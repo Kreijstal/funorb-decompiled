@@ -34,10 +34,10 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         }
         if (bo.field_Cb.a(param0, "park")) {
           BallAgent.field_u = true;
-          bn.field_E = ng.a("benches", "park", 2, bo.field_Cb);
-          ConsoleCommand.field_w = bg.a("park", bo.field_Cb, (byte) 70, "hotdog");
-          pi.field_a = bg.a("park", bo.field_Cb, (byte) 59, "swing");
-          RandomAccessCacheFile.field_c = bg.a("park", bo.field_Cb, (byte) 114, "slide");
+          LeaguesScreen.field_E = ng.a("benches", "park", 2, bo.field_Cb);
+          ConsoleCommand.field_w = QuickChatPhraseDefinition.a("park", bo.field_Cb, (byte) 70, "hotdog");
+          pi.field_a = QuickChatPhraseDefinition.a("park", bo.field_Cb, (byte) 59, "swing");
+          RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.a("park", bo.field_Cb, (byte) 114, "slide");
           ng.field_j = ng.a("trees", "park", 2, bo.field_Cb);
           gw.field_d = ng.a("stains", "park", 2, bo.field_Cb);
           return -1;
@@ -59,16 +59,16 @@ final class ve extends ResizableModalPanel implements ButtonListener {
             return;
           }
           param0.c((byte) -109);
-          var2 = (qb) (kq.field_yb.g(24009));
+          var2 = (qb) (SquadSlotWidget.field_yb.g(24009));
           while (var2 != null) {
             if (var2.a(param1 + 20843, param0)) {
-              var2 = (qb) (kq.field_yb.c(33));
+              var2 = (qb) (SquadSlotWidget.field_yb.c(33));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            kq.field_yb.a(param0, 3);
+            SquadSlotWidget.field_yb.a(param0, 3);
             return;
           }
           ug.a(var2, 16737894, param0);
@@ -132,7 +132,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        hn var3 = new hn(7, new int[]{param1, param2});
+        ManagerAction var3 = new ManagerAction(7, new int[]{param1, param2});
         ii.a(var3, 109);
         if (param0) {
           return;
@@ -157,9 +157,9 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           } else {
             if (param1 == hf.field_a) {
               this.field_i = this.field_i + 10;
-              var3 = je.field_n;
+              var3 = AnimationSkeleton.field_n;
               if (AccountTermsPanel.a(99)) {
-                var3 = lj.field_k;
+                var3 = TextLine.field_k;
                 this.field_i = this.field_i + 20;
               }
             } else {
@@ -174,7 +174,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           var4.field_n = this.field_n;
           var4.field_g = 50;
           var4.field_i = 80;
-          var4.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(qo.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(EmailSyntaxValidator.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(-98, var4);
           this.field_U = this.a((byte) -53, (UiListener) (this), pg.field_c);
           return;
@@ -208,7 +208,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         tv var4_ref_tv = null;
         int var5 = 0;
         int var6 = 0;
-        gv var7 = null;
+        FadingChatMessage var7 = null;
         tv var8 = null;
         int var2Lifetime1;
         var5 = Kickabout.field_G;
@@ -240,24 +240,24 @@ final class ve extends ResizableModalPanel implements ButtonListener {
             }
             AccountRegistrationPanel.field_D = var8;
           }
-          if (e.field_j < 18) {
-            e.field_j = e.field_j + 1;
+          if (SplashScreen.field_j < 18) {
+            SplashScreen.field_j = SplashScreen.field_j + 1;
           }
           if (param0 != -28033) {
             return;
           }
-          if (e.field_j >= 18) {
-            e.field_j = 18;
-            var7 = (gv) (js.field_d.b((byte) 126));
+          if (SplashScreen.field_j >= 18) {
+            SplashScreen.field_j = 18;
+            var7 = (FadingChatMessage) (AppScreen.field_d.b((byte) 126));
             if (var7 != null) {
-              ge.a(var7, false);
+              MatchingTextValidator.a(var7, false);
             }
           }
           var6 = 0;
           var2Lifetime1 = var6;
           while (bk.field_c.length > var6) {
             if (null != bk.field_c[var6]) {
-              bk.field_c[var6].a(0);
+              bk.field_c[var6].tickFade(0);
             }
             var6++;
           }

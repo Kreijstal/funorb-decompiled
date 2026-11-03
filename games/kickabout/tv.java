@@ -83,8 +83,8 @@ final class tv {
           this.field_r = gk.field_b;
         }
         this.field_c = RegistrationRequestDialog.field_ob;
-        this.field_j = sc.field_E;
-        this.field_m = lo.field_l;
+        this.field_j = FindingOpponentScreen.field_E;
+        this.field_m = PasswordValidator.field_l;
         this.field_d = i.field_z;
         this.field_o = ie.field_F;
         this.field_q = hr.field_f;

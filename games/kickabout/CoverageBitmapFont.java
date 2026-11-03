@@ -157,7 +157,7 @@ final class CoverageBitmapFont extends BitmapFont {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;

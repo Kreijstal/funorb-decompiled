@@ -74,7 +74,7 @@ final class vi extends mc {
             var5.field_o = nq.a(var5.field_o, param1, 16, 106);
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            var5.field_G = bp.a(2280703, param1, var5.field_G, 16);
+            var5.field_G = ColumnTableWidget.a(2280703, param1, var5.field_G, 16);
             var6 = 0;
             for (var7 = 0; var5.field_G.length > var7; var7++) {
               if (var6 < (var5.field_G[var7] & 255)) {
@@ -192,8 +192,8 @@ final class vi extends mc {
           return;
         }
         or.field_d.b(88, (byte) -46);
-        or.field_d.a(127, var1);
-        an.field_d = true;
+        or.field_d.writeByte(127, var1);
+        QuickChatPhraseCache.field_d = true;
     }
 
     final long b(byte param0) {

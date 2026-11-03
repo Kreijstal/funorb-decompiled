@@ -96,7 +96,7 @@ final class ModelMesh extends ModelMeshBase {
         field_H = null;
     }
 
-    private final void c() {
+    private final void refreshFaceLighting() {
         int var4 = 0;
         int var3;
         int stackIn_5_0 = 0;
@@ -114,15 +114,15 @@ final class ModelMesh extends ModelMeshBase {
             if (this.field_n[var4] != -1) {
               if (this.field_n[var4] != -2) {
                 var2 = this.field_kb[var4] & -131072;
-                this.field_kb[var4] = var2 | ModelMesh.a(var1, var2 >> 17);
+                this.field_kb[var4] = var2 | ModelMesh.scaleHslLightness(var1, var2 >> 17);
                 var2 = this.field_v[var4] & -131072;
-                this.field_v[var4] = var2 | ModelMesh.a(var1, var2 >> 17);
+                this.field_v[var4] = var2 | ModelMesh.scaleHslLightness(var1, var2 >> 17);
                 var2 = this.field_n[var4] & -131072;
-                this.field_n[var4] = var2 | ModelMesh.a(var1, var2 >> 17);
+                this.field_n[var4] = var2 | ModelMesh.scaleHslLightness(var1, var2 >> 17);
               }
             } else {
               var2 = this.field_kb[var4] & -131072;
-              this.field_kb[var4] = var2 | ModelMesh.a(var1, var2 >> 17);
+              this.field_kb[var4] = var2 | ModelMesh.scaleHslLightness(var1, var2 >> 17);
             }
           }
         }
@@ -169,9 +169,9 @@ final class ModelMesh extends ModelMeshBase {
           }
         } else {
           if (this.field_n[param0] != -1) {
-            TriangleRasterizer.drawShadedTriangle(field_s[var2], field_s[var3], field_s[var4], field_i[var2], field_i[var3], field_i[var4], this.field_kb[param0] & 65535, this.field_v[param0] & 65535, this.field_n[param0] & 65535);
+            TriangleRasterizer.a(field_s[var2], field_s[var3], field_s[var4], field_i[var2], field_i[var3], field_i[var4], this.field_kb[param0] & 65535, this.field_v[param0] & 65535, this.field_n[param0] & 65535);
           } else {
-            TriangleRasterizer.drawFlatTriangle(field_s[var2], field_s[var3], field_s[var4], field_i[var2], field_i[var3], field_i[var4], TriangleRasterizer.field_l[this.field_kb[param0] & 65535]);
+            TriangleRasterizer.a(field_s[var2], field_s[var3], field_s[var4], field_i[var2], field_i[var3], field_i[var4], TriangleRasterizer.field_l[this.field_kb[param0] & 65535]);
           }
         }
     }
@@ -187,7 +187,7 @@ final class ModelMesh extends ModelMeshBase {
         this.field_M = false;
     }
 
-    final void applyGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5) {
+    final void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5) {
         int var7;
         int var8;
         int var9;
@@ -424,7 +424,7 @@ final class ModelMesh extends ModelMeshBase {
         int var24Lifetime3;
         try {
           if (!this.field_M) {
-            this.e();
+            this.calculateBounds();
           }
           var9_int = TriangleRasterizer.field_p;
           var10 = TriangleRasterizer.field_e;
@@ -476,7 +476,7 @@ final class ModelMesh extends ModelMeshBase {
         }
     }
 
-    private final static int a(int param0, int param1) {
+    private final static int scaleHslLightness(int param0, int param1) {
         param1 = param1 * (param0 & 127) >> 7;
         if (param1 < 2) {
           param1 = 2;
@@ -671,9 +671,9 @@ final class ModelMesh extends ModelMeshBase {
           }
           else {
             if (this.field_n[param0] != -1) {
-              TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_H[0], field_H[1], field_H[2]);
+              TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_H[0], field_H[1], field_H[2]);
             } else {
-              TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, TriangleRasterizer.field_l[this.field_kb[param0] & 65535]);
+              TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, TriangleRasterizer.field_l[this.field_kb[param0] & 65535]);
             }
           }
         }
@@ -713,17 +713,17 @@ final class ModelMesh extends ModelMeshBase {
           }
         } else {
           if (this.field_n[param0] != -1) {
-            TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_H[0], field_H[1], field_H[2]);
-            TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var16, field_db[3], var11Lifetime3, var13Lifetime3, field_t[3], field_H[0], field_H[2], field_H[3]);
+            TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_H[0], field_H[1], field_H[2]);
+            TriangleRasterizer.a(var14Lifetime3, var16, field_db[3], var11Lifetime3, var13Lifetime3, field_t[3], field_H[0], field_H[2], field_H[3]);
           } else {
             var17Lifetime1 = TriangleRasterizer.field_l[this.field_kb[param0] & 65535];
-            TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
-            TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var16, field_db[3], var11Lifetime3, var13Lifetime3, field_t[3], var17Lifetime1);
+            TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
+            TriangleRasterizer.a(var14Lifetime3, var16, field_db[3], var11Lifetime3, var13Lifetime3, field_t[3], var17Lifetime1);
           }
         }
     }
 
-    private final static int clampHslLightness(int param0) {
+    private final static int d(int param0) {
         if (param0 < 2) {
           param0 = 2;
         } else {
@@ -890,8 +890,8 @@ final class ModelMesh extends ModelMeshBase {
               }
               if (param1 &&
                 this.b(bq.field_c + TriangleRasterizer.field_p, vs.field_i + TriangleRasterizer.field_e, field_s[var9], field_s[var10], field_s[var11], var12, var13, var14_int)) {
-                fieldTemp$13 = jk.field_f;
-                jk.field_f = jk.field_f + 1;
+                fieldTemp$13 = MusicPatch.field_f;
+                MusicPatch.field_f = MusicPatch.field_f + 1;
                 MouseWheelInput.field_c[fieldTemp$13] = param2;
                 param1 = false;
               }
@@ -1183,9 +1183,9 @@ final class ModelMesh extends ModelMeshBase {
         this.field_M = false;
     }
 
-    final void a() {
+    final void finishAnimation() {
         if (this.field_X) {
-          this.c();
+          this.refreshFaceLighting();
           this.field_X = false;
         }
         this.field_M = false;
@@ -1258,7 +1258,7 @@ final class ModelMesh extends ModelMeshBase {
         return (ModelMeshBase) ((Object) param2);
     }
 
-    final void applyMaskedGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
+    final void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
         int var35_int = 0;
         int var42 = 0;
         int var9;
@@ -1758,7 +1758,7 @@ final class ModelMesh extends ModelMeshBase {
         int var22Lifetime1Lifetime1;
         int var23Lifetime1Lifetime1;
         if (!this.field_M) {
-          this.e();
+          this.calculateBounds();
         }
         var15 = param0[3] >> 2;
         var16 = param0[4] >> 2;
@@ -1873,7 +1873,7 @@ final class ModelMesh extends ModelMeshBase {
         return true;
     }
 
-    private final void e() {
+    private final void calculateBounds() {
         int var9 = 0;
         int var1;
         int var2;
@@ -1946,7 +1946,7 @@ final class ModelMesh extends ModelMeshBase {
         return this.a(param0, param1, field_r, field_jb, field_y, field_G, field_cb, field_j);
     }
 
-    final boolean b() {
+    final boolean beginAnimation() {
         if (this.field_I == null) {
           return false;
         }
@@ -2112,7 +2112,7 @@ final class ModelMesh extends ModelMeshBase {
               } else {
                 var19 = param0.field_J[var16];
                 var14 = param1 + (param3 * var19.field_f + param4 * var19.field_a + param5 * var19.field_g) / (var8 + var8 / 2);
-                this.field_kb[var16] = ModelMesh.clampHslLightness(var14);
+                this.field_kb[var16] = ModelMesh.d(var14);
                 this.field_n[var16] = -1;
               }
             } else {
@@ -2123,7 +2123,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_gb[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g);
-              this.field_kb[var16] = ModelMesh.clampHslLightness(var14);
+              this.field_kb[var16] = ModelMesh.d(var14);
               if (param0.field_q != null &&
                 param0.field_q[this.field_S[var16]] != null) {
                 var13 = param0.field_q[this.field_S[var16]];
@@ -2131,7 +2131,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_S[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g);
-              this.field_v[var16] = ModelMesh.clampHslLightness(var14);
+              this.field_v[var16] = ModelMesh.d(var14);
               if (param0.field_q != null &&
                 param0.field_q[this.field_h[var16]] != null) {
                 var13 = param0.field_q[this.field_h[var16]];
@@ -2139,7 +2139,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_h[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g);
-              this.field_n[var16] = ModelMesh.clampHslLightness(var14);
+              this.field_n[var16] = ModelMesh.d(var14);
             }
           } else {
             if (var10Lifetime2 != 0) {
@@ -2153,7 +2153,7 @@ final class ModelMesh extends ModelMeshBase {
               } else {
                 var18 = param0.field_J[var16];
                 var14 = param1 + (param3 * var18.field_f + param4 * var18.field_a + param5 * var18.field_g) / (var8 + var8 / 2) << 17;
-                this.field_kb[var16] = var14 | ModelMesh.a(param0.field_p[var16] & 65535, var14 >> 17);
+                this.field_kb[var16] = var14 | ModelMesh.scaleHslLightness(param0.field_p[var16] & 65535, var14 >> 17);
                 this.field_n[var16] = -1;
               }
             } else {
@@ -2165,7 +2165,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_gb[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g) << 17;
-              this.field_kb[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
+              this.field_kb[var16] = var14 | ModelMesh.scaleHslLightness(var15, var14 >> 17);
               if (param0.field_q != null &&
                 param0.field_q[this.field_S[var16]] != null) {
                 var13 = param0.field_q[this.field_S[var16]];
@@ -2173,7 +2173,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_S[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g) << 17;
-              this.field_v[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
+              this.field_v[var16] = var14 | ModelMesh.scaleHslLightness(var15, var14 >> 17);
               if (param0.field_q != null &&
                 param0.field_q[this.field_h[var16]] != null) {
                 var13 = param0.field_q[this.field_h[var16]];
@@ -2181,7 +2181,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_h[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g) << 17;
-              this.field_n[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
+              this.field_n[var16] = var14 | ModelMesh.scaleHslLightness(var15, var14 >> 17);
             }
           }
           var16++;

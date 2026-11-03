@@ -35,7 +35,7 @@ final class NotCommand extends ConsoleCommand {
         Sprite var9 = new Sprite(16, param0);
         var9.e();
         if (param5 == -46) {
-          SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param0, param2, param3);
+          SoftwareRasterizer.g(0, 0, 16, param0, param2, param3);
           var10 = null;
           var11 = null;
           if (param4) {
@@ -62,7 +62,7 @@ final class NotCommand extends ConsoleCommand {
           return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         field_E = (String) null;
-        SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param0, param2, param3);
+        SoftwareRasterizer.g(0, 0, 16, param0, param2, param3);
         var10 = null;
         var11 = null;
         if (param4) {

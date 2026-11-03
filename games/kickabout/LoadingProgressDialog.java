@@ -82,7 +82,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         fj.field_b.a(this.field_S, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, fj.field_b.field_G);
     }
 
-    final static void a(int param0, vc param1) {
+    final static void a(int param0, ReceivedAuctionItem param1) {
         try {
           np.field_Jb.a(new hk(param1, 19), 3);
           int var2_int = -76 / ((49 - param0) / 61);
@@ -97,7 +97,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         try {
           this.field_S = param1;
           if (this.field_S != null) {
-            var3_int = fj.field_b.c(this.field_S, 260, fj.field_b.field_G);
+            var3_int = fj.field_b.paragraphHeight(this.field_S, 260, fj.field_b.field_G);
             this.a((byte) 110, var3_int + 150, 300);
           }
           this.field_Y = new ou(13, 50, 274, 30, 15, 2113632, 4210752);

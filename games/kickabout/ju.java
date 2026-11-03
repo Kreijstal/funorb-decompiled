@@ -91,7 +91,7 @@ final class ju extends TextHotspotWidget {
         return Character.toTitleCase(param1);
     }
 
-    final boolean focusNext(UiWidget param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         Sprite[] var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -138,7 +138,7 @@ final class ju extends TextHotspotWidget {
 
     final void a(int param0, int param1, int param2, int param3) {
         String var5;
-        rv var6;
+        ValidationState var6;
         WidgetTextLayout var8;
         int var9;
         int var10;
@@ -148,12 +148,12 @@ final class ju extends TextHotspotWidget {
         Sprite var14;
         Sprite var15;
         Sprite var16;
-        rv var6Lifetime1;
+        ValidationState var6Lifetime1;
         var13 = Kickabout.field_G;
-        var6 = this.field_R.c(-24407);
+        var6 = this.field_R.getValidationState(-24407);
         if (var6 != mn.field_c &&
           var6 != en.field_p) {
-          var5 = this.field_R.b(param1 - 90);
+          var5 = this.field_R.getValidationMessage(param1 - 90);
           if (var5 == null) {
             var5 = this.field_O;
           }
@@ -165,13 +165,13 @@ final class ju extends TextHotspotWidget {
           this.a((byte) -41);
         }
         super.a(param0, (int) (char)param1, param2, param3);
-        var6Lifetime1 = this.field_R.c(-24407);
+        var6Lifetime1 = this.field_R.getValidationState(-24407);
         var8 = (WidgetTextLayout) ((Object) this.field_r);
         var9 = param2 + this.field_t;
         var10 = var8.a(true, (UiWidget) (this), param3) + (var8.a(5035, (UiWidget) (this)).a(-1761) >> 1);
         if (var6Lifetime1 != mn.field_c &&
           var6Lifetime1 != en.field_p) {
-          if (jt.field_Bb == var6Lifetime1) {
+          if (PitchOptionTile.field_Bb == var6Lifetime1) {
             var15 = LoggedPlayer.field_g[2];
             var15.drawAdditive(var9, var10 - (var15.field_w >> 1), 256);
           } else if (var6Lifetime1 == he.field_yb) {
@@ -191,8 +191,8 @@ final class ju extends TextHotspotWidget {
             this.field_Q = new Sprite(var11, var12);
             PacketBuffer.a(70, this.field_Q);
           }
-          var14.rotateSmooth(112, 144, var14.field_o << 4, var14.field_v << 4, -this.field_S << 10, 4096);
-          ta.e(126);
+          var14.b(112, 144, var14.field_o << 4, var14.field_v << 4, -this.field_S << 10, 4096);
+          TeamManagementScreen.e(126);
           this.field_Q.drawAdditive(-(var14.field_o >> 1) + var9, -var14.field_v + var10, 256);
         }
     }
@@ -234,7 +234,7 @@ final class ju extends TextHotspotWidget {
           return;
         }
         try {
-          hw.field_j = param0;
+          InstrumentNoteMask.field_j = param0;
           ts.field_b = param1;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ju.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

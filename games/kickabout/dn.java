@@ -20,7 +20,7 @@ final class dn extends hd {
         Sprite var2 = var3;
         PacketBuffer.a(-59, var3);
         qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(0, 0);
-        ta.e(121);
+        TeamManagementScreen.e(121);
         this.field_N = var2;
         this.field_mb = 5 + var2.field_v + 5;
         this.field_B = 5;
@@ -76,7 +76,7 @@ final class dn extends hd {
         if (param0 != -5) {
           field_Ab = (String) null;
         }
-        fw.field_G = (double)param1;
+        MyPitchScreen.field_G = (double)param1;
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
@@ -93,7 +93,7 @@ final class dn extends hd {
               CommonGame.a(119, ck.field_b.field_Eb, var3, param1, var4 != 0, ck.field_b.a(-15596));
             }
             ck.field_b = null;
-            da.b(108);
+            MusicPatchNode.b(108);
           }
         }
     }

@@ -43,7 +43,7 @@ class TextButton extends UiWidget {
         try {
           if (this.field_y &&
             this.a((byte) 47, param5, param1, param2, param4)) {
-            this.focusNext(param3, 0);
+            this.a(param3, 0);
             this.field_p = param6;
             if (null != this.field_k) {
               if (!(this.field_k instanceof nf)) {
@@ -169,7 +169,7 @@ class TextButton extends UiWidget {
         }
     }
 
-    boolean focusNext(UiWidget param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -258,7 +258,7 @@ class TextButton extends UiWidget {
         }
     }
 
-    final StringBuilder appendWidgetDiagnostics(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -270,7 +270,7 @@ class TextButton extends UiWidget {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.beginWidgetDiagnosticVisit(param0 - 17882, param3, param2, param1)) {
+          if (this.a(param0 - 17882, param3, param2, param1)) {
             this.b(param1, param3, param2, -18568);
             if (this.field_A) {
               discarded$2 = param3.append(" active");

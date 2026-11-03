@@ -11,15 +11,15 @@ final class PcmStreamMixer extends PcmStream {
         return (PcmStream) (this.field_k.c(33));
     }
 
-    private final void b(int param0) {
+    private final void skipChildStreams(int param0) {
         PcmStream var2 = (PcmStream) (this.field_k.g(24009));
         while (var2 != null) {
-          var2.a(param0);
+          var2.skipFrames(param0);
           var2 = (PcmStream) (this.field_k.c(33));
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2 = 0;
         me var3 = null;
         int var5 = 0;
@@ -27,16 +27,16 @@ final class PcmStreamMixer extends PcmStream {
         Object var4 = null;
         do {
           if (this.field_l < 0) {
-            this.b(param0);
+            this.skipChildStreams(param0);
             return;
           }
           if (this.field_j + param0 < this.field_l) {
             this.field_j = this.field_j + param0;
-            this.b(param0);
+            this.skipChildStreams(param0);
             return;
           }
           var2 = this.field_l - this.field_j;
-          this.b(var2);
+          this.skipChildStreams(var2);
           param0 = param0 - var2;
           this.field_j = this.field_j + var2;
           this.e();
@@ -118,7 +118,7 @@ final class PcmStreamMixer extends PcmStream {
         return (PcmStream) (this.field_k.g(24009));
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         me var5 = null;
         int var7 = 0;

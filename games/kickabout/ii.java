@@ -20,13 +20,13 @@ final class ii extends IntrusiveNode {
         RuntimeException var1 = null;
         var3 = Kickabout.field_G;
         try {
-          ad.field_c = new Sprite[je.field_g.length];
+          ad.field_c = new Sprite[AnimationSkeleton.field_g.length];
           if (param0 != 65280) {
             field_l = -68;
           }
-          for (var1_int = 0; var1_int < je.field_g.length; var1_int++) {
+          for (var1_int = 0; var1_int < AnimationSkeleton.field_g.length; var1_int++) {
             ad.field_c[var1_int] = new Sprite(94, 84);
-            var2 = df.a(var1_int, (int) wk.a(255, 63), true, (int) wk.a(65280, param0 - 65217)).b(100, 728, 20, -56, -20);
+            var2 = AuctionsHelpScreen.a(var1_int, (int) wk.a(255, 63), true, (int) wk.a(65280, param0 - 65217)).b(100, 728, 20, -56, -20);
             pe.a(var2, ad.field_c[var1_int], var1_int, 40);
           }
           return;
@@ -47,10 +47,10 @@ final class ii extends IntrusiveNode {
         field_m = null;
     }
 
-    final static void a(hn param0, int param1) {
+    final static void a(ManagerAction param0, int param1) {
         try {
-          ic.field_h.a(param0, cq.e(15137), 0);
-          da.field_h.a(param0, 3);
+          ic.field_h.applyAction(param0, AuctionLogEntry.e(15137), 0);
+          MusicPatchNode.field_h.a(param0, 3);
           if (param1 < 47) {
             field_h = (String) null;
           }
@@ -60,7 +60,7 @@ final class ii extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        sp.c(48, 36);
+        ShopPlayerSlot.c(48, 36);
         if (param0 >= -116) {
           field_h = (String) null;
         }

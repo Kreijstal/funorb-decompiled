@@ -81,14 +81,14 @@ final class wp {
           ni.field_f = param10;
           fh.field_a = param7;
           ThreeCommand.field_D = param5;
-          vc.field_D = param8;
+          ReceivedAuctionItem.field_D = param8;
           ue.field_k = param1;
           no.field_J = param14;
           rn.field_d = param0;
           LoadingProgressDialog.field_Q = param12;
           oi.field_f = param3;
           ca.field_g = param6;
-          jd.field_d = ModalStack.a(param9, 70, "lobby", "gameprivacy");
+          TextFieldValidator.field_d = ModalStack.a(param9, 70, "lobby", "gameprivacy");
           CachedArchiveSource.field_m = ModalStack.a(param9, 86, "lobby", "ratedgame");
           nv.field_L = ModalStack.a(param9, -6, "lobby", "opentome");
           i.field_E = ModalStack.a(param9, -119, "lobby", "allowspectators");
@@ -115,7 +115,7 @@ final class wp {
           ConsoleValue.field_a = new hd(0L, ConsoleEvaluationException.field_e);
           ConsoleValue.field_a.field_A = 1;
           MouseWheelInput.field_a = new hd(0L, LongPlusOneCommand.field_D, ic.field_g.toUpperCase());
-          fp.field_o = new hd(0L, qa.field_H, ConsoleValue.field_f.toUpperCase());
+          AuctionItem.field_o = new hd(0L, LeaguesHelpScreen.field_H, ConsoleValue.field_f.toUpperCase());
           bt.field_b = new hd(0L, cp.field_g);
           va.field_w = new hd(0L, dn.field_zb, NameSuggestionsPanel.field_B);
           qq.field_G = new hd(0L, gw.field_a, sn.field_j);
@@ -123,10 +123,10 @@ final class wp {
             field_i = (String) null;
           }
           TextWidgetPainter.field_n = new hd(0L, gw.field_a, aj.field_c);
-          df.field_G = new hd(0L, gw.field_a, hd.field_C);
+          AuctionsHelpScreen.field_G = new hd(0L, gw.field_a, hd.field_C);
           DateInputWidget.field_D = new hd(0L, gw.field_a, n.field_j);
           RegistrationRequestDialog.field_lb = new hd(0L, pq.field_P, ig.field_h);
-          sp.field_Jb = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
+          ShopPlayerSlot.field_Jb = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
           dr.field_d = new hd(0L, vg.field_Qb, vp.field_n.toUpperCase());
           dr.field_d.field_lb = ui.field_t;
           stackIn_7_0 = null;
@@ -142,49 +142,49 @@ final class wp {
             stackIn_8_1 = null;
             stackIn_8_4 = wo.field_l;
           }
-          ps.field_b = new hd(stackIn_7_2, stackIn_7_3, ((String) (Object) stackIn_8_4).toUpperCase());
+          LoginCredentials.field_b = new hd(stackIn_7_2, stackIn_7_3, ((String) (Object) stackIn_8_4).toUpperCase());
           af.field_d = new hd(0L, (hd) null);
-          af.field_d.a((byte) -115, fp.field_o);
+          af.field_d.a((byte) -115, AuctionItem.field_o);
           af.field_d.a((byte) -112, bt.field_b);
           bt.field_b.a((byte) -127, va.field_w);
           bt.field_b.a((byte) -118, qq.field_G);
           bt.field_b.a((byte) -113, TextWidgetPainter.field_n);
           if (ui.field_t) {
-            bt.field_b.a((byte) -118, df.field_G);
+            bt.field_b.a((byte) -118, AuctionsHelpScreen.field_G);
           }
           bt.field_b.a((byte) -128, DateInputWidget.field_D);
           bt.field_b.a((byte) -122, RegistrationRequestDialog.field_lb);
-          bt.field_b.a((byte) -118, (hd) (sp.field_Jb));
+          bt.field_b.a((byte) -118, (hd) (ShopPlayerSlot.field_Jb));
           if (ui.field_t) {
             af.field_d.a((byte) -109, dr.field_d);
           }
-          af.field_d.a((byte) -112, ps.field_b);
-          jw.field_Cb = new hd(0L, ConsoleEvaluationException.field_e);
-          jw.field_Cb.field_p = 0;
-          jw.field_Cb.field_A = 1;
-          RandomAccessCacheFile.field_a = new hd(0L, dc.field_a, ap.field_x.toUpperCase());
+          af.field_d.a((byte) -112, LoginCredentials.field_b);
+          CheckboxLabelWidget.field_Cb = new hd(0L, ConsoleEvaluationException.field_e);
+          CheckboxLabelWidget.field_Cb.field_p = 0;
+          CheckboxLabelWidget.field_Cb.field_A = 1;
+          RandomAccessCacheFile.field_a = new hd(0L, dc.field_a, MatchScreen.field_x.toUpperCase());
           kk.field_j = new hd(0L, tv.field_e);
-          kk.field_j.a((byte) -112, jw.field_Cb);
+          kk.field_j.a((byte) -112, CheckboxLabelWidget.field_Cb);
           kk.field_j.a((byte) -113, RandomAccessCacheFile.field_a);
           w.field_e = new hd(0L, rj.field_b);
           w.field_e.a(ConsoleEvaluationException.field_e, (byte) -110);
           w.field_e.field_p = 1;
           var16 = w.field_e;
           var16.field_A = 1;
-          fm.field_C = new hd(0L, (hd) null);
+          AchievementsScreen.field_C = new hd(0L, (hd) null);
           ka.field_c = new hd(0L, ConsoleEvaluationException.field_e);
           ka.field_c.field_A = 1;
           BufferedSocket.field_u = new hd(0L, dn.field_zb, oh.field_h);
           DoSomethingCommand.field_D = new hd(0L, pq.field_P, mt.field_b);
           ClientException.field_c = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
-          fm.field_C.a((byte) -114, ka.field_c);
-          fm.field_C.a((byte) -105, BufferedSocket.field_u);
+          AchievementsScreen.field_C.a((byte) -114, ka.field_c);
+          AchievementsScreen.field_C.a((byte) -105, BufferedSocket.field_u);
           if (ui.field_t) {
-            fm.field_C.a((byte) -123, DoSomethingCommand.field_D);
+            AchievementsScreen.field_C.a((byte) -123, DoSomethingCommand.field_D);
           }
-          fm.field_C.a((byte) -122, (hd) (ClientException.field_c));
+          AchievementsScreen.field_C.a((byte) -122, (hd) (ClientException.field_c));
           ac.field_b = new hd(0L, LongPlusOneCommand.field_D, ns.field_b.toUpperCase());
-          ci.field_h = new hd(0L, qa.field_H);
+          ci.field_h = new hd(0L, LeaguesHelpScreen.field_H);
           sg.field_a = new hd(0L, cp.field_g);
           MouseInputHandler.field_d = new hd(0L, oi.field_i, IntDoubleCommand.field_F.toUpperCase());
           rf.field_c = new vu[param4 + 4][];
@@ -192,7 +192,7 @@ final class wp {
           qr.field_b[0] = new hd(0L, kr.field_b, mi.field_a);
           rf.field_c[0] = new vu[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            rf.field_c[0][var17_int + 1] = new vu(0L, k.field_f, (hd) null, ul.field_c, jd.field_d[var17_int], WidgetContainer.field_w[var17_int]);
+            rf.field_c[0][var17_int + 1] = new vu(0L, k.field_f, (hd) null, ul.field_c, TextFieldValidator.field_d[var17_int], WidgetContainer.field_w[var17_int]);
           }
           if (2 <= rn.field_d.length) {
             qr.field_b[1] = new hd(0L, kr.field_b, Checkbox.field_H);
@@ -211,7 +211,7 @@ final class wp {
             rf.field_c[3] = array$1;
             rf.field_c[3][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ia.field_b);
             for (var17_intLifetime2 = 0; MouseInputHandler.field_f > var17_intLifetime2; var17_intLifetime2++) {
-              rf.field_c[3][1 + var17_intLifetime2] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, vc.field_D[var17_intLifetime2]);
+              rf.field_c[3][1 + var17_intLifetime2] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ReceivedAuctionItem.field_D[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param4 > var17_intLifetime3; var17_intLifetime3++) {
@@ -261,9 +261,9 @@ final class wp {
           var17 = nv.field_F;
           nv.field_F.field_p = 1;
           var17.field_A = 1;
-          fp.field_p = new hd(0L, (hd) null);
-          fp.field_p.a((byte) -106, ci.field_h);
-          fp.field_p.a((byte) -111, sg.field_a);
+          AuctionItem.field_p = new hd(0L, (hd) null);
+          AuctionItem.field_p.a((byte) -106, ci.field_h);
+          AuctionItem.field_p.a((byte) -111, sg.field_a);
           sg.field_a.a((byte) -107, MouseInputHandler.field_d);
           for (var18Lifetime2 = 0; var18Lifetime2 < 4 + param4; var18Lifetime2++) {
             if ((1 != var18Lifetime2 ||
@@ -277,11 +277,11 @@ final class wp {
               }
             }
           }
-          fp.field_p.a((byte) -112, em.field_d);
-          fp.field_p.a((byte) -124, GoalStateAgent.field_k);
-          fp.field_p.a((byte) -108, nv.field_F);
+          AuctionItem.field_p.a((byte) -112, em.field_d);
+          AuctionItem.field_p.a((byte) -124, GoalStateAgent.field_k);
+          AuctionItem.field_p.a((byte) -108, nv.field_F);
           is.field_b = new hd(0L, AccountTermsPanel.field_H, po.field_b.toUpperCase());
-          kt.field_i = new hd(0L, dc.field_a, bk.field_d.toUpperCase());
+          BlackFadeScreen.field_i = new hd(0L, dc.field_a, bk.field_d.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -375,19 +375,19 @@ final class wp {
         byte[] var21;
         int[] var22;
         var8 = Kickabout.field_G;
-        var1 = new Sprite[io.field_l];
-        for (var2 = 0; io.field_l > var2; var2++) {
-          var3 = lo.field_j[var2] * MouseInputHandler.field_c[var2];
+        var1 = new Sprite[MenuButton.field_l];
+        for (var2 = 0; MenuButton.field_l > var2; var2++) {
+          var3 = PasswordValidator.field_j[var2] * MouseInputHandler.field_c[var2];
           var21 = pq.field_O[var2];
-          if (!rm.field_B[var2]) {
+          if (!RankingsScreen.field_B[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = lt.field_a[qj.b((int) var21[var6], 255)];
             }
-            var1[var2] = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], var22);
+            var1[var2] = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var22);
           } else {
-            var16 = es.field_e[var2];
+            var16 = RowRangeRequest.field_e[var2];
             var12 = var16;
             var9 = var12;
             var5 = var9;
@@ -397,7 +397,7 @@ final class wp {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = hf.a(lt.field_a[qj.b((int) var21[var7], 255)], qj.b(-16777216, var16[var7] << 24));
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var17));
           }
         }
         if (param0 >= -123) {
@@ -407,13 +407,13 @@ final class wp {
         return var1;
     }
 
-    final static ps a(int param0, String param1, boolean param2, String param3) {
+    final static LoginCredentials a(int param0, String param1, boolean param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         byte[] var7 = null;
         CharSequence var8 = null;
-        ps stackIn_6_0 = null;
+        LoginCredentials stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -501,10 +501,10 @@ final class wp {
           var8 = 100 % ((61 - param3) / 53);
           var17 = 0;
           var7Lifetime1 = var17;
-          while (var17 < sc.field_D) {
-            var9 = 255 & mh.field_j[var17] >> 16;
-            var10 = 255 & mh.field_j[var17] >> 8;
-            var11 = 255 & mh.field_j[var17];
+          while (var17 < FindingOpponentScreen.field_D) {
+            var9 = 255 & EmailAvailabilityValidator.field_j[var17] >> 16;
+            var10 = 255 & EmailAvailabilityValidator.field_j[var17] >> 8;
+            var11 = 255 & EmailAvailabilityValidator.field_j[var17];
             var12 = (var9 >> 3) + 1;
             var13 = (var10 >> 3) + 1;
             var14 = 1 + (var11 >> 3);

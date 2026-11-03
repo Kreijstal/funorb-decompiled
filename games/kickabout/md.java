@@ -57,10 +57,10 @@ final class md implements hc {
             ci.a(false);
           }
         }
-        if (up.a((byte) -3) &&
+        if (PlayerStats.a((byte) -3) &&
           !ng.a(param0 ^ 27302)) {
           stackIn_12_0 = 100;
-          if (e.field_m == null) {
+          if (SplashScreen.field_m == null) {
             stackIn_13_1 = vb.field_k;
           } else {
             stackIn_13_1 = true;
@@ -154,7 +154,7 @@ final class md implements hc {
           PacketBuffer.a(-102, this.field_b);
           SoftwareRasterizer.b();
           this.field_i[var4].a(var3, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, (byte) -105);
-          ta.e(120);
+          TeamManagementScreen.e(120);
           if (this.field_f > 136) {
             this.field_b.b(-(this.field_b.field_o >> 1) + var8, -(this.field_b.field_v >> 1) + var9, 200 - this.field_f << 2);
           } else {

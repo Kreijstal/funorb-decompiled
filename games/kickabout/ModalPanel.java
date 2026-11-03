@@ -11,7 +11,7 @@ abstract class ModalPanel extends WidgetContainer {
     static hd field_D;
 
     final static IndexedSprite h(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], lo.field_j[0], pq.field_O[0], lt.field_a);
+        IndexedSprite var1 = new IndexedSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], pq.field_O[0], lt.field_a);
         int var2 = 103 / ((param0 + 65) / 46);
         tk.h((byte) -98);
         return var1;
@@ -35,7 +35,7 @@ abstract class ModalPanel extends WidgetContainer {
           SoftwareRasterizer.b();
           this.a(0, (byte) 125, 0);
           super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
-          ta.e(127);
+          TeamManagementScreen.e(127);
           d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
         }
@@ -45,7 +45,7 @@ abstract class ModalPanel extends WidgetContainer {
           SoftwareRasterizer.b();
           this.a(0, (byte) 125, 0);
           super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
-          ta.e(127);
+          TeamManagementScreen.e(127);
           d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
         }
@@ -55,7 +55,7 @@ abstract class ModalPanel extends WidgetContainer {
           SoftwareRasterizer.b();
           this.a(0, (byte) 125, 0);
           super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
-          ta.e(127);
+          TeamManagementScreen.e(127);
           d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
         }
@@ -63,7 +63,7 @@ abstract class ModalPanel extends WidgetContainer {
         SoftwareRasterizer.b();
         this.a(0, (byte) 125, 0);
         super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
-        ta.e(127);
+        TeamManagementScreen.e(127);
         d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
     }
 
@@ -74,16 +74,16 @@ abstract class ModalPanel extends WidgetContainer {
         int[] var5 = null;
         int var6 = 0;
         int var7 = Kickabout.field_G;
-        Sprite[] var1 = new Sprite[io.field_l];
+        Sprite[] var1 = new Sprite[MenuButton.field_l];
         if (param0 == 78) {
-          for (var2 = 0; io.field_l > var2; var2++) {
-            var3 = MouseInputHandler.field_c[var2] * lo.field_j[var2];
+          for (var2 = 0; MenuButton.field_l > var2; var2++) {
+            var3 = MouseInputHandler.field_c[var2] * PasswordValidator.field_j[var2];
             var4 = pq.field_O[var2];
             var5 = new int[var3];
             for (var6 = 0; var3 > var6; var6++) {
               var5[var6] = lt.field_a[qj.b((int) var4[var6], 255)];
             }
-            var1[var2] = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], var5);
+            var1[var2] = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var5);
           }
           tk.h((byte) -70);
           return var1;
@@ -92,21 +92,21 @@ abstract class ModalPanel extends WidgetContainer {
     }
 
     final static void a(int param0, byte param1) {
-        hn var2 = null;
+        ManagerAction var2 = null;
         int var3 = Kickabout.field_G;
-        hn var2Lifetime1;
+        ManagerAction var2Lifetime1;
         try {
           if (param1 >= -23) {
             field_G = (IndexedSprite[]) null;
           }
-          var2 = (hn) (da.field_h.g(24009));
+          var2 = (ManagerAction) (MusicPatchNode.field_h.g(24009));
           while (var2 != null) {
-            if (var2.field_i == 4) {
+            if (var2.actionType == 4) {
               var2.c((byte) -109);
             }
-            var2 = (hn) (da.field_h.c(33));
+            var2 = (ManagerAction) (MusicPatchNode.field_h.c(33));
           }
-          var2Lifetime1 = new hn(4, new int[]{param0});
+          var2Lifetime1 = new ManagerAction(4, new int[]{param0});
           ii.a(var2Lifetime1, 102);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ub.BC(" + param0 + ',' + param1 + ')');

@@ -155,10 +155,10 @@ final class qb extends hd {
 
     final boolean b(int param0) {
         if (param0 == -7) {
-          return !this.a((byte) -60) ? true : false;
+          return !this.isSecondaryLinked((byte) -60) ? true : false;
         }
         this.field_Db = 32;
-        return !this.a((byte) -60) ? true : false;
+        return !this.isSecondaryLinked((byte) -60) ? true : false;
     }
 
     qb(int param0) {

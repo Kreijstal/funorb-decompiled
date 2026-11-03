@@ -35,10 +35,10 @@ final class sk {
             return;
           }
           var2 = un.field_e;
-          var2.k(4);
-          var2.k(4);
-          var2.k(4);
-          var2.k(4);
+          var2.readInt(4);
+          var2.readInt(4);
+          var2.readInt(4);
+          var2.readInt(4);
           var1.c((byte) -109);
           return;
         }
@@ -48,10 +48,10 @@ final class sk {
           return;
         }
         var2Lifetime1 = un.field_e;
-        var2Lifetime1.k(4);
-        var2Lifetime1.k(4);
-        var2Lifetime1.k(4);
-        var2Lifetime1.k(4);
+        var2Lifetime1.readInt(4);
+        var2Lifetime1.readInt(4);
+        var2Lifetime1.readInt(4);
+        var2Lifetime1.readInt(4);
         var1Lifetime1.c((byte) -109);
     }
 
@@ -104,7 +104,7 @@ final class sk {
             var12 = var13 + " - " + var6 + "%";
           }
           ju.a(var11, var12, (byte) 30);
-          nm.field_g.b((byte) 118);
+          nm.field_g.paintFrame((byte) 118);
           return;
         }
     }

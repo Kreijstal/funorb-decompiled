@@ -25,7 +25,7 @@ final class gw {
             var1.field_n = var1.field_n + 1;
             var2 = fieldTemp$0;
             MatchAgent.a(var1, 0);
-            or.field_d.c(param0 ^ 59, -var2 + var1.field_n);
+            or.field_d.backpatchByteLength(param0 ^ 59, -var2 + var1.field_n);
           }
           if (param0 == 5) {
             return;
@@ -53,7 +53,7 @@ final class gw {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param2.f(-32768);
+            var3_int = param2.readUnsignedSmart(-32768);
             if (param0 < var3_int) {
               var3_int = param0;
             }

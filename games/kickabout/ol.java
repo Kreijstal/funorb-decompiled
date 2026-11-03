@@ -32,7 +32,7 @@ final class ol extends hs {
     private boolean field_C;
     private int field_V;
     private boolean field_N;
-    private kq[] field_o;
+    private SquadSlotWidget[] field_o;
     private boolean field_F;
     private int field_A;
     private int[][] field_O;
@@ -63,7 +63,7 @@ final class ol extends hs {
         int discarded$1 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        up var3 = null;
+        PlayerStats var3 = null;
         int var4 = 0;
         int stackIn_32_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -84,10 +84,10 @@ final class ol extends hs {
             stackIn_32_0 = ~this.field_hb[var2_int];
             if (var4 == 0) {
               if (stackIn_32_0 != 0) {
-                var3 = GameLoopApplet.field_E.field_i[this.field_hb[var2_int]];
-                if (100 <= var3.field_r && (!(var3.field_n >= 100) ||
-                  !(100 <= var3.field_g) ||
-                  !(var3.field_o >= 100))) {
+                var3 = GameLoopApplet.field_E.squad[this.field_hb[var2_int]];
+                if (100 <= var3.experience && (!(var3.power >= 100) ||
+                  !(100 <= var3.speed) ||
+                  !(var3.tackle >= 100))) {
                   return true;
                 }
               }
@@ -233,7 +233,7 @@ final class ol extends hs {
         var15 = Kickabout.field_G;
         try {
           SoftwareRasterizer.a(22, 95, 596, 225, 10, 0, 96);
-          pt.a(618, param0 ^ -16754303, 22, 305, 110);
+          AuctionListing.a(618, param0 ^ -16754303, 22, 305, 110);
           var2_int = this.field_ib;
           un.field_d.d("<u=FFFFFF>" + ConsoleEvaluationException.field_b.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
           un.field_d.d(he.field_Ub.toUpperCase(), var2_int + 140, this.field_Q + 130, 16777215, -1);
@@ -241,7 +241,7 @@ final class ol extends hs {
           var3 = this.field_Q + 140;
           var4 = 360 + var2_int;
           st.b(var4, param0 ^ 16777113, var3);
-          jk.a(param0 ^ 0);
+          MusicPatch.a(param0 ^ 0);
           var5 = this.field_u[this.field_h];
           var6 = this.field_u[1 - this.field_h];
           stackIn_4_0 = un.field_d;
@@ -274,10 +274,10 @@ final class ol extends hs {
           ((CoverageBitmapFont) (Object) stackIn_11_0).d(stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_15_4, -1);
           var7 = var2_int + 60;
           var8 = this.field_Q + 140;
-          pt.a(160 + var7, -22914, var7, var8 + 21, var8);
-          SoftwareRasterizer.fillRoundedRectangle(var7, var8, 160, 42, 10, 65793);
+          AuctionListing.a(160 + var7, -22914, var7, var8 + 21, var8);
+          SoftwareRasterizer.i(var7, var8, 160, 42, 10, 65793);
           un.field_d.d(ib.field_H, 80 + var7, 17 + var8, 16777215, -1);
-          ta.e(124);
+          TeamManagementScreen.e(124);
           var8 += 40;
           var9 = 0;
           scanLoop1: while (true) {
@@ -335,10 +335,10 @@ final class ol extends hs {
             }
             var8 = 140 + this.field_Q;
             var7 = var2_int + 420;
-            pt.a(var7 + 160, param0 - 16800129, var7, var8 + 21, var8);
-            SoftwareRasterizer.fillRoundedRectangle(var7, var8, 160, 42, 10, 65793);
+            AuctionListing.a(var7 + 160, param0 - 16800129, var7, var8 + 21, var8);
+            SoftwareRasterizer.i(var7, var8, 160, 42, 10, 65793);
             un.field_d.d(ib.field_H, var7 + 80, var8 + 17, 16777215, -1);
-            ta.e(117);
+            TeamManagementScreen.e(117);
             var8 += 40;
             break;
           }
@@ -449,8 +449,8 @@ final class ol extends hs {
           var9 = this.a(var10_refLifetime1, var2_int, var9, true);
           if (this.field_P != 0 &&
             this.field_M > this.field_P) {
-            ta.e(param0 - 16777091);
-            pt.a(618, -22914, 22, 320, 110);
+            TeamManagementScreen.e(param0 - 16777091);
+            AuctionListing.a(618, -22914, 22, 320, 110);
             stackIn_99_0 = this.field_x;
             stackIn_99_1 = this.field_B;
             stackIn_99_2 = 570;
@@ -463,7 +463,7 @@ final class ol extends hs {
             }
             SoftwareRasterizer.a(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_99_4, stackIn_100_5, 128);
             stackIn_103_0 = un.field_d;
-            stackIn_103_1 = qt.field_h;
+            stackIn_103_1 = ButtonMenuScreen.field_h;
             stackIn_103_2 = this.field_x + 285;
             stackIn_103_3 = this.field_B + 12;
             if (this.field_y) {
@@ -472,12 +472,12 @@ final class ol extends hs {
               stackIn_104_4 = 11184810;
             }
             ((CoverageBitmapFont) (Object) stackIn_103_0).d(stackIn_103_1, stackIn_103_2, stackIn_103_3, stackIn_104_4, -1);
-            ta.e(param0 - 16777088);
-            pt.a(618, -22914, 22, 305, 110);
+            TeamManagementScreen.e(param0 - 16777088);
+            AuctionListing.a(618, -22914, 22, 305, 110);
           }
           if (this.field_M != 0) {
-            ta.e(119);
-            pt.a(618, -22914, 22, 320, 95);
+            TeamManagementScreen.e(119);
+            AuctionListing.a(618, -22914, 22, 320, 95);
             stackIn_111_0 = this.field_T;
             stackIn_111_1 = this.field_kb;
             stackIn_111_2 = 570;
@@ -499,8 +499,8 @@ final class ol extends hs {
               stackIn_116_4 = 11184810;
             }
             ((CoverageBitmapFont) (Object) stackIn_115_0).d(stackIn_115_1, stackIn_115_2, stackIn_115_3, stackIn_116_4, -1);
-            ta.e(127);
-            pt.a(618, -22914, 22, 305, 110);
+            TeamManagementScreen.e(127);
+            AuctionListing.a(618, -22914, 22, 305, 110);
           }
           stackIn_121_0 = this.field_L;
           stackIn_121_1 = this.field_r;
@@ -553,8 +553,8 @@ final class ol extends hs {
           var9 = var9 + ((1 + this.field_a.playerCount) * 25 + 140);
           if (this.field_lb != 0 &&
             this.field_lb < this.field_M) {
-            ta.e(122);
-            pt.a(618, param0 ^ -16754303, 22, 320, 110);
+            TeamManagementScreen.e(122);
+            AuctionListing.a(618, param0 ^ -16754303, 22, 320, 110);
             stackIn_147_0 = this.field_H;
             stackIn_147_1 = this.field_jb;
             stackIn_147_2 = 570;
@@ -567,7 +567,7 @@ final class ol extends hs {
             }
             SoftwareRasterizer.a(stackIn_147_0, stackIn_147_1, stackIn_147_2, stackIn_147_3, stackIn_147_4, stackIn_148_5, 128);
             stackIn_151_0 = un.field_d;
-            stackIn_151_1 = qt.field_h;
+            stackIn_151_1 = ButtonMenuScreen.field_h;
             stackIn_151_2 = 285 + this.field_H;
             stackIn_151_3 = 12 + this.field_jb;
             if (this.field_U) {
@@ -576,12 +576,12 @@ final class ol extends hs {
               stackIn_152_4 = 11184810;
             }
             ((CoverageBitmapFont) (Object) stackIn_151_0).d(stackIn_151_1, stackIn_151_2, stackIn_151_3, stackIn_152_4, -1);
-            ta.e(117);
-            pt.a(618, param0 ^ -16754303, 22, 305, 110);
+            TeamManagementScreen.e(117);
+            AuctionListing.a(618, param0 ^ -16754303, 22, 305, 110);
           }
           if (this.field_M != 0) {
-            ta.e(param0 ^ 16777090);
-            pt.a(618, -22914, 22, 320, 95);
+            TeamManagementScreen.e(param0 ^ 16777090);
+            AuctionListing.a(618, -22914, 22, 320, 95);
             stackIn_159_0 = this.field_v;
             stackIn_159_1 = this.field_A;
             stackIn_159_2 = 570;
@@ -603,10 +603,10 @@ final class ol extends hs {
               stackIn_164_4 = 65793;
             }
             ((CoverageBitmapFont) (Object) stackIn_163_0).d(stackIn_163_1, stackIn_163_2, stackIn_163_3, stackIn_164_4, -1);
-            ta.e(param0 - 16777089);
-            pt.a(618, param0 ^ -16754303, 22, 305, 110);
+            TeamManagementScreen.e(param0 - 16777089);
+            AuctionListing.a(618, param0 ^ -16754303, 22, 305, 110);
           }
-          ta.e(127);
+          TeamManagementScreen.e(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -624,7 +624,7 @@ final class ol extends hs {
         int var3_int = 0;
         RuntimeException var3 = null;
         try {
-          var3_int = this.field_c[param0].field_m;
+          var3_int = this.field_c[param0].kind;
           if (param1 != 50) {
             return false;
           }
@@ -678,7 +678,7 @@ final class ol extends hs {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         String var6 = null;
-        up var7 = null;
+        PlayerStats var7 = null;
         String var7_ref = null;
         int var8 = 0;
         String var9 = null;
@@ -704,23 +704,23 @@ final class ol extends hs {
                 SoftwareRasterizer.a(-30 + this.field_o[var6_int].field_F, 92, 110, 180, 10, 0, 128);
                 this.field_o[var6_int].h((byte) -116);
                 this.field_s[var6_int].a(59, true);
-                if (var7.field_n >= 100 &&
-                  100 <= var7.field_g &&
-                  100 <= var7.field_o) {
+                if (var7.power >= 100 &&
+                  100 <= var7.speed &&
+                  100 <= var7.tackle) {
                   wq.a(-23 + this.field_o[var6_int].field_F, param1, 150, (byte) 32, hv.field_b, 100);
                 } else {
                   var8 = Math.abs(this.field_j);
                   var8 = var8 | Math.abs(this.field_j) << 8;
                   var8 = var8 | 16711680;
-                  eo.a(this.field_o[var6_int].field_F - 25, this.field_o[var6_int].field_T + 80, var7.field_r, 3, false, 0);
+                  eo.a(this.field_o[var6_int].field_F - 25, this.field_o[var6_int].field_T + 80, var7.experience, 3, false, 0);
                   var9 = "";
                   if (this.field_l[var6_int] > 0) {
                     var9 = var9 + MouseWheelInput.field_d + "+" + this.field_l[var6_int];
                   }
-                  if (var7.field_r >= 100) {
+                  if (var7.experience >= 100) {
                     var9 = var9 + "<br>" + ss.field_e + "<col=" + Integer.toHexString(var8) + ">Max</col>";
                   } else {
-                    var9 = var9 + "<br>" + ss.field_e + var7.field_r;
+                    var9 = var9 + "<br>" + ss.field_e + var7.experience;
                   }
                   wq.a(-30 + this.field_o[var6_int].field_F, param1, 164, (byte) 32, var9, 110);
                 }
@@ -732,15 +732,15 @@ final class ol extends hs {
           }
           if (decompiledNaturalLoopExit0) {
             param4 += 6;
-            SoftwareRasterizer.drawLine(159, param4 + 36, 159, 63 + param4, 4473924);
-            SoftwareRasterizer.drawLine(160, param4 + 35, 160, 64 + param4, 11184810);
-            SoftwareRasterizer.drawLine(161, 36 + param4, 161, param4 + 63, 4473924);
-            SoftwareRasterizer.drawLine(469, 36 + param4, 469, param4 + 63, 4473924);
-            SoftwareRasterizer.drawLine(470, param4 + 35, 470, param4 + 64, 11184810);
-            SoftwareRasterizer.drawLine(471, param4 + 36, 471, 63 + param4, 4473924);
-            SoftwareRasterizer.drawLine(33, param4 + 71, 602, param4 + 71, 4473924);
-            SoftwareRasterizer.drawLine(32, 72 + param4, 603, param4 + 72, 11184810);
-            SoftwareRasterizer.drawLine(33, 73 + param4, 602, 73 + param4, 4473924);
+            SoftwareRasterizer.b(159, param4 + 36, 159, 63 + param4, 4473924);
+            SoftwareRasterizer.b(160, param4 + 35, 160, 64 + param4, 11184810);
+            SoftwareRasterizer.b(161, 36 + param4, 161, param4 + 63, 4473924);
+            SoftwareRasterizer.b(469, 36 + param4, 469, param4 + 63, 4473924);
+            SoftwareRasterizer.b(470, param4 + 35, 470, param4 + 64, 11184810);
+            SoftwareRasterizer.b(471, param4 + 36, 471, 63 + param4, 4473924);
+            SoftwareRasterizer.b(33, param4 + 71, 602, param4 + 71, 4473924);
+            SoftwareRasterizer.b(32, 72 + param4, 603, param4 + 72, 11184810);
+            SoftwareRasterizer.b(33, 73 + param4, 602, 73 + param4, 4473924);
             stackIn_25_0 = param3;
             stackIn_25_1 = 119;
           }
@@ -748,8 +748,8 @@ final class ol extends hs {
             return;
           }
           wq.a(param2, param1, param4, (byte) 32, IntrusiveNode.field_c, param0);
-          var6 = AlphaContainer.field_D + "+" + ad.a(this.field_G, 26300);
-          var6 = var6 + "<br>" + ss.field_e + ad.a(GameLoopApplet.field_E.field_x, 26300);
+          var6 = AlphaContainer.field_D + "+" + ad.formatCurrencyAmount(this.field_G, 26300);
+          var6 = var6 + "<br>" + ss.field_e + ad.formatCurrencyAmount(GameLoopApplet.field_E.field_x, 26300);
           wq.a(25, param1, param4, (byte) 32, var6, 140);
           stackIn_30_0 = new StringBuilder().append(bt.field_c);
           if (this.field_Y > 0) {
@@ -787,7 +787,7 @@ final class ol extends hs {
         int var7 = 0;
         int var8 = 0;
         try {
-          var4 = ne.field_G;
+          var4 = GameplayHelpScreen.field_G;
           if (!var4[rb.field_Kb] &&
             !var4[98] &&
             param2 != 98) {
@@ -945,10 +945,10 @@ final class ol extends hs {
           var4 = new int[]{47, 56, 50, 44, 11, 12, 55};
           if (var4 != null) {
             var5 = 120;
-            this.field_c = new io[var4.length];
+            this.field_c = new MenuButton[var4.length];
             var6_int = 0;
             while (var6_int < var4.length) {
-              this.field_c[var6_int] = new io(var5, 7126504, var4[var6_int]);
+              this.field_c[var6_int] = new MenuButton(var5, 7126504, var4[var6_int]);
               var6_int++;
               if (var10 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -1029,7 +1029,7 @@ final class ol extends hs {
                     decompiledFrameCompleted2 = false;
                     break;
                   }
-                  this.field_o[var8] = new kq();
+                  this.field_o[var8] = new SquadSlotWidget();
                   stackIn_76_0 = var8 * 155;
                   decompiledFrameCompleted1 = false;
                   break;
@@ -1050,7 +1050,7 @@ final class ol extends hs {
                 (decompiledFrameCompleted1)) {
                 this.field_s = new hd[4];
                 this.field_l = var6.field_o;
-                this.field_o = new kq[4];
+                this.field_o = new SquadSlotWidget[4];
                 var8Lifetime1 = 0;
                 while (true) {
                   stackIn_64_0Lifetime1 = -5;
@@ -1058,7 +1058,7 @@ final class ol extends hs {
                   if (stackIn_64_0Lifetime1 >= stackIn_64_1Lifetime1) {
                     break;
                   }
-                  this.field_o[var8Lifetime1] = new kq();
+                  this.field_o[var8Lifetime1] = new SquadSlotWidget();
                   stackIn_76_0 = var8Lifetime1 * 155;
                   if (var10 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -1150,9 +1150,9 @@ final class ol extends hs {
             this.field_S == 0) {
             var3 = this.d(127, 3);
             var4 = this.c(342, 3);
-            pt.a(31 + var3, -22914, var3 - 31, var4 - 17, var4 - 37);
+            AuctionListing.a(31 + var3, -22914, var3 - 31, var4 - 17, var4 - 37);
             SoftwareRasterizer.a(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
-            ta.e(param0 + 116);
+            TeamManagementScreen.e(param0 + 116);
             uv.a(var3 - 19, (byte) -82, -22 + var4);
             IsSixCommand.field_C.a(eq.field_b, -6 + var3, -16 + var4, 16777215, -1);
           }
@@ -1163,9 +1163,9 @@ final class ol extends hs {
             this.b((byte) -109)) {
             var3Lifetime1 = this.d(param0 ^ 126, 0);
             var4Lifetime1 = this.c(342, 0);
-            pt.a(31 + var3Lifetime1, -22914, -31 + var3Lifetime1, var4Lifetime1 - 17, -37 + var4Lifetime1);
+            AuctionListing.a(31 + var3Lifetime1, -22914, -31 + var3Lifetime1, var4Lifetime1 - 17, -37 + var4Lifetime1);
             SoftwareRasterizer.a(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
-            ta.e(126);
+            TeamManagementScreen.e(126);
             uv.a(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
             IsSixCommand.field_C.a(eq.field_b, var3Lifetime1 - 6, -16 + var4Lifetime1, 16777215, -1);
           }
@@ -1205,11 +1205,11 @@ final class ol extends hs {
         }
     }
 
-    final void a(int param0, hn param1, int param2, int param3) {
-        up dupTemp$0 = null;
-        up dupTemp$1 = null;
-        up dupTemp$2 = null;
-        up dupTemp$3 = null;
+    final void a(int param0, ManagerAction param1, int param2, int param3) {
+        PlayerStats dupTemp$0 = null;
+        PlayerStats dupTemp$1 = null;
+        PlayerStats dupTemp$2 = null;
+        PlayerStats dupTemp$3 = null;
         boolean stackIn_6_0 = false;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_30_0 = null;
@@ -1217,7 +1217,7 @@ final class ol extends hs {
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_5_0;
-        hn var5 = null;
+        ManagerAction var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         var6 = Kickabout.field_G;
@@ -1225,17 +1225,17 @@ final class ol extends hs {
           if (this.field_a.field_e) {
             return;
           }
-          var5 = (hn) (this.field_gb.g(24009));
+          var5 = (ManagerAction) (this.field_gb.g(24009));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var5))) {
-            stackOut_5_0 = param1.a(var5, 114);
+            stackOut_5_0 = param1.isSameAction(var5, 114);
             stackIn_13_0 = stackOut_5_0 ? 1 : 0;
             stackIn_6_0 = stackOut_5_0;
             if (var6 == 0) {
               if (stackIn_6_0) {
                 return;
               }
-              var5 = (hn) (this.field_gb.c(param0 ^ 32));
+              var5 = (ManagerAction) (this.field_gb.c(param0 ^ 32));
               continue;
             }
             break;
@@ -1244,19 +1244,19 @@ final class ol extends hs {
             stackIn_13_0 = -1;
           }
           if (stackIn_13_0 == ~param3) {
-            dupTemp$0 = GameLoopApplet.field_E.field_i[this.field_hb[param2]];
-            dupTemp$0.field_n = dupTemp$0.field_n + 1;
+            dupTemp$0 = GameLoopApplet.field_E.squad[this.field_hb[param2]];
+            dupTemp$0.power = dupTemp$0.power + 1;
           }
           if (param3 == param0) {
-            dupTemp$1 = GameLoopApplet.field_E.field_i[this.field_hb[param2]];
-            dupTemp$1.field_g = dupTemp$1.field_g + 1;
+            dupTemp$1 = GameLoopApplet.field_E.squad[this.field_hb[param2]];
+            dupTemp$1.speed = dupTemp$1.speed + 1;
           }
           if (2 == param3) {
-            dupTemp$2 = GameLoopApplet.field_E.field_i[this.field_hb[param2]];
-            dupTemp$2.field_o = dupTemp$2.field_o + 1;
+            dupTemp$2 = GameLoopApplet.field_E.squad[this.field_hb[param2]];
+            dupTemp$2.tackle = dupTemp$2.tackle + 1;
           }
-          dupTemp$3 = GameLoopApplet.field_E.field_i[this.field_hb[param2]];
-          dupTemp$3.field_r = dupTemp$3.field_r - 100;
+          dupTemp$3 = GameLoopApplet.field_E.squad[this.field_hb[param2]];
+          dupTemp$3.experience = dupTemp$3.experience - 100;
           this.field_gb.a(param1, 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1302,32 +1302,32 @@ final class ol extends hs {
             var6 = 2 + (160 + var5_int);
             var7 = 244 + var5_int;
             var8 = 160;
-            pt.a(4 + (var5_int + 320), -22914, var5_int, param2 + 21, param2);
+            AuctionListing.a(4 + (var5_int + 320), -22914, var5_int, param2 + 21, param2);
             var9 = 80;
-            SoftwareRasterizer.fillRoundedRectangle(var5_int, param2, var8, 42, 10, 65793);
-            SoftwareRasterizer.fillRoundedRectangle(var6, param2, var9, 42, 10, 65793);
-            SoftwareRasterizer.fillRoundedRectangle(var7, param2, var9, 42, 10, 65793);
+            SoftwareRasterizer.i(var5_int, param2, var8, 42, 10, 65793);
+            SoftwareRasterizer.i(var6, param2, var9, 42, 10, 65793);
+            SoftwareRasterizer.i(var7, param2, var9, 42, 10, 65793);
             un.field_d.d(ib.field_H, var5_int + (var8 >> 1), param2 + 17, 16777215, -1);
             un.field_d.d(et.field_e, var6 + (var9 >> 1), param2 + 17, 16777215, -1);
             un.field_d.d(lt.field_e, var7 + (var9 >> 1), 17 + param2, 16777215, -1);
-            ta.e(122);
+            TeamManagementScreen.e(122);
             var10 = 0;
             var11_ref_ch = (LoggedGoal) (param0.g(24009));
             while (null != var11_ref_ch) {
               param2 += 23;
               var12 = 65793;
               var13 = 128;
-              var14 = this.field_a.field_S[var11_ref_ch.field_s].toLowerCase();
-              stackIn_23_0 = ~var11_ref_ch.field_k;
+              var14 = this.field_a.field_S[var11_ref_ch.scorerParticipant].toLowerCase();
+              stackIn_23_0 = ~var11_ref_ch.scorerTeam;
               stackIn_23_1 = ~var11_ref_ch.field_f;
               if (var15 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
               if (stackIn_23_0 != stackIn_23_1) {
-                var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountRegistrationPanel.field_P, new String[]{this.field_a.field_S[var11_ref_ch.field_s].toLowerCase()});
+                var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountRegistrationPanel.field_P, new String[]{this.field_a.field_S[var11_ref_ch.scorerParticipant].toLowerCase()});
               }
-              if (this.field_g == var11_ref_ch.field_s) {
+              if (this.field_g == var11_ref_ch.scorerParticipant) {
                 var13 = 50;
                 var12 = 16777215;
               }
@@ -1402,7 +1402,7 @@ final class ol extends hs {
             this.field_f &&
             this.field_g >= 0) {
             or.field_d.b(75, (byte) -55);
-            or.field_d.a(117, 3);
+            or.field_d.writeByte(117, 3);
           }
           if (44 == param1) {
             ek.g(-29315);
@@ -1501,16 +1501,16 @@ final class ol extends hs {
                   if (stackIn_17_0) {
                     uv.a(var7 + 10, (byte) -119, var8 - 6);
                   }
-                  b.field_U[this.field_a.field_g[this.field_O[var5][var9]].field_f].c(var7, var8 - 16);
+                  MySquadScreen.field_U[this.field_a.field_g[this.field_O[var5][var9]].field_f].c(var7, var8 - 16);
                   stackIn_26_0 = (var11 == 0) ? 16777215 : 11184810;
                   var12 = stackIn_26_0;
                   un.field_d.d(this.field_w[var5][var9], 80 + var7, var8, var12, -1);
                   if (var11 == 0) {
                     if (var10.field_k) {
-                      hn.a(8, 16777215, 90, var7, var8, 16777215, wq.field_e);
+                      ManagerAction.a(8, 16777215, 90, var7, var8, 16777215, wq.field_e);
                     }
                   } else {
-                    hn.a(8, 14492194, 110, var7, var8, 11184810, vc.field_A);
+                    ManagerAction.a(8, 14492194, 110, var7, var8, 11184810, ReceivedAuctionItem.field_A);
                   }
                   if (var10.resigned) {
                     qq.a(110, (byte) -101, 13421772, ss.field_g, var8, var7, 14492194);
@@ -1543,7 +1543,7 @@ final class ol extends hs {
               if (!um.field_e.field_s) {
                 if (this.field_N) {
                   if (this.field_a.field_e) {
-                    var4 = je.field_p + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, DraggableWidget.field_I, new String[]{ad.a(this.field_G, 26300)});
+                    var4 = AnimationSkeleton.field_p + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, DraggableWidget.field_I, new String[]{ad.formatCurrencyAmount(this.field_G, 26300)});
                   } else {
                     var4 = mc.field_b + "<br>" + vk.field_a + " " + NotCommand.field_E;
                   }
@@ -1570,11 +1570,11 @@ final class ol extends hs {
                 if (!um.field_e.field_q &&
                   this.field_a.field_g[this.field_g].field_l &&
                   pr.field_a[var5] > this.field_a.field_g[this.field_g].field_h) {
-                  var4 = var4 + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, ja.field_L, new String[]{q.field_h[var5], Integer.toString(pr.field_a[var5]), Integer.toString(this.field_a.field_g[this.field_g].field_h)});
+                  var4 = var4 + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, MyKitScreen.field_L, new String[]{q.field_h[var5], Integer.toString(pr.field_a[var5]), Integer.toString(this.field_a.field_g[this.field_g].field_h)});
                 }
               }
             }
-            var5 = IsSixCommand.field_C.c(var4, 380, 16);
+            var5 = IsSixCommand.field_C.paragraphHeight(var4, 380, 16);
             wb.a(var4, 400, var5, -5 + (300 - var5), 120, 0);
           }
           return;
@@ -1833,7 +1833,7 @@ final class ol extends hs {
         int var12_int = 0;
         String var12 = null;
         int var13 = 0;
-        up var14 = null;
+        PlayerStats var14 = null;
         int var15 = 0;
         var15 = Kickabout.field_G;
         try {
@@ -2038,37 +2038,37 @@ final class ol extends hs {
                 return;
               }
               if (this.field_hb[var13] != -1) {
-                var14 = GameLoopApplet.field_E.field_i[this.field_hb[var13]];
+                var14 = GameLoopApplet.field_E.squad[this.field_hb[var13]];
                 this.field_o[var13].b(0, param1);
                 this.field_o[var13].a(this.field_a.field_Q[this.field_h], this.field_a.field_H[this.field_h], (byte) 126, this.field_a.field_d[this.field_h], var14);
                 this.field_s[var13].b(0, param1);
-                if (100 > var14.field_r) {
+                if (100 > var14.experience) {
                   this.field_s[var13].field_lb = false;
                 } else {
                   this.field_s[var13].field_lb = true;
                 }
-                if (var14.field_n >= 100 &&
-                  var14.field_g >= 100 &&
-                  var14.field_o >= 100) {
+                if (var14.power >= 100 &&
+                  var14.speed >= 100 &&
+                  var14.tackle >= 100) {
                   this.field_s[var13].field_lb = false;
                 }
                 if (1 == this.field_s[var13].field_sb) {
-                  if (100 <= var14.field_r) {
-                    if (100 <= var14.field_n &&
-                      var14.field_o >= 100 &&
-                      var14.field_g >= 100) {
+                  if (100 <= var14.experience) {
+                    if (100 <= var14.power &&
+                      var14.tackle >= 100 &&
+                      var14.speed >= 100) {
                       sk.a(7, 16586, var14);
-                      sp.c(49, -122);
+                      ShopPlayerSlot.c(49, -122);
                     } else {
                       dg.a((byte) -120, var13, this.field_hb[var13], var14);
-                      sp.c(49, -121);
+                      ShopPlayerSlot.c(49, -121);
                     }
                   } else {
-                    if (var14.field_n >= 100 &&
-                      var14.field_o >= 100 &&
-                      var14.field_g >= 100) {
+                    if (var14.power >= 100 &&
+                      var14.tackle >= 100 &&
+                      var14.speed >= 100) {
                       sk.a(7, 16586, var14);
-                      sp.c(49, 52);
+                      ShopPlayerSlot.c(49, 52);
                     }
                   }
                   kj.a((byte) 61);

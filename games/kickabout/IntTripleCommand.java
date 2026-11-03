@@ -133,10 +133,10 @@ final class IntTripleCommand extends ConsoleCommand {
         var4.b(param1, (byte) -94);
         var4.field_n = var4.field_n + 1;
         int var5 = var4.field_n;
-        var4.a(108, 6);
+        var4.writeByte(108, 6);
         if (param2 >= 119) {
-          var4.a(param0, -1781890008);
-          var4.c(62, var4.field_n - var5);
+          var4.writeLong(param0, -1781890008);
+          var4.backpatchByteLength(62, var4.field_n - var5);
           return;
         }
     }

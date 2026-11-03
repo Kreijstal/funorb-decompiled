@@ -66,10 +66,10 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           }
           if (null != this.field_ab) {
             if (param3 == 98) {
-              this.field_ab.focusNext(param2, 0);
+              this.field_ab.a(param2, 0);
             }
             if (param3 == 99) {
-              this.field_ab.focusNext(param2, 0);
+              this.field_ab.a(param2, 0);
             }
           }
           if (param1 < -60) {
@@ -134,10 +134,10 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             this.field_T = 0;
             return;
           }
-          if (rv.field_e == this.field_X) {
+          if (ValidationState.field_e == this.field_X) {
             return;
           }
-          this.field_X = rv.field_e;
+          this.field_X = ValidationState.field_e;
           this.field_T = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -178,7 +178,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     }
 
     final void n(int param0) {
-        if (rv.field_e == this.field_X) {
+        if (ValidationState.field_e == this.field_X) {
           return;
         }
         this.field_T = 0;
@@ -201,7 +201,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           if (this.field_X == null) {
             return super.k(param0 + 0);
           }
-          if (rv.field_e != this.field_X) {
+          if (ValidationState.field_e != this.field_X) {
             if (this.field_X != wn.field_b) {
               return super.k(param0 + 0);
             }
@@ -230,7 +230,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         if (this.field_X == null) {
           return super.k(param0 + 0);
         }
-        if (rv.field_e != this.field_X) {
+        if (ValidationState.field_e != this.field_X) {
           if (this.field_X != wn.field_b) {
             return super.k(param0 + 0);
           }

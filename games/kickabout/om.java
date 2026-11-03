@@ -77,22 +77,22 @@ final class om extends hd {
         var6 = Kickabout.field_G;
         try {
           var8 = un.field_e;
-          var2 = var8.h((byte) -114);
+          var2 = var8.readUnsignedByte((byte) -114);
           if (param0 == var2) {
             var3_ref_k = (k) (ci.field_f.g(param0 ^ 24009));
             if (var3_ref_k == null) {
               lr.b((byte) -116);
               return;
             }
-            var4_int = var8.h((byte) -112);
+            var4_int = var8.readUnsignedByte((byte) -112);
             if (0 != var4_int) {
               var12 = new byte[var4_int];
-              var8.a(var12, 0, (byte) -6, var4_int);
+              var8.readBytes(var12, 0, (byte) -6, var4_int);
             } else {
               var5 = null;
             }
             var8.field_n = var8.field_n + 4;
-            if (!var8.h(param0 + 0)) {
+            if (!var8.verifyCrc32(param0 + 0)) {
               lr.b((byte) -116);
               return;
             }
@@ -100,11 +100,11 @@ final class om extends hd {
             return;
           }
           if (var2 != 1) {
-            bd.a("A1: " + tr.b(0), (Throwable) null, param0 + 1);
+            UnreadMessagesScreen.a("A1: " + tr.b(0), (Throwable) null, param0 + 1);
             lr.b((byte) -116);
             return;
           }
-          var3 = var8.k(4);
+          var3 = var8.readInt(4);
           var4 = (mp) (le.field_d.g(24009));
           while (var4 != null) {
             if (var4.field_m != var3) {
@@ -141,7 +141,7 @@ final class om extends hd {
           if (param2 > -59) {
             field_Ab = (String) null;
           }
-          ta.a(param1, param4, param3.field_n, 0, param3.field_f, 10, param0);
+          TeamManagementScreen.writeEncryptedLoginBlock(param1, param4, param3.field_n, 0, param3.field_f, 10, param0);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "om.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

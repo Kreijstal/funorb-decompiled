@@ -31,9 +31,9 @@ final class dr {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        jm var4_ref_jm = null;
+        DelayedServerPacket var4_ref_jm = null;
         int var4 = 0;
-        jm var5 = null;
+        DelayedServerPacket var5 = null;
         int var7 = 0;
         var7 = Kickabout.field_G;
         try {
@@ -46,19 +46,19 @@ final class dr {
           var2_long = nj.a(-90);
           if (cu.field_c != 0 &&
             ll.field_i < 0) {
-            var4_ref_jm = (jm) (ConsolePanel.field_i.g(24009));
+            var4_ref_jm = (DelayedServerPacket) (ConsolePanel.field_i.g(24009));
             if (var4_ref_jm != null &&
-              var4_ref_jm.field_f < var2_long) {
+              var4_ref_jm.dueTime < var2_long) {
               var4_ref_jm.c((byte) -109);
-              ms.field_b = var4_ref_jm.field_k.length;
+              ms.field_b = var4_ref_jm.data.length;
               un.field_e.field_n = 0;
               for (var5_int = 0; var5_int < ms.field_b; var5_int++) {
-                un.field_e.field_f[var5_int] = var4_ref_jm.field_k[var5_int];
+                un.field_e.field_f[var5_int] = var4_ref_jm.data[var5_int];
               }
-              dj.field_A = wb.field_n;
-              wb.field_n = kq.field_Ab;
-              kq.field_Ab = so.field_b;
-              so.field_b = var4_ref_jm.field_j;
+              PagedHelpScreen.field_A = wb.field_n;
+              wb.field_n = SquadSlotWidget.field_Ab;
+              SquadSlotWidget.field_Ab = so.field_b;
+              so.field_b = var4_ref_jm.opcode;
               return true;
             }
           }
@@ -72,13 +72,13 @@ final class dr {
               un.field_e.field_n = 0;
               ms.field_b = param1[ll.field_i];
             }
-            if (!ps.a(180)) {
+            if (!LoginCredentials.a(180)) {
               return false;
             }
             if (cu.field_c == 0) {
-              dj.field_A = wb.field_n;
-              wb.field_n = kq.field_Ab;
-              kq.field_Ab = so.field_b;
+              PagedHelpScreen.field_A = wb.field_n;
+              wb.field_n = SquadSlotWidget.field_Ab;
+              SquadSlotWidget.field_Ab = so.field_b;
               so.field_b = ll.field_i;
               ll.field_i = -1;
               return true;
@@ -90,9 +90,9 @@ final class dr {
                 var4 = 0;
               }
             }
-            var5 = new jm(var2_long + (long)var4, ll.field_i, new byte[ms.field_b]);
+            var5 = new DelayedServerPacket(var2_long + (long)var4, ll.field_i, new byte[ms.field_b]);
             for (var6 = 0; var6 < ms.field_b; var6++) {
-              var5.field_k[var6] = un.field_e.field_f[var6];
+              var5.data[var6] = un.field_e.field_f[var6];
             }
             ConsolePanel.field_i.a(var5, 3);
             ll.field_i = -1;
@@ -115,7 +115,7 @@ final class dr {
         if (param0 != 0) {
           return (hd) null;
         }
-        return sp.field_Jb.field_Ab;
+        return ShopPlayerSlot.field_Jb.field_Ab;
     }
 
     final static String a(int param0, Class param1) {

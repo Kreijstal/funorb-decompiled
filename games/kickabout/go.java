@@ -57,7 +57,7 @@ final class go {
 
     final static int a(int param0, byte param1) {
         if (param1 == -56) {
-          return ((int)((-fw.field_G + (-jr.field_Gb + (double)param0)) * (double)hw.field_i) >> 8) + 240;
+          return ((int)((-MyPitchScreen.field_G + (-jr.field_Gb + (double)param0)) * (double)InstrumentNoteMask.field_i) >> 8) + 240;
         }
         return 123;
     }

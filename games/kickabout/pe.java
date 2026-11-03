@@ -23,10 +23,10 @@ final class pe {
           if (!gs.field_c.a(false, "commonui")) {
             return 60;
           }
-          if (!up.field_k.d(param0 - 179)) {
+          if (!PlayerStats.field_k.d(param0 - 179)) {
             return 70;
           }
-          if (!up.field_k.a(false)) {
+          if (!PlayerStats.field_k.a(false)) {
             return 80;
           }
         } else {
@@ -53,10 +53,10 @@ final class pe {
           if (!gs.field_c.a(false, "commonui")) {
             return 80;
           }
-          if (!up.field_k.d(-106)) {
+          if (!PlayerStats.field_k.d(-106)) {
             return 82;
           }
-          if (!up.field_k.a(false)) {
+          if (!PlayerStats.field_k.a(false)) {
             return 86;
           }
         }
@@ -73,8 +73,8 @@ final class pe {
         var2 = Kickabout.field_G;
         try {
           if (!n.a(false)) {
-            if (null != e.field_m &&
-              e.field_m.field_b) {
+            if (null != SplashScreen.field_m &&
+              SplashScreen.field_m.field_b) {
               UiWidget.h(0);
               ValidatedTextWidget.field_Z.a(new ve(ValidatedTextWidget.field_Z, hf.field_a), false);
             }
@@ -167,10 +167,10 @@ final class pe {
             int[] var5 = (int[]) null;
             pe.isInsideAnyArea((PlayArea[]) null, (byte) 103, (int[]) null);
           }
-          TriangleRasterizer.c();
-          TriangleRasterizer.b(SoftwareRasterizer.field_g >> 1, 198);
+          TriangleRasterizer.useRasterClip();
+          TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 198);
           param0.a(0, 0, 0, 0, 0, 0, 0, 700);
-          ta.e(param3 + 77);
+          TeamManagementScreen.e(param3 + 77);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "pe.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

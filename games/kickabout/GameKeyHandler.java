@@ -39,7 +39,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (nr.field_q != null) {
+          if (PlayerModelPreview.field_q != null) {
             rc.field_d = -1;
           }
           return;
@@ -64,14 +64,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (nr.field_q != null) {
+          if (PlayerModelPreview.field_q != null) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && 65535 != var2_int &&
               DebugConsole.a((char) var2_int, (byte) 80)) {
               var3 = du.field_j + 1 & 127;
               if (var3 != LineupAgent.field_n) {
                 bt.field_a[du.field_j] = -1;
-                up.field_a[du.field_j] = (char)var2_int;
+                PlayerStats.field_a[du.field_j] = (char)var2_int;
                 du.field_j = var3;
               }
             }
@@ -119,11 +119,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var22Lifetime2;
         var26 = Kickabout.field_G;
         try {
-          var1_int = fp.field_f * 6 >> 8;
+          var1_int = AuctionItem.field_f * 6 >> 8;
           var2 = 2 * DualLinkNode.field_h[0].field_i;
           var3 = 3 * hl.field_e[0].field_a;
-          var4 = 146 * hw.field_i >> 8;
-          var5 = hw.field_i * 140 >> 8;
+          var4 = 146 * InstrumentNoteMask.field_i >> 8;
+          var5 = InstrumentNoteMask.field_i * 140 >> 8;
           stackIn_4_0 = (qr.a(0, (byte) -1) >= -var2 + 896 >> 1) ? 0 : 1;
           var6 = stackIn_4_0;
           stackIn_7_0 = (ig.a(0, 4620) >= 1344 - var3 >> 1) ? 0 : 1;
@@ -132,21 +132,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           var8 = stackIn_10_0;
           stackIn_13_0 = (ig.a(480, 4620) <= 1344 + var3 >> 1) ? 0 : 1;
           var9 = stackIn_13_0;
-          var10 = b.c(-75, 448);
+          var10 = MySquadScreen.c(-75, 448);
           var11 = go.a(672, (byte) -56);
-          var12 = DualLinkNode.field_h[0].field_i * hw.field_i >> 8;
-          var13 = hw.field_i * hl.field_e[0].field_a >> 8;
+          var12 = DualLinkNode.field_h[0].field_i * InstrumentNoteMask.field_i >> 8;
+          var13 = InstrumentNoteMask.field_i * hl.field_e[0].field_a >> 8;
           var14 = var10 + (-(1 * var12) + 0);
           var15 = -(1 * var13) + (var11 - (var13 >> 1));
           var16 = var12 * 2 + var14;
           var17 = var13 * 3 + var15;
-          var18 = c.field_f[0].field_v * hw.field_i >> 8;
+          var18 = c.field_f[0].field_v * InstrumentNoteMask.field_i >> 8;
           var20 = 84 % ((30 - param0) / 34);
-          var19 = c.field_f[0].field_o * hw.field_i >> 8;
-          var21 = hw.field_i * (LoggedGoal.field_o.field_o + 78) >> 8;
+          var19 = c.field_f[0].field_o * InstrumentNoteMask.field_i >> 8;
+          var21 = InstrumentNoteMask.field_i * (LoggedGoal.field_o.field_o + 78) >> 8;
           if (var6 != 0 &&
             var7 != 0) {
-            im.a(-12376, -var21 + var14, var15 - var5, wh.field_p);
+            im.a(-12376, -var21 + var14, var15 - var5, FadingSoundPlayer.field_p);
             im.a(-12376, var14 - var19, var15 - var18, c.field_f[0]);
           }
           if (var8 != 0 &&
@@ -157,21 +157,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           for (var22 = 0; var22 < 2; var22++) {
             if (var7 != 0) {
               im.a(-12376, var14 + var12 * var22, -var5 + var15, od.field_p);
-              wf.a(-840618968, var12 * var22 + var14, DualLinkNode.field_h[var1_int], -var18 + var15);
+              AuctionsScreen.a(-840618968, var12 * var22 + var14, DualLinkNode.field_h[var1_int], -var18 + var15);
             }
             if (var9 != 0) {
               im.a(-12376, var12 * var22 + var14, var17, qj.field_a);
-              wf.a(-840618968, var14 + var22 * var12, ModalPanel.field_G[var1_int], var17 + var5);
+              AuctionsScreen.a(-840618968, var14 + var22 * var12, ModalPanel.field_G[var1_int], var17 + var5);
             }
           }
           for (var22Lifetime1 = 0; var22Lifetime1 < 3; var22Lifetime1++) {
             if (var6 != 0) {
               im.a(-12376, -var21 + var14, var13 * var22Lifetime1 + var15, LoggedGoal.field_o);
-              wf.a(-840618968, -var19 + var14, hl.field_e[var1_int], var22Lifetime1 * var13 + var15);
+              AuctionsScreen.a(-840618968, -var19 + var14, hl.field_e[var1_int], var22Lifetime1 * var13 + var15);
             }
             if (var8 != 0) {
               im.a(-12376, var16, var13 * var22Lifetime1 + var15, mt.field_d);
-              wf.a(-840618968, var16 + var4, hq.field_e[var1_int], var15 + var22Lifetime1 * var13);
+              AuctionsScreen.a(-840618968, var16 + var4, hq.field_e[var1_int], var15 + var22Lifetime1 * var13);
             }
           }
           if (var6 != 0 &&
@@ -184,12 +184,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             im.a(-12376, var16, var17, pf.field_b);
             im.a(-12376, var16, var17, c.field_f[3]);
           }
-          var22Lifetime2 = b.c(-82, -130);
-          var23 = b.c(-70, 998);
+          var22Lifetime2 = MySquadScreen.c(-82, -130);
+          var23 = MySquadScreen.c(-70, 998);
           for (var24 = 0; var24 < 8; var24++) {
-            var25 = go.a(40 + (-22 + hn.field_f.field_v) * var24, (byte) -56);
-            im.a(-12376, var22Lifetime2, var25, hn.field_f);
-            im.a(-12376, var23, var25, da.field_m);
+            var25 = go.a(40 + (-22 + ManagerAction.field_f.field_v) * var24, (byte) -56);
+            im.a(-12376, var22Lifetime2, var25, ManagerAction.field_f);
+            im.a(-12376, var23, var25, MusicPatchNode.field_m);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,7 +209,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException var2 = null;
         int var3Lifetime1;
         try {
-          if (null != nr.field_q) {
+          if (null != PlayerModelPreview.field_q) {
             fj.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -233,7 +233,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var3 = 127 & du.field_j + 1;
               if (var3 != LineupAgent.field_n) {
                 bt.field_a[du.field_j] = var2_int;
-                up.field_a[du.field_j] = (char)0;
+                PlayerStats.field_a[du.field_j] = (char)0;
                 du.field_j = var3;
               }
             }
@@ -268,7 +268,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (nr.field_q != null) {
+          if (PlayerModelPreview.field_q != null) {
             fj.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -304,8 +304,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static void b(int param0) {
         int var2 = 0;
-        if (!(iu.field_i <= 0)) {
-          iu.field_i = iu.field_i - 1;
+        if (!(CachedListingRow.field_i <= 0)) {
+          CachedListingRow.field_i = CachedListingRow.field_i - 1;
           return;
         }
         if (param0 != 40) {
@@ -315,13 +315,13 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (vl.field_d &&
           -1 + pq.field_L.length > bm.field_I) {
           bm.field_I = bm.field_I + 1;
-          gp.field_i = pq.field_L[bm.field_I] * var1 >> 12;
+          PasswordLoginCredentials.field_i = pq.field_L[bm.field_I] * var1 >> 12;
         }
         if (!vl.field_d &&
           !(bm.field_I <= 0)) {
           bm.field_I = bm.field_I - 1;
           var2 = -1 + pq.field_L.length;
-          gp.field_i = var1 - (-bm.field_I + var2) * ((var2 - bm.field_I) * var1) / (var2 * var2);
+          PasswordLoginCredentials.field_i = var1 - (-bm.field_I + var2) * ((var2 - bm.field_I) * var1) / (var2 * var2);
         }
     }
 

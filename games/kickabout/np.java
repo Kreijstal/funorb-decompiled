@@ -287,7 +287,7 @@ final class np extends hd {
           return;
         }
         if (eq.field_a != vu.field_Hb) {
-          if (bn.field_A != eq.field_a) {
+          if (LeaguesScreen.field_A != eq.field_a) {
             return;
           }
           fieldTemp$2 = vo.field_bb;
@@ -308,7 +308,7 @@ final class np extends hd {
             ConsoleEvaluationException.a(false, 0);
           }
         }
-        eq.field_a = bn.field_A;
+        eq.field_a = LeaguesScreen.field_A;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -323,7 +323,7 @@ final class np extends hd {
     }
 
     final static void a(int param0, int param1, int param2) {
-        lo.a(0, param2, param0, true, (byte) -55);
+        PasswordValidator.a(0, param2, param0, true, (byte) -55);
         int var3 = -114 / ((param1 - 16) / 57);
     }
 

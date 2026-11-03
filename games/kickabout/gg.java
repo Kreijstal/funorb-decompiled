@@ -107,12 +107,12 @@ final class gg extends hd {
 
     final static void h(byte param0) {
         hd.field_K = CachedArchiveSource.field_C;
-        hw.field_f = PlayArea.field_d;
-        jr.field_Gb = cq.field_f;
-        up.field_f = 0.0;
+        InstrumentNoteMask.field_f = PlayArea.field_d;
+        jr.field_Gb = AuctionLogEntry.field_f;
+        PlayerStats.field_f = 0.0;
         DualLinkDeque.field_e = 0.0;
         int var1 = -104 % ((param0 + 10) / 60);
-        hw.field_i = (int)hw.field_f >> 3;
+        InstrumentNoteMask.field_i = (int)InstrumentNoteMask.field_f >> 3;
         IntrusiveDeque.field_a = 0.0;
     }
 

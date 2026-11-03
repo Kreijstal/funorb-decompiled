@@ -148,7 +148,7 @@ final class bo extends hd {
           var10 = 50;
           var11 = 0;
           for (var12 = 0; var12 < r.field_b.length; var12++) {
-            var13 = new hd(0L, param3, ud.field_A[var12]);
+            var13 = new hd(0L, param3, MatchTransitionScreen.field_A[var12]);
             var14 = new hd(0L, param3, r.field_b[var12]);
             var15 = param3.field_X.a(r.field_b[var12]);
             if (var15 > var11) {

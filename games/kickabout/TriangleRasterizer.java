@@ -1102,7 +1102,7 @@ final class TriangleRasterizer {
           return;
         }
         var20Lifetime1 = field_d.a((byte) 79, param18);
-        TriangleRasterizer.drawShadedTriangle(param0, param1, param2, param3, param4, param5, TriangleRasterizer.c(var20Lifetime1, param6), TriangleRasterizer.c(var20Lifetime1, param7), TriangleRasterizer.c(var20Lifetime1, param8));
+        TriangleRasterizer.a(param0, param1, param2, param3, param4, param5, TriangleRasterizer.c(var20Lifetime1, param6), TriangleRasterizer.c(var20Lifetime1, param7), TriangleRasterizer.c(var20Lifetime1, param8));
     }
 
     final static void a(float param0) {
@@ -1122,7 +1122,7 @@ final class TriangleRasterizer {
         return (param0 & 65408) + param1;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_q = null;
         field_l = null;
         field_d = null;
@@ -1132,7 +1132,7 @@ final class TriangleRasterizer {
         field_o = null;
     }
 
-    final static void b(int param0, int param1) {
+    final static void setProjectionCenter(int param0, int param1) {
         int var2 = field_q[0];
         int var3 = var2 / SoftwareRasterizer.field_g;
         int var4 = var2 - var3 * SoftwareRasterizer.field_g;
@@ -1258,7 +1258,7 @@ final class TriangleRasterizer {
         }
     }
 
-    private final static void b() {
+    private final static void centerProjection() {
         field_p = field_b / 2;
         field_e = field_k / 2;
     }
@@ -1268,7 +1268,7 @@ final class TriangleRasterizer {
         field_i = (float)((double)field_i + (Math.random() * 0.03 - 0.015));
     }
 
-    final static void drawShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int localTemp$2 = 0;
@@ -1762,7 +1762,7 @@ final class TriangleRasterizer {
         return;
     }
 
-    final static void drawFlatTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int localTemp$2 = 0;
@@ -2318,11 +2318,11 @@ final class TriangleRasterizer {
 
     }
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void setClip(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         field_b = param2 - param0;
         field_k = param3 - param1;
-        TriangleRasterizer.b();
+        TriangleRasterizer.centerProjection();
         if (field_q.length < field_k) {
           field_q = new int[ig.a((byte) 6, field_k)];
         }
@@ -2333,8 +2333,8 @@ final class TriangleRasterizer {
         }
     }
 
-    final static void c() {
-        TriangleRasterizer.a(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, SoftwareRasterizer.field_c, SoftwareRasterizer.field_h);
+    final static void useRasterClip() {
+        TriangleRasterizer.setClip(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, SoftwareRasterizer.field_c, SoftwareRasterizer.field_h);
     }
 
     private final static void a(int param0, int param1) {

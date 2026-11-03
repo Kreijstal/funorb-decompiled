@@ -24,12 +24,12 @@ final class ar {
           var2_int = BytePlusOneCommand.field_A;
           var3 = n.field_m;
           var4 = ConsoleEvaluationException.field_e.field_X.b(param1, 500);
-          var5 = 6 + ConsoleEvaluationException.field_e.field_X.a(param1, 500);
+          var5 = 6 + ConsoleEvaluationException.field_e.field_X.maxLineWidth(param1, 500);
           var6 = 2 + var4 * sh.field_c;
           var7 = ou.b(var5, var2_int, 12, 127);
           var8 = nj.a(var3, 20, var6, 29079);
           SoftwareRasterizer.e(var7, var8, var5, var6, 0);
-          SoftwareRasterizer.a(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
+          SoftwareRasterizer.fillRect(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
           ConsoleEvaluationException.field_e.field_X.a(param1, 3 + var7, var8 - (-1 - ig.field_c) - ConsoleEvaluationException.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, sh.field_c);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ar.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -39,7 +39,7 @@ final class ar {
     final static void a(int param0, int param1) {
         try {
           try {
-            AppletJavaScriptBridge.callWithArguments(new Object[]{new Integer(param1)}, so.a(-120), "resizing", 25449);
+            AppletJavaScriptBridge.a(new Object[]{new Integer(param1)}, so.a(-120), "resizing", 25449);
           } catch (Throwable throwable) {
           }
           if (param0 == 500) {

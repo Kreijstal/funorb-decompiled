@@ -230,15 +230,15 @@ final class rf {
           var5.b(param1, (byte) -75);
           var5.field_n = var5.field_n + 1;
           var4 = var5.field_n;
-          var5.a(125, 1);
-          var5.a(113, param0.field_j);
-          var5.e(-109, param0.field_i);
-          var5.b(-65, param0.field_e);
-          var5.b(-84, param0.field_l);
-          var5.b(-74, param0.field_n);
-          var5.b(-75, param0.field_g);
-          var5.a(var4, !param2 ? true : false);
-          var5.c(62, var5.field_n - var4);
+          var5.writeByte(125, 1);
+          var5.writeByte(113, param0.field_j);
+          var5.writeSignedSmart(-109, param0.field_i);
+          var5.writeInt(-65, param0.field_e);
+          var5.writeInt(-84, param0.field_l);
+          var5.writeInt(-74, param0.field_n);
+          var5.writeInt(-75, param0.field_g);
+          var5.appendCrc32(var4, !param2 ? true : false);
+          var5.backpatchByteLength(62, var5.field_n - var4);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "rf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -271,7 +271,7 @@ final class rf {
         try {
           var3 = new String[]{param0, ConsoleExpression.field_n, at.field_Jb};
           var4 = new hd[]{param1, kk.field_R, (hd) ((Object) nq.field_F)};
-          this.field_b = new kf(0L, ge.field_n, var3, MouseInputHandler.field_b, var4, 0);
+          this.field_b = new kf(0L, MatchingTextValidator.field_n, var3, MouseInputHandler.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

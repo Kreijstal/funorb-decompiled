@@ -31,7 +31,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           if (param1 != 17369) {
             DemoIntegersCommand.g(27);
           }
-          var5 = param0.findFileId((byte) -121, param3, var4_int);
+          var5 = param0.a((byte) -121, param3, var4_int);
           stackIn_3_0 = GoalStateAgent.a(var4_int, var5, param0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -133,7 +133,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           if (param0 != 84) {
             field_F = (CommonGame) null;
           }
-          stackIn_3_0 = new ConsoleValue(nt.k(39));
+          stackIn_3_0 = new ConsoleValue(KitStyleTile.k(39));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

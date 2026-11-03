@@ -4,7 +4,7 @@
 final class ic {
     static String field_b;
     static boolean field_f;
-    static gr field_h;
+    static ClubState field_h;
     static String field_e;
     static hd field_a;
     static boolean field_i;
@@ -34,7 +34,7 @@ final class ic {
         var13 = Kickabout.field_G;
         try {
           var8_int = param0 - 30;
-          var9 = 16 + IsSixCommand.field_C.c(param1, var8_int, 16);
+          var9 = 16 + IsSixCommand.field_C.paragraphHeight(param1, var8_int, 16);
           if (param6) {
             param4 = param4 - (var9 >> 1);
           }
@@ -94,7 +94,7 @@ final class ic {
           field_d = null;
           return;
         }
-        field_h = (gr) null;
+        field_h = (ClubState) null;
         field_a = null;
         field_e = null;
         field_j = null;
@@ -127,6 +127,6 @@ final class ic {
         field_g = "Return to Main Menu";
         field_c = "You need a rating of <%1> to play with the current options.";
         field_j = "search";
-        field_h = new gr();
+        field_h = new ClubState();
     }
 }

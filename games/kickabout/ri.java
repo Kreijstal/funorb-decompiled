@@ -65,8 +65,8 @@ class ri extends TextWidgetPainter {
             }
           } else {
             ParticipantStatus.a(param1, param3, (byte) 103, param2.field_r[param3]);
-            var10 = var6 - ge.field_m[0];
-            var11 = -ge.field_m[1] + var7;
+            var10 = var6 - MatchingTextValidator.field_m[0];
+            var11 = -MatchingTextValidator.field_m[1] + var7;
             var12 = 24;
             var13 = 24;
             if ((10 & var16.directionMask) == 0) {
@@ -230,11 +230,11 @@ class ri extends TextWidgetPainter {
           BytePlusOneCommand.field_I = 2;
           mj.field_b = 2;
           var7 = Checkbox.a("largefont", param0, 75, "lobby", param4);
-          rq.field_E = Checkbox.a("generalfont", param0, 87, "lobby", param4);
-          jw.field_Ab = Checkbox.a("chatfont", param0, 112, "lobby", param4);
+          ServerMessageScreen.field_E = Checkbox.a("generalfont", param0, 87, "lobby", param4);
+          CheckboxLabelWidget.field_Ab = Checkbox.a("chatfont", param0, 112, "lobby", param4);
           var7.a(var5, var25);
-          rq.field_E.a(var5, var25);
-          jw.field_Ab.a(var5, var25);
+          ServerMessageScreen.field_E.a(var5, var25);
+          CheckboxLabelWidget.field_Ab.a(var5, var25);
           var8 = new hd(0L, (hd) null);
           var8.field_y = 16777215;
           var8.field_X = (BitmapFont) ((Object) var7);
@@ -248,13 +248,13 @@ class ri extends TextWidgetPainter {
             var19 = (CommonGame) null;
             ri.updateIdleMovement((byte) -76, -14, (CommonGame) null, 71);
           }
-          var10.field_X = (BitmapFont) ((Object) rq.field_E);
+          var10.field_X = (BitmapFont) ((Object) ServerMessageScreen.field_E);
           var10.field_xb = sh.field_c;
           var10.field_p = 1;
           var11 = var10;
           var11.field_A = 1;
-          qa.field_H = new hd(0L, var8);
-          qa.field_H.field_R = ClientException.a(ModalStack.a(param4, -22, "lobby", "heading"), (byte) 86);
+          LeaguesHelpScreen.field_H = new hd(0L, var8);
+          LeaguesHelpScreen.field_H.field_R = ClientException.a(ModalStack.a(param4, -22, "lobby", "heading"), (byte) 86);
           DoSomethingCommand.field_B = new hd(0L, (hd) null);
           DoSomethingCommand.field_B.field_R = NotCommand.a(120, false, 8421504, 4210752, false, (byte) -46);
           r.field_c = new hd(0L, (hd) null);
@@ -281,7 +281,7 @@ class ri extends TextWidgetPainter {
           pq.field_P.field_kb = 2;
           pq.field_P.field_R = NotCommand.a(30, true, 3815994, 2039583, false, (byte) -46);
           ConsoleEvaluationException.field_e = new hd(0L, (hd) null);
-          ConsoleEvaluationException.field_e.field_X = (BitmapFont) ((Object) rq.field_E);
+          ConsoleEvaluationException.field_e.field_X = (BitmapFont) ((Object) ServerMessageScreen.field_E);
           ConsoleEvaluationException.field_e.field_y = 13421772;
           ConsoleEvaluationException.field_e.field_xb = sh.field_c;
           ConsoleEvaluationException.field_e.field_p = 1;
@@ -318,11 +318,11 @@ class ri extends TextWidgetPainter {
           MouseWheelInput.field_e.field_u = ModalStack.a(param4, -119, "lobby", "button_active");
           MouseWheelInput.field_e.field_tb = ModalStack.a(param4, -119, "lobby", "button_disabled");
           MouseWheelInput.field_e.field_A = 1;
-          ge.field_n = new hd(0L, ul.field_c);
-          ge.field_n.field_A = 1;
-          ge.field_n.field_R = ClientException.a(ModalStack.a(param4, 6, "lobby", "tab_inactive"), (byte) 49);
-          ge.field_n.field_S = ClientException.a(ModalStack.a(param4, -125, "lobby", "tab_mouseover"), (byte) 37);
-          ge.field_n.field_u = var14;
+          MatchingTextValidator.field_n = new hd(0L, ul.field_c);
+          MatchingTextValidator.field_n.field_A = 1;
+          MatchingTextValidator.field_n.field_R = ClientException.a(ModalStack.a(param4, 6, "lobby", "tab_inactive"), (byte) 49);
+          MatchingTextValidator.field_n.field_S = ClientException.a(ModalStack.a(param4, -125, "lobby", "tab_mouseover"), (byte) 37);
+          MatchingTextValidator.field_n.field_u = var14;
           MouseInputHandler.field_b = new hd(0L, (hd) null);
           MouseInputHandler.field_b.field_R = fs.a(206, 3, -1, 1856141, 1127256, (byte) 91);
           cp.field_g = new hd(0L, (hd) null);
@@ -472,14 +472,14 @@ class ri extends TextWidgetPainter {
           }
           var3 = new ArgbSprite(param0.field_o, param0.field_v);
           PacketBuffer.a(-54, var3);
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 6710886);
+          SoftwareRasterizer.fillRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 6710886);
           for (var4 = 2; 10 > var4; var4++) {
             var5 = (-var4 + 12 << 7) / 13;
             var6 = param0.field_o - var4;
             var7 = var4 / 4 + var4;
-            var12.drawScaledSilhouette(var7, var4 / 5 + var7, var6, var6, 65793 * var5);
+            var12.c(var7, var4 / 5 + var7, var6, var6, 65793 * var5);
           }
-          ta.e(125);
+          TeamManagementScreen.e(125);
           if (!param1) {
             var9 = (CharSequence) null;
             ri.a((CharSequence) null, (byte) 122);
@@ -575,9 +575,9 @@ class ri extends TextWidgetPainter {
             var7 = nv.field_F;
             var7.field_q = 0;
             ci.field_h.field_E = qn.field_d.toUpperCase();
-            var8 = (2 + fp.field_p.field_q) / 2;
-            nv.field_F.a(true, -2 + var8, 0, -40 + fp.field_p.field_mb, 40);
-            GoalStateAgent.field_k.a(true, -var8 + fp.field_p.field_q, var8, -40 + fp.field_p.field_mb, 40);
+            var8 = (2 + AuctionItem.field_p.field_q) / 2;
+            nv.field_F.a(true, -2 + var8, 0, -40 + AuctionItem.field_p.field_mb, 40);
+            GoalStateAgent.field_k.a(true, -var8 + AuctionItem.field_p.field_q, var8, -40 + AuctionItem.field_p.field_mb, 40);
             if (rn.field_d.length == 1 &&
               rn.field_d[0] == 2) {
               var9 = 0;
@@ -608,7 +608,7 @@ class ri extends TextWidgetPainter {
               }
             }
             GoalStateAgent.field_k.field_lb = true;
-            if (hw.field_k) {
+            if (InstrumentNoteMask.field_k) {
               ac.field_b.field_lb = false;
               w.field_e.field_E = qr.field_c;
               if (var9 == 0) {
@@ -645,12 +645,12 @@ class ri extends TextWidgetPainter {
               stackIn_26_0 = w.field_e;
               stackIn_26_1 = -18;
               if (var9 != 0) {
-                stackIn_27_2 = ko.field_j;
+                stackIn_27_2 = MenuSelection.field_j;
               } else {
                 stackIn_27_2 = vr.field_b;
               }
               stackIn_26_0.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
-              nv.field_F.field_E = jw.field_Db;
+              nv.field_F.field_E = CheckboxLabelWidget.field_Db;
               ac.field_b.field_lb = true;
               tt.field_c = true;
               if (null != PlayArea.field_k) {
@@ -668,7 +668,7 @@ class ri extends TextWidgetPainter {
                 }
                 pl.a(0, ss.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
                 if (!(2 > tk.field_Ib) &&
-                  ne.field_G[12]) {
+                  GameplayHelpScreen.field_G[12]) {
                   tt.field_c = true;
                 }
               }
@@ -704,7 +704,7 @@ class ri extends TextWidgetPainter {
           stackIn_65_1 = 0;
           stackIn_66_2 = (param2) && (!param1) && (!td.field_b);
           ((hd) (Object) stackIn_65_0).b(stackIn_65_1, stackIn_66_2);
-          stackIn_70_0 = fp.field_p;
+          stackIn_70_0 = AuctionItem.field_p;
           stackIn_70_1 = 0;
           stackIn_71_2 = (param2) && (!param1) && (!td.field_b);
           ((hd) (Object) stackIn_70_0).b(stackIn_70_1, stackIn_71_2);
@@ -719,10 +719,10 @@ class ri extends TextWidgetPainter {
               nv.a(param3, 32361);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {
-              if (hw.field_k) {
+              if (InstrumentNoteMask.field_k) {
                 mp.a(param3, (byte) 79);
               } else {
-                up.a(param3, 0);
+                PlayerStats.a(param3, 0);
               }
             }
             NetworkGameClient.a(param3, (byte) -127, ArchiveSource.field_b, true);

@@ -15,13 +15,13 @@ final class ej extends hd {
             ob.field_C = this.field_Bb;
           }
         } else {
-          if (pt.field_e != this.field_Bb) {
-            pt.field_e = this.field_Bb;
+          if (AuctionListing.field_e != this.field_Bb) {
+            AuctionListing.field_e = this.field_Bb;
             if (this.field_gb) {
               ob.field_C = this.field_Bb;
             }
           } else {
-            pt.field_e = -1;
+            AuctionListing.field_e = -1;
             if (!this.field_gb) {
               if (param1 < -5) {
                 return;
@@ -62,8 +62,8 @@ final class ej extends hd {
         try {
           int var2_int = 2 % ((-26 - param1) / 58);
           param0.setFocusTraversalKeysEnabled(false);
-          param0.addKeyListener(nr.field_q);
-          param0.addFocusListener(nr.field_q);
+          param0.addKeyListener(PlayerModelPreview.field_q);
+          param0.addFocusListener(PlayerModelPreview.field_q);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ej.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -72,9 +72,9 @@ final class ej extends hd {
     final void c(boolean param0) {
         int var3;
         var3 = Kickabout.field_G;
-        if (pt.field_e == this.field_Bb) {
+        if (AuctionListing.field_e == this.field_Bb) {
           SoftwareRasterizer.a(-4 + this.field_F, this.field_T - 4, 40, 40, 2, 65793, 128);
-          SoftwareRasterizer.drawRoundedRectangle(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
+          SoftwareRasterizer.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           if (param0) {
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
               qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
@@ -85,8 +85,8 @@ final class ej extends hd {
                 if (this.field_Bb != 32) {
                   pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                 } else {
-                  if (jd.f(-1)) {
-                    ra.field_L.drawQuarterSize(this.field_F, this.field_T);
+                  if (TextFieldValidator.f(-1)) {
+                    GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
                   } else {
                     pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                   }
@@ -100,10 +100,10 @@ final class ej extends hd {
             } else {
               if (!pc.field_e) {
                 if (this.field_Bb == 32) {
-                  if (!jd.f(-1)) {
+                  if (!TextFieldValidator.f(-1)) {
                     pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
-                    ra.field_L.drawQuarterSize(this.field_F, this.field_T);
+                    GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
                   }
                 } else {
                   pn.field_w.drawQuarterSize(this.field_F, this.field_T);
@@ -116,7 +116,7 @@ final class ej extends hd {
         } else {
           if (this.field_Bb == ob.field_C) {
             SoftwareRasterizer.a(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 65793, 32);
-            SoftwareRasterizer.drawRoundedRectangle(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
+            SoftwareRasterizer.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           }
           if (param0) {
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
@@ -128,10 +128,10 @@ final class ej extends hd {
                 if (this.field_Bb != 32) {
                   pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                 } else {
-                  if (!jd.f(-1)) {
+                  if (!TextFieldValidator.f(-1)) {
                     pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
-                    ra.field_L.drawQuarterSize(this.field_F, this.field_T);
+                    GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
                   }
                 }
               }
@@ -143,10 +143,10 @@ final class ej extends hd {
             } else {
               if (!pc.field_e) {
                 if (this.field_Bb == 32) {
-                  if (!jd.f(-1)) {
+                  if (!TextFieldValidator.f(-1)) {
                     pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
-                    ra.field_L.drawQuarterSize(this.field_F, this.field_T);
+                    GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
                   }
                 } else {
                   pn.field_w.drawQuarterSize(this.field_F, this.field_T);

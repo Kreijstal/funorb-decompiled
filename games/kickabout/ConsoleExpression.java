@@ -126,7 +126,7 @@ final class ConsoleExpression extends IntrusiveNode {
                 var7[incrementValue$0] = var5.a(true, param1);
                 var5 = (ConsoleExpression) (this.field_j.c(33));
               }
-              stackIn_10_0 = lo.a(var8, false, param1, this.field_h);
+              stackIn_10_0 = PasswordValidator.a(var8, false, param1, this.field_h);
               return stackIn_10_0;
             }
             if (this.field_k == pv.field_H) {
@@ -146,7 +146,7 @@ final class ConsoleExpression extends IntrusiveNode {
               stackIn_21_0 = new ConsoleValue(Double.valueOf(this.field_h).doubleValue());
               return stackIn_21_0;
             }
-            if (this.field_k == ra.field_N) {
+            if (this.field_k == GameModesHelpScreen.field_N) {
               stackIn_27_0 = new ConsoleValue(this.field_h.equals("true"));
               return stackIn_27_0;
             }
@@ -197,7 +197,7 @@ final class ConsoleExpression extends IntrusiveNode {
         if (pv.field_H == this.field_k) {
           return "Number{" + this.field_h + "}";
         }
-        if (ra.field_N == this.field_k) {
+        if (GameModesHelpScreen.field_N == this.field_k) {
           return "Boolean{" + this.field_h + "}";
         }
         if (this.field_k == v.field_d) {
@@ -206,13 +206,13 @@ final class ConsoleExpression extends IntrusiveNode {
         if (this.field_k == rb.field_Mb) {
           return "String{" + this.field_h + "}";
         }
-        if (si.field_g == this.field_k) {
+        if (ReflectionCheck.field_g == this.field_k) {
           return "ArgStart";
         }
         if (this.field_k == RasterBuffer.field_c) {
           return "ArgEnd";
         }
-        if (this.field_k == bp.field_Gb) {
+        if (this.field_k == ColumnTableWidget.field_Gb) {
           return "ArgComma";
         }
         return "Unknown";

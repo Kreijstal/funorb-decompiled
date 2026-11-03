@@ -54,22 +54,22 @@ final class ei implements WidgetPainter {
           var15 = (s) (stackIn_3_0);
           if (var15 != null) {
           }
-          SoftwareRasterizer.a(param4 + param3.field_t, param2 + param3.field_g, param3.field_n, param3.field_i, this.field_m);
+          SoftwareRasterizer.fillRect(param4 + param3.field_t, param2 + param3.field_g, param3.field_n, param3.field_i, this.field_m);
           var7 = param4 + (param3.field_t + var15.field_H);
           var8 = param3.field_g + (param2 + var15.field_G);
-          SoftwareRasterizer.fillCircle(var7, var8, var15.field_J, this.field_i);
+          SoftwareRasterizer.d(var7, var8, var15.field_J, this.field_i);
           var12 = -80 % ((59 - param0) / 53);
           if (var15.field_I != -1) {
             var9 = 2.0 * (3.141592653589793 * (double)var15.field_I) / (double)var15.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_J);
             var13 = (int)(Math.cos(var9) * (double)var15.field_J);
-            SoftwareRasterizer.fillCircle(var11 + var7, var13 + var8, 1, this.field_g);
+            SoftwareRasterizer.d(var11 + var7, var13 + var8, 1, this.field_g);
           }
-          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
+          SoftwareRasterizer.d(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var15.field_L) / (double)var15.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_J);
           var13Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_J);
-          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var13Lifetime1 + var8, 1);
+          SoftwareRasterizer.b(var7, var8, var11Lifetime1 + var7, var13Lifetime1 + var8, 1);
           if (this.field_k != null) {
             var14 = this.field_h + (var15.field_J + var15.field_H);
             this.field_k.a(param3.field_q, param4 - (-param3.field_t - var14), param2 + (param3.field_g + this.field_a), -var14 - this.field_h + param3.field_n, param3.field_i - (this.field_h << 1), this.field_l, this.field_j, 1, 1, 0);
@@ -195,7 +195,7 @@ final class ei implements WidgetPainter {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < sp.field_Ob; var13Lifetime1++) {
+          for (var13Lifetime1 = 0; var13Lifetime1 < ShopPlayerSlot.field_Ob; var13Lifetime1++) {
             var14Lifetime1 = nb.field_e[var13Lifetime1];
             var15Lifetime1 = param6.field_n[var14Lifetime1];
             var16 = param6.field_z[var14Lifetime1];

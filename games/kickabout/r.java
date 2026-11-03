@@ -60,7 +60,7 @@ final class r {
     final boolean a(byte param0) {
         if (param0 >= -26) {
           this.a((byte) -81);
-          if (this == gr.field_c) {
+          if (this == ClubState.field_c) {
             return true;
           }
           if (this != bm.field_H) {
@@ -68,7 +68,7 @@ final class r {
           }
           return true;
         }
-        if (this == gr.field_c) {
+        if (this == ClubState.field_c) {
           return true;
         }
         if (this == bm.field_H) {

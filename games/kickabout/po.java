@@ -83,7 +83,7 @@ final class po {
         }
     }
 
-    final static int a(js param0, int param1) {
+    final static int a(AppScreen param0, int param1) {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -103,54 +103,54 @@ final class po {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param0.field_c == 23) {
+          if (param0.screenId == 23) {
             stackIn_3_0 = 680;
             return stackIn_3_0;
           }
-          if (24 == param0.field_c) {
+          if (24 == param0.screenId) {
             stackIn_7_0 = 440;
             return stackIn_7_0;
           }
-          if (param0.field_c == 25) {
+          if (param0.screenId == 25) {
             stackIn_10_0 = 680;
             return stackIn_10_0;
           }
-          if (param0.field_c == 16) {
+          if (param0.screenId == 16) {
             stackIn_14_0 = 680;
             return stackIn_14_0;
           }
-          if (param0.field_c == 18) {
+          if (param0.screenId == 18) {
             stackIn_18_0 = 680;
             return stackIn_18_0;
           }
-          if (param0.field_c == -5) {
+          if (param0.screenId == -5) {
             stackIn_21_0 = 680;
             return stackIn_21_0;
           }
-          if (param0.field_c == param1) {
+          if (param0.screenId == param1) {
             stackIn_24_0 = 680;
             return stackIn_24_0;
           }
-          if (param0.field_c == 19) {
+          if (param0.screenId == 19) {
             stackIn_27_0 = 680;
             return stackIn_27_0;
           }
-          if (20 == param0.field_c) {
+          if (20 == param0.screenId) {
             stackIn_31_0 = 680;
             return stackIn_31_0;
           }
-          if (param0.field_c == 21) {
+          if (param0.screenId == 21) {
             stackIn_35_0 = 680;
             return stackIn_35_0;
           }
-          if (param0.field_c == 22) {
+          if (param0.screenId == 22) {
             stackIn_39_0 = 680;
             return stackIn_39_0;
           }
-          if (param0.field_c != -1 &&
-            -3 != param0.field_c &&
-            param0.field_c != -2) {
-            if (param0.field_c == 26) {
+          if (param0.screenId != -1 &&
+            -3 != param0.screenId &&
+            param0.screenId != -2) {
+            if (param0.screenId == 26) {
               return 0;
             }
             stackIn_48_0 = 423;
@@ -173,31 +173,31 @@ final class po {
     }
 
     final static void a(int param0, boolean param1) {
-        js var3 = null;
-        js var3Lifetime1;
-        js var3Lifetime2;
+        AppScreen var3 = null;
+        AppScreen var3Lifetime1;
+        AppScreen var3Lifetime2;
         if (NumericDateInputWidget.field_J == null) {
           if (param0 == -27) {
             return;
           }
-          var3 = (js) null;
-          po.a((js) null, 65);
+          var3 = (AppScreen) null;
+          po.a((AppScreen) null, 65);
           return;
         }
         if (!NumericDateInputWidget.field_J.a((byte) -122, param1)) {
           if (param0 == -27) {
             return;
           }
-          var3Lifetime1 = (js) null;
-          po.a((js) null, 65);
+          var3Lifetime1 = (AppScreen) null;
+          po.a((AppScreen) null, 65);
           return;
         }
         NumericDateInputWidget.field_J = null;
         if (param0 == -27) {
           return;
         }
-        var3Lifetime2 = (js) null;
-        po.a((js) null, 65);
+        var3Lifetime2 = (AppScreen) null;
+        po.a((AppScreen) null, 65);
     }
 
     static {

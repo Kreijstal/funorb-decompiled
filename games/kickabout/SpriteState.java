@@ -22,12 +22,12 @@ abstract class SpriteState extends DualLinkNode {
         if (param0 != 6773) {
           return;
         }
-        var2.a(param0 - 6660, 5);
-        var2.a(123, uv.field_i.field_bc);
+        var2.writeByte(param0 - 6660, 5);
+        var2.writeByte(123, uv.field_i.field_bc);
         int var4 = (uv.field_i.field_Mb << 6) + uv.field_i.field_Wb;
-        var2.a(106, var4);
-        var2.readBytes(0, uv.field_i.field_Eb.length, param0 ^ 1991213509, uv.field_i.field_Eb);
-        var2.c(62, var2.field_n - var3);
+        var2.writeByte(106, var4);
+        var2.writeBytes(0, uv.field_i.field_Eb.length, param0 ^ 1991213509, uv.field_i.field_Eb);
+        var2.backpatchByteLength(62, var2.field_n - var3);
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
@@ -105,14 +105,14 @@ abstract class SpriteState extends DualLinkNode {
             var7.field_q = 0;
             if (!np.a(113)) {
               var9_ref_String = uv.field_i.field_ec;
-              ci.field_h.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, bv.field_m, new String[]{var9_ref_String}).toUpperCase();
-              nv.field_F.a(true, fp.field_p.field_q, 0, fp.field_p.field_mb - 40, 40);
+              ci.field_h.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{var9_ref_String}).toUpperCase();
+              nv.field_F.a(true, AuctionItem.field_p.field_q, 0, AuctionItem.field_p.field_mb - 40, 40);
               nv.field_F.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, wa.field_c, new String[]{var9_ref_String});
               var8 = nv.field_F;
             } else {
               ci.field_h.field_E = kf.field_zb.toUpperCase();
-              var9 = (fp.field_p.field_q + 2) / 2;
-              em.field_d.a(true, var9 - 2, 0, -40 + fp.field_p.field_mb, 40);
+              var9 = (AuctionItem.field_p.field_q + 2) / 2;
+              em.field_d.a(true, var9 - 2, 0, -40 + AuctionItem.field_p.field_mb, 40);
               if (uv.field_i.field_bc <= uv.field_i.field_gc) {
                 em.field_d.field_E = no.field_I.toUpperCase();
                 em.field_d.field_lb = false;
@@ -133,8 +133,8 @@ abstract class SpriteState extends DualLinkNode {
                   em.field_d.field_R = vg.field_Qb.field_S;
                 }
               }
-              GoalStateAgent.field_k.a(true, fp.field_p.field_q - var9, var9, -40 + fp.field_p.field_mb, 40);
-              GoalStateAgent.field_k.field_E = hj.field_g.toUpperCase();
+              GoalStateAgent.field_k.a(true, AuctionItem.field_p.field_q - var9, var9, -40 + AuctionItem.field_p.field_mb, 40);
+              GoalStateAgent.field_k.field_E = BlankScreen.field_g.toUpperCase();
               stackIn_18_0 = GoalStateAgent.field_k;
               stackIn_19_1 = (param3) && (0L == vg.field_Ib);
               stackIn_18_0.field_lb = stackIn_19_1;
@@ -205,7 +205,7 @@ abstract class SpriteState extends DualLinkNode {
                   break;
                 }
                 if (!(2 > tk.field_Ib) &&
-                  ne.field_G[12]) {
+                  GameplayHelpScreen.field_G[12]) {
                   var10 = 2;
                 }
               }
@@ -295,7 +295,7 @@ abstract class SpriteState extends DualLinkNode {
                     break;
                   }
                   if (tk.field_Ib >= 2 &&
-                    ne.field_G[12]) {
+                    GameplayHelpScreen.field_G[12]) {
                     var16Lifetime1Lifetime1 = 0;
                   }
                   if ((var16Lifetime1Lifetime1 != 0)) {
@@ -330,7 +330,7 @@ abstract class SpriteState extends DualLinkNode {
                   if (var10 != 0) {
                     var13_ref = os.field_w;
                     if (var12Lifetime2 == 0) {
-                      var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, bp.field_yb, new String[]{(String) (var11)});
+                      var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ColumnTableWidget.field_yb, new String[]{(String) (var11)});
                     } else {
                       var14 = oi.field_k + (String) (var11);
                     }
@@ -360,7 +360,7 @@ abstract class SpriteState extends DualLinkNode {
           stackIn_156_1 = param2 ^ param2;
           stackIn_157_2 = (param0) && (!param4) && (!td.field_b);
           ((hd) (Object) stackIn_156_0).b(stackIn_156_1, stackIn_157_2);
-          stackIn_161_0 = fp.field_p;
+          stackIn_161_0 = AuctionItem.field_p;
           stackIn_161_1 = 0;
           stackIn_162_2 = (param0) && (!param4) && (!td.field_b);
           ((hd) (Object) stackIn_161_0).b(stackIn_161_1, stackIn_162_2);
@@ -379,7 +379,7 @@ abstract class SpriteState extends DualLinkNode {
             if (em.field_d.field_sb != 0) {
               td.field_b = true;
             }
-            if (kt.field_i.field_sb != 0) {
+            if (BlackFadeScreen.field_i.field_sb != 0) {
               td.field_b = false;
             }
             NetworkGameClient.a(param1, (byte) -57, uv.field_i, false);

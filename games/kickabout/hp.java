@@ -23,7 +23,7 @@ final class hp {
 
     static {
         field_b = false;
-        field_a = bn.a(' ', (byte) -83);
+        field_a = LeaguesScreen.a(' ', (byte) -83);
         field_c = "Press F10 to open Quick Chat.";
     }
 }

@@ -167,11 +167,11 @@ final class w implements hc {
         var53 = null;
         var41 = Kickabout.field_G;
         try {
-          stackIn_3_0 = sp.field_Jb;
+          stackIn_3_0 = ShopPlayerSlot.field_Jb;
           stackIn_3_1 = param5 * (sh.field_c * 4 + 8);
-          stackIn_4_2 = (ig.field_f == sp.field_Jb);
+          stackIn_4_2 = (ig.field_f == ShopPlayerSlot.field_Jb);
           var7_int = ((np) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param0, 2, param1, (2 + sh.field_c) * 2) ? 1 : 0;
-          var8 = sp.field_Jb.field_Ab.field_jb;
+          var8 = ShopPlayerSlot.field_Jb.field_Ab.field_jb;
           var9 = nj.a(97);
           var11 = null;
           var12 = (qb) (var8.g(24009));
@@ -342,7 +342,7 @@ final class w implements hc {
             var12.field_Bb.field_mb = 0;
             var30 = var12.field_Bb;
             var30.field_q = 0;
-            var12.field_q = sp.field_Jb.field_Ab.field_q;
+            var12.field_q = ShopPlayerSlot.field_Jb.field_Ab.field_q;
             var31 = 0;
             var32 = var12.field_ec;
             if (!var12.b(-7)) {
@@ -409,7 +409,7 @@ final class w implements hc {
               var12.field_zb.a(true, -var33_intLifetime1 + 365 - 2, var33_intLifetime1, var31, sh.field_c);
               var34_int = mj.field_b;
               if ((var14Lifetime1 & 1 << wb.field_u) != 0) {
-                var50_ref = jd.field_d[var12.field_Wb];
+                var50_ref = TextFieldValidator.field_d[var12.field_Wb];
                 var12.field_Pb.field_N = var50_ref;
                 var12.field_Pb.a(true, var50_ref.field_o, var34_int, 0, var12.field_zb.field_mb);
                 var34_int = var34_int + (var50_ref.field_o + mj.field_b);
@@ -521,7 +521,7 @@ final class w implements hc {
                 var31 = var31 + sh.field_c;
               }
             }
-            var33 = cq.a(var12.field_Ab, var32, (byte) 112);
+            var33 = AuctionLogEntry.a(var12.field_Ab, var32, (byte) 112);
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
@@ -535,7 +535,7 @@ final class w implements hc {
               var12.field_L = var31 - var12.field_mb;
             }
             if (var13 != 0) {
-              sp.field_Jb.field_Ab.a(true, 2, var12, (hd) (var11));
+              ShopPlayerSlot.field_Jb.field_Ab.a(true, 2, var12, (hd) (var11));
             }
             for (var34_intLifetime2 = 0; ss.field_j > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Sb[var34_intLifetime2].field_gb) {
@@ -577,7 +577,7 @@ final class w implements hc {
                 if (var12.field_ic) {
                   stackIn_176_0 = gf.field_f;
                 } else {
-                  stackIn_176_0 = dj.field_B;
+                  stackIn_176_0 = PagedHelpScreen.field_B;
                 }
               } else {
                 stackIn_176_0 = ar.field_f;
@@ -605,7 +605,7 @@ final class w implements hc {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  wf.b(var12.h((byte) -87), param2, (byte) -59);
+                  AuctionsScreen.sendAuctionAction(var12.h((byte) -87), param2, (byte) -59);
                 }
               }
             }

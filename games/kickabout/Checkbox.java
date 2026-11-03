@@ -57,8 +57,8 @@ final class Checkbox extends TextButton {
             Checkbox.a((String) null, (ResourceArchive) null, -54, (String) null, (ResourceArchive) null);
           }
           var5_int = param4.b(param3, -1);
-          var6 = param4.findFileId((byte) -98, param0, var5_int);
-          stackIn_3_0 = cq.a(10, param1, var6, var5_int, param4);
+          var6 = param4.a((byte) -98, param0, var5_int);
+          stackIn_3_0 = AuctionLogEntry.a(10, param1, var6, var5_int, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,7 +97,7 @@ final class Checkbox extends TextButton {
         super.b(param0, param1, param2, param3);
     }
 
-    public static void releaseStatics(byte param0) {
+    public static void a(byte param0) {
         field_F = null;
         field_H = null;
         field_E = null;

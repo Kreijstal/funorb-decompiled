@@ -72,13 +72,13 @@ class hd extends iv {
         int var8 = 0;
         int var9 = Kickabout.field_G;
         try {
-          PacketBuffer.a(-123, lg.field_a);
+          PacketBuffer.a(-123, DebouncedValidationProvider.field_a);
           var10 = j.a(-5275);
           var5 = var10.field_o;
           var6 = var10.field_v;
           for (var7 = 0; var7 < SoftwareRasterizer.field_g; var7 = var7 + var5) {
             for (var8 = 0; SoftwareRasterizer.field_f > var8; var8 = var8 + var6) {
-              var10.d(var7, var8);
+              var10.drawWithOffsets(var7, var8);
             }
           }
           td.a(param0, 15, param2, param1, param3, false);
@@ -91,7 +91,7 @@ class hd extends iv {
           if (2 == ih.field_c) {
             wd.a(15, 15, 124);
           }
-          ta.e(param0 ^ 122);
+          TeamManagementScreen.e(param0 ^ 122);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "hd.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -152,7 +152,7 @@ class hd extends iv {
         int var4_intLifetime1;
         if (this.field_E != null &&
           null != this.field_X) {
-          var4_int = this.field_X.a(this.field_E, param0);
+          var4_int = this.field_X.maxLineWidth(this.field_E, param0);
           if (var3 < var4_int) {
             var3 = var4_int;
           }
@@ -326,7 +326,7 @@ class hd extends iv {
 
     final void b(int param0, boolean param1) {
         ic.field_f = !param1 ? true : false;
-        bd.field_D = !param1 ? true : false;
+        UnreadMessagesScreen.field_D = !param1 ? true : false;
         this.a(0, ~param0, true, SoftwareRasterizer.field_f, param0, SoftwareRasterizer.field_g);
     }
 
@@ -380,8 +380,8 @@ class hd extends iv {
             }
             td.a(-108);
           } else {
-            if (cq.field_m.length() > 0) {
-              var4_ref_String = cq.field_m.toString();
+            if (AuctionLogEntry.field_m.length() > 0) {
+              var4_ref_String = AuctionLogEntry.field_m.toString();
               if (tb.a(var4_ref_String, -125)) {
                 TextButton.a((String) null, (String) null, 0, 2, ng.field_i, -125);
                 TextButton.a((String) null, (String) null, 0, 2, mg.field_e, -126);
@@ -394,7 +394,7 @@ class hd extends iv {
                 if (r.a(0, var5) == 2) {
                   gd.a(-117, 1, var5, param2);
                 }
-                gp.a(-1, 82, NodeHashTableIterator.field_b, param1, at.field_Kb, var4_ref_String);
+                PasswordLoginCredentials.a(-1, 82, NodeHashTableIterator.field_b, param1, at.field_Kb, var4_ref_String);
               }
             }
             td.a(99);
@@ -403,8 +403,8 @@ class hd extends iv {
         }
         if (cc.field_e == 85) {
           if (var3 != 0 &&
-            cq.field_m.length() > 0) {
-            dj.a(-1 + cq.field_m.length(), ' ', -11407, cq.field_m);
+            AuctionLogEntry.field_m.length() > 0) {
+            PagedHelpScreen.a(-1 + AuctionLogEntry.field_m.length(), ' ', -11407, AuctionLogEntry.field_m);
           }
           return true;
         }
@@ -413,8 +413,8 @@ class hd extends iv {
           return false;
         }
         if (var3 != 0 &&
-          cq.field_m.length() < 80) {
-          discarded$0 = cq.field_m.append((char) var4);
+          AuctionLogEntry.field_m.length() < 80) {
+          discarded$0 = AuctionLogEntry.field_m.append((char) var4);
           var5Lifetime1 = 485;
           var13 = ArchiveSource.field_e;
           var7 = var13;
@@ -430,14 +430,14 @@ class hd extends iv {
             if (NodeHashTableIterator.field_b == 0) {
               if (uv.field_i == null &&
                 uk.field_d) {
-                var7Lifetime6 = "[" + qt.field_z + "] ";
+                var7Lifetime6 = "[" + ButtonMenuScreen.field_z + "] ";
               }
               if (uv.field_i != null) {
                 if (ol.field_R &&
                   null != SingleChildContainer.field_x) {
                   var7Lifetime6 = "[" + SingleChildContainer.field_x + "] ";
                 } else {
-                  var7Lifetime6 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, bv.field_m, new String[]{uv.field_i.field_ec}) + "] ";
+                  var7Lifetime6 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{uv.field_i.field_ec}) + "] ";
                 }
               }
             }
@@ -445,7 +445,7 @@ class hd extends iv {
             var5Lifetime1 = var5Lifetime1 - FootballerAgent.field_i.a(var16);
           } else {
             var18 = (CharSequence) ((Object) at.field_Kb);
-            var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, b.field_F, new String[]{hv.a(false, var18)});
+            var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{hv.a(false, var18)});
             var7Lifetime6 = var14;
             var7Lifetime6 = var14;
             var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, field_ib, new String[]{var12});
@@ -459,8 +459,8 @@ class hd extends iv {
               var5Lifetime1 = var5Lifetime1 - var9;
             }
           }
-          if (FootballerAgent.field_i.a(cq.field_m.toString()) > var5Lifetime1) {
-            dj.a(cq.field_m.length() - 1, ' ', -11407, cq.field_m);
+          if (FootballerAgent.field_i.a(AuctionLogEntry.field_m.toString()) > var5Lifetime1) {
+            PagedHelpScreen.a(AuctionLogEntry.field_m.length() - 1, ' ', -11407, AuctionLogEntry.field_m);
           }
         }
         return true;
@@ -541,20 +541,20 @@ class hd extends iv {
           WidgetContainer.field_A != 0 &&
           SoftwareRasterizer.field_b <= sm.field_q &&
           SoftwareRasterizer.field_c > sm.field_q &&
-          vc.field_y >= SoftwareRasterizer.field_e &&
-          SoftwareRasterizer.field_h > vc.field_y) {
+          ReceivedAuctionItem.field_y >= SoftwareRasterizer.field_e &&
+          SoftwareRasterizer.field_h > ReceivedAuctionItem.field_y) {
           var12 = 1;
           this.field_bb = -this.field_F + sm.field_q;
           this.field_qb = WidgetContainer.field_A;
           this.field_sb = WidgetContainer.field_A;
-          this.field_M = vc.field_y - this.field_T;
+          this.field_M = ReceivedAuctionItem.field_y - this.field_T;
         } else {
           if (WidgetContainer.field_A != 0) {
             this.field_qb = 0;
           }
           this.field_sb = 0;
         }
-        stackIn_31_1 = (!bd.field_D) && (SoftwareRasterizer.field_b <= BytePlusOneCommand.field_A) && (BytePlusOneCommand.field_A < SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_e <= n.field_m) && (n.field_m < SoftwareRasterizer.field_h);
+        stackIn_31_1 = (!UnreadMessagesScreen.field_D) && (SoftwareRasterizer.field_b <= BytePlusOneCommand.field_A) && (BytePlusOneCommand.field_A < SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_e <= n.field_m) && (n.field_m < SoftwareRasterizer.field_h);
         this.field_Q = stackIn_31_1;
         if (FootballerAgent.field_p == 0) {
           this.field_qb = 0;
@@ -562,14 +562,14 @@ class hd extends iv {
         stackIn_39_1 = (this.field_Q) && (this.field_qb == FootballerAgent.field_p) && (param2);
         this.field_gb = stackIn_39_1;
         if (null != this.field_jb) {
-          var13 = (hd) (this.field_jb.d(param1 ^ 9032));
+          var13 = (hd) (this.field_jb.last(param1 ^ 9032));
           while (var13 != null) {
             var13.a(this.field_F, param1 ^ 0, param2, this.field_mb, this.field_T, this.field_q);
             var13 = (hd) (this.field_jb.e(33));
           }
         }
         if (this.field_Q) {
-          bd.field_D = true;
+          UnreadMessagesScreen.field_D = true;
         }
         if (var12 != 0) {
           ic.field_f = true;
@@ -659,7 +659,7 @@ class hd extends iv {
           return;
         }
         if (this.field_jb != null) {
-          var4 = (hd) (this.field_jb.d(-9033));
+          var4 = (hd) (this.field_jb.last(-9033));
           while (var4 != null) {
             var4.field_z = true;
             var4.b(param0);

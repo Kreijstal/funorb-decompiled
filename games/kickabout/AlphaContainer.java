@@ -12,7 +12,7 @@ final class AlphaContainer extends SingleChildContainer {
         Sprite var4 = null;
         RuntimeException var4_ref = null;
         Sprite var5 = null;
-        nr var6 = null;
+        PlayerModelPreview var6 = null;
         int var7 = 0;
         Sprite[] stackIn_3_0 = null;
         int stackIn_4_1 = 0;
@@ -40,17 +40,17 @@ final class AlphaContainer extends SingleChildContainer {
           } else {
             stackIn_7_1 = -120;
           }
-          ((Sprite) (Object) stackIn_6_0).d(stackIn_7_1, 0);
+          ((Sprite) (Object) stackIn_6_0).drawWithOffsets(stackIn_7_1, 0);
           var4.c(0, 0);
-          var6 = (nr) (param2.g(24009));
+          var6 = (PlayerModelPreview) (param2.g(24009));
           while (var6 != null) {
             var6.a(param3, -2);
-            var6 = (nr) (param2.c(33));
+            var6 = (PlayerModelPreview) (param2.c(33));
           }
           if (param1 > -41) {
             field_D = (String) null;
           }
-          ta.e(120);
+          TeamManagementScreen.e(120);
           stackIn_13_0 = eo.a(var5);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ final class AlphaContainer extends SingleChildContainer {
         Sprite var6 = new Sprite(this.field_z.field_n, this.field_z.field_i);
         PacketBuffer.a(-46, var6);
         this.field_z.a(param0, (int) (char)param1, 0, 0);
-        ta.e(127);
+        TeamManagementScreen.e(127);
         var6.b(param2 + this.field_t, this.field_g + param3, this.field_F);
     }
 

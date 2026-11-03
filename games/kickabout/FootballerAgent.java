@@ -29,7 +29,7 @@ class FootballerAgent extends MatchAgent {
     int field_q;
     private int field_t;
     boolean field_s;
-    up stats;
+    PlayerStats stats;
     static IntrusiveDeque field_f;
     int field_P;
     int action;
@@ -210,7 +210,7 @@ class FootballerAgent extends MatchAgent {
               }
             }
             if (this.action == 11) {
-              var8Lifetime1 = io.field_q[this.stats.field_q] * 3 >> 1;
+              var8Lifetime1 = MenuButton.field_q[this.stats.playerType] * 3 >> 1;
               if (this.isMovingDiagonally(false)) {
                 var8Lifetime1 = var8Lifetime1 * 181 >> 8;
               }
@@ -272,7 +272,7 @@ class FootballerAgent extends MatchAgent {
     }
 
     final int computeChecksum(byte param0) {
-        int var2 = this.stats.h(0);
+        int var2 = this.stats.computeChecksum(0);
         var2 = fj.a(-40, var2 ^ this.field_A);
         var2 = fj.a(-40, this.field_g ^ var2);
         var2 = fj.a(-40, var2 ^ this.field_q);
@@ -547,7 +547,7 @@ class FootballerAgent extends MatchAgent {
         return 200 - (this.stats.d(this.member, (byte) -127) * 2 - 120) + vf.field_I[4];
     }
 
-    final void applyPlayerStats(boolean param0, up param1, int param2) {
+    final void applyPlayerStats(boolean param0, PlayerStats param1, int param2) {
         boolean stackIn_3_1 = false;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -562,14 +562,14 @@ class FootballerAgent extends MatchAgent {
           this.stats = param1;
           stackIn_3_1 = (param0);
           this.member = stackIn_3_1;
-          this.archetype = this.stats.field_q;
+          this.archetype = this.stats.playerType;
           if (this.stats.c(this.member, param2 - 109)) {
             stackIn_6_0 = 3;
           } else {
             stackIn_6_0 = this.archetype;
           }
           var4_int = stackIn_6_0;
-          this.field_A = ea.field_j[var4_int] + (io.field_q[var4_int] - ea.field_j[var4_int]) * this.stats.d(this.member, (byte) -84) / 100;
+          this.field_A = ea.field_j[var4_int] + (MenuButton.field_q[var4_int] - ea.field_j[var4_int]) * this.stats.d(this.member, (byte) -84) / 100;
           if (this.stats.a((byte) 44, this.member)) {
             stackIn_9_0 = 0;
           } else {
@@ -731,7 +731,7 @@ class FootballerAgent extends MatchAgent {
         StringBuilder discarded$8 = var2.append(", ");
         eh.a(this.field_D, 100, var2);
         StringBuilder discarded$9 = var2.append("]");
-        StringBuilder discarded$10 = var2.append("\n\t\tstathash=" + this.stats.h(0));
+        StringBuilder discarded$10 = var2.append("\n\t\tstathash=" + this.stats.computeChecksum(0));
         StringBuilder discarded$33 = var2.append("\n\t\tact=\t[" + this.actionTime + ", " + this.actionName(true) + ", ai_wait=" + this.aiWait + "]");
         if (4 == this.archetype) {
           discarded$34 = var2.append("\n\t\tkeeperstate=[" + this.field_o + "," + this.field_t + "]");

@@ -132,7 +132,7 @@ final class SumIntegersCommand extends ConsoleCommand {
           var3 = -93 % ((param0 - 72) / 43);
           var6 = (ni) (lw.field_g.g(24009));
           while (var6 != null) {
-            gv.a(param1, 112, var6);
+            FadingChatMessage.a(param1, 112, var6);
             var6 = (ni) (lw.field_g.c(33));
           }
           return;

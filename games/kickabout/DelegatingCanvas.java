@@ -49,7 +49,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             try {
               var10 = param0.getParameter("cookieprefix");
               var3 = var10 + "settings";
-              var4 = (String) (AppletJavaScriptBridge.callWithoutArguments(30858, "getcookies", param0));
+              var4 = (String) (AppletJavaScriptBridge.a(30858, "getcookies", param0));
               var5 = FormationAgent.a(var4, 2, ';');
               var6 = 0;
               var7 = 35 % ((param1 - 32) / 57);

@@ -40,16 +40,16 @@ final class du implements WidgetPainter {
             stackIn_4_0 = (UiWidget) (param3);
           }
           var13 = (nv) (stackIn_4_0);
-          SoftwareRasterizer.a(param3.field_t + param4, param3.field_g + param2, param3.field_n, param3.field_i, this.field_b);
+          SoftwareRasterizer.fillRect(param3.field_t + param4, param3.field_g + param2, param3.field_n, param3.field_i, this.field_b);
           if (var13 != null) {
           }
           var7 = param3.field_n - var13.field_H * 2;
           var8 = var13.field_H + param4 + param3.field_t;
           var9 = var13.field_J + (param2 + param3.field_g);
-          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_h);
+          SoftwareRasterizer.b(var8, var9, var8 + var7, var9, this.field_h);
           var10 = 47 / ((59 - param0) / 53);
           for (var11 = var13.a((byte) 31) - 1; 0 <= var11; var11--) {
-            SoftwareRasterizer.fillCircle(var13.a((byte) -120, var11) * var7 / var13.h((byte) -88) + var8, var9, this.field_d, this.field_l);
+            SoftwareRasterizer.d(var13.a((byte) -120, var11) * var7 / var13.h((byte) -88) + var8, var9, this.field_d, this.field_l);
           }
           if (null == this.field_m) {
             return;

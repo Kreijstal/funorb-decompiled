@@ -12,7 +12,7 @@ final class nq extends i {
         if (param0 >= -55) {
           field_H = (String) null;
         }
-        return 250 < up.field_p ? true : false;
+        return 250 < PlayerStats.field_p ? true : false;
     }
 
     final static boolean a(boolean param0, String param1, long param2) {
@@ -190,13 +190,13 @@ final class nq extends i {
           return;
         }
         or.field_d.b(77, (byte) 85);
-        or.field_d.a(105, param0);
+        or.field_d.writeByte(105, param0);
         ri.field_t = param1;
         uv.field_f = true;
     }
 
     final static void b(int param0, int param1, int param2) {
-        lj.field_h = param0;
+        TextLine.field_h = param0;
         ji.field_Hb = param2;
         if (param1 != 0) {
           nq.h(-29);

@@ -19,14 +19,14 @@ final class ph {
 
     final static void b(boolean param0) {
         int var1 = IntTripleCommand.h((byte) -118);
-        int var2 = qo.e((byte) 18);
+        int var2 = EmailSyntaxValidator.e((byte) 18);
         if (param0) {
-          oi.field_g.a(nb.field_k - is.field_d, var2 + (jm.field_e << 1), SumIntegersCommand.field_I - jm.field_e, var1 + (is.field_d << 1), 3);
+          oi.field_g.a(nb.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
           na.k(0);
           return;
         }
         field_c = (String) null;
-        oi.field_g.a(nb.field_k - is.field_d, var2 + (jm.field_e << 1), SumIntegersCommand.field_I - jm.field_e, var1 + (is.field_d << 1), 3);
+        oi.field_g.a(nb.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
         na.k(0);
     }
 

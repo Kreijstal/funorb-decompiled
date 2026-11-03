@@ -41,7 +41,7 @@ final class wc {
           }
           SoftwareRasterizer.e(var7, var8, 6 + var5_int, 6 + var6, this.field_b);
           int var9 = -76 / ((param2 - 58) / 54);
-          SoftwareRasterizer.a(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_t);
+          SoftwareRasterizer.fillRect(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_t);
           this.field_a.a(param3, var7 + 3, 3 + var8 + this.field_a.field_L, this.field_b, -1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wc.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -49,7 +49,7 @@ final class wc {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        SoftwareRasterizer.drawLine(param2, param3, param4, param1, param0);
+        SoftwareRasterizer.b(param2, param3, param4, param1, param0);
         if (!param5) {
           this.a(-95, 103, -98, -54, -82, true);
         }
@@ -114,7 +114,7 @@ final class wc {
         var17.field_b = 16777215;
         this.field_c = (WidgetPainter) ((Object) var17);
         id var4 = new id();
-        var17.copyStyleTo(var4, (byte) -92);
+        var17.a(var4, (byte) -92);
         this.field_t = 5592405;
         var4.field_i = 15658734;
         this.field_a = param0;
@@ -147,13 +147,13 @@ final class wc {
           var6.field_e = 0;
           var7 = new id(var4, true);
           var7.field_e = 0;
-          var7.a(sp.a((byte) 26, 8947848), -23952);
-          var7.a(1, -12085).a(true, sp.a((byte) 26, 11184810)).b(-2, 2236962);
+          var7.a(ShopPlayerSlot.a((byte) 26, 8947848), -23952);
+          var7.a(1, -12085).a(true, ShopPlayerSlot.a((byte) 26, 11184810)).b(-2, 2236962);
           this.field_o = (WidgetPainter) ((Object) new re(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ei(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new du(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new id();
-          var17.copyStyleTo(var8, (byte) -87);
+          var17.a(var8, (byte) -87);
           var8.a(0, param1 ^ -8811).a(true, ba.a(10066329, 7829367, 15658734, (byte) -118)).b(-2, 1118481).a(-1, true);
           var8.a(4, param1 ^ -8811).a(true, (byte) -58).a(true, var5);
           this.field_h = (WidgetPainter) ((Object) var8);
@@ -265,7 +265,7 @@ final class wc {
             if (null == tl.field_a) {
               tl.field_a = new String[16];
             }
-            var11Lifetime1 = this.field_a.a(param1, new int[]{var12}, tl.field_a);
+            var11Lifetime1 = this.field_a.wrapText(param1, new int[]{var12}, tl.field_a);
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
@@ -284,7 +284,7 @@ final class wc {
             var13Lifetime1 = -var10 + (param3 - var6);
           }
           SoftwareRasterizer.e(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_j);
-          SoftwareRasterizer.a(1 + var12, 1 + var13Lifetime1, -2 + var9 + var5_int, -2 + (var6 + var10), this.field_t);
+          SoftwareRasterizer.fillRect(1 + var12, 1 + var13Lifetime1, -2 + var9 + var5_int, -2 + (var6 + var10), this.field_t);
           this.field_a.a(param1, var12 + this.field_i, this.field_m + var13Lifetime1, var9, var10, this.field_b, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -148,7 +148,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
           DebugConsole.field_z.a((byte) -106, ij.field_s);
           ds.field_a = new hd[5];
           ValidatedTextWidget.field_W = new hd[5];
-          kt.field_m = new hd[5];
+          BlackFadeScreen.field_m = new hd[5];
           SocketConnector.field_b = new hd[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -160,7 +160,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
                 if (!uk.field_d) {
                   stackIn_13_0 = DraggableWidget.field_F;
                 } else {
-                  stackIn_13_0 = qt.field_z;
+                  stackIn_13_0 = ButtonMenuScreen.field_z;
                 }
                 var19 = stackIn_13_0;
               } else if (var18 == 1 &&
@@ -174,12 +174,12 @@ final class BytePlusOneCommand extends ConsoleCommand {
               }
               if (decompiledFrameRemainder0) {
                 ValidatedTextWidget.field_W[var18] = new hd(0L, param4);
-                kt.field_m[var18] = new hd(0L, vv.field_o, var19);
+                BlackFadeScreen.field_m[var18] = new hd(0L, vv.field_o, var19);
                 SocketConnector.field_b[var18] = new hd(0L, (hd) null);
                 SocketConnector.field_b[var18].field_p = 1;
                 ds.field_a[var18] = new hd(0L, vv.field_o);
                 ds.field_a[var18].field_p = 1;
-                ValidatedTextWidget.field_W[var18].a((byte) -126, kt.field_m[var18]);
+                ValidatedTextWidget.field_W[var18].a((byte) -126, BlackFadeScreen.field_m[var18]);
                 ValidatedTextWidget.field_W[var18].a((byte) -113, SocketConnector.field_b[var18]);
                 ValidatedTextWidget.field_W[var18].a((byte) -127, ds.field_a[var18]);
                 ValidatedTextWidget.field_W[var18].b(false);
@@ -327,7 +327,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 29430) {
-            stackIn_4_0 = param2 - (param1 - p.a((byte) -24, param1 << 1));
+            stackIn_4_0 = param2 - (param1 - LoggedPossession.a((byte) -24, param1 << 1));
             return stackIn_4_0;
           }
           stackIn_2_0 = 12;
@@ -341,7 +341,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
 
     final static void g(int param0) {
         try {
-          ja.field_O = false;
+          MyKitScreen.field_O = false;
           ks.field_e = param0;
           et.field_d = null;
         } catch (RuntimeException runtimeException) {

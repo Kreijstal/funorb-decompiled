@@ -57,9 +57,9 @@ final class j {
     final static Sprite a(int param0) {
         if (param0 != -5275) {
           field_a = (String[]) null;
-          return cv.field_b[ih.field_c][rm.field_C];
+          return cv.field_b[ih.field_c][RankingsScreen.field_C];
         }
-        return cv.field_b[ih.field_c][rm.field_C];
+        return cv.field_b[ih.field_c][RankingsScreen.field_C];
     }
 
     final void a(int param0, int param1, int param2) {
@@ -69,7 +69,7 @@ final class j {
           PacketBuffer.a(param0 + 39, wa.field_a);
           SoftwareRasterizer.b();
           this.field_b.a(1200, 300, 48, 90, (byte) -105);
-          ta.e(127);
+          TeamManagementScreen.e(127);
           wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
           if (ia.field_c) {
             this.field_b.field_R = var4;
@@ -80,7 +80,7 @@ final class j {
         PacketBuffer.a(param0 + 39, wa.field_a);
         SoftwareRasterizer.b();
         this.field_b.a(1200, 300, 48, 90, (byte) -105);
-        ta.e(127);
+        TeamManagementScreen.e(127);
         wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
         if (!ia.field_c) {
           return;
@@ -136,7 +136,7 @@ final class j {
 
     j(int param0) {
         int var2 = 3;
-        gr var3 = new gr();
+        ClubState var3 = new ClubState();
         var3.field_w = 4;
         if (param0 != 0) {
           var3.field_k = 10;
@@ -145,7 +145,7 @@ final class j {
           var3.field_R = 31;
           var3.field_k = 16;
         }
-        vn var4 = fp.a(var3.field_w, var3.field_k, 0, var2, 0, 0, var3.field_R, false, false, false);
+        vn var4 = AuctionItem.a(var3.field_w, var3.field_k, 0, var2, 0, 0, var3.field_R, false, false, false);
         this.field_b = new gm(var4, var2, false);
         this.field_b.directionMask = 8;
         this.field_b.field_R = 1536;

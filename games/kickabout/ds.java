@@ -72,7 +72,7 @@ final class ds {
 
     final static void a(int param0, bb param1) {
         try {
-          qa.field_E.a((byte) -128, (hd) (param1));
+          LeaguesHelpScreen.field_E.a((byte) -128, (hd) (param1));
           if (param0 != -1) {
             field_c = -45;
           }

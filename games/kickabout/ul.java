@@ -78,24 +78,24 @@ final class ul {
           }
           var2_int = -mc.field_a + 640 >> 1;
           var3 = 358;
-          pt.a(mc.field_a + var2_int, -22914, var2_int, var3 + 112, var3);
+          AuctionListing.a(mc.field_a + var2_int, -22914, var2_int, var3 + 112, var3);
           for (var4 = 0; mc.field_a > var4; var4++) {
-            mk.field_a.d(var2_int + var4, var3 - 368);
+            mk.field_a.drawWithOffsets(var2_int + var4, var3 - 368);
           }
           SoftwareRasterizer.c(var2_int, var3, mc.field_a, 112, 2, 65793);
           if (param1 != null) {
             un.field_d.a(param1.toLowerCase(), 20 + var2_int, var3 + 22, 16777215, -1);
           }
           var2_int += 10;
-          ta.e(param0 ^ -7);
+          TeamManagementScreen.e(param0 ^ -7);
           var4Lifetime1 = 12 + ((mc.field_a + 640 >> 1) - 22);
-          pt.a(320, param0 - 22788, var2_int, 480, 0);
+          AuctionListing.a(320, param0 - 22788, var2_int, 480, 0);
           SoftwareRasterizer.a(var2_int, 388, 640, 72, 8, 65793, 128);
-          ta.e(122);
-          pt.a(var4Lifetime1, -22914, 320, 480, 0);
+          TeamManagementScreen.e(122);
+          AuctionListing.a(var4Lifetime1, -22914, 320, 480, 0);
           SoftwareRasterizer.a(0, 388, var4Lifetime1, 72, 8, 65793, 128);
-          ta.e(122);
-          var5 = je.a(false);
+          TeamManagementScreen.e(122);
+          var5 = AnimationSkeleton.a(false);
           if (var5 != -1) {
             of.field_e = 1;
             if (var5 == 6 ||
@@ -107,9 +107,9 @@ final class ul {
               of.field_e = 4;
             }
           }
-          pt.a(-20 + (var2_int + mc.field_a), param0 ^ 23036, var2_int + 22 - 12, 112 + var3, var3);
+          AuctionListing.a(-20 + (var2_int + mc.field_a), param0 ^ 23036, var2_int + 22 - 12, 112 + var3, var3);
           kj.a(et.field_d.field_H[0], param0 ^ -126, et.field_d.field_P[0][of.field_e].stats, et.field_d.field_Q[0], et.field_d.field_d[0], false).c(12 + var2_int, var3 + 40);
-          ta.e(120);
+          TeamManagementScreen.e(120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,7 +142,7 @@ final class ul {
           return;
         }
         if (2 == ks.field_e) {
-          if (mh.field_k.pixelY(true) <= 477) {
+          if (EmailAvailabilityValidator.field_k.pixelY(true) <= 477) {
             ss.field_b.a(448, 282, -76);
           } else {
             ss.field_b.a(448, 477, param0 - 82);
@@ -161,7 +161,7 @@ final class ul {
           if (sl.field_Eb) {
             ss.field_b.a(0, 0, -102);
           } else {
-            ss.field_b.a(mh.field_k.pixelX(-107), mh.field_k.pixelY(true), param0 - 84);
+            ss.field_b.a(EmailAvailabilityValidator.field_k.pixelX(-107), EmailAvailabilityValidator.field_k.pixelY(true), param0 - 84);
           }
           return;
         }
@@ -182,7 +182,7 @@ final class ul {
           return;
         }
         if (ks.field_e == 9) {
-          ss.field_b.a(mh.field_k.pixelX(-92), mh.field_k.pixelY(true), -72);
+          ss.field_b.a(EmailAvailabilityValidator.field_k.pixelX(-92), EmailAvailabilityValidator.field_k.pixelY(true), -72);
           return;
         }
         if (ks.field_e == 10) {
@@ -247,7 +247,7 @@ final class ul {
         int var11 = 0;
         try {
           var11 = -64 / ((-60 - param4) / 50);
-          var10_int = 8 + IsSixCommand.field_C.c(param9, -10 + (param5 - 10), param6);
+          var10_int = 8 + IsSixCommand.field_C.paragraphHeight(param9, -10 + (param5 - 10), param6);
           if (param3) {
             stackIn_4_0 = param7;
             if (param1 > 0) {
@@ -255,7 +255,7 @@ final class ul {
             } else {
               stackIn_5_1 = -4;
             }
-            SoftwareRasterizer.drawRoundedRectangle(stackIn_4_0, stackIn_5_1 + param2, param5, var10_int, 10, 983040);
+            SoftwareRasterizer.f(stackIn_4_0, stackIn_5_1 + param2, param5, var10_int, 10, 983040);
             stackIn_7_0 = param7;
             stackIn_7_1 = param2;
             if (0 >= param1) {

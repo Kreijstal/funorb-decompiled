@@ -13,15 +13,15 @@ final class al extends hd {
     final static int a(boolean param0, byte param1) {
         int var2 = 0;
         int var2Lifetime1;
-        if (!ja.field_O) {
+        if (!MyKitScreen.field_O) {
           var2 = 87 % ((-53 - param1) / 43);
-          return (256 - hw.field_i >> 1) + 70;
+          return (256 - InstrumentNoteMask.field_i >> 1) + 70;
         }
         if (param0) {
           return 200;
         }
         var2Lifetime1 = 87 % ((-53 - param1) / 43);
-        return (256 - hw.field_i >> 1) + 70;
+        return (256 - InstrumentNoteMask.field_i >> 1) + 70;
     }
 
     public static void a(int param0) {
@@ -74,7 +74,7 @@ final class al extends hd {
           }
           var1_int = 0;
           while (true) {
-            var2 = vc.field_x.a(200, var1_int);
+            var2 = ReceivedAuctionItem.field_x.a(200, var1_int);
             if (!var2.field_t) {
               var1_int++;
               continue;

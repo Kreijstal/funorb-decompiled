@@ -17,7 +17,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           }
           var3 = this.field_C;
           var4 = param0;
-          ((TextInputWidget) ((Object) var3)).setInputText(var4, (byte) -17, false);
+          ((TextInputWidget) ((Object) var3)).a(var4, (byte) -17, false);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -27,7 +27,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         if (param0 != -1) {
           return;
         }
-        ((bv) (this.field_C.a((byte) -116))).c((byte) 101);
+        ((AccountNameAvailabilityValidator) (this.field_C.a((byte) -116))).c((byte) 101);
     }
 
     private final int a(String param0, int param1, int param2, UiWidget param3, int param4, int param5, String param6) {
@@ -155,12 +155,12 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
     public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_C = new ValidatedTextWidget("", (UiListener) null, 12);
-        TextWidgetPainter var1 = new TextWidgetPainter(qo.field_k, 0, 0, 0, 0, 16777215, -1, 3, 0, gf.field_a.field_G, -1, 2147483647, true);
+        TextWidgetPainter var1 = new TextWidgetPainter(EmailSyntaxValidator.field_k, 0, 0, 0, 0, 16777215, -1, 3, 0, gf.field_a.field_G, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(vt.field_b, var1, (UiListener) null);
-        this.field_B = new TextButton(ap.field_x, (UiListener) null);
+        this.field_B = new TextButton(MatchScreen.field_x, (UiListener) null);
         this.field_E = new TextButton(vt.field_a, (UiListener) null);
         this.field_C.field_u = sr.field_b;
-        this.field_C.a(6, new bv(this.field_C));
+        this.field_C.a(6, new AccountNameAvailabilityValidator(this.field_C));
         this.field_B.field_y = false;
         this.field_B.field_r = (WidgetPainter) ((Object) new op());
         this.field_E.field_r = (WidgetPainter) ((Object) new cr());
@@ -171,7 +171,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         var2.a(50, 1, 20, 270, var3);
         this.a(-86, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, jk.field_i, GoalStateAgent.field_f, this.field_C, (byte) 29, 170));
+        var3 = var3 + (5 + this.a(var3, MusicPatch.field_i, GoalStateAgent.field_f, this.field_C, (byte) 29, 170));
         this.field_B.a(40, 1, -var5 + 496 >> 1, var5, var3);
         this.field_E.a(40, 1, var4 + 3, 60, 15 + var3);
         this.field_E.field_k = (UiListener) (this);
@@ -251,7 +251,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
     private final boolean a(int param0, ValidationProvider param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        rv var4 = null;
+        ValidationState var4 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -262,7 +262,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           if (var3 == null) {
             return true;
           }
-          var4 = var3.c(-24407);
+          var4 = var3.getValidationState(-24407);
           if (param0 == 496) {
             stackIn_9_0 = (var4 == he.field_yb);
             return stackIn_9_0;

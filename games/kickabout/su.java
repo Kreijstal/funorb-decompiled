@@ -108,14 +108,14 @@ final class su {
         int stackIn_45_0 = 0;
         int var6;
         int var7;
-        oo.field_e[wf.field_O] = param3;
-        pf.field_d[wf.field_O] = wf.field_O;
-        bl.field_m[wf.field_O] = param4;
-        if (kt.field_g >= param4) {
+        oo.field_e[AuctionsScreen.field_O] = param3;
+        pf.field_d[AuctionsScreen.field_O] = AuctionsScreen.field_O;
+        bl.field_m[AuctionsScreen.field_O] = param4;
+        if (BlackFadeScreen.field_g >= param4) {
           if (er.field_k <= param4) {
-            AccountMessagePanel.field_G[wf.field_O] = param5;
-            fo.field_j[wf.field_O] = param0;
-            DropTargetWidget.field_B[wf.field_O] = param2;
+            AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;
+            AgeValidator.field_j[AuctionsScreen.field_O] = param0;
+            DropTargetWidget.field_B[AuctionsScreen.field_O] = param2;
             var6 = param5 - (-param0 - param2);
             if (var6 == 0) {
               stackIn_45_0 = 0;
@@ -123,13 +123,13 @@ final class su {
               stackIn_45_0 = param5 * 1000 / var6;
             }
             var7 = stackIn_45_0;
-            w.field_a[wf.field_O] = var7;
-            wf.field_O = wf.field_O + 1;
+            w.field_a[AuctionsScreen.field_O] = var7;
+            AuctionsScreen.field_O = AuctionsScreen.field_O + 1;
             if (vi.field_s > var7) {
               vi.field_s = var7;
             }
-            if (var7 > lm.field_V) {
-              lm.field_V = var7;
+            if (var7 > TournamentLobbyScreen.field_V) {
+              TournamentLobbyScreen.field_V = var7;
             }
             if (param1 == -106) {
               return;
@@ -138,9 +138,9 @@ final class su {
             return;
           }
           vi.field_s = param4;
-          AccountMessagePanel.field_G[wf.field_O] = param5;
-          fo.field_j[wf.field_O] = param0;
-          DropTargetWidget.field_B[wf.field_O] = param2;
+          AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;
+          AgeValidator.field_j[AuctionsScreen.field_O] = param0;
+          DropTargetWidget.field_B[AuctionsScreen.field_O] = param2;
           var6 = param5 - (-param0 - param2);
           if (var6 == 0) {
             stackIn_32_0 = 0;
@@ -149,11 +149,11 @@ final class su {
           }
           var7 = stackIn_32_0;
         } else {
-          lm.field_V = param4;
+          TournamentLobbyScreen.field_V = param4;
           if (er.field_k <= param4) {
-            AccountMessagePanel.field_G[wf.field_O] = param5;
-            fo.field_j[wf.field_O] = param0;
-            DropTargetWidget.field_B[wf.field_O] = param2;
+            AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;
+            AgeValidator.field_j[AuctionsScreen.field_O] = param0;
+            DropTargetWidget.field_B[AuctionsScreen.field_O] = param2;
             var6 = param5 - (-param0 - param2);
             if (var6 == 0) {
               stackIn_5_0 = 0;
@@ -163,9 +163,9 @@ final class su {
             var7 = stackIn_5_0;
           } else {
             vi.field_s = param4;
-            AccountMessagePanel.field_G[wf.field_O] = param5;
-            fo.field_j[wf.field_O] = param0;
-            DropTargetWidget.field_B[wf.field_O] = param2;
+            AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;
+            AgeValidator.field_j[AuctionsScreen.field_O] = param0;
+            DropTargetWidget.field_B[AuctionsScreen.field_O] = param2;
             var6 = param5 - (-param0 - param2);
             if (var6 == 0) {
               stackIn_18_0 = 0;
@@ -175,13 +175,13 @@ final class su {
             var7 = stackIn_18_0;
           }
         }
-        w.field_a[wf.field_O] = var7;
-        wf.field_O = wf.field_O + 1;
+        w.field_a[AuctionsScreen.field_O] = var7;
+        AuctionsScreen.field_O = AuctionsScreen.field_O + 1;
         if (vi.field_s > var7) {
           vi.field_s = var7;
         }
-        if (var7 > lm.field_V) {
-          lm.field_V = var7;
+        if (var7 > TournamentLobbyScreen.field_V) {
+          TournamentLobbyScreen.field_V = var7;
         }
         if (param1 == -106) {
           return;
@@ -196,7 +196,7 @@ final class su {
         int var1 = -21 % ((param0 + 46) / 55);
     }
 
-    final static int a(byte param0, up param1) {
+    final static int a(byte param0, PlayerStats param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -207,7 +207,7 @@ final class su {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 79 % ((-40 - param0) / 58);
-          var3 = (gp.a(param1, -576054046) << 1) / 3;
+          var3 = (PasswordLoginCredentials.a(param1, -576054046) << 1) / 3;
           if (var3 < 10) {
             var3 = 10;
           }

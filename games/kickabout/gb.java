@@ -30,12 +30,12 @@ final class gb extends TextButton {
         if (param0 != -1) {
           field_G = (Sprite[]) null;
           if (this.field_m) {
-            return this.field_J.b(param0 ^ 79);
+            return this.field_J.getValidationMessage(param0 ^ 79);
           }
           return null;
         }
         if (this.field_m) {
-          return this.field_J.b(param0 ^ 79);
+          return this.field_J.getValidationMessage(param0 ^ 79);
         }
         return null;
     }
@@ -55,7 +55,7 @@ final class gb extends TextButton {
         }
         int var5 = (this.field_n >> 1) + (param2 + this.field_t);
         int var6 = (this.field_i >> 1) + (this.field_g + param3);
-        rv var8 = this.field_J.c(param1 - 24472);
+        ValidationState var8 = this.field_J.getValidationState(param1 - 24472);
         if (var8 == mn.field_c) {
           var15 = LoggedPlayer.field_g[0];
           var9 = var15.field_o << 1;
@@ -63,31 +63,31 @@ final class gb extends TextButton {
           if (null == nq.field_G) {
             nq.field_G = new Sprite(var9, var10);
             PacketBuffer.a(-54, nq.field_G);
-            var15.rotateSmooth(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
-            ta.e(120);
+            var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
+            TeamManagementScreen.e(120);
             nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
           if (nq.field_G.field_q < var9) {
             nq.field_G = new Sprite(var9, var10);
             PacketBuffer.a(-54, nq.field_G);
-            var15.rotateSmooth(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
-            ta.e(120);
+            var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
+            TeamManagementScreen.e(120);
             nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
           if (nq.field_G.field_w < var10) {
             nq.field_G = new Sprite(var9, var10);
             PacketBuffer.a(-54, nq.field_G);
-            var15.rotateSmooth(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
-            ta.e(120);
+            var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
+            TeamManagementScreen.e(120);
             nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
           PacketBuffer.a(116, nq.field_G);
           SoftwareRasterizer.b();
-          var15.rotateSmooth(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
-          ta.e(120);
+          var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
+          TeamManagementScreen.e(120);
           nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
           return;
         }
@@ -98,35 +98,35 @@ final class gb extends TextButton {
           if (null == nq.field_G) {
             nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
             PacketBuffer.a(-54, nq.field_G);
-            var16.rotateSmooth(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
-            ta.e(120);
+            var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
+            TeamManagementScreen.e(120);
             nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
           if (nq.field_G.field_q < var9Lifetime1) {
             nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
             PacketBuffer.a(-54, nq.field_G);
-            var16.rotateSmooth(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
-            ta.e(120);
+            var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
+            TeamManagementScreen.e(120);
             nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
           if (nq.field_G.field_w < var10Lifetime1) {
             nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
             PacketBuffer.a(-54, nq.field_G);
-            var16.rotateSmooth(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
-            ta.e(120);
+            var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
+            TeamManagementScreen.e(120);
             nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
           PacketBuffer.a(116, nq.field_G);
           SoftwareRasterizer.b();
-          var16.rotateSmooth(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
-          ta.e(120);
+          var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
+          TeamManagementScreen.e(120);
           nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
           return;
         }
-        if (jt.field_Bb == var8) {
+        if (PitchOptionTile.field_Bb == var8) {
           var13 = LoggedPlayer.field_g[2];
           var13.drawAdditive(-(var13.field_q >> 1) + var5, -(var13.field_w >> 1) + var6, 256);
           return;
@@ -138,7 +138,7 @@ final class gb extends TextButton {
         var12.drawAdditive(-(var12.field_q >> 1) + var5, var6 - (var12.field_w >> 1), 256);
     }
 
-    final boolean focusNext(UiWidget param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

@@ -87,7 +87,7 @@ final class tk extends hd {
         pq.field_O = (byte[][]) null;
         IsaacRandom.field_f = null;
         fc.field_g = null;
-        lo.field_j = null;
+        PasswordValidator.field_j = null;
         if (param0 >= -69) {
           tk.i((byte) 118);
         }

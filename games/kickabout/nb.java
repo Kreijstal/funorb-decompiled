@@ -60,7 +60,7 @@ final class nb {
           return false;
         }
         if (param0 == 32) {
-          this.field_l = VorbisSample.load(sr.field_h, this.field_a, "").c();
+          this.field_l = VorbisSample.a(sr.field_h, this.field_a, "").decodeAllToPcm();
           this.field_d = true;
           return true;
         }
@@ -71,7 +71,7 @@ final class nb {
         if (param0 != 64) {
           return false;
         }
-        return da.field_h.a(false) > 0 ? true : false;
+        return MusicPatchNode.field_h.a(false) > 0 ? true : false;
     }
 
     final static void a(byte param0) {

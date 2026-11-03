@@ -47,21 +47,21 @@ final class bq {
           }
           ConsoleEvaluationException.a(stackIn_3_0, stackIn_4_1);
           ni.field_l.a(0, dn.field_Cb.field_q, 0, -2 + (-40 + dn.field_Cb.field_mb), (byte) -80);
-          ka.field_c.a(true, fm.field_C.field_q, 0, 0, sh.field_c);
+          ka.field_c.a(true, AchievementsScreen.field_C.field_q, 0, 0, sh.field_c);
           stackIn_6_0 = BufferedSocket.field_u;
           stackIn_6_1 = true;
-          stackIn_6_2 = fm.field_C.field_q;
+          stackIn_6_2 = AchievementsScreen.field_C.field_q;
           if (!ui.field_t) {
             stackIn_7_3 = 0;
           } else {
             stackIn_7_3 = 2 + (TeamSelectionAgent.field_f + 40 + 2);
           }
           ((hd) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
-          DoSomethingCommand.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (fm.field_C.field_q - 2), 2 + sh.field_c, 18);
-          ClientException.field_c.a(2, 124, -20 - sh.field_c + fm.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, fm.field_C.field_q, TeamSelectionAgent.field_f);
+          DoSomethingCommand.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (AchievementsScreen.field_C.field_q - 2), 2 + sh.field_c, 18);
+          ClientException.field_c.a(2, 124, -20 - sh.field_c + AchievementsScreen.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, AchievementsScreen.field_C.field_q, TeamSelectionAgent.field_f);
           ac.field_b.a(true, dn.field_Cb.field_q, 0, -40 + dn.field_Cb.field_mb, 40);
-          ci.field_h.a(true, fp.field_p.field_q, 0, 0, 30);
-          sg.field_a.a(true, fp.field_p.field_q, 0, 30, -40 + (fp.field_p.field_mb - 2) - 30);
+          ci.field_h.a(true, AuctionItem.field_p.field_q, 0, 0, 30);
+          sg.field_a.a(true, AuctionItem.field_p.field_q, 0, 30, -40 + (AuctionItem.field_p.field_mb - 2) - 30);
           var2_int = 3 + ss.field_j;
           if (rn.field_d.length < 2) {
             var2_int--;
@@ -152,7 +152,7 @@ final class bq {
                     rf.field_c[var6][0].a(mj.field_b, 2, 38, var5, var8, 15114, var3);
                     var8 += 40;
                   }
-                  var9_int = -3 + (fp.field_p.field_q - var8);
+                  var9_int = -3 + (AuctionItem.field_p.field_q - var8);
                   var10_int = rf.field_c[var6].length - 1;
                   for (var11 = 0; var11 < var10_int; var11++) {
                     var12 = var11 * var9_int / var10_int;
@@ -168,7 +168,7 @@ final class bq {
           vj.field_g.a(true, tn.field_f.field_q, 0, 24, -24 + tn.field_f.field_mb);
           vj.field_g.field_R = fs.a(vj.field_g.field_mb, 3, 1, 11579568, 8421504, (byte) 97);
           mc.field_d.a(true, vj.field_g.field_q - 10, 5, 5, -10 + (vj.field_g.field_mb - 24) - 2);
-          kt.field_i.a(true, 80, (-80 + vj.field_g.field_q) / 2, -24 + (-5 + vj.field_g.field_mb), 24);
+          BlackFadeScreen.field_i.a(true, 80, (-80 + vj.field_g.field_q) / 2, -24 + (-5 + vj.field_g.field_mb), 24);
           ClientException.a(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

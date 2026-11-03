@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class un {
-    static qt[] field_b;
+    static ButtonMenuScreen[] field_b;
     static r field_c;
     static CoverageBitmapFont field_d;
     static int[] field_a;

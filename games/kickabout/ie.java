@@ -38,9 +38,9 @@ final class ie extends i {
           if (null != et.field_d &&
             et.field_d.phase == 4 &&
             ks.field_e == 14 &&
-            0 < je.field_m) {
-            fieldTemp$0 = je.field_m - 1;
-            je.field_m = je.field_m - 1;
+            0 < AnimationSkeleton.field_m) {
+            fieldTemp$0 = AnimationSkeleton.field_m - 1;
+            AnimationSkeleton.field_m = AnimationSkeleton.field_m - 1;
             if (fieldTemp$0 == 0) {
               gm.a(GameKeyHandler.field_a, true, (byte) -118);
             }
@@ -52,16 +52,16 @@ final class ie extends i {
             if (bt.b(105)) {
               sl.field_Eb = false;
               et.field_d.participantStatus[0].controlledSlot = vb.field_d;
-              p.a(false);
+              LoggedPossession.a(false);
               mk.b(-1622);
               no.g(99);
             }
           } else {
-            if (qt.d(-8)) {
-              jw.c(ks.field_e + 1, false);
+            if (ButtonMenuScreen.d(-8)) {
+              CheckboxLabelWidget.c(ks.field_e + 1, false);
             }
           }
-          var1_int = je.a(false);
+          var1_int = AnimationSkeleton.a(false);
           var2 = ob.a(var1_int, -128);
           if (mc.field_a != var2) {
             dd.field_f = 60;
@@ -86,22 +86,22 @@ final class ie extends i {
           var3Lifetime1 = 640;
           if (ks.field_e == 1 &&
             !sl.field_Eb &&
-            (1050 > mh.field_k.pixelY(true) ||
-            640 != cq.field_g) ||
+            (1050 > EmailAvailabilityValidator.field_k.pixelY(true) ||
+            640 != AuctionLogEntry.field_g) ||
             (2 == ks.field_e ||
             ks.field_e == 3)) {
             var3Lifetime1 = 470;
           }
-          if (var3Lifetime1 != cq.field_g) {
-            var4 = var3Lifetime1 - cq.field_g >> 2;
+          if (var3Lifetime1 != AuctionLogEntry.field_g) {
+            var4 = var3Lifetime1 - AuctionLogEntry.field_g >> 2;
             if (var4 == 0) {
-              stackIn_47_0 = (cq.field_g >= var3Lifetime1) ? -1 : 1;
+              stackIn_47_0 = (AuctionLogEntry.field_g >= var3Lifetime1) ? -1 : 1;
               var4 = stackIn_47_0;
             }
-            cq.field_g = cq.field_g + var4;
+            AuctionLogEntry.field_g = AuctionLogEntry.field_g + var4;
           }
           ul.b(11);
-          vc.h((byte) 125);
+          ReceivedAuctionItem.h((byte) 125);
           if (ks.field_e == 6) {
             DualLinkDeque.a((byte) -127);
           }
@@ -157,7 +157,7 @@ final class ie extends i {
                 et.field_d.field_P[1][var4Lifetime3Lifetime1].setDirectionFromMask(1, 26214);
               }
             }
-            df.d(true);
+            AuctionsHelpScreen.d(true);
           }
           var4Lifetime4 = -97 / ((param0 - 88) / 34);
           if (ks.field_e == 10) {
@@ -172,7 +172,7 @@ final class ie extends i {
             et.field_d.field_X.goalCount > 25) {
             et.field_d.field_X.goalCount = 0;
             if (et.field_d.field_V.horizontalSpeedSquared(-1) == 0) {
-              jw.c(13, false);
+              CheckboxLabelWidget.c(13, false);
             }
           }
           if (ks.field_e == 13) {
@@ -180,13 +180,13 @@ final class ie extends i {
               if (et.field_d.field_X.goalCount > 25) {
                 et.field_d.field_X.goalCount = 0;
                 if (et.field_d.field_V.horizontalSpeedSquared(44) == 0) {
-                  jw.c(14, false);
+                  CheckboxLabelWidget.c(14, false);
                 }
               }
             } else {
               et.field_d.field_X.goalCount = 0;
               if (et.field_d.field_P[1][0].positionY < 0) {
-                qg.a(2235, 2949120, 4, 29360128);
+                RasterStateSnapshot.a(2235, 2949120, 4, 29360128);
               }
               if (et.field_d.field_V.possessorTeam == 0) {
                 et.field_d.field_V.possessorTeam = -1;
@@ -195,9 +195,9 @@ final class ie extends i {
             }
           }
           if (ks.field_e == 14 &&
-            ja.field_O &&
+            MyKitScreen.field_O &&
             et.field_d.phase == 4) {
-            ja.field_O = false;
+            MyKitScreen.field_O = false;
             var10 = GameLoopApplet.field_E.field_J;
             var9 = var10;
             var5 = var9;
@@ -213,7 +213,7 @@ final class ie extends i {
                 }
               }
               or.field_d.b(69, (byte) 78);
-              or.field_d.b(-78, var6Lifetime1);
+              or.field_d.writeInt(-78, var6Lifetime1);
             }
           }
           return;
@@ -306,16 +306,16 @@ final class ie extends i {
         field_H = null;
     }
 
-    ie(int param0, up param1) {
+    ie(int param0, PlayerStats param1) {
         super(34, param1);
         String var6 = null;
         String var4 = null;
         String var5 = null;
         try {
           this.field_I = param0;
-          var6 = param1.d(100);
+          var6 = param1.getDisplayName(100);
           String var3 = var6;
-          var4 = ad.a(ImageProducerRasterBuffer.a(param1, true), 26300);
+          var4 = ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(param1, true), 26300);
           var5 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[34], new String[]{var6, var4});
           this.a(var5, this.field_t, this.field_D, -71, this.field_u);
         } catch (RuntimeException runtimeException) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class en extends sr {
-    static rv field_p;
+    static ValidationState field_p;
     static int[] field_n;
     static int field_o;
     static long[] field_q;
@@ -68,7 +68,7 @@ final class en extends sr {
           ng.field_a = 2;
         }
         if (param1 != -1) {
-          field_p = (rv) null;
+          field_p = (ValidationState) null;
         }
         if (2 < q.field_b) {
           q.field_b = 2;
@@ -81,12 +81,12 @@ final class en extends sr {
     }
 
     final int a(int param0, Object param1, Object param2) {
-        up var4 = null;
+        PlayerStats var4 = null;
         RuntimeException var4_ref = null;
-        up var5 = null;
+        PlayerStats var5 = null;
         String var6 = null;
         String var7 = null;
-        up var8 = null;
+        PlayerStats var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -95,14 +95,14 @@ final class en extends sr {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = ((sp) (param1)).field_Sb;
+          var8 = ((ShopPlayerSlot) (param1)).field_Sb;
           var4 = var8;
-          var5 = ((sp) (param2)).field_Sb;
+          var5 = ((ShopPlayerSlot) (param2)).field_Sb;
           if (param0 != 2) {
             en.b(83, 32);
           }
-          var6 = ce.field_G[var8.field_q][var8.field_l];
-          var7 = ce.field_G[var5.field_q][var5.field_l];
+          var6 = ce.field_G[var8.playerType][var8.surnameIndex];
+          var7 = ce.field_G[var5.playerType][var5.surnameIndex];
           stackIn_3_0 = var6.compareTo(var7) ^ this.field_i << 31;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,7 +127,7 @@ final class en extends sr {
 
     static {
         int var0 = 0;
-        field_p = new rv();
+        field_p = new ValidationState();
         field_o = -1;
         field_q = new long[]{64356L, 63569L, 64749L};
         field_n = new int[64];

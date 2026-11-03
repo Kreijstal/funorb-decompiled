@@ -52,13 +52,13 @@ final class ss {
         }
         if (null != TextButton.field_v &&
           TextButton.field_v.a((byte) -52)) {
-          da.b(param0 ^ 21);
+          MusicPatchNode.b(param0 ^ 21);
           return true;
         }
         if (null != ck.field_b &&
           ck.field_b.h((byte) 37)) {
           ck.field_b = null;
-          da.b(85);
+          MusicPatchNode.b(85);
           return true;
         }
         if (br.a(param0 ^ 62)) {

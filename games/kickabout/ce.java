@@ -9,7 +9,7 @@ final class ce extends i {
     static IntrusiveDeque field_K;
     static int field_I;
 
-    ce(sp param0) {
+    ce(ShopPlayerSlot param0) {
         super(30, param0.field_Sb);
         String var5 = null;
         String var3 = null;
@@ -17,7 +17,7 @@ final class ce extends i {
         try {
           this.field_H = param0.field_Fb;
           this.field_J = param0.field_Qb;
-          var5 = param0.field_Sb.d(100);
+          var5 = param0.field_Sb.getDisplayName(100);
           String var2 = var5;
           var3 = param0.field_Nb;
           var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[30], new String[]{var5, var3});

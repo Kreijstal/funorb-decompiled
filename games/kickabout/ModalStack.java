@@ -63,7 +63,7 @@ final class ModalStack extends SingleChildContainer {
         try {
           var4_int = param0.b(param2, -1);
           var5 = -67 % ((-81 - param1) / 38);
-          var6 = param0.findFileId((byte) -102, param3, var4_int);
+          var6 = param0.a((byte) -102, param3, var4_int);
           stackIn_1_0 = fa.a(var4_int, (byte) -89, var6, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -255,7 +255,7 @@ final class ModalStack extends SingleChildContainer {
               stackIn_86_0 = ei.field_d.field_Eb;
             }
             if (((hd) (stackIn_86_0)).field_sb != 0) {
-              k.field_m = new sl(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, sf.field_G, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+              k.field_m = new sl(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, MainMenuScreen.field_G, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               fs.field_b = 0;
             }
             if (ei.field_d.field_zb.field_sb != 0) {
@@ -270,10 +270,10 @@ final class ModalStack extends SingleChildContainer {
             if (ts.field_d == 1) {
               ei.field_d.field_Cb.field_zb.field_E = aw.field_I;
               if (var19 != 0) {
-                ei.field_d.field_Cb.field_zb.field_E = jw.field_yb;
+                ei.field_d.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
               }
             } else {
-              ei.field_d.field_Cb.field_zb.field_E = jw.field_yb;
+              ei.field_d.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
             }
             hl.a(true, ei.field_d.field_yb);
           }
@@ -401,7 +401,7 @@ final class ModalStack extends SingleChildContainer {
             this.field_A = (IntrusiveDeque) null;
           }
           var3.field_C = true;
-          var3.focusNext((UiWidget) (this), 0);
+          var3.a((UiWidget) (this), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

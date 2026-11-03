@@ -32,18 +32,18 @@ final class te {
           var5.b(param0, (byte) 114);
           var5.field_n = var5.field_n + 1;
           var4 = var5.field_n;
-          var5.a(107, 1);
-          var5.a(param2 ^ -4, param1.field_g);
-          var5.a(param2 ^ -22, param1.field_f);
-          var5.b(-121, param1.field_e);
-          var5.b(-40, param1.field_k);
-          var5.b(-62, param1.field_i);
-          var5.b(-91, param1.field_j);
+          var5.writeByte(107, 1);
+          var5.writeByte(param2 ^ -4, param1.field_g);
+          var5.writeByte(param2 ^ -22, param1.field_f);
+          var5.writeInt(-121, param1.field_e);
+          var5.writeInt(-40, param1.field_k);
+          var5.writeInt(-62, param1.field_i);
+          var5.writeInt(-91, param1.field_j);
           if (param2 != -112) {
             field_b = (String) null;
           }
-          var5.a(var4, false);
-          var5.c(62, var5.field_n - var4);
+          var5.appendCrc32(var4, false);
+          var5.backpatchByteLength(62, var5.field_n - var4);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "te.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -92,7 +92,7 @@ final class te {
         bb[] var8 = null;
         int var9 = 0;
         Exception var10 = null;
-        bg var11 = null;
+        QuickChatPhraseDefinition var11 = null;
         int var12 = 0;
         hd var13 = null;
         char[] var14 = null;
@@ -108,8 +108,8 @@ final class te {
           var9 = 49;
           try {
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
-              var11 = lm.field_j.a(119, param2[var10_int]);
-              var6[var10_int] = var11.g((byte) -79);
+              var11 = TournamentLobbyScreen.field_j.getPhrase(119, param2[var10_int]);
+              var6[var10_int] = var11.getDisplayText((byte) -79);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;

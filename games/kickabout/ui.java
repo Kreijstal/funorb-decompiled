@@ -4,7 +4,7 @@
 final class ui extends vv {
     static boolean field_y;
     byte field_x;
-    static vc[] field_w;
+    static ReceivedAuctionItem[] field_w;
     static boolean field_t;
     PacketBuffer field_v;
     int field_u;
@@ -56,14 +56,14 @@ final class ui extends vv {
         var5 = Kickabout.field_G;
         var1 = 2147483647;
         var2 = 0;
-        for (var3 = param0; var3 < e.field_n.length; var3++) {
-          var4 = e.field_n[var3].field_a;
+        for (var3 = param0; var3 < SplashScreen.field_n.length; var3++) {
+          var4 = SplashScreen.field_n[var3].field_a;
           if (var1 > var4) {
             var1 = var4;
             var2 = var3;
           }
         }
-        return e.field_n[var2];
+        return SplashScreen.field_n[var2];
     }
 
     public static void a(boolean param0) {
@@ -77,7 +77,7 @@ final class ui extends vv {
     final static void h(int param0) {
         ol.field_R = true;
         if (param0 != -15396) {
-          field_w = (vc[]) null;
+          field_w = (ReceivedAuctionItem[]) null;
         }
     }
 

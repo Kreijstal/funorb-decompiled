@@ -13,7 +13,7 @@ final class ak extends IntrusiveNode {
     boolean field_n;
     private int field_j;
 
-    final static int a(js param0, int param1) {
+    final static int a(AppScreen param0, int param1) {
         int stackIn_18_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
@@ -26,22 +26,22 @@ final class ak extends IntrusiveNode {
           if (param1 != 4) {
             field_f = (Sprite) null;
           }
-          if (0 != param0.field_c &&
-            17 != param0.field_c &&
-            13 != param0.field_c &&
-            param0.field_c != 12 &&
-            param0.field_c != 1 &&
-            2 != param0.field_c &&
-            param0.field_c != 3 &&
-            4 != param0.field_c &&
-            param0.field_c != 5 &&
-            6 != param0.field_c &&
-            param0.field_c != 8 &&
-            18 != param0.field_c &&
-            param0.field_c != -5 &&
-            param0.field_c != 26) {
-            if (-1 == param0.field_c &&
-              ja.field_O) {
+          if (0 != param0.screenId &&
+            17 != param0.screenId &&
+            13 != param0.screenId &&
+            param0.screenId != 12 &&
+            param0.screenId != 1 &&
+            2 != param0.screenId &&
+            param0.screenId != 3 &&
+            4 != param0.screenId &&
+            param0.screenId != 5 &&
+            6 != param0.screenId &&
+            param0.screenId != 8 &&
+            18 != param0.screenId &&
+            param0.screenId != -5 &&
+            param0.screenId != 26) {
+            if (-1 == param0.screenId &&
+              MyKitScreen.field_O) {
               stackIn_22_0 = dt.b((byte) -75);
               return stackIn_22_0;
             }
@@ -114,8 +114,8 @@ final class ak extends IntrusiveNode {
           var2 = stackIn_12_0;
           var3 = ug.a(0, this.field_k);
           var4 = lf.a((byte) -59, this.field_g + var2);
-          var5_int = this.field_e.field_o * hw.field_i >> 8;
-          var6 = this.field_e.field_v * hw.field_i >> 8;
+          var5_int = this.field_e.field_o * InstrumentNoteMask.field_i >> 8;
+          var6 = this.field_e.field_v * InstrumentNoteMask.field_i >> 8;
           this.field_e.a(var3 - (var5_int >> 1), -(var6 >> 1) + var4, var5_int, var6);
           if (param0 == 192) {
             return;
@@ -132,14 +132,14 @@ final class ak extends IntrusiveNode {
           var2Lifetime1 = stackIn_5_0;
           var3Lifetime1 = ug.a(0, this.field_k);
           var4Lifetime1 = lf.a((byte) -59, this.field_g + var2Lifetime1);
-          var5_intLifetime1 = this.field_e.field_o * hw.field_i >> 8;
-          var6Lifetime1 = this.field_e.field_v * hw.field_i >> 8;
+          var5_intLifetime1 = this.field_e.field_o * InstrumentNoteMask.field_i >> 8;
+          var6Lifetime1 = this.field_e.field_v * InstrumentNoteMask.field_i >> 8;
           this.field_e.a(var3Lifetime1 - (var5_intLifetime1 >> 1), -(var6Lifetime1 >> 1) + var4Lifetime1, var5_intLifetime1, var6Lifetime1);
         } else {
           if (this.field_j == 5) {
             var2Lifetime1 = ug.a(param0 ^ 192, this.field_k);
             var3Lifetime1 = lf.a((byte) -110, (this.field_e.field_v >> 1) + this.field_g);
-            var4Lifetime1 = hw.field_i << 4;
+            var4Lifetime1 = InstrumentNoteMask.field_i << 4;
             var5 = nj.a(param0 - 126);
             var7 = (int)(var5 % 1050L);
             if (var7 < 700) {

@@ -119,7 +119,7 @@ class BallAgent extends MatchAgent {
               } else {
                 var7Lifetime4 = var9 + "; Expires=" + rj.a(nj.a(-121) + 1000L * param3, -102) + "; Max-Age=" + param3;
               }
-              AppletJavaScriptBridge.a("document.cookie=\"" + var7Lifetime4 + "\"", param1, (byte) 24);
+              AppletJavaScriptBridge.evaluateScript("document.cookie=\"" + var7Lifetime4 + "\"", param1, (byte) 24);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -333,21 +333,21 @@ class BallAgent extends MatchAgent {
           var5 = stackIn_14_0;
           stackIn_17_0 = (var5 != 0) ? 2000L : 58982L;
           var6 = stackIn_17_0;
-          var8 = jk.field_m[param1];
+          var8 = MusicPatch.field_m[param1];
           var17 = lt.moveWithinAreas(this.velocityX, this.velocityY, param2, -66, this.height, this.positionY, this.positionX, this.verticalVelocity);
           this.height = var17[2];
           this.positionX = var17[0];
           this.positionY = var17[1];
           if (this.velocityX != var17[3]) {
-            this.velocityX = jw.a(var6, var17[3], (byte) 115);
+            this.velocityX = CheckboxLabelWidget.a(var6, var17[3], (byte) 115);
             this.field_y = true;
           }
           if (this.velocityY != var17[4]) {
-            this.velocityY = jw.a(var6, var17[4], (byte) 119);
+            this.velocityY = CheckboxLabelWidget.a(var6, var17[4], (byte) 119);
             this.field_y = true;
           }
           if (var17[5] != this.verticalVelocity) {
-            this.verticalVelocity = d.a(true, jw.a(var8, var17[5], (byte) 105));
+            this.verticalVelocity = d.a(true, CheckboxLabelWidget.a(var8, var17[5], (byte) 105));
             if (this.verticalVelocity == 0) {
               this.height = 0;
             }

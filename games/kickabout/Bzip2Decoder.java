@@ -152,8 +152,8 @@ final class Bzip2Decoder {
         var24 = null;
         var25 = null;
         param0.field_D = 1;
-        if (jd.field_g == null) {
-          jd.field_g = new int[param0.field_D * 100000];
+        if (TextFieldValidator.field_g == null) {
+          TextFieldValidator.field_g = new int[param0.field_D * 100000];
         }
         var26 = 1;
         while (true) {
@@ -324,19 +324,19 @@ final class Bzip2Decoder {
                 param0.field_u[var4] = param0.field_u[var4] + param0.field_u[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(jd.field_g[var4] & 255);
+                var1 = (byte)(TextFieldValidator.field_g[var4] & 255);
                 dupTemp$1 = param0.field_u[var1 & 255];
-                jd.field_g[dupTemp$1] = jd.field_g[dupTemp$1] | var4 << 8;
+                TextFieldValidator.field_g[dupTemp$1] = TextFieldValidator.field_g[dupTemp$1] | var4 << 8;
                 param0.field_u[var1 & 255] = param0.field_u[var1 & 255] + 1;
               }
-              param0.field_x = jd.field_g[param0.field_A] >> 8;
+              param0.field_x = TextFieldValidator.field_g[param0.field_A] >> 8;
               param0.field_G = 0;
-              param0.field_x = jd.field_g[param0.field_x];
+              param0.field_x = TextFieldValidator.field_g[param0.field_x];
               param0.field_p = (byte)(param0.field_x & 255);
               param0.field_x = param0.field_x >> 8;
               param0.field_G = param0.field_G + 1;
               param0.field_j = var14;
-              Bzip2Decoder.c(param0);
+              Bzip2Decoder.emitBlock(param0);
               if (param0.field_G == param0.field_j + 1 &&
                 param0.field_e == 0) {
                 var26 = 1;
@@ -395,7 +395,7 @@ final class Bzip2Decoder {
               }
               dupTemp$0 = param0.field_m[var1 & 255] & 255;
               param0.field_o[dupTemp$0] = param0.field_o[dupTemp$0] + 1;
-              jd.field_g[var14] = param0.field_m[var1 & 255] & 255;
+              TextFieldValidator.field_g[var14] = param0.field_m[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -452,7 +452,7 @@ final class Bzip2Decoder {
             var1 = param0.field_m[param0.field_g[param0.field_f[0]] & 255];
             param0.field_o[var1 & 255] = param0.field_o[var1 & 255] + var15;
             while (var15 > 0) {
-              jd.field_g[var14] = var1 & 255;
+              TextFieldValidator.field_g[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -460,7 +460,7 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void c(os param0) {
+    private final static void emitBlock(os param0) {
         int var1;
         int var2;
         int var3;
@@ -481,7 +481,7 @@ final class Bzip2Decoder {
         var3 = param0.field_e;
         var4 = param0.field_G;
         var5 = param0.field_p;
-        var15 = jd.field_g;
+        var15 = TextFieldValidator.field_g;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_x;
@@ -583,7 +583,7 @@ final class Bzip2Decoder {
         param0.field_e = var3;
         param0.field_G = var4;
         param0.field_p = var5;
-        jd.field_g = var6;
+        TextFieldValidator.field_g = var6;
         param0.field_x = var7;
         param0.field_h = var8;
         param0.field_s = var9;
@@ -591,7 +591,7 @@ final class Bzip2Decoder {
         return;
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompressInto(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;

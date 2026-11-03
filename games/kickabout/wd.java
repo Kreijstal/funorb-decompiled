@@ -42,21 +42,21 @@ final class wd extends IntrusiveNode {
           }
           var9 = PacketBuffer.field_h;
           var3 = var9;
-          if (rm.field_C == 0) {
+          if (RankingsScreen.field_C == 0) {
             for (var4 = 0; var4 < 30; var4++) {
-              var10 = var9[p.a((byte) -24, var9.length)];
-              var6 = p.a((byte) -24, 896 - (var10.field_o >> 1));
-              var7 = p.a((byte) -24, 1344 - (var10.field_v >> 1));
+              var10 = var9[LoggedPossession.a((byte) -24, var9.length)];
+              var6 = LoggedPossession.a((byte) -24, 896 - (var10.field_o >> 1));
+              var7 = LoggedPossession.a((byte) -24, 1344 - (var10.field_v >> 1));
               var10.c(var6 + param1, param0 + var7);
             }
           } else {
-            if (rm.field_C != 1) {
+            if (RankingsScreen.field_C != 1) {
               return;
             }
             for (var4 = 0; var4 < 15; var4++) {
-              var11 = var9[p.a((byte) -24, var9.length)];
-              var6 = p.a((byte) -24, 896 - (var11.field_o >> 1));
-              var7 = p.a((byte) -24, 1344 - (var11.field_v >> 1));
+              var11 = var9[LoggedPossession.a((byte) -24, var9.length)];
+              var6 = LoggedPossession.a((byte) -24, 896 - (var11.field_o >> 1));
+              var7 = LoggedPossession.a((byte) -24, 1344 - (var11.field_v >> 1));
               var11.c(var6 + param1, var7 + param0);
             }
           }
@@ -68,11 +68,11 @@ final class wd extends IntrusiveNode {
         }
     }
 
-    final static ki a(int param0, up[] param1, gr param2, int param3, int param4) {
-        ki var5 = null;
+    final static PlayerInputEvent a(int param0, PlayerStats[] param1, ClubState param2, int param3, int param4) {
+        PlayerInputEvent var5 = null;
         RuntimeException var5_ref = null;
-        ki stackIn_2_0 = null;
-        ki stackIn_4_0 = null;
+        PlayerInputEvent stackIn_2_0 = null;
+        PlayerInputEvent stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -80,10 +80,10 @@ final class wd extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new ki(5, param4, param3, (byte) 0, (byte) 0);
+          var5 = new PlayerInputEvent(5, param4, param3, (byte) 0, (byte) 0);
           var5.field_s = param1;
           if (param0 != 18238) {
-            stackIn_2_0 = (ki) null;
+            stackIn_2_0 = (PlayerInputEvent) null;
             return stackIn_2_0;
           }
           var5.field_t = param2;

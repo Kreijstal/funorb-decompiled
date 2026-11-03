@@ -50,7 +50,7 @@ final class gm extends FootballerAgent {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = param3.b(param4, -1);
-          var6 = param3.findFileId((byte) -107, param2, var5_int);
+          var6 = param3.a((byte) -107, param2, var5_int);
           if (param1 != 10) {
             var7 = (String) null;
             gm.a((ResourceArchive) null, -21, (String) null, (ResourceArchive) null, (String) null);
@@ -89,10 +89,10 @@ final class gm extends FootballerAgent {
         }
     }
 
-    final static void a(int param0, boolean param1, hd param2, kq param3) {
-        up stackIn_7_0;
+    final static void a(int param0, boolean param1, hd param2, SquadSlotWidget param3) {
+        PlayerStats stackIn_7_0;
         int stackIn_7_1;
-        up stackIn_7_2;
+        PlayerStats stackIn_7_2;
         int stackIn_7_3;
         boolean stackIn_8_4 = false;
         boolean stackIn_12_2 = false;
@@ -124,8 +124,8 @@ final class gm extends FootballerAgent {
             stackIn_7_1 = 0;
             stackIn_7_2 = param3.field_Eb;
             stackIn_7_3 = -107;
-            stackIn_8_4 = !(jd.f(param0 ^ 5185));
-            stackIn_12_2 = (((up) (Object) stackIn_7_2).c((byte) stackIn_7_3, stackIn_8_4)) && (wn.a((byte) 83));
+            stackIn_8_4 = !(TextFieldValidator.f(param0 ^ 5185));
+            stackIn_12_2 = (((PlayerStats) (Object) stackIn_7_2).c((byte) stackIn_7_3, stackIn_8_4)) && (wn.a((byte) 83));
             var4 = kk.a(stackIn_7_0, stackIn_7_1, stackIn_12_2);
             var5 = param2.field_q + param2.field_F - 38;
             var6 = param2.field_T + 58;
@@ -134,7 +134,7 @@ final class gm extends FootballerAgent {
             } else {
               ((Sprite) ((Object) var4)).c(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
             }
-            var7 = ad.a(ImageProducerRasterBuffer.a(param3.field_Eb, true), 26300);
+            var7 = ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(param3.field_Eb, true), 26300);
             var8 = Math.max(param2.field_F + 15, 66 + (param2.field_F - (IsSixCommand.field_C.a(var7) >> 1)));
             IsSixCommand.field_C.a(var7, var8, param2.field_T + 51, 16777215, -1);
             if (!param1) {
@@ -195,8 +195,8 @@ final class gm extends FootballerAgent {
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {
-        TriangleRasterizer.c();
-        TriangleRasterizer.b(param2, param3);
+        TriangleRasterizer.useRasterClip();
+        TriangleRasterizer.setProjectionCenter(param2, param3);
         if (this.field_jb &&
           this.field_W != this.field_R) {
           this.b(this.field_R, (byte) 79);
@@ -311,11 +311,11 @@ final class gm extends FootballerAgent {
         var2 = 1900;
         var3 = ug.a(0, this.g(1606384336));
         var4 = lf.a((byte) -119, this.h(1000));
-        var5 = hw.field_i * 40 >> 8;
-        var6 = hw.field_i * 70 >> 8;
-        var7 = hw.field_i * 10 >> 8;
+        var5 = InstrumentNoteMask.field_i * 40 >> 8;
+        var6 = InstrumentNoteMask.field_i * 70 >> 8;
+        var7 = InstrumentNoteMask.field_i * 10 >> 8;
         if (th.field_d &&
-          this.stats.field_q != 4) {
+          this.stats.playerType != 4) {
           var8_ref_String__ = new String[]{"action:", "action_time:", "dash_delay"};
           var9_ref_String__ = new String[]{Integer.toString(this.action), Integer.toString(this.actionTime), Integer.toString(this.dashCooldown)};
           var10 = new StringBuilder("(");
@@ -348,9 +348,9 @@ final class gm extends FootballerAgent {
           var15.a(var10.toString(), 20, var16, 16777215, -1);
           var16 += 10;
           var15.a(var11_ref_StringBuilder.toString(), 20, var16, 16777215, -1);
-          ta.e(125);
-          var17Lifetime1 = var14.field_o * hw.field_i >> 8;
-          var18 = hw.field_i * var14.field_v >> 8;
+          TeamManagementScreen.e(125);
+          var17Lifetime1 = var14.field_o * InstrumentNoteMask.field_i >> 8;
+          var18 = InstrumentNoteMask.field_i * var14.field_v >> 8;
           var19 = -(var17Lifetime1 >> 1) + var3;
           var20 = 10 + var4;
           SoftwareRasterizer.a(var19 - 5, -5 + var20, var17Lifetime1 + 10, var18 + 10, 5, 65793, 200);
@@ -383,9 +383,9 @@ final class gm extends FootballerAgent {
           this.field_T)) {
           PacketBuffer.a(-88, kw.field_f);
           SoftwareRasterizer.b();
-          var2 = (var2 << 7) / hw.field_i;
+          var2 = (var2 << 7) / InstrumentNoteMask.field_i;
           this.a(var2, var8, 128, 190, (byte) -91);
-          ta.e(119);
+          TeamManagementScreen.e(119);
           if (this.field_T) {
             eo.a(kw.field_f, -16777215);
             eo.a(kw.field_f, -16777214);
@@ -407,7 +407,7 @@ final class gm extends FootballerAgent {
           decompiledFrameRemainder0 = false;
         }
         else {
-          var2 = (var2 << 8) / hw.field_i;
+          var2 = (var2 << 8) / InstrumentNoteMask.field_i;
           if (this.megamode) {
             var2 = var2 >> 1;
           }
@@ -436,20 +436,20 @@ final class gm extends FootballerAgent {
         return this.field_kb >> 16;
     }
 
-    final static gv a(String param0, boolean param1, byte param2) {
-        gv var3 = null;
+    final static FadingChatMessage a(String param0, boolean param1, byte param2) {
+        FadingChatMessage var3 = null;
         RuntimeException var3_ref = null;
-        gv stackIn_6_0 = null;
+        FadingChatMessage stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new gv(param0, param1);
-          if (e.field_j < 18) {
-            js.field_d.a(var3, 3);
+          var3 = new FadingChatMessage(param0, param1);
+          if (SplashScreen.field_j < 18) {
+            AppScreen.field_d.a(var3, 3);
           } else {
-            ge.a(var3, false);
+            MatchingTextValidator.a(var3, false);
           }
           if (param2 > -103) {
             field_Q = (String) null;
@@ -652,7 +652,7 @@ final class gm extends FootballerAgent {
             } else {
               var10 = 84;
             }
-            sp.c(var10, -121);
+            ShopPlayerSlot.c(var10, -121);
             this.field_db = true;
           }
         }
@@ -701,10 +701,10 @@ final class gm extends FootballerAgent {
               }
             }
             if (var10Lifetime1 != -1) {
-              sp.c(var10Lifetime1, -3);
+              ShopPlayerSlot.c(var10Lifetime1, -3);
             }
             if (-1 != var11) {
-              sp.c(var11, 11);
+              ShopPlayerSlot.c(var11, 11);
             }
             this.field_Y = true;
           }
@@ -825,7 +825,7 @@ final class gm extends FootballerAgent {
         sn.field_e = null;
         NetworkGameClient.b(true);
         param11 = in.a(param4, 50, param5, param11, param13, param12, param1);
-        ud.a(false, param7, param9, param8, param10, param6, param5, param11, param3, param2);
+        MatchTransitionScreen.a(false, param7, param9, param8, param10, param6, param5, param11, param3, param2);
         sb.a(param9, false, param8);
         if (param0 >= -42) {
           field_S = (String) null;
@@ -924,10 +924,10 @@ final class gm extends FootballerAgent {
 
     final static void i(int param0) {
         int var2 = 0;
-        qt[] var1 = null;
-        qt var3 = null;
+        ButtonMenuScreen[] var1 = null;
+        ButtonMenuScreen var3 = null;
         int var4 = 0;
-        qt[] var5 = null;
+        ButtonMenuScreen[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = Kickabout.field_G;
@@ -936,7 +936,7 @@ final class gm extends FootballerAgent {
           var1 = var5;
           for (var2 = param0; var5.length > var2; var2++) {
             var3 = var5[var2];
-            var3.b((byte) -112);
+            var3.restoreDefaultButtons((byte) -112);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -24,7 +24,7 @@ final class MidiFileReader {
         this.field_a.field_n = -1;
     }
 
-    final void b(int param0) {
+    final void saveTrackPosition(int param0) {
         this.field_b[param0] = this.field_a.field_n;
     }
 
@@ -52,7 +52,7 @@ final class MidiFileReader {
         return true;
     }
 
-    private final int a(int param0, int param1) {
+    private final int decodeMessagePayload(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         int var3 = 0;
@@ -60,14 +60,14 @@ final class MidiFileReader {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_a.h((byte) -117);
+          var3 = this.field_a.readUnsignedByte((byte) -117);
           var4 = this.field_a.l(9);
           if (var3 == 47) {
             this.field_a.field_n = this.field_a.field_n + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_a.i(-90);
+            var5 = this.field_a.readUnsignedMedium(-90);
             var4 -= 3;
             var6 = this.field_e[param0];
             this.field_f = this.field_f + (long)var6 * (long)(this.field_c - var5);
@@ -81,10 +81,10 @@ final class MidiFileReader {
         var3Lifetime1 = field_i[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_a.h((byte) -125) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_a.readUnsignedByte((byte) -125) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_a.h((byte) -117) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_a.readUnsignedByte((byte) -117) << 16;
         }
         return var4Lifetime1;
     }
@@ -140,8 +140,8 @@ final class MidiFileReader {
         this.field_d = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_a.k(4);
-          var5 = this.field_a.k(4);
+          var4 = this.field_a.readInt(4);
+          var5 = this.field_a.readInt(4);
           if (var4 == 1297379947) {
             this.field_d[var3] = this.field_a.field_n;
             var3++;
@@ -174,7 +174,7 @@ final class MidiFileReader {
         }
         if (var2 != 240 &&
           var2 != 247) {
-          return this.a(param0, var2);
+          return this.decodeMessagePayload(param0, var2);
         }
         var3 = this.field_a.l(118);
         if (var2 == 247 &&
@@ -186,7 +186,7 @@ final class MidiFileReader {
             !(var4 > 252) || var4 == 254) {
             this.field_a.field_n = this.field_a.field_n + 1;
             this.field_g[param0] = var4;
-            return this.a(param0, var4);
+            return this.decodeMessagePayload(param0, var4);
           }
         }
         this.field_a.field_n = this.field_a.field_n + var3;

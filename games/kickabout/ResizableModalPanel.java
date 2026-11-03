@@ -122,8 +122,8 @@ abstract class ResizableModalPanel extends ModalPanel {
             lt.field_c[var4] = new Sprite(var2, var3);
             PacketBuffer.a(123, lt.field_c[var4]);
             var5 = (var4 << 16) / 100;
-            wt.field_y.rotateSmooth(wt.field_y.field_o << 3, wt.field_y.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, -var5, 4096);
-            ta.e(127);
+            wt.field_y.b(wt.field_y.field_o << 3, wt.field_y.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, -var5, 4096);
+            TeamManagementScreen.e(127);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -163,7 +163,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         int var13Lifetime1;
         int var14Lifetime1;
         var17 = Kickabout.field_G;
-        SoftwareRasterizer.fillVerticalGradient(param0 + 6, 35 + param2, this.field_n - 12, -40 + this.field_i, 2105376, 0);
+        SoftwareRasterizer.g(param0 + 6, 35 + param2, this.field_n - 12, -40 + this.field_i, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -229,7 +229,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           var9Lifetime1++;
           var8Lifetime1++;
         }
-        aa.field_f.c(-90 + this.field_n + param0, param2 + 10);
+        KeyedLoginCredentials.field_f.c(-90 + this.field_n + param0, param2 + 10);
         ju.a(5 + param0, -127, 35 + param2, sk.field_a, -10 + this.field_n);
         ju.a(param0, -125, -22 + (this.field_i + param2), vb.field_a, this.field_n);
         var4Lifetime2 = this.field_i - 79;

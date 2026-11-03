@@ -43,8 +43,8 @@ final class ParticipantStatus extends MatchAgent {
             var9 = var7 + (-var5 + 1344 - ws.field_c[param3][-1 + param0][1]);
             var8 = var6 - var4_int + (896 - ws.field_c[param3][param0 - 1][0]);
           }
-          ge.field_m[0] = Math.min(896, Math.max(0, var8));
-          ge.field_m[1] = Math.min(1344, Math.max(0, var9));
+          MatchingTextValidator.field_m[0] = Math.min(896, Math.max(0, var8));
+          MatchingTextValidator.field_m[1] = Math.min(1344, Math.max(0, var9));
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "gt.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -126,7 +126,7 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    final static wh a(boolean param0, int param1, byte param2, int param3) {
+    final static FadingSoundPlayer a(boolean param0, int param1, byte param2, int param3) {
         int var4_int = 0;
         int stackIn_3_0 = 0;
         boolean stackIn_3_1 = false;
@@ -135,7 +135,7 @@ final class ParticipantStatus extends MatchAgent {
         int stackIn_7_0 = 0;
         boolean stackIn_7_1 = false;
         boolean stackIn_7_2 = false;
-        wh stackIn_8_0 = null;
+        FadingSoundPlayer stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
@@ -564,7 +564,7 @@ final class ParticipantStatus extends MatchAgent {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static wh $cfr$intArgs$a$60f25194e713(boolean param0, int param1, int param2, int param3) {
+    final static FadingSoundPlayer $cfr$intArgs$a$60f25194e713(boolean param0, int param1, int param2, int param3) {
         int var4_int = 0;
         int stackIn_3_0 = 0;
         boolean stackIn_3_1 = false;
@@ -573,7 +573,7 @@ final class ParticipantStatus extends MatchAgent {
         int stackIn_7_0 = 0;
         boolean stackIn_7_1 = false;
         boolean stackIn_7_2 = false;
-        wh stackIn_8_0 = null;
+        FadingSoundPlayer stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {

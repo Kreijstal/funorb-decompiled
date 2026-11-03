@@ -8,7 +8,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
     static String field_L;
     static String field_C;
     static hd field_H;
-    static up field_G;
+    static PlayerStats field_G;
     static String[] field_K;
     private TextHotspotWidget field_D;
     static int field_J;
@@ -58,7 +58,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
         int var6 = 0;
         try {
           this.field_B = param0;
-          this.field_I = new TextButton(es.field_g, (UiListener) null);
+          this.field_I = new TextButton(RowRangeRequest.field_g, (UiListener) null);
           this.field_I.field_r = (WidgetPainter) ((Object) new op());
           var7 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, NodeHashTableIterator.field_a, new String[]{this.k(107), this.m(-1522433695)});
           var3 = 20;

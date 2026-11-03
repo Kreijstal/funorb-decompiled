@@ -67,13 +67,13 @@ final class ClientException extends RuntimeException {
     final static void a(int param0, int param1, int param2) {
         if (param1 == 0) {
           tb.field_s = param0;
-          ta.field_A = param2;
+          TeamManagementScreen.field_A = param2;
           return;
         }
         Sprite[] var4 = (Sprite[]) null;
         ClientException.a((Sprite[]) null, (byte) 5);
         tb.field_s = param0;
-        ta.field_A = param2;
+        TeamManagementScreen.field_A = param2;
     }
 
     ClientException(Throwable param0, String param1) {

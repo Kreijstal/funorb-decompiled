@@ -14,7 +14,7 @@ final class os {
     int field_z;
     static String field_d;
     int field_j;
-    static rv field_l;
+    static ValidationState field_l;
     byte[] field_y;
     boolean[] field_B;
     static String field_w;
@@ -284,7 +284,7 @@ final class os {
                 }
                 if (param1) {
                   vf.field_M[var23Lifetime2] = var27Lifetime1 >> im.field_yb;
-                  ud.field_B[var23Lifetime2] = var28Lifetime1 >> im.field_yb;
+                  MatchTransitionScreen.field_B[var23Lifetime2] = var28Lifetime1 >> im.field_yb;
                   bw.field_f[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -306,7 +306,7 @@ final class os {
                   var24Lifetime2Lifetime1 = param0.field_S[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_C[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_J[var23Lifetime2];
-                  jd.field_h[var23Lifetime2] = (var26Lifetime1Lifetime1 * var18 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime2Lifetime1 >> 16) + var9;
+                  TextFieldValidator.field_h[var23Lifetime2] = (var26Lifetime1Lifetime1 * var18 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime2Lifetime1 >> 16) + var9;
                   un.field_a[var23Lifetime2] = var10 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13 + var26Lifetime1Lifetime1 * var19 >> 16);
                   ThreeCommand.field_A[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var17 + var24Lifetime2Lifetime1 * var14) >> 16);
                   var24Lifetime2Lifetime1 = param0.field_O[var23Lifetime2];
@@ -320,7 +320,7 @@ final class os {
                   var26Lifetime1Lifetime1 = param0.field_d[var23Lifetime2];
                   ConsoleValue.field_g[var23Lifetime2] = (var12 * var24Lifetime2Lifetime1 + var15 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var18 >> 16) + var9;
                   jl.field_e[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16 >> 16) + var10;
-                  gp.field_g[var23Lifetime2] = var11 + (var17 * var25Lifetime1Lifetime1 + (var24Lifetime2Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20) >> 16);
+                  PasswordLoginCredentials.field_g[var23Lifetime2] = var11 + (var17 * var25Lifetime1Lifetime1 + (var24Lifetime2Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20) >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
                     return;
@@ -414,7 +414,7 @@ final class os {
     static {
         field_d = "Loading extra data (1/2)";
         field_w = "You do not have a suitable number of players for the current options.";
-        field_l = new rv();
+        field_l = new ValidationState();
         field_i = new String[]{"Rating", "League", "Avg. Stat"};
     }
 }

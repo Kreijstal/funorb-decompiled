@@ -200,7 +200,7 @@ final class vf extends i {
         return Character.toLowerCase(param1);
     }
 
-    vf(jt param0) {
+    vf(PitchOptionTile param0) {
         super(29, param0);
         String var5 = null;
         String var3 = null;

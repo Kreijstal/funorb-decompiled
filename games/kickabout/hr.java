@@ -88,7 +88,7 @@ final class hr extends IntrusiveNode {
           var15 = j.a(-5275);
           if (IsSixCommand.field_B &&
             var15 != null) {
-            SoftwareRasterizer.a(0, 0, 640, 480, ConsoleCommand.field_x[ih.field_c][rm.field_C]);
+            SoftwareRasterizer.fillRect(0, 0, 640, 480, ConsoleCommand.field_x[ih.field_c][RankingsScreen.field_C]);
             var2_int = var15.field_v;
             var3 = var15.field_v;
             var4_int = -1 + AccountTermsPanel.a(0, 6784) / var2_int;
@@ -107,18 +107,18 @@ final class hr extends IntrusiveNode {
             }
           }
           if (var15 != null) {
-            if (bn.field_G != var15) {
-              ja.field_S = var15.copy();
-              bn.field_G = var15;
+            if (LeaguesScreen.field_G != var15) {
+              MyKitScreen.field_S = var15.copy();
+              LeaguesScreen.field_G = var15;
               ou.field_B = -1;
             }
-            if (hw.field_i != ou.field_B) {
-              ou.field_B = hw.field_i;
-              var2_intLifetime1 = var15.field_o * hw.field_i >> 8;
-              var3Lifetime1 = hw.field_i * var15.field_v >> 8;
-              PacketBuffer.a(param0 ^ 10, ja.field_S);
+            if (InstrumentNoteMask.field_i != ou.field_B) {
+              ou.field_B = InstrumentNoteMask.field_i;
+              var2_intLifetime1 = var15.field_o * InstrumentNoteMask.field_i >> 8;
+              var3Lifetime1 = InstrumentNoteMask.field_i * var15.field_v >> 8;
+              PacketBuffer.a(param0 ^ 10, MyKitScreen.field_S);
               var15.a(0, 0, var2_intLifetime1, var3Lifetime1);
-              ta.e(118);
+              TeamManagementScreen.e(118);
             }
             stackIn_20_0 = (qr.a(0, (byte) -1) >= 0) ? 0 : 1;
             var2_intLifetime1Lifetime1 = stackIn_20_0;
@@ -129,7 +129,7 @@ final class hr extends IntrusiveNode {
             stackIn_29_0 = (ig.a(480, 4620) <= 1344) ? 0 : 1;
             var5Lifetime1 = stackIn_29_0;
             if (var2_intLifetime1Lifetime1 != 0) {
-              var6Lifetime1 = b.c(param0 - 26, -15 - var15.field_o);
+              var6Lifetime1 = MySquadScreen.c(param0 - 26, -15 - var15.field_o);
               stackIn_33_0 = -15;
               if (var4_intLifetime1 != 0) {
                 stackIn_34_1 = var15.field_v;
@@ -145,14 +145,14 @@ final class hr extends IntrusiveNode {
               }
               var8Lifetime1 = stackIn_36_0 + stackIn_37_1;
               while (var7Lifetime1 < var8Lifetime1) {
-                ja.field_S.d(var6Lifetime1, go.a(var7Lifetime1, (byte) -56));
+                MyKitScreen.field_S.drawWithOffsets(var6Lifetime1, go.a(var7Lifetime1, (byte) -56));
                 var7Lifetime1 = var7Lifetime1 + var15.field_v;
               }
             }
             if (var4_intLifetime1 != 0) {
               var6Lifetime1Lifetime1 = go.a(-var15.field_v - 15, (byte) -56);
               for (var7Lifetime1Lifetime1 = -15; var7Lifetime1Lifetime1 < 896; var7Lifetime1Lifetime1 = var7Lifetime1Lifetime1 + var15.field_o) {
-                ja.field_S.d(b.c(-44, var7Lifetime1Lifetime1), var6Lifetime1Lifetime1);
+                MyKitScreen.field_S.drawWithOffsets(MySquadScreen.c(-44, var7Lifetime1Lifetime1), var6Lifetime1Lifetime1);
               }
             }
             if (var5Lifetime1 != 0) {
@@ -161,7 +161,7 @@ final class hr extends IntrusiveNode {
               for (var7Lifetime1Lifetime2 = 0; var7Lifetime1Lifetime2 < 2; var7Lifetime1Lifetime2++) {
                 var8Lifetime1Lifetime1 = go.a(var6Lifetime1Lifetime2, (byte) -56);
                 for (var9Lifetime1 = -15; 896 > var9Lifetime1; var9Lifetime1 = var9Lifetime1 + var15.field_o) {
-                  ja.field_S.d(b.c(-16, var9Lifetime1), var8Lifetime1Lifetime1);
+                  MyKitScreen.field_S.drawWithOffsets(MySquadScreen.c(-16, var9Lifetime1), var8Lifetime1Lifetime1);
                 }
                 var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + var15.field_v;
               }
@@ -170,7 +170,7 @@ final class hr extends IntrusiveNode {
               for (var6Lifetime1Lifetime3 = -15; var15.field_o + var6Lifetime1Lifetime3 < 896; var6Lifetime1Lifetime3 = var6Lifetime1Lifetime3 + var15.field_o) {
               }
               for (var7Lifetime1Lifetime3 = 0; var7Lifetime1Lifetime3 < 2; var7Lifetime1Lifetime3++) {
-                var8Lifetime1Lifetime2 = b.c(-63, var6Lifetime1Lifetime3);
+                var8Lifetime1Lifetime2 = MySquadScreen.c(-63, var6Lifetime1Lifetime3);
                 stackIn_62_0 = -15;
                 if (var4_intLifetime1 != 0) {
                   stackIn_63_1 = var15.field_v;
@@ -185,42 +185,42 @@ final class hr extends IntrusiveNode {
                 }
                 var10Lifetime1 = stackIn_66_0 + 1359;
                 while (var9Lifetime1Lifetime1 < var10Lifetime1) {
-                  ja.field_S.d(var8Lifetime1Lifetime2, go.a(var9Lifetime1Lifetime1, (byte) -56));
+                  MyKitScreen.field_S.drawWithOffsets(var8Lifetime1Lifetime2, go.a(var9Lifetime1Lifetime1, (byte) -56));
                   var9Lifetime1Lifetime1 = var9Lifetime1Lifetime1 + var15.field_v;
                 }
                 var6Lifetime1Lifetime3 = var6Lifetime1Lifetime3 + var15.field_o;
               }
             }
           } else {
-            SoftwareRasterizer.a(0, 0, 640, 480, ConsoleCommand.field_x[ih.field_c][rm.field_C]);
+            SoftwareRasterizer.fillRect(0, 0, 640, 480, ConsoleCommand.field_x[ih.field_c][RankingsScreen.field_C]);
           }
-          if (lg.field_a != null) {
-            var2_intLifetime2 = b.c(-29, -15);
+          if (DebouncedValidationProvider.field_a != null) {
+            var2_intLifetime2 = MySquadScreen.c(-29, -15);
             var3Lifetime2 = go.a(-15, (byte) -56);
-            if (hw.field_i == 256) {
-              lg.field_a.d(var2_intLifetime2, var3Lifetime2);
+            if (InstrumentNoteMask.field_i == 256) {
+              DebouncedValidationProvider.field_a.drawWithOffsets(var2_intLifetime2, var3Lifetime2);
             } else {
-              lg.field_a.a(var2_intLifetime2, var3Lifetime2, lg.field_a.field_o * hw.field_i >> 8, hw.field_i * lg.field_a.field_v >> 8);
+              DebouncedValidationProvider.field_a.a(var2_intLifetime2, var3Lifetime2, DebouncedValidationProvider.field_a.field_o * InstrumentNoteMask.field_i >> 8, InstrumentNoteMask.field_i * DebouncedValidationProvider.field_a.field_v >> 8);
             }
           }
-          if (!wh.field_q) {
-            if (rm.field_C == 3) {
+          if (!FadingSoundPlayer.field_q) {
+            if (RankingsScreen.field_C == 3) {
               GameKeyHandler.a((byte) 92);
             }
-            if (rm.field_C == 2) {
+            if (RankingsScreen.field_C == 2) {
               LoginForm.a((byte) -79);
             }
-            if (bv.field_l != null) {
-              var2_intLifetime3 = fp.field_f * 6 >> 8;
+            if (AccountNameAvailabilityValidator.field_l != null) {
+              var2_intLifetime3 = AuctionItem.field_f * 6 >> 8;
               if (3 >= var2_intLifetime3) {
                 stackIn_85_0 = var2_intLifetime3;
               } else {
                 stackIn_85_0 = 6 - var2_intLifetime3;
               }
               var2_intLifetime3Lifetime1 = stackIn_85_0;
-              for (var3Lifetime3 = 0; var3Lifetime3 < bv.field_l.length; var3Lifetime3++) {
-                if (bv.field_l[var3Lifetime3] != null) {
-                  bv.field_l[var3Lifetime3].a(var2_intLifetime3Lifetime1, true);
+              for (var3Lifetime3 = 0; var3Lifetime3 < AccountNameAvailabilityValidator.field_l.length; var3Lifetime3++) {
+                if (AccountNameAvailabilityValidator.field_l[var3Lifetime3] != null) {
+                  AccountNameAvailabilityValidator.field_l[var3Lifetime3].a(var2_intLifetime3Lifetime1, true);
                 }
               }
             }

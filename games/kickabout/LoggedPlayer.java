@@ -7,7 +7,7 @@ final class LoggedPlayer {
     int field_c;
     int field_q;
     int field_n;
-    private int field_s;
+    private int totalGoals;
     static hd field_r;
     int field_a;
     int field_m;
@@ -15,8 +15,8 @@ final class LoggedPlayer {
     static String field_k;
     int crosses;
     int field_i;
-    private boolean field_d;
-    private boolean field_b;
+    private boolean reward;
+    private boolean member;
     int resignTime;
     int field_f;
     static String[] field_e;
@@ -26,13 +26,13 @@ final class LoggedPlayer {
         StringBuilder var2 = new StringBuilder();
         StringBuilder discarded$0 = var2.append(this.home ? "home" : "away");
         StringBuilder discarded$1 = var2.append(" resigntime=" + this.resignTime);
-        StringBuilder discarded$2 = var2.append(" reward=" + this.field_d);
-        StringBuilder discarded$3 = var2.append(" member=" + this.field_b);
+        StringBuilder discarded$2 = var2.append(" reward=" + this.reward);
+        StringBuilder discarded$3 = var2.append(" member=" + this.member);
         StringBuilder discarded$4 = var2.append(" tackles=" + this.field_m + "." + this.field_c + "." + this.field_n + "." + this.field_a);
         StringBuilder discarded$5 = var2.append(" kicks=" + this.field_i + "." + this.field_f + "." + this.field_q);
         StringBuilder discarded$6 = var2.append(" crosses=" + this.crosses);
         StringBuilder discarded$7 = var2.append(" headers=" + this.headers);
-        StringBuilder discarded$8 = var2.append(" tot_goals=" + this.field_s);
+        StringBuilder discarded$8 = var2.append(" tot_goals=" + this.totalGoals);
         return "LoggedPlayer{" + var2.toString() + "}";
     }
 
@@ -105,16 +105,16 @@ final class LoggedPlayer {
         return 2 * param0;
     }
 
-    final void a(boolean param0, LoggedPlayer param1) {
+    final void copyFrom(boolean param0, LoggedPlayer param1) {
         this.field_c = param1.field_c;
-        this.field_s = param1.field_s;
-        this.field_b = param1.field_b;
+        this.totalGoals = param1.totalGoals;
+        this.member = param1.member;
         this.home = param1.home;
         this.crosses = param1.crosses;
         this.headers = param1.headers;
         this.resignTime = param1.resignTime;
         this.field_a = param1.field_a;
-        this.field_d = param1.field_d;
+        this.reward = param1.reward;
         this.field_f = param1.field_f;
         this.field_i = param1.field_i;
         this.field_n = param1.field_n;

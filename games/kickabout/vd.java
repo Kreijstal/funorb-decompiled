@@ -12,7 +12,7 @@ final class vd {
         if (param1 > rl.field_r) {
           rl.field_r = param1;
           dg.field_c = nv.field_I[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(115, nv.field_I.length, MidiPcmStream.field_l)];
-          jm.a(1, param0 + 9863, param0);
+          DelayedServerPacket.a(1, param0 + 9863, param0);
           return;
         }
     }
@@ -47,12 +47,12 @@ final class vd {
         int var1Lifetime1;
         if (param0 == 82) {
           if (null != um.field_e &&
-            5 == um.field_e.field_o.phase) {
+            5 == um.field_e.matchState.phase) {
             return true;
           }
           if (um.field_e == null &&
-            null == ra.field_G) {
-            var1 = cq.field_h.field_c;
+            null == GameModesHelpScreen.field_G) {
+            var1 = AuctionLogEntry.field_h.screenId;
             if (-5 == var1) {
               return false;
             }
@@ -62,16 +62,16 @@ final class vd {
         }
         field_b = (String) null;
         if (null != um.field_e &&
-          5 == um.field_e.field_o.phase) {
+          5 == um.field_e.matchState.phase) {
           return true;
         }
         if (um.field_e != null) {
           return false;
         }
-        if (null != ra.field_G) {
+        if (null != GameModesHelpScreen.field_G) {
           return false;
         }
-        var1Lifetime1 = cq.field_h.field_c;
+        var1Lifetime1 = AuctionLogEntry.field_h.screenId;
         if (-5 == var1Lifetime1) {
           return false;
         }

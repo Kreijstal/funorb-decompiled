@@ -13,8 +13,8 @@ final class DoSomethingCommand extends ConsoleCommand {
           field_B = null;
           return;
         }
-        up var2 = (up) null;
-        DoSomethingCommand.a(70, (up) null, -110);
+        PlayerStats var2 = (PlayerStats) null;
+        DoSomethingCommand.a(70, (PlayerStats) null, -110);
         field_D = null;
         field_A = null;
         field_B = null;
@@ -53,7 +53,7 @@ final class DoSomethingCommand extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, up param1, int param2) {
+    final static void a(int param0, PlayerStats param1, int param2) {
         try {
           np.field_Jb.a(new ie(param2, param1), 3);
           int var3_int = -77 % ((param0 + 44) / 63);

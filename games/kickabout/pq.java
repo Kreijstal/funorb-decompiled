@@ -3,7 +3,7 @@
  */
 final class pq extends i {
     static int[] field_L;
-    private mf field_H;
+    private SquadGridWidget field_H;
     static String field_G;
     static byte[][] field_O;
     static em field_N;
@@ -24,14 +24,14 @@ final class pq extends i {
           return;
         }
         try {
-          bg.field_r = param1;
+          QuickChatPhraseDefinition.field_r = param1;
           or.field_d.b(54, (byte) 89);
           fieldTemp$0 = or.field_d.field_n + 1;
           or.field_d.field_n = or.field_d.field_n + 1;
           var3_int = fieldTemp$0;
-          or.field_d.a(param1, (byte) -127);
-          or.field_d.a(102, param0);
-          or.field_d.c(62, -var3_int + or.field_d.field_n);
+          or.field_d.writeCircumfixedString(param1, (byte) -127);
+          or.field_d.writeByte(102, param0);
+          or.field_d.backpatchByteLength(62, -var3_int + or.field_d.field_n);
           ri.field_t = 500;
           uv.field_f = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
@@ -107,29 +107,29 @@ final class pq extends i {
           this.field_H.a(101, false);
           this.field_H.k((byte) 84);
           if (-1 != this.field_H.field_Fb) {
-            GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].a(param2 + 35 + 105, 23, param1 + 320);
+            GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].a(param2 + 35 + 105, 23, param1 + 320);
             if (!GameLoopApplet.field_E.a((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
-              if (cq.e(15137) &&
+              if (AuctionLogEntry.e(15137) &&
                 !np.h((byte) 5)) {
                 IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
               if (this.field_H.field_Fb != -1 &&
-                gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+                PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
                 IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
-              IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
             IsSixCommand.field_C.d(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
           }
-          if (!cq.e(15137)) {
+          if (!AuctionLogEntry.e(15137)) {
             if (this.field_H.field_Fb == -1) {
-              IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             } else {
-              if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              if (PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+                IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
                 IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
               }
@@ -141,11 +141,11 @@ final class pq extends i {
             return;
           }
           if (this.field_H.field_Fb != -1 &&
-            gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+            PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
             IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
             return;
           }
-          IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+          IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
           return;
         }
         field_J = -68;
@@ -155,25 +155,25 @@ final class pq extends i {
         this.field_H.a(101, false);
         this.field_H.k((byte) 84);
         if (-1 != this.field_H.field_Fb) {
-          GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].a(param2 + 35 + 105, 23, param1 + 320);
+          GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].a(param2 + 35 + 105, 23, param1 + 320);
           if (!GameLoopApplet.field_E.a((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
-            if (!cq.e(15137)) {
+            if (!AuctionLogEntry.e(15137)) {
               if (this.field_H.field_Fb != -1 &&
-                gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+                PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
                 IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
-              IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
             if (!np.h((byte) 5)) {
               IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
             } else {
               if (this.field_H.field_Fb == -1) {
-                IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
-                if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                  IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                if (PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+                  IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
                 } else {
                   IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 }
@@ -183,14 +183,14 @@ final class pq extends i {
           }
           IsSixCommand.field_C.d(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
         }
-        if (!cq.e(15137)) {
+        if (!AuctionLogEntry.e(15137)) {
           if (this.field_H.field_Fb == -1) {
-            IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+            IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
           } else {
-            if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+            if (PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
               IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
             } else {
-              IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             }
           }
         } else {
@@ -198,10 +198,10 @@ final class pq extends i {
             IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
           } else {
             if (this.field_H.field_Fb == -1) {
-              IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             } else {
-              if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              if (PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+                IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
                 IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
               }
@@ -212,7 +212,7 @@ final class pq extends i {
 
     pq() {
         super(11);
-        this.field_H = new mf(GameLoopApplet.field_E);
+        this.field_H = new SquadGridWidget(GameLoopApplet.field_E);
     }
 
     final static void g(byte param0) {
@@ -258,14 +258,14 @@ final class pq extends i {
           if (GameLoopApplet.field_E.a((byte) 90, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
             this.field_i[0].field_lb = false;
           } else {
-            if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+            if (PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
               this.field_i[0].field_lb = true;
             } else {
               this.field_i[0].field_lb = false;
             }
           }
         }
-        if (!cq.e(15137)) {
+        if (!AuctionLogEntry.e(15137)) {
           return;
         }
         if (np.h((byte) -128)) {

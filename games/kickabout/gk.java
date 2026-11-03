@@ -20,7 +20,7 @@ final class gk {
         }
         try {
           SectorCacheStore.field_c = param2;
-          qs.field_K = param3;
+          PlayerShopScreen.field_K = param3;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "gk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

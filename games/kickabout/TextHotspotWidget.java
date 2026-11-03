@@ -77,8 +77,8 @@ class TextHotspotWidget extends TextButton {
           TextHotspotWidget.i(83);
         }
         var2.b(param1, (byte) -80);
-        var2.a(116, 1);
-        var2.a(param0 ^ -32, 2);
+        var2.writeByte(116, 1);
+        var2.writeByte(param0 ^ -32, 2);
     }
 
     final void c(int param0, int param1, int param2, int param3) {
@@ -100,7 +100,7 @@ class TextHotspotWidget extends TextButton {
 
     final static void a(int param0, String param1) {
         int var2_int = 0;
-        if (!cq.e(15137)) {
+        if (!AuctionLogEntry.e(15137)) {
           return;
         }
         try {
@@ -110,8 +110,8 @@ class TextHotspotWidget extends TextButton {
           or.field_d.b(89, (byte) 77);
           or.field_d.field_n = or.field_d.field_n + 2;
           var2_int = or.field_d.field_n;
-          or.field_d.a(14190, param1);
-          or.field_d.d(or.field_d.field_n - var2_int, 62);
+          or.field_d.writeString(14190, param1);
+          or.field_d.backpatchShortLength(or.field_d.field_n - var2_int, 62);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "lb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -228,7 +228,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    boolean focusNext(UiWidget param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

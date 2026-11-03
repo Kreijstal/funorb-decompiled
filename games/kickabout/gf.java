@@ -78,18 +78,18 @@ final class gf {
         try {
           var15 = un.field_e;
           var2 = 123 % ((param0 + 25) / 60);
-          var3 = var15.h((byte) -106);
+          var3 = var15.readUnsignedByte((byte) -106);
           if (var3 == 0) {
             var12 = st.c(-23091);
             var4 = var12;
             var11 = var12;
             var5 = var11;
             var6 = var15;
-            var7 = ((PacketBuffer) ((Object) var6)).h((byte) -108);
+            var7 = ((PacketBuffer) ((Object) var6)).readUnsignedByte((byte) -108);
             for (var8 = 0; var7 > var8; var8++) {
-              var11[var8] = ((PacketBuffer) ((Object) var6)).k(4);
+              var11[var8] = ((PacketBuffer) ((Object) var6)).readInt(4);
             }
-            var13 = (dk) (ap.field_j.g(24009));
+            var13 = (dk) (MatchScreen.field_j.g(24009));
             if (var13 == null) {
               lr.b((byte) -116);
               return;
@@ -109,11 +109,11 @@ final class gf {
             return;
           }
           if (2 != var3) {
-            bd.a("A1: " + tr.b(0), (Throwable) null, 1);
+            UnreadMessagesScreen.a("A1: " + tr.b(0), (Throwable) null, 1);
             lr.b((byte) -116);
             return;
           }
-          var16_ref = (dk) (ap.field_j.g(24009));
+          var16_ref = (dk) (MatchScreen.field_j.g(24009));
           if (var16_ref == null) {
             lr.b((byte) -116);
             return;
@@ -206,7 +206,7 @@ final class gf {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
-            var5 = gp.a((byte) -25, var3);
+            var5 = PasswordLoginCredentials.a((byte) -25, var3);
             if (var5 == null) {
               stackIn_12_0 = ie.a(var4, param0 - 64);
               return stackIn_12_0;

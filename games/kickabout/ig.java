@@ -63,7 +63,7 @@ final class ig {
           var4 = 0;
           if (0 != dc.field_d) {
             var3Lifetime2 = 0;
-            pt.a(param0 + (qj.field_e + vo.field_cb.field_q), -22914, qj.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-vo.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
+            AuctionListing.a(param0 + (qj.field_e + vo.field_cb.field_q), -22914, qj.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-vo.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
             var4Lifetime1 = cf.field_Db;
             while (var4Lifetime1 > 0) {
               field_a[var4Lifetime1 % 10].c(qj.field_e + 140 + (-(var3Lifetime2 * field_a[0].field_q) + param0), 9 + (ArchiveNetworkClient.field_i - 2 * (-CachedArchiveSource.field_s + 18)));
@@ -87,7 +87,7 @@ final class ig {
               un.field_d.a(ks.field_b, -(var3Lifetime2Lifetime1 * field_a[0].field_q) + (qj.field_e + 140 + param0), 35 + ArchiveNetworkClient.field_i - 2 * (18 - CachedArchiveSource.field_s), 4521796, -1);
             }
             un.field_d.a("-----------", 64 + qj.field_e, -(2 * (18 - CachedArchiveSource.field_s)) + 44 + ArchiveNetworkClient.field_i, 16777215, -1);
-            ta.e(param1 ^ -12506);
+            TeamManagementScreen.e(param1 ^ -12506);
           }
           var4Lifetime2 = GoalStateAgent.field_l;
           var3Lifetime3 = 0;
@@ -111,7 +111,7 @@ final class ig {
         if (param1 != 4620) {
           field_h = (String) null;
         }
-        return (int)(fw.field_G + (jr.field_Gb + (double)((-240 + param0 << 8) / hw.field_i)));
+        return (int)(MyPitchScreen.field_G + (jr.field_Gb + (double)((-240 + param0 << 8) / InstrumentNoteMask.field_i)));
     }
 
     final static void a(boolean param0, byte param1, int param2, int param3) {
@@ -119,7 +119,7 @@ final class ig {
           return;
         }
         int var4 = sh.a(70, param2);
-        int var5 = fm.a((byte) -27, param3);
+        int var5 = AchievementsScreen.a((byte) -27, param3);
         gm var6 = (gm) (et.field_d.field_P[param3][param2]);
         int var7 = !param0 ? 80 + qj.a(-6779, 480) : qj.a(-6779, 0) - 50;
         if (var6.positionY != var5 &&

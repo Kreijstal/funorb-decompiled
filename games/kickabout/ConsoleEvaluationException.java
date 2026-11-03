@@ -31,7 +31,7 @@ final class ConsoleEvaluationException extends Exception {
         int var3 = rb.field_Bb * rb.field_Bb;
         int var4 = -(param1 * param1) + var3;
         dn.field_Cb.a(true, 199, var2 - var4 * 199 / var3, 90, -210 + (SoftwareRasterizer.field_f - 4));
-        fp.field_p.a(true, 438, var4 * 438 / var3 + (202 + var2), 0, -124 + SoftwareRasterizer.field_f);
+        AuctionItem.field_p.a(true, 438, var4 * 438 / var3 + (202 + var2), 0, -124 + SoftwareRasterizer.field_f);
         int var5 = 66 % ((73 - param0) / 52);
     }
 
@@ -48,12 +48,12 @@ final class ConsoleEvaluationException extends Exception {
             }
           } else {
             if (ArchiveIndex.field_h == null) {
-              e.field_m = gf.a(oo.field_c, param1 + 0, 480, 0, 640, 0);
-              if (null == e.field_m) {
+              SplashScreen.field_m = gf.a(oo.field_c, param1 + 0, 480, 0, 640, 0);
+              if (null == SplashScreen.field_m) {
                 var2 = 3;
               } else {
                 var2 = 2;
-                lp.a(e.field_m, (byte) -64);
+                lp.a(SplashScreen.field_m, (byte) -64);
               }
               if (ArchiveIndex.field_h == null &&
                 cv.field_e) {
@@ -61,11 +61,11 @@ final class ConsoleEvaluationException extends Exception {
               }
               return;
             }
-            e.field_m = ArchiveIndex.field_h.b(30182);
+            SplashScreen.field_m = ArchiveIndex.field_h.b(30182);
             ar.a(500, 2);
-            if (null != e.field_m) {
+            if (null != SplashScreen.field_m) {
               var2 = 2;
-              lp.a(e.field_m, (byte) -64);
+              lp.a(SplashScreen.field_m, (byte) -64);
               if (ArchiveIndex.field_h == null &&
                 cv.field_e) {
                 ba.a(param0, param1 + 6, var2);
@@ -95,16 +95,16 @@ final class ConsoleEvaluationException extends Exception {
             return;
           }
           if (ArchiveIndex.field_h == null) {
-            e.field_m = gf.a(oo.field_c, param1 + 0, 480, 0, 640, 0);
+            SplashScreen.field_m = gf.a(oo.field_c, param1 + 0, 480, 0, 640, 0);
           } else {
-            e.field_m = ArchiveIndex.field_h.b(30182);
+            SplashScreen.field_m = ArchiveIndex.field_h.b(30182);
             ar.a(500, 2);
           }
-          if (null == e.field_m) {
+          if (null == SplashScreen.field_m) {
             var2 = 3;
           } else {
             var2 = 2;
-            lp.a(e.field_m, (byte) -64);
+            lp.a(SplashScreen.field_m, (byte) -64);
           }
         }
         if (ArchiveIndex.field_h != null) {

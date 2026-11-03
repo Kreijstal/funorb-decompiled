@@ -15,11 +15,11 @@ final class k extends IntrusiveNode {
     final static void a(boolean param0, int param1) {
         np.field_Jb.a(new hg(param1), 3);
         if (!param0) {
-          k.b(-78);
+          k.loadStreetScenery(-78);
         }
     }
 
-    final static int b(int param0) {
+    final static int loadStreetScenery(int param0) {
         if (vk.field_b) {
           return -1;
         }

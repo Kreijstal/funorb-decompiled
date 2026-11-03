@@ -18,7 +18,7 @@ final class ReverbPcmStream extends PcmStream {
     private float field_j;
     private float field_l;
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int incrementValue$0 = 0;
@@ -67,7 +67,7 @@ final class ReverbPcmStream extends PcmStream {
         int var21Lifetime1;
         int var21Lifetime2;
         int var6Lifetime2Lifetime1;
-        this.e();
+        this.synchronizeChannelMode();
         param2 = param2 + param1;
         while (param1 < param2) {
           var4 = param2 - param1;
@@ -75,7 +75,7 @@ final class ReverbPcmStream extends PcmStream {
             var4 = 256;
           }
           if (this.field_r != null) {
-            this.field_r.a(this.field_i, 0, var4);
+            this.field_r.mixInto(this.field_i, 0, var4);
           }
           var5 = 0;
           for (var6 = 0; var6 < 8; var6++) {
@@ -242,7 +242,7 @@ final class ReverbPcmStream extends PcmStream {
           if (this.field_r == null) {
             continue;
           }
-          ArrayOperations.a(this.field_i, 0, var4);
+          ArrayOperations.clearInts(this.field_i, 0, var4);
         }
     }
 
@@ -256,7 +256,7 @@ final class ReverbPcmStream extends PcmStream {
         this.field_w = param0;
     }
 
-    private final void e() {
+    private final void synchronizeChannelMode() {
         int var1;
         if (!PcmPlayerService.field_o) {
           if (this.field_n != null) {
@@ -346,9 +346,9 @@ final class ReverbPcmStream extends PcmStream {
         return this.field_r;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         if (this.field_r != null) {
-          this.field_r.a(param0);
+          this.field_r.skipFrames(param0);
         }
     }
 
@@ -374,7 +374,7 @@ final class ReverbPcmStream extends PcmStream {
         if (!PcmPlayerService.field_o) {
           this.field_i = new int[256];
         }
-        this.e();
+        this.synchronizeChannelMode();
         this.a(0.04500000178813934f);
         this.b(1.0f);
         this.f(0.8399999737739563f);

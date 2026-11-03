@@ -81,7 +81,7 @@ final class fk extends hs {
         }
         if (!this.field_l) {
           or.field_d.b(75, (byte) 74);
-          or.field_d.a(121, 4);
+          or.field_d.writeByte(121, 4);
           this.field_l = true;
           return;
         }

@@ -22,7 +22,7 @@ final class ci implements Iterable {
         if (var2 == this.field_d) {
           return null;
         }
-        var2.f(-124);
+        var2.unlinkSecondary(-124);
         if (param0 == -120) {
           return var2;
         }
@@ -32,7 +32,7 @@ final class ci implements Iterable {
 
     final void a(int param0, DualLinkNode param1) {
         if (null != param1.field_e) {
-          param1.f(-81);
+          param1.unlinkSecondary(-81);
         }
         param1.field_f = this.field_d;
         if (param0 != -8545) {

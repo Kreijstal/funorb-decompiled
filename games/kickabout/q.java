@@ -32,7 +32,7 @@ final class q {
           dd.field_c = -1L;
           qi.field_p = param8;
           ss.field_j = param5.length;
-          hw.field_k = false;
+          InstrumentNoteMask.field_k = false;
           er.field_h = new byte[(7 + qi.field_p) / 8];
           uv.field_i = null;
           ArchiveSource.field_b = null;
@@ -48,15 +48,15 @@ final class q {
           rp.field_B = param0.field_jb;
           rp.field_B.b(22997);
           pq.field_N = new em(param2);
-          jm.field_h = 0;
+          DelayedServerPacket.field_h = 0;
           mi.field_d = -1;
-          da.field_o = -1;
+          MusicPatchNode.field_o = -1;
           fh.field_b = 0;
           if (param6.field_jb == null) {
             param6.field_jb = new IntrusiveDeque();
           }
-          kq.field_yb = param6.field_jb;
-          kq.field_yb.b(22997);
+          SquadSlotWidget.field_yb = param6.field_jb;
+          SquadSlotWidget.field_yb.b(22997);
           sr.field_f = new em(param9);
           if (param4.field_jb == null) {
             param4.field_jb = new IntrusiveDeque();

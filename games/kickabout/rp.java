@@ -12,15 +12,15 @@ final class rp extends ri {
     static String[][] field_z;
 
     final static void a(int param0, int param1) {
-        hn var2 = null;
-        hn var2Lifetime1;
+        ManagerAction var2 = null;
+        ManagerAction var2Lifetime1;
         if (param0 == 65536) {
-          var2 = new hn(1, new int[]{param1});
+          var2 = new ManagerAction(1, new int[]{param1});
           ii.a(var2, 69);
           return;
         }
         rp.a(false, -70);
-        var2Lifetime1 = new hn(1, new int[]{param1});
+        var2Lifetime1 = new ManagerAction(1, new int[]{param1});
         ii.a(var2Lifetime1, 69);
     }
 
@@ -60,7 +60,7 @@ final class rp extends ri {
           if (param1 != -587) {
             rp.b(-111);
           }
-          while (bd.a(vp.field_a, false, nq.field_I) >= 65536) {
+          while (UnreadMessagesScreen.a(vp.field_a, false, nq.field_I) >= 65536) {
             nq.field_I = nq.field_I - vp.field_a;
           }
           var2_int = -1;
@@ -76,13 +76,13 @@ final class rp extends ri {
             if (vp.field_f > ig.field_g) {
               ig.field_g = ig.field_g + 1;
               if (vp.field_c < ig.field_g && (wo.field_n == null ||
-                wo.field_n[ps.field_e] == null)) {
+                wo.field_n[LoginCredentials.field_e] == null)) {
                 ig.field_g = ig.field_g - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (ig.field_g >= vp.field_f &&
-                  null == wo.field_n[(ps.field_e + 1) % var2_int]) {
+                  null == wo.field_n[(LoginCredentials.field_e + 1) % var2_int]) {
                   ig.field_g = ig.field_g - 1;
                 }
               }
@@ -90,14 +90,14 @@ final class rp extends ri {
             if (vp.field_f <= ig.field_g) {
               ig.field_g = ig.field_g - vp.field_f;
               if (sm.field_m) {
-                ps.field_e = ps.field_e + 1;
-                if (ps.field_e >= var2_int) {
-                  ps.field_e = ps.field_e - var2_int;
+                LoginCredentials.field_e = LoginCredentials.field_e + 1;
+                if (LoginCredentials.field_e >= var2_int) {
+                  LoginCredentials.field_e = LoginCredentials.field_e - var2_int;
                 }
               } else {
-                ps.field_e = ps.field_e - 1;
-                if (ps.field_e < 0) {
-                  ps.field_e = ps.field_e + var2_int;
+                LoginCredentials.field_e = LoginCredentials.field_e - 1;
+                if (LoginCredentials.field_e < 0) {
+                  LoginCredentials.field_e = LoginCredentials.field_e + var2_int;
                 }
               }
             }
@@ -109,8 +109,8 @@ final class rp extends ri {
             var3 = -(TextInputWidget.field_E.field_v / 2) + 357;
             var4 = 0;
             if (0 != WidgetContainer.field_A &&
-              vc.field_y > var3 &&
-              TextInputWidget.field_E.field_w + var3 > vc.field_y) {
+              ReceivedAuctionItem.field_y > var3 &&
+              TextInputWidget.field_E.field_w + var3 > ReceivedAuctionItem.field_y) {
               if (269 - TextInputWidget.field_E.field_q < sm.field_q &&
                 sm.field_q < 269) {
                 sm.field_m = false;
@@ -141,13 +141,13 @@ final class rp extends ri {
           if (!param0) {
             return 0;
           }
-          fp.field_l.a(-21174, vp.a(n.field_m, BytePlusOneCommand.field_A, (byte) 98), vp.a(vc.field_y, sm.field_q, (byte) 69));
-          if (fp.field_l.c(-1)) {
-            if (fp.field_l.field_e == 0) {
+          AuctionItem.field_l.a(-21174, vp.a(n.field_m, BytePlusOneCommand.field_A, (byte) 98), vp.a(ReceivedAuctionItem.field_y, sm.field_q, (byte) 69));
+          if (AuctionItem.field_l.c(-1)) {
+            if (AuctionItem.field_l.selectedIndex == 0) {
               stackIn_58_0 = 3;
               return stackIn_58_0;
             }
-            if (fp.field_l.field_e == 1) {
+            if (AuctionItem.field_l.selectedIndex == 1) {
               stackIn_61_0 = 2;
               return stackIn_61_0;
             }
@@ -158,13 +158,13 @@ final class rp extends ri {
               stackIn_77_0 = 0;
               return stackIn_77_0;
             }
-            fp.field_l.a(0, true);
-            if (fp.field_l.c(param1 ^ 586)) {
-              if (fp.field_l.field_e == 0) {
+            AuctionItem.field_l.handleArrowKeys(0, true);
+            if (AuctionItem.field_l.c(param1 ^ 586)) {
+              if (AuctionItem.field_l.selectedIndex == 0) {
                 stackIn_69_0 = 3;
                 return stackIn_69_0;
               }
-              if (1 == fp.field_l.field_e) {
+              if (1 == AuctionItem.field_l.selectedIndex) {
                 stackIn_72_0 = 1;
                 return stackIn_72_0;
               }
@@ -217,10 +217,10 @@ final class rp extends ri {
 
     final static ff[] b(int param0) {
         if (param0 == -27666) {
-          return new ff[]{eb.field_c, om.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, ge.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
+          return new ff[]{eb.field_c, om.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
         }
         field_A = true;
-        return new ff[]{eb.field_c, om.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, ge.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
+        return new ff[]{eb.field_c, om.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
     }
 
     rp(int param0) {

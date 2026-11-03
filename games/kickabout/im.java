@@ -55,7 +55,7 @@ abstract class im extends hd {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 75 / ((66 - param0) / 50);
-          stackIn_1_0 = kt.a(param1, true, (byte) 125, param2);
+          stackIn_1_0 = BlackFadeScreen.a(param1, true, (byte) 125, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ abstract class im extends hd {
               }
               var3 = new java.net.URL(param0.getCodeBase(), param2);
               var3 = qr.a(param0, var3, 3);
-              bv.a(0, var3.toString(), true, param0);
+              AccountNameAvailabilityValidator.openExternalUrl(0, var3.toString(), true, param0);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -134,8 +134,8 @@ abstract class im extends hd {
           if (param0 != -12376) {
             field_Bb = (String) null;
           }
-          if (hw.field_i != 256) {
-            param3.a(param1, param2, hw.field_i * param3.field_o >> 8, hw.field_i * param3.field_v >> 8);
+          if (InstrumentNoteMask.field_i != 256) {
+            param3.a(param1, param2, InstrumentNoteMask.field_i * param3.field_o >> 8, InstrumentNoteMask.field_i * param3.field_v >> 8);
             return;
           }
           param3.c(param1, param2);

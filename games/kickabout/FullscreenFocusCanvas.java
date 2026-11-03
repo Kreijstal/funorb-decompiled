@@ -3,7 +3,7 @@
  */
 final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static IntrusiveDeque field_g;
-    static ps field_h;
+    static LoginCredentials field_h;
     static Sprite field_d;
     java.awt.Frame field_c;
     static String[] field_i;

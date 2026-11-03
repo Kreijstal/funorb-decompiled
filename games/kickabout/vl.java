@@ -177,9 +177,9 @@ final class vl {
         int var4 = (param1 << 1) + 1;
         Sprite var5 = new Sprite(var4, var4);
         PacketBuffer.a(56, var5);
-        SoftwareRasterizer.fillCircle(param1, param1, param1, param3);
-        SoftwareRasterizer.fillCircle(param1, param1, param1 - param0, 0);
-        ta.e(120);
+        SoftwareRasterizer.d(param1, param1, param1, param3);
+        SoftwareRasterizer.d(param1, param1, param1 - param0, 0);
+        TeamManagementScreen.e(120);
         if (!param2) {
           vl.a(8);
         }
@@ -189,7 +189,7 @@ final class vl {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         dk.a(param2, -109, param1, param3 / param0, param3 % 3);
         SoftwareRasterizer.a(param2, param1, 156, 225, 10, 16777215, param4);
-        ta.e(126);
+        TeamManagementScreen.e(126);
     }
 
     final static boolean a(boolean param0) {
@@ -197,7 +197,7 @@ final class vl {
         if (param0) {
           vl.a(12, -70, true, -119);
         }
-        stackIn_6_0 = (fp.field_e == -1) && (nq.g(0) < 10);
+        stackIn_6_0 = (AuctionItem.field_e == -1) && (nq.g(0) < 10);
         return stackIn_6_0;
     }
 

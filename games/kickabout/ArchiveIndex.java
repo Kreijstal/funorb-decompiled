@@ -98,19 +98,19 @@ final class ArchiveIndex {
         var17 = Kickabout.field_G;
         try {
           var18 = new PacketBuffer(hh.a(param1, (byte) -3));
-          var4 = var18.h((byte) -107);
+          var4 = var18.readUnsignedByte((byte) -107);
           if (5 <= var4 &&
             var4 <= 7) {
             if (var4 < 6) {
               this.field_p = 0;
             } else {
-              this.field_p = var18.k(4);
+              this.field_p = var18.readInt(4);
             }
-            var5 = var18.h((byte) -116);
+            var5 = var18.readUnsignedByte((byte) -116);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 >= 7) {
-              this.field_n = var18.f((byte) 117);
+              this.field_n = var18.readUnsignedShortOrInt((byte) 117);
             } else {
               this.field_n = var18.a((byte) 81);
             }
@@ -130,7 +130,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; this.field_n > var10; var10++) {
-                dupTemp$1 = var8 + var18.f((byte) -27);
+                dupTemp$1 = var8 + var18.readUnsignedShortOrInt((byte) -27);
                 var8 = dupTemp$1;
                 this.field_b[var10] = dupTemp$1;
                 if (this.field_b[var10] > var9) {
@@ -154,30 +154,30 @@ final class ArchiveIndex {
                 this.field_l[var11] = -1;
               }
               for (var11Lifetime5 = 0; var11Lifetime5 < this.field_n; var11Lifetime5++) {
-                this.field_l[this.field_b[var11Lifetime5]] = var18.k(4);
+                this.field_l[this.field_b[var11Lifetime5]] = var18.readInt(4);
               }
               this.field_q = new lf(this.field_l);
             }
             for (var11Lifetime1 = 0; var11Lifetime1 < this.field_n; var11Lifetime1++) {
-              this.field_c[this.field_b[var11Lifetime1]] = var18.k(4);
+              this.field_c[this.field_b[var11Lifetime1]] = var18.readInt(4);
             }
             if (var7 == 0) {
               for (var11Lifetime2 = 0; var11Lifetime2 < this.field_n; var11Lifetime2++) {
-                this.field_f[this.field_b[var11Lifetime2]] = var18.k(4);
+                this.field_f[this.field_b[var11Lifetime2]] = var18.readInt(4);
               }
             } else {
               for (var11Lifetime2 = 0; var11Lifetime2 < this.field_n; var11Lifetime2++) {
                 var22 = new byte[64];
-                var18.a(var22, 0, (byte) -6, 64);
+                var18.readBytes(var22, 0, (byte) -6, 64);
                 this.field_k[this.field_b[var11Lifetime2]] = var22;
               }
               for (var11Lifetime2 = 0; var11Lifetime2 < this.field_n; var11Lifetime2++) {
-                this.field_f[this.field_b[var11Lifetime2]] = var18.k(4);
+                this.field_f[this.field_b[var11Lifetime2]] = var18.readInt(4);
               }
             }
             if (var4 >= 7) {
               for (var11Lifetime3 = 0; this.field_n > var11Lifetime3; var11Lifetime3++) {
-                this.field_i[this.field_b[var11Lifetime3]] = var18.f((byte) -104);
+                this.field_i[this.field_b[var11Lifetime3]] = var18.readUnsignedShortOrInt((byte) -104);
               }
               for (var11Lifetime3 = 0; var11Lifetime3 < this.field_n; var11Lifetime3++) {
                 var12 = this.field_b[var11Lifetime3];
@@ -187,7 +187,7 @@ final class ArchiveIndex {
                 this.field_r[var12] = array$2;
                 var14 = -1;
                 for (var15 = 0; var15 < var13; var15++) {
-                  dupTemp$3 = var8Lifetime1 + var18.f((byte) -96);
+                  dupTemp$3 = var8Lifetime1 + var18.readUnsignedShortOrInt((byte) -96);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_r[var12];
                   dupTemp$4[var15] = dupTemp$3;
@@ -245,7 +245,7 @@ final class ArchiveIndex {
                   } else {
                     var15Lifetime1 = var14Lifetime1Lifetime1;
                   }
-                  this.field_j[var12Lifetime1][var15Lifetime1] = var18.k(4);
+                  this.field_j[var12Lifetime1][var15Lifetime1] = var18.readInt(4);
                 }
                 this.field_s[var12Lifetime1] = new lf(this.field_j[var12Lifetime1]);
               }

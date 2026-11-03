@@ -23,7 +23,7 @@ class UiWidget extends IntrusiveNode {
     WidgetPainter field_r;
 
     public final String toString() {
-        return this.appendWidgetDiagnostics(17883, 0, new Hashtable(), new StringBuilder()).toString();
+        return this.a(17883, 0, new Hashtable(), new StringBuilder()).toString();
     }
 
     final static int a(boolean param0, boolean param1, byte param2, boolean param3, boolean param4) {
@@ -153,7 +153,7 @@ class UiWidget extends IntrusiveNode {
           if (null != this.field_r) {
             discarded$4 = param1.append(" renderer=");
             if (this.field_r instanceof UiWidget) {
-              param1 = this.appendWidgetDiagnostics(17883, 1 + param0, param2, param1);
+              param1 = this.a(17883, 1 + param0, param2, param1);
             } else {
               discarded$5 = param1.append(this.field_r);
             }
@@ -163,7 +163,7 @@ class UiWidget extends IntrusiveNode {
             if (!(this.field_k instanceof UiWidget)) {
               discarded$7 = param1.append(this.field_k);
             } else {
-              param1 = this.appendWidgetDiagnostics(17883, param0 + 1, param2, param1);
+              param1 = this.a(17883, param0 + 1, param2, param1);
             }
           }
           return;
@@ -306,15 +306,15 @@ class UiWidget extends IntrusiveNode {
     }
 
     final static void h(int param0) {
-        if (null == e.field_m) {
+        if (null == SplashScreen.field_m) {
           return;
         }
-        SumIntegersCommand.a(param0 ^ -120, e.field_m);
+        SumIntegersCommand.a(param0 ^ -120, SplashScreen.field_m);
         if (param0 != 0) {
           UiWidget.g((byte) 9);
         }
-        e.field_m.a(oo.field_c, param0 + 9);
-        e.field_m = null;
+        SplashScreen.field_m.a(oo.field_c, param0 + 9);
+        SplashScreen.field_m = null;
         if (null != ArchiveIndex.field_h) {
           ArchiveIndex.field_h.a(0);
         }
@@ -348,7 +348,7 @@ class UiWidget extends IntrusiveNode {
         return stackIn_6_0;
     }
 
-    boolean focusNext(UiWidget param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -386,7 +386,7 @@ class UiWidget extends IntrusiveNode {
             this.a(n.field_m, this, param2, BytePlusOneCommand.field_A, param0, id.field_v, param1 ^ 31923);
           }
           if (WidgetContainer.field_A != 0) {
-            if (this.handlePointerPress(true, param0, sm.field_q, this, vc.field_y, param2, WidgetContainer.field_A)) {
+            if (this.handlePointerPress(true, param0, sm.field_q, this, ReceivedAuctionItem.field_y, param2, WidgetContainer.field_A)) {
               param3 = false;
             } else {
               if (var5 != 0) {
@@ -426,7 +426,7 @@ class UiWidget extends IntrusiveNode {
         return false;
     }
 
-    final boolean beginWidgetDiagnosticVisit(int param0, StringBuilder param1, Hashtable param2, int param3) {
+    final boolean a(int param0, StringBuilder param1, Hashtable param2, int param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -472,7 +472,7 @@ class UiWidget extends IntrusiveNode {
         }
         int var4 = param2;
         if (var4 == 80) {
-          return this.focusNext(this, 0);
+          return this.a(this, 0);
         }
         var4 = 41 / ((41 - param1) / 57);
         return false;
@@ -518,7 +518,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    StringBuilder appendWidgetDiagnostics(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_2_0 = null;
         StringBuilder stackIn_7_0 = null;
@@ -533,7 +533,7 @@ class UiWidget extends IntrusiveNode {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
+          if (this.a(1, param3, param2, param1)) {
             this.b(param1, param3, param2, -18568);
           }
           stackIn_7_0 = (StringBuilder) (param3);
@@ -581,7 +581,7 @@ class UiWidget extends IntrusiveNode {
           this.field_p = 0;
           if (param4 != -1) {
             UiWidget var8 = (UiWidget) null;
-            this.focusNext((UiWidget) null, 108);
+            this.a((UiWidget) null, 108);
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "fd.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

@@ -35,14 +35,14 @@ final class et {
             stackIn_6_0 = (1 != var5) ? 0 : 1;
             var6 = stackIn_6_0;
             PacketBuffer.a(param0 ^ 55, var9[var5]);
-            param2.d(0, 0);
+            param2.drawWithOffsets(0, 0);
             if (var6 == 0) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             }
             stackIn_12_0 = (var6 != 0) ? 2 : 0;
             var7 = stackIn_12_0;
             un.field_d.d(param1.toLowerCase(), var7 + (SoftwareRasterizer.field_g >> 1), -13 + (SoftwareRasterizer.field_f + var7), 0, -1);
-            ta.e(123);
+            TeamManagementScreen.e(123);
             sd.a(var9[var5], (byte) -51);
           }
           stackIn_14_0 = var4;

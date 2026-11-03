@@ -29,7 +29,7 @@ final class ug {
         if (param0 != 0) {
           return -103;
         }
-        return b.c(-23, param1);
+        return MySquadScreen.c(-23, param1);
     }
 
     final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
@@ -82,7 +82,7 @@ final class ug {
           var4 = nq.field_F.field_yb.field_jb;
           if (ts.field_d != 2 &&
             1 != ts.field_d) {
-            nq.field_F.field_Cb.field_zb.field_E = jw.field_yb;
+            nq.field_F.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
             nq.field_F.field_lb = false;
             hl.a(true, nq.field_F.field_yb);
             return;
@@ -149,7 +149,7 @@ final class ug {
               var16.field_j.a(0, 7, var13_ref_String);
               var17 = TextButton.field_v;
               var13 = sm.field_q;
-              var14 = vc.field_y;
+              var14 = ReceivedAuctionItem.field_y;
               var17.field_j.a(0, 0, var13, var14, 0);
             }
             var5 = var6;

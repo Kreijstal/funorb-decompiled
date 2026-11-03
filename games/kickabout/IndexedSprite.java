@@ -5,7 +5,7 @@ final class IndexedSprite extends IndexedSpriteState {
     int[] field_l;
     byte[] field_m;
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPaletteRows(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -108,7 +108,7 @@ final class IndexedSprite extends IndexedSpriteState {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.a(SoftwareRasterizer.field_a, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.copyNonzeroPaletteRows(SoftwareRasterizer.field_a, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -152,10 +152,10 @@ final class IndexedSprite extends IndexedSpriteState {
           var6 <= 0) {
           return;
         }
-        IndexedSprite.b(SoftwareRasterizer.field_a, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.blendPaletteRowsWithAlpha(SoftwareRasterizer.field_a, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var13 = 0;
         int var15 = 0;
         int var5 = this.field_b;
@@ -233,7 +233,7 @@ final class IndexedSprite extends IndexedSpriteState {
         this.field_l = param7;
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendPaletteRowsWithAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;

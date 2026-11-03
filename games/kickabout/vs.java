@@ -10,7 +10,7 @@ final class vs {
     static sm field_g;
     static sr field_k;
     boolean field_j;
-    up field_d;
+    PlayerStats field_d;
     static String field_l;
     static String field_c;
     static int field_i;
@@ -26,8 +26,8 @@ final class vs {
             vs.a(50);
           }
           var2 = pn.field_z.g(24009);
-          while (var2 instanceof wh) {
-            if (((wh) (var2)).a(false) == param1) {
+          while (var2 instanceof FadingSoundPlayer) {
+            if (((FadingSoundPlayer) (var2)).getSoundId(false) == param1) {
               return true;
             }
             var2 = var2.field_d;
@@ -72,7 +72,7 @@ final class vs {
         field_k = null;
     }
 
-    final void a(int param0, int param1, int param2, up param3, boolean param4, int param5) {
+    final void a(int param0, int param1, int param2, PlayerStats param3, boolean param4, int param5) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int[] var7 = null;
@@ -96,7 +96,7 @@ final class vs {
         int var15Lifetime1;
         var16 = Kickabout.field_G;
         try {
-          this.field_d.a((byte) -122, param3);
+          this.field_d.copyFrom((byte) -122, param3);
           this.field_a = param1;
           this.field_b = param5;
           stackIn_4_1 = (param4);
@@ -109,16 +109,16 @@ final class vs {
           var10 = this.field_b;
           var11 = this.field_a;
           if (var9 == -1) {
-            var10 = this.field_d.field_l % 14;
-            var9 = this.field_d.field_e % 7;
+            var10 = this.field_d.surnameIndex % 14;
+            var9 = this.field_d.initialIndex % 7;
             var11 = 31;
           }
           var12 = mg.a(this.field_d, var9, var10, this.field_j, var11, (byte) 108);
           var12.field_mb.a(0, 99);
           PacketBuffer.a(-81, ConsoleCommand.field_u);
           SoftwareRasterizer.b();
-          var12.a(var8[this.field_d.field_q], 0, SoftwareRasterizer.field_g >> 1, var17[this.field_d.field_q], (byte) -118);
-          ta.e(122);
+          var12.a(var8[this.field_d.playerType], 0, SoftwareRasterizer.field_g >> 1, var17[this.field_d.playerType], (byte) -118);
+          TeamManagementScreen.e(122);
           eo.a(ConsoleCommand.field_u, this.field_h);
           var13 = (this.field_h.field_v - 2) * this.field_h.field_o;
           for (var14 = -this.field_h.field_o; 0 > var14; var14++) {
@@ -149,7 +149,7 @@ final class vs {
     }
 
     vs() {
-        this.field_d = new up();
+        this.field_d = new PlayerStats();
         this.field_h = new ArgbSprite(38, 46);
     }
 
@@ -171,7 +171,7 @@ final class vs {
           wk.field_f = cr.field_d;
           if (param3 == 255) {
             stackIn_12_0 = !(tn.field_b >= 13);
-            ArchiveIndex.field_a = mf.a(stackIn_12_0, 124);
+            ArchiveIndex.field_a = SquadGridWidget.a(stackIn_12_0, 124);
             return;
           }
           if (param3 >= 100 &&

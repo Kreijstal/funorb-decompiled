@@ -39,7 +39,7 @@ final class of {
         try {
           var10 = (CharSequence) ((Object) param2);
           if (!ef.a(var10, -9907)) {
-            stackIn_4_0 = kq.field_Ib;
+            stackIn_4_0 = SquadSlotWidget.field_Ib;
             return stackIn_4_0;
           }
           if (ts.field_d != 2) {
@@ -51,9 +51,9 @@ final class of {
             stackIn_11_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, af.field_c, new String[]{param2});
             return stackIn_11_0;
           }
-          ne.field_I.b(-7584, var8);
+          GameplayHelpScreen.field_I.b(-7584, var8);
           while (true) {
-            var7 = (gg) (ne.field_I.c(33));
+            var7 = (gg) (GameplayHelpScreen.field_I.c(33));
             if (var7 != null) {
               var7.field_Cb = var7.field_Cb - 1;
               continue;
@@ -61,18 +61,18 @@ final class of {
             break;
           }
           var8.c((byte) -109);
-          var8.f(25);
-          bc.field_d = bc.field_d - 1;
+          var8.unlinkSecondary(25);
+          ListingRow.field_d = ListingRow.field_d - 1;
           var9 = or.field_d;
           var9.b(param0, (byte) -85);
           var9.field_n = var9.field_n + 1;
           var5 = var9.field_n;
-          var9.a(123, 1);
-          var9.a(14190, param2);
+          var9.writeByte(123, 1);
+          var9.writeString(14190, param2);
           if (param1 < 4) {
             of.a(false);
           }
-          var9.c(62, var9.field_n - var5);
+          var9.backpatchByteLength(62, var9.field_n - var5);
           stackIn_18_0 = null;
           return (String) (stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

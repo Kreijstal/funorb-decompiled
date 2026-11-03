@@ -371,7 +371,7 @@ final class eo {
         Sprite var8 = new Sprite(param4, param5);
         PacketBuffer.a(-79, var8);
         param1.a(param0, 0, 0, param4, param5, param6, -1, 1, 1, 0);
-        ta.e(126);
+        TeamManagementScreen.e(126);
         var8.c(param2, param3, param7, 4096);
     }
 
@@ -439,7 +439,7 @@ final class eo {
         int var11 = var9 == 0 ? 5592405 : 16777215;
         SoftwareRasterizer.a(param3, param4, param5 - 20, param6 - 2 >> 1, 65793, 128);
         SoftwareRasterizer.a(param3 + param5 - 19, param4, 20, param6 - 2 >> 1, 65793, 128);
-        pt.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
+        AuctionListing.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
         if (un.field_d.a(param2) > param5 - 20) {
           var12 = (double)(IsSixCommand.field_C.a(param2) - (param5 - 30));
           var14 = -(int)(Math.sin(var7 / 1000.0) * var12 + var12 / 2.0);
@@ -447,7 +447,7 @@ final class eo {
         } else {
           IsSixCommand.field_C.a(param2, param3 + 8, param4 + (param6 >> 1) - 3, var11, -1);
         }
-        ta.e(125);
+        TeamManagementScreen.e(125);
         IsSixCommand.field_C.d(Integer.toString(param0.field_b), param3 + param5 - 8, param4 + (param6 >> 1) - 3, var11, -1);
         if (var9 == 0) {
           SoftwareRasterizer.e(param3 + 2, param4 + (param6 >> 2), param3 + param5 - 1, param4 + (param6 >> 2), 11141377, 196);
@@ -455,7 +455,7 @@ final class eo {
         }
         SoftwareRasterizer.a(param3, param4 + (param6 >> 1), param5 - 20, param6 - 2 >> 1, 65793, 128);
         SoftwareRasterizer.a(param3 + param5 - 19, param4 + (param6 >> 1), 20, param6 - 2 >> 1, 65793, 128);
-        pt.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
+        AuctionListing.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
         if (un.field_d.a(param1) > param5 - 20) {
           var12Lifetime1 = (double)(IsSixCommand.field_C.a(param1) - (param5 - 30));
           var14Lifetime1 = -(int)(Math.sin(var7 / 1000.0) * var12Lifetime1 + var12Lifetime1 / 2.0);
@@ -463,7 +463,7 @@ final class eo {
         } else {
           IsSixCommand.field_C.a(param1, param3 + 8, param4 + param6 - 3, var10, -1);
         }
-        ta.e(124);
+        TeamManagementScreen.e(124);
         IsSixCommand.field_C.d(Integer.toString(param0.field_j), param3 + param5 - 8, param4 + param6 - 3, var10, -1);
         if (var9 == 1) {
           SoftwareRasterizer.e(param3 + 2, param4 + 3 * (param6 >> 2), param3 + param5 - 1, param4 + 3 * (param6 >> 2), 11141377, 196);
@@ -503,9 +503,9 @@ final class eo {
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
-        SoftwareRasterizer.drawCircle(param0, param1, param2, param3);
+        SoftwareRasterizer.c(param0, param1, param2, param3);
         SoftwareRasterizer.drawHorizontalLine(param0 - param2, param1, param2 << 1, param3);
-        SoftwareRasterizer.a(param0, param1 - param2, param2 << 1, param3);
+        SoftwareRasterizer.drawVerticalLine(param0, param1 - param2, param2 << 1, param3);
     }
 
     final static hd a(boolean param0, int param1) {
@@ -534,10 +534,10 @@ final class eo {
         for (var7 = 0; var7 < 100; var7++) {
           var8 = (var7 & 3) == param3 ? param6 : 256;
           var9 = ((param2 & 16711935) * var8 & -16711936 | (param2 & 65280) * var8 & 16711680) >> 8;
-          SoftwareRasterizer.a(param0 + var7, param1, 11, var9);
+          SoftwareRasterizer.drawVerticalLine(param0 + var7, param1, 11, var9);
         }
         for (var7Lifetime1 = 0; var7Lifetime1 < 3; var7Lifetime1++) {
-          SoftwareRasterizer.drawRectangleAlpha(param0 + var7Lifetime1 - 1, param1 + var7Lifetime1 - 1, 100 - var7Lifetime1 - var7Lifetime1 + 1, 11 - var7Lifetime1 - var7Lifetime1 + 1, 65793, (3 - var7Lifetime1) * param4);
+          SoftwareRasterizer.h(param0 + var7Lifetime1 - 1, param1 + var7Lifetime1 - 1, 100 - var7Lifetime1 - var7Lifetime1 + 1, 11 - var7Lifetime1 - var7Lifetime1 + 1, 65793, (3 - var7Lifetime1) * param4);
         }
         var7Lifetime2 = param5 * 65793;
         SoftwareRasterizer.d(param0, param1, 100, 2, 0, var7Lifetime2);
@@ -625,20 +625,20 @@ final class eo {
           field_n[var5] = AccountRegistrationPanel.a(true, (byte) -52, var5, var4, 7126504);
           PacketBuffer.a(-41, field_n[var5]);
           ((BitmapFont) (var2)).d(var0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, 16777215, -1);
-          ta.e(127);
+          TeamManagementScreen.e(127);
         }
         field_g = new Sprite(102, 13);
         PacketBuffer.a(-67, field_g);
         eo.a(1, 1, 10066329, 2, 20, 0, 200);
         SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
-        ta.e(124);
+        TeamManagementScreen.e(124);
         field_h = new Sprite[4][4];
         for (var5Lifetime1 = 0; var5Lifetime1 < 4; var5Lifetime1++) {
           for (var6 = 0; var6 < 4; var6++) {
             var7 = new Sprite(100, 11);
             PacketBuffer.a(81, var7);
             eo.a(0, 0, LoginForm.field_B[var5Lifetime1], var6, 40, 90, 160);
-            ta.e(120);
+            TeamManagementScreen.e(120);
             field_h[var5Lifetime1][var6] = var7;
           }
         }
@@ -745,7 +745,7 @@ final class eo {
         int[] var2;
         int var4;
         int var5;
-        bv.a(true, param0.field_y, 255);
+        AccountNameAvailabilityValidator.a(true, param0.field_y, 255);
         var1 = new IndexedSprite(param0.field_q, param0.field_w, 256);
         var2 = var1.field_l;
         for (var3 = 0; var3 < param0.field_y.length; var3++) {
@@ -769,7 +769,7 @@ final class eo {
         ArgbSprite var1 = ((ArgbSprite) (param0)).h();
         PacketBuffer.a(-112, var1);
         param0.drawAdditive(0, 0, 90);
-        ta.e(117);
+        TeamManagementScreen.e(117);
         return var1;
     }
 
@@ -871,7 +871,7 @@ final class eo {
           PacketBuffer.a(-52, var5[var6_int]);
           var7 = param4 ? 8 : 9;
           param2.d(param0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - var7, 16777215, -1);
-          ta.e(122);
+          TeamManagementScreen.e(122);
         }
         hd var6 = new hd();
         var6.field_N = var5[0];
@@ -891,7 +891,7 @@ final class eo {
         ArgbSprite var5 = new ArgbSprite(param3, param3);
         PacketBuffer.a(-38, var5);
         SoftwareRasterizer.a(SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, SoftwareRasterizer.field_g << 3, param0.length - 1, param0);
-        ta.e(122);
+        TeamManagementScreen.e(122);
         byte[] var6 = new byte[var5.field_y.length];
         for (var7 = 0; var7 < var6.length; var7++) {
           var8 = var5.field_y[var7];
@@ -991,17 +991,17 @@ final class eo {
           var6_ref_ut = new Sprite(102, 13);
           PacketBuffer.a(73, var6_ref_ut);
           eo.a(0, 0, param2 - 100, param3, false, 0);
-          ta.e(126);
+          TeamManagementScreen.e(126);
           var6_ref_ut.b(param0 + 3, param1 + 7, 128);
           param5 = param5 + (param2 - 100);
           param2 = 100;
         }
         int var6 = (int)(nj.a(74) % 220L);
         var6 = (var6 << 2) / 220;
-        field_g.d(param0 - 1, param1 - 1);
-        pt.a(param0 + param2, -22914, param0, param1 + 11, param1);
-        field_h[param3][var6].d(param0, param1);
-        ta.e(127);
+        field_g.drawWithOffsets(param0 - 1, param1 - 1);
+        AuctionListing.a(param0 + param2, -22914, param0, param1 + 11, param1);
+        field_h[param3][var6].drawWithOffsets(param0, param1);
+        TeamManagementScreen.e(127);
         SoftwareRasterizer.e(param0 - 1, param1 - 1, 102, 13, 65793);
         if (param4) {
           PacketBuffer.a(-38, field_d);
@@ -1021,7 +1021,7 @@ final class eo {
           }
           discarded$42 = var10.append('%');
           q.field_d.a(var10.toString(), var9 + 4, 10, 16777215, var7);
-          ta.e(127);
+          TeamManagementScreen.e(127);
           eo.a(field_d, 65793);
           field_d.c(param0, param1);
           return;
@@ -1440,7 +1440,7 @@ final class eo {
         var6 = new ArgbSprite(72, 72);
         PacketBuffer.a(-115, var6);
         SoftwareRasterizer.a(SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, SoftwareRasterizer.field_g << 3, param0.length - 1, param0);
-        ta.e(119);
+        TeamManagementScreen.e(119);
         var7 = new byte[var6.field_y.length];
         var8 = 0;
         for (var9 = -36; var9 < 36; var9++) {

@@ -42,7 +42,7 @@ final class oa {
             var7 = var7 + var15[1];
           }
           var17[2].a(var7, 0);
-          ta.e(122);
+          TeamManagementScreen.e(122);
           LoginForm.a(var16, 20684);
           return var16;
         }
@@ -61,7 +61,7 @@ final class oa {
           var7Lifetime1 = var7Lifetime1 + var12[1];
         }
         var14[2].a(var7Lifetime1, 0);
-        ta.e(122);
+        TeamManagementScreen.e(122);
         LoginForm.a(var13, 20684);
         return var13;
     }
@@ -79,15 +79,15 @@ final class oa {
           var10.b(param1, (byte) 120);
           var10.field_n = var10.field_n + 1;
           var7 = var10.field_n;
-          var10.a(124, 4);
-          var10.a(104, param2);
+          var10.writeByte(124, 4);
+          var10.writeByte(104, param2);
           var8 = param4;
           if (param3) {
             var8 += 128;
           }
-          var10.a(108, var8);
-          var10.readBytes(0, param5.length, 1991220144, param5);
-          var10.c(62, -var7 + var10.field_n);
+          var10.writeByte(108, var8);
+          var10.writeBytes(0, param5.length, 1991220144, param5);
+          var10.backpatchByteLength(62, -var7 + var10.field_n);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

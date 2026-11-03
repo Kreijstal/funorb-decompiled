@@ -21,7 +21,7 @@ class TextInputWidget extends TextButton {
 
     private final void a(int param0, int param1) {
         this.field_I = param0;
-        if (!ne.field_G[81]) {
+        if (!GameplayHelpScreen.field_G[81]) {
           this.field_Q = this.field_I;
         }
         if (param1 != 20) {
@@ -41,7 +41,7 @@ class TextInputWidget extends TextButton {
           if (param0) {
             field_E = (Sprite) null;
           }
-          var2_int = ki.a(bl.field_c, (byte) -105, tk.field_Ib);
+          var2_int = PlayerInputEvent.a(bl.field_c, (byte) -105, tk.field_Ib);
           if (1 == var2_int) {
             param1 = "<img=0>" + param1;
           }
@@ -85,7 +85,7 @@ class TextInputWidget extends TextButton {
         field_M = null;
     }
 
-    private final String k(int param0) {
+    private final String getSelectedText(int param0) {
         if (param0 != 82) {
           return (String) null;
         }
@@ -98,9 +98,9 @@ class TextInputWidget extends TextButton {
         if (param0 < 99) {
           this.i((byte) 116);
         }
-        String var2 = this.k(82);
+        String var2 = this.getSelectedText(82);
         if (0 < var2.length()) {
-          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.k(82))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText(82))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -114,7 +114,7 @@ class TextInputWidget extends TextButton {
           String var3 = null;
           if (!param0) {
             var3 = (String) null;
-            this.setInputText((String) null, (byte) -122, true);
+            this.a((String) null, (byte) -122, true);
           }
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
@@ -142,7 +142,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    final void setInputText(String param0, byte param1, boolean param2) {
+    final void a(String param0, byte param1, boolean param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_14_0 = null;
@@ -231,7 +231,7 @@ class TextInputWidget extends TextButton {
         try {
           this.field_r = nb.field_i.field_h;
           this.field_S = param2;
-          this.setInputText(param0, (byte) -17, true);
+          this.a(param0, (byte) -17, true);
           this.field_H = true;
           this.field_L = nj.a(-123);
         } catch (RuntimeException runtimeException) {
@@ -259,7 +259,7 @@ class TextInputWidget extends TextButton {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new ag(param0, param0);
-          ps.field_a.a(var2, 3);
+          LoginCredentials.field_a.a(var2, 3);
           if (param1 <= 108) {
             field_U = (String) null;
           }
@@ -418,24 +418,24 @@ class TextInputWidget extends TextButton {
                     this.m(99);
                     return true;
                   }
-                  if (ne.field_G[82] &&
+                  if (GameplayHelpScreen.field_G[82] &&
                     65 == param3) {
                     this.j(-13630);
                     return true;
                   }
-                  if (ne.field_G[82] &&
+                  if (GameplayHelpScreen.field_G[82] &&
                     param3 == 66) {
                     this.k((byte) 109);
                     return true;
                   }
-                  if (ne.field_G[82] &&
+                  if (GameplayHelpScreen.field_G[82] &&
                     param3 == 67) {
                     this.a(true);
                     return true;
                   }
                 } else {
                   if (this.field_I < this.field_q.length()) {
-                    if (ne.field_G[82]) {
+                    if (GameplayHelpScreen.field_G[82]) {
                       stackIn_40_1 = this.h((byte) 37);
                     } else {
                       stackIn_40_1 = 1 + this.field_I;
@@ -446,7 +446,7 @@ class TextInputWidget extends TextButton {
                 }
               } else {
                 if (this.field_I > 0) {
-                  if (!ne.field_G[82]) {
+                  if (!GameplayHelpScreen.field_G[82]) {
                     stackIn_33_1 = -1 + this.field_I;
                   } else {
                     stackIn_33_1 = this.l((byte) -55);
@@ -563,7 +563,7 @@ class TextInputWidget extends TextButton {
           }
           if (param1) {
             var4 = (String) null;
-            this.setInputText((String) null, (byte) -99, true);
+            this.a((String) null, (byte) -99, true);
           }
           this.field_I = this.field_I + param0.length();
           this.field_Q = this.field_I;

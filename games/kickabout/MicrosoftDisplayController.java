@@ -36,7 +36,7 @@ final class MicrosoftDisplayController implements com.ms.directX.IEnumModesCallb
         this.field_c.initialize((com.ms.com._Guid) null);
     }
 
-    final void a(int param0, java.awt.Frame param1) {
+    final void exitFullscreen(int param0, java.awt.Frame param1) {
         this.field_c.restoreDisplayMode();
         this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
         if (param0 != 0) {

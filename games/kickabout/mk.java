@@ -502,7 +502,7 @@ final class mk {
           } else {
             stackIn_8_4 = 0;
           }
-          stackIn_9_0 = nr.a(stackIn_5_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, param3);
+          stackIn_9_0 = PlayerModelPreview.a(stackIn_5_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, param3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -520,7 +520,7 @@ final class mk {
 
     final static dk a(int param0, int param1) {
         dk var2 = new dk();
-        ap.field_j.a(var2, 3);
+        MatchScreen.field_j.a(var2, 3);
         TextHotspotWidget.a((byte) -105, param0);
         if (param1 != 26731) {
           mk.a(121, -110);

@@ -60,8 +60,8 @@ final class rb extends hd {
               if (var8_ref_tv.field_s != null) {
               }
               var10 = ob.a((byte) -92, var8_ref_tv);
-              var11 = var10 + BitmapFont.c(var8_ref_tv.field_g);
-              var12 = qa.a(var8_ref_tv, 31100);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_tv.field_g);
+              var12 = LeaguesHelpScreen.a(var8_ref_tv, 31100);
               var8_ref_tv.field_s = new hd(0L, vv.field_o, var11);
               var6 = var6 + param1;
               var8_ref_tv.field_s.field_X = FootballerAgent.field_i;
@@ -563,7 +563,7 @@ final class rb extends hd {
           if (param0 != -6305) {
             this.field_Db = (StringBuilder) null;
           }
-          var6_int = param1.field_X.c(param1.field_E, -(2 * param1.field_kb) + param2, param1.field_xb);
+          var6_int = param1.field_X.paragraphHeight(param1.field_E, -(2 * param1.field_kb) + param2, param1.field_xb);
           param1.a(true, param2, 0, param3, var6_int);
           param3 = param3 + (0 + var6_int);
           param4.a((byte) -120, param1);

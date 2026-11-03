@@ -101,7 +101,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                 var5.a(395869153, var4);
                 var6 = (UiWidget) (var5.a(0));
                 while (var6 != null) {
-                  stackOut_20_0 = var6.focusNext(param0, 0);
+                  stackOut_20_0 = var6.a(param0, 0);
                   stackIn_30_0 = stackOut_20_0;
                   stackIn_21_0 = stackOut_20_0;
                   if (stackIn_21_0) {
@@ -133,7 +133,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final boolean focusNext(UiWidget param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -154,7 +154,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           var4 = (UiWidget) (var3.a((byte) -97));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
-            stackOut_6_0 = var4.focusNext(param0, 0);
+            stackOut_6_0 = var4.a(param0, 0);
             stackIn_14_0 = stackOut_6_0;
             stackIn_7_0 = stackOut_6_0;
             if (var5 == 0) {
@@ -231,7 +231,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           }
           scanLoop1: while (true) {
             if (var9 != null) {
-              stackOut_5_0 = var9.e((byte) -113);
+              stackOut_5_0 = var9.isLinked((byte) -113);
               stackIn_16_0 = stackOut_5_0;
               stackIn_6_0 = stackOut_5_0;
               if (var10 != 0) {
@@ -273,7 +273,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         try {
           var2 = new IntrusiveDequeCursor(this.field_y);
           if (param0 != 84) {
-            this.focusNext((UiWidget) null, -46);
+            this.a((UiWidget) null, -46);
           }
           var3 = (UiWidget) (var2.a((byte) -99));
           while (var3 != null) {
@@ -374,7 +374,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                 var5.a((byte) 104, (IntrusiveNode) (var4));
                 var6 = (UiWidget) (var5.b((byte) 46));
                 while (var6 != null) {
-                  stackOut_19_0 = var6.focusNext(param0, 0);
+                  stackOut_19_0 = var6.a(param0, 0);
                   stackIn_29_0 = stackOut_19_0;
                   stackIn_20_0 = stackOut_19_0;
                   if (stackIn_20_0) {
@@ -452,9 +452,9 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         var10 = Kickabout.field_G;
         try {
           var6_int = -127 % ((param5 - 63) / 51);
-          pt.a(160 + param3, -22914, param3, param4 + 21, param4);
-          SoftwareRasterizer.fillRoundedRectangle(param3, param4, 160, 42, 10, 65793);
-          ta.e(123);
+          AuctionListing.a(160 + param3, -22914, param3, param4 + 21, param4);
+          SoftwareRasterizer.i(param3, param4, 160, 42, 10, 65793);
+          TeamManagementScreen.e(123);
           if (param2 != null) {
             un.field_d.d(param2, 80 + param3, 17 + param4, 16777215, -1);
           }
@@ -535,7 +535,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             param1.field_G != null) {
             qr.a(82);
           }
-          sp.field_Ob = 0;
+          ShopPlayerSlot.field_Ob = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8 < param1.field_g)))) {
@@ -592,7 +592,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                           dupTemp$0 = param1.field_G[var8];
                           vu.field_zb[dupTemp$0] = vu.field_zb[dupTemp$0] + 1;
                         }
-                        sp.field_Ob = sp.field_Ob + 1;
+                        ShopPlayerSlot.field_Ob = ShopPlayerSlot.field_Ob + 1;
                         break;
                       }
                     }
@@ -768,7 +768,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           var7 = new IntrusiveDequeCursor(this.field_y);
           var8 = (UiWidget) (var7.a((byte) -93));
           while (var8 != null) {
-            if (var8.e((byte) -113)) {
+            if (var8.isLinked((byte) -113)) {
               var8.a(param0 + this.field_g, param1, param2, param3, -1, this.field_t + param5);
               var8 = (UiWidget) (var7.a(0));
               if (var9 == 0) {
@@ -823,7 +823,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
               discarded$3 = param0.append(' ');
               var7++;
             }
-            var6.appendWidgetDiagnostics(param3 ^ 9586, 1 + param2, param1, param0);
+            var6.a(param3 ^ 9586, 1 + param2, param1, param0);
             var6 = (UiWidget) (var5.a(0));
           }
           return;
@@ -899,7 +899,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final StringBuilder appendWidgetDiagnostics(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -912,7 +912,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           if (param0 != 17883) {
             field_v = (vn[][]) null;
           }
-          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
+          if (this.a(1, param3, param2, param1)) {
             this.b(param1, param3, param2, param0 - 36451);
             this.a(param3, param2, param1, 24745);
           }
@@ -961,7 +961,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           var6_ref_fd = (UiWidget) (var5.a((byte) -108));
           scanLoop1: while (true) {
             if (var6_ref_fd != null) {
-              stackOut_6_0 = var6_ref_fd.e((byte) -113);
+              stackOut_6_0 = var6_ref_fd.isLinked((byte) -113);
               stackIn_20_0 = stackOut_6_0 ? 1 : 0;
               stackIn_7_0 = stackOut_6_0;
               if (var7 != 0) {
@@ -983,7 +983,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           if (var6 != 80) {
             return false;
           }
-          if (!ne.field_G[81]) {
+          if (!GameplayHelpScreen.field_G[81]) {
             stackIn_27_0 = this.b(param2, (byte) 123);
           } else {
             stackIn_27_0 = this.a(param2, (byte) -100);
@@ -1018,7 +1018,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           var5 = new IntrusiveDequeCursor(this.field_y);
           var6 = (UiWidget) (var5.a((byte) -34));
           while (null != var6) {
-            if (var6.e((byte) -113)) {
+            if (var6.isLinked((byte) -113)) {
               var6.a((byte) 12, param1, this.field_t + param2, param3 + this.field_g);
               var6 = (UiWidget) (var5.a(0));
               if (var7 == 0) {
@@ -1090,7 +1090,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           var10 = -61 % ((63 - param6) / 56);
           scanLoop1: while (true) {
             if (var9 != null) {
-              stackOut_3_0 = var9.e((byte) -113);
+              stackOut_3_0 = var9.isLinked((byte) -113);
               stackIn_19_0 = stackOut_3_0;
               stackIn_4_0 = stackOut_3_0;
               if (var11 != 0) {

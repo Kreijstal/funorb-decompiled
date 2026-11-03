@@ -87,13 +87,13 @@ abstract class MatchAgent {
     final static Sprite b(int param0) {
         int var4_int = 0;
         int var5 = Kickabout.field_G;
-        int var1 = MouseInputHandler.field_c[0] * lo.field_j[0];
+        int var1 = MouseInputHandler.field_c[0] * PasswordValidator.field_j[0];
         byte[] var2 = pq.field_O[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = lt.field_a[qj.b(255, (int) var2[var4_int])];
         }
-        Sprite var4 = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[param0], MouseInputHandler.field_c[0], lo.field_j[0], var3);
+        Sprite var4 = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[param0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var3);
         tk.h((byte) -81);
         return var4;
     }
@@ -140,10 +140,10 @@ abstract class MatchAgent {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          si var13 = null;
+          ReflectionCheck var13 = null;
           Object var16 = null;
           java.lang.reflect.Field var16_ref = null;
-          si var17 = null;
+          ReflectionCheck var17 = null;
           Object var18 = null;
           Object var19 = null;
           java.lang.reflect.Field var20 = null;
@@ -162,26 +162,26 @@ abstract class MatchAgent {
           var23 = null;
           var12 = Kickabout.field_G;
           try {
-            var13 = (si) (nv.field_N.g(24009));
+            var13 = (ReflectionCheck) (nv.field_N.g(24009));
             var17 = var13;
             if (var17 == null) {
               return;
             }
             var3 = 0;
-            for (var4 = 0; var4 < var17.field_n; var4++) {
-              if (var13.field_f[var4] != null) {
-                if (var13.field_f[var4].field_a == 2) {
-                  var13.field_m[var4] = -5;
+            for (var4 = 0; var4 < var17.operationCount; var4++) {
+              if (var13.fieldTasks[var4] != null) {
+                if (var13.fieldTasks[var4].field_a == 2) {
+                  var13.operationErrors[var4] = -5;
                 }
-                if (var13.field_f[var4].field_a == 0) {
+                if (var13.fieldTasks[var4].field_a == 0) {
                   var3 = 1;
                 }
               }
-              if (var13.field_e[var4] != null) {
-                if (var13.field_e[var4].field_a == 2) {
-                  var13.field_m[var4] = -6;
+              if (var13.methodTasks[var4] != null) {
+                if (var13.methodTasks[var4].field_a == 2) {
+                  var13.operationErrors[var4] = -6;
                 }
-                if (0 == var13.field_e[var4].field_a) {
+                if (0 == var13.methodTasks[var4].field_a) {
                   var3 = 1;
                 }
               }
@@ -190,36 +190,36 @@ abstract class MatchAgent {
               return;
             }
             var4 = param0.field_n;
-            param0.b(-82, var17.field_p);
-            for (var5 = param1; var5 < var17.field_n; var5++) {
-              if (var17.field_m[var5] != 0) {
-                param0.a(109, var17.field_m[var5]);
+            param0.writeInt(-82, var17.requestId);
+            for (var5 = param1; var5 < var17.operationCount; var5++) {
+              if (var17.operationErrors[var5] != 0) {
+                param0.writeByte(109, var17.operationErrors[var5]);
               } else {
                 try {
-                  var6_int = var17.field_h[var5];
+                  var6_int = var17.operationTypes[var5];
                   if (0 != var6_int) {
                     if (var6_int == 1) {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_f[var5].field_b);
+                      var16_ref = (java.lang.reflect.Field) (var17.fieldTasks[var5].field_b);
                       var20 = var16_ref;
-                      var20.setInt((Object) null, var17.field_o[var5]);
-                      param0.a(113, 0);
+                      var20.setInt((Object) null, var17.fieldSetValues[var5]);
+                      param0.writeByte(113, 0);
                     } else {
                       if (var6_int == 2) {
-                        var28 = (java.lang.reflect.Field) (var17.field_f[var5].field_b);
+                        var28 = (java.lang.reflect.Field) (var17.fieldTasks[var5].field_b);
                         var8 = var28.getModifiers();
-                        param0.a(118, 0);
-                        param0.b(param1 ^ -120, var8);
+                        param0.writeByte(118, 0);
+                        param0.writeInt(param1 ^ -120, var8);
                       }
                     }
                   } else {
-                    var27 = (java.lang.reflect.Field) (var17.field_f[var5].field_b);
+                    var27 = (java.lang.reflect.Field) (var17.fieldTasks[var5].field_b);
                     var8 = var27.getInt((Object) null);
-                    param0.a(114, 0);
-                    param0.b(-110, var8);
+                    param0.writeByte(114, 0);
+                    param0.writeInt(-110, var8);
                   }
                   if (var6_int == 3) {
-                    var29 = (java.lang.reflect.Method) (var17.field_e[var5].field_b);
-                    var26 = var17.field_l[var5];
+                    var29 = (java.lang.reflect.Method) (var17.methodTasks[var5].field_b);
+                    var26 = var17.serializedArguments[var5];
                     var9 = new Object[var26.length];
                     for (var10_int = 0; var10_int < var26.length; var10_int++) {
                       var11 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var26[var10_int])));
@@ -227,76 +227,76 @@ abstract class MatchAgent {
                     }
                     var10 = var29.invoke((Object) null, var9);
                     if (var10 == null) {
-                      param0.a(106, 0);
+                      param0.writeByte(106, 0);
                     } else if (var10 instanceof Number) {
-                      param0.a(110, 1);
-                      param0.a(((Number) (var10)).longValue(), param1 - 1781890008);
+                      param0.writeByte(110, 1);
+                      param0.writeLong(((Number) (var10)).longValue(), param1 - 1781890008);
                     } else if (!(var10 instanceof String)) {
-                      param0.a(109, 4);
+                      param0.writeByte(109, 4);
                     } else {
-                      param0.a(102, 2);
-                      param0.a(param1 ^ 14190, (String) (var10));
+                      param0.writeByte(102, 2);
+                      param0.writeString(param1 ^ 14190, (String) (var10));
                     }
                   } else {
                     if (var6_int == 4) {
-                      var30 = (java.lang.reflect.Method) (var17.field_e[var5].field_b);
+                      var30 = (java.lang.reflect.Method) (var17.methodTasks[var5].field_b);
                       var8Lifetime1 = var30.getModifiers();
-                      param0.a(115, 0);
-                      param0.b(param1 - 114, var8Lifetime1);
+                      param0.writeByte(115, 0);
+                      param0.writeInt(param1 - 114, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param0.a(116, -10);
+                  param0.writeByte(116, -10);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param0.a(119, -11);
+                  param0.writeByte(119, -11);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param0.a(param1 + 117, -12);
+                  param0.writeByte(param1 + 117, -12);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param0.a(103, -13);
+                  param0.writeByte(103, -13);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param0.a(127, -14);
+                  param0.writeByte(127, -14);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param0.a(120, -15);
+                  param0.writeByte(120, -15);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param0.a(109, -16);
+                  param0.writeByte(109, -16);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param0.a(102, -17);
+                  param0.writeByte(102, -17);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param0.a(111, -18);
+                  param0.writeByte(111, -18);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param0.a(105, -19);
+                  param0.writeByte(105, -19);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param0.a(106, -20);
+                  param0.writeByte(106, -20);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var6_ref11 = decompiledCaughtException;
-                  param0.a(param1 + 106, -21);
+                  param0.writeByte(param1 + 106, -21);
                 }
               }
             }
-            param0.a(var4, false);
+            param0.appendCrc32(var4, false);
             var17.c((byte) -109);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

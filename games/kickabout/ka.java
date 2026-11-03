@@ -12,12 +12,12 @@ final class ka implements fg {
         if (vl.a(false)) {
           return;
         }
-        si.field_k = param1;
+        ReflectionCheck.field_k = param1;
         ag.field_h = param0;
         if (param2 >= -68) {
           return;
         }
-        fp.field_e = 2;
+        AuctionItem.field_e = 2;
     }
 
     final static void a(int param0, String param1) {

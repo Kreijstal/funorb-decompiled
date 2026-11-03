@@ -35,7 +35,7 @@ final class nv extends TextButton {
           if (param1 == null) {
             return null;
           }
-          var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, lo.field_j, lt.field_a, pq.field_O);
+          var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, lt.field_a, pq.field_O);
           tk.h((byte) -92);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -209,8 +209,8 @@ final class nv extends TextButton {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = or.field_d;
         var2.b(param0, (byte) -104);
-        var2.a(106, 1);
-        var2.a(117, 1);
+        var2.writeByte(106, 1);
+        var2.writeByte(117, 1);
         if (param1 == 32361) {
           return;
         }

@@ -26,7 +26,7 @@ final class ip {
         int var1_intLifetime1;
         var4 = Kickabout.field_G;
         try {
-          TriangleRasterizer.c();
+          TriangleRasterizer.useRasterClip();
           ValidatedTextWidget.field_Y = new int[260];
           im.field_yb = 11;
           var1_int = 0;

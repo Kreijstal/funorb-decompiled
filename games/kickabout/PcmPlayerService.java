@@ -50,7 +50,7 @@ class PcmPlayerService {
         if (field_o) {
           var3 = var3 << 1;
         }
-        ArrayOperations.a(param0, 0, var3);
+        ArrayOperations.clearInts(param0, 0, var3);
         this.field_u = this.field_u - param1;
         if (this.field_c != null &&
           this.field_u <= 0) {
@@ -142,7 +142,7 @@ class PcmPlayerService {
           this.field_u = 0;
         }
         if (this.field_c != null) {
-          this.field_c.a(param0, 0, param1);
+          this.field_c.mixInto(param0, 0, param1);
         }
         this.field_t = nj.a(-96);
     }
@@ -208,7 +208,7 @@ class PcmPlayerService {
               if (((PcmPlayerService) ((Object) var4)).field_r > 16384) {
                 ((PcmPlayerService) ((Object) var4)).field_r = 16384;
               }
-              ((PcmPlayerService) ((Object) var4)).b(((PcmPlayerService) ((Object) var4)).field_r);
+              ((PcmPlayerService) ((Object) var4)).openDevice(((PcmPlayerService) ((Object) var4)).field_r);
               if (field_h > 0 &&
                 field_d == null) {
                 field_d = new cp();
@@ -285,7 +285,7 @@ class PcmPlayerService {
               if (var1 < this.field_g) {
                 return;
               }
-              this.b(this.field_r);
+              this.openDevice(this.field_r);
               this.field_g = 0L;
               this.field_a = true;
             }
@@ -303,7 +303,7 @@ class PcmPlayerService {
                 this.field_r = 16384;
               }
               this.closeDevice();
-              this.b(this.field_r);
+              this.openDevice(this.field_r);
               var3_int = 0;
               this.field_a = true;
               if (var4 + 256 > this.field_r) {
@@ -313,7 +313,7 @@ class PcmPlayerService {
             }
             while (var3_int < var4) {
               this.a(this.field_k, 256);
-              this.e();
+              this.writeMixBlock();
               var3_int += 256;
             }
             if (var1 > this.field_q) {
@@ -353,7 +353,7 @@ class PcmPlayerService {
           this.field_u = 0;
         }
         if (this.field_c != null) {
-          this.field_c.a(param0);
+          this.field_c.skipFrames(param0);
           return;
         }
     }
@@ -362,14 +362,14 @@ class PcmPlayerService {
         return this.field_r;
     }
 
-    void e() throws Exception {
+    void writeMixBlock() throws Exception {
     }
 
     public static void a() {
         field_d = null;
     }
 
-    void b(int param0) throws Exception {
+    void openDevice(int param0) throws Exception {
     }
 
     void closeDevice() {

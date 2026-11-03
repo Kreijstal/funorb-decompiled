@@ -30,7 +30,7 @@ final class ng {
         int var14;
         IndexedSprite[] var15;
         Object var16;
-        nr var17;
+        PlayerModelPreview var17;
         int var9Lifetime1;
         var16 = null;
         var14 = Kickabout.field_G;
@@ -51,27 +51,27 @@ final class ng {
         var8 = new IntrusiveDeque();
         for (var9 = 0; var9 < 4; var9++) {
           for (var10_int = 0; 2 + param3 > var10_int; var10_int++) {
-            if (p.a((byte) -24, 256) <= param1) {
-              var11 = p.a((byte) -24, 5);
-              var12 = p.a((byte) -24, 5);
+            if (LoggedPossession.a((byte) -24, 256) <= param1) {
+              var11 = LoggedPossession.a((byte) -24, 5);
+              var12 = LoggedPossession.a((byte) -24, 5);
               var13 = var12 + (var9 * 36 + 20);
               if (!param4) {
                 var13 = ph.field_e[0][0].field_i - var13;
               }
-              var8.a(new nr(var13, var10_int * 26 + 63 + 11 * var9, var7, var11), 3);
+              var8.a(new PlayerModelPreview(var13, var10_int * 26 + 63 + 11 * var9, var7, var11), 3);
             }
           }
         }
         for (var9Lifetime1 = 0; var9Lifetime1 < 6; var9Lifetime1++) {
-          jm.a(100, 9863, (param5 - param0) * var9Lifetime1 / 6 + param0);
+          DelayedServerPacket.a(100, 9863, (param5 - param0) * var9Lifetime1 / 6 + param0);
           var10 = bt.a(-127, param4, param3);
           PacketBuffer.a(87, var10);
-          var17 = (nr) (var8.g(24009));
+          var17 = (PlayerModelPreview) (var8.g(24009));
           while (var17 != null) {
             var17.a(var9Lifetime1, -2);
-            var17 = (nr) (var8.c(33));
+            var17 = (PlayerModelPreview) (var8.c(33));
           }
-          ta.e(121);
+          TeamManagementScreen.e(121);
           var6[var9Lifetime1] = eo.a(var10);
         }
         return var6;
@@ -87,8 +87,8 @@ final class ng {
         RuntimeException var3 = null;
         var4 = Kickabout.field_G;
         try {
-          this.field_b = param0.j((byte) -104);
-          this.field_c = param0.h((byte) -123);
+          this.field_b = param0.readByte((byte) -104);
+          this.field_c = param0.readUnsignedByte((byte) -123);
           this.field_h = new int[this.field_c];
           this.field_g = new int[this.field_c];
           this.field_f = new String[this.field_c];
@@ -96,11 +96,11 @@ final class ng {
             field_j = (Sprite[]) null;
           }
           for (var3_int = 0; this.field_c > var3_int; var3_int++) {
-            this.field_g[var3_int] = param0.h((byte) -108);
+            this.field_g[var3_int] = param0.readUnsignedByte((byte) -108);
             if (this.field_g[var3_int] != 0) {
-              this.field_h[var3_int] = param0.h((byte) -117);
+              this.field_h[var3_int] = param0.readUnsignedByte((byte) -117);
             } else {
-              this.field_f[var3_int] = param0.a(-117);
+              this.field_f[var3_int] = param0.readString(-117);
             }
           }
           return;
@@ -156,7 +156,7 @@ final class ng {
             var2[var3] = this.field_f[var3];
           }
         }
-        return vo.$cfr$intArgs$a$53ce4ab4c593(-18, rv.field_d[this.field_b], var5);
+        return vo.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_d[this.field_b], var5);
     }
 
     final static Sprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
@@ -177,7 +177,7 @@ final class ng {
           if (param2 != 2) {
             field_j = (Sprite[]) null;
           }
-          var5 = param3.findFileId((byte) -104, param0, var4_int);
+          var5 = param3.a((byte) -104, param0, var4_int);
           stackIn_3_0 = dk.a(var4_int, var5, (byte) -123, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,7 +208,7 @@ final class ng {
 
     final static void a(int param0, int param1) {
         ig.field_d = param0;
-        mf.field_Db = null;
+        SquadGridWidget.field_Db = null;
         um.field_b = false;
         if (param1 <= 27) {
           field_k = (String[]) null;

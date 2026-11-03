@@ -130,7 +130,7 @@ final class ob extends BallAgent {
             if (var6Lifetime1 > 255) {
               var6Lifetime1 = 255;
             }
-            bv.a(this, 256, var6Lifetime1);
+            AccountNameAvailabilityValidator.a(this, 256, var6Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -182,8 +182,8 @@ final class ob extends BallAgent {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        TriangleRasterizer.c();
-        TriangleRasterizer.b(param1, param2);
+        TriangleRasterizer.useRasterClip();
+        TriangleRasterizer.setProjectionCenter(param1, param2);
         if (param4 != 300) {
           tv var7 = (tv) null;
           ob.a((byte) -13, (tv) null);
@@ -195,7 +195,7 @@ final class ob extends BallAgent {
         if (this.field_J != param3) {
           this.a((byte) -113, param3, 300);
         }
-        qo.field_l[this.modelId].a(this.field_D, this.field_G);
+        EmailSyntaxValidator.field_l[this.modelId].a(this.field_D, this.field_G);
     }
 
     private final int k(int param0) {
@@ -342,26 +342,26 @@ final class ob extends BallAgent {
         var5 = Kickabout.field_G;
         try {
           var1_int = -78 % ((param0 + 26) / 53);
-          if (null == mh.field_q) {
-            mh.field_q = mk.a(4, 26731);
+          if (null == EmailAvailabilityValidator.field_q) {
+            EmailAvailabilityValidator.field_q = mk.a(4, 26731);
           }
-          if (!mh.field_q.field_f) {
+          if (!EmailAvailabilityValidator.field_q.field_f) {
             return false;
           }
           var6 = BufferedSocket.field_f;
-          var7 = mh.field_q.field_e;
+          var7 = EmailAvailabilityValidator.field_q.field_e;
           for (var4 = 0; var4 < 8; var4++) {
             var6[var4] = hf.a(var6[var4], var7[var4]);
           }
           var8 = ha.field_F;
-          var9 = mh.field_q.field_e;
+          var9 = EmailAvailabilityValidator.field_q.field_e;
           var10 = 0;
           var4Lifetime1 = var10;
           while (8 > var10) {
             var8[var10] = qj.b(var8[var10], ~var9[var10]);
             var10++;
           }
-          mh.field_q = null;
+          EmailAvailabilityValidator.field_q = null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -388,9 +388,9 @@ final class ob extends BallAgent {
         if (var2Lifetime1 < 0) {
           var2Lifetime1 = 0;
         }
-        int var3 = hw.field_i * (14 - (var2Lifetime1 * 14 >> 10)) >> 8;
-        int var4 = -5 * hw.field_i >> 8;
-        int var5 = 4 * hw.field_i >> 8;
+        int var3 = InstrumentNoteMask.field_i * (14 - (var2Lifetime1 * 14 >> 10)) >> 8;
+        int var4 = -5 * InstrumentNoteMask.field_i >> 8;
+        int var5 = 4 * InstrumentNoteMask.field_i >> 8;
         int var6 = -1 + m.field_d.length;
         int var7 = (var2Lifetime1 * (var6 >> 1) >> 8) + (var6 >> 1);
         nh.a(ug.a(0, this.field_N >> 16) + var4 << 4, lf.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, m.field_d);
@@ -490,10 +490,10 @@ final class ob extends BallAgent {
           if (param1.field_c != 2) {
             if (0 == param1.field_c &&
               uk.field_d) {
-              var3 = "[" + qt.field_z + "] ";
+              var3 = "[" + ButtonMenuScreen.field_z + "] ";
             }
             if (1 == param1.field_c) {
-              var3 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, bv.field_m, new String[]{param1.field_l}) + "] ";
+              var3 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{param1.field_l}) + "] ";
             }
             if (param1.field_c == 4 &&
               null != SingleChildContainer.field_x) {
@@ -509,7 +509,7 @@ final class ob extends BallAgent {
             if (!param1.field_m) {
               if (param1.field_j == 0 &&
                 param1.field_p == 0) {
-                var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, b.field_F, new String[]{(String) (var2)});
+                var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{(String) (var2)});
               } else {
                 var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, hd.field_ib, new String[]{(String) (var2)});
               }
@@ -654,14 +654,14 @@ final class ob extends BallAgent {
         int var3 = ug.a(0, this.k(param0 + 14899));
         int var4 = lf.a((byte) -107, this.c(true));
         if (tb.field_v != 1) {
-          var2 = (var2 << 8) / hw.field_i;
+          var2 = (var2 << 8) / InstrumentNoteMask.field_i;
           this.a(300, var3, var4, var2, 300);
         } else {
           PacketBuffer.a(-115, kw.field_f);
           SoftwareRasterizer.b();
-          var2 = (var2 << 7) / hw.field_i;
+          var2 = (var2 << 7) / InstrumentNoteMask.field_i;
           this.a(300, 64, 64, var2, 300);
-          ta.e(118);
+          TeamManagementScreen.e(118);
           kw.field_f.drawHalfSize(var3 - 32, -32 + var4);
         }
     }

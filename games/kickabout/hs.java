@@ -8,8 +8,8 @@ abstract class hs {
     CommonGame field_a;
     static int field_e;
     boolean field_f;
-    private ko field_i;
-    io[] field_c;
+    private MenuSelection field_i;
+    MenuButton[] field_c;
     int field_h;
 
     private final int a(int param0, int param1, int param2) {
@@ -23,9 +23,9 @@ abstract class hs {
         if (param2 > -48) {
           this.e(38, -6);
         }
-        for (var4 = 0; var4 < this.field_i.field_a; var4++) {
-          var5 = this.field_c[var4].field_d;
-          var6 = this.field_c[var4].field_h;
+        for (var4 = 0; var4 < this.field_i.itemCount; var4++) {
+          var5 = this.field_c[var4].width;
+          var6 = this.field_c[var4].height;
           var7 = -(var5 >> 1) + this.d(111, var4);
           var8 = this.c(342, var4) - (var6 >> 1);
           if (this.e(var4, 50) &&
@@ -259,14 +259,14 @@ abstract class hs {
         }
         if (param1) {
           this.field_i.a(-21174, this.a(wt.field_x, us.field_j, -74), this.a(dn.field_yb, kf.field_Eb, -106));
-          if (this.field_i.field_e >= 0 &&
+          if (this.field_i.selectedIndex >= 0 &&
             this.field_i.c(-1)) {
-            this.f(111, this.field_c[this.field_i.field_e].field_m);
+            this.f(111, this.field_c[this.field_i.selectedIndex].kind);
           }
         }
         for (var3 = 0; this.field_c.length > var3; var3++) {
           if (param1) {
-            stackIn_16_0 = (var3 == this.field_i.field_e) ? 1 : 0;
+            stackIn_16_0 = (var3 == this.field_i.selectedIndex) ? 1 : 0;
           } else {
             stackIn_16_0 = 0;
           }
@@ -300,7 +300,7 @@ abstract class hs {
         if (param0 != -26254) {
           field_d = (om) null;
         }
-        this.field_i = new ko(this.field_c.length);
+        this.field_i = new MenuSelection(this.field_c.length);
         this.field_i.a(true, this.a(wt.field_x, us.field_j, -93), (byte) -127);
     }
 
@@ -325,32 +325,32 @@ abstract class hs {
         int var5;
         var5 = Kickabout.field_G;
         if (param1 != 1670) {
-          this.field_i = (ko) null;
+          this.field_i = (MenuSelection) null;
         }
         if (null == this.field_i) {
           return false;
         }
-        this.field_i.a(0, true);
-        if (this.field_i.field_e >= 0) {
+        this.field_i.handleArrowKeys(0, true);
+        if (this.field_i.selectedIndex >= 0) {
           var4 = 0;
-          while (!this.e(this.field_i.field_e, 50)) {
+          while (!this.e(this.field_i.selectedIndex, 50)) {
             incrementValue$3 = var4;
             var4++;
-            if (this.field_i.field_a < incrementValue$3) {
+            if (this.field_i.itemCount < incrementValue$3) {
               break;
             }
             if (96 == param2) {
-              this.field_i.field_e = (this.field_i.field_a + this.field_i.field_e - 1) % this.field_i.field_a;
+              this.field_i.selectedIndex = (this.field_i.itemCount + this.field_i.selectedIndex - 1) % this.field_i.itemCount;
               continue;
             }
-            this.field_i.field_e = (1 + this.field_i.field_e) % this.field_i.field_a;
+            this.field_i.selectedIndex = (1 + this.field_i.selectedIndex) % this.field_i.itemCount;
           }
         }
-        if (this.field_i.field_e >= 0) {
+        if (this.field_i.selectedIndex >= 0) {
           if (!this.field_i.c(-1)) {
             return true;
           }
-          this.f(101, this.field_c[this.field_i.field_e].field_m);
+          this.f(101, this.field_c[this.field_i.selectedIndex].kind);
         }
         return true;
     }
@@ -383,10 +383,10 @@ abstract class hs {
         var7 = SoftwareRasterizer.field_f >> 1;
         un.field_d.d(var5, var6, var7, 16777215, -1);
         pw.field_H.c(-16 + var6, var7 - 31);
-        ta.e(124);
+        TeamManagementScreen.e(124);
         var8 = 256;
         if (param0 != -2351) {
-          this.field_c = (io[]) null;
+          this.field_c = (MenuButton[]) null;
         }
         if (param1 / 50 <= 10) {
           var8 = var8 + (-200 + 4 * (this.field_a.phaseTime % 50) + 128);
@@ -455,7 +455,7 @@ abstract class hs {
         var7Lifetime1 = var14;
         while (var14 < this.field_a.playerCount) {
           if (param0 == this.field_a.field_g[var14].field_p) {
-            b.field_U[this.field_a.field_g[var14].field_f].c(param3, -16 + param1);
+            MySquadScreen.field_U[this.field_a.field_g[var14].field_f].c(param3, -16 + param1);
             stackIn_24_0 = (this.field_a.participantStatus[var14].isActive(3511)) ? 16777215 : 11184810;
             var8 = stackIn_24_0;
             var9 = this.field_a.field_S[var14].toLowerCase();
@@ -464,8 +464,8 @@ abstract class hs {
               var10 = un.field_d.a(var9);
               var11 = param3 + (-var10 + 160 >> 1);
               var12 = 10;
-              SoftwareRasterizer.drawLine(var11, -2 + param1 - var12, var10 + var11, param1 - 1, 13382451);
-              SoftwareRasterizer.drawLine(var11, param1 - 1, var10 + var11, -var12 + (param1 - 2), 13382451);
+              SoftwareRasterizer.b(var11, -2 + param1 - var12, var10 + var11, param1 - 1, 13382451);
+              SoftwareRasterizer.b(var11, param1 - 1, var10 + var11, -var12 + (param1 - 2), 13382451);
             }
             param1 += 23;
           }
@@ -501,9 +501,9 @@ abstract class hs {
           this.field_h = -2 != this.field_g ? this.field_a.field_g[this.field_g].field_p : 0;
           this.field_f = param2 ? true : false;
           if (param3 != null) {
-            this.field_c = new io[param3.length];
+            this.field_c = new MenuButton[param3.length];
             for (var5_int = 0; param3.length > var5_int; var5_int++) {
-              this.field_c[var5_int] = new io(-3, 7126504, param3[var5_int]);
+              this.field_c[var5_int] = new MenuButton(-3, 7126504, param3[var5_int]);
             }
             this.a(-26254);
           }
@@ -565,9 +565,9 @@ abstract class hs {
         var7Lifetime1 = var10;
         while (this.field_a.playerCount > var10) {
           var8 = this.field_a.field_g[var10].field_p;
-          pt.a(640, -22914, 2 + (var4[var8] + 160), 480, 0);
+          AuctionListing.a(640, -22914, 2 + (var4[var8] + 160), 480, 0);
           SoftwareRasterizer.a(var4[var8], var5[var8], 186, 21, 7, 65793, 128);
-          ta.e(123);
+          TeamManagementScreen.e(123);
           if (this.field_a.participantStatus[var10].loadedPitch) {
             vb.field_l.c(2 + (160 + var4[var8]), -4 + var5[var8]);
           }

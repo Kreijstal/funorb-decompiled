@@ -42,7 +42,7 @@ final class vg extends hd {
           this.field_Fb = var2;
           this.field_Mb = var2;
           var4 = this.field_Ub.toString().substring(var3, this.field_Ub.length());
-          dj.a(var2, ' ', param0 - 11439, this.field_Ub);
+          PagedHelpScreen.a(var2, ' ', param0 - 11439, this.field_Ub);
           discarded$0 = this.field_Ub.append(var4);
           this.field_Lb.field_E = this.field_Ub.toString();
         }
@@ -153,7 +153,7 @@ final class vg extends hd {
 
     final void k(int param0) {
         int discarded$0 = 0;
-        dj.a(0, ' ', -11407, this.field_Ub);
+        PagedHelpScreen.a(0, ' ', -11407, this.field_Ub);
         this.field_Mb = 0;
         this.field_Fb = 0;
         if (param0 != -19174) {
@@ -168,13 +168,13 @@ final class vg extends hd {
         RuntimeException var2 = null;
         int var4 = 0;
         int var6 = 0;
-        jm var6_ref_jm = null;
+        DelayedServerPacket var6_ref_jm = null;
         int var7 = 0;
         byte[] var8 = null;
-        jm var9 = null;
+        DelayedServerPacket var9 = null;
         int var10 = 0;
         byte[] var11 = null;
-        jm var13 = null;
+        DelayedServerPacket var13 = null;
         byte[] var14 = null;
         byte[] var17 = null;
         int var6Lifetime1;
@@ -197,22 +197,22 @@ final class vg extends hd {
               for (var6 = 0; var6 < var14.length; var6++) {
                 var8[var6] = or.field_d.field_f[var6];
               }
-              var6_ref_jm = new jm((long)var4 + var2_long, or.field_d.field_n, var17);
+              var6_ref_jm = new DelayedServerPacket((long)var4 + var2_long, or.field_d.field_n, var17);
               DualLinkNode.field_g.a(var6_ref_jm, 3);
               or.field_d.field_n = 0;
             }
-            var9 = (jm) (DualLinkNode.field_g.g(24009));
+            var9 = (DelayedServerPacket) (DualLinkNode.field_g.g(24009));
             var13 = var9;
             if (var13 != null &&
-              var13.field_f < var2_long) {
+              var13.dueTime < var2_long) {
               var13.c((byte) -109);
               var10 = 0;
               var6Lifetime1 = var10;
-              while (var10 < var13.field_j) {
-                or.field_d.field_f[var10] = var9.field_k[var10];
+              while (var10 < var13.opcode) {
+                or.field_d.field_f[var10] = var9.data[var10];
                 var10++;
               }
-              or.field_d.field_n = var13.field_j;
+              or.field_d.field_n = var13.opcode;
             }
           }
           c.a(param0, false);
@@ -253,8 +253,8 @@ final class vg extends hd {
           if (!param0) {
             vg.c(-62, -59);
           }
-          var3.a(127, param1.field_k);
-          var3.a(115, param1.field_p);
+          var3.writeByte(127, param1.field_k);
+          var3.writeByte(115, param1.field_p);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "vg.RA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -327,7 +327,7 @@ final class vg extends hd {
         if (null == this.field_Pb) {
           return;
         }
-        this.field_Gb = this.field_Pb.a(15);
+        this.field_Gb = this.field_Pb.requestDisplayModes(15);
     }
 
     private final int d(int param0, int param1) {
@@ -379,7 +379,7 @@ final class vg extends hd {
               discarded$1 = this.field_Ub.append(param1);
             } else {
               var5 = this.field_Ub.toString().substring(this.field_Mb, this.field_Ub.length());
-              dj.a(this.field_Mb, ' ', param2 - 12282, this.field_Ub);
+              PagedHelpScreen.a(this.field_Mb, ' ', param2 - 12282, this.field_Ub);
               discarded$2 = this.field_Ub.append(param1);
               discarded$3 = this.field_Ub.append(var5);
             }
@@ -407,7 +407,7 @@ final class vg extends hd {
               if (param0 != 96) {
                 if (param0 == 97) {
                   if (this.field_Mb < this.field_Ub.length()) {
-                    if (ne.field_G[82]) {
+                    if (GameplayHelpScreen.field_G[82]) {
                       stackIn_52_0 = this.i(-100);
                     } else {
                       stackIn_52_0 = this.field_Mb + 1;
@@ -425,17 +425,17 @@ final class vg extends hd {
                     this.a(this.field_Ub.length(), (byte) -103);
                     return true;
                   }
-                  if (ne.field_G[82] &&
+                  if (GameplayHelpScreen.field_G[82] &&
                     65 == param0) {
                     this.h((byte) 74);
                     return true;
                   }
-                  if (ne.field_G[82] &&
+                  if (GameplayHelpScreen.field_G[82] &&
                     param0 == 66) {
                     this.c(false);
                     return true;
                   }
-                  if (ne.field_G[82] &&
+                  if (GameplayHelpScreen.field_G[82] &&
                     param0 == 67) {
                     this.k((byte) 38);
                     return true;
@@ -443,7 +443,7 @@ final class vg extends hd {
                 }
               } else {
                 if (this.field_Mb > 0) {
-                  if (ne.field_G[82]) {
+                  if (GameplayHelpScreen.field_G[82]) {
                     stackIn_31_0 = this.h(26864);
                   } else {
                     stackIn_31_0 = this.field_Mb - 1;
@@ -535,7 +535,7 @@ final class vg extends hd {
         if (param1 > -70) {
           vg.c(-51, -118);
         }
-        if (!ne.field_G[81]) {
+        if (!GameplayHelpScreen.field_G[81]) {
           this.field_Fb = this.field_Mb;
         }
     }
@@ -583,7 +583,7 @@ final class vg extends hd {
           }
           if (this.field_Mb != this.field_Ub.length()) {
             var4 = this.field_Ub.toString().substring(this.field_Mb, this.field_Ub.length());
-            dj.a(this.field_Mb, ' ', -11407, this.field_Ub);
+            PagedHelpScreen.a(this.field_Mb, ' ', -11407, this.field_Ub);
             discarded$4 = this.field_Ub.append(param0);
             discarded$5 = this.field_Ub.append(var4);
           } else {

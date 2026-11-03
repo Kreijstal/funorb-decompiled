@@ -13,7 +13,7 @@ final class op extends TextWidgetPainter {
     static int field_v;
 
     final static void a(int param0) {
-        jt.field_yb = 80;
+        PitchOptionTile.field_yb = 80;
         om.field_Bb = 120;
         hq.field_d = -om.field_Bb + 480 - 21;
         if (param0 != -363021503) {
@@ -25,29 +25,29 @@ final class op extends TextWidgetPainter {
         int var4 = 48;
         int var5 = 48;
         int var6 = 21;
-        Sprite var7 = new Sprite(jt.field_yb << 1, om.field_Bb << 1);
+        Sprite var7 = new Sprite(PitchOptionTile.field_yb << 1, om.field_Bb << 1);
         PacketBuffer.a(97, var7);
         SoftwareRasterizer.b();
-        SoftwareRasterizer.c(0, 0, jt.field_yb << 1, om.field_Bb << 1, 2, 16777215);
-        SoftwareRasterizer.e(1, 1, -2 + (jt.field_yb << 1), (om.field_Bb << 1) - 2, 16777215);
-        SoftwareRasterizer.drawHorizontalLine(0, om.field_Bb, jt.field_yb << 1, 16777215);
-        SoftwareRasterizer.drawHorizontalLine(0, 1 + om.field_Bb, jt.field_yb << 1, 16777215);
-        vl.a(2, var1, true, 16777215).c(-var1 + jt.field_yb, om.field_Bb - var1);
-        SoftwareRasterizer.c(jt.field_yb - (var2 >> 1), 1, var2, var4, 2, 16777215);
-        SoftwareRasterizer.c(jt.field_yb - (var5 >> 1), 0, var5, var6, 2, 16777215);
-        SoftwareRasterizer.c(jt.field_yb - (var2 >> 1), -1 + (-var4 + om.field_Bb) + om.field_Bb, var2, var4, 2, 16777215);
-        SoftwareRasterizer.c(jt.field_yb - (var5 >> 1), -var6 + (om.field_Bb + om.field_Bb), var5, var6, 2, 16777215);
-        pt.a(jt.field_yb + jt.field_yb, -22914, 0, -var4 + (om.field_Bb + om.field_Bb), var4);
+        SoftwareRasterizer.c(0, 0, PitchOptionTile.field_yb << 1, om.field_Bb << 1, 2, 16777215);
+        SoftwareRasterizer.e(1, 1, -2 + (PitchOptionTile.field_yb << 1), (om.field_Bb << 1) - 2, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, om.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, 1 + om.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
+        vl.a(2, var1, true, 16777215).c(-var1 + PitchOptionTile.field_yb, om.field_Bb - var1);
+        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var2 >> 1), 1, var2, var4, 2, 16777215);
+        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var5 >> 1), 0, var5, var6, 2, 16777215);
+        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var2 >> 1), -1 + (-var4 + om.field_Bb) + om.field_Bb, var2, var4, 2, 16777215);
+        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var5 >> 1), -var6 + (om.field_Bb + om.field_Bb), var5, var6, 2, 16777215);
+        AuctionListing.a(PitchOptionTile.field_yb + PitchOptionTile.field_yb, -22914, 0, -var4 + (om.field_Bb + om.field_Bb), var4);
         Sprite var8 = vl.a(2, var3, true, 16777215);
-        var8.c(-var3 + jt.field_yb, -var3 + var6);
-        var8.c(jt.field_yb - var3, -var3 + (om.field_Bb + om.field_Bb) - var6);
-        ta.e(param0 ^ -363021514);
-        ta.e(127);
-        pq.field_Q = new Sprite(2 + jt.field_yb, 2 + om.field_Bb);
+        var8.c(-var3 + PitchOptionTile.field_yb, -var3 + var6);
+        var8.c(PitchOptionTile.field_yb - var3, -var3 + (om.field_Bb + om.field_Bb) - var6);
+        TeamManagementScreen.e(param0 ^ -363021514);
+        TeamManagementScreen.e(127);
+        pq.field_Q = new Sprite(2 + PitchOptionTile.field_yb, 2 + om.field_Bb);
         PacketBuffer.a(param0 + 363021421, pq.field_Q);
-        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
+        SoftwareRasterizer.fillRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
         var7.drawHalfSize(1, 1);
-        ta.e(125);
+        TeamManagementScreen.e(125);
     }
 
     public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {

@@ -26,7 +26,7 @@ final class hi extends vv {
 
     final static void a(java.applet.Applet param0, boolean param1) {
         try {
-          bv.a(param0, "", (byte) 15);
+          AccountNameAvailabilityValidator.writeSessionCookie(param0, "", (byte) 15);
           if (!param1) {
             field_w = (String) null;
           }
@@ -63,7 +63,7 @@ final class hi extends vv {
             var3 = (java.applet.Applet) null;
             hi.a((java.applet.Applet) null, false);
           }
-          stackIn_5_0 = (null != fm.a(param1, 145));
+          stackIn_5_0 = (null != AchievementsScreen.a(param1, 145));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -104,7 +104,7 @@ final class il {
         try {
           var6 = (CharSequence) ((Object) param0);
           if (!ef.a(var6, -9907)) {
-            stackIn_3_0 = kq.field_Ib;
+            stackIn_3_0 = SquadSlotWidget.field_Ib;
             return stackIn_3_0;
           }
           if (SumIntegersCommand.a((byte) 86, param0)) {
@@ -120,11 +120,11 @@ final class il {
             return stackIn_13_0;
           }
           if (ou.field_y >= 100) {
-            stackIn_17_0 = an.field_f;
+            stackIn_17_0 = QuickChatPhraseCache.field_f;
             return stackIn_17_0;
           }
           if (lf.a(param0, 108)) {
-            stackIn_20_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, pt.field_i, new String[]{param0});
+            stackIn_20_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionListing.field_i, new String[]{param0});
             return stackIn_20_0;
           }
           var5 = or.field_d;
@@ -135,9 +135,9 @@ final class il {
             return stackIn_23_0;
           }
           var4 = var5.field_n;
-          var5.a(112, 2);
-          var5.a(14190, param0);
-          var5.c(62, var5.field_n - var4);
+          var5.writeByte(112, 2);
+          var5.writeString(14190, param0);
+          var5.backpatchByteLength(62, var5.field_n - var4);
           stackIn_25_0 = null;
           return (String) (stackIn_25_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

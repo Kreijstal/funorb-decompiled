@@ -65,7 +65,7 @@ final class em {
     final void a(DualLinkNode param0, byte param1, long param2) {
         DualLinkNode var5 = null;
         if (param0.field_e != null) {
-          param0.f(param1 ^ 74);
+          param0.unlinkSecondary(param1 ^ 74);
         }
         if (param1 != -4) {
           return;

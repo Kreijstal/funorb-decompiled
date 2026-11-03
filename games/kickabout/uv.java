@@ -123,7 +123,7 @@ final class uv {
           field_m = (Sprite) null;
           return;
         }
-        var7 = lo.a(this.field_b, false);
+        var7 = PasswordValidator.a(this.field_b, false);
         var4 = nk.a(param1 ^ 31253, this.field_b);
         var5 = this.a(-26719);
         if (var4 != null) {
@@ -240,7 +240,7 @@ final class uv {
           try {
             un.field_e = new CipherPacketBuffer(param7);
             or.field_d = new CipherPacketBuffer(param12);
-            fp.field_g = param9;
+            AuctionItem.field_g = param9;
             fu.field_c = param2;
             s.field_E = param1;
             ResizableModalPanel.field_J = param4;
@@ -376,10 +376,10 @@ final class uv {
         var5 = Kickabout.field_G;
         if (0 != param0) {
           if (1 == param0) {
-            ko.a(80, param1, this.field_b);
+            MenuSelection.a(80, param1, this.field_b);
           } else {
             if (param0 == 2) {
-              wf.b(this.field_c, param1, (byte) -83);
+              AuctionsScreen.sendAuctionAction(this.field_c, param1, (byte) -83);
             } else {
               if (param0 == 3) {
                 gu.a(this.field_c, (byte) -90, param1);
@@ -436,7 +436,7 @@ final class uv {
           discarded$14 = this.a(126);
           return;
         }
-        var5 = rm.b(this.field_c, (byte) -52);
+        var5 = RankingsScreen.b(this.field_c, (byte) -52);
         if (var5 == null) {
           if (param0 == 1) {
             return;
@@ -447,7 +447,7 @@ final class uv {
         var3 = var5.field_ec;
         if (var5.field_hc) {
           this.field_j.a(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tb.field_u, new String[]{var3}));
-          this.field_j.a(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, vc.field_z, new String[]{var3}));
+          this.field_j.a(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ReceivedAuctionItem.field_z, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -501,7 +501,7 @@ final class uv {
           return;
         }
         if (!var5.field_Cb) {
-          this.field_j.a(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ne.field_H, new String[]{var3}));
+          this.field_j.a(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameplayHelpScreen.field_H, new String[]{var3}));
           if (!var5.field_Tb) {
             if (param0 == 1) {
               return;
@@ -531,7 +531,7 @@ final class uv {
           discarded$6 = this.a(126);
           return;
         }
-        this.field_j.a(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ne.field_H, new String[]{var3}));
+        this.field_j.a(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameplayHelpScreen.field_H, new String[]{var3}));
         if (!var5.field_Tb) {
           if (param0 == 1) {
             return;

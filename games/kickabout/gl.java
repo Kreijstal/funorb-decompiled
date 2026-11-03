@@ -151,8 +151,8 @@ final class gl {
                   param1.field_V.positionX = var9;
                   param1.field_V.positionY = var10;
                   ParticipantStatus.a(var3 + 1, var2_int, (byte) 112, param1.field_r[var2_int]);
-                  in.field_c[var2_int][var3][var4][var6][0] = ge.field_m[0];
-                  in.field_c[var2_int][var3][var4][var6][1] = ge.field_m[1];
+                  in.field_c[var2_int][var3][var4][var6][0] = MatchingTextValidator.field_m[0];
+                  in.field_c[var2_int][var3][var4][var6][1] = MatchingTextValidator.field_m[1];
                 }
               }
             }

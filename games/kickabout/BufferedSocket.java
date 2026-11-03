@@ -40,7 +40,7 @@ final class BufferedSocket implements Runnable {
         this.a(1);
     }
 
-    final int readByte(int param0) throws IOException {
+    final int b(int param0) throws IOException {
         if (this.field_e) {
           return 0;
         }
@@ -183,7 +183,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            bd.a((String) null, (Throwable) ((Object) var1_ref), 1);
+            UnreadMessagesScreen.a((String) null, (Throwable) ((Object) var1_ref), 1);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -261,7 +261,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void b(byte param0) throws IOException {
+    final void checkWriteError(byte param0) throws IOException {
         int var2 = -42 / ((62 - param0) / 57);
         if (this.field_e) {
           return;

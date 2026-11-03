@@ -6,7 +6,7 @@ final class LineupAgent extends MatchAgent {
     private it[] field_k;
     private int field_h;
     static int field_n;
-    private up[][] field_i;
+    private PlayerStats[][] field_i;
     private int[][] field_j;
     private int[][] field_m;
     private ParticipantStatus[] field_f;
@@ -55,7 +55,7 @@ final class LineupAgent extends MatchAgent {
             var6 = 0;
             var4Lifetime1 = var6;
             while (var6 < 4) {
-              this.field_i[var3_intLifetime1][var6].a(112, param0);
+              this.field_i[var3_intLifetime1][var6].readFromPacket(112, param0);
               var6++;
             }
             var3_intLifetime1++;
@@ -94,7 +94,7 @@ final class LineupAgent extends MatchAgent {
         return var5.toString();
     }
 
-    private final boolean a(int param0, gr param1, int param2, int param3) {
+    private final boolean a(int param0, ClubState param1, int param2, int param3) {
         int var6 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -106,7 +106,7 @@ final class LineupAgent extends MatchAgent {
         var7 = Kickabout.field_G;
         try {
           if (!this.field_l &&
-            param1.field_i[param0].c(-2)) {
+            param1.squad[param0].isEmpty(-2)) {
             return false;
           }
           if (!this.field_l &&
@@ -138,7 +138,7 @@ final class LineupAgent extends MatchAgent {
         }
     }
 
-    final void a(gr param0, up[] param1, byte param2, int param3, int param4) {
+    final void a(ClubState param0, PlayerStats[] param1, byte param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         MatchAgent var8 = null;
@@ -184,9 +184,9 @@ final class LineupAgent extends MatchAgent {
         }
     }
 
-    final void a(int param0, int param1, gr param2, up[] param3, int param4) {
+    final void a(int param0, int param1, ClubState param2, PlayerStats[] param3, int param4) {
         int var10 = 0;
-        up stackIn_22_0 = null;
+        PlayerStats stackIn_22_0 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
@@ -197,10 +197,10 @@ final class LineupAgent extends MatchAgent {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        up var9 = null;
+        PlayerStats var9 = null;
         int var11 = 0;
         MatchAgent var12 = null;
-        up var13 = null;
+        PlayerStats var13 = null;
         int var7Lifetime1;
         var11 = Kickabout.field_G;
         try {
@@ -223,13 +223,13 @@ final class LineupAgent extends MatchAgent {
                 if (var8 == -1) {
                   stackIn_22_0 = null;
                 } else {
-                  stackIn_22_0 = param2.field_i[var8];
+                  stackIn_22_0 = param2.squad[var8];
                 }
                 var13 = stackIn_22_0;
                 var9 = var13;
                 if (var8 != -1) {
                   if (!this.field_l) {
-                    if (var13.c(-2)) {
+                    if (var13.isEmpty(-2)) {
                       return;
                     }
                     if (param2.a((byte) 79, var8)) {
@@ -244,12 +244,12 @@ final class LineupAgent extends MatchAgent {
                     if (this.field_m[var6_int][var10] == param4 &&
                       this.field_j[var6_int][var10] == var8) {
                       this.field_j[var6_int][var10] = this.field_j[var6_int][var7];
-                      this.field_i[var6_int][var10].a((byte) -101, this.field_i[var6_int][var7]);
+                      this.field_i[var6_int][var10].copyFrom((byte) -101, this.field_i[var6_int][var7]);
                     }
                   }
-                  this.field_i[var6_int][var7].a((byte) -90, var9);
+                  this.field_i[var6_int][var7].copyFrom((byte) -90, var9);
                 } else {
-                  this.field_i[var6_int][var7].b((byte) -7);
+                  this.field_i[var6_int][var7].clear((byte) -7);
                 }
                 this.field_j[var6_int][var7] = var8;
                 this.field_h = this.field_h & ~(1 << param4);
@@ -302,7 +302,7 @@ final class LineupAgent extends MatchAgent {
           }
           for (var4 = 0; var4 < 2; var4++) {
             for (var5 = 0; var5 < 4; var5++) {
-              this.field_i[var4][var5].a((byte) -90, var3.field_i[var4][var5]);
+              this.field_i[var4][var5].copyFrom((byte) -90, var3.field_i[var4][var5]);
               this.field_j[var4][var5] = var3.field_j[var4][var5];
             }
           }
@@ -321,7 +321,7 @@ final class LineupAgent extends MatchAgent {
         return stackIn_7_0;
     }
 
-    LineupAgent(boolean param0, it[] param1, ParticipantStatus[] param2, int[][] param3, int[][] param4, up[][] param5) {
+    LineupAgent(boolean param0, it[] param1, ParticipantStatus[] param2, int[][] param3, int[][] param4, PlayerStats[][] param5) {
         try {
           this.field_f = param2;
           this.field_k = param1;

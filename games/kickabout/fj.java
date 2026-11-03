@@ -26,7 +26,7 @@ final class fj {
         if (param0) {
           return (String) null;
         }
-        return un.field_e.a(-108);
+        return un.field_e.readString(-108);
     }
 
     final static int a(int param0, int param1) {
@@ -78,7 +78,7 @@ final class fj {
             if (34 != var4 &&
               var4 != 39) {
               if (40 == var4) {
-                var2.a(new ConsoleExpression(si.field_g, -1 + var3.field_c), 3);
+                var2.a(new ConsoleExpression(ReflectionCheck.field_g, -1 + var3.field_c), 3);
                 continue;
               }
               if (41 == var4) {
@@ -86,7 +86,7 @@ final class fj {
                 continue;
               }
               if (var4 == 44) {
-                var2.a(new ConsoleExpression(bp.field_Gb, -1 + var3.field_c), 3);
+                var2.a(new ConsoleExpression(ColumnTableWidget.field_Gb, -1 + var3.field_c), 3);
                 continue;
               }
               var2.a(tl.a(var3, false), 3);

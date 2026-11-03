@@ -16,15 +16,15 @@ final class VorbisCodebook {
         return var2;
     }
 
-    final int b() {
+    final int decodeScalar() {
         int var1 = 0;
         while (this.field_c[var1] >= 0) {
-          var1 = VorbisSample.b() != 0 ? this.field_c[var1] : var1 + 1;
+          var1 = VorbisSample.readBit() != 0 ? this.field_c[var1] : var1 + 1;
         }
         return ~this.field_c[var1];
     }
 
-    private final void a() {
+    private final void buildHuffmanTree() {
         int[] var2_ref_int__;
         int var2;
         int var3;
@@ -125,7 +125,7 @@ final class VorbisCodebook {
     }
 
     final float[] c() {
-        return this.field_f[this.b()];
+        return this.field_f[this.decodeScalar()];
     }
 
     VorbisCodebook() {
@@ -153,17 +153,17 @@ final class VorbisCodebook {
         int var2Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        VorbisSample.e(24);
-        this.field_b = VorbisSample.e(16);
-        this.field_a = VorbisSample.e(24);
+        VorbisSample.readBits(24);
+        this.field_b = VorbisSample.readBits(16);
+        this.field_a = VorbisSample.readBits(24);
         this.field_e = new int[this.field_a];
-        stackIn_3_0 = (VorbisSample.b() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
-          var3_int = VorbisSample.e(5) + 1;
+          var3_int = VorbisSample.readBits(5) + 1;
           while (var2 < this.field_a) {
-            var4_int = VorbisSample.e(ResizableModalPanel.a(true, this.field_a - var2));
+            var4_int = VorbisSample.readBits(ResizableModalPanel.a(true, this.field_a - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
@@ -172,27 +172,27 @@ final class VorbisCodebook {
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (VorbisSample.b() == 0) ? 0 : 1;
+          stackIn_13_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_a) {
             if (var2 != 0 &&
-              VorbisSample.b() == 0) {
+              VorbisSample.readBit() == 0) {
               this.field_e[var14] = 0;
             } else {
-              this.field_e[var14] = VorbisSample.e(5) + 1;
+              this.field_e[var14] = VorbisSample.readBits(5) + 1;
             }
             var14++;
           }
         }
-        this.a();
-        var2Lifetime1 = VorbisSample.e(4);
+        this.buildHuffmanTree();
+        var2Lifetime1 = VorbisSample.readBits(4);
         if (var2Lifetime1 > 0) {
-          var3 = VorbisSample.a(VorbisSample.e(32));
-          var4 = VorbisSample.a(VorbisSample.e(32));
-          var5Lifetime1 = VorbisSample.e(4) + 1;
-          stackIn_25_0 = (VorbisSample.b() == 0) ? 0 : 1;
+          var3 = VorbisSample.a(VorbisSample.readBits(32));
+          var4 = VorbisSample.a(VorbisSample.readBits(32));
+          var5Lifetime1 = VorbisSample.readBits(4) + 1;
+          stackIn_25_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_a * this.field_b;
@@ -201,7 +201,7 @@ final class VorbisCodebook {
           }
           this.field_d = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
-            this.field_d[var8] = VorbisSample.e(var5Lifetime1);
+            this.field_d[var8] = VorbisSample.readBits(var5Lifetime1);
           }
           this.field_f = new float[this.field_a][this.field_b];
           if (var2Lifetime1 != 1) {

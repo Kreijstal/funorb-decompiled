@@ -653,13 +653,13 @@ final class CachedArchiveSource extends ArchiveSource {
           var3 = new Sprite(param2, param1.field_v);
           PacketBuffer.a(-59, var3);
           param1.c(0, 0);
-          pt.a(SoftwareRasterizer.field_g, -22914, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
+          AuctionListing.a(SoftwareRasterizer.field_g, -22914, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
           if (param0 >= -20) {
             CachedArchiveSource.c((byte) 52);
           }
           param1.c(-param1.field_o + SoftwareRasterizer.field_g, 0);
-          ta.e(122);
-          ta.e(125);
+          TeamManagementScreen.e(122);
+          TeamManagementScreen.e(125);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

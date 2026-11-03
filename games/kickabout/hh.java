@@ -34,31 +34,31 @@ final class hh {
             hh.a((byte) 111);
           }
           var9 = new PacketBuffer(param0);
-          var3 = var9.h((byte) -107);
-          var4 = var9.k(param1 + 7);
-          if (var4 >= 0 && (jk.field_h == 0 ||
-            !(var4 > jk.field_h))) {
+          var3 = var9.readUnsignedByte((byte) -107);
+          var4 = var9.readInt(param1 + 7);
+          if (var4 >= 0 && (MusicPatch.field_h == 0 ||
+            !(var4 > MusicPatch.field_h))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a(var12, 0, (byte) -6, var4);
+              var9.readBytes(var12, 0, (byte) -6, var4);
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
-            var5 = var9.k(4);
-            if (var5 >= 0 && (jk.field_h == 0 ||
-              !(var5 > jk.field_h))) {
+            var5 = var9.readInt(4);
+            if (var5 >= 0 && (MusicPatch.field_h == 0 ||
+              !(var5 > MusicPatch.field_h))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;
               if (1 != var3) {
-                var7 = lj.field_g;
+                var7 = TextLine.field_g;
                 synchronized (var7) {
-                  lj.field_g.a(-4019, var9, var13);
+                  TextLine.field_g.a(-4019, var9, var13);
                 }
               } else {
-                Bzip2Decoder.a(var13, var5, param0, var4, 9);
+                Bzip2Decoder.decompressInto(var13, var5, param0, var4, 9);
               }
               stackIn_23_0 = var6;
               return stackIn_23_0;

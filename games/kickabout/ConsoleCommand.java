@@ -61,7 +61,7 @@ abstract class ConsoleCommand extends DualLinkNode {
           }
           for (var4_int = 0; this.field_p.length > var4_int; var4_int++) {
             if (param0[var4_int].field_b) {
-              var5 = rm.a(param0[var4_int].field_d, (byte) 127);
+              var5 = RankingsScreen.a(param0[var4_int].field_d, (byte) 127);
               if (var5 == Boolean.TYPE &&
                 this.field_p[var4_int] != Boolean.TYPE) {
                 return false;
@@ -70,8 +70,8 @@ abstract class ConsoleCommand extends DualLinkNode {
                 this.field_p[var4_int] != Character.TYPE) {
                 return false;
               }
-              if (fp.a(89, var5) &&
-                !fp.a(98, this.field_p[var4_int])) {
+              if (AuctionItem.a(89, var5) &&
+                !AuctionItem.a(98, this.field_p[var4_int])) {
                 return false;
               }
             } else {
@@ -103,28 +103,28 @@ abstract class ConsoleCommand extends DualLinkNode {
 
     final static boolean b(int param0) {
         int var2 = 0;
-        si var1 = null;
+        ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
-        si var4 = null;
+        ReflectionCheck var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
           if (param0 != -16000) {
             return true;
           }
-          var4 = (si) (nv.field_N.g(param0 ^ -25527));
+          var4 = (ReflectionCheck) (nv.field_N.g(param0 ^ -25527));
           var1 = var4;
           if (var1 == null) {
             return false;
           }
-          for (var2 = 0; var1.field_n > var2; var2++) {
-            if (null != var4.field_f[var2] &&
-              var4.field_f[var2].field_a == 0) {
+          for (var2 = 0; var1.operationCount > var2; var2++) {
+            if (null != var4.fieldTasks[var2] &&
+              var4.fieldTasks[var2].field_a == 0) {
               return false;
             }
-            if (null != var4.field_e[var2] &&
-              0 == var4.field_e[var2].field_a) {
+            if (null != var4.methodTasks[var2] &&
+              0 == var4.methodTasks[var2].field_a) {
               return false;
             }
           }

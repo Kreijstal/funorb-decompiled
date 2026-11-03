@@ -43,7 +43,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         return null;
     }
 
-    final boolean focusNext(UiWidget param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -54,7 +54,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
           if (param1 != 0) {
             SingleChildContainer.j(-18);
           }
-          stackIn_6_0 = (null != this.field_z) && (this.field_z.focusNext(param0, 0));
+          stackIn_6_0 = (null != this.field_z) && (this.field_z.a(param0, 0));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -74,7 +74,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    private final boolean focusNext(byte param0, UiWidget param1) {
+    private final boolean b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -85,7 +85,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
           if (param0 != 99) {
             field_y = (Calendar) null;
           }
-          stackIn_7_0 = (this.field_z != null) && (!this.field_z.b(param0 ^ 113)) && (this.field_z.focusNext(param1, 0));
+          stackIn_7_0 = (this.field_z != null) && (!this.field_z.b(param0 ^ 113)) && (this.field_z.a(param1, 0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,10 +140,10 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
           if (80 != var5_int) {
             return false;
           }
-          if (ne.field_G[81]) {
+          if (GameplayHelpScreen.field_G[81]) {
             stackIn_12_0 = this.a((byte) -86, param2);
           } else {
-            stackIn_12_0 = this.focusNext((byte) 99, param2);
+            stackIn_12_0 = this.b((byte) 99, param2);
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -251,7 +251,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
             discarded$28 = param2.append(' ');
           }
           if (this.field_z != null) {
-            this.field_z.appendWidgetDiagnostics(17883, param3 + 1, param0, param2);
+            this.field_z.a(17883, param3 + 1, param0, param2);
           } else {
             discarded$27 = param2.append("null");
           }
@@ -286,7 +286,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -75 / ((18 - param0) / 53);
-          stackIn_5_0 = (null != this.field_z) && (!this.field_z.b(30)) && (this.field_z.focusNext(param1, 0));
+          stackIn_5_0 = (null != this.field_z) && (!this.field_z.b(30)) && (this.field_z.a(param1, 0));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -302,7 +302,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    StringBuilder appendWidgetDiagnostics(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -315,7 +315,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
           if (param0 != 17883) {
             SingleChildContainer.j(31);
           }
-          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
+          if (this.a(1, param3, param2, param1)) {
             this.b(param1, param3, param2, -18568);
             this.a(param2, 124, param3, param1);
           }

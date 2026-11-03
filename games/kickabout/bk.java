@@ -3,7 +3,7 @@
  */
 final class bk {
     static gm[] field_a;
-    static gv[] field_c;
+    static FadingChatMessage[] field_c;
     static String field_g;
     static IntrusiveDeque field_f;
     static long field_b;

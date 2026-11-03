@@ -37,7 +37,7 @@ final class h {
         tc var13_ref_tc = null;
         int var13 = 0;
         int var15 = 0;
-        bg var16 = null;
+        QuickChatPhraseDefinition var16 = null;
         int var17 = 0;
         int[] var18 = null;
         char[] var19 = null;
@@ -76,7 +76,7 @@ final class h {
           }
           if (param1.field_o != null) {
             for (var12 = 0; var12 < param1.field_o.length; var12++) {
-              var13_ref_tc = vc.field_x.a(200, param1.field_o[var12]);
+              var13_ref_tc = ReceivedAuctionItem.field_x.a(200, param1.field_o[var12]);
               var8[var12] = var13_ref_tc.field_r;
               var9[var12] = param1.field_q[var12];
               var11[var12] = h.a(0, var13_ref_tc, param2, param3, param4);
@@ -92,8 +92,8 @@ final class h {
                 var9[var12Lifetime1 + var14] = param1.field_p[var14];
                 var10[var12Lifetime1 + var14] = param1.field_n[var14];
               } else {
-                var16 = lm.field_j.a(param0 ^ 6, var15);
-                var8[var14 + var12Lifetime1] = var16.g((byte) -105);
+                var16 = TournamentLobbyScreen.field_j.getPhrase(param0 ^ 6, var15);
+                var8[var14 + var12Lifetime1] = var16.getDisplayText((byte) -105);
                 var9[var14 + var12Lifetime1] = param1.field_p[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
                   var13 = (char)(var13 + 1);

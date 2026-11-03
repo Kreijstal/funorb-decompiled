@@ -45,7 +45,7 @@ final class DraggableWidget extends SingleChildContainer {
           }
           var7 = ug.field_c[param0];
           if (param4) {
-            var7 = sp.field_Hb[param0];
+            var7 = ShopPlayerSlot.field_Hb[param0];
           }
           if (param6 != 4) {
             return;
@@ -73,7 +73,7 @@ final class DraggableWidget extends SingleChildContainer {
             eo.a(kp.field_m, 65793);
             eo.a(kp.field_m, 16777215);
             eo.a(kp.field_m, 7829367);
-            pt.a(95, -22914, 14, 88, 22);
+            AuctionListing.a(95, -22914, 14, 88, 22);
             var12 = new int[255];
             var11 = var12;
             var8 = var11;
@@ -81,8 +81,8 @@ final class DraggableWidget extends SingleChildContainer {
               var8[var9] = 65793 * var9;
             }
             nh.a(20, 40, -20 + SoftwareRasterizer.field_g, 40, 28, 40, var12);
-            ta.e(119);
-            ta.e(param6 + 123);
+            TeamManagementScreen.e(119);
+            TeamManagementScreen.e(param6 + 123);
             DualLinkNode.field_k = param0;
           }
           kp.field_m.c(param3 - 4, -4 + param2);
@@ -115,7 +115,7 @@ final class DraggableWidget extends SingleChildContainer {
         try {
           if (!param0) {
             var9 = (StringBuilder) null;
-            this.appendWidgetDiagnostics(-45, -42, (Hashtable) null, (StringBuilder) null);
+            this.a(-45, -42, (Hashtable) null, (StringBuilder) null);
           }
           var8_int = super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6) ? 1 : 0;
           if (var8_int != 0 &&
@@ -235,7 +235,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final StringBuilder appendWidgetDiagnostics(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         RuntimeException var5 = null;
@@ -247,7 +247,7 @@ final class DraggableWidget extends SingleChildContainer {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
+          if (this.a(1, param3, param2, param1)) {
             this.b(param1, param3, param2, -18568);
             this.a(param2, 127, param3, param1);
             discarded$64 = param3.append(" revert=").append(this.field_L);
@@ -305,7 +305,7 @@ final class DraggableWidget extends SingleChildContainer {
         if (!DebugConsole.field_s) {
           return;
         }
-        qa.field_E.b(0, param2);
+        LeaguesHelpScreen.field_E.b(0, param2);
         int var4 = dr.field_g.h(-113) ? 1 : 0;
         if (WidgetContainer.field_A != 0 &&
           var4 == 0) {
@@ -317,7 +317,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
         int var6 = -116 % ((param1 - 17) / 36);
         if (var4 != 0) {
-          qa.field_E.b(0, param2);
+          LeaguesHelpScreen.field_E.b(0, param2);
         }
         int var5 = dr.field_g.h((byte) 49) + dr.field_g.field_F;
         if (var5 > 640) {

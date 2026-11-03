@@ -133,7 +133,7 @@ final class sl extends hd {
           }
           if (cc.field_e == 85 &&
             0 < this.field_yb.length()) {
-            dj.a(-1 + this.field_yb.length(), ' ', -11407, this.field_yb);
+            PagedHelpScreen.a(-1 + this.field_yb.length(), ' ', -11407, this.field_yb);
           }
           if (id.a(false, (CharSequence) ((Object) this.field_yb), il.field_c)) {
             discarded$1 = this.field_yb.append(il.field_c);
@@ -326,7 +326,7 @@ final class sl extends hd {
           }
           return true;
         }
-        dj.a(this.field_yb.length() - 1, ' ', -11407, this.field_yb);
+        PagedHelpScreen.a(this.field_yb.length() - 1, ' ', -11407, this.field_yb);
         if (this.field_yb.length() >= 12) {
           var2Lifetime2 = -60 % ((-76 - param0) / 48);
           if (cc.field_e == 84) {

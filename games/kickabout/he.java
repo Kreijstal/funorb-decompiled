@@ -4,7 +4,7 @@
 final class he extends hd {
     int field_Sb;
     static String field_Kb;
-    static rv field_yb;
+    static ValidationState field_yb;
     hd field_Hb;
     boolean field_Gb;
     static String field_Ub;
@@ -123,7 +123,7 @@ final class he extends hd {
     }
 
     final static String a(int param0) {
-        if (nr.field_f == wk.field_f) {
+        if (PlayerModelPreview.field_f == wk.field_f) {
           return ld.field_a;
         }
         if (param0 != 320) {
@@ -133,7 +133,7 @@ final class he extends hd {
         if (!DualLinkDequeIterator.field_e.a((byte) -80)) {
           return DualLinkDequeIterator.field_e.a(3);
         }
-        if (mj.field_a == nr.field_f) {
+        if (mj.field_a == PlayerModelPreview.field_f) {
           return DualLinkDequeIterator.field_e.a(param0 ^ 323);
         }
         return ep.field_b;
@@ -202,10 +202,10 @@ final class he extends hd {
         if (param0 != -13356) {
           this.field_Db = -100;
         }
-        return !this.a((byte) -60) ? true : false;
+        return !this.isSecondaryLinked((byte) -60) ? true : false;
     }
 
-    final static wh a(int param0, boolean param1, int param2, int param3, int param4) {
+    final static FadingSoundPlayer a(int param0, boolean param1, int param2, int param3, int param4) {
         if (param2 != 240) {
           field_Ub = (String) null;
         }
@@ -260,6 +260,6 @@ final class he extends hd {
         field_Kb = "Visit the Account Management section on the main site to view.";
         field_Eb = "Bid";
         field_Bb = "MANAGEMENT";
-        field_yb = new rv();
+        field_yb = new ValidationState();
     }
 }

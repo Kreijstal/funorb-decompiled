@@ -29,18 +29,18 @@ final class PlatformTaskDispatcher implements Runnable {
     private MicrosoftCursorController field_n;
     static String field_u;
 
-    final PlatformTask requestDeclaredField(int param0, Class[] param1, Class param2, String param3) {
+    final PlatformTask requestDeclaredMethod(int param0, Class[] param1, Class param2, String param3) {
         if (param0 != -30971) {
           this.field_k = (MicrosoftDisplayController) null;
         }
-        return this.a(8, 0, 8128, new Object[]{param2, param3, param1}, 0);
+        return this.enqueueTask(8, 0, 8128, new Object[]{param2, param3, param1}, 0);
     }
 
-    final PlatformTask a(String param0, Class param1, int param2) {
+    final PlatformTask requestDeclaredField(String param0, Class param1, int param2) {
         if (param2 != 0) {
           return (PlatformTask) null;
         }
-        return this.a(9, 0, 8128, new Object[]{param1, param0}, 0);
+        return this.enqueueTask(9, 0, 8128, new Object[]{param1, param0}, 0);
     }
 
     final PlatformTask a(byte param0, int param1, int param2, java.awt.Component param3) {
@@ -48,28 +48,28 @@ final class PlatformTaskDispatcher implements Runnable {
         if (param0 <= 19) {
           field_e = (String) null;
         }
-        return this.a(14, param1 + var5.y, 8128, (Object) null, var5.x + param2);
+        return this.enqueueTask(14, param1 + var5.y, 8128, (Object) null, var5.x + param2);
     }
 
     private final PlatformTask a(String param0, boolean param1, int param2, int param3) {
         if (param2 != -8) {
           return (PlatformTask) null;
         }
-        return this.a(param1 ? 22 : 1, 0, 8128, param0, param3);
+        return this.enqueueTask(param1 ? 22 : 1, 0, 8128, param0, param3);
     }
 
     final PlatformTask b(boolean param0) {
         if (!param0) {
           return (PlatformTask) null;
         }
-        return this.a(5, 0, 8128, (Object) null, 0);
+        return this.enqueueTask(5, 0, 8128, (Object) null, 0);
     }
 
     final PlatformTask a(int param0, java.awt.Component param1, boolean param2) {
         if (param0 > -116) {
           return (PlatformTask) null;
         }
-        return this.a(15, 0, 8128, param1, !param2 ? 0 : 1);
+        return this.enqueueTask(15, 0, 8128, param1, !param2 ? 0 : 1);
     }
 
     final boolean b(int param0) {
@@ -237,7 +237,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_f) {
                           Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.field_i, new Object[]{});
                         } else {
-                          this.field_k.a(0, (java.awt.Frame) (var8.field_g));
+                          this.field_k.exitFullscreen(0, (java.awt.Frame) (var8.field_g));
                         }
                         break;
                       case 6:
@@ -337,21 +337,21 @@ final class PlatformTaskDispatcher implements Runnable {
         if (param0 != 68) {
           this.field_g = (Object) null;
         }
-        return this.a(19, 0, 8128, param1, 0);
+        return this.enqueueTask(19, 0, 8128, param1, 0);
     }
 
     final PlatformTask a(int param0, int param1, boolean param2, int param3, int param4) {
         if (param2) {
           return (PlatformTask) null;
         }
-        return this.a(6, param1 + (param4 << 16), 8128, (Object) null, (param3 << 16) + param0);
+        return this.enqueueTask(6, param1 + (param4 << 16), 8128, (Object) null, (param3 << 16) + param0);
     }
 
-    final PlatformTask a(int param0) {
+    final PlatformTask requestDisplayModes(int param0) {
         if (param0 != 15) {
           return (PlatformTask) null;
         }
-        return this.a(18, 0, 8128, (Object) null, 0);
+        return this.enqueueTask(18, 0, 8128, (Object) null, 0);
     }
 
     final void a(boolean param0) {
@@ -423,7 +423,7 @@ final class PlatformTaskDispatcher implements Runnable {
           String var4 = (String) null;
           PlatformTaskDispatcher.a(92, -82, (String) null, (String) null);
         }
-        return this.a(4, 0, 8128, param0, 0);
+        return this.enqueueTask(4, 0, 8128, param0, 0);
     }
 
     final PlatformTask a(byte param0, java.awt.Frame param1) {
@@ -431,17 +431,17 @@ final class PlatformTaskDispatcher implements Runnable {
           String var4 = (String) null;
           PlatformTaskDispatcher.a(-21, 74, (String) null, (String) null);
         }
-        return this.a(7, 0, 8128, param1, 0);
+        return this.enqueueTask(7, 0, 8128, param1, 0);
     }
 
     final PlatformTask a(int param0, byte param1, Runnable param2) {
         if (param1 < 109) {
           this.field_g = (Object) null;
         }
-        return this.a(2, 0, 8128, param2, param0);
+        return this.enqueueTask(2, 0, 8128, param2, param0);
     }
 
-    private final PlatformTask a(int param0, int param1, int param2, Object param3, int param4) {
+    private final PlatformTask enqueueTask(int param0, int param1, int param2, Object param3, int param4) {
         PlatformTask var6 = null;
         Object var7 = null;
         Object var7_ref = null;

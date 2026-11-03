@@ -97,7 +97,7 @@ final class cf extends hd {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         int var7Lifetime1;
-        qa.field_E.a(true, param2, param3, param6, param5);
+        LeaguesHelpScreen.field_E.a(true, param2, param3, param6, param5);
         if (null == dr.field_g) {
           var7 = 80 / ((68 - param0) / 48);
           return;
@@ -156,7 +156,7 @@ final class cf extends hd {
         this.field_Hb = null;
     }
 
-    final void a(byte param0, bc param1) {
+    final void a(byte param0, ListingRow param1) {
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
@@ -166,21 +166,21 @@ final class cf extends hd {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        bc var4 = null;
+        ListingRow var4 = null;
         try {
-          if (param1.field_g == this.field_yb &&
-            param1.field_j == this.field_Ab) {
+          if (param1.rowId == this.field_yb &&
+            param1.category == this.field_Ab) {
             this.field_Eb = param1.field_c;
             this.field_Hb = param1.field_f;
             stackIn_6_1 = new StringBuilder().append("");
             if (!param1.field_i) {
-              stackIn_7_2 = Integer.toString(1 + param1.field_g);
+              stackIn_7_2 = Integer.toString(1 + param1.rowId);
             } else {
               stackIn_7_2 = "=";
             }
             this.field_Bb = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).toString();
             stackIn_9_1 = new StringBuilder().append("");
-            if (param1.field_j == 6) {
+            if (param1.category == 6) {
               stackIn_10_2 = Integer.toString(param1.field_h);
             } else {
               stackIn_10_2 = Integer.toString(param1.field_e);
@@ -194,8 +194,8 @@ final class cf extends hd {
                 this.field_Jb = 65280;
               } else {
                 if (null != this.field_Hb &&
-                  null != bg.field_r &&
-                  this.field_Hb.equalsIgnoreCase(bg.field_r)) {
+                  null != QuickChatPhraseDefinition.field_r &&
+                  this.field_Hb.equalsIgnoreCase(QuickChatPhraseDefinition.field_r)) {
                   this.field_Jb = 65280;
                 }
               }
@@ -203,8 +203,8 @@ final class cf extends hd {
             if (param0 == 59) {
               return;
             }
-            var4 = (bc) null;
-            this.a((byte) 88, (bc) null);
+            var4 = (ListingRow) null;
+            this.a((byte) 88, (ListingRow) null);
             return;
           }
           throw new IllegalArgumentException();

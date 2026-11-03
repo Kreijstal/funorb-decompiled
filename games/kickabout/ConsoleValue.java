@@ -22,7 +22,7 @@ final class ConsoleValue {
 
     public final String toString() {
         if (this.field_b) {
-          return rm.a(this.field_d, (byte) 117) + "{" + this.field_d + "}";
+          return RankingsScreen.a(this.field_d, (byte) 117) + "{" + this.field_d + "}";
         }
         if (null == this.field_d) {
           return "null";

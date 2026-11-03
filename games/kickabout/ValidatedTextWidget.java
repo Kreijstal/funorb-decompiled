@@ -17,7 +17,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           ValidatedTextWidget.a(true, 93);
         }
         if (this.field_V != null) {
-          this.field_V.a(113);
+          this.field_V.validationChanged(113);
         }
     }
 
@@ -95,18 +95,18 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
     }
 
     final static void a(byte param0, int param1) {
-        hn var2 = null;
+        ManagerAction var2 = null;
         int var3 = Kickabout.field_G;
-        hn var2Lifetime1;
+        ManagerAction var2Lifetime1;
         try {
-          var2 = (hn) (da.field_h.g(24009));
+          var2 = (ManagerAction) (MusicPatchNode.field_h.g(24009));
           while (var2 != null) {
-            if (6 == var2.field_i) {
+            if (6 == var2.actionType) {
               var2.c((byte) -109);
             }
-            var2 = (hn) (da.field_h.c(33));
+            var2 = (ManagerAction) (MusicPatchNode.field_h.c(33));
           }
-          var2Lifetime1 = new hn(6, new int[]{param1});
+          var2Lifetime1 = new ManagerAction(6, new int[]{param1});
           if (param0 < 16) {
             ValidatedTextWidget.n((byte) 103);
           }
@@ -164,7 +164,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           var3 = 0;
           while (true) {
             if (var3 >= var2_int) {
-              stackIn_13_0 = lm.field_F;
+              stackIn_13_0 = TournamentLobbyScreen.field_F;
               return stackIn_13_0;
             }
             var4 = param1.charAt(var3);

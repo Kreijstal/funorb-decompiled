@@ -114,7 +114,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
     final void r(int param0) {
         this.field_jb.a((byte) 21, 4210752, param0);
         AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_eb, ii.field_m);
-        var2.a((byte) 99, 15, ta.field_E);
+        var2.a((byte) 99, 15, TeamManagementScreen.field_E);
         this.a((byte) -124, (UiWidget) (var2));
     }
 
@@ -177,7 +177,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           var4 = var7;
           if (param0 == 5) {
             var7.a((byte) 72, 11, ql.field_d);
-            var7.a((byte) 104, 17, bv.field_o);
+            var7.a((byte) 104, 17, AccountNameAvailabilityValidator.field_o);
           } else {
             if (param0 == 256) {
               var7.a(bt.field_d, (UiListener) (this), (byte) 79);
@@ -195,10 +195,10 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           }
           if (param0 != 3) {
             if (param0 == 4) {
-              var7.a((byte) 96, 8, ra.field_O);
+              var7.a((byte) 96, 8, GameModesHelpScreen.field_O);
             } else {
               if (param0 == 6) {
-                var7.a((byte) 92, 9, bv.field_p);
+                var7.a((byte) 92, 9, AccountNameAvailabilityValidator.field_p);
               } else {
                 if (9 == param0) {
                   var7.a(ThreeCommand.field_C, (UiListener) (this), (byte) 79);

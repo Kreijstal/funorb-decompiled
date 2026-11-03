@@ -206,12 +206,12 @@ final class kk {
         }
     }
 
-    final static ArgbSprite a(up param0, int param1, boolean param2) {
+    final static ArgbSprite a(PlayerStats param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        gr var6 = null;
+        ClubState var6 = null;
         ArgbSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

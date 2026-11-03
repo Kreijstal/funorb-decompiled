@@ -13,9 +13,9 @@ final class pp extends PcmStream {
     }
 
     final PcmStream b() {
-        da var1;
+        MusicPatchNode var1;
         while (true) {
-          var1 = (da) (this.field_j.c(33));
+          var1 = (MusicPatchNode) (this.field_j.c(33));
           if (var1 == null) {
             return null;
           }
@@ -26,7 +26,7 @@ final class pp extends PcmStream {
     }
 
     final PcmStream c() {
-        da var1 = (da) (this.field_j.g(24009));
+        MusicPatchNode var1 = (MusicPatchNode) (this.field_j.g(24009));
         if (var1 == null) {
           return null;
         }
@@ -36,14 +36,14 @@ final class pp extends PcmStream {
         return this.b();
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2;
-        da var3;
+        MusicPatchNode var3;
         int var4;
         boolean stackIn_3_0 = false;
         var4 = Kickabout.field_G;
-        this.field_i.a(param0);
-        var3 = (da) (this.field_j.g(24009));
+        this.field_i.skipFrames(param0);
+        var3 = (MusicPatchNode) (this.field_j.g(24009));
         while (var3 != null) {
           stackIn_3_0 = this.field_l.a(-25102, var3);
           boolean decompiledFrameCompleted0 = true;
@@ -62,14 +62,14 @@ final class pp extends PcmStream {
               var3.field_B = var3.field_B - var2;
             }
           }
-          var3 = (da) (this.field_j.c(33));
+          var3 = (MusicPatchNode) (this.field_j.c(33));
         }
     }
 
-    private final void a(int param0, da param1, byte param2) {
+    private final void a(int param0, MusicPatchNode param1, byte param2) {
         MidiPcmStream stackIn_7_0 = null;
         boolean stackIn_7_1 = false;
-        da stackIn_7_2 = null;
+        MusicPatchNode stackIn_7_2 = null;
         boolean stackIn_8_3;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -93,7 +93,7 @@ final class pp extends PcmStream {
                 param1.field_F = PcmSampleStream.b(param1.field_y, param1.field_F.getSampleStepMagnitude(), 0, param1.field_F.k());
                 stackIn_7_0 = this.field_l;
                 stackIn_7_1 = false;
-                stackIn_7_2 = (da) (param1);
+                stackIn_7_2 = (MusicPatchNode) (param1);
                 stackIn_8_3 = !(param1.field_g.field_r[param1.field_e] >= 0);
                 ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
               }
@@ -103,7 +103,7 @@ final class pp extends PcmStream {
               param0 = param1.field_r / var5;
             }
           }
-          param1.field_F.a(param0);
+          param1.field_F.skipFrames(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,10 +119,10 @@ final class pp extends PcmStream {
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
-        da var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -132,8 +132,8 @@ final class pp extends PcmStream {
         RuntimeException var4 = null;
         var7 = Kickabout.field_G;
         try {
-          this.field_i.a(param0, param1, param2);
-          var6 = (da) (this.field_j.g(24009));
+          this.field_i.mixInto(param0, param1, param2);
+          var6 = (MusicPatchNode) (this.field_j.g(24009));
           while (var6 != null) {
             stackIn_4_0 = this.field_l.a(-25102, var6);
             boolean decompiledFrameCompleted0 = true;
@@ -154,7 +154,7 @@ final class pp extends PcmStream {
                 var6.field_B = var6.field_B - var5;
               }
             }
-            var6 = (da) (this.field_j.c(33));
+            var6 = (MusicPatchNode) (this.field_j.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,8 +184,8 @@ final class pp extends PcmStream {
           if (null != CachedArchiveSource.field_u) {
             CachedArchiveSource.field_u.field_L.a(param1, -48);
           }
-          if (ki.field_n != null) {
-            ki.field_n.field_G.a(param1, -71);
+          if (PlayerInputEvent.field_n != null) {
+            PlayerInputEvent.field_n.field_G.a(param1, -71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -278,7 +278,7 @@ final class pp extends PcmStream {
           if (param0 != 1) {
             return;
           }
-          if (0 == rm.field_C) {
+          if (0 == RankingsScreen.field_C) {
             oi.field_e = new oh[34];
             var1_int = 0;
             incrementValue$3 = var1_int;
@@ -306,7 +306,7 @@ final class pp extends PcmStream {
             var1_int++;
             oi.field_e[incrementValue$10] = new oh(ng.field_j[1], 800, -240);
             for (var2_int = 0; var2_int < 8; var2_int++) {
-              if (p.a((byte) -24, 2) == 1) {
+              if (LoggedPossession.a((byte) -24, 2) == 1) {
                 stackIn_9_0 = ng.field_j[0];
               } else {
                 stackIn_9_0 = ng.field_j[1];
@@ -323,7 +323,7 @@ final class pp extends PcmStream {
               oi.field_e[incrementValue$14] = new oh(var11, var4_int, var5);
             }
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              if (p.a((byte) -24, 2) != 1) {
+              if (LoggedPossession.a((byte) -24, 2) != 1) {
                 stackIn_15_0 = ng.field_j[1];
               } else {
                 stackIn_15_0 = ng.field_j[0];
@@ -346,17 +346,17 @@ final class pp extends PcmStream {
             oi.field_e[incrementValue$12] = new oh(ng.field_j[1], 800, 1364);
             return;
           }
-          if (rm.field_C == 1) {
-            var13Lifetime1 = bn.field_E[0];
+          if (RankingsScreen.field_C == 1) {
+            var13Lifetime1 = LeaguesScreen.field_E[0];
             var7Lifetime1 = var13Lifetime1;
             var7Lifetime1Lifetime1 = var13Lifetime1;
-            var2 = bn.field_E[1];
+            var2 = LeaguesScreen.field_E[1];
             var7Lifetime1Lifetime2 = var2;
             var7Lifetime1Lifetime3 = var2;
-            var14 = bn.field_E[2];
+            var14 = LeaguesScreen.field_E[2];
             var7Lifetime1Lifetime4 = var14;
             var7Lifetime1Lifetime5 = var14;
-            var4 = bn.field_E[3];
+            var4 = LeaguesScreen.field_E[3];
             var7Lifetime1Lifetime6 = var4;
             var7Lifetime1Lifetime7 = var4;
             oi.field_e = new oh[28];
@@ -401,7 +401,7 @@ final class pp extends PcmStream {
               stackIn_28_0[stackIn_28_1] = new oh(stackIn_29_4, 896 - var7_int - 20, var8);
             }
             for (var6Lifetime1 = 0; var6Lifetime1 < 12; var6Lifetime1++) {
-              if (p.a((byte) -24, 2) == 0) {
+              if (LoggedPossession.a((byte) -24, 2) == 0) {
                 stackIn_35_0 = ng.field_j[0];
               } else {
                 stackIn_35_0 = ng.field_j[1];
@@ -417,7 +417,7 @@ final class pp extends PcmStream {
               oi.field_e[incrementValue$0] = new oh(var7Lifetime1Lifetime8, var8Lifetime1, var9);
             }
           } else {
-            if (rm.field_C == 2) {
+            if (RankingsScreen.field_C == 2) {
               oi.field_e = new oh[9];
               oi.field_e[0] = new oh(ng.field_j[0], -345, 132);
               oi.field_e[1] = new oh(ng.field_j[1], -157, 510);
@@ -430,7 +430,7 @@ final class pp extends PcmStream {
               oi.field_e[8] = new oh(ConsoleCommand.field_w, 925, 214);
               return;
             }
-            if (rm.field_C != 3) {
+            if (RankingsScreen.field_C != 3) {
               return;
             }
             oi.field_e = new oh[]{};
@@ -443,10 +443,10 @@ final class pp extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int[] param3, da param4, int param5) {
+    private final void a(int param0, int param1, int param2, int[] param3, MusicPatchNode param4, int param5) {
         MidiPcmStream stackIn_11_0 = null;
         boolean stackIn_11_1 = false;
-        da stackIn_11_2 = null;
+        MusicPatchNode stackIn_11_2 = null;
         boolean stackIn_12_3;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -472,7 +472,7 @@ final class pp extends PcmStream {
                 param4.field_r = param4.field_r + param1 * var7_int;
                 break;
               }
-              param4.field_F.a(param3, param2, var8);
+              param4.field_F.mixInto(param3, param2, var8);
               param1 = param1 - var8;
               param4.field_r = param4.field_r + (var7_int * var8 - 1048576);
               param2 = param2 + var8;
@@ -486,7 +486,7 @@ final class pp extends PcmStream {
                 param4.field_F = PcmSampleStream.b(param4.field_y, var11.getSampleStepMagnitude(), 0, var11.k());
                 stackIn_11_0 = this.field_l;
                 stackIn_11_1 = false;
-                stackIn_11_2 = (da) (param4);
+                stackIn_11_2 = (MusicPatchNode) (param4);
                 stackIn_12_3 = !(0 <= param4.field_g.field_r[param4.field_e]);
                 ((MidiPcmStream) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
                 param4.field_F.c(var9, var11.getTargetVolume());
@@ -496,15 +496,15 @@ final class pp extends PcmStream {
               if (param4.field_g.field_r[param4.field_e] < 0) {
                 param4.field_F.g(-1);
               }
-              var11.e(var9);
-              var11.a(param3, param2, -param2 + param5);
+              var11.fadeOutAndUnlink(var9);
+              var11.mixInto(param3, param2, -param2 + param5);
               if (!var11.n()) {
                 continue;
               }
               this.field_i.addSubStream(var11);
             }
           }
-          param4.field_F.a(param3, param2, param1);
+          param4.field_F.mixInto(param3, param2, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

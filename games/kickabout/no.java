@@ -31,7 +31,7 @@ final class no extends i {
         var2 = Kickabout.field_G;
         var1 = -24 % ((param0 - 38) / 56);
         if (1 == ks.field_e) {
-          ps.a(-25246, true, false, false, false, false, false);
+          LoginCredentials.a(-25246, true, false, false, false, false, false);
         } else {
           if (ks.field_e != 2) {
             if (3 != ks.field_e) {
@@ -41,46 +41,46 @@ final class no extends i {
                     if (ks.field_e != 7) {
                       if (8 != ks.field_e) {
                         if (ks.field_e == 9) {
-                          ps.a(-25246, false, false, true, true, false, false);
+                          LoginCredentials.a(-25246, false, false, true, true, false, false);
                         } else {
                           if (ks.field_e != 10) {
                             if (ks.field_e == 11) {
-                              ps.a(-25246, true, true, true, true, false, true);
+                              LoginCredentials.a(-25246, true, true, true, true, false, true);
                             } else {
                               if (ks.field_e != 12) {
                                 if (ks.field_e == 13) {
-                                  ps.a(-25246, true, true, true, true, false, true);
+                                  LoginCredentials.a(-25246, true, true, true, true, false, true);
                                 } else {
-                                  ps.a(-25246, true, true, true, true, true, true);
+                                  LoginCredentials.a(-25246, true, true, true, true, true, true);
                                 }
                               } else {
-                                ps.a(-25246, false, false, true, true, false, false);
+                                LoginCredentials.a(-25246, false, false, true, true, false, false);
                               }
                             }
                           } else {
-                            ps.a(-25246, false, false, false, false, true, false);
+                            LoginCredentials.a(-25246, false, false, false, false, true, false);
                           }
                         }
                       } else {
-                        ps.a(-25246, true, true, false, true, false, true);
+                        LoginCredentials.a(-25246, true, true, false, true, false, true);
                       }
                     } else {
-                      ps.a(-25246, true, true, false, false, false, true);
+                      LoginCredentials.a(-25246, true, true, false, false, false, true);
                     }
                   } else {
-                    ps.a(-25246, false, false, false, true, false, false);
+                    LoginCredentials.a(-25246, false, false, false, true, false, false);
                   }
                 } else {
-                  ps.a(-25246, false, false, false, true, false, false);
+                  LoginCredentials.a(-25246, false, false, false, true, false, false);
                 }
               } else {
-                ps.a(-25246, false, false, false, true, false, false);
+                LoginCredentials.a(-25246, false, false, false, true, false, false);
               }
             } else {
-              ps.a(-25246, true, false, false, false, false, true);
+              LoginCredentials.a(-25246, true, false, false, false, false, true);
             }
           } else {
-            ps.a(-25246, false, false, false, false, false, true);
+            LoginCredentials.a(-25246, false, false, false, false, false, true);
           }
         }
     }
@@ -116,7 +116,7 @@ final class no extends i {
             }
           } else {
             stackIn_7_0 = !(tn.field_b >= 13);
-            JaggrabDownloader.field_h = mf.a(stackIn_7_0, param3 ^ -42);
+            JaggrabDownloader.field_h = SquadGridWidget.a(stackIn_7_0, param3 ^ -42);
             pp.a(param3 ^ -18268, (String[]) null);
           }
           return;
@@ -194,12 +194,12 @@ final class no extends i {
             if (var4 == 45) {
               if (var3 == 0 ||
                 var2_int - 1 == var3) {
-                stackIn_19_0 = lm.field_F;
+                stackIn_19_0 = TournamentLobbyScreen.field_F;
                 return stackIn_19_0;
               }
             } else {
-              if (-1 == qs.field_V.indexOf(var4)) {
-                stackIn_23_0 = lm.field_F;
+              if (-1 == PlayerShopScreen.field_V.indexOf(var4)) {
+                stackIn_23_0 = TournamentLobbyScreen.field_F;
                 return stackIn_23_0;
               }
             }

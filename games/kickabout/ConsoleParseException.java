@@ -60,27 +60,27 @@ final class ConsoleParseException extends Exception {
           ei.field_b.field_ab = ag.field_e + (-((ag.field_e & 16711422) >> 1) + ((vv.field_o.field_ab & 16711422) >> 1));
           ei.field_b.field_H = ag.field_e + (-((ag.field_e & 16711422) >> 1) + (8355711 & vv.field_o.field_H >> 1));
           ei.field_b.field_ub = -((16711423 & ag.field_e) >> 1) + ag.field_e + (vv.field_o.field_ub >> 1 & 8355711);
-          qt.field_n = ij.field_s;
+          ButtonMenuScreen.field_n = ij.field_s;
           jl.field_f = ei.field_b;
           ContentTransitionDialog.field_Y = new hd(0L, param0);
           h.field_e = new hd(0L, param1);
-          dj.field_D = new hd(0L, (hd) null);
+          PagedHelpScreen.field_D = new hd(0L, (hd) null);
           Kickabout.field_H = new hd(0L, param4);
           ei.field_b = new hd(0L, param3);
           ei.field_b.field_X = FootballerAgent.field_i;
           Kickabout.field_H.a((byte) -112, ei.field_b);
-          ij.field_s = new hd(0L, qt.field_n);
+          ij.field_s = new hd(0L, ButtonMenuScreen.field_n);
           Kickabout.field_H.a((byte) -126, ij.field_s);
           if (param2 != 14594) {
             field_e = (ff) null;
           }
           gl.field_c = new hd(0L, vv.field_o, rr.field_h);
-          b.field_N = new hd(0L, vv.field_o);
+          MySquadScreen.field_N = new hd(0L, vv.field_o);
           ContentTransitionDialog.field_Y.a((byte) -111, h.field_e);
-          ContentTransitionDialog.field_Y.a((byte) -121, dj.field_D);
-          dj.field_D.a((byte) -119, Kickabout.field_H);
-          dj.field_D.a((byte) -104, gl.field_c);
-          dj.field_D.a((byte) -111, b.field_N);
+          ContentTransitionDialog.field_Y.a((byte) -121, PagedHelpScreen.field_D);
+          PagedHelpScreen.field_D.a((byte) -119, Kickabout.field_H);
+          PagedHelpScreen.field_D.a((byte) -104, gl.field_c);
+          PagedHelpScreen.field_D.a((byte) -111, MySquadScreen.field_N);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bf extends hs {
-    private kq[] field_j;
+    private SquadSlotWidget[] field_j;
     private hd field_q;
-    private up[] field_k;
+    private PlayerStats[] field_k;
     static np field_u;
     private int field_r;
     private int field_B;
-    private kq[] field_z;
-    private jw field_o;
+    private SquadSlotWidget[] field_z;
+    private CheckboxLabelWidget field_o;
     private int field_p;
     private hd field_A;
     private boolean field_v;
@@ -65,8 +65,8 @@ final class bf extends hs {
         var6 = this.field_t[param2].field_T;
         var7 = this.field_t[param2].field_q;
         var8 = this.field_t[param2].field_mb;
-        var9 = es.field_f.field_o * 13 >> 4;
-        var10 = es.field_f.field_v * 13 >> 4;
+        var9 = RowRangeRequest.field_f.field_o * 13 >> 4;
+        var10 = RowRangeRequest.field_f.field_v * 13 >> 4;
         if (param1) {
           stackIn_3_0 = var5;
           stackIn_3_1 = var6;
@@ -82,7 +82,7 @@ final class bf extends hs {
           stackIn_6_3 = var8;
           stackIn_6_4 = 10;
           stackIn_7_5 = (param3) ? 16777215 : 8947848;
-          SoftwareRasterizer.drawRoundedRectangle(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
+          SoftwareRasterizer.f(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
         }
         var11 = (var7 - var9 >> 1) + var5;
         if (param0 > -72) {
@@ -92,7 +92,7 @@ final class bf extends hs {
         if (!this.field_v) {
           var12 += 4;
         }
-        stackIn_17_0 = es.field_f;
+        stackIn_17_0 = RowRangeRequest.field_f;
         stackIn_17_1 = var11;
         stackIn_17_2 = var12;
         stackIn_17_3 = var9;
@@ -156,18 +156,18 @@ final class bf extends hs {
 
     final void a(int param0, boolean param1) {
         int stackIn_6_0 = 0;
-        up stackIn_9_0 = null;
+        PlayerStats stackIn_9_0 = null;
         int stackIn_41_0 = 0;
         int stackIn_51_0 = 0;
         int var3;
         int var5;
-        up var6;
+        PlayerStats var6;
         int var7;
         int var8;
         int var9;
         int var10;
-        kq var11;
-        up var12;
+        SquadSlotWidget var11;
+        PlayerStats var12;
         int var3Lifetime1;
         int var3Lifetime2;
         int var9Lifetime1;
@@ -186,14 +186,14 @@ final class bf extends hs {
             if (this.field_a.field_e) {
               stackIn_9_0 = this.field_k[var5];
             } else {
-              stackIn_9_0 = GameLoopApplet.field_E.field_i[var5];
+              stackIn_9_0 = GameLoopApplet.field_E.squad[var5];
             }
             var6 = stackIn_9_0;
             var11.a(this.field_r, this.field_w, (byte) 125, this.field_B, var6);
             if (!this.field_a.field_e) {
               var11.a((byte) -128, GameLoopApplet.field_E, var5);
             }
-            if (!var11.field_Eb.c(-2) &&
+            if (!var11.field_Eb.isEmpty(-2) &&
               var11.field_qb != 0 &&
               !var11.field_Gb) {
               var11.field_F = -(var11.field_q >> 1) + wt.field_x;
@@ -243,7 +243,7 @@ final class bf extends hs {
           }
           if (this.field_l == -1) {
             for (var3Lifetime2 = 0; var3Lifetime2 < 9; var3Lifetime2++) {
-              if (!this.field_j[var3Lifetime2].field_Eb.c(-2) &&
+              if (!this.field_j[var3Lifetime2].field_Eb.isEmpty(-2) &&
                 this.field_j[var3Lifetime2].field_gb &&
                 !this.field_j[var3Lifetime2].field_Gb) {
                 this.field_l = var3Lifetime2;
@@ -252,7 +252,7 @@ final class bf extends hs {
           }
           if (this.field_o.field_sb == 1) {
             this.i(74, -1);
-            sp.c(61, 47);
+            ShopPlayerSlot.c(61, 47);
           }
           this.field_o.field_Gb = this.field_a.field_o.a(-82, this.field_g);
           this.field_o.field_lb = this.field_a.field_o.a(false, this.field_g);
@@ -327,7 +327,7 @@ final class bf extends hs {
             ArchiveSource.field_b == null) {
             if (!WriteIntegersCommand.field_C) {
               var5 = TextButton.field_v;
-              var6 = sp.field_Cb;
+              var6 = ShopPlayerSlot.field_Cb;
               var5.field_j.a(0, 14, var6);
             }
             var7 = TextButton.field_v;
@@ -357,7 +357,7 @@ final class bf extends hs {
             return;
           }
           var3 = sm.field_q;
-          var4 = vc.field_y;
+          var4 = ReceivedAuctionItem.field_y;
           var13.field_j.a(0, 0, var3, var4, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -379,7 +379,7 @@ final class bf extends hs {
         int var8 = 0;
         int stackIn_24_1 = 0;
         boolean stackIn_25_2 = false;
-        jw stackIn_34_0 = null;
+        CheckboxLabelWidget stackIn_34_0 = null;
         boolean stackIn_35_1 = false;
         int var2;
         int var3;
@@ -434,7 +434,7 @@ final class bf extends hs {
           gd.a(-1, this.field_A.field_T, this.field_A.field_F, (byte) -96, var3);
           stackIn_34_0 = this.field_o;
           stackIn_35_1 = (this.field_o.field_lb) && (!this.field_o.field_Gb);
-          ((jw) (Object) stackIn_34_0).a(stackIn_35_1, (byte) 46);
+          ((CheckboxLabelWidget) (Object) stackIn_34_0).a(stackIn_35_1, (byte) 46);
           for (var4Lifetime2 = 0; var4Lifetime2 < 9; var4Lifetime2++) {
             if (this.field_l != var4Lifetime2) {
               this.field_j[var4Lifetime2].h((byte) -116);
@@ -456,7 +456,7 @@ final class bf extends hs {
             PacketBuffer.a(67, ff.field_b);
             SoftwareRasterizer.b();
             q.field_d.d(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
-            ta.e(param0 + 116);
+            TeamManagementScreen.e(param0 + 116);
             eo.a(ff.field_b, 65793);
             ff.field_b.c(-(ff.field_b.field_o >> 1) + var6, var7 - ff.field_b.field_v);
           }
@@ -466,7 +466,7 @@ final class bf extends hs {
         }
         if (this.field_v) {
           this.a(this.field_h, 240, (byte) -60, 412);
-          pt.a(640, -22914, 574, 480, 0);
+          AuctionListing.a(640, -22914, 574, 480, 0);
           var4Lifetime5 = 263;
           var11 = 0;
           var5_intLifetime1 = var11;
@@ -480,7 +480,7 @@ final class bf extends hs {
             }
             var11++;
           }
-          ta.e(param0 ^ 124);
+          TeamManagementScreen.e(param0 ^ 124);
           if (this.a((byte) 13)) {
             var6 = -1;
             var7 = -1;
@@ -536,7 +536,7 @@ final class bf extends hs {
           }
           var6 = param3.getParameter("currency");
           if (var6 != null &&
-            gr.a((byte) 15, (CharSequence) ((Object) var6))) {
+            ClubState.a((byte) 15, (CharSequence) ((Object) var6))) {
             rr.a(10, (CharSequence) ((Object) var6));
           }
           sb.field_b = new Sprite[param1.length];
@@ -576,13 +576,13 @@ final class bf extends hs {
     }
 
     private final void i(int param0, int param1) {
-        this.field_a.a(wd.a(18238, this.field_k, GameLoopApplet.field_E, param1, this.field_g), -121);
+        this.field_a.enqueueEvent(wd.a(18238, this.field_k, GameLoopApplet.field_E, param1, this.field_g), -121);
         if (param0 != 74) {
           return;
         }
         if (this.field_f) {
           or.field_d.b(74, (byte) 121);
-          or.field_d.g(-1207444472, param1);
+          or.field_d.writeShort(-1207444472, param1);
         }
     }
 
@@ -590,7 +590,7 @@ final class bf extends hs {
         if (param1 != 1670) {
           field_m = (ic) null;
         }
-        if (this.a((byte) 13) && ne.field_G[82] &&
+        if (this.a((byte) 13) && GameplayHelpScreen.field_G[82] &&
           param2 == 48) {
           this.i(74, -2);
           return true;
@@ -598,7 +598,7 @@ final class bf extends hs {
         return super.a(param0, 1670, param2);
     }
 
-    bf(CommonGame param0, int param1, boolean param2, up[] param3) {
+    bf(CommonGame param0, int param1, boolean param2, PlayerStats[] param3) {
         super(param0, param1, param2, (int[]) null);
         int var6 = 0;
         int var7 = 0;
@@ -607,7 +607,7 @@ final class bf extends hs {
         hd var11 = null;
         hd var12 = null;
         int stackIn_6_0 = 0;
-        up stackIn_8_0 = null;
+        PlayerStats stackIn_8_0 = null;
         int stackIn_9_1 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -634,12 +634,12 @@ final class bf extends hs {
           var12.a(true, var12.field_N.field_o, 220, 100, var12.field_N.field_v);
           this.field_q.a((byte) -114, var11);
           var6 = param0.field_r[this.field_h];
-          this.field_z = new kq[4];
+          this.field_z = new SquadSlotWidget[4];
           this.field_t = new hd[4];
           for (var7 = 3; var7 >= 0; var7--) {
             this.field_t[var7] = this.a(var6, var7, (byte) -75);
             var11.a((byte) -111, this.field_t[var7]);
-            this.field_z[var7] = new kq();
+            this.field_z[var7] = new SquadSlotWidget();
             var8 = this.field_t[var7];
             this.field_z[var7].a(true, var8.field_q, var8.field_s, var8.field_J, var8.field_mb);
             var11.a((byte) -104, (hd) (this.field_z[var7]));
@@ -658,14 +658,14 @@ final class bf extends hs {
             this.field_A.a(true, 156, 45, 112, 225);
             this.field_q.a((byte) -104, this.field_A);
             this.field_q.b(0, true);
-            this.field_o = new jw(sl.field_Ab, un.field_d, var12.field_q);
+            this.field_o = new CheckboxLabelWidget(sl.field_Ab, un.field_d, var12.field_q);
             this.field_o.field_lb = false;
             this.field_o.field_J = 7 + var12.field_mb + var12.field_T;
             this.field_o.field_s = var12.field_F;
             this.field_q.a((byte) -127, (hd) (this.field_o));
-            this.field_j = new kq[9];
+            this.field_j = new SquadSlotWidget[9];
             for (var7Lifetime1 = 0; var7Lifetime1 < 9; var7Lifetime1++) {
-              this.field_j[var7Lifetime1] = new kq();
+              this.field_j[var7Lifetime1] = new SquadSlotWidget();
               this.field_j[var7Lifetime1].a(true, 52, this.h(var7Lifetime1, 3), this.a((byte) 113, var7Lifetime1), 75);
               this.field_j[var7Lifetime1].field_F = this.field_j[var7Lifetime1].field_s;
               this.field_j[var7Lifetime1].field_T = this.field_j[var7Lifetime1].field_J;

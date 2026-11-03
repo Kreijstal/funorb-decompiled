@@ -135,7 +135,7 @@ final class IntrusiveNodeHashTable {
         var7 = Kickabout.field_G;
         try {
           ug.field_c = param1;
-          sp.field_Hb = new Sprite[ug.field_c.length];
+          ShopPlayerSlot.field_Hb = new Sprite[ug.field_c.length];
           for (var2_int = 0; var2_int < ug.field_c.length; var2_int++) {
             var3 = ug.field_c[var2_int].copy();
             var4 = 0;
@@ -152,7 +152,7 @@ final class IntrusiveNodeHashTable {
                 var4 = var4 | var5 << 16;
               }
             }
-            sp.field_Hb[var2_int] = var3;
+            ShopPlayerSlot.field_Hb[var2_int] = var3;
           }
           if (!param0) {
             field_g = (Sprite[]) null;

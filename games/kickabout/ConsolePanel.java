@@ -16,7 +16,7 @@ abstract class ConsolePanel implements hc {
     private boolean field_h;
     private int field_b;
     private int field_n;
-    private lj field_o;
+    private TextLine field_o;
     private String field_p;
     private int field_e;
 
@@ -27,7 +27,7 @@ abstract class ConsolePanel implements hc {
         String[] var6 = null;
         String var8 = null;
         IntrusiveDeque var9 = null;
-        lj var10 = null;
+        TextLine var10 = null;
         int var11 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -46,10 +46,10 @@ abstract class ConsolePanel implements hc {
             var8 = var6[var7];
             if (this.field_d.a(var8) >= var4_int) {
               var9 = this.b(0, var8, var4_int);
-              var10 = (lj) (var9.g(24009));
+              var10 = (TextLine) (var9.g(24009));
               while (var10 != null) {
-                this.a(31779, param0, var10.field_i);
-                var10 = (lj) (var9.c(33));
+                this.a(31779, param0, var10.text);
+                var10 = (TextLine) (var9.c(33));
               }
             } else {
               this.a(31779, param0, var8);
@@ -91,7 +91,7 @@ abstract class ConsolePanel implements hc {
           if (var2 < 0) {
             var2 = 0;
           }
-          SoftwareRasterizer.a(this.field_l.field_F, this.field_l.field_T + this.field_l.field_mb, this.field_l.field_q, -this.field_l.field_mb + vc.field_B - this.field_l.field_T, 0, var2 >> 1);
+          SoftwareRasterizer.a(this.field_l.field_F, this.field_l.field_T + this.field_l.field_mb, this.field_l.field_q, -this.field_l.field_mb + ReceivedAuctionItem.field_B - this.field_l.field_T, 0, var2 >> 1);
           var3 = 5 + (this.field_l.field_mb + this.field_l.field_J);
           for (var4 = 0; 6 > var4; var4++) {
             SoftwareRasterizer.c(0, var3, f.field_d, 0, var4 << 5);
@@ -171,7 +171,7 @@ abstract class ConsolePanel implements hc {
             else {
               param1 = null;
             }
-            var4.a(new lj(var6), param0 ^ 3);
+            var4.a(new TextLine(var6), param0 ^ 3);
           }
           stackIn_20_0 = var4;
           return stackIn_20_0;
@@ -189,14 +189,14 @@ abstract class ConsolePanel implements hc {
         }
     }
 
-    abstract boolean evaluateInput(String param0, boolean param1);
+    abstract boolean a(String param0, boolean param1);
 
     private final hd a(int param0, int param1) {
         if (param0 != 4) {
           return (hd) null;
         }
         hd var3 = new hd(0L, (hd) null);
-        var3.field_R = sp.a((byte) 26, param1);
+        var3.field_R = ShopPlayerSlot.a((byte) 26, param1);
         return var3;
     }
 
@@ -261,9 +261,9 @@ abstract class ConsolePanel implements hc {
               } else {
                 stackIn_26_1 = this.field_o.field_d;
               }
-              this.field_o = (lj) (stackIn_26_1);
+              this.field_o = (TextLine) (stackIn_26_1);
               if (this.field_o != null) {
-                this.field_k.b(this.field_o.field_i, param0 ^ -30330);
+                this.field_k.b(this.field_o.text, param0 ^ -30330);
               }
             }
           } else {
@@ -276,8 +276,8 @@ abstract class ConsolePanel implements hc {
             } else {
               if (this.field_o != null &&
                 this.field_m.field_c != this.field_o.field_b) {
-                this.field_o = (lj) (this.field_o.field_b);
-                this.field_k.b(this.field_o.field_i, -23174);
+                this.field_o = (TextLine) (this.field_o.field_b);
+                this.field_k.b(this.field_o.text, -23174);
               }
             }
           }
@@ -287,8 +287,8 @@ abstract class ConsolePanel implements hc {
             return true;
           }
           this.a(5635925, this.field_a + var7, (byte) -122);
-          var5 = (hd) (this.field_g.field_Ab.field_jb.d(param0 ^ -4021));
-          if (!this.evaluateInput(var7, true)) {
+          var5 = (hd) (this.field_g.field_Ab.field_jb.last(param0 ^ -4021));
+          if (!this.a(var7, true)) {
             var5.field_y = 16733525;
           }
           this.field_k.k(param0 ^ -26138);
@@ -299,17 +299,17 @@ abstract class ConsolePanel implements hc {
     }
 
     private final void a(String param0, int param1) {
-        lj var3 = null;
+        TextLine var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = (lj) (this.field_m.g(24009));
+          var3 = (TextLine) (this.field_m.g(24009));
           if (var3 == null ||
-            !param0.equals(var3.field_i)) {
-            this.field_m.a(0, new lj(param0));
+            !param0.equals(var3.text)) {
+            this.field_m.a(0, new TextLine(param0));
           }
           if (this.field_m.a(false) > param1) {
             this.field_m.h(-124);
@@ -382,7 +382,7 @@ abstract class ConsolePanel implements hc {
 
     private final hd a(int param0, int param1, int param2) {
         if (param1 != 200) {
-          this.field_o = (lj) null;
+          this.field_o = (TextLine) null;
         }
         hd var4 = new hd(0L, (hd) null);
         var4.field_R = ih.a(param0, param1 - 200, param2);

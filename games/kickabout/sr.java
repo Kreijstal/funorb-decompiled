@@ -7,7 +7,7 @@ abstract class sr {
     static String field_b;
     int field_i;
     static String field_c;
-    static lm field_l;
+    static TournamentLobbyScreen field_l;
     static ConsoleExpression[] field_a;
     static em field_f;
     static String field_d;
@@ -17,7 +17,7 @@ abstract class sr {
     static String field_e;
 
     final static void a(boolean param0, byte param1) {
-        cq.a(param0, 0);
+        AuctionLogEntry.a(param0, 0);
         if (param1 >= -20) {
           field_a = (ConsoleExpression[]) null;
         }
@@ -48,14 +48,14 @@ abstract class sr {
         Sprite var16;
         int var16_int;
         int var17;
-        nr[] var18_ref_nr__;
+        PlayerModelPreview[] var18_ref_nr__;
         int var18;
         int var19;
-        nr var20;
+        PlayerModelPreview var20;
         int var21;
-        nr[][] var22;
+        PlayerModelPreview[][] var22;
         Sprite var23;
-        nr[][] var24;
+        PlayerModelPreview[][] var24;
         int var10Lifetime1;
         int var15Lifetime1;
         int var15Lifetime2;
@@ -70,7 +70,7 @@ abstract class sr {
         var21 = Kickabout.field_G;
         var6 = new IndexedSprite[6];
         if (!param2) {
-          stackIn_3_0 = ps.field_c;
+          stackIn_3_0 = LoginCredentials.field_c;
         } else {
           stackIn_3_0 = bf.field_s;
         }
@@ -114,41 +114,41 @@ abstract class sr {
               var8[2][var15].c(var16_int, 0);
             }
           }
-          ta.e(123);
+          TeamManagementScreen.e(123);
           var15_ref_kg = eo.a(var23);
           for (var16_intLifetime2 = 0; var16_intLifetime2 < 6; var16_intLifetime2++) {
             var6[var16_intLifetime2] = var15_ref_kg;
           }
           return var6;
         }
-        var22 = new nr[var13][param5 + 2];
+        var22 = new PlayerModelPreview[var13][param5 + 2];
         var24 = var22;
         for (var15Lifetime1 = 0; var22.length > var15Lifetime1; var15Lifetime1++) {
           for (var16_intLifetime1 = 0; var16_intLifetime1 < var22[0].length; var16_intLifetime1++) {
             regionExit1: {
-              if (p.a((byte) -24, 256) <= param1) {
+              if (LoggedPossession.a((byte) -24, 256) <= param1) {
                 var17Lifetime1 = 39 + var16_intLifetime1 * var10Lifetime1 + var15Lifetime1;
                 var18 = var9Lifetime1 + var15Lifetime1 * var11;
-                var19 = p.a((byte) -24, 5);
+                var19 = LoggedPossession.a((byte) -24, 5);
                 if (param2) {
-                  var18 = var18 + p.a((byte) -24, 5);
+                  var18 = var18 + LoggedPossession.a((byte) -24, 5);
                 } else {
                   if (var15Lifetime1 == 0) {
                     if (0 != var19 &&
                       var19 != 2) {
-                      var22[var15Lifetime1][var16_intLifetime1] = new nr(var17Lifetime1, var18, var12, var19);
+                      var22[var15Lifetime1][var16_intLifetime1] = new PlayerModelPreview(var17Lifetime1, var18, var12, var19);
                       break regionExit1;
                     }
                     var19++;
                   }
                 }
-                var22[var15Lifetime1][var16_intLifetime1] = new nr(var17Lifetime1, var18, var12, var19);
+                var22[var15Lifetime1][var16_intLifetime1] = new PlayerModelPreview(var17Lifetime1, var18, var12, var19);
               }
             }
           }
         }
         for (var15Lifetime2 = 0; 6 > var15Lifetime2; var15Lifetime2++) {
-          jm.a(100, 9863, (-param0 + param4) * var15Lifetime2 / 6 + param0);
+          DelayedServerPacket.a(100, 9863, (-param0 + param4) * var15Lifetime2 / 6 + param0);
           var16 = oa.a(param2, param5, (byte) 95);
           PacketBuffer.a(-101, var16);
           for (var17Lifetime2 = 0; var13 > var17Lifetime2; var17Lifetime2++) {
@@ -171,7 +171,7 @@ abstract class sr {
               var8[2][var17Lifetime2].c(var18Lifetime1, 0);
             }
           }
-          ta.e(119);
+          TeamManagementScreen.e(119);
           var6[var15Lifetime2] = eo.a(var16);
         }
         return var6;

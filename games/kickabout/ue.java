@@ -79,17 +79,17 @@ final class ue extends IntrusiveNode {
         qb var4 = null;
         CipherPacketBuffer var5 = null;
         int var3 = 35 / ((23 - param1) / 35);
-        if (jm.field_h != param0) {
-          var4 = (qb) (sr.field_f.a(-3611, (long)jm.field_h));
+        if (DelayedServerPacket.field_h != param0) {
+          var4 = (qb) (sr.field_f.a(-3611, (long)DelayedServerPacket.field_h));
           if (var4 != null) {
             var4.field_Kb = null;
           }
-          jm.field_h = param0;
+          DelayedServerPacket.field_h = param0;
           var5 = or.field_d;
           var5.b(param2, (byte) -61);
-          var5.a(107, 3);
-          var5.a(118, 11);
-          var5.g(-1207444472, param0);
+          var5.writeByte(107, 3);
+          var5.writeByte(118, 11);
+          var5.writeShort(-1207444472, param0);
         }
     }
 
@@ -146,7 +146,7 @@ final class ue extends IntrusiveNode {
             var12 = (String) null;
             ue.a((String) null, (byte) -120);
           }
-          pt.a(640, -22914, 0, 229 + var2, -var2 + 229);
+          AuctionListing.a(640, -22914, 0, 229 + var2, -var2 + 229);
           SoftwareRasterizer.a(0, 229 - var2, 640, var2 << 1, 0, 128);
           if (var1_int >= 30) {
             var1_int -= 30;
@@ -240,7 +240,7 @@ final class ue extends IntrusiveNode {
               f.$cfr$intArgs$a$8e2a9e3a0d15(119, var8, var3, 180, 355);
             }
           }
-          ta.e(121);
+          TeamManagementScreen.e(121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

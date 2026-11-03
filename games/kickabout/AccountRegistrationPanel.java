@@ -91,7 +91,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             stackIn_11_0 = param4;
             stackIn_11_1 = -113;
             if (!param0) {
-              stackIn_12_2 = mf.field_Cb;
+              stackIn_12_2 = SquadGridWidget.field_Cb;
             } else {
               stackIn_12_2 = fv.field_b;
             }
@@ -99,19 +99,19 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             var15 = new Sprite(param3, var14.field_v);
             var5 = var15;
             PacketBuffer.a(-116, var15);
-            var9_ref_ut.d(var15.field_o - var9_ref_ut.field_o, 0);
+            var9_ref_ut.drawWithOffsets(var15.field_o - var9_ref_ut.field_o, 0);
             for (var10 = var14.field_o; var10 < var15.field_o - var9_ref_ut.field_o; var10 = var10 + var16.field_o) {
-              var16.d(var10, 0);
+              var16.drawWithOffsets(var10, 0);
             }
             var6 = 1;
-            var14.d(0, 0);
+            var14.drawWithOffsets(0, 0);
           } else {
             var13 = nm.a(param4, -85, TextHotspotWidget.field_L);
             var5 = var13;
             PacketBuffer.a(98, var13);
           }
         }
-        pt.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
+        AuctionListing.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
         if (param2 == 0 &&
           var6 == 0) {
           var25 = new int[64];
@@ -128,7 +128,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         } else if (1 == param2) {
           PacketBuffer.a(109, var5);
           var5.drawAdditive(0, 0, 60);
-          ta.e(param1 + 174);
+          TeamManagementScreen.e(param1 + 174);
           var24 = new int[64];
           var21 = var24;
           var7_ref_int__ = var21;
@@ -137,14 +137,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           }
           nh.a(4, 6, SoftwareRasterizer.field_g - 4, 6, 8, -40 + var24.length, var24);
         } else if (2 == param2) {
-          ta.e(param1 ^ -69);
-          ta.e(123);
+          TeamManagementScreen.e(param1 ^ -69);
+          TeamManagementScreen.e(123);
           var19 = var5;
           var18 = new Sprite(var5.field_o, var5.field_v);
           var5 = var18;
           PacketBuffer.a(-45, var18);
           eo.a(var19, 0, 0, 230);
-          pt.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
+          AuctionListing.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
           var23 = new int[64];
           var20 = var23;
           var8_ref_int__ = var20;
@@ -157,18 +157,18 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             nh.a(var5, 0.0, 0.0, 0.7);
           }
         }
-        ta.e(117);
+        TeamManagementScreen.e(117);
         if (param3 != -1) {
           if (param3 == -2) {
-            ap.field_l.drawAdditive(0, 0, 16);
+            MatchScreen.field_l.drawAdditive(0, 0, 16);
           } else {
             if (!param0) {
               tt.field_e.drawAdditive(0, 0, 16);
-              pt.a(SoftwareRasterizer.field_g - cg.field_K.field_o, -22914, 0, SoftwareRasterizer.field_f, 0);
+              AuctionListing.a(SoftwareRasterizer.field_g - cg.field_K.field_o, -22914, 0, SoftwareRasterizer.field_f, 0);
               for (var7 = tt.field_e.field_o; SoftwareRasterizer.field_g - cg.field_K.field_o > var7; var7 = var7 + GameAppletShell.field_l.field_o) {
                 GameAppletShell.field_l.drawAdditive(var7, 0, 16);
               }
-              ta.e(124);
+              TeamManagementScreen.e(124);
               cg.field_K.drawAdditive(var5.field_o - cg.field_K.field_o, 0, 16);
             }
           }
@@ -178,7 +178,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         if (param1 != -52) {
           field_D = (tv) null;
         }
-        ta.e(117);
+        TeamManagementScreen.e(117);
         return var5;
     }
 
@@ -233,18 +233,18 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_Q = new TextButton(ph.field_c, (UiListener) null);
         this.field_F = new TextButton(vb.field_e, (UiListener) null);
         this.field_E.field_u = sr.field_b;
-        this.field_S.field_u = gi.field_Bb;
+        this.field_S.field_u = ColourSwatchTile.field_Bb;
         this.field_K.field_u = aw.field_G;
         this.field_T.field_u = od.field_o;
         this.field_N.field_u = hd.field_Z;
         this.field_J.field_u = SpriteState.field_r;
         this.field_O.field_u = le.field_b;
-        this.field_E.a(6, new bv(this.field_E));
-        this.field_S.a(6, new qo(this.field_S));
-        this.field_K.a(6, new mh(this.field_K, this.field_S));
-        this.field_T.a(6, new lo(this.field_T, this.field_E, this.field_S));
-        this.field_N.a(6, new ge(this.field_N, this.field_T));
-        this.field_J.a(6, new fo(this.field_J));
+        this.field_E.a(6, new AccountNameAvailabilityValidator(this.field_E));
+        this.field_S.a(6, new EmailSyntaxValidator(this.field_S));
+        this.field_K.a(6, new EmailAvailabilityValidator(this.field_K, this.field_S));
+        this.field_T.a(6, new PasswordValidator(this.field_T, this.field_E, this.field_S));
+        this.field_N.a(6, new MatchingTextValidator(this.field_N, this.field_T));
+        this.field_J.a(6, new AgeValidator(this.field_J));
         this.field_Q.field_y = false;
         this.field_Q.field_r = (WidgetPainter) ((Object) new op());
         this.field_F.field_r = (WidgetPainter) ((Object) new cr());
@@ -257,15 +257,15 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         rp dupTemp$1 = new rp(10000536);
         this.field_N.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_T.field_r = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, mf.field_Ab, new String[]{this.b(true), this.l(6)});
+        String var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, SquadGridWidget.field_Ab, new String[]{this.b(true), this.l(6)});
         int var3 = 20;
-        var3 = var3 + this.a(170, si.field_i, 21621, var3, this.field_S);
+        var3 = var3 + this.a(170, ReflectionCheck.field_i, 21621, var3, this.field_S);
         var3 = var3 + (5 + this.a(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
         var3 = var3 + this.a(170, at.field_Ib, 21621, var3, this.field_T);
-        var3 = var3 + (this.addLabeledFieldWithDefaultMessageWidth(this.field_N, fa.field_h, 35, 170, var3, LongPlusOneCommand.field_A) + 5);
-        var3 = var3 + (this.addLabeledFieldWithDefaultMessageWidth(this.field_E, GoalStateAgent.field_f, 35, 170, var3, jk.field_i) + 5);
+        var3 = var3 + (this.a(this.field_N, fa.field_h, 35, 170, var3, LongPlusOneCommand.field_A) + 5);
+        var3 = var3 + (this.a(this.field_E, GoalStateAgent.field_f, 35, 170, var3, MusicPatch.field_i) + 5);
         var3 = var3 + this.a(var3, pl.field_a, 170, this.field_J, (byte) 117);
-        cg var4 = new cg(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, qo.field_k, 11579568, pn.field_v);
+        cg var4 = new cg(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, EmailSyntaxValidator.field_k, 11579568, pn.field_v);
         this.a(-35, var4);
         var3 = var3 + var4.field_i;
         TextWidgetPainter var5 = new TextWidgetPainter(gf.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, gf.field_a.field_G, -1, 2147483647, true);
@@ -347,7 +347,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         if (param0 != -1) {
           return;
         }
-        ((bv) (this.field_E.a((byte) -110))).c((byte) 92);
+        ((AccountNameAvailabilityValidator) (this.field_E.a((byte) -110))).c((byte) 92);
     }
 
     public final void a(TextHotspotWidget param0, int param1, int param2, int param3) {
@@ -400,12 +400,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     }
 
     private final boolean k(int param0) {
-        if (this.passesSubmissionGate((ValidationProvider) (this.field_E), 120) &&
-          this.passesSubmissionGate((ValidationProvider) (this.field_S), 120) &&
-          this.passesSubmissionGate((ValidationProvider) (this.field_K), 120) &&
-          this.passesSubmissionGate((ValidationProvider) (this.field_T), 120) &&
-          this.passesSubmissionGate((ValidationProvider) (this.field_N), 120) &&
-          this.passesSubmissionGate((ValidationProvider) (this.field_J), 120)) {
+        if (this.a((ValidationProvider) (this.field_E), 120) &&
+          this.a((ValidationProvider) (this.field_S), 120) &&
+          this.a((ValidationProvider) (this.field_K), 120) &&
+          this.a((ValidationProvider) (this.field_T), 120) &&
+          this.a((ValidationProvider) (this.field_N), 120) &&
+          this.a((ValidationProvider) (this.field_J), 120)) {
           if (param0 >= -108) {
             AccountRegistrationPanel.a((byte) 127);
           }
@@ -455,10 +455,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           var2 = Integer.parseInt(this.field_J.field_q);
         } catch (NumberFormatException numberFormatException) {
         }
-        return gp.a((byte) 117, this.field_S.field_q, this.field_O.field_A, this.field_E.field_q, this, var2, this.field_T.field_q);
+        return PasswordLoginCredentials.a((byte) 117, this.field_S.field_q, this.field_O.field_A, this.field_E.field_q, this, var2, this.field_T.field_q);
     }
 
-    private final int addLabeledFieldWithDefaultMessageWidth(UiWidget param0, String param1, int param2, int param3, int param4, String param5) {
+    private final int a(UiWidget param0, String param1, int param2, int param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -517,7 +517,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
               discarded$1 = this.h((byte) -104);
             }
           } else {
-            jk.a((byte) -125);
+            MusicPatch.a((byte) -125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -627,10 +627,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    private final boolean passesSubmissionGate(ValidationProvider param0, int param1) {
+    private final boolean a(ValidationProvider param0, int param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        rv var4 = null;
+        ValidationState var4 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -643,8 +643,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (var3 == null) {
             return true;
           }
-          var4 = var3.c(param1 ^ -24367);
-          if (var4 == jt.field_Bb) {
+          var4 = var3.getValidationState(param1 ^ -24367);
+          if (var4 == PitchOptionTile.field_Bb) {
             return false;
           }
           if (mn.field_c == var4) {
@@ -681,7 +681,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         try {
           var3 = this.field_E;
           var4 = param0;
-          ((TextInputWidget) ((Object) var3)).setInputText(var4, (byte) -17, false);
+          ((TextInputWidget) ((Object) var3)).a(var4, (byte) -17, false);
           if (param1 != 15) {
             var5 = (String) null;
             discarded$1 = this.a(24, false, (String) null, (UiWidget) null, 103, (String) null, 84);

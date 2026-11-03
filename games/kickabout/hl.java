@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends lg implements TextInputListener, ft {
+final class hl extends DebouncedValidationProvider implements TextInputListener, ft {
     DateInputWidget field_g;
     static hd field_f;
     static int field_d;
@@ -43,7 +43,7 @@ final class hl extends lg implements TextInputListener, ft {
         }
     }
 
-    final String e(int param0) {
+    final String evaluateValidationMessage(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -83,16 +83,16 @@ final class hl extends lg implements TextInputListener, ft {
     public hl() {
     }
 
-    final rv a(boolean param0) {
+    final ValidationState evaluateValidationState(boolean param0) {
         NumberFormatException numberFormatException = null;
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        rv stackIn_3_0 = null;
-        rv stackIn_6_0 = null;
+        ValidationState stackIn_3_0 = null;
+        ValidationState stackIn_6_0 = null;
         boolean stackIn_10_0 = false;
-        rv stackIn_13_0 = null;
+        ValidationState stackIn_13_0 = null;
         Throwable decompiledCaughtException = null;
         try {
           var2_int = this.field_g.l(94);
@@ -100,16 +100,16 @@ final class hl extends lg implements TextInputListener, ft {
           var4 = this.field_g.m(-1);
           var5 = th.b((byte) 108);
           if (var4 < 1890) {
-            stackIn_3_0 = jt.field_Bb;
+            stackIn_3_0 = PitchOptionTile.field_Bb;
             return stackIn_3_0;
           }
           if (var5 - 3 < var4) {
-            stackIn_6_0 = jt.field_Bb;
+            stackIn_6_0 = PitchOptionTile.field_Bb;
             return stackIn_6_0;
           }
           stackIn_10_0 = !param0;
           if (!cl.a(stackIn_10_0, var4, var2_int, var3)) {
-            stackIn_13_0 = jt.field_Bb;
+            stackIn_13_0 = PitchOptionTile.field_Bb;
             return stackIn_13_0;
           }
           if (param0) {
@@ -118,14 +118,14 @@ final class hl extends lg implements TextInputListener, ft {
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
-          return jt.field_Bb;
+          return PitchOptionTile.field_Bb;
         }
         return he.field_yb;
     }
 
-    public final boolean a(byte param0) {
+    public final boolean isInputEmpty(byte param0) {
         if (param0 != -28) {
-          this.a((byte) 110);
+          this.isInputEmpty((byte) 110);
           return this.field_g.b(true);
         }
         return this.field_g.b(true);
@@ -133,7 +133,7 @@ final class hl extends lg implements TextInputListener, ft {
 
     public final void a(byte param0, TextInputWidget param1) {
         try {
-          this.a(113);
+          this.validationChanged(113);
           if (param0 <= 65) {
             field_d = 37;
           }

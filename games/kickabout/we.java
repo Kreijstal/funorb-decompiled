@@ -130,13 +130,13 @@ final class we {
               NodeHashTableIterator.a(-43, param3);
             } else {
               if (tk.field_Ib >= 2 &&
-                ne.field_G[12]) {
+                GameplayHelpScreen.field_G[12]) {
                 NodeHashTableIterator.a(-43, param3);
               }
             }
           }
         }
-        if (ps.field_b.field_sb != 0) {
+        if (LoginCredentials.field_b.field_sb != 0) {
           if (1 == rn.field_d.length &&
             rn.field_d[0] != ThreeCommand.field_D) {
             ThreeCommand.field_D = rn.field_d[0];

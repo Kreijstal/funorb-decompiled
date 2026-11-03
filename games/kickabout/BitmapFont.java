@@ -31,17 +31,17 @@ abstract class BitmapFont extends DualLinkNode {
         int var5 = 0;
         if (param0 != 32) {
           param2 = param2 - this.field_x;
-          var5 = mf.a(param0, (byte) -104) & 255;
+          var5 = SquadGridWidget.a(param0, (byte) -104) & 255;
           this.drawGlyph(var5, param1 + this.field_n[var5] - (this.field_I[var5] >> 1), param2 + this.field_o[var5], this.field_D[var5], this.field_J[var5], param3, false);
         }
     }
 
-    final int a(String param0, int param1) {
+    final int maxLineWidth(String param0, int param1) {
         int var5 = 0;
         int var3;
         int var4;
         int var6;
-        var3 = this.a(param0, new int[]{param1}, field_s);
+        var3 = this.wrapText(param0, new int[]{param1}, field_s);
         var4 = 0;
         for (var5 = 0; var5 < var3; var5++) {
           var6 = this.a(field_s[var5]);
@@ -145,7 +145,7 @@ abstract class BitmapFont extends DualLinkNode {
                         if (!var9_ref_String.equals("euro")) {
                           if (!var9_ref_String.equals("copy")) {
                             if (!var9_ref_String.equals("reg")) {
-                              this.applyStyleTag(var9_ref_String);
+                              this.b(var9_ref_String);
                               decompiledFrameRemainder0 = false;
                             }
                             else {
@@ -175,7 +175,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(mf.a((char) var8, (byte) -104) & 255);
+              var8 = (char)(SquadGridWidget.a((char) var8, (byte) -104) & 255);
               var9 = this.field_D[var8];
               var10 = this.field_I[var8];
               var11 = this.field_J[var8];
@@ -204,10 +204,10 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               }
               if (field_z != -1) {
-                SoftwareRasterizer.a(param1 + (int)((double)this.field_x * 0.7), param2, var10, field_z);
+                SoftwareRasterizer.drawVerticalLine(param1 + (int)((double)this.field_x * 0.7), param2, var10, field_z);
               }
               if (field_w != -1) {
-                SoftwareRasterizer.a(param1 + this.field_x + 1, param2, var10, field_w);
+                SoftwareRasterizer.drawVerticalLine(param1 + this.field_x + 1, param2, var10, field_w);
               }
               var5 = var8;
             }
@@ -292,9 +292,9 @@ abstract class BitmapFont extends DualLinkNode {
 
     abstract void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
+    abstract void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
-    private final void a(byte[] param0) {
+    private final void decodeFontMetrics(byte[] param0) {
         int var3_int = 0;
         int incrementValue$6 = 0;
         int incrementValue$5 = 0;
@@ -436,7 +436,7 @@ abstract class BitmapFont extends DualLinkNode {
                           if (!var9_ref_String.equals("copy")) {
                             if (!var9_ref_String.equals("reg")) {
                               if (!var9_ref_String.startsWith("img=")) {
-                                this.applyStyleTag(var9_ref_String);
+                                this.b(var9_ref_String);
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
@@ -489,7 +489,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(mf.a((char) var8, (byte) -104) & 255);
+              var8 = (char)(SquadGridWidget.a((char) var8, (byte) -104) & 255);
               if (this.field_K != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_K[(var5 << 8) + var8];
@@ -506,9 +506,9 @@ abstract class BitmapFont extends DualLinkNode {
               } else {
                 if (field_t != 256) {
                   if (field_u != -1) {
-                    this.b(var8, param1 + this.field_n[var8] + 1, param2 + this.field_o[var8] + 1, var9, var10, field_u, field_t, true);
+                    this.drawGlyphAlpha(var8, param1 + this.field_n[var8] + 1, param2 + this.field_o[var8] + 1, var9, var10, field_u, field_t, true);
                   }
-                  this.b(var8, param1 + this.field_n[var8], param2 + this.field_o[var8], var9, var10, field_v, field_t, false);
+                  this.drawGlyphAlpha(var8, param1 + this.field_n[var8], param2 + this.field_o[var8], var9, var10, field_v, field_t, false);
                 } else {
                   if (field_u != -1) {
                     this.drawGlyph(var8, param1 + this.field_n[var8] + 1, param2 + this.field_o[var8] + 1, var9, var10, field_u, true);
@@ -531,20 +531,20 @@ abstract class BitmapFont extends DualLinkNode {
         }
     }
 
-    final int c(String param0, int param1, int param2) {
+    final int paragraphHeight(String param0, int param1, int param2) {
         if (param2 == 0) {
           param2 = this.field_x;
         }
-        int var4 = this.a(param0, new int[]{param1}, field_s);
+        int var4 = this.wrapText(param0, new int[]{param1}, field_s);
         int var5 = (var4 - 1) * param2;
         return this.field_G + var5 + this.field_p;
     }
 
     final int b(String param0, int param1) {
-        return this.a(param0, new int[]{param1}, field_s);
+        return this.wrapText(param0, new int[]{param1}, field_s);
     }
 
-    private final void applyStyleTag(String param0) {
+    private final void b(String param0) {
         Throwable decompiledCaughtException = null;
         Exception var2 = null;
         CharSequence var3 = null;
@@ -620,7 +620,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int charWidth(char param0) {
-        return this.field_I[mf.a(param0, (byte) -104) & 255];
+        return this.field_I[SquadGridWidget.a(param0, (byte) -104) & 255];
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
@@ -641,7 +641,7 @@ abstract class BitmapFont extends DualLinkNode {
           param4 < param10 + param10) {
           var12 = null;
         }
-        var13 = this.a(param0, var12, field_s);
+        var13 = this.wrapText(param0, var12, field_s);
         if (param9 == 3 &&
           var13 == 1) {
           param9 = 1;
@@ -692,7 +692,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var13;
     }
 
-    final static String c(String param0) {
+    final static String escapeMarkup(String param0) {
         int var3_int = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -808,7 +808,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(mf.a((char) var7, (byte) -104) & 255);
+              var7 = (char)(SquadGridWidget.a((char) var7, (byte) -104) & 255);
               var4 = var4 + this.field_I[var7];
               if (this.field_K != null &&
                 var3 != 0) {
@@ -823,7 +823,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var4;
     }
 
-    final int a(String param0, int[] param1, String[] param2) {
+    final int wrapText(String param0, int[] param1, String[] param2) {
         int var13 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -852,7 +852,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        dj.a(0, ' ', -11407, field_C);
+        PagedHelpScreen.a(0, ' ', -11407, field_C);
         var4 = 0;
         var5 = 0;
         var6 = -1;
@@ -969,7 +969,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_C.append((char) var14);
-                var14 = (char)(mf.a((char) var14, (byte) -104) & 255);
+                var14 = (char)(SquadGridWidget.a((char) var14, (byte) -104) & 255);
                 var4 = var4 + this.field_I[var14];
                 if (this.field_K != null &&
                   var10 != 0) {
@@ -1035,7 +1035,7 @@ abstract class BitmapFont extends DualLinkNode {
         this.field_o = param2;
         this.field_D = param3;
         this.field_J = param4;
-        this.a(param0);
+        this.decodeFontMetrics(param0);
         var6 = 2147483647;
         var7 = -2147483648;
         for (var8 = 0; var8 < 256; var8++) {

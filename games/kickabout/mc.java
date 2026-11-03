@@ -32,15 +32,15 @@ abstract class mc {
     final static void a(int param0) {
         vg.field_Wb = true;
         gl.field_c = null;
-        b.field_N = null;
+        MySquadScreen.field_N = null;
         ContentTransitionDialog.field_Y = null;
         h.field_e = null;
         if (param0 >= -82) {
           mc.a((byte) 24);
           if (null != jl.field_f) {
             ei.field_b = jl.field_f;
-            ij.field_s = qt.field_n;
-            qt.field_n = null;
+            ij.field_s = ButtonMenuScreen.field_n;
+            ButtonMenuScreen.field_n = null;
             ei.field_b.field_ab = -1;
             ei.field_b.field_ub = -1;
             jl.field_f = null;
@@ -55,8 +55,8 @@ abstract class mc {
           return;
         }
         ei.field_b = jl.field_f;
-        ij.field_s = qt.field_n;
-        qt.field_n = null;
+        ij.field_s = ButtonMenuScreen.field_n;
+        ButtonMenuScreen.field_n = null;
         ei.field_b.field_ab = -1;
         ei.field_b.field_ub = -1;
         jl.field_f = null;

@@ -20,13 +20,13 @@ final class kf extends hd {
           if (param1 != 63) {
             kf.c(true);
           }
-          na.a(kt.field_g, true, wf.field_O, er.field_k, 1, param0, 0);
-          for (var2_int = 0; var2_int < wf.field_O; var2_int++) {
+          na.a(BlackFadeScreen.field_g, true, AuctionsScreen.field_O, er.field_k, 1, param0, 0);
+          for (var2_int = 0; var2_int < AuctionsScreen.field_O; var2_int++) {
             pf.field_d[var2_int + param0] = var2_int;
           }
-          na.a(lm.field_V, false, wf.field_O + param0, vi.field_s, 1, param0 + param0, param0);
-          if (wf.field_O > param0) {
-            wf.field_O = param0;
+          na.a(TournamentLobbyScreen.field_V, false, AuctionsScreen.field_O + param0, vi.field_s, 1, param0 + param0, param0);
+          if (AuctionsScreen.field_O > param0) {
+            AuctionsScreen.field_O = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

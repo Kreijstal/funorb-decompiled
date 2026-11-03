@@ -12,7 +12,7 @@ final class wb extends hs {
     static int field_q;
     private hd field_o;
     static wc field_p;
-    private jw field_l;
+    private CheckboxLabelWidget field_l;
     static int[] field_r;
 
     final void e(int param0) {
@@ -20,7 +20,7 @@ final class wb extends hs {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         String stackIn_22_0 = null;
-        jw stackIn_24_0 = null;
+        CheckboxLabelWidget stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
         int var2;
         int var3;
@@ -51,7 +51,7 @@ final class wb extends hs {
         var3 = stackIn_9_0;
         for (var4 = 0; var4 < 3; var4++) {
           if (var4 == 1) {
-            var5_ref_String = wh.field_e;
+            var5_ref_String = FadingSoundPlayer.field_e;
           } else {
             if (var4 == 0) {
               var5_ref_String = he.field_Ub;
@@ -71,7 +71,7 @@ final class wb extends hs {
           wb.a(var4_ref_String, 302, 46, 316, 88, 0);
           stackIn_24_0 = this.field_l;
           stackIn_25_1 = (var2 != 0) ? false : true;
-          ((jw) (Object) stackIn_24_0).a(stackIn_25_1, (byte) 46);
+          ((CheckboxLabelWidget) (Object) stackIn_24_0).a(stackIn_25_1, (byte) 46);
         }
         this.field_t.a(96, false);
         var4Lifetime1 = 128;
@@ -81,16 +81,16 @@ final class wb extends hs {
             var7 = un.field_d.a(var6.field_E);
             var8 = (var6.field_q - var7 >> 1) + var6.field_F;
             var9 = 20;
-            SoftwareRasterizer.drawLine(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
-            SoftwareRasterizer.drawLine(var8 + var7, var4Lifetime1 + 6, var8, -2 + var4Lifetime1 + var9, 13382451);
+            SoftwareRasterizer.b(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
+            SoftwareRasterizer.b(var8 + var7, var4Lifetime1 + 6, var8, -2 + var4Lifetime1 + var9, 13382451);
           }
-          pt.a(76, -22914, 0, 480, 0);
+          AuctionListing.a(76, -22914, 0, 480, 0);
           SoftwareRasterizer.a(52, var4Lifetime1, 486, 21, 7, 65793, 128);
-          ta.e(120);
-          b.field_U[this.field_a.field_g[var5].field_f].c(55, 1 + var4Lifetime1);
-          pt.a(640, -22914, 564, 480, 0);
+          TeamManagementScreen.e(120);
+          MySquadScreen.field_U[this.field_a.field_g[var5].field_f].c(55, 1 + var4Lifetime1);
+          AuctionListing.a(640, -22914, 564, 480, 0);
           SoftwareRasterizer.a(78, var4Lifetime1, 512, 21, 7, 65793, 128);
-          ta.e(121);
+          TeamManagementScreen.e(121);
           var4Lifetime1 += 23;
           if (this.field_a.field_n.isReadyOrInactive(param0 ^ 8659, var5)) {
             vb.field_l.c(564, var6.field_T - 4);
@@ -103,7 +103,7 @@ final class wb extends hs {
 
     final static void f(int param0) {
         int var1 = 113 % ((-88 - param0) / 32);
-        da.field_h.b(22997);
+        MusicPatchNode.field_h.b(22997);
     }
 
     final void f(int param0, int param1) {
@@ -144,7 +144,7 @@ final class wb extends hs {
               if (0 != gl.field_c.field_sb) {
                 vg.field_Wb = false;
               }
-              if (0 != b.field_N.field_sb) {
+              if (0 != MySquadScreen.field_N.field_sb) {
                 td.a(76);
                 vg.field_Wb = false;
               }
@@ -177,13 +177,13 @@ final class wb extends hs {
     }
 
     private final void a(byte param0, int param1) {
-        this.field_a.a(mg.a(this.field_g, (byte) 0, param1), -125);
+        this.field_a.enqueueEvent(mg.a(this.field_g, (byte) 0, param1), -125);
         if (param0 >= -95) {
           return;
         }
         if (this.field_f) {
           or.field_d.b(72, (byte) -47);
-          or.field_d.a(117, param1);
+          or.field_d.writeByte(117, param1);
         }
     }
 
@@ -209,7 +209,7 @@ final class wb extends hs {
             var5.field_q = 158;
             var5.field_mb = 21;
             var5.field_J = 105 + 23 * (1 + var4_int);
-            var5.field_s = qs.field_P[0] - (var5.field_q >> 1) + 1;
+            var5.field_s = PlayerShopScreen.field_P[0] - (var5.field_q >> 1) + 1;
             if (this.a((byte) 13) &&
               var4_int == param1) {
               this.a(var5, (byte) -64);
@@ -218,7 +218,7 @@ final class wb extends hs {
             this.field_t.a((byte) -126, this.field_k[var4_int]);
           }
           if (this.a((byte) 13)) {
-            this.field_l = new jw(sl.field_Ab, un.field_d, 120);
+            this.field_l = new CheckboxLabelWidget(sl.field_Ab, un.field_d, 120);
             this.field_l.field_s = 442;
             this.field_l.field_J = 322;
             this.field_t.a((byte) -121, (hd) (this.field_l));
@@ -263,15 +263,15 @@ final class wb extends hs {
         int var2 = 0;
         int var3 = Kickabout.field_G;
         try {
-          da.field_u = new ArgbSprite[32];
+          MusicPatchNode.field_u = new ArgbSprite[32];
           for (var1_int = 0; var1_int < 32; var1_int++) {
             var2 = -(var1_int << 11) / 32;
-            da.field_u[var1_int] = wa.a(-116, var2);
+            MusicPatchNode.field_u[var1_int] = wa.a(-116, var2);
           }
           if (param0 != -47) {
             field_u = 99;
           }
-          ar.field_c = qo.g(-22976);
+          ar.field_c = EmailSyntaxValidator.g(-22976);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wb.J(" + param0 + ')');
         }
@@ -314,7 +314,7 @@ final class wb extends hs {
           this.field_o = new hd();
           this.field_s = new hd();
           var5 = new hd(0L, param0);
-          var5.field_S = sp.a((byte) 26, 12303291);
+          var5.field_S = ShopPlayerSlot.a((byte) 26, 12303291);
           var5.field_B = -2;
           var5.field_hb = 5592405;
           var5.field_ub = 65793;
@@ -353,7 +353,7 @@ final class wb extends hs {
         super.a(-103, param1);
         for (var3 = 0; this.field_a.playerCount > var3; var3++) {
           stackIn_4_0 = this.field_k[var3];
-          stackIn_5_1 = (~(this.field_k[var3].field_s + (this.field_k[var3].field_q >> 1)) == ~qs.field_P[this.field_a.field_n.selection[var3] + 1]);
+          stackIn_5_1 = (~(this.field_k[var3].field_s + (this.field_k[var3].field_q >> 1)) == ~PlayerShopScreen.field_P[this.field_a.field_n.selection[var3] + 1]);
           stackIn_4_0.field_lb = stackIn_5_1;
         }
         if (param0 >= -92) {
@@ -365,7 +365,7 @@ final class wb extends hs {
         while (this.field_a.playerCount > var9) {
           var4 = this.field_k[var9];
           var5 = 1 + this.field_a.field_n.selection[var9];
-          var6 = qs.field_P[var5] - (var4.field_q >> 1);
+          var6 = PlayerShopScreen.field_P[var5] - (var4.field_q >> 1);
           if (~var6 != ~var4.field_s) {
             var7 = var4.field_s;
             var4.field_s = var4.field_s * 3 + var6 >> 2;
@@ -398,7 +398,7 @@ final class wb extends hs {
           }
           if (0 != this.field_l.field_sb) {
             this.a((byte) -118, 2);
-            sp.c(61, -126);
+            ShopPlayerSlot.c(61, -126);
           }
           this.field_l.field_Gb = this.field_a.field_n.isReadyOrInactive(8658, this.field_g);
         }

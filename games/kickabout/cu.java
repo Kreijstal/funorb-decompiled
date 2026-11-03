@@ -121,10 +121,10 @@ final class cu {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        hn var3 = new hn(3, new int[]{param1, param2});
+        ManagerAction var3 = new ManagerAction(3, new int[]{param1, param2});
         ii.a(var3, 106);
-        if (25 == cq.field_h.field_c) {
-          ((b) (cq.field_h)).h((byte) 84);
+        if (25 == AuctionLogEntry.field_h.screenId) {
+          ((MySquadScreen) (AuctionLogEntry.field_h)).refreshSelectedPlayer((byte) 84);
         }
         int var4 = -22 / ((param0 - 36) / 39);
     }
@@ -148,7 +148,7 @@ final class cu {
           var3_int = param2.field_n;
           var5 = (CharSequence) ((Object) param1);
           var4 = ok.a(var5, (byte) 106);
-          param2.f(-53, var4.length);
+          param2.writeUnsignedSmart(-53, var4.length);
           param2.field_n = param2.field_n + os.field_I.a(-1, var4.length, param2.field_n, param2.field_f, var4, 0);
           stackIn_3_0 = param2.field_n - var3_int;
           return stackIn_3_0;

@@ -34,7 +34,7 @@ final class rj {
           if (var5_int < 0) {
             return null;
           }
-          var6 = this.field_e.findFileId((byte) -98, param0, var5_int);
+          var6 = this.field_e.a((byte) -98, param0, var5_int);
           if (var6 < 0) {
             return null;
           }
@@ -168,13 +168,13 @@ final class rj {
           }
           var9 = (VorbisSample) (this.field_f.a(true, var6));
           if (var9 == null) {
-            var9 = VorbisSample.a(this.field_d, param2, param3);
+            var9 = VorbisSample.loadNamed(this.field_d, param2, param3);
             if (var9 == null) {
               return null;
             }
             this.field_f.a(var9, 79, var6);
           }
-          var8Lifetime1 = var9.a(param0);
+          var8Lifetime1 = var9.decodeToPcm(param0);
           if (var8Lifetime1 == null) {
             stackIn_18_0 = null;
             return (PcmSample) (stackIn_18_0);

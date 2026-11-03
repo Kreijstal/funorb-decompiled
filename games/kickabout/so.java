@@ -21,21 +21,21 @@ final class so {
               return;
             }
             if (!param3) {
-              gu.b(2, (byte) 60, vc.field_E[5]);
+              gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
-              ui.a(2, 7, vc.field_E[4], 2147483647);
+              ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             }
             return;
           }
           if (param3) {
-            ui.a(2, 5, vc.field_E[4], 2147483647);
+            ui.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             if (param0 != 3) {
               return;
             }
-            ui.a(2, 7, vc.field_E[4], 2147483647);
+            ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             return;
           }
-          gu.b(2, (byte) 60, vc.field_E[5]);
+          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         } else {
           so.a(44, true, true, false);
           if (!param1) {
@@ -43,9 +43,9 @@ final class so {
           }
           if (2 == param0) {
             if (!param3) {
-              gu.b(2, (byte) 60, vc.field_E[5]);
+              gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
-              ui.a(2, 5, vc.field_E[4], 2147483647);
+              ui.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             }
           }
         }
@@ -53,9 +53,9 @@ final class so {
           return;
         }
         if (param3) {
-          ui.a(2, 7, vc.field_E[4], 2147483647);
+          ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
         } else {
-          gu.b(2, (byte) 60, vc.field_E[5]);
+          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         }
     }
 
@@ -133,11 +133,11 @@ final class so {
     }
 
     final static java.applet.Applet a(int param0) {
-        if (null != qs.field_M) {
-          return qs.field_M;
+        if (null != PlayerShopScreen.field_M) {
+          return PlayerShopScreen.field_M;
         }
         int var1 = -80 / ((-28 - param0) / 43);
-        return (java.applet.Applet) ((Object) ap.field_p);
+        return (java.applet.Applet) ((Object) MatchScreen.field_p);
     }
 
     static {

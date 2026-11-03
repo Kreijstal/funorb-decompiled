@@ -53,7 +53,7 @@ final class ea {
           var16 = Integer.toString(var8);
           var10 = var16;
           if (!(2 <= var16.length())) {
-            var10 = bn.a('0', (byte) -83) + var16;
+            var10 = LeaguesScreen.a('0', (byte) -83) + var16;
           }
           var11 = -25 + param3 - (var7 >= 10 ? 0 : 3);
           var12 = -4 + (param1 + 20);
@@ -80,7 +80,7 @@ final class ea {
             field_f = (RasterBuffer) null;
           }
           if (var9 != 256) {
-            ta.e(124);
+            TeamManagementScreen.e(124);
             ph.field_b.e(param3 - var13, param1, var13, var14, 256);
           }
           return;

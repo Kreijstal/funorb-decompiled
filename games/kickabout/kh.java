@@ -101,7 +101,7 @@ final class kh {
           var7 = (ModelMesh) (((dd) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
           PacketBuffer.a(102, vf.field_F);
           SoftwareRasterizer.b();
-          TriangleRasterizer.c();
+          TriangleRasterizer.useRasterClip();
           if (FormationAgent.field_l == 3) {
             var6 = 256 + param2;
             if (var6 >= 2048) {
@@ -125,7 +125,7 @@ final class kh {
               var7.a(0, 0, 1280, 0, 0, 0, 0, param4);
             }
           }
-          ta.e(124);
+          TeamManagementScreen.e(124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,9 +143,9 @@ final class kh {
 
     final FullscreenFocusCanvas b(int param0) {
         this.field_v = f.field_d;
-        this.field_f = vc.field_B;
+        this.field_f = ReceivedAuctionItem.field_B;
         this.field_j.a(111, this.field_u, this.field_b);
-        mf.field_Ib = false;
+        SquadGridWidget.field_Ib = false;
         FullscreenFocusCanvas var2 = gf.a(oo.field_c, 0, this.field_b, 0, this.field_u, 0);
         if (param0 != 30182) {
           this.c(119);
@@ -177,7 +177,7 @@ final class kh {
 
     final void c(int param0) {
         int fieldTemp$0 = 0;
-        if (e.field_m != null) {
+        if (SplashScreen.field_m != null) {
           return;
         }
         if (eq.field_d <= param0) {
@@ -205,7 +205,7 @@ final class kh {
           }
         }
         if (f.field_d == this.field_d &&
-          this.field_a == vc.field_B) {
+          this.field_a == ReceivedAuctionItem.field_B) {
           return;
         }
         this.field_j.a(127, this.field_d, this.field_a);
@@ -280,7 +280,7 @@ final class kh {
                 if (f.field_d != var2) {
                   this.field_j.a(101, var2, var3);
                 } else {
-                  if (vc.field_B != var3) {
+                  if (ReceivedAuctionItem.field_B != var3) {
                     this.field_j.a(101, var2, var3);
                   }
                 }
@@ -298,7 +298,7 @@ final class kh {
         if (f.field_d != var2) {
           this.field_j.a(101, var2, var3);
         } else {
-          if (vc.field_B != var3) {
+          if (ReceivedAuctionItem.field_B != var3) {
             this.field_j.a(101, var2, var3);
           }
         }

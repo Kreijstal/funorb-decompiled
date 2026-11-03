@@ -43,7 +43,7 @@ final class DualLinkDeque {
         RuntimeException var3 = null;
         try {
           if (param1.field_e != null) {
-            param1.f(79);
+            param1.unlinkSecondary(79);
           }
           param1.field_e = this.field_a.field_e;
           param1.field_f = this.field_a;
@@ -123,7 +123,7 @@ final class DualLinkDeque {
         if (var2 == this.field_a) {
           return null;
         }
-        var2.f(114);
+        var2.unlinkSecondary(114);
         return var2;
     }
 
@@ -155,21 +155,21 @@ final class DualLinkDeque {
         RuntimeException var1 = null;
         var3 = Kickabout.field_G;
         try {
-          df.d(true);
+          AuctionsHelpScreen.d(true);
           var1_int = 0;
           if (param0 != -127) {
             return;
           }
           while (var1_int < 3) {
             var2 = et.field_d.field_P[1][var1_int + 1];
-            if (tc.a(0, (byte) 86, var2.positionX, var2, nt.field_zb[var1_int] << 16)) {
-              nt.field_zb[var1_int] = 700 + (-var2.pixelY(true) + 700);
-              if (nt.field_zb[var1_int] <= 700) {
-                nt.field_zb[var1_int] = Math.max(520, nt.field_zb[var1_int] - 20);
+            if (tc.a(0, (byte) 86, var2.positionX, var2, KitStyleTile.field_zb[var1_int] << 16)) {
+              KitStyleTile.field_zb[var1_int] = 700 + (-var2.pixelY(true) + 700);
+              if (KitStyleTile.field_zb[var1_int] <= 700) {
+                KitStyleTile.field_zb[var1_int] = Math.max(520, KitStyleTile.field_zb[var1_int] - 20);
               } else {
-                nt.field_zb[var1_int] = Math.min(880, nt.field_zb[var1_int] + 20);
+                KitStyleTile.field_zb[var1_int] = Math.min(880, KitStyleTile.field_zb[var1_int] + 20);
               }
-              tc.a(0, (byte) 122, var2.positionX, var2, nt.field_zb[var1_int] << 16);
+              tc.a(0, (byte) 122, var2.positionX, var2, KitStyleTile.field_zb[var1_int] << 16);
             }
             var1_int++;
           }

@@ -6,7 +6,7 @@ class i extends jb {
     static Sprite[] field_E;
     private int field_C;
     private int field_s;
-    static vc[] field_A;
+    static ReceivedAuctionItem[] field_A;
     static String field_w;
     static int field_x;
     int field_y;
@@ -133,8 +133,8 @@ class i extends jb {
                 stackIn_44_1 = 1;
               }
               var13 = stackIn_43_0[stackIn_44_1];
-              var14 = hw.field_i * var13.field_o >> 8;
-              var15 = var13.field_v * hw.field_i >> 8;
+              var14 = InstrumentNoteMask.field_i * var13.field_o >> 8;
+              var15 = var13.field_v * InstrumentNoteMask.field_i >> 8;
               var13.b(ug.a(param0 ^ 70, var8_ref_int__[var11]) - (var14 >> 1), lf.a((byte) -90, var9_ref_int__[var11]) - (var15 >> 1), var14, var15);
             }
           }
@@ -162,8 +162,8 @@ class i extends jb {
               var6 = var3.pixelX(-124);
               var7 = var3.pixelY(true) + 30;
             }
-            var8 = hw.field_i * var18.field_o >> 8;
-            var9 = hw.field_i * var18.field_v >> 8;
+            var8 = InstrumentNoteMask.field_i * var18.field_o >> 8;
+            var9 = InstrumentNoteMask.field_i * var18.field_v >> 8;
             var5_ref.b(ug.a(0, var6) - (var8 >> 1), -(var9 >> 1) + lf.a((byte) -77, var7), var8, var9);
           }
           return;
@@ -339,7 +339,7 @@ class i extends jb {
               this.field_s = this.field_s - (this.field_D.field_o + 15);
             }
           }
-          this.field_C = IsSixCommand.field_C.c(this.field_v, this.field_s, 16);
+          this.field_C = IsSixCommand.field_C.paragraphHeight(this.field_v, this.field_s, 16);
           stackIn_9_1 = this.field_C;
           if (this.field_D != null) {
             stackIn_10_2 = this.field_D.field_v;
@@ -400,20 +400,20 @@ class i extends jb {
         ii.a((byte) -125);
         if (param0 >= 60) {
           if (this.field_y == 40) {
-            wf.b(10, true);
+            AuctionsScreen.startComputerMatch(10, true);
           }
           return;
         }
         this.b(62);
         if (this.field_y == 40) {
-          wf.b(10, true);
+          AuctionsScreen.startComputerMatch(10, true);
         }
     }
 
     i(int param0, lv param1, String param2, String param3) {
         try {
           this.field_y = param0;
-          this.a(param3, param1, da.b(2, this.field_y), -125, param2);
+          this.a(param3, param1, MusicPatchNode.b(2, this.field_y), -125, param2);
           this.a(ds.a(this.field_y, 1), pg.a(false, this.field_y), 1054928844);
           if (this.field_y == 8) {
             this.a(wo.field_j, (byte) 90);
@@ -425,7 +425,7 @@ class i extends jb {
 
     static {
         field_w = "<%0> scores a goal, closing the gap to <%1> with a score of <%2> to <%3>.";
-        field_A = new vc[9];
+        field_A = new ReceivedAuctionItem[9];
         field_B = 0.0;
     }
 }

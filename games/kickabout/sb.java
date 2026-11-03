@@ -30,11 +30,11 @@ final class sb {
           if (var3 != null) {
             TextButton.field_v.a(false, 0);
             var4 = TextButton.field_v;
-            var5_ref_String = qt.field_k;
+            var5_ref_String = ButtonMenuScreen.field_k;
             var4.field_j.a(0, 5, var5_ref_String);
             var4Lifetime1 = TextButton.field_v;
             var5 = sm.field_q;
-            var6 = vc.field_y;
+            var6 = ReceivedAuctionItem.field_y;
             var4Lifetime1.field_j.a(0, 0, var5, var6, 0);
           }
           ug.a(param2, 2, param0);
@@ -44,14 +44,14 @@ final class sb {
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 == 5) {
-          nr.field_j = param1;
+          PlayerModelPreview.field_j = param1;
           jl.field_d = param2;
           ConsoleExpression.field_g = param0;
           PlayArea.field_c = param3;
           return;
         }
         field_h = (int[]) null;
-        nr.field_j = param1;
+        PlayerModelPreview.field_j = param1;
         jl.field_d = param2;
         ConsoleExpression.field_g = param0;
         PlayArea.field_c = param3;
@@ -60,11 +60,11 @@ final class sb {
     final static void a(boolean param0, byte param1, int param2, int param3) {
         um.field_b = true;
         gk.field_g = param3;
-        mf.field_Db = null;
+        SquadGridWidget.field_Db = null;
         wb.field_j = param0 ? true : false;
         hh.field_f = param2;
         TextInputWidget.field_R = 0.0f;
-        jm.a(18, false, -2);
+        DelayedServerPacket.a(18, false, -2);
         if (param1 > -85) {
           sb.b((byte) -66);
         }
@@ -84,8 +84,8 @@ final class sb {
 
     final static void b(byte param0) {
         BufferedSocket.field_i = new String[ob.field_B];
-        BufferedSocket.field_i[6] = lj.field_j;
-        BufferedSocket.field_i[15] = sp.field_Eb;
+        BufferedSocket.field_i[6] = TextLine.field_j;
+        BufferedSocket.field_i[15] = ShopPlayerSlot.field_Eb;
         BufferedSocket.field_i[16] = gd.field_f;
         BufferedSocket.field_i[18] = aj.field_b;
         BufferedSocket.field_i[11] = aw.field_F;
@@ -93,7 +93,7 @@ final class sb {
         if (param0 < -121) {
           BufferedSocket.field_i[9] = we.field_e;
           BufferedSocket.field_i[20] = vr.field_a;
-          BufferedSocket.field_i[4] = fp.field_n;
+          BufferedSocket.field_i[4] = AuctionItem.field_n;
           BufferedSocket.field_i[13] = ParticipantStatus.field_o;
           BufferedSocket.field_i[7] = ca.field_b;
           BufferedSocket.field_i[21] = mp.field_e;
@@ -104,7 +104,7 @@ final class sb {
         field_e = (String) null;
         BufferedSocket.field_i[9] = we.field_e;
         BufferedSocket.field_i[20] = vr.field_a;
-        BufferedSocket.field_i[4] = fp.field_n;
+        BufferedSocket.field_i[4] = AuctionItem.field_n;
         BufferedSocket.field_i[13] = ParticipantStatus.field_o;
         BufferedSocket.field_i[7] = ca.field_b;
         BufferedSocket.field_i[21] = mp.field_e;

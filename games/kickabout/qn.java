@@ -50,7 +50,7 @@ final class qn {
                 uq.field_a.a(true, var8, var6_int, var13, var7Lifetime1);
               } else {
                 ValidatedTextWidget.field_W[var12].a(true, var8, var6_int, var13, var7Lifetime1);
-                kt.field_m[var12].a(true, -param3 + var9, param3, 0, var7Lifetime1);
+                BlackFadeScreen.field_m[var12].a(true, -param3 + var9, param3, 0, var7Lifetime1);
                 SocketConnector.field_b[var12].a(true, param1, var9, param2, -param2 + (var7Lifetime1 - param2));
                 ds.field_a[var12].a(true, -var10 - param3 + var8, var10, param2, -param2 - param2 + var7Lifetime1);
               }

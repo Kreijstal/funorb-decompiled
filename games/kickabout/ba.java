@@ -19,31 +19,31 @@ final class ba extends sr {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        up var5 = null;
+        PlayerStats var5 = null;
         int var6 = 0;
         int var7 = 0;
         fn var8_ref_fn = null;
         fn var9 = null;
         int var10 = 0;
-        up var11 = null;
-        up var12 = null;
+        PlayerStats var11 = null;
+        PlayerStats var12 = null;
         int var7Lifetime1;
         var10 = Kickabout.field_G;
         try {
-          var11 = ((sp) (param1)).field_Sb;
+          var11 = ((ShopPlayerSlot) (param1)).field_Sb;
           var12 = var11;
-          var5 = ((sp) (param2)).field_Sb;
-          var6 = var12.field_h.length;
-          for (var7 = 0; var7 < var12.field_h.length; var7++) {
-            var8_ref_fn = pa.field_g[var11.field_h[var7]];
+          var5 = ((ShopPlayerSlot) (param2)).field_Sb;
+          var6 = var12.trinketIds.length;
+          for (var7 = 0; var7 < var12.trinketIds.length; var7++) {
+            var8_ref_fn = pa.field_g[var11.trinketIds[var7]];
             var6 = var6 + (var8_ref_fn.field_h + var8_ref_fn.field_k);
           }
-          var7Lifetime1 = var5.field_h.length;
+          var7Lifetime1 = var5.trinketIds.length;
           if (param0 != 2) {
             field_n = (kk[]) null;
           }
-          for (var8 = 0; var5.field_h.length > var8; var8++) {
-            var9 = pa.field_g[var5.field_h[var8]];
+          for (var8 = 0; var5.trinketIds.length > var8; var8++) {
+            var9 = pa.field_g[var5.trinketIds[var8]];
             var7Lifetime1 = var7Lifetime1 + (var9.field_k + var9.field_h);
           }
           stackIn_10_0 = this.field_i << 31 ^ var6 - var7Lifetime1;
@@ -130,7 +130,7 @@ final class ba extends sr {
           AccountChoicePanel.field_D = true;
           ck.field_a = param2;
           if (ck.field_a == 0) {
-            var3_int = SpriteState.a(cv.field_f, tt.field_a, -46, ta.field_C, vp.field_k);
+            var3_int = SpriteState.a(cv.field_f, tt.field_a, -46, TeamManagementScreen.field_C, vp.field_k);
             var4 = 3 + var3_int;
             dk.field_g = new int[var4];
             eq.field_c = new String[var4];
@@ -139,7 +139,7 @@ final class ba extends sr {
             }
             sh.field_f = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              eq.field_c[var5] = ta.field_C[var5];
+              eq.field_c[var5] = TeamManagementScreen.field_C[var5];
             }
             eq.field_c[-3 + var4] = "";
             eq.field_c[var4 - 2] = tk.field_Jb;
@@ -149,7 +149,7 @@ final class ba extends sr {
             dk.field_g[-1 + var4] = 1;
             sh.field_f[1] = 5;
           } else if (ck.field_a == 1) {
-            var3_int = SpriteState.a(cv.field_f, tt.field_a, param1 ^ -44, ta.field_C, vp.field_k);
+            var3_int = SpriteState.a(cv.field_f, tt.field_a, param1 ^ -44, TeamManagementScreen.field_C, vp.field_k);
             var4 = 2 + var3_int;
             eq.field_c = new String[var4];
             dk.field_g = new int[var4];
@@ -158,7 +158,7 @@ final class ba extends sr {
             }
             sh.field_f = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              eq.field_c[var5] = ta.field_C[var5];
+              eq.field_c[var5] = TeamManagementScreen.field_C[var5];
             }
             eq.field_c[-2 + var4] = "";
             eq.field_c[var4 - 1] = pg.field_c;
@@ -167,9 +167,9 @@ final class ba extends sr {
           } else if (2 != ck.field_a) {
             if (ck.field_a == 3) {
               if (!oo.field_c.field_l) {
-                var3_int = SpriteState.a(cv.field_f, ValidatedTextWidget.field_bb, -46, ta.field_C, vp.field_k);
+                var3_int = SpriteState.a(cv.field_f, ValidatedTextWidget.field_bb, -46, TeamManagementScreen.field_C, vp.field_k);
               } else {
-                var3_int = SpriteState.a(cv.field_f, fu.field_a, param1 - 52, ta.field_C, vp.field_k);
+                var3_int = SpriteState.a(cv.field_f, fu.field_a, param1 - 52, TeamManagementScreen.field_C, vp.field_k);
               }
               var4 = 2 + var3_int;
               eq.field_c = new String[var4];
@@ -179,14 +179,14 @@ final class ba extends sr {
               }
               sh.field_f = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                eq.field_c[var5] = ta.field_C[var5];
+                eq.field_c[var5] = TeamManagementScreen.field_C[var5];
               }
               eq.field_c[-2 + var4] = "";
               eq.field_c[var4 - 1] = pg.field_c;
               dk.field_g[-1 + var4] = 0;
               sh.field_f[0] = 5;
             } else if (ck.field_a == 4) {
-              var3_int = SpriteState.a(cv.field_f, je.field_n, -46, ta.field_C, vp.field_k);
+              var3_int = SpriteState.a(cv.field_f, AnimationSkeleton.field_n, -46, TeamManagementScreen.field_C, vp.field_k);
               var4 = var3_int + 2;
               dk.field_g = new int[var4];
               eq.field_c = new String[var4];
@@ -195,7 +195,7 @@ final class ba extends sr {
               }
               sh.field_f = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                eq.field_c[var5] = ta.field_C[var5];
+                eq.field_c[var5] = TeamManagementScreen.field_C[var5];
               }
               eq.field_c[var4 - 2] = "";
               eq.field_c[var4 - 1] = pg.field_c;
@@ -205,7 +205,7 @@ final class ba extends sr {
               if (ck.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = SpriteState.a(cv.field_f, dr.field_b, -46, ta.field_C, vp.field_k);
+              var3_int = SpriteState.a(cv.field_f, dr.field_b, -46, TeamManagementScreen.field_C, vp.field_k);
               var4 = 3 + var3_int;
               eq.field_c = new String[var4];
               dk.field_g = new int[var4];
@@ -214,7 +214,7 @@ final class ba extends sr {
               }
               sh.field_f = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                eq.field_c[var5] = ta.field_C[var5];
+                eq.field_c[var5] = TeamManagementScreen.field_C[var5];
               }
               eq.field_c[-3 + var4] = "";
               eq.field_c[var4 - 2] = mi.field_c;
@@ -225,10 +225,10 @@ final class ba extends sr {
               sh.field_f[1] = 5;
             }
           } else {
-            var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, vg.field_Kb, new String[]{"<br><%0><br>"}), -46, ta.field_C, vp.field_k);
+            var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, vg.field_Kb, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(ta.field_C[var5])) {
+              if (!"<%0>".equals(TeamManagementScreen.field_C[var5])) {
                 continue;
               }
               var4 = var5;
@@ -238,13 +238,13 @@ final class ba extends sr {
               throw new IllegalStateException();
             }
             dn.field_Eb = new String[var4];
-            ArrayOperations.a(ta.field_C, 0, dn.field_Eb, 0, var4);
+            ArrayOperations.a(TeamManagementScreen.field_C, 0, dn.field_Eb, 0, var4);
             pg.field_a = new String[-1 + (-var4 + var3_int)];
-            ArrayOperations.a(ta.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
+            ArrayOperations.a(TeamManagementScreen.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, lr.field_o, new String[]{"<br><%0><br>"}), -46, ta.field_C, vp.field_k);
+            var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, lr.field_o, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(ta.field_C[var5])) {
+              if (!"<%0>".equals(TeamManagementScreen.field_C[var5])) {
                 continue;
               }
               var4 = var5;
@@ -254,9 +254,9 @@ final class ba extends sr {
               throw new IllegalStateException();
             }
             pn.field_D = new String[var4];
-            ArrayOperations.a(ta.field_C, 0, pn.field_D, 0, var4);
+            ArrayOperations.a(TeamManagementScreen.field_C, 0, pn.field_D, 0, var4);
             cg.field_E = new String[var3_int - var4 - 1];
-            ArrayOperations.a(ta.field_C, 1 + var4, cg.field_E, 0, -var4 + (var3_int - 1));
+            ArrayOperations.a(TeamManagementScreen.field_C, 1 + var4, cg.field_E, 0, -var4 + (var3_int - 1));
             if (pn.field_D.length > dn.field_Eb.length) {
               stackIn_22_0 = pn.field_D.length;
             } else {
@@ -312,7 +312,7 @@ final class ba extends sr {
             }
             va.field_o = nj.a(90);
           }
-          ll.field_k.field_a = sh.field_f.length;
+          ll.field_k.itemCount = sh.field_f.length;
           var3_intLifetime1 = 0;
           if (param1 != 6) {
             return;
@@ -321,7 +321,7 @@ final class ba extends sr {
             stackIn_90_0 = 10;
             stackIn_90_1 = eq.field_c[var4Lifetime1];
             stackIn_91_2 = !(dk.field_g[var4Lifetime1] < 0);
-            var5Lifetime1 = ud.a(stackIn_90_0, stackIn_90_1, stackIn_91_2);
+            var5Lifetime1 = MatchTransitionScreen.a(stackIn_90_0, stackIn_90_1, stackIn_91_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -331,7 +331,7 @@ final class ba extends sr {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = ud.a(10, var11, false);
+              var7Lifetime1 = MatchTransitionScreen.a(10, var11, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -339,19 +339,19 @@ final class ba extends sr {
             var4_ref_String__Lifetime1 = pg.field_a;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = ud.a(10, var12, false);
+              var7Lifetime1Lifetime1 = MatchTransitionScreen.a(10, var12, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
             }
           }
-          BufferedSocket.field_j = ll.field_k.field_a * (pr.field_d + aj.field_a << 1);
-          ka.field_a = -(var3_intLifetime1 >> 1) + ta.field_A;
-          BufferedSocket.field_l = var3_intLifetime1 + (ta.field_A - (var3_intLifetime1 >> 1));
+          BufferedSocket.field_j = ll.field_k.itemCount * (pr.field_d + aj.field_a << 1);
+          ka.field_a = -(var3_intLifetime1 >> 1) + TeamManagementScreen.field_A;
+          BufferedSocket.field_l = var3_intLifetime1 + (TeamManagementScreen.field_A - (var3_intLifetime1 >> 1));
           for (var4Lifetime2 = 0; var4Lifetime2 < eq.field_c.length; var4Lifetime2++) {
             stackIn_114_0 = BufferedSocket.field_j;
             if (dk.field_g[var4Lifetime2] >= 0) {
-              stackIn_115_1 = nr.field_j;
+              stackIn_115_1 = PlayerModelPreview.field_j;
             } else {
               stackIn_115_1 = PlayArea.field_c;
             }
@@ -366,15 +366,15 @@ final class ba extends sr {
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + PlayArea.field_c;
             } else {
-              var7Lifetime2 = ud.a(10, eq.field_c[var4Lifetime3], true);
-              var8Lifetime1 = ta.field_A - (var7Lifetime2 >> 1);
+              var7Lifetime2 = MatchTransitionScreen.a(10, eq.field_c[var4Lifetime3], true);
+              var8Lifetime1 = TeamManagementScreen.field_A - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + aj.field_a;
               ld.field_j[var4Lifetime3] = new int[4];
               ld.field_j[var4Lifetime3][0] = -eb.field_d + var8Lifetime1;
               ld.field_j[var4Lifetime3][1] = var5Lifetime3;
               ld.field_j[var4Lifetime3][2] = (eb.field_d << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (nr.field_j + ((pr.field_d << 1) + aj.field_a));
-              ld.field_j[var4Lifetime3][3] = nr.field_j + (pr.field_d << 1);
+              var5Lifetime3 = var5Lifetime3 + (PlayerModelPreview.field_j + ((pr.field_d << 1) + aj.field_a));
+              ld.field_j[var4Lifetime3][3] = PlayerModelPreview.field_j + (pr.field_d << 1);
             }
             var4Lifetime3++;
           }
@@ -430,8 +430,8 @@ final class ba extends sr {
             if (null != ParticipantStatus.field_t) {
               ParticipantStatus.field_t.b((byte) 109);
             }
-            if (null != e.field_i) {
-              e.field_i.b(109);
+            if (null != SplashScreen.field_i) {
+              SplashScreen.field_i.b(109);
             }
             if (RandomAccessCacheFile.field_h != null) {
               try {

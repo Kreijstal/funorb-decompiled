@@ -31,7 +31,7 @@ final class gu extends hd {
         if (param0 != -20010) {
           field_Ib = (String) null;
         }
-        return mj.field_a == nr.field_f ? true : false;
+        return mj.field_a == PlayerModelPreview.field_f ? true : false;
     }
 
     final int a(byte param0, boolean param1) {
@@ -139,7 +139,7 @@ final class gu extends hd {
         this(param0, param0.field_Ob, param0.field_Nb, param0.field_Lb, param0.field_Mb, param0.field_Hb, param0.field_Eb, param0.field_Fb, param0.field_Cb);
     }
 
-    final static void a(byte param0, pt param1, boolean param2) {
+    final static void a(byte param0, AuctionListing param1, boolean param2) {
         jb var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -152,7 +152,7 @@ final class gu extends hd {
           var3 = (jb) (np.field_Jb.g(24009));
           while (var3 != null) {
             if (var3 instanceof bm &&
-              ((bm) (var3)).field_J.a(param1, param0 ^ -5275)) {
+              ((bm) (var3)).field_J.isSameListing(param1, param0 ^ -5275)) {
               return;
             }
             var3 = (jb) (np.field_Jb.c(33));
@@ -193,9 +193,9 @@ final class gu extends hd {
         }
         CipherPacketBuffer var3 = or.field_d;
         var3.b(param2, (byte) -76);
-        var3.a(111, 3);
-        var3.a(125, 9);
-        var3.g(-1207444472, param0);
+        var3.writeByte(111, 3);
+        var3.writeByte(125, 9);
+        var3.writeShort(-1207444472, param0);
     }
 
     gu(hd param0, Sprite[] param1, hd param2, hd param3, int param4, int param5, int param6, int param7, int param8) {

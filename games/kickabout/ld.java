@@ -16,7 +16,7 @@ final class ld {
     final static void a(byte param0, int param1, int param2) {
         int var4_int = 0;
         int var3_int = 0;
-        hn var4 = null;
+        ManagerAction var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -27,16 +27,16 @@ final class ld {
             ld.a((int[][][]) null, (int[][][]) null, (double[][][]) null, (int[][][]) null, (int[][][]) null, false);
           }
           for (var4_int = 0; var4_int < 9; var4_int++) {
-            if (!ic.field_h.field_i[ic.field_h.field_q[var4_int]].c(-2)) {
+            if (!ic.field_h.squad[ic.field_h.field_q[var4_int]].isEmpty(-2)) {
               continue;
             }
             var3_int = var4_int;
             break;
           }
-          var4 = new hn(0, new int[]{1 + param1, param2});
+          var4 = new ManagerAction(0, new int[]{1 + param1, param2});
           ii.a(var4, 81);
-          if (23 == cq.field_h.field_c) {
-            ((qs) (cq.field_h)).a(param2, var3_int, param0 ^ -66, param1);
+          if (23 == AuctionLogEntry.field_h.screenId) {
+            ((PlayerShopScreen) (AuctionLogEntry.field_h)).a(param2, var3_int, param0 ^ -66, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

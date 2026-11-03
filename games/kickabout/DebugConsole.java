@@ -15,7 +15,7 @@ final class DebugConsole extends ConsolePanel {
     static hd field_z;
     static String field_A;
 
-    final boolean evaluateInput(String param0, boolean param1) {
+    final boolean a(String param0, boolean param1) {
         try {
           ConsoleExpression var5 = null;
           IntrusiveDeque var6 = null;
@@ -35,7 +35,7 @@ final class DebugConsole extends ConsolePanel {
                 this.b(5);
               }
               var7 = new q(var6);
-              var5 = jh.a(var7, 1422);
+              var5 = AuctionTableWidget.a(var7, 1422);
               if (!var7.a(6)) {
                 throw new ConsoleParseException(var7.a((byte) 114).field_f);
               }
@@ -45,7 +45,7 @@ final class DebugConsole extends ConsolePanel {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (ConsoleParseException) (Object) decompiledCaughtException;
               param0 = "<col=55ff55>" + param0.substring(0, var3.field_f) + "</col>" + param0.substring(var3.field_f);
-              var4 = (hd) (this.field_g.field_Ab.field_jb.d(-9033));
+              var4 = (hd) (this.field_g.field_Ab.field_jb.last(-9033));
               var4.field_E = this.field_a + param0;
               return false;
             } catch (ConsoleEvaluationException decompiledCaughtParameter1) {
@@ -158,7 +158,7 @@ final class DebugConsole extends ConsolePanel {
                 if (~var4[var9].field_k == ~RasterBuffer.field_c) {
                   var10++;
                 }
-                if (si.field_g == var4[var9].field_k) {
+                if (ReflectionCheck.field_g == var4[var9].field_k) {
                   var10--;
                 }
                 if (var10 >= 0) {
@@ -430,7 +430,7 @@ final class DebugConsole extends ConsolePanel {
           var3 = var7;
           for (var5 = 0; this.field_t.length > var5; var5++) {
             if (this.field_t[var5].field_o.startsWith(param0)) {
-              this.field_t[var5].f(47);
+              this.field_t[var5].unlinkSecondary(47);
               var7.a(127, this.field_t[var5]);
             }
           }
@@ -573,7 +573,7 @@ final class DebugConsole extends ConsolePanel {
         String var12 = null;
         uv var13 = null;
         try {
-          BytePlusOneCommand.a(param1, false, sp.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.h((byte) 77));
+          BytePlusOneCommand.a(param1, false, ShopPlayerSlot.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.h((byte) 77));
           if (param1.field_Cb && (param1.field_Mb == 2 ||
             !(2 > tk.field_Ib))) {
             var7 = TextButton.field_v;
@@ -582,7 +582,7 @@ final class DebugConsole extends ConsolePanel {
           }
           TextButton.field_v.d(param0 - 14);
           if (param2) {
-            if (TextButton.field_v.field_c != jm.field_h) {
+            if (TextButton.field_v.field_c != DelayedServerPacket.field_h) {
               var11 = TextButton.field_v;
               var12 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, br.field_a, new String[]{param3});
               var11.field_j.a(param0 - 15, 15, var12);
@@ -597,7 +597,7 @@ final class DebugConsole extends ConsolePanel {
           if (param0 != 15) {
             field_x = (String) null;
           }
-          var6 = vc.field_y;
+          var6 = ReceivedAuctionItem.field_y;
           var13.field_j.a(0, 0, var5, var6, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -678,19 +678,19 @@ final class DebugConsole extends ConsolePanel {
           var9 = new IntrusiveDeque();
           for (var10 = 0; var10 < 3; var10++) {
             for (var11 = 0; var11 < 9; var11++) {
-              if (param5 >= p.a((byte) -24, 256)) {
-                var12 = p.a((byte) -24, 5);
-                var13 = p.a((byte) -24, 5);
+              if (param5 >= LoggedPossession.a((byte) -24, 256)) {
+                var12 = LoggedPossession.a((byte) -24, 5);
+                var13 = LoggedPossession.a((byte) -24, 5);
                 var14 = 50 * var10 + 32 + var13;
                 if (!param2) {
                   var14 = var7 - (var14 + 12);
                 }
-                var9.a(new nr(var14, 63 + (var11 * 26 + 14 * var10), var8Lifetime1, var12), 3);
+                var9.a(new PlayerModelPreview(var14, 63 + (var11 * 26 + 14 * var10), var8Lifetime1, var12), 3);
               }
             }
           }
           for (var10Lifetime1 = 0; var10Lifetime1 < 6; var10Lifetime1++) {
-            jm.a(100, 9863, var10Lifetime1 * (-param1 + param0) / 6 + param1);
+            DelayedServerPacket.a(100, 9863, var10Lifetime1 * (-param1 + param0) / 6 + param1);
             var16[var10Lifetime1] = AlphaContainer.a(param2, -76, var9, var10Lifetime1);
           }
           stackIn_33_0 = var6;

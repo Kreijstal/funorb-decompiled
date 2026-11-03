@@ -216,8 +216,8 @@ final class SectorCacheStore {
           if (param1.field_r != null) {
             ol.field_z = param1.field_c;
             mv.field_a = param1.field_q;
-            nr.field_r = param1.field_d;
-            qs.field_S = param1.field_r;
+            PlayerModelPreview.field_r = param1.field_d;
+            PlayerShopScreen.field_S = param1.field_r;
           }
           var2_intLifetime1 = 50 % ((-10 - param0) / 54);
           ec.a(true, param1);
@@ -434,7 +434,7 @@ final class SectorCacheStore {
         int var3 = 0;
         int var4 = 0;
         cf var5 = null;
-        bc var6 = null;
+        ListingRow var6 = null;
         int var7 = 0;
         IntrusiveDeque var8 = null;
         cf var9 = null;
@@ -442,16 +442,16 @@ final class SectorCacheStore {
         var7 = Kickabout.field_G;
         try {
           var8 = new IntrusiveDeque();
-          if (jh.field_Hb.field_Db.field_jb != null) {
-            jh.field_Hb.field_Db.field_jb.a(-17481, var8);
+          if (AuctionTableWidget.field_Hb.field_Db.field_jb != null) {
+            AuctionTableWidget.field_Hb.field_Db.field_jb.a(-17481, var8);
           }
-          var2 = mf.field_Gb;
+          var2 = SquadGridWidget.field_Gb;
           if (var2 < 0) {
             var2 = 0;
           }
-          var3 = je.field_k;
+          var3 = AnimationSkeleton.field_k;
           var4 = 5 + var2 * 18;
-          scanLoop1: while (jh.field_Hb.field_Gb.field_mb - (-15 + jh.field_Hb.field_Db.field_J) > var4) {
+          scanLoop1: while (AuctionTableWidget.field_Hb.field_Gb.field_mb - (-15 + AuctionTableWidget.field_Hb.field_Db.field_J) > var4) {
             if (pu.field_Db[var3] > var2) {
               var5 = (cf) (var8.g(24009));
               while (var5 != null) {
@@ -467,7 +467,7 @@ final class SectorCacheStore {
                 var5 = var9;
                 var9.a(true, 327, 5, var4, 16);
               }
-              jh.field_Hb.field_Db.a((byte) -109, (hd) (var5));
+              AuctionTableWidget.field_Hb.field_Db.a((byte) -109, (hd) (var5));
               var6 = bf.field_y.a(var2, (byte) 116, var3);
               var4 += 18;
               var2++;

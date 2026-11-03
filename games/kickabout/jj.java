@@ -31,7 +31,7 @@ final class jj extends PcmStream {
         throw new IllegalArgumentException("Illegal midiplayer: " + param0);
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int[] array$0 = null;
         int var10 = 0;
         int stackIn_39_0 = 0;
@@ -64,7 +64,7 @@ final class jj extends PcmStream {
             }
           }
           if (var4_int != 0) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           var5Lifetime1 = 0;
@@ -108,7 +108,7 @@ final class jj extends PcmStream {
           if (this.field_j[0] != null &&
             var7Lifetime1 <= this.field_j[0].length) {
             for (var8 = 0; this.field_j.length > var8; var8++) {
-              ArrayOperations.a(this.field_j[var8], 0, var7Lifetime1);
+              ArrayOperations.clearInts(this.field_j[var8], 0, var7Lifetime1);
             }
           } else {
             for (var8 = 0; var8 < this.field_j.length; var8++) {
@@ -118,7 +118,7 @@ final class jj extends PcmStream {
           }
           for (var8Lifetime1 = 0; var8Lifetime1 < this.field_p.length; var8Lifetime1++) {
             if (this.field_p[var8Lifetime1] != null) {
-              this.field_k[var8Lifetime1].a(this.field_j[var8Lifetime1], param1, param2);
+              this.field_k[var8Lifetime1].mixInto(this.field_j[var8Lifetime1], param1, param2);
             }
           }
           if (PcmPlayerService.field_o) {
@@ -246,7 +246,7 @@ final class jj extends PcmStream {
         }
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2_int = 0;
         int[] var2;
         int var3;
@@ -259,7 +259,7 @@ final class jj extends PcmStream {
         var4 = Kickabout.field_G;
         for (var2_int = 0; this.field_k.length > var2_int; var2_int++) {
           if (null != this.field_p[var2_int]) {
-            this.field_k[var2_int].a(param0);
+            this.field_k[var2_int].skipFrames(param0);
           }
         }
         var8 = new int[this.field_o];

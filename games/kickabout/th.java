@@ -97,8 +97,8 @@ final class th {
         try {
           var2 = -16 % ((param0 - 22) / 35);
           var1 = pn.field_z.g(24009);
-          while (var1 instanceof wh) {
-            ((wh) (var1)).b(112);
+          while (var1 instanceof FadingSoundPlayer) {
+            ((FadingSoundPlayer) (var1)).b(112);
             var1 = var1.field_d;
           }
           return;

@@ -13,7 +13,7 @@ final class kj {
         }
     }
 
-    final static ArgbSprite a(int param0, int param1, up param2, int param3, int param4, boolean param5) {
+    final static ArgbSprite a(int param0, int param1, PlayerStats param2, int param3, int param4, boolean param5) {
         int var6_int = 0;
         boolean stackIn_9_0 = false;
         int stackIn_10_1 = 0;
@@ -34,7 +34,7 @@ final class kj {
             if (param0 == var7.field_e &&
               param4 == var7.field_b &&
               param3 == var7.field_a &&
-              var7.field_d.b((byte) -98, param2)) {
+              var7.field_d.isSameAs((byte) -98, param2)) {
               stackIn_9_0 = var7.field_j;
               if (param5) {
                 stackIn_10_1 = 0;
@@ -52,7 +52,7 @@ final class kj {
           if (-bk.field_b + var6_long < 80L) {
             return null;
           }
-          if (ra.field_G != null) {
+          if (GameModesHelpScreen.field_G != null) {
             return null;
           }
           bk.field_b = var6_long;
@@ -75,7 +75,7 @@ final class kj {
     }
 
     final static void a(byte param0) {
-        sp.c(44, -96);
+        ShopPlayerSlot.c(44, -96);
         int var1 = 45 % ((param0 + 37) / 58);
     }
 

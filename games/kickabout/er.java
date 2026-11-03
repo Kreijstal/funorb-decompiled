@@ -34,7 +34,7 @@ final class er extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_double = (double)NameSuggestionsPanel.a(param1, ra.field_F, true);
+          var2_double = (double)NameSuggestionsPanel.a(param1, GameModesHelpScreen.field_F, true);
           var4 = (double)NameSuggestionsPanel.a(param1, IntrusiveDeque.field_g, true);
           var6 = (double)NameSuggestionsPanel.a(param1, gm.field_fb, true);
           if (param0 <= 91) {

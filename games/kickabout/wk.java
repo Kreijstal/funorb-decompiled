@@ -10,7 +10,7 @@ final class wk {
     static String field_b;
     static Sprite[] field_d;
     static PlayArea[] field_g;
-    static up field_c;
+    static PlayerStats field_c;
 
     final static short a(int param0, int param1) {
         float stackIn_8_0 = 0.0f;
@@ -102,77 +102,77 @@ final class wk {
     }
 
     final static void a(int param0) {
-        hn var3 = null;
+        ManagerAction var3 = null;
         int var2 = Kickabout.field_G;
         try {
           if (param0 != 50) {
             field_a = (String) null;
           }
-          var3 = (hn) (da.field_h.g(24009));
+          var3 = (ManagerAction) (MusicPatchNode.field_h.g(24009));
           while (var3 != null) {
-            GameLoopApplet.field_E.a(var3, false, 0);
-            var3 = (hn) (da.field_h.c(param0 ^ 19));
+            GameLoopApplet.field_E.applyAction(var3, false, 0);
+            var3 = (ManagerAction) (MusicPatchNode.field_h.c(param0 ^ 19));
           }
-          da.field_h.b(22997);
+          MusicPatchNode.field_h.b(22997);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wk.E(" + param0 + ')');
         }
     }
 
-    final static gr a(boolean param0, boolean param1) {
+    final static ClubState a(boolean param0, boolean param1) {
         Random var3;
         int var4;
-        up var5;
+        PlayerStats var5;
         int var6;
         int var7;
         int var8;
         int var9;
         int var10;
-        gr var11;
+        ClubState var11;
         var10 = Kickabout.field_G;
-        var11 = new gr();
+        var11 = new ClubState();
         var3 = new Random();
         var4 = 0;
         if (!param1) {
           wk.a(-87L, -8);
         }
         while (var4 < 5) {
-          var5 = new up();
-          var5.field_q = 0;
+          var5 = new PlayerStats();
+          var5.playerType = 0;
           if (var4 == 0) {
-            var5.field_q = 0;
+            var5.playerType = 0;
           }
           if (var4 == 2) {
-            var5.field_q = 3;
+            var5.playerType = 3;
           }
           if (var4 == 3) {
-            var5.field_q = 1;
+            var5.playerType = 1;
           }
           if (param0) {
-            var5.field_q = 0;
+            var5.playerType = 0;
           }
-          var5.field_e = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-126, td.field_a.length, var3);
-          var5.field_l = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, -1 + ce.field_G[var5.field_q].length, var3);
-          var5.field_r = 0;
+          var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-126, td.field_a.length, var3);
+          var5.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, -1 + ce.field_G[var5.playerType].length, var3);
+          var5.experience = 0;
           if (param0 &&
             var4 != 3) {
-            var5.field_g = 10;
-            var5.field_o = 10;
-            var5.field_n = 10;
+            var5.speed = 10;
+            var5.tackle = 10;
+            var5.power = 10;
           } else {
-            var5.field_o = 50;
-            var5.field_g = 50;
-            var5.field_n = 50;
+            var5.tackle = 50;
+            var5.speed = 50;
+            var5.power = 50;
           }
-          var5.field_h = new int[]{};
+          var5.trinketIds = new int[]{};
           var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-48, 5, var3);
           var7 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-40, 3, var3);
           var8 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(107, 3, var3);
           var9 = var8;
           var9 = var9 | var7 << 4;
           var9 = var9 | var6 << 8;
-          var5.field_j = var9;
-          var11.field_i[var4] = var5;
+          var5.appearance = var9;
+          var11.squad[var4] = var5;
           var4++;
         }
         return var11;

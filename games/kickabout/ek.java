@@ -78,19 +78,19 @@ final class ek extends i {
         if (param0 >= -11) {
           return;
         }
-        if (var11.field_Eb.e((byte) -113)) {
+        if (var11.field_Eb.isLinked((byte) -113)) {
           SoftwareRasterizer.darkenRectangle(var11.field_Eb.field_F + 3, var11.field_Eb.field_T, -6 + var11.field_Eb.field_q, var11.field_Eb.field_mb);
         }
-        pt.a(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
+        AuctionListing.a(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
         Object var5 = null;
         at var6_ref_at = (at) (this.field_L.field_Db.field_jb.g(24009));
         while (var6_ref_at != null) {
           if (this.field_H == var6_ref_at) {
             SoftwareRasterizer.a(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
-            SoftwareRasterizer.drawRoundedRectangle(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
+            SoftwareRasterizer.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
           } else {
             if (var6_ref_at.field_gb) {
-              SoftwareRasterizer.drawRoundedRectangle(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
+              SoftwareRasterizer.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
             }
           }
           var6_ref_at.i((byte) -76);
@@ -99,7 +99,7 @@ final class ek extends i {
         if (this.field_t != var5) {
           this.a(this.field_v, (lv) (var5), (Sprite) null, -94, this.field_u);
         }
-        ta.e(123);
+        TeamManagementScreen.e(123);
         if (null != this.field_H) {
           var6 = 130 + param1;
           var7 = 160 + param2;
@@ -113,7 +113,7 @@ final class ek extends i {
           }
         }
         this.field_L.a(117, false);
-        IsSixCommand.field_C.d(jw.field_Bb, (this.b(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
+        IsSixCommand.field_C.d(CheckboxLabelWidget.field_Bb, (this.b(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
     }
 
     final static void g(int param0) {
@@ -138,12 +138,12 @@ final class ek extends i {
         this.field_L.a(id.field_v * 32, true, (byte) -78, 32);
         if (var3 < this.field_L.field_Db.field_J &&
           this.field_K == 0) {
-          sp.c(59, 52);
+          ShopPlayerSlot.c(59, 52);
           this.field_K = 10;
         }
         if (this.field_L.field_Db.field_J < var3 &&
           this.field_K == 0) {
-          sp.c(60, -119);
+          ShopPlayerSlot.c(60, -119);
           this.field_K = 10;
         }
         if (param0 != 3) {
@@ -201,8 +201,8 @@ final class ek extends i {
         if (param1 == 0 &&
           null != this.field_H) {
           var3 = this.field_H.field_yb;
-          ge.a(var3, this.field_I, (byte) 123, this.field_F);
-          sp.c(50, -110);
+          MatchingTextValidator.a(var3, this.field_I, (byte) 123, this.field_F);
+          ShopPlayerSlot.c(50, -110);
         } else {
           ii.a((byte) -120);
         }

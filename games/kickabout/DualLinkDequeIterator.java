@@ -126,7 +126,7 @@ final class DualLinkDequeIterator implements Iterator {
         if (null == this.field_d) {
           throw new IllegalStateException();
         }
-        this.field_d.f(-88);
+        this.field_d.unlinkSecondary(-88);
         this.field_d = null;
     }
 

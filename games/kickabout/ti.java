@@ -123,10 +123,10 @@ final class ti {
         boolean stackIn_154_2 = false;
         String var3;
         String var3Lifetime1;
-        pt.a(SoftwareRasterizer.field_g + 640 >> 1, -22914, -640 + SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
+        AuctionListing.a(SoftwareRasterizer.field_g + 640 >> 1, -22914, -640 + SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
         if (0 < ns.field_a) {
           if (IntrusiveDeque.field_e != null) {
-            IntrusiveDeque.field_e.d(ss.field_c.field_s, 0);
+            IntrusiveDeque.field_e.drawWithOffsets(ss.field_c.field_s, 0);
             stackIn_5_0 = ss.field_c;
             stackIn_5_1 = 65;
             stackIn_6_2 = (param1) && (!TextWidgetPainter.field_f);
@@ -139,31 +139,31 @@ final class ti {
               if (!(0 >= fj.field_a) ||
                 !(ee.field_b <= 0)) {
                 if (null != IntrusiveDeque.field_e) {
-                  IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
+                  IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
                 }
                 stackIn_19_0 = dn.field_Cb;
                 stackIn_19_1 = 102;
                 stackIn_20_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
-                stackIn_23_0 = fp.field_p;
+                stackIn_23_0 = AuctionItem.field_p;
                 stackIn_23_1 = 49;
                 stackIn_24_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_24_2);
               }
-              ta.e(param0 + 62);
+              TeamManagementScreen.e(param0 + 62);
               return;
             }
             var3 = (String) null;
             ti.a((String) null, 87L, (byte) -24, false, (String) null);
             if (0 < fj.field_a) {
               if (null != IntrusiveDeque.field_e) {
-                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
               }
               stackIn_32_0 = dn.field_Cb;
               stackIn_32_1 = 102;
               stackIn_33_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_32_0).a(stackIn_32_1, stackIn_33_2);
-              stackIn_36_0 = fp.field_p;
+              stackIn_36_0 = AuctionItem.field_p;
               stackIn_36_1 = 49;
               stackIn_37_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_37_2);
@@ -174,24 +174,24 @@ final class ti {
                   stackIn_44_1 = 102;
                   stackIn_45_2 = (param1) && (!td.field_b);
                   ((hd) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2);
-                  stackIn_48_0 = fp.field_p;
+                  stackIn_48_0 = AuctionItem.field_p;
                   stackIn_48_1 = 49;
                   stackIn_49_2 = (param1) && (!td.field_b);
                   ((hd) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_49_2);
                 } else {
-                  IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
+                  IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
                   stackIn_53_0 = dn.field_Cb;
                   stackIn_53_1 = 102;
                   stackIn_54_2 = (param1) && (!td.field_b);
                   ((hd) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_54_2);
-                  stackIn_57_0 = fp.field_p;
+                  stackIn_57_0 = AuctionItem.field_p;
                   stackIn_57_1 = 49;
                   stackIn_58_2 = (param1) && (!td.field_b);
                   ((hd) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_58_2);
                 }
               }
             }
-            ta.e(param0 + 62);
+            TeamManagementScreen.e(param0 + 62);
             return;
           }
           stackIn_63_0 = ss.field_c;
@@ -210,17 +210,17 @@ final class ti {
               stackIn_140_1 = 102;
               stackIn_141_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_140_0).a(stackIn_140_1, stackIn_141_2);
-              stackIn_144_0 = fp.field_p;
+              stackIn_144_0 = AuctionItem.field_p;
               stackIn_144_1 = 49;
               stackIn_145_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_144_0).a(stackIn_144_1, stackIn_145_2);
             } else {
-              IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
+              IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
               stackIn_149_0 = dn.field_Cb;
               stackIn_149_1 = 102;
               stackIn_150_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_149_0).a(stackIn_149_1, stackIn_150_2);
-              stackIn_153_0 = fp.field_p;
+              stackIn_153_0 = AuctionItem.field_p;
               stackIn_153_1 = 49;
               stackIn_154_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_153_0).a(stackIn_153_1, stackIn_154_2);
@@ -232,17 +232,17 @@ final class ti {
                 stackIn_120_1 = 102;
                 stackIn_121_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_120_0).a(stackIn_120_1, stackIn_121_2);
-                stackIn_124_0 = fp.field_p;
+                stackIn_124_0 = AuctionItem.field_p;
                 stackIn_124_1 = 49;
                 stackIn_125_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_124_0).a(stackIn_124_1, stackIn_125_2);
               } else {
-                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
                 stackIn_129_0 = dn.field_Cb;
                 stackIn_129_1 = 102;
                 stackIn_130_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_129_0).a(stackIn_129_1, stackIn_130_2);
-                stackIn_133_0 = fp.field_p;
+                stackIn_133_0 = AuctionItem.field_p;
                 stackIn_133_1 = 49;
                 stackIn_134_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_133_0).a(stackIn_133_1, stackIn_134_2);
@@ -258,17 +258,17 @@ final class ti {
               stackIn_97_1 = 102;
               stackIn_98_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_97_0).a(stackIn_97_1, stackIn_98_2);
-              stackIn_101_0 = fp.field_p;
+              stackIn_101_0 = AuctionItem.field_p;
               stackIn_101_1 = 49;
               stackIn_102_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_101_0).a(stackIn_101_1, stackIn_102_2);
             } else {
-              IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
+              IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
               stackIn_106_0 = dn.field_Cb;
               stackIn_106_1 = 102;
               stackIn_107_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_106_0).a(stackIn_106_1, stackIn_107_2);
-              stackIn_110_0 = fp.field_p;
+              stackIn_110_0 = AuctionItem.field_p;
               stackIn_110_1 = 49;
               stackIn_111_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_110_0).a(stackIn_110_1, stackIn_111_2);
@@ -280,17 +280,17 @@ final class ti {
                 stackIn_86_1 = 102;
                 stackIn_87_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_86_0).a(stackIn_86_1, stackIn_87_2);
-                stackIn_90_0 = fp.field_p;
+                stackIn_90_0 = AuctionItem.field_p;
                 stackIn_90_1 = 49;
                 stackIn_91_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_90_0).a(stackIn_90_1, stackIn_91_2);
               } else {
-                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
                 stackIn_77_0 = dn.field_Cb;
                 stackIn_77_1 = 102;
                 stackIn_78_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_77_0).a(stackIn_77_1, stackIn_78_2);
-                stackIn_81_0 = fp.field_p;
+                stackIn_81_0 = AuctionItem.field_p;
                 stackIn_81_1 = 49;
                 stackIn_82_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_81_0).a(stackIn_81_1, stackIn_82_2);
@@ -298,7 +298,7 @@ final class ti {
             }
           }
         }
-        ta.e(param0 + 62);
+        TeamManagementScreen.e(param0 + 62);
     }
 
     final ue a(int param0, String param1) {
@@ -375,12 +375,12 @@ final class ti {
         }
     }
 
-    final static ps a(String param0, long param1, byte param2, boolean param3, String param4) {
+    final static LoginCredentials a(String param0, long param1, byte param2, boolean param3, String param4) {
         RuntimeException var6 = null;
-        ps stackIn_2_0 = null;
-        gp stackIn_6_0 = null;
+        LoginCredentials stackIn_2_0 = null;
+        PasswordLoginCredentials stackIn_6_0 = null;
         wo stackIn_10_0 = null;
-        aa stackIn_12_0 = null;
+        KeyedLoginCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -389,20 +389,20 @@ final class ti {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 18) {
-            stackIn_2_0 = (ps) null;
+            stackIn_2_0 = (LoginCredentials) null;
             return stackIn_2_0;
           }
           if (param1 == 0L &&
             param4 != null) {
-            stackIn_6_0 = new gp(param4, param0);
-            return (ps) ((Object) stackIn_6_0);
+            stackIn_6_0 = new PasswordLoginCredentials(param4, param0);
+            return (LoginCredentials) ((Object) stackIn_6_0);
           }
           if (param3) {
             stackIn_10_0 = new wo(param1, param0);
-            return (ps) ((Object) stackIn_10_0);
+            return (LoginCredentials) ((Object) stackIn_10_0);
           }
-          stackIn_12_0 = new aa(param1, param0);
-          return (ps) ((Object) stackIn_12_0);
+          stackIn_12_0 = new KeyedLoginCredentials(param1, param0);
+          return (LoginCredentials) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -465,20 +465,20 @@ final class ti {
             var5 = param0.field_n + var4;
             try {
               try {
-                var6_int = param0.h((byte) -107);
+                var6_int = param0.readUnsignedByte((byte) -107);
                 if (255 == var6_int) {
-                  var7_int = param0.h((byte) -127);
+                  var7_int = param0.readUnsignedByte((byte) -127);
                   if (var7_int == 0) {
-                    this.field_a = param0.h((byte) -112);
+                    this.field_a = param0.readUnsignedByte((byte) -112);
                   }
                   decompiledRegionSelector0 = 0;
                 } else {
                   var7 = new ue();
                   if (var6_int == 0) {
-                    var7.field_e = param0.h((byte) -127);
+                    var7.field_e = param0.readUnsignedByte((byte) -127);
                   } else {
                     if (1 == var6_int) {
-                      var7.field_j = param0.a(47);
+                      var7.field_j = param0.readString(47);
                     }
                   }
                   var7.field_i = param0.field_n;

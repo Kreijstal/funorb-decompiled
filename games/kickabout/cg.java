@@ -30,15 +30,15 @@ final class cg extends SingleChildContainer {
           }
           k.field_i = k.field_i + 1;
           if (ji.field_Hb == -1 &&
-            lj.field_h == -1) {
+            TextLine.field_h == -1) {
             ji.field_Hb = BytePlusOneCommand.field_A;
-            lj.field_h = n.field_m;
+            TextLine.field_h = n.field_m;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {
-            decompiledFrameRemainder0 = !(param0.equals(mh.field_o));
+            decompiledFrameRemainder0 = !(param0.equals(EmailAvailabilityValidator.field_o));
           } else {
-            decompiledFrameRemainder0 = (null == mh.field_o);
+            decompiledFrameRemainder0 = (null == EmailAvailabilityValidator.field_o);
           }
           if (decompiledFrameRemainder0) {
             if (!nc.field_a) {
@@ -64,7 +64,7 @@ final class cg extends SingleChildContainer {
                 }
               }
             }
-            td.field_d = lj.field_h;
+            td.field_d = TextLine.field_h;
             ws.field_e = ji.field_Hb;
             if (param0 == null) {
               if (var2_int != 0) {
@@ -78,16 +78,16 @@ final class cg extends SingleChildContainer {
             us.field_e > k.field_i &&
             BytePlusOneCommand.field_C) {
             k.field_i = 0;
-            td.field_d = lj.field_h;
+            td.field_d = TextLine.field_h;
             ws.field_e = ji.field_Hb;
           }
-          mh.field_o = param0;
+          EmailAvailabilityValidator.field_o = param0;
           if (nc.field_a &&
             k.field_i == nd.field_b) {
             k.field_i = 0;
             nc.field_a = false;
           }
-          lj.field_h = -1;
+          TextLine.field_h = -1;
           ji.field_Hb = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -160,7 +160,7 @@ final class cg extends SingleChildContainer {
           this.field_M = param6;
           this.field_I = param8;
           var12_int = this.field_M - this.field_J;
-          var13 = this.field_I.c(param10, var12_int, this.field_I.field_G) + 2 * this.field_J;
+          var13 = this.field_I.paragraphHeight(param10, var12_int, this.field_I.field_G) + 2 * this.field_J;
           if (param3 < var13) {
             this.a(var13, 1, param0, param2, param1);
           } else {

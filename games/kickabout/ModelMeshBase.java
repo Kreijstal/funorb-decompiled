@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ModelMeshBase extends cv {
-    private final void blendAnimationFrames(je param0, db param1, db param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
+    private final void a(AnimationSkeleton param0, db param1, db param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
         int var11;
         int var12;
         int var13;
@@ -142,24 +142,24 @@ abstract class ModelMeshBase extends cv {
                   if (var26 != -1) {
                     var31Lifetime1 = param8 & param0.field_r[var26];
                     if (var31Lifetime1 == 65535) {
-                      this.applyGroupTransform(0, param0.field_q[var26], 0, 0, 0, param7);
+                      this.a(0, param0.field_q[var26], 0, 0, 0, param7);
                     } else {
-                      this.applyMaskedGroupTransform(0, param0.field_q[var26], 0, 0, 0, param7, var31Lifetime1, param9);
+                      this.a(0, param0.field_q[var26], 0, 0, 0, param7, var31Lifetime1, param9);
                     }
                   }
                 } else {
                   var31Lifetime1 = param8 & param0.field_r[var21];
                   if (var31Lifetime1 == 65535) {
-                    this.applyGroupTransform(0, param0.field_q[var21], 0, 0, 0, param7);
+                    this.a(0, param0.field_q[var21], 0, 0, 0, param7);
                   } else {
-                    this.applyMaskedGroupTransform(0, param0.field_q[var21], 0, 0, 0, param7, var31Lifetime1, param9);
+                    this.a(0, param0.field_q[var21], 0, 0, 0, param7, var31Lifetime1, param9);
                   }
                 }
                 var31Lifetime2 = param8 & param0.field_r[var36];
                 if (var31Lifetime2 == 65535) {
-                  this.applyGroupTransform(var17, param0.field_q[var36], var28, var29, var30, param7);
+                  this.a(var17, param0.field_q[var36], var28, var29, var30, param7);
                 } else {
-                  this.applyMaskedGroupTransform(var17, param0.field_q[var36], var28, var29, var30, param7, var31Lifetime2, param9);
+                  this.a(var17, param0.field_q[var36], var28, var29, var30, param7, var31Lifetime2, param9);
                 }
               }
             }
@@ -176,16 +176,16 @@ abstract class ModelMeshBase extends cv {
             if (var13Lifetime1 != -1) {
               var14Lifetime1 = param8 & param0.field_r[var13Lifetime1];
               if (var14Lifetime1 == 65535) {
-                this.applyGroupTransform(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7);
+                this.a(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7);
               } else {
-                this.applyMaskedGroupTransform(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7, var14Lifetime1, param9);
+                this.a(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7, var14Lifetime1, param9);
               }
             }
             var14Lifetime1Lifetime1 = param8 & param0.field_r[var12Lifetime1];
             if (var14Lifetime1Lifetime1 == 65535) {
-              this.applyGroupTransform(param0.field_o[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_c[var11Lifetime1], (int) param1.field_f[var11Lifetime1], (int) param1.field_d[var11Lifetime1], param7);
+              this.a(param0.field_o[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_c[var11Lifetime1], (int) param1.field_f[var11Lifetime1], (int) param1.field_d[var11Lifetime1], param7);
             } else {
-              this.applyMaskedGroupTransform(param0.field_o[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_c[var11Lifetime1], (int) param1.field_f[var11Lifetime1], (int) param1.field_d[var11Lifetime1], param7, var14Lifetime1Lifetime1, param9);
+              this.a(param0.field_o[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_c[var11Lifetime1], (int) param1.field_f[var11Lifetime1], (int) param1.field_d[var11Lifetime1], param7, var14Lifetime1Lifetime1, param9);
             }
           }
         }
@@ -196,19 +196,19 @@ abstract class ModelMeshBase extends cv {
 
     abstract ModelMeshBase a(boolean param0, boolean param1, boolean param2);
 
-    abstract boolean b();
+    abstract boolean beginAnimation();
 
-    abstract void a();
+    abstract void finishAnimation();
 
-    final void applyAnimationFrame(ef param0, int param1, ef param2, int param3, int param4, int param5, boolean param6) {
+    final void a(ef param0, int param1, ef param2, int param3, int param4, int param5, boolean param6) {
         if (param1 == -1) {
           return;
         }
-        if (!this.b()) {
+        if (!this.beginAnimation()) {
           return;
         }
         db var8 = param0.field_q[param1];
-        je var9 = var8.field_e;
+        AnimationSkeleton var9 = var8.field_e;
         Object var10 = null;
         if (param2 != null) {
           var10 = param2.field_q[param3];
@@ -216,11 +216,11 @@ abstract class ModelMeshBase extends cv {
             var10 = null;
           }
         }
-        this.blendAnimationFrames(var9, var8, (db) (var10), param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
-        this.a();
+        this.a(var9, var8, (db) (var10), param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
+        this.finishAnimation();
     }
 
-    abstract void applyGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5);
+    abstract void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5);
 
-    abstract void applyMaskedGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
+    abstract void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 }

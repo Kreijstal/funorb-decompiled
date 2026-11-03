@@ -20,10 +20,10 @@ final class st extends iq {
     final static void a(CommonGame param0, int param1, int param2) {
         try {
           vl.field_d = true;
-          gp.field_i = -pq.field_Q.field_o;
+          PasswordLoginCredentials.field_i = -pq.field_Q.field_o;
           bm.field_I = 0;
           mk.field_c = param1;
-          iu.field_i = param2;
+          CachedListingRow.field_i = param2;
           tb.field_w = param0;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "st.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -166,7 +166,7 @@ final class st extends iq {
           this.field_k = param3;
           var16 = new String[1 + param1.b(param6, param0)];
           var17 = var16;
-          var10 = Math.max(1, param1.a(param6, new int[]{param0}, var17));
+          var10 = Math.max(1, param1.wrapText(param6, new int[]{param0}, var17));
           if (param5 < 89) {
             return;
           }
@@ -313,7 +313,7 @@ final class st extends iq {
     }
 
     final static void b(int param0, int param1, int param2) {
-        gp.field_i = param0;
+        PasswordLoginCredentials.field_i = param0;
         if (param1 < 76) {
           field_d = (String) null;
           hq.field_d = param2;

@@ -40,8 +40,8 @@ final class BufferedCacheFile {
           BytePlusOneCommand.field_C = rp.field_A;
           rp.field_A = false;
           WidgetContainer.field_A = vu.field_Fb;
-          sm.field_q = fp.field_w;
-          vc.field_y = UiWidget.field_l;
+          sm.field_q = AuctionItem.field_w;
+          ReceivedAuctionItem.field_y = UiWidget.field_l;
           vu.field_Fb = 0;
         }
         if (param0 != 58) {
@@ -88,7 +88,7 @@ final class BufferedCacheFile {
     final static void a(int param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
           vp.field_k = param1;
-          sf.field_F = param3;
+          MainMenuScreen.field_F = param3;
           cv.field_f = param2;
           int var4_int = 82 / ((60 - param0) / 61);
           ClientException.a(SoftwareRasterizer.field_f / 2, 0, SoftwareRasterizer.field_g / 2);
@@ -158,12 +158,12 @@ final class BufferedCacheFile {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         try {
-          BytePlusOneCommand.a(jw.field_Ab, kr.field_b, kn.field_F, uk.field_b, nj.field_d, param0, r.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, ip.field_c);
+          BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, kr.field_b, kn.field_F, uk.field_b, nj.field_d, param0, r.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, ip.field_c);
           il.field_d = ModalStack.a(param1, -127, "lobby", "chatfilter");
           IntrusiveDeque.field_h[2] = pa.field_j;
-          IntrusiveDeque.field_h[param3] = gr.field_Q;
+          IntrusiveDeque.field_h[param3] = ClubState.field_Q;
           IntrusiveDeque.field_h[1] = ConsoleExpression.field_n;
-          at.a(rq.field_E, param2, (byte) -32);
+          at.a(ServerMessageScreen.field_E, param2, (byte) -32);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ew.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

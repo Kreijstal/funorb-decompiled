@@ -32,7 +32,7 @@ final class eq {
         int var1 = rb.field_Bb * rb.field_Bb;
         int var2 = -(pg.field_b * pg.field_b) + var1;
         int var3 = c.field_c + var2 * (-c.field_c + na.field_Ab) / var1;
-        g.field_a.a(true, 640, df.field_H, var3, 120);
+        g.field_a.a(true, 640, AuctionsHelpScreen.field_H, var3, 120);
         cf.a(124, mj.field_b, 640, 5, eb.field_b, na.field_Ab - 24, param0);
     }
 
@@ -42,7 +42,7 @@ final class eq {
           if (null != TextButton.field_v) {
             return true;
           }
-          if (ne.k((byte) -55)) {
+          if (GameplayHelpScreen.k((byte) -55)) {
             return true;
           }
           if (ck.field_b != null) {
@@ -56,7 +56,7 @@ final class eq {
         if (null != TextButton.field_v) {
           return true;
         }
-        if (ne.k((byte) -55)) {
+        if (GameplayHelpScreen.k((byte) -55)) {
           return true;
         }
         if (ck.field_b != null) {
@@ -83,9 +83,9 @@ final class eq {
         if (param0 == 1) {
           nq.field_I = 0;
           ig.field_g = vp.field_c;
-          ps.field_e = 0;
-          fp.field_l = new ko(2);
-          fp.field_l.a(vp.a(n.field_m, BytePlusOneCommand.field_A, (byte) 42), 0, -1, param1);
+          LoginCredentials.field_e = 0;
+          AuctionItem.field_l = new MenuSelection(2);
+          AuctionItem.field_l.a(vp.a(n.field_m, BytePlusOneCommand.field_A, (byte) 42), 0, -1, param1);
           return;
         }
     }
@@ -138,7 +138,7 @@ final class eq {
           var9 = var7.a(-91);
           if (var9 == null) {
             var7.c((byte) -109);
-            var7.f(62);
+            var7.unlinkSecondary(62);
             this.field_f = this.field_f + var7.field_o;
             return null;
           }
@@ -148,7 +148,7 @@ final class eq {
             this.field_i.a(-8545, var6);
             ((ij) ((Object) var6)).field_l = 0L;
             var7.c((byte) -109);
-            var7.f(53);
+            var7.unlinkSecondary(53);
           } else {
             this.field_i.a(param1 ^ -8524, var7);
             var7.field_l = 0L;
@@ -162,7 +162,7 @@ final class eq {
         var8 = var7.a(-91);
         if (var8 == null) {
           var7.c((byte) -109);
-          var7.f(62);
+          var7.unlinkSecondary(62);
           this.field_f = this.field_f + var7.field_o;
           return null;
         }
@@ -172,7 +172,7 @@ final class eq {
           this.field_i.a(-8545, var6Lifetime1);
           ((ij) ((Object) var6Lifetime1)).field_l = 0L;
           var7.c((byte) -109);
-          var7.f(53);
+          var7.unlinkSecondary(53);
         } else {
           this.field_i.a(param1 ^ -8524, var7);
           var7.field_l = 0L;
@@ -193,7 +193,7 @@ final class eq {
             return;
           }
           param0.c((byte) -109);
-          param0.f(-113);
+          param0.unlinkSecondary(-113);
           this.field_f = this.field_f + param0.field_o;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -148,7 +148,7 @@ final class bb extends hd {
           var12 = "</col>";
           for (var13 = 0; this.field_Fb > var13; var13++) {
             if (this.field_Hb[var13] > 0) {
-              param6[var13] = var11 + bn.a(this.field_Hb[var13], (byte) -83).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + LeaguesScreen.a(this.field_Hb[var13], (byte) -83).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.field_Ob[var13] != null ||
@@ -297,10 +297,10 @@ final class bb extends hd {
                 gd.a(21, 1, var6, param2);
               }
               String var8 = (String) null;
-              gp.a(var5, -128, NodeHashTableIterator.field_b, param3, at.field_Kb, (String) null);
+              PasswordLoginCredentials.a(var5, -128, NodeHashTableIterator.field_b, param3, at.field_Kb, (String) null);
               gk.a(at.field_Kb, var5, IntDoubleCommand.field_A, NodeHashTableIterator.field_b, (byte) -51);
               fa.b(125);
-              jm.b(68);
+              DelayedServerPacket.b(68);
             } else {
               gw.a(8);
               fa.b(-123);

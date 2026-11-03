@@ -22,12 +22,12 @@ final class bt {
             GameLoopApplet.b(15848, 11, 0);
           }
         } else {
-          if (um.field_e.e(param0 - 2) &&
+          if (um.field_e.isSpectator(param0 - 2) &&
             !um.field_e.b(-21660)) {
             GameLoopApplet.b(param0 + 15848, 11, 0);
           } else {
             gu.a(uv.field_i.h((byte) 74), (byte) -114, 11);
-            an.field_d = true;
+            QuickChatPhraseCache.field_d = true;
           }
         }
         if (param0 != 0) {
@@ -54,7 +54,7 @@ final class bt {
           var7 = var7 + var4[1];
         }
         var5[2].a(0, var7);
-        ta.e(118);
+        TeamManagementScreen.e(118);
         LoginForm.a(var6, 20684);
         return var6;
     }
@@ -118,34 +118,34 @@ final class bt {
         try {
           var1_int = 73 % ((param0 + 65) / 33);
           if (ks.field_e == 1) {
-            stackIn_72_0 = tc.a(4, (byte) 97, 29360128, mh.field_k, 74973184);
+            stackIn_72_0 = tc.a(4, (byte) 97, 29360128, EmailAvailabilityValidator.field_k, 74973184);
             return stackIn_72_0;
           }
           if (ks.field_e == 2) {
-            stackIn_4_0 = tc.a(4, (byte) 82, 29360128, mh.field_k, 44040192);
+            stackIn_4_0 = tc.a(4, (byte) 82, 29360128, EmailAvailabilityValidator.field_k, 44040192);
             return stackIn_4_0;
           }
           if (ks.field_e == 3) {
-            stackIn_7_0 = tc.a(8, (byte) 116, 29360128, mh.field_k, 18481152);
+            stackIn_7_0 = tc.a(8, (byte) 116, 29360128, EmailAvailabilityValidator.field_k, 18481152);
             return stackIn_7_0;
           }
           if (ks.field_e == 4) {
             var2 = 1;
-            var2 = var2 != 0 & tc.a(4, (byte) 121, 53084160, mh.field_k, 72744960) ? 1 : 0;
+            var2 = var2 != 0 & tc.a(4, (byte) 121, 53084160, EmailAvailabilityValidator.field_k, 72744960) ? 1 : 0;
             var2 = var2 != 0 & tc.a(1, (byte) 93, 49152000, ld.field_f, 55050240) ? 1 : 0;
             stackIn_70_0 = var2;
             return stackIn_70_0 != 0;
           }
           if (ks.field_e == 5) {
             var2Lifetime1 = 1;
-            var2Lifetime1 = var2Lifetime1 != 0 & tc.a(1, (byte) 122, 53084160, mh.field_k, 55050240) ? 1 : 0;
+            var2Lifetime1 = var2Lifetime1 != 0 & tc.a(1, (byte) 122, 53084160, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
             var2Lifetime1 = var2Lifetime1 != 0 & tc.a(4, (byte) 89, 49152000, ld.field_f, 72744960) ? 1 : 0;
             stackIn_11_0 = var2Lifetime1;
             return stackIn_11_0 != 0;
           }
           if (6 == ks.field_e) {
             var2Lifetime2 = 1;
-            var2Lifetime2 = var2Lifetime2 != 0 & tc.a(2, (byte) 116, 52428800, mh.field_k, 43909120) ? 1 : 0;
+            var2Lifetime2 = var2Lifetime2 != 0 & tc.a(2, (byte) 116, 52428800, EmailAvailabilityValidator.field_k, 43909120) ? 1 : 0;
             var2Lifetime2 = var2Lifetime2 != 0 & tc.a(8, (byte) 84, 13107200, ld.field_f, 43909120) ? 1 : 0;
             stackIn_14_0 = var2Lifetime2;
             return stackIn_14_0 != 0;
@@ -166,7 +166,7 @@ final class bt {
             }
             var2Lifetime3Lifetime1 = stackIn_50_0 & stackIn_51_1;
             stackIn_53_0 = var2Lifetime3Lifetime1;
-            if (et.field_d.field_P[1][4].positionY != fm.a((byte) -27, 1)) {
+            if (et.field_d.field_P[1][4].positionY != AchievementsScreen.a((byte) -27, 1)) {
               stackIn_54_1 = 0;
             } else {
               stackIn_54_1 = 1;
@@ -192,7 +192,7 @@ final class bt {
           if (ks.field_e == 9) {
             var2Lifetime4 = 1;
             var2Lifetime4 = var2Lifetime4 != 0 & tc.a(2, (byte) 119, 49152000, ld.field_f, 55050240) ? 1 : 0;
-            var2Lifetime4 = var2Lifetime4 != 0 & tc.a(8, (byte) 82, 20971520, mh.field_k, 55050240) ? 1 : 0;
+            var2Lifetime4 = var2Lifetime4 != 0 & tc.a(8, (byte) 82, 20971520, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
             var2Lifetime4 = var2Lifetime4 != 0 & tc.a(1, (byte) 119, 31457280, et.field_d.field_P[1][3], 54067200) ? 1 : 0;
             var2Lifetime4 = var2Lifetime4 != 0 & tc.a(1, (byte) 123, 31457280, et.field_d.field_P[1][4], 56033280) ? 1 : 0;
             stackIn_46_0 = var2Lifetime4;
@@ -223,9 +223,9 @@ final class bt {
             return stackIn_42_0 != 0;
           }
           var2Lifetime6 = 1;
-          var2Lifetime6 = var2Lifetime6 != 0 & tc.a(12, (byte) 113, 3276800, mh.field_k, 58982400) ? 1 : 0;
+          var2Lifetime6 = var2Lifetime6 != 0 & tc.a(12, (byte) 113, 3276800, EmailAvailabilityValidator.field_k, 58982400) ? 1 : 0;
           if (var2Lifetime6 != 0 &&
-            mh.field_k.action == 0 &&
+            EmailAvailabilityValidator.field_k.action == 0 &&
             0 == et.field_d.field_V.possessorTeam) {
             ej.b(200, -2, -100, 30);
           }

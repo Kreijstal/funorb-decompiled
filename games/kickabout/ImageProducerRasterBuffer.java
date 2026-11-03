@@ -16,9 +16,9 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     final void drawImage(int param0, int param1, int param2, java.awt.Graphics param3) {
         try {
           if (param1 != 10) {
-            this.b((byte) 4);
+            this.pushPixels((byte) 4);
           }
-          this.b((byte) -104);
+          this.pushPixels((byte) -104);
           param3.drawImage(this.field_d, param2, param0, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "dh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -31,17 +31,17 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         this.field_b = new int[param1 * param2 + 1];
         this.field_h = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
         this.field_d = param3.createImage((java.awt.image.ImageProducer) (this));
-        this.b((byte) 119);
+        this.pushPixels((byte) 119);
         param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
-        this.b((byte) -127);
+        this.pushPixels((byte) -127);
         param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
-        this.b((byte) 116);
+        this.pushPixels((byte) 116);
         param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
         if (param0 != 30) {
           return;
         }
         try {
-          this.b(32);
+          this.bindAsTarget(32);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -68,7 +68,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         return SetLagCommand.a(param1, (byte) -58, 1, false, false, true);
     }
 
-    private final synchronized void b(byte param0) {
+    private final synchronized void pushPixels(byte param0) {
         int var2 = -79 % ((62 - param0) / 32);
         if (null != this.field_f) {
           this.field_f.setPixels(0, 0, this.field_a, this.field_e, this.field_h, this.field_b, 0, this.field_a);
@@ -81,7 +81,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         return this.field_f == param0;
     }
 
-    final static int a(up param0, boolean param1) {
+    final static int a(PlayerStats param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_6_0 = 0;
@@ -93,8 +93,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (!param1) {
             field_g = (String) null;
           }
-          var2_int = gp.a(param0, -576054046) / 10;
-          if (gp.a(param0, -576054046) > 0 &&
+          var2_int = PasswordLoginCredentials.a(param0, -576054046) / 10;
+          if (PasswordLoginCredentials.a(param0, -576054046) > 0 &&
             var2_int == 0) {
             var2_int = 1;
           }
@@ -150,15 +150,15 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final static void a(int param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
-          param2.a(param3 ^ -3315, 12);
-          param2.g(param3 ^ 1207447422, 17);
-          param2.g(-1207444472, param1);
+          param2.writeByte(param3 ^ -3315, 12);
+          param2.writeShort(param3 ^ 1207447422, 17);
+          param2.writeShort(-1207444472, param1);
           if (param3 != -3210) {
             PacketBuffer var6 = (PacketBuffer) null;
             ImageProducerRasterBuffer.a(106, -79, (PacketBuffer) null, 72, 113);
           }
-          param2.g(param3 - 1207441262, param4);
-          param2.a(param3 ^ -3298, param0);
+          param2.writeShort(param3 - 1207441262, param4);
+          param2.writeByte(param3 ^ -3298, param0);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "dh.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -214,128 +214,128 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         int var1Lifetime2Lifetime1;
         int var2Lifetime2Lifetime1;
         if (!param0) {
-          up var3 = (up) null;
-          ImageProducerRasterBuffer.a((up) null, false);
-          if (!iu.field_h) {
+          PlayerStats var3 = (PlayerStats) null;
+          ImageProducerRasterBuffer.a((PlayerStats) null, false);
+          if (!CachedListingRow.field_h) {
             IterableNodeHashTable.a(true, (byte) 89);
             return;
           }
           if (null == um.field_e) {
             ia.field_c = false;
             var1 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
-            var2 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
+            var2 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
             if (var2 * var2 + var1 * var1 < 10000) {
               fieldTemp$0 = BufferedCacheFile.field_a + 1;
               BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
               BufferedCacheFile.field_a = fieldTemp$0 % nv.field_E.length;
             }
-            mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)qt.field_r[BufferedCacheFile.field_a]);
+            mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
             IterableNodeHashTable.a(false, (byte) 89);
             return;
           }
-          if (ra.field_G == null) {
-            if (cq.field_h.field_c != 0) {
+          if (GameModesHelpScreen.field_G == null) {
+            if (AuctionLogEntry.field_h.screenId != 0) {
               IterableNodeHashTable.a(true, (byte) 89);
             } else {
               ia.field_c = false;
               var1Lifetime4 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
-              var2Lifetime4 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
+              var2Lifetime4 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
               if (var2Lifetime4 * var2Lifetime4 + var1Lifetime4 * var1Lifetime4 < 10000) {
                 fieldTemp$1 = BufferedCacheFile.field_a + 1;
                 BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
                 BufferedCacheFile.field_a = fieldTemp$1 % nv.field_E.length;
               }
-              mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)qt.field_r[BufferedCacheFile.field_a]);
+              mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
               IterableNodeHashTable.a(false, (byte) 89);
             }
             return;
           }
-          if (ra.field_G.field_c == 0) {
+          if (GameModesHelpScreen.field_G.screenId == 0) {
             ia.field_c = false;
             var1Lifetime5 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
-            var2Lifetime5 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
+            var2Lifetime5 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
             if (var2Lifetime5 * var2Lifetime5 + var1Lifetime5 * var1Lifetime5 < 10000) {
               fieldTemp$2 = BufferedCacheFile.field_a + 1;
               BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
               BufferedCacheFile.field_a = fieldTemp$2 % nv.field_E.length;
             }
-            mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)qt.field_r[BufferedCacheFile.field_a]);
+            mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
             IterableNodeHashTable.a(false, (byte) 89);
             return;
           }
-          if (cq.field_h.field_c != 0) {
+          if (AuctionLogEntry.field_h.screenId != 0) {
             IterableNodeHashTable.a(true, (byte) 89);
             return;
           }
           ia.field_c = false;
           var1Lifetime6 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
-          var2Lifetime6 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
+          var2Lifetime6 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime6 * var2Lifetime6 + var1Lifetime6 * var1Lifetime6 < 10000) {
             fieldTemp$3 = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = fieldTemp$3 % nv.field_E.length;
           }
-          mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)qt.field_r[BufferedCacheFile.field_a]);
+          mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
           IterableNodeHashTable.a(false, (byte) 89);
           return;
         }
-        if (!iu.field_h) {
+        if (!CachedListingRow.field_h) {
           IterableNodeHashTable.a(true, (byte) 89);
           return;
         }
         if (null == um.field_e) {
           ia.field_c = false;
           var1Lifetime1 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
-          var2Lifetime1 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
+          var2Lifetime1 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime1 * var2Lifetime1 + var1Lifetime1 * var1Lifetime1 < 10000) {
             fieldTemp$4 = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = fieldTemp$4 % nv.field_E.length;
           }
-          mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)qt.field_r[BufferedCacheFile.field_a]);
+          mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
           IterableNodeHashTable.a(false, (byte) 89);
           return;
         }
-        if (ra.field_G != null) {
-          if (ra.field_G.field_c != 0) {
-            if (cq.field_h.field_c != 0) {
+        if (GameModesHelpScreen.field_G != null) {
+          if (GameModesHelpScreen.field_G.screenId != 0) {
+            if (AuctionLogEntry.field_h.screenId != 0) {
               IterableNodeHashTable.a(true, (byte) 89);
             } else {
               ia.field_c = false;
               var1Lifetime2 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
-              var2Lifetime2 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
+              var2Lifetime2 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
               if (var2Lifetime2 * var2Lifetime2 + var1Lifetime2 * var1Lifetime2 < 10000) {
                 fieldTemp$5 = BufferedCacheFile.field_a + 1;
                 BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
                 BufferedCacheFile.field_a = fieldTemp$5 % nv.field_E.length;
               }
-              mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)qt.field_r[BufferedCacheFile.field_a]);
+              mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
               IterableNodeHashTable.a(false, (byte) 89);
             }
             return;
           }
           ia.field_c = false;
           var1Lifetime2Lifetime1 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
-          var2Lifetime2Lifetime1 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
+          var2Lifetime2Lifetime1 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime2Lifetime1 * var2Lifetime2Lifetime1 + var1Lifetime2Lifetime1 * var1Lifetime2Lifetime1 < 10000) {
             fieldTemp$6 = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = fieldTemp$6 % nv.field_E.length;
           }
-          mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)qt.field_r[BufferedCacheFile.field_a]);
+          mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
           IterableNodeHashTable.a(false, (byte) 89);
           return;
         }
-        if (cq.field_h.field_c == 0) {
+        if (AuctionLogEntry.field_h.screenId == 0) {
           ia.field_c = false;
           var1Lifetime3 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
-          var2Lifetime3 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
+          var2Lifetime3 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime3 * var2Lifetime3 + var1Lifetime3 * var1Lifetime3 < 10000) {
             fieldTemp$7 = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = fieldTemp$7 % nv.field_E.length;
           }
-          mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)qt.field_r[BufferedCacheFile.field_a]);
+          mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
           IterableNodeHashTable.a(false, (byte) 89);
           return;
         }

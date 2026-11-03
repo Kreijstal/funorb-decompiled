@@ -96,7 +96,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode d(int param0) {
+    final IntrusiveNode last(int param0) {
         if (param0 != -9033) {
           return (IntrusiveNode) null;
         }
@@ -150,7 +150,7 @@ final class IntrusiveDeque {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = -var3 + ((var3 << 5) + mf.a(param1.charAt(var4), (byte) -104));
+            var3 = -var3 + ((var3 << 5) + SquadGridWidget.a(param1.charAt(var4), (byte) -104));
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;

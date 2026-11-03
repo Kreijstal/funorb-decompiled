@@ -45,23 +45,23 @@ final class at extends hd {
         var9 = Kickabout.field_G;
         try {
           var3_int = vv.field_r;
-          qa.field_E = new hd(0L, (hd) null);
+          LeaguesHelpScreen.field_E = new hd(0L, (hd) null);
           if (param1 == null) {
             var10 = (Throwable) null;
-            bd.a("QC1", (Throwable) null, 1);
+            UnreadMessagesScreen.a("QC1", (Throwable) null, 1);
             return;
           }
           param1.field_c = 0;
           param1.field_b = false;
-          vc.field_x = new bt(var3_int, param1, param1);
-          lm.field_j = new an(var3_int, param1, param1, new ka());
+          ReceivedAuctionItem.field_x = new bt(var3_int, param1, param1);
+          TournamentLobbyScreen.field_j = new QuickChatPhraseCache(var3_int, param1, param1, new ka());
           if (param2 != -32) {
             at.h((byte) -19);
           }
           var4 = al.h((byte) 124);
           if (var4 == null) {
             var11 = (Throwable) null;
-            bd.a("QC2", (Throwable) null, 1);
+            UnreadMessagesScreen.a("QC2", (Throwable) null, 1);
             return;
           }
           TeamSelectionAgent.a((byte) -45, var4);
@@ -75,11 +75,11 @@ final class at extends hd {
           ci.field_g = new Sprite(10, 14);
           ci.field_g.e();
           for (var8 = 2; var8 < 7; var8++) {
-            SoftwareRasterizer.a(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
           gk.field_h = h.a(param2 ^ -32, var4, ve.field_S, NameSuggestionsPanel.field_E, ic.field_a);
-          qa.field_E.field_jb = new IntrusiveDeque();
+          LeaguesHelpScreen.field_E.field_jb = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,7 +123,7 @@ final class at extends hd {
         this.field_Db = var3.field_e;
         this.field_B = 5;
         this.field_D = 5;
-        this.field_Eb = ad.a(this.field_Db, 26300);
+        this.field_Eb = ad.formatCurrencyAmount(this.field_Db, 26300);
         this.field_zb = var3.f((byte) -1).toLowerCase();
         this.a((byte) -115, (hd) (this.field_Cb));
         this.field_Cb.field_s = 8;

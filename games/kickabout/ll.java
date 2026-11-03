@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ll extends pf {
-    static ko field_k;
+    static MenuSelection field_k;
     static String field_h;
     private java.nio.ByteBuffer field_f;
     static String field_l;
@@ -124,7 +124,7 @@ final class ll extends pf {
 
     static {
         field_h = "Please try changing the following settings:  ";
-        field_k = new ko(1);
+        field_k = new MenuSelection(1);
         field_l = "Up to 16 players compete in <col=ffff00>1 vs 1 games</col> to be the ultimate winner in a <col=ffff00>knockout competition.</col>";
         field_j = new int[4];
         field_i = -1;

@@ -105,7 +105,7 @@ final class dd {
         int var2 = Kickabout.field_G;
         int var1_intLifetime1;
         try {
-          e.field_k.b(-1);
+          SplashScreen.field_k.b(-1);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             mi.field_b[var1_int] = 0L;
           }
@@ -199,7 +199,7 @@ final class dd {
           stackIn_5_2 = false;
           stackIn_6_3 = !(param1);
           var5 = ((ModelMeshBase) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3);
-          var5.applyAnimationFrame(ModalStack.field_C, this.field_j, (ef) null, -1, 0, 0, param1);
+          var5.a(ModalStack.field_C, this.field_j, (ef) null, -1, 0, 0, param1);
           stackIn_7_0 = var5;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

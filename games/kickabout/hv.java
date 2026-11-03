@@ -17,7 +17,7 @@ final class hv {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = bg.a((byte) 116, LoggedPlayer.a(param1, param0));
+          var2 = QuickChatPhraseDefinition.decodeBase37Name((byte) 116, LoggedPlayer.a(param1, param0));
           if (param0) {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
@@ -133,7 +133,7 @@ final class hv {
               var19.setAction((byte) -31, 14);
             }
             if (var13 != 0) {
-              es.a(-120, var19, param2, param1.getBallCarrier((byte) -96), param1.field_V);
+              RowRangeRequest.a(-120, var19, param2, param1.getBallCarrier((byte) -96), param1.field_V);
             }
             if (var19.action == 14) {
               var19.setDirectionFromMask(uv.a(param0, -var19.pixelY(true) + var9, var8 - var19.pixelX(-98)), 26214);
@@ -170,10 +170,10 @@ final class hv {
           return;
         }
         try {
-          cq.field_e = param0;
+          AuctionLogEntry.field_e = param0;
           AccountRegistrationPanel.field_D = h.a(17475);
-          js.field_d = new IntrusiveDeque();
-          bk.field_c = new gv[6];
+          AppScreen.field_d = new IntrusiveDeque();
+          bk.field_c = new FadingChatMessage[6];
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "hv.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

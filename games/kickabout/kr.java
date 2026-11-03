@@ -5,7 +5,7 @@ final class kr {
     static String field_c;
     static boolean field_e;
     static hd field_b;
-    static jw field_a;
+    static CheckboxLabelWidget field_a;
     static String field_d;
 
     public static void a(int param0) {
@@ -151,7 +151,7 @@ final class kr {
         RuntimeException var3 = null;
         try {
           if (param1 == 1) {
-            stackIn_3_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, sp.field_Kb, new String[]{param0});
+            stackIn_3_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ShopPlayerSlot.field_Kb, new String[]{param0});
             return stackIn_3_0;
           }
           if (param1 == 2) {
@@ -179,7 +179,7 @@ final class kr {
             return stackIn_25_0;
           }
           if (param1 == 8) {
-            stackIn_28_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, iu.field_e, new String[]{param0});
+            stackIn_28_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, CachedListingRow.field_e, new String[]{param0});
             return stackIn_28_0;
           }
           if (param1 == 11) {
@@ -223,7 +223,7 @@ final class kr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = mf.a(param0.length, param0, 99, 0);
+            stackIn_4_0 = SquadGridWidget.a(param0.length, param0, 99, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

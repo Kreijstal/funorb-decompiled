@@ -122,7 +122,7 @@ final class ql {
           if (!JaggrabDownloader.field_c) {
             return;
           }
-          kt.b((byte) -85);
+          BlackFadeScreen.b((byte) -85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

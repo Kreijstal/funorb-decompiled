@@ -69,7 +69,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     public final void a(int param0, TextInputWidget param1) {
         try {
           if (this.field_N == param1) {
-            this.field_J.focusNext((UiWidget) (this), 0);
+            this.field_J.a((UiWidget) (this), 0);
           }
           if (this.field_J == param1) {
             this.l(60);
@@ -104,7 +104,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               if (this.field_F == param1) {
                 if (!this.field_H) {
                   if (this.field_C) {
-                    jk.a((byte) -124);
+                    MusicPatch.a((byte) -124);
                   } else {
                     PacketBuffer.g(4);
                   }
@@ -181,7 +181,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var3 = this.field_N;
           var4 = param0;
           int var5 = 25 % ((33 - param1) / 48);
-          var3.setInputText(var4, (byte) -17, false);
+          var3.a(var4, (byte) -17, false);
           this.field_J.i((byte) -41);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "pd.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -266,7 +266,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             }
           } else {
             this.field_K = new TextButton(bt.field_d, (UiListener) null);
-            this.field_F = new TextButton(bv.field_o, (UiListener) null);
+            this.field_F = new TextButton(AccountNameAvailabilityValidator.field_o, (UiListener) null);
             this.field_N.field_y = false;
           }
           this.field_N.field_r = (WidgetPainter) ((Object) new ri(10000536));
@@ -276,7 +276,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (this.field_F != null) {
             this.field_F.field_r = (WidgetPainter) ((Object) var6);
           }
-          this.field_N.field_u = mf.field_yb;
+          this.field_N.field_u = SquadGridWidget.field_yb;
           if (null != this.field_L) {
             this.field_L.field_r = (WidgetPainter) ((Object) var6);
           }
@@ -296,10 +296,10 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           this.field_g = 15;
           var7 = gf.field_a;
           if (this.field_D != null) {
-            this.field_g = this.field_g + (5 + var7.c(this.field_D, -40 + this.field_n, var7.field_G));
+            this.field_g = this.field_g + (5 + var7.paragraphHeight(this.field_D, -40 + this.field_n, var7.field_G));
           }
-          var8 = ne.field_J;
-          var9 = lm.a(so.a(104), -7465);
+          var8 = GameplayHelpScreen.field_J;
+          var9 = TournamentLobbyScreen.a(so.a(104), -7465);
           if (IsSixCommand.field_F == var9) {
             var8 = SetLagCommand.field_A;
           } else {
@@ -402,10 +402,10 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         var10 = Kickabout.field_G;
         try {
           var12 = j.a(param0 ^ 5332);
-          var2 = b.c(param0 ^ 62, -var12.field_o - 15 + 120);
-          var3 = b.c(-54, 10 + var12.field_o * 3 - 15);
+          var2 = MySquadScreen.c(param0 ^ 62, -var12.field_o - 15 + 120);
+          var3 = MySquadScreen.c(-54, 10 + var12.field_o * 3 - 15);
           var4 = var12.field_v;
-          var5 = 6 * fp.field_f >> 8;
+          var5 = 6 * AuctionItem.field_f >> 8;
           var6 = -15;
           if (param0 != -79) {
             var11 = (sm) null;
@@ -424,8 +424,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               stackIn_11_0 = hq.field_e;
             }
             var9 = stackIn_11_0;
-            wf.a(-840618968, var2, var8[var5], go.a(var6, (byte) -56));
-            wf.a(-840618968, var3, var9[var5], go.a(var6, (byte) -56));
+            AuctionsScreen.a(-840618968, var2, var8[var5], go.a(var6, (byte) -56));
+            AuctionsScreen.a(-840618968, var3, var9[var5], go.a(var6, (byte) -56));
             var6 = var6 + var4;
           }
           return;

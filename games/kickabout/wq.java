@@ -88,13 +88,13 @@ final class wq {
           }
           if (LineupAgent.field_o &&
             null != um.field_e) {
-            var1_int = var1_int + um.field_e.field_o.playerCount;
+            var1_int = var1_int + um.field_e.matchState.playerCount;
           }
           if (var1_int == 0) {
             return;
           }
           var1_int = var1_int * 20 + 10;
-          SoftwareRasterizer.a(470, 10, 160, var1_int, 34);
+          SoftwareRasterizer.fillRect(470, 10, 160, var1_int, 34);
           SoftwareRasterizer.e(470, 10, 160, var1_int, 3355477);
           SoftwareRasterizer.e(471, 11, 158, -2 + var1_int, 11184844);
           SoftwareRasterizer.e(472, 12, 156, var1_int - 4, 5592439);
@@ -116,10 +116,10 @@ final class wq {
           }
           if (LineupAgent.field_o &&
             null != um.field_e) {
-            for (var3 = 0; var3 < um.field_e.field_o.playerCount; var3++) {
-              stackIn_42_0 = (~var3 == ~um.field_e.field_h) ? 16777215 : 11184812;
+            for (var3 = 0; var3 < um.field_e.matchState.playerCount; var3++) {
+              stackIn_42_0 = (~var3 == ~um.field_e.localSeat) ? 16777215 : 11184812;
               var4 = stackIn_42_0;
-              var10 = um.field_e.field_o.field_S[var3] + ": " + um.field_e.field_z[var3] + "ms / team " + um.field_e.field_o.field_g[var3].field_p;
+              var10 = um.field_e.matchState.field_S[var3] + ": " + um.field_e.field_z[var3] + "ms / team " + um.field_e.matchState.field_g[var3].field_p;
               IsSixCommand.field_C.c(var10, 620, var2, var4, 0);
               var2 += 20;
             }

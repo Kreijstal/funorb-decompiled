@@ -8,7 +8,7 @@ final class pg {
     static String[] field_a;
 
     final static void a(int param0, boolean param1) {
-        ni.field_l = param1 ? new rf(TextHotspotWidget.field_H, w.field_e) : new rf(c.field_d, fm.field_C);
+        ni.field_l = param1 ? new rf(TextHotspotWidget.field_H, w.field_e) : new rf(c.field_d, AchievementsScreen.field_C);
         dn.field_Cb = new hd(0L, (hd) null);
         if (param0 == -35) {
           dn.field_Cb.a((byte) -110, (hd) (ni.field_l.field_b));
@@ -18,7 +18,7 @@ final class pg {
           tn.field_f.a((byte) -125, is.field_b);
           tn.field_f.a((byte) -105, vj.field_g);
           vj.field_g.a((byte) -124, mc.field_d);
-          vj.field_g.a((byte) -119, kt.field_i);
+          vj.field_g.a((byte) -119, BlackFadeScreen.field_i);
           bq.a(93, param1);
           return;
         }
@@ -30,7 +30,7 @@ final class pg {
         tn.field_f.a((byte) -125, is.field_b);
         tn.field_f.a((byte) -105, vj.field_g);
         vj.field_g.a((byte) -124, mc.field_d);
-        vj.field_g.a((byte) -119, kt.field_i);
+        vj.field_g.a((byte) -119, BlackFadeScreen.field_i);
         bq.a(93, param1);
     }
 
@@ -59,7 +59,7 @@ final class pg {
             }
             var2 = 1;
           }
-          ll.field_k.a(-21174, ResourceArchive.a(BytePlusOneCommand.field_A, n.field_m, (byte) -96), ResourceArchive.a(sm.field_q, vc.field_y, (byte) -101));
+          ll.field_k.a(-21174, ResourceArchive.a(BytePlusOneCommand.field_A, n.field_m, (byte) -96), ResourceArchive.a(sm.field_q, ReceivedAuctionItem.field_y, (byte) -101));
           if (ll.field_k.c(-1)) {
             var1_int = 1;
           }
@@ -69,8 +69,8 @@ final class pg {
           }
           var3 = 0;
           if (var1_int != 0 &&
-            ll.field_k.field_e >= 0) {
-            var3 = sh.field_f[ll.field_k.field_e];
+            ll.field_k.selectedIndex >= 0) {
+            var3 = sh.field_f[ll.field_k.selectedIndex];
             if (var3 == 2) {
               oc.a((byte) -43);
             } else if (var3 == 5) {
@@ -150,12 +150,12 @@ final class pg {
           return fs.field_a;
         }
         if (param1 == 21) {
-          return si.field_q;
+          return ReflectionCheck.field_q;
         }
         if (param1 == 20) {
           return fs.field_a;
         }
-        return fp.field_u;
+        return AuctionItem.field_u;
     }
 
     public static void b(int param0) {
@@ -167,15 +167,15 @@ final class pg {
         field_c = null;
     }
 
-    final static gm a(int param0, int param1, up param2, int param3, int param4) {
+    final static gm a(int param0, int param1, PlayerStats param2, int param3, int param4) {
         long var5_long = 0L;
         RuntimeException var5 = null;
         gm stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        up stackIn_8_0;
+        PlayerStats stackIn_8_0;
         int stackIn_8_1;
         int stackIn_8_2;
-        up stackIn_8_3;
+        PlayerStats stackIn_8_3;
         int stackIn_8_4;
         boolean stackIn_9_5 = false;
         boolean stackIn_13_3;
@@ -195,13 +195,13 @@ final class pg {
             return (gm) (stackIn_5_0);
           }
           tr.field_d = var5_long;
-          stackIn_8_0 = (up) (param2);
+          stackIn_8_0 = (PlayerStats) (param2);
           stackIn_8_1 = param1;
           stackIn_8_2 = param4;
-          stackIn_8_3 = (up) (param2);
+          stackIn_8_3 = (PlayerStats) (param2);
           stackIn_8_4 = -107;
           stackIn_9_5 = !(param2.f(13467));
-          stackIn_13_3 = (((up) (Object) stackIn_8_3).c((byte) stackIn_8_4, stackIn_9_5)) && (wn.a((byte) 34));
+          stackIn_13_3 = (((PlayerStats) (Object) stackIn_8_3).c((byte) stackIn_8_4, stackIn_9_5)) && (wn.a((byte) 34));
           stackIn_14_0 = mg.a(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_13_3, param0, (byte) 106);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

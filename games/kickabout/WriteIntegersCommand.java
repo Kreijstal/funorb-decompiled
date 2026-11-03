@@ -122,7 +122,7 @@ final class WriteIntegersCommand extends ConsoleCommand {
           if (AccountRegistrationPanel.field_C == null) {
             return;
           }
-          var1_int = cq.field_g;
+          var1_int = AuctionLogEntry.field_g;
           if (param0 >= -49) {
             return;
           }
@@ -137,11 +137,11 @@ final class WriteIntegersCommand extends ConsoleCommand {
             var4[3][1].b(20 + (var1_int + 13), 49 + var3, 20, 20);
             IsSixCommand.field_C.d(BallAgent.field_g, 14 + (var1_int + 20) + 10, 20 + var3 + 65, 16777215, -1);
             if (ks.field_e > 1) {
-              IsSixCommand.field_C.d(nr.field_k, 115 + var1_int, 20 + (var3 + 49 + 16), 16777215, -1);
+              IsSixCommand.field_C.d(PlayerModelPreview.field_k, 115 + var1_int, 20 + (var3 + 49 + 16), 16777215, -1);
               var5 = DebugConsole.field_y[var2][1];
               var6 = 180 * var5.field_o >> 8;
               var7 = 180 * var5.field_v >> 8;
-              var5.b(-(var6 >> 1) + (160 + cq.field_g - 46), var3 + 50, var6, var7);
+              var5.b(-(var6 >> 1) + (160 + AuctionLogEntry.field_g - 46), var3 + 50, var6, var7);
             }
           }
           return;

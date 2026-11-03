@@ -171,7 +171,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
           return (TextWidgetPainter) null;
         }
         if (null == n.field_e) {
-          n.field_e = new TextWidgetPainter(qo.field_k, 20, 0, 0, 0, 11579568, -1, 0, 0, qo.field_k.field_G, -1, 2147483647, true);
+          n.field_e = new TextWidgetPainter(EmailSyntaxValidator.field_k, 20, 0, 0, 0, 11579568, -1, 0, 0, EmailSyntaxValidator.field_k.field_G, -1, 2147483647, true);
         }
         return n.field_e;
     }

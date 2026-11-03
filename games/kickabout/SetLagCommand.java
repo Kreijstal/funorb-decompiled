@@ -87,8 +87,8 @@ final class SetLagCommand extends ConsoleCommand {
             stackIn_8_0 = (param1[var6].field_p == param3) ? 11184895 : 16755370;
             var8 = stackIn_8_0;
             q.field_d.d(var7, SoftwareRasterizer.field_g >> 1, -4 + SoftwareRasterizer.field_f, var8, -1);
-            ta.e(117);
-            var5[var6].addOutline(65793);
+            TeamManagementScreen.e(117);
+            var5[var6].a(65793);
           }
           stackIn_10_0 = var5;
           return stackIn_10_0;
@@ -172,7 +172,7 @@ final class SetLagCommand extends ConsoleCommand {
               return true;
             }
             if (0 > var2 ||
-              !(30000L >= aa.c(29680))) {
+              !(30000L >= KeyedLoginCredentials.c(29680))) {
               lr.b((byte) -116);
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {

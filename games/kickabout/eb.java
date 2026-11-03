@@ -92,7 +92,7 @@ final class eb implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              bd.a((String) null, (Throwable) ((Object) var2_ref), 1);
+              UnreadMessagesScreen.a((String) null, (Throwable) ((Object) var2_ref), 1);
               var7.field_p = false;
             }
           }

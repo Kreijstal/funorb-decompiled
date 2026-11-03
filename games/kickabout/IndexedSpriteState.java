@@ -15,7 +15,7 @@ abstract class IndexedSpriteState {
     static String field_f;
 
     final static void b(int param0, int param1) {
-        kt.field_j = param1;
+        BlackFadeScreen.field_j = param1;
         if (param0 != 38) {
           field_f = (String) null;
         }
@@ -60,7 +60,7 @@ abstract class IndexedSpriteState {
         }
         try {
           wp.field_h = param1;
-          fp.field_e = 1;
+          AuctionItem.field_e = 1;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -85,7 +85,7 @@ abstract class IndexedSpriteState {
         }
         try {
           wp.field_h = param1;
-          fp.field_e = 1;
+          AuctionItem.field_e = 1;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

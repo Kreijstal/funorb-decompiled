@@ -49,7 +49,7 @@ final class pv extends i {
             }
           }
           or.field_d.b(69, (byte) 119);
-          or.field_d.b(-57, var4);
+          or.field_d.writeInt(-57, var4);
         }
     }
 

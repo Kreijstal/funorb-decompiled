@@ -39,7 +39,7 @@ final class pn extends ij {
         if (param0 != 2368) {
           return false;
         }
-        return null == e.field_m ? vb.field_k : true;
+        return null == SplashScreen.field_m ? vb.field_k : true;
     }
 
     pn(Object param0, int param1) {

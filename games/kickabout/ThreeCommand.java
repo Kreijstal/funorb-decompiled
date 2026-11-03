@@ -44,20 +44,20 @@ final class ThreeCommand extends ConsoleCommand {
           if (gs.field_b) {
             SoftwareRasterizer.darkenRectangle(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
             ni.field_l.field_b.a(122, param0);
-            gp.a(param0, (byte) -93);
+            PasswordLoginCredentials.a(param0, (byte) -93);
             return;
           }
-          gp.a(param0, (byte) -93);
+          PasswordLoginCredentials.a(param0, (byte) -93);
           return;
         }
         ti.a(63, param0);
         if (!gs.field_b) {
-          gp.a(param0, (byte) -93);
+          PasswordLoginCredentials.a(param0, (byte) -93);
           return;
         }
         SoftwareRasterizer.darkenRectangle(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
         ni.field_l.field_b.a(122, param0);
-        gp.a(param0, (byte) -93);
+        PasswordLoginCredentials.a(param0, (byte) -93);
     }
 
     public static void a(boolean param0) {
@@ -74,35 +74,35 @@ final class ThreeCommand extends ConsoleCommand {
     }
 
     final static void a(float param0, int param1, float param2, float param3, float param4, float param5, float param6) {
-        if (rq.field_D == null) {
+        if (ServerMessageScreen.field_D == null) {
           vg.field_Bb = new PcmStreamMixer();
-          rq.field_D = new ReverbPcmStream(vg.field_Bb);
-          pi.field_b.addSubStream(rq.field_D);
+          ServerMessageScreen.field_D = new ReverbPcmStream(vg.field_Bb);
+          pi.field_b.addSubStream(ServerMessageScreen.field_D);
           IndexedSpriteState.field_c = new IntrusiveDeque();
         } else {
           if (null == vg.field_Bb) {
             vg.field_Bb = new PcmStreamMixer();
-            rq.field_D = new ReverbPcmStream(vg.field_Bb);
-            pi.field_b.addSubStream(rq.field_D);
+            ServerMessageScreen.field_D = new ReverbPcmStream(vg.field_Bb);
+            pi.field_b.addSubStream(ServerMessageScreen.field_D);
             IndexedSpriteState.field_c = new IntrusiveDeque();
           } else {
             if (null == IndexedSpriteState.field_c) {
               vg.field_Bb = new PcmStreamMixer();
-              rq.field_D = new ReverbPcmStream(vg.field_Bb);
-              pi.field_b.addSubStream(rq.field_D);
+              ServerMessageScreen.field_D = new ReverbPcmStream(vg.field_Bb);
+              pi.field_b.addSubStream(ServerMessageScreen.field_D);
               IndexedSpriteState.field_c = new IntrusiveDeque();
             }
           }
         }
-        rq.field_D.a(param5);
-        rq.field_D.f(param4);
-        rq.field_D.setDampingTimeMicros(param0);
+        ServerMessageScreen.field_D.a(param5);
+        ServerMessageScreen.field_D.f(param4);
+        ServerMessageScreen.field_D.setDampingTimeMicros(param0);
         if (param1 > -10) {
           field_A = (int[]) null;
         }
-        rq.field_D.b(param6);
-        rq.field_D.e(param3);
-        rq.field_D.d(param2);
+        ServerMessageScreen.field_D.b(param6);
+        ServerMessageScreen.field_D.e(param3);
+        ServerMessageScreen.field_D.d(param2);
     }
 
     static {

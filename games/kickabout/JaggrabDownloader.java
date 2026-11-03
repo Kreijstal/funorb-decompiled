@@ -150,7 +150,7 @@ final class JaggrabDownloader implements Runnable {
             return null;
           }
           if (k.field_i < rd.field_i + us.field_e) {
-            return mh.field_o;
+            return EmailAvailabilityValidator.field_o;
           }
           return null;
         }
@@ -161,7 +161,7 @@ final class JaggrabDownloader implements Runnable {
           return null;
         }
         if (k.field_i < rd.field_i + us.field_e) {
-          return mh.field_o;
+          return EmailAvailabilityValidator.field_o;
         }
         return null;
     }

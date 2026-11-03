@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mn implements WidgetPainter {
-    static rv field_c;
+    static ValidationState field_c;
     static String field_d;
     static int[] field_b;
     static int field_a;
@@ -61,7 +61,7 @@ final class mn implements WidgetPainter {
         field_d = "Clan";
         field_a = 256;
         field_b = new int[4];
-        field_c = new rv();
+        field_c = new ValidationState();
         field_e = new ff(11, 0, 1, 2);
         field_f = "Accept";
     }

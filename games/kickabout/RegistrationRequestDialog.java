@@ -11,11 +11,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     static int field_kb;
     private AccountRegistrationPanel field_mb;
 
-    public static void s(int param0) {
+    public static void releaseStatics(int param0) {
         field_lb = null;
         field_rb = null;
         if (param0 != 248) {
-          RegistrationRequestDialog.s(-37);
+          RegistrationRequestDialog.releaseStatics(-37);
           field_qb = null;
           return;
         }
@@ -45,7 +45,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (AppletJavaScriptBridge.callWithoutArguments(30858, "getcookies", param1));
+              var3 = (String) (AppletJavaScriptBridge.a(30858, "getcookies", param1));
               var4 = FormationAgent.a(var3, 2, ';');
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -103,7 +103,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         wn var2 = null;
         wn var2Lifetime1;
         if (param0 != -1) {
-          RegistrationRequestDialog.s(-114);
+          RegistrationRequestDialog.releaseStatics(-114);
           if (!this.field_C) {
             return super.k(-1);
           }
@@ -190,24 +190,24 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               this.a((byte) -126, (UiWidget) (new AccountTermsPanel(this)));
               return;
             }
-            var5.a(es.field_g, (UiListener) (this), (byte) 79);
+            var5.a(RowRangeRequest.field_g, (UiListener) (this), (byte) 79);
           } else {
             if (!this.field_nb) {
               if (param1.field_e != 5) {
                 var5.a((byte) 55, -1, is.field_f);
               } else {
                 var5.a((byte) 75, 11, ql.field_d);
-                var5.a((byte) 66, 17, bv.field_o);
+                var5.a((byte) 66, 17, AccountNameAvailabilityValidator.field_o);
               }
             } else {
-              var5.a(es.field_g, (UiListener) (this), (byte) 79);
+              var5.a(RowRangeRequest.field_g, (UiListener) (this), (byte) 79);
             }
             if (param1.field_e != 3) {
               if (param1.field_e != 6) {
                 this.a((byte) -122, (UiWidget) (var5));
                 return;
               }
-              var5.a((byte) 114, 9, bv.field_p);
+              var5.a((byte) 114, 9, AccountNameAvailabilityValidator.field_p);
             } else {
               var5.a((byte) 94, 7, ha.field_J);
             }

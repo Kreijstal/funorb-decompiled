@@ -12,7 +12,7 @@ final class oi extends IntrusiveNode {
 
     final static boolean b(int param0) {
         int var1 = 66 % ((param0 + 43) / 35);
-        if (jd.f(-1)) {
+        if (TextFieldValidator.f(-1)) {
           return false;
         }
         if (eq.field_d > 0) {

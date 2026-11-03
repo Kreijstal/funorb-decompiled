@@ -62,7 +62,7 @@ final class cb {
         field_c = null;
     }
 
-    final static void a(jt param0, byte param1) {
+    final static void a(PitchOptionTile param0, byte param1) {
         try {
           np.field_Jb.a(new vf(param0), 3);
           if (param1 < 118) {

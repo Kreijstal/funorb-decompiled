@@ -21,15 +21,15 @@ final class aj {
           return;
         }
         if (param0 % 10L != 0L) {
-          rq.a((byte) -93, param0);
+          ServerMessageScreen.a((byte) -93, param0);
           if (param1 != 1) {
             field_b = (String) null;
             return;
           }
           return;
         }
-        rq.a((byte) -93, param0 - 1L);
-        rq.a((byte) -93, 1L);
+        ServerMessageScreen.a((byte) -93, param0 - 1L);
+        ServerMessageScreen.a((byte) -93, 1L);
         if (param1 != 1) {
           field_b = (String) null;
           return;

@@ -40,7 +40,7 @@ final class ou extends UiWidget {
             SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
-        ta.e(124);
+        TeamManagementScreen.e(124);
         return var3;
     }
 
@@ -63,7 +63,7 @@ final class ou extends UiWidget {
         try {
           var8 = new CipherPacketBuffer(param1.a("", "logo.fo3d", 48));
           var10 = var8;
-          var3 = var10.h((byte) -109);
+          var3 = var10.readUnsignedByte((byte) -109);
           var10.p(-111);
           sq.field_H = ds.a(var10, (byte) -4);
           sm.field_l = new int[var3][];
@@ -117,17 +117,17 @@ final class ou extends UiWidget {
             return;
           }
           var5_int = this.field_n + param1;
-          pt.a(var5_int - this.field_v.field_q, -22914, param1 + this.field_v.field_q, this.field_i + param3, param3);
+          AuctionListing.a(var5_int - this.field_v.field_q, -22914, param1 + this.field_v.field_q, this.field_i + param3, param3);
           for (var6 = param1 - this.field_H; var5_int > var6; var6 = var6 + param0.field_q) {
             param0.c(var6, param3);
           }
-          ta.e(param2 - 1);
+          TeamManagementScreen.e(param2 - 1);
           if (SoftwareRasterizer.field_b <= this.field_v.field_q + param1) {
             PacketBuffer.a(param2 ^ -84, this.field_I);
             param0.c(-this.field_H, 0);
             param0.c(this.field_G * 2 - this.field_H, 0);
             this.field_D.e(0, 0);
-            ta.e(117);
+            TeamManagementScreen.e(117);
             this.field_I.c(param1, param3);
           }
           if (SoftwareRasterizer.field_c >= var5_int - this.field_v.field_q) {
@@ -137,7 +137,7 @@ final class ou extends UiWidget {
             param0.c(-var7, 0);
             param0.c(-var7 + 2 * this.field_G, 0);
             this.field_v.e(0, 0);
-            ta.e(120);
+            TeamManagementScreen.e(120);
             this.field_I.c(-this.field_v.field_q + var5_int, param3);
             return;
           }
@@ -217,7 +217,7 @@ final class ou extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(var7 + this.field_G, var6, this.field_G, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.field_G + var7, var6, this.field_G, var12Lifetime1);
         }
-        ta.e(122);
+        TeamManagementScreen.e(122);
         return var14;
     }
 
@@ -249,9 +249,9 @@ final class ou extends UiWidget {
           this.field_x = 38;
         }
         if (65536 > this.field_C) {
-          pt.a(var5 + this.field_n, -22914, var5 + (this.field_C * this.field_n >> 16), this.field_i + var6, var6);
+          AuctionListing.a(var5 + this.field_n, -22914, var5 + (this.field_C * this.field_n >> 16), this.field_i + var6, var6);
           this.a(this.field_z[1], var5, (byte) 124, var6);
-          ta.e(127);
+          TeamManagementScreen.e(127);
         }
     }
 
@@ -293,7 +293,7 @@ final class ou extends UiWidget {
         }
         this.field_z = new Sprite[]{this.a(-257, this.field_A, this.field_E), this.a(-257, this.field_x, this.field_F)};
         this.field_v = this.a(false);
-        this.field_D = this.field_v.f();
+        this.field_D = this.field_v.flipHorizontal();
         this.field_I = new Sprite(this.field_i >> 1, this.field_i);
     }
 

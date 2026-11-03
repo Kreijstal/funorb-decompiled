@@ -10,7 +10,7 @@ final class ih {
         if (param1 != 0) {
           return (Sprite[]) null;
         }
-        return cq.a(1, param2, param0, 124);
+        return AuctionLogEntry.a(1, param2, param0, 124);
     }
 
     final static boolean a(CharSequence param0, boolean param1) {
@@ -26,7 +26,7 @@ final class ih {
             var3 = (CommonGame) null;
             ih.a(28, (CommonGame) null, 23);
           }
-          stackIn_3_0 = gv.a(false, param0, 0);
+          stackIn_3_0 = FadingChatMessage.a(false, param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,13 +94,13 @@ final class ih {
             var5 = DemoIntegersCommand.field_F.field_H[var4];
             var6 = DemoIntegersCommand.field_F.field_d[var4];
             var7 = DemoIntegersCommand.field_F.field_Q[var4];
-            var8 = df.a(var5, LongPlusOneCommand.field_B[var7], true, LongPlusOneCommand.field_B[var6]).b(100, 4369, 20, -56, -20);
+            var8 = AuctionsHelpScreen.a(var5, LongPlusOneCommand.field_B[var7], true, LongPlusOneCommand.field_B[var6]).b(100, 4369, 20, -56, -20);
             nb.field_j[var4] = new Sprite(200, 200);
             PacketBuffer.a(param0 - 124, nb.field_j[var4]);
-            TriangleRasterizer.c();
-            TriangleRasterizer.b(SoftwareRasterizer.field_g >> 1, 410);
+            TriangleRasterizer.useRasterClip();
+            TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 410);
             var8.a(0, var12[var4], 0, 0, 0, 0, 0, 350);
-            ta.e(127);
+            TeamManagementScreen.e(127);
             eo.a(nb.field_j[var4], 65793);
             eo.a(nb.field_j[var4], 66049);
             eo.a(nb.field_j[var4], 65793);

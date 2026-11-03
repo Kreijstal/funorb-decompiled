@@ -7,8 +7,8 @@ final class qi extends sr {
     static int field_p;
 
     final int a(int param0, Object param1, Object param2) {
-        up var4 = null;
-        up var5 = null;
+        PlayerStats var4 = null;
+        PlayerStats var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -24,23 +24,23 @@ final class qi extends sr {
         RuntimeException var4_ref = null;
         var9 = Kickabout.field_G;
         try {
-          var4 = ((sp) (param1)).field_Sb;
+          var4 = ((ShopPlayerSlot) (param1)).field_Sb;
           if (param0 != 2) {
             stackIn_3_0 = -108;
             return stackIn_3_0;
           }
-          var5 = ((sp) (param2)).field_Sb;
+          var5 = ((ShopPlayerSlot) (param2)).field_Sb;
           var8 = this.field_i % 3;
           if (0 == var8) {
-            var6 = var4.field_n;
-            var7 = var5.field_n;
+            var6 = var4.power;
+            var7 = var5.power;
           } else {
             if (var8 != 1) {
-              var7 = var5.field_o;
-              var6 = var4.field_o;
+              var7 = var5.tackle;
+              var6 = var4.tackle;
             } else {
-              var6 = var4.field_g;
-              var7 = var5.field_g;
+              var6 = var4.speed;
+              var7 = var5.speed;
             }
           }
           stackIn_10_0 = -var7 + var6 ^ this.field_i / 3 << 31;

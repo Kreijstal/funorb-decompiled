@@ -23,7 +23,7 @@ final class cp implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 16 / ((param0 - 46) / 47);
-          if (mj.field_a == nr.field_f) {
+          if (mj.field_a == PlayerModelPreview.field_f) {
             stackIn_2_0 = null;
             return (wn) (stackIn_2_0);
           }
@@ -33,7 +33,7 @@ final class cp implements Runnable {
             stackIn_9_0 = JaggrabDownloader.field_h;
             return stackIn_9_0;
           }
-          mj.field_a = nr.field_f;
+          mj.field_a = PlayerModelPreview.field_f;
           pr.field_c = param1;
           JaggrabDownloader.field_h = null;
           stackIn_7_0 = null;
@@ -76,11 +76,11 @@ final class cp implements Runnable {
             }
             aj.a(10L, 1);
             Object var5 = (Object) null;
-            si.a((byte) 41, this.field_f, (Object) null);
+            ReflectionCheck.a((byte) 41, this.field_f, (Object) null);
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          bd.a((String) null, (Throwable) ((Object) exception), 1);
+          UnreadMessagesScreen.a((String) null, (Throwable) ((Object) exception), 1);
         } finally {
           this.field_c = false;
         }
@@ -104,7 +104,7 @@ final class cp implements Runnable {
     final static int a(int param0) {
         al.field_Ab.a(0);
         if (!ParticipantStatus.field_t.a((byte) -46)) {
-          return fw.h((byte) 66);
+          return MyPitchScreen.pollServerConnection((byte) 66);
         }
         if (param0 != 522) {
           field_h = (r) null;

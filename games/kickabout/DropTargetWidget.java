@@ -53,9 +53,9 @@ final class DropTargetWidget extends SingleChildContainer {
           if (null == ni.field_m) {
             ni.field_m = new em(64);
           }
-          ne.field_I = param1.field_jb;
+          GameplayHelpScreen.field_I = param1.field_jb;
           qn.field_b = param2.field_jb;
-          qg.a(0);
+          RasterStateSnapshot.a(0);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ln.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -64,9 +64,9 @@ final class DropTargetWidget extends SingleChildContainer {
     final static java.awt.Canvas l(int param0) {
         if (param0 != 64) {
           field_B = (int[]) null;
-          return e.field_m == null ? ic.field_d : (java.awt.Canvas) ((Object) e.field_m);
+          return SplashScreen.field_m == null ? ic.field_d : (java.awt.Canvas) ((Object) SplashScreen.field_m);
         }
-        return e.field_m == null ? ic.field_d : (java.awt.Canvas) ((Object) e.field_m);
+        return SplashScreen.field_m == null ? ic.field_d : (java.awt.Canvas) ((Object) SplashScreen.field_m);
     }
 
     public static void k(int param0) {

@@ -9,7 +9,7 @@ final class hg extends i {
 
     hg(int param0) {
         super(10);
-        String var6 = Integer.toString(ps.field_d[param0]);
+        String var6 = Integer.toString(LoginCredentials.field_d[param0]);
         String var2 = var6;
         String var3 = q.field_h[param0];
         String var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[10], new String[]{var6, var3});
@@ -61,14 +61,14 @@ final class hg extends i {
         RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
-          wd.field_l.a(cq.field_n, 31947, PacketBuffer.field_i, true);
+          wd.field_l.a(AuctionLogEntry.field_n, 31947, PacketBuffer.field_i, true);
           var1_int = -43 % ((param0 + 39) / 43);
           wd.field_l.n(2);
           while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
             wd.field_l.a(il.field_c, (byte) -88, cc.field_e);
           }
-          if (kt.field_j != -1) {
-            var2 = kt.field_j;
+          if (BlackFadeScreen.field_j != -1) {
+            var2 = BlackFadeScreen.field_j;
             IndexedSpriteState.b(38, -1);
             stackIn_7_0 = var2;
             return stackIn_7_0;
@@ -77,7 +77,7 @@ final class hg extends i {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (mj.field_a == nr.field_f) {
+          if (mj.field_a == PlayerModelPreview.field_f) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -85,7 +85,7 @@ final class hg extends i {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (wk.field_f != nr.field_f) {
+          if (wk.field_f != PlayerModelPreview.field_f) {
             stackIn_23_0 = -1;
             return stackIn_23_0;
           }

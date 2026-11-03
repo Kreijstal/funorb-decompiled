@@ -78,7 +78,7 @@ final class is {
         }
     }
 
-    final static void a(byte param0, vc param1) {
+    final static void a(byte param0, ReceivedAuctionItem param1) {
         try {
           int var2_int = 119 % ((-72 - param0) / 44);
           np.field_Jb.a(new hk(param1, 32), 3);
@@ -94,8 +94,8 @@ final class is {
         RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
-          for (var1_int = 0; var1_int < e.field_n.length; var1_int++) {
-            e.field_n[var1_int].a(param0 - 7232);
+          for (var1_int = 0; var1_int < SplashScreen.field_n.length; var1_int++) {
+            SplashScreen.field_n[var1_int].a(param0 - 7232);
           }
           if (param0 != 7249) {
             field_e = (Random) null;

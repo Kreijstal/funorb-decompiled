@@ -29,15 +29,15 @@ final class tc extends DualLinkNode {
         var7 = Kickabout.field_G;
         try {
           if (param0 == 1) {
-            this.field_r = param2.a(-118);
+            this.field_r = param2.readString(-118);
           } else {
             if (param0 == 2) {
-              var4_int = param2.h((byte) -105);
+              var4_int = param2.readUnsignedByte((byte) -105);
               this.field_o = new int[var4_int];
               this.field_q = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
                 this.field_o[var5] = param2.a((byte) 81);
-                var6 = param2.j((byte) -65);
+                var6 = param2.readByte((byte) -65);
                 stackIn_16_0 = this.field_q;
                 stackIn_16_1 = var5;
                 if (var6 != 0) {
@@ -49,12 +49,12 @@ final class tc extends DualLinkNode {
               }
             } else {
               if (3 == param0) {
-                var4_int = param2.h((byte) -109);
+                var4_int = param2.readUnsignedByte((byte) -109);
                 this.field_n = new int[var4_int];
                 this.field_p = new char[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
                   this.field_n[var5] = param2.a((byte) 81);
-                  var6 = param2.j((byte) -81);
+                  var6 = param2.readByte((byte) -81);
                   stackIn_10_0 = this.field_p;
                   stackIn_10_1 = var5;
                   if (0 != var6) {
@@ -321,8 +321,8 @@ final class tc extends DualLinkNode {
         if (!param0) {
           param3 = 0;
         }
-        ThreeCommand.a(rv.field_c[param2][param3][2], -88, rv.field_c[param2][param3][5], rv.field_c[param2][param3][4], rv.field_c[param2][param3][1], rv.field_c[param2][param3][0], rv.field_c[param2][param3][3]);
-        ic.a(rv.field_c[param2][param3][4], rv.field_c[param2][param3][5], rv.field_c[param2][param3][3], rv.field_c[param2][param3][0], rv.field_c[param2][param3][2], (byte) -113, rv.field_c[param2][param3][1]);
+        ThreeCommand.a(ValidationState.field_c[param2][param3][2], -88, ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][1], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][3]);
+        ic.a(ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][3], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][2], (byte) -113, ValidationState.field_c[param2][param3][1]);
         if (param1 != 8710) {
           FootballerAgent var5 = (FootballerAgent) null;
           tc.a(117, (byte) -18, -15, (FootballerAgent) null, 51);
@@ -382,7 +382,7 @@ final class tc extends DualLinkNode {
         var4 = Kickabout.field_G;
         try {
           while (true) {
-            var3_int = param0.h((byte) -125);
+            var3_int = param0.readUnsignedByte((byte) -125);
             if (var3_int != 0) {
               this.a(var3_int, false, param0);
               continue;

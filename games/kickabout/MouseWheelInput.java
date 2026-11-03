@@ -49,7 +49,7 @@ abstract class MouseWheelInput {
         int var5Lifetime3;
         var6 = Kickabout.field_G;
         var2 = 0;
-        var3 = up.field_p;
+        var3 = PlayerStats.field_p;
         if (var3 < 5) {
           var2 = 8192 * (var3 * var3) / 1100;
           var4 = param1;

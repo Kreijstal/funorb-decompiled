@@ -156,7 +156,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           if (param3 < 86) {
             field_R = 41;
           }
-          qo.field_k.d(param1, param4 + param0.field_t + (param0.field_n >> 1), -5 + param0.field_g + param2, 16777215, -1);
+          EmailSyntaxValidator.field_k.d(param1, param4 + param0.field_t + (param0.field_n >> 1), -5 + param0.field_g + param2, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "fb.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -165,9 +165,9 @@ final class NumericDateInputWidget extends DateInputWidget {
     final static IndexedSprite[] i(byte param0) {
         int var2 = 0;
         int var3 = Kickabout.field_G;
-        IndexedSprite[] var1 = new IndexedSprite[io.field_l];
-        for (var2 = 0; var2 < io.field_l; var2++) {
-          var1[var2] = new IndexedSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], pq.field_O[var2], lt.field_a);
+        IndexedSprite[] var1 = new IndexedSprite[MenuButton.field_l];
+        for (var2 = 0; var2 < MenuButton.field_l; var2++) {
+          var1[var2] = new IndexedSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], pq.field_O[var2], lt.field_a);
         }
         if (param0 <= 78) {
           NumericDateInputWidget.n(-91);

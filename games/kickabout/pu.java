@@ -15,7 +15,7 @@ final class pu extends hd implements lv {
 
     final void h(byte param0) {
         if (this.field_gb) {
-          je.a((byte) 100, this);
+          AnimationSkeleton.a((byte) 100, this);
         }
         if (param0 != 30) {
           this.h((byte) 44);
@@ -116,7 +116,7 @@ final class pu extends hd implements lv {
           if (param1 == 4) {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
-            stackIn_8_5 = es.field_k;
+            stackIn_8_5 = RowRangeRequest.field_k;
           } else {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
@@ -215,19 +215,19 @@ final class pu extends hd implements lv {
 
     final static void a(byte param0, int param1, int param2, int param3) {
         gl.field_a.field_n = 0;
-        gl.field_a.a(122, 12);
-        gl.field_a.b(-43, ac.field_d.nextInt());
-        gl.field_a.b(-111, ac.field_d.nextInt());
-        gl.field_a.a(102, param3);
-        gl.field_a.a(112, param2);
-        gl.field_a.g(-1207444472, param1);
-        gl.field_a.a(bb.field_Nb, hn.field_h, 38);
+        gl.field_a.writeByte(122, 12);
+        gl.field_a.writeInt(-43, ac.field_d.nextInt());
+        gl.field_a.writeInt(-111, ac.field_d.nextInt());
+        gl.field_a.writeByte(102, param3);
+        gl.field_a.writeByte(112, param2);
+        gl.field_a.writeShort(-1207444472, param1);
+        gl.field_a.rsaEncrypt(bb.field_Nb, ManagerAction.field_h, 38);
         or.field_d.b(18, (byte) -83);
         int fieldTemp$0 = or.field_d.field_n + 1;
         or.field_d.field_n = or.field_d.field_n + 1;
         int var4 = fieldTemp$0;
-        or.field_d.readBytes(0, gl.field_a.field_n, 1991220144, gl.field_a.field_f);
-        or.field_d.c(62, -var4 + or.field_d.field_n);
+        or.field_d.writeBytes(0, gl.field_a.field_n, 1991220144, gl.field_a.field_f);
+        or.field_d.backpatchByteLength(62, -var4 + or.field_d.field_n);
         int var5 = 83 % ((40 - param0) / 43);
     }
 
@@ -237,7 +237,7 @@ final class pu extends hd implements lv {
           return -84;
         }
         if (this.field_Bb.field_h != 0) {
-          var2 = var2 + (20 + q.field_d.c(us.field_h[this.field_Bb.field_h], this.b(param0 ^ 15) - 10, 12));
+          var2 = var2 + (20 + q.field_d.paragraphHeight(us.field_h[this.field_Bb.field_h], this.b(param0 ^ 15) - 10, 12));
         }
         return var2;
     }
@@ -263,7 +263,7 @@ final class pu extends hd implements lv {
             this.field_mb = this.field_mb >> 1;
             this.field_N = (Sprite) ((Object) nh.b(this.field_Cb));
           }
-          this.field_yb = rv.field_b[this.field_Bb.field_h].toUpperCase();
+          this.field_yb = ValidationState.field_b[this.field_Bb.field_h].toUpperCase();
           this.field_Hb = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DebugConsole.field_u, new String[]{wq.field_a[this.field_Bb.field_k]}).toLowerCase();
           if (0 == this.field_Bb.field_h) {
             this.field_yb = '(' + this.field_yb + ')';

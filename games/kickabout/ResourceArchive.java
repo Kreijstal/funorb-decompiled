@@ -43,7 +43,7 @@ final class ResourceArchive {
           var4_int = this.field_d.field_q.a(IntrusiveDeque.a(true, var7), param2 - 33);
           if (param2 != -10) {
             var6 = (String) null;
-            this.findFileId(((byte[]) (this.field_e[3]))[2], (String) null, -100);
+            this.a(((byte[]) (this.field_e[3]))[2], (String) null, -100);
           }
           if (!this.a((byte) -58, var4_int)) {
             return false;
@@ -154,7 +154,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_a[param0][param3] != null) {
-            var7 = lg.a(this.field_a[param0][param3], false, 18828);
+            var7 = DebouncedValidationProvider.a(this.field_a[param0][param3], false, 18828);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -192,7 +192,7 @@ final class ResourceArchive {
         if (this.field_b) {
           this.field_e[param0] = this.field_i.b(param0, 4);
         } else {
-          this.field_e[param0] = cq.a(this.field_i.b(param0, 4), false, 136);
+          this.field_e[param0] = AuctionLogEntry.a(this.field_i.b(param0, 4), false, 136);
         }
         if (param1 < 31) {
           this.b(-52, ((int[]) (this.field_e[5]))[1]);
@@ -426,7 +426,7 @@ final class ResourceArchive {
         return this.field_i.a(6999, param0);
     }
 
-    final int findFileId(byte param0, String param1, int param2) {
+    final int a(byte param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         CharSequence var5 = null;
@@ -580,7 +580,7 @@ final class ResourceArchive {
         if (param1 <= 125) {
           field_g = false;
         }
-        cq.field_f = cq.field_f + param0;
+        AuctionLogEntry.field_f = AuctionLogEntry.field_f + param0;
         PlayArea.field_d = PlayArea.field_d + 8.0 * param3;
         if (848.0 > PlayArea.field_d) {
           PlayArea.field_d = 848.0;
@@ -591,18 +591,18 @@ final class ResourceArchive {
         if (IsSixCommand.field_B) {
           return;
         }
-        int var7 = 81920 / hw.field_i - 320;
-        int var8 = 61440 / hw.field_i - 240;
+        int var7 = 81920 / InstrumentNoteMask.field_i - 320;
+        int var8 = 61440 / InstrumentNoteMask.field_i - 240;
         int var9 = 896 - var7;
         int var10 = -var8 + 1344;
-        if ((double)var8 > cq.field_f) {
-          cq.field_f = (double)var8;
+        if ((double)var8 > AuctionLogEntry.field_f) {
+          AuctionLogEntry.field_f = (double)var8;
         }
         if (CachedArchiveSource.field_C < (double)var7) {
           CachedArchiveSource.field_C = (double)var7;
         }
-        if (cq.field_f > (double)var10) {
-          cq.field_f = (double)var10;
+        if (AuctionLogEntry.field_f > (double)var10) {
+          AuctionLogEntry.field_f = (double)var10;
         }
         if (CachedArchiveSource.field_C > (double)var9) {
           CachedArchiveSource.field_C = (double)var9;
@@ -630,14 +630,14 @@ final class ResourceArchive {
           while (eq.field_c.length > var3_int) {
             var5 = dk.field_g[var3_int];
             if (var5 >= 0) {
-              var6 = ud.a(10, eq.field_c[var3_int], true);
-              var7 = -(var6 >> 1) + ta.field_A;
+              var6 = MatchTransitionScreen.a(10, eq.field_c[var3_int], true);
+              var7 = -(var6 >> 1) + TeamManagementScreen.field_A;
               var4 = var4 + aj.field_a;
-              if (ec.a(-eb.field_d + var7, param1, param0, (byte) -124, var4, var6 + (eb.field_d << 1), nr.field_j + (pr.field_d << 1))) {
+              if (ec.a(-eb.field_d + var7, param1, param0, (byte) -124, var4, var6 + (eb.field_d << 1), PlayerModelPreview.field_j + (pr.field_d << 1))) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + ((pr.field_d << 1) + aj.field_a + nr.field_j);
+              var4 = var4 + ((pr.field_d << 1) + aj.field_a + PlayerModelPreview.field_j);
             } else {
               var4 = var4 + PlayArea.field_c;
             }
@@ -752,7 +752,7 @@ final class ResourceArchive {
             param1[1] != 0 ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var35 = lg.a(this.field_e[param0], true, 18828);
+            var35 = DebouncedValidationProvider.a(this.field_e[param0], true, 18828);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -760,7 +760,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = lg.a(this.field_e[param0], false, param3 + 18826);
+            var9 = DebouncedValidationProvider.a(this.field_e[param0], false, param3 + 18826);
           }
           try {
             var36 = hh.a(var9, (byte) -3);
@@ -791,7 +791,7 @@ final class ResourceArchive {
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var29.k(4);
+                  var17 = var17 + var29.readInt(4);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -813,7 +813,7 @@ final class ResourceArchive {
               for (var18 = 0; var12 > var18; var18++) {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var29.k(4);
+                  var19 = var19 + var29.readInt(4);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -840,7 +840,7 @@ final class ResourceArchive {
               for (var15_int = 0; var15_int < var12; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
-                  var16 = var16 + var31.k(4);
+                  var16 = var16 + var31.readInt(4);
                   var14[var17] = var14[var17] + var16;
                 }
               }
@@ -857,7 +857,7 @@ final class ResourceArchive {
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var31.k(4);
+                  var18 = var18 + var31.readInt(4);
                   ArrayOperations.a(var43, var16, var40[var19], var39[var19], var18);
                   var14[var19] = var14[var19] + var18;
                   var16 = var16 + var18;
@@ -872,7 +872,7 @@ final class ResourceArchive {
                 if (this.field_c != 0) {
                   var7[var18] = var40[var17];
                 } else {
-                  var7[var18] = cq.a(var40[var17], false, ek.b(param3, 138));
+                  var7[var18] = AuctionLogEntry.a(var40[var17], false, ek.b(param3, 138));
                 }
               }
             }
@@ -886,7 +886,7 @@ final class ResourceArchive {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = cq.a(var43, false, 136);
+            var7[var11] = AuctionLogEntry.a(var43, false, 136);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

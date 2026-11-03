@@ -37,7 +37,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
               for (var4_int = var4_int + param2; var4_int < this.field_w.length; var4_int = var4_int + param2) {
                 var6 = this.field_w[var4_int];
                 if (var6 != null &&
-                  var6.focusNext(param0, param1 ^ -28)) {
+                  var6.a(param0, param1 ^ -28)) {
                   return true;
                 }
               }
@@ -66,7 +66,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
         return this.a(true) != null ? true : false;
     }
 
-    final StringBuilder appendWidgetDiagnostics(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         StringBuilder stackIn_6_0 = null;
@@ -81,7 +81,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
             var6 = (UiWidget) null;
             this.a(125, (UiWidget) null, 11, -44, 107, -118, 34);
           }
-          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
+          if (this.a(1, param3, param2, param1)) {
             this.b(param1, param3, param2, param0 ^ -3421);
             this.a(param2, 10, param1, param3);
           }
@@ -107,12 +107,12 @@ abstract class wt extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final static wh a(int param0, boolean param1, boolean param2, int param3, int param4, int param5) {
+    final static FadingSoundPlayer a(int param0, boolean param1, boolean param2, int param3, int param4, int param5) {
         if (pn.field_z.a(false) >= 16) {
           return null;
         }
         int var7 = -79 % ((-85 - param5) / 32);
-        wh var6 = new wh(param3, param0, param4, param2, param1);
+        FadingSoundPlayer var6 = new FadingSoundPlayer(param3, param0, param4, param2, param1);
         pn.field_z.a(var6, 3);
         return var6;
     }
@@ -160,7 +160,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
               discarded$8 = param3.append(' ');
             }
             if (var7 != null) {
-              var7.appendWidgetDiagnostics(17883, param2 + 1, param0, param3);
+              var7.a(17883, param2 + 1, param0, param3);
             } else {
               discarded$7 = param3.append("null");
             }
@@ -280,7 +280,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
           if (80 != var5_int) {
             return false;
           }
-          if (!ne.field_G[81]) {
+          if (!GameplayHelpScreen.field_G[81]) {
             stackIn_19_0 = this.b(param2, 87);
           } else {
             stackIn_19_0 = this.a(9, param2);
@@ -709,7 +709,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
               for (var4_int = var4_int - param2; var4_int >= 0; var4_int = var4_int - param2) {
                 var6 = this.field_w[var4_int];
                 if (var6 != null &&
-                  var6.focusNext(param1, 0)) {
+                  var6.a(param1, 0)) {
                   return true;
                 }
               }
@@ -794,7 +794,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final boolean focusNext(UiWidget param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         int var4 = 0;
         UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
@@ -812,7 +812,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
           for (var4 = param1; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.focusNext(param0, param1 + 0)) {
+              var5.a(param0, param1 + 0)) {
               return true;
             }
           }

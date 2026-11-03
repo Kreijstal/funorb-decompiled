@@ -42,9 +42,9 @@ final class v {
           this.field_h = 96;
           PacketBuffer.a(74, this.field_f);
           SoftwareRasterizer.b();
-          var4_int = 486400 / hw.field_i;
+          var4_int = 486400 / InstrumentNoteMask.field_i;
           param0.a(var4_int, 300, this.field_g, this.field_h, (byte) -74);
-          ta.e(124);
+          TeamManagementScreen.e(124);
           if (param2) {
             return;
           }
@@ -109,9 +109,9 @@ final class v {
           PacketBuffer.a(-57, this.field_f);
           SoftwareRasterizer.b();
           int var5 = 64 / ((-64 - param1) / 38);
-          var4_int = (param2.j(-1) << 8) / hw.field_i;
+          var4_int = (param2.j(-1) << 8) / InstrumentNoteMask.field_i;
           param2.a(300, this.field_g, this.field_h, var4_int, 300);
-          ta.e(123);
+          TeamManagementScreen.e(123);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

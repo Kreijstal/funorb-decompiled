@@ -83,7 +83,7 @@ final class aw extends i {
         if (param1 == 2) {
           return;
         }
-        wf.b(10, param1 == 0 ? true : false);
+        AuctionsScreen.startComputerMatch(10, param1 == 0 ? true : false);
         if (param0 > 60) {
           return;
         }

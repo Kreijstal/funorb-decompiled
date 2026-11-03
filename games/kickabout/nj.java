@@ -40,7 +40,7 @@ final class nj {
           var7 = Kickabout.field_G;
           try {
             try {
-              var3 = (String) (AppletJavaScriptBridge.callWithoutArguments(param0 ^ 30858, "getcookies", param2));
+              var3 = (String) (AppletJavaScriptBridge.a(param0 ^ 30858, "getcookies", param2));
               var4 = FormationAgent.a(var3, param0 ^ 2, ';');
               for (var5 = param0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -83,11 +83,11 @@ final class nj {
 
     final synchronized static long a(int param0) {
         long var1 = System.currentTimeMillis();
-        if (!(jh.field_Kb <= var1)) {
-          in.field_b = in.field_b + (-var1 + jh.field_Kb);
+        if (!(AuctionTableWidget.field_Kb <= var1)) {
+          in.field_b = in.field_b + (-var1 + AuctionTableWidget.field_Kb);
         }
         int var3 = -67 / ((param0 + 10) / 32);
-        jh.field_Kb = var1;
+        AuctionTableWidget.field_Kb = var1;
         return var1 + in.field_b;
     }
 

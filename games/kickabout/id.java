@@ -36,7 +36,7 @@ final class id extends TextWidgetPainter {
         UiWidget var8 = null;
         var7 = Kickabout.field_G;
         try {
-          super.copyStyleTo(param0, (byte) -112);
+          super.a(param0, (byte) -112);
           if (param1) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_w[var4_int];
@@ -190,17 +190,17 @@ final class id extends TextWidgetPainter {
         try {
           sk.field_a = ModalStack.a(param3, -9, "commonui", "frame_top");
           vb.field_a = ModalStack.a(param3, -120, "commonui", "frame_bottom");
-          aa.field_f = wa.a((byte) 112, "commonui", param3, "jagex_logo_grey");
+          KeyedLoginCredentials.field_f = wa.a((byte) 112, "commonui", param3, "jagex_logo_grey");
           IntrusiveDequeCursor.field_a = ModalStack.a(param3, -29, "commonui", "button");
           LoggedPlayer.field_g = ng.a("validation", "commonui", 2, param3);
-          qo.field_k = (BitmapFont) ((Object) gm.a(param1, 10, "arezzo12", param3, "commonui"));
+          EmailSyntaxValidator.field_k = (BitmapFont) ((Object) gm.a(param1, 10, "arezzo12", param3, "commonui"));
           gf.field_a = (BitmapFont) ((Object) gm.a(param1, 10, "arezzo14", param3, "commonui"));
           fj.field_b = (BitmapFont) ((Object) gm.a(param1, 10, "arezzo14bold", param3, "commonui"));
           var17 = new Sprite(param0.a("", "button.gif", 34), (java.awt.Component) ((Object) ic.field_d));
           stackIn_3_0 = (ResourceArchive) (param3);
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param2);
-          fw.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "dropdown");
+          MyPitchScreen.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "dropdown");
           var5 = DemoIntegersCommand.a(param3, 17369, "commonui", "screen_options");
           ConsoleEvaluationException.field_d = new IndexedSprite[4];
           BallAgent.field_f = new IndexedSprite[4];
@@ -227,18 +227,18 @@ final class id extends TextWidgetPainter {
           var9Lifetime1 = var17.field_w;
           tr.d(-12974);
           var17.e();
-          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
+          SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.e();
-          var17.d(0, 0);
+          var17.drawWithOffsets(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.e();
-          var17.d(-var17.field_q + var9Lifetime1, 0);
+          var17.drawWithOffsets(-var17.field_q + var9Lifetime1, 0);
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_q, var9Lifetime1);
           var12.e();
-          var17.d(-var9Lifetime1, 0);
-          ta.e(119);
+          var17.drawWithOffsets(-var9Lifetime1, 0);
+          TeamManagementScreen.e(119);
           IntrusiveDequeCursor.field_a = new Sprite[]{var15, var12, var11};
           if (param2) {
             id.a(false, (CharSequence) null, 'ﾺ');
@@ -292,7 +292,7 @@ final class id extends TextWidgetPainter {
             stackIn_3_0 = null;
           }
           var10 = (TextButton) (stackIn_3_0);
-          pt.a(param3.field_t + (param4 + param3.field_n), -22914, param3.field_t + param4, param3.field_i + (param2 + param3.field_g), param2 + param3.field_g);
+          AuctionListing.a(param3.field_t + (param4 + param3.field_n), -22914, param3.field_t + param4, param3.field_i + (param2 + param3.field_g), param2 + param3.field_g);
           if (var10 != null) {
             param1 = param1 & var10.field_y;
           }
@@ -333,7 +333,7 @@ final class id extends TextWidgetPainter {
             }
           }
           this.field_x.a(param3, this, param2, param4, 0);
-          ta.e(127);
+          TeamManagementScreen.e(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

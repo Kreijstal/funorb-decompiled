@@ -24,8 +24,8 @@ final class od extends sr {
           if (param0 != 2) {
             field_n = false;
           }
-          var4_int = ((sp) (param1)).field_Gb;
-          var5 = ((sp) (param2)).field_Gb;
+          var4_int = ((ShopPlayerSlot) (param1)).field_Gb;
+          var5 = ((ShopPlayerSlot) (param2)).field_Gb;
           stackIn_3_0 = -var5 + var4_int ^ this.field_i << 31;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -159,20 +159,20 @@ final class od extends sr {
                 if (vt.field_c.participantStatus[var12].isActive(3511)) {
                   if (vt.field_c.participantStatus[var12].offerDraw) {
                     var17 = ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A) + 12;
-                    pt.a(-rn.field_c + (-et.field_c + 642) - 1, -22914, 0, 480, 0);
+                    AuctionListing.a(-rn.field_c + (-et.field_c + 642) - 1, -22914, 0, 480, 0);
                     SoftwareRasterizer.a(642 - (et.field_c + (rn.field_c + var17)), var13 - rn.field_c + 3, var17 + 4, rn.field_c - 2, 6, 65793, param1);
                     ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A, 7 + (-et.field_c + 644 - rn.field_c - (2 + var17)), var13, 16777215, -1);
-                    ta.e(119);
+                    TeamManagementScreen.e(119);
                   }
                 } else {
                   var17 = 644 + (-et.field_c + 10);
                   var18 = ((BitmapFont) ((Object) var4)).a(kn.field_G[var12]);
-                  SoftwareRasterizer.drawLine(var17, -2 + (var13 - rb.field_yb), var18 + var17, var13 - 1, 13382451);
-                  SoftwareRasterizer.drawLine(var17, -1 + var13, var17 + var18, -2 - rb.field_yb + var13, 13382451);
+                  SoftwareRasterizer.b(var17, -2 + (var13 - rb.field_yb), var18 + var17, var13 - 1, 13382451);
+                  SoftwareRasterizer.b(var17, -1 + var13, var17 + var18, -2 - rb.field_yb + var13, 13382451);
                 }
                 var11++;
                 if (JaggrabDownloader.field_c) {
-                  SoftwareRasterizer.a(629, var13 - 10, 6, 10, 0);
+                  SoftwareRasterizer.fillRect(629, var13 - 10, 6, 10, 0);
                   for (var17Lifetime1 = 0; var15 > var17Lifetime1; var17Lifetime1++) {
                     SoftwareRasterizer.drawHorizontalLine(630, var13 - var17Lifetime1 - 2, 4, DualLinkNode.field_i[var17Lifetime1]);
                   }

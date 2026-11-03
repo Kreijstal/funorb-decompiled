@@ -9,21 +9,21 @@ final class oq {
 
     oq() {
         int var1 = 0;
-        VorbisSample.e(16);
-        this.field_b = VorbisSample.b() != 0 ? VorbisSample.e(4) + 1 : 1;
-        if (VorbisSample.b() != 0) {
-          VorbisSample.e(8);
+        VorbisSample.readBits(16);
+        this.field_b = VorbisSample.readBit() != 0 ? VorbisSample.readBits(4) + 1 : 1;
+        if (VorbisSample.readBit() != 0) {
+          VorbisSample.readBits(8);
         }
-        VorbisSample.e(2);
+        VorbisSample.readBits(2);
         if (this.field_b > 1) {
-          this.field_c = VorbisSample.e(4);
+          this.field_c = VorbisSample.readBits(4);
         }
         this.field_a = new int[this.field_b];
         this.field_d = new int[this.field_b];
         for (var1 = 0; var1 < this.field_b; var1++) {
-          VorbisSample.e(8);
-          this.field_a[var1] = VorbisSample.e(8);
-          this.field_d[var1] = VorbisSample.e(8);
+          VorbisSample.readBits(8);
+          this.field_a[var1] = VorbisSample.readBits(8);
+          this.field_d[var1] = VorbisSample.readBits(8);
         }
     }
 }

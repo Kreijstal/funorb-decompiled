@@ -6,7 +6,7 @@ abstract class jb extends IntrusiveNode {
     static String field_h;
     private int field_p;
     static String field_f;
-    private ko field_j;
+    private MenuSelection field_j;
     private int field_q;
     private int field_r;
     private int field_e;
@@ -35,12 +35,12 @@ abstract class jb extends IntrusiveNode {
         this.field_j.a(param0 ^ 4642, this.a(true, us.field_j, wt.field_x), this.a(true, kf.field_Eb, dn.field_yb));
         if (this.field_n == 0 &&
           0 == this.field_m) {
-          sp.c(this.a(false), -104);
+          ShopPlayerSlot.c(this.a(false), -104);
         }
         if (this.field_n != 0) {
           if (this.field_n == 1) {
             for (var3 = 0; this.field_i.length > var3; var3++) {
-              stackIn_22_0 = (var3 != this.field_j.field_e) ? 0 : 1;
+              stackIn_22_0 = (var3 != this.field_j.selectedIndex) ? 0 : 1;
               var4 = stackIn_22_0;
               this.field_i[var3].b(0, param1);
               stackIn_25_0 = this.field_i[var3];
@@ -59,7 +59,7 @@ abstract class jb extends IntrusiveNode {
             this.field_q = 4096;
           } else {
             if (2 == this.field_n) {
-              this.field_j.field_e = -1;
+              this.field_j.selectedIndex = -1;
               if (this.field_m > 0) {
                 this.field_m = this.field_m - 2;
               }
@@ -137,7 +137,7 @@ abstract class jb extends IntrusiveNode {
             var8.field_J = var10;
             var8.field_s = var9;
           }
-          ta.e(119);
+          TeamManagementScreen.e(119);
           var7Lifetime1 = (this.field_m << 10) / kh.field_q.length;
           if (var7Lifetime1 > 256) {
             var7Lifetime1 = 256;
@@ -170,15 +170,15 @@ abstract class jb extends IntrusiveNode {
         if (param0 == 13) {
           this.e(19910);
         } else {
-          this.field_j.a(0, true);
-          if (this.field_j.field_e != -1) {
-            while (!this.field_i[this.field_j.field_e].field_lb) {
-              this.field_j.field_e = (this.field_j.field_e + 1) % this.field_j.field_a;
+          this.field_j.handleArrowKeys(0, true);
+          if (this.field_j.selectedIndex != -1) {
+            while (!this.field_i[this.field_j.selectedIndex].field_lb) {
+              this.field_j.selectedIndex = (this.field_j.selectedIndex + 1) % this.field_j.itemCount;
             }
           }
-          if (this.field_j.field_e >= 0 &&
+          if (this.field_j.selectedIndex >= 0 &&
             this.field_j.c(-1)) {
-            this.a(114, this.field_j.field_e);
+            this.a(114, this.field_j.selectedIndex);
             this.e(19910);
           }
         }
@@ -263,8 +263,8 @@ abstract class jb extends IntrusiveNode {
             this.field_i[var6].field_s = 100 * var6 + var5;
             this.field_i[var6].field_J = var7;
           }
-          this.field_j = new ko(this.field_i.length);
-          this.field_j.field_e = param0;
+          this.field_j = new MenuSelection(this.field_i.length);
+          this.field_j.selectedIndex = param0;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "jb.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -273,14 +273,14 @@ abstract class jb extends IntrusiveNode {
     private final void a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
-        pt.a(param1 + this.field_e, param0 - 22946, param1, param2 + this.field_r, param2);
+        AuctionListing.a(param1 + this.field_e, param0 - 22946, param1, param2 + this.field_r, param2);
         for (var4 = 0; this.field_e > var4; var4++) {
-          mk.field_a.d(var4 + param1, param2 + this.field_r - 480);
+          mk.field_a.drawWithOffsets(var4 + param1, param2 + this.field_r - 480);
         }
-        cq.field_j.e(param1 - 10, 15 + param2, cq.field_j.field_o * 2 / 3, 2 * cq.field_j.field_v / 3, param0);
+        AuctionLogEntry.field_j.e(param1 - 10, 15 + param2, AuctionLogEntry.field_j.field_o * 2 / 3, 2 * AuctionLogEntry.field_j.field_v / 3, param0);
         this.a((byte) -29, param1, param2);
         SoftwareRasterizer.c(param1, param2, this.field_e, this.field_r, 2, 65793);
-        ta.e(124);
+        TeamManagementScreen.e(124);
     }
 
     jb() {

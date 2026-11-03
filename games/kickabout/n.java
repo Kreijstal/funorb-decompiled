@@ -130,10 +130,10 @@ final class n {
               return stackIn_9_0;
             }
             this.field_i.field_n = param2 * 72 + 6;
-            var6_int = this.field_i.k(4);
-            var7 = this.field_i.k(4);
+            var6_int = this.field_i.readInt(4);
+            var7 = this.field_i.readInt(4);
             var14 = new byte[64];
-            this.field_i.a(var14, 0, (byte) -6, 64);
+            this.field_i.readBytes(var14, 0, (byte) -6, 64);
             var10 = -31 / ((param1 - 39) / 51);
             var9 = new CachedArchiveSource(param2, param0, param4, this.field_g, this.field_h, var6_int, var14, var7, param3);
             this.field_k[param2] = var9;
@@ -167,16 +167,16 @@ final class n {
         int var5 = 0;
         int var6 = 0;
         try {
-          jw.field_Cb.field_E = param1;
+          CheckboxLabelWidget.field_Cb.field_E = param1;
           TextWidgetPainter.field_f = true;
           var2_int = ea.field_f.field_a;
           var3 = ea.field_f.field_e;
           int var4 = 59 % ((param0 + 57) / 43);
-          var5 = jw.field_Cb.field_X.c(param1, 272, jw.field_Cb.field_xb);
+          var5 = CheckboxLabelWidget.field_Cb.field_X.paragraphHeight(param1, 272, CheckboxLabelWidget.field_Cb.field_xb);
           var6 = -103 + var3 / 2 - var5 / 2;
           kk.field_j.a(true, 320, (-320 + var2_int) / 2, var6, -120 + (var3 - 2 * var6));
           kk.field_j.field_R = fs.a(kk.field_j.field_mb, 3, 2105376, 11579568, 8421504, (byte) 126);
-          jw.field_Cb.a(true, -24 + kk.field_j.field_q - 24, 24, 16, -24 + (-20 + kk.field_j.field_mb));
+          CheckboxLabelWidget.field_Cb.a(true, -24 + kk.field_j.field_q - 24, 24, 16, -24 + (-20 + kk.field_j.field_mb));
           RandomAccessCacheFile.field_a.a(true, 80, 120, -20 + kk.field_j.field_mb - 24, 24);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "n.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -220,8 +220,8 @@ final class n {
             !(param1 <= AccountMessagePanel.field_G.length)) {
             AccountMessagePanel.field_G = new int[param1 * 2];
           }
-          if (null != fo.field_j &&
-            param1 <= fo.field_j.length) {
+          if (null != AgeValidator.field_j &&
+            param1 <= AgeValidator.field_j.length) {
             if (DropTargetWidget.field_B == null ||
               !(DropTargetWidget.field_B.length >= param1)) {
               DropTargetWidget.field_B = new int[2 * param1];
@@ -273,14 +273,14 @@ final class n {
                 }
               }
             }
-            kt.field_g = -2147483648;
-            lm.field_V = -2147483648;
+            BlackFadeScreen.field_g = -2147483648;
+            TournamentLobbyScreen.field_V = -2147483648;
             er.field_k = 2147483647;
             vi.field_s = 2147483647;
-            wf.field_O = 0;
+            AuctionsScreen.field_O = 0;
             return;
           }
-          fo.field_j = new int[2 * param1];
+          AgeValidator.field_j = new int[2 * param1];
           if (DropTargetWidget.field_B == null ||
             !(DropTargetWidget.field_B.length >= param1)) {
             DropTargetWidget.field_B = new int[2 * param1];
@@ -311,8 +311,8 @@ final class n {
               !(param1 <= AccountMessagePanel.field_G.length)) {
               AccountMessagePanel.field_G = new int[param1 * 2];
             }
-            if (null != fo.field_j &&
-              param1 <= fo.field_j.length) {
+            if (null != AgeValidator.field_j &&
+              param1 <= AgeValidator.field_j.length) {
               if (DropTargetWidget.field_B == null ||
                 !(DropTargetWidget.field_B.length >= param1)) {
                 DropTargetWidget.field_B = new int[2 * param1];
@@ -364,14 +364,14 @@ final class n {
                   }
                 }
               }
-              kt.field_g = -2147483648;
-              lm.field_V = -2147483648;
+              BlackFadeScreen.field_g = -2147483648;
+              TournamentLobbyScreen.field_V = -2147483648;
               er.field_k = 2147483647;
               vi.field_s = 2147483647;
-              wf.field_O = 0;
+              AuctionsScreen.field_O = 0;
               return;
             }
-            fo.field_j = new int[2 * param1];
+            AgeValidator.field_j = new int[2 * param1];
             if (DropTargetWidget.field_B == null ||
               !(DropTargetWidget.field_B.length >= param1)) {
               DropTargetWidget.field_B = new int[2 * param1];
@@ -402,8 +402,8 @@ final class n {
               !(param1 <= AccountMessagePanel.field_G.length)) {
               AccountMessagePanel.field_G = new int[param1 * 2];
             }
-            if (null != fo.field_j &&
-              param1 <= fo.field_j.length) {
+            if (null != AgeValidator.field_j &&
+              param1 <= AgeValidator.field_j.length) {
               if (DropTargetWidget.field_B == null ||
                 !(DropTargetWidget.field_B.length >= param1)) {
                 DropTargetWidget.field_B = new int[2 * param1];
@@ -457,14 +457,14 @@ final class n {
                   }
                 }
               }
-              kt.field_g = -2147483648;
-              lm.field_V = -2147483648;
+              BlackFadeScreen.field_g = -2147483648;
+              TournamentLobbyScreen.field_V = -2147483648;
               er.field_k = 2147483647;
               vi.field_s = 2147483647;
-              wf.field_O = 0;
+              AuctionsScreen.field_O = 0;
               return;
             }
-            fo.field_j = new int[2 * param1];
+            AgeValidator.field_j = new int[2 * param1];
             if (DropTargetWidget.field_B == null ||
               !(DropTargetWidget.field_B.length >= param1)) {
               DropTargetWidget.field_B = new int[2 * param1];
@@ -479,21 +479,21 @@ final class n {
             }
             if (null != ug.field_f &&
               ug.field_f.length >= param1) {
-              kt.field_g = -2147483648;
-              lm.field_V = -2147483648;
+              BlackFadeScreen.field_g = -2147483648;
+              TournamentLobbyScreen.field_V = -2147483648;
               er.field_k = 2147483647;
               vi.field_s = 2147483647;
-              wf.field_O = 0;
+              AuctionsScreen.field_O = 0;
               return;
             }
             ug.field_f = new boolean[2 * param1];
           }
         }
-        kt.field_g = -2147483648;
-        lm.field_V = -2147483648;
+        BlackFadeScreen.field_g = -2147483648;
+        TournamentLobbyScreen.field_V = -2147483648;
         er.field_k = 2147483647;
         vi.field_s = 2147483647;
-        wf.field_O = 0;
+        AuctionsScreen.field_O = 0;
     }
 
     final boolean a(byte param0) {
@@ -525,7 +525,7 @@ final class n {
         }
         var10 = new PacketBuffer(this.field_a.b(param0 ^ -12847));
         var10.field_n = 5;
-        var3 = var10.h((byte) -116);
+        var3 = var10.readUnsignedByte((byte) -116);
         var10.field_n = var10.field_n + 72 * var3;
         var13 = new byte[var10.field_f.length - var10.field_n];
         var11 = var13;
@@ -533,7 +533,7 @@ final class n {
         if (param0 != -45) {
           return true;
         }
-        var10.a(var4, 0, (byte) -6, var13.length);
+        var10.readBytes(var4, 0, (byte) -6, var13.length);
         if (this.field_b == null) {
           var5 = var4;
         } else {

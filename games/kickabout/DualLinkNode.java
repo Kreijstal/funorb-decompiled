@@ -33,7 +33,7 @@ class DualLinkNode extends IntrusiveNode {
     protected DualLinkNode() {
     }
 
-    final boolean a(byte param0) {
+    final boolean isSecondaryLinked(byte param0) {
         if (this.field_e == null) {
           return false;
         }
@@ -44,7 +44,7 @@ class DualLinkNode extends IntrusiveNode {
         return true;
     }
 
-    final void f(int param0) {
+    final void unlinkSecondary(int param0) {
         if (null == this.field_e) {
           return;
         }

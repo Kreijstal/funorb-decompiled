@@ -22,14 +22,14 @@ final class d {
         if (param0 > 126) {
           td.field_d = -1;
           nc.field_a = false;
-          mh.field_o = null;
+          EmailAvailabilityValidator.field_o = null;
           ws.field_e = -1;
           return;
         }
         d.a((byte) -102);
         td.field_d = -1;
         nc.field_a = false;
-        mh.field_o = null;
+        EmailAvailabilityValidator.field_o = null;
         ws.field_e = -1;
     }
 

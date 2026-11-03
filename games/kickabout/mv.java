@@ -5,20 +5,20 @@ final class mv {
     static String field_a;
     static int field_b;
 
-    final static up b(boolean param0) {
-        up var2 = null;
-        up var1 = null;
+    final static PlayerStats b(boolean param0) {
+        PlayerStats var2 = null;
+        PlayerStats var1 = null;
         if (!param0) {
-          var2 = new up();
+          var2 = new PlayerStats();
           var1 = var2;
-          var1.field_n = 50;
-          var1.field_g = 50;
-          var2.field_h = new int[]{110};
-          var1.field_q = 4;
-          var1.field_o = 50;
+          var1.power = 50;
+          var1.speed = 50;
+          var2.trinketIds = new int[]{110};
+          var1.playerType = 4;
+          var1.tackle = 50;
           return var1;
         }
-        return (up) null;
+        return (PlayerStats) null;
     }
 
     public static void a(boolean param0) {
@@ -30,15 +30,15 @@ final class mv {
 
     final static void a(byte param0) {
         if (param0 > 104) {
-          gu.b(1, (byte) 60, vc.field_E[3]);
-          gu.b(2, (byte) 60, vc.field_E[5]);
-          ui.a(0, fn.field_c, vc.field_E[0], 2147483647);
+          gu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ui.a(0, fn.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
           return;
         }
         field_b = 48;
-        gu.b(1, (byte) 60, vc.field_E[3]);
-        gu.b(2, (byte) 60, vc.field_E[5]);
-        ui.a(0, fn.field_c, vc.field_E[0], 2147483647);
+        gu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+        gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+        ui.a(0, fn.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
     }
 
     static {
@@ -48,14 +48,14 @@ final class mv {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$6121ff5511c4(int param0) {
         if (param0 > 104) {
-          gu.b(1, (byte) 60, vc.field_E[3]);
-          gu.b(2, (byte) 60, vc.field_E[5]);
-          ui.a(0, fn.field_c, vc.field_E[0], 2147483647);
+          gu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ui.a(0, fn.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
           return;
         }
         field_b = 48;
-        gu.b(1, (byte) 60, vc.field_E[3]);
-        gu.b(2, (byte) 60, vc.field_E[5]);
-        ui.a(0, fn.field_c, vc.field_E[0], 2147483647);
+        gu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+        gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+        ui.a(0, fn.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
     }
 }

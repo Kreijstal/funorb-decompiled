@@ -44,7 +44,7 @@ final class PlayArea {
 
     final static void a(CommonGame param0, int param1) {
         try {
-          ja.field_O = true;
+          MyKitScreen.field_O = true;
           et.field_d = param0;
           if (null == ss.field_b) {
             ss.field_b = ParticipantStatus.c(0);
@@ -52,9 +52,9 @@ final class PlayArea {
           ld.field_f = (gm) (et.field_d.field_P[0][3]);
           fc.field_c = (gm) (et.field_d.field_P[0][4]);
           mc.field_a = 0;
-          cq.field_g = 640;
-          mh.field_k = (gm) (et.field_d.field_P[param1][1]);
-          jw.c(1, false);
+          AuctionLogEntry.field_g = 640;
+          EmailAvailabilityValidator.field_k = (gm) (et.field_d.field_P[param1][1]);
+          CheckboxLabelWidget.c(1, false);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "la.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

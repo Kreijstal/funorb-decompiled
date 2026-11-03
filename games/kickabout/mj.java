@@ -25,7 +25,7 @@ final class mj {
             var3 = eb.field_i[var2_int];
             c.field_f[var2_int] = ih.field_c == 0 ? (Sprite) ((Object) var3) : (Sprite) ((Object) var3.h());
             LoginForm.a(c.field_f[var2_int], 20684);
-            jm.a(100, 9863, var2_int + 96);
+            DelayedServerPacket.a(100, 9863, var2_int + 96);
           }
           var7 = al.field_Bb[ih.field_c];
           var6 = var7;
@@ -37,17 +37,17 @@ final class mj {
           nh.a(bf.field_x.field_y, var7[0], var7[1], var7[2]);
           nh.a(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
           nh.a(od.field_p.field_y, var7[0], var7[1], var7[2]);
-          wh.field_p = eo.b(bf.field_x);
-          ConsoleCommand.field_z = eo.a(wh.field_p);
+          FadingSoundPlayer.field_p = eo.b(bf.field_x);
+          ConsoleCommand.field_z = eo.a(FadingSoundPlayer.field_p);
           pf.field_b = eo.b(ConsoleCommand.field_z);
           mt.field_d = new Sprite(ConsoleCommand.field_z.field_o, LoggedGoal.field_o.field_v);
           qj.field_a = new Sprite(od.field_p.field_o, bf.field_x.field_v);
           PacketBuffer.a(-70, mt.field_d);
-          LoggedGoal.field_o.d(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
-          ta.e(param0 + 158);
+          LoggedGoal.field_o.drawWithOffsets(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
+          TeamManagementScreen.e(param0 + 158);
           PacketBuffer.a(-42, qj.field_a);
-          od.field_p.d(0, -od.field_p.field_v + SoftwareRasterizer.field_f);
-          ta.e(118);
+          od.field_p.drawWithOffsets(0, -od.field_p.field_v + SoftwareRasterizer.field_f);
+          TeamManagementScreen.e(118);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "mj.D(" + param0 + ',' + param1 + ')');
         }
@@ -73,14 +73,14 @@ final class mj {
 
     final static void a(double param0, int param1, double param2, double param3) {
         CachedArchiveSource.field_C = param2;
-        cq.field_f = param3;
+        AuctionLogEntry.field_f = param3;
         if (param1 != 60) {
           mj.a(49);
         }
         PlayArea.field_d = param0 * 8.0;
         if (ia.field_c) {
           CachedArchiveSource.field_C = 896.0 - CachedArchiveSource.field_C;
-          cq.field_f = 1344.0 - cq.field_f;
+          AuctionLogEntry.field_f = 1344.0 - AuctionLogEntry.field_f;
         }
     }
 

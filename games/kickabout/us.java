@@ -18,7 +18,7 @@ final class us extends IntrusiveNode {
         return ck.field_d;
     }
 
-    final static void g(byte param0) {
+    final static void drawTutorialCaption(byte param0) {
         String var9 = null;
         String var3 = null;
         int var4 = 0;
@@ -34,7 +34,7 @@ final class us extends IntrusiveNode {
           return;
         }
         Object var1 = null;
-        int var2 = je.a(false);
+        int var2 = AnimationSkeleton.a(false);
         if (var2 != -1) {
           var1 = rr.field_g[var2];
         }

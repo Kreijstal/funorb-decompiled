@@ -27,7 +27,7 @@ final class SoundFilter {
         field_b = (int[][]) null;
     }
 
-    final void decode(PacketBuffer param0, SoundEnvelope param1) {
+    final void a(PacketBuffer param0, SoundEnvelope param1) {
         int var3;
         int var4;
         int var5;
@@ -36,13 +36,13 @@ final class SoundFilter {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.h((byte) -120);
+        var3 = param0.readUnsignedByte((byte) -120);
         this.field_h[0] = var3 >> 4;
         this.field_h[1] = var3 & 15;
         if (var3 != 0) {
           this.field_a[0] = param0.a((byte) 81);
           this.field_a[1] = param0.a((byte) 81);
-          var4 = param0.h((byte) -126);
+          var4 = param0.readUnsignedByte((byte) -126);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_h[var5]; var6++) {
               this.field_e[var5][0][var6] = param0.a((byte) 81);
@@ -74,7 +74,7 @@ final class SoundFilter {
         }
     }
 
-    final int computeCoefficients(int param0, float param1) {
+    final int a(int param0, float param1) {
         float var5 = 0.0f;
         float var6 = 0.0f;
         int var7 = 0;

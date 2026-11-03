@@ -31,26 +31,26 @@ final class fs {
         int var8 = SoftwareRasterizer.field_f;
         Sprite var9 = new Sprite(param1, param0 - param1 * 2);
         var9.e();
-        SoftwareRasterizer.fillVerticalGradient(0, 0, param1, -(2 * param1) + param0, param3, param4);
+        SoftwareRasterizer.g(0, 0, param1, -(2 * param1) + param0, param3, param4);
         Sprite var10 = new Sprite(param1, param1);
         var10.e();
-        SoftwareRasterizer.a(0, 0, param1, param1, param3);
+        SoftwareRasterizer.fillRect(0, 0, param1, param1, param3);
         Sprite var11 = new Sprite(16, param1);
         var11.e();
-        SoftwareRasterizer.a(0, 0, 16, param1, param3);
+        SoftwareRasterizer.fillRect(0, 0, 16, param1, param3);
         if (param5 > 77) {
           var22 = new Sprite(param1, param1);
           var22.e();
-          SoftwareRasterizer.a(0, 0, param1, param1, param4);
+          SoftwareRasterizer.fillRect(0, 0, param1, param1, param4);
           var23 = new Sprite(16, param1);
           var23.e();
-          SoftwareRasterizer.a(0, 0, 16, param1, param4);
+          SoftwareRasterizer.fillRect(0, 0, 16, param1, param4);
           var14 = null;
           if (param2 > 0) {
             var24 = new Sprite(16, 16);
             var14 = var24;
             var24.e();
-            SoftwareRasterizer.a(0, 0, 16, 16, param2);
+            SoftwareRasterizer.fillRect(0, 0, 16, 16, param2);
           }
           SoftwareRasterizer.a(var18, var7, var8);
           return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var22, var23, var22};
@@ -58,16 +58,16 @@ final class fs {
         field_a = (String[]) null;
         Sprite var19 = new Sprite(param1, param1);
         var19.e();
-        SoftwareRasterizer.a(0, 0, param1, param1, param4);
+        SoftwareRasterizer.fillRect(0, 0, param1, param1, param4);
         Sprite var20 = new Sprite(16, param1);
         var20.e();
-        SoftwareRasterizer.a(0, 0, 16, param1, param4);
+        SoftwareRasterizer.fillRect(0, 0, 16, param1, param4);
         var14 = null;
         if (param2 > 0) {
           var21 = new Sprite(16, 16);
           var14 = var21;
           var21.e();
-          SoftwareRasterizer.a(0, 0, 16, 16, param2);
+          SoftwareRasterizer.fillRect(0, 0, 16, 16, param2);
         }
         SoftwareRasterizer.a(var18, var7, var8);
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var19, var20, var19};
@@ -179,26 +179,26 @@ final class fs {
     final static void a(byte param0) {
         if (param0 != -126) {
           field_a = (String[]) null;
-          if (up.field_p == 0 - qt.field_l) {
-            up.field_p = up.field_p + 1;
+          if (PlayerStats.field_p == 0 - ButtonMenuScreen.field_l) {
+            PlayerStats.field_p = PlayerStats.field_p + 1;
             return;
           }
-          if (up.field_p != -qt.field_l + 250) {
-            up.field_p = up.field_p + 1;
+          if (PlayerStats.field_p != -ButtonMenuScreen.field_l + 250) {
+            PlayerStats.field_p = PlayerStats.field_p + 1;
             return;
           }
-          up.field_p = up.field_p + 1;
+          PlayerStats.field_p = PlayerStats.field_p + 1;
           return;
         }
-        if (up.field_p == 0 - qt.field_l) {
-          up.field_p = up.field_p + 1;
+        if (PlayerStats.field_p == 0 - ButtonMenuScreen.field_l) {
+          PlayerStats.field_p = PlayerStats.field_p + 1;
           return;
         }
-        if (up.field_p != -qt.field_l + 250) {
-          up.field_p = up.field_p + 1;
+        if (PlayerStats.field_p != -ButtonMenuScreen.field_l + 250) {
+          PlayerStats.field_p = PlayerStats.field_p + 1;
           return;
         }
-        up.field_p = up.field_p + 1;
+        PlayerStats.field_p = PlayerStats.field_p + 1;
     }
 
     static {

@@ -90,8 +90,8 @@ final class NodeHashTableIterator implements Iterator {
         CipherPacketBuffer var2 = or.field_d;
         int var3 = -31 / ((param0 - 40) / 56);
         var2.b(param1, (byte) 120);
-        var2.a(106, 1);
-        var2.a(119, 0);
+        var2.writeByte(106, 1);
+        var2.writeByte(119, 0);
     }
 
     public final Object next() {

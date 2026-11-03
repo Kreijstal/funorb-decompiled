@@ -190,7 +190,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (lw.field_e != null) {
             TextHotspotWidget.field_M = 0;
-            fp.field_w = param0.getX();
+            AuctionItem.field_w = param0.getX();
             UiWidget.field_l = param0.getY();
             nj.a(71);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {

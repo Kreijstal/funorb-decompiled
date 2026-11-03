@@ -44,7 +44,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final void copyStyleTo(TextWidgetPainter param0, byte param1) {
+    final void a(TextWidgetPainter param0, byte param1) {
         param0.field_a = this.field_a;
         param0.field_b = this.field_b;
         param0.field_i = this.field_i;
@@ -210,9 +210,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               stackIn_4_3 = var13.field_c[var7 + 1].field_g;
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
-            pt.a(param1 - (-param4.field_t - param4.field_n), -22914, param1 + param4.field_t, param4.field_i + (param2 + param4.field_g), param2 + param4.field_g);
+            AuctionListing.a(param1 - (-param4.field_t - param4.field_n), -22914, param1 + param4.field_t, param4.field_i + (param2 + param4.field_g), param2 + param4.field_g);
             nb.field_i.a(this.field_i, var12, var10, var11, var10, param3);
-            ta.e(127);
+            TeamManagementScreen.e(127);
           }
           if (!param3) {
             field_g = (String) null;
@@ -253,7 +253,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var12Lifetime1;
         var13 = Kickabout.field_G;
         try {
-          pt.a(param2 + param4.field_t + param4.field_n, -22914, param2 + param4.field_t, param4.field_g + (param7 + param4.field_i), param4.field_g + param7);
+          AuctionListing.a(param2 + param4.field_t + param4.field_n, -22914, param2 + param4.field_t, param4.field_g + (param7 + param4.field_i), param4.field_g + param7);
           var9_int = this.a((byte) -124, param4);
           if (param3 <= 71) {
             this.field_o = 4;
@@ -292,7 +292,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               this.field_a.a(this.b((byte) -103, param4), this.b(-31112, param4, param2, param6), this.a(param7, (byte) 90, param4, param5) + var11, param0, param1);
             }
           }
-          ta.e(126);
+          TeamManagementScreen.e(126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -546,7 +546,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           String var15 = null;
           String var16 = null;
           int var17 = 0;
-          si var18 = null;
+          ReflectionCheck var18 = null;
           byte[][] var19 = null;
           String var20 = null;
           String var21 = null;
@@ -554,42 +554,42 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           int var13Lifetime1;
           var14 = Kickabout.field_G;
           try {
-            var18 = new si();
-            var18.field_n = param0.h((byte) -118);
-            var18.field_p = param0.k(4);
-            var18.field_e = new PlatformTask[var18.field_n];
-            var18.field_h = new int[var18.field_n];
-            var18.field_l = new byte[var18.field_n][][];
-            var18.field_o = new int[var18.field_n];
-            var18.field_m = new int[var18.field_n];
-            var18.field_f = new PlatformTask[var18.field_n];
-            for (var5 = 0; var18.field_n > var5; var5++) {
+            var18 = new ReflectionCheck();
+            var18.operationCount = param0.readUnsignedByte((byte) -118);
+            var18.requestId = param0.readInt(4);
+            var18.methodTasks = new PlatformTask[var18.operationCount];
+            var18.operationTypes = new int[var18.operationCount];
+            var18.serializedArguments = new byte[var18.operationCount][][];
+            var18.fieldSetValues = new int[var18.operationCount];
+            var18.operationErrors = new int[var18.operationCount];
+            var18.fieldTasks = new PlatformTask[var18.operationCount];
+            for (var5 = 0; var18.operationCount > var5; var5++) {
               try {
-                var6_int = param0.h((byte) -108);
+                var6_int = param0.readUnsignedByte((byte) -108);
                 if (var6_int != 0 &&
                   1 != var6_int &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param0.a(125);
-                    var21 = param0.a(-105);
-                    var9 = param0.h((byte) -112);
+                    var20 = param0.readString(125);
+                    var21 = param0.readString(-105);
+                    var9 = param0.readUnsignedByte((byte) -112);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param0.a(param2 + 102);
+                      var10[var11_int] = param0.readString(param2 + 102);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param0.k(4);
+                        var13 = param0.readInt(4);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param0.a(var22[var12_int], 0, (byte) -6, var13);
+                        param0.readBytes(var22[var12_int], 0, (byte) -6, var13);
                       }
                     }
-                    var18.field_h[var5] = var6_int;
+                    var18.operationTypes[var5] = var6_int;
                     var12 = new Class[var9];
                     var17 = 0;
                     var13Lifetime1 = var17;
@@ -597,42 +597,42 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                       var12[var17] = il.a(param2 - 106, var10[var17]);
                       var17++;
                     }
-                    var18.field_e[var5] = param3.requestDeclaredField(-30971, var12, il.a(-113, var20), var21);
-                    var18.field_l[var5] = var22;
+                    var18.methodTasks[var5] = param3.requestDeclaredMethod(-30971, var12, il.a(-113, var20), var21);
+                    var18.serializedArguments[var5] = var22;
                   }
                 } else {
-                  var16 = param0.a(84);
+                  var16 = param0.readString(84);
                   var7 = var16;
-                  var15 = param0.a(59);
+                  var15 = param0.readString(59);
                   var8 = var15;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.k(4);
+                    var9 = param0.readInt(4);
                   }
-                  var18.field_h[var5] = var6_int;
-                  var18.field_o[var5] = var9;
-                  var18.field_f[var5] = param3.a(var15, il.a(98, var16), 0);
+                  var18.operationTypes[var5] = var6_int;
+                  var18.fieldSetValues[var5] = var9;
+                  var18.fieldTasks[var5] = param3.requestDeclaredField(var15, il.a(98, var16), 0);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                var18.field_m[var5] = -1;
+                var18.operationErrors[var5] = -1;
               } catch (java.lang.SecurityException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var6_ref = (SecurityException) (Object) decompiledCaughtException;
-                var18.field_m[var5] = -2;
+                var18.operationErrors[var5] = -2;
               } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                var18.field_m[var5] = -3;
+                var18.operationErrors[var5] = -3;
               } catch (java.lang.Exception decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
                 var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                var18.field_m[var5] = -4;
+                var18.operationErrors[var5] = -4;
               } catch (java.lang.Throwable decompiledCaughtParameter4) {
                 decompiledCaughtException = decompiledCaughtParameter4;
                 var6_ref4 = decompiledCaughtException;
-                var18.field_m[var5] = -5;
+                var18.operationErrors[var5] = -5;
               }
             }
             nv.field_N.a(var18, 3);
@@ -762,7 +762,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var10 = var18.a(0, var8);
             var11 = var18.a(0, var9);
-            pt.a(param3.field_n + (param3.field_t + param0), -22914, param3.field_t + param0, param3.field_i + param5 + param3.field_g, param3.field_g + param5);
+            AuctionListing.a(param3.field_n + (param3.field_t + param0), -22914, param3.field_t + param0, param3.field_i + param5 + param3.field_g, param3.field_g + param5);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_c[var12];
               if (var12 != var10) {
@@ -783,7 +783,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var15 = stackIn_19_0;
               nb.field_i.a(this.b(-31112, param3, param0, var14), var13.field_d, this.field_c, var15 - var14, var13.field_g + (this.field_q + param5) + (param3.field_g + param3.field_o), this.field_c >>> 24, (byte) -2);
             }
-            ta.e(125);
+            TeamManagementScreen.e(125);
             return;
           }
           return;

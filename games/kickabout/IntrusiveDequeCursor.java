@@ -118,7 +118,7 @@ final class IntrusiveDequeCursor {
           bw.field_e[2] = param1.copy();
           int var2_int = 50 % ((-82 - param0) / 42);
           bw.field_e[2].d();
-          bw.field_e[3] = bw.field_e[2].f();
+          bw.field_e[3] = bw.field_e[2].flipHorizontal();
           du.field_e = param1.field_q;
           re.field_k = param1.field_w;
           kw.field_h = du.field_e >> 1;

@@ -48,7 +48,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
         try {
           var6 = (CharSequence) ((Object) param2);
           if (!ef.a(var6, param1 - 10007)) {
-            stackIn_2_0 = kq.field_Ib;
+            stackIn_2_0 = SquadSlotWidget.field_Ib;
             return stackIn_2_0;
           }
           if (ts.field_d != 2) {
@@ -63,12 +63,12 @@ final class BroadcastServerCommand extends ConsoleCommand {
             stackIn_13_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameAppletShell.field_m, new String[]{param2});
             return stackIn_13_0;
           }
-          if (param1 <= bc.field_d &&
+          if (param1 <= ListingRow.field_d &&
             eq.field_d <= 0) {
             stackIn_17_0 = DraggableWidget.field_A;
             return stackIn_17_0;
           }
-          if (bc.field_d >= 200) {
+          if (ListingRow.field_d >= 200) {
             stackIn_20_0 = DraggableWidget.field_A;
             return stackIn_20_0;
           }
@@ -80,9 +80,9 @@ final class BroadcastServerCommand extends ConsoleCommand {
           var5.b(param0, (byte) 93);
           var5.field_n = var5.field_n + 1;
           var4 = var5.field_n;
-          var5.a(123, 0);
-          var5.a(param1 ^ 14090, param2);
-          var5.c(62, -var4 + var5.field_n);
+          var5.writeByte(123, 0);
+          var5.writeString(param1 ^ 14090, param2);
+          var5.backpatchByteLength(62, -var4 + var5.field_n);
           stackIn_26_0 = null;
           return (String) (stackIn_26_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,11 +140,11 @@ final class BroadcastServerCommand extends ConsoleCommand {
         }
     }
 
-    final static bc a(PacketBuffer param0, int param1) {
-        bc var2 = null;
+    final static ListingRow a(PacketBuffer param0, int param1) {
+        ListingRow var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;
-        bc stackIn_3_0 = null;
+        ListingRow stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -154,7 +154,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             var3 = (String) null;
             BroadcastServerCommand.a(8, 73, (String) null);
           }
-          var2 = new bc();
+          var2 = new ListingRow();
           var2.a(param0, 62);
           stackIn_3_0 = var2;
           return stackIn_3_0;

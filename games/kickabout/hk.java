@@ -52,8 +52,8 @@ final class hk extends i {
         }
     }
 
-    hk(vc param0, int param1) {
-        super(param1, param0.field_m);
+    hk(ReceivedAuctionItem param0, int param1) {
+        super(param1, param0.playerStats);
         String stackIn_5_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -65,8 +65,8 @@ final class hk extends i {
         this.field_M = -1L;
         try {
           this.field_M = param0.field_a;
-          if (jd.f(-1) &&
-            param0.field_m.field_h.length > 0) {
+          if (TextFieldValidator.f(-1) &&
+            param0.playerStats.trinketIds.length > 0) {
             stackIn_5_0 = "<br><br>" + mp.field_n;
           } else {
             stackIn_5_0 = "";
@@ -75,17 +75,17 @@ final class hk extends i {
           var3 = var5;
           if (param1 == 19) {
             this.field_N = param0.field_i;
-            this.field_v = vo.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{ad.a(this.field_N, 26300), var5});
+            this.field_v = vo.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{ad.formatCurrencyAmount(this.field_N, 26300), var5});
             this.field_J = 52;
           } else {
             if (param1 == 32) {
               this.field_N = param0.field_t;
-              this.field_v = vo.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{ad.a(this.field_N, 26300), var5});
+              this.field_v = vo.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{ad.formatCurrencyAmount(this.field_N, 26300), var5});
               this.field_J = 66;
             } else {
               if (param1 == 37) {
                 this.field_N = param0.field_t;
-                this.field_v = vo.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{ad.a(this.field_N, 26300), ad.a(param0.field_v, 26300), var5});
+                this.field_v = vo.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{ad.formatCurrencyAmount(this.field_N, 26300), ad.formatCurrencyAmount(param0.field_v, 26300), var5});
                 this.field_J = 66;
               }
             }
@@ -119,11 +119,11 @@ final class hk extends i {
         }
         if (0 == param1) {
           or.field_d.b(this.field_J, (byte) 124);
-          or.field_d.a(this.field_M, -1781890008);
-          or.field_d.b(-74, this.field_N);
+          or.field_d.writeLong(this.field_M, -1781890008);
+          or.field_d.writeInt(-74, this.field_N);
           ParticipantStatus.$cfr$intArgs$a$60f25194e713(true, 128, 118, 49);
           this.field_M = -1L;
-          ((wf) (rn.a(-108, 16))).field_H = -1L;
+          ((AuctionsScreen) (rn.a(-108, 16))).field_H = -1L;
           if (param0 >= 60) {
             return;
           }

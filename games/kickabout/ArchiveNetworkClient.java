@@ -60,7 +60,7 @@ abstract class ArchiveNetworkClient {
           if (qe.a(true, param0)) {
             return false;
           }
-          if (lg.a(param0, (byte) 79)) {
+          if (DebouncedValidationProvider.a(param0, (byte) 79)) {
             return false;
           }
           if (param1 != -32341) {
@@ -75,7 +75,7 @@ abstract class ArchiveNetworkClient {
           if (SetLagCommand.a(63, param0, param2)) {
             return false;
           }
-          if (!lj.a((byte) -120, param2, param0)) {
+          if (!TextLine.a((byte) -120, param2, param0)) {
             return true;
           }
           return false;

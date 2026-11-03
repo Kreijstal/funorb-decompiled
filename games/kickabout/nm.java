@@ -76,7 +76,7 @@ final class nm {
     }
 
     private nm(ResourceArchive param0, int param1, String param2) {
-        this(param0, param1, param0.findFileId((byte) -111, param2, param1));
+        this(param0, param1, param0.a((byte) -111, param2, param1));
     }
 
     nm(ResourceArchive param0, String param1, String param2) {
@@ -105,7 +105,7 @@ final class nm {
         boolean decompiledFrameRemainder0 = true;
         stackIn_8_0 = ArchiveIndex.field_t;
         if (param3 == ih.field_c &&
-          rm.field_C == param0) {
+          RankingsScreen.field_C == param0) {
           if (param2) {
             stackIn_7_1 = 0;
           } else {
@@ -120,10 +120,10 @@ final class nm {
           stackIn_10_1 = true;
         }
         ArchiveIndex.field_t = stackIn_8_0 | stackIn_10_1;
-        wh.field_q = true;
+        FadingSoundPlayer.field_q = true;
         rl.field_r = -1;
         vi.field_n = param2;
-        rm.field_C = param0;
+        RankingsScreen.field_C = param0;
         ih.field_c = param3;
     }
 
@@ -160,28 +160,28 @@ final class nm {
               this.field_h = param1.a((byte) 81);
             } else {
               if (param0 == 3) {
-                var4_int = param1.h((byte) -122);
+                var4_int = param1.readUnsignedByte((byte) -122);
                 this.field_m = new int[1 + var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  this.field_m[var5] = param1.h((byte) -115);
+                  this.field_m[var5] = param1.readUnsignedByte((byte) -115);
                 }
                 this.field_m[var4_int] = 9999999;
               } else {
                 if (5 == param0) {
-                  param1.h((byte) -126);
+                  param1.readUnsignedByte((byte) -126);
                 } else {
                   if (param0 != 6) {
                     if (param0 != 7) {
                       if (param0 != 8) {
                         if (param0 == 9) {
-                          param1.h((byte) -106);
+                          param1.readUnsignedByte((byte) -106);
                         } else {
                           if (param0 != 10) {
                             if (11 == param0) {
-                              param1.h((byte) -118);
+                              param1.readUnsignedByte((byte) -118);
                             } else {
                               if (param0 == 12) {
-                                var4_int = param1.h((byte) -117);
+                                var4_int = param1.readUnsignedByte((byte) -117);
                                 for (var5 = 0; var4_int > var5; var5++) {
                                   param1.a((byte) 81);
                                 }
@@ -193,11 +193,11 @@ final class nm {
                                   var4_int = param1.a((byte) 81);
                                   this.field_n = new int[var4_int][];
                                   for (var5 = 0; var5 < var4_int; var5++) {
-                                    var6 = param1.h((byte) -108);
+                                    var6 = param1.readUnsignedByte((byte) -108);
                                     if (var6 > 0) {
                                       array$0 = new int[var6];
                                       this.field_n[var5] = array$0;
-                                      this.field_n[var5][0] = param1.i(-95);
+                                      this.field_n[var5][0] = param1.readUnsignedMedium(-95);
                                       for (var7 = 1; var6 > var7; var7++) {
                                         this.field_n[var5][var7] = param1.a((byte) 81);
                                       }
@@ -217,11 +217,11 @@ final class nm {
                               }
                             }
                           } else {
-                            param1.h((byte) -115);
+                            param1.readUnsignedByte((byte) -115);
                           }
                         }
                       } else {
-                        this.field_f = param1.h((byte) -124);
+                        this.field_f = param1.readUnsignedByte((byte) -124);
                         this.field_j = false;
                       }
                     } else {
@@ -300,7 +300,7 @@ final class nm {
         var4 = Kickabout.field_G;
         try {
           while (true) {
-            var3_int = param1.h((byte) -124);
+            var3_int = param1.readUnsignedByte((byte) -124);
             if (var3_int != 0) {
               this.a(var3_int, param1, param0 ^ 118);
               continue;

@@ -5,14 +5,14 @@ import java.util.*;
 
 abstract class GameLoopApplet extends NetworkGameClient implements hc {
     static String field_D;
-    static gr field_E;
+    static ClubState field_E;
     static String field_C;
 
     final void a(int param0, pk param1) {
         try {
           try {
             NetworkGameClient.field_t = param1;
-            this.a(true, -1);
+            this.enableBaseResponses(true, -1);
             this.h((byte) 105);
             this.l(-1);
             if (param0 < 97) {
@@ -42,14 +42,14 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         }
         CipherPacketBuffer var3 = or.field_d;
         var3.b(param1, (byte) -117);
-        var3.a(param0 - 15721, 3);
-        var3.a(109, 10);
-        var3.g(-1207444472, param2);
+        var3.writeByte(param0 - 15721, 3);
+        var3.writeByte(109, 10);
+        var3.writeShort(-1207444472, param2);
     }
 
     private final void r(int param0) {
         if (param0 != 10) {
-          field_E = (gr) null;
+          field_E = (ClubState) null;
         }
     }
 
@@ -60,9 +60,9 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         return true;
     }
 
-    abstract void o(int param0);
+    abstract void applyPendingNavigation(int param0);
 
-    final void e(byte param0) {
+    final void runFrameStep(byte param0) {
         int stackIn_6_1 = 0;
         boolean stackIn_7_2 = false;
         int var2;
@@ -70,13 +70,13 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         int var4;
         ii var5;
         var4 = Kickabout.field_G;
-        if (e.field_m != null &&
-          e.field_m.field_b) {
+        if (SplashScreen.field_m != null &&
+          SplashScreen.field_m.field_b) {
           UiWidget.h(0);
           ph.a((byte) -122);
         }
         stackIn_6_1 = 0;
-        stackIn_7_2 = (e.field_m != null);
+        stackIn_7_2 = (SplashScreen.field_m != null);
         this.c(stackIn_6_1, stackIn_7_2);
         if (nd.field_c) {
           NetworkGameClient.field_t.a(7312);
@@ -88,26 +88,26 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
             return;
           }
         }
-        this.s(-113);
-        if (!iu.field_h) {
-          iu.a(17, id.field_v);
+        this.processIncomingPackets(-113);
+        if (!CachedListingRow.field_h) {
+          CachedListingRow.a(17, id.field_v);
           if (NetworkGameClient.field_t.a(true)) {
             NetworkGameClient.field_t.b(12763);
-            iu.field_h = true;
+            CachedListingRow.field_h = true;
           }
         } else {
           if (!MouseWheelInput.field_b) {
             if (!PlayArea.a(100)) {
               if (NetworkGameClient.field_t.c(-27598)) {
                 MouseWheelInput.field_b = true;
-                this.o(55);
-                nt.c(false);
+                this.applyPendingNavigation(55);
+                KitStyleTile.c(false);
               }
             } else {
-              this.p(18861);
+              this.dispatchInputEvents(18861);
             }
           } else {
-            this.p(18861);
+            this.dispatchInputEvents(18861);
           }
         }
         if (!PlayArea.a(100)) {
@@ -125,16 +125,16 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         gw.b(5);
         vg.c(0, 0);
         if (hq.a((byte) 10)) {
-          var2 = this.i((byte) -65);
+          var2 = this.pollLoginResult((byte) -65);
           if (var2 == 0 ||
             var2 == 1) {
-            this.a(var2, (byte) 120);
+            this.onConnectionResult(var2, (byte) 120);
           }
           var3 = 0;
           if (var2 == 2) {
             var3 = 1;
           }
-          if (this.m((byte) -120)) {
+          if (this.isConnectionBusy((byte) -120)) {
             var3 = 1;
           }
           if (!hq.a((byte) 10)) {
@@ -148,9 +148,9 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
 
     public abstract void a(int param0, boolean param1);
 
-    abstract boolean m(byte param0);
+    abstract boolean isConnectionBusy(byte param0);
 
-    private final void p(int param0) {
+    private final void dispatchInputEvents(int param0) {
         int stackIn_28_1 = 0;
         boolean stackIn_29_2 = false;
         int stackIn_54_0 = 0;
@@ -184,28 +184,28 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
               this.a(param0 - 18886, false);
             }
           } else {
-            if (up.a((byte) -3)) {
+            if (PlayerStats.a((byte) -3)) {
               stackIn_28_1 = param0 - 18856;
-              stackIn_29_2 = (null != e.field_m);
+              stackIn_29_2 = (null != SplashScreen.field_m);
               var3 = this.b(stackIn_28_1, stackIn_29_2);
               if (var3 != 1 &&
                 var3 != 2) {
                 this.a(param0 ^ -18870, false);
               } else {
-                if (null != e.field_m) {
+                if (null != SplashScreen.field_m) {
                   UiWidget.h(0);
                 }
                 if (var3 != 2) {
                   this.a(param0 ^ -18870, false);
                 } else {
-                  js.a(param0 + 1477, so.a(-79));
+                  AppScreen.openQuitPage(param0 + 1477, so.a(-79));
                   this.a(param0 ^ -18870, false);
                 }
               }
             } else {
               if (vi.c(2915)) {
                 if (!nv.i(0)) {
-                  var3 = df.g(-61);
+                  var3 = AuctionsHelpScreen.g(-61);
                   if (var3 == 1) {
                     ql.a((byte) 50, true, dg.field_f);
                   }
@@ -225,7 +225,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
                         var3 = -1;
                       }
                     } else {
-                      if (ud.c(cc.field_e, param0 - 1831)) {
+                      if (MatchTransitionScreen.c(cc.field_e, param0 - 1831)) {
                         var3 = cc.field_e;
                         continue;
                       }
@@ -268,9 +268,9 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
     protected GameLoopApplet() {
     }
 
-    abstract void a(int param0, byte param1);
+    abstract void onConnectionResult(int param0, byte param1);
 
-    final void b(byte param0) {
+    final void paintFrame(byte param0) {
         int var3 = 0;
         int var4 = Kickabout.field_G;
         java.awt.Canvas var2 = DropTargetWidget.l(64);
@@ -278,7 +278,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
           va.a(var2, pn.g(2368), 0);
           return;
         }
-        if (!iu.field_h) {
+        if (!CachedListingRow.field_h) {
           FormationAgent.a(var2, -14142);
           return;
         }
@@ -303,7 +303,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         }
     }
 
-    abstract boolean a(int param0, CipherPacketBuffer param1, int param2);
+    abstract boolean handlePacket(int param0, CipherPacketBuffer param1, int param2);
 
     final static void n(byte param0) {
         int var1_int = 0;
@@ -351,15 +351,15 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
 
     public abstract void a(int param0);
 
-    private final void s(int param0) {
+    private final void processIncomingPackets(int param0) {
         int var2;
         int var3;
         var3 = Kickabout.field_G;
         while (dr.a(-125, IntTripleCommand.field_A)) {
-          if (this.a(so.field_b, un.field_e, 1)) {
+          if (this.handlePacket(so.field_b, un.field_e, 1)) {
             continue;
           }
-          this.j(95);
+          this.dispatchServerPacket(95);
         }
         var2 = 80 / ((param0 + 28) / 48);
     }

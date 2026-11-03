@@ -6,10 +6,10 @@ final class BigCommand extends ConsoleCommand {
         if (param0 != -26370) {
           return (String) null;
         }
-        if (nr.field_f == wk.field_f) {
+        if (PlayerModelPreview.field_f == wk.field_f) {
           return qr.field_f;
         }
-        if (nr.field_f == mj.field_a) {
+        if (PlayerModelPreview.field_f == mj.field_a) {
           return pr.field_c;
         }
         if (!DualLinkDequeIterator.field_e.a((byte) -80)) {
