@@ -258,7 +258,7 @@ final class LinkPainter implements WidgetPainter {
                   }
                   stackIn_46_0 = var7.field_Cb;
                   if (var14 > 0) {
-                    stackIn_47_1 = nq.a(var7.field_Cb.field_nb, var7.field_Ab, var14);
+                    stackIn_47_1 = nq.truncateWithEllipsis(var7.field_Cb.field_nb, var7.field_Ab, var14);
                   } else {
                     stackIn_47_1 = var7.field_Ab;
                   }

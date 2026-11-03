@@ -195,7 +195,7 @@ final class ObjectList {
             if (ls.field_a == param2) {
               var21 += 42;
             }
-            var33 = nq.a(var12.field_Ab.field_nb, var32, var21);
+            var33 = nq.truncateWithEllipsis(var12.field_Ab.field_nb, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;

@@ -669,7 +669,7 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 var12.field_Db.setTarget(68, cr.field_c, (byte) 72, var31, 0);
               }
-              var12.field_Pb.field_z = nq.a(var12.field_Pb.field_nb, var32, 78);
+              var12.field_Pb.field_z = nq.truncateWithEllipsis(var12.field_Pb.field_nb, var32, 78);
               var12.field_Pb.setTarget(78, cr.field_c, (byte) 85, var31, 70);
               if (var12.field_Pb.field_L &&
                 !var12.field_Pb.field_z.equals(var32)) {

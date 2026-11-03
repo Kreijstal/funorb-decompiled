@@ -2162,7 +2162,7 @@ final class sm {
             param2 = param2 + param0;
             var14 = param7.stringWidth(var13);
             if (4 * var14 >= param4 * 3) {
-              param7.b(var13, param3, param2, param5, -1, param4);
+              param7.drawJustified(var13, param3, param2, param5, -1, param4);
             } else {
               param7.drawString(var13, param3, param2, param5, -1);
             }

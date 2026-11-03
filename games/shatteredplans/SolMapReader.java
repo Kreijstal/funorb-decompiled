@@ -217,7 +217,7 @@ final class SolMapReader implements MapGenerator {
               if (null != var8_ref_nf.field_j) {
               }
               var10 = IsolationistAi.a(param0, var8_ref_nf);
-              var11 = var10 + nq.a(var8_ref_nf.field_k);
+              var11 = var10 + nq.escapeMarkup(var8_ref_nf.field_k);
               var12 = jl.a(var8_ref_nf, (byte) -73);
               var8_ref_nf.field_j = new AnimatedPanel(0L, BoundsRect.field_k, var11);
               var8_ref_nf.field_j.field_nb = ho.field_f;

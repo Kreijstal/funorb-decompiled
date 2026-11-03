@@ -9596,6 +9596,14 @@
       "renamedSymbol": "M:nq.setColoursAlpha(III)V"
     },
     {
+      "symbol": "M:nq.a(Ljava/lang/String;)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "escapeMarkup",
+      "evidence": "Replaces each less-than and greater-than character with its lt or gt tag.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:nq.a(Ljava/lang/String;I)I",
       "originalName": "a",
       "to": "lineCount",
@@ -9620,12 +9628,44 @@
       "renamedSymbol": "M:nq.wrapText(Ljava/lang/String;[I[Ljava/lang/String;)I"
     },
     {
+      "symbol": "M:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "truncateWithEllipsis",
+      "evidence": "Shortens the string with three dots when it is wider than the given width.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:nq.truncateWithEllipsis(Lnq;Ljava/lang/String;I)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:nq.b(Ljava/lang/String;)V",
+      "originalName": "b",
+      "to": "applyTag",
+      "evidence": "Handles one markup tag such as a colour or transparency change.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:nq.applyTag(Ljava/lang/String;)V"
+    },
+    {
+      "symbol": "M:nq.b(Ljava/lang/String;I)V",
+      "originalName": "b",
+      "to": "computeJustifySpacing",
+      "evidence": "Counts the spaces outside tags and divides the missing width among them.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:nq.computeJustifySpacing(Ljava/lang/String;I)V"
+    },
+    {
       "symbol": "M:nq.b(Ljava/lang/String;IIII)V",
       "originalName": "b",
       "to": "drawRightAligned",
       "evidence": "Sets the colours and draws the string with its right end at the x position.",
       "confidence": "reviewed",
       "renamedSymbol": "M:nq.drawRightAligned(Ljava/lang/String;IIII)V"
+    },
+    {
+      "symbol": "M:nq.b(Ljava/lang/String;IIIII)V",
+      "originalName": "b",
+      "to": "drawJustified",
+      "evidence": "Sets the colours, computes the space padding for a target width and draws the string.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:nq.drawJustified(Ljava/lang/String;IIIII)V"
     },
     {
       "symbol": "M:nq.c(II)V",
@@ -221172,7 +221212,7 @@
     },
     {
       "symbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "L:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -221183,7 +221223,7 @@
     },
     {
       "symbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#1",
-      "renamedSymbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#1",
+      "renamedSymbol": "L:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#1",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -221194,7 +221234,7 @@
     },
     {
       "symbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#2",
-      "renamedSymbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#2",
+      "renamedSymbol": "L:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#2",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -221205,7 +221245,7 @@
     },
     {
       "symbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#3",
-      "renamedSymbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#3",
+      "renamedSymbol": "L:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#3",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -221216,7 +221256,7 @@
     },
     {
       "symbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#4",
-      "renamedSymbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#4",
+      "renamedSymbol": "L:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#4",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -221227,7 +221267,7 @@
     },
     {
       "symbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#5",
-      "renamedSymbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#5",
+      "renamedSymbol": "L:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -221238,7 +221278,7 @@
     },
     {
       "symbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#6",
-      "renamedSymbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#6",
+      "renamedSymbol": "L:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -221249,7 +221289,7 @@
     },
     {
       "symbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#7",
-      "renamedSymbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#7",
+      "renamedSymbol": "L:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -221260,7 +221300,7 @@
     },
     {
       "symbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#8",
-      "renamedSymbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#8",
+      "renamedSymbol": "L:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -221271,7 +221311,7 @@
     },
     {
       "symbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#9",
-      "renamedSymbol": "L:nq.a(Ljava/lang/String;)Ljava/lang/String;#9",
+      "renamedSymbol": "L:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#9",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -221722,7 +221762,7 @@
     },
     {
       "symbol": "L:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#0",
-      "renamedSymbol": "L:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#0",
+      "renamedSymbol": "L:nq.truncateWithEllipsis(Lnq;Ljava/lang/String;I)Ljava/lang/String;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -221733,7 +221773,7 @@
     },
     {
       "symbol": "L:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#1",
-      "renamedSymbol": "L:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#1",
+      "renamedSymbol": "L:nq.truncateWithEllipsis(Lnq;Ljava/lang/String;I)Ljava/lang/String;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -221744,7 +221784,7 @@
     },
     {
       "symbol": "L:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#2",
-      "renamedSymbol": "L:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#2",
+      "renamedSymbol": "L:nq.truncateWithEllipsis(Lnq;Ljava/lang/String;I)Ljava/lang/String;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -221755,7 +221795,7 @@
     },
     {
       "symbol": "L:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#3",
-      "renamedSymbol": "L:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#3",
+      "renamedSymbol": "L:nq.truncateWithEllipsis(Lnq;Ljava/lang/String;I)Ljava/lang/String;#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -221766,7 +221806,7 @@
     },
     {
       "symbol": "L:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#4",
-      "renamedSymbol": "L:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#4",
+      "renamedSymbol": "L:nq.truncateWithEllipsis(Lnq;Ljava/lang/String;I)Ljava/lang/String;#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -222283,7 +222323,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;)V#0",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;)V#0",
+      "renamedSymbol": "L:nq.applyTag(Ljava/lang/String;)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -222294,7 +222334,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;)V#1",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;)V#1",
+      "renamedSymbol": "L:nq.applyTag(Ljava/lang/String;)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -222305,7 +222345,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;)V#2",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;)V#2",
+      "renamedSymbol": "L:nq.applyTag(Ljava/lang/String;)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -222316,7 +222356,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;)V#3",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;)V#3",
+      "renamedSymbol": "L:nq.applyTag(Ljava/lang/String;)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -222327,7 +222367,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;)V#4",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;)V#4",
+      "renamedSymbol": "L:nq.applyTag(Ljava/lang/String;)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -222338,7 +222378,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;)V#5",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;)V#5",
+      "renamedSymbol": "L:nq.applyTag(Ljava/lang/String;)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -222349,7 +222389,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;)V#6",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;)V#6",
+      "renamedSymbol": "L:nq.applyTag(Ljava/lang/String;)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -222360,7 +222400,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;)V#7",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;)V#7",
+      "renamedSymbol": "L:nq.applyTag(Ljava/lang/String;)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -222371,7 +222411,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "L:nq.computeJustifySpacing(Ljava/lang/String;I)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -222382,7 +222422,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "L:nq.computeJustifySpacing(Ljava/lang/String;I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -222393,7 +222433,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;I)V#2",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;I)V#2",
+      "renamedSymbol": "L:nq.computeJustifySpacing(Ljava/lang/String;I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -222404,7 +222444,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;I)V#3",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;I)V#3",
+      "renamedSymbol": "L:nq.computeJustifySpacing(Ljava/lang/String;I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -222415,7 +222455,7 @@
     },
     {
       "symbol": "L:nq.b(Ljava/lang/String;I)V#4",
-      "renamedSymbol": "L:nq.b(Ljava/lang/String;I)V#4",
+      "renamedSymbol": "L:nq.computeJustifySpacing(Ljava/lang/String;I)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -333867,9 +333907,9 @@
     },
     {
       "symbol": "M:nq.a(Ljava/lang/String;)Ljava/lang/String;",
-      "renamedSymbol": "M:nq.a(Ljava/lang/String;)Ljava/lang/String;",
+      "renamedSymbol": "M:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "escapeMarkup",
       "declaration": {
         "file": "nq.java",
         "start": 10250,
@@ -333955,9 +333995,9 @@
     },
     {
       "symbol": "M:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;",
-      "renamedSymbol": "M:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;",
+      "renamedSymbol": "M:nq.truncateWithEllipsis(Lnq;Ljava/lang/String;I)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "truncateWithEllipsis",
       "declaration": {
         "file": "nq.java",
         "start": 19801,
@@ -334021,9 +334061,9 @@
     },
     {
       "symbol": "M:nq.b(Ljava/lang/String;)V",
-      "renamedSymbol": "M:nq.b(Ljava/lang/String;)V",
+      "renamedSymbol": "M:nq.applyTag(Ljava/lang/String;)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "applyTag",
       "declaration": {
         "file": "nq.java",
         "start": 11701,
@@ -334032,9 +334072,9 @@
     },
     {
       "symbol": "M:nq.b(Ljava/lang/String;I)V",
-      "renamedSymbol": "M:nq.b(Ljava/lang/String;I)V",
+      "renamedSymbol": "M:nq.computeJustifySpacing(Ljava/lang/String;I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "computeJustifySpacing",
       "declaration": {
         "file": "nq.java",
         "start": 33467,
@@ -334065,9 +334105,9 @@
     },
     {
       "symbol": "M:nq.b(Ljava/lang/String;IIIII)V",
-      "renamedSymbol": "M:nq.b(Ljava/lang/String;IIIII)V",
+      "renamedSymbol": "M:nq.drawJustified(Ljava/lang/String;IIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawJustified",
       "declaration": {
         "file": "nq.java",
         "start": 37891,
@@ -409250,7 +409290,7 @@
     },
     {
       "symbol": "P:nq.a(Ljava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "P:nq.a(Ljava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "P:nq.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -409701,7 +409741,7 @@
     },
     {
       "symbol": "P:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:nq.truncateWithEllipsis(Lnq;Ljava/lang/String;I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -409712,7 +409752,7 @@
     },
     {
       "symbol": "P:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#1",
-      "renamedSymbol": "P:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#1",
+      "renamedSymbol": "P:nq.truncateWithEllipsis(Lnq;Ljava/lang/String;I)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -409723,7 +409763,7 @@
     },
     {
       "symbol": "P:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#2",
-      "renamedSymbol": "P:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;#2",
+      "renamedSymbol": "P:nq.truncateWithEllipsis(Lnq;Ljava/lang/String;I)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -410009,7 +410049,7 @@
     },
     {
       "symbol": "P:nq.b(Ljava/lang/String;)V#0",
-      "renamedSymbol": "P:nq.b(Ljava/lang/String;)V#0",
+      "renamedSymbol": "P:nq.applyTag(Ljava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -410020,7 +410060,7 @@
     },
     {
       "symbol": "P:nq.b(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:nq.b(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:nq.computeJustifySpacing(Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -410031,7 +410071,7 @@
     },
     {
       "symbol": "P:nq.b(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:nq.b(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:nq.computeJustifySpacing(Ljava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -410130,7 +410170,7 @@
     },
     {
       "symbol": "P:nq.b(Ljava/lang/String;IIIII)V#0",
-      "renamedSymbol": "P:nq.b(Ljava/lang/String;IIIII)V#0",
+      "renamedSymbol": "P:nq.drawJustified(Ljava/lang/String;IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -410141,7 +410181,7 @@
     },
     {
       "symbol": "P:nq.b(Ljava/lang/String;IIIII)V#1",
-      "renamedSymbol": "P:nq.b(Ljava/lang/String;IIIII)V#1",
+      "renamedSymbol": "P:nq.drawJustified(Ljava/lang/String;IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -410152,7 +410192,7 @@
     },
     {
       "symbol": "P:nq.b(Ljava/lang/String;IIIII)V#2",
-      "renamedSymbol": "P:nq.b(Ljava/lang/String;IIIII)V#2",
+      "renamedSymbol": "P:nq.drawJustified(Ljava/lang/String;IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -410163,7 +410203,7 @@
     },
     {
       "symbol": "P:nq.b(Ljava/lang/String;IIIII)V#3",
-      "renamedSymbol": "P:nq.b(Ljava/lang/String;IIIII)V#3",
+      "renamedSymbol": "P:nq.drawJustified(Ljava/lang/String;IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -410174,7 +410214,7 @@
     },
     {
       "symbol": "P:nq.b(Ljava/lang/String;IIIII)V#4",
-      "renamedSymbol": "P:nq.b(Ljava/lang/String;IIIII)V#4",
+      "renamedSymbol": "P:nq.drawJustified(Ljava/lang/String;IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -410185,7 +410225,7 @@
     },
     {
       "symbol": "P:nq.b(Ljava/lang/String;IIIII)V#5",
-      "renamedSymbol": "P:nq.b(Ljava/lang/String;IIIII)V#5",
+      "renamedSymbol": "P:nq.drawJustified(Ljava/lang/String;IIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -468215,7 +468255,7 @@
       "original": "bk.java",
       "renamed": "bk.java",
       "inputSha256": "5a9407e814065d6b3573dbb8d36d09172980615c71df0343995c53b072787cc1",
-      "outputSha256": "fea474b47844acec3ec270903ad5419f5a86af845040d388e3a108da0654fe05",
+      "outputSha256": "e4d8c00ef324670c88e6543bf188c7a80102f8ce20fab1ead4b31c8d606395ee",
       "edits": [
         {
           "start": 120,
@@ -468496,6 +468536,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 9017,
+          "end": 9018,
+          "symbol": "M:nq.a(Ljava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "escapeMarkup"
         },
         {
           "start": 9196,
@@ -485143,7 +485190,7 @@
       "original": "di.java",
       "renamed": "di.java",
       "inputSha256": "fd8e83ffb38f4d4a0d13dc804f92389a188a5c9559da34d60304b86b8b7fb614",
-      "outputSha256": "4f5fad47f3ea5cc1b7bcca5709d20a49b0d9473a424cc8dc4450f66003fb0836",
+      "outputSha256": "726d970a267b96f09a770d94899cf4db74512d4d299849b66dcf9a3add1b08b4",
       "edits": [
         {
           "start": 61,
@@ -485916,6 +485963,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 11501,
+          "end": 11502,
+          "symbol": "M:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "truncateWithEllipsis"
+        },
+        {
           "start": 11820,
           "end": 11821,
           "symbol": "M:qr.a(IIBII)V",
@@ -486238,7 +486292,7 @@
       "original": "dm.java",
       "renamed": "ObjectList.java",
       "inputSha256": "2ed4fe489c7e8fffbec5f404e1d4bcee016418274f2c02c98d01145565d8755a",
-      "outputSha256": "5c74e45e8f522cc1ee07a50cf8a2f4e40c6c1da748720cac25d85f97887d8135",
+      "outputSha256": "e695ed29c1fb38cf3e1fcf5bbf62ccdb5ba23e713784a393ba8c77d90b6361d0",
       "edits": [
         {
           "start": 50,
@@ -486540,6 +486594,13 @@
           "symbol": "M:qr.a(ILqr;)V",
           "original": "a",
           "renamed": "addChild"
+        },
+        {
+          "start": 6616,
+          "end": 6617,
+          "symbol": "M:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "truncateWithEllipsis"
         },
         {
           "start": 7058,
@@ -508412,7 +508473,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "26ab4cbcc15d38b2d044fbf97e32b1d2083e99f021ce3e1f21cf0bd211a28d45",
+      "outputSha256": "32340202763ca375cea6d89f9fe288d4c7605cf6c530e15341463a29985fd6f7",
       "edits": [
         {
           "start": 50,
@@ -509757,6 +509818,13 @@
           "symbol": "M:qr.a(IIBII)V",
           "original": "a",
           "renamed": "setTarget"
+        },
+        {
+          "start": 23928,
+          "end": 23929,
+          "symbol": "M:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "truncateWithEllipsis"
         },
         {
           "start": 23996,
@@ -519416,7 +519484,7 @@
       "original": "hd.java",
       "renamed": "hd.java",
       "inputSha256": "98b5c39df933650b6a4d1f0278f70ca75a567b3fb1b8329f003fc1df3e00d1f5",
-      "outputSha256": "5d62528b3384a12120775ddc33724a8090cda6f61a3a8c07e1a8bee98d5a42e5",
+      "outputSha256": "af86cf9a77bef880e0e937612df66b75ac8dd862a8d5484b190ac9ac9115df2c",
       "edits": [
         {
           "start": 61,
@@ -519648,6 +519716,13 @@
           "symbol": "M:nq.d(Ljava/lang/String;IIII)V",
           "original": "d",
           "renamed": "drawString"
+        },
+        {
+          "start": 3777,
+          "end": 3778,
+          "symbol": "M:nq.b(Ljava/lang/String;IIIII)V",
+          "original": "b",
+          "renamed": "drawJustified"
         },
         {
           "start": 3861,
@@ -585127,7 +585202,7 @@
       "original": "nq.java",
       "renamed": "nq.java",
       "inputSha256": "84e8dbecf406c1c125292e1aa5d36e635cbb73b2b3512ae62e69651ba0742b69",
-      "outputSha256": "945e99c3077d5a4732097135e41359d510c62f83e123ec5ded9a3c132365f737",
+      "outputSha256": "e12c80bc92cb2983b65a331cb555cb6931fa660090599687726419ca1cb6bc56",
       "edits": [
         {
           "start": 64,
@@ -585207,6 +585282,13 @@
           "renamed": "wrapText"
         },
         {
+          "start": 3125,
+          "end": 3126,
+          "symbol": "M:nq.b(Ljava/lang/String;I)V",
+          "original": "b",
+          "renamed": "computeJustifySpacing"
+        },
+        {
           "start": 3502,
           "end": 3503,
           "symbol": "M:nq.c(Ljava/lang/String;)I",
@@ -585240,6 +585322,13 @@
           "symbol": "C:bq",
           "original": "bq",
           "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 5865,
+          "end": 5866,
+          "symbol": "M:nq.b(Ljava/lang/String;)V",
+          "original": "b",
+          "renamed": "applyTag"
         },
         {
           "start": 6102,
@@ -585277,6 +585366,13 @@
           "renamed": "drawHorizontalLine"
         },
         {
+          "start": 10250,
+          "end": 10251,
+          "symbol": "M:nq.a(Ljava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "escapeMarkup"
+        },
+        {
           "start": 11364,
           "end": 11365,
           "symbol": "M:nq.d(Ljava/lang/String;IIII)V",
@@ -585291,6 +585387,13 @@
           "renamed": "setColours"
         },
         {
+          "start": 11701,
+          "end": 11702,
+          "symbol": "M:nq.b(Ljava/lang/String;)V",
+          "original": "b",
+          "renamed": "applyTag"
+        },
+        {
           "start": 12787,
           "end": 12788,
           "symbol": "M:nq.a(III)V",
@@ -585303,6 +585406,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 15970,
+          "end": 15971,
+          "symbol": "M:nq.b(Ljava/lang/String;)V",
+          "original": "b",
+          "renamed": "applyTag"
         },
         {
           "start": 18290,
@@ -585387,6 +585497,13 @@
           "symbol": "M:nq.c(II)V",
           "original": "c",
           "renamed": "setColours"
+        },
+        {
+          "start": 19801,
+          "end": 19802,
+          "symbol": "M:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "truncateWithEllipsis"
         },
         {
           "start": 19956,
@@ -585564,6 +585681,13 @@
           "renamed": "wrapText"
         },
         {
+          "start": 33467,
+          "end": 33468,
+          "symbol": "M:nq.b(Ljava/lang/String;I)V",
+          "original": "b",
+          "renamed": "computeJustifySpacing"
+        },
+        {
           "start": 34084,
           "end": 34085,
           "symbol": "M:nq.c(Ljava/lang/String;)I",
@@ -585571,11 +585695,25 @@
           "renamed": "stringWidth"
         },
         {
+          "start": 37891,
+          "end": 37892,
+          "symbol": "M:nq.b(Ljava/lang/String;IIIII)V",
+          "original": "b",
+          "renamed": "drawJustified"
+        },
+        {
           "start": 38041,
           "end": 38042,
           "symbol": "M:nq.c(II)V",
           "original": "c",
           "renamed": "setColours"
+        },
+        {
+          "start": 38073,
+          "end": 38074,
+          "symbol": "M:nq.b(Ljava/lang/String;I)V",
+          "original": "b",
+          "renamed": "computeJustifySpacing"
         },
         {
           "start": 38995,
@@ -617509,7 +617647,7 @@
       "original": "rq.java",
       "renamed": "LinkPainter.java",
       "inputSha256": "8e61072f3a33239667a0d782b76701b00119a418b9fe10f6fbe54fc7be1404e9",
-      "outputSha256": "055fd6430eab04c5f65a21b8e0b92c4b72659cfe446cbef2dc4169113bc35001",
+      "outputSha256": "b6e00d4d0bab2356a0c1e1b29c1a0be542e29d7efab5980840ee9a1770a539c4",
       "edits": [
         {
           "start": 50,
@@ -617940,6 +618078,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 9753,
+          "end": 9754,
+          "symbol": "M:nq.a(Lnq;Ljava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "truncateWithEllipsis"
         },
         {
           "start": 9986,
@@ -621821,7 +621966,7 @@
       "original": "sh.java",
       "renamed": "SolMapReader.java",
       "inputSha256": "0740a169845de1d7a06ce0018f7b5d52f33cdd49b6a3d4176d832ef40b2d1d4e",
-      "outputSha256": "576816467c8be03c1764076fd90c39e669e370109db76cb08e05e83be7e79cb1",
+      "outputSha256": "a51da05bd2604ebd28b34d3ff717b061c71cd694c849b15057f5163337dbb437",
       "edits": [
         {
           "start": 50,
@@ -622123,6 +622268,13 @@
           "symbol": "C:hg",
           "original": "hg",
           "renamed": "IsolationistAi"
+        },
+        {
+          "start": 6339,
+          "end": 6340,
+          "symbol": "M:nq.a(Ljava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "escapeMarkup"
         },
         {
           "start": 6456,
@@ -624073,7 +624225,7 @@
       "original": "sm.java",
       "renamed": "sm.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "f6b651d227c41b5ff60c4f698c7ba3ffd8b87f7ad714fce9ac66a9134b6a10c7",
+      "outputSha256": "e245126fe15a8b4b1afe5cac0bec8d76701d924ff96852a630dd3a543d092d24",
       "edits": [
         {
           "start": 710,
@@ -628367,6 +628519,13 @@
           "symbol": "M:nq.c(Ljava/lang/String;)I",
           "original": "c",
           "renamed": "stringWidth"
+        },
+        {
+          "start": 82111,
+          "end": 82112,
+          "symbol": "M:nq.b(Ljava/lang/String;IIIII)V",
+          "original": "b",
+          "renamed": "drawJustified"
         },
         {
           "start": 82199,
@@ -677591,10 +677750,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "714df4c910bbb9f1c966615c6dca0103f935d5f4e587fad5e0728d33e5b79d4e",
+    "rulesSha256": "a4e99604a51c6237d2a465a7444db303f1670bc22c26d655905e1c81ef807974",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "0f07794c1ebb60c64b05c0c5dd9cac853e7dd7f8332011cd74690217bbb9c548",
+    "outputTreeSha256": "3c608feb20c00fcd993b62f537e767aac9b31c23f2416795889f43ab79652c6d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

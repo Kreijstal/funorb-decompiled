@@ -114,7 +114,7 @@ final class hd extends IntrusiveNode {
           if (var6 == 0) {
             param1.drawString(param0, 0, param1.field_J, 16777215, -1);
           } else {
-            param1.b(param0, 0, param1.field_J, 16777215, -1, 600);
+            param1.drawJustified(param0, 0, param1.field_J, 16777215, -1, 600);
           }
           this.field_o.bindAsRenderTarget();
           this.field_i.drawOpaque(3, 3);
