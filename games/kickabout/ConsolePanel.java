@@ -171,7 +171,7 @@ abstract class ConsolePanel implements OverlayLayer {
             else {
               param1 = null;
             }
-            var4.a(new TextLine(var6), param0 ^ 3);
+            var4.addLast(new TextLine(var6), param0 ^ 3);
           }
           stackIn_20_0 = var4;
           return stackIn_20_0;
@@ -209,7 +209,7 @@ abstract class ConsolePanel implements OverlayLayer {
         try {
           this.field_g.field_Ab.addChild((byte) -109, this.a(param1, param2, -73));
           if (!(256 >= this.field_g.field_Ab.field_jb.a(false))) {
-            this.field_g.field_Ab.field_jb.b((byte) 125);
+            this.field_g.field_Ab.field_jb.removeFirst((byte) 125);
           }
           var4_int = 5;
           var5 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.g(24009));
@@ -312,7 +312,7 @@ abstract class ConsolePanel implements OverlayLayer {
             this.field_m.a(0, new TextLine(param0));
           }
           if (this.field_m.a(false) > param1) {
-            this.field_m.h(-124);
+            this.field_m.removeLast(-124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

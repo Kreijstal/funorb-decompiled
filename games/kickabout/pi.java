@@ -12,7 +12,7 @@ final class pi {
           return;
         }
         try {
-          ScrollPane.field_Jb.a(new BuyPlayerDialog(param1), 3);
+          ScrollPane.field_Jb.addLast(new BuyPlayerDialog(param1), 3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pi.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

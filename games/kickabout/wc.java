@@ -49,7 +49,7 @@ final class wc {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        SoftwareRasterizer.b(param2, param3, param4, param1, param0);
+        SoftwareRasterizer.drawLine(param2, param3, param4, param1, param0);
         if (!param5) {
           this.a(-95, 103, -98, -54, -82, true);
         }

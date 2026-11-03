@@ -358,7 +358,7 @@ final class NamedValueContainer {
             return;
           }
           if (var3_ref == null) {
-            this.field_e.a(param0, 3);
+            this.field_e.addLast(param0, 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

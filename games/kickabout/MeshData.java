@@ -141,18 +141,18 @@ final class MeshData extends MeshObject {
         var7 = new PacketBuffer(param0);
         var8 = new PacketBuffer(param0);
         var4.field_n = param0.length - 18;
-        var9 = var4.a((byte) 81);
-        var10 = var4.a((byte) 81);
+        var9 = var4.readUnsignedShort((byte) 81);
+        var10 = var4.readUnsignedShort((byte) 81);
         var11 = var4.readUnsignedByte((byte) -123);
         var12 = var4.readUnsignedByte((byte) -118);
         var13 = var4.readUnsignedByte((byte) -122);
         var14 = var4.readUnsignedByte((byte) -126);
         var15 = var4.readUnsignedByte((byte) -110);
         var16 = var4.readUnsignedByte((byte) -124);
-        var17 = var4.a((byte) 81);
-        var18 = var4.a((byte) 81);
-        var19 = var4.a((byte) 81);
-        var20 = var4.a((byte) 81);
+        var17 = var4.readUnsignedShort((byte) 81);
+        var18 = var4.readUnsignedShort((byte) 81);
+        var19 = var4.readUnsignedShort((byte) 81);
+        var20 = var4.readUnsignedShort((byte) 81);
         var21 = 0;
         var22 = var21;
         var21 = var21 + var9;
@@ -263,7 +263,7 @@ final class MeshData extends MeshObject {
         var7.field_n = var28;
         var8.field_n = var25;
         for (var38Lifetime1 = 0; var38Lifetime1 < var10; var38Lifetime1++) {
-          this.field_p[var38Lifetime1] = (short)var4.a((byte) 81);
+          this.field_p[var38Lifetime1] = (short)var4.readUnsignedShort((byte) 81);
           if (var12 == 1) {
             var39Lifetime1 = var5.readUnsignedByte((byte) -108);
             if ((var39Lifetime1 & 1) != 1) {
@@ -363,9 +363,9 @@ final class MeshData extends MeshObject {
         var4.field_n = var31;
         for (var42Lifetime2 = 0; var42Lifetime2 < var11; var42Lifetime2++) {
           this.field_T[var42Lifetime2] = (byte) 0;
-          this.field_h[var42Lifetime2] = (short)var4.a((byte) 81);
-          this.field_B[var42Lifetime2] = (short)var4.a((byte) 81);
-          this.field_y[var42Lifetime2] = (short)var4.a((byte) 81);
+          this.field_h[var42Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+          this.field_B[var42Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+          this.field_y[var42Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
         }
         if (this.field_I != null) {
           var42Lifetime3 = 0;
@@ -586,8 +586,8 @@ final class MeshData extends MeshObject {
         var7 = new PacketBuffer(param0);
         var8 = new PacketBuffer(param0);
         var2.field_n = param0.length - 23;
-        var9 = var2.a((byte) 81);
-        var10 = var2.a((byte) 81);
+        var9 = var2.readUnsignedShort((byte) 81);
+        var10 = var2.readUnsignedShort((byte) 81);
         var11 = var2.readUnsignedByte((byte) -118);
         var12 = var2.readUnsignedByte((byte) -120);
         stackIn_3_0 = ((var12 & 1) != 1) ? 0 : 1;
@@ -599,11 +599,11 @@ final class MeshData extends MeshObject {
         var17 = var2.readUnsignedByte((byte) -112);
         var18 = var2.readUnsignedByte((byte) -114);
         var19 = var2.readUnsignedByte((byte) -128);
-        var20 = var2.a((byte) 81);
-        var21 = var2.a((byte) 81);
-        var22 = var2.a((byte) 81);
-        var23 = var2.a((byte) 81);
-        var24 = var2.a((byte) 81);
+        var20 = var2.readUnsignedShort((byte) 81);
+        var21 = var2.readUnsignedShort((byte) 81);
+        var22 = var2.readUnsignedShort((byte) 81);
+        var23 = var2.readUnsignedShort((byte) 81);
+        var24 = var2.readUnsignedShort((byte) 81);
         var25 = 0;
         var26 = 0;
         var27 = 0;
@@ -771,7 +771,7 @@ final class MeshData extends MeshObject {
         var7.field_n = var37;
         var8.field_n = var38;
         for (var53Lifetime1 = 0; var53Lifetime1 < var10; var53Lifetime1++) {
-          this.field_p[var53Lifetime1] = (short)var2.a((byte) 81);
+          this.field_p[var53Lifetime1] = (short)var2.readUnsignedShort((byte) 81);
           if (var13 != 0) {
             this.field_o[var53Lifetime1] = var3.readByte((byte) -125);
           }
@@ -785,7 +785,7 @@ final class MeshData extends MeshObject {
             this.field_O[var53Lifetime1] = var6.readUnsignedByte((byte) -125);
           }
           if (var18 == 1) {
-            this.field_u[var53Lifetime1] = (short)(var7.a((byte) 81) - 1);
+            this.field_u[var53Lifetime1] = (short)(var7.readUnsignedShort((byte) 81) - 1);
           }
           if (this.field_I != null) {
             if (this.field_u[var53Lifetime1] == -1) {
@@ -870,28 +870,28 @@ final class MeshData extends MeshObject {
         for (var57Lifetime2 = 0; var57Lifetime2 < var11; var57Lifetime2++) {
           var58Lifetime1 = this.field_T[var57Lifetime2] & 255;
           if (var58Lifetime1 == 0) {
-            this.field_h[var57Lifetime2] = (short)var2.a((byte) 81);
-            this.field_B[var57Lifetime2] = (short)var2.a((byte) 81);
-            this.field_y[var57Lifetime2] = (short)var2.a((byte) 81);
+            this.field_h[var57Lifetime2] = (short)var2.readUnsignedShort((byte) 81);
+            this.field_B[var57Lifetime2] = (short)var2.readUnsignedShort((byte) 81);
+            this.field_y[var57Lifetime2] = (short)var2.readUnsignedShort((byte) 81);
           }
           if (var58Lifetime1 == 1) {
-            this.field_h[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_B[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_y[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_S[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_P[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_j[var57Lifetime2] = (short)var4.a((byte) 81);
+            this.field_h[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_B[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_y[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_S[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_P[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_j[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
             this.field_x[var57Lifetime2] = var5.readByte((byte) -100);
             this.field_E[var57Lifetime2] = var6.readByte((byte) -58);
             this.field_Q[var57Lifetime2] = var7.readByte((byte) -48);
           }
           if (var58Lifetime1 == 2) {
-            this.field_h[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_B[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_y[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_S[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_P[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_j[var57Lifetime2] = (short)var4.a((byte) 81);
+            this.field_h[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_B[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_y[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_S[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_P[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_j[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
             this.field_x[var57Lifetime2] = var5.readByte((byte) -109);
             this.field_E[var57Lifetime2] = var6.readByte((byte) -113);
             this.field_Q[var57Lifetime2] = var7.readByte((byte) -111);
@@ -899,12 +899,12 @@ final class MeshData extends MeshObject {
             this.field_G[var57Lifetime2] = var7.readByte((byte) -111);
           }
           if (var58Lifetime1 == 3) {
-            this.field_h[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_B[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_y[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_S[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_P[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_j[var57Lifetime2] = (short)var4.a((byte) 81);
+            this.field_h[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_B[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_y[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_S[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_P[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_j[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
             this.field_x[var57Lifetime2] = var5.readByte((byte) -102);
             this.field_E[var57Lifetime2] = var6.readByte((byte) -102);
             this.field_Q[var57Lifetime2] = var7.readByte((byte) -76);

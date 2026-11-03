@@ -13,7 +13,7 @@ final class k extends IntrusiveNode {
     static String field_h;
 
     final static void a(boolean param0, int param1) {
-        ScrollPane.field_Jb.a(new PromotionDialog(param1), 3);
+        ScrollPane.field_Jb.addLast(new PromotionDialog(param1), 3);
         if (!param0) {
           k.loadStreetScenery(-78);
         }

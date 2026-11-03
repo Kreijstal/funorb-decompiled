@@ -565,7 +565,7 @@ final class wp {
           return;
         }
         try {
-          il.field_a.a(param1, 3);
+          il.field_a.addLast(param1, 3);
           te.a(param0, param1, (byte) -112);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

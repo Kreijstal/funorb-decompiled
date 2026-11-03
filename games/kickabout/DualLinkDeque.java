@@ -35,7 +35,7 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final void a(int param0, DualLinkNode param1) {
+    final void addLast(int param0, DualLinkNode param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -117,7 +117,7 @@ final class DualLinkDeque {
         }
     }
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode removeFirst(byte param0) {
         int var3 = 118 % ((54 - param0) / 51);
         DualLinkNode var2 = this.field_a.field_f;
         if (var2 == this.field_a) {

@@ -45,7 +45,7 @@ final class ts {
               var7 = param0 + (2048 * var5 + var6);
               var8 = 54 * we.cosine(var7, false) >> 16;
               var9 = ei.sine(var7, (byte) -23) * -54 >> 16;
-              SoftwareRasterizer.b(var3_int + var8, var4 + var9, var3_int - var8, -var9 + var4, param1);
+              SoftwareRasterizer.drawLine(var3_int + var8, var4 + var9, var3_int - var8, -var9 + var4, param1);
             }
           }
           return;

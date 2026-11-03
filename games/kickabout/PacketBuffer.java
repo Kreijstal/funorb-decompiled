@@ -143,7 +143,7 @@ class PacketBuffer extends IntrusiveNode {
     final int readUnsignedShortOrInt(byte param0) {
         int var2 = 82 % ((55 - param0) / 41);
         if (0 <= this.field_f[this.field_n]) {
-          return this.a((byte) 81);
+          return this.readUnsignedShort((byte) 81);
         }
         return 2147483647 & this.readInt(4);
     }
@@ -396,7 +396,7 @@ class PacketBuffer extends IntrusiveNode {
         return PainterStyle.a((byte) -123, var4, var2, this.field_f);
     }
 
-    final int a(byte param0) {
+    final int readUnsignedShort(byte param0) {
         this.field_n = this.field_n + 2;
         if (param0 != 81) {
           field_m = (MeshData[]) null;
@@ -429,7 +429,7 @@ class PacketBuffer extends IntrusiveNode {
           while (true) {
             if (var7 >= var6) {
               if (!param2) {
-                this.a((byte) 126);
+                this.readUnsignedShort((byte) 126);
               }
               this.field_n = var5_int;
               return;
@@ -489,7 +489,7 @@ class PacketBuffer extends IntrusiveNode {
         this.field_f[-param1 + (this.field_n - 1)] = (byte)param1;
     }
 
-    final int l(int param0) {
+    final int readVarInt(int param0) {
         int fieldTemp$1 = 0;
         int var2;
         int var3;
@@ -559,7 +559,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 < 128) {
           return -64 + this.readUnsignedByte((byte) -113);
         }
-        return this.a((byte) 81) - 49152;
+        return this.readUnsignedShort((byte) 81) - 49152;
     }
 
     final void writeBase38Password(byte param0, String param1) {
@@ -707,7 +707,7 @@ class PacketBuffer extends IntrusiveNode {
             break;
           }
           if (var2 == null) {
-            rp.field_B.a(param1, 3);
+            rp.field_B.addLast(param1, 3);
           } else {
             ug.a(var2, 16737894, param1);
           }
@@ -836,7 +836,7 @@ class PacketBuffer extends IntrusiveNode {
         if (128 > var2) {
           return this.readUnsignedByte((byte) -105);
         }
-        return -32768 + this.a((byte) 81);
+        return -32768 + this.readUnsignedShort((byte) 81);
     }
 
     PacketBuffer(byte[] param0) {

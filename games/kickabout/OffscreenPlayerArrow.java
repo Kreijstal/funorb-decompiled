@@ -156,13 +156,13 @@ final class OffscreenPlayerArrow {
             TriangleRasterizer.a(this.field_d, var9 + this.field_d, this.field_d + var5, this.field_b, this.field_b - var8, -var4 + this.field_b, 85);
           } else {
             PacketBuffer.a(param0 + 112, UiWidget.field_e);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.a(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, -(var6 << 1) + TextInputWidget.field_P, TextInputWidget.field_P - (var4 << 1), -16777216);
             TriangleRasterizer.a(TextInputWidget.field_P, TextInputWidget.field_P + (var9 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, TextInputWidget.field_P - (var8 << 1), -(var4 << 1) + TextInputWidget.field_P, -16777216);
             TeamManagementScreen.e(param0 + 116);
             PacketBuffer.a(param0 ^ 68, TextInputWidget.field_N);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(TextInputWidget.field_P, TextInputWidget.field_P);
             TriangleRasterizer.a(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, TextInputWidget.field_P - (var6 << 1), -(var4 << 1) + TextInputWidget.field_P, 153);

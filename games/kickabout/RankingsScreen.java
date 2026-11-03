@@ -152,7 +152,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         if (param0 != 25) {
           return;
         }
-        ScrollPane.field_Jb.a(new SquadPickerDialog(), 3);
+        ScrollPane.field_Jb.addLast(new SquadPickerDialog(), 3);
     }
 
     final int buttonCenterX(int param0, int param1) {

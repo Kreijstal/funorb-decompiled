@@ -161,7 +161,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
         }
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -175,7 +175,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
             return;
           }
           oh.a(-124);
-          this.field_B.q(-87);
+          this.field_B.closeDialog(-87);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

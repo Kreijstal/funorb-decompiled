@@ -226,7 +226,7 @@ final class MyPitchScreen extends TeamManagementScreen {
               ImageProducerRasterBuffer.a(or.field_c, GzipDecoder.field_f, var2, -3210, wo.field_k);
               var2.writeByte(param0 + 52, 15);
               var2.writeInt(param0 ^ -44, gg.field_Db);
-              AnimationSkeleton.field_e.a(13, (byte) -127, 0, var2.field_f);
+              AnimationSkeleton.field_e.write(13, (byte) -127, 0, var2.field_f);
               IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
               LoginRequiredDialog.field_I = 30000L + nj.monotonicMillis(93);
             }

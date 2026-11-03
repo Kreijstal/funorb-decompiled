@@ -78,7 +78,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           return;
         }
         PacketBuffer.a(85, dc.field_b);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearFramebuffer();
         var5 = new int[4];
         var4 = var5;
         var3 = var4;

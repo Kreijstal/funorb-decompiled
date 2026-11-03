@@ -378,7 +378,7 @@ abstract class MatchPhaseView {
         var4 = 83;
         var5 = Integer.toString(param1 / 50);
         PacketBuffer.a(-45, PromotionDialog.field_G);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearFramebuffer();
         var6 = SoftwareRasterizer.field_g >> 1;
         var7 = SoftwareRasterizer.field_f >> 1;
         un.field_d.d(var5, var6, var7, 16777215, -1);
@@ -464,8 +464,8 @@ abstract class MatchPhaseView {
               var10 = un.field_d.a(var9);
               var11 = param3 + (-var10 + 160 >> 1);
               var12 = 10;
-              SoftwareRasterizer.b(var11, -2 + param1 - var12, var10 + var11, param1 - 1, 13382451);
-              SoftwareRasterizer.b(var11, param1 - 1, var10 + var11, -var12 + (param1 - 2), 13382451);
+              SoftwareRasterizer.drawLine(var11, -2 + param1 - var12, var10 + var11, param1 - 1, 13382451);
+              SoftwareRasterizer.drawLine(var11, param1 - 1, var10 + var11, -var12 + (param1 - 2), 13382451);
             }
             param1 += 23;
           }

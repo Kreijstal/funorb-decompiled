@@ -9,7 +9,7 @@ final class PasswordValidator extends TextFieldValidator {
     static String field_m;
     static boolean field_l;
 
-    private final boolean b(String param0, byte param1) {
+    private final boolean containsEmailPart(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -93,7 +93,7 @@ final class PasswordValidator extends TextFieldValidator {
         try {
           if (param1 != -5) {
             var5 = (String) null;
-            discarded$1 = this.b((String) null, (byte) -69);
+            discarded$1 = this.containsEmailPart((String) null, (byte) -69);
           }
           var3 = this.field_n.field_q.toLowerCase();
           var4 = param0.toLowerCase();
@@ -105,7 +105,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_9_0 = PitchOptionTile.field_Bb;
             return stackIn_9_0;
           }
-          if (!this.b(param0, (byte) -77)) {
+          if (!this.containsEmailPart(param0, (byte) -77)) {
             return LobbyPlayerRow.field_yb;
           }
           stackIn_13_0 = PitchOptionTile.field_Bb;
@@ -152,7 +152,7 @@ final class PasswordValidator extends TextFieldValidator {
           var6_int = (100 * ReceivedAuctionItemRow.field_Kb >> 8) + 50;
           var7 = (116 * FadingChatMessage.field_h >> 8) + 40;
           PacketBuffer.a(-68, wn.field_j);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           AuctionListing.a(var7, -22914, 0, SoftwareRasterizer.field_f, 0);
           tn.field_e.a(0, 0, tn.field_e.field_o * var7 / 140, tn.field_e.field_v);
           TeamManagementScreen.e(124);
@@ -170,7 +170,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           TeamManagementScreen.e(121);
           PacketBuffer.a(65, PacketBuffer.field_g);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           var8Lifetime1 = PlayerContextMenu.b(-ValidationIndicator.field_K, TextButton.field_C, (byte) 2);
           if (param0 != 706856675) {
             field_j = (int[]) null;
@@ -282,7 +282,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_15_0 = NotCommand.field_D;
             return stackIn_15_0;
           }
-          if (this.b(param1, (byte) -67)) {
+          if (this.containsEmailPart(param1, (byte) -67)) {
             stackIn_18_0 = LeagueWinnerDialog.field_G;
             return stackIn_18_0;
           }

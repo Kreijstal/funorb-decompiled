@@ -72,8 +72,8 @@ final class SynthesizedSoundInstrument {
         }
         this.field_l = param0.readUnsignedSmart(-32768);
         this.field_n = param0.readUnsignedSmart(-32768);
-        this.field_w = param0.a((byte) 81);
-        this.field_y = param0.a((byte) 81);
+        this.field_w = param0.readUnsignedShort((byte) 81);
+        this.field_y = param0.readUnsignedShort((byte) 81);
         this.field_c = new SoundFilter();
         this.field_q = new SoundEnvelope();
         this.field_c.a(param0, this.field_q);
@@ -229,8 +229,8 @@ final class SynthesizedSoundInstrument {
           !(this.field_c.field_h[1] <= 0)) {
           this.field_q.reset();
           var11Lifetime4 = this.field_q.advance(param0 + 1);
-          var12Lifetime3 = this.field_c.a(0, (float)var11Lifetime4 / 65536.0f);
-          var13Lifetime2 = this.field_c.a(1, (float)var11Lifetime4 / 65536.0f);
+          var12Lifetime3 = this.field_c.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+          var13Lifetime2 = this.field_c.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
           if (param0 >= var12Lifetime3 + var13Lifetime2) {
             var14Lifetime2 = 0;
             var15Lifetime2 = var13Lifetime2;
@@ -267,8 +267,8 @@ final class SynthesizedSoundInstrument {
                 var14Lifetime2++;
               }
               if (var14Lifetime2 < param0 - var12Lifetime3) {
-                var12Lifetime3 = this.field_c.a(0, (float)var11Lifetime4 / 65536.0f);
-                var13Lifetime2 = this.field_c.a(1, (float)var11Lifetime4 / 65536.0f);
+                var12Lifetime3 = this.field_c.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+                var13Lifetime2 = this.field_c.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
                 var15Lifetime2Lifetime1 += 128;
                 continue;
               }

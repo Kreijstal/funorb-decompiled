@@ -17,7 +17,7 @@ abstract class ModalPanel extends WidgetContainer {
         return var1;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_F == 0) {
           return;
         }
@@ -26,15 +26,15 @@ abstract class ModalPanel extends WidgetContainer {
             return;
           }
           this.a(this.field_t + param2, (byte) 64, param3 + this.field_g);
-          super.a(param0, 65, param2, param3);
+          super.drawLayer(param0, 65, param2, param3);
           return;
         }
         if (null == d.field_a) {
           d.field_a = new Sprite(this.field_n, this.field_i);
           PacketBuffer.a(param1 - 190, d.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           this.a(0, (byte) 125, 0);
-          super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
+          super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           TeamManagementScreen.e(127);
           d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
@@ -42,9 +42,9 @@ abstract class ModalPanel extends WidgetContainer {
         if (d.field_a.field_q < this.field_n) {
           d.field_a = new Sprite(this.field_n, this.field_i);
           PacketBuffer.a(param1 - 190, d.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           this.a(0, (byte) 125, 0);
-          super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
+          super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           TeamManagementScreen.e(127);
           d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
@@ -52,17 +52,17 @@ abstract class ModalPanel extends WidgetContainer {
         if (this.field_i > d.field_a.field_w) {
           d.field_a = new Sprite(this.field_n, this.field_i);
           PacketBuffer.a(param1 - 190, d.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           this.a(0, (byte) 125, 0);
-          super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
+          super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           TeamManagementScreen.e(127);
           d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
         }
         PacketBuffer.a(param1 - 190, d.field_a);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearFramebuffer();
         this.a(0, (byte) 125, 0);
-        super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
+        super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
         TeamManagementScreen.e(127);
         d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
     }
@@ -142,7 +142,7 @@ abstract class ModalPanel extends WidgetContainer {
         return (UiWidget) (this);
     }
 
-    boolean k(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         boolean stackIn_10_0 = false;
         boolean stackIn_22_0 = false;
         int var2;

@@ -46,18 +46,18 @@ final class LoggedGoal extends IntrusiveNode {
           this.scorerTeam = param0.readUnsignedByte((byte) -113);
           this.scorerSlot = param0.readUnsignedByte((byte) -122);
           this.field_f = param0.readUnsignedByte((byte) -114);
-          this.scorerX = param0.a((byte) 81);
-          this.scorerY = param0.a((byte) 81);
+          this.scorerX = param0.readUnsignedShort((byte) 81);
+          this.scorerY = param0.readUnsignedShort((byte) 81);
           int var3_int = -82 / ((-7 - param1) / 53);
           this.goalType = param0.readUnsignedByte((byte) -127);
           this.kickCharge = param0.readUnsignedByte((byte) -110);
           this.highKick = param0.readUnsignedByte((byte) -123) == 1 ? true : false;
           this.kickVelocityX = param0.readUnsignedByte((byte) -105);
           this.kickVelocityY = param0.readUnsignedByte((byte) -120);
-          this.keeperX = param0.a((byte) 81);
-          this.keeperY = param0.a((byte) 81);
+          this.keeperX = param0.readUnsignedShort((byte) 81);
+          this.keeperY = param0.readUnsignedShort((byte) 81);
           this.keeperState = param0.readUnsignedByte((byte) -118);
-          this.time = param0.a((byte) 81);
+          this.time = param0.readUnsignedShort((byte) 81);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ch.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -201,7 +201,7 @@ final class MatchScreen extends AppScreen {
           ((PlayingView) (this.phaseController)).g(0);
         }
         this.matchState.processEventQueue((byte) -87);
-        this.matchState.field_E.b(22997);
+        this.matchState.field_E.clear(22997);
         this.matchState.tick(4);
         if (this.isOnlineMatch) {
           this.field_i.tick(4);
@@ -395,7 +395,7 @@ final class MatchScreen extends AppScreen {
             return;
           }
           for (var3_int = 0; this.matchState.playerCount > var3_int; var3_int++) {
-            this.field_z[var3_int] = param1.a((byte) 81);
+            this.field_z[var3_int] = param1.readUnsignedShort((byte) 81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -816,16 +816,16 @@ final class MatchScreen extends AppScreen {
             for (var4 = 0; var3_intLifetime1 > var4; var4++) {
               ((GameOverView) (this.phaseController)).field_k[var4] = param1.readUnsignedByte((byte) -109);
             }
-            ((GameOverView) (this.phaseController)).field_bb.b(22997);
-            ((GameOverView) (this.phaseController)).field_q.b(22997);
-            var4Lifetime1 = param1.a((byte) 81);
+            ((GameOverView) (this.phaseController)).field_bb.clear(22997);
+            ((GameOverView) (this.phaseController)).field_q.clear(22997);
+            var4Lifetime1 = param1.readUnsignedShort((byte) 81);
             for (var5 = 0; var4Lifetime1 > var5; var5++) {
               var6_ref_ch = new LoggedGoal();
               var6_ref_ch.readFromBuffer(param1, (byte) -79);
               if (0 != var6_ref_ch.field_f) {
-                ((GameOverView) (this.phaseController)).field_q.a(var6_ref_ch, 3);
+                ((GameOverView) (this.phaseController)).field_q.addLast(var6_ref_ch, 3);
               } else {
-                ((GameOverView) (this.phaseController)).field_bb.a(var6_ref_ch, 3);
+                ((GameOverView) (this.phaseController)).field_bb.addLast(var6_ref_ch, 3);
               }
             }
             var3_intLifetime1 = param1.readUnsignedByte((byte) -120);

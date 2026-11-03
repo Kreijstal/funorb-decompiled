@@ -80,7 +80,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           param2.readBytes(param3.field_Eb, 0, (byte) -6, param3.field_Eb.length);
           stackIn_28_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_28_0;
-          param3.field_Ob = param2.a((byte) 81);
+          param3.field_Ob = param2.readUnsignedShort((byte) 81);
           param3.field_Fb = nj.monotonicMillis(-128) - (long)param2.readInt(4);
           if (var5 != 0) {
             param3.field_ac = param2.readInt(4);
@@ -392,7 +392,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
               } else {
                 stackIn_67_3 = -(var18 >> 1);
               }
-              SoftwareRasterizer.b(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3 + var13Lifetime2Lifetime1, 11184810);
+              SoftwareRasterizer.drawLine(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3 + var13Lifetime2Lifetime1, 11184810);
               stackIn_69_0 = var12Lifetime2Lifetime1 + (var15Lifetime1Lifetime1 >> 1);
               stackIn_69_1 = 1 + var13Lifetime2Lifetime1;
               stackIn_69_2 = var12Lifetime2Lifetime1 - (-(var17 << 1) + (var15Lifetime1Lifetime1 >> 1));
@@ -402,7 +402,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
               } else {
                 stackIn_70_4 = -(var18 >> 1);
               }
-              SoftwareRasterizer.b(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3 + stackIn_70_4, 11184810);
+              SoftwareRasterizer.drawLine(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3 + stackIn_70_4, 11184810);
             }
             var13Lifetime2Lifetime1 = var13Lifetime2Lifetime1 + var18;
             if (var21 == var14Lifetime2 - 8 ||

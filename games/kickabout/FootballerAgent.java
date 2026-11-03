@@ -318,37 +318,37 @@ class FootballerAgent extends MatchAgent {
 
     final void readFullState(int param0, CipherPacketBuffer param1) {
         try {
-          this.positionX = param1.l(26, param0 ^ -13927);
-          this.positionY = param1.l(27, 59);
+          this.positionX = param1.readBits(26, param0 ^ -13927);
+          this.positionY = param1.readBits(27, 59);
           this.height = hq.a(22531, 30, param1, 0);
           this.verticalVelocity = BufferedCacheFile.a((byte) 125, 17, param1, 0, 24, 25);
-          this.directionMask = param1.l(4, 59);
-          this.directionY = param1.l(2, 59) - 1;
-          this.directionX = -1 + param1.l(2, param0 + 13977);
+          this.directionMask = param1.readBits(4, 59);
+          this.directionY = param1.readBits(2, 59) - 1;
+          this.directionX = -1 + param1.readBits(2, param0 + 13977);
           this.action = hq.a(param0 ^ -28255, WriteIntegersCommand.a(14, false), param1, 0);
           this.actionTime = hq.a(22531, 8, param1, 0);
           this.dashCooldown = hq.a(22531, 9, param1, 0);
-          this.aiWait = param1.l(3, param0 ^ -13927);
+          this.aiWait = param1.readBits(3, param0 ^ -13927);
           this.field_O = ContentTransitionDialog.a(param1, (byte) -39);
           this.field_s = ContentTransitionDialog.a(param1, (byte) -39);
           this.field_k = mk.a(param1, 30, (byte) 6, 18);
           this.field_m = mk.a(param1, 30, (byte) 6, 18);
           this.field_r = mk.a(param1, 30, (byte) 6, 18);
           this.field_B = mk.a(param1, 30, (byte) 6, 18);
-          this.field_h = param1.l(4, 59);
-          this.field_z = param1.l(9, 59) - 5;
+          this.field_h = param1.readBits(4, 59);
+          this.field_z = param1.readBits(9, 59) - 5;
           this.field_x = IsaacRandom.a(11, -30273, param1);
           if (param0 != -13918) {
             CipherPacketBuffer var4 = (CipherPacketBuffer) null;
             this.readDeltaState(-70, (CipherPacketBuffer) null);
           }
           this.field_P = IsaacRandom.a(11, -30273, param1);
-          this.field_A = param1.l(32, param0 + 13977);
-          this.field_g = param1.l(32, 59);
-          this.field_q = param1.l(32, 59);
-          this.field_D = param1.l(32, 59);
-          this.field_o = param1.l(12, 59);
-          this.field_t = param1.l(26, 59);
+          this.field_A = param1.readBits(32, param0 + 13977);
+          this.field_g = param1.readBits(32, 59);
+          this.field_q = param1.readBits(32, 59);
+          this.field_D = param1.readBits(32, 59);
+          this.field_o = param1.readBits(12, 59);
+          this.field_t = param1.readBits(26, 59);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -408,22 +408,22 @@ class FootballerAgent extends MatchAgent {
           }
           this.verticalVelocity = mk.a(param1, 25, (byte) 6, 0);
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            this.directionMask = param1.l(4, 59);
-            this.directionY = -1 + param1.l(2, param0 ^ 50);
-            this.directionX = param1.l(2, 59) - 1;
+            this.directionMask = param1.readBits(4, 59);
+            this.directionY = -1 + param1.readBits(2, param0 ^ 50);
+            this.directionX = param1.readBits(2, 59) - 1;
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            this.action = param1.l(WriteIntegersCommand.a(14, false), 59);
-            this.actionTime = param1.l(8, param0 ^ 50);
+            this.action = param1.readBits(WriteIntegersCommand.a(14, false), 59);
+            this.actionTime = param1.readBits(8, param0 ^ 50);
           }
           this.dashCooldown = hq.a(param0 ^ 22538, param0, param1, 0);
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            this.aiWait = param1.l(3, 59);
+            this.aiWait = param1.readBits(3, 59);
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
             this.field_O = ContentTransitionDialog.a(param1, (byte) -39);
-            this.field_h = param1.l(4, 59);
-            this.field_z = -5 + param1.l(9, 59);
+            this.field_h = param1.readBits(4, 59);
+            this.field_z = -5 + param1.readBits(9, 59);
             this.field_x = IsaacRandom.a(11, -30273, param1);
             this.field_P = IsaacRandom.a(11, -30273, param1);
           }
@@ -435,15 +435,15 @@ class FootballerAgent extends MatchAgent {
             this.field_B = mk.a(param1, 30, (byte) 6, 18);
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            this.field_A = param1.l(32, param0 ^ 50);
-            this.field_g = param1.l(32, 59);
-            this.field_q = param1.l(32, 59);
-            this.field_D = param1.l(32, 59);
+            this.field_A = param1.readBits(32, param0 ^ 50);
+            this.field_g = param1.readBits(32, 59);
+            this.field_q = param1.readBits(32, 59);
+            this.field_D = param1.readBits(32, 59);
           }
           if (this.archetype == 4 &&
             ContentTransitionDialog.a(param1, (byte) -39)) {
-            this.field_o = param1.l(4, 59);
-            this.field_t = param1.l(26, param0 + 50);
+            this.field_o = param1.readBits(4, 59);
+            this.field_t = param1.readBits(26, param0 + 50);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

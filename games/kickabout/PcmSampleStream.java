@@ -1046,7 +1046,7 @@ final class PcmSampleStream extends PcmStream {
         this.rampVolumeAndPan(param0, param1, this.k());
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         if (this.field_j == 0 &&
           this.field_k == 0) {
           return 0;
@@ -1702,7 +1702,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized boolean n() {
+    final synchronized boolean hasRemainingRampFrames() {
         return this.field_k != 0;
     }
 
@@ -1718,7 +1718,7 @@ final class PcmSampleStream extends PcmStream {
         this.setVolumeAndPan(param0 << 6, this.k());
     }
 
-    final synchronized void g(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_p = param0;
     }
 

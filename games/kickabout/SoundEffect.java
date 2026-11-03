@@ -6,7 +6,7 @@ final class SoundEffect {
     private SynthesizedSoundInstrument[] field_c;
     private int field_b;
 
-    final PcmSample a() {
+    final PcmSample toPcmSample() {
         byte[] var1 = this.mix();
         return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
@@ -71,7 +71,7 @@ final class SoundEffect {
             this.field_c[var2].a(param0);
           }
         }
-        this.field_a = param0.a((byte) 81);
-        this.field_b = param0.a((byte) 81);
+        this.field_a = param0.readUnsignedShort((byte) 81);
+        this.field_b = param0.readUnsignedShort((byte) 81);
     }
 }

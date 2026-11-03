@@ -143,21 +143,21 @@ final class AnimationClip {
         var8 = Kickabout.field_G;
         try {
           if (param0 == 1) {
-            var4_int = param1.a((byte) 81);
+            var4_int = param1.readUnsignedShort((byte) 81);
             this.field_c = new int[var4_int];
             for (var5 = 0; var4_int > var5; var5++) {
-              this.field_c[var5] = param1.a((byte) 81);
+              this.field_c[var5] = param1.readUnsignedShort((byte) 81);
             }
             this.field_e = new int[var4_int];
             for (var5 = 0; var4_int > var5; var5++) {
-              this.field_e[var5] = param1.a((byte) 81);
+              this.field_e[var5] = param1.readUnsignedShort((byte) 81);
             }
             for (var5 = 0; var4_int > var5; var5++) {
-              this.field_e[var5] = (param1.a((byte) 81) << 16) + this.field_e[var5];
+              this.field_e[var5] = (param1.readUnsignedShort((byte) 81) << 16) + this.field_e[var5];
             }
           } else {
             if (param0 == 2) {
-              this.field_h = param1.a((byte) 81);
+              this.field_h = param1.readUnsignedShort((byte) 81);
             } else {
               if (param0 == 3) {
                 var4_int = param1.readUnsignedByte((byte) -122);
@@ -183,14 +183,14 @@ final class AnimationClip {
                               if (param0 == 12) {
                                 var4_int = param1.readUnsignedByte((byte) -117);
                                 for (var5 = 0; var4_int > var5; var5++) {
-                                  param1.a((byte) 81);
+                                  param1.readUnsignedShort((byte) 81);
                                 }
                                 for (var5 = 0; var4_int > var5; var5++) {
-                                  param1.a((byte) 81);
+                                  param1.readUnsignedShort((byte) 81);
                                 }
                               } else {
                                 if (param0 == 13) {
-                                  var4_int = param1.a((byte) 81);
+                                  var4_int = param1.readUnsignedShort((byte) 81);
                                   this.field_n = new int[var4_int][];
                                   for (var5 = 0; var5 < var4_int; var5++) {
                                     var6 = param1.readUnsignedByte((byte) -108);
@@ -199,7 +199,7 @@ final class AnimationClip {
                                       this.field_n[var5] = array$0;
                                       this.field_n[var5][0] = param1.readUnsignedMedium(-95);
                                       for (var7 = 1; var6 > var7; var7++) {
-                                        this.field_n[var5][var7] = param1.a((byte) 81);
+                                        this.field_n[var5][var7] = param1.readUnsignedShort((byte) 81);
                                       }
                                     }
                                   }
@@ -225,10 +225,10 @@ final class AnimationClip {
                         this.field_j = false;
                       }
                     } else {
-                      param1.a((byte) 81);
+                      param1.readUnsignedShort((byte) 81);
                     }
                   } else {
-                    param1.a((byte) 81);
+                    param1.readUnsignedShort((byte) 81);
                   }
                 }
               }
@@ -272,7 +272,7 @@ final class AnimationClip {
             return;
           }
           for (var11 = 0; -1 + var10 > var11; var11++) {
-            param5.a(TrinketShopDialog.b(true, param4 + (param0 - param4) * var11 / (-1 + var10), param3 + var11 * (-param3 + param2) / (-1 + var10)), 3);
+            param5.addLast(TrinketShopDialog.b(true, param4 + (param0 - param4) * var11 / (-1 + var10), param3 + var11 * (-param3 + param2) / (-1 + var10)), 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

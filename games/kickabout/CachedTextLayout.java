@@ -38,7 +38,7 @@ final class CachedTextLayout extends TextLayout {
         return new int[8];
     }
 
-    private final TextLayoutLine a(int param0, boolean param1, BitmapFont param2, String param3) {
+    private final TextLayoutLine createSingleLine(int param0, boolean param1, BitmapFont param2, String param3) {
         TextLayoutLine var5 = null;
         RuntimeException var5_ref = null;
         TextLayoutLine var6 = null;
@@ -94,7 +94,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_p = param1;
           this.field_g = param3;
           this.field_l = 0;
-          var8 = this.a(param4, true, param3, param1);
+          var8 = this.createSingleLine(param4, true, param3, param1);
           var9 = var8;
           var8.field_b[0] = param0;
           var9.field_b[param1.length()] = param3.a(param1) + param0;
@@ -265,7 +265,7 @@ final class CachedTextLayout extends TextLayout {
           return;
         }
         try {
-          var8 = this.a(param2, true, param4, param1);
+          var8 = this.createSingleLine(param2, true, param4, param1);
           var9 = var8;
           var9.field_b[0] = -param4.a(param1) + param3;
           var9.field_b[param1.length()] = param3;
@@ -302,7 +302,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_l = param0;
           this.field_h = true;
           this.field_g = param2;
-          var8 = this.a(param4, true, param2, param3);
+          var8 = this.createSingleLine(param4, true, param2, param3);
           var7 = param2.a(param3);
           var8.field_b[0] = param1 - (var7 >> 1);
           var8.field_b[param3.length()] = (var7 >> 1) + param1;

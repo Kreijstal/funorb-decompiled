@@ -96,7 +96,7 @@ final class fs {
         int var12Lifetime2;
         try {
           var10_int = 59 % ((-62 - param0) / 61);
-          var10_intLifetime1 = param7.l(2, 59);
+          var10_intLifetime1 = param7.readBits(2, 59);
           if (var10_intLifetime1 == 0) {
             if (0 == param9) {
               stackIn_29_0 = 0;

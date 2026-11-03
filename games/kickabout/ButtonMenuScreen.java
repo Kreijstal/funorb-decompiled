@@ -575,7 +575,7 @@ class ButtonMenuScreen extends AppScreen {
     }
 
     final static void a(int param0) {
-        ScrollPane.field_Jb.a(new LoginRequiredDialog(), 3);
+        ScrollPane.field_Jb.addLast(new LoginRequiredDialog(), 3);
         if (param0 != 16144) {
           ButtonMenuScreen.d(-47);
         }

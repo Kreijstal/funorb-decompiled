@@ -201,7 +201,7 @@ final class RenderedFootballer extends FootballerAgent {
           this.field_W != this.field_R) {
           this.setFacingAngle(this.field_R, (byte) 79);
         }
-        ModelMesh var8 = (ModelMesh) (this.field_mb.a(this.field_gb, false, true, true));
+        ModelMesh var8 = (ModelMesh) (this.field_mb.applyCurrentFrame(this.field_gb, false, true, true));
         int var7 = this.field_R;
         if (this.field_V) {
           var7 = 2047 & var7 + 1024;
@@ -382,7 +382,7 @@ final class RenderedFootballer extends FootballerAgent {
           this.field_ab ||
           this.field_T)) {
           PacketBuffer.a(-88, kw.field_f);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           var2 = (var2 << 7) / InstrumentNoteMask.field_i;
           this.renderModel(var2, var8, 128, 190, (byte) -91);
           TeamManagementScreen.e(119);
@@ -447,7 +447,7 @@ final class RenderedFootballer extends FootballerAgent {
         try {
           var3 = new FadingChatMessage(param0, param1);
           if (SplashScreen.field_j < 18) {
-            AppScreen.field_d.a(var3, 3);
+            AppScreen.field_d.addLast(var3, 3);
           } else {
             MatchingTextValidator.a(var3, false);
           }

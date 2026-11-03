@@ -39,7 +39,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(wq.a(param1[0].a(true), -126));
+            stackIn_4_0 = new ConsoleValue(wq.a(param1[0].asLong(true), -126));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -87,16 +87,16 @@ final class LongPlusOneCommand extends ConsoleCommand {
         int var4 = IntKeyLookup.a((byte) -110, param0.field_V.pixelY(879306160));
         SoftwareRasterizer.e(var3_int, var4, ug.a(0, TriangleMesh.field_B[0]), IntKeyLookup.a((byte) -70, or.field_a[0]), 16777215, 64);
         SoftwareRasterizer.e(var3_int, var4, ug.a(0, TriangleMesh.field_B[1]), IntKeyLookup.a((byte) -68, or.field_a[1]), 16777215, 64);
-        SoftwareRasterizer.b(ug.a(0, TriangleMesh.field_B[0]), IntKeyLookup.a((byte) -92, or.field_a[0]), ug.a(0, TriangleMesh.field_B[1]), IntKeyLookup.a((byte) -98, or.field_a[1]), 16777215);
+        SoftwareRasterizer.drawLine(ug.a(0, TriangleMesh.field_B[0]), IntKeyLookup.a((byte) -92, or.field_a[0]), ug.a(0, TriangleMesh.field_B[1]), IntKeyLookup.a((byte) -98, or.field_a[1]), 16777215);
         if (param1 <= 22) {
           return;
         }
         try {
           var5 = ug.a(0, TrinketSlot.field_zb[0]);
           var6 = IntKeyLookup.a((byte) -102, TrinketSlot.field_zb[1]);
-          SoftwareRasterizer.b(ug.a(0, TriangleMesh.field_B[0] + TriangleMesh.field_B[1] >> 1), IntKeyLookup.a((byte) -86, or.field_a[0] + or.field_a[1] >> 1), var5, var6, 16777215);
-          SoftwareRasterizer.b(-4 + var5, var6 - 4, var5 + 4, 4 + var6, 16776960);
-          SoftwareRasterizer.b(var5 - 4, var6 + 4, var5 + 4, var6 - 4, 16776960);
+          SoftwareRasterizer.drawLine(ug.a(0, TriangleMesh.field_B[0] + TriangleMesh.field_B[1] >> 1), IntKeyLookup.a((byte) -86, or.field_a[0] + or.field_a[1] >> 1), var5, var6, 16777215);
+          SoftwareRasterizer.drawLine(-4 + var5, var6 - 4, var5 + 4, 4 + var6, 16776960);
+          SoftwareRasterizer.drawLine(var5 - 4, var6 + 4, var5 + 4, var6 - 4, 16776960);
           var7 = param0.field_P[param2][0];
           SoftwareRasterizer.c(ug.a(0, 372), IntKeyLookup.a((byte) -110, var7.pixelY(true)), ug.a(0, 523) - ug.a(0, 372), 16776960, 128);
           var8 = 4474111;
@@ -107,9 +107,9 @@ final class LongPlusOneCommand extends ConsoleCommand {
             var8 = 16711680;
           }
           var12 = var11 * InstrumentNoteMask.field_i >> 8;
-          SoftwareRasterizer.c(ug.a(0, var7.pixelX(-101)), IntKeyLookup.a((byte) -125, var7.pixelY(true)), var12, var8);
+          SoftwareRasterizer.drawCircle(ug.a(0, var7.pixelX(-101)), IntKeyLookup.a((byte) -125, var7.pixelY(true)), var12, var8);
           var12Lifetime1 = 28 * InstrumentNoteMask.field_i >> 8;
-          SoftwareRasterizer.c(ug.a(0, var7.pixelX(-120)), IntKeyLookup.a((byte) -64, var7.pixelY(true)), var12Lifetime1, 16777215);
+          SoftwareRasterizer.drawCircle(ug.a(0, var7.pixelX(-120)), IntKeyLookup.a((byte) -64, var7.pixelY(true)), var12Lifetime1, 16777215);
           var12Lifetime2 = 250 * InstrumentNoteMask.field_i >> 8;
           var13 = 0 == param2 ? 1344 : 0;
           var9Lifetime1 = -param0.field_V.pixelX(true) + 448;
@@ -118,7 +118,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
           if (var9Lifetime1 * var9Lifetime1 + var10Lifetime1 * var10Lifetime1 < 62500) {
             var14 = 16711680;
           }
-          SoftwareRasterizer.c(ug.a(0, 448), IntKeyLookup.a((byte) -65, var13), var12Lifetime2, var14);
+          SoftwareRasterizer.drawCircle(ug.a(0, 448), IntKeyLookup.a((byte) -65, var13), var12Lifetime2, var14);
           if (-1 == param0.field_V.possessorTeam) {
             if (param0.field_V.velocityY == 0) {
             } else {

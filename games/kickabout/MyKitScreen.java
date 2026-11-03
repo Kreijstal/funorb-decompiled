@@ -123,7 +123,7 @@ final class MyKitScreen extends TeamManagementScreen {
         for (var6_int = 0; var5_ref_rd__.length > var6_int; var6_int++) {
           var7_ref_rd = var5_ref_rd__[var6_int];
           if (var7_ref_rd.a(ic.field_h.field_e, param0 + 109, ScrollContainer.field_Ib)) {
-            var11.a(new KitStyleTile(ic.field_h, var7_ref_rd), 3);
+            var11.addLast(new KitStyleTile(ic.field_h, var7_ref_rd), 3);
           }
         }
         this.field_F.field_jb = var11;
@@ -453,7 +453,7 @@ final class MyKitScreen extends TeamManagementScreen {
           var12 = OffscreenPlayerArrow.field_f;
           var5 = TriangleRasterizer.field_o[var3] * var12[0] >> 16;
           var6 = var12[0] * TriangleRasterizer.field_f[var3] >> 16;
-          var7 = (ModelMesh) (this.field_cb.a(this.field_db.createModelMesh(var12[2], var12[3], var5, var12[1], var6), false, true, true));
+          var7 = (ModelMesh) (this.field_cb.applyCurrentFrame(this.field_db.createModelMesh(var12[2], var12[3], var5, var12[1], var6), false, true, true));
           var7.a(0, var3, 0, 0, 0, 0, 0, 540);
           var8 = Math.max(120, IsSixCommand.field_C.a(this.field_T) + 30);
           SoftwareRasterizer.a(this.slideOffsetX + (532 - (var8 >> 1)), 412, var8, 56, 12, 65793, 128);

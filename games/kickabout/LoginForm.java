@@ -59,7 +59,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (param0 != 70) {
             LoginForm.a((byte) -2);
           }
-          ia.field_d.a(param2, param0 - 67);
+          ia.field_d.addLast(param2, param0 - 67);
           mp.a(125, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -80,17 +80,17 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_D != null) {
           gf.field_a.a(this.field_D, 20 + param2 + this.field_t, 15 + param3 + this.field_g, -40 + this.field_n, this.field_i, 16777215, -1, 1, 0, gf.field_a.field_G);
         }
         if (null != this.field_L) {
           SoftwareRasterizer.drawHorizontalLine(param2 + 10, param3 + 134, -20 + this.field_n, 4210752);
         }
-        super.a(param0, (int) (char)param1, param2, param3);
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

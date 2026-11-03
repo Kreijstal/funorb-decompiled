@@ -48,16 +48,16 @@ final class FormationAgent extends MatchAgent {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = param1.l(param5, 59);
+          var6_int = param1.readBits(param5, 59);
           if (var6_int != 0) {
             if (var6_int != 1) {
               throw new IllegalStateException();
             }
-            stackIn_8_0 = param2 + param1.l(param0, 59);
+            stackIn_8_0 = param2 + param1.readBits(param0, 59);
             return stackIn_8_0;
           }
           if (param3 > 0) {
-            stackIn_4_0 = param1.l(param3, 59);
+            stackIn_4_0 = param1.readBits(param3, 59);
           } else {
             stackIn_4_0 = 0;
           }
@@ -78,12 +78,12 @@ final class FormationAgent extends MatchAgent {
 
     final void c(CipherPacketBuffer param0, int param1) {
         try {
-          this.formationChoice[0] = param0.l(3, 59);
+          this.formationChoice[0] = param0.readBits(3, 59);
           if (param1 != 2) {
             java.awt.Canvas var4 = (java.awt.Canvas) null;
             FormationAgent.a((java.awt.Canvas) null, 103);
           }
-          this.formationChoice[1] = param0.l(3, 59);
+          this.formationChoice[1] = param0.readBits(3, 59);
           this.formationConfirmed[0] = ContentTransitionDialog.a(param0, (byte) -39);
           this.formationConfirmed[1] = ContentTransitionDialog.a(param0, (byte) -39);
         } catch (RuntimeException runtimeException) {

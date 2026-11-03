@@ -162,7 +162,7 @@ final class pe {
     final static void a(ModelMesh param0, Sprite param1, int param2, int param3) {
         try {
           PacketBuffer.a(-51, param1);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           if (param3 != 40) {
             int[] var5 = (int[]) null;
             pe.isInsideAnyArea((PlayArea[]) null, (byte) 103, (int[]) null);

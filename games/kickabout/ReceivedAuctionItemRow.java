@@ -358,7 +358,7 @@ final class ReceivedAuctionItemRow extends ListRow {
         int var11 = 0;
         int var12 = 0;
         try {
-          var3 = (ReceivedAuctionItemRow) (bk.field_f.b((byte) 126));
+          var3 = (ReceivedAuctionItemRow) (bk.field_f.removeFirst((byte) 126));
           if (var3 == null) {
             var3 = new ReceivedAuctionItemRow();
           }

@@ -50,7 +50,7 @@ final class ii extends IntrusiveNode {
     final static void a(ManagerAction param0, int param1) {
         try {
           ic.field_h.applyAction(param0, AuctionLogEntry.e(15137), 0);
-          MusicPatchNode.field_h.a(param0, 3);
+          MusicPatchNode.field_h.addLast(param0, 3);
           if (param1 < 47) {
             field_h = (String) null;
           }

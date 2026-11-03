@@ -646,7 +646,7 @@ class UiLayoutNode extends iv {
           return;
         }
         try {
-          this.field_jb.a(param1, 3);
+          this.field_jb.addLast(param1, 3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hd.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

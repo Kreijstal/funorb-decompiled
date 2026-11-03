@@ -112,9 +112,9 @@ final class SoundCache {
           if (var9 == null) {
             return null;
           }
-          var11 = var9.a();
+          var11 = var9.toPcmSample();
           var8Lifetime1 = var11;
-          this.field_c.a(var8Lifetime1, -95, var6);
+          this.field_c.put(var8Lifetime1, -95, var6);
           if (param1 != null) {
             param1[0] = param1[0] - var11.field_i.length;
           }
@@ -172,7 +172,7 @@ final class SoundCache {
             if (var9 == null) {
               return null;
             }
-            this.field_f.a(var9, 79, var6);
+            this.field_f.put(var9, 79, var6);
           }
           var8Lifetime1 = var9.decodeToPcm(param0);
           if (var8Lifetime1 == null) {
@@ -180,7 +180,7 @@ final class SoundCache {
             return (PcmSample) (stackIn_18_0);
           }
           var9.c((byte) -109);
-          this.field_c.a(var8Lifetime1, -82, var6);
+          this.field_c.put(var8Lifetime1, -82, var6);
           stackIn_20_0 = (PcmSample) (var8Lifetime1);
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

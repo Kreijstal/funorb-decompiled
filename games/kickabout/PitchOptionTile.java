@@ -37,7 +37,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
         var4 = new wd();
         var4.field_p = param0;
         var4.field_k = param2;
-        ak.field_i.a(var4, 3);
+        ak.field_i.addLast(var4, 3);
         if (param1 == 100) {
           TextFieldNode.a(true, var4, param3);
           return var4;

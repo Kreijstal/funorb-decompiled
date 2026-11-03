@@ -21,7 +21,7 @@ final class GoalStateAgent extends MatchAgent {
           this.score[1] = hq.a(22531, 7, param0, 0);
           this.goalCount = hq.a(22531, 10, param0, 0);
           int var3_int = -57 % ((25 - param1) / 63);
-          this.goalScorer = -1 + param0.l(2, 59);
+          this.goalScorer = -1 + param0.readBits(2, 59);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ua.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

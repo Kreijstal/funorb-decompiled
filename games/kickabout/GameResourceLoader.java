@@ -27,7 +27,7 @@ final class GameResourceLoader implements LoadingSequence {
             }
             var2_ref_oi = (IntValueNode) (LoginText.field_f.c(param0 ^ -27629));
           }
-          ok.field_a.b(22997);
+          ok.field_a.clear(22997);
           RasterBuffer.a(20164);
         }
         if (param0 != -27598) {
@@ -113,7 +113,7 @@ final class GameResourceLoader implements LoadingSequence {
           SoftwareRasterizer.d(4, 4, 2, 13421772);
           TeamManagementScreen.e(122);
           var5 = eo.toIndexedSprite(var4);
-          IsSixCommand.field_C.a(new IndexedSprite[]{var5}, new int[]{10});
+          IsSixCommand.field_C.setInlineImages(new IndexedSprite[]{var5}, new int[]{10});
           sk.a(83, 100, 10);
           var6 = wa.a((byte) 100, "basic", var16, "orbcoin");
           LoggedGoal.a(var6, (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "locked")), (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "unachieved")), -123);
@@ -539,8 +539,8 @@ final class GameResourceLoader implements LoadingSequence {
               var3.field_y[var4] = PainterStyle.a(var3.field_y[var4], -16777216);
             }
           }
-          var3.a(-16777216);
-          var3.a(2130706432);
+          var3.addOutline(-16777216);
+          var3.addOutline(2130706432);
           MySquadScreen.field_U[var2] = (Sprite) ((Object) nh.downscaleArgbByHalf(var3));
         }
         CipherPacketBuffer.k(61, 11);

@@ -41,7 +41,7 @@ final class v {
           this.field_g = 64;
           this.field_h = 96;
           PacketBuffer.a(74, this.field_f);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           var4_int = 486400 / InstrumentNoteMask.field_i;
           param0.renderModel(var4_int, 300, this.field_g, this.field_h, (byte) -74);
           TeamManagementScreen.e(124);
@@ -107,7 +107,7 @@ final class v {
           this.field_j = param2.c(true);
           this.field_a = 17;
           PacketBuffer.a(-57, this.field_f);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           int var5 = 64 / ((-64 - param1) / 38);
           var4_int = (param2.j(-1) << 8) / InstrumentNoteMask.field_i;
           param2.a(300, this.field_g, this.field_h, var4_int, 300);

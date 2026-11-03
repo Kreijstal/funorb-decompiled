@@ -93,7 +93,7 @@ final class MusicTrack extends IntrusiveNode {
                 var14 = (InstrumentNoteMask) (this.field_f.a(true, (long)var13));
                 if (var14 == null) {
                   var14 = new InstrumentNoteMask(new byte[128]);
-                  this.field_f.a(var14, 90, (long)var13);
+                  this.field_f.put(var14, 90, (long)var13);
                 }
                 var14.field_g[var11Lifetime2] = (byte) 1;
               }
@@ -104,7 +104,7 @@ final class MusicTrack extends IntrusiveNode {
         }
     }
 
-    final static MusicTrack a(ResourceArchive param0, String param1, String param2) {
+    final static MusicTrack load(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.takeFileByName(param2, param1, 5);
         if (var3 == null) {
           return null;
@@ -222,7 +222,7 @@ final class MusicTrack extends IntrusiveNode {
         int var29Lifetime1;
         param0.field_n = param0.field_f.length - 3;
         var2 = param0.readUnsignedByte((byte) -105);
-        var3 = param0.a((byte) 81);
+        var3 = param0.readUnsignedShort((byte) 81);
         var4 = 14 + var2 * 10;
         param0.field_n = 0;
         var5 = 0;
@@ -286,7 +286,7 @@ final class MusicTrack extends IntrusiveNode {
         var13Lifetime1 = param0.field_n;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
-          param0.l(127);
+          param0.readVarInt(127);
         }
         var4 = var4 + (param0.field_n - var13Lifetime1);
         var15Lifetime2 = param0.field_n;
@@ -452,7 +452,7 @@ final class MusicTrack extends IntrusiveNode {
           var61 = var51.field_n;
           var62 = -1;
           while (true) {
-            var63 = param0.l(-82);
+            var63 = param0.readVarInt(-82);
             var51.writeVarInt(var63, 0);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;

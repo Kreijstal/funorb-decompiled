@@ -43,7 +43,7 @@ final class AuctionListingDialog extends MessageDialog {
           or.field_d.b(60, (byte) 104);
           this.field_J.writeToPacket(or.field_d, 5);
         }
-        BuyPlayerDialog.field_K.a(this.field_J, 3);
+        BuyPlayerDialog.field_K.addLast(this.field_J, 3);
         ((AuctionsScreen) (rn.a(-104, 16))).field_H = -1L;
         if (param1 == 1) {
           DelayedServerPacket.a(16, true, -2);

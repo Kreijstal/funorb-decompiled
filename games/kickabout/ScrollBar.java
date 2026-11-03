@@ -683,10 +683,10 @@ final class ScrollBar extends UiLayoutNode {
         th.a((byte) -99);
         if (param0 != 0) {
           field_Eb = (String) null;
-          StrongCacheEntry.field_z.b(22997);
+          StrongCacheEntry.field_z.clear(22997);
           return;
         }
-        StrongCacheEntry.field_z.b(22997);
+        StrongCacheEntry.field_z.clear(22997);
     }
 
     static {

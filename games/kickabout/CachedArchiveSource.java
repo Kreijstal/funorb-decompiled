@@ -310,7 +310,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     var6 = new IntrusiveNode();
                     var6.field_a = (long)this.field_i;
                     var2_int = 0;
-                    this.field_t.a(var6, 3);
+                    this.field_t.addLast(var6, 3);
                   }
                   this.field_i = this.field_i + 1;
                   continue;
@@ -353,7 +353,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       var7 = new IntrusiveNode();
                       var7.field_a = (long)this.field_i;
                       var2_intLifetime2 = 0;
-                      this.field_t.a(var7, 3);
+                      this.field_t.addLast(var7, 3);
                     }
                     this.field_i = this.field_i + 1;
                     continue;
@@ -513,7 +513,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 var4 = this.field_l.a(this.field_h, param1, (byte) 2, (byte) 89, false);
               }
             }
-            this.field_v.a((IntrusiveNode) (var4), -73, (long)param1);
+            this.field_v.put((IntrusiveNode) (var4), -73, (long)param1);
           }
           if (((vv) (var4)).field_p) {
             stackIn_40_0 = null;
@@ -572,7 +572,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   return null;
                 }
                 var4 = this.field_l.a(this.field_h, param1, (byte) 2, (byte) 89, true);
-                this.field_v.a((IntrusiveNode) (var4), -50, (long)param1);
+                this.field_v.put((IntrusiveNode) (var4), -50, (long)param1);
               }
               stackIn_81_0 = null;
               return (vv) (stackIn_81_0);
@@ -617,7 +617,7 @@ final class CachedArchiveSource extends ArchiveSource {
               return null;
             }
             var4 = this.field_l.a(this.field_h, param1, (byte) 2, (byte) 89, true);
-            this.field_v.a((IntrusiveNode) (var4), param2 + 128, (long)param1);
+            this.field_v.put((IntrusiveNode) (var4), param2 + 128, (long)param1);
             stackIn_107_0 = null;
             return (vv) (stackIn_107_0);
           }

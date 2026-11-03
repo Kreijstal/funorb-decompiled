@@ -27,7 +27,7 @@ final class op extends TextWidgetPainter {
         int var6 = 21;
         Sprite var7 = new Sprite(PitchOptionTile.field_yb << 1, IconLabel.field_Bb << 1);
         PacketBuffer.a(97, var7);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearFramebuffer();
         SoftwareRasterizer.c(0, 0, PitchOptionTile.field_yb << 1, IconLabel.field_Bb << 1, 2, 16777215);
         SoftwareRasterizer.e(1, 1, -2 + (PitchOptionTile.field_yb << 1), (IconLabel.field_Bb << 1) - 2, 16777215);
         SoftwareRasterizer.drawHorizontalLine(0, IconLabel.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
@@ -65,7 +65,7 @@ final class op extends TextWidgetPainter {
         int var9 = 0;
         try {
           if (!param3.field_m) {
-            stackIn_6_0 = (param3.b(99)) ? 1 : 0;
+            stackIn_6_0 = (param3.isFocused(99)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }

@@ -23,7 +23,7 @@ class UiWidget extends IntrusiveNode {
     WidgetPainter field_r;
 
     public final String toString() {
-        return this.a(17883, 0, new Hashtable(), new StringBuilder()).toString();
+        return this.appendDebugTree(17883, 0, new Hashtable(), new StringBuilder()).toString();
     }
 
     final static int a(boolean param0, boolean param1, byte param2, boolean param3, boolean param4) {
@@ -118,7 +118,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void b(int param0, StringBuilder param1, Hashtable param2, int param3) {
+    final void appendWidgetDiagnosticProperties(int param0, StringBuilder param1, Hashtable param2, int param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -144,7 +144,7 @@ class UiWidget extends IntrusiveNode {
           if (this.field_m) {
             discarded$2 = param1.append(" mouseover");
           }
-          if (this.b(64)) {
+          if (this.isFocused(64)) {
             discarded$3 = param1.append(" focused");
           }
           if (param3 != -18568) {
@@ -153,7 +153,7 @@ class UiWidget extends IntrusiveNode {
           if (null != this.field_r) {
             discarded$4 = param1.append(" renderer=");
             if (this.field_r instanceof UiWidget) {
-              param1 = this.a(17883, 1 + param0, param2, param1);
+              param1 = this.appendDebugTree(17883, 1 + param0, param2, param1);
             } else {
               discarded$5 = param1.append(this.field_r);
             }
@@ -163,7 +163,7 @@ class UiWidget extends IntrusiveNode {
             if (!(this.field_k instanceof UiWidget)) {
               discarded$7 = param1.append(this.field_k);
             } else {
-              param1 = this.a(17883, param0 + 1, param2, param1);
+              param1 = this.appendDebugTree(17883, param0 + 1, param2, param1);
             }
           }
           return;
@@ -187,7 +187,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    String f(int param0) {
+    String getTooltip(int param0) {
         if (param0 != -1) {
           return (String) null;
         }
@@ -270,7 +270,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void g(int param0) {
+    void layoutChild(int param0) {
         if (param0 != 84) {
           this.field_r = (WidgetPainter) null;
         }
@@ -379,7 +379,7 @@ class UiWidget extends IntrusiveNode {
         DraggableWidget var6;
         var7 = Kickabout.field_G;
         this.a((byte) 12, this, param2, param0);
-        var5 = this.b(73) ? 1 : 0;
+        var5 = this.isFocused(73) ? 1 : 0;
         if (param3) {
           if (StatefulTextPainter.field_v != 0 &&
             var5 != 0) {
@@ -390,13 +390,13 @@ class UiWidget extends IntrusiveNode {
               param3 = false;
             } else {
               if (var5 != 0) {
-                this.g(84);
+                this.layoutChild(84);
               }
             }
           }
           if (FootballerAgent.field_p == 0 &&
             TextFieldNode.field_Ob != 0) {
-            this.a(param0, ArchiveManager.field_m, BytePlusOneCommand.field_A, this, param1 ^ -31948, param2);
+            this.handlePointerRelease(param0, ArchiveManager.field_m, BytePlusOneCommand.field_A, this, param1 ^ -31948, param2);
             var6 = mp.field_g;
             if (var6 != null) {
               if (var6.field_k instanceof co) {
@@ -408,20 +408,20 @@ class UiWidget extends IntrusiveNode {
         } else {
           if (var5 != 0 &&
             0 != WidgetContainer.field_A) {
-            this.g(84);
+            this.layoutChild(84);
           }
         }
         TextFieldNode.field_Ob = FootballerAgent.field_p;
-        cg.a(this.f(-1), (byte) -98);
+        cg.a(this.getTooltip(-1), (byte) -98);
         if (param1 == 31947) {
           return param3;
         }
         return false;
     }
 
-    boolean b(int param0) {
+    boolean isFocused(int param0) {
         if (param0 <= 10) {
-          this.a(32, -97, -104, 83);
+          this.drawLayer(32, -97, -104, 83);
         }
         return false;
     }
@@ -466,7 +466,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     final boolean a(char param0, byte param1, int param2) {
-        if (this.b(87) &&
+        if (this.isFocused(87) &&
           this.a(param0, (byte) -121, this, param2)) {
           return true;
         }
@@ -507,7 +507,7 @@ class UiWidget extends IntrusiveNode {
         int var6 = Kickabout.field_G;
         int var4 = this.f((byte) 118);
         for (var5_int = 0; var5_int <= var4; var5_int++) {
-          this.a(var5_int, 65, param1, param0);
+          this.drawLayer(var5_int, 65, param1, param0);
         }
         if (param2 >= -85) {
           return;
@@ -518,7 +518,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(int param0, int param1, Hashtable param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_2_0 = null;
         StringBuilder stackIn_7_0 = null;
@@ -534,7 +534,7 @@ class UiWidget extends IntrusiveNode {
             return stackIn_2_0;
           }
           if (this.a(1, param3, param2, param1)) {
-            this.b(param1, param3, param2, -18568);
+            this.appendWidgetDiagnosticProperties(param1, param3, param2, -18568);
           }
           stackIn_7_0 = (StringBuilder) (param3);
           return stackIn_7_0;
@@ -566,7 +566,7 @@ class UiWidget extends IntrusiveNode {
         this.a(this.field_i, 1, this.field_t, this.field_n, this.field_g);
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         if (param0 == 0 &&
           this.field_r != null) {
           this.field_r.drawWidget(126, true, param3, this, param2);
@@ -576,7 +576,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
+    void handlePointerRelease(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         try {
           this.field_p = 0;
           if (param4 != -1) {

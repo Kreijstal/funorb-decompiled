@@ -238,7 +238,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         }
         for (var2 = 0; ip.field_b.length > var2; var2++) {
           PacketBuffer.a(73, UrlRequest.field_k);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           if (var2 != 3 &&
             var2 != 4) {
             stackIn_9_0 = 700;
@@ -520,7 +520,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var5 = stackIn_9_0 + stackIn_10_1;
           un.field_d.a(DelegatingCanvas.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
           PacketBuffer.a(param0 ^ -19, UrlRequest.field_k);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           bk.field_a[var4].renderModel(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
           TeamManagementScreen.e(param0 ^ 24);
           var6 = bk.field_a[var4].directionMask;

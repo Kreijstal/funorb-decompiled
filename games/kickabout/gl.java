@@ -37,12 +37,12 @@ final class gl {
           if (param1 <= 32) {
             field_a = (PacketBuffer) null;
           }
-          var10_int = param4.l(2, 59);
+          var10_int = param4.readBits(2, 59);
           if (0 == var10_int) {
             if (0 == param2) {
               stackIn_25_0 = 0;
             } else {
-              stackIn_25_0 = param4.l(param2, 59);
+              stackIn_25_0 = param4.readBits(param2, 59);
             }
             return stackIn_25_0;
           }
@@ -50,7 +50,7 @@ final class gl {
             if (0 == param5) {
               stackIn_7_0 = 0;
             } else {
-              stackIn_7_0 = param4.l(param5, 59);
+              stackIn_7_0 = param4.readBits(param5, 59);
             }
             stackIn_8_0 = stackIn_7_0 + param8;
             return stackIn_8_0;
@@ -58,7 +58,7 @@ final class gl {
           if (var10_int == 2) {
             stackIn_12_0 = param8;
             if (param9 != 0) {
-              stackIn_13_1 = param4.l(param9, 59);
+              stackIn_13_1 = param4.readBits(param9, 59);
             } else {
               stackIn_13_1 = 0;
             }
@@ -70,7 +70,7 @@ final class gl {
           }
           stackIn_19_0 = param8;
           if (param3 != 0) {
-            stackIn_20_1 = param4.l(param3, 59);
+            stackIn_20_1 = param4.readBits(param3, 59);
           } else {
             stackIn_20_1 = 0;
           }

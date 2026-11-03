@@ -286,7 +286,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
@@ -303,7 +303,7 @@ final class ModalStack extends SingleChildContainer {
           var5 = new IntrusiveDequeCursor(this.field_A);
           var6 = (UiWidget) (var5.b(0));
           while (null != var6) {
-            var6.a(param0, 65, param2 + this.field_t, this.field_g + param3);
+            var6.drawLayer(param0, 65, param2 + this.field_t, this.field_g + param3);
             var6 = (UiWidget) (var5.b((byte) 46));
             if (var7 != 0) {
               return;
@@ -528,7 +528,7 @@ final class ModalStack extends SingleChildContainer {
             if (var4 != 0) {
               return;
             }
-            if (var3.k(-1)) {
+            if (var3.advanceDialogAnimation(-1)) {
               var3.c((byte) -109);
             }
             var3 = (ModalPanel) (var2.a(0));

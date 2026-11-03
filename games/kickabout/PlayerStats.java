@@ -178,7 +178,7 @@ final class PlayerStats implements PopupCard {
         try {
           param1.readUnsignedByte((byte) -126);
           this.archetype = (7 & param1.readUnsignedByte((byte) -127)) - 1;
-          this.appearance = param1.a((byte) 81);
+          this.appearance = param1.readUnsignedShort((byte) 81);
           this.initialIndex = param1.readUnsignedByte((byte) -112);
           this.surnameIndex = param1.readUnsignedByte((byte) -118);
           this.power = param1.readUnsignedByte((byte) -122);

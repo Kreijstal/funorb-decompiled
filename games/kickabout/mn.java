@@ -38,7 +38,7 @@ final class mn implements WidgetPainter {
             ((TextButton) (param3)).field_A) {
             var9.drawAdditive((-var9.field_o + param3.field_n >> 1) + (1 + var6_int), 1 + (var8 + (-var9.field_v + param3.field_i >> 1)), 256);
           }
-          if (!param3.b(44)) {
+          if (!param3.isFocused(44)) {
             return;
           }
           RenderedBall.b(2, param3.field_n - 4, var8 + 2, -4 + param3.field_i, 2 + var6_int);

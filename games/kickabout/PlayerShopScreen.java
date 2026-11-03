@@ -37,7 +37,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_J.h((byte) -48);
         SortCriterion var6 = this.field_J.field_zb[this.field_J.field_Db];
-        this.field_I.a(new IntValueNode(param0 | param3 << 16), 3);
+        this.field_I.addLast(new IntValueNode(param0 | param3 << 16), 3);
         this.rebuildShopRows(true);
         this.field_J.a(var6, 94);
         this.field_J.a(true, var5);
@@ -230,7 +230,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
                   }
                   var7 = (IntValueNode) (this.field_I.c(33));
                 }
-                var10.a(new ShopPlayerSlot(var5, MusicPatchNode.field_x, var3, var4_int, var6 != 0), 3);
+                var10.addLast(new ShopPlayerSlot(var5, MusicPatchNode.field_x, var3, var4_int, var6 != 0), 3);
               }
             }
             var3++;

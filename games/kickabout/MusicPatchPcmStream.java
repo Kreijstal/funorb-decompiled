@@ -8,7 +8,7 @@ final class MusicPatchPcmStream extends PcmStream {
     IntrusiveDeque field_j;
     PcmStreamMixer field_i;
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -52,7 +52,7 @@ final class MusicPatchPcmStream extends PcmStream {
             while (var3.field_B < var2) {
               this.a(var3.field_B, var3, (byte) -105);
               var2 = var2 - var3.field_B;
-              if (this.field_l.a(-123, var2, 0, var3, (int[]) null)) {
+              if (this.field_l.updateNote(-123, var2, 0, var3, (int[]) null)) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
@@ -98,7 +98,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
               }
               if (0 > param1.field_g.field_r[param1.field_e]) {
-                param1.field_F.g(-1);
+                param1.field_F.setLoopCount(-1);
               }
               param0 = param1.field_r / var5;
             }
@@ -144,7 +144,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 this.a(0, var6.field_B, var4_int, param0, var6, var5 + var4_int);
                 var4_int = var4_int + var6.field_B;
                 var5 = var5 - var6.field_B;
-                if (this.field_l.a(-30, var5, var4_int, var6, param0)) {
+                if (this.field_l.updateNote(-30, var5, var4_int, var6, param0)) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -494,11 +494,11 @@ final class MusicPatchPcmStream extends PcmStream {
                 param4.field_F = PcmSampleStream.b(param4.field_y, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.k());
               }
               if (param4.field_g.field_r[param4.field_e] < 0) {
-                param4.field_F.g(-1);
+                param4.field_F.setLoopCount(-1);
               }
               var11.fadeOutAndUnlink(var9);
               var11.mixInto(param3, param2, -param2 + param5);
-              if (!var11.n()) {
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_i.addSubStream(var11);

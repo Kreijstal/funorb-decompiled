@@ -28,7 +28,7 @@ final class DialogOverlay implements OverlayLayer {
           }
           var2_int = 119 / ((72 - param1) / 33);
           var3 = new ag(param0, param0);
-          IndexedSpriteState.field_c.a(var3, 3);
+          IndexedSpriteState.field_c.addLast(var3, 3);
           TextFieldNode.field_Bb.addSubStream(param0);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -713,7 +713,7 @@ final class DialogOverlay implements OverlayLayer {
           stackIn_22_0 = param1;
           if (stackIn_22_0 &&
             vd.a((byte) 82)) {
-            su.field_c = (PopupDialog) (ScrollPane.field_Jb.b((byte) 125));
+            su.field_c = (PopupDialog) (ScrollPane.field_Jb.removeFirst((byte) 125));
           }
         } else {
           su.field_c.b(param0 - 16511, param1);

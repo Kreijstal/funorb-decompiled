@@ -157,7 +157,7 @@ final class ContextMenu extends UiLayoutNode {
             }
             var3 = (PopupDialog) (ScrollPane.field_Jb.c(33));
           }
-          ScrollPane.field_Jb.a(new AuctionListingDialog(param1, param2), 3);
+          ScrollPane.field_Jb.addLast(new AuctionListingDialog(param1, param2), 3);
           if (param0 != -25) {
             ContextMenu.b(-42, (byte) 4, 39);
           }

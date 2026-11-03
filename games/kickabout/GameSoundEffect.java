@@ -60,7 +60,7 @@ final class GameSoundEffect {
           return false;
         }
         if (param0 == 32) {
-          this.field_l = VorbisSample.a(SortCriterion.field_h, this.field_a, "").decodeAllToPcm();
+          this.field_l = VorbisSample.loadNamed(SortCriterion.field_h, this.field_a, "").decodeAllToPcm();
           this.field_d = true;
           return true;
         }

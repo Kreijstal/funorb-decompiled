@@ -95,7 +95,7 @@ final class AlphaContainer extends SingleChildContainer {
         this.field_F = 256;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (0 != param0) {
           return;
         }
@@ -106,12 +106,12 @@ final class AlphaContainer extends SingleChildContainer {
           return;
         }
         if (256 == this.field_F) {
-          this.field_z.a(param0, 65, this.field_t + param2, this.field_g + param3);
+          this.field_z.drawLayer(param0, 65, this.field_t + param2, this.field_g + param3);
           return;
         }
         Sprite var6 = new Sprite(this.field_z.field_n, this.field_z.field_i);
         PacketBuffer.a(-46, var6);
-        this.field_z.a(param0, (int) (char)param1, 0, 0);
+        this.field_z.drawLayer(param0, (int) (char)param1, 0, 0);
         TeamManagementScreen.e(127);
         var6.b(param2 + this.field_t, this.field_g + param3, this.field_F);
     }

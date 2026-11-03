@@ -153,7 +153,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           VorbisSample.decodeSetup(param0.takeFileByName("", "headers.packvorbis", 110));
-          var2 = VorbisSample.a(param0, "jagex logo2.packvorbis", "");
+          var2 = VorbisSample.loadNamed(param0, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
           var3 = 116 % ((-33 - param1) / 60);
           return;

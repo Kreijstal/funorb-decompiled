@@ -66,7 +66,7 @@ final class tl {
             field_b = (String) null;
           }
           if (var2 == 0) {
-            var3 = var28.a((byte) 81);
+            var3 = var28.readUnsignedShort((byte) 81);
             var4 = (ni) (ProxyAuthenticationRequiredException.field_g.g(24009));
             while (var4 != null) {
               if (var3 != var4.field_o) {
@@ -161,7 +161,7 @@ final class tl {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var28.a((byte) 81);
+            var3Lifetime1 = var28.readUnsignedShort((byte) 81);
             var28.readLong((byte) -124);
             var4_ref = (sm) (ia.field_d.g(24009));
             while (var4_ref != null) {

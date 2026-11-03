@@ -152,7 +152,7 @@ final class CheatCodeListener implements OverlayLayer {
           var8 = (int)stackIn_16_0 + 320;
           var9 = (int)var7 + 140;
           PacketBuffer.a(-102, this.field_b);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           this.field_i[var4].renderModel(var3, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, (byte) -105);
           TeamManagementScreen.e(120);
           if (this.field_f > 136) {

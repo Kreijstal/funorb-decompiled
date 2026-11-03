@@ -61,7 +61,7 @@ final class gw {
               gw.c(-32);
             }
             var4 = new byte[var3_int];
-            param2.field_n = param2.field_n + Bzip2State.field_I.a(param2.field_n, var4, var3_int, param2.field_f, 0, false);
+            param2.field_n = param2.field_n + Bzip2State.field_I.decompress(param2.field_n, var4, var3_int, param2.field_f, 0, false);
             var5 = PainterStyle.a((byte) -121, var3_int, 0, var4);
             stackIn_6_0 = var5;
             return stackIn_6_0;
@@ -97,10 +97,10 @@ final class gw {
     final static void c(int param0) {
         if (param0 != 0) {
           gw.b(-31);
-          ScrollPane.field_Jb.a(new LeagueWinnerDialog(), 3);
+          ScrollPane.field_Jb.addLast(new LeagueWinnerDialog(), 3);
           return;
         }
-        ScrollPane.field_Jb.a(new LeagueWinnerDialog(), 3);
+        ScrollPane.field_Jb.addLast(new LeagueWinnerDialog(), 3);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5) {

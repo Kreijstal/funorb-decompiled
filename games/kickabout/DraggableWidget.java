@@ -67,7 +67,7 @@ final class DraggableWidget extends SingleChildContainer {
               LobbyGameRecord.field_m = new Sprite(var7.field_o + 8, var7.field_v + 8);
             }
             PacketBuffer.a(-56, LobbyGameRecord.field_m);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
             var7.c(4, 4);
             nh.adjustSpriteHsv(LobbyGameRecord.field_m, 0.0, 1.3, 1.2);
             eo.a(LobbyGameRecord.field_m, 65793);
@@ -115,7 +115,7 @@ final class DraggableWidget extends SingleChildContainer {
         try {
           if (!param0) {
             var9 = (StringBuilder) null;
-            this.a(-45, -42, (Hashtable) null, (StringBuilder) null);
+            this.appendDebugTree(-45, -42, (Hashtable) null, (StringBuilder) null);
           }
           var8_int = super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6) ? 1 : 0;
           if (var8_int != 0 &&
@@ -223,9 +223,9 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         try {
-          super.a(param0, param1, param2, param3, param4 ^ 0, param5);
+          super.handlePointerRelease(param0, param1, param2, param3, param4 ^ 0, param5);
           this.field_p = 0;
           if (param4 != -1) {
             this.field_L = false;
@@ -235,7 +235,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int param0, int param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         RuntimeException var5 = null;
@@ -248,7 +248,7 @@ final class DraggableWidget extends SingleChildContainer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(1, param3, param2, param1)) {
-            this.b(param1, param3, param2, -18568);
+            this.appendWidgetDiagnosticProperties(param1, param3, param2, -18568);
             this.a(param2, 127, param3, param1);
             discarded$64 = param3.append(" revert=").append(this.field_L);
             if (this.field_H != 2147483647 &&

@@ -193,7 +193,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param4.b(67)) {
+          if (param4.isFocused(67)) {
             var13 = this.ensureTextLayout(5035, param4);
             var14 = var13;
             var7 = var14.a(0, param0);
@@ -635,7 +635,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 var18.operationErrors[var5] = -5;
               }
             }
-            nv.field_N.a(var18, 3);
+            nv.field_N.addLast(var18, 3);
             if (param2 != -1) {
               field_g = (String) null;
             }
@@ -750,7 +750,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param4 < 86) {
             return;
           }
-          if (param3.b(125)) {
+          if (param3.isFocused(125)) {
             var17 = this.ensureTextLayout(5035, param3);
             var18 = var17;
             if (param1 > param2) {

@@ -15,7 +15,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
     static String field_F;
     private TextButton[] field_J;
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -45,7 +45,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
             IndexedSpriteState.b(38, this.field_M[var6_int]);
             return;
           }
-          this.field_E.q(-77);
+          this.field_E.closeDialog(-77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,8 +94,8 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
         this.field_N = param1;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, (int) (char)param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         this.field_B.a(this.field_D, 14 + (param2 + this.field_t), 10 + (this.field_g + param3), -28 + this.field_n, this.field_i, 16777215, -1, 0, 0, this.field_B.field_G);
     }
 

@@ -81,8 +81,8 @@ final class TeamSelectionView extends MatchPhaseView {
             var7 = un.field_d.a(var6.field_E);
             var8 = (var6.field_q - var7 >> 1) + var6.field_F;
             var9 = 20;
-            SoftwareRasterizer.b(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
-            SoftwareRasterizer.b(var8 + var7, var4Lifetime1 + 6, var8, -2 + var4Lifetime1 + var9, 13382451);
+            SoftwareRasterizer.drawLine(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
+            SoftwareRasterizer.drawLine(var8 + var7, var4Lifetime1 + 6, var8, -2 + var4Lifetime1 + var9, 13382451);
           }
           AuctionListing.a(76, -22914, 0, 480, 0);
           SoftwareRasterizer.a(52, var4Lifetime1, 486, 21, 7, 65793, 128);
@@ -103,7 +103,7 @@ final class TeamSelectionView extends MatchPhaseView {
 
     final static void f(int param0) {
         int var1 = 113 % ((-88 - param0) / 32);
-        MusicPatchNode.field_h.b(22997);
+        MusicPatchNode.field_h.clear(22997);
     }
 
     final void onButtonClick(int param0, int param1) {

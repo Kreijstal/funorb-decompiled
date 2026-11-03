@@ -101,7 +101,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
                 return stackIn_23_0;
               }
               param0.field_a = param0.field_a - 1;
-              var5.field_j.a(AuctionTableWidget.a(param0, 1422), 3);
+              var5.field_j.addLast(AuctionTableWidget.a(param0, 1422), 3);
               if (param0.isAtEnd(6)) {
                 throw new ConsoleParseException(var5.field_f);
               }

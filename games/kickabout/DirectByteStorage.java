@@ -35,7 +35,7 @@ final class DirectByteStorage extends ByteStorage {
         field_g = null;
     }
 
-    final void a(byte[] param0, int param1) {
+    final void setBytes(byte[] param0, int param1) {
         try {
           this.field_f = java.nio.ByteBuffer.allocateDirect(param0.length);
           this.field_f.position(0);

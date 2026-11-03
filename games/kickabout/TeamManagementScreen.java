@@ -103,12 +103,12 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
     void enterScreen(int param0, int param1, boolean param2) {
         super.enterScreen(param0 + param0, param1, param2);
         ic.field_h.copyFrom(GameLoopApplet.field_E, (byte) 120);
-        MusicPatchNode.field_h.b(22997);
+        MusicPatchNode.field_h.clear(22997);
         IntrusiveNodeHashTable.a(ic.field_h.field_x, 415422632);
     }
 
     final static void e(int param0) {
-        RasterStateSnapshot var1 = (RasterStateSnapshot) (IntDoubleCommand.field_C.h(-126));
+        RasterStateSnapshot var1 = (RasterStateSnapshot) (IntDoubleCommand.field_C.removeLast(-126));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -119,7 +119,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
         SoftwareRasterizer.a(var1.field_h, var1.field_g, var1.field_j);
         SoftwareRasterizer.setClip(var1.field_e, var1.field_l, var1.field_i, var1.field_f);
         var1.field_h = null;
-        ScrollContainer.field_Ab.a(var1, 3);
+        ScrollContainer.field_Ab.addLast(var1, 3);
     }
 
     void updateScreen(byte param0, boolean param1) {

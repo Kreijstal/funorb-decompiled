@@ -19,12 +19,12 @@ final class ql {
 
     final static void a(int param0) {
         if (param0 == 31663) {
-          ScrollPane.field_Jb.a(new WelcomeDialog(), 3);
+          ScrollPane.field_Jb.addLast(new WelcomeDialog(), 3);
           return;
         }
         String var2 = (String) null;
         ql.a((byte) 32, false, (String) null);
-        ScrollPane.field_Jb.a(new WelcomeDialog(), 3);
+        ScrollPane.field_Jb.addLast(new WelcomeDialog(), 3);
     }
 
     final static SocketConnector a(String param0, int param1, int param2) {

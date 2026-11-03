@@ -111,7 +111,7 @@ final class MusicPatch extends IntrusiveNode {
                 var9 = 23 * var9 >> 8;
                 var8 = var8 * 23 >> 8;
                 SoftwareRasterizer.d(var8 + (var1_int + 1), var9 + (1 + var2), 3, var7);
-                SoftwareRasterizer.c(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
+                SoftwareRasterizer.drawCircle(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
               }
             }
             var3 = (RenderedBall) (tb.field_w.field_V);
@@ -131,7 +131,7 @@ final class MusicPatch extends IntrusiveNode {
             var5Lifetime1 = var5Lifetime1 * 23 >> 8;
             var4Lifetime1 = var4Lifetime1 * 23 >> 8;
             SoftwareRasterizer.d(var4Lifetime1 + (1 + var1_int), var5Lifetime1 + (var2 + 1), 3, 16777215);
-            SoftwareRasterizer.c(var4Lifetime1 + 1 + var1_int, 1 + (var2 + var5Lifetime1), 3, 65793);
+            SoftwareRasterizer.drawCircle(var4Lifetime1 + 1 + var1_int, 1 + (var2 + var5Lifetime1), 3, 65793);
             TeamManagementScreen.e(125);
             return;
           }
@@ -496,7 +496,7 @@ final class MusicPatch extends IntrusiveNode {
               } else {
                 var20Lifetime2 = -1;
               }
-              var22 = var38.l(-35);
+              var22 = var38.readVarInt(-35);
             }
             this.field_r[var23] = (short)(this.field_r[var23] + (TextLayoutLine.b(-1 + var22, 2) << 14));
             this.field_q[var23] = var22;

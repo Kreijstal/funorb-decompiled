@@ -421,7 +421,7 @@ abstract class MatchAgent {
           }
           this.field_b = -hq.a(22531, 6, param0, 0) + 64;
           if (ContentTransitionDialog.a(param0, (byte) -39)) {
-            this.field_e = param0.l(4, param1 + 55) - 1;
+            this.field_e = param0.readBits(4, param1 + 55) - 1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

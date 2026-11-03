@@ -184,7 +184,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         WidgetTextLayout var8 = null;
         long var6 = 0L;
         if (null != this.field_r &&
@@ -259,7 +259,7 @@ class TextInputWidget extends TextButton {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new ag(param0, param0);
-          LoginCredentials.field_a.a(var2, 3);
+          LoginCredentials.field_a.addLast(var2, 3);
           if (param1 <= 108) {
             field_U = (String) null;
           }

@@ -60,7 +60,7 @@ final class sk {
           return;
         }
         try {
-          ScrollPane.field_Jb.a(new MessageDialog(param0, param2), 3);
+          ScrollPane.field_Jb.addLast(new MessageDialog(param0, param2), 3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

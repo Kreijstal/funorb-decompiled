@@ -64,7 +64,7 @@ final class cb {
 
     final static void a(PitchOptionTile param0, byte param1) {
         try {
-          ScrollPane.field_Jb.a(new BuyPitchDialog(param0), 3);
+          ScrollPane.field_Jb.addLast(new BuyPitchDialog(param0), 3);
           if (param1 < 118) {
             field_d = (PcmPlayerService) null;
           }

@@ -31,7 +31,7 @@ abstract class TextLayout {
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
-              var6 = var5.a((byte) -114);
+              var6 = var5.width((byte) -114);
               if (var2 < var6) {
                 var2 = var6;
               }

@@ -23,7 +23,7 @@ class DualLinkNode extends IntrusiveNode {
         field_j = null;
     }
 
-    final long f(byte param0) {
+    final long getSecondaryKey(byte param0) {
         if (param0 <= 58) {
           this.field_f = (DualLinkNode) null;
         }
@@ -38,7 +38,7 @@ class DualLinkNode extends IntrusiveNode {
           return false;
         }
         if (param0 != -60) {
-          this.f((byte) 24);
+          this.getSecondaryKey((byte) 24);
           return true;
         }
         return true;

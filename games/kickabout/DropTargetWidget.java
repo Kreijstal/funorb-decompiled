@@ -13,10 +13,10 @@ final class DropTargetWidget extends SingleChildContainer {
         }
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         DraggableWidget var7 = null;
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           var7 = mp.field_g;
           if (var7 != null &&
             this.a((byte) -81, param5, param0, param2, param1)) {

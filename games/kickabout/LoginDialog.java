@@ -186,7 +186,7 @@ final class LoginDialog extends ContentTransitionDialog {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.field_n = -2 + param1.length;
-          MenuButton.field_l = var17.a((byte) 81);
+          MenuButton.field_l = var17.readUnsignedShort((byte) 81);
           PasswordValidator.field_j = new int[MenuButton.field_l];
           RankingsScreen.field_B = new boolean[MenuButton.field_l];
           RowRangeRequest.field_e = new byte[MenuButton.field_l][];
@@ -195,20 +195,20 @@ final class LoginDialog extends ContentTransitionDialog {
           fc.field_g = new int[MenuButton.field_l];
           SquadPickerDialog.field_O = new byte[MenuButton.field_l][];
           var17.field_n = -(MenuButton.field_l * 8) + param1.length - 7;
-          kw.field_i = var17.a((byte) 81);
-          AccountTermsPanel.field_J = var17.a((byte) 81);
+          kw.field_i = var17.readUnsignedShort((byte) 81);
+          AccountTermsPanel.field_J = var17.readUnsignedShort((byte) 81);
           var3 = 1 + (var17.readUnsignedByte((byte) -116) & 255);
           for (var4 = 0; var4 < MenuButton.field_l; var4++) {
-            IsaacRandom.field_f[var4] = var16.a((byte) 81);
+            IsaacRandom.field_f[var4] = var16.readUnsignedShort((byte) 81);
           }
           for (var4Lifetime1 = 0; MenuButton.field_l > var4Lifetime1; var4Lifetime1++) {
-            fc.field_g[var4Lifetime1] = var17.a((byte) 81);
+            fc.field_g[var4Lifetime1] = var17.readUnsignedShort((byte) 81);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < MenuButton.field_l; var4Lifetime2++) {
-            MouseInputHandler.field_c[var4Lifetime2] = var17.a((byte) 81);
+            MouseInputHandler.field_c[var4Lifetime2] = var17.readUnsignedShort((byte) 81);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < MenuButton.field_l; var4Lifetime3++) {
-            PasswordValidator.field_j[var4Lifetime3] = var17.a((byte) 81);
+            PasswordValidator.field_j[var4Lifetime3] = var17.readUnsignedShort((byte) 81);
           }
           var17.field_n = -7 + (param1.length + (-(MenuButton.field_l * 8) - 3 * (-1 + var3)));
           lt.field_a = new int[var3];

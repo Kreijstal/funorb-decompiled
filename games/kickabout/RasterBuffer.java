@@ -208,7 +208,7 @@ abstract class RasterBuffer {
     }
 
     final static void a(boolean param0) {
-        ScrollPane.field_Jb.a(new SaveChangesDialog(), 3);
+        ScrollPane.field_Jb.addLast(new SaveChangesDialog(), 3);
         if (param0) {
           RasterBuffer.a(false);
         }

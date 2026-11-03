@@ -187,7 +187,7 @@ final class BlackFadeScreen extends AppScreen {
         if (this.field_h != 256) {
           SoftwareRasterizer.a(0, 0, 640, 480, 0, this.field_h);
         } else {
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
         }
         if (param0 != -5) {
           field_m = (UiLayoutNode[]) null;

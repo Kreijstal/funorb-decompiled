@@ -79,7 +79,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         }
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         String var7 = null;
         RuntimeException stackIn_10_0 = null;

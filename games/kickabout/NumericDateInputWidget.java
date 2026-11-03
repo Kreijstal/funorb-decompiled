@@ -63,8 +63,8 @@ final class NumericDateInputWidget extends DateInputWidget {
         return true;
     }
 
-    final String f(int param0) {
-        String var2 = this.field_K.f(param0);
+    final String getTooltip(int param0) {
+        String var2 = this.field_K.getTooltip(param0);
         if (var2 != null) {
           return var2;
         }
@@ -80,7 +80,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         Throwable decompiledCaughtException = null;
         try {
           if (param0 != 48) {
-            this.a(-35, -39, 1, -65);
+            this.drawLayer(-35, -39, 1, -65);
           }
           stackIn_3_0 = -1 + Integer.parseInt(this.field_K.field_q);
           return stackIn_3_0;
@@ -189,8 +189,8 @@ final class NumericDateInputWidget extends DateInputWidget {
         this.field_P.a(param0, param1, 90 + var6, 40, 0);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, (int) (char)param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         if (param0 != 0) {
           return;
         }

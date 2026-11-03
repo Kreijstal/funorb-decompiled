@@ -127,7 +127,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         }
     }
 
-    final String f(int param0) {
+    final String getTooltip(int param0) {
         if (!this.field_m) {
           return null;
         }
@@ -135,7 +135,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           return null;
         }
         if (param0 != -1) {
-          this.f(54);
+          this.getTooltip(54);
         }
         TournamentChampionDialog.b(ArchiveManager.field_m, 0, this.field_n - this.field_ab + BytePlusOneCommand.field_A);
         return this.field_u;

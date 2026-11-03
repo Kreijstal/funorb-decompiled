@@ -117,7 +117,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    String f(int param0) {
+    String getTooltip(int param0) {
         if (null == this.field_I) {
           return null;
         }
@@ -253,10 +253,10 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, (int) (char)param1, param2, param3);
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         if (0 != param0) {
           return;
         }
@@ -334,7 +334,7 @@ class TextHotspotWidget extends TextButton {
               ((er) (var10)).field_j = var15;
             }
             var10 = var15;
-            this.field_E.a(var15, param0 + 44);
+            this.field_E.addLast(var15, param0 + 44);
           }
         }
     }

@@ -658,7 +658,7 @@ final class RenderedBall extends BallAgent {
           this.a(300, var3, var4, var2, 300);
         } else {
           PacketBuffer.a(-115, kw.field_f);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           var2 = (var2 << 7) / InstrumentNoteMask.field_i;
           this.a(300, 64, 64, var2, 300);
           TeamManagementScreen.e(118);

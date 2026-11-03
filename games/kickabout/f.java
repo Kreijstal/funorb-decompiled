@@ -26,22 +26,22 @@ final class f {
 
     final static void a(ResourceArchive param0, byte param1) {
         try {
-          ad.field_d[0] = MusicTrack.a(param0, "", "KaB_park_menu");
+          ad.field_d[0] = MusicTrack.load(param0, "", "KaB_park_menu");
           sk.a(80, 8, 0);
-          ad.field_d[1] = MusicTrack.a(param0, "", "KaB_beach_atmospherics_loop_lvl1_2");
+          ad.field_d[1] = MusicTrack.load(param0, "", "KaB_beach_atmospherics_loop_lvl1_2");
           sk.a(73, 8, 1);
           int var2_int = 109 / ((param1 - 28) / 61);
-          ad.field_d[2] = MusicTrack.a(param0, "", "KaB_park_atmospherics_loop_lvl1_2");
+          ad.field_d[2] = MusicTrack.load(param0, "", "KaB_park_atmospherics_loop_lvl1_2");
           sk.a(94, 8, 2);
-          ad.field_d[3] = MusicTrack.a(param0, "", "KaB_street_atmospherics_loop_lvl1_2");
+          ad.field_d[3] = MusicTrack.load(param0, "", "KaB_street_atmospherics_loop_lvl1_2");
           sk.a(-119, 8, 3);
-          ad.field_d[4] = MusicTrack.a(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl3");
+          ad.field_d[4] = MusicTrack.load(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl3");
           sk.a(83, 8, 4);
-          ad.field_d[5] = MusicTrack.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl3");
+          ad.field_d[5] = MusicTrack.load(param0, "", "KaB_crowd_loop_END_PITCH_lvl3");
           sk.a(98, 8, 5);
-          ad.field_d[6] = MusicTrack.a(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl4");
+          ad.field_d[6] = MusicTrack.load(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl4");
           sk.a(-53, 8, 6);
-          ad.field_d[7] = MusicTrack.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl4");
+          ad.field_d[7] = MusicTrack.load(param0, "", "KaB_crowd_loop_END_PITCH_lvl4");
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "f.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

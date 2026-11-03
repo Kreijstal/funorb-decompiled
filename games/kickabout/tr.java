@@ -12,7 +12,7 @@ final class tr implements OverlayLayer {
     static String[] field_f;
 
     final static void d(int param0) {
-        RasterStateSnapshot var1 = (RasterStateSnapshot) (ScrollContainer.field_Ab.h(-125));
+        RasterStateSnapshot var1 = (RasterStateSnapshot) (ScrollContainer.field_Ab.removeLast(-125));
         if (var1 == null) {
           var1 = new RasterStateSnapshot();
         }
@@ -20,7 +20,7 @@ final class tr implements OverlayLayer {
           tr.a(true);
         }
         var1.captureRasterState((byte) -96, SoftwareRasterizer.field_e, SoftwareRasterizer.field_b, SoftwareRasterizer.field_a, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
-        IntDoubleCommand.field_C.a(var1, 3);
+        IntDoubleCommand.field_C.addLast(var1, 3);
     }
 
     public final boolean a(byte param0) {

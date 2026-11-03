@@ -22,7 +22,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var3_ref = this.field_h;
           synchronized (var3_ref) {
-            this.field_h.a(127, param0);
+            this.field_h.addLast(127, param0);
             this.field_e = this.field_e + 1;
             this.field_h.notifyAll();
           }
@@ -59,7 +59,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.field_f) {
             var2 = this.field_h;
             synchronized (var2) {
-              var7 = (DiskCacheRequest) (this.field_h.b((byte) 3));
+              var7 = (DiskCacheRequest) (this.field_h.removeFirst((byte) 3));
               if (var7 == null) {
                 try {
                   this.field_h.wait();
@@ -78,7 +78,7 @@ final class DiskCacheWorker implements Runnable {
             }
             try {
               if (2 == var7.field_t) {
-                var7.field_v.a((byte) 66, (int)var7.field_l, var7.field_u.length, var7.field_u);
+                var7.field_v.write((byte) 66, (int)var7.field_l, var7.field_u.length, var7.field_u);
                 var7.field_p = false;
               } else {
                 if (3 == var7.field_t) {

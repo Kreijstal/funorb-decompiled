@@ -125,7 +125,7 @@ final class s extends TextButton {
         if (param0 != -1) {
           return;
         }
-        ScrollPane.field_Jb.a(new TrinketShopDialog(param3, param1, param2), 3);
+        ScrollPane.field_Jb.addLast(new TrinketShopDialog(param3, param1, param2), 3);
     }
 
     private s() throws Throwable {

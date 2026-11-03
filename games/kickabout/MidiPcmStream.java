@@ -111,7 +111,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -427,7 +427,7 @@ final class MidiPcmStream extends PcmStream {
           var7.field_F = PcmSampleStream.b(var6, this.a(var7, -5), this.b(-101, var7), this.a(true, var7));
         }
         if (var11.field_r[param2] < 0) {
-          var7.field_F.g(-1);
+          var7.field_F.setLoopCount(-1);
         }
         if (var7.field_E >= 0) {
           var8 = this.field_Q[param3][var7.field_E];
@@ -438,7 +438,7 @@ final class MidiPcmStream extends PcmStream {
           }
           this.field_Q[param3][var7.field_E] = var7;
         }
-        this.field_m.field_j.a(var7, 3);
+        this.field_m.field_j.addLast(var7, 3);
         this.field_O[param3][param2] = var7;
         return;
     }
@@ -567,7 +567,7 @@ final class MidiPcmStream extends PcmStream {
             if (var10 == null) {
               var10 = ReceivedAuctionItemRow.a(param2, var9, 116);
               if (var10 != null) {
-                this.field_w.a(var10, param0 ^ 124, (long)var9);
+                this.field_w.put(var10, param0 ^ 124, (long)var9);
               } else {
                 var6_int = 0;
               }
@@ -656,7 +656,7 @@ final class MidiPcmStream extends PcmStream {
             var3.field_q == param0) {
             if (var3.field_F != null) {
               var3.field_F.fadeOutAndUnlink(PcmPlayerService.field_i / 100);
-              if (var3.field_F.n()) {
+              if (var3.field_F.hasRemainingRampFrames()) {
                 this.field_m.field_i.addSubStream(var3.field_F);
               }
               var3.clearReferences(true);
@@ -697,7 +697,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, MusicPatchNode param3, int[] param4) {
+    final boolean updateNote(int param0, int param1, int param2, MusicPatchNode param3, int[] param4) {
         int stackIn_32_0 = 0;
         int stackIn_32_1 = 0;
         int stackIn_50_0 = 0;
@@ -824,7 +824,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             param3.field_F.mixInto(param4, param2, param1);
           }
-          if (param3.field_F.n()) {
+          if (param3.field_F.hasRemainingRampFrames()) {
             this.field_m.field_i.addSubStream(param3.field_F);
           }
           param3.clearReferences(true);
@@ -1407,7 +1407,7 @@ final class MidiPcmStream extends PcmStream {
     private final void b(int param0, int param1, int param2) {
         this.field_v[param1] = param2;
         if (param0 < 20) {
-          this.d();
+          this.getSchedulingCost();
         }
     }
 

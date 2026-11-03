@@ -23,7 +23,7 @@ final class SectorCacheStore {
         field_e = null;
     }
 
-    final boolean a(byte param0, int param1, int param2, byte[] param3) {
+    final boolean write(byte param0, int param1, int param2, byte[] param3) {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -480,13 +480,13 @@ final class SectorCacheStore {
             }
             break;
           }
-          var5Lifetime1 = (RankingRowNode) (var8.b((byte) 127));
+          var5Lifetime1 = (RankingRowNode) (var8.removeFirst((byte) 127));
           if (param0 < 82) {
             return;
           }
           while (var5Lifetime1 != null) {
             var5Lifetime1.c(true);
-            var5Lifetime1 = (RankingRowNode) (var8.b((byte) 127));
+            var5Lifetime1 = (RankingRowNode) (var8.removeFirst((byte) 127));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

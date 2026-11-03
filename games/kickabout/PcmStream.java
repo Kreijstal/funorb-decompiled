@@ -27,7 +27,7 @@ abstract class PcmStream extends IntrusiveNode {
 
     abstract PcmStream b();
 
-    abstract int d();
+    abstract int getSchedulingCost();
 
     protected PcmStream() {
         this.field_e = true;

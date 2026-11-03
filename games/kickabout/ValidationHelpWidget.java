@@ -12,7 +12,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
     static String field_P;
     static int field_U;
 
-    final String f(int param0) {
+    final String getTooltip(int param0) {
         if (param0 == -1) {
           return null;
         }
@@ -136,7 +136,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         field_P = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         String var5;
         ValidationState var6;
         WidgetTextLayout var8;
@@ -164,7 +164,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           this.field_q = var5;
           this.a((byte) -41);
         }
-        super.a(param0, (int) (char)param1, param2, param3);
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         var6Lifetime1 = this.field_R.getValidationState(-24407);
         var8 = (WidgetTextLayout) ((Object) this.field_r);
         var9 = param2 + this.field_t;
@@ -186,7 +186,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             this.field_Q.field_q >= var11 &&
             this.field_Q.field_w >= var12) {
             PacketBuffer.a(param1 ^ -19, this.field_Q);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
           } else {
             this.field_Q = new Sprite(var11, var12);
             PacketBuffer.a(70, this.field_Q);

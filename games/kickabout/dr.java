@@ -94,7 +94,7 @@ final class dr {
             for (var6 = 0; var6 < ms.field_b; var6++) {
               var5.data[var6] = un.field_e.field_f[var6];
             }
-            ConsolePanel.field_i.a(var5, 3);
+            ConsolePanel.field_i.addLast(var5, 3);
             DirectByteStorage.field_i = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

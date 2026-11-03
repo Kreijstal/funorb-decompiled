@@ -178,7 +178,7 @@ final class AnimationSkeleton extends IntrusiveNode {
             stackIn_8_0[stackIn_8_1] = stackIn_9_2;
           }
           for (var4Lifetime2 = 0; this.field_j > var4Lifetime2; var4Lifetime2++) {
-            this.field_r[var4Lifetime2] = var7.a((byte) 81);
+            this.field_r[var4Lifetime2] = var7.readUnsignedShort((byte) 81);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < this.field_j; var4Lifetime3++) {
             array$0 = new int[var7.readUnsignedByte((byte) -106)];

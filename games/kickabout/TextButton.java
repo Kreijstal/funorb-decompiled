@@ -90,7 +90,7 @@ class TextButton extends UiWidget {
           if (param1 >= -60) {
             this.field_w = true;
           }
-          if (!this.b(97)) {
+          if (!this.isFocused(97)) {
             return false;
           }
           if (param3 != 84 &&
@@ -113,14 +113,14 @@ class TextButton extends UiWidget {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 < 10) {
           return false;
         }
         return this.field_D;
     }
 
-    final void g(int param0) {
+    final void layoutChild(int param0) {
         if (this.field_D) {
           this.field_D = false;
           if (null != this.field_k &&
@@ -134,7 +134,7 @@ class TextButton extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         try {
           if (null != this.field_k &&
             this.field_k instanceof nf) {
@@ -162,7 +162,7 @@ class TextButton extends UiWidget {
               0 == FootballerAgent.field_p) {
               this.b(this.field_p, -param2 + BytePlusOneCommand.field_A, ArchiveManager.field_m - param3, -1);
             }
-            this.a(param3, ArchiveManager.field_m, BytePlusOneCommand.field_A, param1, param0 - 13, param2);
+            this.handlePointerRelease(param3, ArchiveManager.field_m, BytePlusOneCommand.field_A, param1, param0 - 13, param2);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wi.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -181,7 +181,7 @@ class TextButton extends UiWidget {
             if (param1 != 0) {
               return true;
             }
-            param0.g(84);
+            param0.layoutChild(84);
             this.field_D = true;
             if (this.field_k != null) {
               if (!(this.field_k instanceof ab)) {
@@ -254,11 +254,11 @@ class TextButton extends UiWidget {
         }
         if (this.field_k != null &&
           this.field_k instanceof ButtonListener) {
-          ((ButtonListener) (this.field_k)).a(param1, this, param2, (byte) 99, param0);
+          ((ButtonListener) (this.field_k)).onAction(param1, this, param2, (byte) 99, param0);
         }
     }
 
-    final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int param0, int param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -271,7 +271,7 @@ class TextButton extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param0 - 17882, param3, param2, param1)) {
-            this.b(param1, param3, param2, -18568);
+            this.appendWidgetDiagnosticProperties(param1, param3, param2, -18568);
             if (this.field_A) {
               discarded$2 = param3.append(" active");
             }

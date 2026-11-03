@@ -33,7 +33,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           while (var4_int < this.field_w.length) {
             var5 = this.field_w[var4_int];
             if (var5 != null &&
-              var5.b(100)) {
+              var5.isFocused(100)) {
               for (var4_int = var4_int + param2; var4_int < this.field_w.length; var4_int = var4_int + param2) {
                 var6 = this.field_w[var4_int];
                 if (var6 != null &&
@@ -59,14 +59,14 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 < 10) {
           return true;
         }
         return this.a(true) != null ? true : false;
     }
 
-    final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int param0, int param1, Hashtable param2, StringBuilder param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         StringBuilder stackIn_6_0 = null;
@@ -82,7 +82,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
             this.a(125, (UiWidget) null, 11, -44, 107, -118, 34);
           }
           if (this.a(1, param3, param2, param1)) {
-            this.b(param1, param3, param2, param0 ^ -3421);
+            this.appendWidgetDiagnosticProperties(param1, param3, param2, param0 ^ -3421);
             this.a(param2, 10, param1, param3);
           }
           stackIn_6_0 = (StringBuilder) (param3);
@@ -113,7 +113,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
         int var7 = -79 % ((-85 - param5) / 32);
         FadingSoundPlayer var6 = new FadingSoundPlayer(param3, param0, param4, param2, param1);
-        StrongCacheEntry.field_z.a(var6, 3);
+        StrongCacheEntry.field_z.addLast(var6, 3);
         return var6;
     }
 
@@ -160,7 +160,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
               discarded$8 = param3.append(' ');
             }
             if (var7 != null) {
-              var7.a(17883, param2 + 1, param0, param3);
+              var7.appendDebugTree(17883, param2 + 1, param0, param3);
             } else {
               discarded$7 = param3.append("null");
             }
@@ -268,7 +268,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
             if (var7 != null &&
-              var7.b(35) &&
+              var7.isFocused(35) &&
               var7.a(param0, (byte) -123, param2, param3)) {
               return true;
             }
@@ -451,7 +451,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
 
     abstract void a(byte param0);
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         UiWidget var6;
         int var7;
@@ -467,13 +467,13 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           for (var5 = this.field_w.length - 1; var5 >= 0; var5--) {
             var6 = this.field_w[var5];
             if (var6 != null) {
-              var6.a(param0, 65, param2 + this.field_t, this.field_g + param3);
+              var6.drawLayer(param0, 65, param2 + this.field_t, this.field_g + param3);
             }
           }
         }
     }
 
-    final String f(int param0) {
+    final String getTooltip(int param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -492,7 +492,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         for (var3 = 0; var7.length > var3; var3++) {
           var4 = var7[var3];
           if (var4 != null) {
-            var5 = var4.f(-1);
+            var5 = var4.getTooltip(-1);
             if (var5 != null) {
               return var5;
             }
@@ -590,18 +590,18 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null &&
-            var4.b(100)) {
+            var4.isFocused(100)) {
             return var4;
           }
         }
         if (param0) {
           return null;
         }
-        this.f(91);
+        this.getTooltip(91);
         return null;
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         int var8 = 0;
         UiWidget[] var7 = null;
         UiWidget var9 = null;
@@ -622,7 +622,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           for (var8 = 0; var11.length > var8; var8++) {
             var9 = var11[var8];
             if (var9 != null) {
-              var9.a(this.field_g + param0, param1, param2, param3, -1, this.field_t + param5);
+              var9.handlePointerRelease(this.field_g + param0, param1, param2, param3, -1, this.field_t + param5);
             }
           }
           if (param4 != -1) {
@@ -705,7 +705,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           while (var4_int >= 0) {
             var5 = this.field_w[var4_int];
             if (var5 != null &&
-              var5.b(92)) {
+              var5.isFocused(92)) {
               for (var4_int = var4_int - param2; var4_int >= 0; var4_int = var4_int - param2) {
                 var6 = this.field_w[var4_int];
                 if (var6 != null &&
@@ -731,7 +731,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final void g(int param0) {
+    final void layoutChild(int param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -743,7 +743,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
           if (var4 != null) {
-            var4.g(84);
+            var4.layoutChild(84);
           }
         }
         if (param0 != 84) {
@@ -773,7 +773,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           for (var9 = 0; var9 < var12.length; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.b(127) &&
+              var10.isFocused(127) &&
               var10.a(param0, param1, param2, param3, param4, param5, -87)) {
               return true;
             }

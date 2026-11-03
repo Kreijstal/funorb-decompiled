@@ -13,7 +13,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
     private TextButton field_E;
     static Sprite field_C;
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -147,11 +147,11 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = param2 + this.field_t;
         int var6 = param3 + this.field_g;
         gf.field_a.a(vb.field_i, 20 + var5, 20 + var6, this.field_n - 40, this.field_i - 50, 16777215, -1, 1, 0, gf.field_a.field_G);
-        super.a(param0, (int) (char)param1, param2, param3);
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
     }
 
     static {

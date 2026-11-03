@@ -39,7 +39,7 @@ final class TextPromptDialog extends UiLayoutNode {
         int var8Lifetime1;
         int var9Lifetime1;
         var13 = Kickabout.field_G;
-        AuctionSettingsDialog.field_G.field_Ab.field_jb.b(22997);
+        AuctionSettingsDialog.field_G.field_Ab.field_jb.clear(22997);
         var4 = null;
         var5 = 0;
         var6 = 0;

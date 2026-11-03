@@ -479,7 +479,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
                   var10_ref_jr.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
                   var10_ref_jr.field_mb = 50;
                   var10_ref_jr.field_y = 16777215;
-                  var17.a(var10_ref_jr, 3);
+                  var17.addLast(var10_ref_jr, 3);
                   var8++;
                 }
                 var10_ref_jrLifetime2 = new ReceivedAuctionItemRow(var18, gk.field_f);
@@ -487,7 +487,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
                 var10_ref_jrLifetime2.field_mb = 50;
                 var10_ref_jrLifetime2.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
                 var8++;
-                var17.a(var10_ref_jrLifetime2, 3);
+                var17.addLast(var10_ref_jrLifetime2, 3);
               }
               var7++;
               var18 = (ReceivedAuctionItem) (this.field_T.c(33));
@@ -499,7 +499,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             var9_ref_jr.field_y = 16777215;
             var9_ref_jr.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             var8++;
-            var17.a(var9_ref_jr, 3);
+            var17.addLast(var9_ref_jr, 3);
           }
           if (!param0) {
             AuctionsScreen.h((byte) 106);
@@ -513,7 +513,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             var10_ref_jrLifetime1.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             var10_ref_jrLifetime1.field_y = 16777215;
             var6++;
-            var17.a(var10_ref_jrLifetime1, 3);
+            var17.addLast(var10_ref_jrLifetime1, 3);
           }
           var9Lifetime1 = param3;
           if (var9Lifetime1 > 5) {
@@ -744,7 +744,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         try {
           this.field_T = new IntrusiveDeque();
           for (var3_int = 0; var3_int < param1.length; var3_int++) {
-            this.field_T.a(param1[var3_int], 3);
+            this.field_T.addLast(param1[var3_int], 3);
           }
           if (!param0) {
             this.drawScreen(68, false);

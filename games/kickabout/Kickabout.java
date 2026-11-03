@@ -869,7 +869,7 @@ public final class Kickabout extends GameLoopApplet {
             return true;
           }
           if (param0 == 81) {
-            vd.field_a.a(new AuctionListing(un.field_e), param2 ^ 2);
+            vd.field_a.addLast(new AuctionListing(un.field_e), param2 ^ 2);
             return true;
           }
           if (71 != param0 &&
@@ -878,7 +878,7 @@ public final class Kickabout extends GameLoopApplet {
               ds.field_g = false;
               param1.p(-127);
               stackIn_36_0 = false;
-              stackIn_37_1 = (param1.l(1, 59) == 1);
+              stackIn_37_1 = (param1.readBits(1, 59) == 1);
               fj.a(stackIn_36_0, stackIn_37_1);
               param1.l((byte) 103);
               var4_int = un.field_e.readUnsignedMedium(param2 ^ -97);
@@ -895,7 +895,7 @@ public final class Kickabout extends GameLoopApplet {
               ds.field_g = false;
               param1.p(-104);
               stackIn_45_0 = false;
-              stackIn_46_1 = (param1.l(1, param2 ^ 58) == 1);
+              stackIn_46_1 = (param1.readBits(1, param2 ^ 58) == 1);
               fj.a(stackIn_45_0, stackIn_46_1);
               param1.l((byte) -84);
               var4_intLifetime1 = un.field_e.readUnsignedByte((byte) -125);
@@ -911,7 +911,7 @@ public final class Kickabout extends GameLoopApplet {
               ds.field_g = false;
               param1.p(-100);
               stackIn_55_0 = false;
-              stackIn_56_1 = (param1.l(1, param2 + 58) == 1);
+              stackIn_56_1 = (param1.readBits(1, param2 + 58) == 1);
               fj.a(stackIn_55_0, stackIn_56_1);
               param1.l((byte) 112);
               var4_intLifetime2 = un.field_e.readUnsignedByte((byte) -125);
@@ -937,7 +937,7 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (param0 == 78) {
-              var32 = new String[param1.a((byte) 81)];
+              var32 = new String[param1.readUnsignedShort((byte) 81)];
               var4 = var32;
               for (var5Lifetime1 = 0; var32.length > var5Lifetime1; var5Lifetime1++) {
                 var4[var5Lifetime1] = param1.readString(TrinketShopDialog.b(param2, -112));
@@ -965,12 +965,12 @@ public final class Kickabout extends GameLoopApplet {
                 tb.a((byte) 126, 28);
               }
               param1.p(param2 ^ -105);
-              stackIn_88_0 = (param1.l(1, 59) == 1);
+              stackIn_88_0 = (param1.readBits(1, 59) == 1);
               c.field_g = stackIn_88_0;
-              stackIn_91_0 = (1 == param1.l(1, 59));
+              stackIn_91_0 = (1 == param1.readBits(1, 59));
               f.field_c = stackIn_91_0;
               stackIn_93_0 = false;
-              stackIn_94_1 = (param1.l(1, 59) == 1);
+              stackIn_94_1 = (param1.readBits(1, 59) == 1);
               fj.a(stackIn_93_0, stackIn_94_1);
               param1.l((byte) 108);
               return true;
@@ -1043,8 +1043,8 @@ public final class Kickabout extends GameLoopApplet {
               }
               for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < 73; var5Lifetime2Lifetime1++) {
                 if (c.a(var5Lifetime2Lifetime1, 0, var48)) {
-                  LoginText.field_f.a(new IntValueNode(var5Lifetime2Lifetime1), 3);
-                  ok.field_a.a(new IntValueNode(var5Lifetime2Lifetime1), 3);
+                  LoginText.field_f.addLast(new IntValueNode(var5Lifetime2Lifetime1), 3);
+                  ok.field_a.addLast(new IntValueNode(var5Lifetime2Lifetime1), 3);
                 }
               }
               var49 = BufferedSocket.field_f;
@@ -1215,7 +1215,7 @@ public final class Kickabout extends GameLoopApplet {
               }
               return true;
             }
-            ok.field_a.b(22997);
+            ok.field_a.clear(22997);
             if (SortCriterion.field_l != null) {
               TextButton.field_B = true;
             }

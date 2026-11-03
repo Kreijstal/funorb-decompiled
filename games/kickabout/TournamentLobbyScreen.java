@@ -682,8 +682,8 @@ final class TournamentLobbyScreen extends AppScreen {
             this.field_S[var5].readFromPacket((byte) -119, param0);
           }
           this.field_W = param0.readUnsignedByte((byte) -108);
-          this.field_v = param0.a((byte) 81);
-          this.field_x = param0.a((byte) 81);
+          this.field_v = param0.readUnsignedShort((byte) 81);
+          this.field_x = param0.readUnsignedShort((byte) 81);
           stackIn_7_1 = (param0.readUnsignedByte((byte) -128) == 1);
           this.field_z = stackIn_7_1;
           if (dc.field_c == -1) {
@@ -1117,7 +1117,7 @@ final class TournamentLobbyScreen extends AppScreen {
             } else {
               stackIn_77_4 = var8 >> 1;
             }
-            SoftwareRasterizer.b(stackIn_76_0, stackIn_76_1, stackIn_76_2, stackIn_76_3 + stackIn_77_4, 65793);
+            SoftwareRasterizer.drawLine(stackIn_76_0, stackIn_76_1, stackIn_76_2, stackIn_76_3 + stackIn_77_4, 65793);
             stackIn_79_0 = (var5 >> 1) + var11;
             stackIn_79_1 = var12;
             stackIn_79_2 = var11 + ((var7 << 1) - (var5 >> 1));
@@ -1126,7 +1126,7 @@ final class TournamentLobbyScreen extends AppScreen {
             } else {
               stackIn_80_3 = var8 >> 1;
             }
-            SoftwareRasterizer.b(stackIn_79_0, stackIn_79_1, stackIn_79_2, stackIn_80_3 + var12, 65793);
+            SoftwareRasterizer.drawLine(stackIn_79_0, stackIn_79_1, stackIn_79_2, stackIn_80_3 + var12, 65793);
             stackIn_82_0 = var11 + (var5 >> 1);
             stackIn_82_1 = var12 + 1;
             stackIn_82_2 = -(var5 >> 1) + (var11 + (var7 << 1));
@@ -1137,7 +1137,7 @@ final class TournamentLobbyScreen extends AppScreen {
             } else {
               stackIn_83_5 = -(var8 >> 1);
             }
-            SoftwareRasterizer.b(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3 + (stackIn_82_4 + stackIn_83_5), 65793);
+            SoftwareRasterizer.drawLine(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3 + (stackIn_82_4 + stackIn_83_5), 65793);
           }
           var12 = var12 + var8;
           if (var14_int == -8 + var2 ||
@@ -1276,15 +1276,15 @@ final class TournamentLobbyScreen extends AppScreen {
           var4 = 0;
           int var5 = 37 % ((param0 - 72) / 36);
           while (var4 < var3_int) {
-            this.field_M[var4] = param1.a((byte) 81);
-            this.field_p[var4] = param1.a((byte) 81);
-            this.field_w[var4] = param1.a((byte) 81);
-            this.field_B[var4] = param1.a((byte) 81);
-            this.field_l[var4] = param1.a((byte) 81);
-            this.field_o[var4] = param1.a((byte) 81);
-            this.field_t[var4] = param1.a((byte) 81);
-            this.field_P[var4] = param1.a((byte) 81);
-            this.field_J[var4] = param1.a((byte) 81);
+            this.field_M[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_p[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_w[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_B[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_l[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_o[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_t[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_P[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_J[var4] = param1.readUnsignedShort((byte) 81);
             this.field_I[var4] = param1.readUnsignedByte((byte) -127);
             var4++;
           }

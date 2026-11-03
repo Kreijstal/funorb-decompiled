@@ -69,7 +69,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         int var6 = 0;
         var6 = Kickabout.field_G;
         try {
-          this.field_y.b(22997);
+          this.field_y.clear(22997);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
@@ -176,8 +176,8 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         return ArchiveManager.field_e;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, (int) (char)param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         if (0 != param0) {
           return;
         }
@@ -187,7 +187,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         }
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;

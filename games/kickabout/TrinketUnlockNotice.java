@@ -76,7 +76,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
           if (-1 != field_c) {
             field_c = -1;
           }
-          var5 = (IntValueNode) (LoginText.field_f.b((byte) -36));
+          var5 = (IntValueNode) (LoginText.field_f.removeFirst((byte) -36));
           if (var5 != null) {
             field_c = var5.field_j;
             TextLine.field_f = 335;

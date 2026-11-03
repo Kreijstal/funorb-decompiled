@@ -194,8 +194,8 @@ class BallAgent extends MatchAgent {
         RuntimeException var3 = null;
         try {
           if (ContentTransitionDialog.a(param0, (byte) -39)) {
-            this.possessorTeam = -1 + param0.l(2, param1 ^ 42);
-            this.possessorSlot = param0.l(3, 59);
+            this.possessorTeam = -1 + param0.readBits(2, param1 ^ 42);
+            this.possessorSlot = param0.readBits(3, 59);
           }
           if (param1 != 17) {
             return;
@@ -213,7 +213,7 @@ class BallAgent extends MatchAgent {
           }
           this.uncatchable = hq.a(22531, 9, param0, 0);
           this.highFriction = hq.a(22531, 5, param0, 0);
-          this.modelId = param0.l(4, 59);
+          this.modelId = param0.readBits(4, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -232,20 +232,20 @@ class BallAgent extends MatchAgent {
     final void a(CipherPacketBuffer param0, byte param1) {
         int discarded$0 = 0;
         try {
-          this.possessorTeam = param0.l(2, 59) - 1;
-          this.possessorSlot = param0.l(3, 59);
-          this.positionX = param0.l(32, 59);
-          this.positionY = param0.l(32, 59);
-          this.height = param0.l(32, 59);
-          this.velocityX = param0.l(32, 59);
-          this.velocityY = param0.l(32, 59);
-          this.verticalVelocity = param0.l(32, 59);
-          this.uncatchable = param0.l(10, 59);
-          this.highFriction = param0.l(5, 59);
+          this.possessorTeam = param0.readBits(2, 59) - 1;
+          this.possessorSlot = param0.readBits(3, 59);
+          this.positionX = param0.readBits(32, 59);
+          this.positionY = param0.readBits(32, 59);
+          this.height = param0.readBits(32, 59);
+          this.velocityX = param0.readBits(32, 59);
+          this.velocityY = param0.readBits(32, 59);
+          this.verticalVelocity = param0.readBits(32, 59);
+          this.uncatchable = param0.readBits(10, 59);
+          this.highFriction = param0.readBits(5, 59);
           if (param1 >= -94) {
             discarded$0 = this.pixelHeight(false);
           }
-          this.modelId = param0.l(4, 59);
+          this.modelId = param0.readBits(4, 59);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "tj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

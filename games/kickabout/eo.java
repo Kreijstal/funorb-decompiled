@@ -503,7 +503,7 @@ final class eo {
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
-        SoftwareRasterizer.c(param0, param1, param2, param3);
+        SoftwareRasterizer.drawCircle(param0, param1, param2, param3);
         SoftwareRasterizer.drawHorizontalLine(param0 - param2, param1, param2 << 1, param3);
         SoftwareRasterizer.drawVerticalLine(param0, param1 - param2, param2 << 1, param3);
     }
@@ -1005,7 +1005,7 @@ final class eo {
         SoftwareRasterizer.e(param0 - 1, param1 - 1, 102, 13, 65793);
         if (param4) {
           PacketBuffer.a(-38, field_d);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           var7 = 131586;
           var8 = 10;
           var9 = 54 - (param5 != 0 ? var8 : 0);

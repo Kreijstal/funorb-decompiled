@@ -18,7 +18,7 @@ final class MicrosoftDisplayController implements com.ms.directX.IEnumModesCallb
         return var3;
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Frame param3, int param4, int param5) {
+    final void enterFullscreen(int param0, int param1, int param2, java.awt.Frame param3, int param4, int param5) {
         param3.setVisible(true);
         com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
         int var8 = var7.getHwnd();

@@ -12,7 +12,7 @@ final class IsaacRandom {
     static int field_c;
     private int field_b;
 
-    final int b(byte param0) {
+    final int nextInt(byte param0) {
         int var2 = 102 / ((2 - param0) / 62);
         if (this.field_e == 0) {
           this.a(256);
@@ -34,7 +34,7 @@ final class IsaacRandom {
           if (param1 != -30273) {
             field_f = (int[]) null;
           }
-          stackIn_3_0 = (param2.l(param0, 59) ^ 1 << param0 - 1) - (1 << param0 - 1);
+          stackIn_3_0 = (param2.readBits(param0, 59) ^ 1 << param0 - 1) - (1 << param0 - 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

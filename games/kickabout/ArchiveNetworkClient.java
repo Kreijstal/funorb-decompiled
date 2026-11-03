@@ -133,13 +133,13 @@ abstract class ArchiveNetworkClient {
           if (this.b(-21) >= 20) {
             throw new RuntimeException();
           }
-          this.field_c.a(param3 + 38, var8);
+          this.field_c.addLast(param3 + 38, var8);
           return var8;
         }
         if (this.e(0) >= 20) {
           throw new RuntimeException();
         }
-        this.field_h.a(127, var8);
+        this.field_h.addLast(127, var8);
         return var8;
     }
 

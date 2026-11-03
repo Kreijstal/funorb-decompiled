@@ -58,7 +58,7 @@ final class ng {
               if (!param4) {
                 var13 = ph.field_e[0][0].field_i - var13;
               }
-              var8.a(new PlayerModelPreview(var13, var10_int * 26 + 63 + 11 * var9, var7, var11), 3);
+              var8.addLast(new PlayerModelPreview(var13, var10_int * 26 + 63 + 11 * var9, var7, var11), 3);
             }
           }
         }

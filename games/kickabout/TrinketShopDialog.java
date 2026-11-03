@@ -117,7 +117,7 @@ final class TrinketShopDialog extends MessageDialog {
     }
 
     final static void g(int param0) {
-        ScrollPane.field_Jb.a(new TrinketPickerDialog(), 3);
+        ScrollPane.field_Jb.addLast(new TrinketPickerDialog(), 3);
         if (param0 != -29315) {
           TrinketShopDialog.b(true, -105, 126);
         }

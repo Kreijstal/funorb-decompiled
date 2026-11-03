@@ -431,7 +431,7 @@ final class DebugConsole extends ConsolePanel {
           for (var5 = 0; this.field_t.length > var5; var5++) {
             if (this.field_t[var5].field_o.startsWith(param0)) {
               this.field_t[var5].unlinkSecondary(47);
-              var7.a(127, this.field_t[var5]);
+              var7.addLast(127, this.field_t[var5]);
             }
           }
           stackIn_9_0 = var3;
@@ -685,7 +685,7 @@ final class DebugConsole extends ConsolePanel {
                 if (!param2) {
                   var14 = var7 - (var14 + 12);
                 }
-                var9.a(new PlayerModelPreview(var14, 63 + (var11 * 26 + 14 * var10), var8Lifetime1, var12), 3);
+                var9.addLast(new PlayerModelPreview(var14, 63 + (var11 * 26 + 14 * var10), var8Lifetime1, var12), 3);
               }
             }
           }

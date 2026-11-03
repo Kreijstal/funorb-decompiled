@@ -68,7 +68,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
             break;
           }
           if (var2 == null) {
-            SquadSlotWidget.field_yb.a(param0, 3);
+            SquadSlotWidget.field_yb.addLast(param0, 3);
             return;
           }
           ug.a(var2, 16737894, param0);
@@ -248,7 +248,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           }
           if (SplashScreen.field_j >= 18) {
             SplashScreen.field_j = 18;
-            var7 = (FadingChatMessage) (AppScreen.field_d.b((byte) 126));
+            var7 = (FadingChatMessage) (AppScreen.field_d.removeFirst((byte) 126));
             if (var7 != null) {
               MatchingTextValidator.a(var7, false);
             }
@@ -269,7 +269,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         }
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         TextButton discarded$1 = null;
         RuntimeException var6 = null;
         String var7 = null;

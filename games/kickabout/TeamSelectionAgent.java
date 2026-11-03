@@ -225,10 +225,10 @@ final class TeamSelectionAgent extends MatchAgent {
           var3_int = 0;
           int var4 = 14 / ((param0 + 25) / 44);
           while (this.field_i > var3_int) {
-            this.selection[var3_int] = -1 + param1.l(2, 59);
+            this.selection[var3_int] = -1 + param1.readBits(2, 59);
             var3_int++;
           }
-          this.readyMask = param1.l(8, 59);
+          this.readyMask = param1.readBits(8, 59);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

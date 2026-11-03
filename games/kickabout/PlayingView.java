@@ -683,22 +683,22 @@ final class PlayingView extends MatchPhaseView {
           if (null == this.field_r) {
             this.field_r = new IntrusiveDeque();
           } else {
-            this.field_r.b(22997);
+            this.field_r.clear(22997);
           }
           for (var3_int = 0; 2 > var3_int; var3_int++) {
             for (var4_int = 0; var4_int < 5; var4_int++) {
-              this.field_r.a(TextHotspotWidget.a((RenderedFootballer) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
+              this.field_r.addLast(TextHotspotWidget.a((RenderedFootballer) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
             }
           }
-          this.field_r.a(ValidatedTextWidget.a((RenderedBall) (this.field_a.field_V), false), 3);
-          this.field_r.a(re.a(true, 115), 3);
+          this.field_r.addLast(ValidatedTextWidget.a((RenderedBall) (this.field_a.field_V), false), 3);
+          this.field_r.addLast(re.a(true, 115), 3);
           var3_intLifetime1 = -88 / ((4 - param1) / 50);
-          this.field_r.a(re.a(false, 92), 3);
+          this.field_r.addLast(re.a(false, 92), 3);
           if (param0 != null) {
             var4 = (ak) (param0.g(24009));
             while (var4 != null) {
               var4.c((byte) -109);
-              this.field_r.a(var4, 3);
+              this.field_r.addLast(var4, 3);
               var4 = (ak) (param0.c(33));
             }
           }
@@ -1540,7 +1540,7 @@ final class PlayingView extends MatchPhaseView {
             AgeValidator.a(var3_int != 0, -68, PlayerInputEvent.g((byte) 60), SumIntegersCommand.field_A, pe.a((byte) 92));
           } else {
             if (!TournamentChampionDialog.i(-86)) {
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearFramebuffer();
               ValidationState.a(320, 240, (byte) 122);
               su.a(27744, 0, 0, param0);
             } else {

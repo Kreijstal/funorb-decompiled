@@ -326,7 +326,7 @@ final class Trinket {
           var1 = new Sprite(540, 140);
           PacketBuffer.a(param0 + 26, var1);
           TriangleRasterizer.useRasterClip();
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           PlayerStats.field_p = 0;
           AuctionItem.a((byte) -112);
           var2 = var1.copy();

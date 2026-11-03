@@ -87,7 +87,7 @@ class PcmPlayerService {
                       continue;
                     }
                     var11.field_e = true;
-                    var13 = var11.d();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_e = var12.field_e + var13;

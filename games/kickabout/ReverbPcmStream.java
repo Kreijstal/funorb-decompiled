@@ -352,7 +352,7 @@ final class ReverbPcmStream extends PcmStream {
         }
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 8;
     }
 

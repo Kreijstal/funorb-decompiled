@@ -356,7 +356,7 @@ final class ArchivePreloader {
           if (this.field_d.length <= this.field_e) {
             var9 = new oc[2 * this.field_e];
             var7 = var9;
-            ArrayOperations.a(this.field_d, 0, var9, 0, this.field_e);
+            ArrayOperations.copyReferences(this.field_d, 0, var9, 0, this.field_e);
             this.field_d = var9;
           }
           var8 = new oc();

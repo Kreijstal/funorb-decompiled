@@ -198,7 +198,7 @@ final class TextFieldNode extends UiLayoutNode {
                 var8[var6] = or.field_d.field_f[var6];
               }
               var6_ref_jm = new DelayedServerPacket((long)var4 + var2_long, or.field_d.field_n, var17);
-              DualLinkNode.field_g.a(var6_ref_jm, 3);
+              DualLinkNode.field_g.addLast(var6_ref_jm, 3);
               or.field_d.field_n = 0;
             }
             var9 = (DelayedServerPacket) (DualLinkNode.field_g.g(24009));

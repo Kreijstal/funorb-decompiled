@@ -238,9 +238,9 @@ final class TrinketCountSortCriterion extends SortCriterion {
               throw new IllegalStateException();
             }
             TrinketIcon.field_Eb = new String[var4];
-            ArrayOperations.a(TeamManagementScreen.field_C, 0, TrinketIcon.field_Eb, 0, var4);
+            ArrayOperations.copyReferences(TeamManagementScreen.field_C, 0, TrinketIcon.field_Eb, 0, var4);
             pg.field_a = new String[-1 + (-var4 + var3_int)];
-            ArrayOperations.a(TeamManagementScreen.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
+            ArrayOperations.copyReferences(TeamManagementScreen.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
             var4 = -1;
             var3_int = SpriteState.a(MeshObject.field_f, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_o, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
             for (var5 = 0; var3_int > var5; var5++) {
@@ -254,9 +254,9 @@ final class TrinketCountSortCriterion extends SortCriterion {
               throw new IllegalStateException();
             }
             StrongCacheEntry.field_D = new String[var4];
-            ArrayOperations.a(TeamManagementScreen.field_C, 0, StrongCacheEntry.field_D, 0, var4);
+            ArrayOperations.copyReferences(TeamManagementScreen.field_C, 0, StrongCacheEntry.field_D, 0, var4);
             cg.field_E = new String[var3_int - var4 - 1];
-            ArrayOperations.a(TeamManagementScreen.field_C, 1 + var4, cg.field_E, 0, -var4 + (var3_int - 1));
+            ArrayOperations.copyReferences(TeamManagementScreen.field_C, 1 + var4, cg.field_E, 0, -var4 + (var3_int - 1));
             if (StrongCacheEntry.field_D.length > TrinketIcon.field_Eb.length) {
               stackIn_22_0 = StrongCacheEntry.field_D.length;
             } else {

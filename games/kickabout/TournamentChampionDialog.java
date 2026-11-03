@@ -66,7 +66,7 @@ final class TournamentChampionDialog extends MessageDialog {
         var9 = Kickabout.field_G;
         try {
           var4_int = 46 % ((-4 - param3) / 47);
-          var5 = param1.l(param2, 59);
+          var5 = param1.readBits(param2, 59);
           if (0 == var5) {
             return null;
           }
@@ -74,11 +74,11 @@ final class TournamentChampionDialog extends MessageDialog {
             param0.length != var5) {
             param0 = new short[var5];
           }
-          var6 = param1.l(4, 59);
-          var7 = (short)param1.l(16, 59);
+          var6 = param1.readBits(4, 59);
+          var7 = (short)param1.readBits(16, 59);
           if (var6 > 0) {
             for (var8 = 0; var5 > var8; var8++) {
-              param0[var8] = (short)(var7 + param1.l(var6, 59));
+              param0[var8] = (short)(var7 + param1.readBits(var6, 59));
             }
           } else {
             for (var8 = 0; var8 < var5; var8++) {

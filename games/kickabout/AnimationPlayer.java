@@ -176,7 +176,7 @@ final class AnimationPlayer {
         }
     }
 
-    final ModelMeshBase a(ModelMeshBase param0, boolean param1, boolean param2, boolean param3) {
+    final ModelMeshBase applyCurrentFrame(ModelMeshBase param0, boolean param1, boolean param2, boolean param3) {
         ModelMeshBase var5 = null;
         RuntimeException var5_ref = null;
         ModelMeshBase stackIn_2_0 = null;

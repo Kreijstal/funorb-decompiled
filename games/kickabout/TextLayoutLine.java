@@ -10,7 +10,7 @@ final class TextLayoutLine {
     static Sprite field_a;
     static String field_c;
 
-    final int a(byte param0) {
+    final int width(byte param0) {
         int var2 = -121 / ((-14 - param0) / 44);
         if (this.field_b == null) {
           return 0;

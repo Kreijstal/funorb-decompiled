@@ -114,7 +114,7 @@ abstract class LoginCredentials {
         if (!SetLagCommand.a((byte) 29, 2)) {
           return false;
         }
-        ms.field_b = un.field_e.a((byte) 81);
+        ms.field_b = un.field_e.readUnsignedShort((byte) 81);
         un.field_e.field_n = 0;
         return SetLagCommand.a((byte) -114, ms.field_b);
     }

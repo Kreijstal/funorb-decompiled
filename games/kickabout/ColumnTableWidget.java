@@ -55,7 +55,7 @@ class ColumnTableWidget extends UiLayoutNode {
           if (param0 != 2280703) {
             field_Gb = 6;
           }
-          var4_int = param1.l(param3, 59);
+          var4_int = param1.readBits(param3, 59);
           if (var4_int == 0) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
@@ -64,11 +64,11 @@ class ColumnTableWidget extends UiLayoutNode {
             param2.length != var4_int) {
             param2 = new byte[var4_int];
           }
-          var5 = param1.l(3, 59);
-          var6 = (byte)param1.l(8, 59);
+          var5 = param1.readBits(3, 59);
+          var6 = (byte)param1.readBits(8, 59);
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param2[var7] = (byte)(var6 + param1.l(var5, 59));
+              param2[var7] = (byte)(var6 + param1.readBits(var5, 59));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

@@ -82,13 +82,13 @@ abstract class TickClock {
           aj.a(var4, 1);
         }
         if (param0 <= -51) {
-          return this.a(114, param1);
+          return this.advanceTicks(114, param1);
         }
         TickClock.a(19);
-        return this.a(114, param1);
+        return this.advanceTicks(114, param1);
     }
 
-    abstract int a(int param0, long param1);
+    abstract int advanceTicks(int param0, long param1);
 
     abstract long b(byte param0);
 

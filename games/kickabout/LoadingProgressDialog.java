@@ -13,7 +13,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
     static String field_R;
     private StripedProgressBar field_Y;
 
-    final void a(String param0, float param1, int param2, boolean param3) {
+    final void setProgress(String param0, float param1, int param2, boolean param3) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -25,10 +25,10 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             stackIn_4_1 = (param3);
             this.field_W = stackIn_4_1;
             if (this.field_W) {
-              this.field_Y.a((byte) 21, 4210752, 8405024);
+              this.field_Y.setColors((byte) 21, 4210752, 8405024);
               this.field_Y.field_w = true;
             } else {
-              this.field_Y.a((byte) 21, 4210752, 2113632);
+              this.field_Y.setColors((byte) 21, 4210752, 2113632);
               if (this.field_X) {
                 this.field_Y.field_w = false;
               }
@@ -84,7 +84,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final static void a(int param0, ReceivedAuctionItem param1) {
         try {
-          ScrollPane.field_Jb.a(new AuctionBidDialog(param1, 19), 3);
+          ScrollPane.field_Jb.addLast(new AuctionBidDialog(param1, 19), 3);
           int var2_int = -76 / ((49 - param0) / 61);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -112,7 +112,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final static void b(int param0, int param1) {
         int var2 = 51 / ((param0 + 28) / 58);
-        ScrollPane.field_Jb.a(new AuctionSettingsDialog(param1), 3);
+        ScrollPane.field_Jb.addLast(new AuctionSettingsDialog(param1), 3);
     }
 
     static {

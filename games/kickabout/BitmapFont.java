@@ -1017,7 +1017,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var11;
     }
 
-    final void a(IndexedSpriteState[] param0, int[] param1) {
+    final void setInlineImages(IndexedSpriteState[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();

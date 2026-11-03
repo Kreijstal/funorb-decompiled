@@ -32,7 +32,7 @@ final class ConsoleValue {
 
     final static void a(int param0, String param1) {
         try {
-          ScrollPane.field_Jb.a(new TournamentChampionDialog(param1), 3);
+          ScrollPane.field_Jb.addLast(new TournamentChampionDialog(param1), 3);
           if (param0 != 2009) {
             String var3 = (String) null;
             ConsoleValue.a(79, (String) null);
@@ -42,7 +42,7 @@ final class ConsoleValue {
         }
     }
 
-    final long a(boolean param0) {
+    final long asLong(boolean param0) {
         if (this.field_d instanceof Long) {
           return ((Long) (this.field_d)).longValue();
         }
@@ -75,12 +75,12 @@ final class ConsoleValue {
         if (param0 != -30368) {
           field_h = -65;
           if (!(this.field_d instanceof Integer)) {
-            return (int)this.a(true);
+            return (int)this.asLong(true);
           }
           return ((Integer) (this.field_d)).intValue();
         }
         if (!(this.field_d instanceof Integer)) {
-          return (int)this.a(true);
+          return (int)this.asLong(true);
         }
         return ((Integer) (this.field_d)).intValue();
     }
@@ -98,12 +98,12 @@ final class ConsoleValue {
           if (this.field_d instanceof Byte) {
             return ((Byte) (this.field_d)).byteValue();
           }
-          return (byte)(int)this.a(true);
+          return (byte)(int)this.asLong(true);
         }
         if (this.field_d instanceof Byte) {
           return ((Byte) (this.field_d)).byteValue();
         }
-        return (byte)(int)this.a(true);
+        return (byte)(int)this.asLong(true);
     }
 
     public static void releaseStatics(byte param0) {

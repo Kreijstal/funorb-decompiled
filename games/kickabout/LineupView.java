@@ -454,7 +454,7 @@ final class LineupView extends MatchPhaseView {
             var6 = (this.field_t[var4Lifetime4].field_q >> 1) + this.field_t[var4Lifetime4].field_F;
             var7 = -16 + this.field_t[var4Lifetime4].field_T + this.field_t[var4Lifetime4].field_mb;
             PacketBuffer.a(67, ff.field_b);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
             ConsoleTokenCursor.field_d.d(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
             TeamManagementScreen.e(param0 + 116);
             eo.a(ff.field_b, 65793);

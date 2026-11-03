@@ -81,7 +81,7 @@ final class is {
     final static void a(byte param0, ReceivedAuctionItem param1) {
         try {
           int var2_int = 119 % ((-72 - param0) / 44);
-          ScrollPane.field_Jb.a(new AuctionBidDialog(param1, 32), 3);
+          ScrollPane.field_Jb.addLast(new AuctionBidDialog(param1, 32), 3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "is.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

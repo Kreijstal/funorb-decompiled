@@ -112,7 +112,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         if (!PlayArea.a(100)) {
           while (true) {
-            var5 = (ii) (ve.field_R.b((byte) 127));
+            var5 = (ii) (ve.field_R.removeFirst((byte) 127));
             if (var5 == null) {
               break;
             }

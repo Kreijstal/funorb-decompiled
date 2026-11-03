@@ -261,7 +261,7 @@ final class kr {
         int[] var10 = null;
         var7 = Kickabout.field_G;
         try {
-          if (!param1.b(82)) {
+          if (!param1.hasFullscreenSupport(82)) {
             stackIn_4_0 = new cl[]{};
             return stackIn_4_0;
           }

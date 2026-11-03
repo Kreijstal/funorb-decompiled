@@ -4572,7 +4572,7 @@ final class ad {
             return;
           }
           dr.field_g = param0;
-          LeaguesHelpScreen.field_E.field_jb.b(22997);
+          LeaguesHelpScreen.field_E.field_jb.clear(22997);
           LeaguesHelpScreen.field_E.addChild((byte) -105, (UiLayoutNode) (dr.field_g));
           if (param1 >= -33) {
             ad.a(47, false, -60);

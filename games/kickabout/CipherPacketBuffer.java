@@ -53,7 +53,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void b(int param0, byte param1) {
         int fieldTemp$0 = this.field_n;
         this.field_n = this.field_n + 1;
-        this.field_f[fieldTemp$0] = (byte)(param0 + this.field_p.b((byte) 100));
+        this.field_f[fieldTemp$0] = (byte)(param0 + this.field_p.nextInt((byte) 100));
         int var3 = -46 % ((param1 - 13) / 59);
     }
 
@@ -123,7 +123,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           for (var5_int = 0; var5_int < param3; var5_int++) {
             fieldTemp$0 = this.field_n;
             this.field_n = this.field_n + 1;
-            param2[param1 + var5_int] = (byte)(this.field_f[fieldTemp$0] - this.field_p.b((byte) 119));
+            param2[param1 + var5_int] = (byte)(this.field_f[fieldTemp$0] - this.field_p.nextInt((byte) 119));
           }
           if (param0 != -30) {
             this.field_u = -126;
@@ -254,10 +254,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         int fieldTemp$0 = this.field_n;
         this.field_n = this.field_n + 1;
-        return this.field_f[fieldTemp$0] - this.field_p.b((byte) 126) & 255;
+        return this.field_f[fieldTemp$0] - this.field_p.nextInt((byte) 126) & 255;
     }
 
-    final int l(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = Kickabout.field_G;
         int var3 = this.field_o >> 3;
@@ -282,7 +282,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return var5;
     }
 
-    final void a(byte param0, int[] param1) {
+    final void installCipher(byte param0, int[] param1) {
         try {
           this.field_p = new IsaacRandom(param1);
           if (param0 <= 99) {

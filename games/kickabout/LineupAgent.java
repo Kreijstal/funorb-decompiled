@@ -42,10 +42,10 @@ final class LineupAgent extends MatchAgent {
         try {
           for (var3_int = 0; 2 > var3_int; var3_int++) {
             for (var4 = 0; var4 < 4; var4++) {
-              this.slotChoice[var3_int][var4] = param0.l(4, 59) - 1;
+              this.slotChoice[var3_int][var4] = param0.readBits(4, 59) - 1;
             }
           }
-          this.readyMask = param0.l(8, 59);
+          this.readyMask = param0.readBits(8, 59);
           param0.l((byte) 112);
           var3_intLifetime1 = 0;
           if (param1) {

@@ -94,7 +94,7 @@ final class vr {
           PlayerContextMenu.field_i = null;
           ArchiveSource.field_b = null;
           if (rp.field_B != null) {
-            rp.field_B.b(param0 + 22999);
+            rp.field_B.clear(param0 + 22999);
             rp.field_B = null;
           }
           if (param0 != -2) {
@@ -102,12 +102,12 @@ final class vr {
           }
           SquadPickerDialog.field_N = null;
           if (SquadSlotWidget.field_yb != null) {
-            SquadSlotWidget.field_yb.b(param0 ^ -22997);
+            SquadSlotWidget.field_yb.clear(param0 ^ -22997);
             SquadSlotWidget.field_yb = null;
           }
           SortCriterion.field_f = null;
           if (null != ProxyAuthenticationRequiredException.field_d) {
-            ProxyAuthenticationRequiredException.field_d.b(param0 ^ -22997);
+            ProxyAuthenticationRequiredException.field_d.clear(param0 ^ -22997);
             ProxyAuthenticationRequiredException.field_d = null;
           }
           TrinketSlot.field_Eb = null;
@@ -129,7 +129,7 @@ final class vr {
     }
 
     final static void b(byte param0) {
-        ScrollPane.field_Jb.a(new TutorialChoiceDialog(), 3);
+        ScrollPane.field_Jb.addLast(new TutorialChoiceDialog(), 3);
         if (param0 > -114) {
           vr.releaseStatics((byte) -74);
         }

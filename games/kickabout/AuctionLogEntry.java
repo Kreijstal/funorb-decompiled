@@ -254,7 +254,7 @@ final class AuctionLogEntry extends IntrusiveNode {
           }
           if (param2 < param0.length) {
             var3 = new DirectByteStorage();
-            ((ByteStorage) ((Object) var3)).a(param0, 21820);
+            ((ByteStorage) ((Object) var3)).setBytes(param0, 21820);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }

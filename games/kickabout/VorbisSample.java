@@ -92,10 +92,10 @@ final class VorbisSample extends IntrusiveNode {
         return new PcmSample(this.field_k, var12, this.field_l, this.field_o, this.field_v);
     }
 
-    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
+    final static VorbisSample loadNamed(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.ensureFileAvailableByName(param1, param2, (byte) -10);
             return null;
           }
@@ -151,7 +151,7 @@ final class VorbisSample extends IntrusiveNode {
     final static VorbisSample loadNamed(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.ensureFileAvailable(param2, 51, param1);
             return null;
           }
@@ -345,7 +345,7 @@ final class VorbisSample extends IntrusiveNode {
         return var1;
     }
 
-    private final static boolean a(ResourceArchive param0) {
+    private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_z) {
           var1 = param0.b(0, -32669, 0);

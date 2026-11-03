@@ -61,7 +61,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         int var1 = -48 % ((-50 - param0) / 51);
     }
 
-    final void q(int param0) {
+    final void closeDialog(int param0) {
         if (!this.field_C) {
           return;
         }
@@ -78,7 +78,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
     }
 
-    public void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         TextButton var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -88,13 +88,13 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         try {
           if (param3 <= 64) {
             var7 = (TextButton) null;
-            this.a(-123, (TextButton) null, 56, (byte) 64, 43);
+            this.onAction(-123, (TextButton) null, 56, (byte) 64, 43);
           }
           if (!this.field_cb) {
             ListRow.openUrlInBrowser(so.a(-79), 126, "tochangedisplayname.ws");
           } else {
             IndexedSpriteState.b(38, 3);
-            this.q(-97);
+            this.closeDialog(-97);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
     }
 
     final void r(int param0) {
-        this.field_jb.a((byte) 21, 4210752, param0);
+        this.field_jb.setColors((byte) 21, 4210752, param0);
         AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_eb, ii.field_m);
         var2.a((byte) 99, 15, TeamManagementScreen.field_E);
         this.a((byte) -124, (UiWidget) (var2));
@@ -133,7 +133,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             stackIn_7_0 = super.a(param0, (byte) -94, param2, param3);
             return stackIn_7_0;
           }
-          this.q(-115);
+          this.closeDialog(-115);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,7 +172,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           stackIn_6_1 = (param0 == 256);
           this.field_cb = stackIn_6_1;
           this.field_hb = true;
-          this.field_jb.a((byte) 21, 4210752, 8405024);
+          this.field_jb.setColors((byte) 21, 4210752, 8405024);
           var7 = new AccountMessagePanel(this, this.field_eb, param2);
           var4 = var7;
           if (param0 == 5) {

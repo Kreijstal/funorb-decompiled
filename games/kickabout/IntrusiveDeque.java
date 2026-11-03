@@ -12,7 +12,7 @@ final class IntrusiveDeque {
     private IntrusiveNode field_i;
     static String field_b;
 
-    final IntrusiveNode h(int param0) {
+    final IntrusiveNode removeLast(int param0) {
         IntrusiveNode var2 = this.field_c.field_b;
         if (param0 >= -119) {
           return (IntrusiveNode) null;
@@ -24,7 +24,7 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final void b(int param0) {
+    final void clear(int param0) {
         int var3;
         IntrusiveNode var5;
         IntrusiveNode var4;
@@ -242,7 +242,7 @@ final class IntrusiveDeque {
         return var2Lifetime1;
     }
 
-    final void a(IntrusiveNode param0, int param1) {
+    final void addLast(IntrusiveNode param0, int param1) {
         try {
           if (null != param0.field_b) {
             param0.c((byte) -109);
@@ -259,7 +259,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean isEmpty(byte param0) {
         int var2 = -23 / ((param0 + 53) / 36);
         return this.field_c == this.field_c.field_d ? true : false;
     }
@@ -371,7 +371,7 @@ final class IntrusiveDeque {
         return 127;
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode removeFirst(byte param0) {
         IntrusiveNode var2 = this.field_c.field_d;
         if (var2 != this.field_c) {
           int var3 = -19 / ((param0 - 75) / 50);

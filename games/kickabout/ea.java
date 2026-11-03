@@ -68,7 +68,7 @@ final class ea {
           SoftwareRasterizer.a(-var13 + param3, param1, var13, var14, 2, 0, param4);
           if (256 != var9) {
             PacketBuffer.a(-122, ph.field_b);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
           }
           var15 = un.field_d;
           if (nj.monotonicMillis(107) % 1000L < 500L) {

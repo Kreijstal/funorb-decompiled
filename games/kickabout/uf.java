@@ -219,7 +219,7 @@ final class uf {
                 var5 = 8947848;
               }
               PacketBuffer.a(-110, var8);
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearFramebuffer();
               SoftwareRasterizer.fillRect(SoftwareRasterizer.field_g - 6 >> 1, 26, 6, 10, var5);
               TeamManagementScreen.e(120);
               var6 = (var4 << 16) / 6;

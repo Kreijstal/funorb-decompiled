@@ -67,7 +67,7 @@ final class j {
         if (ia.field_c) {
           this.field_b.field_R = (this.field_b.field_R + 1024) % 2048;
           PacketBuffer.a(param0 + 39, wa.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
           TeamManagementScreen.e(127);
           wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
@@ -78,7 +78,7 @@ final class j {
           return;
         }
         PacketBuffer.a(param0 + 39, wa.field_a);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearFramebuffer();
         this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
         TeamManagementScreen.e(127);
         wa.field_a.drawHalfSize(param2 - param0, -47 + param1);

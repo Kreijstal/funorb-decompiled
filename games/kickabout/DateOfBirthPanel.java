@@ -19,7 +19,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
         }
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         if (param3 < 64) {
           return;
         }
@@ -70,8 +70,8 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
         field_C = (int[]) null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, (int) (char)param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         EmailSyntaxValidator.field_k.a(DebugConsole.field_v, 4 + param2 + this.field_t, 4 + EmailSyntaxValidator.field_k.field_G + (this.field_g + param3), 16777215, -1);
     }
 

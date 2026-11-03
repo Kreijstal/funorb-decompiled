@@ -232,9 +232,9 @@ class ri extends TextWidgetPainter {
           var7 = Checkbox.a("largefont", param0, 75, "lobby", param4);
           ServerMessageScreen.field_E = Checkbox.a("generalfont", param0, 87, "lobby", param4);
           CheckboxLabelWidget.field_Ab = Checkbox.a("chatfont", param0, 112, "lobby", param4);
-          var7.a(var5, var25);
-          ServerMessageScreen.field_E.a(var5, var25);
-          CheckboxLabelWidget.field_Ab.a(var5, var25);
+          var7.setInlineImages(var5, var25);
+          ServerMessageScreen.field_E.setInlineImages(var5, var25);
+          CheckboxLabelWidget.field_Ab.setInlineImages(var5, var25);
           var8 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var8.field_y = 16777215;
           var8.field_X = (BitmapFont) ((Object) var7);

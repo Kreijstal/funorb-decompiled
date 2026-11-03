@@ -46,7 +46,7 @@ final class ConsoleTokenCursor {
             param0.field_jb = new IntrusiveDeque();
           }
           rp.field_B = param0.field_jb;
-          rp.field_B.b(22997);
+          rp.field_B.clear(22997);
           SquadPickerDialog.field_N = new DualLinkHashTable(param2);
           DelayedServerPacket.field_h = 0;
           mi.field_d = -1;
@@ -56,13 +56,13 @@ final class ConsoleTokenCursor {
             param6.field_jb = new IntrusiveDeque();
           }
           SquadSlotWidget.field_yb = param6.field_jb;
-          SquadSlotWidget.field_yb.b(22997);
+          SquadSlotWidget.field_yb.clear(22997);
           SortCriterion.field_f = new DualLinkHashTable(param9);
           if (param4.field_jb == null) {
             param4.field_jb = new IntrusiveDeque();
           }
           ProxyAuthenticationRequiredException.field_d = param4.field_jb;
-          ProxyAuthenticationRequiredException.field_d.b(22997);
+          ProxyAuthenticationRequiredException.field_d.clear(22997);
           TrinketSlot.field_Eb = new DualLinkHashTable(param3);
           mg.field_c = param7;
           TextFieldNode.field_Ib = 0L;

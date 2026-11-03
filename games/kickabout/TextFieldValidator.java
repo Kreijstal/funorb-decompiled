@@ -35,7 +35,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           FindingOpponentScreen.field_E = 0;
           DateInputWidget.field_G = 0;
         } else {
-          FindingOpponentScreen.field_E = var8.a((byte) 81);
+          FindingOpponentScreen.field_E = var8.readUnsignedShort((byte) 81);
           DateInputWidget.field_G = var8.readUnsignedMedium(-119);
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -116) != 1) ? 0 : 1;
@@ -47,11 +47,11 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           hr.field_f = SortCriterion.field_d;
         }
         if (RegistrationRequestDialog.field_ob == 1) {
-          oh.field_f = var8.a((byte) 81);
+          oh.field_f = var8.readUnsignedShort((byte) 81);
           vp.field_e = var8.readString(42);
         } else {
           if (RegistrationRequestDialog.field_ob == 4) {
-            oh.field_f = var8.a((byte) 81);
+            oh.field_f = var8.readUnsignedShort((byte) 81);
             vp.field_e = var8.readString(42);
           } else {
             oh.field_f = 0;
@@ -67,7 +67,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           TextFieldValidator.b((byte) 82);
           return new ChatMessage(param1);
         }
-        var5 = var8.a((byte) 81);
+        var5 = var8.readUnsignedShort((byte) 81);
         try {
           var9 = TournamentLobbyScreen.field_j.getPhrase(-39, var5);
           ee.field_a = var9.getDisplayText((byte) -98);
@@ -222,7 +222,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           FindingOpponentScreen.field_E = 0;
           DateInputWidget.field_G = 0;
         } else {
-          FindingOpponentScreen.field_E = var8.a((byte) 81);
+          FindingOpponentScreen.field_E = var8.readUnsignedShort((byte) 81);
           DateInputWidget.field_G = var8.readUnsignedMedium(-119);
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -116) != 1) ? 0 : 1;
@@ -234,11 +234,11 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           hr.field_f = SortCriterion.field_d;
         }
         if (RegistrationRequestDialog.field_ob == 1) {
-          oh.field_f = var8.a((byte) 81);
+          oh.field_f = var8.readUnsignedShort((byte) 81);
           vp.field_e = var8.readString(42);
         } else {
           if (RegistrationRequestDialog.field_ob == 4) {
-            oh.field_f = var8.a((byte) 81);
+            oh.field_f = var8.readUnsignedShort((byte) 81);
             vp.field_e = var8.readString(42);
           } else {
             oh.field_f = 0;
@@ -254,7 +254,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           TextFieldValidator.b((byte) 82);
           return new ChatMessage(param1);
         }
-        var5 = var8.a((byte) 81);
+        var5 = var8.readUnsignedShort((byte) 81);
         try {
           var9 = TournamentLobbyScreen.field_j.getPhrase(-39, var5);
           ee.field_a = var9.getDisplayText((byte) -98);
