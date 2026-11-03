@@ -37,7 +37,7 @@ final class oj extends ArrayWidgetGroup implements in {
 
     oj(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
-        this.field_P = new em(new tb(10000536), tm.field_b, 0, 0, 140, 25);
+        this.field_P = new em(new GradientOutlineTextPainter(10000536), tm.field_b, 0, 0, 140, 25);
         this.field_P.a(3, new dj());
         this.field_B = new ButtonWidget(ub.field_xb, (WidgetListener) (this));
         this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_P), (UiWidget) ((Object) this.field_B)};

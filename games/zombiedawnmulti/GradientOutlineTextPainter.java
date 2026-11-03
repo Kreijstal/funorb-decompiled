@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tb extends TextWidgetPainter {
+class GradientOutlineTextPainter extends TextWidgetPainter {
     static boolean field_u;
     static Sprite field_v;
     static int[] field_t;
@@ -39,22 +39,22 @@ class tb extends TextWidgetPainter {
         }
     }
 
-    tb(int param0) {
+    GradientOutlineTextPainter(int param0) {
         this(ke.field_h, param0);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = null;
         field_t = null;
         if (param0 != 109) {
-          tb.c((byte) 124);
+          GradientOutlineTextPainter.releaseStatics((byte) 124);
           field_s = null;
           return;
         }
         field_s = null;
     }
 
-    tb(BitmapFont param0, int param1) {
+    GradientOutlineTextPainter(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
     }
 

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl extends TextWidgetPainter {
+final class StatefulTextPainter extends TextWidgetPainter {
     static IndexedSprite field_u;
     private WidgetStyleLayer field_w;
     private WidgetStyleLayer[] field_s;
     static String field_v;
     static String field_t;
 
-    private final void a(jl param0, boolean param1, byte param2) {
+    private final void copyStatesTo(StatefulTextPainter param0, boolean param1, byte param2) {
         int var4_int = 0;
         WidgetStyleLayer dupTemp$0 = null;
         WidgetStyleLayer stackIn_8_0 = null;
@@ -135,21 +135,21 @@ final class jl extends TextWidgetPainter {
         }
     }
 
-    final WidgetStyleLayer a(int param0, byte param1) {
+    final WidgetStyleLayer createStateLayer(int param0, byte param1) {
         WidgetStyleLayer dupTemp$0 = null;
         if (param1 == -36) {
           dupTemp$0 = new WidgetStyleLayer();
           this.field_s[param0] = dupTemp$0;
           return dupTemp$0;
         }
-        jl var4 = (jl) null;
-        this.a((jl) null, false, (byte) -31);
+        StatefulTextPainter var4 = (StatefulTextPainter) null;
+        this.copyStatesTo((StatefulTextPainter) null, false, (byte) -31);
         WidgetStyleLayer dupTemp$1 = new WidgetStyleLayer();
         this.field_s[param0] = dupTemp$1;
         return dupTemp$1;
     }
 
-    final void a(Sprite[] param0, int param1, boolean param2) {
+    final void setStateFrameSprites(Sprite[] param0, int param1, boolean param2) {
         int var4_int = 0;
         if (param2) {
           return;
@@ -165,10 +165,10 @@ final class jl extends TextWidgetPainter {
         }
     }
 
-    jl(jl param0, boolean param1) {
+    StatefulTextPainter(StatefulTextPainter param0, boolean param1) {
         this();
         try {
-          param0.a(this, param1, (byte) -122);
+          param0.copyStatesTo(this, param1, (byte) -122);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -194,7 +194,7 @@ final class jl extends TextWidgetPainter {
         RuntimeException var6 = null;
         WidgetStyleLayer var7 = null;
         WidgetStyleLayer var9 = null;
-        jl var10 = null;
+        StatefulTextPainter var10 = null;
         ButtonWidget var11 = null;
         WidgetStyleLayer var12 = null;
         WidgetStyleLayer var13 = null;
@@ -251,8 +251,8 @@ final class jl extends TextWidgetPainter {
           if (param2 == -15112) {
             return;
           }
-          var10 = (jl) null;
-          this.a((jl) null, false, (byte) -63);
+          var10 = (StatefulTextPainter) null;
+          this.copyStatesTo((StatefulTextPainter) null, false, (byte) -63);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -318,10 +318,10 @@ final class jl extends TextWidgetPainter {
           return;
         }
         pd var8 = (pd) null;
-        jl.a(-33, 72, 86, 111, -101, -58, (BitmapFont) null, (pd) null, (pd) null, -42, -100, -45, 56, 89, -124, (BitmapFont) null, -98, -113, (pd) null, -13, true);
+        StatefulTextPainter.a(-33, 72, 86, 111, -101, -58, (BitmapFont) null, (pd) null, (pd) null, -42, -100, -45, 56, 89, -124, (BitmapFont) null, -98, -113, (pd) null, -13, true);
     }
 
-    final void a(Sprite[] param0, boolean param1) {
+    final void setFrameSpritesForAllStates(Sprite[] param0, boolean param1) {
         int var4 = 0;
         WidgetStyleLayer[] var3 = null;
         WidgetStyleLayer var5 = null;
@@ -361,7 +361,7 @@ final class jl extends TextWidgetPainter {
         }
     }
 
-    public jl() {
+    public StatefulTextPainter() {
         this.field_s = new WidgetStyleLayer[6];
         this.field_w = new WidgetStyleLayer();
         WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
@@ -370,7 +370,7 @@ final class jl extends TextWidgetPainter {
         var1.a((byte) 11);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_t = null;
         field_v = null;
         field_u = null;

@@ -73,10 +73,10 @@ final class wd extends WidgetContainer implements in {
         }
         try {
           param2.b((byte) -35, 58);
-          param2.a(param1, (byte) -110);
-          param2.a(param0, (byte) -125);
-          param2.a(param3, (byte) -47);
-          param2.a(param5, (byte) -109);
+          param2.writeShort(param1, (byte) -110);
+          param2.writeShort(param0, (byte) -125);
+          param2.writeShort(param3, (byte) -47);
+          param2.writeShort(param5, (byte) -109);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "wd.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

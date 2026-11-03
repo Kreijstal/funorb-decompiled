@@ -430,7 +430,7 @@ abstract class BitmapFont extends DualLinkNode {
         return this.maxAscent + var5 + this.maxDescent;
     }
 
-    final void a(char param0, int param1, int param2, int param3) {
+    final void drawCharacter(char param0, int param1, int param2, int param3) {
         int var5 = 0;
         if (param0 != 32) {
           param2 = param2 - this.baselineHeight;

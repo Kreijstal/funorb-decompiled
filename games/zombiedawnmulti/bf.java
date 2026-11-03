@@ -83,7 +83,7 @@ final class bf extends IntrusiveNode {
           if (param0.field_r != null) {
             ld.field_Kb = param0.field_a;
             SectorCacheStore.field_f = param0.field_e;
-            tb.field_t = param0.field_r;
+            GradientOutlineTextPainter.field_t = param0.field_r;
             en.field_c = param0.field_l;
           }
           var2_intLifetime1 = 98 % ((param1 + 13) / 35);

@@ -167,7 +167,7 @@ final class ld extends UiComponent {
               stackIn_22_0 = ma.field_b[0][var6 + 1];
               stackIn_23_1 = (var4_int != 0);
               stackIn_22_0.field_Z = stackIn_23_1;
-              if (!tb.field_u &&
+              if (!GradientOutlineTextPainter.field_u &&
                 var6 == 3) {
                 ma.field_b[0][1 + var6].field_Z = false;
               }
@@ -339,7 +339,7 @@ final class ld extends UiComponent {
                   null != na.field_J[var7] &&
                   (~ql.field_c & na.field_J[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = vl.a(~ql.field_c & na.field_J[var7][var9], (byte) -103);
+                  var15 = vl.highestOneBit(~ql.field_c & na.field_J[var7][var9], (byte) -103);
                 }
                 if (null != IntrusiveDequeCursor.field_g &&
                   IntrusiveDequeCursor.field_g[var7] != null &&
@@ -676,7 +676,7 @@ final class ld extends UiComponent {
             var14 = null;
             if (null != this.field_Fb[var13] ||
               -1 == this.field_Qb[var13]) {
-              var14 = tb.field_v;
+              var14 = GradientOutlineTextPainter.field_v;
             }
             this.field_Gb[var13] = new mo(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.a((byte) 50, this.field_Gb[var13]);
@@ -685,7 +685,7 @@ final class ld extends UiComponent {
               this.field_Vb = var15;
             }
           }
-          this.field_Vb = this.field_Vb + (tb.field_v.fullWidth + 10);
+          this.field_Vb = this.field_Vb + (GradientOutlineTextPainter.field_v.fullWidth + 10);
           this.b(12, 11183);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

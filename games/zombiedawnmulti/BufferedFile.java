@@ -87,7 +87,7 @@ final class BufferedFile {
               this.field_o.a((byte) -127, this.field_h);
               this.field_c = this.field_h;
               while (param0 > 0) {
-                var10_intLifetime1 = this.field_o.a(param0, param2, -1, param1);
+                var10_intLifetime1 = this.field_o.read(param0, param2, -1, param1);
                 if (var10_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -378,7 +378,7 @@ final class BufferedFile {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_o.a(var2, this.field_i, -1, this.field_n);
+          var3 = this.field_o.read(var2, this.field_i, -1, this.field_n);
           if (-1 != var3) {
             this.field_c = this.field_c + (long)var3;
             this.field_n = this.field_n + var3;

@@ -54,7 +54,7 @@ final class FightEvent extends GameEvent {
           var4.b((byte) -35, param1);
           var4.writeByte(-39, 3);
           var4.writeByte(125, 11);
-          var4.a(param0, (byte) -43);
+          var4.writeShort(param0, (byte) -43);
         }
         if (param2 >= -20) {
           field_n = (float[]) null;

@@ -90,7 +90,7 @@ final class kn {
         try {
           fa.field_Ib = param3;
           s.field_a = param2;
-          qj.a(jl.field_v, param1, param0 + 1549);
+          qj.a(StatefulTextPainter.field_v, param1, param0 + 1549);
           if (param0 != -1431) {
             field_d = (String) null;
           }

@@ -1149,7 +1149,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void h() {
+    final void replaceZeroWithOne() {
         int var1;
         int var2;
         var1 = -1;
@@ -1717,7 +1717,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void adjustColourChannels(int param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         int var6;

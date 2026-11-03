@@ -116,7 +116,7 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static void a(boolean param0) {
-        dm.field_ac.setBounds(18, 0, -(tb.field_u ? 40 + (2 + (DualLinkNode.field_o + 2)) : 0) + pd.field_b.field_zb, 0, -3344);
+        dm.field_ac.setBounds(18, 0, -(GradientOutlineTextPainter.field_u ? 40 + (2 + (DualLinkNode.field_o + 2)) : 0) + pd.field_b.field_zb, 0, -3344);
         mo.field_Hb.setBounds(18, 0, 42 + DualLinkNode.field_o, -2 + (pd.field_b.field_zb + (-DualLinkNode.field_o - 40)), -3344);
         if (param0) {
           field_g = (UiComponent) null;

@@ -43,7 +43,7 @@ final class WidgetStyleLayer {
         int var1 = 9 % ((param0 + 74) / 48);
     }
 
-    final WidgetStyleLayer a(Sprite[] param0, int param1) {
+    final WidgetStyleLayer setFrameSprites(Sprite[] param0, int param1) {
         RuntimeException var3 = null;
         WidgetStyleLayer stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -134,7 +134,7 @@ final class WidgetStyleLayer {
           return;
         }
         UiWidget var3 = (UiWidget) null;
-        this.draw(14, true, (jl) null, (UiWidget) null, -114);
+        this.draw(14, true, (StatefulTextPainter) null, (UiWidget) null, -114);
         this.field_f = 0;
         this.field_j = 0;
         this.field_m = 0;
@@ -150,7 +150,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final void draw(int param0, boolean param1, jl param2, UiWidget param3, int param4) {
+    final void draw(int param0, boolean param1, StatefulTextPainter param2, UiWidget param3, int param4) {
         BitmapFont stackIn_22_0;
         String stackIn_22_1;
         int stackIn_22_2;
@@ -250,7 +250,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final void applyTo(int param0, int param1, int param2, jl param3, UiWidget param4, WidgetStyleLayer param5) {
+    final void applyTo(int param0, int param1, int param2, StatefulTextPainter param3, UiWidget param4, WidgetStyleLayer param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

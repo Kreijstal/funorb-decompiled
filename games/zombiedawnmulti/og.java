@@ -237,7 +237,7 @@ final class og extends SimEntity {
               stackIn_9_1 = null;
               stackIn_9_2 = null;
               stackIn_9_3 = 0L;
-              if (tb.field_u) {
+              if (GradientOutlineTextPainter.field_u) {
                 stackIn_10_1 = null;
                 stackIn_10_2 = null;
                 stackIn_10_4 = wc.field_H;
@@ -283,7 +283,7 @@ final class og extends SimEntity {
               stackIn_29_1 = null;
               stackIn_29_2 = null;
               stackIn_29_3 = 0L;
-              if (tb.field_u) {
+              if (GradientOutlineTextPainter.field_u) {
                 stackIn_30_1 = null;
                 stackIn_30_2 = null;
                 stackIn_30_4 = m.field_x;
@@ -440,7 +440,7 @@ final class og extends SimEntity {
               }
               var12.field_Lb.field_wb = Integer.toString(var12.field_Ub);
               var12.field_Lb.setBounds(jk.field_f, var31, 48, 200, -3344);
-              stackIn_69_0 = (tb.field_u) ? 250 : 200;
+              stackIn_69_0 = (GradientOutlineTextPainter.field_u) ? 250 : 200;
               var33_intLifetime1 = stackIn_69_0;
               var12.field_jc.setBounds(jk.field_f, var31, -var33_intLifetime1 + 365 - 2, var33_intLifetime1, -3344);
               var34_int = LevelFileCatalog.field_c;

@@ -61,7 +61,7 @@ final class pi {
           TextInputWidget.field_R.writeInt(-111, mj.field_Fb[2]);
           TextInputWidget.field_R.writeInt(param0 ^ 88, mj.field_Fb[3]);
           jq.a(TextInputWidget.field_R, 13746);
-          TextInputWidget.field_R.a(param4, (byte) -54);
+          TextInputWidget.field_R.writeShort(param4, (byte) -54);
           if (param0 != -59) {
             field_c = (String) null;
           }
@@ -90,7 +90,7 @@ final class pi {
             var6 = var6 | 16;
           }
           ma.field_a.writeByte(-81, var6);
-          var7 = wg.a(0, jl.b(0));
+          var7 = wg.a(0, StatefulTextPainter.b(0));
           if (var7 == null) {
             var7 = "";
           }

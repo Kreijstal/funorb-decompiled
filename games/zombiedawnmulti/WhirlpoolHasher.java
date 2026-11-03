@@ -16,7 +16,7 @@ final class WhirlpoolHasher {
     private int field_f;
     static IndexedSprite field_l;
 
-    final void b(int param0) {
+    final void reset(int param0) {
         int var2 = 0;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2Lifetime1;

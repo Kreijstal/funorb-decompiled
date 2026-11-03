@@ -229,7 +229,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3 = stackIn_88_0;
                           var14 = (java.awt.Component) (var8.field_a);
                           if (this.field_v) {
-                            this.field_p.a(var14, var3 != 0, -1101);
+                            this.field_p.setCursorVisible(var14, var3 != 0, -1101);
                           } else {
                             Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_x, new Object[]{var14, new Boolean(var3 != 0)});
                           }
@@ -281,7 +281,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.field_d = var11;
                         var11.setResizable(false);
                         if (this.field_v) {
-                          this.field_m.a(65535 & var8.field_b, var8.field_c >>> 16, var8.field_c & 65535, var11, 0, var8.field_b >> 16);
+                          this.field_m.enterFullscreen(65535 & var8.field_b, var8.field_c >>> 16, var8.field_c & 65535, var11, 0, var8.field_b >> 16);
                         } else {
                           Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_b, new Object[]{var11, new Integer(var8.field_c >>> 16), new Integer(65535 & var8.field_c), new Integer(var8.field_b >> 16), new Integer(var8.field_b & 65535)});
                         }

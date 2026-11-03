@@ -147,7 +147,7 @@ final class vl extends IntrusiveNode {
         field_f = null;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int highestOneBit(int param0, byte param1) {
         if (param1 != -103) {
           field_h = -19;
         }

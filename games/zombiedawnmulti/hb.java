@@ -57,7 +57,7 @@ final class hb {
               } else {
                 var7 = ArmedHumanView.field_wb;
                 synchronized (var7) {
-                  ArmedHumanView.field_wb.a(var12, var9, param1 + 27);
+                  ArmedHumanView.field_wb.decompress(var12, var9, param1 + 27);
                 }
               }
               stackIn_19_0 = var6;

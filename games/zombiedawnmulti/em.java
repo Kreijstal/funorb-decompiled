@@ -106,7 +106,7 @@ final class em extends wk {
           if (param2 != 2) {
             return;
           }
-          jl.a(param4, param18, param3, param20, param11, param14, param8, new pd(param5), new pd(param13), param17, param19, param10, param7, param9, param6, param15, param12, param0, new pd(param16), param1, true);
+          StatefulTextPainter.a(param4, param18, param3, param20, param11, param14, param8, new pd(param5), new pd(param13), param17, param19, param10, param7, param9, param6, param15, param12, param0, new pd(param16), param1, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,7 +220,7 @@ final class em extends wk {
               }
               return true;
             }
-            if (lo.a(param1 ^ -8230, param0.charAt(var2_int))) {
+            if (lo.isAccountNameCharacter(param1 ^ -8230, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }

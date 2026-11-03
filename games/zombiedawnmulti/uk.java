@@ -19,7 +19,7 @@ final class uk extends ButtonWidget {
           var3 = ma.field_a;
           var3.b((byte) -35, param2);
           var3.writeByte(param0 ^ -41, param1.field_g);
-          var3.a(param1.field_i, (byte) -92);
+          var3.writeShort(param1.field_i, (byte) -92);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "uk.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

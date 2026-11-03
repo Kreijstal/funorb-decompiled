@@ -421,9 +421,9 @@ final class MusicTrack extends IntrusiveNode {
         } else {
           stackIn_85_1 = 1;
         }
-        ((PacketBuffer) (Object) stackIn_84_0).a(stackIn_85_1, (byte) -79);
-        var51.a(var2, (byte) -118);
-        var51.a(var3, (byte) -103);
+        ((PacketBuffer) (Object) stackIn_84_0).writeShort(stackIn_85_1, (byte) -79);
+        var51.writeShort(var2, (byte) -118);
+        var51.writeShort(var3, (byte) -103);
         param0.position = var13Lifetime1;
         var52 = 0;
         var53 = 0;

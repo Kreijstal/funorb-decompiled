@@ -160,13 +160,13 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         try {
           param2.b((byte) -35, 65);
           param2.writeByte(param1 ^ -102, param0);
-          param2.a(param5, (byte) -45);
+          param2.writeShort(param5, (byte) -45);
           if (param1 != -11) {
             CipherPacketBuffer var7 = (CipherPacketBuffer) null;
             QuickChatPhraseDefinition.a(-103, (byte) 41, (CipherPacketBuffer) null, -22, 121, -61);
           }
-          param2.a(param3, (byte) -110);
-          param2.a(param4, (byte) -64);
+          param2.writeShort(param3, (byte) -110);
+          param2.writeShort(param4, (byte) -64);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "tl.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

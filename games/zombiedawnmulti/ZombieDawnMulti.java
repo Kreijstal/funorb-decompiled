@@ -1431,7 +1431,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             if (decompiledNaturalLoopExit0) {
               vm.field_lb = fl.a("", "lobby_game_logo", ii.field_a, 11091);
               ip.field_e = wq.a(-117, "", ii.field_a, "help_arrow");
-              jl.field_u = wq.a(-119, "", ii.field_a, "info_help_button");
+              StatefulTextPainter.field_u = wq.a(-119, "", ii.field_a, "info_help_button");
               oi.field_k = ip.field_e.d();
               oi.field_k.a();
               lh.field_m = ip.field_e.d();
@@ -1551,7 +1551,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             InfectionEvent.field_j = fl.a("", "frameh", ii.field_a, 11091);
             SimHuman.field_fb = fl.a("", "framev", ii.field_a, 11091);
             rp.field_r = pb.a("", ii.field_a, -256, "framecorners");
-            tb.field_s = SimHuman.field_fb.copyFlippedHorizontal();
+            GradientOutlineTextPainter.field_s = SimHuman.field_fb.copyFlippedHorizontal();
             vo.field_p = InfectionEvent.field_j.copy();
             vo.field_p.flipVertical();
             md.field_N = pb.a("", ii.field_a, -256, "instructions_controls");
@@ -1962,7 +1962,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           sf.a(4);
           fl.a((byte) 109);
           ij.a(true);
-          jl.a(false);
+          StatefulTextPainter.releaseStatics(false);
           bg.a((byte) -104);
           wa.a(2);
           mp.a(12);
@@ -2037,7 +2037,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           we.a((byte) 103);
           oq.d((byte) -39);
           he.a((byte) -122);
-          tb.c((byte) 109);
+          GradientOutlineTextPainter.releaseStatics((byte) 109);
           m.a(false);
           na.g((byte) -108);
           nh.a((byte) 48);

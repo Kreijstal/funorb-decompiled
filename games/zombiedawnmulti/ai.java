@@ -51,7 +51,7 @@ final class ai implements Runnable {
     final static void a(String param0, byte param1) {
         try {
           wk.a(param0, (byte) 48);
-          qj.a(jl.field_v, false, 102);
+          qj.a(StatefulTextPainter.field_v, false, 102);
           int var2_int = -102 % ((52 - param1) / 40);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ai.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

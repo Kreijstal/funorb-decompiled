@@ -36,9 +36,9 @@ final class sd extends rg {
     final static boolean h(int param0) {
         if (param0 != 3853) {
           sd.h(-41);
-          return ho.a(jl.b(0), 61);
+          return ho.a(StatefulTextPainter.b(0), 61);
         }
-        return ho.a(jl.b(0), 61);
+        return ho.a(StatefulTextPainter.b(0), 61);
     }
 
     final static int a(byte param0, int param1, int param2) {

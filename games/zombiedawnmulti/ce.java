@@ -388,7 +388,7 @@ final class ce extends IntrusiveNode {
           if (var2_int == 0) {
             if (this.field_f != null &&
               0 == this.field_q) {
-              this.field_f.b(0, 1, 0);
+              this.field_f.adjustColourChannels(0, 1, 0);
             }
             if (this.field_l - 50 >= this.field_s) {
               this.b(false);
@@ -408,7 +408,7 @@ final class ce extends IntrusiveNode {
             if (decompiledFrameRemainder0) {
               if (null != this.field_f &&
                 this.field_q == 0) {
-                this.field_f.b(0, -1, 0);
+                this.field_f.adjustColourChannels(0, -1, 0);
               }
               boolean decompiledFrameCompleted0 = true;
               if (this.field_p != null) {

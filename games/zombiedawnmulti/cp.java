@@ -154,7 +154,7 @@ final class cp extends WidgetContainer implements jn, in {
         this.field_M.field_F = false;
         this.field_M.painter = (WidgetPainter) ((Object) new oq());
         this.field_W.painter = (WidgetPainter) ((Object) new he());
-        this.field_G.painter = (WidgetPainter) ((Object) new tb(10000536));
+        this.field_G.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
         int var3 = 20;
         int var4 = 4;
         var2.setWidgetBounds(20, var3, 28972, 270, 50);

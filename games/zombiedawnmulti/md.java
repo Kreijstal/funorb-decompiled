@@ -378,7 +378,7 @@ final class md {
           mo.field_Hb = new UiComponent(0L, pn.field_g, cg.field_j);
           hf.field_e = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
           pd.field_b.a((byte) 50, dm.field_ac);
-          if (tb.field_u) {
+          if (GradientOutlineTextPainter.field_u) {
             pd.field_b.a((byte) 50, mo.field_Hb);
           }
           pd.field_b.a((byte) 50, hf.field_e);
@@ -395,17 +395,17 @@ final class md {
           PacketBuffer.field_g = new UiComponent(0L, vd.field_a, vh.field_Nb);
           ud.field_M = new UiComponent(0L, al.field_fb, GameWorld.field_p);
           LaboratoryScreen.field_l = new UiComponent(0L, al.field_fb, ck.field_b);
-          sc.field_d = new UiComponent(0L, al.field_fb, jl.field_t);
+          sc.field_d = new UiComponent(0L, al.field_fb, StatefulTextPainter.field_t);
           InflaterDecompressor.field_h = new UiComponent(0L, al.field_fb, PortalEntryEvent.field_k);
           AgeValidator.field_w = new UiComponent(0L, pn.field_g, fd.field_N);
           SimEntity.field_H = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
           PasswordValidator.field_t = new UiComponent(0L, he.field_i, ContextMenu.field_Gb.toUpperCase());
-          PasswordValidator.field_t.field_Z = tb.field_u;
+          PasswordValidator.field_t.field_Z = GradientOutlineTextPainter.field_u;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
           stackIn_5_2 = 0L;
           stackIn_5_3 = he.field_i;
-          if (!tb.field_u) {
+          if (!GradientOutlineTextPainter.field_u) {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
             stackIn_6_4 = cn.field_C;
@@ -425,13 +425,13 @@ final class md {
           ml.field_Lb.a((byte) 50, PacketBuffer.field_g);
           ml.field_Lb.a((byte) 50, ud.field_M);
           ml.field_Lb.a((byte) 50, LaboratoryScreen.field_l);
-          if (tb.field_u) {
+          if (GradientOutlineTextPainter.field_u) {
             ml.field_Lb.a((byte) 50, sc.field_d);
           }
           ml.field_Lb.a((byte) 50, InflaterDecompressor.field_h);
           ml.field_Lb.a((byte) 50, AgeValidator.field_w);
           ml.field_Lb.a((byte) 50, SimEntity.field_H);
-          if (tb.field_u) {
+          if (GradientOutlineTextPainter.field_u) {
             cm.field_a.a((byte) 50, PasswordValidator.field_t);
           }
           cm.field_a.a((byte) 50, ArrayWidgetGroup.field_L);
@@ -455,7 +455,7 @@ final class md {
           bf.field_n = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
           CipherPacketBuffer.field_r.a((byte) 50, ClientException.field_h);
           CipherPacketBuffer.field_r.a((byte) 50, ie.field_jb);
-          if (tb.field_u) {
+          if (GradientOutlineTextPainter.field_u) {
             CipherPacketBuffer.field_r.a((byte) 50, bf.field_h);
           }
           CipherPacketBuffer.field_r.a((byte) 50, bf.field_n);

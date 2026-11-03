@@ -374,7 +374,7 @@ class MenuScreen {
                                             if (rn.field_f != null) {
                                               rn.a(-128);
                                             }
-                                            cq.a(jl.b(0), false);
+                                            cq.a(StatefulTextPainter.b(0), false);
                                           }
                                           break;
                                         case 50:
@@ -672,7 +672,7 @@ class MenuScreen {
         } else {
           wp.field_h.draw(true, 1);
           SoftwareRasterizer.clearRect(0, 0, 640, 480);
-          ClientException.field_e.h();
+          ClientException.field_e.replaceZeroWithOne();
         }
         SocketConnector.field_h.b((byte) 99);
         ClientException.field_e.drawWithVerticalAlphaGradient(0, 0, var4, var5);
@@ -777,7 +777,7 @@ class MenuScreen {
               if (rn.field_f != null) {
                 rn.a(-36);
               }
-              uq.a(param0 + 3, jl.b(0));
+              uq.a(param0 + 3, StatefulTextPainter.b(0));
             }
             if (var3 == 1) {
               stackIn_16_0 = (ec.field_c) ? 15 : 1;

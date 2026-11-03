@@ -223,7 +223,7 @@ abstract class NetworkGameClient extends GameApplet {
           return;
         }
         String var2 = al.k(103);
-        ra.a(jl.b(0), -44, var2);
+        ra.a(StatefulTextPainter.b(0), -44, var2);
     }
 
     private final void h(int param0) {
@@ -233,7 +233,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var4 = -1 + EmailAvailabilityValidator.field_q;
         byte[] var6 = new byte[var4];
         s.field_e.readCipheredBytes(var4, 0, 0, var6);
-        f.a(jl.b(0), var3 != 0, (byte) -45, qe.a(-2739, var6));
+        f.a(StatefulTextPainter.b(0), var3 != 0, (byte) -45, qe.a(-2739, var6));
     }
 
     final void a(String param0, int param1, byte param2) {
@@ -426,33 +426,33 @@ abstract class NetworkGameClient extends GameApplet {
               a.field_b = 10;
               og.field_N = true;
             } else {
-              wm.a(-1, jl.b(0));
+              wm.a(-1, StatefulTextPainter.b(0));
             }
           }
           if (5 == var4) {
-            cq.a(jl.b(param0 ^ -2197), false);
+            cq.a(StatefulTextPainter.b(param0 ^ -2197), false);
           }
           if (var4 == 6 &&
             hh.field_m) {
             a.field_b = 10;
           }
           if (var4 == 7) {
-            uq.a(jl.b(param0 ^ -2197), 3);
+            uq.a(StatefulTextPainter.b(param0 ^ -2197), 3);
           }
           if (var4 == 8) {
-            wm.a(param0 + 2196, jl.b(0));
+            wm.a(param0 + 2196, StatefulTextPainter.b(0));
           }
           if (var4 == 9) {
-            ji.a(8355711, jl.b(0));
+            ji.a(8355711, StatefulTextPainter.b(0));
           }
           if (var4 == 10) {
             ma.field_a.b((byte) -35, 17);
           }
           if (var4 == 11) {
-            em.a(false, jl.b(0));
+            em.a(false, StatefulTextPainter.b(0));
           }
           if (var4 == 12) {
-            ic.a(jl.b(0), qe.b(6958), 49);
+            ic.a(StatefulTextPainter.b(0), qe.b(6958), 49);
           }
           if (13 == var4) {
             try {

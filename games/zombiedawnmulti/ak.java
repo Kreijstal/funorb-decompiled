@@ -116,7 +116,7 @@ final class ak {
         InfectionEvent.field_j.h(param3, param4, param0);
         SimHuman.field_fb.a(param3, param4, param1);
         vo.field_p.h(param3, -5 + param1 + param4, param0);
-        tb.field_s.a(param0 + param3 - 5, param4, param1);
+        GradientOutlineTextPainter.field_s.a(param0 + param3 - 5, param4, param1);
         rp.field_r[0].c(param3, param4);
         rp.field_r[1].c(param0 + param3 - 5, param4);
         rp.field_r[2].c(param3, param2 + param4 + param1);

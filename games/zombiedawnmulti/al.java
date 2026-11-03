@@ -25,7 +25,7 @@ abstract class al extends df {
             return;
           }
           try {
-            JavaScriptBridge.a(jl.b(0), "resizing", (byte) 23, new Object[]{new Integer(param1)});
+            JavaScriptBridge.a(StatefulTextPainter.b(0), "resizing", (byte) 23, new Object[]{new Integer(param1)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

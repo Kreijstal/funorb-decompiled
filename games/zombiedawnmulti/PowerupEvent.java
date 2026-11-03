@@ -25,7 +25,7 @@ final class PowerupEvent extends GameEvent {
     final static void a(int param0) {
         if (param0 == 6835) {
           lo.field_g = new UiComponent(0L, (UiComponent) null);
-          if (tb.field_u) {
+          if (GradientOutlineTextPainter.field_u) {
             lo.field_g.a((byte) 50, ql.field_b);
           }
           lo.field_g.a((byte) 50, pd.field_b);

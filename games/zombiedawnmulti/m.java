@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class m extends tb {
+final class m extends GradientOutlineTextPainter {
     static UiComponent field_B;
     static UiComponent field_x;
     static String field_A;

@@ -306,26 +306,26 @@ final class fd extends SceneObject {
               vo.field_l = pi.field_a;
               if (ki.field_a.b(7) != uq.field_b) {
                 if (ki.field_a.b(7) == ArrayWidgetGroup.field_G) {
-                  RasterBuffer.field_c.a(-100, jl.b(0));
+                  RasterBuffer.field_c.a(-100, StatefulTextPainter.b(0));
                 }
               } else {
-                wp.field_b.a(-108, jl.b(0));
+                wp.field_b.a(-108, StatefulTextPainter.b(0));
               }
               UiTheme.field_j = false;
               if (var11 != null) {
-                jh.a(jl.b(0), param0 ^ -15, var11);
+                jh.a(StatefulTextPainter.b(0), param0 ^ -15, var11);
               }
               if (vl.field_h <= 0 &&
                 !fj.field_M) {
                 try {
-                  JavaScriptBridge.b(jl.b(0), 13093, "unzap");
+                  JavaScriptBridge.b(StatefulTextPainter.b(0), 13093, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.a(jl.b(0), "zap", (byte) 23, new Object[]{RandomAccessCacheFile.a(ii.field_d, (byte) 26)});
+                  JavaScriptBridge.a(StatefulTextPainter.b(0), "zap", (byte) 23, new Object[]{RandomAccessCacheFile.a(ii.field_d, (byte) 26)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

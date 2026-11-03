@@ -15,7 +15,7 @@ abstract class SpriteState extends DualLinkNode {
     static int[] field_q;
 
     final static void f(int param0) {
-        og.a(0, jl.b(0));
+        og.a(0, StatefulTextPainter.b(0));
         int var1 = -5 % ((33 - param0) / 60);
     }
 

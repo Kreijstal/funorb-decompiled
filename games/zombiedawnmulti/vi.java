@@ -153,7 +153,7 @@ final class vi {
               var12.field_Ub = new UiComponent(0L, m.field_x);
               var12.a((byte) 50, var12.field_Ub);
               var12.field_Gb = new UiComponent(0L, wc.field_H);
-              if (tb.field_u) {
+              if (GradientOutlineTextPainter.field_u) {
                 var12.a((byte) 50, var12.field_Gb);
               }
               var12.field_Gb.field_R = 2;
@@ -274,7 +274,7 @@ final class vi {
               stackIn_103_2 = var19;
               stackIn_103_3 = -var25_int;
               stackIn_103_4 = var12.field_zb;
-              if (!tb.field_u) {
+              if (!GradientOutlineTextPainter.field_u) {
                 stackIn_104_5 = 0;
               } else {
                 stackIn_104_5 = 42;
@@ -352,7 +352,7 @@ final class vi {
                       var24Lifetime2 = vl.a(oi.field_a, new String[]{null, Integer.toString(var6)}, 2);
                     } else {
                       if ((~var12.field_Vb & var8) != 0) {
-                        var25_int = vl.a(var8 & ~var12.field_Vb, (byte) -103);
+                        var25_int = vl.highestOneBit(var8 & ~var12.field_Vb, (byte) -103);
                         var24Lifetime2 = af.field_c;
                         if (0 < var25_int &&
                           ki.field_o != null &&
@@ -378,7 +378,7 @@ final class vi {
                   } else {
                     if (var6 <= var12.field_Mb) {
                       if (0 != (~var12.field_Vb & var8)) {
-                        var25_int = vl.a(var8 & ~var12.field_Vb, (byte) -103);
+                        var25_int = vl.highestOneBit(var8 & ~var12.field_Vb, (byte) -103);
                         var24Lifetime2 = vl.a(ap.field_r, new String[]{var20}, 2);
                         if (var25_int > 0 &&
                           null != ki.field_o &&

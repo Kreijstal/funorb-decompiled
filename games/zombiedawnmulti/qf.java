@@ -50,7 +50,7 @@ final class qf {
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param2 != 2) {
-            qf.a(67, '\026');
+            qf.foldAccountNameCharacter(67, '\026');
           }
           if (param1 < param3) {
             var5_int = (param3 + param1) / 2;
@@ -114,7 +114,7 @@ final class qf {
         }
     }
 
-    final static char a(int param0, char param1) {
+    final static char foldAccountNameCharacter(int param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;

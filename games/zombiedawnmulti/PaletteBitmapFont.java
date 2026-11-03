@@ -123,7 +123,7 @@ final class PaletteBitmapFont extends BitmapFont {
         }
     }
 
-    private final static int a(int[] param0, int param1) {
+    private final static int findNearestPaletteIndex(int[] param0, int param1) {
         int var4 = 0;
         int var2;
         int var3;
@@ -253,6 +253,6 @@ final class PaletteBitmapFont extends BitmapFont {
     }
 
     final int findNearestBasePaletteIndex(int param0) {
-        return PaletteBitmapFont.a(this.colorPalettes[0], param0);
+        return PaletteBitmapFont.findNearestPaletteIndex(this.colorPalettes[0], param0);
     }
 }

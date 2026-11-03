@@ -24,7 +24,7 @@ final class InflaterDecompressor {
         field_f = null;
     }
 
-    final void a(byte[] param0, PacketBuffer param1, int param2) {
+    final void decompress(byte[] param0, PacketBuffer param1, int param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;

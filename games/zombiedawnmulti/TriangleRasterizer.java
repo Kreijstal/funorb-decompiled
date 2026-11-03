@@ -41,7 +41,7 @@ final class TriangleRasterizer {
         field_e = null;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static void drawFlatSpan(int[] param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
@@ -224,7 +224,7 @@ final class TriangleRasterizer {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param4 >> 16);
                   param4 = param4 + var9;
                   param3 = param3 + var7;
                   param0 = param0 + SoftwareRasterizer.width;
@@ -234,7 +234,7 @@ final class TriangleRasterizer {
               }
               param1--;
               while (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var8;
                 param3 = param3 + var7;
                 param0 = param0 + SoftwareRasterizer.width;
@@ -248,7 +248,7 @@ final class TriangleRasterizer {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param4 >> 16, param3 >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param0, param6, 0, param4 >> 16, param3 >> 16);
                 param4 = param4 + var9;
                 param3 = param3 + var7;
                 param0 = param0 + SoftwareRasterizer.width;
@@ -258,7 +258,7 @@ final class TriangleRasterizer {
             }
             param1--;
             while (param1 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var8;
               param3 = param3 + var7;
               param0 = param0 + SoftwareRasterizer.width;
@@ -289,7 +289,7 @@ final class TriangleRasterizer {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var9;
                 param3 = param3 + var7;
                 param0 = param0 + SoftwareRasterizer.width;
@@ -299,7 +299,7 @@ final class TriangleRasterizer {
             }
             param2--;
             while (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param4 >> 16, param5 >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param0, param6, 0, param4 >> 16, param5 >> 16);
               param5 = param5 + var9;
               param4 = param4 + var8;
               param0 = param0 + SoftwareRasterizer.width;
@@ -313,7 +313,7 @@ final class TriangleRasterizer {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var9;
               param3 = param3 + var7;
               param0 = param0 + SoftwareRasterizer.width;
@@ -323,7 +323,7 @@ final class TriangleRasterizer {
           }
           param2--;
           while (param2 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param4 >> 16);
+            TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param4 >> 16);
             param5 = param5 + var9;
             param4 = param4 + var8;
             param0 = param0 + SoftwareRasterizer.width;
@@ -362,7 +362,7 @@ final class TriangleRasterizer {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param3 >> 16);
                   param3 = param3 + var8;
                   param5 = param5 + var9;
                   param2 = param2 + SoftwareRasterizer.width;
@@ -372,7 +372,7 @@ final class TriangleRasterizer {
               }
               param0--;
               while (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var7;
                 param5 = param5 + var9;
                 param2 = param2 + SoftwareRasterizer.width;
@@ -386,7 +386,7 @@ final class TriangleRasterizer {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param3 >> 16, param5 >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param2, param6, 0, param3 >> 16, param5 >> 16);
                 param3 = param3 + var8;
                 param5 = param5 + var9;
                 param2 = param2 + SoftwareRasterizer.width;
@@ -396,7 +396,7 @@ final class TriangleRasterizer {
             }
             param0--;
             while (param0 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var7;
               param5 = param5 + var9;
               param2 = param2 + SoftwareRasterizer.width;
@@ -424,7 +424,7 @@ final class TriangleRasterizer {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var8;
                 param5 = param5 + var9;
                 param2 = param2 + SoftwareRasterizer.width;
@@ -434,7 +434,7 @@ final class TriangleRasterizer {
             }
             param1--;
             while (param1 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param3 >> 16, param4 >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param2, param6, 0, param3 >> 16, param4 >> 16);
               param4 = param4 + var8;
               param3 = param3 + var7;
               param2 = param2 + SoftwareRasterizer.width;
@@ -448,7 +448,7 @@ final class TriangleRasterizer {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var8;
               param5 = param5 + var9;
               param2 = param2 + SoftwareRasterizer.width;
@@ -458,7 +458,7 @@ final class TriangleRasterizer {
           }
           param1--;
           while (param1 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param3 >> 16);
+            TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param3 >> 16);
             param4 = param4 + var8;
             param3 = param3 + var7;
             param2 = param2 + SoftwareRasterizer.width;
@@ -496,7 +496,7 @@ final class TriangleRasterizer {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param5 >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param5 >> 16);
                 param5 = param5 + var7;
                 param4 = param4 + var8;
                 param1 = param1 + SoftwareRasterizer.width;
@@ -506,7 +506,7 @@ final class TriangleRasterizer {
             }
             param2--;
             while (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var9;
               param4 = param4 + var8;
               param1 = param1 + SoftwareRasterizer.width;
@@ -520,7 +520,7 @@ final class TriangleRasterizer {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param5 >> 16, param4 >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param1, param6, 0, param5 >> 16, param4 >> 16);
               param5 = param5 + var7;
               param4 = param4 + var8;
               param1 = param1 + SoftwareRasterizer.width;
@@ -530,7 +530,7 @@ final class TriangleRasterizer {
           }
           param2--;
           while (param2 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
+            TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var9;
             param4 = param4 + var8;
             param1 = param1 + SoftwareRasterizer.width;
@@ -561,7 +561,7 @@ final class TriangleRasterizer {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var7;
               param4 = param4 + var8;
               param1 = param1 + SoftwareRasterizer.width;
@@ -571,7 +571,7 @@ final class TriangleRasterizer {
           }
           param0--;
           while (param0 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param5 >> 16, param3 >> 16);
+            TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param1, param6, 0, param5 >> 16, param3 >> 16);
             param3 = param3 + var7;
             param5 = param5 + var9;
             param1 = param1 + SoftwareRasterizer.width;
@@ -585,7 +585,7 @@ final class TriangleRasterizer {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
+            TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var7;
             param4 = param4 + var8;
             param1 = param1 + SoftwareRasterizer.width;
@@ -595,7 +595,7 @@ final class TriangleRasterizer {
         }
         param0--;
         while (param0 >= 0) {
-          TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param5 >> 16);
+          TriangleRasterizer.drawFlatSpan(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param5 >> 16);
           param3 = param3 + var7;
           param5 = param5 + var9;
           param1 = param1 + SoftwareRasterizer.width;

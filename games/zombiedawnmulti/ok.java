@@ -473,10 +473,10 @@ final class ok {
             ok.e(112);
           }
           param2.b((byte) -35, 59);
-          param2.a(param3, (byte) -87);
+          param2.writeShort(param3, (byte) -87);
           param2.writeByte(123, param5);
-          param2.a(param4, (byte) -112);
-          param2.a(param1, (byte) -50);
+          param2.writeShort(param4, (byte) -112);
+          param2.writeShort(param1, (byte) -50);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ok.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

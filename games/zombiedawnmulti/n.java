@@ -12,7 +12,7 @@ final class n extends IntrusiveNode {
         if (dk.field_Ib != null) {
           SpriteState.a(95, dk.field_Ib);
         }
-        tb.b(4862);
+        GradientOutlineTextPainter.b(4862);
         if (param0) {
           return;
         }

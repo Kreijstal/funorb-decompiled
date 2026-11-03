@@ -561,12 +561,12 @@ final class IndexedSprite extends IndexedSpriteState {
           if (var5 <= 0) {
             return;
           }
-          IndexedSprite.a(0, this.pixelIndices, var4, var3, 0, SoftwareRasterizer.pixels, this.palette, var6, var7, var8, 0, var5);
+          IndexedSprite.blitPaletteRuns(0, this.pixelIndices, var4, var3, 0, SoftwareRasterizer.pixels, this.palette, var6, var7, var8, 0, var5);
           return;
         }
     }
 
-    private final static void a(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitPaletteRuns(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         param10 = -param11;
@@ -720,7 +720,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         int var17 = 0;

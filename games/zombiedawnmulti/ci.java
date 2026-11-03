@@ -139,7 +139,7 @@ final class ci {
           stackIn_6_0 = ie.field_jb;
           stackIn_6_1 = 18;
           stackIn_6_2 = 2 + jk.field_f;
-          if (tb.field_u) {
+          if (GradientOutlineTextPainter.field_u) {
             stackIn_7_3 = 2 + (40 + DualLinkNode.field_o) + 2;
           } else {
             stackIn_7_3 = 0;

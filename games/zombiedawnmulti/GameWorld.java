@@ -334,7 +334,7 @@ class GameWorld {
             var8.writeString(param1, (byte) 105);
           }
           if (param3 == null) {
-            var8.a(param0, (byte) -71);
+            var8.writeShort(param0, (byte) -71);
           } else {
             GameEvent.a(var8, param3, -31746);
           }

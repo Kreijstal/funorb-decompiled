@@ -1117,7 +1117,7 @@ final class LaboratoryScreen extends MenuScreen {
         if (param0 >= -85) {
           field_n = 43;
         }
-        jl.field_u.c(600, 10);
+        StatefulTextPainter.field_u.drawHalfSize(600, 10);
         if (ud.field_S) {
           SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, 64);
           var6 = 10;

@@ -328,8 +328,8 @@ final class tg implements Runnable {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param0.charAt(var6);
-            if (lo.a(8192, (char) var7)) {
-              var8 = qf.a(28233, (char) var7);
+            if (lo.isAccountNameCharacter(8192, (char) var7)) {
+              var8 = qf.foldAccountNameCharacter(28233, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

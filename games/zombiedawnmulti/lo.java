@@ -89,7 +89,7 @@ final class lo {
         field_e = null;
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAccountNameCharacter(int param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

@@ -14,7 +14,7 @@ final class PasswordValidator extends TextInputValidator {
     static hn[] field_x;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        jl.a(jk.field_f, (byte) -97, jo.field_f, param2, param1, param0, nj.field_h);
+        StatefulTextPainter.a(jk.field_f, (byte) -97, jo.field_f, param2, param1, param0, nj.field_h);
         if (param3 != 0) {
           String var5 = (String) null;
           PasswordValidator.a(-113, (String) null, (String) null);

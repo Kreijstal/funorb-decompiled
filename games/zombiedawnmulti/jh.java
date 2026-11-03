@@ -191,7 +191,7 @@ final class jh extends UiComponent {
               if (~param2.length() == param1) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + ke.a(-29971, bl.a((byte) 113) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + ke.formatCookieDate(-29971, bl.a((byte) 113) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
               JavaScriptBridge.evaluateScript(param0, 14575, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {

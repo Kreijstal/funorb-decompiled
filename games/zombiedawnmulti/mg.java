@@ -103,13 +103,13 @@ final class mg extends SceneObject {
               TextInputWidget.field_R.b(-16171, var8);
               var15 = (CharSequence) ((Object) param4);
               TextInputWidget.field_R.b(-16171, SpriteState.a(-50, var15));
-              TextInputWidget.field_R.a(param5, (byte) -91);
+              TextInputWidget.field_R.writeShort(param5, (byte) -91);
               TextInputWidget.field_R.writeByte(param6 ^ 37, param2);
               TextInputWidget.field_R.writeByte(param6 ^ 19, var9);
               ma.field_a.writeByte(120, 18);
               ma.field_a.position = ma.field_a.position + 2;
               var10 = ma.field_a.position;
-              var11_ref_StringLifetime4 = wg.a(0, jl.b(param6 + 92));
+              var11_ref_StringLifetime4 = wg.a(0, StatefulTextPainter.b(param6 + 92));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
@@ -130,7 +130,7 @@ final class mg extends SceneObject {
               vo.field_l = sa.field_n;
             } else {
               if (248 == var9Lifetime1) {
-                og.a(param6 ^ -92, jl.b(0));
+                og.a(param6 ^ -92, StatefulTextPainter.b(0));
                 ol.field_q = SimUnit.field_Y;
                 ak.a((byte) -115);
                 UiTheme.field_j = false;
@@ -170,7 +170,7 @@ final class mg extends SceneObject {
             if (PortalEntryEvent.field_i == 255) {
               var9_ref_String = s.field_e.readNullableString((byte) -89);
               if (var9_ref_String != null) {
-                jh.a(jl.b(0), -1, var9_ref_String);
+                jh.a(StatefulTextPainter.b(0), -1, var9_ref_String);
               }
             } else {
               ol.field_q = s.field_e.readString((byte) -71);

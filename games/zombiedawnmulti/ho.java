@@ -357,7 +357,7 @@ final class ho extends MenuScreen {
             var4 = param2;
           }
           var5 = new WhirlpoolHasher();
-          var5.b(32);
+          var5.reset(32);
           if (param0 != 4246) {
             stackIn_12_0 = (byte[]) null;
             return stackIn_12_0;

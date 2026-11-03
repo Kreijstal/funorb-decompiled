@@ -62,7 +62,7 @@ abstract class mp {
           TextInputWidget.field_R.writeInt(-118, TertiaryLinkDeque.field_c.nextInt());
           TextInputWidget.field_R.writeByte(123, param2);
           TextInputWidget.field_R.writeByte(-67, param1);
-          TextInputWidget.field_R.a(param3, (byte) -128);
+          TextInputWidget.field_R.writeShort(param3, (byte) -128);
           TextInputWidget.field_R.a(UsernameAvailabilityValidator.field_v, -2628, ButtonWidget.field_L);
           ma.field_a.b((byte) -35, 18);
           fieldTemp$0 = ma.field_a.position + 1;

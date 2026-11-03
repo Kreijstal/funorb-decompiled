@@ -118,7 +118,7 @@ final class AudioFilter {
           }
           if (var4 != 0 ||
             this.gainEndpoints[1] != this.gainEndpoints[0]) {
-            param1.a(param0);
+            param1.decodeSegments(param0);
           }
         } else {
           var11 = this.gainEndpoints;

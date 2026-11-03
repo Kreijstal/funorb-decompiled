@@ -37,7 +37,7 @@ final class RandomAccessCacheFile {
         field_b = null;
     }
 
-    final int a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final int read(int param0, byte[] param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;

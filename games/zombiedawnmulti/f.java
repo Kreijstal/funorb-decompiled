@@ -138,7 +138,7 @@ final class f {
           RuntimeException var4_ref = null;
           try {
             if (PlatformTaskDispatcher.field_l.startsWith("win") &&
-              va.a(9805, param3)) {
+              va.openUrlWithShell(9805, param3)) {
               return;
             }
             try {

@@ -117,12 +117,12 @@ final class mo extends UiComponent {
     final static void a(int param0, PacketBuffer param1, int param2, int param3, byte param4) {
         try {
           param1.writeByte(-120, 12);
-          param1.a(17, (byte) -56);
+          param1.writeShort(17, (byte) -56);
           if (param4 != -124) {
             field_Gb = 73L;
           }
-          param1.a(param0, (byte) -70);
-          param1.a(param3, (byte) -42);
+          param1.writeShort(param0, (byte) -70);
+          param1.writeShort(param3, (byte) -42);
           param1.writeByte(-118, param2);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "mo.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

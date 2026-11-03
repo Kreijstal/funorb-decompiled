@@ -294,7 +294,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_gamelist_avg_rating", (byte) 83);
                 if (null != var2) {
-                  jl.field_t = qe.a(-2739, var2);
+                  StatefulTextPainter.field_t = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_gamelist_options", (byte) 83);
                 if (null != var2) {
@@ -1108,7 +1108,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("logging_in", (byte) 83);
                 if (null != var2) {
-                  jl.field_v = qe.a(-2739, var2);
+                  StatefulTextPainter.field_v = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("reconnect", (byte) 83);
                 if (var2 != null) {

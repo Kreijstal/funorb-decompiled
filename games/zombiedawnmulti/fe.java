@@ -508,11 +508,11 @@ final class fe extends WidgetContainer implements co, in, jn {
         this.field_S.field_F = false;
         this.field_S.painter = (WidgetPainter) ((Object) new oq());
         this.field_O.painter = (WidgetPainter) ((Object) new he());
-        this.field_V.painter = (WidgetPainter) ((Object) new tb(10000536));
-        tb dupTemp$0 = new tb(10000536);
+        this.field_V.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
+        GradientOutlineTextPainter dupTemp$0 = new GradientOutlineTextPainter(10000536);
         this.field_T.painter = (WidgetPainter) ((Object) dupTemp$0);
         this.field_M.painter = (WidgetPainter) ((Object) dupTemp$0);
-        this.field_N.painter = (WidgetPainter) ((Object) new tb(10000536));
+        this.field_N.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
         this.field_H.painter = (WidgetPainter) ((Object) new ib());
         m dupTemp$1 = new m(10000536);
         this.field_I.painter = (WidgetPainter) ((Object) dupTemp$1);

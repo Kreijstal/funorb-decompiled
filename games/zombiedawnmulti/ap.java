@@ -89,8 +89,8 @@ final class ap extends qb {
           var6 = SoftwareRasterizer.width;
           var7 = SoftwareRasterizer.height;
           var17 = SoftwareRasterizer.pixels;
-          tb.field_v = new Sprite(10, 14);
-          tb.field_v.bindAsRenderTarget();
+          GradientOutlineTextPainter.field_v = new Sprite(10, 14);
+          GradientOutlineTextPainter.field_v.bindAsRenderTarget();
           for (var9 = 2; 7 > var9; var9++) {
             SoftwareRasterizer.drawVerticalLine(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
@@ -391,7 +391,7 @@ final class ap extends qb {
             this.field_b.position = param0;
             this.field_b.writeByte(124, 6);
             this.field_b.writeMedium(3, -8593);
-            this.field_b.a(0, (byte) -55);
+            this.field_b.writeShort(0, (byte) -55);
             this.field_q.a(0, param0 - 100, this.field_b.payload.length, this.field_b.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

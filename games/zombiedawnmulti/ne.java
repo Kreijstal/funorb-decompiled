@@ -148,7 +148,7 @@ class ne extends ie implements in {
             PowerupButton.a(3, 118);
             this.m(-7435);
           } else {
-            ic.a(jl.b(0), "tochangedisplayname.ws", 114);
+            ic.a(StatefulTextPainter.b(0), "tochangedisplayname.ws", 114);
           }
           if (param3 < -83) {
             return;

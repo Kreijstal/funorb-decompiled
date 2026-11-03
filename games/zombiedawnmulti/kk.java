@@ -53,7 +53,7 @@ abstract class kk extends DualLinkNode {
         var3.b((byte) -35, param2);
         var3.writeByte(109, 3);
         var3.writeByte(-59, 10);
-        var3.a(param1, (byte) -110);
+        var3.writeShort(param1, (byte) -110);
         int var4 = -18 / ((-55 - param0) / 40);
     }
 

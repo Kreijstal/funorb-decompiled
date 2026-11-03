@@ -186,7 +186,7 @@ class PacketBuffer extends IntrusiveNode {
         return this.readUnsignedShort((byte) 69) - 49152;
     }
 
-    final void a(int param0, byte param1) {
+    final void writeShort(int param0, byte param1) {
         if (param1 >= -41) {
           field_h = (String) null;
         }
@@ -364,7 +364,7 @@ class PacketBuffer extends IntrusiveNode {
           var7 = var6.modPow(param0, param2);
           var8 = var7.toByteArray();
           this.position = 0;
-          this.a(var8.length, (byte) -101);
+          this.writeShort(var8.length, (byte) -101);
           this.writeBytes(var8, var8.length, 0, param1 ^ -2617);
           if (param1 != -2628) {
             field_l = (PcmStreamMixer) null;
@@ -485,7 +485,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         if (param0 < 16384 &&
           param0 >= -16384) {
-          this.a(param0 + 49152, (byte) -83);
+          this.writeShort(param0 + 49152, (byte) -83);
           return;
         }
         if (param1 != 0) {
@@ -697,7 +697,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         if (param0 >= 0 &&
           param0 < 32768) {
-          this.a(param0 + 32768, (byte) -75);
+          this.writeShort(param0 + 32768, (byte) -75);
           return;
         }
         int var3 = 22 % ((param1 - 0) / 46);

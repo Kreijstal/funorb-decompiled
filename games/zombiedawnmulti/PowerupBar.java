@@ -345,7 +345,7 @@ final class PowerupBar {
             if (bk.field_g) {
               return;
             }
-            el.field_E.c(1 + var3Lifetime2, var4 + 1);
+            el.field_E.drawHalfSize(1 + var3Lifetime2, var4 + 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

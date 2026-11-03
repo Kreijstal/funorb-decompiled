@@ -5,7 +5,7 @@ final class va {
     static String field_b;
     static int field_a;
 
-    final static boolean a(int param0, String param1) {
+    final static boolean openUrlWithShell(int param0, String param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

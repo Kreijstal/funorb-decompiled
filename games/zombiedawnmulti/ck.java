@@ -406,7 +406,7 @@ final class ck {
           if (param1 != -1) {
             field_b = (String) null;
           }
-          if (!lo.a(8192, param0)) {
+          if (!lo.isAccountNameCharacter(8192, param0)) {
             return false;
           }
           if (param2 == null) {

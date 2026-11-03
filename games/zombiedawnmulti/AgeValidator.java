@@ -69,9 +69,9 @@ final class AgeValidator extends TextInputValidator {
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(108, 1);
-          var8.a(param0.field_i, (byte) -95);
-          var8.a(param0.field_v, (byte) -76);
-          var8.a(param0.field_t, (byte) -66);
+          var8.writeShort(param0.field_i, (byte) -95);
+          var8.writeShort(param0.field_v, (byte) -76);
+          var8.writeShort(param0.field_t, (byte) -66);
           var8.writeInt(-116, param0.field_w);
           var8.writeInt(-99, param0.field_x);
           var8.writeInt(122, param0.field_l);

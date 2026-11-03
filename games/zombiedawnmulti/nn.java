@@ -89,9 +89,9 @@ final class nn {
         }
         if (param0 < 21) {
           nn.b(-111);
-          return (java.awt.Container) ((Object) jl.b(0));
+          return (java.awt.Container) ((Object) StatefulTextPainter.b(0));
         }
-        return (java.awt.Container) ((Object) jl.b(0));
+        return (java.awt.Container) ((Object) StatefulTextPainter.b(0));
     }
 
     final static void a(int param0, int param1, byte[] param2, int param3) {

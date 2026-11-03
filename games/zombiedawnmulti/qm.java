@@ -229,7 +229,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
             this.field_J = new ButtonWidget(oe.field_b, (WidgetListener) null);
             this.field_H.field_F = false;
           }
-          this.field_H.painter = (WidgetPainter) ((Object) new tb(10000536));
+          this.field_H.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
           this.field_M.painter = (WidgetPainter) ((Object) new m(10000536));
           var6 = new oq();
           this.field_G.painter = (WidgetPainter) ((Object) var6);
@@ -259,7 +259,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
             this.field_i = this.field_i + (var7.measureWrappedHeight(this.field_O, this.field_n - 40, var7.maxAscent) + 5);
           }
           var8 = SimPortal.field_M;
-          var9 = me.a(-57, jl.b(0));
+          var9 = me.a(-57, StatefulTextPainter.b(0));
           if (wp.field_b != var9) {
             if (RasterBuffer.field_c == var9) {
               var8 = lj.field_f;

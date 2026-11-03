@@ -325,7 +325,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         if (param1 <= 89) {
           return;
         }
-        var3.a(param2, (byte) -69);
+        var3.writeShort(param2, (byte) -69);
     }
 
     final boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {

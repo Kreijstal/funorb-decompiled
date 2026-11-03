@@ -142,7 +142,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_f = true;
             System.out.println("error_game_" + param1);
             try {
-              JavaScriptBridge.b(jl.b(param0 ^ 27200), 13093, "loggedout");
+              JavaScriptBridge.b(StatefulTextPainter.b(param0 ^ 27200), 13093, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -555,7 +555,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               if (param3 != 32000) {
                 field_g = (String) null;
               }
-              NetworkGameClient.field_w = jl.b(0);
+              NetworkGameClient.field_w = StatefulTextPainter.b(0);
               dupTemp$0 = new PlatformTaskDispatcher(param2, param5, param6, true);
               ArrayWidgetGroup.field_J = dupTemp$0;
               kk.field_y = dupTemp$0;
@@ -724,7 +724,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var3.b((byte) -35, param2);
           var3.writeByte(-128, 5);
           var3.writeByte(123, 0);
-          var3.a(param1.field_l, (byte) -44);
+          var3.writeShort(param1.field_l, (byte) -44);
           var3.writeByte(126, param1.field_k);
           var3.writeByte(111, param1.field_f);
           return;

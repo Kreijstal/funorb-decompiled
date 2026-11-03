@@ -176,7 +176,7 @@ final class qi {
             RasterBuffer.field_e.writeInt(-128, var13[var11]);
             var11++;
           }
-          RasterBuffer.field_e.a(param3, (byte) -82);
+          RasterBuffer.field_e.writeShort(param3, (byte) -82);
           RasterBuffer.field_e.a(param4, -2628, param2);
           param6.writeBytes(RasterBuffer.field_e.payload, RasterBuffer.field_e.position, 0, 127);
           param6.writeBytes(UnitStateEvent.field_k.payload, UnitStateEvent.field_k.position, 0, 122);

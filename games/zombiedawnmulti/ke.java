@@ -30,7 +30,7 @@ final class ke {
           ah.field_e.colorPalettes[param1][rj.field_F] = param3;
           ah.field_e.colorPalettes[param1][wm.field_Q[0]] = param4;
           if (param2 != -17895) {
-            ke.a(92, -5L);
+            ke.formatCookieDate(92, -5L);
           }
           for (var5_int = 1; wm.field_Q.length > var5_int; var5_int++) {
             ah.field_e.colorPalettes[param1][wm.field_Q[var5_int]] = ui.a(ah.field_e.colorPalettes[param1][wm.field_Q[var5_int - 1]], false);
@@ -43,7 +43,7 @@ final class ke {
         }
     }
 
-    final static String a(int param0, long param1) {
+    final static String formatCookieDate(int param0, long param1) {
         int var9 = 0;
         int var9Lifetime1;
         cp.field_U.setTime(new Date(param1));
