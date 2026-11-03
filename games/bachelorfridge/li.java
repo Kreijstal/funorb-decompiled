@@ -13,16 +13,16 @@ final class li extends lw {
         RuntimeException var1 = null;
         var3 = BachelorFridge.field_y;
         try {
-          cma.field_x = new js(256);
+          InsanoSauceAnimation.field_x = new IntrusiveNodeHashTable(256);
           var1_int = -102 / ((-53 - param0) / 51);
           for (var2 = 0; dq.field_a.length > var2; var2++) {
-            cma.field_x.a((long)dq.field_a[var2].toLowerCase().hashCode(), (byte) 76, new ji(var2));
+            InsanoSauceAnimation.field_x.a((long)dq.field_a[var2].toLowerCase().hashCode(), (byte) 76, new ji(var2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "li.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "li.B(" + param0 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class li extends lw {
             var6 = param2;
           } else {
             var8 = (CharSequence) ((Object) param2);
-            var4_long = mp.a(var8, true);
+            var4_long = MassPoisonSpecial.a(var8, true);
           }
           stackIn_6_0 = ov.a(var4_long, param1, (String) (var6), param3, (byte) 58);
           return stackIn_6_0;
@@ -76,7 +76,7 @@ final class li extends lw {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class li extends lw {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -46) {
           field_l = (cf) null;
           field_l = null;
@@ -100,7 +100,7 @@ final class li extends lw {
     }
 
     li() {
-        super(true, new String[]{bga.field_h, ur.field_m}, bp.field_w);
+        super(true, new String[]{bga.field_h, WhirlpoolDigest.field_m}, AttackUpAllAnimation.field_w);
         this.field_c = new int[][]{new int[]{250, 195}, new int[]{320, 400}};
     }
 
@@ -114,7 +114,7 @@ final class li extends lw {
             0 != this.field_e) {
             this.b(1);
             if (this.c((byte) 95)) {
-              fla.b(23621);
+              ShieldSpecial.b(23621);
             }
           }
         }

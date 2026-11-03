@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class am extends vf {
-    static kv[] field_M;
+    static Sprite[] field_M;
     private int field_L;
     private int field_I;
     static long field_K;
@@ -53,18 +53,18 @@ abstract class am extends vf {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = BachelorFridge.field_y;
-        dg.b(param2 + 6, param0 + 35, -12 + this.field_p, -40 + this.field_q, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(param2 + 6, param0 + 35, -12 + this.width, -40 + this.height, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param0;
         while (var4 > var7) {
-          if (dg.field_j <= var8 &&
-            var8 < dg.field_k) {
+          if (SoftwareRasterizer.field_j <= var8 &&
+            var8 < SoftwareRasterizer.field_k) {
             var9 = var7 * (-var5 + var6) / var4 + var5;
             var10 = 0;
-            var11 = this.field_p;
+            var11 = this.width;
             if (20 >= var7) {
               while (var10 <= 20) {
                 var12 = (20 - var10) * (-var10 + 20) + (-var7 + 20) * (-var7 + 20);
@@ -74,7 +74,7 @@ abstract class am extends vf {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  dg.field_e[var8 * dg.field_i + param2 + var10] = var13;
+                  SoftwareRasterizer.field_e[var8 * SoftwareRasterizer.field_i + param2 + var10] = var13;
                 }
                 var10++;
               }
@@ -90,7 +90,7 @@ abstract class am extends vf {
                   } else {
                     var15 = (-var14 + 462) * var9 / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    dg.field_e[param2 + (dg.field_i * var8 + var11)] = var15;
+                    SoftwareRasterizer.field_e[param2 + (SoftwareRasterizer.field_i * var8 + var11)] = var15;
                   }
                   var11++;
                   continue;
@@ -100,7 +100,7 @@ abstract class am extends vf {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            dg.e(param2 + var10, var8, var11 - var10, var9);
+            SoftwareRasterizer.drawHorizontalLine(param2 + var10, var8, var11 - var10, var9);
           }
           var8++;
           var7++;
@@ -114,24 +114,24 @@ abstract class am extends vf {
         while (var4Lifetime1 > var7Lifetime1) {
           var10Lifetime1 = var7Lifetime1 * (var6Lifetime1 - var5Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var10Lifetime1 = var10Lifetime1 | (var10Lifetime1 << 16 | var10Lifetime1 << 8);
-          dg.e(param2, var8Lifetime1, 6, var10Lifetime1);
-          dg.e(-6 + param2 + this.field_p, var8Lifetime1, 6, var10Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var10Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + param2 + this.width, var8Lifetime1, 6, var10Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        gt.field_s.e(-90 + (param2 + this.field_p), 10 + param0);
-        ao.a(param2 + 5, oea.field_s, this.field_p - 10, (byte) -128, param0 + 35);
-        ao.a(param2, jw.field_v, this.field_p, (byte) -128, this.field_q + (param0 - 22));
+        gt.field_s.draw(-90 + (param2 + this.width), 10 + param0);
+        ao.a(param2 + 5, oea.field_s, this.width - 10, (byte) -128, param0 + 35);
+        ao.a(param2, LevitateAnimation.field_v, this.width, (byte) -128, this.height + (param0 - 22));
         var5Lifetime2 = 169;
-        var4Lifetime2 = this.field_q - 79;
+        var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var7Lifetime2 = 0;
         var8Lifetime2 = param0 + 57;
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          dg.e(param2, var8Lifetime2, 6, var9Lifetime2);
-          dg.e(this.field_p + (param2 - 6), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(this.width + (param2 - 6), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }
@@ -147,8 +147,8 @@ abstract class am extends vf {
         if (param1 != 26012) {
           return;
         }
-        this.field_I = this.field_p;
-        this.field_N = this.field_q;
+        this.field_I = this.width;
+        this.field_N = this.height;
         this.field_L = 0;
         this.field_P = param3;
     }

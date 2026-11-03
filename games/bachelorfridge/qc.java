@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qc {
-    static sna field_b;
+    static UiComponent field_b;
     int field_d;
     private int field_f;
     private int field_c;
@@ -10,7 +10,7 @@ final class qc {
     static String field_e;
 
     final void a(byte param0, pd param1) {
-        if (this.field_f >= qga.field_p[this.field_c]) {
+        if (this.field_f >= OneSpecial.field_p[this.field_c]) {
           return;
         }
         try {
@@ -20,28 +20,28 @@ final class qc {
             this.field_c = 122;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(je param0, int param1) {
+    final static void a(PcmSampleStream param0, int param1) {
         if (param1 != -2490) {
           return;
         }
         try {
           saa.field_a.b(param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     qc(int param0) {
         this.field_c = param0;
-        this.field_d = qga.field_p[this.field_c];
+        this.field_d = OneSpecial.field_p[this.field_c];
         this.field_a = new pd[this.field_d];
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 15) {
           field_e = (String) null;
           field_e = null;

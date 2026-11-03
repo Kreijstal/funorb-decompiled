@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pka implements qda {
-    static sna[] field_b;
+final class pka implements WidgetRenderer {
+    static UiComponent[] field_b;
     private int field_d;
     static boolean field_f;
-    private po field_c;
+    private BitmapFont field_c;
     static String field_a;
     private int field_e;
 
-    public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -22,43 +22,43 @@ final class pka implements qda {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        lu var12 = null;
+        PacketBuffer var12 = null;
         var11 = BachelorFridge.field_y;
         try {
-          if (!param1.field_t &&
-            !param1.e(param2 - 31656)) {
+          if (!param1.mouseOver &&
+            !param1.isFocused(param2 - 31656)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param0 + param1.field_s, param3 + param1.field_v, param1.field_p, param1.field_q, var6_int, -1, this.field_d, this.field_e, this.field_c.field_u + this.field_c.field_B);
-          if (param1.e(1023)) {
-            var7 = this.field_c.a(param1.field_w);
+          this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.text + "</u>", param0 + param1.x, param3 + param1.y, param1.width, param1.height, var6_int, -1, this.field_d, this.field_e, this.field_c.field_u + this.field_c.field_B);
+          if (param1.isFocused(1023)) {
+            var7 = this.field_c.a(param1.text);
             var8 = this.field_c.field_u + this.field_c.field_B;
-            var9 = param1.field_s + param0;
-            var10 = param3 + param1.field_v;
+            var9 = param1.x + param0;
+            var10 = param3 + param1.y;
             if (2 != this.field_d) {
               if (this.field_d == 1) {
-                var9 = var9 + (param1.field_p - var7 >> 1);
+                var9 = var9 + (param1.width - var7 >> 1);
               }
             } else {
-              var9 = var9 + (param1.field_p - var7);
+              var9 = var9 + (param1.width - var7);
             }
             if (this.field_e != 2) {
               if (this.field_e == 1) {
-                var10 = var10 + (param1.field_q - var8 >> 1);
+                var10 = var10 + (param1.height - var8 >> 1);
               }
             } else {
-              var10 = var10 + (param1.field_q - var8);
+              var10 = var10 + (param1.height - var8);
             }
             uv.a(var7 + 4, var10 + 2, var8, var9 - 2, false);
           }
           if (param2 == 32679) {
             return;
           }
-          var12 = (lu) null;
-          pka.a((lu) null, true);
+          var12 = (PacketBuffer) null;
+          pka.a((PacketBuffer) null, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,11 +70,11 @@ final class pka implements qda {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static nga a(lu param0, boolean param1) {
+    final static nga a(PacketBuffer param0, boolean param1) {
         RuntimeException var2 = null;
         nga stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -85,7 +85,7 @@ final class pka implements qda {
           if (param1) {
             field_a = (String) null;
           }
-          stackIn_3_0 = new nga(param0.c((byte) -85), param0.c((byte) -85), param0.c((byte) -85), param0.c((byte) -85), param0.a(3), param0.b(16711935));
+          stackIn_3_0 = new nga(param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.a(3), param0.readUnsignedByte(16711935));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,19 +97,19 @@ final class pka implements qda {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(kia param0, boolean param1, byte param2) {
+    final static void a(MusicTrack param0, boolean param1, byte param2) {
         try {
           hda.a(-1, param0, param1, 256);
           if (param2 != 73) {
-            lu var4 = (lu) null;
-            pka.a((lu) null, false);
+            PacketBuffer var4 = (PacketBuffer) null;
+            pka.a((PacketBuffer) null, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pka.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pka.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -127,11 +127,11 @@ final class pka implements qda {
     final static void a(byte param0, boolean param1) {
         int var2 = -19 / ((9 - param0) / 54);
         if (param1) {
-          iea.field_d = new eaa();
+          iea.field_d = new IntrusiveDeque();
           mg.field_m.field_a = mg.field_m.field_a - dea.field_n;
           dea.field_n = 0;
           gu.field_d = 0;
-          rs.a(true);
+          StatusEffectInfo.a(true);
           lg.a(true, -3, true);
           gs.field_f.a(-65);
         }
@@ -143,13 +143,13 @@ final class pka implements qda {
         this.field_e = 1;
     }
 
-    pka(po param0, int param1, int param2) {
+    pka(BitmapFont param0, int param1, int param2) {
         try {
           this.field_c = param0;
           this.field_e = param2;
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

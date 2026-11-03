@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wn extends at {
+final class wn extends AnimationNode {
     static boolean field_p;
     private String field_k;
     static String field_l;
     private int field_n;
-    private ad field_o;
+    private CreatureActor field_o;
     static du field_j;
     private int field_m;
 
@@ -16,7 +16,7 @@ final class wn extends at {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 10) {
           return;
         }
@@ -24,7 +24,7 @@ final class wn extends at {
         field_j = null;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         if (this.field_n == 0) {
           this.field_o.a(this.field_m, 97, this.field_k);
         }
@@ -40,19 +40,19 @@ final class wn extends at {
 
     private final int e(int param0) {
         if (param0 != -12304) {
-          this.c((byte) 38);
+          this.isFinished((byte) 38);
           return 10;
         }
         return 10;
     }
 
-    wn(ad param0, String param1, int param2) {
+    wn(CreatureActor param0, String param1, int param2) {
         try {
           this.field_k = param1;
           this.field_m = param2;
           this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

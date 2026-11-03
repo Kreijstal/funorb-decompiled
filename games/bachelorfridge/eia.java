@@ -8,7 +8,7 @@ final class eia {
     private fw[] field_e;
     private int field_h;
     static qia field_a;
-    private eaa field_f;
+    private IntrusiveDeque field_f;
     private int field_g;
     static int field_d;
     boolean field_b;
@@ -17,7 +17,7 @@ final class eia {
         int var2 = 0;
         int var3 = BachelorFridge.field_y;
         if (param0) {
-          eia.a(-90);
+          eia.releaseStatics(-90);
         }
         for (var2 = 0; this.field_i > var2; var2++) {
           this.field_c[var2][0] = null;
@@ -43,15 +43,15 @@ final class eia {
         if (param0 != -15) {
           field_a = (qia) null;
         }
-        if (null != lc.field_l) {
-          lc.field_l.b();
+        if (null != BoardChangeBatch.field_l) {
+          BoardChangeBatch.field_l.b();
         }
         if (null != nia.field_m) {
           nia.field_m.b();
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 21 % ((81 - param0) / 37);
         field_a = null;
     }
@@ -145,10 +145,10 @@ final class eia {
           if (an.field_q <= param5 &&
             param5 <= ha.field_n) {
             var57 = tj.field_b[param5];
-            var40 = cr.a(DualLinkNode.field_l, -param7 + param6, pw.field_x, 0);
-            var41 = cr.a(DualLinkNode.field_l, param6 + param7, pw.field_x, 0);
-            var42 = cr.a(DualLinkNode.field_l, param6 - var11, pw.field_x, 0);
-            var43 = cr.a(DualLinkNode.field_l, param6 + var11, pw.field_x, 0);
+            var40 = cr.a(DualLinkNode.field_l, -param7 + param6, SnowAnimation.field_x, 0);
+            var41 = cr.a(DualLinkNode.field_l, param6 + param7, SnowAnimation.field_x, 0);
+            var42 = cr.a(DualLinkNode.field_l, param6 - var11, SnowAnimation.field_x, 0);
+            var43 = cr.a(DualLinkNode.field_l, param6 + var11, SnowAnimation.field_x, 0);
             hba.a(param1, var40, var57, 7, var42);
             hba.a(param4, var42, var57, 7, var43);
             hba.a(param1, var43, var57, 7, var41);
@@ -210,8 +210,8 @@ final class eia {
             if (ha.field_n < var40Lifetime1) {
               continue;
             }
-            var42Lifetime1 = cr.a(DualLinkNode.field_l, param6 + var8_int, pw.field_x, 0);
-            var43Lifetime1 = cr.a(DualLinkNode.field_l, -var8_int + param6, pw.field_x, 0);
+            var42Lifetime1 = cr.a(DualLinkNode.field_l, param6 + var8_int, SnowAnimation.field_x, 0);
+            var43Lifetime1 = cr.a(DualLinkNode.field_l, -var8_int + param6, SnowAnimation.field_x, 0);
             if (var39 == 0) {
               if (var40Lifetime1 >= an.field_q) {
                 hba.a(param1, var43Lifetime1, tj.field_b[var40Lifetime1], 7, var42Lifetime1);
@@ -222,8 +222,8 @@ final class eia {
               hba.a(param1, var43Lifetime1, tj.field_b[var41Lifetime1], 7, var42Lifetime1);
               continue;
             }
-            var44 = cr.a(DualLinkNode.field_l, var10 + param6, pw.field_x, 0);
-            var45 = cr.a(DualLinkNode.field_l, param6 - var10, pw.field_x, 0);
+            var44 = cr.a(DualLinkNode.field_l, var10 + param6, SnowAnimation.field_x, 0);
+            var45 = cr.a(DualLinkNode.field_l, param6 - var10, SnowAnimation.field_x, 0);
             if (an.field_q <= var40Lifetime1) {
               var58 = tj.field_b[var40Lifetime1];
               hba.a(param1, var43Lifetime1, var58, 7, var45);
@@ -241,7 +241,7 @@ final class eia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var8), "eia.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw pe.wrapException((Throwable) ((Object) var8), "eia.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class eia {
             var4Lifetime2 = (fw) (this.field_f.a(param1 + 864));
             var3 = new fw(param0, var4Lifetime2.field_g);
             this.field_e[var4Lifetime2.field_k] = null;
-            var4Lifetime2.a(false);
+            var4Lifetime2.unlink(false);
           }
           this.field_e[param0] = var3;
         } else {
@@ -307,7 +307,7 @@ final class eia {
     eia(int param0, int param1, int param2) {
         this.field_g = 0;
         this.field_j = -1;
-        this.field_f = new eaa();
+        this.field_f = new IntrusiveDeque();
         this.field_b = false;
         this.field_i = param0;
         this.field_h = param1;

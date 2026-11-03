@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dh extends pp {
+final class dh extends EventEffect {
     static String field_i;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -39) {
           field_i = (String) null;
           field_i = null;
@@ -47,7 +47,7 @@ final class dh extends pp {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -66,23 +66,23 @@ final class dh extends pp {
         }
     }
 
-    final void a(aga param0, op param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         try {
           param1.field_R = true;
           if (param2 != 12) {
             field_i = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dh.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dh.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(lu param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -1 % ((34 - param1) / 58);
-          super.a(param0, (byte) -77);
+          super.write(param0, (byte) -77);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -14,7 +14,7 @@ class qb extends k {
         this.field_k = -1;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         int var1 = -31 % ((74 - param0) / 46);
         field_m = null;
@@ -26,7 +26,7 @@ class qb extends k {
           return true;
         }
         if (this.field_k >= 0) {
-          var2 = sp.field_l >= 0 ? uh.a(l.field_r, sp.field_l, this.field_k) : uh.a(l.field_r, this.field_k);
+          var2 = sp.field_l >= 0 ? uh.a(SplitEvent.field_r, sp.field_l, this.field_k) : uh.a(SplitEvent.field_r, this.field_k);
           var2.c();
           this.field_n = var2.a();
           this.field_o = var2.field_i;
@@ -134,17 +134,17 @@ class qb extends k {
         int var8Lifetime2;
         var10 = BachelorFridge.field_y;
         try {
-          fv.field_w = param0;
+          PetAttackAnimation.field_w = param0;
           nla.field_f = true;
           var11 = param2;
           if (!param1) {
-            stackIn_4_0 = ko.field_h;
+            stackIn_4_0 = IsaacRandom.field_h;
           } else {
-            stackIn_4_0 = maa.field_x;
+            stackIn_4_0 = SuperSpeedAnimation.field_x;
           }
           var6 = stackIn_4_0;
-          if (~fv.field_w == param3) {
-            var7 = ut.a(db.field_b, 480, var11, qm.field_a, 127);
+          if (~PetAttackAnimation.field_w == param3) {
+            var7 = ut.a(db.field_b, 480, var11, RasterBuffer.field_a, 127);
             var8 = var7 + 3;
             gn.field_l = new int[var8];
             pt.field_a = new String[var8];
@@ -163,10 +163,10 @@ class qb extends k {
             gn.field_l[-1 + var8] = 1;
             st.field_a[1] = 2;
           } else {
-            if (1 != fv.field_w) {
+            if (1 != PetAttackAnimation.field_w) {
               throw new IllegalArgumentException();
             }
-            var7 = ut.a(db.field_b, 480, var11, qm.field_a, -118);
+            var7 = ut.a(db.field_b, 480, var11, RasterBuffer.field_a, -118);
             var8 = var7 + 2;
             gn.field_l = new int[var8];
             pt.field_a = new String[var8];
@@ -196,18 +196,18 @@ class qb extends k {
             }
           }
           dfa.field_b = -(var7Lifetime1 >> 1) + (var7Lifetime1 + sd.field_a);
-          ula.field_f = (pba.field_r + raa.field_J << 1) * fw.field_i.field_e;
-          rs.field_a = sd.field_a - (var7Lifetime1 >> 1);
+          ula.field_f = (ShieldEvent.field_r + raa.field_J << 1) * fw.field_i.field_e;
+          StatusEffectInfo.field_a = sd.field_a - (var7Lifetime1 >> 1);
           for (var8Lifetime2 = 0; var8Lifetime2 < pt.field_a.length; var8Lifetime2++) {
             stackIn_37_0 = ula.field_f;
             if (gn.field_l[var8Lifetime2] >= 0) {
-              stackIn_38_1 = jo.field_t;
+              stackIn_38_1 = BoardView.field_t;
             } else {
               stackIn_38_1 = un.field_i;
             }
             ula.field_f = stackIn_37_0 + stackIn_38_1;
           }
-          vka.field_q = jfa.field_w - (ula.field_f >> 1);
+          GasCloudSpecial.field_q = FridgeCreature.field_w - (ula.field_f >> 1);
           fw.field_i.a(param4, param3 ^ -86, rh.a(mk.field_p, (byte) -126, gd.field_m), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -220,11 +220,11 @@ class qb extends k {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -232,7 +232,7 @@ class qb extends k {
         RuntimeException var4 = null;
         try {
           if (param2 == 0) {
-            this.field_k = param1.e((byte) 108);
+            this.field_k = param1.readUnsignedShort((byte) 108);
           }
           if (param0 != -71) {
             this.a(66);
@@ -248,7 +248,7 @@ class qb extends k {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

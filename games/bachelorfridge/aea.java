@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aea extends k {
-    static kv field_k;
+    static Sprite field_k;
 
     private final void a(int param0, int param1, int param2) {
         int var4;
@@ -18,41 +18,41 @@ final class aea extends k {
         var6 = (float)Math.atan2((double)(-2048 + var4), (double)(-2048 + var5));
         if ((double)var6 >= -3.141592653589793 &&
           (double)var6 <= -2.356194490192345) {
-          kk.field_s = param1;
+          AttackUpAllEvent.field_s = param1;
           kb.field_g = param2;
         } else if (-1.5707963267948966 >= (double)var6 &&
           -2.356194490192345 <= (double)var6) {
-          kk.field_s = param2;
+          AttackUpAllEvent.field_s = param2;
           kb.field_g = param1;
         } else if (-0.7853981633974483 >= (double)var6 &&
           -1.5707963267948966 <= (double)var6) {
           kb.field_g = -param1 + hh.field_d;
-          kk.field_s = param2;
+          AttackUpAllEvent.field_s = param2;
         } else if (var6 <= 0.0f &&
           (double)var6 >= -0.7853981633974483) {
           kb.field_g = param2;
-          kk.field_s = bi.field_g - param1;
+          AttackUpAllEvent.field_s = bi.field_g - param1;
         } else if (0.0f <= var6 &&
           0.7853981633974483 >= (double)var6) {
-          kk.field_s = bi.field_g - param1;
+          AttackUpAllEvent.field_s = bi.field_g - param1;
           kb.field_g = -param2 + hh.field_d;
         } else if (0.7853981633974483 <= (double)var6 &&
           (double)var6 <= 1.5707963267948966) {
           kb.field_g = -param1 + hh.field_d;
-          kk.field_s = -param2 + bi.field_g;
+          AttackUpAllEvent.field_s = -param2 + bi.field_g;
         } else if (1.5707963267948966 <= (double)var6 &&
           (double)var6 <= 2.356194490192345) {
-          kk.field_s = -param2 + bi.field_g;
+          AttackUpAllEvent.field_s = -param2 + bi.field_g;
           kb.field_g = param1;
         } else {
           if ((double)var6 >= 2.356194490192345 &&
             (double)var6 <= 3.141592653589793) {
             kb.field_g = -param2 + hh.field_d;
-            kk.field_s = param1;
+            AttackUpAllEvent.field_s = param1;
           }
         }
         kb.field_g = kb.field_g & wp.field_r;
-        kk.field_s = kk.field_s & it.field_r;
+        AttackUpAllEvent.field_s = AttackUpAllEvent.field_s & it.field_r;
     }
 
     final int[][] a(boolean param0, int param1) {
@@ -75,7 +75,7 @@ final class aea extends k {
           var6 = var13[2];
           for (var7 = 0; var7 < hh.field_d; var7++) {
             this.a(1, param1, var7);
-            var14 = this.a((byte) -91, 0, kk.field_s);
+            var14 = this.a((byte) -91, 0, AttackUpAllEvent.field_s);
             var4[var7] = var14[0][kb.field_g];
             var5[var7] = var14[1][kb.field_g];
             var6[var7] = var14[2][kb.field_g];
@@ -96,14 +96,14 @@ final class aea extends k {
         if (this.field_j.field_m) {
           for (var4 = 0; hh.field_d > var4; var4++) {
             this.a(param1 ^ 1, param0, var4);
-            var5 = this.a(0, kk.field_s, (byte) 118);
+            var5 = this.a(0, AttackUpAllEvent.field_s, (byte) 118);
             var7[var4] = var5[kb.field_g];
           }
         }
         return var3;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 87) {
           return;
         }
@@ -114,8 +114,8 @@ final class aea extends k {
         super(1, false);
     }
 
-    final void a(byte param0, lu param1, int param2) {
-        lu var5 = null;
+    final void a(byte param0, PacketBuffer param1, int param2) {
+        PacketBuffer var5 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -124,12 +124,12 @@ final class aea extends k {
         RuntimeException var4 = null;
         try {
           if (param2 == 0) {
-            stackIn_5_1 = (param1.b(param0 + 16712006) == 1);
+            stackIn_5_1 = (param1.readUnsignedByte(param0 + 16712006) == 1);
             this.field_f = stackIn_5_1;
           }
           if (param0 != -71) {
-            var5 = (lu) null;
-            this.a((byte) 63, (lu) null, 61);
+            var5 = (PacketBuffer) null;
+            this.a((byte) 63, (PacketBuffer) null, 61);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,7 +142,7 @@ final class aea extends k {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

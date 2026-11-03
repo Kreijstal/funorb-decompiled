@@ -13,10 +13,10 @@ final class saa {
     ua field_d;
     private int field_l;
     private boolean field_h;
-    jfa field_k;
+    FridgeCreature field_k;
     static String field_u;
-    static sna field_f;
-    static hn field_a;
+    static UiComponent field_f;
+    static PcmStreamMixer field_a;
     static int field_b;
     private boolean field_j;
     static String field_r;
@@ -27,24 +27,24 @@ final class saa {
     private final void c(byte param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
-        jfa var2 = null;
+        FridgeCreature var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         var3 = BachelorFridge.field_y;
         try {
           if (mg.field_m != null) {
-            this.field_d.field_c.field_r = new jfa[50];
+            this.field_d.field_c.field_r = new FridgeCreature[50];
             this.field_d.field_c.a((byte) 103, mg.field_m.field_e);
             for (var2_int = 0; var2_int < 50; var2_int++) {
               if (mg.field_m.field_i[var2_int] != null) {
-                this.field_d.field_c.field_r[var2_int] = new jfa(mg.field_m.field_i[var2_int], 0, 0, this.field_d.field_c.field_i);
-                this.field_d.field_c.field_r[var2_int].field_g.a((byte) -121, dm.field_f);
+                this.field_d.field_c.field_r[var2_int] = new FridgeCreature(mg.field_m.field_i[var2_int], 0, 0, this.field_d.field_c.field_i);
+                this.field_d.field_c.field_r[var2_int].field_g.a((byte) -121, ProxySocketConnector.field_f);
               }
             }
-            var2 = (jfa) (this.field_d.field_c.field_m.b((byte) 90));
+            var2 = (FridgeCreature) (this.field_d.field_c.field_m.b((byte) 90));
             while (var2 != null) {
-              var2.field_g.a((byte) 13, dm.field_f);
-              var2 = (jfa) (this.field_d.field_c.field_m.c(0));
+              var2.field_g.a((byte) 13, ProxySocketConnector.field_f);
+              var2 = (FridgeCreature) (this.field_d.field_c.field_m.c(0));
             }
             this.field_d.field_c.field_n = mg.field_m.field_c;
             this.field_d.field_c.field_k.a(false, mg.field_m.field_f);
@@ -56,7 +56,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "saa.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "saa.C(" + param0 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class saa {
         try {
           if (gf.field_k == 13 &&
             kaa.field_m != 0 &&
-            0 != iba.field_s) {
+            0 != OhNoEvent.field_s) {
             var2_int = 1;
             lg.a(true, var2_int, false);
             return;
@@ -78,7 +78,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.I(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.I(" + param0 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class saa {
         try {
           mg.field_m.field_c = this.field_d.field_c.field_n;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.L(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.L(" + param0 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class saa {
           }
           rba.a(mg.field_m, (byte) 58);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.H(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.H(" + param0 + ')');
         }
     }
 
@@ -115,33 +115,33 @@ final class saa {
         Object stackIn_156_0;
         mk stackIn_156_1;
         mk stackIn_156_2;
-        jfa stackIn_156_3;
+        FridgeCreature stackIn_156_3;
         boolean stackIn_156_4;
         Object stackIn_158_0;
         mk stackIn_158_1;
         mk stackIn_158_2;
-        jfa stackIn_158_3;
+        FridgeCreature stackIn_158_3;
         boolean stackIn_158_4;
         Object stackIn_159_0;
         mk stackIn_159_1;
         mk stackIn_159_2;
-        jfa stackIn_159_3;
+        FridgeCreature stackIn_159_3;
         boolean stackIn_159_4;
         int stackIn_159_5;
         Object stackIn_167_0;
         mk stackIn_167_1;
         mk stackIn_167_2;
-        jfa stackIn_167_3;
+        FridgeCreature stackIn_167_3;
         boolean stackIn_167_4;
         Object stackIn_169_0;
         mk stackIn_169_1;
         mk stackIn_169_2;
-        jfa stackIn_169_3;
+        FridgeCreature stackIn_169_3;
         boolean stackIn_169_4;
         Object stackIn_170_0;
         mk stackIn_170_1;
         mk stackIn_170_2;
-        jfa stackIn_170_3;
+        FridgeCreature stackIn_170_3;
         boolean stackIn_170_4;
         int stackIn_170_5;
         RuntimeException decompiledCaughtException = null;
@@ -149,17 +149,17 @@ final class saa {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        jfa var5 = null;
-        jfa var6 = null;
+        FridgeCreature var5 = null;
+        FridgeCreature var6 = null;
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var2_intLifetime3;
         var4 = BachelorFridge.field_y;
         try {
-          kg.field_e.a(19842, true);
+          FullscreenFocusCanvas.field_e.a(19842, true);
           if (!this.field_i &&
-            kg.field_e.field_R == 1 &&
-            kg.field_e.field_T &&
+            FullscreenFocusCanvas.field_e.field_R == 1 &&
+            FullscreenFocusCanvas.field_e.field_T &&
             this.field_d.field_c.field_k.field_a != 2) {
           }
           if (param0 > -31) {
@@ -182,7 +182,7 @@ final class saa {
               this.field_p = stackIn_37_1;
               var2_int = -1;
               var2_intLifetime3 = (this.field_p) ? 1 : 0;
-              ct.c(var2_intLifetime3, -123);
+              OneEvent.c(var2_intLifetime3, -123);
               this.field_o = 5;
             }
             if (d.field_H.field_T &&
@@ -200,13 +200,13 @@ final class saa {
                   this.field_k = null;
                   mg.field_m.field_e.field_j.field_d = true;
                 } else {
-                  qm.a(11, 7758);
+                  RasterBuffer.a(11, 7758);
                   ag.a(this.field_k, (byte) -104);
                   this.field_n = 12;
-                  this.field_k.a(false);
+                  this.field_k.unlink(false);
                   mg.field_m.field_e.field_j = null;
                 }
-                ct.c(0, -114);
+                OneEvent.c(0, -114);
                 this.field_s = null;
               } else {
                 if (var2_intLifetime1 == 1) {
@@ -222,7 +222,7 @@ final class saa {
             if (var6 != null) {
               var3 = this.field_d.field_c.field_k.g(50);
               if (var3 != -1) {
-                var6.a(false);
+                var6.unlink(false);
                 this.field_d.field_c.field_r[var3] = var5;
                 ik.a(0, var6, -6622, var3);
               }
@@ -231,19 +231,19 @@ final class saa {
           if (this.field_p &&
             lf.field_c == 2) {
             this.field_p = false;
-            ct.c(0, -123);
+            OneEvent.c(0, -123);
             this.field_o = 5;
             this.field_t = false;
           }
           if (this.field_h &&
             lf.field_c == 2) {
             this.field_h = false;
-            ct.c(0, -124);
+            OneEvent.c(0, -124);
           }
           if (this.field_j &&
             lf.field_c == 2) {
             this.field_j = false;
-            ct.c(0, -127);
+            OneEvent.c(0, -127);
           }
           boolean decompiledFrameRemainder0 = true;
           if (!this.field_h) {
@@ -364,7 +364,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "saa.P(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "saa.P(" + param0 + ')');
         }
     }
 
@@ -389,7 +389,7 @@ final class saa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -406,7 +406,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "saa.J(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "saa.J(" + param0 + ')');
         }
     }
 
@@ -418,11 +418,11 @@ final class saa {
           field_f = null;
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.D(" + param0 + ')');
         }
     }
 
-    final void a(boolean param0, eaa param1) {
+    final void a(boolean param0, IntrusiveDeque param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -441,11 +441,11 @@ final class saa {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
-    final void a(eaa param0, int param1) {
+    final void a(IntrusiveDeque param0, int param1) {
         int[] var3 = null;
         kha var4 = null;
         int var5 = 0;
@@ -477,33 +477,33 @@ final class saa {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final void a(boolean param0) {
-        sna var2 = null;
-        sna discarded$0 = null;
-        sna discarded$1 = null;
+        UiComponent var2 = null;
+        UiComponent discarded$0 = null;
+        UiComponent discarded$1 = null;
         try {
           var2 = mka.a(13558251, 13558251, 13558251, (byte) -124, jha.field_g, 13558251, 16777215, 13558251);
           var2.field_eb = wd.field_w;
-          var2.field_A = bla.field_p;
-          var2.field_db = op.field_I;
+          var2.field_A = RageSpecial.field_p;
+          var2.field_db = BattleState.field_I;
           if (param0) {
-            field_a = (hn) null;
+            field_a = (PcmStreamMixer) null;
           }
-          kg.field_e = new sna("shopbutton", var2, 433, 87, 195, 42, "");
-          sn.field_m = new sna("getmagnify", var2, 420, 32, 80, 62, "");
-          d.field_H = new sna("clean", var2, 526, 318, 82, 124, "");
-          discarded$0 = new sna("freeze", var2, 576, 430, 50, 42, "");
-          discarded$1 = new sna("throwin", var2, 580, 380, 80, 20, "Throw in");
-          aq.field_b = new sna("viewstats", var2, -50, -50, 50, 20, "View");
+          FullscreenFocusCanvas.field_e = new UiComponent("shopbutton", var2, 433, 87, 195, 42, "");
+          sn.field_m = new UiComponent("getmagnify", var2, 420, 32, 80, 62, "");
+          d.field_H = new UiComponent("clean", var2, 526, 318, 82, 124, "");
+          discarded$0 = new UiComponent("freeze", var2, 576, 430, 50, 42, "");
+          discarded$1 = new UiComponent("throwin", var2, 580, 380, 80, 20, "Throw in");
+          aq.field_b = new UiComponent("viewstats", var2, -50, -50, 50, 20, "View");
           aq.field_b.field_L = 10;
-          cf.field_b = new sna("close", var2, -50, -50, 50, 20, "Close");
+          cf.field_b = new UiComponent("close", var2, -50, -50, 50, 20, "Close");
           cf.field_b.field_L = 10;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.G(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.G(" + param0 + ')');
         }
     }
 
@@ -511,7 +511,7 @@ final class saa {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        jfa var4 = null;
+        FridgeCreature var4 = null;
         int var5 = 0;
         var5 = BachelorFridge.field_y;
         try {
@@ -522,15 +522,15 @@ final class saa {
             if (!this.field_i &&
               this.field_s == null) {
               var3_int = 0;
-              var4 = (jfa) (this.field_d.field_c.field_m.b((byte) 90));
+              var4 = (FridgeCreature) (this.field_d.field_c.field_m.b((byte) 90));
               while (var4 != null) {
                 if (var4.a(gd.field_m, (byte) 116, mk.field_p)) {
                   var3_int = 1;
                   if (kr.field_vb <= 3) {
-                    ct.c(4 + kr.field_vb, -113);
+                    OneEvent.c(4 + kr.field_vb, -113);
                   }
                 }
-                var4 = (jfa) (this.field_d.field_c.field_m.c(0));
+                var4 = (FridgeCreature) (this.field_d.field_c.field_m.c(0));
               }
               if (!this.field_j &&
                 !this.field_h &&
@@ -541,7 +541,7 @@ final class saa {
               }
               if (var3_int == 0 &&
                 !(kr.field_vb <= 3)) {
-                ct.c(-4 + kr.field_vb, -126);
+                OneEvent.c(-4 + kr.field_vb, -126);
               }
             }
             this.f((byte) -85);
@@ -573,23 +573,23 @@ final class saa {
           if (this.field_m != au.field_c) {
             if (1 != au.field_c) {
               if (au.field_c == 5) {
-                qm.a(19, 7758);
+                RasterBuffer.a(19, 7758);
               } else {
                 if (au.field_c == 2) {
-                  qm.a(27, 7758);
+                  RasterBuffer.a(27, 7758);
                 } else {
                   if (au.field_c != 3) {
                     if (-1 == au.field_c &&
                       this.field_m == 5) {
-                      qm.a(20, 7758);
+                      RasterBuffer.a(20, 7758);
                     }
                   } else {
-                    qm.a(22, 7758);
+                    RasterBuffer.a(22, 7758);
                   }
                 }
               }
             } else {
-              qm.a(28, 7758);
+              RasterBuffer.a(28, 7758);
             }
             this.field_m = au.field_c;
           }
@@ -604,7 +604,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "saa.N(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "saa.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -619,49 +619,49 @@ final class saa {
           if (!this.field_p) {
             if (sn.field_m.field_T &&
               this.field_d.field_c.field_k.field_a != 0) {
-              rfa.field_a.e(param1 + 418, 31);
+              rfa.field_a.draw(param1 + 418, 31);
             } else {
-              bh.field_r.e(param1 + 418, 41);
+              bh.field_r.draw(param1 + 418, 41);
             }
           }
           iea.field_a.a(param1 + 524, 420, 64);
-          op.field_u.e(param1 + 540, 424);
-          dp.field_n[5].e(524 + param1, 300);
+          BattleState.field_u.draw(param1 + 540, 424);
+          dp.field_n[5].draw(524 + param1, 300);
           if (this.field_n <= 0) {
             if ((d.field_H.field_T ||
               this.b(true)) &&
               (this.field_d.field_c.field_k.field_a != 0 &&
               !this.field_i)) {
-              dp.field_n[0].e(param1 + 524, 300);
+              dp.field_n[0].draw(param1 + 524, 300);
             } else {
-              dp.field_n[2].e(param1 + 524, 300);
+              dp.field_n[2].draw(param1 + 524, 300);
             }
           } else {
             if (8 >= this.field_n) {
               if (this.field_n > 4) {
-                dp.field_n[4].e(param1 + 524, 300);
+                dp.field_n[4].draw(param1 + 524, 300);
               } else {
                 if (this.field_n > 0) {
-                  dp.field_n[0].e(524 + param1, 300);
+                  dp.field_n[0].draw(524 + param1, 300);
                 }
               }
             } else {
-              dp.field_n[3].e(param1 + 524, 300);
+              dp.field_n[3].draw(param1 + 524, 300);
             }
           }
           this.field_d.field_c.a(-125, param1);
           if (this.field_i &&
             this.field_q != null) {
-            dg.g(0, 0, 640, 480);
+            SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
             this.field_q.a(param2, 117);
           }
           if (this.field_s != null) {
-            dg.g(0, 0, 640, 480);
+            SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
             this.field_s.e(param0 - 2);
           }
           if (af.field_a &&
             param2) {
-            kla.b(true);
+            DiveBomberAnimation.b(true);
           }
           if (param0 != 2) {
             this.f((byte) 60);
@@ -670,7 +670,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var4), "saa.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var4), "saa.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -678,7 +678,7 @@ final class saa {
         boolean discarded$0 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
-        jfa var2 = null;
+        FridgeCreature var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -699,13 +699,13 @@ final class saa {
             }
             var2_int++;
           }
-          mg.field_m.field_e.field_m = new eaa();
-          var2 = (jfa) (this.field_d.field_c.field_m.b((byte) 90));
+          mg.field_m.field_e.field_m = new IntrusiveDeque();
+          var2 = (FridgeCreature) (this.field_d.field_c.field_m.b((byte) 90));
           while (var2 != null) {
             mg.field_m.field_e.field_m.a(var2.field_g, true);
-            var2 = (jfa) (this.field_d.field_c.field_m.c(0));
+            var2 = (FridgeCreature) (this.field_d.field_c.field_m.c(0));
           }
-          mg.field_m.field_i = new rk[50];
+          mg.field_m.field_i = new CreatureProfile[50];
           var5 = 0;
           var3Lifetime1 = var5;
           while (var5 < 50) {
@@ -720,7 +720,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "saa.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "saa.B(" + param0 + ')');
         }
     }
 
@@ -735,9 +735,9 @@ final class saa {
           }
           this.field_d.field_c.field_k.d(-123);
           this.field_q = null;
-          ln.e(-122);
-          mea.e((byte) 90);
-          if (bp.e(-29919)) {
+          TeleportAnimation.e(-122);
+          CranberryAnimation.e((byte) 90);
+          if (AttackUpAllAnimation.e(-29919)) {
             if (!hs.a(false, nga.field_i)) {
               lg.a(true, 0, param0);
             } else {
@@ -754,7 +754,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "saa.O(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "saa.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -764,7 +764,7 @@ final class saa {
             field_u = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.E(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.E(" + param0 + ')');
         }
     }
 
@@ -778,7 +778,7 @@ final class saa {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        this.field_e = ea.field_d;
+        this.field_e = DiskCacheWorker.field_d;
         try {
           this.field_d = new ua(param0, mg.field_m);
           this.field_d.field_c.a(false, this);
@@ -803,7 +803,7 @@ final class saa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

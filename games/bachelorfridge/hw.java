@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hw extends sna {
+final class hw extends UiComponent {
     static int[] field_xb;
     int field_vb;
     static String field_wb;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

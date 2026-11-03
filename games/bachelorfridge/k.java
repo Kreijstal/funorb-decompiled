@@ -15,11 +15,11 @@ abstract class k extends IntrusiveNode {
         throw new IllegalStateException("This operation does not have a monochrome output");
     }
 
-    final static pp a(boolean param0, lu param1) {
-        nq var2 = null;
+    final static EventEffect a(boolean param0, PacketBuffer param1) {
+        CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        pp stackIn_2_0 = null;
+        EventEffect stackIn_2_0 = null;
         kt stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -27,13 +27,13 @@ abstract class k extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_2_0 = (pp) null;
+            stackIn_2_0 = (EventEffect) null;
             return stackIn_2_0;
           }
           var2 = qi.a(param1, (byte) 60);
-          var3 = param1.b(16711935);
+          var3 = param1.readUnsignedByte(16711935);
           stackIn_4_0 = new kt(var2, var3);
-          return (pp) ((Object) stackIn_4_0);
+          return (EventEffect) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -44,14 +44,14 @@ abstract class k extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     int a(int param0) {
         if (param0 != -2359) {
-          lu var3 = (lu) null;
-          this.a((byte) 23, (lu) null, 74);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((byte) 23, (PacketBuffer) null, 74);
           return -1;
         }
         return -1;
@@ -134,14 +134,14 @@ abstract class k extends IntrusiveNode {
         return this.field_g[param1].a(false, param2);
     }
 
-    void a(byte param0, lu param1, int param2) {
+    void a(byte param0, PacketBuffer param1, int param2) {
         try {
           if (param0 != -71) {
-            lu var5 = (lu) null;
-            k.a(false, (lu) null);
+            PacketBuffer var5 = (PacketBuffer) null;
+            k.a(false, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "k.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "k.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -158,13 +158,13 @@ abstract class k extends IntrusiveNode {
     }
 
     final static void c(int param0) {
-        eia.field_d = dg.field_k;
-        jf.field_m = dg.field_f;
-        tq.field_r = dg.field_h;
+        eia.field_d = SoftwareRasterizer.field_k;
+        jf.field_m = SoftwareRasterizer.field_f;
+        tq.field_r = SoftwareRasterizer.field_h;
         if (param0 != 3685) {
           return;
         }
-        mm.field_D = dg.field_j;
+        FlyAnimation.field_D = SoftwareRasterizer.field_j;
     }
 
     static {

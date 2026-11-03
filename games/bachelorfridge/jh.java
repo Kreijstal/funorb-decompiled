@@ -7,7 +7,7 @@ final class jh extends k {
     static String field_m;
     static volatile int field_l;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_k = null;
         if (param0 != 4096) {
@@ -104,7 +104,7 @@ final class jh extends k {
         return var9;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -114,12 +114,12 @@ final class jh extends k {
         try {
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_n = param1.e((byte) 106);
+            this.field_n = param1.readUnsignedShort((byte) 106);
           }
           if (param0 == -71) {
             return;
           }
-          jh.d(-90);
+          jh.releaseStatics(-90);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,7 +131,7 @@ final class jh extends k {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

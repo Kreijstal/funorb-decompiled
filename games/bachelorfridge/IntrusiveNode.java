@@ -2,39 +2,39 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    IntrusiveNode field_b;
-    static sna field_a;
-    long field_c;
-    IntrusiveNode field_e;
+    IntrusiveNode next;
+    static UiComponent field_a;
+    long key;
+    IntrusiveNode previous;
     static String field_d;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 != 127) {
-          IntrusiveNode.b((byte) 117);
+          IntrusiveNode.releaseStatics((byte) 117);
         }
     }
 
-    final void a(boolean param0) {
-        if (this.field_e == null) {
+    final void unlink(boolean param0) {
+        if (this.previous == null) {
           return;
         }
         if (!param0) {
-          this.field_e.field_b = this.field_b;
-          this.field_b.field_e = this.field_e;
-          this.field_e = null;
-          this.field_b = null;
+          this.previous.next = this.next;
+          this.next.previous = this.previous;
+          this.previous = null;
+          this.next = null;
           return;
         }
     }
 
-    final boolean a(byte param0) {
-        if (null == this.field_e) {
+    final boolean isLinked(byte param0) {
+        if (null == this.previous) {
           return false;
         }
         if (param0 != -106) {
-          field_a = (sna) null;
+          field_a = (UiComponent) null;
           return true;
         }
         return true;

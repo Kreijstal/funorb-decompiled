@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mw extends kj {
+final class mw extends TileEffect {
     static String field_g;
     private int field_h;
     private int field_j;
@@ -27,7 +27,7 @@ final class mw extends kj {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_g = null;
         if (param0 != 16) {
@@ -69,7 +69,7 @@ final class mw extends kj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -166,26 +166,26 @@ final class mw extends kj {
         }
     }
 
-    mw(gj param0, int param1, int param2) {
+    mw(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_h = 0;
         try {
           nia.e((byte) 17);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0, int param1, int param2, int param3, String param4, String param5, int param6, int param7) {
         try {
-          ur.field_e[pe.field_m] = (oha) ((Object) new tv(param7, param3, param1, param4, param5, param6, param2));
+          WhirlpoolDigest.field_e[pe.field_m] = (MoveDefinition) ((Object) new tv(param7, param3, param1, param4, param5, param6, param2));
           pe.field_m = pe.field_m + 1;
           if (param0 > -117) {
             String var9 = (String) null;
             mw.a((String) null, -49);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mw.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mw.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 

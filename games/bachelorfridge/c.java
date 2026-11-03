@@ -7,13 +7,13 @@ final class c extends gca {
     float field_j;
     static String field_i;
     static String[] field_k;
-    private eaa field_l;
+    private IntrusiveDeque field_l;
 
     private final void e(byte param0) {
         int var5 = 0;
         cia var6 = null;
-        int var2 = baa.field_v.nextInt() & 8191;
-        int var3 = (255 & baa.field_v.nextInt()) + 128;
+        int var2 = BananarangAnimation.field_v.nextInt() & 8191;
+        int var3 = (255 & BananarangAnimation.field_v.nextInt()) + 128;
         int var4 = var3 * via.a(var2, (byte) 72) >> 16;
         if (param0 == 99) {
           var5 = var3 * ft.a(var2, (byte) -128) >> 16;
@@ -26,10 +26,10 @@ final class c extends gca {
     final static void f(byte param0) {
         if (param0 != 48) {
           field_i = (String) null;
-          wh.field_p = null;
+          RefreshingSpecial.field_p = null;
           return;
         }
-        wh.field_p = null;
+        RefreshingSpecial.field_p = null;
     }
 
     final static int a(int param0, int param1, boolean param2) {
@@ -57,14 +57,14 @@ final class c extends gca {
         } else {
           var4_ref = (cia) (this.field_l.b((byte) 90));
           while (var4_ref != null) {
-            dg.f((var4_ref.field_i >> 4) + param1, (var4_ref.field_q >> 5) + param0 + (var4_ref.field_h >> 9), 2, 12632256, var4_ref.field_o);
+            SoftwareRasterizer.fillCircleAlpha((var4_ref.field_i >> 4) + param1, (var4_ref.field_q >> 5) + param0 + (var4_ref.field_h >> 9), 2, 12632256, var4_ref.field_o);
             var4_ref = (cia) (this.field_l.c(0));
           }
           return;
         }
         var4_refLifetime1 = (cia) (this.field_l.b((byte) 90));
         while (var4_refLifetime1 != null) {
-          dg.f((var4_refLifetime1.field_i >> 4) + param1, (var4_refLifetime1.field_q >> 5) + param0 + (var4_refLifetime1.field_h >> 9), 2, 12632256, var4_refLifetime1.field_o);
+          SoftwareRasterizer.fillCircleAlpha((var4_refLifetime1.field_i >> 4) + param1, (var4_refLifetime1.field_q >> 5) + param0 + (var4_refLifetime1.field_h >> 9), 2, 12632256, var4_refLifetime1.field_o);
           var4_refLifetime1 = (cia) (this.field_l.c(0));
         }
     }
@@ -86,19 +86,19 @@ final class c extends gca {
           if (param1 == 6) {
             var2 = 2;
           }
-          ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
+          ol.a(pja.field_a[param1][6 + DiveBomberAnimation.a(var2, m.field_a, -2147483648)], true);
           return;
         }
         c.a(88, 16);
         if (param1 == 6) {
           var2 = 2;
         }
-        ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
+        ol.a(pja.field_a[param1][6 + DiveBomberAnimation.a(var2, m.field_a, -2147483648)], true);
     }
 
     public c() {
         super(32);
-        this.field_l = new eaa();
+        this.field_l = new IntrusiveDeque();
     }
 
     final boolean a(boolean param0, boolean param1) {
@@ -124,7 +124,7 @@ final class c extends gca {
           var3 = (cia) (this.field_l.c(0));
         }
         var4 = this.field_j * 3.0f;
-        while (baa.field_v.nextFloat() * (var4 + 1.0f) < var4) {
+        while (BananarangAnimation.field_v.nextFloat() * (var4 + 1.0f) < var4) {
           this.e((byte) 99);
         }
         stackIn_16_0 = !(this.field_l.e(12917));

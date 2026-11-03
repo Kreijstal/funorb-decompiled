@@ -3,7 +3,7 @@
  */
 final class qia {
     static String field_b;
-    static po field_a;
+    static BitmapFont field_a;
 
     final boolean a(int param0) {
         if (param0 != 23716) {
@@ -25,7 +25,7 @@ final class qia {
         throw new IllegalStateException();
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         int var1 = -94 / ((param0 - 69) / 47);

@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tb {
-    static eaa field_c;
+    static IntrusiveDeque field_c;
     static java.awt.Font field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -7778) {
           field_a = (String) null;
@@ -63,12 +63,12 @@ final class tb {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
     static {
-        field_c = new eaa();
+        field_c = new IntrusiveDeque();
         field_a = "Names should contain a maximum of 12 characters";
     }
 }

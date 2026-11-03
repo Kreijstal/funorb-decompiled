@@ -3,8 +3,8 @@
  */
 final class f {
     static int field_b;
-    static kv field_c;
-    static v field_a;
+    static Sprite field_c;
+    static BufferedCacheFile field_a;
 
     final synchronized static long b(byte param0) {
         long var1 = 0L;

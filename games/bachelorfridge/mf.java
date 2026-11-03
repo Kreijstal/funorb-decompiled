@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mf extends uda implements lja {
+class mf extends uda implements WidgetActionListener {
     private boolean field_ib;
     private boolean field_gb;
     private boolean field_fb;
     private boolean field_jb;
     private de field_kb;
-    private po field_hb;
+    private BitmapFont field_hb;
 
     final void o(int param0) {
         this.field_kb.c(1705304705, 2121792, 4210752);
@@ -22,7 +22,7 @@ class mf extends uda implements lja {
         this.e(var2, 33);
     }
 
-    final boolean a(int param0, int param1, char param2, wj param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -37,7 +37,7 @@ class mf extends uda implements lja {
           if (param0 != 10) {
             this.o(25);
           }
-          stackIn_6_0 = super.a(10, param1, param2, param3);
+          stackIn_6_0 = super.handleKey(10, param1, param2, param3);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,7 +49,7 @@ class mf extends uda implements lja {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ class mf extends uda implements lja {
           var4 = var6;
           if (5 != param0) {
             if (param0 == 256) {
-              var6.a((pl) (this), bga.field_k, 19528);
+              var6.a((WidgetListener) (this), bga.field_k, 19528);
             } else {
               stackIn_14_0 = var6;
               stackIn_14_1 = 7;
@@ -100,16 +100,16 @@ class mf extends uda implements lja {
             var6.a(7, pr.field_c, 7);
           } else {
             if (param0 == 4) {
-              var6.a(7, hd.field_r, 8);
+              var6.a(7, SpecialMoveDefinition.field_r, 8);
             } else {
               if (param0 != 6) {
                 if (param0 != 9) {
                   this.e(var6, 33);
                   return;
                 }
-                var6.a((pl) (this), eq.field_i, 19528);
+                var6.a((WidgetListener) (this), eq.field_i, 19528);
               } else {
-                var6.a(7, wha.field_b, 9);
+                var6.a(7, IterableNodeHashTable.field_b, 9);
               }
             }
           }
@@ -125,11 +125,11 @@ class mf extends uda implements lja {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public void a(int param0, hf param1, int param2, byte param3, int param4) {
+    public void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -137,7 +137,7 @@ class mf extends uda implements lja {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < 50) {
-            this.field_hb = (po) null;
+            this.field_hb = (BitmapFont) null;
           }
           if (!this.field_ib) {
             eea.a((byte) 127, "tochangedisplayname.ws", nia.d(-31768));
@@ -156,7 +156,7 @@ class mf extends uda implements lja {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ class mf extends uda implements lja {
         }
     }
 
-    mf(rp param0, po param1, String param2, boolean param3, boolean param4) {
+    mf(rp param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new hc((mf) null, param1, param2), 77, 10, 10);
         try {
           this.field_jb = param3 ? true : false;
@@ -203,7 +203,7 @@ class mf extends uda implements lja {
           this.field_kb.field_P = true;
           this.c(this.field_kb, -123);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -7,10 +7,10 @@ final class kma extends k {
     private int field_k;
     private int[] field_n;
     private int field_l;
-    static eaa field_o;
+    static IntrusiveDeque field_o;
     private int field_q;
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -18,10 +18,10 @@ final class kma extends k {
         RuntimeException var4 = null;
         try {
           if (param2 == 0) {
-            this.field_l = param1.e((byte) 60);
+            this.field_l = param1.readUnsignedShort((byte) 60);
           }
           if (param0 != -71) {
-            field_o = (eaa) null;
+            field_o = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -34,7 +34,7 @@ final class kma extends k {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -189,22 +189,22 @@ final class kma extends k {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          ng.field_f = new js(32);
+          MoveInfoPanel.field_f = new IntrusiveNodeHashTable(32);
           if (param0 > -93) {
             return;
           }
           for (var1_int = 0; fj.field_m.length > var1_int; var1_int++) {
-            ng.field_f.a((long)fj.field_m[var1_int].toLowerCase().hashCode(), (byte) -114, new ji(var1_int));
+            MoveInfoPanel.field_f.a((long)fj.field_m[var1_int].toLowerCase().hashCode(), (byte) -114, new ji(var1_int));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "kma.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "kma.D(" + param0 + ')');
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -1) {
           field_p = null;
           field_m = null;
@@ -220,6 +220,6 @@ final class kma extends k {
     static {
         field_p = "Enter name of player to delete from list";
         field_m = "All";
-        field_o = new eaa();
+        field_o = new IntrusiveDeque();
     }
 }

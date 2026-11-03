@@ -10,23 +10,23 @@ final class jea {
 
     final static void a(boolean param0) {
         if (!param0) {
-          jea.a(25);
+          jea.releaseStatics(25);
         }
         lga.c((byte) 112);
-        if (dca.field_y != null) {
-          wd.a((byte) 70, dca.field_y);
+        if (TBomberAnimation.field_y != null) {
+          wd.a((byte) 70, TBomberAnimation.field_y);
         }
         oda.a(-705481812);
         qi.b(-1);
         te.c((byte) 94);
         if (lt.a((byte) 99)) {
-          sja.field_fb.c(1, (byte) 125);
+          sja.field_fb.writeCipheredByte(1, (byte) 125);
           hna.a(0, 68);
         }
         vc.a((byte) -96);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           field_c = (ofa) null;
           field_c = null;

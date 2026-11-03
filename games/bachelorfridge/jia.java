@@ -7,7 +7,7 @@ final class jia extends k {
     static java.applet.Applet field_m;
     private int field_k;
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_13_1 = false;
@@ -24,15 +24,15 @@ final class jia extends k {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_n = param1.b(16711935);
+              this.field_n = param1.readUnsignedByte(16711935);
             } else {
               if (var4_int == 2) {
-                stackIn_13_1 = (1 == param1.b(param0 ^ -16711866));
+                stackIn_13_1 = (1 == param1.readUnsignedByte(param0 ^ -16711866));
                 this.field_f = stackIn_13_1;
               }
             }
           } else {
-            this.field_k = param1.b(16711935);
+            this.field_k = param1.readUnsignedByte(16711935);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -45,11 +45,11 @@ final class jia extends k {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         if (param0) {
           field_l = (String) null;
@@ -168,7 +168,7 @@ final class jia extends k {
         return var3;
     }
 
-    final static void a(po param0, mla param1, int param2, byte param3, String param4) {
+    final static void a(BitmapFont param0, mla param1, int param2, byte param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -230,7 +230,7 @@ final class jia extends k {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -254,9 +254,9 @@ final class jia extends k {
               ac.a("document.cookie=\"" + var5 + "\"", param2, 113);
             } catch (Throwable throwable) {
             }
-            eha.a(-119, param2);
+            InsanoSauceSpecial.a(-119, param2);
           } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "jia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pe.wrapException((Throwable) ((Object) runtimeException), "jia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

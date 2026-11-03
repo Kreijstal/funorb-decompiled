@@ -5,22 +5,22 @@ final class ec {
     static String[] field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -29584) {
-          ec.a(-78);
+          ec.releaseStatics(-78);
         }
         field_b = null;
     }
 
-    final static kv[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        kv[] var10;
-        kv[] var11_ref_kv__;
+        Sprite[] var10;
+        Sprite[] var11_ref_kv__;
         int var11;
         int var12;
-        kv var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -31,7 +31,7 @@ final class ec {
         int var12Lifetime4;
         var15 = BachelorFridge.field_y;
         var9 = param4 + (param8 + param6);
-        var10 = new kv[]{new kv(var9, var9), new kv(param0, var9), new kv(var9, var9), new kv(var9, param0), new kv(64, 64), new kv(var9, param0), new kv(var9, var9), new kv(param0, var9), new kv(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9), new Sprite(var9, param0), new Sprite(64, 64), new Sprite(var9, param0), new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9)};
         var11_ref_kv__ = var10;
         for (var12 = 0; var11_ref_kv__.length > var12; var12++) {
           var13 = var11_ref_kv__[var12];

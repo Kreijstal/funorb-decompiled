@@ -4,11 +4,11 @@
 final class mba {
     static qia field_b;
     static int[] field_a;
-    static eaa field_c;
-    static kv[] field_d;
+    static IntrusiveDeque field_c;
+    static Sprite[] field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= -31) {
           field_b = null;
           field_d = null;
@@ -16,7 +16,7 @@ final class mba {
           field_a = null;
           return;
         }
-        mba.a(18);
+        mba.releaseStatics(18);
         field_b = null;
         field_d = null;
         field_c = null;

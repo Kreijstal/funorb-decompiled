@@ -25,23 +25,23 @@ final class sc extends lw {
     final void a(int param0, byte param1) {
         if (param0 == 39) {
           this.b(1);
-          fla.b(23621);
+          ShieldSpecial.b(23621);
           mka.field_j = true;
           pka.field_f = true;
-          iaa.field_a = true;
+          MeshObject.field_a = true;
         }
         if (param1 == 73) {
           return;
         }
-        sc.d(-97);
+        sc.releaseStatics(-97);
     }
 
     sc() {
-        super(true, new String[]{rn.field_t}, ls.field_d);
+        super(true, new String[]{BananarangEvent.field_t}, ls.field_d);
         this.field_c = new int[][]{new int[]{170, 160}};
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_l = null;
         field_n = null;

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qq extends pp {
-    static ee[] field_i;
-    static kv field_l;
-    static sna field_k;
+final class qq extends EventEffect {
+    static IndexedSprite[] field_i;
+    static Sprite field_l;
+    static UiComponent field_k;
     private int field_j;
 
     final static String a(byte[] param0, boolean param1) {
@@ -30,11 +30,11 @@ final class qq extends pp {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(lu param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -42,9 +42,9 @@ final class qq extends pp {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          er.a(this.field_h, 119, param0);
+          FlirtAnimation.a(this.target, 119, param0);
           var3_int = -74 / ((34 - param1) / 58);
-          param0.d(this.field_j, 0);
+          param0.writeByte(this.field_j, 0);
           param0.b(this.field_f, -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,11 +57,11 @@ final class qq extends pp {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(eaa param0, int param1, int param2, int param3) {
+    final static void a(IntrusiveDeque param0, int param1, int param2, int param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -102,7 +102,7 @@ final class qq extends pp {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -152,11 +152,11 @@ final class qq extends pp {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    final static void a(sna param0, sna param1, cw param2, sna param3, po param4, sna param5, sna param6, sna param7, sna param8, int param9, sna param10, boolean param11) {
+    final static void a(UiComponent param0, UiComponent param1, cw param2, UiComponent param3, BitmapFont param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, int param9, UiComponent param10, boolean param11) {
         String stackIn_27_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_41_0 = null;
@@ -181,33 +181,33 @@ final class qq extends pp {
         StringBuilder stackIn_77_1 = null;
         String stackIn_78_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kv var12 = null;
+        Sprite var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        kv[] var16 = null;
-        sna var17 = null;
+        Sprite[] var16 = null;
+        UiComponent var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
         var20 = BachelorFridge.field_y;
         try {
           uc.field_l = param8;
-          jaa.field_u[4] = 16711935;
-          jaa.field_u[0] = 16764000;
-          jaa.field_u[3] = 16736511;
-          jaa.field_u[2] = 9474303;
+          HazmatEvent.field_u[4] = 16711935;
+          HazmatEvent.field_u[0] = 16764000;
+          HazmatEvent.field_u[3] = 16736511;
+          HazmatEvent.field_u[2] = 9474303;
           dc.field_r = param4;
           am.field_O = param11;
-          jaa.field_u[1] = 6356832;
+          HazmatEvent.field_u[1] = 6356832;
           wp.field_q[2] = 16736352;
           wp.field_q[0] = 16764000;
-          jaa.field_u[4] = 16711935;
+          HazmatEvent.field_u[4] = 16711935;
           wp.field_q[3] = 16736511;
           wp.field_q[1] = 6356832;
-          vq.field_w = 8421504;
-          var12 = new kv(4, 4);
+          SlowAllAnimation.field_w = 8421504;
+          var12 = new Sprite(4, 4);
           var13 = var12.field_v;
           var14 = var12.field_v;
           var12.field_v[15] = 7368816;
@@ -215,31 +215,31 @@ final class qq extends pp {
           var13[2] = 7368816;
           var14[5] = 7368816;
           var15[8] = 7368816;
-          var16 = new kv[9];
+          var16 = new Sprite[9];
           var16[4] = var12;
-          i.field_a = new sna(0L, param10);
-          gha.field_d = new sna(0L, param7);
+          i.field_a = new UiComponent(0L, param10);
+          DefaultWidgetRenderer.field_d = new UiComponent(0L, param7);
           if (param9 != -30803) {
-            field_k = (sna) null;
+            field_k = (UiComponent) null;
           }
-          i.field_a.a(-1, gha.field_d);
-          var17 = new sna(0L, (sna) null);
-          var17.field_z = new eaa();
+          i.field_a.a(-1, DefaultWidgetRenderer.field_d);
+          var17 = new UiComponent(0L, (UiComponent) null);
+          var17.children = new IntrusiveDeque();
           af.field_b = new sga(0L, var17, param5, param2);
-          gha.field_d.a(-1, af.field_b);
-          oi.field_w = new sna(0L, param3);
-          gha.field_d.a(-1, oi.field_w);
-          jba.field_A = new sna(0L, param6);
-          jba.field_A.field_jb = dc.field_r;
-          oi.field_w.a(-1, jba.field_A);
-          oi.field_w.d((byte) 116);
-          ts.field_r = new sna(0L, (sna) null);
-          ts.field_r.field_eb = var16;
-          oi.field_w.a(-1, ts.field_r);
-          r.field_l = new sna[5];
-          bda.field_m = new sna[5];
-          cb.field_o = new sna[5];
-          wg.field_i = new sna[5];
+          DefaultWidgetRenderer.field_d.a(-1, af.field_b);
+          ResetAnimation.field_w = new UiComponent(0L, param3);
+          DefaultWidgetRenderer.field_d.a(-1, ResetAnimation.field_w);
+          HailAnimation.field_A = new UiComponent(0L, param6);
+          HailAnimation.field_A.field_jb = dc.field_r;
+          ResetAnimation.field_w.a(-1, HailAnimation.field_A);
+          ResetAnimation.field_w.d((byte) 116);
+          DisableSpecial.field_r = new UiComponent(0L, (UiComponent) null);
+          DisableSpecial.field_r.field_eb = var16;
+          ResetAnimation.field_w.a(-1, DisableSpecial.field_r);
+          r.field_l = new UiComponent[5];
+          bda.field_m = new UiComponent[5];
+          cb.field_o = new UiComponent[5];
+          wg.field_i = new UiComponent[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -249,7 +249,7 @@ final class qq extends pp {
               if (stackIn_31_0 != 0) {
                 if (var18 == 1 &&
                   am.field_O) {
-                  var19 = hfa.field_B;
+                  var19 = WidgetWrapper.field_B;
                 } else {
                   decompiledFrameRemainder0 = (var18 == 2);
                   if (decompiledFrameRemainder0) {
@@ -260,23 +260,23 @@ final class qq extends pp {
                 if (!am.field_O) {
                   stackIn_27_0 = uha.field_Vb;
                 } else {
-                  stackIn_27_0 = cja.field_r;
+                  stackIn_27_0 = FlyEvent.field_r;
                 }
                 var19 = stackIn_27_0;
               }
               if (decompiledFrameRemainder0) {
-                r.field_l[var18] = new sna(0L, param0);
-                cb.field_o[var18] = new sna(0L, uc.field_l, var19);
-                wg.field_i[var18] = new sna(0L, (sna) null);
+                r.field_l[var18] = new UiComponent(0L, param0);
+                cb.field_o[var18] = new UiComponent(0L, uc.field_l, var19);
+                wg.field_i[var18] = new UiComponent(0L, (UiComponent) null);
                 wg.field_i[var18].field_Y = 1;
-                bda.field_m[var18] = new sna(0L, uc.field_l);
+                bda.field_m[var18] = new UiComponent(0L, uc.field_l);
                 bda.field_m[var18].field_Y = 1;
                 r.field_l[var18].a(param9 + 30802, cb.field_o[var18]);
                 r.field_l[var18].a(-1, wg.field_i[var18]);
                 r.field_l[var18].a(-1, bda.field_m[var18]);
                 r.field_l[var18].d((byte) 126);
                 i.field_a.a(param9 ^ 30802, r.field_l[var18]);
-                rf.field_k = rf.field_k + 1;
+                ArchiveIndex.field_k = ArchiveIndex.field_k + 1;
               }
               var18++;
               continue;
@@ -284,9 +284,9 @@ final class qq extends pp {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            kg.field_a = new sna(0L, param1);
-            kg.field_a.field_Z = sv.field_b;
-            i.field_a.a(-1, kg.field_a);
+            FullscreenFocusCanvas.field_a = new UiComponent(0L, param1);
+            FullscreenFocusCanvas.field_a.field_Z = sv.field_b;
+            i.field_a.a(-1, FullscreenFocusCanvas.field_a);
             stackIn_31_0 = cia.a(0) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&
@@ -359,7 +359,7 @@ final class qq extends pp {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param11).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -393,13 +393,13 @@ final class qq extends pp {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    final void a(aga param0, op param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         RuntimeException runtimeException = null;
-        aga var4 = null;
+        BattleCreature var4 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -408,7 +408,7 @@ final class qq extends pp {
         RuntimeException decompiledCaughtException = null;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var4 = this.field_h.a(71, param1);
+          var4 = this.target.a(71, param1);
           if (-1 != this.field_j) {
             var4.field_k[this.field_j] = var4.field_k[this.field_j] - this.field_f;
             decompiledFrameRemainder0 = (BachelorFridge.field_y != 0);
@@ -418,7 +418,7 @@ final class qq extends pp {
             return;
           }
           if (param2 != 12) {
-            this.a((lu) null, (byte) -4);
+            this.write((PacketBuffer) null, (byte) -4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -437,34 +437,34 @@ final class qq extends pp {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static sca b(int param0) {
+    final static MouseWheelInput b(int param0) {
         try {
           Throwable var1 = null;
           RuntimeException var1_ref = null;
-          sca stackIn_4_0 = null;
+          MouseWheelInput stackIn_4_0 = null;
           Object stackIn_6_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
               if (param0 != -5368) {
-                field_l = (kv) null;
+                field_l = (Sprite) null;
               }
-              stackIn_4_0 = (sca) (Class.forName("qv").newInstance());
+              stackIn_4_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = decompiledCaughtException;
               stackIn_6_0 = null;
-              return (sca) (stackIn_6_0);
+              return (MouseWheelInput) (stackIn_6_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw pe.a((Throwable) ((Object) var1_ref), "qq.K(" + param0 + ')');
+            throw pe.wrapException((Throwable) ((Object) var1_ref), "qq.K(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -487,18 +487,18 @@ final class qq extends pp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "qq.F(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "qq.F(" + param0 + ')');
         }
     }
 
-    qq(nq param0, int param1, int param2) {
+    qq(CreatureRef param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_h = param0;
+          this.target = param0;
           this.field_j = param1;
           this.field_f = param2;
           return;
@@ -512,7 +512,7 @@ final class qq extends pp {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

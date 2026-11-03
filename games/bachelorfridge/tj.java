@@ -9,13 +9,13 @@ final class tj {
     static String field_a;
     static byte[] field_c;
 
-    final static kv[] a(kv[] param0, byte param1) {
+    final static Sprite[] a(Sprite[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        kv var3_ref_kv = null;
+        Sprite var3_ref_kv = null;
         int var3 = 0;
         int var4 = 0;
-        kv[] stackIn_5_0 = null;
+        Sprite[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -30,7 +30,7 @@ final class tj {
             param0[var2_int].field_o = param0[var2_int].field_p;
           }
           var3 = -22 % ((59 - param1) / 44);
-          stackIn_5_0 = (kv[]) (param0);
+          stackIn_5_0 = (Sprite[]) (param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -42,32 +42,32 @@ final class tj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static rk[] a(byte param0, lu param1) {
+    final static CreatureProfile[] a(byte param0, PacketBuffer param1) {
         int var3 = 0;
-        rk[] var2 = null;
+        CreatureProfile[] var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
-        lu var5 = null;
-        rk[] var6 = null;
-        rk[] stackIn_7_0 = null;
+        PacketBuffer var5 = null;
+        CreatureProfile[] var6 = null;
+        CreatureProfile[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = BachelorFridge.field_y;
         try {
-          var6 = new rk[50];
+          var6 = new CreatureProfile[50];
           var2 = var6;
           for (var3 = 0; var3 < 50; var3++) {
             var6[var3] = gka.a(param1, 255);
           }
           if (param0 != 124) {
-            var5 = (lu) null;
-            tj.a((byte) -37, (lu) null);
+            var5 = (PacketBuffer) null;
+            tj.a((byte) -37, (PacketBuffer) null);
           }
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -81,11 +81,11 @@ final class tj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -99) {
           return;
         }

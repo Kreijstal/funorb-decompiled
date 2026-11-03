@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sga extends sna {
-    sna field_wb;
-    sna field_vb;
+final class sga extends UiComponent {
+    UiComponent field_wb;
+    UiComponent field_vb;
     cw field_xb;
 
     private final void a(int param0, int param1, int param2) {
@@ -13,21 +13,21 @@ final class sga extends sna {
         this.field_vb.field_sb = -param2 + this.field_sb - param1;
         this.field_xb.a(param2, -this.field_vb.field_rb, this.field_sb - param2, this.field_wb.field_p, 0, false, this.field_vb.field_p, this.field_p);
         if (param0 >= -117) {
-          this.field_vb = (sna) null;
+          this.field_vb = (UiComponent) null;
         }
     }
 
-    sga(long param0, sna param1, sna param2, cw param3) {
-        super(param0, (sna) null);
+    sga(long param0, UiComponent param1, UiComponent param2, cw param3) {
+        super(param0, (UiComponent) null);
         try {
-          this.field_wb = new sna(0L, param2);
+          this.field_wb = new UiComponent(0L, param2);
           this.field_xb = new cw(0L, param3);
           this.a(-1, this.field_wb);
           this.a(-1, this.field_xb);
           this.field_vb = param1;
           this.field_wb.a(-1, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sga.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sga.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class sga extends sna {
     final void a(boolean param0, int param1, int param2, int param3) {
         this.a((byte) 125, param3, this.field_wb.field_p, param0, param2);
         if (param1 != 0) {
-          this.field_vb = (sna) null;
+          this.field_vb = (UiComponent) null;
         }
     }
 

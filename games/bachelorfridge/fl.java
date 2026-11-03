@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends at {
-    static sna field_m;
+final class fl extends AnimationNode {
+    static UiComponent field_m;
     static int field_q;
     static int[] field_j;
     static int[] field_p;
     private int field_k;
     static String[] field_o;
-    private ad field_n;
+    private CreatureActor field_n;
     static String field_l;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_m = null;
         if (!param0) {
           field_o = null;
@@ -20,7 +20,7 @@ final class fl extends at {
           field_j = null;
           return;
         }
-        fl.b(true);
+        fl.releaseStatics(true);
         field_o = null;
         field_l = null;
         field_p = null;
@@ -29,20 +29,20 @@ final class fl extends at {
 
     private final void d(byte param0) {
         if (param0 == -82) {
-          if (this.field_n.field_s.field_y == 31) {
+          if (this.field_n.field_s.statusId == 31) {
             this.field_n.a(24831, 101, kna.field_g[31]);
-            wf.a(34, (byte) 126);
+            MartyrAnimation.a(34, (byte) 126);
           }
           return;
         }
         field_p = (int[]) null;
-        if (this.field_n.field_s.field_y == 31) {
+        if (this.field_n.field_s.statusId == 31) {
           this.field_n.a(24831, 101, kna.field_g[31]);
-          wf.a(34, (byte) 126);
+          MartyrAnimation.a(34, (byte) 126);
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         if (this.field_k == 10) {
           aba.a((byte) -67, 19);
         }
@@ -59,13 +59,13 @@ final class fl extends at {
         return false;
     }
 
-    fl(gj param0, ad param1) {
+    fl(BattleScreen param0, CreatureActor param1) {
         try {
           this.field_n = param1;
           this.field_n.field_f.a((byte) 18, this.field_n.field_s.field_o.field_b, 5);
           this.field_k = 25;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

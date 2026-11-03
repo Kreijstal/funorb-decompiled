@@ -3,7 +3,7 @@
  */
 abstract class cga extends DualLinkNode {
     static int field_p;
-    static ee field_r;
+    static IndexedSprite field_r;
     boolean field_q;
     boolean field_o;
     volatile boolean field_n;
@@ -45,15 +45,15 @@ abstract class cga extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "cga.C(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "cga.C(" + param0 + ',' + param1 + ')');
         }
     }
 
     abstract int e(int param0);
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          field_r = (ee) null;
+          field_r = (IndexedSprite) null;
           field_r = null;
           return;
         }

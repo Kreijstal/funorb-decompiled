@@ -3,11 +3,11 @@
  */
 final class qs extends pu {
     static int field_o;
-    static kv[][] field_l;
-    static sna field_m;
+    static Sprite[][] field_l;
+    static UiComponent field_m;
     static int field_n;
 
-    final static String[][] a(boolean param0, lu param1) {
+    final static String[][] a(boolean param0, PacketBuffer param1) {
         int var5 = 0;
         int var6 = 0;
         int var2_int = 0;
@@ -23,10 +23,10 @@ final class qs extends pu {
         var7 = BachelorFridge.field_y;
         try {
           if (param0) {
-            field_l = (kv[][]) null;
+            field_l = (Sprite[][]) null;
           }
-          var2_int = param1.e((byte) 117);
-          var3 = param1.e((byte) 95);
+          var2_int = param1.readUnsignedShort((byte) 117);
+          var3 = param1.readUnsignedShort((byte) 95);
           var4 = new String[var2_int][var3];
           for (var5 = 0; var5 < var2_int; var5++) {
             for (var6 = 0; var6 < var3; var6++) {
@@ -45,7 +45,7 @@ final class qs extends pu {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -56,29 +56,29 @@ final class qs extends pu {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          i.field_h = new js(16);
+          i.field_h = new IntrusiveNodeHashTable(16);
           var1_int = 0;
           if (param0) {
-            field_l = (kv[][]) null;
+            field_l = (Sprite[][]) null;
           }
-          while (nm.field_C.length > var1_int) {
-            i.field_h.a((long)nm.field_C[var1_int].toLowerCase().hashCode(), (byte) 127, new ji(var1_int));
+          while (StampedeAnimation.field_C.length > var1_int) {
+            i.field_h.a((long)StampedeAnimation.field_C[var1_int].toLowerCase().hashCode(), (byte) 127, new ji(var1_int));
             var1_int++;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "qs.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "qs.B(" + param0 + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -5232) {
           return;
         }
         field_m = null;
-        field_l = (kv[][]) null;
+        field_l = (Sprite[][]) null;
     }
 
     final static void c(int param0) {
@@ -95,7 +95,7 @@ final class qs extends pu {
           }
         }
         if (lfa.field_q > 0) {
-          pm.f(param0 + 11100);
+          IncomingAnimation.f(param0 + 11100);
         }
         if (ld.field_p > 0) {
           dna.c(ld.field_p, false);
@@ -104,8 +104,8 @@ final class qs extends pu {
           dna.c(dja.field_m, false);
         }
         if (param0 != -10901) {
-          lu var3 = (lu) null;
-          qs.a(false, (lu) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          qs.a(false, (PacketBuffer) null);
         }
     }
 

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wba {
-    static eaa field_g;
+    static IntrusiveDeque field_g;
     int field_b;
     static vr field_f;
     static String[] field_a;
-    static kia[] field_e;
+    static MusicTrack[] field_e;
     static int field_c;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_d = null;
         field_a = null;
@@ -28,9 +28,9 @@ final class wba {
     }
 
     static {
-        field_g = new eaa();
+        field_g = new IntrusiveDeque();
         field_c = 0;
-        field_e = new kia[3];
+        field_e = new MusicTrack[3];
         field_d = "Report <%0> for abuse";
     }
 }

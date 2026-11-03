@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class raa extends hfa {
+final class raa extends WidgetWrapper {
     static int field_F;
     private int field_C;
     static lda field_I;
@@ -14,20 +14,20 @@ final class raa extends hfa {
     private boolean field_H;
     private int field_K;
 
-    private raa(int param0, int param1, int param2, int param3, qda param4, pl param5, wj param6, boolean param7, boolean param8) {
+    private raa(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_D = 2147483647;
         this.field_K = 2147483647;
         try {
           this.field_H = param7 ? true : false;
-          this.field_A = param6;
+          this.child = param6;
           this.field_G = param8 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "raa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "raa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4, wj param5, int param6) {
+    final boolean b(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_14_0 = 0;
@@ -49,9 +49,9 @@ final class raa extends hfa {
             return stackIn_14_0 != 0;
           }
           if (param3 == 1) {
-            this.field_L = -param4 + (-this.field_v + param6);
+            this.field_L = -param4 + (-this.y + param6);
             cea.field_b = this;
-            this.field_C = param0 - this.field_s - param2;
+            this.field_C = param0 - this.x - param2;
           }
           this.field_u = param3;
           return true;
@@ -65,16 +65,16 @@ final class raa extends hfa {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, byte param2, wj param3, int param4, int param5) {
+    final void a(int param0, int param1, byte param2, UiWidget param3, int param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_u = 0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "raa.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "raa.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -85,21 +85,21 @@ final class raa extends hfa {
           raa.e((byte) 61);
           var1 = qaa.field_e[rba.field_b];
           if (var1 != -1) {
-            jga.field_v = jm.field_k[var1] + "...";
+            PizzaPartyAnimation.field_v = BoardChange.field_k[var1] + "...";
             cr.field_a = f.b((byte) 73);
             return;
           }
-          jga.field_v = jm.field_k[0] + "... " + id.field_g;
+          PizzaPartyAnimation.field_v = BoardChange.field_k[0] + "... " + PizzaArenaTheme.field_g;
           cr.field_a = f.b((byte) 73);
           return;
         }
         var1Lifetime1 = qaa.field_e[rba.field_b];
         if (var1Lifetime1 != -1) {
-          jga.field_v = jm.field_k[var1Lifetime1] + "...";
+          PizzaPartyAnimation.field_v = BoardChange.field_k[var1Lifetime1] + "...";
           cr.field_a = f.b((byte) 73);
           return;
         }
-        jga.field_v = jm.field_k[0] + "... " + id.field_g;
+        PizzaPartyAnimation.field_v = BoardChange.field_k[0] + "... " + PizzaArenaTheme.field_g;
         cr.field_a = f.b((byte) 73);
     }
 
@@ -147,21 +147,21 @@ final class raa extends hfa {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     final void a(int param0) {
         super.a(param0 ^ 0);
-        this.field_A.a(0, this.field_q, (byte) 59, this.field_p, 0);
-        this.field_D = this.field_v;
-        this.field_K = this.field_s;
+        this.child.a(0, this.height, (byte) 59, this.width, 0);
+        this.field_D = this.y;
+        this.field_K = this.x;
         if (param0 != -81) {
           this.field_D = 118;
         }
     }
 
-    final void a(int param0, int param1, wj param2, int param3) {
+    final void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {
         int stackIn_17_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_23_1 = 0;
@@ -174,24 +174,24 @@ final class raa extends hfa {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_A instanceof hf) ||
-            ((hf) (this.field_A)).field_z) &&
+          if ((!(this.child instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.child)).field_z) &&
             this.field_u == 1) {
             var5_int = mk.field_p - (this.field_C + param0);
             var6 = -param1 + (gd.field_m - this.field_L);
-            if (var5_int != this.field_s ||
-              this.field_v != var6) {
-              this.field_v = var6;
-              this.field_s = var5_int;
-              if (this.field_k instanceof tm) {
-                ((tm) (this.field_k)).a(param1, (byte) 118, param0, this);
+            if (var5_int != this.x ||
+              this.y != var6) {
+              this.y = var6;
+              this.x = var5_int;
+              if (this.listener instanceof tm) {
+                ((tm) (this.listener)).a(param1, (byte) 118, param0, this);
               }
             }
           } else {
             if (this.field_H) {
-              if (this.field_K != this.field_s) {
-                var5_int = this.field_K - this.field_s;
-                stackIn_17_1 = this.field_s;
+              if (this.field_K != this.x) {
+                var5_int = this.field_K - this.x;
+                stackIn_17_1 = this.x;
                 if (Math.abs(var5_int) > 2) {
                   stackIn_18_2 = var5_int >> 1;
                 } else {
@@ -201,11 +201,11 @@ final class raa extends hfa {
                     stackIn_18_2 = 1;
                   }
                 }
-                this.field_s = stackIn_17_1 + stackIn_18_2;
+                this.x = stackIn_17_1 + stackIn_18_2;
               }
-              if (this.field_D != this.field_v) {
-                var5_int = -this.field_v + this.field_D;
-                stackIn_23_1 = this.field_v;
+              if (this.field_D != this.y) {
+                var5_int = -this.y + this.field_D;
+                stackIn_23_1 = this.y;
                 if (Math.abs(var5_int) <= 2) {
                   if (var5_int <= 0) {
                     stackIn_26_2 = -1;
@@ -215,14 +215,14 @@ final class raa extends hfa {
                 } else {
                   stackIn_26_2 = var5_int >> 1;
                 }
-                this.field_v = stackIn_23_1 + stackIn_26_2;
+                this.y = stackIn_23_1 + stackIn_26_2;
               }
             }
           }
           if (param3 != 20) {
             return;
           }
-          super.a(param0, param1, param2, param3 + 0);
+          super.updateMouseOver(param0, param1, param2, param3 + 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -234,11 +234,11 @@ final class raa extends hfa {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 2) {
           return;
         }

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vc {
-    static kv[] field_d;
+    static Sprite[] field_d;
     static int field_a;
     static String field_f;
     static String field_b;
     static String field_e;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_e = null;
         field_b = null;
@@ -41,7 +41,7 @@ final class vc {
           vc.a((byte) 16);
         }
         try {
-          stackIn_3_0 = Integer.parseInt(lka.field_E[param0][param1]);
+          stackIn_3_0 = Integer.parseInt(TextInputWidget.field_E[param0][param1]);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

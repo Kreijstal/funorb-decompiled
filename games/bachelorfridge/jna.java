@@ -11,10 +11,10 @@ final class jna extends IntrusiveNode {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 != oi.field_w.field_R &&
+          if (0 != ResetAnimation.field_w.field_R &&
             !hl.field_I) {
             if (sea.field_j) {
-              fk.d(120);
+              HomingMissileEvent.d(120);
             } else {
               lna.field_q = true;
             }
@@ -23,11 +23,11 @@ final class jna extends IntrusiveNode {
             qfa.a(param0, param6, param7, (byte) -115, param6, param4, param5, param1, 20);
             bi.field_h.a(19842, param3);
             if (param3) {
-              if (ub.field_k.field_R != 0) {
+              if (BoardChangeAnimation.field_k.field_R != 0) {
                 lna.field_q = false;
               }
               if (qq.field_k.field_R != 0) {
-                bea.d(param2 ^ 125);
+                ClamsEvent.d(param2 ^ 125);
                 lna.field_q = false;
               }
             }
@@ -47,30 +47,30 @@ final class jna extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    final void a(int param0, lu param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
-          this.field_c = param1.c(-99);
+          this.key = param1.readLong(-99);
           if (param0 > -43) {
             field_f = (int[]) null;
           }
-          param1.f(-55);
+          param1.readInt(-55);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jna.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jna.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static kv[] a(int param0, int param1, byte param2, int param3) {
+    final static Sprite[] a(int param0, int param1, byte param2, int param3) {
         int var6 = BachelorFridge.field_y;
-        kv[] var7 = new kv[9];
-        kv[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         var7[0] = ik.b(param1, param3, 2);
         int var5 = 1;
         if (param2 != 106) {
-          return (kv[]) null;
+          return (Sprite[]) null;
         }
         while (9 > var5) {
           var7[var5] = var7[0];
@@ -94,8 +94,8 @@ final class jna extends IntrusiveNode {
     }
 
     final static void a(boolean param0, boolean param1) {
-        wia.a(param1, (byte) 31);
-        kh.a((byte) -74, param1);
+        BoardTile.a(param1, (byte) 31);
+        MassPoisonEvent.a((byte) -74, param1);
         if (param0) {
           return;
         }

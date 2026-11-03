@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ada extends k {
-    static ee field_l;
-    static ee field_p;
+    static IndexedSprite field_l;
+    static IndexedSprite field_p;
     static boolean field_k;
     private int[][] field_n;
     private int[] field_o;
-    static ee field_m;
+    static IndexedSprite field_m;
 
     public ada() {
         super(1, false);
         this.field_o = new int[257];
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;
@@ -26,14 +26,14 @@ final class ada extends k {
         var6 = BachelorFridge.field_y;
         try {
           if (param2 == 0) {
-            var4_int = param1.b(16711935);
+            var4_int = param1.readUnsignedByte(16711935);
             if (0 == var4_int) {
-              this.field_n = new int[param1.b(16711935)][4];
+              this.field_n = new int[param1.readUnsignedByte(16711935)][4];
               for (var5 = 0; var5 < this.field_n.length; var5++) {
-                this.field_n[var5][0] = param1.e((byte) 124);
-                this.field_n[var5][1] = param1.b(16711935) << 4;
-                this.field_n[var5][2] = param1.b(16711935) << 4;
-                this.field_n[var5][3] = param1.b(16711935) << 4;
+                this.field_n[var5][0] = param1.readUnsignedShort((byte) 124);
+                this.field_n[var5][1] = param1.readUnsignedByte(16711935) << 4;
+                this.field_n[var5][2] = param1.readUnsignedByte(16711935) << 4;
+                this.field_n[var5][3] = param1.readUnsignedByte(16711935) << 4;
               }
             } else {
               this.a(var4_int, (byte) 33);
@@ -53,7 +53,7 @@ final class ada extends k {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class ada extends k {
         int[] var17;
         var13 = BachelorFridge.field_y;
         if (param0 != 578) {
-          field_p = (ee) null;
+          field_p = (IndexedSprite) null;
         }
         var5 = this.field_n.length;
         if (var5 > 0) {
@@ -132,55 +132,55 @@ final class ada extends k {
             } else {
               var4 = 0;
             }
-            this.field_o[var6] = mp.a(mp.a(var2 << 16, var3 << 8), var4);
+            this.field_o[var6] = MassPoisonSpecial.a(MassPoisonSpecial.a(var2 << 16, var3 << 8), var4);
           }
         }
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
-        sna stackIn_9_0 = null;
+        UiComponent stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
-        sna stackIn_16_0 = null;
+        UiComponent stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         boolean stackIn_17_2 = false;
-        sna stackIn_21_0 = null;
+        UiComponent stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         boolean stackIn_22_2 = false;
-        pm.f(199);
+        IncomingAnimation.f(199);
         if (wk.field_a >= 0) {
-          dea.field_m.field_Z = lga.a(true, new String[]{Integer.toString(wk.field_a)}, bla.field_q);
+          dea.field_m.field_Z = lga.a(true, new String[]{Integer.toString(wk.field_a)}, RageSpecial.field_q);
         } else {
           dea.field_m.field_Z = null;
         }
-        stackIn_9_0 = ng.field_e;
+        stackIn_9_0 = MoveInfoPanel.field_e;
         stackIn_9_1 = 19842;
-        stackIn_10_2 = (param0) && (!param3) && (!eda.field_j) && (pw.field_w == null) && (null == rv.field_n);
-        ((sna) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
-        stackIn_16_0 = ui.field_r;
+        stackIn_10_2 = (param0) && (!param3) && (!eda.field_j) && (SnowAnimation.field_w == null) && (null == EffectBatch.field_n);
+        ((UiComponent) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
+        stackIn_16_0 = FullHealSpecial.field_r;
         stackIn_16_1 = 19842;
-        stackIn_17_2 = (param0) && (!param3) && (!eda.field_j) && (pw.field_w == null) && (rv.field_n == null);
-        ((sna) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
+        stackIn_17_2 = (param0) && (!param3) && (!eda.field_j) && (SnowAnimation.field_w == null) && (EffectBatch.field_n == null);
+        ((UiComponent) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
         stackIn_21_0 = sb.field_n;
         stackIn_21_1 = 19842;
         stackIn_22_2 = (param0) && (!param3) && (eda.field_j);
-        ((sna) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
+        ((UiComponent) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
         lia.field_j.field_a.f(18632);
         if (mc.field_g.field_R != 0) {
-          efa.field_p = true;
+          StickySpecial.field_p = true;
         }
         if (ae.field_a.field_R != 0 && (bha.field_l ||
-          !(dm.field_f <= 0) ||
-          !(hea.field_r < 2) &&
-          wga.field_q[12])) {
+          !(ProxySocketConnector.field_f <= 0) ||
+          !(BananarangSpecial.field_r < 2) &&
+          InvincibleEvent.field_q[12])) {
           aq.a(param2, (byte) 47);
         }
-        if (vh.field_y.field_R != 0) {
+        if (BagpipeAnimation.field_y.field_R != 0) {
           if (qha.field_c.length == 1 &&
-            mt.field_s != qha.field_c[0]) {
-            mt.field_s = qha.field_c[0];
+            ScavengerSpecial.field_s != qha.field_c[0]) {
+            ScavengerSpecial.field_s = qha.field_c[0];
           }
-          dn.a(-25, mt.field_s, 0, param2, true, cla.field_a);
+          dn.a(-25, ScavengerSpecial.field_s, 0, param2, true, cla.field_a);
         }
         if (param1 != aja.field_l.field_R) {
           eda.field_j = false;
@@ -255,13 +255,13 @@ final class ada extends k {
             }
           }
           if (param3 <= 72) {
-            field_m = (ee) null;
+            field_m = (IndexedSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var5), "ada.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) var5), "ada.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -473,7 +473,7 @@ final class ada extends k {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_p = null;
         field_l = null;

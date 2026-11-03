@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa extends kj {
-    private kv field_j;
+final class fa extends TileEffect {
+    private Sprite field_j;
     private int field_h;
-    private kv field_m;
-    static sna field_k;
+    private Sprite field_m;
+    static UiComponent field_k;
     static int field_f;
     static int field_l;
     private lna field_i;
     static fw field_g;
 
-    final static boolean a(byte param0, pf param1) {
+    final static boolean a(byte param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -20,7 +20,7 @@ final class fa extends kj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -75) {
-            stackIn_6_0 = (param1.d(1, (byte) -72) == 1);
+            stackIn_6_0 = (param1.readBits(1, (byte) -72) == 1);
             return stackIn_6_0;
           }
           return true;
@@ -34,36 +34,36 @@ final class fa extends kj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final static void a(boolean param0, int param1) {
-        sna stackIn_7_0 = null;
+        UiComponent stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        sna stackIn_11_0 = null;
+        UiComponent stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        sna stackIn_21_0 = null;
+        UiComponent stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
-        sna stackIn_25_0 = null;
+        UiComponent stackIn_25_0 = null;
         boolean stackIn_26_1 = false;
-        sna stackIn_36_0 = null;
+        UiComponent stackIn_36_0 = null;
         boolean stackIn_37_1 = false;
-        sna stackIn_40_0 = null;
+        UiComponent stackIn_40_0 = null;
         boolean stackIn_41_1 = false;
-        pf var3;
-        pf var3Lifetime1;
-        ah.a(640 + dg.field_i >> 1, (byte) 106, 0, dg.field_i - 640 >> 1, dg.field_c);
+        BitPacketBuffer var3;
+        BitPacketBuffer var3Lifetime1;
+        ah.a(640 + SoftwareRasterizer.field_i >> 1, (byte) 106, 0, SoftwareRasterizer.field_i - 640 >> 1, SoftwareRasterizer.field_c);
         if (0 < lfa.field_q) {
           if (nda.field_l != null) {
-            nda.field_l.c(ng.field_e.field_kb, 0);
+            nda.field_l.c(MoveInfoPanel.field_e.field_kb, 0);
           }
-          stackIn_7_0 = ng.field_e;
+          stackIn_7_0 = MoveInfoPanel.field_e;
           stackIn_8_1 = (param0) && (!eda.field_j);
-          ((sna) (Object) stackIn_7_0).a(stackIn_8_1, 7802);
-          stackIn_11_0 = ui.field_r;
+          ((UiComponent) (Object) stackIn_7_0).a(stackIn_8_1, 7802);
+          stackIn_11_0 = FullHealSpecial.field_r;
           stackIn_12_1 = (param0) && (!eda.field_j);
-          ((sna) (Object) stackIn_11_0).a(stackIn_12_1, 7802);
+          ((UiComponent) (Object) stackIn_11_0).a(stackIn_12_1, 7802);
         }
         if (ld.field_p > 0) {
           if (nda.field_l != null) {
@@ -71,10 +71,10 @@ final class fa extends kj {
           }
           stackIn_36_0 = ela.field_i;
           stackIn_37_1 = (param0) && (!w.field_e);
-          ((sna) (Object) stackIn_36_0).a(stackIn_37_1, 7802);
+          ((UiComponent) (Object) stackIn_36_0).a(stackIn_37_1, 7802);
           stackIn_40_0 = ho.field_g;
           stackIn_41_1 = (param0) && (!w.field_e);
-          ((sna) (Object) stackIn_40_0).a(stackIn_41_1, 7802);
+          ((UiComponent) (Object) stackIn_40_0).a(stackIn_41_1, 7802);
         } else {
           if (0 < dja.field_m) {
             if (nda.field_l != null) {
@@ -82,16 +82,16 @@ final class fa extends kj {
             }
             stackIn_21_0 = ela.field_i;
             stackIn_22_1 = (param0) && (!w.field_e);
-            ((sna) (Object) stackIn_21_0).a(stackIn_22_1, 7802);
+            ((UiComponent) (Object) stackIn_21_0).a(stackIn_22_1, 7802);
             stackIn_25_0 = ho.field_g;
             stackIn_26_1 = (param0) && (!w.field_e);
-            ((sna) (Object) stackIn_25_0).a(stackIn_26_1, 7802);
+            ((UiComponent) (Object) stackIn_25_0).a(stackIn_26_1, 7802);
             db.b(122);
             if (param1 == 26443) {
               return;
             }
-            var3 = (pf) null;
-            fa.a((byte) 74, (pf) null);
+            var3 = (BitPacketBuffer) null;
+            fa.a((byte) 74, (BitPacketBuffer) null);
             return;
           }
         }
@@ -99,25 +99,25 @@ final class fa extends kj {
         if (param1 == 26443) {
           return;
         }
-        var3Lifetime1 = (pf) null;
-        fa.a((byte) 74, (pf) null);
+        var3Lifetime1 = (BitPacketBuffer) null;
+        fa.a((byte) 74, (BitPacketBuffer) null);
     }
 
-    fa(gj param0, int param1, int param2, lna param3) {
+    fa(BattleScreen param0, int param1, int param2, lna param3) {
         super(param0, param1, param2);
         try {
           this.field_i = param3;
-          this.field_m = new kv(bd.field_i.field_q, bd.field_i.field_p);
-          this.field_j = new kv(128, 64);
+          this.field_m = new Sprite(bd.field_i.field_q, bd.field_i.field_p);
+          this.field_j = new Sprite(128, 64);
           bu.a(0, this.field_j);
           param0.field_s.field_p.e(0, 0, 16711680);
           db.b(107);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -10 / ((35 - param0) / 63);
         field_k = null;
         field_g = null;
@@ -144,13 +144,13 @@ final class fa extends kj {
     final void a(int param0, boolean param1, int param2) {
         this.field_i.e(86);
         if (this.field_i.field_x) {
-          bd.field_i.e();
+          bd.field_i.flipHorizontal();
         }
         this.field_m.b();
-        dg.d();
-        bd.field_i.c(0, 0, 16711680);
+        SoftwareRasterizer.clear();
+        bd.field_i.drawSilhouette(0, 0, 16711680);
         hga.field_U.a((byte) 127);
-        this.field_m.c(param2 + 9, -90 + param0, this.field_m.field_q >> 1, this.field_m.field_p >> 1, (int)((1.0 - Math.cos(3.141592653589793 * (double)(8 * this.field_h) / 50.0)) * 64.0));
+        this.field_m.drawScaledAlpha(param2 + 9, -90 + param0, this.field_m.field_q >> 1, this.field_m.field_p >> 1, (int)((1.0 - Math.cos(3.141592653589793 * (double)(8 * this.field_h) / 50.0)) * 64.0));
         if (param1) {
           return;
         }

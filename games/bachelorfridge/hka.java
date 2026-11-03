@@ -23,7 +23,7 @@ final class hka extends aba {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "hka.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "hka.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class hka extends aba {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!vn.a((byte) 119, var4)) {
-            stackIn_3_0 = jt.field_f;
+            stackIn_3_0 = FoodShopPanel.field_f;
             return stackIn_3_0;
           }
           var5 = (CharSequence) ((Object) param0);
@@ -55,7 +55,7 @@ final class hka extends aba {
             stackIn_12_0 = cm.field_u;
             return stackIn_12_0;
           }
-          stackIn_10_0 = jt.field_f;
+          stackIn_10_0 = FoodShopPanel.field_f;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class hka extends aba {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class hka extends aba {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 41 / ((param0 + 8) / 45);
-          if (this.a(param1, false) != jt.field_f) {
+          if (this.a(param1, false) != FoodShopPanel.field_f) {
             return null;
           }
           stackIn_3_0 = ug.field_k;
@@ -96,11 +96,11 @@ final class hka extends aba {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    hka(lka param0) {
+    hka(TextInputWidget param0) {
         super(param0);
     }
 
@@ -119,7 +119,7 @@ final class hka extends aba {
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_7_0 = qm.field_a.a(param2);
+            stackIn_7_0 = RasterBuffer.field_a.a(param2);
             return stackIn_7_0;
           }
           stackIn_5_0 = lha.field_b.a(param2);
@@ -134,7 +134,7 @@ final class hka extends aba {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

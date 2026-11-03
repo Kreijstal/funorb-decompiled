@@ -8,13 +8,13 @@ class ao extends kda {
     ao() {
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         int var1 = 113 % ((param0 - 21) / 43);
         field_d = null;
     }
 
-    final static void a(int param0, kv[] param1, int param2, byte param3, int param4) {
+    final static void a(int param0, Sprite[] param1, int param2, byte param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -36,16 +36,16 @@ class ao extends kda {
               return;
             }
             var7 = param1[1].field_n;
-            param1[0].e(param0, param4);
-            param1[2].e(param0 + param2 - var6, param4);
-            dg.a(eha.field_q);
-            dg.c(param0 + var5_int, param4, -var6 + param0 + param2, param4 + param1[1].field_o);
+            param1[0].draw(param0, param4);
+            param1[2].draw(param0 + param2 - var6, param4);
+            SoftwareRasterizer.saveClip(InsanoSauceSpecial.field_q);
+            SoftwareRasterizer.intersectClip(param0 + var5_int, param4, -var6 + param0 + param2, param4 + param1[1].field_o);
             var8 = param0 + var5_int;
             var9 = -var6 + param2 + param0;
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {
-              param1[1].e(param0, param4);
+              param1[1].draw(param0, param4);
             }
-            dg.b(eha.field_q);
+            SoftwareRasterizer.restoreClip(InsanoSauceSpecial.field_q);
             return;
           }
           return;
@@ -59,7 +59,7 @@ class ao extends kda {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

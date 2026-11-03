@@ -36,7 +36,7 @@ final class mb {
           }
           if (this.field_b >= param0) {
             if (param0 != this.field_b) {
-              bl.a(this.field_d, 1 + param0, this.field_d, param0, -param0 + this.field_b);
+              ArrayOperations.copy(this.field_d, 1 + param0, this.field_d, param0, -param0 + this.field_b);
             }
             this.field_b = this.field_b - 1;
             return;
@@ -48,7 +48,7 @@ final class mb {
         }
         if (this.field_b >= param0) {
           if (param0 != this.field_b) {
-            bl.a(this.field_d, 1 + param0, this.field_d, param0, -param0 + this.field_b);
+            ArrayOperations.copy(this.field_d, 1 + param0, this.field_d, param0, -param0 + this.field_b);
           }
           this.field_b = this.field_b - 1;
           return;
@@ -93,7 +93,7 @@ final class mb {
     private final void a(int param0, int param1) {
         int[] var4 = new int[this.b(param0 ^ 118, param1)];
         int[] var3 = var4;
-        bl.a(this.field_d, 0, var4, 0, this.field_d.length);
+        ArrayOperations.copy(this.field_d, 0, var4, 0, this.field_d.length);
         if (param0 == 1) {
           this.field_d = var4;
           return;

@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class pi extends kj {
+final class pi extends TileEffect {
     private int field_f;
-    private eaa field_g;
+    private IntrusiveDeque field_g;
     static String field_h;
 
     final static String a(int param0, java.applet.Applet param1) {
@@ -49,10 +49,10 @@ final class pi extends kj {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (null == nb.field_q) {
+            if (null == ScavengerEvent.field_q) {
               return param1.getParameter("settings");
             }
-            stackIn_16_0 = nb.field_q;
+            stackIn_16_0 = ScavengerEvent.field_q;
             return stackIn_16_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -64,7 +64,7 @@ final class pi extends kj {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -105,16 +105,16 @@ final class pi extends kj {
           var2 = this.field_f;
           var2 += 16;
           for (var3 = 0; var3 < 72; var3++) {
-            var4 = kla.a(this.field_f, this.field_e.field_h.field_w, -2147483648) - (this.field_f >> 1);
+            var4 = DiveBomberAnimation.a(this.field_f, this.field_e.field_h.field_w, -2147483648) - (this.field_f >> 1);
             stackIn_10_0 = (this.field_f >> 2) - Math.abs(var4) / 2;
             stackIn_10_1 = 0;
-            if (stackIn_10_1 < kla.a(2, this.field_e.field_h.field_w, -2147483648)) {
+            if (stackIn_10_1 < DiveBomberAnimation.a(2, this.field_e.field_h.field_w, -2147483648)) {
               stackIn_13_1 = 1;
             } else {
               stackIn_13_1 = -1;
             }
             var5 = stackIn_10_0 * stackIn_13_1;
-            kla.a(50, this.field_e.field_h.field_w, -2147483648);
+            DiveBomberAnimation.a(50, this.field_e.field_h.field_w, -2147483648);
             var6 = 64 + var4;
             var7 = var5 + 32;
             var8 = (int)(Math.sin(300.0 * (double)var2) * 100.0) * 0;
@@ -123,36 +123,36 @@ final class pi extends kj {
             stackIn_15_2 = var6;
             stackIn_15_3 = var8;
             stackIn_15_4 = var7;
-            if (kla.a(20, this.field_e.field_h.field_w, -2147483648) >= 5) {
+            if (DiveBomberAnimation.a(20, this.field_e.field_h.field_w, -2147483648) >= 5) {
               stackIn_16_0 = null;
               stackIn_16_1 = null;
-              stackIn_16_5 = aha.field_A[this.field_e.field_h.field_E][0];
+              stackIn_16_5 = LinkTextWidget.field_A[this.field_e.field_h.field_E][0];
             } else {
               stackIn_16_0 = null;
               stackIn_16_1 = null;
-              stackIn_16_5 = aha.field_A[this.field_e.field_h.field_E][1];
+              stackIn_16_5 = LinkTextWidget.field_A[this.field_e.field_h.field_E][1];
             }
             var9 = new rea(stackIn_15_2, stackIn_15_3, stackIn_15_4, stackIn_16_5);
-            kla.a(3, this.field_e.field_h.field_w, -2147483648);
-            kla.a(5000, this.field_e.field_h.field_w, -2147483648);
-            var9.field_o = (double)(-kla.a(2, this.field_e.field_h.field_w, -2147483648));
-            var9.field_n = -kla.a(10, this.field_e.field_h.field_w, -2147483648) + 25;
+            DiveBomberAnimation.a(3, this.field_e.field_h.field_w, -2147483648);
+            DiveBomberAnimation.a(5000, this.field_e.field_h.field_w, -2147483648);
+            var9.field_o = (double)(-DiveBomberAnimation.a(2, this.field_e.field_h.field_w, -2147483648));
+            var9.field_n = -DiveBomberAnimation.a(10, this.field_e.field_h.field_w, -2147483648) + 25;
             var9.field_h = -1;
             this.field_g.a(var9, true);
           }
         }
         if (param0 < 21) {
-          this.field_g = (eaa) null;
+          this.field_g = (IntrusiveDeque) null;
         }
         r.a(-126, this.field_f, this.field_e.field_h.field_w, this.field_g);
         return false;
     }
 
-    final static kv[] a(vr param0, int param1, String param2, String param3) {
+    final static Sprite[] a(vr param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        kv[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -167,7 +167,7 @@ final class pi extends kj {
           }
           var4_int = param0.a(param2, false);
           var5 = param0.a((byte) 6, var4_int, param3);
-          stackIn_3_0 = uka.a(var5, param1 ^ -8947, param0, var4_int);
+          stackIn_3_0 = ImageProducerRasterBuffer.a(var5, param1 ^ -8947, param0, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,7 +191,7 @@ final class pi extends kj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -201,13 +201,13 @@ final class pi extends kj {
         }
     }
 
-    pi(gj param0, int param1, int param2) {
+    pi(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_f = 136;
-          this.field_g = new eaa();
+          this.field_g = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -215,10 +215,10 @@ final class pi extends kj {
         if (param1 != 0) {
           return;
         }
-        fv.a(param0, 65280, 10, this.field_g, param2, (byte) -115);
+        PetAttackAnimation.a(param0, 65280, 10, this.field_g, param2, (byte) -115);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_h = (String) null;
         }

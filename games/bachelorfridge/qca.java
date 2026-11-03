@@ -13,78 +13,78 @@ final class qca extends k {
     static String field_m;
     private int field_k;
 
-    final static void a(int param0, sna param1, byte param2) {
+    final static void a(int param0, UiComponent param1, byte param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         ik var11 = null;
         String var12 = null;
-        kv var13 = null;
+        Sprite var13 = null;
         ik var14 = null;
         String var15 = null;
-        kv var16 = null;
+        Sprite var16 = null;
         ik var17 = null;
         String var18 = null;
-        kv var19 = null;
+        Sprite var19 = null;
         ik var20 = null;
         String var21 = null;
-        kv var22 = null;
+        Sprite var22 = null;
         ik var23 = null;
         String var24 = null;
-        kv var25 = null;
+        Sprite var25 = null;
         ik var26 = null;
         String var27 = null;
-        kv var28 = null;
+        Sprite var28 = null;
         ik var29 = null;
         String var30 = null;
-        kv var31 = null;
+        Sprite var31 = null;
         ik var32 = null;
         String var33 = null;
-        kv var34 = null;
+        Sprite var34 = null;
         ik var35 = null;
         String var36 = null;
-        kv var37 = null;
+        Sprite var37 = null;
         ik var38 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        kv var22Lifetime1;
-        kv var31Lifetime1;
-        kv var31Lifetime2;
-        kv var22Lifetime2;
-        kv var22Lifetime3;
-        kv var22Lifetime4;
-        kv var22Lifetime5;
-        kv var22Lifetime6;
-        kv var31Lifetime3;
-        kv var31Lifetime4;
-        kv var31Lifetime1Lifetime1;
-        kv var31Lifetime1Lifetime2;
-        kv var31Lifetime1Lifetime3;
-        kv var31Lifetime1Lifetime4;
-        kv var31Lifetime1Lifetime5;
+        Sprite var22Lifetime1;
+        Sprite var31Lifetime1;
+        Sprite var31Lifetime2;
+        Sprite var22Lifetime2;
+        Sprite var22Lifetime3;
+        Sprite var22Lifetime4;
+        Sprite var22Lifetime5;
+        Sprite var22Lifetime6;
+        Sprite var31Lifetime3;
+        Sprite var31Lifetime4;
+        Sprite var31Lifetime1Lifetime1;
+        Sprite var31Lifetime1Lifetime2;
+        Sprite var31Lifetime1Lifetime3;
+        Sprite var31Lifetime1Lifetime4;
+        Sprite var31Lifetime1Lifetime5;
         try {
-          mna.a(-1, (int[]) null, 0L, (String) null, (String) null, param0, -114, (sga) null, param1);
+          SleepEvent.a(-1, (int[]) null, 0L, (String) null, (String) null, param0, -114, (sga) null, param1);
           if (param0 == 0) {
             var11 = NetworkGameClient.field_u;
-            var13 = gi.field_b[0];
+            var13 = ClientException.field_b[0];
             var22 = var13;
             var31 = var22;
             var22Lifetime2 = var13;
             var12 = pr.field_e;
             var11.field_a.a((byte) 62, var12, var13, 11);
             var14 = NetworkGameClient.field_u;
-            var16 = gi.field_b[1];
+            var16 = ClientException.field_b[1];
             var22Lifetime3 = var16;
             var31Lifetime3 = var22Lifetime3;
             var22Lifetime4 = var16;
             var15 = hw.field_wb;
             var14.field_a.a((byte) 119, var15, var16, 12);
             var17 = NetworkGameClient.field_u;
-            var19 = gi.field_b[2];
+            var19 = ClientException.field_b[2];
             var22Lifetime5 = var19;
             var31Lifetime4 = var22Lifetime5;
             var22Lifetime6 = var19;
@@ -93,35 +93,35 @@ final class qca extends k {
           }
           if (param0 == 1) {
             var20 = NetworkGameClient.field_u;
-            var22Lifetime1 = gi.field_b[0];
+            var22Lifetime1 = ClientException.field_b[0];
             var31Lifetime1 = var22Lifetime1;
             var31Lifetime1Lifetime1 = var22Lifetime1;
-            var21 = eaa.field_f;
+            var21 = IntrusiveDeque.field_f;
             var20.field_a.a((byte) 118, var21, var22Lifetime1, 11);
             var23 = NetworkGameClient.field_u;
-            var25 = gi.field_b[1];
+            var25 = ClientException.field_b[1];
             var31Lifetime1Lifetime2 = var25;
             var31Lifetime1Lifetime3 = var25;
             var24 = mn.field_n;
             var23.field_a.a((byte) 116, var24, var25, 12);
             var26 = NetworkGameClient.field_u;
-            var28 = gi.field_b[2];
+            var28 = ClientException.field_b[2];
             var31Lifetime1Lifetime4 = var28;
             var31Lifetime1Lifetime5 = var28;
-            var27 = sma.field_B;
+            var27 = GasCloudAnimation.field_B;
             var26.field_a.a((byte) 49, var27, var28, 13);
           }
           if (param0 == 2) {
             var29 = NetworkGameClient.field_u;
-            var31Lifetime2 = gi.field_b[0];
+            var31Lifetime2 = ClientException.field_b[0];
             var30 = sh.field_H;
             var29.field_a.a((byte) 69, var30, var31Lifetime2, 11);
             var32 = NetworkGameClient.field_u;
-            var34 = gi.field_b[1];
-            var33 = kk.field_t;
+            var34 = ClientException.field_b[1];
+            var33 = AttackUpAllEvent.field_t;
             var32.field_a.a((byte) 59, var33, var34, 12);
             var35 = NetworkGameClient.field_u;
-            var37 = gi.field_b[2];
+            var37 = ClientException.field_b[2];
             var36 = ho.field_f;
             var35.field_a.a((byte) 122, var36, var37, 13);
           }
@@ -145,16 +145,16 @@ final class qca extends k {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static pia a(byte[] param0, int param1, boolean param2, ee[] param3, int param4, int param5) {
+    final static PalettedBitmapFont a(byte[] param0, int param1, boolean param2, IndexedSprite[] param3, int param4, int param5) {
         int var16_int = 0;
         byte[] array$0 = null;
         int var26 = 0;
         int incrementValue$2 = 0;
-        pia stackIn_29_0 = null;
+        PalettedBitmapFont stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -170,7 +170,7 @@ final class qca extends k {
         byte[][] var11 = null;
         int var13 = 0;
         int var14 = 0;
-        pia var16 = null;
+        PalettedBitmapFont var16 = null;
         byte[] var17 = null;
         byte[] var18 = null;
         int var19 = 0;
@@ -218,14 +218,14 @@ final class qca extends k {
           var40 = new byte[256][];
           var33 = var40;
           var11 = var33;
-          var45 = dg.field_e;
-          var13 = dg.field_i;
-          var14 = dg.field_c;
+          var45 = SoftwareRasterizer.field_e;
+          var13 = SoftwareRasterizer.field_i;
+          var14 = SoftwareRasterizer.field_c;
           if (param2) {
             field_m = (String) null;
           }
           var44 = new int[4];
-          dg.a(var44);
+          SoftwareRasterizer.saveClip(var44);
           for (var16_int = 0; var16_int < 256; var16_int++) {
             var6[var16_int] = param3[var16_int].field_f - param1;
             var7[var16_int] = param3[var16_int].field_c - param1;
@@ -239,18 +239,18 @@ final class qca extends k {
             var20 = param3[var16_int].field_e;
             var21 = var36[var16_int];
             var22 = var21 - var19;
-            dg.a(new int[var36[var16_int] * var37[var16_int]], var36[var16_int], var37[var16_int]);
+            SoftwareRasterizer.setTarget(new int[var36[var16_int] * var37[var16_int]], var36[var16_int], var37[var16_int]);
             var23 = 0;
             for (var24 = 0; var24 < var20; var24++) {
               for (var25 = 0; var25 < var19; var25++) {
                 if (var18[var23++] != 0) {
-                  dg.b(var25 + param1, param1 + var24, param1, 2);
+                  SoftwareRasterizer.fillCircle(var25 + param1, param1 + var24, param1, 2);
                 }
               }
             }
             var23Lifetime1 = 0;
             for (var24Lifetime1 = 0; var17.length > var24Lifetime1; var24Lifetime1++) {
-              var17[var24Lifetime1] = (byte)dg.field_e[var24Lifetime1];
+              var17[var24Lifetime1] = (byte)SoftwareRasterizer.field_e[var24Lifetime1];
             }
             var24Lifetime2 = param1 * (1 + var36[var16_int]);
             for (var25Lifetime1 = 0; var25Lifetime1 < var20; var25Lifetime1++) {
@@ -266,12 +266,12 @@ final class qca extends k {
               var24Lifetime2 = var24Lifetime2 + var22;
             }
           }
-          var16 = new pia(param0, var38, var39, var36, var37, var10, var40);
+          var16 = new PalettedBitmapFont(param0, var38, var39, var36, var37, var10, var40);
           var16.field_v = var16.field_v - param1;
           var16.field_B = var16.field_B - param1;
           var16.field_u = var16.field_u - param1;
-          dg.a(var45, var13, var14);
-          dg.b(var44);
+          SoftwareRasterizer.setTarget(var45, var13, var14);
+          SoftwareRasterizer.restoreClip(var44);
           stackIn_29_0 = var16;
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -290,11 +290,11 @@ final class qca extends k {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -307,22 +307,22 @@ final class qca extends k {
           var4_int = param2;
           if (var4_int != 0) {
             if (1 == var4_int) {
-              this.field_n = param1.e((byte) 66);
+              this.field_n = param1.readUnsignedShort((byte) 66);
             } else {
               if (var4_int != 2) {
                 if (var4_int != 3) {
                   if (4 == var4_int) {
-                    this.field_r = param1.e((byte) 53);
+                    this.field_r = param1.readUnsignedShort((byte) 53);
                   }
                 } else {
-                  this.field_q = param1.e((byte) 59);
+                  this.field_q = param1.readUnsignedShort((byte) 59);
                 }
               } else {
-                this.field_o = param1.b(16711935);
+                this.field_o = param1.readUnsignedByte(16711935);
               }
             }
           } else {
-            this.field_k = param1.b(16711935);
+            this.field_k = param1.readUnsignedByte(16711935);
           }
           if (param0 != -71) {
             this.field_k = 20;
@@ -338,15 +338,15 @@ final class qca extends k {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static sna e(int param0) {
+    final static UiComponent e(int param0) {
         if (param0 != -117485887) {
           field_l = (String) null;
         }
-        return nr.field_w.field_wb;
+        return RageAnimation.field_w.field_wb;
     }
 
     public qca() {
@@ -358,7 +358,7 @@ final class qca extends k {
         this.field_k = 0;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_l = null;
         if (param0 > -86) {
@@ -402,7 +402,7 @@ final class qca extends k {
         int var25;
         int var26;
         int var27;
-        sna var28;
+        UiComponent var28;
         int[][] var32;
         int var16Lifetime1;
         int var16Lifetime2;
@@ -410,8 +410,8 @@ final class qca extends k {
         int var17Lifetime2;
         var27 = BachelorFridge.field_y;
         if (param1 != 0) {
-          var28 = (sna) null;
-          qca.a(90, (sna) null, (byte) -84);
+          var28 = (UiComponent) null;
+          qca.a(90, (UiComponent) null, (byte) -84);
         }
         var3 = this.field_j.a(param0, -1);
         if (this.field_j.field_m) {
@@ -422,14 +422,14 @@ final class qca extends k {
             if (this.field_r <= 0) {
               stackIn_9_0 = this.field_q;
             } else {
-              stackIn_9_0 = this.field_q + (kla.a(this.field_r, var6, -2147483648) - var4);
+              stackIn_9_0 = this.field_q + (DiveBomberAnimation.a(this.field_r, var6, -2147483648) - var4);
             }
             var8 = stackIn_9_0;
             var8 = var8 >> 4 & 255;
-            var9 = kla.a(hh.field_d, var6, -2147483648);
-            var10 = kla.a(bi.field_g, var6, param1 + -2147483648);
+            var9 = DiveBomberAnimation.a(hh.field_d, var6, -2147483648);
+            var10 = DiveBomberAnimation.a(bi.field_g, var6, param1 + -2147483648);
             var11 = var9 + (am.field_R[var8] * this.field_o >> 12);
-            var12 = var10 + (this.field_o * baa.field_z[var8] >> 12);
+            var12 = var10 + (this.field_o * BananarangAnimation.field_z[var8] >> 12);
             var13 = var12 - var10;
             var14 = var11 - var9;
             if (0 != var14 ||
@@ -463,7 +463,7 @@ final class qca extends k {
               var18 = -var10 + var12;
               var19 = -var17Lifetime2 / 2;
               var20 = 2048 / var17Lifetime2;
-              var21 = -(kla.a(4096, var6, -2147483648) >> 2) + 1024;
+              var21 = -(DiveBomberAnimation.a(4096, var6, -2147483648) >> 2) + 1024;
               stackIn_30_0 = (var10 >= var12) ? -1 : 1;
               var22 = stackIn_30_0;
               if (var18 < 0) {

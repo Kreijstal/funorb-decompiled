@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nk {
-    final static void a(kv param0, int param1, int param2, int param3, int param4) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4) {
         int var13 = 0;
         int var15 = 0;
         int var13Lifetime1;
@@ -37,41 +37,41 @@ final class nk {
         if (var6 < var10) {
           param4 = ((var6 << 16) - var8 + var12 - 1) / var12;
         }
-        var13Lifetime2 = param1 + param2 * dg.field_i;
-        int var14 = dg.field_i - param3;
-        if (param2 + param4 > dg.field_k) {
-          param4 = param4 - (param2 + param4 - dg.field_k);
+        var13Lifetime2 = param1 + param2 * SoftwareRasterizer.field_i;
+        int var14 = SoftwareRasterizer.field_i - param3;
+        if (param2 + param4 > SoftwareRasterizer.field_k) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_k);
         }
-        if (param2 < dg.field_j) {
-          var15 = dg.field_j - param2;
+        if (param2 < SoftwareRasterizer.field_j) {
+          var15 = SoftwareRasterizer.field_j - param2;
           param4 = param4 - var15;
-          var13Lifetime2 = var13Lifetime2 + var15 * dg.field_i;
+          var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRasterizer.field_i;
           var8 = var8 + var12 * var15;
         }
-        if (param1 + param3 > dg.field_h) {
-          var15Lifetime1 = param1 + param3 - dg.field_h;
+        if (param1 + param3 > SoftwareRasterizer.field_h) {
+          var15Lifetime1 = param1 + param3 - SoftwareRasterizer.field_h;
           param3 = param3 - var15Lifetime1;
           var14 = var14 + var15Lifetime1;
         }
-        if (param1 < dg.field_f) {
-          var15Lifetime2 = dg.field_f - param1;
+        if (param1 < SoftwareRasterizer.field_f) {
+          var15Lifetime2 = SoftwareRasterizer.field_f - param1;
           param3 = param3 - var15Lifetime2;
           var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        nk.a(dg.field_e, param0.field_v, 0, 0, var7, var8, var13Lifetime2, var14, param3, param4, var11, var12, var5);
+        nk.a(SoftwareRasterizer.field_e, param0.field_v, 0, 0, var7, var8, var13Lifetime2, var14, param3, param4, var11, var12, var5);
     }
 
-    final static kv a(pa param0) {
+    final static Sprite a(ArgbSprite param0) {
         int var3 = 0;
-        kv var1;
+        Sprite var1;
         int var2;
         int var4;
         int[] stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
-        var1 = new kv(param0.field_q, param0.field_p);
+        var1 = new Sprite(param0.field_q, param0.field_p);
         var1.field_t = param0.field_t;
         var1.field_u = param0.field_u;
         var1.field_n = param0.field_n;

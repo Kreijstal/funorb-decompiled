@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rfa {
-    static kv field_a;
-    static sna field_b;
+    static Sprite field_a;
+    static UiComponent field_b;
 
     final static int a(boolean param0, int param1) {
         param1 = (param1 >>> 1 & 1431655765) + (1431655765 & param1);
@@ -17,27 +17,27 @@ final class rfa {
         return -30;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != -101) {
-          field_b = (sna) null;
+          field_b = (UiComponent) null;
         }
     }
 
-    final static cj a(int param0, lu param1) {
+    final static BattleUpdate a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        rv stackIn_3_0 = null;
+        EffectBatch stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 29428) {
-            rfa.a((byte) 60);
+            rfa.releaseStatics((byte) 60);
           }
-          stackIn_3_0 = new rv(param1);
-          return (cj) ((Object) stackIn_3_0);
+          stackIn_3_0 = new EffectBatch(param1);
+          return (BattleUpdate) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -48,7 +48,7 @@ final class rfa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

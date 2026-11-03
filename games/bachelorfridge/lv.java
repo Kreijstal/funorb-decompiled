@@ -5,27 +5,27 @@ final class lv extends iha {
     private aj[] field_n;
     static int[] field_l;
     static Object[] field_m;
-    private gj field_o;
+    private BattleScreen field_o;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var4 = 0;
         aj var5 = null;
         mw var6 = null;
         int var7 = BachelorFridge.field_y;
-        qm.a(37, 7758);
+        RasterBuffer.a(37, 7758);
         aj[] var8 = this.field_n;
         aj[] var2 = var8;
         int var3 = -71 % ((param0 - 71) / 47);
         for (var4 = 0; var4 < var8.length; var4++) {
           var5 = var8[var4];
           var6 = new mw(this.field_o, var5.field_c, var5.field_a);
-          ((kj) ((Object) var6)).a(0);
-          this.field_o.field_h.field_a[var5.field_c][var5.field_a].field_j = 2;
+          ((TileEffect) ((Object) var6)).a(0);
+          this.field_o.field_h.tiles[var5.field_c][var5.field_a].field_j = 2;
         }
         return true;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -47) {
           field_l = (int[]) null;
         }
@@ -33,11 +33,11 @@ final class lv extends iha {
         field_m = null;
     }
 
-    lv(gj param0, aj[] param1) {
+    lv(BattleScreen param0, aj[] param1) {
         int var4 = 0;
         aj[] var3 = null;
         aj var5 = null;
-        aga var6 = null;
+        BattleCreature var6 = null;
         aj[] var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -53,10 +53,10 @@ final class lv extends iha {
           var3 = var8;
           for (var4 = 0; var4 < var8.length; var4++) {
             var5 = var8[var4];
-            var6 = this.field_o.field_h.field_a[var5.field_c][var5.field_a].field_l;
+            var6 = this.field_o.field_h.tiles[var5.field_c][var5.field_a].occupant;
             if (var6 != null) {
               var6.g(-76, 40);
-              this.a(27799, new ek(this.field_o, this.field_o.b(var6, -23990), 40));
+              this.addChild(27799, new DamagePopupAnimation(this.field_o, this.field_o.b(var6, -23990), 40));
             }
           }
           return;
@@ -76,7 +76,7 @@ final class lv extends iha {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -85,51 +85,51 @@ final class lv extends iha {
         int[] var13 = field_l;
         int[] var1 = var13;
         int[] var0 = var1;
-        var0[0] = mp.a(var13[0], 4);
+        var0[0] = MassPoisonSpecial.a(var13[0], 4);
         int[] var14 = field_l;
         int[] var2 = var14;
         var0 = var2;
-        var0[0] = mp.a(var14[0], 4096);
+        var0[0] = MassPoisonSpecial.a(var14[0], 4096);
         int[] var15 = field_l;
         int[] var3 = var15;
         var0 = var3;
-        var0[0] = mp.a(var15[0], 8192);
+        var0[0] = MassPoisonSpecial.a(var15[0], 8192);
         int[] var16 = field_l;
         int[] var4 = var16;
         var0 = var4;
-        var0[0] = mp.a(var16[0], 16384);
+        var0[0] = MassPoisonSpecial.a(var16[0], 16384);
         int[] var17 = field_l;
         int[] var5 = var17;
         var0 = var5;
-        var0[0] = mp.a(var17[0], 131072);
+        var0[0] = MassPoisonSpecial.a(var17[0], 131072);
         int[] var18 = field_l;
         int[] var6 = var18;
         var0 = var6;
-        var0[0] = mp.a(var18[0], 262144);
+        var0[0] = MassPoisonSpecial.a(var18[0], 262144);
         int[] var19 = field_l;
         int[] var7 = var19;
         var0 = var7;
-        var0[1] = mp.a(var19[1], 8);
+        var0[1] = MassPoisonSpecial.a(var19[1], 8);
         int[] var20 = field_l;
         int[] var8 = var20;
         var0 = var8;
-        var0[1] = mp.a(var20[1], 512);
+        var0[1] = MassPoisonSpecial.a(var20[1], 512);
         int[] var21 = field_l;
         int[] var9 = var21;
         var0 = var9;
-        var0[1] = mp.a(var21[1], 2048);
+        var0[1] = MassPoisonSpecial.a(var21[1], 2048);
         int[] var22 = field_l;
         int[] var10 = var22;
         var0 = var10;
-        var0[1] = mp.a(var22[1], 4096);
+        var0[1] = MassPoisonSpecial.a(var22[1], 4096);
         int[] var23 = field_l;
         int[] var11 = var23;
         var0 = var11;
-        var0[1] = mp.a(var23[1], 8192);
+        var0[1] = MassPoisonSpecial.a(var23[1], 8192);
         int[] var24 = field_l;
         int[] var12 = var24;
         var0 = var12;
-        var0[1] = mp.a(var24[1], 65536);
+        var0[1] = MassPoisonSpecial.a(var24[1], 65536);
         field_m = new Object[1];
     }
 }

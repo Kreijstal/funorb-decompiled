@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rp extends hfa {
-    private eaa field_D;
-    static eaa field_C;
+final class rp extends WidgetWrapper {
+    private IntrusiveDeque field_D;
+    static IntrusiveDeque field_C;
 
     public rp() {
-        super(0, 0, lb.field_v, mi.field_k, (qda) null, (pl) null);
-        this.field_D = new eaa();
+        super(0, 0, InvincibleAnimation.field_v, mi.field_k, (WidgetRenderer) null, (WidgetListener) null);
+        this.field_D = new IntrusiveDeque();
     }
 
     final vf h(int param0) {
-        rna var2;
+        IntrusiveDequeCursor var2;
         vf var3;
         int var4;
         var4 = BachelorFridge.field_y;
         if (param0 != 0) {
           return (vf) null;
         }
-        var2 = new rna(this.field_D);
+        var2 = new IntrusiveDequeCursor(this.field_D);
         var3 = (vf) (var2.b((byte) 90));
         while (var3 != null) {
           if (var3.field_C) {
@@ -31,33 +31,33 @@ final class rp extends hfa {
 
     final void i(int param0) {
         int var4 = BachelorFridge.field_y;
-        rna var2 = new rna(this.field_D);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_D);
         vf var3 = (vf) (var2.b((byte) 44));
         while (var3 != null) {
           if (var3.a(param0 ^ -68)) {
-            var3.a(false);
+            var3.unlink(false);
           }
           var3 = (vf) (var2.a((byte) 0));
         }
-        this.field_A = (wj) ((Object) this.h(param0));
+        this.child = (UiWidget) ((Object) this.h(param0));
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 104) {
-          field_C = (eaa) null;
+          field_C = (IntrusiveDeque) null;
         }
         field_C = null;
     }
 
-    final wj d(byte param0) {
-        rna var2;
+    final UiWidget d(byte param0) {
+        IntrusiveDequeCursor var2;
         vf var3;
         int var4;
         var4 = BachelorFridge.field_y;
         if (param0 < 38) {
-          rp.e((byte) -80);
+          rp.releaseStatics((byte) -80);
         }
-        var2 = new rna(this.field_D);
+        var2 = new IntrusiveDequeCursor(this.field_D);
         var3 = (vf) (var2.b((byte) 107));
         while (var3 != null) {
           if (var3.field_C) {
@@ -68,17 +68,17 @@ final class rp extends hfa {
         return null;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void draw(byte param0, int param1, int param2, int param3) {
         int var8 = BachelorFridge.field_y;
         int var5 = 70 / ((param0 + 20) / 54);
-        if (null != this.field_f) {
-          this.field_f.a(param3, (wj) (this), 32679, param1, true);
+        if (null != this.renderer) {
+          this.renderer.a(param3, (UiWidget) (this), 32679, param1, true);
         }
-        rna var6 = new rna(this.field_D);
-        wj var7 = (wj) (var6.c((byte) 126));
+        IntrusiveDequeCursor var6 = new IntrusiveDequeCursor(this.field_D);
+        UiWidget var7 = (UiWidget) (var6.c((byte) 126));
         while (var7 != null) {
-          var7.a((byte) -127, this.field_v + param1, param2, param3 + this.field_s);
-          var7 = (wj) (var6.d((byte) -124));
+          var7.draw((byte) -127, this.y + param1, param2, param3 + this.x);
+          var7 = (UiWidget) (var6.d((byte) -124));
         }
     }
 
@@ -87,42 +87,42 @@ final class rp extends hfa {
         if (param0 != -66) {
           return;
         }
-        rna var2 = new rna(this.field_D);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_D);
         vf var3 = (vf) (var2.b((byte) -112));
         while (var3 != null) {
           var3.field_C = false;
           var3 = (vf) (var2.a((byte) 0));
         }
-        this.field_A = null;
+        this.child = null;
     }
 
     final void g(byte param0) {
         int var4 = BachelorFridge.field_y;
-        rna var2 = new rna(this.field_D);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_D);
         if (param0 <= 126) {
-          this.field_D = (eaa) null;
+          this.field_D = (IntrusiveDeque) null;
         }
         vf var3 = (vf) (var2.b((byte) 69));
         while (var3 != null) {
           if (var3.k(-116)) {
-            var3.a(false);
+            var3.unlink(false);
           }
           var3 = (vf) (var2.a((byte) 0));
         }
     }
 
-    final static void a(boolean param0, je param1) {
+    final static void a(boolean param0, PcmSampleStream param1) {
         try {
           qc.a(param1, -2490);
           if (!param0) {
-            field_C = (eaa) null;
+            field_C = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(wj param0, byte param1) {
+    final void a(UiWidget param0, byte param1) {
         if (!(param0 instanceof vf)) {
           throw new IllegalArgumentException();
         }
@@ -133,13 +133,13 @@ final class rp extends hfa {
           return;
         }
         try {
-          var3.a((wj) (this), -94);
+          var3.acquireFocus((UiWidget) (this), -94);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rp.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rp.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        field_C = new eaa();
+        field_C = new IntrusiveDeque();
     }
 }

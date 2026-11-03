@@ -8,7 +8,7 @@ final class cp {
     static int field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 66 % ((param0 + 77) / 33);
         field_b = null;

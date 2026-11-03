@@ -1,106 +1,106 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wu extends hf {
+final class wu extends InteractiveWidget {
     private qu field_A;
     private int field_D;
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        kv var16 = null;
-        kv var17 = null;
-        kv var14 = null;
-        kv var13 = null;
+    final void draw(byte param0, int param1, int param2, int param3) {
+        Sprite var16 = null;
+        Sprite var17 = null;
+        Sprite var14 = null;
+        Sprite var13 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = BachelorFridge.field_y;
         int var10Lifetime1;
         int var11Lifetime1;
-        super.a((byte) -82, param1, param2, param3);
+        super.draw((byte) -82, param1, param2, param3);
         if (0 != param2) {
           return;
         }
-        int var5 = (this.field_p >> 1) + param3 + this.field_s;
-        int var6 = this.field_v + (param1 + (this.field_q >> 1));
+        int var5 = (this.width >> 1) + param3 + this.x;
+        int var6 = this.y + (param1 + (this.height >> 1));
         int var9 = -121 % ((-20 - param0) / 54);
         jg var8 = this.field_A.b(-19704);
         if (var8 == cq.field_g) {
           var16 = fr.field_q[0];
           var10 = var16.field_n << 1;
           var11 = var16.field_o << 1;
-          if (null == rs.field_f) {
-            rs.field_f = new kv(var10, var11);
-            bu.a(0, rs.field_f);
+          if (null == StatusEffectInfo.field_f) {
+            StatusEffectInfo.field_f = new Sprite(var10, var11);
+            bu.a(0, StatusEffectInfo.field_f);
             var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var16.field_n, var6 - var16.field_o, 256);
+            StatusEffectInfo.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
             return;
           }
-          if (var10 > rs.field_f.field_q) {
-            rs.field_f = new kv(var10, var11);
-            bu.a(0, rs.field_f);
+          if (var10 > StatusEffectInfo.field_f.field_q) {
+            StatusEffectInfo.field_f = new Sprite(var10, var11);
+            bu.a(0, StatusEffectInfo.field_f);
             var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var16.field_n, var6 - var16.field_o, 256);
+            StatusEffectInfo.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
             return;
           }
-          if (rs.field_f.field_p < var11) {
-            rs.field_f = new kv(var10, var11);
-            bu.a(0, rs.field_f);
+          if (StatusEffectInfo.field_f.field_p < var11) {
+            StatusEffectInfo.field_f = new Sprite(var10, var11);
+            bu.a(0, StatusEffectInfo.field_f);
             var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var16.field_n, var6 - var16.field_o, 256);
+            StatusEffectInfo.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
             return;
           }
-          bu.a(0, rs.field_f);
-          dg.d();
+          bu.a(0, StatusEffectInfo.field_f);
+          SoftwareRasterizer.clear();
           var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
           db.b(89);
-          rs.field_f.d(var5 - var16.field_n, var6 - var16.field_o, 256);
+          StatusEffectInfo.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
           return;
         }
         if (var8 == ji.field_f) {
           var17 = fr.field_q[0];
           var10Lifetime1 = var17.field_n << 1;
           var11Lifetime1 = var17.field_o << 1;
-          if (null == rs.field_f) {
-            rs.field_f = new kv(var10Lifetime1, var11Lifetime1);
-            bu.a(0, rs.field_f);
+          if (null == StatusEffectInfo.field_f) {
+            StatusEffectInfo.field_f = new Sprite(var10Lifetime1, var11Lifetime1);
+            bu.a(0, StatusEffectInfo.field_f);
             var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var17.field_n, var6 - var17.field_o, 256);
+            StatusEffectInfo.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
             return;
           }
-          if (var10Lifetime1 > rs.field_f.field_q) {
-            rs.field_f = new kv(var10Lifetime1, var11Lifetime1);
-            bu.a(0, rs.field_f);
+          if (var10Lifetime1 > StatusEffectInfo.field_f.field_q) {
+            StatusEffectInfo.field_f = new Sprite(var10Lifetime1, var11Lifetime1);
+            bu.a(0, StatusEffectInfo.field_f);
             var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var17.field_n, var6 - var17.field_o, 256);
+            StatusEffectInfo.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
             return;
           }
-          if (rs.field_f.field_p < var11Lifetime1) {
-            rs.field_f = new kv(var10Lifetime1, var11Lifetime1);
-            bu.a(0, rs.field_f);
+          if (StatusEffectInfo.field_f.field_p < var11Lifetime1) {
+            StatusEffectInfo.field_f = new Sprite(var10Lifetime1, var11Lifetime1);
+            bu.a(0, StatusEffectInfo.field_f);
             var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var17.field_n, var6 - var17.field_o, 256);
+            StatusEffectInfo.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
             return;
           }
-          bu.a(0, rs.field_f);
-          dg.d();
+          bu.a(0, StatusEffectInfo.field_f);
+          SoftwareRasterizer.clear();
           var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
           db.b(89);
-          rs.field_f.d(var5 - var17.field_n, var6 - var17.field_o, 256);
+          StatusEffectInfo.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
           return;
         }
-        if (var8 == jt.field_f) {
+        if (var8 == FoodShopPanel.field_f) {
           var14 = fr.field_q[2];
-          var14.d(-(var14.field_q >> 1) + var5, var6 - (var14.field_p >> 1), 256);
+          var14.drawAdditive(-(var14.field_q >> 1) + var5, var6 - (var14.field_p >> 1), 256);
           return;
         }
         if (var8 == cm.field_u) {
           var13 = fr.field_q[1];
-          var13.d(var5 - (var13.field_q >> 1), var6 - (var13.field_p >> 1), 256);
+          var13.drawAdditive(var5 - (var13.field_q >> 1), var6 - (var13.field_p >> 1), 256);
           return;
         }
     }
@@ -109,26 +109,26 @@ final class wu extends hf {
         try {
           this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, wj param2, int param3) {
+    final void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.field_D = this.field_D + 1;
-          super.a(param0, param1, param2, param3);
+          super.updateMouseOver(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wu.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wu.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final String c(byte param0) {
-        if (this.field_t) {
+    final String getTooltip(byte param0) {
+        if (this.mouseOver) {
           return this.field_A.a((byte) 71);
         }
         if (param0 != 16) {
-          wj var3 = (wj) null;
-          this.a(-94, 42, (wj) null, -101);
+          UiWidget var3 = (UiWidget) null;
+          this.updateMouseOver(-94, 42, (UiWidget) null, -101);
           return null;
         }
         return null;
@@ -161,8 +161,8 @@ final class wu extends hf {
           var6 = param2;
           var7 = -param2;
           var8 = -1;
-          var9 = cr.a(DualLinkNode.field_l, param3 + param2, pw.field_x, 0);
-          var10 = cr.a(DualLinkNode.field_l, param3 - param2, pw.field_x, 0);
+          var9 = cr.a(DualLinkNode.field_l, param3 + param2, SnowAnimation.field_x, 0);
+          var10 = cr.a(DualLinkNode.field_l, param3 - param2, SnowAnimation.field_x, 0);
           hba.a(param0, var10, tj.field_b[param1], 7, var9);
           while (var6 > var5_int) {
             var8 += 2;
@@ -174,8 +174,8 @@ final class wu extends hf {
               var12 = param1 + var6;
               if (an.field_q <= var12 &&
                 var11 <= ha.field_n) {
-                var13 = cr.a(DualLinkNode.field_l, param3 + var5_int, pw.field_x, 0);
-                var14 = cr.a(DualLinkNode.field_l, -var5_int + param3, pw.field_x, 0);
+                var13 = cr.a(DualLinkNode.field_l, param3 + var5_int, SnowAnimation.field_x, 0);
+                var14 = cr.a(DualLinkNode.field_l, -var5_int + param3, SnowAnimation.field_x, 0);
                 if (var12 <= ha.field_n) {
                   hba.a(param0, var14, tj.field_b[var12], 7, var13);
                 }
@@ -193,8 +193,8 @@ final class wu extends hf {
             if (var11Lifetime1 > ha.field_n) {
               continue;
             }
-            var13Lifetime1 = cr.a(DualLinkNode.field_l, var6 + param3, pw.field_x, 0);
-            var14Lifetime1 = cr.a(DualLinkNode.field_l, param3 - var6, pw.field_x, param4 + 23);
+            var13Lifetime1 = cr.a(DualLinkNode.field_l, var6 + param3, SnowAnimation.field_x, 0);
+            var14Lifetime1 = cr.a(DualLinkNode.field_l, param3 - var6, SnowAnimation.field_x, param4 + 23);
             if (var12Lifetime1 <= ha.field_n) {
               hba.a(param0, var14Lifetime1, tj.field_b[var12Lifetime1], 7, var13Lifetime1);
             }
@@ -207,7 +207,7 @@ final class wu extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var5), "wu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) var5), "wu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -237,11 +237,11 @@ final class wu extends hf {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    final boolean a(wj param0, int param1) {
+    final boolean acquireFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -263,7 +263,7 @@ final class wu extends hf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

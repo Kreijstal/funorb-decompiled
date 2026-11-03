@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dda extends kj {
+final class dda extends TileEffect {
     static int field_j;
     boolean field_h;
     static boolean field_f;
@@ -25,12 +25,12 @@ final class dda extends kj {
         }
     }
 
-    dda(gj param0, int param1, int param2) {
+    dda(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_i = 150;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class dda extends kj {
         return false;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_k = null;
         field_l = null;
         if (param0) {
@@ -104,18 +104,18 @@ final class dda extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        dg.a(dga.field_b);
+        SoftwareRasterizer.saveClip(dga.field_b);
         int var4 = this.field_i * 36 / 150;
         if (param1 == 0) {
-          dg.a(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
+          SoftwareRasterizer.setClip(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
           this.field_e.field_s.field_k.field_b[109].a(param2, param0);
-          dg.b(dga.field_b);
+          SoftwareRasterizer.restoreClip(dga.field_b);
           return;
         }
         field_f = true;
-        dg.a(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
+        SoftwareRasterizer.setClip(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
         this.field_e.field_s.field_k.field_b[109].a(param2, param0);
-        dg.b(dga.field_b);
+        SoftwareRasterizer.restoreClip(dga.field_b);
     }
 
     static {

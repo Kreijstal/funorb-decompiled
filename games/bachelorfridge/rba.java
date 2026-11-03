@@ -6,9 +6,9 @@ import java.util.*;
 final class rba {
     static int field_b;
     static ok field_a;
-    static kia field_c;
+    static MusicTrack field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         int var1 = -16 / ((param0 - 16) / 44);
@@ -22,22 +22,22 @@ final class rba {
         int var9 = 0;
         int incrementValue$0 = 0;
         if (param2 >= 0) {
-          if (param2 >= dg.field_i ||
+          if (param2 >= SoftwareRasterizer.field_i ||
             param1 < 0 ||
-            dg.field_c <= param1) {
+            SoftwareRasterizer.field_c <= param1) {
             return;
           }
           if (param3 != -1) {
-            field_c = (kia) null;
+            field_c = (MusicTrack) null;
           }
           var5 = param0 * (param4 >>> 24) >> 8;
           var6 = 256 - var5;
-          var7 = dg.field_i * param1 + param2;
+          var7 = SoftwareRasterizer.field_i * param1 + param2;
           var8 = param4;
-          var9 = dg.field_e[var7];
+          var9 = SoftwareRasterizer.field_e[var7];
           incrementValue$0 = var7;
           var7++;
-          dg.field_e[incrementValue$0] = dda.a(dda.a(var9, 16711935) * var6 + dda.a(16711935, var8) * var5, -16711936) + dda.a(16711680, var5 * dda.a(var8, 65280) + dda.a(65280, var9) * var6) >>> 8;
+          SoftwareRasterizer.field_e[incrementValue$0] = dda.a(dda.a(var9, 16711935) * var6 + dda.a(16711935, var8) * var5, -16711936) + dda.a(16711680, var5 * dda.a(var8, 65280) + dda.a(65280, var9) * var6) >>> 8;
           return;
         }
     }
@@ -69,7 +69,7 @@ final class rba {
           }
           for (var5Lifetime1 = 0; 255 > var5Lifetime1; var5Lifetime1++) {
             var6 = -var5Lifetime1 + 255;
-            var7 = kla.a(var6, var4, -2147483648);
+            var7 = DiveBomberAnimation.a(var6, var4, -2147483648);
             var8 = var11[var7];
             var3[var7] = var11[var6];
             var3[511 - var5Lifetime1] = (byte) var8;
@@ -95,7 +95,7 @@ final class rba {
         int var3Lifetime1;
         var5 = BachelorFridge.field_y;
         try {
-          lp.field_u = false;
+          GasCloudEvent.field_u = false;
           if (param0 != null &&
             null != param0.field_f) {
             var6 = param0.field_f;
@@ -103,7 +103,7 @@ final class rba {
             for (var3 = 0; var6.length > var3; var3++) {
               var4 = var6[var3];
               if (var4 != 0) {
-                lp.field_u = true;
+                GasCloudEvent.field_u = true;
                 return;
               }
             }
@@ -121,7 +121,7 @@ final class rba {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

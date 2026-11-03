@@ -24,14 +24,14 @@ final class wk {
     }
 
     final static String a(boolean param0) {
-        if (kq.field_j == ola.field_p) {
-          return wj.field_i;
+        if (kq.field_j == FridgeScreen.field_p) {
+          return UiWidget.field_i;
         }
         if (!param0) {
           wk.a(44);
-          return lb.field_w;
+          return InvincibleAnimation.field_w;
         }
-        return lb.field_w;
+        return InvincibleAnimation.field_w;
     }
 
     final pda a(int param0, int param1) {
@@ -52,7 +52,7 @@ final class wk {
         }
         var3Lifetime1 = new pda();
         if (var4 != null) {
-          var3Lifetime1.a(new lu(var4), (byte) 109);
+          var3Lifetime1.a(new PacketBuffer(var4), (byte) 109);
         }
         if (32768 <= param1) {
           var3Lifetime1.b(true);
@@ -105,7 +105,7 @@ final class wk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

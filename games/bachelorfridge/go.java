@@ -4,7 +4,7 @@
 abstract class go extends DualLinkNode {
     int field_t;
     int field_q;
-    static qh field_s;
+    static WidgetTheme field_s;
     int field_o;
     int field_p;
     int field_n;
@@ -23,13 +23,13 @@ abstract class go extends DualLinkNode {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        pna.field_zb[param2] = new rs(param2, param0);
+        pna.field_zb[param2] = new StatusEffectInfo(param2, param0);
         if (param1 >= -125) {
           field_r = (String) null;
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     go() {
     }
@@ -44,7 +44,7 @@ abstract class go extends DualLinkNode {
           var7 = this.field_o << 3;
           param2 = (var6 & 15) + (param2 << 4);
           param1 = (var7 & 15) + (param1 << 4);
-          this.a(var6, var7, param2, param1, param0, param4);
+          this.rotateNearest(var6, var7, param2, param1, param0, param4);
           return;
         }
         this.field_p = -3;
@@ -52,7 +52,7 @@ abstract class go extends DualLinkNode {
         var7Lifetime1 = this.field_o << 3;
         param2 = (var6Lifetime1 & 15) + (param2 << 4);
         param1 = (var7Lifetime1 & 15) + (param1 << 4);
-        this.a(var6Lifetime1, var7Lifetime1, param2, param1, param0, param4);
+        this.rotateNearest(var6Lifetime1, var7Lifetime1, param2, param1, param0, param4);
     }
 
     static {

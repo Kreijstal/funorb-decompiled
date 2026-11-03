@@ -63,7 +63,7 @@ final class wr extends k {
         return var8;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String[] var5 = null;
@@ -78,13 +78,13 @@ final class wr extends k {
           }
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_k = param1.e((byte) 54);
+            this.field_k = param1.readUnsignedShort((byte) 54);
             return;
           }
           if (var4_int != 1) {
             return;
           }
-          this.field_l = param1.e((byte) 109);
+          this.field_l = param1.readUnsignedShort((byte) 109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,7 +96,7 @@ final class wr extends k {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -111,8 +111,8 @@ final class wr extends k {
           if (qi.field_b != null) {
             qi.field_b.field_J.a(args, (byte) -52);
           }
-          if (vk.field_q != null) {
-            vk.field_q.field_E.a(args, (byte) -35);
+          if (MartyrEvent.field_q != null) {
+            MartyrEvent.field_q.field_E.a(args, (byte) -35);
           }
           if (param1 == -38) {
             return;
@@ -130,7 +130,7 @@ final class wr extends k {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

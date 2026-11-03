@@ -9,18 +9,18 @@ final class cg extends DualLinkNode {
     private boolean field_s;
     private int field_o;
 
-    cg(lu param0) {
+    cg(PacketBuffer param0) {
         this.field_q = new on(param0);
-        this.field_p = param0.b(16711935) == 1 ? true : false;
-        this.field_s = param0.b(16711935) == 1 ? true : false;
-        param0.b(16711935);
-        param0.b(16711935);
-        int var2 = param0.b(16711935) & 3;
+        this.field_p = param0.readUnsignedByte(16711935) == 1 ? true : false;
+        this.field_s = param0.readUnsignedByte(16711935) == 1 ? true : false;
+        param0.readUnsignedByte(16711935);
+        param0.readUnsignedByte(16711935);
+        int var2 = param0.readUnsignedByte(16711935) & 3;
         param0.b(true);
         param0.b(true);
-        param0.b(16711935);
-        param0.b(16711935);
-        param0.b(16711935);
+        param0.readUnsignedByte(16711935);
+        param0.readUnsignedByte(16711935);
+        param0.readUnsignedByte(16711935);
         if (var2 == 1) {
           return;
         }

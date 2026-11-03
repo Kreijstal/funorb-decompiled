@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends at {
+final class ra extends AnimationNode {
     static char[] field_r;
     static int[] field_s;
     static String field_j;
     private int field_m;
-    private taa field_q;
-    private gj field_o;
-    private ad field_n;
+    private ActorAnimation field_q;
+    private BattleScreen field_o;
+    private CreatureActor field_n;
     static String field_l;
     static String[] field_k;
     static String field_p;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
-        if (!this.field_q.a((byte) -106)) {
+        if (!this.field_q.isLinked((byte) -106)) {
           int var2 = -46 / ((param0 - 71) / 47);
           fieldTemp$0 = this.field_m - 1;
           this.field_m = this.field_m - 1;
@@ -24,20 +24,20 @@ final class ra extends at {
         return false;
     }
 
-    ra(gj param0, ew param1) {
+    ra(BattleScreen param0, ew param1) {
         try {
           this.field_o = param0;
-          this.field_n = param1.field_l.a(-27449, this.field_o);
-          this.field_q = new taa(this.field_o, this.field_n);
-          this.a(27799, this.field_q);
-          this.field_n.a(16761024, 65, fb.field_q);
+          this.field_n = param1.creature.a(-27449, this.field_o);
+          this.field_q = new ActorAnimation(this.field_o, this.field_n);
+          this.addChild(27799, this.field_q);
+          this.field_n.a(16761024, 65, ShuffleSpecial.field_q);
           this.field_m = 100;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 11919) {
           field_k = null;
           field_j = null;

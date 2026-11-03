@@ -1,0 +1,72 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GasCloudSpecial extends SpecialOrder {
+    static String[] field_p;
+    static String field_r;
+    static int field_q;
+
+    final static void c(byte param0) {
+        bg.a(param0 ^ 51);
+        if (param0 != 73) {
+          GasCloudSpecial.c((byte) -18);
+        }
+    }
+
+    GasCloudSpecial(int param0, BattleCreature param1, int param2, int param3) {
+        super(param0, param1);
+        try {
+          this.field_n = param3;
+          this.field_k = param2;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vka.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    public static void d(byte param0) {
+        field_p = null;
+        field_r = null;
+        if (param0 >= -91) {
+          GasCloudSpecial.d((byte) -36);
+        }
+    }
+
+    final CreatureEvent createEvent(BattleState param0, int param1) {
+        BattleCreature var3 = null;
+        RuntimeException var3_ref = null;
+        GasCloudEvent var4 = null;
+        CreatureEvent stackIn_2_0 = null;
+        GasCloudEvent stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 3) {
+            stackIn_2_0 = (CreatureEvent) null;
+            return stackIn_2_0;
+          }
+          var3 = this.creature.a(22, param0);
+          var4 = new GasCloudEvent(this.moveId, new CreatureRef(var3));
+          var4.field_r = var3.tileX;
+          var4.field_s = var3.tileY;
+          stackIn_4_0 = var4;
+          return (CreatureEvent) ((Object) stackIn_4_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_7_0 = var3_ref;
+          stackIn_7_1 = new StringBuilder().append("vka.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    static {
+        field_r = "Not enough money!";
+    }
+}

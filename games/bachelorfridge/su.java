@@ -16,7 +16,7 @@ final class su {
         cda var5 = null;
         int var6 = BachelorFridge.field_y;
         if (param0 != -12) {
-          su.a(false);
+          su.releaseStatics(false);
         }
         for (var2 = 0; var2 < 11; var2++) {
           for (var3 = 0; var3 < -1 + this.field_c.length; var3++) {
@@ -40,7 +40,7 @@ final class su {
         int var12 = BachelorFridge.field_y;
         int var2 = 0;
         if (!param0) {
-          su.a(false);
+          su.releaseStatics(false);
         }
         while (11 > var2) {
           for (var3 = 0; -1 + this.field_c.length > var3; var3++) {
@@ -58,7 +58,7 @@ final class su {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_a = null;
         if (!param0) {
@@ -106,7 +106,7 @@ final class su {
           this.b(true);
           this.b(-12);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "su.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "su.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

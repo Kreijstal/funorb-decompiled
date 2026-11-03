@@ -4,11 +4,11 @@
 final class tq extends vv {
     static String field_n;
     private int field_i;
-    private po field_m;
+    private BitmapFont field_m;
     static int field_r;
     private int field_l;
     private boolean field_f;
-    static kv[] field_g;
+    static Sprite[] field_g;
     static int field_q;
     static int field_h;
     private int field_o;
@@ -16,7 +16,7 @@ final class tq extends vv {
     private int field_k;
     private int field_p;
 
-    final void a(po param0, String param1, int param2, int param3, int param4) {
+    final void a(BitmapFont param0, String param1, int param2, int param3, int param4) {
         mla var8 = null;
         mla var9 = null;
         if (param1 == null) {
@@ -38,11 +38,11 @@ final class tq extends vv {
           var9.field_a[param1.length()] = param3;
           jia.a(param0, var9, 0, (byte) -79, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tq.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tq.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0, int param1, po param2, String param3, int param4) {
+    final void a(int param0, int param1, BitmapFont param2, String param3, int param4) {
         mla var8 = null;
         int var7 = 0;
         if (param3 == null) {
@@ -63,11 +63,11 @@ final class tq extends vv {
           var8.field_a[param3.length()] = (var7 >> 1) + param4;
           jia.a(param2, var8, 0, (byte) -75, param3);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tq.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tq.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final void a(po param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7) {
+    final void a(BitmapFont param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7) {
         mla stackIn_36_0;
         mla stackIn_36_1;
         int stackIn_36_2;
@@ -75,7 +75,7 @@ final class tq extends vv {
         mla stackIn_37_0 = null;
         mla stackIn_37_1 = null;
         int stackIn_37_4 = 0;
-        po stackIn_40_0 = null;
+        BitmapFont stackIn_40_0 = null;
         mla stackIn_40_1 = null;
         int stackIn_41_2 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -170,7 +170,7 @@ final class tq extends vv {
             var14.field_a[0] = 0;
             if (var13 != null) {
               var14.field_a[var13.length()] = param0.a(var13);
-              stackIn_40_0 = (po) (param0);
+              stackIn_40_0 = (BitmapFont) (param0);
               stackIn_40_1 = var14;
               if (param5 != 3) {
                 stackIn_41_2 = 0;
@@ -199,11 +199,11 @@ final class tq extends vv {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    private final mla a(int param0, int param1, po param2, String param3) {
+    private final mla a(int param0, int param1, BitmapFont param2, String param3) {
         mla var5 = null;
         RuntimeException var5_ref = null;
         mla var6 = null;
@@ -239,11 +239,11 @@ final class tq extends vv {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final void a(int param0, String param1, po param2, int param3, int param4) {
+    final void a(int param0, String param1, BitmapFont param2, int param3, int param4) {
         mla var7 = null;
         mla var8 = null;
         if (param1 == null) {
@@ -265,11 +265,11 @@ final class tq extends vv {
           var8.field_a[param1.length()] = param4 + param2.a(param1);
           jia.a(param2, var8, param0, (byte) -109, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -15298) {
           return;
         }

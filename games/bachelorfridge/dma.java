@@ -4,10 +4,10 @@
 final class dma {
     static volatile int field_c;
     static boolean field_a;
-    static pj field_b;
+    static BufferedSocket field_b;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

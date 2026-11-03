@@ -5,7 +5,7 @@ final class dn {
     static lo field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 > -73) {
           field_b = (lo) null;
@@ -13,26 +13,26 @@ final class dn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, byte[] param5) {
-        pf var6 = null;
+        BitPacketBuffer var6 = null;
         int var7 = 0;
         int var9 = 0;
         try {
           var6 = sja.field_fb;
-          var6.c(param3, (byte) 112);
+          var6.writeCipheredByte(param3, (byte) 112);
           int var8 = 112 % ((64 - param0) / 59);
-          var6.field_g = var6.field_g + 1;
-          var7 = var6.field_g;
-          var6.d(4, 0);
-          var6.d(param1, 0);
+          var6.position = var6.position + 1;
+          var7 = var6.position;
+          var6.writeByte(4, 0);
+          var6.writeByte(param1, 0);
           var9 = param2;
           if (param4) {
             var9 += 128;
           }
-          var6.d(var9, 0);
+          var6.writeByte(var9, 0);
           var6.a(0, -105, param5.length, param5);
-          var6.b((byte) 77, var6.field_g - var7);
+          var6.writeLengthByte((byte) 77, var6.position - var7);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

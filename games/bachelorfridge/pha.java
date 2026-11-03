@@ -5,9 +5,9 @@ final class pha {
     private int field_e;
     static int field_g;
     static boolean field_a;
-    private ou field_b;
-    static kv[] field_f;
-    private wha field_d;
+    private IterableDualLinkDeque field_b;
+    static Sprite[] field_f;
+    private IterableNodeHashTable field_d;
     static int[][] field_h;
     private int field_c;
 
@@ -23,8 +23,8 @@ final class pha {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null) {
-            param1.a(false);
-            param1.b(param0 + 29063);
+            param1.unlink(false);
+            param1.unlinkSecondary(param0 + 29063);
             this.field_e = this.field_e + param1.field_n;
           }
           if (param0 == -29063) {
@@ -42,13 +42,13 @@ final class pha {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static java.awt.Canvas a(int param0) {
         int var1 = -20 % ((56 - param0) / 46);
-        return kga.field_c != null ? (java.awt.Canvas) ((Object) kga.field_c) : dca.field_y;
+        return kga.field_c != null ? (java.awt.Canvas) ((Object) kga.field_c) : TBomberAnimation.field_y;
     }
 
     private final void a(byte param0, long param1) {
@@ -63,7 +63,7 @@ final class pha {
         try {
           this.a(126, param1, param0, param2);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pha.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pha.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,19 +78,19 @@ final class pha {
         if (var6 != null) {
           if (!var5.f(125)) {
             this.field_b.a(var5, (byte) -118);
-            var5.field_h = 0L;
+            var5.secondaryKey = 0L;
           } else {
             var7 = new oea(var6, var5.field_n);
-            this.field_d.a(0, var5.field_c, var7);
+            this.field_d.a(0, var5.key, var7);
             this.field_b.a(var7, (byte) -118);
-            ((ul) ((Object) var7)).field_h = 0L;
-            var5.a(false);
-            var5.b(0);
+            ((ul) ((Object) var7)).secondaryKey = 0L;
+            var5.unlink(false);
+            var5.unlinkSecondary(0);
           }
           return var6;
         }
-        var5.a(false);
-        var5.b(0);
+        var5.unlink(false);
+        var5.unlinkSecondary(0);
         this.field_e = this.field_e + var5.field_n;
         return null;
     }
@@ -113,13 +113,13 @@ final class pha {
           var7_ref = new oea(param3, param1);
           this.field_d.a(0, param2, var7_ref);
           this.field_b.a(var7_ref, (byte) -118);
-          ((ul) ((Object) var7_ref)).field_h = 0L;
+          ((ul) ((Object) var7_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pha.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pha.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         field_h = (int[][]) null;
         if (!param0) {
@@ -129,13 +129,13 @@ final class pha {
 
     private pha(int param0, int param1) {
         int var3;
-        this.field_b = new ou();
+        this.field_b = new IterableDualLinkDeque();
         this.field_c = param0;
         this.field_e = param0;
         var3 = 1;
         while (true) {
           if (var3 + var3 >= param0) {
-            this.field_d = new wha(var3);
+            this.field_d = new IterableNodeHashTable(var3);
             return;
           }
           if (param1 > var3) {
@@ -144,7 +144,7 @@ final class pha {
           }
           break;
         }
-        this.field_d = new wha(var3);
+        this.field_d = new IterableNodeHashTable(var3);
         return;
     }
 

@@ -20,7 +20,7 @@ class w implements q {
         if (var4 == null) {
           return null;
         }
-        on var5 = new on(new lu(var4));
+        on var5 = new on(new PacketBuffer(var4));
         this.field_a.a(var5, (long)param0, 97);
         if (param1 != -23060) {
           field_h = (int[][]) null;
@@ -56,18 +56,18 @@ class w implements q {
           if (!param0) {
             w.a(true);
           }
-          var1_int = dfa.field_b - rs.field_a;
-          rs.field_a = sd.field_a - (var1_int >> 1);
-          vka.field_q = -(ula.field_f >> 1) + jfa.field_w;
-          dfa.field_b = var1_int + rs.field_a;
-          var2 = vka.field_q;
+          var1_int = dfa.field_b - StatusEffectInfo.field_a;
+          StatusEffectInfo.field_a = sd.field_a - (var1_int >> 1);
+          GasCloudSpecial.field_q = -(ula.field_f >> 1) + FridgeCreature.field_w;
+          dfa.field_b = var1_int + StatusEffectInfo.field_a;
+          var2 = GasCloudSpecial.field_q;
           for (var3 = 0; pt.field_a.length > var3; var3++) {
             var4 = gn.field_l[var3];
             if (var4 >= 0) {
               if (var4 != fw.field_i.field_g) {
-                var5 = mt.field_v;
+                var5 = ScavengerSpecial.field_v;
               } else {
-                var5 = ru.field_c;
+                var5 = NanoGameClock.field_c;
               }
             } else {
               var5 = wk.field_f;
@@ -81,20 +81,20 @@ class w implements q {
               if (fw.field_i.field_g == var4) {
                 stackIn_18_0 = nj.field_j;
               } else {
-                stackIn_18_0 = aka.field_x;
+                stackIn_18_0 = HomingMissileAnimation.field_x;
               }
               var9 = stackIn_18_0;
               var2 = var2 + raa.field_J;
               if (var9 != null) {
-                var9.a(jo.field_t + (pba.field_r << 1), 28, -hna.field_k + var8, var2, var7 + (hna.field_k << 1));
+                var9.a(BoardView.field_t + (ShieldEvent.field_r << 1), 28, -hna.field_k + var8, var2, var7 + (hna.field_k << 1));
               }
-              var2 = var2 + pba.field_r;
+              var2 = var2 + ShieldEvent.field_r;
             }
             if (0 <= var4) {
-              lha.field_b.c(var6, var8, var2 + mha.field_g, var5, -1);
-              var2 = var2 + (pba.field_r + (raa.field_J + jo.field_t));
+              lha.field_b.drawText(var6, var8, var2 + mha.field_g, var5, -1);
+              var2 = var2 + (ShieldEvent.field_r + (raa.field_J + BoardView.field_t));
             } else {
-              qm.field_a.c(var6, var8, ah.field_l + var2, var5, -1);
+              RasterBuffer.field_a.drawText(var6, var8, ah.field_l + var2, var5, -1);
               var2 = var2 + un.field_i;
             }
           }
@@ -102,11 +102,11 @@ class w implements q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "w.F(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "w.F(" + param0 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = (int[][]) null;
         if (param0 <= 29) {
           w.a(true);
@@ -130,7 +130,7 @@ class w implements q {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
-        lu var7 = null;
+        PacketBuffer var7 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
@@ -154,31 +154,31 @@ class w implements q {
         try {
           this.field_d = param1;
           this.field_b = param2;
-          var7 = new lu(param0.b(-38, 0, 0));
-          this.field_f = var7.e((byte) 103);
+          var7 = new PacketBuffer(param0.b(-38, 0, 0));
+          this.field_f = var7.readUnsignedShort((byte) 103);
           this.field_c = new gma[this.field_f];
           for (var5 = 0; this.field_f > var5; var5++) {
-            if (var7.b(16711935) == 1) {
+            if (var7.readUnsignedByte(16711935) == 1) {
               this.field_c[var5] = new gma();
             }
           }
           for (var5Lifetime1 = 0; this.field_f > var5Lifetime1; var5Lifetime1++) {
             if (this.field_c[var5Lifetime1] != null) {
               stackIn_11_0 = this.field_c[var5Lifetime1];
-              stackIn_12_1 = (var7.b(16711935) == 0);
+              stackIn_12_1 = (var7.readUnsignedByte(16711935) == 0);
               stackIn_11_0.field_f = stackIn_12_1;
             }
           }
           for (var5Lifetime2 = 0; var5Lifetime2 < this.field_f; var5Lifetime2++) {
             if (null != this.field_c[var5Lifetime2]) {
               stackIn_19_0 = this.field_c[var5Lifetime2];
-              stackIn_20_1 = (var7.b(16711935) == 1);
+              stackIn_20_1 = (var7.readUnsignedByte(16711935) == 1);
               stackIn_19_0.field_d = stackIn_20_1;
             }
           }
           for (var5Lifetime3 = 0; this.field_f > var5Lifetime3; var5Lifetime3++) {
             if (null != this.field_c[var5Lifetime3]) {
-              var7.b(16711935);
+              var7.readUnsignedByte(16711935);
             }
           }
           for (var5Lifetime4 = 0; var5Lifetime4 < this.field_f; var5Lifetime4++) {
@@ -203,7 +203,7 @@ class w implements q {
           }
           for (var5Lifetime8 = 0; var5Lifetime8 < this.field_f; var5Lifetime8++) {
             if (this.field_c[var5Lifetime8] != null) {
-              this.field_c[var5Lifetime8].field_g = (short)var7.e((byte) 77);
+              this.field_c[var5Lifetime8].field_g = (short)var7.readUnsignedShort((byte) 77);
             }
           }
           for (var5Lifetime9 = 0; this.field_f > var5Lifetime9; var5Lifetime9++) {
@@ -218,13 +218,13 @@ class w implements q {
           }
           for (var5Lifetime11 = 0; this.field_f > var5Lifetime11; var5Lifetime11++) {
             if (null != this.field_c[var5Lifetime11]) {
-              var7.b(16711935);
+              var7.readUnsignedByte(16711935);
             }
           }
           for (var5Lifetime12 = 0; var5Lifetime12 < this.field_f; var5Lifetime12++) {
             if (this.field_c[var5Lifetime12] != null) {
               stackIn_72_0 = this.field_c[var5Lifetime12];
-              stackIn_73_1 = (var7.b(16711935) == 1);
+              stackIn_73_1 = (var7.readUnsignedByte(16711935) == 1);
               stackIn_72_0.field_a = stackIn_73_1;
             }
           }
@@ -235,32 +235,32 @@ class w implements q {
           }
           for (var5Lifetime14 = 0; var5Lifetime14 < this.field_f; var5Lifetime14++) {
             if (null != this.field_c[var5Lifetime14]) {
-              var7.b(16711935);
+              var7.readUnsignedByte(16711935);
             }
           }
           for (var5Lifetime15 = 0; var5Lifetime15 < this.field_f; var5Lifetime15++) {
             if (this.field_c[var5Lifetime15] != null) {
-              var7.b(16711935);
+              var7.readUnsignedByte(16711935);
             }
           }
           for (var5Lifetime16 = 0; var5Lifetime16 < this.field_f; var5Lifetime16++) {
             if (null != this.field_c[var5Lifetime16]) {
-              var7.b(16711935);
+              var7.readUnsignedByte(16711935);
             }
           }
           for (var5Lifetime17 = 0; var5Lifetime17 < this.field_f; var5Lifetime17++) {
             if (this.field_c[var5Lifetime17] != null) {
-              var7.b(16711935);
+              var7.readUnsignedByte(16711935);
             }
           }
           for (var5Lifetime18 = 0; var5Lifetime18 < this.field_f; var5Lifetime18++) {
             if (null != this.field_c[var5Lifetime18]) {
-              var7.f(57);
+              var7.readInt(57);
             }
           }
           for (var5Lifetime19 = 0; this.field_f > var5Lifetime19; var5Lifetime19++) {
             if (null != this.field_c[var5Lifetime19]) {
-              this.field_c[var5Lifetime19].field_b = var7.b(16711935);
+              this.field_c[var5Lifetime19].field_b = var7.readUnsignedByte(16711935);
             }
           }
           return;
@@ -286,7 +286,7 @@ class w implements q {
           } else {
             stackIn_120_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
         }
     }
 

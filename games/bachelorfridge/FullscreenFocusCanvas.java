@@ -1,0 +1,123 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
+    static String field_c;
+    volatile boolean field_f;
+    static UiComponent field_e;
+    static UiComponent field_a;
+    java.awt.Frame field_g;
+    static UiComponent field_d;
+    static int field_b;
+
+    public final void paint(java.awt.Graphics param0) {
+    }
+
+    public final void update(java.awt.Graphics param0) {
+    }
+
+    public final void focusGained(java.awt.event.FocusEvent param0) {
+    }
+
+    public static void a(byte param0) {
+        if (param0 != 36) {
+          vr var2 = (vr) null;
+          FullscreenFocusCanvas.a((vr) null, -47);
+        }
+        field_d = null;
+        field_c = null;
+        field_a = null;
+        field_e = null;
+    }
+
+    public final void focusLost(java.awt.event.FocusEvent param0) {
+        try {
+          this.field_f = true;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+        String var7 = null;
+        if (~gk.field_d != param4) {
+          var7 = ama.field_k;
+        } else {
+          var7 = oka.field_t;
+        }
+        jna.a(param1, param2, -1, param3, var7, param5, param6, param0);
+    }
+
+    final void a(int param0, PlatformTaskDispatcher param1) {
+        try {
+          int var3_int = 80 / ((-61 - param0) / 41);
+          gv.a(-110, param1, this.field_g);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    FullscreenFocusCanvas() {
+    }
+
+    final static void a(vr param0, int param1) {
+        int var3 = 0;
+        int var4 = 0;
+        ma var5 = null;
+        int[] var6 = null;
+        int var7 = 0;
+        BitPacketBuffer var8 = null;
+        int var9 = 0;
+        BitPacketBuffer var10 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var4Lifetime1;
+        var7 = BachelorFridge.field_y;
+        try {
+          var8 = new BitPacketBuffer(param0.a((byte) 123, "", "logo.fo3d"));
+          var10 = var8;
+          var3 = var10.readUnsignedByte(16711935);
+          var10.startBitAccess(1);
+          ld.field_o = ni.a((byte) 41, var10);
+          bd.field_l = new int[var3][];
+          gaa.field_i = new ma[var3];
+          if (param1 < 110) {
+            return;
+          }
+          for (var4 = 0; var4 < var3; var4++) {
+            gaa.field_i[var4] = sa.a(false, var8);
+          }
+          var10.endBitAccess((byte) -86);
+          var9 = 0;
+          var4Lifetime1 = var9;
+          while (var3 > var9) {
+            var5 = gaa.field_i[var9];
+            var5.a(0, 6, 6, 6, 1);
+            var5.b(117);
+            var6 = new int[]{var5.field_u + var5.field_A >> 1, var5.field_G + var5.field_B >> 1, var5.field_q + var5.field_I >> 1};
+            bd.field_l[var9] = var6;
+            var5.a(-var6[2], 0, -var6[1], -var6[0]);
+            var9++;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("kg.A(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    static {
+        field_c = "Friends";
+    }
+}

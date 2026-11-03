@@ -4,9 +4,9 @@
 import java.io.*;
 
 final class vda {
-    static sna field_a;
+    static UiComponent field_a;
 
-    final static void a(long param0, int param1, int param2, int param3, boolean param4, boolean param5, int param6, int param7, ht param8, int param9, int param10, String param11, int param12, int param13) {
+    final static void a(long param0, int param1, int param2, int param3, boolean param4, boolean param5, int param6, int param7, PlatformTaskDispatcher param8, int param9, int param10, String param11, int param12, int param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -17,14 +17,14 @@ final class vda {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            ig.field_m = new pf(param6);
-            sja.field_fb = new pf(param2);
+            ig.field_m = new BitPacketBuffer(param6);
+            sja.field_fb = new BitPacketBuffer(param2);
             vs.field_c = param5;
             oja.field_c = param9;
             if (param7 != 64) {
               vda.a(-73, -89, 99, 10, (byte) 120, -109);
             }
-            mfa.field_a = param10;
+            GameKeyHandler.field_a = param10;
             oca.field_p = param11;
             cp.field_c = param12;
             vi.field_a = param0;
@@ -32,12 +32,12 @@ final class vda {
             kha.field_k = param3;
             cc.field_e = param8;
             fl.field_q = param1;
-            kn.field_h = param13;
+            CurryArenaTheme.field_h = param13;
             if (null == cc.field_e.field_a) {
               return;
             }
             try {
-              vg.field_n = new v(cc.field_e.field_a, 64, 0);
+              vg.field_n = new BufferedCacheFile(cc.field_e.field_a, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -60,7 +60,7 @@ final class vda {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -69,7 +69,7 @@ final class vda {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 42 % ((34 - param0) / 38);
         field_a = null;
     }
@@ -119,8 +119,8 @@ final class vda {
           var20 = var17 * (1 + var6_int);
           if (an.field_q <= param2 &&
             ha.field_n >= param2) {
-            var22 = cr.a(DualLinkNode.field_l, param3 + param5, pw.field_x, 0);
-            var23 = cr.a(DualLinkNode.field_l, param5 - param3, pw.field_x, 0);
+            var22 = cr.a(DualLinkNode.field_l, param3 + param5, SnowAnimation.field_x, 0);
+            var23 = cr.a(DualLinkNode.field_l, param5 - param3, SnowAnimation.field_x, 0);
             hba.a(param1, var23, tj.field_b[param2], 7, var22);
           }
           var21 = (-1 + var7) * var16;
@@ -157,8 +157,8 @@ final class vda {
             if (ha.field_n < var22Lifetime1) {
               continue;
             }
-            var24 = cr.a(DualLinkNode.field_l, var6_int + param5, pw.field_x, 0);
-            var25 = cr.a(DualLinkNode.field_l, -var6_int + param5, pw.field_x, 0);
+            var24 = cr.a(DualLinkNode.field_l, var6_int + param5, SnowAnimation.field_x, 0);
+            var25 = cr.a(DualLinkNode.field_l, -var6_int + param5, SnowAnimation.field_x, 0);
             if (var22Lifetime1 >= an.field_q) {
               hba.a(param1, var25, tj.field_b[var22Lifetime1], 7, var24);
             }
@@ -170,7 +170,7 @@ final class vda {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "vda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "vda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

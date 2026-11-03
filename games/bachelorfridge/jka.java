@@ -8,46 +8,46 @@ final class jka extends pu {
         if (param5 != 88) {
           field_l = (il) null;
           if (param1 < DualLinkNode.field_l) {
-            fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
+            TileEffectAnimation.a(param0, 127, param4, param7, param1, param3, param2, param6);
             return;
           }
-          if (param0 > pw.field_x) {
-            fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
+          if (param0 > SnowAnimation.field_x) {
+            TileEffectAnimation.a(param0, 127, param4, param7, param1, param3, param2, param6);
             return;
           }
           if (an.field_q > param6) {
-            fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
+            TileEffectAnimation.a(param0, 127, param4, param7, param1, param3, param2, param6);
             return;
           }
           if (ha.field_n >= param4) {
-            jl.a(param2, param1, param3, param4, -1, param6, param0, param7);
+            SuperSpeedEvent.a(param2, param1, param3, param4, -1, param6, param0, param7);
             return;
           }
-          fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
+          TileEffectAnimation.a(param0, 127, param4, param7, param1, param3, param2, param6);
           return;
         }
         if (param1 < DualLinkNode.field_l) {
-          fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
+          TileEffectAnimation.a(param0, 127, param4, param7, param1, param3, param2, param6);
           return;
         }
-        if (param0 > pw.field_x) {
-          fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
+        if (param0 > SnowAnimation.field_x) {
+          TileEffectAnimation.a(param0, 127, param4, param7, param1, param3, param2, param6);
           return;
         }
         if (an.field_q > param6) {
-          fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
+          TileEffectAnimation.a(param0, 127, param4, param7, param1, param3, param2, param6);
           return;
         }
         if (ha.field_n >= param4) {
-          jl.a(param2, param1, param3, param4, -1, param6, param0, param7);
+          SuperSpeedEvent.a(param2, param1, param3, param4, -1, param6, param0, param7);
           return;
         }
-        fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
+        TileEffectAnimation.a(param0, 127, param4, param7, param1, param3, param2, param6);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 11178) {
-          jka.b(-10);
+          jka.releaseStatics(-10);
           field_l = null;
           return;
         }

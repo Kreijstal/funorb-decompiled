@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jha extends kj {
-    private kv field_h;
-    static fea field_g;
+final class jha extends TileEffect {
+    private Sprite field_h;
+    static BinaryBitmapFont field_g;
     private int field_k;
     static byte[] field_j;
     private int field_f;
-    static eaa field_i;
+    static IntrusiveDeque field_i;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 95) {
-          field_g = (fea) null;
+          field_g = (BinaryBitmapFont) null;
         }
         field_g = null;
         field_j = null;
@@ -24,25 +24,25 @@ final class jha extends kj {
         this.field_h.a(param2, param0, var4);
     }
 
-    jha(gj param0, int param1, int param2, int param3) {
+    jha(BattleScreen param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
-        kv var5 = null;
+        Sprite var5 = null;
         try {
           this.field_f = 64;
           this.field_k = param3;
           var5 = param0.field_s.field_p;
-          this.field_h = new kv(var5.field_q, var5.field_p);
+          this.field_h = new Sprite(var5.field_q, var5.field_p);
           bu.a(0, this.field_h);
           var5.e(0, 0, 16777215);
           db.b(73);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static kv a(vr param0, byte param1, int param2, int param3) {
+    final static Sprite a(vr param0, byte param1, int param2, int param3) {
         RuntimeException var4 = null;
-        kv stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -66,20 +66,20 @@ final class jha extends kj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static sna c(int param0) {
+    final static UiComponent c(int param0) {
         if (param0 != -31068) {
-          return (sna) null;
+          return (UiComponent) null;
         }
-        return mt.c(0);
+        return ScavengerSpecial.c(0);
     }
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-          this.field_h = (kv) null;
+          this.field_h = (Sprite) null;
         }
     }
 

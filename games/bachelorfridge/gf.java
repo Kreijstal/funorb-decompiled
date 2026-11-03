@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class gf extends kj {
+final class gf extends TileEffect {
     static String field_h;
-    private eaa field_j;
+    private IntrusiveDeque field_j;
     static String field_i;
     static int field_l;
     private int field_f;
-    private kv[][] field_g;
+    private Sprite[][] field_g;
     static int field_k;
 
-    gf(gj param0, int param1, int param2) {
+    gf(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         int var5 = 0;
-        kv[] array$2 = null;
+        Sprite[] array$2 = null;
         int var7 = 0;
         int var4_int = 0;
         int var6 = 0;
@@ -25,16 +25,16 @@ final class gf extends kj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_j = new eaa();
+          this.field_j = new IntrusiveDeque();
           this.field_f = 300;
-          var4_int = aw.field_v.length;
-          this.field_g = new kv[var4_int][];
+          var4_int = SauceOfFlameAnimation.field_v.length;
+          this.field_g = new Sprite[var4_int][];
           for (var5 = 0; var5 < var4_int; var5++) {
-            var6 = aw.field_v[var5].length;
-            array$2 = new kv[var6];
+            var6 = SauceOfFlameAnimation.field_v[var5].length;
+            array$2 = new Sprite[var6];
             this.field_g[var5] = array$2;
             for (var7 = 0; var6 > var7; var7++) {
-              this.field_g[var5][var7] = aw.field_v[var5][var7].a();
+              this.field_g[var5][var7] = SauceOfFlameAnimation.field_v[var5][var7].toRgbSprite();
             }
           }
           return;
@@ -48,20 +48,20 @@ final class gf extends kj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     private final void c(byte param0) {
-        int var2 = kla.a(1024, sma.field_I, -2147483648);
-        int var3 = kla.a(1024, sma.field_I, -2147483648);
+        int var2 = DiveBomberAnimation.a(1024, GasCloudAnimation.field_I, -2147483648);
+        int var3 = DiveBomberAnimation.a(1024, GasCloudAnimation.field_I, -2147483648);
         if (param0 >= -97) {
           this.a(114, true, -46);
         }
         int var4 = var3 + var2;
         int var5 = -var3 + var2 >> 1;
         int var6 = 200;
-        mia var7 = new mia(var4, var6 << 4, var5, kla.a(aw.field_v.length, sma.field_I, -2147483648), kla.a(20, sma.field_I, -2147483648) + 5);
+        mia var7 = new mia(var4, var6 << 4, var5, DiveBomberAnimation.a(SauceOfFlameAnimation.field_v.length, GasCloudAnimation.field_I, -2147483648), DiveBomberAnimation.a(20, GasCloudAnimation.field_I, -2147483648) + 5);
         this.field_j.a(var7, true);
     }
 
@@ -71,7 +71,7 @@ final class gf extends kj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_h = null;
         field_i = null;
         if (param0) {
@@ -91,7 +91,7 @@ final class gf extends kj {
         var3 = BachelorFridge.field_y;
         this.field_f = this.field_f - 1;
         if (this.field_f == 270) {
-          wf.a(14, (byte) 126);
+          MartyrAnimation.a(14, (byte) 126);
         }
         if (param0 <= 21) {
           return true;
@@ -99,13 +99,13 @@ final class gf extends kj {
         if (50 < this.field_f &&
           this.field_f < 270) {
           if (this.field_f % 79 == 0) {
-            wf.a(14, (byte) 127);
+            MartyrAnimation.a(14, (byte) 127);
           }
           if (this.field_f % 31 == 0) {
-            wf.a(15, (byte) 24);
+            MartyrAnimation.a(15, (byte) 24);
           }
           if (0 == this.field_f % 109) {
-            wf.a(16, (byte) 127);
+            MartyrAnimation.a(16, (byte) 127);
           }
         }
         if (50 <= this.field_f) {
@@ -126,7 +126,7 @@ final class gf extends kj {
         if (this.field_f == 0) {
           var2_ref = (mia) (this.field_j.b((byte) 90));
           while (var2_ref != null) {
-            var2_ref.field_m = -(4 + kla.a(8, m.field_a, -2147483648));
+            var2_ref.field_m = -(4 + DiveBomberAnimation.a(8, m.field_a, -2147483648));
             var2_ref = (mia) (this.field_j.c(0));
           }
         }
@@ -147,7 +147,7 @@ final class gf extends kj {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        kv var8 = null;
+        Sprite var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = BachelorFridge.field_y;
@@ -162,7 +162,7 @@ final class gf extends kj {
           var8 = this.field_g[var4.field_r][var7];
           var9 = var8.field_n >> 1;
           var10 = var8.field_o >> 1;
-          var8.c(-(var9 >> 1) + var5, -(var10 >> 1) + (var6 + 30), var9, var10, var4.field_o);
+          var8.drawScaledAlpha(-(var9 >> 1) + var5, -(var10 >> 1) + (var6 + 30), var9, var10, var4.field_o);
           var4 = (mia) (this.field_j.c(0));
         }
     }

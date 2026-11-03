@@ -5,7 +5,7 @@ import java.util.*;
 
 final class bh extends k {
     private short[] field_k;
-    static kv field_r;
+    static Sprite field_r;
     private int field_q;
     private int field_n;
     static String field_s;
@@ -16,9 +16,9 @@ final class bh extends k {
     private int field_o;
     private int field_m;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -78) {
-          field_r = (kv) null;
+          field_r = (Sprite) null;
         }
         field_r = null;
         field_p = null;
@@ -48,7 +48,7 @@ final class bh extends k {
         this.field_k = new short[512];
         if (0 < this.field_m) {
           for (var3 = 0; var3 < 512; var3++) {
-            this.field_k[var3] = (short)kla.a(this.field_m, var5, -2147483648);
+            this.field_k[var3] = (short)DiveBomberAnimation.a(this.field_m, var5, -2147483648);
           }
         }
     }
@@ -100,9 +100,9 @@ final class bh extends k {
           var5 = var4 >> 12;
           var6 = var5 + 1;
           for (var14 = 0; hh.field_d > var14; var14++) {
-            dca.field_v = 2147483647;
+            TBomberAnimation.field_v = 2147483647;
             um.field_a = 2147483647;
-            sma.field_C = 2147483647;
+            GasCloudAnimation.field_C = 2147483647;
             iia.field_p = 2147483647;
             var15 = 2048 + this.field_u * jq.field_k[var14];
             var16 = var15 >> 12;
@@ -194,14 +194,14 @@ final class bh extends k {
                   var11 = var10 * var10 + var9 * var9 >> 12;
                 }
                 if (var11 >= iia.field_p) {
-                  if (dca.field_v > var11) {
-                    um.field_a = sma.field_C;
-                    sma.field_C = dca.field_v;
-                    dca.field_v = var11;
+                  if (TBomberAnimation.field_v > var11) {
+                    um.field_a = GasCloudAnimation.field_C;
+                    GasCloudAnimation.field_C = TBomberAnimation.field_v;
+                    TBomberAnimation.field_v = var11;
                   } else {
-                    if (var11 < sma.field_C) {
-                      um.field_a = sma.field_C;
-                      sma.field_C = var11;
+                    if (var11 < GasCloudAnimation.field_C) {
+                      um.field_a = GasCloudAnimation.field_C;
+                      GasCloudAnimation.field_C = var11;
                     } else {
                       if (var11 < um.field_a) {
                         um.field_a = var11;
@@ -209,9 +209,9 @@ final class bh extends k {
                     }
                   }
                 } else {
-                  um.field_a = sma.field_C;
-                  sma.field_C = dca.field_v;
-                  dca.field_v = iia.field_p;
+                  um.field_a = GasCloudAnimation.field_C;
+                  GasCloudAnimation.field_C = TBomberAnimation.field_v;
+                  TBomberAnimation.field_v = iia.field_p;
                   iia.field_p = var11;
                 }
               }
@@ -220,18 +220,18 @@ final class bh extends k {
             if (var18Lifetime1 != 0) {
               if (var18Lifetime1 != 1) {
                 if (var18Lifetime1 == 3) {
-                  var3[var14] = sma.field_C;
+                  var3[var14] = GasCloudAnimation.field_C;
                 } else {
                   if (var18Lifetime1 == 4) {
                     var3[var14] = um.field_a;
                   } else {
                     if (2 == var18Lifetime1) {
-                      var3[var14] = -iia.field_p + dca.field_v;
+                      var3[var14] = -iia.field_p + TBomberAnimation.field_v;
                     }
                   }
                 }
               } else {
-                var3[var14] = dca.field_v;
+                var3[var14] = TBomberAnimation.field_v;
               }
             } else {
               var3[var14] = iia.field_p;
@@ -241,7 +241,7 @@ final class bh extends k {
         return var3;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int dupTemp$0 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -257,28 +257,28 @@ final class bh extends k {
           }
           var4_int = param2;
           if (0 == var4_int) {
-            dupTemp$0 = param1.b(param0 + 16712006);
+            dupTemp$0 = param1.readUnsignedByte(param0 + 16712006);
             this.field_q = dupTemp$0;
             this.field_u = dupTemp$0;
           } else {
             if (1 == var4_int) {
-              this.field_o = param1.b(16711935);
+              this.field_o = param1.readUnsignedByte(16711935);
             } else {
               if (var4_int == 2) {
-                this.field_m = param1.e((byte) 112);
+                this.field_m = param1.readUnsignedShort((byte) 112);
               } else {
                 if (var4_int == 3) {
-                  this.field_l = param1.b(16711935);
+                  this.field_l = param1.readUnsignedByte(16711935);
                 } else {
                   if (4 == var4_int) {
-                    this.field_n = param1.b(16711935);
+                    this.field_n = param1.readUnsignedByte(16711935);
                   } else {
                     if (var4_int != 5) {
                       if (var4_int == 6) {
-                        this.field_q = param1.b(16711935);
+                        this.field_q = param1.readUnsignedByte(16711935);
                       }
                     } else {
-                      this.field_u = param1.b(param0 + 16712006);
+                      this.field_u = param1.readUnsignedByte(param0 + 16712006);
                     }
                   }
                 }
@@ -296,7 +296,7 @@ final class bh extends k {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -304,8 +304,8 @@ final class bh extends k {
         this.field_t = rba.a(this.field_o, -96);
         this.b(false);
         if (param0 != -68) {
-          lu var3 = (lu) null;
-          this.a((byte) 95, (lu) null, -98);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((byte) 95, (PacketBuffer) null, -98);
         }
     }
 

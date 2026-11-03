@@ -6,7 +6,7 @@ final class af {
     static boolean field_a;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 9680) {
           af.a(73, 86);
           field_b = null;
@@ -25,7 +25,7 @@ final class af {
         if (param1 == 26291) {
           var2 = 0;
           if (param0 == 0) {
-            var2 = fb.field_p;
+            var2 = ShuffleSpecial.field_p;
           }
           if (param0 == 1) {
             var2 = ri.field_c;
@@ -38,7 +38,7 @@ final class af {
         af.a(-60, 33);
         var2Lifetime1 = 0;
         if (param0 == 0) {
-          var2Lifetime1 = fb.field_p;
+          var2Lifetime1 = ShuffleSpecial.field_p;
         }
         if (param0 == 1) {
           var2Lifetime1 = ri.field_c;

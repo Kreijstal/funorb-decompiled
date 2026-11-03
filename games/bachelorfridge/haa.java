@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class haa extends kj {
+final class haa extends TileEffect {
     private int field_g;
     private boolean field_f;
 
@@ -12,8 +12,8 @@ final class haa extends kj {
         int fieldTemp$0 = this.field_g - 1;
         this.field_g = this.field_g - 1;
         if (fieldTemp$0 < 0) {
-          this.field_e.field_h.b((byte) -72, 38, this.field_d, this.field_c);
-          this.field_e.field_h.field_a[this.field_d][this.field_c].field_j = this.field_f ? 1 : 0;
+          this.field_e.field_h.setTerrain((byte) -72, 38, this.field_d, this.field_c);
+          this.field_e.field_h.tiles[this.field_d][this.field_c].field_j = this.field_f ? 1 : 0;
           return true;
         }
         if (param0 < 21) {
@@ -34,18 +34,18 @@ final class haa extends kj {
           return;
         }
         int var4 = this.field_d * this.field_c % 3;
-        ee var5 = cba.field_c[var4];
+        IndexedSprite var5 = cba.field_c[var4];
         int var6 = via.a(6 * this.field_g * (13 + (15 & this.field_d * 3 + this.field_c * 4)), (byte) 118) >> 3;
         var5.a(var5.field_a << 3, -40 + var5.field_b << 3, ((param2 << 1) + 128 << 3) + (-var6 >> 4), 64 + (param0 - (2 * this.field_g + 20) << 1) << 3, var6, 4096);
     }
 
-    haa(gj param0, int param1, int param2, boolean param3) {
+    haa(BattleScreen param0, int param1, int param2, boolean param3) {
         super(param0, param1, param2);
         try {
           this.field_f = param3 ? true : false;
           this.field_g = 150;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "haa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "haa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

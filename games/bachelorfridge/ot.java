@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ot extends iga {
-    static kv field_e;
+    static Sprite field_e;
     private String field_g;
     private long field_f;
 
@@ -10,34 +10,34 @@ class ot extends iga {
         if (param0 != -106) {
           return (wba) null;
         }
-        return bna.field_x;
+        return DisableAnimation.field_x;
     }
 
     final static boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, byte param6) {
         if (param6 > 43) {
-          if (lb.g((byte) -96)) {
+          if (InvincibleAnimation.g((byte) -96)) {
             kja.a(param1, param3, (byte) -66, param2);
             if (NetworkGameClient.field_u != null &&
               NetworkGameClient.field_u.a(true, param2, param1, param0, param4)) {
               param2 = false;
               di.c(55);
             }
-            fd.a(true, param1, param2);
-            vd.a((byte) -35, param2, param5);
+            AirstrikeAnimation.a(true, param1, param2);
+            WidgetContainer.a((byte) -35, param2, param5);
             param2 = false;
           }
           return param2;
         }
         ot.a(-115, -104, true, 1, -88, -103, (byte) -27);
-        if (lb.g((byte) -96)) {
+        if (InvincibleAnimation.g((byte) -96)) {
           kja.a(param1, param3, (byte) -66, param2);
           if (NetworkGameClient.field_u != null &&
             NetworkGameClient.field_u.a(true, param2, param1, param0, param4)) {
             param2 = false;
             di.c(55);
           }
-          fd.a(true, param1, param2);
-          vd.a((byte) -35, param2, param5);
+          AirstrikeAnimation.a(true, param1, param2);
+          WidgetContainer.a((byte) -35, param2, param5);
           param2 = false;
         }
         return param2;
@@ -48,25 +48,25 @@ class ot extends iga {
           this.field_f = param0;
           this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ot.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ot.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(lu param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         try {
-          param0.b(1686281208, this.field_f);
+          param0.writeLong(1686281208, this.field_f);
           if (param1) {
             this.field_f = -1L;
           }
           param0.a(26, this.field_g);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ot.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ot.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -36) {
-          field_e = (kv) null;
+          field_e = (Sprite) null;
           field_e = null;
           return;
         }

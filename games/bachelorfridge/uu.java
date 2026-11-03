@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uu extends sna {
+final class uu extends UiComponent {
     static String field_zb;
     private int field_wb;
     int field_Cb;
-    static ee field_vb;
+    static IndexedSprite field_vb;
     private String field_xb;
     private String field_Bb;
-    private kv field_Ab;
+    private Sprite field_Ab;
     static boolean field_yb;
 
     final static String a(int param0, int param1, char param2) {
@@ -17,7 +17,7 @@ final class uu extends sna {
         char[] var6 = new char[param0];
         char[] var3 = var6;
         if (param1 != 83) {
-          field_vb = (ee) null;
+          field_vb = (IndexedSprite) null;
         }
         for (var4 = 0; var4 < param0; var4++) {
           var6[var4] = param2;
@@ -25,7 +25,7 @@ final class uu extends sna {
         return new String(var6);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_vb = null;
         if (param0 < 9) {
           uu.a(127, 25, 'ﾍ');
@@ -33,7 +33,7 @@ final class uu extends sna {
         field_zb = null;
     }
 
-    uu(kv param0, int param1, String param2, int param3) {
+    uu(Sprite param0, int param1, String param2, int param3) {
         try {
           this.field_Bb = param2;
           this.field_p = 102;
@@ -43,37 +43,37 @@ final class uu extends sna {
           this.field_Cb = param1;
           this.field_xb = fw.field_h[this.field_Cb].field_c;
           this.field_v = this.b(true);
-          this.a(-1, new sna("buy", (sna) null, 294, 70, 80, 20, qd.field_l));
+          this.a(-1, new UiComponent("buy", (UiComponent) null, 294, 70, 80, 20, qd.field_l));
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    private final kv b(boolean param0) {
-        kv var4 = new kv(400, 102);
+    private final Sprite b(boolean param0) {
+        Sprite var4 = new Sprite(400, 102);
         var4.b();
-        dg.c(0, 0, 400, 102, 16777215);
-        dg.e(0, 0, 380, 8698113);
-        dg.e(0, 1, 380, 8698113);
-        dg.e(0, 100, 380, 8698113);
-        dg.e(0, 101, 380, 8698113);
-        dg.c(15, 16, 62, 56, 16768634);
-        this.field_Ab.e(18, 10);
-        dg.c(86, 10, 288, 24, 16700507);
-        jha.field_g.c(this.field_Bb, 102, 26, 11796224, -1);
-        hfa.field_z.c(this.field_Bb, 102, 26, 65793, -1);
-        g.field_g.a(this.field_xb, 102, 36, 240, 70, 8553090, -1, 0, 0, 14);
+        SoftwareRasterizer.fillRectangle(0, 0, 400, 102, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, 0, 380, 8698113);
+        SoftwareRasterizer.drawHorizontalLine(0, 1, 380, 8698113);
+        SoftwareRasterizer.drawHorizontalLine(0, 100, 380, 8698113);
+        SoftwareRasterizer.drawHorizontalLine(0, 101, 380, 8698113);
+        SoftwareRasterizer.fillRectangle(15, 16, 62, 56, 16768634);
+        this.field_Ab.draw(18, 10);
+        SoftwareRasterizer.fillRectangle(86, 10, 288, 24, 16700507);
+        jha.field_g.drawText(this.field_Bb, 102, 26, 11796224, -1);
+        WidgetWrapper.field_z.drawText(this.field_Bb, 102, 26, 65793, -1);
+        g.field_g.drawParagraph(this.field_xb, 102, 36, 240, 70, 8553090, -1, 0, 0, 14);
         String var3 = lga.a(param0, new String[]{ti.a((byte) 124, 2, (long)this.field_wb, kt.field_k, param0)}, vla.field_u);
         jha.field_g.a(var3, 43, 86, 16699649, -1);
-        hfa.field_z.a(var3, 43, 86, 65793, -1);
-        dg.e(294, 70, 80, 20, 9, 8698113);
+        WidgetWrapper.field_z.a(var3, 43, 86, 65793, -1);
+        SoftwareRasterizer.fillRoundedRectangle(294, 70, 80, 20, 9, 8698113);
         jha.field_g.a(qd.field_l, 334, 84, 16777215, -1);
-        hfa.field_z.a(qd.field_l, 334, 84, 16204, -1);
-        if (dm.field_f <= 0 &&
+        WidgetWrapper.field_z.a(qd.field_l, 334, 84, 16204, -1);
+        if (ProxySocketConnector.field_f <= 0 &&
           !fw.field_h[this.field_Cb].field_e) {
           jha.field_g.b(dj.field_b, 288, 92, 16736256, -1);
         }
-        dg.c(8, 10, 75, 83, 2, 16694784);
+        SoftwareRasterizer.c(8, 10, 75, 83, 2, 16694784);
         hga.field_U.a((byte) -27);
         return var4;
     }

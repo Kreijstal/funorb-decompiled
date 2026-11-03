@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fda extends pp {
+final class fda extends EventEffect {
     static java.awt.Frame field_j;
-    static kv field_m;
+    static Sprite field_m;
     static vr field_l;
-    static qh field_i;
+    static WidgetTheme field_i;
     static vr field_k;
 
-    fda(nq param0) {
+    fda(CreatureRef param0) {
         try {
-          this.field_h = param0;
+          this.target = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class fda extends pp {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -88,13 +88,13 @@ final class fda extends pp {
         RuntimeException decompiledCaughtException = null;
         var2 = BachelorFridge.field_y;
         try {
-          gja.field_m.a(true, hk.field_e, tq.field_q, param0 ^ 6380);
+          gja.field_m.processInput(true, hk.field_e, tq.field_q, param0 ^ 6380);
           gja.field_m.i(0);
           while (kaa.b(127)) {
             gja.field_m.a(dla.field_j, (byte) 7, gf.field_k);
           }
-          if (la.field_r != -1) {
-            var1_int = la.field_r;
+          if (TBomberEvent.field_r != -1) {
+            var1_int = TBomberEvent.field_r;
             ep.a(-1, param0 + 8191);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
@@ -103,7 +103,7 @@ final class fda extends pp {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (kq.field_j == dka.field_G) {
+          if (kq.field_j == ReportAbusePanel.field_G) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -115,7 +115,7 @@ final class fda extends pp {
             stackIn_20_0 = -103;
             return stackIn_20_0;
           }
-          if (kq.field_j != ola.field_p) {
+          if (kq.field_j != FridgeScreen.field_p) {
             return -1;
           }
           stackIn_24_0 = 2;
@@ -123,11 +123,11 @@ final class fda extends pp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "fda.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "fda.D(" + param0 + ')');
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 25) {
           field_j = (java.awt.Frame) null;
         }
@@ -138,8 +138,8 @@ final class fda extends pp {
         field_j = null;
     }
 
-    final void a(aga param0, op param1, int param2) {
-        aga var4 = this.field_h.a(103, param1);
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
+        BattleCreature var4 = this.target.a(103, param1);
         if (var4 == null) {
           return;
         }
@@ -150,16 +150,16 @@ final class fda extends pp {
             field_l = (vr) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fda.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fda.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(lu param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
-          er.a(this.field_h, 109, param0);
+          FlirtAnimation.a(this.target, 109, param0);
           int var3_int = -94 % ((param1 - 34) / 58);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fda.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fda.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class fda extends pp {
             w.field_g = param0.field_a;
             fl.field_p = param0.field_o;
           }
-          ija.a((byte) -100, param0);
+          CranberrySpecial.a((byte) -100, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -209,7 +209,7 @@ final class fda extends pp {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 

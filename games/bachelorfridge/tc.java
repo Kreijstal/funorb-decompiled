@@ -3,11 +3,11 @@
  */
 final class tc {
     private int field_d;
-    kv[] field_c;
+    Sprite[] field_c;
     private int field_e;
     private boolean field_b;
     private int field_h;
-    kv field_g;
+    Sprite field_g;
     private int field_a;
     private int field_f;
 
@@ -19,7 +19,7 @@ final class tc {
         if (hl.field_I) {
           return ao.field_d.a(dla.field_j, (byte) 7, gf.field_k);
         }
-        if (gm.field_k) {
+        if (MoveOrder.field_k) {
           return wi.a(93, param1, param0);
         }
         if (kf.a(param1, (byte) -89, param0)) {
@@ -45,7 +45,7 @@ final class tc {
           param1.field_d = this.field_d;
           param1.field_h = this.field_h;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tc.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tc.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class tc {
         return this;
     }
 
-    final tc a(kv[] param0, byte param1) {
+    final tc a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -79,7 +79,7 @@ final class tc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -144,7 +144,7 @@ final class tc {
           var3Lifetime1 = aca.field_g[9] >> 8;
           var4 = aca.field_g[10] >> 8;
           var5Lifetime1 = aca.field_g[11] >> 8;
-          var6Lifetime1 = ur.field_d << 4;
+          var6Lifetime1 = WhirlpoolDigest.field_d << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = via.a(var6Lifetime1, (byte) 59) >> 8;
           var9Lifetime1 = ft.a(var6Lifetime1, (byte) -128) >> 8;
@@ -185,7 +185,7 @@ final class tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "tc.J(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "tc.J(" + param0 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class tc {
         this.field_e = -1;
         this.field_f = 0;
         if (param0 != 11) {
-          this.field_g = (kv) null;
+          this.field_g = (Sprite) null;
         }
         this.field_g = null;
         this.field_c = null;
@@ -254,7 +254,7 @@ final class tc {
             } else {
               stackIn_24_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -263,8 +263,8 @@ final class tc {
         }
     }
 
-    final void a(int param0, wd param1, wj param2, int param3, int param4) {
-        po stackIn_21_0 = null;
+    final void a(int param0, wd param1, UiWidget param2, int param3, int param4) {
+        BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
         int stackIn_24_2;
@@ -288,23 +288,23 @@ final class tc {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          hp.a(param2.field_p, param4 + param2.field_s, (byte) -5, param2.field_q, this.field_c, param2.field_v + param0);
+          hp.a(param2.width, param4 + param2.x, (byte) -5, param2.height, this.field_c, param2.y + param0);
           if (null != this.field_g) {
-            var6_int = param4 + (param2.field_s + this.field_f);
-            var7 = param0 - (-param2.field_v - this.field_d);
+            var6_int = param4 + (param2.x + this.field_f);
+            var7 = param0 - (-param2.y - this.field_d);
             if (param1.field_m == 1) {
-              var6_int = var6_int + (-this.field_g.field_n + param2.field_p) / 2;
+              var6_int = var6_int + (-this.field_g.field_n + param2.width) / 2;
             }
             if (param1.field_m == 2) {
-              var6_int = var6_int + (param2.field_p - this.field_g.field_n);
+              var6_int = var6_int + (param2.width - this.field_g.field_n);
             }
             if (1 == param1.field_g) {
-              var7 = var7 + (param2.field_q - this.field_g.field_o) / 2;
+              var7 = var7 + (param2.height - this.field_g.field_o) / 2;
             }
             if (param1.field_g == 2) {
-              var7 = var7 + (param2.field_q - this.field_g.field_o);
+              var7 = var7 + (param2.height - this.field_g.field_o);
             }
-            this.field_g.e(var6_int, var7);
+            this.field_g.draw(var6_int, var7);
           }
           if (param3 >= -17) {
             this.field_a = 54;
@@ -322,17 +322,17 @@ final class tc {
             } else {
               stackIn_22_2 = this.field_f;
             }
-            stackIn_24_2 = stackIn_22_2 + param1.field_i + param2.field_s + param4;
+            stackIn_24_2 = stackIn_22_2 + param1.field_i + param2.x + param4;
             stackIn_24_3 = param1.field_j;
-            stackIn_24_4 = param2.field_v + param0;
+            stackIn_24_4 = param2.y + param0;
             if (this.field_d != -2147483648) {
               stackIn_25_5 = this.field_d;
             } else {
               stackIn_25_5 = 0;
             }
             stackIn_27_3 = stackIn_24_3 + (stackIn_24_4 + stackIn_25_5);
-            stackIn_27_4 = -param1.field_s + param2.field_p - param1.field_i;
-            stackIn_27_5 = param2.field_q + (-param1.field_j - param1.field_r);
+            stackIn_27_4 = -param1.field_s + param2.width - param1.field_i;
+            stackIn_27_5 = param2.height + (-param1.field_j - param1.field_r);
             stackIn_27_6 = this.field_h;
             stackIn_27_7 = this.field_e;
             if (this.field_a == -2147483648) {
@@ -340,7 +340,7 @@ final class tc {
             } else {
               stackIn_28_8 = this.field_a;
             }
-            ((po) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param1.field_m, param1.field_g, param1.field_c);
+            ((BitmapFont) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param1.field_m, param1.field_g, param1.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -359,14 +359,14 @@ final class tc {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final tc a(boolean param0, int param1) {
         this.field_b = param0 ? true : false;
         if (param1 != -2147483648) {
-          this.field_c = (kv[]) null;
+          this.field_c = (Sprite[]) null;
         }
         return this;
     }
@@ -379,7 +379,7 @@ final class tc {
         return this;
     }
 
-    final void a(wd param0, int param1, wj param2, byte param3, tc param4, int param5) {
+    final void a(wd param0, int param1, UiWidget param2, byte param3, tc param4, int param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -440,13 +440,13 @@ final class tc {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param5).append(')').toString());
         }
     }
 
     final tc b(int param0, int param1) {
         if (param1 != -25251) {
-          this.field_g = (kv) null;
+          this.field_g = (Sprite) null;
         }
         this.field_h = param0;
         return this;
@@ -472,11 +472,11 @@ final class tc {
         int var2_intLifetime1;
         var3 = BachelorFridge.field_y;
         try {
-          var2_int = vq.field_w;
+          var2_int = SlowAllAnimation.field_w;
           if (param1.field_p != 2) {
             if (param1.field_p != 4) {
               if (ge.field_F == param1.field_a) {
-                var2_intLifetime1 = jaa.field_u[param1.field_p];
+                var2_intLifetime1 = HazmatEvent.field_u[param1.field_p];
               } else {
                 var2_intLifetime1 = wp.field_q[param1.field_p];
               }
@@ -487,12 +487,12 @@ final class tc {
             if (!param1.field_i) {
               if (param1.field_m == 0 &&
                 param1.field_j == 0) {
-                var2_intLifetime1 = jaa.field_u[param1.field_p];
+                var2_intLifetime1 = HazmatEvent.field_u[param1.field_p];
               } else {
                 var2_intLifetime1 = wp.field_q[param1.field_p];
               }
             } else {
-              var2_intLifetime1 = vq.field_w;
+              var2_intLifetime1 = SlowAllAnimation.field_w;
             }
           }
           if (param0) {
@@ -510,7 +510,7 @@ final class tc {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -535,7 +535,7 @@ final class tc {
         try {
           var4 = (gea) (wd.field_t.b((byte) 90));
           while (var4 != null) {
-            tca.a(var4, 5, param0);
+            JaggrabDownloader.a(var4, 5, param0);
             var4 = (gea) (wd.field_t.c(0));
           }
           if (param1 != -16482) {
@@ -550,7 +550,7 @@ final class tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "tc.E(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "tc.E(" + param0 + ',' + param1 + ')');
         }
     }
 

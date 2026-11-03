@@ -22,7 +22,7 @@ final class paa {
     boolean[] field_u;
     int[] field_p;
     int[] field_q;
-    private op field_z;
+    private BattleState field_z;
     boolean[] field_d;
     long[] field_r;
     boolean[] field_x;
@@ -37,46 +37,46 @@ final class paa {
     int[][] field_m;
     int[] field_D;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 != 2) {
           field_h = (String) null;
         }
     }
 
-    final tk a(byte param0, int param1) {
+    final PlayerMatchStats a(byte param0, int param1) {
         int var4 = BachelorFridge.field_y;
         int var3 = 0;
         int var3Lifetime1;
         if (1 == this.field_z.field_o) {
           var3 = this.field_w[param1];
           if (param0 != 9) {
-            paa.b(-63);
-            return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
+            paa.releaseStatics(-63);
+            return new PlayerMatchStats(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
           }
-          return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
+          return new PlayerMatchStats(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
         }
         if (2 != this.field_z.field_o) {
           if (this.field_z.field_o != 3) {
             if (param0 != 9) {
-              paa.b(-63);
-              return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
+              paa.releaseStatics(-63);
+              return new PlayerMatchStats(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
             }
-            return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
+            return new PlayerMatchStats(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
           }
           var3 = this.field_s[param1];
           if (param0 == 9) {
-            return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
+            return new PlayerMatchStats(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
           }
-          paa.b(-63);
-          return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
+          paa.releaseStatics(-63);
+          return new PlayerMatchStats(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
         }
         var3Lifetime1 = this.field_A[param1];
         if (param0 == 9) {
-          return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3Lifetime1);
+          return new PlayerMatchStats(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3Lifetime1);
         }
-        paa.b(-63);
-        return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3Lifetime1);
+        paa.releaseStatics(-63);
+        return new PlayerMatchStats(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3Lifetime1);
     }
 
     final static boolean a(int param0) {
@@ -85,11 +85,11 @@ final class paa {
         return jv.field_j == 11 ? true : false;
     }
 
-    paa(op param0) {
+    paa(BattleState param0) {
         int var2_int = 0;
         try {
           this.field_z = param0;
-          var2_int = this.field_z.field_d;
+          var2_int = this.field_z.playerCount;
           this.field_m = new int[var2_int][50];
           this.field_v = new int[var2_int];
           this.field_C = new long[var2_int];
@@ -123,7 +123,7 @@ final class paa {
           this.field_u = new boolean[var2_int];
           this.field_c = new int[var2_int];
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "paa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "paa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

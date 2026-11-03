@@ -2,23 +2,23 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fp extends tja {
-    private js field_q;
+    private IntrusiveNodeHashTable field_q;
     private byte[] field_s;
-    private ta field_g;
+    private SectorCacheStore field_g;
     private vm field_n;
-    private rf field_d;
+    private ArchiveIndex field_d;
     private int field_k;
     private byte[] field_w;
     private cga field_i;
     static String field_t;
-    private ea field_r;
-    static po field_f;
+    private DiskCacheWorker field_r;
+    static BitmapFont field_f;
     private int field_c;
-    private ta field_h;
+    private SectorCacheStore field_h;
     private int field_o;
     private boolean field_j;
-    private eaa field_v;
-    private eaa field_l;
+    private IntrusiveDeque field_v;
+    private IntrusiveDeque field_l;
     private boolean field_e;
     private int field_u;
     private long field_m;
@@ -31,7 +31,7 @@ final class fp extends tja {
         }
         byte[] var4 = var3.d((byte) -65);
         int var5 = -54 / ((param0 - 49) / 43);
-        var3.a(false);
+        var3.unlink(false);
         return var4;
     }
 
@@ -60,12 +60,12 @@ final class fp extends tja {
             var2_int = 1;
             var3 = this.field_v.b((byte) 90);
             while (var3 != null) {
-              var4 = (int)var3.field_c;
+              var4 = (int)var3.key;
               if (this.field_s[var4] == 0) {
                 discarded$1 = this.a(1, 127, var4);
               }
               if (0 != this.field_s[var4]) {
-                var3.a(false);
+                var3.unlink(false);
               } else {
                 var2_int = 0;
               }
@@ -83,7 +83,7 @@ final class fp extends tja {
                   }
                   if (0 == this.field_s[this.field_u]) {
                     var7 = new IntrusiveNode();
-                    var7.field_c = (long)this.field_u;
+                    var7.key = (long)this.field_u;
                     var2_int = 0;
                     this.field_v.a(var7, true);
                   }
@@ -104,12 +104,12 @@ final class fp extends tja {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_v.b((byte) 90);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_c;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_s[var4Lifetime1] != 1) {
                   discarded$3 = this.a(2, param0 - 14193, var4Lifetime1);
                 }
                 if (1 == this.field_s[var4Lifetime1]) {
-                  var3Lifetime1.a(false);
+                  var3Lifetime1.unlink(false);
                 } else {
                   var2_intLifetime1 = 0;
                 }
@@ -127,7 +127,7 @@ final class fp extends tja {
                     }
                     if (this.field_s[this.field_u] != 1) {
                       var6 = new IntrusiveNode();
-                      var6.field_c = (long)this.field_u;
+                      var6.key = (long)this.field_u;
                       var2_intLifetime1 = 0;
                       this.field_v.a(var6, true);
                     }
@@ -157,7 +157,7 @@ final class fp extends tja {
                 if (!var2.field_q) {
                   throw new RuntimeException();
                 }
-                var2.a(false);
+                var2.unlink(false);
               } else {
                 var2.field_o = true;
               }
@@ -180,7 +180,7 @@ final class fp extends tja {
         }
         this.field_e = true;
         if (this.field_v == null) {
-          this.field_v = new eaa();
+          this.field_v = new IntrusiveDeque();
         }
     }
 
@@ -223,7 +223,7 @@ final class fp extends tja {
           0 == param0 &&
           !var13.field_q &&
           var13.field_n) {
-          var13.a(false);
+          var13.unlink(false);
           var4 = null;
         }
         if (var4 == null) {
@@ -268,7 +268,7 @@ final class fp extends tja {
         var19 = ((cga) (var4)).d((byte) -65);
         var14 = var19;
         var5 = var14;
-        if (var4 instanceof se) {
+        if (var4 instanceof DiskCacheRequest) {
           try {
             if (var5 != null &&
               var19.length > 2) {
@@ -281,7 +281,7 @@ final class fp extends tja {
               if (null != this.field_d.field_g &&
                 null != this.field_d.field_g[param2]) {
                 var28 = this.field_d.field_g[param2];
-                var29 = ln.a(var19.length - 2, var19, 0, 8);
+                var29 = TeleportAnimation.a(var19.length - 2, var19, 0, 8);
                 for (var10 = 0; var10 < 64; var10++) {
                   if (var28[var10] != var29[var10]) {
                     throw new RuntimeException();
@@ -298,7 +298,7 @@ final class fp extends tja {
                 this.field_s[param2] = (byte) 1;
               }
               if (!((cga) (var4)).field_q) {
-                ((cga) (var4)).a(false);
+                ((cga) (var4)).unlink(false);
               }
               stackIn_56_0 = var4;
               return (cga) (stackIn_56_0);
@@ -308,7 +308,7 @@ final class fp extends tja {
             decompiledCaughtException = decompiledCaughtParameter1;
             var7_ref = (Exception) (Object) decompiledCaughtException;
             this.field_s[param2] = (byte)-1;
-            ((cga) (var4)).a(false);
+            ((cga) (var4)).unlink(false);
             if (!((cga) (var4)).field_q) {
               return null;
             }
@@ -332,7 +332,7 @@ final class fp extends tja {
             if (null != this.field_d.field_g &&
               null != this.field_d.field_g[param2]) {
               var31 = this.field_d.field_g[param2];
-              var30 = ln.a(-2 + var19.length, var19, 0, 8);
+              var30 = TeleportAnimation.a(-2 + var19.length, var19, 0, 8);
               var12 = 0;
               var10 = var12;
               while (var12 < 64) {
@@ -351,7 +351,7 @@ final class fp extends tja {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_n.b((byte) 109);
-          ((cga) (var4)).a(false);
+          ((cga) (var4)).unlink(false);
           if (!((cga) (var4)).field_q) {
             return null;
           }
@@ -370,12 +370,12 @@ final class fp extends tja {
           }
         }
         if (!((cga) (var4)).field_q) {
-          ((cga) (var4)).a(false);
+          ((cga) (var4)).unlink(false);
         }
         return (cga) (var4);
     }
 
-    final rf b(int param0) {
+    final ArchiveIndex b(int param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -403,12 +403,12 @@ final class fp extends tja {
         var6 = var7;
         var5 = var6;
         var2 = var5;
-        if (!(this.field_i instanceof se)) {
+        if (!(this.field_i instanceof DiskCacheRequest)) {
           try {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_d = new rf(var7, this.field_k, this.field_w);
+            this.field_d = new ArchiveIndex(var7, this.field_k, this.field_w);
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
@@ -429,7 +429,7 @@ final class fp extends tja {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_d = new rf(var7, this.field_k, this.field_w);
+            this.field_d = new ArchiveIndex(var7, this.field_k, this.field_w);
             if (this.field_d.field_r != this.field_c) {
               throw new RuntimeException();
             }
@@ -468,15 +468,15 @@ final class fp extends tja {
         }
         IntrusiveNode var2 = this.field_l.b((byte) 90);
         while (var2 != null) {
-          var3 = (int)var2.field_c;
+          var3 = (int)var2.key;
           if (var3 < 0) {
-            var2.a(false);
+            var2.unlink(false);
           } else {
             if (var3 >= this.field_d.field_f) {
-              var2.a(false);
+              var2.unlink(false);
             } else {
               if (this.field_d.field_e[var3] == 0) {
-                var2.a(false);
+                var2.unlink(false);
               } else {
                 if (this.field_s[var3] == 0) {
                   discarded$0 = this.a(1, -111, var3);
@@ -485,7 +485,7 @@ final class fp extends tja {
                   discarded$1 = this.a(2, -116, var3);
                 }
                 if (this.field_s[var3] == 1) {
-                  var2.a(false);
+                  var2.unlink(false);
                 }
               }
             }
@@ -494,13 +494,13 @@ final class fp extends tja {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         int var1 = 5 % ((-59 - param0) / 47);
         field_f = null;
     }
 
-    fp(int param0, ta param1, ta param2, vm param3, ea param4, int param5, byte[] param6, int param7, boolean param8) {
+    fp(int param0, SectorCacheStore param1, SectorCacheStore param2, vm param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -515,16 +515,16 @@ final class fp extends tja {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_q = new js(16);
+        this.field_q = new IntrusiveNodeHashTable(16);
         this.field_u = 0;
-        this.field_l = new eaa();
+        this.field_l = new IntrusiveDeque();
         this.field_m = 0L;
         try {
           this.field_h = param1;
           this.field_o = param0;
           if (this.field_h != null) {
             this.field_j = true;
-            this.field_v = new eaa();
+            this.field_v = new IntrusiveDeque();
           } else {
             this.field_j = false;
           }
@@ -574,7 +574,7 @@ final class fp extends tja {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

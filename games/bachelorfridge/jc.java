@@ -13,7 +13,7 @@ final class jc extends DualLinkNode {
     char[] field_p;
     char[] field_o;
 
-    private final void a(lu param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         char[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         int stackIn_14_2 = 0;
@@ -35,19 +35,19 @@ final class jc extends DualLinkNode {
             return;
           }
           if (param1 == 1) {
-            this.field_s = param0.g(49);
+            this.field_s = param0.readString(49);
           } else {
             if (param1 == 2) {
-              var4_int = param0.b(16711935);
+              var4_int = param0.readUnsignedByte(16711935);
               this.field_u = new int[var4_int];
               this.field_p = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_u[var5] = param0.e((byte) 114);
+                this.field_u[var5] = param0.readUnsignedShort((byte) 114);
                 var6 = param0.b(true);
                 stackIn_19_0 = this.field_p;
                 stackIn_19_1 = var5;
                 if (var6 != 0) {
-                  stackIn_20_2 = vja.a((byte) var6, (byte) -93);
+                  stackIn_20_2 = AttackEvent.a((byte) var6, (byte) -93);
                 } else {
                   stackIn_20_2 = 0;
                 }
@@ -61,16 +61,16 @@ final class jc extends DualLinkNode {
                 this.field_w = true;
                 return;
               }
-              var4_int = param0.b(16711935);
+              var4_int = param0.readUnsignedByte(16711935);
               this.field_q = new int[var4_int];
               this.field_o = new char[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_q[var5] = param0.e((byte) 92);
+                this.field_q[var5] = param0.readUnsignedShort((byte) 92);
                 var6 = param0.b(true);
                 stackIn_13_0 = this.field_o;
                 stackIn_13_1 = var5;
                 if (var6 != 0) {
-                  stackIn_14_2 = vja.a((byte) var6, (byte) -46);
+                  stackIn_14_2 = AttackEvent.a((byte) var6, (byte) -46);
                 } else {
                   stackIn_14_2 = 0;
                 }
@@ -89,11 +89,11 @@ final class jc extends DualLinkNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(lu param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -104,7 +104,7 @@ final class jc extends DualLinkNode {
         var4 = BachelorFridge.field_y;
         try {
           while (true) {
-            var3_int = param0.b(16711935);
+            var3_int = param0.readUnsignedByte(16711935);
             if (var3_int != 0) {
               this.a(param0, var3_int, -3);
               continue;
@@ -112,7 +112,7 @@ final class jc extends DualLinkNode {
             break;
           }
           if (param1) {
-            jc.e(91);
+            jc.releaseStatics(91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,15 +125,15 @@ final class jc extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static fea a(vr param0, int param1, boolean param2, vr param3, int param4) {
+    final static BinaryBitmapFont a(vr param0, int param1, boolean param2, vr param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        fea stackIn_5_0 = null;
-        fea stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_5_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -143,13 +143,13 @@ final class jc extends DualLinkNode {
         try {
           if (!g.a(param4, param1, -30744, param3)) {
             stackIn_2_0 = null;
-            return (fea) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (!param2) {
-            stackIn_7_0 = kea.a((byte) -3, param0.b(-26, param4, param1));
+            stackIn_7_0 = AirstrikeSpecial.a((byte) -3, param0.b(-26, param4, param1));
             return stackIn_7_0;
           }
-          stackIn_5_0 = (fea) null;
+          stackIn_5_0 = (BinaryBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ final class jc extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -185,14 +185,14 @@ final class jc extends DualLinkNode {
         int var2Lifetime1;
         if (this.field_q != null) {
           for (var2 = 0; var2 < this.field_q.length; var2++) {
-            this.field_q[var2] = mp.a(this.field_q[var2], 32768);
+            this.field_q[var2] = MassPoisonSpecial.a(this.field_q[var2], 32768);
           }
         }
         if (null != this.field_u) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (this.field_u.length > var4) {
-            this.field_u[var4] = mp.a(this.field_u[var4], 32768);
+            this.field_u[var4] = MassPoisonSpecial.a(this.field_u[var4], 32768);
             var4++;
           }
         }
@@ -201,9 +201,9 @@ final class jc extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 91) {
-          jc.e(5);
+          jc.releaseStatics(5);
         }
         field_n = null;
     }

@@ -6,7 +6,7 @@ final class un {
     static int[] field_a;
     byte[] field_b;
     int field_g;
-    static kv field_m;
+    static Sprite field_m;
     static int field_i;
     int field_d;
     int field_e;
@@ -16,7 +16,7 @@ final class un {
     int field_c;
     int field_k;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 == 2) {
           field_a = null;

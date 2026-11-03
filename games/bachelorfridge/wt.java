@@ -5,7 +5,7 @@ final class wt extends k {
     private int field_o;
     private int field_w;
     private int field_l;
-    static kv field_q;
+    static Sprite field_q;
     private int field_t;
     private int field_v;
     private int field_p;
@@ -13,8 +13,8 @@ final class wt extends k {
     private int field_r;
     private int field_s;
     static int field_u;
-    static be[] field_m;
-    static sba field_k;
+    static PcmSample[] field_m;
+    static AntialiasedBitmapFont field_k;
     private int field_x;
 
     public wt() {
@@ -31,13 +31,13 @@ final class wt extends k {
           wt.a(19, -118, 72, -6, 50, -27, -99);
         }
         if (DualLinkNode.field_l <= param5 &&
-          pw.field_x >= param0 &&
+          SnowAnimation.field_x >= param0 &&
           an.field_q <= param3 &&
           param4 <= ha.field_n) {
           if (param2 != 1) {
-            cma.a(param4, param6, param5, param0, param2, 64, param3);
+            InsanoSauceAnimation.a(param4, param6, param5, param0, param2, 64, param3);
           } else {
-            cv.a(param6, param1 + 28849, param4, param5, param0, param3);
+            SpiltMilkEvent.a(param6, param1 + 28849, param4, param5, param0, param3);
           }
         } else {
           if (1 == param2) {
@@ -128,7 +128,7 @@ final class wt extends k {
         return;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_m = null;
         field_n = null;
@@ -138,7 +138,7 @@ final class wt extends k {
         field_q = null;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -158,7 +158,7 @@ final class wt extends k {
               }
             }
           } else {
-            this.field_x = param1.c((byte) -85);
+            this.field_x = param1.readSignedShort((byte) -85);
           }
           if (param0 != -71) {
             this.field_o = -52;
@@ -174,7 +174,7 @@ final class wt extends k {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -250,18 +250,18 @@ final class wt extends k {
           this.field_p = param1;
         }
         if (param0 != -6) {
-          field_m = (be[]) null;
+          field_m = (PcmSample[]) null;
         }
     }
 
     final static void b(int param0, int param1) {
-        pf var2 = sja.field_fb;
-        var2.c(param1, (byte) 109);
-        var2.d(1, 0);
+        BitPacketBuffer var2 = sja.field_fb;
+        var2.writeCipheredByte(param1, (byte) 109);
+        var2.writeByte(1, 0);
         if (param0 != -22908) {
-          field_m = (be[]) null;
+          field_m = (PcmSample[]) null;
         }
-        var2.d(1, 0);
+        var2.writeByte(1, 0);
     }
 
     final int[][] a(boolean param0, int param1) {
@@ -327,6 +327,6 @@ final class wt extends k {
     }
 
     static {
-        field_m = new be[6];
+        field_m = new PcmSample[6];
     }
 }

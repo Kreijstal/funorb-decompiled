@@ -11,18 +11,18 @@ final class rm {
           if (param1 < 91) {
             field_a = -26;
           }
-          eaa.field_d.a(param2, true);
-          nr.a(param0, param2, (byte) -48);
+          IntrusiveDeque.field_d.a(param2, true);
+          RageAnimation.a(param0, param2, (byte) -48);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         if (param0 >= -93) {
-          rm.a(-6);
+          rm.releaseStatics(-6);
         }
     }
 

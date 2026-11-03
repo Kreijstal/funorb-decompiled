@@ -3,14 +3,14 @@
  */
 final class cba {
     static String field_b;
-    static kv field_a;
+    static Sprite field_a;
     static int field_d;
-    static ee[] field_c;
+    static IndexedSprite[] field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 != -44) {
-          field_c = (ee[]) null;
+          field_c = (IndexedSprite[]) null;
           field_a = null;
           field_c = null;
           return;
@@ -20,7 +20,7 @@ final class cba {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        oha var5 = al.a(-71, param3);
+        MoveDefinition var5 = al.a(-71, param3);
         int var7 = 37 / ((param4 - 1) / 35);
         int var6 = var5.field_h;
         int var8 = var5.field_l;

@@ -96,7 +96,7 @@ final class kna extends IntrusiveNode {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

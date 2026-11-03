@@ -3,11 +3,11 @@
  */
 abstract class bi extends jla {
     static long field_j;
-    static be[] field_i;
+    static PcmSample[] field_i;
     static int field_g;
-    static sna field_h;
+    static UiComponent field_h;
 
-    final static void a(int param0, boolean param1, int param2, oha param3, int param4, int param5, int param6, boolean param7, double param8) {
+    final static void a(int param0, boolean param1, int param2, MoveDefinition param3, int param4, int param5, int param6, boolean param7, double param8) {
         int stackIn_4_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_16_0 = 0;
@@ -42,8 +42,8 @@ abstract class bi extends jla {
         var26 = BachelorFridge.field_y;
         try {
           var27 = param3.a((byte) 37);
-          var11 = param3.field_k;
-          stackIn_4_0 = (param3.field_a != 1) ? 0 : 1;
+          var11 = param3.description;
+          stackIn_4_0 = (param3.kind != 1) ? 0 : 1;
           var12 = stackIn_4_0;
           var13 = 0;
           if (var12 != 0) {
@@ -53,15 +53,15 @@ abstract class bi extends jla {
           }
           var14 = stackIn_10_0;
           if (var12 != 0) {
-            stackIn_16_0 = (((t) (param3)).field_u != 0) ? 1 : 0;
+            stackIn_16_0 = (((BasicMoveDefinition) (param3)).field_u != 0) ? 1 : 0;
           } else {
             stackIn_16_0 = 0;
           }
           var15 = stackIn_16_0;
-          var16 = 10 + ad.field_h.c(var11, 200);
+          var16 = 10 + CreatureActor.field_h.c(var11, 200);
           stackIn_19_0 = (var14 == 0) ? 0 : 10;
-          stackIn_21_1 = ad.field_h.a(var11, 200, var13);
-          stackIn_21_2 = ad.field_h.field_F;
+          stackIn_21_1 = CreatureActor.field_h.measureWrappedHeight(var11, 200, var13);
+          stackIn_21_2 = CreatureActor.field_h.field_F;
           if (var12 != 0) {
             stackIn_22_3 = 2;
           } else {
@@ -69,14 +69,14 @@ abstract class bi extends jla {
           }
           stackIn_24_1 = stackIn_21_1 + (stackIn_21_2 << stackIn_22_3);
           if (var15 != 0) {
-            stackIn_25_2 = ad.field_h.field_F;
+            stackIn_25_2 = CreatureActor.field_h.field_F;
           } else {
             stackIn_25_2 = 0;
           }
           var17 = stackIn_19_0 + (stackIn_24_1 + stackIn_25_2);
           if (param7 ||
             param1) {
-            var17 = var17 + ad.field_h.field_F;
+            var17 = var17 + CreatureActor.field_h.field_F;
           }
           if (param5 < param2 + var16 + param4) {
             param4 = param4 + (param5 - 20 - (param4 + var16));
@@ -84,13 +84,13 @@ abstract class bi extends jla {
           if (param6 + var17 > param0) {
             param6 = param6 + (param0 + (-param6 - var17));
           }
-          dg.a(param4 + 13, param6, 6 + var16, var17, 10, 65793, 192);
-          ad.field_h.c(var27, 20 + param4, 16 + param6, 0, -1);
-          ad.field_h.a(var11, param4 + 20, param6 + 24, 200, 200, 0, -1, 0, 0, var13);
-          var18 = ad.field_h.a(var11, 200, 0);
+          SoftwareRasterizer.a(param4 + 13, param6, 6 + var16, var17, 10, 65793, 192);
+          CreatureActor.field_h.drawText(var27, 20 + param4, 16 + param6, 0, -1);
+          CreatureActor.field_h.drawParagraph(var11, param4 + 20, param6 + 24, 200, 200, 0, -1, 0, 0, var13);
+          var18 = CreatureActor.field_h.measureWrappedHeight(var11, 200, 0);
           if (var12 != 0) {
-            var19 = ((t) (param3)).field_q;
-            var20 = ((t) (param3)).field_u;
+            var19 = ((BasicMoveDefinition) (param3)).field_q;
+            var20 = ((BasicMoveDefinition) (param3)).field_u;
             if (var19 >= 0) {
               var19 = (int)((double)var19 * param8);
             }
@@ -99,27 +99,27 @@ abstract class bi extends jla {
             var23 = lga.a(true, new String[]{String.valueOf(var19)}, qea.field_a);
             var24 = lga.a(true, new String[]{kna.field_g[var20]}, vf.field_D);
             var25 = lga.a(true, new String[]{Integer.toString(var21 - 1)}, ona.field_xb);
-            ad.field_h.c(var23, param4 + 20, var22, 0, -1);
+            CreatureActor.field_h.drawText(var23, param4 + 20, var22, 0, -1);
             if (var20 != 0) {
-              var22 = var22 + ad.field_h.field_F;
-              ad.field_h.c(var24, param4 + 20, var22, 0, -1);
+              var22 = var22 + CreatureActor.field_h.field_F;
+              CreatureActor.field_h.drawText(var24, param4 + 20, var22, 0, -1);
             }
             if (var21 > 0) {
-              ad.field_h.c(var25, 20 + param4, ad.field_h.field_F + var22, 0, -1);
+              CreatureActor.field_h.drawText(var25, 20 + param4, CreatureActor.field_h.field_F + var22, 0, -1);
             }
             if (!param7) {
               if (param1) {
-                ad.field_h.c(wfa.field_r, 20 + param4, ad.field_h.field_F + var22, 2, -1);
+                CreatureActor.field_h.drawText(FullHealEvent.field_r, 20 + param4, CreatureActor.field_h.field_F + var22, 2, -1);
               }
             } else {
-              ad.field_h.c(gea.field_n, 20 + param4, ad.field_h.field_F * 2 + var22, 2, -1);
+              CreatureActor.field_h.drawText(gea.field_n, 20 + param4, CreatureActor.field_h.field_F * 2 + var22, 2, -1);
             }
           } else {
             if (param7) {
-              ad.field_h.c(gea.field_n, 20 + param4, var18 + ad.field_h.field_F + ((ad.field_h.field_F << 1) + (-4 + param6)), 2, -1);
+              CreatureActor.field_h.drawText(gea.field_n, 20 + param4, var18 + CreatureActor.field_h.field_F + ((CreatureActor.field_h.field_F << 1) + (-4 + param6)), 2, -1);
             } else {
               if (param1) {
-                ad.field_h.c(wfa.field_r, param4 + 20, var18 + ad.field_h.field_F + param6 + (-4 + (ad.field_h.field_F << 1)), 2, -1);
+                CreatureActor.field_h.drawText(FullHealEvent.field_r, param4 + 20, var18 + CreatureActor.field_h.field_F + param6 + (-4 + (CreatureActor.field_h.field_F << 1)), 2, -1);
               }
             }
           }
@@ -134,62 +134,62 @@ abstract class bi extends jla {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
     public static void d(byte param0) {
         field_h = null;
         if (param0 != -97) {
-          bi.a(8, true, 97, (oha) null, -49, 70, 87, true, 1.3991795379432221);
+          bi.a(8, true, 97, (MoveDefinition) null, -49, 70, 87, true, 1.3991795379432221);
         }
         field_i = null;
     }
 
     final static void o(int param0) {
         if (param0 != 2) {
-          bi.a(49, true, -128, (oha) null, 0, 127, 48, false, -0.8479634019263611);
+          bi.a(49, true, -128, (MoveDefinition) null, 0, 127, 48, false, -0.8479634019263611);
         }
         gja.field_m.f((byte) -66);
         if (null == hp.field_d) {
-          hp.field_d = new hga(gja.field_m, at.field_i);
+          hp.field_d = new hga(gja.field_m, AnimationNode.field_i);
         }
-        gja.field_m.a((wj) (hp.field_d), (byte) 111);
+        gja.field_m.a((UiWidget) (hp.field_d), (byte) 111);
     }
 
     void b(boolean param0, int param1, int param2) {
         int var10 = 0;
-        kv var11 = this.b(param1, (byte) 74);
+        Sprite var11 = this.b(param1, (byte) 74);
         int var5 = this.d(param1, param2 + 26891) ? 1 : 0;
-        String var6 = this.d(false, pj.field_b[this.field_b][param1]);
-        pia var7 = fn.field_n;
+        String var6 = this.d(false, BufferedSocket.field_b[this.field_b][param1]);
+        PalettedBitmapFont var7 = fn.field_n;
         int var8 = var5 != 0 ? !param0 ? 9 : 10 : 8;
         int var9 = this.a(param1, true) + this.b(param1, 40) >> 1;
         if (param2 == 0) {
           var10 = this.a(param1, (byte) -81) + (this.a(-26, param1) >> 1);
           if (var5 != 0) {
-            var11.e(-(var11.field_n >> 1) + var9, -22 + var10);
+            var11.draw(-(var11.field_n >> 1) + var9, -22 + var10);
           } else {
             var11.b(-(var11.field_n >> 1) + var9, -22 + var10, 128);
           }
-          ((po) ((Object) var7)).a(var6, var9, var10 + 6, var8, -1);
+          ((BitmapFont) ((Object) var7)).a(var6, var9, var10 + 6, var8, -1);
           return;
         }
     }
 
     final void i(int param0) {
         super.i(param0);
-        dg.f(0, 0, 640, 480, 0, 128);
-        nu.field_e.e(-5, 0);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
+        nu.field_e.draw(-5, 0);
     }
 
     bi(int param0) {
         super(param0);
     }
 
-    abstract kv b(int param0, byte param1);
+    abstract Sprite b(int param0, byte param1);
 
     static {
-        field_i = new be[2];
+        field_i = new PcmSample[2];
     }
 }

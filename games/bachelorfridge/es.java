@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class es extends IntrusiveNode {
-    static eaa field_j;
+    static IntrusiveDeque field_j;
     private int field_f;
     static String field_h;
     private int field_i;
@@ -12,7 +12,7 @@ final class es extends IntrusiveNode {
         pr.field_h[this.field_g].a(12 + (this.field_i + param1), -20 + this.field_f, param0);
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_h = (String) null;
           field_h = null;

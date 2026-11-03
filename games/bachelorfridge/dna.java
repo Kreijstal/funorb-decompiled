@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dna extends sna {
-    private sna field_vb;
-    private sna[] field_xb;
+final class dna extends UiComponent {
+    private UiComponent field_vb;
+    private UiComponent[] field_xb;
     int field_yb;
-    private sna[] field_wb;
+    private UiComponent[] field_wb;
 
     final void f(int param0) {
         int var2 = 0;
-        sna dupTemp$0 = null;
-        sna dupTemp$1 = null;
+        UiComponent dupTemp$0 = null;
+        UiComponent dupTemp$1 = null;
         int var3;
         var3 = BachelorFridge.field_y;
         for (var2 = 0; var2 < this.field_xb.length; var2++) {
@@ -30,8 +30,8 @@ final class dna extends sna {
         }
     }
 
-    dna(long param0, sna param1, String[] param2, sna param3, sna[] param4, int param5) {
-        super(param0, (sna) null);
+    dna(long param0, UiComponent param1, String[] param2, UiComponent param3, UiComponent[] param4, int param5) {
+        super(param0, (UiComponent) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -44,15 +44,15 @@ final class dna extends sna {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        sna var9 = null;
+        UiComponent var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_xb = new sna[param2.length];
-          this.field_vb = new sna(0L, param3);
+          this.field_xb = new UiComponent[param2.length];
+          this.field_vb = new UiComponent(0L, param3);
           this.field_wb = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new sna(0L, param1);
+            var9 = new UiComponent(0L, param1);
             var9.field_Z = param2[var8_int];
             this.field_xb[var8_int] = var9;
             this.a(-1, var9);
@@ -95,19 +95,19 @@ final class dna extends sna {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
     final static void c(int param0, boolean param1) {
-        int var2 = (kg.field_b - 640) / 2;
+        int var2 = (FullscreenFocusCanvas.field_b - 640) / 2;
         int var3 = saa.field_b * saa.field_b;
         int var4 = var3 - param0 * param0;
-        ela.field_i.a(dg.field_c - 124 - 90, 31407, 199, -(199 * var4 / var3) + var2, 90);
+        ela.field_i.a(SoftwareRasterizer.field_c - 124 - 90, 31407, 199, -(199 * var4 / var3) + var2, 90);
         if (param1) {
           dna.f((byte) 74);
         }
-        ho.field_g.a(-4 + dg.field_c - 120, 31407, 438, var4 * 438 / var3 + (var2 + 202), 0);
+        ho.field_g.a(-4 + SoftwareRasterizer.field_c - 120, 31407, 438, var4 * 438 / var3 + (var2 + 202), 0);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -129,7 +129,7 @@ final class dna extends sna {
     }
 
     final static int b(int param0, boolean param1) {
-        String var2 = lka.field_E[param0][4];
+        String var2 = TextInputWidget.field_E[param0][4];
         var2 = var2.trim();
         if (param1) {
           return 84;
@@ -139,7 +139,7 @@ final class dna extends sna {
     }
 
     private final void a(boolean param0, int param1, int param2) {
-        sna dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         int var4;
         int var5;
         int var6;

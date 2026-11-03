@@ -23,7 +23,7 @@ final class pe extends k {
         if (param1 != 0) {
           field_n = (String) null;
           if (this.field_j.field_m) {
-            bl.a(var4, 0, hh.field_d, tj.field_f[param0]);
+            ArrayOperations.a(var4, 0, hh.field_d, tj.field_f[param0]);
             return var4;
           }
           return var4;
@@ -31,7 +31,7 @@ final class pe extends k {
         if (!this.field_j.field_m) {
           return var4;
         }
-        bl.a(var4, 0, hh.field_d, tj.field_f[param0]);
+        ArrayOperations.a(var4, 0, hh.field_d, tj.field_f[param0]);
         return var4;
     }
 
@@ -39,13 +39,13 @@ final class pe extends k {
         super(0, true);
     }
 
-    final static gi a(Throwable param0, String param1) {
-        gi var2 = null;
-        if (!(param0 instanceof gi)) {
-          var2 = new gi(param0, param1);
+    final static ClientException wrapException(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (gi) ((Object) param0);
-          var2.field_e = var2.field_e + ' ' + param1;
+          var2 = (ClientException) ((Object) param0);
+          var2.context = var2.context + ' ' + param1;
         }
         return var2;
     }

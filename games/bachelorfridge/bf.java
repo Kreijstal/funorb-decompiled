@@ -6,7 +6,7 @@ abstract class bf extends IntrusiveNode {
     static hw[] field_g;
     static boolean field_f;
 
-    abstract void a(op param0, int param1);
+    abstract void a(BattleState param0, int param1);
 
     bf() {
     }
@@ -89,7 +89,7 @@ abstract class bf extends IntrusiveNode {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ abstract class bf extends IntrusiveNode {
         String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
-        nea var3 = hj.b(0, param0, param1);
+        nea var3 = SplitSpecial.b(0, param0, param1);
         int var4 = 6 / ((-4 - param2) / 36);
         ik var5Lifetime1;
         if (var3 != null) {
@@ -114,13 +114,13 @@ abstract class bf extends IntrusiveNode {
         wb.a(param1, param0, -115);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -105 / ((param0 + 1) / 57);
         field_g = null;
         field_h = null;
     }
 
-    abstract void a(int param0, lu param1);
+    abstract void a(int param0, PacketBuffer param1);
 
     static {
     }

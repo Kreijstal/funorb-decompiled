@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ce extends vja {
+final class ce extends AttackEvent {
     static int field_t;
     static int[][] field_w;
     int field_v;
@@ -11,16 +11,16 @@ final class ce extends vja {
     static boolean field_y;
     static int[] field_u;
 
-    ce(int param0, nq param1, int param2, boolean param3, boolean param4, boolean param5, int param6) {
+    ce(int param0, CreatureRef param1, int param2, boolean param3, boolean param4, boolean param5, int param6) {
         super(param0, param1, param2, param6, param3, param4, param5);
         try {
           this.field_v = param6;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ce.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ce.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    ce(int param0, lu param1) {
+    ce(int param0, PacketBuffer param1) {
         super(param0, param1);
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -31,7 +31,7 @@ final class ce extends vja {
           if (this.field_n) {
             return;
           }
-          this.field_v = param1.b(16711935);
+          this.field_v = param1.readUnsignedByte(16711935);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,11 +43,11 @@ final class ce extends vja {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_u = null;
         if (param0 <= 17) {
           return;
@@ -55,9 +55,9 @@ final class ce extends vja {
         field_w = (int[][]) null;
     }
 
-    final at a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
-        at stackIn_2_0 = null;
+        AnimationNode stackIn_2_0 = null;
         rja stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -66,9 +66,9 @@ final class ce extends vja {
         try {
           if (param0 == 5) {
             stackIn_4_0 = new rja(param1, this);
-            return (at) ((Object) stackIn_4_0);
+            return (AnimationNode) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (at) null;
+          stackIn_2_0 = (AnimationNode) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,7 +80,7 @@ final class ce extends vja {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -99,33 +99,33 @@ final class ce extends vja {
         int[] var12 = null;
         try {
           k.c(3685);
-          var12 = dg.field_e;
+          var12 = SoftwareRasterizer.field_e;
           var11 = var12;
           var10 = var11;
           var6 = var10;
-          var7 = dg.field_i;
-          var8 = dg.field_c;
-          if (sca.field_a != null &&
+          var7 = SoftwareRasterizer.field_i;
+          var8 = SoftwareRasterizer.field_c;
+          if (MouseWheelInput.field_a != null &&
             lo.field_b != null) {
             param2 = param2 - (lo.field_b.field_u - lo.field_b.field_B);
             var9 = lo.field_b.a(param3);
             var9 += 10;
-            sca.field_a.b();
+            MouseWheelInput.field_a.b();
             if ((1 & var9) == 1) {
               var9++;
             }
-            dg.d();
+            SoftwareRasterizer.clear();
             if (!param0) {
               field_x = 120;
             }
-            lo.field_b.c(param3, 5, 3 + lo.field_b.field_u, 0, -1);
-            dg.a(var12, var7, var8);
-            fk.d((byte) 69);
+            lo.field_b.drawText(param3, 5, 3 + lo.field_b.field_u, 0, -1);
+            SoftwareRasterizer.setTarget(var12, var7, var8);
+            HomingMissileEvent.d((byte) 69);
             if (param5) {
-              fw.a(param4, sca.field_a, var9, param1, true, ap.field_c, param2);
+              fw.a(param4, MouseWheelInput.field_a, var9, param1, true, ap.field_c, param2);
               return;
             }
-            fn.a(param1, (byte) 11, var9, param4, param2, sca.field_a);
+            fn.a(param1, (byte) 11, var9, param4, param2, MouseWheelInput.field_a);
             return;
           }
           return;
@@ -139,14 +139,14 @@ final class ce extends vja {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final void a(op param0, boolean param1) {
+    final void apply(BattleState param0, boolean param1) {
         RuntimeException runtimeException = null;
-        aga var3 = null;
-        t var4 = null;
+        BattleCreature var3 = null;
+        BasicMoveDefinition var4 = null;
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -156,18 +156,18 @@ final class ce extends vja {
         try {
           if (!this.field_r &&
             !this.field_n) {
-            var3 = this.field_l.a(69, param0);
-            var4 = (t) (al.a(120, this.field_k));
+            var3 = this.creature.a(69, param0);
+            var4 = (BasicMoveDefinition) (al.a(120, this.moveId));
             var5 = 0;
             if (var4.field_u == 15 ||
               var4.field_u == 45 ||
               var4.field_u == 46) {
               var5 = 1;
             }
-            var6 = om.a(this.field_q, (byte) 25, var3.field_J, var5 != 0, this.field_v, var3, var3.field_x, param0);
+            var6 = ShuffleAnimation.a(this.field_q, (byte) 25, var3.tileY, var5 != 0, this.field_v, var3, var3.tileX, param0);
             this.field_v = var6;
             var3.a(param1, this.field_v, this.field_q);
-            super.a(param0, false);
+            super.apply(param0, false);
             return;
           }
           return;
@@ -181,7 +181,7 @@ final class ce extends vja {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -212,21 +212,21 @@ final class ce extends vja {
             ce.a(false, -81, -123, (String) null, 28, false);
           }
           var3 = new ika(param0.a((byte) 123, "", "manifest"));
-          rn.field_u = var3.field_c;
-          rs.field_g = new lr[rn.field_u];
+          BananarangEvent.field_u = var3.field_c;
+          StatusEffectInfo.field_g = new lr[BananarangEvent.field_u];
           var4 = 0;
           var5 = (ft) (var3.field_b.b((byte) 90));
           while (var5 != null) {
             var6 = var5.field_g;
             var7 = var5.field_f ? 1 : 0;
             var14 = param0.b(-102, var2_int, var6);
-            rs.field_g[var4] = new lr(new lu(var14));
+            StatusEffectInfo.field_g[var4] = new lr(new PacketBuffer(var14));
             if (var7 != 0) {
             }
-            stackIn_9_0 = rs.field_g[var4];
+            stackIn_9_0 = StatusEffectInfo.field_g[var4];
             stackIn_10_1 = (var7 != 0);
             stackIn_9_0.field_i = stackIn_10_1;
-            incrementValue$0 = rs.field_g[var4];
+            incrementValue$0 = StatusEffectInfo.field_g[var4];
             incrementValue$1 = var4;
             var4++;
             incrementValue$0.field_g = incrementValue$1;
@@ -244,11 +244,11 @@ final class ce extends vja {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         RuntimeException var3 = null;
         String var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -264,7 +264,7 @@ final class ce extends vja {
           if (this.field_n) {
             return;
           }
-          param1.d(this.field_v, 0);
+          param1.writeByte(this.field_v, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -276,7 +276,7 @@ final class ce extends vja {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

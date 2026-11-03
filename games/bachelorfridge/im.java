@@ -6,7 +6,7 @@ final class im {
     static String field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = -48 / ((34 - param0) / 57);
         field_c = (boolean[][]) null;
@@ -38,8 +38,8 @@ final class im {
           }
           var7 = stackIn_34_0;
           uc.field_k[ut.field_l] = var7;
-          if (var7 < mt.field_r) {
-            mt.field_r = var7;
+          if (var7 < ScavengerSpecial.field_r) {
+            ScavengerSpecial.field_r = var7;
           }
           if (param3) {
             im.a(-109, 3, 88, true, 30, 109);
@@ -50,7 +50,7 @@ final class im {
           }
           return;
         }
-        mt.field_r = param1;
+        ScavengerSpecial.field_r = param1;
         if (wt.field_u < param1) {
           af.field_c = param1;
         }
@@ -65,8 +65,8 @@ final class im {
         }
         var7Lifetime1 = stackIn_7_0;
         uc.field_k[ut.field_l] = var7Lifetime1;
-        if (var7Lifetime1 < mt.field_r) {
-          mt.field_r = var7Lifetime1;
+        if (var7Lifetime1 < ScavengerSpecial.field_r) {
+          ScavengerSpecial.field_r = var7Lifetime1;
         }
         if (param3) {
           im.a(-109, 3, 88, true, 30, 109);
@@ -77,27 +77,27 @@ final class im {
         }
     }
 
-    final static pp a(int param0, lu param1) {
+    final static EventEffect a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        lu var5 = null;
-        sl stackIn_3_0 = null;
+        PacketBuffer var5 = null;
+        DamageTileEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.e((byte) 73);
+          var2_int = param1.readUnsignedShort((byte) 73);
           if (param0 != -22833) {
-            var5 = (lu) null;
-            im.a(9, (lu) null);
+            var5 = (PacketBuffer) null;
+            im.a(9, (PacketBuffer) null);
           }
-          var3 = param1.b(param0 ^ -16734672);
-          var4 = param1.b(16711935);
-          stackIn_3_0 = new sl(var2_int, var3, var4);
-          return (pp) ((Object) stackIn_3_0);
+          var3 = param1.readUnsignedByte(param0 ^ -16734672);
+          var4 = param1.readUnsignedByte(16711935);
+          stackIn_3_0 = new DamageTileEffect(var2_int, var3, var4);
+          return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -108,7 +108,7 @@ final class im {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

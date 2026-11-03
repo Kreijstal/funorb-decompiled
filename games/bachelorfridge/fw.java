@@ -3,14 +3,14 @@
  */
 final class fw extends IntrusiveNode {
     int field_k;
-    static ee field_f;
+    static IndexedSprite field_f;
     int field_g;
     static jd field_i;
     static vr field_j;
     static long field_l;
     static pd[] field_h;
 
-    final static void a(int param0, kv param1, int param2, int param3, boolean param4, kv param5, int param6) {
+    final static void a(int param0, Sprite param1, int param2, int param3, boolean param4, Sprite param5, int param6) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
@@ -26,7 +26,7 @@ final class fw extends IntrusiveNode {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        kv var14 = null;
+        Sprite var14 = null;
         int var7_intLifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
@@ -34,8 +34,8 @@ final class fw extends IntrusiveNode {
         var13 = BachelorFridge.field_y;
         try {
           if (!param4) {
-            var14 = (kv) null;
-            fw.a((byte) 13, (kv) null, (kv) null, (kv) null);
+            var14 = (Sprite) null;
+            fw.a((byte) 13, (Sprite) null, (Sprite) null, (Sprite) null);
           }
           param6 -= 3;
           if (param1.field_q < param2) {
@@ -85,7 +85,7 @@ final class fw extends IntrusiveNode {
               var12 = var12 | 65280 & var10Lifetime1 * ((param3 & 65280) >> 8);
               var12 = var12 | var10Lifetime1 * (255 & param3) >> 8 & 255;
               if (0 <= param1.field_v[var7_intLifetime1]) {
-                tla.a(var9Lifetime1 + param0, -1898743704, var12, var8Lifetime1 + param6, var11);
+                AirstrikeEvent.a(var9Lifetime1 + param0, -1898743704, var12, var8Lifetime1 + param6, var11);
               }
               var7_intLifetime1++;
             }
@@ -108,15 +108,15 @@ final class fw extends IntrusiveNode {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    final static kv[] a(byte param0, kv param1, kv param2, kv param3) {
-        kv[] var4 = null;
+    final static Sprite[] a(byte param0, Sprite param1, Sprite param2, Sprite param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
-        kv[] var5 = null;
-        kv[] stackIn_3_0 = null;
+        Sprite[] var5 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -126,7 +126,7 @@ final class fw extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new kv[9];
+          var5 = new Sprite[9];
           var4 = var5;
           var5[3] = param2;
           var5[5] = param3;
@@ -158,17 +158,17 @@ final class fw extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final static kv[] a(int param0, byte param1) {
+    final static Sprite[] a(int param0, byte param1) {
         int var3 = 0;
         int var4 = BachelorFridge.field_y;
-        kv[] var5 = new kv[50];
-        kv[] var2 = var5;
+        Sprite[] var5 = new Sprite[50];
+        Sprite[] var2 = var5;
         if (param1 != -74) {
-          return (kv[]) null;
+          return (Sprite[]) null;
         }
         for (var3 = 0; 50 > var3; var3++) {
           var5[var3] = bs.a(qs.field_l[param0][var3], (byte) 112);
@@ -181,7 +181,7 @@ final class fw extends IntrusiveNode {
         this.field_g = param1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_h = null;
         if (param0 != -8668) {

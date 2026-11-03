@@ -1,0 +1,119 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class BuffVendorEvent extends SpecialEvent {
+    int field_r;
+    static IntrusiveNodeHashTable field_t;
+    int field_u;
+    static String field_q;
+    static String field_s;
+
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
+        RuntimeException var3 = null;
+        BuffVendorAnimation stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 5) {
+            BuffVendorEvent.d((byte) 14);
+          }
+          stackIn_3_0 = new BuffVendorAnimation(param1, this, this.field_p);
+          return (AnimationNode) ((Object) stackIn_3_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("me.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    BuffVendorEvent(int param0, CreatureRef param1) {
+        super(param0, param1);
+    }
+
+    final void a(BattleState param0, int param1) {
+        try {
+          this.creature.a(107, param0);
+          this.field_p = !param0.isTileFree(this.field_r, this.field_u, -11066) ? true : false;
+          if (null != param0.tiles[this.field_r][this.field_u].occupant) {
+            this.field_p = true;
+          }
+          if (!this.field_p) {
+            param0.setTerrain((byte) 91, 36, this.field_r, this.field_u);
+          }
+          int var3_int = -2 / ((param1 - 12) / 35);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "me.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_s = null;
+        field_t = null;
+        field_q = null;
+        if (param0 < 63) {
+          field_s = (String) null;
+        }
+    }
+
+    final void a(byte param0, PacketBuffer param1) {
+        try {
+          super.a((byte) -38, param1);
+          param1.writeByte(this.field_r, 0);
+          param1.writeByte(this.field_u, 0);
+          if (param0 > -12) {
+            BuffVendorEvent.releaseStatics(94);
+          }
+          param1.writeByte(!this.field_p ? 0 : 1, 0);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "me.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void d(byte param0) {
+        if (AttackUpAllAnimation.e(-29919)) {
+          return;
+        }
+        if (param0 <= -112) {
+          sja.field_fb.writeCipheredByte(64, (byte) 123);
+          return;
+        }
+        BuffVendorEvent.d((byte) 87);
+        sja.field_fb.writeCipheredByte(64, (byte) 123);
+    }
+
+    BuffVendorEvent(PacketBuffer param0) {
+        super(param0);
+        int var2_int = 0;
+        try {
+          this.moveId = param0.readUnsignedShort((byte) 55);
+          this.effects = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
+          while (true) {
+            var2_int--;
+            if (var2_int < 0) {
+              break;
+            }
+            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+          }
+          this.field_r = param0.readUnsignedByte(16711935);
+          this.field_u = param0.readUnsignedByte(16711935);
+          this.field_p = param0.readUnsignedByte(16711935) == 1 ? true : false;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_s = "This password contains your Player Name, and would be easy to guess";
+        field_q = "Macroing or use of bots";
+    }
+}

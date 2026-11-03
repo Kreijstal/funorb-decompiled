@@ -7,11 +7,11 @@ final class lh extends cia {
     static String field_t;
     private static String field_z;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_s = null;
         if (param0 != -12847) {
-          lh.b(63);
+          lh.releaseStatics(63);
         }
     }
 

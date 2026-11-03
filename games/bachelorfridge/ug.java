@@ -9,7 +9,7 @@ final class ug extends pv {
     static String field_m;
     static int[][] field_l;
     static String field_k;
-    static kv field_o;
+    static Sprite field_o;
 
     final static Object a(boolean param0, byte[] param1, int param2) {
         gla var3 = null;
@@ -52,13 +52,13 @@ final class ug extends pv {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
     private final void b(int param0) {
         if (param0 != 1) {
-          field_o = (kv) null;
+          field_o = (Sprite) null;
         }
     }
 
@@ -106,7 +106,7 @@ final class ug extends pv {
         return false;
     }
 
-    ug(jfa param0, int param1) {
+    ug(FridgeCreature param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -133,11 +133,11 @@ final class ug extends pv {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = (int[][]) null;
         field_m = null;
         if (param0 == 10) {

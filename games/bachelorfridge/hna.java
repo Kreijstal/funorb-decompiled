@@ -5,23 +5,23 @@ import java.io.*;
 
 final class hna extends aba {
     private hb field_j;
-    static ee field_h;
+    static IndexedSprite field_h;
     private String field_g;
     static int field_k;
     private boolean field_i;
 
-    hna(lka param0, lka param1) {
+    hna(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         this.field_g = "";
         this.field_i = false;
         try {
           this.field_j = new hb(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 28) {
           hna.a(-7, 97);
           field_h = null;
@@ -42,8 +42,8 @@ final class hna extends aba {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_j.a(param0, param1) == jt.field_f) {
-            stackIn_3_0 = jt.field_f;
+          if (this.field_j.a(param0, param1) == FoodShopPanel.field_f) {
+            stackIn_3_0 = FoodShopPanel.field_f;
             return stackIn_3_0;
           }
           if (param1) {
@@ -51,7 +51,7 @@ final class hna extends aba {
             this.a((String) null, false);
           }
           if (!param0.equals(this.field_g)) {
-            var3 = cca.b(-26869, param0);
+            var3 = HazmatAnimation.b(-26869, param0);
             if (!var3.a(false)) {
               stackIn_10_0 = ji.field_f;
               return stackIn_10_0;
@@ -60,7 +60,7 @@ final class hna extends aba {
             this.field_i = var3.a(-7750);
           }
           if (!this.field_i) {
-            stackIn_15_0 = jt.field_f;
+            stackIn_15_0 = FoodShopPanel.field_f;
           } else {
             stackIn_15_0 = cm.field_u;
           }
@@ -75,7 +75,7 @@ final class hna extends aba {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -91,15 +91,15 @@ final class hna extends aba {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -92 / ((param0 + 8) / 45);
-          if (this.field_j.a(param1, false) == jt.field_f) {
+          if (this.field_j.a(param1, false) == FoodShopPanel.field_f) {
             stackIn_3_0 = this.field_j.a((byte) 66, param1);
             return stackIn_3_0;
           }
-          if (this.a(param1, false) != jt.field_f) {
+          if (this.a(param1, false) != FoodShopPanel.field_f) {
             stackIn_8_0 = bv.field_j;
             return stackIn_8_0;
           }
-          stackIn_6_0 = ija.field_p;
+          stackIn_6_0 = CranberrySpecial.field_p;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,7 +111,7 @@ final class hna extends aba {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -120,28 +120,28 @@ final class hna extends aba {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (param1 < 61) {
-            field_h = (ee) null;
+            field_h = (IndexedSprite) null;
           }
           if (dma.field_b != null && (param0 < 0 ||
             eia.field_a == uca.field_a)) {
-            if (0 == sja.field_fb.field_g &&
+            if (0 == sja.field_fb.position &&
               f.b((byte) 73) > (vla.field_v + 10000L)) {
-              sja.field_fb.c(param0, (byte) 99);
+              sja.field_fb.writeCipheredByte(param0, (byte) 99);
             }
-            if (sja.field_fb.field_g > 0) {
+            if (sja.field_fb.position > 0) {
               try {
-                dma.field_b.a(0, sja.field_fb.field_h, false, sja.field_fb.field_g);
+                dma.field_b.a(0, sja.field_fb.payload, false, sja.field_fb.position);
                 vla.field_v = f.b((byte) 73);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 vc.a((byte) -118);
               }
-              sja.field_fb.field_g = 0;
+              sja.field_fb.position = 0;
             }
             return;
           }
-          sja.field_fb.field_g = 0;
+          sja.field_fb.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -3,7 +3,7 @@
  */
 final class ama extends k {
     static String field_m;
-    static kv[] field_o;
+    static Sprite[] field_o;
     private vo[] field_n;
     static String field_l;
     static String field_k;
@@ -16,7 +16,7 @@ final class ama extends k {
         int[] var4 = this.field_j.a(param0, -1);
         int[] var3 = var4;
         if (param1 != 0) {
-          ama.e((byte) 27);
+          ama.releaseStatics((byte) 27);
         }
         if (this.field_j.field_m) {
           this.a((byte) 126, this.field_j.a(false));
@@ -65,7 +65,7 @@ final class ama extends k {
         return var3;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         boolean stackIn_21_1 = false;
         RuntimeException stackIn_27_0 = null;
@@ -79,9 +79,9 @@ final class ama extends k {
         var7 = BachelorFridge.field_y;
         try {
           if (param2 == 0) {
-            this.field_n = new vo[param1.b(param0 + 16712006)];
+            this.field_n = new vo[param1.readUnsignedByte(param0 + 16712006)];
             for (var4_int = 0; var4_int < this.field_n.length; var4_int++) {
-              var5 = param1.b(16711935);
+              var5 = param1.readUnsignedByte(16711935);
               var6 = var5;
               if (0 != var6) {
                 if (var6 != 1) {
@@ -93,7 +93,7 @@ final class ama extends k {
                     }
                   }
                 } else {
-                  this.field_n[var4_int] = (vo) ((Object) ch.a(false, param1));
+                  this.field_n[var4_int] = (vo) ((Object) BagpipeSpecial.a(false, param1));
                 }
               } else {
                 this.field_n[var4_int] = (vo) ((Object) pka.a(param1, false));
@@ -101,7 +101,7 @@ final class ama extends k {
             }
           } else {
             if (1 == param2) {
-              stackIn_21_1 = (param1.b(16711935) == 1);
+              stackIn_21_1 = (param1.readUnsignedByte(16711935) == 1);
               this.field_f = stackIn_21_1;
             }
           }
@@ -119,11 +119,11 @@ final class ama extends k {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_l = null;
         if (param0 > -107) {
@@ -150,7 +150,7 @@ final class ama extends k {
         try {
           var3_int = hh.field_d;
           var4 = bi.field_g;
-          tma.a(param1, -5);
+          SplitAnimation.a(param1, -5);
           bm.a(it.field_r, 0, wp.field_r, -14702, 0);
           if (this.field_n != null) {
             for (var5 = 0; var5 < this.field_n.length; var5++) {
@@ -184,7 +184,7 @@ final class ama extends k {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

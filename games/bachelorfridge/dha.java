@@ -27,7 +27,7 @@ final class dha {
           var7 = new hh(param2);
           var8 = new hh(param4);
           if (param1 == 53) {
-            stackIn_4_0 = iv.a(-15, param5, param0, var7, param6, param3, var8);
+            stackIn_4_0 = DamageEffect.a(-15, param5, param0, var7, param6, param3, var8);
             return stackIn_4_0;
           }
           stackIn_2_0 = -12;
@@ -54,15 +54,15 @@ final class dha {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    final static boolean a(int param0, bca param1, gj param2) {
-        aga var3 = null;
+    final static boolean a(int param0, SpecialEvent param1, BattleScreen param2) {
+        BattleCreature var3 = null;
         RuntimeException var3_ref = null;
-        pp var4 = null;
-        ad var5 = null;
+        EventEffect var4 = null;
+        CreatureActor var5 = null;
         int var6 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -72,20 +72,20 @@ final class dha {
         RuntimeException decompiledCaughtException = null;
         var6 = BachelorFridge.field_y;
         try {
-          var3 = param1.field_l.a(60, param2.field_h);
-          if (var3.i(-69)) {
+          var3 = param1.creature.a(60, param2.field_h);
+          if (var3.isDown(-69)) {
             return false;
           }
-          param1.field_l.a(-27449, param2);
+          param1.creature.a(-27449, param2);
           if (param0 > -87) {
             return true;
           }
-          var4 = (pp) (param1.field_o.b((byte) 90));
+          var4 = (EventEffect) (param1.effects.b((byte) 90));
           while (var4 != null) {
-            var5 = var4.field_h.a(-27449, param2);
+            var5 = var4.target.a(-27449, param2);
             var5.b(-1, 6);
-            var4.a(var3, param2.field_h, 12);
-            var4 = (pp) (param1.field_o.c(0));
+            var4.apply(var3, param2.field_h, 12);
+            var4 = (EventEffect) (param1.effects.c(0));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -104,17 +104,17 @@ final class dha {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     final static int a(byte param0, int param1) {
         int var3 = 51 % ((param0 + 73) / 34);
-        String var2 = lka.field_E[param1][16];
+        String var2 = TextInputWidget.field_E[param1][16];
         var2 = var2.trim();
         var2 = var2.toLowerCase();
         if (!var2.equals("")) {
-          return ((ji) (cma.field_x.a(true, (long)var2.hashCode()))).field_h;
+          return ((ji) (InsanoSauceAnimation.field_x.a(true, (long)var2.hashCode()))).field_h;
         }
         return -1;
     }
@@ -127,7 +127,7 @@ final class dha {
         }
     }
 
-    final static void a(eaa param0, int param1, Random param2, int param3) {
+    final static void a(IntrusiveDeque param0, int param1, Random param2, int param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -147,10 +147,10 @@ final class dha {
             fieldTemp$0 = var5.field_n + var5.field_h;
             var5.field_n = var5.field_n + var5.field_h;
             if (0 > fieldTemp$0) {
-              var5.a(false);
+              var5.unlink(false);
             } else {
               var5.field_l = var5.field_l + var5.field_o;
-              kla.a(50, param2, -2147483648);
+              DiveBomberAnimation.a(50, param2, -2147483648);
             }
             var5 = (rea) (param0.c(0));
           }
@@ -171,7 +171,7 @@ final class dha {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 

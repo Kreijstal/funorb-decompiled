@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tga extends jm {
+class tga extends BoardChange {
     int field_o;
-    static sna field_p;
+    static UiComponent field_p;
     int field_n;
-    static sna field_m;
+    static UiComponent field_m;
 
-    final void b(lu param0, byte param1) {
+    final void b(PacketBuffer param0, byte param1) {
         try {
-          param0.d(this.field_n, 0);
+          param0.writeByte(this.field_n, 0);
           int var3_int = -77 % ((param1 - 37) / 38);
-          param0.d(this.field_o, 0);
+          param0.writeByte(this.field_o, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(ub param0, int param1) {
-        gj var3 = param0.field_o;
-        param0.a(27799, new fha(new uea(var3, this.field_n, this.field_o, 16777215)));
+    void a(BoardChangeAnimation param0, int param1) {
+        BattleScreen var3 = param0.field_o;
+        param0.addChild(27799, new TileEffectAnimation(new uea(var3, this.field_n, this.field_o, 16777215)));
         if (param1 >= -2) {
           return;
         }
@@ -27,30 +27,30 @@ class tga extends jm {
           this.a(false, var3.field_h);
           var3.field_s.d(73);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(boolean param0, op param1) {
+    void a(boolean param0, BattleState param1) {
         int var3_int = 0;
         try {
           if (param0) {
-            tga.a(-106);
+            tga.releaseStatics(-106);
           }
-          var3_int = param1.field_L.field_o[this.field_n][this.field_o].field_n;
+          var3_int = param1.field_L.field_o[this.field_n][this.field_o].terrain;
           if (param1.field_L.field_o[this.field_n][this.field_o].field_a != -1 &&
             param1.field_L.field_o[this.field_n][this.field_o].field_a < 9) {
             var3_int = param1.field_L.field_o[this.field_n][this.field_o].field_a + 6;
           }
-          param1.b((byte) 76, var3_int, this.field_n, this.field_o);
+          param1.setTerrain((byte) 76, var3_int, this.field_n, this.field_o);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tga.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tga.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -63) {
-          tga.a(110);
+          tga.releaseStatics(110);
           field_m = null;
           field_p = null;
           return;
@@ -65,13 +65,13 @@ class tga extends jm {
         this.field_j = 2;
     }
 
-    tga(lu param0) {
+    tga(PacketBuffer param0) {
         try {
           this.field_j = 2;
-          this.field_n = param0.b(16711935);
-          this.field_o = param0.b(16711935);
+          this.field_n = param0.readUnsignedByte(16711935);
+          this.field_o = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

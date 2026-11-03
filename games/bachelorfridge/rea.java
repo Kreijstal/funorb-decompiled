@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rea extends IntrusiveNode {
-    static sna field_g;
+    static UiComponent field_g;
     double field_o;
     double field_m;
     int field_n;
@@ -10,7 +10,7 @@ final class rea extends IntrusiveNode {
     double field_l;
     int field_i;
     static String field_f;
-    static kv field_k;
+    static Sprite field_k;
     int field_h;
 
     public static void c(byte param0) {
@@ -20,13 +20,13 @@ final class rea extends IntrusiveNode {
           field_f = null;
           return;
         }
-        eaa var2 = (eaa) null;
-        rea.a((eaa) null, -84, 24, (byte) -29, -110, -31);
+        IntrusiveDeque var2 = (IntrusiveDeque) null;
+        rea.a((IntrusiveDeque) null, -84, 24, (byte) -29, -110, -31);
         field_k = null;
         field_f = null;
     }
 
-    final static void a(eaa param0, int param1, int param2, byte param3, int param4, int param5) {
+    final static void a(IntrusiveDeque param0, int param1, int param2, byte param3, int param4, int param5) {
         int var6_int = 0;
         rea var7 = null;
         int var8 = 0;
@@ -59,7 +59,7 @@ final class rea extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

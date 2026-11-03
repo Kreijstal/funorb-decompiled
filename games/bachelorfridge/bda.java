@@ -4,7 +4,7 @@
 final class bda extends lw {
     static String field_o;
     static String[] field_n;
-    static sna[] field_m;
+    static UiComponent[] field_m;
     static String field_p;
     static int field_l;
 
@@ -32,7 +32,7 @@ final class bda extends lw {
           } else {
             if (param0 == 18 &&
               this.field_e >= 1) {
-              fla.b(param1 + 23548);
+              ShieldSpecial.b(param1 + 23548);
             }
           }
         } else {
@@ -41,11 +41,11 @@ final class bda extends lw {
             this.c(101);
           }
           if (this.field_e == 1) {
-            wf.field_x = true;
+            MartyrAnimation.field_x = true;
           }
           if (um.a(true) &&
             this.c((byte) 95)) {
-            fla.b(23621);
+            ShieldSpecial.b(23621);
           }
         }
         if (param1 == 73) {
@@ -71,7 +71,7 @@ final class bda extends lw {
     }
 
     bda() {
-        super(true, new String[]{ek.field_k, el.field_g}, au.field_a);
+        super(true, new String[]{DamagePopupAnimation.field_k, el.field_g}, au.field_a);
         this.field_c = new int[][]{new int[]{180, 160}, new int[]{180, 390}};
     }
 

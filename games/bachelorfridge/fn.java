@@ -8,9 +8,9 @@ final class fn extends k {
     private int field_q;
     static cf field_m;
     static int[] field_k;
-    static pia field_n;
+    static PalettedBitmapFont field_n;
 
-    final static void a(byte param0, int param1, java.math.BigInteger param2, java.math.BigInteger param3, lu param4, byte[] param5, int param6) {
+    final static void a(byte param0, int param1, java.math.BigInteger param2, java.math.BigInteger param3, PacketBuffer param4, byte[] param5, int param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -42,33 +42,33 @@ final class fn extends k {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = fj.field_i.nextInt();
           }
-          if (null == rl.field_p ||
-            !(var7_int <= rl.field_p.field_h.length)) {
-            rl.field_p = new lu(var7_int);
+          if (null == BuffVendorSpecial.field_p ||
+            !(var7_int <= BuffVendorSpecial.field_p.payload.length)) {
+            BuffVendorSpecial.field_p = new PacketBuffer(var7_int);
           }
-          rl.field_p.field_g = 0;
+          BuffVendorSpecial.field_p.position = 0;
           if (param0 != -68) {
             field_k = (int[]) null;
           }
-          rl.field_p.a(param1, -108, param6, param5);
-          rl.field_p.a(var7_int, false);
-          rl.field_p.a(var13, 0);
+          BuffVendorSpecial.field_p.a(param1, -108, param6, param5);
+          BuffVendorSpecial.field_p.a(var7_int, false);
+          BuffVendorSpecial.field_p.encryptXtea(var13, 0);
           if (null == gu.field_a ||
-            !(gu.field_a.field_h.length >= 100)) {
-            gu.field_a = new lu(100);
+            !(gu.field_a.payload.length >= 100)) {
+            gu.field_a = new PacketBuffer(100);
           }
-          gu.field_a.field_g = 0;
-          gu.field_a.d(10, param0 + 68);
+          gu.field_a.position = 0;
+          gu.field_a.writeByte(10, param0 + 68);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            gu.field_a.e(var13[var11], -1615464796);
+            gu.field_a.writeInt(var13[var11], -1615464796);
             var11++;
           }
           gu.field_a.b(param6, param0 ^ 53);
-          gu.field_a.a(param3, 0, param2);
-          param4.a(0, -82, gu.field_a.field_g, gu.field_a.field_h);
-          param4.a(0, param0 ^ 35, rl.field_p.field_g, rl.field_p.field_h);
+          gu.field_a.encryptRsa(param3, 0, param2);
+          param4.a(0, -82, gu.field_a.position, gu.field_a.payload);
+          param4.a(0, param0 ^ 35, BuffVendorSpecial.field_p.position, BuffVendorSpecial.field_p.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,11 +98,11 @@ final class fn extends k {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -114,14 +114,14 @@ final class fn extends k {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_l = param1.e((byte) 87);
+            this.field_l = param1.readUnsignedShort((byte) 87);
           } else {
             if (1 != var4_int) {
               if (var4_int == 2) {
-                this.field_o = param1.e((byte) 117);
+                this.field_o = param1.readUnsignedShort((byte) 117);
               }
             } else {
-              this.field_q = param1.e((byte) 81);
+              this.field_q = param1.readUnsignedShort((byte) 81);
             }
           }
           if (param0 != -71) {
@@ -138,21 +138,21 @@ final class fn extends k {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void f(byte param0) {
         if (param0 < 75) {
-          kv var2 = (kv) null;
-          fn.a(-79, (byte) 41, 48, -26, -58, (kv) null);
+          Sprite var2 = (Sprite) null;
+          fn.a(-79, (byte) 41, 48, -26, -58, (Sprite) null);
         }
         field_k = null;
         field_n = null;
         field_m = null;
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, kv param5) {
+    final static void a(int param0, byte param1, int param2, int param3, int param4, Sprite param5) {
         int var7 = 0;
         int var8 = 0;
         int var6_int = 0;
@@ -172,7 +172,7 @@ final class fn extends k {
           for (var7 = 0; var7 < param5.field_p; var7++) {
             for (var8 = 0; var8 < param2; var8++) {
               if (param5.field_v[var6_int] > 0) {
-                tla.a(param3 + var8, param1 - 1898743715, param0, param4 + var7, 255 & param5.field_v[var6_int]);
+                AirstrikeEvent.a(param3 + var8, param1 - 1898743715, param0, param4 + var7, 255 & param5.field_v[var6_int]);
               }
               var6_int++;
             }
@@ -189,7 +189,7 @@ final class fn extends k {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -275,8 +275,8 @@ final class fn extends k {
 
     final void d(byte param0) {
         if (param0 != -68) {
-          kv var3 = (kv) null;
-          fn.a(90, (byte) 41, -54, -20, 63, (kv) null);
+          Sprite var3 = (Sprite) null;
+          fn.a(90, (byte) 41, -54, -20, 63, (Sprite) null);
         }
         this.e((byte) -97);
     }

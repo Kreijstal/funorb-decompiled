@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ok extends sna {
-    sna field_wb;
+final class ok extends UiComponent {
+    UiComponent field_wb;
     static String field_Cb;
     static int field_vb;
     static byte[][] field_zb;
-    sna field_yb;
+    UiComponent field_yb;
     static int field_Bb;
     sga field_xb;
-    sna field_Ab;
+    UiComponent field_Ab;
 
     final static boolean a(CharSequence param0, char param1, byte param2) {
         int var3_int = 0;
@@ -19,7 +19,7 @@ final class ok extends sna {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!io.a(true, param1)) {
+          if (!RaiseSpecial.a(true, param1)) {
             return false;
           }
           if (param0 == null) {
@@ -32,7 +32,7 @@ final class ok extends sna {
           if (12 <= var3_int) {
             return false;
           }
-          if (!mp.a(true, param1)) {
+          if (!MassPoisonSpecial.a(true, param1)) {
             return true;
           }
           if (var3_int != 0) {
@@ -49,13 +49,13 @@ final class ok extends sna {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static sna f(byte param0) {
+    final static UiComponent f(byte param0) {
         if (param0 != -15) {
-          return (sna) null;
+          return (UiComponent) null;
         }
         return p.field_n.field_vb;
     }
@@ -64,25 +64,25 @@ final class ok extends sna {
         this(param0, param1, param1.field_xb.field_wb, param1.field_xb.field_xb, param1.field_Ab, param2, param3);
     }
 
-    ok(long param0, sna param1, sna param2, cw param3, sna param4, String param5, String param6) {
+    ok(long param0, UiComponent param1, UiComponent param2, cw param3, UiComponent param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_wb = new sna(0L, (sna) null);
+          this.field_wb = new UiComponent(0L, (UiComponent) null);
           this.field_xb = new sga(0L, this.field_wb, param2, param3);
-          this.field_Ab = new sna(0L, param4);
-          this.field_yb = new sna(0L, param4);
+          this.field_Ab = new UiComponent(0L, param4);
+          this.field_yb = new UiComponent(0L, param4);
           this.field_Ab.field_Z = param5;
           this.field_yb.field_Z = param6;
           this.a(-1, this.field_xb);
           this.a(-1, this.field_Ab);
           this.a(-1, this.field_yb);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ok.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ok.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int c(int param0, int param1) {
-        be var2 = mg.a((byte) -126, param0);
+        PcmSample var2 = mg.a((byte) -126, param0);
         if (var2 == null) {
           return 0;
         }
@@ -113,7 +113,7 @@ final class ok extends sna {
         this.field_yb.field_sb = -var5 + this.field_sb;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_Cb = null;
         if (param0 != 7576) {
           ok.c(53, 83);
@@ -128,67 +128,67 @@ final class ok extends sna {
           return;
         }
         if (DualLinkNode.field_l > param4) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (pw.field_x < param4) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+        if (SnowAnimation.field_x < param4) {
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param5 < DualLinkNode.field_l) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (param5 > pw.field_x) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+        if (param5 > SnowAnimation.field_x) {
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param6 < DualLinkNode.field_l) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (pw.field_x < param6) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+        if (SnowAnimation.field_x < param6) {
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param8 < DualLinkNode.field_l) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (pw.field_x < param8) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+        if (SnowAnimation.field_x < param8) {
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (an.field_q > param0) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param0 > ha.field_n) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (an.field_q > param3) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (ha.field_n < param3) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param7 < an.field_q) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param7 > ha.field_n) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (an.field_q > param2) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (ha.field_n < param2) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         oda.a(param2, param5, param7, param0, 123, param4, param6, param3, param9, param8);

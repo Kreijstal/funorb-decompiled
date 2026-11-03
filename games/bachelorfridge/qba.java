@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qba extends pu {
-    static sna field_l;
+    static UiComponent field_l;
     static sga field_m;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_l = null;
         if (param0 != 2753) {
-          qba.b(-102);
+          qba.releaseStatics(-102);
         }
     }
 
@@ -22,7 +22,7 @@ final class qba extends pu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 17602) {
-            field_l = (sna) null;
+            field_l = (UiComponent) null;
           }
           stackIn_3_0 = ft.field_h.a((byte) 123, param1, "");
           return stackIn_3_0;
@@ -36,7 +36,7 @@ final class qba extends pu {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

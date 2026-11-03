@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class rr extends at {
+final class rr extends AnimationNode {
     private int field_s;
-    private fd field_o;
+    private AirstrikeAnimation field_o;
     private int field_u;
     private int field_k;
     private cq field_l;
@@ -13,7 +13,7 @@ final class rr extends at {
     private int field_n;
     int field_w;
     static String field_r;
-    private gj field_j;
+    private BattleScreen field_j;
     private int field_p;
     private int field_t;
     static String field_x;
@@ -61,7 +61,7 @@ final class rr extends at {
 
     private final void e(int param0) {
         if (this.field_l != null) {
-          id.a(97, this.field_l);
+          PizzaArenaTheme.a(97, this.field_l);
           if (param0 >= -54) {
             this.field_m = true;
             return;
@@ -74,7 +74,7 @@ final class rr extends at {
         this.field_m = true;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -13421) {
           field_r = (String) null;
           field_x = null;
@@ -91,7 +91,7 @@ final class rr extends at {
         this.field_j.field_s.c(107, 240 - var3, param0 - var2);
     }
 
-    final static void a(int param0, eaa param1, int param2, Random param3) {
+    final static void a(int param0, IntrusiveDeque param1, int param2, Random param3) {
         lh var4 = null;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -106,16 +106,16 @@ final class rr extends at {
           var4 = (lh) (param1.b((byte) 90));
           while (var4 != null) {
             if (var4.b(true)) {
-              kla.a(50, param3, -2147483648);
-              var4.field_p = (int)((double)(128 + kla.a(80000, param3, -2147483648)) * Math.sin(var4.field_r));
-              var4.field_g = (int)((double)(kla.a(40000, param3, -2147483648) + 128) * Math.cos(var4.field_r));
+              DiveBomberAnimation.a(50, param3, -2147483648);
+              var4.field_p = (int)((double)(128 + DiveBomberAnimation.a(80000, param3, -2147483648)) * Math.sin(var4.field_r));
+              var4.field_g = (int)((double)(DiveBomberAnimation.a(40000, param3, -2147483648) + 128) * Math.cos(var4.field_r));
             }
             var4 = (lh) (param1.c(0));
           }
           if (param0 >= 120) {
             return;
           }
-          rr.f(63);
+          rr.releaseStatics(63);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,21 +133,21 @@ final class rr extends at {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final taa e(byte param0) {
+    final ActorAnimation e(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        taa var4 = null;
-        taa var4Lifetime1;
+        ActorAnimation var4 = null;
+        ActorAnimation var4Lifetime1;
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 == -120) {
           var2 = this.field_p - this.field_t * this.field_q;
           var3 = -(this.field_t * this.field_k) + this.field_u;
-          var4 = new taa(this.field_j, 0, 0);
+          var4 = new ActorAnimation(this.field_j, 0, 0);
           var4.field_k = 320 - var2;
           var4.field_j = 240 - var3;
           return var4;
@@ -155,17 +155,17 @@ final class rr extends at {
         this.field_w = 21;
         var2Lifetime1 = this.field_p - this.field_t * this.field_q;
         var3Lifetime1 = -(this.field_t * this.field_k) + this.field_u;
-        var4Lifetime1 = new taa(this.field_j, 0, 0);
+        var4Lifetime1 = new ActorAnimation(this.field_j, 0, 0);
         var4Lifetime1.field_k = 320 - var2Lifetime1;
         var4Lifetime1.field_j = 240 - var3Lifetime1;
         return var4Lifetime1;
     }
 
-    final boolean c(byte param0) {
-        je var3 = null;
+    final boolean isFinished(byte param0) {
+        PcmSampleStream var3 = null;
         int var2 = -62 / ((param0 - 71) / 47);
         if (this.field_w == -this.field_t) {
-          var3 = je.a(rt.field_a[20], 256, 128);
+          var3 = PcmSampleStream.createWithVolume(rt.field_a[20], 256, 128);
           var3.d(-1);
           this.field_l = tw.a(var3, (byte) -36);
         }
@@ -187,15 +187,15 @@ final class rr extends at {
 
     private final void d(byte param0) {
         oia var2 = null;
-        this.field_o.a(this.field_v, this.field_n, this.field_o.field_B.field_l.a(-27449, this.field_j), 0);
+        this.field_o.a(this.field_v, this.field_n, this.field_o.field_B.creature.a(-27449, this.field_j), 0);
         if (param0 > 87) {
           var2 = new oia(this.field_j, this.field_v, this.field_n);
-          ((kj) ((Object) var2)).a(0);
+          ((TileEffect) ((Object) var2)).a(0);
           return;
         }
     }
 
-    rr(gj param0, fd param1, int param2, int param3, boolean param4) {
+    rr(BattleScreen param0, AirstrikeAnimation param1, int param2, int param3, boolean param4) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -218,11 +218,11 @@ final class rr extends at {
           this.field_m = stackIn_4_1;
           this.field_q = this.field_k << 1;
           if (!this.field_m) {
-            this.field_s = ((this.field_j.field_h.field_z - this.field_v) * 64 + 640) / this.field_q;
+            this.field_s = ((this.field_j.field_h.width - this.field_v) * 64 + 640) / this.field_q;
             this.field_t = (10 + this.field_v) * 64 / this.field_q;
           } else {
             this.field_t = 64 * (10 + this.field_n) / this.field_q;
-            this.field_s = (640 + (-this.field_n + this.field_j.field_h.field_B) * 64) / this.field_q;
+            this.field_s = (640 + (-this.field_n + this.field_j.field_h.height) * 64) / this.field_q;
           }
           if (this.field_m) {
             this.field_q = -this.field_q;
@@ -245,7 +245,7 @@ final class rr extends at {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

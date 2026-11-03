@@ -3,12 +3,12 @@
  */
 final class bha extends pu {
     static boolean field_n;
-    static kv[] field_m;
+    static Sprite[] field_m;
     static boolean field_l;
     static int field_o;
     private static String field_z;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         int var1 = 95 / ((-7 - param0) / 43);
     }

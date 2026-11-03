@@ -8,7 +8,7 @@ final class md extends pu {
     static String[] field_p;
     static int field_l;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_m = null;
         field_n = null;

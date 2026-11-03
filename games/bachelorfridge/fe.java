@@ -7,7 +7,7 @@ final class fe extends vo {
     private int field_m;
     private int field_l;
     private int field_i;
-    static kv field_j;
+    static Sprite field_j;
     static int field_k;
 
     final void a(byte param0, int param1, int param2) {
@@ -24,7 +24,7 @@ final class fe extends vo {
           var5 = param2 * this.field_l >> 12;
           var6 = this.field_i * param1 >> 12;
           var7 = param1 * this.field_m >> 12;
-          rv.a(this.field_e, this.field_f, var7, -120, var5, var6, this.field_a, var4);
+          EffectBatch.a(this.field_e, this.field_f, var7, -120, var5, var6, this.field_a, var4);
           return;
         }
         this.a((byte) -76, -16, 37);
@@ -32,7 +32,7 @@ final class fe extends vo {
         var5Lifetime1 = param2 * this.field_l >> 12;
         var6Lifetime1 = this.field_i * param1 >> 12;
         var7Lifetime1 = param1 * this.field_m >> 12;
-        rv.a(this.field_e, this.field_f, var7Lifetime1, -120, var5Lifetime1, var6Lifetime1, this.field_a, var4Lifetime1);
+        EffectBatch.a(this.field_e, this.field_f, var7Lifetime1, -120, var5Lifetime1, var6Lifetime1, this.field_a, var4Lifetime1);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -41,10 +41,10 @@ final class fe extends vo {
         int var6 = this.field_i * param2 >> 12;
         int var7 = -30 % ((param1 - 14) / 62);
         int var8 = this.field_m * param2 >> 12;
-        fc.a(var8, var5, (byte) 92, var6, var4, this.field_a);
+        OhNoSpecial.a(var8, var5, (byte) 92, var6, var4, this.field_a);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         int var1 = -49 / ((param0 + 57) / 54);
     }

@@ -6,7 +6,7 @@ final class et extends k {
     private int field_o;
     static int field_l;
     private int field_k;
-    static kv field_p;
+    static Sprite field_p;
     private int field_n;
 
     final void d(byte param0) {
@@ -16,10 +16,10 @@ final class et extends k {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         if (param0 >= -40) {
-          et.d(-100);
+          et.releaseStatics(-100);
         }
         field_m = null;
     }
@@ -61,7 +61,7 @@ final class et extends k {
             regionExit1: {
               var7 = var7 - (var7 & -4096);
               if (this.field_o == 0) {
-                var7 = 4096 + baa.field_z[var7 >> 4 & 255] >> 1;
+                var7 = 4096 + BananarangAnimation.field_z[var7 >> 4 & 255] >> 1;
               } else {
                 if (this.field_o != 2) {
                   var14[var6] = var7;
@@ -80,7 +80,7 @@ final class et extends k {
         return var12;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -95,14 +95,14 @@ final class et extends k {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_k = param1.b(16711935);
+            this.field_k = param1.readUnsignedByte(16711935);
           } else {
             if (var4_int != 1) {
               if (var4_int == 3) {
-                this.field_n = param1.b(16711935);
+                this.field_n = param1.readUnsignedByte(16711935);
               }
             } else {
-              this.field_o = param1.b(16711935);
+              this.field_o = param1.readUnsignedByte(16711935);
             }
           }
           return;
@@ -116,7 +116,7 @@ final class et extends k {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 

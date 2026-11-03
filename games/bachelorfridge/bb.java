@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb extends hf {
+final class bb extends InteractiveWidget {
     private int field_E;
     private mb field_G;
     static int field_F;
@@ -15,7 +15,7 @@ final class bb extends hf {
         return this.field_G.a((byte) -127);
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4, wj param5, int param6) {
+    final boolean b(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -34,7 +34,7 @@ final class bb extends hf {
             return false;
           }
           var8_int = -this.field_A + param0 - param2;
-          var9 = -(2 * this.field_A) + this.field_p;
+          var9 = -(2 * this.field_A) + this.width;
           if (var9 < var8_int) {
             var8_int = var9;
           }
@@ -73,7 +73,7 @@ final class bb extends hf {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param6).append(')').toString());
         }
     }
 

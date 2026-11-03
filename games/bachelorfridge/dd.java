@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dd extends vd implements lja {
+final class dd extends WidgetContainer implements WidgetActionListener {
     private String[] field_F;
     static String field_G;
     private uja field_D;
-    private hf[] field_E;
+    private InteractiveWidget[] field_E;
     static boolean field_H;
 
     dd(uja param0) {
-        super(0, 0, 0, 0, (qda) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_D = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(int param0, hf param1, int param2, byte param3, int param4) {
+    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -38,7 +38,7 @@ final class dd extends vd implements lja {
           if (param3 > 50) {
             return;
           }
-          this.a((byte) -38, -88, -30, 94);
+          this.draw((byte) -38, -88, -30, 94);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,7 +50,7 @@ final class dd extends vd implements lja {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -73,32 +73,32 @@ final class dd extends vd implements lja {
         RuntimeException var3 = null;
         pka var4 = null;
         int var6 = 0;
-        wj var7 = null;
+        UiWidget var7 = null;
         var6 = BachelorFridge.field_y;
         try {
-          this.field_A.d(67);
+          this.children.d(67);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
             this.field_F = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_F[var4_int] = lu.a((CharSequence) ((Object) param0[var4_int]), 7995).replace(' ', ' ');
+              this.field_F[var4_int] = PacketBuffer.a((CharSequence) ((Object) param0[var4_int]), 7995).replace(' ', ' ');
             }
             var4 = new pka(jca.field_a, 0, 1);
-            this.field_E = new hf[1 + var3_int];
+            this.field_E = new InteractiveWidget[1 + var3_int];
             for (var5 = 0; var3_int > var5; var5++) {
-              this.field_E[var5] = new hf(this.field_F[var5], (pl) (this));
-              this.field_E[var5].field_f = (qda) ((Object) var4);
-              this.field_E[var5].field_h = a.field_p;
+              this.field_E[var5] = new InteractiveWidget(this.field_F[var5], (WidgetListener) (this));
+              this.field_E[var5].renderer = (WidgetRenderer) ((Object) var4);
+              this.field_E[var5].tooltip = a.field_p;
               this.field_E[var5].a(0, 15, (byte) 59, 80, 16 * var5 + 20);
               this.c(this.field_E[var5], -125);
             }
-            this.field_E[var3_int] = new hf(mt.field_t, (pl) (this));
-            this.field_E[var3_int].field_f = (qda) ((Object) var4);
+            this.field_E[var3_int] = new InteractiveWidget(ScavengerSpecial.field_t, (WidgetListener) (this));
+            this.field_E[var3_int].renderer = (WidgetRenderer) ((Object) var4);
             this.field_E[var3_int].a(0, 15, (byte) 59, 100, 20 + var3_int * 16 + 16);
             if (param1 >= -19) {
-              var7 = (wj) null;
-              this.a(28, 90, '￺', (wj) null);
+              var7 = (UiWidget) null;
+              this.handleKey(28, 90, '￺', (UiWidget) null);
             }
             this.c(this.field_E[var3_int], 112);
             return;
@@ -115,7 +115,7 @@ final class dd extends vd implements lja {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -126,20 +126,20 @@ final class dd extends vd implements lja {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a((byte) 108, param1, param2, param3);
+    final void draw(byte param0, int param1, int param2, int param3) {
+        super.draw((byte) 108, param1, param2, param3);
         if (param2 != 0) {
           return;
         }
         int var6 = -102 / ((-20 - param0) / 54);
-        po var5 = jca.field_a;
+        BitmapFont var5 = jca.field_a;
         if (this.field_F == null) {
           return;
         }
-        var5.a(oja.field_b, this.field_s + param3, this.field_v + param1, this.field_p, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_B);
+        var5.drawParagraph(oja.field_b, this.x + param3, this.y + param1, this.width, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_B);
     }
 
-    final boolean a(int param0, int param1, char param2, wj param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_11_0 = false;
@@ -148,7 +148,7 @@ final class dd extends vd implements lja {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0 ^ 0, param1, param2, param3)) {
+          if (super.handleKey(param0 ^ 0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -156,7 +156,7 @@ final class dd extends vd implements lja {
             return stackIn_6_0;
           }
           if (param0 != 10) {
-            this.a((byte) 70, -46, 111, 92);
+            this.draw((byte) 70, -46, 111, 92);
           }
           if (param1 != 99) {
             return false;
@@ -173,7 +173,7 @@ final class dd extends vd implements lja {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

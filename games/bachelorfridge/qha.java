@@ -11,7 +11,7 @@ final class qha {
     private int field_a;
     static String field_h;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 123) {
           return;
         }
@@ -45,23 +45,23 @@ final class qha {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(int param0, vr param1) {
         try {
-          wha.field_a = param1;
-          vj.field_p = wfa.a("logo", param1, "minimal", (byte) -86);
+          IterableNodeHashTable.field_a = param1;
+          vj.field_p = FullHealEvent.a("logo", param1, "minimal", (byte) -86);
           if (param0 < 114) {
             vr var3 = (vr) null;
             qha.a(-41, (vr) null);
           }
-          em.field_S = wfa.a("loading", param1, "minimal", (byte) -74);
-          ml.field_a = ch.a(param1, -1, "minimal", "fridgedoor2d");
-          ada.field_p = ch.a(param1, -1, "minimal", "fridge_left");
+          em.field_S = FullHealEvent.a("loading", param1, "minimal", (byte) -74);
+          ml.field_a = BagpipeSpecial.a(param1, -1, "minimal", "fridgedoor2d");
+          ada.field_p = BagpipeSpecial.a(param1, -1, "minimal", "fridge_left");
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

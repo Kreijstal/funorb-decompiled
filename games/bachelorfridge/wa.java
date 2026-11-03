@@ -5,7 +5,7 @@ final class wa extends lw {
     static String field_o;
     static String field_l;
     static int[] field_m;
-    static ee field_n;
+    static IndexedSprite field_n;
 
     public static void d(byte param0) {
         field_l = null;
@@ -17,12 +17,12 @@ final class wa extends lw {
         }
     }
 
-    final static sba a(int param0, byte[] param1) {
-        sba var2 = null;
+    final static AntialiasedBitmapFont a(int param0, byte[] param1) {
+        AntialiasedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
         Object stackIn_4_0 = null;
-        sba stackIn_6_0 = null;
+        AntialiasedBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -34,10 +34,10 @@ final class wa extends lw {
           }
           if (param1 == null) {
             stackIn_4_0 = null;
-            return (sba) (stackIn_4_0);
+            return (AntialiasedBitmapFont) (stackIn_4_0);
           }
-          var2 = new sba(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
-          al.b(-18073);
+          var2 = new AntialiasedBitmapFont(param1, fl.field_j, AirstrikeAnimation.field_D, lq.field_A, InsanoSauceSpecial.field_s, hk.field_f, BananarangAnimation.field_P);
+          al.releaseStatics(-18073);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -50,7 +50,7 @@ final class wa extends lw {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ final class wa extends lw {
         this.b(1);
         if (this.c((byte) 95)) {
           this.b((byte) 112);
-          fla.b(23621);
+          ShieldSpecial.b(23621);
           return;
         }
         if (param1 != 73) {
@@ -90,25 +90,25 @@ final class wa extends lw {
           if (param0 > -85) {
             wa.d((byte) -63);
           }
-          if (qg.field_b.field_z != null) {
-            var1 = (kr) (qg.field_b.field_z.b((byte) 90));
+          if (qg.field_b.children != null) {
+            var1 = (kr) (qg.field_b.children.b((byte) 90));
             while (var1 != null) {
               if (var1.field_R == 1) {
-                qm.a(7, 7758);
+                RasterBuffer.a(7, 7758);
                 var1.field_yb.c((byte) -80);
                 if (var1.field_yb.field_g == 0) {
-                  var1.field_yb.a(false);
-                  var1.a(false);
+                  var1.field_yb.unlink(false);
+                  var1.unlink(false);
                 }
                 gu.field_d = gu.field_d - 1;
               }
-              var1 = (kr) (qg.field_b.field_z.c(0));
+              var1 = (kr) (qg.field_b.children.c(0));
             }
           }
-          qf.e(20434);
-          iaa.a(-119);
+          MoveEventAnimation.e(20434);
+          MeshObject.a(-119);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wa.F(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wa.F(" + param0 + ')');
         }
     }
 

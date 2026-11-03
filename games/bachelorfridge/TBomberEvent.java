@@ -1,0 +1,182 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TBomberEvent extends SpecialEvent {
+    static vr field_s;
+    static int field_r;
+    int field_t;
+    int field_q;
+
+    final static void a(int param0, PalettedBitmapFont param1) {
+        int var2_int = 0;
+        int var3 = 0;
+        try {
+          lo.field_b = param1;
+          if (param0 != 3) {
+            TBomberEvent.d(-39);
+          }
+          var2_int = 1000;
+          var3 = 6 + (lo.field_b.field_B + lo.field_b.field_F);
+          if (1 == (var3 & 1)) {
+            var3++;
+          }
+          MouseWheelInput.field_a = new Sprite(var2_int, var3);
+          ap.field_c = new Sprite(var2_int, var3);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void d(int param0) {
+        field_s = null;
+        if (param0 != 2) {
+          PalettedBitmapFont var2 = (PalettedBitmapFont) null;
+          TBomberEvent.a(109, (PalettedBitmapFont) null);
+        }
+    }
+
+    TBomberEvent(int param0, CreatureRef param1) {
+        super(param0, param1);
+    }
+
+    final void a(BattleState param0, int param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        boolean stackIn_3_1 = false;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          this.creature.a(78, param0);
+          stackIn_3_1 = !(param0.isTileFree(this.field_q, this.field_t, -11066));
+          this.field_p = stackIn_3_1;
+          var3_int = -82 % ((param1 - 12) / 35);
+          if (this.field_p) {
+            return;
+          }
+          param0.setTerrain((byte) 103, 35, this.field_q, this.field_t);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("la.E(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static void a(boolean param0, int param1) {
+        int var2;
+        int var3;
+        var3 = BachelorFridge.field_y;
+        if (ProxySocketConnector.field_f <= 0) {
+          if (AttackUpAllAnimation.e(param1 ^ -29917)) {
+            var2 = 0;
+            if (qt.field_l == null &&
+              ai.field_e) {
+              tfa.a(var2, param1 ^ 3, param0);
+            }
+            if (param1 == 2) {
+              return;
+            }
+            field_r = -88;
+            return;
+          }
+          var2 = 1;
+        } else {
+          if (null == qt.field_l) {
+            kga.field_c = GameKeyHandler.a(true, 640, 0, 480, DiveBomberEvent.field_r, 0);
+          } else {
+            kga.field_c = qt.field_l.c((byte) -91);
+            fga.a(2, (byte) -2);
+          }
+          if (kga.field_c == null) {
+            var2 = 3;
+          } else {
+            nl.a(kga.field_c, (byte) 92);
+            var2 = 2;
+          }
+        }
+        if (qt.field_l == null &&
+          ai.field_e) {
+          tfa.a(var2, param1 ^ 3, param0);
+        }
+        if (param1 == 2) {
+          return;
+        }
+        field_r = -88;
+    }
+
+    final void a(byte param0, PacketBuffer param1) {
+        try {
+          super.a((byte) -48, param1);
+          param1.writeByte(this.field_q, 0);
+          if (param0 >= -12) {
+            this.field_t = -45;
+          }
+          param1.writeByte(this.field_t, 0);
+          param1.writeByte(this.field_p ? 1 : 0, 0);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "la.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
+        RuntimeException var3 = null;
+        TBomberAnimation stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 5) {
+            field_s = (vr) null;
+          }
+          stackIn_3_0 = new TBomberAnimation(param1, this, this.field_p);
+          return (AnimationNode) ((Object) stackIn_3_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("la.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    TBomberEvent(PacketBuffer param0) {
+        super(param0);
+        int var2_int = 0;
+        try {
+          this.moveId = param0.readUnsignedShort((byte) 100);
+          this.effects = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
+          while (true) {
+            var2_int--;
+            if (var2_int < 0) {
+              break;
+            }
+            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+          }
+          this.field_q = param0.readUnsignedByte(16711935);
+          this.field_t = param0.readUnsignedByte(16711935);
+          this.field_p = 1 == param0.readUnsignedByte(16711935) ? true : false;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "la.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_r = -1;
+    }
+}

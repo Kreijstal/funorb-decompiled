@@ -5,7 +5,7 @@ final class we {
     static long field_b;
     static String field_a;
 
-    final static lba[] a(byte param0, ht param1) {
+    final static lba[] a(byte param0, PlatformTaskDispatcher param1) {
         lba[] stackIn_4_0 = null;
         lba[] stackIn_10_0 = null;
         lba[] stackIn_16_0 = null;
@@ -19,7 +19,7 @@ final class we {
         int var5 = 0;
         lba var6 = null;
         int var7 = 0;
-        eh var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = BachelorFridge.field_y;
@@ -65,11 +65,11 @@ final class we {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 < -122) {
           return;

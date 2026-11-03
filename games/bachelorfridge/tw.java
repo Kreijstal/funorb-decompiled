@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tw {
-    static kv[] field_c;
+    static Sprite[] field_c;
     static String field_d;
     static String field_b;
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -17,25 +17,25 @@ final class tw {
         }
     }
 
-    final static void a(int param0, jfa param1, int param2) {
+    final static void a(int param0, FridgeCreature param1, int param2) {
         int var3_int = 0;
-        if (bp.e(-29919)) {
+        if (AttackUpAllAnimation.e(-29919)) {
           return;
         }
         try {
-          sja.field_fb.c(91, (byte) 104);
-          sja.field_fb.field_g = sja.field_fb.field_g + 2;
-          var3_int = sja.field_fb.field_g;
-          sja.field_fb.d(param0, 0);
+          sja.field_fb.writeCipheredByte(91, (byte) 104);
+          sja.field_fb.position = sja.field_fb.position + 2;
+          var3_int = sja.field_fb.position;
+          sja.field_fb.writeByte(param0, 0);
           rha.a(param1.field_g, sja.field_fb, (byte) -81);
           int var4 = 21 / ((param2 - 3) / 60);
-          sja.field_fb.a((byte) -88, sja.field_fb.field_g - var3_int);
+          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var3_int);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tw.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tw.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static cq a(je param0, byte param1) {
+    final static cq a(PcmSampleStream param0, byte param1) {
         cq var2 = null;
         RuntimeException var2_ref = null;
         cq stackIn_3_0 = null;
@@ -48,7 +48,7 @@ final class tw {
           if (param1 != -36) {
             field_d = (String) null;
           }
-          rma.field_d.a(var2, true);
+          SocketConnector.field_d.a(var2, true);
           saa.field_a.a(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -62,7 +62,7 @@ final class tw {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class gu {
     static int field_d;
-    static lu field_a;
+    static PacketBuffer field_a;
     String field_e;
     boolean field_c;
     String field_b;
@@ -13,20 +13,20 @@ final class gu {
           field_a = null;
           return;
         }
-        kv[] var2 = (kv[]) null;
-        gu.a(40, true, -118, (po) null, -87, (String) null, -19, false, (kv[]) null, -15, -124, -124, (kv[]) null, -26, 29);
+        Sprite[] var2 = (Sprite[]) null;
+        gu.a(40, true, -118, (BitmapFont) null, -87, (String) null, -19, false, (Sprite[]) null, -15, -124, -124, (Sprite[]) null, -26, 29);
         field_a = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, po param3, int param4, String param5, int param6, boolean param7, kv[] param8, int param9, int param10, int param11, kv[] param12, int param13, int param14) {
+    final static void a(int param0, boolean param1, int param2, BitmapFont param3, int param4, String param5, int param6, boolean param7, Sprite[] param8, int param9, int param10, int param11, Sprite[] param12, int param13, int param14) {
         if (param2 != 6106) {
           return;
         }
         try {
-          nda.a(param0, new lda(param12), ge.field_I, param6, wk.field_f, param3, param3, new lda(param8), param14, false, raa.field_I, ru.field_c, param10, param6, wo.field_j, param4, param11, param4, mt.field_v, param9);
+          nda.a(param0, new lda(param12), ge.field_I, param6, wk.field_f, param3, param3, new lda(param8), param14, false, raa.field_I, NanoGameClock.field_c, param10, param6, wo.field_j, param4, param11, param4, ScavengerSpecial.field_v, param9);
           qb.a(param13, param7, param5, param2 ^ -6107, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
         }
     }
 

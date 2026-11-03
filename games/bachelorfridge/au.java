@@ -36,13 +36,13 @@ final class au {
 
     final static void a(int param0, String param1, boolean param2) {
         try {
-          ha.field_k = bt.field_s;
-          taa.field_l = param0;
+          ha.field_k = DreamsEvent.field_s;
+          ActorAnimation.field_l = param0;
           if (param2) {
             field_a = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "au.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "au.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

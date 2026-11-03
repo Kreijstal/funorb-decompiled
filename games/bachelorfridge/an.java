@@ -5,13 +5,13 @@ final class an extends qb {
     static String field_s;
     static int field_q;
     static int field_t;
-    static ee field_r;
+    static IndexedSprite field_r;
 
-    final static kv[] a(byte param0, vr param1, String param2, String param3) {
-        kv[] var4 = null;
+    final static Sprite[] a(byte param0, vr param1, String param2, String param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
-        kv[] var5 = null;
-        kv[] stackIn_3_0 = null;
+        Sprite[] var5 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -54,7 +54,7 @@ final class an extends qb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -108,15 +108,15 @@ final class an extends qb {
         RuntimeException var2 = null;
         var9 = BachelorFridge.field_y;
         try {
-          lka.field_E = qs.a(false, new lu(param0));
+          TextInputWidget.field_E = qs.a(false, new PacketBuffer(param0));
           if (param1 > -40) {
             an.f((byte) 123);
           }
-          fw.field_h = new pd[-1 + lka.field_E.length];
-          for (var2_int = 1; var2_int < lka.field_E.length; var2_int++) {
+          fw.field_h = new pd[-1 + TextInputWidget.field_E.length];
+          for (var2_int = 1; var2_int < TextInputWidget.field_E.length; var2_int++) {
             vc.a(var2_int, 0, -16306);
-            var3 = lka.field_E[var2_int][3];
-            var4 = lka.field_E[var2_int][16];
+            var3 = TextInputWidget.field_E[var2_int][3];
+            var4 = TextInputWidget.field_E[var2_int][16];
             var5 = m.a(var2_int, (byte) -98, 1);
             var6 = kka.a(var2_int, -114, 2);
             var7 = vc.a(var2_int, 9, -16306);
@@ -134,7 +134,7 @@ final class an extends qb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

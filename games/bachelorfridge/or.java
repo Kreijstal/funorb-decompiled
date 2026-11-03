@@ -5,7 +5,7 @@ final class or extends bia {
     static String field_j;
     private static String field_z;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -98 % ((52 - param0) / 37);
         field_j = null;
     }

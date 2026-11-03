@@ -3,15 +3,15 @@
  */
 final class dl extends jla {
     static int[] field_j;
-    private po field_g;
-    static js field_h;
+    private BitmapFont field_g;
+    static IntrusiveNodeHashTable field_h;
     static int[] field_i;
     static String[] field_k;
 
     final void e(int param0) {
         int var3 = 0;
-        ad[] var2;
-        ad var4;
+        CreatureActor[] var2;
+        CreatureActor var4;
         int var5;
         var5 = BachelorFridge.field_y;
         if (!um.a(true)) {
@@ -92,7 +92,7 @@ final class dl extends jla {
           this.p(-74);
         }
         var2 = fr.field_o.length;
-        var3 = pu.field_j.field_h.field_d;
+        var3 = pu.field_j.field_h.playerCount;
         var4 = 40;
         var5 = 110;
         var6 = 14;
@@ -105,7 +105,7 @@ final class dl extends jla {
           var5Lifetime1 = 110;
           stackIn_7_0 = ((1 & var9) != 0) ? 24 : 40;
           var13 = stackIn_7_0;
-          dg.f(var4, -var6 + var5Lifetime1, var8, 2 * var6 + var7, 0, var13);
+          SoftwareRasterizer.fillRectangleAlpha(var4, -var6 + var5Lifetime1, var8, 2 * var6 + var7, 0, var13);
           this.field_g.a(var10, var8 / 2 + var4, var5Lifetime1, var11, -1);
           var14 = 1;
           var15 = "";
@@ -123,10 +123,10 @@ final class dl extends jla {
             var15 = kha.field_j;
           }
           var5Lifetime1 += 20;
-          dg.a(var4, var5Lifetime1, var8 + var4, var7 + var5Lifetime1);
-          this.field_g.a(var15, var4 + 5, var5Lifetime1, -10 + var8, var7, var12, -1, 1, 0, var6);
+          SoftwareRasterizer.setClip(var4, var5Lifetime1, var8 + var4, var7 + var5Lifetime1);
+          this.field_g.drawParagraph(var15, var4 + 5, var5Lifetime1, -10 + var8, var7, var12, -1, 1, 0, var6);
           var4 = var4 + var8;
-          dg.c();
+          SoftwareRasterizer.c();
         }
     }
 
@@ -137,25 +137,25 @@ final class dl extends jla {
 
     public dl() {
         super(3);
-        this.field_g = (po) ((Object) jha.field_g);
+        this.field_g = (BitmapFont) ((Object) jha.field_g);
     }
 
-    private final kv b(int param0, byte param1) {
+    private final Sprite b(int param0, byte param1) {
         if (param1 != 96) {
           dl.d((byte) 68);
         }
-        return param0 == 0 ? jt.field_g : gj.field_F;
+        return param0 == 0 ? FoodShopPanel.field_g : BattleScreen.field_F;
     }
 
     final boolean c(int param0, int param1) {
         if (param1 != 19950) {
-          this.field_g = (po) null;
+          this.field_g = (BitmapFont) null;
         }
         if (!pu.field_j.field_e.field_a &&
           param0 == 0) {
           return false;
         }
-        if (null != sna.field_fb) {
+        if (null != UiComponent.field_fb) {
           if (param0 != 0) {
             return true;
           }
@@ -181,10 +181,10 @@ final class dl extends jla {
     }
 
     final void b(boolean param0, int param1, int param2) {
-        kv var11 = this.b(param1, (byte) 96);
+        Sprite var11 = this.b(param1, (byte) 96);
         int var5 = this.d(param1, 26891) ? 1 : 0;
-        String var6 = this.d(false, pj.field_b[this.field_b][param1]);
-        pia var7 = fn.field_n;
+        String var6 = this.d(false, BufferedSocket.field_b[this.field_b][param1]);
+        PalettedBitmapFont var7 = fn.field_n;
         int var8 = var5 != 0 ? !param0 ? 9 : 10 : 8;
         if (param2 != 0) {
           field_k = (String[]) null;
@@ -194,27 +194,27 @@ final class dl extends jla {
         if (var5 == 0) {
           var11.b(var9 - (var11.field_n >> 1), var10 - 22, 128);
         } else {
-          var11.e(var9 - (var11.field_n >> 1), var10 - 22);
+          var11.draw(var9 - (var11.field_n >> 1), var10 - 22);
         }
-        ((po) ((Object) var7)).a(var6, var9, 6 + var10, var8, -1);
+        ((BitmapFont) ((Object) var7)).a(var6, var9, 6 + var10, var8, -1);
     }
 
     final void l(int param0) {
-        kv discarded$0 = null;
+        Sprite discarded$0 = null;
         String var2 = null;
         int var3 = BachelorFridge.field_y;
         if (null != vj.field_m) {
           vj.field_m.c(0, 0);
         }
-        dg.f(0, 0, 640, 480, 0, 128);
-        nu.field_e.e(-5, 0);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
+        nu.field_e.draw(-5, 0);
         if (param0 != 9) {
           discarded$0 = this.b(23, (byte) -91);
         }
-        dg.a(40, 60, 560, 215, 20, 0, 80);
-        dg.a(40, 295, 560, 95, 20, 0, 80);
+        SoftwareRasterizer.a(40, 60, 560, 215, 20, 0, 80);
+        SoftwareRasterizer.a(40, 295, 560, 95, 20, 0, 80);
         if (li.field_m) {
-          var2 = t.field_m;
+          var2 = BasicMoveDefinition.field_m;
         } else {
           if (null != dd.field_G) {
             var2 = lga.a(true, new String[]{dd.field_G}, jea.field_d);
@@ -222,14 +222,14 @@ final class dl extends jla {
             var2 = kw.field_n;
           }
         }
-        j.a(var2, 40, 16760896, true, 320, false);
+        InsanoSauceEvent.a(var2, 40, 16760896, true, 320, false);
         this.p(1);
         if (null != rga.field_a) {
           this.o(0);
         }
         this.c(true);
         if (!um.a(true)) {
-          kla.b(true);
+          DiveBomberAnimation.b(true);
         }
     }
 
@@ -252,7 +252,7 @@ final class dl extends jla {
         var7 = BachelorFridge.field_y;
         var3 = 0;
         var4 = -1;
-        var5 = pu.field_j.field_h.field_d;
+        var5 = pu.field_j.field_h.playerCount;
         if (param0 <= 35) {
           return -83;
         }

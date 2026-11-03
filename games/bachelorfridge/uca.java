@@ -11,11 +11,11 @@ final class uca {
         if (!af.field_a) {
           return;
         }
-        bf.field_h[wca.field_n].a(param0, (byte) 73);
+        bf.field_h[CreatureType.field_n].a(param0, (byte) 73);
         int var2 = 56 / ((param1 - 49) / 47);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_b = null;
         field_d = null;

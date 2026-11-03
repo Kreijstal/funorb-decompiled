@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends sna {
+final class oa extends UiComponent {
     private StringBuilder field_Ab;
     static int field_vb;
-    private sna field_xb;
+    private UiComponent field_xb;
     static String field_wb;
     private int field_zb;
-    private sna field_yb;
-    static kv field_Bb;
+    private UiComponent field_yb;
+    static Sprite field_Bb;
 
-    oa(int param0, int param1, int param2, int param3, String param4, sna param5, sna param6, sna param7) {
+    oa(int param0, int param1, int param2, int param3, String param4, UiComponent param5, UiComponent param6, UiComponent param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -30,19 +30,19 @@ final class oa extends sna {
         int var13 = 0;
         this.field_zb = 0;
         try {
-          this.field_xb = new sna(0L, param6, param4);
+          this.field_xb = new UiComponent(0L, param6, param4);
           this.a(-1, this.field_xb);
-          this.field_yb = new sna(0L, param7);
+          this.field_yb = new UiComponent(0L, param7);
           this.field_yb.field_gb = 16764006;
           this.a(-1, this.field_yb);
-          this.field_yb.field_pb = "|";
+          this.field_yb.name = "|";
           this.field_Ab = new StringBuilder(12);
           var9_int = this.field_xb.e(-1);
           this.field_xb.a(rg.field_h, 31407, var9_int, 5, 3);
           this.field_yb.a(rg.field_h, 31407, var9_int, 5, 3 + rg.field_h);
           var10 = 5 + var9_int + 5;
           var11 = 6 + rg.field_h * 2;
-          var12 = oi.a(param2, var10, param0, -21264);
+          var12 = ResetAnimation.a(param2, var10, param0, -21264);
           var13 = nga.a(var11, param1, (byte) 99, param3);
           this.a(var11, 31407, var10, var12, var13);
           return;
@@ -74,7 +74,7 @@ final class oa extends sna {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class oa extends sna {
           }
           if (gf.field_k == 85 &&
             this.field_Ab.length() > 0) {
-            sw.a(this.field_Ab, 4, this.field_Ab.length() - 1, ' ');
+            SleepSpecial.a(this.field_Ab, 4, this.field_Ab.length() - 1, ' ');
           }
           if (ok.a((CharSequence) ((Object) this.field_Ab), dla.field_j, (byte) -19)) {
             discarded$0 = this.field_Ab.append(dla.field_j);
@@ -153,17 +153,17 @@ final class oa extends sna {
         return 2;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_Bb = null;
         field_wb = null;
         if (param0 <= 107) {
-          field_Bb = (kv) null;
+          field_Bb = (Sprite) null;
         }
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9, boolean param10, int param11, boolean param12, boolean param13) {
         jja.field_m = null;
-        er.e(9941);
+        FlirtAnimation.e(9941);
         param1 = ot.a(param8, param11, param1, param3, param2, param6, (byte) 92);
         lr.a(param7, param5, param0, param9, param2, 1, param4, param13, param10, param1);
         bf.a(param5, param10, (byte) -88);
@@ -171,7 +171,7 @@ final class oa extends sna {
         if (!param12) {
           return;
         }
-        field_Bb = (kv) null;
+        field_Bb = (Sprite) null;
     }
 
     final boolean b(boolean param0) {
@@ -201,7 +201,7 @@ final class oa extends sna {
         if (param0) {
           if (85 == gf.field_k &&
             this.field_Ab.length() > 0) {
-            sw.a(this.field_Ab, 4, this.field_Ab.length() - 1, ' ');
+            SleepSpecial.a(this.field_Ab, 4, this.field_Ab.length() - 1, ' ');
           }
           if (this.field_Ab.length() < 12) {
             var2 = Character.toLowerCase(dla.field_j);
@@ -361,7 +361,7 @@ final class oa extends sna {
           return true;
         }
         if (this.field_Ab.length() > 0) {
-          sw.a(this.field_Ab, 4, this.field_Ab.length() - 1, ' ');
+          SleepSpecial.a(this.field_Ab, 4, this.field_Ab.length() - 1, ' ');
         }
         if (this.field_Ab.length() >= 12) {
           if (gf.field_k == 84) {

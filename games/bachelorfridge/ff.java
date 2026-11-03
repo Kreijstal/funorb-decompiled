@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ff extends gha {
-    static ee field_u;
+final class ff extends DefaultWidgetRenderer {
+    static IndexedSprite field_u;
     private int field_x;
     private int field_v;
     private int field_w;
-    private kv[] field_t;
+    private Sprite[] field_t;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 16777215) {
-          field_u = (ee) null;
+          field_u = (IndexedSprite) null;
           field_u = null;
           return;
         }
         field_u = null;
     }
 
-    public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -30,14 +30,14 @@ final class ff extends gha {
         int var7 = 0;
         int var8 = 0;
         try {
-          if (!param1.field_t) {
-            stackIn_6_0 = (param1.e(1023)) ? 1 : 0;
+          if (!param1.mouseOver) {
+            stackIn_6_0 = (param1.isFocused(1023)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param1 instanceof hf) {
-            param4 = param4 & ((hf) (param1)).field_z;
+          if (param1 instanceof InteractiveWidget) {
+            param4 = param4 & ((InteractiveWidget) (param1)).field_z;
           }
           if (param4) {
             if (var6_int != 0) {
@@ -49,13 +49,13 @@ final class ff extends gha {
             stackIn_13_0 = this.field_w;
           }
           var7 = stackIn_13_0;
-          pj.a(param1.field_s + param0, var7, 447, param1.field_v + param3 + (param1.field_q - this.field_t[0].field_o >> 1), param1.field_p, this.field_t);
+          BufferedSocket.a(param1.x + param0, var7, 447, param1.y + param3 + (param1.height - this.field_t[0].field_o >> 1), param1.width, this.field_t);
           stackIn_16_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_16_0;
           if (param2 != 32679) {
-            ff.c(122);
+            ff.releaseStatics(122);
           }
-          this.field_l.a(param1.field_w, param1.field_s + param0, -2 + (param1.field_v + param3), param1.field_p, param1.field_q, var8, -1, 1, 1, this.field_l.field_u);
+          this.field_l.drawParagraph(param1.text, param1.x + param0, -2 + (param1.y + param3), param1.width, param1.height, var8, -1, 1, 1, this.field_l.field_u);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class ff extends gha {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ final class ff extends gha {
         this.field_x = param0;
         this.field_v = param1;
         this.field_l = qia.field_a;
-        this.field_t = sl.field_k;
+        this.field_t = DamageTileEffect.field_k;
     }
 
     public ff() {

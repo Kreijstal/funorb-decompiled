@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gba extends sna {
-    private sna field_Fb;
+final class gba extends UiComponent {
+    private UiComponent field_Fb;
     private int field_Ab;
-    private sna field_zb;
+    private UiComponent field_zb;
     private boolean field_vb;
-    static kv field_xb;
-    private sna field_Eb;
-    private sna field_wb;
-    private sna field_Gb;
+    static Sprite field_xb;
+    private UiComponent field_Eb;
+    private UiComponent field_wb;
+    private UiComponent field_Gb;
     private static int[] field_Hb;
-    private sna field_Cb;
+    private UiComponent field_Cb;
     static int field_Bb;
-    static kv[] field_Db;
+    static Sprite[] field_Db;
     static String field_yb;
     static String field_Ib;
 
@@ -71,9 +71,9 @@ final class gba extends sna {
     }
 
     private final void a(int param0, int param1, int param2, byte param3) {
-        sna stackIn_17_0 = null;
-        sna stackIn_17_1 = null;
-        sna stackIn_17_2 = null;
+        UiComponent stackIn_17_0 = null;
+        UiComponent stackIn_17_1 = null;
+        UiComponent stackIn_17_2 = null;
         boolean stackIn_18_3 = false;
         int var5;
         int var6;
@@ -84,12 +84,12 @@ final class gba extends sna {
         int var11;
         int var12;
         int var14;
-        sna var15;
-        sna var16;
-        sna var17;
-        sna var18;
-        sna var19;
-        sna var20;
+        UiComponent var15;
+        UiComponent var16;
+        UiComponent var17;
+        UiComponent var18;
+        UiComponent var19;
+        UiComponent var20;
         var14 = BachelorFridge.field_y;
         if (this.field_sb >= this.field_p * 2) {
           var5 = this.field_p;
@@ -160,7 +160,7 @@ final class gba extends sna {
         var20.field_sb = var8;
     }
 
-    gba(String param0, sna param1, kv param2, kv param3, sna param4, sna param5, boolean param6) {
+    gba(String param0, UiComponent param1, Sprite param2, Sprite param3, UiComponent param4, UiComponent param5, boolean param6) {
         this(ew.a((byte) 8, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5, param6);
     }
 
@@ -182,10 +182,10 @@ final class gba extends sna {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_Db = null;
         if (param0 != 2) {
-          gba.i(-103);
+          gba.releaseStatics(-103);
         }
         field_Ib = null;
         field_yb = null;
@@ -193,13 +193,13 @@ final class gba extends sna {
         field_Hb = null;
     }
 
-    private gba(long param0, sna param1, kv param2, kv param3, sna param4, sna param5, boolean param6) {
+    private gba(long param0, UiComponent param1, Sprite param2, Sprite param3, UiComponent param4, UiComponent param5, boolean param6) {
         this(param0, param1, param1, param4, param5, param6);
         try {
           this.field_Fb.field_v = param2;
           this.field_Eb.field_v = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gba.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gba.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class gba extends sna {
           }
         }
         if (param0 != 25910) {
-          this.field_Cb = (sna) null;
+          this.field_Cb = (UiComponent) null;
           return false;
         }
         return false;
@@ -269,9 +269,9 @@ final class gba extends sna {
     }
 
     private final void b(int param0, int param1, boolean param2, int param3) {
-        sna stackIn_17_0 = null;
-        sna stackIn_17_1 = null;
-        sna stackIn_17_2 = null;
+        UiComponent stackIn_17_0 = null;
+        UiComponent stackIn_17_1 = null;
+        UiComponent stackIn_17_2 = null;
         boolean stackIn_18_3 = false;
         int var5;
         int var6;
@@ -282,12 +282,12 @@ final class gba extends sna {
         int var11;
         int var12;
         int var14;
-        sna var15;
-        sna var16;
-        sna var17;
-        sna var18;
-        sna var19;
-        sna var20;
+        UiComponent var15;
+        UiComponent var16;
+        UiComponent var17;
+        UiComponent var18;
+        UiComponent var19;
+        UiComponent var20;
         var14 = BachelorFridge.field_y;
         if (2 * this.field_sb > this.field_p) {
           var6 = this.field_p / 2;
@@ -358,8 +358,8 @@ final class gba extends sna {
         var20.field_kb = 0;
     }
 
-    private gba(long param0, sna param1, sna param2, sna param3, sna param4, boolean param5) {
-        super(param0, (sna) null);
+    private gba(long param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, boolean param5) {
+        super(param0, (UiComponent) null);
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -372,26 +372,26 @@ final class gba extends sna {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
-        sna var10 = null;
-        sna var11 = null;
+        UiComponent var10 = null;
+        UiComponent var11 = null;
         try {
           stackIn_4_1 = (param5);
           this.field_vb = stackIn_4_1;
-          this.field_Fb = new sna(0L, param1);
-          this.field_Eb = new sna(0L, param2);
+          this.field_Fb = new UiComponent(0L, param1);
+          this.field_Eb = new UiComponent(0L, param2);
           this.a(-1, this.field_Fb);
           this.a(-1, this.field_Eb);
-          this.field_zb = new sna(0L, (sna) null);
+          this.field_zb = new UiComponent(0L, (UiComponent) null);
           this.a(-1, this.field_zb);
-          this.field_Cb = new sna(0L, param3);
-          this.field_Gb = new sna(0L, param3);
+          this.field_Cb = new UiComponent(0L, param3);
+          this.field_Gb = new UiComponent(0L, param3);
           var10 = this.field_Cb;
           var11 = var10;
           this.field_Gb.field_qb = true;
           var11.field_qb = true;
           this.field_zb.a(-1, this.field_Cb);
           this.field_zb.a(-1, this.field_Gb);
-          this.field_wb = new sna(0L, param4);
+          this.field_wb = new UiComponent(0L, param4);
           this.field_wb.field_ub = true;
           this.field_zb.a(-1, this.field_wb);
           return;
@@ -423,7 +423,7 @@ final class gba extends sna {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -455,7 +455,7 @@ final class gba extends sna {
           }
         }
         if (param1 < 15) {
-          field_xb = (kv) null;
+          field_xb = (Sprite) null;
         }
         return var5;
     }

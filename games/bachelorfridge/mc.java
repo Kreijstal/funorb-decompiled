@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mc extends IntrusiveNode {
-    static sna field_g;
+    static UiComponent field_g;
     int field_j;
     static String field_i;
     static int field_h;
     int field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_g = null;
         if (param0 > -21) {
-          field_g = (sna) null;
+          field_g = (UiComponent) null;
         }
     }
 
@@ -29,7 +29,7 @@ final class mc extends IntrusiveNode {
         RuntimeException var3_ref = null;
         var5 = BachelorFridge.field_y;
         try {
-          var3 = lk.a(param1, param0, (byte) -53);
+          var3 = SuperSpeedAllEvent.a(param1, param0, (byte) -53);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -45,7 +45,7 @@ final class mc extends IntrusiveNode {
             }
             break;
           }
-          stackIn_10_0 = fha.field_k;
+          stackIn_10_0 = TileEffectAnimation.field_k;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,7 +57,7 @@ final class mc extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

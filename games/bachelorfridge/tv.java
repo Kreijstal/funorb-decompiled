@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tv extends oha {
+final class tv extends MoveDefinition {
     static String field_n;
     static String field_p;
-    static sna field_o;
+    static UiComponent field_o;
     static String field_m;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -20,10 +20,10 @@ final class tv extends oha {
     tv(int param0, int param1, int param2, String param3, String param4, int param5, int param6) {
         super(2, param0, param1, param2, param5, param6);
         try {
-          this.field_k = param4;
-          this.field_f = param3;
+          this.description = param4;
+          this.name = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tv.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tv.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 

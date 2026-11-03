@@ -9,8 +9,8 @@ final class fma extends pu {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          pj.field_b[param0] = param2;
-          eg.field_p[param0] = vfa.a(19341, param0);
+          BufferedSocket.field_b[param0] = param2;
+          LevitateSpecial.field_p[param0] = ClamsSpecial.a(19341, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -22,7 +22,7 @@ final class fma extends pu {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

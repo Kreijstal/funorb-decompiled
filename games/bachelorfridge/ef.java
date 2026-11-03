@@ -43,10 +43,10 @@ final class ef extends k {
         return var13;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_m = null;
         if (param0) {
-          ef.b(true);
+          ef.releaseStatics(true);
         }
     }
 
@@ -64,7 +64,7 @@ final class ef extends k {
         this.field_o = 1024;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -77,15 +77,15 @@ final class ef extends k {
         try {
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_o = param1.e((byte) 98);
+            this.field_o = param1.readUnsignedShort((byte) 98);
           } else {
             if (var4_int != 1) {
               if (2 == var4_int) {
-                stackIn_11_1 = (param1.b(16711935) == 1);
+                stackIn_11_1 = (param1.readUnsignedByte(16711935) == 1);
                 this.field_f = stackIn_11_1;
               }
             } else {
-              this.field_p = param1.e((byte) 45);
+              this.field_p = param1.readUnsignedShort((byte) 45);
             }
           }
           if (param0 != -71) {
@@ -102,7 +102,7 @@ final class ef extends k {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -5,21 +5,21 @@ final class p extends pu {
     static sga field_n;
     static long[] field_l;
     static String field_m;
-    static sna field_o;
+    static UiComponent field_o;
 
     final static void c(int param0) {
         int var2 = -3 / ((param0 - 19) / 61);
-        gb var1 = (gb) (ja.field_s.b((byte) 90));
+        gb var1 = (gb) (ResetSpecial.field_s.b((byte) 90));
         if (var1 == null) {
           vc.a((byte) -72);
           return;
         }
-        pf var3 = ig.field_m;
-        var3.f(-64);
-        var3.f(48);
-        var3.f(-108);
-        var3.f(111);
-        var1.a(false);
+        BitPacketBuffer var3 = ig.field_m;
+        var3.readInt(-64);
+        var3.readInt(48);
+        var3.readInt(-108);
+        var3.readInt(111);
+        var1.unlink(false);
     }
 
     final static void a(int param0, byte[] param1, int param2) {
@@ -63,14 +63,14 @@ final class p extends pu {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 != 0) {
-          p.b(111);
+          p.releaseStatics(111);
         }
         field_l = null;
         field_n = null;

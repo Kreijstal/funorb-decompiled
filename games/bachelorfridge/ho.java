@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ho extends IntrusiveNode {
-    static sna field_g;
+    static UiComponent field_g;
     static String field_f;
     int field_i;
     pd field_h;
-    static ee[] field_j;
+    static IndexedSprite[] field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_g = null;
         if (param0 < 70) {
@@ -21,7 +21,7 @@ final class ho extends IntrusiveNode {
         if (param0 > 45) {
           return new ho(this.field_h, this.field_i);
         }
-        field_j = (ee[]) null;
+        field_j = (IndexedSprite[]) null;
         return new ho(this.field_h, this.field_i);
     }
 
@@ -44,7 +44,7 @@ final class ho extends IntrusiveNode {
           this.field_i = param1;
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ho.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ho.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -11,8 +11,8 @@ final class nl {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ii.a(-104, (java.awt.Component) ((Object) param0));
-          jba.a(-30229, (java.awt.Component) ((Object) param0));
+          CreatureEvent.a(-104, (java.awt.Component) ((Object) param0));
+          HailAnimation.a(-30229, (java.awt.Component) ((Object) param0));
           if (null != sd.field_c) {
             sd.field_c.a((java.awt.Component) ((Object) param0), (byte) -126);
           }
@@ -31,14 +31,14 @@ final class nl {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    nl(ola param0) {
+    nl(FridgeScreen param0) {
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 >= -80) {
           field_a = (String) null;
@@ -51,14 +51,14 @@ final class nl {
         }
         try {
           if (null == hp.field_d) {
-            hp.field_d = new hga(gja.field_m, at.field_i);
-            gja.field_m.a((wj) (hp.field_d), (byte) 124);
+            hp.field_d = new hga(gja.field_m, AnimationNode.field_i);
+            gja.field_m.a((UiWidget) (hp.field_d), (byte) 124);
           }
           hp.field_d.a(50, param2, param0, param1);
-          dg.d();
+          SoftwareRasterizer.clear();
           pja.a((byte) 53, true);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

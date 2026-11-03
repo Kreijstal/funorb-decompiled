@@ -6,13 +6,13 @@ final class dc extends k {
     private short[] field_q;
     static String field_u;
     static qia field_k;
-    static kv[] field_y;
+    static Sprite[] field_y;
     private boolean field_l;
     private short[] field_p;
     private byte[] field_s;
     private int field_x;
     private int field_v;
-    static po field_r;
+    static BitmapFont field_r;
     private int field_t;
     private int field_w;
     static String field_o;
@@ -297,7 +297,7 @@ final class dc extends k {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ final class dc extends k {
         return var4;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_o = null;
         field_r = null;
         field_m = null;
@@ -325,7 +325,7 @@ final class dc extends k {
         field_k = null;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int dupTemp$0 = 0;
         boolean stackIn_18_1 = false;
         RuntimeException stackIn_31_0 = null;
@@ -342,16 +342,16 @@ final class dc extends k {
           }
           var4_int = param2;
           if (0 == var4_int) {
-            stackIn_18_1 = (param1.b(16711935) == 1);
+            stackIn_18_1 = (param1.readUnsignedByte(16711935) == 1);
             this.field_l = stackIn_18_1;
           } else {
             if (1 != var4_int) {
               if (var4_int == 2) {
-                this.field_t = param1.c((byte) -85);
+                this.field_t = param1.readSignedShort((byte) -85);
                 if (0 > this.field_t) {
                   this.field_q = new short[this.field_n];
                   for (var4_int = 0; this.field_n > var4_int; var4_int++) {
-                    this.field_q[var4_int] = (short)param1.c((byte) -85);
+                    this.field_q[var4_int] = (short)param1.readSignedShort((byte) -85);
                   }
                 }
               } else {
@@ -359,22 +359,22 @@ final class dc extends k {
                   if (var4_int != 4) {
                     if (var4_int != 5) {
                       if (var4_int == 6) {
-                        this.field_x = param1.b(16711935);
+                        this.field_x = param1.readUnsignedByte(16711935);
                       }
                     } else {
-                      this.field_w = param1.b(16711935);
+                      this.field_w = param1.readUnsignedByte(16711935);
                     }
                   } else {
-                    this.field_v = param1.b(param0 + 16712006);
+                    this.field_v = param1.readUnsignedByte(param0 + 16712006);
                   }
                 } else {
-                  dupTemp$0 = param1.b(16711935);
+                  dupTemp$0 = param1.readUnsignedByte(16711935);
                   this.field_x = dupTemp$0;
                   this.field_w = dupTemp$0;
                 }
               }
             } else {
-              this.field_n = param1.b(16711935);
+              this.field_n = param1.readUnsignedByte(16711935);
             }
           }
           return;
@@ -388,7 +388,7 @@ final class dc extends k {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 

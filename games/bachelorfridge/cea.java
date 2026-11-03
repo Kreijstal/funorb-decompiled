@@ -9,10 +9,10 @@ final class cea {
     private double field_g;
     static wk field_h;
     static raa field_b;
-    static kv field_i;
+    static Sprite field_i;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = (byte[][]) null;
         if (param0 == 65536) {
@@ -21,18 +21,18 @@ final class cea {
           field_a = null;
           return;
         }
-        field_i = (kv) null;
+        field_i = (Sprite) null;
         field_i = null;
         field_h = null;
         field_a = null;
     }
 
-    final static pia a(byte[] param0, int param1) {
-        pia var2 = null;
+    final static PalettedBitmapFont a(byte[] param0, int param1) {
+        PalettedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        pia stackIn_5_0 = null;
-        pia stackIn_7_0 = null;
+        PalettedBitmapFont stackIn_5_0 = null;
+        PalettedBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -40,14 +40,14 @@ final class cea {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (pia) (stackIn_2_0);
+            return (PalettedBitmapFont) (stackIn_2_0);
           }
           if (param1 != 28450) {
-            stackIn_5_0 = (pia) null;
+            stackIn_5_0 = (PalettedBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new pia(param0, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
-          al.b(-18073);
+          var2 = new PalettedBitmapFont(param0, fl.field_j, AirstrikeAnimation.field_D, lq.field_A, InsanoSauceSpecial.field_s, hk.field_f, BananarangAnimation.field_P);
+          al.releaseStatics(-18073);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,7 +60,7 @@ final class cea {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

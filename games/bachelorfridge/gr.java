@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gr {
-    static kv[] field_a;
+    static Sprite[] field_a;
 
     public static void b(int param0) {
         if (param0 != 12653) {
@@ -11,7 +11,7 @@ final class gr {
         try {
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gr.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gr.B(" + param0 + ')');
         }
     }
 
@@ -34,34 +34,34 @@ final class gr {
           var1 = null;
           var2 = null;
           if (gk.field_d == 0 &&
-            null != rv.field_n) {
+            null != EffectBatch.field_n) {
             var2 = iu.field_l;
           }
           if (param0 != 2) {
-            field_a = (kv[]) null;
+            field_a = (Sprite[]) null;
           }
           if (gk.field_d == 2 &&
             !hv.a(-19229)) {
-            if (!gl.a(3, df.field_s)) {
-              var2 = lga.a(true, new String[]{bd.field_k}, ja.field_r);
+            if (!gl.a(3, MoveEvent.field_s)) {
+              var2 = lga.a(true, new String[]{bd.field_k}, ResetSpecial.field_r);
               if (var10 != 0) {
                 var2 = lga.a(true, new String[]{bd.field_k}, uma.field_O);
               }
             } else {
               var2 = lga.a(true, new String[]{bd.field_k}, uma.field_O);
             }
-            if (gm.field_k) {
+            if (MoveOrder.field_k) {
               vf.a((String) null, 0, param0 + 115, (String) null, (String) (var2), 2);
-              lc.b(-1);
+              BoardChangeBatch.b(-1);
             }
           }
           if (null == var2 &&
-            !qh.field_l &&
+            !WidgetTheme.field_l &&
             null == bi.field_h) {
             var2 = cd.field_l;
           }
           if (var2 != null) {
-            pp.a(vq.field_w, param0 + 3, (String) (var2), 0, (String) null);
+            EventEffect.a(SlowAllAnimation.field_w, param0 + 3, (String) (var2), 0, (String) null);
           } else {
             var3 = cha.field_l;
             var3 = kba.a(-123, var3);
@@ -72,21 +72,21 @@ final class gr {
             if (var6 == 2) {
               var4 = lga.a(true, new String[]{bd.field_k}, iia.field_q);
               var8 = lga.a(true, new String[]{var3}, wla.field_n);
-              var7 = -485 + (ts.field_r.field_sb + jba.field_A.field_sb + dc.field_r.a(var8) - dc.field_r.a(var4));
+              var7 = -485 + (DisableSpecial.field_r.field_sb + HailAnimation.field_A.field_sb + dc.field_r.a(var8) - dc.field_r.a(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
             } else {
               if (var6 == 0) {
-                if (pw.field_w == null &&
+                if (SnowAnimation.field_w == null &&
                   am.field_O) {
-                  var4 = "[" + cja.field_r + "] ";
+                  var4 = "[" + FlyEvent.field_r + "] ";
                 }
-                if (null != pw.field_w) {
+                if (null != SnowAnimation.field_w) {
                   var6 = 1;
                   if (!ada.field_k ||
                     null == jc.field_n) {
-                    var4 = "[" + lga.a(true, new String[]{pw.field_w.field_Jb}, fq.field_r) + "] ";
+                    var4 = "[" + lga.a(true, new String[]{SnowAnimation.field_w.field_Jb}, HomingMissileSpecial.field_r) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + jc.field_n + "] ";
                     }
@@ -95,7 +95,7 @@ final class gr {
                   }
                 }
               }
-              if (ak.e(param0 ^ -1373)) {
+              if (SnowEvent.e(param0 ^ -1373)) {
                 stackIn_58_0 = ": ";
               } else {
                 stackIn_58_0 = "<img=3>: ";
@@ -116,27 +116,27 @@ final class gr {
                 var4 = "<col=999999>" + var4 + kna.field_h + "</col>";
               }
               var9 = dc.field_r.a(var4);
-              if (!ak.e(param0 - 1377)) {
-                if (jba.field_A.field_T &&
-                  -jba.field_A.field_D + mk.field_p < var9) {
+              if (!SnowEvent.e(param0 - 1377)) {
+                if (HailAnimation.field_A.field_T &&
+                  -HailAnimation.field_A.field_D + mk.field_p < var9) {
                   if (hl.field_I) {
                     var1 = "Broken!";
                   } else {
                     var1 = qca.field_m;
                   }
                 }
-                if (0 != jba.field_A.field_R &&
-                  var9 > jba.field_A.field_nb &&
+                if (0 != HailAnimation.field_A.field_R &&
+                  var9 > HailAnimation.field_A.field_nb &&
                   !hl.field_I) {
-                  fk.d(param0 ^ 127);
+                  HomingMissileEvent.d(param0 ^ 127);
                 }
               }
             }
-            pp.a(jaa.field_u[var6], 5, var4 + po.c(jm.field_g.toString()), var7, var5);
+            EventEffect.a(HazmatEvent.field_u[var6], 5, var4 + BitmapFont.escapeMarkup(BoardChange.field_g.toString()), var7, var5);
             if (!lna.field_q) {
-              ts.field_r.field_T = false;
+              DisableSpecial.field_r.field_T = false;
             }
-            if (ts.field_r.field_T) {
+            if (DisableSpecial.field_r.field_T) {
               var1 = lga.a(true, new String[]{var3, bd.field_k}, nl.field_a);
             }
           }
@@ -145,7 +145,7 @@ final class gr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (var1), "gr.A(" + param0 + ')');
+          throw pe.wrapException((Throwable) (var1), "gr.A(" + param0 + ')');
         }
     }
 

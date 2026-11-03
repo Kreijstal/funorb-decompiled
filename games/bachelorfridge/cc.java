@@ -7,8 +7,8 @@ final class cc {
     private vr field_f;
     private pha field_g;
     static String[] field_d;
-    static sna field_b;
-    static ht field_e;
+    static UiComponent field_b;
+    static PlatformTaskDispatcher field_e;
 
     final jc a(byte param0, int param1) {
         byte[] var4 = null;
@@ -24,7 +24,7 @@ final class cc {
         }
         var3 = new jc();
         if (var4 != null) {
-          var3.a(new lu(var4), false);
+          var3.a(new PacketBuffer(var4), false);
         }
         if (param1 >= 32768) {
           var3.d((byte) -25);
@@ -36,8 +36,8 @@ final class cc {
     public static void a(byte param0) {
         field_d = null;
         if (param0 != -122) {
-          ht var2 = (ht) null;
-          cc.a(-37, (String) null, 61, 62, -69, (ht) null, -47, 27, -18);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          cc.a(-37, (String) null, 61, 62, -69, (PlatformTaskDispatcher) null, -47, 27, -18);
         }
         field_e = null;
         field_b = null;
@@ -79,7 +79,7 @@ final class cc {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class cc {
             var60 = var44.field_d;
             dla.a(0, fg.field_a, 72, var60, 0);
           } else {
-            ku.d(-372);
+            FloodEvent.d(-372);
           }
           var54 = new int[param4.field_i];
           var49 = var54;
@@ -160,7 +160,7 @@ final class cc {
           var8 = var41;
           var64 = new int[param4.field_i];
           var62 = bv.field_G;
-          var63 = fv.field_x;
+          var63 = PetAttackAnimation.field_x;
           var61 = ep.field_l;
           for (var13 = 0; param4.field_i > var13; var13++) {
             var14 = var61[var13] * param1 + (var62[var13] * param0 + param3 * var63[var13]) >> 8;
@@ -190,7 +190,7 @@ final class cc {
             var64[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < lq.field_y; var13Lifetime1++) {
-            var14Lifetime1 = ci.field_q[var13Lifetime1];
+            var14Lifetime1 = PizzaPartySpecial.field_q[var13Lifetime1];
             var15Lifetime1 = param4.field_C[var14Lifetime1];
             var16 = param4.field_h[var14Lifetime1];
             var17 = param4.field_t[var14Lifetime1];
@@ -278,14 +278,14 @@ final class cc {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, ht param5, int param6, int param7, int param8) {
+    final static void a(int param0, String param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, int param6, int param7, int param8) {
         nj.field_f = param4;
-        pw.field_A = param1;
-        ro.field_j = param0;
+        SnowAnimation.field_A = param1;
+        ClearTileFlagEffect.field_j = param0;
         if (param2 != -1456477592) {
           return;
         }
@@ -294,12 +294,12 @@ final class cc {
           mh.field_l = param5;
           bd.field_m = param8;
           uea.field_i = param7;
-          gp.field_x = param3;
-          aka.field_G = (vm) ((Object) new cl());
-          oea.field_q = new ea(param5);
-          ga.field_c = new kb(aka.field_G, oea.field_q);
+          DreamsAnimation.field_x = param3;
+          HomingMissileAnimation.field_G = (vm) ((Object) new cl());
+          oea.field_q = new DiskCacheWorker(param5);
+          ga.field_c = new kb(HomingMissileAnimation.field_G, oea.field_q);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

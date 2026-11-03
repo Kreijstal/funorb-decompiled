@@ -3,12 +3,12 @@
  */
 abstract class iga {
     static vr field_d;
-    static wma field_c;
+    static DualLinkNodeHashTable field_c;
     static String field_b;
-    static kv[] field_a;
+    static Sprite[] field_a;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_b = null;
         if (param0) {
@@ -20,7 +20,7 @@ abstract class iga {
 
     abstract wba a(byte param0);
 
-    abstract void a(lu param0, boolean param1);
+    abstract void a(PacketBuffer param0, boolean param1);
 
     static {
         field_z = "iga.E(";

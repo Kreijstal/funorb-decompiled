@@ -3,12 +3,12 @@
  */
 final class ds extends pu {
     static int field_m;
-    static fea field_l;
+    static BinaryBitmapFont field_l;
     private static String field_z;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1182) {
-          field_l = (fea) null;
+          field_l = (BinaryBitmapFont) null;
           field_l = null;
           return;
         }

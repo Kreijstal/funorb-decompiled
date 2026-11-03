@@ -5,7 +5,7 @@ final class kha extends IntrusiveNode {
     int field_h;
     static boolean field_f;
     int field_g;
-    static sna field_i;
+    static UiComponent field_i;
     static String field_j;
     static int field_k;
 
@@ -19,9 +19,9 @@ final class kha extends IntrusiveNode {
         this.field_h = param0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -111) {
-          kha.a(36);
+          kha.releaseStatics(36);
           field_j = null;
           field_i = null;
           return;

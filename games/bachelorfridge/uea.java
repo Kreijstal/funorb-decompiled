@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uea extends kj {
-    static kv field_j;
+final class uea extends TileEffect {
+    static Sprite field_j;
     static int field_i;
     static String field_g;
-    private kv field_f;
+    private Sprite field_f;
     private int field_h;
 
     final void a(int param0, int param1, int param2) {
@@ -14,7 +14,7 @@ final class uea extends kj {
         this.field_f.a(param2, param0, var4);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_g = null;
         int var1 = -108 % ((param0 - 15) / 62);
@@ -32,20 +32,20 @@ final class uea extends kj {
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-          this.field_f = (kv) null;
+          this.field_f = (Sprite) null;
         }
     }
 
-    uea(gj param0, int param1, int param2, int param3) {
+    uea(BattleScreen param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         try {
           this.field_h = 50;
-          this.field_f = new kv(128, 64);
+          this.field_f = new Sprite(128, 64);
           bu.a(0, this.field_f);
           param0.field_s.field_p.e(0, 0, param3);
           db.b(100);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

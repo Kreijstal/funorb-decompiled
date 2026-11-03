@@ -3,7 +3,7 @@
  */
 final class pga {
     static int field_a;
-    static js field_b;
+    static IntrusiveNodeHashTable field_b;
 
     final static du a(boolean param0, int param1) {
         int var3 = 0;
@@ -11,7 +11,7 @@ final class pga {
         int var4;
         du[] var5;
         var4 = BachelorFridge.field_y;
-        var5 = wga.d(0);
+        var5 = InvincibleEvent.d(0);
         var2 = var5;
         if (param0) {
           return (du) null;
@@ -24,9 +24,9 @@ final class pga {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 470) {
-          pga.a(-55);
+          pga.releaseStatics(-55);
           field_b = null;
           return;
         }

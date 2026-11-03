@@ -3,7 +3,7 @@
  */
 final class rha {
     private StringBuilder field_c;
-    static kv[][] field_e;
+    static Sprite[][] field_e;
     static String field_d;
     private int field_b;
     private boolean field_a;
@@ -25,7 +25,7 @@ final class rha {
           this.field_a = false;
           return;
         }
-        field_e = (kv[][]) null;
+        field_e = (Sprite[][]) null;
         this.field_a = false;
     }
 
@@ -45,7 +45,7 @@ final class rha {
           this.a(true, param0);
           this.a(83);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -67,50 +67,50 @@ final class rha {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = BachelorFridge.field_y;
-        if (ur.field_d < 0) {
+        if (WhirlpoolDigest.field_d < 0) {
           return;
         }
         var3 = -135 + param2;
         var4 = param0 - 35;
         var5 = 256;
-        if (ur.field_d < 75) {
-          var5 = (ur.field_d << 8) / 75;
+        if (WhirlpoolDigest.field_d < 75) {
+          var5 = (WhirlpoolDigest.field_d << 8) / 75;
         }
-        if (ur.field_d > 200) {
-          var5 = (250 - ur.field_d << 8) / 50;
+        if (WhirlpoolDigest.field_d > 200) {
+          var5 = (250 - WhirlpoolDigest.field_d << 8) / 50;
         }
-        bu.a(0, rl.field_r);
-        jb.d();
-        dg.d();
+        bu.a(0, BuffVendorSpecial.field_r);
+        TriangleRasterizer.d();
+        SoftwareRasterizer.clear();
         tc.b(-8144);
         if (var5 < 256) {
-          dg.f(0, 0, dg.field_i, dg.field_c, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0, -var5 + 256);
           db.b(110);
-          if (ur.field_d < 150) {
-            rl.field_r.f(var3, var4);
+          if (WhirlpoolDigest.field_d < 150) {
+            BuffVendorSpecial.field_r.drawHalfSize(var3, var4);
           } else {
             nd.field_g.a(var3 + 15, var4 + 10, var5);
           }
-          var6 = ur.field_d - 125;
+          var6 = WhirlpoolDigest.field_d - 125;
           if (var6 > 0 &&
             var6 < 50) {
             if (var6 < 20) {
               var7 = var6 * 256 / 20;
-              rg.field_j.d(var3, var4, var7);
+              rg.field_j.drawAdditive(var3, var4, var7);
             } else {
               if (30 > var6) {
-                rg.field_j.d(var3, var4, 256);
+                rg.field_j.drawAdditive(var3, var4, 256);
               } else {
                 var7 = (-(256 * var6) + 12800) / 20;
-                rg.field_j.d(var3, var4, var7);
+                rg.field_j.drawAdditive(var3, var4, var7);
               }
             }
           }
         } else {
           db.b(110);
-          if (ur.field_d >= 150) {
+          if (WhirlpoolDigest.field_d >= 150) {
             nd.field_g.a(var3 + 15, var4 + 10, var5);
-            var6 = ur.field_d - 125;
+            var6 = WhirlpoolDigest.field_d - 125;
             if (var6 > 0 &&
               var6 < 50) {
               regionExit1: {
@@ -118,37 +118,37 @@ final class rha {
                   var7 = var6 * 256 / 20;
                 } else {
                   if (30 > var6) {
-                    rg.field_j.d(var3, var4, 256);
+                    rg.field_j.drawAdditive(var3, var4, 256);
                     break regionExit1;
                   }
                   var7 = (-(256 * var6) + 12800) / 20;
                 }
-                rg.field_j.d(var3, var4, var7);
+                rg.field_j.drawAdditive(var3, var4, var7);
               }
             }
           } else {
-            rl.field_r.f(var3, var4);
-            var6 = ur.field_d - 125;
+            BuffVendorSpecial.field_r.drawHalfSize(var3, var4);
+            var6 = WhirlpoolDigest.field_d - 125;
             if (var6 > 0 &&
               var6 < 50) {
               if (var6 < 20) {
                 var7 = var6 * 256 / 20;
-                rg.field_j.d(var3, var4, var7);
+                rg.field_j.drawAdditive(var3, var4, var7);
               } else {
                 if (30 <= var6) {
                   var7 = (-(256 * var6) + 12800) / 20;
-                  rg.field_j.d(var3, var4, var7);
+                  rg.field_j.drawAdditive(var3, var4, var7);
                 } else {
-                  rg.field_j.d(var3, var4, 256);
+                  rg.field_j.drawAdditive(var3, var4, 256);
                 }
               }
             }
           }
         }
         if (param1) {
-          rha.c(-72);
+          rha.releaseStatics(-72);
         }
-        var6Lifetime1 = ur.field_d - 140;
+        var6Lifetime1 = WhirlpoolDigest.field_d - 140;
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {
@@ -169,28 +169,28 @@ final class rha {
           }
           discarded$0 = this.field_c.append(param1.toString());
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void c(int param0) {
-        field_e = (kv[][]) null;
+    public static void releaseStatics(int param0) {
+        field_e = (Sprite[][]) null;
         field_d = null;
         int var1 = -18 % ((40 - param0) / 37);
     }
 
-    final static void a(rk param0, lu param1, byte param2) {
+    final static void a(CreatureProfile param0, PacketBuffer param1, byte param2) {
         if (param2 >= -61) {
-          field_e = (kv[][]) null;
+          field_e = (Sprite[][]) null;
         }
         if (param0 == null) {
-          param1.d(-1, 0);
+          param1.writeByte(-1, 0);
           return;
         }
         try {
           param0.a((byte) -59, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rha.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rha.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

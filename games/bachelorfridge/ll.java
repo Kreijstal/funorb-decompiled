@@ -4,7 +4,7 @@
 final class ll extends pu {
     static String field_l;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, kv[] param5, int param6, int param7, po param8, int param9, int param10, kv[] param11, int param12, kv[] param13, po param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, BitmapFont param8, int param9, int param10, Sprite[] param11, int param12, Sprite[] param13, BitmapFont param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -18,12 +18,12 @@ final class ll extends pu {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
-        po var22 = null;
+        BitmapFont var22 = null;
         try {
-          tha.a(new lda(param5), param14, param7, new lda(param13), param9, param16, param6, param15, true, param2, param1, param8, new lda(param11), param18, param12, param10, param20, param3, param4, param19, param0);
+          DreamsSpecial.a(new lda(param5), param14, param7, new lda(param13), param9, param16, param6, param15, true, param2, param1, param8, new lda(param11), param18, param12, param10, param20, param3, param4, param19, param0);
           if (param17 != 256) {
-            var22 = (po) null;
-            ll.a(-16, -38, -63, 72, 88, (kv[]) null, -28, -64, (po) null, 105, -128, (kv[]) null, 110, (kv[]) null, (po) null, -76, 31, -87, 88, -62, 81);
+            var22 = (BitmapFont) null;
+            ll.a(-16, -38, -63, 72, 88, (Sprite[]) null, -28, -64, (BitmapFont) null, 105, -128, (Sprite[]) null, 110, (Sprite[]) null, (BitmapFont) null, -76, 31, -87, 88, -62, 81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,16 +60,16 @@ final class ll extends pu {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
-    final static fea a(byte[] param0, int param1, ee[] param2) {
+    final static BinaryBitmapFont a(byte[] param0, int param1, IndexedSprite[] param2) {
         int var8_int = 0;
         byte[] array$0 = null;
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
-        fea stackIn_28_0 = null;
+        BinaryBitmapFont stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -82,7 +82,7 @@ final class ll extends pu {
         int[] var5 = null;
         int[] var6 = null;
         byte[][] var7 = null;
-        fea var8 = null;
+        BinaryBitmapFont var8 = null;
         byte[] var9 = null;
         byte[] var10 = null;
         int var11 = 0;
@@ -187,7 +187,7 @@ final class ll extends pu {
               var16Lifetime1 = var16Lifetime1 + var14;
             }
           }
-          var8 = new fea(param0, var33, var34, var32, var31, var35);
+          var8 = new BinaryBitmapFont(param0, var33, var34, var32, var31, var35);
           var8.field_v = var8.field_v - 1;
           var8.field_B = var8.field_B - 1;
           var8.field_u = var8.field_u - 1;
@@ -209,15 +209,15 @@ final class ll extends pu {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
     public static void d(byte param0) {
         field_l = null;
         if (param0 != 63) {
-          po var2 = (po) null;
-          ll.a(52, 15, 22, -43, 103, (kv[]) null, -109, 112, (po) null, 123, 80, (kv[]) null, 125, (kv[]) null, (po) null, 89, -55, 32, -96, 61, 68);
+          BitmapFont var2 = (BitmapFont) null;
+          ll.a(52, 15, 22, -43, 103, (Sprite[]) null, -109, 112, (BitmapFont) null, 123, 80, (Sprite[]) null, 125, (Sprite[]) null, (BitmapFont) null, 89, -55, 32, -96, 61, 68);
         }
     }
 

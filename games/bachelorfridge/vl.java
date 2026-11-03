@@ -5,11 +5,11 @@ final class vl {
     static boolean[] field_e;
     static String field_a;
     static String field_b;
-    static sna field_d;
-    static ee field_c;
+    static UiComponent field_d;
+    static IndexedSprite field_c;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         field_e = null;

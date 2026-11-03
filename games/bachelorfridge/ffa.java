@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ffa extends kj {
+final class ffa extends TileEffect {
     static String field_i;
     private int field_g;
     static String[][] field_j;
-    private rb field_f;
+    private CranberryEvent field_f;
     static String field_h;
 
     final boolean b(int param0) {
@@ -55,13 +55,13 @@ final class ffa extends kj {
         return true;
     }
 
-    ffa(gj param0, rb param1, int param2, int param3) {
+    ffa(BattleScreen param0, CranberryEvent param1, int param2, int param3) {
         super(param0, param2, param3);
         try {
           this.field_f = param1;
           this.field_g = 80;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ffa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ffa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -202,14 +202,14 @@ final class ffa extends kj {
           re.field_D = param0;
           ep.a(param1, 8192);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ffa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ffa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, boolean param1, int param2) {
         int var4 = (400 + (-(this.field_g * 655360) + 52428800 >> 16)) * this.field_g / 80;
         if (param1) {
-          hr.field_c.a(param2, param0 + (-var4 - 64), 192);
+          DelegatingCanvas.field_c.a(param2, param0 + (-var4 - 64), 192);
           return;
         }
     }

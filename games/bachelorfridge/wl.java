@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wl extends sna {
+final class wl extends UiComponent {
     gba field_vb;
-    static kv[][] field_yb;
+    static Sprite[][] field_yb;
     static String field_wb;
-    private sna field_xb;
+    private UiComponent field_xb;
     private gba field_zb;
-    private sna field_Ab;
+    private UiComponent field_Ab;
 
-    private wl(long param0, sna param1, sna param2, gba param3) {
-        super(param0, (sna) null);
+    private wl(long param0, UiComponent param1, UiComponent param2, gba param3) {
+        super(param0, (UiComponent) null);
         try {
-          this.field_xb = new sna(0L, param2);
+          this.field_xb = new UiComponent(0L, param2);
           this.field_vb = new gba(0L, param3, true);
           this.field_zb = new gba(0L, param3, false);
           this.a(-1, this.field_xb);
@@ -21,7 +21,7 @@ final class wl extends sna {
           this.field_Ab = param1;
           this.field_xb.a(-1, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,8 +38,8 @@ final class wl extends sna {
         this.field_xb.field_sb = this.field_sb;
         var4 = 18 % ((78 - param2) / 48);
         this.field_xb.field_p = this.field_p;
-        this.field_vb.a(false);
-        this.field_zb.a(false);
+        this.field_vb.unlink(false);
+        this.field_zb.unlink(false);
         stackIn_3_0 = (this.field_Ab.field_sb <= this.field_xb.field_sb) ? 0 : 1;
         var5 = stackIn_3_0;
         stackIn_6_0 = (this.field_Ab.field_p <= this.field_xb.field_p) ? 0 : 1;
@@ -71,7 +71,7 @@ final class wl extends sna {
         }
     }
 
-    wl(String param0, sna param1, sna param2, gba param3) {
+    wl(String param0, UiComponent param1, UiComponent param2, gba param3) {
         this(ew.a((byte) 8, (CharSequence) ((Object) param0)), param1, param2, param3);
     }
 
@@ -166,11 +166,11 @@ final class wl extends sna {
         this.field_zb.b(this.field_Ab.field_sb, -this.field_Ab.field_kb, this.field_xb.field_sb, (byte) -117);
     }
 
-    public static void f(int param0) {
-        field_yb = (kv[][]) null;
+    public static void releaseStatics(int param0) {
+        field_yb = (Sprite[][]) null;
         field_wb = null;
         if (param0 != 0) {
-          field_yb = (kv[][]) null;
+          field_yb = (Sprite[][]) null;
         }
     }
 

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gda extends vd implements uja, lja {
+final class gda extends WidgetContainer implements uja, WidgetActionListener {
     dd field_E;
     private vn field_G;
-    private hf field_F;
-    private hf field_C;
+    private InteractiveWidget field_F;
+    private InteractiveWidget field_C;
 
     private final void d(byte param0) {
         if (param0 <= 29) {
@@ -14,7 +14,7 @@ final class gda extends vd implements uja, lja {
         if (!this.j(-111)) {
           return;
         }
-        gaa.a(this.field_G.field_w, -123);
+        gaa.a(this.field_G.text, -123);
     }
 
     private final boolean j(int param0) {
@@ -29,33 +29,33 @@ final class gda extends vd implements uja, lja {
     }
 
     public gda() {
-        super(0, 0, 496, 0, (qda) null);
-        this.field_G = new vn("", (pl) null, 12);
-        gha var1 = new gha(oc.field_l, 0, 0, 0, 0, 16777215, -1, 3, 0, jca.field_a.field_u, -1, 2147483647, true);
-        wj var2 = new wj(eq.field_f, var1, (pl) null);
-        this.field_F = new hf(ne.field_m, (pl) null);
-        this.field_C = new hf(bga.field_f, (pl) null);
-        this.field_G.field_h = cu.field_z;
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.field_G = new vn("", (WidgetListener) null, 12);
+        DefaultWidgetRenderer var1 = new DefaultWidgetRenderer(oc.field_l, 0, 0, 0, 0, 16777215, -1, 3, 0, jca.field_a.field_u, -1, 2147483647, true);
+        UiWidget var2 = new UiWidget(eq.field_f, var1, (WidgetListener) null);
+        this.field_F = new InteractiveWidget(ne.field_m, (WidgetListener) null);
+        this.field_C = new InteractiveWidget(bga.field_f, (WidgetListener) null);
+        this.field_G.tooltip = FloodAnimation.field_z;
         this.field_G.a(7, new tt(this.field_G));
         this.field_F.field_z = false;
-        this.field_F.field_f = (qda) ((Object) new ff());
-        this.field_C.field_f = (qda) ((Object) new pka());
-        this.field_G.field_f = (qda) ((Object) new oka(10000536));
+        this.field_F.renderer = (WidgetRenderer) ((Object) new ff());
+        this.field_C.renderer = (WidgetRenderer) ((Object) new pka());
+        this.field_G.renderer = (WidgetRenderer) ((Object) new oka(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
         var2.a(20, 50, (byte) 59, 270, var3);
         var3 += 50;
         this.c(var2, -123);
-        var3 = var3 + (5 + this.a(var3, this.field_G, gp.field_v, 170, saa.field_u, false));
+        var3 = var3 + (5 + this.a(var3, this.field_G, DreamsAnimation.field_v, 170, saa.field_u, false));
         this.field_F.a(-var5 + 496 >> 1, 40, (byte) 59, var5, var3);
         this.field_C.a(var4 + 3, 40, (byte) 59, 60, var3 + 15);
-        this.field_C.field_k = (pl) (this);
-        this.field_F.field_k = (pl) (this);
+        this.field_C.listener = (WidgetListener) (this);
+        this.field_F.listener = (WidgetListener) (this);
         this.c(this.field_F, 91);
         this.c(this.field_C, 27);
         this.field_E = new dd((uja) (this));
-        this.field_E.a(60 + this.field_G.field_p + this.field_G.field_s, 150, (byte) 59, -this.field_G.field_p - this.field_G.field_s + this.field_p - 60, 20);
+        this.field_E.a(60 + this.field_G.width + this.field_G.x, 150, (byte) 59, -this.field_G.width - this.field_G.x + this.width - 60, 20);
         this.c(this.field_E, 74);
         this.a(0, 55 + var3 + var4, (byte) 59, 496, 0);
     }
@@ -63,11 +63,11 @@ final class gda extends vd implements uja, lja {
     public final void a(int param0) {
         ((tt) (this.field_G.a(16728128))).d(-116);
         if (param0 != 14322) {
-          this.field_F = (hf) null;
+          this.field_F = (InteractiveWidget) null;
         }
     }
 
-    private final int a(int param0, wj param1, String param2, int param3, String param4, boolean param5) {
+    private final int a(int param0, UiWidget param1, String param2, int param3, String param4, boolean param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -108,7 +108,7 @@ final class gda extends vd implements uja, lja {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -119,9 +119,9 @@ final class gda extends vd implements uja, lja {
           int var3_int = -77 / ((-41 - param1) / 37);
           var4 = this.field_G;
           var5 = param0;
-          ((lka) ((Object) var4)).a((byte) 122, var5, false);
+          ((TextInputWidget) ((Object) var4)).a((byte) 122, var5, false);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gda.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gda.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -151,16 +151,16 @@ final class gda extends vd implements uja, lja {
         pv.a(20182, 1L);
     }
 
-    final void a(int param0, int param1, wj param2, int param3) {
+    final void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateMouseOver(param0, param1, param2, param3);
           this.field_F.field_z = this.j(-117);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gda.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gda.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final boolean a(int param0, int param1, char param2, wj param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -169,7 +169,7 @@ final class gda extends vd implements uja, lja {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param1) {
@@ -191,11 +191,11 @@ final class gda extends vd implements uja, lja {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    private final int a(String param0, String param1, int param2, byte param3, wj param4, int param5, int param6) {
+    private final int a(String param0, String param1, int param2, byte param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         int var9 = 0;
         nf var10 = null;
@@ -213,10 +213,10 @@ final class gda extends vd implements uja, lja {
           var11 = new ge(20, param5, param2 + 120, 25, param4, false, 120, 3, jca.field_a, 16777215, param0);
           this.c(var11, 111);
           var9 = -90 / ((param3 - 25) / 34);
-          var10 = new nf(((mca) ((Object) param4)).a(16728128), param1, 126, param5 + var11.field_q, 25 + param2, param6);
-          var10.field_k = (pl) (this);
+          var10 = new nf(((mca) ((Object) param4)).a(16728128), param1, 126, param5 + var11.height, 25 + param2, param6);
+          var10.listener = (WidgetListener) (this);
           this.c(var10, 30);
-          stackIn_1_0 = var10.field_q + var11.field_q;
+          stackIn_1_0 = var10.height + var11.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,7 +240,7 @@ final class gda extends vd implements uja, lja {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -253,17 +253,17 @@ final class gda extends vd implements uja, lja {
           param1.removeMouseListener(uc.field_m);
           param1.removeMouseMotionListener(uc.field_m);
           param1.removeFocusListener(uc.field_m);
-          oga.field_q = 0;
+          FlirtEvent.field_q = 0;
           if (param0 > -14) {
             java.awt.Component var3 = (java.awt.Component) null;
             gda.a(-19, (java.awt.Component) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gda.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gda.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(int param0, hf param1, int param2, byte param3, int param4) {
+    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         int discarded$1 = 0;
         RuntimeException var6 = null;
         String var7 = null;
@@ -283,7 +283,7 @@ final class gda extends vd implements uja, lja {
             return;
           }
           var7 = (String) null;
-          discarded$1 = this.a(7, (wj) null, (String) null, 77, (String) null, true);
+          discarded$1 = this.a(7, (UiWidget) null, (String) null, 77, (String) null, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -295,7 +295,7 @@ final class gda extends vd implements uja, lja {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -328,7 +328,7 @@ final class gda extends vd implements uja, lja {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -2,42 +2,42 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nha {
-    static ee field_a;
+    static IndexedSprite field_a;
     static String field_d;
     static vr field_c;
     static String field_b;
     static gba field_e;
 
     final static void a(int param0, bga param1, byte param2) {
-        pf var6 = null;
+        BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = sja.field_fb;
-          pf var3 = var6;
-          var6.c(param0, (byte) 110);
-          var6.field_g = var6.field_g + 1;
-          var4 = var6.field_g;
-          var6.d(1, 0);
+          BitPacketBuffer var3 = var6;
+          var6.writeCipheredByte(param0, (byte) 110);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(1, 0);
           if (param1.field_g != null) {
-            var6.d(param1.field_g.length, 0);
+            var6.writeByte(param1.field_g.length, 0);
             var6.a(0, -72, param1.field_g.length, param1.field_g);
           } else {
-            var6.d(0, 0);
+            var6.writeByte(0, 0);
           }
           var6.a(var4, 19);
-          var6.field_g = var6.field_g - 4;
+          var6.position = var6.position - 4;
           if (param2 >= -22) {
             bga var5 = (bga) null;
             nha.a(-98, (bga) null, (byte) 0);
           }
-          param1.field_i = var6.f(-76);
-          var6.b((byte) 117, var6.field_g - var4);
+          param1.field_i = var6.readInt(-76);
+          var6.writeLengthByte((byte) 117, var6.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_d = null;
         if (param0 != -18307) {
@@ -68,20 +68,20 @@ final class nha {
               var6_int = 0;
               param4 = DualLinkNode.field_l;
             } else {
-              if (param4 <= pw.field_x) {
+              if (param4 <= SnowAnimation.field_x) {
                 var6_int = 1;
               } else {
                 var6_int = 0;
-                param4 = pw.field_x;
+                param4 = SnowAnimation.field_x;
               }
             }
             if (param5 < DualLinkNode.field_l) {
               param5 = DualLinkNode.field_l;
               var7 = 0;
             } else {
-              if (pw.field_x < param5) {
+              if (SnowAnimation.field_x < param5) {
                 var7 = 0;
-                param5 = pw.field_x;
+                param5 = SnowAnimation.field_x;
               } else {
                 var7 = 1;
               }
@@ -130,7 +130,7 @@ final class nha {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "nha.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "nha.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -17,21 +17,21 @@ final class gd extends pu {
         return -var3 + (param2 + var3) / param0;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, kv param4, int param5, int param6, int param7, po param8, int param9, int param10) {
+    final static void a(int param0, int param1, int param2, byte param3, Sprite param4, int param5, int param6, int param7, BitmapFont param8, int param9, int param10) {
         try {
-          ou.field_b = param1;
+          IterableDualLinkDeque.field_b = param1;
           cga.field_p = param7;
           vc.field_c = param0;
-          rs.field_c = param2;
-          od.field_B = param4;
+          StatusEffectInfo.field_c = param2;
+          BuffVendorAnimation.field_B = param4;
           kt.field_j = param9;
           sha.field_m = param10;
           if (param3 > -57) {
             field_l = -90L;
           }
-          ima.field_r = param6;
+          TeleportEvent.field_r = param6;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
         }
     }
 

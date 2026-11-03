@@ -7,9 +7,9 @@ final class vu extends pv {
     private boolean field_n;
     int[][] field_m;
     static String field_o;
-    static ee[] field_k;
+    static IndexedSprite[] field_k;
     private int field_j;
-    static sna field_p;
+    static UiComponent field_p;
     static String field_l;
 
     private final int c(boolean param0) {
@@ -39,16 +39,16 @@ final class vu extends pv {
         if (this.field_g == 1) {
           this.field_f.field_v.a((byte) 57, this.field_f.field_g.field_o.field_b, 0);
           if (this.field_n) {
-            qm.a(29, 7758);
+            RasterBuffer.a(29, 7758);
           } else {
-            qm.a(30, 7758);
+            RasterBuffer.a(30, 7758);
           }
         }
         if (40 >= this.field_g &&
           0 == this.field_g % 8) {
-          this.field_m[this.field_j][0] = kla.a(15, m.field_a, -2147483648);
-          this.field_m[this.field_j][1] = kla.a(15, m.field_a, -2147483648);
-          this.field_m[this.field_j][2] = kla.a(10, m.field_a, -2147483648) + 20;
+          this.field_m[this.field_j][0] = DiveBomberAnimation.a(15, m.field_a, -2147483648);
+          this.field_m[this.field_j][1] = DiveBomberAnimation.a(15, m.field_a, -2147483648);
+          this.field_m[this.field_j][2] = DiveBomberAnimation.a(10, m.field_a, -2147483648) + 20;
           this.field_m[this.field_j][3] = 2;
           this.field_j = this.field_j + 1;
         }
@@ -96,7 +96,7 @@ final class vu extends pv {
         if (param0 > 116) {
           return false;
         }
-        vu.c((byte) 125);
+        vu.releaseStatics((byte) 125);
         return false;
     }
 
@@ -111,17 +111,17 @@ final class vu extends pv {
         this.field_f.field_k = this.field_f.b(true);
     }
 
-    vu(jfa param0, boolean param1) {
+    vu(FridgeCreature param0, boolean param1) {
         try {
           this.field_f = param0;
           this.field_n = param1 ? true : false;
           this.field_m = new int[5][4];
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_p = null;
         field_k = null;

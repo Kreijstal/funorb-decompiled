@@ -43,7 +43,7 @@ class cia extends IntrusiveNode {
         int fieldTemp$0 = this.field_o + this.field_m;
         this.field_o = this.field_o + this.field_m;
         if (fieldTemp$0 < 0) {
-          this.a(false);
+          this.unlink(false);
           return false;
         }
         this.field_q = this.field_q + this.field_g;
@@ -83,7 +83,7 @@ class cia extends IntrusiveNode {
         this.field_q = param0;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         if (param0 >= -70) {
           return;

@@ -3,9 +3,9 @@
  */
 final class du {
     int field_c;
-    static js field_a;
+    static IntrusiveNodeHashTable field_a;
     int field_d;
-    static ee field_b;
+    static IndexedSprite field_b;
     static int[] field_e;
 
     final static eq a(String param0, byte param1) {
@@ -23,18 +23,18 @@ final class du {
             var3 = (String) null;
             du.a((String) null, (byte) -83);
           }
-          if (dka.field_G == kq.field_j) {
+          if (ReportAbusePanel.field_G == kq.field_j) {
             stackIn_4_0 = null;
             return (eq) (stackIn_4_0);
           }
-          if (dka.field_G == ki.field_w &&
-            param0.equals(vh.field_w)) {
-            dka.field_G = tn.field_a;
+          if (ReportAbusePanel.field_G == OhNoAnimation.field_w &&
+            param0.equals(BagpipeAnimation.field_w)) {
+            ReportAbusePanel.field_G = GameClock.field_a;
             stackIn_8_0 = vo.field_d;
             return stackIn_8_0;
           }
-          vh.field_w = param0;
-          dka.field_G = kq.field_j;
+          BagpipeAnimation.field_w = param0;
+          ReportAbusePanel.field_G = kq.field_j;
           vo.field_d = null;
           stackIn_10_0 = null;
           return (eq) (stackIn_10_0);
@@ -48,7 +48,7 @@ final class du {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -61,10 +61,10 @@ final class du {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 8192) {
-          field_a = (js) null;
+          field_a = (IntrusiveNodeHashTable) null;
           field_a = null;
           field_e = null;
           return;

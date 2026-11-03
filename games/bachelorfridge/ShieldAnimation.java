@@ -1,0 +1,114 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ShieldAnimation extends EventAnimation {
+    static Sprite field_w;
+    static Sprite field_v;
+    private ShieldEvent field_x;
+
+    ShieldAnimation(BattleScreen param0, ShieldEvent param1) {
+        super(param0, param1);
+        try {
+          this.field_x = param1;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final void e(byte param0) {
+        CreatureActor var7 = null;
+        CreatureActor var8 = null;
+        int var5 = BachelorFridge.field_y;
+        BattleCreature var6 = this.field_x.creature.a(54, this.screen.field_h);
+        if (var6.isDown(119)) {
+          return;
+        }
+        DamageEffect var3 = (DamageEffect) (this.field_x.effects.b((byte) 90));
+        if (param0 >= -11) {
+          field_v = (Sprite) null;
+        } else {
+          al.a(110, this.field_x.moveId);
+          while (var3 != null) {
+            var7 = var3.target.a(-27449, this.screen);
+            if (var7 != null) {
+              this.addChild(27799, new ActorAnimation(this.screen, var7));
+              this.addChild(27799, new TileEffectAnimation(new nd(this.screen, var7.field_s.tileX, var7.field_s.tileY)));
+              this.addChild(27799, new wn(var7, kna.field_g[3], 24831));
+            }
+            var3.apply(var6, this.screen.field_h, 12);
+            var3 = (DamageEffect) (this.field_x.effects.c(0));
+          }
+          return;
+        }
+        al.a(110, this.field_x.moveId);
+        while (var3 != null) {
+          var8 = var3.target.a(-27449, this.screen);
+          if (var8 != null) {
+            this.addChild(27799, new ActorAnimation(this.screen, var8));
+            this.addChild(27799, new TileEffectAnimation(new nd(this.screen, var8.field_s.tileX, var8.field_s.tileY)));
+            this.addChild(27799, new wn(var8, kna.field_g[3], 24831));
+          }
+          var3.apply(var6, this.screen.field_h, 12);
+          var3 = (DamageEffect) (this.field_x.effects.c(0));
+        }
+    }
+
+    final static eq a(byte param0, boolean param1) {
+        int var3 = 31 / ((param0 + 55) / 54);
+        eq var2 = new eq(true);
+        var2.field_h = param1 ? true : false;
+        return var2;
+    }
+
+    final static void a(lda param0, lda param1, int param2, int param3, int param4, byte param5) {
+        try {
+          hi.field_a = param0;
+          st.field_b = param1;
+          cba.field_d = param2;
+          int var6_int = 68 % ((param5 - 1) / 47);
+          um.field_d = param4;
+          vt.field_k = param3;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nna.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    private final void b(boolean param0) {
+        if (param0) {
+          this.field_x = (ShieldEvent) null;
+        }
+    }
+
+    final boolean isFinished(byte param0) {
+        int fieldTemp$0 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
+        if (fieldTemp$0 >= 0) {
+          if (this.field_l == 25) {
+            jja.a(256, -1, 50);
+            this.e((byte) -68);
+            return false;
+          }
+          return false;
+        }
+        int var2 = 100 / ((param0 - 71) / 47);
+        this.b(false);
+        return true;
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_w = null;
+        field_v = null;
+        int var1 = -9 / ((param0 - 75) / 38);
+    }
+
+    static {
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static eq $cfr$intArgs$a$262119530e06(int param0, boolean param1) {
+        int var3 = 31 / ((param0 + 55) / 54);
+        eq var2 = new eq(true);
+        var2.field_h = param1 ? true : false;
+        return var2;
+    }
+}

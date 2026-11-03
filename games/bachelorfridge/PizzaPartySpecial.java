@@ -1,0 +1,109 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class PizzaPartySpecial extends SpecialOrder {
+    static String field_p;
+    static int[] field_q;
+
+    public static void releaseStatics(int param0) {
+        field_q = null;
+        field_p = null;
+        int var1 = 114 % ((-67 - param0) / 47);
+    }
+
+    final CreatureEvent createEvent(BattleState param0, int param1) {
+        int var10 = 0;
+        int var11 = 0;
+        int fieldTemp$0 = 0;
+        CreatureEvent stackIn_3_0 = null;
+        PizzaPartyEvent stackIn_26_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_30_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        PizzaPartyEvent var4 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        BoardTile var14 = null;
+        int var15 = 0;
+        BattleCreature var16 = null;
+        int[][] var20 = null;
+        var15 = BachelorFridge.field_y;
+        try {
+          var16 = this.creature.a(param1 + 9, param0);
+          var4 = new PizzaPartyEvent(this.moveId, new CreatureRef(var16));
+          var4.field_t = this.field_n;
+          var4.field_q = this.field_k;
+          var20 = var4.d(9268);
+          var6 = 17;
+          var7 = 17;
+          var8 = -1 + var6 >> 1;
+          var9 = -1 + var7 >> 1;
+          var4.field_u = 0;
+          if (param1 != 3) {
+            stackIn_3_0 = (CreatureEvent) null;
+            return stackIn_3_0;
+          }
+          for (var10 = 0; var6 > var10; var10++) {
+            for (var11 = 0; var11 < var7; var11++) {
+              if (var20[var10][var11] == 1) {
+                var12 = -var8 + (var10 + this.field_k);
+                var13 = this.field_n + var11 - var9;
+                if (0 <= var12 &&
+                  var12 < param0.width &&
+                  var13 >= 0 &&
+                  param0.height > var13) {
+                  var14 = param0.tiles[var12][var13];
+                  if (0 == var14.terrain &&
+                    var14.occupant == null &&
+                    6 > var4.field_u &&
+                    DiveBomberAnimation.a(10, param0.field_w, -2147483648) <= 3) {
+                    fieldTemp$0 = var4.field_u;
+                    var4.field_u = var4.field_u + 1;
+                    var4.field_s[fieldTemp$0] = new aj(var12, var13);
+                  }
+                }
+              }
+            }
+          }
+          if (var4.field_u > 0) {
+            var4.field_r = DiveBomberAnimation.a(var4.field_u, param0.field_w, -2147483648);
+          }
+          stackIn_26_0 = var4;
+          return (CreatureEvent) ((Object) stackIn_26_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_29_0 = var3;
+          stackIn_29_1 = new StringBuilder().append("ci.A(");
+          if (param0 == null) {
+            stackIn_30_2 = "null";
+          } else {
+            stackIn_30_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    PizzaPartySpecial(int param0, BattleCreature param1, int param2, int param3) {
+        super(param0, param1);
+        try {
+          this.field_n = param3;
+          this.field_k = param2;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ci.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    static {
+        field_q = new int[16384];
+        field_p = "Quick Chat Help";
+    }
+}

@@ -5,8 +5,8 @@ final class vt extends tia {
     static int field_k;
     static String field_m;
     static int[] field_l;
-    private eaa field_j;
-    private kv[] field_i;
+    private IntrusiveDeque field_j;
+    private Sprite[] field_i;
 
     final static void a(sga param0, int param1, int param2, boolean param3, int param4) {
         int var27_int = 0;
@@ -17,7 +17,7 @@ final class vt extends tia {
         boolean stackIn_41_4 = false;
         int stackIn_44_0 = 0;
         int stackIn_57_0 = 0;
-        sna stackIn_95_0;
+        UiComponent stackIn_95_0;
         int stackIn_95_1;
         int stackIn_95_2;
         int stackIn_95_3;
@@ -33,16 +33,16 @@ final class vt extends tia {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        eaa var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         ema var12 = null;
         int var13 = 0;
-        sna var14 = null;
-        sna var15 = null;
-        sna var16 = null;
-        sna var17 = null;
-        sna var18 = null;
+        UiComponent var14 = null;
+        UiComponent var15 = null;
+        UiComponent var16 = null;
+        UiComponent var17 = null;
+        UiComponent var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -82,15 +82,15 @@ final class vt extends tia {
           var6 = 0;
           var7 = 0;
           var8 = param2;
-          if (pw.field_w != null && (null != hr.field_b ||
+          if (SnowAnimation.field_w != null && (null != DelegatingCanvas.field_b ||
             null != re.field_F ||
             null != gma.field_c ||
             null != wda.field_c)) {
             for (var9 = 0; var9 < ld.field_q; var9++) {
-              var10_int = pw.field_w.field_Eb[var9] & 255;
-              if (hr.field_b != null &&
-                hr.field_b[var9] != null &&
-                hr.field_b[var9][var10_int]) {
+              var10_int = SnowAnimation.field_w.field_Eb[var9] & 255;
+              if (DelegatingCanvas.field_b != null &&
+                DelegatingCanvas.field_b[var9] != null &&
+                DelegatingCanvas.field_b[var9][var10_int]) {
                 var5_int = 1;
               }
               if (re.field_F != null &&
@@ -128,25 +128,25 @@ final class vt extends tia {
           stackIn_41_4 = (bga.field_m == param0);
           stackIn_44_0 = (!((sga) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, param3, true)) ? 0 : 1;
           var9Lifetime1 = stackIn_44_0;
-          var10 = param0.field_vb.field_z;
+          var10 = param0.field_vb.children;
           var11 = null;
           var12 = (ema) (var10.b((byte) 90));
           while (var12 != null) {
             var13 = 0;
-            if (var12.field_z == null) {
-              var12.field_Ib = new sna(0L, gi.field_c);
+            if (var12.children == null) {
+              var12.field_Ib = new UiComponent(0L, ClientException.field_c);
               var12.a(-1, var12.field_Ib);
-              var12.field_Bb = new sna(0L, wv.field_l);
-              if (eaa.field_c) {
+              var12.field_Bb = new UiComponent(0L, wv.field_l);
+              if (IntrusiveDeque.field_c) {
                 var12.a(-1, var12.field_Bb);
               }
               var12.field_Bb.field_N = 2;
-              var12.field_vb = new sna(0L, qs.field_m);
+              var12.field_vb = new UiComponent(0L, qs.field_m);
               var12.a(~param2, var12.field_vb);
               var12.d((byte) 118);
-              var12.field_Fb = new sna(0L, mh.field_k);
+              var12.field_Fb = new UiComponent(0L, mh.field_k);
               var12.a(-1, var12.field_Fb);
-              var12.field_Db = new sna(0L, tca.field_c);
+              var12.field_Db = new UiComponent(0L, JaggrabDownloader.field_c);
               var13 = 1;
               var12.a(-1, var12.field_Db);
             }
@@ -177,7 +177,7 @@ final class vt extends tia {
             if (param0 == qba.field_m) {
               var21 += 42;
             }
-            var33 = po.a(var12.field_Ib.field_jb, var32, var21);
+            var33 = BitmapFont.a(var12.field_Ib.field_jb, var32, var21);
             var20 = var33;
             stackIn_57_0 = (var33.equals(var12.field_Nb)) ? 0 : 1;
             var22 = stackIn_57_0;
@@ -212,16 +212,16 @@ final class vt extends tia {
               var12.field_Fb.field_w = var24_int;
               var12.field_Fb.field_G = var24_int;
               var12.field_Fb.field_ab = var24_int;
-              if (param0 == ak.field_q) {
-                if (!pw.field_w.field_Zb) {
-                  var12.field_Db.field_Z = ui.field_p;
+              if (param0 == SnowEvent.field_q) {
+                if (!SnowAnimation.field_w.field_Zb) {
+                  var12.field_Db.field_Z = FullHealSpecial.field_p;
                 }
               } else {
                 if (!var12.field_wb) {
                   if (!var12.field_Ob) {
                     var12.field_Fb.field_Z = go.field_r;
                   } else {
-                    var12.field_Ib.field_Z = lga.a(true, new String[]{var20}, ql.field_p);
+                    var12.field_Ib.field_Z = lga.a(true, new String[]{var20}, HailSpecial.field_p);
                     var12.field_Fb.field_Z = mc.field_i;
                     var12.field_Db.field_Z = im.field_b;
                   }
@@ -231,8 +231,8 @@ final class vt extends tia {
                 }
               }
               var25_int = 0;
-              if (null != pw.field_w &&
-                ps.d(-118) &&
+              if (null != SnowAnimation.field_w &&
+                ZombiesEvent.d(-118) &&
                 ge.field_F != var12.field_Eb) {
                 if (var12.field_Fb.field_Z != null) {
                   var26 = var12.field_Fb.e(-1) + gba.field_Bb * 2;
@@ -240,7 +240,7 @@ final class vt extends tia {
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Db.field_Z) {
-                  if (ak.field_q == param0) {
+                  if (SnowEvent.field_q == param0) {
                     var26Lifetime2 = 40;
                   } else {
                     var26Lifetime2 = var12.field_Db.e(-1) + gba.field_Bb * 2;
@@ -253,26 +253,26 @@ final class vt extends tia {
               stackIn_95_1 = rg.field_h;
               stackIn_95_2 = param2 + 31407;
               stackIn_95_3 = var12.field_sb;
-              if (!eaa.field_c) {
+              if (!IntrusiveDeque.field_c) {
                 stackIn_96_4 = 0;
               } else {
                 stackIn_96_4 = 42;
               }
-              ((sna) (Object) stackIn_95_0).a(stackIn_95_1, stackIn_95_2, stackIn_95_3 - stackIn_96_4 - var25_int, var25_int, var19);
+              ((UiComponent) (Object) stackIn_95_0).a(stackIn_95_1, stackIn_95_2, stackIn_95_3 - stackIn_96_4 - var25_int, var25_int, var19);
               var12.field_Bb.field_Z = Integer.toString(var12.field_Jb);
               var12.field_Bb.a(rg.field_h, param2 + 31407, 40, -40 + var12.field_sb, var19);
               if (var12.field_Ib.field_T &&
                 var22 != 0) {
                 jja.field_m = var12.field_Nb;
-                if (null != nt.field_y &&
-                  null != nt.field_y[var12.field_Kb]) {
-                  jja.field_m = jja.field_m + " - " + nt.field_y[var12.field_Kb];
+                if (null != SuperSpeedAllAnimation.field_y &&
+                  null != SuperSpeedAllAnimation.field_y[var12.field_Kb]) {
+                  jja.field_m = jja.field_m + " - " + SuperSpeedAllAnimation.field_y[var12.field_Kb];
                 }
               } else {
                 if (var12.field_Ib.field_T &&
-                  nt.field_y != null &&
-                  nt.field_y[var12.field_Kb] != null) {
-                  jja.field_m = nt.field_y[var12.field_Kb];
+                  SuperSpeedAllAnimation.field_y != null &&
+                  SuperSpeedAllAnimation.field_y[var12.field_Kb] != null) {
+                  jja.field_m = SuperSpeedAllAnimation.field_y[var12.field_Kb];
                 }
               }
               var19 = var19 + rg.field_h;
@@ -285,7 +285,7 @@ final class vt extends tia {
             if (var23 != null) {
               var24_intLifetime1 = var12.field_vb.field_jb.b(var23, -gba.field_Bb - gba.field_Bb + var12.field_sb);
               var12.field_vb.field_Z = var23;
-              var12.field_vb.field_cb = 256 * var12.field_Mb / kla.field_x;
+              var12.field_vb.field_cb = 256 * var12.field_Mb / DiveBomberAnimation.field_x;
               var12.field_vb.a(rg.field_h * var24_intLifetime1, 31407, -(gba.field_Bb * 2) + var12.field_sb, gba.field_Bb, var19);
               var19 = var19 + var24_intLifetime1 * rg.field_h;
             }
@@ -293,13 +293,13 @@ final class vt extends tia {
               var12.field_hb = var19 - var12.field_p;
             }
             if (var13 != 0) {
-              param0.field_vb.a(false, var12, (sna) (var11), 2);
+              param0.field_vb.a(false, var12, (UiComponent) (var11), 2);
             }
             if (var12.field_R != 0 &&
               !var12.f((byte) 21)) {
               if (var12.field_Fb.field_R == 0) {
                 if (var12.field_Db.field_R != 0) {
-                  od.a(var12.field_Eb, param1, 2);
+                  BuffVendorAnimation.a(var12.field_Eb, param1, 2);
                 } else {
                   rda.a((byte) -104, 0, 0, param0, jc.field_r, var12, nfa.field_a);
                 }
@@ -314,7 +314,7 @@ final class vt extends tia {
               if (~ge.field_F != ~var12.field_Eb) {
                 if (var5_int != 0 &&
                   !var12.field_zb) {
-                  var24Lifetime2 = lga.a(true, new String[]{var20}, in.field_d);
+                  var24Lifetime2 = lga.a(true, new String[]{var20}, DualLinkDeque.field_d);
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
@@ -324,7 +324,7 @@ final class vt extends tia {
                   if (var7 > var12.field_Gb) {
                     var25_int = var7 - var12.field_Gb;
                     if (var25_int == 1) {
-                      var24Lifetime2 = lga.a(true, new String[]{var20}, sna.field_C);
+                      var24Lifetime2 = lga.a(true, new String[]{var20}, UiComponent.field_C);
                     }
                     var24Lifetime2 = lga.a(true, new String[]{var20, Integer.toString(var25_int)}, pi.field_h);
                   } else {
@@ -347,7 +347,7 @@ final class vt extends tia {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_zb) {
-                  var24Lifetime2 = fla.field_p;
+                  var24Lifetime2 = ShieldSpecial.field_p;
                 } else {
                   if (var7 <= var12.field_Gb) {
                     if (var12.field_Jb < var6) {
@@ -367,7 +367,7 @@ final class vt extends tia {
                   } else {
                     var25_int = -var12.field_Gb + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = bk.field_w;
+                      var24Lifetime2 = SpiltMilkAnimation.field_w;
                     }
                     var24Lifetime2 = lga.a(true, new String[]{null, Integer.toString(var25_int)}, rj.field_o);
                   }
@@ -383,11 +383,11 @@ final class vt extends tia {
                 var25 = null;
                 var26Lifetime1 = 0;
                 for (var27_int = 0; var27_int < ld.field_q; var27_int++) {
-                  var28 = 255 & pw.field_w.field_Eb[var27_int];
+                  var28 = 255 & SnowAnimation.field_w.field_Eb[var27_int];
                   var29 = 0;
-                  if (hr.field_b != null &&
-                    null != hr.field_b[var27_int] &&
-                    hr.field_b[var27_int][var28] &&
+                  if (DelegatingCanvas.field_b != null &&
+                    null != DelegatingCanvas.field_b[var27_int] &&
+                    DelegatingCanvas.field_b[var27_int][var28] &&
                     !var12.field_zb) {
                     var29 = 1;
                   }
@@ -435,8 +435,8 @@ final class vt extends tia {
                     }
                   }
                 }
-                if (ak.field_q == param0 &&
-                  ps.d(param2 - 124)) {
+                if (SnowEvent.field_q == param0 &&
+                  ZombiesEvent.d(param2 - 124)) {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + qn.field_h + (String) (var25);
                   } else {
@@ -449,9 +449,9 @@ final class vt extends tia {
                     var24Lifetime2 = var34 + "<br>" + ra.field_l + (String) (var25);
                   }
                 }
-                if (ak.field_q == param0 &&
-                  !ps.d(-121)) {
-                  var27 = pw.field_w.field_Jb;
+                if (SnowEvent.field_q == param0 &&
+                  !ZombiesEvent.d(-121)) {
+                  var27 = SnowAnimation.field_w.field_Jb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + lga.a(true, new String[]{var27}, ef.field_m);
                 }
                 jja.field_m = (String) (var24Lifetime2);
@@ -470,11 +470,11 @@ final class vt extends tia {
           } else {
             stackIn_217_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_216_0), ((StringBuilder) (Object) stackIn_216_1).append(stackIn_217_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_216_0), ((StringBuilder) (Object) stackIn_216_1).append(stackIn_217_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 != 0) {
           return;
@@ -482,20 +482,20 @@ final class vt extends tia {
         field_l = null;
     }
 
-    vt(gj param0, ad param1) {
+    vt(BattleScreen param0, CreatureActor param1) {
         super(param0, param1);
         int var3_int = 0;
         int var4 = 0;
         try {
           var3_int = qq.field_i.length;
-          this.field_i = new kv[var3_int];
+          this.field_i = new Sprite[var3_int];
           for (var4 = 0; var4 < var3_int; var4++) {
-            this.field_i[var4] = qq.field_i[var4].a();
+            this.field_i[var4] = qq.field_i[var4].toRgbSprite();
           }
-          this.field_j = new eaa();
+          this.field_j = new IntrusiveDeque();
           this.field_g = 192;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -524,7 +524,7 @@ final class vt extends tia {
     final void a(int param0, int param1, int param2) {
         int var5 = BachelorFridge.field_y;
         if (param1 != 25415) {
-          vt.b(-62);
+          vt.releaseStatics(-62);
         }
         b var4 = (b) (this.field_j.b((byte) 90));
         while (var4 != null) {

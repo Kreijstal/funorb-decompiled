@@ -15,8 +15,8 @@ final class dba {
 
     final static int b(byte param0) {
         ga.field_c.b((byte) 102);
-        if (!aka.field_G.c((byte) 69)) {
-          return sca.a(param0 ^ 72);
+        if (!HomingMissileAnimation.field_G.c((byte) 69)) {
+          return MouseWheelInput.a(param0 ^ 72);
         }
         if (param0 == 72) {
           return 0;

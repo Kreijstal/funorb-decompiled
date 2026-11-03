@@ -5,7 +5,7 @@ final class lda {
     static String field_d;
     static String field_b;
     static int field_a;
-    private kv[] field_c;
+    private Sprite[] field_c;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param1 > 8) {
@@ -17,23 +17,23 @@ final class lda {
         hp.a(param4, param2, (byte) 108, param0, this.field_c, param3);
     }
 
-    final static rma a(String param0, int param1, byte param2) {
-        dm var3 = null;
+    final static SocketConnector a(String param0, int param1, byte param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        dm stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new dm();
+          var3 = new ProxySocketConnector();
           if (param2 >= -111) {
             field_a = -15;
           }
-          ((rma) ((Object) var3)).field_a = param0;
-          ((rma) ((Object) var3)).field_b = param1;
+          ((SocketConnector) ((Object) var3)).host = param0;
+          ((SocketConnector) ((Object) var3)).port = param1;
           stackIn_3_0 = var3;
-          return (rma) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -44,7 +44,7 @@ final class lda {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -70,11 +70,11 @@ final class lda {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        pf var5 = null;
+        BitPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param2);
-          if (!wc.a(0, var6)) {
+          if (!HazmatSpecial.a(0, var6)) {
             stackIn_2_0 = mk.field_f;
             return stackIn_2_0;
           }
@@ -90,29 +90,29 @@ final class lda {
             stackIn_12_0 = lga.a(true, new String[]{param2}, rt.field_c);
             return stackIn_12_0;
           }
-          if (maa.field_v >= 100 &&
-            0 >= dm.field_f) {
+          if (SuperSpeedAnimation.field_v >= 100 &&
+            0 >= ProxySocketConnector.field_f) {
             stackIn_16_0 = he.field_m;
             return stackIn_16_0;
           }
           if (param0 != -26181) {
             field_d = (String) null;
           }
-          if (maa.field_v >= 200) {
+          if (SuperSpeedAnimation.field_v >= 200) {
             stackIn_22_0 = he.field_m;
             return stackIn_22_0;
           }
-          if (bna.a((byte) 5, param2)) {
+          if (DisableAnimation.a((byte) 5, param2)) {
             stackIn_25_0 = lga.a(true, new String[]{param2}, bda.field_p);
             return stackIn_25_0;
           }
           var5 = sja.field_fb;
-          var5.c(param1, (byte) 116);
-          var5.field_g = var5.field_g + 1;
-          var4 = var5.field_g;
-          var5.d(0, 0);
-          var5.a((byte) -50, param2);
-          var5.b((byte) 124, -var4 + var5.field_g);
+          var5.writeCipheredByte(param1, (byte) 116);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(0, 0);
+          var5.writeString((byte) -50, param2);
+          var5.writeLengthByte((byte) 124, -var4 + var5.position);
           stackIn_27_0 = null;
           return (String) (stackIn_27_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,21 +125,21 @@ final class lda {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 90 % ((-75 - param0) / 49);
         field_d = null;
         field_b = null;
     }
 
-    lda(kv[] param0) {
+    lda(Sprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

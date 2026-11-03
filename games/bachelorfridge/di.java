@@ -38,16 +38,16 @@ final class di extends pu {
         RuntimeException decompiledCaughtException = null;
         var5 = BachelorFridge.field_y;
         try {
-          if (fq.field_s == null) {
+          if (HomingMissileSpecial.field_s == null) {
             stackIn_3_0 = null;
             return (nea) (stackIn_3_0);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = fq.a(0, var6);
+          var2 = HomingMissileSpecial.a(0, var6);
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (nea) (fq.field_s.a((long)var2.hashCode(), (byte) -87));
+          var3 = (nea) (HomingMissileSpecial.field_s.a((long)var2.hashCode(), (byte) -87));
           while (true) {
             if (var3 == null) {
               if (param1 < -110) {
@@ -58,12 +58,12 @@ final class di extends pu {
               return (nea) (stackIn_18_0);
             }
             var7 = (CharSequence) ((Object) var3.field_xb);
-            var4 = fq.a(0, var7);
+            var4 = HomingMissileSpecial.a(0, var7);
             if (var4 == null) {
               var4 = var3.field_xb;
             }
             if (!var4.equals(var2)) {
-              var3 = (nea) (fq.field_s.a((byte) -31));
+              var3 = (nea) (HomingMissileSpecial.field_s.a((byte) -31));
               continue;
             }
             break;
@@ -80,7 +80,7 @@ final class di extends pu {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -93,10 +93,10 @@ final class di extends pu {
           st.field_c = hca.a("benefits", vb.field_j, 101, "members_benefits_price");
           f.field_c = hca.a("benefits", vb.field_j, param0 - 167, "members_benefits_logo");
           ik.field_l = gw.a("benefits", "members_benefits_screenshots", vb.field_j, param0 - 143);
-          pp.a(qk.field_k, -84, qq.field_l);
-          gd.a(param0, -2400, 40, (byte) -85, st.field_c, 16744576, 80, 2, aha.field_D, 80, 15);
-          oi.a(3, ik.field_l);
-          kl.a((byte) 94, f.field_c);
+          EventEffect.a(qk.field_k, -84, qq.field_l);
+          gd.a(param0, -2400, 40, (byte) -85, st.field_c, 16744576, 80, 2, LinkTextWidget.field_D, 80, 15);
+          ResetAnimation.a(3, ik.field_l);
+          TBomberSpecial.a((byte) 94, f.field_c);
           return true;
         }
         return false;
@@ -115,23 +115,23 @@ final class di extends pu {
           if (!param0) {
             return;
           }
-          var2 = (cq) (rma.field_d.b((byte) 90));
+          var2 = (cq) (SocketConnector.field_d.b((byte) 90));
           while (var2 != null) {
-            if (!var2.field_h.a((byte) -106)) {
-              var2.a(false);
+            if (!var2.field_h.isLinked((byte) -106)) {
+              var2.unlink(false);
             } else {
               var2.field_i.f(var2.field_f * b.field_u + 128 >> 8);
             }
-            var2 = (cq) (rma.field_d.c(0));
+            var2 = (cq) (SocketConnector.field_d.c(0));
           }
           if (jha.field_i != null) {
             var2Lifetime1 = (cq) (jha.field_i.b((byte) 90));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_h.a((byte) -106);
+              stackIn_14_0 = var2Lifetime1.field_h.isLinked((byte) -106);
               if (stackIn_14_0) {
                 var2Lifetime1.field_i.f(var2Lifetime1.field_f * b.field_u + 128 >> 8);
               } else {
-                var2Lifetime1.a(false);
+                var2Lifetime1.unlink(false);
               }
               var2Lifetime1 = (cq) (jha.field_i.c(0));
             }
@@ -141,11 +141,11 @@ final class di extends pu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "di.D(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "di.D(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -53) {
           di.a(false, 44);
           field_l = null;

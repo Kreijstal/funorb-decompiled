@@ -72,7 +72,7 @@ final class uh {
         int stackIn_54_1 = 0;
         int stackIn_67_0 = 0;
         int stackIn_68_1 = 0;
-        lu var1;
+        PacketBuffer var1;
         int var2;
         uh[] var3;
         int var4;
@@ -98,35 +98,35 @@ final class uh {
         int var7_intLifetime4;
         int var8Lifetime1;
         int var8Lifetime2;
-        var1 = new lu(param0);
-        var1.field_g = param0.length - 2;
-        var2 = var1.e((byte) 99);
+        var1 = new PacketBuffer(param0);
+        var1.position = param0.length - 2;
+        var2 = var1.readUnsignedShort((byte) 99);
         var3 = new uh[var2];
         for (var4 = 0; var4 < var2; var4++) {
           var3[var4] = new uh();
         }
-        var1.field_g = param0.length - 7 - var2 * 8;
-        var4Lifetime1 = var1.e((byte) 91);
-        var5 = var1.e((byte) 84);
-        var6 = (var1.b(16711935) & 255) + 1;
+        var1.position = param0.length - 7 - var2 * 8;
+        var4Lifetime1 = var1.readUnsignedShort((byte) 91);
+        var5 = var1.readUnsignedShort((byte) 84);
+        var6 = (var1.readUnsignedByte(16711935) & 255) + 1;
         for (var7_int = 0; var7_int < var2; var7_int++) {
-          var3[var7_int].field_b = var1.e((byte) 127);
+          var3[var7_int].field_b = var1.readUnsignedShort((byte) 127);
         }
         for (var7_intLifetime1 = 0; var7_intLifetime1 < var2; var7_intLifetime1++) {
-          var3[var7_intLifetime1].field_h = var1.e((byte) 107);
+          var3[var7_intLifetime1].field_h = var1.readUnsignedShort((byte) 107);
         }
         for (var7_intLifetime2 = 0; var7_intLifetime2 < var2; var7_intLifetime2++) {
-          var3[var7_intLifetime2].field_i = var1.e((byte) 67);
+          var3[var7_intLifetime2].field_i = var1.readUnsignedShort((byte) 67);
         }
         for (var7_intLifetime3 = 0; var7_intLifetime3 < var2; var7_intLifetime3++) {
-          var3[var7_intLifetime3].field_a = var1.e((byte) 107);
+          var3[var7_intLifetime3].field_a = var1.readUnsignedShort((byte) 107);
         }
         for (var7_intLifetime4 = 0; var7_intLifetime4 < var2; var7_intLifetime4++) {
           var8_ref_uh = var3[var7_intLifetime4];
           var8_ref_uh.field_f = var4Lifetime1 - var8_ref_uh.field_i - var8_ref_uh.field_b;
           var8_ref_uh.field_c = var5 - var8_ref_uh.field_a - var8_ref_uh.field_h;
         }
-        var1.field_g = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
+        var1.position = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
         var17 = new int[var6];
         var16 = var17;
         var7 = var16;
@@ -139,12 +139,12 @@ final class uh {
         for (var8Lifetime1 = 0; var8Lifetime1 < var2; var8Lifetime1++) {
           var3[var8Lifetime1].field_e = var7;
         }
-        var1.field_g = 0;
+        var1.position = 0;
         for (var8Lifetime2 = 0; var8Lifetime2 < var2; var8Lifetime2++) {
           var9 = var3[var8Lifetime2];
           var10 = var9.field_i * var9.field_a;
           var9.field_d = new byte[var10];
-          var11 = var1.b(16711935);
+          var11 = var1.readUnsignedByte(16711935);
           if ((var11 & 2) == 0) {
             if ((var11 & 1) == 0) {
               for (var12 = 0; var12 < var10; var12++) {

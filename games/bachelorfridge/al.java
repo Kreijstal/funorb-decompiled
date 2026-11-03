@@ -80,7 +80,7 @@ final class al {
             } else {
               stackIn_13_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -89,28 +89,28 @@ final class al {
         }
     }
 
-    final static void b(int param0) {
+    final static void releaseStatics(int param0) {
         if (param0 != -18073) {
           return;
         }
-        eha.field_s = null;
-        baa.field_P = (byte[][]) null;
-        fd.field_D = null;
+        InsanoSauceSpecial.field_s = null;
+        BananarangAnimation.field_P = (byte[][]) null;
+        AirstrikeAnimation.field_D = null;
         hk.field_f = null;
         lq.field_A = null;
         fl.field_j = null;
     }
 
-    final static oha a(int param0, int param1) {
+    final static MoveDefinition a(int param0, int param1) {
         int var3 = 0;
         int var2;
         int var4;
         var4 = BachelorFridge.field_y;
         var2 = -33 % ((param0 - 28) / 58);
-        for (var3 = 0; ur.field_e.length > var3; var3++) {
-          if (null != ur.field_e[var3] &&
-            param1 == ur.field_e[var3].field_j) {
-            return ur.field_e[var3];
+        for (var3 = 0; WhirlpoolDigest.field_e.length > var3; var3++) {
+          if (null != WhirlpoolDigest.field_e[var3] &&
+            param1 == WhirlpoolDigest.field_e[var3].field_j) {
+            return WhirlpoolDigest.field_e[var3];
           }
         }
         return null;

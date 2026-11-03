@@ -4,20 +4,20 @@
 import java.io.*;
 
 final class qja extends bf {
-    nq field_i;
+    CreatureRef field_i;
 
     final static void a(int param0) {
         fr.field_n = false;
         wba.field_a = null;
-        ta.field_b = null;
+        SectorCacheStore.field_b = null;
         if (param0 != 0) {
           return;
         }
-        vka.field_p = null;
+        GasCloudSpecial.field_p = null;
         mq.field_a = null;
     }
 
-    final static void b(int param0, lu param1) {
+    final static void b(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -69,7 +69,7 @@ final class qja extends bf {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -78,38 +78,38 @@ final class qja extends bf {
         }
     }
 
-    final void a(op param0, int param1) {
+    final void a(BattleState param0, int param1) {
         try {
           if (param1 != -26281) {
-            this.field_i = (nq) null;
+            this.field_i = (CreatureRef) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qja.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qja.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    qja(nq param0) {
+    qja(CreatureRef param0) {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, lu param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
-          er.a(this.field_i, 123, param1);
+          FlirtAnimation.a(this.field_i, 123, param1);
           int var3_int = -82 / ((param0 + 53) / 50);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qja.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qja.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    qja(lu param0) {
+    qja(PacketBuffer param0) {
         try {
           this.field_i = qi.a(param0, (byte) 19);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

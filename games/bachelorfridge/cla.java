@@ -6,7 +6,7 @@ import java.util.*;
 final class cla {
     static byte[] field_a;
 
-    final static void a(byte param0, eaa param1, int param2, Random param3) {
+    final static void a(byte param0, IntrusiveDeque param1, int param2, Random param3) {
         lh var4 = null;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -24,9 +24,9 @@ final class cla {
           var4 = (lh) (param1.b((byte) 90));
           while (var4 != null) {
             if (var4.b(true)) {
-              var4.field_k = (int)((double)(kla.a(64, param3, -2147483648) + 176) * -Math.abs(100.0 * Math.sin((double)(108 - param2) / 300.0)));
-              var4.field_p = -(int)((double)(128 + kla.a(10000, param3, -2147483648)) * Math.sin(var4.field_r));
-              var4.field_g = -(int)((double)(128 + kla.a(10000, param3, -2147483648)) * Math.cos(var4.field_r));
+              var4.field_k = (int)((double)(DiveBomberAnimation.a(64, param3, -2147483648) + 176) * -Math.abs(100.0 * Math.sin((double)(108 - param2) / 300.0)));
+              var4.field_p = -(int)((double)(128 + DiveBomberAnimation.a(10000, param3, -2147483648)) * Math.sin(var4.field_r));
+              var4.field_g = -(int)((double)(128 + DiveBomberAnimation.a(10000, param3, -2147483648)) * Math.cos(var4.field_r));
             }
             var4 = (lh) (param1.c(param0 ^ 11));
           }
@@ -47,11 +47,11 @@ final class cla {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 34 / ((param0 - 24) / 48);
     }

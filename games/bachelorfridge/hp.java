@@ -4,7 +4,7 @@
 final class hp {
     static hga field_d;
     static boolean field_a;
-    static kv[] field_b;
+    static Sprite[] field_b;
     static int field_c;
 
     final static boolean a(int param0, byte param1, int[] param2) {
@@ -29,7 +29,7 @@ final class hp {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -46,10 +46,10 @@ final class hp {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            nb.field_q = param1;
+            ScavengerEvent.field_q = param1;
             try {
               if (param2 != 3) {
-                hp.a(106);
+                hp.releaseStatics(106);
               }
               var6 = param0.getParameter("cookieprefix");
               var5 = var6;
@@ -68,9 +68,9 @@ final class hp {
               ac.a("document.cookie=\"" + var5Lifetime6 + "\"", param0, 119);
             } catch (Throwable throwable) {
             }
-            eha.a(-123, param0);
+            InsanoSauceSpecial.a(-123, param0);
           } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "hp.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw pe.wrapException((Throwable) ((Object) runtimeException), "hp.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -79,7 +79,7 @@ final class hp {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         int var1 = 31 % ((-6 - param0) / 38);
@@ -110,11 +110,11 @@ final class hp {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, kv[] param4, int param5) {
+    final static void a(int param0, int param1, byte param2, int param3, Sprite[] param4, int param5) {
         int var22 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -196,71 +196,71 @@ final class hp {
               var20 = param5 + var8 * param3 / (var9 + var8);
               var19 = param5 + var8 * param3 / (var9 + var8);
             }
-            dg.a(qb.field_m);
+            SoftwareRasterizer.saveClip(qb.field_m);
             if (param4[0] != null) {
-              dg.c(param1, param5, var17, var19);
-              param4[0].e(param1, param5);
-              dg.b(qb.field_m);
+              SoftwareRasterizer.intersectClip(param1, param5, var17, var19);
+              param4[0].draw(param1, param5);
+              SoftwareRasterizer.restoreClip(qb.field_m);
             }
             if (null != param4[2]) {
-              dg.c(var18, param5, var11, var19);
-              param4[2].e(var14, param5);
-              dg.b(qb.field_m);
+              SoftwareRasterizer.intersectClip(var18, param5, var11, var19);
+              param4[2].draw(var14, param5);
+              SoftwareRasterizer.restoreClip(qb.field_m);
             }
             if (param4[6] != null) {
-              dg.c(param1, var20, var17, var12);
-              param4[6].e(param1, var16);
-              dg.b(qb.field_m);
+              SoftwareRasterizer.intersectClip(param1, var20, var17, var12);
+              param4[6].draw(param1, var16);
+              SoftwareRasterizer.restoreClip(qb.field_m);
             }
             if (param4[8] != null) {
-              dg.c(var18, var20, var11, var12);
-              param4[8].e(var14, var16);
-              dg.b(qb.field_m);
+              SoftwareRasterizer.intersectClip(var18, var20, var11, var12);
+              param4[8].draw(var14, var16);
+              SoftwareRasterizer.restoreClip(qb.field_m);
             }
             if (null != param4[1] &&
               param4[1].field_n != 0) {
-              dg.c(var17, param5, var18, var19);
+              SoftwareRasterizer.intersectClip(var17, param5, var18, var19);
               for (var21 = var13; var21 < var14; var21 = var21 + param4[1].field_n) {
-                param4[1].e(var21, param5);
+                param4[1].draw(var21, param5);
               }
-              dg.b(qb.field_m);
+              SoftwareRasterizer.restoreClip(qb.field_m);
             }
             if (null != param4[7] &&
               param4[7].field_n != 0) {
-              dg.c(var17, var20, var18, var12);
+              SoftwareRasterizer.intersectClip(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var21Lifetime1 < var14; var21Lifetime1 = var21Lifetime1 + param4[7].field_n) {
-                param4[7].e(var21Lifetime1, var16);
+                param4[7].draw(var21Lifetime1, var16);
               }
-              dg.b(qb.field_m);
+              SoftwareRasterizer.restoreClip(qb.field_m);
             }
             if (param4[3] != null &&
               0 != param4[3].field_o) {
-              dg.c(param1, var19, var17, var20);
+              SoftwareRasterizer.intersectClip(param1, var19, var17, var20);
               for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param4[3].field_o) {
-                param4[3].e(param1, var21Lifetime2);
+                param4[3].draw(param1, var21Lifetime2);
               }
-              dg.b(qb.field_m);
+              SoftwareRasterizer.restoreClip(qb.field_m);
             }
             if (param4[5] != null &&
               0 != param4[5].field_o) {
-              dg.c(var18, var19, var11, var20);
+              SoftwareRasterizer.intersectClip(var18, var19, var11, var20);
               for (var21Lifetime3 = var15; var16 > var21Lifetime3; var21Lifetime3 = var21Lifetime3 + param4[5].field_o) {
-                param4[5].e(var14, var21Lifetime3);
+                param4[5].draw(var14, var21Lifetime3);
               }
-              dg.b(qb.field_m);
+              SoftwareRasterizer.restoreClip(qb.field_m);
             }
             if (null != param4[4] &&
               param4[4].field_n != 0) {
               if (0 == param4[4].field_o) {
                 return;
               }
-              dg.c(var17, var19, var18, var20);
+              SoftwareRasterizer.intersectClip(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param4[4].field_o) {
                 for (var22 = var13; var14 > var22; var22 = var22 + param4[4].field_n) {
-                  param4[4].e(var22, var21Lifetime4);
+                  param4[4].draw(var22, var21Lifetime4);
                 }
               }
-              dg.b(qb.field_m);
+              SoftwareRasterizer.restoreClip(qb.field_m);
             }
             return;
           }
@@ -275,7 +275,7 @@ final class hp {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
         }
     }
 

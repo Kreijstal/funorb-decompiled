@@ -3,16 +3,16 @@
  */
 final class ska extends k {
     private int field_l;
-    static kv field_k;
+    static Sprite field_k;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 1) {
           return;
         }
         field_k = null;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_9_1 = false;
@@ -26,11 +26,11 @@ final class ska extends k {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              stackIn_9_1 = (param1.b(param0 ^ -16711866) == 1);
+              stackIn_9_1 = (param1.readUnsignedByte(param0 ^ -16711866) == 1);
               this.field_f = stackIn_9_1;
             }
           } else {
-            this.field_l = param1.b(16711935);
+            this.field_l = param1.readUnsignedByte(16711935);
           }
           if (param0 != -71) {
             this.a(-58, -67);
@@ -46,7 +46,7 @@ final class ska extends k {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -584,15 +584,15 @@ final class ska extends k {
         int var5;
         int var8;
         int var9;
-        lu var10;
+        PacketBuffer var10;
         int[] var11;
         int[] var18;
         int[] var19;
         int[] var11Lifetime1;
         var9 = BachelorFridge.field_y;
         if (param1 != 0) {
-          var10 = (lu) null;
-          this.a((byte) -21, (lu) null, -72);
+          var10 = (PacketBuffer) null;
+          this.a((byte) -21, (PacketBuffer) null, -72);
         }
         var11 = this.field_j.a(param0, ~param1);
         var3 = var11;

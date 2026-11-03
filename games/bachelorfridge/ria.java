@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class ria extends gca {
-    private eaa field_j;
-    private kv field_l;
+    private IntrusiveDeque field_j;
+    private Sprite field_l;
     static vr field_i;
-    static sna field_k;
+    static UiComponent field_k;
 
     final boolean a(boolean param0, boolean param1) {
         cia var3 = null;
@@ -48,11 +48,11 @@ final class ria extends gca {
 
     public ria() {
         super(29);
-        this.field_j = new eaa();
-        this.field_l = ff.field_u.a();
+        this.field_j = new IntrusiveDeque();
+        this.field_l = ff.field_u.toRgbSprite();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 != 127) {
           return;
@@ -63,9 +63,9 @@ final class ria extends gca {
     private final void e(byte param0) {
         int var3 = 0;
         cia var4 = null;
-        int var2 = kla.a(256, vd.field_z, -2147483648);
+        int var2 = DiveBomberAnimation.a(256, WidgetContainer.field_z, -2147483648);
         if (param0 < -80) {
-          var3 = kla.a(1024, vd.field_z, -2147483648);
+          var3 = DiveBomberAnimation.a(1024, WidgetContainer.field_z, -2147483648);
           var4 = new cia(var2, 0, var3);
           var4.a(119, 128, -2);
           var4.a(0, -15, 0, 0);
@@ -87,7 +87,7 @@ final class ria extends gca {
           var5 = 256 - (var4.field_o << 1);
           var6 = this.field_l.field_n * var5 >> 8;
           var7 = var5 * this.field_l.field_o >> 8;
-          this.field_l.c((var4.field_i >> 4) + param2 - (var6 >> 1), (var4.field_h >> 9) + param0 - (-(var4.field_q >> 5) + (var7 >> 1)), var6, var7, var4.field_o);
+          this.field_l.drawScaledAlpha((var4.field_i >> 4) + param2 - (var6 >> 1), (var4.field_h >> 9) + param0 - (-(var4.field_q >> 5) + (var7 >> 1)), var6, var7, var4.field_o);
           var4 = (cia) (this.field_j.c(0));
         }
         if (param1 > 7) {

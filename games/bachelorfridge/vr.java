@@ -5,7 +5,7 @@ final class vr {
     int field_e;
     static int field_b;
     boolean field_g;
-    private rf field_f;
+    private ArchiveIndex field_f;
     private tja field_a;
     private Object[][] field_d;
     private Object[] field_c;
@@ -29,7 +29,7 @@ final class vr {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_m.a((byte) -79, efa.a(var4, true));
+          var3_int = this.field_f.field_m.a((byte) -79, StickySpecial.a(var4, true));
           if (param1) {
             this.b(87, 101);
           }
@@ -49,7 +49,7 @@ final class vr {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class vr {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_m.a((byte) -75, efa.a(var4, true));
+          var3_int = this.field_f.field_m.a((byte) -75, StickySpecial.a(var4, true));
           stackIn_7_0 = this.c(var3_int, -734);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,7 +84,7 @@ final class vr {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -139,12 +139,12 @@ final class vr {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        lu var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        lu var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        lu var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -202,8 +202,8 @@ final class vr {
               var35 = tb.a(true, (byte) 105, this.field_c[param3]);
               var25 = var35;
               var9 = var25;
-              var26 = new lu(var35);
-              var26.a(17654, 5, param0, var26.field_h.length);
+              var26 = new PacketBuffer(var35);
+              var26.decryptXtea(17654, 5, param0, var26.payload.length);
               decompiledFrameRemainder1 = false;
             }
           }
@@ -211,7 +211,7 @@ final class vr {
             var9 = tb.a(false, (byte) 81, this.field_c[param3]);
           }
           try {
-            var36 = td.a(-124, var9);
+            var36 = SpecialOrder.a(-124, var9);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -221,7 +221,7 @@ final class vr {
             stackIn_39_0 = var11_ref_RuntimeException;
             stackIn_39_1 = new StringBuilder();
             stackIn_40_2 = (param0 != null);
-            throw pe.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(wc.a(var9, -31303, var9.length)).append(" ").append(wc.a(var9, -31303, var9.length - 2)).append(" ").append(this.field_f.field_p[param3]).append(" ").append(this.field_f.field_b).toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(HazmatSpecial.a(var9, -31303, var9.length)).append(" ").append(HazmatSpecial.a(var9, -31303, var9.length - 2)).append(" ").append(this.field_f.field_p[param3]).append(" ").append(this.field_f.field_b).toString());
           }
           if (this.field_g) {
             this.field_c[param3] = null;
@@ -232,14 +232,14 @@ final class vr {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var12 * (var5_int * 4);
-              var32 = new lu(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
               var15 = 0;
-              var32.field_g = var11;
+              var32.position = var11;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var32.f(-68);
+                  var17 = var17 + var32.readInt(-68);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -255,20 +255,20 @@ final class vr {
                 return true;
               }
               var44 = new byte[var14];
-              var32.field_g = var11;
+              var32.position = var11;
               var14Lifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var32.f(124);
+                  var19 = var19 + var32.readInt(124);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
                     var21 = var34[var20];
                   }
                   if (var21 == param2) {
-                    bl.a(var43, var17, var44, var14Lifetime1, var19);
+                    ArrayOperations.copy(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -280,15 +280,15 @@ final class vr {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * (var5_int * var12);
-              var29 = new lu(var43);
-              var29.field_g = var11;
+              var29 = new PacketBuffer(var43);
+              var29.position = var11;
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
               for (var15 = 0; var15 < var12; var15++) {
                 var16 = 0;
                 for (var17 = 0; var17 < var5_int; var17++) {
-                  var16 = var16 + var29.f(-128);
+                  var16 = var16 + var29.readInt(-128);
                   var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
                 }
               }
@@ -300,13 +300,13 @@ final class vr {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_g = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var29.f(72);
-                  bl.a(var43, var16, var39[var19], var38[var19], var18);
+                  var18 = var18 + var29.readInt(72);
+                  ArrayOperations.copy(var43, var16, var39[var19], var38[var19], var18);
                   var16 = var16 + var18;
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                 }
@@ -347,7 +347,7 @@ final class vr {
           } else {
             stackIn_108_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -379,13 +379,13 @@ final class vr {
           }
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_m.a((byte) -87, efa.a(var6, true));
+          var4_int = this.field_f.field_m.a((byte) -87, StickySpecial.a(var6, true));
           if (!this.a(var4_int, (byte) 70)) {
             stackIn_8_0 = null;
             return (byte[]) (stackIn_8_0);
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_f.field_l[var4_int].a((byte) -81, efa.a(var7, true));
+          var5 = this.field_f.field_l[var4_int].a((byte) -81, StickySpecial.a(var7, true));
           stackIn_10_0 = this.b(-71, var4_int, var5);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -404,11 +404,11 @@ final class vr {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -19779) {
           return;
         }
@@ -478,12 +478,12 @@ final class vr {
           stackIn_8_1 = -92;
           stackIn_8_2 = (String) (param2);
           stackIn_9_3 = !(param1);
-          var4_int = ((cr) (Object) stackIn_8_0).a((byte) stackIn_8_1, efa.a((CharSequence) ((Object) stackIn_8_2), stackIn_9_3));
+          var4_int = ((cr) (Object) stackIn_8_0).a((byte) stackIn_8_1, StickySpecial.a((CharSequence) ((Object) stackIn_8_2), stackIn_9_3));
           if (!this.a(var4_int, (byte) 70)) {
             return false;
           }
           var6 = (CharSequence) ((Object) param0);
-          var5 = this.field_f.field_l[var4_int].a((byte) -104, efa.a(var6, true));
+          var5 = this.field_f.field_l[var4_int].a((byte) -104, StickySpecial.a(var6, true));
           stackIn_13_0 = this.a(-121, var5, var4_int);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -502,7 +502,7 @@ final class vr {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -548,7 +548,7 @@ final class vr {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_m.a((byte) -115, efa.a(var4, true));
+          var3_int = this.field_f.field_m.a((byte) -115, StickySpecial.a(var4, true));
           if (var3_int < 0) {
             return false;
           }
@@ -567,7 +567,7 @@ final class vr {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -645,7 +645,7 @@ final class vr {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw pe.a((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -668,7 +668,7 @@ final class vr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "vr.M(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "vr.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -784,10 +784,10 @@ final class vr {
           }
           param2 = param2.toLowerCase();
           if (param0 != 6) {
-            this.field_f = (rf) null;
+            this.field_f = (ArchiveIndex) null;
           }
           var5 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_l[param1].a((byte) -128, efa.a(var5, true));
+          var4_int = this.field_f.field_l[param1].a((byte) -128, StickySpecial.a(var5, true));
           if (this.a(false, param1, var4_int)) {
             stackIn_10_0 = var4_int;
             return stackIn_10_0;
@@ -804,13 +804,13 @@ final class vr {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final int d(int param0, int param1) {
         if (param1 != 0) {
-          vr.a(-90, (po) (((Object[]) (((Object[]) (this.field_c[6]))[0]))[9]), 120, ((int[]) (this.field_c[35]))[29], 19, (kv[]) null, -99, (po) null, -110, ((int[]) (this.field_c[0]))[6], ((boolean[]) (this.field_c[35]))[11], (kv[]) null, 84, ((int[]) (this.field_c[0]))[0], 54);
+          vr.a(-90, (BitmapFont) (((Object[]) (((Object[]) (this.field_c[6]))[0]))[9]), 120, ((int[]) (this.field_c[35]))[29], 19, (Sprite[]) null, -99, (BitmapFont) null, -110, ((int[]) (this.field_c[0]))[6], ((boolean[]) (this.field_c[35]))[11], (Sprite[]) null, 84, ((int[]) (this.field_c[0]))[0], 54);
         }
         if (!this.a(param0, (byte) 70)) {
           return 0;
@@ -818,13 +818,13 @@ final class vr {
         return this.field_f.field_j[param0];
     }
 
-    final static void a(int param0, po param1, int param2, int param3, int param4, kv[] param5, int param6, po param7, int param8, int param9, boolean param10, kv[] param11, int param12, int param13, int param14) {
+    final static void a(int param0, BitmapFont param1, int param2, int param3, int param4, Sprite[] param5, int param6, BitmapFont param7, int param8, int param9, boolean param10, Sprite[] param11, int param12, int param13, int param14) {
         try {
-          kv[] var16 = (kv[]) null;
-          ll.a(jc.field_t, param13, param3, param2, param8, param5, 0, param6, param1, param9, param4, (kv[]) null, nja.field_a, param11, param7, param0, 0, 256, param12, param14, fa.field_f);
-          la.a(param10, 2);
+          Sprite[] var16 = (Sprite[]) null;
+          ll.a(jc.field_t, param13, param3, param2, param8, param5, 0, param6, param1, param9, param4, (Sprite[]) null, nja.field_a, param11, param7, param0, 0, 256, param12, param14, fa.field_f);
+          TBomberEvent.a(param10, 2);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vr.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + param14 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vr.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -876,7 +876,7 @@ final class vr {
           this.field_e = param2;
           this.field_g = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -897,7 +897,7 @@ final class vr {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_f.field_m.a((byte) -95, efa.a(var4, true));
+          var3_int = this.field_f.field_m.a((byte) -95, StickySpecial.a(var4, true));
           stackIn_5_0 = this.b(var3_int, (byte) -87);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -910,7 +910,7 @@ final class vr {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

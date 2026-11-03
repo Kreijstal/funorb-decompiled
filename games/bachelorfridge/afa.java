@@ -133,7 +133,7 @@ final class afa extends k {
         return this.field_o[param0];
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 <= 56) {
           field_k = (String) null;
@@ -172,7 +172,7 @@ final class afa extends k {
         return var8;
     }
 
-    final static fe a(lu param0, int param1) {
+    final static fe a(PacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         fe stackIn_2_0 = null;
         fe stackIn_4_0 = null;
@@ -182,7 +182,7 @@ final class afa extends k {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -113) {
-            stackIn_4_0 = new fe(param0.c((byte) -85), param0.c((byte) -85), param0.c((byte) -85), param0.c((byte) -85), param0.a(3), param0.a(3), param0.b(16711935));
+            stackIn_4_0 = new fe(param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.a(3), param0.a(3), param0.readUnsignedByte(16711935));
             return stackIn_4_0;
           }
           stackIn_2_0 = (fe) null;
@@ -197,7 +197,7 @@ final class afa extends k {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -216,10 +216,10 @@ final class afa extends k {
         this.field_p = new int[]{-var12[0] + (var10[0] + var10[0]), var10[1] - (var12[1] - var10[1])};
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
-        lu var6 = null;
+        PacketBuffer var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -228,16 +228,16 @@ final class afa extends k {
         var5 = BachelorFridge.field_y;
         try {
           if (param2 == 0) {
-            this.field_n = param1.b(16711935);
-            this.field_o = new int[param1.b(param0 + 16712006)][2];
+            this.field_n = param1.readUnsignedByte(16711935);
+            this.field_o = new int[param1.readUnsignedByte(param0 + 16712006)][2];
             for (var4_int = 0; var4_int < this.field_o.length; var4_int++) {
-              this.field_o[var4_int][0] = param1.e((byte) 90);
-              this.field_o[var4_int][1] = param1.e((byte) 105);
+              this.field_o[var4_int][0] = param1.readUnsignedShort((byte) 90);
+              this.field_o[var4_int][1] = param1.readUnsignedShort((byte) 105);
             }
           }
           if (param0 != -71) {
-            var6 = (lu) null;
-            this.a((byte) -45, (lu) null, -22);
+            var6 = (PacketBuffer) null;
+            this.a((byte) -45, (PacketBuffer) null, -22);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,7 +250,7 @@ final class afa extends k {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 

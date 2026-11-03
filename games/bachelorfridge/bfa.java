@@ -4,10 +4,10 @@
 final class bfa {
     static int[][] field_c;
     static boolean field_a;
-    static kv[] field_b;
+    static Sprite[] field_b;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_b = null;
           field_c = (int[][]) null;

@@ -16,7 +16,7 @@ final class he extends pu {
         field_o = null;
     }
 
-    final static void a(ht param0, boolean param1, Object param2) {
+    final static void a(PlatformTaskDispatcher param0, boolean param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -67,7 +67,7 @@ final class he extends pu {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

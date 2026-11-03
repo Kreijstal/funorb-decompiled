@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends kj {
+final class ob extends TileEffect {
     private int field_f;
     static ok field_g;
 
@@ -27,10 +27,10 @@ final class ob extends kj {
           we.field_b = param0;
           hda.field_l = param4;
           if (param1 != -47) {
-            ob.c(0);
+            ob.releaseStatics(0);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ob.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ob.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,16 +40,16 @@ final class ob extends kj {
         }
     }
 
-    ob(gj param0, int param1, int param2) {
+    ob(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_f = 100;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_g = (ok) null;
           field_g = null;
@@ -60,14 +60,14 @@ final class ob extends kj {
 
     final static void a(String param0, int param1, int[] param2, String param3, int param4, byte param5, int param6, String param7, kga param8, int[] param9) {
         try {
-          gfa.field_a[param4] = new wca(param6, param0, param7, param2, param9, param1, param8, param3);
+          gfa.field_a[param4] = new CreatureType(param6, param0, param7, param2, param9, param1, param8, param3);
           if (param5 != 22) {
             String var11 = (String) null;
             ob.a(-114L, (byte) -127, -69, -33, (String) null);
           }
           param4++;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ob.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + (param8 != null ? "{...}" : "null") + ',' + (param9 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ob.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + (param8 != null ? "{...}" : "null") + ',' + (param9 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -118,7 +118,7 @@ final class sq {
           var1 = field_e;
           var2 = field_d;
           var3 = field_a;
-          dg.e(var1, var3, var2 - var1, param0);
+          SoftwareRasterizer.drawHorizontalLine(var1, var3, var2 - var1, param0);
         }
     }
 
@@ -181,8 +181,8 @@ final class sq {
         }
         sq.a(0, field_c);
         int var0 = field_g[1];
-        if (var0 < dg.field_j) {
-          var0 = dg.field_j;
+        if (var0 < SoftwareRasterizer.field_j) {
+          var0 = SoftwareRasterizer.field_j;
         }
         int var1 = 0;
         for (var2 = 0; var2 < field_c; var2 += 4) {
@@ -239,7 +239,7 @@ final class sq {
           }
           var2++;
           field_a = var2;
-          if (var2 >= dg.field_k) {
+          if (var2 >= SoftwareRasterizer.field_k) {
             return false;
           }
           var3 = field_b;
@@ -282,7 +282,7 @@ final class sq {
         }
     }
 
-    public static void c() {
+    public static void releaseStatics() {
         field_g = null;
     }
 }

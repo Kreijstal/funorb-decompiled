@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class kw extends kj {
+final class kw extends TileEffect {
     private int field_l;
-    static hq field_j;
+    static MusicCrossfadeStream field_j;
     private int field_h;
     static int field_f;
     static String field_m;
@@ -43,7 +43,7 @@ final class kw extends kj {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -60,7 +60,7 @@ final class kw extends kj {
               return false;
             }
             if (this.field_o) {
-              this.field_e.field_h.b((byte) -126, 28, this.field_d, this.field_c);
+              this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
             }
             jja.a(64, -1, 24);
             return true;
@@ -72,7 +72,7 @@ final class kw extends kj {
             return false;
           }
           if (this.field_o) {
-            this.field_e.field_h.b((byte) -126, 28, this.field_d, this.field_c);
+            this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
           }
           jja.a(64, -1, 24);
           return true;
@@ -85,7 +85,7 @@ final class kw extends kj {
             return false;
           }
           if (this.field_o) {
-            this.field_e.field_h.b((byte) -126, 28, this.field_d, this.field_c);
+            this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
           }
           jja.a(64, -1, 24);
           return true;
@@ -97,7 +97,7 @@ final class kw extends kj {
           return false;
         }
         if (this.field_o) {
-          this.field_e.field_h.b((byte) -126, 28, this.field_d, this.field_c);
+          this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
         }
         jja.a(64, -1, 24);
         return true;
@@ -109,19 +109,19 @@ final class kw extends kj {
         }
     }
 
-    kw(gj param0, int param1, int param2, int param3, int param4, boolean param5) {
+    kw(BattleScreen param0, int param1, int param2, int param3, int param4, boolean param5) {
         super(param0, param1, param2);
         try {
           this.field_o = param5 ? true : false;
           this.field_l = 80;
-          this.field_i = -64 + kla.a(129, m.field_a, -2147483648) + param3;
-          this.field_h = kla.a(65, m.field_a, -2147483648) + param4 - 32;
+          this.field_i = -64 + DiveBomberAnimation.a(129, m.field_a, -2147483648) + param3;
+          this.field_h = DiveBomberAnimation.a(65, m.field_a, -2147483648) + param4 - 32;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         if (param0 >= 75) {
           field_g = null;
@@ -139,7 +139,7 @@ final class kw extends kj {
 
     final void a(int param0, int param1, int param2) {
         int var4 = 0;
-        ee var5 = null;
+        IndexedSprite var5 = null;
         int var6 = 0;
         int var7 = 0;
         if (param1 == 0) {

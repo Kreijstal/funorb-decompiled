@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jja extends tda {
-    eaa field_k;
-    private jp field_l;
-    hn field_j;
+final class jja extends PcmStream {
+    IntrusiveDeque field_k;
+    private MidiPcmStream field_l;
+    PcmStreamMixer field_j;
     static String field_m;
 
     final void a(int[] param0, int param1, int param2) {
@@ -15,18 +15,18 @@ final class jja extends tda {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        fh var6 = null;
+        MidiNote var6 = null;
         int var7 = 0;
         var7 = BachelorFridge.field_y;
         try {
           this.field_j.a(param0, param1, param2);
-          var6 = (fh) (this.field_k.b((byte) 90));
+          var6 = (MidiNote) (this.field_k.b((byte) 90));
           scanLoop1: while (true) {
             if (var6 == null) {
               return;
             }
             if (this.field_l.a(var6, (byte) 95)) {
-              var6 = (fh) (this.field_k.c(0));
+              var6 = (MidiNote) (this.field_k.c(0));
               continue;
             }
             var4_int = param1;
@@ -35,14 +35,14 @@ final class jja extends tda {
               if (var6.field_r >= var5) {
                 this.a(var5, param0, var4_int, var4_int + var5, var6, (byte) 12);
                 var6.field_r = var6.field_r - var5;
-                var6 = (fh) (this.field_k.c(0));
+                var6 = (MidiNote) (this.field_k.c(0));
                 continue scanLoop1;
               }
               this.a(var6.field_r, param0, var4_int, var5 + var4_int, var6, (byte) 12);
               var5 = var5 - var6.field_r;
               var4_int = var4_int + var6.field_r;
             } while (!this.field_l.a(var4_int, var6, param0, var5, false));
-            var6 = (fh) (this.field_k.c(0));
+            var6 = (MidiNote) (this.field_k.c(0));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,14 +54,14 @@ final class jja extends tda {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(int param0, int[] param1, int param2, int param3, fh param4, byte param5) {
-        jp stackIn_13_0 = null;
+    private final void a(int param0, int[] param1, int param2, int param3, MidiNote param4, byte param5) {
+        MidiPcmStream stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        fh stackIn_13_2 = null;
+        MidiNote stackIn_13_2 = null;
         boolean stackIn_14_3;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -74,13 +74,13 @@ final class jja extends tda {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        je var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = BachelorFridge.field_y;
         try {
           if ((this.field_l.field_u[param4.field_n] & 4) != 0 &&
             param4.field_p < 0) {
-            var7_int = this.field_l.field_M[param4.field_n] / pb.field_j;
+            var7_int = this.field_l.field_M[param4.field_n] / AudioOutput.field_j;
             while (true) {
               var8 = (-param4.field_t + (var7_int + 1048575)) / var7_int;
               if (var8 > param0) {
@@ -91,27 +91,27 @@ final class jja extends tda {
               param0 = param0 - var8;
               param4.field_t = param4.field_t + (-1048576 + var8 * var7_int);
               param2 = param2 + var8;
-              var9 = pb.field_j / 100;
+              var9 = AudioOutput.field_j / 100;
               var10 = 262144 / var7_int;
               if (var9 > var10) {
                 var9 = var10;
               }
               var11 = param4.field_z;
               if (this.field_l.field_y[param4.field_n] != 0) {
-                param4.field_z = je.a(param4.field_f, var11.f(), 0, var11.i());
+                param4.field_z = PcmSampleStream.createAtStepQ8(param4.field_f, var11.f(), 0, var11.i());
                 stackIn_13_0 = this.field_l;
                 stackIn_13_1 = 809594182;
-                stackIn_13_2 = (fh) (param4);
+                stackIn_13_2 = (MidiNote) (param4);
                 stackIn_14_3 = !(0 <= param4.field_j.field_n[param4.field_h]);
-                ((jp) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_14_3);
+                ((MidiPcmStream) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_14_3);
                 param4.field_z.a(var9, var11.g());
               } else {
-                param4.field_z = je.a(param4.field_f, var11.f(), var11.g(), var11.i());
+                param4.field_z = PcmSampleStream.createAtStepQ8(param4.field_f, var11.f(), var11.g(), var11.i());
               }
               if (param4.field_j.field_n[param4.field_h] < 0) {
                 param4.field_z.d(-1);
               }
-              var11.c(var9);
+              var11.fadeOutAndUnlink(var9);
               var11.a(param1, param2, param3 - param2);
               if (!var11.e()) {
                 continue;
@@ -140,7 +140,7 @@ final class jja extends tda {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -148,13 +148,13 @@ final class jja extends tda {
         return 0;
     }
 
-    final tda b() {
-        fh var1 = (fh) (this.field_k.b((byte) 90));
+    final PcmStream b() {
+        MidiNote var1 = (MidiNote) (this.field_k.b((byte) 90));
         if (var1 == null) {
           return null;
         }
         if (var1.field_z != null) {
-          return (tda) ((Object) var1.field_z);
+          return (PcmStream) ((Object) var1.field_z);
         }
         return this.a();
     }
@@ -163,22 +163,22 @@ final class jja extends tda {
         if (param0 < 18) {
           return;
         }
-        kka.field_l.e(new dka(), 33);
+        kka.field_l.e(new ReportAbusePanel(), 33);
     }
 
     final void a(int param0) {
-        fh var3;
+        MidiNote var3;
         int var4;
         int var2;
         var4 = BachelorFridge.field_y;
         this.field_j.a(param0);
-        var3 = (fh) (this.field_k.b((byte) 90));
+        var3 = (MidiNote) (this.field_k.b((byte) 90));
         scanLoop1: while (true) {
           if (var3 == null) {
             return;
           }
           if (this.field_l.a(var3, (byte) 95)) {
-            var3 = (fh) (this.field_k.c(0));
+            var3 = (MidiNote) (this.field_k.c(0));
             continue;
           }
           var2 = param0;
@@ -186,13 +186,13 @@ final class jja extends tda {
             if (var2 <= var3.field_r) {
               this.a(var2, 53, var3);
               var3.field_r = var3.field_r - var2;
-              var3 = (fh) (this.field_k.c(0));
+              var3 = (MidiNote) (this.field_k.c(0));
               continue scanLoop1;
             }
             this.a(var3.field_r, 91, var3);
             var2 = var2 - var3.field_r;
           } while (!this.field_l.a(0, var3, (int[]) null, var2, false));
-          var3 = (fh) (this.field_k.c(0));
+          var3 = (MidiNote) (this.field_k.c(0));
         }
     }
 
@@ -204,12 +204,12 @@ final class jja extends tda {
     }
 
     final static void b(int param0) {
-        cha.field_l = ig.field_m.g(76);
+        cha.field_l = ig.field_m.readString(76);
         CharSequence var2 = (CharSequence) ((Object) cha.field_l);
-        tca.field_a = fq.a(param0 ^ param0, var2);
+        JaggrabDownloader.field_a = HomingMissileSpecial.a(param0 ^ param0, var2);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -90) {
           field_m = (String) null;
           field_m = null;
@@ -218,17 +218,17 @@ final class jja extends tda {
         field_m = null;
     }
 
-    final tda a() {
-        fh var1;
+    final PcmStream a() {
+        MidiNote var1;
         int var2;
         var2 = BachelorFridge.field_y;
         while (true) {
-          var1 = (fh) (this.field_k.c(0));
+          var1 = (MidiNote) (this.field_k.c(0));
           if (var1 == null) {
             return null;
           }
           if (var1.field_z != null) {
-            return (tda) ((Object) var1.field_z);
+            return (PcmStream) ((Object) var1.field_z);
           }
         }
     }
@@ -242,10 +242,10 @@ final class jja extends tda {
         ic.a(param0, rt.field_a[param2], -31855);
     }
 
-    private final void a(int param0, int param1, fh param2) {
-        jp stackIn_7_0 = null;
+    private final void a(int param0, int param1, MidiNote param2) {
+        MidiPcmStream stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        fh stackIn_7_2 = null;
+        MidiNote stackIn_7_2 = null;
         boolean stackIn_8_3;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -257,19 +257,19 @@ final class jja extends tda {
         try {
           if (0 != (this.field_l.field_u[param2.field_n] & 4) &&
             param2.field_p < 0) {
-            var4_int = this.field_l.field_M[param2.field_n] / pb.field_j;
+            var4_int = this.field_l.field_M[param2.field_n] / AudioOutput.field_j;
             var5 = (-param2.field_t + 1048575 + var4_int) / var4_int;
             param2.field_t = var4_int * param0 + param2.field_t & 1048575;
             if (param0 >= var5) {
               if (this.field_l.field_y[param2.field_n] == 0) {
-                param2.field_z = je.a(param2.field_f, param2.field_z.f(), param2.field_z.g(), param2.field_z.i());
+                param2.field_z = PcmSampleStream.createAtStepQ8(param2.field_f, param2.field_z.f(), param2.field_z.g(), param2.field_z.i());
               } else {
-                param2.field_z = je.a(param2.field_f, param2.field_z.f(), 0, param2.field_z.i());
+                param2.field_z = PcmSampleStream.createAtStepQ8(param2.field_f, param2.field_z.f(), 0, param2.field_z.i());
                 stackIn_7_0 = this.field_l;
                 stackIn_7_1 = 809594182;
-                stackIn_7_2 = (fh) (param2);
+                stackIn_7_2 = (MidiNote) (param2);
                 stackIn_8_3 = !(param2.field_j.field_n[param2.field_h] >= 0);
-                ((jp) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
+                ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
               }
               if (param2.field_j.field_n[param2.field_h] < 0) {
                 param2.field_z.d(-1);
@@ -281,7 +281,7 @@ final class jja extends tda {
           if (param1 >= 18) {
             return;
           }
-          this.field_l = (jp) null;
+          this.field_l = (MidiPcmStream) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -293,17 +293,17 @@ final class jja extends tda {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    jja(jp param0) {
-        this.field_k = new eaa();
-        this.field_j = new hn();
+    jja(MidiPcmStream param0) {
+        this.field_k = new IntrusiveDeque();
+        this.field_j = new PcmStreamMixer();
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

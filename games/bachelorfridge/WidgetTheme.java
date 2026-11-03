@@ -1,0 +1,418 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class WidgetTheme {
+    BitmapFont field_m;
+    int field_c;
+    static String field_q;
+    private boolean field_b;
+    WidgetRenderer field_s;
+    private int field_o;
+    static String field_a;
+    WidgetRenderer field_h;
+    WidgetRenderer field_j;
+    int field_p;
+    int field_n;
+    WidgetRenderer field_i;
+    int field_f;
+    WidgetRenderer field_r;
+    static boolean field_l;
+    int field_e;
+    int field_k;
+    int field_d;
+    static String field_g;
+
+    final void a(BitmapFont param0, boolean param1) {
+        DefaultWidgetRenderer var17 = null;
+        wd var4 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
+        int var7_int = 0;
+        wd var6 = null;
+        wd var7 = null;
+        via discarded$0 = null;
+        bka discarded$1 = null;
+        wd var8 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
+        wd var11 = null;
+        wd var12 = null;
+        Sprite var13 = null;
+        wd var14 = null;
+        wd var19 = null;
+        int var15 = BachelorFridge.field_y;
+        wd var14Lifetime1;
+        wd var14Lifetime2;
+        try {
+          var17 = new DefaultWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_u + param0.field_B));
+          this.field_i = (WidgetRenderer) ((Object) var17);
+          var17.field_k = 16777215;
+          var4 = new wd();
+          var17.a(-44, var4);
+          var4.field_f = 11711154;
+          var4.field_p = 15658734;
+          this.field_e = 15658734;
+          this.field_o = 15658734;
+          this.field_f = 5592405;
+          this.field_d = 3;
+          this.field_c = 3;
+          this.field_m = param0;
+          this.field_k = 3;
+          this.field_n = -1;
+          this.field_p = 3;
+          var4.a(0, (byte) 78).b(15658734, -25251).a(MovementAnimation.a(7829367, -95, 10066329, 8947848), (byte) -40);
+          var4.a(1, (byte) 78).a(MovementAnimation.a(13421772, -34, 10066329, 11184810), (byte) -40);
+          var4.a(3, (byte) 78).a(MovementAnimation.a(10066329, -32, 7829367, 8947848), (byte) -40).b((byte) -88, 1).a((byte) 0, 1);
+          if (!param1) {
+            this.field_i = (WidgetRenderer) null;
+          }
+          var5 = new Sprite[9];
+          var16 = new ArgbSprite(32, 32);
+          var18 = var16;
+          for (var7_int = 0; var7_int < var18.field_v.length; var7_int++) {
+            var16.field_v[var7_int] = 1077952576;
+          }
+          var5[4] = (Sprite) ((Object) var18);
+          var4.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
+          var4.a(5, (byte) 78).a(SocketConnector.a(0, 65793, 3, 0, 0), (byte) -40).a(true, -2147483648).b(-1, -25251);
+          this.field_r = (WidgetRenderer) ((Object) var4);
+          var6 = new wd(var4, true);
+          var6.field_m = 0;
+          var7 = new wd(var4, true);
+          var7.field_m = 0;
+          var7.a((byte) 95, qaa.a(8947848, -16));
+          var7.a(1, (byte) 78).a(qaa.a(11184810, -25), (byte) -40).b(2236962, -25251);
+          this.field_h = (WidgetRenderer) ((Object) new sea(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          discarded$0 = new via(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$1 = new bka(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          var8 = new wd();
+          var17.a(-24, var8);
+          var8.a(0, (byte) 78).a(MovementAnimation.a(10066329, -99, 7829367, 15658734), (byte) -40).b(1118481, -25251).c(127, -1);
+          var8.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
+          this.field_s = (WidgetRenderer) ((Object) var8);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
+          dupTemp$2 = var9[4];
+          dupTemp$2.field_v = new int[]{6710886, 7829367};
+          var10[4].field_v = new int[]{6710886, 7829367};
+          var11 = new wd();
+          var12 = new wd();
+          var11.a(0, 69, var9);
+          var12.a(0, 115, var10);
+          var13 = new Sprite(7, 4);
+          var13.field_v = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var14 = new wd(var4, true);
+          var14.a(var13.copy(), -110);
+          var13.rotateClockwise();
+          var14Lifetime1 = new wd(var4, true);
+          var14Lifetime1.a(var13.copy(), -99);
+          var13.rotateClockwise();
+          var14Lifetime2 = new wd(var4, true);
+          var14Lifetime2.a(var13.copy(), -84);
+          var13.rotateClockwise();
+          var19 = new wd(var4, true);
+          var19.a(var13, -79);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static void a(byte param0) {
+        int var2 = 0;
+        int var1_int = 0;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        var3 = BachelorFridge.field_y;
+        try {
+          du.field_a = new IntrusiveNodeHashTable(256);
+          var1_int = 35 % ((param0 + 49) / 38);
+          for (var2 = 0; var2 < ArchiveIndex.field_h.length; var2++) {
+            du.field_a.a((long)ArchiveIndex.field_h[var2].toLowerCase().hashCode(), (byte) -34, new ji(var2));
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pe.wrapException((Throwable) ((Object) var1), "qh.E(" + param0 + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 23312) {
+          field_q = (String) null;
+        }
+        field_q = null;
+        field_a = null;
+        field_g = null;
+    }
+
+    private final void a(int param0, String param1, int param2, int param3) {
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var11Lifetime1;
+        int var13Lifetime1;
+        int var14Lifetime1;
+        int var13Lifetime2;
+        var15 = BachelorFridge.field_y;
+        try {
+          var5_int = this.field_c + this.field_p;
+          var6 = this.field_d + this.field_k;
+          var7 = this.field_n;
+          if (var7 == -1) {
+            var7 = this.field_m.field_u + this.field_m.field_B;
+          }
+          var8 = SoftwareRasterizer.field_i >> 2;
+          var9 = this.field_m.a(param1);
+          var10 = this.field_m.field_u + this.field_m.field_B;
+          var11 = 1;
+          if (var8 < var9 ||
+            param1.indexOf("<br>") != -1) {
+            if (null == IntrusiveDequeCursor.field_a) {
+              IntrusiveDequeCursor.field_a = new String[16];
+            }
+            if (var9 <= var8) {
+              var12 = var8;
+            } else {
+              var13 = var9 / var8;
+              var12 = var8 + 2 * ((var13 + var9 % var8 - 1) / var13);
+            }
+            var11Lifetime1 = this.field_m.a(param1, new int[]{var12}, IntrusiveDequeCursor.field_a);
+            var10 = var10 + (var11Lifetime1 - 1) * var7;
+            var9 = 0;
+            for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
+              var14 = this.field_m.a(IntrusiveDequeCursor.field_a[var13Lifetime2]);
+              if (var14 > var9) {
+                var9 = var14;
+              }
+            }
+          }
+          var12 = param2;
+          if (SoftwareRasterizer.field_i < var9 + var12 + var5_int) {
+            var12 = SoftwareRasterizer.field_i - (var9 + var5_int);
+          }
+          var13Lifetime1 = -this.field_m.field_v + param3 + 32;
+          if (SoftwareRasterizer.field_c < var13Lifetime1 + var10 + var6) {
+            var13Lifetime1 = -var6 - var10 + param3;
+          }
+          var14Lifetime1 = 102 % ((param0 - 64) / 56);
+          SoftwareRasterizer.drawRectangle(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_e);
+          SoftwareRasterizer.fillRectangle(1 + var12, 1 + var13Lifetime1, var9 - (-var5_int + 2), -2 + (var10 + var6), this.field_f);
+          this.field_m.drawParagraph(param1, var12 + this.field_p, var13Lifetime1 + this.field_k, var9, var10, this.field_o, -1, 0, 0, var7);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_28_0 = var5;
+          stackIn_28_1 = new StringBuilder().append("qh.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    private final void a(String param0, int param1, int param2, int param3) {
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        try {
+          var5_int = this.field_m.a(param0);
+          var6 = this.field_m.field_B + this.field_m.field_v;
+          var7 = param3;
+          if (var7 + (var5_int + 6) > SoftwareRasterizer.field_i) {
+            var7 = -6 + SoftwareRasterizer.field_i - var5_int;
+          }
+          var8 = 32 + (-this.field_m.field_v + param2);
+          if (var8 + (var6 + 6) > SoftwareRasterizer.field_c) {
+            var8 = SoftwareRasterizer.field_c - (var6 + 6);
+          }
+          SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, var6 + 6, this.field_o);
+          var9 = 34 / ((33 - param1) / 53);
+          SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, this.field_f);
+          this.field_m.drawText(param0, 3 + var7, this.field_m.field_v + (3 + var8), this.field_o, -1);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_10_0 = var5;
+          stackIn_10_1 = new StringBuilder().append("qh.C(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        if (param2 != 27209) {
+          this.a(106, 96, 101, 90, 116, 89, -113);
+        }
+        SoftwareRasterizer.fillRectangleAlpha(param6, param1, param5, param4, param0, param3);
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int var10 = BachelorFridge.field_y;
+        int var8 = param6 + param0;
+        if (param1 > param3) {
+          SoftwareRasterizer.drawHorizontalLine(param3, var8, 1 + (-param3 + param1), param7);
+        } else {
+          SoftwareRasterizer.drawHorizontalLine(param1, var8, param3 - (param1 - 1), param7);
+        }
+        if (param2 != -1271) {
+          field_g = (String) null;
+        }
+        int var9 = param3 + param1 >> 1;
+        if (param5 > var9) {
+          SoftwareRasterizer.drawHorizontalLine(var9, param4, param5 - var9, param7);
+        } else {
+          SoftwareRasterizer.drawHorizontalLine(param5, param4, -param5 + var9, param7);
+        }
+        if (0 >= param6) {
+          SoftwareRasterizer.drawVerticalLine(param3, var8, -param6, param7);
+          SoftwareRasterizer.drawVerticalLine(param1, var8, -param6, param7);
+        } else {
+          SoftwareRasterizer.drawVerticalLine(param3, param0, param6, param7);
+          SoftwareRasterizer.drawVerticalLine(param1, param0, param6, param7);
+        }
+        if (var8 < param4) {
+          SoftwareRasterizer.drawVerticalLine(var9, var8, -var8 + param4, param7);
+        } else {
+          SoftwareRasterizer.drawVerticalLine(var9, param4, var8 - param4, param7);
+        }
+    }
+
+    final static void c(byte param0) {
+        int[] var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        var4 = BachelorFridge.field_y;
+        try {
+          var5 = wa.field_m;
+          var1 = var5;
+          var2 = 0;
+          var3 = var5.length;
+          if (param0 < 44) {
+            field_q = (String) null;
+          }
+          while (var2 < var3) {
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "qh.J(" + param0 + ')');
+        }
+    }
+
+    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRasterizer.drawLine(param1, param2, param0, param3, param4);
+        if (param5 != 1) {
+          this.field_k = 72;
+        }
+    }
+
+    final void a(byte param0, int param1, int param2, String param3) {
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        try {
+          if (param0 >= -23) {
+            this.field_m = (BitmapFont) null;
+          }
+          if (!this.field_b) {
+            this.a(param3, -96, param2, param1);
+          } else {
+            this.a(-24, param3, param1, param2);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("qh.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+        }
+    }
+
+    final static void b(byte param0) {
+        Throwable decompiledCaughtException = null;
+        Object var1 = null;
+        var1 = uc.field_m;
+        synchronized (var1) {
+          UiNode.field_n = UiNode.field_n + 1;
+          LevitateEvent.field_t = FlirtEvent.field_q;
+          mk.field_p = AccountCreationPanel.field_N;
+          gd.field_m = dia.field_A;
+          dda.field_f = gja.field_j;
+          gja.field_j = false;
+          lf.field_c = jh.field_l;
+          if (param0 <= 103) {
+            WidgetTheme.a(94, -48, 114, -68, -92, -64, 34, 23);
+          }
+          nfa.field_a = FishRainEvent.field_u;
+          jc.field_r = dma.field_c;
+          jh.field_l = 0;
+          nd.field_h = BattleUpdate.field_f;
+        }
+    }
+
+    public WidgetTheme() {
+        this.field_b = true;
+    }
+
+    static {
+        field_q = "Rating";
+        field_a = "Accept invitation to <%0>'s game";
+        field_l = true;
+        field_g = "Dragging a creature onto the bin will delete a creature permanently. It won't work if you have less than four creatures.";
+    }
+}

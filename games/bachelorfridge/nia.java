@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nia extends lw {
-    static kv[] field_l;
-    static pb field_m;
+    static Sprite[] field_l;
+    static AudioOutput field_m;
 
     final static int a(int param0, boolean param1) {
         int var2;
@@ -77,7 +77,7 @@ final class nia extends lw {
             this.b((byte) 112);
             if (um.a(true) &&
               this.c((byte) 95)) {
-              fla.b(param1 + 23548);
+              ShieldSpecial.b(param1 + 23548);
             }
           }
         }
@@ -106,7 +106,7 @@ final class nia extends lw {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         field_m = null;
         if (param0) {
@@ -115,7 +115,7 @@ final class nia extends lw {
     }
 
     nia() {
-        super(true, new String[]{md.field_m, fq.field_p}, id.field_j);
+        super(true, new String[]{md.field_m, HomingMissileSpecial.field_p}, PizzaArenaTheme.field_j);
         this.field_c = new int[][]{new int[]{320, 400}, new int[]{320, 390}};
     }
 
@@ -135,20 +135,20 @@ final class nia extends lw {
         var5 = BachelorFridge.field_y;
         try {
           sd.field_b = new int[50];
-          var1_int = (rla.a(false, 16777088) - rla.a(false, 16711680)) / 50;
-          var2 = (tf.a(-6, 16777088) - tf.a(-127, 16711680)) / 50;
+          var1_int = (SetFriendlyEffect.a(false, 16777088) - SetFriendlyEffect.a(false, 16711680)) / 50;
+          var2 = (UiNode.a(-6, 16777088) - UiNode.a(-127, 16711680)) / 50;
           if (param0 < 16) {
             nia.a(120, true);
           }
           var3 = (lda.a(16777088, (byte) -36) - lda.a(16711680, (byte) -45)) / 50;
           for (var4 = 0; var4 < 50; var4++) {
-            sd.field_b[var4] = gna.a(rla.a(false, 16711680) + var4 * var1_int, (byte) -64, var4 * var3 + lda.a(16711680, (byte) -21), tf.a(-127, 16711680) + var4 * var2);
+            sd.field_b[var4] = gna.a(SetFriendlyEffect.a(false, 16711680) + var4 * var1_int, (byte) -64, var4 * var3 + lda.a(16711680, (byte) -21), UiNode.a(-127, 16711680) + var4 * var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "nia.H(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "nia.H(" + param0 + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class nia extends lw {
           var1 = var6 + ":";
           for (var2 = 0; var2 < dw.field_f; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & ig.field_m.field_h[var2];
+            var3 = 255 & ig.field_m.payload[var2];
             var4 = var3 >> 4;
             if (var4 < 10) {
               var4 += 48;

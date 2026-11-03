@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kr extends sna {
+final class kr extends UiComponent {
     kha field_yb;
     static String field_wb;
     static String field_xb;
@@ -9,39 +9,39 @@ final class kr extends sna {
     static int field_vb;
 
     final static void a(int param0, rg param1, int param2) {
-        pf var3 = sja.field_fb;
-        var3.c(param2, (byte) 126);
-        var3.d(2, 0);
-        var3.d(0, 0);
+        BitPacketBuffer var3 = sja.field_fb;
+        var3.writeCipheredByte(param2, (byte) 126);
+        var3.writeByte(2, 0);
+        var3.writeByte(0, 0);
         if (param0 <= 62) {
           return;
         }
         try {
-          var3.d(param1.field_i, 0);
+          var3.writeByte(param1.field_i, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kr.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kr.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_zb = null;
         int var1 = 110 % ((-79 - param0) / 43);
         field_xb = null;
         field_wb = null;
     }
 
-    kr(int param0, kv param1, kha param2) {
+    kr(int param0, Sprite param1, kha param2) {
         try {
           this.field_p = 39;
           this.field_v = param1;
           this.field_sb = 39;
-          if (qg.field_b.field_z != null) {
-            this.field_kb = 39 * (qg.field_b.field_z.g(0) % 4);
-            this.field_rb = qg.field_b.field_z.g(0) / 4 * 39 - 8;
+          if (qg.field_b.children != null) {
+            this.field_kb = 39 * (qg.field_b.children.g(0) % 4);
+            this.field_rb = qg.field_b.children.g(0) / 4 * 39 - 8;
           }
           this.field_yb = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kr.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kr.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

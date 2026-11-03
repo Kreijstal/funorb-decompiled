@@ -3,19 +3,19 @@
  */
 final class ua {
     static String field_a;
-    ola field_c;
+    FridgeScreen field_c;
     static boolean field_b;
-    static kv field_d;
+    static Sprite field_d;
 
     ua(String param0, mu param1) {
         try {
-          this.field_c = new ola();
+          this.field_c = new FridgeScreen();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         int var1 = -19 % ((64 - param0) / 60);
         field_a = null;
@@ -28,9 +28,9 @@ final class ua {
             field_b = false;
           }
           lda.field_a = param2;
-          fh.field_v = param1;
+          MidiNote.field_v = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ua.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ua.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

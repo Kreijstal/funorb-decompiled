@@ -2,28 +2,28 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class us {
-    static kv field_b;
+    static Sprite field_b;
     static String field_a;
-    static eaa field_e;
-    static ee field_c;
+    static IntrusiveDeque field_e;
+    static IndexedSprite field_c;
     static String field_d;
 
-    final static tn a(int param0) {
+    final static GameClock a(int param0) {
         if (param0 != -4127) {
           us.a(23);
-          return (tn) ((Object) new ru());
+          return (GameClock) ((Object) new NanoGameClock());
         }
-        return (tn) ((Object) new ru());
+        return (GameClock) ((Object) new NanoGameClock());
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_e = null;
         field_c = null;
         field_d = null;
         field_b = null;
         if (param0 != 12745) {
-          field_e = (eaa) null;
+          field_e = (IntrusiveDeque) null;
         }
     }
 
@@ -78,13 +78,13 @@ final class us {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
         }
     }
 
     static {
         field_a = "You need 5 or more creatures to delete one.";
-        field_e = new eaa();
+        field_e = new IntrusiveDeque();
         field_d = "Breaking real-world laws";
     }
 }

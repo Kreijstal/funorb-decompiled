@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ov extends uo {
-    static sna field_d;
+    static UiComponent field_d;
     static String field_g;
     static int field_c;
     static int[] field_e;
@@ -21,7 +21,7 @@ final class ov extends uo {
         return 0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_f = null;
         field_g = null;
@@ -75,7 +75,7 @@ final class ov extends uo {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -21,7 +21,7 @@ final class rh {
             field_a = (String) null;
           }
           var3_int = 0;
-          var4 = vka.field_q;
+          var4 = GasCloudSpecial.field_q;
           while (pt.field_a.length > var3_int) {
             var5 = gn.field_l[var3_int];
             if (var5 < 0) {
@@ -30,11 +30,11 @@ final class rh {
               var6 = hka.a(true, true, pt.field_a[var3_int]);
               var4 = var4 + raa.field_J;
               var7 = sd.field_a - (var6 >> 1);
-              if (hha.a(jo.field_t + (pba.field_r << 1), param2, var6 + (hna.field_k << 1), 1, var7 - hna.field_k, var4, param0)) {
+              if (SleepAnimation.a(BoardView.field_t + (ShieldEvent.field_r << 1), param2, var6 + (hna.field_k << 1), 1, var7 - hna.field_k, var4, param0)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (raa.field_J + (pba.field_r << 1) + jo.field_t);
+              var4 = var4 + (raa.field_J + (ShieldEvent.field_r << 1) + BoardView.field_t);
             }
             var3_int++;
           }
@@ -43,7 +43,7 @@ final class rh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "rh.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "rh.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class rh {
           var2 = param1.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (0L != mp.a(var3, true)) {
+            if (0L != MassPoisonSpecial.a(var3, true)) {
               return;
             }
           }
@@ -77,11 +77,11 @@ final class rh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -92,33 +92,33 @@ final class rh {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        sna var5 = null;
+        UiComponent var5 = null;
         int var6 = 0;
         int var7 = 0;
-        eaa var8 = null;
+        IntrusiveDeque var8 = null;
         String var9 = null;
         gs var10 = null;
         var7 = BachelorFridge.field_y;
         try {
-          if (saa.field_b > eb.field_t) {
-            eb.field_t = eb.field_t + 1;
+          if (saa.field_b > FishRainSpecial.field_t) {
+            FishRainSpecial.field_t = FishRainSpecial.field_t + 1;
           }
           if (hga.field_U.field_f != pda.field_p) {
             fs.field_f = fs.field_f + (hga.field_U.field_f - pda.field_p);
             pda.field_p = hga.field_U.field_f;
           }
-          if (eb.field_t <= 0) {
+          if (FishRainSpecial.field_t <= 0) {
             return;
           }
-          iv.b(false);
+          DamageEffect.b(false);
           if (param1 < 45) {
-            var8 = (eaa) null;
-            rh.a(true, (eaa) null);
+            var8 = (IntrusiveDeque) null;
+            rh.a(true, (IntrusiveDeque) null);
           }
           i.field_a.a(19842, param2);
           if (ao.field_d != null) {
             if (hl.field_I) {
-              ao.field_d.a(param2, i.field_a.field_D, i.field_a.field_M, 6381);
+              ao.field_d.processInput(param2, i.field_a.field_D, i.field_a.field_M, 6381);
             } else {
               ao.field_d = null;
             }
@@ -130,16 +130,16 @@ final class rh {
                 qca.a(var4_int, var5, (byte) 124);
               }
               var6 = af.a(var4_int, 26291);
-              wg.field_i[var4_int].field_v = gi.field_b[var6];
+              wg.field_i[var4_int].field_v = ClientException.field_b[var6];
               bda.field_m[var4_int].field_Z = qo.field_a[var6];
             }
           }
-          if (kg.field_a.field_R != 0) {
-            wt.field_n = new uq(kg.field_a.field_D, kg.field_a.field_M, kg.field_a.field_sb, kg.field_a.field_p, param3, qaa.field_d, mda.field_c, sm.field_s, qs.field_m, nr.field_v, dla.field_k, (String) null, 0L);
+          if (FullscreenFocusCanvas.field_a.field_R != 0) {
+            wt.field_n = new uq(FullscreenFocusCanvas.field_a.field_D, FullscreenFocusCanvas.field_a.field_M, FullscreenFocusCanvas.field_a.field_sb, FullscreenFocusCanvas.field_a.field_p, param3, qaa.field_d, mda.field_c, SlowAllEvent.field_s, qs.field_m, RageAnimation.field_v, dla.field_k, (String) null, 0L);
           }
           var10 = iu.a(param0, (byte) 114, gba.field_Bb, rg.field_h);
           if (var10 != null) {
-            om.a(var10, (byte) -111);
+            ShuffleAnimation.a(var10, (byte) -111);
           }
           var9 = gr.a(2);
           if (var9 != null) {
@@ -149,42 +149,42 @@ final class rh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var4), "rh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) var4), "rh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static void a(boolean param0, eaa param1) {
+    final static void a(boolean param0, IntrusiveDeque param1) {
         int var2_int = 0;
         int var3 = 0;
         kha var4 = null;
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
         try {
-          if (bp.e(-29919)) {
+          if (AttackUpAllAnimation.e(-29919)) {
             throw new IllegalStateException();
           }
-          sja.field_fb.c(80, (byte) 107);
+          sja.field_fb.writeCipheredByte(80, (byte) 107);
           if (param0) {
             field_a = (String) null;
           }
-          sja.field_fb.field_g = sja.field_fb.field_g + 2;
-          var2_int = sja.field_fb.field_g;
-          sja.field_fb.field_g = sja.field_fb.field_g + 1;
+          sja.field_fb.position = sja.field_fb.position + 2;
+          var2_int = sja.field_fb.position;
+          sja.field_fb.position = sja.field_fb.position + 1;
           var3 = 0;
           var4 = (kha) (param1.b((byte) 90));
           while (var4 != null) {
-            sja.field_fb.d(var4.field_h, 0);
+            sja.field_fb.writeByte(var4.field_h, 0);
             var3++;
-            sja.field_fb.d(var4.field_g, 0);
+            sja.field_fb.writeByte(var4.field_g, 0);
             var4 = (kha) (param1.c(0));
           }
-          var5 = sja.field_fb.field_g;
-          sja.field_fb.field_g = var2_int;
-          sja.field_fb.d(var3, 0);
-          sja.field_fb.field_g = var5;
-          sja.field_fb.a((byte) -88, -var2_int + sja.field_fb.field_g);
+          var5 = sja.field_fb.position;
+          sja.field_fb.position = var2_int;
+          sja.field_fb.writeByte(var3, 0);
+          sja.field_fb.position = var5;
+          sja.field_fb.writeLengthShort((byte) -88, -var2_int + sja.field_fb.position);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -12,11 +12,11 @@ final class lna {
     boolean field_i;
     private int field_k;
     int field_s;
-    private kv[] field_D;
+    private Sprite[] field_D;
     private int field_p;
-    static sna field_C;
+    static UiComponent field_C;
     private int field_m;
-    private kv field_a;
+    private Sprite field_a;
     static String field_h;
     static boolean field_q;
     private int field_c;
@@ -47,10 +47,10 @@ final class lna {
         int var15;
         var15 = BachelorFridge.field_y;
         bd.field_i.b();
-        dg.d();
+        SoftwareRasterizer.clear();
         var12 = this.field_u.a(-113);
         for (var13 = 0; 6 > var13; var13++) {
-          if (cma.field_v[var13] != 11) {
+          if (InsanoSauceAnimation.field_v[var13] != 11) {
             var10 = -this.field_D[vt.field_l[var13]].field_o + this.field_D[vt.field_l[var13]].field_p + var12.field_g[vt.field_l[var13]].field_l + (this.field_j[vt.field_l[var13]].field_b + (var12.field_g[vt.field_l[var13]].field_e >> 1));
             var7 = (int)((double)var12.field_g[vt.field_l[var13]].field_d * (4096.0 / (double)this.field_D[vt.field_l[var13]].field_n));
             var11 = 0;
@@ -91,8 +91,8 @@ final class lna {
               this.field_l[1] == 5) {
               var11 = var12.field_g[8].field_j;
             }
-            if (cma.field_v[var13] != 1 &&
-              cma.field_v[var13] != 2) {
+            if (InsanoSauceAnimation.field_v[var13] != 1 &&
+              InsanoSauceAnimation.field_v[var13] != 2) {
               var11 = var12.field_g[8].field_j;
             }
             gna.a(var7, -114, var9 << 4, this.field_D[8].field_o << 3, this.field_D[8].field_n << 3, var10 << 4, this.field_D[vt.field_l[var13]], var11, var8);
@@ -114,7 +114,7 @@ final class lna {
           this.field_l = (int[]) null;
         }
         if (0 == param4) {
-          this.field_u.field_d = this.field_u.field_d + kla.a(100, m.field_a, -2147483648);
+          this.field_u.field_d = this.field_u.field_d + DiveBomberAnimation.a(100, m.field_a, -2147483648);
         }
     }
 
@@ -122,8 +122,8 @@ final class lna {
         if (this.field_A) {
           return;
         }
-        this.field_D = wj.a(-863, this.field_l);
-        ek.a((byte) -25, this.field_l);
+        this.field_D = UiWidget.a(-863, this.field_l);
+        DamagePopupAnimation.a((byte) -25, this.field_l);
         this.field_A = true;
         if (param0 != 8) {
           this.a(-65);
@@ -132,10 +132,10 @@ final class lna {
 
     final void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         boolean stackIn_11_1 = false;
-        if (param7 <= dg.field_h &&
-          param8 <= dg.field_k &&
-          dg.field_f <= bd.field_i.field_q + param7 &&
-          param8 + bd.field_i.field_p >= dg.field_j) {
+        if (param7 <= SoftwareRasterizer.field_h &&
+          param8 <= SoftwareRasterizer.field_k &&
+          SoftwareRasterizer.field_f <= bd.field_i.field_q + param7 &&
+          param8 + bd.field_i.field_p >= SoftwareRasterizer.field_j) {
           param4 = param4 & 65535;
           if (null == this.field_u) {
             this.a(param4, param2, param3, 0, param7, param6, param8, param1, param0);
@@ -145,7 +145,7 @@ final class lna {
             this.b(9);
             hga.field_U.a((byte) -105);
             if (this.field_x) {
-              bd.field_i.e();
+              bd.field_i.flipHorizontal();
             }
             this.a(param4, param3, param2, (byte) 110, param1, param6, param8, param7);
             if (param5 >= -8) {
@@ -169,14 +169,14 @@ final class lna {
           this.a(param1, param4, 0, param2, 16632, param5, param0);
           return;
         }
-        this.field_a = new kv(160, 140);
+        this.field_a = new Sprite(160, 140);
         if (param3 != 8) {
           this.b((byte) -93);
         }
         this.field_a.b();
-        dg.d();
+        SoftwareRasterizer.clear();
         for (var12 = 0; var12 < 6; var12++) {
-          if (11 == cma.field_v[var12]) {
+          if (11 == InsanoSauceAnimation.field_v[var12]) {
             var8 = (int)(4096.0 / (double)this.field_D[vt.field_l[var12]].field_p) * this.field_j[vt.field_l[var12]].field_d;
             var7 = this.field_j[vt.field_l[var12]].field_c * (int)(4096.0 / (double)this.field_D[vt.field_l[var12]].field_q);
             var7 += 128;
@@ -295,18 +295,18 @@ final class lna {
         int var10 = 42 * param2 / 4096;
         int var11 = param5 / 4096;
         if (this.field_i) {
-          bd.field_i.b(var10 + param0, var11 + param1, var8, var9, 7837199);
+          bd.field_i.drawScaledSilhouette(var10 + param0, var11 + param1, var8, var9, 7837199);
           param4 = 192;
         }
         int var12 = 26 % ((param3 - 35) / 56);
         if (this.field_v) {
-          bd.field_i.b(var10 + param0, var11 + param1, var8, var9, 16736256);
+          bd.field_i.drawScaledSilhouette(var10 + param0, var11 + param1, var8, var9, 16736256);
           param4 = 192;
         }
         if (param4 < 256) {
-          bd.field_i.c(var10 + param0, param1 + var11, var8, var9, param4);
+          bd.field_i.drawScaledAlpha(var10 + param0, param1 + var11, var8, var9, param4);
         } else {
-          bd.field_i.c(param0 + var10, var11 + param1, var8, var9);
+          bd.field_i.drawScaled(param0 + var10, var11 + param1, var8, var9);
         }
     }
 
@@ -326,7 +326,7 @@ final class lna {
         int var7Lifetime1;
         var9 = BachelorFridge.field_y;
         bd.field_i.b();
-        dg.d();
+        SoftwareRasterizer.clear();
         var10 = this.field_u.a(param0 ^ -125);
         var3 = 0;
         var4 = 0;
@@ -337,10 +337,10 @@ final class lna {
         }
         var7 = 0;
         for (var8 = 0; var8 < 14; var8++) {
-          if (cma.field_v[var8] != 13) {
-            if (12 == cma.field_v[var8]) {
-              var4Lifetime1 = (int)((double)var10.field_g[9].field_e * (4096.0 / (double)this.field_D[cma.field_v[var8]].field_o));
-              var3Lifetime1 = (int)((double)var10.field_g[9].field_d * (4096.0 / (double)this.field_D[cma.field_v[var8]].field_n));
+          if (InsanoSauceAnimation.field_v[var8] != 13) {
+            if (12 == InsanoSauceAnimation.field_v[var8]) {
+              var4Lifetime1 = (int)((double)var10.field_g[9].field_e * (4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var8]].field_o));
+              var3Lifetime1 = (int)((double)var10.field_g[9].field_d * (4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var8]].field_n));
               var6Lifetime1 = (var10.field_g[9].field_e >> 1) + (this.field_j[9].field_b - (-var10.field_g[9].field_l + this.field_D[9].field_o)) + this.field_D[9].field_p;
               var5Lifetime1 = -this.field_D[9].field_n + (this.field_D[9].field_q + ((var10.field_g[9].field_d >> 1) + this.field_j[9].field_a)) + var10.field_g[9].field_h;
               var3Lifetime1 += 256;
@@ -354,40 +354,40 @@ final class lna {
                 this.field_l[1] == 5) {
                 var7Lifetime1 = var10.field_g[9].field_j;
               }
-              if (cma.field_v[var8] != 1 &&
-                2 != cma.field_v[var8]) {
+              if (InsanoSauceAnimation.field_v[var8] != 1 &&
+                2 != InsanoSauceAnimation.field_v[var8]) {
                 var7Lifetime1 = var10.field_g[9].field_j;
               }
-              gna.a(var3Lifetime1, -108, var5Lifetime1 << 4, this.field_D[9].field_o << 3, this.field_D[9].field_n << 3, var6Lifetime1 << 4, this.field_D[cma.field_v[var8]], var7Lifetime1, var4Lifetime1);
+              gna.a(var3Lifetime1, -108, var5Lifetime1 << 4, this.field_D[9].field_o << 3, this.field_D[9].field_n << 3, var6Lifetime1 << 4, this.field_D[InsanoSauceAnimation.field_v[var8]], var7Lifetime1, var4Lifetime1);
             } else {
-              if (cma.field_v[var8] != 11) {
-                var4Lifetime1 = (int)(4096.0 / (double)this.field_D[cma.field_v[var8]].field_o * (double)var10.field_g[cma.field_v[var8]].field_e);
-                var3Lifetime1 = (int)(4096.0 / (double)this.field_D[cma.field_v[var8]].field_n * (double)var10.field_g[cma.field_v[var8]].field_d);
-                var5Lifetime1 = this.field_D[cma.field_v[var8]].field_q - this.field_D[cma.field_v[var8]].field_n + this.field_j[cma.field_v[var8]].field_a - (-var10.field_g[cma.field_v[var8]].field_h - (var10.field_g[cma.field_v[var8]].field_d >> 1));
+              if (InsanoSauceAnimation.field_v[var8] != 11) {
+                var4Lifetime1 = (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var8]].field_o * (double)var10.field_g[InsanoSauceAnimation.field_v[var8]].field_e);
+                var3Lifetime1 = (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var8]].field_n * (double)var10.field_g[InsanoSauceAnimation.field_v[var8]].field_d);
+                var5Lifetime1 = this.field_D[InsanoSauceAnimation.field_v[var8]].field_q - this.field_D[InsanoSauceAnimation.field_v[var8]].field_n + this.field_j[InsanoSauceAnimation.field_v[var8]].field_a - (-var10.field_g[InsanoSauceAnimation.field_v[var8]].field_h - (var10.field_g[InsanoSauceAnimation.field_v[var8]].field_d >> 1));
                 var7Lifetime1 = 0;
-                var6Lifetime1 = (var10.field_g[cma.field_v[var8]].field_e >> 1) + (var10.field_g[cma.field_v[var8]].field_l + this.field_j[cma.field_v[var8]].field_b - this.field_D[cma.field_v[var8]].field_o + this.field_D[cma.field_v[var8]].field_p);
+                var6Lifetime1 = (var10.field_g[InsanoSauceAnimation.field_v[var8]].field_e >> 1) + (var10.field_g[InsanoSauceAnimation.field_v[var8]].field_l + this.field_j[InsanoSauceAnimation.field_v[var8]].field_b - this.field_D[InsanoSauceAnimation.field_v[var8]].field_o + this.field_D[InsanoSauceAnimation.field_v[var8]].field_p);
                 if (this.field_l[8] == 0 &&
                   this.field_l[1] == 0 ||
                   20 == this.field_l[8] &&
                   this.field_l[1] == 20 ||
                   5 == this.field_l[8] &&
                   this.field_l[1] == 5) {
-                  var7Lifetime1 = var10.field_g[cma.field_v[var8]].field_j;
+                  var7Lifetime1 = var10.field_g[InsanoSauceAnimation.field_v[var8]].field_j;
                 }
-                if (cma.field_v[var8] != 1 &&
-                  cma.field_v[var8] != 2) {
-                  var7Lifetime1 = var10.field_g[cma.field_v[var8]].field_j;
+                if (InsanoSauceAnimation.field_v[var8] != 1 &&
+                  InsanoSauceAnimation.field_v[var8] != 2) {
+                  var7Lifetime1 = var10.field_g[InsanoSauceAnimation.field_v[var8]].field_j;
                 }
-                if (cma.field_v[var8] != 1 &&
-                  2 != cma.field_v[var8] &&
-                  cma.field_v[var8] != 3) {
-                  gna.a(var3Lifetime1, param0 - 103, var5Lifetime1 << 4, this.field_D[cma.field_v[var8]].field_o << 3, this.field_D[cma.field_v[var8]].field_n << 3, var6Lifetime1 << 4, this.field_D[cma.field_v[var8]], var7Lifetime1, var4Lifetime1);
+                if (InsanoSauceAnimation.field_v[var8] != 1 &&
+                  2 != InsanoSauceAnimation.field_v[var8] &&
+                  InsanoSauceAnimation.field_v[var8] != 3) {
+                  gna.a(var3Lifetime1, param0 - 103, var5Lifetime1 << 4, this.field_D[InsanoSauceAnimation.field_v[var8]].field_o << 3, this.field_D[InsanoSauceAnimation.field_v[var8]].field_n << 3, var6Lifetime1 << 4, this.field_D[InsanoSauceAnimation.field_v[var8]], var7Lifetime1, var4Lifetime1);
                 } else {
-                  vg.a(this.field_D[cma.field_v[var8]], var5Lifetime1 << 4, param0 + 22988, var7Lifetime1, var3Lifetime1, var6Lifetime1 << 4, var4Lifetime1, this.field_D[cma.field_v[var8]].field_o << 3, this.field_D[cma.field_v[var8]].field_n << 3);
+                  vg.a(this.field_D[InsanoSauceAnimation.field_v[var8]], var5Lifetime1 << 4, param0 + 22988, var7Lifetime1, var3Lifetime1, var6Lifetime1 << 4, var4Lifetime1, this.field_D[InsanoSauceAnimation.field_v[var8]].field_o << 3, this.field_D[InsanoSauceAnimation.field_v[var8]].field_n << 3);
                 }
               } else {
-                var3Lifetime1 = (int)((double)var10.field_g[8].field_d * (4096.0 / (double)this.field_D[cma.field_v[var8]].field_n));
-                var4Lifetime1 = (int)((double)var10.field_g[8].field_e * (4096.0 / (double)this.field_D[cma.field_v[var8]].field_o));
+                var3Lifetime1 = (int)((double)var10.field_g[8].field_d * (4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var8]].field_n));
+                var4Lifetime1 = (int)((double)var10.field_g[8].field_e * (4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var8]].field_o));
                 var7Lifetime1 = 0;
                 var3Lifetime1 += 256;
                 var6Lifetime1 = var10.field_g[8].field_l + (this.field_j[8].field_b + ((var10.field_g[8].field_e >> 1) + (-this.field_D[8].field_o + this.field_D[8].field_p)));
@@ -401,16 +401,16 @@ final class lna {
                   this.field_l[1] == 5) {
                   var7Lifetime1 = var10.field_g[8].field_j;
                 }
-                if (cma.field_v[var8] != 1 &&
-                  cma.field_v[var8] != 2) {
+                if (InsanoSauceAnimation.field_v[var8] != 1 &&
+                  InsanoSauceAnimation.field_v[var8] != 2) {
                   var7Lifetime1 = var10.field_g[8].field_j;
                 }
-                gna.a(var3Lifetime1, -101, var5Lifetime1 << 4, this.field_D[8].field_o << 3, this.field_D[8].field_n << 3, var6Lifetime1 << 4, this.field_D[cma.field_v[var8]], var7Lifetime1, var4Lifetime1);
+                gna.a(var3Lifetime1, -101, var5Lifetime1 << 4, this.field_D[8].field_o << 3, this.field_D[8].field_n << 3, var6Lifetime1 << 4, this.field_D[InsanoSauceAnimation.field_v[var8]], var7Lifetime1, var4Lifetime1);
               }
             }
           } else {
-            var3Lifetime1 = (int)((double)var10.field_g[10].field_d * (4096.0 / (double)this.field_D[cma.field_v[var8]].field_n));
-            var4Lifetime1 = (int)(4096.0 / (double)this.field_D[cma.field_v[var8]].field_o * (double)var10.field_g[10].field_e);
+            var3Lifetime1 = (int)((double)var10.field_g[10].field_d * (4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var8]].field_n));
+            var4Lifetime1 = (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var8]].field_o * (double)var10.field_g[10].field_e);
             var4Lifetime1 += 256;
             var3Lifetime1 += 256;
             var5Lifetime1 = (var10.field_g[10].field_d >> 1) + (var10.field_g[10].field_h + (this.field_j[10].field_a + (-this.field_D[10].field_n + this.field_D[10].field_q)));
@@ -424,11 +424,11 @@ final class lna {
               5 == this.field_l[1]) {
               var7Lifetime1 = var10.field_g[10].field_j;
             }
-            if (cma.field_v[var8] != 1 &&
-              cma.field_v[var8] != 2) {
+            if (InsanoSauceAnimation.field_v[var8] != 1 &&
+              InsanoSauceAnimation.field_v[var8] != 2) {
               var7Lifetime1 = var10.field_g[10].field_j;
             }
-            gna.a(var3Lifetime1, -97, var5Lifetime1 << 4, this.field_D[10].field_o << 3, this.field_D[10].field_n << 3, var6Lifetime1 << 4, this.field_D[cma.field_v[var8]], var7Lifetime1, var4Lifetime1);
+            gna.a(var3Lifetime1, -97, var5Lifetime1 << 4, this.field_D[10].field_o << 3, this.field_D[10].field_n << 3, var6Lifetime1 << 4, this.field_D[InsanoSauceAnimation.field_v[var8]], var7Lifetime1, var4Lifetime1);
           }
         }
         return;
@@ -437,10 +437,10 @@ final class lna {
     private final void a(int param0, boolean param1, int param2, int param3) {
         int[] discarded$0 = null;
         if (param2 != 256) {
-          kv var6 = (kv) null;
-          discarded$0 = this.a(2, -126, (kv) null, -110, false, 51, 115, (kv) null);
+          Sprite var6 = (Sprite) null;
+          discarded$0 = this.a(2, -126, (Sprite) null, -110, false, 51, 115, (Sprite) null);
         }
-        bd.field_i.e(-50 + param3, param0 - 50);
+        bd.field_i.draw(-50 + param3, param0 - 50);
     }
 
     private final void d(int param0) {
@@ -596,7 +596,7 @@ final class lna {
         }
     }
 
-    final kv e(int param0) {
+    final Sprite e(int param0) {
         this.b(9);
         int var2 = 29 % ((-16 - param0) / 42);
         return bd.field_i;
@@ -623,68 +623,68 @@ final class lna {
         int var13Lifetime1;
         int var14Lifetime1;
         var16 = BachelorFridge.field_y;
-        if (param4 <= dg.field_h &&
-          dg.field_k >= param6 &&
-          bd.field_i.field_q + param4 >= dg.field_f &&
-          param6 + bd.field_i.field_p >= dg.field_j) {
+        if (param4 <= SoftwareRasterizer.field_h &&
+          SoftwareRasterizer.field_k >= param6 &&
+          bd.field_i.field_q + param4 >= SoftwareRasterizer.field_f &&
+          param6 + bd.field_i.field_p >= SoftwareRasterizer.field_j) {
           stackIn_9_1 = (param8);
           this.field_x = stackIn_9_1;
           bd.field_i.b();
-          dg.d();
+          SoftwareRasterizer.clear();
           for (var10 = param3; var10 < 14; var10++) {
             var11 = 0;
             var12 = 0;
             var13 = 0;
             var14 = 0;
             var15 = 0;
-            if (cma.field_v[var10] == 13) {
-              var11Lifetime1 = (int)(4096.0 / (double)this.field_D[cma.field_v[var10]].field_q) * this.field_j[cma.field_v[var10]].field_c;
-              var12Lifetime1 = (int)(4096.0 / (double)this.field_D[cma.field_v[var10]].field_p) * this.field_j[cma.field_v[var10]].field_d;
+            if (InsanoSauceAnimation.field_v[var10] == 13) {
+              var11Lifetime1 = (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var10]].field_q) * this.field_j[InsanoSauceAnimation.field_v[var10]].field_c;
+              var12Lifetime1 = (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var10]].field_p) * this.field_j[InsanoSauceAnimation.field_v[var10]].field_d;
               var11Lifetime1 += 128;
               var12Lifetime1 += 128;
               var14Lifetime1 = this.field_j[10].field_b - (-(this.field_D[10].field_o >> 1) - this.field_D[10].field_p + this.field_D[10].field_o);
               var15 = 0;
               var13Lifetime1 = (this.field_D[10].field_n >> 1) + this.field_j[10].field_a + (-this.field_D[10].field_n + this.field_D[10].field_q);
-              gna.a(var11Lifetime1, param3 - 122, var13Lifetime1 << 4, this.field_D[10].field_o << 3, this.field_D[10].field_n << 3, var14Lifetime1 << 4, this.field_D[cma.field_v[var10]], var15, var12Lifetime1);
+              gna.a(var11Lifetime1, param3 - 122, var13Lifetime1 << 4, this.field_D[10].field_o << 3, this.field_D[10].field_n << 3, var14Lifetime1 << 4, this.field_D[InsanoSauceAnimation.field_v[var10]], var15, var12Lifetime1);
             } else {
-              if (cma.field_v[var10] == 12) {
-                var11Lifetime1 = this.field_j[cma.field_v[var10]].field_c * (int)(4096.0 / (double)this.field_D[cma.field_v[var10]].field_q);
-                var12Lifetime1 = (int)(4096.0 / (double)this.field_D[cma.field_v[var10]].field_p) * this.field_j[cma.field_v[var10]].field_d;
+              if (InsanoSauceAnimation.field_v[var10] == 12) {
+                var11Lifetime1 = this.field_j[InsanoSauceAnimation.field_v[var10]].field_c * (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var10]].field_q);
+                var12Lifetime1 = (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var10]].field_p) * this.field_j[InsanoSauceAnimation.field_v[var10]].field_d;
                 var14Lifetime1 = this.field_D[9].field_p - this.field_D[9].field_o + (this.field_j[9].field_b + (this.field_D[9].field_o >> 1));
                 var13Lifetime1 = this.field_j[9].field_a + (this.field_D[9].field_n >> 1) - (this.field_D[9].field_n - this.field_D[9].field_q);
                 var11Lifetime1 += 128;
                 var12Lifetime1 += 128;
-                gna.a(var11Lifetime1, -109, var13Lifetime1 << 4, this.field_D[9].field_o << 3, this.field_D[9].field_n << 3, var14Lifetime1 << 4, this.field_D[cma.field_v[var10]], var15, var12Lifetime1);
+                gna.a(var11Lifetime1, -109, var13Lifetime1 << 4, this.field_D[9].field_o << 3, this.field_D[9].field_n << 3, var14Lifetime1 << 4, this.field_D[InsanoSauceAnimation.field_v[var10]], var15, var12Lifetime1);
               } else {
-                if (cma.field_v[var10] != 11) {
+                if (InsanoSauceAnimation.field_v[var10] != 11) {
                   var15 = 0;
-                  var11Lifetime1 = (int)(4096.0 / (double)this.field_D[cma.field_v[var10]].field_q) * this.field_j[cma.field_v[var10]].field_c;
-                  var12Lifetime1 = (int)(4096.0 / (double)this.field_D[cma.field_v[var10]].field_p) * this.field_j[cma.field_v[var10]].field_d;
-                  var13Lifetime1 = this.field_D[cma.field_v[var10]].field_q - this.field_D[cma.field_v[var10]].field_n + (this.field_j[cma.field_v[var10]].field_a + (this.field_D[cma.field_v[var10]].field_n >> 1));
-                  var14Lifetime1 = this.field_D[cma.field_v[var10]].field_p - this.field_D[cma.field_v[var10]].field_o + this.field_j[cma.field_v[var10]].field_b + (this.field_D[cma.field_v[var10]].field_o >> 1);
-                  if (cma.field_v[var10] != 1 &&
-                    cma.field_v[var10] != 2 &&
-                    cma.field_v[var10] != 3) {
-                    gna.a(var11Lifetime1, param3 - 94, var13Lifetime1 << 4, this.field_D[cma.field_v[var10]].field_o << 3, this.field_D[cma.field_v[var10]].field_n << 3, var14Lifetime1 << 4, this.field_D[cma.field_v[var10]], var15, var12Lifetime1);
+                  var11Lifetime1 = (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var10]].field_q) * this.field_j[InsanoSauceAnimation.field_v[var10]].field_c;
+                  var12Lifetime1 = (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var10]].field_p) * this.field_j[InsanoSauceAnimation.field_v[var10]].field_d;
+                  var13Lifetime1 = this.field_D[InsanoSauceAnimation.field_v[var10]].field_q - this.field_D[InsanoSauceAnimation.field_v[var10]].field_n + (this.field_j[InsanoSauceAnimation.field_v[var10]].field_a + (this.field_D[InsanoSauceAnimation.field_v[var10]].field_n >> 1));
+                  var14Lifetime1 = this.field_D[InsanoSauceAnimation.field_v[var10]].field_p - this.field_D[InsanoSauceAnimation.field_v[var10]].field_o + this.field_j[InsanoSauceAnimation.field_v[var10]].field_b + (this.field_D[InsanoSauceAnimation.field_v[var10]].field_o >> 1);
+                  if (InsanoSauceAnimation.field_v[var10] != 1 &&
+                    InsanoSauceAnimation.field_v[var10] != 2 &&
+                    InsanoSauceAnimation.field_v[var10] != 3) {
+                    gna.a(var11Lifetime1, param3 - 94, var13Lifetime1 << 4, this.field_D[InsanoSauceAnimation.field_v[var10]].field_o << 3, this.field_D[InsanoSauceAnimation.field_v[var10]].field_n << 3, var14Lifetime1 << 4, this.field_D[InsanoSauceAnimation.field_v[var10]], var15, var12Lifetime1);
                   } else {
-                    vg.a(this.field_D[cma.field_v[var10]], var13Lifetime1 << 4, 22997, var15, var11Lifetime1, var14Lifetime1 << 4, var12Lifetime1, this.field_D[cma.field_v[var10]].field_o << 3, this.field_D[cma.field_v[var10]].field_n << 3);
+                    vg.a(this.field_D[InsanoSauceAnimation.field_v[var10]], var13Lifetime1 << 4, 22997, var15, var11Lifetime1, var14Lifetime1 << 4, var12Lifetime1, this.field_D[InsanoSauceAnimation.field_v[var10]].field_o << 3, this.field_D[InsanoSauceAnimation.field_v[var10]].field_n << 3);
                   }
                 } else {
-                  var12Lifetime1 = this.field_j[cma.field_v[var10]].field_d * (int)(4096.0 / (double)this.field_D[cma.field_v[var10]].field_p);
-                  var11Lifetime1 = this.field_j[cma.field_v[var10]].field_c * (int)(4096.0 / (double)this.field_D[cma.field_v[var10]].field_q);
+                  var12Lifetime1 = this.field_j[InsanoSauceAnimation.field_v[var10]].field_d * (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var10]].field_p);
+                  var11Lifetime1 = this.field_j[InsanoSauceAnimation.field_v[var10]].field_c * (int)(4096.0 / (double)this.field_D[InsanoSauceAnimation.field_v[var10]].field_q);
                   var14Lifetime1 = (this.field_D[8].field_o >> 1) + (this.field_j[8].field_b + (this.field_D[8].field_p - this.field_D[8].field_o));
                   var13Lifetime1 = this.field_j[8].field_a - (-(this.field_D[8].field_n >> 1) + this.field_D[8].field_n - this.field_D[8].field_q);
                   var11Lifetime1 += 128;
                   var12Lifetime1 += 128;
                   var15 = 0;
-                  gna.a(var11Lifetime1, -106, var13Lifetime1 << 4, this.field_D[8].field_o << 3, this.field_D[8].field_n << 3, var14Lifetime1 << 4, this.field_D[cma.field_v[var10]], var15, var12Lifetime1);
+                  gna.a(var11Lifetime1, -106, var13Lifetime1 << 4, this.field_D[8].field_o << 3, this.field_D[8].field_n << 3, var14Lifetime1 << 4, this.field_D[InsanoSauceAnimation.field_v[var10]], var15, var12Lifetime1);
                 }
               }
             }
           }
           hga.field_U.a((byte) 121);
           if (this.field_x) {
-            bd.field_i.e();
+            bd.field_i.flipHorizontal();
           }
           if ((param0 == 0 ||
             param0 == 65536) &&
@@ -701,7 +701,7 @@ final class lna {
         }
     }
 
-    private final int[] a(int param0, int param1, kv param2, int param3, boolean param4, int param5, int param6, kv param7) {
+    private final int[] a(int param0, int param1, Sprite param2, int param3, boolean param4, int param5, int param6, Sprite param7) {
         int var17 = 0;
         int[] stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
@@ -772,7 +772,7 @@ final class lna {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -785,13 +785,13 @@ final class lna {
         int var10 = 40 * param1 / 4096;
         int var11 = 20 * param6 / 4096;
         if (param3 < 256) {
-          this.field_a.c(var10 + param5, var11 + param0, var8, var9, param3);
+          this.field_a.drawScaledAlpha(var10 + param5, var11 + param0, var8, var9, param3);
         } else {
-          this.field_a.c(var10 + param5, param0 + var11, var8, var9);
+          this.field_a.drawScaled(var10 + param5, param0 + var11, var8, var9);
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -44 / ((-7 - param0) / 56);
         field_h = null;
         field_y = (String[][]) null;
@@ -817,11 +817,11 @@ final class lna {
         while (!this.field_A) {
           this.a(8);
         }
-        bd.field_i = new kv(220, 300);
+        bd.field_i = new Sprite(220, 300);
         this.field_s = 0;
         this.d(1);
         this.b((byte) -69);
-        jha.field_g.c("?", 0, jha.field_g.field_u, 16777215, 65793);
+        jha.field_g.drawText("?", 0, jha.field_g.field_u, 16777215, 65793);
         hga.field_U.a((byte) 121);
         this.a(false, 0, 1, true, -1);
     }

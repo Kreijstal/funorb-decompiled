@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nv extends sna {
+final class nv extends UiComponent {
     private nv field_Eb;
-    static ee field_wb;
+    static IndexedSprite field_wb;
     private int field_Ib;
     private int[] field_yb;
     private int field_Ab;
@@ -17,10 +17,10 @@ final class nv extends sna {
     private int field_Cb;
     private int field_zb;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_wb = null;
         if (param0 != 20038) {
-          field_wb = (ee) null;
+          field_wb = (IndexedSprite) null;
         }
     }
 
@@ -38,7 +38,7 @@ final class nv extends sna {
         int var7Lifetime1;
         var9 = BachelorFridge.field_y;
         if (param0 >= -91) {
-          nv.f(-20);
+          nv.releaseStatics(-20);
         }
         this.field_Fb = 2 * param4 + this.field_Gb;
         this.a(this.field_Ib, 31407, this.field_Fb, param3, param2 - this.field_Ib);
@@ -73,22 +73,22 @@ final class nv extends sna {
         } else {
           if (this.field_Hb[param1] == null) {
             if (this.field_yb[param1] == -1) {
-              js.a(121);
-              ki.g(-26);
+              IntrusiveNodeHashTable.a(121);
+              OhNoAnimation.g(-26);
             } else {
               var5 = 32768 | this.field_yb[param1];
               var6 = gk.field_d;
               if (0 == var6 &&
-                null != pw.field_w) {
+                null != SnowAnimation.field_w) {
                 var6 = 1;
               }
               if (af.a(var6, 26291) == 2) {
-                fk.a(113, var6, param0, 1);
+                HomingMissileEvent.a(113, var6, param0, 1);
               }
               var8 = (String) null;
-              no.a(var5, gk.field_d, 110, (String) null, bd.field_k, param2);
-              ob.a(eaa.field_a, (byte) -47, gk.field_d, var5, bd.field_k);
-              ki.g(-26);
+              PetAttackSpecial.a(var5, gk.field_d, 110, (String) null, bd.field_k, param2);
+              ob.a(IntrusiveDeque.field_a, (byte) -47, gk.field_d, var5, bd.field_k);
+              OhNoAnimation.g(-26);
               vca.c(true);
             }
           } else {
@@ -96,7 +96,7 @@ final class nv extends sna {
             this.b(0, false);
             this.field_xb = param1;
             this.field_Eb = this.field_Hb[this.field_xb];
-            dka.a(this.field_Eb, (byte) 59);
+            ReportAbusePanel.a(this.field_Eb, (byte) 59);
             this.field_Eb.b(12, false);
           }
         }
@@ -134,7 +134,7 @@ final class nv extends sna {
         }
         if (this.field_Eb != null) {
           this.field_Eb.f((byte) -97);
-          this.field_Eb.a(false);
+          this.field_Eb.unlink(false);
         }
         this.field_Eb = null;
         this.field_xb = -1;
@@ -143,7 +143,7 @@ final class nv extends sna {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param2 >= -82) {
-          field_wb = (ee) null;
+          field_wb = (IndexedSprite) null;
         }
         if (jea.field_c != null &&
           13 == gf.field_k) {
@@ -151,14 +151,14 @@ final class nv extends sna {
           return true;
         }
         if (!lna.field_q) {
-          if (gm.field_k ||
+          if (MoveOrder.field_k ||
             gf.field_k == 9 ||
             gf.field_k == 10 ||
             11 == gf.field_k) {
             return wi.a(103, param0, param1);
           }
           if (gf.field_k == 80) {
-            if (!cn.d((byte) 23)) {
+            if (!PlaceCreatureEffect.d((byte) 23)) {
               return false;
             }
             lna.field_q = true;
@@ -166,7 +166,7 @@ final class nv extends sna {
           }
           return false;
         }
-        if (!cn.d((byte) 64)) {
+        if (!PlaceCreatureEffect.d((byte) 64)) {
           return false;
         }
         int var4 = vaa.a(param3, 1, param0) ? 1 : 0;
@@ -176,14 +176,14 @@ final class nv extends sna {
           lna.field_q = false;
         }
         if (gf.field_k == 13) {
-          bea.d(-125);
+          ClamsEvent.d(-125);
           var4 = 1;
           lna.field_q = false;
         }
         return var4 != 0;
     }
 
-    nv(long param0, sna param1, sna param2, sna param3, nv[] param4, int[] param5, String[] param6, char[] param7) {
+    nv(long param0, UiComponent param1, UiComponent param2, UiComponent param3, nv[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -207,8 +207,8 @@ final class nv extends sna {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        po var17 = null;
-        po var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_xb = -1;
         try {
           this.field_Db = param7;
@@ -232,7 +232,7 @@ final class nv extends sna {
               this.field_yb[var13] == -1) {
               var14 = kga.field_a;
             }
-            this.field_vb[var13] = new gna(0L, param2, (sna) null, param3, (kv) (var14), param6[var13]);
+            this.field_vb[var13] = new gna(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.a(-1, this.field_vb[var13]);
             var15 = var17.a(param6[var13]);
             if (var15 > this.field_Gb) {
@@ -288,7 +288,7 @@ final class nv extends sna {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ final class nv extends sna {
         if (this.field_Eb == null &&
           this == da.field_d &&
           var4 != 0) {
-          ki.g(-26);
+          OhNoAnimation.g(-26);
           return true;
         }
         var5 = dla.field_j;

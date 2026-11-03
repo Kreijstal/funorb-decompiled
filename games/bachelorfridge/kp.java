@@ -13,7 +13,7 @@ final class kp {
               if (var4 > 35) {
                 var4 = 35;
               }
-              dg.b(var3, var2, var4, param0);
+              SoftwareRasterizer.fillCircle(var3, var2, var4, param0);
             }
           }
         }
@@ -30,7 +30,7 @@ final class kp {
               if (var4 > 35) {
                 var4 = 35;
               }
-              dg.b(var3, var2, var4, param0);
+              SoftwareRasterizer.fillCircle(var3, var2, var4, param0);
             }
           }
         }

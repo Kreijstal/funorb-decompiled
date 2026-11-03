@@ -4,11 +4,11 @@
 import java.util.*;
 
 final class r extends pu {
-    static kv field_n;
+    static Sprite field_n;
     static lo field_m;
-    static sna[] field_l;
+    static UiComponent[] field_l;
 
-    final static void a(int[] param0, int param1, vr param2, String[][] param3, byte[] param4, byte[] param5, String[] param6, int param7, vr param8, vr param9, String[][] param10, kv[][] param11, boolean param12, kv[][] param13, int param14) {
+    final static void a(int[] param0, int param1, vr param2, String[][] param3, byte[] param4, byte[] param5, String[] param6, int param7, vr param8, vr param9, String[][] param10, Sprite[][] param11, boolean param12, Sprite[][] param13, int param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -35,7 +35,7 @@ final class r extends pu {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
         try {
-          fd.a(param0, param8, param14, param1 + 1, param5, param9, param12, param2, (int[]) null, param7, (ee[]) null, param11, param13, param4, param3, param10, param6);
+          AirstrikeAnimation.a(param0, param8, param14, param1 + 1, param5, param9, param12, param2, (int[]) null, param7, (IndexedSprite[]) null, param11, param13, param4, param3, param10, param6);
           if (param1 != -1) {
             field_m = (lo) null;
           }
@@ -110,7 +110,7 @@ final class r extends pu {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param14).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -119,11 +119,11 @@ final class r extends pu {
         field_n = null;
         field_l = null;
         if (param0 != -1) {
-          r.a((int[]) null, -60, (vr) null, (String[][]) null, (byte[]) null, (byte[]) null, (String[]) null, 7, (vr) null, (vr) null, (String[][]) null, (kv[][]) null, true, (kv[][]) null, 53);
+          r.a((int[]) null, -60, (vr) null, (String[][]) null, (byte[]) null, (byte[]) null, (String[]) null, 7, (vr) null, (vr) null, (String[][]) null, (Sprite[][]) null, true, (Sprite[][]) null, 53);
         }
     }
 
-    final static void a(int param0, int param1, Random param2, eaa param3) {
+    final static void a(int param0, int param1, Random param2, IntrusiveDeque param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -142,10 +142,10 @@ final class r extends pu {
             fieldTemp$0 = var4.field_n + var4.field_h;
             var4.field_n = var4.field_n + var4.field_h;
             if (fieldTemp$0 < 0) {
-              var4.a(false);
+              var4.unlink(false);
             } else {
               var4.field_l = var4.field_l + var4.field_o;
-              kla.a(50, param2, -2147483648);
+              DiveBomberAnimation.a(50, param2, -2147483648);
             }
             var4 = (rea) (param3.c(0));
           }
@@ -167,7 +167,7 @@ final class r extends pu {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

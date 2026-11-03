@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pt implements qda {
+final class pt implements WidgetRenderer {
     static String[] field_a;
     static String[] field_b;
 
@@ -11,33 +11,33 @@ final class pt implements qda {
           field_a = null;
           field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pt.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pt.C(" + param0 + ')');
         }
     }
 
-    public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;
-        kv var8 = null;
+        Sprite var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = param0 + param1.field_s;
+          var6_int = param0 + param1.x;
           if (param2 != 32679) {
             return;
           }
-          var7 = param1.field_v + param3;
-          oka.a(var6_int, param1.field_p, var7, false, param1.field_q);
+          var7 = param1.y + param3;
+          oka.a(var6_int, param1.width, var7, false, param1.height);
           var8 = fr.field_q[1];
-          if (param1 instanceof hf &&
-            ((hf) (param1)).field_B) {
-            var8.d((param1.field_p - var8.field_n >> 1) + var6_int + 1, var7 + 1 + (param1.field_q - var8.field_o >> 1), 256);
+          if (param1 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param1)).field_B) {
+            var8.drawAdditive((param1.width - var8.field_n >> 1) + var6_int + 1, var7 + 1 + (param1.height - var8.field_o >> 1), 256);
           }
-          if (param1.e(param2 ^ 31832)) {
-            uv.a(-4 + param1.field_p, var7 + 2, param1.field_q - 4, 2 + var6_int, false);
+          if (param1.isFocused(param2 ^ 31832)) {
+            uv.a(-4 + param1.width, var7 + 2, param1.height - 4, 2 + var6_int, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -50,7 +50,7 @@ final class pt implements qda {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -130,19 +130,19 @@ final class pt implements qda {
             pt.a(101);
           }
           var23Lifetime1 = -param1[2] + param6[2];
-          var9 = var23Lifetime1 * param1[5] + (param1[3] * var21Lifetime1 + var22Lifetime1 * param1[4]) >> 16 - ima.field_s;
+          var9 = var23Lifetime1 * param1[5] + (param1[3] * var21Lifetime1 + var22Lifetime1 * param1[4]) >> 16 - TeleportEvent.field_s;
           var11 = param1[9] * var21Lifetime1 + param1[10] * var22Lifetime1 + var23Lifetime1 * param1[11] >> 16;
-          var10 = var23Lifetime1 * param1[8] + (var22Lifetime1 * param1[7] + var21Lifetime1 * param1[6]) >> 16 - ima.field_s;
-          var21Lifetime2 = jb.field_h;
-          var22Lifetime2 = jb.field_j;
+          var10 = var23Lifetime1 * param1[8] + (var22Lifetime1 * param1[7] + var21Lifetime1 * param1[6]) >> 16 - TeleportEvent.field_s;
+          var21Lifetime2 = TriangleRasterizer.field_h;
+          var22Lifetime2 = TriangleRasterizer.field_j;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             if (var23Lifetime2 < param2.field_g) {
               var24Lifetime1 = param2.field_x[var23Lifetime2];
               var25Lifetime1 = param2.field_O[var23Lifetime2];
               var26Lifetime1 = param2.field_r[var23Lifetime2];
-              var27Lifetime1 = (var26Lifetime1 * var18 + (var24Lifetime1 * var12 + var25Lifetime1 * var15) >> 16 - ima.field_s) + var9;
-              var28Lifetime1 = (var16 * var25Lifetime1 + (var13 * var24Lifetime1 + var26Lifetime1 * var19) >> -ima.field_s + 16) + var10;
+              var27Lifetime1 = (var26Lifetime1 * var18 + (var24Lifetime1 * var12 + var25Lifetime1 * var15) >> 16 - TeleportEvent.field_s) + var9;
+              var28Lifetime1 = (var16 * var25Lifetime1 + (var13 * var24Lifetime1 + var26Lifetime1 * var19) >> -TeleportEvent.field_s + 16) + var10;
               var29Lifetime1 = (var26Lifetime1 * var20 + (var14 * var24Lifetime1 + var25Lifetime1 * var17) >> 16) + var11;
               stackIn_68_0 = ~var29Lifetime1;
               stackIn_68_1 = -51;
@@ -161,8 +161,8 @@ final class pt implements qda {
                   }
                 }
                 if (param5) {
-                  on.field_w[var23Lifetime2] = var27Lifetime1 >> ima.field_s;
-                  ra.field_s[var23Lifetime2] = var28Lifetime1 >> ima.field_s;
+                  on.field_w[var23Lifetime2] = var27Lifetime1 >> TeleportEvent.field_s;
+                  ra.field_s[var23Lifetime2] = var28Lifetime1 >> TeleportEvent.field_s;
                   ji.field_i[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -185,18 +185,18 @@ final class pt implements qda {
                   var26Lifetime1 = param2.field_L[var23Lifetime2];
                   fm.field_f[var23Lifetime2] = (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var18 * var26Lifetime1) >> 16) + var9;
                   ha.field_m[var23Lifetime2] = var10 + (var13 * var24Lifetime1 + var16 * var25Lifetime1 + var19 * var26Lifetime1 >> 16);
-                  eb.field_p[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + var24Lifetime1 * var14 + var17 * var25Lifetime1 >> 16);
+                  FishRainSpecial.field_p[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + var24Lifetime1 * var14 + var17 * var25Lifetime1 >> 16);
                   var24Lifetime1 = param2.field_M[var23Lifetime2];
                   var25Lifetime1 = param2.field_j[var23Lifetime2];
                   var26Lifetime1 = param2.field_p[var23Lifetime2];
-                  hha.field_A[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + (var12 * var24Lifetime1 + var15 * var25Lifetime1) >> 16);
-                  vea.field_x[var23Lifetime2] = (var19 * var26Lifetime1 + (var13 * var24Lifetime1 + var16 * var25Lifetime1) >> 16) + var10;
-                  kea.field_s[var23Lifetime2] = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var14 * var24Lifetime1 >> 16) + var11;
+                  SleepAnimation.field_A[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + (var12 * var24Lifetime1 + var15 * var25Lifetime1) >> 16);
+                  RaiseAnimation.field_x[var23Lifetime2] = (var19 * var26Lifetime1 + (var13 * var24Lifetime1 + var16 * var25Lifetime1) >> 16) + var10;
+                  AirstrikeSpecial.field_s[var23Lifetime2] = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var14 * var24Lifetime1 >> 16) + var11;
                   var24Lifetime1 = param2.field_s[var23Lifetime2];
                   var25Lifetime1 = param2.field_z[var23Lifetime2];
                   var26Lifetime1 = param2.field_a[var23Lifetime2];
                   tw.field_a[var23Lifetime2] = (var18 * var26Lifetime1 + (var24Lifetime1 * var12 + var25Lifetime1 * var15) >> 16) + var9;
-                  mt.field_u[var23Lifetime2] = var10 + (var26Lifetime1 * var19 + var25Lifetime1 * var16 + var13 * var24Lifetime1 >> 16);
+                  ScavengerSpecial.field_u[var23Lifetime2] = var10 + (var26Lifetime1 * var19 + var25Lifetime1 * var16 + var13 * var24Lifetime1 >> 16);
                   tja.field_a[var23Lifetime2] = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var14 * var24Lifetime1 >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
@@ -228,7 +228,7 @@ final class pt implements qda {
                   var20 = param2.field_N[var18];
                   var21Lifetime2 = param2.field_b[var18];
                   bv.field_G[var18] = var12 * var20 + var9 * var19 + var21Lifetime2 * var15 >> 16;
-                  fv.field_x[var18] = var19 * var10 - (-(var20 * var13) - var21Lifetime2 * var16) >> 16;
+                  PetAttackAnimation.field_x[var18] = var19 * var10 - (-(var20 * var13) - var21Lifetime2 * var16) >> 16;
                   ep.field_l[var18] = var21Lifetime2 * var17 + var19 * var11 + var14 * var20 >> 16;
                   var18++;
                 }
@@ -262,7 +262,7 @@ final class pt implements qda {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
         }
     }
 
@@ -282,16 +282,16 @@ final class pt implements qda {
         try {
           var9_int = param0 + param6;
           if (param6 > 0) {
-            dg.e(param0, param2, param6, param1);
-            dg.e(param0, param5, param6, param1);
+            SoftwareRasterizer.drawHorizontalLine(param0, param2, param6, param1);
+            SoftwareRasterizer.drawHorizontalLine(param0, param5, param6, param1);
           }
           if (param6 <= 0 ||
             var13 != 0) {
-            dg.e(var9_int, param2, -param6, param1);
-            dg.e(var9_int, param5, -param6, param1);
+            SoftwareRasterizer.drawHorizontalLine(var9_int, param2, -param6, param1);
+            SoftwareRasterizer.drawHorizontalLine(var9_int, param5, -param6, param1);
           }
           if (param5 > param2) {
-            dg.f(var9_int, param2, 1 + (param5 - param2), param1);
+            SoftwareRasterizer.drawVerticalLine(var9_int, param2, 1 + (param5 - param2), param1);
             if (param2 <= param4 &&
               param4 < param5) {
               stackIn_17_0 = 0;
@@ -309,7 +309,7 @@ final class pt implements qda {
               stackIn_27_0 = 1;
             }
             var10 = stackIn_27_0;
-            dg.f(var9_int, param5, 1 - param5 + param2, param1);
+            SoftwareRasterizer.drawVerticalLine(var9_int, param5, 1 - param5 + param2, param1);
           }
           if (param7 <= 43) {
             pt.a(-3);
@@ -318,28 +318,28 @@ final class pt implements qda {
             if (var10 != 0) {
               var11 = param2 + param5 >> 1;
               if (param6 <= 0) {
-                dg.e(var9_int, var11, -param6, param1);
+                SoftwareRasterizer.drawHorizontalLine(var9_int, var11, -param6, param1);
                 var9_int = var9_int - param6;
               }
               if (param6 > 0 ||
                 var13 != 0) {
                 var9_int = var9_int - param6;
-                dg.e(var9_int, var11, param6, param1);
+                SoftwareRasterizer.drawHorizontalLine(var9_int, var11, param6, param1);
               }
               var12 = -var11 + param4;
               if (0 < var12) {
-                dg.f(var9_int, var11, var12, param1);
+                SoftwareRasterizer.drawVerticalLine(var9_int, var11, var12, param1);
                 if (var13 != 0) {
-                  dg.f(var9_int, var11 + var12, -var12, param1);
+                  SoftwareRasterizer.drawVerticalLine(var9_int, var11 + var12, -var12, param1);
                 }
               } else {
-                dg.f(var9_int, var11 + var12, -var12, param1);
+                SoftwareRasterizer.drawVerticalLine(var9_int, var11 + var12, -var12, param1);
               }
             }
             if (!param3) {
               return;
             }
-            dg.e(param8, param4, -param8 + var9_int, param1);
+            SoftwareRasterizer.drawHorizontalLine(param8, param4, -param8 + var9_int, param1);
             if (var13 == 0) {
               return;
             }
@@ -349,30 +349,30 @@ final class pt implements qda {
             var12Lifetime1 = -var11Lifetime1 + param4;
             if (param6 <= 0) {
               var9_int = var9_int + param6;
-              dg.e(var9_int, var11Lifetime1, -param6, param1);
+              SoftwareRasterizer.drawHorizontalLine(var9_int, var11Lifetime1, -param6, param1);
             }
             if (param6 > 0 ||
               var13 != 0) {
-              dg.e(var9_int, var11Lifetime1, param6, param1);
+              SoftwareRasterizer.drawHorizontalLine(var9_int, var11Lifetime1, param6, param1);
               var9_int = var9_int + param6;
             }
             if (var12Lifetime1 > 0) {
-              dg.f(var9_int, var11Lifetime1, var12Lifetime1, param1);
+              SoftwareRasterizer.drawVerticalLine(var9_int, var11Lifetime1, var12Lifetime1, param1);
               if (var13 != 0) {
-                dg.f(var9_int, var12Lifetime1 + var11Lifetime1, -var12Lifetime1, param1);
+                SoftwareRasterizer.drawVerticalLine(var9_int, var12Lifetime1 + var11Lifetime1, -var12Lifetime1, param1);
               }
             } else {
-              dg.f(var9_int, var12Lifetime1 + var11Lifetime1, -var12Lifetime1, param1);
+              SoftwareRasterizer.drawVerticalLine(var9_int, var12Lifetime1 + var11Lifetime1, -var12Lifetime1, param1);
             }
           }
           if (param3) {
-            dg.e(var9_int, param4, -var9_int + param8, param1);
+            SoftwareRasterizer.drawHorizontalLine(var9_int, param4, -var9_int + param8, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var9), "pt.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pe.wrapException((Throwable) ((Object) var9), "pt.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

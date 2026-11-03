@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wea extends at {
+final class wea extends AnimationNode {
     private int field_k;
-    private gj field_j;
+    private BattleScreen field_j;
     private vg field_l;
 
     final static int b(boolean param0) {
         if (param0) {
           return 48;
         }
-        if (2 > lk.field_r) {
+        if (2 > SuperSpeedAllEvent.field_r) {
           return 0;
         }
         if (kt.field_k == 0) {
@@ -66,14 +66,14 @@ final class wea extends at {
         return 100;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         bf var2_ref_bf;
         int var2;
         int var4;
-        ad var5;
-        ad var6;
+        CreatureActor var5;
+        CreatureActor var6;
         int var2Lifetime1;
         var4 = BachelorFridge.field_y;
         if (this.field_k != 25) {
@@ -93,13 +93,13 @@ final class wea extends at {
               continue;
             }
             var6 = ((dla) (var2_ref_bf)).field_n.a(-27449, this.field_j);
-            if (!var6.field_s.i(81) &&
+            if (!var6.field_s.isDown(81) &&
               var6.field_f.field_s != 6) {
               var6.b(-1, 5);
             }
           } else {
             var5 = ((qja) (var2_ref_bf)).field_i.a(-27449, this.field_j);
-            if (!var5.field_s.i(98) &&
+            if (!var5.field_s.isDown(98) &&
               var5.field_f.field_s != 3) {
               var5.b(-1, 7);
             }
@@ -115,13 +115,13 @@ final class wea extends at {
         return false;
     }
 
-    wea(gj param0, vg param1) {
+    wea(BattleScreen param0, vg param1) {
         try {
           this.field_j = param0;
           this.field_l = param1;
           this.field_k = 25;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

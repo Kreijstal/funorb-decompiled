@@ -1,43 +1,43 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oca extends jm {
+final class oca extends BoardChange {
     private int field_q;
     static String field_p;
-    static sna field_n;
+    static UiComponent field_n;
     static String field_o;
     private int field_m;
 
-    final void a(boolean param0, op param1) {
+    final void a(boolean param0, BattleState param1) {
         try {
-          param1.field_a[this.field_q][this.field_m].field_m = true;
+          param1.tiles[this.field_q][this.field_m].field_m = true;
           if (param0) {
-            lu var4 = (lu) null;
-            this.b((lu) null, (byte) 17);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.b((PacketBuffer) null, (byte) 17);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(lu param0, byte param1) {
+    final void b(PacketBuffer param0, byte param1) {
         try {
-          param0.d(this.field_q, 0);
-          param0.d(this.field_m, 0);
+          param0.writeByte(this.field_q, 0);
+          param0.writeByte(this.field_m, 0);
           int var3_int = 118 % ((37 - param1) / 38);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oca.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oca.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(ub param0, int param1) {
+    final void a(BoardChangeAnimation param0, int param1) {
         if (param1 > -2) {
           return;
         }
         try {
           param0.field_o.b(30996, this.field_q, this.field_m);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -60,13 +60,13 @@ final class oca extends jm {
         this.field_j = 1;
     }
 
-    oca(lu param0) {
+    oca(PacketBuffer param0) {
         try {
           this.field_j = 1;
-          this.field_q = param0.b(16711935);
-          this.field_m = param0.b(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
+          this.field_m = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

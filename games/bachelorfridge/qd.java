@@ -19,7 +19,7 @@ final class qd extends pv {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         if (param0 < 31) {
           return;
@@ -89,7 +89,7 @@ final class qd extends pv {
         var4 = BachelorFridge.field_y;
         try {
           try {
-            if (!ht.field_i.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_i.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&
@@ -97,7 +97,7 @@ final class qd extends pv {
               return false;
             }
             if (param1 >= -119) {
-              qd.c((byte) -22);
+              qd.releaseStatics((byte) -22);
             }
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             for (var3 = 0; param0.length() > var3; var3++) {
@@ -122,18 +122,18 @@ final class qd extends pv {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    qd(jfa param0, int param1) {
+    qd(FridgeCreature param0, int param1) {
         try {
           this.field_f = param0;
           this.field_m = param1;
           this.field_o = this.field_f.field_k;
           this.field_j = (double)this.field_m / (-43.0 + (double)this.c(false));
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

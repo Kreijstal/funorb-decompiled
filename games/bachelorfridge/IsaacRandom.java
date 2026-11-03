@@ -1,0 +1,250 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class IsaacRandom {
+    private int[] field_b;
+    private int field_i;
+    private int field_d;
+    static int field_e;
+    private int field_a;
+    private int[] field_c;
+    static kga field_f;
+    private int field_j;
+    static vr field_g;
+    static String field_h;
+
+    private final void a(boolean param0) {
+        int var2 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int var3;
+        int var4;
+        int var5;
+        var5 = BachelorFridge.field_y;
+        int fieldTemp$0 = this.field_d + 1;
+        this.field_d = this.field_d + 1;
+        this.field_i = this.field_i + fieldTemp$0;
+        for (var2 = 0; var2 < 256; var2++) {
+          var3 = this.field_c[var2];
+          if (0 == (2 & var2)) {
+            if ((var2 & 1) != 0) {
+              this.field_j = this.field_j ^ this.field_j >>> 6;
+            } else {
+              this.field_j = this.field_j ^ this.field_j << 13;
+            }
+          } else {
+            if ((1 & var2) == 0) {
+              this.field_j = this.field_j ^ this.field_j << 2;
+            } else {
+              this.field_j = this.field_j ^ this.field_j >>> 16;
+            }
+          }
+          this.field_j = this.field_j + this.field_c[255 & var2 + 128];
+          dupTemp$1 = this.field_i + (this.field_j + this.field_c[dda.a(var3, 1020) >> 2]);
+          var4 = dupTemp$1;
+          this.field_c[var2] = dupTemp$1;
+          dupTemp$2 = var3 + this.field_c[dda.a(var4 >> 8 >> 2, 255)];
+          this.field_i = dupTemp$2;
+          this.field_b[var2] = dupTemp$2;
+        }
+        if (param0) {
+          IsaacRandom.a((byte) -43);
+        }
+    }
+
+    final static void a(int param0, byte param1) {
+        if (AttackUpAllAnimation.e(-29919)) {
+          return;
+        }
+        sja.field_fb.writeCipheredByte(94, (byte) 115);
+        int var2 = -5 / ((param1 + 18) / 51);
+        sja.field_fb.writeByte(param0, 0);
+    }
+
+    private final void a(int param0) {
+        int var2 = 0;
+        int var12 = BachelorFridge.field_y;
+        int var5 = -1640531527;
+        int var6 = -1640531527;
+        int var9 = -1640531527;
+        int var4 = -1640531527;
+        int var10 = -1640531527;
+        int var3 = -1640531527;
+        int var7 = -1640531527;
+        int var8 = -1640531527;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        for (var2 = 0; 4 > var2; var2++) {
+          var3 = var3 ^ var4 << 11;
+          var6 = var6 + var3;
+          var4 = var4 + var5;
+          var4 = var4 ^ var5 >>> 2;
+          var5 = var5 + var6;
+          var7 = var7 + var4;
+          var5 = var5 ^ var6 << 8;
+          var6 = var6 + var7;
+          var8 = var8 + var5;
+          var6 = var6 ^ var7 >>> 16;
+          var9 = var9 + var6;
+          var7 = var7 + var8;
+          var7 = var7 ^ var8 << 10;
+          var8 = var8 + var9;
+          var10 = var10 + var7;
+          var8 = var8 ^ var9 >>> 4;
+          var9 = var9 + var10;
+          var3 = var3 + var8;
+          var9 = var9 ^ var10 << 8;
+          var4 = var4 + var9;
+          var10 = var10 + var3;
+          var10 = var10 ^ var3 >>> 9;
+          var5 = var5 + var10;
+          var3 = var3 + var4;
+        }
+        var2Lifetime1 = 0;
+        int var11 = 77 / ((param0 - 1) / 37);
+        while (256 > var2Lifetime1) {
+          var5 = var5 + this.field_b[var2Lifetime1 + 2];
+          var4 = var4 + this.field_b[var2Lifetime1 + 1];
+          var6 = var6 + this.field_b[3 + var2Lifetime1];
+          var7 = var7 + this.field_b[4 + var2Lifetime1];
+          var10 = var10 + this.field_b[var2Lifetime1 + 7];
+          var8 = var8 + this.field_b[var2Lifetime1 + 5];
+          var9 = var9 + this.field_b[6 + var2Lifetime1];
+          var3 = var3 + this.field_b[var2Lifetime1];
+          var3 = var3 ^ var4 << 11;
+          var6 = var6 + var3;
+          var4 = var4 + var5;
+          var4 = var4 ^ var5 >>> 2;
+          var5 = var5 + var6;
+          var7 = var7 + var4;
+          var5 = var5 ^ var6 << 8;
+          var6 = var6 + var7;
+          var8 = var8 + var5;
+          var6 = var6 ^ var7 >>> 16;
+          var9 = var9 + var6;
+          var7 = var7 + var8;
+          var7 = var7 ^ var8 << 10;
+          var8 = var8 + var9;
+          var10 = var10 + var7;
+          var8 = var8 ^ var9 >>> 4;
+          var3 = var3 + var8;
+          var9 = var9 + var10;
+          var9 = var9 ^ var10 << 8;
+          var10 = var10 + var3;
+          var4 = var4 + var9;
+          var10 = var10 ^ var3 >>> 9;
+          var3 = var3 + var4;
+          var5 = var5 + var10;
+          this.field_c[var2Lifetime1] = var3;
+          this.field_c[1 + var2Lifetime1] = var4;
+          this.field_c[var2Lifetime1 + 2] = var5;
+          this.field_c[3 + var2Lifetime1] = var6;
+          this.field_c[var2Lifetime1 + 4] = var7;
+          this.field_c[var2Lifetime1 + 5] = var8;
+          this.field_c[var2Lifetime1 + 6] = var9;
+          this.field_c[7 + var2Lifetime1] = var10;
+          var2Lifetime1 += 8;
+        }
+        for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
+          var8 = var8 + this.field_c[var2Lifetime2 + 5];
+          var3 = var3 + this.field_c[var2Lifetime2];
+          var10 = var10 + this.field_c[var2Lifetime2 + 7];
+          var4 = var4 + this.field_c[1 + var2Lifetime2];
+          var7 = var7 + this.field_c[4 + var2Lifetime2];
+          var9 = var9 + this.field_c[6 + var2Lifetime2];
+          var5 = var5 + this.field_c[2 + var2Lifetime2];
+          var6 = var6 + this.field_c[3 + var2Lifetime2];
+          var3 = var3 ^ var4 << 11;
+          var4 = var4 + var5;
+          var6 = var6 + var3;
+          var4 = var4 ^ var5 >>> 2;
+          var7 = var7 + var4;
+          var5 = var5 + var6;
+          var5 = var5 ^ var6 << 8;
+          var8 = var8 + var5;
+          var6 = var6 + var7;
+          var6 = var6 ^ var7 >>> 16;
+          var9 = var9 + var6;
+          var7 = var7 + var8;
+          var7 = var7 ^ var8 << 10;
+          var10 = var10 + var7;
+          var8 = var8 + var9;
+          var8 = var8 ^ var9 >>> 4;
+          var3 = var3 + var8;
+          var9 = var9 + var10;
+          var9 = var9 ^ var10 << 8;
+          var4 = var4 + var9;
+          var10 = var10 + var3;
+          var10 = var10 ^ var3 >>> 9;
+          var3 = var3 + var4;
+          var5 = var5 + var10;
+          this.field_c[var2Lifetime2] = var3;
+          this.field_c[1 + var2Lifetime2] = var4;
+          this.field_c[2 + var2Lifetime2] = var5;
+          this.field_c[3 + var2Lifetime2] = var6;
+          this.field_c[4 + var2Lifetime2] = var7;
+          this.field_c[5 + var2Lifetime2] = var8;
+          this.field_c[var2Lifetime2 + 6] = var9;
+          this.field_c[7 + var2Lifetime2] = var10;
+        }
+        this.a(false);
+        this.field_a = 256;
+    }
+
+    final int nextBounded(int param0, int param1) {
+        int var4 = 0;
+        int var5 = BachelorFridge.field_y;
+        if (0 >= param1) {
+          throw new IllegalArgumentException();
+        }
+        if (param0 != -21000) {
+          this.field_i = -67;
+        }
+        int var3 = 2147483647 - (int)(4294967296L % (long)param1);
+        do {
+          var4 = this.nextInt(28602);
+        } while (var3 < var4);
+        return ZombiesSpecial.a(param1, 1816304479, var4);
+    }
+
+    final int nextInt(int param0) {
+        if (0 == this.field_a) {
+          this.a(false);
+          this.field_a = 256;
+        }
+        if (param0 != 28602) {
+          this.field_c = (int[]) null;
+        }
+        int fieldTemp$0 = this.field_a - 1;
+        this.field_a = this.field_a - 1;
+        return this.field_b[fieldTemp$0];
+    }
+
+    public static void a(byte param0) {
+        if (param0 >= -41) {
+          IsaacRandom.a(35, (byte) -68);
+        }
+        field_h = null;
+        field_g = null;
+        field_f = null;
+    }
+
+    IsaacRandom(int[] param0) {
+        int var2_int = 0;
+        try {
+          this.field_b = new int[256];
+          this.field_c = new int[256];
+          for (var2_int = 0; var2_int < param0.length; var2_int++) {
+            this.field_b[var2_int] = param0[var2_int];
+          }
+          this.a(48);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_e = 20;
+        field_h = "Members";
+    }
+}

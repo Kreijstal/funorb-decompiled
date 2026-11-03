@@ -6,7 +6,7 @@ abstract class lea extends IntrusiveNode {
 
     abstract void a();
 
-    abstract int a(hn param0);
+    abstract int a(PcmStreamMixer param0);
 
     private lea() throws Throwable {
         throw new Error();

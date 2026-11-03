@@ -35,7 +35,7 @@ final class hja {
         this.field_f = -1;
         this.field_h = param0;
         this.field_a = vj.field_r[this.field_h];
-        this.field_d = oha.field_d[this.field_h];
+        this.field_d = MoveDefinition.field_d[this.field_h];
         stackIn_3_1 = (param2);
         this.field_b = stackIn_3_1;
         if (6 == this.field_h) {

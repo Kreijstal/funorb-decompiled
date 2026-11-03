@@ -24,7 +24,7 @@ final class jd {
         if (lfa.field_q <= 0) {
           if (ld.field_p > 0) {
             if (w.field_e) {
-              dg.g(0, 0, dg.field_i, i.field_a.field_M);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
               qw.field_b.a(param0, 7802);
             }
             if (param1 < 67) {
@@ -39,35 +39,35 @@ final class jd {
             return;
           }
           if (w.field_e) {
-            dg.g(0, 0, dg.field_i, i.field_a.field_M);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
             qw.field_b.a(param0, 7802);
           }
         } else {
           if (!eda.field_j) {
             if (ld.field_p > 0) {
               if (w.field_e) {
-                dg.g(0, 0, dg.field_i, i.field_a.field_M);
+                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
                 qw.field_b.a(param0, 7802);
               }
             } else {
               if (dja.field_m > 0 &&
                 w.field_e) {
-                dg.g(0, 0, dg.field_i, i.field_a.field_M);
+                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
                 qw.field_b.a(param0, 7802);
               }
             }
           } else {
-            dg.g(0, 0, dg.field_i, i.field_a.field_M);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
             sb.field_n.a(param0, 7802);
             if (ld.field_p > 0) {
               if (w.field_e) {
-                dg.g(0, 0, dg.field_i, i.field_a.field_M);
+                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
                 qw.field_b.a(param0, 7802);
               }
             } else {
               if (dja.field_m > 0) {
                 if (w.field_e) {
-                  dg.g(0, 0, dg.field_i, i.field_a.field_M);
+                  SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
                   qw.field_b.a(param0, 7802);
                 }
                 if (param1 < 67) {
@@ -213,7 +213,7 @@ final class jd {
         return 102 == this.field_h ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 89) {
           return;
         }
@@ -343,11 +343,11 @@ final class jd {
           this.field_c = true;
           this.field_a = lf.field_c;
           this.field_f = lf.field_c;
-          this.field_i = nb.field_r;
+          this.field_i = ScavengerEvent.field_r;
         }
         if (this.field_f == 0) {
           if (lf.field_c == 0) {
-            if (fia.field_t != 0) {
+            if (LevitateEvent.field_t != 0) {
               if (this.field_f == 0) {
                 if (!this.field_c &&
                   !dda.field_f) {
@@ -404,9 +404,9 @@ final class jd {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (fia.field_t == 0) {
+        if (LevitateEvent.field_t == 0) {
           if (lf.field_c == 0) {
-            if (fia.field_t != 0) {
+            if (LevitateEvent.field_t != 0) {
               if (this.field_f == 0) {
                 if (!this.field_c &&
                   !dda.field_f) {
@@ -434,7 +434,7 @@ final class jd {
           }
           this.field_i = this.field_i - 1;
           if (lf.field_c == 0) {
-            if (fia.field_t != 0) {
+            if (LevitateEvent.field_t != 0) {
               if (this.field_f != 0) {
                 return;
               }

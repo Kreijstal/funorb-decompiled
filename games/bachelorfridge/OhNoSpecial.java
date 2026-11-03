@@ -1,0 +1,108 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class OhNoSpecial extends SpecialOrder {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
+        BattleCreature var3 = null;
+        RuntimeException var3_ref = null;
+        OhNoEvent var4 = null;
+        OhNoEvent stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3 = this.creature.a(79, param0);
+          if (param1 != 3) {
+            OhNoSpecial.a(68, -10, (byte) -83, -44, 25, 72);
+          }
+          var4 = new OhNoEvent(this.moveId, new CreatureRef(var3));
+          var4.field_q = this.field_k;
+          var4.field_r = this.field_n;
+          stackIn_3_0 = var4;
+          return (CreatureEvent) ((Object) stackIn_3_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_6_0 = var3_ref;
+          stackIn_6_1 = new StringBuilder().append("fc.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
+        int var6;
+        var6 = 26 % ((param2 - 38) / 47);
+        if (param0 == param1) {
+          eda.a(param3, param4, param1, false, param5);
+        } else {
+          if (param4 - param1 < DualLinkNode.field_l) {
+            vda.a(param0, param5, param3, param1, (byte) -115, param4);
+          } else {
+            if (SnowAnimation.field_x < param1 + param4) {
+              vda.a(param0, param5, param3, param1, (byte) -115, param4);
+            } else {
+              if (param3 - param0 < an.field_q) {
+                vda.a(param0, param5, param3, param1, (byte) -115, param4);
+              } else {
+                if (param3 + param0 > ha.field_n) {
+                  vda.a(param0, param5, param3, param1, (byte) -115, param4);
+                } else {
+                  dw.a(param3, param0, 0, param1, param5, param4);
+                }
+              }
+            }
+          }
+        }
+    }
+
+    final static void a(int param0, int param1, Sprite param2, int param3, byte param4, int param5) {
+        int var6_int = 0;
+        int var7 = 0;
+        int var8 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        var8 = BachelorFridge.field_y;
+        try {
+          var6_int = 0;
+          var7 = -110 % ((param4 - 7) / 37);
+          while (var6_int < param2.field_v.length) {
+            param2.field_v[var6_int] = hga.field_U.field_e[var6_int];
+            var6_int++;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_7_0 = var6;
+          stackIn_7_1 = new StringBuilder().append("fc.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    OhNoSpecial(int param0, BattleCreature param1, int param2, int param3) {
+        super(param0, param1);
+        try {
+          this.field_k = param2;
+          this.field_n = param3;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    static {
+    }
+}

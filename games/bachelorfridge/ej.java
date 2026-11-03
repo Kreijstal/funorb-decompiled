@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ej extends jm {
+final class ej extends BoardChange {
     private int field_m;
     static String field_n;
     static String field_o;
@@ -12,13 +12,13 @@ final class ej extends jm {
         this.field_j = 7;
     }
 
-    final void a(ub param0, int param1) {
+    final void a(BoardChangeAnimation param0, int param1) {
         int var5 = 0;
-        ib var4 = null;
+        PlayerRoster var4 = null;
         int var6 = 0;
-        op var7 = null;
-        gj var8 = null;
-        gj var9 = null;
+        BattleState var7 = null;
+        BattleScreen var8 = null;
+        BattleScreen var9 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -30,13 +30,13 @@ final class ej extends jm {
           var9 = var8;
           var8.field_T[this.field_m] = 0;
           if (param1 > -2) {
-            var7 = (op) null;
-            this.a(true, (op) null);
+            var7 = (BattleState) null;
+            this.a(true, (BattleState) null);
           }
-          var4 = param0.field_o.field_h.field_S[this.field_m];
+          var4 = param0.field_o.field_h.rosters[this.field_m];
           for (var5 = 0; var4.field_b.length > var5; var5++) {
             if (var4.field_b[var5] != null) {
-              param0.a(27799, new cb(param0.field_o.b(var4.field_b[var5], -23990), 5));
+              param0.addChild(27799, new cb(param0.field_o.b(var4.field_b[var5], -23990), 5));
             }
           }
           this.a(false, var9.field_h);
@@ -51,7 +51,7 @@ final class ej extends jm {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -61,25 +61,25 @@ final class ej extends jm {
           gb.a(param0, param4, param1, 0, param3, param2);
           int var6_int = -111 / ((4 - param5) / 59);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ej.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ej.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    ej(lu param0) {
+    ej(PacketBuffer param0) {
         try {
           this.field_j = 7;
-          this.field_m = param0.b(16711935);
+          this.field_m = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, op param1) {
+    final void a(boolean param0, BattleState param1) {
         int var4 = 0;
-        ib var3 = null;
+        PlayerRoster var3 = null;
         int var5 = 0;
-        op var6 = null;
-        ib var7 = null;
+        BattleState var6 = null;
+        PlayerRoster var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -87,12 +87,12 @@ final class ej extends jm {
         RuntimeException var3_ref = null;
         var5 = BachelorFridge.field_y;
         try {
-          param1.field_S[this.field_m].field_c = true;
-          var7 = param1.field_S[this.field_m];
+          param1.rosters[this.field_m].field_c = true;
+          var7 = param1.rosters[this.field_m];
           var3 = var7;
           if (param0) {
-            var6 = (op) null;
-            this.a(true, (op) null);
+            var6 = (BattleState) null;
+            this.a(true, (BattleState) null);
           }
           for (var4 = 0; var3.field_b.length > var4; var4++) {
             if (null != var7.field_b[var4]) {
@@ -111,16 +111,16 @@ final class ej extends jm {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final void b(lu param0, byte param1) {
+    final void b(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -73 % ((param1 - 37) / 38);
-          param0.d(this.field_m, 0);
+          param0.writeByte(this.field_m, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ej.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ej.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class ej extends jm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -12) {
-            ej.b(-110);
+            ej.releaseStatics(-110);
           }
           if (!param0.a(0)) {
             stackIn_5_0 = (String) (param1);
@@ -176,7 +176,7 @@ final class ej extends jm {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class ej extends jm {
         var4 = BachelorFridge.field_y;
         try {
           if (param0 != -11163) {
-            ej.b(49);
+            ej.releaseStatics(49);
           }
           var5 = fg.field_a;
           var1 = var5;
@@ -211,11 +211,11 @@ final class ej extends jm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "ej.G(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "ej.G(" + param0 + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 0) {
           field_n = (String) null;

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mda {
-    static sna field_b;
+    static UiComponent field_b;
     static du field_a;
-    static sna field_c;
+    static UiComponent field_c;
 
     final static int a(int param0, int param1) {
         int var2;
@@ -37,12 +37,12 @@ final class mda {
         return var2 + param0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
         if (param0 != 15) {
-          field_b = (sna) null;
+          field_b = (UiComponent) null;
         }
     }
 

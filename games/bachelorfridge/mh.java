@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mh extends pp {
+final class mh extends EventEffect {
     boolean field_i;
-    static ht field_l;
-    static sna field_k;
-    static sna field_j;
+    static PlatformTaskDispatcher field_l;
+    static UiComponent field_k;
+    static UiComponent field_j;
 
     public static void a(int param0) {
         if (param0 != -15947) {
@@ -16,28 +16,28 @@ final class mh extends pp {
         field_k = null;
     }
 
-    final void a(lu param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -92 / ((param1 - 34) / 58);
-          er.a(this.field_h, 126, param0);
-          param0.d(this.field_i ? 1 : 0, 0);
+          FlirtAnimation.a(this.target, 126, param0);
+          param0.writeByte(this.field_i ? 1 : 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(aga param0, op param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         try {
           if (param2 != 12) {
             this.field_i = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mh.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mh.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void a(boolean param0, boolean param1, boolean param2, int param3, byte param4) {
-        sna stackIn_20_0 = null;
+        UiComponent stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_36_0 = 0;
         int stackIn_36_1 = 0;
@@ -50,24 +50,24 @@ final class mh extends pp {
         int stackIn_87_0 = 0;
         boolean stackIn_134_0 = false;
         int stackIn_148_0 = 0;
-        sna stackIn_167_0 = null;
+        UiComponent stackIn_167_0 = null;
         int stackIn_167_1 = 0;
         boolean stackIn_168_2 = false;
-        sna stackIn_172_0 = null;
+        UiComponent stackIn_172_0 = null;
         int stackIn_172_1 = 0;
         boolean stackIn_173_2 = false;
-        sna stackIn_177_0 = null;
+        UiComponent stackIn_177_0 = null;
         int stackIn_177_1 = 0;
         boolean stackIn_178_2 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_79_0;
         boolean stackOut_133_0;
-        sna var5 = null;
+        UiComponent var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        sna var6 = null;
-        sna var7 = null;
-        sna var8 = null;
+        UiComponent var6 = null;
+        UiComponent var7 = null;
+        UiComponent var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -83,7 +83,7 @@ final class mh extends pp {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        eaa var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         ema var18_ref = null;
@@ -101,21 +101,21 @@ final class mh extends pp {
         var19 = BachelorFridge.field_y;
         try {
           dna.c(dja.field_m, false);
-          if (pw.field_w != null) {
+          if (SnowAnimation.field_w != null) {
             boolean decompiledFrameRemainder1 = true;
             jj.field_wb.field_u = true;
             ik.field_i.field_p = 0;
             var5 = ik.field_i;
             var5.field_sb = 0;
-            cn.field_j.field_p = 0;
-            var6 = cn.field_j;
+            PlaceCreatureEffect.field_j.field_p = 0;
+            var6 = PlaceCreatureEffect.field_j;
             var6.field_sb = 0;
             cw.field_yb.field_p = 0;
             var7 = cw.field_yb;
             var7.field_sb = 0;
-            if (!ps.d(-119)) {
-              var9_ref_String = pw.field_w.field_Jb;
-              vaa.field_a.field_Z = lga.a(true, new String[]{var9_ref_String}, fq.field_r).toUpperCase();
+            if (!ZombiesEvent.d(-119)) {
+              var9_ref_String = SnowAnimation.field_w.field_Jb;
+              vaa.field_a.field_Z = lga.a(true, new String[]{var9_ref_String}, HomingMissileSpecial.field_r).toUpperCase();
               cw.field_yb.a(40, 31407, ho.field_g.field_sb, 0, -40 + ho.field_g.field_p);
               cw.field_yb.field_Z = lga.a(true, new String[]{var9_ref_String}, ne.field_n);
               var8 = cw.field_yb;
@@ -125,7 +125,7 @@ final class mh extends pp {
               vaa.field_a.field_Z = tea.field_lb.toUpperCase();
               var9 = (2 + ho.field_g.field_sb) / 2;
               ik.field_i.a(40, 31407, -2 + var9, 0, ho.field_g.field_p - 40);
-              if (pw.field_w.field_Pb <= pw.field_w.field_Rb) {
+              if (SnowAnimation.field_w.field_Pb <= SnowAnimation.field_w.field_Rb) {
                 ik.field_i.field_Z = oia.field_i.toUpperCase();
                 ik.field_i.field_u = false;
                 if (var19 != 0) {
@@ -147,17 +147,17 @@ final class mh extends pp {
                   var10_ref_String = mu.field_m;
                 }
                 ik.field_i.field_Z = ik.field_i.field_Z + "<br>" + var10_ref_String;
-                if ((16 & qf.field_v) == 0 &&
+                if ((16 & MoveEventAnimation.field_v) == 0 &&
                   !w.field_e) {
                   ik.field_i.field_eb = vo.field_b.field_A;
                 }
               }
-              cn.field_j.a(40, 31407, -var9 + ho.field_g.field_sb, var9, ho.field_g.field_p - 40);
-              cn.field_j.field_Z = l.field_q.toUpperCase();
-              stackIn_20_0 = cn.field_j;
+              PlaceCreatureEffect.field_j.a(40, 31407, -var9 + ho.field_g.field_sb, var9, ho.field_g.field_p - 40);
+              PlaceCreatureEffect.field_j.field_Z = SplitEvent.field_q.toUpperCase();
+              stackIn_20_0 = PlaceCreatureEffect.field_j;
               stackIn_21_1 = (param0) && (wda.field_a == 0L);
               stackIn_20_0.field_u = stackIn_21_1;
-              var8 = cn.field_j;
+              var8 = PlaceCreatureEffect.field_j;
               var10 = 2;
               if (pha.field_h != null) {
                 if (bja.field_o == null) {
@@ -198,14 +198,14 @@ final class mh extends pp {
                             stackIn_55_0 = 0;
                             stackIn_55_1 = ~var15;
                             if (stackIn_55_0 != stackIn_55_1) {
-                              if ((255 & pw.field_w.field_Eb[var15]) != var16) {
+                              if ((255 & SnowAnimation.field_w.field_Eb[var15]) != var16) {
                                 break scanLoop2;
                               }
                             } else {
                               if (var10 == 0) {
-                                stackIn_48_0 = pw.field_w.field_Pb;
+                                stackIn_48_0 = SnowAnimation.field_w.field_Pb;
                               } else {
-                                stackIn_48_0 = pw.field_w.field_Rb;
+                                stackIn_48_0 = SnowAnimation.field_w.field_Rb;
                               }
                               var17_int = stackIn_48_0;
                               if (~var16 != ~var17_int &&
@@ -248,17 +248,17 @@ final class mh extends pp {
                       continue;
                     }
                   }
-                  stackIn_70_0 = ~hea.field_r;
+                  stackIn_70_0 = ~BananarangSpecial.field_r;
                   break;
                 }
                 if (stackIn_70_0 <= -3 &&
-                  wga.field_q[12]) {
+                  InvincibleEvent.field_q[12]) {
                   var10 = 2;
                 }
               }
               if (var10 < 2) {
-                cn.field_j.field_u = false;
-                decompiledFrameRemainder1 = !(!cn.field_j.field_E);
+                PlaceCreatureEffect.field_j.field_u = false;
+                decompiledFrameRemainder1 = !(!PlaceCreatureEffect.field_j.field_E);
                 if (decompiledFrameRemainder1) {
                   var11_ref = null;
                   var12 = 0;
@@ -287,7 +287,7 @@ final class mh extends pp {
                     break;
                   }
                   if (stackIn_87_0 != var10) {
-                    var13_ref_String = nq.field_h;
+                    var13_ref_String = CreatureRef.field_h;
                     boolean decompiledSharedTail2 = (var12 == 0);
                     if (!decompiledSharedTail2) {
                       var14_ref_String = oda.field_b + (String) (var11_ref);
@@ -297,7 +297,7 @@ final class mh extends pp {
                       var14_ref_String = lga.a(true, new String[]{(String) (var11_ref)}, ec.field_b);
                     }
                   } else {
-                    var13_ref_String = aha.field_H;
+                    var13_ref_String = LinkTextWidget.field_H;
                     boolean decompiledSharedTail1 = (var12 == 0);
                     if (!decompiledSharedTail1) {
                       var14_ref_String = ag.field_k + (String) (var11_ref);
@@ -310,7 +310,7 @@ final class mh extends pp {
                   jja.field_m = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
                 }
               }
-              if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (hr.field_b != null ||
+              if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (DelegatingCanvas.field_b != null ||
                 null != re.field_F ||
                 null != gma.field_c ||
                 null != wda.field_c)) {
@@ -322,11 +322,11 @@ final class mh extends pp {
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (!(ld.field_q > var16)))) {
-                  var17_int = pw.field_w.field_Eb[var16] & 255;
+                  var17_int = SnowAnimation.field_w.field_Eb[var16] & 255;
                   if (var19 == 0) {
-                    if (hr.field_b != null &&
-                      hr.field_b[var16] != null &&
-                      hr.field_b[var16][var17_int]) {
+                    if (DelegatingCanvas.field_b != null &&
+                      DelegatingCanvas.field_b[var16] != null &&
+                      DelegatingCanvas.field_b[var16][var17_int]) {
                       var11 = 1;
                     }
                     if (null != re.field_F &&
@@ -363,7 +363,7 @@ final class mh extends pp {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = ak.field_q.field_vb.field_z;
+                var17 = SnowEvent.field_q.field_vb.children;
                 var18_ref = (ema) (var17.b((byte) 90));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
@@ -413,20 +413,20 @@ final class mh extends pp {
                   stackIn_148_0 = -3;
                   break;
                 }
-                if (stackIn_148_0 >= ~hea.field_r &&
-                  wga.field_q[12]) {
+                if (stackIn_148_0 >= ~BananarangSpecial.field_r &&
+                  InvincibleEvent.field_q[12]) {
                   var16 = 0;
                 }
                 if (var16 != 0) {
-                  cn.field_j.field_u = false;
-                  if (cn.field_j.field_E) {
-                    boolean decompiledSharedTail0 = (0 != pf.field_n.field_a.field_yb);
+                  PlaceCreatureEffect.field_j.field_u = false;
+                  if (PlaceCreatureEffect.field_j.field_E) {
+                    boolean decompiledSharedTail0 = (0 != BitPacketBuffer.field_n.field_a.field_yb);
                     if (!decompiledSharedTail0) {
                       jja.field_m = bma.field_t;
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
-                      jja.field_m = lga.a(true, new String[]{hfa.field_B}, n.field_c);
+                      jja.field_m = lga.a(true, new String[]{WidgetWrapper.field_B}, n.field_c);
                     }
                   }
                 }
@@ -440,51 +440,51 @@ final class mh extends pp {
               }
               var8.field_Z = lga.a(true, new String[]{Integer.toString(var9)}, jk.field_p);
             }
-            mja.field_t.field_Z = lga.a(true, new String[]{Integer.toString(pw.field_w.field_Rb), Integer.toString(pw.field_w.field_Pb)}, gfa.field_b);
+            StampedeSpecial.field_t.field_Z = lga.a(true, new String[]{Integer.toString(SnowAnimation.field_w.field_Rb), Integer.toString(SnowAnimation.field_w.field_Pb)}, gfa.field_b);
           }
           stackIn_167_0 = ela.field_i;
           stackIn_167_1 = 19842;
           stackIn_168_2 = (param2) && (!param1) && (!w.field_e);
-          ((sna) (Object) stackIn_167_0).a(stackIn_167_1, stackIn_168_2);
+          ((UiComponent) (Object) stackIn_167_0).a(stackIn_167_1, stackIn_168_2);
           stackIn_172_0 = ho.field_g;
           stackIn_172_1 = 19842;
           stackIn_173_2 = (param2) && (!param1) && (!w.field_e);
-          ((sna) (Object) stackIn_172_0).a(stackIn_172_1, stackIn_173_2);
+          ((UiComponent) (Object) stackIn_172_0).a(stackIn_172_1, stackIn_173_2);
           stackIn_177_0 = qw.field_b;
           stackIn_177_1 = 19842;
           stackIn_178_2 = (param2) && (!param1) && (w.field_e);
-          ((sna) (Object) stackIn_177_0).a(stackIn_177_1, stackIn_178_2);
-          pf.field_n.field_a.f(18632);
-          if (null != pw.field_w) {
+          ((UiComponent) (Object) stackIn_177_0).a(stackIn_177_1, stackIn_178_2);
+          BitPacketBuffer.field_n.field_a.f(18632);
+          if (null != SnowAnimation.field_w) {
             if (0 != jj.field_wb.field_R) {
-              rja.a(param3, pw.field_w.f((byte) -62), 1);
+              rja.a(param3, SnowAnimation.field_w.f((byte) -62), 1);
             }
             if (ik.field_i.field_R != 0) {
               w.field_e = true;
             }
-            if (cn.field_j.field_R != 0) {
+            if (PlaceCreatureEffect.field_j.field_R != 0) {
               aba.field_f = true;
             }
             if (0 != vca.field_h.field_R) {
               w.field_e = false;
             }
-            wp.a(false, pw.field_w, param3, false);
+            wp.a(false, SnowAnimation.field_w, param3, false);
           }
           var5_int = -73 / ((param4 - 27) / 42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var5_ref), "mh.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) var5_ref), "mh.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    mh(nq param0, boolean param1) {
+    mh(CreatureRef param0, boolean param1) {
         try {
-          this.field_h = param0;
+          this.target = param0;
           this.field_i = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

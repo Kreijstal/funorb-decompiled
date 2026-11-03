@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ema extends sna {
+final class ema extends UiComponent {
     int field_xb;
     String field_Hb;
     int field_Mb;
-    sna field_Fb;
+    UiComponent field_Fb;
     int field_Kb;
     int field_Jb;
     boolean field_Ob;
     String field_Nb;
-    sna field_Bb;
+    UiComponent field_Bb;
     int field_yb;
-    sna field_Db;
+    UiComponent field_Db;
     boolean field_wb;
     static String field_Lb;
-    sna field_Ib;
-    sna field_vb;
+    UiComponent field_Ib;
+    UiComponent field_vb;
     int field_Gb;
     long field_Eb;
     boolean field_zb;
@@ -47,7 +47,7 @@ final class ema extends sna {
             return stackIn_9_0;
           }
           if (param0 != 0) {
-            this.field_Bb = (sna) null;
+            this.field_Bb = (UiComponent) null;
           }
           stackIn_15_0 = (param1.field_wb) ? 0 : 1;
           if (stackIn_15_0 == (this.field_wb ? 1 : 0)) {
@@ -66,21 +66,21 @@ final class ema extends sna {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
     final boolean f(byte param0) {
         if (param0 == 21) {
-          return !this.a(0) ? true : false;
+          return !this.isSecondaryLinked(0) ? true : false;
         }
         this.field_Eb = 8L;
-        return !this.a(0) ? true : false;
+        return !this.isSecondaryLinked(0) ? true : false;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          ema.f(56);
+          ema.releaseStatics(56);
           field_Ab = null;
           field_Lb = null;
           return;
@@ -90,16 +90,16 @@ final class ema extends sna {
     }
 
     ema(String param0, String param1, long param2) {
-        super(0L, (sna) null);
+        super(0L, (UiComponent) null);
         CharSequence var6 = null;
         try {
           this.field_Eb = param2;
           this.field_Hb = param0;
           this.field_Nb = param1;
           var6 = (CharSequence) ((Object) this.field_Hb);
-          fq.a(0, var6);
+          HomingMissileSpecial.a(0, var6);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ema.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ema.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -109,9 +109,9 @@ final class ema extends sna {
           this.field_Nb = param2;
           this.field_Hb = param0;
           var5 = (CharSequence) ((Object) this.field_Hb);
-          fq.a(param1 + param1, var5);
+          HomingMissileSpecial.a(param1 + param1, var5);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ema.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ema.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

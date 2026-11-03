@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class pk implements qu {
-    static ee[] field_b;
+    static IndexedSprite[] field_b;
     private long field_d;
     static long field_c;
     static String[] field_a;
@@ -16,7 +16,7 @@ abstract class pk implements qu {
 
     abstract String d(byte param0);
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -41) {
           return;
         }
@@ -46,8 +46,8 @@ abstract class pk implements qu {
         return null;
     }
 
-    final static String a(bca param0, boolean param1) {
-        hd var2 = null;
+    final static String a(SpecialEvent param0, boolean param1) {
+        SpecialMoveDefinition var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -56,9 +56,9 @@ abstract class pk implements qu {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = (hd) (al.a(-56, param0.field_k));
+          var2 = (SpecialMoveDefinition) (al.a(-56, param0.moveId));
           if (param1) {
-            stackIn_4_0 = var2.field_f;
+            stackIn_4_0 = var2.name;
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -73,7 +73,7 @@ abstract class pk implements qu {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

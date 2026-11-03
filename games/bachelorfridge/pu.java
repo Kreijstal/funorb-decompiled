@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class pu extends bia {
-    static gj field_j;
+    static BattleScreen field_j;
     static String field_k;
 
     pu() {
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_j = null;
         int var1 = -64 % ((param0 - 74) / 49);
@@ -25,7 +25,7 @@ class pu extends bia {
           qb.field_l = param3;
           ai.field_d = new i(qb.field_l, ha.field_i);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pu.I(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pu.I(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

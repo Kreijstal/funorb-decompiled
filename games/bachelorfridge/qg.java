@@ -4,9 +4,9 @@
 final class qg {
     static String field_a;
     static String field_c;
-    static sna field_b;
+    static UiComponent field_b;
 
-    final static void a(int[] param0, int param1, kv param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void a(int[] param0, int param1, Sprite param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int stackIn_67_0 = 0;
         int stackIn_73_0 = 0;
         int stackIn_80_0 = 0;
@@ -220,18 +220,18 @@ final class qg {
             var35 = var35 >> 4;
             var33 = var33 >> 4;
             var36 = var36 + param15;
-            if (var35 < dg.field_j) {
-              var35 = dg.field_j;
+            if (var35 < SoftwareRasterizer.field_j) {
+              var35 = SoftwareRasterizer.field_j;
             }
-            if (dg.field_h < var34) {
-              var34 = dg.field_h;
+            if (SoftwareRasterizer.field_h < var34) {
+              var34 = SoftwareRasterizer.field_h;
             }
             var36 = var36 + 15 >> 4;
-            if (var33 < dg.field_f) {
-              var33 = dg.field_f;
+            if (var33 < SoftwareRasterizer.field_f) {
+              var33 = SoftwareRasterizer.field_f;
             }
-            if (dg.field_k < var36) {
-              var36 = dg.field_k;
+            if (SoftwareRasterizer.field_k < var36) {
+              var36 = SoftwareRasterizer.field_k;
             }
             var34 = -var34 + var33;
             if (var34 >= 0) {
@@ -241,8 +241,8 @@ final class qg {
             if (var36 >= 0) {
               return;
             }
-            param14 = dg.field_i * var35 + var33;
-            param9 = dg.field_i + var34;
+            param14 = SoftwareRasterizer.field_i * var35 + var33;
+            param9 = SoftwareRasterizer.field_i + var34;
             var37 = 16777216.0 / (double)param1;
             var39 = 16777216.0 / (double)param12;
             var21Lifetime1 = (int)Math.floor(Math.sin(var19) * var37 + 0.5);
@@ -370,7 +370,7 @@ final class qg {
                           if (var65 != 0) {
                             var67 = param8[param14];
                             var66 = -var65 + 256;
-                            param8[param14] = mp.a(dda.a(-16711936, var65 * var63 + var66 * dda.a(16711935, var67)) + dda.a(dda.a(var67, 65280) * var66 + var65 * var64, 16711680) >>> 8, 128 + (var65 >> 1) << 24);
+                            param8[param14] = MassPoisonSpecial.a(dda.a(-16711936, var65 * var63 + var66 * dda.a(16711935, var67)) + dda.a(dda.a(var67, 65280) * var66 + var65 * var64, 16711680) >>> 8, 128 + (var65 >> 1) << 24);
                           }
                         }
                         var45++;
@@ -498,7 +498,7 @@ final class qg {
                       if (var65Lifetime3 != 0) {
                         var66Lifetime3 = 256 - var65Lifetime3;
                         var67Lifetime3 = param8[param14];
-                        param8[param14] = mp.a(128 + (var65Lifetime3 >> 1) << 24, dda.a(-16711936, var63Lifetime3 * var65Lifetime3 + dda.a(var67Lifetime3, 16711935) * var66Lifetime3) + dda.a(16711680, var66Lifetime3 * dda.a(65280, var67Lifetime3) + var64Lifetime3 * var65Lifetime3) >>> 8);
+                        param8[param14] = MassPoisonSpecial.a(128 + (var65Lifetime3 >> 1) << 24, dda.a(-16711936, var63Lifetime3 * var65Lifetime3 + dda.a(var67Lifetime3, 16711935) * var66Lifetime3) + dda.a(16711680, var66Lifetime3 * dda.a(65280, var67Lifetime3) + var64Lifetime3 * var65Lifetime3) >>> 8);
                       }
                     }
                     var45Lifetime3++;
@@ -627,7 +627,7 @@ final class qg {
                         if (var65Lifetime1 != 0) {
                           var67Lifetime1 = param8[param14];
                           var66Lifetime1 = -var65Lifetime1 + 256;
-                          param8[param14] = mp.a(128 + (var65Lifetime1 >> 1) << 24, dda.a(dda.a(var67Lifetime1, 16711935) * var66Lifetime1 + var65Lifetime1 * var63Lifetime1, -16711936) + dda.a(var66Lifetime1 * dda.a(var67Lifetime1, 65280) + var64Lifetime1 * var65Lifetime1, 16711680) >>> 8);
+                          param8[param14] = MassPoisonSpecial.a(128 + (var65Lifetime1 >> 1) << 24, dda.a(dda.a(var67Lifetime1, 16711935) * var66Lifetime1 + var65Lifetime1 * var63Lifetime1, -16711936) + dda.a(var66Lifetime1 * dda.a(var67Lifetime1, 65280) + var64Lifetime1 * var65Lifetime1, 16711680) >>> 8);
                         }
                       }
                       var45Lifetime1++;
@@ -763,7 +763,7 @@ final class qg {
                         if (0 != var65Lifetime2) {
                           var66Lifetime2 = -var65Lifetime2 + 256;
                           var67Lifetime2 = param8[param14];
-                          param8[param14] = mp.a(dda.a(dda.a(var67Lifetime2, 65280) * var66Lifetime2 + var64Lifetime2 * var65Lifetime2, 16711680) + dda.a(var66Lifetime2 * dda.a(var67Lifetime2, 16711935) + var63Lifetime2 * var65Lifetime2, -16711936) >>> 8, (var65Lifetime2 >> 1) + 128 << 24);
+                          param8[param14] = MassPoisonSpecial.a(dda.a(dda.a(var67Lifetime2, 65280) * var66Lifetime2 + var64Lifetime2 * var65Lifetime2, 16711680) + dda.a(var66Lifetime2 * dda.a(var67Lifetime2, 16711935) + var63Lifetime2 * var65Lifetime2, -16711936) >>> 8, (var65Lifetime2 >> 1) + 128 << 24);
                         }
                       }
                       var51Lifetime2 = var51Lifetime2 + var23Lifetime1;
@@ -807,15 +807,15 @@ final class qg {
           } else {
             stackIn_242_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_235_0), ((StringBuilder) (Object) stackIn_241_1).append(stackIn_242_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_235_0), ((StringBuilder) (Object) stackIn_241_1).append(stackIn_242_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != 4096) {
-          qg.a(60);
+          qg.releaseStatics(60);
         }
         field_b = null;
     }

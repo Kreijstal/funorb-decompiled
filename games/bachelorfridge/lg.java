@@ -6,9 +6,9 @@ class lg {
     int field_g;
     int field_c;
     String field_b;
-    sna field_a;
+    UiComponent field_a;
     int field_d;
-    private sna field_e;
+    private UiComponent field_e;
 
     final static void c(int param0) {
         int var1_int = 0;
@@ -17,7 +17,7 @@ class lg {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          cw.field_zb = new js(param0);
+          cw.field_zb = new IntrusiveNodeHashTable(param0);
           for (var1_int = 0; var1_int < vca.field_f.length; var1_int++) {
             cw.field_zb.a((long)vca.field_f[var1_int].toLowerCase().hashCode(), (byte) 104, new ji(var1_int));
           }
@@ -25,20 +25,20 @@ class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "lg.J(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "lg.J(" + param0 + ')');
         }
     }
 
     final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
-        sna var7 = null;
+        UiComponent var7 = null;
         if (param2 != -4586) {
           return;
         }
         try {
-          var7 = new sna(param0, this.field_e, param5, param4, param3, param1, param0);
+          var7 = new UiComponent(param0, this.field_e, param5, param4, param3, param1, param0);
           this.field_a.a(-1, var7);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ class lg {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          DualLinkNode.field_f = new js(64);
+          DualLinkNode.field_f = new IntrusiveNodeHashTable(64);
           if (param0 >= -10) {
             lg.c(56);
           }
@@ -60,7 +60,7 @@ class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "lg.K(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "lg.K(" + param0 + ')');
         }
     }
 
@@ -74,14 +74,14 @@ class lg {
     final int b(int param0) {
         int var4 = BachelorFridge.field_y;
         this.field_a.a(19842, true);
-        sna var2 = (sna) (this.field_a.field_z.b((byte) 90));
+        UiComponent var2 = (UiComponent) (this.field_a.children.b((byte) 90));
         int var3 = param0;
         while (var2 != null) {
           var2.a(param0 ^ 19842, true);
           if (1 == var2.field_R) {
             return var3;
           }
-          var2 = (sna) (this.field_a.field_z.c(0));
+          var2 = (UiComponent) (this.field_a.children.c(0));
           var3++;
         }
         return -1;
@@ -96,13 +96,13 @@ class lg {
           this.field_e = mka.a(13558251, 13558251, 13558251, (byte) -119, jha.field_g, 13558251, 1118481, 13558251);
           this.field_e.field_N = 1;
           this.field_e.field_eb = wd.field_w;
-          this.field_e.field_db = op.field_I;
+          this.field_e.field_db = BattleState.field_I;
           this.field_b = param5;
-          this.field_e.field_A = bla.field_p;
-          this.field_a = new sna();
+          this.field_e.field_A = RageSpecial.field_p;
+          this.field_a = new UiComponent();
           this.field_a.a(this.field_c >> 2, 31407, this.field_d, this.field_g, -(this.field_c >> 2) + this.field_f + this.field_c);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -3,11 +3,11 @@
  */
 final class qna extends k {
     private int field_n;
-    static kv[] field_l;
+    static Sprite[] field_l;
     static int field_k;
     private boolean field_m;
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         boolean stackIn_9_1 = false;
@@ -21,13 +21,13 @@ final class qna extends k {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_n = param1.e((byte) 107);
+            this.field_n = param1.readUnsignedShort((byte) 107);
             return;
           }
           if (var4_int != 1) {
             return;
           }
-          stackIn_9_1 = (param1.b(param0 + 16712006) == 1);
+          stackIn_9_1 = (param1.readUnsignedByte(param0 + 16712006) == 1);
           this.field_m = stackIn_9_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -40,18 +40,18 @@ final class qna extends k {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void b(int param0, int param1) {
-        pf var2 = sja.field_fb;
-        var2.c(param0, (byte) 124);
-        var2.d(1, param1 ^ param1);
-        var2.d(0, param1 ^ 0);
+        BitPacketBuffer var2 = sja.field_fb;
+        var2.writeCipheredByte(param0, (byte) 124);
+        var2.writeByte(1, param1 ^ param1);
+        var2.writeByte(0, param1 ^ 0);
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -106) {
           qna.b(18, -38);
           field_l = null;

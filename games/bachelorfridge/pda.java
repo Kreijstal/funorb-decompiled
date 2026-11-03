@@ -9,7 +9,7 @@ final class pda extends DualLinkNode {
     private int[][] field_n;
     static int field_p;
 
-    private final void a(lu param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -29,24 +29,24 @@ final class pda extends DualLinkNode {
           }
           if (param2 != 1) {
             if (param2 == 2) {
-              var4_int = param0.b(16711935);
+              var4_int = param0.readUnsignedByte(16711935);
               this.field_s = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_s[var5] = param0.e((byte) 97);
+                this.field_s[var5] = param0.readUnsignedShort((byte) 97);
               }
             } else if (param2 == 3) {
-              var4_int = param0.b(16711935);
+              var4_int = param0.readUnsignedByte(16711935);
               this.field_o = new int[var4_int];
               this.field_n = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param0.e((byte) 57);
+                var6 = param0.readUnsignedShort((byte) 57);
                 var7 = pga.a(false, var6);
                 if (var7 != null) {
                   this.field_o[var5] = var6;
                   array$0 = new int[var7.field_d];
                   this.field_n[var5] = array$0;
                   for (var8 = 0; var8 < var7.field_d; var8++) {
-                    this.field_n[var5][var8] = param0.e((byte) 85);
+                    this.field_n[var5][var8] = param0.readUnsignedShort((byte) 85);
                   }
                 }
               }
@@ -56,7 +56,7 @@ final class pda extends DualLinkNode {
               }
             }
           } else {
-            this.field_r = fda.a(~param1, '<', param0.g(-125));
+            this.field_r = fda.a(~param1, '<', param0.readString(-125));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -69,7 +69,7 @@ final class pda extends DualLinkNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class pda extends DualLinkNode {
         }
         if (null != this.field_s) {
           for (var2 = 0; var2 < this.field_s.length; var2++) {
-            this.field_s[var2] = mp.a(this.field_s[var2], 32768);
+            this.field_s[var2] = MassPoisonSpecial.a(this.field_s[var2], 32768);
           }
         }
     }
@@ -93,7 +93,7 @@ final class pda extends DualLinkNode {
         }
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -107,7 +107,7 @@ final class pda extends DualLinkNode {
             return;
           }
           while (true) {
-            var3_int = param0.b(16711935);
+            var3_int = param0.readUnsignedByte(16711935);
             if (var3_int == 0) {
               return;
             }
@@ -123,7 +123,7 @@ final class pda extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

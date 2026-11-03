@@ -4,7 +4,7 @@
 final class sd {
     static int[] field_b;
     static int field_a;
-    static sca field_c;
+    static MouseWheelInput field_c;
 
     final synchronized static byte[] a(int param0, int param1) {
         int fieldTemp$3 = 0;
@@ -29,16 +29,16 @@ final class sd {
           mc.field_h > 0) {
           fieldTemp$4 = mc.field_h - 1;
           mc.field_h = mc.field_h - 1;
-          var2_ref_byte__Lifetime1 = rn.field_q[fieldTemp$4];
-          rn.field_q[mc.field_h] = null;
+          var2_ref_byte__Lifetime1 = BananarangEvent.field_q[fieldTemp$4];
+          BananarangEvent.field_q[mc.field_h] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&
-          0 < sca.field_d) {
-          fieldTemp$5 = sca.field_d - 1;
-          sca.field_d = sca.field_d - 1;
+          0 < MouseWheelInput.field_d) {
+          fieldTemp$5 = MouseWheelInput.field_d - 1;
+          MouseWheelInput.field_d = MouseWheelInput.field_d - 1;
           var2_ref_byte__Lifetime2 = ok.field_zb[fieldTemp$5];
-          ok.field_zb[sca.field_d] = null;
+          ok.field_zb[MouseWheelInput.field_d] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (vla.field_o != null) {
@@ -57,7 +57,7 @@ final class sd {
         return new byte[param0];
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -65,32 +65,32 @@ final class sd {
         field_c = null;
     }
 
-    final static void a(double param0, int param1, oha param2, byte param3, int param4, int param5, int param6) {
+    final static void a(double param0, int param1, MoveDefinition param2, byte param3, int param4, int param5, int param6) {
         try {
           bi.a(param6, false, 20, param2, param1, param5, param4, false, param0);
           if (param3 != 74) {
             sd.a(71, -102);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    final static void a(byte param0, lu param1, sfa param2) {
+    final static void a(byte param0, PacketBuffer param1, CreatureOrder param2) {
         if (param2 == null) {
-          param1.d(-1, param0 - 124);
+          param1.writeByte(-1, param0 - 124);
           return;
         }
         try {
-          param1.d(param2.field_f, 0);
+          param1.writeByte(param2.field_f, 0);
           if (param0 != 124) {
             sd.a(62, 123);
           }
-          param1.b(param2.field_g, -112);
-          er.a(param2.field_h, 110, param1);
+          param1.b(param2.moveId, -112);
+          FlirtAnimation.a(param2.creature, 110, param1);
           param2.a(param0 ^ 14, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

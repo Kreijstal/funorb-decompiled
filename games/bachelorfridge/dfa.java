@@ -6,7 +6,7 @@ class dfa {
     static int[] field_c;
     boolean field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, byte[] param4, int param5, sna param6, sna param7, int param8, sna param9) {
+    final static void a(int param0, int param1, int param2, int param3, byte[] param4, int param5, UiComponent param6, UiComponent param7, int param8, UiComponent param9) {
         int var11 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -24,43 +24,43 @@ class dfa {
         var12 = BachelorFridge.field_y;
         try {
           ge.field_F = -1L;
-          mja.field_s = param4;
+          StampedeSpecial.field_s = param4;
           kb.field_j = param5;
           ld.field_q = param4.length;
-          fia.field_r = new byte[(7 + kb.field_j) / 8];
+          LevitateEvent.field_r = new byte[(7 + kb.field_j) / 8];
           ce.field_y = false;
-          rv.field_n = null;
-          pw.field_w = null;
+          EffectBatch.field_n = null;
+          SnowAnimation.field_w = null;
           var10_int = 0;
-          for (var11 = param3; mja.field_s.length > var11; var11++) {
-            var10_int = var10_int + (255 & mja.field_s[var11]);
+          for (var11 = param3; StampedeSpecial.field_s.length > var11; var11++) {
+            var10_int = var10_int + (255 & StampedeSpecial.field_s[var11]);
           }
           var10_int = (7 + var10_int) / 8;
-          sca.field_c = new byte[var10_int];
-          if (param9.field_z == null) {
-            param9.field_z = new eaa();
+          MouseWheelInput.field_c = new byte[var10_int];
+          if (param9.children == null) {
+            param9.children = new IntrusiveDeque();
           }
-          aa.field_l = param9.field_z;
+          aa.field_l = param9.children;
           aa.field_l.d(99);
-          iga.field_c = new wma(param2);
+          iga.field_c = new DualLinkNodeHashTable(param2);
           wk.field_a = -1;
-          ui.field_q = -1;
+          FullHealSpecial.field_q = -1;
           hja.field_i = 0;
           hc.field_J = 0;
-          if (null == param7.field_z) {
-            param7.field_z = new eaa();
+          if (null == param7.children) {
+            param7.children = new IntrusiveDeque();
           }
-          uma.field_M = param7.field_z;
+          uma.field_M = param7.children;
           uma.field_M.d(param3 + 91);
-          ola.field_g = new wma(param8);
-          if (null == param6.field_z) {
-            param6.field_z = new eaa();
+          FridgeScreen.field_g = new DualLinkNodeHashTable(param8);
+          if (null == param6.children) {
+            param6.children = new IntrusiveDeque();
           }
-          bia.field_g = param6.field_z;
+          bia.field_g = param6.children;
           bia.field_g.d(param3 + 92);
-          wi.field_i = new wma(param1);
+          wi.field_i = new DualLinkNodeHashTable(param1);
           wda.field_a = 0L;
-          kla.field_x = param0;
+          DiveBomberAnimation.field_x = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,7 +90,7 @@ class dfa {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -113,14 +113,14 @@ class dfa {
           return;
         }
         hp.field_c = 0;
-        kj.b((byte) -88);
+        TileEffect.b((byte) -88);
         if (param0 == 8) {
           return;
         }
         this.field_a = true;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

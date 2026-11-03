@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class iw {
-    static sna field_a;
-    static ee[] field_b;
+    static UiComponent field_a;
+    static IndexedSprite[] field_b;
 
-    final static void a(int param0, boolean param1, po param2, po param3) {
-        wfa.field_s = param0;
+    final static void a(int param0, boolean param1, BitmapFont param2, BitmapFont param3) {
+        FullHealEvent.field_s = param0;
         fp.field_f = param2;
         jk.field_o = param3;
         if (param1) {
           return;
         }
         try {
-          iea.a(dg.field_c / 2, dg.field_i / 2, (byte) -98);
-          mja.a(param3.field_v, param2.field_v, 3, param3.field_B + param3.field_v, param2.field_v + param2.field_B);
+          iea.a(SoftwareRasterizer.field_c / 2, SoftwareRasterizer.field_i / 2, (byte) -98);
+          StampedeSpecial.a(param3.field_v, param2.field_v, 3, param3.field_B + param3.field_v, param2.field_v + param2.field_B);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "iw.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "iw.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -328,7 +328,7 @@ final class iw {
         wt.field_u = -2147483648;
         af.field_c = -2147483648;
         waa.field_a = 2147483647;
-        mt.field_r = 2147483647;
+        ScavengerSpecial.field_r = 2147483647;
     }
 
     final static void a(int param0, byte param1) {
@@ -339,14 +339,14 @@ final class iw {
           qs.field_n = 0;
           return;
         }
-        field_a = (sna) null;
+        field_a = (UiComponent) null;
         on.field_t = param0;
         kw.field_k = new gs[15 * param0];
         oma.field_a = new int[3];
         qs.field_n = 0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 >= -101) {
           return;
@@ -356,10 +356,10 @@ final class iw {
 
     final static int a(int param0, int param1) {
         if (param1 != 2047) {
-          field_b = (ee[]) null;
-          return jb.field_p[2047 & param0];
+          field_b = (IndexedSprite[]) null;
+          return TriangleRasterizer.field_p[2047 & param0];
         }
-        return jb.field_p[2047 & param0];
+        return TriangleRasterizer.field_p[2047 & param0];
     }
 
     static {

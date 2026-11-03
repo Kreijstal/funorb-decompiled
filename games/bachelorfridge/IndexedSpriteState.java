@@ -1,0 +1,51 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class IndexedSpriteState {
+    int field_b;
+    int field_c;
+    int field_e;
+    int field_d;
+    int field_f;
+    int field_a;
+    private static String field_z;
+
+    abstract void a(int param0, int param1);
+
+    abstract void a(int param0, int param1, int param2);
+
+    final static void a(int param0) {
+        if (null != lr.field_k) {
+          return;
+        }
+        lr.field_k = new String[35];
+        lr.field_k[23] = SuperSpeedAnimation.field_x;
+        lr.field_k[2] = wk.field_i;
+        lr.field_k[21] = BananarangSpecial.field_t;
+        lr.field_k[5] = ll.field_l;
+        lr.field_k[6] = GasCloudEvent.field_t;
+        lr.field_k[param0] = BagpipeSpecial.field_q;
+        lr.field_k[18] = ResetSpecial.field_q;
+        lr.field_k[26] = si.field_c;
+        lr.field_k[8] = null;
+        lr.field_k[17] = WidgetTheme.field_q;
+        lr.field_k[33] = BitPacketBuffer.field_i;
+        lr.field_k[34] = tj.field_a;
+        hl.field_G = new String[]{HazmatAnimation.field_w, bm.field_i, vm.field_g, mg.field_p};
+        lr.field_k[11] = EffectBatchAnimation.field_m;
+        lr.field_k[19] = WidgetWrapper.field_y;
+        lr.field_k[13] = dh.field_i;
+        lr.field_k[24] = nla.field_c;
+        lr.field_k[22] = rc.field_k;
+        lr.field_k[1] = qaa.field_a;
+        lr.field_k[7] = nha.field_b;
+        lr.field_k[9] = ul.field_o;
+        lr.field_k[4] = wa.field_l;
+        lr.field_k[20] = HomingMissileSpecial.field_q;
+        lr.field_k[0] = dj.field_a;
+    }
+
+    static {
+        field_z = "th.S(";
+    }
+}

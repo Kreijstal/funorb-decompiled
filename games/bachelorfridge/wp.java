@@ -5,8 +5,8 @@ final class wp extends tga {
     static int[] field_q;
     static int field_r;
 
-    wp(lu param0) {
-        this(param0.b(16711935), param0.b(16711935));
+    wp(PacketBuffer param0) {
+        this(param0.readUnsignedByte(16711935), param0.readUnsignedByte(16711935));
     }
 
     wp(int param0, int param1) {
@@ -14,34 +14,34 @@ final class wp extends tga {
         this.field_j = 3;
     }
 
-    private final void a(ub param0, int param1, int param2, byte param3) {
-        gj var8 = param0.field_o;
+    private final void a(BoardChangeAnimation param0, int param1, int param2, byte param3) {
+        BattleScreen var8 = param0.field_o;
         if (param3 != 83) {
           field_r = -32;
         }
-        op var6 = var8.field_h;
+        BattleState var6 = var8.field_h;
         if (param2 < 0 ||
-          var6.field_z <= param2) {
+          var6.width <= param2) {
           return;
         }
         if (0 > param1 ||
-          param1 >= var6.field_B) {
+          param1 >= var6.height) {
           return;
         }
-        ad var7 = var8.a(param1, false, param2);
+        CreatureActor var7 = var8.a(param1, false, param2);
         if (var7 == null) {
           return;
         }
         try {
           var7.field_s.g(48, 45);
-          param0.a(27799, new ek(var8, var7, 45));
+          param0.addChild(27799, new DamagePopupAnimation(var8, var7, 45));
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final void a(byte param0, int param1, int param2, op param3) {
-        aga var5 = null;
+    private final void a(byte param0, int param1, int param2, BattleState param3) {
+        BattleCreature var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -49,10 +49,10 @@ final class wp extends tga {
         RuntimeException var5_ref = null;
         try {
           if (0 <= param2 &&
-            param3.field_z > param2) {
+            param3.width > param2) {
             if (param1 >= 0 &&
-              param3.field_B > param1) {
-              var5 = param3.field_a[param2][param1].field_l;
+              param3.height > param1) {
+              var5 = param3.tiles[param2][param1].occupant;
               if (var5 != null) {
                 var5.g(-94, 45);
               }
@@ -74,18 +74,18 @@ final class wp extends tga {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         if (param0 <= 58) {
-          wp.b(44);
+          wp.releaseStatics(44);
         }
     }
 
-    final void a(boolean param0, op param1) {
+    final void a(boolean param0, BattleState param1) {
         try {
           this.a((byte) -116, this.field_o, this.field_n, param1);
           this.a((byte) -116, this.field_o, -1 + this.field_n, param1);
@@ -94,7 +94,7 @@ final class wp extends tga {
           this.a((byte) -116, this.field_o + 1, this.field_n, param1);
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class wp extends tga {
             stackIn_12_0 = (ce.field_y) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (ps.d(-122)) {
+            if (ZombiesEvent.d(-122)) {
               stackIn_8_0 = (!param1.field_Zb) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -229,8 +229,8 @@ final class wp extends tga {
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
                 var7 = aca.field_k;
-                for (var8_int = 0; fia.field_r.length > var8_int; var8_int++) {
-                  fia.field_r[var8_int] = (byte) 0;
+                for (var8_int = 0; LevitateEvent.field_r.length > var8_int; var8_int++) {
+                  LevitateEvent.field_r[var8_int] = (byte) 0;
                 }
               }
             }
@@ -245,7 +245,7 @@ final class wp extends tga {
               stackIn_34_0 = gd.field_n[0][1 + var6];
               stackIn_35_1 = (var4_int != 0);
               stackIn_34_0.field_u = stackIn_35_1;
-              if (!eaa.field_c &&
+              if (!IntrusiveDeque.field_c &&
                 var6 == 3) {
                 gd.field_n[0][1 + var6].field_u = false;
               }
@@ -254,8 +254,8 @@ final class wp extends tga {
               stackIn_41_0.field_t = stackIn_42_1;
             }
             if (gd.field_n[0][2].field_E) {
-              if (!ps.d(-117)) {
-                jja.field_m = lga.a(true, new String[]{pw.field_w.field_Jb}, wa.field_o);
+              if (!ZombiesEvent.d(-117)) {
+                jja.field_m = lga.a(true, new String[]{SnowAnimation.field_w.field_Jb}, wa.field_o);
               } else {
                 jja.field_m = qd.field_p;
               }
@@ -271,15 +271,15 @@ final class wp extends tga {
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
                 var7 = aca.field_k;
-                for (var8_int = 0; fia.field_r.length > var8_int; var8_int++) {
-                  fia.field_r[var8_int] = (byte) 0;
+                for (var8_int = 0; LevitateEvent.field_r.length > var8_int; var8_int++) {
+                  LevitateEvent.field_r[var8_int] = (byte) 0;
                 }
               }
             }
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            fia.field_r[var7 / 8] = (byte)mp.a((int) fia.field_r[var7 / 8], 1 << var7 % 8);
+            LevitateEvent.field_r[var7 / 8] = (byte)MassPoisonSpecial.a((int) LevitateEvent.field_r[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_63_0 = (!param3) ? 0 : -1;
@@ -301,11 +301,11 @@ final class wp extends tga {
                 } else {
                   if (var6 == 0) {
                     if (var7 == -1) {
-                      for (var9 = 0; var9 < fia.field_r.length; var9++) {
-                        fia.field_r[var9] = (byte) 0;
+                      for (var9 = 0; var9 < LevitateEvent.field_r.length; var9++) {
+                        LevitateEvent.field_r[var9] = (byte) 0;
                       }
                     } else {
-                      fia.field_r[var7 / 8] = (byte)lt.a((int) fia.field_r[var7 / 8], 1 << dda.a(var7, 7));
+                      LevitateEvent.field_r[var7 / 8] = (byte)lt.a((int) LevitateEvent.field_r[var7 / 8], 1 << dda.a(var7, 7));
                     }
                   }
                 }
@@ -317,12 +317,12 @@ final class wp extends tga {
                     dupTemp$0 = gd.field_n[1][var7 + 1];
                     stackIn_94_0 = dupTemp$0;
                     stackIn_94_1 = dupTemp$0.field_t;
-                    stackIn_95_2 = ((fia.field_r[var9 / 8] & 1 << (var9 & 7)) == 0);
+                    stackIn_95_2 = ((LevitateEvent.field_r[var9 / 8] & 1 << (var9 & 7)) == 0);
                     stackIn_94_0.field_t = stackIn_94_1 & stackIn_95_2;
                   }
                 } else {
                   stackIn_97_0 = gd.field_n[1][var7 + 1];
-                  stackIn_97_1 = ~(fia.field_r[var7 / 8] & 1 << (var7 & 7));
+                  stackIn_97_1 = ~(LevitateEvent.field_r[var7 / 8] & 1 << (var7 & 7));
                   stackIn_97_2 = -1;
                   stackIn_100_1 = (stackIn_97_1 != stackIn_97_2);
                   stackIn_97_0.field_t = stackIn_100_1;
@@ -419,14 +419,14 @@ final class wp extends tga {
                 var9 >= 0) {
                 if (null != wda.field_c &&
                   wda.field_c[var7] != null &&
-                  (wda.field_c[var7][var9] & ~pn.field_d) > 0) {
+                  (wda.field_c[var7][var9] & ~ArenaTheme.field_d) > 0) {
                   var14 = 1;
-                  var15 = ho.a(62, wda.field_c[var7][var9] & ~pn.field_d);
+                  var15 = ho.a(62, wda.field_c[var7][var9] & ~ArenaTheme.field_d);
                 }
-                if (hr.field_b != null &&
-                  hr.field_b[var7] != null &&
-                  dm.field_f <= 0 &&
-                  hr.field_b[var7][var9]) {
+                if (DelegatingCanvas.field_b != null &&
+                  DelegatingCanvas.field_b[var7] != null &&
+                  ProxySocketConnector.field_f <= 0 &&
+                  DelegatingCanvas.field_b[var7][var9]) {
                   var10 = 1;
                 }
                 if (null != re.field_F &&
@@ -434,7 +434,7 @@ final class wp extends tga {
                   var16 = re.field_F[var7][var9];
                   if (var16 != 0 &&
                     !bha.field_l &&
-                    dm.field_f <= 0) {
+                    ProxySocketConnector.field_f <= 0) {
                     var10 = 1;
                   }
                   if (var16 > 0 &&
@@ -446,12 +446,12 @@ final class wp extends tga {
                   gma.field_c[var7] != null) {
                   var16Lifetime2 = gma.field_c[var7][var9];
                   if (0 < var16Lifetime2 &&
-                    ui.field_q < var16Lifetime2) {
+                    FullHealSpecial.field_q < var16Lifetime2) {
                     var11 = 1;
                   }
                   if (var16Lifetime2 != 0 &&
                     !bha.field_l &&
-                    dm.field_f <= 0) {
+                    ProxySocketConnector.field_f <= 0) {
                     var10 = 1;
                   }
                 }
@@ -470,8 +470,8 @@ final class wp extends tga {
                 }
                 var13 = stackIn_212_0;
               }
-              if (hea.field_r >= 2 &&
-                wga.field_q[12]) {
+              if (BananarangSpecial.field_r >= 2 &&
+                InvincibleEvent.field_q[12]) {
                 var12 = 0;
                 var10 = 0;
                 var14 = 0;
@@ -488,7 +488,7 @@ final class wp extends tga {
                 stackIn_225_0 = 1;
               }
               var16Lifetime1 = stackIn_225_0;
-              fla.field_q = true;
+              ShieldSpecial.field_q = true;
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
                 pha.field_h != null && (!param3 ||
@@ -497,17 +497,17 @@ final class wp extends tga {
                   ala.field_b = new boolean[ld.field_q];
                   bja.field_o = new byte[ld.field_q];
                 }
-                fla.field_q = false;
+                ShieldSpecial.field_q = false;
                 uu.field_yb = false;
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   ala.field_b[var17_int] = false;
                 }
-                ub.a(0, param3, -96, var9, -1, param1, -1, var7);
-                if (2 <= hea.field_r &&
-                  wga.field_q[12]) {
-                  fla.field_q = true;
+                BoardChangeAnimation.a(0, param3, -96, var9, -1, param1, -1, var7);
+                if (2 <= BananarangSpecial.field_r &&
+                  InvincibleEvent.field_q[12]) {
+                  ShieldSpecial.field_q = true;
                 }
-                if (!fla.field_q) {
+                if (!ShieldSpecial.field_q) {
                   var16Lifetime1 = 1;
                 }
               }
@@ -517,10 +517,10 @@ final class wp extends tga {
                 if (param3) {
                   if (-1 == var9) {
                     for (var18 = var6Lifetime3; -1 + (var30.length + var6Lifetime3) > var18; var18++) {
-                      sca.field_c[var18 / 8] = (byte)dda.a((int) sca.field_c[var18 / 8], ~(1 << dda.a(7, var18)));
+                      MouseWheelInput.field_c[var18 / 8] = (byte)dda.a((int) MouseWheelInput.field_c[var18 / 8], ~(1 << dda.a(7, var18)));
                     }
                   } else {
-                    sca.field_c[(var9 + var6Lifetime3) / 8] = (byte)lt.a((int) sca.field_c[(var9 + var6Lifetime3) / 8], 1 << dda.a(7, var6Lifetime3 + var9));
+                    MouseWheelInput.field_c[(var9 + var6Lifetime3) / 8] = (byte)lt.a((int) MouseWheelInput.field_c[(var9 + var6Lifetime3) / 8], 1 << dda.a(7, var6Lifetime3 + var9));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -532,7 +532,7 @@ final class wp extends tga {
               }
               if (param3 &&
                 var16Lifetime1 != 0) {
-                sca.field_c[(var6Lifetime3 + var9) / 8] = (byte)dda.a((int) sca.field_c[(var6Lifetime3 + var9) / 8], ~(1 << dda.a(var9 + var6Lifetime3, 7)));
+                MouseWheelInput.field_c[(var6Lifetime3 + var9) / 8] = (byte)dda.a((int) MouseWheelInput.field_c[(var6Lifetime3 + var9) / 8], ~(1 << dda.a(var9 + var6Lifetime3, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_E) {
@@ -563,7 +563,7 @@ final class wp extends tga {
                 if (var13 == 0) {
                   if (var10 == 0) {
                     if (var11 != 0) {
-                      var22_int = -ui.field_q + gma.field_c[var7][var9];
+                      var22_int = -FullHealSpecial.field_q + gma.field_c[var7][var9];
                       if (1 != var22_int) {
                         var21 = lga.a(true, new String[]{Integer.toString(var22_int)}, tv.field_p);
                         var31 = var21;
@@ -585,7 +585,7 @@ final class wp extends tga {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = df.field_q;
+                      var22 = MoveEvent.field_q;
                       if (0 < var15 &&
                         ffa.field_j != null &&
                         var15 <= ffa.field_j.length &&
@@ -605,7 +605,7 @@ final class wp extends tga {
                   var21 = hk.field_a;
                 }
                 if (var4_int != 0 &&
-                  !fla.field_q) {
+                  !ShieldSpecial.field_q) {
                   var22 = null;
                   var23 = 0;
                   if (uu.field_yb) {
@@ -633,14 +633,14 @@ final class wp extends tga {
                     }
                   }
                   if (var23 == 0) {
-                    var21 = lga.a(true, new String[]{(String) (var22)}, l.field_s);
+                    var21 = lga.a(true, new String[]{(String) (var22)}, SplitEvent.field_s);
                   } else {
                     var21 = gf.field_i + (String) (var22);
                   }
                 }
                 if (var21 != null) {
                   var32 = "<col=A00000>" + (String) (var21);
-                  var33 = qm.a("<br><col=A00000>", "<br>", var32, -1);
+                  var33 = RasterBuffer.a("<br><col=A00000>", "<br>", var32, -1);
                   if (var20 == null) {
                     var20 = var33;
                   } else {
@@ -654,7 +654,7 @@ final class wp extends tga {
               if (!param3) {
                 boolean decompiledFrameRemainder2 = true;
                 stackIn_337_0 = var17;
-                if (fla.field_q) {
+                if (ShieldSpecial.field_q) {
                   stackIn_335_1 = ~(byte)var9;
                   stackIn_335_2 = param1.field_Eb[var7];
                   stackIn_335_3 = -1;
@@ -675,13 +675,13 @@ final class wp extends tga {
                   while (var27 < var6Lifetime3 + var30.length - 1) {
                     stackIn_331_0 = var17;
                     stackIn_331_1 = var17.field_t;
-                    stackIn_332_2 = ((sca.field_c[var27 / 8] & 1 << (7 & var27)) == 0);
+                    stackIn_332_2 = ((MouseWheelInput.field_c[var27 / 8] & 1 << (7 & var27)) == 0);
                     stackIn_331_0.field_t = stackIn_331_1 & stackIn_332_2;
                     var27++;
                   }
                 } else {
                   stackIn_325_0 = var17;
-                  stackIn_326_1 = ((sca.field_c[(var9 + var6Lifetime3) / 8] & 1 << (var9 + var6Lifetime3 & 7)) != 0);
+                  stackIn_326_1 = ((MouseWheelInput.field_c[(var9 + var6Lifetime3) / 8] & 1 << (var9 + var6Lifetime3 & 7)) != 0);
                   stackIn_325_0.field_t = stackIn_326_1;
                 }
               }
@@ -689,7 +689,7 @@ final class wp extends tga {
               stackIn_343_1 = (var4_int != 0) && (var16Lifetime1 == 0);
               stackIn_342_0.field_u = stackIn_343_1;
             }
-            var6Lifetime3 = var6Lifetime3 + (255 & mja.field_s[var7]);
+            var6Lifetime3 = var6Lifetime3 + (255 & StampedeSpecial.field_s[var7]);
           }
           if (var5 != 0) {
             if (param3) {
@@ -708,30 +708,30 @@ final class wp extends tga {
           } else {
             stackIn_353_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_352_0), ((StringBuilder) (Object) stackIn_352_1).append(stackIn_353_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_352_0), ((StringBuilder) (Object) stackIn_352_1).append(stackIn_353_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(ub param0, int param1) {
+    final void a(BoardChangeAnimation param0, int param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        gj var4 = null;
-        gj var5 = null;
+        BattleScreen var4 = null;
+        BattleScreen var5 = null;
         try {
           if (param1 > -2) {
             return;
           }
           var4 = param0.field_o;
           var5 = var4;
-          if (var4.field_h.field_a[this.field_n][this.field_o].field_n == 37) {
-            param0.a(27799, new iu(8, 128));
+          if (var4.field_h.tiles[this.field_n][this.field_o].terrain == 37) {
+            param0.addChild(27799, new iu(8, 128));
           } else {
-            param0.a(27799, new iu(60, 128));
+            param0.addChild(27799, new iu(60, 128));
           }
-          param0.a(27799, new fha(new dw(var5, this.field_n, this.field_o)));
+          param0.addChild(27799, new TileEffectAnimation(new dw(var5, this.field_n, this.field_o)));
           this.a(param0, this.field_o, this.field_n, (byte) 83);
           this.a(param0, this.field_o, -1 + this.field_n, (byte) 83);
           this.a(param0, this.field_o, this.field_n + 1, (byte) 83);
@@ -749,7 +749,7 @@ final class wp extends tga {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

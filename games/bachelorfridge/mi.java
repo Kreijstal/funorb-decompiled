@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-final class mi extends at {
-    private gj field_j;
+final class mi extends AnimationNode {
+    private BattleScreen field_j;
     static String field_n;
     private int field_o;
     private int field_q;
@@ -13,7 +13,7 @@ final class mi extends at {
     static gu[] field_l;
     private int field_p;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_l = null;
         int var1 = 17 / ((-49 - param0) / 54);
@@ -21,11 +21,11 @@ final class mi extends at {
 
     private final void b(boolean param0) {
         if (param0) {
-          mi.d((byte) 97);
+          mi.releaseStatics((byte) 97);
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$3 = 0;
         uea var3;
         int var4;
@@ -45,25 +45,25 @@ final class mi extends at {
         var5 = this.field_m[fieldTemp$3];
         var6 = var5;
         var3 = new uea(this.field_j, var6.field_c, var6.field_a, 16777215);
-        ((kj) ((Object) var3)).a(0);
-        this.field_j.field_h.field_a[var5.field_c][var5.field_a].field_i = true;
+        ((TileEffect) ((Object) var3)).a(0);
+        this.field_j.field_h.tiles[var5.field_c][var5.field_a].field_i = true;
         this.field_j.field_s.d(74);
         var4 = -120 / ((71 - param0) / 47);
-        this.field_q = 200 / (this.field_j.field_h.field_B + this.field_j.field_h.field_z);
+        this.field_q = 200 / (this.field_j.field_h.height + this.field_j.field_h.width);
         if (1 > this.field_q) {
           this.field_q = 1;
         }
         if (this.field_o == 1) {
-          wf.a(19, (byte) 126);
+          MartyrAnimation.a(19, (byte) 126);
         } else {
           if (0 == this.field_o % (100 / this.field_q)) {
-            wf.a(19, (byte) 126);
+            MartyrAnimation.a(19, (byte) 126);
           }
         }
         return false;
     }
 
-    mi(gj param0, bja param1) {
+    mi(BattleScreen param0, bja param1) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -75,8 +75,8 @@ final class mi extends at {
         int var4 = 0;
         int var5 = 0;
         aj var6 = null;
-        op var8 = null;
-        op var9 = null;
+        BattleState var8 = null;
+        BattleState var9 = null;
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;
@@ -86,20 +86,20 @@ final class mi extends at {
           var8 = this.field_j.field_h;
           var9 = var8;
           this.field_p = 0;
-          for (var4 = 0; var4 < var9.field_z; var4++) {
-            for (var5 = 0; var5 < var9.field_B; var5++) {
-              if (!var8.field_a[var4][var5].field_i &&
-                var8.field_L.field_o[var4][var5].field_n == 1) {
+          for (var4 = 0; var4 < var9.width; var4++) {
+            for (var5 = 0; var5 < var9.height; var5++) {
+              if (!var8.tiles[var4][var5].field_i &&
+                var8.field_L.field_o[var4][var5].terrain == 1) {
                 this.field_p = this.field_p + 1;
               }
             }
           }
           this.field_m = new aj[this.field_p];
           this.field_o = 0;
-          for (var4Lifetime1 = 0; var9.field_z > var4Lifetime1; var4Lifetime1++) {
-            for (var5Lifetime1 = 0; var5Lifetime1 < var9.field_B; var5Lifetime1++) {
-              if (!var8.field_a[var4Lifetime1][var5Lifetime1].field_i &&
-                1 == var8.field_L.field_o[var4Lifetime1][var5Lifetime1].field_n) {
+          for (var4Lifetime1 = 0; var9.width > var4Lifetime1; var4Lifetime1++) {
+            for (var5Lifetime1 = 0; var5Lifetime1 < var9.height; var5Lifetime1++) {
+              if (!var8.tiles[var4Lifetime1][var5Lifetime1].field_i &&
+                1 == var8.field_L.field_o[var4Lifetime1][var5Lifetime1].terrain) {
                 fieldTemp$0 = this.field_o;
                 this.field_o = this.field_o + 1;
                 this.field_m[fieldTemp$0] = new aj(var4Lifetime1, var5Lifetime1);
@@ -107,7 +107,7 @@ final class mi extends at {
             }
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < this.field_p; var4Lifetime2++) {
-            var5Lifetime2 = kla.a(this.field_p, m.field_a, -2147483648);
+            var5Lifetime2 = DiveBomberAnimation.a(this.field_p, m.field_a, -2147483648);
             if (var5Lifetime2 != var4Lifetime2) {
               var6 = this.field_m[var4Lifetime2];
               this.field_m[var4Lifetime2] = this.field_m[var5Lifetime2];
@@ -132,7 +132,7 @@ final class mi extends at {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

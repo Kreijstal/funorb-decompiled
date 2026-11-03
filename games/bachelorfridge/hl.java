@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends hfa {
-    static fea field_H;
-    static kv[] field_D;
-    static pia field_C;
+final class hl extends WidgetWrapper {
+    static BinaryBitmapFont field_H;
+    static Sprite[] field_D;
+    static PalettedBitmapFont field_C;
     static String[] field_G;
     static String field_E;
     static boolean field_I;
     int field_F;
 
-    final static pia a(int param0, byte param1, ee[] param2, int param3, byte[] param4) {
+    final static PalettedBitmapFont a(int param0, byte param1, IndexedSprite[] param2, int param3, byte[] param4) {
         int var11_int = 0;
         byte[] array$0 = null;
         int incrementValue$2 = 0;
-        pia stackIn_28_0 = null;
+        PalettedBitmapFont stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -28,7 +28,7 @@ final class hl extends hfa {
         int[] var8 = null;
         int[] var9 = null;
         byte[][] var10 = null;
-        pia var11 = null;
+        PalettedBitmapFont var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         int var14 = 0;
@@ -65,7 +65,7 @@ final class hl extends hfa {
         try {
           if (param1 != 107) {
             var29 = (byte[]) null;
-            hl.a(120, (byte) -3, (ee[]) null, 68, (byte[]) null);
+            hl.a(120, (byte) -3, (IndexedSprite[]) null, 68, (byte[]) null);
           }
           if (param2.length != 256) {
             throw new IllegalArgumentException();
@@ -134,7 +134,7 @@ final class hl extends hfa {
               var19Lifetime1 = var19Lifetime1 + var17;
             }
           }
-          var11 = new pia(param4, var37, var38, var35, var36, var9, var39);
+          var11 = new PalettedBitmapFont(param4, var37, var38, var35, var36, var9, var39);
           var11.field_B = var11.field_B - 1;
           var11.field_v = var11.field_v - 1;
           var11.field_u = var11.field_u - 1;
@@ -156,7 +156,7 @@ final class hl extends hfa {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -168,41 +168,41 @@ final class hl extends hfa {
         return stackIn_6_0;
     }
 
-    hl(wj param0) {
-        super(param0.field_s, param0.field_v, param0.field_p, param0.field_q, (qda) null, (pl) null);
+    hl(UiWidget param0) {
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetRenderer) null, (WidgetListener) null);
         try {
-          param0.a(0, this.field_q, (byte) 59, this.field_p, 0);
+          param0.a(0, this.height, (byte) 59, this.width, 0);
           this.field_F = 256;
-          this.field_A = param0;
+          this.child = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void draw(byte param0, int param1, int param2, int param3) {
         if (param2 != 0) {
           return;
         }
-        if (this.field_A == null) {
+        if (this.child == null) {
           return;
         }
         if (this.field_F == 0) {
           return;
         }
         if (this.field_F == 256) {
-          this.field_A.a((byte) 93, this.field_v + param1, param2, param3 + this.field_s);
+          this.child.draw((byte) 93, this.y + param1, param2, param3 + this.x);
           return;
         }
-        kv var7 = new kv(this.field_A.field_p, this.field_A.field_q);
+        Sprite var7 = new Sprite(this.child.width, this.child.height);
         int var6 = 59 % ((param0 + 20) / 54);
         bu.a(0, var7);
-        this.field_A.a((byte) -85, 0, param2, 0);
+        this.child.draw((byte) -85, 0, param2, 0);
         db.b(111);
-        var7.a(param3 + this.field_s, param1 + this.field_v, this.field_F);
+        var7.a(param3 + this.x, param1 + this.y, this.field_F);
     }
 
     public hl() {
-        super(0, 0, 0, 0, (qda) null, (pl) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetListener) null);
         this.field_F = 256;
     }
 
@@ -234,10 +234,10 @@ final class hl extends hfa {
           param1.removeFocusListener(vv.field_e);
           gfa.field_c = -1;
           if (param0 > -46) {
-            field_D = (kv[]) null;
+            field_D = (Sprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

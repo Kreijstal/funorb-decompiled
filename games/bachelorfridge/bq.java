@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bq extends wia {
+final class bq extends BoardTile {
     boolean field_o;
 
     bq(int param0) {
@@ -23,7 +23,7 @@ final class bq extends wia {
           if (tfa.a(41, param0)) {
             return false;
           }
-          if (eha.a(15, param0)) {
+          if (InsanoSauceSpecial.a(15, param0)) {
             return false;
           }
           if (param1 != 20133) {
@@ -58,7 +58,7 @@ final class bq extends wia {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 

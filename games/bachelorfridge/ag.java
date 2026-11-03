@@ -65,8 +65,8 @@ final class ag extends k {
 
     final static long e(int param0) {
         if (param0 != -9109) {
-          jfa var2 = (jfa) null;
-          ag.a((jfa) null, (byte) 80);
+          FridgeCreature var2 = (FridgeCreature) null;
+          ag.a((FridgeCreature) null, (byte) 80);
         }
         return -pk.field_c + f.b((byte) 73);
     }
@@ -118,43 +118,43 @@ final class ag extends k {
         this.field_m = 4;
     }
 
-    final static void a(jfa param0, byte param1) {
+    final static void a(FridgeCreature param0, byte param1) {
         int var2_int = 0;
-        if (bp.e(param1 ^ 29881)) {
+        if (AttackUpAllAnimation.e(param1 ^ 29881)) {
           return;
         }
         try {
-          sja.field_fb.c(92, (byte) 111);
-          sja.field_fb.field_g = sja.field_fb.field_g + 2;
+          sja.field_fb.writeCipheredByte(92, (byte) 111);
+          sja.field_fb.position = sja.field_fb.position + 2;
           if (param1 != -104) {
             field_k = (String) null;
           }
-          var2_int = sja.field_fb.field_g;
+          var2_int = sja.field_fb.position;
           rha.a(param0.field_g, sja.field_fb, (byte) -107);
-          sja.field_fb.a((byte) -88, sja.field_fb.field_g - var2_int);
+          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var2_int);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ag.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ag.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -112 / ((39 - param0) / 53);
         field_k = null;
     }
 
     final static void a(int param0, String param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         try {
-          ur.field_e[pe.field_m] = (oha) ((Object) new t(param17, param1, param4, param12, param14, param11, param0, param7, param10, param3, param2, param16, param18, param5, param13, param15, param6, param8, param9));
+          WhirlpoolDigest.field_e[pe.field_m] = (MoveDefinition) ((Object) new BasicMoveDefinition(param17, param1, param4, param12, param14, param11, param0, param7, param10, param3, param2, param16, param18, param5, param13, param15, param6, param8, param9));
           pe.field_m = pe.field_m + 1;
           if (param19 != -4313) {
             field_k = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ag.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + param15 + ',' + param16 + ',' + param17 + ',' + param18 + ',' + param19 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ag.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + param15 + ',' + param16 + ',' + param17 + ',' + param18 + ',' + param19 + ')');
         }
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -170,10 +170,10 @@ final class ag extends k {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_m = param1.b(param0 ^ -16711866);
+              this.field_m = param1.readUnsignedByte(param0 ^ -16711866);
             }
           } else {
-            this.field_l = param1.b(16711935);
+            this.field_l = param1.readUnsignedByte(16711935);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class ag extends k {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 

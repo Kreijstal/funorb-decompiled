@@ -89,7 +89,7 @@ final class laa extends pv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var7), "laa.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) var7), "laa.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -130,14 +130,14 @@ final class laa extends pv {
 
     final static void a(int param0, byte param1, int param2, int param3, String param4, int param5) {
         try {
-          param2 = param2 - (hfa.field_z.a(param4) >> 1);
+          param2 = param2 - (WidgetWrapper.field_z.a(param4) >> 1);
           if (param1 > -44) {
             laa.a(123, -54, -39, true, -63, -89, -61);
           }
-          hfa.field_z.c(param4, param2, param0, param5, -1);
-          jha.field_g.c(param4, param2, param0, param3, -1);
+          WidgetWrapper.field_z.drawText(param4, param2, param0, param5, -1);
+          jha.field_g.drawText(param4, param2, param0, param3, -1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "laa.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "laa.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -148,18 +148,18 @@ final class laa extends pv {
         var3 = BachelorFridge.field_y;
         eea.field_b = false;
         var1 = 92 / ((0 - param0) / 52);
-        at.field_i = null;
+        AnimationNode.field_i = null;
         if (gfa.field_i) {
           oq.field_b.o(2113632);
         } else {
           var2 = rja.field_o;
           if (0 < var2) {
             if (var2 != 1) {
-              at.field_i = lga.a(true, new String[]{Integer.toString(var2)}, ra.field_j);
+              AnimationNode.field_i = lga.a(true, new String[]{Integer.toString(var2)}, ra.field_j);
             } else {
-              at.field_i = qw.field_a;
+              AnimationNode.field_i = qw.field_a;
             }
-            at.field_i = rca.a(0, new CharSequence[]{(CharSequence) ((Object) at.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DualLinkNode.field_j)});
+            AnimationNode.field_i = rca.a(0, new CharSequence[]{(CharSequence) ((Object) AnimationNode.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DualLinkNode.field_j)});
           }
           oq.field_b.p(-97);
           bi.o(2);
@@ -171,14 +171,14 @@ final class laa extends pv {
         return (int)((double)Math.abs(this.field_o) * 20.0) / 39;
     }
 
-    laa(jfa param0, int param1) {
+    laa(FridgeCreature param0, int param1) {
         try {
           this.field_o = param1;
           this.field_f = param0;
           this.field_k = this.field_f.field_k;
           this.field_l = (double)this.field_o / (double)this.c((byte) 107);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "laa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "laa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

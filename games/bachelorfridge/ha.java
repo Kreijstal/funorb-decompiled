@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ha extends tia {
     static int field_n;
-    private eaa field_j;
+    private IntrusiveDeque field_j;
     static vr field_i;
     static int field_l;
     static int[] field_m;
@@ -29,15 +29,15 @@ final class ha extends tia {
           var2 = this.field_g;
           var2 += 16;
           for (var3 = 0; var3 < 16; var3++) {
-            var4 = 15 + kla.a(300, this.field_f, -2147483648) - 150;
-            var5 = -(int)((double)((64 + kla.a(50, this.field_f, -2147483648) - 25) * (16384 / (var2 / 16))) * Math.sin((double)var4));
-            var6 = -(int)((double)(6144 / (var2 / 16) * (-25 + kla.a(50, this.field_f, -2147483648) + 64)) * Math.cos((double)var4));
+            var4 = 15 + DiveBomberAnimation.a(300, this.field_f, -2147483648) - 150;
+            var5 = -(int)((double)((64 + DiveBomberAnimation.a(50, this.field_f, -2147483648) - 25) * (16384 / (var2 / 16))) * Math.sin((double)var4));
+            var6 = -(int)((double)(6144 / (var2 / 16) * (-25 + DiveBomberAnimation.a(50, this.field_f, -2147483648) + 64)) * Math.cos((double)var4));
             var7 = (int)(Math.sin((double)var2 * 300.0) * 100.0);
             var8 = new lh(var5, var7, var6);
-            kla.a(10, this.field_f, -2147483648);
-            var8.field_p = -kla.a(5000, this.field_f, -2147483648);
-            var8.field_k = -kla.a(5000, this.field_f, -2147483648);
-            var8.field_g = -kla.a(5000, this.field_f, -2147483648);
+            DiveBomberAnimation.a(10, this.field_f, -2147483648);
+            var8.field_p = -DiveBomberAnimation.a(5000, this.field_f, -2147483648);
+            var8.field_k = -DiveBomberAnimation.a(5000, this.field_f, -2147483648);
+            var8.field_g = -DiveBomberAnimation.a(5000, this.field_f, -2147483648);
             var8.field_m = -2;
             var8.field_o = this.field_g - 10;
             var8.field_r = (double)var4;
@@ -55,29 +55,29 @@ final class ha extends tia {
     final static void a(int param0, int param1, boolean param2) {
         ld.field_n = param1;
         if (param2) {
-          ha.c(true);
+          ha.releaseStatics(true);
         }
         hda.field_o = param0;
     }
 
     final void a(int param0, int param1, int param2) {
-        iaa.a(param0, 20, 65280, (byte) -101, param2, this.field_j);
+        MeshObject.a(param0, 20, 65280, (byte) -101, param2, this.field_j);
         if (param1 != 25415) {
-          this.field_j = (eaa) null;
+          this.field_j = (IntrusiveDeque) null;
         }
     }
 
-    ha(gj param0, ad param1) {
+    ha(BattleScreen param0, CreatureActor param1) {
         super(param0, param1);
         try {
           this.field_g = 128;
-          this.field_j = new eaa();
+          this.field_j = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_m = (int[]) null;
         }

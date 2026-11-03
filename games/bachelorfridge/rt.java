@@ -4,9 +4,9 @@
 final class rt {
     static String field_b;
     static String field_c;
-    static be[] field_a;
+    static PcmSample[] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 > -53) {
           field_c = (String) null;
@@ -30,12 +30,12 @@ final class rt {
           if (oq.field_b != null) {
             oq.field_b.p(param2 - 85);
           }
-          ola.field_e = new ph(param0, param1, false, true, true);
-          kka.field_l.e(ola.field_e, param2 + 24);
+          FridgeScreen.field_e = new ph(param0, param1, false, true, true);
+          kka.field_l.e(FridgeScreen.field_e, param2 + 24);
           if (param2 == 9) {
             return;
           }
-          field_a = (be[]) null;
+          field_a = (PcmSample[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,12 +53,12 @@ final class rt {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(java.awt.Canvas param0, byte param1, ht param2) {
-        oea.field_p = new jp();
+    final static void a(java.awt.Canvas param0, byte param1, PlatformTaskDispatcher param2) {
+        oea.field_p = new MidiPcmStream();
         if (param1 < 73) {
           return;
         }
@@ -66,13 +66,13 @@ final class rt {
           oea.field_p.a(128, (byte) 39, 9);
           lfa.a(22050, param2, true, (byte) 107, oea.field_p, (java.awt.Component) ((Object) param0));
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rt.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rt.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_c = "<%0> is already on your friend list.";
         field_b = "Open in popup window";
-        field_a = new be[71];
+        field_a = new PcmSample[71];
     }
 }

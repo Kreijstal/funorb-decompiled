@@ -3,9 +3,9 @@
  */
 final class oc extends pu {
     static String field_m;
-    static po field_l;
+    static BitmapFont field_l;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 32586) {
           return;
         }
@@ -77,7 +77,7 @@ final class oc extends pu {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

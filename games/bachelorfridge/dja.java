@@ -3,7 +3,7 @@
  */
 final class dja extends pu {
     static int field_m;
-    static pia field_l;
+    static PalettedBitmapFont field_l;
 
     final static void b(boolean param0) {
         if (param0) {

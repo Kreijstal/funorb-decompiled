@@ -19,9 +19,9 @@ final class qma extends pu {
               var6 = null;
               var7 = null;
               if (null != mh.field_l.field_h) {
-                f.field_a = new v(mh.field_l.field_h, 5200, 0);
+                f.field_a = new BufferedCacheFile(mh.field_l.field_h, 5200, 0);
                 mh.field_l.field_h = null;
-                var6 = new ta(255, f.field_a, new v(mh.field_l.field_n, 12000, 0), 2097152);
+                var6 = new SectorCacheStore(255, f.field_a, new BufferedCacheFile(mh.field_l.field_n, 12000, 0), 2097152);
               }
               if (param1 != 2097152) {
                 stackIn_5_0 = (vr) null;
@@ -29,15 +29,15 @@ final class qma extends pu {
               }
               if (f.field_a != null) {
                 if (null == fr.field_m) {
-                  fr.field_m = new v[mh.field_l.field_v.length];
+                  fr.field_m = new BufferedCacheFile[mh.field_l.field_v.length];
                 }
                 if (null == fr.field_m[param5]) {
-                  fr.field_m[param5] = new v(mh.field_l.field_v[param5], 12000, 0);
+                  fr.field_m[param5] = new BufferedCacheFile(mh.field_l.field_v[param5], 12000, 0);
                   mh.field_l.field_v[param5] = null;
                 }
-                var7 = new ta(param5, f.field_a, fr.field_m[param5], 2097152);
+                var7 = new SectorCacheStore(param5, f.field_a, fr.field_m[param5], 2097152);
               }
-              var8 = ga.field_c.a(param2, param5, (ta) (var7), (ta) (var6), 64);
+              var8 = ga.field_c.a(param2, param5, (SectorCacheStore) (var7), (SectorCacheStore) (var6), 64);
               if (param4) {
                 var8.a((byte) 90);
               }
@@ -51,7 +51,7 @@ final class qma extends pu {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6 = (RuntimeException) (Object) decompiledCaughtException;
-            throw pe.a((Throwable) (var6), field_z + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+            throw pe.wrapException((Throwable) (var6), field_z + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

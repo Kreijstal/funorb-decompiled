@@ -9,7 +9,7 @@ final class sk extends k {
     static String field_n;
     private int field_l;
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -17,24 +17,24 @@ final class sk extends k {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        lu var6 = null;
+        PacketBuffer var6 = null;
         var5 = BachelorFridge.field_y;
         try {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int != 1) {
               if (2 == var4_int) {
-                this.field_k = param1.e((byte) 52);
+                this.field_k = param1.readUnsignedShort((byte) 52);
               }
             } else {
-              this.field_o = param1.b(param0 ^ -16711866);
+              this.field_o = param1.readUnsignedByte(param0 ^ -16711866);
             }
           } else {
-            this.field_l = param1.b(16711935);
+            this.field_l = param1.readUnsignedByte(16711935);
           }
           if (param0 != -71) {
-            var6 = (lu) null;
-            this.a((byte) 105, (lu) null, -57);
+            var6 = (PacketBuffer) null;
+            this.a((byte) 105, (PacketBuffer) null, -57);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -47,7 +47,7 @@ final class sk extends k {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ final class sk extends k {
         this.field_l = 1;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_n = null;
         field_m = null;

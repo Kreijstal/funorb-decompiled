@@ -3,18 +3,18 @@
  */
 final class pja {
     static String field_c;
-    static kv[] field_b;
+    static Sprite[] field_b;
     static int[] field_g;
-    static be[][] field_a;
+    static PcmSample[][] field_a;
     static rp field_e;
-    static kv[] field_d;
+    static Sprite[] field_d;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         int var1 = -126 / ((param0 + 54) / 35);
         field_e = null;
-        field_a = (be[][]) null;
+        field_a = (PcmSample[][]) null;
         field_b = null;
         field_c = null;
         field_g = null;
@@ -47,10 +47,10 @@ final class pja {
     static {
         int var0 = 0;
         field_c = "Warning! <%0> will win in <%1> turns!";
-        field_a = new be[10][9];
+        field_a = new PcmSample[10][9];
         field_g = new int[4096];
         for (var0 = 0; 4096 > var0; var0++) {
-          field_g[var0] = rn.c(40960, var0);
+          field_g[var0] = BananarangEvent.c(40960, var0);
         }
         field_f = "Return to Main Menu";
     }

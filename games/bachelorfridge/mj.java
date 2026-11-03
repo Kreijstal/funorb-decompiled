@@ -4,19 +4,19 @@
 final class mj extends lg {
     static int field_i;
     static du field_l;
-    static sna field_k;
+    static UiComponent field_k;
     static String[] field_h;
     static int field_j;
 
     private final void c(byte param0) {
         if (param0 == -51) {
-          this.field_a.field_z = null;
-          this.a(hea.field_s, 40, param0 ^ 4571, 72, 334, 366);
+          this.field_a.children = null;
+          this.a(BananarangSpecial.field_s, 40, param0 ^ 4571, 72, 334, 366);
           return;
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_h = null;
         if (param0 <= 29) {
@@ -28,12 +28,12 @@ final class mj extends lg {
     }
 
     final void a(byte param0) {
-        ew.field_r.e(this.field_g, this.field_f);
+        ew.field_r.draw(this.field_g, this.field_f);
         int var2 = -107 / ((param0 + 54) / 47);
-        dg.a(40 + this.field_g, this.field_f + 20, -110 + this.field_d, -30 + this.field_c, 20, 65793, 64);
+        SoftwareRasterizer.a(40 + this.field_g, this.field_f + 20, -110 + this.field_d, -30 + this.field_c, 20, 65793, 64);
         wq.a(1, 14, 300, 16777215, 16 + this.field_f, 300, 65793, true, this.field_b, 0, this.field_g + 54);
-        ana.field_r.e(350, 330);
-        laa.a(356, (byte) -112, 402, 16777215, hea.field_s, 65793);
+        EventAnimation.field_r.draw(350, 330);
+        laa.a(356, (byte) -112, 402, 16777215, BananarangSpecial.field_s, 65793);
     }
 
     mj(int param0, int param1, int param2, int param3, String param4) {
@@ -41,7 +41,7 @@ final class mj extends lg {
         try {
           this.c((byte) -51);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

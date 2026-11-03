@@ -3,12 +3,12 @@
  */
 final class fja {
     static String field_c;
-    static kv[] field_d;
+    static Sprite[] field_d;
     static String field_b;
-    static sna field_a;
+    static UiComponent field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_a = null;
         if (param0 == 6220) {
@@ -16,7 +16,7 @@ final class fja {
           field_b = null;
           return;
         }
-        field_d = (kv[]) null;
+        field_d = (Sprite[]) null;
         field_c = null;
         field_b = null;
     }

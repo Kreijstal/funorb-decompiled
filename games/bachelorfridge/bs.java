@@ -9,10 +9,10 @@ final class bs extends IntrusiveNode {
     static String field_j;
     static int field_k;
 
-    final static kv a(kv param0, byte param1) {
-        kv var2 = null;
+    final static Sprite a(Sprite param0, byte param1) {
+        Sprite var2 = null;
         RuntimeException var2_ref = null;
-        kv stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -21,9 +21,9 @@ final class bs extends IntrusiveNode {
           if (param1 != 112) {
             bs.a(-13);
           }
-          var2 = new kv(param0.field_n, param0.field_o);
+          var2 = new Sprite(param0.field_n, param0.field_o);
           var2.b();
-          param0.c(0, 0, 65793);
+          param0.drawSilhouette(0, 0, 65793);
           hga.field_U.a((byte) 14);
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -37,7 +37,7 @@ final class bs extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -45,8 +45,8 @@ final class bs extends IntrusiveNode {
         field_j = null;
         field_g = null;
         if (param0 < 88) {
-          kv var2 = (kv) null;
-          bs.a((kv) null, (byte) -55);
+          Sprite var2 = (Sprite) null;
+          bs.a((Sprite) null, (byte) -55);
         }
     }
 
@@ -56,7 +56,7 @@ final class bs extends IntrusiveNode {
         RuntimeException var1_ref = null;
         int var3 = 0;
         int var4 = 0;
-        kv var5 = null;
+        Sprite var5 = null;
         int[] var6 = null;
         int[] var8 = null;
         int var10 = 0;
@@ -75,17 +75,17 @@ final class bs extends IntrusiveNode {
           }
           if (!dma.field_a &&
             null == vla.field_x) {
-            vla.field_x = cn.a((byte) -68, 4);
+            vla.field_x = PlaceCreatureEffect.a((byte) -68, 4);
           }
           if (!dma.field_a &&
             vla.field_x.field_j) {
-            var13 = sg.field_q;
+            var13 = ZombiesSpecial.field_q;
             var11 = var13;
             var6 = var11;
             var1 = var6;
             var17 = vla.field_x.field_m;
             for (var3 = 0; var3 < 8; var3++) {
-              var6[var3] = mp.a(var13[var3], var17[var3]);
+              var6[var3] = MassPoisonSpecial.a(var13[var3], var17[var3]);
             }
             var14 = nga.field_i;
             var12 = var14;
@@ -102,13 +102,13 @@ final class bs extends IntrusiveNode {
             vla.field_x = null;
           }
           if (param0 > -106) {
-            var5 = (kv) null;
-            bs.a((kv) null, (byte) 34);
+            var5 = (Sprite) null;
+            bs.a((Sprite) null, (byte) 34);
           }
           if (dma.field_a) {
-            of.b(115);
-            dca.d(-122);
-            if (iba.field_s == 8 &&
+            SlowAllSpecial.b(115);
+            TBomberAnimation.d(-122);
+            if (OhNoEvent.field_s == 8 &&
               !hs.a(false, nga.field_i)) {
               lg.a(true, 0, false);
               return;
@@ -118,7 +118,7 @@ final class bs extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "bs.A(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "bs.A(" + param0 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class bs extends IntrusiveNode {
           this.field_f = param0;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bs.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bs.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

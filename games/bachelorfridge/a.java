@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class a extends oha {
+final class a extends MoveDefinition {
     static int[][] field_m;
     static String field_p;
     int field_r;
     int field_q;
-    static kv field_o;
-    static kv[] field_n;
+    static Sprite field_o;
+    static Sprite[] field_n;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_m = (int[][]) null;
         field_n = null;
@@ -41,12 +41,12 @@ final class a extends oha {
           var14 = var14 + var8;
           var18 = var18 + var12;
           var16 = var16 + var10;
-          var22[var20] = mp.a(mp.a(dda.a((int)Math.round(var14) << 16, 16763049), dda.a((int)Math.round(var16), -1526726401) << 8), dda.a(255, (int)Math.round(var18)));
+          var22[var20] = MassPoisonSpecial.a(MassPoisonSpecial.a(dda.a((int)Math.round(var14) << 16, 16763049), dda.a((int)Math.round(var16), -1526726401) << 8), dda.a(255, (int)Math.round(var18)));
         }
         if (param2 == 16763049) {
           return var4;
         }
-        a.c(-96);
+        a.releaseStatics(-96);
         return var4;
     }
 
@@ -54,11 +54,11 @@ final class a extends oha {
         super(3, param0, param1, param2, param5, 0);
         try {
           this.field_q = param7;
-          this.field_k = param4;
+          this.description = param4;
           this.field_r = param6;
-          this.field_f = param3;
+          this.name = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "a.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "a.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 import java.util.*;
 
 class tia extends IntrusiveNode {
-    ad field_h;
+    CreatureActor field_h;
     Random field_f;
     int field_g;
 
@@ -28,12 +28,12 @@ class tia extends IntrusiveNode {
         return false;
     }
 
-    tia(gj param0, ad param1) {
+    tia(BattleScreen param0, CreatureActor param1) {
         this.field_f = new Random();
         try {
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

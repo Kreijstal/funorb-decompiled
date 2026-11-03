@@ -5,8 +5,8 @@ final class db {
     static vr field_a;
     static String[] field_b;
 
-    final static pp a(lu param0, int param1) {
-        nq var2 = null;
+    final static EventEffect a(PacketBuffer param0, int param1) {
+        CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -18,12 +18,12 @@ final class db {
         try {
           var2 = qi.a(param0, (byte) 115);
           var3 = param0.b(true);
-          var4 = param0.c((byte) -85);
+          var4 = param0.readSignedShort((byte) -85);
           if (param1 != 95) {
             field_a = (vr) null;
           }
           stackIn_3_0 = new qq(var2, var3, var4);
-          return (pp) ((Object) stackIn_3_0);
+          return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -34,7 +34,7 @@ final class db {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -43,19 +43,19 @@ final class db {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        dg.a(var1.field_o, var1.field_f, var1.field_n);
-        dg.a(var1.field_l, var1.field_j, var1.field_k, var1.field_h);
+        SoftwareRasterizer.setTarget(var1.field_o, var1.field_f, var1.field_n);
+        SoftwareRasterizer.setClip(var1.field_l, var1.field_j, var1.field_k, var1.field_h);
         if (param0 > 60) {
           var1.field_o = null;
-          ii.field_m.a(var1, true);
+          CreatureEvent.field_m.a(var1, true);
           return;
         }
         db.b(-65);
         var1.field_o = null;
-        ii.field_m.a(var1, true);
+        CreatureEvent.field_m.a(var1, true);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_b = (String[]) null;
           field_a = null;
@@ -78,7 +78,7 @@ final class db {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param0 = jm.a((byte) 75, param0, '_', "");
+          param0 = BoardChange.a((byte) 75, param0, '_', "");
           var3 = vm.a(param0, (byte) 106);
           if (param2) {
             var4 = (String) null;
@@ -102,7 +102,7 @@ final class db {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 

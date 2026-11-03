@@ -7,7 +7,7 @@ final class pma extends k {
     private int field_n;
     private int field_m;
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -33,7 +33,7 @@ final class pma extends k {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -89,8 +89,8 @@ final class pma extends k {
         if (param0 != 122) {
           pma.a((byte) 49, false);
         }
-        if (pw.field_w != null) {
-          stackIn_8_0 = (hfa.a(pw.field_w.field_Rb, param0 - 120)) ? 1 : 0;
+        if (SnowAnimation.field_w != null) {
+          stackIn_8_0 = (WidgetWrapper.a(SnowAnimation.field_w.field_Rb, param0 - 120)) ? 1 : 0;
         } else {
           stackIn_8_0 = 0;
         }
@@ -104,12 +104,12 @@ final class pma extends k {
         stackIn_16_6 = (md.field_l <= 50) ? false : true;
         gfa.a(stackIn_13_0, stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_15_4 != 0, stackIn_15_5, stackIn_16_6, param1, 0, true, 109, 11);
         if (aba.field_f) {
-          sja.field_fb.c(57, (byte) 100);
+          sja.field_fb.writeCipheredByte(57, (byte) 100);
           aba.field_f = false;
         }
-        if (efa.field_p) {
-          sja.field_fb.c(10, (byte) 97);
-          efa.field_p = false;
+        if (StickySpecial.field_p) {
+          sja.field_fb.writeCipheredByte(10, (byte) 97);
+          StickySpecial.field_p = false;
         }
     }
 
@@ -129,47 +129,47 @@ final class pma extends k {
         if (param1 != 20208) {
           pma.b(121, -115);
         }
-        wca.field_n = param0;
-        if (8 >= wca.field_n) {
-          iaa.field_a = false;
+        CreatureType.field_n = param0;
+        if (8 >= CreatureType.field_n) {
+          MeshObject.field_a = false;
         }
-        if (wca.field_n <= 3) {
+        if (CreatureType.field_n <= 3) {
           sh.field_I = false;
         }
-        if (8 > wca.field_n) {
+        if (8 > CreatureType.field_n) {
           pka.field_f = false;
         }
-        if (wca.field_n <= 3) {
-          ku.field_q = false;
+        if (CreatureType.field_n <= 3) {
+          FloodEvent.field_q = false;
         }
-        if (wca.field_n <= 5) {
-          gi.field_a = false;
+        if (CreatureType.field_n <= 5) {
+          ClientException.field_a = false;
         }
-        if (wca.field_n <= 8) {
+        if (CreatureType.field_n <= 8) {
           cm.field_v = false;
         }
-        if (wca.field_n <= 2) {
+        if (CreatureType.field_n <= 2) {
           hp.field_a = false;
         }
-        if (wca.field_n <= 7) {
-          wf.field_x = false;
+        if (CreatureType.field_n <= 7) {
+          MartyrAnimation.field_x = false;
         }
-        if (wca.field_n <= 5) {
+        if (CreatureType.field_n <= 5) {
           gla.field_k = false;
         }
-        if (wca.field_n < 8) {
+        if (CreatureType.field_n < 8) {
           mka.field_j = false;
         }
-        if (wca.field_n <= 5) {
+        if (CreatureType.field_n <= 5) {
           bfa.field_a = false;
         }
         if (o.d((byte) 54)) {
           af.field_a = false;
         } else {
-          bf.field_h[wca.field_n].a(108);
+          bf.field_h[CreatureType.field_n].a(108);
           ua.field_b = true;
           af.field_a = true;
-          aga.d(false);
+          BattleCreature.d(false);
         }
     }
 

@@ -19,7 +19,7 @@ final class ji extends IntrusiveNode {
         var3 = BachelorFridge.field_y;
         try {
           if (param0 >= -87) {
-            ji.a(-69);
+            ji.releaseStatics(-69);
           }
           if (ld.field_n == -1 &&
             hda.field_o == -1) {
@@ -27,7 +27,7 @@ final class ji extends IntrusiveNode {
             hda.field_o = gd.field_m;
           }
           boolean decompiledFrameRemainder0 = true;
-          df.field_o = df.field_o + 1;
+          MoveEvent.field_o = MoveEvent.field_o + 1;
           if (param1 != null) {
             decompiledFrameRemainder0 = !(param1.equals(ov.field_g));
           } else {
@@ -35,8 +35,8 @@ final class ji extends IntrusiveNode {
           }
           if (decompiledFrameRemainder0) {
             if (!b.field_r) {
-              if (pv.field_i <= df.field_o) {
-                stackIn_19_0 = (pv.field_i + oha.field_i > df.field_o) ? 1 : 0;
+              if (pv.field_i <= MoveEvent.field_o) {
+                stackIn_19_0 = (pv.field_i + MoveDefinition.field_i > MoveEvent.field_o) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }
@@ -45,15 +45,15 @@ final class ji extends IntrusiveNode {
             }
             var2_int = stackIn_19_0;
             if (param1 == null) {
-              df.field_o = 0;
+              MoveEvent.field_o = 0;
             } else {
               if (b.field_r) {
-                df.field_o = pv.field_i;
+                MoveEvent.field_o = pv.field_i;
               } else {
                 if (var2_int != 0) {
-                  df.field_o = pv.field_i;
+                  MoveEvent.field_o = pv.field_i;
                 } else {
-                  df.field_o = 0;
+                  MoveEvent.field_o = 0;
                 }
               }
             }
@@ -64,22 +64,22 @@ final class ji extends IntrusiveNode {
                 b.field_r = true;
               }
             }
-            jl.field_s = ld.field_n;
-            eaa.field_b = hda.field_o;
+            SuperSpeedEvent.field_s = ld.field_n;
+            IntrusiveDeque.field_b = hda.field_o;
           }
           ov.field_g = param1;
           if (!b.field_r &&
-            pv.field_i > df.field_o &&
+            pv.field_i > MoveEvent.field_o &&
             dda.field_f) {
-            jl.field_s = ld.field_n;
-            df.field_o = 0;
-            eaa.field_b = hda.field_o;
+            SuperSpeedEvent.field_s = ld.field_n;
+            MoveEvent.field_o = 0;
+            IntrusiveDeque.field_b = hda.field_o;
           }
           ld.field_n = -1;
           hda.field_o = -1;
           if (b.field_r &&
-            df.field_o == lfa.field_o) {
-            df.field_o = 0;
+            MoveEvent.field_o == lfa.field_o) {
+            MoveEvent.field_o = 0;
             b.field_r = false;
             return;
           }
@@ -94,7 +94,7 @@ final class ji extends IntrusiveNode {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -113,11 +113,11 @@ final class ji extends IntrusiveNode {
         hda.a((byte) -91, param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_g = null;
         if (param0 < 10) {
-          ji.a(111);
+          ji.releaseStatics(111);
           field_i = null;
           return;
         }

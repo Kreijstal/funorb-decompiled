@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qfa extends cga {
-    lu field_v;
+    PacketBuffer field_v;
     int field_u;
     static String field_w;
     byte field_s;
@@ -60,7 +60,7 @@ final class qfa extends cga {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -69,10 +69,10 @@ final class qfa extends cga {
           return 0;
         }
         if (param0 == -6298) {
-          return this.field_v.field_g * 100 / (-this.field_s + this.field_v.field_h.length);
+          return this.field_v.position * 100 / (-this.field_s + this.field_v.payload.length);
         }
         field_w = (String) null;
-        return this.field_v.field_g * 100 / (-this.field_s + this.field_v.field_h.length);
+        return this.field_v.position * 100 / (-this.field_s + this.field_v.payload.length);
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, String param5, int param6, int param7, int param8) {
@@ -83,17 +83,17 @@ final class qfa extends cga {
         try {
           qc.field_b.field_Z = param5;
           if (2 == gk.field_d) {
-            qq.field_k.field_Z = ru.field_l;
+            qq.field_k.field_Z = NanoGameClock.field_l;
           } else {
-            qq.field_k.field_Z = ro.field_k;
+            qq.field_k.field_Z = ClearTileFlagEffect.field_k;
           }
           var9_int = 495;
           var10 = 5;
           aja.field_p.a(param4, 31407, -10 + var9_int, 5, var10);
-          jba.field_A.a(param4, 31407, aja.field_p.field_sb - ts.field_r.field_sb, 0, 0);
+          HailAnimation.field_A.a(param4, 31407, aja.field_p.field_sb - DisableSpecial.field_r.field_sb, 0, 0);
           var10 = var10 + (param4 + param0);
-          ts.field_r.a(param4, 31407, ts.field_r.field_sb, jba.field_A.field_sb, 0);
-          ub.field_k.a(param1, 31407, ub.field_k.e(-1), 5, var10);
+          DisableSpecial.field_r.a(param4, 31407, DisableSpecial.field_r.field_sb, HailAnimation.field_A.field_sb, 0);
+          BoardChangeAnimation.field_k.a(param1, 31407, BoardChangeAnimation.field_k.e(-1), 5, var10);
           var11 = qq.field_k.e(-1);
           qq.field_k.a(param1, 31407, var11, -var11 + (var9_int - 5), var10);
           var12 = param1 + (var10 + 5);
@@ -106,7 +106,7 @@ final class qfa extends cga {
           var12 = var12 + param8;
           bi.field_h.a(var12, 31407, var9_int, param2 - var9_int / 2, -(var12 / 2) + param6);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qfa.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qfa.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class qfa extends cga {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -201,7 +201,7 @@ final class qfa extends cga {
             return stackIn_12_0;
           }
           if (param0 == 8) {
-            stackIn_16_0 = hr.field_e;
+            stackIn_16_0 = DelegatingCanvas.field_e;
             return stackIn_16_0;
           }
           if (param0 == 9) {
@@ -219,7 +219,7 @@ final class qfa extends cga {
           if (param0 != 14) {
             return null;
           }
-          stackIn_30_0 = lga.a(true, new String[]{param1}, vfa.field_r);
+          stackIn_30_0 = lga.a(true, new String[]{param1}, ClamsSpecial.field_r);
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -231,11 +231,11 @@ final class qfa extends cga {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         if (param0 != 97) {
           return;
@@ -253,12 +253,12 @@ final class qfa extends cga {
         Object var5 = null;
         int var6 = 0;
         fm var9 = null;
-        pf var10 = null;
+        BitPacketBuffer var10 = null;
         byte[] var14 = null;
         var6 = BachelorFridge.field_y;
         try {
           var10 = ig.field_m;
-          var2 = var10.b(16711935);
+          var2 = var10.readUnsignedByte(16711935);
           if (param0 >= -44) {
             return;
           }
@@ -268,27 +268,27 @@ final class qfa extends cga {
               vc.a((byte) -118);
               return;
             }
-            var4 = var10.b(16711935);
+            var4 = var10.readUnsignedByte(16711935);
             if (0 == var4) {
               var5 = null;
             } else {
               var14 = new byte[var4];
               var10.a(var14, var4, 128, 0);
             }
-            var10.field_g = var10.field_g + 4;
-            if (var10.j(4)) {
-              var9.a(false);
+            var10.position = var10.position + 4;
+            if (var10.verifyCrc(4)) {
+              var9.unlink(false);
               return;
             }
             vc.a((byte) -124);
             return;
           }
           if (var2 != 1) {
-            cv.a(1, "A1: " + nia.d((byte) -108), (Throwable) null);
+            SpiltMilkEvent.a(1, "A1: " + nia.d((byte) -108), (Throwable) null);
             vc.a((byte) -115);
             return;
           }
-          var3 = var10.f(-108);
+          var3 = var10.readInt(-108);
           var4_ref_bga = (bga) (on.field_r.b((byte) 90));
           while (var4_ref_bga != null) {
             if (var4_ref_bga.field_i != var3) {
@@ -301,19 +301,19 @@ final class qfa extends cga {
             vc.a((byte) -80);
             return;
           }
-          var4_ref_bga.a(false);
+          var4_ref_bga.unlink(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "qfa.L(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "qfa.L(" + param0 + ')');
         }
     }
 
     final static void i(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        pf var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -323,24 +323,24 @@ final class qfa extends cga {
             field_t = (String) null;
           }
           var1 = sja.field_fb;
-          while (tg.c(-43)) {
-            var1.c(8, (byte) 119);
-            fieldTemp$0 = var1.field_g + 1;
-            var1.field_g = var1.field_g + 1;
+          while (SuperSpeedSpecial.c(-43)) {
+            var1.writeCipheredByte(8, (byte) 119);
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             sia.a(var1, 108);
-            sja.field_fb.b((byte) -68, var1.field_g - var2);
+            sja.field_fb.writeLengthByte((byte) -68, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "qfa.P(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "qfa.P(" + param0 + ')');
         }
     }
 
     final static void f(int param0) {
-        qi.field_b = new ue();
+        qi.field_b = new AccountCreationPanel();
         kka.field_l.e(qi.field_b, 33);
         int var1 = -78 / ((param0 - 45) / 53);
     }
@@ -349,14 +349,14 @@ final class qfa extends cga {
         if (this.field_n) {
           throw new RuntimeException();
         }
-        if (-this.field_s + this.field_v.field_h.length > this.field_v.field_g) {
+        if (-this.field_s + this.field_v.payload.length > this.field_v.position) {
           throw new RuntimeException();
         }
         if (param0 == -65) {
-          return this.field_v.field_h;
+          return this.field_v.payload;
         }
         qfa.i(1);
-        return this.field_v.field_h;
+        return this.field_v.payload;
     }
 
     static {

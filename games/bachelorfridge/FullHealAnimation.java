@@ -1,0 +1,174 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FullHealAnimation extends EventAnimation {
+    static String field_A;
+    private FullHealEvent field_z;
+    static int field_y;
+    static Sprite field_C;
+    static vr field_B;
+    static int field_v;
+    static String field_w;
+    static int field_x;
+
+    final static boolean e(int param0) {
+        if (param0 != 37) {
+          field_B = (vr) null;
+          return true;
+        }
+        return true;
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_A = null;
+        field_w = null;
+        if (param0 != 21) {
+          return;
+        }
+        field_B = null;
+        field_C = null;
+    }
+
+    FullHealAnimation(BattleScreen param0, FullHealEvent param1) {
+        super(param0, param1);
+        try {
+          this.field_z = param1;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final void e(byte param0) {
+        DamageEffect var3_ref = null;
+        CreatureActor var7 = null;
+        Object var3 = null;
+        int var5 = BachelorFridge.field_y;
+        BattleCreature var6 = this.field_z.creature.a(96, this.screen.field_h);
+        if (param0 >= -78) {
+          this.e((byte) 27);
+        }
+        if (!var6.isDown(-83)) {
+          var3_ref = (DamageEffect) (this.field_z.effects.b((byte) 90));
+          al.a(-86, this.field_z.moveId);
+          while (var3_ref != null) {
+            var3_ref.apply(var6, this.screen.field_h, 12);
+            var7 = var3_ref.target.a(-27449, this.screen);
+            var7.b(-1, 6);
+            this.addChild(27799, new DamagePopupAnimation(this.screen, this.field_z.creature.a(-27449, this.screen), -200));
+            var3_ref = (DamageEffect) (this.field_z.effects.c(0));
+          }
+          return;
+        }
+    }
+
+    private final void d(int param0) {
+        if (param0 > -10) {
+          field_w = (String) null;
+        }
+    }
+
+    final static String a(long param0, int param1) {
+        StringBuilder var12 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder var13 = null;
+        StringBuilder discarded$1 = null;
+        int var3 = 0;
+        long var4 = 0L;
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = BachelorFridge.field_y;
+        int var3Lifetime1;
+        long var4Lifetime1;
+        long var7Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        if (param1 <= 43) {
+          field_w = (String) null;
+          if (param0 <= 0L) {
+            return null;
+          }
+          if (6582952005840035281L <= param0) {
+            return null;
+          }
+          if (param0 % 37L != 0L) {
+            var3 = 0;
+            var4 = param0;
+            while (var4 != 0L) {
+              var3++;
+              var4 = var4 / 37L;
+            }
+            var12 = new StringBuilder(var3);
+            while (param0 != 0L) {
+              var7 = param0;
+              param0 = param0 / 37L;
+              var9 = ga.field_a[(int)(-(param0 * 37L) + var7)];
+              if (var9 == 95) {
+                var10 = var12.length() - 1;
+                var9 = 160;
+                var12.setCharAt(var10, Character.toUpperCase(var12.charAt(var10)));
+              }
+              discarded$0 = var12.append((char) var9);
+            }
+            var12.reverse();
+            var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
+            return var12.toString();
+          }
+          return null;
+        }
+        if (param0 <= 0L) {
+          return null;
+        }
+        if (6582952005840035281L <= param0) {
+          return null;
+        }
+        if (param0 % 37L != 0L) {
+          var3Lifetime1 = 0;
+          var4Lifetime1 = param0;
+          while (var4Lifetime1 != 0L) {
+            var3Lifetime1++;
+            var4Lifetime1 = var4Lifetime1 / 37L;
+          }
+          var13 = new StringBuilder(var3Lifetime1);
+          while (param0 != 0L) {
+            var7Lifetime1 = param0;
+            param0 = param0 / 37L;
+            var9Lifetime1 = ga.field_a[(int)(-(param0 * 37L) + var7Lifetime1)];
+            if (var9Lifetime1 == 95) {
+              var10Lifetime1 = var13.length() - 1;
+              var9Lifetime1 = 160;
+              var13.setCharAt(var10Lifetime1, Character.toUpperCase(var13.charAt(var10Lifetime1)));
+            }
+            discarded$1 = var13.append((char) var9Lifetime1);
+          }
+          var13.reverse();
+          var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
+          return var13.toString();
+        }
+        return null;
+    }
+
+    final boolean isFinished(byte param0) {
+        int fieldTemp$0 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
+        if (fieldTemp$0 >= 0) {
+          if (this.field_l != 25) {
+            return false;
+          }
+          MartyrAnimation.a(22, (byte) 126);
+          this.e((byte) -90);
+          return false;
+        }
+        this.d(-63);
+        int var2 = -17 / ((71 - param0) / 47);
+        return true;
+    }
+
+    static {
+        field_A = "That name is not available";
+        field_y = 0;
+        field_v = 12320512;
+        field_w = "Shopping bag. Click the tooltips to continue.";
+        field_x = 0;
+    }
+}

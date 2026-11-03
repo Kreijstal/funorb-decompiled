@@ -1,43 +1,43 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qn extends kj {
+final class qn extends TileEffect {
     static cf field_i;
     private boolean field_f;
-    static kv field_g;
+    static Sprite field_g;
     static String field_h;
 
     final static void a(int param0, nc param1, int param2) {
-        pf var7 = null;
-        pf var8 = null;
+        BitPacketBuffer var7 = null;
+        BitPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
         try {
           var7 = sja.field_fb;
           var8 = var7;
-          var8.c(param0, (byte) 109);
-          var8.field_g = var8.field_g + 1;
-          var4 = var8.field_g;
-          var8.d(1, 0);
+          var8.writeCipheredByte(param0, (byte) 109);
+          var8.position = var8.position + 1;
+          var4 = var8.position;
+          var8.writeByte(1, 0);
           var8.b(param1.field_j, -116);
           var8.b(param1.field_k, param2 ^ 8591);
           var8.b(param1.field_f, -113);
-          var8.e(param1.field_h, -1615464796);
-          var8.e(param1.field_l, param2 - 1615456104);
-          var8.e(param1.field_i, -1615464796);
-          var8.e(param1.field_g, -1615464796);
-          var8.d(param1.field_m.length, param2 + 8692);
+          var8.writeInt(param1.field_h, -1615464796);
+          var8.writeInt(param1.field_l, param2 - 1615456104);
+          var8.writeInt(param1.field_i, -1615464796);
+          var8.writeInt(param1.field_g, -1615464796);
+          var8.writeByte(param1.field_m.length, param2 + 8692);
           for (var5 = 0; param1.field_m.length > var5; var5++) {
-            var7.e(param1.field_m[var5], -1615464796);
+            var7.writeInt(param1.field_m[var5], -1615464796);
           }
           if (param2 != -8692) {
             field_i = (cf) null;
           }
           var8.a(var4, 19);
-          var8.b((byte) -108, -var4 + var8.field_g);
+          var8.writeLengthByte((byte) -108, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -64,10 +64,10 @@ final class qn extends kj {
           var6_int = cr.a(an.field_q, param2, ha.field_n, 0);
           var7 = cr.a(an.field_q, param5, ha.field_n, 0);
           if (param4 <= 28) {
-            qn.c((byte) -62);
+            qn.releaseStatics((byte) -62);
           }
-          var8 = cr.a(DualLinkNode.field_l, param0, pw.field_x, 0);
-          var9 = cr.a(DualLinkNode.field_l, param1, pw.field_x, 0);
+          var8 = cr.a(DualLinkNode.field_l, param0, SnowAnimation.field_x, 0);
+          var9 = cr.a(DualLinkNode.field_l, param1, SnowAnimation.field_x, 0);
           for (var10 = var6_int; var10 <= var7; var10++) {
             hba.a(param3, var8, tj.field_b[var10], 7, var9);
           }
@@ -75,18 +75,18 @@ final class qn extends kj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "qn.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "qn.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        rla.field_k.e(param2 + 25, 10 + param0);
+        SetFriendlyEffect.field_k.draw(param2 + 25, 10 + param0);
         if (param1 != 0) {
           this.field_f = true;
         }
     }
 
-    qn(gj param0, int param1, int param2) {
+    qn(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -98,7 +98,7 @@ final class qn extends kj {
         return this.field_f;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_h = null;
         field_g = null;
@@ -109,7 +109,7 @@ final class qn extends kj {
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-          field_g = (kv) null;
+          field_g = (Sprite) null;
         }
     }
 

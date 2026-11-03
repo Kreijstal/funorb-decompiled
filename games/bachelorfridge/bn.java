@@ -3,23 +3,23 @@
  */
 import java.util.*;
 
-final class bn extends kj {
-    private eaa field_g;
-    static ee field_h;
+final class bn extends TileEffect {
+    private IntrusiveDeque field_g;
+    static IndexedSprite field_h;
     private int field_f;
-    static ee field_i;
+    static IndexedSprite field_i;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_h = null;
         if (param0 <= 93) {
-          field_i = (ee) null;
+          field_i = (IndexedSprite) null;
         }
     }
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-          field_h = (ee) null;
+          field_h = (IndexedSprite) null;
         }
     }
 
@@ -34,15 +34,15 @@ final class bn extends kj {
         java.awt.Canvas var5 = null;
         var4 = BachelorFridge.field_y;
         try {
-          if (lk.field_r >= 10) {
-            if (!ad.d((byte) 27)) {
-              dg.d();
+          if (SuperSpeedAllEvent.field_r >= 10) {
+            if (!CreatureActor.d((byte) 27)) {
+              SoftwareRasterizer.clear();
               rha.a(240, false, 320);
-              av.a(0, -83, param1, 0);
+              IncomingEvent.a(0, -83, param1, 0);
             } else {
               if (0 == jv.field_j) {
                 rda.a(0, param2, false);
-                av.a(0, -76, param1, 0);
+                IncomingEvent.a(0, -76, param1, 0);
               } else {
                 jq.a(param1, -128);
               }
@@ -53,7 +53,7 @@ final class bn extends kj {
               nf.field_K = false;
               var3_int = 1;
             }
-            lha.a(kla.f(param0 - 10284), dea.field_o, wea.b(false), var3_int != 0, 3);
+            lha.a(DiveBomberAnimation.f(param0 - 10284), dea.field_o, wea.b(false), var3_int != 0, 3);
           }
           if (param0 != 0) {
             var5 = (java.awt.Canvas) null;
@@ -70,17 +70,17 @@ final class bn extends kj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    bn(gj param0, int param1, int param2) {
+    bn(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_f = 128;
-          this.field_g = new eaa();
+          this.field_g = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -91,11 +91,11 @@ final class bn extends kj {
         rea.a(this.field_g, 65280, param2, (byte) 118, 10, param0);
     }
 
-    final static kv a(vr param0, byte param1, int param2, int param3) {
+    final static Sprite a(vr param0, byte param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        kv stackIn_4_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -103,7 +103,7 @@ final class bn extends kj {
         try {
           if (!g.a(param3, param2, -30744, param0)) {
             stackIn_2_0 = null;
-            return (kv) (stackIn_2_0);
+            return (Sprite) (stackIn_2_0);
           }
           var4_int = -101 / ((-66 - param1) / 41);
           stackIn_4_0 = nja.a(true);
@@ -118,7 +118,7 @@ final class bn extends kj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -144,16 +144,16 @@ final class bn extends kj {
           for (var2 = 0; var2 < 1; var2++) {
             var3 = this.field_f;
             var3 += 16;
-            var4 = kla.a(96, this.field_e.field_h.field_w, -2147483648);
-            var5 = kla.a(48, this.field_e.field_h.field_w, -2147483648);
-            kla.a(50, this.field_e.field_h.field_w, -2147483648);
+            var4 = DiveBomberAnimation.a(96, this.field_e.field_h.field_w, -2147483648);
+            var5 = DiveBomberAnimation.a(48, this.field_e.field_h.field_w, -2147483648);
+            DiveBomberAnimation.a(50, this.field_e.field_h.field_w, -2147483648);
             var6 = 128 + var4;
             var7 = 64 + var5;
             var8 = (int)(Math.sin((double)var3 * 300.0) * 100.0) * 0;
-            var9 = new rea(var6, var8, var7, kla.a(3, this.field_e.field_h.field_w, -2147483648));
-            kla.a(3, this.field_e.field_h.field_w, -2147483648);
-            kla.a(5000, this.field_e.field_h.field_w, -2147483648);
-            var9.field_o = (double)(-kla.a(2, this.field_e.field_h.field_w, -2147483648) - 1);
+            var9 = new rea(var6, var8, var7, DiveBomberAnimation.a(3, this.field_e.field_h.field_w, -2147483648));
+            DiveBomberAnimation.a(3, this.field_e.field_h.field_w, -2147483648);
+            DiveBomberAnimation.a(5000, this.field_e.field_h.field_w, -2147483648);
+            var9.field_o = (double)(-DiveBomberAnimation.a(2, this.field_e.field_h.field_w, -2147483648) - 1);
             var9.field_n = 64;
             var9.field_h = -1;
             this.field_g.a(var9, true);
