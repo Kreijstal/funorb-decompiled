@@ -177,7 +177,7 @@ final class TeamSelectionView extends MatchPhaseView {
     }
 
     private final void a(byte param0, int param1) {
-        this.field_a.enqueueEvent(mg.a(this.field_g, (byte) 0, param1), -125);
+        this.field_a.enqueueEvent(mg.createTeamEvent(this.field_g, (byte) 0, param1), -125);
         if (param0 >= -95) {
           return;
         }

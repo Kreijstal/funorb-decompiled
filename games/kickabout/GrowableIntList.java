@@ -65,7 +65,7 @@ final class GrowableIntList {
         this.field_d = var4;
     }
 
-    final static PlayerInputEvent a(int param0, byte param1, int param2) {
+    final static PlayerInputEvent createCheatEvent(int param0, byte param1, int param2) {
         int var3 = 3 % ((param1 - 62) / 40);
         return new PlayerInputEvent(7, param0, param2, (byte) 0, (byte) 0);
     }

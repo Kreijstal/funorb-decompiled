@@ -576,7 +576,7 @@ final class LineupView extends MatchPhaseView {
     }
 
     private final void i(int param0, int param1) {
-        this.field_a.enqueueEvent(wd.a(18238, this.field_k, GameLoopApplet.field_E, param1, this.field_g), -121);
+        this.field_a.enqueueEvent(wd.createLineupEvent(18238, this.field_k, GameLoopApplet.field_E, param1, this.field_g), -121);
         if (param0 != 74) {
           return;
         }

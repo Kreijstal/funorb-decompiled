@@ -210,7 +210,7 @@ final class FormationView extends MatchPhaseView {
     }
 
     private final void g(int param0, int param1) {
-        this.field_a.enqueueEvent(SquadGridWidget.a(param1, this.field_g, (byte) 0), param0 ^ -127);
+        this.field_a.enqueueEvent(SquadGridWidget.createFormationEvent(param1, this.field_g, (byte) 0), param0 ^ -127);
         if (this.field_f) {
           or.field_d.b(73, (byte) 112);
           or.field_d.writeByte(param0 ^ 96, param1);

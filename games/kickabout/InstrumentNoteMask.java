@@ -85,7 +85,7 @@ final class InstrumentNoteMask extends IntrusiveNode {
         }
     }
 
-    final static PlayerInputEvent a(int param0, int param1, int param2, byte param3, byte param4) {
+    final static PlayerInputEvent createMouseEvent(int param0, int param1, int param2, byte param3, byte param4) {
         int var5 = -103 / ((-46 - param2) / 36);
         return new PlayerInputEvent(2, param0, param1, param4, param3);
     }

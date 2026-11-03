@@ -386,7 +386,7 @@ final class PlayingView extends MatchPhaseView {
               stackIn_10_0 = 0;
             }
             var6 = stackIn_10_0;
-            var7 = InstrumentNoteMask.a(this.field_g, var6, 85, (byte) var5, (byte) var4);
+            var7 = InstrumentNoteMask.createMouseEvent(this.field_g, var6, 85, (byte) var5, (byte) var4);
             this.queueInputEvent(false, var7);
             if (this.field_f) {
               or.field_d.b(71, (byte) 94);
@@ -854,7 +854,7 @@ final class PlayingView extends MatchPhaseView {
             this.field_a.c(this.field_g, -7) &&
             ei.field_n &&
             !MyKitScreen.field_O) {
-            this.switchToPredictedReceiver(InstrumentNoteMask.a(param1.participant, param1.value, -115, param1.field_p, param1.field_o), -122);
+            this.switchToPredictedReceiver(InstrumentNoteMask.createMouseEvent(param1.participant, param1.value, -115, param1.field_p, param1.field_o), -122);
             return;
           }
           return;
@@ -1186,7 +1186,7 @@ final class PlayingView extends MatchPhaseView {
     }
 
     private final void b(boolean param0) {
-        this.queueInputEvent(param0, mg.a(param0, this.field_H, this.field_g));
+        this.queueInputEvent(param0, mg.createKeyheldEvent(param0, this.field_H, this.field_g));
         if (this.field_f) {
           or.field_d.b(68, (byte) -65);
           or.field_d.writeByte(123, this.field_H);
@@ -1197,7 +1197,7 @@ final class PlayingView extends MatchPhaseView {
         if (param1 != -1) {
           this.field_q = -15;
         }
-        this.queueInputEvent(false, WelcomeDialog.b(1, this.field_g, param0));
+        this.queueInputEvent(false, WelcomeDialog.createKeypressEvent(1, this.field_g, param0));
         if (this.field_f) {
           or.field_d.b(70, (byte) 99);
           or.field_d.writeByte(param1 ^ -107, param0);
@@ -1395,7 +1395,7 @@ final class PlayingView extends MatchPhaseView {
               }
               if (var5 != 11 &&
                 var5 != 10) {
-                this.queueInputEvent(false, GrowableIntList.a(this.field_g, (byte) 8, var5));
+                this.queueInputEvent(false, GrowableIntList.createCheatEvent(this.field_g, (byte) 8, var5));
               }
               if (this.field_f) {
                 or.field_d.b(76, (byte) 98);

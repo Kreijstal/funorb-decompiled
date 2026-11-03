@@ -696,7 +696,7 @@ final class MatchScreen extends AppScreen {
         this.createPhaseController(-2);
         this.matchState.phaseTime = -1;
         if (2 == this.matchState.phase) {
-          this.matchState.enqueueEvent(SquadGridWidget.a(2, 1, (byte) 0), -127);
+          this.matchState.enqueueEvent(SquadGridWidget.createFormationEvent(2, 1, (byte) 0), -127);
         }
         if (this.matchState.phase == 3) {
           for (var3 = 0; 4 > var3; var3++) {

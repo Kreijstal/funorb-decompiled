@@ -10,7 +10,7 @@ final class WelcomeDialog extends MessageDialog {
     static UiLayoutNode[] field_H;
     static int field_I;
 
-    final static PlayerInputEvent b(int param0, int param1, int param2) {
+    final static PlayerInputEvent createKeypressEvent(int param0, int param1, int param2) {
         if (param0 != 1) {
           return (PlayerInputEvent) null;
         }

@@ -75,7 +75,7 @@ final class mg {
         }
     }
 
-    final static PlayerInputEvent a(int param0, byte param1, int param2) {
+    final static PlayerInputEvent createTeamEvent(int param0, byte param1, int param2) {
         if (param1 != 0) {
           return (PlayerInputEvent) null;
         }
@@ -86,7 +86,7 @@ final class mg {
         return param0 & param1;
     }
 
-    final static PlayerInputEvent a(boolean param0, int param1, int param2) {
+    final static PlayerInputEvent createKeyheldEvent(boolean param0, int param1, int param2) {
         if (param0) {
           return (PlayerInputEvent) null;
         }

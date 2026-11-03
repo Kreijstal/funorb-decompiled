@@ -735,7 +735,7 @@ final class SquadGridWidget extends UiLayoutNode {
         DiskCacheWorker.field_g[2] = CascadingMenu.field_Db;
     }
 
-    final static PlayerInputEvent a(int param0, int param1, byte param2) {
+    final static PlayerInputEvent createFormationEvent(int param0, int param1, byte param2) {
         if (param2 != 0) {
           SquadGridWidget.releaseStatics((byte) 81);
         }

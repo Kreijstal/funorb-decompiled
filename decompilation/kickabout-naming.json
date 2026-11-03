@@ -6764,6 +6764,14 @@
       "renamedSymbol": "M:GrowableIntList.get(IB)I"
     },
     {
+      "symbol": "M:fu.a(IBI)Lki;",
+      "originalName": "a",
+      "to": "createCheatEvent",
+      "evidence": "Returns new ki(7, ...), the Cheat event type printed by PlayerInputEvent.toString.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GrowableIntList.createCheatEvent(IBI)LPlayerInputEvent;"
+    },
+    {
       "symbol": "M:fu.a(II)V",
       "originalName": "a",
       "to": "removeAt",
@@ -7356,6 +7364,14 @@
       "renamedSymbol": "M:WelcomeDialog.handleResult(II)V"
     },
     {
+      "symbol": "M:ha.b(III)Lki;",
+      "originalName": "b",
+      "to": "createKeypressEvent",
+      "evidence": "Returns new ki(1, ...), the Keypress event type printed by PlayerInputEvent.toString.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WelcomeDialog.createKeypressEvent(III)LPlayerInputEvent;"
+    },
+    {
       "symbol": "M:hb.a([FIZ)V",
       "originalName": "a",
       "to": "decodeResidue",
@@ -7738,6 +7754,14 @@
       "evidence": "CommonGame.stepMatch calls it for slot 0 of each team, the keeper with the keeperstate fields.",
       "confidence": "reviewed",
       "renamedSymbol": "M:hv.updateKeeperAI(ZLCommonGame;I)V"
+    },
+    {
+      "symbol": "M:hw.a(IIIBB)Lki;",
+      "originalName": "a",
+      "to": "createMouseEvent",
+      "evidence": "Returns new ki(2, ...), the Mouse event type printed by PlayerInputEvent.toString, carrying the click coordinates.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:InstrumentNoteMask.createMouseEvent(IIIBB)LPlayerInputEvent;"
     },
     {
       "symbol": "M:hw.a(Ljava/lang/CharSequence;IZ)Z",
@@ -9356,6 +9380,14 @@
       "renamedSymbol": "M:SquadGridWidget.update(I)V"
     },
     {
+      "symbol": "M:mf.a(IIB)Lki;",
+      "originalName": "a",
+      "to": "createFormationEvent",
+      "evidence": "Returns new ki(3, ...), the event type handled by applyFormationCommand.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SquadGridWidget.createFormationEvent(IIB)LPlayerInputEvent;"
+    },
+    {
       "symbol": "M:mf.b(II)I",
       "originalName": "b",
       "to": "slotY",
@@ -9394,6 +9426,22 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:mg.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:mg.a(IBI)Lki;",
+      "originalName": "a",
+      "to": "createTeamEvent",
+      "evidence": "Returns new ki(4, ...), the Team event type printed by PlayerInputEvent.toString.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:mg.createTeamEvent(IBI)LPlayerInputEvent;"
+    },
+    {
+      "symbol": "M:mg.a(ZII)Lki;",
+      "originalName": "a",
+      "to": "createKeyheldEvent",
+      "evidence": "Returns new ki(0, ...), the Keyheld event type printed by PlayerInputEvent.toString.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:mg.createKeyheldEvent(ZII)LPlayerInputEvent;"
     },
     {
       "symbol": "M:mh.a(BLjava/lang/String;)Ljava/lang/String;",
@@ -13434,6 +13482,14 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:wd.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:wd.a(I[Lup;Lgr;II)Lki;",
+      "originalName": "a",
+      "to": "createLineupEvent",
+      "evidence": "Creates new ki(5, ...) and attaches the PlayerStats array, the LineUp event type.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;"
     },
     {
       "symbol": "M:we.a(B)V",
@@ -132293,7 +132349,7 @@
     },
     {
       "symbol": "L:fu.a(IBI)Lki;#0",
-      "renamedSymbol": "L:GrowableIntList.a(IBI)LPlayerInputEvent;#0",
+      "renamedSymbol": "L:GrowableIntList.createCheatEvent(IBI)LPlayerInputEvent;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -156185,7 +156241,7 @@
     },
     {
       "symbol": "L:hw.a(IIIBB)Lki;#0",
-      "renamedSymbol": "L:InstrumentNoteMask.a(IIIBB)LPlayerInputEvent;#0",
+      "renamedSymbol": "L:InstrumentNoteMask.createMouseEvent(IIIBB)LPlayerInputEvent;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -326685,7 +326741,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#0",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#0",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -326696,7 +326752,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#1",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#1",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#1",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -326707,7 +326763,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#10",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#10",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -326718,7 +326774,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#2",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#2",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -326729,7 +326785,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#3",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#3",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -326740,7 +326796,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#4",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#4",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -326751,7 +326807,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#5",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#5",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#5",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -326762,7 +326818,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#6",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#6",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#6",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -326773,7 +326829,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#7",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#7",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#7",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -326784,7 +326840,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#8",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#8",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#8",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -326795,7 +326851,7 @@
     },
     {
       "symbol": "L:wd.a(I[Lup;Lgr;II)Lki;#9",
-      "renamedSymbol": "L:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#9",
+      "renamedSymbol": "L:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -351567,9 +351623,9 @@
     },
     {
       "symbol": "M:fu.a(IBI)Lki;",
-      "renamedSymbol": "M:GrowableIntList.a(IBI)LPlayerInputEvent;",
+      "renamedSymbol": "M:GrowableIntList.createCheatEvent(IBI)LPlayerInputEvent;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createCheatEvent",
       "declaration": {
         "file": "fu.java",
         "start": 1720,
@@ -354031,9 +354087,9 @@
     },
     {
       "symbol": "M:ha.b(III)Lki;",
-      "renamedSymbol": "M:WelcomeDialog.b(III)LPlayerInputEvent;",
+      "renamedSymbol": "M:WelcomeDialog.createKeypressEvent(III)LPlayerInputEvent;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "createKeypressEvent",
       "declaration": {
         "file": "ha.java",
         "start": 233,
@@ -356044,9 +356100,9 @@
     },
     {
       "symbol": "M:hw.a(IIIBB)Lki;",
-      "renamedSymbol": "M:InstrumentNoteMask.a(IIIBB)LPlayerInputEvent;",
+      "renamedSymbol": "M:InstrumentNoteMask.createMouseEvent(IIIBB)LPlayerInputEvent;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createMouseEvent",
       "declaration": {
         "file": "hw.java",
         "start": 2711,
@@ -364734,9 +364790,9 @@
     },
     {
       "symbol": "M:mf.a(IIB)Lki;",
-      "renamedSymbol": "M:SquadGridWidget.a(IIB)LPlayerInputEvent;",
+      "renamedSymbol": "M:SquadGridWidget.createFormationEvent(IIB)LPlayerInputEvent;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createFormationEvent",
       "declaration": {
         "file": "mf.java",
         "start": 25567,
@@ -364877,9 +364933,9 @@
     },
     {
       "symbol": "M:mg.a(IBI)Lki;",
-      "renamedSymbol": "M:mg.a(IBI)LPlayerInputEvent;",
+      "renamedSymbol": "M:mg.createTeamEvent(IBI)LPlayerInputEvent;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createTeamEvent",
       "declaration": {
         "file": "mg.java",
         "start": 2544,
@@ -364910,9 +364966,9 @@
     },
     {
       "symbol": "M:mg.a(ZII)Lki;",
-      "renamedSymbol": "M:mg.a(ZII)LPlayerInputEvent;",
+      "renamedSymbol": "M:mg.createKeyheldEvent(ZII)LPlayerInputEvent;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createKeyheldEvent",
       "declaration": {
         "file": "mg.java",
         "start": 2824,
@@ -386074,9 +386130,9 @@
     },
     {
       "symbol": "M:wd.a(I[Lup;Lgr;II)Lki;",
-      "renamedSymbol": "M:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;",
+      "renamedSymbol": "M:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createLineupEvent",
       "declaration": {
         "file": "wd.java",
         "start": 2128,
@@ -414663,7 +414719,7 @@
     },
     {
       "symbol": "P:fu.a(IBI)Lki;#0",
-      "renamedSymbol": "P:GrowableIntList.a(IBI)LPlayerInputEvent;#0",
+      "renamedSymbol": "P:GrowableIntList.createCheatEvent(IBI)LPlayerInputEvent;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -414674,7 +414730,7 @@
     },
     {
       "symbol": "P:fu.a(IBI)Lki;#1",
-      "renamedSymbol": "P:GrowableIntList.a(IBI)LPlayerInputEvent;#1",
+      "renamedSymbol": "P:GrowableIntList.createCheatEvent(IBI)LPlayerInputEvent;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -414685,7 +414741,7 @@
     },
     {
       "symbol": "P:fu.a(IBI)Lki;#2",
-      "renamedSymbol": "P:GrowableIntList.a(IBI)LPlayerInputEvent;#2",
+      "renamedSymbol": "P:GrowableIntList.createCheatEvent(IBI)LPlayerInputEvent;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -420064,7 +420120,7 @@
     },
     {
       "symbol": "P:ha.b(III)Lki;#0",
-      "renamedSymbol": "P:WelcomeDialog.b(III)LPlayerInputEvent;#0",
+      "renamedSymbol": "P:WelcomeDialog.createKeypressEvent(III)LPlayerInputEvent;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -420075,7 +420131,7 @@
     },
     {
       "symbol": "P:ha.b(III)Lki;#1",
-      "renamedSymbol": "P:WelcomeDialog.b(III)LPlayerInputEvent;#1",
+      "renamedSymbol": "P:WelcomeDialog.createKeypressEvent(III)LPlayerInputEvent;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -420086,7 +420142,7 @@
     },
     {
       "symbol": "P:ha.b(III)Lki;#2",
-      "renamedSymbol": "P:WelcomeDialog.b(III)LPlayerInputEvent;#2",
+      "renamedSymbol": "P:WelcomeDialog.createKeypressEvent(III)LPlayerInputEvent;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -424882,7 +424938,7 @@
     },
     {
       "symbol": "P:hw.a(IIIBB)Lki;#0",
-      "renamedSymbol": "P:InstrumentNoteMask.a(IIIBB)LPlayerInputEvent;#0",
+      "renamedSymbol": "P:InstrumentNoteMask.createMouseEvent(IIIBB)LPlayerInputEvent;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424893,7 +424949,7 @@
     },
     {
       "symbol": "P:hw.a(IIIBB)Lki;#1",
-      "renamedSymbol": "P:InstrumentNoteMask.a(IIIBB)LPlayerInputEvent;#1",
+      "renamedSymbol": "P:InstrumentNoteMask.createMouseEvent(IIIBB)LPlayerInputEvent;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -424904,7 +424960,7 @@
     },
     {
       "symbol": "P:hw.a(IIIBB)Lki;#2",
-      "renamedSymbol": "P:InstrumentNoteMask.a(IIIBB)LPlayerInputEvent;#2",
+      "renamedSymbol": "P:InstrumentNoteMask.createMouseEvent(IIIBB)LPlayerInputEvent;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -424915,7 +424971,7 @@
     },
     {
       "symbol": "P:hw.a(IIIBB)Lki;#3",
-      "renamedSymbol": "P:InstrumentNoteMask.a(IIIBB)LPlayerInputEvent;#3",
+      "renamedSymbol": "P:InstrumentNoteMask.createMouseEvent(IIIBB)LPlayerInputEvent;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -424926,7 +424982,7 @@
     },
     {
       "symbol": "P:hw.a(IIIBB)Lki;#4",
-      "renamedSymbol": "P:InstrumentNoteMask.a(IIIBB)LPlayerInputEvent;#4",
+      "renamedSymbol": "P:InstrumentNoteMask.createMouseEvent(IIIBB)LPlayerInputEvent;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -443549,7 +443605,7 @@
     },
     {
       "symbol": "P:mf.a(IIB)Lki;#0",
-      "renamedSymbol": "P:SquadGridWidget.a(IIB)LPlayerInputEvent;#0",
+      "renamedSymbol": "P:SquadGridWidget.createFormationEvent(IIB)LPlayerInputEvent;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -443560,7 +443616,7 @@
     },
     {
       "symbol": "P:mf.a(IIB)Lki;#1",
-      "renamedSymbol": "P:SquadGridWidget.a(IIB)LPlayerInputEvent;#1",
+      "renamedSymbol": "P:SquadGridWidget.createFormationEvent(IIB)LPlayerInputEvent;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -443571,7 +443627,7 @@
     },
     {
       "symbol": "P:mf.a(IIB)Lki;#2",
-      "renamedSymbol": "P:SquadGridWidget.a(IIB)LPlayerInputEvent;#2",
+      "renamedSymbol": "P:SquadGridWidget.createFormationEvent(IIB)LPlayerInputEvent;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -443780,7 +443836,7 @@
     },
     {
       "symbol": "P:mg.a(IBI)Lki;#0",
-      "renamedSymbol": "P:mg.a(IBI)LPlayerInputEvent;#0",
+      "renamedSymbol": "P:mg.createTeamEvent(IBI)LPlayerInputEvent;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -443791,7 +443847,7 @@
     },
     {
       "symbol": "P:mg.a(IBI)Lki;#1",
-      "renamedSymbol": "P:mg.a(IBI)LPlayerInputEvent;#1",
+      "renamedSymbol": "P:mg.createTeamEvent(IBI)LPlayerInputEvent;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -443802,7 +443858,7 @@
     },
     {
       "symbol": "P:mg.a(IBI)Lki;#2",
-      "renamedSymbol": "P:mg.a(IBI)LPlayerInputEvent;#2",
+      "renamedSymbol": "P:mg.createTeamEvent(IBI)LPlayerInputEvent;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -443901,7 +443957,7 @@
     },
     {
       "symbol": "P:mg.a(ZII)Lki;#0",
-      "renamedSymbol": "P:mg.a(ZII)LPlayerInputEvent;#0",
+      "renamedSymbol": "P:mg.createKeyheldEvent(ZII)LPlayerInputEvent;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -443912,7 +443968,7 @@
     },
     {
       "symbol": "P:mg.a(ZII)Lki;#1",
-      "renamedSymbol": "P:mg.a(ZII)LPlayerInputEvent;#1",
+      "renamedSymbol": "P:mg.createKeyheldEvent(ZII)LPlayerInputEvent;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -443923,7 +443979,7 @@
     },
     {
       "symbol": "P:mg.a(ZII)Lki;#2",
-      "renamedSymbol": "P:mg.a(ZII)LPlayerInputEvent;#2",
+      "renamedSymbol": "P:mg.createKeyheldEvent(ZII)LPlayerInputEvent;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -496228,7 +496284,7 @@
     },
     {
       "symbol": "P:wd.a(I[Lup;Lgr;II)Lki;#0",
-      "renamedSymbol": "P:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#0",
+      "renamedSymbol": "P:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -496239,7 +496295,7 @@
     },
     {
       "symbol": "P:wd.a(I[Lup;Lgr;II)Lki;#1",
-      "renamedSymbol": "P:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#1",
+      "renamedSymbol": "P:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -496250,7 +496306,7 @@
     },
     {
       "symbol": "P:wd.a(I[Lup;Lgr;II)Lki;#2",
-      "renamedSymbol": "P:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#2",
+      "renamedSymbol": "P:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -496261,7 +496317,7 @@
     },
     {
       "symbol": "P:wd.a(I[Lup;Lgr;II)Lki;#3",
-      "renamedSymbol": "P:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#3",
+      "renamedSymbol": "P:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -496272,7 +496328,7 @@
     },
     {
       "symbol": "P:wd.a(I[Lup;Lgr;II)Lki;#4",
-      "renamedSymbol": "P:wd.a(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#4",
+      "renamedSymbol": "P:wd.createLineupEvent(I[LPlayerStats;LClubState;II)LPlayerInputEvent;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -532907,7 +532963,7 @@
       "original": "ap.java",
       "renamed": "MatchScreen.java",
       "inputSha256": "4a2760ed88366821f32e7992323d02b0a945439a6030bc604062a62b9a9dc292",
-      "outputSha256": "d5c477fe891907b3a52a275e5a968ba15728e5e450ecb84c7f3cd2c3617bca96",
+      "outputSha256": "5b4e73bd48dc2b380d211ac3f82df34261edd8b24a07003bea52ce3d7acfd6d0",
       "edits": [
         {
           "start": 50,
@@ -534980,6 +535036,13 @@
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "SquadGridWidget"
+        },
+        {
+          "start": 23942,
+          "end": 23943,
+          "symbol": "M:mf.a(IIB)Lki;",
+          "original": "a",
+          "renamed": "createFormationEvent"
         },
         {
           "start": 23995,
@@ -541542,7 +541605,7 @@
       "original": "bf.java",
       "renamed": "LineupView.java",
       "inputSha256": "50140a75f23ed37236da8d4890a8149e39cdc6edfd658b68d1d8426a89d8e1b3",
-      "outputSha256": "0679b588bff19b0c3f6931e7a415469c2b864922b78054bfd2b32bddeef72e77",
+      "outputSha256": "bf0489591ed7bee12b7ac54ab15ed88ac2ae796aa58329d67cad7937aed95d48",
       "edits": [
         {
           "start": 50,
@@ -542453,6 +542516,13 @@
           "symbol": "M:nu.a(Lki;I)V",
           "original": "a",
           "renamed": "enqueueEvent"
+        },
+        {
+          "start": 20554,
+          "end": 20555,
+          "symbol": "M:wd.a(I[Lup;Lgr;II)Lki;",
+          "original": "a",
+          "renamed": "createLineupEvent"
         },
         {
           "start": 20577,
@@ -584454,7 +584524,7 @@
       "original": "fu.java",
       "renamed": "GrowableIntList.java",
       "inputSha256": "2937dd55d048a52a39b506b8f786ce763579d43b9883e447c82af93b4e9e3bc4",
-      "outputSha256": "c23033360a4a81bf2666ac2d28080ead3d4d344e4d73dfadc63a76a96a4cb0aa",
+      "outputSha256": "cd7fac32cef649ee2f241a10d46420e70c65cf179517231e5f0c4f8f9067e3e5",
       "edits": [
         {
           "start": 50,
@@ -584539,6 +584609,13 @@
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "PlayerInputEvent"
+        },
+        {
+          "start": 1720,
+          "end": 1721,
+          "symbol": "M:fu.a(IBI)Lki;",
+          "original": "a",
+          "renamed": "createCheatEvent"
         },
         {
           "start": 1825,
@@ -596976,7 +597053,7 @@
       "original": "ha.java",
       "renamed": "WelcomeDialog.java",
       "inputSha256": "7f28de6ff6880f2225e634f73252204e86984a3033cb33dac03d6a4d7ce3770a",
-      "outputSha256": "7b9e87bc8f50e655594c66084bc65cce7b8bf5408f745432917b7ab45950ff3c",
+      "outputSha256": "7619e77c4dedcd86c8dee201c3a639e42bf4a21c1a05a5410f9b9d059994a2bb",
       "edits": [
         {
           "start": 71,
@@ -597005,6 +597082,13 @@
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "PlayerInputEvent"
+        },
+        {
+          "start": 233,
+          "end": 234,
+          "symbol": "M:ha.b(III)Lki;",
+          "original": "b",
+          "renamed": "createKeypressEvent"
         },
         {
           "start": 318,
@@ -606896,7 +606980,7 @@
       "original": "hw.java",
       "renamed": "InstrumentNoteMask.java",
       "inputSha256": "7ba96fb1da2aa20aaa666d05f74d86be724eb13e4ee67d81d777fdad3049da73",
-      "outputSha256": "88a6b401fc2e3a1154cac27f28794f1d8f1e8a495ffb8d4d2b7fea4e185c76f1",
+      "outputSha256": "7411396af18a6d45c07277fd2f9c46b7f5bf4c27adc742d4bfe73e1275a5b5a2",
       "edits": [
         {
           "start": 50,
@@ -606946,6 +607030,13 @@
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "PlayerInputEvent"
+        },
+        {
+          "start": 2711,
+          "end": 2712,
+          "symbol": "M:hw.a(IIIBB)Lki;",
+          "original": "a",
+          "renamed": "createMouseEvent"
         },
         {
           "start": 2845,
@@ -644504,7 +644595,7 @@
       "original": "lr.java",
       "renamed": "FormationView.java",
       "inputSha256": "3c1f0d9c9cf529eb3ab43e3f9dc1bdca4049b3337b2e5ad32298a7fd4445a245",
-      "outputSha256": "11aef4570e99dcdd72281bd1e0cec808804c71958a672fa18dd280dc1230f7ed",
+      "outputSha256": "3ab68e1842b646c256fc862c38216ec59c5aa8612a42142f9c1831ff2360e031",
       "edits": [
         {
           "start": 50,
@@ -644897,6 +644988,13 @@
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "SquadGridWidget"
+        },
+        {
+          "start": 7231,
+          "end": 7232,
+          "symbol": "M:mf.a(IIB)Lki;",
+          "original": "a",
+          "renamed": "createFormationEvent"
         },
         {
           "start": 7371,
@@ -651445,7 +651543,7 @@
       "original": "mf.java",
       "renamed": "SquadGridWidget.java",
       "inputSha256": "3e6c7471ee75dfd91fe741ab3ae4ac73acebe34cddb939de76d94c19d892a8af",
-      "outputSha256": "5ca302568d1f6b32dfadcfe433d8365934f49bddffcf29d967a27934c451b89c",
+      "outputSha256": "e14e53b7207eef4eba69cfd19b5ed60909c52ccfeb789665e6bf8b47c6f4fd47",
       "edits": [
         {
           "start": 50,
@@ -653534,6 +653632,13 @@
           "renamed": "PlayerInputEvent"
         },
         {
+          "start": 25567,
+          "end": 25568,
+          "symbol": "M:mf.a(IIB)Lki;",
+          "original": "a",
+          "renamed": "createFormationEvent"
+        },
+        {
           "start": 25645,
           "end": 25647,
           "symbol": "C:mf",
@@ -653819,7 +653924,7 @@
       "original": "mg.java",
       "renamed": "mg.java",
       "inputSha256": "70633ddea6dd0a5e08b5d7ba051798cabbeb9c95348518ef1063923ee22de5f3",
-      "outputSha256": "8ef5a6ece2bca2f3981ec067a173e1c74c16e23fab90a056b3ade5484937f092",
+      "outputSha256": "dd1c55973958d31768b37ec42b41946cf5a2ae532d7145e59e6c79e574e3b4cc",
       "edits": [
         {
           "start": 87,
@@ -653990,6 +654095,13 @@
           "renamed": "PlayerInputEvent"
         },
         {
+          "start": 2544,
+          "end": 2545,
+          "symbol": "M:mg.a(IBI)Lki;",
+          "original": "a",
+          "renamed": "createTeamEvent"
+        },
+        {
           "start": 2630,
           "end": 2632,
           "symbol": "C:ki",
@@ -654009,6 +654121,13 @@
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "PlayerInputEvent"
+        },
+        {
+          "start": 2824,
+          "end": 2825,
+          "symbol": "M:mg.a(ZII)Lki;",
+          "original": "a",
+          "renamed": "createKeyheldEvent"
         },
         {
           "start": 2908,
@@ -764601,7 +764720,7 @@
       "original": "va.java",
       "renamed": "PlayingView.java",
       "inputSha256": "b3400f2acb443a491ff0196d693bafa7d49b5cae3aa38486473e42d2e4dc5cf3",
-      "outputSha256": "5eae299fd843f7eed1a0b3a0b4b13bc968dfaf2bcd3352dfded7a67f7e9b938b",
+      "outputSha256": "0b0f255dcd36bfc6cb4e4b93270616351e8ffc4bf1f11227a199d792508280f8",
       "edits": [
         {
           "start": 71,
@@ -765318,6 +765437,13 @@
           "renamed": "InstrumentNoteMask"
         },
         {
+          "start": 12145,
+          "end": 12146,
+          "symbol": "M:hw.a(IIIBB)Lki;",
+          "original": "a",
+          "renamed": "createMouseEvent"
+        },
+        {
           "start": 12215,
           "end": 12216,
           "symbol": "M:va.a(ZLki;)V",
@@ -766006,6 +766132,13 @@
           "renamed": "InstrumentNoteMask"
         },
         {
+          "start": 27113,
+          "end": 27114,
+          "symbol": "M:hw.a(IIIBB)Lki;",
+          "original": "a",
+          "renamed": "createMouseEvent"
+        },
+        {
           "start": 27122,
           "end": 27129,
           "symbol": "F:ki.field_u:I",
@@ -766643,6 +766776,13 @@
           "renamed": "queueInputEvent"
         },
         {
+          "start": 38455,
+          "end": 38456,
+          "symbol": "M:mg.a(ZII)Lki;",
+          "original": "a",
+          "renamed": "createKeyheldEvent"
+        },
+        {
           "start": 38584,
           "end": 38585,
           "symbol": "M:iw.a(II)V",
@@ -766669,6 +766809,13 @@
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "WelcomeDialog"
+        },
+        {
+          "start": 38767,
+          "end": 38768,
+          "symbol": "M:ha.b(III)Lki;",
+          "original": "b",
+          "renamed": "createKeypressEvent"
         },
         {
           "start": 38884,
@@ -767187,6 +767334,13 @@
           "symbol": "C:fu",
           "original": "fu",
           "renamed": "GrowableIntList"
+        },
+        {
+          "start": 45119,
+          "end": 45120,
+          "symbol": "M:fu.a(IBI)Lki;",
+          "original": "a",
+          "renamed": "createCheatEvent"
         },
         {
           "start": 45275,
@@ -776424,7 +776578,7 @@
       "original": "wb.java",
       "renamed": "TeamSelectionView.java",
       "inputSha256": "693229f6f120d6b6f69d406461cce73a702847de906c44347c365b893c145a58",
-      "outputSha256": "ff92d5c358ba897f79709fb7a110870a842e18098d652837b89e427b9de1e0da",
+      "outputSha256": "24a8258f79bee9040c769793d5f63c08c9ab84e0329983cd7c998010b77a2bce",
       "edits": [
         {
           "start": 50,
@@ -776831,6 +776985,13 @@
           "symbol": "M:nu.a(Lki;I)V",
           "original": "a",
           "renamed": "enqueueEvent"
+        },
+        {
+          "start": 5817,
+          "end": 5818,
+          "symbol": "M:mg.a(IBI)Lki;",
+          "original": "a",
+          "renamed": "createTeamEvent"
         },
         {
           "start": 6005,
@@ -777875,7 +778036,7 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "62b446d56b03bbf97a7e6300c1214372b1469758345e8903d06e632061781cfe",
-      "outputSha256": "8baf478caf4dd80545faeb021971952f3d44825fb3b4d184d31ed2efaba87794",
+      "outputSha256": "5492d77b9380b34ab2caf8b11d97844eeedbe84ade51fe3f4778db768c2c4558",
       "edits": [
         {
           "start": 61,
@@ -778016,6 +778177,13 @@
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "PlayerInputEvent"
+        },
+        {
+          "start": 2128,
+          "end": 2129,
+          "symbol": "M:wd.a(I[Lup;Lgr;II)Lki;",
+          "original": "a",
+          "renamed": "createLineupEvent"
         },
         {
           "start": 2142,
@@ -788960,10 +789128,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/kickabout"
     },
-    "rulesSha256": "3d7f94b7da3ac8902b644b3b2d32f9bab3bcd96e763e2c68e9b17510a9818107",
+    "rulesSha256": "ae21814147d7a7c0865da675273866ff4d7cca23f3fda951565b249a79c6678d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
-    "outputTreeSha256": "bce7b035dc55d3be5f73807c1b4698cb519a36e41ffeee0c6bbd3b55f0850b95",
+    "outputTreeSha256": "2e2f2726753ed19867b00916b936876d8f5987e0537fb042352b88f46f1320f0",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

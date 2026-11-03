@@ -68,7 +68,7 @@ final class wd extends IntrusiveNode {
         }
     }
 
-    final static PlayerInputEvent a(int param0, PlayerStats[] param1, ClubState param2, int param3, int param4) {
+    final static PlayerInputEvent createLineupEvent(int param0, PlayerStats[] param1, ClubState param2, int param3, int param4) {
         PlayerInputEvent var5 = null;
         RuntimeException var5_ref = null;
         PlayerInputEvent stackIn_2_0 = null;
