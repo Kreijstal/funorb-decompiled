@@ -4325,7 +4325,7 @@ final class GameScreen {
                 var6 = vm.a(kr.field_f[var3_int], 0, true);
                 var7 = QuaternaryLinkNode.field_w - (var6 >> 1);
                 var4 = var4 + sm.field_b;
-                if (ArrayWidgetGroup.a(id.field_b + (ArchiveNetworkClient.field_i << 1), param0, var7 - MapView.field_Lb, (byte) -99, var4, (MapView.field_Lb << 1) + var6, param1)) {
+                if (ArrayWidgetGroup.rectContains(id.field_b + (ArchiveNetworkClient.field_i << 1), param0, var7 - MapView.field_Lb, (byte) -99, var4, (MapView.field_Lb << 1) + var6, param1)) {
                   stackIn_11_0 = var5;
                   return stackIn_11_0;
                 }

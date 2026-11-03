@@ -5124,6 +5124,14 @@
       "renamedSymbol": "M:ArrayWidgetGroup.handlePress(IIBIIILUiWidget;)Z"
     },
     {
+      "symbol": "M:ek.a(IIIBIII)Z",
+      "originalName": "a",
+      "to": "rectContains",
+      "evidence": "Returns whether a point lies inside a rectangle given by its left, top, width and height.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArrayWidgetGroup.rectContains(IIIBIII)Z"
+    },
+    {
       "symbol": "M:ek.a(IIII)V",
       "originalName": "a",
       "to": "drawLayer",
@@ -111311,7 +111319,7 @@
     },
     {
       "symbol": "L:ek.a(IIIBIII)Z#0",
-      "renamedSymbol": "L:ArrayWidgetGroup.a(IIIBIII)Z#0",
+      "renamedSymbol": "L:ArrayWidgetGroup.rectContains(IIIBIII)Z#0",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -318661,9 +318669,9 @@
     },
     {
       "symbol": "M:ek.a(IIIBIII)Z",
-      "renamedSymbol": "M:ArrayWidgetGroup.a(IIIBIII)Z",
+      "renamedSymbol": "M:ArrayWidgetGroup.rectContains(IIIBIII)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "rectContains",
       "declaration": {
         "file": "ek.java",
         "start": 9787,
@@ -370977,7 +370985,7 @@
     },
     {
       "symbol": "P:ek.a(IIIBIII)Z#0",
-      "renamedSymbol": "P:ArrayWidgetGroup.a(IIIBIII)Z#0",
+      "renamedSymbol": "P:ArrayWidgetGroup.rectContains(IIIBIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -370988,7 +370996,7 @@
     },
     {
       "symbol": "P:ek.a(IIIBIII)Z#1",
-      "renamedSymbol": "P:ArrayWidgetGroup.a(IIIBIII)Z#1",
+      "renamedSymbol": "P:ArrayWidgetGroup.rectContains(IIIBIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -370999,7 +371007,7 @@
     },
     {
       "symbol": "P:ek.a(IIIBIII)Z#2",
-      "renamedSymbol": "P:ArrayWidgetGroup.a(IIIBIII)Z#2",
+      "renamedSymbol": "P:ArrayWidgetGroup.rectContains(IIIBIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -371010,7 +371018,7 @@
     },
     {
       "symbol": "P:ek.a(IIIBIII)Z#3",
-      "renamedSymbol": "P:ArrayWidgetGroup.a(IIIBIII)Z#3",
+      "renamedSymbol": "P:ArrayWidgetGroup.rectContains(IIIBIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -371021,7 +371029,7 @@
     },
     {
       "symbol": "P:ek.a(IIIBIII)Z#4",
-      "renamedSymbol": "P:ArrayWidgetGroup.a(IIIBIII)Z#4",
+      "renamedSymbol": "P:ArrayWidgetGroup.rectContains(IIIBIII)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -371032,7 +371040,7 @@
     },
     {
       "symbol": "P:ek.a(IIIBIII)Z#5",
-      "renamedSymbol": "P:ArrayWidgetGroup.a(IIIBIII)Z#5",
+      "renamedSymbol": "P:ArrayWidgetGroup.rectContains(IIIBIII)Z#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -371043,7 +371051,7 @@
     },
     {
       "symbol": "P:ek.a(IIIBIII)Z#6",
-      "renamedSymbol": "P:ArrayWidgetGroup.a(IIIBIII)Z#6",
+      "renamedSymbol": "P:ArrayWidgetGroup.rectContains(IIIBIII)Z#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -473468,7 +473476,7 @@
       "original": "ch.java",
       "renamed": "ch.java",
       "inputSha256": "f736055e37199533433f3956683f507ffa2477bf2feed11fd567645c21359f72",
-      "outputSha256": "0302e55002cf5cbed98b631ce8c4492eebee36a9efe445b58417858b589dddb9",
+      "outputSha256": "bb0987876d452c07914d4a1901c9aa73832213afca8a77868cbeea73df0b2384",
       "edits": [
         {
           "start": 80,
@@ -473770,6 +473778,13 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "ArrayWidgetGroup"
+        },
+        {
+          "start": 3344,
+          "end": 3345,
+          "symbol": "M:ek.a(IIIBIII)Z",
+          "original": "a",
+          "renamed": "rectContains"
         },
         {
           "start": 3677,
@@ -499365,7 +499380,7 @@
       "original": "ek.java",
       "renamed": "ArrayWidgetGroup.java",
       "inputSha256": "53431edd1c4c151f293ad0e3d8a23d275a0de029e67c7be5799ef91c71714821",
-      "outputSha256": "88ab2044573d5cf252170b5da71f8d7da0e73fc26c93ca83b63504e1abc0668a",
+      "outputSha256": "f4664b51b41878a5c6d4927c214de90a68e00f3c48410f78011b24ca17bf97e9",
       "edits": [
         {
           "start": 74,
@@ -499627,6 +499642,13 @@
           "renamed": "ArrayWidgetGroup"
         },
         {
+          "start": 6379,
+          "end": 6380,
+          "symbol": "M:ek.a(IIIBIII)Z",
+          "original": "a",
+          "renamed": "rectContains"
+        },
+        {
           "start": 6945,
           "end": 6946,
           "symbol": "C:r",
@@ -499709,6 +499731,13 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "AnimatedPanel"
+        },
+        {
+          "start": 9787,
+          "end": 9788,
+          "symbol": "M:ek.a(IIIBIII)Z",
+          "original": "a",
+          "renamed": "rectContains"
         },
         {
           "start": 9952,
@@ -557943,7 +557972,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "df6e52217533259d53351b95ccdbe6bc7dfb22daac4ac05fa7346d12f12670c5",
+      "outputSha256": "c440f542fa82541ec60a1113c24a72dff6bf7003f4d8408ffad014227462825a",
       "edits": [
         {
           "start": 50,
@@ -564876,6 +564905,13 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "ArrayWidgetGroup"
+        },
+        {
+          "start": 165802,
+          "end": 165803,
+          "symbol": "M:ek.a(IIIBIII)Z",
+          "original": "a",
+          "renamed": "rectContains"
         },
         {
           "start": 165818,
@@ -680621,10 +680657,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "e1779084ce52c709109db12615ad645c4a4c1f0995c632012daf3eb5d27bbb17",
+    "rulesSha256": "a16047b176b1469748e7aaa72a7d51d29d3ef9edf8995a281f28631e98df6166",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "399e2f5cb022e5d2a9912309eaf5a1fddd607616ff4639cdb4b5920cdddcbe80",
+    "outputTreeSha256": "f1511d38e4540b447a8b71cc44a9075da4c3950b312278dd2afcdbfd217abed9",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
