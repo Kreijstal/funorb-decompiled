@@ -4,7 +4,7 @@
 final class hh extends nq {
     private byte[][] field_H;
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void blitGlyphTransposedAlphaRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$0 = 0;
@@ -28,7 +28,7 @@ final class hh extends nq {
         }
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitGlyphTransposedRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var10;
         int var12;
@@ -75,7 +75,7 @@ final class hh extends nq {
         }
     }
 
-    final static void b(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitGlyphAlphaRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -98,7 +98,7 @@ final class hh extends nq {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -138,15 +138,15 @@ final class hh extends nq {
         if (param3 > 0 &&
           param4 > 0) {
           if (SoftwareRasterizer.field_c == null) {
-            hh.a(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
+            hh.blitGlyphRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            hh.a(SoftwareRasterizer.field_h, this.field_H[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_c, SoftwareRasterizer.field_d);
+            hh.blitGlyphClippedRows(SoftwareRasterizer.field_h, this.field_H[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_c, SoftwareRasterizer.field_d);
           }
           return;
         }
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void blitGlyphRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -188,7 +188,7 @@ final class hh extends nq {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
         int var9 = param1 + param2 * SoftwareRasterizer.field_b;
         int var10 = SoftwareRasterizer.field_b - param3;
@@ -225,7 +225,7 @@ final class hh extends nq {
           param4 <= 0) {
           return;
         }
-        hh.b(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        hh.blitGlyphAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
     hh(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
@@ -234,7 +234,7 @@ final class hh extends nq {
         this.field_H = param5;
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+    private final static void blitGlyphClippedRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
         int var15 = 0;
         int var20 = 0;
         int incrementValue$1 = 0;
@@ -297,7 +297,7 @@ final class hh extends nq {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyphTransposed(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var13 = 0;
         int var8 = param1 + param2 * SoftwareRasterizer.field_b;
         int var9 = SoftwareRasterizer.field_b - param3;
@@ -334,10 +334,10 @@ final class hh extends nq {
           return;
         }
         var11 = var11 - var10 * param3;
-        hh.a(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+        hh.blitGlyphTransposedRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphTransposedAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var14 = 0;
         int var9 = param1 + param2 * SoftwareRasterizer.field_b;
         int var10 = SoftwareRasterizer.field_b - param3;
@@ -374,6 +374,6 @@ final class hh extends nq {
           return;
         }
         var12 = var12 - var11 * param3;
-        hh.a(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+        hh.blitGlyphTransposedAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
     }
 }

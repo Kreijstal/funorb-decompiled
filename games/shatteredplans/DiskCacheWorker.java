@@ -113,7 +113,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final DiskArchiveRequest a(int param0, SectorCacheStore param1, int param2) {
+    final DiskArchiveRequest read(int param0, SectorCacheStore param1, int param2) {
         DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -230,7 +230,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    private final void a(DiskArchiveRequest param0, int param1) {
+    private final void enqueue(DiskArchiveRequest param0, int param1) {
         DiskArchiveRequest var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -245,7 +245,7 @@ final class DiskCacheWorker implements Runnable {
             this.field_d = this.field_d + 1;
             if (param1 != 1048576) {
               var5 = (DiskArchiveRequest) null;
-              this.a((DiskArchiveRequest) null, 31);
+              this.enqueue((DiskArchiveRequest) null, 31);
             }
             this.field_c.notifyAll();
           }
@@ -316,7 +316,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final DiskArchiveRequest a(int param0, SectorCacheStore param1, int param2, byte[] param3) {
+    final DiskArchiveRequest queueWrite(int param0, SectorCacheStore param1, int param2, byte[] param3) {
         DiskArchiveRequest var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;
@@ -331,14 +331,14 @@ final class DiskCacheWorker implements Runnable {
           var5 = new DiskArchiveRequest();
           if (param2 >= -28) {
             var6 = (byte[]) null;
-            this.a(9, (SectorCacheStore) null, -105, (byte[]) null);
+            this.queueWrite(9, (SectorCacheStore) null, -105, (byte[]) null);
           }
           var5.field_q = false;
           var5.field_y = 2;
           var5.field_B = param1;
           var5.field_l = (long)param0;
           var5.field_w = param3;
-          this.a(var5, 1048576);
+          this.enqueue(var5, 1048576);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -396,7 +396,7 @@ final class DiskCacheWorker implements Runnable {
           var4.field_B = param0;
           var4.field_y = 3;
           var4.field_l = (long)param1;
-          this.a(var4, 1048576);
+          this.enqueue(var4, 1048576);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -413,7 +413,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final void a(byte param0) {
+    final void shutdown(byte param0) {
         try {
           this.field_f = true;
           synchronized (this.field_c) {

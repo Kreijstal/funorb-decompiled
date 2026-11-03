@@ -34,13 +34,13 @@ final class uh {
             return false;
           }
           if (var4.field_e >= 0 &&
-            !var4.field_a.b(109, var4.field_e)) {
+            !var4.field_a.ensureGroupLoaded(109, var4.field_e)) {
             this.a(true, var4.field_a.getGroupProgress((byte) 36, var4.field_e), var4);
             return false;
           }
           if (var4.field_d != null &&
-            !var4.field_a.a(var4.field_d, -118)) {
-            this.a(true, var4.field_a.a(var4.field_d, (byte) 91), var4);
+            !var4.field_a.ensureGroupLoadedByName(var4.field_d, -118)) {
+            this.a(true, var4.field_a.getGroupProgressByName(var4.field_d, (byte) 91), var4);
             return false;
           }
           if (var4.field_e < 0 &&

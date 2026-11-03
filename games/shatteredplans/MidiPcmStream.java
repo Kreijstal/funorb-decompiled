@@ -37,14 +37,14 @@ final class MidiPcmStream extends PcmStream {
     private int field_S;
     private MusicTrack field_z;
 
-    final synchronized void e(int param0) {
+    final synchronized void stop(int param0) {
         this.stopTrack(16384, true);
         if (param0 != 15) {
           this.field_r = (int[]) null;
         }
     }
 
-    private final void b(int param0, byte param1, int param2) {
+    private final void setPitchWheel(int param0, byte param1, int param2) {
         this.field_T[param0] = param2;
         if (param1 != -34) {
           this.field_K = (MusicVoice[][]) null;
@@ -55,7 +55,7 @@ final class MidiPcmStream extends PcmStream {
         return (PcmStream) ((Object) this.field_l);
     }
 
-    private final void setPitchBend(int param0, int param1, int param2) {
+    private final void setFineTuning(int param0, int param1, int param2) {
         int var4 = -117 / ((param0 + 22) / 39);
         this.field_E[param2] = param1;
         this.field_u[param2] = (int)(0.5 + 2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)param1));
@@ -155,7 +155,7 @@ final class MidiPcmStream extends PcmStream {
     private final void allNotesOff(int param0, int param1) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 != 2) {
-          this.b(-91, (byte) 112, -1);
+          this.setPitchWheel(-91, (byte) 112, -1);
         }
         MusicVoice var3 = (MusicVoice) (this.field_l.field_n.startForward(0));
         while (var3 != null) {
@@ -201,7 +201,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void onChannelPressure(int param0, byte param1, int param2) {
         if (param1 != 98) {
           this.firstChild();
         }
@@ -218,7 +218,7 @@ final class MidiPcmStream extends PcmStream {
         int var4 = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 > -67) {
-          this.b(44, (byte) 25, -26);
+          this.setPitchWheel(44, (byte) 25, -26);
         }
         if (param1 >= 0) {
           this.field_A[param1] = param2;
@@ -897,10 +897,10 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void c(int param0, int param1) {
+    final synchronized void setMasterVolume(int param0, int param1) {
         this.field_H = param1;
         if (param0 != 598) {
-          this.a(-76, -5, true, 106);
+          this.onPolyPressure(-76, -5, true, 106);
         }
     }
 
@@ -1178,7 +1178,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_q[param1] = 32767;
           this.field_r[param1] = 256;
           this.field_t[param1] = 0;
-          this.setPitchBend(70, 8192, param1);
+          this.setFineTuning(70, 8192, param1);
         }
     }
 
@@ -1238,7 +1238,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void handleMessage(int param0, byte param1) {
         int var3;
         int var4;
         int var5;
@@ -1287,7 +1287,7 @@ final class MidiPcmStream extends PcmStream {
           var5Lifetime2 = param0 & 15;
           var6Lifetime2 = param0 >> 8 & 127;
           var7Lifetime2 = (param0 & 8368783) >> 16;
-          this.a(var5Lifetime2, var7Lifetime2, true, var6Lifetime2);
+          this.onPolyPressure(var5Lifetime2, var7Lifetime2, true, var6Lifetime2);
           return;
         }
         if (var4 != 176) {
@@ -1300,13 +1300,13 @@ final class MidiPcmStream extends PcmStream {
           if (var4 == 208) {
             var5Lifetime3Lifetime1 = param0 & 15;
             var6Lifetime3Lifetime1 = param0 >> 8 & 127;
-            this.a(var5Lifetime3Lifetime1, (byte) 98, var6Lifetime3Lifetime1);
+            this.onChannelPressure(var5Lifetime3Lifetime1, (byte) 98, var6Lifetime3Lifetime1);
             return;
           }
           if (224 == var4) {
             var5Lifetime3Lifetime2 = 15 & param0;
             var6Lifetime3Lifetime2 = (127 & param0 >> 8) + (param0 >> 9 & 16256);
-            this.b(var5Lifetime3Lifetime2, (byte) -34, var6Lifetime3Lifetime2);
+            this.setPitchWheel(var5Lifetime3Lifetime2, (byte) -34, var6Lifetime3Lifetime2);
             return;
           }
           var4 = param0 & 255;
@@ -1418,10 +1418,10 @@ final class MidiPcmStream extends PcmStream {
           }
         }
         if (var6Lifetime4 == 17) {
-          this.setPitchBend(-72, (var7Lifetime3 << 7) + (-16257 & this.field_E[var5Lifetime4]), var5Lifetime4);
+          this.setFineTuning(-72, (var7Lifetime3 << 7) + (-16257 & this.field_E[var5Lifetime4]), var5Lifetime4);
         }
         if (var6Lifetime4 == 49) {
-          this.setPitchBend(46, (this.field_E[var5Lifetime4] & -128) + var7Lifetime3, var5Lifetime4);
+          this.setFineTuning(46, (this.field_E[var5Lifetime4] & -128) + var7Lifetime3, var5Lifetime4);
         }
     }
 
@@ -1440,7 +1440,7 @@ final class MidiPcmStream extends PcmStream {
         LinkPainter.field_e = 0;
     }
 
-    private final void a(int param0, int param1, boolean param2, int param3) {
+    private final void onPolyPressure(int param0, int param1, boolean param2, int param3) {
         if (!param2) {
           this.field_u = (int[]) null;
         }
@@ -1689,7 +1689,7 @@ final class MidiPcmStream extends PcmStream {
           }
           if (var8 == 0) {
             if (param2 != 2) {
-              this.setPitchBend(-71, -84, -11);
+              this.setFineTuning(-71, -84, -11);
             }
             param3.field_K.rampVolume(param3.field_p, this.computeVolume(param3, -1481279096), this.computePan(param3, (byte) 122));
             return false;
@@ -1828,7 +1828,7 @@ final class MidiPcmStream extends PcmStream {
             var7 = this.field_x.readEvent(var2);
             if (var7 != 1) {
               if ((var7 & 128) != 0) {
-                this.a(var7, (byte) -121);
+                this.handleMessage(var7, (byte) -121);
               }
               this.field_x.advanceTime(var2);
               this.field_x.savePosition(var2);

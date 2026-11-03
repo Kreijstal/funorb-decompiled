@@ -85,7 +85,7 @@ final class BoundsRect extends IntrusiveNode {
             stackIn_5_0 = (String) (param3);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param4 + " - " + param1.a(param0, (byte) 33) + "%";
+          stackIn_7_0 = param4 + " - " + param1.getGroupProgressByName(param0, (byte) 33) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

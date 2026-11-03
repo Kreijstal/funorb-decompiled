@@ -2208,7 +2208,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(byte param0, IntrusiveDeque param1) {
+    private final void drawFleetTrails(byte param0, IntrusiveDeque param1) {
         int var4 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -2344,7 +2344,7 @@ final class MapView extends MapViewState {
                 var4 = (BattleSnapshot) (this.field_m.nextForward((byte) -71));
               }
               if (this.field_t < 200) {
-                this.a((byte) -116, this.field_v);
+                this.drawFleetTrails((byte) -116, this.field_v);
               }
               var5Lifetime1 = 200;
               this.field_t = this.field_t + var3_int;
@@ -2357,7 +2357,7 @@ final class MapView extends MapViewState {
               if (this.field_T != 2) {
                 if (this.field_T == 3) {
                   if (this.field_t < 200) {
-                    this.a((byte) -110, this.field_hb);
+                    this.drawFleetTrails((byte) -110, this.field_hb);
                   }
                   this.field_t = this.field_t + var3_int;
                   if (this.field_t >= 200) {
@@ -2375,7 +2375,7 @@ final class MapView extends MapViewState {
             }
           } else {
             if (this.field_t < 200) {
-              this.a((byte) -117, this.field_c);
+              this.drawFleetTrails((byte) -117, this.field_c);
             }
             if (this.field_W == 0) {
               stackIn_11_0 = 0;
@@ -2531,7 +2531,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    final void a(IntrusiveDeque param0, IntrusiveDeque param1, boolean param2, int param3, boolean param4, TertiaryNodeList param5) {
+    final void drawMap(IntrusiveDeque param0, IntrusiveDeque param1, boolean param2, int param3, boolean param4, TertiaryNodeList param5) {
         ArgbSprite var15 = null;
         ArgbSprite var8_ref_om = null;
         int var12 = 0;
@@ -2788,7 +2788,7 @@ final class MapView extends MapViewState {
         return null;
     }
 
-    private final void b(int param0, int param1, byte param2) {
+    private final void drawAnnotations(int param0, int param1, byte param2) {
         StarAnnotation var4;
         int var5;
         int var6;
@@ -2946,7 +2946,7 @@ final class MapView extends MapViewState {
         if (this.field_T == 0) {
           this.drawFleetVisuals(this.field_c, false, false, true);
           this.drawFleetVisuals(this.field_c, true, false, true);
-          this.b(320, var2, (byte) 101);
+          this.drawAnnotations(320, var2, (byte) 101);
         } else {
           if (this.field_T != 1) {
             if (this.field_T == 2) {
@@ -3103,7 +3103,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void updateHoverTarget(int param0, int param1, int param2, int param3) {
         Object var5;
         int var6;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;

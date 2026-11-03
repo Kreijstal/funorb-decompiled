@@ -45,7 +45,7 @@ final class TaskAi implements Ai {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 <= 26) {
           var9 = (Player) null;
-          this.a((Player) null, (byte) 115);
+          this.sendWarningChat((Player) null, (byte) 115);
         }
         var3 = (GarrisonTask) (this.field_l.startForward(0));
         while (var3 != null) {
@@ -653,7 +653,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    public final void a(Player param0, int param1) {
+    public final void sendTurnChat(Player param0, int param1) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -1179,7 +1179,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    public final void a(Player param0, byte param1) {
+    public final void sendWarningChat(Player param0, byte param1) {
         int var3_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1622,7 +1622,7 @@ final class TaskAi implements Ai {
             }
             if (var6 != -1) {
               this.field_c.a(0, (byte) -109, var5, this.field_w, var6);
-              this.field_f[this.field_r] = ClientException.a(6, 3, (byte) 104);
+              this.field_f[this.field_r] = ClientException.randomInRange(6, 3, (byte) 104);
             }
           }
           this.field_c.a((byte) -63, this.field_w, var5);
@@ -1630,7 +1630,7 @@ final class TaskAi implements Ai {
         return;
     }
 
-    final static int a(int param0, Random param1, int param2) {
+    final static int randomBelow(int param0, Random param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

@@ -118,7 +118,7 @@ final class MusicCrossfadeStream extends PcmStream {
                   this.field_l = 0;
                   if (!this.field_A) {
                     if (this.field_z != null) {
-                      this.field_u.e(15);
+                      this.field_u.stop(15);
                     }
                     this.field_z = null;
                   }
@@ -130,7 +130,7 @@ final class MusicCrossfadeStream extends PcmStream {
                 this.field_l = 0;
                 if (!this.field_A) {
                   if (null != this.field_E) {
-                    this.field_r.e(15);
+                    this.field_r.stop(15);
                   }
                   this.field_E = null;
                 }
@@ -312,7 +312,7 @@ final class MusicCrossfadeStream extends PcmStream {
                 this.field_l = 0;
                 if (!this.field_A) {
                   if (this.field_z != null) {
-                    this.field_u.e(15);
+                    this.field_u.stop(15);
                   }
                   this.field_z = null;
                 }
@@ -324,7 +324,7 @@ final class MusicCrossfadeStream extends PcmStream {
               this.field_l = 0;
               if (!this.field_A) {
                 if (this.field_E != null) {
-                  this.field_r.e(15);
+                  this.field_r.stop(15);
                 }
                 this.field_E = null;
               }
@@ -449,7 +449,7 @@ final class MusicCrossfadeStream extends PcmStream {
             param3) {
             if (this.field_l <= 0) {
               if (null != this.field_E) {
-                this.field_r.e(15);
+                this.field_r.stop(15);
               }
               this.field_E = param5;
               if (param5 != null) {
@@ -458,7 +458,7 @@ final class MusicCrossfadeStream extends PcmStream {
               }
             } else {
               if (null != this.field_z) {
-                this.field_u.e(15);
+                this.field_u.stop(15);
               }
               this.field_z = param5;
               if (param5 != null) {
@@ -495,7 +495,7 @@ final class MusicCrossfadeStream extends PcmStream {
           }
           if (var7_int == 0) {
             if (this.field_E != null) {
-              this.field_r.e(15);
+              this.field_r.stop(15);
             }
             this.field_E = param5;
             if (param5 != null) {
@@ -509,7 +509,7 @@ final class MusicCrossfadeStream extends PcmStream {
             this.field_l = -param4;
           } else {
             if (this.field_z != null) {
-              this.field_u.e(15);
+              this.field_u.stop(15);
             }
             this.field_z = param5;
             if (param5 != null) {

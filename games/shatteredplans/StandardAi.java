@@ -219,10 +219,10 @@ class StandardAi implements Ai {
             var6 = param1[var5];
             var7 = var11[var6];
             var8 = this.starValue(var7, -5);
-            var9 = this.a(var7, (byte) -127);
+            var9 = this.starWeight(var7, (byte) -127);
             cb.field_o[var6] = var8;
             StandardMapGenerator.field_i[var6] = var9;
-            ei.field_d[var6] = this.d(var7, 2);
+            ei.field_d[var6] = this.starPriority(var7, 2);
             ValidationState.field_d[var6] = (var8 << 16) / var9;
           }
           return;
@@ -356,7 +356,7 @@ class StandardAi implements Ai {
         }
     }
 
-    int d(Star param0, int param1) {
+    int starPriority(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
@@ -429,7 +429,7 @@ class StandardAi implements Ai {
         return var3;
     }
 
-    int a(int param0, int param1, Player param2) {
+    int scorePlayer(int param0, int param1, Player param2) {
         int var14 = 0;
         int[] dupTemp$0 = null;
         int var11 = 0;
@@ -615,7 +615,7 @@ class StandardAi implements Ai {
         return;
     }
 
-    public final void a(Player param0, byte param1) {
+    public final void sendWarningChat(Player param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int var7 = 0;
@@ -630,7 +630,7 @@ class StandardAi implements Ai {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 != -42) {
-            this.d((Star) null, 1);
+            this.starPriority((Star) null, 1);
           }
           var3_int = this.field_b[param0.field_x];
           var7 = var3_int;
@@ -1500,7 +1500,7 @@ class StandardAi implements Ai {
         }
     }
 
-    public final void a(Player param0, int param1) {
+    public final void sendTurnChat(Player param0, int param1) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -1574,7 +1574,7 @@ class StandardAi implements Ai {
             if (this.field_h != 3) {
               return;
             }
-            this.g(param1 - 26170);
+            this.chooseTargetPlayer(param1 - 26170);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2024,7 +2024,7 @@ class StandardAi implements Ai {
         }
     }
 
-    int a(Star param0, byte param1) {
+    int starWeight(Star param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_9_0 = 0;
@@ -2122,11 +2122,11 @@ class StandardAi implements Ai {
           }
         }
         if (param0 != -63) {
-          this.a(113, 108, (Player) null);
+          this.scorePlayer(113, 108, (Player) null);
         }
         if (this.field_l &&
           this.field_g.field_o.field_j) {
-          this.g(-18484);
+          this.chooseTargetPlayer(-18484);
           if (-1 != this.field_k) {
             var4 = this.field_g.field_v[this.field_k];
             if (0 >= this.field_c[this.field_k]) {
@@ -2153,7 +2153,7 @@ class StandardAi implements Ai {
               }
               if (var5 != -1) {
                 this.field_j.a(0, (byte) 93, var4, this.field_n, var5);
-                this.field_c[this.field_k] = ClientException.a(6, 3, (byte) 121);
+                this.field_c[this.field_k] = ClientException.randomInRange(6, 3, (byte) 121);
               }
             }
             this.field_j.a((byte) -63, this.field_n, var4);
@@ -2199,7 +2199,7 @@ class StandardAi implements Ai {
         int var11;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 >= -124) {
-          this.a((Player) null, (byte) -78);
+          this.sendWarningChat((Player) null, (byte) -78);
         }
         var4 = 0;
         var5 = ik.a(ValidationState.field_c, this.field_o, (byte) 49);
@@ -2238,7 +2238,7 @@ class StandardAi implements Ai {
         return var4;
     }
 
-    void g(int param0) {
+    void chooseTargetPlayer(int param0) {
         int var3_int = 0;
         int var2;
         int[] var3;
@@ -2289,7 +2289,7 @@ class StandardAi implements Ai {
           this.d(-52);
         }
         for (var5Lifetime1 = 0; var2 > var5Lifetime1; var5Lifetime1++) {
-          this.field_b[var5Lifetime1] = this.a(var4, CandidateLink.intXor(param0, -18484), this.field_g.field_v[var5Lifetime1]);
+          this.field_b[var5Lifetime1] = this.scorePlayer(var4, CandidateLink.intXor(param0, -18484), this.field_g.field_v[var5Lifetime1]);
         }
         for (var5Lifetime2 = 0; var2 > var5Lifetime2; var5Lifetime2++) {
           var6Lifetime1 = this.field_g.field_m[var5Lifetime2];

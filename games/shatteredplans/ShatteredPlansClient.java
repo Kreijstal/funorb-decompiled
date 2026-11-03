@@ -60,8 +60,8 @@ public final class ShatteredPlansClient extends tl {
         MusicCrossfadeStream var3 = new MusicCrossfadeStream();
         var3.field_u.d(128, (byte) -110, 9);
         var3.field_r.d(128, (byte) -110, 9);
-        var3.field_u.c(598, wm.field_b);
-        var3.field_r.c(param0 ^ -599, wm.field_b);
+        var3.field_u.setMasterVolume(598, wm.field_b);
+        var3.field_r.setMasterVolume(param0 ^ -599, wm.field_b);
         DebouncedValidator.a((java.awt.Component) ((Object) tm.field_i), fa.field_W, var3, 1102, false, 22050, 22050, true);
         IterableNodeHashTable.field_b = 2458760;
         wo.field_a = 2805974;
@@ -646,11 +646,11 @@ public final class ShatteredPlansClient extends tl {
           return true;
         }
         if (AttackTask.field_s.isIndexLoaded((byte) 127) &&
-          AttackTask.field_s.a("basic", -70)) {
+          AttackTask.field_s.ensureGroupLoadedByName("basic", -70)) {
           if (AttackTask.field_s.isIndexLoaded((byte) -45) &&
-            AttackTask.field_s.a("lobby", param0 + 16)) {
+            AttackTask.field_s.ensureGroupLoadedByName("lobby", param0 + 16)) {
             if (rl.field_f.isIndexLoaded((byte) 120) &&
-              rl.field_f.a("lobby", param0 ^ -62)) {
+              rl.field_f.ensureGroupLoadedByName("lobby", param0 ^ -62)) {
               if (IntHashIndex.field_a.isIndexLoaded((byte) 120) &&
                 IntHashIndex.field_a.preloadAll(param0 - 83)) {
                 if (ld.field_m.isIndexLoaded((byte) -70) &&
@@ -660,7 +660,7 @@ public final class ShatteredPlansClient extends tl {
                     if (StrongCacheEntry.field_z.isIndexLoaded((byte) -121) &&
                       StrongCacheEntry.field_z.preloadAll(-1)) {
                       if (ChatMessage.field_d.isIndexLoaded((byte) -81) &&
-                        ChatMessage.field_d.a("", -67)) {
+                        ChatMessage.field_d.ensureGroupLoadedByName("", -67)) {
                         if (PointsVictoryChecker.field_l.isIndexLoaded((byte) -19) &&
                           PointsVictoryChecker.field_l.preloadAll(param0 ^ -83)) {
                           if (IntrusiveNodeHashTable.field_g.isIndexLoaded((byte) -79) &&

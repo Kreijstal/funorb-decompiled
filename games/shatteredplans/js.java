@@ -404,7 +404,7 @@ final class js {
             var1 = var5;
             for (var2 = 0; var2 < var5.length; var2++) {
               var3 = var5[var2];
-              GameScreen.b(var3, param0 ^ -15);
+              GameScreen.runConsoleCommand(var3, param0 ^ -15);
             }
           }
           if (WeightedLruCache.field_g.field_h) {

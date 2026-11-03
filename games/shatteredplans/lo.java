@@ -27,7 +27,7 @@ final class lo extends Territory {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = 34 / ((param1 + 77) / 39);
-          var5 = param0.a(false, param2);
+          var5 = param0.getSingleFileBytes(false, param2);
           var3 = var5;
           if (var5 != null) {
             stackIn_4_0 = new MusicPatch(var5);

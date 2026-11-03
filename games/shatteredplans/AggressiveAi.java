@@ -8,7 +8,7 @@ final class AggressiveAi extends StandardAi {
     static boolean field_q;
     private int field_s;
 
-    final int a(int param0, int param1, Player param2) {
+    final int scorePlayer(int param0, int param1, Player param2) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -25,7 +25,7 @@ final class AggressiveAi extends StandardAi {
           if (param1 != 0) {
             field_q = true;
           }
-          stackIn_8_0 = super.a(param0, param1 + 0, param2);
+          stackIn_8_0 = super.scorePlayer(param0, param1 + 0, param2);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

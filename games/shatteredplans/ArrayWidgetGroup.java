@@ -174,7 +174,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1) {
-            ArrayWidgetGroup.a(-30, 122, -111, (byte) 51, -17, -36, -28);
+            ArrayWidgetGroup.rectContains(-30, 122, -111, (byte) 51, -17, -36, -28);
           }
           stackIn_3_0 = this.a(param0, (byte) -110, 1);
           return stackIn_3_0;
@@ -263,7 +263,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ni {
         return pg.a(param2, 1, 1, (byte) -41, param3, param0, 3, 1, param1);
     }
 
-    final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
+    final static boolean rectContains(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         boolean stackIn_8_0 = false;
         if (param3 >= -66) {
           ArrayWidgetGroup.clearStatics(-78);

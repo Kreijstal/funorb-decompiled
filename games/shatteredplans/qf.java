@@ -106,7 +106,7 @@ final class qf {
           if (param0 <= 0) {
             qf.a(119, 68, -5, 5);
           }
-          stackIn_3_0 = TaskAi.a(param1, param2, -11);
+          stackIn_3_0 = TaskAi.randomBelow(param1, param2, -11);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

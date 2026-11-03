@@ -245,14 +245,14 @@ abstract class nq extends DualLinkNode {
               } else {
                 if (field_A != 256) {
                   if (field_u != -1) {
-                    this.b(var8, param1 + this.field_o[var8] + 1, param2 + this.field_E[var8] + 1, var9, var10, field_u, field_A, true);
+                    this.drawGlyphAlpha(var8, param1 + this.field_o[var8] + 1, param2 + this.field_E[var8] + 1, var9, var10, field_u, field_A, true);
                   }
-                  this.b(var8, param1 + this.field_o[var8], param2 + this.field_E[var8], var9, var10, field_G, field_A, false);
+                  this.drawGlyphAlpha(var8, param1 + this.field_o[var8], param2 + this.field_E[var8], var9, var10, field_G, field_A, false);
                 } else {
                   if (field_u != -1) {
-                    this.b(var8, param1 + this.field_o[var8] + 1, param2 + this.field_E[var8] + 1, var9, var10, field_u, true);
+                    this.drawGlyph(var8, param1 + this.field_o[var8] + 1, param2 + this.field_E[var8] + 1, var9, var10, field_u, true);
                   }
-                  this.b(var8, param1 + this.field_o[var8], param2 + this.field_E[var8], var9, var10, field_G, false);
+                  this.drawGlyph(var8, param1 + this.field_o[var8], param2 + this.field_E[var8], var9, var10, field_G, false);
                 }
               }
               param1 = param1 + this.field_y[var8];
@@ -321,7 +321,7 @@ abstract class nq extends DualLinkNode {
         this.b(param0, param1, param2);
     }
 
-    abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
     private final void applyTag(String param0) {
         Throwable decompiledCaughtException = null;
@@ -476,14 +476,14 @@ abstract class nq extends DualLinkNode {
               } else {
                 if (field_A != 256) {
                   if (field_u != -1) {
-                    this.a(var8, param1 + this.field_E[var8] + 1, param2 - this.field_o[var8] + 1, var11, var9, field_u, field_A, true);
+                    this.drawGlyphTransposedAlpha(var8, param1 + this.field_E[var8] + 1, param2 - this.field_o[var8] + 1, var11, var9, field_u, field_A, true);
                   }
-                  this.a(var8, param1 + this.field_E[var8], param2 - this.field_o[var8], var11, var9, field_G, field_A, false);
+                  this.drawGlyphTransposedAlpha(var8, param1 + this.field_E[var8], param2 - this.field_o[var8], var11, var9, field_G, field_A, false);
                 } else {
                   if (field_u != -1) {
-                    this.a(var8, param1 + this.field_E[var8] + 1, param2 - this.field_o[var8] + 1, var11, var9, field_u, true);
+                    this.drawGlyphTransposed(var8, param1 + this.field_E[var8] + 1, param2 - this.field_o[var8] + 1, var11, var9, field_u, true);
                   }
-                  this.a(var8, param1 + this.field_E[var8], param2 - this.field_o[var8], var11, var9, field_G, false);
+                  this.drawGlyphTransposed(var8, param1 + this.field_E[var8], param2 - this.field_o[var8], var11, var9, field_G, false);
                 }
               }
               if (field_w != -1) {
@@ -500,7 +500,7 @@ abstract class nq extends DualLinkNode {
         }
     }
 
-    abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
+    abstract void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
     final void a(IndexedSpriteState[] param0, int[] param1) {
         if (param1 != null &&
@@ -932,7 +932,7 @@ abstract class nq extends DualLinkNode {
         return this.field_J + var5 + this.field_q;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void drawGlyphTransposed(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
     private final void computeJustifySpacing(String param0, int param1) {
         int var6 = 0;
@@ -963,7 +963,7 @@ abstract class nq extends DualLinkNode {
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
+    abstract void drawGlyphTransposedAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
     private final void a(byte[] param0) {
         int var3_int = 0;

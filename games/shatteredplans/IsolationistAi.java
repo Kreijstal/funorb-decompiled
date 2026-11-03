@@ -17,7 +17,7 @@ final class IsolationistAi extends StandardAi {
         so.a(0, param8, 16777215, param9, param2, param6, param11, param5, param0, param4, param10, param1, param7, param3);
     }
 
-    final int a(int param0, int param1, Player param2) {
+    final int scorePlayer(int param0, int param1, Player param2) {
         int var9 = 0;
         int var13 = 0;
         int stackIn_5_0 = 0;
@@ -109,11 +109,11 @@ final class IsolationistAi extends StandardAi {
         }
     }
 
-    final void g(int param0) {
+    final void chooseTargetPlayer(int param0) {
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         for (var2 = 0; this.field_g.field_r > var2; var2++) {
-          this.field_b[var2] = this.a(0, 0, this.field_g.field_v[var2]);
+          this.field_b[var2] = this.scorePlayer(0, 0, this.field_g.field_v[var2]);
         }
         if (param0 != -18484) {
           IsolationistAi.a(-92, true, -31, false, 87, 112, -41, 4, true, false, 96, false);
@@ -248,7 +248,7 @@ final class IsolationistAi extends StandardAi {
           }
         }
         if (this.isChatEnabled((byte) -116)) {
-          this.g(-18484);
+          this.chooseTargetPlayer(-18484);
           for (var4Lifetime1 = 0; this.field_g.field_r > var4Lifetime1; var4Lifetime1++) {
             if (this.field_b[var4Lifetime1] < 0) {
               var5 = this.field_g.field_v[var4Lifetime1];
@@ -276,7 +276,7 @@ final class IsolationistAi extends StandardAi {
                 }
                 if (var6 != -1) {
                   this.field_j.a(0, (byte) -118, var5, this.field_n, var6);
-                  this.field_c[var4Lifetime1] = ClientException.a(6, 3, (byte) 118);
+                  this.field_c[var4Lifetime1] = ClientException.randomInRange(6, 3, (byte) 118);
                 }
               }
               this.field_j.a((byte) -63, this.field_n, var5);

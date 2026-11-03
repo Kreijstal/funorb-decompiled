@@ -690,7 +690,7 @@ final class GameSession implements AiHost {
           stackIn_6_1 = this.field_P.field_A;
           stackIn_6_2 = this.field_P.field_i;
           stackIn_7_3 = (this.field_j) && (AchievementProgress.field_g);
-          ((MapView) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_7_3, 12114, param0, this.field_P.field_p);
+          ((MapView) (Object) stackIn_6_0).drawMap(stackIn_6_1, stackIn_6_2, stackIn_7_3, 12114, param0, this.field_P.field_p);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1328,7 +1328,7 @@ final class GameSession implements AiHost {
               this.a(SliderWidget.field_P, (byte) -103, PointsVictoryChecker.field_p);
             }
             this.handleMapPointer(-3587, TertiaryListSequence.field_k, bb.field_b);
-            this.field_z.a(this.field_m, 0, TertiaryListSequence.field_k, bb.field_b);
+            this.field_z.updateHoverTarget(this.field_m, 0, TertiaryListSequence.field_k, bb.field_b);
           }
           var3 = this.field_z.field_k;
           var4 = this.field_z.field_E;
@@ -1973,7 +1973,7 @@ final class GameSession implements AiHost {
             this.field_H.addFirst(new n(param1, (Player) null, var4), 0);
           }
           if (null != this.field_s[param1.field_x]) {
-            this.field_s[param1.field_x].a(param0, 7686);
+            this.field_s[param1.field_x].sendTurnChat(param0, 7686);
           }
           if (!param2) {
             this.queueFleetMove(true, 25, (Star) null, (Star) null);
@@ -2529,7 +2529,7 @@ final class GameSession implements AiHost {
           param2.field_A = param2.field_A | 1 << param1.field_x;
           if ((1 << param2.field_x & param1.field_A) != 0) {
             if (null != this.field_s[param2.field_x]) {
-              this.field_s[param2.field_x].a(param1, (byte) -42);
+              this.field_s[param2.field_x].sendWarningChat(param1, (byte) -42);
             }
             param1.field_f[param2.field_x] = 3;
             param1.field_h[param2.field_x] = true;
@@ -2545,7 +2545,7 @@ final class GameSession implements AiHost {
             }
           }
           if (this.field_s[param2.field_x] != null) {
-            this.field_s[param2.field_x].a(param1, param0 ^ -7737);
+            this.field_s[param2.field_x].sendTurnChat(param1, param0 ^ -7737);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2848,7 +2848,7 @@ final class GameSession implements AiHost {
         int var8 = 0;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.field_z.a(this.field_m, 0, param2, param0);
+          this.field_z.updateHoverTarget(this.field_m, 0, param2, param0);
           if (!this.field_b) {
             return;
           }
@@ -3417,7 +3417,7 @@ final class GameSession implements AiHost {
           }
           this.a(this.field_n, param1 + 27510);
           if (null != this.field_s[param0.field_x]) {
-            this.field_s[param0.field_x].a(param2, (byte) -42);
+            this.field_s[param0.field_x].sendWarningChat(param2, (byte) -42);
           }
           if (param1 != -27584) {
             this.field_J = (int[]) null;
@@ -3650,7 +3650,7 @@ final class GameSession implements AiHost {
               this.e(0);
             }
             this.field_z.projectStars(false);
-            this.field_Y.n(106);
+            this.field_Y.refreshAllPanels(106);
             this.field_Y.a(-73, 0);
             this.field_N = 0;
             break;

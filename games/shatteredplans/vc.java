@@ -13,9 +13,9 @@ final class vc {
     final static int a(byte param0, int param1) {
         if (param0 != -39) {
           vc.clearStatics(-12);
-          return TaskAi.a(param1, tg.field_b, -11);
+          return TaskAi.randomBelow(param1, tg.field_b, -11);
         }
-        return TaskAi.a(param1, tg.field_b, -11);
+        return TaskAi.randomBelow(param1, tg.field_b, -11);
     }
 
     public static void clearStatics(int param0) {
