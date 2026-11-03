@@ -133,11 +133,11 @@ class TextHotspotWidget extends TextButton {
         return this.field_J[this.field_I.field_i];
     }
 
-    void a(byte param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_I = null;
           if (this.field_m) {
             var5_int = -param2 + (BytePlusOneCommand.field_A - this.field_t);
@@ -228,7 +228,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean requestKeyboardFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

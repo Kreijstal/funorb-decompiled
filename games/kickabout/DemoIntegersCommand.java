@@ -86,7 +86,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           g.field_a.updateInput(0, param0);
           if (null != PlayArea.field_a) {
             if (PacketBuffer.field_l) {
-              PlayArea.field_a.a(g.field_a.field_T, 31947, g.field_a.field_F, param0);
+              PlayArea.field_a.processPointerFrame(g.field_a.field_T, 31947, g.field_a.field_F, param0);
             } else {
               PlayArea.field_a = null;
             }

@@ -114,7 +114,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         }
     }
 
-    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -123,7 +123,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.handleKeyTyped(param0, (byte) -108, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -108, param2, param3)) {
             return true;
           }
           if (param1 > -60) {
@@ -192,7 +192,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           return true;
         }
         UiWidget var3 = (UiWidget) null;
-        this.handleKeyTyped('L', (byte) 88, (UiWidget) null, -112);
+        this.handleKeyInput('L', (byte) 88, (UiWidget) null, -112);
         return true;
     }
 
@@ -282,9 +282,9 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         }
     }
 
-    final void a(byte param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_B.field_y = this.isNameValid(20);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

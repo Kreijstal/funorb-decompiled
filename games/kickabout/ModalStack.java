@@ -401,7 +401,7 @@ final class ModalStack extends SingleChildContainer {
             this.field_A = (IntrusiveDeque) null;
           }
           var3.field_C = true;
-          var3.a((UiWidget) (this), 0);
+          var3.requestKeyboardFocus((UiWidget) (this), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

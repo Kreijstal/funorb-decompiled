@@ -37,7 +37,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
               for (var4_int = var4_int + param2; var4_int < this.field_w.length; var4_int = var4_int + param2) {
                 var6 = this.field_w[var4_int];
                 if (var6 != null &&
-                  var6.a(param0, param1 ^ -28)) {
+                  var6.requestKeyboardFocus(param0, param1 ^ -28)) {
                   return true;
                 }
               }
@@ -79,9 +79,9 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         try {
           if (param0 != 17883) {
             var6 = (UiWidget) null;
-            this.a(125, (UiWidget) null, 11, -44, 107, -118, 34);
+            this.handlePointerWheel(125, (UiWidget) null, 11, -44, 107, -118, 34);
           }
-          if (this.a(1, param3, param2, param1)) {
+          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.appendWidgetDiagnosticProperties(param1, param3, param2, param0 ^ -3421);
             this.a(param2, 10, param1, param3);
           }
@@ -150,7 +150,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           }
           if (param1 != 10) {
             var10 = (UiWidget) null;
-            this.a((byte) 88, (UiWidget) null, 119, 67);
+            this.updatePointerState((byte) 88, (UiWidget) null, 119, 67);
           }
           var11 = this.field_w;
           for (var6 = 0; var6 < var11.length; var6++) {
@@ -227,7 +227,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 84) {
-            this.f((byte) 119);
+            this.getLastRenderPass((byte) 119);
           }
           stackIn_3_0 = this.a(param0, -28, 1);
           return stackIn_3_0;
@@ -245,7 +245,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         int var6 = 0;
         UiWidget[] var5 = null;
         int var5_int = 0;
@@ -269,7 +269,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
             var7 = var9[var6];
             if (var7 != null &&
               var7.isFocused(35) &&
-              var7.handleKeyTyped(param0, (byte) -123, param2, param3)) {
+              var7.handleKeyInput(param0, (byte) -123, param2, param3)) {
               return true;
             }
           }
@@ -501,7 +501,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         return null;
     }
 
-    final int f(byte param0) {
+    final int getLastRenderPass(byte param0) {
         int var4 = 0;
         int var2;
         UiWidget[] var3;
@@ -515,7 +515,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         for (var4 = 0; var3.length > var4; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var6 = var5.f((byte) 118);
+            var6 = var5.getLastRenderPass((byte) 118);
             if (var2 < var6) {
               var2 = var6;
             }
@@ -523,7 +523,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
         if (param0 != 118) {
           var8 = (UiWidget) null;
-          this.a(20, (UiWidget) null, 22, -126, -123, 63, -127);
+          this.handlePointerWheel(20, (UiWidget) null, 22, -126, -123, 63, -127);
         }
         return var2;
     }
@@ -643,7 +643,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    void a(byte param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         int var6 = 0;
         UiWidget[] var5 = null;
         UiWidget var7 = null;
@@ -656,7 +656,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         RuntimeException var5_ref = null;
         var8 = Kickabout.field_G;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           if (null == this.field_w) {
             return;
           }
@@ -665,7 +665,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a((byte) 12, param1, this.field_t + param2, this.field_g + param3);
+              var7.updatePointerState((byte) 12, param1, this.field_t + param2, this.field_g + param3);
             }
           }
           return;
@@ -709,7 +709,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
               for (var4_int = var4_int - param2; var4_int >= 0; var4_int = var4_int - param2) {
                 var6 = this.field_w[var4_int];
                 if (var6 != null &&
-                  var6.a(param1, 0)) {
+                  var6.requestKeyboardFocus(param1, 0)) {
                   return true;
                 }
               }
@@ -731,7 +731,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final void layoutChild(int param0) {
+    final void clearKeyboardFocus(int param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -743,7 +743,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
           if (var4 != null) {
-            var4.layoutChild(84);
+            var4.clearKeyboardFocus(84);
           }
         }
         if (param0 != 84) {
@@ -751,7 +751,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerWheel(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
@@ -774,7 +774,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
             var10 = var12[var9];
             if (var10 != null &&
               var10.isFocused(127) &&
-              var10.a(param0, param1, param2, param3, param4, param5, -87)) {
+              var10.handlePointerWheel(param0, param1, param2, param3, param4, param5, -87)) {
               return true;
             }
           }
@@ -794,7 +794,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, int param1) {
         int var4 = 0;
         UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
@@ -812,7 +812,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           for (var4 = param1; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.a(param0, param1 + 0)) {
+              var5.requestKeyboardFocus(param0, param1 + 0)) {
               return true;
             }
           }

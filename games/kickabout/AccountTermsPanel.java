@@ -83,7 +83,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
         }
     }
 
-    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -92,7 +92,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.handleKeyTyped(param0, (byte) -122, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -122, param2, param3)) {
             return true;
           }
           if (param3 == 98) {

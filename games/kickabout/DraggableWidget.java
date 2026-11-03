@@ -122,7 +122,7 @@ final class DraggableWidget extends SingleChildContainer {
             this.field_B) {
             return true;
           }
-          if (!this.a((byte) 58, param5, param1, param2, param4)) {
+          if (!this.containsPointer((byte) 58, param5, param1, param2, param4)) {
             stackIn_13_0 = var8_int;
             return stackIn_13_0 != 0;
           }
@@ -147,7 +147,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final void a(byte param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         int stackIn_17_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_22_1 = 0;
@@ -175,7 +175,7 @@ final class DraggableWidget extends SingleChildContainer {
             }
           } else {
             if (!this.field_L) {
-              super.a(param0, param1, param2, param3);
+              super.updatePointerState(param0, param1, param2, param3);
               return;
             }
             if (this.field_t != this.field_H) {
@@ -207,7 +207,7 @@ final class DraggableWidget extends SingleChildContainer {
               this.field_g = stackIn_22_1 + stackIn_25_2;
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -247,7 +247,7 @@ final class DraggableWidget extends SingleChildContainer {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(1, param3, param2, param1)) {
+          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.appendWidgetDiagnosticProperties(param1, param3, param2, -18568);
             this.a(param2, 127, param3, param1);
             discarded$64 = param3.append(" revert=").append(this.field_L);

@@ -21,9 +21,9 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     private Checkbox field_O;
     NameSuggestionsPanel field_L;
 
-    final void a(byte param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_Q.field_y = this.allFieldsValid(-123);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ae.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -589,7 +589,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -598,7 +598,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.handleKeyTyped(param0, (byte) -126, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -126, param2, param3)) {
             return true;
           }
           if (param1 >= -60) {

@@ -69,7 +69,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     public final void a(int param0, TextInputWidget param1) {
         try {
           if (this.field_N == param1) {
-            this.field_J.a((UiWidget) (this), 0);
+            this.field_J.requestKeyboardFocus((UiWidget) (this), 0);
           }
           if (this.field_J == param1) {
             this.submitLogin(60);
@@ -136,7 +136,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_12_0 = false;
@@ -148,7 +148,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (param1 > -60) {
             this.field_H = true;
           }
-          if (super.handleKeyTyped(param0, (byte) -62, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -62, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
@@ -375,7 +375,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     final String getUsername(int param0) {
         if (param0 <= 84) {
           UiWidget var3 = (UiWidget) null;
-          this.handleKeyTyped('f', (byte) 111, (UiWidget) null, -119);
+          this.handleKeyInput('f', (byte) 111, (UiWidget) null, -119);
         }
         if (null == this.field_N.field_q) {
           return "";

@@ -911,7 +911,7 @@ final class PlayingView extends MatchPhaseView {
         } else {
           var4_ref_ob = (RenderedBall) (this.field_a.field_V);
           var5 = var4_ref_ob.positionX >> 16;
-          var6 = var4_ref_ob.c(true) + (var4_ref_ob.positionY >> 16) >> 1;
+          var6 = var4_ref_ob.getRenderedY(true) + (var4_ref_ob.positionY >> 16) >> 1;
           var7_double = (double)var3.field_kb / 65536.0;
           var9 = (double)var3.field_bb / 65536.0;
           var11 = (double)(this.field_q + 40);
@@ -1264,7 +1264,7 @@ final class PlayingView extends MatchPhaseView {
             Trinket.a((RenderedFootballer) (this.field_a.field_P[var2][var3]), 100);
           }
         }
-        ((RenderedBall) (this.field_a.field_V)).l(param0 - 13);
+        ((RenderedBall) (this.field_a.field_V)).drawShadow(param0 - 13);
         gs.b(0);
         if (param0 != 1) {
           return;

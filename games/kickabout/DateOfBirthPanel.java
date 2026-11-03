@@ -10,9 +10,9 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
     static int[] field_C;
     private TextButton field_D;
 
-    final void a(byte param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_D.field_y = this.field_G.a((byte) -125).getValidationState(-24407) == LobbyPlayerRow.field_yb ? true : false;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ib.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

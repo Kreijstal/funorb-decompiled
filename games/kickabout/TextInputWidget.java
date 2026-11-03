@@ -280,11 +280,11 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    void a(byte param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         WidgetTextLayout var7 = null;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.scrollCaretIntoView((byte) 110);
           if (this.field_p == 1) {
             if (this.field_r instanceof WidgetTextLayout) {
@@ -357,7 +357,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_33_1 = 0;
         int stackIn_40_1 = 0;

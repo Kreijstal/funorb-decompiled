@@ -101,7 +101,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                 var5.a(395869153, var4);
                 var6 = (UiWidget) (var5.a(0));
                 while (var6 != null) {
-                  stackOut_20_0 = var6.a(param0, 0);
+                  stackOut_20_0 = var6.requestKeyboardFocus(param0, 0);
                   stackIn_30_0 = stackOut_20_0;
                   stackIn_21_0 = stackOut_20_0;
                   if (stackIn_21_0) {
@@ -133,7 +133,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, int param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -154,7 +154,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           var4 = (UiWidget) (var3.a((byte) -97));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
-            stackOut_6_0 = var4.a(param0, 0);
+            stackOut_6_0 = var4.requestKeyboardFocus(param0, 0);
             stackIn_14_0 = stackOut_6_0;
             stackIn_7_0 = stackOut_6_0;
             if (var5 == 0) {
@@ -263,7 +263,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final void layoutChild(int param0) {
+    final void clearKeyboardFocus(int param0) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var2 = null;
         UiWidget var3 = null;
@@ -273,11 +273,11 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         try {
           var2 = new IntrusiveDequeCursor(this.field_y);
           if (param0 != 84) {
-            this.a((UiWidget) null, -46);
+            this.requestKeyboardFocus((UiWidget) null, -46);
           }
           var3 = (UiWidget) (var2.a((byte) -99));
           while (var3 != null) {
-            var3.layoutChild(param0 ^ 0);
+            var3.clearKeyboardFocus(param0 ^ 0);
             var3 = (UiWidget) (var2.a(0));
             if (var4 != 0) {
               return;
@@ -291,7 +291,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final int f(byte param0) {
+    final int getLastRenderPass(byte param0) {
         int var2_int = 0;
         IntrusiveDequeCursor var3 = null;
         UiWidget var4 = null;
@@ -309,7 +309,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           var4 = (UiWidget) (var3.a((byte) -80));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
-            var5 = var4.f((byte) 118);
+            var5 = var4.getLastRenderPass((byte) 118);
             stackIn_11_0 = var2_int;
             stackIn_11_1 = var5;
             if (var6 == 0) {
@@ -374,7 +374,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                 var5.a((byte) 104, (IntrusiveNode) (var4));
                 var6 = (UiWidget) (var5.b((byte) 46));
                 while (var6 != null) {
-                  stackOut_19_0 = var6.a(param0, 0);
+                  stackOut_19_0 = var6.requestKeyboardFocus(param0, 0);
                   stackIn_29_0 = stackOut_19_0;
                   stackIn_20_0 = stackOut_19_0;
                   if (stackIn_20_0) {
@@ -912,7 +912,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           if (param0 != 17883) {
             field_v = (MeshData[][]) null;
           }
-          if (this.a(1, param3, param2, param1)) {
+          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.appendWidgetDiagnosticProperties(param1, param3, param2, param0 - 36451);
             this.a(param3, param2, param1, 24745);
           }
@@ -938,7 +938,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
+    boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         IntrusiveDequeCursor var5 = null;
         RuntimeException var5_ref = null;
         UiWidget var6_ref_fd = null;
@@ -969,7 +969,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
               }
               if (stackIn_7_0) {
                 if (var6_ref_fd.isFocused(52) &&
-                  var6_ref_fd.handleKeyTyped(param0, (byte) -76, param2, param3)) {
+                  var6_ref_fd.handleKeyInput(param0, (byte) -76, param2, param3)) {
                   return true;
                 }
                 var6_ref_fd = (UiWidget) (var5.a(0));
@@ -1003,7 +1003,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    void a(byte param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
@@ -1014,12 +1014,12 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         RuntimeException decompiledCaughtException = null;
         var7 = Kickabout.field_G;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           var5 = new IntrusiveDequeCursor(this.field_y);
           var6 = (UiWidget) (var5.a((byte) -34));
           while (null != var6) {
             if (var6.isLinked((byte) -113)) {
-              var6.a((byte) 12, param1, this.field_t + param2, param3 + this.field_g);
+              var6.updatePointerState((byte) 12, param1, this.field_t + param2, param3 + this.field_g);
               var6 = (UiWidget) (var5.a(0));
               if (var7 == 0) {
                 continue;
@@ -1070,7 +1070,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerWheel(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -1098,7 +1098,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
               }
               if (stackIn_4_0) {
                 if (var9.isFocused(82) &&
-                  var9.a(param0, param1, param2, param3, param4, param5, -10)) {
+                  var9.handlePointerWheel(param0, param1, param2, param3, param4, param5, -10)) {
                   return true;
                 }
                 var9 = (UiWidget) (var8.a(0));

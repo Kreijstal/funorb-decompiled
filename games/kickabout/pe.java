@@ -80,13 +80,13 @@ final class pe {
             }
             return;
           }
-          ValidatedTextWidget.field_Z.a(gw.field_c, 31947, TournamentChampionDialog.field_J, true);
+          ValidatedTextWidget.field_Z.processPointerFrame(gw.field_c, 31947, TournamentChampionDialog.field_J, true);
           if (param0 <= 104) {
             pe.b(104);
           }
           ValidatedTextWidget.field_Z.n(2);
           while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
-            ValidatedTextWidget.field_Z.a(il.field_c, (byte) -91, FixedQuaternion.field_e);
+            ValidatedTextWidget.field_Z.dispatchKeyInput(il.field_c, (byte) -91, FixedQuaternion.field_e);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -401,7 +401,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
         if (param1) {
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 192);
         }
-        ValidatedTextWidget.field_Z.a(0, 0, (byte) -103);
+        ValidatedTextWidget.field_Z.renderWidgetPassesAndTooltip(0, 0, (byte) -103);
         if (param0 <= 108) {
           field_n = (TriangleMesh[]) null;
         }

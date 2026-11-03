@@ -71,7 +71,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           PasswordLoginCredentials.b((byte) 111);
         }
         if (var2 != null) {
-          var2.a(g.field_a.field_T, g.field_a.field_F, (byte) -120);
+          var2.renderWidgetPassesAndTooltip(g.field_a.field_T, g.field_a.field_F, (byte) -120);
         }
     }
 
