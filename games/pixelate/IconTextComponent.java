@@ -86,7 +86,7 @@ final class IconTextComponent extends SceneWidget {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class IconTextComponent extends SceneWidget {
           }
           return param2 + var4 + (param2 + param1) + var5;
         }
-        IconTextComponent.j(1);
+        IconTextComponent.releaseStatics(1);
         var4Lifetime1 = -param1;
         var5Lifetime1 = -param1;
         if (this.field_Fb != null) {
@@ -161,7 +161,7 @@ final class IconTextComponent extends SceneWidget {
         return;
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Ib = null;
         field_Lb = null;
         if (param0 >= 34) {

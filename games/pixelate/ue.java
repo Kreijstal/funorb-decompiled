@@ -57,7 +57,7 @@ final class ue extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ue.C(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "ue.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class ue extends IntrusiveNode {
         return ResizableModalPanel.field_W != null ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_t = null;
         field_q = null;
@@ -100,7 +100,7 @@ final class ue extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "ue.B(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "ue.B(" + param0 + ',' + param1 + ')');
         }
     }
 

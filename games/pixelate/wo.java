@@ -21,7 +21,7 @@ final class wo {
           var4 = new SceneWidget[]{param1, wa.field_f, (SceneWidget) ((Object) MouseWheelHandler.field_e)};
           this.field_g = new TabbedPanel(0L, ab.field_a, var3, AccountMessagePanel.field_J, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class wo {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class wo {
           Match.field_l = new Sprite[param0];
           for (var2 = 3; var2 > 0; var2--) {
             var1.c();
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clear();
             rk.field_e.drawCentered(Integer.toString(var2), SoftwareRasterizer.field_j >> 1, SoftwareRasterizer.field_d, 0, -1);
             Match.field_l[-var2 + 3] = new Sprite(150, 90);
             Match.field_l[3 - var2].c();
@@ -140,7 +140,7 @@ final class wo {
           ArrayWidgetContainer.field_J = rk.field_e.textWidth(IntrusiveDeque.field_e);
           Js5Transport.field_n = rk.field_e.textWidth(SoundCache.field_j);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wo.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wo.A(" + param0 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class wo {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

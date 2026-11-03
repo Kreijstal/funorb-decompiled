@@ -14,7 +14,7 @@ final class LoginDialog extends ContentTransitionDialog {
             field_pb = (SceneWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "on.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "on.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class LoginDialog extends ContentTransitionDialog {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class LoginDialog extends ContentTransitionDialog {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_mb = null;
         if (param0 <= 60) {
           field_pb = (SceneWidget) null;
@@ -147,7 +147,7 @@ final class LoginDialog extends ContentTransitionDialog {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class LoginDialog extends ContentTransitionDialog {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

@@ -168,7 +168,7 @@ final class cl {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -180,8 +180,8 @@ final class cl {
         }
         Sprite var6 = new Sprite(param0, param0);
         Sprite var3 = var6;
-        for (var4 = 0; var4 < var3.field_G.length; var4++) {
-          var6.field_G[var4] = param1;
+        for (var4 = 0; var4 < var3.pixels.length; var4++) {
+          var6.pixels[var4] = param1;
         }
         return var3;
     }

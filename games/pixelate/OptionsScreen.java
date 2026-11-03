@@ -53,25 +53,25 @@ final class OptionsScreen extends MenuScreen {
         int var8 = SoftwareRasterizer.field_d;
         Sprite var9 = new Sprite(param5, -(2 * param5) + param3);
         var9.c();
-        SoftwareRasterizer.g(0, 0, param5, -(2 * param5) + param3, param2, param0);
+        SoftwareRasterizer.fillVerticalGradient(0, 0, param5, -(2 * param5) + param3, param2, param0);
         Sprite var10 = new Sprite(param5, param5);
         var10.c();
-        SoftwareRasterizer.d(0, 0, param5, param5, param2);
+        SoftwareRasterizer.fillRectangle(0, 0, param5, param5, param2);
         Sprite var11 = new Sprite(param1, param5);
         var11.c();
-        SoftwareRasterizer.d(0, 0, 16, param5, param2);
+        SoftwareRasterizer.fillRectangle(0, 0, 16, param5, param2);
         Sprite var12 = new Sprite(param5, param5);
         var12.c();
-        SoftwareRasterizer.d(0, 0, param5, param5, param0);
+        SoftwareRasterizer.fillRectangle(0, 0, param5, param5, param0);
         Sprite var13 = new Sprite(16, param5);
         var13.c();
-        SoftwareRasterizer.d(0, 0, 16, param5, param0);
+        SoftwareRasterizer.fillRectangle(0, 0, 16, param5, param0);
         Object var14 = null;
         if (param4 > 0) {
           var16 = new Sprite(16, 16);
           var14 = var16;
           var16.c();
-          SoftwareRasterizer.d(0, 0, 16, 16, param4);
+          SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param4);
         }
         SoftwareRasterizer.a(var18, var7, var8);
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
@@ -372,7 +372,7 @@ final class OptionsScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "op.B(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "op.B(" + param0 + ')');
         }
     }
 
@@ -406,7 +406,7 @@ final class OptionsScreen extends MenuScreen {
           } else {
             if (var4 != 31) {
               if (var4 == 32) {
-                SoftwareRasterizer.f(0, 182, 640, 350);
+                SoftwareRasterizer.setClip(0, 182, 640, 350);
                 var5 = -2 + param2;
                 var6 = ki.field_m + ' ' + var5;
                 var7 = this.a(param2, (byte) 90);
@@ -427,7 +427,7 @@ final class OptionsScreen extends MenuScreen {
                   stackIn_21_1 = (!param1) ? 0 : 1;
                   ((Sprite) (Object) stackIn_20_0[stackIn_21_1]).b(var8, this.b(118, param2));
                 }
-                SoftwareRasterizer.c();
+                SoftwareRasterizer.resetClip();
               }
             } else {
               if (DirectByteStorage.field_k == this.field_o) {
@@ -458,7 +458,7 @@ final class OptionsScreen extends MenuScreen {
           this.field_r = 0;
           this.field_v = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "op.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "op.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

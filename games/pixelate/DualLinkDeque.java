@@ -17,11 +17,11 @@ final class DualLinkDeque {
           if (param1 != 14) {
             field_e = (int[]) null;
           }
-          VorbisSample.a(param0.a((byte) 24, "", "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.a((byte) 24, "", "headers.packvorbis"));
           var2 = VorbisSample.a(param0, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -31,9 +31,9 @@ final class DualLinkDeque {
         int var4 = Pixelate.field_H ? 1 : 0;
         if (param0 > 96) {
           var2 = 0;
-          var3 = this.field_b.field_p;
+          var3 = this.field_b.secondaryNext;
           while (var3 != this.field_b) {
-            var3 = var3.field_p;
+            var3 = var3.secondaryNext;
             var2++;
           }
           return var2;
@@ -41,7 +41,7 @@ final class DualLinkDeque {
         return 62;
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_g = null;
         field_e = null;
         field_d = null;
@@ -53,7 +53,7 @@ final class DualLinkDeque {
     }
 
     final DualLinkNode a(byte param0) {
-        DualLinkNode var2 = this.field_b.field_p;
+        DualLinkNode var2 = this.field_b.secondaryNext;
         if (var2 == this.field_b) {
           return null;
         }
@@ -87,12 +87,12 @@ final class DualLinkDeque {
           if (param0 == 49661) {
             return;
           }
-          DualLinkDeque.b((byte) -125);
+          DualLinkDeque.clearSharedReferences((byte) -125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "nj.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "nj.E(" + param0 + ')');
         }
     }
 
@@ -100,9 +100,9 @@ final class DualLinkDeque {
         if (param0 < 53) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_b.field_p;
+        DualLinkNode var2 = this.field_b.secondaryNext;
         if (this.field_b != var2) {
-          this.field_a = var2.field_p;
+          this.field_a = var2.secondaryNext;
           return var2;
         }
         this.field_a = null;
@@ -111,16 +111,16 @@ final class DualLinkDeque {
 
     final void a(int param0, DualLinkNode param1) {
         try {
-          if (param1.field_r != null) {
+          if (param1.secondaryPrevious != null) {
             param1.e(17);
           }
-          param1.field_r = this.field_b.field_r;
-          param1.field_p = this.field_b;
-          param1.field_r.field_p = param1;
-          param1.field_p.field_r = param1;
+          param1.secondaryPrevious = this.field_b.secondaryPrevious;
+          param1.secondaryNext = this.field_b;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
           int var3_int = -65 % ((31 - param0) / 45);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class DualLinkDeque {
           this.field_a = null;
           return null;
         }
-        this.field_a = var2.field_p;
+        this.field_a = var2.secondaryNext;
         if (param0 == 65151) {
           return var2;
         }
@@ -139,8 +139,8 @@ final class DualLinkDeque {
 
     public DualLinkDeque() {
         this.field_b = new DualLinkNode();
-        this.field_b.field_r = this.field_b;
-        this.field_b.field_p = this.field_b;
+        this.field_b.secondaryPrevious = this.field_b;
+        this.field_b.secondaryNext = this.field_b;
     }
 
     static {

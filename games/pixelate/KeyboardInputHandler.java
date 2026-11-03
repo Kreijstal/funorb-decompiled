@@ -43,7 +43,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -65,7 +65,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           DisplayNameForm.field_J = new DiskCacheWorker(param4);
           ck.field_j = new Js5ArchiveManager(Match.field_h, DisplayNameForm.field_J);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               var6++;
               incrementValue$1 = var5;
               var5++;
-              var4[incrementValue$0] = param1.field_G[incrementValue$1];
+              var4[incrementValue$0] = param1.pixels[incrementValue$1];
             }
             var6 = var6 + (var2_int - param1.field_F);
           }
@@ -114,7 +114,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           param1.field_D = param1.field_D & -4;
           param1.field_F = var2_int;
           param1.field_E = var3;
-          param1.field_G = var4;
+          param1.pixels = var4;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +126,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             PauseMenuScreen.field_q = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rp.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rp.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rp.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rp.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

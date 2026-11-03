@@ -40,7 +40,7 @@ abstract class LoginCredentials {
           jm.field_h.a(16, -24 + TickClock.field_e.height - 20, 24, 256, -24 + (TickClock.field_e.field_K - 24));
           DelegatingCanvas.field_h.a(-24 + (TickClock.field_e.height - 20), 24, 120, 256, 80);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

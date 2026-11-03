@@ -145,9 +145,9 @@ final class PuzzlePieceQueue {
         boolean[] var4;
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
-        SoftwareRasterizer.e(535, -15 + this.field_o, 62, 15 + this.field_b + 15, 6, 0);
+        SoftwareRasterizer.drawRoundedRectangle(535, -15 + this.field_o, 62, 15 + this.field_b + 15, 6, 0);
         SoftwareRasterizer.a(535, -15 + this.field_o, 62, 15 + (this.field_b + 15), 6, 0, 128);
-        li.field_d.b(542, this.field_g - 8, 256);
+        li.field_d.drawAdditive(542, this.field_g - 8, 256);
         var2 = this.field_o;
         if (param0 != 550) {
           this.field_l = -112;
@@ -183,7 +183,7 @@ final class PuzzlePieceQueue {
           }
           ((Sprite) (Object) stackIn_15_0[stackIn_16_1]).b(566, 16 + var2);
           if (var3 < -1 + this.field_p) {
-            SoftwareRasterizer.a(550, var2, 32, 32, 0, 128);
+            SoftwareRasterizer.fillRectangleAlpha(550, var2, 32, 32, 0, 128);
           }
           var2 += 37;
         }
@@ -202,7 +202,7 @@ final class PuzzlePieceQueue {
           this.field_j = param3;
           this.field_b = this.field_i.length * 37 - 5;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "so.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "so.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

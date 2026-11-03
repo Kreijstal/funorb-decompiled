@@ -49,7 +49,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ca.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ca.C(" + param0 + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ca.F(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "ca.F(" + param0 + ')');
         }
     }
 
@@ -344,7 +344,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ca.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ca.E(" + param0 + ')');
         }
     }
 
@@ -447,7 +447,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -525,7 +525,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -544,7 +544,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ca.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ca.A(" + param0 + ')');
         }
     }
 

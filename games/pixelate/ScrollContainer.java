@@ -21,7 +21,7 @@ final class ScrollContainer extends SceneWidget {
           this.field_Fb = param1;
           this.field_Ib.a(param1, (byte) 26);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class ScrollContainer extends SceneWidget {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ final class ScrollContainer extends SceneWidget {
         int var5 = -81 / ((param0 + 15) / 62);
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Hb = null;
         field_Eb = null;
         if (param0 != 0) {

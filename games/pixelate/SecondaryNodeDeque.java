@@ -15,7 +15,7 @@ final class SecondaryNodeDeque implements Iterable {
         if (param0 < 57) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_a.field_p;
+        DualLinkNode var2 = this.field_a.secondaryNext;
         if (this.field_a == var2) {
           return null;
         }
@@ -23,7 +23,7 @@ final class SecondaryNodeDeque implements Iterable {
         return var2;
     }
 
-    final static void a(java.math.BigInteger param0, boolean param1, int param2, int param3, java.math.BigInteger param4, PacketBuffer param5, byte[] param6) {
+    final static void writeEncryptedPayload(java.math.BigInteger param0, boolean param1, int param2, int param3, java.math.BigInteger param4, PacketBuffer param5, byte[] param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -72,7 +72,7 @@ final class SecondaryNodeDeque implements Iterable {
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            bi.field_d.d(var13[var11], -127);
+            bi.field_d.writeInt(var13[var11], -127);
             var11++;
           }
           bi.field_d.writeShort(1276387944, param3);
@@ -108,7 +108,7 @@ final class SecondaryNodeDeque implements Iterable {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -135,34 +135,34 @@ final class SecondaryNodeDeque implements Iterable {
     }
 
     final void a(byte param0, DualLinkNode param1) {
-        if (param1.field_r != null) {
+        if (param1.secondaryPrevious != null) {
           param1.e(17);
         }
-        param1.field_p = this.field_a;
+        param1.secondaryNext = this.field_a;
         if (param0 <= 0) {
           return;
         }
         try {
-          param1.field_r = this.field_a.field_r;
-          param1.field_r.field_p = param1;
-          param1.field_p.field_r = param1;
+          param1.secondaryPrevious = this.field_a.secondaryPrevious;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean b(int param0) {
         if (param0 != 916440577) {
           byte[] var2 = (byte[]) null;
-          SecondaryNodeDeque.a((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (PacketBuffer) null, (byte[]) null);
+          SecondaryNodeDeque.writeEncryptedPayload((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (PacketBuffer) null, (byte[]) null);
         }
         return ck.field_j.c(32059);
     }
 
     SecondaryNodeDeque() {
         this.field_a = new DualLinkNode();
-        this.field_a.field_p = this.field_a;
-        this.field_a.field_r = this.field_a;
+        this.field_a.secondaryNext = this.field_a;
+        this.field_a.secondaryPrevious = this.field_a;
     }
 
     static {

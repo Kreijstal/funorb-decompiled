@@ -129,7 +129,7 @@ abstract class Js5Transport {
           SecondaryNodeDeque.field_f[129] = param0.getSoundEffectByName(true, "pix_time_running_out", "");
           SecondaryNodeDeque.field_f[130] = param0.getSoundEffectByName(true, "pix_time_up", "");
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

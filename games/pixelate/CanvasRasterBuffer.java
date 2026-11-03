@@ -44,7 +44,7 @@ abstract class CanvasRasterBuffer {
           if (param1 != 37) {
             field_k = (String) null;
           }
-          stackIn_5_0 = (re.a(param0, -1) != null);
+          stackIn_5_0 = (re.findFriend(param0, -1) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ abstract class CanvasRasterBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ abstract class CanvasRasterBuffer {
         SoftwareRasterizer.a(this.field_e, this.field_a, this.field_i);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }

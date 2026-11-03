@@ -20,7 +20,7 @@ final class mi extends MenuScreen {
         if (param0 != 11) {
           mi.b(false);
         }
-        String var8 = var7 + " " + ub.a(AlphaContainer.a(AchievementIcon.a(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{mj.field_i}), param0 - 11, "<br><br>", '#');
+        String var8 = var7 + " " + ub.replaceCharacter(AlphaContainer.a(AchievementIcon.a(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{mj.field_i}), param0 - 11, "<br><br>", '#');
         BinaryBitmapFont var5 = qj.field_e;
         int var6 = 1 + var5.maxDescent + var5.maxAscent;
         var5.drawParagraph(var8, 50, 150, 540, 10 * var6, 16777215, 0, 1, 0, var6);
@@ -336,7 +336,7 @@ final class mi extends MenuScreen {
             } else {
               stackIn_110_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -355,10 +355,10 @@ final class mi extends MenuScreen {
             field_o = false;
           }
           cn.field_b.a(param3, param1, 7595, param0);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           Js5NetworkRequest.a(94, true);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class mi extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "mi.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "mi.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

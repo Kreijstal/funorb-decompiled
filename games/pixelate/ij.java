@@ -100,7 +100,7 @@ final class ij extends MenuScreen {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class ij extends MenuScreen {
         if (param0 != 0) {
           return;
         }
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clear();
     }
 
     final void c(byte param0) {

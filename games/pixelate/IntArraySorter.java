@@ -256,7 +256,7 @@ final class IntArraySorter {
           var1 = field_f;
           var2 = field_e;
           var3 = field_a;
-          SoftwareRasterizer.b(var1, var3, var2 - var1, param0);
+          SoftwareRasterizer.drawHorizontalLine(var1, var3, var2 - var1, param0);
         }
     }
 

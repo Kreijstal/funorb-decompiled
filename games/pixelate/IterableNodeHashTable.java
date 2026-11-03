@@ -6,7 +6,7 @@ import java.util.*;
 final class IterableNodeHashTable implements Iterable {
     static String field_c;
     IntrusiveNode[] field_e;
-    private IntrusiveNode field_b;
+    private IntrusiveNode lookupCursor;
     int field_a;
     static String field_d;
 
@@ -38,37 +38,37 @@ final class IterableNodeHashTable implements Iterable {
         int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         var4 = this.field_e[(int)((long)(this.field_a - param0) & param1)];
-        this.field_b = var4.field_a;
+        this.lookupCursor = var4.field_a;
         while (true) {
-          if (this.field_b == var4) {
-            this.field_b = null;
+          if (this.lookupCursor == var4) {
+            this.lookupCursor = null;
             return null;
           }
-          if (this.field_b.field_e != param1) {
-            this.field_b = this.field_b.field_a;
+          if (this.lookupCursor.field_e != param1) {
+            this.lookupCursor = this.lookupCursor.field_a;
             continue;
           }
           break;
         }
-        var5 = this.field_b;
-        this.field_b = this.field_b.field_a;
+        var5 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.field_a;
         return var5;
     }
 
     final void a(IntrusiveNode param0, long param1, int param2) {
         IntrusiveNode var5 = null;
         try {
-          if (param0.field_h != null) {
+          if (param0.previous != null) {
             param0.c(2779);
           }
           var5 = this.field_e[(int)(param1 & (long)(param2 + this.field_a))];
-          param0.field_h = var5.field_h;
+          param0.previous = var5.previous;
           param0.field_a = var5;
-          param0.field_h.field_a = param0;
+          param0.previous.field_a = param0;
           param0.field_e = param1;
-          param0.field_a.field_h = param0;
+          param0.field_a.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "kl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class IterableNodeHashTable implements Iterable {
           var3 = dupTemp$0;
           this.field_e[var2] = dupTemp$0;
           var3.field_a = var3;
-          var3.field_h = var3;
+          var3.previous = var3;
         }
     }
 

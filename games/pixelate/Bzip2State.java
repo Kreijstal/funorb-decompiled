@@ -57,7 +57,7 @@ final class Bzip2State {
           }
           var2_int = 0;
           if (param0 >= -125) {
-            Bzip2State.a((byte) 125);
+            Bzip2State.releaseStatics((byte) 125);
           }
           while (param1.length() > var2_int) {
             if (!vf.a((byte) -3, param1.charAt(var2_int))) {
@@ -76,7 +76,7 @@ final class Bzip2State {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class Bzip2State {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_C = null;
         if (param0 == -92) {
           field_A = null;

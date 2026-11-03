@@ -49,8 +49,8 @@ final class ph extends IntrusiveNode {
               var2 = new PacketBuffer(13);
               FallingPieceView.a(GreenGrowTheRushesBackground.field_o, (byte) 66, SceneWidget.field_ib, var2, AcidSunsetBackground.field_n);
               var2.writeByte(160, 15);
-              var2.d(fj.field_a, -76);
-              ConditionalTextValue.field_d.a(13, -103, 0, var2.payload);
+              var2.writeInt(fj.field_a, -76);
+              ConditionalTextValue.field_d.write(13, -103, 0, var2.payload);
               AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
               ViewportController.field_a = 30000L + hm.a(64);
             }
@@ -151,7 +151,7 @@ final class ph extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 

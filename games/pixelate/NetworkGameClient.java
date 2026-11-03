@@ -590,11 +590,11 @@ abstract class NetworkGameClient extends GameApplet {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_C = null;
         if (!param0) {
           field_C = (wm) null;
@@ -607,7 +607,7 @@ abstract class NetworkGameClient extends GameApplet {
         try {
           this.a((byte) -128, 480, param1, param2, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lb.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lb.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -761,7 +761,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var4 = BackgroundScene.field_b - 1;
         byte[] var5 = new byte[var4];
         MusicCrossfadeStream.field_o.b(var5, 0, 88, var4);
-        LinkButtonPainter.a(var3 != 0, of.a(var5, 1), -33, AudioService.a(param0 ^ 13840));
+        LinkButtonPainter.openUrlInNewWindow(var3 != 0, of.a(var5, 1), -33, AudioService.a(param0 ^ 13840));
     }
 
     final static IndexedSprite[] a(ResourceArchive param0, int param1, String param2, String param3) {
@@ -806,7 +806,7 @@ abstract class NetworkGameClient extends GameApplet {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

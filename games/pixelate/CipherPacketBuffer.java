@@ -50,7 +50,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "pc.WA(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "pc.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                   }
                   stackIn_45_0 = var7.field_Pb;
                   if (var14 > 0) {
-                    stackIn_46_1 = BitmapFont.a(var7.field_Pb.font, var7.field_Fb, var14);
+                    stackIn_46_1 = BitmapFont.truncateWithEllipsis(var7.field_Pb.font, var7.field_Fb, var14);
                   } else {
                     stackIn_46_1 = var7.field_Fb;
                   }
@@ -269,7 +269,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "pc.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "pc.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         try {
           this.position = (param0 + this.field_r) / 8;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pc.BB(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pc.BB(" + param0 + ')');
         }
     }
 
@@ -303,7 +303,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           if (param1 != -47) {
             field_q = -19;
           }
-          param2 = ub.a(param2, param1 ^ -47, "", '_');
+          param2 = ub.replaceCharacter(param2, param1 ^ -47, "", '_');
           var3 = EmailValidator.b(0, param0);
           stackIn_10_0 = (param2.indexOf(param0) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_10_0;
@@ -345,7 +345,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -361,7 +361,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "pc.VA(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "pc.VA(" + param0 + ')');
         }
     }
 
@@ -381,7 +381,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "pc.UA(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "pc.UA(" + param0 + ')');
         }
     }
 
@@ -431,7 +431,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "pc.DB(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "pc.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -450,7 +450,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "pc.SA(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "pc.SA(" + param0 + ')');
         }
     }
 

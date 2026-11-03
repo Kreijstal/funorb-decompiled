@@ -66,7 +66,7 @@ final class AchievementIcon extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class AchievementIcon extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = SocketConnector.a(param2, param1, (byte) 47, MenuInputState.field_d);
+          var4 = SocketConnector.loadRgbSpritesByName(param2, param1, (byte) 47, MenuInputState.field_d);
           var3 = var4;
           var4[1].field_A = var4[1].field_F;
           var4[3].field_B = var4[3].field_E;
@@ -124,7 +124,7 @@ final class AchievementIcon extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -157,12 +157,12 @@ final class AchievementIcon extends IntrusiveNode {
           param2 >= 256) {
           this.a(param3, param1, (byte) 98);
         } else {
-          SoftwareRasterizer.a(NameSuggestionsPanel.field_N);
+          SoftwareRasterizer.saveClip(NameSuggestionsPanel.field_N);
           this.field_l.c();
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           this.a(0, 0, (byte) 98);
           ClientException.field_f.a(19692);
-          SoftwareRasterizer.b(NameSuggestionsPanel.field_N);
+          SoftwareRasterizer.restoreClip(NameSuggestionsPanel.field_N);
           SpriteEffectHelpers.a(this.field_l, param1, param3, param4, param2);
         }
     }
@@ -251,7 +251,7 @@ final class AchievementIcon extends IntrusiveNode {
           this.field_s = param0.field_a;
           this.field_l = new Sprite(16 * this.field_n, 16 * this.field_s);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

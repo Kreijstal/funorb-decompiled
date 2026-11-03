@@ -179,7 +179,7 @@ final class LobbyGame extends SceneWidget {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 

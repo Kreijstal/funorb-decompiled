@@ -277,7 +277,7 @@ final class Vector3 {
                 Vector3.a((byte) -4, (java.applet.Applet) null, (String) null);
               }
               var3 = lg.a(false, param1, var3);
-              LinkButtonPainter.a(true, var3.toString(), -72, param1);
+              LinkButtonPainter.openUrlInNewWindow(true, var3.toString(), -72, param1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;
@@ -300,7 +300,7 @@ final class Vector3 {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

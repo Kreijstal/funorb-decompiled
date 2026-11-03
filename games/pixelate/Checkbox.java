@@ -21,7 +21,7 @@ final class Checkbox extends TextButton {
         try {
           this.field_M = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class Checkbox extends TextButton {
         try {
           this.field_y = field_X.field_t;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class Checkbox extends TextButton {
         try {
           this.field_y = field_X.field_t;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,12 +51,12 @@ final class Checkbox extends TextButton {
     final static void a(int param0, Sprite param1) {
         try {
           MidiPcmStream.a(false);
-          SoftwareRasterizer.a(param1.field_G, param1.field_A, param1.field_B);
+          SoftwareRasterizer.a(param1.pixels, param1.field_A, param1.field_B);
           if (param0 >= -58) {
             field_V = (Sprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "h.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "h.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

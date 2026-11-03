@@ -29,7 +29,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "ee.D(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "ee.D(" + param0 + ')');
         }
     }
 
@@ -140,9 +140,9 @@ final class InputQueue {
           }
           var4_ref_StringLifetime1 = var1.h(5);
           var5Lifetime1 = var1.h(5);
-          var6Lifetime1 = re.a(var4_ref_StringLifetime1, -1);
+          var6Lifetime1 = re.findFriend(var4_ref_StringLifetime1, -1);
           if (null == var6Lifetime1) {
-            var6Lifetime1 = re.a(var5Lifetime1, -1);
+            var6Lifetime1 = re.findFriend(var5Lifetime1, -1);
             if (null != var6Lifetime1) {
               vm.field_b.a(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 29).hashCode());
             }
@@ -190,7 +190,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "ee.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "ee.C(" + param0 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class InputQueue {
         try {
           this.field_b.e(77);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
         }
     }
 
@@ -228,7 +228,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3_ref), "ee.F(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3_ref), "ee.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ee.H(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ee.H(" + param0 + ')');
         }
     }
 
@@ -275,7 +275,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) (var4), "ee.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) (var4), "ee.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -300,7 +300,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ee.<init>()");
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.<init>()");
         }
     }
 
@@ -328,7 +328,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ee.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.A(" + param0 + ')');
         }
     }
 
@@ -339,7 +339,7 @@ final class InputQueue {
             this.a(-120, 48, 81);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

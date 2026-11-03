@@ -94,7 +94,7 @@ final class AudioService implements Runnable {
               return;
             }
             var4 = param0.position;
-            param0.d(var16_ref.field_p, -66);
+            param0.writeInt(var16_ref.field_p, -66);
             for (var5 = 0; var16_ref.field_s > var5; var5++) {
               if (var16_ref.field_u[var5] == 0) {
                 try {
@@ -105,7 +105,7 @@ final class AudioService implements Runnable {
                         var14 = (java.lang.reflect.Field) (var16_ref.field_l[var5].field_e);
                         var8 = var14.getModifiers();
                         param0.writeByte(160, 0);
-                        param0.d(var8, -46);
+                        param0.writeInt(var8, -46);
                       }
                     } else {
                       var15 = (java.lang.reflect.Field) (var16_ref.field_l[var5].field_e);
@@ -117,7 +117,7 @@ final class AudioService implements Runnable {
                     var25 = (java.lang.reflect.Field) (var16_ref.field_l[var5].field_e);
                     var8 = var25.getInt((Object) null);
                     param0.writeByte(160, 0);
-                    param0.d(var8, -124);
+                    param0.writeInt(var8, -124);
                   }
                   if (var6_int == 3) {
                     var26 = (java.lang.reflect.Method) (var16_ref.field_v[var5].field_e);
@@ -144,7 +144,7 @@ final class AudioService implements Runnable {
                       var27 = (java.lang.reflect.Method) (var16_ref.field_v[var5].field_e);
                       var8Lifetime1 = var27.getModifiers();
                       param0.writeByte(160, 0);
-                      param0.d(var8Lifetime1, -45);
+                      param0.writeInt(var8Lifetime1, -45);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
@@ -213,7 +213,7 @@ final class AudioService implements Runnable {
             } else {
               stackIn_68_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -243,7 +243,7 @@ final class AudioService implements Runnable {
         hm.a((byte) -95);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (!param0) {
           field_b = (String) null;

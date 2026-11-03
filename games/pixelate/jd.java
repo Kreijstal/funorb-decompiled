@@ -39,7 +39,7 @@ final class jd extends IntrusiveNode {
             this.a((int[]) null, 104, -115, 98, (byte) -50, -62, -94, 1);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

@@ -38,7 +38,7 @@ final class MusicPatchNode extends IntrusiveNode {
           param0.addKeyListener(mc.field_r);
           param0.addFocusListener(mc.field_r);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "in.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "in.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

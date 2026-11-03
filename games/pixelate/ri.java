@@ -32,7 +32,7 @@ final class ri {
             ri.a((String) null, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ri.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ri.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

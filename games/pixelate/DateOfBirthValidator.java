@@ -14,7 +14,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           int var3_int = -49 / ((-30 - param0) / 60);
           this.b(2048);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "oa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,13 +160,13 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return qk.field_g;
     }
 
-    public final void a(EditableTextWidget param0, int param1) {
+    public final void onTextChanged(EditableTextWidget param0, int param1) {
         try {
           if (param1 != 4) {
             this.field_g = (DateInputWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "oa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

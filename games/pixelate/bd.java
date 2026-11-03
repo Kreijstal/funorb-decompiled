@@ -75,7 +75,7 @@ final class bd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "bd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var4), "bd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class bd {
           }
           ValidatedTextWidget.field_db = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ')');
         }
     }
 

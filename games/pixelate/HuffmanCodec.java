@@ -99,7 +99,7 @@ final class HuffmanCodec {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class HuffmanCodec {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -240,17 +240,17 @@ final class HuffmanCodec {
           if (param4 > -91) {
             HuffmanCodec.a('ﾢ', 24);
           }
-          AudioOutput.a(param1, param2, 10);
-          MainMenuScreen.field_t = AudioOutput.a(param6, param5, 0, param3);
-          ib.field_h = AudioOutput.a(param6, param5, 1, param0);
+          AudioOutput.configure(param1, param2, 10);
+          MainMenuScreen.field_t = AudioOutput.create(param6, param5, 0, param3);
+          ib.field_h = AudioOutput.create(param6, param5, 1, param0);
           ClientContextMenu.field_d = new PcmStreamMixer();
           ba.field_f = param0;
-          ib.field_h.b(ClientContextMenu.field_d);
+          ib.field_h.setStream(ClientContextMenu.field_d);
           ri.field_a = param7;
           ri.field_a.a(SocketJs5Transport.field_u, (byte) 2);
-          MainMenuScreen.field_t.b(ri.field_a);
+          MainMenuScreen.field_t.setStream(ri.field_a);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "oh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -470,7 +470,7 @@ final class HuffmanCodec {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
         }
     }
 

@@ -194,7 +194,7 @@ final class ef {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ef.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ef.C(" + param0 + ')');
         }
     }
 

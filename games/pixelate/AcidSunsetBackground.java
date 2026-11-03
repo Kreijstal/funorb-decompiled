@@ -39,7 +39,7 @@ final class AcidSunsetBackground extends BackgroundScene {
     }
 
     final void a(boolean param0) {
-        SoftwareRasterizer.g(0, 0, 640, 480, DialWidgetPainter.field_f[this.field_m], DialWidgetPainter.field_f[this.field_p]);
+        SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, DialWidgetPainter.field_f[this.field_m], DialWidgetPainter.field_f[this.field_p]);
         if (param0) {
           return;
         }

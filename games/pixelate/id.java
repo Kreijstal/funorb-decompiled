@@ -29,14 +29,14 @@ final class id {
         }
         try {
           var5.writeByte(160, param1.field_v);
-          var5.d(param1.field_s, -116);
-          var5.d(param1.field_r, -102);
-          var5.d(param1.field_l, -112);
-          var5.d(param1.field_p, -120);
+          var5.writeInt(param1.field_s, -116);
+          var5.writeInt(param1.field_r, -102);
+          var5.writeInt(param1.field_l, -112);
+          var5.writeInt(param1.field_p, -120);
           var5.b(var4, (byte) 84);
           var5.f(var5.position - var4, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class id {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "id.D(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "id.D(" + param0 + ')');
         }
     }
 

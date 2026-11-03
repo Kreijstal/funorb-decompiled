@@ -31,7 +31,7 @@ final class nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "nk.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "nk.E(" + param0 + ')');
         }
     }
 
@@ -87,10 +87,10 @@ final class nk {
           VerticalScrollbar.field_Ib = 8421504;
           LabeledField.field_P[0] = 16764000;
           var12 = new Sprite(4, 4);
-          var13 = var12.field_G;
-          var14 = var12.field_G;
-          var15 = var12.field_G;
-          var12.field_G[15] = 7368816;
+          var13 = var12.pixels;
+          var14 = var12.pixels;
+          var15 = var12.pixels;
+          var12.pixels[15] = 7368816;
           var14[5] = 7368816;
           var13[2] = 7368816;
           var15[8] = 7368816;
@@ -238,7 +238,7 @@ final class nk {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "nk.G(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "nk.G(" + param0 + ')');
         }
     }
 
@@ -296,7 +296,7 @@ final class nk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "nk.F(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "nk.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -367,7 +367,7 @@ final class nk {
         try {
           an.field_e.a(param0 + param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nk.A(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nk.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class nk {
             field_a = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nk.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nk.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

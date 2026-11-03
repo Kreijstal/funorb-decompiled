@@ -84,7 +84,7 @@ final class nd {
           an.field_b.a(0, 0, 0, (byte) -98, 0);
           DiskCacheRequest.field_H.a(-18577);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nd.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nd.A(" + param0 + ')');
         }
     }
 

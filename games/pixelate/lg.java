@@ -71,7 +71,7 @@ final class lg {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class lg {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class lg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -213,26 +213,26 @@ final class lg {
 
     final static void a(int param0, ResourceArchive param1) {
         try {
-          bj.field_c[0] = MusicTrack.a(param1, "", "pix_title");
-          bj.field_c[1] = MusicTrack.a(param1, "", "pix_end_game");
-          bj.field_c[2] = MusicTrack.a(param1, "", "skin1");
-          bj.field_c[param0] = MusicTrack.a(param1, "", "skin8");
-          bj.field_c[4] = MusicTrack.a(param1, "", "skin2");
-          bj.field_c[5] = MusicTrack.a(param1, "", "skin9");
-          bj.field_c[6] = MusicTrack.a(param1, "", "skin3");
-          bj.field_c[7] = MusicTrack.a(param1, "", "skin16");
-          bj.field_c[8] = MusicTrack.a(param1, "", "skin4");
-          bj.field_c[9] = MusicTrack.a(param1, "", "skin11");
-          bj.field_c[10] = MusicTrack.a(param1, "", "skin12");
-          bj.field_c[11] = MusicTrack.a(param1, "", "skin7");
-          bj.field_c[12] = MusicTrack.a(param1, "", "skin5");
-          bj.field_c[13] = MusicTrack.a(param1, "", "skin6");
-          bj.field_c[14] = MusicTrack.a(param1, "", "skin13");
-          bj.field_c[15] = MusicTrack.a(param1, "", "skin14");
-          bj.field_c[16] = MusicTrack.a(param1, "", "skin15");
-          bj.field_c[17] = MusicTrack.a(param1, "", "skin10");
+          bj.field_c[0] = MusicTrack.load(param1, "", "pix_title");
+          bj.field_c[1] = MusicTrack.load(param1, "", "pix_end_game");
+          bj.field_c[2] = MusicTrack.load(param1, "", "skin1");
+          bj.field_c[param0] = MusicTrack.load(param1, "", "skin8");
+          bj.field_c[4] = MusicTrack.load(param1, "", "skin2");
+          bj.field_c[5] = MusicTrack.load(param1, "", "skin9");
+          bj.field_c[6] = MusicTrack.load(param1, "", "skin3");
+          bj.field_c[7] = MusicTrack.load(param1, "", "skin16");
+          bj.field_c[8] = MusicTrack.load(param1, "", "skin4");
+          bj.field_c[9] = MusicTrack.load(param1, "", "skin11");
+          bj.field_c[10] = MusicTrack.load(param1, "", "skin12");
+          bj.field_c[11] = MusicTrack.load(param1, "", "skin7");
+          bj.field_c[12] = MusicTrack.load(param1, "", "skin5");
+          bj.field_c[13] = MusicTrack.load(param1, "", "skin6");
+          bj.field_c[14] = MusicTrack.load(param1, "", "skin13");
+          bj.field_c[15] = MusicTrack.load(param1, "", "skin14");
+          bj.field_c[16] = MusicTrack.load(param1, "", "skin15");
+          bj.field_c[17] = MusicTrack.load(param1, "", "skin10");
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -247,7 +247,7 @@ final class lg {
           AccountTermsPanel.field_J = param1;
           AudioService.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -297,7 +297,7 @@ final class lg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

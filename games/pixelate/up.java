@@ -80,7 +80,7 @@ final class up {
           10 <= this.field_m) {
           var3 = 3 * this.field_b >> 2;
           PlayerBoard.field_w.a(-var2 + 96, 196, var3);
-          PlayerBoard.field_w.b(-var2 + 96, 196, var3);
+          PlayerBoard.field_w.drawAdditive(-var2 + 96, 196, var3);
         }
     }
 

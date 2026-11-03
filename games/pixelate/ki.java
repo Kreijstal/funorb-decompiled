@@ -100,7 +100,7 @@ final class ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ki.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ki.E(" + param0 + ')');
         }
     }
 
@@ -150,24 +150,24 @@ final class ki {
         int var2Lifetime1;
         if (param0 == 3887) {
           var2 = (int)(this.field_l * 32768.0 / 3.141592653589793);
-          ContentTransitionDialog.field_hb.b(672, 160, this.field_g << 4, this.field_h << 4, var2, this.field_n);
+          ContentTransitionDialog.field_hb.rotateNearest(672, 160, this.field_g << 4, this.field_h << 4, var2, this.field_n);
           return;
         }
         this.b(19);
         var2Lifetime1 = (int)(this.field_l * 32768.0 / 3.141592653589793);
-        ContentTransitionDialog.field_hb.b(672, 160, this.field_g << 4, this.field_h << 4, var2Lifetime1, this.field_n);
+        ContentTransitionDialog.field_hb.rotateNearest(672, 160, this.field_g << 4, this.field_h << 4, var2Lifetime1, this.field_n);
     }
 
     final void a(boolean param0) {
-        SoftwareRasterizer.b(this.field_i, this.field_p, this.field_g, this.field_h, 6710784);
+        SoftwareRasterizer.drawLine(this.field_i, this.field_p, this.field_g, this.field_h, 6710784);
         if (!param0) {
-          SoftwareRasterizer.b(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
-          SoftwareRasterizer.b(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
+          SoftwareRasterizer.drawLine(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
+          SoftwareRasterizer.drawLine(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
           return;
         }
         field_a = (String) null;
-        SoftwareRasterizer.b(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
-        SoftwareRasterizer.b(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
+        SoftwareRasterizer.drawLine(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
+        SoftwareRasterizer.drawLine(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
     }
 
     public static void c(int param0) {

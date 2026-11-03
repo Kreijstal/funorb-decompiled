@@ -28,14 +28,14 @@ final class StripedProgressBar extends UiComponent {
         this.field_P = new Sprite[]{this.a(this.field_Z, this.field_I, (byte) -121), this.a(this.field_V, this.field_T, (byte) -125)};
         if (param0 > 73) {
           this.field_F = this.c(true);
-          this.field_K = this.field_F.e();
+          this.field_K = this.field_F.copyFlippedHorizontal();
           this.field_L = new Sprite(this.field_C >> 1, this.field_C);
           return;
         }
         UiComponent var3 = (UiComponent) null;
         this.updatePointer(59, -16, -71, (UiComponent) null);
         this.field_F = this.c(true);
-        this.field_K = this.field_F.e();
+        this.field_K = this.field_F.copyFlippedHorizontal();
         this.field_L = new Sprite(this.field_C >> 1, this.field_C);
     }
 
@@ -75,7 +75,7 @@ final class StripedProgressBar extends UiComponent {
                 var6 = Math.sqrt(-var6 + 1.0);
                 var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
               }
-              SoftwareRasterizer.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+              SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
             }
           }
           LinkButtonPainter.a((byte) 92);
@@ -92,7 +92,7 @@ final class StripedProgressBar extends UiComponent {
               var6Lifetime1 = Math.sqrt(-var6Lifetime1 + 1.0);
               var8Lifetime1 = !(1.0 <= var6Lifetime1) ? (int)(var6Lifetime1 * 255.0) : 255;
             }
-            SoftwareRasterizer.a(var5Lifetime1, var4Lifetime1, var8Lifetime1 << 8 | var8Lifetime1 | var8Lifetime1 << 16);
+            SoftwareRasterizer.setPixel(var5Lifetime1, var4Lifetime1, var8Lifetime1 << 8 | var8Lifetime1 | var8Lifetime1 << 16);
           }
         }
         LinkButtonPainter.a((byte) 92);
@@ -106,7 +106,7 @@ final class StripedProgressBar extends UiComponent {
         try {
           DraggableWidget.field_I.a(param0, (byte) 26);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class StripedProgressBar extends UiComponent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -221,13 +221,13 @@ final class StripedProgressBar extends UiComponent {
             var10 = var6 - var5;
             var11 = 128 + (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
             var12 = 256 <= var11 ? var9 | var8 : (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 8;
-            SoftwareRasterizer.b(var7, var6, this.field_M, var12);
-            SoftwareRasterizer.b(-(this.field_M * 2) + var7, var6, this.field_M, var12);
+            SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_M, var12);
+            SoftwareRasterizer.drawHorizontalLine(-(this.field_M * 2) + var7, var6, this.field_M, var12);
             var9Lifetime2 = param1 & 65280;
             var8Lifetime2 = param1 & 16711935;
             var12Lifetime2 = var11 < 256 ? (-16711936 & var8Lifetime2 * var11 | 16711680 & var11 * var9Lifetime2) >>> 8 : var8Lifetime2 | var9Lifetime2;
-            SoftwareRasterizer.b(this.field_M + var7, var6, this.field_M, var12Lifetime2);
-            SoftwareRasterizer.b(-this.field_M + var7, var6, this.field_M, var12Lifetime2);
+            SoftwareRasterizer.drawHorizontalLine(this.field_M + var7, var6, this.field_M, var12Lifetime2);
+            SoftwareRasterizer.drawHorizontalLine(-this.field_M + var7, var6, this.field_M, var12Lifetime2);
           }
           LinkButtonPainter.a((byte) 92);
           return var16;
@@ -243,13 +243,13 @@ final class StripedProgressBar extends UiComponent {
           var10Lifetime1 = var6Lifetime1 - var5Lifetime1;
           var11Lifetime1 = 128 + (int)(128.0 * (Math.sqrt((double)(-(var10Lifetime1 * var10Lifetime1) + var5Lifetime1 * var5Lifetime1)) / (double)var5Lifetime1));
           var12Lifetime1 = 256 <= var11Lifetime1 ? var9Lifetime1 | var8Lifetime1 : (-16711936 & var8Lifetime1 * var11Lifetime1 | var9Lifetime1 * var11Lifetime1 & 16711680) >>> 8;
-          SoftwareRasterizer.b(var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1);
-          SoftwareRasterizer.b(-(this.field_M * 2) + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-(this.field_M * 2) + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1);
           var9Lifetime1Lifetime1 = param1 & 65280;
           var8Lifetime1Lifetime1 = param1 & 16711935;
           var12Lifetime1Lifetime1 = var11Lifetime1 < 256 ? (-16711936 & var8Lifetime1Lifetime1 * var11Lifetime1 | 16711680 & var11Lifetime1 * var9Lifetime1Lifetime1) >>> 8 : var8Lifetime1Lifetime1 | var9Lifetime1Lifetime1;
-          SoftwareRasterizer.b(this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
-          SoftwareRasterizer.b(-this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
         }
         LinkButtonPainter.a((byte) 92);
         return var15;
@@ -306,7 +306,7 @@ final class StripedProgressBar extends UiComponent {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -28,7 +28,7 @@ final class pb {
             pb.a(-25, (sb) null, 81, -121);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class pb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -164,9 +164,9 @@ final class pb {
         int var11;
         var11 = Pixelate.field_H ? 1 : 0;
         var2 = SpriteCheckboxPainter.field_d ? 1 : 0;
-        SoftwareRasterizer.a(ProxyAuthenticationException.field_b);
+        SoftwareRasterizer.saveClip(ProxyAuthenticationException.field_b);
         if (var2 == 0) {
-          SoftwareRasterizer.f(0, -100 + this.field_o, 640, this.field_o + 100);
+          SoftwareRasterizer.setClip(0, -100 + this.field_o, 640, this.field_o + 100);
         }
         for (var7 = 0; this.field_m.pictures.length > var7; var7++) {
           var8 = var7;
@@ -216,7 +216,7 @@ final class pb {
         if (param0 <= 43) {
           this.field_h = -119;
         }
-        SoftwareRasterizer.b(ProxyAuthenticationException.field_b);
+        SoftwareRasterizer.restoreClip(ProxyAuthenticationException.field_b);
     }
 
     final void d(int param0) {
@@ -279,7 +279,7 @@ final class pb {
           this.field_e = 200 + this.field_o;
           this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

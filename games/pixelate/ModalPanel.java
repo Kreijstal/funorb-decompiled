@@ -57,7 +57,7 @@ abstract class ModalPanel extends UiContainer {
           this.field_N = false;
           this.field_J = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ abstract class ModalPanel extends UiContainer {
         if (null == fd.field_a) {
           fd.field_a = new Sprite(this.field_E, this.field_C);
           Checkbox.a(-90, fd.field_a);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           this.a(0, 0, true);
           super.a(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5 = -94 / ((param3 - 70) / 49);
@@ -100,7 +100,7 @@ abstract class ModalPanel extends UiContainer {
         if (fd.field_a.field_F < this.field_E) {
           fd.field_a = new Sprite(this.field_E, this.field_C);
           Checkbox.a(-90, fd.field_a);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           this.a(0, 0, true);
           super.a(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5Lifetime1 = -94 / ((param3 - 70) / 49);
@@ -111,7 +111,7 @@ abstract class ModalPanel extends UiContainer {
         if (this.field_C > fd.field_a.field_E) {
           fd.field_a = new Sprite(this.field_E, this.field_C);
           Checkbox.a(-90, fd.field_a);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           this.a(0, 0, true);
           super.a(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5Lifetime2 = -94 / ((param3 - 70) / 49);
@@ -120,7 +120,7 @@ abstract class ModalPanel extends UiContainer {
           return;
         }
         Checkbox.a(-90, fd.field_a);
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clear();
         this.a(0, 0, true);
         super.a(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
         var5Lifetime3 = -94 / ((param3 - 70) / 49);

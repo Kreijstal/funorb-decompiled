@@ -69,7 +69,7 @@ final class JaggrabDownloader implements Runnable {
         this.field_j = null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_g = null;
         field_k = null;
@@ -138,7 +138,7 @@ final class JaggrabDownloader implements Runnable {
                 var3 = var4.getOutputStream();
                 var3.write(17);
                 var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_b.getFile() + "\n\n"));
-                var3.write(ValidatedTextWidget.b(var5, 353));
+                var3.write(ValidatedTextWidget.encodeSingleByteText(var5, 353));
                 this.field_o = new DataInputStream(var4.getInputStream());
               }
               this.field_l.position = 0;
@@ -217,7 +217,7 @@ final class JaggrabDownloader implements Runnable {
           this.field_b = param1;
           this.field_l = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ll.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ll.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

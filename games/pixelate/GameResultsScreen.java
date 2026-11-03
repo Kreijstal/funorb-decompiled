@@ -122,8 +122,8 @@ final class GameResultsScreen extends MenuScreen {
           var5.drawText(IconTextComponent.field_Lb, 120, var6, 0, -1);
           var5.drawRightAlignedText(Integer.toString(this.field_J), 540, var6, 1, -1);
           var6 = var6 + var7;
-          SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
-          SoftwareRasterizer.d(120, var6 - 2, 420, 3, 16777215);
+          SoftwareRasterizer.fillRectangle(118, var6 - 5, 424, 9, 0);
+          SoftwareRasterizer.fillRectangle(120, var6 - 2, 420, 3, 16777215);
           var6 = var6 + var7;
           var5.drawText(he.field_c, 120, var6, 0, -1);
           var5.drawRightAlignedText(this.field_K, 540, var6, 1, -1);
@@ -152,8 +152,8 @@ final class GameResultsScreen extends MenuScreen {
             var5.drawText(ep.field_d, 120, var6, 0, -1);
             var5.drawRightAlignedText(this.field_y, 540, var6, 1, -1);
             var6 = var6 + var7;
-            SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
-            SoftwareRasterizer.d(120, var6 - 2, 420, 3, 16777215);
+            SoftwareRasterizer.fillRectangle(118, var6 - 5, 424, 9, 0);
+            SoftwareRasterizer.fillRectangle(120, var6 - 2, 420, 3, 16777215);
             var6 = var6 + var7;
             var5.drawCentered(this.field_u, 330, var6, 0, -1);
           }
@@ -269,7 +269,7 @@ final class GameResultsScreen extends MenuScreen {
           super.c(0);
         } else {
           ro.field_e.a(false, param0 ^ 0);
-          SoftwareRasterizer.a(0, 0, 640, 480);
+          SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
           rh.b((byte) -75);
         }
     }
@@ -348,7 +348,7 @@ final class GameResultsScreen extends MenuScreen {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -423,7 +423,7 @@ final class GameResultsScreen extends MenuScreen {
             this.e(79);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hq.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hq.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

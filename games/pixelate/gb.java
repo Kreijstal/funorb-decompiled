@@ -20,7 +20,7 @@ final class gb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = ub.a(param1, 0, "", (char)param2);
+          param1 = ub.replaceCharacter(param1, 0, "", (char)param2);
           var3 = EmailValidator.b(param2 ^ 95, param1);
           stackIn_5_0 = (param0.indexOf(param1) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_5_0;
@@ -40,7 +40,7 @@ final class gb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

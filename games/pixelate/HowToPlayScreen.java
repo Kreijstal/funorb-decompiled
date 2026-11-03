@@ -88,7 +88,7 @@ final class HowToPlayScreen extends MenuScreen {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -207,9 +207,9 @@ final class HowToPlayScreen extends MenuScreen {
             var9.cells[3] = (byte)2;
             var9.cells[2] = (byte) 1;
             var9.cells[7] = (byte) 1;
-            SoftwareRasterizer.f(0, 0, 640, 389);
+            SoftwareRasterizer.setClip(0, 0, 640, 389);
             var10.a(false);
-            SoftwareRasterizer.c();
+            SoftwareRasterizer.resetClip();
           } else {
             if (this.field_r != 2) {
               if (this.field_r == 3) {
@@ -261,13 +261,13 @@ final class HowToPlayScreen extends MenuScreen {
                       }
                     } else {
                       var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
-                      SoftwareRasterizer.f(0, 0, 640, 389);
+                      SoftwareRasterizer.setClip(0, 0, 640, 389);
                       PasswordValidator.field_r.a(false);
                       an.field_b.a(false);
                       DiskCacheRequest.field_H.c((byte) 119);
                       BoundedRandomAccessFile.field_g.a(55, 0, 0);
                       DialWidgetPainter.field_a.a(60, 0, 0);
-                      SoftwareRasterizer.c();
+                      SoftwareRasterizer.resetClip();
                     }
                   }
                 }

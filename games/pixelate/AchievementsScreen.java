@@ -109,9 +109,9 @@ final class AchievementsScreen extends MenuScreen {
               SoftwareRasterizer.a(var7 - 3, -3 + var8, 38, 38, 6, 0, 128);
             }
             if (var5 == jn.field_v) {
-              SoftwareRasterizer.e(var7 - 3, var8 - 3, 38, 38, 6, 16777215);
+              SoftwareRasterizer.drawRoundedRectangle(var7 - 3, var8 - 3, 38, 38, 6, 16777215);
             }
-            var6_ref_tf.e(var7, var8);
+            var6_ref_tf.drawQuarterSize(var7, var8);
           }
         }
         if (jm.field_j == -1) {

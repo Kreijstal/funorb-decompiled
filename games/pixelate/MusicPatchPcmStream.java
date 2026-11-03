@@ -117,7 +117,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -183,20 +183,20 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               var11 = param0.field_G;
               if (this.sequencer.field_o[param0.field_I] == 0) {
-                param0.field_G = PcmSampleStream.a(param0.field_F, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.panQ14());
+                param0.field_G = PcmSampleStream.createAtStepQ8(param0.field_F, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.panQ14());
               } else {
-                param0.field_G = PcmSampleStream.a(param0.field_F, var11.getSampleStepMagnitude(), 0, var11.panQ14());
+                param0.field_G = PcmSampleStream.createAtStepQ8(param0.field_F, var11.getSampleStepMagnitude(), 0, var11.panQ14());
                 stackIn_11_0 = this.sequencer;
                 stackIn_12_1 = !(param0.field_x.field_u[param0.field_A] >= 0);
                 ((MidiPcmStream) (Object) stackIn_11_0).a(stackIn_12_1, (byte) 118, param0);
                 param0.field_G.rampVolumeQ6(var9, var11.getTargetVolume());
               }
               if (0 > param0.field_x.field_u[param0.field_A]) {
-                param0.field_G.g(-1);
+                param0.field_G.setLoopCount(-1);
               }
-              var11.e(var9);
+              var11.fadeOut(var9);
               var11.mixInto(param3, param2, -param2 + param1);
-              if (!var11.k()) {
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_o.a(var11);
@@ -220,7 +220,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -256,15 +256,15 @@ final class MusicPatchPcmStream extends PcmStream {
             param2.field_n = param2.field_n + param0 * var4_int & 1048575;
             if (var5 <= param0) {
               if (this.sequencer.field_o[param2.field_I] != 0) {
-                param2.field_G = PcmSampleStream.a(param2.field_F, param2.field_G.getSampleStepMagnitude(), 0, param2.field_G.panQ14());
+                param2.field_G = PcmSampleStream.createAtStepQ8(param2.field_F, param2.field_G.getSampleStepMagnitude(), 0, param2.field_G.panQ14());
                 stackIn_8_0 = this.sequencer;
                 stackIn_9_1 = !(param2.field_x.field_u[param2.field_A] >= 0);
                 ((MidiPcmStream) (Object) stackIn_8_0).a(stackIn_9_1, (byte) 118, param2);
               } else {
-                param2.field_G = PcmSampleStream.a(param2.field_F, param2.field_G.getSampleStepMagnitude(), param2.field_G.getTargetVolume(), param2.field_G.panQ14());
+                param2.field_G = PcmSampleStream.createAtStepQ8(param2.field_F, param2.field_G.getSampleStepMagnitude(), param2.field_G.getTargetVolume(), param2.field_G.panQ14());
               }
               if (param2.field_x.field_u[param2.field_A] < 0) {
-                param2.field_G.g(-1);
+                param2.field_G.setLoopCount(-1);
               }
               param0 = param2.field_n / var4_int;
             }
@@ -285,7 +285,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -295,7 +295,7 @@ final class MusicPatchPcmStream extends PcmStream {
         try {
           this.sequencer = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

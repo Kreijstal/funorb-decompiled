@@ -54,7 +54,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Pixelate.field_H ? 1 : 0;
-        SoftwareRasterizer.g(param0 + 6, 35 + param1, -12 + this.field_E, -40 + this.field_C, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(param0 + 6, 35 + param1, -12 + this.field_E, -40 + this.field_C, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -213,7 +213,7 @@ abstract class ResizableModalPanel extends ModalPanel {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            SoftwareRasterizer.b(var10 + param0, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param0, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -226,8 +226,8 @@ abstract class ResizableModalPanel extends ModalPanel {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          SoftwareRasterizer.b(param0, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.b(-6 + (param0 + this.field_E), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (param0 + this.field_E), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -245,8 +245,8 @@ abstract class ResizableModalPanel extends ModalPanel {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = (var6Lifetime2 - var5Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          SoftwareRasterizer.b(param0, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.b(this.field_E + param0 - 6, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(this.field_E + param0 - 6, var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

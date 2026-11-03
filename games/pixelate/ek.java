@@ -20,7 +20,7 @@ final class ek {
           }
           AlphaContainer.field_L = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ek.B(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ek.B(" + param0 + ')');
         }
     }
 

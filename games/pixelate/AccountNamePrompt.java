@@ -267,55 +267,55 @@ final class AccountNamePrompt extends SceneWidget {
         Sprite var9 = new Sprite(16, param3);
         var9.c();
         if (param4) {
-          SoftwareRasterizer.g(0, 0, 16, param3, param5, param2);
+          SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param5, param2);
           var10 = null;
           if (param0) {
             var19 = var9.a();
             var10 = var19;
             var19.c();
-            SoftwareRasterizer.b(0, 0, 5, 0);
-            SoftwareRasterizer.b(0, 1, 3, 0);
-            SoftwareRasterizer.b(0, 2, 2, 0);
-            SoftwareRasterizer.b(0, 3, 1, 0);
-            SoftwareRasterizer.b(0, 4, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
           }
           var11 = null;
           if (param1) {
             var20 = var9.a();
             var11 = var20;
             var20.c();
-            SoftwareRasterizer.b(11, 0, 5, 0);
-            SoftwareRasterizer.b(13, 1, 3, 0);
-            SoftwareRasterizer.b(14, 2, 2, 0);
-            SoftwareRasterizer.b(15, 3, 1, 0);
-            SoftwareRasterizer.b(15, 4, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+            SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+            SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+            SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
           }
           SoftwareRasterizer.a(var16, var7, var8);
           return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         field_Kb = 20;
-        SoftwareRasterizer.g(0, 0, 16, param3, param5, param2);
+        SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param5, param2);
         var10 = null;
         if (param0) {
           var17 = var9.a();
           var10 = var17;
           var17.c();
-          SoftwareRasterizer.b(0, 0, 5, 0);
-          SoftwareRasterizer.b(0, 1, 3, 0);
-          SoftwareRasterizer.b(0, 2, 2, 0);
-          SoftwareRasterizer.b(0, 3, 1, 0);
-          SoftwareRasterizer.b(0, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         var11 = null;
         if (param1) {
           var18 = var9.a();
           var11 = var18;
           var18.c();
-          SoftwareRasterizer.b(11, 0, 5, 0);
-          SoftwareRasterizer.b(13, 1, 3, 0);
-          SoftwareRasterizer.b(14, 2, 2, 0);
-          SoftwareRasterizer.b(15, 3, 1, 0);
-          SoftwareRasterizer.b(15, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
         SoftwareRasterizer.a(var16, var7, var8);
         return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
@@ -451,7 +451,7 @@ final class AccountNamePrompt extends SceneWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

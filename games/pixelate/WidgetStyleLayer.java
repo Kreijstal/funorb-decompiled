@@ -14,7 +14,7 @@ final class WidgetStyleLayer {
     private int field_a;
     static ResourceArchive field_f;
 
-    final void a(WidgetStyleLayer param0, int param1, StatefulTextPainter param2, byte param3, int param4, UiComponent param5) {
+    final void applyTo(WidgetStyleLayer param0, int param1, StatefulTextPainter param2, byte param3, int param4, UiComponent param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -75,7 +75,7 @@ final class WidgetStyleLayer {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class WidgetStyleLayer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "lf.I(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "lf.I(" + param0 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class WidgetStyleLayer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class WidgetStyleLayer {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class WidgetStyleLayer {
           param0.field_c = this.field_c;
           param0.field_k = this.field_k;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lf.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lf.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

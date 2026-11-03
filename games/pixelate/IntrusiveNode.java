@@ -11,7 +11,7 @@ class IntrusiveNode {
     static String field_g;
     static String field_d;
     static String field_i;
-    IntrusiveNode field_h;
+    IntrusiveNode previous;
 
     final static void a(String[] args, ResourceArchive param1, int[] param2, byte param3, Sprite[][] param4, int param5, byte[] param6, Sprite[][] param7, String[] param8, String[][] param9, String[][] param10, String[] param11, int param12, int param13, byte[] param14) {
         IconTextComponent[] array$0 = null;
@@ -79,10 +79,10 @@ class IntrusiveNode {
           bg.field_d = param14;
           AchievementIcon.field_q = param10;
           dk.field_a = param4;
-          DraggableWidget.field_P = SocketConnector.a("gameprivacy", "lobby", (byte) 47, param1);
-          fd.field_c = SocketConnector.a("ratedgame", "lobby", (byte) 47, param1);
-          EmailCredentials.field_h = SocketConnector.a("opentome", "lobby", (byte) 47, param1);
-          PuzzlePieceQueue.field_d = SocketConnector.a("allowspectators", "lobby", (byte) 47, param1);
+          DraggableWidget.field_P = SocketConnector.loadRgbSpritesByName("gameprivacy", "lobby", (byte) 47, param1);
+          fd.field_c = SocketConnector.loadRgbSpritesByName("ratedgame", "lobby", (byte) 47, param1);
+          EmailCredentials.field_h = SocketConnector.loadRgbSpritesByName("opentome", "lobby", (byte) 47, param1);
+          PuzzlePieceQueue.field_d = SocketConnector.loadRgbSpritesByName("allowspectators", "lobby", (byte) 47, param1);
           AchievementsScreen.field_p = new String[5];
           AchievementsScreen.field_p[3] = QuickChatCategoryCache.field_c;
           AchievementsScreen.field_p[2] = cl.field_b;
@@ -344,7 +344,7 @@ class IntrusiveNode {
           } else {
             stackIn_110_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
         }
     }
 
@@ -360,7 +360,7 @@ class IntrusiveNode {
     }
 
     final boolean b(int param0) {
-        if (this.field_h == null) {
+        if (this.previous == null) {
           return false;
         }
         if (param0 != 0) {
@@ -371,16 +371,16 @@ class IntrusiveNode {
     }
 
     final void c(int param0) {
-        if (this.field_h == null) {
+        if (this.previous == null) {
           return;
         }
-        this.field_h.field_a = this.field_a;
+        this.previous.field_a = this.field_a;
         if (param0 != 2779) {
           return;
         }
-        this.field_a.field_h = this.field_h;
+        this.field_a.previous = this.previous;
         this.field_a = null;
-        this.field_h = null;
+        this.previous = null;
     }
 
     static {

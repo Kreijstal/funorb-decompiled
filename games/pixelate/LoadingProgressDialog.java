@@ -39,7 +39,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_ab = false;
           this.b(this.field_bb, 80);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           super.a(param0, param1, param2);
           ba.field_d.drawCentered(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
           if (this.field_gb != null) {
-            SoftwareRasterizer.b(param0 + 20, 120 + param1 - 7, 260, 8421504);
+            SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + param1 - 7, 260, 8421504);
             ba.field_d.drawParagraph(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.maxAscent);
             return;
           }
@@ -73,7 +73,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         if (this.field_gb == null) {
           return;
         }
-        SoftwareRasterizer.b(param0 + 20, 120 + param1 - 7, 260, 8421504);
+        SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + param1 - 7, 260, 8421504);
         ba.field_d.drawParagraph(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.maxAscent);
     }
 
@@ -116,7 +116,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           MainMenuScreen.field_r = new AccountRequestDialog(wa.field_c, ba.field_d, param1, MainMenuScreen.field_s, ke.field_d);
           wa.field_c.b(param2 ^ 32140, MainMenuScreen.field_r);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ko.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ko.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -124,16 +124,16 @@ final class el {
         }
         IntArraySorter.a(var18, param2);
         if (param3 <= -8) {
-          SoftwareRasterizer.c(param4, param0, (int)(param6 - 0.5f), param2);
-          SoftwareRasterizer.c(param1, param5, (int)(-0.5f + param6), param2);
+          SoftwareRasterizer.fillCircle(param4, param0, (int)(param6 - 0.5f), param2);
+          SoftwareRasterizer.fillCircle(param1, param5, (int)(-0.5f + param6), param2);
           return;
         }
         field_b = -46;
-        SoftwareRasterizer.c(param4, param0, (int)(param6 - 0.5f), param2);
-        SoftwareRasterizer.c(param1, param5, (int)(-0.5f + param6), param2);
+        SoftwareRasterizer.fillCircle(param4, param0, (int)(param6 - 0.5f), param2);
+        SoftwareRasterizer.fillCircle(param1, param5, (int)(-0.5f + param6), param2);
     }
 
-    final static ResourceArchive a(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
+    final static ResourceArchive createResourceArchive(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
@@ -141,27 +141,27 @@ final class el {
           ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 >= -100) {
-            el.a(68, true, true, -71, -103, true);
+            el.createResourceArchive(68, true, true, -71, -103, true);
           }
           try {
             var6 = null;
             var7 = null;
-            if (ef.field_e.field_k != null) {
-              Js5NetworkRequest.field_G = new BufferedRandomAccessFile(ef.field_e.field_k, 5200, 0);
-              ef.field_e.field_k = null;
+            if (ef.field_e.cacheDataFile != null) {
+              Js5NetworkRequest.field_G = new BufferedRandomAccessFile(ef.field_e.cacheDataFile, 5200, 0);
+              ef.field_e.cacheDataFile = null;
               var6 = new SectorCacheStore(255, Js5NetworkRequest.field_G, new BufferedRandomAccessFile(ef.field_e.field_m, 12000, 0), 2097152);
             }
             if (null != Js5NetworkRequest.field_G) {
               if (ug.field_l == null) {
-                ug.field_l = new BufferedRandomAccessFile[ef.field_e.field_u.length];
+                ug.field_l = new BufferedRandomAccessFile[ef.field_e.cacheIndexFiles.length];
               }
               if (null == ug.field_l[param3]) {
-                ug.field_l[param3] = new BufferedRandomAccessFile(ef.field_e.field_u[param3], 12000, 0);
-                ef.field_e.field_u[param3] = null;
+                ug.field_l[param3] = new BufferedRandomAccessFile(ef.field_e.cacheIndexFiles[param3], 12000, 0);
+                ef.field_e.cacheIndexFiles[param3] = null;
               }
               var7 = new SectorCacheStore(param3, Js5NetworkRequest.field_G, ug.field_l[param3], 2097152);
             }
-            var8 = ck.field_j.a(param2, 6, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            var8 = ck.field_j.getArchiveSource(param2, 6, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param5) {
               var8.a(true);
             }

@@ -91,7 +91,7 @@ final class KiteBackground extends BackgroundScene {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class KiteBackground extends BackgroundScene {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "se.J(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "se.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class KiteBackground extends BackgroundScene {
         int var3 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         int var3Lifetime1;
-        SoftwareRasterizer.g(0, 0, 640, 480, 8874, 3368703);
+        SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, 8874, 3368703);
         if (param0) {
           return;
         }
@@ -169,7 +169,7 @@ final class KiteBackground extends BackgroundScene {
         PasswordFieldPainter.field_y = bi.a("benefits", "members_benefits_borders", MenuInputState.field_d, (byte) -89);
         MusicPatchPcmStream.field_p = bi.a("benefits", "members_benefits_price", MenuInputState.field_d, (byte) -70);
         SpriteState.field_t = bi.a("benefits", "members_benefits_logo", MenuInputState.field_d, (byte) -118);
-        li.field_h = SocketConnector.a("members_benefits_screenshots", "benefits", (byte) 47, MenuInputState.field_d);
+        li.field_h = SocketConnector.loadRgbSpritesByName("members_benefits_screenshots", "benefits", (byte) 47, MenuInputState.field_d);
         bl.a(11833, PasswordFieldPainter.field_y, SoundCache.field_e);
         ni.a(MusicPatchPcmStream.field_p, 2, 40, 40, 80, false, -2400, 15, rk.field_e, 80, 0);
         pb.a(-25960, li.field_h);
@@ -215,7 +215,7 @@ final class KiteBackground extends BackgroundScene {
           this.field_m[2] = new fo(2200, 500, 140, 900, 1000);
           this.field_m[3] = new fo(2600, 230, 220, 700, 1000);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "se.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "se.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

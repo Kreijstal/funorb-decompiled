@@ -32,7 +32,7 @@ final class BoundedRandomAccessFile {
           }
           if (param3 != -22165) {
             var6 = (QuickChatCategory) null;
-            BoundedRandomAccessFile.a((SceneWidget) null, (SceneWidget) null, 33, (SceneWidget) null, (QuickChatCategory) null);
+            BoundedRandomAccessFile.buildQuickChatCategoryMenu((SceneWidget) null, (SceneWidget) null, 33, (SceneWidget) null, (QuickChatCategory) null);
           }
           stackIn_7_0 = param2 + " - " + param0.a(param4, (byte) -78) + "%";
           return stackIn_7_0;
@@ -58,7 +58,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class BoundedRandomAccessFile {
           }
           this.field_e.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -233,11 +233,11 @@ final class BoundedRandomAccessFile {
           this.field_e.write(param1, param2, param0);
           this.field_a = this.field_a + (long)param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static QuickChatMenu a(SceneWidget param0, SceneWidget param1, int param2, SceneWidget param3, QuickChatCategory param4) {
+    final static QuickChatMenu buildQuickChatCategoryMenu(SceneWidget param0, SceneWidget param1, int param2, SceneWidget param3, QuickChatCategory param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -305,7 +305,7 @@ final class BoundedRandomAccessFile {
               var13_ref_qe = StatefulTextPainter.field_y.a(param4.subcategoryIds[var12], false);
               var8[var12] = var13_ref_qe.field_C;
               var9[var12] = param4.field_x[var12];
-              var11[var12] = BoundedRandomAccessFile.a(param0, param1, -113, param3, var13_ref_qe);
+              var11[var12] = BoundedRandomAccessFile.buildQuickChatCategoryMenu(param0, param1, -113, param3, var13_ref_qe);
             }
           }
           if (null != param4.phraseIds) {
@@ -359,7 +359,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 

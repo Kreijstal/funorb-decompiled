@@ -17,7 +17,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_f = null;
           var1 = null;
         } else {
-          this.field_f = ((DualLinkNode) (var1)).field_p;
+          this.field_f = ((DualLinkNode) (var1)).secondaryNext;
         }
         this.field_e = (DualLinkNode) (var1);
         return var1;
@@ -40,7 +40,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           NodeHashTable.field_c = param3;
           AudioService.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -128,10 +128,10 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.field_e = null;
         try {
           this.field_d = param0;
-          this.field_f = this.field_d.field_a.field_p;
+          this.field_f = this.field_d.field_a.secondaryNext;
           this.field_e = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -47,7 +47,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "vf.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "vf.E(" + param0 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "vf.A(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "vf.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class vf {
             if (0 >= var10) {
               stackIn_21_1 = var6.field_Fb;
             } else {
-              stackIn_21_1 = BitmapFont.a(var6.field_Pb.font, var6.field_Fb, var10);
+              stackIn_21_1 = BitmapFont.truncateWithEllipsis(var6.field_Pb.font, var6.field_Fb, var10);
             }
             stackIn_20_0.field_cb = stackIn_21_1;
             stackIn_24_0 = (var6.field_Pb.field_cb.equals(var6.field_Fb)) ? 0 : 1;
@@ -215,7 +215,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "vf.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "vf.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -264,7 +264,7 @@ final class vf {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

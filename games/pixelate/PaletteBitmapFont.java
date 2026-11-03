@@ -5,7 +5,7 @@ final class PaletteBitmapFont extends BitmapFont {
     int[][] colorPalettes;
     private byte[][] glyphPaletteIndices;
 
-    private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitPaletteGlyph(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         byte dupTemp$4 = 0;
@@ -202,7 +202,7 @@ final class PaletteBitmapFont extends BitmapFont {
           if (!param7) {
             PaletteBitmapFont.a(0, SoftwareRasterizer.field_k, this.glyphPaletteIndices[param0], this.colorPalettes[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.field_k, this.glyphPaletteIndices[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.field_k, this.glyphPaletteIndices[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
@@ -248,9 +248,9 @@ final class PaletteBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            PaletteBitmapFont.a(0, SoftwareRasterizer.field_k, this.glyphPaletteIndices[param0], this.colorPalettes[param5], var11, var8, param3, param4, var9, var10);
+            PaletteBitmapFont.blitPaletteGlyph(0, SoftwareRasterizer.field_k, this.glyphPaletteIndices[param0], this.colorPalettes[param5], var11, var8, param3, param4, var9, var10);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.field_k, this.glyphPaletteIndices[param0], param5, var11, var8, param3, param4, var9, var10);
+            BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.field_k, this.glyphPaletteIndices[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }

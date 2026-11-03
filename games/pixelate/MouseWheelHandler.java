@@ -9,7 +9,7 @@ abstract class MouseWheelHandler {
     static id field_b;
     private static String field_z;
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void attach(int param0, java.awt.Component param1);
 
     abstract int b(boolean param0);
 

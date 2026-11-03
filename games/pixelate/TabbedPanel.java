@@ -124,10 +124,10 @@ final class TabbedPanel extends SceneWidget {
                     var16 = 0;
                     var13Lifetime1 = var16;
                     while (var16 < var9) {
-                      var12[var16] = ImageProducerRasterBuffer.a(var10[var16], -113);
+                      var12[var16] = ImageProducerRasterBuffer.loadClassOrPrimitive(var10[var16], -113);
                       var16++;
                     }
-                    var17.field_v[var5] = param3.a(0, var12, var8, ImageProducerRasterBuffer.a(var19, -115));
+                    var17.field_v[var5] = param3.a(0, var12, var8, ImageProducerRasterBuffer.loadClassOrPrimitive(var19, -115));
                     var17.field_w[var5] = var20;
                   }
                 } else {
@@ -140,7 +140,7 @@ final class TabbedPanel extends SceneWidget {
                   }
                   var17.field_r[var5] = var6_int;
                   var17.field_q[var5] = var9;
-                  var17.field_l[var5] = param3.a(var8, ImageProducerRasterBuffer.a(var15, DraggableWidget.a(param0, 121)), (byte) -94);
+                  var17.field_l[var5] = param3.a(var8, ImageProducerRasterBuffer.loadClassOrPrimitive(var15, DraggableWidget.a(param0, 121)), (byte) -94);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,7 +182,7 @@ final class TabbedPanel extends SceneWidget {
             } else {
               stackIn_40_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -267,7 +267,7 @@ final class TabbedPanel extends SceneWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ final class TabbedPanel extends SceneWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

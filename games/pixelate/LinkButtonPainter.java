@@ -12,7 +12,7 @@ final class LinkButtonPainter implements WidgetPainter {
     private BitmapFont font;
     static int field_h;
 
-    final static void a(boolean param0, String param1, int param2, java.applet.Applet param3) {
+    final static void openUrlInNewWindow(boolean param0, String param1, int param2, java.applet.Applet param3) {
         try {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
@@ -55,7 +55,7 @@ final class LinkButtonPainter implements WidgetPainter {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -72,7 +72,7 @@ final class LinkButtonPainter implements WidgetPainter {
             throw new IllegalStateException();
           }
           SoftwareRasterizer.a(var1.field_t, var1.field_q, var1.field_u);
-          SoftwareRasterizer.f(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
+          SoftwareRasterizer.setClip(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
           var1.field_t = null;
           ValidationIndicator.field_O.addFirst(param0 ^ 22065, var1);
           return;
@@ -81,7 +81,7 @@ final class LinkButtonPainter implements WidgetPainter {
           throw new IllegalStateException();
         }
         SoftwareRasterizer.a(var1.field_t, var1.field_q, var1.field_u);
-        SoftwareRasterizer.f(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
+        SoftwareRasterizer.setClip(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
         var1.field_t = null;
         ValidationIndicator.field_O.addFirst(param0 ^ 22065, var1);
     }
@@ -106,7 +106,7 @@ final class LinkButtonPainter implements WidgetPainter {
           this.font = param0;
           this.verticalAlignment = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class LinkButtonPainter implements WidgetPainter {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

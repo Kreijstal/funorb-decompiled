@@ -55,7 +55,7 @@ class AudioOutput {
         if (this.rootStream != null &&
           this.field_m <= 0) {
           this.field_m = this.field_m + (field_h >> 4);
-          AudioOutput.a(this.rootStream);
+          AudioOutput.deactivateTree(this.rootStream);
           this.enqueueByPriority(this.rootStream, this.rootStream.priority());
           var4 = 0;
           var5 = 255;
@@ -165,7 +165,7 @@ class AudioOutput {
         param0.field_m = param1;
     }
 
-    final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput create(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
@@ -338,11 +338,11 @@ class AudioOutput {
     void closeDevice() {
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void setStream(PcmStream param0) {
         this.rootStream = param0;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void configure(int param0, boolean param1, int param2) {
         if (param0 < 8000 ||
           param0 > 48000) {
           throw new IllegalArgumentException();
@@ -389,14 +389,14 @@ class AudioOutput {
         }
     }
 
-    private final static void a(PcmStream param0) {
+    private final static void deactivateTree(PcmStream param0) {
         param0.field_n = false;
         if (param0.field_k != null) {
           param0.field_k.field_k = 0;
         }
         PcmStream var1 = param0.firstSubStream();
         while (var1 != null) {
-          AudioOutput.a(var1);
+          AudioOutput.deactivateTree(var1);
           var1 = param0.nextSubStream();
         }
     }

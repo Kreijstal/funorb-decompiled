@@ -27,7 +27,7 @@ final class AlphaContainer extends SingleChildContainer {
           this.field_O = 256;
           this.child = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class AlphaContainer extends SingleChildContainer {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -186,13 +186,13 @@ final class AlphaContainer extends SingleChildContainer {
           var8.writeShort(1276387944, param1.field_o);
           var8.writeShort(1276387944, param1.field_t);
           var8.writeShort(1276387944, param1.field_p);
-          var8.d(param1.field_s, -93);
-          var8.d(param1.field_v, -71);
-          var8.d(param1.field_l, -40);
-          var8.d(param1.field_n, -71);
+          var8.writeInt(param1.field_s, -93);
+          var8.writeInt(param1.field_v, -71);
+          var8.writeInt(param1.field_l, -40);
+          var8.writeInt(param1.field_n, -71);
           var8.writeByte(160, param1.field_k.length);
           for (var5 = 0; param1.field_k.length > var5; var5++) {
-            var7.d(param1.field_k[var5], -123);
+            var7.writeInt(param1.field_k[var5], -123);
           }
           if (param0 >= -37) {
             field_I = false;
@@ -200,7 +200,7 @@ final class AlphaContainer extends SingleChildContainer {
           var8.b(var4, (byte) 86);
           var8.f(var8.position - var4, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -356,7 +356,7 @@ final class AlphaContainer extends SingleChildContainer {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 

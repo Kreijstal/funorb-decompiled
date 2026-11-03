@@ -20,10 +20,10 @@ final class vm {
 
     final static ResourceArchive a(boolean param0, byte param1, boolean param2, int param3, int param4) {
         if (param1 == 22) {
-          return el.a(-107, param0, false, param3, param4, param2);
+          return el.createResourceArchive(-107, param0, false, param3, param4, param2);
         }
         vm.a(-98, (byte) 84);
-        return el.a(-107, param0, false, param3, param4, param2);
+        return el.createResourceArchive(-107, param0, false, param3, param4, param2);
     }
 
     final static void b(int param0, byte param1) {
@@ -55,7 +55,7 @@ final class vm {
         ib.field_e = 2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 > 77) {
           field_b = null;
@@ -65,7 +65,7 @@ final class vm {
           field_f = null;
           return;
         }
-        vm.a(11);
+        vm.releaseStatics(11);
         field_b = null;
         field_g = null;
         field_c = null;

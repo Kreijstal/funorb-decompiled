@@ -134,14 +134,14 @@ final class CheckboxPainter implements WidgetPainter {
           if (param4) {
             var7 = 16777215;
           }
-          SoftwareRasterizer.d(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, this.field_a);
+          SoftwareRasterizer.fillRectangle(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, this.field_a);
           var8 = this.field_f + (param3 + param0.field_z);
           var9 = param2 + param0.field_p + this.field_l;
           SoftwareRasterizer.c(var8, var9, this.checkboxWidth, this.checkboxHeight, 5592405);
-          SoftwareRasterizer.d(var8, var9, this.checkboxWidth, this.checkboxHeight, var7);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.checkboxWidth, this.checkboxHeight, var7);
           if (var11.field_M) {
-            SoftwareRasterizer.b(var8, var9, var8 + this.checkboxWidth, var9 + this.checkboxHeight, 1);
-            SoftwareRasterizer.b(var8 + this.checkboxWidth, var9, var8, var9 + this.checkboxHeight, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.checkboxWidth, var9 + this.checkboxHeight, 1);
+            SoftwareRasterizer.drawLine(var8 + this.checkboxWidth, var9, var8, var9 + this.checkboxHeight, 1);
           }
           if (this.field_m == null) {
             return;
@@ -159,7 +159,7 @@ final class CheckboxPainter implements WidgetPainter {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class CheckboxPainter implements WidgetPainter {
           this.checkboxHeight = param7;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

@@ -27,7 +27,7 @@ final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
         this.field_c.initialize((com.ms.com._Guid) null);
     }
 
-    final void a(int param0, java.awt.Frame param1) {
+    final void restoreDisplay(int param0, java.awt.Frame param1) {
         this.field_c.restoreDisplayMode();
         this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param1), param0);
     }
@@ -55,7 +55,7 @@ final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4, java.awt.Frame param5) {
+    final void enterFullscreen(int param0, byte param1, int param2, int param3, int param4, java.awt.Frame param5) {
         param5.setVisible(true);
         com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
         int var8 = var7.getHwnd();

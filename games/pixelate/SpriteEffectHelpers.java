@@ -24,10 +24,10 @@ final class SpriteEffectHelpers {
             var7 <= var6) {
             if (var7 >= 5 &&
               var7 < var5) {
-              param3.b(param0, param1 + var7, 256);
+              param3.drawAdditive(param0, param1 + var7, 256);
             }
           } else {
-            SpriteEffectHelpers.a(param3, param0, param1 + var7, param4);
+            SpriteEffectHelpers.drawAdditive(param3, param0, param1 + var7, param4);
           }
         }
     }
@@ -162,7 +162,7 @@ final class SpriteEffectHelpers {
           var6 <= 0) {
           return;
         }
-        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.field_G, 0, var5, var4, var7, var6, var8, var9, param1.indices);
+        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.pixels, 0, var5, var4, var7, var6, var8, var9, param1.indices);
     }
 
     final static void a(int[] param0, int param1, int param2) {
@@ -221,7 +221,7 @@ final class SpriteEffectHelpers {
         }
     }
 
-    private final static void a(Sprite param0, int param1, int param2, int param3) {
+    private final static void drawAdditive(Sprite param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -262,14 +262,14 @@ final class SpriteEffectHelpers {
           var6 <= 0) {
           return;
         }
-        SpriteEffectHelpers.a(0, 0, 0, SoftwareRasterizer.field_k, param0.field_G, var5, 0, var4, 0, var7, var6, var8, var9, param3);
+        SpriteEffectHelpers.a(0, 0, 0, SoftwareRasterizer.field_k, param0.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param3);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int var15 = 0;
         int var15Lifetime1;
         if (!SpriteCheckboxPainter.field_d) {
-          SoftwareRasterizer.b(param0, param1, param2, param3, param6[param5]);
+          SoftwareRasterizer.drawLine(param0, param1, param2, param3, param6[param5]);
           return;
         }
         int var7 = param2 - param0;
@@ -451,7 +451,7 @@ final class SpriteEffectHelpers {
         }
     }
 
-    final static void a(Sprite param0, int param1, int param2) {
+    final static void drawTransparent(Sprite param0, int param1, int param2) {
         int var9 = 0;
         int var3 = param1 + param2 * SoftwareRasterizer.field_j;
         int var4 = 0;
@@ -490,7 +490,7 @@ final class SpriteEffectHelpers {
           var5 <= 0) {
           return;
         }
-        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.field_G, 0, var4, var3, var6, var5, var7, var8);
+        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final static void a(int param0, int param1, int param2, Sprite param3) {
@@ -508,7 +508,7 @@ final class SpriteEffectHelpers {
         Sprite var1 = new Sprite(param0, 1);
         for (var2 = 0; var2 < param0; var2++) {
           var3 = ((var2 > param0 / 2 - 1 ? param0 - var2 - 1 : var2) << 9) / param0;
-          var1.field_G[var2] = 65793 * var3;
+          var1.pixels[var2] = 65793 * var3;
         }
         return var1;
     }
@@ -581,6 +581,6 @@ final class SpriteEffectHelpers {
           var7 <= 0) {
           return;
         }
-        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.field_G, 0, var6, var5, var8, var7, var9, var10, var11, var12);
+        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.pixels, 0, var6, var5, var8, var7, var9, var10, var11, var12);
     }
 }

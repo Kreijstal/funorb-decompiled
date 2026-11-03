@@ -15,20 +15,20 @@ final class IntrusiveDeque {
         if (param0 != 1504642273) {
           IntrusiveNode var3 = (IntrusiveNode) null;
           this.addFirst(46, (IntrusiveNode) null);
-          var2 = this.sentinel.field_h;
+          var2 = this.sentinel.previous;
           if (this.sentinel == var2) {
             this.field_c = null;
             return null;
           }
-          this.field_c = var2.field_h;
+          this.field_c = var2.previous;
           return var2;
         }
-        var2Lifetime1 = this.sentinel.field_h;
+        var2Lifetime1 = this.sentinel.previous;
         if (this.sentinel == var2Lifetime1) {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2Lifetime1.field_h;
+        this.field_c = var2Lifetime1.previous;
         return var2Lifetime1;
     }
 
@@ -88,7 +88,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ final class IntrusiveDeque {
 
     final IntrusiveNode b(int param0) {
         int var2 = -96 % ((-6 - param0) / 48);
-        IntrusiveNode var3 = this.sentinel.field_h;
+        IntrusiveNode var3 = this.sentinel.previous;
         if (var3 != this.sentinel) {
           var3.c(2779);
           return var3;
@@ -186,7 +186,7 @@ final class IntrusiveDeque {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2.field_h;
+        this.field_c = var2.previous;
         if (param0 == 0) {
           return var2;
         }
@@ -196,18 +196,18 @@ final class IntrusiveDeque {
 
     final void addLast(int param0, IntrusiveNode param1) {
         try {
-          if (param1.field_h != null) {
+          if (param1.previous != null) {
             param1.c(2779);
           }
           param1.field_a = this.sentinel.field_a;
-          param1.field_h = this.sentinel;
+          param1.previous = this.sentinel;
           if (param0 != 1392503105) {
             field_e = (String) null;
           }
-          param1.field_h.field_a = param1;
-          param1.field_a.field_h = param1;
+          param1.previous.field_a = param1;
+          param1.field_a.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -224,25 +224,25 @@ final class IntrusiveDeque {
 
     final void addFirst(int param0, IntrusiveNode param1) {
         try {
-          if (param1.field_h != null) {
+          if (param1.previous != null) {
             param1.c(2779);
           }
           if (param0 != 22125) {
             field_e = (String) null;
           }
           param1.field_a = this.sentinel;
-          param1.field_h = this.sentinel.field_h;
-          param1.field_h.field_a = param1;
-          param1.field_a.field_h = param1;
+          param1.previous = this.sentinel.previous;
+          param1.previous.field_a = param1;
+          param1.field_a.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public IntrusiveDeque() {
         this.sentinel = new IntrusiveNode();
         this.sentinel.field_a = this.sentinel;
-        this.sentinel.field_h = this.sentinel;
+        this.sentinel.previous = this.sentinel;
     }
 
     static {

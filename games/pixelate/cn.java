@@ -66,8 +66,8 @@ final class cn {
               if (param3) {
                 var9 = var9 | 1;
               }
-              GameModeSelectScreen.field_v.d(Bzip2State.field_d.nextInt(), -49);
-              GameModeSelectScreen.field_v.d(Bzip2State.field_d.nextInt(), -62);
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -49);
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -62);
               GameModeSelectScreen.field_v.a((byte) -66, var14);
               GameModeSelectScreen.field_v.a((byte) -66, var8);
               var15 = (CharSequence) ((Object) param0);
@@ -87,8 +87,8 @@ final class cn {
               aa.field_f.c(7519, aa.field_f.position - var10);
             } else {
               GameModeSelectScreen.field_v.position = 0;
-              GameModeSelectScreen.field_v.d(Bzip2State.field_d.nextInt(), -90);
-              GameModeSelectScreen.field_v.d(Bzip2State.field_d.nextInt(), -68);
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -90);
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -68);
               stackIn_13_0 = GameModeSelectScreen.field_v;
               stackIn_13_1 = -66;
               if (!param6.b((byte) -25)) {
@@ -214,7 +214,7 @@ final class cn {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ final class cn {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

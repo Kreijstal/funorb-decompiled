@@ -45,8 +45,8 @@ final class ra {
         var11_ref_tf__ = var10;
         for (var12 = 0; var12 < var11_ref_tf__.length; var12++) {
           var13 = var11_ref_tf__[var12];
-          for (var14 = 0; var13.field_G.length > var14; var14++) {
-            var13.field_G[var14] = param3;
+          for (var14 = 0; var13.pixels.length > var14; var14++) {
+            var13.pixels[var14] = param3;
           }
         }
         if (param5 <= 104) {
@@ -54,36 +54,36 @@ final class ra {
         }
         for (var11 = 0; param8 > var11; var11++) {
           for (var12Lifetime1 = 0; var12Lifetime1 < var9; var12Lifetime1++) {
-            var10[6].field_G[var12Lifetime1 + var9 * (-1 - var11 + var9)] = param6;
-            var10[8].field_G[(var9 - var11 - 1) * var9 + var12Lifetime1] = param6;
-            var10[2].field_G[var12Lifetime1 * var9 - (-var9 + 1) - var11] = param6;
-            var10[8].field_G[-var11 + var9 - 1 + var12Lifetime1 * var9] = param6;
+            var10[6].pixels[var12Lifetime1 + var9 * (-1 - var11 + var9)] = param6;
+            var10[8].pixels[(var9 - var11 - 1) * var9 + var12Lifetime1] = param6;
+            var10[2].pixels[var12Lifetime1 * var9 - (-var9 + 1) - var11] = param6;
+            var10[8].pixels[-var11 + var9 - 1 + var12Lifetime1 * var9] = param6;
           }
         }
         for (var11Lifetime1 = 0; var11Lifetime1 < param8; var11Lifetime1++) {
           for (var12Lifetime2 = 0; var12Lifetime2 < var9; var12Lifetime2++) {
-            var10[0].field_G[var9 * var11Lifetime1 + var12Lifetime2] = param2;
-            var10[0].field_G[var11Lifetime1 + var9 * var12Lifetime2] = param2;
+            var10[0].pixels[var9 * var11Lifetime1 + var12Lifetime2] = param2;
+            var10[0].pixels[var11Lifetime1 + var9 * var12Lifetime2] = param2;
             if ((var9 - var11Lifetime1) > var12Lifetime2) {
-              var10[2].field_G[var11Lifetime1 * var9 + var12Lifetime2] = param2;
-              var10[6].field_G[var11Lifetime1 + var12Lifetime2 * var9] = param2;
+              var10[2].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param2;
+              var10[6].pixels[var11Lifetime1 + var12Lifetime2 * var9] = param2;
             }
           }
         }
         for (var11Lifetime2 = 0; param4 > var11Lifetime2; var11Lifetime2++) {
           for (var12Lifetime3 = 0; var12Lifetime3 < param8; var12Lifetime3++) {
-            var10[7].field_G[param4 * (-var12Lifetime3 + (var9 - 1)) + var11Lifetime2] = param6;
-            var10[5].field_G[-var12Lifetime3 - (-var9 - (-1 + var9 * var11Lifetime2))] = param6;
-            var10[1].field_G[var11Lifetime2 + param4 * var12Lifetime3] = param2;
-            var10[3].field_G[var11Lifetime2 * var9 + var12Lifetime3] = param2;
+            var10[7].pixels[param4 * (-var12Lifetime3 + (var9 - 1)) + var11Lifetime2] = param6;
+            var10[5].pixels[-var12Lifetime3 - (-var9 - (-1 + var9 * var11Lifetime2))] = param6;
+            var10[1].pixels[var11Lifetime2 + param4 * var12Lifetime3] = param2;
+            var10[3].pixels[var11Lifetime2 * var9 + var12Lifetime3] = param2;
           }
         }
         for (var11Lifetime3 = 0; param4 >> 1 > var11Lifetime3; var11Lifetime3++) {
           for (var12Lifetime4 = 0; var12Lifetime4 < param1; var12Lifetime4++) {
-            var10[1].field_G[var11Lifetime3 + param4 * (-1 + (-var12Lifetime4 + var9))] = param7;
-            var10[3].field_G[var9 * var11Lifetime3 - (1 - var9 + var12Lifetime4)] = param7;
-            var10[7].field_G[var11Lifetime3 + param4 * var12Lifetime4] = param7;
-            var10[5].field_G[var11Lifetime3 * var9 + var12Lifetime4] = param7;
+            var10[1].pixels[var11Lifetime3 + param4 * (-1 + (-var12Lifetime4 + var9))] = param7;
+            var10[3].pixels[var9 * var11Lifetime3 - (1 - var9 + var12Lifetime4)] = param7;
+            var10[7].pixels[var11Lifetime3 + param4 * var12Lifetime4] = param7;
+            var10[5].pixels[var11Lifetime3 * var9 + var12Lifetime4] = param7;
           }
         }
         return var10;

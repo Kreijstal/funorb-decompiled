@@ -12,7 +12,7 @@ final class MidiFileReader {
     private int[] trackStarts;
     private long timeOffset;
 
-    public static void g() {
+    public static void releaseMessageTable() {
         field_a = null;
     }
 

@@ -79,7 +79,7 @@ final class PauseMenuScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ol.I(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ol.I(" + param0 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class PauseMenuScreen extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

@@ -112,7 +112,7 @@ final class GameplayScreen extends MenuScreen {
           }
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dp.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dp.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -152,11 +152,11 @@ final class GameplayScreen extends MenuScreen {
           var6 = 2 + var4 * fq.field_q;
           var7 = ui.a(12, var2_int, var5, (byte) -1);
           var8 = pj.a(var6, var3, 20, (byte) 112);
-          SoftwareRasterizer.a(var7, var8, var5, var6, 0);
-          SoftwareRasterizer.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
           TextFieldValidator.field_h.font.drawParagraph(param0, 3 + var7, TickClock.field_d + (1 + (var8 - TextFieldValidator.field_h.font.maxAscent)), 500, 1000, 0, -1, 0, 0, fq.field_q);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class GameplayScreen extends MenuScreen {
           } else {
             var4.a(false, param0 + param0);
             if (this.field_l == 1) {
-              SoftwareRasterizer.a(0, 0, 640, 480);
+              SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
               rh.b((byte) 121);
             }
           }
@@ -194,7 +194,7 @@ final class GameplayScreen extends MenuScreen {
             } else {
               var3.a(false, param0 + param0);
               if (this.field_l == 1) {
-                SoftwareRasterizer.a(0, 0, 640, 480);
+                SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
                 rh.b((byte) 121);
               }
             }
@@ -205,7 +205,7 @@ final class GameplayScreen extends MenuScreen {
               } else {
                 ((MatchController) (var2)).a(false, param0 + param0);
                 if (this.field_l == 1) {
-                  SoftwareRasterizer.a(0, 0, 640, 480);
+                  SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
                   rh.b((byte) 121);
                 }
               }
@@ -216,7 +216,7 @@ final class GameplayScreen extends MenuScreen {
               } else {
                 var5.a(false, param0 + param0);
                 if (this.field_l == 1) {
-                  SoftwareRasterizer.a(0, 0, 640, 480);
+                  SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
                   rh.b((byte) 121);
                 }
               }

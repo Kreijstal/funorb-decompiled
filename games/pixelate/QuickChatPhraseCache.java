@@ -24,7 +24,7 @@ final class QuickChatPhraseCache {
           }
           tj.a(param8, param11, param10, param5, param7, param6, param4, param0, param9, param2, param7, (byte) 122, param3, param0, param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "u.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + param11 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "u.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + param11 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class QuickChatPhraseCache {
         return var3Lifetime1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_k = null;
         field_e = null;
@@ -116,14 +116,14 @@ final class QuickChatPhraseCache {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     final static void a(boolean param0, int param1) {
         qh.a((byte) -110, 10, bj.field_c[param1], true);
         if (param0) {
-          QuickChatPhraseCache.a(-24);
+          QuickChatPhraseCache.releaseStatics(-24);
         }
     }
 

@@ -12,7 +12,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private static volatile long field_c;
     private static String field_r;
     static String field_l;
-    BoundedRandomAccessFile field_k;
+    BoundedRandomAccessFile cacheDataFile;
     private PlatformTask field_q;
     private static String field_i;
     private Object field_g;
@@ -25,7 +25,7 @@ final class PlatformTaskDispatcher implements Runnable {
     static String field_o;
     private static String field_a;
     private static int field_t;
-    BoundedRandomAccessFile[] field_u;
+    BoundedRandomAccessFile[] cacheIndexFiles;
     private DisplayModeEnumerator field_s;
     BoundedRandomAccessFile field_e;
 
@@ -130,9 +130,9 @@ final class PlatformTaskDispatcher implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref = (InterruptedException) (Object) decompiledCaughtException;
           }
-          if (this.field_k != null) {
+          if (this.cacheDataFile != null) {
             try {
-              this.field_k.b(-5317);
+              this.cacheDataFile.b(-5317);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -146,11 +146,11 @@ final class PlatformTaskDispatcher implements Runnable {
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
             }
           }
-          if (this.field_u != null) {
-            for (var2_int = 0; this.field_u.length > var2_int; var2_int++) {
-              if (this.field_u[var2_int] != null) {
+          if (this.cacheIndexFiles != null) {
+            for (var2_int = 0; this.cacheIndexFiles.length > var2_int; var2_int++) {
+              if (this.cacheIndexFiles[var2_int] != null) {
                 try {
-                  this.field_u[var2_int].b(-5317);
+                  this.cacheIndexFiles[var2_int].b(-5317);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -252,12 +252,12 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_v) {
                           Class.forName("FullscreenDisplayController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_g, new Object[]{var16, new Integer(var8.field_a >>> 16), new Integer(65535 & var8.field_a), new Integer(var8.field_c >> 16), new Integer(65535 & var8.field_c)});
                         } else {
-                          this.field_s.a(65535 & var8.field_a, (byte) 122, 65535 & var8.field_c, var8.field_c >> 16, var8.field_a >>> 16, var16);
+                          this.field_s.enterFullscreen(65535 & var8.field_a, (byte) 122, 65535 & var8.field_c, var8.field_c >> 16, var8.field_a >>> 16, var16);
                         }
                         break;
                       case 7:
                         if (this.field_v) {
-                          this.field_s.a(8, (java.awt.Frame) (var8.field_g));
+                          this.field_s.restoreDisplay(8, (java.awt.Frame) (var8.field_g));
                         } else {
                           Class.forName("FullscreenDisplayController").getMethod("exit", new Class[]{}).invoke(this.field_g, new Object[]{});
                         }
@@ -281,7 +281,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3 = stackIn_75_0;
                           var13 = (java.awt.Component) (var8.field_g);
                           if (this.field_v) {
-                            this.field_d.a(var13, var3 != 0, false);
+                            this.field_d.setCursorVisible(var13, var3 != 0, false);
                           } else {
                             Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_n, new Object[]{var13, new Boolean(var3 != 0)});
                           }
@@ -499,7 +499,7 @@ final class PlatformTaskDispatcher implements Runnable {
         DisplayModeEnumerator var6 = null;
         this.field_v = false;
         this.field_h = null;
-        this.field_k = null;
+        this.cacheDataFile = null;
         this.field_q = null;
         this.field_f = false;
         this.field_x = false;
@@ -575,12 +575,12 @@ final class PlatformTaskDispatcher implements Runnable {
         }
         CacheFileLocator.a(field_r, 71, field_t);
         if (this.field_x) {
-          this.field_e = new BoundedRandomAccessFile(CacheFileLocator.a((String) null, field_t, true, "random.dat"), "rw", 25L);
-          this.field_k = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.dat2", (byte) -61), "rw", 314572800L);
+          this.field_e = new BoundedRandomAccessFile(CacheFileLocator.resolveFile((String) null, field_t, true, "random.dat"), "rw", 25L);
+          this.cacheDataFile = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.dat2", (byte) -61), "rw", 314572800L);
           this.field_m = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.idx255", (byte) -61), "rw", 1048576L);
-          this.field_u = new BoundedRandomAccessFile[param2];
+          this.cacheIndexFiles = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_u[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.idx" + var5_int, (byte) -61), "rw", 1048576L);
+            this.cacheIndexFiles[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.idx" + var5_int, (byte) -61), "rw", 1048576L);
           }
           if (this.field_v) {
             try {

@@ -54,7 +54,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_7_0 = MusicCrossfadeStream.field_y;
             return stackIn_7_0;
           }
-          if (IntrusiveDequeCursor.a(var5, 64)) {
+          if (IntrusiveDequeCursor.containsNonAlphanumeric(var5, 64)) {
             stackIn_11_0 = ResizableModalPanel.field_R;
             return stackIn_11_0;
           }
@@ -130,7 +130,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -371,7 +371,7 @@ final class PasswordValidator extends TextFieldValidator {
           this.field_p = param2;
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

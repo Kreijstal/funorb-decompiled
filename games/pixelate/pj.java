@@ -97,7 +97,7 @@ final class pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "pj.C(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "pj.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class pj {
             this.field_e = new Sprite(10 + var5_int, this.field_e.field_B);
           }
           this.field_e.c();
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           rk.field_e.drawCentered(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
           ClientException.field_f.a(19692);
           return;
@@ -137,7 +137,7 @@ final class pj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "pj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var4), "pj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "pj.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "pj.A(" + param0 + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "pj.D(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "pj.D(" + param0 + ')');
         }
     }
 
@@ -252,7 +252,7 @@ final class pj {
           field_a = null;
           field_i = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pj.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pj.E(" + param0 + ')');
         }
     }
 

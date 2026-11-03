@@ -58,7 +58,7 @@ final class fo {
         int var3 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         int var3Lifetime1;
-        IntrusiveDequeCursor.field_f.b(1600, 2272, this.field_p << 4, this.field_i << 4, this.field_k, this.field_l);
+        IntrusiveDequeCursor.field_f.rotateNearest(1600, 2272, this.field_p << 4, this.field_i << 4, this.field_k, this.field_l);
         ki[] var6 = this.field_j;
         ki[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
@@ -74,9 +74,9 @@ final class fo {
           var10.b(3887);
           var8++;
         }
-        SoftwareRasterizer.b(this.field_p - 3, this.field_i - 5, 299 + this.field_d, this.field_q, 3355392);
-        SoftwareRasterizer.b(-2 + this.field_p, this.field_i - 5, this.field_d + 0 + 300, this.field_q, 6710784);
-        SoftwareRasterizer.b(-1 + this.field_p, -5 + this.field_i, 300 + this.field_d + param0, this.field_q, 3355392);
+        SoftwareRasterizer.drawLine(this.field_p - 3, this.field_i - 5, 299 + this.field_d, this.field_q, 3355392);
+        SoftwareRasterizer.drawLine(-2 + this.field_p, this.field_i - 5, this.field_d + 0 + 300, this.field_q, 6710784);
+        SoftwareRasterizer.drawLine(-1 + this.field_p, -5 + this.field_i, 300 + this.field_d + param0, this.field_q, 3355392);
     }
 
     final static boolean a(byte param0) {

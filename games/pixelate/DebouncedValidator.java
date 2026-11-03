@@ -24,7 +24,7 @@ abstract class DebouncedValidator implements ValidationSource {
         try {
           var3_int = param2.position;
           var5 = (CharSequence) ((Object) param1);
-          var4 = ValidatedTextWidget.b(var5, 353);
+          var4 = ValidatedTextWidget.encodeSingleByteText(var5, 353);
           param2.a((byte) 81, var4.length);
           param2.position = param2.position + QuickChatPhraseDefinition.field_v.compress(param2.position, var4.length, param2.payload, 0, var4, param0);
           stackIn_1_0 = -var3_int + param2.position;
@@ -45,12 +45,12 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
-        an.field_e = MatchController.a((byte) 122, "");
+        an.field_e = MatchController.execute((byte) 122, "");
         an.field_e.a(param1 - 27848, false);
         MatchHud.a(param1 + 4740151, param3, param2, param0);
         GreenGrowTheRushesBackground.b(false);
@@ -61,7 +61,7 @@ abstract class DebouncedValidator implements ValidationSource {
           MatchingTextValidator.field_n = wm.field_a;
           MarkerSlider.field_X = wm.field_a;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hn.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hn.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -346,7 +346,7 @@ abstract class DebouncedValidator implements ValidationSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "hn.V(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "hn.V(" + param0 + ',' + param1 + ')');
         }
     }
 

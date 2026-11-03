@@ -37,7 +37,7 @@ final class hp extends SceneWidget {
         if (param3 > -83) {
           hp.j(-32);
         }
-        SoftwareRasterizer.d(param0, param4, param2, param1);
+        SoftwareRasterizer.intersectClip(param0, param4, param2, param1);
     }
 
     hp(SceneWidget param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4, SceneWidget param5) {
@@ -142,7 +142,7 @@ final class hp extends SceneWidget {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

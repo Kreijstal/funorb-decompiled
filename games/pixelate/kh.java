@@ -13,7 +13,7 @@ final class kh {
           }
           ConditionalTextValue.field_a = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "kh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

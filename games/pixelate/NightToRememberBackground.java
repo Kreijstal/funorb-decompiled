@@ -29,7 +29,7 @@ final class NightToRememberBackground extends BackgroundScene {
         if (param0) {
           return;
         }
-        QuickChatPhraseCache.field_f.b(0, -QuickChatPhraseCache.field_f.field_B + 480, lg.field_a);
+        QuickChatPhraseCache.field_f.drawAdditive(0, -QuickChatPhraseCache.field_f.field_B + 480, lg.field_a);
     }
 
     NightToRememberBackground(String param0, Sprite[] param1) {
@@ -139,7 +139,7 @@ final class NightToRememberBackground extends BackgroundScene {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 

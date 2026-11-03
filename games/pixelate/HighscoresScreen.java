@@ -73,7 +73,7 @@ final class HighscoresScreen extends MenuScreen {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class HighscoresScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "wh.I(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "wh.I(" + param0 + ')');
         }
     }
 
@@ -658,12 +658,12 @@ final class HighscoresScreen extends MenuScreen {
 
     final static void a(java.math.BigInteger param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, int param4) {
         try {
-          SecondaryNodeDeque.a(param0, true, 0, param3.position, param2, param1, param3.payload);
+          SecondaryNodeDeque.writeEncryptedPayload(param0, true, 0, param3.position, param2, param1, param3.payload);
           if (param4 != 12556) {
             field_s = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wh.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wh.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

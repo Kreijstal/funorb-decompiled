@@ -44,7 +44,7 @@ final class l extends MenuScreen {
           }
           Js5ArchiveManager.a((byte) 29, param1);
           if (dk.field_b) {
-            SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
+            SoftwareRasterizer.darkenRectangle(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
             nd.field_b.field_g.a(param1, 0);
             CachedTextLayout.a(param1, (byte) 34);
             return;
@@ -60,7 +60,7 @@ final class l extends MenuScreen {
           CachedTextLayout.a(param1, (byte) 34);
           return;
         }
-        SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
+        SoftwareRasterizer.darkenRectangle(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
         nd.field_b.field_g.a(param1, 0);
         CachedTextLayout.a(param1, (byte) 34);
     }
@@ -143,7 +143,7 @@ final class l extends MenuScreen {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

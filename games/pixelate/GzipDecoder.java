@@ -77,7 +77,7 @@ final class GzipDecoder {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "vh.B(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "vh.B(" + param0 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class GzipDecoder {
             }
             this.inflater.reset();
           } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "vh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

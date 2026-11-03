@@ -30,7 +30,7 @@ final class td {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -69,14 +69,14 @@ final class td {
             if (param4 != 121) {
               return;
             }
-            SoftwareRasterizer.a(Matrix3.field_c);
-            SoftwareRasterizer.d(var6_int + param0, param1, -var7 + param2 + param0, param1 + param3[1].field_B);
+            SoftwareRasterizer.saveClip(Matrix3.field_c);
+            SoftwareRasterizer.intersectClip(var6_int + param0, param1, -var7 + param2 + param0, param1 + param3[1].field_B);
             var9 = param0 + var6_int;
             var10 = -var7 + (param0 + param2);
             for (param0 = var9; var10 > param0; param0 = param0 + var8) {
               param3[1].d(param0, param1, param5);
             }
-            SoftwareRasterizer.b(Matrix3.field_c);
+            SoftwareRasterizer.restoreClip(Matrix3.field_c);
             return;
           }
           return;
@@ -90,7 +90,7 @@ final class td {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -130,10 +130,10 @@ final class td {
           }
           for (var2_intLifetime1 = 0; 8 > var2_intLifetime1; var2_intLifetime1++) {
             var3Lifetime1 = (var2_intLifetime1 << 8) / 8;
-            SoftwareRasterizer.d(var2_intLifetime1, var2_intLifetime1, 32 + (-var2_intLifetime1 + 8) * 2, -(2 * var2_intLifetime1) + 16 + 32, 6, var3Lifetime1 * 65793);
+            SoftwareRasterizer.fillRoundedRectangle(var2_intLifetime1, var2_intLifetime1, 32 + (-var2_intLifetime1 + 8) * 2, -(2 * var2_intLifetime1) + 16 + 32, 6, var3Lifetime1 * 65793);
           }
-          SoftwareRasterizer.d(8, 8, 32, 32, 6, 16777215);
-          SoftwareRasterizer.c(2, 2, 0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
+          SoftwareRasterizer.fillRoundedRectangle(8, 8, 32, 32, 6, 16777215);
+          SoftwareRasterizer.blurRectangle(2, 2, 0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           ClientException.field_f.a(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -146,7 +146,7 @@ final class td {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

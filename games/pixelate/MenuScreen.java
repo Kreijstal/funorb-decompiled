@@ -75,12 +75,12 @@ abstract class MenuScreen {
             var10 = SoftwareRasterizer.field_j;
             var11 = SoftwareRasterizer.field_d;
             var29 = new int[4];
-            SoftwareRasterizer.a(var29);
+            SoftwareRasterizer.saveClip(var29);
             param3.c();
-            SoftwareRasterizer.d(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param3.field_F * param1 + param0;
             var14 = param3.field_F - param4;
-            var25 = var21.field_G;
+            var25 = var21.pixels;
             var22 = var25;
             var15 = var22;
             for (var16 = param1; var16 < param7 + param1; var16++) {
@@ -94,7 +94,7 @@ abstract class MenuScreen {
                   var15[var13 + 1] == 0 ||
                   !(-1 + param3.field_E <= var16) &&
                   var15[var13 + param3.field_F] == 0)) {
-                  SoftwareRasterizer.c(var17, var16, param6, param2);
+                  SoftwareRasterizer.fillCircle(var17, var16, param6, param2);
                 }
                 var13++;
               }
@@ -102,7 +102,7 @@ abstract class MenuScreen {
             }
             var21.b(-param3.field_D, -param3.field_y);
             SoftwareRasterizer.a(var30, var10, var11);
-            SoftwareRasterizer.b(var29);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;
@@ -116,7 +116,7 @@ abstract class MenuScreen {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -127,8 +127,8 @@ abstract class MenuScreen {
         if (param1 >= -82) {
           field_e = (aa[]) null;
         }
-        SoftwareRasterizer.a(30, param0 + 20, 580, param2 + 250, 0, 180);
-        SoftwareRasterizer.b(30, param0 + 20, 580, 250 + param2, 16777215, 192);
+        SoftwareRasterizer.fillRectangleAlpha(30, param0 + 20, 580, param2 + 250, 0, 180);
+        SoftwareRasterizer.drawRectangleAlpha(30, param0 + 20, 580, 250 + param2, 16777215, 192);
     }
 
     final void b(byte param0) {
@@ -268,7 +268,7 @@ abstract class MenuScreen {
         try {
           this.a(param3, param0, param1, -6, 320);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "de.NA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "de.NA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -337,7 +337,7 @@ abstract class MenuScreen {
           this.field_a = param2;
           this.a(param5, (byte) -24);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "de.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "de.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -350,7 +350,7 @@ abstract class MenuScreen {
             field_b = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "de.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "de.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -362,7 +362,7 @@ abstract class MenuScreen {
             this.field_d = 119;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "de.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "de.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -457,7 +457,7 @@ abstract class MenuScreen {
             return;
           }
           var12 = var12 + Checkbox.field_T;
-          SoftwareRasterizer.a(var12, var10 + var13 / 2 - 1, 121, 2, var14);
+          SoftwareRasterizer.drawRectangle(var12, var10 + var13 / 2 - 1, 121, 2, var14);
           if (var6_int == 20) {
             stackIn_45_0 = 120 * LinkButtonPainter.field_h / 256;
           } else {
@@ -483,7 +483,7 @@ abstract class MenuScreen {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -509,7 +509,7 @@ abstract class MenuScreen {
           MusicPatch.field_m.b(var8, var9);
           ConditionalTextValue.field_h.drawText(param1, var6_int + var8 + MusicPatch.field_m.field_A, var9 + ConditionalTextValue.field_h.maxAscent, var10, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "de.AB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "de.AB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -529,7 +529,7 @@ abstract class MenuScreen {
         pe.field_b.c();
         this.c(0);
         ClientException.field_f.a(19692);
-        SpriteEffectHelpers.a(pe.field_b.field_G, var4, var5);
+        SpriteEffectHelpers.a(pe.field_b.pixels, var4, var5);
     }
 
     void e(byte param0) {

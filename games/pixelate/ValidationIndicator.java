@@ -15,7 +15,7 @@ final class ValidationIndicator extends TextButton {
           }
           super.updatePointer(param0 ^ 0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vc.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vc.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class ValidationIndicator extends TextButton {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class ValidationIndicator extends TextButton {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class ValidationIndicator extends TextButton {
             } else {
               if (QuickChatPhraseCache.field_k.field_E >= var11) {
                 Checkbox.a(-71, QuickChatPhraseCache.field_k);
-                SoftwareRasterizer.d();
+                SoftwareRasterizer.clear();
               } else {
                 QuickChatPhraseCache.field_k = new Sprite(var10, var11);
                 Checkbox.a(-83, QuickChatPhraseCache.field_k);
@@ -164,20 +164,20 @@ final class ValidationIndicator extends TextButton {
           }
           var17.a(112, 144, var17.field_A << 4, var17.field_B << 4, -this.field_Q << 10, 4096);
           LinkButtonPainter.a((byte) 92);
-          QuickChatPhraseCache.field_k.b(var5 - var17.field_A, var7 - var17.field_B, 256);
+          QuickChatPhraseCache.field_k.drawAdditive(var5 - var17.field_A, var7 - var17.field_B, 256);
           return;
         }
         if (var9 != UiTheme.field_j) {
           if (var9 == sk.field_a) {
             var14 = CanvasRasterBuffer.field_g[2];
-            var14.b(var5 - (var14.field_F >> 1), -(var14.field_E >> 1) + var7, 256);
+            var14.drawAdditive(var5 - (var14.field_F >> 1), -(var14.field_E >> 1) + var7, 256);
             return;
           }
           if (qk.field_g != var9) {
             return;
           }
           var15 = CanvasRasterBuffer.field_g[1];
-          var15.b(-(var15.field_F >> 1) + var5, var7 - (var15.field_E >> 1), 256);
+          var15.drawAdditive(-(var15.field_F >> 1) + var5, var7 - (var15.field_E >> 1), 256);
           return;
         }
         var16 = CanvasRasterBuffer.field_g[0];
@@ -193,7 +193,7 @@ final class ValidationIndicator extends TextButton {
           } else {
             if (QuickChatPhraseCache.field_k.field_E >= var11Lifetime1) {
               Checkbox.a(-71, QuickChatPhraseCache.field_k);
-              SoftwareRasterizer.d();
+              SoftwareRasterizer.clear();
             } else {
               QuickChatPhraseCache.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
               Checkbox.a(-83, QuickChatPhraseCache.field_k);
@@ -202,7 +202,7 @@ final class ValidationIndicator extends TextButton {
         }
         var16.a(112, 144, var16.field_A << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
         LinkButtonPainter.a((byte) 92);
-        QuickChatPhraseCache.field_k.b(var5 - var16.field_A, var7 - var16.field_B, 256);
+        QuickChatPhraseCache.field_k.drawAdditive(var5 - var16.field_A, var7 - var16.field_B, 256);
     }
 
     public static void a(byte param0) {
@@ -221,7 +221,7 @@ final class ValidationIndicator extends TextButton {
         try {
           this.field_P = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

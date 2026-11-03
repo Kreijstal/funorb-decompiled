@@ -43,15 +43,15 @@ final class MarkerSliderPainter implements WidgetPainter {
             stackIn_6_0 = (UiComponent) (param0);
           }
           var12 = (MarkerSlider) (stackIn_6_0);
-          SoftwareRasterizer.d(param0.field_z + param3, param2 + param0.field_p, param0.field_E, param0.field_C, this.field_d);
+          SoftwareRasterizer.fillRectangle(param0.field_z + param3, param2 + param0.field_p, param0.field_E, param0.field_C, this.field_d);
           if (var12 != null) {
           }
           var7 = param0.field_E - 2 * var12.field_R;
           var8 = param3 + param0.field_z + var12.field_R;
           var9 = param2 + param0.field_p + var12.field_T;
-          SoftwareRasterizer.b(var8, var9, var7 + var8, var9, this.field_c);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_c);
           for (var10 = -1 + var12.f((byte) 62); var10 >= 0; var10--) {
-            SoftwareRasterizer.c(var8 + var7 * var12.a((byte) -91, var10) / var12.k(param1 + 123), var9, this.field_e, this.field_a);
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.a((byte) -91, var10) / var12.k(param1 + 123), var9, this.field_e, this.field_a);
           }
           if (null == this.field_h) {
             return;
@@ -68,7 +68,7 @@ final class MarkerSliderPainter implements WidgetPainter {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class MarkerSliderPainter implements WidgetPainter {
           this.field_a = param6;
           this.field_e = param5;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

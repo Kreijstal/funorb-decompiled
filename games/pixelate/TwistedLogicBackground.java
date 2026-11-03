@@ -23,7 +23,7 @@ final class TwistedLogicBackground extends BackgroundScene {
     final void a(boolean param0) {
         jn var4 = null;
         int var3 = Pixelate.field_H ? 1 : 0;
-        SoftwareRasterizer.d(0, 0, 640, 480, 12632256);
+        SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 12632256);
         if (!param0) {
           var4 = (jn) (this.field_n.c(1504642273));
           while (var4 != null) {
@@ -89,7 +89,7 @@ final class TwistedLogicBackground extends BackgroundScene {
           }
           this.field_m = TabbedPanel.a((byte) 41, 75, 25);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

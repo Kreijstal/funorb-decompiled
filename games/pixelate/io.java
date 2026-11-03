@@ -29,7 +29,7 @@ final class io {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "io.A(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "io.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class io {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "io.B(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "io.B(" + param0 + ')');
         }
     }
 
@@ -179,16 +179,16 @@ final class io {
           }
           Checkbox.a(-113, re.field_b);
           MeshRasterState.a();
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           ma.d((byte) 106);
           if (256 > var5) {
-            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           }
           LinkButtonPainter.a((byte) 92);
           if (GameModeCard.field_f >= 150) {
             th.field_b.a(var3 + 15, var4 + 10, var5);
           } else {
-            re.field_b.d(var3, var4);
+            re.field_b.drawHalfSize(var3, var4);
           }
           var6 = GameModeCard.field_f - 125;
           if (var6 > 0) {
@@ -206,13 +206,13 @@ final class io {
             if (var6 >= 20) {
               if (var6 >= 30) {
                 var7Lifetime4 = (12800 - var6 * 256) / 20;
-                bd.field_a.b(var3, var4, var7Lifetime4);
+                bd.field_a.drawAdditive(var3, var4, var7Lifetime4);
               } else {
-                bd.field_a.b(var3, var4, 256);
+                bd.field_a.drawAdditive(var3, var4, 256);
               }
             } else {
               var7Lifetime4 = 256 * var6 / 20;
-              bd.field_a.b(var3, var4, var7Lifetime4);
+              bd.field_a.drawAdditive(var3, var4, var7Lifetime4);
             }
           }
           var6Lifetime3 = GameModeCard.field_f - 140;
@@ -230,15 +230,15 @@ final class io {
         }
         Checkbox.a(-113, re.field_b);
         MeshRasterState.a();
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clear();
         ma.d((byte) 106);
         if (256 > var5) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           LinkButtonPainter.a((byte) 92);
           if (GameModeCard.field_f >= 150) {
             th.field_b.a(var3 + 15, var4 + 10, var5);
           } else {
-            re.field_b.d(var3, var4);
+            re.field_b.drawHalfSize(var3, var4);
           }
           var6Lifetime1 = GameModeCard.field_f - 125;
           if (var6Lifetime1 > 0 &&
@@ -246,13 +246,13 @@ final class io {
             if (var6Lifetime1 >= 20) {
               if (var6Lifetime1 >= 30) {
                 var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
-                bd.field_a.b(var3, var4, var7Lifetime1);
+                bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
               } else {
-                bd.field_a.b(var3, var4, 256);
+                bd.field_a.drawAdditive(var3, var4, 256);
               }
             } else {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
-              bd.field_a.b(var3, var4, var7Lifetime1);
+              bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
             }
           }
         } else {
@@ -282,7 +282,7 @@ final class io {
               } else {
                 if (var6Lifetime1 < 20) {
                   var7Lifetime1 = 256 * var6Lifetime1 / 20;
-                  bd.field_a.b(var3, var4, var7Lifetime1);
+                  bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
                   var6Lifetime1 = GameModeCard.field_f - 140;
                   if (var6Lifetime1 > 0) {
                     var7Lifetime1 = 256;
@@ -293,7 +293,7 @@ final class io {
                   }
                 } else {
                   if (var6Lifetime1 < 30) {
-                    bd.field_a.b(var3, var4, 256);
+                    bd.field_a.drawAdditive(var3, var4, 256);
                     var6Lifetime1 = GameModeCard.field_f - 140;
                     if (var6Lifetime1 > 0) {
                       var7Lifetime1 = 256;
@@ -304,7 +304,7 @@ final class io {
                     }
                   } else {
                     var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
-                    bd.field_a.b(var3, var4, var7Lifetime1);
+                    bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
                     var6Lifetime1 = GameModeCard.field_f - 140;
                     if (var6Lifetime1 > 0) {
                       var7Lifetime1 = 256;
@@ -319,19 +319,19 @@ final class io {
             }
             return;
           }
-          re.field_b.d(var3, var4);
+          re.field_b.drawHalfSize(var3, var4);
           var6Lifetime1 = GameModeCard.field_f - 125;
           if (var6Lifetime1 > 0 &&
             var6Lifetime1 < 50) {
             if (var6Lifetime1 < 20) {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
-              bd.field_a.b(var3, var4, var7Lifetime1);
+              bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
             } else {
               if (var6Lifetime1 < 30) {
-                bd.field_a.b(var3, var4, 256);
+                bd.field_a.drawAdditive(var3, var4, 256);
               } else {
                 var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
-                bd.field_a.b(var3, var4, var7Lifetime1);
+                bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
               }
             }
           }
@@ -369,7 +369,7 @@ final class io {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -393,10 +393,10 @@ final class io {
           GameModeSelectScreen.field_v.position = 0;
           ModalPanel.field_L[3] = (int)NumericDateInputWidget.field_P;
           ModalPanel.field_L[2] = (int)(NumericDateInputWidget.field_P >> 32);
-          GameModeSelectScreen.field_v.d(ModalPanel.field_L[0], -55);
-          GameModeSelectScreen.field_v.d(ModalPanel.field_L[1], -71);
-          GameModeSelectScreen.field_v.d(ModalPanel.field_L[2], -68);
-          GameModeSelectScreen.field_v.d(ModalPanel.field_L[3], -48);
+          GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[0], -55);
+          GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[1], -71);
+          GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[2], -68);
+          GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[3], -48);
           wf.a(1, GameModeSelectScreen.field_v);
           GameModeSelectScreen.field_v.writeShort(1276387944, param3);
           param2.a((byte) -12, GameModeSelectScreen.field_v);
@@ -408,7 +408,7 @@ final class io {
           }
           aa.field_f.position = aa.field_f.position + 2;
           var5_int = aa.field_f.position;
-          aa.field_f.d(ra.field_c, -118);
+          aa.field_f.writeInt(ra.field_c, -118);
           aa.field_f.writeLong(false, hf.field_t);
           var6 = 0;
           if (LobbyPlayer.field_Lb) {
@@ -450,7 +450,7 @@ final class io {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -460,7 +460,7 @@ final class io {
           pe.field_c = DelegatingCanvas.field_d.maxDescent + DelegatingCanvas.field_d.maxAscent;
           int var2_int = -116 / ((70 - param1) / 48);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "io.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "io.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -472,11 +472,11 @@ final class io {
           }
           MatchHud.a(param0, -75, this.field_b, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "io.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "io.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_a = null;
         field_c = null;
@@ -492,7 +492,7 @@ final class io {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "io.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "io.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

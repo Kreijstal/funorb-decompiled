@@ -190,7 +190,7 @@ final class MatchHud {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -237,10 +237,10 @@ final class MatchHud {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          HowToPlayScreen.field_s = SocketConnector.a("frame_top", "commonui", (byte) 47, param2);
-          PlayerBoard.field_v = SocketConnector.a("frame_bottom", "commonui", (byte) 47, param2);
+          HowToPlayScreen.field_s = SocketConnector.loadRgbSpritesByName("frame_top", "commonui", (byte) 47, param2);
+          PlayerBoard.field_v = SocketConnector.loadRgbSpritesByName("frame_bottom", "commonui", (byte) 47, param2);
           ge.field_g = bi.a("commonui", "jagex_logo_grey", param2, (byte) -74);
-          fc.field_d = SocketConnector.a("button", "commonui", (byte) 47, param2);
+          fc.field_d = SocketConnector.loadRgbSpritesByName("button", "commonui", (byte) 47, param2);
           CanvasRasterBuffer.field_g = MusicCrossfadeStream.a(param2, 20049, "validation", "commonui");
           ep.field_b = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo12", param3));
           he.field_d = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo14", param3));
@@ -273,7 +273,7 @@ final class MatchHud {
           var9Lifetime1 = var17.field_E;
           MidiPcmStream.a(false);
           var17.c();
-          SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.c();
@@ -287,7 +287,7 @@ final class MatchHud {
           LinkButtonPainter.a((byte) 92);
           fc.field_d = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -339,7 +339,7 @@ final class MatchHud {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

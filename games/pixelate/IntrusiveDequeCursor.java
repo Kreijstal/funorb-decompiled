@@ -56,7 +56,7 @@ final class IntrusiveDequeCursor {
         try {
           if (param0 != -1) {
             var3 = (String) null;
-            IntrusiveDequeCursor.a((String) null, -43);
+            IntrusiveDequeCursor.containsNonAlphanumeric((String) null, -43);
           }
           var1 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.c(1504642273));
           while (var1 != null) {
@@ -104,7 +104,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref2), "nm.I(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref2), "nm.I(" + param0 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ final class IntrusiveDequeCursor {
         if (param0 > -56) {
           return (IntrusiveNode) null;
         }
-        this.cursor = var2.field_h;
+        this.cursor = var2.previous;
         return var2;
     }
 
@@ -185,14 +185,14 @@ final class IntrusiveDequeCursor {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.deque.sentinel.field_h;
+            var3 = this.deque.sentinel.previous;
           }
           if (var3 == this.deque.sentinel) {
             this.cursor = null;
             stackIn_6_0 = null;
             return (IntrusiveNode) (stackIn_6_0);
           }
-          this.cursor = var3.field_h;
+          this.cursor = var3.previous;
           if (param0 != -99) {
             var4 = (IntrusiveNode) null;
             this.firstFrom((byte) -11, (IntrusiveNode) null);
@@ -209,11 +209,11 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean containsNonAlphanumeric(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -245,7 +245,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -253,12 +253,12 @@ final class IntrusiveDequeCursor {
         if (param0 != -1) {
           field_c = 52;
         }
-        IntrusiveNode var2 = this.deque.sentinel.field_h;
+        IntrusiveNode var2 = this.deque.sentinel.previous;
         if (var2 == this.deque.sentinel) {
           this.cursor = null;
           return null;
         }
-        this.cursor = var2.field_h;
+        this.cursor = var2.previous;
         return var2;
     }
 
@@ -295,7 +295,7 @@ final class IntrusiveDequeCursor {
         try {
           this.deque = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

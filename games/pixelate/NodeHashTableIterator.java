@@ -111,7 +111,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_g = param0;
           this.a((byte) -39);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

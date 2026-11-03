@@ -63,12 +63,12 @@ final class aa {
           return;
         }
         String var2 = (String) null;
-        aa.a((Throwable) null, (String) null);
+        aa.addExceptionContext((Throwable) null, (String) null);
         field_p = null;
         field_f = null;
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException addExceptionContext(Throwable param0, String param1) {
         ClientException var2 = null;
         if (param0 instanceof ClientException) {
           var2 = (ClientException) ((Object) param0);
@@ -113,7 +113,7 @@ final class aa {
           this.field_n = param1;
           this.field_l = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

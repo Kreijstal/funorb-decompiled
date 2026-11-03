@@ -325,7 +325,7 @@ final class MatchController {
         }
     }
 
-    final static fl a(byte param0, String param1) {
+    final static fl execute(byte param0, String param1) {
         RuntimeException var2 = null;
         fl stackIn_2_0 = null;
         fl stackIn_4_0 = null;
@@ -350,7 +350,7 @@ final class MatchController {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -375,8 +375,8 @@ final class MatchController {
             var7 = param4[1].field_A;
             param4[0].b(param3, param1);
             param4[2].b(-var6 + param0 + param3, param1);
-            SoftwareRasterizer.a(Matrix3.field_c);
-            SoftwareRasterizer.d(param3 + var5_int, param1, param0 + param3 - var6, param1 + param4[1].field_B);
+            SoftwareRasterizer.saveClip(Matrix3.field_c);
+            SoftwareRasterizer.intersectClip(param3 + var5_int, param1, param0 + param3 - var6, param1 + param4[1].field_B);
             var8 = var5_int + param3;
             var9 = param3 + param0 - var6;
             param3 = var8;
@@ -387,7 +387,7 @@ final class MatchController {
               param4[1].b(param3, param1);
               param3 = param3 + var7;
             }
-            SoftwareRasterizer.b(Matrix3.field_c);
+            SoftwareRasterizer.restoreClip(Matrix3.field_c);
             return;
           }
           return;
@@ -401,7 +401,7 @@ final class MatchController {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -478,7 +478,7 @@ final class MatchController {
           QueuedInput.field_l = param6;
           jk.field_c = param5;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ii.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ii.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -517,7 +517,7 @@ final class MatchController {
           if (fq.field_o != null &&
             SpriteCheckboxPainter.field_d) {
             pe.field_b.c();
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clear();
             fq.field_o.a(false);
             ClientException.field_f.a(19692);
             pe.field_b.a(0, 0, DebouncedValidator.field_d);
@@ -574,7 +574,7 @@ final class MatchController {
             var7 = var5 + 110;
             var8 = this.field_a.getClass();
             var9 = var8.getFields();
-            SoftwareRasterizer.a(var5 - 5, -5 + var6 - var4, 70 + var7 - var5, var4 * var9.length, 0, 190);
+            SoftwareRasterizer.fillRectangleAlpha(var5 - 5, -5 + var6 - var4, 70 + var7 - var5, var4 * var9.length, 0, 190);
             var10 = var9;
             for (var11 = 0; var11 < var10.length; var11++) {
               var12 = var10[var11];
@@ -903,7 +903,7 @@ final class MatchController {
           int var5_int = 55 / ((2 - param3) / 55);
           UiContainer.a(param0, param4, 5, param1, ab.field_c, 320, rk.field_e.maxAscent, 10, bi.field_g, true, rk.field_e, rk.field_e.maxDescent + rk.field_e.maxAscent, (byte) 27, 15, 240);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ii.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ii.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1083,7 +1083,7 @@ final class MatchController {
           this.field_a.readState(param1, (byte) 123);
           this.b(param0 ^ 102);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ii.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ii.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1143,7 +1143,7 @@ final class MatchController {
         }
         if (param0 != 41) {
           var7 = (String) null;
-          MatchController.a((byte) 95, (String) null);
+          MatchController.execute((byte) 95, (String) null);
         }
         if (this.field_a.field_r > 0) {
           if (this.field_a.field_o == this.field_a.puzzle.field_g) {
@@ -1382,7 +1382,7 @@ final class MatchController {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -13,7 +13,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
     private int field_P;
     static SceneWidget field_L;
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int param0) {
         field_R = null;
         if (param0 != 0) {
           field_J = (SceneWidget) null;
@@ -61,7 +61,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           var4_int = this.field_N == null ? 0 : this.field_O.paragraphHeight(this.field_N, 260, this.field_O.maxAscent);
           this.a(288, (byte) 55, 0, 0, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           this.field_S[var4_int] = this.a(1707, (UiListener) (this), param2);
           this.field_I[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vl.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vl.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

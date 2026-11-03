@@ -384,7 +384,7 @@ final class MenuInputState {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1021,7 +1021,7 @@ final class MenuInputState {
           Js5ArchiveManager.a(-7749, (java.awt.Component) ((Object) param0));
           QuickChatMenu.a((byte) -47, (java.awt.Component) ((Object) param0));
           if (null != ScrollContainer.field_Lb) {
-            ScrollContainer.field_Lb.a(param1 + 18421, (java.awt.Component) ((Object) param0));
+            ScrollContainer.field_Lb.attach(param1 + 18421, (java.awt.Component) ((Object) param0));
           }
           if (param1 != 0) {
             field_d = (ResourceArchive) null;
@@ -1037,7 +1037,7 @@ final class MenuInputState {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

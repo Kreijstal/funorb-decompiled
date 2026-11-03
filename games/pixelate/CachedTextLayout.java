@@ -308,11 +308,11 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_116_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(',').append(param7).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(',').append(param7).append(')').toString());
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_n = null;
         field_j = null;
@@ -475,7 +475,7 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ final class CachedTextLayout extends TextLayout {
           var8.field_g[param0.length()] = param4 + (var7 >> 1);
           an.a(param3, 0, (byte) -92, var8, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "no.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "no.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -974,7 +974,7 @@ final class CachedTextLayout extends TextLayout {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "no.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var5), "no.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -992,8 +992,8 @@ final class CachedTextLayout extends TextLayout {
         int var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
-          SoftwareRasterizer.d(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangle(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (Matrix3.field_g == null) {
             if (null != QuickChatCategory.field_A) {
               QuickChatCategory.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
@@ -1061,7 +1061,7 @@ final class CachedTextLayout extends TextLayout {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "no.P(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "no.P(" + param0 + ')');
         }
     }
 
@@ -1100,7 +1100,7 @@ final class CachedTextLayout extends TextLayout {
           var9.field_g[param4.length()] = param2;
           an.a(param0, 0, (byte) -92, var9, param4);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "no.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "no.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1142,7 +1142,7 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1170,7 +1170,7 @@ final class CachedTextLayout extends TextLayout {
           var7.field_g[param0.length()] = param2.textWidth(param0) + param3;
           an.a(param2, 0, (byte) -92, var7, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "no.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "no.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

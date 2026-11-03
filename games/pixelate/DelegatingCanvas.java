@@ -15,7 +15,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_c.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hk.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hk.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_c.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hk.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hk.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

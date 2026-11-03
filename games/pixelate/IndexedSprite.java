@@ -116,10 +116,10 @@ final class IndexedSprite extends IndexedSpriteState {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.a(SoftwareRasterizer.field_k, this.indices, this.palette, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.copyNonzeroPaletteRows(SoftwareRasterizer.field_k, this.indices, this.palette, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPaletteRows(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;

@@ -52,7 +52,7 @@ final class FallingPieceView {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class FallingPieceView {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class FallingPieceView {
           param3.writeShort(1276387944, param0);
           param3.writeByte(160, param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "al.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "al.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class FallingPieceView {
           this.field_a = param0.field_n;
           this.a(-127);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -243,10 +243,10 @@ final class FallingPieceView {
           if (fieldTemp$0 >= 50) {
             this.field_b = 0;
           }
-          gd.field_f[this.field_b].b(1 + var13, -63 + var14, var9);
+          gd.field_f[this.field_b].drawAdditive(1 + var13, -63 + var14, var9);
         }
-        SoftwareRasterizer.a(1 + var13, -63 + var14, 63, 63, 16777215);
-        SoftwareRasterizer.a(2 + var13, var14 - 64 + 2, 61, 61, 0);
+        SoftwareRasterizer.drawRectangle(1 + var13, -63 + var14, 63, 63, 16777215);
+        SoftwareRasterizer.drawRectangle(2 + var13, var14 - 64 + 2, 61, 61, 0);
         var18 = var9 * var11 * 15 >> 16;
         SpriteEffectHelpers.a(6 + var16, var17 + 5, var13, var14 - 64, 6, var18, CachedArchiveProvider.field_z);
         SpriteEffectHelpers.a(-7 + (var15 + var16), 5 + var17, 64 + var13, var14 - 64, 6, var18, CachedArchiveProvider.field_z);
@@ -318,25 +318,25 @@ final class FallingPieceView {
           } else {
             stackIn_38_0 = var20_ref;
           }
-          ((Sprite) (Object) stackIn_38_0).a(var16, var22 + var17, var15, var15);
+          ((Sprite) (Object) stackIn_38_0).drawScaledAveraged(var16, var22 + var17, var15, var15);
           if (!var4[1]) {
             stackIn_41_0 = var19_ref;
           } else {
             stackIn_41_0 = var20_ref;
           }
-          ((Sprite) (Object) stackIn_41_0).a(var15 + var16 - var22, var17, var15, var15);
+          ((Sprite) (Object) stackIn_41_0).drawScaledAveraged(var15 + var16 - var22, var17, var15, var15);
           if (!var4[2]) {
             stackIn_44_0 = var19_ref;
           } else {
             stackIn_44_0 = var20_ref;
           }
-          ((Sprite) (Object) stackIn_44_0).a(var22 + var16, var15 + var17, var15, var15);
+          ((Sprite) (Object) stackIn_44_0).drawScaledAveraged(var22 + var16, var15 + var17, var15, var15);
           if (var4[3]) {
             stackIn_47_0 = var20_ref;
           } else {
             stackIn_47_0 = var19_ref;
           }
-          ((Sprite) (Object) stackIn_47_0).a(var15 + var16, -var22 + var17 + var15, var15, var15);
+          ((Sprite) (Object) stackIn_47_0).drawScaledAveraged(var15 + var16, -var22 + var17 + var15, var15, var15);
         }
     }
 
@@ -378,7 +378,7 @@ final class FallingPieceView {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

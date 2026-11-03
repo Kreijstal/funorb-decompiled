@@ -56,7 +56,7 @@ final class aj extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -71,14 +71,14 @@ final class aj extends IntrusiveNode {
     final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, int param3) {
         try {
           nk.a(ProxySocketConnector.field_k, EditableTextWidget.field_Y, ug.field_s, ConditionalTextValue.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, qk.field_d, param2, TextFieldValidator.field_h, l.field_q);
-          Checkbox.field_V = SocketConnector.a("chatfilter", "lobby", (byte) 47, param1);
+          Checkbox.field_V = SocketConnector.loadRgbSpritesByName("chatfilter", "lobby", (byte) 47, param1);
           LoginCredentials.field_a[1] = NameSuggestionsPanel.field_J;
           int var4_int = -115 % ((param3 - 44) / 59);
           LoginCredentials.field_a[0] = EmailConfirmationValidator.field_m;
           LoginCredentials.field_a[2] = GrowableIntList.field_e;
           ck.a(65793, ig.field_d, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "aj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "aj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

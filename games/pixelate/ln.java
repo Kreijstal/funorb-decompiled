@@ -64,7 +64,7 @@ final class ln extends IntrusiveNode {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -83,7 +83,7 @@ final class ln extends IntrusiveNode {
     }
 
     ln(int param0) {
-        this.field_o = PcmSampleStream.a(SecondaryNodeDeque.field_f[param0], 100, NightToRememberBackground.field_m[param0]);
+        this.field_o = PcmSampleStream.createAtRatePercent(SecondaryNodeDeque.field_f[param0], 100, NightToRememberBackground.field_m[param0]);
         TextLayoutLine.a(-21317, this.field_o);
     }
 

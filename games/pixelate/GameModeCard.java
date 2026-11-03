@@ -27,12 +27,12 @@ final class GameModeCard {
             var4 = this.field_c * 35 / 1000;
             var5 = var4 >> 1;
             SpriteEffectHelpers.a(320, 349 - var5, var4, StripedProgressBar.field_S, var3_int);
-            SoftwareRasterizer.f(0, -var5 + 355, 640, var4 / 2 + 343);
+            SoftwareRasterizer.setClip(0, -var5 + 355, 640, var4 / 2 + 343);
           }
           rk.field_e.drawCentered(param1, 320, 360, 0, -1);
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.resetClip();
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ga.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ga.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -213,7 +213,7 @@ final class GameModeCard {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class GameModeCard {
           this.field_e = param2;
           this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ga.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ga.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

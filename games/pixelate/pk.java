@@ -78,7 +78,7 @@ final class pk {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "pk.F(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "pk.F(" + param0 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "pk.D(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "pk.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -217,7 +217,7 @@ final class pk {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "pk.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "pk.A(" + param0 + ')');
         }
     }
 
@@ -362,7 +362,7 @@ final class pk {
                 }
               }
             }
-            IntKeyLookup.a(var5, var7, ib.field_i[var6], 24092, var4 + BitmapFont.b(mp.field_a.toString()));
+            IntKeyLookup.a(var5, var7, ib.field_i[var6], 24092, var4 + BitmapFont.escapeMarkup(mp.field_a.toString()));
             if (!oo.field_d) {
               rh.field_y.field_W = false;
             }
@@ -375,7 +375,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (var1), "pk.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) (var1), "pk.E(" + param0 + ')');
         }
     }
 

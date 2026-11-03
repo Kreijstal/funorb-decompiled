@@ -118,7 +118,7 @@ final class NodeHashTable {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -128,17 +128,17 @@ final class NodeHashTable {
           if (param1 <= 120) {
             this.a(-40);
           }
-          if (param2.field_h != null) {
+          if (param2.previous != null) {
             param2.c(2779);
           }
           var5 = this.field_g[(int)(param0 & (long)(-1 + this.field_a))];
-          param2.field_h = var5.field_h;
+          param2.previous = var5.previous;
           param2.field_a = var5;
-          param2.field_h.field_a = param2;
+          param2.previous.field_a = param2;
           param2.field_e = param0;
-          param2.field_a.field_h = param2;
+          param2.field_a.previous = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nl.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nl.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -220,7 +220,7 @@ final class NodeHashTable {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_g[var2] = dupTemp$0;
-          var3.field_h = var3;
+          var3.previous = var3;
           var3.field_a = var3;
         }
     }

@@ -70,7 +70,7 @@ final class ck {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -165,11 +165,11 @@ final class ck {
           if (SpriteCheckboxPainter.field_d) {
             SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var5, var3, var4);
           } else {
-            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, var4);
+            SoftwareRasterizer.fillRectangleAlpha((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, var4);
           }
         } else {
           if (!SpriteCheckboxPainter.field_d) {
-            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, 100);
+            SoftwareRasterizer.fillRectangleAlpha((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, 100);
           } else {
             SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, 5, var3, 32);
           }
@@ -224,10 +224,10 @@ final class ck {
           fe.field_b = new Sprite(10, 14);
           fe.field_b.c();
           for (var8 = 2; var8 < 7; var8++) {
-            SoftwareRasterizer.g(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
-          ContextActionMenu.field_Rb = BoundedRandomAccessFile.a(ue.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
+          ContextActionMenu.field_Rb = BoundedRandomAccessFile.buildQuickChatCategoryMenu(ue.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
           DraggableWidget.field_I.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -246,7 +246,7 @@ final class ck {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class ck {
             } else {
               stackIn_23_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

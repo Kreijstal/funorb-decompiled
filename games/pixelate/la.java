@@ -91,7 +91,7 @@ final class la {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "la.I(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "la.I(" + param0 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class la {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -203,7 +203,7 @@ final class la {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -382,7 +382,7 @@ final class la {
             if (jm.field_b == param2) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.field_Hb.font, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.field_Hb.font, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -681,7 +681,7 @@ final class la {
           } else {
             stackIn_224_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_223_0), ((StringBuilder) (Object) stackIn_223_1).append(stackIn_224_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_223_0), ((StringBuilder) (Object) stackIn_223_1).append(stackIn_224_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -760,7 +760,7 @@ final class la {
               var10 = var12;
               var6 = var10;
               if (1 == var3) {
-                Bzip2Decoder.a(var12, var5_int, param0, var4, 9);
+                Bzip2Decoder.decompress(var12, var5_int, param0, var4, 9);
               } else {
                 var7 = fd.field_b;
                 synchronized (var7) {
@@ -783,7 +783,7 @@ final class la {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -3043,7 +3043,7 @@ final class GameModeSelectScreen extends MenuScreen {
                   } else {
                     stackIn_2603_2 = "{...}";
                   }
-                  throw aa.a((Throwable) ((Object) stackIn_2602_0), ((StringBuilder) (Object) stackIn_2602_1).append(stackIn_2603_2).append(')').toString());
+                  throw aa.addExceptionContext((Throwable) ((Object) stackIn_2602_0), ((StringBuilder) (Object) stackIn_2602_1).append(stackIn_2603_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = GameApplet.field_l;
@@ -3072,7 +3072,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "uk.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "uk.E(" + param0 + ')');
         }
     }
 
@@ -3126,7 +3126,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "uk.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "uk.C(" + param0 + ')');
         }
     }
 
@@ -3357,7 +3357,7 @@ final class GameModeSelectScreen extends MenuScreen {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -3368,7 +3368,7 @@ final class GameModeSelectScreen extends MenuScreen {
             this.a(57);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "uk.L(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uk.L(" + param0 + ')');
         }
     }
 
@@ -3379,7 +3379,7 @@ final class GameModeSelectScreen extends MenuScreen {
           this.field_o.a((byte) -84);
           super.a(param0, 0, param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "uk.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uk.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3409,7 +3409,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "uk.O(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "uk.O(" + param0 + ')');
         }
     }
 
@@ -3451,7 +3451,7 @@ final class GameModeSelectScreen extends MenuScreen {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -3490,7 +3490,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "uk.H(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "uk.H(" + param0 + ')');
         }
     }
 
@@ -3522,7 +3522,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "uk.N(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var4), "uk.N(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3556,7 +3556,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "uk.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var4), "uk.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

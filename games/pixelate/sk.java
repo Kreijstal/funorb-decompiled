@@ -15,7 +15,7 @@ final class sk {
             sk.a((byte) -101);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

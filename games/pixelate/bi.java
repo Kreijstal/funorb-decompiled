@@ -17,7 +17,7 @@ final class bi {
         int var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
         SoftwareRasterizer.a(this.field_f, this.field_e, 250, this.field_c, 12, 0, 180);
-        SoftwareRasterizer.e(this.field_f, this.field_e, 250, this.field_c, 12, 0);
+        SoftwareRasterizer.drawRoundedRectangle(this.field_f, this.field_e, 250, this.field_c, 12, 0);
         var2 = 4 + this.field_e + 8;
         if (!param0) {
           if (null != this.field_a) {
@@ -84,7 +84,7 @@ final class bi {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class bi {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 

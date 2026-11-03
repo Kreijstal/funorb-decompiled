@@ -26,7 +26,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         try {
           this.field_Ab = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -149,13 +149,13 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (!param0) {
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           if (param2 != 0) {
             RegistrationRequestDialog.a(true, false, -123);
             Js5NetworkRequest.a(param2 ^ 91, param0);
@@ -164,7 +164,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           Js5NetworkRequest.a(param2 ^ 91, param0);
           return;
         }
-        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
         if (param2 != 0) {
           RegistrationRequestDialog.a(true, false, -123);
           Js5NetworkRequest.a(param2 ^ 91, param0);
@@ -185,7 +185,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         try {
           this.p(-119);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -73,7 +73,7 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
           var4 = -1L;
           MatchHud.a(param0, 78, var3, var2, var4);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ql.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ql.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

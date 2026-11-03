@@ -39,7 +39,7 @@ final class dk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class dk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class dk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -238,76 +238,76 @@ final class dk {
             }
             var18 = var14;
             var19 = var15;
-            SoftwareRasterizer.a(qk.field_c);
+            SoftwareRasterizer.saveClip(qk.field_c);
             if (var18 > var19) {
               var19 = param3 * var8 / (var9 + var8) + param4;
               var18 = param3 * var8 / (var9 + var8) + param4;
             }
             if (null != param5[0]) {
-              SoftwareRasterizer.d(param1, param4, var16, var18);
+              SoftwareRasterizer.intersectClip(param1, param4, var16, var18);
               param5[0].b(param1, param4);
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (param5[2] != null) {
-              SoftwareRasterizer.d(var17, param4, var10, var18);
+              SoftwareRasterizer.intersectClip(var17, param4, var10, var18);
               param5[2].b(var13, param4);
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (param2 != 75) {
               return;
             }
             if (param5[6] != null) {
-              SoftwareRasterizer.d(param1, var19, var16, var11);
+              SoftwareRasterizer.intersectClip(param1, var19, var16, var11);
               param5[6].b(param1, var15);
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (null != param5[8]) {
-              SoftwareRasterizer.d(var17, var19, var10, var11);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param5[8].b(var13, var15);
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (param5[1] != null &&
               0 != param5[1].field_A) {
-              SoftwareRasterizer.d(var16, param4, var17, var18);
+              SoftwareRasterizer.intersectClip(var16, param4, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param5[1].field_A) {
                 param5[1].b(var20, param4);
               }
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (null != param5[7] &&
               param5[7].field_A != 0) {
-              SoftwareRasterizer.d(var16, var19, var17, var11);
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param5[7].field_A) {
                 param5[7].b(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (param5[3] != null &&
               param5[3].field_B != 0) {
-              SoftwareRasterizer.d(param1, var18, var16, var19);
+              SoftwareRasterizer.intersectClip(param1, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param5[3].field_B) {
                 param5[3].b(param1, var20Lifetime2);
               }
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (null != param5[5] &&
               param5[5].field_B != 0) {
-              SoftwareRasterizer.d(var17, var18, var10, var19);
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param5[5].field_B) {
                 param5[5].b(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (param5[4] != null &&
               param5[4].field_A != 0 &&
               0 != param5[4].field_B) {
-              SoftwareRasterizer.d(var16, var18, var17, var19);
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param5[4].field_B) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param5[4].field_A) {
                   param5[4].b(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
               return;
             }
             return;
@@ -323,7 +323,7 @@ final class dk {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 

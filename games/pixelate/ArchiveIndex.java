@@ -64,7 +64,7 @@ final class ArchiveIndex {
             QuickChatCategoryCache.field_d = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "kj.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kj.C(" + param0 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class ArchiveIndex {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "kj.F(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "kj.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -323,7 +323,7 @@ final class ArchiveIndex {
           } else {
             stackIn_101_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
         }
     }
 
@@ -416,7 +416,7 @@ final class ArchiveIndex {
                 } else {
                   incrementValue$0 = var10;
                   var10++;
-                  var18 = param1.field_G[incrementValue$0];
+                  var18 = param1.pixels[incrementValue$0];
                   if (var18 != 0) {
                     if (var16 > 255) {
                       SoftwareRasterizer.field_k[var9] = var18;
@@ -445,7 +445,7 @@ final class ArchiveIndex {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -469,7 +469,7 @@ final class ArchiveIndex {
           }
           this.decode(-89, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

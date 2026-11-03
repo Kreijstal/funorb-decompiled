@@ -60,7 +60,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -74,14 +74,14 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
             field_R = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "oj.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oj.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     BirthDateEntryPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_Q = new NumericDateInputWidget(new GradientOutlineTextPainter(10000536), TextFieldValidator.field_l, 0, 0, 140, 25);
-        this.field_Q.a(new DateOfBirthValidator(), 20672);
+        this.field_Q.setBirthDateValidator(new DateOfBirthValidator(), 20672);
         this.field_O = new TextButton(MusicCrossfadeStream.field_J, (UiListener) (this));
         this.children = new UiComponent[]{(UiComponent) ((Object) this.field_Q), (UiComponent) ((Object) this.field_O)};
         this.field_O.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());

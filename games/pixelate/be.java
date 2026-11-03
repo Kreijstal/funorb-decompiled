@@ -14,7 +14,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
     static SceneWidget field_P;
     private boolean field_M;
 
-    public final void a(EditableTextWidget param0, int param1) {
+    public final void onTextChanged(EditableTextWidget param0, int param1) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -41,7 +41,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "be.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "be.E(" + param0 + ')');
         }
     }
 
@@ -749,7 +749,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           } else {
             stackIn_571_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_570_0), ((StringBuilder) (Object) stackIn_570_1).append(stackIn_571_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_570_0), ((StringBuilder) (Object) stackIn_570_1).append(stackIn_571_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -771,7 +771,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "be.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "be.C(" + param0 + ')');
         }
     }
 
@@ -784,7 +784,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
             he.field_d.drawParagraph(this.field_S, 20 + (param2 + this.field_z), 15 + param0 + this.field_p, -40 + this.field_E, this.field_C, 16777215, -1, 1, 0, he.field_d.maxAscent);
           }
           if (this.field_Q != null) {
-            SoftwareRasterizer.b(param2 + 10, 134 + param0, -20 + this.field_E, 4210752);
+            SoftwareRasterizer.drawHorizontalLine(param2 + 10, 134 + param0, -20 + this.field_E, 4210752);
           }
           super.a(param0, param1, param2, (byte) 6);
           var5_int = 11 / ((param3 - 70) / 49);
@@ -792,7 +792,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "be.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var5), "be.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -853,7 +853,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -873,7 +873,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "be.D(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "be.D(" + param0 + ')');
         }
     }
 
@@ -904,7 +904,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1671,7 +1671,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           } else {
             stackIn_530_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_529_0), ((StringBuilder) (Object) stackIn_529_1).append(stackIn_530_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_529_0), ((StringBuilder) (Object) stackIn_529_1).append(stackIn_530_2).append(')').toString());
         }
         if (GameApplet.field_l != 0) {
           Pixelate.field_H = (var4 == 0);
@@ -1709,7 +1709,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1726,7 +1726,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "be.I(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "be.I(" + param0 + ')');
         }
     }
 
@@ -1908,7 +1908,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           } else {
             stackIn_95_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1932,7 +1932,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

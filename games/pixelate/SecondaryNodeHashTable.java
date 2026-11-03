@@ -31,13 +31,13 @@ final class SecondaryNodeHashTable {
               return null;
             }
             if (this.field_g.field_q != this.field_b) {
-              this.field_g = this.field_g.field_p;
+              this.field_g = this.field_g.secondaryNext;
               continue;
             }
             break;
           }
           var3 = this.field_g;
-          this.field_g = this.field_g.field_p;
+          this.field_g = this.field_g.secondaryNext;
           return var3;
         }
         this.a((byte) -113);
@@ -47,33 +47,33 @@ final class SecondaryNodeHashTable {
             return null;
           }
           if (this.field_g.field_q != this.field_b) {
-            this.field_g = this.field_g.field_p;
+            this.field_g = this.field_g.secondaryNext;
             continue;
           }
           break;
         }
         var3Lifetime1 = this.field_g;
-        this.field_g = this.field_g.field_p;
+        this.field_g = this.field_g.secondaryNext;
         return var3Lifetime1;
     }
 
     final void a(boolean param0, DualLinkNode param1, long param2) {
         DualLinkNode var5 = null;
         try {
-          if (param1.field_r != null) {
+          if (param1.secondaryPrevious != null) {
             param1.e(17);
           }
           var5 = this.field_a[(int)((long)(this.field_h - 1) & param2)];
-          param1.field_r = var5.field_r;
-          param1.field_p = var5;
-          param1.field_r.field_p = param1;
+          param1.secondaryPrevious = var5.secondaryPrevious;
+          param1.secondaryNext = var5;
+          param1.secondaryPrevious.secondaryNext = param1;
           if (param0) {
             SecondaryNodeHashTable.b(-98, -4);
           }
-          param1.field_p.field_r = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
           param1.field_q = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -158,10 +158,10 @@ final class SecondaryNodeHashTable {
               }
               fieldTemp$1 = this.field_d;
               this.field_d = this.field_d + 1;
-              var4 = this.field_a[fieldTemp$1].field_p;
+              var4 = this.field_a[fieldTemp$1].secondaryNext;
               var58 = var4;
             } while (var4 == this.field_a[this.field_d - 1]);
-            this.field_c = var58.field_p;
+            this.field_c = var58.secondaryNext;
             return var58;
           }
           SecondaryNodeHashTable.a(-20, -121);
@@ -171,15 +171,15 @@ final class SecondaryNodeHashTable {
             }
             fieldTemp$0 = this.field_d;
             this.field_d = this.field_d + 1;
-            var4 = this.field_a[fieldTemp$0].field_p;
+            var4 = this.field_a[fieldTemp$0].secondaryNext;
             var59 = var4;
           } while (var4 == this.field_a[this.field_d - 1]);
-          this.field_c = var59.field_p;
+          this.field_c = var59.secondaryNext;
           return var59;
         }
         if (this.field_c != this.field_a[this.field_d - 1]) {
           var57 = this.field_c;
-          this.field_c = var57.field_p;
+          this.field_c = var57.secondaryNext;
           return var57;
         }
         if (param0 == 50) {
@@ -189,10 +189,10 @@ final class SecondaryNodeHashTable {
             }
             fieldTemp$3 = this.field_d;
             this.field_d = this.field_d + 1;
-            var4 = this.field_a[fieldTemp$3].field_p;
+            var4 = this.field_a[fieldTemp$3].secondaryNext;
             var5 = var4;
           } while (var4 == this.field_a[this.field_d - 1]);
-          this.field_c = var5.field_p;
+          this.field_c = var5.secondaryNext;
           return var5;
         }
         SecondaryNodeHashTable.a(-20, -121);
@@ -202,10 +202,10 @@ final class SecondaryNodeHashTable {
           }
           fieldTemp$2 = this.field_d;
           this.field_d = this.field_d + 1;
-          var4 = this.field_a[fieldTemp$2].field_p;
+          var4 = this.field_a[fieldTemp$2].secondaryNext;
           var29 = var4;
         } while (var4 == this.field_a[this.field_d - 1]);
-        this.field_c = var29.field_p;
+        this.field_c = var29.secondaryNext;
         return var29;
     }
 
@@ -270,39 +270,39 @@ final class SecondaryNodeHashTable {
         if (param0 == -11434) {
           this.field_b = param1;
           var4 = this.field_a[(int)(param1 & (long)(this.field_h - 1))];
-          this.field_g = var4.field_p;
+          this.field_g = var4.secondaryNext;
           while (true) {
             if (this.field_g == var4) {
               this.field_g = null;
               return null;
             }
             if (~param1 != ~this.field_g.field_q) {
-              this.field_g = this.field_g.field_p;
+              this.field_g = this.field_g.secondaryNext;
               continue;
             }
             break;
           }
           var5 = this.field_g;
-          this.field_g = this.field_g.field_p;
+          this.field_g = this.field_g.secondaryNext;
           return var5;
         }
         this.field_c = (DualLinkNode) null;
         this.field_b = param1;
         var4Lifetime1 = this.field_a[(int)(param1 & (long)(this.field_h - 1))];
-        this.field_g = var4Lifetime1.field_p;
+        this.field_g = var4Lifetime1.secondaryNext;
         while (true) {
           if (this.field_g == var4Lifetime1) {
             this.field_g = null;
             return null;
           }
           if (~param1 != ~this.field_g.field_q) {
-            this.field_g = this.field_g.field_p;
+            this.field_g = this.field_g.secondaryNext;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_g;
-        this.field_g = this.field_g.field_p;
+        this.field_g = this.field_g.secondaryNext;
         return var5Lifetime1;
     }
 
@@ -336,7 +336,7 @@ final class SecondaryNodeHashTable {
             if (decompiledFrameRemainder0) {
               if (aa.field_f.position > 0) {
                 try {
-                  NodeHashTableIterator.field_e.a(aa.field_f.position, -98, 0, aa.field_f.payload);
+                  NodeHashTableIterator.field_e.write(aa.field_f.position, -98, 0, aa.field_f.payload);
                   aj.field_m = hm.a(64);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -371,8 +371,8 @@ final class SecondaryNodeHashTable {
           dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_a[var2] = dupTemp$1;
-          var3.field_r = var3;
-          var3.field_p = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 

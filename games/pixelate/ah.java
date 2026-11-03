@@ -64,7 +64,7 @@ abstract class ah extends DualLinkNode {
               if (var8_ref_aa.field_q != null) {
               }
               var10 = TextWidgetPainter.a(var8_ref_aa, -77);
-              var11 = var10 + BitmapFont.b(var8_ref_aa.field_g);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_aa.field_g);
               var12 = lc.a(var8_ref_aa, false);
               var8_ref_aa.field_q = new SceneWidget(0L, oi.field_e, var11);
               var8_ref_aa.field_q.field_y = ((16711423 & oi.field_e.field_y) >> 1) + (var12 - (var12 >> 1 & 8355711));
@@ -249,7 +249,7 @@ abstract class ah extends DualLinkNode {
         this.field_t = param0;
     }
 
-    abstract boolean b(boolean param0);
+    abstract boolean isSoft(boolean param0);
 
     static {
         field_u = "Highscores";

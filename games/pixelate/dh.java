@@ -13,7 +13,7 @@ final class dh {
           if (oo.field_b <= 0) {
             if (0 < vn.field_g) {
               if (EmergentBehaviourBackground.field_o) {
-                SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
                 ra.field_e.a(param1, 0);
                 return;
               }
@@ -23,7 +23,7 @@ final class dh {
               return;
             }
             if (EmergentBehaviourBackground.field_o) {
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
               ra.field_e.a(param1, 0);
               return;
             }
@@ -34,7 +34,7 @@ final class dh {
               if (!EmergentBehaviourBackground.field_o) {
                 return;
               }
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
               ra.field_e.a(param1, 0);
               return;
             }
@@ -42,13 +42,13 @@ final class dh {
               if (!EmergentBehaviourBackground.field_o) {
                 return;
               }
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
               ra.field_e.a(param1, 0);
               return;
             }
             return;
           }
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           TickClock.field_e.a(param1, 0);
           if (0 >= vn.field_g &&
             Checkbox.field_W <= 0) {
@@ -57,13 +57,13 @@ final class dh {
           if (!EmergentBehaviourBackground.field_o) {
             return;
           }
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           ra.field_e.a(param1, 0);
           return;
         }
         if (oo.field_b > 0 &&
           LobbyPlayer.field_Wb) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           TickClock.field_e.a(param1, 0);
           if (0 >= vn.field_g &&
             Checkbox.field_W <= 0) {
@@ -72,7 +72,7 @@ final class dh {
           if (!EmergentBehaviourBackground.field_o) {
             return;
           }
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           ra.field_e.a(param1, 0);
           return;
         }
@@ -83,7 +83,7 @@ final class dh {
         if (!EmergentBehaviourBackground.field_o) {
           return;
         }
-        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+        SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
         ra.field_e.a(param1, 0);
     }
 
@@ -185,7 +185,7 @@ final class dh {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 

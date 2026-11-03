@@ -5,7 +5,7 @@ final class MusicTrack extends IntrusiveNode {
     byte[] field_k;
     NodeHashTable patchUsage;
 
-    final void b() {
+    final void releasePatchUsage() {
         this.patchUsage = null;
     }
 
@@ -110,7 +110,7 @@ final class MusicTrack extends IntrusiveNode {
         }
     }
 
-    final static MusicTrack a(ResourceArchive param0, String param1, String param2) {
+    final static MusicTrack load(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a((byte) 24, param2, param1);
         if (var3 == null) {
           return null;
@@ -422,8 +422,8 @@ final class MusicTrack extends IntrusiveNode {
         param0.position = param0.position + var5 * 3;
         this.field_k = new byte[var4];
         var51 = new PacketBuffer(this.field_k);
-        var51.d(1297377380, -80);
-        var51.d(6, -75);
+        var51.writeInt(1297377380, -80);
+        var51.writeInt(6, -75);
         stackIn_84_0 = var51;
         stackIn_84_1 = 1276387944;
         if (var2 <= 1) {
@@ -449,7 +449,7 @@ final class MusicTrack extends IntrusiveNode {
           if (var60 >= var2) {
             return;
           }
-          var51.d(1297379947, -88);
+          var51.writeInt(1297379947, -88);
           var51.position = var51.position + 4;
           var61 = var51.position;
           var62 = -1;
