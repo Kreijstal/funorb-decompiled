@@ -76,7 +76,7 @@ final class bo extends UiLayoutNode {
         }
     }
 
-    final static int a(ec param0, byte param1, ec param2) {
+    final static int a(LoginText param0, byte param1, LoginText param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;

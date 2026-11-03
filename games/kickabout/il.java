@@ -108,7 +108,7 @@ final class il {
             return stackIn_3_0;
           }
           if (SumIntegersCommand.a((byte) 86, param0)) {
-            stackIn_7_0 = ec.field_g;
+            stackIn_7_0 = LoginText.field_g;
             return stackIn_7_0;
           }
           if (ts.field_d != 2) {

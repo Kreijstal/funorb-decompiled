@@ -422,7 +422,7 @@ final class eo {
         }
     }
 
-    final static void a(kp param0, String param1, String param2, int param3, int param4, int param5, int param6) {
+    final static void a(LobbyGameRecord param0, String param1, String param2, int param3, int param4, int param5, int param6) {
         double var12 = 0.0;
         int var14 = 0;
         double var7 = (double)nj.monotonicMillis(120);

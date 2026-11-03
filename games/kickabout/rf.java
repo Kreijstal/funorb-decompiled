@@ -195,14 +195,14 @@ final class rf {
           }
           kj.field_b = new byte[210][];
           qi.field_n = new int[16];
-          ac.field_a = new byte[16][];
+          TrinketUnlockNotice.field_a = new byte[16][];
           for (var3Lifetime2 = 0; var3Lifetime2 < 210; var3Lifetime2++) {
             kj.field_b[var3Lifetime2] = eo.a(var13, var3Lifetime2, 210);
           }
           var4Lifetime2 = -20 % ((param0 + 71) / 47);
           for (var3Lifetime3 = 0; var3Lifetime3 < 16; var3Lifetime3++) {
             qi.field_n[var3Lifetime3] = (-(90 * var3Lifetime3) + 1440 >> 4) + 72;
-            ac.field_a[var3Lifetime3] = eo.a(var14, var3Lifetime3, 16, qi.field_n[var3Lifetime3]);
+            TrinketUnlockNotice.field_a[var3Lifetime3] = eo.a(var14, var3Lifetime3, 16, qi.field_n[var3Lifetime3]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -253,10 +253,10 @@ final class rf {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = ei.a(param0, (byte) -23);
-        int var4 = we.a(param0, false);
-        int var5 = ei.a(param2, (byte) -23);
-        int var6 = we.a(param2, false);
+        int var3 = ei.sine(param0, (byte) -23);
+        int var4 = we.cosine(param0, false);
+        int var5 = ei.sine(param2, (byte) -23);
+        int var6 = we.cosine(param2, false);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);

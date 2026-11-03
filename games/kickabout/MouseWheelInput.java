@@ -254,10 +254,10 @@ abstract class MouseWheelInput {
         or.field_d.b(9, (byte) -52);
         if (param0 != -1822) {
           MouseWheelInput.a(-16, -37);
-          ec.field_e = true;
+          LoginText.field_e = true;
           return;
         }
-        ec.field_e = true;
+        LoginText.field_e = true;
     }
 
     abstract void a(byte param0, java.awt.Component param1);

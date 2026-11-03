@@ -73,7 +73,7 @@ final class s extends TextButton {
         field_F = null;
     }
 
-    final static ec j(int param0) {
+    final static LoginText j(int param0) {
         String var1 = null;
         if (param0 >= 33) {
           var1 = BigCommand.g(-26370);
@@ -81,9 +81,9 @@ final class s extends TextButton {
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new ec(BigCommand.g(-26370), ContextMenu.b(-20010));
+          return new LoginText(BigCommand.g(-26370), ContextMenu.b(-20010));
         }
-        return (ec) null;
+        return (LoginText) null;
     }
 
     final static int a(int param0, int param1, byte[] param2, int param3) {

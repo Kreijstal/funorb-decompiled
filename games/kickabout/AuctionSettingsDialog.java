@@ -69,7 +69,7 @@ final class AuctionSettingsDialog extends MessageDialog {
 
     }
 
-    final boolean a(int param0, byte param1, char param2) {
+    final boolean handleKey(int param0, byte param1, char param2) {
         boolean discarded$0 = false;
         boolean stackIn_2_0 = false;
         int stackIn_3_1 = 0;
@@ -104,7 +104,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         var4 = stackIn_2_0 | (stackIn_11_1 | stackIn_12_2) != 0 ? 1 : 0;
         stackIn_15_0 = var4;
         if (GameplayHelpScreen.field_G[82] &&
-          cc.field_e == 66) {
+          FixedQuaternion.field_e == 66) {
           stackIn_16_1 = 1;
         } else {
           stackIn_16_1 = 0;
@@ -147,7 +147,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         if (var4Lifetime3 == 0) {
           if (!this.field_F &&
             !this.field_I) {
-            discarded$0 = super.a(param0, param1, param2);
+            discarded$0 = super.handleKey(param0, param1, param2);
             return false;
           }
           return true;
@@ -760,7 +760,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         stackIn_205_1 = (var7Lifetime4 == 0) ? false : true;
         stackIn_204_0.field_lb = stackIn_205_1;
         if (param0 != 3) {
-          this.a(-126, (byte) 75, '￺');
+          this.handleKey(-126, (byte) 75, '￺');
         }
     }
 

@@ -357,11 +357,11 @@ final class PlayingView extends MatchPhaseView {
         return stackIn_5_0;
     }
 
-    final static ec f(int param0) {
+    final static LoginText f(int param0) {
         if (param0 != -1) {
           PlayingView.d((byte) -2);
         }
-        return new ec(LobbyPlayerRow.a(320), TextLine.a(false));
+        return new LoginText(LobbyPlayerRow.a(320), TextLine.a(false));
     }
 
     private final void c(int param0, int param1, int param2) {

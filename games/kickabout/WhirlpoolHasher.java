@@ -94,7 +94,7 @@ final class WhirlpoolHasher {
         field_f = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          WhirlpoolHasher.a(96, (ec) null, (ec) null, 12, false, (String) null, true);
+          WhirlpoolHasher.a(96, (LoginText) null, (LoginText) null, 12, false, (String) null, true);
         }
         field_b = null;
         field_m = null;
@@ -151,7 +151,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static int a(int param0, ec param1, ec param2, int param3, boolean param4, String param5, boolean param6) {
+    final static int a(int param0, LoginText param1, LoginText param2, int param3, boolean param4, String param5, boolean param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
         PacketBuffer stackIn_17_0 = null;
@@ -188,8 +188,8 @@ final class WhirlpoolHasher {
         int var9Lifetime3;
         var13 = Kickabout.field_G;
         try {
-          var14 = param2.b(27939);
-          var8 = param1.b(27939);
+          var14 = param2.getText(27939);
+          var8 = param1.getText(27939);
           if (null == op.field_y &&
             !EmailSyntaxValidator.a(false, (byte) 123)) {
             stackIn_5_0 = -1;
@@ -200,17 +200,17 @@ final class WhirlpoolHasher {
             or.field_d.field_n = 0;
             if (param5 == null) {
               gl.field_a.field_n = 0;
-              gl.field_a.writeInt(-56, ac.field_d.nextInt());
-              gl.field_a.writeInt(-34, ac.field_d.nextInt());
+              gl.field_a.writeInt(-56, TrinketUnlockNotice.field_d.nextInt());
+              gl.field_a.writeInt(-34, TrinketUnlockNotice.field_d.nextInt());
               stackIn_17_0 = gl.field_a;
-              if (!param2.c(-95)) {
+              if (!param2.getFlag(-95)) {
                 stackIn_18_1 = "";
               } else {
                 stackIn_18_1 = var14;
               }
               ((PacketBuffer) (Object) stackIn_17_0).writeCircumfixedString(stackIn_18_1, (byte) -126);
               stackIn_20_0 = gl.field_a;
-              if (!param1.c(-94)) {
+              if (!param1.getFlag(-94)) {
                 stackIn_21_1 = "";
               } else {
                 stackIn_21_1 = var8;
@@ -227,8 +227,8 @@ final class WhirlpoolHasher {
                 var9 = var9 | 1;
               }
               gl.field_a.field_n = 0;
-              gl.field_a.writeInt(-62, ac.field_d.nextInt());
-              gl.field_a.writeInt(-42, ac.field_d.nextInt());
+              gl.field_a.writeInt(-62, TrinketUnlockNotice.field_d.nextInt());
+              gl.field_a.writeInt(-42, TrinketUnlockNotice.field_d.nextInt());
               gl.field_a.writeCircumfixedString(var14, (byte) -126);
               gl.field_a.writeCircumfixedString(var8, (byte) -126);
               var15 = (CharSequence) ((Object) param5);
@@ -391,7 +391,7 @@ final class WhirlpoolHasher {
           }
           if (param1 != 21024) {
             var9 = (String) null;
-            WhirlpoolHasher.a(64, (ec) null, (ec) null, -29, false, (String) null, true);
+            WhirlpoolHasher.a(64, (LoginText) null, (LoginText) null, -29, false, (String) null, true);
           }
           ArrayOperations.a(this.field_j, 0, this.field_e, 32, 32);
           this.a((byte) 18);

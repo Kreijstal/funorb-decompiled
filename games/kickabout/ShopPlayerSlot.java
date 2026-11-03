@@ -119,12 +119,12 @@ final class ShopPlayerSlot extends im {
             }
             var8 = stackIn_16_0;
             if (0 == var6) {
-              stackIn_21_0 = this.field_Sb.c(true, oi.b(-91));
+              stackIn_21_0 = this.field_Sb.c(true, IntValueNode.b(-91));
             } else {
               if (var6 != 1) {
-                stackIn_21_0 = this.field_Sb.b((byte) 84, oi.b(99));
+                stackIn_21_0 = this.field_Sb.b((byte) 84, IntValueNode.b(99));
               } else {
-                stackIn_21_0 = this.field_Sb.a(5205, oi.b(param0 + 118));
+                stackIn_21_0 = this.field_Sb.a(5205, IntValueNode.b(param0 + 118));
               }
             }
             var9 = stackIn_21_0;

@@ -245,7 +245,7 @@ final class tb extends ArchiveNetworkClient {
           }
           if (param1 == 28) {
             if (su.field_c != null) {
-              su.field_c.e(19910);
+              su.field_c.beginClose(19910);
             }
             var5 = (PopupDialog) (ScrollPane.field_Jb.g(24009));
             while (var5 != null) {

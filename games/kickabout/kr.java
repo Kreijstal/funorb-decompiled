@@ -73,7 +73,7 @@ final class kr {
           var14 = il.field_d[1];
           var29Lifetime4 = var14;
           var29Lifetime5 = var14;
-          var13 = oi.field_h;
+          var13 = IntValueNode.field_h;
           var12.field_j.addItemWithIcon(var13, param1, 12, var14);
           var15 = TextButton.field_v;
           var17 = il.field_d[2];

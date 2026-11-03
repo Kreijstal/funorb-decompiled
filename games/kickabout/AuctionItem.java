@@ -124,8 +124,8 @@ class AuctionItem extends IntrusiveNode {
           var5Lifetime1 = ImageProducerRasterBuffer.field_i[11] >> 8;
           var6Lifetime1 = PlayerStats.field_p << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = ei.a(var6Lifetime1, (byte) -23) >> 8;
-          var9Lifetime1 = we.a(var6Lifetime1, false) >> 8;
+          var8Lifetime1 = ei.sine(var6Lifetime1, (byte) -23) >> 8;
+          var9Lifetime1 = we.cosine(var6Lifetime1, false) >> 8;
           var12Lifetime1 = -33 / ((-50 - param0) / 49);
           if (BytePlusOneCommand.field_A != -1 &&
             -1 != ArchiveManager.field_m) {

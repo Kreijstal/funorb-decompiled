@@ -184,7 +184,7 @@ final class TextFieldNode extends UiLayoutNode {
             var2_long = nj.monotonicMillis(param1 - 75);
             var4 = go.field_b;
             if (0.0 != WhirlpoolHasher.field_a) {
-              var4 = (int)((double)var4 + ac.field_d.nextGaussian() * WhirlpoolHasher.field_a);
+              var4 = (int)((double)var4 + TrinketUnlockNotice.field_d.nextGaussian() * WhirlpoolHasher.field_a);
               if (0 > var4) {
                 var4 = 0;
               }

@@ -1034,13 +1034,13 @@ final class PlayerStats implements lv {
           }
           var18Lifetime1 = stackIn_51_0;
           if (0 == var17_int) {
-            stackIn_58_0 = this.c(true, oi.b(-89));
+            stackIn_58_0 = this.c(true, IntValueNode.b(-89));
           } else {
             if (var17_int == 1) {
-              stackIn_58_0 = this.a(5205, oi.b(-120));
+              stackIn_58_0 = this.a(5205, IntValueNode.b(-120));
             } else {
               if (var17_int == 2) {
-                stackIn_58_0 = this.b((byte) -118, oi.b(-110));
+                stackIn_58_0 = this.b((byte) -118, IntValueNode.b(-110));
               } else {
                 stackIn_58_0 = 0;
               }

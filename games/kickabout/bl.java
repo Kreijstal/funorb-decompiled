@@ -11,7 +11,7 @@ final class bl {
     private int field_a;
     private int field_k;
     static String[] field_d;
-    private kp field_e;
+    private LobbyGameRecord field_e;
     private boolean field_f;
     static String field_n;
     static int[] field_m;
@@ -22,7 +22,7 @@ final class bl {
         int var8 = 0;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
-        kp stackIn_29_0 = null;
+        LobbyGameRecord stackIn_29_0 = null;
         String[] stackIn_29_1 = null;
         int stackIn_30_2 = 0;
         String stackIn_32_1 = null;
@@ -52,7 +52,7 @@ final class bl {
           k.field_j.b(var2, var3, 96);
         }
         if (param0 < 63) {
-          this.field_e = (kp) null;
+          this.field_e = (LobbyGameRecord) null;
         }
         SquadPickerDialog.field_Q.b(var2, var3, al.a(false, (byte) 14));
         if (this.field_e.field_f == 4) {
@@ -138,7 +138,7 @@ final class bl {
         return true;
     }
 
-    final void a(kp param0, boolean param1, int param2) {
+    final void a(LobbyGameRecord param0, boolean param1, int param2) {
         int var5 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -196,7 +196,7 @@ final class bl {
         }
     }
 
-    bl(kp param0, String[] param1, int param2, int param3, int param4) {
+    bl(LobbyGameRecord param0, String[] param1, int param2, int param3, int param4) {
         try {
           this.field_e = param0;
           this.field_l = param2;

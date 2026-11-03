@@ -146,7 +146,7 @@ final class ng {
                 var2[var3] = DiskCacheWorker.field_g[this.field_h[var3]];
               } else {
                 if (this.field_g[var3] == 3) {
-                  var2[var3] = kp.field_g[this.field_h[var3]];
+                  var2[var3] = LobbyGameRecord.field_g[this.field_h[var3]];
                 }
               }
             } else {

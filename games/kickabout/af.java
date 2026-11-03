@@ -3,7 +3,7 @@
  */
 final class af {
     static int[] field_b;
-    static dt[] field_a;
+    static OffscreenPlayerArrow[] field_a;
     static String field_c;
     static UiLayoutNode field_d;
 

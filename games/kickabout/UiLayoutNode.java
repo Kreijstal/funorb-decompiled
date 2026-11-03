@@ -373,7 +373,7 @@ class UiLayoutNode extends iv {
           !LoggedPlayer.b(-3197)) {
           var3 = 0;
         }
-        if (84 == cc.field_e) {
+        if (84 == FixedQuaternion.field_e) {
           if (var3 == 0) {
             if (NodeHashTableIterator.field_b == 0) {
               return true;
@@ -401,7 +401,7 @@ class UiLayoutNode extends iv {
           }
           return true;
         }
-        if (cc.field_e == 85) {
+        if (FixedQuaternion.field_e == 85) {
           if (var3 != 0 &&
             AuctionLogEntry.field_m.length() > 0) {
             PagedHelpScreen.a(-1 + AuctionLogEntry.field_m.length(), ' ', -11407, AuctionLogEntry.field_m);

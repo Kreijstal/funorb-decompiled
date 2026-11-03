@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dt {
+final class OffscreenPlayerArrow {
     static int[] field_f;
     private int field_b;
     private int field_g;
@@ -108,12 +108,12 @@ final class dt {
           return Math.max(0, Math.min(256, 768 - var2 * 3));
         }
         if (param0 != -75) {
-          dt.a(101);
+          OffscreenPlayerArrow.a(101);
         }
         return 0;
     }
 
-    dt(RenderedFootballer param0, int param1) {
+    OffscreenPlayerArrow(RenderedFootballer param0, int param1) {
         this.field_k = false;
         try {
           this.field_h = param1;
@@ -143,12 +143,12 @@ final class dt {
         } else {
           var2 = this.field_g + 155;
           var3 = 1600 - (1200 * var2 >> 8);
-          var4 = we.a(this.field_a, false) * 40 >> 17;
-          var5 = ei.a(this.field_a, (byte) -23) * 40 >> 17;
-          var6 = we.a(this.field_a - var3, false) * var2 * 40 >> 24;
-          var7 = var2 * ei.a(-var3 + this.field_a, (byte) -23) * 40 >> 24;
-          var8 = 40 * (var2 * we.a(var3 + this.field_a, false)) >> 24;
-          var9 = 40 * var2 * ei.a(var3 + this.field_a, (byte) -23) >> 24;
+          var4 = we.cosine(this.field_a, false) * 40 >> 17;
+          var5 = ei.sine(this.field_a, (byte) -23) * 40 >> 17;
+          var6 = we.cosine(this.field_a - var3, false) * var2 * 40 >> 24;
+          var7 = var2 * ei.sine(-var3 + this.field_a, (byte) -23) * 40 >> 24;
+          var8 = 40 * (var2 * we.cosine(var3 + this.field_a, false)) >> 24;
+          var9 = 40 * var2 * ei.sine(var3 + this.field_a, (byte) -23) >> 24;
           if (0 == tb.field_v) {
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(this.field_b, this.field_d);

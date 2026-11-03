@@ -205,12 +205,12 @@ final class jr extends im {
               var9_int = stackIn_36_0;
               if (var7 != 0) {
                 if (var7 == 1) {
-                  stackIn_41_0 = var12.a(5205, oi.b(87));
+                  stackIn_41_0 = var12.a(5205, IntValueNode.b(87));
                 } else {
-                  stackIn_41_0 = var12.b((byte) -51, oi.b(-112));
+                  stackIn_41_0 = var12.b((byte) -51, IntValueNode.b(-112));
                 }
               } else {
-                stackIn_41_0 = var12.c(true, oi.b(-113));
+                stackIn_41_0 = var12.c(true, IntValueNode.b(-113));
               }
               var10 = stackIn_41_0;
               stackIn_44_0 = var6;

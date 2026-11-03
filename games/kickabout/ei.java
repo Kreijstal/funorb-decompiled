@@ -288,7 +288,7 @@ final class ei implements WidgetPainter {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int sine(int param0, byte param1) {
         if (param1 != -23) {
           field_f = (String) null;
         }

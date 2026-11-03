@@ -131,7 +131,7 @@ final class HoverTooltip extends UiLayoutNode {
             this.field_Fb = 1;
             return this.field_Fb;
           }
-          if (cc.field_e == 85 &&
+          if (FixedQuaternion.field_e == 85 &&
             0 < this.field_yb.length()) {
             PagedHelpScreen.a(-1 + this.field_yb.length(), ' ', -11407, this.field_yb);
           }
@@ -152,8 +152,8 @@ final class HoverTooltip extends UiLayoutNode {
               }
             }
           }
-          if (cc.field_e != 84) {
-            if (cc.field_e != 13) {
+          if (FixedQuaternion.field_e != 84) {
+            if (FixedQuaternion.field_e != 13) {
               continue;
             }
             return 1;
@@ -200,7 +200,7 @@ final class HoverTooltip extends UiLayoutNode {
         if (this.field_Fb != 0) {
           return false;
         }
-        if (cc.field_e != 85) {
+        if (FixedQuaternion.field_e != 85) {
           if (this.field_yb.length() < 12) {
             var2 = Character.toLowerCase(il.field_c);
             if (32 == var2) {
@@ -218,7 +218,7 @@ final class HoverTooltip extends UiLayoutNode {
             if (ModalStack.a((byte) -118, (char) var2)) {
               discarded$10 = this.field_yb.append((char) var2);
               var2 = -60 % ((-76 - param0) / 48);
-              if (cc.field_e == 84) {
+              if (FixedQuaternion.field_e == 84) {
                 if (0 >= this.field_yb.length()) {
                   this.field_Fb = 1;
                 } else {
@@ -226,7 +226,7 @@ final class HoverTooltip extends UiLayoutNode {
                   this.field_Fb = 2;
                 }
               }
-              if (cc.field_e != 13) {
+              if (FixedQuaternion.field_e != 13) {
                 return true;
               }
               this.field_Fb = 1;
@@ -235,7 +235,7 @@ final class HoverTooltip extends UiLayoutNode {
             if (IntrusiveNode.a(12105, (char) var2)) {
               discarded$11 = this.field_yb.append((char) var2);
               var2 = -60 % ((-76 - param0) / 48);
-              if (cc.field_e == 84) {
+              if (FixedQuaternion.field_e == 84) {
                 if (0 >= this.field_yb.length()) {
                   this.field_Fb = 1;
                 } else {
@@ -243,14 +243,14 @@ final class HoverTooltip extends UiLayoutNode {
                   this.field_Fb = 2;
                 }
               }
-              if (cc.field_e == 13) {
+              if (FixedQuaternion.field_e == 13) {
                 this.field_Fb = 1;
               }
               return true;
             }
           }
           var2Lifetime5 = -60 % ((-76 - param0) / 48);
-          if (cc.field_e == 84) {
+          if (FixedQuaternion.field_e == 84) {
             if (0 >= this.field_yb.length()) {
               this.field_Fb = 1;
             } else {
@@ -258,7 +258,7 @@ final class HoverTooltip extends UiLayoutNode {
               this.field_Fb = 2;
             }
           }
-          if (cc.field_e == 13) {
+          if (FixedQuaternion.field_e == 13) {
             this.field_Fb = 1;
           }
           return true;
@@ -281,7 +281,7 @@ final class HoverTooltip extends UiLayoutNode {
             if (ModalStack.a((byte) -118, (char) var2Lifetime1)) {
               discarded$7 = this.field_yb.append((char) var2Lifetime1);
               var2Lifetime1 = -60 % ((-76 - param0) / 48);
-              if (cc.field_e == 84) {
+              if (FixedQuaternion.field_e == 84) {
                 if (0 >= this.field_yb.length()) {
                   this.field_Fb = 1;
                 } else {
@@ -289,7 +289,7 @@ final class HoverTooltip extends UiLayoutNode {
                   this.field_Fb = 2;
                 }
               }
-              if (cc.field_e == 13) {
+              if (FixedQuaternion.field_e == 13) {
                 this.field_Fb = 1;
               }
               return true;
@@ -297,7 +297,7 @@ final class HoverTooltip extends UiLayoutNode {
             if (IntrusiveNode.a(12105, (char) var2Lifetime1)) {
               discarded$6 = this.field_yb.append((char) var2Lifetime1);
               var2Lifetime1 = -60 % ((-76 - param0) / 48);
-              if (cc.field_e == 84) {
+              if (FixedQuaternion.field_e == 84) {
                 if (0 >= this.field_yb.length()) {
                   this.field_Fb = 1;
                 } else {
@@ -305,7 +305,7 @@ final class HoverTooltip extends UiLayoutNode {
                   this.field_Fb = 2;
                 }
               }
-              if (cc.field_e != 13) {
+              if (FixedQuaternion.field_e != 13) {
                 return true;
               }
               this.field_Fb = 1;
@@ -313,7 +313,7 @@ final class HoverTooltip extends UiLayoutNode {
             }
           }
           var2Lifetime1Lifetime1 = -60 % ((-76 - param0) / 48);
-          if (cc.field_e == 84) {
+          if (FixedQuaternion.field_e == 84) {
             if (0 >= this.field_yb.length()) {
               this.field_Fb = 1;
             } else {
@@ -321,7 +321,7 @@ final class HoverTooltip extends UiLayoutNode {
               this.field_Fb = 2;
             }
           }
-          if (cc.field_e == 13) {
+          if (FixedQuaternion.field_e == 13) {
             this.field_Fb = 1;
           }
           return true;
@@ -329,7 +329,7 @@ final class HoverTooltip extends UiLayoutNode {
         PagedHelpScreen.a(this.field_yb.length() - 1, ' ', -11407, this.field_yb);
         if (this.field_yb.length() >= 12) {
           var2Lifetime2 = -60 % ((-76 - param0) / 48);
-          if (cc.field_e == 84) {
+          if (FixedQuaternion.field_e == 84) {
             if (0 >= this.field_yb.length()) {
               this.field_Fb = 1;
             } else {
@@ -337,7 +337,7 @@ final class HoverTooltip extends UiLayoutNode {
               this.field_Fb = 2;
             }
           }
-          if (cc.field_e != 13) {
+          if (FixedQuaternion.field_e != 13) {
             return true;
           }
           this.field_Fb = 1;
@@ -359,7 +359,7 @@ final class HoverTooltip extends UiLayoutNode {
         if (ModalStack.a((byte) -118, (char) var2Lifetime3)) {
           discarded$3 = this.field_yb.append((char) var2Lifetime3);
           var2Lifetime3 = -60 % ((-76 - param0) / 48);
-          if (cc.field_e == 84) {
+          if (FixedQuaternion.field_e == 84) {
             if (0 >= this.field_yb.length()) {
               this.field_Fb = 1;
             } else {
@@ -367,7 +367,7 @@ final class HoverTooltip extends UiLayoutNode {
               this.field_Fb = 2;
             }
           }
-          if (cc.field_e == 13) {
+          if (FixedQuaternion.field_e == 13) {
             this.field_Fb = 1;
           }
           return true;
@@ -375,8 +375,8 @@ final class HoverTooltip extends UiLayoutNode {
         if (IntrusiveNode.a(12105, (char) var2Lifetime3)) {
           discarded$2 = this.field_yb.append((char) var2Lifetime3);
           var2Lifetime3 = -60 % ((-76 - param0) / 48);
-          if (cc.field_e != 84) {
-            if (cc.field_e != 13) {
+          if (FixedQuaternion.field_e != 84) {
+            if (FixedQuaternion.field_e != 13) {
               return true;
             }
             this.field_Fb = 1;
@@ -384,7 +384,7 @@ final class HoverTooltip extends UiLayoutNode {
           }
           if (0 >= this.field_yb.length()) {
             this.field_Fb = 1;
-            if (cc.field_e != 13) {
+            if (FixedQuaternion.field_e != 13) {
               return true;
             }
             this.field_Fb = 1;
@@ -392,13 +392,13 @@ final class HoverTooltip extends UiLayoutNode {
           }
           this.field_E = this.field_yb.toString();
           this.field_Fb = 2;
-          if (cc.field_e == 13) {
+          if (FixedQuaternion.field_e == 13) {
             this.field_Fb = 1;
           }
           return true;
         }
         var2Lifetime4 = -60 % ((-76 - param0) / 48);
-        if (cc.field_e == 84) {
+        if (FixedQuaternion.field_e == 84) {
           if (0 >= this.field_yb.length()) {
             this.field_Fb = 1;
           } else {
@@ -406,7 +406,7 @@ final class HoverTooltip extends UiLayoutNode {
             this.field_Fb = 2;
           }
         }
-        if (cc.field_e != 13) {
+        if (FixedQuaternion.field_e != 13) {
           return true;
         }
         this.field_Fb = 1;

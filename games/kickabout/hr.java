@@ -224,8 +224,8 @@ final class hr extends IntrusiveNode {
                 }
               }
             }
-            if (null != oi.field_e) {
-              var2 = oi.field_e;
+            if (null != IntValueNode.field_e) {
+              var2 = IntValueNode.field_e;
               for (var3Lifetime3Lifetime1 = 0; var2.length > var3Lifetime3Lifetime1; var3Lifetime3Lifetime1++) {
                 var4 = var2[var3Lifetime3Lifetime1];
                 var4.a((byte) 125);

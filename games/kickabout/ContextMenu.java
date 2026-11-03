@@ -107,7 +107,7 @@ final class ContextMenu extends UiLayoutNode {
         if (this.field_Gb != param0) {
           return false;
         }
-        if (cc.field_e != 13) {
+        if (FixedQuaternion.field_e != 13) {
           return true;
         }
         this.field_Gb = -1;

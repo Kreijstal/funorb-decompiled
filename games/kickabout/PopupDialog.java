@@ -48,7 +48,7 @@ abstract class PopupDialog extends IntrusiveNode {
               stackIn_25_0.field_gb = stackIn_26_1;
               if (1 == this.field_i[var3].field_sb) {
                 this.handleResult(118, var3);
-                this.e(param0 ^ -3410);
+                this.beginClose(param0 ^ -3410);
               }
               if (null != this.field_o &&
                 null != this.field_o[var3] &&
@@ -150,7 +150,7 @@ abstract class PopupDialog extends IntrusiveNode {
 
     abstract int dialogHeight(byte param0);
 
-    final void a(String[] param0, byte param1) {
+    final void setOptionLabels(String[] param0, byte param1) {
         try {
           this.field_o = param0;
           if (param1 != 90) {
@@ -161,14 +161,14 @@ abstract class PopupDialog extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, byte param1, char param2) {
+    boolean handleKey(int param0, byte param1, char param2) {
         int var5;
         var5 = Kickabout.field_G;
         if (1 != this.field_n) {
           return true;
         }
         if (param0 == 13) {
-          this.e(19910);
+          this.beginClose(19910);
         } else {
           this.field_j.handleArrowKeys(0, true);
           if (this.field_j.selectedIndex != -1) {
@@ -179,7 +179,7 @@ abstract class PopupDialog extends IntrusiveNode {
           if (this.field_j.selectedIndex >= 0 &&
             this.field_j.c(-1)) {
             this.handleResult(114, this.field_j.selectedIndex);
-            this.e(19910);
+            this.beginClose(19910);
           }
         }
         if (param1 != -21) {
@@ -220,7 +220,7 @@ abstract class PopupDialog extends IntrusiveNode {
 
     abstract int dialogWidth(int param0);
 
-    final boolean a(int param0) {
+    final boolean isClosed(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -31268) {
           this.field_q = 38;
@@ -229,14 +229,14 @@ abstract class PopupDialog extends IntrusiveNode {
         return stackIn_6_0;
     }
 
-    final void e(int param0) {
+    final void beginClose(int param0) {
         this.field_n = 2;
         if (param0 != 19910) {
           this.field_m = 118;
         }
     }
 
-    final void a(int param0, String[] param1, int param2) {
+    final void open(int param0, String[] param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

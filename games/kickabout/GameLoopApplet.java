@@ -218,21 +218,21 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                   var2 = 1;
                   var3 = -1;
                   while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
-                    if (-1 == cc.field_e) {
-                      if (cc.field_e == -1 &&
+                    if (-1 == FixedQuaternion.field_e) {
+                      if (FixedQuaternion.field_e == -1 &&
                         -1 != var3) {
-                        cc.field_e = var3;
+                        FixedQuaternion.field_e = var3;
                         var3 = -1;
                       }
                     } else {
-                      if (MatchTransitionScreen.c(cc.field_e, param0 - 1831)) {
-                        var3 = cc.field_e;
+                      if (MatchTransitionScreen.c(FixedQuaternion.field_e, param0 - 1831)) {
+                        var3 = FixedQuaternion.field_e;
                         continue;
                       }
                     }
                     var4 = 0;
                     while (UrlRequest.field_g.size() > var4) {
-                      if (((OverlayLayer) (UrlRequest.field_g.elementAt(var4))).a(param0 - 7345, cc.field_e, il.field_c)) {
+                      if (((OverlayLayer) (UrlRequest.field_g.elementAt(var4))).a(param0 - 7345, FixedQuaternion.field_e, il.field_c)) {
                         break;
                       }
                       var4++;

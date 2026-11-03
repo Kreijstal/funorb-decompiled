@@ -40,7 +40,7 @@ final class fc {
               if (!AuctionBidDialog.field_G) {
                 param0 = cb.field_f;
               } else {
-                param0 = dt.field_j;
+                param0 = OffscreenPlayerArrow.field_j;
               }
               IsSixCommand.field_E.a(ep.field_b, (byte) 120);
             }

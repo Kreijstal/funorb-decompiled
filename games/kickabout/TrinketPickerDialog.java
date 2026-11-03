@@ -26,7 +26,7 @@ final class TrinketPickerDialog extends MessageDialog {
         this.field_K = new UiLayoutNode();
         this.field_I = new TrinketIcon[ok.field_a.a(false)];
         int var1 = 0;
-        oi var2 = (oi) (ok.field_a.g(24009));
+        IntValueNode var2 = (IntValueNode) (ok.field_a.g(24009));
         while (var2 != null) {
           var3 = new TrinketIcon(var2.field_j);
           var3.field_J = var3.field_mb * (var1 / 5);
@@ -35,7 +35,7 @@ final class TrinketPickerDialog extends MessageDialog {
           incrementValue$0 = var1;
           var1++;
           this.field_I[incrementValue$0] = var3;
-          var2 = (oi) (ok.field_a.c(33));
+          var2 = (IntValueNode) (ok.field_a.c(33));
         }
         this.field_K.a(true, 300, 100, 80, 200);
     }

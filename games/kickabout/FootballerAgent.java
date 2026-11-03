@@ -521,8 +521,8 @@ class FootballerAgent extends MatchAgent {
 
     final void startTackle(int param0, int param1) {
         this.setAction((byte) -31, 3);
-        this.field_k = (we.a(param0, false) >> 8) * (this.field_q >> 8);
-        this.field_m = (ei.a(param0, (byte) -23) >> 8) * (this.field_q >> 8);
+        this.field_k = (we.cosine(param0, false) >> 8) * (this.field_q >> 8);
+        this.field_m = (ei.sine(param0, (byte) -23) >> 8) * (this.field_q >> 8);
         if (this.directionMask == 0) {
           this.setDirectionFromMask(en.b(param0, -25147), 26214);
         }

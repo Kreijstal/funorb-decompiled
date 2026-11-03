@@ -633,7 +633,7 @@ final class ResourceArchive {
               var6 = MatchTransitionScreen.a(10, WeightedLruCache.field_c[var3_int], true);
               var7 = -(var6 >> 1) + TeamManagementScreen.field_A;
               var4 = var4 + aj.field_a;
-              if (ec.a(-DiskCacheWorker.field_d + var7, param1, param0, (byte) -124, var4, var6 + (DiskCacheWorker.field_d << 1), PlayerModelPreview.field_j + (pr.field_d << 1))) {
+              if (LoginText.rectangleContains(-DiskCacheWorker.field_d + var7, param1, param0, (byte) -124, var4, var6 + (DiskCacheWorker.field_d << 1), PlayerModelPreview.field_j + (pr.field_d << 1))) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }

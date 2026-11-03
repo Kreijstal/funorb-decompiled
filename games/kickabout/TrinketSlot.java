@@ -216,8 +216,8 @@ final class TrinketSlot extends UiLayoutNode implements lv {
     final static void a(byte param0, int param1, int param2, int param3) {
         gl.field_a.field_n = 0;
         gl.field_a.writeByte(122, 12);
-        gl.field_a.writeInt(-43, ac.field_d.nextInt());
-        gl.field_a.writeInt(-111, ac.field_d.nextInt());
+        gl.field_a.writeInt(-43, TrinketUnlockNotice.field_d.nextInt());
+        gl.field_a.writeInt(-111, TrinketUnlockNotice.field_d.nextInt());
         gl.field_a.writeByte(102, param3);
         gl.field_a.writeByte(112, param2);
         gl.field_a.writeShort(-1207444472, param1);

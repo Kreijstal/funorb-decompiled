@@ -414,9 +414,9 @@ class MessageDialog extends PopupDialog {
         try {
           this.field_y = param0;
           this.a(param3, param1, MusicPatchNode.b(2, this.field_y), -125, param2);
-          this.a(ds.a(this.field_y, 1), pg.a(false, this.field_y), 1054928844);
+          this.open(ds.a(this.field_y, 1), pg.a(false, this.field_y), 1054928844);
           if (this.field_y == 8) {
-            this.a(wo.field_j, (byte) 90);
+            this.setOptionLabels(wo.field_j, (byte) 90);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "i.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -353,7 +353,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             }
             var6 = j.field_a[var3];
             stackIn_11_0 = !(var4 < 0);
-            var7 = ec.a(stackIn_11_0, var6, -23044);
+            var7 = LoginText.a(stackIn_11_0, var6, -23044);
             var8 = RasterStateSnapshot.field_k - (var7 >> 1);
             if (var4 >= 0) {
               if (re.field_c.selectedIndex != var4) {

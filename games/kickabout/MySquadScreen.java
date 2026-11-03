@@ -221,11 +221,11 @@ final class MySquadScreen extends TeamManagementScreen {
           var11Lifetime1 = -10 + (this.field_I.field_T + this.field_I.field_mb);
           var13 = this.field_W.field_F + (-100 + this.field_W.field_q >> 1);
           var14 = this.field_W.field_T + 32;
-          eo.a(var13, var14, var26.power, 0, true, var26.c(true, oi.b(param0 - 73)));
+          eo.a(var13, var14, var26.power, 0, true, var26.c(true, IntValueNode.b(param0 - 73)));
           var14 += 18;
-          eo.a(var13, var14, var26.speed, 1, true, var26.a(param0 + 5210, oi.b(-89)));
+          eo.a(var13, var14, var26.speed, 1, true, var26.a(param0 + 5210, IntValueNode.b(-89)));
           var14 += 18;
-          eo.a(var13, var14, var26.tackle, 2, true, var26.b((byte) 108, oi.b(param0 ^ 95)));
+          eo.a(var13, var14, var26.tackle, 2, true, var26.b((byte) 108, IntValueNode.b(param0 ^ 95)));
           if (var26.power == 100 &&
             100 == var26.tackle &&
             var26.speed == 100) {
@@ -321,7 +321,7 @@ final class MySquadScreen extends TeamManagementScreen {
             var5.c(var6, this.field_X.field_q + this.field_X.field_F - 20, 22 + this.field_X.field_T, 16777215, -1);
           } else {
             if (var4.field_Gb) {
-              var6 = dt.field_e;
+              var6 = OffscreenPlayerArrow.field_e;
               var5.d(var6, (this.field_X.field_q >> 1) + this.field_X.field_F, 109 + this.field_X.field_T, 11184810, -1);
             }
           }

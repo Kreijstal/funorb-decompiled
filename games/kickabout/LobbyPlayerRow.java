@@ -144,8 +144,8 @@ final class LobbyPlayerRow extends UiLayoutNode {
         int var8 = 0;
         int var2 = 0;
         int var3 = 0;
-        dt[] var4 = null;
-        dt var6 = null;
+        OffscreenPlayerArrow[] var4 = null;
+        OffscreenPlayerArrow var6 = null;
         int var7 = 0;
         int var9 = 0;
         RenderedFootballer var10 = null;

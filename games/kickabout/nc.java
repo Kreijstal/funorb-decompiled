@@ -70,8 +70,8 @@ final class nc {
         int var6 = 0;
         String var7 = null;
         try {
-          UrlRequest.field_f[0] = ac.field_d.nextInt();
-          UrlRequest.field_f[1] = ac.field_d.nextInt();
+          UrlRequest.field_f[0] = TrinketUnlockNotice.field_d.nextInt();
+          UrlRequest.field_f[1] = TrinketUnlockNotice.field_d.nextInt();
           gl.field_a.field_n = 0;
           UrlRequest.field_f[3] = (int)ld.field_c;
           UrlRequest.field_f[2] = (int)(ld.field_c >> 32);

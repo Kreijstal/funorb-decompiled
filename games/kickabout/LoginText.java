@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ec {
+final class LoginText {
     static boolean field_e;
     private String field_b;
     private boolean field_c;
@@ -10,17 +10,17 @@ final class ec {
     static String field_a;
     static String field_g;
 
-    final boolean c(int param0) {
+    final boolean getFlag(int param0) {
         int var2 = -5 / ((-31 - param0) / 58);
         return this.field_c;
     }
 
-    final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
+    final static boolean rectangleContains(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         String var8;
         boolean stackIn_8_0 = false;
         if (param3 != -124) {
           var8 = (String) null;
-          ec.a(true, (String) null, -17);
+          LoginText.a(true, (String) null, -17);
         }
         stackIn_8_0 = (param2 >= param0) && (param0 + param5 > param2) && (param1 >= param4) && (param6 + param4 > param1);
         return stackIn_8_0;
@@ -127,7 +127,7 @@ final class ec {
         }
     }
 
-    ec(String param0, boolean param1) {
+    LoginText(String param0, boolean param1) {
         RuntimeException runtimeException = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_11_0 = null;
@@ -169,14 +169,14 @@ final class ec {
         field_g = null;
     }
 
-    ec(String param0) {
+    LoginText(String param0) {
         this(param0, false);
     }
 
-    final String b(int param0) {
+    final String getText(int param0) {
         if (param0 != 27939) {
           String var3 = (String) null;
-          ec.a(true, (String) null, 58);
+          LoginText.a(true, (String) null, 58);
         }
         return this.field_b;
     }

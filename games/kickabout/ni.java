@@ -66,7 +66,7 @@ final class ni extends IntrusiveNode {
           return false;
         }
         if (PacketBuffer.field_l) {
-          return PlayArea.field_a.a(il.field_c, (byte) 127, cc.field_e);
+          return PlayArea.field_a.a(il.field_c, (byte) 127, FixedQuaternion.field_e);
         }
         if (DebugConsole.field_s) {
           return NodeHashTableIterator.a(param1, -14, param0);

@@ -37,7 +37,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_J.h((byte) -48);
         SortCriterion var6 = this.field_J.field_zb[this.field_J.field_Db];
-        this.field_I.a(new oi(param0 | param3 << 16), 3);
+        this.field_I.a(new IntValueNode(param0 | param3 << 16), 3);
         this.rebuildShopRows(true);
         this.field_J.a(var6, 94);
         this.field_J.a(true, var5);
@@ -199,7 +199,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         ShopPlayerSlot var4;
         PlayerStats var5;
         int var6;
-        oi var7;
+        IntValueNode var7;
         int var8;
         int var9;
         IntrusiveDeque var10;
@@ -221,14 +221,14 @@ final class PlayerShopScreen extends TeamManagementScreen {
                 var5 = WelcomeDialog.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
                 stackIn_16_0 = (~BufferedSocket.field_k != ~var3) ? 0 : 1;
                 var6 = stackIn_16_0;
-                var7 = (oi) (this.field_I.g(24009));
+                var7 = (IntValueNode) (this.field_I.g(24009));
                 while (var7 != null) {
                   var8 = var7.field_j;
                   if (~(var8 >> 16) == ~var3 &&
                     (var8 & 65535) == var4_int) {
                     var6 = 1;
                   }
-                  var7 = (oi) (this.field_I.c(33));
+                  var7 = (IntValueNode) (this.field_I.c(33));
                 }
                 var10.a(new ShopPlayerSlot(var5, MusicPatchNode.field_x, var3, var4_int, var6 != 0), 3);
               }

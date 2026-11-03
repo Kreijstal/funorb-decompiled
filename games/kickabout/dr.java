@@ -85,7 +85,7 @@ final class dr {
             }
             var4 = cu.field_c;
             if (0.0 != MessageDialog.field_B) {
-              var4 = (int)((double)var4 + ac.field_d.nextGaussian() * MessageDialog.field_B);
+              var4 = (int)((double)var4 + TrinketUnlockNotice.field_d.nextGaussian() * MessageDialog.field_B);
               if (var4 < 0) {
                 var4 = 0;
               }

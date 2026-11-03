@@ -86,7 +86,7 @@ final class pe {
           }
           ValidatedTextWidget.field_Z.n(2);
           while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
-            ValidatedTextWidget.field_Z.a(il.field_c, (byte) -91, cc.field_e);
+            ValidatedTextWidget.field_Z.a(il.field_c, (byte) -91, FixedQuaternion.field_e);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

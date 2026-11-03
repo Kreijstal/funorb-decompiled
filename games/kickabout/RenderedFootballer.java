@@ -175,7 +175,7 @@ final class RenderedFootballer extends FootballerAgent {
         if (param1 <= 39) {
           this.field_Y = false;
         }
-        int[] var6 = !this.field_jb ? ParticipantStatus.field_f : dt.field_f;
+        int[] var6 = !this.field_jb ? ParticipantStatus.field_f : OffscreenPlayerArrow.field_f;
         int[] var3 = var6;
         int var4 = var6[0] * TriangleRasterizer.field_o[param0] >> 16;
         int var5 = TriangleRasterizer.field_f[param0] * var6[0] >> 16;

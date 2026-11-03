@@ -277,7 +277,7 @@ final class ba extends SortCriterion {
             }
             sh.field_f = new int[2];
             WeightedLruCache.field_c[1] = mn.field_f;
-            WeightedLruCache.field_c[0] = ec.field_a;
+            WeightedLruCache.field_c[0] = LoginText.field_a;
             dk.field_g[1] = 0;
             dk.field_g[3] = 1;
             WeightedLruCache.field_c[5] = "";

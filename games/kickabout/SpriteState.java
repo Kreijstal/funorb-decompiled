@@ -92,7 +92,7 @@ abstract class SpriteState extends DualLinkNode {
           ConsoleEvaluationException.a(7, ee.field_b);
           if (ChatLine.field_i != null) {
             boolean decompiledFrameRemainder0 = true;
-            ac.field_b.field_lb = true;
+            TrinketUnlockNotice.field_b.field_lb = true;
             DualLinkHashTable.field_d.field_mb = 0;
             var21 = DualLinkHashTable.field_d;
             var26 = var21;
@@ -123,7 +123,7 @@ abstract class SpriteState extends DualLinkNode {
               DualLinkHashTable.field_d.field_R = TextFieldNode.field_Qb.field_R;
               if (fh.field_b > 0) {
                 if (fh.field_b == 1) {
-                  var10_ref_String = kp.field_i;
+                  var10_ref_String = LobbyGameRecord.field_i;
                 } else {
                   var10_ref_String = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PopupDialog.field_f, new String[]{Integer.toString(fh.field_b)});
                 }
@@ -332,7 +332,7 @@ abstract class SpriteState extends DualLinkNode {
                     if (var12Lifetime2 == 0) {
                       var14 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ColumnTableWidget.field_yb, new String[]{(String) (var11)});
                     } else {
-                      var14 = oi.field_k + (String) (var11);
+                      var14 = IntValueNode.field_k + (String) (var11);
                     }
                   } else {
                     var13_ref = StringCursor.field_g;
@@ -370,7 +370,7 @@ abstract class SpriteState extends DualLinkNode {
           ((UiLayoutNode) (Object) stackIn_166_0).b(stackIn_166_1, stackIn_167_2);
           ni.field_l.field_b.h((byte) 71);
           if (null != ChatLine.field_i) {
-            if (ac.field_b.field_sb != 0) {
+            if (TrinketUnlockNotice.field_b.field_sb != 0) {
               ContextMenu.a(ChatLine.field_i.h((byte) 73), (byte) -108, param1);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {

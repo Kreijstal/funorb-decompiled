@@ -358,13 +358,13 @@ final class StatChoiceDialog extends MessageDialog {
           }
           var9 = 0;
           if (0 == var4) {
-            var9 = this.field_J.c(true, oi.b(-79));
+            var9 = this.field_J.c(true, IntValueNode.b(-79));
           }
           if (var4 == 1) {
-            var9 = this.field_J.a(5205, oi.b(-79));
+            var9 = this.field_J.a(5205, IntValueNode.b(-79));
           }
           if (var4 == 2) {
-            var9 = this.field_J.b((byte) 120, oi.b(27));
+            var9 = this.field_J.b((byte) 120, IntValueNode.b(27));
           }
           eo.a(16 + var5, 9 + var6, this.field_M[var4], var4, true, var9);
         }

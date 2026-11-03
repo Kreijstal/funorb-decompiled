@@ -663,7 +663,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -116, "mu_chat_lobby_friends");
                 if (null != var2) {
-                  oi.field_h = BlackFadeScreen.a(var2, true);
+                  IntValueNode.field_h = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -89, "mu_chat_lobby_hide");
                 if (var2 != null) {
@@ -763,7 +763,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -60, "join_requests_one");
                 if (var2 != null) {
-                  kp.field_i = BlackFadeScreen.a(var2, true);
+                  LobbyGameRecord.field_i = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -113, "join_requests_many");
                 if (null != var2) {
@@ -1135,7 +1135,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -67, "gameopt_inviteplayers_or_trychanging2");
                 if (null != var2) {
-                  oi.field_k = BlackFadeScreen.a(var2, param0);
+                  IntValueNode.field_k = BlackFadeScreen.a(var2, param0);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
@@ -1361,7 +1361,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -54, "invalidpass");
                 if (null != var2) {
-                  dt.field_j = BlackFadeScreen.a(var2, true);
+                  OffscreenPlayerArrow.field_j = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -58, "retry");
                 if (null != var2) {
@@ -1561,7 +1561,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -102, "day");
                 if (null != var2) {
-                  ec.field_d = BlackFadeScreen.a(var2, param0);
+                  LoginText.field_d = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -79, "month");
                 if (null != var2) {
@@ -1912,7 +1912,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -97, "cannot_add_yourself");
                 if (var2 != null) {
-                  ec.field_g = BlackFadeScreen.a(var2, true);
+                  LoginText.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -59, "unable_to_add_friend");
                 if (null != var2) {
@@ -2886,7 +2886,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -101, "fs_accept_beforeaccept");
                 if (var2 != null) {
-                  ec.field_a = BlackFadeScreen.a(var2, param0);
+                  LoginText.field_a = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -88, "fs_button_accept");
                 if (var2 != null) {

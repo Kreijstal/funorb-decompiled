@@ -169,7 +169,7 @@ final class rp extends ri {
                 return stackIn_72_0;
               }
             }
-            if (cc.field_e != 13) {
+            if (FixedQuaternion.field_e != 13) {
               stackIn_64_0 = -59;
               continue;
             }

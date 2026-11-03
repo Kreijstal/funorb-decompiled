@@ -60,7 +60,7 @@ abstract class cv {
         try {
           if (RankingsScreen.field_C != 0) {
             if (RankingsScreen.field_C == 1) {
-              oi.field_e = new oh[26];
+              IntValueNode.field_e = new oh[26];
               var1_int = 0;
               for (var2 = 0; var2 < 14; var2++) {
                 var3_ref_ut = oo.field_b[LoggedPossession.a((byte) -24, 3)];
@@ -71,13 +71,13 @@ abstract class cv {
                 }
                 incrementValue$45 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$45] = new oh(var3_ref_ut, var4, var5);
+                IntValueNode.field_e[incrementValue$45] = new oh(var3_ref_ut, var4, var5);
               }
               var2Lifetime1 = -40;
               for (var3 = 0; var3 < 6; var3++) {
                 incrementValue$44 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$44] = new oh(MouseInputHandler.field_g[LoggedPossession.a((byte) -24, 2)], var2Lifetime1, 1394);
+                IntValueNode.field_e[incrementValue$44] = new oh(MouseInputHandler.field_g[LoggedPossession.a((byte) -24, 2)], var2Lifetime1, 1394);
                 stackIn_17_0 = var2Lifetime1;
                 if (0 == (var3 & 1)) {
                   stackIn_18_1 = 95;
@@ -90,7 +90,7 @@ abstract class cv {
               for (var3Lifetime1 = 0; var3Lifetime1 < 6; var3Lifetime1++) {
                 incrementValue$43 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$43] = new oh(MouseInputHandler.field_g[LoggedPossession.a((byte) -24, 2)], var2Lifetime2, -90);
+                IntValueNode.field_e[incrementValue$43] = new oh(MouseInputHandler.field_g[LoggedPossession.a((byte) -24, 2)], var2Lifetime2, -90);
                 stackIn_22_0 = var2Lifetime2;
                 stackIn_22_1 = ~(1 & var3Lifetime1);
                 stackIn_22_2 = -1;
@@ -103,89 +103,89 @@ abstract class cv {
               }
             } else {
               if (RankingsScreen.field_C == 2) {
-                oi.field_e = new oh[5];
+                IntValueNode.field_e = new oh[5];
                 var1_int = 0;
                 incrementValue$46 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$46] = new oh(oo.field_b[1], 1002, -229);
+                IntValueNode.field_e[incrementValue$46] = new oh(oo.field_b[1], 1002, -229);
                 incrementValue$47 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$47] = new oh(oo.field_b[2], 1126, -206);
+                IntValueNode.field_e[incrementValue$47] = new oh(oo.field_b[2], 1126, -206);
                 incrementValue$48 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$48] = new oh(oo.field_b[0], -332, 200);
+                IntValueNode.field_e[incrementValue$48] = new oh(oo.field_b[0], -332, 200);
                 incrementValue$49 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$49] = new oh(oo.field_b[0], -170, 1428);
+                IntValueNode.field_e[incrementValue$49] = new oh(oo.field_b[0], -170, 1428);
                 incrementValue$50 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$50] = new oh(oo.field_b[1], -296, 1415);
+                IntValueNode.field_e[incrementValue$50] = new oh(oo.field_b[1], -296, 1415);
               } else {
                 if (RankingsScreen.field_C == 3) {
-                  oi.field_e = new oh[]{};
+                  IntValueNode.field_e = new oh[]{};
                 }
               }
             }
           } else {
-            oi.field_e = new oh[19];
+            IntValueNode.field_e = new oh[19];
             var1_int = 0;
             incrementValue$51 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$51] = new oh(oo.field_b[0], -156, -31);
+            IntValueNode.field_e[incrementValue$51] = new oh(oo.field_b[0], -156, -31);
             incrementValue$52 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$52] = new oh(oo.field_b[2], 933, 763);
+            IntValueNode.field_e[incrementValue$52] = new oh(oo.field_b[2], 933, 763);
             incrementValue$53 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$53] = new oh(oo.field_b[0], 943, -36);
+            IntValueNode.field_e[incrementValue$53] = new oh(oo.field_b[0], 943, -36);
             incrementValue$54 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$54] = new oh(oo.field_b[0], -141, 1275);
+            IntValueNode.field_e[incrementValue$54] = new oh(oo.field_b[0], -141, 1275);
             incrementValue$55 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$55] = new oh(MouseInputHandler.field_g[0], -390, 629);
+            IntValueNode.field_e[incrementValue$55] = new oh(MouseInputHandler.field_g[0], -390, 629);
             incrementValue$56 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$56] = new oh(MouseInputHandler.field_g[1], -264, 584);
+            IntValueNode.field_e[incrementValue$56] = new oh(MouseInputHandler.field_g[1], -264, 584);
             incrementValue$57 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$57] = new oh(MouseInputHandler.field_g[1], -357, 447);
+            IntValueNode.field_e[incrementValue$57] = new oh(MouseInputHandler.field_g[1], -357, 447);
             incrementValue$58 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$58] = new oh(MouseInputHandler.field_g[0], -259, 379);
+            IntValueNode.field_e[incrementValue$58] = new oh(MouseInputHandler.field_g[0], -259, 379);
             incrementValue$59 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$59] = new oh(oo.field_b[0], 180, 1371);
+            IntValueNode.field_e[incrementValue$59] = new oh(oo.field_b[0], 180, 1371);
             incrementValue$60 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$60] = new oh(oo.field_b[1], 566, 1422);
+            IntValueNode.field_e[incrementValue$60] = new oh(oo.field_b[1], 566, 1422);
             incrementValue$61 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$61] = new oh(oo.field_b[0], 750, 1353);
+            IntValueNode.field_e[incrementValue$61] = new oh(oo.field_b[0], 750, 1353);
             incrementValue$62 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$62] = new oh(oo.field_b[2], 51, 1415);
+            IntValueNode.field_e[incrementValue$62] = new oh(oo.field_b[2], 51, 1415);
             incrementValue$63 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$63] = new oh(oo.field_b[1], 1014, 211);
+            IntValueNode.field_e[incrementValue$63] = new oh(oo.field_b[1], 1014, 211);
             incrementValue$64 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$64] = new oh(oo.field_b[2], 775, -174);
+            IntValueNode.field_e[incrementValue$64] = new oh(oo.field_b[2], 775, -174);
             incrementValue$65 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$65] = new oh(oo.field_b[1], 570, -220);
+            IntValueNode.field_e[incrementValue$65] = new oh(oo.field_b[1], 570, -220);
             incrementValue$66 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$66] = new oh(oo.field_b[0], 211, -199);
+            IntValueNode.field_e[incrementValue$66] = new oh(oo.field_b[0], 211, -199);
             incrementValue$67 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$67] = new oh(oo.field_b[2], -31, -163);
+            IntValueNode.field_e[incrementValue$67] = new oh(oo.field_b[2], -31, -163);
             incrementValue$68 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$68] = new oh(oo.field_b[1], -288, 1213);
+            IntValueNode.field_e[incrementValue$68] = new oh(oo.field_b[1], -288, 1213);
             incrementValue$69 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$69] = new oh(oo.field_b[2], -200, 1041);
+            IntValueNode.field_e[incrementValue$69] = new oh(oo.field_b[2], -200, 1041);
           }
           if (param0 != 11383) {
             field_e = true;

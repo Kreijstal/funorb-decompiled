@@ -285,9 +285,9 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     }
 
     final static int a(int param0, int param1, String param2, String param3, String param4, boolean param5, int param6) {
-        ec var7 = null;
+        LoginText var7 = null;
         RuntimeException var7_ref = null;
-        ec var8 = null;
+        LoginText var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -299,12 +299,12 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new ec(param2);
+          var7 = new LoginText(param2);
           if (param0 != 12) {
             stackIn_2_0 = -64;
             return stackIn_2_0;
           }
-          var8 = new ec(param4);
+          var8 = new LoginText(param4);
           stackIn_4_0 = WhirlpoolHasher.a(param6, var8, var7, param1, param5, param3, false);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

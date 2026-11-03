@@ -73,7 +73,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             SumIntegersCommand.a(115, 3);
           }
           if (hr.field_h[3]) {
-            kp.a(4, -56);
+            LobbyGameRecord.a(4, -56);
           }
           if (hr.field_h[4]) {
             PromotionDialog.a(5, (byte) -122);
@@ -498,7 +498,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (hl.field_d == 3 &&
           so.a(bw.field_b, true, gs.field_c, PlayerStats.field_k) &&
           LoggedGoal.a(-2, PlayerStats.field_k)) {
-          oi.a(115);
+          IntValueNode.a(115);
           CachedArchiveSource.c(param0 + 1);
           ts.field_b = CheckboxLabelWidget.field_yb;
           TutorialChoiceDialog.field_H = false;
@@ -874,8 +874,8 @@ abstract class NetworkGameClient extends GameAppletShell {
               }
               if (var29.field_Q &&
                 var6Lifetime2 > 0) {
-                if (null != oi.field_f) {
-                  stackIn_154_0 = oi.field_f[-1 + var6Lifetime2];
+                if (null != IntValueNode.field_f) {
+                  stackIn_154_0 = IntValueNode.field_f[-1 + var6Lifetime2];
                 } else {
                   stackIn_154_0 = null;
                 }

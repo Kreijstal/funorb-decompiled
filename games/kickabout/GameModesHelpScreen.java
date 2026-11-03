@@ -10,7 +10,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
     private PlayerStats[] field_M;
     private String[] field_E;
     private int field_J;
-    private kp[] field_I;
+    private LobbyGameRecord[] field_I;
     static int field_N;
     static String field_O;
     static ArgbSprite field_L;
@@ -208,7 +208,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         int var18;
         int var19;
         int var20;
-        kp var22;
+        LobbyGameRecord var22;
         String var23;
         String var24;
         int var25;
@@ -499,9 +499,9 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           this.field_K[var3].field_J = var3 / 3 * 75 + 178;
         }
         this.field_E = new String[]{"Mod_Iain", "Mod_Thomas", "Mod_Shade", "Mod_Korpz", "Mod_Zeph", "Mod_Thor", "Mod_Wivlaro", "Mod_Crispy"};
-        this.field_I = new kp[7];
+        this.field_I = new LobbyGameRecord[7];
         for (var3Lifetime1 = 0; this.field_I.length > var3Lifetime1; var3Lifetime1++) {
-          this.field_I[var3Lifetime1] = new kp();
+          this.field_I[var3Lifetime1] = new LobbyGameRecord();
           this.field_I[var3Lifetime1].field_f = 5;
           this.field_I[var3Lifetime1].field_o = 0;
         }

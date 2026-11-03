@@ -23,7 +23,7 @@ final class we {
         field_a = null;
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int cosine(int param0, boolean param1) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;

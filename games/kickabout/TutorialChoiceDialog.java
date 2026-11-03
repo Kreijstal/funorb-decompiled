@@ -94,8 +94,8 @@ final class TutorialChoiceDialog extends MessageDialog {
         super(8);
     }
 
-    final boolean a(int param0, byte param1, char param2) {
-        boolean discarded$2 = super.a(param0, param1, param2);
+    final boolean handleKey(int param0, byte param1, char param2) {
+        boolean discarded$2 = super.handleKey(param0, param1, param2);
         if (param0 == 13) {
           this.handleResult(78, 2);
           return true;

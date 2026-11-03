@@ -63,16 +63,16 @@ final class DraggableWidget extends SingleChildContainer {
             return;
           }
           if (DualLinkNode.field_k != param0) {
-            if (kp.field_m == null) {
-              kp.field_m = new Sprite(var7.field_o + 8, var7.field_v + 8);
+            if (LobbyGameRecord.field_m == null) {
+              LobbyGameRecord.field_m = new Sprite(var7.field_o + 8, var7.field_v + 8);
             }
-            PacketBuffer.a(-56, kp.field_m);
+            PacketBuffer.a(-56, LobbyGameRecord.field_m);
             SoftwareRasterizer.b();
             var7.c(4, 4);
-            nh.adjustSpriteHsv(kp.field_m, 0.0, 1.3, 1.2);
-            eo.a(kp.field_m, 65793);
-            eo.a(kp.field_m, 16777215);
-            eo.a(kp.field_m, 7829367);
+            nh.adjustSpriteHsv(LobbyGameRecord.field_m, 0.0, 1.3, 1.2);
+            eo.a(LobbyGameRecord.field_m, 65793);
+            eo.a(LobbyGameRecord.field_m, 16777215);
+            eo.a(LobbyGameRecord.field_m, 7829367);
             AuctionListing.a(95, -22914, 14, 88, 22);
             var12 = new int[255];
             var11 = var12;
@@ -85,7 +85,7 @@ final class DraggableWidget extends SingleChildContainer {
             TeamManagementScreen.e(param6 + 123);
             DualLinkNode.field_k = param0;
           }
-          kp.field_m.c(param3 - 4, -4 + param2);
+          LobbyGameRecord.field_m.c(param3 - 4, -4 + param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

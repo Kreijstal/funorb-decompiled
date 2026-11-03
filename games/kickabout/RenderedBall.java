@@ -5,7 +5,7 @@ final class RenderedBall extends BallAgent {
     private int[] field_G;
     static boolean[] field_T;
     private int[] field_D;
-    private cc field_Q;
+    private FixedQuaternion field_Q;
     static String field_H;
     private int field_J;
     static int field_C;
@@ -88,7 +88,7 @@ final class RenderedBall extends BallAgent {
             if (var5 != 0) {
               var4 = (int)(((long)var4 << 16) / (long)var5);
               var3_intLifetime1 = (int)(((long)var3_intLifetime1 << 16) / (long)var5);
-              IntrusiveDeque.field_d.a(var3_intLifetime1, true, 0, var4, var5 >> 12);
+              IntrusiveDeque.field_d.setFromAxisAngle(var3_intLifetime1, true, 0, var4, var5 >> 12);
               this.field_Q.a(IntrusiveDeque.field_d, -49);
               this.field_L = true;
             }
@@ -189,7 +189,7 @@ final class RenderedBall extends BallAgent {
           RenderedBall.a((byte) -13, (ChatMessage) null);
         }
         if (this.field_L) {
-          this.field_Q.a(8, this.field_G);
+          this.field_Q.toRotationMatrix(8, this.field_G);
           this.field_L = false;
         }
         if (this.field_J != param3) {
@@ -445,8 +445,8 @@ final class RenderedBall extends BallAgent {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        int var4 = ei.a(param2, (byte) -23);
-        int var5 = we.a(param2, false);
+        int var4 = ei.sine(param2, (byte) -23);
+        int var5 = we.cosine(param2, false);
         this.field_J = param1;
         this.field_D[3] = 65536;
         this.field_D[1] = var4 * param1 >> 16;
@@ -671,8 +671,8 @@ final class RenderedBall extends BallAgent {
         try {
           this.a(param0, false);
           this.field_G = new int[12];
-          this.field_Q = new cc();
-          this.field_Q.a(8, this.field_G);
+          this.field_Q = new FixedQuaternion();
+          this.field_Q.toRotationMatrix(8, this.field_G);
           this.field_D = new int[12];
           this.a((byte) 127, 1200, 300);
           this.field_N = this.positionX;

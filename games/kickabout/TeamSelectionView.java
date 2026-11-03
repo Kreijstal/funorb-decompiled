@@ -63,7 +63,7 @@ final class TeamSelectionView extends MatchPhaseView {
         }
         if (this.isLocalParticipantActive((byte) 13)) {
           if (var2 != 0) {
-            stackIn_22_0 = kp.field_a;
+            stackIn_22_0 = LobbyGameRecord.field_a;
           } else {
             stackIn_22_0 = TriangleMesh.field_A;
           }

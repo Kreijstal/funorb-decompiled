@@ -160,7 +160,7 @@ final class NamedValueEntry extends IntrusiveNode {
             var4 = 115;
             if (75 >= var1_int) {
               if (var1_int > 50) {
-                var5 = 65536 - we.a((-25 + (var1_int - 25) << 12) / 25, false);
+                var5 = 65536 - we.cosine((-25 + (var1_int - 25) << 12) / 25, false);
                 var4 = var4 - (115 * var5 >> 17);
               }
             } else {

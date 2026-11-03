@@ -450,7 +450,7 @@ final class MyKitScreen extends TeamManagementScreen {
           var3 = ((int)(nj.monotonicMillis(75) % 5000L) << 11) / 5000;
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(532 + this.slideOffsetX, 410);
-          var12 = dt.field_f;
+          var12 = OffscreenPlayerArrow.field_f;
           var5 = TriangleRasterizer.field_o[var3] * var12[0] >> 16;
           var6 = var12[0] * TriangleRasterizer.field_f[var3] >> 16;
           var7 = (ModelMesh) (this.field_cb.a(this.field_db.b(var12[2], var12[3], var5, var12[1], var6), false, true, true));

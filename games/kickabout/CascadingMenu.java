@@ -320,7 +320,7 @@ final class CascadingMenu extends UiLayoutNode {
         int var8;
         int stackIn_3_0 = 0;
         var8 = Kickabout.field_G;
-        stackIn_3_0 = (cc.field_e != 85) ? 0 : 1;
+        stackIn_3_0 = (FixedQuaternion.field_e != 85) ? 0 : 1;
         var4 = stackIn_3_0;
         if (null != this.field_Kb) {
           if (var4 != 0 &&

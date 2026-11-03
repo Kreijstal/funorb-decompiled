@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi extends IntrusiveNode {
+final class IntValueNode extends IntrusiveNode {
     static String field_h;
     static oh[] field_e;
     static String field_k;
@@ -31,7 +31,7 @@ final class oi extends IntrusiveNode {
           field_g = null;
           return;
         }
-        oi.a(-54);
+        IntValueNode.a(-54);
         field_i = null;
         field_k = null;
         field_g = null;
@@ -39,7 +39,7 @@ final class oi extends IntrusiveNode {
 
     final static void a(int param0) {
         if (param0 < 13) {
-          oi.a(-87);
+          IntValueNode.a(-87);
           bt.field_i = null;
           ar.field_b = null;
           return;
@@ -48,7 +48,7 @@ final class oi extends IntrusiveNode {
         ar.field_b = null;
     }
 
-    oi(int param0) {
+    IntValueNode(int param0) {
         this.field_j = param0;
     }
 

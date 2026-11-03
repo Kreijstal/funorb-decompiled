@@ -12,7 +12,7 @@ final class GameResourceLoader implements LoadingSequence {
     private static int[][] field_f;
 
     public final boolean pollReady(int param0) {
-        oi var2_ref_oi;
+        IntValueNode var2_ref_oi;
         int var2;
         int var3;
         boolean stackIn_24_0 = false;
@@ -20,12 +20,12 @@ final class GameResourceLoader implements LoadingSequence {
         if (!this.field_a &&
           RenderedBall.m(99)) {
           this.field_a = true;
-          var2_ref_oi = (oi) (ec.field_f.g(24009));
+          var2_ref_oi = (IntValueNode) (LoginText.field_f.g(24009));
           while (var2_ref_oi != null) {
             if (c.a(var2_ref_oi.field_j, 0, BufferedSocket.field_f)) {
               var2_ref_oi.c((byte) -109);
             }
-            var2_ref_oi = (oi) (ec.field_f.c(param0 ^ -27629));
+            var2_ref_oi = (IntValueNode) (LoginText.field_f.c(param0 ^ -27629));
           }
           ok.field_a.b(22997);
           RasterBuffer.a(20164);
@@ -340,87 +340,87 @@ final class GameResourceLoader implements LoadingSequence {
           var2 = nh.toMaskedSprite((ArgbSprite) (c.field_e));
           var3 = nh.toMaskedSprite((ArgbSprite) (CachedTextLayout.field_q));
           if (RankingsScreen.field_C == 0) {
-            oi.field_e = new oh[30];
+            IntValueNode.field_e = new oh[30];
             var4 = 0;
             for (var5 = 0; 4 > var5; var5++) {
               var6 = LoggedPossession.a((byte) -24, 896 - var11.field_o);
               var7 = LoggedPossession.a((byte) -24, 1344 - var11.field_v);
               incrementValue$69 = var4;
               var4++;
-              oi.field_e[incrementValue$69] = new oh(var10, var6, var7);
+              IntValueNode.field_e[incrementValue$69] = new oh(var10, var6, var7);
             }
             incrementValue$49 = var4;
             var4++;
-            oi.field_e[incrementValue$49] = new oh(ns.field_c, 50, -100);
+            IntValueNode.field_e[incrementValue$49] = new oh(ns.field_c, 50, -100);
             incrementValue$50 = var4;
             var4++;
-            oi.field_e[incrementValue$50] = new oh(AnimationSkeleton.field_h, 80, -150);
+            IntValueNode.field_e[incrementValue$50] = new oh(AnimationSkeleton.field_h, 80, -150);
             incrementValue$51 = var4;
             var4++;
-            oi.field_e[incrementValue$51] = new oh(AnimationSkeleton.field_h, 120, -105);
+            IntValueNode.field_e[incrementValue$51] = new oh(AnimationSkeleton.field_h, 120, -105);
             incrementValue$52 = var4;
             var4++;
-            oi.field_e[incrementValue$52] = new oh(var3, -100, -170);
+            IntValueNode.field_e[incrementValue$52] = new oh(var3, -100, -170);
             incrementValue$53 = var4;
             var4++;
-            oi.field_e[incrementValue$53] = new oh(var2, 530, -240);
+            IntValueNode.field_e[incrementValue$53] = new oh(var2, 530, -240);
             incrementValue$54 = var4;
             var4++;
-            oi.field_e[incrementValue$54] = new oh(var3, 670, -170);
+            IntValueNode.field_e[incrementValue$54] = new oh(var3, 670, -170);
             incrementValue$55 = var4;
             var4++;
-            oi.field_e[incrementValue$55] = new oh(var2, 790, -195);
+            IntValueNode.field_e[incrementValue$55] = new oh(var2, 790, -195);
             incrementValue$56 = var4;
             var4++;
-            oi.field_e[incrementValue$56] = new oh(ns.field_c, 700, 1354);
+            IntValueNode.field_e[incrementValue$56] = new oh(ns.field_c, 700, 1354);
             incrementValue$57 = var4;
             var4++;
-            oi.field_e[incrementValue$57] = new oh(AnimationSkeleton.field_h, 720, 1394);
+            IntValueNode.field_e[incrementValue$57] = new oh(AnimationSkeleton.field_h, 720, 1394);
             incrementValue$58 = var4;
             var4++;
-            oi.field_e[incrementValue$58] = new oh(AnimationSkeleton.field_h, 780, 1374);
+            IntValueNode.field_e[incrementValue$58] = new oh(AnimationSkeleton.field_h, 780, 1374);
             incrementValue$59 = var4;
             var4++;
-            oi.field_e[incrementValue$59] = new oh(var3, -171, 1037);
+            IntValueNode.field_e[incrementValue$59] = new oh(var3, -171, 1037);
             incrementValue$60 = var4;
             var4++;
-            oi.field_e[incrementValue$60] = new oh(FullscreenFocusCanvas.field_a, -51, 1082);
+            IntValueNode.field_e[incrementValue$60] = new oh(FullscreenFocusCanvas.field_a, -51, 1082);
             incrementValue$61 = var4;
             var4++;
-            oi.field_e[incrementValue$61] = new oh(FullscreenFocusCanvas.field_a, -30, 1105);
+            IntValueNode.field_e[incrementValue$61] = new oh(FullscreenFocusCanvas.field_a, -30, 1105);
             incrementValue$62 = var4;
             var4++;
-            oi.field_e[incrementValue$62] = new oh(FullscreenFocusCanvas.field_a, -20, 1055);
+            IntValueNode.field_e[incrementValue$62] = new oh(FullscreenFocusCanvas.field_a, -20, 1055);
             incrementValue$63 = var4;
             var4++;
-            oi.field_e[incrementValue$63] = new oh(ns.field_c, -68, 1143);
+            IntValueNode.field_e[incrementValue$63] = new oh(ns.field_c, -68, 1143);
             for (var5Lifetime2 = 0; 7 > var5Lifetime2; var5Lifetime2++) {
               var6Lifetime2 = BytePlusOneCommand.a(29430, 40, 956);
               var7Lifetime2 = BytePlusOneCommand.a(29430, 70, var5Lifetime2 * 150 + 200);
               incrementValue$68 = var4;
               var4++;
-              oi.field_e[incrementValue$68] = new oh(c.field_e, var6Lifetime2, var7Lifetime2);
+              IntValueNode.field_e[incrementValue$68] = new oh(c.field_e, var6Lifetime2, var7Lifetime2);
             }
             incrementValue$64 = var4;
             var4++;
-            oi.field_e[incrementValue$64] = new oh(var2, -111, 138);
+            IntValueNode.field_e[incrementValue$64] = new oh(var2, -111, 138);
             incrementValue$65 = var4;
             var4++;
-            oi.field_e[incrementValue$65] = new oh(var2, -191, 290);
+            IntValueNode.field_e[incrementValue$65] = new oh(var2, -191, 290);
             incrementValue$66 = var4;
             var4++;
-            oi.field_e[incrementValue$66] = new oh(var2, 30, 1324);
+            IntValueNode.field_e[incrementValue$66] = new oh(var2, 30, 1324);
             incrementValue$67 = var4;
             var4++;
-            oi.field_e[incrementValue$67] = new oh(var2, 170, 1364);
+            IntValueNode.field_e[incrementValue$67] = new oh(var2, 170, 1364);
             return;
           }
           if (RankingsScreen.field_C == 1) {
-            oi.field_e = new oh[34];
+            IntValueNode.field_e = new oh[34];
             var4Lifetime1 = 0;
             incrementValue$40 = var4Lifetime1;
             var4Lifetime1++;
-            oi.field_e[incrementValue$40] = new oh(BytePlusOneCommand.field_D, 0, 1375);
+            IntValueNode.field_e[incrementValue$40] = new oh(BytePlusOneCommand.field_D, 0, 1375);
             for (var5Lifetime1 = 0; 12 > var5Lifetime1; var5Lifetime1++) {
               var6Lifetime1 = BytePlusOneCommand.a(29430, 30, -300 + 100 * var5Lifetime1);
               var7Lifetime1 = BytePlusOneCommand.a(29430, 60, -290);
@@ -430,23 +430,23 @@ final class GameResourceLoader implements LoadingSequence {
               }
               incrementValue$48 = var4Lifetime1;
               var4Lifetime1++;
-              oi.field_e[incrementValue$48] = new oh(c.field_e, var6Lifetime1, var7Lifetime1);
+              IntValueNode.field_e[incrementValue$48] = new oh(c.field_e, var6Lifetime1, var7Lifetime1);
             }
             incrementValue$41 = var4Lifetime1;
             var4Lifetime1++;
-            oi.field_e[incrementValue$41] = new oh(var3, -203, 169);
+            IntValueNode.field_e[incrementValue$41] = new oh(var3, -203, 169);
             incrementValue$42 = var4Lifetime1;
             var4Lifetime1++;
-            oi.field_e[incrementValue$42] = new oh(AnimationSkeleton.field_h, -219, 292);
+            IntValueNode.field_e[incrementValue$42] = new oh(AnimationSkeleton.field_h, -219, 292);
             incrementValue$43 = var4Lifetime1;
             var4Lifetime1++;
-            oi.field_e[incrementValue$43] = new oh(ns.field_c, 824, -60);
+            IntValueNode.field_e[incrementValue$43] = new oh(ns.field_c, 824, -60);
             incrementValue$44 = var4Lifetime1;
             var4Lifetime1++;
-            oi.field_e[incrementValue$44] = new oh(AnimationSkeleton.field_h, 753, -69);
+            IntValueNode.field_e[incrementValue$44] = new oh(AnimationSkeleton.field_h, 753, -69);
             incrementValue$45 = var4Lifetime1;
             var4Lifetime1++;
-            oi.field_e[incrementValue$45] = new oh(BytePlusOneCommand.field_D, 1030, 568);
+            IntValueNode.field_e[incrementValue$45] = new oh(BytePlusOneCommand.field_D, 1030, 568);
             for (var5Lifetime1Lifetime1 = 0; var5Lifetime1Lifetime1 < 8; var5Lifetime1Lifetime1++) {
               var6Lifetime1Lifetime1 = BytePlusOneCommand.a(29430, 20, -170);
               var7Lifetime1Lifetime1 = -50 + var5Lifetime1Lifetime1 / 2 * 400;
@@ -455,27 +455,27 @@ final class GameResourceLoader implements LoadingSequence {
               }
               incrementValue$46 = var4Lifetime1;
               var4Lifetime1++;
-              oi.field_e[incrementValue$46] = new oh(wn.field_a[LoggedPossession.a((byte) -24, wn.field_a.length)], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1);
+              IntValueNode.field_e[incrementValue$46] = new oh(wn.field_a[LoggedPossession.a((byte) -24, wn.field_a.length)], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1);
               incrementValue$47 = var4Lifetime1;
               var4Lifetime1++;
-              oi.field_e[incrementValue$47] = new oh(wn.field_a[LoggedPossession.a((byte) -24, wn.field_a.length)], -var6Lifetime1Lifetime1 + 876, var7Lifetime1Lifetime1);
+              IntValueNode.field_e[incrementValue$47] = new oh(wn.field_a[LoggedPossession.a((byte) -24, wn.field_a.length)], -var6Lifetime1Lifetime1 + 876, var7Lifetime1Lifetime1);
             }
             return;
           }
           if (RankingsScreen.field_C == 2) {
-            oi.field_e = new oh[9];
-            oi.field_e[0] = new oh(var3, -142, 231);
-            oi.field_e[1] = new oh(c.field_e, -140, 549);
-            oi.field_e[2] = new oh(var3, -154, 1331);
-            oi.field_e[3] = new oh(c.field_e, -245, 1384);
-            oi.field_e[4] = new oh(c.field_e, 901, -252);
-            oi.field_e[5] = new oh(var3, 1095, 963);
-            oi.field_e[6] = new oh(c.field_e, 925, 1294);
-            oi.field_e[7] = new oh(BytePlusOneCommand.field_D, -131, 957);
-            oi.field_e[8] = new oh(BytePlusOneCommand.field_D, 924, 240);
+            IntValueNode.field_e = new oh[9];
+            IntValueNode.field_e[0] = new oh(var3, -142, 231);
+            IntValueNode.field_e[1] = new oh(c.field_e, -140, 549);
+            IntValueNode.field_e[2] = new oh(var3, -154, 1331);
+            IntValueNode.field_e[3] = new oh(c.field_e, -245, 1384);
+            IntValueNode.field_e[4] = new oh(c.field_e, 901, -252);
+            IntValueNode.field_e[5] = new oh(var3, 1095, 963);
+            IntValueNode.field_e[6] = new oh(c.field_e, 925, 1294);
+            IntValueNode.field_e[7] = new oh(BytePlusOneCommand.field_D, -131, 957);
+            IntValueNode.field_e[8] = new oh(BytePlusOneCommand.field_D, 924, 240);
           } else {
             if (RankingsScreen.field_C == 3) {
-              oi.field_e = new oh[]{};
+              IntValueNode.field_e = new oh[]{};
             }
           }
           return;
@@ -564,7 +564,7 @@ final class GameResourceLoader implements LoadingSequence {
         oa.registerOverlay(false, new tr());
         oa.registerOverlay(false, new DialogOverlay());
         oa.registerOverlay(false, new vp());
-        oa.registerOverlay(false, new ac());
+        oa.registerOverlay(false, new TrinketUnlockNotice());
         oa.registerOverlay(false, new fv());
     }
 
@@ -686,7 +686,7 @@ final class GameResourceLoader implements LoadingSequence {
         mp.field_h.a(ContextMenuItem.field_Eb, (byte) -126, vp.field_l, cu.field_b);
         mp.field_h.a(ListingRowCache.field_h, (byte) -106, vp.field_l, cu.field_b);
         mp.field_h.a(MySquadScreen.field_H, (byte) -128, kw.field_g, Bzip2State.field_d);
-        mp.field_h.a(StatefulTextPainter.field_y, (byte) -116, CascadingMenu.field_Ib, ac.field_e);
+        mp.field_h.a(StatefulTextPainter.field_y, (byte) -116, CascadingMenu.field_Ib, TrinketUnlockNotice.field_e);
     }
 
     private final void a(int param0, ArgbSprite param1) {

@@ -279,32 +279,32 @@ final class MusicPatchPcmStream extends PcmStream {
             return;
           }
           if (0 == RankingsScreen.field_C) {
-            oi.field_e = new oh[34];
+            IntValueNode.field_e = new oh[34];
             var1_int = 0;
             incrementValue$3 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$3] = new oh(RandomAccessCacheFile.field_c, -100, -100);
+            IntValueNode.field_e[incrementValue$3] = new oh(RandomAccessCacheFile.field_c, -100, -100);
             incrementValue$4 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$4] = new oh(pi.field_a, 60, -180);
+            IntValueNode.field_e[incrementValue$4] = new oh(pi.field_a, 60, -180);
             incrementValue$5 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$5] = new oh(ng.field_j[0], 280, -280);
+            IntValueNode.field_e[incrementValue$5] = new oh(ng.field_j[0], 280, -280);
             incrementValue$6 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$6] = new oh(RandomAccessCacheFile.field_c, -190, 1184);
+            IntValueNode.field_e[incrementValue$6] = new oh(RandomAccessCacheFile.field_c, -190, 1184);
             incrementValue$7 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$7] = new oh(pi.field_a, -280, 994);
+            IntValueNode.field_e[incrementValue$7] = new oh(pi.field_a, -280, 994);
             incrementValue$8 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$8] = new oh(pi.field_a, -160, 1047);
+            IntValueNode.field_e[incrementValue$8] = new oh(pi.field_a, -160, 1047);
             incrementValue$9 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$9] = new oh(ng.field_j[0], 660, -260);
+            IntValueNode.field_e[incrementValue$9] = new oh(ng.field_j[0], 660, -260);
             incrementValue$10 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$10] = new oh(ng.field_j[1], 800, -240);
+            IntValueNode.field_e[incrementValue$10] = new oh(ng.field_j[1], 800, -240);
             for (var2_int = 0; var2_int < 8; var2_int++) {
               if (LoggedPossession.a((byte) -24, 2) == 1) {
                 stackIn_9_0 = ng.field_j[0];
@@ -320,7 +320,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var5 = BytePlusOneCommand.a(29430, 10, var2_int * 110 - 20);
               incrementValue$14 = var1_int;
               var1_int++;
-              oi.field_e[incrementValue$14] = new oh(var11, var4_int, var5);
+              IntValueNode.field_e[incrementValue$14] = new oh(var11, var4_int, var5);
             }
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
               if (LoggedPossession.a((byte) -24, 2) != 1) {
@@ -336,14 +336,14 @@ final class MusicPatchPcmStream extends PcmStream {
               var5Lifetime2 = BytePlusOneCommand.a(29430, 1, -200 + 100 * var2_intLifetime1);
               incrementValue$13 = var1_int;
               var1_int++;
-              oi.field_e[incrementValue$13] = new oh(var12, var4_intLifetime1, var5Lifetime2);
+              IntValueNode.field_e[incrementValue$13] = new oh(var12, var4_intLifetime1, var5Lifetime2);
             }
             incrementValue$11 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$11] = new oh(ng.field_j[0], 650, 1354);
+            IntValueNode.field_e[incrementValue$11] = new oh(ng.field_j[0], 650, 1354);
             incrementValue$12 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$12] = new oh(ng.field_j[1], 800, 1364);
+            IntValueNode.field_e[incrementValue$12] = new oh(ng.field_j[1], 800, 1364);
             return;
           }
           if (RankingsScreen.field_C == 1) {
@@ -359,7 +359,7 @@ final class MusicPatchPcmStream extends PcmStream {
             var4 = LeaguesScreen.field_E[3];
             var7Lifetime1Lifetime6 = var4;
             var7Lifetime1Lifetime7 = var4;
-            oi.field_e = new oh[28];
+            IntValueNode.field_e = new oh[28];
             var5Lifetime1 = 0;
             for (var6 = 0; var6 < 8; var6++) {
               var7_int = BytePlusOneCommand.a(param0 + 29429, 20, -170);
@@ -369,7 +369,7 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               incrementValue$1 = var5Lifetime1;
               var5Lifetime1++;
-              stackIn_25_0 = oi.field_e;
+              stackIn_25_0 = IntValueNode.field_e;
               stackIn_25_1 = incrementValue$1;
               stackIn_25_2 = null;
               stackIn_25_3 = null;
@@ -385,7 +385,7 @@ final class MusicPatchPcmStream extends PcmStream {
               stackIn_25_0[stackIn_25_1] = new oh(stackIn_26_4, var7_int, var8);
               incrementValue$2 = var5Lifetime1;
               var5Lifetime1++;
-              stackIn_28_0 = oi.field_e;
+              stackIn_28_0 = IntValueNode.field_e;
               stackIn_28_1 = incrementValue$2;
               stackIn_28_2 = null;
               stackIn_28_3 = null;
@@ -414,26 +414,26 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               incrementValue$0 = var5Lifetime1;
               var5Lifetime1++;
-              oi.field_e[incrementValue$0] = new oh(var7Lifetime1Lifetime8, var8Lifetime1, var9);
+              IntValueNode.field_e[incrementValue$0] = new oh(var7Lifetime1Lifetime8, var8Lifetime1, var9);
             }
           } else {
             if (RankingsScreen.field_C == 2) {
-              oi.field_e = new oh[9];
-              oi.field_e[0] = new oh(ng.field_j[0], -345, 132);
-              oi.field_e[1] = new oh(ng.field_j[1], -157, 510);
-              oi.field_e[2] = new oh(ng.field_j[1], -170, 1294);
-              oi.field_e[3] = new oh(ng.field_j[0], -245, 1384);
-              oi.field_e[4] = new oh(ng.field_j[0], 690, -220);
-              oi.field_e[5] = new oh(ng.field_j[1], 1086, 910);
-              oi.field_e[6] = new oh(ng.field_j[0], 920, 1294);
-              oi.field_e[7] = new oh(ConsoleCommand.field_w, -150, 940);
-              oi.field_e[8] = new oh(ConsoleCommand.field_w, 925, 214);
+              IntValueNode.field_e = new oh[9];
+              IntValueNode.field_e[0] = new oh(ng.field_j[0], -345, 132);
+              IntValueNode.field_e[1] = new oh(ng.field_j[1], -157, 510);
+              IntValueNode.field_e[2] = new oh(ng.field_j[1], -170, 1294);
+              IntValueNode.field_e[3] = new oh(ng.field_j[0], -245, 1384);
+              IntValueNode.field_e[4] = new oh(ng.field_j[0], 690, -220);
+              IntValueNode.field_e[5] = new oh(ng.field_j[1], 1086, 910);
+              IntValueNode.field_e[6] = new oh(ng.field_j[0], 920, 1294);
+              IntValueNode.field_e[7] = new oh(ConsoleCommand.field_w, -150, 940);
+              IntValueNode.field_e[8] = new oh(ConsoleCommand.field_w, 925, 214);
               return;
             }
             if (RankingsScreen.field_C != 3) {
               return;
             }
-            oi.field_e = new oh[]{};
+            IntValueNode.field_e = new oh[]{};
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

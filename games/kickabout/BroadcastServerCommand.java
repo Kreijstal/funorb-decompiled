@@ -56,7 +56,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             return stackIn_6_0;
           }
           if (SumIntegersCommand.a((byte) 82, param2)) {
-            stackIn_10_0 = ec.field_g;
+            stackIn_10_0 = LoginText.field_g;
             return stackIn_10_0;
           }
           if (IntKeyLookup.a(param2, -64)) {

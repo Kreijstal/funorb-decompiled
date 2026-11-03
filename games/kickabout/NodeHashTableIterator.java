@@ -133,11 +133,11 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (~cc.field_e == param1) {
+        if (~FixedQuaternion.field_e == param1) {
           hq.b((byte) 124);
           return true;
         }
-        if (cc.field_e == 102) {
+        if (FixedQuaternion.field_e == 102) {
           dr.field_g.a(5075);
           return true;
         }

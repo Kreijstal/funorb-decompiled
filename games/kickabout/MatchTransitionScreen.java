@@ -554,16 +554,16 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (DebugConsole.field_s) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (9 == cc.field_e) {
+            if (9 == FixedQuaternion.field_e) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (cc.field_e == 10) {
+            if (FixedQuaternion.field_e == 10) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (11 == cc.field_e) {
+            if (11 == FixedQuaternion.field_e) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (cc.field_e != 80) {
+            if (FixedQuaternion.field_e != 80) {
               return false;
             }
             if (!ph.a(true)) {
@@ -577,13 +577,13 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           }
           stackIn_44_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;
           var4 = stackIn_44_0;
-          if (80 == cc.field_e ||
-            84 == cc.field_e) {
+          if (80 == FixedQuaternion.field_e ||
+            84 == FixedQuaternion.field_e) {
             TextFieldNode.field_Wb = false;
             var4 = 1;
           }
         } else {
-          if (cc.field_e == 13) {
+          if (FixedQuaternion.field_e == 13) {
             NumericDateInputWidget.field_J = null;
             return true;
           }
@@ -591,16 +591,16 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (DebugConsole.field_s) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (9 == cc.field_e) {
+            if (9 == FixedQuaternion.field_e) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (cc.field_e == 10) {
+            if (FixedQuaternion.field_e == 10) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (11 == cc.field_e) {
+            if (11 == FixedQuaternion.field_e) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (cc.field_e != 80) {
+            if (FixedQuaternion.field_e != 80) {
               return false;
             }
             if (!ph.a(true)) {
@@ -614,17 +614,17 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           }
           stackIn_11_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;
           var4 = stackIn_11_0;
-          if (80 == cc.field_e) {
+          if (80 == FixedQuaternion.field_e) {
             TextFieldNode.field_Wb = false;
             var4 = 1;
           } else {
-            if (84 == cc.field_e) {
+            if (84 == FixedQuaternion.field_e) {
               TextFieldNode.field_Wb = false;
               var4 = 1;
             }
           }
         }
-        if (13 == cc.field_e) {
+        if (13 == FixedQuaternion.field_e) {
           TrinketCatalog.a(89);
           var4 = 1;
           TextFieldNode.field_Wb = false;

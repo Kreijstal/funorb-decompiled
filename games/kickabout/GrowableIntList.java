@@ -86,7 +86,7 @@ final class GrowableIntList {
         RuntimeException var3 = null;
         double var4 = 0.0;
         double var6 = 0.0;
-        oi var8 = null;
+        IntValueNode var8 = null;
         int var9 = 0;
         int var10 = 0;
         IntrusiveDeque var11 = null;
@@ -96,29 +96,29 @@ final class GrowableIntList {
           if (param0 != 5464) {
             field_b = (ChatMessage[]) null;
           }
-          var11.a(new oi(0), 3);
+          var11.a(new IntValueNode(0), 3);
           if (0 == param1) {
-            var11.a(new oi(2), 3);
+            var11.a(new IntValueNode(2), 3);
           }
           if (param1 == 1) {
-            var11.a(new oi(3), 3);
+            var11.a(new IntValueNode(3), 3);
           }
           if (2 == param1) {
-            var11.a(new oi(4), 3);
+            var11.a(new IntValueNode(4), 3);
           }
           if (param2 == 1 ||
             param2 == 2) {
-            var11.a(new oi(1), param0 - 5461);
+            var11.a(new IntValueNode(1), param0 - 5461);
           }
           if (param2 == 2) {
-            var11.a(new oi(5), 3);
+            var11.a(new IntValueNode(5), 3);
           }
           if (param2 == 3) {
-            var11.a(new oi(6), 3);
+            var11.a(new IntValueNode(6), 3);
           }
           var4 = 100.0 / (double)var11.a(false);
           var6 = 0.0;
-          var8 = (oi) (var11.g(param0 + 18545));
+          var8 = (IntValueNode) (var11.g(param0 + 18545));
           while (true) {
             if (var8 == null) {
               stackIn_25_0 = -1;
@@ -127,7 +127,7 @@ final class GrowableIntList {
             var9 = fv.a(var8.field_j, (byte) 19);
             if (var9 == -1) {
               var6 = var6 + var4;
-              var8 = (oi) (var11.c(33));
+              var8 = (IntValueNode) (var11.c(33));
               continue;
             }
             break;

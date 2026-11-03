@@ -42,7 +42,7 @@ final class ak extends IntrusiveNode {
             param0.screenId != 26) {
             if (-1 == param0.screenId &&
               MyKitScreen.field_O) {
-              stackIn_22_0 = dt.b((byte) -75);
+              stackIn_22_0 = OffscreenPlayerArrow.b((byte) -75);
               return stackIn_22_0;
             }
             stackIn_24_0 = 0;
@@ -143,7 +143,7 @@ final class ak extends IntrusiveNode {
             var5 = nj.monotonicMillis(param0 - 126);
             var7 = (int)(var5 % 1050L);
             if (var7 < 700) {
-              var8 = (65536 + we.a((var7 << 13) / 700, false) >> 11) + 192;
+              var8 = (65536 + we.cosine((var7 << 13) / 700, false) >> 11) + 192;
               var4Lifetime1 = var8 * var4Lifetime1 >> 8;
             }
             var8Lifetime1 = (int)((var5 << 16) / 2600L);

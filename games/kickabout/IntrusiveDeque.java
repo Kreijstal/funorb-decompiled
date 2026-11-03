@@ -8,7 +8,7 @@ final class IntrusiveDeque {
     IntrusiveNode field_c;
     static Sprite field_e;
     static int[][][] field_g;
-    static cc field_d;
+    static FixedQuaternion field_d;
     private IntrusiveNode field_i;
     static String field_b;
 
@@ -391,7 +391,7 @@ final class IntrusiveDeque {
         field_h = new String[3];
         field_g = new int[33][33][33];
         field_f = false;
-        field_d = new cc();
+        field_d = new FixedQuaternion();
         field_b = "Top Bidder";
     }
 }

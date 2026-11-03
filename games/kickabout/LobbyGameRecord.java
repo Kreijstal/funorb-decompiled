@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kp {
+final class LobbyGameRecord {
     int field_j;
     int[][][] field_e;
     static String[] field_g;
@@ -107,7 +107,7 @@ final class kp {
         }
     }
 
-    final void a(byte param0, CipherPacketBuffer param1) {
+    final void readFromPacket(byte param0, CipherPacketBuffer param1) {
         int var4 = 0;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_21_0 = null;
@@ -163,7 +163,7 @@ final class kp {
         }
     }
 
-    final void a(boolean param0, kp param1) {
+    final void copyFrom(boolean param0, LobbyGameRecord param1) {
         int var9 = 0;
         int var10 = 0;
         int[] dupTemp$0 = null;
@@ -266,7 +266,7 @@ final class kp {
         field_i = null;
     }
 
-    final void b(boolean param0, kp param1) {
+    final void b(boolean param0, LobbyGameRecord param1) {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -315,7 +315,7 @@ final class kp {
         }
     }
 
-    public kp() {
+    public LobbyGameRecord() {
         this.field_e = new int[2][5][2];
         this.field_c = new int[]{-1, -1};
         this.field_j = 0;

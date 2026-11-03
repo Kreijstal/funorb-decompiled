@@ -147,7 +147,7 @@ public final class Kickabout extends GameLoopApplet {
         int var3;
         int var4;
         var4 = field_G;
-        kp.a(4, -120);
+        LobbyGameRecord.a(4, -120);
         SquadGridWidget.a(7, (byte) -97);
         if (AuctionLogEntry.field_h instanceof FindingOpponentScreen) {
           DelayedServerPacket.a(0, false, -2);
@@ -155,7 +155,7 @@ public final class Kickabout extends GameLoopApplet {
         var3 = -37 % ((-39 - param1) / 32);
         if (param0 == 1) {
           QuickChatPhraseCache.field_d = true;
-          ec.field_e = true;
+          LoginText.field_e = true;
         } else {
           if (od.field_n) {
             TextButton.field_B = true;
@@ -181,7 +181,7 @@ public final class Kickabout extends GameLoopApplet {
             od.field_n = false;
             vr.b(1);
           }
-          ec.field_e = false;
+          LoginText.field_e = false;
           QuickChatPhraseCache.field_d = false;
         }
     }
@@ -710,7 +710,7 @@ public final class Kickabout extends GameLoopApplet {
         if (param0 >= -70) {
           return true;
         }
-        stackIn_8_0 = (od.field_n) || (ec.field_e) || (QuickChatPhraseCache.field_d);
+        stackIn_8_0 = (od.field_n) || (LoginText.field_e) || (QuickChatPhraseCache.field_d);
         return stackIn_8_0;
     }
 
@@ -986,7 +986,7 @@ public final class Kickabout extends GameLoopApplet {
             }
             if (param0 == 9) {
               cv.a((byte) 87);
-              ec.field_e = false;
+              LoginText.field_e = false;
               DelayedServerPacket.a(10, false, -2);
               ka.a(2, param1.readString(param2 - 98));
               return true;
@@ -995,7 +995,7 @@ public final class Kickabout extends GameLoopApplet {
               cv.a((byte) 81);
               ConsoleTokenCursor.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), AnimationPlayer.b(-116), UrlRequest.field_c, dr.a(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
               DropTargetWidget.a(64, LoginRequiredDialog.h((byte) -64), ButtonMenuScreen.f((byte) -63));
-              ec.field_e = false;
+              LoginText.field_e = false;
               od.field_n = true;
               if (!QuickChatPhraseCache.field_d) {
                 DelayedServerPacket.a(-3, false, -2);
@@ -1014,7 +1014,7 @@ public final class Kickabout extends GameLoopApplet {
                 vr.b(1);
               }
               QuickChatPhraseCache.field_d = false;
-              ec.field_e = false;
+              LoginText.field_e = false;
               return true;
             }
             if (10 == param0 &&
@@ -1043,8 +1043,8 @@ public final class Kickabout extends GameLoopApplet {
               }
               for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < 73; var5Lifetime2Lifetime1++) {
                 if (c.a(var5Lifetime2Lifetime1, 0, var48)) {
-                  ec.field_f.a(new oi(var5Lifetime2Lifetime1), 3);
-                  ok.field_a.a(new oi(var5Lifetime2Lifetime1), 3);
+                  LoginText.field_f.a(new IntValueNode(var5Lifetime2Lifetime1), 3);
+                  ok.field_a.a(new IntValueNode(var5Lifetime2Lifetime1), 3);
                 }
               }
               var49 = BufferedSocket.field_f;
@@ -1477,7 +1477,7 @@ public final class Kickabout extends GameLoopApplet {
         oo.a(param0 ^ -18184);
         pl.a(20177);
         pr.a(0);
-        oi.a(false);
+        IntValueNode.a(false);
         IntrusiveDeque.a(param0 - 133);
         SoftwareRasterizer.c();
         jl.a(param0 ^ 8198);
@@ -1564,7 +1564,7 @@ public final class Kickabout extends GameLoopApplet {
         MenuSelection.a((byte) -22);
         BufferedCacheFile.d(81);
         te.a(true);
-        ec.a(0);
+        LoginText.a(0);
         we.a((byte) -43);
         kr.a(param0 ^ -121);
         kj.b((byte) -118);
@@ -1615,7 +1615,7 @@ public final class Kickabout extends GameLoopApplet {
         LeaguesScreen.e(-38);
         so.a((byte) -113);
         jq.a(true);
-        kp.a((byte) 101);
+        LobbyGameRecord.a((byte) 101);
         vk.a(50);
         pi.a((byte) -116);
         h.a(false);
@@ -1663,7 +1663,7 @@ public final class Kickabout extends GameLoopApplet {
         rf.a(-97);
         TabStrip.c(true);
         HoverTooltip.i((byte) 39);
-        ac.b((byte) 16);
+        TrinketUnlockNotice.b((byte) 16);
         wa.a((byte) 116);
         rr.a(param0 - 121);
         MidiPcmStream.a((byte) -32);
@@ -1836,7 +1836,7 @@ public final class Kickabout extends GameLoopApplet {
         ff.a((byte) 101);
         StrongCacheEntry.b(-1);
         ProxySocketConnector.a(false);
-        dt.a(43);
+        OffscreenPlayerArrow.a(43);
         DateInputWidget.a(param0 ^ -104);
         vt.a(-73);
         SoundFilter.a();

@@ -2062,7 +2062,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("extra_w2", -84);
                 if (null != var2) {
-                  ac.field_e = BlackFadeScreen.a(var2, true);
+                  TrinketUnlockNotice.field_e = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("extra_l1", -81);
                 if (null != var2) {
@@ -2174,7 +2174,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("choose_team_instructions2", param1 ^ -89);
                 if (var2 != null) {
-                  kp.field_a = BlackFadeScreen.a(var2, true);
+                  LobbyGameRecord.field_a = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("formation_instructions1", param1 ^ -99);
                 if (null != var2) {
@@ -3160,7 +3160,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("cant_use_trinkets_in_auction", -84);
                 if (null != var2) {
-                  dt.field_e = BlackFadeScreen.a(var2, true);
+                  OffscreenPlayerArrow.field_e = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("player_not_inauction", -110);
                 if (null != var2) {

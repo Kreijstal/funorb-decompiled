@@ -269,8 +269,8 @@ class ri extends TextWidgetPainter {
           hl.field_f = new UiLayoutNode(0L, (UiLayoutNode) null);
           hl.field_f.field_N = wa.a((byte) 127, "lobby", param4, "closebutton");
           hl.field_f.field_vb = wa.a((byte) 114, "lobby", param4, "closebutton_mouseover");
-          oi.field_i = new UiLayoutNode(0L, var8);
-          oi.field_i.field_R = NotCommand.a(40, true, 3815994, 2039583, true, (byte) -46);
+          IntValueNode.field_i = new UiLayoutNode(0L, var8);
+          IntValueNode.field_i.field_R = NotCommand.a(40, true, 3815994, 2039583, true, (byte) -46);
           TrinketIcon.field_zb = new UiLayoutNode(0L, var10);
           TrinketIcon.field_zb.field_kb = 2;
           TrinketIcon.field_zb.field_R = NotCommand.a(30, false, 3815994, 2039583, true, (byte) -46);
@@ -609,7 +609,7 @@ class ri extends TextWidgetPainter {
             }
             GoalStateAgent.field_k.field_lb = true;
             if (InstrumentNoteMask.field_k) {
-              ac.field_b.field_lb = false;
+              TrinketUnlockNotice.field_b.field_lb = false;
               DialogOverlay.field_e.field_E = qr.field_c;
               if (var9 == 0) {
                 stackIn_54_0 = ea.field_g;
@@ -651,7 +651,7 @@ class ri extends TextWidgetPainter {
               }
               stackIn_26_0.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
               nv.field_F.field_E = CheckboxLabelWidget.field_Db;
-              ac.field_b.field_lb = true;
+              TrinketUnlockNotice.field_b.field_lb = true;
               tt.field_c = true;
               if (null != PlayArea.field_k) {
                 ee.field_e = false;
@@ -715,7 +715,7 @@ class ri extends TextWidgetPainter {
           ni.field_l.field_b.h((byte) 118);
           if (null != ArchiveSource.field_b) {
             stackIn_78_0 = 0;
-            if (stackIn_78_0 != ac.field_b.field_sb) {
+            if (stackIn_78_0 != TrinketUnlockNotice.field_b.field_sb) {
               nv.a(param3, 32361);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {

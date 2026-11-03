@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cc {
+final class FixedQuaternion {
     private int field_b;
     private int field_a;
     private int field_c;
@@ -31,7 +31,7 @@ final class cc {
         this.field_d = bw.a((long)var2, 249299984, (long)this.field_d);
     }
 
-    final void a(cc param0, int param1) {
+    final void a(FixedQuaternion param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -52,7 +52,7 @@ final class cc {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, int param4) {
+    final void setFromAxisAngle(int param0, boolean param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var6Lifetime1;
@@ -67,8 +67,8 @@ final class cc {
           this.field_d = EmailSyntaxValidator.a(-8905, (long)param2, (long)var6);
           return;
         }
-        cc var8 = (cc) null;
-        this.a((cc) null, 27);
+        FixedQuaternion var8 = (FixedQuaternion) null;
+        this.a((FixedQuaternion) null, 27);
         var6Lifetime1 = rn.b(param4, 3);
         var7Lifetime1 = StringCursor.a(param4, -127);
         this.field_a = var7Lifetime1;
@@ -77,7 +77,7 @@ final class cc {
         this.field_d = EmailSyntaxValidator.a(-8905, (long)param2, (long)var6Lifetime1);
     }
 
-    final void a(int param0, int[] param1) {
+    final void toRotationMatrix(int param0, int[] param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -113,7 +113,7 @@ final class cc {
         }
     }
 
-    public cc() {
+    public FixedQuaternion() {
         this.field_a = 65536;
     }
 

@@ -8,7 +8,7 @@ final class SaveChangesDialog extends MessageDialog {
 
     final static boolean b(int param0, int param1, int param2) {
         int var3 = null != ArchiveSource.field_b ? 1 : 0;
-        if (cc.field_e == 9 &&
+        if (FixedQuaternion.field_e == 9 &&
           cb.a(GameOverView.field_z, mv.field_a, (byte) -64, PlayerShopScreen.field_S, PlayerModelPreview.field_r)) {
           if (GameOverView.field_z != 2 &&
             var3 != 0) {
@@ -17,14 +17,14 @@ final class SaveChangesDialog extends MessageDialog {
           return mi.a(PlayerModelPreview.field_r, mv.field_a, (byte) 124, GameOverView.field_z, PlayerShopScreen.field_S);
         }
         int var4 = 1 % ((59 - param0) / 44);
-        if (10 == cc.field_e) {
+        if (10 == FixedQuaternion.field_e) {
           if (var3 != 0) {
             return false;
           }
           hp.b(0);
           return true;
         }
-        if (11 == cc.field_e &&
+        if (11 == FixedQuaternion.field_e &&
           CommonGame.field_j) {
           if (PlayerShopScreen.field_K == 2 &&
             !TournamentChampionDialog.a(false, oc.field_f, SectorCacheStore.field_c)) {

@@ -86,7 +86,7 @@ final class wp {
           LeagueWinnerDialog.field_J = param14;
           rn.field_d = param0;
           LoadingProgressDialog.field_Q = param12;
-          oi.field_f = param3;
+          IntValueNode.field_f = param3;
           ca.field_g = param6;
           TextFieldValidator.field_d = ModalStack.a(param9, 70, "lobby", "gameprivacy");
           CachedArchiveSource.field_m = ModalStack.a(param9, 86, "lobby", "ratedgame");
@@ -183,10 +183,10 @@ final class wp {
             AchievementsScreen.field_C.addChild((byte) -123, DoSomethingCommand.field_D);
           }
           AchievementsScreen.field_C.addChild((byte) -122, (UiLayoutNode) (ClientException.field_c));
-          ac.field_b = new UiLayoutNode(0L, LongPlusOneCommand.field_D, ns.field_b.toUpperCase());
+          TrinketUnlockNotice.field_b = new UiLayoutNode(0L, LongPlusOneCommand.field_D, ns.field_b.toUpperCase());
           IterableDualLinkDeque.field_h = new UiLayoutNode(0L, LeaguesHelpScreen.field_H);
           sg.field_a = new UiLayoutNode(0L, AudioService.field_g);
-          MouseInputHandler.field_d = new UiLayoutNode(0L, oi.field_i, IntDoubleCommand.field_F.toUpperCase());
+          MouseInputHandler.field_d = new UiLayoutNode(0L, IntValueNode.field_i, IntDoubleCommand.field_F.toUpperCase());
           rf.field_c = new ContextMenuItem[param4 + 4][];
           qr.field_b = new UiLayoutNode[4 + param4];
           qr.field_b[0] = new UiLayoutNode(0L, kr.field_b, mi.field_a);

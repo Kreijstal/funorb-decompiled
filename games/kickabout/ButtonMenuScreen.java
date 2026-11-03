@@ -531,7 +531,7 @@ class ButtonMenuScreen extends AppScreen {
         int var4Lifetime2;
         var8 = Kickabout.field_G;
         stackIn_3_0 = param1;
-        stackIn_4_1 = (!ec.field_e) && (!QuickChatPhraseCache.field_d);
+        stackIn_4_1 = (!LoginText.field_e) && (!QuickChatPhraseCache.field_d);
         param1 = stackIn_3_0 & stackIn_4_1;
         if (!param1) {
           this.buttonSelection.selectedIndex = -1;

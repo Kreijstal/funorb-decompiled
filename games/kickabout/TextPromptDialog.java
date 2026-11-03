@@ -593,7 +593,7 @@ final class TextPromptDialog extends UiLayoutNode {
         if (this.field_Ob != -2) {
           return false;
         }
-        if (cc.field_e == 13) {
+        if (FixedQuaternion.field_e == 13) {
           this.field_Ob = -1;
         }
         if (param0 != 37) {

@@ -6,7 +6,7 @@ final class TournamentLobbyScreen extends AppScreen {
     private int[] field_J;
     private boolean field_K;
     private int[] field_H;
-    private kp[] field_S;
+    private LobbyGameRecord[] field_S;
     private int field_h;
     private int[][] field_Y;
     private int field_A;
@@ -15,7 +15,7 @@ final class TournamentLobbyScreen extends AppScreen {
     private String field_r;
     private ChatMessage field_g;
     private int field_v;
-    private kp[] field_T;
+    private LobbyGameRecord[] field_T;
     private int[][] field_D;
     private MenuSelection field_Z;
     private int[] field_P;
@@ -367,14 +367,14 @@ final class TournamentLobbyScreen extends AppScreen {
           this.field_X[var5_intLifetime3].a(var6 != 0, var7_int != 0, var8 != 0, 16, var9_int);
         }
         if (this.field_T == null) {
-          this.field_T = new kp[this.field_S.length];
+          this.field_T = new LobbyGameRecord[this.field_S.length];
         }
         for (var5_intLifetime4 = 0; var5_intLifetime4 < this.field_T.length; var5_intLifetime4++) {
           if (null == this.field_T[var5_intLifetime4]) {
-            this.field_T[var5_intLifetime4] = new kp();
+            this.field_T[var5_intLifetime4] = new LobbyGameRecord();
             this.field_T[var5_intLifetime4].b(false, this.field_S[var5_intLifetime4]);
           }
-          this.field_T[var5_intLifetime4].a(false, this.field_S[var5_intLifetime4]);
+          this.field_T[var5_intLifetime4].copyFrom(false, this.field_S[var5_intLifetime4]);
         }
         if (ph.field_a == 0) {
           if (null != this.field_y &&
@@ -676,10 +676,10 @@ final class TournamentLobbyScreen extends AppScreen {
         try {
           var3_int = param0.readUnsignedByte((byte) -119);
           var4 = 17 % ((50 - param1) / 55);
-          this.field_S = new kp[var3_int];
+          this.field_S = new LobbyGameRecord[var3_int];
           for (var5 = 0; this.field_S.length > var5; var5++) {
-            this.field_S[var5] = new kp();
-            this.field_S[var5].a((byte) -119, param0);
+            this.field_S[var5] = new LobbyGameRecord();
+            this.field_S[var5].readFromPacket((byte) -119, param0);
           }
           this.field_W = param0.readUnsignedByte((byte) -108);
           this.field_v = param0.a((byte) 81);
@@ -835,7 +835,7 @@ final class TournamentLobbyScreen extends AppScreen {
         ((CoverageBitmapFont) (Object) stackIn_2_0).d(((StringBuilder) (Object) stackIn_2_1).append(stackIn_3_2).toString(), 320, 50, 16777215, -1);
         AuctionListing.a(640, -22914, 0, 88, 60);
         SoftwareRasterizer.a(224, 66, 372, 50, 8, 65793, 196);
-        un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wk.field_e, new String[]{kp.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
+        un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wk.field_e, new String[]{LobbyGameRecord.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
         var2 = 46;
         SoftwareRasterizer.a(var2, 66, 175, 50, 8, 65793, 196);
         un.field_d.d(nk.field_g, var2 + 87, 82, 16777215, -1);
@@ -914,9 +914,9 @@ final class TournamentLobbyScreen extends AppScreen {
         int stackIn_33_1 = 0;
         int stackIn_35_0 = 0;
         int stackIn_36_1 = 0;
-        kp[] stackIn_49_0 = null;
+        LobbyGameRecord[] stackIn_49_0 = null;
         int stackIn_50_1 = 0;
-        kp[] stackIn_53_0 = null;
+        LobbyGameRecord[] stackIn_53_0 = null;
         int stackIn_54_1 = 0;
         int stackIn_56_0 = 0;
         int[] stackIn_56_1 = null;
@@ -961,9 +961,9 @@ final class TournamentLobbyScreen extends AppScreen {
         int var11;
         int var12;
         int var13;
-        kp var14;
+        LobbyGameRecord var14;
         int var15;
-        kp var15_ref_kp;
+        LobbyGameRecord var15_ref_kp;
         int var16;
         String var16_ref_String;
         int var17;
@@ -1048,7 +1048,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (var2 <= 1) {
           var13--;
         }
-        un.field_d.d(kp.field_g[var13].toLowerCase(), var11, var12 + (-(var6 >> 1) - 4), 16777215, -1);
+        un.field_d.d(LobbyGameRecord.field_g[var13].toLowerCase(), var11, var12 + (-(var6 >> 1) - 4), 16777215, -1);
         for (var14_int = 0; var2 > var14_int; var14_int++) {
           if (null != this.field_T) {
             stackIn_49_0 = this.field_T;
@@ -1150,7 +1150,7 @@ final class TournamentLobbyScreen extends AppScreen {
             var12 = var10;
             var13--;
             if (var13 >= 0) {
-              un.field_d.d(kp.field_g[var13].toLowerCase(), var11, -4 + var12 - (var6 >> 1), 16777215, -1);
+              un.field_d.d(LobbyGameRecord.field_g[var13].toLowerCase(), var11, -4 + var12 - (var6 >> 1), 16777215, -1);
             }
           }
         }

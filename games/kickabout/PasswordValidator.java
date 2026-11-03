@@ -176,8 +176,8 @@ final class PasswordValidator extends TextFieldValidator {
             field_j = (int[]) null;
           }
           var9 = wn.field_j.field_o;
-          DelegatingCanvas.field_e = -(var9 * we.a(var8Lifetime1, false)) >> 17;
-          FormationView.field_m = var9 * ei.a(var8Lifetime1, (byte) -23) >> 17;
+          DelegatingCanvas.field_e = -(var9 * we.cosine(var8Lifetime1, false)) >> 17;
+          FormationView.field_m = var9 * ei.sine(var8Lifetime1, (byte) -23) >> 17;
           wn.field_j.a(wn.field_j.field_o << 3, wn.field_j.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, var8Lifetime1 << 3, 4096);
           TeamManagementScreen.e(118);
           return;

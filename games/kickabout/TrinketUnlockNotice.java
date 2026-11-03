@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ac implements OverlayLayer {
+final class TrinketUnlockNotice implements OverlayLayer {
     static Random field_d;
     private static int field_c;
     static UiLayoutNode field_b;
@@ -13,7 +13,7 @@ final class ac implements OverlayLayer {
 
     public final boolean a(byte param0) {
         if (param0 < 63) {
-          ac.b((byte) 14);
+          TrinketUnlockNotice.b((byte) 14);
           return false;
         }
         return false;
@@ -50,7 +50,7 @@ final class ac implements OverlayLayer {
           field_b = null;
           return;
         }
-        ac.b((byte) -17);
+        TrinketUnlockNotice.b((byte) -17);
         field_d = null;
         field_a = (byte[][]) null;
         field_b = null;
@@ -59,7 +59,7 @@ final class ac implements OverlayLayer {
     public final void a(int param0, boolean param1) {
         int var3;
         int var4;
-        oi var5;
+        IntValueNode var5;
         var4 = Kickabout.field_G;
         if (0 != TextLine.field_f) {
           TextLine.field_f = TextLine.field_f - 1;
@@ -76,7 +76,7 @@ final class ac implements OverlayLayer {
           if (-1 != field_c) {
             field_c = -1;
           }
-          var5 = (oi) (ec.field_f.b((byte) -36));
+          var5 = (IntValueNode) (LoginText.field_f.b((byte) -36));
           if (var5 != null) {
             field_c = var5.field_j;
             TextLine.field_f = 335;

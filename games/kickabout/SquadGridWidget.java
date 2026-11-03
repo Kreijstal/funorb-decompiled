@@ -698,7 +698,7 @@ final class SquadGridWidget extends UiLayoutNode {
         ValidationState.field_d[1] = DemoIntegersCommand.field_C;
         ValidationState.field_d[4] = AudioService.field_a;
         ValidationState.field_d[7] = rr.field_a;
-        kp.field_g = new String[4];
+        LobbyGameRecord.field_g = new String[4];
         ValidationState.field_d[22] = ni.field_n;
         ValidationState.field_d[0] = ValidationState.field_a;
         ValidationState.field_d[5] = ServerMessageScreen.field_B;
@@ -719,10 +719,10 @@ final class SquadGridWidget extends UiLayoutNode {
         ValidationState.field_d[8] = MusicPatch.field_o;
         ValidationState.field_d[13] = ld.field_d;
         ValidationState.field_d[11] = bw.field_c;
-        kp.field_g[0] = lt.field_b;
-        kp.field_g[2] = WeightedCacheEntry.field_n;
-        kp.field_g[3] = AccountMessagePanel.field_C;
-        kp.field_g[1] = Checkbox.field_G;
+        LobbyGameRecord.field_g[0] = lt.field_b;
+        LobbyGameRecord.field_g[2] = WeightedCacheEntry.field_n;
+        LobbyGameRecord.field_g[3] = AccountMessagePanel.field_C;
+        LobbyGameRecord.field_g[1] = Checkbox.field_G;
         GameSetupPanel.field_Qb = new String[4];
         DiskCacheWorker.field_g = new String[4];
         GameSetupPanel.field_Qb[0] = TrinketTile.field_Bb;

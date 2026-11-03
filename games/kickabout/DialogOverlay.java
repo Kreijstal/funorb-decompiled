@@ -699,14 +699,14 @@ final class DialogOverlay implements OverlayLayer {
             if (var3 instanceof AuctionBidDialog ||
               var3 instanceof AuctionSettingsDialog ||
               var3 instanceof SquadPickerDialog) {
-              var3.e(19910);
+              var3.beginClose(19910);
             }
             var3 = (PopupDialog) (ScrollPane.field_Jb.c(33));
           }
           if (su.field_c != null && (su.field_c instanceof AuctionBidDialog ||
             su.field_c instanceof AuctionSettingsDialog ||
             su.field_c instanceof SquadPickerDialog)) {
-            su.field_c.e(19910);
+            su.field_c.beginClose(19910);
           }
         }
         if (su.field_c == null) {
@@ -717,7 +717,7 @@ final class DialogOverlay implements OverlayLayer {
           }
         } else {
           su.field_c.b(param0 - 16511, param1);
-          if (su.field_c.a(-31268)) {
+          if (su.field_c.isClosed(-31268)) {
             su.field_c = null;
           }
         }
@@ -729,7 +729,7 @@ final class DialogOverlay implements OverlayLayer {
 
     public final boolean a(int param0, int param1, char param2) {
         if (null != su.field_c) {
-          return su.field_c.a(param1, (byte) -21, param2);
+          return su.field_c.handleKey(param1, (byte) -21, param2);
         }
         if (param0 != 11516) {
           DialogOverlay.a(true, true, 2, -89, false, 39, -5);

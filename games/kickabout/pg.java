@@ -12,7 +12,7 @@ final class pg {
         TrinketIcon.field_Cb = new UiLayoutNode(0L, (UiLayoutNode) null);
         if (param0 == -35) {
           TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
-          TrinketIcon.field_Cb.addChild((byte) -126, ac.field_b);
+          TrinketIcon.field_Cb.addChild((byte) -126, TrinketUnlockNotice.field_b);
           tn.field_f = new UiLayoutNode(0L, ChatMessage.field_e);
           vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
           tn.field_f.addChild((byte) -125, is.field_b);
@@ -24,7 +24,7 @@ final class pg {
         }
         field_c = (String) null;
         TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
-        TrinketIcon.field_Cb.addChild((byte) -126, ac.field_b);
+        TrinketIcon.field_Cb.addChild((byte) -126, TrinketUnlockNotice.field_b);
         tn.field_f = new UiLayoutNode(0L, ChatMessage.field_e);
         vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
         tn.field_f.addChild((byte) -125, is.field_b);
@@ -54,7 +54,7 @@ final class pg {
             if (DirectByteStorage.field_k.c(param0 + 2)) {
               var1_int = 1;
             }
-            if (cc.field_e != 13) {
+            if (FixedQuaternion.field_e != 13) {
               continue;
             }
             var2 = 1;

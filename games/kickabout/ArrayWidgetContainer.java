@@ -319,9 +319,9 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
             return;
           }
           if (TrinketShopDialog.field_G != -2) {
-            af.field_a = new dt[4];
+            af.field_a = new OffscreenPlayerArrow[4];
             for (var4_int = 0; var4_int < 4; var4_int++) {
-              af.field_a[var4_int] = new dt((RenderedFootballer) (IntrusiveDequeCursor.field_b.field_P[IntrusiveDequeCursor.field_b.field_g[TrinketShopDialog.field_G].field_p][var4_int + 1]), var4_int + 1);
+              af.field_a[var4_int] = new OffscreenPlayerArrow((RenderedFootballer) (IntrusiveDequeCursor.field_b.field_P[IntrusiveDequeCursor.field_b.field_g[TrinketShopDialog.field_G].field_p][var4_int + 1]), var4_int + 1);
             }
             return;
           }
