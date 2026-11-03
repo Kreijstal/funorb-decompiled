@@ -3,7 +3,7 @@
  */
 abstract class vv extends DualLinkNode {
     boolean field_q;
-    static hd field_o;
+    static UiLayoutNode field_o;
     boolean field_n;
     static int field_r;
     volatile boolean field_p;

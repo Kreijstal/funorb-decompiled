@@ -62,15 +62,15 @@ final class MusicPatch extends IntrusiveNode {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        ob var3 = null;
+        RenderedBall var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        gm var11 = null;
-        gm var12 = null;
+        RenderedFootballer var11 = null;
+        RenderedFootballer var12 = null;
         int var4Lifetime1;
         int var5Lifetime1;
         int var7Lifetime1;
@@ -96,7 +96,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var4 = stackIn_17_0;
               for (var5 = 0; var5 < 5; var5++) {
-                var11 = (gm) (tb.field_w.field_P[var3_int][var5]);
+                var11 = (RenderedFootballer) (tb.field_w.field_P[var3_int][var5]);
                 stackIn_22_0 = (var4 != 0) ? 2271999 : 16716032;
                 var7 = stackIn_22_0;
                 if (var5 == 0) {
@@ -114,11 +114,11 @@ final class MusicPatch extends IntrusiveNode {
                 SoftwareRasterizer.c(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
               }
             }
-            var3 = (ob) (tb.field_w.field_V);
+            var3 = (RenderedBall) (tb.field_w.field_V);
             var4Lifetime1 = var3.field_N >> 16;
             var5Lifetime1 = var3.field_E >> 16;
             if (tb.field_w.field_V.possessorTeam != -1) {
-              var12 = (gm) (tb.field_w.getBallCarrier((byte) -96));
+              var12 = (RenderedFootballer) (tb.field_w.getBallCarrier((byte) -96));
               stackIn_34_0 = (!var12.isMovingDiagonally(false)) ? 40 : 30;
               var7Lifetime1 = stackIn_34_0;
               var5Lifetime1 = (var12.field_bb >> 16) + var12.directionY * var7Lifetime1;

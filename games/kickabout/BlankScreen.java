@@ -3,12 +3,12 @@
  */
 final class BlankScreen extends AppScreen {
     static String field_g;
-    static hd field_h;
+    static UiLayoutNode field_h;
 
     final void drawScreen(int param0, boolean param1) {
         SoftwareRasterizer.fillRect(0, 0, 640, 480, 65793);
         if (param0 != -5) {
-          field_h = (hd) null;
+          field_h = (UiLayoutNode) null;
         }
     }
 

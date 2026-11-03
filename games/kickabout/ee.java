@@ -39,7 +39,7 @@ final class ee {
         int var3 = InstrumentNoteMask.field_i * PacketBuffer.field_g.field_o >> 8;
         int var4 = PacketBuffer.field_g.field_o * InstrumentNoteMask.field_i >> 8;
         int var5 = InstrumentNoteMask.field_i * DelegatingCanvas.field_e >> 8;
-        int var6 = lr.field_m * InstrumentNoteMask.field_i >> 8;
+        int var6 = FormationView.field_m * InstrumentNoteMask.field_i >> 8;
         if (!MouseWheelInput.field_f) {
           eo.a(PacketBuffer.field_g, -(var3 >> 1) + (-var5 + param1), -var6 + param2 - (var4 >> 1), var3, var4);
           return;

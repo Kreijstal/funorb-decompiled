@@ -9,7 +9,7 @@ final class wo extends KeyedLoginCredentials {
     static String[] field_j;
     static int field_o;
 
-    final static void a(ArgbSprite param0, gm param1, byte param2, int param3) {
+    final static void a(ArgbSprite param0, RenderedFootballer param1, byte param2, int param3) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

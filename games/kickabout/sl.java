@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl extends hd {
-    private hd field_Cb;
-    private hd field_Db;
+final class sl extends UiLayoutNode {
+    private UiLayoutNode field_Cb;
+    private UiLayoutNode field_Db;
     private int field_Fb;
     static boolean field_Eb;
     private StringBuilder field_yb;
@@ -11,7 +11,7 @@ final class sl extends hd {
     static String field_Ab;
     static String field_Bb;
 
-    sl(int param0, int param1, int param2, int param3, String param4, hd param5, hd param6, hd param7) {
+    sl(int param0, int param1, int param2, int param3, String param4, UiLayoutNode param5, UiLayoutNode param6, UiLayoutNode param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -31,11 +31,11 @@ final class sl extends hd {
         int var13 = 0;
         this.field_Fb = 0;
         try {
-          this.field_Cb = new hd(0L, param6, param4);
-          this.a((byte) -124, this.field_Cb);
-          this.field_Db = new hd(0L, param7);
+          this.field_Cb = new UiLayoutNode(0L, param6, param4);
+          this.addChild((byte) -124, this.field_Cb);
+          this.field_Db = new UiLayoutNode(0L, param7);
           this.field_Db.field_y = 16764006;
-          this.a((byte) -116, this.field_Db);
+          this.addChild((byte) -116, this.field_Db);
           this.field_Db.field_V = "|";
           this.field_yb = new StringBuilder(12);
           var9_int = this.field_Cb.g((byte) 116);

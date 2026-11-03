@@ -6,7 +6,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
     static int field_H;
     static PacketBuffer field_I;
     static String[] field_F;
-    static hd field_G;
+    static UiLayoutNode field_G;
 
     final static void d(boolean param0) {
         FootballerAgent var1 = null;

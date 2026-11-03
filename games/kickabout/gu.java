@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gu extends hd {
+final class gu extends UiLayoutNode {
     private int field_Cb;
     static String field_Ib;
     private int field_Hb;
-    private hd field_Lb;
-    private hd field_Nb;
+    private UiLayoutNode field_Lb;
+    private UiLayoutNode field_Nb;
     private int field_Fb;
     static Sprite field_zb;
     private int[] field_Kb;
@@ -66,9 +66,9 @@ final class gu extends hd {
         int var8Lifetime1;
         var11 = Kickabout.field_G;
         if (0 == this.field_Ab) {
-          this.field_Bb[this.field_Ab] = new vu(0L, (hd) null, (hd) null, this.field_Nb, (Sprite) null, TextInputWidget.field_M);
+          this.field_Bb[this.field_Ab] = new vu(0L, (UiLayoutNode) null, (UiLayoutNode) null, this.field_Nb, (Sprite) null, TextInputWidget.field_M);
           this.field_Bb[this.field_Ab].field_p = 1;
-          this.a((byte) -111, (hd) (this.field_Bb[this.field_Ab]));
+          this.addChild((byte) -111, (UiLayoutNode) (this.field_Bb[this.field_Ab]));
           this.field_Kb[this.field_Ab] = -1;
           this.field_Ab = this.field_Ab + 1;
         }
@@ -91,11 +91,11 @@ final class gu extends hd {
 
     final void a(int param0, int param1, String param2) {
         try {
-          this.field_Bb[this.field_Ab] = new vu((long)param0, (hd) null, (hd) null, this.field_Lb, (Sprite) null, param2);
+          this.field_Bb[this.field_Ab] = new vu((long)param0, (UiLayoutNode) null, (UiLayoutNode) null, this.field_Lb, (Sprite) null, param2);
           this.field_Bb[this.field_Ab].field_S = this.field_Ob;
           this.field_Bb[this.field_Ab].field_ob = true;
           this.field_Bb[this.field_Ab].field_p = 1;
-          this.a((byte) -115, (hd) (this.field_Bb[this.field_Ab]));
+          this.addChild((byte) -115, (UiLayoutNode) (this.field_Bb[this.field_Ab]));
           this.field_Kb[this.field_Ab] = param1;
           this.field_Ab = this.field_Ab + 1;
         } catch (RuntimeException runtimeException) {
@@ -123,11 +123,11 @@ final class gu extends hd {
 
     final void a(String param0, boolean param1, int param2, Sprite param3) {
         try {
-          this.field_Bb[this.field_Ab] = new vu(0L, (hd) null, (hd) null, this.field_Lb, param3, param0);
+          this.field_Bb[this.field_Ab] = new vu(0L, (UiLayoutNode) null, (UiLayoutNode) null, this.field_Lb, param3, param0);
           this.field_Bb[this.field_Ab].field_S = this.field_Ob;
           this.field_Bb[this.field_Ab].field_ob = param1 ? true : false;
           this.field_Bb[this.field_Ab].field_p = 1;
-          this.a((byte) -117, (hd) (this.field_Bb[this.field_Ab]));
+          this.addChild((byte) -117, (UiLayoutNode) (this.field_Bb[this.field_Ab]));
           this.field_Kb[this.field_Ab] = param2;
           this.field_Ab = this.field_Ab + 1;
         } catch (RuntimeException runtimeException) {
@@ -198,7 +198,7 @@ final class gu extends hd {
         var3.writeShort(-1207444472, param0);
     }
 
-    gu(hd param0, Sprite[] param1, hd param2, hd param3, int param4, int param5, int param6, int param7, int param8) {
+    gu(UiLayoutNode param0, Sprite[] param1, UiLayoutNode param2, UiLayoutNode param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Kb = new int[256];
         this.field_Bb = new vu[256];

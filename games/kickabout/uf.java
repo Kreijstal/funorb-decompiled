@@ -4,7 +4,7 @@
 final class uf {
     static String field_d;
     static String field_a;
-    static hd field_b;
+    static UiLayoutNode field_b;
     static PacketBuffer field_c;
     static String[] field_e;
 

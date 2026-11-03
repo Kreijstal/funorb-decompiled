@@ -165,7 +165,7 @@ final class fs {
         }
     }
 
-    final static void a(int param0, gm param1, int param2) {
+    final static void a(int param0, RenderedFootballer param1, int param2) {
         try {
           ui.g(0).a(param1, param0, true);
           if (param2 < 103) {

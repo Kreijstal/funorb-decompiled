@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EmailAvailabilityValidator extends TextFieldValidator {
-    static gm field_k;
+    static RenderedFootballer field_k;
     static dk field_q;
     private boolean field_n;
     static String field_l;

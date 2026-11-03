@@ -75,7 +75,7 @@ final class ui extends vv {
     }
 
     final static void h(int param0) {
-        ol.field_R = true;
+        GameOverView.field_R = true;
         if (param0 != -15396) {
           field_w = (ReceivedAuctionItem[]) null;
         }

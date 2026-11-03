@@ -42,10 +42,10 @@ final class ArchiveIndex {
     }
 
     final static void c(int param0) {
-        int fieldTemp$0 = va.field_J + 1;
-        va.field_J = va.field_J + 1;
+        int fieldTemp$0 = PlayingView.field_J + 1;
+        PlayingView.field_J = PlayingView.field_J + 1;
         if (32 <= fieldTemp$0) {
-          va.field_J = 0;
+          PlayingView.field_J = 0;
         }
         int var1 = -125 / ((param0 - 27) / 54);
     }

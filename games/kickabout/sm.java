@@ -52,7 +52,7 @@ final class sm extends IntrusiveNode {
           if (0 == var3) {
             var5 = (dl) (MidiPcmStream.field_M.g(24009));
             if (var5 == null) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
               return;
             }
             var6 = -var2.field_n + ms.field_b;
@@ -70,7 +70,7 @@ final class sm extends IntrusiveNode {
           }
           if (var3 != 1) {
             UnreadMessagesScreen.a("LR1: " + tr.b(0), (Throwable) null, 1);
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             return;
           }
           var5_int = var2.readSignedSmart(85);
@@ -87,7 +87,7 @@ final class sm extends IntrusiveNode {
             var6_ref_hr.c((byte) -109);
             return;
           }
-          lr.b((byte) -116);
+          FormationView.b((byte) -116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

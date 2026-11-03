@@ -40,12 +40,12 @@ final class mg {
         mg.a((byte) 127);
     }
 
-    final static gm a(PlayerStats param0, int param1, int param2, boolean param3, int param4, byte param5) {
+    final static RenderedFootballer a(PlayerStats param0, int param1, int param2, boolean param3, int param4, byte param5) {
         vn var6 = null;
         RuntimeException var6_ref = null;
-        gm var7 = null;
+        RenderedFootballer var7 = null;
         PlayerStats var8 = null;
-        gm stackIn_3_0 = null;
+        RenderedFootballer stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -56,7 +56,7 @@ final class mg {
             var8 = (PlayerStats) null;
             mg.a((PlayerStats) null, 111, 43, false, 111, (byte) 15);
           }
-          var7 = new gm(var6, param0.playerType, true);
+          var7 = new RenderedFootballer(var6, param0.playerType, true);
           var7.setAction((byte) -31, 0);
           var7.field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, var7.field_mb.a(true), new Random()), -38);
           stackIn_3_0 = var7;

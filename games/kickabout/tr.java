@@ -62,7 +62,7 @@ final class tr implements hc {
         if (param0 != 0) {
           field_f = (String[]) null;
         }
-        String var6 = "(" + PagedHelpScreen.field_A + " " + wb.field_n + " " + SquadSlotWidget.field_Ab + ") " + so.field_b;
+        String var6 = "(" + PagedHelpScreen.field_A + " " + TeamSelectionView.field_n + " " + SquadSlotWidget.field_Ab + ") " + so.field_b;
         String var1 = var6;
         if (ms.field_b > 0) {
           var1 = var6 + ":";
@@ -114,7 +114,7 @@ final class tr implements hc {
         try {
           var13 = NameSuggestionsPanel.a(param2, GameModesHelpScreen.field_F, true);
           var14 = NameSuggestionsPanel.a(param2, IntrusiveDeque.field_g, true);
-          var15 = NameSuggestionsPanel.a(param2, gm.field_fb, true);
+          var15 = NameSuggestionsPanel.a(param2, RenderedFootballer.field_fb, true);
           var16 = NameSuggestionsPanel.a(param2, RandomAccessCacheFile.field_i, true);
           var7 = ServerMessageScreen.a(2, param2.field_l, (byte) -99, var15, param2, var13, var16, param2.field_c + 1, var14);
           var4 = jr.field_Mb;

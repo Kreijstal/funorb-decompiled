@@ -9,7 +9,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
     static int[] field_Y;
     private ValidationSource field_V;
     private int field_ab;
-    static hd[] field_W;
+    static UiLayoutNode[] field_W;
 
     final void m(byte param0) {
         super.m((byte) -97);
@@ -29,8 +29,8 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         vb.field_j = 0;
         AlphaContainer.field_C = new int[3];
         if (param0) {
-          ob var3 = (ob) null;
-          ValidatedTextWidget.a((ob) null, true);
+          RenderedBall var3 = (RenderedBall) null;
+          ValidatedTextWidget.a((RenderedBall) null, true);
         }
         at.field_Hb = param1;
         fu.field_b = new tv[param1 * 15];
@@ -55,7 +55,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         return this.field_V;
     }
 
-    final static ak a(ob param0, boolean param1) {
+    final static ak a(RenderedBall param0, boolean param1) {
         ak var2 = null;
         RuntimeException var2_ref = null;
         ak stackIn_3_0 = null;

@@ -145,7 +145,7 @@ final class vl {
         }
     }
 
-    final static void a(CommonGame param0, byte param1) {
+    final static void computeCameraFocus(CommonGame param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;

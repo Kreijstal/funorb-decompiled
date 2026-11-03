@@ -3,21 +3,21 @@
  */
 final class PlayerShopScreen extends TeamManagementScreen {
     private ColumnTableWidget field_J;
-    private hd field_Q;
-    private hd field_U;
+    private UiLayoutNode field_Q;
+    private UiLayoutNode field_U;
     static String field_H;
     private int field_N;
     static String field_V;
     private IntrusiveDeque field_I;
     static int[] field_P;
     static java.applet.Applet field_M;
-    private hd field_G;
+    private UiLayoutNode field_G;
     private int field_O;
     static int[] field_S;
     private ShopPlayerSlot[] field_F;
     static int field_K;
     private SquadGridWidget field_T;
-    private hd field_L;
+    private UiLayoutNode field_L;
     static Sprite field_R;
 
     final void drawOverlay(boolean param0, int param1) {
@@ -75,7 +75,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
           var6 = var8[var5];
           var6.field_Lb = true;
         }
-        this.field_Q.a((byte) -126, (hd) (this.field_T));
+        this.field_Q.addChild((byte) -126, (UiLayoutNode) (this.field_T));
         this.field_Q.a(true, 12 + this.field_T.field_q, 3, 54, 30 + this.field_T.field_mb + 12);
         this.field_T.field_J = 36;
         this.field_T.field_s = 6;
@@ -88,7 +88,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
     }
 
     final void updateScreen(byte param0, boolean param1) {
-        hd stackIn_15_0 = null;
+        UiLayoutNode stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         int var3;
         int var4;
@@ -153,7 +153,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         SquadSlotWidget var2 = this.field_T.j((byte) 21);
         if (var2 != null &&
           !var2.field_Gb) {
-          this.field_G.a((byte) -127, this.field_U);
+          this.field_G.addChild((byte) -127, this.field_U);
         }
         if (param0) {
           this.rebuildShopRows(true);
@@ -267,13 +267,13 @@ final class PlayerShopScreen extends TeamManagementScreen {
         if (param0 != -38) {
           field_K = 109;
         }
-        this.field_Q = new hd();
-        this.field_G = new hd();
-        this.field_L = new hd();
+        this.field_Q = new UiLayoutNode();
+        this.field_G = new UiLayoutNode();
+        this.field_L = new UiLayoutNode();
         this.field_L.a(true, 640, 640, 0, 480);
-        this.field_L.a((byte) -110, (hd) (this.field_J));
-        this.field_L.a((byte) -111, this.field_Q);
-        this.field_L.a((byte) -111, this.field_G);
+        this.field_L.addChild((byte) -110, (UiLayoutNode) (this.field_J));
+        this.field_L.addChild((byte) -111, this.field_Q);
+        this.field_L.addChild((byte) -111, this.field_G);
         this.field_U = eo.a(MyKitScreen.field_M, 15147554);
         this.field_U.field_J = 56;
         this.field_U.field_s = 66 - (this.field_U.field_q >> 1);
@@ -286,7 +286,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_T.k((byte) 55);
         SoftwareRasterizer.a(this.field_G.field_F, this.field_G.field_T, this.field_G.field_q, this.field_G.field_mb, 65793, 96);
         un.field_d.a(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
-        gm.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.j((byte) 21));
+        RenderedFootballer.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.j((byte) 21));
         this.field_J.a(-120);
         this.field_L.a(75, false);
     }

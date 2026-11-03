@@ -265,12 +265,12 @@ final class rf {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    rf(String param0, hd param1) {
+    rf(String param0, UiLayoutNode param1) {
         String[] var3 = null;
-        hd[] var4 = null;
+        UiLayoutNode[] var4 = null;
         try {
           var3 = new String[]{param0, ConsoleExpression.field_n, at.field_Jb};
-          var4 = new hd[]{param1, kk.field_R, (hd) ((Object) nq.field_F)};
+          var4 = new UiLayoutNode[]{param1, kk.field_R, (UiLayoutNode) ((Object) nq.field_F)};
           this.field_b = new kf(0L, MatchingTextValidator.field_n, var3, MouseInputHandler.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

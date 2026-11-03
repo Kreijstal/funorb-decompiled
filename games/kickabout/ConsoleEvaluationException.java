@@ -5,7 +5,7 @@ final class ConsoleEvaluationException extends Exception {
     static String field_a;
     static IndexedSprite[] field_d;
     static String field_f;
-    static hd field_e;
+    static UiLayoutNode field_e;
     String field_c;
     static String field_b;
 

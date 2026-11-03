@@ -173,12 +173,12 @@ final class SetLagCommand extends ConsoleCommand {
             }
             if (0 > var2 ||
               !(30000L >= KeyedLoginCredentials.c(29680))) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
           }
           var2 = -124 / ((param0 + 30) / 55);
           return false;

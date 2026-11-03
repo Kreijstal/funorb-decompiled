@@ -7,7 +7,7 @@ abstract class ij extends DualLinkNode {
     static String field_r;
     static String field_q;
     static char[] field_p;
-    static hd field_s;
+    static UiLayoutNode field_s;
 
     abstract Object a(int param0);
 

@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wb extends hs {
+final class TeamSelectionView extends MatchPhaseView {
     static String field_m;
-    private hd[] field_k;
-    private hd field_t;
+    private UiLayoutNode[] field_k;
+    private UiLayoutNode field_t;
     static boolean field_j;
     static int field_n;
     static int field_u;
-    private hd field_s;
+    private UiLayoutNode field_s;
     static int field_q;
-    private hd field_o;
+    private UiLayoutNode field_o;
     static wc field_p;
     private CheckboxLabelWidget field_l;
     static int[] field_r;
 
-    final void e(int param0) {
+    final void drawContent(int param0) {
         int var5 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -27,23 +27,23 @@ final class wb extends hs {
         int var4;
         String var4_ref_String;
         String var5_ref_String;
-        hd var6;
+        UiLayoutNode var6;
         int var7;
         int var8;
         int var9;
         int var10;
         int var4Lifetime1;
         var10 = Kickabout.field_G;
-        this.c(108);
-        this.a(false, gb.field_H);
-        this.b(-2351, this.field_a.phaseTime);
+        this.drawPanelBackground(108);
+        this.drawTitle(false, gb.field_H);
+        this.drawCountdown(-2351, this.field_a.phaseTime);
         if (~this.field_g != param0) {
           stackIn_6_0 = (this.field_a.field_n.isReadyOrInactive(8658, this.field_g)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
         var2 = stackIn_6_0;
-        if (!this.a((byte) 13)) {
+        if (!this.isLocalParticipantActive((byte) 13)) {
           stackIn_9_0 = -1;
         } else {
           stackIn_9_0 = this.field_g;
@@ -61,14 +61,14 @@ final class wb extends hs {
           }
           WidgetContainer.a(var3, 8, var5_ref_String, var4 * 162 + 78, 105, 126);
         }
-        if (this.a((byte) 13)) {
+        if (this.isLocalParticipantActive((byte) 13)) {
           if (var2 != 0) {
             stackIn_22_0 = kp.field_a;
           } else {
             stackIn_22_0 = kk.field_A;
           }
           var4_ref_String = stackIn_22_0;
-          wb.a(var4_ref_String, 302, 46, 316, 88, 0);
+          TeamSelectionView.a(var4_ref_String, 302, 46, 316, 88, 0);
           stackIn_24_0 = this.field_l;
           stackIn_25_1 = (var2 != 0) ? false : true;
           ((CheckboxLabelWidget) (Object) stackIn_24_0).a(stackIn_25_1, (byte) 46);
@@ -106,9 +106,9 @@ final class wb extends hs {
         MusicPatchNode.field_h.b(22997);
     }
 
-    final void f(int param0, int param1) {
+    final void onButtonClick(int param0, int param1) {
         if (param0 < 98) {
-          wb.f(77);
+          TeamSelectionView.f(77);
         }
     }
 
@@ -152,7 +152,7 @@ final class wb extends hs {
           }
           if (param5 <= 70) {
             var9 = (String) null;
-            wb.a(27, (String) null, 93);
+            TeamSelectionView.a(27, (String) null, 93);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,21 +187,21 @@ final class wb extends hs {
         }
     }
 
-    wb(CommonGame param0, int param1, boolean param2) {
+    TeamSelectionView(CommonGame param0, int param1, boolean param2) {
         super(param0, param1, param2, (int[]) null);
         int var4_int = 0;
         RuntimeException runtimeException = null;
-        hd var5 = null;
+        UiLayoutNode var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_t = new hd();
+          this.field_t = new UiLayoutNode();
           this.field_t.a(true, 640, 0, 0, 480);
-          this.field_k = new hd[param0.playerCount];
+          this.field_k = new UiLayoutNode[param0.playerCount];
           for (var4_int = 0; param0.playerCount > var4_int; var4_int++) {
-            var5 = new hd();
+            var5 = new UiLayoutNode();
             var5.field_E = param0.field_S[var4_int].toLowerCase();
             var5.field_y = 16777215;
             var5.field_X = (BitmapFont) ((Object) un.field_d);
@@ -210,18 +210,18 @@ final class wb extends hs {
             var5.field_mb = 21;
             var5.field_J = 105 + 23 * (1 + var4_int);
             var5.field_s = PlayerShopScreen.field_P[0] - (var5.field_q >> 1) + 1;
-            if (this.a((byte) 13) &&
+            if (this.isLocalParticipantActive((byte) 13) &&
               var4_int == param1) {
               this.a(var5, (byte) -64);
             }
             this.field_k[var4_int] = var5;
-            this.field_t.a((byte) -126, this.field_k[var4_int]);
+            this.field_t.addChild((byte) -126, this.field_k[var4_int]);
           }
-          if (this.a((byte) 13)) {
+          if (this.isLocalParticipantActive((byte) 13)) {
             this.field_l = new CheckboxLabelWidget(sl.field_Ab, un.field_d, 120);
             this.field_l.field_s = 442;
             this.field_l.field_J = 322;
-            this.field_t.a((byte) -121, (hd) (this.field_l));
+            this.field_t.addChild((byte) -121, (UiLayoutNode) (this.field_l));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -238,8 +238,8 @@ final class wb extends hs {
         }
     }
 
-    final boolean a(char param0, int param1, int param2) {
-        if (this.a((byte) 13) &&
+    final boolean handleKey(char param0, int param1, int param2) {
+        if (this.isLocalParticipantActive((byte) 13) &&
           !this.field_a.field_n.isReadyOrInactive(8658, this.field_g)) {
           if (param2 == 96 &&
             this.field_a.field_n.canJoinTeamZero((byte) 107, this.field_g)) {
@@ -308,12 +308,12 @@ final class wb extends hs {
         }
     }
 
-    private final void a(hd param0, byte param1) {
-        hd var5 = null;
+    private final void a(UiLayoutNode param0, byte param1) {
+        UiLayoutNode var5 = null;
         try {
-          this.field_o = new hd();
-          this.field_s = new hd();
-          var5 = new hd(0L, param0);
+          this.field_o = new UiLayoutNode();
+          this.field_s = new UiLayoutNode();
+          var5 = new UiLayoutNode(0L, param0);
           var5.field_S = ShopPlayerSlot.a((byte) 26, 12303291);
           var5.field_B = -2;
           var5.field_hb = 5592405;
@@ -323,8 +323,8 @@ final class wb extends hs {
           this.field_s.a(var5, (byte) 107);
           this.field_o.field_E = "<lt>";
           this.field_s.field_E = "<gt>";
-          param0.a((byte) -106, this.field_o);
-          param0.a((byte) -112, this.field_s);
+          param0.addChild((byte) -106, this.field_o);
+          param0.addChild((byte) -112, this.field_s);
           this.field_o.field_R = null;
           this.field_s.field_R = null;
           int var4 = 100 / ((87 - param1) / 37);
@@ -335,14 +335,14 @@ final class wb extends hs {
         }
     }
 
-    final void a(int param0, boolean param1) {
-        hd stackIn_4_0 = null;
+    final void update(int param0, boolean param1) {
+        UiLayoutNode stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
-        hd stackIn_21_0 = null;
+        UiLayoutNode stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_22_2 = 0;
         int var3;
-        hd var4;
+        UiLayoutNode var4;
         int var5;
         int var6;
         int var7;
@@ -350,14 +350,14 @@ final class wb extends hs {
         int var9;
         int var3Lifetime1;
         var8 = Kickabout.field_G;
-        super.a(-103, param1);
+        super.update(-103, param1);
         for (var3 = 0; this.field_a.playerCount > var3; var3++) {
           stackIn_4_0 = this.field_k[var3];
           stackIn_5_1 = (~(this.field_k[var3].field_s + (this.field_k[var3].field_q >> 1)) == ~PlayerShopScreen.field_P[this.field_a.field_n.selection[var3] + 1]);
           stackIn_4_0.field_lb = stackIn_5_1;
         }
         if (param0 >= -92) {
-          this.f(-102, 73);
+          this.onButtonClick(-102, 73);
         }
         this.field_t.b(0, param1);
         var9 = 0;
@@ -383,7 +383,7 @@ final class wb extends hs {
           }
           var9++;
         }
-        if (this.a((byte) 13)) {
+        if (this.isLocalParticipantActive((byte) 13)) {
           this.field_o.field_lb = this.field_a.field_n.canJoinTeamZero((byte) 50, this.field_g);
           this.field_s.field_lb = this.field_a.field_n.canJoinTeamOne((byte) 79, this.field_g);
           if (0 != this.field_o.field_sb) {

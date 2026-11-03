@@ -43,9 +43,9 @@ final class qn {
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != ValidatedTextWidget.field_W[var12]) {
-              var13 = (g.field_a.field_mb - 4) * var11 / (1 + hs.field_e) + 3;
+              var13 = (g.field_a.field_mb - 4) * var11 / (1 + MatchPhaseView.field_e) + 3;
               var11++;
-              var7Lifetime1 = -var13 + (var11 * (-4 + g.field_a.field_mb) / (hs.field_e + 1) + 3 - 2);
+              var7Lifetime1 = -var13 + (var11 * (-4 + g.field_a.field_mb) / (MatchPhaseView.field_e + 1) + 3 - 2);
               if (var12 >= 5) {
                 uq.field_a.a(true, var8, var6_int, var13, var7Lifetime1);
               } else {

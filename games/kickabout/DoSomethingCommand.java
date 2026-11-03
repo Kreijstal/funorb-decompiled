@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DoSomethingCommand extends ConsoleCommand {
-    static hd field_B;
+    static UiLayoutNode field_B;
     static String field_A;
-    static hd field_D;
+    static UiLayoutNode field_D;
 
     public static void g(int param0) {
         if (param0 >= 26) {

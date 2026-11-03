@@ -6,10 +6,10 @@ final class h {
     static String field_c;
     static String field_d;
     static String field_a;
-    static hd field_e;
+    static UiLayoutNode field_e;
     static String field_f;
 
-    final static bb a(int param0, tc param1, hd param2, hd param3, hd param4) {
+    final static bb a(int param0, tc param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;

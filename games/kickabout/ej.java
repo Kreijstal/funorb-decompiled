@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ej extends hd {
+final class ej extends UiLayoutNode {
     private int field_Bb;
     static String[] field_zb;
     static String field_Ab;
@@ -12,13 +12,13 @@ final class ej extends hd {
         java.awt.Component var4Lifetime1;
         if (this.field_sb != 1) {
           if (this.field_gb) {
-            ob.field_C = this.field_Bb;
+            RenderedBall.field_C = this.field_Bb;
           }
         } else {
           if (AuctionListing.field_e != this.field_Bb) {
             AuctionListing.field_e = this.field_Bb;
             if (this.field_gb) {
-              ob.field_C = this.field_Bb;
+              RenderedBall.field_C = this.field_Bb;
             }
           } else {
             AuctionListing.field_e = -1;
@@ -30,7 +30,7 @@ final class ej extends hd {
               ej.a((java.awt.Component) null, -51);
               return;
             }
-            ob.field_C = this.field_Bb;
+            RenderedBall.field_C = this.field_Bb;
           }
         }
         if (param1 < -5) {
@@ -114,7 +114,7 @@ final class ej extends hd {
             }
           }
         } else {
-          if (this.field_Bb == ob.field_C) {
+          if (this.field_Bb == RenderedBall.field_C) {
             SoftwareRasterizer.a(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 65793, 32);
             SoftwareRasterizer.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           }

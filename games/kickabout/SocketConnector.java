@@ -5,7 +5,7 @@ import java.io.*;
 
 abstract class SocketConnector {
     String field_c;
-    static hd[] field_b;
+    static UiLayoutNode[] field_b;
     int field_a;
     static String field_d;
 

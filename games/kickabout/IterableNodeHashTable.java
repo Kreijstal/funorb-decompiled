@@ -118,7 +118,7 @@ final class IterableNodeHashTable implements Iterable {
         if (2048.0 < PlayArea.field_d) {
           PlayArea.field_d = 2048.0;
         }
-        var4 = CachedArchiveSource.field_C - hd.field_K;
+        var4 = CachedArchiveSource.field_C - UiLayoutNode.field_K;
         var6 = -jr.field_Gb + AuctionLogEntry.field_f;
         if (param1 != 89) {
           field_c = (ResourceArchive) null;
@@ -142,16 +142,16 @@ final class IterableNodeHashTable implements Iterable {
             DualLinkDeque.field_e = DualLinkDeque.field_e + var24;
             IntrusiveDeque.field_a = IntrusiveDeque.field_a + var22;
           }
-          stackIn_17_0 = (!(hd.field_K < CachedArchiveSource.field_C)) ? 0 : 1;
+          stackIn_17_0 = (!(UiLayoutNode.field_K < CachedArchiveSource.field_C)) ? 0 : 1;
           var12 = stackIn_17_0;
-          hd.field_K = hd.field_K + PlayerStats.field_f;
+          UiLayoutNode.field_K = UiLayoutNode.field_K + PlayerStats.field_f;
           if (var12 != 0 &&
-            hd.field_K > CachedArchiveSource.field_C) {
-            hd.field_K = CachedArchiveSource.field_C;
+            UiLayoutNode.field_K > CachedArchiveSource.field_C) {
+            UiLayoutNode.field_K = CachedArchiveSource.field_C;
           } else {
             if (var12 == 0 &&
-              hd.field_K < CachedArchiveSource.field_C) {
-              hd.field_K = CachedArchiveSource.field_C;
+              UiLayoutNode.field_K < CachedArchiveSource.field_C) {
+              UiLayoutNode.field_K = CachedArchiveSource.field_C;
             }
           }
           stackIn_28_0 = (!(AuctionLogEntry.field_f > jr.field_Gb)) ? 0 : 1;
@@ -208,12 +208,12 @@ final class IterableNodeHashTable implements Iterable {
           DualLinkDeque.field_e = DualLinkDeque.field_e + var24Lifetime1;
           IntrusiveDeque.field_a = IntrusiveDeque.field_a + var22Lifetime1;
         }
-        stackIn_59_0 = (!(hd.field_K < CachedArchiveSource.field_C)) ? 0 : 1;
+        stackIn_59_0 = (!(UiLayoutNode.field_K < CachedArchiveSource.field_C)) ? 0 : 1;
         var12Lifetime1 = stackIn_59_0;
-        hd.field_K = hd.field_K + PlayerStats.field_f;
+        UiLayoutNode.field_K = UiLayoutNode.field_K + PlayerStats.field_f;
         if (var12Lifetime1 != 0) {
-          if (hd.field_K > CachedArchiveSource.field_C) {
-            hd.field_K = CachedArchiveSource.field_C;
+          if (UiLayoutNode.field_K > CachedArchiveSource.field_C) {
+            UiLayoutNode.field_K = CachedArchiveSource.field_C;
             stackIn_64_0 = (!(AuctionLogEntry.field_f > jr.field_Gb)) ? 0 : 1;
             var12Lifetime1 = stackIn_64_0;
             jr.field_Gb = jr.field_Gb + IntrusiveDeque.field_a;
@@ -237,8 +237,8 @@ final class IterableNodeHashTable implements Iterable {
             }
           } else {
             if (var12Lifetime1 == 0 &&
-              hd.field_K < CachedArchiveSource.field_C) {
-              hd.field_K = CachedArchiveSource.field_C;
+              UiLayoutNode.field_K < CachedArchiveSource.field_C) {
+              UiLayoutNode.field_K = CachedArchiveSource.field_C;
             }
             stackIn_91_0 = (!(AuctionLogEntry.field_f > jr.field_Gb)) ? 0 : 1;
             var12Lifetime1 = stackIn_91_0;
@@ -372,8 +372,8 @@ final class IterableNodeHashTable implements Iterable {
               }
             }
           } else {
-            if (hd.field_K < CachedArchiveSource.field_C) {
-              hd.field_K = CachedArchiveSource.field_C;
+            if (UiLayoutNode.field_K < CachedArchiveSource.field_C) {
+              UiLayoutNode.field_K = CachedArchiveSource.field_C;
               stackIn_218_0 = (!(AuctionLogEntry.field_f > jr.field_Gb)) ? 0 : 1;
               var12Lifetime1 = stackIn_218_0;
               jr.field_Gb = jr.field_Gb + IntrusiveDeque.field_a;

@@ -7,7 +7,7 @@ final class ha extends i {
     static String field_J;
     static int[] field_F;
     static int field_G;
-    static hd[] field_H;
+    static UiLayoutNode[] field_H;
     static int field_I;
 
     final static PlayerInputEvent b(int param0, int param1, int param2) {

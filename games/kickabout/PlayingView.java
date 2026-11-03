@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class va extends hs {
+final class PlayingView extends MatchPhaseView {
     private boolean field_B;
     private int field_z;
     static String[][] field_y;
     private Sprite[] field_C;
-    static hd field_w;
+    static UiLayoutNode field_w;
     static long field_o;
     private int field_G;
     private int field_D;
@@ -139,7 +139,7 @@ final class va extends hs {
         if (param0 != -41) {
           this.field_m = false;
         }
-        return this.a((byte) 13) ? this.field_g : this.field_a.b((byte) -69, this.field_h);
+        return this.isLocalParticipantActive((byte) 13) ? this.field_g : this.field_a.b((byte) -69, this.field_h);
     }
 
     private final void l(int param0) {
@@ -359,7 +359,7 @@ final class va extends hs {
 
     final static ec f(int param0) {
         if (param0 != -1) {
-          va.d((byte) -2);
+          PlayingView.d((byte) -2);
         }
         return new ec(he.a(320), TextLine.a(false));
     }
@@ -387,7 +387,7 @@ final class va extends hs {
             }
             var6 = stackIn_10_0;
             var7 = InstrumentNoteMask.a(this.field_g, var6, 85, (byte) var5, (byte) var4);
-            this.a(false, var7);
+            this.queueInputEvent(false, var7);
             if (this.field_f) {
               or.field_d.b(71, (byte) 94);
               or.field_d.writeByte(114, var6);
@@ -475,7 +475,7 @@ final class va extends hs {
           }
         }
         if (this.field_l) {
-          if (this.a((byte) 13)) {
+          if (this.isLocalParticipantActive((byte) 13)) {
             if (ia.field_c) {
               var7 = var3;
               var3 = var5;
@@ -584,7 +584,7 @@ final class va extends hs {
         if (param0 != 16623) {
           this.field_n = true;
         }
-        if (!this.a((byte) 13)) {
+        if (!this.isLocalParticipantActive((byte) 13)) {
           if (2 == ip.field_a) {
             stackIn_58_1 = !(this.field_l);
             this.field_l = stackIn_58_1;
@@ -687,10 +687,10 @@ final class va extends hs {
           }
           for (var3_int = 0; 2 > var3_int; var3_int++) {
             for (var4_int = 0; var4_int < 5; var4_int++) {
-              this.field_r.a(TextHotspotWidget.a((gm) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
+              this.field_r.a(TextHotspotWidget.a((RenderedFootballer) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
             }
           }
-          this.field_r.a(ValidatedTextWidget.a((ob) (this.field_a.field_V), false), 3);
+          this.field_r.a(ValidatedTextWidget.a((RenderedBall) (this.field_a.field_V), false), 3);
           this.field_r.a(re.a(true, 115), 3);
           var3_intLifetime1 = -88 / ((4 - param1) / 50);
           this.field_r.a(re.a(false, 92), 3);
@@ -746,10 +746,10 @@ final class va extends hs {
         int var8 = 0;
         boolean stackIn_5_0 = false;
         boolean stackIn_6_1 = false;
-        ob stackIn_8_0 = null;
+        RenderedBall stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
         int stackIn_22_0 = 0;
-        gm stackIn_24_0 = null;
+        RenderedFootballer stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -767,7 +767,7 @@ final class va extends hs {
         int var13 = 0;
         int var14_int = 0;
         vn var14 = null;
-        gm var15 = null;
+        RenderedFootballer var15 = null;
         int var16 = 0;
         var16 = Kickabout.field_G;
         try {
@@ -777,8 +777,8 @@ final class va extends hs {
           stackIn_5_0 = param1;
           stackIn_6_1 = !(wp.field_f);
           param1 = stackIn_5_0 & stackIn_6_1;
-          param0.field_V = (BallAgent) ((Object) new ob(param0.field_V));
-          stackIn_8_0 = (ob) (param0.field_V);
+          param0.field_V = (BallAgent) ((Object) new RenderedBall(param0.field_V));
+          stackIn_8_0 = (RenderedBall) (param0.field_V);
           stackIn_9_1 = (param1);
           stackIn_8_0.field_I = stackIn_9_1;
           for (var4_int = 0; var4_int < 2; var4_int++) {
@@ -806,7 +806,7 @@ final class va extends hs {
               }
               var13 = stackIn_22_0;
               var14 = AuctionItem.a(var5, var6, var10, var9, var11, var12, var7, false, this.field_n, var13 != 0);
-              var15 = new gm(var14, var9, false, param0.field_P[var4_int][var8]);
+              var15 = new RenderedFootballer(var14, var9, false, param0.field_P[var4_int][var8]);
               stackIn_24_0 = var15;
               stackIn_25_1 = (param1);
               stackIn_24_0.field_E = stackIn_25_1;
@@ -828,14 +828,14 @@ final class va extends hs {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void onButtonClick(int param0, int param1) {
         if (param0 <= 98) {
           IntrusiveDeque var4 = (IntrusiveDeque) null;
           this.a((IntrusiveDeque) null, (byte) -3);
         }
     }
 
-    private final void a(boolean param0, PlayerInputEvent param1) {
+    private final void queueInputEvent(boolean param0, PlayerInputEvent param1) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -848,7 +848,7 @@ final class va extends hs {
           }
           if (param1.eventType == 0 ||
             1 == param1.eventType) {
-            ((gm) (this.field_a.getControlledFootballer((byte) 105, this.field_g))).field_Z = false;
+            ((RenderedFootballer) (this.field_a.getControlledFootballer((byte) 105, this.field_g))).field_Z = false;
           }
           if (2 == param1.eventType &&
             this.field_a.c(this.field_g, -7) &&
@@ -874,9 +874,9 @@ final class va extends hs {
 
     final void a(boolean param0) {
         int var2;
-        gm var3;
+        RenderedFootballer var3;
         int var4;
-        ob var4_ref_ob;
+        RenderedBall var4_ref_ob;
         int var5;
         int var6;
         int var7;
@@ -901,7 +901,7 @@ final class va extends hs {
           this.a(false, 114, -8);
         }
         var2 = this.h(-41);
-        var3 = (gm) (this.field_a.getControlledFootballer((byte) -70, var2));
+        var3 = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) -70, var2));
         if (this.field_a.c(var2, -67)) {
           var4 = var3.g(1606384336);
           var5 = var3.h(1000);
@@ -909,7 +909,7 @@ final class va extends hs {
           var7 = 50 * var3.directionY;
           mj.a((double)this.field_q, 60, (double)(var6 + var4), (double)(var5 + var7));
         } else {
-          var4_ref_ob = (ob) (this.field_a.field_V);
+          var4_ref_ob = (RenderedBall) (this.field_a.field_V);
           var5 = var4_ref_ob.positionX >> 16;
           var6 = var4_ref_ob.c(true) + (var4_ref_ob.positionY >> 16) >> 1;
           var7_double = (double)var3.field_kb / 65536.0;
@@ -929,7 +929,7 @@ final class va extends hs {
     private final void e(byte param0) {
         int var2;
         int var3;
-        gm var4;
+        RenderedFootballer var4;
         int var5;
         int var6;
         int var7;
@@ -950,7 +950,7 @@ final class va extends hs {
         if (param0 <= 102) {
           this.field_L = true;
         }
-        var4 = (gm) (this.field_a.getControlledFootballer((byte) 93, this.field_g));
+        var4 = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) 93, this.field_g));
         var5 = ug.a(0, var4.field_kb >> 16);
         var6 = lf.a((byte) -110, var4.field_bb >> 16);
         if (this.field_a.c(this.field_g, -50) &&
@@ -1093,7 +1093,7 @@ final class va extends hs {
         int var2 = -this.field_a.timeLimit + this.field_a.phaseTime;
         int var6Lifetime1;
         if (param0 != 0) {
-          this.f(-113, 91);
+          this.onButtonClick(-113, 91);
         }
         if (var2 < 120) {
           var3 = tb.field_q[var2 / 40 + 1];
@@ -1120,7 +1120,7 @@ final class va extends hs {
         return (java.awt.Container) ((Object) so.a(-120));
     }
 
-    va(CommonGame param0, int param1, CommonGame param2, boolean param3, boolean param4) {
+    PlayingView(CommonGame param0, int param1, CommonGame param2, boolean param3, boolean param4) {
         super(param0, param1, param3, (int[]) null);
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
@@ -1186,7 +1186,7 @@ final class va extends hs {
     }
 
     private final void b(boolean param0) {
-        this.a(param0, mg.a(param0, this.field_H, this.field_g));
+        this.queueInputEvent(param0, mg.a(param0, this.field_H, this.field_g));
         if (this.field_f) {
           or.field_d.b(68, (byte) -65);
           or.field_d.writeByte(123, this.field_H);
@@ -1197,7 +1197,7 @@ final class va extends hs {
         if (param1 != -1) {
           this.field_q = -15;
         }
-        this.a(false, ha.b(1, this.field_g, param0));
+        this.queueInputEvent(false, ha.b(1, this.field_g, param0));
         if (this.field_f) {
           or.field_d.b(70, (byte) 99);
           or.field_d.writeByte(param1 ^ -107, param0);
@@ -1212,7 +1212,7 @@ final class va extends hs {
         }
         if (param0 != 0) {
           var3 = (PlayerInputEvent) null;
-          this.a(true, (PlayerInputEvent) null);
+          this.queueInputEvent(true, (PlayerInputEvent) null);
         }
         if (this.field_a.field_X.goalCount >= 40) {
           this.field_s = -2;
@@ -1238,12 +1238,12 @@ final class va extends hs {
         }
     }
 
-    final void e(int param0) {
+    final void drawContent(int param0) {
         int var4 = 0;
         int stackIn_21_0 = 0;
         int var2;
         int var3;
-        gm var4_ref_gm;
+        RenderedFootballer var4_ref_gm;
         int var5;
         ak var6;
         int var2Lifetime1;
@@ -1255,16 +1255,16 @@ final class va extends hs {
         var5 = Kickabout.field_G;
         LeaguesHelpScreen.i(-126);
         if (this.field_u &&
-          this.a((byte) 13)) {
+          this.isLocalParticipantActive((byte) 13)) {
           this.e((byte) 107);
         }
         ReceivedAuctionItem.i((byte) 45);
         for (var2 = 0; 2 > var2; var2++) {
           for (var3 = 0; var3 < 5; var3++) {
-            fn.a((gm) (this.field_a.field_P[var2][var3]), 100);
+            fn.a((RenderedFootballer) (this.field_a.field_P[var2][var3]), 100);
           }
         }
-        ((ob) (this.field_a.field_V)).l(param0 - 13);
+        ((RenderedBall) (this.field_a.field_V)).l(param0 - 13);
         gs.b(0);
         if (param0 != 1) {
           return;
@@ -1282,7 +1282,7 @@ final class va extends hs {
           var2Lifetime1 = stackIn_21_0 + (InstrumentNoteMask.field_i * 100 >> 8);
           for (var3Lifetime1 = 0; this.field_a.playerCount > var3Lifetime1; var3Lifetime1++) {
             if (this.field_a.participantStatus[var3Lifetime1].isActive(3511)) {
-              var4_ref_gm = (gm) (this.field_a.getControlledFootballer((byte) 112, var3Lifetime1));
+              var4_ref_gm = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) 112, var3Lifetime1));
               this.field_C[var3Lifetime1].c(ug.a(0, var4_ref_gm.g(1606384336)) - (this.field_C[var3Lifetime1].field_o >> 1), lf.a((byte) -85, var4_ref_gm.h(1000)) - var2Lifetime1);
             }
           }
@@ -1291,7 +1291,7 @@ final class va extends hs {
           !MyKitScreen.field_O) {
           ns.a(3585);
           MusicPatch.a(16777215);
-          if (this.a((byte) 13)) {
+          if (this.isLocalParticipantActive((byte) 13)) {
             CommonGame.b(false);
           }
         } else {
@@ -1301,7 +1301,7 @@ final class va extends hs {
           this.field_a.timeLimit < this.field_a.phaseTime) {
           this.k(0);
         }
-        if (this.a((byte) 13) &&
+        if (this.isLocalParticipantActive((byte) 13) &&
           !this.field_l) {
           un.field_d.d(vb.field_f.toUpperCase(), 320, 30, 16777215, -1);
         }
@@ -1319,7 +1319,7 @@ final class va extends hs {
           this.field_a.phase == 4) {
           var2Lifetime3 = pq.field_J / 5;
           var3Lifetime3 = pq.field_J % 5;
-          vl.a(this.field_a, (byte) -98);
+          vl.computeCameraFocus(this.field_a, (byte) -98);
           if (var3Lifetime3 == 0) {
             for (var4 = 1; var4 < 5; var4++) {
               or.a(this.field_a, var4, var2Lifetime3, (byte) 99);
@@ -1336,12 +1336,12 @@ final class va extends hs {
         field_F = null;
         field_K = null;
         if (param0 != -40) {
-          va.c((byte) -12);
+          PlayingView.c((byte) -12);
         }
         field_y = (String[][]) null;
     }
 
-    final boolean a(char param0, int param1, int param2) {
+    final boolean handleKey(char param0, int param1, int param2) {
         int var6 = 0;
         int stackIn_8_0 = 0;
         boolean stackIn_9_1 = false;
@@ -1365,9 +1365,9 @@ final class va extends hs {
           this.field_l = stackIn_17_1;
         }
         if (param1 != 1670) {
-          this.a('�', 73, -75);
+          this.handleKey('�', 73, -75);
         }
-        if (!this.a((byte) 13)) {
+        if (!this.isLocalParticipantActive((byte) 13)) {
           return true;
         }
         if (this.field_a.participantStatus[this.field_g].isActive(param1 ^ 2865)) {
@@ -1395,7 +1395,7 @@ final class va extends hs {
               }
               if (var5 != 11 &&
                 var5 != 10) {
-                this.a(false, fu.a(this.field_g, (byte) 8, var5));
+                this.queueInputEvent(false, fu.a(this.field_g, (byte) 8, var5));
               }
               if (this.field_f) {
                 or.field_d.b(76, (byte) 98);
@@ -1407,7 +1407,7 @@ final class va extends hs {
         return true;
     }
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         this.field_u = param1 ? true : false;
         if (this.field_u) {
           this.n(-122);
@@ -1424,7 +1424,7 @@ final class va extends hs {
         }
         FootballerAgent var4 = this.field_a.getBallCarrier((byte) -96);
         if (var4 != null) {
-          ((ob) (this.field_a.field_V)).field_E = ((ob) (this.field_a.field_V)).field_E + (var4.directionY << 16);
+          ((RenderedBall) (this.field_a.field_V)).field_E = ((RenderedBall) (this.field_a.field_V)).field_E + (var4.directionY << 16);
         }
         if (param0 > -92) {
           return;
@@ -1488,7 +1488,7 @@ final class va extends hs {
             }
             var11 = stackIn_27_0;
             var12 = AuctionItem.a(var3, var4, var8, var7, var9, var10, var5, false, this.field_n, var11 != 0);
-            ((gm) (this.field_a.field_P[var2][var6])).a(var12, (byte) -115);
+            ((RenderedFootballer) (this.field_a.field_P[var2][var6])).a(var12, (byte) -115);
           }
           var2++;
         }
@@ -1497,7 +1497,7 @@ final class va extends hs {
     private final void a(boolean param0, CommonGame param1) {
         int var3_int = 0;
         int var4 = 0;
-        gm var5 = null;
+        RenderedFootballer var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1508,14 +1508,14 @@ final class va extends hs {
           }
           for (var3_int = 0; 2 > var3_int; var3_int++) {
             for (var4 = 0; var4 < 5; var4++) {
-              var5 = (gm) (param1.field_P[var3_int][var4]);
+              var5 = (RenderedFootballer) (param1.field_P[var3_int][var4]);
               var6 = ~param1.field_X.goalScorer == ~var3_int ? 1 : 0;
               var7 = param1.findControllingParticipant((byte) 6, var3_int, var4);
               var8 = var7 == -1 ? 0 : param1.participantStatus[var7].field_l;
               var5.a(var6 != 0, false, var8);
             }
           }
-          ((ob) (param1.field_V)).a((gm) (param1.getBallCarrier((byte) -96)), (byte) 50);
+          ((RenderedBall) (param1.field_V)).a((RenderedFootballer) (param1.getBallCarrier((byte) -96)), (byte) 50);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "va.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1553,7 +1553,7 @@ final class va extends hs {
             }
           }
           if (param2 != 0) {
-            va.d((byte) -37);
+            PlayingView.d((byte) -37);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

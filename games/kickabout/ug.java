@@ -53,7 +53,7 @@ final class ug {
         np stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
-        hd stackIn_18_0 = null;
+        UiLayoutNode stackIn_18_0 = null;
         String stackIn_19_1 = null;
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -94,11 +94,11 @@ final class ug {
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_jb) {
-              var6.field_Bb = new hd(0L, mp.field_f);
-              var6.a((byte) -109, var6.field_Bb);
-              var6.field_Fb = new hd(0L, mp.field_f);
-              var6.a((byte) -105, var6.field_Fb);
-              var6.b(false);
+              var6.field_Bb = new UiLayoutNode(0L, mp.field_f);
+              var6.addChild((byte) -109, var6.field_Bb);
+              var6.field_Fb = new UiLayoutNode(0L, mp.field_f);
+              var6.addChild((byte) -105, var6.field_Fb);
+              var6.invalidateChildren(false);
               var7 = 1;
             }
             var6.field_q = nq.field_F.field_yb.field_q;
@@ -131,7 +131,7 @@ final class ug {
               var6.field_L = -var6.field_mb + sh.field_c;
             }
             if (var7 != 0) {
-              nq.field_F.field_yb.a(true, 2, var6, (hd) (var5));
+              nq.field_F.field_yb.a(true, 2, var6, (UiLayoutNode) (var5));
             }
             if (var6.field_Fb != null &&
               var6.field_Fb.field_gb) {

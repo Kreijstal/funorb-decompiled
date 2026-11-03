@@ -99,12 +99,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             var15 = new Sprite(param3, var14.field_v);
             var5 = var15;
             PacketBuffer.a(-116, var15);
-            var9_ref_ut.drawWithOffsets(var15.field_o - var9_ref_ut.field_o, 0);
+            var9_ref_ut.d(var15.field_o - var9_ref_ut.field_o, 0);
             for (var10 = var14.field_o; var10 < var15.field_o - var9_ref_ut.field_o; var10 = var10 + var16.field_o) {
-              var16.drawWithOffsets(var10, 0);
+              var16.d(var10, 0);
             }
             var6 = 1;
-            var14.drawWithOffsets(0, 0);
+            var14.d(0, 0);
           } else {
             var13 = nm.a(param4, -85, TextHotspotWidget.field_L);
             var5 = var13;
@@ -236,7 +236,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_S.field_u = ColourSwatchTile.field_Bb;
         this.field_K.field_u = aw.field_G;
         this.field_T.field_u = od.field_o;
-        this.field_N.field_u = hd.field_Z;
+        this.field_N.field_u = UiLayoutNode.field_Z;
         this.field_J.field_u = SpriteState.field_r;
         this.field_O.field_u = le.field_b;
         this.field_E.a(6, new AccountNameAvailabilityValidator(this.field_E));

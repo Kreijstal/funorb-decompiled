@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ji extends hd {
+final class ji extends UiLayoutNode {
     static int[] field_Db;
-    private hd field_yb;
-    private hd field_Ib;
+    private UiLayoutNode field_yb;
+    private UiLayoutNode field_Ib;
     private int field_Gb;
     private boolean field_Cb;
-    private hd field_zb;
+    private UiLayoutNode field_zb;
     static int field_Hb;
     static String field_Eb;
-    private hd field_Ab;
-    private hd field_Bb;
-    private hd field_Fb;
+    private UiLayoutNode field_Ab;
+    private UiLayoutNode field_Bb;
+    private UiLayoutNode field_Fb;
 
     final int a(int param0, int param1, boolean param2, int param3) {
         int var7 = 0;
@@ -179,8 +179,8 @@ final class ji extends hd {
         tn.field_f.a(125, param1);
     }
 
-    private ji(long param0, hd param1, hd param2, hd param3, hd param4, boolean param5) {
-        super(param0, (hd) null);
+    private ji(long param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4, boolean param5) {
+        super(param0, (UiLayoutNode) null);
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -193,28 +193,28 @@ final class ji extends hd {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
-        hd var10 = null;
-        hd var11 = null;
+        UiLayoutNode var10 = null;
+        UiLayoutNode var11 = null;
         try {
           stackIn_4_1 = (param5);
           this.field_Cb = stackIn_4_1;
-          this.field_Bb = new hd(0L, param1);
-          this.field_Fb = new hd(0L, param2);
-          this.a((byte) -116, this.field_Bb);
-          this.a((byte) -110, this.field_Fb);
-          this.field_zb = new hd(0L, (hd) null);
-          this.a((byte) -113, this.field_zb);
-          this.field_Ab = new hd(0L, param3);
-          this.field_Ib = new hd(0L, param3);
+          this.field_Bb = new UiLayoutNode(0L, param1);
+          this.field_Fb = new UiLayoutNode(0L, param2);
+          this.addChild((byte) -116, this.field_Bb);
+          this.addChild((byte) -110, this.field_Fb);
+          this.field_zb = new UiLayoutNode(0L, (UiLayoutNode) null);
+          this.addChild((byte) -113, this.field_zb);
+          this.field_Ab = new UiLayoutNode(0L, param3);
+          this.field_Ib = new UiLayoutNode(0L, param3);
           this.field_Ib.field_ob = true;
           var10 = this.field_Ab;
           var11 = var10;
           var11.field_ob = true;
-          this.field_zb.a((byte) -108, this.field_Ab);
-          this.field_zb.a((byte) -116, this.field_Ib);
-          this.field_yb = new hd(0L, param4);
+          this.field_zb.addChild((byte) -108, this.field_Ab);
+          this.field_zb.addChild((byte) -116, this.field_Ib);
+          this.field_yb = new UiLayoutNode(0L, param4);
           this.field_yb.field_Y = true;
-          this.field_zb.a((byte) -117, this.field_yb);
+          this.field_zb.addChild((byte) -117, this.field_yb);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -255,25 +255,25 @@ final class ji extends hd {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        hd var15 = null;
-        hd var16 = null;
-        hd var17 = null;
-        hd var18 = null;
-        hd var19 = null;
-        hd var20 = null;
+        UiLayoutNode var15 = null;
+        UiLayoutNode var16 = null;
+        UiLayoutNode var17 = null;
+        UiLayoutNode var18 = null;
+        UiLayoutNode var19 = null;
+        UiLayoutNode var20 = null;
         int var14 = Kickabout.field_G;
-        hd var15Lifetime1;
-        hd var15Lifetime2;
-        hd var16Lifetime1;
-        hd var16Lifetime2;
-        hd var17Lifetime1;
-        hd var17Lifetime2;
-        hd var18Lifetime1;
-        hd var18Lifetime2;
-        hd var19Lifetime1;
-        hd var19Lifetime2;
-        hd var20Lifetime1;
-        hd var20Lifetime2;
+        UiLayoutNode var15Lifetime1;
+        UiLayoutNode var15Lifetime2;
+        UiLayoutNode var16Lifetime1;
+        UiLayoutNode var16Lifetime2;
+        UiLayoutNode var17Lifetime1;
+        UiLayoutNode var17Lifetime2;
+        UiLayoutNode var18Lifetime1;
+        UiLayoutNode var18Lifetime2;
+        UiLayoutNode var19Lifetime1;
+        UiLayoutNode var19Lifetime2;
+        UiLayoutNode var20Lifetime1;
+        UiLayoutNode var20Lifetime2;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
@@ -460,7 +460,7 @@ final class ji extends hd {
         return true;
     }
 
-    ji(String param0, hd param1, hd param2, hd param3, hd param4, boolean param5) {
+    ji(String param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4, boolean param5) {
         this(vb.a(0, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5);
     }
 
@@ -515,30 +515,30 @@ final class ji extends hd {
         int var11;
         int var12;
         int var14;
-        hd var15;
-        hd var16;
-        hd var17;
-        hd var18;
-        hd var19;
-        hd var20;
-        hd stackIn_13_0 = null;
-        hd stackIn_13_1 = null;
-        hd stackIn_13_2 = null;
+        UiLayoutNode var15;
+        UiLayoutNode var16;
+        UiLayoutNode var17;
+        UiLayoutNode var18;
+        UiLayoutNode var19;
+        UiLayoutNode var20;
+        UiLayoutNode stackIn_13_0 = null;
+        UiLayoutNode stackIn_13_1 = null;
+        UiLayoutNode stackIn_13_2 = null;
         boolean stackIn_14_3 = false;
-        hd stackIn_23_0 = null;
-        hd stackIn_23_1 = null;
-        hd stackIn_23_2 = null;
+        UiLayoutNode stackIn_23_0 = null;
+        UiLayoutNode stackIn_23_1 = null;
+        UiLayoutNode stackIn_23_2 = null;
         boolean stackIn_24_3 = false;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        hd var15Lifetime1;
-        hd var16Lifetime1;
-        hd var17Lifetime1;
-        hd var18Lifetime1;
-        hd var19Lifetime1;
-        hd var20Lifetime1;
+        UiLayoutNode var15Lifetime1;
+        UiLayoutNode var16Lifetime1;
+        UiLayoutNode var17Lifetime1;
+        UiLayoutNode var18Lifetime1;
+        UiLayoutNode var19Lifetime1;
+        UiLayoutNode var20Lifetime1;
         var14 = Kickabout.field_G;
         if (2 * this.field_q > this.field_mb) {
           var6 = this.field_mb / 2;
@@ -675,7 +675,7 @@ final class ji extends hd {
         if (param0) {
           return false;
         }
-        this.field_yb = (hd) null;
+        this.field_yb = (UiLayoutNode) null;
         return false;
     }
 

@@ -11,8 +11,8 @@ final class ag extends IntrusiveNode {
     static int field_g;
     IntrusiveNode field_k;
 
-    final static hd a(int param0, int param1) {
-        hd var2 = new hd((long)param1, (hd) null);
+    final static UiLayoutNode a(int param0, int param1) {
+        UiLayoutNode var2 = new UiLayoutNode((long)param1, (UiLayoutNode) null);
         var2.field_R = ShopPlayerSlot.a((byte) 26, param0);
         return var2;
     }

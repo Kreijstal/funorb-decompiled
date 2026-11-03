@@ -157,7 +157,7 @@ final class PasswordValidator extends TextFieldValidator {
           tn.field_e.a(0, 0, tn.field_e.field_o * var7 / 140, tn.field_e.field_v);
           TeamManagementScreen.e(124);
           AuctionListing.a(SoftwareRasterizer.field_g, -22914, var7, SoftwareRasterizer.field_f, 0);
-          tn.field_e.drawWithOffsets(-140 + var7, 0);
+          tn.field_e.d(-140 + var7, 0);
           TeamManagementScreen.e(param0 - 706856552);
           if (MouseWheelInput.field_f) {
             for (var8 = 0; SoftwareRasterizer.field_a.length > var8; var8++) {
@@ -177,7 +177,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           var9 = wn.field_j.field_o;
           DelegatingCanvas.field_e = -(var9 * we.a(var8Lifetime1, false)) >> 17;
-          lr.field_m = var9 * ei.a(var8Lifetime1, (byte) -23) >> 17;
+          FormationView.field_m = var9 * ei.a(var8Lifetime1, (byte) -23) >> 17;
           wn.field_j.a(wn.field_j.field_o << 3, wn.field_j.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, var8Lifetime1 << 3, 4096);
           TeamManagementScreen.e(118);
           return;

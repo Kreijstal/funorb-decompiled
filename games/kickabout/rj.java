@@ -8,7 +8,7 @@ final class rj {
     private IntrusiveNodeHashTable field_f;
     static boolean[] field_a;
     private ResourceArchive field_e;
-    static hd field_b;
+    static UiLayoutNode field_b;
     private IntrusiveNodeHashTable field_c;
 
     private final PcmSample a(String param0, String param1, byte param2, int[] param3) {

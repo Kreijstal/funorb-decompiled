@@ -120,8 +120,8 @@ final class vp implements hc {
         }
         if (ha.field_G <= param1 &&
           ha.field_G + td.field_c.field_q > param1 &&
-          param0 >= lr.field_q &&
-          param0 < td.field_c.field_w + lr.field_q) {
+          param0 >= FormationView.field_q &&
+          param0 < td.field_c.field_w + FormationView.field_q) {
           return 1;
         }
         if (param2 < 0) {

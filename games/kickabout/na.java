@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class na extends hd {
-    private hd field_Hb;
-    private hd field_Cb;
-    private hd field_yb;
+final class na extends UiLayoutNode {
+    private UiLayoutNode field_Hb;
+    private UiLayoutNode field_Cb;
+    private UiLayoutNode field_yb;
     static int field_Ab;
-    private hd field_Gb;
-    private hd field_Fb;
+    private UiLayoutNode field_Gb;
+    private UiLayoutNode field_Fb;
     static String field_Eb;
     static int field_Ib;
     private int field_Db;
     static int[][] field_zb;
-    private hd field_Bb;
+    private UiLayoutNode field_Bb;
 
-    na(long param0, hd param1, hd param2, hd param3, hd param4) {
-        super(param0, (hd) null);
+    na(long param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4) {
+        super(param0, (UiLayoutNode) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -27,26 +27,26 @@ final class na extends hd {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        hd var9 = null;
-        hd var10 = null;
+        UiLayoutNode var9 = null;
+        UiLayoutNode var10 = null;
         try {
-          this.field_Bb = new hd(0L, param1);
-          this.field_Gb = new hd(0L, param2);
-          this.a((byte) -107, this.field_Bb);
-          this.a((byte) -106, this.field_Gb);
-          this.field_Cb = new hd(0L, (hd) null);
-          this.a((byte) -127, this.field_Cb);
-          this.field_Fb = new hd(0L, param3);
-          this.field_yb = new hd(0L, param3);
+          this.field_Bb = new UiLayoutNode(0L, param1);
+          this.field_Gb = new UiLayoutNode(0L, param2);
+          this.addChild((byte) -107, this.field_Bb);
+          this.addChild((byte) -106, this.field_Gb);
+          this.field_Cb = new UiLayoutNode(0L, (UiLayoutNode) null);
+          this.addChild((byte) -127, this.field_Cb);
+          this.field_Fb = new UiLayoutNode(0L, param3);
+          this.field_yb = new UiLayoutNode(0L, param3);
           var9 = this.field_Fb;
           var10 = var9;
           this.field_yb.field_ob = true;
           var10.field_ob = true;
-          this.field_Cb.a((byte) -127, this.field_Fb);
-          this.field_Cb.a((byte) -112, this.field_yb);
-          this.field_Hb = new hd(0L, param4);
+          this.field_Cb.addChild((byte) -127, this.field_Fb);
+          this.field_Cb.addChild((byte) -112, this.field_yb);
+          this.field_Hb = new UiLayoutNode(0L, param4);
           this.field_Hb.field_Y = true;
-          this.field_Cb.a((byte) -127, this.field_Hb);
+          this.field_Cb.addChild((byte) -127, this.field_Hb);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,15 +167,15 @@ final class na extends hd {
     }
 
     final static void h(int param0) {
-        m.field_m = new hd(0L, (hd) null);
+        m.field_m = new UiLayoutNode(0L, (UiLayoutNode) null);
         if (ui.field_t) {
-          m.field_m.a((byte) -127, ConsoleValue.field_a);
+          m.field_m.addChild((byte) -127, ConsoleValue.field_a);
         }
-        m.field_m.a((byte) -114, mc.field_d);
+        m.field_m.addChild((byte) -114, mc.field_d);
         tn.field_d = new rf(ButtonMenuScreen.field_z, m.field_m);
-        ss.field_c = new hd((long)param0, (hd) null);
-        ss.field_c.a((byte) -127, (hd) (tn.field_d.field_b));
-        ss.field_c.a((byte) -116, MouseWheelInput.field_a);
+        ss.field_c = new UiLayoutNode((long)param0, (UiLayoutNode) null);
+        ss.field_c.addChild((byte) -127, (UiLayoutNode) (tn.field_d.field_b));
+        ss.field_c.addChild((byte) -116, MouseWheelInput.field_a);
         CipherPacketBuffer.c(false);
     }
 
@@ -221,7 +221,7 @@ final class na extends hd {
           }
         }
         if (param0 != -40) {
-          this.field_Gb = (hd) null;
+          this.field_Gb = (UiLayoutNode) null;
           return false;
         }
         return false;
@@ -232,9 +232,9 @@ final class na extends hd {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        hd stackIn_16_0 = null;
-        hd stackIn_16_1 = null;
-        hd stackIn_16_2 = null;
+        UiLayoutNode stackIn_16_0 = null;
+        UiLayoutNode stackIn_16_1 = null;
+        UiLayoutNode stackIn_16_2 = null;
         boolean stackIn_17_3 = false;
         int var5;
         int var6;
@@ -244,12 +244,12 @@ final class na extends hd {
         int var10;
         int var11;
         int var12;
-        hd var14;
-        hd var15;
-        hd var16;
-        hd var17;
-        hd var18;
-        hd var19;
+        UiLayoutNode var14;
+        UiLayoutNode var15;
+        UiLayoutNode var16;
+        UiLayoutNode var17;
+        UiLayoutNode var18;
+        UiLayoutNode var19;
         if (2 * this.field_q > this.field_mb) {
           var6 = this.field_mb / 2;
           var5 = this.field_mb / 2;
@@ -386,7 +386,7 @@ final class na extends hd {
 
     final boolean l(int param0) {
         if (param0 >= -30) {
-          this.field_yb = (hd) null;
+          this.field_yb = (UiLayoutNode) null;
         }
         return 0 != this.field_Hb.field_qb ? true : false;
     }
@@ -718,7 +718,7 @@ final class na extends hd {
                     return;
                   }
                   UnreadMessagesScreen.a("L1: " + tr.b(0), (Throwable) null, param0 ^ 15);
-                  lr.b((byte) -116);
+                  FormationView.b((byte) -116);
                   return;
                 }
                 var3Lifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);

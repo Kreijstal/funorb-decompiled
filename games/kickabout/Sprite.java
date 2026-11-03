@@ -233,7 +233,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void drawWithOffsets(int param0, int param1) {
+    void d(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -424,7 +424,7 @@ class Sprite extends SpriteState {
         this.field_y = var2;
     }
 
-    final void drawWithOffsets(int param0, int param1, int param2) {
+    final void a(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1384,7 +1384,7 @@ class Sprite extends SpriteState {
           }
           if (param2 == this.field_q &&
             param3 == this.field_w) {
-            this.drawWithOffsets(param0, param1, param4);
+            this.a(param0, param1, param4);
             return;
           }
           var6 = this.field_q;

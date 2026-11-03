@@ -4,7 +4,7 @@
 final class DisplayNameForm extends WidgetContainer implements NameSuggestionListener, ButtonListener {
     NameSuggestionsPanel field_G;
     private TextButton field_E;
-    static hd field_F;
+    static UiLayoutNode field_F;
     private TextButton field_B;
     private ValidatedTextWidget field_C;
 

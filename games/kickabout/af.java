@@ -5,7 +5,7 @@ final class af {
     static int[] field_b;
     static dt[] field_a;
     static String field_c;
-    static hd field_d;
+    static UiLayoutNode field_d;
 
     final static int a(PlayerStats param0, int param1) {
         int var2_int = 0;

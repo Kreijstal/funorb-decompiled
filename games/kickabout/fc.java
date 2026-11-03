@@ -3,7 +3,7 @@
  */
 final class fc {
     static boolean field_f;
-    static gm field_c;
+    static RenderedFootballer field_c;
     static ArgbSprite field_h;
     static String field_e;
     static int field_a;

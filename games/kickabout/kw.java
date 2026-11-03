@@ -52,10 +52,10 @@ final class kw {
         ph.field_e[2][0] = MyPitchScreen.a(bo.field_Cb, "stadium", true, "right_seats_1");
         ph.field_e[2][1] = MyPitchScreen.a(bo.field_Cb, "stadium", true, "right_seats_2");
         ph.field_e[2][2] = MyPitchScreen.a(bo.field_Cb, "stadium", true, "right_seats_3");
-        bf.field_s = new IndexedSprite[3][];
-        bf.field_s[0] = DemoIntegersCommand.a(bo.field_Cb, ek.b((int) param0, 17349), "stadium", "top_seats_1_mask");
-        bf.field_s[1] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "top_seats_2_mask");
-        bf.field_s[2] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "top_seats_3_mask");
+        LineupView.field_s = new IndexedSprite[3][];
+        LineupView.field_s[0] = DemoIntegersCommand.a(bo.field_Cb, ek.b((int) param0, 17349), "stadium", "top_seats_1_mask");
+        LineupView.field_s[1] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "top_seats_2_mask");
+        LineupView.field_s[2] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "top_seats_3_mask");
         LoginCredentials.field_c = new IndexedSprite[3][];
         LoginCredentials.field_c[0] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "bot_seats_1_mask");
         LoginCredentials.field_c[1] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "bot_seats_2_mask");

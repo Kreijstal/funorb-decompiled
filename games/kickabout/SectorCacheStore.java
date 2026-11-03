@@ -214,7 +214,7 @@ final class SectorCacheStore {
             }
           }
           if (param1.field_r != null) {
-            ol.field_z = param1.field_c;
+            GameOverView.field_z = param1.field_c;
             mv.field_a = param1.field_q;
             PlayerModelPreview.field_r = param1.field_d;
             PlayerShopScreen.field_S = param1.field_r;
@@ -467,8 +467,8 @@ final class SectorCacheStore {
                 var5 = var9;
                 var9.a(true, 327, 5, var4, 16);
               }
-              AuctionTableWidget.field_Hb.field_Db.a((byte) -109, (hd) (var5));
-              var6 = bf.field_y.a(var2, (byte) 116, var3);
+              AuctionTableWidget.field_Hb.field_Db.addChild((byte) -109, (UiLayoutNode) (var5));
+              var6 = LineupView.field_y.a(var2, (byte) 116, var3);
               var4 += 18;
               var2++;
               if (var6 == null) {

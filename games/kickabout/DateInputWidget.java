@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class DateInputWidget extends WidgetContainer implements ValidationProvider {
-    static hd field_D;
+    static UiLayoutNode field_D;
     private hl field_B;
     static String field_H;
     static int field_G;
@@ -21,11 +21,11 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           var7 = vo.field_db;
         }
         if (!param4) {
-          wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
+          TeamSelectionView.a(param0, var7, param6, param3, param2, 73, param5, param1);
           return;
         }
         DateInputWidget.a(-38);
-        wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
+        TeamSelectionView.a(param0, var7, param6, param3, param2, 73, param5, param1);
     }
 
     void a(hl param0, int param1) {

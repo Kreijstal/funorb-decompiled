@@ -7,7 +7,7 @@ final class dr {
     static String[] field_c;
     static String field_e;
     static boolean field_a;
-    static hd field_d;
+    static UiLayoutNode field_d;
     static String field_b;
 
     public static void a(byte param0) {
@@ -55,8 +55,8 @@ final class dr {
               for (var5_int = 0; var5_int < ms.field_b; var5_int++) {
                 un.field_e.field_f[var5_int] = var4_ref_jm.data[var5_int];
               }
-              PagedHelpScreen.field_A = wb.field_n;
-              wb.field_n = SquadSlotWidget.field_Ab;
+              PagedHelpScreen.field_A = TeamSelectionView.field_n;
+              TeamSelectionView.field_n = SquadSlotWidget.field_Ab;
               SquadSlotWidget.field_Ab = so.field_b;
               so.field_b = var4_ref_jm.opcode;
               return true;
@@ -76,8 +76,8 @@ final class dr {
               return false;
             }
             if (cu.field_c == 0) {
-              PagedHelpScreen.field_A = wb.field_n;
-              wb.field_n = SquadSlotWidget.field_Ab;
+              PagedHelpScreen.field_A = TeamSelectionView.field_n;
+              TeamSelectionView.field_n = SquadSlotWidget.field_Ab;
               SquadSlotWidget.field_Ab = so.field_b;
               so.field_b = ll.field_i;
               ll.field_i = -1;
@@ -111,9 +111,9 @@ final class dr {
         }
     }
 
-    final static hd a(int param0) {
+    final static UiLayoutNode a(int param0) {
         if (param0 != 0) {
-          return (hd) null;
+          return (UiLayoutNode) null;
         }
         return ShopPlayerSlot.field_Jb.field_Ab;
     }

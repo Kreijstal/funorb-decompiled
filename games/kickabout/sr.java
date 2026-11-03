@@ -72,7 +72,7 @@ abstract class sr {
         if (!param2) {
           stackIn_3_0 = LoginCredentials.field_c;
         } else {
-          stackIn_3_0 = bf.field_s;
+          stackIn_3_0 = LineupView.field_s;
         }
         var7 = stackIn_3_0;
         var8 = new Sprite[var7.length][];

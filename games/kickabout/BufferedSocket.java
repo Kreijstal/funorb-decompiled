@@ -9,7 +9,7 @@ final class BufferedSocket implements Runnable {
     private byte[] field_r;
     private boolean field_c;
     static String field_q;
-    static hd field_u;
+    static UiLayoutNode field_u;
     private boolean field_e;
     private java.net.Socket field_b;
     private int field_o;

@@ -8,7 +8,7 @@ abstract class mc {
     static String field_b;
     static String field_l;
     static Sprite[] field_k;
-    static hd field_d;
+    static UiLayoutNode field_d;
     static String field_e;
     static boolean field_j;
     static String field_f;

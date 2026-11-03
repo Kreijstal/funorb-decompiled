@@ -3,7 +3,7 @@
  */
 final class ve extends ResizableModalPanel implements ButtonListener {
     static String field_Q;
-    static hd field_S;
+    static UiLayoutNode field_S;
     private TextButton field_U;
     static IntrusiveDeque field_R;
     static int[] field_T;
@@ -103,7 +103,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           var4.field_r = (WidgetPainter) ((Object) new op());
           var5 = this.field_i - 6;
           if (param0 != -53) {
-            field_S = (hd) null;
+            field_S = (UiLayoutNode) null;
           }
           this.field_i = this.field_i + 38;
           var4.a(30, param0 ^ -54, 15, -16 + (this.field_n - 14), var5);
@@ -235,7 +235,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
             for (var4 = 9; var4 >= 0; var4--) {
               if (null != var3[var4] &&
                 var3[var4] != "") {
-                gm.a(var3[var4], false, (byte) -116);
+                RenderedFootballer.a(var3[var4], false, (byte) -116);
               }
             }
             AccountRegistrationPanel.field_D = var8;

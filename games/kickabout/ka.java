@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ka implements fg {
-    static hd field_c;
+    static UiLayoutNode field_c;
     static String field_d;
     static boolean field_b;
     static int field_a;
@@ -33,7 +33,7 @@ final class ka implements fg {
 
     public static void a(int param0) {
         if (param0 != 19044) {
-          field_c = (hd) null;
+          field_c = (UiLayoutNode) null;
           field_d = null;
           field_c = null;
           return;

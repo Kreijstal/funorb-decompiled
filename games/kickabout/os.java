@@ -271,7 +271,7 @@ final class os {
               else {
                 if (stackIn_56_0 <= stackIn_56_1) {
                   NumericDateInputWidget.field_M[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
-                  fk.field_k[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
+                  WaitForPlayersView.field_k[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   ld.field_e[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 > var8) {
                     var8 = var29Lifetime1;

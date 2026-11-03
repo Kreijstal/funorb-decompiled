@@ -34,7 +34,7 @@ final class SplashScreen extends AppScreen {
         boolean stackIn_45_2 = false;
         int stackIn_48_0 = 0;
         int stackIn_62_0 = 0;
-        hd stackIn_98_0 = null;
+        UiLayoutNode stackIn_98_0 = null;
         boolean stackIn_98_1 = false;
         int stackIn_98_2 = 0;
         int stackIn_99_3 = 0;
@@ -54,11 +54,11 @@ final class SplashScreen extends AppScreen {
         Object var11 = null;
         he var12 = null;
         int var13 = 0;
-        hd var14 = null;
-        hd var15 = null;
-        hd var16 = null;
-        hd var17 = null;
-        hd var18 = null;
+        UiLayoutNode var14 = null;
+        UiLayoutNode var15 = null;
+        UiLayoutNode var16 = null;
+        UiLayoutNode var17 = null;
+        UiLayoutNode var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -151,21 +151,21 @@ final class SplashScreen extends AppScreen {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_jb == null) {
-              var12.field_Lb = new hd(0L, mp.field_f);
-              var12.a((byte) -120, var12.field_Lb);
-              var12.field_Ob = new hd(0L, pw.field_J);
+              var12.field_Lb = new UiLayoutNode(0L, mp.field_f);
+              var12.addChild((byte) -120, var12.field_Lb);
+              var12.field_Ob = new UiLayoutNode(0L, pw.field_J);
               if (ui.field_t) {
-                var12.a((byte) -127, var12.field_Ob);
+                var12.addChild((byte) -127, var12.field_Ob);
               }
               var12.field_Ob.field_A = 2;
-              var12.field_zb = new hd(0L, ConsoleEvaluationException.field_e);
-              var12.a((byte) -112, var12.field_zb);
-              var12.b(false);
-              var12.field_Tb = new hd(0L, LoggedPlayer.field_r);
-              var12.a((byte) -115, var12.field_Tb);
-              var12.field_Hb = new hd(0L, DisplayNameForm.field_F);
+              var12.field_zb = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
+              var12.addChild((byte) -112, var12.field_zb);
+              var12.invalidateChildren(false);
+              var12.field_Tb = new UiLayoutNode(0L, LoggedPlayer.field_r);
+              var12.addChild((byte) -115, var12.field_Tb);
+              var12.field_Hb = new UiLayoutNode(0L, DisplayNameForm.field_F);
               var13 = 1;
-              var12.a((byte) -121, var12.field_Hb);
+              var12.addChild((byte) -121, var12.field_Hb);
             }
             var12.field_Lb.field_E = null;
             var14 = var12.field_Lb;
@@ -191,7 +191,7 @@ final class SplashScreen extends AppScreen {
             var19 = 0;
             var32 = var12.field_Nb;
             var21 = 72;
-            if (bf.field_u == param0) {
+            if (LineupView.field_u == param0) {
               var21 += 42;
             }
             var33 = BitmapFont.a(var12.field_Lb.field_X, var32, var21);
@@ -275,7 +275,7 @@ final class SplashScreen extends AppScreen {
               } else {
                 stackIn_99_3 = 0;
               }
-              ((hd) (Object) stackIn_98_0).a(stackIn_98_1, stackIn_98_2 - stackIn_99_3 + var12.field_q, var25_int, var19, sh.field_c);
+              ((UiLayoutNode) (Object) stackIn_98_0).a(stackIn_98_1, stackIn_98_2 - stackIn_99_3 + var12.field_q, var25_int, var19, sh.field_c);
               var12.field_Ob.field_E = Integer.toString(var12.field_Qb);
               var12.field_Ob.a(true, 40, -40 + var12.field_q, var19, sh.field_c);
               var19 = var19 + sh.field_c;
@@ -312,7 +312,7 @@ final class SplashScreen extends AppScreen {
               var12.field_L = var19 - var12.field_mb;
             }
             if (var13 != 0) {
-              param0.field_Ab.a(true, 2, var12, (hd) (var11));
+              param0.field_Ab.a(true, 2, var12, (UiLayoutNode) (var11));
             }
             if (var12.field_sb != 0 &&
               !var12.h(-13356)) {
@@ -369,7 +369,7 @@ final class SplashScreen extends AppScreen {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Cb) {
-                  var24Lifetime2 = ob.field_F;
+                  var24Lifetime2 = RenderedBall.field_F;
                 } else {
                   if (var12.field_Db < var7) {
                     var25_int = -var12.field_Db + var7;
@@ -501,7 +501,7 @@ final class SplashScreen extends AppScreen {
         if (this.field_h != 256) {
           CachedListingRow.field_k.b(0, 0, this.field_h);
         } else {
-          CachedListingRow.field_k.drawWithOffsets(0, 0);
+          CachedListingRow.field_k.d(0, 0);
         }
         if (param0 != -5) {
           var4 = (AppScreen) null;

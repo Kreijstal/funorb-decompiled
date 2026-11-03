@@ -4,7 +4,7 @@
 final class nj {
     static String field_c;
     static String field_b;
-    static hd field_d;
+    static UiLayoutNode field_d;
     static String field_a;
 
     final static void a(boolean param0, int param1) {

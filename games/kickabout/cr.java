@@ -107,7 +107,7 @@ final class cr implements WidgetPainter {
               var11 = var11 + (-var9 + param3.field_i >> 1);
             }
           }
-          ob.b(2, var8 + 4, 2 + var11, var9, var10 - 2);
+          RenderedBall.b(2, var8 + 4, 2 + var11, var9, var10 - 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

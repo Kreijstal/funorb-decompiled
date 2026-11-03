@@ -123,7 +123,7 @@ final class hv {
               ue.steerTowardsPoint(4, var8, var19, var9);
               return;
             }
-            if (wt.a(param1.field_V, var19, (byte) -75, param2)) {
+            if (wt.tryKeeperDive(param1.field_V, var19, (byte) -75, param2)) {
               return;
             }
             gg.a(param2, 0, param1.field_V);
@@ -133,7 +133,7 @@ final class hv {
               var19.setAction((byte) -31, 14);
             }
             if (var13 != 0) {
-              RowRangeRequest.a(-120, var19, param2, param1.getBallCarrier((byte) -96), param1.field_V);
+              RowRangeRequest.tryKeeperTackle(-120, var19, param2, param1.getBallCarrier((byte) -96), param1.field_V);
             }
             if (var19.action == 14) {
               var19.setDirectionFromMask(uv.a(param0, -var19.pixelY(true) + var9, var8 - var19.pixelX(-98)), 26214);

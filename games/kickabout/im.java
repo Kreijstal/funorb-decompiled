@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class im extends hd {
+abstract class im extends UiLayoutNode {
     static String field_Bb;
     static String field_zb;
     static int field_Ab;

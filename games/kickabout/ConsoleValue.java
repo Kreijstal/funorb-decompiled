@@ -6,7 +6,7 @@ final class ConsoleValue {
     Object field_d;
     static String field_f;
     static String field_e;
-    static hd field_a;
+    static UiLayoutNode field_a;
     boolean field_b;
     static int field_h;
     static int[] field_g;
@@ -59,7 +59,7 @@ final class ConsoleValue {
           return ((Double) (this.field_d)).longValue();
         }
         if (!param0) {
-          field_a = (hd) null;
+          field_a = (UiLayoutNode) null;
           if (!(this.field_d instanceof Float)) {
             throw new ClassCastException();
           }

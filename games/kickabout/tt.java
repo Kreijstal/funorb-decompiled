@@ -112,7 +112,7 @@ final class tt {
               return;
             }
             UnreadMessagesScreen.a("F1: " + tr.b(0), (Throwable) null, 1);
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             if (param0 <= 38) {
               field_e = (Sprite) null;
             }

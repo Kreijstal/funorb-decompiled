@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class hs {
+abstract class MatchPhaseView {
     static String field_b;
     static om field_d;
     int field_g;
@@ -21,14 +21,14 @@ abstract class hs {
         int var9;
         var9 = Kickabout.field_G;
         if (param2 > -48) {
-          this.e(38, -6);
+          this.isButtonEnabled(38, -6);
         }
         for (var4 = 0; var4 < this.field_i.itemCount; var4++) {
           var5 = this.field_c[var4].width;
           var6 = this.field_c[var4].height;
-          var7 = -(var5 >> 1) + this.d(111, var4);
-          var8 = this.c(342, var4) - (var6 >> 1);
-          if (this.e(var4, 50) &&
+          var7 = -(var5 >> 1) + this.buttonX(111, var4);
+          var8 = this.buttonY(342, var4) - (var6 >> 1);
+          if (this.isButtonEnabled(var4, 50) &&
             var7 <= param0 &&
             var7 + var5 > param0 &&
             param1 >= var8 &&
@@ -39,24 +39,24 @@ abstract class hs {
         return -1;
     }
 
-    boolean e(int param0, int param1) {
+    boolean isButtonEnabled(int param0, int param1) {
         if (param1 != 50) {
-          this.b(2, 47);
+          this.drawCountdown(2, 47);
         }
         return true;
     }
 
-    int d(int param0, int param1) {
+    int buttonX(int param0, int param1) {
         if (param0 <= 106) {
           return 15;
         }
         return 544;
     }
 
-    final boolean a(byte param0) {
+    final boolean isLocalParticipantActive(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 13) {
-          this.d(-24);
+          this.positionButtons(-24);
         }
         stackIn_6_0 = (this.field_g != -2) && (this.field_a.participantStatus[this.field_g].isActive(3511));
         return stackIn_6_0;
@@ -243,7 +243,7 @@ abstract class hs {
         }
     }
 
-    void a(int param0, boolean param1) {
+    void update(int param0, boolean param1) {
         int var3 = 0;
         int stackIn_16_0 = 0;
         int stackIn_24_0 = 0;
@@ -261,7 +261,7 @@ abstract class hs {
           this.field_i.a(-21174, this.a(wt.field_x, us.field_j, -74), this.a(dn.field_yb, kf.field_Eb, -106));
           if (this.field_i.selectedIndex >= 0 &&
             this.field_i.c(-1)) {
-            this.f(111, this.field_c[this.field_i.selectedIndex].kind);
+            this.onButtonClick(111, this.field_c[this.field_i.selectedIndex].kind);
           }
         }
         for (var3 = 0; this.field_c.length > var3; var3++) {
@@ -287,7 +287,7 @@ abstract class hs {
             stackIn_30_0 = 0;
           }
           var6 = stackIn_30_0;
-          var7 = wt.field_x - this.d(124, var3);
+          var7 = wt.field_x - this.buttonX(124, var3);
           this.field_c[var3].a(var4 != 0, var5 != 0, var6 != 0, 16, var7);
         }
         if (param0 >= -92) {
@@ -310,16 +310,16 @@ abstract class hs {
         int var1 = 45 % ((22 - param0) / 38);
     }
 
-    abstract void e(int param0);
+    abstract void drawContent(int param0);
 
-    final void c(int param0) {
+    final void drawPanelBackground(int param0) {
         SoftwareRasterizer.a(10, 50, 620, 320, 20, 65793, 128);
         if (param0 < 43) {
-          this.c(-47, -123);
+          this.buttonY(-47, -123);
         }
     }
 
-    boolean a(char param0, int param1, int param2) {
+    boolean handleKey(char param0, int param1, int param2) {
         int incrementValue$3 = 0;
         int var4;
         int var5;
@@ -333,7 +333,7 @@ abstract class hs {
         this.field_i.handleArrowKeys(0, true);
         if (this.field_i.selectedIndex >= 0) {
           var4 = 0;
-          while (!this.e(this.field_i.selectedIndex, 50)) {
+          while (!this.isButtonEnabled(this.field_i.selectedIndex, 50)) {
             incrementValue$3 = var4;
             var4++;
             if (this.field_i.itemCount < incrementValue$3) {
@@ -350,7 +350,7 @@ abstract class hs {
           if (!this.field_i.c(-1)) {
             return true;
           }
-          this.f(101, this.field_c[this.field_i.selectedIndex].kind);
+          this.onButtonClick(101, this.field_c[this.field_i.selectedIndex].kind);
         }
         return true;
     }
@@ -358,11 +358,11 @@ abstract class hs {
     void a(boolean param0) {
         mj.a(140.0, 60, 448.0, 672.0);
         if (!param0) {
-          this.d(69);
+          this.positionButtons(69);
         }
     }
 
-    final void b(int param0, int param1) {
+    final void drawCountdown(int param0, int param1) {
         int var3;
         int var4;
         String var5;
@@ -474,7 +474,7 @@ abstract class hs {
         return;
     }
 
-    final void a(boolean param0, String param1) {
+    final void drawTitle(boolean param0, String param1) {
         try {
           SoftwareRasterizer.a(22, 62, 596, 28, 10, 65793, 128);
           if (param0) {
@@ -486,14 +486,14 @@ abstract class hs {
         }
     }
 
-    int c(int param0, int param1) {
+    int buttonY(int param0, int param1) {
         if (param0 != 342) {
           return -91;
         }
         return 342 - param1 * 29;
     }
 
-    hs(CommonGame param0, int param1, boolean param2, int[] param3) {
+    MatchPhaseView(CommonGame param0, int param1, boolean param2, int[] param3) {
         int var5_int = 0;
         try {
           this.field_g = param1;
@@ -512,9 +512,9 @@ abstract class hs {
         }
     }
 
-    abstract void f(int param0, int param1);
+    abstract void onButtonClick(int param0, int param1);
 
-    final void d(int param0) {
+    final void positionButtons(int param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -524,8 +524,8 @@ abstract class hs {
         }
         var2 = 90 / ((param0 - 78) / 38);
         for (var3 = 0; var3 < this.field_c.length; var3++) {
-          if (this.e(var3, 50)) {
-            this.field_c[var3].a(this.c(342, var3), this.d(124, var3), 13800);
+          if (this.isButtonEnabled(var3, 50)) {
+            this.field_c[var3].a(this.buttonY(342, var3), this.buttonX(124, var3), 13800);
           }
         }
     }

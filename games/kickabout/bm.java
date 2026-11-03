@@ -13,7 +13,7 @@ final class bm extends i {
     bm(AuctionListing param0, boolean param1) {
         super(21, !param0.getPlayerStats(-73).isEmpty(-2) ? param0.getPlayerStats(-128) : null);
         String var6 = null;
-        hd dupTemp$0 = null;
+        UiLayoutNode dupTemp$0 = null;
         String var4 = null;
         int var5 = 0;
         try {

@@ -7,7 +7,7 @@ final class is {
     static boolean field_a;
     static int field_g;
     static int field_d;
-    static hd field_b;
+    static UiLayoutNode field_b;
     static Random field_e;
     static boolean field_c;
     static String field_f;

@@ -193,21 +193,21 @@ final class ReceivedAuctionItem extends AuctionItem {
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        gm var2 = null;
+        RenderedFootballer var2 = null;
         int var3 = 0;
         var4 = Kickabout.field_G;
         try {
-          wo.a(ar.field_c, (gm) (NotCommand.field_F.getBallCarrier((byte) -96)), (byte) 118, 256);
+          wo.a(ar.field_c, (RenderedFootballer) (NotCommand.field_F.getBallCarrier((byte) -96)), (byte) 118, 256);
           if (param0 != 45) {
             ReceivedAuctionItem.i((byte) 21);
           }
           for (var1_int = 0; var1_int < NotCommand.field_F.playerCount; var1_int++) {
             if (NotCommand.field_F.participantStatus[var1_int].isActive(3511) &&
               wp.field_c == NotCommand.field_F.field_g[var1_int].field_p) {
-              var2 = (gm) (NotCommand.field_F.getControlledFootballer((byte) -60, var1_int));
+              var2 = (RenderedFootballer) (NotCommand.field_F.getControlledFootballer((byte) -60, var1_int));
               stackIn_14_0 = (RegistrationRequestDialog.field_kb != var1_int) ? 160 : 256;
               var3 = stackIn_14_0;
-              wo.a(MusicPatchNode.field_u[va.field_J], var2, (byte) -17, var3);
+              wo.a(MusicPatchNode.field_u[PlayingView.field_J], var2, (byte) -17, var3);
             }
           }
           return;

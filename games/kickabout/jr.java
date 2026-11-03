@@ -8,18 +8,18 @@ final class jr extends im {
     private int[] field_Db;
     static int field_Kb;
     private boolean field_Lb;
-    private hd field_Cb;
+    private UiLayoutNode field_Cb;
     private ReceivedAuctionItem field_Hb;
     static double field_Gb;
-    private hd field_Jb;
+    private UiLayoutNode field_Jb;
     private pu[] field_Eb;
 
     final void c(int param0, boolean param1) {
         int var4 = 0;
         int stackIn_8_0 = 0;
-        hd stackIn_18_0 = null;
+        UiLayoutNode stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        hd stackIn_29_0 = null;
+        UiLayoutNode stackIn_29_0 = null;
         boolean stackIn_30_1 = false;
         int var3;
         int var5;
@@ -383,8 +383,8 @@ final class jr extends im {
           var5 = stackIn_14_0;
           this.field_Jb = eo.a(he.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
           this.field_Cb = eo.a(mc.field_f, 7126504, (BitmapFont) (var5), 50, true);
-          this.a((byte) -117, this.field_Jb);
-          this.a((byte) -120, this.field_Cb);
+          this.addChild((byte) -117, this.field_Jb);
+          this.addChild((byte) -120, this.field_Cb);
           this.field_Jb.field_J = this.field_T + 20;
           this.field_Jb.field_s = -25 + ((this.field_Db[5] >> 1) + (this.field_Db[3] + this.field_Db[2] + this.field_Db[1])) + (this.field_Db[0] + this.field_Db[4]);
           this.field_Lb = false;
@@ -412,7 +412,7 @@ final class jr extends im {
             }
             var10.field_s = -(var10.field_q >> 1) + var11;
             var10.field_J = -(var10.field_mb >> 1) + var12;
-            this.a((byte) -106, (hd) (var10));
+            this.addChild((byte) -106, (UiLayoutNode) (var10));
             this.field_Eb[var8] = var10;
           }
           return;

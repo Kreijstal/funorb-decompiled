@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lr extends hs {
+final class FormationView extends MatchPhaseView {
     static String field_l;
     static int field_m;
-    private hd field_p;
+    private UiLayoutNode field_p;
     static int field_r;
     static String field_s;
-    private hd field_k;
+    private UiLayoutNode field_k;
     static boolean[][] field_n;
     static String field_o;
     static int field_q;
@@ -23,7 +23,7 @@ final class lr extends hs {
         }
     }
 
-    final void e(int param0) {
+    final void drawContent(int param0) {
         String stackIn_16_0 = null;
         int stackIn_20_0 = 0;
         int stackIn_22_0 = 0;
@@ -45,8 +45,8 @@ final class lr extends hs {
         int var6Lifetime1;
         int var6Lifetime2;
         var7 = Kickabout.field_G;
-        this.c(param0 ^ 106);
-        this.a(false, tl.field_b);
+        this.drawPanelBackground(param0 ^ 106);
+        this.drawTitle(false, tl.field_b);
         if (!this.field_a.field_C.formationConfirmed[this.field_h]) {
           if (this.field_g != -2 &&
             this.field_g == this.field_a.b((byte) -89, this.field_h)) {
@@ -68,18 +68,18 @@ final class lr extends hs {
         } else {
           var2_ref_String = cb.field_a;
         }
-        stackIn_20_0 = (!this.e(0, 50)) ? 0 : 1;
+        stackIn_20_0 = (!this.isButtonEnabled(0, 50)) ? 0 : 1;
         var3_intLifetime1 = stackIn_20_0;
         var4Lifetime1 = 8 + IsSixCommand.field_C.paragraphHeight(var2_ref_String, 185, 16);
-        var5 = -33 + (-var4Lifetime1 + this.c(342, 0));
+        var5 = -33 + (-var4Lifetime1 + this.buttonY(342, 0));
         stackIn_22_0 = 10 + var4Lifetime1;
         stackIn_23_1 = (var3_intLifetime1 == 0) ? 0 : 60;
         var6 = stackIn_22_0 + stackIn_23_1;
         SoftwareRasterizer.f(390, var5, 205, var6, 10, 983040);
         SoftwareRasterizer.a(390, var5, 205, var6, 10, 65793, 140);
         IsSixCommand.field_C.a(var2_ref_String, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
-        this.d(param0 - 95);
-        this.b(param0 ^ -2352, this.field_a.phaseTime);
+        this.positionButtons(param0 - 95);
+        this.drawCountdown(param0 ^ -2352, this.field_a.phaseTime);
         var2 = this.field_a.field_C.formationChoice[this.field_h];
         SoftwareRasterizer.a(220, 332, 150, 26, 8, 65793, 128);
         var3 = AuctionsHelpScreen.field_F[var2].toLowerCase();
@@ -90,7 +90,7 @@ final class lr extends hs {
           var6Lifetime1 = -(RowRangeRequest.field_f.field_v >> 1) + ws.field_d[var2][var4Lifetime2] * 220 / 1344 + 100;
           RowRangeRequest.field_f.c(var5Lifetime1, var6Lifetime1);
         }
-        if (this.e(0, param0 + 49)) {
+        if (this.isButtonEnabled(0, param0 + 49)) {
           this.field_k.a(102, false);
           this.field_p.a(param0 + 126, false);
         }
@@ -109,7 +109,7 @@ final class lr extends hs {
         }
     }
 
-    lr(CommonGame param0, int param1, boolean param2) {
+    FormationView(CommonGame param0, int param1, boolean param2) {
         super(param0, param1, param2, new int[]{41});
         int var4_int = 0;
         int var5 = 0;
@@ -119,10 +119,10 @@ final class lr extends hs {
           this.field_p = eo.a(true);
           var4_int = this.field_k.field_N.field_o;
           var5 = this.field_k.field_N.field_v;
-          this.field_k.field_s = -3 - var4_int + (this.d(127, 0) - (this.field_c[0].width >> 1));
-          this.field_k.field_J = this.c(342, 0) - (var5 >> 1);
-          this.field_p.field_s = 3 + this.d(117, 0) + (this.field_c[0].width >> 1);
-          this.field_p.field_J = this.c(342, 0) - (var5 >> 1);
+          this.field_k.field_s = -3 - var4_int + (this.buttonX(127, 0) - (this.field_c[0].width >> 1));
+          this.field_k.field_J = this.buttonY(342, 0) - (var5 >> 1);
+          this.field_p.field_s = 3 + this.buttonX(117, 0) + (this.field_c[0].width >> 1);
+          this.field_p.field_J = this.buttonY(342, 0) - (var5 >> 1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "lr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -147,13 +147,13 @@ final class lr extends hs {
         field_o = null;
         if (param0 != -15640) {
           java.awt.Component var2 = (java.awt.Component) null;
-          lr.a((java.awt.Component) null, 101);
+          FormationView.a((java.awt.Component) null, 101);
         }
         field_j = null;
         field_l = null;
     }
 
-    final boolean e(int param0, int param1) {
+    final boolean isButtonEnabled(int param0, int param1) {
         int var3;
         int var4;
         boolean stackIn_16_0 = false;
@@ -188,14 +188,14 @@ final class lr extends hs {
         return stackIn_16_0;
     }
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         if (param0 >= -92) {
-          this.c(-63, 11);
+          this.buttonY(-63, 11);
         }
-        super.a(-124, param1);
+        super.update(-124, param1);
         if (-2 != this.field_g) {
-          this.field_k.field_lb = this.e(1, 50);
-          this.field_p.field_lb = this.e(2, 50);
+          this.field_k.field_lb = this.isButtonEnabled(1, 50);
+          this.field_p.field_lb = this.isButtonEnabled(2, 50);
           this.field_k.b(0, param1);
           this.field_p.b(0, param1);
           if (this.field_k.field_sb != 0) {
@@ -216,25 +216,25 @@ final class lr extends hs {
           or.field_d.writeByte(param0 ^ 96, param1);
         }
         if (param0 != 8) {
-          this.e(29, 11);
+          this.isButtonEnabled(29, 11);
         }
     }
 
-    final int c(int param0, int param1) {
+    final int buttonY(int param0, int param1) {
         if (param0 != 342) {
           field_n = (boolean[][]) null;
         }
         return 224;
     }
 
-    final int d(int param0, int param1) {
+    final int buttonX(int param0, int param1) {
         if (param0 <= 106) {
-          this.field_p = (hd) null;
+          this.field_p = (UiLayoutNode) null;
         }
         return 493;
     }
 
-    final void f(int param0, int param1) {
+    final void onButtonClick(int param0, int param1) {
         if (param0 <= 98) {
           return;
         }

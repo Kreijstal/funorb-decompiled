@@ -11,7 +11,7 @@ final class uv {
     static String[] field_d;
     static qb field_i;
     private long field_b;
-    hd field_g;
+    UiLayoutNode field_g;
     static boolean field_f;
     String field_k;
     private int field_l;
@@ -20,7 +20,7 @@ final class uv {
 
     private final boolean c(int param0, int param1, int param2) {
         if (param2 == 17) {
-          ck.field_b = new rb(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, hs.field_d, ul.field_c, this.field_k, this.field_b);
+          ck.field_b = new rb(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, this.field_k, this.field_b);
           return true;
         }
         if (param0 == -8985) {
@@ -142,10 +142,10 @@ final class uv {
               this.field_j.a(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_f, new String[]{var5}));
             } else {
               if (!param0) {
-                this.field_j.a(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, va.field_F, new String[]{var5}));
+                this.field_j.a(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, PlayingView.field_F, new String[]{var5}));
               } else {
                 if (!var7.field_Fb) {
-                  this.field_j.a(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, va.field_F, new String[]{var5}));
+                  this.field_j.a(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, PlayingView.field_F, new String[]{var5}));
                 } else {
                   this.field_j.a(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, om.field_Ab, new String[]{var5}));
                   this.field_j.a(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ji.field_Eb, new String[]{var5}));
@@ -683,7 +683,7 @@ final class uv {
         return true;
     }
 
-    uv(hd param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    uv(UiLayoutNode param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_j = new gu(su.field_b);
           this.field_k = param2;

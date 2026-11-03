@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hq {
-    static hd field_c;
+    static UiLayoutNode field_c;
     static nm[] field_b;
     static boolean field_a;
     static int field_d;

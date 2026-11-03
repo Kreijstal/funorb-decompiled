@@ -3,25 +3,25 @@
  */
 final class MySquadScreen extends TeamManagementScreen {
     private SquadGridWidget field_L;
-    private hd field_X;
-    private hd field_W;
+    private UiLayoutNode field_X;
+    private UiLayoutNode field_W;
     private pu[] field_T;
-    private hd field_R;
+    private UiLayoutNode field_R;
     static String field_F;
-    private hd field_P;
+    private UiLayoutNode field_P;
     private int field_S;
     static String field_O;
     static Sprite[] field_U;
-    private hd[] field_K;
-    static hd field_N;
-    private hd field_Q;
+    private UiLayoutNode[] field_K;
+    static UiLayoutNode field_N;
+    private UiLayoutNode field_Q;
     static String field_M;
-    private hd field_V;
-    private hd field_Y;
+    private UiLayoutNode field_V;
+    private UiLayoutNode field_Y;
     static String field_J;
-    private hd field_I;
+    private UiLayoutNode field_I;
     static ResourceArchive field_H;
-    private hd field_G;
+    private UiLayoutNode field_G;
 
     final void enterScreen(int param0, int param1, boolean param2) {
         int var4 = 0;
@@ -29,7 +29,7 @@ final class MySquadScreen extends TeamManagementScreen {
         super.enterScreen(param0, param1, param2);
         this.field_V.field_jb = new IntrusiveDeque();
         this.field_L = new SquadGridWidget(ic.field_h);
-        this.field_V.a((byte) -113, (hd) (this.field_L));
+        this.field_V.addChild((byte) -113, (UiLayoutNode) (this.field_L));
         this.field_V.a(true, 12 + this.field_L.field_q, 3, 60, 12 + this.field_L.field_mb + 30);
         this.field_L.field_J = 36;
         this.field_L.field_s = 6;
@@ -59,7 +59,7 @@ final class MySquadScreen extends TeamManagementScreen {
     final void refreshSelectedPlayer(byte param0) {
         this.field_L.a(param0 - 36);
         if (param0 != 84) {
-          this.field_R = (hd) null;
+          this.field_R = (UiLayoutNode) null;
         }
         if (this.field_L.field_Fb != -1 &&
           this.field_L.j((byte) 21).field_Eb.isEmpty(-2)) {
@@ -70,9 +70,9 @@ final class MySquadScreen extends TeamManagementScreen {
 
     final static int c(int param0, int param1) {
         if (param0 >= -15) {
-          field_N = (hd) null;
+          field_N = (UiLayoutNode) null;
         }
-        return ((int)((double)InstrumentNoteMask.field_i * (-hd.field_K + (double)param1)) >> 8) + 320;
+        return ((int)((double)InstrumentNoteMask.field_i * (-UiLayoutNode.field_K + (double)param1)) >> 8) + 320;
     }
 
     public static void f(int param0) {
@@ -143,7 +143,7 @@ final class MySquadScreen extends TeamManagementScreen {
         String stackIn_22_0 = null;
         int stackIn_61_0 = 0;
         int stackIn_61_1 = 0;
-        hd var3;
+        UiLayoutNode var3;
         SquadSlotWidget var4;
         BinaryBitmapFont var5;
         String var6;
@@ -167,7 +167,7 @@ final class MySquadScreen extends TeamManagementScreen {
         int var22;
         pu[] var23;
         pu var24;
-        hd var25;
+        UiLayoutNode var25;
         PlayerStats var26;
         pu var27;
         ReceivedAuctionItem var28;
@@ -180,11 +180,11 @@ final class MySquadScreen extends TeamManagementScreen {
         super.drawScreen(param0, param1);
         var25 = this.field_Y;
         SoftwareRasterizer.a(var25.field_F, var25.field_T, var25.field_q, var25.field_mb, 65793, 96);
-        var3 = (hd) (this.field_Y.field_jb.g(24009));
+        var3 = (UiLayoutNode) (this.field_Y.field_jb.g(24009));
         while (var3 != null) {
           SoftwareRasterizer.a(var3.field_F, var3.field_T, var3.field_q, var3.field_mb, 10, 65793, 96);
           un.field_d.a(var3.field_E, var3.field_F + 10, var3.field_T + 20, 16777215, -1);
-          var3 = (hd) (this.field_Y.field_jb.c(33));
+          var3 = (UiLayoutNode) (this.field_Y.field_jb.c(33));
         }
         boolean decompiledFrameRemainder0 = true;
         SoftwareRasterizer.darkenRectangle(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
@@ -289,7 +289,7 @@ final class MySquadScreen extends TeamManagementScreen {
                       }
                     }
                   }
-                  var5.c(fk.field_j[var17_int], -7 + var18, var19, var21, -1);
+                  var5.c(WaitForPlayersView.field_j[var17_int], -7 + var18, var19, var21, -1);
                   var5.a(var20, var18, var19, 16777215, -1);
                 }
                 var17Lifetime1 = SquadSlotWidget.field_Bb;
@@ -330,7 +330,7 @@ final class MySquadScreen extends TeamManagementScreen {
 
     private final void rebuildPlayerPanel(int param0) {
         int var7 = 0;
-        hd stackIn_8_0 = null;
+        UiLayoutNode stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
         String stackIn_15_0 = null;
         int var3;
@@ -356,10 +356,10 @@ final class MySquadScreen extends TeamManagementScreen {
             stackIn_8_0 = this.field_Q;
             stackIn_9_1 = !(var13.field_Gb);
             stackIn_8_0.field_lb = stackIn_9_1;
-            this.field_P.a((byte) -106, this.field_Q);
+            this.field_P.addChild((byte) -106, this.field_Q);
           }
           var5 = var13.field_Eb;
-          this.field_K = new hd[var5.trinketIds.length];
+          this.field_K = new UiLayoutNode[var5.trinketIds.length];
           this.field_T = new pu[var5.trinketIds.length];
           var6 = this.field_X.field_q - 150 * (-1 + var5.trinketIds.length) >> 1;
           for (var7 = 0; var7 < this.field_K.length; var7++) {
@@ -375,14 +375,14 @@ final class MySquadScreen extends TeamManagementScreen {
             var11 = var6 + var7 * 150;
             var9.field_s = var11 - (var9.field_q >> 1);
             var9.field_J = 36;
-            this.field_X.a((byte) -113, (hd) (var9));
+            this.field_X.addChild((byte) -113, (UiLayoutNode) (var9));
             this.field_K[var7].field_s = -(this.field_K[var7].field_q >> 1) + var11;
             this.field_K[var7].field_J = 90;
             this.field_T[var7] = var9;
-            this.field_X.a((byte) -117, (hd) (this.field_T[var7]));
+            this.field_X.addChild((byte) -117, (UiLayoutNode) (this.field_T[var7]));
             if (!var13.field_Gb &&
               !TextFieldValidator.f(-1)) {
-              this.field_X.a((byte) -108, this.field_K[var7]);
+              this.field_X.addChild((byte) -108, this.field_K[var7]);
             }
           }
         }
@@ -390,18 +390,18 @@ final class MySquadScreen extends TeamManagementScreen {
     }
 
     final void buildWidgets(int param0) {
-        this.field_V = new hd();
-        this.field_Y = new hd();
+        this.field_V = new UiLayoutNode();
+        this.field_Y = new UiLayoutNode();
         this.field_Y.a(true, 452, 180, 60, 358);
-        this.field_I = new hd();
+        this.field_I = new UiLayoutNode();
         this.field_I.a(true, 234, 6, 6, 84);
-        this.field_G = new hd();
+        this.field_G = new UiLayoutNode();
         this.field_G.a(true, 234, 6, 96, 124);
-        this.field_W = new hd();
+        this.field_W = new UiLayoutNode();
         this.field_W.a(true, 200, 246, 6, 100);
-        this.field_P = new hd();
+        this.field_P = new UiLayoutNode();
         this.field_P.a(true, 200, 246, 112, 108);
-        this.field_X = new hd();
+        this.field_X = new UiLayoutNode();
         this.field_X.a(true, 440, 6, 226, 126);
         if (param0 != -38) {
           this.field_L = (SquadGridWidget) null;
@@ -412,24 +412,24 @@ final class MySquadScreen extends TeamManagementScreen {
         this.field_G.field_E = ca.field_d.toLowerCase();
         this.field_X.field_E = mp.field_k.toLowerCase();
         this.field_Q = eo.a(NodeHashTableIterator.field_c, 7126504);
-        this.field_K = new hd[]{};
+        this.field_K = new UiLayoutNode[]{};
         this.field_T = new pu[]{};
         this.field_Q.field_s = -this.field_Q.field_q + this.field_P.field_q >> 1;
         this.field_Q.field_J = 66;
-        this.field_Y.a((byte) -115, this.field_X);
-        this.field_Y.a((byte) -109, this.field_I);
-        this.field_Y.a((byte) -126, this.field_W);
-        this.field_Y.a((byte) -115, this.field_P);
-        this.field_Y.a((byte) -104, this.field_G);
-        this.field_R = new hd();
+        this.field_Y.addChild((byte) -115, this.field_X);
+        this.field_Y.addChild((byte) -109, this.field_I);
+        this.field_Y.addChild((byte) -126, this.field_W);
+        this.field_Y.addChild((byte) -115, this.field_P);
+        this.field_Y.addChild((byte) -104, this.field_G);
+        this.field_R = new UiLayoutNode();
         this.field_R.a(true, 640, 640, 0, 480);
-        this.field_R.a((byte) -125, this.field_V);
-        this.field_R.a((byte) -109, this.field_Y);
+        this.field_R.addChild((byte) -125, this.field_V);
+        this.field_R.addChild((byte) -109, this.field_Y);
     }
 
     final int buttonCenterX(int param0, int param1) {
         if (param1 != -22667) {
-          this.field_V = (hd) null;
+          this.field_V = (UiLayoutNode) null;
         }
         return param0 != 1 ? 320 : 600;
     }

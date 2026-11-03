@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf extends hd {
+final class cf extends UiLayoutNode {
     private String field_Hb;
     boolean field_Fb;
     static int field_Db;
     int field_Ab;
     int field_yb;
     String field_Bb;
-    static hd field_Gb;
+    static UiLayoutNode field_Gb;
     private int field_Jb;
     static String field_Ib;
     static String field_Cb;

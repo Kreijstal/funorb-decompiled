@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uq {
-    static hd field_a;
-    static hd field_b;
+    static UiLayoutNode field_a;
+    static UiLayoutNode field_b;
     static ff field_d;
     static int field_c;
     static String field_e;

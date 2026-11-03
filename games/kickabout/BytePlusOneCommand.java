@@ -10,7 +10,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
     static int[] field_E;
     static boolean field_C;
 
-    final static void a(hd param0, boolean param1, np param2, int param3, String param4, int[] param5, long param6, String param7, int param8) {
+    final static void a(UiLayoutNode param0, boolean param1, np param2, int param3, String param4, int[] param5, long param6, String param7, int param8) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -69,7 +69,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         }
     }
 
-    final static void a(BitmapFont param0, hd param1, hd param2, na param3, hd param4, boolean param5, hd param6, hd param7, hd param8, hd param9, int param10, hd param11) {
+    final static void a(BitmapFont param0, UiLayoutNode param1, UiLayoutNode param2, na param3, UiLayoutNode param4, boolean param5, UiLayoutNode param6, UiLayoutNode param7, UiLayoutNode param8, UiLayoutNode param9, int param10, UiLayoutNode param11) {
         String stackIn_13_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_41_0 = null;
@@ -100,7 +100,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         int[] var14 = null;
         int[] var15 = null;
         Sprite[] var16 = null;
-        hd var17 = null;
+        UiLayoutNode var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
@@ -130,26 +130,26 @@ final class BytePlusOneCommand extends ConsoleCommand {
           var13[2] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          g.field_a = new hd(0L, param7);
-          uf.field_b = new hd(0L, param6);
-          g.field_a.a((byte) -121, uf.field_b);
-          var17 = new hd(0L, (hd) null);
+          g.field_a = new UiLayoutNode(0L, param7);
+          uf.field_b = new UiLayoutNode(0L, param6);
+          g.field_a.addChild((byte) -121, uf.field_b);
+          var17 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var17.field_jb = new IntrusiveDeque();
           pw.field_G = new np(0L, var17, param1, param3);
-          uf.field_b.a((byte) -110, (hd) (pw.field_G));
-          DebugConsole.field_z = new hd(0L, param11);
-          uf.field_b.a((byte) -128, DebugConsole.field_z);
-          ei.field_b = new hd(0L, param9);
+          uf.field_b.addChild((byte) -110, (UiLayoutNode) (pw.field_G));
+          DebugConsole.field_z = new UiLayoutNode(0L, param11);
+          uf.field_b.addChild((byte) -128, DebugConsole.field_z);
+          ei.field_b = new UiLayoutNode(0L, param9);
           ei.field_b.field_X = FootballerAgent.field_i;
-          DebugConsole.field_z.a((byte) -116, ei.field_b);
-          DebugConsole.field_z.b(false);
-          ij.field_s = new hd(0L, (hd) null);
+          DebugConsole.field_z.addChild((byte) -116, ei.field_b);
+          DebugConsole.field_z.invalidateChildren(false);
+          ij.field_s = new UiLayoutNode(0L, (UiLayoutNode) null);
           ij.field_s.field_R = var16;
-          DebugConsole.field_z.a((byte) -106, ij.field_s);
-          ds.field_a = new hd[5];
-          ValidatedTextWidget.field_W = new hd[5];
-          BlackFadeScreen.field_m = new hd[5];
-          SocketConnector.field_b = new hd[5];
+          DebugConsole.field_z.addChild((byte) -106, ij.field_s);
+          ds.field_a = new UiLayoutNode[5];
+          ValidatedTextWidget.field_W = new UiLayoutNode[5];
+          BlackFadeScreen.field_m = new UiLayoutNode[5];
+          SocketConnector.field_b = new UiLayoutNode[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -173,18 +173,18 @@ final class BytePlusOneCommand extends ConsoleCommand {
                 }
               }
               if (decompiledFrameRemainder0) {
-                ValidatedTextWidget.field_W[var18] = new hd(0L, param4);
-                BlackFadeScreen.field_m[var18] = new hd(0L, vv.field_o, var19);
-                SocketConnector.field_b[var18] = new hd(0L, (hd) null);
+                ValidatedTextWidget.field_W[var18] = new UiLayoutNode(0L, param4);
+                BlackFadeScreen.field_m[var18] = new UiLayoutNode(0L, vv.field_o, var19);
+                SocketConnector.field_b[var18] = new UiLayoutNode(0L, (UiLayoutNode) null);
                 SocketConnector.field_b[var18].field_p = 1;
-                ds.field_a[var18] = new hd(0L, vv.field_o);
+                ds.field_a[var18] = new UiLayoutNode(0L, vv.field_o);
                 ds.field_a[var18].field_p = 1;
-                ValidatedTextWidget.field_W[var18].a((byte) -126, BlackFadeScreen.field_m[var18]);
-                ValidatedTextWidget.field_W[var18].a((byte) -113, SocketConnector.field_b[var18]);
-                ValidatedTextWidget.field_W[var18].a((byte) -127, ds.field_a[var18]);
-                ValidatedTextWidget.field_W[var18].b(false);
-                g.field_a.a((byte) -104, ValidatedTextWidget.field_W[var18]);
-                hs.field_e = hs.field_e + 1;
+                ValidatedTextWidget.field_W[var18].addChild((byte) -126, BlackFadeScreen.field_m[var18]);
+                ValidatedTextWidget.field_W[var18].addChild((byte) -113, SocketConnector.field_b[var18]);
+                ValidatedTextWidget.field_W[var18].addChild((byte) -127, ds.field_a[var18]);
+                ValidatedTextWidget.field_W[var18].invalidateChildren(false);
+                g.field_a.addChild((byte) -104, ValidatedTextWidget.field_W[var18]);
+                MatchPhaseView.field_e = MatchPhaseView.field_e + 1;
               }
               var18++;
               continue;
@@ -192,9 +192,9 @@ final class BytePlusOneCommand extends ConsoleCommand {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            uq.field_a = new hd(0L, param2);
+            uq.field_a = new UiLayoutNode(0L, param2);
             uq.field_a.field_E = ig.field_i;
-            g.field_a.a((byte) -104, uq.field_a);
+            g.field_a.addChild((byte) -104, uq.field_a);
             stackIn_31_0 = oh.b(-14954) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&
@@ -308,7 +308,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         try {
           field_G = null;
           if (param0 != 52) {
-            BytePlusOneCommand.a((BitmapFont) null, (hd) null, (hd) null, (na) null, (hd) null, true, (hd) null, (hd) null, (hd) null, (hd) null, -39, (hd) null);
+            BytePlusOneCommand.a((BitmapFont) null, (UiLayoutNode) null, (UiLayoutNode) null, (na) null, (UiLayoutNode) null, true, (UiLayoutNode) null, (UiLayoutNode) null, (UiLayoutNode) null, (UiLayoutNode) null, -39, (UiLayoutNode) null);
           }
           field_D = null;
           field_E = null;

@@ -252,7 +252,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(ob param0, int param1, int param2) {
+    final static void a(RenderedBall param0, int param1, int param2) {
         try {
           if (param1 != 256) {
             String var4 = (String) null;
@@ -357,14 +357,14 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
                 RandomAccessCacheFile.field_i[var11Lifetime1][var12Lifetime1][var25] = 0;
                 GameModesHelpScreen.field_F[var11Lifetime1][var12Lifetime1][var25] = 0;
                 IntrusiveDeque.field_g[var11Lifetime1][var12Lifetime1][var25] = 0;
-                gm.field_fb[var11Lifetime1][var12Lifetime1][var25] = 0;
+                RenderedFootballer.field_fb[var11Lifetime1][var12Lifetime1][var25] = 0;
                 IntTripleCommand.field_C[var11Lifetime1][var12Lifetime1][var25] = 0.0;
                 var25++;
               }
             }
           }
-          wp.a(IntTripleCommand.field_C, RandomAccessCacheFile.field_i, GameModesHelpScreen.field_F, 121, gm.field_fb, IntrusiveDeque.field_g);
-          ld.a(RandomAccessCacheFile.field_i, gm.field_fb, IntTripleCommand.field_C, GameModesHelpScreen.field_F, IntrusiveDeque.field_g, false);
+          wp.a(IntTripleCommand.field_C, RandomAccessCacheFile.field_i, GameModesHelpScreen.field_F, 121, RenderedFootballer.field_fb, IntrusiveDeque.field_g);
+          ld.a(RandomAccessCacheFile.field_i, RenderedFootballer.field_fb, IntTripleCommand.field_C, GameModesHelpScreen.field_F, IntrusiveDeque.field_g, false);
           var14 = var26[0];
           var26[0].field_k = 0;
           var15 = var26[0];
@@ -427,7 +427,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             } else {
               var19 = NameSuggestionsPanel.a(var26[var12Lifetime3], GameModesHelpScreen.field_F, true) / var9Lifetime1 & 255;
               var20 = NameSuggestionsPanel.a(var26[var12Lifetime3], IntrusiveDeque.field_g, true) / var9Lifetime1 & 255;
-              var21 = NameSuggestionsPanel.a(var26[var12Lifetime3], gm.field_fb, param0) / var9Lifetime1 & 255;
+              var21 = NameSuggestionsPanel.a(var26[var12Lifetime3], RenderedFootballer.field_fb, param0) / var9Lifetime1 & 255;
               var18[var12Lifetime3] = var21 + (var19 << 16) + (var20 << 8);
             }
           }

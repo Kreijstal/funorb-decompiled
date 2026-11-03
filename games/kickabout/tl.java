@@ -76,7 +76,7 @@ final class tl {
               break;
             }
             if (var4 == null) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
               return;
             }
             var5 = var28.readUnsignedByte((byte) -128);
@@ -172,14 +172,14 @@ final class tl {
               break;
             }
             if (var4_ref == null) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
               return;
             }
             var4_ref.c((byte) -109);
             return;
           }
           UnreadMessagesScreen.a("HS1: " + tr.b(0), (Throwable) null, 1);
-          lr.b((byte) -116);
+          FormationView.b((byte) -116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

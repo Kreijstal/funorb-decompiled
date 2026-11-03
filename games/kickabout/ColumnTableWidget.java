@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ColumnTableWidget extends hd {
+class ColumnTableWidget extends UiLayoutNode {
     int field_Db;
     static int field_Gb;
     sr[] field_zb;
     static String field_yb;
     private im[] field_Fb;
     private int field_Eb;
-    private hd field_Ab;
+    private UiLayoutNode field_Ab;
     private tk field_Cb;
-    private hd[] field_Bb;
+    private UiLayoutNode[] field_Bb;
 
     final void a(boolean param0, boolean param1) {
         int var3_int = 0;
@@ -143,13 +143,13 @@ class ColumnTableWidget extends hd {
           var5 = var11;
           for (var6 = 0; var6 < var11.length; var6++) {
             var7_ref = var11[var6];
-            this.field_Ab.a((byte) -124, (hd) (var7_ref));
+            this.field_Ab.addChild((byte) -124, (UiLayoutNode) (var7_ref));
           }
           var5_int = 5 + param0 * (5 + this.field_Eb);
           var6_ref_im__ = this.field_Fb;
           for (var7_int = 0; var7_int < var6_ref_im__.length; var7_int++) {
             var8_ref_im = var6_ref_im__[var7_int];
-            ((hd) ((Object) var8_ref_im)).field_J = var5_int;
+            ((UiLayoutNode) ((Object) var8_ref_im)).field_J = var5_int;
             var5_int = var5_int + (5 + this.field_Eb);
           }
           var6Lifetime1 = 0;
@@ -166,7 +166,7 @@ class ColumnTableWidget extends hd {
           var7 = this.field_Fb;
           for (var8 = 0; var8 < var12.length; var8++) {
             var9 = var12[var8];
-            ((hd) ((Object) var9)).field_q = var6Lifetime1;
+            ((UiLayoutNode) ((Object) var9)).field_q = var6Lifetime1;
           }
           if (this.field_Fb.length == 0) {
             this.field_Ab.field_mb = 0;
@@ -238,7 +238,7 @@ class ColumnTableWidget extends hd {
           var4_ref_im__ = this.field_Fb;
           for (var5 = 0; var5 < var4_ref_im__.length; var5++) {
             var6 = var4_ref_im__[var5];
-            ((hd) ((Object) var6)).field_J = var3_int;
+            ((UiLayoutNode) ((Object) var6)).field_J = var3_int;
             var3_int = var3_int + (5 + this.field_Eb);
           }
           if (param1 <= 30) {
@@ -292,7 +292,7 @@ class ColumnTableWidget extends hd {
         sr var10;
         Sprite var11;
         int var12;
-        hd var13;
+        UiLayoutNode var13;
         im[] var14;
         int var2Lifetime1;
         int var4Lifetime1;
@@ -306,7 +306,7 @@ class ColumnTableWidget extends hd {
         SoftwareRasterizer.a(this.field_F, this.field_T + 20, this.field_q, this.field_mb - 20, 16777215, 60);
         if (this.field_Cb.field_Eb.isLinked((byte) -113)) {
           var2_ref_ji = this.field_Cb.field_Eb;
-          SoftwareRasterizer.darkenRectangle(3 + ((hd) ((Object) var2_ref_ji)).field_F, ((hd) ((Object) var2_ref_ji)).field_T, ((hd) ((Object) var2_ref_ji)).field_q - 6, ((hd) ((Object) var2_ref_ji)).field_mb);
+          SoftwareRasterizer.darkenRectangle(3 + ((UiLayoutNode) ((Object) var2_ref_ji)).field_F, ((UiLayoutNode) ((Object) var2_ref_ji)).field_T, ((UiLayoutNode) ((Object) var2_ref_ji)).field_q - 6, ((UiLayoutNode) ((Object) var2_ref_ji)).field_mb);
         }
         for (var2 = 0; var2 < this.field_Bb.length; var2++) {
           var13 = this.field_Bb[var2];
@@ -402,7 +402,7 @@ class ColumnTableWidget extends hd {
 
     final int i(byte param0) {
         if (param0 != -124) {
-          this.field_Ab = (hd) null;
+          this.field_Ab = (UiLayoutNode) null;
         }
         return Math.abs(this.field_Ab.field_J / (5 + this.field_Eb));
     }
@@ -420,16 +420,16 @@ class ColumnTableWidget extends hd {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        hd[] var6 = null;
-        hd var8 = null;
+        UiLayoutNode[] var6 = null;
+        UiLayoutNode var8 = null;
         this.field_Db = -1;
         try {
           this.field_Eb = param3;
           this.field_zb = param2;
-          this.field_Bb = new hd[param0.length];
+          this.field_Bb = new UiLayoutNode[param0.length];
           var5_int = 5;
           for (var6_int = 0; var6_int < this.field_Bb.length; var6_int++) {
-            this.field_Bb[var6_int] = new hd();
+            this.field_Bb[var6_int] = new UiLayoutNode();
             this.field_Bb[var6_int].a(true, param0[var6_int], var5_int, 0, 20);
             this.field_Bb[var6_int].field_E = param1[var6_int];
             var5_int = var5_int + param0[var6_int];
@@ -437,11 +437,11 @@ class ColumnTableWidget extends hd {
           var6 = this.field_Bb;
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];
-            this.a((byte) -106, var8);
+            this.addChild((byte) -106, var8);
           }
-          this.field_Ab = new hd();
-          this.field_Cb = new tk(0L, this.field_Ab, new hd(), rr.field_b);
-          this.a((byte) -110, (hd) (this.field_Cb));
+          this.field_Ab = new UiLayoutNode();
+          this.field_Cb = new tk(0L, this.field_Ab, new UiLayoutNode(), rr.field_b);
+          this.addChild((byte) -110, (UiLayoutNode) (this.field_Cb));
           this.field_q = 15 + (var5_int + 10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

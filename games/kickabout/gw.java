@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gw {
-    static hd field_a;
+    static UiLayoutNode field_a;
     static String field_e;
     static vn[] field_f;
     static Sprite[] field_d;
@@ -153,9 +153,9 @@ final class gw {
     }
 
     final static void a(int param0) {
-        NumericDateInputWidget.field_J = new bo(tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, hs.field_d, ul.field_c);
+        NumericDateInputWidget.field_J = new bo(tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c);
         if (param0 != 8) {
-          field_a = (hd) null;
+          field_a = (UiLayoutNode) null;
         }
     }
 

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PitchOptionTile extends hd implements lv {
+final class PitchOptionTile extends UiLayoutNode implements lv {
     private ClubState field_Cb;
     int field_Db;
     String field_Eb;
     int field_zb;
-    hd field_Ab;
+    UiLayoutNode field_Ab;
     static ValidationState field_Bb;
     static int field_yb;
 
@@ -311,7 +311,7 @@ final class PitchOptionTile extends hd implements lv {
         if (param0 == -29050) {
           return this.field_Cb.field_a[this.field_Db][this.field_zb];
         }
-        this.field_Ab = (hd) null;
+        this.field_Ab = (UiLayoutNode) null;
         return this.field_Cb.field_a[this.field_Db][this.field_zb];
     }
 
@@ -675,15 +675,15 @@ final class PitchOptionTile extends hd implements lv {
     }
 
     final void c(int param0, boolean param1) {
-        hd stackIn_9_0 = null;
+        UiLayoutNode stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        hd stackIn_34_0 = null;
+        UiLayoutNode stackIn_34_0 = null;
         boolean stackIn_35_1 = false;
-        hd stackIn_59_0 = null;
+        UiLayoutNode stackIn_59_0 = null;
         boolean stackIn_60_1 = false;
         int stackIn_78_0 = 0;
         String stackIn_79_1 = null;
-        hd stackIn_98_0 = null;
+        UiLayoutNode stackIn_98_0 = null;
         boolean stackIn_99_1 = false;
         int var3;
         int var4;
@@ -728,7 +728,7 @@ final class PitchOptionTile extends hd implements lv {
             if (var3 == 0 &&
               var5 == 0) {
               this.field_Ab = eo.b();
-              this.a((byte) -123, this.field_Ab);
+              this.addChild((byte) -123, this.field_Ab);
               this.field_Ab.field_J = (-this.field_Ab.field_J + this.field_mb >> 1) - 3;
               this.field_Ab.field_s = -this.field_Ab.field_q + this.field_q >> 1;
             }
@@ -763,7 +763,7 @@ final class PitchOptionTile extends hd implements lv {
             if (var3 == 0 &&
               var5 == 0) {
               this.field_Ab = eo.b();
-              this.a((byte) -123, this.field_Ab);
+              this.addChild((byte) -123, this.field_Ab);
               this.field_Ab.field_J = (-this.field_Ab.field_J + this.field_mb >> 1) - 3;
               this.field_Ab.field_s = -this.field_Ab.field_q + this.field_q >> 1;
             }
@@ -853,7 +853,7 @@ final class PitchOptionTile extends hd implements lv {
           if (var3 == 0 &&
             var5 == 0) {
             this.field_Ab = eo.b();
-            this.a((byte) -123, this.field_Ab);
+            this.addChild((byte) -123, this.field_Ab);
             this.field_Ab.field_J = (-this.field_Ab.field_J + this.field_mb >> 1) - 3;
             this.field_Ab.field_s = -this.field_Ab.field_q + this.field_q >> 1;
           }

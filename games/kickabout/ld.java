@@ -11,7 +11,7 @@ final class ld {
     static byte[] field_g;
     static int field_h;
     static int[] field_e;
-    static gm field_f;
+    static RenderedFootballer field_f;
 
     final static void a(byte param0, int param1, int param2) {
         int var4_int = 0;

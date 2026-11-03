@@ -9,16 +9,16 @@ final class rt extends i {
     private PlayerStats field_J;
     private int[] field_M;
     static vg field_F;
-    private gm field_I;
-    private hd field_L;
+    private RenderedFootballer field_I;
+    private UiLayoutNode field_L;
     static String field_K;
-    private hd[] field_O;
+    private UiLayoutNode[] field_O;
 
     final void a(int param0, boolean param1) {
         int var3;
         int var4;
         int stackIn_8_1 = 0;
-        hd stackIn_12_0 = null;
+        UiLayoutNode stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
         int var3Lifetime1;
         var4 = Kickabout.field_G;
@@ -54,7 +54,7 @@ final class rt extends i {
     rt(int param0, int param1, PlayerStats param2) {
         super(20);
         int var4_int = 0;
-        hd stackIn_5_0 = null;
+        UiLayoutNode stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
         Object stackIn_10_0;
         PlayerStats stackIn_10_1;
@@ -78,18 +78,18 @@ final class rt extends i {
           this.field_J = param2;
           this.field_P = param0;
           this.field_N = param1;
-          this.field_L = new hd();
+          this.field_L = new UiLayoutNode();
           this.field_L.field_q = 150;
-          this.field_O = new hd[3];
+          this.field_O = new UiLayoutNode[3];
           this.field_M = new int[]{this.field_J.power, this.field_J.speed, this.field_J.tackle};
           this.field_L.field_mb = 110;
           for (var4_int = 0; 3 > var4_int; var4_int++) {
-            this.field_O[var4_int] = new hd();
+            this.field_O[var4_int] = new UiLayoutNode();
             this.field_O[var4_int].a(true, 150, 0, var4_int * 40, 30);
             stackIn_5_0 = this.field_O[var4_int];
             stackIn_6_1 = !(this.field_M[var4_int] >= 100);
             stackIn_5_0.field_lb = stackIn_6_1;
-            this.field_L.a((byte) -127, this.field_O[var4_int]);
+            this.field_L.addChild((byte) -127, this.field_O[var4_int]);
           }
           regionExit1: {
             var6 = GameLoopApplet.field_E;

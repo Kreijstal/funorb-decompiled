@@ -4,8 +4,8 @@
 final class ip {
     static String[] field_d;
     static int field_a;
-    static gm[] field_b;
-    static hd field_c;
+    static RenderedFootballer[] field_b;
+    static UiLayoutNode field_c;
 
     public static void a(int param0) {
         if (param0 > -60) {

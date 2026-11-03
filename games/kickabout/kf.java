@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends hd {
-    private hd[] field_Ab;
+final class kf extends UiLayoutNode {
+    private UiLayoutNode[] field_Ab;
     static String field_yb;
     static int field_Eb;
-    private hd[] field_Bb;
+    private UiLayoutNode[] field_Bb;
     int field_Db;
-    private hd field_Cb;
+    private UiLayoutNode field_Cb;
     static String field_zb;
 
     final static void a(int param0, byte param1) {
@@ -47,8 +47,8 @@ final class kf extends hd {
         this.a(param3, param4, 10000);
     }
 
-    kf(long param0, hd param1, String[] param2, hd param3, hd[] param4, int param5) {
-        super(param0, (hd) null);
+    kf(long param0, UiLayoutNode param1, String[] param2, UiLayoutNode param3, UiLayoutNode[] param4, int param5) {
+        super(param0, (UiLayoutNode) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -61,24 +61,24 @@ final class kf extends hd {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        hd var9 = null;
+        UiLayoutNode var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Bb = new hd[param2.length];
-          this.field_Cb = new hd(0L, param3);
+          this.field_Bb = new UiLayoutNode[param2.length];
+          this.field_Cb = new UiLayoutNode(0L, param3);
           this.field_Ab = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new hd(0L, param1);
+            var9 = new UiLayoutNode(0L, param1);
             var9.field_E = param2[var8_int];
             this.field_Bb[var8_int] = var9;
-            this.a((byte) -109, var9);
+            this.addChild((byte) -109, var9);
           }
-          this.a((byte) -124, this.field_Cb);
+          this.addChild((byte) -124, this.field_Cb);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (var11 < param4.length) {
-            this.field_Cb.a((byte) -127, param4[var11]);
+            this.field_Cb.addChild((byte) -127, param4[var11]);
             var11++;
           }
           this.field_Db = param5;
@@ -117,7 +117,7 @@ final class kf extends hd {
     }
 
     private final void a(int param0, int param1, int param2) {
-        hd dupTemp$0 = null;
+        UiLayoutNode dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -145,14 +145,14 @@ final class kf extends hd {
           var8++;
         }
         if (param2 != 10000) {
-          this.field_Ab = (hd[]) null;
+          this.field_Ab = (UiLayoutNode[]) null;
         }
     }
 
     final void h(byte param0) {
         int var2 = 0;
-        hd dupTemp$0 = null;
-        hd dupTemp$1 = null;
+        UiLayoutNode dupTemp$0 = null;
+        UiLayoutNode dupTemp$1 = null;
         int var3;
         var3 = Kickabout.field_G;
         if (param0 < 36) {

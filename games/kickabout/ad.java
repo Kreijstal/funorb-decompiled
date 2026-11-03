@@ -16,7 +16,7 @@ final class ad {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 26300) {
-            stackIn_4_0 = hs.field_b + dg.a((byte) -128, 0, (long)param0, true, vv.field_r);
+            stackIn_4_0 = MatchPhaseView.field_b + dg.a((byte) -128, 0, (long)param0, true, vv.field_r);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -963,7 +963,7 @@ final class ad {
                 }
                 var2 = ib.a("money_symbol", param1 ^ -81);
                 if (var2 != null) {
-                  hs.field_b = BlackFadeScreen.a(var2, true);
+                  MatchPhaseView.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("text_benefits,0", -117);
                 if (var2 != null) {
@@ -1217,11 +1217,11 @@ final class ad {
                 }
                 var2 = ib.a("awesome_exclamation", -116);
                 if (var2 != null) {
-                  gm.field_Q = BlackFadeScreen.a(var2, true);
+                  RenderedFootballer.field_Q = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("yes", -88);
                 if (null != var2) {
-                  ob.field_H = BlackFadeScreen.a(var2, true);
+                  RenderedBall.field_H = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("no", -103);
                 if (var2 != null) {
@@ -2206,7 +2206,7 @@ final class ad {
                 }
                 var2 = ib.a("gameover_won", -96);
                 if (null != var2) {
-                  lr.field_l = BlackFadeScreen.a(var2, true);
+                  FormationView.field_l = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("gameover_lost", -95);
                 if (null != var2) {
@@ -2330,7 +2330,7 @@ final class ad {
                 }
                 var2 = ib.a("beach", -101);
                 if (var2 != null) {
-                  lr.field_j = BlackFadeScreen.a(var2, true);
+                  FormationView.field_j = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("street", -87);
                 if (var2 != null) {
@@ -3200,7 +3200,7 @@ final class ad {
                 }
                 var2 = ib.a("kit_lock_achievement1", -122);
                 if (var2 != null) {
-                  ob.field_R = BlackFadeScreen.a(var2, true);
+                  RenderedBall.field_R = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("kit_lock_achievement2", -127);
                 if (var2 != null) {
@@ -3400,15 +3400,15 @@ final class ad {
                 }
                 var2 = ib.a("management_squad_auctiondata_left,0", -84);
                 if (var2 != null) {
-                  fk.field_j[0] = BlackFadeScreen.a(var2, true);
+                  WaitForPlayersView.field_j[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("management_squad_auctiondata_left,1", -118);
                 if (var2 != null) {
-                  fk.field_j[1] = BlackFadeScreen.a(var2, true);
+                  WaitForPlayersView.field_j[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("management_squad_auctiondata_left,2", param1 ^ -125);
                 if (var2 != null) {
-                  fk.field_j[2] = BlackFadeScreen.a(var2, true);
+                  WaitForPlayersView.field_j[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("management_auctions_no_bids", -118);
                 if (null != var2) {
@@ -3720,37 +3720,37 @@ final class ad {
                 }
                 var2 = ib.a("instructions_gamemodes3,0,0", param1 ^ -113);
                 if (null != var2) {
-                  va.field_y[0][0] = BlackFadeScreen.a(var2, true);
+                  PlayingView.field_y[0][0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemodes3,0,1", -114);
                 if (null != var2) {
-                  va.field_y[0][1] = BlackFadeScreen.a(var2, true);
+                  PlayingView.field_y[0][1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemodes3,0,2", param1 ^ -103);
             }
             void runChunk4() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  va.field_y[0][2] = BlackFadeScreen.a(var2, true);
+                  PlayingView.field_y[0][2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemodes3,0,3", param1 ^ -120);
                 if (null != var2) {
-                  va.field_y[0][3] = BlackFadeScreen.a(var2, true);
+                  PlayingView.field_y[0][3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemodes3,1,0", -108);
                 if (null != var2) {
-                  va.field_y[1][0] = BlackFadeScreen.a(var2, true);
+                  PlayingView.field_y[1][0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemodes3,1,1", param1 ^ -87);
                 if (null != var2) {
-                  va.field_y[1][1] = BlackFadeScreen.a(var2, true);
+                  PlayingView.field_y[1][1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemodes3,1,2", -96);
                 if (var2 != null) {
-                  va.field_y[1][2] = BlackFadeScreen.a(var2, true);
+                  PlayingView.field_y[1][2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemodes3,1,3", -122);
                 if (var2 != null) {
-                  va.field_y[1][3] = BlackFadeScreen.a(var2, true);
+                  PlayingView.field_y[1][3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_league_diamond_division,0", -86);
                 if (var2 != null) {
@@ -4573,7 +4573,7 @@ final class ad {
           }
           dr.field_g = param0;
           LeaguesHelpScreen.field_E.field_jb.b(22997);
-          LeaguesHelpScreen.field_E.a((byte) -105, (hd) (dr.field_g));
+          LeaguesHelpScreen.field_E.addChild((byte) -105, (UiLayoutNode) (dr.field_g));
           if (param1 >= -33) {
             ad.a(47, false, -60);
           }

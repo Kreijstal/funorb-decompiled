@@ -10,10 +10,10 @@ class iv extends DualLinkNode {
         int var20 = 0;
         int var2_int = 0;
         int var3 = 0;
-        hd var4 = null;
-        hd var5 = null;
-        hd var6 = null;
-        hd var7 = null;
+        UiLayoutNode var4 = null;
+        UiLayoutNode var5 = null;
+        UiLayoutNode var6 = null;
+        UiLayoutNode var7 = null;
         MenuButton[] var8 = null;
         int[][] var9 = null;
         int[][] var10 = null;
@@ -41,15 +41,15 @@ class iv extends DualLinkNode {
           var2_int = param0.a(MatchingTextValidator.field_o[16]);
           var3 = param0.a(MatchingTextValidator.field_o[17]);
           DraggableWidget.a(Math.max(var2_int, var3), param0, (byte) -46);
-          var4 = new hd();
+          var4 = new UiLayoutNode();
           var4.field_R = LeaguesScreen.field_B;
-          var5 = new hd();
-          var6 = new hd();
+          var5 = new UiLayoutNode();
+          var6 = new UiLayoutNode();
           var6.field_N = rk.field_g;
-          var7 = new hd();
+          var7 = new UiLayoutNode();
           var7.field_N = rk.field_g.copy();
           var7.field_N.a();
-          ConsolePanel.field_q = new hd();
+          ConsolePanel.field_q = new UiLayoutNode();
           ConsolePanel.field_q.field_y = 14540253;
           ConsolePanel.field_q.field_p = 1;
           ConsolePanel.field_q.field_A = 1;
@@ -334,7 +334,7 @@ class iv extends DualLinkNode {
         var8 = Kickabout.field_G;
         try {
           if (param2 == null) {
-            stackIn_4_0 = wb.field_m;
+            stackIn_4_0 = TeamSelectionView.field_m;
             return stackIn_4_0;
           }
           var3_int = param2.length();
@@ -368,10 +368,10 @@ class iv extends DualLinkNode {
               stackIn_19_0 = tb.field_r;
               return stackIn_19_0;
             }
-            stackIn_14_0 = wb.field_m;
+            stackIn_14_0 = TeamSelectionView.field_m;
             return stackIn_14_0;
           }
-          stackIn_9_0 = wb.field_m;
+          stackIn_9_0 = TeamSelectionView.field_m;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

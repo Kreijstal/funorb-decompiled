@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gg extends hd {
+final class gg extends UiLayoutNode {
     int field_Cb;
-    hd field_Ab;
+    UiLayoutNode field_Ab;
     String field_Gb;
     String field_yb;
-    hd field_Bb;
+    UiLayoutNode field_Bb;
     String field_zb;
     String field_Eb;
     static int field_Db;
-    hd field_Fb;
+    UiLayoutNode field_Fb;
 
     final static void a(int param0, int param1, BallAgent param2) {
         int[] stackIn_3_0;
@@ -102,11 +102,11 @@ final class gg extends hd {
     }
 
     gg() {
-        super(0L, (hd) null);
+        super(0L, (UiLayoutNode) null);
     }
 
     final static void h(byte param0) {
-        hd.field_K = CachedArchiveSource.field_C;
+        UiLayoutNode.field_K = CachedArchiveSource.field_C;
         InstrumentNoteMask.field_f = PlayArea.field_d;
         jr.field_Gb = AuctionLogEntry.field_f;
         PlayerStats.field_f = 0.0;

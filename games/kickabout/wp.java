@@ -27,12 +27,12 @@ final class wp {
         vu[] array$1 = null;
         vu[] array$2 = null;
         int var19 = 0;
-        hd stackIn_7_0;
-        hd stackIn_7_1;
+        UiLayoutNode stackIn_7_0;
+        UiLayoutNode stackIn_7_1;
         long stackIn_7_2;
-        hd stackIn_7_3;
-        hd stackIn_8_0 = null;
-        hd stackIn_8_1 = null;
+        UiLayoutNode stackIn_7_3;
+        UiLayoutNode stackIn_8_0 = null;
+        UiLayoutNode stackIn_8_1 = null;
         String stackIn_8_4 = null;
         RuntimeException stackIn_74_0 = null;
         StringBuilder stackIn_74_1 = null;
@@ -59,15 +59,15 @@ final class wp {
         String stackIn_105_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        hd var16 = null;
+        UiLayoutNode var16 = null;
         int var17_int = 0;
-        hd var17 = null;
+        UiLayoutNode var17 = null;
         int var18 = 0;
         Object var19_ref = null;
         Object var20 = null;
         int var21 = 0;
-        hd var23 = null;
-        hd var24 = null;
+        UiLayoutNode var23 = null;
+        UiLayoutNode var24 = null;
         int var18Lifetime1;
         int var18Lifetime2;
         int var17_intLifetime1;
@@ -98,36 +98,36 @@ final class wp {
           WidgetContainer.field_w[3] = bq.field_b;
           WidgetContainer.field_w[2] = bl.field_h;
           WidgetContainer.field_w[1] = mn.field_d;
-          mc.field_d = new hd(0L, (hd) null);
-          id.field_s = new hd(0L, dn.field_zb, oh.field_h);
-          ck.field_c = new hd(0L, pq.field_P, mt.field_b);
-          bf.field_u = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
-          mc.field_d.a((byte) -114, id.field_s);
+          mc.field_d = new UiLayoutNode(0L, (UiLayoutNode) null);
+          id.field_s = new UiLayoutNode(0L, dn.field_zb, oh.field_h);
+          ck.field_c = new UiLayoutNode(0L, pq.field_P, mt.field_b);
+          LineupView.field_u = new np(0L, new UiLayoutNode(0L, (UiLayoutNode) null), rj.field_b, uk.field_b);
+          mc.field_d.addChild((byte) -114, id.field_s);
           if (ui.field_t) {
-            mc.field_d.a((byte) -107, ck.field_c);
+            mc.field_d.addChild((byte) -107, ck.field_c);
           }
-          mc.field_d.a((byte) -119, (hd) (bf.field_u));
-          bf.field_u.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
-          var23 = bf.field_u.field_zb;
+          mc.field_d.addChild((byte) -119, (UiLayoutNode) (LineupView.field_u));
+          LineupView.field_u.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
+          var23 = LineupView.field_u.field_zb;
           var24 = var23;
-          bf.field_u.field_zb.field_p = 1;
+          LineupView.field_u.field_zb.field_p = 1;
           var24.field_A = 1;
-          ConsoleValue.field_a = new hd(0L, ConsoleEvaluationException.field_e);
+          ConsoleValue.field_a = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           ConsoleValue.field_a.field_A = 1;
-          MouseWheelInput.field_a = new hd(0L, LongPlusOneCommand.field_D, ic.field_g.toUpperCase());
-          AuctionItem.field_o = new hd(0L, LeaguesHelpScreen.field_H, ConsoleValue.field_f.toUpperCase());
-          bt.field_b = new hd(0L, cp.field_g);
-          va.field_w = new hd(0L, dn.field_zb, NameSuggestionsPanel.field_B);
-          qq.field_G = new hd(0L, gw.field_a, sn.field_j);
+          MouseWheelInput.field_a = new UiLayoutNode(0L, LongPlusOneCommand.field_D, ic.field_g.toUpperCase());
+          AuctionItem.field_o = new UiLayoutNode(0L, LeaguesHelpScreen.field_H, ConsoleValue.field_f.toUpperCase());
+          bt.field_b = new UiLayoutNode(0L, cp.field_g);
+          PlayingView.field_w = new UiLayoutNode(0L, dn.field_zb, NameSuggestionsPanel.field_B);
+          qq.field_G = new UiLayoutNode(0L, gw.field_a, sn.field_j);
           if (param13 <= 23) {
             field_i = (String) null;
           }
-          TextWidgetPainter.field_n = new hd(0L, gw.field_a, aj.field_c);
-          AuctionsHelpScreen.field_G = new hd(0L, gw.field_a, hd.field_C);
-          DateInputWidget.field_D = new hd(0L, gw.field_a, n.field_j);
-          RegistrationRequestDialog.field_lb = new hd(0L, pq.field_P, ig.field_h);
-          ShopPlayerSlot.field_Jb = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
-          dr.field_d = new hd(0L, vg.field_Qb, vp.field_n.toUpperCase());
+          TextWidgetPainter.field_n = new UiLayoutNode(0L, gw.field_a, aj.field_c);
+          AuctionsHelpScreen.field_G = new UiLayoutNode(0L, gw.field_a, UiLayoutNode.field_C);
+          DateInputWidget.field_D = new UiLayoutNode(0L, gw.field_a, n.field_j);
+          RegistrationRequestDialog.field_lb = new UiLayoutNode(0L, pq.field_P, ig.field_h);
+          ShopPlayerSlot.field_Jb = new np(0L, new UiLayoutNode(0L, (UiLayoutNode) null), rj.field_b, uk.field_b);
+          dr.field_d = new UiLayoutNode(0L, vg.field_Qb, vp.field_n.toUpperCase());
           dr.field_d.field_lb = ui.field_t;
           stackIn_7_0 = null;
           stackIn_7_1 = null;
@@ -142,83 +142,83 @@ final class wp {
             stackIn_8_1 = null;
             stackIn_8_4 = wo.field_l;
           }
-          LoginCredentials.field_b = new hd(stackIn_7_2, stackIn_7_3, ((String) (Object) stackIn_8_4).toUpperCase());
-          af.field_d = new hd(0L, (hd) null);
-          af.field_d.a((byte) -115, AuctionItem.field_o);
-          af.field_d.a((byte) -112, bt.field_b);
-          bt.field_b.a((byte) -127, va.field_w);
-          bt.field_b.a((byte) -118, qq.field_G);
-          bt.field_b.a((byte) -113, TextWidgetPainter.field_n);
+          LoginCredentials.field_b = new UiLayoutNode(stackIn_7_2, stackIn_7_3, ((String) (Object) stackIn_8_4).toUpperCase());
+          af.field_d = new UiLayoutNode(0L, (UiLayoutNode) null);
+          af.field_d.addChild((byte) -115, AuctionItem.field_o);
+          af.field_d.addChild((byte) -112, bt.field_b);
+          bt.field_b.addChild((byte) -127, PlayingView.field_w);
+          bt.field_b.addChild((byte) -118, qq.field_G);
+          bt.field_b.addChild((byte) -113, TextWidgetPainter.field_n);
           if (ui.field_t) {
-            bt.field_b.a((byte) -118, AuctionsHelpScreen.field_G);
+            bt.field_b.addChild((byte) -118, AuctionsHelpScreen.field_G);
           }
-          bt.field_b.a((byte) -128, DateInputWidget.field_D);
-          bt.field_b.a((byte) -122, RegistrationRequestDialog.field_lb);
-          bt.field_b.a((byte) -118, (hd) (ShopPlayerSlot.field_Jb));
+          bt.field_b.addChild((byte) -128, DateInputWidget.field_D);
+          bt.field_b.addChild((byte) -122, RegistrationRequestDialog.field_lb);
+          bt.field_b.addChild((byte) -118, (UiLayoutNode) (ShopPlayerSlot.field_Jb));
           if (ui.field_t) {
-            af.field_d.a((byte) -109, dr.field_d);
+            af.field_d.addChild((byte) -109, dr.field_d);
           }
-          af.field_d.a((byte) -112, LoginCredentials.field_b);
-          CheckboxLabelWidget.field_Cb = new hd(0L, ConsoleEvaluationException.field_e);
+          af.field_d.addChild((byte) -112, LoginCredentials.field_b);
+          CheckboxLabelWidget.field_Cb = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           CheckboxLabelWidget.field_Cb.field_p = 0;
           CheckboxLabelWidget.field_Cb.field_A = 1;
-          RandomAccessCacheFile.field_a = new hd(0L, dc.field_a, MatchScreen.field_x.toUpperCase());
-          kk.field_j = new hd(0L, tv.field_e);
-          kk.field_j.a((byte) -112, CheckboxLabelWidget.field_Cb);
-          kk.field_j.a((byte) -113, RandomAccessCacheFile.field_a);
-          w.field_e = new hd(0L, rj.field_b);
+          RandomAccessCacheFile.field_a = new UiLayoutNode(0L, dc.field_a, MatchScreen.field_x.toUpperCase());
+          kk.field_j = new UiLayoutNode(0L, tv.field_e);
+          kk.field_j.addChild((byte) -112, CheckboxLabelWidget.field_Cb);
+          kk.field_j.addChild((byte) -113, RandomAccessCacheFile.field_a);
+          w.field_e = new UiLayoutNode(0L, rj.field_b);
           w.field_e.a(ConsoleEvaluationException.field_e, (byte) -110);
           w.field_e.field_p = 1;
           var16 = w.field_e;
           var16.field_A = 1;
-          AchievementsScreen.field_C = new hd(0L, (hd) null);
-          ka.field_c = new hd(0L, ConsoleEvaluationException.field_e);
+          AchievementsScreen.field_C = new UiLayoutNode(0L, (UiLayoutNode) null);
+          ka.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           ka.field_c.field_A = 1;
-          BufferedSocket.field_u = new hd(0L, dn.field_zb, oh.field_h);
-          DoSomethingCommand.field_D = new hd(0L, pq.field_P, mt.field_b);
-          ClientException.field_c = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
-          AchievementsScreen.field_C.a((byte) -114, ka.field_c);
-          AchievementsScreen.field_C.a((byte) -105, BufferedSocket.field_u);
+          BufferedSocket.field_u = new UiLayoutNode(0L, dn.field_zb, oh.field_h);
+          DoSomethingCommand.field_D = new UiLayoutNode(0L, pq.field_P, mt.field_b);
+          ClientException.field_c = new np(0L, new UiLayoutNode(0L, (UiLayoutNode) null), rj.field_b, uk.field_b);
+          AchievementsScreen.field_C.addChild((byte) -114, ka.field_c);
+          AchievementsScreen.field_C.addChild((byte) -105, BufferedSocket.field_u);
           if (ui.field_t) {
-            AchievementsScreen.field_C.a((byte) -123, DoSomethingCommand.field_D);
+            AchievementsScreen.field_C.addChild((byte) -123, DoSomethingCommand.field_D);
           }
-          AchievementsScreen.field_C.a((byte) -122, (hd) (ClientException.field_c));
-          ac.field_b = new hd(0L, LongPlusOneCommand.field_D, ns.field_b.toUpperCase());
-          ci.field_h = new hd(0L, LeaguesHelpScreen.field_H);
-          sg.field_a = new hd(0L, cp.field_g);
-          MouseInputHandler.field_d = new hd(0L, oi.field_i, IntDoubleCommand.field_F.toUpperCase());
+          AchievementsScreen.field_C.addChild((byte) -122, (UiLayoutNode) (ClientException.field_c));
+          ac.field_b = new UiLayoutNode(0L, LongPlusOneCommand.field_D, ns.field_b.toUpperCase());
+          ci.field_h = new UiLayoutNode(0L, LeaguesHelpScreen.field_H);
+          sg.field_a = new UiLayoutNode(0L, cp.field_g);
+          MouseInputHandler.field_d = new UiLayoutNode(0L, oi.field_i, IntDoubleCommand.field_F.toUpperCase());
           rf.field_c = new vu[param4 + 4][];
-          qr.field_b = new hd[4 + param4];
-          qr.field_b[0] = new hd(0L, kr.field_b, mi.field_a);
+          qr.field_b = new UiLayoutNode[4 + param4];
+          qr.field_b[0] = new UiLayoutNode(0L, kr.field_b, mi.field_a);
           rf.field_c[0] = new vu[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            rf.field_c[0][var17_int + 1] = new vu(0L, k.field_f, (hd) null, ul.field_c, TextFieldValidator.field_d[var17_int], WidgetContainer.field_w[var17_int]);
+            rf.field_c[0][var17_int + 1] = new vu(0L, k.field_f, (UiLayoutNode) null, ul.field_c, TextFieldValidator.field_d[var17_int], WidgetContainer.field_w[var17_int]);
           }
           if (2 <= rn.field_d.length) {
-            qr.field_b[1] = new hd(0L, kr.field_b, Checkbox.field_H);
+            qr.field_b[1] = new UiLayoutNode(0L, kr.field_b, Checkbox.field_H);
             array$0 = new vu[rn.field_d.length + 1];
             rf.field_c[1] = array$0;
-            rf.field_c[1][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ia.field_b);
+            rf.field_c[1][0] = new vu(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b);
             for (var17_intLifetime1 = 0; rn.field_d.length > var17_intLifetime1; var17_intLifetime1++) {
-              rf.field_c[1][1 + var17_intLifetime1] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, Integer.toString(rn.field_d[var17_intLifetime1]));
+              rf.field_c[1][1 + var17_intLifetime1] = new vu(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, Integer.toString(rn.field_d[var17_intLifetime1]));
             }
           }
-          qr.field_b[2] = new hd(0L, kr.field_b, rc.field_b);
-          rf.field_c[2] = new vu[]{new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ia.field_b), new vu(0L, k.field_f, (hd) null, ul.field_c, i.field_E[0], np.field_Db), new vu(0L, k.field_f, (hd) null, ul.field_c, i.field_E[1], um.field_g)};
+          qr.field_b[2] = new UiLayoutNode(0L, kr.field_b, rc.field_b);
+          rf.field_c[2] = new vu[]{new vu(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b), new vu(0L, k.field_f, (UiLayoutNode) null, ul.field_c, i.field_E[0], np.field_Db), new vu(0L, k.field_f, (UiLayoutNode) null, ul.field_c, i.field_E[1], um.field_g)};
           if (MouseInputHandler.field_f > 1) {
-            qr.field_b[3] = new hd(0L, kr.field_b, pc.field_b);
+            qr.field_b[3] = new UiLayoutNode(0L, kr.field_b, pc.field_b);
             array$1 = new vu[1 + MouseInputHandler.field_f];
             rf.field_c[3] = array$1;
-            rf.field_c[3][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ia.field_b);
+            rf.field_c[3][0] = new vu(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b);
             for (var17_intLifetime2 = 0; MouseInputHandler.field_f > var17_intLifetime2; var17_intLifetime2++) {
-              rf.field_c[3][1 + var17_intLifetime2] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ReceivedAuctionItem.field_D[var17_intLifetime2]);
+              rf.field_c[3][1 + var17_intLifetime2] = new vu(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ReceivedAuctionItem.field_D[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param4 > var17_intLifetime3; var17_intLifetime3++) {
-            qr.field_b[4 + var17_intLifetime3] = new hd(0L, kr.field_b, ok.field_b[var17_intLifetime3]);
+            qr.field_b[4 + var17_intLifetime3] = new UiLayoutNode(0L, kr.field_b, ok.field_b[var17_intLifetime3]);
             array$2 = new vu[qj.b(255, (int) ue.field_k[var17_intLifetime3]) + 1];
             rf.field_c[var17_intLifetime3 + 4] = array$2;
-            rf.field_c[4 + var17_intLifetime3][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ia.field_b);
+            rf.field_c[4 + var17_intLifetime3][0] = new vu(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b);
             for (var18 = 0; (255 & ue.field_k[var17_intLifetime3]) > var18; var18++) {
               if (ni.field_f != null) {
                 if (null == ni.field_f[var17_intLifetime3]) {
@@ -238,7 +238,7 @@ final class wp {
               } else {
                 var20 = null;
               }
-              rf.field_c[4 + var17_intLifetime3][var18 + 1] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) (var19_ref), (String) (var20));
+              rf.field_c[4 + var17_intLifetime3][var18 + 1] = new vu(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -254,34 +254,34 @@ final class wp {
               }
             }
           }
-          em.field_d = new hd(0L, vg.field_Qb);
-          GoalStateAgent.field_k = new hd(0L, vg.field_Qb);
-          nv.field_F = new hd(0L, ip.field_c);
+          em.field_d = new UiLayoutNode(0L, vg.field_Qb);
+          GoalStateAgent.field_k = new UiLayoutNode(0L, vg.field_Qb);
+          nv.field_F = new UiLayoutNode(0L, ip.field_c);
           nv.field_F.a(ConsoleEvaluationException.field_e, (byte) -99);
           var17 = nv.field_F;
           nv.field_F.field_p = 1;
           var17.field_A = 1;
-          AuctionItem.field_p = new hd(0L, (hd) null);
-          AuctionItem.field_p.a((byte) -106, ci.field_h);
-          AuctionItem.field_p.a((byte) -111, sg.field_a);
-          sg.field_a.a((byte) -107, MouseInputHandler.field_d);
+          AuctionItem.field_p = new UiLayoutNode(0L, (UiLayoutNode) null);
+          AuctionItem.field_p.addChild((byte) -106, ci.field_h);
+          AuctionItem.field_p.addChild((byte) -111, sg.field_a);
+          sg.field_a.addChild((byte) -107, MouseInputHandler.field_d);
           for (var18Lifetime2 = 0; var18Lifetime2 < 4 + param4; var18Lifetime2++) {
             if ((1 != var18Lifetime2 ||
               !(rn.field_d.length < 2)) && (var18Lifetime2 != 3 ||
               !(MouseInputHandler.field_f <= 1))) {
-              sg.field_a.a((byte) -121, qr.field_b[var18Lifetime2]);
+              sg.field_a.addChild((byte) -121, qr.field_b[var18Lifetime2]);
               for (var19 = 0; var19 < rf.field_c[var18Lifetime2].length; var19++) {
                 if (rf.field_c[var18Lifetime2][var19] != null) {
-                  sg.field_a.a((byte) -115, (hd) (rf.field_c[var18Lifetime2][var19]));
+                  sg.field_a.addChild((byte) -115, (UiLayoutNode) (rf.field_c[var18Lifetime2][var19]));
                 }
               }
             }
           }
-          AuctionItem.field_p.a((byte) -112, em.field_d);
-          AuctionItem.field_p.a((byte) -124, GoalStateAgent.field_k);
-          AuctionItem.field_p.a((byte) -108, nv.field_F);
-          is.field_b = new hd(0L, AccountTermsPanel.field_H, po.field_b.toUpperCase());
-          BlackFadeScreen.field_i = new hd(0L, dc.field_a, bk.field_d.toUpperCase());
+          AuctionItem.field_p.addChild((byte) -112, em.field_d);
+          AuctionItem.field_p.addChild((byte) -124, GoalStateAgent.field_k);
+          AuctionItem.field_p.addChild((byte) -108, nv.field_F);
+          is.field_b = new UiLayoutNode(0L, AccountTermsPanel.field_H, po.field_b.toUpperCase());
+          BlackFadeScreen.field_i = new UiLayoutNode(0L, dc.field_a, bk.field_d.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -12,7 +12,7 @@ final class ShopPlayerSlot extends im {
     private boolean field_Lb;
     static int field_Ob;
     static String field_Kb;
-    hd field_Mb;
+    UiLayoutNode field_Mb;
     static np field_Jb;
     static String field_Rb;
     int field_Gb;
@@ -183,15 +183,15 @@ final class ShopPlayerSlot extends im {
         if ((double)var2 > jr.field_Gb) {
           jr.field_Gb = (double)var2;
         }
-        if (hd.field_K < (double)var1) {
-          hd.field_K = (double)var1;
+        if (UiLayoutNode.field_K < (double)var1) {
+          UiLayoutNode.field_K = (double)var1;
         }
         int var4 = 1344 - var2;
         if (848.0 > InstrumentNoteMask.field_f) {
           InstrumentNoteMask.field_f = 848.0;
         }
-        if ((double)var3 < hd.field_K) {
-          hd.field_K = (double)var3;
+        if ((double)var3 < UiLayoutNode.field_K) {
+          UiLayoutNode.field_K = (double)var3;
         }
         if (jr.field_Gb > (double)var4) {
           jr.field_Gb = (double)var4;
@@ -282,7 +282,7 @@ final class ShopPlayerSlot extends im {
           this.field_Pb = param1;
           this.field_Qb = param3;
           this.field_Mb = eo.b();
-          this.a((byte) -121, this.field_Mb);
+          this.addChild((byte) -121, this.field_Mb);
           this.field_Mb.field_s = this.field_Pb[-1 + this.field_Pb.length] - this.field_Mb.field_q >> 1;
           for (var6_int = 0; var6_int < this.field_Pb.length - 1; var6_int++) {
             this.field_Mb.field_s = this.field_Mb.field_s + this.field_Pb[var6_int];
@@ -315,7 +315,7 @@ final class ShopPlayerSlot extends im {
             }
             var10.field_J = var12 - (var10.field_mb >> 1);
             var10.field_s = -(var10.field_q >> 1) + var11;
-            this.a((byte) -105, (hd) (var10));
+            this.addChild((byte) -105, (UiLayoutNode) (var10));
             this.field_Ib[var8] = var10;
           }
           return;

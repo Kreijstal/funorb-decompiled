@@ -241,7 +241,7 @@ final class tc extends DualLinkNode {
         }
     }
 
-    final static boolean a(int param0, byte param1, int param2, FootballerAgent param3, int param4) {
+    final static boolean advanceToPoint(int param0, byte param1, int param2, FootballerAgent param3, int param4) {
         FootballerAgent stackIn_23_0 = null;
         int stackIn_24_1 = 0;
         int stackIn_27_2 = 0;
@@ -325,7 +325,7 @@ final class tc extends DualLinkNode {
         ic.a(ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][3], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][2], (byte) -113, ValidationState.field_c[param2][param3][1]);
         if (param1 != 8710) {
           FootballerAgent var5 = (FootballerAgent) null;
-          tc.a(117, (byte) -18, -15, (FootballerAgent) null, 51);
+          tc.advanceToPoint(117, (byte) -18, -15, (FootballerAgent) null, 51);
           return;
         }
     }

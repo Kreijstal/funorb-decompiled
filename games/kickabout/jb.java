@@ -10,7 +10,7 @@ abstract class jb extends IntrusiveNode {
     private int field_q;
     private int field_r;
     private int field_e;
-    hd[] field_i;
+    UiLayoutNode[] field_i;
     private Sprite field_l;
     int field_n;
     static java.security.SecureRandom field_g;
@@ -23,7 +23,7 @@ abstract class jb extends IntrusiveNode {
         int var3 = 0;
         int fieldTemp$0 = 0;
         int stackIn_22_0 = 0;
-        hd stackIn_25_0 = null;
+        UiLayoutNode stackIn_25_0 = null;
         boolean stackIn_26_1 = false;
         int var4;
         int var5;
@@ -90,12 +90,12 @@ abstract class jb extends IntrusiveNode {
     final void b(boolean param0) {
         int var2;
         int var3;
-        hd var4;
+        UiLayoutNode var4;
         int var4_int;
         int var5;
         int var6;
         int var7;
-        hd var8;
+        UiLayoutNode var8;
         int var9;
         int var10;
         int var11;
@@ -253,7 +253,7 @@ abstract class jb extends IntrusiveNode {
           this.field_k = 480 - this.field_r >> 1;
           this.field_p = -this.field_e + 640 >> 1;
           this.field_l = new Sprite(this.field_e, this.field_r);
-          this.field_i = new hd[param1.length];
+          this.field_i = new UiLayoutNode[param1.length];
           var4_int = this.field_i.length;
           var5 = -(95 * var4_int) - 5 * (var4_int - 1) + 640 >> 1;
           for (var6 = 0; this.field_i.length > var6; var6++) {
@@ -275,7 +275,7 @@ abstract class jb extends IntrusiveNode {
         int var5 = Kickabout.field_G;
         AuctionListing.a(param1 + this.field_e, param0 - 22946, param1, param2 + this.field_r, param2);
         for (var4 = 0; this.field_e > var4; var4++) {
-          mk.field_a.drawWithOffsets(var4 + param1, param2 + this.field_r - 480);
+          mk.field_a.d(var4 + param1, param2 + this.field_r - 480);
         }
         AuctionLogEntry.field_j.e(param1 - 10, 15 + param2, AuctionLogEntry.field_j.field_o * 2 / 3, 2 * AuctionLogEntry.field_j.field_v / 3, param0);
         this.a((byte) -29, param1, param2);

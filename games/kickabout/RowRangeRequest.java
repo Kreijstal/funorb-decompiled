@@ -41,7 +41,7 @@ final class RowRangeRequest extends IntrusiveNode {
         this.category = param0;
     }
 
-    final static void a(int param0, FootballerAgent param1, int param2, FootballerAgent param3, BallAgent param4) {
+    final static void tryKeeperTackle(int param0, FootballerAgent param1, int param2, FootballerAgent param3, BallAgent param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -62,7 +62,7 @@ final class RowRangeRequest extends IntrusiveNode {
           var5_int = param1.pixelX(-92) - param4.pixelX(true);
           if (param0 >= -56) {
             var8 = (BallAgent) null;
-            RowRangeRequest.a(-29, (FootballerAgent) null, -8, (FootballerAgent) null, (BallAgent) null);
+            RowRangeRequest.tryKeeperTackle(-29, (FootballerAgent) null, -8, (FootballerAgent) null, (BallAgent) null);
           }
           var6 = param1.pixelY(true) - param4.pixelY(879306160);
           var7 = nb.keeperReach(param1, 170);

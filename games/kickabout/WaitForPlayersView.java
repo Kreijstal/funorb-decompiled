@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends hs {
+final class WaitForPlayersView extends MatchPhaseView {
     private boolean field_l;
     static String[] field_j;
     static int[] field_k;
@@ -23,7 +23,7 @@ final class fk extends hs {
             param2 = param2 >> 1;
           }
           if (param1 != -11934) {
-            fk.f(-39);
+            WaitForPlayersView.f(-39);
           }
           if (param2 != 1) {
             return var3_int;
@@ -37,19 +37,19 @@ final class fk extends hs {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void onButtonClick(int param0, int param1) {
         if (param0 < 98) {
           this.field_l = true;
         }
     }
 
-    final void e(int param0) {
-        this.c(112);
-        this.a(false, vo.$cfr$intArgs$a$53ce4ab4c593(-18, mc.field_e, new String[]{h.field_b[this.field_a.surface][this.field_a.tier]}));
-        this.b(param0 - 2352, this.field_a.phaseTime);
+    final void drawContent(int param0) {
+        this.drawPanelBackground(112);
+        this.drawTitle(false, vo.$cfr$intArgs$a$53ce4ab4c593(-18, mc.field_e, new String[]{h.field_b[this.field_a.surface][this.field_a.tier]}));
+        this.drawCountdown(param0 - 2352, this.field_a.phaseTime);
         this.a(150, 17709);
         if (param0 != 1) {
-          this.e(-98);
+          this.drawContent(-98);
           if (this.field_a.field_f) {
             un.field_d.a("FB", 5, 17, 16777215, -1);
             return;
@@ -65,14 +65,14 @@ final class fk extends hs {
     public static void f(int param0) {
         field_k = null;
         if (param0 != 1) {
-          fk.b(76, -73, -121);
+          WaitForPlayersView.b(76, -73, -121);
           field_j = null;
           return;
         }
         field_j = null;
     }
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         if (param0 >= -92) {
           return;
         }
@@ -87,7 +87,7 @@ final class fk extends hs {
         }
     }
 
-    fk(CommonGame param0, int param1, boolean param2) {
+    WaitForPlayersView(CommonGame param0, int param1, boolean param2) {
         super(param0, param1, param2, (int[]) null);
         this.field_l = false;
     }

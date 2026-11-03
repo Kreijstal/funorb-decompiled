@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class CheckboxLabelWidget extends hd {
+final class CheckboxLabelWidget extends UiLayoutNode {
     static BinaryBitmapFont field_Ab;
     private int field_zb;
     private String field_Hb;
     static String field_yb;
-    static hd field_Cb;
+    static UiLayoutNode field_Cb;
     static String field_Eb;
     static String field_Db;
     static String field_Bb;
@@ -56,8 +56,8 @@ final class CheckboxLabelWidget extends hd {
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
-        gm var7 = null;
-        gm var8 = null;
+        RenderedFootballer var7 = null;
+        RenderedFootballer var8 = null;
         int var2_intLifetime1;
         var4 = Kickabout.field_G;
         try {
@@ -89,13 +89,13 @@ final class CheckboxLabelWidget extends hd {
                       var2_intLifetime1 = var5;
                       while (3 > var5) {
                         KitStyleTile.field_zb[var5] = 740;
-                        ((gm) (et.field_d.field_P[1][1 + var5])).a(400 + var5 * 100 << 16, param1, 0, -(var5 * 40) + 330 << 16);
+                        ((RenderedFootballer) (et.field_d.field_P[1][1 + var5])).a(400 + var5 * 100 << 16, param1, 0, -(var5 * 40) + 330 << 16);
                         var5++;
                       }
                     } else {
                       if (ks.field_e == 7) {
                         vb.field_d = 3;
-                        var8 = (gm) (et.field_d.field_P[1][4]);
+                        var8 = (RenderedFootballer) (et.field_d.field_P[1][4]);
                         var8.a(-13107200, false, 0, 22937600);
                         et.field_d.participantStatus[1].controlledSlot = 4;
                         var8.directionMask = 8;
@@ -120,7 +120,7 @@ final class CheckboxLabelWidget extends hd {
                                     }
                                   } else {
                                     vb.field_d = 4;
-                                    var7 = (gm) (et.field_d.field_P[1][0]);
+                                    var7 = (RenderedFootballer) (et.field_d.field_P[1][0]);
                                     var7.a(29360128, false, 0, -19005440);
                                     var7.field_o = 8;
                                     var7.directionMask = 0;

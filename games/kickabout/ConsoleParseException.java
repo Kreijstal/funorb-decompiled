@@ -25,7 +25,7 @@ final class ConsoleParseException extends Exception {
         field_b = null;
     }
 
-    final static void a(hd param0, hd param1, int param2, hd param3, hd param4) {
+    final static void a(UiLayoutNode param0, UiLayoutNode param1, int param2, UiLayoutNode param3, UiLayoutNode param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -50,7 +50,7 @@ final class ConsoleParseException extends Exception {
             var5 = ie.field_H;
           } else {
             if (!WriteIntegersCommand.field_C) {
-              var5 = bf.field_n;
+              var5 = LineupView.field_n;
             } else {
               var5 = hp.field_c;
             }
@@ -62,25 +62,25 @@ final class ConsoleParseException extends Exception {
           ei.field_b.field_ub = -((16711423 & ag.field_e) >> 1) + ag.field_e + (vv.field_o.field_ub >> 1 & 8355711);
           ButtonMenuScreen.field_n = ij.field_s;
           jl.field_f = ei.field_b;
-          ContentTransitionDialog.field_Y = new hd(0L, param0);
-          h.field_e = new hd(0L, param1);
-          PagedHelpScreen.field_D = new hd(0L, (hd) null);
-          Kickabout.field_H = new hd(0L, param4);
-          ei.field_b = new hd(0L, param3);
+          ContentTransitionDialog.field_Y = new UiLayoutNode(0L, param0);
+          h.field_e = new UiLayoutNode(0L, param1);
+          PagedHelpScreen.field_D = new UiLayoutNode(0L, (UiLayoutNode) null);
+          Kickabout.field_H = new UiLayoutNode(0L, param4);
+          ei.field_b = new UiLayoutNode(0L, param3);
           ei.field_b.field_X = FootballerAgent.field_i;
-          Kickabout.field_H.a((byte) -112, ei.field_b);
-          ij.field_s = new hd(0L, ButtonMenuScreen.field_n);
-          Kickabout.field_H.a((byte) -126, ij.field_s);
+          Kickabout.field_H.addChild((byte) -112, ei.field_b);
+          ij.field_s = new UiLayoutNode(0L, ButtonMenuScreen.field_n);
+          Kickabout.field_H.addChild((byte) -126, ij.field_s);
           if (param2 != 14594) {
             field_e = (ff) null;
           }
-          gl.field_c = new hd(0L, vv.field_o, rr.field_h);
-          MySquadScreen.field_N = new hd(0L, vv.field_o);
-          ContentTransitionDialog.field_Y.a((byte) -111, h.field_e);
-          ContentTransitionDialog.field_Y.a((byte) -121, PagedHelpScreen.field_D);
-          PagedHelpScreen.field_D.a((byte) -119, Kickabout.field_H);
-          PagedHelpScreen.field_D.a((byte) -104, gl.field_c);
-          PagedHelpScreen.field_D.a((byte) -111, MySquadScreen.field_N);
+          gl.field_c = new UiLayoutNode(0L, vv.field_o, rr.field_h);
+          MySquadScreen.field_N = new UiLayoutNode(0L, vv.field_o);
+          ContentTransitionDialog.field_Y.addChild((byte) -111, h.field_e);
+          ContentTransitionDialog.field_Y.addChild((byte) -121, PagedHelpScreen.field_D);
+          PagedHelpScreen.field_D.addChild((byte) -119, Kickabout.field_H);
+          PagedHelpScreen.field_D.addChild((byte) -104, gl.field_c);
+          PagedHelpScreen.field_D.addChild((byte) -111, MySquadScreen.field_N);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

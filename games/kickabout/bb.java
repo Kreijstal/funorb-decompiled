@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb extends hd {
+final class bb extends UiLayoutNode {
     private vu[] field_Eb;
     private bb[] field_Ob;
     private char[] field_Hb;
@@ -106,7 +106,7 @@ final class bb extends hd {
         field_Ib = null;
     }
 
-    bb(long param0, hd param1, hd param2, hd param3, bb[] param4, int[] param5, String[] param6, char[] param7) {
+    bb(long param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, bb[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -155,8 +155,8 @@ final class bb extends hd {
               this.field_Jb[var13] == -1) {
               var14 = ci.field_g;
             }
-            this.field_Eb[var13] = new vu(0L, param2, (hd) null, param3, (Sprite) (var14), param6[var13]);
-            this.a((byte) -112, (hd) (this.field_Eb[var13]));
+            this.field_Eb[var13] = new vu(0L, param2, (UiLayoutNode) null, param3, (Sprite) (var14), param6[var13]);
+            this.addChild((byte) -112, (UiLayoutNode) (this.field_Eb[var13]));
             var15 = var17.a(param6[var13]);
             if (var15 > this.field_Gb) {
               this.field_Gb = var15;

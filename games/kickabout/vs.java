@@ -80,7 +80,7 @@ final class vs {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        gm var12 = null;
+        RenderedFootballer var12 = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -179,7 +179,7 @@ final class vs {
             ArchiveIndex.field_a = wt.a(-111, param1);
             return;
           }
-          ArchiveIndex.field_a = wb.a(-126, param0, param3);
+          ArchiveIndex.field_a = TeamSelectionView.a(-126, param0, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

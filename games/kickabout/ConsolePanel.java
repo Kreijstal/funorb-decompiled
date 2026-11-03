@@ -4,10 +4,10 @@
 abstract class ConsolePanel implements hc {
     private IntrusiveDeque field_m;
     vg field_k;
-    static hd field_q;
+    static UiLayoutNode field_q;
     BitmapFont field_d;
-    private hd field_l;
-    hd field_j;
+    private UiLayoutNode field_l;
+    UiLayoutNode field_j;
     private int field_f;
     np field_g;
     String field_a;
@@ -117,7 +117,7 @@ abstract class ConsolePanel implements hc {
     }
 
     private final IntrusiveDeque b(int param0, String param1, int param2) {
-        hd discarded$0 = null;
+        UiLayoutNode discarded$0 = null;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         IntrusiveDeque stackIn_20_0 = null;
@@ -191,11 +191,11 @@ abstract class ConsolePanel implements hc {
 
     abstract boolean a(String param0, boolean param1);
 
-    private final hd a(int param0, int param1) {
+    private final UiLayoutNode a(int param0, int param1) {
         if (param0 != 4) {
-          return (hd) null;
+          return (UiLayoutNode) null;
         }
-        hd var3 = new hd(0L, (hd) null);
+        UiLayoutNode var3 = new UiLayoutNode(0L, (UiLayoutNode) null);
         var3.field_R = ShopPlayerSlot.a((byte) 26, param1);
         return var3;
     }
@@ -204,19 +204,19 @@ abstract class ConsolePanel implements hc {
 
     private final void a(int param0, int param1, String param2) {
         int var4_int = 0;
-        hd var5 = null;
+        UiLayoutNode var5 = null;
         int var6 = Kickabout.field_G;
         try {
-          this.field_g.field_Ab.a((byte) -109, this.a(param1, param2, -73));
+          this.field_g.field_Ab.addChild((byte) -109, this.a(param1, param2, -73));
           if (!(256 >= this.field_g.field_Ab.field_jb.a(false))) {
             this.field_g.field_Ab.field_jb.b((byte) 125);
           }
           var4_int = 5;
-          var5 = (hd) (this.field_g.field_Ab.field_jb.g(24009));
+          var5 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.g(24009));
           while (var5 != null) {
             var5.field_J = var4_int;
             var4_int = var4_int + this.field_f;
-            var5 = (hd) (this.field_g.field_Ab.field_jb.c(param0 - 31746));
+            var5 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.c(param0 - 31746));
           }
           if (param0 != 31779) {
             this.field_p = (String) null;
@@ -229,7 +229,7 @@ abstract class ConsolePanel implements hc {
     }
 
     public final boolean a(byte param0) {
-        hd discarded$0 = null;
+        UiLayoutNode discarded$0 = null;
         if (param0 < 63) {
           discarded$0 = this.a(40, -60, 5);
         }
@@ -238,7 +238,7 @@ abstract class ConsolePanel implements hc {
 
     public boolean a(int param0, int param1, char param2) {
         IntrusiveNode stackIn_26_1 = null;
-        hd var5;
+        UiLayoutNode var5;
         int var6;
         String var7;
         var6 = Kickabout.field_G;
@@ -287,7 +287,7 @@ abstract class ConsolePanel implements hc {
             return true;
           }
           this.a(5635925, this.field_a + var7, (byte) -122);
-          var5 = (hd) (this.field_g.field_Ab.field_jb.last(param0 ^ -4021));
+          var5 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.last(param0 ^ -4021));
           if (!this.a(var7, true)) {
             var5.field_y = 16733525;
           }
@@ -329,17 +329,17 @@ abstract class ConsolePanel implements hc {
         }
     }
 
-    private final hd a(int param0, String param1, int param2) {
-        hd var4 = null;
+    private final UiLayoutNode a(int param0, String param1, int param2) {
+        UiLayoutNode var4 = null;
         RuntimeException var4_ref = null;
         String var5 = null;
-        hd stackIn_3_0 = null;
+        UiLayoutNode stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hd(0L, (hd) null, param1);
+          var4 = new UiLayoutNode(0L, (UiLayoutNode) null, param1);
           var4.field_X = this.field_d;
           var4.field_y = param0;
           var4.a(true, this.field_d.a(var4.field_E), 5, 0, this.field_f);
@@ -374,17 +374,17 @@ abstract class ConsolePanel implements hc {
         }
     }
 
-    private final hd b(int param0, int param1) {
-        hd var3 = new hd();
+    private final UiLayoutNode b(int param0, int param1) {
+        UiLayoutNode var3 = new UiLayoutNode();
         var3.field_R = ih.a(param0, param1 ^ param1, 0);
         return var3;
     }
 
-    private final hd a(int param0, int param1, int param2) {
+    private final UiLayoutNode a(int param0, int param1, int param2) {
         if (param1 != 200) {
           this.field_o = (TextLine) null;
         }
-        hd var4 = new hd(0L, (hd) null);
+        UiLayoutNode var4 = new UiLayoutNode(0L, (UiLayoutNode) null);
         var4.field_R = ih.a(param0, param1 - 200, param2);
         return var4;
     }
@@ -417,7 +417,7 @@ abstract class ConsolePanel implements hc {
         var1 = bk.a(2);
         var2 = qi.a(false);
         if (param0 < 45) {
-          field_q = (hd) null;
+          field_q = (UiLayoutNode) null;
         }
         stackIn_10_0 = ((var1 == 9 &&
           !(var2 < 28)) ||
@@ -433,11 +433,11 @@ abstract class ConsolePanel implements hc {
         if (this.field_h) {
           this.field_e = 15;
           if (this.field_l != null) {
-            this.field_l.a(-95, this.field_k);
+            this.field_l.setFocusedNode(-95, this.field_k);
           }
         } else {
           if (null != this.field_l) {
-            this.field_l.a(param0 ^ -100, (hd) null);
+            this.field_l.setFocusedNode(param0 ^ -100, (UiLayoutNode) null);
           }
         }
         if (param0 != -23) {
@@ -493,18 +493,18 @@ abstract class ConsolePanel implements hc {
 
     ConsolePanel(BitmapFont param0, PlatformTaskDispatcher param1) {
         int var3_int = 0;
-        hd var4 = null;
-        hd var5 = null;
-        hd var6 = null;
-        hd var7 = null;
-        hd var8 = null;
-        hd var9 = null;
-        hd var10 = null;
-        hd var11 = null;
-        hd var12 = null;
+        UiLayoutNode var4 = null;
+        UiLayoutNode var5 = null;
+        UiLayoutNode var6 = null;
+        UiLayoutNode var7 = null;
+        UiLayoutNode var8 = null;
+        UiLayoutNode var9 = null;
+        UiLayoutNode var10 = null;
+        UiLayoutNode var11 = null;
+        UiLayoutNode var12 = null;
         na var13 = null;
-        hd var14 = null;
-        hd var15 = null;
+        UiLayoutNode var14 = null;
+        UiLayoutNode var15 = null;
         this.field_a = "# ";
         this.field_m = new IntrusiveDeque();
         this.field_h = false;
@@ -524,16 +524,16 @@ abstract class ConsolePanel implements hc {
           var10 = this.a(65793, 200, 3355443);
           var11 = this.a(4, 2263074);
           var12 = this.a(65793, 200, 2236962);
-          this.field_l = new hd(0L, var5);
+          this.field_l = new UiLayoutNode(0L, var5);
           this.field_l.a(true, f.field_d, 0, -200, 200);
           var13 = new na(0L, var8, var8, var9, var10);
-          var14 = new hd();
+          var14 = new UiLayoutNode();
           var14.field_jb = new IntrusiveDeque();
           this.field_g = new np(0L, var14, var6, var13);
           this.field_g.field_Ab.field_jb = new IntrusiveDeque();
           this.field_g.a(0, 94, -var3_int + 185, 5, 5, -10 + this.field_l.field_q, 15);
-          this.field_l.a((byte) -118, (hd) (this.field_g));
-          var15 = new hd();
+          this.field_l.addChild((byte) -118, (UiLayoutNode) (this.field_g));
+          var15 = new UiLayoutNode();
           var15.field_y = 13421772;
           var15.field_D = 5;
           var15.field_B = 2;
@@ -541,8 +541,8 @@ abstract class ConsolePanel implements hc {
           this.field_k = new vg(0L, var7, var11, var15);
           this.field_k.a(-630, this.field_g.field_s, 5 + (this.field_g.field_J + this.field_g.field_mb), var3_int, this.field_g.field_q);
           this.field_k.a(param1, -17421);
-          this.field_l.a((byte) -119, (hd) (this.field_k));
-          this.field_j = new hd(0L, var12);
+          this.field_l.addChild((byte) -119, (UiLayoutNode) (this.field_k));
+          this.field_j = new UiLayoutNode(0L, var12);
           this.field_j.field_s = 0;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

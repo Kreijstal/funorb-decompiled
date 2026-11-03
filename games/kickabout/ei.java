@@ -9,7 +9,7 @@ final class ei implements WidgetPainter {
     private int field_i;
     private int field_h;
     static int field_e;
-    static hd field_b;
+    static UiLayoutNode field_b;
     private int field_a;
     private int field_g;
     private int field_l;
@@ -229,11 +229,11 @@ final class ei implements WidgetPainter {
             }
             var21 = stackIn_39_0;
             var22 = NumericDateInputWidget.field_M[var15Lifetime1];
-            var23 = fk.field_k[var15Lifetime1];
+            var23 = WaitForPlayersView.field_k[var15Lifetime1];
             var24 = NumericDateInputWidget.field_M[var16];
-            var25 = fk.field_k[var16];
+            var25 = WaitForPlayersView.field_k[var16];
             var26 = NumericDateInputWidget.field_M[var17];
-            var27 = fk.field_k[var17];
+            var27 = WaitForPlayersView.field_k[var17];
             if (var18 == var19 &&
               var19 == var20) {
               var28 = var54[var18];

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ColourSwatchTile extends hd {
+final class ColourSwatchTile extends UiLayoutNode {
     private int field_Cb;
     private int field_Ab;
     private ClubState field_zb;

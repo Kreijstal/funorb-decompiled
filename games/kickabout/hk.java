@@ -3,7 +3,7 @@
  */
 final class hk extends i {
     static int field_F;
-    static hd field_I;
+    static UiLayoutNode field_I;
     private int field_N;
     private int field_J;
     static int field_L;

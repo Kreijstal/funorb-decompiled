@@ -165,7 +165,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               un.field_c = sd.field_d;
               var2_ref_ml.field_n = 0;
               PagedHelpScreen.field_A = param0 ? -2 : -1;
-              wb.field_n = param0 ? -2 : -1;
+              TeamSelectionView.field_n = param0 ? -2 : -1;
               SquadSlotWidget.field_Ab = param0 ? -2 : -1;
               ImageProducerRasterBuffer.a(AuctionItem.field_g, il.field_g, or.field_d, -3210, s.field_E);
               c.a(-1, false);

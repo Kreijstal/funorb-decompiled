@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class ci implements Iterable {
-    static hd field_b;
+    static UiLayoutNode field_b;
     DualLinkNode field_d;
     static IntrusiveDeque field_f;
-    static hd field_h;
+    static UiLayoutNode field_h;
     static int field_a;
     static long field_c;
     static Sprite field_g;

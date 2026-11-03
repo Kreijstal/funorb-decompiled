@@ -3,28 +3,28 @@
  */
 final class MyKitScreen extends TeamManagementScreen {
     static boolean[] field_Z;
-    private hd field_K;
+    private UiLayoutNode field_K;
     static String field_L;
     private int field_V;
     static Sprite field_S;
-    private hd field_ab;
+    private UiLayoutNode field_ab;
     private int field_U;
-    private hd field_X;
+    private UiLayoutNode field_X;
     private dd field_cb;
     private int field_Q;
-    private hd field_G;
-    private hd field_Y;
+    private UiLayoutNode field_G;
+    private UiLayoutNode field_Y;
     private String field_T;
-    private hd field_F;
+    private UiLayoutNode field_F;
     private vn field_db;
     private int field_R;
-    private hd[] field_J;
-    private hd field_H;
+    private UiLayoutNode[] field_J;
+    private UiLayoutNode field_H;
     static String field_W;
     private int field_bb;
     static String field_M;
-    private hd field_eb;
-    private hd field_P;
+    private UiLayoutNode field_eb;
+    private UiLayoutNode field_P;
     static boolean field_O;
     private int field_N;
     static String field_I;
@@ -105,7 +105,7 @@ final class MyKitScreen extends TeamManagementScreen {
         int var7 = 0;
         rd[] var5_ref_rd__;
         int var5;
-        hd var6;
+        UiLayoutNode var6;
         PlayerStats[] var6_array;
         rd var7_ref_rd;
         PlayerStats var8;
@@ -128,13 +128,13 @@ final class MyKitScreen extends TeamManagementScreen {
         }
         this.field_F.field_jb = var11;
         var5 = 5;
-        var6 = (hd) (this.field_F.field_jb.g(24009));
+        var6 = (UiLayoutNode) (this.field_F.field_jb.g(24009));
         while (var6 != null) {
           var6.field_mb = this.field_F.field_mb;
           var6.field_s = var5;
           var6.field_J = 0;
           var5 = var5 + (12 + var6.field_q);
-          var6 = (hd) (this.field_F.field_jb.c(33));
+          var6 = (UiLayoutNode) (this.field_F.field_jb.c(33));
         }
         this.field_F.field_s = 0;
         this.field_V = param0;
@@ -155,9 +155,9 @@ final class MyKitScreen extends TeamManagementScreen {
         int stackIn_25_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_32_0 = 0;
-        hd stackIn_34_0 = null;
+        UiLayoutNode stackIn_34_0 = null;
         boolean stackIn_35_1 = false;
-        hd stackIn_41_0 = null;
+        UiLayoutNode stackIn_41_0 = null;
         boolean stackIn_42_1 = false;
         int var2;
         int var3;
@@ -228,7 +228,7 @@ final class MyKitScreen extends TeamManagementScreen {
         int var3 = this.field_U;
         this.field_U = this.field_U + param1;
         if (param0 >= -7) {
-          this.field_X = (hd) null;
+          this.field_X = (UiLayoutNode) null;
         }
         if (this.field_U < 0) {
           this.field_U = this.field_V - 1;
@@ -255,7 +255,7 @@ final class MyKitScreen extends TeamManagementScreen {
     }
 
     final void drawScreen(int param0, boolean param1) {
-        hd var3_ref_hd;
+        UiLayoutNode var3_ref_hd;
         int var3;
         Object var4;
         ColourSwatchTile var5;
@@ -265,10 +265,10 @@ final class MyKitScreen extends TeamManagementScreen {
         var6 = Kickabout.field_G;
         super.drawScreen(param0, param1);
         SoftwareRasterizer.a(this.field_P.field_F - 8, -8 + this.field_P.field_T, this.field_P.field_q + 16, this.field_P.field_mb + 16, 65793, 96);
-        var3_ref_hd = (hd) (this.field_P.field_jb.g(param0 + 24014));
+        var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.g(param0 + 24014));
         while (var3_ref_hd != null) {
           SoftwareRasterizer.a(var3_ref_hd.field_F, var3_ref_hd.field_T, var3_ref_hd.field_q, var3_ref_hd.field_mb, 10, 65793, 96);
-          var3_ref_hd = (hd) (this.field_P.field_jb.c(33));
+          var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.c(33));
         }
         un.field_d.a(le.field_c, -26 + this.field_G.field_F, this.field_G.field_T - 16, 16777215, -1);
         for (var3 = 0; var3 < 2; var3++) {
@@ -305,52 +305,52 @@ final class MyKitScreen extends TeamManagementScreen {
         int var3 = 0;
         int var6 = Kickabout.field_G;
         int var3Lifetime1;
-        this.field_P = new hd();
-        this.field_X = new hd();
-        hd var7 = new hd();
+        this.field_P = new UiLayoutNode();
+        this.field_X = new UiLayoutNode();
+        UiLayoutNode var7 = new UiLayoutNode();
         this.field_P.a(true, 370, 16, 80, 330);
         this.field_X.a(true, 370, 0, 0, 130);
         var7.a(true, 370, 0, 140, 190);
-        this.field_P.a((byte) -115, this.field_X);
-        this.field_P.a((byte) -113, var7);
-        this.field_F = new hd();
-        this.field_G = new hd();
+        this.field_P.addChild((byte) -115, this.field_X);
+        this.field_P.addChild((byte) -113, var7);
+        this.field_F = new UiLayoutNode();
+        this.field_G = new UiLayoutNode();
         this.field_eb = eo.a(false);
         this.field_H = eo.a(true);
         this.field_eb.field_s = 5;
         this.field_H.field_s = this.field_X.field_q - (this.field_H.field_q + 5);
         this.field_H.field_J = -this.field_eb.field_mb + this.field_X.field_mb >> 1;
         this.field_eb.field_J = -this.field_eb.field_mb + this.field_X.field_mb >> 1;
-        this.field_G.a((byte) -114, this.field_F);
+        this.field_G.addChild((byte) -114, this.field_F);
         this.field_G.a(true, 290, 40, 38, 84);
         this.field_F.field_mb = this.field_G.field_mb;
-        this.field_X.a((byte) -105, this.field_G);
-        this.field_X.a((byte) -115, this.field_eb);
-        this.field_X.a((byte) -122, this.field_H);
-        this.field_J = new hd[2];
+        this.field_X.addChild((byte) -105, this.field_G);
+        this.field_X.addChild((byte) -115, this.field_eb);
+        this.field_X.addChild((byte) -122, this.field_H);
+        this.field_J = new UiLayoutNode[2];
         for (var3 = 0; var3 < 2; var3++) {
-          this.field_J[var3] = new hd();
+          this.field_J[var3] = new UiLayoutNode();
           for (var4_int = 0; var4_int < 32; var4_int++) {
             var5 = new ColourSwatchTile(ic.field_h, var3, var4_int);
             var5.a(true, 22, 22 * (var4_int % 16), var4_int / 16 * 22, 22);
-            this.field_J[var3].a((byte) -110, (hd) (var5));
+            this.field_J[var3].addChild((byte) -110, (UiLayoutNode) (var5));
           }
           this.field_J[var3].a(true, 354, 8, 40, 58);
-          var7.a((byte) -123, this.field_J[var3]);
+          var7.addChild((byte) -123, this.field_J[var3]);
         }
-        hd dupTemp$0 = this.field_J[1];
+        UiLayoutNode dupTemp$0 = this.field_J[1];
         dupTemp$0.field_J = dupTemp$0.field_J + ((var7.field_mb >> 1) - 6);
         this.field_Y = eo.a(false);
         this.field_K = eo.a(true);
         var3Lifetime1 = 5;
         this.field_Y.field_s = -this.field_Y.field_q + (-var3Lifetime1 + 532);
         this.field_K.field_s = 532 + var3Lifetime1;
-        hd var4 = this.field_Y;
+        UiLayoutNode var4 = this.field_Y;
         this.field_K.field_J = 436;
         var4.field_J = 436;
-        this.field_ab = new hd();
-        this.field_ab.a((byte) -106, this.field_Y);
-        this.field_ab.a((byte) -105, this.field_K);
+        this.field_ab = new UiLayoutNode();
+        this.field_ab.addChild((byte) -106, this.field_Y);
+        this.field_ab.addChild((byte) -105, this.field_K);
         this.field_ab.a(true, 640, 0, 0, 480);
         if (param0 != -38) {
           this.field_R = -25;

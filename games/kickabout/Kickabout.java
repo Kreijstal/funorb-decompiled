@@ -5,7 +5,7 @@ public final class Kickabout extends GameLoopApplet {
     private boolean field_L;
     static ResourceArchive field_J;
     static String field_I;
-    static hd field_H;
+    static UiLayoutNode field_H;
     static String field_F;
     public static int field_G;
 
@@ -468,7 +468,7 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (35 == param1) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
             }
             if (param1 == 39) {
               stackIn_192_0 = !(pc.field_e);
@@ -699,7 +699,7 @@ public final class Kickabout extends GameLoopApplet {
             MouseWheelInput.a(-1822);
           }
         }
-        gm.i(0);
+        RenderedFootballer.i(0);
         if (param0 < 50) {
           field_I = (String) null;
         }
@@ -1530,11 +1530,11 @@ public final class Kickabout extends GameLoopApplet {
         ig.a((byte) -13);
         vb.a(0);
         fn.q(140);
-        hs.b(104);
+        MatchPhaseView.b(104);
         il.a((byte) 101);
         jb.c(false);
         ar.a((byte) -73);
-        gm.i((byte) 14);
+        RenderedFootballer.i((byte) 14);
         ak.a(17);
         vr.a((byte) -118);
         ca.a((byte) -72);
@@ -1559,7 +1559,7 @@ public final class Kickabout extends GameLoopApplet {
         fv.b((byte) 108);
         mt.a(param0 ^ 7);
         ji.a(-123);
-        hd.g(-14457);
+        UiLayoutNode.g(-14457);
         MenuButton.a((byte) -6);
         MenuSelection.a((byte) -22);
         BufferedCacheFile.d(81);
@@ -1592,7 +1592,7 @@ public final class Kickabout extends GameLoopApplet {
         uf.b(param0 ^ 3547);
         GameplayHelpScreen.g(29250);
         cb.a((byte) -100);
-        ob.i(127);
+        RenderedBall.i(127);
         PlayArea.a((byte) -124);
         BallAgent.f(0);
         FootballerAgent.e((byte) -108);
@@ -1759,12 +1759,12 @@ public final class Kickabout extends GameLoopApplet {
         hq.a(param0 + 55);
         cl.a(-1);
         tr.a(false);
-        ol.g(-39);
-        va.c((byte) -40);
-        wb.g(param0 - 119);
-        fk.f(1);
-        lr.f(param0 - 15646);
-        bf.b((byte) -113);
+        GameOverView.g(-39);
+        PlayingView.c((byte) -40);
+        TeamSelectionView.g(param0 - 119);
+        WaitForPlayersView.f(1);
+        FormationView.f(param0 - 15646);
+        LineupView.b((byte) -113);
         ib.a(param0 + 905215451);
         cv.b((byte) -39);
         ia.a((byte) 107);

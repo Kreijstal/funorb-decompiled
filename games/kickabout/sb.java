@@ -61,7 +61,7 @@ final class sb {
         um.field_b = true;
         gk.field_g = param3;
         SquadGridWidget.field_Db = null;
-        wb.field_j = param0 ? true : false;
+        TeamSelectionView.field_j = param0 ? true : false;
         hh.field_f = param2;
         TextInputWidget.field_R = 0.0f;
         DelayedServerPacket.a(18, false, -2);
@@ -83,7 +83,7 @@ final class sb {
     }
 
     final static void b(byte param0) {
-        BufferedSocket.field_i = new String[ob.field_B];
+        BufferedSocket.field_i = new String[RenderedBall.field_B];
         BufferedSocket.field_i[6] = TextLine.field_j;
         BufferedSocket.field_i[15] = ShopPlayerSlot.field_Eb;
         BufferedSocket.field_i[16] = gd.field_f;

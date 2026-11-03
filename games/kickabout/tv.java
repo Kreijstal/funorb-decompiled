@@ -10,12 +10,12 @@ final class tv {
     int field_c;
     String field_g;
     static String[] field_a;
-    static hd field_e;
+    static UiLayoutNode field_e;
     static String field_k;
     long field_d;
     String field_q;
     boolean field_m;
-    hd field_s;
+    UiLayoutNode field_s;
     int field_o;
     int[] field_r;
     int field_n;

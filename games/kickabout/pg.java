@@ -9,28 +9,28 @@ final class pg {
 
     final static void a(int param0, boolean param1) {
         ni.field_l = param1 ? new rf(TextHotspotWidget.field_H, w.field_e) : new rf(c.field_d, AchievementsScreen.field_C);
-        dn.field_Cb = new hd(0L, (hd) null);
+        dn.field_Cb = new UiLayoutNode(0L, (UiLayoutNode) null);
         if (param0 == -35) {
-          dn.field_Cb.a((byte) -110, (hd) (ni.field_l.field_b));
-          dn.field_Cb.a((byte) -126, ac.field_b);
-          tn.field_f = new hd(0L, tv.field_e);
-          vj.field_g = new hd(0L, (hd) null);
-          tn.field_f.a((byte) -125, is.field_b);
-          tn.field_f.a((byte) -105, vj.field_g);
-          vj.field_g.a((byte) -124, mc.field_d);
-          vj.field_g.a((byte) -119, BlackFadeScreen.field_i);
+          dn.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
+          dn.field_Cb.addChild((byte) -126, ac.field_b);
+          tn.field_f = new UiLayoutNode(0L, tv.field_e);
+          vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
+          tn.field_f.addChild((byte) -125, is.field_b);
+          tn.field_f.addChild((byte) -105, vj.field_g);
+          vj.field_g.addChild((byte) -124, mc.field_d);
+          vj.field_g.addChild((byte) -119, BlackFadeScreen.field_i);
           bq.a(93, param1);
           return;
         }
         field_c = (String) null;
-        dn.field_Cb.a((byte) -110, (hd) (ni.field_l.field_b));
-        dn.field_Cb.a((byte) -126, ac.field_b);
-        tn.field_f = new hd(0L, tv.field_e);
-        vj.field_g = new hd(0L, (hd) null);
-        tn.field_f.a((byte) -125, is.field_b);
-        tn.field_f.a((byte) -105, vj.field_g);
-        vj.field_g.a((byte) -124, mc.field_d);
-        vj.field_g.a((byte) -119, BlackFadeScreen.field_i);
+        dn.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
+        dn.field_Cb.addChild((byte) -126, ac.field_b);
+        tn.field_f = new UiLayoutNode(0L, tv.field_e);
+        vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
+        tn.field_f.addChild((byte) -125, is.field_b);
+        tn.field_f.addChild((byte) -105, vj.field_g);
+        vj.field_g.addChild((byte) -124, mc.field_d);
+        vj.field_g.addChild((byte) -119, BlackFadeScreen.field_i);
         bq.a(93, param1);
     }
 
@@ -84,7 +84,7 @@ final class pg {
           }
           if (var3 == 0 &&
             ck.field_a == 2) {
-            var4 = -va.field_o + nj.a(param0 ^ -51);
+            var4 = -PlayingView.field_o + nj.a(param0 ^ -51);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               ba.a(true, 6, 5);
@@ -167,10 +167,10 @@ final class pg {
         field_c = null;
     }
 
-    final static gm a(int param0, int param1, PlayerStats param2, int param3, int param4) {
+    final static RenderedFootballer a(int param0, int param1, PlayerStats param2, int param3, int param4) {
         long var5_long = 0L;
         RuntimeException var5 = null;
-        gm stackIn_2_0 = null;
+        RenderedFootballer stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         PlayerStats stackIn_8_0;
         int stackIn_8_1;
@@ -179,20 +179,20 @@ final class pg {
         int stackIn_8_4;
         boolean stackIn_9_5 = false;
         boolean stackIn_13_3;
-        gm stackIn_14_0 = null;
+        RenderedFootballer stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 >= -62) {
-            stackIn_2_0 = (gm) null;
+            stackIn_2_0 = (RenderedFootballer) null;
             return stackIn_2_0;
           }
           var5_long = nj.a(51);
           if (80L > -tr.field_d + var5_long) {
             stackIn_5_0 = null;
-            return (gm) (stackIn_5_0);
+            return (RenderedFootballer) (stackIn_5_0);
           }
           tr.field_d = var5_long;
           stackIn_8_0 = (PlayerStats) (param2);

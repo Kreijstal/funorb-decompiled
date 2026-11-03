@@ -7,7 +7,7 @@ final class GoalStateAgent extends MatchAgent {
     static String field_h;
     int[] score;
     static String field_i;
-    static hd field_k;
+    static UiLayoutNode field_k;
     static String field_f;
     int goalCount;
     static int field_l;

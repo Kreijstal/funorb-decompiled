@@ -548,11 +548,11 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             if (var19 == 0) {
               if (stackIn_12_0) {
                 var12 = NumericDateInputWidget.field_M[var9];
-                var13 = fk.field_k[var9];
+                var13 = WaitForPlayersView.field_k[var9];
                 var14 = -var12 + NumericDateInputWidget.field_M[var10];
                 var15 = NumericDateInputWidget.field_M[var11] - var12;
-                var16 = fk.field_k[var10] - var13;
-                var17 = fk.field_k[var11] - var13;
+                var16 = WaitForPlayersView.field_k[var10] - var13;
+                var17 = WaitForPlayersView.field_k[var11] - var13;
               }
               if (!stackIn_12_0 ||
                 !(var17 * var14 - var15 * var16 >= 0)) {

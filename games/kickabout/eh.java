@@ -18,7 +18,7 @@ final class eh implements pk {
         boolean stackIn_24_0 = false;
         var3 = Kickabout.field_G;
         if (!this.field_a &&
-          ob.m(99)) {
+          RenderedBall.m(99)) {
           this.field_a = true;
           var2_ref_oi = (oi) (ec.field_f.g(24009));
           while (var2_ref_oi != null) {
@@ -104,7 +104,7 @@ final class eh implements pk {
           eo.field_f = DemoIntegersCommand.a(bo.field_Cb, 17369, "lobby", "orb_icons");
           ModalStack.a(bo.field_Cb, -127, "lobby", "players");
           IntrusiveDeque.field_e = eo.field_q;
-          un.field_d = gm.a(v.field_b, 10, "font2", bo.field_Cb, "fonts");
+          un.field_d = RenderedFootballer.a(v.field_b, 10, "font2", bo.field_Cb, "fonts");
           q.field_d = Checkbox.a("font", v.field_b, 75, "fonts", bo.field_Cb);
           IsSixCommand.field_C = Checkbox.a("", var17, 105, "arialish12", var16);
           var4 = new Sprite(16, 9);
@@ -184,13 +184,13 @@ final class eh implements pk {
           int[] var15 = (int[]) null;
           uf.a(var11, id.field_y, ArchiveSource.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, sn.field_c, rp.field_y, ld.field_h, os.field_i, var12, (int[]) null, 8, 3, TextFieldValidator.field_i);
           PlayArea.field_k = MusicPatchNode.field_k;
-          IndexedSpriteState.field_e = lr.field_n;
+          IndexedSpriteState.field_e = FormationView.field_n;
           TextButton.field_z = MyKitScreen.field_Z;
           pn.field_t = 0;
           ValidatedTextWidget.a(false, 200);
           sk.a(-61, 100, 95);
           m.a(var17, var16, 5198);
-          bf.a(-70, RankingsScreen.field_A, 0, nm.field_g, 0, 16777215);
+          LineupView.a(-70, RankingsScreen.field_A, 0, nm.field_g, 0, 16777215);
           Object var3 = null;
           v.field_b = null;
           dd.a((byte) 104);
@@ -521,7 +521,7 @@ final class eh implements pk {
         sk.a(-49, 6, 5);
         GameLoopApplet.n((byte) -10);
         CipherPacketBuffer.k(61, 10);
-        wb.b((byte) -47);
+        TeamSelectionView.b((byte) -47);
         rf.a((byte) -124);
         sk.a(127, 4, 1);
         op.a(param0 ^ -363033958);

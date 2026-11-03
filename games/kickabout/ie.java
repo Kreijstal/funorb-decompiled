@@ -42,7 +42,7 @@ final class ie extends i {
             fieldTemp$0 = AnimationSkeleton.field_m - 1;
             AnimationSkeleton.field_m = AnimationSkeleton.field_m - 1;
             if (fieldTemp$0 == 0) {
-              gm.a(GameKeyHandler.field_a, true, (byte) -118);
+              RenderedFootballer.a(GameKeyHandler.field_a, true, (byte) -118);
             }
           }
           if (null == et.field_d) {
@@ -62,7 +62,7 @@ final class ie extends i {
             }
           }
           var1_int = AnimationSkeleton.a(false);
-          var2 = ob.a(var1_int, -128);
+          var2 = RenderedBall.a(var1_int, -128);
           if (mc.field_a != var2) {
             dd.field_f = 60;
             var3 = -mc.field_a + (mc.field_a + var2 >> 1);
@@ -125,7 +125,7 @@ final class ie extends i {
             else {
               if (1 == et.field_d.field_V.possessorTeam &&
                 var4_ref_nl.action == 0) {
-                tc.a(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
+                tc.advanceToPoint(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
                 if (sl.field_Eb &&
                   ld.field_f.action == 0) {
                   ld.field_f.directionMask = 0;

@@ -9,7 +9,7 @@ final class nv extends TextButton {
     static String[] field_I;
     static IntrusiveDeque field_N;
     static Sprite[] field_L;
-    static hd field_F;
+    static UiLayoutNode field_F;
     int field_J;
     private int field_M;
 

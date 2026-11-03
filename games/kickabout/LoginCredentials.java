@@ -3,7 +3,7 @@
  */
 abstract class LoginCredentials {
     static IntrusiveDeque field_a;
-    static hd field_b;
+    static UiLayoutNode field_b;
     static int field_e;
     static IndexedSprite[][] field_c;
     static int[] field_d;

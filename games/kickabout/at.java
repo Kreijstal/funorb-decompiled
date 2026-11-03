@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class at extends hd {
+final class at extends UiLayoutNode {
     pu field_Cb;
     static String field_Jb;
     static String field_Kb;
@@ -45,7 +45,7 @@ final class at extends hd {
         var9 = Kickabout.field_G;
         try {
           var3_int = vv.field_r;
-          LeaguesHelpScreen.field_E = new hd(0L, (hd) null);
+          LeaguesHelpScreen.field_E = new UiLayoutNode(0L, (UiLayoutNode) null);
           if (param1 == null) {
             var10 = (Throwable) null;
             UnreadMessagesScreen.a("QC1", (Throwable) null, 1);
@@ -125,7 +125,7 @@ final class at extends hd {
         this.field_D = 5;
         this.field_Eb = ad.formatCurrencyAmount(this.field_Db, 26300);
         this.field_zb = var3.f((byte) -1).toLowerCase();
-        this.a((byte) -115, (hd) (this.field_Cb));
+        this.addChild((byte) -115, (UiLayoutNode) (this.field_Cb));
         this.field_Cb.field_s = 8;
         this.field_Cb.field_J = this.field_mb - this.field_Cb.field_mb >> 1;
     }

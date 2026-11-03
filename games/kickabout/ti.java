@@ -37,88 +37,88 @@ final class ti {
     }
 
     final static void a(int param0, boolean param1) {
-        hd stackIn_5_0 = null;
+        UiLayoutNode stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         boolean stackIn_6_2 = false;
-        hd stackIn_9_0 = null;
+        UiLayoutNode stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
-        hd stackIn_19_0 = null;
+        UiLayoutNode stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         boolean stackIn_20_2 = false;
-        hd stackIn_23_0 = null;
+        UiLayoutNode stackIn_23_0 = null;
         int stackIn_23_1 = 0;
         boolean stackIn_24_2 = false;
-        hd stackIn_32_0 = null;
+        UiLayoutNode stackIn_32_0 = null;
         int stackIn_32_1 = 0;
         boolean stackIn_33_2 = false;
-        hd stackIn_36_0 = null;
+        UiLayoutNode stackIn_36_0 = null;
         int stackIn_36_1 = 0;
         boolean stackIn_37_2 = false;
-        hd stackIn_44_0 = null;
+        UiLayoutNode stackIn_44_0 = null;
         int stackIn_44_1 = 0;
         boolean stackIn_45_2 = false;
-        hd stackIn_48_0 = null;
+        UiLayoutNode stackIn_48_0 = null;
         int stackIn_48_1 = 0;
         boolean stackIn_49_2 = false;
-        hd stackIn_53_0 = null;
+        UiLayoutNode stackIn_53_0 = null;
         int stackIn_53_1 = 0;
         boolean stackIn_54_2 = false;
-        hd stackIn_57_0 = null;
+        UiLayoutNode stackIn_57_0 = null;
         int stackIn_57_1 = 0;
         boolean stackIn_58_2 = false;
-        hd stackIn_63_0 = null;
+        UiLayoutNode stackIn_63_0 = null;
         int stackIn_63_1 = 0;
         boolean stackIn_64_2 = false;
-        hd stackIn_67_0 = null;
+        UiLayoutNode stackIn_67_0 = null;
         int stackIn_67_1 = 0;
         boolean stackIn_68_2 = false;
-        hd stackIn_77_0 = null;
+        UiLayoutNode stackIn_77_0 = null;
         int stackIn_77_1 = 0;
         boolean stackIn_78_2 = false;
-        hd stackIn_81_0 = null;
+        UiLayoutNode stackIn_81_0 = null;
         int stackIn_81_1 = 0;
         boolean stackIn_82_2 = false;
-        hd stackIn_86_0 = null;
+        UiLayoutNode stackIn_86_0 = null;
         int stackIn_86_1 = 0;
         boolean stackIn_87_2 = false;
-        hd stackIn_90_0 = null;
+        UiLayoutNode stackIn_90_0 = null;
         int stackIn_90_1 = 0;
         boolean stackIn_91_2 = false;
-        hd stackIn_97_0 = null;
+        UiLayoutNode stackIn_97_0 = null;
         int stackIn_97_1 = 0;
         boolean stackIn_98_2 = false;
-        hd stackIn_101_0 = null;
+        UiLayoutNode stackIn_101_0 = null;
         int stackIn_101_1 = 0;
         boolean stackIn_102_2 = false;
-        hd stackIn_106_0 = null;
+        UiLayoutNode stackIn_106_0 = null;
         int stackIn_106_1 = 0;
         boolean stackIn_107_2 = false;
-        hd stackIn_110_0 = null;
+        UiLayoutNode stackIn_110_0 = null;
         int stackIn_110_1 = 0;
         boolean stackIn_111_2 = false;
-        hd stackIn_120_0 = null;
+        UiLayoutNode stackIn_120_0 = null;
         int stackIn_120_1 = 0;
         boolean stackIn_121_2 = false;
-        hd stackIn_124_0 = null;
+        UiLayoutNode stackIn_124_0 = null;
         int stackIn_124_1 = 0;
         boolean stackIn_125_2 = false;
-        hd stackIn_129_0 = null;
+        UiLayoutNode stackIn_129_0 = null;
         int stackIn_129_1 = 0;
         boolean stackIn_130_2 = false;
-        hd stackIn_133_0 = null;
+        UiLayoutNode stackIn_133_0 = null;
         int stackIn_133_1 = 0;
         boolean stackIn_134_2 = false;
-        hd stackIn_140_0 = null;
+        UiLayoutNode stackIn_140_0 = null;
         int stackIn_140_1 = 0;
         boolean stackIn_141_2 = false;
-        hd stackIn_144_0 = null;
+        UiLayoutNode stackIn_144_0 = null;
         int stackIn_144_1 = 0;
         boolean stackIn_145_2 = false;
-        hd stackIn_149_0 = null;
+        UiLayoutNode stackIn_149_0 = null;
         int stackIn_149_1 = 0;
         boolean stackIn_150_2 = false;
-        hd stackIn_153_0 = null;
+        UiLayoutNode stackIn_153_0 = null;
         int stackIn_153_1 = 0;
         boolean stackIn_154_2 = false;
         String var3;
@@ -126,29 +126,29 @@ final class ti {
         AuctionListing.a(SoftwareRasterizer.field_g + 640 >> 1, -22914, -640 + SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
         if (0 < ns.field_a) {
           if (IntrusiveDeque.field_e != null) {
-            IntrusiveDeque.field_e.drawWithOffsets(ss.field_c.field_s, 0);
+            IntrusiveDeque.field_e.d(ss.field_c.field_s, 0);
             stackIn_5_0 = ss.field_c;
             stackIn_5_1 = 65;
             stackIn_6_2 = (param1) && (!TextWidgetPainter.field_f);
-            ((hd) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
+            ((UiLayoutNode) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
             stackIn_9_0 = af.field_d;
             stackIn_9_1 = 121;
             stackIn_10_2 = (param1) && (!TextWidgetPainter.field_f);
-            ((hd) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
+            ((UiLayoutNode) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
             if (param0 == 63) {
               if (!(0 >= fj.field_a) ||
                 !(ee.field_b <= 0)) {
                 if (null != IntrusiveDeque.field_e) {
-                  IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
+                  IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
                 }
                 stackIn_19_0 = dn.field_Cb;
                 stackIn_19_1 = 102;
                 stackIn_20_2 = (param1) && (!td.field_b);
-                ((hd) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
+                ((UiLayoutNode) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
                 stackIn_23_0 = AuctionItem.field_p;
                 stackIn_23_1 = 49;
                 stackIn_24_2 = (param1) && (!td.field_b);
-                ((hd) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_24_2);
+                ((UiLayoutNode) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_24_2);
               }
               TeamManagementScreen.e(param0 + 62);
               return;
@@ -157,37 +157,37 @@ final class ti {
             ti.a((String) null, 87L, (byte) -24, false, (String) null);
             if (0 < fj.field_a) {
               if (null != IntrusiveDeque.field_e) {
-                IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
               }
               stackIn_32_0 = dn.field_Cb;
               stackIn_32_1 = 102;
               stackIn_33_2 = (param1) && (!td.field_b);
-              ((hd) (Object) stackIn_32_0).a(stackIn_32_1, stackIn_33_2);
+              ((UiLayoutNode) (Object) stackIn_32_0).a(stackIn_32_1, stackIn_33_2);
               stackIn_36_0 = AuctionItem.field_p;
               stackIn_36_1 = 49;
               stackIn_37_2 = (param1) && (!td.field_b);
-              ((hd) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_37_2);
+              ((UiLayoutNode) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_37_2);
             } else {
               if (ee.field_b > 0) {
                 if (null == IntrusiveDeque.field_e) {
                   stackIn_44_0 = dn.field_Cb;
                   stackIn_44_1 = 102;
                   stackIn_45_2 = (param1) && (!td.field_b);
-                  ((hd) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2);
+                  ((UiLayoutNode) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2);
                   stackIn_48_0 = AuctionItem.field_p;
                   stackIn_48_1 = 49;
                   stackIn_49_2 = (param1) && (!td.field_b);
-                  ((hd) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_49_2);
+                  ((UiLayoutNode) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_49_2);
                 } else {
-                  IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
+                  IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
                   stackIn_53_0 = dn.field_Cb;
                   stackIn_53_1 = 102;
                   stackIn_54_2 = (param1) && (!td.field_b);
-                  ((hd) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_54_2);
+                  ((UiLayoutNode) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_54_2);
                   stackIn_57_0 = AuctionItem.field_p;
                   stackIn_57_1 = 49;
                   stackIn_58_2 = (param1) && (!td.field_b);
-                  ((hd) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_58_2);
+                  ((UiLayoutNode) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_58_2);
                 }
               }
             }
@@ -197,11 +197,11 @@ final class ti {
           stackIn_63_0 = ss.field_c;
           stackIn_63_1 = 65;
           stackIn_64_2 = (param1) && (!TextWidgetPainter.field_f);
-          ((hd) (Object) stackIn_63_0).a(stackIn_63_1, stackIn_64_2);
+          ((UiLayoutNode) (Object) stackIn_63_0).a(stackIn_63_1, stackIn_64_2);
           stackIn_67_0 = af.field_d;
           stackIn_67_1 = 121;
           stackIn_68_2 = (param1) && (!TextWidgetPainter.field_f);
-          ((hd) (Object) stackIn_67_0).a(stackIn_67_1, stackIn_68_2);
+          ((UiLayoutNode) (Object) stackIn_67_0).a(stackIn_67_1, stackIn_68_2);
         }
         if (param0 == 63) {
           if (0 < fj.field_a) {
@@ -209,21 +209,21 @@ final class ti {
               stackIn_140_0 = dn.field_Cb;
               stackIn_140_1 = 102;
               stackIn_141_2 = (param1) && (!td.field_b);
-              ((hd) (Object) stackIn_140_0).a(stackIn_140_1, stackIn_141_2);
+              ((UiLayoutNode) (Object) stackIn_140_0).a(stackIn_140_1, stackIn_141_2);
               stackIn_144_0 = AuctionItem.field_p;
               stackIn_144_1 = 49;
               stackIn_145_2 = (param1) && (!td.field_b);
-              ((hd) (Object) stackIn_144_0).a(stackIn_144_1, stackIn_145_2);
+              ((UiLayoutNode) (Object) stackIn_144_0).a(stackIn_144_1, stackIn_145_2);
             } else {
-              IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
+              IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
               stackIn_149_0 = dn.field_Cb;
               stackIn_149_1 = 102;
               stackIn_150_2 = (param1) && (!td.field_b);
-              ((hd) (Object) stackIn_149_0).a(stackIn_149_1, stackIn_150_2);
+              ((UiLayoutNode) (Object) stackIn_149_0).a(stackIn_149_1, stackIn_150_2);
               stackIn_153_0 = AuctionItem.field_p;
               stackIn_153_1 = 49;
               stackIn_154_2 = (param1) && (!td.field_b);
-              ((hd) (Object) stackIn_153_0).a(stackIn_153_1, stackIn_154_2);
+              ((UiLayoutNode) (Object) stackIn_153_0).a(stackIn_153_1, stackIn_154_2);
             }
           } else {
             if (ee.field_b > 0) {
@@ -231,21 +231,21 @@ final class ti {
                 stackIn_120_0 = dn.field_Cb;
                 stackIn_120_1 = 102;
                 stackIn_121_2 = (param1) && (!td.field_b);
-                ((hd) (Object) stackIn_120_0).a(stackIn_120_1, stackIn_121_2);
+                ((UiLayoutNode) (Object) stackIn_120_0).a(stackIn_120_1, stackIn_121_2);
                 stackIn_124_0 = AuctionItem.field_p;
                 stackIn_124_1 = 49;
                 stackIn_125_2 = (param1) && (!td.field_b);
-                ((hd) (Object) stackIn_124_0).a(stackIn_124_1, stackIn_125_2);
+                ((UiLayoutNode) (Object) stackIn_124_0).a(stackIn_124_1, stackIn_125_2);
               } else {
-                IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
                 stackIn_129_0 = dn.field_Cb;
                 stackIn_129_1 = 102;
                 stackIn_130_2 = (param1) && (!td.field_b);
-                ((hd) (Object) stackIn_129_0).a(stackIn_129_1, stackIn_130_2);
+                ((UiLayoutNode) (Object) stackIn_129_0).a(stackIn_129_1, stackIn_130_2);
                 stackIn_133_0 = AuctionItem.field_p;
                 stackIn_133_1 = 49;
                 stackIn_134_2 = (param1) && (!td.field_b);
-                ((hd) (Object) stackIn_133_0).a(stackIn_133_1, stackIn_134_2);
+                ((UiLayoutNode) (Object) stackIn_133_0).a(stackIn_133_1, stackIn_134_2);
               }
             }
           }
@@ -257,21 +257,21 @@ final class ti {
               stackIn_97_0 = dn.field_Cb;
               stackIn_97_1 = 102;
               stackIn_98_2 = (param1) && (!td.field_b);
-              ((hd) (Object) stackIn_97_0).a(stackIn_97_1, stackIn_98_2);
+              ((UiLayoutNode) (Object) stackIn_97_0).a(stackIn_97_1, stackIn_98_2);
               stackIn_101_0 = AuctionItem.field_p;
               stackIn_101_1 = 49;
               stackIn_102_2 = (param1) && (!td.field_b);
-              ((hd) (Object) stackIn_101_0).a(stackIn_101_1, stackIn_102_2);
+              ((UiLayoutNode) (Object) stackIn_101_0).a(stackIn_101_1, stackIn_102_2);
             } else {
-              IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
+              IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
               stackIn_106_0 = dn.field_Cb;
               stackIn_106_1 = 102;
               stackIn_107_2 = (param1) && (!td.field_b);
-              ((hd) (Object) stackIn_106_0).a(stackIn_106_1, stackIn_107_2);
+              ((UiLayoutNode) (Object) stackIn_106_0).a(stackIn_106_1, stackIn_107_2);
               stackIn_110_0 = AuctionItem.field_p;
               stackIn_110_1 = 49;
               stackIn_111_2 = (param1) && (!td.field_b);
-              ((hd) (Object) stackIn_110_0).a(stackIn_110_1, stackIn_111_2);
+              ((UiLayoutNode) (Object) stackIn_110_0).a(stackIn_110_1, stackIn_111_2);
             }
           } else {
             if (ee.field_b > 0) {
@@ -279,21 +279,21 @@ final class ti {
                 stackIn_86_0 = dn.field_Cb;
                 stackIn_86_1 = 102;
                 stackIn_87_2 = (param1) && (!td.field_b);
-                ((hd) (Object) stackIn_86_0).a(stackIn_86_1, stackIn_87_2);
+                ((UiLayoutNode) (Object) stackIn_86_0).a(stackIn_86_1, stackIn_87_2);
                 stackIn_90_0 = AuctionItem.field_p;
                 stackIn_90_1 = 49;
                 stackIn_91_2 = (param1) && (!td.field_b);
-                ((hd) (Object) stackIn_90_0).a(stackIn_90_1, stackIn_91_2);
+                ((UiLayoutNode) (Object) stackIn_90_0).a(stackIn_90_1, stackIn_91_2);
               } else {
-                IntrusiveDeque.field_e.drawWithOffsets(dn.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
                 stackIn_77_0 = dn.field_Cb;
                 stackIn_77_1 = 102;
                 stackIn_78_2 = (param1) && (!td.field_b);
-                ((hd) (Object) stackIn_77_0).a(stackIn_77_1, stackIn_78_2);
+                ((UiLayoutNode) (Object) stackIn_77_0).a(stackIn_77_1, stackIn_78_2);
                 stackIn_81_0 = AuctionItem.field_p;
                 stackIn_81_1 = 49;
                 stackIn_82_2 = (param1) && (!td.field_b);
-                ((hd) (Object) stackIn_81_0).a(stackIn_81_1, stackIn_82_2);
+                ((UiLayoutNode) (Object) stackIn_81_0).a(stackIn_81_1, stackIn_82_2);
               }
             }
           }

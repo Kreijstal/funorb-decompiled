@@ -93,9 +93,9 @@ final class dd {
         this.field_b = 0;
     }
 
-    final static hd b(int param0) {
+    final static UiLayoutNode b(int param0) {
         if (param0 > -108) {
-          return (hd) null;
+          return (UiLayoutNode) null;
         }
         return ClientException.field_c.field_Ab;
     }

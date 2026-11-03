@@ -3,7 +3,7 @@
  */
 abstract class PagedHelpScreen extends ButtonMenuScreen {
     static int field_A;
-    static hd field_D;
+    static UiLayoutNode field_D;
     int pageIndex;
     static String field_B;
 
@@ -41,7 +41,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
           return true;
         }
         if (param1 >= -5) {
-          field_D = (hd) null;
+          field_D = (UiLayoutNode) null;
         }
         return super.handleKey(param0, -53, param2);
     }

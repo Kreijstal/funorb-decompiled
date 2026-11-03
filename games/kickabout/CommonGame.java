@@ -92,7 +92,7 @@ final class CommonGame {
           }
           if (3 == this.phase) {
             this.field_o.b(param0, 4);
-            this.field_o.a(param0, false);
+            this.field_o.readState(param0, false);
           }
           if (this.phase == 4) {
             this.field_V.b(param0, 4);
@@ -525,7 +525,7 @@ final class CommonGame {
           if (param0 != 11660) {
             field_D = (String) null;
           }
-          vl.a(this, (byte) -41);
+          vl.computeCameraFocus(this, (byte) -41);
           var2_int = 0;
           while (true) {
             stackIn_17_0 = -3;
@@ -2160,7 +2160,7 @@ final class CommonGame {
           if (!this.participantStatus[param0.participant].isActive(3511)) {
             return;
           }
-          this.field_o.a(param0.value, 0, param0.field_t, param0.field_s, param0.participant);
+          this.field_o.applyCommand(param0.value, 0, param0.field_t, param0.field_s, param0.participant);
           this.field_o.a((MatchAgent) (this.field_g[param0.participant]), (byte) 84);
           if (param1 >= -8) {
             this.computeChecksum(-30);
@@ -3186,7 +3186,7 @@ final class CommonGame {
           }
           if (3 == this.phase) {
             this.field_o.b(param0, 4);
-            this.field_o.a(param0, false);
+            this.field_o.readState(param0, false);
           }
           if (this.phase == 4) {
             this.field_V.b(param0, 4);

@@ -3,7 +3,7 @@
  */
 final class ss {
     static int field_j;
-    static hd field_c;
+    static UiLayoutNode field_c;
     static String field_f;
     static String field_i;
     static String[] field_a;

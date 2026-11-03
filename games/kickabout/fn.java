@@ -11,7 +11,7 @@ final class fn {
     static int field_c;
     static int[] field_g;
     static ArgbSprite field_d;
-    static hd field_a;
+    static UiLayoutNode field_a;
     static ResourceArchive field_b;
 
     final boolean k(int param0) {
@@ -229,7 +229,7 @@ final class fn {
         }
     }
 
-    final static void a(gm param0, int param1) {
+    final static void a(RenderedFootballer param0, int param1) {
         int stackIn_49_0 = 0;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
@@ -332,7 +332,7 @@ final class fn {
           var2 = var1.copy();
           var3 = 0;
           while (var3 < 15) {
-            var2.drawWithOffsets(-2, -2, 16777215);
+            var2.a(-2, -2, 16777215);
             SoftwareRasterizer.b(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
@@ -586,7 +586,7 @@ final class fn {
             var7 = 0;
             if (var6 == 2) {
               var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{at.field_Kb});
-              var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, hd.field_ib, new String[]{var3});
+              var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{var3});
               var7 = -485 + ij.field_s.field_q + (ei.field_b.field_q + (FootballerAgent.field_i.a(var8) - FootballerAgent.field_i.a(var4)));
               if (0 > var7) {
                 var7 = 0;
@@ -600,7 +600,7 @@ final class fn {
                   var4 = "[" + ButtonMenuScreen.field_z + "] ";
                 }
                 if (uv.field_i != null) {
-                  if (!ol.field_R ||
+                  if (!GameOverView.field_R ||
                     SingleChildContainer.field_x == null) {
                     var4 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{uv.field_i.field_ec}) + "] ";
                     if (var10 != 0) {
@@ -652,7 +652,7 @@ final class fn {
               ij.field_s.field_gb = false;
             }
             if (ij.field_s.field_gb) {
-              var1 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, lr.field_s, new String[]{var3, at.field_Kb});
+              var1 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_s, new String[]{var3, at.field_Kb});
             }
           }
           stackIn_99_0 = var1;
@@ -670,7 +670,7 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 65) {
-            fn.a((gm) null, -74);
+            fn.a((RenderedFootballer) null, -74);
           }
           stackIn_7_0 = (this.field_h == 65);
           return stackIn_7_0;
@@ -774,7 +774,7 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            fn.a((gm) null, 63);
+            fn.a((RenderedFootballer) null, 63);
           }
           stackIn_7_0 = (this.field_h == 71);
           return stackIn_7_0;
@@ -843,7 +843,7 @@ final class fn {
           if (param0 < 124) {
             field_j = (String[]) null;
           }
-          stackIn_4_0 = wb.field_r[this.field_h];
+          stackIn_4_0 = TeamSelectionView.field_r[this.field_h];
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

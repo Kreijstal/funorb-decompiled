@@ -31,7 +31,7 @@ final class sk {
           sk.a(-17, -97, 99);
           var1 = (fa) (FootballerAgent.field_f.g(24009));
           if (var1 == null) {
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             return;
           }
           var2 = un.field_e;
@@ -44,7 +44,7 @@ final class sk {
         }
         var1Lifetime1 = (fa) (FootballerAgent.field_f.g(24009));
         if (var1Lifetime1 == null) {
-          lr.b((byte) -116);
+          FormationView.b((byte) -116);
           return;
         }
         var2Lifetime1 = un.field_e;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MainMenuScreen extends ButtonMenuScreen {
-    private hd field_B;
+    private UiLayoutNode field_B;
     static BitmapFont field_F;
     static Sprite field_C;
     private int field_E;
@@ -12,7 +12,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
     final void buildWidgets(int param0) {
         this.field_B = eo.a("", 7126504, un.field_d, -1, false);
         if (param0 != -38) {
-          this.field_B = (hd) null;
+          this.field_B = (UiLayoutNode) null;
         }
     }
 
@@ -41,7 +41,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
 
     final void drawOverlay(boolean param0, int param1) {
         if (param1 < 99) {
-          this.field_B = (hd) null;
+          this.field_B = (UiLayoutNode) null;
           super.drawOverlay(param0, 110);
           SoftwareRasterizer.a(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
           this.field_B.a(76, param0);

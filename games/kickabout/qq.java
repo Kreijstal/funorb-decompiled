@@ -3,14 +3,14 @@
  */
 final class qq extends i {
     static ResourceArchive field_H;
-    static hd field_G;
+    static UiLayoutNode field_G;
     static long field_I;
     static kj field_K;
     static String field_F;
     static String[] field_L;
     static String field_J;
 
-    final static hd h(byte param0) {
+    final static UiLayoutNode h(byte param0) {
         if (param0 >= -39) {
           qq.g(-104);
           return ei.field_d.field_yb;

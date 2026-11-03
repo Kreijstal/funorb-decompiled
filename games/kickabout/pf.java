@@ -58,8 +58,8 @@ abstract class pf {
           MenuButton.field_j = MenuButton.field_j + (param0.readUnsignedByte((byte) -106) << 7);
           var2_intLifetime2 = param0.readUnsignedByte((byte) -105);
           MenuButton.field_j = MenuButton.field_j + (var2_intLifetime2 >> 1);
-          lr.field_r = (var2_intLifetime2 & 1) << 16;
-          lr.field_r = lr.field_r + param0.a((byte) 81);
+          FormationView.field_r = (var2_intLifetime2 & 1) << 16;
+          FormationView.field_r = FormationView.field_r + param0.a((byte) 81);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "pf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

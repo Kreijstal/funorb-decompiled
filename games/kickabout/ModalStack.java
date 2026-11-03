@@ -97,9 +97,9 @@ final class ModalStack extends SingleChildContainer {
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         gg stackIn_9_0 = null;
-        hd stackIn_36_0 = null;
+        UiLayoutNode stackIn_36_0 = null;
         String stackIn_37_1 = null;
-        hd stackIn_40_0 = null;
+        UiLayoutNode stackIn_40_0 = null;
         String stackIn_41_1 = null;
         int stackIn_45_0 = 0;
         Object stackIn_86_0 = null;
@@ -149,14 +149,14 @@ final class ModalStack extends SingleChildContainer {
               stackIn_9_0 = stackOut_8_0;
               if (var19 == 0) {
                 if (stackIn_9_0.field_jb == null) {
-                  var7.field_Bb = new hd(0L, mp.field_f);
-                  var7.a((byte) -112, var7.field_Bb);
-                  var7.field_Ab = new hd(0L, pw.field_J);
-                  var7.a((byte) -122, var7.field_Ab);
-                  var7.field_Fb = new hd(0L, mp.field_f);
-                  var7.a((byte) -117, var7.field_Fb);
+                  var7.field_Bb = new UiLayoutNode(0L, mp.field_f);
+                  var7.addChild((byte) -112, var7.field_Bb);
+                  var7.field_Ab = new UiLayoutNode(0L, pw.field_J);
+                  var7.addChild((byte) -122, var7.field_Ab);
+                  var7.field_Fb = new UiLayoutNode(0L, mp.field_f);
+                  var7.addChild((byte) -117, var7.field_Fb);
                   var7.field_Ab.field_A = 2;
-                  var7.b(false);
+                  var7.invalidateChildren(false);
                   var8 = 1;
                 }
                 var7.field_q = ei.field_d.field_yb.field_q;
@@ -218,7 +218,7 @@ final class ModalStack extends SingleChildContainer {
                   var7.field_L = -var7.field_mb + var9;
                 }
                 if (var8 != 0) {
-                  ei.field_d.field_yb.a(true, 2, var7, (hd) (var6));
+                  ei.field_d.field_yb.a(true, 2, var7, (UiLayoutNode) (var6));
                 }
                 var6 = var7;
                 if (var7.field_Fb != null &&
@@ -254,7 +254,7 @@ final class ModalStack extends SingleChildContainer {
             if (decompiledNaturalLoopExit0) {
               stackIn_86_0 = ei.field_d.field_Eb;
             }
-            if (((hd) (stackIn_86_0)).field_sb != 0) {
+            if (((UiLayoutNode) (stackIn_86_0)).field_sb != 0) {
               k.field_m = new sl(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, MainMenuScreen.field_G, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               fs.field_b = 0;
             }

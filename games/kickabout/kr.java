@@ -4,7 +4,7 @@
 final class kr {
     static String field_c;
     static boolean field_e;
-    static hd field_b;
+    static UiLayoutNode field_b;
     static CheckboxLabelWidget field_a;
     static String field_d;
 
@@ -18,7 +18,7 @@ final class kr {
         field_b = null;
     }
 
-    final static void a(hd param0, boolean param1, int param2) {
+    final static void a(UiLayoutNode param0, boolean param1, int param2) {
         uv var9 = null;
         Sprite var11 = null;
         String var10 = null;
@@ -274,7 +274,7 @@ final class kr {
             return stackIn_10_0;
           }
           if (param0 < 122) {
-            field_b = (hd) null;
+            field_b = (UiLayoutNode) null;
           }
           var10 = (int[]) (var8.field_b);
           var9 = var10;

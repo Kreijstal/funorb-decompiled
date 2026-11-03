@@ -3,7 +3,7 @@
  */
 final class j {
     static String[] field_a;
-    private gm field_b;
+    private RenderedFootballer field_b;
 
     public static void a(boolean param0) {
         field_a = null;
@@ -146,7 +146,7 @@ final class j {
           var3.field_k = 16;
         }
         vn var4 = AuctionItem.a(var3.field_w, var3.field_k, 0, var2, 0, 0, var3.field_R, false, false, false);
-        this.field_b = new gm(var4, var2, false);
+        this.field_b = new RenderedFootballer(var4, var2, false);
         this.field_b.directionMask = 8;
         this.field_b.field_R = 1536;
         this.field_b.b((byte) -128, 5);

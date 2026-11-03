@@ -6,7 +6,7 @@ import java.util.*;
 final class ac implements hc {
     static Random field_d;
     private static int field_c;
-    static hd field_b;
+    static UiLayoutNode field_b;
     static boolean field_f;
     static String field_e;
     static byte[][] field_a;

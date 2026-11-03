@@ -15,18 +15,18 @@ final class ek extends i {
         return param0 ^ param1;
     }
 
-    private final hd g(byte param0) {
+    private final UiLayoutNode g(byte param0) {
         int var4 = 0;
         int var3;
         fn var5;
         int var7;
-        hd var8;
+        UiLayoutNode var8;
         at var6;
         var7 = Kickabout.field_G;
-        var8 = new hd();
+        var8 = new UiLayoutNode();
         var3 = 0;
         if (param0 > -46) {
-          return (hd) null;
+          return (UiLayoutNode) null;
         }
         for (var4 = 0; var4 < pa.field_g.length; var4++) {
           var5 = pa.field_g[var4];
@@ -39,7 +39,7 @@ final class ek extends i {
             var6.field_s = 5;
             var6.field_J = var3;
             var3 = var3 + var6.field_mb;
-            var8.a((byte) -114, (hd) (var6));
+            var8.addChild((byte) -114, (UiLayoutNode) (var6));
           }
         }
         var8.a(true, 270, 0, 0, var3);
@@ -124,7 +124,7 @@ final class ek extends i {
     }
 
     final void a(int param0, boolean param1) {
-        hd stackIn_23_0 = null;
+        UiLayoutNode stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int var3;
         at var4;
@@ -186,7 +186,7 @@ final class ek extends i {
     }
 
     final int a(byte param0) {
-        hd discarded$0 = null;
+        UiLayoutNode discarded$0 = null;
         if (param0 <= 75) {
           discarded$0 = this.g((byte) 21);
         }

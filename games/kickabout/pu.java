@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pu extends hd implements lv {
+final class pu extends UiLayoutNode implements lv {
     private ArgbSprite field_Cb;
     private String field_Hb;
     static em field_Eb;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn extends hd {
+final class dn extends UiLayoutNode {
     static String field_Db;
     int field_Bb;
     static int field_yb;
-    static hd field_zb;
-    static hd field_Cb;
+    static UiLayoutNode field_zb;
+    static UiLayoutNode field_Cb;
     static String field_Ab;
     static String[] field_Eb;
 

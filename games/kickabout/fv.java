@@ -85,7 +85,7 @@ final class fv implements hc {
         int var3Lifetime1;
         var5 = Kickabout.field_G;
         try {
-          if (ob.field_T[param0]) {
+          if (RenderedBall.field_T[param0]) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -112,7 +112,7 @@ final class fv implements hc {
             }
             var4++;
           }
-          ob.field_T[param0] = true;
+          RenderedBall.field_T[param0] = true;
           stackIn_23_0 = -1;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

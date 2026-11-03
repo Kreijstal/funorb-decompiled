@@ -30,7 +30,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         SquadGridWidget.field_Gb = -1;
         AnimationSkeleton.field_k = GameLoopApplet.field_E.field_t;
         uv.field_f = false;
-        bf.field_y.b(72);
+        LineupView.field_y.b(72);
         nq.b(AnimationSkeleton.field_k, 500);
     }
 
@@ -126,7 +126,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         AuctionTableWidget.field_Hb.a(32 * id.field_v, false, (byte) -111, 32);
         if (var6 == 0) {
           var7 = ReceivedAuctionItem.a(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
-          bf.field_y.a(30 + var7, -20 + var7, -108);
+          LineupView.field_y.a(30 + var7, -20 + var7, -108);
           re.a((byte) 125, -10 + var7, var7 + 20, var5);
           if (SquadGridWidget.field_Gb != var7 ||
             AnimationSkeleton.field_k != var5) {
@@ -168,14 +168,14 @@ final class LeaguesScreen extends ButtonMenuScreen {
             gu.field_Jb = SectorCacheStore.field_g;
           }
         }
-        MenuButton.field_e = new hd();
+        MenuButton.field_e = new UiLayoutNode();
         MenuButton.field_e.a(true, 640, 0, 0, 480);
-        hd var8 = new hd();
+        UiLayoutNode var8 = new UiLayoutNode();
         var8.field_A = 1;
         var8.field_p = 1;
         var8.field_y = 16777215;
         var8.field_X = (BitmapFont) ((Object) q.field_d);
-        hd var3 = new hd();
+        UiLayoutNode var3 = new UiLayoutNode();
         var3.a(true, 317, 5, 5, 18);
         AuctionTableWidget.field_Hb = new tk(0L, var3, var8, rr.field_b);
         AuctionTableWidget.field_Hb.a(15, 20, 2, (byte) 37, 230, 344, 175);
@@ -183,8 +183,8 @@ final class LeaguesScreen extends ButtonMenuScreen {
         AuctionTableWidget.field_Hb.field_y = 16777215;
         AuctionTableWidget.field_Hb.field_p = 1;
         AuctionTableWidget.field_Hb.field_X = (BitmapFont) ((Object) q.field_d);
-        hd var4 = ag.a(16006912, param0 ^ param0);
-        hd var5 = new hd();
+        UiLayoutNode var4 = ag.a(16006912, param0 ^ param0);
+        UiLayoutNode var5 = new UiLayoutNode();
         var5.field_y = 16777215;
         var5.field_B = 2;
         var5.field_X = (BitmapFont) ((Object) q.field_d);
@@ -195,15 +195,15 @@ final class LeaguesScreen extends ButtonMenuScreen {
         w.field_b.field_R = null;
         np.field_Cb = eo.a(ic.field_j, 7126504);
         np.field_Cb.a(true, np.field_Cb.field_q, 310, 61, np.field_Cb.field_mb);
-        ha.field_H = new hd[7];
+        ha.field_H = new UiLayoutNode[7];
         for (var6 = 6; var6 >= 0; var6--) {
-          ha.field_H[var6] = new hd();
+          ha.field_H[var6] = new UiLayoutNode();
           ha.field_H[var6].a(true, 48, 20 + 50 * var6, 96, 48);
-          MenuButton.field_e.a((byte) -127, ha.field_H[var6]);
+          MenuButton.field_e.addChild((byte) -127, ha.field_H[var6]);
         }
-        MenuButton.field_e.a((byte) -126, (hd) (AuctionTableWidget.field_Hb));
-        MenuButton.field_e.a((byte) -106, (hd) (w.field_b));
-        MenuButton.field_e.a((byte) -112, np.field_Cb);
+        MenuButton.field_e.addChild((byte) -126, (UiLayoutNode) (AuctionTableWidget.field_Hb));
+        MenuButton.field_e.addChild((byte) -106, (UiLayoutNode) (w.field_b));
+        MenuButton.field_e.addChild((byte) -112, np.field_Cb);
         if (!PlayArea.a(100)) {
           ShopPlayerSlot.a(ArchiveSource.field_e, (byte) 74);
         }
@@ -246,7 +246,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         int var3_int = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        hd stackIn_26_0 = null;
+        UiLayoutNode stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         boolean stackIn_27_2 = false;
         ji var3;
@@ -263,7 +263,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         SoftwareRasterizer.a(w.field_b.field_F, w.field_b.field_T + 4, w.field_b.field_q, w.field_b.field_mb - 5, 7829367, 128);
         if (AuctionTableWidget.field_Hb.field_Eb.isLinked((byte) -113)) {
           var3 = AuctionTableWidget.field_Hb.field_Eb;
-          SoftwareRasterizer.darkenRectangle(3 + (((hd) ((Object) var3)).field_F + this.slideOffsetX), ((hd) ((Object) var3)).field_T, ((hd) ((Object) var3)).field_q - 6, ((hd) ((Object) var3)).field_mb);
+          SoftwareRasterizer.darkenRectangle(3 + (((UiLayoutNode) ((Object) var3)).field_F + this.slideOffsetX), ((UiLayoutNode) ((Object) var3)).field_T, ((UiLayoutNode) ((Object) var3)).field_q - 6, ((UiLayoutNode) ((Object) var3)).field_mb);
         }
         AuctionListing.a(640, -22914, 0, 135, 60);
         for (var3_int = 0; ha.field_H.length > var3_int; var3_int++) {
@@ -295,7 +295,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         stackIn_26_0 = MenuButton.field_e;
         stackIn_26_1 = 85;
         stackIn_27_2 = (pn.g(2368)) && (nj.a(127) % 500L < 250L);
-        ((hd) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2);
+        ((UiLayoutNode) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2);
         if (AuctionTableWidget.field_Hb.field_Db.field_jb != null) {
           AuctionListing.a(-2 + AuctionTableWidget.field_Hb.field_q + (AuctionTableWidget.field_Hb.field_F - 15), -22914, AuctionTableWidget.field_Hb.field_F, 12 + (AuctionTableWidget.field_Hb.field_T - (-AuctionTableWidget.field_Hb.field_mb + 15)), AuctionTableWidget.field_Hb.field_T);
           var7 = (cf) (AuctionTableWidget.field_Hb.field_Db.field_jb.g(24009));

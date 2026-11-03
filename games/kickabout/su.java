@@ -227,10 +227,10 @@ final class su {
         }
     }
 
-    final static hd a(int param0, int param1, int param2, boolean param3, int param4, BitmapFont param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
-        hd var13 = null;
+    final static UiLayoutNode a(int param0, int param1, int param2, boolean param3, int param4, BitmapFont param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        UiLayoutNode var13 = null;
         RuntimeException var13_ref = null;
-        hd stackIn_3_0 = null;
+        UiLayoutNode stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -239,7 +239,7 @@ final class su {
           if (!param3) {
             field_c = (jb) null;
           }
-          var13 = new hd(0L, (hd) null);
+          var13 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var13.field_R = ih.a(param4, 0, param11);
           var13.field_S = ih.a(param2, 0, param9);
           var13.field_rb = ih.a(param12, 0, param1);

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class SquadSlotWidget extends hd {
-    private gm field_Db;
+final class SquadSlotWidget extends UiLayoutNode {
+    private RenderedFootballer field_Db;
     boolean field_Kb;
     static IntrusiveDeque field_yb;
     boolean field_Gb;

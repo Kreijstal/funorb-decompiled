@@ -33,23 +33,23 @@ abstract class SpriteState extends DualLinkNode {
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static void a(boolean param0, int param1, int param2, boolean param3, boolean param4) {
-        hd stackIn_18_0 = null;
+        UiLayoutNode stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
         int stackIn_37_0 = 0;
-        hd stackIn_156_0 = null;
+        UiLayoutNode stackIn_156_0 = null;
         int stackIn_156_1 = 0;
         boolean stackIn_157_2 = false;
-        hd stackIn_161_0 = null;
+        UiLayoutNode stackIn_161_0 = null;
         int stackIn_161_1 = 0;
         boolean stackIn_162_2 = false;
-        hd stackIn_166_0 = null;
+        UiLayoutNode stackIn_166_0 = null;
         int stackIn_166_1 = 0;
         boolean stackIn_167_2 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        hd var6 = null;
-        hd var7 = null;
-        hd var8 = null;
+        UiLayoutNode var6 = null;
+        UiLayoutNode var7 = null;
+        UiLayoutNode var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -70,11 +70,11 @@ abstract class SpriteState extends DualLinkNode {
         he var18_ref = null;
         int var18_int = 0;
         int var19 = 0;
-        hd var21 = null;
+        UiLayoutNode var21 = null;
         int[] var22 = null;
         String var24 = null;
         int[] var25 = null;
-        hd var26 = null;
+        UiLayoutNode var26 = null;
         int var11_intLifetime1;
         int var12Lifetime1;
         int var12Lifetime2;
@@ -337,7 +337,7 @@ abstract class SpriteState extends DualLinkNode {
                   } else {
                     var13_ref = sb.field_g;
                     if (var12Lifetime2 != 0) {
-                      var14 = gm.field_S + (String) (var11);
+                      var14 = RenderedFootballer.field_S + (String) (var11);
                     } else {
                       var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, WriteIntegersCommand.field_D, new String[]{(String) (var11)});
                     }
@@ -359,15 +359,15 @@ abstract class SpriteState extends DualLinkNode {
           stackIn_156_0 = dn.field_Cb;
           stackIn_156_1 = param2 ^ param2;
           stackIn_157_2 = (param0) && (!param4) && (!td.field_b);
-          ((hd) (Object) stackIn_156_0).b(stackIn_156_1, stackIn_157_2);
+          ((UiLayoutNode) (Object) stackIn_156_0).b(stackIn_156_1, stackIn_157_2);
           stackIn_161_0 = AuctionItem.field_p;
           stackIn_161_1 = 0;
           stackIn_162_2 = (param0) && (!param4) && (!td.field_b);
-          ((hd) (Object) stackIn_161_0).b(stackIn_161_1, stackIn_162_2);
+          ((UiLayoutNode) (Object) stackIn_161_0).b(stackIn_161_1, stackIn_162_2);
           stackIn_166_0 = tn.field_f;
           stackIn_166_1 = 0;
           stackIn_167_2 = (param0) && (!param4) && (td.field_b);
-          ((hd) (Object) stackIn_166_0).b(stackIn_166_1, stackIn_167_2);
+          ((UiLayoutNode) (Object) stackIn_166_0).b(stackIn_166_1, stackIn_167_2);
           ni.field_l.field_b.h((byte) 71);
           if (null != uv.field_i) {
             if (ac.field_b.field_sb != 0) {

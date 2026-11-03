@@ -5,7 +5,7 @@ import java.util.*;
 
 final class oa {
     static Calendar field_a;
-    static hd field_b;
+    static UiLayoutNode field_b;
 
     final static void b(int param0) {
         ee.b((byte) -25);
@@ -115,7 +115,7 @@ final class oa {
     final static void a(byte param0, boolean param1) {
         wd.field_l.a(0, 0, (byte) -114);
         if (param0 > -98) {
-          field_b = (hd) null;
+          field_b = (UiLayoutNode) null;
         }
     }
 

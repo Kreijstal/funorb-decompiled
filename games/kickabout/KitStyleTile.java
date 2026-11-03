@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class KitStyleTile extends hd implements lv {
+final class KitStyleTile extends UiLayoutNode implements lv {
     private ModelMesh field_Eb;
-    hd field_Jb;
+    UiLayoutNode field_Jb;
     private int field_Db;
     static byte[] field_yb;
     private boolean field_Gb;
@@ -314,7 +314,7 @@ final class KitStyleTile extends hd implements lv {
               if (!this.field_Ib) {
                 stackIn_24_2 = qe.field_f;
               } else {
-                stackIn_24_2 = ob.field_R;
+                stackIn_24_2 = RenderedBall.field_R;
               }
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_23_0, vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{kw.field_c[this.field_Cb.field_k].toLowerCase()}));
             }
@@ -416,8 +416,8 @@ final class KitStyleTile extends hd implements lv {
           this.field_Cb = param1;
           this.field_Fb = -1;
           this.field_Ab = -1;
-          this.field_Jb = new hd();
-          this.a((byte) -128, this.field_Jb);
+          this.field_Jb = new UiLayoutNode();
+          this.addChild((byte) -128, this.field_Jb);
           this.field_q = 50;
           this.field_Jb.a(true, 60, (this.field_q - 50 >> 1) - 5, 0, 60);
           this.field_Ib = this.field_Cb.a(tk.field_Ib, (byte) 54, BufferedSocket.field_f);

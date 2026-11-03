@@ -5,7 +5,7 @@ final class pw extends i {
     static Sprite field_H;
     static np field_G;
     private boolean field_F;
-    static hd field_J;
+    static UiLayoutNode field_J;
     private boolean field_I;
 
     final void a(int param0, int param1) {
@@ -219,7 +219,7 @@ final class pw extends i {
         wk.field_c.a(150 + param2, 23, param1 + 98);
         IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
         if (param0 > -11) {
-          field_J = (hd) null;
+          field_J = (UiLayoutNode) null;
         }
         var4 = 220 + param1;
         var5 = 50 + var4;
@@ -314,8 +314,8 @@ final class pw extends i {
     pw(int param0) {
         super(18);
         int var3_int = 0;
-        hd var7 = null;
-        hd var8 = null;
+        UiLayoutNode var7 = null;
+        UiLayoutNode var8 = null;
         ArchiveNetworkClient.field_m = param0;
         ng.field_e = true;
         wk.field_c = GameLoopApplet.field_E.squad[ArchiveNetworkClient.field_m];
@@ -324,14 +324,14 @@ final class pw extends i {
         ad.field_f = QuickChatPhraseCache.field_c;
         BlackFadeScreen.field_l = 8;
         hk.field_L = PasswordLoginCredentials.a(wk.field_c, -576054046) <= 0 ? 1 : PasswordLoginCredentials.a(wk.field_c, -576054046);
-        hd var9 = new hd();
-        of.field_d = new hd[5];
+        UiLayoutNode var9 = new UiLayoutNode();
+        of.field_d = new UiLayoutNode[5];
         var9.field_y = 16777215;
         var9.field_ub = 65793;
         var9.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
         var9.field_D = 95;
         for (var3_int = 0; var3_int < 5; var3_int++) {
-          of.field_d[var3_int] = new hd();
+          of.field_d[var3_int] = new UiLayoutNode();
           var7 = of.field_d[var3_int];
           var8 = var7;
           var8.a(var9, (byte) -77);
@@ -340,28 +340,28 @@ final class pw extends i {
           var8.field_mb = 18;
           var8.field_q = 240;
         }
-        uq.field_b = new hd();
+        uq.field_b = new UiLayoutNode();
         uq.field_b.field_y = 16777215;
         uq.field_b.field_B = 5;
         uq.field_b.field_A = 1;
         uq.field_b.field_mb = 24;
         uq.field_b.field_q = 240;
         uq.field_b.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
-        oa.field_b = new hd();
+        oa.field_b = new UiLayoutNode();
         oa.field_b.field_B = 40;
         oa.field_b.field_mb = 60;
         oa.field_b.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
         oa.field_b.field_A = 1;
         oa.field_b.field_q = 240;
         oa.field_b.field_y = 16777215;
-        hd var3 = new hd();
+        UiLayoutNode var3 = new UiLayoutNode();
         var3.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
         var3.field_p = 1;
         var3.field_A = 1;
         var3.field_y = 16777215;
-        hd var10 = new hd(0L, (hd) null);
+        UiLayoutNode var10 = new UiLayoutNode(0L, (UiLayoutNode) null);
         var10.field_R = ShopPlayerSlot.a((byte) 26, 8947956);
-        hd var5 = new hd();
+        UiLayoutNode var5 = new UiLayoutNode();
         var5.field_B = 2;
         var5.field_y = 16777215;
         var5.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
@@ -369,11 +369,11 @@ final class pw extends i {
         UnreadMessagesScreen.field_A = new vg(0L, var3, var10, var5, 20);
         UnreadMessagesScreen.field_A.field_R = null;
         UnreadMessagesScreen.field_A.a(-630, 5 + (uq.field_b.field_q >> 1) - 33, (uq.field_b.field_mb >> 2) - 2, 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
-        uq.field_b.a((byte) -113, (hd) (UnreadMessagesScreen.field_A));
+        uq.field_b.addChild((byte) -113, (UiLayoutNode) (UnreadMessagesScreen.field_A));
         rt.field_F = new vg(0L, var3, var10, var5, 20);
         rt.field_F.field_R = null;
         rt.field_F.a(-630, 5 + (-33 + (oa.field_b.field_q >> 1)), 8 + (oa.field_b.field_mb >> 1), 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
-        oa.field_b.a((byte) -121, (hd) (rt.field_F));
+        oa.field_b.addChild((byte) -121, (UiLayoutNode) (rt.field_F));
         kr.field_a = new CheckboxLabelWidget(LoggedPlayer.field_k.toLowerCase(), un.field_d);
         kr.field_a.field_J = 5;
         kr.field_a.field_s = 5 + (oa.field_b.field_q - kr.field_a.field_q >> 1);
@@ -387,11 +387,11 @@ final class pw extends i {
         hq.field_c.field_s = (oa.field_b.field_q >> 1) + (-(2 * hq.field_c.field_q) - (hq.field_c.field_q >> 1));
         fn.field_a.field_J = 35;
         hq.field_c.field_J = 35;
-        uq.field_b.a((byte) -108, hk.field_I);
-        uq.field_b.a((byte) -125, AccountMessagePanel.field_L);
-        oa.field_b.a((byte) -117, hq.field_c);
-        oa.field_b.a((byte) -115, fn.field_a);
-        oa.field_b.a((byte) -113, (hd) (kr.field_a));
+        uq.field_b.addChild((byte) -108, hk.field_I);
+        uq.field_b.addChild((byte) -125, AccountMessagePanel.field_L);
+        oa.field_b.addChild((byte) -117, hq.field_c);
+        oa.field_b.addChild((byte) -115, fn.field_a);
+        oa.field_b.addChild((byte) -113, (UiLayoutNode) (kr.field_a));
         UnreadMessagesScreen.field_A.b(Integer.toString(ad.field_f), -23174);
         rt.field_F.b(Integer.toString(hk.field_L), -23174);
         this.field_F = true;
@@ -408,15 +408,15 @@ final class pw extends i {
     }
 
     final void a(int param0, boolean param1) {
-        hd stackIn_43_0 = null;
+        UiLayoutNode stackIn_43_0 = null;
         int stackIn_43_1 = 0;
         int stackIn_44_2 = 0;
         boolean stackIn_47_1 = false;
-        hd stackIn_49_0 = null;
+        UiLayoutNode stackIn_49_0 = null;
         boolean stackIn_50_1 = false;
-        hd stackIn_52_0 = null;
+        UiLayoutNode stackIn_52_0 = null;
         boolean stackIn_53_1 = false;
-        hd stackIn_55_0 = null;
+        UiLayoutNode stackIn_55_0 = null;
         boolean stackIn_56_1 = false;
         int stackIn_60_0 = 0;
         String stackIn_61_1 = null;
@@ -444,7 +444,7 @@ final class pw extends i {
         int stackIn_198_1 = 0;
         int stackIn_200_0 = 0;
         int stackIn_201_1 = 0;
-        hd stackIn_204_0 = null;
+        UiLayoutNode stackIn_204_0 = null;
         boolean stackIn_205_1 = false;
         int var3;
         int var4;

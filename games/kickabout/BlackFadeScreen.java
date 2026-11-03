@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BlackFadeScreen extends AppScreen {
-    static hd field_i;
+    static UiLayoutNode field_i;
     static int field_j;
     static int field_g;
     static String field_k;
     private int field_h;
-    static hd[] field_m;
+    static UiLayoutNode[] field_m;
     static int field_l;
 
     final void setTransitionProgress(int param0, boolean param1, int param2, AppScreen param3) {
@@ -144,7 +144,7 @@ final class BlackFadeScreen extends AppScreen {
             DualLinkDequeIterator.field_e = su.a(-3505, param1);
           }
           if (param0) {
-            field_i = (hd) null;
+            field_i = (UiLayoutNode) null;
           }
           stackIn_7_0 = DualLinkDequeIterator.field_e;
           return stackIn_7_0;
@@ -190,7 +190,7 @@ final class BlackFadeScreen extends AppScreen {
           SoftwareRasterizer.b();
         }
         if (param0 != -5) {
-          field_m = (hd[]) null;
+          field_m = (UiLayoutNode[]) null;
         }
     }
 

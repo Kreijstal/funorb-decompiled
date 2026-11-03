@@ -8,7 +8,7 @@ final class oi extends IntrusiveNode {
     static String[] field_f;
     static dg field_g;
     int field_j;
-    static hd field_i;
+    static UiLayoutNode field_i;
 
     final static boolean b(int param0) {
         int var1 = 66 % ((param0 + 43) / 35);

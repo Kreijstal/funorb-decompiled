@@ -97,7 +97,7 @@ final class pe {
     }
 
     final static void b(int param0) {
-        ol.field_R = false;
+        GameOverView.field_R = false;
         if (param0 != 0) {
           field_a = (String) null;
         }

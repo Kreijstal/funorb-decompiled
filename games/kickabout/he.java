@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends hd {
+final class he extends UiLayoutNode {
     int field_Sb;
     static String field_Kb;
     static ValidationState field_yb;
-    hd field_Hb;
+    UiLayoutNode field_Hb;
     boolean field_Gb;
     static String field_Ub;
     String field_Rb;
     long field_Ab;
     String field_Nb;
     int field_Qb;
-    hd field_zb;
+    UiLayoutNode field_zb;
     static String field_Eb;
     int field_Mb;
     boolean field_Fb;
     long field_Ib;
-    hd field_Tb;
-    hd field_Lb;
+    UiLayoutNode field_Tb;
+    UiLayoutNode field_Lb;
     boolean field_Cb;
     int field_Db;
-    hd field_Ob;
+    UiLayoutNode field_Ob;
     int field_Jb;
     int field_Pb;
     static String field_Bb;
@@ -148,14 +148,14 @@ final class he extends hd {
         dt var6 = null;
         int var7 = 0;
         int var9 = 0;
-        gm var10 = null;
+        RenderedFootballer var10 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var9 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
             IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].isActive(3511)) {
-            var10 = (gm) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, ek.field_G));
+            var10 = (RenderedFootballer) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, ek.field_G));
             var2 = ug.a(param0, var10.field_kb >> 16);
             var3 = lf.a((byte) -119, var10.field_bb >> 16);
             if (!TextHotspotWidget.a(var2, var3, param0 ^ 480)) {
@@ -185,7 +185,7 @@ final class he extends hd {
     }
 
     he(String param0, String param1, long param2) {
-        super(0L, (hd) null);
+        super(0L, (UiLayoutNode) null);
         CharSequence var6 = null;
         try {
           this.field_Ab = param2;

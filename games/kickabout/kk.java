@@ -4,7 +4,7 @@
 final class kk {
     static boolean field_m;
     int field_w;
-    static hd field_R;
+    static UiLayoutNode field_R;
     short[] field_z;
     byte field_u;
     short[] field_l;
@@ -12,7 +12,7 @@ final class kk {
     short[] field_E;
     int[] field_d;
     short[] field_I;
-    static hd field_j;
+    static UiLayoutNode field_j;
     int field_t;
     short[] field_p;
     int[] field_a;
@@ -55,7 +55,7 @@ final class kk {
           ou.a(param0 + 101);
           wd.field_l.k(param0 + 225);
           if (param0 != -101) {
-            field_R = (hd) null;
+            field_R = (UiLayoutNode) null;
           }
           IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, hk.field_G, param2, param1);
           we.field_a = new vo(wd.field_l, IsSixCommand.field_E);
@@ -316,7 +316,7 @@ final class kk {
           ou.a(param0 + 101);
           wd.field_l.k(param0 + 225);
           if (param0 != -101) {
-            field_R = (hd) null;
+            field_R = (UiLayoutNode) null;
           }
           IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, hk.field_G, param2, param1);
           we.field_a = new vo(wd.field_l, IsSixCommand.field_E);

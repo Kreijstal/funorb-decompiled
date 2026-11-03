@@ -4,11 +4,11 @@
 final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int field_f;
     static String field_e;
-    static hd field_b;
+    static UiLayoutNode field_b;
     static int[] field_c;
     static Sprite[] field_g;
     static String field_a;
-    static hd field_d;
+    static UiLayoutNode field_d;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.a(param2 - 8, param4 - 11, du.field_n, 20, 6, param5, param1);
@@ -149,7 +149,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           field_b = null;
           return;
         }
-        field_d = (hd) null;
+        field_d = (UiLayoutNode) null;
         field_c = null;
         field_g = null;
         field_a = null;

@@ -8,7 +8,7 @@ final class um {
     static boolean field_b;
     static String field_g;
     static String[][] field_a;
-    static hd field_d;
+    static UiLayoutNode field_d;
 
     final static void a(byte param0) {
         try {

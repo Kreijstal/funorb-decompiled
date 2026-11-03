@@ -9,7 +9,7 @@ final class w implements hc {
     static vg field_b;
     static String[] field_g;
     static String field_c;
-    static hd field_e;
+    static UiLayoutNode field_e;
 
     final static ag a(PcmSampleStream param0, int param1) {
         int var2_int = 0;
@@ -56,7 +56,7 @@ final class w implements hc {
     final static void a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
-        hd dupTemp$0 = null;
+        UiLayoutNode dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -67,31 +67,31 @@ final class w implements hc {
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
         qb stackIn_10_0;
-        hd stackIn_10_1;
-        hd stackIn_10_2;
+        UiLayoutNode stackIn_10_1;
+        UiLayoutNode stackIn_10_2;
         long stackIn_10_3;
-        hd stackIn_11_1 = null;
-        hd stackIn_11_2 = null;
-        hd stackIn_11_4 = null;
+        UiLayoutNode stackIn_11_1 = null;
+        UiLayoutNode stackIn_11_2 = null;
+        UiLayoutNode stackIn_11_4 = null;
         qb stackIn_31_0;
-        hd stackIn_31_1;
-        hd stackIn_31_2;
+        UiLayoutNode stackIn_31_1;
+        UiLayoutNode stackIn_31_2;
         long stackIn_31_3;
-        hd stackIn_32_1;
-        hd stackIn_32_2;
-        hd stackIn_32_4;
+        UiLayoutNode stackIn_32_1;
+        UiLayoutNode stackIn_32_2;
+        UiLayoutNode stackIn_32_4;
         int stackIn_36_0 = 0;
-        hd stackIn_64_0 = null;
+        UiLayoutNode stackIn_64_0 = null;
         boolean stackIn_65_1 = false;
         int stackIn_75_0 = 0;
         int stackIn_85_0 = 0;
         Sprite[] stackIn_87_0 = null;
         int stackIn_88_1 = 0;
-        hd stackIn_90_0 = null;
+        UiLayoutNode stackIn_90_0 = null;
         boolean stackIn_91_1 = false;
         Sprite[] stackIn_98_0 = null;
         int stackIn_99_1 = 0;
-        hd stackIn_101_0 = null;
+        UiLayoutNode stackIn_101_0 = null;
         boolean stackIn_102_1 = false;
         String stackIn_168_0 = null;
         String stackIn_176_0 = null;
@@ -105,19 +105,19 @@ final class w implements hc {
         qb var12 = null;
         int var13 = 0;
         int var14 = 0;
-        hd var18 = null;
-        hd var19 = null;
-        hd var20 = null;
-        hd var21 = null;
-        hd var22 = null;
-        hd var23 = null;
-        hd var24 = null;
-        hd var25 = null;
-        hd var26 = null;
-        hd var27 = null;
-        hd var28 = null;
-        hd var29 = null;
-        hd var30 = null;
+        UiLayoutNode var18 = null;
+        UiLayoutNode var19 = null;
+        UiLayoutNode var20 = null;
+        UiLayoutNode var21 = null;
+        UiLayoutNode var22 = null;
+        UiLayoutNode var23 = null;
+        UiLayoutNode var24 = null;
+        UiLayoutNode var25 = null;
+        UiLayoutNode var26 = null;
+        UiLayoutNode var27 = null;
+        UiLayoutNode var28 = null;
+        UiLayoutNode var29 = null;
+        UiLayoutNode var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -134,13 +134,13 @@ final class w implements hc {
         int var40 = 0;
         int var41 = 0;
         Sprite var42 = null;
-        hd var43 = null;
-        hd var44 = null;
-        hd var45 = null;
-        hd var46 = null;
-        hd var47 = null;
-        hd var48 = null;
-        hd var49 = null;
+        UiLayoutNode var43 = null;
+        UiLayoutNode var44 = null;
+        UiLayoutNode var45 = null;
+        UiLayoutNode var46 = null;
+        UiLayoutNode var47 = null;
+        UiLayoutNode var48 = null;
+        UiLayoutNode var49 = null;
         Object var50 = null;
         Sprite var50_ref = null;
         Object var51 = null;
@@ -178,22 +178,22 @@ final class w implements hc {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_jb == null) {
-              var12.field_Ib = new hd(0L, pw.field_J);
+              var12.field_Ib = new UiLayoutNode(0L, pw.field_J);
               stackIn_8_0 = param3;
               stackIn_8_1 = param6;
               var14 = stackIn_8_0 | stackIn_8_1;
-              var12.a((byte) -104, var12.field_Ib);
+              var12.addChild((byte) -104, var12.field_Ib);
               var12.field_Ib.field_A = 1;
-              var12.field_Jb = new hd(0L, mp.field_f);
-              var12.a((byte) -116, var12.field_Jb);
-              var12.field_kc = new hd(0L, pw.field_J);
-              var12.a((byte) -109, var12.field_kc);
+              var12.field_Jb = new UiLayoutNode(0L, mp.field_f);
+              var12.addChild((byte) -116, var12.field_Jb);
+              var12.field_kc = new UiLayoutNode(0L, pw.field_J);
+              var12.addChild((byte) -109, var12.field_kc);
               var12.field_kc.field_kb = 0;
-              var12.field_jc = new hd(0L, pw.field_J);
-              var12.a((byte) -110, var12.field_jc);
+              var12.field_jc = new UiLayoutNode(0L, pw.field_J);
+              var12.addChild((byte) -110, var12.field_jc);
               var12.field_jc.field_kb = 0;
-              var12.field_Hb = new hd(0L, mp.field_f);
-              var12.a((byte) -121, var12.field_Hb);
+              var12.field_Hb = new UiLayoutNode(0L, mp.field_f);
+              var12.addChild((byte) -121, var12.field_Hb);
               var12.field_Hb.field_A = 2;
               stackIn_10_0 = var12;
               stackIn_10_1 = null;
@@ -208,24 +208,24 @@ final class w implements hc {
                 stackIn_11_2 = null;
                 stackIn_11_4 = mp.field_f;
               }
-              stackIn_10_0.field_zb = new hd(stackIn_10_3, stackIn_11_4);
-              var12.a((byte) -120, var12.field_zb);
-              var12.field_Sb = new hd[ss.field_j];
-              var12.field_Pb = new hd(0L, (hd) null);
-              if ((var14 & 1 << wb.field_u) != 0) {
-                var12.field_zb.a((byte) -119, var12.field_Pb);
+              stackIn_10_0.field_zb = new UiLayoutNode(stackIn_10_3, stackIn_11_4);
+              var12.addChild((byte) -120, var12.field_zb);
+              var12.field_Sb = new UiLayoutNode[ss.field_j];
+              var12.field_Pb = new UiLayoutNode(0L, (UiLayoutNode) null);
+              if ((var14 & 1 << TeamSelectionView.field_u) != 0) {
+                var12.field_zb.addChild((byte) -119, var12.field_Pb);
               }
-              var12.field_Rb = new hd(0L, (hd) null);
+              var12.field_Rb = new UiLayoutNode(0L, (UiLayoutNode) null);
               if (0 != (1 << FormationAgent.field_j & var14)) {
-                var12.field_zb.a((byte) -126, var12.field_Rb);
+                var12.field_zb.addChild((byte) -126, var12.field_Rb);
               }
-              var12.field_Gb = new hd(0L, (hd) null);
+              var12.field_Gb = new UiLayoutNode(0L, (UiLayoutNode) null);
               if ((var14 & 1 << hk.field_F) != 0) {
-                var12.field_zb.a((byte) -111, var12.field_Gb);
+                var12.field_zb.addChild((byte) -111, var12.field_Gb);
               }
-              var12.field_cc = new hd(0L, (hd) null);
+              var12.field_cc = new UiLayoutNode(0L, (UiLayoutNode) null);
               if ((1 << mv.field_b & var14) != 0) {
-                var12.field_zb.a((byte) -119, var12.field_cc);
+                var12.field_zb.addChild((byte) -119, var12.field_cc);
               }
               var45 = var12.field_Pb;
               var44 = var12.field_cc;
@@ -235,9 +235,9 @@ final class w implements hc {
               var44.field_p = 1;
               var45.field_p = 1;
               for (var18_int = 0; ss.field_j > var18_int; var18_int++) {
-                var12.field_Sb[var18_int] = new hd(0L, (hd) null);
+                var12.field_Sb[var18_int] = new UiLayoutNode(0L, (UiLayoutNode) null);
                 if ((var14 & 1 << var18_int + ResourceArchive.field_h) != 0) {
-                  var12.field_zb.a((byte) -122, var12.field_Sb[var18_int]);
+                  var12.field_zb.addChild((byte) -122, var12.field_Sb[var18_int]);
                 }
                 var12.field_Sb[var18_int].field_p = 1;
               }
@@ -254,21 +254,21 @@ final class w implements hc {
                 stackIn_32_2 = null;
                 stackIn_32_4 = pw.field_J;
               }
-              stackIn_31_0.field_Zb = new hd(stackIn_31_3, stackIn_32_4);
-              var12.a((byte) -104, var12.field_Zb);
+              stackIn_31_0.field_Zb = new UiLayoutNode(stackIn_31_3, stackIn_32_4);
+              var12.addChild((byte) -104, var12.field_Zb);
               var12.field_Zb.field_A = 2;
-              var12.field_fc = new hd(0L, mp.field_f);
-              var12.a((byte) -112, var12.field_fc);
-              var12.field_dc = new hd(0L, ul.field_c);
-              var12.a((byte) -127, var12.field_dc);
-              var12.field_Yb = new hd(0L, ul.field_c);
-              var12.a((byte) -121, var12.field_Yb);
-              var12.field_Bb = new hd(0L, ConsoleEvaluationException.field_e);
-              var12.a((byte) -128, var12.field_Bb);
-              var12.b(param1);
-              var12.field_Lb = new hd(0L, LoggedPlayer.field_r);
+              var12.field_fc = new UiLayoutNode(0L, mp.field_f);
+              var12.addChild((byte) -112, var12.field_fc);
+              var12.field_dc = new UiLayoutNode(0L, ul.field_c);
+              var12.addChild((byte) -127, var12.field_dc);
+              var12.field_Yb = new UiLayoutNode(0L, ul.field_c);
+              var12.addChild((byte) -121, var12.field_Yb);
+              var12.field_Bb = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
+              var12.addChild((byte) -128, var12.field_Bb);
+              var12.invalidateChildren(param1);
+              var12.field_Lb = new UiLayoutNode(0L, LoggedPlayer.field_r);
               var13 = 1;
-              var12.a((byte) -128, var12.field_Lb);
+              var12.addChild((byte) -128, var12.field_Lb);
             }
             stackIn_36_0 = (var12.field_Cb) ? param6 : param3;
             var14Lifetime1 = stackIn_36_0;
@@ -386,7 +386,7 @@ final class w implements hc {
               var12.field_Jb.field_E = BitmapFont.a(var12.field_Jb.field_X, var32, 78);
               stackIn_64_0 = var12.field_Jb;
               stackIn_65_1 = !(param1);
-              ((hd) (Object) stackIn_64_0).a(stackIn_65_1, 78, 70, var31, sh.field_c);
+              ((UiLayoutNode) (Object) stackIn_64_0).a(stackIn_65_1, 78, 70, var31, sh.field_c);
               if (var12.field_Jb.field_gb &&
                 !var12.field_Jb.field_E.equals(var32)) {
                 sn.field_e = var32;
@@ -408,7 +408,7 @@ final class w implements hc {
               var33_intLifetime1 = stackIn_75_0;
               var12.field_zb.a(true, -var33_intLifetime1 + 365 - 2, var33_intLifetime1, var31, sh.field_c);
               var34_int = mj.field_b;
-              if ((var14Lifetime1 & 1 << wb.field_u) != 0) {
+              if ((var14Lifetime1 & 1 << TeamSelectionView.field_u) != 0) {
                 var50_ref = TextFieldValidator.field_d[var12.field_Wb];
                 var12.field_Pb.field_N = var50_ref;
                 var12.field_Pb.a(true, var50_ref.field_o, var34_int, 0, var12.field_zb.field_mb);
@@ -431,7 +431,7 @@ final class w implements hc {
                 var12.field_Rb.field_N = var51_ref;
                 stackIn_90_0 = var12.field_Rb;
                 stackIn_91_1 = !(param1);
-                ((hd) (Object) stackIn_90_0).a(stackIn_91_1, var51_ref.field_o, var34_int, 0, var12.field_zb.field_mb);
+                ((UiLayoutNode) (Object) stackIn_90_0).a(stackIn_91_1, var51_ref.field_o, var34_int, 0, var12.field_zb.field_mb);
                 var34_int = var34_int + (var51_ref.field_o + mj.field_b);
               }
               if ((1 << hk.field_F & var14Lifetime1) != 0) {
@@ -451,7 +451,7 @@ final class w implements hc {
                 var12.field_cc.field_N = var53_ref;
                 stackIn_101_0 = var12.field_cc;
                 stackIn_102_1 = !(param1);
-                ((hd) (Object) stackIn_101_0).a(stackIn_102_1, var53_ref.field_o, var34_int, 0, var12.field_zb.field_mb);
+                ((UiLayoutNode) (Object) stackIn_101_0).a(stackIn_102_1, var53_ref.field_o, var34_int, 0, var12.field_zb.field_mb);
                 var34_int = var34_int + (var53_ref.field_o + mj.field_b);
               }
               if (fh.field_a != null) {
@@ -535,7 +535,7 @@ final class w implements hc {
               var12.field_L = var31 - var12.field_mb;
             }
             if (var13 != 0) {
-              ShopPlayerSlot.field_Jb.field_Ab.a(true, 2, var12, (hd) (var11));
+              ShopPlayerSlot.field_Jb.field_Ab.a(true, 2, var12, (UiLayoutNode) (var11));
             }
             for (var34_intLifetime2 = 0; ss.field_j > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Sb[var34_intLifetime2].field_gb) {
@@ -739,7 +739,7 @@ final class w implements hc {
 
     public final boolean a(byte param0) {
         if (param0 <= 63) {
-          field_e = (hd) null;
+          field_e = (UiLayoutNode) null;
         }
         return null != su.field_c ? true : false;
     }

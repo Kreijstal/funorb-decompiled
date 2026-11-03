@@ -8,7 +8,7 @@ abstract class ModalPanel extends WidgetContainer {
     static int field_E;
     boolean field_C;
     private ModalStack field_H;
-    static hd field_D;
+    static UiLayoutNode field_D;
 
     final static IndexedSprite h(byte param0) {
         IndexedSprite var1 = new IndexedSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], pq.field_O[0], lt.field_a);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends hs {
+final class GameOverView extends MatchPhaseView {
     private boolean field_t;
     private int field_B;
     private int field_mb;
@@ -41,7 +41,7 @@ final class ol extends hs {
     private int field_M;
     private int field_r;
     private int field_v;
-    private hd[] field_s;
+    private UiLayoutNode[] field_s;
     private int field_H;
     private int field_db;
     private int field_x;
@@ -615,7 +615,7 @@ final class ol extends hs {
         }
     }
 
-    final boolean e(int param0, int param1) {
+    final boolean isButtonEnabled(int param0, int param1) {
         boolean stackIn_40_0 = false;
         boolean stackIn_69_0 = false;
         boolean stackIn_80_0 = false;
@@ -774,7 +774,7 @@ final class ol extends hs {
         }
     }
 
-    final boolean a(char param0, int param1, int param2) {
+    final boolean handleKey(char param0, int param1, int param2) {
         int stackIn_10_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_30_0 = 0;
@@ -883,7 +883,7 @@ final class ol extends hs {
         }
     }
 
-    ol(CommonGame param0, int param1, boolean param2) {
+    GameOverView(CommonGame param0, int param1, boolean param2) {
         super(param0, param1, param2, (int[]) null);
         int dupTemp$0 = 0;
         String[] arrayValue$1 = null;
@@ -998,7 +998,7 @@ final class ol extends hs {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.field_I = new String[]{lr.field_l, of.field_c};
+            this.field_I = new String[]{FormationView.field_l, of.field_c};
             stackIn_33_0 = 0;
           }
           if (stackIn_33_0 == ~param0.winner ||
@@ -1048,7 +1048,7 @@ final class ol extends hs {
               }
               if ((decompiledFrameCompleted2) &&
                 (decompiledFrameCompleted1)) {
-                this.field_s = new hd[4];
+                this.field_s = new UiLayoutNode[4];
                 this.field_l = var6.field_o;
                 this.field_o = new SquadSlotWidget[4];
                 var8Lifetime1 = 0;
@@ -1113,7 +1113,7 @@ final class ol extends hs {
         }
     }
 
-    final void e(int param0) {
+    final void drawContent(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_5_1 = 0;
         int stackIn_8_1 = 0;
@@ -1129,8 +1129,8 @@ final class ol extends hs {
         int var4Lifetime1;
         var5 = Kickabout.field_G;
         try {
-          this.c(param0 + 121);
-          this.a(false, this.field_Z);
+          this.drawPanelBackground(param0 + 121);
+          this.drawTitle(false, this.field_Z);
           stackIn_4_0 = 15;
           if (this.field_S == param0) {
             stackIn_5_1 = -44;
@@ -1145,11 +1145,11 @@ final class ol extends hs {
             stackIn_9_3 = 0;
           }
           SoftwareRasterizer.a(stackIn_4_0, stackIn_8_1, stackIn_8_2, stackIn_9_3 + 35, 10, 0, 128);
-          this.d(123);
-          if (this.e(3, 50) &&
+          this.positionButtons(123);
+          if (this.isButtonEnabled(3, 50) &&
             this.field_S == 0) {
-            var3 = this.d(127, 3);
-            var4 = this.c(342, 3);
+            var3 = this.buttonX(127, 3);
+            var4 = this.buttonY(342, 3);
             AuctionListing.a(31 + var3, -22914, var3 - 31, var4 - 17, var4 - 37);
             SoftwareRasterizer.a(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
             TeamManagementScreen.e(param0 + 116);
@@ -1157,12 +1157,12 @@ final class ol extends hs {
             IsSixCommand.field_C.a(eq.field_b, -6 + var3, -16 + var4, 16777215, -1);
           }
           var2_int = 245;
-          if (this.e(0, param0 ^ 51) &&
+          if (this.isButtonEnabled(0, param0 ^ 51) &&
             0 == this.field_S &&
             0 <= this.field_g &&
             this.b((byte) -109)) {
-            var3Lifetime1 = this.d(param0 ^ 126, 0);
-            var4Lifetime1 = this.c(342, 0);
+            var3Lifetime1 = this.buttonX(param0 ^ 126, 0);
+            var4Lifetime1 = this.buttonY(342, 0);
             AuctionListing.a(31 + var3Lifetime1, -22914, -31 + var3Lifetime1, var4Lifetime1 - 17, -37 + var4Lifetime1);
             SoftwareRasterizer.a(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
             TeamManagementScreen.e(126);
@@ -1339,7 +1339,7 @@ final class ol extends hs {
               un.field_d.d(Integer.toString(var10), -14 + var5_int, 16 + param2, 16777215, -1);
               un.field_d.d(var14, (var8 >> 1) + var5_int, 16 + param2, 16777215, -1);
               un.field_d.d(this.g(var11_ref_ch.goalType, -16305), var6 + (var9 >> 1), param2 + 16, 16777215, -1);
-              un.field_d.d(this.a((byte) -110, var11_ref_ch.time), (var9 >> 1) + var7, 16 + param2, 16777215, -1);
+              un.field_d.d(this.formatMatchTime((byte) -110, var11_ref_ch.time), (var9 >> 1) + var7, 16 + param2, 16777215, -1);
               var11_ref_ch = (LoggedGoal) (param0.c(33));
             }
             if (decompiledFrameCompleted0) {
@@ -1392,7 +1392,7 @@ final class ol extends hs {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void onButtonClick(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1575,7 +1575,7 @@ final class ol extends hs {
               }
             }
             var5 = IsSixCommand.field_C.paragraphHeight(var4, 380, 16);
-            wb.a(var4, 400, var5, -5 + (300 - var5), 120, 0);
+            TeamSelectionView.a(var4, 400, var5, -5 + (300 - var5), 120, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1585,7 +1585,7 @@ final class ol extends hs {
         }
     }
 
-    final int d(int param0, int param1) {
+    final int buttonX(int param0, int param1) {
         boolean stackIn_4_0 = false;
         int stackIn_10_0 = 0;
         int stackIn_19_0 = 0;
@@ -1609,7 +1609,7 @@ final class ol extends hs {
           var4 = 0;
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (!(this.field_c.length > var4)))) {
-            stackOut_3_0 = this.e(var4, 50);
+            stackOut_3_0 = this.isButtonEnabled(var4, 50);
             stackIn_10_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var10 == 0) {
@@ -1626,11 +1626,11 @@ final class ol extends hs {
             stackIn_10_0 = 610;
           }
           var5 = stackIn_10_0;
-          if (this.e(3, 50)) {
+          if (this.isButtonEnabled(3, 50)) {
             var4 = 120;
           }
           if (param0 <= 106) {
-            this.a('ﾖ', 56, 92);
+            this.handleKey('ﾖ', 56, 92);
           }
           var6 = (640 - var5 >> 1) + 3;
           if (1 == var3_int) {
@@ -1642,7 +1642,7 @@ final class ol extends hs {
           var9 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var9 >= param1))) {
-            stackOut_22_0 = this.e(var9, 50);
+            stackOut_22_0 = this.isButtonEnabled(var9, 50);
             stackIn_29_0 = stackOut_22_0 ? 1 : 0;
             stackIn_23_0 = stackOut_22_0;
             if (var10 == 0) {
@@ -1812,7 +1812,7 @@ final class ol extends hs {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         int stackIn_5_1 = 0;
         boolean stackIn_60_1 = false;
         boolean stackIn_73_1 = false;
@@ -1837,7 +1837,7 @@ final class ol extends hs {
         int var15 = 0;
         var15 = Kickabout.field_G;
         try {
-          super.a(-94, param1);
+          super.update(-94, param1);
           var3_int = this.field_bb.a(false) + this.field_q.a(false);
           this.field_lb = -((this.field_a.playerCount + 1) * 50 + 100);
           if (0 >= var3_int) {
@@ -2131,7 +2131,7 @@ final class ol extends hs {
         }
     }
 
-    private final String a(byte param0, int param1) {
+    private final String formatMatchTime(byte param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -2164,13 +2164,13 @@ final class ol extends hs {
         }
     }
 
-    final int c(int param0, int param1) {
+    final int buttonY(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 342) {
-            this.d(-95, 21);
+            this.buttonX(-95, 21);
           }
           stackIn_4_0 = 342;
           return stackIn_4_0;

@@ -4,7 +4,7 @@
 class AuctionItem extends IntrusiveNode {
     static int field_f;
     boolean field_q;
-    static hd field_o;
+    static UiLayoutNode field_o;
     long field_k;
     static MenuSelection field_l;
     boolean field_r;
@@ -18,7 +18,7 @@ class AuctionItem extends IntrusiveNode {
     boolean field_h;
     static String field_n;
     static volatile int field_w;
-    static hd field_p;
+    static UiLayoutNode field_p;
     static int field_e;
     boolean field_j;
 
@@ -57,7 +57,7 @@ class AuctionItem extends IntrusiveNode {
         int var10 = LongPlusOneCommand.field_B[param1];
         int var11 = LongPlusOneCommand.field_B[param6];
         boolean[][][] var12 = AnimationSkeleton.field_g[param0].field_l;
-        return hs.a(param9, param5, param3, var10, var12[0], param4, var12[1], (byte) -92, param2, param8, var11);
+        return MatchPhaseView.a(param9, param5, param3, var10, var12[0], param4, var12[1], (byte) -92, param2, param8, var11);
     }
 
     final static void a(byte param0) {
@@ -180,7 +180,7 @@ class AuctionItem extends IntrusiveNode {
         field_o = null;
         field_u = null;
         if (param0 != -23834) {
-          field_p = (hd) null;
+          field_p = (UiLayoutNode) null;
         }
     }
 

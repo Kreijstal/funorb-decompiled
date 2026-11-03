@@ -48,7 +48,7 @@ final class re implements WidgetPainter {
           var1_int = uq.field_c;
           var2 = param0;
           if (ck.field_a == 2) {
-            var3_long = -va.field_o + nj.a(-50);
+            var3_long = -PlayingView.field_o + nj.a(-50);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -248,16 +248,16 @@ final class re implements WidgetPainter {
             c.field_f = null;
             vd.a(0, 6);
             if (0 == RankingsScreen.field_C) {
-              hd.a(15, 6, 50, 0);
+              UiLayoutNode.a(15, 6, 50, 0);
             }
             if (RankingsScreen.field_C == 1) {
-              hd.a(15, 5, 70, 20);
+              UiLayoutNode.a(15, 5, 70, 20);
             }
             if (2 == RankingsScreen.field_C) {
-              hd.a(15, 4, 128, 0);
+              UiLayoutNode.a(15, 4, 128, 0);
             }
             if (3 == RankingsScreen.field_C) {
-              hd.a(15, 3, 256, 0);
+              UiLayoutNode.a(15, 3, 256, 0);
             }
             vd.a(0, 7);
             if (RankingsScreen.field_C == 2) {
@@ -331,7 +331,7 @@ final class re implements WidgetPainter {
           var5 = 0;
           var6 = param1;
           for (var7 = param1; var7 < param2; var7++) {
-            if (bf.field_y.a(var7, (byte) 116, param3) == null) {
+            if (LineupView.field_y.a(var7, (byte) 116, param3) == null) {
               if (var5 == 0) {
                 var6 = var7;
               }

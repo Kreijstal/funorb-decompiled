@@ -4,7 +4,7 @@
 final class jl {
     static String[] field_a;
     static int[] field_e;
-    static hd field_f;
+    static UiLayoutNode field_f;
     static String field_b;
     static String field_c;
     static int field_d;

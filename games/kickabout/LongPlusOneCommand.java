@@ -3,7 +3,7 @@
  */
 final class LongPlusOneCommand extends ConsoleCommand {
     static int[] field_B;
-    static hd field_D;
+    static UiLayoutNode field_D;
     static String field_A;
 
     public static void g(int param0) {

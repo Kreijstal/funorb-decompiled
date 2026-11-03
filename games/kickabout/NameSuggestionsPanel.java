@@ -8,7 +8,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
     private TextButton[] field_F;
     static String field_B;
     static int field_G;
-    static hd field_E;
+    static UiLayoutNode field_E;
 
     final static int a(ea param0, int[][][] param1, boolean param2) {
         RuntimeException var3 = null;
@@ -89,7 +89,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
               this.field_F[var5].a(15, 1, 0, 80, var5 * 16 + 20);
               this.a(-23, this.field_F[var5]);
             }
-            this.field_F[var3_int] = new TextButton(va.field_K, (UiListener) (this));
+            this.field_F[var3_int] = new TextButton(PlayingView.field_K, (UiListener) (this));
             this.field_F[var3_int].field_r = (WidgetPainter) ((Object) var4);
             this.field_F[var3_int].a(15, 1, 0, 100, 20 + 16 * (var3_int + 1));
             this.a(-52, this.field_F[var3_int]);

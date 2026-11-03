@@ -3,24 +3,24 @@
  */
 final class hl extends DebouncedValidationProvider implements TextInputListener, ft {
     DateInputWidget field_g;
-    static hd field_f;
+    static UiLayoutNode field_f;
     static int field_d;
     static IndexedSprite[] field_e;
 
-    final static void a(boolean param0, hd param1) {
-        hd var4 = null;
-        hd var2 = null;
+    final static void a(boolean param0, UiLayoutNode param1) {
+        UiLayoutNode var4 = null;
+        UiLayoutNode var2 = null;
         int var3 = Kickabout.field_G;
-        hd var2Lifetime1;
+        UiLayoutNode var2Lifetime1;
         try {
-          var4 = (hd) (param1.field_jb.g(24009));
+          var4 = (UiLayoutNode) (param1.field_jb.g(24009));
           var2 = var4;
           while (var4 != null) {
             var4.field_J = 0;
             var4.field_mb = 0;
             var4.field_L = 0;
             var4.field_v = 0;
-            var4 = (hd) (param1.field_jb.c(33));
+            var4 = (UiLayoutNode) (param1.field_jb.c(33));
             var2Lifetime1 = var4;
           }
           if (!param0) {
@@ -76,7 +76,7 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
         field_f = null;
         field_e = null;
         if (param0 != -3) {
-          field_f = (hd) null;
+          field_f = (UiLayoutNode) null;
         }
     }
 

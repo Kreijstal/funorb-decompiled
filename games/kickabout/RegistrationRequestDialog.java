@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RegistrationRequestDialog extends AccountRequestDialog implements ButtonListener {
-    static hd field_lb;
+    static UiLayoutNode field_lb;
     static Sprite field_qb;
     private boolean field_nb;
     private boolean field_pb;
@@ -93,7 +93,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     final void t(int param0) {
-        this.a(true, wb.a(param0 ^ -105, nb.field_g, 248), (byte) -71);
+        this.a(true, TeamSelectionView.a(param0 ^ -105, nb.field_g, 248), (byte) -71);
         if (param0 != 17) {
           field_qb = (Sprite) null;
         }

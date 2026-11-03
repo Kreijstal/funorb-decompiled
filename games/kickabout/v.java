@@ -26,7 +26,7 @@ final class v {
         }
     }
 
-    final void a(gm param0, int param1, boolean param2) {
+    final void a(RenderedFootballer param0, int param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
@@ -74,8 +74,8 @@ final class v {
         if (param0 < -1) {
           return;
         }
-        gm var4 = (gm) null;
-        this.a((gm) null, 55, true);
+        RenderedFootballer var4 = (RenderedFootballer) null;
+        this.a((RenderedFootballer) null, 55, true);
     }
 
     final static Boolean d(int param0) {
@@ -97,7 +97,7 @@ final class v {
         this.field_f = new Sprite(128, 128);
     }
 
-    final void a(int param0, byte param1, ob param2) {
+    final void a(int param0, byte param1, RenderedBall param2) {
         int var4_int = 0;
         try {
           this.field_g = 64;

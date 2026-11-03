@@ -484,7 +484,7 @@ class FootballerAgent extends MatchAgent {
         return this.positionX >> 16;
     }
 
-    final void c(int param0, int param1) {
+    final void startDive(int param0, int param1) {
         this.setAction((byte) -31, param1);
         this.directionMask = param0 > this.positionX ? 8 : 2;
         this.field_t = param0;

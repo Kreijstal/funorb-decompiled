@@ -10,7 +10,7 @@ final class qr {
     static String field_a;
     static String field_d;
     static String field_g;
-    static hd[] field_b;
+    static UiLayoutNode[] field_b;
 
     final static void a(int param0) {
         int[] var1 = null;
@@ -101,7 +101,7 @@ final class qr {
         if (param1 != -1) {
           field_f = (String) null;
         }
-        return (int)((double)((-320 + param0 << 8) / InstrumentNoteMask.field_i) + hd.field_K);
+        return (int)((double)((-320 + param0 << 8) / InstrumentNoteMask.field_i) + UiLayoutNode.field_K);
     }
 
     final static void a(int param0, PacketBuffer param1) {

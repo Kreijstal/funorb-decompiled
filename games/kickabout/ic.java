@@ -6,7 +6,7 @@ final class ic {
     static boolean field_f;
     static ClubState field_h;
     static String field_e;
-    static hd field_a;
+    static UiLayoutNode field_a;
     static boolean field_i;
     static String field_c;
     static String field_g;

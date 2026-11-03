@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LeaguesHelpScreen extends PagedHelpScreen {
-    static hd field_E;
-    static hd field_H;
+    static UiLayoutNode field_E;
+    static UiLayoutNode field_H;
     static String field_F;
     static String field_G;
 
@@ -76,21 +76,21 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
 
     final static wc h(int param0) {
         if (param0 >= -58) {
-          field_E = (hd) null;
+          field_E = (UiLayoutNode) null;
         }
-        if (wb.field_p == null) {
-          wb.field_p = new wc();
-          wb.field_p.a(gf.field_a, 3422);
-          wb.field_p.field_a = EmailSyntaxValidator.field_k;
-          wb.field_p.field_m = 0;
-          wb.field_p.field_p = 4;
-          wb.field_p.field_d = 5;
-          wb.field_p.field_i = 6;
-          wb.field_p.field_j = 7697781;
-          wb.field_p.field_t = 2763306;
-          wb.field_p.field_f = 14;
+        if (TeamSelectionView.field_p == null) {
+          TeamSelectionView.field_p = new wc();
+          TeamSelectionView.field_p.a(gf.field_a, 3422);
+          TeamSelectionView.field_p.field_a = EmailSyntaxValidator.field_k;
+          TeamSelectionView.field_p.field_m = 0;
+          TeamSelectionView.field_p.field_p = 4;
+          TeamSelectionView.field_p.field_d = 5;
+          TeamSelectionView.field_p.field_i = 6;
+          TeamSelectionView.field_p.field_j = 7697781;
+          TeamSelectionView.field_p.field_t = 2763306;
+          TeamSelectionView.field_p.field_f = 14;
         }
-        return wb.field_p;
+        return TeamSelectionView.field_p;
     }
 
     final void drawScreen(int param0, boolean param1) {
@@ -154,7 +154,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
             }
           }
           for (var4Lifetime1Lifetime1 = 0; WriteIntegersCommand.field_E.length > var4Lifetime1Lifetime1; var4Lifetime1Lifetime1++) {
-            WriteIntegersCommand.field_E[var4Lifetime1Lifetime1].drawWithOffsets(30 * var4Lifetime1Lifetime1 + this.slideOffsetX + 50, 150);
+            WriteIntegersCommand.field_E[var4Lifetime1Lifetime1].d(30 * var4Lifetime1Lifetime1 + this.slideOffsetX + 50, 150);
           }
         }
     }
@@ -164,7 +164,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        gm var2_ref_gm = null;
+        RenderedFootballer var2_ref_gm = null;
         Object var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -176,7 +176,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         var9 = Kickabout.field_G;
         try {
           for (var1_int = 0; var1_int < mn.field_b.length; var1_int++) {
-            var2_ref_gm = (gm) (sh.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int]);
+            var2_ref_gm = (RenderedFootballer) (sh.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int]);
             var3 = null;
             var4 = 0;
             if (var2_ref_gm.dashCooldown > 0) {

@@ -54,7 +54,7 @@ final class c {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                lr.b((byte) -116);
+                FormationView.b((byte) -116);
               }
               or.field_d.field_n = 0;
             }

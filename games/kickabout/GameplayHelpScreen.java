@@ -13,7 +13,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
     private PlayerStats[] field_F;
     private SquadSlotWidget[] field_K;
 
-    final static hd j(byte param0) {
+    final static UiLayoutNode j(byte param0) {
         int var4 = 0;
         int var8 = 0;
         ej stackIn_30_0;
@@ -23,16 +23,16 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         int stackIn_31_4;
         int var2;
         int var3;
-        hd var5;
+        UiLayoutNode var5;
         int var6;
         int var7;
         int var9;
         ej var10;
         int var11;
-        hd var12;
+        UiLayoutNode var12;
         int var7Lifetime1;
         var11 = Kickabout.field_G;
-        var12 = new hd();
+        var12 = new UiLayoutNode();
         if (param0 != 15) {
           GameplayHelpScreen.j((byte) 80);
         }
@@ -44,10 +44,10 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var3--;
         }
         for (var4 = 0; var4 < var3; var4++) {
-          var5 = new hd();
+          var5 = new UiLayoutNode();
           var5.a(true, fn.field_d.field_q, 20, 44 + var4 * 44 - 10, fn.field_d.field_w);
           var5.field_N = (Sprite) ((Object) fn.field_d);
-          var12.a((byte) -121, var5);
+          var12.addChild((byte) -121, var5);
           var6 = ca.field_f[var4];
           for (var7 = 0; var7 < ca.field_f[var4]; var7++) {
             if (hv.field_a[bo.field_Ab[var2 + var7]] &&
@@ -76,7 +76,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
               ((ej) (Object) stackIn_30_0).a(stackIn_30_1, stackIn_30_2, stackIn_30_3 + (stackIn_31_4 + var7Lifetime1 * 50), 10 + 44 * var4, 32);
               var2++;
               var7Lifetime1++;
-              var12.a((byte) -121, (hd) (var10));
+              var12.addChild((byte) -121, (UiLayoutNode) (var10));
             } else {
               var2++;
             }
@@ -87,29 +87,29 @@ final class GameplayHelpScreen extends PagedHelpScreen {
     }
 
     final void updateScreen(byte param0, boolean param1) {
-        gm dupTemp$0 = null;
-        gm dupTemp$1 = null;
-        gm dupTemp$2 = null;
-        gm dupTemp$3 = null;
-        gm dupTemp$4 = null;
-        gm dupTemp$5 = null;
-        gm dupTemp$6 = null;
-        gm dupTemp$7 = null;
-        gm var3_ref_gm;
+        RenderedFootballer dupTemp$0 = null;
+        RenderedFootballer dupTemp$1 = null;
+        RenderedFootballer dupTemp$2 = null;
+        RenderedFootballer dupTemp$3 = null;
+        RenderedFootballer dupTemp$4 = null;
+        RenderedFootballer dupTemp$5 = null;
+        RenderedFootballer dupTemp$6 = null;
+        RenderedFootballer dupTemp$7 = null;
+        RenderedFootballer var3_ref_gm;
         int var3;
         int var4;
-        gm var5_ref_gm;
+        RenderedFootballer var5_ref_gm;
         int var5;
         int var6;
         int var7;
         int var8;
         int var9;
-        gm var10;
+        RenderedFootballer var10;
         int var4Lifetime1;
         int var5Lifetime1;
         int var5Lifetime2;
-        gm var5_ref_gmLifetime1;
-        gm var5_ref_gmLifetime2;
+        RenderedFootballer var5_ref_gmLifetime1;
+        RenderedFootballer var5_ref_gmLifetime2;
         var9 = Kickabout.field_G;
         super.updateScreen((byte) -106, param1);
         if (this.pageIndex == 0) {
@@ -374,7 +374,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         int var5 = Kickabout.field_G;
         int var3_intLifetime1;
         int var3_intLifetime2;
-        ip.field_b = new gm[5];
+        ip.field_b = new RenderedFootballer[5];
         for (var2 = 0; var2 < ip.field_b.length; var2++) {
           var3_int = 0;
           if (var2 == 1) {
@@ -389,17 +389,17 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           if (var2 == 4) {
             var3_int = 2;
           }
-          ip.field_b[var2] = new gm(AuctionItem.a(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
+          ip.field_b[var2] = new RenderedFootballer(AuctionItem.a(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
           ip.field_b[var2].archetype = var3_int;
           ip.field_b[var2].g((byte) 127);
           ip.field_b[var2].field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, ip.field_b[var2].field_mb.a(true), new Random()), -61);
         }
-        bk.field_a = new gm[2];
+        bk.field_a = new RenderedFootballer[2];
         PlayerStats var6 = new PlayerStats();
         var6.playerType = 0;
         var6.speed = 100;
         for (var3_intLifetime1 = 0; var3_intLifetime1 < 2; var3_intLifetime1++) {
-          bk.field_a[var3_intLifetime1] = new gm(AuctionItem.a(4, 16, var3_intLifetime1, 0, var3_intLifetime1, var3_intLifetime1, 31, false, false, false), 0, true);
+          bk.field_a[var3_intLifetime1] = new RenderedFootballer(AuctionItem.a(4, 16, var3_intLifetime1, 0, var3_intLifetime1, var3_intLifetime1, 31, false, false, false), 0, true);
           bk.field_a[var3_intLifetime1].applyPlayerStats(true, var6, 3);
         }
         sn.field_k = new Sprite(200, 300);
@@ -445,9 +445,9 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3.playerType = 1;
         var3.experience = 98;
         var3.speed = 35;
-        hd var4 = new hd();
+        UiLayoutNode var4 = new UiLayoutNode();
         var4.a(true, 350, 0, 0, 350);
-        this.field_E = new tk(0L, var4, new hd(), rr.field_b);
+        this.field_E = new tk(0L, var4, new UiLayoutNode(), rr.field_b);
         this.field_E.a(15, 220 + this.slideOffsetX, 0, (byte) 6, 220, this.field_E.field_Db.field_q + 15, 180);
     }
 

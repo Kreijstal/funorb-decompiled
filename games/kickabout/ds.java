@@ -5,7 +5,7 @@ final class ds {
     static boolean[][] field_h;
     static hh field_d;
     static int field_c;
-    static hd[] field_a;
+    static UiLayoutNode[] field_a;
     static String field_e;
     static String field_b;
     static boolean field_g;
@@ -72,7 +72,7 @@ final class ds {
 
     final static void a(int param0, bb param1) {
         try {
-          LeaguesHelpScreen.field_E.a((byte) -128, (hd) (param1));
+          LeaguesHelpScreen.field_E.addChild((byte) -128, (UiLayoutNode) (param1));
           if (param0 != -1) {
             field_c = -45;
           }

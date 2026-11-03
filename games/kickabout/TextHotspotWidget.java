@@ -39,11 +39,11 @@ class TextHotspotWidget extends TextButton {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        gm var4;
+        RenderedFootballer var4;
         boolean stackIn_8_0 = false;
         if (param2 != 480) {
-          var4 = (gm) null;
-          TextHotspotWidget.a((gm) null, 69);
+          var4 = (RenderedFootballer) null;
+          TextHotspotWidget.a((RenderedFootballer) null, 69);
         }
         stackIn_8_0 = (20 + param0 > 0) && (param1 > 0) && (param0 - 20 < 640) && (480 > -40 + param1);
         return stackIn_8_0;
@@ -149,7 +149,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static ak a(gm param0, int param1) {
+    final static ak a(RenderedFootballer param0, int param1) {
         ak var2 = null;
         RuntimeException var2_ref = null;
         ak stackIn_1_0 = null;
@@ -266,7 +266,7 @@ class TextHotspotWidget extends TextButton {
           var7 = var5.a((UiWidget) (this), param2, -1);
           var8 = var5.a(true, (UiWidget) (this), param3);
           do {
-            ob.b(param1 - 63, 2 + var6.field_e, var6.field_m + (var8 - 2), var6.field_f + 2, -2 + (var7 + var6.field_g));
+            RenderedBall.b(param1 - 63, 2 + var6.field_e, var6.field_m + (var8 - 2), var6.field_f + 2, -2 + (var7 + var6.field_g));
             var6 = var6.field_j;
           } while (var6 != null);
         }

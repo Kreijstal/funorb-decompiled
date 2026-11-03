@@ -31,22 +31,22 @@ final class mj {
           var6 = var7;
           var5 = var6;
           double[] var2 = var5;
-          bf.field_x = fn.field_f.h();
+          LineupView.field_x = fn.field_f.h();
           LoggedGoal.field_o = kn.field_J.copy();
           od.field_p = vl.field_g.copy();
-          nh.a(bf.field_x.field_y, var7[0], var7[1], var7[2]);
+          nh.a(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);
           nh.a(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
           nh.a(od.field_p.field_y, var7[0], var7[1], var7[2]);
-          FadingSoundPlayer.field_p = eo.b(bf.field_x);
+          FadingSoundPlayer.field_p = eo.b(LineupView.field_x);
           ConsoleCommand.field_z = eo.a(FadingSoundPlayer.field_p);
           pf.field_b = eo.b(ConsoleCommand.field_z);
           mt.field_d = new Sprite(ConsoleCommand.field_z.field_o, LoggedGoal.field_o.field_v);
-          qj.field_a = new Sprite(od.field_p.field_o, bf.field_x.field_v);
+          qj.field_a = new Sprite(od.field_p.field_o, LineupView.field_x.field_v);
           PacketBuffer.a(-70, mt.field_d);
-          LoggedGoal.field_o.drawWithOffsets(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
+          LoggedGoal.field_o.d(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
           TeamManagementScreen.e(param0 + 158);
           PacketBuffer.a(-42, qj.field_a);
-          od.field_p.drawWithOffsets(0, -od.field_p.field_v + SoftwareRasterizer.field_f);
+          od.field_p.d(0, -od.field_p.field_v + SoftwareRasterizer.field_f);
           TeamManagementScreen.e(118);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "mj.D(" + param0 + ',' + param1 + ')');

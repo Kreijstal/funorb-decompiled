@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gm extends FootballerAgent {
+final class RenderedFootballer extends FootballerAgent {
     private boolean field_ab;
     private int field_W;
     private double field_H;
@@ -53,7 +53,7 @@ final class gm extends FootballerAgent {
           var6 = param3.a((byte) -107, param2, var5_int);
           if (param1 != 10) {
             var7 = (String) null;
-            gm.a((ResourceArchive) null, -21, (String) null, (ResourceArchive) null, (String) null);
+            RenderedFootballer.a((ResourceArchive) null, -21, (String) null, (ResourceArchive) null, (String) null);
           }
           stackIn_3_0 = kk.a(var5_int, param3, param1 - 84, var6, param0);
           return stackIn_3_0;
@@ -89,7 +89,7 @@ final class gm extends FootballerAgent {
         }
     }
 
-    final static void a(int param0, boolean param1, hd param2, SquadSlotWidget param3) {
+    final static void a(int param0, boolean param1, UiLayoutNode param2, SquadSlotWidget param3) {
         PlayerStats stackIn_7_0;
         int stackIn_7_1;
         PlayerStats stackIn_7_2;
@@ -116,7 +116,7 @@ final class gm extends FootballerAgent {
         try {
           if (param0 != -5186) {
             var12 = (String) null;
-            gm.a((ResourceArchive) null, -89, (String) null, (ResourceArchive) null, (String) null);
+            RenderedFootballer.a((ResourceArchive) null, -89, (String) null, (ResourceArchive) null, (String) null);
           }
           SoftwareRasterizer.a(param2.field_F + 6, 26 + param2.field_T, -12 + param2.field_q, -32 + param2.field_mb, 10, 65793, 96);
           if (param3 != null) {
@@ -231,7 +231,7 @@ final class gm extends FootballerAgent {
         }
         if (param0 != 109) {
           var9 = (String) null;
-          gm.a((String) null, true, (byte) -48);
+          RenderedFootballer.a((String) null, true, (byte) -48);
         }
         if (ih.field_c == 0) {
           var2 = 74;
@@ -418,7 +418,7 @@ final class gm extends FootballerAgent {
         }
     }
 
-    gm(vn param0, int param1, boolean param2, FootballerAgent param3) {
+    RenderedFootballer(vn param0, int param1, boolean param2, FootballerAgent param3) {
         this(param0, param1, param2);
         try {
           this.applyPlayerStats(param3.member, param3.stats, 3);
@@ -946,7 +946,7 @@ final class gm extends FootballerAgent {
         }
     }
 
-    gm(vn param0, int param1, boolean param2) {
+    RenderedFootballer(vn param0, int param1, boolean param2) {
         this.field_H = 0.0;
         this.field_ab = false;
         this.field_eb = false;

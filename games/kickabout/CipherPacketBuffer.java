@@ -39,10 +39,10 @@ final class CipherPacketBuffer extends PacketBuffer {
           tr.d(-12974);
           AppScreen.field_a = new Sprite(var3, param0 * var4 / 4);
           AppScreen.field_a.e();
-          var2.drawWithOffsets(0, 0);
+          var2.d(0, 0);
           po.field_e = new Sprite(var3, var4 - AppScreen.field_a.field_w);
           po.field_e.e();
-          var2.drawWithOffsets(0, -AppScreen.field_a.field_w);
+          var2.d(0, -AppScreen.field_a.field_w);
           po.field_e.field_n = AppScreen.field_a.field_w;
           TeamManagementScreen.e(123);
         } catch (RuntimeException runtimeException) {
@@ -144,17 +144,17 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final static void c(boolean param0) {
-        hd stackIn_4_0 = null;
+        UiLayoutNode stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         int stackIn_7_2;
         int stackIn_7_3;
         int stackIn_8_4 = 0;
         int stackIn_10_5;
         int stackIn_11_6 = 0;
-        hd stackIn_13_0 = null;
+        UiLayoutNode stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
         int stackIn_17_0 = 0;
-        hd stackIn_19_0 = null;
+        UiLayoutNode stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         int var1;
         int var2;
@@ -185,14 +185,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         } else {
           stackIn_11_6 = var1;
         }
-        ((hd) (Object) stackIn_4_0).a(stackIn_5_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, stackIn_10_5 - stackIn_11_6);
+        ((UiLayoutNode) (Object) stackIn_4_0).a(stackIn_5_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, stackIn_10_5 - stackIn_11_6);
         ClientException.a(0);
         MouseWheelInput.field_a.a(true, ss.field_c.field_q, 0, ss.field_c.field_mb - 40, 40);
         AuctionItem.field_o.a(true, af.field_d.field_q, 0, 0, 30);
         stackIn_13_0 = bt.field_b;
         stackIn_14_1 = (param0) ? false : true;
-        ((hd) (Object) stackIn_13_0).a(stackIn_14_1, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));
-        va.field_w.a(true, 68, 5, 5, 30);
+        ((UiLayoutNode) (Object) stackIn_13_0).a(stackIn_14_1, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));
+        PlayingView.field_w.a(true, 68, 5, 5, 30);
         qq.field_G.a(true, 78, 75, 5, 30);
         TextWidgetPainter.field_n.a(true, 48, 155, 5, 30);
         AuctionsHelpScreen.field_G.a(true, 48, 205, 5, 30);
@@ -200,7 +200,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         var2 = stackIn_17_0;
         stackIn_19_0 = DateInputWidget.field_D;
         stackIn_20_1 = (param0) ? false : true;
-        ((hd) (Object) stackIn_19_0).a(stackIn_20_1, -var2 + 363, var2 + 5, 5, 30);
+        ((UiLayoutNode) (Object) stackIn_19_0).a(stackIn_20_1, -var2 + 363, var2 + 5, 5, 30);
         RegistrationRequestDialog.field_lb.a(true, -370 + (-5 + af.field_d.field_q), 370, 5, 30);
         ShopPlayerSlot.field_Jb.a(2, 55, -10 + (bt.field_b.field_mb - 32), 37, 5, -5 + bt.field_b.field_q - 5, TeamSelectionAgent.field_f);
         var3 = (2 + af.field_d.field_q) / 2;

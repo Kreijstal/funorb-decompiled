@@ -6,7 +6,7 @@ final class bt {
     static java.awt.Image field_i;
     static String field_d;
     private ResourceArchive field_g;
-    static hd field_b;
+    static UiLayoutNode field_b;
     private ResourceArchive field_h;
     static String field_c;
     static boolean field_e;
@@ -90,7 +90,7 @@ final class bt {
         int stackIn_51_1 = 0;
         int stackIn_53_0 = 0;
         int stackIn_54_1 = 0;
-        gm stackIn_60_0 = null;
+        RenderedFootballer stackIn_60_0 = null;
         int stackIn_61_1 = 0;
         int stackIn_63_0 = 0;
         boolean stackIn_68_0 = false;
@@ -101,7 +101,7 @@ final class bt {
         RuntimeException var1 = null;
         int var2 = 0;
         FootballerAgent var2_ref_nl = null;
-        gm var4 = null;
+        RenderedFootballer var4 = null;
         int var5 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -118,35 +118,35 @@ final class bt {
         try {
           var1_int = 73 % ((param0 + 65) / 33);
           if (ks.field_e == 1) {
-            stackIn_72_0 = tc.a(4, (byte) 97, 29360128, EmailAvailabilityValidator.field_k, 74973184);
+            stackIn_72_0 = tc.advanceToPoint(4, (byte) 97, 29360128, EmailAvailabilityValidator.field_k, 74973184);
             return stackIn_72_0;
           }
           if (ks.field_e == 2) {
-            stackIn_4_0 = tc.a(4, (byte) 82, 29360128, EmailAvailabilityValidator.field_k, 44040192);
+            stackIn_4_0 = tc.advanceToPoint(4, (byte) 82, 29360128, EmailAvailabilityValidator.field_k, 44040192);
             return stackIn_4_0;
           }
           if (ks.field_e == 3) {
-            stackIn_7_0 = tc.a(8, (byte) 116, 29360128, EmailAvailabilityValidator.field_k, 18481152);
+            stackIn_7_0 = tc.advanceToPoint(8, (byte) 116, 29360128, EmailAvailabilityValidator.field_k, 18481152);
             return stackIn_7_0;
           }
           if (ks.field_e == 4) {
             var2 = 1;
-            var2 = var2 != 0 & tc.a(4, (byte) 121, 53084160, EmailAvailabilityValidator.field_k, 72744960) ? 1 : 0;
-            var2 = var2 != 0 & tc.a(1, (byte) 93, 49152000, ld.field_f, 55050240) ? 1 : 0;
+            var2 = var2 != 0 & tc.advanceToPoint(4, (byte) 121, 53084160, EmailAvailabilityValidator.field_k, 72744960) ? 1 : 0;
+            var2 = var2 != 0 & tc.advanceToPoint(1, (byte) 93, 49152000, ld.field_f, 55050240) ? 1 : 0;
             stackIn_70_0 = var2;
             return stackIn_70_0 != 0;
           }
           if (ks.field_e == 5) {
             var2Lifetime1 = 1;
-            var2Lifetime1 = var2Lifetime1 != 0 & tc.a(1, (byte) 122, 53084160, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
-            var2Lifetime1 = var2Lifetime1 != 0 & tc.a(4, (byte) 89, 49152000, ld.field_f, 72744960) ? 1 : 0;
+            var2Lifetime1 = var2Lifetime1 != 0 & tc.advanceToPoint(1, (byte) 122, 53084160, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
+            var2Lifetime1 = var2Lifetime1 != 0 & tc.advanceToPoint(4, (byte) 89, 49152000, ld.field_f, 72744960) ? 1 : 0;
             stackIn_11_0 = var2Lifetime1;
             return stackIn_11_0 != 0;
           }
           if (6 == ks.field_e) {
             var2Lifetime2 = 1;
-            var2Lifetime2 = var2Lifetime2 != 0 & tc.a(2, (byte) 116, 52428800, EmailAvailabilityValidator.field_k, 43909120) ? 1 : 0;
-            var2Lifetime2 = var2Lifetime2 != 0 & tc.a(8, (byte) 84, 13107200, ld.field_f, 43909120) ? 1 : 0;
+            var2Lifetime2 = var2Lifetime2 != 0 & tc.advanceToPoint(2, (byte) 116, 52428800, EmailAvailabilityValidator.field_k, 43909120) ? 1 : 0;
+            var2Lifetime2 = var2Lifetime2 != 0 & tc.advanceToPoint(8, (byte) 84, 13107200, ld.field_f, 43909120) ? 1 : 0;
             stackIn_14_0 = var2Lifetime2;
             return stackIn_14_0 != 0;
           }
@@ -159,7 +159,7 @@ final class bt {
             var2Lifetime3 = 1;
             stackIn_50_0 = var2Lifetime3;
             if (ld.field_f.action == 0 &&
-              tc.a(8, (byte) 114, 3932160, ld.field_f, 16384000)) {
+              tc.advanceToPoint(8, (byte) 114, 3932160, ld.field_f, 16384000)) {
               stackIn_51_1 = 1;
             } else {
               stackIn_51_1 = 0;
@@ -174,7 +174,7 @@ final class bt {
             var2Lifetime3Lifetime2 = stackIn_53_0 & stackIn_54_1;
             if (var2Lifetime3Lifetime2 != 0) {
               for (var3 = 0; var3 < 4; var3++) {
-                var4 = (gm) (et.field_d.field_P[1][1 + var3]);
+                var4 = (RenderedFootballer) (et.field_d.field_P[1][1 + var3]);
                 var4.a(th.field_c[var3] << 16, false, 0, te.field_a[var3] << 16);
                 var4.directionMask = 0;
                 stackIn_60_0 = var4;
@@ -183,7 +183,7 @@ final class bt {
                 } else {
                   stackIn_61_1 = 2;
                 }
-                ((gm) (Object) stackIn_60_0).setDirectionFromMask(stackIn_61_1, 26214);
+                ((RenderedFootballer) (Object) stackIn_60_0).setDirectionFromMask(stackIn_61_1, 26214);
               }
             }
             stackIn_63_0 = var2Lifetime3Lifetime2;
@@ -191,10 +191,10 @@ final class bt {
           }
           if (ks.field_e == 9) {
             var2Lifetime4 = 1;
-            var2Lifetime4 = var2Lifetime4 != 0 & tc.a(2, (byte) 119, 49152000, ld.field_f, 55050240) ? 1 : 0;
-            var2Lifetime4 = var2Lifetime4 != 0 & tc.a(8, (byte) 82, 20971520, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
-            var2Lifetime4 = var2Lifetime4 != 0 & tc.a(1, (byte) 119, 31457280, et.field_d.field_P[1][3], 54067200) ? 1 : 0;
-            var2Lifetime4 = var2Lifetime4 != 0 & tc.a(1, (byte) 123, 31457280, et.field_d.field_P[1][4], 56033280) ? 1 : 0;
+            var2Lifetime4 = var2Lifetime4 != 0 & tc.advanceToPoint(2, (byte) 119, 49152000, ld.field_f, 55050240) ? 1 : 0;
+            var2Lifetime4 = var2Lifetime4 != 0 & tc.advanceToPoint(8, (byte) 82, 20971520, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
+            var2Lifetime4 = var2Lifetime4 != 0 & tc.advanceToPoint(1, (byte) 119, 31457280, et.field_d.field_P[1][3], 54067200) ? 1 : 0;
+            var2Lifetime4 = var2Lifetime4 != 0 & tc.advanceToPoint(1, (byte) 123, 31457280, et.field_d.field_P[1][4], 56033280) ? 1 : 0;
             stackIn_46_0 = var2Lifetime4;
             return stackIn_46_0 != 0;
           }
@@ -203,15 +203,15 @@ final class bt {
               return true;
             }
             if (ks.field_e == 12) {
-              stackIn_44_0 = tc.a(4, (byte) 107, 29360128, fc.field_c, 19660800);
+              stackIn_44_0 = tc.advanceToPoint(4, (byte) 107, 29360128, fc.field_c, 19660800);
               return stackIn_44_0;
             }
             if (ks.field_e != 13) {
               return true;
             }
             var2Lifetime5 = 1;
-            var2Lifetime5 = var2Lifetime5 != 0 & tc.a(4, (byte) 96, 29360128, fc.field_c, 19660800) ? 1 : 0;
-            var2Lifetime5 = var2Lifetime5 != 0 & tc.a(1, (byte) 84, 29360128, et.field_d.field_P[1][0], 1310720) ? 1 : 0;
+            var2Lifetime5 = var2Lifetime5 != 0 & tc.advanceToPoint(4, (byte) 96, 29360128, fc.field_c, 19660800) ? 1 : 0;
+            var2Lifetime5 = var2Lifetime5 != 0 & tc.advanceToPoint(1, (byte) 84, 29360128, et.field_d.field_P[1][0], 1310720) ? 1 : 0;
             stackIn_40_0 = var2Lifetime5;
             if (-1 != et.field_d.field_V.possessorTeam) {
               stackIn_41_1 = 0;
@@ -223,13 +223,13 @@ final class bt {
             return stackIn_42_0 != 0;
           }
           var2Lifetime6 = 1;
-          var2Lifetime6 = var2Lifetime6 != 0 & tc.a(12, (byte) 113, 3276800, EmailAvailabilityValidator.field_k, 58982400) ? 1 : 0;
+          var2Lifetime6 = var2Lifetime6 != 0 & tc.advanceToPoint(12, (byte) 113, 3276800, EmailAvailabilityValidator.field_k, 58982400) ? 1 : 0;
           if (var2Lifetime6 != 0 &&
             EmailAvailabilityValidator.field_k.action == 0 &&
             0 == et.field_d.field_V.possessorTeam) {
             ej.b(200, -2, -100, 30);
           }
-          var2Lifetime6 = var2Lifetime6 != 0 & tc.a(8, (byte) 86, 29360128, fc.field_c, 36438016) ? 1 : 0;
+          var2Lifetime6 = var2Lifetime6 != 0 & tc.advanceToPoint(8, (byte) 86, 29360128, fc.field_c, 36438016) ? 1 : 0;
           stackIn_26_0 = var2Lifetime6;
           if (-1 != et.field_d.field_V.possessorTeam) {
             stackIn_27_1 = 0;

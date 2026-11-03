@@ -71,7 +71,7 @@ final class te {
         return var5;
     }
 
-    final static bb a(int param0, hd param1, int[] param2, hd param3, hd param4) {
+    final static bb a(int param0, UiLayoutNode param1, int[] param2, UiLayoutNode param3, UiLayoutNode param4) {
         int var10_int = 0;
         Object stackIn_7_0 = null;
         bb stackIn_11_0 = null;
@@ -94,7 +94,7 @@ final class te {
         Exception var10 = null;
         QuickChatPhraseDefinition var11 = null;
         int var12 = 0;
-        hd var13 = null;
+        UiLayoutNode var13 = null;
         char[] var14 = null;
         char[] var15 = null;
         var12 = Kickabout.field_G;
@@ -121,8 +121,8 @@ final class te {
             return (bb) (stackIn_7_0);
           }
           if (param0 >= -91) {
-            var13 = (hd) null;
-            te.a(-59, (hd) null, (int[]) null, (hd) null, (hd) null);
+            var13 = (UiLayoutNode) null;
+            te.a(-59, (UiLayoutNode) null, (int[]) null, (UiLayoutNode) null, (UiLayoutNode) null);
           }
           stackIn_11_0 = new bb(0L, param1, param4, param3, var8, param2, var6, var15);
           return stackIn_11_0;
@@ -163,7 +163,7 @@ final class te {
           ii var13 = (ii) null;
           te.a(80, (ii) null, (byte) -28);
         }
-        gm.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
+        RenderedFootballer.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
     }
 
     static {
@@ -177,6 +177,6 @@ final class te {
           ii var13 = (ii) null;
           te.a(80, (ii) null, (byte) -28);
         }
-        gm.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
+        RenderedFootballer.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
     }
 }

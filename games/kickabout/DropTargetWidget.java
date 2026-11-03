@@ -36,7 +36,7 @@ final class DropTargetWidget extends SingleChildContainer {
         }
     }
 
-    final static void a(int param0, hd param1, hd param2) {
+    final static void a(int param0, UiLayoutNode param1, UiLayoutNode param2) {
         if (null == param1.field_jb) {
           param1.field_jb = new IntrusiveDeque();
         }

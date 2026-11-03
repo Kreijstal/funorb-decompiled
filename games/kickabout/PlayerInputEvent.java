@@ -103,7 +103,7 @@ final class PlayerInputEvent extends DualLinkNode {
             break;
           }
           if (var3 == null) {
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             return;
           }
           var4 = var14.readUnsignedByte((byte) -127);
@@ -117,13 +117,13 @@ final class PlayerInputEvent extends DualLinkNode {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               pf.a(var14, 542439655);
               if (var6_intLifetime1 == 0) {
-                var3.field_f = lr.field_r;
+                var3.field_f = FormationView.field_r;
                 var3.field_m = pl.field_d;
                 var3.field_j = MenuButton.field_j;
                 var3.field_h = AuctionsHelpScreen.field_E;
-                su.a(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, lr.field_r, pl.field_d);
+                su.a(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, FormationView.field_r, pl.field_d);
               } else {
-                su.a(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, lr.field_r, pl.field_d);
+                su.a(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, FormationView.field_r, pl.field_d);
               }
             }
             kf.a(var5, (byte) 63);

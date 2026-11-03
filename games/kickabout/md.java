@@ -9,7 +9,7 @@ final class md implements hc {
     static String field_g;
     private char[] field_e;
     private int field_f;
-    private gm[] field_i;
+    private RenderedFootballer[] field_i;
     private int field_c;
     private boolean field_a;
     private Sprite field_b;
@@ -23,14 +23,14 @@ final class md implements hc {
         int var3 = param1 != 0 ? 0 : 1;
         for (var4 = 0; 4 > var4; var4++) {
           var11 = ih.a(21656, rp.field_z[param1][var4]);
-          var6 = hs.a(false, var4 % 3, var3, LongPlusOneCommand.field_B[-(2 * param1) + 12], var11[0], var4 % 3, var11[1], (byte) -89, -var4 + 3, false, LongPlusOneCommand.field_B[31]);
-          this.field_i[var4] = new gm(var6, var3, true);
+          var6 = MatchPhaseView.a(false, var4 % 3, var3, LongPlusOneCommand.field_B[-(2 * param1) + 12], var11[0], var4 % 3, var11[1], (byte) -89, -var4 + 3, false, LongPlusOneCommand.field_B[31]);
+          this.field_i[var4] = new RenderedFootballer(var6, var3, true);
           this.field_i[var4].directionMask = 1;
           this.field_i[var4].g((byte) 127);
           this.field_i[var4].field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(85, this.field_i[var4].field_mb.a(true), new Random()), 123);
         }
         if (param0 >= -10) {
-          this.field_i = (gm[]) null;
+          this.field_i = (RenderedFootballer[]) null;
         }
     }
 
@@ -205,7 +205,7 @@ final class md implements hc {
     }
 
     private final void b(int param0) {
-        this.field_i = new gm[4];
+        this.field_i = new RenderedFootballer[4];
         this.field_b = new Sprite(100, 200);
         int var2 = 26 / ((43 - param0) / 54);
     }

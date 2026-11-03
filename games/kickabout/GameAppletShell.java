@@ -111,10 +111,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             nk.field_h = ((var6_int >> 1) + 32000) / var6_int;
           }
           CachedArchiveSource.field_E = 31 & CachedArchiveSource.field_E + 1;
-          fieldTemp$1 = wb.field_q;
-          wb.field_q = wb.field_q + 1;
+          fieldTemp$1 = TeamSelectionView.field_q;
+          TeamSelectionView.field_q = TeamSelectionView.field_q + 1;
           if (50 < fieldTemp$1) {
-            wb.field_q = wb.field_q - 50;
+            TeamSelectionView.field_q = TeamSelectionView.field_q - 50;
             oo.field_f = true;
             ic.field_d.setSize(f.field_d, ReceivedAuctionItem.field_B);
             ic.field_d.setVisible(true);

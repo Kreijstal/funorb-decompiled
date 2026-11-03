@@ -242,7 +242,7 @@ final class ba extends sr {
             pg.field_a = new String[-1 + (-var4 + var3_int)];
             ArrayOperations.a(TeamManagementScreen.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, lr.field_o, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
+            var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_o, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(TeamManagementScreen.field_C[var5])) {
                 continue;
@@ -310,7 +310,7 @@ final class ba extends sr {
               }
               stackIn_37_0[stackIn_37_1] = stackIn_40_2;
             }
-            va.field_o = nj.a(90);
+            PlayingView.field_o = nj.a(90);
           }
           ll.field_k.itemCount = sh.field_f.length;
           var3_intLifetime1 = 0;

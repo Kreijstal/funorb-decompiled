@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AuctionsScreen extends ButtonMenuScreen {
-    private hd field_P;
+    private UiLayoutNode field_P;
     private CheckboxLabelWidget[] field_E;
     static int field_Q;
     private jr[] field_B;
     static String field_M;
     static int field_A;
-    private hd field_K;
+    private UiLayoutNode field_K;
     static String field_I;
     private AuctionTableWidget field_G;
-    private hd field_R;
+    private UiLayoutNode field_R;
     private IntrusiveDeque field_T;
-    private hd field_L;
+    private UiLayoutNode field_L;
     static int field_O;
     private boolean field_N;
     private long field_J;
@@ -32,7 +32,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         sr[] var5;
         sr[] var6;
         var4 = Kickabout.field_G;
-        this.field_L = new hd();
+        this.field_L = new UiLayoutNode();
         this.field_L.a(true, 640, 0, 0, 480);
         if (param0 != -38) {
           this.field_B = (jr[]) null;
@@ -43,7 +43,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         this.field_R.field_J = 56;
         this.field_P.field_J = 86;
         this.field_P.field_s = 10;
-        this.field_K = new hd();
+        this.field_K = new UiLayoutNode();
         this.field_K.field_E = ArchiveNetworkClient.field_a.toLowerCase();
         this.field_K.a(true, 420, 195, 51, 66);
         this.field_E = new CheckboxLabelWidget[4];
@@ -52,7 +52,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           this.field_E[var2].field_s = var2 * 100 + 15;
           this.field_E[var2].field_J = 27;
           this.field_E[var2].field_Gb = true;
-          this.field_K.a((byte) -117, (hd) (this.field_E[var2]));
+          this.field_K.addChild((byte) -117, (UiLayoutNode) (this.field_E[var2]));
         }
         var5 = new sr[ClubState.field_l.length];
         var6 = var5;
@@ -66,10 +66,10 @@ final class AuctionsScreen extends ButtonMenuScreen {
         this.field_G.a(300, (byte) -116, 122, 7);
         this.field_B = new jr[]{};
         this.field_G.a(this.field_B, 0);
-        this.field_L.a((byte) -123, this.field_P);
-        this.field_L.a((byte) -106, this.field_R);
-        this.field_L.a((byte) -124, this.field_K);
-        this.field_L.a((byte) -115, (hd) (this.field_G));
+        this.field_L.addChild((byte) -123, this.field_P);
+        this.field_L.addChild((byte) -106, this.field_R);
+        this.field_L.addChild((byte) -124, this.field_K);
+        this.field_L.addChild((byte) -115, (UiLayoutNode) (this.field_G));
     }
 
     final static void a(int param0, int param1, IndexedSprite param2, int param3) {
@@ -265,7 +265,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             var12 = stackIn_21_0;
             var13 = new Sprite(param1.field_o, param1.field_v);
             PacketBuffer.a(-96, var13);
-            param1.drawWithOffsets(0, 0);
+            param1.d(0, 0);
             if (var11 == 0) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             }
@@ -603,7 +603,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
     }
 
     private final void handleButtons(boolean param0, boolean param1) {
-        hd stackIn_2_0 = null;
+        UiLayoutNode stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_6_2 = 0;
         CheckboxLabelWidget stackIn_32_0 = null;
@@ -724,7 +724,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             PlayArea.a(um.field_e.matchState, 0);
           } else {
             um.field_e.beginPhase(26415, 2);
-            gm.a(GameKeyHandler.field_a, true, (byte) -117);
+            RenderedFootballer.a(GameKeyHandler.field_a, true, (byte) -117);
           }
           sb.a(false, (byte) -122, um.field_e.matchState.tier, um.field_e.matchState.surface);
         } catch (RuntimeException runtimeException) {

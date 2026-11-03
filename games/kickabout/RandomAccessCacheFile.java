@@ -7,7 +7,7 @@ final class RandomAccessCacheFile {
     static String[] field_f;
     static BufferedCacheFile field_h;
     private long field_g;
-    static hd field_a;
+    static UiLayoutNode field_a;
     static Sprite field_c;
     static int[] field_b;
     private RandomAccessFile field_j;

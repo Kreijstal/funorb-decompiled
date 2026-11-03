@@ -43,16 +43,16 @@ final class rk {
         var11 = var8.field_v;
         var12 = -15 - SingleChildContainer.a(105, this.field_a - 27, var10);
         var13 = -SingleChildContainer.a(-49, -64 + this.field_b, var11);
-        var8.drawWithOffsets(var12, var13);
-        var8.drawWithOffsets(var12 + var10, var13);
-        var8.drawWithOffsets(var12, var11 + var13);
-        var8.drawWithOffsets(var12 + var10, var11 + var13);
+        var8.d(var12, var13);
+        var8.d(var12 + var10, var13);
+        var8.d(var12, var11 + var13);
+        var8.d(var12 + var10, var11 + var13);
         TeamManagementScreen.e(120);
         for (var14 = 0; var14 < 4; var14++) {
           this.field_c[var14] = new Sprite(54, 85);
           var15 = this.field_c[var14];
           PacketBuffer.a(-114, var15);
-          var9.drawWithOffsets(0, 0);
+          var9.d(0, 0);
           incrementValue$3 = var7;
           var7++;
           var6.a(incrementValue$3 % 4, -2);

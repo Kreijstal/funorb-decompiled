@@ -9,13 +9,13 @@ final class em {
     private int field_a;
     private DualLinkNode field_i;
     static String field_c;
-    static hd field_d;
+    static UiLayoutNode field_d;
     private int field_g;
 
     public static void c(byte param0) {
         field_d = null;
         if (param0 != 36) {
-          field_d = (hd) null;
+          field_d = (UiLayoutNode) null;
           field_c = null;
           return;
         }
@@ -117,7 +117,7 @@ final class em {
           this.field_h = this.field_h.field_f;
           return var3;
         }
-        field_d = (hd) null;
+        field_d = (UiLayoutNode) null;
         var2Lifetime1 = this.field_b[(int)((long)(-1 + this.field_a) & this.field_f)];
         while (true) {
           if (var2Lifetime1 == this.field_h) {

@@ -3,7 +3,7 @@
  */
 final class ul {
     static String field_b;
-    static hd field_c;
+    static UiLayoutNode field_c;
     static String field_a;
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
@@ -34,7 +34,7 @@ final class ul {
           var3.field_h = param0.field_h;
           var3.field_l = param2;
           if (param1 < 44) {
-            field_c = (hd) null;
+            field_c = (UiLayoutNode) null;
           }
           var3.field_m = param0.field_m;
           stackIn_3_0 = var3;
@@ -74,13 +74,13 @@ final class ul {
         var6 = Kickabout.field_G;
         try {
           if (param0 != -126) {
-            field_c = (hd) null;
+            field_c = (UiLayoutNode) null;
           }
           var2_int = -mc.field_a + 640 >> 1;
           var3 = 358;
           AuctionListing.a(mc.field_a + var2_int, -22914, var2_int, var3 + 112, var3);
           for (var4 = 0; mc.field_a > var4; var4++) {
-            mk.field_a.drawWithOffsets(var2_int + var4, var3 - 368);
+            mk.field_a.d(var2_int + var4, var3 - 368);
           }
           SoftwareRasterizer.c(var2_int, var3, mc.field_a, 112, 2, 65793);
           if (param1 != null) {

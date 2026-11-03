@@ -145,14 +145,14 @@ final class hr extends IntrusiveNode {
               }
               var8Lifetime1 = stackIn_36_0 + stackIn_37_1;
               while (var7Lifetime1 < var8Lifetime1) {
-                MyKitScreen.field_S.drawWithOffsets(var6Lifetime1, go.a(var7Lifetime1, (byte) -56));
+                MyKitScreen.field_S.d(var6Lifetime1, go.a(var7Lifetime1, (byte) -56));
                 var7Lifetime1 = var7Lifetime1 + var15.field_v;
               }
             }
             if (var4_intLifetime1 != 0) {
               var6Lifetime1Lifetime1 = go.a(-var15.field_v - 15, (byte) -56);
               for (var7Lifetime1Lifetime1 = -15; var7Lifetime1Lifetime1 < 896; var7Lifetime1Lifetime1 = var7Lifetime1Lifetime1 + var15.field_o) {
-                MyKitScreen.field_S.drawWithOffsets(MySquadScreen.c(-44, var7Lifetime1Lifetime1), var6Lifetime1Lifetime1);
+                MyKitScreen.field_S.d(MySquadScreen.c(-44, var7Lifetime1Lifetime1), var6Lifetime1Lifetime1);
               }
             }
             if (var5Lifetime1 != 0) {
@@ -161,7 +161,7 @@ final class hr extends IntrusiveNode {
               for (var7Lifetime1Lifetime2 = 0; var7Lifetime1Lifetime2 < 2; var7Lifetime1Lifetime2++) {
                 var8Lifetime1Lifetime1 = go.a(var6Lifetime1Lifetime2, (byte) -56);
                 for (var9Lifetime1 = -15; 896 > var9Lifetime1; var9Lifetime1 = var9Lifetime1 + var15.field_o) {
-                  MyKitScreen.field_S.drawWithOffsets(MySquadScreen.c(-16, var9Lifetime1), var8Lifetime1Lifetime1);
+                  MyKitScreen.field_S.d(MySquadScreen.c(-16, var9Lifetime1), var8Lifetime1Lifetime1);
                 }
                 var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + var15.field_v;
               }
@@ -185,7 +185,7 @@ final class hr extends IntrusiveNode {
                 }
                 var10Lifetime1 = stackIn_66_0 + 1359;
                 while (var9Lifetime1Lifetime1 < var10Lifetime1) {
-                  MyKitScreen.field_S.drawWithOffsets(var8Lifetime1Lifetime2, go.a(var9Lifetime1Lifetime1, (byte) -56));
+                  MyKitScreen.field_S.d(var8Lifetime1Lifetime2, go.a(var9Lifetime1Lifetime1, (byte) -56));
                   var9Lifetime1Lifetime1 = var9Lifetime1Lifetime1 + var15.field_v;
                 }
                 var6Lifetime1Lifetime3 = var6Lifetime1Lifetime3 + var15.field_o;
@@ -198,7 +198,7 @@ final class hr extends IntrusiveNode {
             var2_intLifetime2 = MySquadScreen.c(-29, -15);
             var3Lifetime2 = go.a(-15, (byte) -56);
             if (InstrumentNoteMask.field_i == 256) {
-              DebouncedValidationProvider.field_a.drawWithOffsets(var2_intLifetime2, var3Lifetime2);
+              DebouncedValidationProvider.field_a.d(var2_intLifetime2, var3Lifetime2);
             } else {
               DebouncedValidationProvider.field_a.a(var2_intLifetime2, var3Lifetime2, DebouncedValidationProvider.field_a.field_o * InstrumentNoteMask.field_i >> 8, InstrumentNoteMask.field_i * DebouncedValidationProvider.field_a.field_v >> 8);
             }

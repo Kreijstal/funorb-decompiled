@@ -9,7 +9,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     private int field_T;
     private AlphaContainer field_ab;
     private int field_U;
-    static hd field_Y;
+    static UiLayoutNode field_Y;
     static int[] field_Q;
     private int field_Z;
     private int field_R;
@@ -129,7 +129,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           if (param0 > -117) {
             this.field_R = 54;
           }
-          if (bf.field_m == this.field_X) {
+          if (LineupView.field_m == this.field_X) {
             this.a((byte) -23, this.field_U, this.field_V.field_i + (12 + this.field_R), this.field_V.field_n + 12);
             this.field_T = 0;
             return;
@@ -221,7 +221,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             this.field_ab.field_F = -((this.field_T << 8) / this.field_W) + 256;
             return super.k(param0 + 0);
           }
-          this.field_X = bf.field_m;
+          this.field_X = LineupView.field_m;
           this.a((byte) -104, this.field_U, this.field_R + (12 + this.field_V.field_i), 12 + this.field_V.field_n);
           this.field_ab.field_F = 0;
           this.field_T = 0;
@@ -250,7 +250,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           this.field_ab.field_F = -((this.field_T << 8) / this.field_W) + 256;
           return super.k(param0 + 0);
         }
-        this.field_X = bf.field_m;
+        this.field_X = LineupView.field_m;
         this.a((byte) -104, this.field_U, this.field_R + (12 + this.field_V.field_i), 12 + this.field_V.field_n);
         this.field_ab.field_F = 0;
         this.field_T = 0;

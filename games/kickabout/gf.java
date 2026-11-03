@@ -91,7 +91,7 @@ final class gf {
             }
             var13 = (dk) (MatchScreen.field_j.g(24009));
             if (var13 == null) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
               return;
             }
             var13.field_e = var4;
@@ -105,17 +105,17 @@ final class gf {
               var14.c((byte) -109);
               return;
             }
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             return;
           }
           if (2 != var3) {
             UnreadMessagesScreen.a("A1: " + tr.b(0), (Throwable) null, 1);
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             return;
           }
           var16_ref = (dk) (MatchScreen.field_j.g(24009));
           if (var16_ref == null) {
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             return;
           }
           var16_ref.field_e = st.c(-23091);
@@ -141,7 +141,7 @@ final class gf {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = ol.a(param1 ^ -9027, param4, param2, param3, param0, param5);
+          var8 = GameOverView.a(param1 ^ -9027, param4, param2, param3, param0, param5);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;

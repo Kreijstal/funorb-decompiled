@@ -4,7 +4,7 @@
 final class AchievementsScreen extends ButtonMenuScreen {
     private int field_B;
     static String field_A;
-    static hd field_C;
+    static UiLayoutNode field_C;
 
     final static boolean a(boolean param0) {
         if (!param0) {
@@ -15,7 +15,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
     }
 
     final void drawScreen(int param0, boolean param1) {
-        hd var3;
+        UiLayoutNode var3;
         int var5;
         int var6;
         int var7;
@@ -55,18 +55,18 @@ final class AchievementsScreen extends ButtonMenuScreen {
         ModalPanel.field_D.a(97, false);
         vu.field_Ib.a(param0 + 84, false);
         AuctionListing.a(vu.field_Ib.field_F + vu.field_Ib.field_q, param0 - 22909, vu.field_Ib.field_F, vu.field_Ib.field_mb + vu.field_Ib.field_T, vu.field_Ib.field_T);
-        var3 = (hd) (vu.field_Ib.field_Db.field_jb.g(24009));
+        var3 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.g(24009));
         while (var3 != null) {
           if (var3 instanceof ej) {
             ((ej) (var3)).c(true);
           }
-          var3 = (hd) (vu.field_Ib.field_Db.field_jb.c(33));
+          var3 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.c(33));
         }
         TeamManagementScreen.e(117);
         var18 = IsSixCommand.field_C;
         var21 = BufferedSocket.field_f;
         if (AuctionListing.field_e == -1) {
-          stackIn_9_0 = ob.field_C;
+          stackIn_9_0 = RenderedBall.field_C;
         } else {
           stackIn_9_0 = AuctionListing.field_e;
         }
@@ -198,7 +198,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
 
     final void buildWidgets(int param0) {
         int var2 = 0;
-        hd var3 = null;
+        UiLayoutNode var3 = null;
         int var4 = Kickabout.field_G;
         bq.field_d = eo.a(false);
         ModalPanel.field_D = eo.a(true);
@@ -228,7 +228,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
 
     final void updateScreen(byte param0, boolean param1) {
         int var4 = 0;
-        hd var5 = null;
+        UiLayoutNode var5 = null;
         int var6 = Kickabout.field_G;
         int var4Lifetime1;
         super.updateScreen((byte) 101, param1);
@@ -242,13 +242,13 @@ final class AchievementsScreen extends ButtonMenuScreen {
           vu.field_Ib.b(0, param1);
           bq.field_d.b(0, param1);
           ModalPanel.field_D.b(0, param1);
-          ob.field_C = -1;
-          var5 = (hd) (vu.field_Ib.field_Db.field_jb.g(24009));
+          RenderedBall.field_C = -1;
+          var5 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.g(24009));
           while (var5 != null) {
             if (var5 instanceof ej) {
               ((ej) (var5)).a(param1, -60);
             }
-            var5 = (hd) (vu.field_Ib.field_Db.field_jb.c(33));
+            var5 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.c(33));
           }
           this.handleScrollButtons(-1);
           if (vu.field_Ib.field_Db.field_J <= var4) {
@@ -287,13 +287,13 @@ final class AchievementsScreen extends ButtonMenuScreen {
         vu.field_Ib.b(0, param1);
         bq.field_d.b(0, param1);
         ModalPanel.field_D.b(0, param1);
-        ob.field_C = -1;
-        var5 = (hd) (vu.field_Ib.field_Db.field_jb.g(24009));
+        RenderedBall.field_C = -1;
+        var5 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.g(24009));
         while (var5 != null) {
           if (var5 instanceof ej) {
             ((ej) (var5)).a(param1, -60);
           }
-          var5 = (hd) (vu.field_Ib.field_Db.field_jb.c(33));
+          var5 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.c(33));
         }
         this.handleScrollButtons(-1);
         if (vu.field_Ib.field_Db.field_J > var4Lifetime1 &&
@@ -403,7 +403,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
     final void enterScreen(int param0, int param1, boolean param2) {
         super.enterScreen(param0, param1, param2);
         AuctionListing.field_e = -1;
-        ob.field_C = -1;
+        RenderedBall.field_C = -1;
     }
 
     final static int a(byte param0, int param1) {
@@ -435,7 +435,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var6 = (CharSequence) ((Object) param0);
           var2 = MatchAgent.a(0, var6);
           if (param1 != 145) {
-            field_C = (hd) null;
+            field_C = (UiLayoutNode) null;
           }
           if (var2 == null) {
             var2 = param0;
@@ -483,7 +483,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           ModalPanel.field_D.b(0, false);
           vu.field_Ib.b(0, false);
           if (param2 >= -28) {
-            field_C = (hd) null;
+            field_C = (UiLayoutNode) null;
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "fm.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

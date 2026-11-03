@@ -64,22 +64,22 @@ final class we {
     }
 
     final static void a(boolean param0, boolean param1, byte param2, int param3) {
-        hd stackIn_7_0 = null;
+        UiLayoutNode stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
-        hd stackIn_16_0 = null;
+        UiLayoutNode stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         boolean stackIn_17_2 = false;
-        hd stackIn_21_0 = null;
+        UiLayoutNode stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         boolean stackIn_22_2 = false;
-        hd stackIn_51_0 = null;
+        UiLayoutNode stackIn_51_0 = null;
         int stackIn_51_1 = 0;
         boolean stackIn_52_2 = false;
-        hd stackIn_60_0 = null;
+        UiLayoutNode stackIn_60_0 = null;
         int stackIn_60_1 = 0;
         boolean stackIn_61_2 = false;
-        hd stackIn_65_0 = null;
+        UiLayoutNode stackIn_65_0 = null;
         int stackIn_65_1 = 0;
         boolean stackIn_66_2 = false;
         pa.b((byte) 123);
@@ -88,35 +88,35 @@ final class we {
           stackIn_51_0 = ss.field_c;
           stackIn_51_1 = 0;
           stackIn_52_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (uv.field_i == null) && (null == ArchiveSource.field_b);
-          ((hd) (Object) stackIn_51_0).b(stackIn_51_1, stackIn_52_2);
+          ((UiLayoutNode) (Object) stackIn_51_0).b(stackIn_51_1, stackIn_52_2);
           if (param2 > -37) {
             we.a((byte) -81);
           }
           stackIn_60_0 = af.field_d;
           stackIn_60_1 = 0;
           stackIn_61_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (uv.field_i == null) && (ArchiveSource.field_b == null);
-          ((hd) (Object) stackIn_60_0).b(stackIn_60_1, stackIn_61_2);
+          ((UiLayoutNode) (Object) stackIn_60_0).b(stackIn_60_1, stackIn_61_2);
           stackIn_65_0 = kk.field_j;
           stackIn_65_1 = 0;
           stackIn_66_2 = (param0) && (!param1) && (TextWidgetPainter.field_f);
-          ((hd) (Object) stackIn_65_0).b(stackIn_65_1, stackIn_66_2);
+          ((UiLayoutNode) (Object) stackIn_65_0).b(stackIn_65_1, stackIn_66_2);
         } else {
           ConsoleValue.field_a.field_E = null;
           stackIn_7_0 = ss.field_c;
           stackIn_7_1 = 0;
           stackIn_8_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (uv.field_i == null) && (null == ArchiveSource.field_b);
-          ((hd) (Object) stackIn_7_0).b(stackIn_7_1, stackIn_8_2);
+          ((UiLayoutNode) (Object) stackIn_7_0).b(stackIn_7_1, stackIn_8_2);
           if (param2 > -37) {
             we.a((byte) -81);
           }
           stackIn_16_0 = af.field_d;
           stackIn_16_1 = 0;
           stackIn_17_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (uv.field_i == null) && (ArchiveSource.field_b == null);
-          ((hd) (Object) stackIn_16_0).b(stackIn_16_1, stackIn_17_2);
+          ((UiLayoutNode) (Object) stackIn_16_0).b(stackIn_16_1, stackIn_17_2);
           stackIn_21_0 = kk.field_j;
           stackIn_21_1 = 0;
           stackIn_22_2 = (param0) && (!param1) && (TextWidgetPainter.field_f);
-          ((hd) (Object) stackIn_21_0).b(stackIn_21_1, stackIn_22_2);
+          ((UiLayoutNode) (Object) stackIn_21_0).b(stackIn_21_1, stackIn_22_2);
         }
         tn.field_d.field_b.h((byte) 47);
         if (MouseWheelInput.field_a.field_sb != 0) {

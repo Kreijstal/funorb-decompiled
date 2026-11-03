@@ -21,13 +21,13 @@ class ButtonMenuScreen extends AppScreen {
     static PcmStreamMixer field_y;
     private int field_o;
     private boolean field_m;
-    static hd field_n;
+    static UiLayoutNode field_n;
 
     private final boolean hasBackButton(byte param0) {
         int var2 = 0;
         int var3 = Kickabout.field_G;
         if (param0 != 83) {
-          field_n = (hd) null;
+          field_n = (UiLayoutNode) null;
         }
         for (var2 = 0; this.buttons.length > var2; var2++) {
           if (7 == this.buttons[var2].kind) {
@@ -145,9 +145,9 @@ class ButtonMenuScreen extends AppScreen {
           var8 = ug.field_b[this.field_o][1];
           var5_ref_ut = ug.field_b[this.field_o][0];
           for (var6Lifetime1 = 0; var6Lifetime1 < FormationAgent.field_f - var5_ref_ut.field_o; var6Lifetime1 = var6Lifetime1 + var8.field_o) {
-            var8.drawWithOffsets(var6Lifetime1, var3Lifetime1);
+            var8.d(var6Lifetime1, var3Lifetime1);
           }
-          var5_ref_ut.drawWithOffsets(-var5_ref_ut.field_o + FormationAgent.field_f, var3Lifetime1);
+          var5_ref_ut.d(-var5_ref_ut.field_o + FormationAgent.field_f, var3Lifetime1);
           var6Lifetime1Lifetime1 = var3Lifetime1 - (-var5_ref_ut.field_v + 18);
           if (null != this.field_w) {
             un.field_d.a(this.field_w, 10, var6Lifetime1Lifetime1, 16777215, -1);
@@ -163,7 +163,7 @@ class ButtonMenuScreen extends AppScreen {
             if (var3_ref_js == this &&
               var4_ref_js instanceof ButtonMenuScreen &&
               ((ButtonMenuScreen) (var4_ref_js)).field_m) {
-              AccountTermsPanel.field_E.drawWithOffsets(0, 430);
+              AccountTermsPanel.field_E.d(0, 430);
             } else {
               var5Lifetime1 = (ce.field_I << 9) / 24;
               if (256 < var5Lifetime1) {
@@ -175,7 +175,7 @@ class ButtonMenuScreen extends AppScreen {
               AccountTermsPanel.field_E.b(0, 430, var5Lifetime1);
             }
           } else {
-            AccountTermsPanel.field_E.drawWithOffsets(0, 430);
+            AccountTermsPanel.field_E.d(0, 430);
           }
         }
         for (var3Lifetime2 = 0; var3Lifetime2 < this.buttonSelection.itemCount; var3Lifetime2++) {
@@ -665,9 +665,9 @@ class ButtonMenuScreen extends AppScreen {
         }
     }
 
-    final static hd f(byte param0) {
+    final static UiLayoutNode f(byte param0) {
         if (param0 != -63) {
-          return (hd) null;
+          return (UiLayoutNode) null;
         }
         return nq.field_F.field_yb;
     }

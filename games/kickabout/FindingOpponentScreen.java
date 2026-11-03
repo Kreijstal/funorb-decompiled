@@ -5,7 +5,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
     static String[] field_B;
     static int field_E;
     private int field_C;
-    private hd field_A;
+    private UiLayoutNode field_A;
     static int field_D;
     static wp[] field_F;
 

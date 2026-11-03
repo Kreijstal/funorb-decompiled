@@ -8,7 +8,7 @@ final class LoggedPlayer {
     int field_q;
     int field_n;
     private int totalGoals;
-    static hd field_r;
+    static UiLayoutNode field_r;
     int field_a;
     int field_m;
     static String field_l;

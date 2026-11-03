@@ -12,7 +12,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     int field_m;
     private boolean field_k;
     int field_e;
-    static hd field_n;
+    static UiLayoutNode field_n;
     int field_o;
     int field_l;
     int field_i;
@@ -156,7 +156,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           this.a(5035, param1);
           if (param5 != 0) {
-            field_n = (hd) null;
+            field_n = (UiLayoutNode) null;
           }
           stackIn_3_0 = param1.field_h.a(param0 - this.a(true, param1, param4), param2 - this.a(param1, param3, -1), 29889);
           return stackIn_3_0;

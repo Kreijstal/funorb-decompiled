@@ -174,7 +174,7 @@ abstract class AppScreen {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  lr.b((byte) -116);
+                  FormationView.b((byte) -116);
                   vu.field_Db = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
@@ -278,7 +278,7 @@ abstract class AppScreen {
             }
             if (AccountRequestDialog.field_fb == un.field_c &&
               LoginCredentials.a(180)) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
               if (so.field_b == 7 &&
                 !vu.field_Db) {
                 vu.field_Db = true;

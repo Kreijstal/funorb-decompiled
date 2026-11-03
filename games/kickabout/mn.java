@@ -41,7 +41,7 @@ final class mn implements WidgetPainter {
           if (!param3.b(44)) {
             return;
           }
-          ob.b(2, param3.field_n - 4, var8 + 2, -4 + param3.field_i, 2 + var6_int);
+          RenderedBall.b(2, param3.field_n - 4, var8 + 2, -4 + param3.field_i, 2 + var6_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

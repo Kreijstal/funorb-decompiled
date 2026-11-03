@@ -13,7 +13,7 @@ final class mp extends IntrusiveNode {
     static qe field_h;
     static String field_l;
     int field_m;
-    static hd field_f;
+    static UiLayoutNode field_f;
 
     final static void writeSettingsCookie(java.applet.Applet param0, boolean param1, String param2) {
         try {

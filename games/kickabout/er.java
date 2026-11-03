@@ -36,7 +36,7 @@ final class er extends IntrusiveNode {
         try {
           var2_double = (double)NameSuggestionsPanel.a(param1, GameModesHelpScreen.field_F, true);
           var4 = (double)NameSuggestionsPanel.a(param1, IntrusiveDeque.field_g, true);
-          var6 = (double)NameSuggestionsPanel.a(param1, gm.field_fb, true);
+          var6 = (double)NameSuggestionsPanel.a(param1, RenderedFootballer.field_fb, true);
           if (param0 <= 91) {
             stackIn_2_0 = 1.8026836499173446;
             return stackIn_2_0;

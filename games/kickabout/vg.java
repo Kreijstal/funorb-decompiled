@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg extends hd {
+final class vg extends UiLayoutNode {
     private boolean field_Jb;
     static boolean field_Rb;
     static long field_Ib;
@@ -17,16 +17,16 @@ final class vg extends hd {
     static boolean field_Wb;
     private long field_Sb;
     static int field_zb;
-    static hd field_Qb;
+    static UiLayoutNode field_Qb;
     static nb[] field_Db;
-    private hd field_yb;
+    private UiLayoutNode field_yb;
     static String field_Kb;
     static PcmStreamMixer field_Bb;
     private int field_Ab;
     private int field_Eb;
     private int field_Fb;
-    private hd field_Nb;
-    hd field_Lb;
+    private UiLayoutNode field_Nb;
+    UiLayoutNode field_Lb;
 
     private final void l(int param0) {
         int var2 = 0;
@@ -48,7 +48,7 @@ final class vg extends hd {
         }
     }
 
-    vg(long param0, hd param1, hd param2, hd param3, int param4) {
+    vg(long param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, int param4) {
         super(param0, param1);
         StringBuilder stackIn_3_1 = null;
         StringBuilder stackIn_3_2 = null;
@@ -71,9 +71,9 @@ final class vg extends hd {
         this.field_Hb = false;
         try {
           this.field_Eb = param4;
-          this.field_Nb = new hd(0L, param2);
-          this.field_Lb = new hd(0L, param3);
-          this.field_yb = new hd(0L, param3);
+          this.field_Nb = new UiLayoutNode(0L, param2);
+          this.field_Lb = new UiLayoutNode(0L, param3);
+          this.field_yb = new UiLayoutNode(0L, param3);
           this.field_nb = true;
           stackIn_3_1 = null;
           stackIn_3_2 = null;
@@ -93,9 +93,9 @@ final class vg extends hd {
           this.field_yb.field_E = "";
           this.field_yb.field_V = "|";
           this.field_jb = new IntrusiveDeque();
-          this.a((byte) -123, this.field_Nb);
-          this.a((byte) -113, this.field_Lb);
-          this.a((byte) -115, this.field_yb);
+          this.addChild((byte) -123, this.field_Nb);
+          this.addChild((byte) -113, this.field_Lb);
+          this.addChild((byte) -115, this.field_yb);
           this.field_wb = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -217,7 +217,7 @@ final class vg extends hd {
           }
           c.a(param0, false);
           if (param1 != 0) {
-            field_Qb = (hd) null;
+            field_Qb = (UiLayoutNode) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -304,7 +304,7 @@ final class vg extends hd {
         sr.field_c = rt.field_G[param0];
         ks.field_g = ConsoleParseException.field_g[param0];
         if (param1 != 31900) {
-          field_Qb = (hd) null;
+          field_Qb = (UiLayoutNode) null;
         }
         ep.field_e = ss.field_a[param0];
     }
@@ -479,7 +479,7 @@ final class vg extends hd {
 
     final String i(byte param0) {
         if (param0 != 35) {
-          this.field_yb = (hd) null;
+          this.field_yb = (UiLayoutNode) null;
         }
         String var2 = this.field_Ub.toString();
         int var3 = this.field_Mb <= this.field_Fb ? this.field_Mb : this.field_Fb;
@@ -607,7 +607,7 @@ final class vg extends hd {
         }
     }
 
-    vg(long param0, hd param1, hd param2, hd param3) {
+    vg(long param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3) {
         this(param0, param1, param2, param3, -1);
     }
 

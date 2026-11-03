@@ -88,7 +88,7 @@ final class MyPitchScreen extends TeamManagementScreen {
               stackIn_13_1 = true;
             }
             stackIn_11_0.field_lb = stackIn_13_1;
-            cf.field_Gb.a((byte) -104, (hd) (var6));
+            cf.field_Gb.addChild((byte) -104, (UiLayoutNode) (var6));
           }
         }
         cf.field_Gb.field_s = 665;
@@ -134,7 +134,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           IsSixCommand.field_C.a(we.field_d, var3, 376, 348, 40, 16777215, -1, 1, 1, 0);
         }
         un.field_d.a(ca.field_a, this.slideOffsetX + 25, 115, 16777215, -1);
-        un.field_d.a(lr.field_j, 25 + this.slideOffsetX, 223, 16777215, -1);
+        un.field_d.a(FormationView.field_j, 25 + this.slideOffsetX, 223, 16777215, -1);
         un.field_d.a(GameLoopApplet.field_C, 25 + this.slideOffsetX, 331, 16777215, -1);
     }
 
@@ -142,7 +142,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         if (param0 != -38) {
           field_G = -0.01516130877366001;
         }
-        cf.field_Gb = new hd();
+        cf.field_Gb = new UiLayoutNode();
         cf.field_Gb.a(true, 390, 25, 100, 440);
     }
 

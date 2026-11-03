@@ -7,9 +7,9 @@ final class ak extends IntrusiveNode {
     int field_g;
     static IntrusiveDeque field_i;
     int field_k;
-    ob field_h;
+    RenderedBall field_h;
     static Sprite field_f;
-    gm field_m;
+    RenderedFootballer field_m;
     boolean field_n;
     private int field_j;
 

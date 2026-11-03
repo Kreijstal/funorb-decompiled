@@ -321,7 +321,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
           if (ek.field_G != -2) {
             af.field_a = new dt[4];
             for (var4_int = 0; var4_int < 4; var4_int++) {
-              af.field_a[var4_int] = new dt((gm) (IntrusiveDequeCursor.field_b.field_P[IntrusiveDequeCursor.field_b.field_g[ek.field_G].field_p][var4_int + 1]), var4_int + 1);
+              af.field_a[var4_int] = new dt((RenderedFootballer) (IntrusiveDequeCursor.field_b.field_P[IntrusiveDequeCursor.field_b.field_g[ek.field_G].field_p][var4_int + 1]), var4_int + 1);
             }
             return;
           }
@@ -347,7 +347,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final static boolean a(BallAgent param0, FootballerAgent param1, byte param2, int param3) {
+    final static boolean tryKeeperDive(BallAgent param0, FootballerAgent param1, byte param2, int param3) {
         FootballerAgent stackIn_17_0 = null;
         int stackIn_18_1 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -379,7 +379,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
               if (var6 > 24379392 &&
                 var6 < 34275328) {
                 if (-28 + (var7 >> 16) > 12) {
-                  param1.c(var6, 5);
+                  param1.startDive(var6, 5);
                   return true;
                 }
                 stackIn_17_0 = (FootballerAgent) (param1);

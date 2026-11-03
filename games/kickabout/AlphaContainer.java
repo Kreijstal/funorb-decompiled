@@ -6,7 +6,7 @@ final class AlphaContainer extends SingleChildContainer {
     int field_F;
     static String field_A;
     static String field_D;
-    static hd field_E;
+    static UiLayoutNode field_E;
 
     final static IndexedSprite a(boolean param0, int param1, IntrusiveDeque param2, int param3) {
         Sprite var4 = null;
@@ -40,7 +40,7 @@ final class AlphaContainer extends SingleChildContainer {
           } else {
             stackIn_7_1 = -120;
           }
-          ((Sprite) (Object) stackIn_6_0).drawWithOffsets(stackIn_7_1, 0);
+          ((Sprite) (Object) stackIn_6_0).d(stackIn_7_1, 0);
           var4.c(0, 0);
           var6 = (PlayerModelPreview) (param2.g(24009));
           while (var6 != null) {
@@ -83,7 +83,7 @@ final class AlphaContainer extends SingleChildContainer {
         field_E = null;
         field_A = null;
         if (param0 <= 110) {
-          field_E = (hd) null;
+          field_E = (UiLayoutNode) null;
           field_D = null;
           return;
         }

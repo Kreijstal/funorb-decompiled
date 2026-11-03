@@ -397,24 +397,24 @@ final class tb extends ArchiveNetworkClient {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        hd var6 = null;
-        hd var7 = null;
-        hd var3 = null;
+        UiLayoutNode var6 = null;
+        UiLayoutNode var7 = null;
+        UiLayoutNode var3 = null;
         try {
           ll.field_n = wa.a((byte) 126, "basic", param1, "display_name_changed");
           ei.field_d = new al(0L, BroadcastServerCommand.field_D, le.field_a, ButtonMenuScreen.field_k);
           nq.field_F = new al(0L, BroadcastServerCommand.field_D, md.field_j, IsSixCommand.field_D);
-          kk.field_R = new hd(0L, (hd) null);
-          du.field_f = new hd(0L, ConsoleEvaluationException.field_e);
+          kk.field_R = new UiLayoutNode(0L, (UiLayoutNode) null);
+          du.field_f = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           du.field_f.field_A = 1;
-          AlphaContainer.field_E = new hd(0L, dn.field_zb, oh.field_h);
-          ph.field_f = new hd(0L, pq.field_P, vg.field_Vb);
-          BlankScreen.field_h = new hd(0L, ul.field_c);
-          kk.field_R.a((byte) -109, du.field_f);
-          kk.field_R.a((byte) -122, AlphaContainer.field_E);
-          kk.field_R.a((byte) -108, ph.field_f);
-          kk.field_R.a((byte) -124, (hd) (ei.field_d));
-          kk.field_R.a((byte) -108, BlankScreen.field_h);
+          AlphaContainer.field_E = new UiLayoutNode(0L, dn.field_zb, oh.field_h);
+          ph.field_f = new UiLayoutNode(0L, pq.field_P, vg.field_Vb);
+          BlankScreen.field_h = new UiLayoutNode(0L, ul.field_c);
+          kk.field_R.addChild((byte) -109, du.field_f);
+          kk.field_R.addChild((byte) -122, AlphaContainer.field_E);
+          kk.field_R.addChild((byte) -108, ph.field_f);
+          kk.field_R.addChild((byte) -124, (UiLayoutNode) (ei.field_d));
+          kk.field_R.addChild((byte) -108, BlankScreen.field_h);
           ei.field_d.field_Cb.field_zb.a(ConsoleEvaluationException.field_e, (byte) 87);
           if (param0 >= -59) {
             ResourceArchive var4 = (ResourceArchive) null;

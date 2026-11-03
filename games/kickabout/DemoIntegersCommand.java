@@ -66,7 +66,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
-        hd var6 = null;
+        UiLayoutNode var6 = null;
         int var7 = 0;
         int var8 = 0;
         tv var9 = null;
@@ -104,11 +104,11 @@ final class DemoIntegersCommand extends ConsoleCommand {
             }
           }
           if (0 != uq.field_a.field_sb) {
-            ck.field_b = new rb(uq.field_a.field_F, uq.field_a.field_T, uq.field_a.field_q, uq.field_a.field_mb, param2, tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, hs.field_d, ul.field_c, (String) null, 0L);
+            ck.field_b = new rb(uq.field_a.field_F, uq.field_a.field_T, uq.field_a.field_q, uq.field_a.field_mb, param2, tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, (String) null, 0L);
           }
           var9 = rb.a(param1, sh.field_c, (byte) 26, eb.field_b);
           if (var9 != null) {
-            bf.a(var9, (byte) -60);
+            LineupView.a(var9, (byte) -60);
           }
           var5 = fn.f(-3);
           if (var5 != null) {

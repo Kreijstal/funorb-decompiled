@@ -3,7 +3,7 @@
  */
 final class bq {
     static String field_b;
-    static hd field_d;
+    static UiLayoutNode field_d;
     static int field_c;
     static rj field_a;
 
@@ -12,7 +12,7 @@ final class bq {
         int var11 = 0;
         int stackIn_3_0 = 0;
         int stackIn_4_1 = 0;
-        hd stackIn_6_0 = null;
+        UiLayoutNode stackIn_6_0 = null;
         boolean stackIn_6_1 = false;
         int stackIn_6_2 = 0;
         int stackIn_7_3 = 0;
@@ -25,15 +25,15 @@ final class bq {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        hd var8_ref_hd = null;
+        UiLayoutNode var8_ref_hd = null;
         vu var9 = null;
         int var9_int = 0;
         vu var10 = null;
         int var10_int = 0;
         int var12 = 0;
         int var13 = 0;
-        hd var14 = null;
-        hd var15 = null;
+        UiLayoutNode var14 = null;
+        UiLayoutNode var15 = null;
         int var16 = 0;
         var13 = Kickabout.field_G;
         try {
@@ -56,7 +56,7 @@ final class bq {
           } else {
             stackIn_7_3 = 2 + (TeamSelectionAgent.field_f + 40 + 2);
           }
-          ((hd) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
+          ((UiLayoutNode) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
           DoSomethingCommand.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (AchievementsScreen.field_C.field_q - 2), 2 + sh.field_c, 18);
           ClientException.field_c.a(2, 124, -20 - sh.field_c + AchievementsScreen.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, AchievementsScreen.field_C.field_q, TeamSelectionAgent.field_f);
           ac.field_b.a(true, dn.field_Cb.field_q, 0, -40 + dn.field_Cb.field_mb, 40);

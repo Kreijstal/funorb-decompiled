@@ -12,7 +12,7 @@ final class DebugConsole extends ConsolePanel {
     static String field_x;
     static String field_u;
     static String field_v;
-    static hd field_z;
+    static UiLayoutNode field_z;
     static String field_A;
 
     final boolean a(String param0, boolean param1) {
@@ -27,7 +27,7 @@ final class DebugConsole extends ConsolePanel {
           ConsoleParseException var3 = null;
           ConsoleEvaluationException var3_ref = null;
           RuntimeException var3_ref2 = null;
-          hd var4 = null;
+          UiLayoutNode var4 = null;
           try {
             try {
               var6 = fj.a(false, param0);
@@ -45,7 +45,7 @@ final class DebugConsole extends ConsolePanel {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (ConsoleParseException) (Object) decompiledCaughtException;
               param0 = "<col=55ff55>" + param0.substring(0, var3.field_f) + "</col>" + param0.substring(var3.field_f);
-              var4 = (hd) (this.field_g.field_Ab.field_jb.last(-9033));
+              var4 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.last(-9033));
               var4.field_E = this.field_a + param0;
               return false;
             } catch (ConsoleEvaluationException decompiledCaughtParameter1) {

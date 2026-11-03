@@ -176,7 +176,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (var6 != 0 &&
             var9 != 0) {
-            im.a(-12376, -var21 + var14, var17, bf.field_x);
+            im.a(-12376, -var21 + var14, var17, LineupView.field_x);
             im.a(-12376, var14 - var19, var17, c.field_f[2]);
           }
           if (var8 != 0 &&

@@ -139,7 +139,7 @@ final class AuctionLogEntry extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 3) {
-            stackIn_2_0 = ol.field_E;
+            stackIn_2_0 = GameOverView.field_E;
             return stackIn_2_0;
           }
           if (6 == param0) {

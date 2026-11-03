@@ -8,7 +8,7 @@ final class tn {
     static long field_a;
     static Sprite field_e;
     static int field_b;
-    static hd field_f;
+    static UiLayoutNode field_f;
     private static String field_z;
 
     public static void a(boolean param0) {

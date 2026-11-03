@@ -3,7 +3,7 @@
  */
 final class ph {
     static Sprite field_b;
-    static hd field_f;
+    static UiLayoutNode field_f;
     static String field_c;
     static String field_d;
     static int field_a;

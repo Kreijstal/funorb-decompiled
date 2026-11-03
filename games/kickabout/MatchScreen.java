@@ -11,7 +11,7 @@ final class MatchScreen extends AppScreen {
     private int field_E;
     private boolean field_y;
     int[] field_z;
-    private hs phaseController;
+    private MatchPhaseView phaseController;
     CommonGame field_i;
     private PlayerStats[] field_k;
     CommonGame field_m;
@@ -40,7 +40,7 @@ final class MatchScreen extends AppScreen {
 
     final boolean d(byte param0) {
         int var2 = -114 % ((19 - param0) / 39);
-        return this.phaseController instanceof ol;
+        return this.phaseController instanceof GameOverView;
     }
 
     final static void loadMatchSprites(byte param0, ResourceArchive param1) {
@@ -136,7 +136,7 @@ final class MatchScreen extends AppScreen {
           wt.field_x >= 0 &&
           us.field_j >= 0 &&
           wt.field_x < 640 &&
-          us.field_j < 480 && (((va) (this.phaseController)).b((byte) -82) ||
+          us.field_j < 480 && (((PlayingView) (this.phaseController)).b((byte) -82) ||
           !ArchiveIndex.b(640))) {
           stackIn_16_0 = true;
           decompiledFrameRemainder0 = false;
@@ -198,7 +198,7 @@ final class MatchScreen extends AppScreen {
           return;
         }
         if (this.matchState.phase == 4) {
-          ((va) (this.phaseController)).g(0);
+          ((PlayingView) (this.phaseController)).g(0);
         }
         this.matchState.processEventQueue((byte) -87);
         this.matchState.field_E.b(22997);
@@ -209,7 +209,7 @@ final class MatchScreen extends AppScreen {
         ie.g(-128);
         re.b(101);
         this.phaseController.a(true);
-        this.phaseController.a(-117, param1);
+        this.phaseController.update(-117, param1);
         if (this.isOnlineMatch &&
           !pq.field_K) {
           if (this.isSpectator(-2)) {
@@ -239,7 +239,7 @@ final class MatchScreen extends AppScreen {
             this.beginPhase(26415, 3);
           }
           if (this.matchState.phase == 3 &&
-            this.matchState.field_o.a(-127, 0)) {
+            this.matchState.field_o.isReadyOrInactive(-127, 0)) {
             this.beginPhase(26415, 4);
           }
         }
@@ -378,7 +378,7 @@ final class MatchScreen extends AppScreen {
         if (!this.d((byte) -59)) {
           return null;
         }
-        return ((ol) (this.phaseController)).h(-19510);
+        return ((GameOverView) (this.phaseController)).h(-19510);
     }
 
     final void a(int param0, CipherPacketBuffer param1) {
@@ -443,7 +443,7 @@ final class MatchScreen extends AppScreen {
           }
         }
         if (var6 != null) {
-          gm.a(vo.$cfr$intArgs$a$53ce4ab4c593(-18, (String) (var6), new String[]{this.matchState.field_S[param2]}), false, (byte) -108);
+          RenderedFootballer.a(vo.$cfr$intArgs$a$53ce4ab4c593(-18, (String) (var6), new String[]{this.matchState.field_S[param2]}), false, (byte) -108);
         }
     }
 
@@ -556,7 +556,7 @@ final class MatchScreen extends AppScreen {
           return;
         }
         try {
-          ((ol) (this.phaseController)).a(1, param1, param0, param3);
+          ((GameOverView) (this.phaseController)).a(1, param1, param0, param3);
           if (param2 > -71) {
             this.field_v = true;
           }
@@ -591,7 +591,7 @@ final class MatchScreen extends AppScreen {
           ((BitmapFont) ((Object) var3_ref_uo)).d(bm.field_K, 320, 246, 16777215, -1);
           return;
         }
-        this.phaseController.e(1);
+        this.phaseController.drawContent(1);
         if ((1 & fa.field_j) != 0) {
           var7 = this.matchState.field_B;
           var3_ref_la__ = var7;
@@ -613,8 +613,8 @@ final class MatchScreen extends AppScreen {
           rk.field_h.b(0, 0, this.field_E);
         }
         if (!MyKitScreen.field_O) {
-          if (this.phaseController instanceof va) {
-            stackIn_24_0 = (((va) (this.phaseController)).field_l) ? 1 : 0;
+          if (this.phaseController instanceof PlayingView) {
+            stackIn_24_0 = (((PlayingView) (this.phaseController)).field_l) ? 1 : 0;
           } else {
             stackIn_24_0 = 0;
           }
@@ -626,22 +626,22 @@ final class MatchScreen extends AppScreen {
 
     private final void createPhaseController(int param0) {
         if (0 == this.matchState.phase) {
-          this.phaseController = (hs) ((Object) new wb(this.matchState, this.localSeat, this.isOnlineMatch));
+          this.phaseController = (MatchPhaseView) ((Object) new TeamSelectionView(this.matchState, this.localSeat, this.isOnlineMatch));
         }
         if (param0 == ~this.matchState.phase) {
-          this.phaseController = (hs) ((Object) new fk(this.matchState, this.localSeat, this.isOnlineMatch));
+          this.phaseController = (MatchPhaseView) ((Object) new WaitForPlayersView(this.matchState, this.localSeat, this.isOnlineMatch));
         }
         if (this.matchState.phase == 2) {
-          this.phaseController = (hs) ((Object) new lr(this.matchState, this.localSeat, this.isOnlineMatch));
+          this.phaseController = (MatchPhaseView) ((Object) new FormationView(this.matchState, this.localSeat, this.isOnlineMatch));
         }
         if (this.matchState.phase == 3) {
-          this.phaseController = (hs) ((Object) new bf(this.matchState, this.localSeat, this.isOnlineMatch, this.field_k));
+          this.phaseController = (MatchPhaseView) ((Object) new LineupView(this.matchState, this.localSeat, this.isOnlineMatch, this.field_k));
         }
         if (this.matchState.phase == 4) {
-          this.phaseController = (hs) ((Object) new va(this.matchState, this.localSeat, this.field_i, this.isOnlineMatch, this.field_s));
+          this.phaseController = (MatchPhaseView) ((Object) new PlayingView(this.matchState, this.localSeat, this.field_i, this.isOnlineMatch, this.field_s));
         }
         if (this.matchState.phase == 5) {
-          this.phaseController = (hs) ((Object) new ol(this.matchState, this.localSeat, this.isOnlineMatch));
+          this.phaseController = (MatchPhaseView) ((Object) new GameOverView(this.matchState, this.localSeat, this.isOnlineMatch));
         }
     }
 
@@ -662,8 +662,8 @@ final class MatchScreen extends AppScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.phaseController instanceof va) {
-            ((va) (this.phaseController)).a(param1, (byte) -82);
+          if (this.phaseController instanceof PlayingView) {
+            ((PlayingView) (this.phaseController)).a(param1, (byte) -82);
           }
           if (param0 >= -111) {
             this.field_n = (ClubState) null;
@@ -703,7 +703,7 @@ final class MatchScreen extends AppScreen {
             this.matchState.field_i[1][var3] = 1;
           }
           for (var3Lifetime1 = 0; 4 > var3Lifetime1; var3Lifetime1++) {
-            this.matchState.field_o.a(this.field_n, this.field_k, (byte) -85, var3Lifetime1, 1);
+            this.matchState.field_o.autoSelectPlayer(this.field_n, this.field_k, (byte) -85, var3Lifetime1, 1);
           }
         }
     }
@@ -743,12 +743,12 @@ final class MatchScreen extends AppScreen {
         if (!this.stateReceived) {
           return false;
         }
-        return this.phaseController.a(param2, 1670, param0);
+        return this.phaseController.handleKey(param2, 1670, param0);
     }
 
     final void a(int param0) {
-        if (this.phaseController instanceof va) {
-          ((va) (this.phaseController)).m(-105);
+        if (this.phaseController instanceof PlayingView) {
+          ((PlayingView) (this.phaseController)).m(-105);
         }
         int var2 = 109 / ((param0 - 6) / 37);
     }
@@ -808,37 +808,37 @@ final class MatchScreen extends AppScreen {
           }
           if (5 == this.matchState.phase &&
             param1.readUnsignedByte((byte) -113) == 1) {
-            ((ol) (this.phaseController)).field_u = new int[2];
-            ((ol) (this.phaseController)).field_u[0] = param1.readUnsignedByte((byte) -113);
-            ((ol) (this.phaseController)).field_u[1] = param1.readUnsignedByte((byte) -116);
+            ((GameOverView) (this.phaseController)).field_u = new int[2];
+            ((GameOverView) (this.phaseController)).field_u[0] = param1.readUnsignedByte((byte) -113);
+            ((GameOverView) (this.phaseController)).field_u[1] = param1.readUnsignedByte((byte) -116);
             var3_intLifetime1 = param1.readUnsignedByte((byte) -125);
-            ((ol) (this.phaseController)).field_k = new int[var3_intLifetime1];
+            ((GameOverView) (this.phaseController)).field_k = new int[var3_intLifetime1];
             for (var4 = 0; var3_intLifetime1 > var4; var4++) {
-              ((ol) (this.phaseController)).field_k[var4] = param1.readUnsignedByte((byte) -109);
+              ((GameOverView) (this.phaseController)).field_k[var4] = param1.readUnsignedByte((byte) -109);
             }
-            ((ol) (this.phaseController)).field_bb.b(22997);
-            ((ol) (this.phaseController)).field_q.b(22997);
+            ((GameOverView) (this.phaseController)).field_bb.b(22997);
+            ((GameOverView) (this.phaseController)).field_q.b(22997);
             var4Lifetime1 = param1.a((byte) 81);
             for (var5 = 0; var4Lifetime1 > var5; var5++) {
               var6_ref_ch = new LoggedGoal();
               var6_ref_ch.readFromBuffer(param1, (byte) -79);
               if (0 != var6_ref_ch.field_f) {
-                ((ol) (this.phaseController)).field_q.a(var6_ref_ch, 3);
+                ((GameOverView) (this.phaseController)).field_q.a(var6_ref_ch, 3);
               } else {
-                ((ol) (this.phaseController)).field_bb.a(var6_ref_ch, 3);
+                ((GameOverView) (this.phaseController)).field_bb.a(var6_ref_ch, 3);
               }
             }
             var3_intLifetime1 = param1.readUnsignedByte((byte) -120);
-            ((ol) (this.phaseController)).field_p = new int[var3_intLifetime1][4];
-            ((ol) (this.phaseController)).field_ab = new int[var3_intLifetime1][4];
+            ((GameOverView) (this.phaseController)).field_p = new int[var3_intLifetime1][4];
+            ((GameOverView) (this.phaseController)).field_ab = new int[var3_intLifetime1][4];
             for (var5Lifetime1 = 0; var3_intLifetime1 > var5Lifetime1; var5Lifetime1++) {
               for (var6 = 0; var6 < 4; var6++) {
-                ((ol) (this.phaseController)).field_p[var5Lifetime1][var6] = param1.readUnsignedMedium(-95);
+                ((GameOverView) (this.phaseController)).field_p[var5Lifetime1][var6] = param1.readUnsignedMedium(-95);
               }
             }
             for (var5Lifetime2 = 0; var5Lifetime2 < var3_intLifetime1; var5Lifetime2++) {
               for (var6Lifetime1 = 0; var6Lifetime1 < 4; var6Lifetime1++) {
-                ((ol) (this.phaseController)).field_ab[var5Lifetime2][var6Lifetime1] = param1.readUnsignedMedium(-98);
+                ((GameOverView) (this.phaseController)).field_ab[var5Lifetime2][var6Lifetime1] = param1.readUnsignedMedium(-98);
               }
             }
             return;

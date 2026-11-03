@@ -104,10 +104,10 @@ final class no extends i {
           }
           if (255 != param1) {
             if (param1 < 100) {
-              JaggrabDownloader.field_h = wb.a(-124, param2, param1);
+              JaggrabDownloader.field_h = TeamSelectionView.a(-124, param2, param1);
             } else {
               if (105 < param1) {
-                JaggrabDownloader.field_h = wb.a(-124, param2, param1);
+                JaggrabDownloader.field_h = TeamSelectionView.a(-124, param2, param1);
               } else {
                 var7 = args;
                 pp.a(18267, var7);

@@ -11,7 +11,7 @@ final class q {
     static BinaryBitmapFont field_d;
     static String field_c;
 
-    final static void a(hd param0, int param1, int param2, int param3, hd param4, byte[] param5, hd param6, int param7, int param8, int param9) {
+    final static void a(UiLayoutNode param0, int param1, int param2, int param3, UiLayoutNode param4, byte[] param5, UiLayoutNode param6, int param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

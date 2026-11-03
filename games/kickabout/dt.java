@@ -9,7 +9,7 @@ final class dt {
     private int field_c;
     private int field_d;
     private int field_a;
-    private gm field_i;
+    private RenderedFootballer field_i;
     int field_h;
     static String field_e;
     static String field_j;
@@ -113,7 +113,7 @@ final class dt {
         return 0;
     }
 
-    dt(gm param0, int param1) {
+    dt(RenderedFootballer param0, int param1) {
         this.field_k = false;
         try {
           this.field_h = param1;

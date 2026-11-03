@@ -7,7 +7,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     private TextInputWidget field_l;
     static Sprite field_k;
     static int[] field_m;
-    static hd field_n;
+    static UiLayoutNode field_n;
 
     final static void a(int param0, int param1, byte param2, int param3) {
         ManagerAction var4 = null;

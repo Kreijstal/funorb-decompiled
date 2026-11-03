@@ -508,9 +508,9 @@ final class eo {
         SoftwareRasterizer.drawVerticalLine(param0, param1 - param2, param2 << 1, param3);
     }
 
-    final static hd a(boolean param0, int param1) {
+    final static UiLayoutNode a(boolean param0, int param1) {
         ArgbSprite[] var2 = param0 ? field_c[param1] : field_r[param1];
-        hd var3 = new hd();
+        UiLayoutNode var3 = new UiLayoutNode();
         var3.field_N = (Sprite) ((Object) var2[0].h());
         var3.field_vb = (Sprite) ((Object) var2[1].h());
         var3.field_r = (Sprite) ((Object) var2[2].h());
@@ -644,7 +644,7 @@ final class eo {
         }
     }
 
-    private final static hd a(String param0, int param1, BitmapFont param2) {
+    private final static UiLayoutNode a(String param0, int param1, BitmapFont param2) {
         int var3 = param2.a(param0) + 24;
         return eo.a(param0, param1, param2, var3, true);
     }
@@ -678,8 +678,8 @@ final class eo {
         }
     }
 
-    final static hd b() {
-        hd var0 = new hd();
+    final static UiLayoutNode b() {
+        UiLayoutNode var0 = new UiLayoutNode();
         var0.field_N = field_n[0];
         var0.field_vb = field_n[1];
         var0.field_r = field_n[2];
@@ -861,7 +861,7 @@ final class eo {
         return;
     }
 
-    final static hd a(String param0, int param1, BitmapFont param2, int param3, boolean param4) {
+    final static UiLayoutNode a(String param0, int param1, BitmapFont param2, int param3, boolean param4) {
         int var6_int = 0;
         int var7 = 0;
         param0 = param0.toLowerCase();
@@ -873,7 +873,7 @@ final class eo {
           param2.d(param0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - var7, 16777215, -1);
           TeamManagementScreen.e(122);
         }
-        hd var6 = new hd();
+        UiLayoutNode var6 = new UiLayoutNode();
         var6.field_N = var5[0];
         var6.field_vb = var5[1];
         var6.field_r = var5[2];
@@ -998,9 +998,9 @@ final class eo {
         }
         int var6 = (int)(nj.a(74) % 220L);
         var6 = (var6 << 2) / 220;
-        field_g.drawWithOffsets(param0 - 1, param1 - 1);
+        field_g.d(param0 - 1, param1 - 1);
         AuctionListing.a(param0 + param2, -22914, param0, param1 + 11, param1);
-        field_h[param3][var6].drawWithOffsets(param0, param1);
+        field_h[param3][var6].d(param0, param1);
         TeamManagementScreen.e(127);
         SoftwareRasterizer.e(param0 - 1, param1 - 1, 102, 13, 65793);
         if (param4) {
@@ -1138,7 +1138,7 @@ final class eo {
         return param1;
     }
 
-    final static hd a(String param0, int param1) {
+    final static UiLayoutNode a(String param0, int param1) {
         return eo.a(param0, param1, un.field_d);
     }
 
@@ -1636,7 +1636,7 @@ final class eo {
         eo.a(SoftwareRasterizer.field_a, param0, var11, var12, var17, var18, var5, var6, var15, var16, var9);
     }
 
-    final static hd a(boolean param0) {
+    final static UiLayoutNode a(boolean param0) {
         return eo.a(param0, 0);
     }
 

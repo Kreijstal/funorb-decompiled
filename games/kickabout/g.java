@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class g {
-    static hd field_a;
+    static UiLayoutNode field_a;
     static int[] field_b;
 
     final static void b(boolean param0) {
@@ -30,7 +30,7 @@ final class g {
     public static void a(boolean param0) {
         field_b = null;
         if (!param0) {
-          field_a = (hd) null;
+          field_a = (UiLayoutNode) null;
           field_a = null;
           return;
         }

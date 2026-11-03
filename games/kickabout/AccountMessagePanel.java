@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountMessagePanel extends WidgetContainer implements ButtonListener {
-    static hd field_L;
+    static UiLayoutNode field_L;
     static String field_C;
     static int[] field_I;
     private BitmapFont field_B;

@@ -23,11 +23,11 @@ abstract class NetworkGameClient extends GameAppletShell {
         hr.field_h[12] = true;
     }
 
-    final static hd f(int param0) {
+    final static UiLayoutNode f(int param0) {
         if (param0 != 0) {
-          return (hd) null;
+          return (UiLayoutNode) null;
         }
-        return bf.field_u.field_Ab;
+        return LineupView.field_u.field_Ab;
     }
 
     private final void initializeAccountPacketLengths(int param0) {
@@ -289,7 +289,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                                 return;
                               }
                               UnreadMessagesScreen.a("MGS1: " + tr.b(0), (Throwable) null, 1);
-                              lr.b((byte) -116);
+                              FormationView.b((byte) -116);
                               return;
                             }
                             stackIn_26_0 = 113;
@@ -318,7 +318,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           return;
         }
         UnreadMessagesScreen.a("MGS2: " + tr.b(0), (Throwable) null, 1);
-        lr.b((byte) -116);
+        FormationView.b((byte) -116);
     }
 
     final void n(int param0) {
@@ -359,7 +359,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         var5 = Kickabout.field_G;
         if (null != ArchiveIndex.field_h) {
           if (null == SplashScreen.field_m) {
-            var6 = va.d((byte) -13);
+            var6 = PlayingView.d((byte) -13);
             var4 = var6.getSize();
             ArchiveIndex.field_h.a(768, var4.width, var4.height);
           }
@@ -380,7 +380,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             !(or.a(true) <= var3) &&
             !(var3 >= tl.a(-126))) {
             this.field_q = false;
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             ws.a((byte) -31);
             fc.a(IntTripleCommand.field_D, 2, -56);
             TeamSelectionAgent.c(30929);
@@ -464,7 +464,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           m.field_h = false;
         }
         if (hl.field_d == 0 &&
-          wb.h(param0 - 96)) {
+          TeamSelectionView.h(param0 - 96)) {
           hl.field_d = 1;
         }
         if (hl.field_d == 1) {
@@ -1208,7 +1208,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = bo.a(s.j(61), (byte) -98, va.f(-1));
+            var5_int = bo.a(s.j(61), (byte) -98, PlayingView.f(-1));
             if (-1 != var5_int) {
               no.a(ValidatedTextWidget.field_X, var5_int, gd.field_b, -1);
               gd.field_b = null;

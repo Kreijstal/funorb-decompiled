@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static hd field_a;
-    static hd field_e;
+    static UiLayoutNode field_a;
+    static UiLayoutNode field_e;
     static boolean field_b;
     static String field_d;
     static long[] field_c;
@@ -17,7 +17,7 @@ abstract class MouseWheelInput {
           field_c = null;
           return;
         }
-        field_e = (hd) null;
+        field_e = (UiLayoutNode) null;
         field_e = null;
         field_c = null;
     }

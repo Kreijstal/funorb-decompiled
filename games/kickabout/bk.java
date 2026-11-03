@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk {
-    static gm[] field_a;
+    static RenderedFootballer[] field_a;
     static FadingChatMessage[] field_c;
     static String field_g;
     static IntrusiveDeque field_f;

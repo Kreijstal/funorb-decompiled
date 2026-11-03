@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class SquadGridWidget extends hd {
+final class SquadGridWidget extends UiLayoutNode {
     static String field_Ab;
     int field_Fb;
     private int field_zb;
@@ -199,7 +199,7 @@ final class SquadGridWidget extends hd {
           for (var8 = 0; var4 > var8; var8++) {
             var7[var8] = BroadcastServerCommand.a(un.field_e, param0 + 18758);
           }
-          bf.field_y.a(param0 ^ -107, var7, nj.a(param0 + 186));
+          LineupView.field_y.a(param0 ^ -107, var7, nj.a(param0 + 186));
           if (!param2 &&
             var6 != 0) {
             uv.field_f = false;
@@ -443,7 +443,7 @@ final class SquadGridWidget extends hd {
           for (var2_int = 0; var2_int < 9; var2_int++) {
             this.field_Eb[var2_int] = new SquadSlotWidget();
             this.field_Eb[var2_int].a(true, 52, this.a((byte) -53, var2_int), this.b(var2_int, -96), 75);
-            this.a((byte) -117, (hd) (this.field_Eb[var2_int]));
+            this.addChild((byte) -117, (UiLayoutNode) (this.field_Eb[var2_int]));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -611,7 +611,7 @@ final class SquadGridWidget extends hd {
         AuctionsHelpScreen.field_F = new String[8];
         AuctionsHelpScreen.field_F[7] = kr.field_c;
         fs.field_a = new String[]{s.field_F, MouseInputHandler.field_a};
-        rd.field_e = new String[]{gm.field_Q};
+        rd.field_e = new String[]{RenderedFootballer.field_Q};
         AuctionsHelpScreen.field_F[1] = uq.field_f;
         AuctionsHelpScreen.field_F[4] = kr.field_d;
         AuctionsHelpScreen.field_F[6] = pq.field_M;
@@ -625,7 +625,7 @@ final class SquadGridWidget extends hd {
         AuctionItem.field_u = new String[]{s.field_F};
         AuctionsHelpScreen.field_F[2] = m.field_i;
         AuctionsHelpScreen.field_F[5] = fc.field_e;
-        AccountChoicePanel.field_I = new String[]{ob.field_H, in.field_a, MouseInputHandler.field_a};
+        AccountChoicePanel.field_I = new String[]{RenderedBall.field_H, in.field_a, MouseInputHandler.field_a};
         MatchingTextValidator.field_o[10] = nj.field_b;
         MatchingTextValidator.field_o[12] = ns.field_b;
         MatchingTextValidator.field_o[3] = sl.field_zb;
@@ -667,7 +667,7 @@ final class SquadGridWidget extends hd {
         MatchingTextValidator.field_o[21] = ei.field_f;
         MatchingTextValidator.field_o[44] = DualLinkDeque.field_b;
         MatchingTextValidator.field_o[13] = cu.field_f[0];
-        MatchingTextValidator.field_o[20] = ol.field_n;
+        MatchingTextValidator.field_o[20] = GameOverView.field_n;
         MatchingTextValidator.field_o[17] = DebugConsole.field_A;
         MatchingTextValidator.field_o[34] = PasswordValidator.field_m;
         MatchingTextValidator.field_o[48] = oc.field_b.toUpperCase();
@@ -782,7 +782,7 @@ final class SquadGridWidget extends hd {
           for (var8 = 0; var4 > var8; var8++) {
             var7[var8] = BroadcastServerCommand.a(un.field_e, param0 + 18758);
           }
-          bf.field_y.a(param0 ^ -107, var7, nj.a(param0 + 186));
+          LineupView.field_y.a(param0 ^ -107, var7, nj.a(param0 + 186));
           if (!param2 &&
             var6 != 0) {
             uv.field_f = false;

@@ -27,14 +27,14 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           return;
         }
         if (ih.field_c != gk.field_g) {
-          nm.a(hh.field_f, -76, wb.field_j, gk.field_g);
+          nm.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
         } else {
           if (hh.field_f != RankingsScreen.field_C) {
-            nm.a(hh.field_f, -76, wb.field_j, gk.field_g);
+            nm.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
           } else {
             stackIn_9_0 = (vi.field_n) ? 0 : 1;
-            if (stackIn_9_0 == (wb.field_j ? 1 : 0)) {
-              nm.a(hh.field_f, -76, wb.field_j, gk.field_g);
+            if (stackIn_9_0 == (TeamSelectionView.field_j ? 1 : 0)) {
+              nm.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
             }
           }
         }
@@ -312,12 +312,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           if (td.field_b &&
             uv.field_i.field_gc >= uv.field_i.field_bc) {
             mc.field_d.field_lb = false;
-            bf.field_u.field_zb.field_E = no.field_I;
-            hl.a(true, bf.field_u.field_Ab);
+            LineupView.field_u.field_zb.field_E = no.field_I;
+            hl.a(true, LineupView.field_u.field_Ab);
           } else {
-            bf.field_u.field_zb.field_E = null;
+            LineupView.field_u.field_zb.field_E = null;
             mc.field_d.field_lb = true;
-            SplashScreen.layoutPlayerRows(bf.field_u, param3, param2, param6, 92);
+            SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
           }
         } else {
           if (ea.field_a != SoftwareRasterizer.field_g) {
@@ -346,12 +346,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   if (td.field_b &&
                     uv.field_i.field_gc >= uv.field_i.field_bc) {
                     mc.field_d.field_lb = false;
-                    bf.field_u.field_zb.field_E = no.field_I;
-                    hl.a(true, bf.field_u.field_Ab);
+                    LineupView.field_u.field_zb.field_E = no.field_I;
+                    hl.a(true, LineupView.field_u.field_Ab);
                   } else {
-                    bf.field_u.field_zb.field_E = null;
+                    LineupView.field_u.field_zb.field_E = null;
                     mc.field_d.field_lb = true;
-                    SplashScreen.layoutPlayerRows(bf.field_u, param3, param2, param6, 92);
+                    SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
                   w.a(param2, param0, param6, param8, param5, param3, param1);
                   SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
@@ -380,12 +380,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (td.field_b &&
                 uv.field_i.field_gc >= uv.field_i.field_bc) {
                 mc.field_d.field_lb = false;
-                bf.field_u.field_zb.field_E = no.field_I;
-                hl.a(true, bf.field_u.field_Ab);
+                LineupView.field_u.field_zb.field_E = no.field_I;
+                hl.a(true, LineupView.field_u.field_Ab);
               } else {
-                bf.field_u.field_zb.field_E = null;
+                LineupView.field_u.field_zb.field_E = null;
                 mc.field_d.field_lb = true;
-                SplashScreen.layoutPlayerRows(bf.field_u, param3, param2, param6, 92);
+                SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
               }
             } else {
               AuctionsHelpScreen.field_H = ModalPanel.field_B;
@@ -404,12 +404,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (td.field_b &&
                 uv.field_i.field_gc >= uv.field_i.field_bc) {
                 mc.field_d.field_lb = false;
-                bf.field_u.field_zb.field_E = no.field_I;
-                hl.a(true, bf.field_u.field_Ab);
+                LineupView.field_u.field_zb.field_E = no.field_I;
+                hl.a(true, LineupView.field_u.field_Ab);
               } else {
-                bf.field_u.field_zb.field_E = null;
+                LineupView.field_u.field_zb.field_E = null;
                 mc.field_d.field_lb = true;
-                SplashScreen.layoutPlayerRows(bf.field_u, param3, param2, param6, 92);
+                SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
               }
             }
           } else {
@@ -439,12 +439,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   if (td.field_b &&
                     uv.field_i.field_gc >= uv.field_i.field_bc) {
                     mc.field_d.field_lb = false;
-                    bf.field_u.field_zb.field_E = no.field_I;
-                    hl.a(true, bf.field_u.field_Ab);
+                    LineupView.field_u.field_zb.field_E = no.field_I;
+                    hl.a(true, LineupView.field_u.field_Ab);
                   } else {
-                    bf.field_u.field_zb.field_E = null;
+                    LineupView.field_u.field_zb.field_E = null;
                     mc.field_d.field_lb = true;
-                    SplashScreen.layoutPlayerRows(bf.field_u, param3, param2, param6, 92);
+                    SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
                   w.a(param2, param0, param6, param8, param5, param3, param1);
                   SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
@@ -473,12 +473,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (td.field_b &&
                 uv.field_i.field_gc >= uv.field_i.field_bc) {
                 mc.field_d.field_lb = false;
-                bf.field_u.field_zb.field_E = no.field_I;
-                hl.a(true, bf.field_u.field_Ab);
+                LineupView.field_u.field_zb.field_E = no.field_I;
+                hl.a(true, LineupView.field_u.field_Ab);
               } else {
-                bf.field_u.field_zb.field_E = null;
+                LineupView.field_u.field_zb.field_E = null;
                 mc.field_d.field_lb = true;
-                SplashScreen.layoutPlayerRows(bf.field_u, param3, param2, param6, 92);
+                SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
               }
             } else {
               AuctionsHelpScreen.field_H = ModalPanel.field_B;
@@ -496,30 +496,30 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 if (td.field_b &&
                   uv.field_i.field_gc >= uv.field_i.field_bc) {
                   mc.field_d.field_lb = false;
-                  bf.field_u.field_zb.field_E = no.field_I;
-                  hl.a(true, bf.field_u.field_Ab);
+                  LineupView.field_u.field_zb.field_E = no.field_I;
+                  hl.a(true, LineupView.field_u.field_Ab);
                 } else {
-                  bf.field_u.field_zb.field_E = null;
+                  LineupView.field_u.field_zb.field_E = null;
                   mc.field_d.field_lb = true;
-                  SplashScreen.layoutPlayerRows(bf.field_u, param3, param2, param6, 92);
+                  SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                 }
               } else {
                 if (ee.field_b > 0) {
                   SpriteState.a(param7, param6, -2, param9, param4);
                 }
                 if (!td.field_b) {
-                  bf.field_u.field_zb.field_E = null;
+                  LineupView.field_u.field_zb.field_E = null;
                   mc.field_d.field_lb = true;
-                  SplashScreen.layoutPlayerRows(bf.field_u, param3, param2, param6, 92);
+                  SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                 } else {
                   if (uv.field_i.field_gc >= uv.field_i.field_bc) {
                     mc.field_d.field_lb = false;
-                    bf.field_u.field_zb.field_E = no.field_I;
-                    hl.a(true, bf.field_u.field_Ab);
+                    LineupView.field_u.field_zb.field_E = no.field_I;
+                    hl.a(true, LineupView.field_u.field_Ab);
                   } else {
-                    bf.field_u.field_zb.field_E = null;
+                    LineupView.field_u.field_zb.field_E = null;
                     mc.field_d.field_lb = true;
-                    SplashScreen.layoutPlayerRows(bf.field_u, param3, param2, param6, 92);
+                    SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
                 }
               }
@@ -575,7 +575,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           if (!ph.a(true)) {
             return false;
           }
-          stackIn_44_0 = (!hd.a(false, param1, param0)) ? 0 : 1;
+          stackIn_44_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;
           var4 = stackIn_44_0;
           if (80 == cc.field_e ||
             84 == cc.field_e) {
@@ -612,7 +612,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           if (!ph.a(true)) {
             return false;
           }
-          stackIn_11_0 = (!hd.a(false, param1, param0)) ? 0 : 1;
+          stackIn_11_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;
           var4 = stackIn_11_0;
           if (80 == cc.field_e) {
             vg.field_Wb = false;

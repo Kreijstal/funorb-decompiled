@@ -11,7 +11,7 @@ final class gl {
     int field_k;
     int field_j;
     int field_l;
-    static hd field_c;
+    static UiLayoutNode field_c;
     static int[] field_d;
     static String field_f;
     static String field_i;
@@ -147,7 +147,7 @@ final class gl {
                   var10 = param1.field_V.positionY;
                   param1.field_V.positionX = var7 << 16;
                   param1.field_V.positionY = var8 << 16;
-                  vl.a(param1, (byte) -75);
+                  vl.computeCameraFocus(param1, (byte) -75);
                   param1.field_V.positionX = var9;
                   param1.field_V.positionY = var10;
                   ParticipantStatus.a(var3 + 1, var2_int, (byte) 112, param1.field_r[var2_int]);

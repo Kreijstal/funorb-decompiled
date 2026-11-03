@@ -35,13 +35,13 @@ final class RasterStateSnapshot extends IntrusiveNode {
         int var10;
         int var11;
         Object var12;
-        ob var12_ref;
+        RenderedBall var12_ref;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_33_0 = 0;
         int stackIn_36_0 = 0;
         var12 = null;
-        var12_ref = (ob) (et.field_d.field_V);
+        var12_ref = (RenderedBall) (et.field_d.field_V);
         if (param3 != var12_ref.positionX) {
           var5 = var12_ref.positionX;
           var6 = var12_ref.positionY;

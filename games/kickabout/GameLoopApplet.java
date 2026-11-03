@@ -275,7 +275,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         int var4 = Kickabout.field_G;
         java.awt.Canvas var2 = DropTargetWidget.l(64);
         if (uf.c(608)) {
-          va.a(var2, pn.g(2368), 0);
+          PlayingView.a(var2, pn.g(2368), 0);
           return;
         }
         if (!CachedListingRow.field_h) {

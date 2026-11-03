@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hd extends iv {
+class UiLayoutNode extends iv {
     int field_x;
     int field_A;
     boolean field_lb;
@@ -78,7 +78,7 @@ class hd extends iv {
           var6 = var10.field_v;
           for (var7 = 0; var7 < SoftwareRasterizer.field_g; var7 = var7 + var5) {
             for (var8 = 0; SoftwareRasterizer.field_f > var8; var8 = var8 + var6) {
-              var10.drawWithOffsets(var7, var8);
+              var10.d(var7, var8);
             }
           }
           td.a(param0, 15, param2, param1, param3, false);
@@ -97,12 +97,12 @@ class hd extends iv {
         }
     }
 
-    hd(long param0, hd param1) {
+    UiLayoutNode(long param0, UiLayoutNode param1) {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        hd var10_ref_hd = null;
+        UiLayoutNode var10_ref_hd = null;
         int var9 = 0;
         int var11 = Kickabout.field_G;
         int var5 = -this.field_J;
@@ -115,11 +115,11 @@ class hd extends iv {
         int var8 = var7 + this.field_L;
         if (!param3) {
           var9 = 0;
-          var10_ref_hd = (hd) (this.field_jb.g(24009));
+          var10_ref_hd = (UiLayoutNode) (this.field_jb.g(24009));
           while (var10_ref_hd != null) {
             var10_ref_hd.field_v = var9 - var10_ref_hd.field_J;
             var9 = var9 + (param1 + var10_ref_hd.field_L + var10_ref_hd.field_mb);
-            var10_ref_hd = (hd) (this.field_jb.c(33));
+            var10_ref_hd = (UiLayoutNode) (this.field_jb.c(33));
           }
           var8 = var9 - param1;
         }
@@ -143,8 +143,8 @@ class hd extends iv {
         this.field_mb = var7;
     }
 
-    final int a(int param0, int param1) {
-        hd var4 = null;
+    final int computeContentWidth(int param0, int param1) {
+        UiLayoutNode var4 = null;
         int var5 = 0;
         int var4_int = 0;
         int var6 = Kickabout.field_G;
@@ -164,13 +164,13 @@ class hd extends iv {
           }
         }
         if (null != this.field_jb) {
-          var4 = (hd) (this.field_jb.g(24009));
+          var4 = (UiLayoutNode) (this.field_jb.g(24009));
           while (var4 != null) {
             var5 = var4.field_s + var4.field_q;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (hd) (this.field_jb.c(param1 + 33));
+            var4 = (UiLayoutNode) (this.field_jb.c(param1 + 33));
           }
         }
         return var3;
@@ -183,7 +183,7 @@ class hd extends iv {
         }
     }
 
-    final void a(hd param0, byte param1) {
+    final void a(UiLayoutNode param0, byte param1) {
         boolean stackIn_87_1 = false;
         RuntimeException stackIn_106_0 = null;
         StringBuilder stackIn_106_1 = null;
@@ -359,7 +359,7 @@ class hd extends iv {
         var11 = Kickabout.field_G;
         var3 = 1;
         if (param0) {
-          hd.g(-41);
+          UiLayoutNode.g(-41);
         }
         if (!dg.field_a &&
           ContentTransitionDialog.field_Y == null) {
@@ -433,7 +433,7 @@ class hd extends iv {
                 var7Lifetime6 = "[" + ButtonMenuScreen.field_z + "] ";
               }
               if (uv.field_i != null) {
-                if (ol.field_R &&
+                if (GameOverView.field_R &&
                   null != SingleChildContainer.field_x) {
                   var7Lifetime6 = "[" + SingleChildContainer.field_x + "] ";
                 } else {
@@ -469,7 +469,7 @@ class hd extends iv {
     public static void g(int param0) {
         field_Z = null;
         if (param0 != -14457) {
-          hd.g(118);
+          UiLayoutNode.g(118);
         }
         field_C = null;
         field_ib = null;
@@ -477,10 +477,10 @@ class hd extends iv {
 
     final int g(byte param0) {
         int var2 = -9 % ((56 - param0) / 35);
-        return this.a(2147483647, 0);
+        return this.computeContentWidth(2147483647, 0);
     }
 
-    hd(long param0, hd param1, String param2) {
+    UiLayoutNode(long param0, UiLayoutNode param1, String param2) {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
@@ -493,7 +493,7 @@ class hd extends iv {
         int var10;
         int var11;
         int var12;
-        hd var13;
+        UiLayoutNode var13;
         int var14;
         int var7Lifetime1;
         int var7Lifetime2;
@@ -562,10 +562,10 @@ class hd extends iv {
         stackIn_39_1 = (this.field_Q) && (this.field_qb == FootballerAgent.field_p) && (param2);
         this.field_gb = stackIn_39_1;
         if (null != this.field_jb) {
-          var13 = (hd) (this.field_jb.last(param1 ^ 9032));
+          var13 = (UiLayoutNode) (this.field_jb.last(param1 ^ 9032));
           while (var13 != null) {
             var13.a(this.field_F, param1 ^ 0, param2, this.field_mb, this.field_T, this.field_q);
-            var13 = (hd) (this.field_jb.e(33));
+            var13 = (UiLayoutNode) (this.field_jb.e(33));
           }
         }
         if (this.field_Q) {
@@ -598,7 +598,7 @@ class hd extends iv {
         }
     }
 
-    final void a(boolean param0, int param1, hd param2, hd param3) {
+    final void a(boolean param0, int param1, UiLayoutNode param2, UiLayoutNode param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -638,7 +638,7 @@ class hd extends iv {
         }
     }
 
-    final void a(byte param0, hd param1) {
+    final void addChild(byte param0, UiLayoutNode param1) {
         if (this.field_jb == null) {
           this.field_jb = new IntrusiveDeque();
         }
@@ -652,18 +652,18 @@ class hd extends iv {
         }
     }
 
-    final void b(boolean param0) {
-        hd var4 = null;
+    final void invalidateChildren(boolean param0) {
+        UiLayoutNode var4 = null;
         int var3 = Kickabout.field_G;
         if (param0) {
           return;
         }
         if (this.field_jb != null) {
-          var4 = (hd) (this.field_jb.last(-9033));
+          var4 = (UiLayoutNode) (this.field_jb.last(-9033));
           while (var4 != null) {
             var4.field_z = true;
-            var4.b(param0);
-            var4 = (hd) (this.field_jb.e(33));
+            var4.invalidateChildren(param0);
+            var4 = (UiLayoutNode) (this.field_jb.e(33));
           }
         }
     }
@@ -672,7 +672,7 @@ class hd extends iv {
         this.field_fb = 0;
         this.field_v = 0;
         if (!param0) {
-          this.a(-115, (hd) null);
+          this.setFocusedNode(-115, (UiLayoutNode) null);
         }
         this.field_L = 0;
         this.field_s = param2;
@@ -697,7 +697,7 @@ class hd extends iv {
         int var22;
         int var23_int;
         String var23;
-        hd var23_ref;
+        UiLayoutNode var23_ref;
         int var24;
         int var25;
         String var26;
@@ -856,27 +856,27 @@ class hd extends iv {
           }
         }
         if (null != this.field_jb) {
-          var23_ref = (hd) (this.field_jb.g(24009));
+          var23_ref = (UiLayoutNode) (this.field_jb.g(24009));
           while (var23_ref != null) {
             var23_ref.a(param0, -114, this.field_wb, var20 + this.field_T, param4, var19 + this.field_F, param6, this.field_q, param8, param9, this.field_mb);
-            var23_ref = (hd) (this.field_jb.c(33));
+            var23_ref = (UiLayoutNode) (this.field_jb.c(33));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
         return;
     }
 
-    final void a(int param0, hd param1) {
+    final void setFocusedNode(int param0, UiLayoutNode param1) {
         IntrusiveDequeCursor var3 = null;
-        hd var4 = null;
+        UiLayoutNode var4 = null;
         int var5 = Kickabout.field_G;
         try {
           if (this.field_jb != null) {
             var3 = new IntrusiveDequeCursor(this.field_jb);
-            var4 = (hd) (var3.a((byte) 54));
+            var4 = (UiLayoutNode) (var3.a((byte) 54));
             while (var4 != null) {
-              var4.a(103, param1);
-              var4 = (hd) (var3.a(0));
+              var4.setFocusedNode(103, param1);
+              var4 = (UiLayoutNode) (var3.a(0));
             }
           }
           this.field_wb = param1 == this ? true : false;
@@ -889,7 +889,7 @@ class hd extends iv {
         }
     }
 
-    public hd() {
+    public UiLayoutNode() {
         this.field_H = -1;
         this.field_O = -2147483648;
         this.field_pb = -2147483648;
@@ -908,7 +908,7 @@ class hd extends iv {
         this.field_cb = -2147483648;
     }
 
-    hd(long param0, hd param1, int param2, int param3, int param4, int param5, String param6) {
+    UiLayoutNode(long param0, UiLayoutNode param1, int param2, int param3, int param4, int param5, String param6) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

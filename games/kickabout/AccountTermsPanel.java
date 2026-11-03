@@ -7,7 +7,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
     private RegistrationRequestDialog field_B;
     static String field_L;
     static String field_C;
-    static hd field_H;
+    static UiLayoutNode field_H;
     static PlayerStats field_G;
     static String[] field_K;
     private TextHotspotWidget field_D;

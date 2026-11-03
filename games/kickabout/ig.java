@@ -120,10 +120,10 @@ final class ig {
         }
         int var4 = sh.a(70, param2);
         int var5 = AchievementsScreen.a((byte) -27, param3);
-        gm var6 = (gm) (et.field_d.field_P[param3][param2]);
+        RenderedFootballer var6 = (RenderedFootballer) (et.field_d.field_P[param3][param2]);
         int var7 = !param0 ? 80 + qj.a(-6779, 480) : qj.a(-6779, 0) - 50;
         if (var6.positionY != var5 &&
-          tc.a(4, (byte) 106, var6.positionX, var6, var7 << 16)) {
+          tc.advanceToPoint(4, (byte) 106, var6.positionX, var6, var7 << 16)) {
           var6.a(var4, false, 0, var5);
         }
     }

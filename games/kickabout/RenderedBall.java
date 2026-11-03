@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends BallAgent {
+final class RenderedBall extends BallAgent {
     private int[] field_G;
     static boolean[] field_T;
     private int[] field_D;
@@ -21,7 +21,7 @@ final class ob extends BallAgent {
     static int field_B;
     private int field_M;
 
-    final void a(gm param0, byte param1) {
+    final void a(RenderedFootballer param0, byte param1) {
         int stackIn_6_0 = 0;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -186,7 +186,7 @@ final class ob extends BallAgent {
         TriangleRasterizer.setProjectionCenter(param1, param2);
         if (param4 != 300) {
           tv var7 = (tv) null;
-          ob.a((byte) -13, (tv) null);
+          RenderedBall.a((byte) -13, (tv) null);
         }
         if (this.field_L) {
           this.field_Q.a(8, this.field_G);
@@ -511,7 +511,7 @@ final class ob extends BallAgent {
                 param1.field_p == 0) {
                 var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{(String) (var2)});
               } else {
-                var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, hd.field_ib, new String[]{(String) (var2)});
+                var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{(String) (var2)});
               }
             }
           }
@@ -608,7 +608,7 @@ final class ob extends BallAgent {
             }
           }
           if (param0 != 2) {
-            ob.m(53);
+            RenderedBall.m(53);
           }
           if (SoftwareRasterizer.field_b <= var5_int &&
             SoftwareRasterizer.field_c > var5_int) {
@@ -666,7 +666,7 @@ final class ob extends BallAgent {
         }
     }
 
-    ob(BallAgent param0) {
+    RenderedBall(BallAgent param0) {
         this.field_I = true;
         try {
           this.a(param0, false);

@@ -6,7 +6,7 @@ final class r {
     static String[] field_a;
     static DebugConsole field_d;
     static String[] field_b;
-    static hd field_c;
+    static UiLayoutNode field_c;
 
     final static int a(int param0, int param1) {
         int var2 = 0;
@@ -41,7 +41,7 @@ final class r {
           or.field_d.b(1, (byte) -106);
           c.a(0, false);
         }
-        lr.b((byte) -116);
+        FormationView.b((byte) -116);
     }
 
     public static void a(int param0) {

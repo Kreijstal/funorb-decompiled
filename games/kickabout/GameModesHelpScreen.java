@@ -430,8 +430,8 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             var13Lifetime3 = var13Lifetime3 + this.slideOffsetX;
             var14Lifetime3 = var7 - 5;
             SoftwareRasterizer.a(var13Lifetime3 - var8, var4, var5, var6, 10, 65793, 140);
-            for (var15Lifetime2 = 0; va.field_y[var11Lifetime3].length > var15Lifetime2; var15Lifetime2++) {
-              var27 = va.field_y[var11Lifetime3][var15Lifetime2];
+            for (var15Lifetime2 = 0; PlayingView.field_y[var11Lifetime3].length > var15Lifetime2; var15Lifetime2++) {
+              var27 = PlayingView.field_y[var11Lifetime3][var15Lifetime2];
               var14Lifetime3 = var14Lifetime3 + (IsSixCommand.field_C.a(var27, var13Lifetime3, var14Lifetime3, var9, 999, 16777215, -1, 0, 0, var10) * var10 + 15);
             }
           }

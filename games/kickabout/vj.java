@@ -5,7 +5,7 @@ final class vj {
     static int field_c;
     static vd field_a;
     static String field_f;
-    static hd field_g;
+    static UiLayoutNode field_g;
     static String field_d;
     static int field_b;
     static String field_e;
@@ -16,7 +16,7 @@ final class vj {
         field_a = null;
         field_e = null;
         if (param0 != 111) {
-          field_g = (hd) null;
+          field_g = (UiLayoutNode) null;
         }
         field_f = null;
     }
