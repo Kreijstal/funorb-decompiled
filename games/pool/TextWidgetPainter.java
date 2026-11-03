@@ -29,7 +29,7 @@ class TextWidgetPainter implements WidgetPainter, io {
         return param1 != 0 ? param1 == 1 ? "animating" : 2 != param1 ? param1 != 3 ? "illegal state" : "finished with end choice" : "finished" : "waiting";
     }
 
-    String c(int param0, UiWidget param1) {
+    String getWidgetText(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -58,7 +58,7 @@ class TextWidgetPainter implements WidgetPainter, io {
         }
     }
 
-    public final int a(int param0, UiWidget param1) {
+    public final int preferredHeight(int param0, UiWidget param1) {
         int discarded$1 = 0;
         RuntimeException var3 = null;
         UiWidget var4 = null;
@@ -173,7 +173,7 @@ class TextWidgetPainter implements WidgetPainter, io {
         }
     }
 
-    public final int a(byte param0, UiWidget param1) {
+    public final int contentWidth(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -248,7 +248,7 @@ class TextWidgetPainter implements WidgetPainter, io {
           if (!this.wrapText) {
             this.a(param1, false);
           } else {
-            ((BitmapTextLayout) (param1.field_x)).layoutParagraph(this.horizontalAlignment, this.c(-1, param1), this.font, this.b(param1, -3), this.field_b, this.a((byte) 26, param1), this.verticalAlignment, 0);
+            ((BitmapTextLayout) (param1.field_x)).layoutParagraph(this.horizontalAlignment, this.getWidgetText(-1, param1), this.font, this.contentHeight(param1, -3), this.field_b, this.contentWidth((byte) 26, param1), this.verticalAlignment, 0);
           }
           if (param0 == 0) {
             stackIn_10_0 = param1.field_x;
@@ -282,7 +282,7 @@ class TextWidgetPainter implements WidgetPainter, io {
         }
     }
 
-    public final int a(UiWidget param0, int param1) {
+    public final int preferredWidth(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -324,7 +324,7 @@ class TextWidgetPainter implements WidgetPainter, io {
             this.wrapText = false;
           }
           this.ensureTextLayout(0, param3);
-          stackIn_3_0 = param3.field_x.a(-this.a(param0, param3, (byte) -7) + param2, -this.a(5286, param3, param5) + param1, -1);
+          stackIn_3_0 = param3.field_x.a(-this.textTop(param0, param3, (byte) -7) + param2, -this.textLeft(5286, param3, param5) + param1, -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -358,8 +358,8 @@ class TextWidgetPainter implements WidgetPainter, io {
           if (param0.field_x == null) {
             param0.field_x = (op) ((Object) new BitmapTextLayout());
           }
-          var3_int = this.a((byte) 26, param0);
-          var4 = this.b(param0, -3);
+          var3_int = this.contentWidth((byte) 26, param0);
+          var4 = this.contentHeight(param0, -3);
           var6 = this.verticalAlignment;
           if (var6 != 0) {
             if (2 == var6) {
@@ -384,7 +384,7 @@ class TextWidgetPainter implements WidgetPainter, io {
               if (!(param0.field_x instanceof BitmapTextLayout)) {
                 return;
               }
-              ((BitmapTextLayout) (param0.field_x)).layoutCentered(this.font, var3_int >> 1, var5, this.c(-1, param0), false);
+              ((BitmapTextLayout) (param0.field_x)).layoutCentered(this.font, var3_int >> 1, var5, this.getWidgetText(-1, param0), false);
               return;
             }
             if (var6Lifetime1 != 2) {
@@ -393,11 +393,11 @@ class TextWidgetPainter implements WidgetPainter, io {
             if (!(param0.field_x instanceof BitmapTextLayout)) {
               return;
             }
-            ((BitmapTextLayout) (param0.field_x)).layoutRightAligned(this.c(-1, param0), this.font, false, var5, var3_int);
+            ((BitmapTextLayout) (param0.field_x)).layoutRightAligned(this.getWidgetText(-1, param0), this.font, false, var5, var3_int);
             return;
           }
           if (param0.field_x instanceof BitmapTextLayout) {
-            ((BitmapTextLayout) (param0.field_x)).layoutLeftAligned(var5, this.c(-1, param0), this.font, true, 0);
+            ((BitmapTextLayout) (param0.field_x)).layoutLeftAligned(var5, this.getWidgetText(-1, param0), this.font, true, 0);
             return;
           }
           return;
@@ -548,7 +548,7 @@ class TextWidgetPainter implements WidgetPainter, io {
         }
     }
 
-    public final int a(int param0, UiWidget param1, int param2) {
+    public final int textLeft(int param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
         UiWidget var5 = null;
         int stackIn_3_0 = 0;
@@ -559,7 +559,7 @@ class TextWidgetPainter implements WidgetPainter, io {
         try {
           if (param0 != 5286) {
             var5 = (UiWidget) null;
-            this.a(51, (UiWidget) null, 122);
+            this.textLeft(51, (UiWidget) null, 122);
           }
           stackIn_3_0 = this.a(0, (byte) 11, param2, param1);
           return stackIn_3_0;
@@ -605,9 +605,9 @@ class TextWidgetPainter implements WidgetPainter, io {
             var8 = var14.field_b[var7];
             var9 = var15.a(param2, (byte) -94);
             var10 = this.a(var9, (byte) 11, param3, param4);
-            var11 = this.a(param1, param4, (byte) -7) + Math.max(0, var8.top);
-            stackIn_3_0 = this.a(param1, param4, (byte) -7);
-            stackIn_3_1 = this.b(param4, -3);
+            var11 = this.textTop(param1, param4, (byte) -7) + Math.max(0, var8.top);
+            stackIn_3_0 = this.textTop(param1, param4, (byte) -7);
+            stackIn_3_1 = this.contentHeight(param4, -3);
             stackIn_3_2 = var8.bottom;
             if (1 + var7 >= var15.field_b.length) {
               stackIn_4_3 = var8.bottom;
@@ -638,7 +638,7 @@ class TextWidgetPainter implements WidgetPainter, io {
         }
     }
 
-    public final int a(int param0, UiWidget param1, byte param2) {
+    public final int textTop(int param0, UiWidget param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -672,7 +672,7 @@ class TextWidgetPainter implements WidgetPainter, io {
         LimitedRandomAccessFile.b((byte) -60);
     }
 
-    private final int b(UiWidget param0, int param1) {
+    private final int contentHeight(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         int stackIn_3_0 = 0;
@@ -716,8 +716,8 @@ class TextWidgetPainter implements WidgetPainter, io {
         var13 = Pool.field_O;
         try {
           QuickChatPhraseRegistry.a(param2.widgetX + param6, param5 + param2.widgetY, param2.widgetWidth + param2.widgetX + param6, (byte) 85, param2.widgetY + param5 + param2.widgetHeight);
-          var9_int = this.a((byte) 26, param2);
-          var10 = this.b(param2, param7 + 19);
+          var9_int = this.contentWidth((byte) 26, param2);
+          var10 = this.contentHeight(param2, param7 + 19);
           if (param7 != -22) {
             this.shadowColor = 62;
           }
@@ -740,19 +740,19 @@ class TextWidgetPainter implements WidgetPainter, io {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.font.drawCentered(this.c(-1, param2), this.a(param3, (byte) 11, param6, param2) + (var9_int >> 1), this.a(param2, param0, param5, (byte) 125) + var11, param1, param4);
+                this.font.drawCentered(this.getWidgetText(-1, param2), this.a(param3, (byte) 11, param6, param2) + (var9_int >> 1), this.a(param2, param0, param5, (byte) 125) + var11, param1, param4);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.font.c(this.c(-1, param2), this.a(param3, (byte) 11, param6, param2) + var9_int, this.a(param2, param0, param5, (byte) 106) + var11, param1, param4);
+                  this.font.c(this.getWidgetText(-1, param2), this.a(param3, (byte) 11, param6, param2) + var9_int, this.a(param2, param0, param5, (byte) 106) + var11, param1, param4);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.font.d(this.c(param7 ^ 21, param2), this.a(param3, (byte) 11, param6, param2), var11 + this.a(param2, param0, param5, (byte) 92), param1, param4);
+              this.font.d(this.getWidgetText(param7 ^ 21, param2), this.a(param3, (byte) 11, param6, param2), var11 + this.a(param2, param0, param5, (byte) 92), param1, param4);
             }
           } else {
-            this.font.drawParagraph(this.c(param7 ^ 21, param2), this.a(param3, (byte) 11, param6, param2), this.a(param2, param0, param5, (byte) 70), var9_int, var10, param1, param4, this.horizontalAlignment, this.verticalAlignment, this.field_b);
+            this.font.drawParagraph(this.getWidgetText(param7 ^ 21, param2), this.a(param3, (byte) 11, param6, param2), this.a(param2, param0, param5, (byte) 70), var9_int, var10, param1, param4, this.horizontalAlignment, this.verticalAlignment, this.field_b);
           }
           TriangleMesh.a(114);
           return;

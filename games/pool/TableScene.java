@@ -107,7 +107,7 @@ abstract class TableScene {
         if (param0 != 31761) {
           return 92;
         }
-        return this.h(param0 ^ 32445);
+        return this.floorColor(param0 ^ 32445);
     }
 
     final void a(int[] param0, int param1, int param2, int[] param3) {
@@ -122,7 +122,7 @@ abstract class TableScene {
         }
     }
 
-    private final void a(Pocket param0, int param1, PoolMatchController param2, int param3) {
+    private final void animatePottedBall(Pocket param0, int param1, PoolMatchController param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -197,7 +197,7 @@ abstract class TableScene {
         this.a(10, 256, (byte) 62, 128);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    private final void buildCushionMesh(int param0, int param1, int param2, int param3, byte param4, int param5) {
         int var16 = 0;
         int var17 = 0;
         MeshBuilder var18 = null;
@@ -251,7 +251,7 @@ abstract class TableScene {
     private final void k(int param0) {
         hh.field_c = true;
         if (param0 != 0) {
-          this.h(-49);
+          this.floorColor(-49);
         }
         id.field_c.field_g = true;
         if (null != AccountContentDialog.field_ub) {
@@ -702,7 +702,7 @@ abstract class TableScene {
         }
     }
 
-    final void a(int param0, SoundCache param1, ResourceArchive param2) {
+    final void prepareMusic(int param0, SoundCache param1, ResourceArchive param2) {
         kf[] var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -714,7 +714,7 @@ abstract class TableScene {
         try {
           if (param0 != 3) {
             var5 = (kf[]) null;
-            this.a(-23, -100, (byte) -87, (PcmSample[]) null, (kf[]) null);
+            this.updateRollingSounds(-23, -100, (byte) -87, (PcmSample[]) null, (kf[]) null);
           }
           if (this.field_b != null) {
             RankingsScreen.field_N.prepareScoreInstruments(param1, param2, this.field_b, param0 ^ 79, 0);
@@ -752,7 +752,7 @@ abstract class TableScene {
     void a(int param0, ResourceArchive param1) {
         try {
           if (param0 != 1) {
-            this.g(67);
+            this.floorTexture(67);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -763,7 +763,7 @@ abstract class TableScene {
         if (param0 <= 94) {
           return (byte) -18;
         }
-        return this.g(-112);
+        return this.floorTexture(-112);
     }
 
     final String describeAmbientLight(byte param0) {
@@ -823,7 +823,7 @@ abstract class TableScene {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean isSoundPlaying(int param0) {
         int var2;
         boolean stackIn_4_0 = false;
         var2 = 31 % ((-8 - param0) / 41);
@@ -831,7 +831,7 @@ abstract class TableScene {
         return stackIn_4_0;
     }
 
-    private final void a(Pocket[] param0, int param1) {
+    private final void buildPocketMarkers(Pocket[] param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         ModelMesh var3 = null;
@@ -878,7 +878,7 @@ abstract class TableScene {
         }
     }
 
-    private final void a(byte param0, CushionSegment[] param1) {
+    private final void buildCushionMeshes(byte param0, CushionSegment[] param1) {
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -892,7 +892,7 @@ abstract class TableScene {
             return;
           }
           for (var3_int = 0; var3_int < this.field_f.length; var3_int++) {
-            this.a(param1[var3_int].startX >> 13, param1[var3_int].endY >> 13, param1[var3_int].startY >> 13, param1[var3_int].endX >> 13, (byte) -57, var3_int);
+            this.buildCushionMesh(param1[var3_int].startX >> 13, param1[var3_int].endY >> 13, param1[var3_int].startY >> 13, param1[var3_int].endX >> 13, (byte) -57, var3_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -927,20 +927,20 @@ abstract class TableScene {
         }
     }
 
-    byte g(int param0) {
+    byte floorTexture(int param0) {
         int var2 = -110 / ((param0 - 9) / 63);
         return (byte) 0;
     }
 
-    final void a(int param0, int param1) {
+    final void initSoundSlots(int param0, int param1) {
         if (param0 < 52) {
           return;
         }
-        this.a((byte) 120);
+        this.stopSounds((byte) 120);
         QuickChatPhraseDefinition.field_D = new kf[param1];
     }
 
-    final void a(byte param0) {
+    final void stopSounds(byte param0) {
         int var2 = 0;
         int var3;
         var3 = Pool.field_O;
@@ -957,7 +957,7 @@ abstract class TableScene {
         }
     }
 
-    final void a(int param0, int param1, byte param2, PcmSample[] param3, kf[] param4) {
+    final void updateRollingSounds(int param0, int param1, byte param2, PcmSample[] param3, kf[] param4) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -1018,17 +1018,17 @@ abstract class TableScene {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.f(2);
-          this.a(param0.pockets, -33);
-          this.a((byte) -92, param0.cushionSegments);
+          this.buildFloorTiles(2);
+          this.buildPocketMarkers(param0.pockets, -33);
+          this.buildCushionMeshes((byte) -92, param0.cushionSegments);
           this.a(param0.cushionSegments, 16);
           this.k(0);
           if (param1 != 21894) {
             var4 = (CushionSegment[]) null;
-            this.a((byte) 111, (CushionSegment[]) null);
-            this.b(120);
+            this.buildCushionMeshes((byte) 111, (CushionSegment[]) null);
+            this.updateLightPosition(120);
           } else {
-            this.b(120);
+            this.updateLightPosition(120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1200,7 +1200,7 @@ abstract class TableScene {
           for (var4_int = 0; var4_int < param2.length; var4_int++) {
             if (param2[var4_int].transformDirty) {
               param2[var4_int].updateRenderTransform(2);
-              dq.field_a.a(false, param2[var4_int].renderTransform, var4_int);
+              dq.field_a.buildBallModel(false, param2[var4_int].renderTransform, var4_int);
             }
             w.field_a[var4_int] = (eb) ((Object) DropTargetWidget.field_O[var4_int]);
             LinkButtonPainter.field_f[var4_int] = var4_int;
@@ -1278,7 +1278,7 @@ abstract class TableScene {
     void a(boolean param0) {
         if (param0) {
           Pocket[] var3 = (Pocket[]) null;
-          this.a((Pocket[]) null, 70);
+          this.buildPocketMarkers((Pocket[]) null, 70);
         }
     }
 
@@ -1292,7 +1292,7 @@ abstract class TableScene {
         }
     }
 
-    final void b(PoolGameModel param0, int param1) {
+    final void createDebugOverlays(PoolGameModel param0, int param1) {
         int var3_int = 0;
         int var3_intLifetime1;
         try {
@@ -1313,7 +1313,7 @@ abstract class TableScene {
         int var3 = -12 / ((11 - param0) / 52);
     }
 
-    final void b(int param0) {
+    final void updateLightPosition(int param0) {
         while (this.field_j < 0.0) {
           this.field_j = this.field_j + 6.283185307179586;
         }
@@ -1486,7 +1486,7 @@ abstract class TableScene {
         }
     }
 
-    private final void f(int param0) {
+    private final void buildFloorTiles(int param0) {
         int var16 = 0;
         double var17 = 0.0;
         int var19 = 0;
@@ -1504,8 +1504,8 @@ abstract class TableScene {
         int var12 = this.field_s.addVertex(var9, -var10, 0);
         int var13 = this.field_s.addVertex(-var9, var10, 0);
         int var14 = this.field_s.addVertex(var9, var10, 0);
-        this.field_s.addFace(var11, var13, var12, (byte) 1, hh.rgbToPackedHsl((byte) -105, this.h(684)), this.g(-56));
-        this.field_s.addFace(var14, var12, var13, (byte) 1, hh.rgbToPackedHsl((byte) -127, this.h(684)), this.g(91));
+        this.field_s.addFace(var11, var13, var12, (byte) 1, hh.rgbToPackedHsl((byte) -105, this.floorColor(684)), this.floorTexture(-56));
+        this.field_s.addFace(var14, var12, var13, (byte) 1, hh.rgbToPackedHsl((byte) -127, this.floorColor(684)), this.floorTexture(91));
         ModelMesh var15 = (ModelMesh) (this.a(103, this.field_s));
         for (var16 = 0; var16 < var4; var16++) {
           var17 = var7 * (double)(1 + 2 * var16) / 2.0;
@@ -1530,7 +1530,7 @@ abstract class TableScene {
         int var4 = 30 / ((param0 + 47) / 45);
     }
 
-    int h(int param0) {
+    int floorColor(int param0) {
         if (param0 != 684) {
           this.field_g = (int[][]) null;
         }
@@ -1554,7 +1554,7 @@ abstract class TableScene {
         this.field_e = -1024;
         this.field_j = 0.7853981633974483;
         this.field_t = 1031;
-        this.b(115);
+        this.updateLightPosition(115);
     }
 
     void updatePottedBalls(int param0, PoolMatchController param1) {
@@ -1592,7 +1592,7 @@ abstract class TableScene {
                   throw new IllegalStateException("Ball in play cannot be potted!");
                 }
                 if (!var8.field_o) {
-                  LobbyGame.field_gc.a(var10[var4], 24657, param1, var7);
+                  LobbyGame.field_gc.animatePottedBall(var10[var4], 24657, param1, var7);
                 }
               }
             }

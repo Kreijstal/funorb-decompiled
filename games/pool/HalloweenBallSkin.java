@@ -118,7 +118,7 @@ final class HalloweenBallSkin extends BallSkin {
             var6 = stackIn_7_0;
             if (this.field_a[var5] != var6) {
               this.field_a[var5] = var6;
-              this.a(false, param2[var5].renderTransform, var5);
+              this.buildBallModel(false, param2[var5].renderTransform, var5);
             }
           }
           return;

@@ -41,8 +41,8 @@ final class PolarTableScene extends ModelTableScene {
           for (var3_int = 0; var3_int < this.field_U.length; var3_int++) {
             this.field_U[var3_int].a(this, 10);
           }
-          this.a(24, 50, (byte) -121, new PcmSample[]{this.field_V, this.field_W, this.field_T, this.field_db, this.field_fb}, Pool.field_N);
-          this.a(24, 50, (byte) 125, new PcmSample[]{this.field_eb, this.field_Z, this.field_kb}, TextPairLoginPayload.field_g);
+          this.updateRollingSounds(24, 50, (byte) -121, new PcmSample[]{this.field_V, this.field_W, this.field_T, this.field_db, this.field_fb}, Pool.field_N);
+          this.updateRollingSounds(24, 50, (byte) 125, new PcmSample[]{this.field_eb, this.field_Z, this.field_kb}, TextPairLoginPayload.field_g);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vf.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -914,7 +914,7 @@ final class PolarTableScene extends ModelTableScene {
           return;
         }
         ArchiveLoadStep.field_g = null;
-        this.a((byte) 119);
+        this.stopSounds((byte) 119);
     }
 
     final void buildTableGeometry(PoolGameModel param0, int param1) {
@@ -932,7 +932,7 @@ final class PolarTableScene extends ModelTableScene {
           int[] var3 = var4;
           TableScene.field_w = ta.buildGradientPalette(new int[]{0, var6[0], 128, var6[1], 256, var6[2]}, param1 ^ 21919);
           ValueNoise.initializeTable();
-          this.a(86, param0.balls.length);
+          this.initSoundSlots(86, param0.balls.length);
           BufferedSocket.field_p = new int[65536];
           ArchiveLoadStep.field_g = new int[65536];
           ModelInstance.field_c = new int[65536];
@@ -1139,7 +1139,7 @@ final class PolarTableScene extends ModelTableScene {
 
     PolarTableScene() {
         this.field_v = 8559779;
-        this.b(112);
+        this.updateLightPosition(112);
     }
 
     static {

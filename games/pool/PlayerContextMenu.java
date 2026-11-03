@@ -17,7 +17,7 @@ final class PlayerContextMenu {
     private int[] field_h;
     ContextMenu field_n;
 
-    final void a(pn param0, boolean param1) {
+    final void addChatFilterActions(pn param0, boolean param1) {
         if (param0.field_g) {
           return;
         }
@@ -56,7 +56,7 @@ final class PlayerContextMenu {
         }
     }
 
-    private final boolean a(byte param0, int param1, int param2) {
+    private final boolean executeListAction(byte param0, int param1, int param2) {
         int var5;
         var5 = Pool.field_O;
         if (param0 != 98) {
@@ -93,7 +93,7 @@ final class PlayerContextMenu {
         return true;
     }
 
-    final void a(int param0, int[] param1, byte param2) {
+    final void buildPlayerMenu(int param0, int[] param1, byte param2) {
         boolean discarded$0 = false;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -107,7 +107,7 @@ final class PlayerContextMenu {
         try {
           if (null != this.field_m && (~this.field_l != ~BitmapTextLayout.field_m ||
             2 == param0) && th.field_a == 2) {
-            var7 = this.a(3);
+            var7 = this.getTargetName(3);
             var4 = var7;
             var5 = gf.a(-103, this.field_m);
             var6 = MenuSelection.a(this.field_m, 24552) ? 1 : 0;
@@ -158,21 +158,21 @@ final class PlayerContextMenu {
         }
     }
 
-    final void a(byte param0) {
+    final void addReportAbuseAction(byte param0) {
         String var3 = null;
         boolean discarded$0 = false;
         if (null != this.field_m &&
           this.field_l != BitmapTextLayout.field_m) {
-          var3 = this.a(3);
+          var3 = this.getTargetName(3);
           String var2 = var3;
           this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, NetworkGameClient.reportXForAbuse), 17130, 17);
         }
         if (param0 < 8) {
-          discarded$0 = this.b((byte) -22, -119, 104);
+          discarded$0 = this.openReportAbuse((byte) -22, -119, 104);
         }
     }
 
-    private final boolean a(int param0, byte param1, int param2) {
+    private final boolean executePlayerAction(int param0, byte param1, int param2) {
         int var5;
         var5 = Pool.field_O;
         if (param2 != 8) {
@@ -214,9 +214,9 @@ final class PlayerContextMenu {
         return true;
     }
 
-    private final boolean b(byte param0, int param1, int param2) {
+    private final boolean openReportAbuse(byte param0, int param1, int param2) {
         if (param0 > -74) {
-          PlayerContextMenu.a((byte) 75, 'ﾪ');
+          PlayerContextMenu.isValidNameCharacter((byte) 75, 'ﾪ');
         }
         if (17 != param2) {
           return false;
@@ -242,17 +242,17 @@ final class PlayerContextMenu {
         if (var6 == -2) {
           return false;
         }
-        boolean discarded$0 = this.a((byte) 98, param1, var6);
+        boolean discarded$0 = this.executeListAction((byte) 98, param1, var6);
         boolean discarded$1 = this.a(var6, param4, 6);
-        boolean discarded$2 = this.a(param4, (byte) 115, var6);
-        boolean discarded$3 = this.b((byte) -75, param0, var6);
+        boolean discarded$2 = this.executePlayerAction(param4, (byte) 115, var6);
+        boolean discarded$3 = this.openReportAbuse((byte) -75, param0, var6);
         return true;
     }
 
-    final static void c(int param0) {
+    final static void updatePageControls(int param0) {
         VerticalScrollbar.field_Nb.sprite = dq.createTextLabelSprite(1, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(wn.field_f[la.field_a] / 50)}, -1, vm.timerSecs));
         if (param0 != 13) {
-          PlayerContextMenu.c(-82);
+          PlayerContextMenu.updatePageControls(-82);
         }
         TickClock.field_i.enabled = la.field_a > 0 ? true : false;
         DualLinkNodeHashTable.field_f.enabled = la.field_a < -1 + te.field_p[0] ? true : false;
@@ -289,7 +289,7 @@ final class PlayerContextMenu {
         return false;
     }
 
-    final void a(byte param0, boolean param1) {
+    final void addGameInviteActions(byte param0, boolean param1) {
         LobbyPlayer var4;
         String var5;
         LobbyPlayer var6;
@@ -299,7 +299,7 @@ final class PlayerContextMenu {
           TikiTableScene.e((byte) 85)) {
           var6 = mg.a(param0 ^ 124, this.field_l);
           var4 = QuickChatHelpDialog.b(this.field_l, 0);
-          var5 = this.a(3);
+          var5 = this.getTargetName(3);
           if (var4 != null) {
             if (!HighscoresScreen.field_L.field_ec ||
               !(HighscoresScreen.field_L.field_qc < 0)) {
@@ -328,7 +328,7 @@ final class PlayerContextMenu {
         }
     }
 
-    private final String a(int param0) {
+    private final String getTargetName(int param0) {
         String var2 = null;
         if (null != this.field_d) {
           var2 = this.field_d;
@@ -341,7 +341,7 @@ final class PlayerContextMenu {
         return var2;
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isValidNameCharacter(byte param0, char param1) {
         int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;
@@ -394,7 +394,7 @@ final class PlayerContextMenu {
         }
     }
 
-    final void b(int param0) {
+    final void addInviteActions(int param0) {
         String var3;
         LobbyGame var4;
         if (null == HighscoresScreen.field_L) {
@@ -421,7 +421,7 @@ final class PlayerContextMenu {
           }
         }
         if (param0 != 2616) {
-          PlayerContextMenu.a((byte) 103, 'ﾥ');
+          PlayerContextMenu.isValidNameCharacter((byte) 103, 'ﾥ');
         }
     }
 

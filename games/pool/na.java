@@ -70,14 +70,14 @@ final class na {
             var13 = LoginRequiredScreen.quickchatGame;
             var12.field_n.addAction(var13, 17130, 20);
           }
-          PlasmaBallSkin.field_m.b(2616);
-          PlasmaBallSkin.field_m.a((byte) 124, false);
+          PlasmaBallSkin.field_m.addInviteActions(2616);
+          PlasmaBallSkin.field_m.addGameInviteActions((byte) 124, false);
           if (param1 != 122) {
             na.a((byte) -50);
           }
-          PlasmaBallSkin.field_m.a(param0.field_p, param0.field_d, (byte) 64);
-          PlasmaBallSkin.field_m.a((byte) 95);
-          PlasmaBallSkin.field_m.a(param0, false);
+          PlasmaBallSkin.field_m.buildPlayerMenu(param0.field_p, param0.field_d, (byte) 64);
+          PlasmaBallSkin.field_m.addReportAbuseAction((byte) 95);
+          PlasmaBallSkin.field_m.addChatFilterActions(param0, false);
           var14 = PlasmaBallSkin.field_m;
           var3 = DialogLayer.field_W;
           var4 = UsernameAvailabilityValidator.field_o;

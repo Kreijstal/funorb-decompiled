@@ -153,7 +153,7 @@ class MenuScreen extends jh {
           return;
         }
         var11 = var11 + Ball.field_H;
-        var20 = PoolGameModel.field_B[0].b(0, 0);
+        var20 = PoolGameModel.field_B[0].gradientPalette(0, 0);
         for (var14 = var11; var14 <= 120 + var11; var14 += 20) {
           SoftwareRasterizer.a(var14 << 4, -2 + var12 / 2 + var7 << 4, 16 - var11 + var14, var20.length - 1, var20);
         }
@@ -1060,9 +1060,9 @@ class MenuScreen extends jh {
         RuntimeException var7 = null;
         try {
           dr.a(param6.displayName, -1, param6.playerId, -1, param1, param6.accountName, 32540, param6, (int[]) null);
-          PlasmaBallSkin.field_m.a((byte) 124, true);
-          PlasmaBallSkin.field_m.a(0, (int[]) null, (byte) 75);
-          PlasmaBallSkin.field_m.a((byte) 65);
+          PlasmaBallSkin.field_m.addGameInviteActions((byte) 124, true);
+          PlasmaBallSkin.field_m.buildPlayerMenu(0, (int[]) null, (byte) 75);
+          PlasmaBallSkin.field_m.addReportAbuseAction((byte) 65);
           var13 = PlasmaBallSkin.field_m;
           var8 = param5;
           var9 = param4;

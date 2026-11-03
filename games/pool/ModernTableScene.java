@@ -1195,7 +1195,7 @@ final class ModernTableScene extends ModelTableScene {
         this.field_C = 64;
         this.field_j = 1.7627825736999512;
         this.field_m = 85;
-        this.b(126);
+        this.updateLightPosition(126);
     }
 
     static {

@@ -103,7 +103,7 @@ final class TikiTableScene extends ModelTableScene {
             RankingsScreen.field_N.unloadScoreAndResetSynthesis(true, -1);
           }
           if (500 > ln.field_t) {
-            this.a(128, 50, (byte) 71, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
+            this.updateRollingSounds(128, 50, (byte) 71, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
             if (ga.nextRandomInt(400, true, ea.field_r) == 0) {
               this.c(-4577, 32);
             }
@@ -111,14 +111,14 @@ final class TikiTableScene extends ModelTableScene {
             if (ln.field_t != 500) {
               if (ln.field_t < 2000) {
                 var3_int = (128 * ln.field_t - 64000) / 1500;
-                this.a(128 - var3_int * 7 / 8, 50, (byte) 34, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
+                this.updateRollingSounds(128 - var3_int * 7 / 8, 50, (byte) 34, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
                 if (ga.nextRandomInt(800, true, ea.field_r) == 0) {
                   this.c(-4577, 128 - 7 * var3_int / 8 >> 2);
                 }
                 RankingsScreen.field_N.setChannelVolumeScale((byte) 77, -1, var3_int);
               } else {
                 if (ln.field_t < 11200) {
-                  this.a(8, 50, (byte) -101, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
+                  this.updateRollingSounds(8, 50, (byte) -101, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
                 } else {
                   if (ln.field_t >= 12200) {
                     if (ln.field_t == 12200) {
@@ -128,7 +128,7 @@ final class TikiTableScene extends ModelTableScene {
                     }
                   } else {
                     var3_int = 128 * (12200 - ln.field_t) / 1000;
-                    this.a(128 - 7 * var3_int / 8, 50, (byte) -126, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
+                    this.updateRollingSounds(128 - 7 * var3_int / 8, 50, (byte) -126, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
                     if (ga.nextRandomInt(800, true, ea.field_r) == 0) {
                       this.c(-4577, 128 - var3_int * 7 / 8 >> 2);
                     }
@@ -1201,7 +1201,7 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final int h(int param0) {
+    final int floorColor(int param0) {
         if (param0 != 684) {
           this.field_kb = (PcmSample) null;
         }
@@ -1453,7 +1453,7 @@ final class TikiTableScene extends ModelTableScene {
         this.field_j = 5.7246799465414;
         this.field_x = 60;
         this.field_p = 0.3316125578789226;
-        this.b(113);
+        this.updateLightPosition(113);
     }
 
     static {

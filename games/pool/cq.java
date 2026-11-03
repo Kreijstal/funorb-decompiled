@@ -120,7 +120,7 @@ final class cq {
         so.field_g[0].field_d.addFirst((byte) -78, new bk(AchievementsScreen.tutorialShotModeTake, 1, 7, so.field_g[0].field_d));
         so.field_g[0].field_d.addFirst((byte) -110, new bk(om.tutorialShotModeLeave, 1, 6, so.field_g[0].field_d));
         so.field_g[0].field_d.addFirst((byte) -74, new bk(TextLineLayout.tutorialBasicComplete, 1, -1, so.field_g[0].field_d));
-        so.field_g[0].a(false);
+        so.field_g[0].updateStepCount(false);
         TutorialController dupTemp$0 = new TutorialController(fc.tutorialTitleEightBall, 2, 0);
         TutorialController arrayValue$1 = so.field_g[0];
         so.field_g[1] = dupTemp$0;
@@ -134,7 +134,7 @@ final class cq {
         so.field_g[1].field_d.addFirst((byte) 87, new bk(gn.tutorialEightBallAfterfirstpot, 7, 11, 0));
         so.field_g[1].field_d.addFirst((byte) 99, new bk(ChatMessageLine.tutorialEightBallAftergrouppot, 1, 12, 0));
         so.field_g[1].field_d.addFirst((byte) -6, new bk(MusicPatch.tutorialEightBallComplete, 1, -1, 0));
-        so.field_g[1].a(false);
+        so.field_g[1].updateStepCount(false);
         so.field_g[2] = new TutorialController(NetworkGameClient.tutorialTitleNineBall, 2, 1);
         so.field_g[2].field_d.addFirst((byte) -90, new bk(TextPairLoginPayload.tutorialNineBallStartPlaceCueball, 40, 13, 128));
         so.field_g[2].field_d.addFirst((byte) -99, new bk(SoundCache.tutorialNineBallBreak, 1, 8, 0));
@@ -142,7 +142,7 @@ final class cq {
         so.field_g[2].field_d.addFirst((byte) -9, new bk(pl.tutorialNineBallPottingABall, 1, 15, 0));
         so.field_g[2].field_d.addFirst((byte) -62, new bk(LoginForm.tutorialNineBallPottingNine, 1, 16, 0));
         so.field_g[2].field_d.addFirst((byte) 92, new bk(rc.tutorialNineBallFinal, 1, -1, 0));
-        so.field_g[2].a(false);
+        so.field_g[2].updateStepCount(false);
     }
 
     final static MeshBuilder a(int param0, int param1, int param2, MeshBuilder param3, int param4) {

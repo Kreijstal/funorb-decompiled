@@ -1580,7 +1580,7 @@ public final class Pool extends NetworkGameClient {
             RankingsScreen.field_N.prepareScoreInstruments(qg.field_g, gf.field_g, HalloweenBallSkin.field_m, 75, 0);
             RankingsScreen.field_N.prepareScoreInstruments(qg.field_g, gf.field_g, jh.field_d, 95, 0);
             for (var3Lifetime2 = 0; var3Lifetime2 < nn.field_b.length; var3Lifetime2++) {
-              nn.field_b[var3Lifetime2].a(3, qg.field_g, gf.field_g);
+              nn.field_b[var3Lifetime2].prepareMusic(3, qg.field_g, gf.field_g);
             }
             RankingsScreen.field_N.clearInstrumentSampleIds(true);
             gf.field_g = null;

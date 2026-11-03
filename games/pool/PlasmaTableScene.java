@@ -417,7 +417,7 @@ final class PlasmaTableScene extends TableScene {
         }
     }
 
-    final int h(int param0) {
+    final int floorColor(int param0) {
         if (param0 != 684) {
           this.n(16);
         }
@@ -444,7 +444,7 @@ final class PlasmaTableScene extends TableScene {
         }
     }
 
-    final byte g(int param0) {
+    final byte floorTexture(int param0) {
         int var2 = 83 % ((9 - param0) / 63);
         return (byte) -128;
     }
@@ -648,7 +648,7 @@ final class PlasmaTableScene extends TableScene {
         var9 = Pool.field_O;
         try {
           if (param0) {
-            this.g(2);
+            this.floorTexture(2);
           }
           if (param2.canControlCue(-38)) {
             if (id.field_c.field_g) {

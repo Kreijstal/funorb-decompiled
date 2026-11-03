@@ -254,7 +254,7 @@ final class ResourceArchive {
           var3 = param0;
           var1_intLifetime1 = var3;
           while (PoolGameModel.field_B.length > var3) {
-            PoolGameModel.field_B[var3].a(7096);
+            PoolGameModel.field_B[var3].allocateMeshes(7096);
             var3++;
           }
           return;

@@ -20,7 +20,7 @@ final class TutorialController {
     PoolMatchController field_a;
     static int field_c;
 
-    private final void a(int param0, int param1) {
+    private final void renderPanel(int param0, int param1) {
         int var3 = PoolGameModel.field_k.localX;
         int var4 = PoolGameModel.field_k.localY;
         int var5 = SoftwareRasterizer.width - NetworkGameClient.field_s.field_z >> 1;
@@ -29,7 +29,7 @@ final class TutorialController {
         PoolGameModel.field_k.localY = PoolGameModel.field_k.localY - var6;
         NetworkGameClient.field_s.e();
         SoftwareRasterizer.clear();
-        this.c((byte) -109);
+        this.drawStepProgress((byte) -109);
         PoolGameModel.field_k.drawRoot((byte) -79, false);
         this.currentStep.a(false);
         PoolGameModel.field_k.localX = var3;
@@ -110,7 +110,7 @@ final class TutorialController {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean handleButtonPress(int param0) {
         int var2 = -86 % ((40 - param0) / 46);
         int var3 = 0;
         if (qa.field_v.pressedButton != 0) {
@@ -122,13 +122,13 @@ final class TutorialController {
           }
         }
         if (0 != jq.field_d.pressedButton) {
-          this.e((byte) 89);
-          this.c(255);
+          this.setUpStepState((byte) 89);
+          this.goToPreviousStep(255);
           var3 = 1;
         }
         if (0 != pl.field_b.pressedButton) {
           var3 = 1;
-          this.a((byte) -87);
+          this.goToNextStep((byte) -87);
         }
         if (PoolGameModel.field_k.pressedButton != 0) {
           var3 = 1;
@@ -136,7 +136,7 @@ final class TutorialController {
         return var3 != 0;
     }
 
-    final void a(boolean param0) {
+    final void updateStepCount(boolean param0) {
         this.field_k = this.field_d.size(116);
         if (param0) {
           this.field_b = false;
@@ -160,7 +160,7 @@ final class TutorialController {
           var3 = this.currentStep.c((byte) -122);
           PoolGameModel.field_k.height = (var2 * (25 - ThreeSliceButtonPainter.field_s) + ThreeSliceButtonPainter.field_s * var3) / 25;
           PoolGameModel.field_k.localY = -PoolGameModel.field_k.height + SoftwareRasterizer.height - 5;
-          this.e(1);
+          this.layoutButtons(1);
           ThreeSliceButtonPainter.field_s = ThreeSliceButtonPainter.field_s + 1;
           if (ThreeSliceButtonPainter.field_s > 25) {
             ThreeSliceButtonPainter.field_s = -1;
@@ -171,7 +171,7 @@ final class TutorialController {
           if (25 < TextPairLoginPayload.field_i) {
             TextPairLoginPayload.field_i = -1;
             if (this.field_b) {
-              this.e(1);
+              this.layoutButtons(1);
             }
           }
         }
@@ -208,7 +208,7 @@ final class TutorialController {
         }
         if (!this.field_b) {
           if (0 <= TextPairLoginPayload.field_i) {
-            this.a(10, (-TextPairLoginPayload.field_i + 25) * 255 / 25);
+            this.renderPanel(10, (-TextPairLoginPayload.field_i + 25) * 255 / 25);
           }
           if (!qa.field_v.b(-119)) {
             qa.field_v.drawRoot((byte) -79, false);
@@ -216,7 +216,7 @@ final class TutorialController {
         } else {
           if (ThreeSliceButtonPainter.field_s >= 0) {
             SoftwareRasterizer.fillRectangleAlpha(PoolGameModel.field_k.localX + 5, 5 + PoolGameModel.field_k.localY, PoolGameModel.field_k.width - 10, -10 + PoolGameModel.field_k.height, 0, 128);
-            this.c((byte) -109);
+            this.drawStepProgress((byte) -109);
             var2 = PoolGameModel.field_k.localX;
             PoolGameModel.field_k.localX = PoolGameModel.field_k.localX - 160;
             var3 = PoolGameModel.field_k.localY;
@@ -226,7 +226,7 @@ final class TutorialController {
             this.previousStep.a(false);
             NanoTickClock.field_r.e();
             SoftwareRasterizer.clear();
-            this.c((byte) -109);
+            this.drawStepProgress((byte) -109);
             this.currentStep.a(false);
             var4 = -5 + (-qa.field_v.height + (PoolGameModel.field_k.height + PoolGameModel.field_k.localY));
             var5 = PoolGameModel.field_k.localY;
@@ -266,12 +266,12 @@ final class TutorialController {
           } else {
             if (TextPairLoginPayload.field_i < 0) {
               SoftwareRasterizer.fillRectangleAlpha(5 + PoolGameModel.field_k.localX, PoolGameModel.field_k.localY + 5, -10 + PoolGameModel.field_k.width, PoolGameModel.field_k.height - 10, 0, 128);
-              this.c((byte) -109);
+              this.drawStepProgress((byte) -109);
               PoolGameModel.field_k.drawRoot((byte) -79, false);
               qa.field_v.drawRoot((byte) -79, false);
               this.currentStep.a(false);
             } else {
-              this.a(10, 255 * TextPairLoginPayload.field_i / 25);
+              this.renderPanel(10, 255 * TextPairLoginPayload.field_i / 25);
               qa.field_v.drawRoot((byte) -79, false);
             }
           }
@@ -287,7 +287,7 @@ final class TutorialController {
         }
     }
 
-    private final void c(int param0) {
+    private final void goToPreviousStep(int param0) {
         if (param0 != 255) {
           this.field_d = (IntrusiveDeque) null;
         }
@@ -297,7 +297,7 @@ final class TutorialController {
             ThreeSliceButtonPainter.field_s = 0;
             this.previousStep = this.currentStep;
           }
-          this.a((bk) (this.currentStep.previous), param0 ^ 254);
+          this.setCurrentStep((bk) (this.currentStep.previous), param0 ^ 254);
           this.g(-120);
         } else {
           if (null != this.field_j) {
@@ -357,7 +357,7 @@ final class TutorialController {
         }
     }
 
-    private final void e(byte param0) {
+    private final void setUpStepState(byte param0) {
         boolean stackIn_27_0 = false;
         Ball[] var2;
         int var3;
@@ -435,7 +435,7 @@ final class TutorialController {
             var15 = this.field_a.gameModel.currentShot(75);
             ProgressBarWidget.a(true, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{dq.field_a.groupName((byte) 92, var4_int)}, -1, ModelTableScene.pottingBallForYou), (String) null);
             this.field_a.gameModel.stopAllBalls(-95);
-            this.field_a.gameModel.rules.a(var4_int, -1, 0);
+            this.field_a.gameModel.rules.assignGroups(var4_int, -1, 0);
             var15.endResolution = i.field_m | MarkerSliderPainter.field_j;
             var15.phase = 2;
             var15.pottedBalls = new IntrusiveDeque();
@@ -451,7 +451,7 @@ final class TutorialController {
         }
     }
 
-    final void a(boolean param0, ShotRecord param1) {
+    final void checkStepAfterShot(boolean param0, ShotRecord param1) {
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
@@ -472,7 +472,7 @@ final class TutorialController {
           if (this.currentStep.field_s == 256) {
             if (param1.breakSeed >= 0 &&
               2 < Ball.field_i.countEvents((byte) 2)) {
-              this.b(1, 8, -28186);
+              this.onStepEvent(1, 8, -28186);
             } else {
               this.field_a.rerackBalls(0);
               var6 = (String) null;
@@ -481,23 +481,23 @@ final class TutorialController {
           }
           if (this.currentStep.field_s == 512 &&
             0 != (param1.endResolution & i.field_m)) {
-            this.b(1, 9, -28186);
+            this.onStepEvent(1, 9, -28186);
           }
           if (2048 == this.currentStep.field_s &&
             this.field_a.gameModel.rules instanceof EightBallRules) {
             var7 = (EightBallRules) (this.field_a.gameModel.rules);
-            var4 = var7.f(22533, 0);
+            var4 = var7.groupOfPlayer(22533, 0);
             if (var4 == 0 ||
               var4 == 1) {
-              this.currentStep.field_u = var7.e(var4, 125);
+              this.currentStep.field_u = var7.pottedBallCount(var4, 125);
               if (this.currentStep.field_u >= 7) {
-                this.c(255);
+                this.goToPreviousStep(255);
               }
             }
           }
           if (this.currentStep.field_s == 4096 &&
             param1.hasPotted((byte) -122, 8)) {
-            this.b(1, 12, -28186);
+            this.onStepEvent(1, 12, -28186);
           }
           if (param0) {
             return;
@@ -509,10 +509,10 @@ final class TutorialController {
               var5_ref = (PotEvent) (var9.last((byte) -92));
               while (var5_ref != null) {
                 if (0 != var5_ref.ballIndex) {
-                  this.b(1, 15, -28186);
+                  this.onStepEvent(1, 15, -28186);
                 }
                 if (var5_ref.ballIndex == 9) {
-                  this.b(1, 16, -28186);
+                  this.onStepEvent(1, 16, -28186);
                   break;
                 }
                 var5_ref = (PotEvent) (var9.previous(-121));
@@ -526,7 +526,7 @@ final class TutorialController {
               var5_refLifetime1 = (PotEvent) (var11.last((byte) -92));
               while (var5_refLifetime1 != null) {
                 if (9 == var5_refLifetime1.ballIndex) {
-                  this.b(1, 16, -28186);
+                  this.onStepEvent(1, 16, -28186);
                   break;
                 }
                 var5_refLifetime1 = (PotEvent) (var11.previous(-114));
@@ -535,7 +535,7 @@ final class TutorialController {
           }
           if (this.currentStep.field_s == 16384 &&
             param1.groupBefore == this.field_a.gameModel.rules.ballGroup(param1.field_n, 30554)) {
-            this.b(1, 14, -28186);
+            this.onStepEvent(1, 14, -28186);
             return;
           }
           return;
@@ -553,7 +553,7 @@ final class TutorialController {
         }
     }
 
-    private final void c(byte param0) {
+    private final void drawStepProgress(byte param0) {
         int var13 = 0;
         int var17 = 0;
         int[] stackIn_18_0 = null;
@@ -680,7 +680,7 @@ final class TutorialController {
           }
         }
         if (param0 > -121) {
-          this.a(113, -115);
+          this.renderPanel(113, -115);
         }
     }
 
@@ -692,21 +692,21 @@ final class TutorialController {
         return TickClock.field_d[param0];
     }
 
-    final void a(int param0) {
+    final void restart(int param0) {
         IntrusiveDequeCursor var4 = new IntrusiveDequeCursor(this.field_d);
         bk var3 = (bk) (var4.last((byte) -92));
         while (var3 != null) {
           var3.field_u = 0;
           var3 = (bk) (var4.previous(param0 - 98));
         }
-        this.a((bk) (this.field_d.last((byte) 109)), 1);
+        this.setCurrentStep((bk) (this.field_d.last((byte) 109)), 1);
         this.g(-94);
         PoolGameModel.field_k.height = null == this.currentStep ? 10 : this.currentStep.c((byte) -112);
         PoolGameModel.field_k.localY = -5 - PoolGameModel.field_k.height + SoftwareRasterizer.height;
-        this.e(1);
+        this.layoutButtons(1);
         this.field_a.rerackBalls(0);
         if (param0 != -1) {
-          this.c(127);
+          this.goToPreviousStep(127);
         }
         this.field_a.gameModel.setGameType(this.field_n, (byte) -118);
         this.field_a.cueAim.azimuth = 0;
@@ -724,7 +724,7 @@ final class TutorialController {
         e.a(param0 ^ 29411);
     }
 
-    final static String a(int param0, byte param1, CharSequence[] param2, int param3) {
+    final static String joinText(int param0, byte param1, CharSequence[] param2, int param3) {
         int var7_int = 0;
         int var8 = 0;
         StringBuilder discarded$0 = null;
@@ -881,22 +881,22 @@ final class TutorialController {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void onStepEvent(int param0, int param1, int param2) {
         if (param2 != -28186) {
-          this.e(20);
+          this.layoutButtons(20);
         }
         if (1 << param1 == this.currentStep.field_s) {
           if (!this.currentStep.a(param0, (byte) 127)) {
             TranslatedUiText.field_e = true;
             this.g(20);
           } else {
-            this.c(param2 ^ -28391);
+            this.goToPreviousStep(param2 ^ -28391);
             TranslatedUiText.field_e = false;
           }
         }
     }
 
-    private final void e(int param0) {
+    private final void layoutButtons(int param0) {
         int var2 = 0;
         pl.field_b.localY = -3 + PoolGameModel.field_k.height - pl.field_b.height;
         pl.field_b.localX = 277;
@@ -930,7 +930,7 @@ final class TutorialController {
         int var2 = -81 % ((-32 - param0) / 38);
     }
 
-    private final void a(bk param0, int param1) {
+    private final void setCurrentStep(bk param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -959,7 +959,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(byte param0) {
+    private final void goToNextStep(byte param0) {
         if (param0 != -87) {
           this.field_g = (String) null;
         }
@@ -969,7 +969,7 @@ final class TutorialController {
             this.previousStep = this.currentStep;
             ThreeSliceButtonPainter.field_s = 0;
           }
-          this.a((bk) (this.currentStep.next), 1);
+          this.setCurrentStep((bk) (this.currentStep.next), 1);
           this.g(-109);
         }
     }

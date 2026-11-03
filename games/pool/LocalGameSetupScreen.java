@@ -202,7 +202,7 @@ final class LocalGameSetupScreen extends MenuScreen {
                       if (this.selection.isPressActivated((byte) 71) &&
                         la.field_a < te.field_p[0] - 1) {
                         la.field_a = la.field_a + 1;
-                        PlayerContextMenu.c(param0 ^ -16473);
+                        PlayerContextMenu.updatePageControls(param0 ^ -16473);
                       }
                     } else {
                       if (var4 != 46) {
@@ -218,7 +218,7 @@ final class LocalGameSetupScreen extends MenuScreen {
                     if (this.selection.isPressActivated((byte) 68) &&
                       la.field_a > 0) {
                       la.field_a = la.field_a - 1;
-                      PlayerContextMenu.c(13);
+                      PlayerContextMenu.updatePageControls(13);
                     }
                   }
                 } else {
@@ -322,7 +322,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         hg.field_c.addChild(84, dupTemp$5);
         MultiHandleSliderWidget.a(false, hg.field_c, DualLinkNodeHashTable.field_f);
         MultiHandleSliderWidget.a(false, hg.field_c, TickClock.field_i);
-        PlayerContextMenu.c(13);
+        PlayerContextMenu.updatePageControls(13);
         CacheEntry.field_x = new UiComponent(46L, (UiComponent) null, PoolGameModel.field_v.localX, hg.field_c.localY + hg.field_c.height + 10, PoolGameModel.field_v.width, PoolGameModel.field_v.height, (String) null);
         CacheEntry.field_x.frameSprites = rm.field_g;
         CacheEntry.field_x.horizontalAlignment = 0;
@@ -449,7 +449,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         ByteStorage.d(param0 ^ -107);
         KillerRules.c((byte) -45);
         this.g(4);
-        PlayerContextMenu.c(13);
+        PlayerContextMenu.updatePageControls(13);
     }
 
     final int getButtonRight(boolean param0, int param1) {

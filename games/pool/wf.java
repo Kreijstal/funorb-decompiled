@@ -114,7 +114,7 @@ final class wf {
             var10 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, param0 + 109, PacketBuffer.spectateXsGame);
             var9.field_n.addAction(var10, 17130, 10);
           }
-          PlasmaBallSkin.field_m.b(2616);
+          PlasmaBallSkin.field_m.addInviteActions(2616);
           if (param1) {
             if (AgeValidator.field_r != PlasmaBallSkin.field_m.field_b) {
               var13 = PlasmaBallSkin.field_m;

@@ -180,8 +180,8 @@ class HotspotTextWidget extends ButtonWidget {
         qa var7 = this.hoveredHotspot;
         if (var7 == null) {
         } else {
-          var8 = var6.a(5286, (UiWidget) (this), param2);
-          var9 = var6.a(param3, (UiWidget) (this), (byte) -7);
+          var8 = var6.textLeft(5286, (UiWidget) (this), param2);
+          var9 = var6.textTop(param3, (UiWidget) (this), (byte) -7);
           do {
             bj.drawDottedRectangle(var9 + var7.field_p - 2, var7.field_q + 2, 2 + var7.field_w, var7.field_n + (var8 - 2), 2187);
             var7 = var7.field_l;
@@ -239,7 +239,7 @@ class HotspotTextWidget extends ButtonWidget {
 
     final void fitTextBounds(int param0, int param1, int param2, int param3) {
         int var5 = -72 / ((param3 + 62) / 41);
-        this.setWidgetBounds(param2, param0, ((io) ((Object) this.renderer)).a(1, (UiWidget) (this)), false, param1);
+        this.setWidgetBounds(param2, param0, ((io) ((Object) this.renderer)).preferredHeight(1, (UiWidget) (this)), false, param1);
     }
 
     HotspotTextWidget(String param0, WidgetPainter param1) {

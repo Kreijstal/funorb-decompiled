@@ -101,7 +101,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final void a(boolean param0, int[] param1, int param2) {
+    final void buildBallModel(boolean param0, int[] param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -584,7 +584,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final String a(int param0, byte param1) {
+    final String groupLabel(int param0, byte param1) {
         RuntimeException var3 = null;
         String stackIn_7_0 = null;
         String stackIn_12_0 = null;
@@ -863,7 +863,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final int b(int param0) {
+    final int meshCount(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -895,7 +895,7 @@ final class PlasmaBallSkin extends BallSkin {
           if (param0 != -1912602369) {
             this.groupName((byte) -54, -91);
           }
-          this.a(param4, param2, param1, param3, -20263);
+          this.drawBallShadow(param4, param2, param1, param3, -20263);
           if (param2[2] > 16384) {
             if (param2[2] >= 32768) {
               var6_int = 256;
@@ -950,7 +950,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final int[] b(int param0, int param1) {
+    final int[] gradientPalette(int param0, int param1) {
         int[] stackIn_78_0 = null;
         int[] stackIn_80_0 = null;
         int[] stackIn_82_0 = null;

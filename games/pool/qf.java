@@ -216,7 +216,7 @@ final class qf {
           var3 = 1024;
           dupTemp$0 = -134217728 + ga.nextRandomInt(268435456, true, ea.field_r);
           this.field_q = dupTemp$0;
-          dupTemp$1 = EightBallRules.c((byte) -128, var2_int) * var3;
+          dupTemp$1 = EightBallRules.sineLookup((byte) -128, var2_int) * var3;
           this.field_m = dupTemp$1;
           dupTemp$2 = UiComponentNode.sineFixed(var2_int, (byte) 77) * var3;
           this.field_a = dupTemp$2;

@@ -139,7 +139,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
           if (null != wn.field_a) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && 65535 != var2_int &&
-              PlayerContextMenu.a((byte) 112, (char) var2_int)) {
+              PlayerContextMenu.isValidNameCharacter((byte) 112, (char) var2_int)) {
               var3 = 1 + op.field_h & 127;
               if (WireframeQuad.field_s != var3) {
                 ee.field_b[op.field_h] = -1;

@@ -373,7 +373,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
         if (LoginPayloadKind.field_a == null) {
           LoginPayloadKind.field_a = PoolGameModel.field_B[0];
         }
-        vn.field_e = ga.nextRandomInt(LoginPayloadKind.field_a.b(param0 + 23883), true, ea.field_r);
+        vn.field_e = ga.nextRandomInt(LoginPayloadKind.field_a.meshCount(param0 + 23883), true, ea.field_r);
         tp.field_h[1] = 0;
         tp.field_h[0] = -140;
         CushionSegment.field_i = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};

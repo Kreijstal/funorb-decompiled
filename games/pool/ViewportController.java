@@ -136,7 +136,7 @@ final class ViewportController {
           ViewportController.a((float[]) null, -27, -27, (int[]) null);
         }
         if (var3 != null) {
-          PlasmaBallSkin.field_m.a((byte) 124, false);
+          PlasmaBallSkin.field_m.addGameInviteActions((byte) 124, false);
           var4 = PlasmaBallSkin.field_m;
           var5_ref_String = PacketBuffer.muLobbyFriendRm;
           var4.field_n.addAction(var5_ref_String, 17130, 5);

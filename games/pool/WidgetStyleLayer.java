@@ -554,7 +554,7 @@ final class WidgetStyleLayer {
             }
             this.sprite.draw(var6_int, var7);
           }
-          var6 = param3.c(-1, param2);
+          var6 = param3.getWidgetText(-1, param2);
           if (param4 <= 96) {
             this.shadowColor = 108;
           }

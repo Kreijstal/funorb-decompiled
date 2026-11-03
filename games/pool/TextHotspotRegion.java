@@ -114,7 +114,7 @@ final class TextHotspotRegion extends IntrusiveNode {
           var5Lifetime1 = eh.field_p[11] >> 8;
           var6Lifetime1 = LobbyPlayer.field_fc << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = EightBallRules.c((byte) -123, var6Lifetime1) >> 8;
+          var8Lifetime1 = EightBallRules.sineLookup((byte) -123, var6Lifetime1) >> 8;
           var9Lifetime1 = UiComponentNode.sineFixed(var6Lifetime1, (byte) 83) >> 8;
           if (wn.field_i != -1 &&
             DebouncedValidationProvider.field_f != -1) {

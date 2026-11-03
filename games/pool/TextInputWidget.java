@@ -331,7 +331,7 @@ class TextInputWidget extends ButtonWidget {
         io var9 = (io) ((Object) this.renderer);
         op var3 = var9.ensureTextLayout(0, (UiWidget) (this));
         int var4 = var3.a(-1);
-        int var5 = var9.a((byte) 26, (UiWidget) (this));
+        int var5 = var9.contentWidth((byte) 26, (UiWidget) (this));
         int var6 = var9.lineHeight(-10492) >> 1;
         if (-var6 + var5 > var4) {
           this.textOffsetX = 0;

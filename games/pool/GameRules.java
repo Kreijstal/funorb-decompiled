@@ -9,7 +9,7 @@ abstract class GameRules {
 
     abstract int initialBallInHandMode(boolean param0);
 
-    int playerCount(int param0) {
+    int sideCount(int param0) {
         if (param0 <= 64) {
           this.field_d = (PoolGameModel) null;
         }
@@ -74,7 +74,7 @@ abstract class GameRules {
 
     abstract int h(int param0);
 
-    final void l(int param0) {
+    final void prepareShot(int param0) {
         ShotRecord var2 = this.field_d.currentShot(45);
         var2.ballInHandMode = this.b(-120);
         int var3 = -67 % ((param0 + 14) / 58);
@@ -115,7 +115,7 @@ abstract class GameRules {
         return 0;
     }
 
-    final static void b(byte param0) {
+    final static void createBallSkins(byte param0) {
         PoolGameModel.field_B = new BallSkin[7];
         PoolGameModel.field_B[0] = (BallSkin) ((Object) new ClassicBallSkin());
         PoolGameModel.field_B[1] = (BallSkin) ((Object) new PlasmaBallSkin());
@@ -245,7 +245,7 @@ abstract class GameRules {
         return true;
     }
 
-    void a(PacketBuffer param0, boolean param1) {
+    void readRulesState(PacketBuffer param0, boolean param1) {
         try {
           if (!param1) {
             this.initialGroup(-101);
@@ -311,7 +311,7 @@ abstract class GameRules {
 
     abstract int a(byte param0);
 
-    int b(byte param0, int param1) {
+    int sideMask(byte param0, int param1) {
         if (param0 >= -113) {
           field_a = (int[]) null;
         }
@@ -325,7 +325,7 @@ abstract class GameRules {
         return -1;
     }
 
-    void a(int param0, int param1, int param2) {
+    void assignGroups(int param0, int param1, int param2) {
         if (param1 != -1) {
           this.j(100);
         }

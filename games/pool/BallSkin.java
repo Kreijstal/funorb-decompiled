@@ -25,7 +25,7 @@ abstract class BallSkin {
         }
     }
 
-    String a(int param0, byte param1) {
+    String groupLabel(int param0, byte param1) {
         if (param1 <= 108) {
           return (String) null;
         }
@@ -39,14 +39,14 @@ abstract class BallSkin {
           return;
         }
         try {
-          this.a(param4, param2, param1, param3, -20263);
+          this.drawBallShadow(param4, param2, param1, param3, -20263);
           this.field_j[param1].b(param3, param2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tm.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    private final void f(int param0) {
+    private final void buildGradientPalettes(int param0) {
         int var2 = 0;
         int var3 = Pool.field_O;
         this.field_k = new int[16][];
@@ -78,7 +78,7 @@ abstract class BallSkin {
         return null;
     }
 
-    final void a(boolean param0, int[] param1, int param2, int[] param3, int param4) {
+    final void drawBallShadow(boolean param0, int[] param1, int param2, int[] param3, int param4) {
         int var13 = 0;
         int[] stackIn_10_0 = null;
         RuntimeException stackIn_18_0 = null;
@@ -208,14 +208,14 @@ abstract class BallSkin {
         return var29;
     }
 
-    final void a(int param0) {
+    final void allocateMeshes(int param0) {
         if (this.field_a != null) {
           this.field_j = new ModelMesh[this.field_a.length];
         }
         if (param0 != 7096) {
           this.field_k = (int[][]) null;
         }
-        this.f(-128);
+        this.buildGradientPalettes(-128);
     }
 
     public static void releaseStatics(int param0) {
@@ -229,7 +229,7 @@ abstract class BallSkin {
         field_d = null;
     }
 
-    int b(int param0) {
+    int meshCount(int param0) {
         if (param0 != 384) {
           this.field_g = true;
         }
@@ -246,7 +246,7 @@ abstract class BallSkin {
         }
     }
 
-    int[] b(int param0, int param1) {
+    int[] gradientPalette(int param0, int param1) {
         if (param1 != 0) {
           return (int[]) null;
         }
@@ -256,14 +256,14 @@ abstract class BallSkin {
     void loadBallMeshes(ResourceArchive param0, byte param1) {
         try {
           if (param1 != 117) {
-            this.b(-29, 80);
+            this.gradientPalette(-29, 80);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final String a(int param0, GameRules param1, byte param2) {
+    final String ballLabel(int param0, GameRules param1, byte param2) {
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
         String stackIn_7_0 = null;
@@ -312,7 +312,7 @@ abstract class BallSkin {
 
     abstract String groupName(byte param0, int param1);
 
-    void a(boolean param0, int[] param1, int param2) {
+    void buildBallModel(boolean param0, int[] param1, int param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -345,7 +345,7 @@ abstract class BallSkin {
     final void e(int param0) {
         if (param0 != -26707) {
           int[] var3 = (int[]) null;
-          this.a(true, (int[]) null, 13, (int[]) null, -85);
+          this.drawBallShadow(true, (int[]) null, 13, (int[]) null, -85);
         }
     }
 

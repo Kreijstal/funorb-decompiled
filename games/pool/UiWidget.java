@@ -811,8 +811,8 @@ class UiWidget extends IntrusiveNode {
           this.widgetText = param0;
           if (this.renderer instanceof io) {
             var4 = (io) ((Object) this.renderer);
-            this.widgetWidth = var4.a(this, -1848150943);
-            this.widgetHeight = var4.a(1, this);
+            this.widgetWidth = var4.preferredWidth(this, -1848150943);
+            this.widgetHeight = var4.preferredHeight(1, this);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

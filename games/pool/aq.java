@@ -35,7 +35,7 @@ final class aq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -52) {
-            stackIn_4_0 = TutorialController.a(0, (byte) -112, param1, param1.length);
+            stackIn_4_0 = TutorialController.joinText(0, (byte) -112, param1, param1.length);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

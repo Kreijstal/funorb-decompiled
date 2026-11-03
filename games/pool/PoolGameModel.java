@@ -214,10 +214,10 @@ final class PoolGameModel {
           var5Lifetime1 = var8.field_l & 3;
           if (var5Lifetime1 != 1) {
             if (var5Lifetime1 == 2) {
-              this.rules.a(1, -1, var8.playerIndex);
+              this.rules.assignGroups(1, -1, var8.playerIndex);
             }
           } else {
-            this.rules.a(0, -1, var8.playerIndex);
+            this.rules.assignGroups(0, -1, var8.playerIndex);
           }
         }
         this.rules.initializeShot(var4_ref, false);
@@ -640,7 +640,7 @@ final class PoolGameModel {
                 var11 += 256;
               }
               var11 = var11 % param5;
-              var9.positionX = (EightBallRules.c((byte) -121, var11) >> 4) * (var10 >> 12) + param1;
+              var9.positionX = (EightBallRules.sineLookup((byte) -121, var11) >> 4) * (var10 >> 12) + param1;
               var9.positionY = param0 + (UiComponentNode.sineFixed(var11, (byte) -62) >> 4) * (var10 >> 12);
               this.findOverlappingBalls((byte) 77);
               continue;
@@ -1254,7 +1254,7 @@ final class PoolGameModel {
         var8 = Pool.field_O;
         try {
           this.readShotHistory(2, param0);
-          this.rules.a(param0, true);
+          this.rules.readRulesState(param0, true);
           var3_int = param0.readUnsignedByte(-67);
           if (0 != var3_int) {
             if (var3_int == 1) {
@@ -1415,7 +1415,7 @@ final class PoolGameModel {
           var4.cueBallY == -1) {
           this.setUpBreak(63, var6);
         }
-        this.rules.l(-127);
+        this.rules.prepareShot(-127);
         return;
     }
 

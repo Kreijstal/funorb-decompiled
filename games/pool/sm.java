@@ -93,7 +93,7 @@ final class sm extends om {
         return true;
     }
 
-    final String c(int param0, UiWidget param1) {
+    final String getWidgetText(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

@@ -159,7 +159,7 @@ final class KillerRules extends GameRules {
         return var4;
     }
 
-    final void a(PacketBuffer param0, boolean param1) {
+    final void readRulesState(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;

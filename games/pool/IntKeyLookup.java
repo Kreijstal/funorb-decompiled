@@ -115,7 +115,7 @@ final class IntKeyLookup {
 
     final static void a(boolean param0) {
         TriangleMesh.d(-97);
-        GameRules.b((byte) 118);
+        GameRules.createBallSkins((byte) 118);
         if (!param0) {
           muChatGameFriendsOnly = (String) null;
         }

@@ -624,9 +624,9 @@ final class SoundCache {
     }
 
     final static int[] a(int param0, boolean param1, int param2) {
-        int var3 = EightBallRules.c((byte) -123, param2);
+        int var3 = EightBallRules.sineLookup((byte) -123, param2);
         int var4 = UiComponentNode.sineFixed(param2, (byte) -116);
-        int var5 = EightBallRules.c((byte) -124, param0);
+        int var5 = EightBallRules.sineLookup((byte) -124, param0);
         int var6 = UiComponentNode.sineFixed(param0, (byte) -89);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         if (param1) {
