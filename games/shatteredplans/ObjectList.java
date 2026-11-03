@@ -376,7 +376,7 @@ final class ObjectList {
                     if (var25_int == 1) {
                       var24Lifetime2 = fc.field_d;
                     }
-                    var24Lifetime2 = QuickChatCategoryRegistry.a(as.field_h, param1 ^ 4371, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = QuickChatCategoryRegistry.a(FleetVisual.field_h, param1 ^ 4371, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {

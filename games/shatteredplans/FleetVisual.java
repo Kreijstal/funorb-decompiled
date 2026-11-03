@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class as extends IntrusiveNode {
+final class FleetVisual extends IntrusiveNode {
     int field_p;
     int[] field_u;
     static String[] field_y;
@@ -91,7 +91,7 @@ final class as extends IntrusiveNode {
         field_i = null;
     }
 
-    as(FleetMove param0) {
+    FleetVisual(FleetMove param0) {
         try {
           this.field_m = param0.field_G;
           this.field_x = param0.field_z;

@@ -72,7 +72,7 @@ final class nn {
             }
             break;
           }
-          stackIn_10_0 = as.field_i;
+          stackIn_10_0 = FleetVisual.field_i;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

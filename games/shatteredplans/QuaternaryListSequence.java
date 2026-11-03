@@ -140,7 +140,7 @@ final class QuaternaryListSequence extends NodeSequence {
                             if (null != param6[var23] &&
                               param6[var23].field_p != var16.field_k.field_p &&
                               param6[var23].field_p != var26.field_p &&
-                              !kp.a((byte) 96, param6[var23], var16.field_k, param2, var26)) {
+                              !TargetedChatMessage.a((byte) 96, param6[var23], var16.field_k, param2, var26)) {
                               decompiledFrameCompleted0 = false;
                               break;
                             }

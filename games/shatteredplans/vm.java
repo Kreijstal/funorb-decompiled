@@ -171,7 +171,7 @@ final class vm extends AnimatedPanel {
             this.c(false, 0);
             this.field_Gb = param2;
             this.field_Ob = this.field_yb[this.field_Gb];
-            ee.a(this.field_Ob, true);
+            PrivateChatMessage.a(this.field_Ob, true);
             this.field_Ob.c(false, 12);
           } else {
             if (this.field_Hb[param2] != -1) {

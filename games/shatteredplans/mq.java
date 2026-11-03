@@ -3,7 +3,7 @@
  */
 final class mq {
     static String field_b;
-    static ms field_c;
+    static ChatMessage field_c;
     static String field_a;
 
     public static void clearStatics(byte param0) {

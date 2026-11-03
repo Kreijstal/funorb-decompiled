@@ -54,7 +54,7 @@ final class MenuButton extends MenuComponent {
         FleetMove.field_C = false;
         TertiaryNodeList.field_b = false;
         qj.a((byte) -127, param0);
-        ee.field_l = oj.field_Fb;
+        PrivateChatMessage.field_l = oj.field_Fb;
         MatchingTextValidator.field_s = oj.field_Fb;
     }
 
@@ -237,7 +237,7 @@ final class MenuButton extends MenuComponent {
         field_v = new int[7];
         for (var0_int = 0; var0_int < 256; var0_int++) {
           field_u[var0_int] = 65793 * var0_int;
-          field_x[var0_int] = ee.intOr(ee.intOr(var0_int >> 1 << 8, var0_int), var0_int >> 2 << 16);
+          field_x[var0_int] = PrivateChatMessage.intOr(PrivateChatMessage.intOr(var0_int >> 1 << 8, var0_int), var0_int >> 2 << 16);
         }
         int var5 = 0;
         var0_intLifetime1 = var5;

@@ -117,7 +117,7 @@ final class ba {
                 if (!je.field_e) {
                   stackIn_16_0 = MapView.field_Fb;
                 } else {
-                  stackIn_16_0 = ds.field_a;
+                  stackIn_16_0 = MessageKind.field_a;
                 }
                 var19 = stackIn_16_0;
               } else if (var18 != 1 ||

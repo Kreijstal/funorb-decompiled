@@ -38,8 +38,8 @@ final class DiskCacheWorker implements Runnable {
         oe.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
         ja.a(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
         ja.a(param0 ^ -174137062, oe.field_c.field_z / 2, oe.field_c, oe.field_c.field_w / 4);
-        ds.field_b = new Sprite(640, 430);
-        ds.field_b.bindAsRenderTarget();
+        MessageKind.field_b = new Sprite(640, 430);
+        MessageKind.field_b.bindAsRenderTarget();
         for (var1_int = 1; var1_int < 64; var1_int++) {
           var2 = (int)(20.0 * Math.log((double)(63.0f / (float)var1_int)) / Math.log(2.0));
           SoftwareRasterizer.fillCircle(320, 527, var2 + 400, (var1_int << 2) * 65793);
@@ -96,7 +96,7 @@ final class DiskCacheWorker implements Runnable {
               var6 = 65280;
             }
             var7 = 255 & var4;
-            ks.field_j.field_B[var3] = ee.intOr(ee.intOr(var6, var5), var7);
+            ks.field_j.field_B[var3] = PrivateChatMessage.intOr(PrivateChatMessage.intOr(var6, var5), var7);
           }
           MusicVoice.field_n = DefendTask.field_s.flippedCopy();
           uo.a((byte) 110, MusicVoice.field_n, 32768);
@@ -370,7 +370,7 @@ final class DiskCacheWorker implements Runnable {
           wh.field_a.a(false, 37);
           SolMapGenerator.a((byte) 87, param1, param4, param3);
           AudioService.a(0);
-          ee.field_l = oj.field_Fb;
+          PrivateChatMessage.field_l = oj.field_Fb;
           MatchingTextValidator.field_s = oj.field_Fb;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rn.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

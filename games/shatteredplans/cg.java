@@ -120,7 +120,7 @@ final class cg extends SingleChildWidget {
           if (param6 != -13037) {
             return false;
           }
-          if (oj.field_Fb != ee.field_l) {
+          if (oj.field_Fb != PrivateChatMessage.field_l) {
             return false;
           }
           var8 = new oj(le.field_e, param5);
@@ -129,7 +129,7 @@ final class cg extends SingleChildWidget {
             var8.f(false);
             return true;
           }
-          ee.field_l = ue.field_a;
+          PrivateChatMessage.field_l = ue.field_a;
           np.field_m = param1;
           aa.field_G = param4;
           PlayerStats.field_j = param2;

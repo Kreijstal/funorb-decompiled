@@ -316,7 +316,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_27_0 = po.field_e;
             return stackIn_27_0;
           }
-          if (ms.a(var5, (byte) -53, var6)) {
+          if (ChatMessage.a(var5, (byte) -53, var6)) {
             stackIn_31_0 = TutorialVictoryChecker.field_k;
             return stackIn_31_0;
           }

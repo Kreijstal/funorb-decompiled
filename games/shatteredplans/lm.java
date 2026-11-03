@@ -9,29 +9,29 @@ final class lm {
     String field_b;
 
     final static void a(byte param0) {
-        ms.field_e[44] = 71;
-        ms.field_e[61] = 27;
-        ms.field_e[46] = 72;
-        ms.field_e[47] = 73;
-        ms.field_e[59] = 57;
+        ChatMessage.field_e[44] = 71;
+        ChatMessage.field_e[61] = 27;
+        ChatMessage.field_e[46] = 72;
+        ChatMessage.field_e[47] = 73;
+        ChatMessage.field_e[59] = 57;
         if (param0 > 85) {
-          ms.field_e[91] = 42;
-          ms.field_e[92] = 74;
-          ms.field_e[93] = 43;
-          ms.field_e[45] = 26;
-          ms.field_e[222] = 58;
-          ms.field_e[192] = 28;
-          ms.field_e[520] = 59;
+          ChatMessage.field_e[91] = 42;
+          ChatMessage.field_e[92] = 74;
+          ChatMessage.field_e[93] = 43;
+          ChatMessage.field_e[45] = 26;
+          ChatMessage.field_e[222] = 58;
+          ChatMessage.field_e[192] = 28;
+          ChatMessage.field_e[520] = 59;
           return;
         }
         lm.clearStatics(false);
-        ms.field_e[91] = 42;
-        ms.field_e[92] = 74;
-        ms.field_e[93] = 43;
-        ms.field_e[45] = 26;
-        ms.field_e[222] = 58;
-        ms.field_e[192] = 28;
-        ms.field_e[520] = 59;
+        ChatMessage.field_e[91] = 42;
+        ChatMessage.field_e[92] = 74;
+        ChatMessage.field_e[93] = 43;
+        ChatMessage.field_e[45] = 26;
+        ChatMessage.field_e[222] = 58;
+        ChatMessage.field_e[192] = 28;
+        ChatMessage.field_e[520] = 59;
     }
 
     public static void clearStatics(boolean param0) {

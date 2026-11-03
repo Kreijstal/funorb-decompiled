@@ -27,12 +27,12 @@ final class wj extends IntrusiveNode {
           if (param1 >= -68) {
             return false;
           }
-          PlacementOrder.field_w = as.a(param0, bb.field_b, (byte) 115, TertiaryListSequence.field_k);
+          PlacementOrder.field_w = FleetVisual.a(param0, bb.field_b, (byte) 115, TertiaryListSequence.field_k);
           if (1 == je.field_d) {
             jb.field_b = 0;
             am.field_Gb = PointsVictoryChecker.field_p;
             DialogRoot.field_C = SliderWidget.field_P;
-            wl.field_f = as.a(param0, DialogRoot.field_C, (byte) -41, am.field_Gb);
+            wl.field_f = FleetVisual.a(param0, DialogRoot.field_C, (byte) -41, am.field_Gb);
             stackIn_26_0 = (null != wl.field_f);
             return stackIn_26_0;
           }
@@ -119,11 +119,11 @@ final class wj extends IntrusiveNode {
             var5 = 256;
           }
           if (null == WeightedCacheEntry.field_u) {
-            WeightedCacheEntry.field_u = ds.field_b.copy();
+            WeightedCacheEntry.field_u = MessageKind.field_b.copy();
             WeightedCacheEntry.field_u.bindAsRenderTarget();
           } else {
             WeightedCacheEntry.field_u.bindAsRenderTarget();
-            ds.field_b.drawOpaque(0, 0);
+            MessageKind.field_b.drawOpaque(0, 0);
           }
           var1_intLifetime1 = -5;
           var2Lifetime1 = -80 + 100 * di.field_m / 1000;

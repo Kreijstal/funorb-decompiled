@@ -243,17 +243,17 @@ final class sg extends AnimatedPanel {
         return var5 + var4 + (param2 + (param0 + param2));
     }
 
-    final static as a(byte param0, FleetMove param1) {
-        as var2 = null;
+    final static FleetVisual a(byte param0, FleetMove param1) {
+        FleetVisual var2 = null;
         RuntimeException var2_ref = null;
         FleetMove var3 = null;
-        as stackIn_3_0 = null;
+        FleetVisual stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new as(param1);
+          var2 = new FleetVisual(param1);
           var2.field_v = -var2.field_v;
           if (param0 != 101) {
             var3 = (FleetMove) null;

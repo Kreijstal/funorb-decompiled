@@ -32,7 +32,7 @@ abstract class Dialog extends WidgetContainer {
         int var4 = 0;
         String var8 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        String var6 = "(" + IterableNodeHashTable.field_e + " " + SliderPainter.field_g + " " + kp.field_n + ") " + BufferedCacheFile.field_e;
+        String var6 = "(" + IterableNodeHashTable.field_e + " " + SliderPainter.field_g + " " + TargetedChatMessage.field_n + ") " + BufferedCacheFile.field_e;
         String var1 = var6;
         if (param0 != 16738) {
           return (String) null;
@@ -162,12 +162,12 @@ abstract class Dialog extends WidgetContainer {
             if (var5 == 45) {
               if (var4 == 0 ||
                 var2_int - 1 == var4) {
-                stackIn_17_0 = as.field_t;
+                stackIn_17_0 = FleetVisual.field_t;
                 return stackIn_17_0;
               }
             } else {
               if (DefensiveAi.field_q.indexOf(var5) == -1) {
-                stackIn_21_0 = as.field_t;
+                stackIn_21_0 = FleetVisual.field_t;
                 return stackIn_21_0;
               }
             }

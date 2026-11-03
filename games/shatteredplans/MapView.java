@@ -36,7 +36,7 @@ final class MapView extends MapViewState {
     static String field_pb;
     static int field_Lb;
 
-    private final void c(Star param0, int param1) {
+    private final void drawStarLayers(Star param0, int param1) {
         if (param1 != 2) {
           return;
         }
@@ -117,7 +117,7 @@ final class MapView extends MapViewState {
               this.a(-91, var18);
               if (this.field_I < 330.0f &&
                 var18.field_u) {
-                this.a(var18, (byte) 101);
+                this.drawStarSprite(var18, (byte) 101);
               }
             }
           }
@@ -141,10 +141,10 @@ final class MapView extends MapViewState {
               480 >= var23.field_q &&
               var23.field_o >= 0 &&
               0 <= var23.field_i) {
-              this.c(var22, 2);
+              this.drawStarLayers(var22, 2);
               if (this.field_I > 330.0f &&
                 var22.field_u) {
-                this.a(var22, (byte) 102);
+                this.drawStarSprite(var22, (byte) 102);
               }
             }
           }
@@ -184,7 +184,7 @@ final class MapView extends MapViewState {
               var12.field_i >= 0) {
               this.a(param0 ^ 24563, var11Lifetime1, var2_int);
               if (var11Lifetime1.field_u) {
-                this.a(var11Lifetime1, (byte) 99);
+                this.drawStarSprite(var11Lifetime1, (byte) 99);
               }
             }
           }
@@ -223,7 +223,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final FleetMove a(Star param0, int param1, int param2, int param3) {
+    private final FleetMove findFleetNear(Star param0, int param1, int param2, int param3) {
         int var10_int = 0;
         FleetMove stackIn_10_0 = null;
         Object stackIn_20_0 = null;
@@ -757,7 +757,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void drawBattleSummaries(byte param0, int param1, int param2) {
         int var14_int = 0;
         Sprite stackIn_6_0 = null;
         Sprite stackIn_9_0 = null;
@@ -933,7 +933,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(Star param0, byte param1) {
+    private final void drawStarSprite(Star param0, byte param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -1329,7 +1329,7 @@ final class MapView extends MapViewState {
             this.a(-71, param1);
           }
           if (param0 != 11746) {
-            this.a((byte) -83, -5, -104);
+            this.drawBattleSummaries((byte) -83, -5, -104);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1360,13 +1360,13 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(IntrusiveDeque param0, boolean param1, boolean param2, boolean param3) {
+    private final void drawFleetVisuals(IntrusiveDeque param0, boolean param1, boolean param2, boolean param3) {
         Sprite stackIn_30_0 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
-        as var5 = null;
+        FleetVisual var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
@@ -1405,7 +1405,7 @@ final class MapView extends MapViewState {
           if (!param3) {
             this.a(75, 11, (byte) -71);
           }
-          var5 = (as) (param0.startForward(0));
+          var5 = (FleetVisual) (param0.startForward(0));
           while (var5 != null) {
             var6 = this.field_i[var5.field_q.field_p];
             var7 = this.field_J[var5.field_q.field_p];
@@ -1471,7 +1471,7 @@ final class MapView extends MapViewState {
             } else {
               eo.a(false, var17, var19, (byte) 99, this.field_t, var18, var16);
             }
-            var5 = (as) (param0.nextForward((byte) -71));
+            var5 = (FleetVisual) (param0.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1535,7 +1535,7 @@ final class MapView extends MapViewState {
           for (var4Lifetime3 = 0; var4Lifetime3 < this.field_ib[var2].field_e.field_B.length; var4Lifetime3++) {
             if (this.field_ib[var2].field_e.field_B[var4Lifetime3] != 0) {
               SoftwareRasterizer.blendPixel(var4Lifetime3 % this.field_ib[var2].field_e.field_z, var4Lifetime3 / this.field_ib[var2].field_e.field_z, this.field_ib[var2].field_k, 128);
-              this.field_ib[var2].field_e.field_B[var4Lifetime3] = ee.intOr(this.field_ib[var2].field_e.field_B[var4Lifetime3], -16777216);
+              this.field_ib[var2].field_e.field_B[var4Lifetime3] = PrivateChatMessage.intOr(this.field_ib[var2].field_e.field_B[var4Lifetime3], -16777216);
             }
           }
           this.field_ib[var2].field_c = new Sprite(18, 12);
@@ -1556,7 +1556,7 @@ final class MapView extends MapViewState {
             var6 = var6 * var4Lifetime4;
             var5 = var5 & -16711936;
             var6 = var6 & 16711680;
-            this.field_cb[var2][var4Lifetime4] = ee.intOr(var6, var5) >>> 8;
+            this.field_cb[var2][var4Lifetime4] = PrivateChatMessage.intOr(var6, var5) >>> 8;
           }
         }
         cg.i(0);
@@ -2019,8 +2019,8 @@ final class MapView extends MapViewState {
           }
           var5Lifetime1++;
         }
-        this.a(this.field_hb, false, true, true);
-        this.a(this.field_hb, true, true, true);
+        this.drawFleetVisuals(this.field_hb, false, true, true);
+        this.drawFleetVisuals(this.field_hb, true, true, true);
     }
 
     private final void a(Star param0, boolean param1) {
@@ -2218,7 +2218,7 @@ final class MapView extends MapViewState {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var5 = 0;
-        as var6 = null;
+        FleetVisual var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -2233,7 +2233,7 @@ final class MapView extends MapViewState {
           }
           for (var4 = this.field_t; this.field_t + var3_int > var4; var4++) {
             var5 = var4 % 20;
-            var6 = (as) (param1.startForward(0));
+            var6 = (FleetVisual) (param1.startForward(0));
             while (var6 != null) {
               var7 = (-var6.field_r + var6.field_j << 4) * var4 / 200 + (var6.field_r << 4);
               var8 = (var6.field_n << 4) + (-var6.field_n + var6.field_k << 4) * var4 / 200;
@@ -2249,7 +2249,7 @@ final class MapView extends MapViewState {
                 var10.field_h = var7;
                 this.field_V.addLast((byte) -113, var10);
               }
-              var6 = (as) (param1.nextForward((byte) -71));
+              var6 = (FleetVisual) (param1.nextForward((byte) -71));
             }
           }
           return;
@@ -2601,8 +2601,8 @@ final class MapView extends MapViewState {
             var8_ref_om.a(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, (int)(ProjectsContent.field_e * (this.field_wb * 100.0)) + 3, 54613);
             cg.i(0);
             for (var11 = 0; var10Lifetime2 * var9Lifetime2 > var11; var11++) {
-              this.field_ob.field_B[var11] = ee.intOr(16777215, this.field_ob.field_B[var11] << 8);
-              this.field_Ib.field_B[var11] = ee.intOr(16777215, this.field_Ib.field_B[var11] << 8);
+              this.field_ob.field_B[var11] = PrivateChatMessage.intOr(16777215, this.field_ob.field_B[var11] << 8);
+              this.field_Ib.field_B[var11] = PrivateChatMessage.intOr(16777215, this.field_Ib.field_B[var11] << 8);
             }
             var11Lifetime1 = -this.field_Hb - (int)(150.0 * this.field_wb) + (int)(300.0 * this.field_Jb + 0.5);
             this.field_Cb = new ArgbSprite(var11Lifetime1 + 4, var11Lifetime1 / 10 + 8);
@@ -2772,7 +2772,7 @@ final class MapView extends MapViewState {
           MapView.a(43, true, true, 77);
         }
         if (null != this.field_p) {
-          var4 = this.a(this.field_p, param1, param0, -1);
+          var4 = this.findFleetNear(this.field_p, param1, param0, -1);
           if (var4 != null) {
             return var4;
           }
@@ -2780,7 +2780,7 @@ final class MapView extends MapViewState {
         var5 = this.field_O.field_e;
         for (var6 = 0; var6 < var5.length; var6++) {
           var7 = var5[var6];
-          var4Lifetime1 = this.a(var7, param1, param0, -1);
+          var4Lifetime1 = this.findFleetNear(var7, param1, param0, -1);
           if (var4Lifetime1 != null) {
             return var4Lifetime1;
           }
@@ -2885,8 +2885,8 @@ final class MapView extends MapViewState {
         if (param2 != 150) {
           discarded$0 = this.findFleetAt(112, 127, (byte) 21);
         }
-        this.a(this.field_v, false, true, true);
-        this.a(this.field_v, true, true, true);
+        this.drawFleetVisuals(this.field_v, false, true, true);
+        this.drawFleetVisuals(this.field_v, true, true, true);
     }
 
     private final void d(boolean param0) {
@@ -2944,8 +2944,8 @@ final class MapView extends MapViewState {
           var6 = (di) (this.field_V.nextForward((byte) -71));
         }
         if (this.field_T == 0) {
-          this.a(this.field_c, false, false, true);
-          this.a(this.field_c, true, false, true);
+          this.drawFleetVisuals(this.field_c, false, false, true);
+          this.drawFleetVisuals(this.field_c, true, false, true);
           this.b(320, var2, (byte) 101);
         } else {
           if (this.field_T != 1) {
@@ -2958,7 +2958,7 @@ final class MapView extends MapViewState {
             }
           } else {
             this.a(var2, 320, 150);
-            this.a((byte) 82, var2, 320);
+            this.drawBattleSummaries((byte) 82, var2, 320);
           }
         }
     }
@@ -3107,7 +3107,7 @@ final class MapView extends MapViewState {
         Object var5;
         int var6;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (ds.field_c != null) {
+        if (MessageKind.field_c != null) {
           this.field_nb[0] = -1;
           this.field_p = null;
           this.field_S = null;
@@ -3526,10 +3526,10 @@ final class MapView extends MapViewState {
             this.field_bb[var6_int] = new int[256];
           }
           for (var6_intLifetime1 = 0; 256 > var6_intLifetime1; var6_intLifetime1++) {
-            this.field_bb[0][var6_intLifetime1] = ee.intOr(we.intAnd(254, var6_intLifetime1) << 7, var6_intLifetime1);
+            this.field_bb[0][var6_intLifetime1] = PrivateChatMessage.intOr(we.intAnd(254, var6_intLifetime1) << 7, var6_intLifetime1);
             this.field_bb[1][var6_intLifetime1] = var6_intLifetime1 << 8;
-            this.field_bb[2][var6_intLifetime1] = ee.intOr(var6_intLifetime1 << 8, var6_intLifetime1 << 16);
-            this.field_bb[3][var6_intLifetime1] = ee.intOr(var6_intLifetime1 << 16, var6_intLifetime1);
+            this.field_bb[2][var6_intLifetime1] = PrivateChatMessage.intOr(var6_intLifetime1 << 8, var6_intLifetime1 << 16);
+            this.field_bb[3][var6_intLifetime1] = PrivateChatMessage.intOr(var6_intLifetime1 << 16, var6_intLifetime1);
           }
           this.field_z = new int[this.field_O.field_e.length];
           this.field_c = new IntrusiveDeque();

@@ -94,8 +94,8 @@ final class MenuList extends MenuComponent implements gj {
           PanelNode.field_q = param1;
           if (param1 == null) {
             SliderPainter.field_b = DerelictMapGenerator.field_q;
-            jb.field_d = kp.field_j + ArchiveRequest.field_r >> 1;
-            MenuButton.field_B = kp.field_j + ArchiveRequest.field_r >> 1;
+            jb.field_d = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
+            MenuButton.field_B = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
             oi.field_a = be.field_h;
             var13 = (sq) null;
             qj.a((sq) null, -1);
@@ -154,7 +154,7 @@ final class MenuList extends MenuComponent implements gj {
           }
           DerelictMapGenerator.field_q = SliderPainter.field_b;
           be.field_h = oi.field_a;
-          kp.field_j = jb.field_d + MenuButton.field_B >> 1;
+          TargetedChatMessage.field_j = jb.field_d + MenuButton.field_B >> 1;
           ArchiveRequest.field_r = jb.field_d + MenuButton.field_B >> 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -195,7 +195,7 @@ final class MenuList extends MenuComponent implements gj {
           if (!this.containsPoint(param1, param2, 0)) {
             return null;
           }
-          var4 = as.a(this.field_l, param1, (byte) 117, param2);
+          var4 = FleetVisual.a(this.field_l, param1, (byte) 117, param2);
           if (var4 == null) {
             return super.findComponentAt((byte) 127, param1, param2);
           }
@@ -207,7 +207,7 @@ final class MenuList extends MenuComponent implements gj {
         if (!this.containsPoint(param1, param2, 0)) {
           return null;
         }
-        var4Lifetime1 = as.a(this.field_l, param1, (byte) 117, param2);
+        var4Lifetime1 = FleetVisual.a(this.field_l, param1, (byte) 117, param2);
         if (var4Lifetime1 == null) {
           return super.findComponentAt((byte) 127, param1, param2);
         }

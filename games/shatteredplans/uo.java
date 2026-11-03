@@ -55,7 +55,7 @@ final class uo {
             stackIn_22_0 = 1;
             return stackIn_22_0;
           }
-          if (ee.field_l != ue.field_a) {
+          if (PrivateChatMessage.field_l != ue.field_a) {
             stackIn_27_0 = -1;
             return stackIn_27_0;
           }
@@ -185,7 +185,7 @@ final class uo {
         var18 = null;
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          TextLayout.a(22353, ee.field_k);
+          TextLayout.a(22353, PrivateChatMessage.field_k);
           if (null != np.field_a) {
             boolean decompiledFrameRemainder0 = true;
             DialPainter.field_g.field_s = true;

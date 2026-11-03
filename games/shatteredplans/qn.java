@@ -8,17 +8,17 @@ final class qn {
     static String field_d;
     static int[] field_b;
 
-    final static as a(int param0, FleetMove param1) {
-        as var2 = null;
+    final static FleetVisual a(int param0, FleetMove param1) {
+        FleetVisual var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        as stackIn_1_0 = null;
+        FleetVisual stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new as(param1);
+          var2 = new FleetVisual(param1);
           var3 = -54 % ((-34 - param0) / 45);
           stackIn_1_0 = var2;
           return stackIn_1_0;

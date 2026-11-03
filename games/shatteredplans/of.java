@@ -28,7 +28,7 @@ final class of {
     }
 
     final static String a(byte param0) {
-        if (ee.field_l == ue.field_a) {
+        if (PrivateChatMessage.field_l == ue.field_a) {
           return ae.field_g;
         }
         if (param0 != 42) {

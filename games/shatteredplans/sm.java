@@ -42,7 +42,7 @@ final class sm {
         var8 = 20 + var3;
         var9 = var5 - 10;
         var10 = var6 + 10;
-        kp.field_m = MenuWindow.a(kp.field_m, var9 - 3, 24, -3 + var7, -1, 24);
+        TargetedChatMessage.field_m = MenuWindow.a(TargetedChatMessage.field_m, var9 - 3, 24, -3 + var7, -1, 24);
         SolMapGenerator.field_q = MenuWindow.a(SolMapGenerator.field_q, 4 + (var9 + var10) - 24, 24, -24 + (var7 - (-var8 - 3)), -1, 24);
         if (MatchingTextValidator.field_t.field_a == 2) {
           sn.a(var8, -50, var10, param1 + 128, var7, var9);

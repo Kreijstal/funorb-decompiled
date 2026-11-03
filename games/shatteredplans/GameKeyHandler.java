@@ -22,8 +22,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             of.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              ms.field_e.length > var2_int) {
-              var2_int = ms.field_e[var2_int] & -129;
+              ChatMessage.field_e.length > var2_int) {
+              var2_int = ChatMessage.field_e[var2_int] & -129;
             } else {
               var2_int = -1;
             }
@@ -66,8 +66,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             of.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < ms.field_e.length) {
-              var2_int = ms.field_e[var2_int];
+              var2_int < ChatMessage.field_e.length) {
+              var2_int = ChatMessage.field_e[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }
@@ -336,7 +336,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             sa.field_a = new CipherPacketBuffer(param4);
             js.field_f = new CipherPacketBuffer(param2);
             StandardAi.field_a = param6;
-            ee.field_o = param7;
+            PrivateChatMessage.field_o = param7;
             of.field_f = param3;
             StarAbandonedEvent.field_l = param1;
             if (param0 != 0) {

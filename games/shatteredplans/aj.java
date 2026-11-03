@@ -162,13 +162,13 @@ final class aj {
         System.out.println("Error: " + nf.replaceAll("%0a", param0, (byte) 82, "\n"));
     }
 
-    final static ms a(String param0, boolean param1, boolean param2, String param3) {
+    final static ChatMessage a(String param0, boolean param1, boolean param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        ms stackIn_5_0 = null;
-        ms stackIn_7_0 = null;
+        ChatMessage stackIn_5_0 = null;
+        ChatMessage stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -188,7 +188,7 @@ final class aj {
             stackIn_7_0 = dd.a(param1, param3, (String) (var6), 4684, var4_long);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ms) null;
+          stackIn_5_0 = (ChatMessage) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

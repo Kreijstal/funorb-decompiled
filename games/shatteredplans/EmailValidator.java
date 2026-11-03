@@ -195,8 +195,8 @@ final class EmailValidator extends TextFieldValidator {
               PlacementOrder.field_t = PlacementOrder.field_t - 1;
             } else {
               if (Archive.field_b <= 0) {
-                if (0 < ee.field_k) {
-                  ee.field_k = ee.field_k - 1;
+                if (0 < PrivateChatMessage.field_k) {
+                  PrivateChatMessage.field_k = PrivateChatMessage.field_k - 1;
                 }
               } else {
                 Archive.field_b = Archive.field_b - 1;
@@ -207,7 +207,7 @@ final class EmailValidator extends TextFieldValidator {
               if (null == he.field_p) {
                 IntrusiveNodeHashTable.field_e = false;
                 if (Archive.field_b <= 0) {
-                  if (0 >= ee.field_k) {
+                  if (0 >= PrivateChatMessage.field_k) {
                     if (MouseInputHandler.field_f > PlacementOrder.field_t) {
                       if (PlacementOrder.field_t == 0) {
                         SecondaryNodeHashTable.a((byte) -83);
@@ -215,14 +215,14 @@ final class EmailValidator extends TextFieldValidator {
                       PlacementOrder.field_t = PlacementOrder.field_t + 1;
                     }
                   } else {
-                    ee.field_k = ee.field_k - 1;
+                    PrivateChatMessage.field_k = PrivateChatMessage.field_k - 1;
                   }
                 } else {
                   Archive.field_b = Archive.field_b - 1;
                 }
               } else {
                 if (PlacementOrder.field_t <= 0) {
-                  if (ee.field_k <= 0) {
+                  if (PrivateChatMessage.field_k <= 0) {
                     if (MouseInputHandler.field_f > Archive.field_b) {
                       if (0 == Archive.field_b) {
                         DialogRoot.a(true, true);
@@ -230,7 +230,7 @@ final class EmailValidator extends TextFieldValidator {
                       Archive.field_b = Archive.field_b + 1;
                     }
                   } else {
-                    ee.field_k = ee.field_k - 1;
+                    PrivateChatMessage.field_k = PrivateChatMessage.field_k - 1;
                   }
                 } else {
                   PlacementOrder.field_t = PlacementOrder.field_t - 1;
@@ -243,11 +243,11 @@ final class EmailValidator extends TextFieldValidator {
                 if (Archive.field_b > 0) {
                   Archive.field_b = Archive.field_b - 1;
                 } else {
-                  if (ee.field_k < MouseInputHandler.field_f) {
-                    if (0 == ee.field_k) {
+                  if (PrivateChatMessage.field_k < MouseInputHandler.field_f) {
+                    if (0 == PrivateChatMessage.field_k) {
                       DialogRoot.a(true, false);
                     }
-                    ee.field_k = ee.field_k + 1;
+                    PrivateChatMessage.field_k = PrivateChatMessage.field_k + 1;
                   }
                 }
               }

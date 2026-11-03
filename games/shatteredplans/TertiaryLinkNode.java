@@ -44,7 +44,7 @@ class TertiaryLinkNode extends DualLinkNode {
             var4 = dupTemp$0;
             if (dupTemp$0 == null) {
               if (bd.field_A) {
-                System.out.println(ms.field_a);
+                System.out.println(ChatMessage.field_a);
               }
               return;
             }

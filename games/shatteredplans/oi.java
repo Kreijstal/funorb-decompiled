@@ -7,7 +7,7 @@ final class oi {
     static Archive field_h;
     static String field_g;
     static int field_e;
-    static ds field_b;
+    static MessageKind field_b;
     static Sprite[][] field_i;
     static boolean field_f;
     static Sprite field_d;
@@ -89,6 +89,6 @@ final class oi {
 
     static {
         field_g = "You cannot chat to <%0> because <%0> is offline in your friend list.";
-        field_b = new ds(2);
+        field_b = new MessageKind(2);
     }
 }

@@ -188,7 +188,7 @@ final class oq {
           var3 = 0;
           while (true) {
             if (var2_int <= var3) {
-              stackIn_12_0 = as.field_t;
+              stackIn_12_0 = FleetVisual.field_t;
               return stackIn_12_0;
             }
             var4 = param0.charAt(var3);

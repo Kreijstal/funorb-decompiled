@@ -7,21 +7,21 @@ final class bb {
     static String field_a;
     static int field_b;
 
-    final static as a(int param0, FleetMove param1) {
-        as var2 = null;
+    final static FleetVisual a(int param0, FleetMove param1) {
+        FleetVisual var2 = null;
         RuntimeException var2_ref = null;
-        as stackIn_2_0 = null;
-        as stackIn_4_0 = null;
+        FleetVisual stackIn_2_0 = null;
+        FleetVisual stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2) {
-            stackIn_2_0 = (as) null;
+            stackIn_2_0 = (FleetVisual) null;
             return stackIn_2_0;
           }
-          var2 = new as(param1);
+          var2 = new FleetVisual(param1);
           var2.field_v = -var2.field_v;
           stackIn_4_0 = var2;
           return stackIn_4_0;

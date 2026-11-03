@@ -189,7 +189,7 @@ abstract class le {
               }
               return true;
             }
-            var7 = "[" + ds.field_a + "] ";
+            var7 = "[" + MessageKind.field_a + "] ";
           }
           if (null != np.field_a) {
             if (!DialPainter.field_c) {

@@ -858,7 +858,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby", 511);
                 if (var2 != null) {
-                  ds.field_a = IterableNodeHashTable.a(var2, 17746);
+                  MessageKind.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_public", 511);
                 if (var2 != null) {
@@ -1022,7 +1022,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_options", 511);
                 if (null != var2) {
-                  ds.field_e = IterableNodeHashTable.a(var2, 17746);
+                  MessageKind.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_options_whocanjoin", 511);
                 if (null != var2) {
@@ -1554,7 +1554,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_youneedratedgames", 511);
                 if (var2 != null) {
-                  as.field_h = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_h = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playerneeds1ratedgame", 511);
                 if (var2 != null) {
@@ -2316,7 +2316,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_alert_namechars", 511);
                 if (null != var2) {
-                  as.field_i = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_nameleadingspace", 511);
                 if (null != var2) {
@@ -2324,7 +2324,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_alert_doublespace", 511);
                 if (null != var2) {
-                  ms.field_g = IterableNodeHashTable.a(var2, 17746);
+                  ChatMessage.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passchars", 511);
                 if (var2 != null) {
@@ -2608,7 +2608,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("tutorial", 511);
                 if (null != var2) {
-                  ee.field_n = IterableNodeHashTable.a(var2, 17746);
+                  PrivateChatMessage.field_n = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("playtutorial", 511);
                 if (var2 != null) {
@@ -3630,31 +3630,31 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,1", 511);
                 if (var2 != null) {
-                  as.field_y[1] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,2", 511);
                 if (var2 != null) {
-                  as.field_y[2] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,3", 511);
                 if (var2 != null) {
-                  as.field_y[3] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,4", 511);
                 if (var2 != null) {
-                  as.field_y[4] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,5", 511);
                 if (var2 != null) {
-                  as.field_y[5] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,6", 511);
                 if (null != var2) {
-                  as.field_y[6] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[6] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,7", 511);
                 if (var2 != null) {
-                  as.field_y[7] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[7] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_notloggedin", 511);
                 if (null != var2) {

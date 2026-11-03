@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ds {
+final class MessageKind {
     static String field_a;
     static Sprite field_b;
     static a field_c;
@@ -33,7 +33,7 @@ final class ds {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            ds.clearStatics(false);
+            MessageKind.clearStatics(false);
           }
           var4_int = param1.getGroupIdByName(127, param2);
           var5 = param1.getFileIdByName(var4_int, (byte) 106, param3);
@@ -69,7 +69,7 @@ final class ds {
         throw new IllegalStateException();
     }
 
-    ds(int param0) {
+    MessageKind(int param0) {
         this.field_d = param0;
     }
 

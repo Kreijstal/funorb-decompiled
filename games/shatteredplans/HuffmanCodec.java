@@ -289,7 +289,7 @@ final class HuffmanCodec {
             var14 = var12 + (-1 + (var11 + var13) >> 3);
             var8 = var8 + var11;
             var13 += 24;
-            dupTemp$0 = ee.intOr(var7_int, var10 >>> var13);
+            dupTemp$0 = PrivateChatMessage.intOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param3[var12] = (byte)dupTemp$0;
             if (var12 < var14) {
@@ -406,7 +406,7 @@ final class HuffmanCodec {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var3[var10] = ee.intOr(var12, var11);
+                  var3[var10] = PrivateChatMessage.intOr(var12, var11);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {

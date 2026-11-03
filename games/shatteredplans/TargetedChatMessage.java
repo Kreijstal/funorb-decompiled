@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kp extends ms {
+class TargetedChatMessage extends ChatMessage {
     static int field_n;
     private String field_l;
     static String[] field_o;
@@ -55,7 +55,7 @@ class kp extends ms {
             }
             if (param0 < 88) {
               var11 = (Star) null;
-              kp.a((byte) 115, (Star) null, (Star) null, -109, (Star) null);
+              TargetedChatMessage.a((byte) 115, (Star) null, (Star) null, -109, (Star) null);
             }
             var7 = Math.sqrt((double)(var6 * var6 + var5_int * var5_int));
             var9 = (double)(-((param1.field_S - param4.field_S) * var5_int) + (param1.field_A - param4.field_A) * var6) / var7;
@@ -96,24 +96,24 @@ class kp extends ms {
         }
     }
 
-    ds a(byte param0) {
+    MessageKind getKind(byte param0) {
         int var2 = 46 % ((param0 + 7) / 41);
         return oi.field_b;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           param0.writeLong(-16426, this.field_p);
           param0.writePackedName((byte) -120, this.field_l);
           if (param1 <= 67) {
-            kp.clearStatics((byte) -120);
+            TargetedChatMessage.clearStatics((byte) -120);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    kp(long param0, String param1) {
+    TargetedChatMessage(long param0, String param1) {
         try {
           this.field_l = param1;
           this.field_p = param0;

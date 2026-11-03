@@ -1359,7 +1359,7 @@ final class MidiPcmStream extends PcmStream {
           if (var7Lifetime3 < 64) {
             this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -2);
           } else {
-            this.field_F[var5Lifetime4] = ee.intOr(this.field_F[var5Lifetime4], 1);
+            this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 1);
           }
         }
         if (var6Lifetime4 == 65) {
@@ -1367,7 +1367,7 @@ final class MidiPcmStream extends PcmStream {
             this.a(true, var5Lifetime4);
             this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -3);
           } else {
-            this.field_F[var5Lifetime4] = ee.intOr(this.field_F[var5Lifetime4], 2);
+            this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 2);
           }
         }
         if (var6Lifetime4 == 99) {
@@ -1414,7 +1414,7 @@ final class MidiPcmStream extends PcmStream {
             this.d(0, var5Lifetime4);
             this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -5);
           } else {
-            this.field_F[var5Lifetime4] = ee.intOr(this.field_F[var5Lifetime4], 4);
+            this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 4);
           }
         }
         if (var6Lifetime4 == 17) {

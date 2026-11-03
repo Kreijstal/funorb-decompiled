@@ -90,7 +90,7 @@ final class ei {
             boolean decompiledFrameRemainder0 = true;
             if (wm.field_d[var3].field_n == param1.field_n) {
               var4 = wm.field_d[var3].a((byte) 115);
-              if (kp.field_i < im.field_b[var4]) {
+              if (TargetedChatMessage.field_i < im.field_b[var4]) {
                 im.field_b[var4] = im.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

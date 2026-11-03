@@ -8,7 +8,7 @@ final class tm extends IntrusiveNode {
     private String field_l;
     private boolean field_n;
     static Sprite field_r;
-    static ds field_p;
+    static MessageKind field_p;
     static MenuWindow field_k;
     static java.awt.Canvas field_i;
     static int field_h;
@@ -150,6 +150,6 @@ final class tm extends IntrusiveNode {
         field_j = "Invalid name";
         field_h = 0;
         field_o = "Return to lobby";
-        field_p = new ds(0);
+        field_p = new MessageKind(0);
     }
 }

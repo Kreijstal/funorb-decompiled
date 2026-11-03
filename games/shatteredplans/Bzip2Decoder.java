@@ -152,8 +152,8 @@ final class Bzip2Decoder {
         var24 = null;
         var25 = null;
         param0.field_e = 1;
-        if (kp.field_k == null) {
-          kp.field_k = new int[param0.field_e * 100000];
+        if (TargetedChatMessage.field_k == null) {
+          TargetedChatMessage.field_k = new int[param0.field_e * 100000];
         }
         var26 = 1;
         while (true) {
@@ -324,14 +324,14 @@ final class Bzip2Decoder {
                 param0.field_l[var4] = param0.field_l[var4] + param0.field_l[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(kp.field_k[var4] & 255);
+                var1 = (byte)(TargetedChatMessage.field_k[var4] & 255);
                 dupTemp$1 = param0.field_l[var1 & 255];
-                kp.field_k[dupTemp$1] = kp.field_k[dupTemp$1] | var4 << 8;
+                TargetedChatMessage.field_k[dupTemp$1] = TargetedChatMessage.field_k[dupTemp$1] | var4 << 8;
                 param0.field_l[var1 & 255] = param0.field_l[var1 & 255] + 1;
               }
-              param0.field_w = kp.field_k[param0.field_g] >> 8;
+              param0.field_w = TargetedChatMessage.field_k[param0.field_g] >> 8;
               param0.field_G = 0;
-              param0.field_w = kp.field_k[param0.field_w];
+              param0.field_w = TargetedChatMessage.field_k[param0.field_w];
               param0.field_x = (byte)(param0.field_w & 255);
               param0.field_w = param0.field_w >> 8;
               param0.field_G = param0.field_G + 1;
@@ -395,7 +395,7 @@ final class Bzip2Decoder {
               }
               dupTemp$0 = param0.field_A[var1 & 255] & 255;
               param0.field_q[dupTemp$0] = param0.field_q[dupTemp$0] + 1;
-              kp.field_k[var14] = param0.field_A[var1 & 255] & 255;
+              TargetedChatMessage.field_k[var14] = param0.field_A[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -452,7 +452,7 @@ final class Bzip2Decoder {
             var1 = param0.field_A[param0.field_D[param0.field_K[0]] & 255];
             param0.field_q[var1 & 255] = param0.field_q[var1 & 255] + var15;
             while (var15 > 0) {
-              kp.field_k[var14] = var1 & 255;
+              TargetedChatMessage.field_k[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -481,7 +481,7 @@ final class Bzip2Decoder {
         var3 = param0.field_k;
         var4 = param0.field_G;
         var5 = param0.field_x;
-        var15 = kp.field_k;
+        var15 = TargetedChatMessage.field_k;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_w;
@@ -583,7 +583,7 @@ final class Bzip2Decoder {
         param0.field_k = var3;
         param0.field_G = var4;
         param0.field_x = var5;
-        kp.field_k = var6;
+        TargetedChatMessage.field_k = var6;
         param0.field_w = var7;
         param0.field_E = var8;
         param0.field_d = var9;

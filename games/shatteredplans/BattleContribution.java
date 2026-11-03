@@ -122,7 +122,7 @@ final class BattleContribution extends IntrusiveNode {
         DefensiveAi.field_r = null;
         q.field_Cb = null;
         oe.field_c = null;
-        ds.field_b = null;
+        MessageKind.field_b = null;
         mm.field_o = null;
         he.field_h = null;
         vm.field_Jb = null;

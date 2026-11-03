@@ -10996,17 +10996,17 @@
       "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
       "sources": {
         "files": 457,
-        "sha256": "0f469ca03904aa39f94a07aa0c1054af0d921af0e163b040f3374eac8f3e4337"
+        "sha256": "2f6f2e2ea1b0341603be786622c32c658e7158436ec08cc9b182199dc87727e3"
       },
       "dictionary": {
         "path": "decompilation/shatteredplans-naming.json",
-        "sha256": "3085cf8331e0beca153ddd04b284b87aaacac31eb1116b94a7f6b9fa262a000c"
+        "sha256": "955a59599c3314935dd8cd09e9b0125472ac9df3e6e50f2487c81677fb59e61d"
       },
       "readingGuide": {
         "path": "games/shatteredplans/README.md",
-        "sha256": "d32198961fa820ac88925944224e553fad82a7542579bf826e2c5f06417dd63c"
+        "sha256": "ed2ad9978702f3b81544b58877fedb34dc21557e4b765de9047e2f97ab1b729c"
       },
-      "rulesSha256": "89384d5982423bf2b1219f0e73c4a284de4db4212bd8437a77865a6c9eae9207",
+      "rulesSha256": "4b2cfb1490517126dd9679c1b481dc1cf7f69e1e6c7391ca35c46e5aa008abd4",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12885,7 +12885,7 @@
         },
         "publishedSources": {
           "files": 457,
-          "sha256": "0f469ca03904aa39f94a07aa0c1054af0d921af0e163b040f3374eac8f3e4337"
+          "sha256": "2f6f2e2ea1b0341603be786622c32c658e7158436ec08cc9b182199dc87727e3"
         }
       },
       "solknight": {

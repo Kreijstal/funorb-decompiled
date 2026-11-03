@@ -179,7 +179,7 @@ final class SecondaryNodeHashTable {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + (-16711936 & (16711935 & var14) * (-var11 + 256));
                 var12 = var12 + (16711680 & (var14 & 65280) * (256 - var11));
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
               var8 = param5 >> 4;
               var9 = param1 >> 4;
@@ -200,7 +200,7 @@ final class SecondaryNodeHashTable {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + (-16711936 & (16711935 & var14) * (256 - var11));
                 var12 = var12 + (16711680 & (var14 & 65280) * (-var11 + 256));
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
               SoftwareRasterizer.drawHorizontalLineAlpha((param4 >> 4) + 1, param1 >> 4, (var6_intLifetime1 >> 4) - 2, param0, (16 - (15 & param1)) * 16);
               var8 = param4 >> 4;
@@ -222,7 +222,7 @@ final class SecondaryNodeHashTable {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + ((var14 & 16711935) * (-var11 + 256) & -16711936);
                 var12 = var12 + (16711680 & (-var11 + 256) * (65280 & var14));
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
               var8 = param5 >> 4;
               var9 = 1 + (param1 >> 4);
@@ -243,7 +243,7 @@ final class SecondaryNodeHashTable {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + ((256 - var11) * (var14 & 16711935) & -16711936);
                 var12 = var12 + ((-var11 + 256) * (var14 & 65280) & 16711680);
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
               SoftwareRasterizer.drawHorizontalLineAlpha((param4 >> 4) + 1, (param1 >> 4) + 1, -2 + (var6_intLifetime1 >> 4), param0, 16 * (15 & param1));
             } else {
@@ -266,7 +266,7 @@ final class SecondaryNodeHashTable {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + (16711680 & (65280 & var14) * (256 - var11));
                 var10 = var10 + ((16711935 & var14) * (-var11 + 256) & -16711936);
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
               var8 = param4 >> 4;
               var9 = (param1 >> 4) + 1;
@@ -289,7 +289,7 @@ final class SecondaryNodeHashTable {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + ((var14 & 65280) * (-var11 + 256) & 16711680);
                 var10 = var10 + ((16711935 & var14) * (-var11 + 256) & -16711936);
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
             }
             return;
@@ -319,7 +319,7 @@ final class SecondaryNodeHashTable {
             var20 = SoftwareRasterizer.field_h[var19];
             var16 = var16 + ((16711935 & var20) * (-var17 + 256) & -16711936);
             var18 = var18 + ((-var17 + 256) * (65280 & var20) & 16711680);
-            SoftwareRasterizer.field_h[var19] = ee.intOr(var16, var18) >>> 8;
+            SoftwareRasterizer.field_h[var19] = PrivateChatMessage.intOr(var16, var18) >>> 8;
           }
           var14Lifetime2 = 1 + var13Lifetime1;
           var16Lifetime1 = 57 / ((param2 - 20) / 42);
@@ -341,7 +341,7 @@ final class SecondaryNodeHashTable {
             var21 = SoftwareRasterizer.field_h[var20Lifetime1];
             var17Lifetime1 = var17Lifetime1 + (-16711936 & (var21 & 16711935) * (256 - var18Lifetime1));
             var19Lifetime1 = var19Lifetime1 + ((-var18Lifetime1 + 256) * (65280 & var21) & 16711680);
-            SoftwareRasterizer.field_h[var20Lifetime1] = ee.intOr(var19Lifetime1, var17Lifetime1) >>> 8;
+            SoftwareRasterizer.field_h[var20Lifetime1] = PrivateChatMessage.intOr(var19Lifetime1, var17Lifetime1) >>> 8;
           }
           var9Lifetime2 = param3 + 7 >> 4;
           var14Lifetime3 = var10Lifetime1 + var8Lifetime1;
@@ -368,7 +368,7 @@ final class SecondaryNodeHashTable {
             var23 = SoftwareRasterizer.field_h[var22];
             var19Lifetime2 = var19Lifetime2 + ((var23 & 16711935) * (256 - var20Lifetime2) & -16711936);
             var21Lifetime1 = var21Lifetime1 + ((-var20Lifetime2 + 256) * (var23 & 65280) & 16711680);
-            SoftwareRasterizer.field_h[var22] = ee.intOr(var19Lifetime2, var21Lifetime1) >>> 8;
+            SoftwareRasterizer.field_h[var22] = PrivateChatMessage.intOr(var19Lifetime2, var21Lifetime1) >>> 8;
           }
           var17Lifetime3 = 1 + var15Lifetime2;
           var18Lifetime3 = var16Lifetime2;
@@ -389,7 +389,7 @@ final class SecondaryNodeHashTable {
             var23Lifetime1 = SoftwareRasterizer.field_h[var22Lifetime1];
             var19Lifetime3 = var19Lifetime3 + ((-var20Lifetime3 + 256) * (var23Lifetime1 & 16711935) & -16711936);
             var21Lifetime2 = var21Lifetime2 + ((var23Lifetime1 & 65280) * (256 - var20Lifetime3) & 16711680);
-            SoftwareRasterizer.field_h[var22Lifetime1] = ee.intOr(var21Lifetime2, var19Lifetime3) >>> 8;
+            SoftwareRasterizer.field_h[var22Lifetime1] = PrivateChatMessage.intOr(var21Lifetime2, var19Lifetime3) >>> 8;
           }
           var8Lifetime1 = var8Lifetime1 << 4;
           var12Lifetime1++;
@@ -413,7 +413,7 @@ final class SecondaryNodeHashTable {
               var23Lifetime2 = SoftwareRasterizer.field_h[var22Lifetime2];
               var19Lifetime4 = var19Lifetime4 + (-16711936 & (16711935 & var23Lifetime2) * (256 - var20Lifetime4));
               var21Lifetime3 = var21Lifetime3 + ((65280 & var23Lifetime2) * (256 - var20Lifetime4) & 16711680);
-              SoftwareRasterizer.field_h[var22Lifetime2] = ee.intOr(var19Lifetime4, var21Lifetime3) >>> 8;
+              SoftwareRasterizer.field_h[var22Lifetime2] = PrivateChatMessage.intOr(var19Lifetime4, var21Lifetime3) >>> 8;
             }
             var17Lifetime4Lifetime1 = (var14Lifetime3 >> 16) + 1;
             var18Lifetime4Lifetime1 = var12Lifetime1;
@@ -434,7 +434,7 @@ final class SecondaryNodeHashTable {
               var23Lifetime2Lifetime1 = SoftwareRasterizer.field_h[var22Lifetime2Lifetime1];
               var21Lifetime3Lifetime1 = var21Lifetime3Lifetime1 + (16711680 & (-var20Lifetime4Lifetime1 + 256) * (var23Lifetime2Lifetime1 & 65280));
               var19Lifetime4Lifetime1 = var19Lifetime4Lifetime1 + ((var23Lifetime2Lifetime1 & 16711935) * (-var20Lifetime4Lifetime1 + 256) & -16711936);
-              SoftwareRasterizer.field_h[var22Lifetime2Lifetime1] = ee.intOr(var21Lifetime3Lifetime1, var19Lifetime4Lifetime1) >>> 8;
+              SoftwareRasterizer.field_h[var22Lifetime2Lifetime1] = PrivateChatMessage.intOr(var21Lifetime3Lifetime1, var19Lifetime4Lifetime1) >>> 8;
             }
             var14Lifetime3 = var14Lifetime3 + var8Lifetime1;
             var12Lifetime1++;
@@ -583,7 +583,7 @@ final class SecondaryNodeHashTable {
           CanvasResizeController.field_a.addChild(4, nm.field_c);
         }
         CanvasResizeController.field_a.addChild(4, MenuList.field_v);
-        Archive.field_g = new wh(ds.field_a, CanvasResizeController.field_a);
+        Archive.field_g = new wh(MessageKind.field_a, CanvasResizeController.field_a);
         if (param0 != -83) {
           field_i = (Sprite) null;
         }

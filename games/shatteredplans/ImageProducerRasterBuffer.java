@@ -129,7 +129,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                 var10_int = param2[param6];
                 incrementValue$1 = param6;
                 param6++;
-                param2[incrementValue$1] = ee.intOr(we.intAnd(16711935, we.intAnd(16711935, var10_int) * var11 >> 8), we.intAnd(16711920, we.intAnd(var10_int, 65280) * var11) >> 8);
+                param2[incrementValue$1] = PrivateChatMessage.intOr(we.intAnd(16711935, we.intAnd(16711935, var10_int) * var11 >> 8), we.intAnd(16711920, we.intAnd(var10_int, 65280) * var11) >> 8);
               } else {
                 param6++;
               }

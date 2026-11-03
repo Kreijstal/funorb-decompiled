@@ -52,7 +52,7 @@ final class ck {
         try {
           mp.field_b = ri.a("font", "", param0, param4, (byte) 89);
           rs.field_Cb = ri.a("smallfont", "", param0, param4, (byte) 111);
-          SecondaryNodeHashTable.field_f = ds.a(true, param0, "", "logo");
+          SecondaryNodeHashTable.field_f = MessageKind.a(true, param0, "", "logo");
           var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
           var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;
           RandomAccessCacheFile.a(-110);
@@ -76,7 +76,7 @@ final class ck {
             IsaacRandom.field_b[var9_int] = var20;
           }
           cg.i(0);
-          hn.field_c = ds.a(true, param0, "", "menu_hex");
+          hn.field_c = MessageKind.a(true, param0, "", "menu_hex");
           jm.field_r = id.a(2, param0, "", "instr_mainview");
           NodeSequence.field_d = id.a(param6 ^ -6, param0, "", "instr_starframe");
           ae.a(-100, "", param0, "zoomicons");
@@ -100,8 +100,8 @@ final class ck {
           ArchiveIndex.field_p = var22[2];
           Player.field_a = va.a("icon_circles", param6 + 8, "", param0);
           ObjectList.field_d = va.a("production_icons", 0, "", param0);
-          aq.field_i = ds.a(true, param0, "", "production_button");
-          hq.field_a = ds.a(true, param0, "", "production_button_down");
+          aq.field_i = MessageKind.a(true, param0, "", "production_button");
+          hq.field_a = MessageKind.a(true, param0, "", "production_button_down");
           d.field_b = va.a("project_icons", 0, "", param0);
           IntrusiveDeque.field_a = va.a("faction_icons", 0, "", param0);
           NodeSequence.field_b = va.a("faction_icons_large", 0, "", param0);
@@ -117,39 +117,39 @@ final class ck {
           var26_ref = NodeSequence.field_b[2];
           NodeSequence.field_b[2] = NodeSequence.field_b[4];
           NodeSequence.field_b[4] = var26_ref;
-          rk.field_j = ds.a(true, param0, "", "ready_button");
-          ei.field_a = ds.a(true, param0, "", "ready_button_down");
-          jl.field_W = ds.a(true, param0, "", "shine_left");
-          DerelictMapReader.field_g = ds.a(true, param0, "", "shine_right");
-          VictoryChecker.field_h = ds.a(true, param0, "", "shine_mid");
-          SpriteState.field_q = ds.a(true, param0, "", "combat_hex_white");
+          rk.field_j = MessageKind.a(true, param0, "", "ready_button");
+          ei.field_a = MessageKind.a(true, param0, "", "ready_button_down");
+          jl.field_W = MessageKind.a(true, param0, "", "shine_left");
+          DerelictMapReader.field_g = MessageKind.a(true, param0, "", "shine_right");
+          VictoryChecker.field_h = MessageKind.a(true, param0, "", "shine_mid");
+          SpriteState.field_q = MessageKind.a(true, param0, "", "combat_hex_white");
           RandomAccessCacheFile.a(-116);
           SpriteState.field_q.bindAsRenderTarget();
           SpriteState.field_q.b(0, 0, 2105376);
           cg.i(0);
-          bj.field_H = ds.a(true, param0, "", "planet_burnt");
-          qe.field_j = ds.a(true, param0, "", "planet_scorchedearth");
-          NetworkArchiveRequest.field_x = ds.a(true, param0, "", "planet_earthlike");
-          ta.field_a = ds.a(true, param0, "", "planet_exotic");
-          be.field_k = ds.a(true, param0, "", "planet_gas");
-          rl.field_c = ds.a(true, param0, "", "planet_ringed");
-          kr.field_d = ds.a(true, param0, "", "planet_rock");
-          rk.field_k = ds.a(true, param0, "", "alien_miner");
-          IntrusiveNodeHashTable.field_h = ds.a(true, param0, "", "alien_ship");
-          CanvasResizeController.field_t = ds.a(true, param0, "", "alien_base");
+          bj.field_H = MessageKind.a(true, param0, "", "planet_burnt");
+          qe.field_j = MessageKind.a(true, param0, "", "planet_scorchedearth");
+          NetworkArchiveRequest.field_x = MessageKind.a(true, param0, "", "planet_earthlike");
+          ta.field_a = MessageKind.a(true, param0, "", "planet_exotic");
+          be.field_k = MessageKind.a(true, param0, "", "planet_gas");
+          rl.field_c = MessageKind.a(true, param0, "", "planet_ringed");
+          kr.field_d = MessageKind.a(true, param0, "", "planet_rock");
+          rk.field_k = MessageKind.a(true, param0, "", "alien_miner");
+          IntrusiveNodeHashTable.field_h = MessageKind.a(true, param0, "", "alien_ship");
+          CanvasResizeController.field_t = MessageKind.a(true, param0, "", "alien_base");
           kb.field_y = id.a(2, param0, "", "ship");
           wo.field_b = id.a(2, param0, "", "shield");
           oo.field_a = id.a(param6 ^ -6, param0, "", "defensegrid");
           ab.field_e = id.a(2, param0, "", "chevron");
-          TextFieldWidget.field_L = ds.a(true, param0, "", "warning");
+          TextFieldWidget.field_L = MessageKind.a(true, param0, "", "warning");
           bd.field_G = id.a(2, param0, "", "hammer");
           e.field_e = id.a(param6 ^ -6, param0, "", "beaker");
-          UiWidget.field_t = ds.a(true, param0, "", "factionring");
-          SpriteState.field_y = ds.a(true, param0, "", "factionringtag");
-          ArrayWidgetGroup.field_z = ds.a(true, param0, "", "factionringcentre");
-          MatchingTextValidator.field_p = ds.a(true, param0, "", "arrowship");
-          eq.field_o = ds.a(true, param0, "", "arrowshipdamaged");
-          cf.field_F = ds.a(true, param0, "", "fleetsarrowship");
+          UiWidget.field_t = MessageKind.a(true, param0, "", "factionring");
+          SpriteState.field_y = MessageKind.a(true, param0, "", "factionringtag");
+          ArrayWidgetGroup.field_z = MessageKind.a(true, param0, "", "factionringcentre");
+          MatchingTextValidator.field_p = MessageKind.a(true, param0, "", "arrowship");
+          eq.field_o = MessageKind.a(true, param0, "", "arrowshipdamaged");
+          cf.field_F = MessageKind.a(true, param0, "", "fleetsarrowship");
           di.field_i = va.a("fleetbuttons", 0, "", param0);
           StarAbandonedEvent.field_r = va.a("anim_icons", 0, "", param0);
           GarrisonTask.field_s = new ArgbSprite(6, 6);
@@ -192,8 +192,8 @@ final class ck {
           GarrisonTask.field_s.field_B[23] = 1207959552;
           GarrisonTask.field_s.field_B[21] = -10066330;
           for (var13_int = 0; mj.field_Nb.length > var13_int; var13_int++) {
-            mj.field_Nb[var13_int] = ds.a(true, param0, "", "res_side_" + var13_int);
-            ts.field_L[var13_int] = ds.a(true, param0, "", "res_low_" + var13_int);
+            mj.field_Nb[var13_int] = MessageKind.a(true, param0, "", "res_side_" + var13_int);
+            ts.field_L[var13_int] = MessageKind.a(true, param0, "", "res_low_" + var13_int);
           }
           MenuLabel.field_y = va.a("defnet_anim_small", 0, "", param0);
           for (var13_intLifetime1 = 0; var13_intLifetime1 < MenuLabel.field_y[0].field_B.length; var13_intLifetime1++) {
@@ -260,7 +260,7 @@ final class ck {
           for (var13_intLifetime7 = 0; var13_intLifetime7 < wa.field_b.field_B.length; var13_intLifetime7++) {
             if (wa.field_b.field_B[var13_intLifetime7] != 0) {
               SoftwareRasterizer.blendPixel(var13_intLifetime7 % wa.field_b.field_z, var13_intLifetime7 / wa.field_b.field_z, 16777215, 128);
-              wa.field_b.field_B[var13_intLifetime7] = ee.intOr(wa.field_b.field_B[var13_intLifetime7], -16777216);
+              wa.field_b.field_B[var13_intLifetime7] = PrivateChatMessage.intOr(wa.field_b.field_B[var13_intLifetime7], -16777216);
             }
           }
           fb.field_Vb = new Sprite(18, 12);

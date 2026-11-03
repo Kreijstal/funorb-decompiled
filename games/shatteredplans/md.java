@@ -294,7 +294,7 @@ final class md extends UiWidget {
         }
         for (var6 = 0; param2 > var6; var6++) {
           var7 = (param2 - var6) * 256 / param2;
-          var10[var6] = ee.intOr(we.intAnd(var7 * var4, -16711936), we.intAnd(16711680, var7 * var5)) >>> 8;
+          var10[var6] = PrivateChatMessage.intOr(we.intAnd(var7 * var4, -16711936), we.intAnd(16711680, var7 * var5)) >>> 8;
         }
         return var3;
     }

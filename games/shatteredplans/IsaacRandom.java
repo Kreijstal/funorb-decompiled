@@ -267,7 +267,7 @@ final class IsaacRandom {
               param2 = var5_int + param1;
               var5_int = (var5_int & 16711935) + (param1 & 16711935);
               param1 = (var5_int & 16777472) + (65536 & param2 - var5_int);
-              SoftwareRasterizer.field_h[var6] = ee.intOr(-(param1 >>> 8) + param1, -param1 + param2);
+              SoftwareRasterizer.field_h[var6] = PrivateChatMessage.intOr(-(param1 >>> 8) + param1, -param1 + param2);
               var6 = var6 + SoftwareRasterizer.field_b;
               param0--;
             }

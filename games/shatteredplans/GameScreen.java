@@ -2424,7 +2424,7 @@ final class GameScreen {
             return;
           }
           if (0 >= Archive.field_b &&
-            ee.field_k <= 0) {
+            PrivateChatMessage.field_k <= 0) {
             return;
           }
           if (IntrusiveNodeHashTable.field_e) {
@@ -4233,7 +4233,7 @@ final class GameScreen {
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var7 < 0))) {
             var8_ref_nf = wm.field_d[var7];
-            stackIn_21_0 = ~kp.field_i;
+            stackIn_21_0 = ~TargetedChatMessage.field_i;
             if (var11 == 0) {
               stackIn_10_0 = (stackIn_21_0 >= ~var5) ? 0 : 1;
               var9 = stackIn_10_0;
@@ -5164,7 +5164,7 @@ final class GameScreen {
               }
               if (stackIn_45_0 != stackIn_45_1) {
                 SoftwareRasterizer.blendPixel(var3 % this.field_t.field_z, var3 / this.field_t.field_z, 16711680, 128);
-                this.field_t.field_B[var3] = ee.intOr(this.field_t.field_B[var3], -16777216);
+                this.field_t.field_B[var3] = PrivateChatMessage.intOr(this.field_t.field_B[var3], -16777216);
               }
               var3++;
               continue;

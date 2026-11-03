@@ -137,7 +137,7 @@ final class ScrollPane extends AnimatedPanel {
           MusicEnvelope.field_g = param1;
           lq.field_k = param6;
           PointsVictoryChecker.a(param10, param3, param0, param12, 2);
-          as.a(param17, param9 + 20, param18, param2);
+          FleetVisual.a(param17, param9 + 20, param18, param2);
           wi.a(param5, (byte) 67, param19, param7, param11, param15);
           if (param9 != 0) {
             field_Cb = (String) null;

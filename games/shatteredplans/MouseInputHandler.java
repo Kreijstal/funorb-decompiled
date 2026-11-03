@@ -123,7 +123,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var11 = var13;
             var5_ref_int__ = var11;
             for (var6 = 0; var1 > var6; var6++) {
-              var5_ref_int__[var6] = ee.intOr(eo.field_fb[we.intAnd((int) var20[var6], 255)], we.intAnd(-16777216, var21[var6] << 24));
+              var5_ref_int__[var6] = PrivateChatMessage.intOr(eo.field_fb[we.intAnd((int) var20[var6], 255)], we.intAnd(-16777216, var21[var6] << 24));
             }
             var3 = new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var13);
           } else {
@@ -144,7 +144,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           var11Lifetime1 = var13Lifetime1;
           var5_ref_int__Lifetime1 = var11Lifetime1;
           for (var6Lifetime1 = 0; var1 > var6Lifetime1; var6Lifetime1++) {
-            var5_ref_int__Lifetime1[var6Lifetime1] = ee.intOr(eo.field_fb[we.intAnd((int) var18[var6Lifetime1], 255)], we.intAnd(-16777216, var19[var6Lifetime1] << 24));
+            var5_ref_int__Lifetime1[var6Lifetime1] = PrivateChatMessage.intOr(eo.field_fb[we.intAnd((int) var18[var6Lifetime1], 255)], we.intAnd(-16777216, var19[var6Lifetime1] << 24));
           }
           var3Lifetime1 = new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var13Lifetime1);
         } else {

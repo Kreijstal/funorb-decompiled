@@ -75,7 +75,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
             var10Lifetime1 = (var9 & 16777472) + (-var9 + var11 & 65536);
             incrementValue$5 = var8;
             var8++;
-            SoftwareRasterizer.field_h[incrementValue$5] = ee.intOr(-(var10Lifetime1 >>> 8) + var10Lifetime1, var11 - var10Lifetime1);
+            SoftwareRasterizer.field_h[incrementValue$5] = PrivateChatMessage.intOr(-(var10Lifetime1 >>> 8) + var10Lifetime1, var11 - var10Lifetime1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

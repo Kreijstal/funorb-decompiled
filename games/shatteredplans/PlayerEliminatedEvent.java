@@ -81,7 +81,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           AnimatedPanel.a(hn.field_j, pg.field_C, MidiPcmStream.field_w, ScrollPane.field_Db, CellVertex.field_d, 5, Dialog.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
           gn.field_y = id.a(2, param5, "", "lobbyicon");
           PanelNode.field_o = false;
-          pe.field_D = ms.field_c;
+          pe.field_D = ChatMessage.field_c;
           RandomAccessCacheFile.a(115, 200);
           RecklessAi.a(-94, param2, param1);
           PointsVictoryChecker.a(param0, 0, 0, (byte) -3, cg.field_B, 16777215);

@@ -211,7 +211,7 @@ final class bk {
               if (var7 == 0) {
                 if (np.field_a == null &&
                   je.field_e) {
-                  var5 = "[" + ds.field_a + "] ";
+                  var5 = "[" + MessageKind.field_a + "] ";
                 }
                 if (null != np.field_a) {
                   var7 = 1;

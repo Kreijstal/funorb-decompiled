@@ -193,7 +193,7 @@ final class RandomAccessCacheFile {
         im.field_b = new int[3];
         wm.field_d = new nf[param1 * 15];
         DebouncedValidator.field_g = 0;
-        kp.field_i = param1;
+        TargetedChatMessage.field_i = param1;
         int var2 = -27 % ((param0 + 56) / 49);
     }
 

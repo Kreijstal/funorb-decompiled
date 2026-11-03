@@ -134,7 +134,7 @@ final class fb extends AnimatedPanel {
               }
             } else {
               if (param5 != 1) {
-                var14 = QuickChatCategoryRegistry.a(ms.field_b, 4371, new String[]{Integer.toString(param5)});
+                var14 = QuickChatCategoryRegistry.a(ChatMessage.field_b, 4371, new String[]{Integer.toString(param5)});
               } else {
                 var14 = Archive.field_a;
               }
@@ -215,7 +215,7 @@ final class fb extends AnimatedPanel {
         if (Archive.field_b > 0) {
           bb.a(param5, param0, (byte) -2, param2);
         }
-        if (ee.field_k > 0) {
+        if (PrivateChatMessage.field_k > 0) {
           uo.a((byte) 23, param0, param2, param7, param5);
         }
         if (IntrusiveNodeHashTable.field_e &&

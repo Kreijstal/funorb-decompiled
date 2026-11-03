@@ -90,7 +90,7 @@ final class va {
         RuntimeException decompiledCaughtException = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          ee.field_l = ProjectsContent.field_g;
+          PrivateChatMessage.field_l = ProjectsContent.field_g;
           if (param1 != -113) {
             var6 = (Archive) null;
             va.a((String) null, -24, (String) null, (Archive) null);

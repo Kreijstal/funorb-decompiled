@@ -44,8 +44,8 @@ final class di extends IntrusiveNode {
                 sa.field_a.payload[var5_int] = var4_ref_sk.field_h[var5_int];
               }
               IterableNodeHashTable.field_e = SliderPainter.field_g;
-              SliderPainter.field_g = kp.field_n;
-              kp.field_n = BufferedCacheFile.field_e;
+              SliderPainter.field_g = TargetedChatMessage.field_n;
+              TargetedChatMessage.field_n = BufferedCacheFile.field_e;
               BufferedCacheFile.field_e = var4_ref_sk.field_j;
               return true;
             }
@@ -68,8 +68,8 @@ final class di extends IntrusiveNode {
             }
             if (ArchiveRequest.field_o == 0) {
               IterableNodeHashTable.field_e = SliderPainter.field_g;
-              SliderPainter.field_g = kp.field_n;
-              kp.field_n = BufferedCacheFile.field_e;
+              SliderPainter.field_g = TargetedChatMessage.field_n;
+              TargetedChatMessage.field_n = BufferedCacheFile.field_e;
               BufferedCacheFile.field_e = ArchiveNetworkClient.field_b;
               ArchiveNetworkClient.field_b = -1;
               return true;
@@ -234,7 +234,7 @@ final class di extends IntrusiveNode {
           field_p = (boolean[]) null;
         }
         if (!(Archive.field_b <= 0) ||
-          !(ee.field_k <= 0)) {
+          !(PrivateChatMessage.field_k <= 0)) {
           if (null != gn.field_y) {
             gn.field_y.drawOpaque(am.field_xb.field_hb, 0);
           }

@@ -57,7 +57,7 @@ final class WhirlpoolHasher {
             var8 = 255 & param2[var5_int] << var6 | (param2[1 + var5_int] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_a[this.field_o] = (byte)ee.intOr((int) this.field_a[this.field_o], var8 >>> var7);
+              this.field_a[this.field_o] = (byte)PrivateChatMessage.intOr((int) this.field_a[this.field_o], var8 >>> var7);
               this.field_o = this.field_o + 1;
               this.field_d = this.field_d + (8 - var7);
               if (this.field_d == 512) {
@@ -77,7 +77,7 @@ final class WhirlpoolHasher {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_a[this.field_o] = (byte)ee.intOr((int) this.field_a[this.field_o], var8Lifetime1 >>> var7);
+            this.field_a[this.field_o] = (byte)PrivateChatMessage.intOr((int) this.field_a[this.field_o], var8Lifetime1 >>> var7);
           }
           if ((long)var7 + param1 < 8L) {
             this.field_d = (int)((long)this.field_d + param1);
@@ -401,7 +401,7 @@ final class WhirlpoolHasher {
         int var9 = 0;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.field_a[this.field_o] = (byte)ee.intOr((int) this.field_a[this.field_o], 128 >>> we.intAnd(7, this.field_d));
+          this.field_a[this.field_o] = (byte)PrivateChatMessage.intOr((int) this.field_a[this.field_o], 128 >>> we.intAnd(7, this.field_d));
           this.field_o = this.field_o + 1;
           if (this.field_o > 32) {
             while (this.field_o < 64) {

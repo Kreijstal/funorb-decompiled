@@ -292,7 +292,7 @@ final class SolVictoryChecker extends VictoryChecker {
             var7_array[1] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, TutorialAi.field_t);
             var7_array[2] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, (String) null);
           } else {
-            var7_array[1] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, ms.field_h);
+            var7_array[1] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, ChatMessage.field_h);
             var7_array[2] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, var16.name, var16.field_k);
           }
           var8 = new Player[this.field_i.length];
@@ -397,7 +397,7 @@ final class SolVictoryChecker extends VictoryChecker {
               }
               js.field_f.position = 0;
               js.field_f.writeByte(14, (byte) -80);
-              js.field_f.writeByte(mq.field_c.a((byte) -73).field_d, (byte) -68);
+              js.field_f.writeByte(mq.field_c.getKind((byte) -73).field_d, (byte) -68);
               d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
               Wormhole.field_j = IntrusiveNodeHashTable.field_i;
             }
@@ -486,8 +486,8 @@ final class SolVictoryChecker extends VictoryChecker {
               ArchiveIndex.field_d = ji.a(var11, true);
               CheckboxPainter.field_n = sa.field_a.readUnsignedByte(-112);
               Wormhole.field_j = ih.field_f;
-              if (mq.field_c.a((byte) 115) != IsolationistAi.field_u) {
-                if (mq.field_c.a((byte) 123) == oi.field_b) {
+              if (mq.field_c.getKind((byte) 115) != IsolationistAi.field_u) {
+                if (mq.field_c.getKind((byte) 123) == oi.field_b) {
                   ObjectList.field_f.a(GameScreen.getHostApplet((byte) 126), true);
                 }
               } else {

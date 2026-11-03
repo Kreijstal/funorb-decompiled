@@ -4,12 +4,12 @@
 final class dd {
     static String field_a;
 
-    final static ms a(boolean param0, String param1, String param2, int param3, long param4) {
+    final static ChatMessage a(boolean param0, String param1, String param2, int param3, long param4) {
         RuntimeException var6 = null;
         jm stackIn_6_0 = null;
-        ee stackIn_8_0 = null;
-        ms stackIn_11_0 = null;
-        kp stackIn_13_0 = null;
+        PrivateChatMessage stackIn_8_0 = null;
+        ChatMessage stackIn_11_0 = null;
+        TargetedChatMessage stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -19,18 +19,18 @@ final class dd {
         try {
           if (param4 == 0L &&
             param2 != null) {
-            stackIn_8_0 = new ee(param2, param1);
-            return (ms) ((Object) stackIn_8_0);
+            stackIn_8_0 = new PrivateChatMessage(param2, param1);
+            return (ChatMessage) ((Object) stackIn_8_0);
           }
           if (param0) {
             stackIn_6_0 = new jm(param4, param1);
-            return (ms) ((Object) stackIn_6_0);
+            return (ChatMessage) ((Object) stackIn_6_0);
           }
           if (param3 == 4684) {
-            stackIn_13_0 = new kp(param4, param1);
-            return (ms) ((Object) stackIn_13_0);
+            stackIn_13_0 = new TargetedChatMessage(param4, param1);
+            return (ChatMessage) ((Object) stackIn_13_0);
           }
-          stackIn_11_0 = (ms) null;
+          stackIn_11_0 = (ChatMessage) null;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

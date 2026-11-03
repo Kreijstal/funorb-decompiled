@@ -160,7 +160,7 @@ final class oj extends ns implements ButtonListener {
               var4 = param2.field_g;
               if (param2.field_c == 248) {
                 if (!param1) {
-                  kp.c(-1);
+                  TargetedChatMessage.c(-1);
                 }
                 var4 = sg.field_xb;
                 this.field_Eb = true;

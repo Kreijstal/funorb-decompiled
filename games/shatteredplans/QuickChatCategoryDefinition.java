@@ -75,7 +75,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (null != this.field_o) {
           for (var2 = 0; var2 < this.field_o.length; var2++) {
-            this.field_o[var2] = ee.intOr(this.field_o[var2], 32768);
+            this.field_o[var2] = PrivateChatMessage.intOr(this.field_o[var2], 32768);
           }
         }
         if (param0 >= -60) {

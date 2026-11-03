@@ -171,8 +171,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
           if (Archive.field_b > 0) {
             Archive.field_b = Archive.field_b - 1;
           } else {
-            if (ee.field_k > 0) {
-              ee.field_k = ee.field_k - 1;
+            if (PrivateChatMessage.field_k > 0) {
+              PrivateChatMessage.field_k = PrivateChatMessage.field_k - 1;
             }
           }
         }
@@ -185,8 +185,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
         if (Archive.field_b > 0) {
           TextLayout.a(22353, Archive.field_b);
         }
-        if (ee.field_k > 0) {
-          TextLayout.a(22353, ee.field_k);
+        if (PrivateChatMessage.field_k > 0) {
+          TextLayout.a(22353, PrivateChatMessage.field_k);
         }
     }
 

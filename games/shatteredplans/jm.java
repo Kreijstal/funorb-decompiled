@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm extends kp {
+final class jm extends TargetedChatMessage {
     static Sprite field_r;
     static String field_s;
     static int field_t;
@@ -35,7 +35,7 @@ final class jm extends kp {
         super(param0, param1);
     }
 
-    final ds a(byte param0) {
+    final MessageKind getKind(byte param0) {
         int var2 = -78 / ((param0 + 7) / 41);
         return tm.field_p;
     }

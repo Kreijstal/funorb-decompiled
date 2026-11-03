@@ -66,7 +66,7 @@ final class cf extends WidgetContainer implements ButtonListener {
         int var3 = 0;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          ds.field_c = rr.a(param0, bb.field_b, TertiaryListSequence.field_k, 2);
+          MessageKind.field_c = rr.a(param0, bb.field_b, TertiaryListSequence.field_k, 2);
           if (param1 != 39) {
             field_D = -63;
           }

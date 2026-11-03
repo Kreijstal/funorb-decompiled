@@ -25,7 +25,7 @@ final class wi {
             MusicVoice.field_D = MusicVoice.field_D.field_c;
           } else {
             var7 = new wa();
-            ms.field_a = ms.field_a + 1;
+            ChatMessage.field_a = ChatMessage.field_a + 1;
           }
           var7.a(param1, param5, param0, param3, param2, param4, (byte) -34);
           stackIn_7_0 = var7;

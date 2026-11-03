@@ -256,8 +256,8 @@ final class kd {
             var6 = kr.field_f[var3];
             if (eh.field_C == 2 &&
               var2 == 1) {
-              if (kp.field_o.length >= TertiaryNodeList.field_d.length) {
-                stackIn_20_0 = kp.field_o.length;
+              if (TargetedChatMessage.field_o.length >= TertiaryNodeList.field_d.length) {
+                stackIn_20_0 = TargetedChatMessage.field_o.length;
               } else {
                 stackIn_20_0 = TertiaryNodeList.field_d.length;
               }
@@ -270,10 +270,10 @@ final class kd {
               var8 = stackIn_23_0;
               if (var3 >= 6 &&
                 var3 < var7 + 6) {
-                if (kp.field_o.length + var3 + (-6 - var7) < 0) {
+                if (TargetedChatMessage.field_o.length + var3 + (-6 - var7) < 0) {
                   stackIn_29_0 = "";
                 } else {
-                  stackIn_29_0 = kp.field_o[-6 + var3 - (-kp.field_o.length + var7)];
+                  stackIn_29_0 = TargetedChatMessage.field_o[-6 + var3 - (-TargetedChatMessage.field_o.length + var7)];
                 }
                 var6 = stackIn_29_0;
               }

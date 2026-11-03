@@ -344,7 +344,7 @@ final class AggressiveAi extends StandardAi {
               for (var9_int = 0; var9_int < id.field_c.length; var9_int++) {
                 id.field_c[var9_int] = (byte) 0;
               }
-              id.field_c[var8 / 8] = (byte)ee.intOr((int) id.field_c[var8 / 8], 1 << var8 % 8);
+              id.field_c[var8 / 8] = (byte)PrivateChatMessage.intOr((int) id.field_c[var8 / 8], 1 << var8 % 8);
             }
             stackIn_52_0 = (param1) ? -1 : 0;
             for (var8 = stackIn_52_0; var8 < nl.field_a.length; var8++) {

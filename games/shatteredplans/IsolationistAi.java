@@ -5,7 +5,7 @@ final class IsolationistAi extends StandardAi {
     static boolean field_r;
     static int field_t;
     static char field_p;
-    static ds field_u;
+    static MessageKind field_u;
     static String field_s;
     static PcmPlayerService field_q;
 
@@ -177,7 +177,7 @@ final class IsolationistAi extends StandardAi {
           } else {
             if (param1.field_n == 0 &&
               je.field_e) {
-              var3 = "[" + ds.field_a + "] ";
+              var3 = "[" + MessageKind.field_a + "] ";
             }
             if (param1.field_n == 1) {
               var3 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{param1.field_o}) + "] ";
@@ -287,7 +287,7 @@ final class IsolationistAi extends StandardAi {
 
     static {
         field_p = '/';
-        field_u = new ds(3);
+        field_u = new MessageKind(3);
         field_s = "<%0> points per turn";
     }
 }

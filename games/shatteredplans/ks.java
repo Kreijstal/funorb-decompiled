@@ -255,7 +255,7 @@ final class ks {
               param5 = var7 + param4;
               var7 = (16711935 & param4) + (16711935 & var7);
               param4 = (16777472 & var7) + (param5 - var7 & 65536);
-              SoftwareRasterizer.field_h[var8] = ee.intOr(-(param4 >>> 8) + param4, param5 - param4);
+              SoftwareRasterizer.field_h[var8] = PrivateChatMessage.intOr(-(param4 >>> 8) + param4, param5 - param4);
             }
             var8 = var8 + var6_int;
             param1--;

@@ -109,14 +109,14 @@ final class jf {
         if (param0 == -15) {
           PanelNode.field_p = null;
           TertiaryNodeList.field_d = null;
-          kp.field_o = null;
+          TargetedChatMessage.field_o = null;
           kd.field_b = null;
           return;
         }
         field_c = (byte[][]) null;
         PanelNode.field_p = null;
         TertiaryNodeList.field_d = null;
-        kp.field_o = null;
+        TargetedChatMessage.field_o = null;
         kd.field_b = null;
     }
 

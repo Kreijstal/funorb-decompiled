@@ -26,7 +26,7 @@ final class ih {
           if (param4 == null) {
             var8.writeShort(param2, 255);
           } else {
-            ee.a(var8, (byte) -87, param4);
+            PrivateChatMessage.a(var8, (byte) -87, param4);
           }
           var8.patchLengthByte(-var7 + var8.position, (byte) 122);
         } catch (RuntimeException runtimeException) {

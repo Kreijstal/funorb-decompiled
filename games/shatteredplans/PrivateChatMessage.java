@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee extends ms {
+final class PrivateChatMessage extends ChatMessage {
     static mp field_l;
     private String field_m;
     static String field_j;
@@ -10,7 +10,7 @@ final class ee extends ms {
     static int field_k;
     private String field_i;
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -19,7 +19,7 @@ final class ee extends ms {
         try {
           param0.writeMarkedString((byte) 95, this.field_m);
           if (param1 <= 67) {
-            ee.a((vm) null, false);
+            PrivateChatMessage.a((vm) null, false);
           }
           param0.writePackedName((byte) -120, this.field_i);
           return;
@@ -79,7 +79,7 @@ final class ee extends ms {
           var4 = AchievementProgress.a((byte) 86, (CharSequence) ((Object) param2));
           param0.writeSmart(0, var4.length);
           if (param1 >= -36) {
-            ee.a(true);
+            PrivateChatMessage.a(true);
           }
           param0.position = param0.position + DiskArchiveRequest.field_v.encode(var4, param0.position, -6309, param0.payload, 0, var4.length);
           stackIn_4_0 = -var3_int + param0.position;
@@ -1632,7 +1632,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_stat_projects_used", 121);
                 if (var2 != null) {
-                  ms.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ChatMessage.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_research_wasted", 95);
                 if (var2 != null) {
@@ -2074,7 +2074,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipVictoryPaneOneMany", 105);
                 if (null != var2) {
-                  ms.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ChatMessage.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipVictoryPaneManyOne", 126);
                 if (null != var2) {
@@ -2130,7 +2130,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("victorySolOwned", 105);
                 if (null != var2) {
-                  ms.field_h = IterableNodeHashTable.a(var2, 17746);
+                  ChatMessage.field_h = IterableNodeHashTable.a(var2, 17746);
                 }
                 ArrayWidgetGroup.field_D = null;
             }
@@ -2166,8 +2166,8 @@ final class ee extends ms {
         decompiledBody.run();
     }
 
-    final ds a(byte param0) {
-        ds stackIn_1_0 = null;
+    final MessageKind getKind(byte param0) {
+        MessageKind stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -2182,7 +2182,7 @@ final class ee extends ms {
         }
     }
 
-    ee(String param0, String param1) {
+    PrivateChatMessage(String param0, String param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -2220,7 +2220,7 @@ final class ee extends ms {
           field_l = null;
           field_j = null;
           if (param0) {
-            ee.a(true);
+            PrivateChatMessage.a(true);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ee.I(" + param0 + ')');

@@ -143,7 +143,7 @@ final class wp {
                   }
                   if (var5 >= 2 &&
                     !param2) {
-                    stackIn_30_0 = ms.field_g;
+                    stackIn_30_0 = ChatMessage.field_g;
                     return stackIn_30_0;
                   }
                 }

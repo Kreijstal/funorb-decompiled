@@ -32,7 +32,7 @@ final class gi {
           if (param1 != -12076) {
             return true;
           }
-          if (ms.a(param0, (byte) -53, param2)) {
+          if (ChatMessage.a(param0, (byte) -53, param2)) {
             return false;
           }
           if (!Bzip2State.a(param0, 127, param2)) {
@@ -113,14 +113,14 @@ final class gi {
           }
           aj.field_a.clear(0);
           if (WeightedLruCache.field_g == PanelNode.field_q) {
-            ei.field_e = kp.field_j;
+            ei.field_e = TargetedChatMessage.field_j;
             e.field_f = ArchiveRequest.field_r;
             ByteArrayNode.field_k = be.field_h;
             AttackTask.field_o = DerelictMapGenerator.field_q;
           } else {
             e.field_f = QuickChatCategoryRegistry.a(ArchiveRequest.field_r, 32, BufferedCacheFile.field_m, MenuButton.field_B, 0);
             ByteArrayNode.field_k = QuickChatCategoryRegistry.a(be.field_h, 32, BufferedCacheFile.field_m, oi.field_a, 0);
-            ei.field_e = QuickChatCategoryRegistry.a(kp.field_j, 32, BufferedCacheFile.field_m, jb.field_d, 0);
+            ei.field_e = QuickChatCategoryRegistry.a(TargetedChatMessage.field_j, 32, BufferedCacheFile.field_m, jb.field_d, 0);
             stackIn_28_0 = DerelictMapGenerator.field_q;
             stackIn_28_1 = 32;
             AttackTask.field_o = QuickChatCategoryRegistry.a(stackIn_28_0, stackIn_28_1, BufferedCacheFile.field_m, SliderPainter.field_b, 0);
@@ -169,7 +169,7 @@ final class gi {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3, ms param4) {
+    final static void a(int param0, boolean param1, boolean param2, int param3, ChatMessage param4) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -193,7 +193,7 @@ final class gi {
             return;
           }
           eo.field_cb.writeShort(param0, 255);
-          param4.a(eo.field_cb, (byte) 118);
+          param4.write(eo.field_cb, (byte) 118);
           js.field_f.position = 0;
           if (param1) {
             js.field_f.writeByte(18, (byte) -106);

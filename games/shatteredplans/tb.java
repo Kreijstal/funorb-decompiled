@@ -167,7 +167,7 @@ final class tb {
           DialPainter.field_g = new AnimatedPanel(0L, bd.field_E, tm.field_o.toUpperCase());
           ArchiveSourceManager.field_f = new AnimatedPanel(0L, gg.field_d);
           bj.field_D = new AnimatedPanel(0L, rs.field_Eb);
-          StarAnnotation.field_l = new AnimatedPanel(0L, nl.field_b, ds.field_e.toUpperCase());
+          StarAnnotation.field_l = new AnimatedPanel(0L, nl.field_b, MessageKind.field_e.toUpperCase());
           QuickChatCategoryRegistry.field_g = new AnimatedPanel[4 + param0];
           ByteArrayNode.field_p = new sg[4 + param0][];
           QuickChatCategoryRegistry.field_g[0] = new AnimatedPanel(0L, ObjectList.field_h, am.field_Ab);

@@ -124,11 +124,11 @@ final class Bzip2State {
           oq.field_i[19] = ul.field_Fb[1];
           oq.field_i[17] = bf.field_a[2];
           oq.field_i[28] = lm.field_a;
-          oq.field_i[30] = ee.field_j;
+          oq.field_i[30] = PrivateChatMessage.field_j;
           oq.field_i[29] = SliderPainter.field_k;
           oq.field_i[20] = rl.field_d;
           oq.field_i[24] = lq.field_p;
-          oq.field_i[26] = ee.field_n;
+          oq.field_i[26] = PrivateChatMessage.field_n;
           oq.field_i[31] = ep.field_d;
           oq.field_i[25] = SpriteState.field_v;
           oq.field_i[23] = ScrollBar.field_Db;
@@ -144,7 +144,7 @@ final class Bzip2State {
           QuickChatPhraseRegistry.field_g[5] = ClientException.field_g;
           QuickChatPhraseRegistry.field_g[8] = ck.field_d;
           QuickChatPhraseRegistry.field_g[4] = CheckboxWidget.field_D;
-          QuickChatPhraseRegistry.field_g[6] = ms.field_f;
+          QuickChatPhraseRegistry.field_g[6] = ChatMessage.field_f;
           QuickChatPhraseRegistry.field_g[10] = Dialog.field_H;
           QuickChatPhraseRegistry.field_g[12] = am.field_zb;
           QuickChatPhraseRegistry.field_g[2] = LinkPainter.field_c;

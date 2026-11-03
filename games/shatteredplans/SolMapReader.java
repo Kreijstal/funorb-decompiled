@@ -200,7 +200,7 @@ final class SolMapReader implements MapGenerator {
           var8_ref_nf = wm.field_d[var7];
           var9 = 0;
           if (!bg.field_g &&
-            kp.field_i > var5) {
+            TargetedChatMessage.field_i > var5) {
             var10_int = id.a(-7019, var8_ref_nf.field_n);
             if (var10_int <= var8_ref_nf.a((byte) 116) && (var8_ref_nf.field_h ||
               !IntrusiveNodeHashTable.a(var8_ref_nf.field_b, true))) {

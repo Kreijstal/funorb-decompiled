@@ -256,7 +256,7 @@ final class kr extends Exception {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + ((-var11 + 256) * (65280 & var14) & 16711680);
                 var10 = var10 + (-16711936 & (var14 & 16711935) * (256 - var11));
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
               var8 = param2 >> 4;
               var9 = param0 >> 4;
@@ -277,7 +277,7 @@ final class kr extends Exception {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + ((-var11 + 256) * (var14 & 65280) & 16711680);
                 var10 = var10 + (-16711936 & (-var11 + 256) * (var14 & 16711935));
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
               SoftwareRasterizer.drawVerticalLineAlpha(param2 >> 4, 1 + (param5 >> 4), (var7 >> 4) - 2, param4, 256 - 16 * (15 & param2));
               var8 = (param2 >> 4) + 1;
@@ -299,7 +299,7 @@ final class kr extends Exception {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + ((65280 & var14) * (256 - var11) & 16711680);
                 var10 = var10 + ((16711935 & var14) * (-var11 + 256) & -16711936);
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
               var8 = (param2 >> 4) + 1;
               var9 = param0 >> 4;
@@ -320,7 +320,7 @@ final class kr extends Exception {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + ((var14 & 16711935) * (-var11 + 256) & -16711936);
                 var12 = var12 + (16711680 & (var14 & 65280) * (256 - var11));
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
               SoftwareRasterizer.drawVerticalLineAlpha(1 + (param2 >> 4), 1 + (param5 >> 4), -2 + (var7 >> 4), param4, (15 & param2) * 16);
             } else {
@@ -343,7 +343,7 @@ final class kr extends Exception {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + (-16711936 & (var14 & 16711935) * (256 - var11));
                 var12 = var12 + (16711680 & (-var11 + 256) * (65280 & var14));
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
               var8 = 1 + (param2 >> 4);
               var9 = param5 >> 4;
@@ -364,7 +364,7 @@ final class kr extends Exception {
                 var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + (16711680 & (-var11 + 256) * (var14 & 65280));
                 var10 = var10 + (-16711936 & (16711935 & var14) * (-var11 + 256));
-                SoftwareRasterizer.field_h[var13] = ee.intOr(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
             }
             return;
@@ -394,7 +394,7 @@ final class kr extends Exception {
             var21 = SoftwareRasterizer.field_h[var20];
             var19 = var19 + ((var21 & 65280) * (256 - var18) & 16711680);
             var17 = var17 + (-16711936 & (var21 & 16711935) * (-var18 + 256));
-            SoftwareRasterizer.field_h[var20] = ee.intOr(var19, var17) >>> 8;
+            SoftwareRasterizer.field_h[var20] = PrivateChatMessage.intOr(var19, var17) >>> 8;
           }
           var14Lifetime1 = var8Lifetime1 + var10Lifetime1;
           var15Lifetime1 = var12Lifetime1;
@@ -416,7 +416,7 @@ final class kr extends Exception {
             var21Lifetime1 = SoftwareRasterizer.field_h[var20Lifetime1];
             var19Lifetime1 = var19Lifetime1 + ((var21Lifetime1 & 65280) * (-var18Lifetime1 + 256) & 16711680);
             var17Lifetime1 = var17Lifetime1 + ((-var18Lifetime1 + 256) * (16711935 & var21Lifetime1) & -16711936);
-            SoftwareRasterizer.field_h[var20Lifetime1] = ee.intOr(var19Lifetime1, var17Lifetime1) >>> 8;
+            SoftwareRasterizer.field_h[var20Lifetime1] = PrivateChatMessage.intOr(var19Lifetime1, var17Lifetime1) >>> 8;
           }
           var9Lifetime2 = param3 + 7 >> 4;
           var10Lifetime2 = var8Lifetime1 * (-param3 + (var9Lifetime2 << 4)) + (param0 << 12);
@@ -442,7 +442,7 @@ final class kr extends Exception {
             var23 = SoftwareRasterizer.field_h[var22];
             var21Lifetime2 = var21Lifetime2 + ((65280 & var23) * (-var20Lifetime2 + 256) & 16711680);
             var19Lifetime2 = var19Lifetime2 + ((256 - var20Lifetime2) * (var23 & 16711935) & -16711936);
-            SoftwareRasterizer.field_h[var22] = ee.intOr(var19Lifetime2, var21Lifetime2) >>> 8;
+            SoftwareRasterizer.field_h[var22] = PrivateChatMessage.intOr(var19Lifetime2, var21Lifetime2) >>> 8;
           }
           var17Lifetime3 = var15Lifetime2;
           var18Lifetime3 = 1 + var16Lifetime2;
@@ -463,7 +463,7 @@ final class kr extends Exception {
             var23Lifetime1 = SoftwareRasterizer.field_h[var22Lifetime1];
             var19Lifetime3 = var19Lifetime3 + ((var23Lifetime1 & 16711935) * (-var20Lifetime3 + 256) & -16711936);
             var21Lifetime3 = var21Lifetime3 + ((65280 & var23Lifetime1) * (256 - var20Lifetime3) & 16711680);
-            SoftwareRasterizer.field_h[var22Lifetime1] = ee.intOr(var21Lifetime3, var19Lifetime3) >>> 8;
+            SoftwareRasterizer.field_h[var22Lifetime1] = PrivateChatMessage.intOr(var21Lifetime3, var19Lifetime3) >>> 8;
           }
           if (param1 != -55) {
             kr.b((byte) 124);
@@ -490,7 +490,7 @@ final class kr extends Exception {
               var23Lifetime2 = SoftwareRasterizer.field_h[var22Lifetime2];
               var19Lifetime4 = var19Lifetime4 + (-16711936 & (-var20Lifetime4 + 256) * (16711935 & var23Lifetime2));
               var21Lifetime4 = var21Lifetime4 + (16711680 & (256 - var20Lifetime4) * (var23Lifetime2 & 65280));
-              SoftwareRasterizer.field_h[var22Lifetime2] = ee.intOr(var21Lifetime4, var19Lifetime4) >>> 8;
+              SoftwareRasterizer.field_h[var22Lifetime2] = PrivateChatMessage.intOr(var21Lifetime4, var19Lifetime4) >>> 8;
             }
             var17Lifetime4Lifetime1 = var12Lifetime1;
             var18Lifetime4Lifetime1 = (var14Lifetime1 >> 16) + 1;
@@ -511,7 +511,7 @@ final class kr extends Exception {
               var23Lifetime2Lifetime1 = SoftwareRasterizer.field_h[var22Lifetime2Lifetime1];
               var21Lifetime4Lifetime1 = var21Lifetime4Lifetime1 + ((256 - var20Lifetime4Lifetime1) * (65280 & var23Lifetime2Lifetime1) & 16711680);
               var19Lifetime4Lifetime1 = var19Lifetime4Lifetime1 + (-16711936 & (16711935 & var23Lifetime2Lifetime1) * (256 - var20Lifetime4Lifetime1));
-              SoftwareRasterizer.field_h[var22Lifetime2Lifetime1] = ee.intOr(var19Lifetime4Lifetime1, var21Lifetime4Lifetime1) >>> 8;
+              SoftwareRasterizer.field_h[var22Lifetime2Lifetime1] = PrivateChatMessage.intOr(var19Lifetime4Lifetime1, var21Lifetime4Lifetime1) >>> 8;
             }
             var14Lifetime1 = var14Lifetime1 + var8Lifetime1;
             var12Lifetime1++;

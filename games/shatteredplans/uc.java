@@ -46,7 +46,7 @@ final class uc extends MenuComponent {
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(-1 + var2_int) != 34) {
-              stackIn_11_0 = as.field_t;
+              stackIn_11_0 = FleetVisual.field_t;
               return stackIn_11_0;
             }
             var3 = 0;
@@ -58,7 +58,7 @@ final class uc extends MenuComponent {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_24_0 = as.field_t;
+                  stackIn_24_0 = FleetVisual.field_t;
                   return stackIn_24_0;
                 }
                 var3 = 0;
@@ -78,13 +78,13 @@ final class uc extends MenuComponent {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_38_0 = as.field_t;
+                stackIn_38_0 = FleetVisual.field_t;
                 return stackIn_38_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (hr.field_c.indexOf(var5Lifetime1) == -1) {
-                stackIn_42_0 = as.field_t;
+                stackIn_42_0 = FleetVisual.field_t;
                 return stackIn_42_0;
               }
               var3Lifetime1 = 0;

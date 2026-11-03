@@ -1120,7 +1120,7 @@ final class GameSession implements AiHost {
         int var8_int = 0;
         Player[] var8_array = null;
         FleetMove var9 = null;
-        as var10 = null;
+        FleetVisual var10 = null;
         int var11 = 0;
         Object stackIn_74_0Lifetime1;
         int stackIn_98_0Lifetime1;

@@ -120,7 +120,7 @@ final class BoundsRect extends IntrusiveNode {
     }
 
     final static String d(int param0) {
-        if (ue.field_a == ee.field_l) {
+        if (ue.field_a == PrivateChatMessage.field_l) {
           return PlayerStats.field_j;
         }
         if (ue.field_a == MatchingTextValidator.field_s) {

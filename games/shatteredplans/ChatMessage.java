@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ms {
+abstract class ChatMessage {
     static String field_g;
     static int[][] field_c;
     static Archive field_d;
@@ -11,7 +11,7 @@ abstract class ms {
     static String field_h;
     static int[] field_e;
 
-    abstract void a(PacketBuffer param0, byte param1);
+    abstract void write(PacketBuffer param0, byte param1);
 
     final static boolean a(String param0, byte param1, String param2) {
         String var3 = null;
@@ -29,7 +29,7 @@ abstract class ms {
           var3 = DualLinkDequeSequence.a(param0, true);
           if (param1 != -53) {
             var4 = (String) null;
-            ms.a((String) null, (byte) 116, (String) null);
+            ChatMessage.a((String) null, (byte) 116, (String) null);
           }
           stackIn_7_0 = (-1 != param2.indexOf(param0)) || (param2.indexOf(var3) != -1);
           return stackIn_7_0;
@@ -64,7 +64,7 @@ abstract class ms {
           field_c = (int[][]) null;
           return;
         }
-        ms.a(42);
+        ChatMessage.a(42);
         field_c = (int[][]) null;
     }
 
@@ -77,14 +77,14 @@ abstract class ms {
           return;
         }
         String var2 = (String) null;
-        ms.a((String) null, (byte) -111, (String) null);
+        ChatMessage.a((String) null, (byte) -111, (String) null);
         if (QuickChatCategoryDefinition.field_t) {
           SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
           SectorCacheStore.field_f.drawFullRaster(false, -104);
         }
     }
 
-    abstract ds a(byte param0);
+    abstract MessageKind getKind(byte param0);
 
     static {
         field_g = "Names cannot contain consecutive spaces";

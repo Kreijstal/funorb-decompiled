@@ -89,7 +89,7 @@ final class DialPainter implements WidgetPainter {
               param1 = (65536 & -var11 + param2) + (16777472 & var11);
               incrementValue$0 = var9;
               var9++;
-              SoftwareRasterizer.field_h[incrementValue$0] = ee.intOr(-(param1 >>> 8) + param1, param2 - param1);
+              SoftwareRasterizer.field_h[incrementValue$0] = PrivateChatMessage.intOr(-(param1 >>> 8) + param1, param2 - param1);
             }
           }
           return;

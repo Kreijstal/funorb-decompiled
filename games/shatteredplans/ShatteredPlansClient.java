@@ -598,7 +598,7 @@ public final class ShatteredPlansClient extends tl {
           if (IntrusiveNodeHashTable.field_g != null) {
             nj.a(90.0f, 2, PasswordValidator.field_p);
             this.draw(1);
-            ck.a(ms.field_d, (java.applet.Applet) (this), AttackTask.field_s, rl.field_f, IntrusiveNodeHashTable.field_g, RichTextLayout.field_k, (byte) -8);
+            ck.a(ChatMessage.field_d, (java.applet.Applet) (this), AttackTask.field_s, rl.field_f, IntrusiveNodeHashTable.field_g, RichTextLayout.field_k, (byte) -8);
             rl.field_f = null;
             IntrusiveNodeHashTable.field_g = null;
             RichTextLayout.field_k = null;
@@ -659,8 +659,8 @@ public final class ShatteredPlansClient extends tl {
                     DualLinkNode.field_n.preloadAll(param0 - 83)) {
                     if (StrongCacheEntry.field_z.isIndexLoaded((byte) -121) &&
                       StrongCacheEntry.field_z.preloadAll(-1)) {
-                      if (ms.field_d.isIndexLoaded((byte) -81) &&
-                        ms.field_d.a("", -67)) {
+                      if (ChatMessage.field_d.isIndexLoaded((byte) -81) &&
+                        ChatMessage.field_d.a("", -67)) {
                         if (PointsVictoryChecker.field_l.isIndexLoaded((byte) -19) &&
                           PointsVictoryChecker.field_l.preloadAll(param0 ^ -83)) {
                           if (IntrusiveNodeHashTable.field_g.isIndexLoaded((byte) -79) &&
@@ -698,7 +698,7 @@ public final class ShatteredPlansClient extends tl {
                         nj.a(75.0f, 2, BoundsRect.a("", PointsVictoryChecker.field_l, (byte) 61, fa.field_J, SpriteState.field_r));
                         return false;
                       }
-                      nj.a(75.0f, 2, BoundsRect.a("", ms.field_d, (byte) 11, fa.field_J, SpriteState.field_r));
+                      nj.a(75.0f, 2, BoundsRect.a("", ChatMessage.field_d, (byte) 11, fa.field_J, SpriteState.field_r));
                       return false;
                     }
                     nj.a(60.0f, param0 - 80, BoundsRect.a("", StrongCacheEntry.field_z, (byte) 62, le.field_a, hc.field_b));
@@ -851,8 +851,8 @@ public final class ShatteredPlansClient extends tl {
         vs.clearStatics(param0 ^ -24162);
         oo.clearStatics(4);
         mk.a((byte) -58);
-        ds.clearStatics(false);
-        ms.a(param0 ^ 24068);
+        MessageKind.clearStatics(false);
+        ChatMessage.a(param0 ^ 24068);
         CipherPacketBuffer.clearStatics(0);
         ai.clearStatics((byte) 1);
         po.clearStatics((byte) 87);
@@ -869,7 +869,7 @@ public final class ShatteredPlansClient extends tl {
         dg.clearStatics((byte) -124);
         StandardAi.clearStatics((byte) 79);
         TaskAi.clearStatics(param0 ^ 24118);
-        as.clearStatics(param0 ^ -24081);
+        FleetVisual.clearStatics(param0 ^ -24081);
         BattleSnapshot.clearStatics((byte) 68);
         Territory.clearStatics(-28714);
         BattleEvent.clearStatics(param0 + 24195);
@@ -1086,9 +1086,9 @@ public final class ShatteredPlansClient extends tl {
         kj.a(1);
         cf.clearStatics(240);
         bg.clearStatics(16928);
-        kp.clearStatics((byte) -47);
+        TargetedChatMessage.clearStatics((byte) -47);
         jm.clearStatics(22595);
-        ee.a(false);
+        PrivateChatMessage.a(false);
         cl.clearStatics(16777215);
         IntrusiveDequeSequence.clearStatics(11);
         DualLinkDequeSequence.clearStatics((byte) -107);
@@ -1329,12 +1329,12 @@ public final class ShatteredPlansClient extends tl {
 
     private final void c(boolean param0) {
         if (StandardAi.field_e != null) {
-          ee.a(-47, StandardAi.field_e);
+          PrivateChatMessage.a(-47, StandardAi.field_e);
           StandardAi.field_e = null;
           ValidationState.c(121);
         }
         oi.field_h = SoundCache.a(3, 50);
-        ms.field_d = IterableNodeHashTable.a(5, true, param0, !param0 ? true : false, false);
+        ChatMessage.field_d = IterableNodeHashTable.a(5, true, param0, !param0 ? true : false, false);
         PointsVictoryChecker.field_l = SoundCache.a(6, 93);
         IntrusiveNodeHashTable.field_g = SoundCache.a(7, 110);
         IntHashIndex.field_a = SoundCache.a(8, 90);

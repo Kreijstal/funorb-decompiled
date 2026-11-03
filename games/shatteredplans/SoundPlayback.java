@@ -170,8 +170,8 @@ final class SoundPlayback extends IntrusiveNode {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            kp.field_o = new String[var4];
-            ArrayOperations.copyObjects(ts.field_K, 0, kp.field_o, 0, var4);
+            TargetedChatMessage.field_o = new String[var4];
+            ArrayOperations.copyObjects(ts.field_K, 0, TargetedChatMessage.field_o, 0, var4);
             kd.field_b = new String[-1 + (var3_int - var4)];
             ArrayOperations.copyObjects(ts.field_K, var4 + 1, kd.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
@@ -190,8 +190,8 @@ final class SoundPlayback extends IntrusiveNode {
             ArrayOperations.copyObjects(ts.field_K, 0, TertiaryNodeList.field_d, 0, var4);
             PanelNode.field_p = new String[-1 + (var3_int - var4)];
             ArrayOperations.copyObjects(ts.field_K, var4 + 1, PanelNode.field_p, 0, var3_int - var4 - 1);
-            if (kp.field_o.length >= TertiaryNodeList.field_d.length) {
-              stackIn_37_0 = kp.field_o.length;
+            if (TargetedChatMessage.field_o.length >= TertiaryNodeList.field_d.length) {
+              stackIn_37_0 = TargetedChatMessage.field_o.length;
             } else {
               stackIn_37_0 = TertiaryNodeList.field_d.length;
             }
@@ -257,7 +257,7 @@ final class SoundPlayback extends IntrusiveNode {
             }
           }
           if (eh.field_C == 2) {
-            var11 = kp.field_o;
+            var11 = TargetedChatMessage.field_o;
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var11.length > var5Lifetime2; var5Lifetime2++) {
               var12 = var11[var5Lifetime2];
