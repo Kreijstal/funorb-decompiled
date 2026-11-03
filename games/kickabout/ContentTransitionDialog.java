@@ -54,14 +54,14 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         super.finishTransition(param0);
     }
 
-    boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -78, param2, param3)) {
+          if (super.handleKeyTyped(param0, (byte) -78, param2, param3)) {
             return true;
           }
           if (null != this.field_ab) {

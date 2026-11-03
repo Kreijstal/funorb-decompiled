@@ -119,7 +119,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         return var2;
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_12_0 = false;
@@ -133,7 +133,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
           }
           if (null != this.field_z &&
             this.field_z.isFocused(81) &&
-            this.field_z.a(param0, (byte) -114, param2, param3)) {
+            this.field_z.handleKeyTyped(param0, (byte) -114, param2, param3)) {
             return true;
           }
           var5_int = param3;

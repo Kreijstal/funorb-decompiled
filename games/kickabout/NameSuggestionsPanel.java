@@ -111,7 +111,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         }
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -123,7 +123,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
           if (param1 > -60) {
             NameSuggestionsPanel.a((byte) -18);
           }
-          if (super.a(param0, (byte) -87, param2, param3)) {
+          if (super.handleKeyTyped(param0, (byte) -87, param2, param3)) {
             return true;
           }
           if (param3 == 98) {

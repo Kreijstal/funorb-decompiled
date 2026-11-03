@@ -589,7 +589,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -598,7 +598,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -126, param2, param3)) {
+          if (super.handleKeyTyped(param0, (byte) -126, param2, param3)) {
             return true;
           }
           if (param1 >= -60) {
@@ -681,7 +681,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         try {
           var3 = this.field_E;
           var4 = param0;
-          ((TextInputWidget) ((Object) var3)).a(var4, (byte) -17, false);
+          ((TextInputWidget) ((Object) var3)).setInputText(var4, (byte) -17, false);
           if (param1 != 15) {
             var5 = (String) null;
             discarded$1 = this.a(24, false, (String) null, (UiWidget) null, 103, (String) null, 84);

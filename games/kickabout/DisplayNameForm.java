@@ -17,7 +17,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           }
           var3 = this.field_C;
           var4 = param0;
-          ((TextInputWidget) ((Object) var3)).a(var4, (byte) -17, false);
+          ((TextInputWidget) ((Object) var3)).setInputText(var4, (byte) -17, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -114,7 +114,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         }
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -123,7 +123,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -108, param2, param3)) {
+          if (super.handleKeyTyped(param0, (byte) -108, param2, param3)) {
             return true;
           }
           if (param1 > -60) {
@@ -192,7 +192,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           return true;
         }
         UiWidget var3 = (UiWidget) null;
-        this.a('L', (byte) 88, (UiWidget) null, -112);
+        this.handleKeyTyped('L', (byte) 88, (UiWidget) null, -112);
         return true;
     }
 

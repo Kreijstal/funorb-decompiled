@@ -118,7 +118,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         this.a((byte) -124, (UiWidget) (var2));
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -130,7 +130,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             AccountRequestDialog.j((byte) 84);
           }
           if (param3 != 13) {
-            stackIn_7_0 = super.a(param0, (byte) -94, param2, param3);
+            stackIn_7_0 = super.handleKeyTyped(param0, (byte) -94, param2, param3);
             return stackIn_7_0;
           }
           this.closeDialog(-115);

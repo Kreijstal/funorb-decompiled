@@ -364,7 +364,7 @@ final class PlayingView extends MatchPhaseView {
         return new LoginText(LobbyPlayerRow.a(320), TextLine.a(false));
     }
 
-    private final void c(int param0, int param1, int param2) {
+    private final void queueMouseMove(int param0, int param1, int param2) {
         int var8;
         int stackIn_10_0 = 0;
         int var4;
@@ -409,7 +409,7 @@ final class PlayingView extends MatchPhaseView {
         this.a((IntrusiveDeque) null, (byte) -126);
     }
 
-    private final void n(int param0) {
+    private final void pollMovementKeys(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_18_0 = 0;
@@ -610,7 +610,7 @@ final class PlayingView extends MatchPhaseView {
             if (var4.action == 1) {
               if (var2 == 0 &&
                 var3 == 0) {
-                this.c(this.field_z, this.field_G, -1);
+                this.queueMouseMove(this.field_z, this.field_G, -1);
               }
             } else {
               if (-1 != ArrayWidgetContainer.field_x ||
@@ -618,7 +618,7 @@ final class PlayingView extends MatchPhaseView {
                 if (!this.field_a.c(this.field_g, -115)) {
                   if (var2 != 0 &&
                     var4.d((byte) 102)) {
-                    this.c(this.field_z, this.field_G, -1);
+                    this.queueMouseMove(this.field_z, this.field_G, -1);
                     this.field_k = false;
                   }
                   if (this.field_m) {
@@ -1085,7 +1085,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final void k(int param0) {
+    private final void drawStartCountdown(int param0) {
         Sprite var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1299,7 +1299,7 @@ final class PlayingView extends MatchPhaseView {
         }
         if (this.field_f &&
           this.field_a.timeLimit < this.field_a.phaseTime) {
-          this.k(0);
+          this.drawStartCountdown(0);
         }
         if (this.isLocalParticipantActive((byte) 13) &&
           !this.field_l) {
@@ -1410,7 +1410,7 @@ final class PlayingView extends MatchPhaseView {
     final void update(int param0, boolean param1) {
         this.field_u = param1 ? true : false;
         if (this.field_u) {
-          this.n(-122);
+          this.pollMovementKeys(-122);
           this.pollLocalInput(16623);
         }
         if (this.field_g == this.field_a.field_V.field_j &&
@@ -1420,7 +1420,7 @@ final class PlayingView extends MatchPhaseView {
         this.a(true, this.field_a);
         if (this.field_a.bigHeadMode != this.field_n) {
           this.field_n = this.field_a.bigHeadMode;
-          this.j(-90);
+          this.refreshFootballerSprites(-90);
         }
         FootballerAgent var4 = this.field_a.getBallCarrier((byte) -96);
         if (var4 != null) {
@@ -1438,7 +1438,7 @@ final class PlayingView extends MatchPhaseView {
         PlayerShopScreen.a(false);
     }
 
-    private final void j(int param0) {
+    private final void refreshFootballerSprites(int param0) {
         int var6 = 0;
         int stackIn_27_0 = 0;
         int var2;

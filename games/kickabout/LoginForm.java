@@ -136,7 +136,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_12_0 = false;
@@ -148,7 +148,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (param1 > -60) {
             this.field_H = true;
           }
-          if (super.a(param0, (byte) -62, param2, param3)) {
+          if (super.handleKeyTyped(param0, (byte) -62, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
@@ -181,7 +181,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var3 = this.field_N;
           var4 = param0;
           int var5 = 25 % ((33 - param1) / 48);
-          var3.a(var4, (byte) -17, false);
+          var3.setInputText(var4, (byte) -17, false);
           this.field_J.clearInputText((byte) -41);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -375,7 +375,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     final String getUsername(int param0) {
         if (param0 <= 84) {
           UiWidget var3 = (UiWidget) null;
-          this.a('f', (byte) 111, (UiWidget) null, -119);
+          this.handleKeyTyped('f', (byte) 111, (UiWidget) null, -119);
         }
         if (null == this.field_N.field_q) {
           return "";

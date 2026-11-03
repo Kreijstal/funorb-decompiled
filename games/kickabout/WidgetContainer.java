@@ -938,7 +938,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         IntrusiveDequeCursor var5 = null;
         RuntimeException var5_ref = null;
         UiWidget var6_ref_fd = null;
@@ -969,7 +969,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
               }
               if (stackIn_7_0) {
                 if (var6_ref_fd.isFocused(52) &&
-                  var6_ref_fd.a(param0, (byte) -76, param2, param3)) {
+                  var6_ref_fd.handleKeyTyped(param0, (byte) -76, param2, param3)) {
                   return true;
                 }
                 var6_ref_fd = (UiWidget) (var5.a(0));

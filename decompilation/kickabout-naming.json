@@ -417,7 +417,7 @@
       "to": "regionExit1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:PlayingView.n(I)V#0"
+      "renamedSymbol": "B:PlayingView.pollMovementKeys(I)V#0"
     },
     {
       "symbol": "B:vi.a(II[[I[B)Z#0",
@@ -433,7 +433,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:WidgetContainer.a(CBLUiWidget;I)Z#0"
+      "renamedSymbol": "B:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#0"
     },
     {
       "symbol": "B:wj.a(ILfd;IIIII)Z#0",
@@ -4660,6 +4660,14 @@
       "renamedSymbol": "M:ad.loadLocalizedStrings(LResourceArchive;I)V"
     },
     {
+      "symbol": "M:ae.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z"
+    },
+    {
       "symbol": "M:ae.a(ILwi;IBI)V",
       "originalName": "a",
       "to": "onAction",
@@ -4794,6 +4802,14 @@
       "evidence": "Called once before the main loop: initialises the client, creates eh and the fullscreen controller. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameAppletShell.onStartup(B)V"
+    },
+    {
+      "symbol": "M:ai.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z"
     },
     {
       "symbol": "M:ai.a(ILwi;IBI)V",
@@ -5956,6 +5972,14 @@
       "renamedSymbol": "M:cr.drawWidget(IZILUiWidget;I)V"
     },
     {
+      "symbol": "M:ct.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z"
+    },
+    {
       "symbol": "M:ct.a(IIII)V",
       "originalName": "a",
       "to": "drawLayer",
@@ -6996,6 +7020,14 @@
       "renamedSymbol": "M:fc.releaseStatics(I)V"
     },
     {
+      "symbol": "M:fd.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiWidget.handleKeyTyped(CBLUiWidget;I)Z"
+    },
+    {
       "symbol": "M:fd.a(IIII)V",
       "originalName": "a",
       "to": "drawLayer",
@@ -7420,6 +7452,14 @@
       "renamedSymbol": "M:SoundEnvelope.decodeSegments(LPacketBuffer;)V"
     },
     {
+      "symbol": "M:fr.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z"
+    },
+    {
       "symbol": "M:fr.a(IIII)V",
       "originalName": "a",
       "to": "drawLayer",
@@ -7612,12 +7652,52 @@
       "renamedSymbol": "M:MyPitchScreen.pollServerConnection(B)I"
     },
     {
+      "symbol": "M:ga.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z"
+    },
+    {
+      "symbol": "M:ga.a(II)V",
+      "originalName": "a",
+      "to": "moveCaret",
+      "evidence": "Sets the caret index and collapses the selection anchor unless shift is held.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.moveCaret(II)V"
+    },
+    {
       "symbol": "M:ga.a(IIII)V",
       "originalName": "a",
       "to": "drawLayer",
       "evidence": "Matches escapevector/steelsentinels NameSuggestionsPanel.drawLayer by signature and body shape. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextInputWidget.drawLayer(IIII)V"
+    },
+    {
+      "symbol": "M:ga.a(Ljava/lang/String;BZ)V",
+      "originalName": "a",
+      "to": "setInputText",
+      "evidence": "Replaces the text with the argument truncated to the maximum length and moves the caret to the end.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.setInputText(Ljava/lang/String;BZ)V"
+    },
+    {
+      "symbol": "M:ga.a(Ljava/lang/String;Z)V",
+      "originalName": "a",
+      "to": "insertTextAtCaret",
+      "evidence": "Inserts the string at the caret within the maximum length and advances the caret.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V"
+    },
+    {
+      "symbol": "M:ga.a(Z)V",
+      "originalName": "a",
+      "to": "pasteFromClipboard",
+      "evidence": "Reads the system clipboard string and inserts it at the caret.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.pasteFromClipboard(Z)V"
     },
     {
       "symbol": "M:ga.a(ZIILfd;III)Z",
@@ -7628,12 +7708,36 @@
       "renamedSymbol": "M:TextInputWidget.handlePointerPress(ZIILUiWidget;III)Z"
     },
     {
+      "symbol": "M:ga.h(B)I",
+      "originalName": "h",
+      "to": "nextWordBoundary",
+      "evidence": "Returns the caret index after skipping to the next space-delimited word.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.nextWordBoundary(B)I"
+    },
+    {
       "symbol": "M:ga.i(B)V",
       "originalName": "i",
       "to": "clearInputText",
       "evidence": "Matches geoblox TextInputWidget.clearInputText by signature and body shape.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextInputWidget.clearInputText(B)V"
+    },
+    {
+      "symbol": "M:ga.i(I)V",
+      "originalName": "i",
+      "to": "deleteSelectedText",
+      "evidence": "Removes the text between the caret and anchor and collapses both to the start.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.deleteSelectedText(I)V"
+    },
+    {
+      "symbol": "M:ga.j(B)V",
+      "originalName": "j",
+      "to": "scrollCaretIntoView",
+      "evidence": "Adjusts the horizontal and vertical scroll offsets so the caret stays within the visible layout.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.scrollCaretIntoView(B)V"
     },
     {
       "symbol": "M:ga.k(B)V",
@@ -7650,6 +7754,14 @@
       "evidence": "Body closely matches geoblox TextInputWidget.getSelectedText.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextInputWidget.getSelectedText(I)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:ga.l(B)I",
+      "originalName": "l",
+      "to": "previousWordBoundary",
+      "evidence": "Returns the index of the start of the previous space-delimited word.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.previousWordBoundary(B)I"
     },
     {
       "symbol": "M:gb.a(IIII)V",
@@ -10796,6 +10908,14 @@
       "renamedSymbol": "M:NetworkGameClient.enableHandlerGroup5(I)V"
     },
     {
+      "symbol": "M:mb.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z"
+    },
+    {
       "symbol": "M:mb.a(ILcw;)Z",
       "originalName": "a",
       "to": "isFieldValid",
@@ -11082,6 +11202,14 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:mt.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:mu.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z"
     },
     {
       "symbol": "M:mu.k(I)Z",
@@ -11522,6 +11650,14 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AnimationClip.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:nn.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z"
     },
     {
       "symbol": "M:nn.a(IIII)V",
@@ -12322,6 +12458,14 @@
       "evidence": "Copies the pitch-end, per-footballer, per-player and nobody counters from another log.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LoggedPossession.copyFrom(ILLoggedPossession;)V"
+    },
+    {
+      "symbol": "M:pd.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LoginForm.handleKeyTyped(CBLUiWidget;I)Z"
     },
     {
       "symbol": "M:pd.a(I)Ljava/lang/String;",
@@ -15252,6 +15396,14 @@
       "renamedSymbol": "M:PlayingView.releaseStatics(B)V"
     },
     {
+      "symbol": "M:va.c(III)V",
+      "originalName": "c",
+      "to": "queueMouseMove",
+      "evidence": "Halves the offsets until they fit a byte then queues a mouse event for the controlled footballer and sends it online.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayingView.queueMouseMove(III)V"
+    },
+    {
       "symbol": "M:va.e(B)V",
       "originalName": "e",
       "to": "updateAimIndicator",
@@ -15298,6 +15450,30 @@
       "evidence": "Turns the pointer position and button state into movement targets and kick events for the controlled footballer.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlayingView.pollLocalInput(I)V"
+    },
+    {
+      "symbol": "M:va.j(I)V",
+      "originalName": "j",
+      "to": "refreshFootballerSprites",
+      "evidence": "Rebuilds each team member's sprite from the team colours, archetype and appearance fields.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayingView.refreshFootballerSprites(I)V"
+    },
+    {
+      "symbol": "M:va.k(I)V",
+      "originalName": "k",
+      "to": "drawStartCountdown",
+      "evidence": "Draws one of three sprites for 40 ticks each with a scale-and-fade, the 3-2-1 countdown at match start.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayingView.drawStartCountdown(I)V"
+    },
+    {
+      "symbol": "M:va.n(I)V",
+      "originalName": "n",
+      "to": "pollMovementKeys",
+      "evidence": "Reads the arrow and WASD key states, swaps them when the pitch is flipped and builds the direction bitmask.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayingView.pollMovementKeys(I)V"
     },
     {
       "symbol": "M:vc.a(ILiw;)Lvc;",
@@ -16364,6 +16540,14 @@
       "renamedSymbol": "M:FadingSoundPlayer.stepFadeIn(B)V"
     },
     {
+      "symbol": "M:wi.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextButton.handleKeyTyped(CBLUiWidget;I)Z"
+    },
+    {
       "symbol": "M:wi.a(IIILfd;II)V",
       "originalName": "a",
       "to": "handlePointerRelease",
@@ -16402,6 +16586,14 @@
       "evidence": "Matches escapevector/steelsentinels SingleChildContainer.layoutChild by signature and body shape. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextButton.layoutChild(I)V"
+    },
+    {
+      "symbol": "M:wj.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z"
     },
     {
       "symbol": "M:wj.a(IIII)V",
@@ -16604,6 +16796,14 @@
       "renamedSymbol": "M:ws.releaseStatics(I)V"
     },
     {
+      "symbol": "M:wt.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z"
+    },
+    {
       "symbol": "M:wt.a(IIII)V",
       "originalName": "a",
       "to": "drawLayer",
@@ -16674,6 +16874,14 @@
       "evidence": "Matches escapevector/steelsentinels SingleChildContainer.layoutChild by signature and body shape. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ArrayWidgetContainer.layoutChild(I)V"
+    },
+    {
+      "symbol": "M:wv.a(CBLfd;I)Z",
+      "originalName": "a",
+      "to": "handleKeyTyped",
+      "evidence": "Inserts printable characters, skips < and >, and replaces the selection when the caret and anchor differ. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z"
     },
     {
       "symbol": "M:wv.a(ILwi;IBI)V",
@@ -17256,7 +17464,7 @@
     },
     {
       "symbol": "B:va.n(I)V#0",
-      "renamedSymbol": "B:PlayingView.n(I)V#0",
+      "renamedSymbol": "B:PlayingView.pollMovementKeys(I)V#0",
       "originalName": "L16",
       "renamedName": "regionExit1",
       "declaration": {
@@ -17278,7 +17486,7 @@
     },
     {
       "symbol": "B:wj.a(CBLfd;I)Z#0",
-      "renamedSymbol": "B:WidgetContainer.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "B:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "L2",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -78647,7 +78855,7 @@
     },
     {
       "symbol": "L:ae.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -78658,7 +78866,7 @@
     },
     {
       "symbol": "L:ae.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -78669,7 +78877,7 @@
     },
     {
       "symbol": "L:ae.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -78680,7 +78888,7 @@
     },
     {
       "symbol": "L:ae.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -78691,7 +78899,7 @@
     },
     {
       "symbol": "L:ae.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -78702,7 +78910,7 @@
     },
     {
       "symbol": "L:ae.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -78713,7 +78921,7 @@
     },
     {
       "symbol": "L:ae.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -78724,7 +78932,7 @@
     },
     {
       "symbol": "L:ae.a(CBLfd;I)Z#7",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(CBLUiWidget;I)Z#7",
+      "renamedSymbol": "L:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -81881,7 +82089,7 @@
     },
     {
       "symbol": "L:ai.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:AccountTermsPanel.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -81892,7 +82100,7 @@
     },
     {
       "symbol": "L:ai.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:AccountTermsPanel.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -81903,7 +82111,7 @@
     },
     {
       "symbol": "L:ai.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:AccountTermsPanel.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -81914,7 +82122,7 @@
     },
     {
       "symbol": "L:ai.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:AccountTermsPanel.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -81925,7 +82133,7 @@
     },
     {
       "symbol": "L:ai.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:AccountTermsPanel.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -81936,7 +82144,7 @@
     },
     {
       "symbol": "L:ai.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:AccountTermsPanel.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -81947,7 +82155,7 @@
     },
     {
       "symbol": "L:ai.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:AccountTermsPanel.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -81958,7 +82166,7 @@
     },
     {
       "symbol": "L:ai.a(CBLfd;I)Z#7",
-      "renamedSymbol": "L:AccountTermsPanel.a(CBLUiWidget;I)Z#7",
+      "renamedSymbol": "L:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -103540,7 +103748,7 @@
     },
     {
       "symbol": "L:ct.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:SingleChildContainer.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -103551,7 +103759,7 @@
     },
     {
       "symbol": "L:ct.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:SingleChildContainer.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -103562,7 +103770,7 @@
     },
     {
       "symbol": "L:ct.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:SingleChildContainer.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -103573,7 +103781,7 @@
     },
     {
       "symbol": "L:ct.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:SingleChildContainer.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -103584,7 +103792,7 @@
     },
     {
       "symbol": "L:ct.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:SingleChildContainer.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -103595,7 +103803,7 @@
     },
     {
       "symbol": "L:ct.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:SingleChildContainer.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -103606,7 +103814,7 @@
     },
     {
       "symbol": "L:ct.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:SingleChildContainer.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -103617,7 +103825,7 @@
     },
     {
       "symbol": "L:ct.a(CBLfd;I)Z#7",
-      "renamedSymbol": "L:SingleChildContainer.a(CBLUiWidget;I)Z#7",
+      "renamedSymbol": "L:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -129049,7 +129257,7 @@
     },
     {
       "symbol": "L:fd.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:UiWidget.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:UiWidget.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -129060,7 +129268,7 @@
     },
     {
       "symbol": "L:fd.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:UiWidget.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:UiWidget.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -129071,7 +129279,7 @@
     },
     {
       "symbol": "L:fd.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:UiWidget.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:UiWidget.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -129082,7 +129290,7 @@
     },
     {
       "symbol": "L:fd.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:UiWidget.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:UiWidget.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -129093,7 +129301,7 @@
     },
     {
       "symbol": "L:fd.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:UiWidget.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:UiWidget.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -129104,7 +129312,7 @@
     },
     {
       "symbol": "L:fd.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:UiWidget.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:UiWidget.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -134318,7 +134526,7 @@
     },
     {
       "symbol": "L:fr.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:NameSuggestionsPanel.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -134329,7 +134537,7 @@
     },
     {
       "symbol": "L:fr.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:NameSuggestionsPanel.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -134340,7 +134548,7 @@
     },
     {
       "symbol": "L:fr.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:NameSuggestionsPanel.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -134351,7 +134559,7 @@
     },
     {
       "symbol": "L:fr.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:NameSuggestionsPanel.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -134362,7 +134570,7 @@
     },
     {
       "symbol": "L:fr.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:NameSuggestionsPanel.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -134373,7 +134581,7 @@
     },
     {
       "symbol": "L:fr.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:NameSuggestionsPanel.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -134384,7 +134592,7 @@
     },
     {
       "symbol": "L:fr.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:NameSuggestionsPanel.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -134395,7 +134603,7 @@
     },
     {
       "symbol": "L:fr.a(CBLfd;I)Z#7",
-      "renamedSymbol": "L:NameSuggestionsPanel.a(CBLUiWidget;I)Z#7",
+      "renamedSymbol": "L:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136386,7 +136594,7 @@
     },
     {
       "symbol": "L:ga.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:TextInputWidget.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -136397,7 +136605,7 @@
     },
     {
       "symbol": "L:ga.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:TextInputWidget.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -136408,7 +136616,7 @@
     },
     {
       "symbol": "L:ga.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:TextInputWidget.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_40_1",
       "renamedName": "stackIn_40_1",
       "declaration": {
@@ -136419,7 +136627,7 @@
     },
     {
       "symbol": "L:ga.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:TextInputWidget.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_80_0",
       "renamedName": "stackIn_80_0",
       "declaration": {
@@ -136430,7 +136638,7 @@
     },
     {
       "symbol": "L:ga.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:TextInputWidget.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "stackIn_80_1",
       "renamedName": "stackIn_80_1",
       "declaration": {
@@ -136441,7 +136649,7 @@
     },
     {
       "symbol": "L:ga.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:TextInputWidget.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "stackIn_81_2",
       "renamedName": "stackIn_81_2",
       "declaration": {
@@ -136452,7 +136660,7 @@
     },
     {
       "symbol": "L:ga.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:TextInputWidget.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -136463,7 +136671,7 @@
     },
     {
       "symbol": "L:ga.a(CBLfd;I)Z#7",
-      "renamedSymbol": "L:TextInputWidget.a(CBLUiWidget;I)Z#7",
+      "renamedSymbol": "L:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -136474,7 +136682,7 @@
     },
     {
       "symbol": "L:ga.a(CBLfd;I)Z#8",
-      "renamedSymbol": "L:TextInputWidget.a(CBLUiWidget;I)Z#8",
+      "renamedSymbol": "L:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136507,7 +136715,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;BZ)V#0",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;BZ)V#0",
+      "renamedSymbol": "L:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#0",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -136518,7 +136726,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;BZ)V#1",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;BZ)V#1",
+      "renamedSymbol": "L:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#1",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -136529,7 +136737,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;BZ)V#2",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;BZ)V#2",
+      "renamedSymbol": "L:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#2",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -136540,7 +136748,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;BZ)V#3",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;BZ)V#3",
+      "renamedSymbol": "L:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#3",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -136551,7 +136759,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;BZ)V#4",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;BZ)V#4",
+      "renamedSymbol": "L:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#4",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -136562,7 +136770,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;BZ)V#5",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;BZ)V#5",
+      "renamedSymbol": "L:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -136573,7 +136781,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;BZ)V#6",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;BZ)V#6",
+      "renamedSymbol": "L:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -136584,7 +136792,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;BZ)V#7",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;BZ)V#7",
+      "renamedSymbol": "L:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136595,7 +136803,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;Z)V#0",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;Z)V#0",
+      "renamedSymbol": "L:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -136606,7 +136814,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;Z)V#1",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;Z)V#1",
+      "renamedSymbol": "L:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -136617,7 +136825,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;Z)V#2",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;Z)V#2",
+      "renamedSymbol": "L:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V#2",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -136628,7 +136836,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;Z)V#3",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;Z)V#3",
+      "renamedSymbol": "L:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V#3",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -136639,7 +136847,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;Z)V#4",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;Z)V#4",
+      "renamedSymbol": "L:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V#4",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -136650,7 +136858,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;Z)V#5",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;Z)V#5",
+      "renamedSymbol": "L:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -136661,7 +136869,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;Z)V#6",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;Z)V#6",
+      "renamedSymbol": "L:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136672,7 +136880,7 @@
     },
     {
       "symbol": "L:ga.a(Ljava/lang/String;Z)V#7",
-      "renamedSymbol": "L:TextInputWidget.a(Ljava/lang/String;Z)V#7",
+      "renamedSymbol": "L:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136771,7 +136979,7 @@
     },
     {
       "symbol": "L:ga.a(Z)V#0",
-      "renamedSymbol": "L:TextInputWidget.a(Z)V#0",
+      "renamedSymbol": "L:TextInputWidget.pasteFromClipboard(Z)V#0",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -136782,7 +136990,7 @@
     },
     {
       "symbol": "L:ga.a(Z)V#1",
-      "renamedSymbol": "L:TextInputWidget.a(Z)V#1",
+      "renamedSymbol": "L:TextInputWidget.pasteFromClipboard(Z)V#1",
       "originalName": "stackIn_5_2",
       "renamedName": "stackIn_5_2",
       "declaration": {
@@ -136793,7 +137001,7 @@
     },
     {
       "symbol": "L:ga.a(Z)V#2",
-      "renamedSymbol": "L:TextInputWidget.a(Z)V#2",
+      "renamedSymbol": "L:TextInputWidget.pasteFromClipboard(Z)V#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -136804,7 +137012,7 @@
     },
     {
       "symbol": "L:ga.a(Z)V#3",
-      "renamedSymbol": "L:TextInputWidget.a(Z)V#3",
+      "renamedSymbol": "L:TextInputWidget.pasteFromClipboard(Z)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136815,7 +137023,7 @@
     },
     {
       "symbol": "L:ga.a(Z)V#4",
-      "renamedSymbol": "L:TextInputWidget.a(Z)V#4",
+      "renamedSymbol": "L:TextInputWidget.pasteFromClipboard(Z)V#4",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -136826,7 +137034,7 @@
     },
     {
       "symbol": "L:ga.a(Z)V#5",
-      "renamedSymbol": "L:TextInputWidget.a(Z)V#5",
+      "renamedSymbol": "L:TextInputWidget.pasteFromClipboard(Z)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136837,7 +137045,7 @@
     },
     {
       "symbol": "L:ga.a(Z)V#6",
-      "renamedSymbol": "L:TextInputWidget.a(Z)V#6",
+      "renamedSymbol": "L:TextInputWidget.pasteFromClipboard(Z)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136848,7 +137056,7 @@
     },
     {
       "symbol": "L:ga.a(Z)V#7",
-      "renamedSymbol": "L:TextInputWidget.a(Z)V#7",
+      "renamedSymbol": "L:TextInputWidget.pasteFromClipboard(Z)V#7",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -136859,7 +137067,7 @@
     },
     {
       "symbol": "L:ga.a(Z)V#8",
-      "renamedSymbol": "L:TextInputWidget.a(Z)V#8",
+      "renamedSymbol": "L:TextInputWidget.pasteFromClipboard(Z)V#8",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -137068,7 +137276,7 @@
     },
     {
       "symbol": "L:ga.h(B)I#0",
-      "renamedSymbol": "L:TextInputWidget.h(B)I#0",
+      "renamedSymbol": "L:TextInputWidget.nextWordBoundary(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -137079,7 +137287,7 @@
     },
     {
       "symbol": "L:ga.h(B)I#1",
-      "renamedSymbol": "L:TextInputWidget.h(B)I#1",
+      "renamedSymbol": "L:TextInputWidget.nextWordBoundary(B)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -137090,7 +137298,7 @@
     },
     {
       "symbol": "L:ga.h(B)I#2",
-      "renamedSymbol": "L:TextInputWidget.h(B)I#2",
+      "renamedSymbol": "L:TextInputWidget.nextWordBoundary(B)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -137101,7 +137309,7 @@
     },
     {
       "symbol": "L:ga.i(I)V#0",
-      "renamedSymbol": "L:TextInputWidget.i(I)V#0",
+      "renamedSymbol": "L:TextInputWidget.deleteSelectedText(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -137112,7 +137320,7 @@
     },
     {
       "symbol": "L:ga.i(I)V#1",
-      "renamedSymbol": "L:TextInputWidget.i(I)V#1",
+      "renamedSymbol": "L:TextInputWidget.deleteSelectedText(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -137123,7 +137331,7 @@
     },
     {
       "symbol": "L:ga.i(I)V#2",
-      "renamedSymbol": "L:TextInputWidget.i(I)V#2",
+      "renamedSymbol": "L:TextInputWidget.deleteSelectedText(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -137134,7 +137342,7 @@
     },
     {
       "symbol": "L:ga.j(B)V#0",
-      "renamedSymbol": "L:TextInputWidget.j(B)V#0",
+      "renamedSymbol": "L:TextInputWidget.scrollCaretIntoView(B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -137145,7 +137353,7 @@
     },
     {
       "symbol": "L:ga.j(B)V#1",
-      "renamedSymbol": "L:TextInputWidget.j(B)V#1",
+      "renamedSymbol": "L:TextInputWidget.scrollCaretIntoView(B)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -137156,7 +137364,7 @@
     },
     {
       "symbol": "L:ga.j(B)V#2",
-      "renamedSymbol": "L:TextInputWidget.j(B)V#2",
+      "renamedSymbol": "L:TextInputWidget.scrollCaretIntoView(B)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -137167,7 +137375,7 @@
     },
     {
       "symbol": "L:ga.j(B)V#3",
-      "renamedSymbol": "L:TextInputWidget.j(B)V#3",
+      "renamedSymbol": "L:TextInputWidget.scrollCaretIntoView(B)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -137178,7 +137386,7 @@
     },
     {
       "symbol": "L:ga.j(B)V#4",
-      "renamedSymbol": "L:TextInputWidget.j(B)V#4",
+      "renamedSymbol": "L:TextInputWidget.scrollCaretIntoView(B)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -137189,7 +137397,7 @@
     },
     {
       "symbol": "L:ga.j(B)V#5",
-      "renamedSymbol": "L:TextInputWidget.j(B)V#5",
+      "renamedSymbol": "L:TextInputWidget.scrollCaretIntoView(B)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -137200,7 +137408,7 @@
     },
     {
       "symbol": "L:ga.j(B)V#6",
-      "renamedSymbol": "L:TextInputWidget.j(B)V#6",
+      "renamedSymbol": "L:TextInputWidget.scrollCaretIntoView(B)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -137211,7 +137419,7 @@
     },
     {
       "symbol": "L:ga.j(B)V#7",
-      "renamedSymbol": "L:TextInputWidget.j(B)V#7",
+      "renamedSymbol": "L:TextInputWidget.scrollCaretIntoView(B)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -137255,7 +137463,7 @@
     },
     {
       "symbol": "L:ga.l(B)I#0",
-      "renamedSymbol": "L:TextInputWidget.l(B)I#0",
+      "renamedSymbol": "L:TextInputWidget.previousWordBoundary(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -137266,7 +137474,7 @@
     },
     {
       "symbol": "L:ga.l(B)I#1",
-      "renamedSymbol": "L:TextInputWidget.l(B)I#1",
+      "renamedSymbol": "L:TextInputWidget.previousWordBoundary(B)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -203618,7 +203826,7 @@
     },
     {
       "symbol": "L:mb.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:DisplayNameForm.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -203629,7 +203837,7 @@
     },
     {
       "symbol": "L:mb.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:DisplayNameForm.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -203640,7 +203848,7 @@
     },
     {
       "symbol": "L:mb.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:DisplayNameForm.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -203651,7 +203859,7 @@
     },
     {
       "symbol": "L:mb.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:DisplayNameForm.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -203662,7 +203870,7 @@
     },
     {
       "symbol": "L:mb.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:DisplayNameForm.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -203673,7 +203881,7 @@
     },
     {
       "symbol": "L:mb.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:DisplayNameForm.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -203684,7 +203892,7 @@
     },
     {
       "symbol": "L:mb.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:DisplayNameForm.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -203695,7 +203903,7 @@
     },
     {
       "symbol": "L:mb.a(CBLfd;I)Z#7",
-      "renamedSymbol": "L:DisplayNameForm.a(CBLUiWidget;I)Z#7",
+      "renamedSymbol": "L:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -209745,7 +209953,7 @@
     },
     {
       "symbol": "L:mu.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:ContentTransitionDialog.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -209756,7 +209964,7 @@
     },
     {
       "symbol": "L:mu.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:ContentTransitionDialog.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -209767,7 +209975,7 @@
     },
     {
       "symbol": "L:mu.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:ContentTransitionDialog.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -209778,7 +209986,7 @@
     },
     {
       "symbol": "L:mu.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:ContentTransitionDialog.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -209789,7 +209997,7 @@
     },
     {
       "symbol": "L:mu.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:ContentTransitionDialog.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -209800,7 +210008,7 @@
     },
     {
       "symbol": "L:mu.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:ContentTransitionDialog.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -218699,7 +218907,7 @@
     },
     {
       "symbol": "L:nn.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:AccountChoicePanel.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -218710,7 +218918,7 @@
     },
     {
       "symbol": "L:nn.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:AccountChoicePanel.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -218721,7 +218929,7 @@
     },
     {
       "symbol": "L:nn.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:AccountChoicePanel.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -218732,7 +218940,7 @@
     },
     {
       "symbol": "L:nn.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:AccountChoicePanel.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -218743,7 +218951,7 @@
     },
     {
       "symbol": "L:nn.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:AccountChoicePanel.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -218754,7 +218962,7 @@
     },
     {
       "symbol": "L:nn.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:AccountChoicePanel.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -218765,7 +218973,7 @@
     },
     {
       "symbol": "L:nn.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:AccountChoicePanel.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -218776,7 +218984,7 @@
     },
     {
       "symbol": "L:nn.a(CBLfd;I)Z#7",
-      "renamedSymbol": "L:AccountChoicePanel.a(CBLUiWidget;I)Z#7",
+      "renamedSymbol": "L:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -248014,7 +248222,7 @@
     },
     {
       "symbol": "L:pd.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:LoginForm.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -248025,7 +248233,7 @@
     },
     {
       "symbol": "L:pd.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:LoginForm.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -248036,7 +248244,7 @@
     },
     {
       "symbol": "L:pd.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:LoginForm.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -248047,7 +248255,7 @@
     },
     {
       "symbol": "L:pd.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:LoginForm.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -248058,7 +248266,7 @@
     },
     {
       "symbol": "L:pd.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:LoginForm.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -248069,7 +248277,7 @@
     },
     {
       "symbol": "L:pd.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:LoginForm.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -248080,7 +248288,7 @@
     },
     {
       "symbol": "L:pd.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:LoginForm.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -248091,7 +248299,7 @@
     },
     {
       "symbol": "L:pd.a(CBLfd;I)Z#7",
-      "renamedSymbol": "L:LoginForm.a(CBLUiWidget;I)Z#7",
+      "renamedSymbol": "L:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -315070,7 +315278,7 @@
     },
     {
       "symbol": "L:va.c(III)V#0",
-      "renamedSymbol": "L:PlayingView.c(III)V#0",
+      "renamedSymbol": "L:PlayingView.queueMouseMove(III)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -315081,7 +315289,7 @@
     },
     {
       "symbol": "L:va.c(III)V#1",
-      "renamedSymbol": "L:PlayingView.c(III)V#1",
+      "renamedSymbol": "L:PlayingView.queueMouseMove(III)V#1",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -315092,7 +315300,7 @@
     },
     {
       "symbol": "L:va.c(III)V#2",
-      "renamedSymbol": "L:PlayingView.c(III)V#2",
+      "renamedSymbol": "L:PlayingView.queueMouseMove(III)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -315103,7 +315311,7 @@
     },
     {
       "symbol": "L:va.c(III)V#3",
-      "renamedSymbol": "L:PlayingView.c(III)V#3",
+      "renamedSymbol": "L:PlayingView.queueMouseMove(III)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -315114,7 +315322,7 @@
     },
     {
       "symbol": "L:va.c(III)V#4",
-      "renamedSymbol": "L:PlayingView.c(III)V#4",
+      "renamedSymbol": "L:PlayingView.queueMouseMove(III)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -315125,7 +315333,7 @@
     },
     {
       "symbol": "L:va.c(III)V#5",
-      "renamedSymbol": "L:PlayingView.c(III)V#5",
+      "renamedSymbol": "L:PlayingView.queueMouseMove(III)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -315532,7 +315740,7 @@
     },
     {
       "symbol": "L:va.j(I)V#0",
-      "renamedSymbol": "L:PlayingView.j(I)V#0",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -315543,7 +315751,7 @@
     },
     {
       "symbol": "L:va.j(I)V#1",
-      "renamedSymbol": "L:PlayingView.j(I)V#1",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#1",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -315554,7 +315762,7 @@
     },
     {
       "symbol": "L:va.j(I)V#10",
-      "renamedSymbol": "L:PlayingView.j(I)V#10",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#10",
       "originalName": "var11_ref_up",
       "renamedName": "var11_ref_up",
       "declaration": {
@@ -315565,7 +315773,7 @@
     },
     {
       "symbol": "L:va.j(I)V#11",
-      "renamedSymbol": "L:PlayingView.j(I)V#11",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#11",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -315576,7 +315784,7 @@
     },
     {
       "symbol": "L:va.j(I)V#12",
-      "renamedSymbol": "L:PlayingView.j(I)V#12",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#12",
       "originalName": "var12_int",
       "renamedName": "var12_int",
       "declaration": {
@@ -315587,7 +315795,7 @@
     },
     {
       "symbol": "L:va.j(I)V#13",
-      "renamedSymbol": "L:PlayingView.j(I)V#13",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -315598,7 +315806,7 @@
     },
     {
       "symbol": "L:va.j(I)V#14",
-      "renamedSymbol": "L:PlayingView.j(I)V#14",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -315609,7 +315817,7 @@
     },
     {
       "symbol": "L:va.j(I)V#2",
-      "renamedSymbol": "L:PlayingView.j(I)V#2",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -315620,7 +315828,7 @@
     },
     {
       "symbol": "L:va.j(I)V#3",
-      "renamedSymbol": "L:PlayingView.j(I)V#3",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -315631,7 +315839,7 @@
     },
     {
       "symbol": "L:va.j(I)V#4",
-      "renamedSymbol": "L:PlayingView.j(I)V#4",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -315642,7 +315850,7 @@
     },
     {
       "symbol": "L:va.j(I)V#5",
-      "renamedSymbol": "L:PlayingView.j(I)V#5",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -315653,7 +315861,7 @@
     },
     {
       "symbol": "L:va.j(I)V#6",
-      "renamedSymbol": "L:PlayingView.j(I)V#6",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -315664,7 +315872,7 @@
     },
     {
       "symbol": "L:va.j(I)V#7",
-      "renamedSymbol": "L:PlayingView.j(I)V#7",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -315675,7 +315883,7 @@
     },
     {
       "symbol": "L:va.j(I)V#8",
-      "renamedSymbol": "L:PlayingView.j(I)V#8",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -315686,7 +315894,7 @@
     },
     {
       "symbol": "L:va.j(I)V#9",
-      "renamedSymbol": "L:PlayingView.j(I)V#9",
+      "renamedSymbol": "L:PlayingView.refreshFootballerSprites(I)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -315697,7 +315905,7 @@
     },
     {
       "symbol": "L:va.k(I)V#0",
-      "renamedSymbol": "L:PlayingView.k(I)V#0",
+      "renamedSymbol": "L:PlayingView.drawStartCountdown(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -315708,7 +315916,7 @@
     },
     {
       "symbol": "L:va.k(I)V#1",
-      "renamedSymbol": "L:PlayingView.k(I)V#1",
+      "renamedSymbol": "L:PlayingView.drawStartCountdown(I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -315719,7 +315927,7 @@
     },
     {
       "symbol": "L:va.k(I)V#2",
-      "renamedSymbol": "L:PlayingView.k(I)V#2",
+      "renamedSymbol": "L:PlayingView.drawStartCountdown(I)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -315730,7 +315938,7 @@
     },
     {
       "symbol": "L:va.k(I)V#3",
-      "renamedSymbol": "L:PlayingView.k(I)V#3",
+      "renamedSymbol": "L:PlayingView.drawStartCountdown(I)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -315741,7 +315949,7 @@
     },
     {
       "symbol": "L:va.k(I)V#4",
-      "renamedSymbol": "L:PlayingView.k(I)V#4",
+      "renamedSymbol": "L:PlayingView.drawStartCountdown(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -315752,7 +315960,7 @@
     },
     {
       "symbol": "L:va.k(I)V#5",
-      "renamedSymbol": "L:PlayingView.k(I)V#5",
+      "renamedSymbol": "L:PlayingView.drawStartCountdown(I)V#5",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -316159,7 +316367,7 @@
     },
     {
       "symbol": "L:va.n(I)V#0",
-      "renamedSymbol": "L:PlayingView.n(I)V#0",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -316170,7 +316378,7 @@
     },
     {
       "symbol": "L:va.n(I)V#1",
-      "renamedSymbol": "L:PlayingView.n(I)V#1",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#1",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -316181,7 +316389,7 @@
     },
     {
       "symbol": "L:va.n(I)V#10",
-      "renamedSymbol": "L:PlayingView.n(I)V#10",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -316192,7 +316400,7 @@
     },
     {
       "symbol": "L:va.n(I)V#11",
-      "renamedSymbol": "L:PlayingView.n(I)V#11",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -316203,7 +316411,7 @@
     },
     {
       "symbol": "L:va.n(I)V#12",
-      "renamedSymbol": "L:PlayingView.n(I)V#12",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -316214,7 +316422,7 @@
     },
     {
       "symbol": "L:va.n(I)V#13",
-      "renamedSymbol": "L:PlayingView.n(I)V#13",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -316225,7 +316433,7 @@
     },
     {
       "symbol": "L:va.n(I)V#14",
-      "renamedSymbol": "L:PlayingView.n(I)V#14",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#14",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -316236,7 +316444,7 @@
     },
     {
       "symbol": "L:va.n(I)V#15",
-      "renamedSymbol": "L:PlayingView.n(I)V#15",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#15",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -316247,7 +316455,7 @@
     },
     {
       "symbol": "L:va.n(I)V#2",
-      "renamedSymbol": "L:PlayingView.n(I)V#2",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#2",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -316258,7 +316466,7 @@
     },
     {
       "symbol": "L:va.n(I)V#3",
-      "renamedSymbol": "L:PlayingView.n(I)V#3",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#3",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -316269,7 +316477,7 @@
     },
     {
       "symbol": "L:va.n(I)V#4",
-      "renamedSymbol": "L:PlayingView.n(I)V#4",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -316280,7 +316488,7 @@
     },
     {
       "symbol": "L:va.n(I)V#5",
-      "renamedSymbol": "L:PlayingView.n(I)V#5",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -316291,7 +316499,7 @@
     },
     {
       "symbol": "L:va.n(I)V#6",
-      "renamedSymbol": "L:PlayingView.n(I)V#6",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -316302,7 +316510,7 @@
     },
     {
       "symbol": "L:va.n(I)V#7",
-      "renamedSymbol": "L:PlayingView.n(I)V#7",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -316313,7 +316521,7 @@
     },
     {
       "symbol": "L:va.n(I)V#8",
-      "renamedSymbol": "L:PlayingView.n(I)V#8",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -316324,7 +316532,7 @@
     },
     {
       "symbol": "L:va.n(I)V#9",
-      "renamedSymbol": "L:PlayingView.n(I)V#9",
+      "renamedSymbol": "L:PlayingView.pollMovementKeys(I)V#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -331581,7 +331789,7 @@
     },
     {
       "symbol": "L:wi.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:TextButton.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:TextButton.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -331592,7 +331800,7 @@
     },
     {
       "symbol": "L:wi.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:TextButton.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:TextButton.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -331603,7 +331811,7 @@
     },
     {
       "symbol": "L:wi.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:TextButton.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:TextButton.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -331614,7 +331822,7 @@
     },
     {
       "symbol": "L:wi.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:TextButton.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:TextButton.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -331625,7 +331833,7 @@
     },
     {
       "symbol": "L:wi.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:TextButton.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:TextButton.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -331636,7 +331844,7 @@
     },
     {
       "symbol": "L:wi.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:TextButton.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:TextButton.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -332186,7 +332394,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -332197,7 +332405,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -332208,7 +332416,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#10",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#10",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#10",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -332219,7 +332427,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#11",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#11",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -332230,7 +332438,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#12",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#12",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#12",
       "originalName": "stackOut_6_0",
       "renamedName": "stackOut_6_0",
       "declaration": {
@@ -332241,7 +332449,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#13",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#13",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -332252,7 +332460,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "var6_ref_fd",
       "renamedName": "var6_ref_fd",
       "declaration": {
@@ -332263,7 +332471,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -332274,7 +332482,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -332285,7 +332493,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -332296,7 +332504,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -332307,7 +332515,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#7",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#7",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#7",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -332318,7 +332526,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#8",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#8",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#8",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -332329,7 +332537,7 @@
     },
     {
       "symbol": "L:wj.a(CBLfd;I)Z#9",
-      "renamedSymbol": "L:WidgetContainer.a(CBLUiWidget;I)Z#9",
+      "renamedSymbol": "L:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#9",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -340007,7 +340215,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -340018,7 +340226,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -340029,7 +340237,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#10",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#10",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#10",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -340040,7 +340248,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#11",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#11",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -340051,7 +340259,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#12",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#12",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -340062,7 +340270,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -340073,7 +340281,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -340084,7 +340292,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -340095,7 +340303,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -340106,7 +340314,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -340117,7 +340325,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#7",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#7",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#7",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -340128,7 +340336,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#8",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#8",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#8",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -340139,7 +340347,7 @@
     },
     {
       "symbol": "L:wt.a(CBLfd;I)Z#9",
-      "renamedSymbol": "L:ArrayWidgetContainer.a(CBLUiWidget;I)Z#9",
+      "renamedSymbol": "L:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#9",
       "originalName": "stackIn_22_1",
       "renamedName": "stackIn_22_1",
       "declaration": {
@@ -342141,7 +342349,7 @@
     },
     {
       "symbol": "L:wv.a(CBLfd;I)Z#0",
-      "renamedSymbol": "L:AccountRequestDialog.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "L:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -342152,7 +342360,7 @@
     },
     {
       "symbol": "L:wv.a(CBLfd;I)Z#1",
-      "renamedSymbol": "L:AccountRequestDialog.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "L:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -342163,7 +342371,7 @@
     },
     {
       "symbol": "L:wv.a(CBLfd;I)Z#2",
-      "renamedSymbol": "L:AccountRequestDialog.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "L:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -342174,7 +342382,7 @@
     },
     {
       "symbol": "L:wv.a(CBLfd;I)Z#3",
-      "renamedSymbol": "L:AccountRequestDialog.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "L:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -342185,7 +342393,7 @@
     },
     {
       "symbol": "L:wv.a(CBLfd;I)Z#4",
-      "renamedSymbol": "L:AccountRequestDialog.a(CBLUiWidget;I)Z#4",
+      "renamedSymbol": "L:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#4",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -342196,7 +342404,7 @@
     },
     {
       "symbol": "L:wv.a(CBLfd;I)Z#5",
-      "renamedSymbol": "L:AccountRequestDialog.a(CBLUiWidget;I)Z#5",
+      "renamedSymbol": "L:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -342207,7 +342415,7 @@
     },
     {
       "symbol": "L:wv.a(CBLfd;I)Z#6",
-      "renamedSymbol": "L:AccountRequestDialog.a(CBLUiWidget;I)Z#6",
+      "renamedSymbol": "L:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -343032,9 +343240,9 @@
     },
     {
       "symbol": "M:ae.a(CBLfd;I)Z",
-      "renamedSymbol": "M:AccountRegistrationPanel.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "ae.java",
         "start": 22332,
@@ -343681,9 +343889,9 @@
     },
     {
       "symbol": "M:ai.a(CBLfd;I)Z",
-      "renamedSymbol": "M:AccountTermsPanel.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "ai.java",
         "start": 2612,
@@ -348510,9 +348718,9 @@
     },
     {
       "symbol": "M:ct.a(CBLfd;I)Z",
-      "renamedSymbol": "M:SingleChildContainer.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "ct.java",
         "start": 3854,
@@ -352998,9 +353206,9 @@
     },
     {
       "symbol": "M:fd.a(CBLfd;I)Z",
-      "renamedSymbol": "M:UiWidget.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:UiWidget.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "fd.java",
         "start": 9856,
@@ -354274,9 +354482,9 @@
     },
     {
       "symbol": "M:fr.a(CBLfd;I)Z",
-      "renamedSymbol": "M:NameSuggestionsPanel.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "fr.java",
         "start": 4669,
@@ -354747,9 +354955,9 @@
     },
     {
       "symbol": "M:ga.a(CBLfd;I)Z",
-      "renamedSymbol": "M:TextInputWidget.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "ga.java",
         "start": 12795,
@@ -354758,9 +354966,9 @@
     },
     {
       "symbol": "M:ga.a(II)V",
-      "renamedSymbol": "M:TextInputWidget.a(II)V",
+      "renamedSymbol": "M:TextInputWidget.moveCaret(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "moveCaret",
       "declaration": {
         "file": "ga.java",
         "start": 501,
@@ -354780,9 +354988,9 @@
     },
     {
       "symbol": "M:ga.a(Ljava/lang/String;BZ)V",
-      "renamedSymbol": "M:TextInputWidget.a(Ljava/lang/String;BZ)V",
+      "renamedSymbol": "M:TextInputWidget.setInputText(Ljava/lang/String;BZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setInputText",
       "declaration": {
         "file": "ga.java",
         "start": 4692,
@@ -354791,9 +354999,9 @@
     },
     {
       "symbol": "M:ga.a(Ljava/lang/String;Z)V",
-      "renamedSymbol": "M:TextInputWidget.a(Ljava/lang/String;Z)V",
+      "renamedSymbol": "M:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "insertTextAtCaret",
       "declaration": {
         "file": "ga.java",
         "start": 18648,
@@ -354813,9 +355021,9 @@
     },
     {
       "symbol": "M:ga.a(Z)V",
-      "renamedSymbol": "M:TextInputWidget.a(Z)V",
+      "renamedSymbol": "M:TextInputWidget.pasteFromClipboard(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pasteFromClipboard",
       "declaration": {
         "file": "ga.java",
         "start": 3277,
@@ -354846,9 +355054,9 @@
     },
     {
       "symbol": "M:ga.h(B)I",
-      "renamedSymbol": "M:TextInputWidget.h(B)I",
+      "renamedSymbol": "M:TextInputWidget.nextWordBoundary(B)I",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "nextWordBoundary",
       "declaration": {
         "file": "ga.java",
         "start": 18142,
@@ -354868,9 +355076,9 @@
     },
     {
       "symbol": "M:ga.i(I)V",
-      "renamedSymbol": "M:TextInputWidget.i(I)V",
+      "renamedSymbol": "M:TextInputWidget.deleteSelectedText(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "deleteSelectedText",
       "declaration": {
         "file": "ga.java",
         "start": 7006,
@@ -354879,9 +355087,9 @@
     },
     {
       "symbol": "M:ga.j(B)V",
-      "renamedSymbol": "M:TextInputWidget.j(B)V",
+      "renamedSymbol": "M:TextInputWidget.scrollCaretIntoView(B)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "scrollCaretIntoView",
       "declaration": {
         "file": "ga.java",
         "start": 20368,
@@ -354923,9 +355131,9 @@
     },
     {
       "symbol": "M:ga.l(B)I",
-      "renamedSymbol": "M:TextInputWidget.l(B)I",
+      "renamedSymbol": "M:TextInputWidget.previousWordBoundary(B)I",
       "originalName": "l",
-      "renamedName": "l",
+      "renamedName": "previousWordBoundary",
       "declaration": {
         "file": "ga.java",
         "start": 17541,
@@ -367210,9 +367418,9 @@
     },
     {
       "symbol": "M:mb.a(CBLfd;I)Z",
-      "renamedSymbol": "M:DisplayNameForm.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "mb.java",
         "start": 4437,
@@ -368629,9 +368837,9 @@
     },
     {
       "symbol": "M:mu.a(CBLfd;I)Z",
-      "renamedSymbol": "M:ContentTransitionDialog.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "mu.java",
         "start": 1628,
@@ -370235,9 +370443,9 @@
     },
     {
       "symbol": "M:nn.a(CBLfd;I)Z",
-      "renamedSymbol": "M:AccountChoicePanel.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "nn.java",
         "start": 3684,
@@ -374107,9 +374315,9 @@
     },
     {
       "symbol": "M:pd.a(CBLfd;I)Z",
-      "renamedSymbol": "M:LoginForm.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:LoginForm.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "pd.java",
         "start": 4614,
@@ -386119,9 +386327,9 @@
     },
     {
       "symbol": "M:va.c(III)V",
-      "renamedSymbol": "M:PlayingView.c(III)V",
+      "renamedSymbol": "M:PlayingView.queueMouseMove(III)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "queueMouseMove",
       "declaration": {
         "file": "va.java",
         "start": 11461,
@@ -386229,9 +386437,9 @@
     },
     {
       "symbol": "M:va.j(I)V",
-      "renamedSymbol": "M:PlayingView.j(I)V",
+      "renamedSymbol": "M:PlayingView.refreshFootballerSprites(I)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "refreshFootballerSprites",
       "declaration": {
         "file": "va.java",
         "start": 46301,
@@ -386240,9 +386448,9 @@
     },
     {
       "symbol": "M:va.k(I)V",
-      "renamedSymbol": "M:PlayingView.k(I)V",
+      "renamedSymbol": "M:PlayingView.drawStartCountdown(I)V",
       "originalName": "k",
-      "renamedName": "k",
+      "renamedName": "drawStartCountdown",
       "declaration": {
         "file": "va.java",
         "start": 34674,
@@ -386273,9 +386481,9 @@
     },
     {
       "symbol": "M:va.n(I)V",
-      "renamedSymbol": "M:PlayingView.n(I)V",
+      "renamedSymbol": "M:PlayingView.pollMovementKeys(I)V",
       "originalName": "n",
-      "renamedName": "n",
+      "renamedName": "pollMovementKeys",
       "declaration": {
         "file": "va.java",
         "start": 12764,
@@ -389430,9 +389638,9 @@
     },
     {
       "symbol": "M:wi.a(CBLfd;I)Z",
-      "renamedSymbol": "M:TextButton.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:TextButton.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "wi.java",
         "start": 2943,
@@ -389573,9 +389781,9 @@
     },
     {
       "symbol": "M:wj.a(CBLfd;I)Z",
-      "renamedSymbol": "M:WidgetContainer.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "wj.java",
         "start": 34297,
@@ -390497,9 +390705,9 @@
     },
     {
       "symbol": "M:wt.a(CBLfd;I)Z",
-      "renamedSymbol": "M:ArrayWidgetContainer.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "wt.java",
         "start": 8977,
@@ -390783,9 +390991,9 @@
     },
     {
       "symbol": "M:wv.a(CBLfd;I)Z",
-      "renamedSymbol": "M:AccountRequestDialog.a(CBLUiWidget;I)Z",
+      "renamedSymbol": "M:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyTyped",
       "declaration": {
         "file": "wv.java",
         "start": 4147,
@@ -391520,7 +391728,7 @@
     },
     {
       "symbol": "P:ae.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -391531,7 +391739,7 @@
     },
     {
       "symbol": "P:ae.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -391542,7 +391750,7 @@
     },
     {
       "symbol": "P:ae.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -391553,7 +391761,7 @@
     },
     {
       "symbol": "P:ae.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:AccountRegistrationPanel.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -392598,7 +392806,7 @@
     },
     {
       "symbol": "P:ai.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:AccountTermsPanel.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392609,7 +392817,7 @@
     },
     {
       "symbol": "P:ai.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:AccountTermsPanel.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392620,7 +392828,7 @@
     },
     {
       "symbol": "P:ai.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:AccountTermsPanel.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -392631,7 +392839,7 @@
     },
     {
       "symbol": "P:ai.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:AccountTermsPanel.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:AccountTermsPanel.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -403510,7 +403718,7 @@
     },
     {
       "symbol": "P:ct.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:SingleChildContainer.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -403521,7 +403729,7 @@
     },
     {
       "symbol": "P:ct.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:SingleChildContainer.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -403532,7 +403740,7 @@
     },
     {
       "symbol": "P:ct.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:SingleChildContainer.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -403543,7 +403751,7 @@
     },
     {
       "symbol": "P:ct.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:SingleChildContainer.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:SingleChildContainer.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -414752,7 +414960,7 @@
     },
     {
       "symbol": "P:fd.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:UiWidget.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:UiWidget.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -414763,7 +414971,7 @@
     },
     {
       "symbol": "P:fd.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:UiWidget.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:UiWidget.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -414774,7 +414982,7 @@
     },
     {
       "symbol": "P:fd.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:UiWidget.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:UiWidget.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -414785,7 +414993,7 @@
     },
     {
       "symbol": "P:fd.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:UiWidget.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:UiWidget.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -417051,7 +417259,7 @@
     },
     {
       "symbol": "P:fr.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:NameSuggestionsPanel.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -417062,7 +417270,7 @@
     },
     {
       "symbol": "P:fr.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:NameSuggestionsPanel.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -417073,7 +417281,7 @@
     },
     {
       "symbol": "P:fr.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:NameSuggestionsPanel.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -417084,7 +417292,7 @@
     },
     {
       "symbol": "P:fr.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:NameSuggestionsPanel.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:NameSuggestionsPanel.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -418140,7 +418348,7 @@
     },
     {
       "symbol": "P:ga.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:TextInputWidget.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -418151,7 +418359,7 @@
     },
     {
       "symbol": "P:ga.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:TextInputWidget.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -418162,7 +418370,7 @@
     },
     {
       "symbol": "P:ga.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:TextInputWidget.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -418173,7 +418381,7 @@
     },
     {
       "symbol": "P:ga.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:TextInputWidget.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:TextInputWidget.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -418184,7 +418392,7 @@
     },
     {
       "symbol": "P:ga.a(II)V#0",
-      "renamedSymbol": "P:TextInputWidget.a(II)V#0",
+      "renamedSymbol": "P:TextInputWidget.moveCaret(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -418195,7 +418403,7 @@
     },
     {
       "symbol": "P:ga.a(II)V#1",
-      "renamedSymbol": "P:TextInputWidget.a(II)V#1",
+      "renamedSymbol": "P:TextInputWidget.moveCaret(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -418250,7 +418458,7 @@
     },
     {
       "symbol": "P:ga.a(Ljava/lang/String;BZ)V#0",
-      "renamedSymbol": "P:TextInputWidget.a(Ljava/lang/String;BZ)V#0",
+      "renamedSymbol": "P:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -418261,7 +418469,7 @@
     },
     {
       "symbol": "P:ga.a(Ljava/lang/String;BZ)V#1",
-      "renamedSymbol": "P:TextInputWidget.a(Ljava/lang/String;BZ)V#1",
+      "renamedSymbol": "P:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -418272,7 +418480,7 @@
     },
     {
       "symbol": "P:ga.a(Ljava/lang/String;BZ)V#2",
-      "renamedSymbol": "P:TextInputWidget.a(Ljava/lang/String;BZ)V#2",
+      "renamedSymbol": "P:TextInputWidget.setInputText(Ljava/lang/String;BZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -418283,7 +418491,7 @@
     },
     {
       "symbol": "P:ga.a(Ljava/lang/String;Z)V#0",
-      "renamedSymbol": "P:TextInputWidget.a(Ljava/lang/String;Z)V#0",
+      "renamedSymbol": "P:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -418294,7 +418502,7 @@
     },
     {
       "symbol": "P:ga.a(Ljava/lang/String;Z)V#1",
-      "renamedSymbol": "P:TextInputWidget.a(Ljava/lang/String;Z)V#1",
+      "renamedSymbol": "P:TextInputWidget.insertTextAtCaret(Ljava/lang/String;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -418327,7 +418535,7 @@
     },
     {
       "symbol": "P:ga.a(Z)V#0",
-      "renamedSymbol": "P:TextInputWidget.a(Z)V#0",
+      "renamedSymbol": "P:TextInputWidget.pasteFromClipboard(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -418437,7 +418645,7 @@
     },
     {
       "symbol": "P:ga.h(B)I#0",
-      "renamedSymbol": "P:TextInputWidget.h(B)I#0",
+      "renamedSymbol": "P:TextInputWidget.nextWordBoundary(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -418459,7 +418667,7 @@
     },
     {
       "symbol": "P:ga.i(I)V#0",
-      "renamedSymbol": "P:TextInputWidget.i(I)V#0",
+      "renamedSymbol": "P:TextInputWidget.deleteSelectedText(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -418470,7 +418678,7 @@
     },
     {
       "symbol": "P:ga.j(B)V#0",
-      "renamedSymbol": "P:TextInputWidget.j(B)V#0",
+      "renamedSymbol": "P:TextInputWidget.scrollCaretIntoView(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -418514,7 +418722,7 @@
     },
     {
       "symbol": "P:ga.l(B)I#0",
-      "renamedSymbol": "P:TextInputWidget.l(B)I#0",
+      "renamedSymbol": "P:TextInputWidget.previousWordBoundary(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -445662,7 +445870,7 @@
     },
     {
       "symbol": "P:mb.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:DisplayNameForm.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -445673,7 +445881,7 @@
     },
     {
       "symbol": "P:mb.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:DisplayNameForm.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -445684,7 +445892,7 @@
     },
     {
       "symbol": "P:mb.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:DisplayNameForm.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -445695,7 +445903,7 @@
     },
     {
       "symbol": "P:mb.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:DisplayNameForm.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:DisplayNameForm.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -448643,7 +448851,7 @@
     },
     {
       "symbol": "P:mu.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:ContentTransitionDialog.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -448654,7 +448862,7 @@
     },
     {
       "symbol": "P:mu.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:ContentTransitionDialog.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -448665,7 +448873,7 @@
     },
     {
       "symbol": "P:mu.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:ContentTransitionDialog.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -448676,7 +448884,7 @@
     },
     {
       "symbol": "P:mu.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:ContentTransitionDialog.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:ContentTransitionDialog.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -452592,7 +452800,7 @@
     },
     {
       "symbol": "P:nn.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:AccountChoicePanel.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452603,7 +452811,7 @@
     },
     {
       "symbol": "P:nn.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:AccountChoicePanel.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452614,7 +452822,7 @@
     },
     {
       "symbol": "P:nn.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:AccountChoicePanel.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -452625,7 +452833,7 @@
     },
     {
       "symbol": "P:nn.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:AccountChoicePanel.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:AccountChoicePanel.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -463229,7 +463437,7 @@
     },
     {
       "symbol": "P:pd.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:LoginForm.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -463240,7 +463448,7 @@
     },
     {
       "symbol": "P:pd.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:LoginForm.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -463251,7 +463459,7 @@
     },
     {
       "symbol": "P:pd.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:LoginForm.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -463262,7 +463470,7 @@
     },
     {
       "symbol": "P:pd.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:LoginForm.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:LoginForm.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -491972,7 +492180,7 @@
     },
     {
       "symbol": "P:va.c(III)V#0",
-      "renamedSymbol": "P:PlayingView.c(III)V#0",
+      "renamedSymbol": "P:PlayingView.queueMouseMove(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -491983,7 +492191,7 @@
     },
     {
       "symbol": "P:va.c(III)V#1",
-      "renamedSymbol": "P:PlayingView.c(III)V#1",
+      "renamedSymbol": "P:PlayingView.queueMouseMove(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -491994,7 +492202,7 @@
     },
     {
       "symbol": "P:va.c(III)V#2",
-      "renamedSymbol": "P:PlayingView.c(III)V#2",
+      "renamedSymbol": "P:PlayingView.queueMouseMove(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -492126,7 +492334,7 @@
     },
     {
       "symbol": "P:va.j(I)V#0",
-      "renamedSymbol": "P:PlayingView.j(I)V#0",
+      "renamedSymbol": "P:PlayingView.refreshFootballerSprites(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -492137,7 +492345,7 @@
     },
     {
       "symbol": "P:va.k(I)V#0",
-      "renamedSymbol": "P:PlayingView.k(I)V#0",
+      "renamedSymbol": "P:PlayingView.drawStartCountdown(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -492170,7 +492378,7 @@
     },
     {
       "symbol": "P:va.n(I)V#0",
-      "renamedSymbol": "P:PlayingView.n(I)V#0",
+      "renamedSymbol": "P:PlayingView.pollMovementKeys(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -500101,7 +500309,7 @@
     },
     {
       "symbol": "P:wi.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:TextButton.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:TextButton.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -500112,7 +500320,7 @@
     },
     {
       "symbol": "P:wi.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:TextButton.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:TextButton.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -500123,7 +500331,7 @@
     },
     {
       "symbol": "P:wi.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:TextButton.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:TextButton.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -500134,7 +500342,7 @@
     },
     {
       "symbol": "P:wi.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:TextButton.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:TextButton.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -500618,7 +500826,7 @@
     },
     {
       "symbol": "P:wj.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:WidgetContainer.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -500629,7 +500837,7 @@
     },
     {
       "symbol": "P:wj.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:WidgetContainer.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -500640,7 +500848,7 @@
     },
     {
       "symbol": "P:wj.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:WidgetContainer.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -500651,7 +500859,7 @@
     },
     {
       "symbol": "P:wj.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:WidgetContainer.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:WidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -503071,7 +503279,7 @@
     },
     {
       "symbol": "P:wt.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:ArrayWidgetContainer.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -503082,7 +503290,7 @@
     },
     {
       "symbol": "P:wt.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:ArrayWidgetContainer.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -503093,7 +503301,7 @@
     },
     {
       "symbol": "P:wt.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:ArrayWidgetContainer.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -503104,7 +503312,7 @@
     },
     {
       "symbol": "P:wt.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:ArrayWidgetContainer.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:ArrayWidgetContainer.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -503995,7 +504203,7 @@
     },
     {
       "symbol": "P:wv.a(CBLfd;I)Z#0",
-      "renamedSymbol": "P:AccountRequestDialog.a(CBLUiWidget;I)Z#0",
+      "renamedSymbol": "P:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -504006,7 +504214,7 @@
     },
     {
       "symbol": "P:wv.a(CBLfd;I)Z#1",
-      "renamedSymbol": "P:AccountRequestDialog.a(CBLUiWidget;I)Z#1",
+      "renamedSymbol": "P:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -504017,7 +504225,7 @@
     },
     {
       "symbol": "P:wv.a(CBLfd;I)Z#2",
-      "renamedSymbol": "P:AccountRequestDialog.a(CBLUiWidget;I)Z#2",
+      "renamedSymbol": "P:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -504028,7 +504236,7 @@
     },
     {
       "symbol": "P:wv.a(CBLfd;I)Z#3",
-      "renamedSymbol": "P:AccountRequestDialog.a(CBLUiWidget;I)Z#3",
+      "renamedSymbol": "P:AccountRequestDialog.handleKeyTyped(CBLUiWidget;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -531918,7 +532126,7 @@
       "original": "ae.java",
       "renamed": "AccountRegistrationPanel.java",
       "inputSha256": "a0a57c00befaa21290bbf46943fc50f37fe1a59ffc71e674fd0b9b36d672bf9d",
-      "outputSha256": "09030bb89904927b5a86c6a5e7f8f5fb1567eebcd9440876780eae1ea1c85aa6",
+      "outputSha256": "1611f132fc2343a0d58d8e95175b8ac8dc237b8b0d572fc3be5ebfbf3b53d1d2",
       "edits": [
         {
           "start": 50,
@@ -533419,11 +533627,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 22332,
+          "end": 22333,
+          "symbol": "M:ae.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 22360,
           "end": 22362,
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 22716,
+          "end": 22717,
+          "symbol": "M:wj.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 23626,
@@ -533515,6 +533737,13 @@
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 25708,
+          "end": 25709,
+          "symbol": "M:ga.a(Ljava/lang/String;BZ)V",
+          "original": "a",
+          "renamed": "setInputText"
         },
         {
           "start": 25860,
@@ -534988,7 +535217,7 @@
       "original": "ai.java",
       "renamed": "AccountTermsPanel.java",
       "inputSha256": "07300a888d584d8364e6bfc123ca5c22b9e5dabe74fb9bc8485290d42ff488a3",
-      "outputSha256": "c5ed4632be6c8ddbf3b2ae6a6d9de1c3cb1ea40213c8a61b5091a18b8dcadd31",
+      "outputSha256": "5516434f5c7277a993839cc182d25aca1a26bea4c037ab9d88b587cb0e4bd790",
       "edits": [
         {
           "start": 50,
@@ -535208,11 +535437,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 2612,
+          "end": 2613,
+          "symbol": "M:ai.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 2640,
           "end": 2642,
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2996,
+          "end": 2997,
+          "symbol": "M:wj.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 3429,
@@ -559572,7 +559815,7 @@
       "original": "ct.java",
       "renamed": "SingleChildContainer.java",
       "inputSha256": "67a84962316146c455a8e95656d0813e0ecfa35e2047a40ec1810c9901c69cf6",
-      "outputSha256": "920c0ef0699ce90643e88f8975510de9c31e2ff7ab2cc0b13bcf6998cf9e17a8",
+      "outputSha256": "e3fc22b83a4b3cc7bfa7a42f60638070d8704fd574d75a1e1cc60a7470c698c0",
       "edits": [
         {
           "start": 74,
@@ -559750,6 +559993,13 @@
           "renamed": "getTooltip"
         },
         {
+          "start": 3854,
+          "end": 3855,
+          "symbol": "M:ct.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 3882,
           "end": 3884,
           "symbol": "C:fd",
@@ -559762,6 +560012,13 @@
           "symbol": "M:fd.b(I)Z",
           "original": "b",
           "renamed": "isFocused"
+        },
+        {
+          "start": 4386,
+          "end": 4387,
+          "symbol": "M:fd.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 4578,
@@ -585524,7 +585781,7 @@
       "original": "fd.java",
       "renamed": "UiWidget.java",
       "inputSha256": "defa7d10f46d0ef52abfb665c3d3d32e7f24a01f4e2d3bb938b6732071033d36",
-      "outputSha256": "cd28830b77e4962a5aceb19bae3a1990e4eee3e8bfb39e1fac066f4802dc0444",
+      "outputSha256": "4cf223ae5c2cffc2a8b84a039fb99f361510468044ae4a7433732e656f9ce7f0",
       "edits": [
         {
           "start": 65,
@@ -585884,6 +586141,13 @@
           "renamed": "GameSoundEffect"
         },
         {
+          "start": 9856,
+          "end": 9857,
+          "symbol": "M:fd.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 9884,
           "end": 9886,
           "symbol": "C:fd",
@@ -586185,6 +586449,13 @@
           "renamed": "isFocused"
         },
         {
+          "start": 16326,
+          "end": 16327,
+          "symbol": "M:fd.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 16593,
           "end": 16595,
           "symbol": "C:fd",
@@ -586288,6 +586559,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 19975,
+          "end": 19976,
+          "symbol": "M:fd.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 19995,
@@ -591349,7 +591627,7 @@
       "original": "fr.java",
       "renamed": "NameSuggestionsPanel.java",
       "inputSha256": "edf78a27a699cd5609b2e3377b4f7169968933b3e2aef473f27c3c4c957941d8",
-      "outputSha256": "23bd5a9d439cf009525f3711a226361f59da2badf7c7a8fa45164de1e8b8da2b",
+      "outputSha256": "0a56bf2efb263c070d6ea26c4396e08a65a0aa8b5f142db2fa9c43fc7b579895",
       "edits": [
         {
           "start": 50,
@@ -591506,6 +591784,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 4669,
+          "end": 4670,
+          "symbol": "M:fr.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 4697,
           "end": 4699,
           "symbol": "C:fd",
@@ -591518,6 +591803,13 @@
           "symbol": "C:fr",
           "original": "fr",
           "renamed": "NameSuggestionsPanel"
+        },
+        {
+          "start": 5125,
+          "end": 5126,
+          "symbol": "M:wj.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 5965,
@@ -594092,7 +594384,7 @@
       "original": "ga.java",
       "renamed": "TextInputWidget.java",
       "inputSha256": "af993b73ee884b5cbf840f8ae51390c14bc57ff370a71d0ec1f4500bf170ff98",
-      "outputSha256": "e06aa58918bc3ba8ee8c782c3730db7b7b7889681ead3e5abcdeac835098ed96",
+      "outputSha256": "8006a7bde32f146b262adb738c19c18a97fe98ae06acec2a70ecff4797da9c8e",
       "edits": [
         {
           "start": 44,
@@ -594121,6 +594413,13 @@
           "symbol": "C:ut",
           "original": "ut",
           "renamed": "Sprite"
+        },
+        {
+          "start": 501,
+          "end": 502,
+          "symbol": "M:ga.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
         },
         {
           "start": 573,
@@ -594221,6 +594520,34 @@
           "renamed": "getSelectedText"
         },
         {
+          "start": 3277,
+          "end": 3278,
+          "symbol": "M:ga.a(Z)V",
+          "original": "a",
+          "renamed": "pasteFromClipboard"
+        },
+        {
+          "start": 3614,
+          "end": 3615,
+          "symbol": "M:ga.a(Ljava/lang/String;BZ)V",
+          "original": "a",
+          "renamed": "setInputText"
+        },
+        {
+          "start": 3875,
+          "end": 3876,
+          "symbol": "M:ga.i(I)V",
+          "original": "i",
+          "renamed": "deleteSelectedText"
+        },
+        {
+          "start": 3970,
+          "end": 3971,
+          "symbol": "M:ga.a(Ljava/lang/String;Z)V",
+          "original": "a",
+          "renamed": "insertTextAtCaret"
+        },
+        {
           "start": 4601,
           "end": 4603,
           "symbol": "C:sv",
@@ -594233,6 +594560,13 @@
           "symbol": "C:sv",
           "original": "sv",
           "renamed": "TextInputListener"
+        },
+        {
+          "start": 4692,
+          "end": 4693,
+          "symbol": "M:ga.a(Ljava/lang/String;BZ)V",
+          "original": "a",
+          "renamed": "setInputText"
         },
         {
           "start": 6029,
@@ -594326,6 +594660,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 7006,
+          "end": 7007,
+          "symbol": "M:ga.i(I)V",
+          "original": "i",
+          "renamed": "deleteSelectedText"
+        },
+        {
           "start": 7106,
           "end": 7108,
           "symbol": "C:vm",
@@ -594373,6 +594714,13 @@
           "symbol": "C:nb",
           "original": "nb",
           "renamed": "GameSoundEffect"
+        },
+        {
+          "start": 7857,
+          "end": 7858,
+          "symbol": "M:ga.a(Ljava/lang/String;BZ)V",
+          "original": "a",
+          "renamed": "setInputText"
         },
         {
           "start": 7945,
@@ -594464,6 +594812,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "WidgetTextLayout"
+        },
+        {
+          "start": 9794,
+          "end": 9795,
+          "symbol": "M:ga.j(B)V",
+          "original": "j",
+          "renamed": "scrollCaretIntoView"
         },
         {
           "start": 9884,
@@ -594592,11 +594947,32 @@
           "renamed": "BytePlusOneCommand"
         },
         {
+          "start": 11497,
+          "end": 11498,
+          "symbol": "M:ga.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
+        },
+        {
           "start": 11542,
           "end": 11543,
           "symbol": "M:nj.a(I)J",
           "original": "a",
           "renamed": "monotonicMillis"
+        },
+        {
+          "start": 11710,
+          "end": 11711,
+          "symbol": "M:ga.l(B)I",
+          "original": "l",
+          "renamed": "previousWordBoundary"
+        },
+        {
+          "start": 11757,
+          "end": 11758,
+          "symbol": "M:ga.h(B)I",
+          "original": "h",
+          "renamed": "nextWordBoundary"
         },
         {
           "start": 12551,
@@ -594613,6 +594989,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 12795,
+          "end": 12796,
+          "symbol": "M:ga.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 12823,
           "end": 12825,
           "symbol": "C:fd",
@@ -594627,11 +595010,32 @@
           "renamed": "monotonicMillis"
         },
         {
+          "start": 13552,
+          "end": 13553,
+          "symbol": "M:ga.i(I)V",
+          "original": "i",
+          "renamed": "deleteSelectedText"
+        },
+        {
           "start": 14397,
           "end": 14398,
           "symbol": "M:ga.i(B)V",
           "original": "i",
           "renamed": "clearInputText"
+        },
+        {
+          "start": 14592,
+          "end": 14593,
+          "symbol": "M:ga.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
+        },
+        {
+          "start": 14719,
+          "end": 14720,
+          "symbol": "M:ga.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
         },
         {
           "start": 14947,
@@ -594662,6 +595066,13 @@
           "renamed": "GameplayHelpScreen"
         },
         {
+          "start": 15360,
+          "end": 15361,
+          "symbol": "M:ga.a(Z)V",
+          "original": "a",
+          "renamed": "pasteFromClipboard"
+        },
+        {
           "start": 15533,
           "end": 15535,
           "symbol": "C:ne",
@@ -594669,11 +595080,67 @@
           "renamed": "GameplayHelpScreen"
         },
         {
+          "start": 15593,
+          "end": 15594,
+          "symbol": "M:ga.h(B)I",
+          "original": "h",
+          "renamed": "nextWordBoundary"
+        },
+        {
+          "start": 15738,
+          "end": 15739,
+          "symbol": "M:ga.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
+        },
+        {
           "start": 15916,
           "end": 15918,
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "GameplayHelpScreen"
+        },
+        {
+          "start": 16055,
+          "end": 16056,
+          "symbol": "M:ga.l(B)I",
+          "original": "l",
+          "renamed": "previousWordBoundary"
+        },
+        {
+          "start": 16113,
+          "end": 16114,
+          "symbol": "M:ga.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
+        },
+        {
+          "start": 16291,
+          "end": 16292,
+          "symbol": "M:ga.i(I)V",
+          "original": "i",
+          "renamed": "deleteSelectedText"
+        },
+        {
+          "start": 16473,
+          "end": 16474,
+          "symbol": "M:ga.i(I)V",
+          "original": "i",
+          "renamed": "deleteSelectedText"
+        },
+        {
+          "start": 16627,
+          "end": 16628,
+          "symbol": "M:ga.i(I)V",
+          "original": "i",
+          "renamed": "deleteSelectedText"
+        },
+        {
+          "start": 16780,
+          "end": 16781,
+          "symbol": "M:ga.i(I)V",
+          "original": "i",
+          "renamed": "deleteSelectedText"
         },
         {
           "start": 17347,
@@ -594690,11 +595157,46 @@
           "renamed": "wrapException"
         },
         {
+          "start": 17541,
+          "end": 17542,
+          "symbol": "M:ga.l(B)I",
+          "original": "l",
+          "renamed": "previousWordBoundary"
+        },
+        {
           "start": 18076,
           "end": 18077,
           "symbol": "M:ga.k(B)V",
           "original": "k",
           "renamed": "copySelectedTextToClipboard"
+        },
+        {
+          "start": 18104,
+          "end": 18105,
+          "symbol": "M:ga.i(I)V",
+          "original": "i",
+          "renamed": "deleteSelectedText"
+        },
+        {
+          "start": 18142,
+          "end": 18143,
+          "symbol": "M:ga.h(B)I",
+          "original": "h",
+          "renamed": "nextWordBoundary"
+        },
+        {
+          "start": 18648,
+          "end": 18649,
+          "symbol": "M:ga.a(Ljava/lang/String;Z)V",
+          "original": "a",
+          "renamed": "insertTextAtCaret"
+        },
+        {
+          "start": 19553,
+          "end": 19554,
+          "symbol": "M:ga.a(Ljava/lang/String;BZ)V",
+          "original": "a",
+          "renamed": "setInputText"
         },
         {
           "start": 20173,
@@ -594709,6 +595211,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 20368,
+          "end": 20369,
+          "symbol": "M:ga.j(B)V",
+          "original": "j",
+          "renamed": "scrollCaretIntoView"
         },
         {
           "start": 20411,
@@ -662441,7 +662950,7 @@
       "original": "mb.java",
       "renamed": "DisplayNameForm.java",
       "inputSha256": "d21088b995895465cbeb9dc3889ed9e46390d039b93fbadc5ab28136cc04a570",
-      "outputSha256": "0e150d63175cfc5f986ef56d6a66274f64fd79a8a057a97f2ac8ea295713da72",
+      "outputSha256": "d0023d9bdd60416925b6e0c89dc5c0aaf20c091becffc88cdf292fbe3bd9afbd",
       "edits": [
         {
           "start": 50,
@@ -662519,6 +663028,13 @@
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 471,
+          "end": 472,
+          "symbol": "M:ga.a(Ljava/lang/String;BZ)V",
+          "original": "a",
+          "renamed": "setInputText"
         },
         {
           "start": 569,
@@ -662633,11 +663149,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 4437,
+          "end": 4438,
+          "symbol": "M:mb.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 4465,
           "end": 4467,
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 4821,
+          "end": 4822,
+          "symbol": "M:wj.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 4958,
@@ -662911,6 +663441,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 7658,
+          "end": 7659,
+          "symbol": "M:mb.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 7677,
@@ -669943,7 +670480,7 @@
       "original": "mu.java",
       "renamed": "ContentTransitionDialog.java",
       "inputSha256": "b14328f492e0d940bc91e0a9ec972ca86fc99071d402b99d3ed0c0375a42de74",
-      "outputSha256": "1292e2ba3fae3ffe15df2193d573ca52a8daf2cb38c0e7a2280621c7e87f37b7",
+      "outputSha256": "93d102121554b5401deaa6ca093fe4a3f41beef02d1fbe832be65f9d12a85268",
       "edits": [
         {
           "start": 53,
@@ -670051,11 +670588,25 @@
           "renamed": "finishTransition"
         },
         {
+          "start": 1628,
+          "end": 1629,
+          "symbol": "M:mu.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 1656,
           "end": 1658,
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 1937,
+          "end": 1938,
+          "symbol": "M:wj.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 2814,
@@ -681663,7 +682214,7 @@
       "original": "nn.java",
       "renamed": "AccountChoicePanel.java",
       "inputSha256": "0cfdb4892361832573486462fde41cba2edb2a9389d10830f9bcf778e3165ad0",
-      "outputSha256": "15ba64856e07ed7c6483c2a58331298a43a6fe41d9792a91ae55e5fd7caec478",
+      "outputSha256": "92b0b78a2b9bb30d42ca559fdeebcb127dde9c5326a0d81550b4f78198236acf",
       "edits": [
         {
           "start": 50,
@@ -681932,11 +682483,25 @@
           "renamed": "HelpTipDialog"
         },
         {
+          "start": 3684,
+          "end": 3685,
+          "symbol": "M:nn.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 3712,
           "end": 3714,
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 4068,
+          "end": 4069,
+          "symbol": "M:wj.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 4977,
@@ -706178,7 +706743,7 @@
       "original": "pd.java",
       "renamed": "LoginForm.java",
       "inputSha256": "0fcc92e3b4c7b37ee6ed663c12dfae946f9b6b7774b09265d43d8523ae142f55",
-      "outputSha256": "a543454b385f7f1d871fec7f76883d2557b9da227a29fe66c39b081e9aa60f01",
+      "outputSha256": "337d5e1bd28efa091684ae4dc8cb340a93aeeb7bf94b6c90a272a130ecfc0e15",
       "edits": [
         {
           "start": 71,
@@ -706461,11 +707026,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 4614,
+          "end": 4615,
+          "symbol": "M:pd.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 4642,
           "end": 4644,
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 5073,
+          "end": 5074,
+          "symbol": "M:wj.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 5913,
@@ -706494,6 +707073,13 @@
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 6317,
+          "end": 6318,
+          "symbol": "M:ga.a(Ljava/lang/String;BZ)V",
+          "original": "a",
+          "renamed": "setInputText"
         },
         {
           "start": 6368,
@@ -706977,6 +707563,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 13738,
+          "end": 13739,
+          "symbol": "M:pd.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 13758,
@@ -783462,7 +784055,7 @@
       "original": "va.java",
       "renamed": "PlayingView.java",
       "inputSha256": "b3400f2acb443a491ff0196d693bafa7d49b5cae3aa38486473e42d2e4dc5cf3",
-      "outputSha256": "e48e397cd2683a485e42681c072e899ce833b81ffb1df9d29d2799ac61c61250",
+      "outputSha256": "6c25d82bf331858aa44a1da089ca6e65c891794b8b8ec59e9e7b03417169674d",
       "edits": [
         {
           "start": 71,
@@ -784151,6 +784744,13 @@
           "renamed": "TextLine"
         },
         {
+          "start": 11461,
+          "end": 11462,
+          "symbol": "M:va.c(III)V",
+          "original": "c",
+          "renamed": "queueMouseMove"
+        },
+        {
           "start": 11611,
           "end": 11613,
           "symbol": "C:ki",
@@ -784233,6 +784833,13 @@
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 12764,
+          "end": 12765,
+          "symbol": "M:va.n(I)V",
+          "original": "n",
+          "renamed": "pollMovementKeys"
         },
         {
           "start": 13163,
@@ -784468,11 +785075,25 @@
           "renamed": "action"
         },
         {
+          "start": 18467,
+          "end": 18468,
+          "symbol": "M:va.c(III)V",
+          "original": "c",
+          "renamed": "queueMouseMove"
+        },
+        {
           "start": 18563,
           "end": 18565,
           "symbol": "C:wt",
           "original": "wt",
           "renamed": "ArrayWidgetContainer"
+        },
+        {
+          "start": 18774,
+          "end": 18775,
+          "symbol": "M:va.c(III)V",
+          "original": "c",
+          "renamed": "queueMouseMove"
         },
         {
           "start": 18934,
@@ -785420,6 +786041,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 34674,
+          "end": 34675,
+          "symbol": "M:va.k(I)V",
+          "original": "k",
+          "renamed": "drawStartCountdown"
+        },
+        {
           "start": 34698,
           "end": 34700,
           "symbol": "C:ut",
@@ -785896,6 +786524,13 @@
           "renamed": "phaseTime"
         },
         {
+          "start": 42002,
+          "end": 42003,
+          "symbol": "M:va.k(I)V",
+          "original": "k",
+          "renamed": "drawStartCountdown"
+        },
+        {
           "start": 42035,
           "end": 42036,
           "symbol": "M:hs.a(B)Z",
@@ -786148,6 +786783,13 @@
           "renamed": "update"
         },
         {
+          "start": 45526,
+          "end": 45527,
+          "symbol": "M:va.n(I)V",
+          "original": "n",
+          "renamed": "pollMovementKeys"
+        },
+        {
           "start": 45550,
           "end": 45551,
           "symbol": "M:va.i(I)V",
@@ -786181,6 +786823,13 @@
           "symbol": "F:nu.field_G:Z",
           "original": "field_G",
           "renamed": "bigHeadMode"
+        },
+        {
+          "start": 45849,
+          "end": 45850,
+          "symbol": "M:va.j(I)V",
+          "original": "j",
+          "renamed": "refreshFootballerSprites"
         },
         {
           "start": 45875,
@@ -786251,6 +786900,13 @@
           "symbol": "C:qs",
           "original": "qs",
           "renamed": "PlayerShopScreen"
+        },
+        {
+          "start": 46301,
+          "end": 46302,
+          "symbol": "M:va.j(I)V",
+          "original": "j",
+          "renamed": "refreshFootballerSprites"
         },
         {
           "start": 46522,
@@ -801473,7 +802129,7 @@
       "original": "wi.java",
       "renamed": "TextButton.java",
       "inputSha256": "4a2baaf4b9c62b65ab9d962118fd32cca56cdae986c443ee61f28a858832cfde",
-      "outputSha256": "c7f0969b41cf230f75a6defe5201a3f8c7af07b7facfc5b6d575dae54f3e0369",
+      "outputSha256": "7a2a1c7678392fc5771d818f7131528cf5f9a106add286ccd045ee86dc54a543",
       "edits": [
         {
           "start": 65,
@@ -801581,6 +802237,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 2943,
+          "end": 2944,
+          "symbol": "M:wi.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 2971,
           "end": 2973,
           "symbol": "C:fd",
@@ -801642,6 +802305,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 4649,
+          "end": 4650,
+          "symbol": "M:wi.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 4668,
@@ -801908,7 +802578,7 @@
       "original": "wj.java",
       "renamed": "WidgetContainer.java",
       "inputSha256": "ffb7e6b384bfca049f9e4ffd59b71588b01eea799ef4a3873d9718faa6f14c7d",
-      "outputSha256": "191d6b7423c0b71d3deb8bf948eb6c9d24d9bd13f610981dc2934d17373e1676",
+      "outputSha256": "db884d3cbcfcedd7c93e69c9444ec4c945609f2cd2d918011bcded92d4813502",
       "edits": [
         {
           "start": 65,
@@ -803238,6 +803908,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 34297,
+          "end": 34298,
+          "symbol": "M:wj.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 34325,
           "end": 34327,
           "symbol": "C:fd",
@@ -803301,6 +803978,13 @@
           "symbol": "M:fd.b(I)Z",
           "original": "b",
           "renamed": "isFocused"
+        },
+        {
+          "start": 35413,
+          "end": 35414,
+          "symbol": "M:fd.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 35534,
@@ -808653,7 +809337,7 @@
       "original": "wt.java",
       "renamed": "ArrayWidgetContainer.java",
       "inputSha256": "87fe406b210059ed7e518b40d846fc7af18dd7bc815dc8a7132d5ae38b43f6fc",
-      "outputSha256": "6cf1fe1167c00b996f2df708750e4efd679981c568d1cfb7006830a7fa4bd40b",
+      "outputSha256": "5fb94591ea812cb44c65adaef7849da1ade11a3ff192688c5383d97c59c77586",
       "edits": [
         {
           "start": 74,
@@ -808964,6 +809648,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 8977,
+          "end": 8978,
+          "symbol": "M:wt.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 9005,
           "end": 9007,
           "symbol": "C:fd",
@@ -808997,6 +809688,13 @@
           "symbol": "M:fd.b(I)Z",
           "original": "b",
           "renamed": "isFocused"
+        },
+        {
+          "start": 9783,
+          "end": 9784,
+          "symbol": "M:fd.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 10062,
@@ -809824,7 +810522,7 @@
       "original": "wv.java",
       "renamed": "AccountRequestDialog.java",
       "inputSha256": "e57437cbf19099b1bc5931856da4b26f22547b97ad75a19dcf3f0aac0ff113ee",
-      "outputSha256": "3d11b09c037184873e54c661eb2886ac4eb7f0d4f68342a940d55bfb4519d9b1",
+      "outputSha256": "82d02680af3196322572dc30896a4edb252f43877b957e70bd09a32eaca8980a",
       "edits": [
         {
           "start": 44,
@@ -810023,6 +810721,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 4147,
+          "end": 4148,
+          "symbol": "M:wv.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
+        },
+        {
           "start": 4175,
           "end": 4177,
           "symbol": "C:fd",
@@ -810035,6 +810740,13 @@
           "symbol": "C:wv",
           "original": "wv",
           "renamed": "AccountRequestDialog"
+        },
+        {
+          "start": 4607,
+          "end": 4608,
+          "symbol": "M:mu.a(CBLfd;I)Z",
+          "original": "a",
+          "renamed": "handleKeyTyped"
         },
         {
           "start": 4705,
@@ -810250,10 +810962,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/kickabout"
     },
-    "rulesSha256": "c2bb979b5037ca4fadbe2a591cdc0802b2559ca648b8565febab7a9d3355fc05",
+    "rulesSha256": "4d7b5cc0fff51d849ce91cc2729464d649afca82fce24ce7cf241f46b5975b35",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
-    "outputTreeSha256": "442308236ad4428bf7f507fa1ae13a44f4492d7260742c3de5197bf0ae1e5fd8",
+    "outputTreeSha256": "2034545d148c73aaedc021915404eecc327f2abdcab237c76a849e8c95dc349d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

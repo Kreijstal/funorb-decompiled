@@ -280,7 +280,7 @@ class UiWidget extends IntrusiveNode {
         this(param0, GameSoundEffect.field_i.field_c, param1);
     }
 
-    boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -467,7 +467,7 @@ class UiWidget extends IntrusiveNode {
 
     final boolean a(char param0, byte param1, int param2) {
         if (this.isFocused(87) &&
-          this.a(param0, (byte) -121, this, param2)) {
+          this.handleKeyTyped(param0, (byte) -121, this, param2)) {
           return true;
         }
         int var4 = param2;
@@ -561,7 +561,7 @@ class UiWidget extends IntrusiveNode {
     final void refreshLayout(int param0) {
         if (param0 != -1947) {
           UiWidget var3 = (UiWidget) null;
-          this.a('ﾜ', (byte) -95, (UiWidget) null, -57);
+          this.handleKeyTyped('ﾜ', (byte) -95, (UiWidget) null, -57);
         }
         this.setBounds(this.field_i, 1, this.field_t, this.field_n, this.field_g);
     }

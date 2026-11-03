@@ -109,7 +109,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         this.a(-54, this.field_H);
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_14_0 = false;
@@ -118,7 +118,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -101, param2, param3)) {
+          if (super.handleKeyTyped(param0, (byte) -101, param2, param3)) {
             return true;
           }
           if (param3 == 98) {

@@ -80,7 +80,7 @@ class TextButton extends UiWidget {
         field_z = null;
     }
 
-    boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -130,7 +130,7 @@ class TextButton extends UiWidget {
         }
         if (param0 != 84) {
           UiWidget var3 = (UiWidget) null;
-          this.a('￱', (byte) 74, (UiWidget) null, -102);
+          this.handleKeyTyped('￱', (byte) 74, (UiWidget) null, -102);
         }
     }
 

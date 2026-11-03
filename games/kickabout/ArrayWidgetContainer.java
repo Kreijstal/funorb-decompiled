@@ -245,7 +245,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyTyped(char param0, byte param1, UiWidget param2, int param3) {
         int var6 = 0;
         UiWidget[] var5 = null;
         int var5_int = 0;
@@ -269,7 +269,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
             var7 = var9[var6];
             if (var7 != null &&
               var7.isFocused(35) &&
-              var7.a(param0, (byte) -123, param2, param3)) {
+              var7.handleKeyTyped(param0, (byte) -123, param2, param3)) {
               return true;
             }
           }
