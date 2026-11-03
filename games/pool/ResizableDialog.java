@@ -103,45 +103,45 @@ abstract class ResizableDialog extends FadingDialog {
             if (!QuickChatPhraseRegistry.field_a.a((byte) 114, "")) {
               return 29;
             }
-            if (!QuickChatPhraseRegistry.field_a.a("", 0)) {
+            if (!QuickChatPhraseRegistry.field_a.ensureGroupAvailableByName("", 0)) {
               return 29;
             }
           }
           if (!uj.field_d.d(84)) {
             return 43;
           }
-          if (!uj.field_d.a("commonui", param0 - 19535)) {
+          if (!uj.field_d.ensureGroupAvailableByName("commonui", param0 - 19535)) {
             return 57;
           }
           if (!PolarTableScene.field_nb.d(-96)) {
             return 71;
           }
-          if (!PolarTableScene.field_nb.a("commonui", 0)) {
+          if (!PolarTableScene.field_nb.ensureGroupAvailableByName("commonui", 0)) {
             return 80;
           }
           if (!DualLinkNode.field_r.d(47)) {
             return 82;
           }
-          if (!DualLinkNode.field_r.c(-63)) {
+          if (!DualLinkNode.field_r.ensureAllGroupsAvailable(-63)) {
             return 86;
           }
         } else {
           if (!uj.field_d.d(param0 - 19430)) {
             return 20;
           }
-          if (!uj.field_d.a("commonui", 0)) {
+          if (!uj.field_d.ensureGroupAvailableByName("commonui", 0)) {
             return 40;
           }
           if (!PolarTableScene.field_nb.d(104)) {
             return 50;
           }
-          if (!PolarTableScene.field_nb.a("commonui", param0 ^ 19535)) {
+          if (!PolarTableScene.field_nb.ensureGroupAvailableByName("commonui", param0 ^ 19535)) {
             return 60;
           }
           if (!DualLinkNode.field_r.d(114)) {
             return 70;
           }
-          if (!DualLinkNode.field_r.c(-63)) {
+          if (!DualLinkNode.field_r.ensureAllGroupsAvailable(-63)) {
             return 80;
           }
         }

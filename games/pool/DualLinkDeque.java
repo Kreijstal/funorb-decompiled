@@ -21,7 +21,7 @@ final class DualLinkDeque {
         return null;
     }
 
-    final int b(int param0) {
+    final int size(int param0) {
         int var4 = Pool.field_O;
         int var2 = param0;
         DualLinkNode var3 = this.field_d.field_q;

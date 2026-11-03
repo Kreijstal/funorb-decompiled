@@ -21,7 +21,7 @@ final class ab {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = param0.c(-63);
+            stackIn_4_0 = param0.ensureAllGroupsAvailable(-63);
             return stackIn_4_0;
           }
           return false;

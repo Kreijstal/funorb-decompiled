@@ -89,7 +89,7 @@ final class ek {
           stackIn_6_1 = (param2 != -1) && ((long)param2 == param0.key);
           stackIn_5_0.selected = stackIn_6_1;
           if (null != param0.children &&
-            !param0.children.c(0)) {
+            !param0.children.isEmpty(0)) {
             var3 = new IntrusiveDequeCursor(param0.children);
             var4 = (UiComponent) (var3.last((byte) -92));
             while (var4 != null) {

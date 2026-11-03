@@ -82,7 +82,7 @@ abstract class BitmapFont extends DualLinkNode {
         field_D = 0;
     }
 
-    private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
+    private final static int computePairKerning(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
         int var18 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -187,7 +187,7 @@ abstract class BitmapFont extends DualLinkNode {
         this.inlineSpriteBaselines = baselines;
     }
 
-    final int a(String param0, int[] param1, String[] param2) {
+    final int wrapText(String param0, int[] param1, String[] param2) {
         int var13 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -389,7 +389,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int countWrappedLines(String text, int param1) {
-        return this.a(text, new int[]{param1}, wrappedLines);
+        return this.wrapText(text, new int[]{param1}, wrappedLines);
     }
 
     private final void a(String param0, int param1, int param2) {
@@ -422,7 +422,7 @@ abstract class BitmapFont extends DualLinkNode {
                         if (!var9_ref_String.equals("euro")) {
                           if (!var9_ref_String.equals("copy")) {
                             if (!var9_ref_String.equals("reg")) {
-                              this.c(var9_ref_String);
+                              this.applyStyleTag(var9_ref_String);
                               decompiledFrameRemainder0 = false;
                             }
                             else {
@@ -621,7 +621,7 @@ abstract class BitmapFont extends DualLinkNode {
                           if (!var9_ref_String.equals("copy")) {
                             if (!var9_ref_String.equals("reg")) {
                               if (!var9_ref_String.startsWith("img=")) {
-                                this.c(var9_ref_String);
+                                this.applyStyleTag(var9_ref_String);
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
@@ -716,7 +716,7 @@ abstract class BitmapFont extends DualLinkNode {
         }
     }
 
-    private final void a(byte[] param0) {
+    private final void decodeFontMetrics(byte[] param0) {
         int var3_int = 0;
         int incrementValue$6 = 0;
         int incrementValue$5 = 0;
@@ -812,7 +812,7 @@ abstract class BitmapFont extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.kerning[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.glyphAdvances, var14, var7Lifetime2, var8Lifetime2);
+                  this.kerning[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.computePairKerning(var15, var16, var17, this.glyphAdvances, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -825,7 +825,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (lineSpacing == 0) {
           lineSpacing = this.baselineHeight;
         }
-        int var4 = this.a(text, new int[]{width}, wrappedLines);
+        int var4 = this.wrapText(text, new int[]{width}, wrappedLines);
         int var5 = (var4 - 1) * lineSpacing;
         return this.maxAscent + var5 + this.maxDescent;
     }
@@ -835,7 +835,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var3;
         int var4;
         int var6;
-        var3 = this.a(param0, new int[]{param1}, wrappedLines);
+        var3 = this.wrapText(param0, new int[]{param1}, wrappedLines);
         var4 = 0;
         for (var5 = 0; var5 < var3; var5++) {
           var6 = this.b(wrappedLines[var5]);
@@ -846,7 +846,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var4;
     }
 
-    private final void c(String param0) {
+    private final void applyStyleTag(String param0) {
         Throwable decompiledCaughtException = null;
         Exception var2 = null;
         CharSequence var3 = null;
@@ -930,7 +930,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int drawParagraph(String text, int left, int top, int width, int height, int textColor, int shadow, int horizontalAlignment, int verticalAlignment, int lineSpacing) {
-        return this.a(text, left, top, width, height, textColor, shadow, 256, horizontalAlignment, verticalAlignment, lineSpacing);
+        return this.drawParagraphAlpha(text, left, top, width, height, textColor, shadow, 256, horizontalAlignment, verticalAlignment, lineSpacing);
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
@@ -943,7 +943,7 @@ abstract class BitmapFont extends DualLinkNode {
         this.c(text, centerX - this.b(text) / 2, baselineY);
     }
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final int drawParagraphAlpha(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int[] var12;
         int var13;
         int var14;
@@ -961,7 +961,7 @@ abstract class BitmapFont extends DualLinkNode {
           param4 < param10 + param10) {
           var12 = null;
         }
-        var13 = this.a(param0, var12, wrappedLines);
+        var13 = this.wrapText(param0, var12, wrappedLines);
         if (param9 == 3 &&
           var13 == 1) {
           param9 = 1;
@@ -1083,7 +1083,7 @@ abstract class BitmapFont extends DualLinkNode {
         this.field_y = param2;
         this.field_H = param3;
         this.field_A = param4;
-        this.a(param0);
+        this.decodeFontMetrics(param0);
         var6 = 2147483647;
         var7 = -2147483648;
         for (var8 = 0; var8 < 256; var8++) {

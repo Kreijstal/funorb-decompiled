@@ -37,7 +37,7 @@ class AudioOutput {
         serviceThreadPriority = param2;
     }
 
-    void a(int param0) throws Exception {
+    void openDevice(int param0) throws Exception {
     }
 
     private final void enqueueByPriority(PcmStream stream, int priority) {
@@ -52,13 +52,13 @@ class AudioOutput {
         stream.field_m = priority;
     }
 
-    void a(java.awt.Component param0) throws Exception {
+    void initDevice(java.awt.Component param0) throws Exception {
     }
 
     void closeDevice() {
     }
 
-    final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput createOutput(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
@@ -88,12 +88,12 @@ class AudioOutput {
               }
               ((AudioOutput) ((Object) stackIn_10_0)).field_l = new int[stackIn_10_1 * stackIn_11_2];
               ((AudioOutput) ((Object) var4)).field_t = param3;
-              ((AudioOutput) ((Object) var4)).a(param1);
+              ((AudioOutput) ((Object) var4)).initDevice(param1);
               ((AudioOutput) ((Object) var4)).field_a = (param3 & -1024) + 1024;
               if (((AudioOutput) ((Object) var4)).field_a > 16384) {
                 ((AudioOutput) ((Object) var4)).field_a = 16384;
               }
-              ((AudioOutput) ((Object) var4)).a(((AudioOutput) ((Object) var4)).field_a);
+              ((AudioOutput) ((Object) var4)).openDevice(((AudioOutput) ((Object) var4)).field_a);
               if (serviceThreadPriority > 0 &&
                 field_u == null) {
                 field_u = new AudioService();
@@ -130,7 +130,7 @@ class AudioOutput {
         field_u = null;
     }
 
-    final synchronized void d() {
+    final synchronized void serviceOutput() {
         try {
           Throwable decompiledCaughtException = null;
           long var1 = 0L;
@@ -163,7 +163,7 @@ class AudioOutput {
               if (var1 < this.field_b) {
                 return;
               }
-              this.a(this.field_a);
+              this.openDevice(this.field_a);
               this.field_b = 0L;
               this.field_n = true;
             }
@@ -181,7 +181,7 @@ class AudioOutput {
                 this.field_a = 16384;
               }
               this.closeDevice();
-              this.a(this.field_a);
+              this.openDevice(this.field_a);
               var3_int = 0;
               this.field_n = true;
               if (var4 + 256 > this.field_a) {
@@ -371,7 +371,7 @@ class AudioOutput {
         }
     }
 
-    final synchronized void f() {
+    final synchronized void shutdown() {
         int var2 = 0;
         int var1;
         if (field_u != null) {

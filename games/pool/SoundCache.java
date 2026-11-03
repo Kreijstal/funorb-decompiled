@@ -361,7 +361,7 @@ final class SoundCache {
           var10 = -125 % ((param1 - 64) / 36);
           var9 = (VorbisSample) (this.field_e.a(false, var6));
           if (var9 == null) {
-            var9 = VorbisSample.a(this.field_d, param2, param3);
+            var9 = VorbisSample.load(this.field_d, param2, param3);
             if (var9 == null) {
               return null;
             }
@@ -424,7 +424,7 @@ final class SoundCache {
             stackIn_10_0 = (PcmSample) null;
             return stackIn_10_0;
           }
-          var9 = SoundEffect.a(this.field_h, param1, param2);
+          var9 = SoundEffect.load(this.field_h, param1, param2);
           if (var9 == null) {
             return null;
           }

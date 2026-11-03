@@ -30,14 +30,14 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         try {
           var3 = JaggrabDownloader.field_j;
           var3.writeCipheredOpcode(false, param1);
-          var3.a(5, false);
-          var3.a(0, false);
+          var3.writeByte(5, false);
+          var3.writeByte(0, false);
           if (param2 >= -113) {
             field_p = false;
           }
           var3.writeShort((byte) -81, param0.field_A);
-          var3.a(param0.field_r, false);
-          var3.a(param0.field_v, false);
+          var3.writeByte(param0.field_r, false);
+          var3.writeByte(param0.field_v, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,7 +155,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
           var7.writeCipheredOpcode(false, param2);
           var7.position = var7.position + 1;
           var8 = var7.position;
-          var7.a(param4, false);
+          var7.writeByte(param4, false);
           if (2 == param4) {
             var7.a(-9946, param3);
           }
@@ -164,7 +164,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
           } else {
             LobbyPlayer.a(var7, (byte) 75, param1);
           }
-          var7.b(-var8 + var7.position, true);
+          var7.writeByteLengthPrefix(-var8 + var7.position, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

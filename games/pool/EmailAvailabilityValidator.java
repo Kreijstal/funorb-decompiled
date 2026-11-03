@@ -82,8 +82,8 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     final static void b(int param0, int param1) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
         var2.writeCipheredOpcode(false, param1);
-        var2.a(1, false);
-        var2.a(3, false);
+        var2.writeByte(1, false);
+        var2.writeByte(3, false);
         int var3 = 22 / ((-52 - param0) / 62);
     }
 

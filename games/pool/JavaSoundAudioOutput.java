@@ -40,7 +40,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
     JavaSoundAudioOutput() {
     }
 
-    final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
+    final void openDevice(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
           var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, param0 << (stereo ? 2 : 1));
@@ -50,7 +50,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
           this.field_y = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (LongAndTextLoginPayload.countSetBits(false, param0) != 1) {
-            this.a(te.nextPowerOfTwo(-17931, param0));
+            this.openDevice(te.nextPowerOfTwo(-17931, param0));
             return;
           }
           this.field_v = null;
@@ -58,7 +58,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         }
     }
 
-    final void a(java.awt.Component param0) {
+    final void initDevice(java.awt.Component param0) {
         int var4 = 0;
         javax.sound.sampled.Mixer.Info[] var2;
         javax.sound.sampled.Mixer.Info[] var3;

@@ -52,9 +52,9 @@ final class ae {
           var5.writeCipheredOpcode(false, param3);
           var5.position = var5.position + 1;
           var6 = var5.position;
-          var5.a(3, false);
+          var5.writeByte(3, false);
           var5.a(-9946, param2);
-          var5.b(-var6 + var5.position, true);
+          var5.writeByteLengthPrefix(-var6 + var5.position, true);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -143,10 +143,10 @@ final class ae {
         try {
           if (IterableNodeHashTable.field_k != null &&
             IterableNodeHashTable.field_k.d(-86) &&
-            IterableNodeHashTable.field_k.a("benefits", 0) &&
+            IterableNodeHashTable.field_k.ensureGroupAvailableByName("benefits", 0) &&
             null != rl.field_c &&
             rl.field_c.d(-62) &&
-            rl.field_c.a("benefits", 0)) {
+            rl.field_c.ensureGroupAvailableByName("benefits", 0)) {
             rf.field_e = WidgetStyleLayer.loadSprite("benefits", (byte) 51, "headline", IterableNodeHashTable.field_k);
             BallDebugOverlay.field_d = WidgetStyleLayer.loadSprite("benefits", (byte) 79, "blurbpane", IterableNodeHashTable.field_k);
             ph.field_f = WidgetStyleLayer.loadSprite("benefits", (byte) 89, "button", IterableNodeHashTable.field_k);

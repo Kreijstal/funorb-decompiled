@@ -44,7 +44,7 @@ final class kp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 100) {
-            stackIn_4_0 = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(param1, 100, param3, param2));
+            stackIn_4_0 = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(param1, 100, param3, param2));
             return stackIn_4_0;
           }
           stackIn_2_0 = (kf) null;
@@ -66,8 +66,8 @@ final class kp {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
         var2.writeCipheredOpcode(false, param1);
-        var2.a(param0, false);
-        var2.a(2, false);
+        var2.writeByte(param0, false);
+        var2.writeByte(2, false);
     }
 
     static {

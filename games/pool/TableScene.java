@@ -951,7 +951,7 @@ abstract class TableScene {
           for (var2 = 0; var2 < QuickChatPhraseDefinition.field_D.length; var2++) {
             if (null != QuickChatPhraseDefinition.field_D[var2] &&
               !QuickChatPhraseDefinition.field_D[var2].field_o.isSamplePositionOutOfRange()) {
-              QuickChatPhraseDefinition.field_D[var2].field_o.c(441);
+              QuickChatPhraseDefinition.field_D[var2].field_o.fadeOutAndUnlink(441);
             }
           }
         }

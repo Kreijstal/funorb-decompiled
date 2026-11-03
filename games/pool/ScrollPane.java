@@ -168,7 +168,7 @@ final class ScrollPane extends UiComponent {
         Sprite var9 = null;
         int var5Lifetime1;
         try {
-          if (MatchingTextValidator.field_r.c(0)) {
+          if (MatchingTextValidator.field_r.isEmpty(0)) {
             return;
           }
           var9 = ((ChatMessageLine) (MatchingTextValidator.field_r.c((byte) 104))).renderedSprite;

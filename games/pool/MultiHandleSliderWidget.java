@@ -158,10 +158,10 @@ final class MultiHandleSliderWidget extends ButtonWidget {
           var6.writeCipheredOpcode(false, param1);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.a(0, false);
+          var6.writeByte(0, false);
           var5 = -59 % ((-53 - param2) / 33);
           var6.a(-9946, param0);
-          var6.b(var6.position - var4, true);
+          var6.writeByteLengthPrefix(var6.position - var4, true);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

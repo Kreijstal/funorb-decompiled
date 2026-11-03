@@ -27,7 +27,7 @@ final class DialogLayer extends SingleChildWidget {
             return false;
           }
           try {
-            var2_int = jd.field_c.d(107);
+            var2_int = jd.field_c.readByte(107);
             if (param0 < 27) {
               connectionlostWithreason = (String) null;
             }

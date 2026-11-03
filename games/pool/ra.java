@@ -38,19 +38,19 @@ final class ra {
         var5.writeCipheredOpcode(false, param0);
         var5.position = var5.position + 1;
         int var4 = var5.position;
-        var5.a(1, false);
-        var5.a(param1.field_t, false);
-        var5.c(-128, param1.field_l);
-        var5.a(true, param1.field_u);
-        var5.a(true, param1.field_m);
-        var5.a(true, param1.field_s);
-        var5.a(true, param1.field_p);
-        var5.d(-1, var4);
+        var5.writeByte(1, false);
+        var5.writeByte(param1.field_t, false);
+        var5.writeSignedSmart(-128, param1.field_l);
+        var5.writeInt(true, param1.field_u);
+        var5.writeInt(true, param1.field_m);
+        var5.writeInt(true, param1.field_s);
+        var5.writeInt(true, param1.field_p);
+        var5.appendChecksum(-1, var4);
         if (param2 > -23) {
           return;
         }
         try {
-          var5.b(var5.position - var4, true);
+          var5.writeByteLengthPrefix(var5.position - var4, true);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -23,9 +23,9 @@ final class ValidationIconWidget extends ButtonWidget {
           var7_int = JaggrabDownloader.field_j.position;
           JaggrabDownloader.field_j.writeLong(param4, (byte) -79);
           JaggrabDownloader.field_j.a(-9946, param1);
-          JaggrabDownloader.field_j.a(param2, false);
-          JaggrabDownloader.field_j.a(!param0 ? 0 : 1, false);
-          JaggrabDownloader.field_j.b(JaggrabDownloader.field_j.position - var7_int, true);
+          JaggrabDownloader.field_j.writeByte(param2, false);
+          JaggrabDownloader.field_j.writeByte(!param0 ? 0 : 1, false);
+          JaggrabDownloader.field_j.writeByteLengthPrefix(JaggrabDownloader.field_j.position - var7_int, true);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

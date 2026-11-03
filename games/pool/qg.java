@@ -20,7 +20,7 @@ final class qg {
           if (param1 == 0) {
             return;
           }
-          if (MarkerSliderPainter.field_i.c(0)) {
+          if (MarkerSliderPainter.field_i.isEmpty(0)) {
             return;
           }
           if (param0 != 48) {

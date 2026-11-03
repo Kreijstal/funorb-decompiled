@@ -110,7 +110,7 @@ final class CheckboxPainter implements WidgetPainter {
           var10 = 8 / ((param2 - 2) / 41);
           var8 = param1 - (-param4.widgetX - this.field_o);
           var9 = this.field_k + (param3 + param4.widgetY);
-          SoftwareRasterizer.c(var8, var9, this.field_g, this.field_j, 5592405);
+          SoftwareRasterizer.drawDropShadow(var8, var9, this.field_g, this.field_j, 5592405);
           SoftwareRasterizer.fillRectangle(var8, var9, this.field_g, this.field_j, var7);
           if (var12.active) {
             SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_g, this.field_j + var9, 1);

@@ -52,7 +52,7 @@ final class MidiFileReader {
         this.packet.position = this.trackPositions[trackIndex];
     }
 
-    final void a(byte[] param0) {
+    final void parse(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
@@ -89,7 +89,7 @@ final class MidiFileReader {
     }
 
     final void readDelta(int param0) {
-        int var2 = this.packet.k(88);
+        int var2 = this.packet.readVarInt(88);
         this.trackTicks[param0] = this.trackTicks[param0] + var2;
     }
 
@@ -128,7 +128,7 @@ final class MidiFileReader {
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int decodeMessagePayload(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         int var3 = 0;
@@ -137,7 +137,7 @@ final class MidiFileReader {
         int var4Lifetime1;
         if (param1 == 255) {
           var3 = this.packet.readUnsignedByte(-123);
-          var4 = this.packet.k(91);
+          var4 = this.packet.readVarInt(91);
           if (var3 == 47) {
             this.packet.position = this.packet.position + var4;
             return 1;
@@ -179,9 +179,9 @@ final class MidiFileReader {
         }
         if (var2 != 240 &&
           var2 != 247) {
-          return this.a(param0, var2);
+          return this.decodeMessagePayload(param0, var2);
         }
-        var3 = this.packet.k(-75);
+        var3 = this.packet.readVarInt(-75);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.packet.payload[this.packet.position] & 255;
@@ -191,7 +191,7 @@ final class MidiFileReader {
             !(var4 > 252) || var4 == 254) {
             this.packet.position = this.packet.position + 1;
             this.runningStatus[param0] = var4;
-            return this.a(param0, var4);
+            return this.decodeMessagePayload(param0, var4);
           }
         }
         this.packet.position = this.packet.position + var3;
@@ -204,7 +204,7 @@ final class MidiFileReader {
 
     MidiFileReader(byte[] param0) {
         this.packet = new PacketBuffer((byte[]) null);
-        this.a(param0);
+        this.parse(param0);
     }
 
     final void c() {

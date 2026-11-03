@@ -74,7 +74,7 @@ final class ResourceArchive {
         field_a = null;
     }
 
-    final synchronized boolean c(int param0) {
+    final synchronized boolean ensureAllGroupsAvailable(int param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -114,7 +114,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean ensureGroupAvailableByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;

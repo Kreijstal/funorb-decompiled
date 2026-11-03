@@ -304,7 +304,7 @@ final class EightBallRules extends GameRules {
         }
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameCompleted0 = true;
-        if (!var14.pottedBalls.c(0)) {
+        if (!var14.pottedBalls.isEmpty(0)) {
           var5 = var14.pottedBalls.a(45);
           if (0 == var4 &&
             var5 == 1 &&
@@ -394,7 +394,7 @@ final class EightBallRules extends GameRules {
           var4 = this.f((byte) -30);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!var14.pottedBalls.c(0)) {
+        if (!var14.pottedBalls.isEmpty(0)) {
           var6Lifetime1 = 0;
           var7Lifetime1 = 0;
           var8Lifetime1 = ((PotEvent) (var14.pottedBalls.c((byte) 109))).ballIndex;

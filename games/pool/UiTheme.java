@@ -131,7 +131,7 @@ final class UiTheme {
             if (null == w.field_k) {
               w.field_k = new String[16];
             }
-            var11Lifetime1 = this.tooltipFont.a(param2, new int[]{var12}, w.field_k);
+            var11Lifetime1 = this.tooltipFont.wrapText(param2, new int[]{var12}, w.field_k);
             var9 = 0;
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
@@ -321,8 +321,8 @@ final class UiTheme {
     final static void a(MidiPcmStream param0, PlatformTaskDispatcher param1, java.awt.Component param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         try {
           AudioOutput.a(param7, param6, 10);
-          MidiNoteMixer.field_s = AudioOutput.a(param1, param2, 0, param3);
-          CacheEntry.field_D = AudioOutput.a(param1, param2, 1, param5);
+          MidiNoteMixer.field_s = AudioOutput.createOutput(param1, param2, 0, param3);
+          CacheEntry.field_D = AudioOutput.createOutput(param1, param2, 1, param5);
           qf.field_d = new PcmStreamMixer();
           BallEvent.field_b = param5 * 1000 / param7;
           CacheEntry.field_D.a(qf.field_d);

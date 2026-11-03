@@ -269,24 +269,24 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var7.writeCipheredOpcode(false, param2);
           var7.position = var7.position + 1;
           var4 = var7.position;
-          var7.a(1, false);
+          var7.writeByte(1, false);
           var7.writeShort((byte) -81, param1.field_B);
           var7.writeShort((byte) -81, param1.field_l);
           var7.writeShort((byte) -81, param1.field_p);
-          var7.a(true, param1.field_n);
+          var7.writeInt(true, param1.field_n);
           stackIn_2_0 = var7;
           stackIn_3_1 = !(param0);
-          ((CipherPacketBuffer) (Object) stackIn_2_0).a(stackIn_3_1, param1.field_x);
+          ((CipherPacketBuffer) (Object) stackIn_2_0).writeInt(stackIn_3_1, param1.field_x);
           stackIn_5_0 = var7;
           stackIn_6_1 = !(param0);
-          ((CipherPacketBuffer) (Object) stackIn_5_0).a(stackIn_6_1, param1.field_A);
-          var7.a(true, param1.field_v);
-          var7.a(param1.field_z.length, param0);
+          ((CipherPacketBuffer) (Object) stackIn_5_0).writeInt(stackIn_6_1, param1.field_A);
+          var7.writeInt(true, param1.field_v);
+          var7.writeByte(param1.field_z.length, param0);
           for (var5 = 0; param1.field_z.length > var5; var5++) {
-            var6.a(true, param1.field_z[var5]);
+            var6.writeInt(true, param1.field_z[var5]);
           }
-          var7.d(-1, var4);
-          var7.b(-var4 + var7.position, true);
+          var7.appendChecksum(-1, var4);
+          var7.writeByteLengthPrefix(-var4 + var7.position, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -569,7 +569,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         var7 = Pool.field_O;
         try {
-          if (this.children.c(0)) {
+          if (this.children.isEmpty(0)) {
             return false;
           }
           if (param1 != 3) {
@@ -662,7 +662,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         var7 = Pool.field_O;
         try {
-          if (this.children.c(param1)) {
+          if (this.children.isEmpty(param1)) {
             return false;
           }
           var3 = new IntrusiveDequeCursor(this.children);

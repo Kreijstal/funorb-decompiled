@@ -53,7 +53,7 @@ final class ModernTableScene extends ModelTableScene {
           if (null != this.field_ab &&
             this.field_ab.isSamplePositionOutOfRange() &&
             this.field_hb == null) {
-            dupTemp$0 = PcmSampleStream.a(this.field_db, 100, this.field_ab.l(), this.field_ab.n());
+            dupTemp$0 = PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, this.field_ab.getTargetVolume(), this.field_ab.n());
             this.field_hb = dupTemp$0;
             DualLinkDequeIterator.a(-24296, dupTemp$0);
             this.field_ab = null;
@@ -520,7 +520,7 @@ final class ModernTableScene extends ModelTableScene {
               } else {
                 if (var6 != 1) {
                   if (var6 == 4) {
-                    dupTemp$0 = PcmSampleStream.a(this.field_Y, 100, param1, param3);
+                    dupTemp$0 = PcmSampleStream.createAtRatePercentQ6(this.field_Y, 100, param1, param3);
                     this.field_ab = dupTemp$0;
                     DualLinkDequeIterator.a(-24296, dupTemp$0);
                   } else {

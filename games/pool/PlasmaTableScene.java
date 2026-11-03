@@ -1295,9 +1295,9 @@ final class PlasmaTableScene extends TableScene {
           if (this.field_bb == null) {
           } else {
             if (param1) {
-              this.field_bb.c(64);
+              this.field_bb.fadeOutAndUnlink(64);
             } else {
-              this.field_bb.c(4096);
+              this.field_bb.fadeOutAndUnlink(4096);
             }
             this.field_bb = null;
           }

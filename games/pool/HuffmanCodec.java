@@ -97,29 +97,29 @@ final class HuffmanCodec {
             }
             if (null != param6[0]) {
               SoftwareRasterizer.intersectClip(param3, param1, var17, var19);
-              param6[0].a(param3, param1, param2);
+              param6[0].drawShadedGrayscale(param3, param1, param2);
               SoftwareRasterizer.restoreClip(ByteStorage.field_b);
             }
             if (null != param6[2]) {
               SoftwareRasterizer.intersectClip(var18, param1, var11, var19);
-              param6[2].a(var14, param1, param2);
+              param6[2].drawShadedGrayscale(var14, param1, param2);
               SoftwareRasterizer.restoreClip(ByteStorage.field_b);
             }
             if (param6[6] != null) {
               SoftwareRasterizer.intersectClip(param3, var20, var17, var12);
-              param6[6].a(param3, var16, param2);
+              param6[6].drawShadedGrayscale(param3, var16, param2);
               SoftwareRasterizer.restoreClip(ByteStorage.field_b);
             }
             if (param6[8] != null) {
               SoftwareRasterizer.intersectClip(var18, var20, var11, var12);
-              param6[8].a(var14, var16, param2);
+              param6[8].drawShadedGrayscale(var14, var16, param2);
               SoftwareRasterizer.restoreClip(ByteStorage.field_b);
             }
             if (param6[1] != null &&
               param6[1].field_w != 0) {
               SoftwareRasterizer.intersectClip(var17, param1, var18, var19);
               for (var21 = var13; var21 < var14; var21 = var21 + param6[1].field_w) {
-                param6[1].a(var21, param1, param2);
+                param6[1].drawShadedGrayscale(var21, param1, param2);
               }
               SoftwareRasterizer.restoreClip(ByteStorage.field_b);
             }
@@ -127,7 +127,7 @@ final class HuffmanCodec {
               0 != param6[7].field_w) {
               SoftwareRasterizer.intersectClip(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param6[7].field_w) {
-                param6[7].a(var21Lifetime1, var16, param2);
+                param6[7].drawShadedGrayscale(var21Lifetime1, var16, param2);
               }
               SoftwareRasterizer.restoreClip(ByteStorage.field_b);
             }
@@ -135,7 +135,7 @@ final class HuffmanCodec {
               0 != param6[3].field_y) {
               SoftwareRasterizer.intersectClip(param3, var19, var17, var20);
               for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param6[3].field_y) {
-                param6[3].a(param3, var21Lifetime2, param2);
+                param6[3].drawShadedGrayscale(param3, var21Lifetime2, param2);
               }
               SoftwareRasterizer.restoreClip(ByteStorage.field_b);
             }
@@ -143,7 +143,7 @@ final class HuffmanCodec {
               param6[5].field_y != 0) {
               SoftwareRasterizer.intersectClip(var18, var19, var11, var20);
               for (var21Lifetime3 = var15; var16 > var21Lifetime3; var21Lifetime3 = var21Lifetime3 + param6[5].field_y) {
-                param6[5].a(var14, var21Lifetime3, param2);
+                param6[5].drawShadedGrayscale(var14, var21Lifetime3, param2);
               }
               SoftwareRasterizer.restoreClip(ByteStorage.field_b);
             }
@@ -155,7 +155,7 @@ final class HuffmanCodec {
               SoftwareRasterizer.intersectClip(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param6[4].field_y) {
                 for (var22 = var13; var22 < var14; var22 = var22 + param6[4].field_w) {
-                  param6[4].a(var22, var21Lifetime4, param2);
+                  param6[4].drawShadedGrayscale(var22, var21Lifetime4, param2);
                 }
               }
               SoftwareRasterizer.restoreClip(ByteStorage.field_b);

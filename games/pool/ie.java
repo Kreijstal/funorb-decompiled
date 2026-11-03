@@ -26,7 +26,7 @@ final class ie {
         IntrusiveDequeCursor var7 = null;
         ChatMessageLine var8 = null;
         try {
-          if (MatchingTextValidator.field_r.c(0)) {
+          if (MatchingTextValidator.field_r.isEmpty(0)) {
             return;
           }
           var3_int = param0 ? 1 : 0;

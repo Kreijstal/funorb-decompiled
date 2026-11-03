@@ -19,11 +19,11 @@ final class SocketArchiveNetworkClient extends Js5Transport {
           }
           try {
             this.outgoingControl.position = 0;
-            this.outgoingControl.a(6, false);
+            this.outgoingControl.writeByte(6, false);
             if (param0 >= -36) {
               return;
             }
-            this.outgoingControl.b(3, 99);
+            this.outgoingControl.writeMedium(3, 99);
             this.outgoingControl.writeShort((byte) -81, 0);
             this.socket.a(this.outgoingControl.payload, (byte) -105, this.outgoingControl.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             stackIn_2_0 = (IntrusiveDeque) null;
             return stackIn_2_0;
           }
-          var9 = param4.a(param2, new int[]{param1}, var8);
+          var9 = param4.wrapText(param2, new int[]{param1}, var8);
           var10 = param2.toLowerCase();
           for (var11 = 0; var11 < lb.field_P.length; var11++) {
             var12 = lb.field_P[var11];
@@ -239,8 +239,8 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             } else {
               stackIn_7_1 = 2;
             }
-            ((PacketBuffer) (Object) stackIn_6_0).a(stackIn_7_1, false);
-            this.outgoingControl.b(0L, 24136);
+            ((PacketBuffer) (Object) stackIn_6_0).writeByte(stackIn_7_1, false);
+            this.outgoingControl.writeLong40(0L, 24136);
             this.socket.a(this.outgoingControl.payload, (byte) -102, this.outgoingControl.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -310,9 +310,9 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             if (this.field_c != 0) {
               try {
                 this.outgoingControl.position = 0;
-                this.outgoingControl.a(4, false);
-                this.outgoingControl.a((int) this.field_c, false);
-                this.outgoingControl.a(true, 0);
+                this.outgoingControl.writeByte(4, false);
+                this.outgoingControl.writeByte((int) this.field_c, false);
+                this.outgoingControl.writeInt(true, 0);
                 this.socket.a(this.outgoingControl.payload, (byte) -102, this.outgoingControl.payload.length, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -419,8 +419,8 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             var2 = (NetworkArchiveRequest) (this.urgentPending.a((byte) -22));
             while (var2 != null) {
               this.outgoingControl.position = 0;
-              this.outgoingControl.a(1, false);
-              this.outgoingControl.b(var2.field_m, 24136);
+              this.outgoingControl.writeByte(1, false);
+              this.outgoingControl.writeLong40(var2.field_m, 24136);
               this.socket.a(this.outgoingControl.payload, (byte) -97, this.outgoingControl.payload.length, 0);
               this.urgentInFlight.a(var2, false);
               var2 = (NetworkArchiveRequest) (this.urgentPending.b((byte) -116));
@@ -428,8 +428,8 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             var2Lifetime1 = (NetworkArchiveRequest) (this.prefetchPending.a((byte) 117));
             while (var2Lifetime1 != null) {
               this.outgoingControl.position = 0;
-              this.outgoingControl.a(0, false);
-              this.outgoingControl.b(var2Lifetime1.field_m, 24136);
+              this.outgoingControl.writeByte(0, false);
+              this.outgoingControl.writeLong40(var2Lifetime1.field_m, 24136);
               this.socket.a(this.outgoingControl.payload, (byte) 55, this.outgoingControl.payload.length, 0);
               this.prefetchInFlight.a(var2Lifetime1, false);
               var2Lifetime1 = (NetworkArchiveRequest) (this.prefetchPending.b((byte) -112));
@@ -439,7 +439,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               SocketArchiveNetworkClient.a((int[]) null, 69, (String) null, 35, (BitmapFont) null, true, -63);
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
-              var3_int = this.socket.d(75);
+              var3_int = this.socket.readByte(75);
               if (0 > var3_int) {
                 throw new IOException();
               }
@@ -543,8 +543,8 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                       var15 = stackIn_62_0;
                       this.currentRequest = var14_ref;
                       this.currentRequest.responseBuffer = new PacketBuffer(var15 + (var9 + this.currentRequest.reservedTailBytes));
-                      this.currentRequest.responseBuffer.a(var10, false);
-                      this.currentRequest.responseBuffer.a(true, var9);
+                      this.currentRequest.responseBuffer.writeByte(var10, false);
+                      this.currentRequest.responseBuffer.writeInt(true, var9);
                       this.incomingHeader.position = 0;
                       this.currentRequest.blockPosition = 10;
                     }
@@ -715,14 +715,14 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               dq.field_h = new BufferedSocket((java.net.Socket) (AudioService.field_c.field_e), ButtonWidget.field_M);
               var2 = new PacketBuffer(13);
               ArrayWidgetGroup.a(var2, true, DebugTuningSlider.field_k, om.field_v, UiWidget.field_B);
-              var2.a(15, false);
-              var2.a(true, qf.field_f);
+              var2.writeByte(15, false);
+              var2.writeInt(true, qf.field_f);
               dq.field_h.a(var2.payload, (byte) 72, 13, 0);
               rl.field_e = rl.field_e + 1;
               ae.field_d = rl.monotonicTimeMillis((byte) -105) + 30000L;
             }
             if (rl.field_e == 3) {
-              if (0 < dq.field_h.d(72)) {
+              if (0 < dq.field_h.readByte(72)) {
                 var1_int = dq.field_h.a(14528);
                 if (var1_int != 0) {
                   stackIn_27_0 = Under13NoticePanel.a(false, var1_int);

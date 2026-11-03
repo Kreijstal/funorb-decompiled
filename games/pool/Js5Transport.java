@@ -245,10 +245,10 @@ abstract class Js5Transport {
 
     final int prefetchCount(boolean param0) {
         if (!param0) {
-          return this.prefetchPending.b(0) + this.prefetchInFlight.b(0);
+          return this.prefetchPending.size(0) + this.prefetchInFlight.size(0);
         }
         this.field_m = -3;
-        return this.prefetchPending.b(0) + this.prefetchInFlight.b(0);
+        return this.prefetchPending.size(0) + this.prefetchInFlight.size(0);
     }
 
     public static void releaseStatics(int param0) {
@@ -293,7 +293,7 @@ abstract class Js5Transport {
         if (param0 != 4609) {
           return 86;
         }
-        return this.urgentPending.b(0) + this.urgentInFlight.b(0);
+        return this.urgentPending.size(0) + this.urgentInFlight.size(0);
     }
 
     Js5Transport() {

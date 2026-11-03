@@ -172,9 +172,9 @@ final class pm extends IntrusiveNode {
         try {
           var3 = JaggrabDownloader.field_j;
           var3.writeCipheredOpcode(false, param1);
-          var3.a(2, false);
-          var3.a(0, false);
-          var3.a(param0.field_o, false);
+          var3.writeByte(2, false);
+          var3.writeByte(0, false);
+          var3.writeByte(param0.field_o, false);
           if (param2) {
             return;
           }

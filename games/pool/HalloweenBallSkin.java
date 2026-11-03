@@ -184,9 +184,9 @@ final class HalloweenBallSkin extends BallSkin {
           var9.position = var9.position + 1;
           var6 = -10 % ((param0 - 20) / 53);
           var5 = var9.position;
-          var9.a(1, false);
+          var9.writeByte(1, false);
           var9.a(-9946, param1);
-          var9.b(var9.position - var5, true);
+          var9.writeByteLengthPrefix(var9.position - var5, true);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

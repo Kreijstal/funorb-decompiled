@@ -33,7 +33,7 @@ final class SoundEffect {
           if (this.field_b[var4] != null) {
             var5 = this.field_b[var4].field_x * 22050 / 1000;
             var6 = this.field_b[var4].field_l * 22050 / 1000;
-            var13 = this.field_b[var4].a(var5, this.field_b[var4].field_x);
+            var13 = this.field_b[var4].synthesize(var5, this.field_b[var4].field_x);
             for (var8 = 0; var8 < var5; var8++) {
               var9 = var3[var8 + var6] + (var13[var8] >> 8);
               if ((var9 + 128 & -256) != 0) {
@@ -46,7 +46,7 @@ final class SoundEffect {
         return var3;
     }
 
-    final static SoundEffect a(ResourceArchive param0, int param1, int param2) {
+    final static SoundEffect load(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(102, param2, param1);
         if (var3 == null) {
           return null;
@@ -68,7 +68,7 @@ final class SoundEffect {
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_b[var2] = new SoundTone();
-            this.field_b[var2].a(param0);
+            this.field_b[var2].decode(param0);
           }
         }
         this.loopStartMillis = param0.readUnsignedShort(-1034);

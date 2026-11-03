@@ -442,14 +442,14 @@ final class ReportAbuseDialog extends UiComponent {
 
     final static void a(int param0, int param1, int param2, int param3) {
         bc.field_b.position = 0;
-        bc.field_b.a(12, false);
-        bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
+        bc.field_b.writeByte(12, false);
+        bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
         if (param0 >= -116) {
           field_Wb = (char[]) null;
         }
-        bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
-        bc.field_b.a(param3, false);
-        bc.field_b.a(param2, false);
+        bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
+        bc.field_b.writeByte(param3, false);
+        bc.field_b.writeByte(param2, false);
         bc.field_b.writeShort((byte) -81, param1);
         bc.field_b.a(ArchiveLoadSequence.field_l, 124, UiWidget.field_q);
         JaggrabDownloader.field_j.writeCipheredOpcode(false, 18);
@@ -457,7 +457,7 @@ final class ReportAbuseDialog extends UiComponent {
         JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 1;
         int var4 = fieldTemp$0;
         JaggrabDownloader.field_j.a(bc.field_b.payload, (byte) 0, 0, bc.field_b.position);
-        JaggrabDownloader.field_j.b(-var4 + JaggrabDownloader.field_j.position, true);
+        JaggrabDownloader.field_j.writeByteLengthPrefix(-var4 + JaggrabDownloader.field_j.position, true);
     }
 
     public static void f(byte param0) {

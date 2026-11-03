@@ -102,7 +102,7 @@ final class VorbisFloor1 {
         field_j = null;
     }
 
-    final boolean b() {
+    final boolean decode() {
         int var6 = 0;
         int var12 = 0;
         int incrementValue$0 = 0;

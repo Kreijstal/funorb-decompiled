@@ -208,7 +208,7 @@ public final class Pool extends NetworkGameClient {
             IntrusiveDequeCursor.field_h = IntrusiveDequeCursor.field_h + 1;
             if (fieldTemp$0 == 335) {
               IntrusiveDequeCursor.field_h = 0;
-              LoginForm.field_U.e((byte) -41);
+              LoginForm.field_U.removeFirst((byte) -41);
             }
           }
         }
@@ -399,10 +399,10 @@ public final class Pool extends NetworkGameClient {
           if (MatchingTextValidator.field_w == -2) {
             PlasmaBallSkin.a(GameRules.field_b, -21972, false, jc.field_c);
             var3_int = 32 - ThemeSelectScreen.field_P;
-            pn.field_l.a(0, 0, (var3_int << 8) / 32);
+            pn.field_l.drawShadedGrayscale(0, 0, (var3_int << 8) / 32);
           } else if (-2 == GameRules.field_b) {
             PlasmaBallSkin.a(MatchingTextValidator.field_w, -21972, false, TranslatedUiText.field_d);
-            pn.field_l.a(0, 0, (ThemeSelectScreen.field_P << 8) / 32);
+            pn.field_l.drawShadedGrayscale(0, 0, (ThemeSelectScreen.field_P << 8) / 32);
           } else {
             var3_int = TextureCache.a(ThemeSelectScreen.field_P, 32, 108);
             SoftwareRasterizer.setClip(0, 0, var3_int, SoftwareRasterizer.height);
@@ -756,7 +756,7 @@ public final class Pool extends NetworkGameClient {
         pc.releaseStatics(-24420);
         dj.releaseStatics(true);
         WhirlpoolHasher.releaseStatics(8);
-        SoundTone.a();
+        SoundTone.releaseScratch();
         te.releaseStatics((byte) 127);
         e.releaseStatics(true);
         q.releaseStatics(101);
@@ -798,7 +798,7 @@ public final class Pool extends NetworkGameClient {
         hj.releaseStatics((byte) -103);
         StrongCacheEntry.releaseStatics(param0 ^ -28);
         ProxySocketConnector.releaseStatics(15296);
-        AudioFilter.a();
+        AudioFilter.releaseStatics();
         sk.releaseStatics(param0 ^ -27);
         NodeHashTableIterator.a(0);
         DualLinkDequeIterator.releaseStatics(19000);
@@ -1203,7 +1203,7 @@ public final class Pool extends NetworkGameClient {
           PlayerContextMenu.field_e.endBitReading(8);
           var6 = new String[PlayerContextMenu.field_e.readUnsignedByte(param0 ^ -70)];
           for (var7_int = 0; var7_int < var6.length; var7_int++) {
-            var6[var7_int] = PlayerContextMenu.field_e.a(cq.a(param0, 10761));
+            var6[var7_int] = PlayerContextMenu.field_e.readString(cq.a(param0, 10761));
           }
           ti.field_d = null;
           stackIn_57_0 = null;
@@ -1389,7 +1389,7 @@ public final class Pool extends NetworkGameClient {
         }
         if (!NanoTickClock.b(-119)) {
           while (true) {
-            var6 = (i) (ArchiveIndex.field_l.e((byte) -41));
+            var6 = (i) (ArchiveIndex.field_l.removeFirst((byte) -41));
             if (var6 == null) {
               break;
             }
@@ -1606,7 +1606,7 @@ public final class Pool extends NetworkGameClient {
             TextInputValidator.a(om.field_u, (byte) -12);
             dq.field_k = new Sprite(32, 32);
             dq.field_k.e();
-            om.field_u.a(0, 0, 32, 32);
+            om.field_u.drawScaledAveraged(0, 0, 32, 32);
             OpacityWidget.field_P.bindAsRenderTarget(15100);
             om.field_u = null;
             SpriteState.a((byte) -72, true, ScrollPane.field_Lb, Under13NoticePanel.field_R, cp.field_a, 2, PoolUiText.field_c, 4, QuickChatMenu.field_Zb, s.gameoptlabels, nn.field_a, BitmapTextLayout.field_q, EmailValidator.field_n, te.field_p, ff.field_f);
@@ -1654,41 +1654,41 @@ public final class Pool extends NetworkGameClient {
           return true;
         }
         if (Under13NoticePanel.field_R.d(-62) &&
-          Under13NoticePanel.field_R.a("arialbold14", 0)) {
+          Under13NoticePanel.field_R.ensureGroupAvailableByName("arialbold14", 0)) {
           if (Under13NoticePanel.field_R.d(-64) &&
-            Under13NoticePanel.field_R.a("arialish12", 0)) {
+            Under13NoticePanel.field_R.ensureGroupAvailableByName("arialish12", 0)) {
             if (QuickChatMenu.field_Zb.d(48) &&
-              QuickChatMenu.field_Zb.a("arialbold14", 0)) {
+              QuickChatMenu.field_Zb.ensureGroupAvailableByName("arialbold14", 0)) {
               if (QuickChatMenu.field_Zb.d(123) &&
-                QuickChatMenu.field_Zb.a("arialish12", 0)) {
+                QuickChatMenu.field_Zb.ensureGroupAvailableByName("arialish12", 0)) {
                 if (Under13NoticePanel.field_R.d(107) &&
-                  Under13NoticePanel.field_R.a("basic", 0)) {
+                  Under13NoticePanel.field_R.ensureGroupAvailableByName("basic", 0)) {
                   if (Under13NoticePanel.field_R.d(-43) &&
-                    Under13NoticePanel.field_R.a("lobby", 0)) {
+                    Under13NoticePanel.field_R.ensureGroupAvailableByName("lobby", 0)) {
                     if (QuickChatMenu.field_Zb.d(-47) &&
-                      QuickChatMenu.field_Zb.a("lobby", 0)) {
+                      QuickChatMenu.field_Zb.ensureGroupAvailableByName("lobby", 0)) {
                       if (WeightedLruCache.field_d.d(79) &&
-                        WeightedLruCache.field_d.c(-63)) {
+                        WeightedLruCache.field_d.ensureAllGroupsAvailable(-63)) {
                         if (he.field_b.d(105) &&
-                          he.field_b.c(-63)) {
+                          he.field_b.ensureAllGroupsAvailable(-63)) {
                           if (gf.field_g.d(-50) &&
-                            gf.field_g.c(-63)) {
+                            gf.field_g.ensureAllGroupsAvailable(-63)) {
                             if (jc.field_a.d(-114) &&
-                              jc.field_a.c(-63)) {
+                              jc.field_a.ensureAllGroupsAvailable(-63)) {
                               if (ViewportController.field_q.d(-43) &&
-                                ViewportController.field_q.a("", 0)) {
+                                ViewportController.field_q.ensureGroupAvailableByName("", 0)) {
                                 if (rl.field_h.d(-90) &&
-                                  rl.field_h.a("", 0)) {
+                                  rl.field_h.ensureGroupAvailableByName("", 0)) {
                                   if (Ball.field_z.d(120) &&
-                                    Ball.field_z.a("", 0)) {
+                                    Ball.field_z.ensureGroupAvailableByName("", 0)) {
                                     if (fh.field_b.d(-76) &&
-                                      fh.field_b.c(-63)) {
+                                      fh.field_b.ensureAllGroupsAvailable(-63)) {
                                       if (cp.field_a.d(-90) &&
-                                        cp.field_a.c(-63)) {
+                                        cp.field_a.ensureAllGroupsAvailable(-63)) {
                                         if (s.field_a.d(-116) &&
-                                          s.field_a.c(-63)) {
+                                          s.field_a.ensureAllGroupsAvailable(-63)) {
                                           if (NetworkGameClient.field_F.d(-118) &&
-                                            NetworkGameClient.field_F.c(-63)) {
+                                            NetworkGameClient.field_F.ensureAllGroupsAvailable(-63)) {
                                             if (!param1) {
                                               var61 = NetworkGameClient.field_F;
                                               var62 = de.waitingforExtradata;

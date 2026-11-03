@@ -237,7 +237,7 @@ abstract class FadingDialog extends WidgetContainer {
         this.drawDialogFrame(0, 0, 260);
         super.renderWidget(param0, (byte) 48, -this.widgetX - param2, -this.widgetY - param3);
         TriangleMesh.a(117);
-        ArchiveIndex.field_y.a(this.widgetX + param2, param3 + this.widgetY, this.dialogOpacity);
+        ArchiveIndex.field_y.drawShadedGrayscale(this.widgetX + param2, param3 + this.widgetY, this.dialogOpacity);
         var5 = 121 / ((param1 + 42) / 53);
     }
 

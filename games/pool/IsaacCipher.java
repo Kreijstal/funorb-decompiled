@@ -362,39 +362,39 @@ final class IsaacCipher {
           var5 = new CipherPacketBuffer(4096);
           var3 = new IntrusiveDequeCursor(param1.shots);
           if (param1.rules instanceof EightBallRules) {
-            var5.a(0, false);
+            var5.writeByte(0, false);
           } else {
             if (!(param1.rules instanceof NineBallRules)) {
               if (param1.rules instanceof KillerRules) {
-                var5.a(2, false);
+                var5.writeByte(2, false);
               } else {
                 if (!(param1.rules instanceof FreePlayRules)) {
                   if (param1.rules instanceof TimeTrialRules) {
-                    var5.a(4, false);
+                    var5.writeByte(4, false);
                   } else {
-                    var5.a(-1, false);
+                    var5.writeByte(-1, false);
                   }
                 } else {
-                  var5.a(3, false);
+                  var5.writeByte(3, false);
                 }
               }
             } else {
-              var5.a(1, false);
+              var5.writeByte(1, false);
             }
           }
           var4 = (ShotRecord) (var3.last((byte) -92));
           while (var4 != null) {
-            var5.a(true, var4.shotNumber);
-            var5.a(var4.playerIndex, false);
+            var5.writeInt(true, var4.shotNumber);
+            var5.writeByte(var4.playerIndex, false);
             var5.writeShort((byte) -81, var4.breakSeed);
-            var5.a(true, var4.cueBallX);
-            var5.a(true, var4.cueBallY);
+            var5.writeInt(true, var4.cueBallX);
+            var5.writeInt(true, var4.cueBallY);
             var5.writeShort((byte) -81, (int) var4.aimAngle);
             var5.writeShort((byte) -81, (int) var4.elevation);
             var5.writeShort((byte) -81, (int) var4.power);
-            var5.a((int) var4.field_D, false);
-            var5.a((int) var4.field_H, false);
-            var5.a(var4.phase, false);
+            var5.writeByte((int) var4.field_D, false);
+            var5.writeByte((int) var4.field_H, false);
+            var5.writeByte(var4.phase, false);
             if (var4.phase >= 2) {
               var4.writeEndResolution(var5, (byte) -122);
               var5.writeLong(var4.field_x, (byte) -122);
@@ -404,7 +404,7 @@ final class IsaacCipher {
             }
             var4 = (ShotRecord) (var3.previous(-126));
           }
-          var5.a(true, -1);
+          var5.writeInt(true, -1);
           System.out.println("pool2:" + SectorCacheStore.toHexString(false, var5));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -149,13 +149,13 @@ final class Pocket {
             this.containsBall(-87, 43);
           }
           if (null != this.pottedBalls) {
-            param0.a(this.pottedBalls.size((byte) 120), false);
+            param0.writeByte(this.pottedBalls.size((byte) 120), false);
             for (var3_int = 0; this.pottedBalls.size((byte) 108) > var3_int; var3_int++) {
-              param0.a(this.pottedBalls.get(var3_int, 2229), false);
+              param0.writeByte(this.pottedBalls.get(var3_int, 2229), false);
             }
             return;
           }
-          param0.a(0, false);
+          param0.writeByte(0, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

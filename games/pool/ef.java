@@ -167,8 +167,8 @@ final class ef {
     final static void a(int param0, int param1, int param2) {
         CipherPacketBuffer var3 = JaggrabDownloader.field_j;
         var3.writeCipheredOpcode(false, param2);
-        var3.a(param1, false);
-        var3.a(10, false);
+        var3.writeByte(param1, false);
+        var3.writeByte(10, false);
         var3.writeShort((byte) -81, param0);
     }
 

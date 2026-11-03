@@ -66,7 +66,7 @@ final class AudioService implements Runnable {
             for (var1_int = 0; var1_int < 2; var1_int++) {
               var2 = this.outputs[var1_int];
               if (var2 != null) {
-                var2.d();
+                var2.serviceOutput();
               }
             }
             SoundCache.a(-105, 10L);

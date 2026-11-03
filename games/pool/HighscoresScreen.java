@@ -329,8 +329,8 @@ final class HighscoresScreen extends MenuScreen {
         if (param1 > -103) {
           HighscoresScreen.a(-22, (byte) -114, 4);
         }
-        var3.a(3, false);
-        var3.a(8, false);
+        var3.writeByte(3, false);
+        var3.writeByte(8, false);
         var3.writeShort((byte) -81, param0);
     }
 

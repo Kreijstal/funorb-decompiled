@@ -1000,9 +1000,9 @@ final class SpaceTableScene extends ModelTableScene {
         } else {
           if (null != BufferedSocket.field_b) {
             if (!param1) {
-              BufferedSocket.field_b.c(4096);
+              BufferedSocket.field_b.fadeOutAndUnlink(4096);
             } else {
-              BufferedSocket.field_b.c(64);
+              BufferedSocket.field_b.fadeOutAndUnlink(64);
             }
             BufferedSocket.field_b = null;
           }

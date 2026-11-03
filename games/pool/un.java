@@ -98,7 +98,7 @@ final class un {
         try {
           var3 = JaggrabDownloader.field_j;
           var3.writeCipheredOpcode(false, param0);
-          var3.a(param1.field_n, false);
+          var3.writeByte(param1.field_n, false);
           var3.writeShort((byte) -81, param1.field_l);
           if (param2 == -51) {
             return;

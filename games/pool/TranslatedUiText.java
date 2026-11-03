@@ -3232,7 +3232,7 @@ final class TranslatedUiText {
             var1.a(0, (byte) -121, var5_array, var4);
           }
           var1.position = var1.position + 4;
-          if (!var1.a(false)) {
+          if (!var1.verifyChecksum(false)) {
             dn.c(112);
             return;
           }

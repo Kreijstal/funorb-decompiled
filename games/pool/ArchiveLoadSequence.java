@@ -21,8 +21,8 @@ final class ArchiveLoadSequence {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
         var2.writeCipheredOpcode(false, param0);
         if (param1 == 100) {
-          var2.a(1, false);
-          var2.a(0, false);
+          var2.writeByte(1, false);
+          var2.writeByte(0, false);
           return;
         }
     }
@@ -101,14 +101,14 @@ final class ArchiveLoadSequence {
             return false;
           }
           if (var4.groupName != null &&
-            !var4.archive.a(var4.groupName, 0)) {
+            !var4.archive.ensureGroupAvailableByName(var4.groupName, 0)) {
             this.updateStepProgress(var2, false, var4.archive.a(100, var4.groupName));
             return false;
           }
           if (var4.groupId < 0 &&
             var4.groupName == null &&
             var4.loadingText != null &&
-            !var4.archive.c(-63)) {
+            !var4.archive.ensureAllGroupsAvailable(-63)) {
             this.updateStepProgress(var2, false, var4.archive.b(0));
             return false;
           }

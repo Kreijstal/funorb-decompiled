@@ -82,7 +82,7 @@ final class TextLineLayout {
           if (param1 != 18) {
             TextLineLayout.a((byte) -44);
           }
-          if (MarkerSliderPainter.field_i.c(0)) {
+          if (MarkerSliderPainter.field_i.isEmpty(0)) {
             stackIn_12_0 = TextHotspotRegion.a(true, param3, param2, param0);
             return stackIn_12_0;
           }
@@ -159,7 +159,7 @@ final class TextLineLayout {
           if (param0 != -27) {
             ratingWon = (String) null;
           }
-          stackIn_3_0 = DualLinkDequeIterator.a(param0 ^ 24317, PcmSampleStream.b(param1, 100, 96));
+          stackIn_3_0 = DualLinkDequeIterator.a(param0 ^ 24317, PcmSampleStream.createAtRatePercent(param1, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

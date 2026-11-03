@@ -64,7 +64,7 @@ final class AimTarget {
         if (!uj.field_d.d(101)) {
           return rp.waitingforGraphics;
         }
-        if (!uj.field_d.a("commonui", 0)) {
+        if (!uj.field_d.ensureGroupAvailableByName("commonui", 0)) {
           return oj.loadingGraphics + " - " + uj.field_d.a(100, "commonui") + "%";
         }
         if (!PolarTableScene.field_nb.d(-127)) {
@@ -73,13 +73,13 @@ final class AimTarget {
         if (param0 != 84) {
           return (String) null;
         }
-        if (!PolarTableScene.field_nb.a("commonui", 0)) {
+        if (!PolarTableScene.field_nb.ensureGroupAvailableByName("commonui", 0)) {
           return TickClock.loadingFonts + " - " + PolarTableScene.field_nb.a(100, "commonui") + "%";
         }
         if (!DualLinkNode.field_r.d(66)) {
           return de.waitingforExtradata;
         }
-        if (!DualLinkNode.field_r.c(-63)) {
+        if (!DualLinkNode.field_r.ensureAllGroupsAvailable(-63)) {
           return SoundCache.loadingExtradata + " - " + DualLinkNode.field_r.b(0) + "%";
         }
         return cl.pleasewaitDotdotdot;

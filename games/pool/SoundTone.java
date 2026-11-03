@@ -30,7 +30,7 @@ final class SoundTone {
     private static int[] oscillatorPitchSteps;
     int field_x;
 
-    public static void a() {
+    public static void releaseScratch() {
         sampleScratch = null;
         noiseTable = null;
         sineTable = null;
@@ -41,7 +41,7 @@ final class SoundTone {
         oscillatorBasePitchSteps = null;
     }
 
-    final void a(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_j = new SoundEnvelope();
@@ -73,21 +73,21 @@ final class SoundTone {
           this.field_d.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.c((byte) -115);
+          var4 = param0.readUnsignedSmart((byte) -115);
           if (var4 == 0) {
             break;
           }
           this.field_y[var3] = var4;
-          this.field_a[var3] = param0.i(-103);
-          this.field_p[var3] = param0.c((byte) -115);
+          this.field_a[var3] = param0.readSignedSmart(-103);
+          this.field_p[var3] = param0.readUnsignedSmart((byte) -115);
         }
-        this.field_n = param0.c((byte) -115);
-        this.field_q = param0.c((byte) -115);
+        this.field_n = param0.readUnsignedSmart((byte) -115);
+        this.field_q = param0.readUnsignedSmart((byte) -115);
         this.field_x = param0.readUnsignedShort(-1034);
         this.field_l = param0.readUnsignedShort(-1034);
         this.field_r = new AudioFilter();
         this.field_f = new SoundEnvelope();
-        this.field_r.a(param0, this.field_f);
+        this.field_r.decode(param0, this.field_f);
     }
 
     private final int evaluateWaveform(int phase, int amplitude, int waveform) {
@@ -109,7 +109,7 @@ final class SoundTone {
         return 0;
     }
 
-    final int[] a(int param0, int param1) {
+    final int[] synthesize(int param0, int param1) {
         int stackIn_41_0 = 0;
         double var3;
         int var5;

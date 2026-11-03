@@ -474,8 +474,8 @@ final class SectorCacheStore {
                 hn.field_c = bi.a(Quaternion.field_a, -16595, param5, false, (String) null);
               }
               JaggrabDownloader.field_j.position = 0;
-              JaggrabDownloader.field_j.a(14, false);
-              JaggrabDownloader.field_j.a(hn.field_c.payloadKind((byte) -101).wireId, false);
+              JaggrabDownloader.field_j.writeByte(14, false);
+              JaggrabDownloader.field_j.writeByte(hn.field_c.payloadKind((byte) -101).wireId, false);
               de.a(-1, 0);
               RankingsScreen.field_J = vn.field_d;
             }
@@ -531,7 +531,7 @@ final class SectorCacheStore {
               TutorialController.field_i = PlayerContextMenu.field_e.readUnsignedByte(-68);
               ta.field_f = PlayerContextMenu.field_e.readUnsignedByte(-105);
               UsernameSuggestionsPanel.field_V = PlayerContextMenu.field_e.readUnsignedShort(-1034);
-              var12 = PlayerContextMenu.field_e.m(108);
+              var12 = PlayerContextMenu.field_e.readNullableString(108);
               var7 = PlayerContextMenu.field_e.readUnsignedByte(-76);
               if (0 != (1 & var7)) {
                 LoginTextValue.a(100);

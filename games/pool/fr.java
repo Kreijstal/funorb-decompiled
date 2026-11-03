@@ -79,18 +79,18 @@ final class fr extends IntrusiveNode {
           var6.writeCipheredOpcode(false, param2);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.a(1, false);
+          var6.writeByte(1, false);
           if (null != param1.field_p) {
-            var6.a(param1.field_p.length, false);
+            var6.writeByte(param1.field_p.length, false);
             var6.a(param1.field_p, (byte) 0, 0, param1.field_p.length);
           } else {
-            var6.a(0, false);
+            var6.writeByte(0, false);
           }
           int var5 = 48 / ((param0 - 52) / 40);
-          var6.d(-1, var4);
+          var6.appendChecksum(-1, var4);
           var6.position = var6.position - 4;
           param1.field_o = var6.readInt(true);
-          var6.b(-var4 + var6.position, true);
+          var6.writeByteLengthPrefix(-var4 + var6.position, true);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

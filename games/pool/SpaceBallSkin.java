@@ -20,7 +20,7 @@ final class SpaceBallSkin extends BallSkin {
           var3 = var1.copy();
           for (var4 = 0; 15 > var4; var4++) {
             var3.drawSilhouette(-2, -2, 16777215);
-            SoftwareRasterizer.e(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           DebugTuningSlider.field_h.e();
           var1.drawHalfSize(0, 0);
@@ -46,12 +46,12 @@ final class SpaceBallSkin extends BallSkin {
         var2.writeCipheredOpcode(false, param1);
         var2.position = var2.position + 1;
         int var3 = var2.position;
-        var2.a(param0, false);
-        var2.a(HighscoresScreen.field_L.field_Nb, false);
+        var2.writeByte(param0, false);
+        var2.writeByte(HighscoresScreen.field_L.field_Nb, false);
         int var4 = HighscoresScreen.field_L.field_ac + (HighscoresScreen.field_L.field_Yb << 6);
-        var2.a(var4, false);
+        var2.writeByte(var4, false);
         var2.a(HighscoresScreen.field_L.settings, (byte) 0, 0, HighscoresScreen.field_L.settings.length);
-        var2.b(-var3 + var2.position, true);
+        var2.writeByteLengthPrefix(-var3 + var2.position, true);
     }
 
     final void loadBallMeshes(ResourceArchive param0, byte param1) {

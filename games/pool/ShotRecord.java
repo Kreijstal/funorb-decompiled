@@ -140,7 +140,7 @@ final class ShotRecord extends IntrusiveNode {
           return;
         }
         try {
-          param0.a((int) this.field_l, false);
+          param0.writeByte((int) this.field_l, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qe.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -536,7 +536,7 @@ final class ShotRecord extends IntrusiveNode {
             3 != this.phase) {
             throw new IllegalStateException("Can't write an end resolution until the shot is finished");
           }
-          param0.b(this.endResolution, 66);
+          param0.writeMedium(this.endResolution, 66);
           if (param1 >= -65) {
             ShotRecord.a(false, 'ﾨ');
           }
@@ -608,8 +608,8 @@ final class ShotRecord extends IntrusiveNode {
             this.field_t = false;
           }
           var4_ref = param1;
-          var4_ref.a(true, this.cueBallX);
-          var4_ref.a(true, this.cueBallY);
+          var4_ref.writeInt(true, this.cueBallX);
+          var4_ref.writeInt(true, this.cueBallY);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qe.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

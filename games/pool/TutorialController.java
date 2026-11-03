@@ -36,7 +36,7 @@ final class TutorialController {
         PoolGameModel.field_k.localY = var4;
         OpacityWidget.field_P.bindAsRenderTarget(15100);
         SoftwareRasterizer.fillRectangleAlpha(5 + PoolGameModel.field_k.localX, 5 + PoolGameModel.field_k.localY, -10 + PoolGameModel.field_k.width, PoolGameModel.field_k.height - param0, 0, 128 * param1 >> 8);
-        NetworkGameClient.field_s.d(var5, var6, param1, param1);
+        NetworkGameClient.field_s.drawWithVerticalAlphaGradient(var5, var6, param1, param1);
     }
 
     final static void sortParallelArrays(int param0, int[] param1, int[] param2, int param3, byte param4) {

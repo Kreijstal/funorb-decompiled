@@ -308,7 +308,7 @@ final class NineBallRules extends GameRules {
         }
         var4 = 74 % ((-37 - param0) / 60);
         if (var3 != 0) {
-          if (!var9.pottedBalls.c(0)) {
+          if (!var9.pottedBalls.isEmpty(0)) {
             var11 = new IntrusiveDequeCursor(var9.pottedBalls);
             var6_ref = (PotEvent) (var11.last((byte) -92));
             while (var6_ref != null) {
@@ -322,7 +322,7 @@ final class NineBallRules extends GameRules {
             }
           }
         } else {
-          if (!var9.pottedBalls.c(0)) {
+          if (!var9.pottedBalls.isEmpty(0)) {
             var10 = new IntrusiveDequeCursor(var9.pottedBalls);
             var6_ref = (PotEvent) (var10.last((byte) -92));
             while (var6_ref != null) {

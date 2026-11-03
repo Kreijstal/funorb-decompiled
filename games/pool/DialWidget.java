@@ -75,7 +75,7 @@ final class DialWidget extends ButtonWidget {
               if (var6 < 20) {
                 var7 = 256 * var6 / 20;
               }
-              ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
+              ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7 * var5 >> 8);
               return;
             }
             return;
@@ -87,7 +87,7 @@ final class DialWidget extends ButtonWidget {
               if (var6 < 20) {
                 var7Lifetime7 = 256 * var6 / 20;
               }
-              ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime7 * var5 >> 8);
+              ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7Lifetime7 * var5 >> 8);
               return;
             }
             return;
@@ -101,7 +101,7 @@ final class DialWidget extends ButtonWidget {
               if (var6 < 20) {
                 var7Lifetime8 = 256 * var6 / 20;
               }
-              ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime8 * var5 >> 8);
+              ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7Lifetime8 * var5 >> 8);
               return;
             }
             return;
@@ -114,7 +114,7 @@ final class DialWidget extends ButtonWidget {
               if (var6 < 20) {
                 var7Lifetime9 = 256 * var6 / 20;
               }
-              ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime9 * var5 >> 8);
+              ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7Lifetime9 * var5 >> 8);
               return;
             }
             return;
@@ -127,12 +127,12 @@ final class DialWidget extends ButtonWidget {
             if (var6Lifetime3 < 20) {
               var7Lifetime11 = 256 * var6Lifetime3 / 20;
             }
-            ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime11 * var5 >> 8);
+            ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7Lifetime11 * var5 >> 8);
             return;
           }
           return;
         }
-        qf.field_k.a(var3 + 15, 10 + var4, var5);
+        qf.field_k.drawShadedGrayscale(var3 + 15, 10 + var4, var5);
         var6Lifetime1 = -125 + LobbyPlayer.field_fc;
         if (var6Lifetime1 <= 0) {
           var6Lifetime1 = LobbyPlayer.field_fc - 140;
@@ -141,7 +141,7 @@ final class DialWidget extends ButtonWidget {
             if (var6Lifetime1 < 20) {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
             }
-            ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
+            ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
             return;
           }
           return;
@@ -153,7 +153,7 @@ final class DialWidget extends ButtonWidget {
             if (var6Lifetime1 < 20) {
               var7Lifetime2 = 256 * var6Lifetime1 / 20;
             }
-            ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime2 * var5 >> 8);
+            ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7Lifetime2 * var5 >> 8);
             return;
           }
           return;
@@ -167,7 +167,7 @@ final class DialWidget extends ButtonWidget {
             if (var6Lifetime1 < 20) {
               var7Lifetime3Lifetime1 = 256 * var6Lifetime1 / 20;
             }
-            ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime3Lifetime1 * var5 >> 8);
+            ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7Lifetime3Lifetime1 * var5 >> 8);
             return;
           }
           return;
@@ -182,7 +182,7 @@ final class DialWidget extends ButtonWidget {
           if (var6Lifetime1 < 20) {
             var7Lifetime4 = 256 * var6Lifetime1 / 20;
           }
-          ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime4 * var5 >> 8);
+          ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7Lifetime4 * var5 >> 8);
           return;
         }
         var7Lifetime5 = (-var6Lifetime1 + 50) * 256 / 20;
@@ -195,7 +195,7 @@ final class DialWidget extends ButtonWidget {
         if (var6Lifetime2 < 20) {
           var7Lifetime6 = 256 * var6Lifetime2 / 20;
         }
-        ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime6 * var5 >> 8);
+        ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7Lifetime6 * var5 >> 8);
     }
 
     final static void a(LobbyPlayer param0, int param1) {

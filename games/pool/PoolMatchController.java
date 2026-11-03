@@ -1193,7 +1193,7 @@ final class PoolMatchController {
           regionExit1: {
             regionExit2: {
               var4 = this.gameModel.currentShot(71);
-              if (MatchingTextValidator.field_r.c(0) &&
+              if (MatchingTextValidator.field_r.isEmpty(0) &&
                 (this.modeFlags & sk.field_d) == 0) {
                 if (!this.gameModel.field_o) {
                   var6 = 0;
@@ -1648,10 +1648,10 @@ final class PoolMatchController {
         try {
           this.postShotMessages(param0, (byte) 93);
           var3 = new PacketBuffer(this.gameModel.a(-1) + 8);
-          var3.a(true, f.field_g);
+          var3.writeInt(true, f.field_g);
           var4 = this.gameModel;
           var5 = var3;
-          var5.a(var4.balls.length, false);
+          var5.writeByte(var4.balls.length, false);
           for (var6 = 0; var4.balls.length > var6; var6++) {
             var4.balls[var6].writeState(0, var5);
           }
@@ -1668,7 +1668,7 @@ final class PoolMatchController {
           } else {
             stackIn_14_2 = 0;
           }
-          ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2);
+          ((PacketBuffer) (Object) stackIn_13_0).writeInt(stackIn_13_1, stackIn_14_2);
           param0.field_x = ii.crc64(var3.payload, var3.position, 0, 154302664);
           if ((this.modeFlags & TutorialController.field_c) == 0 &&
             this.gameModel.field_q != -1) {
@@ -2504,12 +2504,12 @@ final class PoolMatchController {
               JaggrabDownloader.field_j.writeCipheredOpcode(false, 65);
               var3Lifetime1 = var2;
               var4_ref = JaggrabDownloader.field_j;
-              ((PacketBuffer) ((Object) var4_ref)).a(var3Lifetime1.shotNumber, false);
+              ((PacketBuffer) ((Object) var4_ref)).writeByte(var3Lifetime1.shotNumber, false);
               ((PacketBuffer) ((Object) var4_ref)).writeShort((byte) -81, (int) var3Lifetime1.aimAngle);
               ((PacketBuffer) ((Object) var4_ref)).writeShort((byte) -81, (int) var3Lifetime1.elevation);
               ((PacketBuffer) ((Object) var4_ref)).writeShort((byte) -81, (int) var3Lifetime1.power);
-              ((PacketBuffer) ((Object) var4_ref)).a((int) var3Lifetime1.field_D, false);
-              ((PacketBuffer) ((Object) var4_ref)).a((int) var3Lifetime1.field_H, false);
+              ((PacketBuffer) ((Object) var4_ref)).writeByte((int) var3Lifetime1.field_D, false);
+              ((PacketBuffer) ((Object) var4_ref)).writeByte((int) var3Lifetime1.field_H, false);
             }
             this.gameModel.field_i = null;
             this.beginShotAnimation((byte) 17);
@@ -2720,7 +2720,7 @@ final class PoolMatchController {
         String var4 = null;
         try {
           if (null != param0.field_R &&
-            !param0.field_R.c(0)) {
+            !param0.field_R.isEmpty(0)) {
             var3 = (dn) (param0.field_R.c((byte) -54));
             while (var3 != null) {
               var4 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.gameModel.field_h[param0.playerIndex]}, -1, e.shotMessages[var3.field_q]);
@@ -3458,7 +3458,7 @@ final class PoolMatchController {
                 if (var7 != 0) {
                   if (null != PasswordValidator.field_r &&
                     PasswordValidator.field_r.position < 30) {
-                    PasswordValidator.field_r.a(IterableDualLinkDeque.field_a, false);
+                    PasswordValidator.field_r.writeByte(IterableDualLinkDeque.field_a, false);
                     PasswordValidator.field_r = null;
                   } else {
                     PasswordValidator.field_r = null;
@@ -3468,7 +3468,7 @@ final class PoolMatchController {
             } else {
               if (null != PasswordValidator.field_r &&
                 PasswordValidator.field_r.position < 30) {
-                PasswordValidator.field_r.a(IterableDualLinkDeque.field_a, false);
+                PasswordValidator.field_r.writeByte(IterableDualLinkDeque.field_a, false);
                 if (var7 != 0) {
                   PasswordValidator.field_r = null;
                 }
@@ -3766,7 +3766,7 @@ final class PoolMatchController {
         String var7_ref_StringLifetime2;
         try {
           if (-Js5Transport.field_q.field_A < ArrayWidgetGroup.field_M) {
-            bq.field_n.a(ScrollPane.field_Ob, ArrayWidgetGroup.field_M, 128);
+            bq.field_n.drawShadedGrayscale(ScrollPane.field_Ob, ArrayWidgetGroup.field_M, 128);
             Js5Transport.field_q.draw(ScrollPane.field_Ob, ArrayWidgetGroup.field_M);
             var3 = this.gameModel.currentShot(109);
             if (0 > this.gameModel.field_A) {
@@ -7815,7 +7815,7 @@ final class PoolMatchController {
         ShotRecord var8Lifetime1;
         try {
           if (param0.pottedBalls != null &&
-            !param0.pottedBalls.c(0)) {
+            !param0.pottedBalls.isEmpty(0)) {
             var3 = new IntrusiveDequeCursor(param0.pottedBalls);
             var4_ref_cr = (PotEvent) (((IntrusiveDequeCursor) (var3)).last((byte) -92));
             while (var4_ref_cr != null) {
@@ -8835,7 +8835,7 @@ final class PoolMatchController {
           if (this.introDelayTicks < 0) {
             if ((TutorialController.field_c & this.modeFlags) == 0) {
               if ((f.field_f & this.modeFlags) == 0 && !this.gameModel.field_o && (this.gameModel.field_i == null ||
-                this.gameModel.field_i.c(0)) && 0L == (512L & LinkButtonPainter.field_i) && this.gameModel.field_q != -1) {
+                this.gameModel.field_i.isEmpty(0)) && 0L == (512L & LinkButtonPainter.field_i) && this.gameModel.field_q != -1) {
                 this.clockTicks = this.clockTicks - 1;
                 if (0 == this.clockTicks) {
                   this.v(0);

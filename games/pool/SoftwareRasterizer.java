@@ -865,7 +865,7 @@ final class SoftwareRasterizer {
         scanlineMaskWidths = null;
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void blurRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.a(pixels, 0, param2 + param3 * width, param0, param2, param4, width - param4, param5);
         SoftwareRasterizer.a(pixels, 0, param2 + param3 * width, param1, param3, param5, width - param4, param2, param4);
     }
@@ -1684,7 +1684,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDropShadow(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {

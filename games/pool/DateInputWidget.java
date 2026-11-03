@@ -36,19 +36,19 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
     final static void j(byte param0) {
         if (param0 < -9) {
           if (MidiNoteMixer.field_s != null) {
-            MidiNoteMixer.field_s.f();
+            MidiNoteMixer.field_s.shutdown();
           }
           if (CacheEntry.field_D != null) {
-            CacheEntry.field_D.f();
+            CacheEntry.field_D.shutdown();
           }
           return;
         }
         field_S = 52;
         if (MidiNoteMixer.field_s != null) {
-          MidiNoteMixer.field_s.f();
+          MidiNoteMixer.field_s.shutdown();
         }
         if (CacheEntry.field_D != null) {
-          CacheEntry.field_D.f();
+          CacheEntry.field_D.shutdown();
         }
     }
 

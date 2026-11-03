@@ -74,7 +74,7 @@ final class TriangleMesh {
     }
 
     final static void a(int param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (AccountCreationForm.field_S.b(-1));
+        RasterSnapshot var1 = (RasterSnapshot) (AccountCreationForm.field_S.removeLast(-1));
         if (var1 == null) {
           throw new IllegalStateException();
         }

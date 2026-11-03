@@ -86,18 +86,18 @@ final class lf {
           }
           gd.field_f.position = 0;
           gd.field_f.a(param1, (byte) 0, param5, param4);
-          gd.field_f.b(var7_int, (byte) -8);
+          gd.field_f.padWithZeros(var7_int, (byte) -8);
           gd.field_f.a(32052, var12);
           if (il.field_b == null ||
             !(100 <= il.field_b.payload.length)) {
             il.field_b = new PacketBuffer(100);
           }
           il.field_b.position = 0;
-          il.field_b.a(10, false);
+          il.field_b.writeByte(10, false);
           var10 = param6;
           var9Lifetime1 = var10;
           while (var10 < 4) {
-            il.field_b.a(true, var12[var10]);
+            il.field_b.writeInt(true, var12[var10]);
             var10++;
           }
           il.field_b.writeShort((byte) -81, param4);

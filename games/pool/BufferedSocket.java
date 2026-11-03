@@ -263,7 +263,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int d(int param0) throws IOException {
+    final int readByte(int param0) throws IOException {
         if (this.field_h) {
           return 0;
         }

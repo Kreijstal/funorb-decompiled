@@ -75,7 +75,7 @@ final class AudioFilter {
         return this.pairCounts[channel] * 2;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         coefficientScratch = (float[][]) null;
         coefficientsQ16 = (int[][]) null;
     }
@@ -93,7 +93,7 @@ final class AudioFilter {
         this.field_g = new int[2][2][4];
     }
 
-    final void a(PacketBuffer param0, SoundEnvelope param1) {
+    final void decode(PacketBuffer param0, SoundEnvelope param1) {
         int var3;
         int var4;
         int var5;
@@ -131,7 +131,7 @@ final class AudioFilter {
           }
           if (var4 != 0 ||
             this.gainEndpoints[1] != this.gainEndpoints[0]) {
-            param1.a(param0);
+            param1.decodeSegments(param0);
           }
         } else {
           var11 = this.gainEndpoints;

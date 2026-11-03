@@ -42,7 +42,7 @@ final class uc {
     }
 
     final static void pushRasterSnapshot(byte param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (cb.field_e.b(-1));
+        RasterSnapshot var1 = (RasterSnapshot) (cb.field_e.removeLast(-1));
         int var2 = 34 % ((-56 - param0) / 50);
         if (var1 == null) {
           var1 = new RasterSnapshot();

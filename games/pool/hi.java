@@ -197,8 +197,8 @@ final class hi extends ByteStorage {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
         var2.writeCipheredOpcode(false, param1);
-        var2.a(param0, false);
-        var2.a(0, false);
+        var2.writeByte(param0, false);
+        var2.writeByte(0, false);
     }
 
     final static wc a(boolean param0) {

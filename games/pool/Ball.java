@@ -103,14 +103,14 @@ final class Ball {
           } else {
             stackIn_3_1 = 1;
           }
-          ((PacketBuffer) (Object) stackIn_2_0).a(stackIn_3_1, false);
+          ((PacketBuffer) (Object) stackIn_2_0).writeByte(stackIn_3_1, false);
           if (this.inPlay) {
             if (this.motionState != 0) {
               throw new IllegalStateException("Writing state before ball is stopped.");
             }
             this.orientation.write(param1, (byte) 123);
-            param1.a(true, this.positionX);
-            param1.a(true, this.positionY);
+            param1.writeInt(true, this.positionX);
+            param1.writeInt(true, this.positionY);
           }
           if (param0 != 0) {
             this.field_h = 54;

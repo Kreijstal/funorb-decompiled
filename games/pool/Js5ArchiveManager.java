@@ -200,12 +200,12 @@ final class Js5ArchiveManager {
         int var3 = -32 / ((param0 - 16) / 57);
         var2.position = var2.position + 1;
         int var4 = var2.position;
-        var2.a(2, false);
+        var2.writeByte(2, false);
         var2.a(md.field_c, (byte) 0, 0, md.field_c.length);
-        var2.a(pm.field_l, false);
-        var2.a(FreePlayRules.field_l, false);
+        var2.writeByte(pm.field_l, false);
+        var2.writeByte(FreePlayRules.field_l, false);
         var2.a(AgeValidator.field_s, (byte) 0, 0, AgeValidator.field_s.length);
-        var2.b(var2.position - var4, true);
+        var2.writeByteLengthPrefix(var2.position - var4, true);
     }
 
     private Js5ArchiveManager(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {

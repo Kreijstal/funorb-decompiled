@@ -29,8 +29,8 @@ final class te extends IntrusiveNode {
     final static void b(int param0, int param1) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
         var2.writeCipheredOpcode(false, param0);
-        var2.a(1, false);
-        var2.a(1, false);
+        var2.writeByte(1, false);
+        var2.writeByte(1, false);
         if (param1 <= -1) {
           return;
         }

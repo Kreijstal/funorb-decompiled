@@ -72,7 +72,7 @@ final class MidiPcmStream extends PcmStream {
           if (param3 <= 54) {
             return true;
           }
-          param2.b();
+          param2.buildPatchUsage();
           var6_int = 1;
           var7 = null;
           if (param4 > 0) {
@@ -726,7 +726,7 @@ final class MidiPcmStream extends PcmStream {
         int var6 = 0;
         try {
           this.unloadScoreAndResetSynthesis(param1, -1);
-          this.midiReader.a(param0.field_l);
+          this.midiReader.parse(param0.field_l);
           this.field_ab = 0L;
           this.field_M = param3 ? true : false;
           var5_int = this.midiReader.d();
@@ -781,7 +781,7 @@ final class MidiPcmStream extends PcmStream {
           if (0 > param1 ||
             param1 == var3.field_t) {
             if (null != var3.field_o) {
-              var3.field_o.c(AudioOutput.sampleRate / 100);
+              var3.field_o.fadeOutAndUnlink(AudioOutput.sampleRate / 100);
               if (var3.field_o.g()) {
                 this.noteMixer.field_p.b(var3.field_o);
               }
@@ -1265,7 +1265,7 @@ final class MidiPcmStream extends PcmStream {
             param4.field_o.rampVolumeAndPan(param4.field_D, this.computeNoteVolume(true, param4), this.computeNotePan((byte) 120, param4));
             return false;
           }
-          param4.field_o.c(param4.field_D);
+          param4.field_o.fadeOutAndUnlink(param4.field_D);
           if (param1 == null) {
             param4.field_o.skip(param0);
           } else {

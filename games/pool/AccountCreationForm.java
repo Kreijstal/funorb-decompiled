@@ -108,8 +108,8 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     final static void a(int param0, boolean param1, int param2) {
         CipherPacketBuffer var3 = JaggrabDownloader.field_j;
         var3.writeCipheredOpcode(false, param2);
-        var3.a(3, !param1 ? true : false);
-        var3.a(9, !param1 ? true : false);
+        var3.writeByte(3, !param1 ? true : false);
+        var3.writeByte(9, !param1 ? true : false);
         if (param1) {
           var3.writeShort((byte) -81, param0);
           return;

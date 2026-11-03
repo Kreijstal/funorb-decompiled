@@ -65,15 +65,15 @@ final class je {
           var6.writeCipheredOpcode(param5, param0);
           var6.position = var6.position + 1;
           var7 = var6.position;
-          var6.a(4, false);
-          var6.a(param1, param5);
+          var6.writeByte(4, false);
+          var6.writeByte(param1, param5);
           var8 = param4;
           if (param2) {
             var8 += 128;
           }
-          var6.a(var8, param5);
+          var6.writeByte(var8, param5);
           var6.a(param3, (byte) 0, 0, param3.length);
-          var6.b(var6.position - var7, !param5 ? true : false);
+          var6.writeByteLengthPrefix(var6.position - var7, !param5 ? true : false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "je.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

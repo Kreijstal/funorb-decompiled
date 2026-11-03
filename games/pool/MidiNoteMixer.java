@@ -143,7 +143,7 @@ final class MidiNoteMixer extends PcmStream {
               if (param2.field_u.field_s[param2.field_A] < 0) {
                 param2.field_o.e(-1);
               }
-              var11.c(var9);
+              var11.fadeOutAndUnlink(var9);
               var11.mixInto(param5, param0, param1 - param0);
               if (!var11.g()) {
                 continue;

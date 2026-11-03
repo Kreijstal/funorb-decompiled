@@ -20,7 +20,7 @@ final class Bzip2Decoder {
         return var2;
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompressInto(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;

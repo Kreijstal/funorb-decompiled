@@ -414,7 +414,7 @@ class UiComponent extends UiComponentNode {
           if (this.spriteAlpha256 >= 256) {
             var17.draw(var23_int, var24);
           } else {
-            var17.a(var23_int, var24, this.spriteAlpha256);
+            var17.drawShadedGrayscale(var23_int, var24, this.spriteAlpha256);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -444,7 +444,7 @@ class UiComponent extends UiComponentNode {
                 this.font.drawCenteredAlpha(var23Lifetime2, (-(this.textInset * 2) + this.width) / 2 + var21 + (this.screenX + this.textInset), this.font.maxAscent + var22 + this.screenY, var18, -1, this.textAlpha256);
               } else {
                 if (this.horizontalAlignment != 2) {
-                  this.font.a(var23Lifetime2, this.textInset + (this.screenX + var21), this.screenY + var22, -(2 * this.textInset) + this.width, this.height, var18, -1, this.textAlpha256, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
+                  this.font.drawParagraphAlpha(var23Lifetime2, this.textInset + (this.screenX + var21), this.screenY + var22, -(2 * this.textInset) + this.width, this.height, var18, -1, this.textAlpha256, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
                 } else {
                   this.font.drawRightAlpha(var23Lifetime2, this.textInset + (this.screenX + var21 - (-this.width + this.textInset * 2)), this.font.maxAscent + var22 + this.screenY, var18, -1, this.textAlpha256);
                 }
@@ -453,7 +453,7 @@ class UiComponent extends UiComponentNode {
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.font.a(var23Lifetime2, this.textInset + this.screenX + var21, this.screenY + var22, this.width - this.textInset * 2, this.height, var18, -1, this.textAlpha256, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
+            this.font.drawParagraphAlpha(var23Lifetime2, this.textInset + this.screenX + var21, this.screenY + var22, this.width - this.textInset * 2, this.height, var18, -1, this.textAlpha256, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
           }
         }
         if (null != this.children) {

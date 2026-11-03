@@ -16,8 +16,8 @@ final class q {
           if (param1 <= 4) {
             field_b = (UiComponent) null;
           }
-          VorbisSample.b(param0.getFileByName(false, "", "headers.packvorbis"));
-          var2 = VorbisSample.a(param0, "jagex logo2.packvorbis", "");
+          VorbisSample.decodeSetup(param0.getFileByName(false, "", "headers.packvorbis"));
+          var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "q.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

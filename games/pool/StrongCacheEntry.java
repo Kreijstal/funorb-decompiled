@@ -189,7 +189,7 @@ final class StrongCacheEntry extends CacheEntry {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             wn.writeReflectionCheckReplies(var1, 1);
-            JaggrabDownloader.field_j.b(var1.position - var2, true);
+            JaggrabDownloader.field_j.writeByteLengthPrefix(var1.position - var2, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -108,7 +108,7 @@ final class rl {
               }
               var9_ref_im.field_Mb = rl.monotonicTimeMillis((byte) -99) - (long)((PacketBuffer) ((Object) var1)).readInt(true);
               var9_ref_im.field_Rb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-1034);
-              var11 = ((PacketBuffer) ((Object) var1)).k(118);
+              var11 = ((PacketBuffer) ((Object) var1)).readVarInt(118);
               stackIn_51_0 = var9_ref_im;
               stackIn_52_1 = (0 != (var11 & 1));
               stackIn_51_0.field_Pb = stackIn_52_1;
@@ -218,7 +218,7 @@ final class rl {
                       HighscoresScreen.field_L.field_mc = HighscoresScreen.field_L.field_mc + 1;
                     }
                     var8.field_Rb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-1034);
-                    var9 = ((PacketBuffer) ((Object) var1)).k(-82);
+                    var9 = ((PacketBuffer) ((Object) var1)).readVarInt(-82);
                     stackIn_111_0 = var8;
                     stackIn_112_1 = ((var9 & 1) != 0);
                     stackIn_111_0.field_Pb = stackIn_112_1;
@@ -261,7 +261,7 @@ final class rl {
                   }
                   if (var2 == 22) {
                     mg.field_d = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-1034);
-                    TutorialSelectScreen.field_I = ((PacketBuffer) ((Object) var1)).k(-66);
+                    TutorialSelectScreen.field_I = ((PacketBuffer) ((Object) var1)).readVarInt(-66);
                     return;
                   }
                   if (var2 == 23) {

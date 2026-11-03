@@ -29,8 +29,8 @@ final class wb {
         try {
           var3 = JaggrabDownloader.field_j;
           var3.writeCipheredOpcode(false, param1);
-          var3.a(param0.field_s, false);
-          var3.a(param0.field_o, false);
+          var3.writeByte(param0.field_s, false);
+          var3.writeByte(param0.field_o, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -66,8 +66,8 @@ final class Bzip2DecoderState {
         int var2 = Pool.field_O;
         kf var1Lifetime1;
         try {
-          MidiNoteMixer.field_s.d();
-          CacheEntry.field_D.d();
+          MidiNoteMixer.field_s.serviceOutput();
+          CacheEntry.field_D.serviceOutput();
           if (param0 >= -79) {
             createAlertPasslength = (String) null;
           }

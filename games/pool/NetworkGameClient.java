@@ -407,7 +407,7 @@ abstract class NetworkGameClient extends GameApplet {
         ij var6 = null;
         var4 = Pool.field_O;
         try {
-          if (!MarkerSliderPainter.field_i.c(0)) {
+          if (!MarkerSliderPainter.field_i.isEmpty(0)) {
             kg.field_m = kg.field_m + 1;
             if (GameApplet.field_l != null) {
               GameApplet.field_l.a(false, 50, kg.field_m);
@@ -418,7 +418,7 @@ abstract class NetworkGameClient extends GameApplet {
             var6 = (ij) (MarkerSliderPainter.field_i.c((byte) 80));
             var2 = var6;
             if (var6.field_H + var6.field_B + var6.field_y <= kg.field_m) {
-              dupTemp$0 = (ij) (MarkerSliderPainter.field_i.e((byte) -41));
+              dupTemp$0 = (ij) (MarkerSliderPainter.field_i.removeFirst((byte) -41));
               var2 = dupTemp$0;
               stackIn_14_0 = (dupTemp$0 != null) ? 0 : -1;
               kg.field_m = stackIn_14_0;
@@ -776,7 +776,7 @@ abstract class NetworkGameClient extends GameApplet {
             if (!QuickChatPhraseRegistry.field_a.a((byte) -122, "")) {
               QuickChatPhraseRegistry.field_a = null;
             } else {
-              if (QuickChatPhraseRegistry.field_a.a("", param0 ^ -4)) {
+              if (QuickChatPhraseRegistry.field_a.ensureGroupAvailableByName("", param0 ^ -4)) {
                 TranslatedUiText.a(QuickChatPhraseRegistry.field_a, -21013);
                 QuickChatPhraseRegistry.field_a = null;
                 ArrayWidgetGroup.a(0);
@@ -826,7 +826,7 @@ abstract class NetworkGameClient extends GameApplet {
         boolean decompiledFrameRemainder0 = true;
         if (QuickChatCategoryDefinition.field_y == 11) {
           if (GameApplet.field_m != null && (!GameApplet.field_m.d(param0 ^ -52) ||
-            !GameApplet.field_m.c(param0 ^ 61))) {
+            !GameApplet.field_m.ensureAllGroupsAvailable(param0 ^ 61))) {
             KeyHandler.a(hp.a(GameApplet.field_m, BufferedFile.field_b, -641, SingleChildWidget.field_F), 0.0f, false);
             decompiledFrameRemainder0 = false;
           }

@@ -132,10 +132,10 @@ final class LocalGameSetupScreen extends MenuScreen {
           if (PotEvent.field_m != null) {
             return true;
           }
-          if (!ViewportController.field_q.a("benefits", 0)) {
+          if (!ViewportController.field_q.ensureGroupAvailableByName("benefits", 0)) {
             return false;
           }
-          if (!rl.field_h.a("benefits/", 0)) {
+          if (!rl.field_h.ensureGroupAvailableByName("benefits/", 0)) {
             return false;
           }
           PotEvent.field_m = lb.loadSprite(ViewportController.field_q, param0 - 29, "benefits", "members_benefits_borders");

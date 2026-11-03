@@ -74,8 +74,8 @@ final class CueAim {
           param0.writeShort((byte) -81, this.field_n);
           param0.writeShort((byte) -81, this.azimuth & 2047);
           param0.writeShort((byte) -81, this.polarAngle);
-          param0.a(this.field_d, false);
-          param0.a(this.field_e, false);
+          param0.writeByte(this.field_d, false);
+          param0.writeByte(this.field_e, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

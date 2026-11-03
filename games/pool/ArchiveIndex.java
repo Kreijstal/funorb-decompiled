@@ -112,7 +112,7 @@ final class ArchiveIndex {
             stackIn_11_0 = ((var5 & 1) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 >= 7) {
-              this.groupCount = var17.c(99);
+              this.groupCount = var17.readSmartInt(99);
             } else {
               this.groupCount = var17.readUnsignedShort(-1034);
             }
@@ -123,7 +123,7 @@ final class ArchiveIndex {
             var9 = param1;
             if (7 <= var4) {
               for (var10 = 0; var10 < this.groupCount; var10++) {
-                dupTemp$0 = var8 + var17.c(cq.a(param1, 82));
+                dupTemp$0 = var8 + var17.readSmartInt(cq.a(param1, 82));
                 var8 = dupTemp$0;
                 this.groupIds[var10] = dupTemp$0;
                 if (this.groupIds[var10] > var9) {
@@ -174,7 +174,7 @@ final class ArchiveIndex {
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; this.groupCount > var10Lifetime5; var10Lifetime5++) {
-                this.groupFileCounts[this.groupIds[var10Lifetime5]] = var17.c(cq.a(param1, -103));
+                this.groupFileCounts[this.groupIds[var10Lifetime5]] = var17.readSmartInt(cq.a(param1, -103));
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.groupCount; var10Lifetime5++) {
                 var11 = this.groupIds[var10Lifetime5];
@@ -184,7 +184,7 @@ final class ArchiveIndex {
                 this.field_k[var11] = array$2;
                 var13 = -1;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.c(81);
+                  dupTemp$3 = var8Lifetime1 + var17.readSmartInt(81);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_k[var11];
                   dupTemp$4[var14] = dupTemp$3;

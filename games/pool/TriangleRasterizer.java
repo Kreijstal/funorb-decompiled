@@ -21,7 +21,7 @@ final class TriangleRasterizer {
     static int[] field_f;
 
     final static void useRasterClip() {
-        TriangleRasterizer.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
+        TriangleRasterizer.setClip(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     final static void b(float param0) {
@@ -2294,7 +2294,7 @@ final class TriangleRasterizer {
         TriangleRasterizer.drawShadedTriangle(param0, param1, param2, param3, param4, param5, TriangleRasterizer.scaleHslLightness(var20Lifetime1, param6), TriangleRasterizer.scaleHslLightness(var20Lifetime1, param7), TriangleRasterizer.scaleHslLightness(var20Lifetime1, param8));
     }
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void setClip(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         clipWidth = param2 - param0;
         clipHeight = param3 - param1;

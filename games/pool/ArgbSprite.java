@@ -6,7 +6,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void d(int param0, int param1, int param2, int param3) {
+    final void drawWithVerticalAlphaGradient(int param0, int param1, int param2, int param3) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var5;
@@ -1330,7 +1330,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawShadedGrayscale(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

@@ -507,7 +507,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
     }
 
     final static void a(PacketBuffer param0, boolean param1, int param2, int param3, int param4) {
-        param0.a(12, false);
+        param0.writeByte(12, false);
         param0.writeShort((byte) -81, 17);
         if (!param1) {
           return;
@@ -515,7 +515,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         try {
           param0.writeShort((byte) -81, param2);
           param0.writeShort((byte) -81, param4);
-          param0.a(param3, false);
+          param0.writeByte(param3, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fm.VA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

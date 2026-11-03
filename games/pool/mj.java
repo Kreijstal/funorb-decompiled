@@ -87,16 +87,16 @@ final class mj {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
         if (param1 == 27712) {
           var2.writeCipheredOpcode(false, param0);
-          var2.a(2, false);
-          var2.a(4, false);
-          var2.a(HuffmanCodec.b(true), false);
+          var2.writeByte(2, false);
+          var2.writeByte(4, false);
+          var2.writeByte(HuffmanCodec.b(true), false);
           return;
         }
         mj.a(true);
         var2.writeCipheredOpcode(false, param0);
-        var2.a(2, false);
-        var2.a(4, false);
-        var2.a(HuffmanCodec.b(true), false);
+        var2.writeByte(2, false);
+        var2.writeByte(4, false);
+        var2.writeByte(HuffmanCodec.b(true), false);
     }
 
     static {

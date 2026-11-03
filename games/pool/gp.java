@@ -41,15 +41,15 @@ final class gp {
             gp.a(80, (i) null, -101);
           }
           var4 = var6.position;
-          var6.a(1, false);
-          var6.a(param1.field_r, false);
-          var6.a(param1.field_n, false);
-          var6.a(true, param1.field_p);
-          var6.a(true, param1.field_s);
-          var6.a(true, param1.field_t);
-          var6.a(true, param1.field_q);
-          var6.d(-1, var4);
-          var6.b(-var4 + var6.position, true);
+          var6.writeByte(1, false);
+          var6.writeByte(param1.field_r, false);
+          var6.writeByte(param1.field_n, false);
+          var6.writeInt(true, param1.field_p);
+          var6.writeInt(true, param1.field_s);
+          var6.writeInt(true, param1.field_t);
+          var6.writeInt(true, param1.field_q);
+          var6.appendChecksum(-1, var4);
+          var6.writeByteLengthPrefix(-var4 + var6.position, true);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

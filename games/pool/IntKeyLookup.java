@@ -235,7 +235,7 @@ final class IntKeyLookup {
             return;
           }
           if (var2 == 1) {
-            var4 = var9.i(param0 - 272);
+            var4 = var9.readSignedSmart(param0 - 272);
             var5 = (oi) (qr.field_a.c((byte) 68));
             while (var5 != null) {
               if (var3 != var5.field_t ||

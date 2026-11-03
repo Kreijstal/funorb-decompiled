@@ -84,7 +84,7 @@ final class s {
             return stackIn_2_0;
           }
           try {
-            var3_int = param0.c((byte) -115);
+            var3_int = param0.readUnsignedSmart((byte) -115);
             if (param1 < var3_int) {
               var3_int = param1;
             }

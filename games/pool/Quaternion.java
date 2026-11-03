@@ -33,10 +33,10 @@ final class Quaternion {
                 this.y > -16777216) {
                 if (this.z < 16777216 &&
                   this.z > -16777216) {
-                  param0.b(this.w, param1 - 2);
-                  param0.b(this.x, 65);
-                  param0.b(this.y, param1 - 44);
-                  param0.b(this.z, 109);
+                  param0.writeMedium(this.w, param1 - 2);
+                  param0.writeMedium(this.x, 65);
+                  param0.writeMedium(this.y, param1 - 44);
+                  param0.writeMedium(this.z, 109);
                   return;
                 }
                 throw new IllegalStateException("fpquaternion out of range for state dump.");

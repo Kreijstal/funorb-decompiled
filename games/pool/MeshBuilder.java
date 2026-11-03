@@ -597,15 +597,15 @@ final class MeshBuilder extends um {
           var39 = var4.readUnsignedByte(-109);
           var40 = 0;
           if ((var39 & 1) != 0) {
-            var40 = var5.i(-78);
+            var40 = var5.readSignedSmart(-78);
           }
           var41 = 0;
           if ((var39 & 2) != 0) {
-            var41 = var6.i(-73);
+            var41 = var6.readSignedSmart(-73);
           }
           var42 = 0;
           if ((var39 & 4) != 0) {
-            var42 = var7.i(-123);
+            var42 = var7.readSignedSmart(-123);
           }
           this.vertexX[var38] = var35 + var40;
           this.vertexY[var38] = var36 + var41;
@@ -664,11 +664,11 @@ final class MeshBuilder extends um {
         for (var42Lifetime1 = 0; var42Lifetime1 < var10; var42Lifetime1++) {
           var43 = var5.readUnsignedByte(-110);
           if (var43 == 1) {
-            var38Lifetime2 = var4.i(-33) + var41Lifetime1;
+            var38Lifetime2 = var4.readSignedSmart(-33) + var41Lifetime1;
             var41Lifetime1 = var38Lifetime2;
-            var39Lifetime2 = var4.i(-57) + var41Lifetime1;
+            var39Lifetime2 = var4.readSignedSmart(-57) + var41Lifetime1;
             var41Lifetime1 = var39Lifetime2;
-            var40Lifetime1 = var4.i(-91) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-91) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.faceVertexA[var42Lifetime1] = var38Lifetime2;
             this.faceVertexB[var42Lifetime1] = var39Lifetime2;
@@ -685,7 +685,7 @@ final class MeshBuilder extends um {
           }
           if (var43 == 2) {
             var39Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.i(-29) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-29) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.faceVertexA[var42Lifetime1] = var38Lifetime2;
             this.faceVertexB[var42Lifetime1] = var39Lifetime2;
@@ -696,7 +696,7 @@ final class MeshBuilder extends um {
           }
           if (var43 == 3) {
             var38Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.i(-82) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-82) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.faceVertexA[var42Lifetime1] = var38Lifetime2;
             this.faceVertexB[var42Lifetime1] = var39Lifetime2;
@@ -709,7 +709,7 @@ final class MeshBuilder extends um {
             var44 = var38Lifetime2;
             var38Lifetime2 = var39Lifetime2;
             var39Lifetime2 = var44;
-            var40Lifetime1 = var4.i(-27) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-27) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.faceVertexA[var42Lifetime1] = var38Lifetime2;
             this.faceVertexB[var42Lifetime1] = var39Lifetime2;
@@ -1064,15 +1064,15 @@ final class MeshBuilder extends um {
           var54 = var2.readUnsignedByte(-84);
           var55 = 0;
           if ((var54 & 1) != 0) {
-            var55 = var3.i(-4);
+            var55 = var3.readSignedSmart(-4);
           }
           var56 = 0;
           if ((var54 & 2) != 0) {
-            var56 = var4.i(-28);
+            var56 = var4.readSignedSmart(-28);
           }
           var57 = 0;
           if ((var54 & 4) != 0) {
-            var57 = var5.i(-88);
+            var57 = var5.readSignedSmart(-88);
           }
           this.vertexX[var53] = var50 + var55;
           this.vertexY[var53] = var51 + var56;
@@ -1126,11 +1126,11 @@ final class MeshBuilder extends um {
         for (var57Lifetime1 = 0; var57Lifetime1 < var10; var57Lifetime1++) {
           var58 = var3.readUnsignedByte(-79);
           if (var58 == 1) {
-            var53Lifetime2 = var2.i(-126) + var56Lifetime1;
+            var53Lifetime2 = var2.readSignedSmart(-126) + var56Lifetime1;
             var56Lifetime1 = var53Lifetime2;
-            var54Lifetime1 = var2.i(-118) + var56Lifetime1;
+            var54Lifetime1 = var2.readSignedSmart(-118) + var56Lifetime1;
             var56Lifetime1 = var54Lifetime1;
-            var55Lifetime1 = var2.i(-7) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-7) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.faceVertexA[var57Lifetime1] = var53Lifetime2;
             this.faceVertexB[var57Lifetime1] = var54Lifetime1;
@@ -1147,7 +1147,7 @@ final class MeshBuilder extends um {
           }
           if (var58 == 2) {
             var54Lifetime1 = var55Lifetime1;
-            var55Lifetime1 = var2.i(-47) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-47) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.faceVertexA[var57Lifetime1] = var53Lifetime2;
             this.faceVertexB[var57Lifetime1] = var54Lifetime1;
@@ -1158,7 +1158,7 @@ final class MeshBuilder extends um {
           }
           if (var58 == 3) {
             var53Lifetime2 = var55Lifetime1;
-            var55Lifetime1 = var2.i(-111) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-111) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.faceVertexA[var57Lifetime1] = var53Lifetime2;
             this.faceVertexB[var57Lifetime1] = var54Lifetime1;
@@ -1171,7 +1171,7 @@ final class MeshBuilder extends um {
             var59 = var53Lifetime2;
             var53Lifetime2 = var54Lifetime1;
             var54Lifetime1 = var59;
-            var55Lifetime1 = var2.i(-37) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-37) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.faceVertexA[var57Lifetime1] = var53Lifetime2;
             this.faceVertexB[var57Lifetime1] = var54Lifetime1;

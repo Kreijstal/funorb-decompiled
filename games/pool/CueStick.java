@@ -125,9 +125,9 @@ final class CueStick {
           playerXLostALife = (String) null;
         }
         int var5 = var4.position;
-        var4.a(7, false);
+        var4.writeByte(7, false);
         var4.writeLong(param0, (byte) -119);
-        var4.b(var4.position - var5, true);
+        var4.writeByteLengthPrefix(var4.position - var5, true);
     }
 
     final void a(int param0) {

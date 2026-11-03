@@ -228,7 +228,7 @@ final class AlignedIconLabel extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         try {
-          if (MatchingTextValidator.field_r.c(0)) {
+          if (MatchingTextValidator.field_r.isEmpty(0)) {
             return;
           }
           var1 = new IntrusiveDequeCursor(MatchingTextValidator.field_r);

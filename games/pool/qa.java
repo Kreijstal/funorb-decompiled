@@ -213,7 +213,7 @@ final class qa extends IntrusiveNode {
             if (null == StateIconLabel.field_Mb) {
               StateIconLabel.field_Mb = new String[16];
             }
-            var8Lifetime1 = param2.a(param3, new int[]{var10}, StateIconLabel.field_Mb);
+            var8Lifetime1 = param2.wrapText(param3, new int[]{var10}, StateIconLabel.field_Mb);
             var7 = var7 * var8Lifetime1;
             var6_int = 0;
             for (var11 = 0; var11 < var8Lifetime1; var11++) {

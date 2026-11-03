@@ -176,7 +176,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void a(int param0, int param1, int param2) {
+    void drawShadedGrayscale(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -278,7 +278,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawScaledAveraged(int param0, int param1, int param2, int param3) {
         int var11 = 0;
         int var12 = 0;
         int var30 = 0;
@@ -2471,7 +2471,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void d(int param0, int param1, int param2, int param3) {
+    void drawWithVerticalAlphaGradient(int param0, int param1, int param2, int param3) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

@@ -49,7 +49,7 @@ class MenuScreen extends jh {
             ti.field_g = ti.field_g + 1;
             if (!(0 >= ti.field_g)) {
               var2 = (ie.field_h + 1) % IntrusiveNodeHashTable.field_b.length;
-              IntrusiveNodeHashTable.field_b[var2].a(0, 0, ti.field_g);
+              IntrusiveNodeHashTable.field_b[var2].drawShadedGrayscale(0, 0, ti.field_g);
               if (ti.field_g > 255) {
                 ie.field_h = var2;
                 ti.field_g = -750;
@@ -877,7 +877,7 @@ class MenuScreen extends jh {
               return;
             }
             var18 = new String[32];
-            var9 = param0.a(param4, new int[]{param5}, var18);
+            var9 = param0.wrapText(param4, new int[]{param5}, var18);
             var10 = 0;
             for (var11 = 0; var9 > var11; var11++) {
               var10 = var10 + param1[var11 % param1.length];

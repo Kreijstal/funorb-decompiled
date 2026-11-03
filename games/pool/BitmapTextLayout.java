@@ -352,7 +352,7 @@ final class BitmapTextLayout extends op {
           this.field_k = false;
           this.field_i = param2;
           var9 = new String[1 + param2.countWrappedLines(param1, param5)];
-          var10 = Math.max(1, param2.a(param1, new int[]{param5}, var9));
+          var10 = Math.max(1, param2.wrapText(param1, new int[]{param5}, var9));
           if (3 == this.field_r &&
             var10 == 1) {
             this.field_r = 1;

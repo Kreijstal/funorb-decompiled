@@ -44,7 +44,7 @@ final class AlphaFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            AlphaFont.b(SoftwareRasterizer.pixels, this.field_U[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            AlphaFont.blitCoverageGlyphAlpha(SoftwareRasterizer.pixels, this.field_U[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
             BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.pixels, this.field_U[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
@@ -52,7 +52,7 @@ final class AlphaFont extends BitmapFont {
         }
     }
 
-    private final static byte[][] a(int[] param0, byte[][] param1) {
+    private final static byte[][] convertToCoverage(int[] param0, byte[][] param1) {
         int var2_int = 0;
         int var5 = 0;
         byte[][] var2;
@@ -131,7 +131,7 @@ final class AlphaFont extends BitmapFont {
     AlphaFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
         this.field_U = new byte[256][];
-        this.field_U = AlphaFont.a(param5, param6);
+        this.field_U = AlphaFont.convertToCoverage(param5, param6);
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -161,7 +161,7 @@ final class AlphaFont extends BitmapFont {
         }
     }
 
-    private final static void b(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitCoverageGlyphAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$11 = 0;

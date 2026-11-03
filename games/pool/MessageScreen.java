@@ -65,22 +65,22 @@ final class MessageScreen extends MenuScreen {
           Pool.field_L[2] = (int)(Pool.field_Q >> 32);
           Pool.field_L[3] = (int)Pool.field_Q;
           bc.field_b.position = 0;
-          bc.field_b.a(true, Pool.field_L[0]);
-          bc.field_b.a(true, Pool.field_L[1]);
-          bc.field_b.a(true, Pool.field_L[2]);
-          bc.field_b.a(true, Pool.field_L[3]);
+          bc.field_b.writeInt(true, Pool.field_L[0]);
+          bc.field_b.writeInt(true, Pool.field_L[1]);
+          bc.field_b.writeInt(true, Pool.field_L[2]);
+          bc.field_b.writeInt(true, Pool.field_L[3]);
           OptionsScreen.a(bc.field_b, 0);
           bc.field_b.writeShort((byte) -81, param4);
           param1.writePayload((byte) 121, bc.field_b);
           JaggrabDownloader.field_j.position = 0;
           if (param0) {
-            JaggrabDownloader.field_j.a(18, false);
+            JaggrabDownloader.field_j.writeByte(18, false);
           } else {
-            JaggrabDownloader.field_j.a(16, false);
+            JaggrabDownloader.field_j.writeByte(16, false);
           }
           JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 2;
           var5_int = JaggrabDownloader.field_j.position;
-          JaggrabDownloader.field_j.a(true, LobbyPlayer.field_ec);
+          JaggrabDownloader.field_j.writeInt(true, LobbyPlayer.field_ec);
           JaggrabDownloader.field_j.writeLong(PlayerContextMenu.field_j, (byte) -80);
           var6 = 0;
           if (CushionSegment.field_g) {
@@ -95,7 +95,7 @@ final class MessageScreen extends MenuScreen {
           if (CheckboxWidget.field_N != null) {
             var6 = var6 | 16;
           }
-          JaggrabDownloader.field_j.a(var6, false);
+          JaggrabDownloader.field_j.writeByte(var6, false);
           var7 = DateInputWidget.a(NanoTickClock.getApplet(90), (byte) 120);
           if (var7 == null) {
             var7 = "";
@@ -105,7 +105,7 @@ final class MessageScreen extends MenuScreen {
             JaggrabDownloader.field_j.a(false, CheckboxWidget.field_N);
           }
           ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, bc.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
-          JaggrabDownloader.field_j.c(JaggrabDownloader.field_j.position - var5_int, (byte) -92);
+          JaggrabDownloader.field_j.writeShortLengthPrefix(JaggrabDownloader.field_j.position - var5_int, (byte) -92);
           de.a(-1, 0);
           if (param3 != -98300704) {
             MessageScreen.releaseStatics(false);

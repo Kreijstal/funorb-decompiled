@@ -275,7 +275,7 @@ final class OpacityWidget extends SingleChildWidget {
         CueAim.a(110, var6);
         this.child.renderWidget(param0, (byte) -126, 0, 0);
         TriangleMesh.a(118);
-        var6.a(param2 + this.widgetX, this.widgetY + param3, this.opacity);
+        var6.drawShadedGrayscale(param2 + this.widgetX, this.widgetY + param3, this.opacity);
     }
 
     public OpacityWidget() {

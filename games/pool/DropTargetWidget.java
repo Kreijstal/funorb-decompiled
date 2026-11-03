@@ -43,9 +43,9 @@ final class DropTargetWidget extends SingleChildWidget {
         var4.position = var4.position + 1;
         int var6 = 84 / ((-74 - param1) / 37);
         int var5 = var4.position;
-        var4.a(6, false);
+        var4.writeByte(6, false);
         var4.writeLong(param2, (byte) -126);
-        var4.b(var4.position - var5, true);
+        var4.writeByteLengthPrefix(var4.position - var5, true);
     }
 
     final static void g(byte param0) {
@@ -113,13 +113,13 @@ final class DropTargetWidget extends SingleChildWidget {
           if (!param0.d(85)) {
             return false;
           }
-          if (!param0.a("commonui", 0)) {
+          if (!param0.ensureGroupAvailableByName("commonui", 0)) {
             return false;
           }
           if (param1.d(71) &&
-            param1.a("commonui", 0)) {
+            param1.ensureGroupAvailableByName("commonui", 0)) {
             if (param2.d(122) &&
-              param2.a("button.gif", 0)) {
+              param2.ensureGroupAvailableByName("button.gif", 0)) {
               if (param3) {
                 return true;
               }

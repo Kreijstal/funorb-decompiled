@@ -37,7 +37,7 @@ final class TextureCache implements in {
         }
         if (var7.buildPixels(param2, this.field_b, this.field_i)) {
           if (0 == this.field_j) {
-            var8 = (Texture) (this.field_a.b(-1));
+            var8 = (Texture) (this.field_a.removeLast(-1));
             var8.releasePixels();
             this.field_a.a((byte) -84, var7);
             return var7.pixels;

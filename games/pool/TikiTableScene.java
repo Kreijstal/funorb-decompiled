@@ -1227,56 +1227,56 @@ final class TikiTableScene extends ModelTableScene {
             var4 = ga.nextRandomInt(stackIn_11_0, true, ea.field_r);
             var6 = var4;
             if (var6 == 0) {
-              FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(this.field_db, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+              FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
             } else {
               if (var6 != 1) {
                 if (2 == var6) {
-                  FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(this.field_kb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                  FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_kb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                 } else {
                   if (var6 != 3) {
                     if (4 != var6) {
                       if (var6 == 5) {
-                        FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(this.field_Z, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                        FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_Z, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                       } else {
                         if (var6 != 6) {
                           if (var6 != 7) {
                             if (var6 != 8) {
                               if (var6 != 9) {
                                 if (var6 == 10) {
-                                  FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.a(this.field_gb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                  FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_gb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                                 } else {
                                   var5 = (PcmSample) (FreePlayRules.field_j[var3].field_o.field_n);
                                   if (var5 != this.field_X &&
                                     this.field_cb != var5 &&
                                     var5 != this.field_Y &&
                                     this.field_gb != var5) {
-                                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                                   } else {
-                                    FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.a(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                                   }
                                 }
                               } else {
-                                FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(101, PcmSampleStream.a(this.field_Y, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(101, PcmSampleStream.createAtRatePercentQ6(this.field_Y, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                               }
                             } else {
-                              FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(124, PcmSampleStream.a(this.field_cb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                              FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(124, PcmSampleStream.createAtRatePercentQ6(this.field_cb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                             }
                           } else {
-                            FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.a(this.field_X, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                            FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_X, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                           }
                         } else {
-                          FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.a(this.field_ab, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                          FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_ab, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                         }
                       }
                     } else {
-                      FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.a(this.field_T, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                      FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_T, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                     }
                   } else {
-                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(cq.a(param0, 20231), PcmSampleStream.a(this.field_pb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(cq.a(param0, 20231), PcmSampleStream.createAtRatePercentQ6(this.field_pb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                   }
                 }
               } else {
-                FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(this.field_nb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_nb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
               }
             }
           }

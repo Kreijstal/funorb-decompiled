@@ -141,8 +141,8 @@ final class PoolGameModel {
         var8 = this.currentShot(22);
         var3 = this.a(true, (byte) 76, var8) ? 1 : 0;
         if (this.field_i != null &&
-          !this.field_i.c(0)) {
-          var4_ref = (ShotRecord) (this.field_i.e((byte) -41));
+          !this.field_i.isEmpty(0)) {
+          var4_ref = (ShotRecord) (this.field_i.removeFirst((byte) -41));
         } else {
           var4_ref = new ShotRecord();
         }
@@ -249,7 +249,7 @@ final class PoolGameModel {
         }
         PacketBuffer var2 = new PacketBuffer(this.f(0));
         PacketBuffer var3 = var2;
-        var3.a(this.balls.length, false);
+        var3.writeByte(this.balls.length, false);
         for (var4 = 0; this.balls.length > var4; var4++) {
           this.balls[var4].writeState(0, var3);
         }
@@ -909,7 +909,7 @@ final class PoolGameModel {
           return;
         }
         regionExit1: {
-          if (!this.shots.c(param4 - 19063)) {
+          if (!this.shots.isEmpty(param4 - 19063)) {
             dupTemp$3 = this.currentShot(49);
             var7 = dupTemp$3;
             var6 = var7;
@@ -1461,7 +1461,7 @@ final class PoolGameModel {
               var3 = var3 + var5Lifetime1.pottedBalls.a(param0 ^ 12801);
               var3++;
               if (var5Lifetime1.field_R != null &&
-                !var5Lifetime1.field_R.c(0)) {
+                !var5Lifetime1.field_R.isEmpty(0)) {
                 var6 = new IntrusiveDequeCursor(var5Lifetime1.field_R);
                 var7 = (dn) (var6.last((byte) -92));
                 while (var7 != null) {
@@ -1699,7 +1699,7 @@ final class PoolGameModel {
         if (this.shots.c((byte) 113) == this.shots.a((byte) -127)) {
           return;
         }
-        var2 = (ShotRecord) (this.shots.b(-1));
+        var2 = (ShotRecord) (this.shots.removeLast(-1));
         var3 = (ShotRecord) (this.shots.a((byte) -127));
         var3.stateBefore.position = 0;
         var4 = var3.stateBefore;
@@ -1753,7 +1753,7 @@ final class PoolGameModel {
         stackIn_7_0.phase = stackIn_8_1;
         var3 = this.currentShot(60);
         this.field_j = 0;
-        if (!var3.pottedBalls.c(0)) {
+        if (!var3.pottedBalls.isEmpty(0)) {
           var4_ref_aa = new IntrusiveDequeCursor(var3.pottedBalls);
           var5 = (PotEvent) (var4_ref_aa.first(0));
           while (var5 != null) {

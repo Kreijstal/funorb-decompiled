@@ -46,8 +46,8 @@ final class SocialListEntry extends UiComponent {
           } else {
             var4 = JaggrabDownloader.field_j;
             var4.writeCipheredOpcode(false, param0);
-            var4.a(3, false);
-            var4.a(11, false);
+            var4.writeByte(3, false);
+            var4.writeByte(11, false);
             var4.writeShort((byte) -81, param1);
             if (param2 != 11) {
               field_Rb = (String) null;
@@ -57,8 +57,8 @@ final class SocialListEntry extends UiComponent {
           }
           var4Lifetime1 = JaggrabDownloader.field_j;
           var4Lifetime1.writeCipheredOpcode(false, param0);
-          var4Lifetime1.a(3, false);
-          var4Lifetime1.a(11, false);
+          var4Lifetime1.writeByte(3, false);
+          var4Lifetime1.writeByte(11, false);
           var4Lifetime1.writeShort((byte) -81, param1);
           if (param2 != 11) {
             field_Rb = (String) null;

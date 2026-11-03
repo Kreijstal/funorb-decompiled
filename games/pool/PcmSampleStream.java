@@ -900,7 +900,7 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void fadeOutAndUnlink(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -1208,7 +1208,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    private final boolean e() {
+    private final boolean adjustRampOrStop() {
         int var1;
         int var2;
         int var3;
@@ -1284,11 +1284,11 @@ final class PcmSampleStream extends PcmStream {
         return false;
     }
 
-    final synchronized int l() {
+    final synchronized int getTargetVolume() {
         return this.field_x == -2147483648 ? 0 : this.field_x + 32 >> 6;
     }
 
-    final static PcmSampleStream a(PcmSample param0, int param1, int param2, int param3) {
+    final static PcmSampleStream createAtRatePercentQ6(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_n == null) {
           return null;
         }
@@ -1537,7 +1537,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_A != 0) {
             return param1;
           }
-        } while (!this.e());
+        } while (!this.adjustRampOrStop());
         return param3;
     }
 
@@ -1675,7 +1675,7 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    final static PcmSampleStream b(PcmSample param0, int param1, int param2) {
+    final static PcmSampleStream createAtRatePercent(PcmSample param0, int param1, int param2) {
         if (param0.field_n == null) {
           return null;
         }
@@ -1734,7 +1734,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_A != 0) {
             return param1;
           }
-        } while (!this.e());
+        } while (!this.adjustRampOrStop());
         return param3;
     }
 

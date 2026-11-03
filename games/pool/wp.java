@@ -43,7 +43,7 @@ final class wp implements si {
               !(var5 > sb.field_b))) {
               var6 = new byte[var5];
               if (1 == var3) {
-                Bzip2Decoder.a(var6, var5, param1, var4, 9);
+                Bzip2Decoder.decompressInto(var6, var5, param1, var4, 9);
               } else {
                 var7 = VerticalScrollbar.field_Qb;
                 synchronized (var7) {

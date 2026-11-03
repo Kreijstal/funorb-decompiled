@@ -18,7 +18,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {
+    private final java.net.Socket connectViaProxy(int param0, java.net.Proxy param1) throws IOException {
         java.net.Socket stackIn_3_0 = null;
         java.net.Socket stackIn_16_0 = null;
         Object stackIn_19_0 = null;
@@ -297,7 +297,7 @@ final class ProxySocketConnector extends SocketConnector {
           var11 = (java.net.Proxy) (var10);
           try {
             if (false) throw (lo) null;
-            var12 = this.a(-6589, var11);
+            var12 = this.connectViaProxy(-6589, var11);
             if (var12 != null) {
               stackIn_24_0 = var12;
               return stackIn_24_0;

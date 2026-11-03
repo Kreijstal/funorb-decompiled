@@ -69,8 +69,8 @@ final class ih {
             bq.field_q = null;
             if (param0 == null) {
               bc.field_b.position = 0;
-              bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
-              bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
+              bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
+              bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
               stackIn_17_0 = bc.field_b;
               stackIn_17_1 = false;
               if (param4.isIncludedInLookupRequest(true)) {
@@ -87,27 +87,27 @@ final class ih {
                 stackIn_21_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2);
-              JaggrabDownloader.field_j.a(16, false);
+              JaggrabDownloader.field_j.writeByte(16, false);
               JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 1;
               var9 = JaggrabDownloader.field_j.position;
               ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, bc.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
-              JaggrabDownloader.field_j.b(-var9 + JaggrabDownloader.field_j.position, true);
+              JaggrabDownloader.field_j.writeByteLengthPrefix(-var9 + JaggrabDownloader.field_j.position, true);
             } else {
               var9 = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
               bc.field_b.position = 0;
-              bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
-              bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
+              bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
+              bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
               bc.field_b.a(false, var13);
               bc.field_b.a(false, var8);
               var14 = (CharSequence) ((Object) param0);
               bc.field_b.a(false, DelegatingCanvas.normalizeUsername(-28, var14));
               bc.field_b.writeShort((byte) -81, param2);
-              bc.field_b.a(param6, false);
-              bc.field_b.a(var9, false);
-              JaggrabDownloader.field_j.a(18, false);
+              bc.field_b.writeByte(param6, false);
+              bc.field_b.writeByte(var9, false);
+              JaggrabDownloader.field_j.writeByte(18, false);
               JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 2;
               var10 = JaggrabDownloader.field_j.position;
               var11_ref_String = DateInputWidget.a(NanoTickClock.getApplet(79), (byte) 112);
@@ -116,7 +116,7 @@ final class ih {
               }
               JaggrabDownloader.field_j.a(-9946, var11_ref_String);
               ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, bc.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
-              JaggrabDownloader.field_j.c(-var10 + JaggrabDownloader.field_j.position, (byte) -92);
+              JaggrabDownloader.field_j.writeShortLengthPrefix(-var10 + JaggrabDownloader.field_j.position, (byte) -92);
             }
             de.a(-1, 0);
             RankingsScreen.field_J = dr.field_a;
@@ -157,7 +157,7 @@ final class ih {
               if (DialogLayer.b((byte) 49, var10Lifetime1)) {
                 var11 = bi.field_b.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  bi.field_b[var12] = PlayerContextMenu.field_e.a(10762);
+                  bi.field_b[var12] = PlayerContextMenu.field_e.readString(10762);
                 }
                 dn.c(53);
                 ArchiveLoadStep.field_e = false;
@@ -171,7 +171,7 @@ final class ih {
             if (Bzip2DecoderState.field_c != 255) {
               LoginTextValue.field_g = PlayerContextMenu.field_e.j(-122);
             } else {
-              var9_ref_String = PlayerContextMenu.field_e.m(110);
+              var9_ref_String = PlayerContextMenu.field_e.readNullableString(110);
               if (var9_ref_String != null) {
                 WeightedLruCache.writeSettingsCookie(NanoTickClock.getApplet(86), -128, var9_ref_String);
               }

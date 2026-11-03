@@ -364,7 +364,7 @@ final class MusicPatch extends IntrusiveNode {
               } else {
                 var20Lifetime2 = var18[var21++];
               }
-              var22 = var38.k(-112);
+              var22 = var38.readVarInt(-112);
             }
             this.field_s[var23] = (short)(this.field_s[var23] + (ArchiveLoadSequence.b(2, -1 + var22) << 14));
             var20Lifetime2--;

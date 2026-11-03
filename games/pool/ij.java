@@ -115,7 +115,7 @@ final class ij extends IntrusiveNode {
           var14.draw(var8 - var14.field_z >> 1, 0);
           var9 = 0;
           var10 = new String[16];
-          var11 = sa.field_h.a(param2, new int[]{320}, var10);
+          var11 = sa.field_h.wrapText(param2, new int[]{320}, var10);
           for (var12 = 0; var11 > var12; var12++) {
             var13 = sa.field_h.b(var10[var12]);
             if (var9 < var13) {

@@ -9,7 +9,7 @@ final class IntrusiveDeque {
     static String menuSettings;
     static String muChatLobbyShowAll;
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode removeLast(int param0) {
         IntrusiveNode var2 = this.field_e.next;
         if (var2 == this.field_e) {
           return null;
@@ -21,7 +21,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final boolean c(int param0) {
+    final boolean isEmpty(int param0) {
         if (param0 != 0) {
           this.a(-24);
         }
@@ -45,7 +45,7 @@ final class IntrusiveDeque {
         return;
     }
 
-    final IntrusiveNode e(byte param0) {
+    final IntrusiveNode removeFirst(byte param0) {
         IntrusiveNode var2 = this.field_e.previous;
         if (this.field_e == var2) {
           return null;
@@ -163,7 +163,7 @@ final class IntrusiveDeque {
     final IntrusiveNode f(byte param0) {
         IntrusiveNode var2 = this.field_f;
         if (param0 != -5) {
-          this.b(63);
+          this.removeLast(63);
         }
         if (var2 == this.field_e) {
           this.field_f = null;
