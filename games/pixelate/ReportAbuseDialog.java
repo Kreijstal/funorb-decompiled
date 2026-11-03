@@ -6,7 +6,7 @@ final class ReportAbuseDialog extends SceneWidget {
     private SceneWidget field_Tb;
     private SceneWidget field_Eb;
     private SceneWidget field_Fb;
-    private fb muteControl;
+    private PairedTextColumns muteControl;
     private SceneWidget[] offenceButtons;
     private int field_Jb;
     private SceneWidget targetNameComponent;
@@ -35,18 +35,18 @@ final class ReportAbuseDialog extends SceneWidget {
         return true;
     }
 
-    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, fb param9, SceneWidget param10, String param11, long param12) {
+    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, PairedTextColumns param9, SceneWidget param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
-        fb stackIn_6_1;
-        fb stackIn_6_2;
+        PairedTextColumns stackIn_6_1;
+        PairedTextColumns stackIn_6_2;
         long stackIn_6_3;
-        fb stackIn_6_4;
+        PairedTextColumns stackIn_6_4;
         Object stackIn_7_0;
         Object stackIn_8_0;
-        fb stackIn_8_1;
-        fb stackIn_8_2;
+        PairedTextColumns stackIn_8_1;
+        PairedTextColumns stackIn_8_2;
         String stackIn_8_5;
         SceneWidget stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
@@ -83,8 +83,8 @@ final class ReportAbuseDialog extends SceneWidget {
         SceneWidget[] var28 = null;
         Object stackIn_6_0Lifetime1;
         Object stackIn_8_0Lifetime1;
-        fb stackIn_8_1Lifetime1;
-        fb stackIn_8_2Lifetime1;
+        PairedTextColumns stackIn_8_1Lifetime1;
+        PairedTextColumns stackIn_8_2Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
@@ -107,23 +107,23 @@ final class ReportAbuseDialog extends SceneWidget {
           this.field_Ub = param12;
           this.field_Eb = new SceneWidget(0L, param6, MatchingTextValidator.field_m.toUpperCase());
           this.field_Eb.horizontalAlignment = 1;
-          this.a(this.field_Eb, (byte) 26);
+          this.addChild(this.field_Eb, (byte) 26);
           this.field_Ob = new SceneWidget(0L, param7);
-          this.field_Eb.a(this.field_Ob, (byte) 26);
+          this.field_Eb.addChild(this.field_Ob, (byte) 26);
           this.field_Qb = new SceneWidget(0L, (SceneWidget) null);
-          this.a(this.field_Qb, (byte) 26);
+          this.addChild(this.field_Qb, (byte) 26);
           if (param11 != null) {
             this.field_Tb = new SceneWidget(0L, param8, ge.field_d);
             this.field_Tb.field_N = 11184810;
             this.field_Tb.horizontalAlignment = 1;
-            this.field_Qb.a(this.field_Tb, (byte) 26);
+            this.field_Qb.addChild(this.field_Tb, (byte) 26);
             this.field_Fb = new SceneWidget(0L, param8, CachedTextLayout.field_j);
             this.field_Fb.field_N = 11184810;
             this.field_Fb.horizontalAlignment = 1;
-            this.field_Qb.a(this.field_Fb, (byte) 26);
+            this.field_Qb.addChild(this.field_Fb, (byte) 26);
             this.targetNameComponent = new SceneWidget(0L, param8);
             this.targetNameComponent.field_N = 16764006;
-            this.field_Qb.a(this.targetNameComponent, (byte) 26);
+            this.field_Qb.addChild(this.targetNameComponent, (byte) 26);
             this.targetNameComponent.field_qb = "|";
             if (!(Js5NetworkRequest.field_I < 5) ||
               !(wo.field_h < 2)) {
@@ -132,7 +132,7 @@ final class ReportAbuseDialog extends SceneWidget {
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
                 stackIn_6_3 = 0L;
-                stackIn_6_4 = (fb) (param9);
+                stackIn_6_4 = (PairedTextColumns) (param9);
                 if (Js5NetworkRequest.field_I < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
@@ -149,17 +149,17 @@ final class ReportAbuseDialog extends SceneWidget {
                 stackIn_8_2Lifetime1 = null;
                 stackIn_8_5 = nh.field_d;
               }
-              this.muteControl = new fb(stackIn_6_3, stackIn_6_4, stackIn_8_5);
-              this.field_Qb.a(this.muteControl, (byte) 26);
+              this.muteControl = new PairedTextColumns(stackIn_6_3, stackIn_6_4, stackIn_8_5);
+              this.field_Qb.addChild(this.muteControl, (byte) 26);
             }
             var28 = new SceneWidget[3];
             var15 = var28;
             var28[0] = new SceneWidget(0L, (SceneWidget) null);
-            this.field_Qb.a(var28[0], (byte) 26);
+            this.field_Qb.addChild(var28[0], (byte) 26);
             var28[1] = new SceneWidget(0L, (SceneWidget) null);
-            this.field_Qb.a(var28[1], (byte) 26);
+            this.field_Qb.addChild(var28[1], (byte) 26);
             var28[2] = new SceneWidget(0L, (SceneWidget) null);
-            this.field_Qb.a(var28[2], (byte) 26);
+            this.field_Qb.addChild(var28[2], (byte) 26);
             this.offenceButtons = new SceneWidget[d.field_b];
             for (var16 = 0; d.field_b > var16; var16++) {
               if (null != cd.field_e[var16]) {
@@ -168,7 +168,7 @@ final class ReportAbuseDialog extends SceneWidget {
                 stackIn_14_0 = this.offenceButtons[var16];
                 stackIn_15_1 = (param11 != null);
                 stackIn_14_0.field_rb = stackIn_15_1;
-                this.field_Qb.a(this.offenceButtons[var16], (byte) 26);
+                this.field_Qb.addChild(this.offenceButtons[var16], (byte) 26);
               }
             }
             this.field_Ib = new StringBuilder(12);
@@ -203,30 +203,30 @@ final class ReportAbuseDialog extends SceneWidget {
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
             var18Lifetime3 = this.appendReasonHeading((byte) 126, var18Lifetime3, param6, var16Lifetime2, var28[0], DirectByteStorage.field_l);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 110, var16Lifetime2, this.offenceButtons[6]);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 112, var16Lifetime2, this.offenceButtons[9]);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 101, var16Lifetime2, this.offenceButtons[5]);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 126, var16Lifetime2, this.offenceButtons[7]);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 98, var16Lifetime2, this.offenceButtons[15]);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 108, var16Lifetime2, this.offenceButtons[4]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 110, var16Lifetime2, this.offenceButtons[6]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 112, var16Lifetime2, this.offenceButtons[9]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 101, var16Lifetime2, this.offenceButtons[5]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 126, var16Lifetime2, this.offenceButtons[7]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 98, var16Lifetime2, this.offenceButtons[15]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 108, var16Lifetime2, this.offenceButtons[4]);
             if (var17Lifetime5 < var18Lifetime3) {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
             var18Lifetime4 = this.appendReasonHeading((byte) 112, var18Lifetime4, param6, var16Lifetime2, var28[1], MusicPatchPcmStream.field_t);
-            var18Lifetime4 = this.a(var28[1], var18Lifetime4, (byte) 114, var16Lifetime2, this.offenceButtons[16]);
-            var18Lifetime4 = this.a(var28[1], var18Lifetime4, (byte) 95, var16Lifetime2, this.offenceButtons[17]);
-            var18Lifetime4 = this.a(var28[1], var18Lifetime4, (byte) 95, var16Lifetime2, this.offenceButtons[18]);
-            var18Lifetime4 = this.a(var28[1], var18Lifetime4, (byte) 99, var16Lifetime2, this.offenceButtons[19]);
-            var18Lifetime4 = this.a(var28[1], var18Lifetime4, (byte) 108, var16Lifetime2, this.offenceButtons[20]);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var18Lifetime4, (byte) 114, var16Lifetime2, this.offenceButtons[16]);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var18Lifetime4, (byte) 95, var16Lifetime2, this.offenceButtons[17]);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var18Lifetime4, (byte) 95, var16Lifetime2, this.offenceButtons[18]);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var18Lifetime4, (byte) 99, var16Lifetime2, this.offenceButtons[19]);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var18Lifetime4, (byte) 108, var16Lifetime2, this.offenceButtons[20]);
             if (var17Lifetime5 < var18Lifetime4) {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
             var18Lifetime5 = this.appendReasonHeading((byte) 114, var18Lifetime5, param6, var16Lifetime2, var28[2], IsaacRandom.field_j);
-            var18Lifetime5 = this.a(var28[2], var18Lifetime5, (byte) 94, var16Lifetime2, this.offenceButtons[13]);
-            var18Lifetime5 = this.a(var28[2], var18Lifetime5, (byte) 98, var16Lifetime2, this.offenceButtons[21]);
-            var18Lifetime5 = this.a(var28[2], var18Lifetime5, (byte) 120, var16Lifetime2, this.offenceButtons[11]);
+            var18Lifetime5 = this.appendReasonButton(var28[2], var18Lifetime5, (byte) 94, var16Lifetime2, this.offenceButtons[13]);
+            var18Lifetime5 = this.appendReasonButton(var28[2], var18Lifetime5, (byte) 98, var16Lifetime2, this.offenceButtons[21]);
+            var18Lifetime5 = this.appendReasonButton(var28[2], var18Lifetime5, (byte) 120, var16Lifetime2, this.offenceButtons[11]);
             if (var17Lifetime5 < var18Lifetime5) {
               var17Lifetime5 = var18Lifetime5;
             }
@@ -241,49 +241,49 @@ final class ReportAbuseDialog extends SceneWidget {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Eb.a(0, 24, 0, 256, 13 + (var19 + 13));
-            this.field_Ob.a(5, 15, this.field_Eb.field_K - 20, 256, 15);
+            this.field_Eb.setBounds(0, 24, 0, 256, 13 + (var19 + 13));
+            this.field_Ob.setBounds(5, 15, this.field_Eb.field_K - 20, 256, 15);
             var21 = 10;
-            this.field_Tb.a(var21, 2 * fq.field_q, 13, 256, var19);
+            this.field_Tb.setBounds(var21, 2 * fq.field_q, 13, 256, var19);
             var21 = var21 + 2 * fq.field_q;
-            this.field_Fb.a(var21, 2 * fq.field_q, 13, 256, var19);
+            this.field_Fb.setBounds(var21, 2 * fq.field_q, 13, 256, var19);
             var21 = var21 + (fq.field_q * 2 + 10);
-            this.targetNameComponent.a(var21, fq.field_q, 0, 256, 0);
+            this.targetNameComponent.setBounds(var21, fq.field_q, 0, 256, 0);
             var21 = var21 + (fq.field_q + 10);
             if (this.muteControl != null) {
               var20Lifetime3 = this.muteControl.b((byte) 115, 4);
               this.muteControl.a(fq.field_q, (var19 - var20Lifetime3) / 2 + 13, var21, var20Lifetime3, 4, 0);
               var21 = var21 + (fq.field_q + 10);
             }
-            var28[0].a(var21, var17Lifetime5, 13, 256, var16Lifetime2);
-            var28[1].a(var21, var17Lifetime5, 26 + var16Lifetime2, 256, var16Lifetime2);
-            var28[2].a(var21, var17Lifetime5, 39 + 2 * var16Lifetime2, 256, var16Lifetime2);
+            var28[0].setBounds(var21, var17Lifetime5, 13, 256, var16Lifetime2);
+            var28[1].setBounds(var21, var17Lifetime5, 26 + var16Lifetime2, 256, var16Lifetime2);
+            var28[2].setBounds(var21, var17Lifetime5, 39 + 2 * var16Lifetime2, 256, var16Lifetime2);
             var22 = var21;
-            this.field_Qb.a(24, var17Lifetime5 + (var22 + 10), 0, 256, 13 + (var19 + 13));
-            this.field_Qb.field_zb = op.a(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
+            this.field_Qb.setBounds(24, var17Lifetime5 + (var22 + 10), 0, 256, 13 + (var19 + 13));
+            this.field_Qb.field_zb = OptionsScreen.buildNineSliceSprites(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
             var23 = 13 + (var19 + 13);
             var24 = var17Lifetime5 + (24 + var22) + 10;
             var25 = ui.a(param2, param0, var23, (byte) -1);
             var26 = pj.a(var24, param1, param3, (byte) 110);
-            this.a(var26, var24, var25, 256, var23);
+            this.setBounds(var26, var24, var25, 256, var23);
             return;
           }
-          this.field_Tb = new SceneWidget(0L, param8, im.field_Lb);
+          this.field_Tb = new SceneWidget(0L, param8, SocialListEntry.field_Lb);
           this.field_Tb.horizontalAlignment = 1;
           this.field_Tb.field_N = 11184810;
-          this.field_Qb.a(this.field_Tb, (byte) 26);
+          this.field_Qb.addChild(this.field_Tb, (byte) 26);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Tb.font.wrappedLineCount(this.field_Tb.field_cb, var15_int);
-          this.field_Tb.a(var16Lifetime1, var17Lifetime1 * fq.field_q, 13, 256, var15_int);
+          this.field_Tb.setBounds(var16Lifetime1, var17Lifetime1 * fq.field_q, 13, 256, var15_int);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * fq.field_q;
-          this.field_Qb.a(24, var16Lifetime1 + 10, 0, 256, 13 + (var15_int + 13));
-          this.field_Qb.field_zb = op.a(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
+          this.field_Qb.setBounds(24, var16Lifetime1 + 10, 0, 256, 13 + (var15_int + 13));
+          this.field_Qb.field_zb = OptionsScreen.buildNineSliceSprites(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
           var18Lifetime1 = 13 - (-var15_int - 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = ui.a(param2, param0, var18Lifetime1, (byte) -1);
           var21Lifetime1 = pj.a(var19Lifetime1, param1, param3, (byte) 32);
-          this.a(var21Lifetime1, var19Lifetime1, var20Lifetime1, 256, var18Lifetime1);
+          this.setBounds(var21Lifetime1, var19Lifetime1, var20Lifetime1, 256, var18Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -331,7 +331,7 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -353,7 +353,7 @@ final class ReportAbuseDialog extends SceneWidget {
             this.field_Ob = (SceneWidget) null;
           }
           param1 += 32;
-          param4.a(var7, (byte) 26);
+          param4.addChild(var7, (byte) 26);
           stackIn_3_0 = param1;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -378,7 +378,7 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -391,7 +391,7 @@ final class ReportAbuseDialog extends SceneWidget {
 
     final int pollOffence(byte param0, boolean param1) {
         int var3 = 0;
-        fb stackIn_7_0 = null;
+        PairedTextColumns stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         SceneWidget stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
@@ -527,12 +527,12 @@ final class ReportAbuseDialog extends SceneWidget {
           TickClock.field_d = 11;
           r.field_c = 2;
           PlayerBoard.field_q = 2;
-          var7 = bf.a(0, param4, "largefont", param1, "lobby");
-          ig.field_d = bf.a(0, param4, "generalfont", param1, "lobby");
-          EditableTextWidget.field_Y = bf.a(0, param4, "chatfont", param1, "lobby");
-          var7.a(var5, var24);
-          ig.field_d.a(var5, var24);
-          EditableTextWidget.field_Y.a(var5, var24);
+          var7 = PicturePreview.a(0, param4, "largefont", param1, "lobby");
+          ig.field_d = PicturePreview.a(0, param4, "generalfont", param1, "lobby");
+          EditableTextWidget.field_Y = PicturePreview.a(0, param4, "chatfont", param1, "lobby");
+          var7.setInlineSprites(var5, var24);
+          ig.field_d.setInlineSprites(var5, var24);
+          EditableTextWidget.field_Y.setInlineSprites(var5, var24);
           var8 = new SceneWidget(0L, (SceneWidget) null);
           var8.field_mb = fq.field_q;
           var8.field_N = 16777215;
@@ -548,26 +548,26 @@ final class ReportAbuseDialog extends SceneWidget {
           var11 = var10;
           var11.horizontalAlignment = 1;
           io.field_f = new SceneWidget(0L, var8);
-          io.field_f.field_zb = FallingPieceView.a(false, SocketConnector.a("heading", "lobby", (byte) 47, param1));
+          io.field_f.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("heading", "lobby", (byte) 47, param1));
           ProxySocketConnector.field_k = new SceneWidget(0L, (SceneWidget) null);
           ProxySocketConnector.field_k.field_zb = AccountNamePrompt.a(false, false, 4210752, 120, true, 8421504);
-          sc.field_g = new SceneWidget(0L, (SceneWidget) null);
-          sc.field_g.field_zb = op.a(6316128, 16, 6316128, 114, 1, 3);
+          ConditionalTextValue.field_g = new SceneWidget(0L, (SceneWidget) null);
+          ConditionalTextValue.field_g.field_zb = OptionsScreen.buildNineSliceSprites(6316128, 16, 6316128, 114, 1, 3);
           SoundCache.field_c = new SceneWidget(0L, (SceneWidget) null);
-          SoundCache.field_c.field_zb = FallingPieceView.a(false, SocketConnector.a("popup", "lobby", (byte) 47, param1));
-          var12 = FallingPieceView.a(false, SocketConnector.a("popup_mouseover", "lobby", (byte) 47, param1));
-          var13 = SocketConnector.a("button", "lobby", (byte) 47, param1);
-          var14 = FallingPieceView.a(false, SocketConnector.a("tab_active", "lobby", (byte) 47, param1));
+          SoundCache.field_c.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("popup", "lobby", (byte) 47, param1));
+          var12 = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("popup_mouseover", "lobby", (byte) 47, param1));
+          var13 = SocketConnector.loadRgbSpritesByName("button", "lobby", (byte) 47, param1);
+          var14 = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("tab_active", "lobby", (byte) 47, param1));
           pj.field_i = new SceneWidget(0L, var8);
           pj.field_i.field_zb = var14;
-          ae.field_f = new SceneWidget(0L, (SceneWidget) null);
-          ae.field_f.field_H = bi.a("lobby", "closebutton", param1, (byte) -127);
-          ae.field_f.field_B = bi.a("lobby", "closebutton_mouseover", param1, (byte) -106);
+          Vector3.field_f = new SceneWidget(0L, (SceneWidget) null);
+          Vector3.field_f.field_H = bi.loadSprite("lobby", "closebutton", param1, (byte) -127);
+          Vector3.field_f.field_B = bi.loadSprite("lobby", "closebutton_mouseover", param1, (byte) -106);
           ff.field_j = new SceneWidget(0L, var8);
           ff.field_j.field_zb = AccountNamePrompt.a(true, true, 2039583, 40, true, 3815994);
-          u.field_l = new SceneWidget(0L, var10);
-          u.field_l.field_C = 2;
-          u.field_l.field_zb = AccountNamePrompt.a(true, false, 2039583, 30, true, 3815994);
+          QuickChatPhraseCache.field_l = new SceneWidget(0L, var10);
+          QuickChatPhraseCache.field_l.field_C = 2;
+          QuickChatPhraseCache.field_l.field_zb = AccountNamePrompt.a(true, false, 2039583, 30, true, 3815994);
           AccountRequestDialog.field_mb = new SceneWidget(0L, var10);
           AccountRequestDialog.field_mb.field_C = 2;
           AccountRequestDialog.field_mb.field_zb = AccountNamePrompt.a(false, false, 2039583, 30, true, 3815994);
@@ -602,7 +602,7 @@ final class ReportAbuseDialog extends SceneWidget {
           of.field_i.applyStyle(-27813, dn.field_c);
           SceneWidget.field_T = new SceneWidget(0L, qk.field_d);
           SceneWidget.field_T.applyStyle(-27813, dn.field_c);
-          var16 = SocketConnector.a("button_mouseover", "lobby", (byte) 47, param1);
+          var16 = SocketConnector.loadRgbSpritesByName("button_mouseover", "lobby", (byte) 47, param1);
           NameSuggestionsPanel.field_O = new ContextActionMenu(SoundCache.field_c, var12, TextFieldValidator.field_h, dn.field_c, 3, 2, PlayerBoard.field_q, 3, fq.field_q);
           lc.field_q = new SceneWidget(0L, dn.field_c);
           lc.field_q.selectedOffsetX = 1;
@@ -611,101 +611,101 @@ final class ReportAbuseDialog extends SceneWidget {
           lc.field_q.field_ab = var16;
           lc.field_q.field_zb = var13;
           lc.field_q.field_V = 1;
-          lc.field_q.field_bb = SocketConnector.a("button_mouseheld", "lobby", (byte) 47, param1);
-          lc.field_q.field_eb = SocketConnector.a("button_active", "lobby", (byte) 47, param1);
-          lc.field_q.field_M = SocketConnector.a("button_disabled", "lobby", (byte) 47, param1);
+          lc.field_q.field_bb = SocketConnector.loadRgbSpritesByName("button_mouseheld", "lobby", (byte) 47, param1);
+          lc.field_q.field_eb = SocketConnector.loadRgbSpritesByName("button_active", "lobby", (byte) 47, param1);
+          lc.field_q.field_M = SocketConnector.loadRgbSpritesByName("button_disabled", "lobby", (byte) 47, param1);
           lc.field_q.horizontalAlignment = 1;
           ab.field_a = new SceneWidget(0L, dn.field_c);
           ab.field_a.horizontalAlignment = 1;
-          ab.field_a.field_zb = FallingPieceView.a(false, SocketConnector.a("tab_inactive", "lobby", (byte) 47, param1));
-          ab.field_a.field_ab = FallingPieceView.a(false, SocketConnector.a("tab_mouseover", "lobby", (byte) 47, param1));
+          ab.field_a.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("tab_inactive", "lobby", (byte) 47, param1));
+          ab.field_a.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("tab_mouseover", "lobby", (byte) 47, param1));
           ab.field_a.field_eb = var14;
           AccountMessagePanel.field_J = new SceneWidget(0L, (SceneWidget) null);
-          AccountMessagePanel.field_J.field_zb = op.a(1127256, 16, 1856141, 206, -1, 3);
+          AccountMessagePanel.field_J.field_zb = OptionsScreen.buildNineSliceSprites(1127256, 16, 1856141, 206, -1, 3);
           ff.field_a = new SceneWidget(0L, (SceneWidget) null);
-          ff.field_a.field_zb = op.a(6052956, 16, 11579568, 290, -1, 3);
-          bf.field_k = new SceneWidget(0L, var15);
-          bf.field_k.field_V = 1;
-          bf.field_k.selectedOffsetX = 1;
-          bf.field_k.horizontalAlignment = 1;
-          bf.field_k.field_hb = 1;
-          bf.field_k.field_Q = 1;
-          nk.field_f = new SceneWidget(0L, bf.field_k);
-          u.field_a = new SceneWidget(0L, dn.field_c);
-          u.field_a.field_Q = 1;
-          u.field_a.selectedOffsetX = 1;
-          u.field_a.field_V = 1;
-          u.field_a.field_hb = 1;
-          u.field_a.horizontalAlignment = 1;
-          ul.field_p = new SceneWidget(0L, u.field_a);
-          ge.field_h = new SceneWidget(0L, u.field_a);
-          be.field_R = new SceneWidget(0L, bf.field_k);
-          bl.field_d = new SceneWidget(0L, u.field_a);
-          l.field_q = new SceneWidget(0L, u.field_a);
-          EmailValidator.field_o = new SceneWidget(0L, u.field_a);
-          u.field_a.field_zb = FallingPieceView.a(false, SocketConnector.a("smallbutton", "lobby", (byte) 47, param1));
-          u.field_a.field_ab = FallingPieceView.a(false, SocketConnector.a("smallbutton_mouseover", "lobby", (byte) 47, param1));
-          dupTemp$0 = FallingPieceView.a(false, SocketConnector.a("smallbutton_active", "lobby", (byte) 47, param1));
-          u.field_a.field_eb = dupTemp$0;
-          u.field_a.field_bb = dupTemp$0;
-          u.field_a.field_M = FallingPieceView.a(false, SocketConnector.a("smallbutton_disabled", "lobby", (byte) 47, param1));
-          nk.field_f.field_zb = FallingPieceView.a(false, SocketConnector.a("mediumbutton", "lobby", (byte) 47, param1));
-          nk.field_f.field_ab = FallingPieceView.a(false, SocketConnector.a("mediumbutton_mouseover", "lobby", (byte) 47, param1));
-          nk.field_f.field_bb = FallingPieceView.a(false, SocketConnector.a("mediumbutton_mouseheld", "lobby", (byte) 47, param1));
-          bf.field_k.field_zb = FallingPieceView.a(false, SocketConnector.a("bigbutton", "lobby", (byte) 47, param1));
-          bf.field_k.field_ab = FallingPieceView.a(false, SocketConnector.a("bigbutton_mouseover", "lobby", (byte) 47, param1));
-          bf.field_k.field_bb = FallingPieceView.a(false, SocketConnector.a("bigbutton_mouseheld", "lobby", (byte) 47, param1));
-          bf.field_k.field_M = FallingPieceView.a(false, SocketConnector.a("bigbutton_disabled", "lobby", (byte) 47, param1));
-          ul.field_p.field_zb = FallingPieceView.a(false, SocketConnector.a("greenbutton", "lobby", (byte) 47, param1));
-          ul.field_p.field_ab = FallingPieceView.a(false, SocketConnector.a("greenbutton_mouseover", "lobby", (byte) 47, param1));
-          ul.field_p.field_bb = FallingPieceView.a(false, SocketConnector.a("greenbutton_mouseheld", "lobby", (byte) 47, param1));
-          ge.field_h.field_zb = FallingPieceView.a(false, SocketConnector.a("redbutton", "lobby", (byte) 47, param1));
-          ge.field_h.field_ab = FallingPieceView.a(false, SocketConnector.a("redbutton_mouseover", "lobby", (byte) 47, param1));
-          ge.field_h.field_bb = FallingPieceView.a(false, SocketConnector.a("redbutton_mouseheld", "lobby", (byte) 47, param1));
-          be.field_R.field_zb = FallingPieceView.a(false, SocketConnector.a("backbutton", "lobby", (byte) 47, param1));
-          be.field_R.field_ab = FallingPieceView.a(false, SocketConnector.a("backbutton_mouseover", "lobby", (byte) 47, param1));
-          be.field_R.field_bb = FallingPieceView.a(false, SocketConnector.a("backbutton_mouseheld", "lobby", (byte) 47, param1));
-          be.field_R.field_M = FallingPieceView.a(false, SocketConnector.a("backbutton_disabled", "lobby", (byte) 47, param1));
-          EmailValidator.field_o.field_zb = FallingPieceView.a(false, SocketConnector.a("gameoptionbutton", "lobby", (byte) 47, param1));
-          EmailValidator.field_o.field_ab = FallingPieceView.a(false, SocketConnector.a("gameoptionbutton_mouseover", "lobby", (byte) 47, param1));
-          dupTemp$1 = FallingPieceView.a(false, SocketConnector.a("gameoptionbutton_active", "lobby", (byte) 47, param1));
+          ff.field_a.field_zb = OptionsScreen.buildNineSliceSprites(6052956, 16, 11579568, 290, -1, 3);
+          PicturePreview.field_k = new SceneWidget(0L, var15);
+          PicturePreview.field_k.field_V = 1;
+          PicturePreview.field_k.selectedOffsetX = 1;
+          PicturePreview.field_k.horizontalAlignment = 1;
+          PicturePreview.field_k.field_hb = 1;
+          PicturePreview.field_k.field_Q = 1;
+          nk.field_f = new SceneWidget(0L, PicturePreview.field_k);
+          QuickChatPhraseCache.field_a = new SceneWidget(0L, dn.field_c);
+          QuickChatPhraseCache.field_a.field_Q = 1;
+          QuickChatPhraseCache.field_a.selectedOffsetX = 1;
+          QuickChatPhraseCache.field_a.field_V = 1;
+          QuickChatPhraseCache.field_a.field_hb = 1;
+          QuickChatPhraseCache.field_a.horizontalAlignment = 1;
+          TimerBar.field_p = new SceneWidget(0L, QuickChatPhraseCache.field_a);
+          ge.field_h = new SceneWidget(0L, QuickChatPhraseCache.field_a);
+          LoginForm.field_R = new SceneWidget(0L, PicturePreview.field_k);
+          bl.field_d = new SceneWidget(0L, QuickChatPhraseCache.field_a);
+          l.field_q = new SceneWidget(0L, QuickChatPhraseCache.field_a);
+          EmailValidator.field_o = new SceneWidget(0L, QuickChatPhraseCache.field_a);
+          QuickChatPhraseCache.field_a.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("smallbutton", "lobby", (byte) 47, param1));
+          QuickChatPhraseCache.field_a.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("smallbutton_mouseover", "lobby", (byte) 47, param1));
+          dupTemp$0 = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("smallbutton_active", "lobby", (byte) 47, param1));
+          QuickChatPhraseCache.field_a.field_eb = dupTemp$0;
+          QuickChatPhraseCache.field_a.field_bb = dupTemp$0;
+          QuickChatPhraseCache.field_a.field_M = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("smallbutton_disabled", "lobby", (byte) 47, param1));
+          nk.field_f.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("mediumbutton", "lobby", (byte) 47, param1));
+          nk.field_f.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("mediumbutton_mouseover", "lobby", (byte) 47, param1));
+          nk.field_f.field_bb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("mediumbutton_mouseheld", "lobby", (byte) 47, param1));
+          PicturePreview.field_k.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("bigbutton", "lobby", (byte) 47, param1));
+          PicturePreview.field_k.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("bigbutton_mouseover", "lobby", (byte) 47, param1));
+          PicturePreview.field_k.field_bb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("bigbutton_mouseheld", "lobby", (byte) 47, param1));
+          PicturePreview.field_k.field_M = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("bigbutton_disabled", "lobby", (byte) 47, param1));
+          TimerBar.field_p.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("greenbutton", "lobby", (byte) 47, param1));
+          TimerBar.field_p.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("greenbutton_mouseover", "lobby", (byte) 47, param1));
+          TimerBar.field_p.field_bb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("greenbutton_mouseheld", "lobby", (byte) 47, param1));
+          ge.field_h.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("redbutton", "lobby", (byte) 47, param1));
+          ge.field_h.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("redbutton_mouseover", "lobby", (byte) 47, param1));
+          ge.field_h.field_bb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("redbutton_mouseheld", "lobby", (byte) 47, param1));
+          LoginForm.field_R.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("backbutton", "lobby", (byte) 47, param1));
+          LoginForm.field_R.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("backbutton_mouseover", "lobby", (byte) 47, param1));
+          LoginForm.field_R.field_bb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("backbutton_mouseheld", "lobby", (byte) 47, param1));
+          LoginForm.field_R.field_M = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("backbutton_disabled", "lobby", (byte) 47, param1));
+          EmailValidator.field_o.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("gameoptionbutton", "lobby", (byte) 47, param1));
+          EmailValidator.field_o.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("gameoptionbutton_mouseover", "lobby", (byte) 47, param1));
+          dupTemp$1 = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("gameoptionbutton_active", "lobby", (byte) 47, param1));
           EmailValidator.field_o.field_eb = dupTemp$1;
           EmailValidator.field_o.field_bb = dupTemp$1;
-          EmailValidator.field_o.field_M = FallingPieceView.a(false, SocketConnector.a("gameoptionbutton_disabled", "lobby", (byte) 47, param1));
-          bl.field_d.field_zb = FallingPieceView.a(false, SocketConnector.a("chatbutton", "lobby", (byte) 47, param1));
-          bl.field_d.field_ab = FallingPieceView.a(false, SocketConnector.a("chatbutton_mouseover", "lobby", (byte) 47, param1));
-          dupTemp$2 = FallingPieceView.a(false, SocketConnector.a("chatbutton_active", "lobby", (byte) 47, param1));
+          EmailValidator.field_o.field_M = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("gameoptionbutton_disabled", "lobby", (byte) 47, param1));
+          bl.field_d.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("chatbutton", "lobby", (byte) 47, param1));
+          bl.field_d.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("chatbutton_mouseover", "lobby", (byte) 47, param1));
+          dupTemp$2 = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("chatbutton_active", "lobby", (byte) 47, param1));
           bl.field_d.field_eb = dupTemp$2;
           bl.field_d.field_bb = dupTemp$2;
-          l.field_q.field_zb = FallingPieceView.a(false, SocketConnector.a("chatfilterbutton", "lobby", (byte) 47, param1));
-          l.field_q.field_ab = FallingPieceView.a(false, SocketConnector.a("chatfilterbutton_mouseover", "lobby", (byte) 47, param1));
-          dupTemp$3 = FallingPieceView.a(false, SocketConnector.a("chatfilterbutton_active", "lobby", (byte) 47, param1));
+          l.field_q.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("chatfilterbutton", "lobby", (byte) 47, param1));
+          l.field_q.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("chatfilterbutton_mouseover", "lobby", (byte) 47, param1));
+          dupTemp$3 = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("chatfilterbutton_active", "lobby", (byte) 47, param1));
           l.field_q.field_eb = dupTemp$3;
           l.field_q.field_bb = dupTemp$3;
-          var17 = SocketConnector.a("checkbox", "lobby", (byte) 47, param1);
-          um.field_q = new fb(0L, var17[1], var17[0], 1, dn.field_c, (String) null);
+          var17 = SocketConnector.loadRgbSpritesByName("checkbox", "lobby", (byte) 47, param1);
+          um.field_q = new PairedTextColumns(0L, var17[1], var17[0], 1, dn.field_c, (String) null);
           LoginDialog.field_mb = new SceneWidget(0L, (SceneWidget) null);
-          LoginDialog.field_mb.field_zb = TextHotspotWidget.a(24414, bi.a("lobby", "slideregion", param1, (byte) -73));
-          LoginDialog.field_mb.field_ab = TextHotspotWidget.a(24414, bi.a("lobby", "slideregion_mouseover", param1, (byte) -123));
-          LoginDialog.field_mb.field_bb = TextHotspotWidget.a(24414, bi.a("lobby", "slideregion_mouseheld", param1, (byte) -64));
-          LoginDialog.field_mb.field_M = TextHotspotWidget.a(24414, bi.a("lobby", "slideregion_disabled", param1, (byte) -50));
+          LoginDialog.field_mb.field_zb = TextHotspotWidget.a(24414, bi.loadSprite("lobby", "slideregion", param1, (byte) -73));
+          LoginDialog.field_mb.field_ab = TextHotspotWidget.a(24414, bi.loadSprite("lobby", "slideregion_mouseover", param1, (byte) -123));
+          LoginDialog.field_mb.field_bb = TextHotspotWidget.a(24414, bi.loadSprite("lobby", "slideregion_mouseheld", param1, (byte) -64));
+          LoginDialog.field_mb.field_M = TextHotspotWidget.a(24414, bi.loadSprite("lobby", "slideregion_disabled", param1, (byte) -50));
           jn.field_p = new SceneWidget(0L, (SceneWidget) null);
-          jn.field_p.field_zb = FallingPieceView.a(false, SocketConnector.a("dragbar", "lobby", (byte) 47, param1));
-          jn.field_p.field_ab = FallingPieceView.a(false, SocketConnector.a("dragbar_mouseover", "lobby", (byte) 47, param1));
-          jn.field_p.field_bb = FallingPieceView.a(false, SocketConnector.a("dragbar_mouseheld", "lobby", (byte) 47, param1));
-          jn.field_p.field_M = FallingPieceView.a(false, SocketConnector.a("dragbar_disabled", "lobby", (byte) 47, param1));
-          dj.field_a = new SceneWidget(0L, (SceneWidget) null);
-          dj.field_a.field_H = bi.a("lobby", "upbutton", param1, (byte) -78);
-          dj.field_a.field_B = bi.a("lobby", "upbutton_mouseover", param1, (byte) -126);
-          dj.field_a.field_ob = bi.a("lobby", "upbutton_mouseheld", param1, (byte) -43);
-          dj.field_a.field_xb = bi.a("lobby", "upbutton_disabled", param1, (byte) -58);
+          jn.field_p.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("dragbar", "lobby", (byte) 47, param1));
+          jn.field_p.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("dragbar_mouseover", "lobby", (byte) 47, param1));
+          jn.field_p.field_bb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("dragbar_mouseheld", "lobby", (byte) 47, param1));
+          jn.field_p.field_M = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("dragbar_disabled", "lobby", (byte) 47, param1));
+          ValidationState.field_a = new SceneWidget(0L, (SceneWidget) null);
+          ValidationState.field_a.field_H = bi.loadSprite("lobby", "upbutton", param1, (byte) -78);
+          ValidationState.field_a.field_B = bi.loadSprite("lobby", "upbutton_mouseover", param1, (byte) -126);
+          ValidationState.field_a.field_ob = bi.loadSprite("lobby", "upbutton_mouseheld", param1, (byte) -43);
+          ValidationState.field_a.field_xb = bi.loadSprite("lobby", "upbutton_disabled", param1, (byte) -58);
           ek.field_b = new SceneWidget(0L, (SceneWidget) null);
-          ek.field_b.field_H = bi.a("lobby", "downbutton", param1, (byte) -25);
-          ek.field_b.field_B = bi.a("lobby", "downbutton_mouseover", param1, (byte) -71);
-          ek.field_b.field_ob = bi.a("lobby", "downbutton_mouseheld", param1, (byte) -83);
-          ek.field_b.field_xb = bi.a("lobby", "downbutton_disabled", param1, (byte) -97);
-          ug.field_s = new VerticalScrollbar(0L, dj.field_a, ek.field_b, LoginDialog.field_mb, jn.field_p);
-          rm.field_a = new pd(0L, (SceneWidget) null, ff.field_g, ug.field_s, u.field_a, (String) null, (String) null);
+          ek.field_b.field_H = bi.loadSprite("lobby", "downbutton", param1, (byte) -25);
+          ek.field_b.field_B = bi.loadSprite("lobby", "downbutton_mouseover", param1, (byte) -71);
+          ek.field_b.field_ob = bi.loadSprite("lobby", "downbutton_mouseheld", param1, (byte) -83);
+          ek.field_b.field_xb = bi.loadSprite("lobby", "downbutton_disabled", param1, (byte) -97);
+          ug.field_s = new VerticalScrollbar(0L, ValidationState.field_a, ek.field_b, LoginDialog.field_mb, jn.field_p);
+          rm.field_a = new ScrollPaneWithFooter(0L, (SceneWidget) null, ff.field_g, ug.field_s, QuickChatPhraseCache.field_a, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -735,7 +735,7 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -750,7 +750,7 @@ final class ReportAbuseDialog extends SceneWidget {
         return stackIn_6_0;
     }
 
-    private final int a(SceneWidget param0, int param1, byte param2, int param3, SceneWidget param4) {
+    private final int appendReasonButton(SceneWidget param0, int param1, byte param2, int param3, SceneWidget param4) {
         int discarded$1 = 0;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -765,12 +765,12 @@ final class ReportAbuseDialog extends SceneWidget {
         try {
           param1 += 8;
           var6_int = param4.font.paragraphHeight(param4.field_cb, -(param4.field_C * 2) + param3, param4.field_mb);
-          param4.a(param1, var6_int, 0, 256, param3);
+          param4.setBounds(param1, var6_int, 0, 256, param3);
           if (param2 < 93) {
             var7 = (SceneWidget) null;
-            discarded$1 = this.a((SceneWidget) null, 19, (byte) -78, -14, (SceneWidget) null);
+            discarded$1 = this.appendReasonButton((SceneWidget) null, 19, (byte) -78, -14, (SceneWidget) null);
           }
-          param0.a(param4, (byte) 26);
+          param0.addChild(param4, (byte) 26);
           param1 = param1 + (var6_int - 0);
           stackIn_3_0 = param1;
           return stackIn_3_0;
@@ -790,7 +790,7 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -798,7 +798,7 @@ final class ReportAbuseDialog extends SceneWidget {
         int discarded$0 = 0;
         if (param0 <= 102) {
           SceneWidget var3 = (SceneWidget) null;
-          discarded$0 = this.a((SceneWidget) null, 8, (byte) 76, -63, (SceneWidget) null);
+          discarded$0 = this.appendReasonButton((SceneWidget) null, 8, (byte) 76, -63, (SceneWidget) null);
         }
         return this.field_Ib.toString();
     }

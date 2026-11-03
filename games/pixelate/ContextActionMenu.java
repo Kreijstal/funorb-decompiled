@@ -12,7 +12,7 @@ final class ContextActionMenu extends SceneWidget {
     static int field_Fb;
     private int field_Gb;
     private int field_Ob;
-    private lo[] items;
+    private IconTextComponent[] items;
     private SceneWidget field_Jb;
     private Sprite[] field_Kb;
     private int itemCount;
@@ -91,7 +91,7 @@ final class ContextActionMenu extends SceneWidget {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -109,18 +109,18 @@ final class ContextActionMenu extends SceneWidget {
 
     final void addAction(String param0, byte param1, int param2) {
         try {
-          this.items[this.itemCount] = new lo(0L, (SceneWidget) null, (SceneWidget) null, this.field_Jb, (Sprite) null, param0);
+          this.items[this.itemCount] = new IconTextComponent(0L, (SceneWidget) null, (SceneWidget) null, this.field_Jb, (Sprite) null, param0);
           this.items[this.itemCount].field_ab = this.field_Kb;
           this.items[this.itemCount].field_A = true;
           this.items[this.itemCount].verticalAlignment = 1;
-          this.a(this.items[this.itemCount], (byte) 26);
+          this.addChild(this.items[this.itemCount], (byte) 26);
           this.field_Mb[this.itemCount] = param2;
           if (param1 > -23) {
             this.field_Pb = (SceneWidget) null;
           }
           this.itemCount = this.itemCount + 1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pi.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pi.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -136,19 +136,19 @@ final class ContextActionMenu extends SceneWidget {
 
     final void addIconAction(int param0, int param1, Sprite param2, String param3) {
         try {
-          this.items[this.itemCount] = new lo((long)param0, (SceneWidget) null, (SceneWidget) null, this.field_Jb, param2, param3);
+          this.items[this.itemCount] = new IconTextComponent((long)param0, (SceneWidget) null, (SceneWidget) null, this.field_Jb, param2, param3);
           this.items[this.itemCount].field_ab = this.field_Kb;
           this.items[this.itemCount].field_A = true;
           this.items[this.itemCount].verticalAlignment = 1;
-          this.a(this.items[this.itemCount], (byte) 26);
+          this.addChild(this.items[this.itemCount], (byte) 26);
           this.field_Mb[this.itemCount] = param1;
           this.itemCount = this.itemCount + 1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int b(int param0, boolean param1) {
+    final int updateAndPollAction(int param0, boolean param1) {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
         this.a(param0 ^ 24573, param1);
@@ -185,7 +185,7 @@ final class ContextActionMenu extends SceneWidget {
         super(0L, param0);
         this.field_Mb = new int[256];
         this.field_Gb = -2;
-        this.items = new lo[256];
+        this.items = new IconTextComponent[256];
         try {
           this.field_Kb = param1;
           this.field_Jb = param3;
@@ -196,11 +196,11 @@ final class ContextActionMenu extends SceneWidget {
           this.field_Ob = param4;
           this.field_Pb = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void layoutPopup(int param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
         int var6;
         int var7;
@@ -211,9 +211,9 @@ final class ContextActionMenu extends SceneWidget {
         int var8Lifetime1;
         var11 = Pixelate.field_H ? 1 : 0;
         if (this.itemCount == 0) {
-          this.items[this.itemCount] = new lo(0L, (SceneWidget) null, (SceneWidget) null, this.field_Pb, (Sprite) null, ln.field_l);
+          this.items[this.itemCount] = new IconTextComponent(0L, (SceneWidget) null, (SceneWidget) null, this.field_Pb, (Sprite) null, ln.field_l);
           this.items[this.itemCount].verticalAlignment = 1;
-          this.a(this.items[this.itemCount], (byte) 26);
+          this.addChild(this.items[this.itemCount], (byte) 26);
           this.field_Mb[this.itemCount] = -1;
           this.itemCount = this.itemCount + 1;
         }
@@ -231,7 +231,7 @@ final class ContextActionMenu extends SceneWidget {
         var7Lifetime1 = this.field_Qb * this.itemCount + (this.field_Eb + this.field_Eb);
         var8Lifetime1 = ui.a(param4, param1, var6, (byte) -1);
         var9 = pj.a(var7Lifetime1, param3, param0, (byte) 45);
-        this.a(var9, var7Lifetime1, var8Lifetime1, 256, var6);
+        this.setBounds(var9, var7Lifetime1, var8Lifetime1, 256, var6);
         for (var10 = 0; var10 < this.itemCount; var10++) {
           this.items[var10].a(this.field_Qb, this.field_Nb, this.field_Lb, this.field_Eb + this.field_Qb * var10, this.field_Ob, var6 - 2 * this.field_Ob, -2147483648);
         }

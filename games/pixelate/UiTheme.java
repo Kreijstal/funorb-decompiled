@@ -13,7 +13,7 @@ final class UiTheme {
     int field_d;
     static String field_b;
     int field_q;
-    static dj field_j;
+    static ValidationState field_j;
     WidgetPainter field_r;
     WidgetPainter field_i;
     BitmapFont field_m;
@@ -25,7 +25,7 @@ final class UiTheme {
     static String field_h;
     int field_n;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         if (!param0) {
           return;
@@ -38,12 +38,12 @@ final class UiTheme {
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         if (!param5) {
-          SoftwareRasterizer.b(param3, param0, param2, param1, param4);
+          SoftwareRasterizer.drawLine(param3, param0, param2, param1, param4);
           return;
         }
         String var8 = (String) null;
         this.drawSingleLineTooltip((String) null, 6, 30, -19);
-        SoftwareRasterizer.b(param3, param0, param2, param1, param4);
+        SoftwareRasterizer.drawLine(param3, param0, param2, param1, param4);
     }
 
     static long a(long param0, long param1) {
@@ -78,7 +78,7 @@ final class UiTheme {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -123,12 +123,12 @@ final class UiTheme {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        SoftwareRasterizer.a(param2, param6, param4, param3, param1, param0);
+        SoftwareRasterizer.fillRectangleAlpha(param2, param6, param4, param3, param1, param0);
         int var8 = -61 / ((-21 - param5) / 44);
     }
 
@@ -156,8 +156,8 @@ final class UiTheme {
           if (6 + (var6 + var8) > SoftwareRasterizer.field_d) {
             var8 = -6 + (-var6 + SoftwareRasterizer.field_d);
           }
-          SoftwareRasterizer.a(var7, var8, 6 + var5_int, 6 + var6, this.tooltipTextAndBorderColor);
-          SoftwareRasterizer.d(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.tooltipBackgroundColor);
+          SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, 6 + var6, this.tooltipTextAndBorderColor);
+          SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.tooltipBackgroundColor);
           this.field_m.drawText(param0, 3 + var7, this.field_m.field_D + (var8 + 3), this.tooltipTextAndBorderColor, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -170,7 +170,7 @@ final class UiTheme {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -238,8 +238,8 @@ final class UiTheme {
           if (param3 <= 123) {
             return;
           }
-          SoftwareRasterizer.a(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_d);
-          SoftwareRasterizer.d(var12 + 1, 1 + var13Lifetime1, var9 - (-var5_int + 2), -2 + (var10 + var6), this.tooltipBackgroundColor);
+          SoftwareRasterizer.drawRectangle(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_d);
+          SoftwareRasterizer.fillRectangle(var12 + 1, 1 + var13Lifetime1, var9 - (-var5_int + 2), -2 + (var10 + var6), this.tooltipBackgroundColor);
           this.field_m.drawParagraph(param0, var12 + this.field_n, var13Lifetime1 + this.field_o, var9, var10, this.tooltipTextAndBorderColor, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -252,11 +252,11 @@ final class UiTheme {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, BitmapFont param1) {
+    final void initializePainters(int param0, BitmapFont param1) {
         TextWidgetPainter var17 = null;
         StatefulTextPainter var4 = null;
         Sprite[] var5 = null;
@@ -296,59 +296,59 @@ final class UiTheme {
           this.field_n = 3;
           this.field_m = param1;
           this.field_g = 3;
-          var4.a(0, 7177).a(15658734, 15115).a(ClientException.a(8947848, 7829367, 10066329, 3), (byte) -65);
-          var4.a(1, 7177).a(ClientException.a(11184810, 13421772, 10066329, param0 ^ 7), (byte) -65);
-          var4.a(3, 7177).a(ClientException.a(8947848, 10066329, 7829367, 3), (byte) -65).a((byte) 124, 1).a(1, false);
+          var4.a(0, 7177).a(15658734, 15115).setFrameSprites(ClientException.a(8947848, 7829367, 10066329, 3), (byte) -65);
+          var4.a(1, 7177).setFrameSprites(ClientException.a(11184810, 13421772, 10066329, param0 ^ 7), (byte) -65);
+          var4.a(3, 7177).setFrameSprites(ClientException.a(8947848, 10066329, 7829367, 3), (byte) -65).a((byte) 124, 1).a(1, false);
           var5 = new Sprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
-          for (var7_int = 0; var18.field_G.length > var7_int; var7_int++) {
-            var16.field_G[var7_int] = 1077952576;
+          for (var7_int = 0; var18.pixels.length > var7_int; var7_int++) {
+            var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var18);
-          var4.a(4, 7177).a(true, true).a(var5, (byte) -65);
-          var4.a(5, 7177).a(og.a(0, true, 65793, 0, 0), (byte) -65).a(true, true).a(-1, 15115);
+          var4.a(4, 7177).a(true, true).setFrameSprites(var5, (byte) -65);
+          var4.a(5, 7177).setFrameSprites(og.a(0, true, 65793, 0, 0), (byte) -65).a(true, true).a(-1, 15115);
           this.field_r = (WidgetPainter) ((Object) var4);
           var6 = new StatefulTextPainter(var4, true);
           var6.field_l = 0;
           var7 = new StatefulTextPainter(var4, true);
           var7.field_l = 0;
           var7.setContentSprite(0, SecondaryNodeDeque.a(8947848, (byte) -128));
-          var7.a(1, 7177).a(SecondaryNodeDeque.a(11184810, (byte) -93), (byte) -65).a(2236962, 15115);
+          var7.a(1, 7177).setFrameSprites(SecondaryNodeDeque.a(11184810, (byte) -93), (byte) -65).a(2236962, 15115);
           this.field_t = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
           var17.copyStyleTo(var8, (byte) 126);
-          var8.a(0, 7177).a(ClientException.a(15658734, 10066329, 7829367, 3), (byte) -65).a(1118481, 15115).a(-1, (byte) -68);
-          var8.a(4, 7177).a(true, true).a(var5, (byte) -65);
+          var8.a(0, 7177).setFrameSprites(ClientException.a(15658734, 10066329, 7829367, 3), (byte) -65).a(1118481, 15115).a(-1, (byte) -68);
+          var8.a(4, 7177).a(true, true).setFrameSprites(var5, (byte) -65);
           this.field_i = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
           var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_G = new int[]{6710886, 7829367};
-          var10[param0].field_G = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[param0].pixels = new int[]{6710886, 7829367};
           var11 = new StatefulTextPainter();
           var12 = new StatefulTextPainter();
-          var11.a(122, 0, var9);
-          var12.a(92, 0, var10);
+          var11.setStateFrameSprites(122, 0, var9);
+          var12.setStateFrameSprites(92, 0, var10);
           var13 = new Sprite(7, 4);
-          var13.field_G = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new StatefulTextPainter(var4, true);
-          var14.a(param0 + 107, var13.a());
-          var13.b();
+          var14.a(param0 + 107, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new StatefulTextPainter(var4, true);
-          var14Lifetime1.a(79, var13.a());
-          var13.b();
+          var14Lifetime1.a(79, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new StatefulTextPainter(var4, true);
-          var14Lifetime2.a(-8, var13.a());
-          var13.b();
+          var14Lifetime2.a(-8, var13.copy());
+          var13.rotateClockwise();
           var19 = new StatefulTextPainter(var4, true);
           var19.a(param0 ^ -20, var13);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "tg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "tg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -385,7 +385,7 @@ final class UiTheme {
             stackIn_11_0 = var3;
             return stackIn_11_0;
           }
-          stackIn_9_0 = re.a(true, var3);
+          stackIn_9_0 = re.copyBytes(true, var3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -397,7 +397,7 @@ final class UiTheme {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ final class UiTheme {
 
     static {
         field_b = "Total Time: ";
-        field_j = new dj();
+        field_j = new ValidationState();
         field_l = "<%0> must play <%1> more rated games before playing with the current options.";
         field_h = null;
     }

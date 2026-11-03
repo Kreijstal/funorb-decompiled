@@ -4,7 +4,7 @@
 final class na {
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = 80 / ((51 - param0) / 39);
     }
@@ -20,7 +20,7 @@ final class na {
           if (param1 != -33) {
             field_a = (String) null;
           }
-          stackIn_3_0 = tj.a(10, param0, true, true);
+          stackIn_3_0 = tj.parseInt(10, param0, true, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -32,13 +32,13 @@ final class na {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(boolean param0) {
         if (NodeHashTableIterator.field_e != null) {
-          NodeHashTableIterator.field_e.b(-1);
+          NodeHashTableIterator.field_e.close(-1);
           NodeHashTableIterator.field_e = null;
         }
         if (!param0) {

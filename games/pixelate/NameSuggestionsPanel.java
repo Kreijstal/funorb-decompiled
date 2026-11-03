@@ -44,11 +44,11 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 16) {
           NameSuggestionsPanel.a(true, -63);
         }
@@ -60,15 +60,15 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         field_O = null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, (byte) -79);
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
+        super.drawLayer(param0, param1, param2, (byte) -79);
         if (param1 != 0) {
           return;
         }
         int var5 = 118 / ((param3 - 70) / 49);
         BitmapFont var6 = he.field_d;
         if (null != this.suggestions) {
-          var6.drawParagraph(ok.field_c, param2 + this.field_z, param0 + this.field_p, this.field_E, 20, 16777215, -1, 0, 0, var6.maxAscent + var6.maxDescent);
+          var6.drawParagraph(JavaRandomHelpers.field_c, param2 + this.field_z, param0 + this.field_p, this.field_E, 20, 16777215, -1, 0, 0, var6.maxAscent + var6.maxDescent);
         }
     }
 
@@ -103,7 +103,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -154,13 +154,13 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
               this.buttons[var5] = new TextButton(this.suggestions[var5], (UiListener) (this));
               this.buttons[var5].field_y = (WidgetPainter) ((Object) var4);
               this.buttons[var5].field_l = io.field_a;
-              this.buttons[var5].a(80, (byte) 63, 20 + 16 * var5, 0, 15);
-              this.b(this.buttons[var5], 80);
+              this.buttons[var5].setBounds(80, (byte) 63, 20 + 16 * var5, 0, 15);
+              this.addChild(this.buttons[var5], 80);
             }
             this.buttons[var3_int] = new TextButton(d.field_d, (UiListener) (this));
             this.buttons[var3_int].field_y = (WidgetPainter) ((Object) var4);
-            this.buttons[var3_int].a(100, (byte) 102, 16 + (16 * var3_int + 20), 0, 15);
-            this.b(this.buttons[var3_int], 80);
+            this.buttons[var3_int].setBounds(100, (byte) 102, 16 + (16 * var3_int + 20), 0, 15);
+            this.addChild(this.buttons[var3_int], 80);
             return;
           }
           this.suggestions = null;
@@ -175,7 +175,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         try {
           this.field_K = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "a.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "a.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -5,7 +5,7 @@ final class ed {
     static String field_a;
     static PacketBuffer field_b;
 
-    final static PaletteBitmapFont a(byte[] param0, int param1) {
+    final static PaletteBitmapFont createPaletteBitmapFont(byte[] param0, int param1) {
         PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         PaletteBitmapFont stackIn_5_0 = null;
@@ -36,11 +36,11 @@ final class ed {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 61 % ((-1 - param0) / 61);
         field_b = null;

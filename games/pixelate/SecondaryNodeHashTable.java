@@ -9,71 +9,71 @@ final class SecondaryNodeHashTable {
     private int field_d;
     private DualLinkNode[] field_a;
     static String field_e;
-    private DualLinkNode field_g;
+    private DualLinkNode lookupCursor;
     private DualLinkNode field_c;
     private long field_b;
     static String field_f;
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode findNext(byte param0) {
         DualLinkNode var2;
         DualLinkNode var3;
         int var4;
         DualLinkNode var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
-        if (this.field_g == null) {
+        if (this.lookupCursor == null) {
           return null;
         }
         var2 = this.field_a[(int)((long)(-1 + this.field_h) & this.field_b)];
         if (param0 == 47) {
           while (true) {
-            if (this.field_g == var2) {
-              this.field_g = null;
+            if (this.lookupCursor == var2) {
+              this.lookupCursor = null;
               return null;
             }
-            if (this.field_g.field_q != this.field_b) {
-              this.field_g = this.field_g.field_p;
+            if (this.lookupCursor.field_q != this.field_b) {
+              this.lookupCursor = this.lookupCursor.secondaryNext;
               continue;
             }
             break;
           }
-          var3 = this.field_g;
-          this.field_g = this.field_g.field_p;
+          var3 = this.lookupCursor;
+          this.lookupCursor = this.lookupCursor.secondaryNext;
           return var3;
         }
         this.a((byte) -113);
         while (true) {
-          if (this.field_g == var2) {
-            this.field_g = null;
+          if (this.lookupCursor == var2) {
+            this.lookupCursor = null;
             return null;
           }
-          if (this.field_g.field_q != this.field_b) {
-            this.field_g = this.field_g.field_p;
+          if (this.lookupCursor.field_q != this.field_b) {
+            this.lookupCursor = this.lookupCursor.secondaryNext;
             continue;
           }
           break;
         }
-        var3Lifetime1 = this.field_g;
-        this.field_g = this.field_g.field_p;
+        var3Lifetime1 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.secondaryNext;
         return var3Lifetime1;
     }
 
     final void a(boolean param0, DualLinkNode param1, long param2) {
         DualLinkNode var5 = null;
         try {
-          if (param1.field_r != null) {
-            param1.e(17);
+          if (param1.secondaryPrevious != null) {
+            param1.unlinkSecondary(17);
           }
           var5 = this.field_a[(int)((long)(this.field_h - 1) & param2)];
-          param1.field_r = var5.field_r;
-          param1.field_p = var5;
-          param1.field_r.field_p = param1;
+          param1.secondaryPrevious = var5.secondaryPrevious;
+          param1.secondaryNext = var5;
+          param1.secondaryPrevious.secondaryNext = param1;
           if (param0) {
             SecondaryNodeHashTable.b(-98, -4);
           }
-          param1.field_p.field_r = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
           param1.field_q = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -85,10 +85,10 @@ final class SecondaryNodeHashTable {
           return;
         }
         if (0L != param0 % 10L) {
-          ma.a((byte) 37, param0);
+          ScoreMarkerBar.a((byte) 37, param0);
         } else {
-          ma.a((byte) 37, -1L + param0);
-          ma.a((byte) 37, 1L);
+          ScoreMarkerBar.a((byte) 37, -1L + param0);
+          ScoreMarkerBar.a((byte) 37, 1L);
           return;
         }
     }
@@ -107,14 +107,14 @@ final class SecondaryNodeHashTable {
         }
         var2 = stackIn_5_0;
         if (var2 == 0) {
-          if (ok.a(UiTheme.field_f, -128, 2) != 1) {
+          if (JavaRandomHelpers.a(UiTheme.field_f, -128, 2) != 1) {
             return new ib(4, 3);
           }
           return new ib(3, 4);
         }
         if (var2 != 1) {
           if (2 == var2) {
-            if (ok.a(UiTheme.field_f, -103, 2) == 1) {
+            if (JavaRandomHelpers.a(UiTheme.field_f, -103, 2) == 1) {
               return new ib(4, 5);
             }
             return new ib(5, 4);
@@ -124,7 +124,7 @@ final class SecondaryNodeHashTable {
           }
           return new ib(5, 5);
         }
-        var3 = ok.a(UiTheme.field_f, -121, 3);
+        var3 = JavaRandomHelpers.a(UiTheme.field_f, -121, 3);
         if (var3 == 0) {
           return new ib(3, 5);
         }
@@ -158,10 +158,10 @@ final class SecondaryNodeHashTable {
               }
               fieldTemp$1 = this.field_d;
               this.field_d = this.field_d + 1;
-              var4 = this.field_a[fieldTemp$1].field_p;
+              var4 = this.field_a[fieldTemp$1].secondaryNext;
               var58 = var4;
             } while (var4 == this.field_a[this.field_d - 1]);
-            this.field_c = var58.field_p;
+            this.field_c = var58.secondaryNext;
             return var58;
           }
           SecondaryNodeHashTable.a(-20, -121);
@@ -171,15 +171,15 @@ final class SecondaryNodeHashTable {
             }
             fieldTemp$0 = this.field_d;
             this.field_d = this.field_d + 1;
-            var4 = this.field_a[fieldTemp$0].field_p;
+            var4 = this.field_a[fieldTemp$0].secondaryNext;
             var59 = var4;
           } while (var4 == this.field_a[this.field_d - 1]);
-          this.field_c = var59.field_p;
+          this.field_c = var59.secondaryNext;
           return var59;
         }
         if (this.field_c != this.field_a[this.field_d - 1]) {
           var57 = this.field_c;
-          this.field_c = var57.field_p;
+          this.field_c = var57.secondaryNext;
           return var57;
         }
         if (param0 == 50) {
@@ -189,10 +189,10 @@ final class SecondaryNodeHashTable {
             }
             fieldTemp$3 = this.field_d;
             this.field_d = this.field_d + 1;
-            var4 = this.field_a[fieldTemp$3].field_p;
+            var4 = this.field_a[fieldTemp$3].secondaryNext;
             var5 = var4;
           } while (var4 == this.field_a[this.field_d - 1]);
-          this.field_c = var5.field_p;
+          this.field_c = var5.secondaryNext;
           return var5;
         }
         SecondaryNodeHashTable.a(-20, -121);
@@ -202,10 +202,10 @@ final class SecondaryNodeHashTable {
           }
           fieldTemp$2 = this.field_d;
           this.field_d = this.field_d + 1;
-          var4 = this.field_a[fieldTemp$2].field_p;
+          var4 = this.field_a[fieldTemp$2].secondaryNext;
           var29 = var4;
         } while (var4 == this.field_a[this.field_d - 1]);
-        this.field_c = var29.field_p;
+        this.field_c = var29.secondaryNext;
         return var29;
     }
 
@@ -270,39 +270,39 @@ final class SecondaryNodeHashTable {
         if (param0 == -11434) {
           this.field_b = param1;
           var4 = this.field_a[(int)(param1 & (long)(this.field_h - 1))];
-          this.field_g = var4.field_p;
+          this.lookupCursor = var4.secondaryNext;
           while (true) {
-            if (this.field_g == var4) {
-              this.field_g = null;
+            if (this.lookupCursor == var4) {
+              this.lookupCursor = null;
               return null;
             }
-            if (~param1 != ~this.field_g.field_q) {
-              this.field_g = this.field_g.field_p;
+            if (~param1 != ~this.lookupCursor.field_q) {
+              this.lookupCursor = this.lookupCursor.secondaryNext;
               continue;
             }
             break;
           }
-          var5 = this.field_g;
-          this.field_g = this.field_g.field_p;
+          var5 = this.lookupCursor;
+          this.lookupCursor = this.lookupCursor.secondaryNext;
           return var5;
         }
         this.field_c = (DualLinkNode) null;
         this.field_b = param1;
         var4Lifetime1 = this.field_a[(int)(param1 & (long)(this.field_h - 1))];
-        this.field_g = var4Lifetime1.field_p;
+        this.lookupCursor = var4Lifetime1.secondaryNext;
         while (true) {
-          if (this.field_g == var4Lifetime1) {
-            this.field_g = null;
+          if (this.lookupCursor == var4Lifetime1) {
+            this.lookupCursor = null;
             return null;
           }
-          if (~param1 != ~this.field_g.field_q) {
-            this.field_g = this.field_g.field_p;
+          if (~param1 != ~this.lookupCursor.field_q) {
+            this.lookupCursor = this.lookupCursor.secondaryNext;
             continue;
           }
           break;
         }
-        var5Lifetime1 = this.field_g;
-        this.field_g = this.field_g.field_p;
+        var5Lifetime1 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.secondaryNext;
         return var5Lifetime1;
     }
 
@@ -322,21 +322,21 @@ final class SecondaryNodeHashTable {
           boolean decompiledFrameRemainder0 = true;
           if (null != NodeHashTableIterator.field_e) {
             if (param0 >= 0) {
-              decompiledFrameRemainder0 = (Pixelate.field_G == uk.field_s);
+              decompiledFrameRemainder0 = (Pixelate.field_G == GameModeSelectScreen.field_s);
               if ((decompiledFrameRemainder0) && (aa.field_f.position == 0 &&
                 hm.a(64) > (aj.field_m + 10000L))) {
-                aa.field_f.g(param0, 15514);
+                aa.field_f.writeOpcode(param0, 15514);
               }
             } else {
               if (aa.field_f.position == 0 &&
                 hm.a(64) > (aj.field_m + 10000L)) {
-                aa.field_f.g(param0, 15514);
+                aa.field_f.writeOpcode(param0, 15514);
               }
             }
             if (decompiledFrameRemainder0) {
               if (aa.field_f.position > 0) {
                 try {
-                  NodeHashTableIterator.field_e.a(aa.field_f.position, -98, 0, aa.field_f.payload);
+                  NodeHashTableIterator.field_e.write(aa.field_f.position, -98, 0, aa.field_f.payload);
                   aj.field_m = hm.a(64);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -348,7 +348,7 @@ final class SecondaryNodeHashTable {
               if (param1 == 10000) {
                 return;
               }
-              SecondaryNodeHashTable.a(true);
+              SecondaryNodeHashTable.releaseStatics(true);
               return;
             }
           }
@@ -371,12 +371,12 @@ final class SecondaryNodeHashTable {
           dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_a[var2] = dupTemp$1;
-          var3.field_r = var3;
-          var3.field_p = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           SecondaryNodeHashTable.a(-87L, (byte) 117);
           field_e = null;

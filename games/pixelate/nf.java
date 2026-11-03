@@ -3,14 +3,14 @@
  */
 final class nf {
     static int field_f;
-    static be field_b;
+    static LoginForm field_b;
     static SceneWidget field_d;
     static int field_c;
     static int field_a;
     static String field_e;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_d = null;
         field_e = null;

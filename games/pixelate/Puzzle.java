@@ -25,7 +25,7 @@ final class Puzzle {
         if (param0 != 62) {
           Puzzle.a('￑', (byte) 81);
         }
-        return new wm[]{SectorCacheStore.field_f, ej.field_b, StatefulTextPainter.field_w, NumericDateInputWidget.field_T, NetworkGameClient.field_r, DualLinkNode.field_l, NetworkGameClient.field_C, ArchiveRequest.field_u, MenuInputState.field_f, of.field_e, ModalStack.field_M, u.field_d, GradientOutlineTextPainter.field_s, ThreeSliceButtonPainter.field_u};
+        return new wm[]{SectorCacheStore.field_f, ej.field_b, StatefulTextPainter.field_w, NumericDateInputWidget.field_T, NetworkGameClient.field_r, DualLinkNode.field_l, NetworkGameClient.field_C, ArchiveRequest.field_u, MenuInputState.field_f, of.field_e, ModalStack.field_M, QuickChatPhraseCache.field_d, GradientOutlineTextPainter.field_s, ThreeSliceButtonPainter.field_u};
     }
 
     final void shufflePictures(byte param0, Random param1) {
@@ -54,7 +54,7 @@ final class Puzzle {
           var9 = 0;
           var5_intLifetime1 = var9;
           while (var9 < var3_int) {
-            var6 = var9 + ok.a(param1, -120, var3_int - var9);
+            var6 = var9 + JavaRandomHelpers.a(param1, -120, var3_int - var9);
             var7 = var12[var9];
             var4[var9] = var12[var6];
             var12[var6] = var7;
@@ -70,11 +70,11 @@ final class Puzzle {
           }
           this.pictures = var5;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_a = null;
         field_c = null;
@@ -140,7 +140,7 @@ final class Puzzle {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class Puzzle {
     final static String a(int param0) {
         String var1 = "";
         if (nf.field_b != null) {
-          var1 = nf.field_b.l(-24832);
+          var1 = nf.field_b.getUsername(-24832);
         }
         if (param0 == var1.length()) {
           var1 = DiskCacheRequest.b(false);
@@ -188,7 +188,7 @@ final class Puzzle {
           this.field_g = param1 * param0;
           this.columns = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 

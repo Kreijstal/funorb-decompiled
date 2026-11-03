@@ -6,12 +6,12 @@ final class um extends IntrusiveNode {
     static int field_r;
     static String field_o;
     byte[] field_n;
-    static fb field_q;
+    static PairedTextColumns field_q;
     static volatile long field_m;
     static String[] field_l;
     boolean field_p;
 
-    final static void a(int param0, int param1, wg param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void a(int param0, int param1, Matrix3 param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9, int param10) {
         int var12 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -20,17 +20,17 @@ final class um extends IntrusiveNode {
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ae[] var11 = null;
+        Vector3[] var11 = null;
         RuntimeException var11_ref = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        ae[] var17 = null;
-        ae[] var18 = null;
+        Vector3[] var17 = null;
+        Vector3[] var18 = null;
         var16 = Pixelate.field_H ? 1 : 0;
         try {
-          var17 = new ae[8];
+          var17 = new Vector3[8];
           var18 = var17;
           var11 = var18;
           for (var12 = 0; var12 < 8; var12++) {
@@ -40,7 +40,7 @@ final class um extends IntrusiveNode {
             var14 = stackIn_11_0;
             stackIn_14_0 = ((var12 & 4) != 0) ? param3 : param1;
             var15 = stackIn_14_0;
-            var11[var12] = new ae(var13 * 2 - 2 << 12, var14 * 2 - 2 << 12, var15 * 2 - 2 << 12);
+            var11[var12] = new Vector3(var13 * 2 - 2 << 12, var14 * 2 - 2 << 12, var15 * 2 - 2 << 12);
             var17[var12] = param2.a(var17[var12], (byte) 83);
           }
           if (param2.field_f[8] > 0) {
@@ -49,7 +49,7 @@ final class um extends IntrusiveNode {
             StatefulTextPainter.a(param10, param8 - param0, var17[4], param4 - param7, var17[5], var17[7], var17[6], param6, (byte) -38, param9);
           }
           if (param5 > -85) {
-            um.a(-74);
+            um.releaseStatics(-74);
           }
           if (param2.field_f[7] <= 0) {
             StatefulTextPainter.a(param10, param3 - param1, var18[7], -param0 + param8, var18[3], var18[2], var18[6], param6, (byte) -104, param9);
@@ -72,11 +72,11 @@ final class um extends IntrusiveNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
-    final static BinaryBitmapFont a(ResourceArchive param0, ResourceArchive param1, int param2, int param3, int param4) {
+    final static BinaryBitmapFont loadBinaryBitmapFont(ResourceArchive param0, ResourceArchive param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         BinaryBitmapFont stackIn_6_0 = null;
@@ -91,7 +91,7 @@ final class um extends IntrusiveNode {
             field_o = (String) null;
           }
           if (rk.a(param4, false, param0, param2)) {
-            stackIn_6_0 = kf.a(param1.a(param2, param4, true), -17);
+            stackIn_6_0 = TimerBarDemo.a(param1.getFile(param2, param4, true), -17);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -112,11 +112,11 @@ final class um extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         int var1 = -127 / ((param0 - 74) / 32);
         field_q = null;

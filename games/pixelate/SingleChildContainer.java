@@ -8,7 +8,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
     static String field_F;
     UiComponent child;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -25,9 +25,9 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -95) {
-            this.j(110);
+            this.refreshChildLayout(110);
           }
-          stackIn_7_0 = (this.child != null) && (!this.child.b(true)) && (this.child.focusNext(param1, 27));
+          stackIn_7_0 = (this.child != null) && (!this.child.containsFocus(true)) && (this.child.focusNext(param1, 27));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -39,11 +39,11 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    UiComponent l(int param0) {
+    UiComponent getFocusedChild(int param0) {
         if (param0 <= 48) {
           field_G = (BitmapFont) null;
         }
@@ -51,7 +51,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         if (var2 == null) {
           return null;
         }
-        if (var2.b(true)) {
+        if (var2.containsFocus(true)) {
           return var2;
         }
         return null;
@@ -80,24 +80,24 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    void j(int param0) {
+    void refreshChildLayout(int param0) {
         if (this.child != null) {
-          this.child.c((byte) 99);
+          this.child.refreshLayout((byte) 99);
         }
         if (param0 != 0) {
           this.child = (UiComponent) null;
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean containsFocus(boolean param0) {
         if (!param0) {
-          this.h(43);
+          this.blur(43);
         }
-        return this.l(118) != null ? true : false;
+        return this.getFocusedChild(118) != null ? true : false;
     }
 
     final boolean onMouseWheel(int param0, byte param1, int param2, int param3, int param4, int param5, UiComponent param6) {
@@ -114,7 +114,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             var9 = (UiComponent) null;
             discarded$1 = this.focusNext((byte) -50, (UiComponent) null);
           }
-          stackIn_7_0 = (null != this.child) && (this.child.b(true)) && (this.child.onMouseWheel(param0, (byte) 68, param2, param3, param4, param5, param6));
+          stackIn_7_0 = (null != this.child) && (this.child.containsFocus(true)) && (this.child.onMouseWheel(param0, (byte) 68, param2, param3, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,11 +126,11 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final static void sortRankedEntryRange(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_24_0 = 0;
@@ -156,7 +156,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             return;
           }
           if (param5 < 8) {
-            SingleChildContainer.a(-1, -100, false, 25, 54, 90, -71);
+            SingleChildContainer.sortRankedEntryRange(-1, -100, false, 25, 54, 90, -71);
           }
           if (param0 > param4 + 5 &&
             param1 != param3) {
@@ -186,8 +186,8 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
                 }
               }
             }
-            SingleChildContainer.a(var8, var9, param2, param3, param4, 87, param6);
-            SingleChildContainer.a(param0, param1, param2, var10, var8, 54, param6);
+            SingleChildContainer.sortRankedEntryRange(var8, var9, param2, param3, param4, 87, param6);
+            SingleChildContainer.sortRankedEntryRange(param0, param1, param2, var10, var8, 54, param6);
             return;
           }
           for (var7_intLifetime1 = -1 + param0; var7_intLifetime1 > param4; var7_intLifetime1--) {
@@ -204,7 +204,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var7), "ie.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var7), "ie.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -212,9 +212,9 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final void h(int param0) {
+    final void blur(int param0) {
         if (null != this.child) {
-          this.child.h(param0 ^ 0);
+          this.child.blur(param0 ^ 0);
         }
         if (param0 != 2) {
           UiComponent var3 = (UiComponent) null;
@@ -229,7 +229,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    private final boolean a(int param0, UiComponent param1) {
+    private final boolean focusChildIfUnfocused(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         UiComponent var4 = null;
         boolean stackIn_7_0 = false;
@@ -242,7 +242,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             var4 = (UiComponent) null;
             this.handlePointerRelease(-52, -66, (UiComponent) null, -50, -35, 36);
           }
-          stackIn_7_0 = (this.child != null) && (!this.child.b(true)) && (this.child.focusNext(param1, param0 - 11600));
+          stackIn_7_0 = (this.child != null) && (!this.child.containsFocus(true)) && (this.child.focusNext(param1, param0 - 11600));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -254,18 +254,18 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    String b(byte param0) {
+    String getTooltip(byte param0) {
         String var3 = null;
-        String var2 = super.b((byte) 115);
+        String var2 = super.getTooltip((byte) 115);
         if (param0 <= 16) {
           field_F = (String) null;
         }
         if (this.child != null) {
-          var3 = this.child.b((byte) 84);
+          var3 = this.child.getTooltip((byte) 84);
           if (var3 != null) {
             return var3;
           }
@@ -296,23 +296,23 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 < 19) {
           return;
         }
-        super.a(param0, (byte) 113, param2, param3, param4);
-        this.j(0);
+        super.setBounds(param0, (byte) 113, param2, param3, param4);
+        this.refreshChildLayout(0);
     }
 
-    final int e(int param0) {
+    final int getTopLayer(int param0) {
         if (param0 < 31) {
           return -41;
         }
-        return this.child != null ? this.child.e(122) : 0;
+        return this.child != null ? this.child.getTopLayer(122) : 0;
     }
 
     final static void a(boolean param0, int param1, int param2) {
@@ -325,22 +325,22 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           if (param2 == -2) {
             QuickChatMenu.b(true, -116);
           } else {
-            wo.b(107, param2).c(0);
+            wo.getScreen(107, param2).c(0);
             if (Match.field_u) {
               var3 = 81 % ((-12 - param1) / 42);
               decompiledFrameRemainder0 = false;
             }
             else {
-              wo.b(-73, param2).a(11);
+              wo.getScreen(-73, param2).draw(11);
             }
           }
         } else {
           if (ro.field_e == null) {
             if (null != MatchingTextValidator.field_r) {
-              MatchingTextValidator.field_r.a(param0, 0);
+              MatchingTextValidator.field_r.render(param0, 0);
             }
           } else {
-            ro.field_e.a(param0, 0);
+            ro.field_e.render(param0, 0);
           }
         }
         if (decompiledFrameRemainder0) {
@@ -349,13 +349,13 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
 
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawLayer(int param0, int param1, int param2, byte param3) {
         if (param1 == 0 &&
           this.field_y != null) {
           this.field_y.drawWidget((UiComponent) (this), (byte) -124, param0, param2, true);
         }
         if (this.child != null) {
-          this.child.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) -36);
+          this.child.drawLayer(param0 + this.field_p, param1, param2 + this.field_z, (byte) -36);
         }
         int var5 = -46 % ((param3 - 70) / 49);
     }
@@ -373,8 +373,8 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           if (param1) {
             SingleChildContainer.k(-23);
           }
-          if (this.a(-114, param2, param0, param3)) {
-            this.a(param2, (byte) -2, param3, param0);
+          if (this.beginDebugDescription(-114, param2, param0, param3)) {
+            this.appendDebugBody(param2, (byte) -2, param3, param0);
             this.appendDebugChild(param3, (byte) -80, param0, param2);
           }
           stackIn_5_0 = (StringBuilder) (param0);
@@ -395,7 +395,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -424,7 +424,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -452,7 +452,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -502,7 +502,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -516,7 +516,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != this.child &&
-            this.child.b(true) &&
+            this.child.containsFocus(true) &&
             this.child.onFocusedKey(param0, param1 + 0, param2, param3)) {
             return true;
           }
@@ -530,7 +530,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           if (EmailValidator.field_m[81]) {
             stackIn_12_0 = this.focusNext((byte) -127, param2);
           } else {
-            stackIn_12_0 = this.a(11627, param2);
+            stackIn_12_0 = this.focusChildIfUnfocused(11627, param2);
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -543,7 +543,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 

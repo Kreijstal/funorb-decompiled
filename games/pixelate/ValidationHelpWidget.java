@@ -9,7 +9,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
     private ValidationSource field_W;
     private Sprite field_Z;
 
-    final String b(byte param0) {
+    final String getTooltip(byte param0) {
         if (param0 > 16) {
           return null;
         }
@@ -34,9 +34,9 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         var8 = Pixelate.field_H ? 1 : 0;
         try {
           Pixelate.field_E = param1;
-          u.field_f = new Sprite(Pixelate.field_E.field_A, Pixelate.field_E.field_B);
-          u.field_f.c();
-          Pixelate.field_E.f(0, 0);
+          QuickChatPhraseCache.field_f = new Sprite(Pixelate.field_E.field_A, Pixelate.field_E.field_B);
+          QuickChatPhraseCache.field_f.makeRasterTarget();
+          Pixelate.field_E.drawOpaque(0, 0);
           var3_int = 5395026;
           var4 = SoftwareRasterizer.field_d;
           for (var5 = 0; SoftwareRasterizer.field_k.length > var5; var5++) {
@@ -45,16 +45,16 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             } else {
               var6 = -(var5 / SoftwareRasterizer.field_j) + SoftwareRasterizer.field_d;
               var7 = 255 * var6 / var4;
-              SoftwareRasterizer.field_k[var5] = bq.a(bq.a(var7 << 8, var7 << 16), var7 >> 1);
+              SoftwareRasterizer.field_k[var5] = bq.bitOr(bq.bitOr(var7 << 8, var7 << 16), var7 >> 1);
             }
           }
           ClientException.field_g = new Sprite(640, 480);
-          ClientException.field_g.c();
-          param0.c(0, 0, 255, 80);
-          param0.c(320, 0, 255, 80);
-          param0.c(0, 240, 80, 0);
-          param0.c(320, 240, param2, 0);
-          ClientException.field_f.a(19692);
+          ClientException.field_g.makeRasterTarget();
+          param0.drawWithVerticalAlphaGradient(0, 0, 255, 80);
+          param0.drawWithVerticalAlphaGradient(320, 0, 255, 80);
+          param0.drawWithVerticalAlphaGradient(0, 240, 80, 0);
+          param0.drawWithVerticalAlphaGradient(320, 240, param2, 0);
+          ClientException.field_f.bindRaster(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,13 +72,13 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         String var5;
-        dj var6;
+        ValidationState var6;
         int var14;
         Object var18;
         Object var24;
@@ -104,15 +104,15 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         int var12Lifetime2;
         int var13Lifetime1;
         int var13Lifetime2;
-        dj var6Lifetime1;
-        dj var6Lifetime2;
+        ValidationState var6Lifetime1;
+        ValidationState var6Lifetime2;
         var18 = null;
         var24 = null;
         var14 = Pixelate.field_H ? 1 : 0;
-        var6 = this.field_W.a((byte) 113);
+        var6 = this.field_W.getState((byte) 113);
         if (var6 != BufferedRandomAccessFile.field_b &&
           UiTheme.field_j != var6) {
-          var5 = this.field_W.b((byte) -7);
+          var5 = this.field_W.getMessage((byte) -7);
           if (var5 == null) {
             var5 = this.field_ab;
           }
@@ -120,24 +120,24 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var5 = NameAvailabilityValidator.field_m;
         }
         if (var5.equals(this.field_q)) {
-          super.a(param0, param1, param2, (byte) -25);
-          var6Lifetime1 = this.field_W.a((byte) 97);
+          super.drawLayer(param0, param1, param2, (byte) -25);
+          var6Lifetime1 = this.field_W.getState((byte) 97);
           var29 = (WidgetTextLayout) ((Object) this.field_y);
           var9 = this.field_z + param2;
-          var10 = var29.a(param0, (UiComponent) (this), (byte) 107) + (var29.getTextLayout(-117, (UiComponent) (this)).b(1) >> 1);
+          var10 = var29.getTextOriginY(param0, (UiComponent) (this), (byte) 107) + (var29.getTextLayout(-117, (UiComponent) (this)).getLayoutHeight(1) >> 1);
           var11 = -23 / ((param3 - 70) / 49);
           if (var6Lifetime1 != BufferedRandomAccessFile.field_b &&
             UiTheme.field_j != var6Lifetime1) {
             if (sk.field_a == var6Lifetime1) {
               var26 = CanvasRasterBuffer.field_g[2];
-              var26.b(var9, var10 - (var26.field_E >> 1), 256);
+              var26.drawAdditive(var9, var10 - (var26.field_E >> 1), 256);
               return;
             }
             if (var6Lifetime1 != qk.field_g) {
               return;
             }
             var25 = CanvasRasterBuffer.field_g[1];
-            var25.b(var9, var10 - (var25.field_E >> 1), 256);
+            var25.drawAdditive(var9, var10 - (var25.field_E >> 1), 256);
             return;
           }
           var27 = CanvasRasterBuffer.field_g[0];
@@ -156,22 +156,22 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 Checkbox.a(-119, this.field_Z);
               } else {
                 Checkbox.a(-72, this.field_Z);
-                SoftwareRasterizer.d();
+                SoftwareRasterizer.clear();
               }
             }
           }
-          var27.a(112, 144, var27.field_A << 4, var27.field_B << 4, -this.field_X << 10, 4096);
+          var27.drawRotatedAboutPivot(112, 144, var27.field_A << 4, var27.field_B << 4, -this.field_X << 10, 4096);
           LinkButtonPainter.a((byte) 92);
-          this.field_Z.b(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
+          this.field_Z.drawAdditive(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
           return;
         }
         this.field_q = var5;
-        this.a(1829);
-        super.a(param0, param1, param2, (byte) -25);
-        var6Lifetime2 = this.field_W.a((byte) 97);
+        this.rebuildHotspots(1829);
+        super.drawLayer(param0, param1, param2, (byte) -25);
+        var6Lifetime2 = this.field_W.getState((byte) 97);
         var28 = (WidgetTextLayout) ((Object) this.field_y);
         var9Lifetime1 = this.field_z + param2;
-        var10Lifetime1 = var28.a(param0, (UiComponent) (this), (byte) 107) + (var28.getTextLayout(-117, (UiComponent) (this)).b(1) >> 1);
+        var10Lifetime1 = var28.getTextOriginY(param0, (UiComponent) (this), (byte) 107) + (var28.getTextLayout(-117, (UiComponent) (this)).getLayoutHeight(1) >> 1);
         var11Lifetime1 = -23 / ((param3 - 70) / 49);
         if (var6Lifetime2 == BufferedRandomAccessFile.field_b) {
           var19 = CanvasRasterBuffer.field_g[0];
@@ -181,27 +181,27 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             this.field_Z.field_F >= var12Lifetime1 &&
             this.field_Z.field_E >= var13Lifetime1) {
             Checkbox.a(-72, this.field_Z);
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clear();
           } else {
             this.field_Z = new Sprite(var12Lifetime1, var13Lifetime1);
             Checkbox.a(-119, this.field_Z);
           }
-          var19.a(112, 144, var19.field_A << 4, var19.field_B << 4, -this.field_X << 10, 4096);
+          var19.drawRotatedAboutPivot(112, 144, var19.field_A << 4, var19.field_B << 4, -this.field_X << 10, 4096);
           LinkButtonPainter.a((byte) 92);
-          this.field_Z.b(-(var19.field_A >> 1) + var9Lifetime1, var10Lifetime1 - var19.field_B, 256);
+          this.field_Z.drawAdditive(-(var19.field_A >> 1) + var9Lifetime1, var10Lifetime1 - var19.field_B, 256);
           return;
         }
         if (UiTheme.field_j != var6Lifetime2) {
           if (sk.field_a == var6Lifetime2) {
             var22 = CanvasRasterBuffer.field_g[2];
-            var22.b(var9Lifetime1, var10Lifetime1 - (var22.field_E >> 1), 256);
+            var22.drawAdditive(var9Lifetime1, var10Lifetime1 - (var22.field_E >> 1), 256);
             return;
           }
           if (var6Lifetime2 != qk.field_g) {
             return;
           }
           var21 = CanvasRasterBuffer.field_g[1];
-          var21.b(var9Lifetime1, var10Lifetime1 - (var21.field_E >> 1), 256);
+          var21.drawAdditive(var9Lifetime1, var10Lifetime1 - (var21.field_E >> 1), 256);
           return;
         }
         var20 = CanvasRasterBuffer.field_g[0];
@@ -212,26 +212,26 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           this.field_Z.field_F >= var12Lifetime2 &&
           this.field_Z.field_E >= var13Lifetime2) {
           Checkbox.a(-72, this.field_Z);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
         } else {
           this.field_Z = new Sprite(var12Lifetime2, var13Lifetime2);
           Checkbox.a(-119, this.field_Z);
         }
-        var20.a(112, 144, var20.field_A << 4, var20.field_B << 4, -this.field_X << 10, 4096);
+        var20.drawRotatedAboutPivot(112, 144, var20.field_A << 4, var20.field_B << 4, -this.field_X << 10, 4096);
         LinkButtonPainter.a((byte) 92);
-        this.field_Z.b(-(var20.field_A >> 1) + var9Lifetime1, var10Lifetime1 - var20.field_B, 256);
+        this.field_Z.drawAdditive(-(var20.field_A >> 1) + var9Lifetime1, var10Lifetime1 - var20.field_B, 256);
         return;
     }
 
     final static void a(rh param0, boolean param1, int param2) {
         try {
           MenuScreen.field_b.addFirst(22125, param0);
-          sd.a((byte) -52, param0, param2);
+          AlphaContainer.a((byte) -52, param0, param2);
           if (!param1) {
             ValidationHelpWidget.c(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "md.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "md.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -273,9 +273,9 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         try {
           this.field_ab = param1;
           this.field_W = param0;
-          this.a(param4, (byte) 121, param3, param2, param5);
+          this.setBounds(param4, (byte) 121, param3, param2, param5);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "md.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "md.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -287,7 +287,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           }
           super.updatePointer(param0 + 0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "md.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "md.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

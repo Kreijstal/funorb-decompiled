@@ -5,7 +5,7 @@ final class cn {
     static bd field_a;
     static LoadingProgressDialog field_b;
 
-    final static int a(String param0, int param1, int param2, boolean param3, sc param4, int param5, sc param6) {
+    final static int a(String param0, int param1, int param2, boolean param3, ConditionalTextValue param4, int param5, ConditionalTextValue param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
         PacketBuffer stackIn_13_0 = null;
@@ -57,24 +57,24 @@ final class cn {
           if (param2 >= -121) {
             field_a = (bd) null;
           }
-          if (uk.field_s == ij.field_o) {
+          if (GameModeSelectScreen.field_s == ij.field_o) {
             aa.field_f.position = 0;
             ArchiveIndex.field_j = null;
             if (param0 != null) {
               var9 = 0;
-              uk.field_v.position = 0;
+              GameModeSelectScreen.field_v.position = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
-              uk.field_v.d(ai.field_d.nextInt(), -49);
-              uk.field_v.d(ai.field_d.nextInt(), -62);
-              uk.field_v.a((byte) -66, var14);
-              uk.field_v.a((byte) -66, var8);
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -49);
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -62);
+              GameModeSelectScreen.field_v.a((byte) -66, var14);
+              GameModeSelectScreen.field_v.a((byte) -66, var8);
               var15 = (CharSequence) ((Object) param0);
-              uk.field_v.a((byte) -66, la.a((byte) 10, var15));
-              uk.field_v.writeShort(1276387944, param1);
-              uk.field_v.writeByte(160, param5);
-              uk.field_v.writeByte(160, var9);
+              GameModeSelectScreen.field_v.a((byte) -66, la.a((byte) 10, var15));
+              GameModeSelectScreen.field_v.writeShort(1276387944, param1);
+              GameModeSelectScreen.field_v.writeByte(160, param5);
+              GameModeSelectScreen.field_v.writeByte(160, var9);
               aa.field_f.writeByte(160, 18);
               aa.field_f.position = aa.field_f.position + 2;
               var10 = aa.field_f.position;
@@ -82,14 +82,14 @@ final class cn {
               if (var11_ref_StringLifetime2 == null) {
                 var11_ref_StringLifetime2 = "";
               }
-              aa.field_f.b((byte) -41, var11_ref_StringLifetime2);
-              wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
-              aa.field_f.c(7519, aa.field_f.position - var10);
+              aa.field_f.writeString((byte) -41, var11_ref_StringLifetime2);
+              HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
+              aa.field_f.backpatchShortLength(7519, aa.field_f.position - var10);
             } else {
-              uk.field_v.position = 0;
-              uk.field_v.d(ai.field_d.nextInt(), -90);
-              uk.field_v.d(ai.field_d.nextInt(), -68);
-              stackIn_13_0 = uk.field_v;
+              GameModeSelectScreen.field_v.position = 0;
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -90);
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -68);
+              stackIn_13_0 = GameModeSelectScreen.field_v;
               stackIn_13_1 = -66;
               if (!param6.b((byte) -25)) {
                 stackIn_14_2 = "";
@@ -97,7 +97,7 @@ final class cn {
                 stackIn_14_2 = var14;
               }
               ((PacketBuffer) (Object) stackIn_13_0).a((byte) stackIn_13_1, stackIn_14_2);
-              stackIn_16_0 = uk.field_v;
+              stackIn_16_0 = GameModeSelectScreen.field_v;
               stackIn_16_1 = -66;
               if (param4.b((byte) 127)) {
                 stackIn_17_2 = var8;
@@ -108,23 +108,23 @@ final class cn {
               aa.field_f.writeByte(160, 16);
               aa.field_f.position = aa.field_f.position + 1;
               var9 = aa.field_f.position;
-              wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
-              aa.field_f.f(aa.field_f.position - var9, -1);
+              HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
+              aa.field_f.backpatchByteLength(aa.field_f.position - var9, -1);
             }
             SecondaryNodeHashTable.b(-1, 10000);
-            uk.field_s = TextLayoutLine.field_c;
+            GameModeSelectScreen.field_s = TextLayoutLine.field_c;
           }
-          if (TextLayoutLine.field_c == uk.field_s &&
+          if (TextLayoutLine.field_c == GameModeSelectScreen.field_s &&
             QueuedInput.a(1, false)) {
-            var9Lifetime1 = MusicCrossfadeStream.field_o.f(255);
+            var9Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
             MusicCrossfadeStream.field_o.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               MatchController.field_y = new String[-100 + var9Lifetime1];
-              uk.field_s = EditableTextWidget.field_Z;
+              GameModeSelectScreen.field_s = EditableTextWidget.field_Z;
             } else {
               if (248 == var9Lifetime1) {
-                ql.a(AudioService.a(13867), -7624);
+                GreenGrowTheRushesBackground.a(AudioService.a(13867), -7624);
                 gi.field_b = ph.field_m;
                 na.a(true);
                 qj.field_b = false;
@@ -133,7 +133,7 @@ final class cn {
               }
               if (var9Lifetime1 != 99) {
                 TextLayoutLine.field_e = var9Lifetime1;
-                uk.field_s = bg.field_l;
+                GameModeSelectScreen.field_s = StatusBar.field_l;
                 BackgroundScene.field_b = -1;
               } else {
                 QueuedInput.a(wl.a(23062), false);
@@ -142,15 +142,15 @@ final class cn {
               }
             }
           }
-          if (uk.field_s == EditableTextWidget.field_Z) {
+          if (GameModeSelectScreen.field_s == EditableTextWidget.field_Z) {
             var9Lifetime2 = 2;
             if (QueuedInput.a(var9Lifetime2, false)) {
-              var10Lifetime1 = MusicCrossfadeStream.field_o.a((byte) 82);
+              var10Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedShort((byte) 82);
               MusicCrossfadeStream.field_o.position = 0;
               if (QueuedInput.a(var10Lifetime1, false)) {
                 var11 = MatchController.field_y.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  MatchController.field_y[var12] = MusicCrossfadeStream.field_o.e(122);
+                  MatchController.field_y[var12] = MusicCrossfadeStream.field_o.readNullCircumfixedString(122);
                 }
                 na.a(true);
                 qj.field_b = false;
@@ -159,15 +159,15 @@ final class cn {
               }
             }
           }
-          if (uk.field_s == bg.field_l &&
+          if (GameModeSelectScreen.field_s == StatusBar.field_l &&
             MusicPatchNode.e(-18481)) {
             if (TextLayoutLine.field_e == 255) {
-              var9_ref_String = MusicCrossfadeStream.field_o.e((byte) 40);
+              var9_ref_String = MusicCrossfadeStream.field_o.readOptionalString((byte) 40);
               if (var9_ref_String != null) {
                 QueuedInput.a(var9_ref_String, 126, AudioService.a(13867));
               }
             } else {
-              gi.field_b = MusicCrossfadeStream.field_o.h(5);
+              gi.field_b = MusicCrossfadeStream.field_o.readString(5);
             }
             na.a(true);
             qj.field_b = false;
@@ -179,7 +179,7 @@ final class cn {
               if (CachedTextLayout.d(8) > 30000L) {
                 gi.field_b = ValidationIndicator.field_N;
               } else {
-                gi.field_b = ho.field_b;
+                gi.field_b = TextTableInitializer.field_b;
               }
               qj.field_b = false;
               stackIn_64_0 = 249;
@@ -214,11 +214,11 @@ final class cn {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 > -42) {
           field_a = (bd) null;
@@ -252,15 +252,15 @@ final class cn {
         var19 = Pixelate.field_H ? 1 : 0;
         try {
           if (param2 >= 0 &&
-            ja.field_e > param8) {
+            MeshRasterState.field_e > param8) {
             if (0 > param7 &&
               param0 < 0 &&
               0 > param4) {
               return;
             }
-            if (ja.field_d <= param7 &&
-              ja.field_d <= param0 &&
-              ja.field_d <= param4) {
+            if (MeshRasterState.field_d <= param7 &&
+              MeshRasterState.field_d <= param0 &&
+              MeshRasterState.field_d <= param4) {
               return;
             }
             if (param6) {
@@ -298,19 +298,19 @@ final class cn {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = ja.field_g[param8];
+                var16Lifetime2 = MeshRasterState.field_g[param8];
                 while (param8 < param1) {
                   var17 = var9_int >> 16;
-                  if (var17 < ja.field_d) {
+                  if (var17 < MeshRasterState.field_d) {
                     var18 = (var10 >> 16) - (var9_int >> 16);
                     if (0 == var18) {
                       if (var17 >= 0 &&
-                        var17 < ja.field_d) {
+                        var17 < MeshRasterState.field_d) {
                         ProxySocketConnector.a(var18, 1022226145, var17 + var16Lifetime2, param5, param3);
                       }
                     } else {
-                      if (var17 + var18 >= ja.field_d) {
-                        var18 = -1 + (-var17 + ja.field_d);
+                      if (var17 + var18 >= MeshRasterState.field_d) {
+                        var18 = -1 + (-var17 + MeshRasterState.field_d);
                       }
                       if (0 <= var17) {
                         ProxySocketConnector.a(var18, 1022226145, var16Lifetime2 + var17, param5, param3);
@@ -320,7 +320,7 @@ final class cn {
                     }
                   }
                   param8++;
-                  if (ja.field_e <= param8) {
+                  if (MeshRasterState.field_e <= param8) {
                     return;
                   }
                   var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_j;
@@ -376,14 +376,14 @@ final class cn {
               var10 = var10 + var12 * param8;
               param8 = 0;
             }
-            var15Lifetime1 = ja.field_g[param8];
+            var15Lifetime1 = MeshRasterState.field_g[param8];
             while (param2 > param8) {
               var16Lifetime1 = var9_int >> 16;
-              if (var16Lifetime1 < ja.field_d) {
+              if (var16Lifetime1 < MeshRasterState.field_d) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (0 != var17Lifetime1) {
-                  if (var17Lifetime1 + var16Lifetime1 >= ja.field_d) {
-                    var17Lifetime1 = ja.field_d - var16Lifetime1 - 1;
+                  if (var17Lifetime1 + var16Lifetime1 >= MeshRasterState.field_d) {
+                    var17Lifetime1 = MeshRasterState.field_d - var16Lifetime1 - 1;
                   }
                   if (var16Lifetime1 >= 0) {
                     ProxySocketConnector.a(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
@@ -392,13 +392,13 @@ final class cn {
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
-                    ja.field_d > var16Lifetime1) {
+                    MeshRasterState.field_d > var16Lifetime1) {
                     ProxySocketConnector.a(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
                   }
                 }
               }
               param8++;
-              if (ja.field_e <= param8) {
+              if (MeshRasterState.field_e <= param8) {
                 return;
               }
               var10 = var10 + var12;
@@ -418,7 +418,7 @@ final class cn {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

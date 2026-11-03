@@ -24,7 +24,7 @@ class EditableTextWidget extends TextButton {
           Exception var2_ref = null;
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.l(121);
+            this.deleteSelection(121);
             if (!param0) {
               field_X = 86;
             }
@@ -40,7 +40,7 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    private final int k(int param0) {
+    private final int nextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;
@@ -73,7 +73,7 @@ class EditableTextWidget extends TextButton {
           this.field_Q = true;
           this.field_W = hm.a(64);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "c.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "c.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ class EditableTextWidget extends TextButton {
             field_R = (CanvasRasterBuffer) null;
           }
           this.selectionAnchor = this.caretIndex;
-          this.n(param1 + 1392121585);
+          this.notifyTextSet(param1 + 1392121585);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,19 +114,19 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void r(int param0) {
-        this.e(false);
+    private final void cut(int param0) {
+        this.copySelection(false);
         if (param0 != -1) {
           return;
         }
-        this.l(126);
+        this.deleteSelection(126);
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         field_Z = null;
         field_Y = null;
         field_O = null;
@@ -143,11 +143,11 @@ class EditableTextWidget extends TextButton {
         }
         int var2 = qh.field_c * qh.field_c;
         int var3 = var2 - oo.field_b * oo.field_b;
-        ql.field_n.a(90, -210 + SoftwareRasterizer.field_d - 4, -(var3 * 199 / var2) + var1, 256, 199);
-        MidiPcmStream.field_E.a(0, -120 + SoftwareRasterizer.field_d - 4, 438 * var3 / var2 + var1 + 202, 256, 438);
+        GreenGrowTheRushesBackground.field_n.setBounds(90, -210 + SoftwareRasterizer.field_d - 4, -(var3 * 199 / var2) + var1, 256, 199);
+        MidiPcmStream.field_E.setBounds(0, -120 + SoftwareRasterizer.field_d - 4, 438 * var3 / var2 + var1 + 202, 256, 438);
     }
 
-    private final String a(byte param0) {
+    private final String selectedText(byte param0) {
         if (param0 != 11) {
           this.field_V = -69;
         }
@@ -186,7 +186,7 @@ class EditableTextWidget extends TextButton {
           if (param3 >= 32 &&
             param3 <= 126) {
             if (this.selectionAnchor != this.caretIndex) {
-              this.l(-114);
+              this.deleteSelection(-114);
             }
             if (this.maximumLength == -1 ||
               !(this.field_q.length() >= this.maximumLength)) {
@@ -200,24 +200,24 @@ class EditableTextWidget extends TextButton {
                 this.caretIndex = dupTemp$0;
                 this.selectionAnchor = dupTemp$0;
               }
-              this.n(1392153825);
+              this.notifyTextSet(1392153825);
             }
             return true;
           }
           if (param0 == 85) {
             if (this.caretIndex != this.selectionAnchor) {
-              this.l(-14);
+              this.deleteSelection(-14);
               return true;
             }
             if (this.caretIndex > 0) {
               this.selectionAnchor = this.caretIndex - 1;
-              this.l(-78);
+              this.deleteSelection(-78);
               return true;
             }
           } else {
             if (param0 != 101) {
               if (param0 == 13) {
-                this.p(127);
+                this.clear(127);
                 return true;
               }
               if (param0 != 96) {
@@ -226,7 +226,7 @@ class EditableTextWidget extends TextButton {
                     if (!EmailValidator.field_m[82]) {
                       stackIn_57_1 = 1 + this.caretIndex;
                     } else {
-                      stackIn_57_1 = this.k(-5782);
+                      stackIn_57_1 = this.nextWordBoundary(-5782);
                     }
                     this.moveCaret(stackIn_57_1, 81);
                     return true;
@@ -241,17 +241,17 @@ class EditableTextWidget extends TextButton {
                     return true;
                   }
                   if (param0 == 84) {
-                    this.d((byte) -126);
+                    this.notifyTextChanged((byte) -126);
                     return true;
                   }
                   if (EmailValidator.field_m[82] &&
                     param0 == 65) {
-                    this.r(-1);
+                    this.cut(-1);
                     return true;
                   }
                   if (EmailValidator.field_m[82] &&
                     param0 == 66) {
-                    this.e(false);
+                    this.copySelection(false);
                     return true;
                   }
                   if (EmailValidator.field_m[82] &&
@@ -273,12 +273,12 @@ class EditableTextWidget extends TextButton {
               }
             } else {
               if (this.caretIndex != this.selectionAnchor) {
-                this.l(param1 - 12);
+                this.deleteSelection(param1 - 12);
                 return true;
               }
               if (this.caretIndex < this.field_q.length()) {
                 this.selectionAnchor = 1 + this.caretIndex;
-                this.l(18);
+                this.deleteSelection(18);
                 return true;
               }
             }
@@ -294,28 +294,28 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    void n(int param0) {
+    void notifyTextSet(int param0) {
         if (this.field_n instanceof TextInputListener) {
-          ((TextInputListener) (this.field_n)).a(-107, this);
+          ((TextInputListener) (this.field_n)).onTextSet(-107, this);
         }
         if (param0 != 1392153825) {
-          this.n(103);
+          this.notifyTextSet(103);
         }
     }
 
-    final void p(int param0) {
+    final void clear(int param0) {
         this.caretIndex = 0;
         this.selectionAnchor = 0;
         int var2 = 19 % ((52 - param0) / 55);
         this.field_q = "";
-        this.n(1392153825);
+        this.notifyTextSet(1392153825);
     }
 
-    private final void q(int param0) {
+    private final void scrollCaretIntoView(int param0) {
         TextLayout var3;
         int var4;
         int var5;
@@ -362,7 +362,7 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         WidgetTextLayout var6 = null;
         long var7 = 0L;
         int var5 = 118 % ((param3 - 70) / 49);
@@ -382,7 +382,7 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    private final void l(int param0) {
+    private final void deleteSelection(int param0) {
         int var3 = 0;
         int var2 = 0;
         int var2Lifetime1;
@@ -392,14 +392,14 @@ class EditableTextWidget extends TextButton {
           this.caretIndex = var2;
           this.selectionAnchor = var2;
           this.field_q = this.field_q.substring(0, var2) + this.field_q.substring(var3, this.field_q.length());
-          this.n(1392153825);
+          this.notifyTextSet(1392153825);
         }
         var2Lifetime1 = 96 / ((param0 - 64) / 46);
     }
 
-    private final void d(byte param0) {
+    private final void notifyTextChanged(byte param0) {
         if (this.field_n instanceof TextInputListener) {
-          ((TextInputListener) (this.field_n)).a(this, 4);
+          ((TextInputListener) (this.field_n)).onTextChanged(this, 4);
         }
         int var2 = -72 / ((-78 - param0) / 32);
     }
@@ -421,7 +421,7 @@ class EditableTextWidget extends TextButton {
           if (!(this.field_y instanceof WidgetTextLayout)) {
             return false;
           }
-          var8_int = ((WidgetTextLayout) ((Object) this.field_y)).a(param3, param5, 0, ProxyAuthenticationException.field_d, bg.field_k, (UiComponent) (this));
+          var8_int = ((WidgetTextLayout) ((Object) this.field_y)).hitTestCaretIndex(param3, param5, 0, ProxyAuthenticationException.field_d, StatusBar.field_k, (UiComponent) (this));
           if (var8_int == -1) {
             stackIn_6_1 = 0;
           } else {
@@ -433,7 +433,7 @@ class EditableTextWidget extends TextButton {
           this.field_P = stackIn_9_1;
           if (this.field_P) {
             this.selectionAnchor = this.previousWordBoundary(false);
-            this.caretIndex = this.k(-5782);
+            this.caretIndex = this.nextWordBoundary(-5782);
             if (this.caretIndex > 0 &&
               32 == this.field_q.charAt(-1 + this.caretIndex)) {
               this.caretIndex = this.caretIndex - 1;
@@ -452,17 +452,17 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    private final void e(boolean param0) {
+    private final void copySelection(boolean param0) {
         if (param0) {
           return;
         }
-        String var2 = this.a((byte) 11);
+        String var2 = this.selectedText((byte) 11);
         if (0 < var2.length()) {
-          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.a((byte) 11))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.selectedText((byte) 11))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -488,10 +488,10 @@ class EditableTextWidget extends TextButton {
           this.selectionAnchor = dupTemp$1;
           this.caretIndex = dupTemp$1;
           if (param1 != 87) {
-            EditableTextWidget.o(97);
+            EditableTextWidget.releaseStatics(97);
           }
           if (!param0) {
-            this.n(1392153825);
+            this.notifyTextSet(1392153825);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -504,7 +504,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -518,11 +518,11 @@ class EditableTextWidget extends TextButton {
         RuntimeException var5_ref = null;
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.q(-117);
+          this.scrollCaretIntoView(-117);
           if (this.field_k == 1) {
             if (this.field_y instanceof WidgetTextLayout) {
               var5 = (WidgetTextLayout) ((Object) this.field_y);
-              var6 = var5.a(param1, param2, param0 ^ 40, ProxyAuthenticationException.field_d, bg.field_k, (UiComponent) (this));
+              var6 = var5.hitTestCaretIndex(param1, param2, param0 ^ 40, ProxyAuthenticationException.field_d, StatusBar.field_k, (UiComponent) (this));
               if (var6 != -1) {
                 if (this.field_P &&
                   var6 < this.field_V &&
@@ -545,7 +545,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

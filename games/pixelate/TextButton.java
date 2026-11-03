@@ -24,7 +24,7 @@ class TextButton extends UiComponent {
             field_J = (byte[]) null;
           }
           if (this.field_H &&
-            this.a(102, param5, param3, param6, param4)) {
+            this.containsPoint(102, param5, param3, param6, param4)) {
             this.focusNext(param1, 27);
             this.field_k = param2;
             if (this.field_n != null &&
@@ -44,7 +44,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ class TextButton extends UiComponent {
         try {
           if (this.field_H &&
             this.field_I) {
-            param0.h(2);
+            param0.blur(2);
             this.field_K = true;
             if (param1 != 27) {
               TextButton.a(-64, (sb) null, 111, 79, (sb) null, 120, -16, 109, (sb) null, 39, -126, (BitmapFont) null, 33, -16, (BitmapFont) null, -57, -112, -56, 119, 16);
@@ -79,11 +79,11 @@ class TextButton extends UiComponent {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    void a(boolean param0, int param1, int param2, int param3) {
+    void activate(boolean param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
@@ -98,7 +98,7 @@ class TextButton extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "qm.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var5), "qm.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -117,8 +117,8 @@ class TextButton extends UiComponent {
           if (param1) {
             this.field_K = false;
           }
-          if (this.a(-89, param2, param0, param3)) {
-            this.a(param2, (byte) -2, param3, param0);
+          if (this.beginDebugDescription(-89, param2, param0, param3)) {
+            this.appendDebugBody(param2, (byte) -2, param3, param0);
             if (this.field_M) {
               discarded$2 = param0.append(" active");
             }
@@ -144,7 +144,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -158,11 +158,11 @@ class TextButton extends UiComponent {
           super.updatePointer(param0, param1, param2, param3);
           if (this.field_k != 0 &&
             this.field_k != ef.field_b) {
-            if (this.a(78, param2, param1, bg.field_k, ProxyAuthenticationException.field_d) &&
+            if (this.containsPoint(78, param2, param1, StatusBar.field_k, ProxyAuthenticationException.field_d) &&
               ef.field_b == 0) {
-              this.a(true, -param1 + bg.field_k, this.field_k, -param2 + ProxyAuthenticationException.field_d);
+              this.activate(true, -param1 + StatusBar.field_k, this.field_k, -param2 + ProxyAuthenticationException.field_d);
             }
-            this.handlePointerRelease(bg.field_k, param2, param3, 0, param1, ProxyAuthenticationException.field_d);
+            this.handlePointerRelease(StatusBar.field_k, param2, param3, 0, param1, ProxyAuthenticationException.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,7 +175,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -292,11 +292,11 @@ class TextButton extends UiComponent {
           if (param4 < 3) {
             TextButton.a(112, (sb) null, 29, 72, (sb) null, 76, -127, -121, (sb) null, -76, 4, (BitmapFont) null, -119, 13, (BitmapFont) null, 46, -72, 8, -22, -67);
           }
-          var9 = var21Lifetime1 * param1[3] + param1[4] * var22Lifetime1 + var23Lifetime1 * param1[5] >> -ai.field_x + 16;
-          var10 = var23Lifetime1 * param1[8] + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - ai.field_x;
+          var9 = var21Lifetime1 * param1[3] + param1[4] * var22Lifetime1 + var23Lifetime1 * param1[5] >> -Bzip2State.field_x + 16;
+          var10 = var23Lifetime1 * param1[8] + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - Bzip2State.field_x;
           var11 = param1[11] * var23Lifetime1 + param1[9] * var21Lifetime1 + param1[10] * var22Lifetime1 >> 16;
-          var21Lifetime2 = ja.field_b;
-          var22Lifetime2 = ja.field_i;
+          var21Lifetime2 = MeshRasterState.field_b;
+          var22Lifetime2 = MeshRasterState.field_i;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -304,8 +304,8 @@ class TextButton extends UiComponent {
               var24Lifetime1 = param0.vertexX[var23Lifetime2];
               var25Lifetime1 = param0.vertexY[var23Lifetime2];
               var26Lifetime1 = param0.vertexZ[var23Lifetime2];
-              var27Lifetime1 = (var18 * var26Lifetime1 + var24Lifetime1 * var12 + var25Lifetime1 * var15 >> -ai.field_x + 16) + var9;
-              var28Lifetime1 = var10 + (var26Lifetime1 * var19 + var13 * var24Lifetime1 + var25Lifetime1 * var16 >> 16 - ai.field_x);
+              var27Lifetime1 = (var18 * var26Lifetime1 + var24Lifetime1 * var12 + var25Lifetime1 * var15 >> -Bzip2State.field_x + 16) + var9;
+              var28Lifetime1 = var10 + (var26Lifetime1 * var19 + var13 * var24Lifetime1 + var25Lifetime1 * var16 >> 16 - Bzip2State.field_x);
               var29Lifetime1 = var11 + (var25Lifetime1 * var17 + var24Lifetime1 * var14 + var26Lifetime1 * var20 >> 16);
               stackIn_67_0 = -51;
               stackIn_67_1 = ~var29Lifetime1;
@@ -331,9 +331,9 @@ class TextButton extends UiComponent {
                   }
                 }
                 if (param6) {
-                  ih.field_c[var23Lifetime2] = var27Lifetime1 >> ai.field_x;
-                  MatchingTextValidator.field_w[var23Lifetime2] = var28Lifetime1 >> ai.field_x;
-                  ai.field_e[var23Lifetime2] = var29Lifetime1;
+                  ih.field_c[var23Lifetime2] = var27Lifetime1 >> Bzip2State.field_x;
+                  MatchingTextValidator.field_w[var23Lifetime2] = var28Lifetime1 >> Bzip2State.field_x;
+                  Bzip2State.field_e[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -362,7 +362,7 @@ class TextButton extends UiComponent {
                   var25Lifetime1Lifetime1 = param0.field_P[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_u[var23Lifetime2];
                   ProxySocketConnector.field_l[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15) >> 16);
-                  dj.field_b[var23Lifetime2] = var10 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var13 + var19 * var26Lifetime1Lifetime1 >> 16);
+                  ValidationState.field_b[var23Lifetime2] = var10 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var13 + var19 * var26Lifetime1Lifetime1 >> 16);
                   kh.field_c[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_M[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_y[var23Lifetime2];
@@ -408,7 +408,7 @@ class TextButton extends UiComponent {
                   var20 = param0.field_q[var18];
                   var21Lifetime2 = param0.field_p[var18];
                   GrowableIntList.field_i[var18] = var12 * var20 + (var9 * var19 + var15 * var21Lifetime2) >> 16;
-                  lo.field_Ib[var18] = var16 * var21Lifetime2 + var20 * var13 + var19 * var10 >> 16;
+                  IconTextComponent.field_Ib[var18] = var16 * var21Lifetime2 + var20 * var13 + var19 * var10 >> 16;
                   SocketJs5Transport.field_q[var18] = var17 * var21Lifetime2 + var11 * var19 + var14 * var20 >> 16;
                   var18++;
                 }
@@ -441,11 +441,11 @@ class TextButton extends UiComponent {
           } else {
             stackIn_90_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean containsFocus(boolean param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -458,7 +458,7 @@ class TextButton extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "qm.JA(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "qm.JA(" + param0 + ')');
         }
     }
 
@@ -522,7 +522,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
         }
     }
 
@@ -533,7 +533,7 @@ class TextButton extends UiComponent {
         this.field_I = true;
     }
 
-    final void h(int param0) {
+    final void blur(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -551,7 +551,7 @@ class TextButton extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "qm.OA(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "qm.OA(" + param0 + ')');
         }
     }
 
@@ -565,9 +565,9 @@ class TextButton extends UiComponent {
           if (param1 != 3) {
             return false;
           }
-          if (this.b(true) && (84 == param0 ||
+          if (this.containsFocus(true) && (84 == param0 ||
             83 == param0)) {
-            this.a(true, -1, 1, -1);
+            this.activate(true, -1, 1, -1);
             return true;
           }
           return false;
@@ -581,7 +581,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -601,10 +601,10 @@ class TextButton extends UiComponent {
           if (param2 != 7) {
             field_F = 18;
           }
-          var3_int = mi.d(-4096, param1);
-          var4 = th.a(param1, 8191);
-          var5 = mi.d(-4096, param0);
-          var6 = th.a(param0, 8191);
+          var3_int = mi.fixedSine(-4096, param1);
+          var4 = th.fixedCosine(param1, 8191);
+          var5 = mi.fixedSine(-4096, param0);
+          var6 = th.fixedCosine(param0, 8191);
           var7 = (int)((long)var3_int * (long)var5 >> 16);
           var8 = (int)((long)var3_int * (long)var6 >> 16);
           var9 = (int)((long)var5 * (long)var4 >> 16);
@@ -614,7 +614,7 @@ class TextButton extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "qm.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "qm.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -627,7 +627,7 @@ class TextButton extends UiComponent {
             TextButton.a(8, (sb) null, 42, -55, (sb) null, 28, 88, -93, (sb) null, 77, 108, (BitmapFont) null, 5, -44, (BitmapFont) null, -125, -73, 115, -35, -117);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qm.RA(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qm.RA(" + param0 + ')');
         }
     }
 
@@ -638,7 +638,7 @@ class TextButton extends UiComponent {
         try {
           this.field_y = Checkbox.field_X.field_s;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qm.<init>()");
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qm.<init>()");
         }
     }
 

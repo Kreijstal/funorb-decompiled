@@ -26,15 +26,15 @@ final class jm {
     static boolean[][] field_r;
 
     final void a(byte param0) {
-        this.field_c = -60 + ok.a(ea.field_b, -126, 480);
-        this.field_l = ok.a(ea.field_b, -126, 50);
+        this.field_c = -60 + JavaRandomHelpers.a(ea.field_b, -126, 480);
+        this.field_l = JavaRandomHelpers.a(ea.field_b, -126, 50);
         this.field_e = (double)this.field_l / 100.0 + 0.3;
         int var2 = -112 / ((-40 - param0) / 47);
         this.field_t = (int)(this.field_e * 256.0);
         this.field_a = (int)(200.0 * (0.2 + this.field_e));
         this.field_f = (int)((this.field_e + 0.2) * 120.0);
-        this.field_n = ok.a(ea.field_b, -108, 2);
-        if (ok.a(ea.field_b, -126, 2) != 1) {
+        this.field_n = JavaRandomHelpers.a(ea.field_b, -108, 2);
+        if (JavaRandomHelpers.a(ea.field_b, -126, 2) != 1) {
           this.field_m = (double)(-this.field_a);
         } else {
           this.field_e = -this.field_e;
@@ -42,7 +42,7 @@ final class jm {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_i = null;
         field_k = null;
@@ -68,7 +68,7 @@ final class jm {
         String var7;
         String var8;
         var5 = Pixelate.field_H ? 1 : 0;
-        var6 = "(" + oj.field_G + " " + gb.field_d + " " + MarkerSlider.field_U + ") " + TextLayoutLine.field_e;
+        var6 = "(" + BirthDateEntryPanel.field_G + " " + gb.field_d + " " + MarkerSlider.field_U + ") " + TextLayoutLine.field_e;
         var1 = var6;
         if (0 < BackgroundScene.field_b) {
           var1 = var6 + ":";
@@ -100,7 +100,7 @@ final class jm {
 
     jm() {
         this.a((byte) -107);
-        this.field_m = (double)(ok.a(ea.field_b, -114, 640) - 100);
+        this.field_m = (double)(JavaRandomHelpers.a(ea.field_b, -114, 640) - 100);
     }
 
     static {

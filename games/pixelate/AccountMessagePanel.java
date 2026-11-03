@@ -10,10 +10,10 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
     private int[] field_I;
     static BitmapFont field_Q;
     static String field_R;
-    private int field_P;
+    private int buttonCount;
     static SceneWidget field_L;
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int param0) {
         field_R = null;
         if (param0 != 0) {
           field_J = (SceneWidget) null;
@@ -23,28 +23,28 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         field_J = null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, (byte) -24);
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
+        super.drawLayer(param0, param1, param2, (byte) -24);
         this.field_O.drawParagraph(this.field_N, 14 + (this.field_z + param2), this.field_p + param0 + 10, this.field_E - 28, this.field_C, 16777215, -1, 0, 0, this.field_O.maxAscent);
         int var5 = -57 / ((param3 - 70) / 49);
     }
 
-    private final void a(int param0, int param1) {
+    private final void ensureButtonCapacity(int param0, int param1) {
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
-        if (param1 <= this.field_P) {
+        if (param1 <= this.buttonCount) {
           return;
         }
         TextButton[] var7 = new TextButton[param1];
         TextButton[] var3 = var7;
         int[] var4 = new int[param1];
-        for (var5 = 0; var5 < this.field_P; var5++) {
+        for (var5 = 0; var5 < this.buttonCount; var5++) {
           var7[var5] = this.field_S[var5];
           var4[var5] = this.field_I[var5];
         }
         this.field_I = var4;
         this.field_S = var3;
-        this.field_P = param1;
+        this.buttonCount = param1;
         if (param0 > -57) {
           AccountMessagePanel.b(94, 86, 20);
         }
@@ -53,15 +53,15 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
     AccountMessagePanel(AccountRequestDialog param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
-        this.field_P = 0;
+        this.buttonCount = 0;
         try {
           this.field_M = param0;
           this.field_O = param1;
           this.field_N = param2;
           var4_int = this.field_N == null ? 0 : this.field_O.paragraphHeight(this.field_N, 260, this.field_O.maxAscent);
-          this.a(288, (byte) 55, 0, 0, 22 + var4_int);
+          this.setBounds(288, (byte) 55, 0, 0, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           if (param2 != 11) {
             field_R = (String) null;
           }
-          for (var6_int = 0; var6_int < this.field_P; var6_int++) {
+          for (var6_int = 0; var6_int < this.buttonCount; var6_int++) {
             if (this.field_S[var6_int] != param0) {
               continue;
             }
@@ -102,23 +102,23 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, String param2) {
         int var4_int = 0;
         try {
-          var4_int = this.field_P;
-          this.a(param1 ^ 114, var4_int - param1);
-          this.field_S[var4_int] = this.a(1707, (UiListener) (this), param2);
+          var4_int = this.buttonCount;
+          this.ensureButtonCapacity(param1 ^ 114, var4_int - param1);
+          this.field_S[var4_int] = this.appendButton(1707, (UiListener) (this), param2);
           this.field_I[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vl.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vl.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final TextButton a(int param0, UiListener param1, String param2) {
+    final TextButton appendButton(int param0, UiListener param1, String param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -133,12 +133,12 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           var4 = new TextButton(param2, param1);
           var4.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           if (param0 != 1707) {
-            this.field_P = 66;
+            this.buttonCount = 66;
           }
           var5 = -2 + this.field_C;
-          this.a(this.field_E, (byte) 63, 0, 0, this.field_C + 34);
-          var4.a(-14 + this.field_E, (byte) 81, var5, 7, 30);
-          this.b(var4, 80);
+          this.setBounds(this.field_E, (byte) 63, 0, 0, this.field_C + 34);
+          var4.setBounds(-14 + this.field_E, (byte) 81, var5, 7, 30);
+          this.addChild(var4, 80);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,7 +157,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

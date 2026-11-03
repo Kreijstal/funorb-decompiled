@@ -11,7 +11,7 @@ final class fd {
         if (param0 != 0) {
           return (SceneWidget) null;
         }
-        return jm.field_b.field_Fb;
+        return jm.field_b.content;
     }
 
     final synchronized static byte[] a(int param0, int param1) {
@@ -90,11 +90,11 @@ final class fd {
           }
           return new byte[param1];
         }
-        if (0 < fb.field_Hb) {
-          fieldTemp$8 = fb.field_Hb - 1;
-          fb.field_Hb = fb.field_Hb - 1;
-          var2_ref_byte__Lifetime1 = sc.field_e[fieldTemp$8];
-          sc.field_e[fb.field_Hb] = null;
+        if (0 < PairedTextColumns.field_Hb) {
+          fieldTemp$8 = PairedTextColumns.field_Hb - 1;
+          PairedTextColumns.field_Hb = PairedTextColumns.field_Hb - 1;
+          var2_ref_byte__Lifetime1 = ConditionalTextValue.field_e[fieldTemp$8];
+          ConditionalTextValue.field_e[PairedTextColumns.field_Hb] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (~param1 == param0 &&
@@ -146,7 +146,7 @@ final class fd {
         return new byte[param1];
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -24465) {
           field_d = null;
           field_c = null;
@@ -154,7 +154,7 @@ final class fd {
           field_b = null;
           return;
         }
-        fd.b(119);
+        fd.releaseStatics(119);
         field_d = null;
         field_c = null;
         field_a = null;

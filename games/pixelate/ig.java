@@ -8,7 +8,7 @@ final class ig {
     static Sprite[][] field_a;
     static ResourceArchive field_b;
 
-    final static String a(int param0, char param1) {
+    final static String charToString(int param0, char param1) {
         if (param0 < 123) {
           return (String) null;
         }
@@ -53,11 +53,11 @@ final class ig {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = (Sprite[][]) null;
         field_c = null;
         field_b = null;
@@ -76,7 +76,7 @@ final class ig {
         cm var2Lifetime1;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          to.field_t.serviceOutput();
+          MainMenuScreen.field_t.serviceOutput();
           ib.field_h.serviceOutput();
           var1_int = -121 % ((param0 - 54) / 39);
           e.field_a = e.field_a - 1;
@@ -84,29 +84,29 @@ final class ig {
             e.field_a = 200;
             var2 = (cm) (bo.field_d.c(1504642273));
             while (var2 != null) {
-              if (!var2.field_k.b(0)) {
-                var2.c(2779);
+              if (!var2.field_k.isLinked(0)) {
+                var2.unlink(2779);
               }
               var2 = (cm) (bo.field_d.last(1504642273));
             }
             if (LoginCredentials.field_b != null) {
               var2Lifetime1 = (cm) (LoginCredentials.field_b.c(1504642273));
               while (var2Lifetime1 != null) {
-                if (!var2Lifetime1.field_k.b(0)) {
-                  var2Lifetime1.c(2779);
+                if (!var2Lifetime1.field_k.isLinked(0)) {
+                  var2Lifetime1.unlink(2779);
                 }
                 var2Lifetime1 = (cm) (LoginCredentials.field_b.last(1504642273));
               }
             }
           }
-          if ((null != to.field_q) &&
-            (stackIn_18_0 = to.field_q.a((byte) -123))) {
+          if ((null != MainMenuScreen.field_q) &&
+            (stackIn_18_0 = MainMenuScreen.field_q.isReady((byte) -123))) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ig.B(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ig.B(" + param0 + ')');
         }
     }
 

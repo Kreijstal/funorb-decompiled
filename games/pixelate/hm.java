@@ -35,7 +35,7 @@ final class hm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ final class hm {
             0 != param1.length()) {
             var2_int = param1.indexOf('@');
             if (var2_int == -1) {
-              stackIn_7_0 = pd.field_Kb;
+              stackIn_7_0 = ScrollPaneWithFooter.field_Kb;
               return stackIn_7_0;
             }
             var3 = param1.substring(param0, var2_int);
@@ -83,11 +83,11 @@ final class hm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 9) {
           return;
         }

@@ -144,7 +144,7 @@ final class ViewportController {
           }
         }
         if (this.field_n > 0) {
-          ae.field_a = (this.field_n - BufferedRandomAccessFile.field_i) / 2;
+          Vector3.field_a = (this.field_n - BufferedRandomAccessFile.field_i) / 2;
         }
     }
 
@@ -153,7 +153,7 @@ final class ViewportController {
         this.field_l = wp.field_c;
         this.field_s.a(this.field_q, 126, this.field_x);
         wl.field_i = param0 ? true : false;
-        FullscreenFocusCanvas var2 = wo.a(mc.field_k, 150, this.field_x, 0, this.field_q, 0);
+        FullscreenFocusCanvas var2 = wo.openFullscreenWindow(mc.field_k, 150, this.field_x, 0, this.field_q, 0);
         if (var2 == null) {
           this.b(89);
         }
@@ -165,7 +165,7 @@ final class ViewportController {
         int var2 = 99 % ((param0 + 17) / 62);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_k = null;
         field_e = null;
@@ -204,10 +204,10 @@ final class ViewportController {
           return;
         }
         if (BufferedRandomAccessFile.field_i < this.field_n) {
-          ae.field_a = (this.field_n - BufferedRandomAccessFile.field_i) / 2;
+          Vector3.field_a = (this.field_n - BufferedRandomAccessFile.field_i) / 2;
         } else {
           if (this.field_n > 0) {
-            ae.field_a = 0;
+            Vector3.field_a = 0;
           }
         }
         if (BufferedRandomAccessFile.field_i == this.field_i &&

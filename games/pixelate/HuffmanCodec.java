@@ -53,7 +53,7 @@ final class HuffmanCodec {
             var7_int = var7_int & -var13 >> 31;
             var14 = (var11 + var13 - 1 >> 3) + var12;
             var13 += 24;
-            dupTemp$0 = bq.a(var7_int, var10 >>> var13);
+            dupTemp$0 = bq.bitOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param2[var12] = (byte)dupTemp$0;
             if (var14 > var12) {
@@ -99,11 +99,11 @@ final class HuffmanCodec {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
@@ -116,17 +116,17 @@ final class HuffmanCodec {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        im var3 = CipherPacketBuffer.a(param2, param0, (byte) 113);
+        SocialListEntry var3 = CipherPacketBuffer.a(param2, param0, (byte) 113);
         ClientContextMenu var4Lifetime1;
         if (var3 != null) {
           ProxySocketConnector.field_n.b(false, (byte) -98);
           var4 = ProxySocketConnector.field_n;
-          var5_ref_String = op.field_q;
+          var5_ref_String = OptionsScreen.field_q;
           var4.field_b.addAction(var5_ref_String, (byte) -68, 5);
           var4Lifetime1 = ProxySocketConnector.field_n;
           var5 = BufferedRandomAccessFile.field_a;
           var6 = ji.field_c;
-          var4Lifetime1.field_b.b(0, var5, 115, var6, 0);
+          var4Lifetime1.field_b.layoutPopup(0, var5, 115, var6, 0);
         }
         vf.a(param0, param1, param2);
     }
@@ -177,7 +177,7 @@ final class HuffmanCodec {
                   if (var11 == var8) {
                     var12 = 1 << 32 - var10;
                     if ((var12 & var11) == 0) {
-                      var3[var10] = bq.a(var12, var11);
+                      var3[var10] = bq.bitOr(var12, var11);
                       continue;
                     }
                     var3[var10] = var3[var10 - 1];
@@ -231,7 +231,7 @@ final class HuffmanCodec {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -240,17 +240,17 @@ final class HuffmanCodec {
           if (param4 > -91) {
             HuffmanCodec.a('ﾢ', 24);
           }
-          AudioOutput.a(param1, param2, 10);
-          to.field_t = AudioOutput.a(param6, param5, 0, param3);
-          ib.field_h = AudioOutput.a(param6, param5, 1, param0);
+          AudioOutput.configure(param1, param2, 10);
+          MainMenuScreen.field_t = AudioOutput.create(param6, param5, 0, param3);
+          ib.field_h = AudioOutput.create(param6, param5, 1, param0);
           ClientContextMenu.field_d = new PcmStreamMixer();
           ba.field_f = param0;
-          ib.field_h.b(ClientContextMenu.field_d);
+          ib.field_h.setStream(ClientContextMenu.field_d);
           ri.field_a = param7;
           ri.field_a.a(SocketJs5Transport.field_u, (byte) 2);
-          to.field_t.b(ri.field_a);
+          MainMenuScreen.field_t.setStream(ri.field_a);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "oh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -470,7 +470,7 @@ final class HuffmanCodec {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
         }
     }
 

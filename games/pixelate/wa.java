@@ -14,7 +14,7 @@ final class wa {
     static long field_b;
     static String field_d;
 
-    final static Sprite[] c(int param0) {
+    final static Sprite[] buildSprites(int param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -29,15 +29,15 @@ final class wa {
         int[] var21;
         byte[] var22;
         var8 = Pixelate.field_H ? 1 : 0;
-        var1 = new Sprite[im.field_Qb];
-        for (var2 = 0; im.field_Qb > var2; var2++) {
+        var1 = new Sprite[SocialListEntry.field_Qb];
+        for (var2 = 0; SocialListEntry.field_Qb > var2; var2++) {
           var3 = ge.field_c[var2] * ByteStorage.field_g[var2];
           var20 = wo.field_f[var2];
           if (!TriangleMesh.field_m[var2]) {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
-              var9[var6_int] = fl.field_g[cm.a(255, (int) var20[var6_int])];
+              var9[var6_int] = fl.field_g[cm.bitAnd(255, (int) var20[var6_int])];
             }
             var1[var2] = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var21);
           } else {
@@ -46,7 +46,7 @@ final class wa {
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6[var7] = bq.a(fl.field_g[cm.a(255, (int) var20[var7])], cm.a(var22[var7] << 24, -16777216));
+              var6[var7] = bq.bitOr(fl.field_g[cm.bitAnd(255, (int) var20[var7])], cm.bitAnd(var22[var7] << 24, -16777216));
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var16));
           }
@@ -92,13 +92,13 @@ final class wa {
         field_f = null;
         field_a = null;
         if (param0 != 0) {
-          wa.b(46);
+          wa.currentYear(46);
         }
         field_c = null;
         field_d = null;
     }
 
-    final static int b(int param0) {
+    final static int currentYear(int param0) {
         if (param0 > -64) {
           return -14;
         }

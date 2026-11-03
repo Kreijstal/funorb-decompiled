@@ -13,7 +13,7 @@ final class LabeledField extends SingleChildContainer {
     static String field_L;
     private BitmapFont field_J;
 
-    final String b(byte param0) {
+    final String getTooltip(byte param0) {
         int var2 = 0;
         String var3 = null;
         String var3Lifetime1;
@@ -21,19 +21,19 @@ final class LabeledField extends SingleChildContainer {
         if (param0 >= 16) {
           var2 = this.child.field_D ? 1 : 0;
           this.child.field_D = this.field_D;
-          var3 = this.child.b((byte) 70);
+          var3 = this.child.getTooltip((byte) 70);
           this.child.field_D = var2 != 0 ? true : false;
           return var3;
         }
         this.field_O = false;
         var2Lifetime1 = this.child.field_D ? 1 : 0;
         this.child.field_D = this.field_D;
-        var3Lifetime1 = this.child.b((byte) 70);
+        var3Lifetime1 = this.child.getTooltip((byte) 70);
         this.child.field_D = var2Lifetime1 != 0 ? true : false;
         return var3Lifetime1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_N = null;
         if (param0 == -84) {
           field_Q = null;
@@ -48,10 +48,10 @@ final class LabeledField extends SingleChildContainer {
         field_L = null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         int var5 = param2 + this.field_z;
         int var6 = param0 + this.field_p;
-        super.a(param0, param1, param2, (byte) 125);
+        super.drawLayer(param0, param1, param2, (byte) 125);
         if (param1 != 0) {
           return;
         }
@@ -61,7 +61,7 @@ final class LabeledField extends SingleChildContainer {
     }
 
     final static boolean a(boolean param0, long param1, String param2) {
-        im var4 = null;
+        SocialListEntry var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -69,9 +69,9 @@ final class LabeledField extends SingleChildContainer {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = re.a(param2, -1);
+          var4 = re.findFriend(param2, -1);
           if (!param0) {
-            LabeledField.a((byte) 102);
+            LabeledField.releaseStatics((byte) 102);
           }
           if (var4 != null &&
             null != var4.field_Nb) {
@@ -89,7 +89,7 @@ final class LabeledField extends SingleChildContainer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class LabeledField extends SingleChildContainer {
           if (var13 <= param3) {
             var13 = param3;
           } else {
-            this.a(param2, (byte) 20, param1, param0, var13);
+            this.setBounds(param2, (byte) 20, param1, param0, var13);
           }
           if (!this.field_O) {
             stackIn_10_0 = this.field_M + 2 * this.field_R;
@@ -131,7 +131,7 @@ final class LabeledField extends SingleChildContainer {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.child.a(-this.field_M + (param2 - 3 * this.field_R), (byte) 110, (var13 - param3 >> 1) + this.field_R, var14, -(this.field_R * 2) + param3);
+          this.child.setBounds(-this.field_M + (param2 - 3 * this.field_R), (byte) 110, (var13 - param3 >> 1) + this.field_R, var14, -(this.field_R * 2) + param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,7 +155,7 @@ final class LabeledField extends SingleChildContainer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class LabeledField extends SingleChildContainer {
               stackIn_13_0 = (fl.a(param3, param1, param2, 0));
               return stackIn_13_0;
             }
-            LabeledField.a((byte) 0);
+            LabeledField.releaseStatics((byte) 0);
             if (ArrayWidgetContainer.k(1)) {
               return true;
             }
@@ -197,7 +197,7 @@ final class LabeledField extends SingleChildContainer {
           }
         }
         if (!param0) {
-          LabeledField.a((byte) 0);
+          LabeledField.releaseStatics((byte) 0);
         }
         if (ArrayWidgetContainer.k(1)) {
           return true;

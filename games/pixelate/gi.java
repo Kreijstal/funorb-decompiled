@@ -34,21 +34,21 @@ final class gi {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static void a(String param0, int param1, byte param2) {
         try {
-          kf.field_q = param1;
+          TimerBarDemo.field_q = param1;
           int var3_int = 67 % ((34 - param2) / 41);
-          ga.field_a = ho.field_e;
+          GameModeCard.field_a = TextTableInitializer.field_e;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         int var1 = 102 % ((60 - param0) / 43);

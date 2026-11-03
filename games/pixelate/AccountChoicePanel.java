@@ -38,7 +38,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           if (param0 != 2) {
             return;
           }
-          stackIn_8_0 = ql.field_n;
+          stackIn_8_0 = GreenGrowTheRushesBackground.field_n;
           stackIn_8_1 = -28476;
           stackIn_9_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (null == io.field_c) && (null == DraggableWidget.field_S);
           ((SceneWidget) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2);
@@ -51,11 +51,11 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           stackIn_21_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2);
         } else {
-          ValidatedTextWidget.field_lb.field_cb = sd.a(oi.field_d, 89, new String[]{Integer.toString(gi.field_a)});
+          ValidatedTextWidget.field_lb.field_cb = AlphaContainer.a(oi.field_d, 89, new String[]{Integer.toString(gi.field_a)});
           if (param0 != 2) {
             return;
           }
-          stackIn_56_0 = ql.field_n;
+          stackIn_56_0 = GreenGrowTheRushesBackground.field_n;
           stackIn_56_1 = -28476;
           stackIn_57_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (null == io.field_c) && (null == DraggableWidget.field_S);
           ((SceneWidget) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_57_2);
@@ -68,7 +68,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           stackIn_69_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
         }
-        cl.field_g.field_g.b((byte) -88);
+        cl.field_g.field_g.processTabPresses((byte) -88);
         if (ValidatedTextWidget.field_cb.field_P != 0) {
           fc.field_a = true;
         }
@@ -96,19 +96,19 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
             GameApplet.field_o != LinkButtonPainter.field_a[0]) {
             GameApplet.field_o = LinkButtonPainter.field_a[0];
           }
-          DialWidget.a(param1, bg.field_d, GameApplet.field_o, 0, true, (byte) -76);
+          DialWidget.a(param1, StatusBar.field_d, GameApplet.field_o, 0, true, (byte) -76);
         }
         if (DelegatingCanvas.field_h.field_P != 0) {
           LobbyPlayer.field_Wb = false;
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         int var5 = this.field_z + param2;
         int var6 = this.field_p + param0;
         int var7 = 87 % ((70 - param3) / 49);
         he.field_d.drawParagraph(ClientContextMenu.field_n, 20 + var5, 20 + var6, -40 + this.field_E, -50 + this.field_C, 16777215, -1, 1, 0, he.field_d.maxAscent);
-        super.a(param0, param1, param2, (byte) 122);
+        super.drawLayer(param0, param1, param2, (byte) 122);
     }
 
     final boolean onFocusedKey(int param0, int param1, UiComponent param2, char param3) {
@@ -142,7 +142,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -182,13 +182,13 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public AccountChoicePanel() {
         super(0, 0, 476, 225, (WidgetPainter) null);
-        this.field_J = new TextButton(sd.field_M, (UiListener) null);
+        this.field_J = new TextButton(AlphaContainer.field_M, (UiListener) null);
         this.field_N = new TextButton(MatchController.field_v, (UiListener) null);
         this.field_L = new TextButton(fc.field_c, (UiListener) null);
         ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();
@@ -198,20 +198,20 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_N.a(var4, (byte) 98, -var2 + (this.field_C - 48), -var3 + this.field_E >> 1, 30);
-        this.field_L.a(var4, (byte) 85, -var2 + this.field_C - 48, var2 + (var4 + (-var3 + this.field_E >> 1)), 30);
-        this.field_J.a(var3, (byte) 103, -(2 * var2) + (this.field_C - 78), this.field_E - var3 >> 1, 30);
+        this.field_N.setBounds(var4, (byte) 98, -var2 + (this.field_C - 48), -var3 + this.field_E >> 1, 30);
+        this.field_L.setBounds(var4, (byte) 85, -var2 + this.field_C - 48, var2 + (var4 + (-var3 + this.field_E >> 1)), 30);
+        this.field_J.setBounds(var3, (byte) 103, -(2 * var2) + (this.field_C - 78), this.field_E - var3 >> 1, 30);
         this.field_N.field_n = (UiListener) (this);
         this.field_J.field_n = (UiListener) (this);
         this.field_J.field_l = KeyboardInputHandler.field_a;
         this.field_L.field_n = (UiListener) (this);
         this.field_L.field_l = up.field_q;
-        this.b(this.field_N, 80);
-        this.b(this.field_J, 80);
-        this.b(this.field_L, 80);
+        this.addChild(this.field_N, 80);
+        this.addChild(this.field_J, 80);
+        this.addChild(this.field_L, 80);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_K = null;
         if (param0 != -123) {
           return;

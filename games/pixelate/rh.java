@@ -40,7 +40,7 @@ final class rh extends IntrusiveNode {
           } else {
             if (param3 >= 100 &&
               param3 <= 105) {
-              MouseWheelHandler.field_b = fk.a((byte) 117, param2);
+              MouseWheelHandler.field_b = HowToPlayScreen.a((byte) 117, param2);
               return;
             }
             MouseWheelHandler.field_b = pa.a(param3, param1, (byte) -120);
@@ -62,7 +62,7 @@ final class rh extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class rh extends IntrusiveNode {
         QuickChatMenu.b(false, 93);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         field_u = null;
         if (param0 != 64) {
@@ -97,7 +97,7 @@ final class rh extends IntrusiveNode {
           this.field_k = param6;
           this.field_s = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

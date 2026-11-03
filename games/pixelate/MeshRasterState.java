@@ -1,0 +1,67 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MeshRasterState {
+    static int field_i;
+    static int field_e;
+    private static int[] field_a;
+    static int field_b;
+    static int[] field_h;
+    static int[] field_g;
+    private static int[] field_c;
+    static int field_d;
+    private static int[] field_f;
+
+    final static void a() {
+        MeshRasterState.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_a);
+    }
+
+    private final static void b() {
+        field_b = field_d / 2;
+        field_i = field_e / 2;
+    }
+
+    private final static void a(int param0, int param1, int param2, int param3) {
+        int var5 = 0;
+        field_d = param2 - param0;
+        field_e = param3 - param1;
+        MeshRasterState.b();
+        if (field_g.length < field_e) {
+          field_g = new int[DropTargetWidget.a(-1879863704, field_e)];
+        }
+        int var4 = param1 * SoftwareRasterizer.field_j + param0;
+        for (var5 = 0; var5 < field_e; var5++) {
+          field_g[var5] = var4;
+          var4 = var4 + SoftwareRasterizer.field_j;
+        }
+    }
+
+    public static void releaseStatics() {
+        field_g = null;
+        field_a = null;
+        field_c = null;
+        field_h = null;
+        field_f = null;
+    }
+
+    static {
+        int var0 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
+        field_a = new int[512];
+        field_h = new int[2048];
+        field_c = new int[2048];
+        field_g = new int[1024];
+        field_f = new int[2048];
+        for (var0 = 1; var0 < 512; var0++) {
+          field_a[var0] = 32768 / var0;
+        }
+        for (var0Lifetime1 = 1; var0Lifetime1 < 2048; var0Lifetime1++) {
+          field_c[var0Lifetime1] = 65536 / var0Lifetime1;
+        }
+        for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
+          field_h[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          field_f[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
+        }
+    }
+}

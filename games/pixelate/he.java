@@ -18,7 +18,7 @@ final class he {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = aa.field_f;
-          var3.g(param1, 15514);
+          var3.writeOpcode(param1, 15514);
           var3.writeByte(160, 2);
           var3.writeByte(160, 0);
           var3.writeByte(160, param2.field_p);
@@ -37,11 +37,11 @@ final class he {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_a = null;
           field_e = null;
@@ -60,7 +60,7 @@ final class he {
         field_b = null;
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void attachCanvasInput(int param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -71,7 +71,7 @@ final class he {
             field_e = (String) null;
           }
           MusicPatchNode.a((java.awt.Component) ((Object) param1), 57);
-          tj.a((byte) -128, (java.awt.Component) ((Object) param1));
+          tj.attachMouseInput((byte) -128, (java.awt.Component) ((Object) param1));
           if (ScrollContainer.field_Lb == null) {
             return;
           }
@@ -87,7 +87,7 @@ final class he {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

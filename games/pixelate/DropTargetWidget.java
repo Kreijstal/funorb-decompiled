@@ -9,7 +9,7 @@ final class DropTargetWidget extends SingleChildContainer {
         try {
           this.child = param6;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ne.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ne.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -26,16 +26,16 @@ final class DropTargetWidget extends SingleChildContainer {
           var8 = qf.field_a;
           var7 = var8;
           if (var8 != null) {
-            if (!this.a(param3 ^ 96, param1, param4, param0, param5)) {
+            if (!this.containsPoint(param3 ^ 96, param1, param4, param0, param5)) {
               return;
             }
-            if (this.field_n instanceof s) {
-              ((s) (this.field_n)).a(116, var8, this);
+            if (this.field_n instanceof WidgetDropListener) {
+              ((WidgetDropListener) (this.field_n)).onDropped(116, var8, this);
               qf.field_a = null;
               return;
             }
-            if (var8.field_n instanceof s) {
-              ((s) (var8.field_n)).a(param3 ^ -106, var8, this);
+            if (var8.field_n instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var8.field_n)).onDropped(param3 ^ -106, var8, this);
               qf.field_a = null;
               return;
             }
@@ -51,7 +51,7 @@ final class DropTargetWidget extends SingleChildContainer {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class DropTargetWidget extends SingleChildContainer {
         RuntimeException var3_ref = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
-          var3 = lg.a(11, param1, param2);
+          var3 = lg.normalizeAccountName(11, param1, param2);
           if (param0 < 56) {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
@@ -93,7 +93,7 @@ final class DropTargetWidget extends SingleChildContainer {
           }
           for (var4 = 0; var4 < param2.length(); var4++) {
             if (!HuffmanCodec.a(param2.charAt(var4), -112)) {
-              stackIn_13_0 = nj.field_g;
+              stackIn_13_0 = DualLinkDeque.field_g;
               return stackIn_13_0;
             }
           }
@@ -108,7 +108,7 @@ final class DropTargetWidget extends SingleChildContainer {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

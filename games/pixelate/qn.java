@@ -32,7 +32,7 @@ final class qn extends IntrusiveNode {
         field_l = null;
     }
 
-    final static String a(java.applet.Applet param0, String param1, byte param2) {
+    final static String readCookie(java.applet.Applet param0, String param1, byte param2) {
         try {
           int var5 = 0;
           String var3 = null;
@@ -53,7 +53,7 @@ final class qn extends IntrusiveNode {
           var7 = Pixelate.field_H ? 1 : 0;
           try {
             try {
-              var3 = (String) (cq.a("getcookies", (byte) -114, param0));
+              var3 = (String) (JavaScriptBridge.callWindowFunction("getcookies", (byte) -114, param0));
               var4 = Puzzle.a(var3, (byte) -61, ';');
               if (param2 != -85) {
                 stackIn_3_0 = (String) null;
@@ -89,7 +89,7 @@ final class qn extends IntrusiveNode {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -102,11 +102,11 @@ final class qn extends IntrusiveNode {
         try {
           this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(String param0, int param1, String[] param2, int param3, BitmapFont param4) {
+    final static int wrapText(String param0, int param1, String[] param2, int param3, BitmapFont param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -198,7 +198,7 @@ final class qn extends IntrusiveNode {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 

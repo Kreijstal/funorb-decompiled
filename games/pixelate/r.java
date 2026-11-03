@@ -11,13 +11,13 @@ final class r {
         int var1 = qh.field_c * qh.field_c;
         int var2 = -(HuffmanCodec.field_b * HuffmanCodec.field_b) + var1;
         int var4 = var2 * (MatchingTextValidator.field_o - wa.field_i) / var1 + wa.field_i;
-        ui.field_i.a(var4, 120, ho.field_c, 256, 640);
+        ui.field_i.setBounds(var4, 120, TextTableInitializer.field_c, 256, 640);
         ArchiveProvider.a(-24 + MatchingTextValidator.field_o, (byte) 116, 640, PlayerBoard.field_q, 5, 0, MouseWheelHandler.field_c);
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4;
-        AccountChoicePanel.field_O.b(param1, param0);
+        AccountChoicePanel.field_O.drawTransparent(param1, param0);
         if (param3 != -40) {
           return;
         }
@@ -38,9 +38,9 @@ final class r {
         ProxyAuthenticationException.a(0, 80, 30, AccountChoicePanel.field_O, param1, 0, var4, param0, (byte) -113);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -31558) {
-          r.a(48);
+          r.releaseStatics(48);
           field_b = null;
           return;
         }
@@ -49,15 +49,15 @@ final class r {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = aa.field_f;
-        var2.g(param1, param0 ^ 15514);
+        var2.writeOpcode(param1, param0 ^ 15514);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(160, 2);
-        var2.a(TextButton.field_J.length, 0, -3493, TextButton.field_J);
+        var2.writeBytes(TextButton.field_J.length, 0, -3493, TextButton.field_J);
         var2.writeByte(160, ib.field_a);
         var2.writeByte(160, TextFieldValidator.field_i);
-        var2.a(NanoTickClock.field_k.length, param0, -3493, NanoTickClock.field_k);
-        var2.f(var2.position - var3, -1);
+        var2.writeBytes(NanoTickClock.field_k.length, param0, -3493, NanoTickClock.field_k);
+        var2.backpatchByteLength(var2.position - var3, -1);
     }
 
     static {

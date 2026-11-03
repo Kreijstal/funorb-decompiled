@@ -8,13 +8,13 @@ final class QuickChatMenu extends SceneWidget {
     static String field_Eb;
     private int[] field_Tb;
     private int field_Ob;
-    private lo[] field_Sb;
+    private IconTextComponent[] field_Sb;
     private int field_Kb;
     private QuickChatMenu field_Pb;
     static String field_Ib;
     private int field_Jb;
     static ea field_Nb;
-    private int field_Lb;
+    private int openItemIndex;
     private int field_Rb;
     private int field_Ub;
     private int field_Mb;
@@ -40,7 +40,7 @@ final class QuickChatMenu extends SceneWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "te.E(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "te.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -48,15 +48,15 @@ final class QuickChatMenu extends SceneWidget {
         if (param1 != -2671) {
           field_Nb = (ea) null;
         }
-        u.field_h = param0;
+        QuickChatPhraseCache.field_h = param0;
     }
 
     final void l(int param0) {
         int var3 = 0;
-        lo var4 = null;
+        IconTextComponent var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
-        lo[] var6 = this.field_Sb;
-        lo[] var2 = var6;
+        IconTextComponent[] var6 = this.field_Sb;
+        IconTextComponent[] var2 = var6;
         if (param0 != 17872) {
           this.field_Hb = (char[]) null;
         }
@@ -67,10 +67,10 @@ final class QuickChatMenu extends SceneWidget {
         }
         if (null != this.field_Pb) {
           this.field_Pb.l(17872);
-          this.field_Pb.c(2779);
+          this.field_Pb.unlink(2779);
         }
         this.field_Pb = null;
-        this.field_Lb = -1;
+        this.openItemIndex = -1;
         this.a(12, (byte) -85);
     }
 
@@ -84,18 +84,18 @@ final class QuickChatMenu extends SceneWidget {
           param1.removeFocusListener(fj.field_c);
           jm.field_o = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final void layoutMenu(int param0, int param1, int param2, int param3, byte param4, int param5) {
         int var7;
         int var8;
         int var9;
         int var7Lifetime1;
         var9 = Pixelate.field_H ? 1 : 0;
         this.field_Fb = 2 * param3 + this.field_Rb;
-        this.a(param0 - this.field_Ob, this.field_Ob, param1, 256, this.field_Fb);
+        this.setBounds(param0 - this.field_Ob, this.field_Ob, param1, 256, this.field_Fb);
         if (param5 != this.field_Ub) {
           this.field_Ub = param5;
           this.a(this.field_Kb, (byte) -79);
@@ -106,12 +106,12 @@ final class QuickChatMenu extends SceneWidget {
         for (var7 = 0; var7 < this.field_Mb; var7++) {
           this.field_Sb[var7].a(this.field_Jb, param3, param2, this.field_Sb[var7].field_S, 0, this.field_Fb, param4 - 2147483554);
         }
-        if (this.field_Lb != -1 &&
-          this.field_Gb[this.field_Lb] != null) {
-          var7Lifetime1 = this.field_Gb[this.field_Lb].field_Mb;
-          for (var8 = this.field_Jb * (var7Lifetime1 + this.field_Lb) + this.field_S; var8 > param0; var8 = var8 - this.field_Jb) {
+        if (this.openItemIndex != -1 &&
+          this.field_Gb[this.openItemIndex] != null) {
+          var7Lifetime1 = this.field_Gb[this.openItemIndex].field_Mb;
+          for (var8 = this.field_Jb * (var7Lifetime1 + this.openItemIndex) + this.field_S; var8 > param0; var8 = var8 - this.field_Jb) {
           }
-          this.field_Gb[this.field_Lb].a(var8, param1 + this.field_Fb, param2, param3, (byte) -94, this.field_Sb[this.field_Lb].screenY);
+          this.field_Gb[this.openItemIndex].layoutMenu(var8, param1 + this.field_Fb, param2, param3, (byte) -94, this.field_Sb[this.openItemIndex].screenY);
         }
     }
 
@@ -126,7 +126,7 @@ final class QuickChatMenu extends SceneWidget {
         var4 = stackIn_3_0;
         if (null != this.field_Pb) {
           if (var4 != 0 &&
-            this.field_Pb.field_Lb == -1) {
+            this.field_Pb.openItemIndex == -1) {
             this.l(17872);
             this.a(0, (byte) -82);
             return true;
@@ -139,7 +139,7 @@ final class QuickChatMenu extends SceneWidget {
           mj.a(false);
           return true;
         }
-        var5 = nj.field_f;
+        var5 = DualLinkDeque.field_f;
         if (var5 > param1) {
           if (rk.field_d == var5) {
             var5 = 63;
@@ -159,9 +159,9 @@ final class QuickChatMenu extends SceneWidget {
 
     final void b(int param0, int param1, int param2) {
         int var4_int = 0;
-        lo var5;
+        IconTextComponent var5;
         int var6;
-        lo stackIn_7_0 = null;
+        IconTextComponent stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         QuickChatMenu var4;
         QuickChatMenu var7;
@@ -171,12 +171,12 @@ final class QuickChatMenu extends SceneWidget {
           if (1 == var5.field_P) {
             this.a(var4_int, param2, 118, param0);
             stackIn_7_0 = var5;
-            stackIn_8_1 = (this.field_Lb == var4_int);
+            stackIn_8_1 = (this.openItemIndex == var4_int);
             stackIn_7_0.field_U = stackIn_8_1;
           }
         }
-        if (this.field_Lb != param1) {
-          var7 = this.field_Gb[this.field_Lb];
+        if (this.openItemIndex != param1) {
+          var7 = this.field_Gb[this.openItemIndex];
           var4 = var7;
           if (var4 != null) {
             var7.b(param0, param1 + 0, param2);
@@ -196,10 +196,10 @@ final class QuickChatMenu extends SceneWidget {
 
     final boolean m(int param0) {
         int var4 = 0;
-        lo var5 = null;
+        IconTextComponent var5 = null;
         int var6 = Pixelate.field_H ? 1 : 0;
         int var2 = 0;
-        lo[] var3 = this.field_Sb;
+        IconTextComponent[] var3 = this.field_Sb;
         if (param0 != 14685) {
           return false;
         }
@@ -207,9 +207,9 @@ final class QuickChatMenu extends SceneWidget {
           var5 = var3[var4];
           var2 = var2 | (var5.field_P != 0 ? 1 : 0);
         }
-        if (var2 == 0 && this.field_Lb != -1 &&
-          this.field_Gb[this.field_Lb] != null) {
-          var2 = this.field_Gb[this.field_Lb].m(param0 + 0) ? 1 : 0;
+        if (var2 == 0 && this.openItemIndex != -1 &&
+          this.field_Gb[this.openItemIndex] != null) {
+          var2 = this.field_Gb[this.openItemIndex].m(param0 + 0) ? 1 : 0;
         }
         return var2 != 0;
     }
@@ -240,7 +240,7 @@ final class QuickChatMenu extends SceneWidget {
         int var15 = 0;
         BitmapFont var17 = null;
         BitmapFont var18 = null;
-        this.field_Lb = -1;
+        this.openItemIndex = -1;
         try {
           this.field_Hb = param7;
           this.field_Tb = param5;
@@ -251,20 +251,20 @@ final class QuickChatMenu extends SceneWidget {
           this.field_Jb = var18.maxAscent + (2 + var18.maxDescent);
           this.field_Rb = 0;
           this.field_Ob = this.field_Jb * this.field_Mb;
-          this.field_Sb = new lo[this.field_Mb];
+          this.field_Sb = new IconTextComponent[this.field_Mb];
           var11 = "<col=999999>";
           var12 = "</col>";
           for (var13 = 0; var13 < this.field_Mb; var13++) {
             if (this.field_Hb[var13] > 0) {
-              param6[var13] = var11 + ig.a(124, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + ig.charToString(124, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (null != this.field_Gb[var13] ||
               -1 == this.field_Tb[var13]) {
               var14 = fe.field_b;
             }
-            this.field_Sb[var13] = new lo(0L, param2, (SceneWidget) null, param3, (Sprite) (var14), param6[var13]);
-            this.a(this.field_Sb[var13], (byte) 26);
+            this.field_Sb[var13] = new IconTextComponent(0L, param2, (SceneWidget) null, param3, (Sprite) (var14), param6[var13]);
+            this.addChild(this.field_Sb[var13], (byte) 26);
             var15 = var17.textWidth(param6[var13]);
             if (var15 > this.field_Rb) {
               this.field_Rb = var15;
@@ -319,7 +319,7 @@ final class QuickChatMenu extends SceneWidget {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -352,12 +352,12 @@ final class QuickChatMenu extends SceneWidget {
         int var7;
         String var8;
         var7 = Pixelate.field_H ? 1 : 0;
-        if (this.field_Lb != param0) {
+        if (this.openItemIndex != param0) {
           if (this.field_Gb[param0] != null) {
             this.l(17872);
             this.a(0, (byte) -96);
-            this.field_Lb = param0;
-            this.field_Pb = this.field_Gb[this.field_Lb];
+            this.openItemIndex = param0;
+            this.field_Pb = this.field_Gb[this.openItemIndex];
             StripedProgressBar.a(this.field_Pb, true);
             this.field_Pb.a(12, (byte) -104);
           } else {
@@ -377,7 +377,7 @@ final class QuickChatMenu extends SceneWidget {
               mj.a(false);
               SocketJs5Transport.d(-93);
             } else {
-              pd.j(-127);
+              ScrollPaneWithFooter.j(-127);
               mj.a(false);
             }
           }
@@ -390,7 +390,7 @@ final class QuickChatMenu extends SceneWidget {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Qb = null;
         if (param0 != 1) {
           field_Eb = (String) null;

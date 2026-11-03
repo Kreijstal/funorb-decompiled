@@ -13,7 +13,7 @@ final class ff {
     static String field_b;
     static SceneWidget field_a;
 
-    final static Sprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
+    final static Sprite[] loadSprites(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -26,7 +26,7 @@ final class ff {
             return stackIn_2_0;
           }
           if (rk.a(param2, false, param0, param1)) {
-            return ff.b(0);
+            return ff.buildSprites(0);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -39,11 +39,11 @@ final class ff {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_a = null;
         field_h = null;
@@ -55,7 +55,7 @@ final class ff {
         field_g = null;
     }
 
-    final static String a(int param0, String param1, byte param2) {
+    final static String requestRemoveFriend(int param0, String param1, byte param2) {
         String stackIn_4_0 = null;
         String stackIn_8_0 = null;
         String stackIn_11_0 = null;
@@ -67,14 +67,14 @@ final class ff {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
-        im var7 = null;
-        im var8 = null;
+        SocialListEntry var7 = null;
+        SocialListEntry var8 = null;
         CipherPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param1);
-          if (!ai.a((byte) -126, var10)) {
+          if (!Bzip2State.a((byte) -126, var10)) {
             stackIn_4_0 = qn.field_n;
             return stackIn_4_0;
           }
@@ -82,33 +82,33 @@ final class ff {
             stackIn_8_0 = qg.field_c;
             return stackIn_8_0;
           }
-          var8 = re.a(param1, -1);
+          var8 = re.findFriend(param1, -1);
           if (var8 == null) {
-            stackIn_11_0 = sd.a(AccountMessagePanel.field_R, 41, new String[]{param1});
+            stackIn_11_0 = AlphaContainer.a(AccountMessagePanel.field_R, 41, new String[]{param1});
             return stackIn_11_0;
           }
           VerticalScrollbar.field_Hb.traverseFrom(var8, param2 + 1504642379);
           while (true) {
-            var7 = (im) (VerticalScrollbar.field_Hb.last(param2 ^ -1504642185));
+            var7 = (SocialListEntry) (VerticalScrollbar.field_Hb.last(param2 ^ -1504642185));
             if (var7 != null) {
               var7.field_Kb = var7.field_Kb - 1;
               continue;
             }
             break;
           }
-          var8.c(2779);
-          var8.e(17);
+          var8.unlink(2779);
+          var8.unlinkSecondary(17);
           if (param2 != -106) {
             field_d = -123L;
           }
           DialWidgetPainter.field_q = DialWidgetPainter.field_q - 1;
           var9 = aa.field_f;
-          var9.g(param0, 15514);
+          var9.writeOpcode(param0, 15514);
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.writeByte(160, 1);
-          var9.b((byte) -41, param1);
-          var9.f(-var5 + var9.position, -1);
+          var9.writeString((byte) -41, param1);
+          var9.backpatchByteLength(-var5 + var9.position, -1);
           stackIn_19_0 = null;
           return (String) (stackIn_19_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -121,24 +121,24 @@ final class ff {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final static Sprite[] b(int param0) {
+    private final static Sprite[] buildSprites(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = Pixelate.field_H ? 1 : 0;
-        Sprite[] var1 = new Sprite[im.field_Qb];
-        for (var2 = param0; var2 < im.field_Qb; var2++) {
+        Sprite[] var1 = new Sprite[SocialListEntry.field_Qb];
+        for (var2 = param0; var2 < SocialListEntry.field_Qb; var2++) {
           var3 = ge.field_c[var2] * ByteStorage.field_g[var2];
           var4 = wo.field_f[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = fl.field_g[cm.a((int) var4[var6], 255)];
+            var5[var6] = fl.field_g[cm.bitAnd((int) var4[var6], 255)];
           }
           var1[var2] = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var5);
         }
@@ -146,7 +146,7 @@ final class ff {
         return var1;
     }
 
-    final static IndexedSprite[] a(ResourceArchive param0, int param1, int param2, byte param3) {
+    final static IndexedSprite[] loadIndexedSprites(ResourceArchive param0, int param1, int param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         IndexedSprite[] stackIn_4_0 = null;
@@ -159,7 +159,7 @@ final class ff {
             return null;
           }
           var4_int = 101 % ((-49 - param3) / 52);
-          stackIn_4_0 = gb.a((byte) -96);
+          stackIn_4_0 = gb.buildIndexedSprites((byte) -96);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -171,7 +171,7 @@ final class ff {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

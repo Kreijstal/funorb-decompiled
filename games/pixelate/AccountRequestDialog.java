@@ -25,7 +25,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             field_ub = (int[]) null;
           }
           if (!this.field_nb) {
-            ae.a((byte) 71, AudioService.a(13867), "tochangedisplayname.ws");
+            Vector3.a((byte) 71, AudioService.a(13867), "tochangedisplayname.ws");
             return;
           }
           QuickChatMenu.a(3, -2671);
@@ -41,11 +41,11 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_sb = null;
         field_mb = null;
         field_ub = null;
@@ -68,9 +68,9 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           this.field_vb = false;
           this.field_rb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_rb.field_Y = true;
-          this.b(this.field_rb, 80);
+          this.addChild(this.field_rb, 80);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               }
               ((AccountMessagePanel) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_15_3);
             } else {
-              var6.a(1707, (UiListener) (this), bo.field_k);
+              var6.appendButton(1707, (UiListener) (this), bo.field_k);
             }
           }
           if (param0 == 3) {
@@ -187,13 +187,13 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             if (param0 != 4) {
               if (param0 == 6) {
-                var6.a(9, -1, ho.field_d);
+                var6.a(9, -1, TextTableInitializer.field_d);
               } else {
                 if (param0 != 9) {
                   this.transitionToContent(var6, -124);
                   return;
                 }
-                var6.a(1707, (UiListener) (this), ue.field_q);
+                var6.appendButton(1707, (UiListener) (this), ue.field_q);
               }
             } else {
               var6.a(8, -1, StripedProgressBar.field_X);
@@ -211,7 +211,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -265,14 +265,14 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               var4 = Class.forName("BufferedImageRasterBuffer");
               var6 = 32 / ((param1 - 70) / 45);
               var5 = (CanvasRasterBuffer) (var4.newInstance());
-              var5.a(param3, param2, param0, (byte) -100);
+              var5.initialize(param3, param2, param0, (byte) -100);
               stackIn_1_0 = var5;
               return stackIn_1_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((CanvasRasterBuffer) ((Object) var5_ref)).a(param3, param2, param0, (byte) -78);
+              ((CanvasRasterBuffer) ((Object) var5_ref)).initialize(param3, param2, param0, (byte) -78);
               stackIn_3_0 = var5_ref;
               return (CanvasRasterBuffer) ((Object) stackIn_3_0);
             }
@@ -286,7 +286,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

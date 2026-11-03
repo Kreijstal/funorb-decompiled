@@ -7,12 +7,12 @@ final class nh {
     static int[] field_a;
     static int field_b;
 
-    final static ae c(byte param0) {
+    final static Vector3 randomUnitVector(byte param0) {
         int var1;
         int var2;
         int var3;
         int var4;
-        ae var5;
+        Vector3 var5;
         int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         var3 = -63 / ((param0 + 27) / 63);
@@ -23,17 +23,17 @@ final class nh {
         } while (0 == var1 &&
           0 == var2 &&
           var4 == 0);
-        var5 = new ae(var1, var2, var4);
+        var5 = new Vector3(var1, var2, var4);
         var5.a((byte) -7);
         return var5;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_d = null;
         field_c = null;
         if (param0 <= 61) {
-          nh.b((byte) -92);
+          nh.releaseStatics((byte) -92);
         }
     }
 
@@ -63,7 +63,7 @@ final class nh {
         rk.field_e.colorPalettes[3][var2] = 4473924;
     }
 
-    final static long a(CharSequence param0, int param1) {
+    final static long encodeBase37Name(CharSequence param0, int param1) {
         int var5 = 0;
         long stackIn_25_0 = 0L;
         RuntimeException stackIn_28_0 = null;
@@ -121,7 +121,7 @@ final class nh {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class nh {
                   var10 = 65280 & var8;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = (255 & var8) >> 3;
-                  SoftwareRasterizer.field_k[var6_int] = bq.a(var11, bq.a(var10, var9 << 16));
+                  SoftwareRasterizer.field_k[var6_int] = bq.bitOr(var11, bq.bitOr(var10, var9 << 16));
                 }
                 var6_int++;
               }
@@ -182,7 +182,7 @@ final class nh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var6), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var6), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

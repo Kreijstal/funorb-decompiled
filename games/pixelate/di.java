@@ -6,7 +6,7 @@ final class di {
     static int[] field_b;
     static int field_a;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (param0) {
           return;
@@ -14,7 +14,7 @@ final class di {
         field_c = null;
     }
 
-    final static String a(boolean param0, int param1) {
+    final static String formatThousands(boolean param0, int param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -71,7 +71,7 @@ final class di {
           CheckboxPainter.field_r = true;
           BoardView.field_a = param4;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

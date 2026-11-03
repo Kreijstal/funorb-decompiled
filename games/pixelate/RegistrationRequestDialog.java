@@ -10,8 +10,8 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     static int field_Bb;
 
     final static void i(byte param0) {
-        if (null != to.field_r) {
-          to.field_r.p(-108);
+        if (null != MainMenuScreen.field_r) {
+          MainMenuScreen.field_r.p(-108);
         }
         aa.field_c = new DisplayNameForm();
         ph.field_l.transitionToContent(aa.field_c, -125);
@@ -26,58 +26,58 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         try {
           this.field_Ab = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean q(int param0) {
         if (param0 == 22452) {
-          return ga.field_f > 250 ? true : false;
+          return GameModeCard.field_f > 250 ? true : false;
         }
-        RegistrationRequestDialog.r(-8);
-        return ga.field_f > 250 ? true : false;
+        RegistrationRequestDialog.releaseStatics(-8);
+        return GameModeCard.field_f > 250 ? true : false;
     }
 
-    final boolean c(boolean param0) {
+    final boolean tickLayerAndCheckHidden(boolean param0) {
         id var2 = null;
         id var2Lifetime1;
         if (param0) {
           this.h((byte) -120);
           if (!this.field_N) {
-            return super.c(false);
+            return super.tickLayerAndCheckHidden(false);
           }
           if (this.field_xb) {
-            return super.c(false);
+            return super.tickLayerAndCheckHidden(false);
           }
           var2 = CachedArchiveProvider.d((byte) 52);
           if (var2 != null) {
-            this.a(var2, -127, false);
-            return super.c(false);
+            this.handleRegistrationResult(var2, -127, false);
+            return super.tickLayerAndCheckHidden(false);
           }
-          return super.c(false);
+          return super.tickLayerAndCheckHidden(false);
         }
         if (!this.field_N) {
-          return super.c(false);
+          return super.tickLayerAndCheckHidden(false);
         }
         if (this.field_xb) {
-          return super.c(false);
+          return super.tickLayerAndCheckHidden(false);
         }
         var2Lifetime1 = CachedArchiveProvider.d((byte) 52);
         if (var2Lifetime1 != null) {
-          this.a(var2Lifetime1, -127, false);
-          return super.c(false);
+          this.handleRegistrationResult(var2Lifetime1, -127, false);
+          return super.tickLayerAndCheckHidden(false);
         }
-        return super.c(false);
+        return super.tickLayerAndCheckHidden(false);
     }
 
-    public static void r(int param0) {
+    public static void releaseStatics(int param0) {
         field_zb = null;
         if (param0 > -19) {
           field_zb = (int[]) null;
         }
     }
 
-    private final void a(id param0, int param1, boolean param2) {
+    private final void handleRegistrationResult(id param0, int param1, boolean param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -121,11 +121,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
                 var5.a(17, -1, FullscreenFocusCanvas.field_e);
               }
             } else {
-              var5.a(1707, (UiListener) (this), MusicCrossfadeStream.field_J);
+              var5.appendButton(1707, (UiListener) (this), MusicCrossfadeStream.field_J);
             }
             if (3 != param0.field_a) {
               if (param0.field_a == 6) {
-                var5.a(9, -1, ho.field_d);
+                var5.a(9, -1, TextTableInitializer.field_d);
               }
             } else {
               var5.a(7, -1, gd.field_d);
@@ -135,7 +135,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               this.transitionToContent(new AccountTermsPanel(this), -113);
               return;
             }
-            var5.a(1707, (UiListener) (this), MusicCrossfadeStream.field_J);
+            var5.appendButton(1707, (UiListener) (this), MusicCrossfadeStream.field_J);
           }
           this.transitionToContent(var5, -115);
           return;
@@ -149,13 +149,13 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (!param0) {
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           if (param2 != 0) {
             RegistrationRequestDialog.a(true, false, -123);
             Js5NetworkRequest.a(param2 ^ 91, param0);
@@ -164,7 +164,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           Js5NetworkRequest.a(param2 ^ 91, param0);
           return;
         }
-        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
         if (param2 != 0) {
           RegistrationRequestDialog.a(true, false, -123);
           Js5NetworkRequest.a(param2 ^ 91, param0);
@@ -185,17 +185,17 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         try {
           this.p(-119);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void h(byte param0) {
         if (param0 <= -96) {
-          this.a(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
+          this.handleRegistrationResult(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
           return;
         }
         RegistrationRequestDialog.a(true, false, -97);
-        this.a(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
+        this.handleRegistrationResult(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
     }
 
     static {

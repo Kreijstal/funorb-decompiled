@@ -7,12 +7,12 @@ final class qf {
     static Sprite field_c;
     static String field_d;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_a = null;
         field_d = null;
         if (param0) {
-          qf.a(-39);
+          qf.initialiseKeyMap(-39);
         }
     }
 
@@ -23,7 +23,7 @@ final class qf {
         MusicPatchPcmStream.a(param1, (byte) 112);
     }
 
-    final static void a(int param0) {
+    final static void initialiseKeyMap(int param0) {
         GameApplet.field_j[59] = 57;
         GameApplet.field_j[92] = 74;
         GameApplet.field_j[61] = 27;

@@ -4,7 +4,7 @@
 final class sk {
     static String field_d;
     static SceneWidget field_e;
-    static dj field_a;
+    static ValidationState field_a;
     static String field_b;
     static String field_c;
 
@@ -12,14 +12,14 @@ final class sk {
         try {
           jf.field_a = param1;
           if (param0 >= -45) {
-            sk.a((byte) -101);
+            sk.releaseStatics((byte) -101);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -46,6 +46,6 @@ final class sk {
         field_d = "This entry doesn't match";
         field_b = "Return to game";
         field_c = "From <%0>: ";
-        field_a = new dj();
+        field_a = new ValidationState();
     }
 }

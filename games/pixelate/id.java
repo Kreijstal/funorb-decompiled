@@ -12,14 +12,14 @@ final class id {
     int field_a;
     static int field_b;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 64 / ((-80 - param0) / 37);
         field_d = null;
     }
 
     final static void a(byte param0, hf param1, int param2) {
         CipherPacketBuffer var5 = aa.field_f;
-        var5.g(param2, 15514);
+        var5.writeOpcode(param2, 15514);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.writeByte(160, 1);
@@ -29,14 +29,14 @@ final class id {
         }
         try {
           var5.writeByte(160, param1.field_v);
-          var5.d(param1.field_s, -116);
-          var5.d(param1.field_r, -102);
-          var5.d(param1.field_l, -112);
-          var5.d(param1.field_p, -120);
-          var5.b(var4, (byte) 84);
-          var5.f(var5.position - var4, -1);
+          var5.writeInt(param1.field_s, -116);
+          var5.writeInt(param1.field_r, -102);
+          var5.writeInt(param1.field_l, -112);
+          var5.writeInt(param1.field_p, -120);
+          var5.appendCrc32(var4, (byte) 84);
+          var5.backpatchByteLength(var5.position - var4, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -58,17 +58,17 @@ final class id {
         int var1_intLifetime2;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          im.field_Hb = new Sprite[param0];
+          SocialListEntry.field_Hb = new Sprite[param0];
           for (var1_int = 0; var1_int < 2; var1_int++) {
-            im.field_Hb[var1_int] = new Sprite(64, 64);
+            SocialListEntry.field_Hb[var1_int] = new Sprite(64, 64);
           }
           ProxySocketConnector.a((byte) 99);
-          ClientException.field_f.a(19692);
+          ClientException.field_f.bindRaster(19692);
           MatchController.field_p = new IndexedSprite[10];
           for (var1_intLifetime1 = 0; var1_intLifetime1 < MatchController.field_p.length; var1_intLifetime1++) {
             MatchController.field_p[var1_intLifetime1] = new IndexedSprite(64, 64, 2);
             for (var2 = 0; MatchController.field_p[var1_intLifetime1].indices.length > var2; var2++) {
-              if (ok.a(ea.field_b, param0 ^ -124, 9) > var1_intLifetime1) {
+              if (JavaRandomHelpers.a(ea.field_b, param0 ^ -124, 9) > var1_intLifetime1) {
                 MatchController.field_p[var1_intLifetime1].indices[var2] = (byte) 1;
               }
             }
@@ -80,20 +80,20 @@ final class id {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "id.D(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "id.D(" + param0 + ')');
         }
     }
 
     final static void a(boolean param0, byte param1) {
         qk.field_e = 0;
-        ae.field_b = 0;
+        Vector3.field_b = 0;
         if (param1 <= 104) {
           return;
         }
         ReportAbuseDialog.field_Sb = 0;
         jn.field_q = ui.field_k;
         NameSuggestionsPanel.field_I = new MenuInputState(2);
-        NameSuggestionsPanel.field_I.a(param0, el.a(bg.field_k, (byte) -106, ProxyAuthenticationException.field_d), 17068, -1);
+        NameSuggestionsPanel.field_I.initializeSelection(param0, el.a(StatusBar.field_k, (byte) -106, ProxyAuthenticationException.field_d), 17068, -1);
     }
 
     id(boolean param0) {

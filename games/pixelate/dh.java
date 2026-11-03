@@ -9,11 +9,11 @@ final class dh {
 
     final static void a(byte param0, boolean param1) {
         if (param0 != 58) {
-          dh.a(true);
+          dh.releaseStatics(true);
           if (oo.field_b <= 0) {
             if (0 < vn.field_g) {
-              if (bm.field_o) {
-                SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+              if (EmergentBehaviourBackground.field_o) {
+                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
                 ra.field_e.a(param1, 0);
                 return;
               }
@@ -22,8 +22,8 @@ final class dh {
             if (Checkbox.field_W <= 0) {
               return;
             }
-            if (bm.field_o) {
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+            if (EmergentBehaviourBackground.field_o) {
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
               ra.field_e.a(param1, 0);
               return;
             }
@@ -31,48 +31,48 @@ final class dh {
           }
           if (!LobbyPlayer.field_Wb) {
             if (0 < vn.field_g) {
-              if (!bm.field_o) {
+              if (!EmergentBehaviourBackground.field_o) {
                 return;
               }
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
               ra.field_e.a(param1, 0);
               return;
             }
             if (Checkbox.field_W > 0) {
-              if (!bm.field_o) {
+              if (!EmergentBehaviourBackground.field_o) {
                 return;
               }
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
               ra.field_e.a(param1, 0);
               return;
             }
             return;
           }
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           TickClock.field_e.a(param1, 0);
           if (0 >= vn.field_g &&
             Checkbox.field_W <= 0) {
             return;
           }
-          if (!bm.field_o) {
+          if (!EmergentBehaviourBackground.field_o) {
             return;
           }
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           ra.field_e.a(param1, 0);
           return;
         }
         if (oo.field_b > 0 &&
           LobbyPlayer.field_Wb) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           TickClock.field_e.a(param1, 0);
           if (0 >= vn.field_g &&
             Checkbox.field_W <= 0) {
             return;
           }
-          if (!bm.field_o) {
+          if (!EmergentBehaviourBackground.field_o) {
             return;
           }
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           ra.field_e.a(param1, 0);
           return;
         }
@@ -80,28 +80,28 @@ final class dh {
           Checkbox.field_W <= 0) {
           return;
         }
-        if (!bm.field_o) {
+        if (!EmergentBehaviourBackground.field_o) {
           return;
         }
-        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
+        SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
         ra.field_e.a(param1, 0);
     }
 
     final static void a(int param0) {
         ContentTransitionDialog.field_jb = null;
-        uk.field_r = null;
+        GameModeSelectScreen.field_r = null;
         df.field_r = null;
         if (param0 == 0) {
           sm.field_l = false;
           jk.field_d = null;
           return;
         }
-        dh.a(false);
+        dh.releaseStatics(false);
         sm.field_l = false;
         jk.field_d = null;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_c = null;
         field_d = null;
@@ -161,8 +161,8 @@ final class dh {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param0.charAt(var6);
-            if (vf.a((byte) -3, (char) var7)) {
-              var8 = ae.a(124, (char) var7);
+            if (vf.isAllowedChar((byte) -3, (char) var7)) {
+              var8 = Vector3.a(124, (char) var7);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -185,7 +185,7 @@ final class dh {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 

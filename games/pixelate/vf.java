@@ -9,7 +9,7 @@ final class vf {
     public static void a(int param0) {
         if (param0 > -104) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          vf.a((java.applet.Applet) null, 33);
+          vf.reloadPage((java.applet.Applet) null, 33);
         }
         field_a = null;
         field_c = null;
@@ -29,7 +29,7 @@ final class vf {
           if (param0 != -37) {
             return;
           }
-          var5 = sc.field_i;
+          var5 = ConditionalTextValue.field_i;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -47,11 +47,11 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "vf.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "vf.E(" + param0 + ')');
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAllowedChar(byte param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -69,7 +69,7 @@ final class vf {
           if (Puzzle.a(param1, (byte) 122)) {
             return true;
           }
-          var2 = wh.field_r;
+          var2 = HighscoresScreen.field_r;
           var3 = 0;
           if (param0 != -3) {
             field_c = (String) null;
@@ -92,7 +92,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "vf.A(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "vf.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class vf {
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
-        im var6 = null;
+        SocialListEntry var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -137,25 +137,25 @@ final class vf {
           MouseWheelHandler.field_e.field_rb = true;
           MouseWheelHandler.field_e.field_Gb.field_Ib.field_cb = null;
           var5 = null;
-          var6 = (im) (var4.c(1504642273));
+          var6 = (SocialListEntry) (var4.c(1504642273));
           while (var6 != null) {
             var7 = 0;
             if (null == var6.children) {
               var6.field_Pb = new SceneWidget(0L, SceneWidget.field_T);
-              var6.a(var6.field_Pb, (byte) 26);
+              var6.addChild(var6.field_Pb, (byte) 26);
               var6.field_Ob = new SceneWidget(0L, SceneWidget.field_T);
-              var6.a(var6.field_Ob, (byte) 26);
+              var6.addChild(var6.field_Ob, (byte) 26);
               var6.h(-257);
               var7 = 1;
             }
             var6.field_K = MouseWheelHandler.field_e.field_Fb.field_K;
-            var6.field_Pb.a(0, fq.field_q, 0, param1 ^ 256, var6.field_K);
+            var6.field_Pb.setBounds(0, fq.field_q, 0, param1 ^ 256, var6.field_K);
             var8 = 0;
             if (null != var6.field_Gb &&
               !var6.field_Gb.equals("")) {
               var6.field_Ob.field_y = 16737894;
               var6.field_Ob.field_H = dk.field_e;
-              var6.field_Ob.a(0, fq.field_q, 0, param1 + 256, dk.field_e.field_A + 3);
+              var6.field_Ob.setBounds(0, fq.field_q, 0, param1 + 256, dk.field_e.field_A + 3);
               var8 = 1;
             }
             var9 = 0;
@@ -168,12 +168,12 @@ final class vf {
             if (0 >= var10) {
               stackIn_21_1 = var6.field_Fb;
             } else {
-              stackIn_21_1 = BitmapFont.a(var6.field_Pb.font, var6.field_Fb, var10);
+              stackIn_21_1 = BitmapFont.truncateWithEllipsis(var6.field_Pb.font, var6.field_Fb, var10);
             }
             stackIn_20_0.field_cb = stackIn_21_1;
             stackIn_24_0 = (var6.field_Pb.field_cb.equals(var6.field_Fb)) ? 0 : 1;
             var11 = stackIn_24_0;
-            var6.field_Pb.a(0, fq.field_q, var9, param1 + 256, var10);
+            var6.field_Pb.setBounds(0, fq.field_q, var9, param1 + 256, var10);
             if (var3_int == 0) {
               var6.pendingHeightDelta = fq.field_q - var6.height;
             }
@@ -190,36 +190,36 @@ final class vf {
               }
             }
             if (var6.field_P != 0) {
-              em.a(var6.field_Fb, 0L, var6.field_Ib, -1, var6, -163, MouseWheelHandler.field_e.field_Gb, (int[]) null, -1);
+              em.openContextMenu(var6.field_Fb, 0L, var6.field_Ib, -1, var6, -163, MouseWheelHandler.field_e.field_Gb, (int[]) null, -1);
               var17 = ProxySocketConnector.field_n;
               var13_ref_String = NanoTickClock.field_n;
               var17.field_b.addAction(var13_ref_String, (byte) -107, 7);
               var18 = ProxySocketConnector.field_n;
               var13 = BufferedRandomAccessFile.field_a;
               var14 = ji.field_c;
-              var18.field_b.b(0, var13, 43, var14, 0);
+              var18.field_b.layoutPopup(0, var13, 43, var14, 0);
             }
             var5 = var6;
-            var6 = (im) (var4.last(1504642273));
+            var6 = (SocialListEntry) (var4.last(1504642273));
           }
           if (MouseWheelHandler.field_e.field_Ib.field_P != 0) {
-            he.field_f = new AccountNamePrompt(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.screenY, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.height, dp.field_p, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
-            il.field_e = 2;
+            he.field_f = new AccountNamePrompt(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.screenY, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.height, GameplayScreen.field_p, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
+            QuickChatCategoryCache.field_e = 2;
           }
           if (MouseWheelHandler.field_e.field_Hb.field_P == 0) {
             return;
           }
           he.field_f = new AccountNamePrompt(MouseWheelHandler.field_e.field_Hb.field_tb, MouseWheelHandler.field_e.field_Hb.screenY, MouseWheelHandler.field_e.field_Hb.field_K, MouseWheelHandler.field_e.field_Hb.height, ProxyAuthenticationException.field_f, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
-          il.field_e = 3;
+          QuickChatCategoryCache.field_e = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "vf.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "vf.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void reloadPage(java.applet.Applet param0, int param1) {
         try {
           String var2 = null;
           int var3 = 0;
@@ -264,7 +264,7 @@ final class vf {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

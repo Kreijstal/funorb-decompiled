@@ -15,7 +15,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void b(byte[] param0, int param1, int param2, int param3) {
+    final void readCipheredBytes(byte[] param0, int param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -50,17 +50,17 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void g(int param0, int param1) {
+    final void writeOpcode(int param0, int param1) {
         int fieldTemp$1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (param1 != 15514) {
-            this.f((byte) -21);
+            this.readOpcode((byte) -21);
           }
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
@@ -69,31 +69,31 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "pc.WA(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "pc.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static im a(int param0, boolean param1, byte param2) {
+    final static SocialListEntry a(int param0, boolean param1, byte param2) {
         ScrollContainer stackIn_4_0 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_5_2 = false;
-        im stackIn_18_0 = null;
+        SocialListEntry stackIn_18_0 = null;
         SceneWidget stackIn_45_0 = null;
         String stackIn_46_1 = null;
         SceneWidget stackIn_49_0 = null;
         String stackIn_50_1 = null;
         int stackIn_54_0 = 0;
         Object stackIn_95_0 = null;
-        im stackIn_103_0 = null;
+        SocialListEntry stackIn_103_0 = null;
         Object stackIn_105_0 = null;
         RuntimeException decompiledCaughtException = null;
-        im stackOut_17_0;
+        SocialListEntry stackOut_17_0;
         int var3_int = 0;
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
-        im var7 = null;
+        SocialListEntry var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -110,33 +110,33 @@ final class CipherPacketBuffer extends PacketBuffer {
         String var18Lifetime1;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
-          stackIn_4_0 = ma.field_z.field_Gb;
+          stackIn_4_0 = ScoreMarkerBar.field_z.field_Gb;
           stackIn_4_1 = param1;
-          stackIn_5_2 = (bj.field_d == ma.field_z.field_Gb);
+          stackIn_5_2 = (bj.field_d == ScoreMarkerBar.field_z.field_Gb);
           boolean decompiledFrameRemainder0 = true;
           var3_int = ((ScrollContainer) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, 2, param0 * (3 * fq.field_q + 6), 0, 2 + fq.field_q) ? 1 : 0;
-          var4 = ma.field_z.field_Fb.children;
+          var4 = ScoreMarkerBar.field_z.field_Fb.children;
           var5 = null;
           if (ValidatedTextWidget.field_db != 2) {
             wa.field_f.field_rb = false;
             SceneWidget.field_E.field_cb = GrowableIntList.field_b;
             if (ValidatedTextWidget.field_db != 1) {
-              ma.field_z.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
+              ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
               if (var19 != 0) {
-                ma.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
+                ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
               }
             } else {
-              ma.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
+              ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
             }
-            GrowableIntList.a(ma.field_z.field_Fb, false);
+            GrowableIntList.a(ScoreMarkerBar.field_z.field_Fb, false);
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
             wa.field_f.field_rb = true;
-            SceneWidget.field_E.field_cb = sd.a(ke.field_e, 78, new String[]{LabeledField.field_L});
-            ma.field_z.field_Gb.field_Ib.field_cb = null;
+            SceneWidget.field_E.field_cb = AlphaContainer.a(ke.field_e, 78, new String[]{LabeledField.field_L});
+            ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = null;
             var6 = null;
-            var7 = (im) (var4.c(1504642273));
+            var7 = (SocialListEntry) (var4.c(1504642273));
             while (true) {
               if (var7 != null) {
                 var8 = 0;
@@ -146,16 +146,16 @@ final class CipherPacketBuffer extends PacketBuffer {
                 if (var19 == 0) {
                   if (stackIn_18_0.children == null) {
                     var7.field_Pb = new SceneWidget(0L, SceneWidget.field_T);
-                    var7.a(var7.field_Pb, (byte) 26);
+                    var7.addChild(var7.field_Pb, (byte) 26);
                     var7.field_Eb = new SceneWidget(0L, of.field_i);
-                    var7.a(var7.field_Eb, (byte) 26);
+                    var7.addChild(var7.field_Eb, (byte) 26);
                     var7.field_Ob = new SceneWidget(0L, SceneWidget.field_T);
-                    var7.a(var7.field_Ob, (byte) 26);
+                    var7.addChild(var7.field_Ob, (byte) 26);
                     var7.field_Eb.horizontalAlignment = 2;
                     var7.h(-257);
                     var8 = 1;
                   }
-                  var7.field_K = ma.field_z.field_Fb.field_K;
+                  var7.field_K = ScoreMarkerBar.field_z.field_Fb.field_K;
                   var9 = 0;
                   if (null != var7.field_Nb) {
                     if (var7.field_Nb == LabeledField.field_L) {
@@ -174,7 +174,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     !var7.field_Gb.equals("")) {
                     var7.field_Ob.field_y = var11;
                     var7.field_Ob.field_H = dk.field_e;
-                    var7.field_Ob.a(var9, fq.field_q, 0, 256, 3 + dk.field_e.field_A);
+                    var7.field_Ob.setBounds(var9, fq.field_q, 0, 256, 3 + dk.field_e.field_A);
                     var12 = 1;
                   }
                   var7.field_Eb.field_y = var11;
@@ -193,12 +193,12 @@ final class CipherPacketBuffer extends PacketBuffer {
                   }
                   stackIn_45_0 = var7.field_Pb;
                   if (var14 > 0) {
-                    stackIn_46_1 = BitmapFont.a(var7.field_Pb.font, var7.field_Fb, var14);
+                    stackIn_46_1 = BitmapFont.truncateWithEllipsis(var7.field_Pb.font, var7.field_Fb, var14);
                   } else {
                     stackIn_46_1 = var7.field_Fb;
                   }
                   stackIn_45_0.field_cb = stackIn_46_1;
-                  var7.field_Pb.a(var9, fq.field_q, var13, 256, var14);
+                  var7.field_Pb.setBounds(var9, fq.field_q, var13, 256, var14);
                   stackIn_49_0 = var7.field_Eb;
                   if (null != var7.field_Nb) {
                     stackIn_50_1 = var7.field_Nb;
@@ -206,7 +206,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     stackIn_50_1 = re.field_g;
                   }
                   stackIn_49_0.field_cb = stackIn_50_1;
-                  var7.field_Eb.a(var9, fq.field_q, -80 + var7.field_K, 256, 80);
+                  var7.field_Eb.setBounds(var9, fq.field_q, -80 + var7.field_K, 256, 80);
                   stackIn_54_0 = (var7.field_Pb.field_cb.equals(var7.field_Fb)) ? 0 : 1;
                   var15 = stackIn_54_0;
                   var9 = var9 + fq.field_q;
@@ -214,7 +214,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     var7.pendingHeightDelta = -var7.height + var9;
                   }
                   if (var8 != 0) {
-                    ma.field_z.field_Fb.positionAfter(var7, 2, -1, (SceneWidget) (var6));
+                    ScoreMarkerBar.field_z.field_Fb.positionAfter(var7, 2, -1, (SceneWidget) (var6));
                   }
                   var6 = var7;
                   if (var7.field_Ob != null &&
@@ -227,61 +227,61 @@ final class CipherPacketBuffer extends PacketBuffer {
                     }
                   } else {
                     var16 = var7.field_Fb;
-                    em.a((String) null, 0L, var16, -1, var7, -163, ma.field_z.field_Gb, (int[]) null, -1);
+                    em.openContextMenu((String) null, 0L, var16, -1, var7, -163, ScoreMarkerBar.field_z.field_Gb, (int[]) null, -1);
                     var5 = var7;
                     if (var7.field_Nb != null &&
-                      !ul.a(75, ProxySocketConnector.field_n.field_h) &&
+                      !TimerBar.a(75, ProxySocketConnector.field_n.field_h) &&
                       !ln.field_q) {
                       if (!IsaacRandom.field_g) {
                         var17 = ProxySocketConnector.field_n;
-                        var18 = sd.a(nf.field_e, 46, new String[]{var16});
+                        var18 = AlphaContainer.a(nf.field_e, 46, new String[]{var16});
                         var17.field_b.addAction(var18, (byte) -105, 8);
                       }
                       var17Lifetime1 = ProxySocketConnector.field_n;
-                      var18Lifetime1 = sd.a(ho.field_f, 101, new String[]{var16});
+                      var18Lifetime1 = AlphaContainer.a(TextTableInitializer.field_f, 101, new String[]{var16});
                       var17Lifetime1.field_b.addAction(var18Lifetime1, (byte) -102, 18);
                     }
                   }
-                  var7 = (im) (var4.last(1504642273));
+                  var7 = (SocialListEntry) (var4.last(1504642273));
                   continue;
                 }
               } else {
-                stackIn_95_0 = ma.field_z.field_Ib;
+                stackIn_95_0 = ScoreMarkerBar.field_z.field_Ib;
               }
               if (((SceneWidget) (stackIn_95_0)).field_P != 0) {
-                he.field_f = new AccountNamePrompt(ma.field_z.field_Ib.field_tb, ma.field_z.field_Ib.screenY, ma.field_z.field_Ib.field_K, ma.field_z.field_Ib.height, BackgroundScene.field_j, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
-                il.field_e = 0;
+                he.field_f = new AccountNamePrompt(ScoreMarkerBar.field_z.field_Ib.field_tb, ScoreMarkerBar.field_z.field_Ib.screenY, ScoreMarkerBar.field_z.field_Ib.field_K, ScoreMarkerBar.field_z.field_Ib.height, BackgroundScene.field_j, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
+                QuickChatCategoryCache.field_e = 0;
               }
-              if (ma.field_z.field_Hb.field_P == 0) {
+              if (ScoreMarkerBar.field_z.field_Hb.field_P == 0) {
                 break;
               }
-              he.field_f = new AccountNamePrompt(ma.field_z.field_Hb.field_tb, ma.field_z.field_Hb.screenY, ma.field_z.field_Hb.field_K, ma.field_z.field_Hb.height, hp.field_Fb, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
-              il.field_e = 1;
+              he.field_f = new AccountNamePrompt(ScoreMarkerBar.field_z.field_Hb.field_tb, ScoreMarkerBar.field_z.field_Hb.screenY, ScoreMarkerBar.field_z.field_Hb.field_K, ScoreMarkerBar.field_z.field_Hb.height, hp.field_Fb, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
+              QuickChatCategoryCache.field_e = 1;
               break;
             }
           }
           if (param2 >= 47) {
             stackIn_105_0 = var5;
-            return (im) (stackIn_105_0);
+            return (SocialListEntry) (stackIn_105_0);
           }
-          stackIn_103_0 = (im) null;
+          stackIn_103_0 = (SocialListEntry) null;
           return stackIn_103_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "pc.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "pc.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final void o(int param0) {
+    final void endBitAccess(int param0) {
         try {
           this.position = (param0 + this.field_r) / 8;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pc.BB(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pc.BB(" + param0 + ')');
         }
     }
 
-    final void a(int param0, int[] param1) {
+    final void initCipher(int param0, int[] param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -303,7 +303,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           if (param1 != -47) {
             field_q = -19;
           }
-          param2 = ub.a(param2, param1 ^ -47, "", '_');
+          param2 = ub.replaceCharacter(param2, param1 ^ -47, "", '_');
           var3 = EmailValidator.b(0, param0);
           stackIn_10_0 = (param2.indexOf(param0) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_10_0;
@@ -345,11 +345,11 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final void n(int param0) {
+    final void startBitAccess(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -361,11 +361,11 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "pc.VA(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "pc.VA(" + param0 + ')');
         }
     }
 
-    final int f(byte param0) {
+    final int readOpcode(byte param0) {
         int fieldTemp$1 = 0;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
@@ -381,11 +381,11 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "pc.UA(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "pc.UA(" + param0 + ')');
         }
     }
 
-    final int c(int param0, byte param1) {
+    final int readBits(int param0, byte param1) {
         int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -431,7 +431,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "pc.DB(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "pc.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -450,7 +450,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "pc.SA(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "pc.SA(" + param0 + ')');
         }
     }
 

@@ -10,15 +10,15 @@ final class PasswordValidator extends TextFieldValidator {
     static String field_q;
     private EditableTextWidget field_p;
 
-    final dj validateText(String param0, boolean param1) {
+    final ValidationState validateText(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        dj stackIn_2_0 = null;
-        dj stackIn_5_0 = null;
-        dj stackIn_8_0 = null;
-        dj stackIn_11_0 = null;
-        dj stackIn_13_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_8_0 = null;
+        ValidationState stackIn_11_0 = null;
+        ValidationState stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -27,14 +27,14 @@ final class PasswordValidator extends TextFieldValidator {
           var3 = this.field_n.field_q.toLowerCase();
           var4 = param0.toLowerCase();
           if (!param1) {
-            stackIn_2_0 = (dj) null;
+            stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
           if (var4.length() == 0) {
             stackIn_5_0 = sk.field_a;
             return stackIn_5_0;
           }
-          if (!wg.a(var4, var3, (byte) -4)) {
+          if (!Matrix3.a(var4, var3, (byte) -4)) {
             stackIn_8_0 = sk.field_a;
             return stackIn_8_0;
           }
@@ -54,7 +54,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_7_0 = MusicCrossfadeStream.field_y;
             return stackIn_7_0;
           }
-          if (IntrusiveDequeCursor.a(var5, 64)) {
+          if (IntrusiveDequeCursor.containsNonAlphanumeric(var5, 64)) {
             stackIn_11_0 = ResizableModalPanel.field_R;
             return stackIn_11_0;
           }
@@ -107,7 +107,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_20_0 = cd.field_a;
             return stackIn_20_0;
           }
-          if (DateInputWidget.a(var5, var6, (byte) 78)) {
+          if (DateInputWidget.containsTextOrReverse(var5, var6, (byte) 78)) {
             stackIn_23_0 = tj.field_w;
             return stackIn_23_0;
           }
@@ -130,7 +130,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (param0) {
           return (SceneWidget) null;
         }
-        return ma.field_z.field_Fb;
+        return ScoreMarkerBar.field_z.field_Fb;
     }
 
     private final boolean containsEmailPart(int param0, String param1) {
@@ -185,7 +185,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class PasswordValidator extends TextFieldValidator {
         int var5Lifetime2;
         var6 = Pixelate.field_H ? 1 : 0;
         var2 = 0;
-        var3 = ga.field_f;
+        var3 = GameModeCard.field_f;
         if (var3 < 5) {
           var2 = var3 * var3 * 8192 / 1100;
         } else {
@@ -371,7 +371,7 @@ final class PasswordValidator extends TextFieldValidator {
           this.field_p = param2;
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

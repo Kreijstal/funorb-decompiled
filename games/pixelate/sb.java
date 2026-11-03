@@ -26,10 +26,10 @@ final class sb {
             field_a = 28;
           }
           if (!param2) {
-            stackIn_6_0 = bg.field_j.textWidth(param1);
+            stackIn_6_0 = StatusBar.field_j.textWidth(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ma.field_y.textWidth(param1);
+          stackIn_4_0 = ScoreMarkerBar.field_y.textWidth(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -41,7 +41,7 @@ final class sb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -49,7 +49,7 @@ final class sb {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

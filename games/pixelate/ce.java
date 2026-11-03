@@ -14,16 +14,16 @@ final class ce {
         int var2;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
-        sc.field_d = null;
+        ConditionalTextValue.field_d = null;
         if (param0 != -124) {
           return 3;
         }
-        rb.field_q = 0;
-        se.field_o = null;
+        AchievementsScreen.field_q = 0;
+        KiteBackground.field_o = null;
         var2 = ArchiveIndex.field_s;
-        ArchiveIndex.field_s = pd.field_Eb;
+        ArchiveIndex.field_s = ScrollPaneWithFooter.field_Eb;
         Match.field_h.field_h = Match.field_h.field_h + 1;
-        pd.field_Eb = var2;
+        ScrollPaneWithFooter.field_Eb = var2;
         if (param1 == 51) {
           Match.field_h.field_m = 2;
           if (2 <= Match.field_h.field_h &&
@@ -77,10 +77,10 @@ final class ce {
         return 1;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         if (!param0) {
-          ce.a(true);
+          ce.releaseStatics(true);
         }
     }
 

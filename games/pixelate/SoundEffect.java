@@ -46,8 +46,8 @@ final class SoundEffect {
         return var3;
     }
 
-    final static SoundEffect a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, param2, true);
+    final static SoundEffect load(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param1, param2, true);
         if (var3 == null) {
           return null;
         }
@@ -64,14 +64,14 @@ final class SoundEffect {
         int var3;
         this.instruments = new SynthInstrument[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.f(255);
+          var3 = param0.readUnsignedByte(255);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.instruments[var2] = new SynthInstrument();
             this.instruments[var2].decode(param0);
           }
         }
-        this.field_c = param0.a((byte) -116);
-        this.field_a = param0.a((byte) -112);
+        this.field_c = param0.readUnsignedShort((byte) -116);
+        this.field_a = param0.readUnsignedShort((byte) -112);
     }
 }

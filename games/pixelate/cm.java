@@ -45,7 +45,7 @@ final class cm extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -54,19 +54,19 @@ final class cm extends IntrusiveNode {
         int var3 = qh.field_c * qh.field_c;
         int var4 = -(param0 * param0) + var3;
         if (param1 == 4740) {
-          ff.field_h.a(90, -124 + (SoftwareRasterizer.field_d - 90), -(var4 * 199 / var3) + var2, 256, 199);
-          ai.field_A.a(0, SoftwareRasterizer.field_d - 124, var4 * 438 / var3 + (var2 + 202), 256, 438);
+          ff.field_h.setBounds(90, -124 + (SoftwareRasterizer.field_d - 90), -(var4 * 199 / var3) + var2, 256, 199);
+          Bzip2State.field_A.setBounds(0, SoftwareRasterizer.field_d - 124, var4 * 438 / var3 + (var2 + 202), 256, 438);
           return;
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int floorDivide(int param0, byte param1, int param2) {
         int var4 = -77 % ((param1 - 28) / 58);
         int var3 = param2 >>> 31;
         return (param2 + var3) / param0 - var3;
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeCp1252Byte(byte param0, int param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -106,11 +106,11 @@ final class cm extends IntrusiveNode {
         return (char)var2Lifetime1;
     }
 
-    static int a(int param0, int param1) {
+    static int bitAnd(int param0, int param1) {
         return param0 & param1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 128) {
           field_l = null;
           field_o = null;
@@ -126,16 +126,16 @@ final class cm extends IntrusiveNode {
         int var8 = 0;
         try {
           int var7_int = -86 % ((-33 - param0) / 49);
-          aa.field_f.g(param5, 15514);
+          aa.field_f.writeOpcode(param5, 15514);
           aa.field_f.position = aa.field_f.position + 1;
           var8 = aa.field_f.position;
           aa.field_f.writeLong(false, param2);
-          aa.field_f.b((byte) -41, param3);
+          aa.field_f.writeString((byte) -41, param3);
           aa.field_f.writeByte(160, param4);
           aa.field_f.writeByte(160, param1 ? 1 : 0);
-          aa.field_f.f(aa.field_f.position - var8, -1);
+          aa.field_f.backpatchByteLength(aa.field_f.position - var8, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "cm.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "cm.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -151,10 +151,10 @@ final class cm extends IntrusiveNode {
         synchronized (var1) {
           oi.field_c = oi.field_c + 1;
           ef.field_b = jm.field_o;
-          ProxyAuthenticationException.field_d = u.field_b;
-          bg.field_k = ra.field_d;
-          im.field_Jb = u.field_j;
-          u.field_j = false;
+          ProxyAuthenticationException.field_d = QuickChatPhraseCache.field_b;
+          StatusBar.field_k = ra.field_d;
+          SocialListEntry.field_Jb = QuickChatPhraseCache.field_j;
+          QuickChatPhraseCache.field_j = false;
           IntrusiveDequeCursor.field_c = tl.field_a;
           BufferedRandomAccessFile.field_a = EditableTextWidget.field_X;
           ji.field_c = IntrusiveNode.field_j;
@@ -169,7 +169,7 @@ final class cm extends IntrusiveNode {
           this.field_k = param1;
           this.field_n.setVolumeQ6(128 + LinkButtonPainter.field_h * this.field_p >> 8);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "cm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "cm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

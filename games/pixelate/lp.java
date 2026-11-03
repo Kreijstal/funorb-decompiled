@@ -38,7 +38,7 @@ final class lp {
             }
             var1_int = 1;
           }
-          VerticalScrollbar.field_Gb.a(NameAvailabilityValidator.a(false, BufferedRandomAccessFile.field_a, ji.field_c), NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, bg.field_k), -1);
+          VerticalScrollbar.field_Gb.updatePointer(NameAvailabilityValidator.a(false, BufferedRandomAccessFile.field_a, ji.field_c), NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, StatusBar.field_k), -1);
           if (param0 != 2) {
             field_d = 101;
           }
@@ -47,8 +47,8 @@ final class lp {
           }
           var2 = 0;
           if (var1_int != 0 &&
-            VerticalScrollbar.field_Gb.field_j >= 0) {
-            var2 = di.field_b[VerticalScrollbar.field_Gb.field_j];
+            VerticalScrollbar.field_Gb.selectedIndex >= 0) {
+            var2 = di.field_b[VerticalScrollbar.field_Gb.selectedIndex];
             if (2 == var2) {
               un.a(true);
             }
@@ -58,7 +58,7 @@ final class lp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "lp.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "lp.A(" + param0 + ')');
         }
     }
 
@@ -116,16 +116,16 @@ final class lp {
     }
 
     lp() {
-        this.field_g = ok.a(ea.field_b, -118, 640) << 16;
-        this.field_b = ok.a(ea.field_b, -100, 480) << 16;
-        this.field_e = ok.a(ea.field_b, -99, 90) + 10;
-        this.field_h = -65536 + ok.a(ea.field_b, -111, 131072);
-        this.field_a = -65536 + ok.a(ea.field_b, -123, 131072);
+        this.field_g = JavaRandomHelpers.a(ea.field_b, -118, 640) << 16;
+        this.field_b = JavaRandomHelpers.a(ea.field_b, -100, 480) << 16;
+        this.field_e = JavaRandomHelpers.a(ea.field_b, -99, 90) + 10;
+        this.field_h = -65536 + JavaRandomHelpers.a(ea.field_b, -111, 131072);
+        this.field_a = -65536 + JavaRandomHelpers.a(ea.field_b, -123, 131072);
         this.field_f = this.field_e << 16;
     }
 
     static {
-        field_d = of.a(0.9, 65536);
+        field_d = of.toFixedPoint(0.9, 65536);
         field_c = new String[][]{new String[]{"Easy", "Medium", "Hard"}, new String[]{"", "", ""}};
     }
 }

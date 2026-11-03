@@ -37,7 +37,7 @@ final class SynthInstrument {
         this.pitchEnvelope.decode(param0);
         this.volumeEnvelope = new SoundEnvelope();
         this.volumeEnvelope.decode(param0);
-        int var2 = param0.f(255);
+        int var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.pitchModulation = new SoundEnvelope();
@@ -45,7 +45,7 @@ final class SynthInstrument {
           this.pitchModulationAmplitude = new SoundEnvelope();
           this.pitchModulationAmplitude.decode(param0);
         }
-        var2 = param0.f(255);
+        var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.volumeModulation = new SoundEnvelope();
@@ -53,7 +53,7 @@ final class SynthInstrument {
           this.volumeModulationAmplitude = new SoundEnvelope();
           this.volumeModulationAmplitude.decode(param0);
         }
-        var2 = param0.f(255);
+        var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_q = new SoundEnvelope();
@@ -62,18 +62,18 @@ final class SynthInstrument {
           this.field_b.decode(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.g(21231);
+          var4 = param0.readUnsignedSmart(21231);
           if (var4 == 0) {
             break;
           }
           this.oscillatorVolumePercent[var3] = var4;
-          this.oscillatorPitch[var3] = param0.l(-20729);
-          this.field_y[var3] = param0.g(21231);
+          this.oscillatorPitch[var3] = param0.readSignedSmart(-20729);
+          this.field_y[var3] = param0.readUnsignedSmart(21231);
         }
-        this.echoDelayMillis = param0.g(21231);
-        this.echoDecayPercent = param0.g(21231);
-        this.durationMillis = param0.a((byte) -124);
-        this.field_e = param0.a((byte) 7);
+        this.echoDelayMillis = param0.readUnsignedSmart(21231);
+        this.echoDecayPercent = param0.readUnsignedSmart(21231);
+        this.durationMillis = param0.readUnsignedShort((byte) -124);
+        this.field_e = param0.readUnsignedShort((byte) 7);
         this.filter = new AudioFilter();
         this.filterEnvelope = new SoundEnvelope();
         this.filter.decode(param0, this.filterEnvelope);
@@ -123,7 +123,7 @@ final class SynthInstrument {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        qb.a(field_c, 0, param0);
+        ArraySupport.a(field_c, 0, param0);
         if (param1 < 10) {
           return field_c;
         }

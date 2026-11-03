@@ -17,7 +17,7 @@ final class vd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = fl.field_b.a((byte) 24, param0, "");
+            stackIn_4_0 = fl.field_b.getNamedFile((byte) 24, param0, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -32,11 +32,11 @@ final class vd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, aa param1) {
+    final static void appendChatHistory(boolean param0, aa param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -57,7 +57,7 @@ final class vd {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             MarkerSlider.field_O[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < sd.field_L; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < AlphaContainer.field_L; var2_intLifetime1++) {
             if (param1.field_j == MenuScreen.field_e[var2_intLifetime1].field_j) {
               dupTemp$3 = MenuScreen.field_e[var2_intLifetime1].a((byte) 123);
               MarkerSlider.field_O[dupTemp$3] = MarkerSlider.field_O[dupTemp$3] + 1;
@@ -66,7 +66,7 @@ final class vd {
           dupTemp$0 = param1.a((byte) -87);
           MarkerSlider.field_O[dupTemp$0] = MarkerSlider.field_O[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; var3 < sd.field_L; var3++) {
+          for (var3 = 0; var3 < AlphaContainer.field_L; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (MenuScreen.field_e[var3].field_j == param1.field_j) {
               var4 = MenuScreen.field_e[var3].a((byte) -27);
@@ -81,12 +81,12 @@ final class vd {
               MenuScreen.field_e[incrementValue$2] = MenuScreen.field_e[var3];
             }
           }
-          sd.field_L = var2_intLifetime2;
+          AlphaContainer.field_L = var2_intLifetime2;
           if (param0) {
             return;
           }
-          fieldTemp$1 = sd.field_L;
-          sd.field_L = sd.field_L + 1;
+          fieldTemp$1 = AlphaContainer.field_L;
+          AlphaContainer.field_L = AlphaContainer.field_L + 1;
           MenuScreen.field_e[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +99,7 @@ final class vd {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
         }
     }
 

@@ -24,7 +24,7 @@ final class pj {
           }
           if (param1 ||
             io.field_c == null) {
-            bm.field_o = false;
+            EmergentBehaviourBackground.field_o = false;
           }
           if (param1) {
             if (0 < oo.field_b) {
@@ -77,7 +77,7 @@ final class pj {
             vn.field_g = vn.field_g + 1;
             return;
           }
-          bm.field_o = false;
+          EmergentBehaviourBackground.field_o = false;
           if (vn.field_g > 0) {
             vn.field_g = vn.field_g - 1;
             return;
@@ -97,7 +97,7 @@ final class pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "pj.C(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "pj.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -122,10 +122,10 @@ final class pj {
           if (var5_int > this.field_e.field_A) {
             this.field_e = new Sprite(10 + var5_int, this.field_e.field_B);
           }
-          this.field_e.c();
-          SoftwareRasterizer.d();
+          this.field_e.makeRasterTarget();
+          SoftwareRasterizer.clear();
           rk.field_e.drawCentered(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
-          ClientException.field_f.a(19692);
+          ClientException.field_f.bindRaster(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,7 +137,7 @@ final class pj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "pj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var4), "pj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -181,22 +181,22 @@ final class pj {
             return;
           }
           if (this.field_h < 8) {
-            this.field_e.d(-(this.field_j >> 1) + this.field_c, -(this.field_g >> 1) + this.field_d, this.field_j, this.field_g);
+            this.field_e.drawScaled(-(this.field_j >> 1) + this.field_c, -(this.field_g >> 1) + this.field_d, this.field_j, this.field_g);
             return;
           }
           if (66 > this.field_h) {
-            this.field_e.b(this.field_c - (this.field_e.field_A >> 1), this.field_d - (this.field_e.field_B >> 1));
+            this.field_e.drawTransparent(this.field_c - (this.field_e.field_A >> 1), this.field_d - (this.field_e.field_B >> 1));
             return;
           }
           if (0 >= this.field_b) {
             return;
           }
-          this.field_e.c(this.field_c - (this.field_j >> 1), -(this.field_g >> 1) + this.field_d, this.field_j, this.field_g, this.field_b);
+          this.field_e.drawScaledAlpha(this.field_c - (this.field_j >> 1), -(this.field_g >> 1) + this.field_d, this.field_j, this.field_g, this.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "pj.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "pj.A(" + param0 + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "pj.D(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "pj.D(" + param0 + ')');
         }
     }
 
@@ -252,7 +252,7 @@ final class pj {
           field_a = null;
           field_i = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pj.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pj.E(" + param0 + ')');
         }
     }
 

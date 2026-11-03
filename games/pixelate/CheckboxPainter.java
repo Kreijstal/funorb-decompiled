@@ -23,7 +23,7 @@ final class CheckboxPainter implements WidgetPainter {
     private int checkboxHeight;
     private int field_f;
 
-    final static void a(int param0, String param1, Throwable param2) {
+    final static void reportClientError(int param0, String param1, Throwable param2) {
         try {
           PlatformTaskDispatcher stackIn_15_0;
           int stackIn_15_1;
@@ -57,13 +57,13 @@ final class CheckboxPainter implements WidgetPainter {
               var3 = var3 + param1;
             }
             FallingPieceView.a(var3, 0);
-            var7 = qk.a(var3, ":", "%3a", -123);
-            var8 = qk.a(var7, "@", "%40", -128);
+            var7 = qk.replaceAll(var3, ":", "%3a", -123);
+            var8 = qk.replaceAll(var7, "@", "%40", -128);
             if (param0 != 1) {
               CheckboxPainter.a(-53);
             }
-            var9 = qk.a(var8, "&", "%26", -126);
-            var10 = qk.a(var9, "#", "%23", -127);
+            var9 = qk.replaceAll(var8, "&", "%26", -126);
+            var10 = qk.replaceAll(var9, "#", "%23", -127);
             if (null == TextButton.field_L) {
               return;
             }
@@ -82,7 +82,7 @@ final class CheckboxPainter implements WidgetPainter {
               stackIn_16_3 = null;
               stackIn_16_6 = ui.field_c;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, ((StringBuilder) (Object) stackIn_15_5).append(stackIn_16_6).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_l).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_15_0).requestUrlStream((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, ((StringBuilder) (Object) stackIn_15_5).append(stackIn_16_6).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_l).append("&e=").append(var10).toString()));
             while (0 == var4.field_b) {
               SecondaryNodeHashTable.a(1L, (byte) 23);
             }
@@ -134,14 +134,14 @@ final class CheckboxPainter implements WidgetPainter {
           if (param4) {
             var7 = 16777215;
           }
-          SoftwareRasterizer.d(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, this.field_a);
+          SoftwareRasterizer.fillRectangle(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, this.field_a);
           var8 = this.field_f + (param3 + param0.field_z);
           var9 = param2 + param0.field_p + this.field_l;
-          SoftwareRasterizer.c(var8, var9, this.checkboxWidth, this.checkboxHeight, 5592405);
-          SoftwareRasterizer.d(var8, var9, this.checkboxWidth, this.checkboxHeight, var7);
+          SoftwareRasterizer.drawDropShadow(var8, var9, this.checkboxWidth, this.checkboxHeight, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.checkboxWidth, this.checkboxHeight, var7);
           if (var11.field_M) {
-            SoftwareRasterizer.b(var8, var9, var8 + this.checkboxWidth, var9 + this.checkboxHeight, 1);
-            SoftwareRasterizer.b(var8 + this.checkboxWidth, var9, var8, var9 + this.checkboxHeight, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.checkboxWidth, var9 + this.checkboxHeight, 1);
+            SoftwareRasterizer.drawLine(var8 + this.checkboxWidth, var9, var8, var9 + this.checkboxHeight, 1);
           }
           if (this.field_m == null) {
             return;
@@ -159,11 +159,11 @@ final class CheckboxPainter implements WidgetPainter {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= -103) {
           field_c = null;
           field_n = null;
@@ -201,7 +201,7 @@ final class CheckboxPainter implements WidgetPainter {
           this.checkboxHeight = param7;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

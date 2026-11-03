@@ -23,20 +23,20 @@ final class QuickChatCategory extends DualLinkNode {
         }
         if (this.phraseIds != null) {
           for (var2 = 0; var2 < this.phraseIds.length; var2++) {
-            this.phraseIds[var2] = bq.a(this.phraseIds[var2], 32768);
+            this.phraseIds[var2] = bq.bitOr(this.phraseIds[var2], 32768);
           }
         }
         if (null != this.subcategoryIds) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (var4 < this.subcategoryIds.length) {
-            this.subcategoryIds[var4] = bq.a(this.subcategoryIds[var4], 32768);
+            this.subcategoryIds[var4] = bq.bitOr(this.subcategoryIds[var4], 32768);
             var4++;
           }
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_A = null;
         int var1 = -33 / ((10 - param0) / 52);
         field_w = null;
@@ -56,14 +56,14 @@ final class QuickChatCategory extends DualLinkNode {
         try {
           if (param0) {
             var5 = (PacketBuffer) null;
-            this.a(113, 78, (PacketBuffer) null);
+            this.decodeTag(113, 78, (PacketBuffer) null);
           }
           while (true) {
-            var3_int = param1.f(255);
+            var3_int = param1.readUnsignedByte(255);
             if (0 == var3_int) {
               return;
             }
-            this.a(var3_int, 3, param1);
+            this.decodeTag(var3_int, 3, param1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,7 +75,7 @@ final class QuickChatCategory extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class QuickChatCategory extends DualLinkNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class QuickChatCategory extends DualLinkNode {
         this.field_y = false;
     }
 
-    private final void a(int param0, int param1, PacketBuffer param2) {
+    private final void decodeTag(int param0, int param1, PacketBuffer param2) {
         char[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         char stackIn_10_2 = 0;
@@ -135,35 +135,35 @@ final class QuickChatCategory extends DualLinkNode {
         try {
           if (param0 != 1) {
             if (2 == param0) {
-              var4_int = param2.f(param1 + 252);
+              var4_int = param2.readUnsignedByte(param1 + 252);
               this.field_x = new char[var4_int];
               this.subcategoryIds = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.subcategoryIds[var5] = param2.a((byte) -128);
-                var6 = param2.a(0);
+                this.subcategoryIds[var5] = param2.readUnsignedShort((byte) -128);
+                var6 = param2.readByte(0);
                 stackIn_18_0 = this.field_x;
                 stackIn_18_1 = var5;
                 if (var6 == 0) {
                   stackIn_19_2 = (char)0;
                 } else {
-                  stackIn_19_2 = cm.a((byte) var6, 63);
+                  stackIn_19_2 = cm.decodeCp1252Byte((byte) var6, 63);
                 }
                 stackIn_18_0[stackIn_18_1] = stackIn_19_2;
               }
             } else {
               if (3 == param0) {
-                var4_int = param2.f(255);
+                var4_int = param2.readUnsignedByte(255);
                 this.field_t = new char[var4_int];
                 this.phraseIds = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  this.phraseIds[var5] = param2.a((byte) -113);
-                  var6 = param2.a(0);
+                  this.phraseIds[var5] = param2.readUnsignedShort((byte) -113);
+                  var6 = param2.readByte(0);
                   stackIn_9_0 = this.field_t;
                   stackIn_9_1 = var5;
                   if (0 == var6) {
                     stackIn_10_2 = (char)0;
                   } else {
-                    stackIn_10_2 = cm.a((byte) var6, 63);
+                    stackIn_10_2 = cm.decodeCp1252Byte((byte) var6, 63);
                   }
                   stackIn_9_0[stackIn_9_1] = stackIn_10_2;
                 }
@@ -174,7 +174,7 @@ final class QuickChatCategory extends DualLinkNode {
               }
             }
           } else {
-            this.field_C = param2.h(param1 ^ 6);
+            this.field_C = param2.readString(param1 ^ 6);
           }
           if (param1 != 3) {
             var8 = (PacketBuffer) null;
@@ -191,7 +191,7 @@ final class QuickChatCategory extends DualLinkNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

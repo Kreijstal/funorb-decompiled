@@ -10,7 +10,7 @@ final class ab {
     static String field_d;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_e = null;
         field_a = null;
         field_d = null;
@@ -19,7 +19,7 @@ final class ab {
           field_c = null;
           return;
         }
-        ab.a(true);
+        ab.clearSharedReferences(true);
         field_f = null;
         field_c = null;
     }

@@ -16,7 +16,7 @@ final class aj extends IntrusiveNode {
     PlatformTask[] field_l;
     static int[] field_o;
 
-    final static Object a(boolean param0, byte[] param1, int param2) {
+    final static Object createByteStorage(boolean param0, byte[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         DirectByteStorage var4 = null;
@@ -41,7 +41,7 @@ final class aj extends IntrusiveNode {
             return stackIn_5_0;
           }
           if (param0) {
-            stackIn_10_0 = re.a(true, param1);
+            stackIn_10_0 = re.copyBytes(true, param1);
             return stackIn_10_0;
           }
           stackIn_8_0 = (byte[]) (param1);
@@ -56,11 +56,11 @@ final class aj extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         if (param0 != -38) {
           return;
@@ -70,22 +70,22 @@ final class aj extends IntrusiveNode {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, int param3) {
         try {
-          nk.a(ProxySocketConnector.field_k, EditableTextWidget.field_Y, ug.field_s, sc.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, qk.field_d, param2, TextFieldValidator.field_h, l.field_q);
-          Checkbox.field_V = SocketConnector.a("chatfilter", "lobby", (byte) 47, param1);
+          nk.a(ProxySocketConnector.field_k, EditableTextWidget.field_Y, ug.field_s, ConditionalTextValue.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, qk.field_d, param2, TextFieldValidator.field_h, l.field_q);
+          Checkbox.field_V = SocketConnector.loadRgbSpritesByName("chatfilter", "lobby", (byte) 47, param1);
           LoginCredentials.field_a[1] = NameSuggestionsPanel.field_J;
           int var4_int = -115 % ((param3 - 44) / 59);
           LoginCredentials.field_a[0] = EmailConfirmationValidator.field_m;
           LoginCredentials.field_a[2] = GrowableIntList.field_e;
           ck.a(65793, ig.field_d, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "aj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "aj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static boolean b(byte param0) {
         if (param0 > -42) {
           byte[] var2 = (byte[]) null;
-          aj.a(false, (byte[]) null, -36);
+          aj.createByteStorage(false, (byte[]) null, -36);
           if (!ik.field_a) {
             return ArrayWidgetContainer.a((byte) 78) ? true : false;
           }

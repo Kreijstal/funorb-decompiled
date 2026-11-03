@@ -17,13 +17,13 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_f = null;
           var1 = null;
         } else {
-          this.field_f = ((DualLinkNode) (var1)).field_p;
+          this.field_f = ((DualLinkNode) (var1)).secondaryNext;
         }
         this.field_e = (DualLinkNode) (var1);
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -40,7 +40,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           NodeHashTable.field_c = param3;
           AudioService.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (this.field_e == null) {
           throw new IllegalStateException();
         }
-        this.field_e.e(17);
+        this.field_e.unlinkSecondary(17);
         this.field_e = null;
     }
 
@@ -76,39 +76,39 @@ final class SecondaryNodeDequeIterator implements Iterator {
           }
           var6 = new Sprite[]{param1[0], param1[1]};
           var7 = var6;
-          var4 = wc.field_m[param0];
+          var4 = BlastFromThePastBackground.field_m[param0];
           if (param0 == 0) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new ql(var4, var6));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new GreenGrowTheRushesBackground(var4, var6));
             return;
           }
           if (1 == param0) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new qi(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new TwistedLogicBackground(var4, var7));
             return;
           }
           if (param0 == 2) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new ci(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new NightToRememberBackground(var4, var7));
             return;
           }
           if (param0 == 3) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new lk(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new AcidSunsetBackground(var4, var7));
             return;
           }
           if (param0 == 4) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new se(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new KiteBackground(var4, var7));
             return;
           }
           if (param0 == 5) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new da(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new BouncedownBackground(var4, var7));
             return;
           }
           if (param0 == 6) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new bm(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new EmergentBehaviourBackground(var4, var7));
             return;
           }
           if (param0 != 7) {
             return;
           }
-          Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new wc(var4, var7));
+          Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new BlastFromThePastBackground(var4, var7));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -128,10 +128,10 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.field_e = null;
         try {
           this.field_d = param0;
-          this.field_f = this.field_d.field_a.field_p;
+          this.field_f = this.field_d.field_a.secondaryNext;
           this.field_e = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

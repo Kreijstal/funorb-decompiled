@@ -14,9 +14,9 @@ final class wp {
         return null == ib.field_f ? ro.field_d : true;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 74) {
-          wp.b(60);
+          wp.releaseStatics(60);
           field_b = null;
           field_a = null;
           return;

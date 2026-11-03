@@ -36,26 +36,26 @@ final class dq {
           }
           var5 = aa.field_f;
           CipherPacketBuffer var3 = var5;
-          var5.g(param0, 15514);
+          var5.writeOpcode(param0, 15514);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(160, 1);
           if (param2.field_k != null) {
             var5.writeByte(160, param2.field_k.length);
-            var5.a(param2.field_k.length, 0, param1 + 15496, param2.field_k);
+            var5.writeBytes(param2.field_k.length, 0, param1 + 15496, param2.field_k);
           } else {
             var5.writeByte(160, 0);
           }
-          var5.b(var4, (byte) 48);
+          var5.appendCrc32(var4, (byte) 48);
           var5.position = var5.position - 4;
           param2.field_m = var5.readInt(param1 + 18989);
-          var5.f(var5.position - var4, param1 + 18988);
+          var5.backpatchByteLength(var5.position - var4, param1 + 18988);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dq.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dq.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = (String[][]) null;
         field_c = null;
         field_a = null;
@@ -63,7 +63,7 @@ final class dq {
         int var1 = -55 % ((param0 + 67) / 53);
     }
 
-    final static IndexedSprite a(byte param0, String param1, String param2, ResourceArchive param3) {
+    final static IndexedSprite loadIndexedSprite(byte param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -108,7 +108,7 @@ final class dq {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

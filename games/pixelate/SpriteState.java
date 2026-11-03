@@ -9,7 +9,7 @@ abstract class SpriteState extends DualLinkNode {
     static String field_z;
     static String field_w;
     static String field_v;
-    static kf field_u;
+    static TimerBarDemo field_u;
     int field_D;
     int field_y;
     int field_F;
@@ -18,7 +18,7 @@ abstract class SpriteState extends DualLinkNode {
     int field_E;
     int field_A;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_z = null;
         field_u = null;
         field_H = null;
@@ -48,7 +48,7 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 500) {
-            SpriteState.a((byte) -8);
+            SpriteState.releaseStatics((byte) -8);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null && (param3 != 2 ||
@@ -76,7 +76,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

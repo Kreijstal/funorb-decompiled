@@ -6,7 +6,7 @@ final class dn implements hj {
     static SceneWidget field_c;
     static String[][] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = (String[][]) null;
         field_c = null;
@@ -14,10 +14,10 @@ final class dn implements hj {
     }
 
     final static int a(String param0, byte param1, int param2, String param3, int param4, boolean param5, String param6) {
-        sc var7 = null;
+        ConditionalTextValue var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        sc var9 = null;
+        ConditionalTextValue var9 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -29,8 +29,8 @@ final class dn implements hj {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = 111 / ((75 - param1) / 39);
-          var7 = new sc(param6);
-          var9 = new sc(param0);
+          var7 = new ConditionalTextValue(param6);
+          var9 = new ConditionalTextValue(param0);
           stackIn_1_0 = cn.a(param3, param2, -124, param5, var9, param4, var7);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -55,7 +55,7 @@ final class dn implements hj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

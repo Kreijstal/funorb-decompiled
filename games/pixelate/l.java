@@ -16,7 +16,7 @@ final class l extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_r = null;
         if (param0 == 2219) {
@@ -27,7 +27,7 @@ final class l extends MenuScreen {
           field_q = null;
           return;
         }
-        l.e(8);
+        l.releaseStatics(8);
         field_u = null;
         field_p = null;
         field_o = null;
@@ -38,13 +38,13 @@ final class l extends MenuScreen {
     final static void b(int param0, boolean param1) {
         if (param0 != 19854) {
           PlatformTaskDispatcher var3 = (PlatformTaskDispatcher) null;
-          l.a(false, -75, -15, true, 99, -28L, (String) null, -112, -64, true, 118, -87, 71, (PlatformTaskDispatcher) null);
+          l.initialisePacketBuffers(false, -75, -15, true, 99, -28L, (String) null, -112, -64, true, 118, -87, 71, (PlatformTaskDispatcher) null);
           if (MarkerSlider.a((byte) 127)) {
             param1 = false;
           }
           Js5ArchiveManager.a((byte) 29, param1);
           if (dk.field_b) {
-            SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
+            SoftwareRasterizer.darkenRectangle(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
             nd.field_b.field_g.a(param1, 0);
             CachedTextLayout.a(param1, (byte) 34);
             return;
@@ -60,7 +60,7 @@ final class l extends MenuScreen {
           CachedTextLayout.a(param1, (byte) 34);
           return;
         }
-        SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
+        SoftwareRasterizer.darkenRectangle(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
         nd.field_b.field_g.a(param1, 0);
         CachedTextLayout.a(param1, (byte) 34);
     }
@@ -80,14 +80,14 @@ final class l extends MenuScreen {
         this.a(param1, true);
     }
 
-    final void c(byte param0) {
-        la.a(TickClock.field_a, TickClock.field_a, false, -25528);
+    final void onCancel(byte param0) {
+        la.changeScreen(TickClock.field_a, TickClock.field_a, false, -25528);
         if (param0 > -13) {
-          l.e(-78);
+          l.releaseStatics(-78);
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, long param5, String param6, int param7, int param8, boolean param9, int param10, int param11, int param12, PlatformTaskDispatcher param13) {
+    final static void initialisePacketBuffers(boolean param0, int param1, int param2, boolean param3, int param4, long param5, String param6, int param7, int param8, boolean param9, int param10, int param11, int param12, PlatformTaskDispatcher param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -103,7 +103,7 @@ final class l extends MenuScreen {
             aa.field_f = new CipherPacketBuffer(param2);
             bj.field_a = param1;
             hf.field_n = param7;
-            op.field_p = param13;
+            OptionsScreen.field_p = param13;
             vm.field_d = param9;
             hf.field_t = param5;
             LobbyPlayer.field_Lb = param3;
@@ -114,13 +114,13 @@ final class l extends MenuScreen {
             gd.field_g = param10;
             if (param0) {
               var16 = (PlatformTaskDispatcher) null;
-              l.a(false, 22, 99, false, -71, -71L, (String) null, 37, -83, false, -70, -34, 80, (PlatformTaskDispatcher) null);
+              l.initialisePacketBuffers(false, 22, 99, false, -71, -71L, (String) null, 37, -83, false, -70, -34, 80, (PlatformTaskDispatcher) null);
             }
-            if (null == op.field_p.field_e) {
+            if (null == OptionsScreen.field_p.field_e) {
               return;
             }
             try {
-              MusicCrossfadeStream.field_p = new BufferedRandomAccessFile(op.field_p.field_e, 64, 0);
+              MusicCrossfadeStream.field_p = new BufferedRandomAccessFile(OptionsScreen.field_p.field_e, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,7 +143,7 @@ final class l extends MenuScreen {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -178,13 +178,13 @@ final class l extends MenuScreen {
         }
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         BinaryBitmapFont var2 = null;
         int var3 = 0;
         BinaryBitmapFont var2Lifetime1;
         int var3Lifetime1;
         this.d((byte) -65);
-        this.b((byte) -71);
+        this.drawRows((byte) -71);
         if (param0 == 11) {
           var2 = qj.field_e;
           var3 = 1 + (var2.maxAscent + var2.maxDescent);

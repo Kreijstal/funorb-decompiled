@@ -50,10 +50,10 @@ final class ki {
             field_a = (String) null;
           }
           var10 = MusicCrossfadeStream.field_o;
-          var2 = var10.f(255);
+          var2 = var10.readUnsignedByte(255);
           if (var2 != 0) {
             if (1 != var2) {
-              CheckboxPainter.a(1, "A1: " + jm.b(-26), (Throwable) null);
+              CheckboxPainter.reportClientError(1, "A1: " + jm.b(-26), (Throwable) null);
               na.a(true);
               return;
             }
@@ -67,7 +67,7 @@ final class ki {
               break;
             }
             if (var4_ref_og != null) {
-              var4_ref_og.c(2779);
+              var4_ref_og.unlink(2779);
               return;
             }
             na.a(true);
@@ -78,29 +78,29 @@ final class ki {
             na.a(true);
             return;
           }
-          var4 = var10.f(255);
+          var4 = var10.readUnsignedByte(255);
           if (var4 != 0) {
             var12 = new byte[var4];
             var11 = var12;
             var8 = var11;
             var5 = var8;
-            var10.a(var12, 0, -89, var4);
+            var10.readBytes(var12, 0, -89, var4);
           } else {
             var5 = null;
           }
           var10.position = var10.position + 4;
-          if (!var10.d((byte) 124)) {
+          if (!var10.verifyCrc32((byte) 124)) {
             na.a(true);
             return;
           }
           var9.field_p = true;
           var9.field_n = (byte[]) (var5);
-          var9.c(2779);
+          var9.unlink(2779);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ki.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ki.E(" + param0 + ')');
         }
     }
 
@@ -150,27 +150,27 @@ final class ki {
         int var2Lifetime1;
         if (param0 == 3887) {
           var2 = (int)(this.field_l * 32768.0 / 3.141592653589793);
-          ContentTransitionDialog.field_hb.b(672, 160, this.field_g << 4, this.field_h << 4, var2, this.field_n);
+          ContentTransitionDialog.field_hb.rotateNearest(672, 160, this.field_g << 4, this.field_h << 4, var2, this.field_n);
           return;
         }
         this.b(19);
         var2Lifetime1 = (int)(this.field_l * 32768.0 / 3.141592653589793);
-        ContentTransitionDialog.field_hb.b(672, 160, this.field_g << 4, this.field_h << 4, var2Lifetime1, this.field_n);
+        ContentTransitionDialog.field_hb.rotateNearest(672, 160, this.field_g << 4, this.field_h << 4, var2Lifetime1, this.field_n);
     }
 
     final void a(boolean param0) {
-        SoftwareRasterizer.b(this.field_i, this.field_p, this.field_g, this.field_h, 6710784);
+        SoftwareRasterizer.drawLine(this.field_i, this.field_p, this.field_g, this.field_h, 6710784);
         if (!param0) {
-          SoftwareRasterizer.b(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
-          SoftwareRasterizer.b(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
+          SoftwareRasterizer.drawLine(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
+          SoftwareRasterizer.drawLine(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
           return;
         }
         field_a = (String) null;
-        SoftwareRasterizer.b(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
-        SoftwareRasterizer.b(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
+        SoftwareRasterizer.drawLine(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
+        SoftwareRasterizer.drawLine(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 25335) {
           return;
         }
@@ -186,7 +186,7 @@ final class ki {
           gq.a(param1 + 1, param3, param0, Integer.toString(param2));
           return;
         }
-        ki.c(-60);
+        ki.releaseStatics(-60);
         gq.a(param1 + 1, param3, param0, Integer.toString(param2));
     }
 

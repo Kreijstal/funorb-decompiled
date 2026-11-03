@@ -13,7 +13,7 @@ final class GrowableIntList {
     static String field_b;
     private boolean field_c;
 
-    final static int a(int param0, int param1, int param2) {
+    final static int integerPower(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -44,18 +44,18 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "wd.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "wd.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void removeAt(byte param0, int param1) {
         if (param1 >= 0 &&
           param1 <= this.field_a) {
           if (param0 != -84) {
             return;
           }
           if (this.field_a != param1) {
-            qb.a(this.field_j, 1 + param1, this.field_j, param1, -param1 + this.field_a);
+            ArraySupport.a(this.field_j, 1 + param1, this.field_j, param1, -param1 + this.field_a);
           }
           this.field_a = this.field_a - 1;
           return;
@@ -63,18 +63,18 @@ final class GrowableIntList {
         throw new ArrayIndexOutOfBoundsException(param1);
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void set(int param0, byte param1, int param2) {
         if (this.field_a < param0) {
           this.field_a = param0;
         }
         if (param0 >= this.field_j.length) {
-          this.a(-114, param0);
+          this.resize(-114, param0);
         }
         this.field_j[param0] = param2;
         int var4 = -53 / ((-28 - param1) / 42);
     }
 
-    final int c(int param0, int param1) {
+    final int get(int param0, int param1) {
         if (param1 >= -50) {
           field_d = (int[]) null;
         }
@@ -88,7 +88,7 @@ final class GrowableIntList {
         if (param1 != 0) {
           return -64;
         }
-        return ja.field_h[param0 & 2047];
+        return MeshRasterState.field_h[param0 & 2047];
     }
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
@@ -128,7 +128,7 @@ final class GrowableIntList {
                 var10_int = param9[incrementValue$0] & 255;
                 incrementValue$1 = param5;
                 param5++;
-                param0[incrementValue$1] = bq.a(cm.a(var10_int * cm.a(param2, 16711935) >> 8, 16711935), cm.a(16711802, var10_int * cm.a(param2, 65280)) >> 8);
+                param0[incrementValue$1] = bq.bitOr(cm.bitAnd(var10_int * cm.bitAnd(param2, 16711935) >> 8, 16711935), cm.bitAnd(16711802, var10_int * cm.bitAnd(param2, 65280)) >> 8);
               }
               {
                 param5 = param5 + param8;
@@ -153,7 +153,7 @@ final class GrowableIntList {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -181,13 +181,13 @@ final class GrowableIntList {
           param0.field_S = 0;
           param0.pendingHeightDelta = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wd.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wd.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
-          GrowableIntList.a(23);
+          GrowableIntList.releaseStatics(23);
         }
         field_e = null;
         field_h = null;
@@ -197,10 +197,10 @@ final class GrowableIntList {
         field_d = null;
     }
 
-    final void a(boolean param0, int param1) {
-        this.a(1 + this.field_a, (byte) 41, param1);
+    final void add(boolean param0, int param1) {
+        this.set(1 + this.field_a, (byte) 41, param1);
         if (!param0) {
-          this.a((byte) -113, 40);
+          this.removeAt((byte) -113, 40);
         }
     }
 
@@ -226,17 +226,17 @@ final class GrowableIntList {
         return -50;
     }
 
-    private final void a(int param0, int param1) {
+    private final void resize(int param0, int param1) {
         int[] var5 = new int[this.a(param1, (byte) 120)];
         int[] var3 = var5;
         int var4 = 66 % ((55 - param0) / 63);
-        qb.a(this.field_j, 0, var5, 0, this.field_j.length);
+        ArraySupport.a(this.field_j, 0, var5, 0, this.field_j.length);
         this.field_j = var5;
     }
 
-    final int b(int param0) {
+    final int size(int param0) {
         if (param0 != 1) {
-          this.a(false, -127);
+          this.add(false, -127);
         }
         return 1 + this.field_a;
     }

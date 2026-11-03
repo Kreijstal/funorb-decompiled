@@ -42,7 +42,7 @@ final class re {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -51,21 +51,21 @@ final class re {
           QuickChatPhraseDefinition.field_v = param1;
           if (!param0) {
             byte[] var3 = (byte[]) null;
-            re.a(true, (byte[]) null);
+            re.copyBytes(true, (byte[]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static im a(String param0, int param1) {
+    final static SocialListEntry findFriend(String param0, int param1) {
         String var2 = null;
-        im var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        im stackIn_19_0 = null;
+        SocialListEntry stackIn_19_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -90,7 +90,7 @@ final class re {
           if (var2 == null) {
             return null;
           }
-          var3 = (im) (vm.field_b.a(-11434, (long)var2.hashCode()));
+          var3 = (SocialListEntry) (vm.field_b.a(-11434, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Fb);
             var4 = dh.a(var7, (byte) 41);
@@ -98,7 +98,7 @@ final class re {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (im) (vm.field_b.b((byte) 47));
+            var3 = (SocialListEntry) (vm.field_b.findNext((byte) 47));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ final class re {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class re {
         field_g = null;
     }
 
-    final static byte[] a(boolean param0, byte[] param1) {
+    final static byte[] copyBytes(boolean param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -174,7 +174,7 @@ final class re {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          qb.a(param1, 0, var3, 0, var2_int);
+          ArraySupport.a(param1, 0, var3, 0, var2_int);
           if (param0) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -191,7 +191,7 @@ final class re {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -208,13 +208,13 @@ final class re {
           synchronized (var1) {
             qn.field_p = ln.field_p;
             LinkButtonPainter.field_i = LinkButtonPainter.field_i + 1;
-            if (0 > ol.field_q) {
+            if (0 > PauseMenuScreen.field_q) {
               for (var2 = 0; var2 < 112; var2++) {
                 EmailValidator.field_m[var2] = false;
               }
-              ol.field_q = wm.field_c;
+              PauseMenuScreen.field_q = wm.field_c;
             } else {
-              while (ol.field_q != wm.field_c) {
+              while (PauseMenuScreen.field_q != wm.field_c) {
                 var2 = LabeledField.field_Q[wm.field_c];
                 wm.field_c = 127 & 1 + wm.field_c;
                 if (var2 >= 0) {
@@ -231,7 +231,7 @@ final class re {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "re.I(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "re.I(" + param0 + ')');
         }
     }
 
@@ -246,13 +246,13 @@ final class re {
         while (this.field_i > this.field_j) {
           var4 = this.field_a[this.field_j];
           var2 = var4;
-          if (!var4.field_d.b(-3)) {
+          if (!var4.field_d.ensureIndex(-3)) {
             this.a((byte) 58, var4, 0);
             return false;
           }
           if (0 <= var4.field_b &&
-            !var4.field_d.a(var4.field_b, false)) {
-            this.a((byte) -96, var2, var4.field_d.a(var4.field_b, (byte) -78));
+            !var4.field_d.ensureGroupLoaded(var4.field_b, false)) {
+            this.a((byte) -96, var2, var4.field_d.getGroupProgress(var4.field_b, (byte) -78));
             return false;
           }
           if (var4.field_f != null &&
@@ -263,8 +263,8 @@ final class re {
           if (var4.field_b < 0 &&
             null == var4.field_f &&
             var4.field_e != null &&
-            !var4.field_d.a((byte) 92)) {
-            this.a((byte) -102, var2, var4.field_d.c(param0 ^ 4567));
+            !var4.field_d.ensureAllGroupsAvailable((byte) 92)) {
+            this.a((byte) -102, var2, var4.field_d.getOverallProgress(param0 ^ 4567));
             return false;
           }
           this.field_j = this.field_j + 1;

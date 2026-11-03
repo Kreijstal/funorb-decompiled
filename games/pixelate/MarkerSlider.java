@@ -20,20 +20,20 @@ final class MarkerSlider extends TextButton {
         if (param0 < 108) {
           field_U = -99;
         }
-        stackIn_9_0 = (null != ProxySocketConnector.field_n) || (sc.b(-10093)) || (null != AccountTermsPanel.field_M) || (CanvasRasterBuffer.b(12742));
+        stackIn_9_0 = (null != ProxySocketConnector.field_n) || (ConditionalTextValue.b(-10093)) || (null != AccountTermsPanel.field_M) || (CanvasRasterBuffer.b(12742));
         return stackIn_9_0;
     }
 
     final int f(byte param0) {
         int var2 = 108 / ((9 - param0) / 53);
-        return this.field_W.b(1);
+        return this.field_W.size(1);
     }
 
     final static void a(int param0) {
-        if (!lo.field_Nb) {
+        if (!IconTextComponent.field_Nb) {
           throw new IllegalStateException();
         }
-        sd.field_I = true;
+        AlphaContainer.field_I = true;
         if (param0 != -20822) {
           MarkerSlider.a(-68);
         }
@@ -43,13 +43,13 @@ final class MarkerSlider extends TextButton {
 
     final int a(byte param0, int param1) {
         if (param1 < 0 ||
-          param1 >= this.field_W.b(1)) {
+          param1 >= this.field_W.size(1)) {
           return -1;
         }
         if (param0 > -84) {
           field_U = -103;
         }
-        return this.field_W.c(param1, -124);
+        return this.field_W.get(param1, -124);
     }
 
     final int k(int param0) {
@@ -92,8 +92,8 @@ final class MarkerSlider extends TextButton {
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; var12 < this.field_W.b(1); var12++) {
-              var13 = this.field_W.c(var12, -69) - var8_int;
+            for (var12 = 0; var12 < this.field_W.size(1); var12++) {
+              var13 = this.field_W.get(var12, -69) - var8_int;
               var13 = var13 * var13;
               if (var10 > var13) {
                 var11 = var12;
@@ -101,10 +101,10 @@ final class MarkerSlider extends TextButton {
               }
             }
             if (var11 >= 0) {
-              this.field_W.a((byte) -84, var11);
+              this.field_W.removeAt((byte) -84, var11);
             }
           } else {
-            this.field_W.a(true, var8_int);
+            this.field_W.add(true, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,7 +117,7 @@ final class MarkerSlider extends TextButton {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class MarkerSlider extends TextButton {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Q = null;
         field_O = null;
         field_X = null;
@@ -179,7 +179,7 @@ final class MarkerSlider extends TextButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "tm.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "tm.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

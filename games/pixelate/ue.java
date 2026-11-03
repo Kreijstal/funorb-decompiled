@@ -44,7 +44,7 @@ final class ue extends IntrusiveNode {
             }
             var2_int = var2_int + var8[var4];
           }
-          var4Lifetime1 = ok.a(UiTheme.field_f, param1 ^ -3, var2_int);
+          var4Lifetime1 = JavaRandomHelpers.a(UiTheme.field_f, param1 ^ -3, var2_int);
           for (var5 = 0; var5 < var8.length; var5++) {
             var4Lifetime1 = var4Lifetime1 - var8[var5];
             if (var4Lifetime1 <= 0) {
@@ -52,12 +52,12 @@ final class ue extends IntrusiveNode {
               return stackIn_13_0;
             }
           }
-          stackIn_16_0 = ok.a(UiTheme.field_f, -125, la.field_a.length);
+          stackIn_16_0 = JavaRandomHelpers.a(UiTheme.field_f, -125, la.field_a.length);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ue.C(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "ue.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class ue extends IntrusiveNode {
         return ResizableModalPanel.field_W != null ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_t = null;
         field_q = null;
@@ -100,7 +100,7 @@ final class ue extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "ue.B(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "ue.B(" + param0 + ',' + param1 + ')');
         }
     }
 

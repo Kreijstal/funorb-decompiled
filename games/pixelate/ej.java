@@ -6,9 +6,9 @@ final class ej {
     static long field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -53) {
-          ej.a(-49);
+          ej.releaseStatics(-49);
           field_b = null;
           return;
         }

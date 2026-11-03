@@ -18,7 +18,7 @@ final class ClientContextMenu {
     private int[] field_j;
     static int[] field_f;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > 52) {
           field_e = null;
           field_f = null;
@@ -51,7 +51,7 @@ final class ClientContextMenu {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        im var5 = null;
+        SocialListEntry var5 = null;
         int var6 = 0;
         String var7 = null;
         try {
@@ -68,35 +68,35 @@ final class ClientContextMenu {
             }
             var7 = this.a((byte) 114);
             var4 = var7;
-            var5 = re.a(this.field_h, -1);
+            var5 = re.findFriend(this.field_h, -1);
             var6 = ImageProducerRasterBuffer.a(-640, this.field_h) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_b.addAction(sd.a(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
-              this.field_b.addAction(sd.a(ff.field_e, 18, new String[]{var7}), (byte) -53, 6);
+              this.field_b.addAction(AlphaContainer.a(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
+              this.field_b.addAction(AlphaContainer.a(ff.field_e, 18, new String[]{var7}), (byte) -53, 6);
               if (param1 != null &&
                 param0 != 2 &&
                 !ln.field_q) {
                 this.field_j = param1;
-                this.field_b.addAction(sd.a(NodeHashTable.field_d, 61, new String[]{var7}), (byte) -80, 19);
+                this.field_b.addAction(AlphaContainer.a(NodeHashTable.field_d, 61, new String[]{var7}), (byte) -80, 19);
               }
             }
             if (var5 != null) {
-              if (!ul.a(57, this.field_h) &&
+              if (!TimerBar.a(57, this.field_h) &&
                 !ln.field_q) {
                 if (!IsaacRandom.field_g) {
-                  this.field_b.addAction(sd.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
+                  this.field_b.addAction(AlphaContainer.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
                 }
-                this.field_b.addAction(sd.a(ho.field_f, 83, new String[]{var7}), (byte) -33, 18);
+                this.field_b.addAction(AlphaContainer.a(TextTableInitializer.field_f, 83, new String[]{var7}), (byte) -33, 18);
                 if (param1 != null) {
                   this.field_j = param1;
-                  this.field_b.addAction(sd.a(NodeHashTable.field_d, 22, new String[]{var7}), (byte) -95, 19);
+                  this.field_b.addAction(AlphaContainer.a(NodeHashTable.field_d, 22, new String[]{var7}), (byte) -95, 19);
                 }
               }
-              this.field_b.addAction(sd.a(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
+              this.field_b.addAction(AlphaContainer.a(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
             }
             if (var6 != 0) {
-              this.field_b.addAction(sd.a(DelegatingCanvas.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
+              this.field_b.addAction(AlphaContainer.a(DelegatingCanvas.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
               return;
             }
           }
@@ -111,7 +111,7 @@ final class ClientContextMenu {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class ClientContextMenu {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0 == 0) {
-          bg.a(this.field_l, param1, param2 ^ -31541);
+          StatusBar.a(this.field_l, param1, param2 ^ -31541);
           if (param2 == 7490) {
             return true;
           }
@@ -256,7 +256,7 @@ final class ClientContextMenu {
         var5 = this.a((byte) 27);
         if (var4 != null) {
           if (!io.field_c.field_dc) {
-            this.field_b.addAction(sd.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
+            this.field_b.addAction(AlphaContainer.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
             if (param1 == -98) {
               return;
             }
@@ -270,7 +270,7 @@ final class ClientContextMenu {
             discarded$1 = this.a(48, 58, -125);
             return;
           }
-          this.field_b.addAction(sd.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
+          this.field_b.addAction(AlphaContainer.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
           if (param1 == -98) {
             return;
           }
@@ -299,7 +299,7 @@ final class ClientContextMenu {
           return;
         }
         if (var7.field_Vb) {
-          this.field_b.addAction(sd.a(ResourceArchive.field_j, param1 + 180, new String[]{var5}), (byte) -111, 1);
+          this.field_b.addAction(AlphaContainer.a(ResourceArchive.field_j, param1 + 180, new String[]{var5}), (byte) -111, 1);
           if (param1 == -98) {
             return;
           }
@@ -307,7 +307,7 @@ final class ClientContextMenu {
           return;
         }
         if (!param0) {
-          this.field_b.addAction(sd.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
+          this.field_b.addAction(AlphaContainer.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
           if (param1 == -98) {
             return;
           }
@@ -315,15 +315,15 @@ final class ClientContextMenu {
           return;
         }
         if (!var7.field_Jb) {
-          this.field_b.addAction(sd.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
+          this.field_b.addAction(AlphaContainer.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
           if (param1 == -98) {
             return;
           }
           discarded$6 = this.a(48, 58, -125);
           return;
         }
-        this.field_b.addAction(sd.a(ValidationHelpWidget.field_V, 59, new String[]{var5}), (byte) -70, 0);
-        this.field_b.addAction(sd.a(SoundCache.field_f, 101, new String[]{var5}), (byte) -41, 1);
+        this.field_b.addAction(AlphaContainer.a(ValidationHelpWidget.field_V, 59, new String[]{var5}), (byte) -70, 0);
+        this.field_b.addAction(AlphaContainer.a(SoundCache.field_f, 101, new String[]{var5}), (byte) -41, 1);
         if (param1 == -98) {
           return;
         }
@@ -336,7 +336,7 @@ final class ClientContextMenu {
         CipherPacketBuffer var3Lifetime1;
         if (param1 == -925) {
           var3 = aa.field_f;
-          var3.g(param0, 15514);
+          var3.writeOpcode(param0, 15514);
           var3.writeByte(160, 3);
           var3.writeByte(160, 8);
           var3.writeShort(1276387944, param2);
@@ -344,7 +344,7 @@ final class ClientContextMenu {
         }
         field_e = (String) null;
         var3Lifetime1 = aa.field_f;
-        var3Lifetime1.g(param0, 15514);
+        var3Lifetime1.writeOpcode(param0, 15514);
         var3Lifetime1.writeByte(160, 3);
         var3Lifetime1.writeByte(160, 8);
         var3Lifetime1.writeShort(1276387944, param2);
@@ -358,7 +358,7 @@ final class ClientContextMenu {
         String var8;
         var4 = null;
         if (param2 == 4) {
-          var5 = jf.a(this.field_h, param0, (byte) 79);
+          var5 = jf.requestAddFriend(this.field_h, param0, (byte) 79);
           if (var5 != null) {
             MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var5);
           }
@@ -367,7 +367,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param2 == 5) {
-          var6 = ff.a(param0, this.field_h, (byte) -106);
+          var6 = ff.requestRemoveFriend(param0, this.field_h, (byte) -106);
           if (var6 != null) {
             MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var6);
           }
@@ -440,12 +440,12 @@ final class ClientContextMenu {
             this.field_b.addAction(sf.field_a, (byte) -62, 13);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean a(int param0, int param1, boolean param2, int param3, boolean param4) {
-        int var6 = this.field_b.b(-12487, param4);
+        int var6 = this.field_b.updateAndPollAction(-12487, param4);
         if (param2) {
           return true;
         }
@@ -503,7 +503,7 @@ final class ClientContextMenu {
 
     private final boolean a(int param0, boolean param1, int param2) {
         if (param0 == 17) {
-          AccountTermsPanel.field_M = new ReportAbuseDialog(this.field_o.field_tb, this.field_o.screenY, this.field_o.field_K, this.field_o.height, param2, cm.field_o, pj.field_i, ae.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, this.field_h, this.field_l);
+          AccountTermsPanel.field_M = new ReportAbuseDialog(this.field_o.field_tb, this.field_o.screenY, this.field_o.field_K, this.field_o.height, param2, cm.field_o, pj.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, this.field_h, this.field_l);
           return true;
         }
         if (!param1) {
@@ -523,26 +523,26 @@ final class ClientContextMenu {
         if (io.field_c != null) {
           return;
         }
-        var3 = vm.a(this.field_m, (byte) -107);
+        var3 = vm.findLobbyGame(this.field_m, (byte) -107);
         if (var3 == null) {
           return;
         }
         var4 = var3.field_pc;
         if (var3.field_cc) {
-          this.field_b.addAction(sd.a(fp.field_b, 97, new String[]{var4}), (byte) -105, 2);
-          this.field_b.addAction(sd.a(oi.field_a, 52, new String[]{var4}), (byte) -118, 3);
+          this.field_b.addAction(AlphaContainer.a(fp.field_b, 97, new String[]{var4}), (byte) -105, 2);
+          this.field_b.addAction(AlphaContainer.a(oi.field_a, 52, new String[]{var4}), (byte) -118, 3);
           return;
         }
         if (var3.field_hc) {
-          this.field_b.addAction(sd.a(SecondaryNodeHashTable.field_f, 53, new String[]{var4}), (byte) -106, 2);
+          this.field_b.addAction(AlphaContainer.a(SecondaryNodeHashTable.field_f, 53, new String[]{var4}), (byte) -106, 2);
         } else {
           if (!var3.field_Ob &&
             var3.field_Mb) {
             if (!var3.field_dc) {
-              this.field_b.addAction(sd.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
+              this.field_b.addAction(AlphaContainer.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
             } else {
               if (var3.field_hc) {
-                this.field_b.addAction(sd.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
+                this.field_b.addAction(AlphaContainer.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
               }
             }
           }
@@ -550,7 +550,7 @@ final class ClientContextMenu {
         if (!var3.field_Ob) {
           return;
         }
-        this.field_b.addAction(sd.a(AccountNamePrompt.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
+        this.field_b.addAction(AlphaContainer.a(AccountNamePrompt.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
     }
 
     ClientContextMenu(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
@@ -565,7 +565,7 @@ final class ClientContextMenu {
           this.field_i = param3;
           this.field_m = param4;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -582,7 +582,7 @@ final class ClientContextMenu {
           }
           var3 = this.a((byte) 43);
           String var2 = var3;
-          this.field_b.addAction(sd.a(IndexedSpriteState.field_j, param0 - 8830, new String[]{var3}), (byte) -72, 17);
+          this.field_b.addAction(AlphaContainer.a(IndexedSpriteState.field_j, param0 - 8830, new String[]{var3}), (byte) -72, 17);
         }
         if (param0 == 8893) {
           return;

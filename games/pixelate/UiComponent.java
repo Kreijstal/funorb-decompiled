@@ -52,7 +52,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ class UiComponent extends IntrusiveNode {
           if (param0 != -58) {
             return false;
           }
-          if (!this.a(93, param5, param3, param6, param4)) {
+          if (!this.containsPoint(93, param5, param3, param6, param4)) {
             return false;
           }
           this.field_k = param2;
@@ -81,11 +81,11 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    int e(int param0) {
+    int getTopLayer(int param0) {
         if (param0 <= 31) {
           this.field_l = (String) null;
           return 0;
@@ -93,7 +93,7 @@ class UiComponent extends IntrusiveNode {
         return 0;
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawLayer(int param0, int param1, int param2, byte param3) {
         int var5 = -54 / ((70 - param3) / 49);
         if (0 != param1) {
           return;
@@ -126,13 +126,13 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    void h(int param0) {
+    void blur(int param0) {
         if (param0 != 2) {
-          this.a(-82, false, (byte) 61, -91);
+          this.handlePointerEvents(-82, false, (byte) 61, -91);
         }
     }
 
@@ -155,7 +155,7 @@ class UiComponent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(param0 + 66, param2, param1, bg.field_k, ProxyAuthenticationException.field_d) ? 1 : 0;
+          var5_int = this.containsPoint(param0 + 66, param2, param1, StatusBar.field_k, ProxyAuthenticationException.field_d) ? 1 : 0;
           stackIn_3_0 = (var5_int != 0) ? 0 : 1;
           if (this.field_D) {
             stackIn_6_1 = 0;
@@ -171,7 +171,7 @@ class UiComponent extends IntrusiveNode {
             }
           }
           if (param0 != 40) {
-            this.b(true);
+            this.containsFocus(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,11 +184,11 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 == 0) {
           field_A = null;
@@ -206,7 +206,7 @@ class UiComponent extends IntrusiveNode {
         field_w = null;
     }
 
-    boolean b(boolean param0) {
+    boolean containsFocus(boolean param0) {
         if (!param0) {
           field_u = -102;
           return false;
@@ -214,15 +214,15 @@ class UiComponent extends IntrusiveNode {
         return false;
     }
 
-    final void c(byte param0) {
-        this.a(this.field_E, (byte) 99, this.field_p, this.field_z, this.field_C);
+    final void refreshLayout(byte param0) {
+        this.setBounds(this.field_E, (byte) 99, this.field_p, this.field_z, this.field_C);
         if (param0 <= 48) {
           UiComponent var3 = (UiComponent) null;
           this.updatePointer(124, -118, -106, (UiComponent) null);
         }
     }
 
-    String b(byte param0) {
+    String getTooltip(byte param0) {
         if (param0 < 16) {
           return (String) null;
         }
@@ -240,42 +240,42 @@ class UiComponent extends IntrusiveNode {
         try {
           var1 = new Sprite(540, 140);
           Checkbox.a(-126, var1);
-          ja.a();
-          SoftwareRasterizer.d();
-          ga.field_f = param0;
-          ma.d((byte) 106);
-          var2 = var1.a();
+          MeshRasterState.a();
+          SoftwareRasterizer.clear();
+          GameModeCard.field_f = param0;
+          ScoreMarkerBar.d((byte) 106);
+          var2 = var1.copy();
           var3 = 0;
           while (15 > var3) {
-            var2.e(-2, -2, 16777215);
-            SoftwareRasterizer.c(4, 4, 0, 0, 540, 140);
+            var2.drawSilhouette(-2, -2, 16777215);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;
             }
           }
-          bd.field_a.c();
-          var1.d(0, 0);
+          bd.field_a.makeRasterTarget();
+          var1.drawHalfSize(0, 0);
           LinkButtonPainter.a((byte) 92);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ng.BB(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ng.BB(" + param0 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawLayers(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
         int var7 = 0;
         var7 = Pixelate.field_H ? 1 : 0;
-        var4 = this.e(63);
+        var4 = this.getTopLayer(63);
         var5 = 0;
         while (true) {
           if (var5 <= var4) {
-            this.a(param0, var5, param1, (byte) -63);
+            this.drawLayer(param0, var5, param1, (byte) -63);
             var5++;
             if (var7 == 0) {
               continue;
@@ -318,16 +318,16 @@ class UiComponent extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "ng.FB(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "ng.FB(" + param0 + ')');
         }
     }
 
-    final boolean a(char param0, int param1, boolean param2) {
+    final boolean processKey(char param0, int param1, boolean param2) {
         int var4;
         UiComponent var5;
         int var4Lifetime1;
         UiComponent var5Lifetime1;
-        if (!this.b(true)) {
+        if (!this.containsFocus(true)) {
           var4 = param1;
           if (var4 == 80) {
             return this.focusNext(this, 27);
@@ -354,7 +354,7 @@ class UiComponent extends IntrusiveNode {
         return false;
     }
 
-    final boolean a(int param0, boolean param1, byte param2, int param3) {
+    final boolean handlePointerEvents(int param0, boolean param1, byte param2, int param3) {
         int var5;
         DraggableWidget var6;
         int var7;
@@ -373,25 +373,25 @@ class UiComponent extends IntrusiveNode {
         regionExit1: {
           var7 = Pixelate.field_H ? 1 : 0;
           this.updatePointer(40, param0, param3, this);
-          var5 = this.b(true) ? 1 : 0;
+          var5 = this.containsFocus(true) ? 1 : 0;
           if (param1) {
             if (lp.field_i != 0) {
               if (var5 == 0) {
                 if (0 == IntrusiveDequeCursor.field_c) {
                   if (ef.field_b == 0 &&
                     TextHotspotWidget.field_R != 0) {
-                    this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                    this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                     var10 = qf.field_a;
                     if (var10 != null) {
-                      if (var10.field_n instanceof s) {
-                        ((s) (var10.field_n)).a(-92, var10, (DropTargetWidget) null);
+                      if (var10.field_n instanceof WidgetDropListener) {
+                        ((WidgetDropListener) (var10.field_n)).onDropped(-92, var10, (DropTargetWidget) null);
                       }
                       qf.field_a = null;
                     }
                     if (var7 != 0 &&
                       var5 != 0 &&
                       0 != IntrusiveDequeCursor.field_c) {
-                      this.h(2);
+                      this.blur(2);
                     }
                   }
                 } else {
@@ -399,70 +399,70 @@ class UiComponent extends IntrusiveNode {
                     param1 = false;
                     if (ef.field_b == 0 &&
                       TextHotspotWidget.field_R != 0) {
-                      this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                      this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                       var8 = qf.field_a;
                       var6 = var8;
                       if (var8 != null) {
-                        if (var8.field_n instanceof s) {
-                          ((s) (var8.field_n)).a(-92, var8, (DropTargetWidget) null);
+                        if (var8.field_n instanceof WidgetDropListener) {
+                          ((WidgetDropListener) (var8.field_n)).onDropped(-92, var8, (DropTargetWidget) null);
                         }
                         qf.field_a = null;
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
                         0 != IntrusiveDequeCursor.field_c) {
-                        this.h(2);
+                        this.blur(2);
                       }
                     }
                   } else {
                     if (ef.field_b == 0 &&
                       TextHotspotWidget.field_R != 0) {
-                      this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                      this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                       var9 = qf.field_a;
                       var6Lifetime3 = var9;
                       if (var9 != null) {
-                        if (var9.field_n instanceof s) {
-                          ((s) (var9.field_n)).a(-92, var9, (DropTargetWidget) null);
+                        if (var9.field_n instanceof WidgetDropListener) {
+                          ((WidgetDropListener) (var9.field_n)).onDropped(-92, var9, (DropTargetWidget) null);
                         }
                         qf.field_a = null;
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
                         0 != IntrusiveDequeCursor.field_c) {
-                        this.h(2);
+                        this.blur(2);
                       }
                     }
                   }
                 }
                 break regionExit1;
               }
-              this.onMouseWheel(ProxyAuthenticationException.field_d, (byte) 80, param0, param3, bg.field_k, lp.field_i, this);
+              this.onMouseWheel(ProxyAuthenticationException.field_d, (byte) 80, param0, param3, StatusBar.field_k, lp.field_i, this);
             }
             if (0 == IntrusiveDequeCursor.field_c) {
               if (ef.field_b == 0 &&
                 TextHotspotWidget.field_R != 0) {
-                this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                 var11 = qf.field_a;
                 var6Lifetime1 = var11;
                 if (var11 != null) {
-                  if (var11.field_n instanceof s) {
-                    ((s) (var11.field_n)).a(-92, var11, (DropTargetWidget) null);
+                  if (var11.field_n instanceof WidgetDropListener) {
+                    ((WidgetDropListener) (var11.field_n)).onDropped(-92, var11, (DropTargetWidget) null);
                   }
                   qf.field_a = null;
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
                   0 != IntrusiveDequeCursor.field_c) {
-                  this.h(2);
+                  this.blur(2);
                 }
               }
               TextHotspotWidget.field_R = ef.field_b;
               if (param2 == 99) {
-                ij.a(-5516, this.b((byte) 37));
+                ij.a(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               this.field_E = -110;
-              ij.a(-5516, this.b((byte) 37));
+              ij.a(-5516, this.getTooltip((byte) 37));
               return param1;
             }
             if (!this.handlePointerPress((byte) -58, this, IntrusiveDequeCursor.field_c, param0, BufferedRandomAccessFile.field_a, param3, ji.field_c)) {
@@ -471,123 +471,123 @@ class UiComponent extends IntrusiveNode {
                   if (TextHotspotWidget.field_R == 0) {
                     TextHotspotWidget.field_R = ef.field_b;
                     if (param2 == 99) {
-                      ij.a(-5516, this.b((byte) 37));
+                      ij.a(-5516, this.getTooltip((byte) 37));
                       return param1;
                     }
                     this.field_E = -110;
-                    ij.a(-5516, this.b((byte) 37));
+                    ij.a(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
-                  this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                  this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                   var12 = qf.field_a;
                   if (var12 != null) {
-                    if (var12.field_n instanceof s) {
-                      ((s) (var12.field_n)).a(-92, var12, (DropTargetWidget) null);
+                    if (var12.field_n instanceof WidgetDropListener) {
+                      ((WidgetDropListener) (var12.field_n)).onDropped(-92, var12, (DropTargetWidget) null);
                     }
                     qf.field_a = null;
                   }
                   if (var7 != 0 &&
                     var5 != 0 &&
                     0 != IntrusiveDequeCursor.field_c) {
-                    this.h(2);
+                    this.blur(2);
                     TextHotspotWidget.field_R = ef.field_b;
                     if (param2 == 99) {
-                      ij.a(-5516, this.b((byte) 37));
+                      ij.a(-5516, this.getTooltip((byte) 37));
                       return param1;
                     }
                     this.field_E = -110;
-                    ij.a(-5516, this.b((byte) 37));
+                    ij.a(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                 }
                 TextHotspotWidget.field_R = ef.field_b;
                 if (param2 == 99) {
-                  ij.a(-5516, this.b((byte) 37));
+                  ij.a(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
                 this.field_E = -110;
-                ij.a(-5516, this.b((byte) 37));
+                ij.a(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
-              this.h(2);
+              this.blur(2);
               if (var7 != 0) {
                 param1 = false;
                 if (ef.field_b == 0) {
                   if (TextHotspotWidget.field_R == 0) {
                     break regionExit1;
                   }
-                  this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                  this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                   var14 = qf.field_a;
                   var6Lifetime2 = var14;
                   if (var14 != null) {
-                    if (var14.field_n instanceof s) {
-                      ((s) (var14.field_n)).a(-92, var14, (DropTargetWidget) null);
+                    if (var14.field_n instanceof WidgetDropListener) {
+                      ((WidgetDropListener) (var14.field_n)).onDropped(-92, var14, (DropTargetWidget) null);
                     }
                     qf.field_a = null;
                   }
                   if (var5 != 0 &&
                     0 != IntrusiveDequeCursor.field_c) {
-                    this.h(2);
+                    this.blur(2);
                     TextHotspotWidget.field_R = ef.field_b;
                     if (param2 == 99) {
-                      ij.a(-5516, this.b((byte) 37));
+                      ij.a(-5516, this.getTooltip((byte) 37));
                       return param1;
                     }
                     this.field_E = -110;
-                    ij.a(-5516, this.b((byte) 37));
+                    ij.a(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                 }
                 TextHotspotWidget.field_R = ef.field_b;
                 if (param2 == 99) {
-                  ij.a(-5516, this.b((byte) 37));
+                  ij.a(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
                 this.field_E = -110;
-                ij.a(-5516, this.b((byte) 37));
+                ij.a(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               if (ef.field_b == 0) {
                 if (TextHotspotWidget.field_R == 0) {
                   TextHotspotWidget.field_R = ef.field_b;
                   if (param2 == 99) {
-                    ij.a(-5516, this.b((byte) 37));
+                    ij.a(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                   this.field_E = -110;
-                  ij.a(-5516, this.b((byte) 37));
+                  ij.a(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
-                this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                 var13 = qf.field_a;
                 var6Lifetime2Lifetime1 = var13;
                 if (var13 != null) {
-                  if (var13.field_n instanceof s) {
-                    ((s) (var13.field_n)).a(-92, var13, (DropTargetWidget) null);
+                  if (var13.field_n instanceof WidgetDropListener) {
+                    ((WidgetDropListener) (var13.field_n)).onDropped(-92, var13, (DropTargetWidget) null);
                   }
                   qf.field_a = null;
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
                   0 != IntrusiveDequeCursor.field_c) {
-                  this.h(2);
+                  this.blur(2);
                   TextHotspotWidget.field_R = ef.field_b;
                   if (param2 == 99) {
-                    ij.a(-5516, this.b((byte) 37));
+                    ij.a(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                   this.field_E = -110;
-                  ij.a(-5516, this.b((byte) 37));
+                  ij.a(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
               }
               TextHotspotWidget.field_R = ef.field_b;
               if (param2 == 99) {
-                ij.a(-5516, this.b((byte) 37));
+                ij.a(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               this.field_E = -110;
-              ij.a(-5516, this.b((byte) 37));
+              ij.a(-5516, this.getTooltip((byte) 37));
               return param1;
             }
             param1 = false;
@@ -597,18 +597,18 @@ class UiComponent extends IntrusiveNode {
             if (TextHotspotWidget.field_R == 0) {
               TextHotspotWidget.field_R = ef.field_b;
               if (param2 == 99) {
-                ij.a(-5516, this.b((byte) 37));
+                ij.a(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               this.field_E = -110;
-              ij.a(-5516, this.b((byte) 37));
+              ij.a(-5516, this.getTooltip((byte) 37));
               return param1;
             }
-            this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+            this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
             var15 = qf.field_a;
             if (var15 != null) {
-              if (var15.field_n instanceof s) {
-                ((s) (var15.field_n)).a(-92, var15, (DropTargetWidget) null);
+              if (var15.field_n instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var15.field_n)).onDropped(-92, var15, (DropTargetWidget) null);
               }
               qf.field_a = null;
             }
@@ -618,14 +618,14 @@ class UiComponent extends IntrusiveNode {
           }
           if (var5 != 0 &&
             0 != IntrusiveDequeCursor.field_c) {
-            this.h(2);
+            this.blur(2);
             TextHotspotWidget.field_R = ef.field_b;
             if (param2 == 99) {
-              ij.a(-5516, this.b((byte) 37));
+              ij.a(-5516, this.getTooltip((byte) 37));
               return param1;
             }
             this.field_E = -110;
-            ij.a(-5516, this.b((byte) 37));
+            ij.a(-5516, this.getTooltip((byte) 37));
             return param1;
           }
         }
@@ -633,7 +633,7 @@ class UiComponent extends IntrusiveNode {
         if (param2 != 99) {
           this.field_E = -110;
         }
-        ij.a(-5516, this.b((byte) 37));
+        ij.a(-5516, this.getTooltip((byte) 37));
         return param1;
     }
 
@@ -641,7 +641,7 @@ class UiComponent extends IntrusiveNode {
         this(param0, Checkbox.field_X.field_a, param1);
     }
 
-    final void a(int param0, byte param1, Hashtable param2, StringBuilder param3) {
+    final void appendDebugBody(int param0, byte param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -670,7 +670,7 @@ class UiComponent extends IntrusiveNode {
           if (this.field_D) {
             discarded$2 = param3.append(" mouseover");
           }
-          if (this.b(true)) {
+          if (this.containsFocus(true)) {
             discarded$3 = param3.append(" focused");
           }
           if (this.field_y != null) {
@@ -711,7 +711,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -737,7 +737,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -750,7 +750,7 @@ class UiComponent extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = PacketBuffer.b(nh.a(param0, -29667), -7067);
+          var2 = PacketBuffer.decodeBase37Name(nh.encodeBase37Name(param0, -29667), -7067);
           if (var2 == null) {
             var2 = "";
           }
@@ -769,7 +769,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -783,8 +783,8 @@ class UiComponent extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(-59, param2, param0, param3)) {
-            this.a(param2, (byte) -2, param3, param0);
+          if (this.beginDebugDescription(-59, param2, param0, param3)) {
+            this.appendDebugBody(param2, (byte) -2, param3, param0);
           }
           if (param1) {
             field_o = (IndexedSprite[]) null;
@@ -807,7 +807,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -815,11 +815,11 @@ class UiComponent extends IntrusiveNode {
         try {
           this.field_k = param3;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ng.EA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ng.EA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    void a(int param0, byte param1, int param2, int param3, int param4) {
+    void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         this.field_E = param0;
         this.field_z = param3;
         this.field_C = param4;
@@ -831,7 +831,7 @@ class UiComponent extends IntrusiveNode {
         this.field_p = param2;
     }
 
-    final boolean a(int param0, int param1, StringBuilder param2, Hashtable param3) {
+    final boolean beginDebugDescription(int param0, int param1, StringBuilder param2, Hashtable param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -866,11 +866,11 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPoint(int param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_18_0 = false;
         if (param0 < 55) {
           this.field_y = (WidgetPainter) null;
@@ -917,7 +917,7 @@ class UiComponent extends IntrusiveNode {
             this.field_C = var4.getPreferredWidth(this, 4592);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ng.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ng.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -932,7 +932,7 @@ class UiComponent extends IntrusiveNode {
           this.field_p = param1;
           this.field_n = param5;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ng.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ng.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

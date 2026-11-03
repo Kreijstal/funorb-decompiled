@@ -9,12 +9,12 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
     DateInputWidget field_g;
     static boolean field_i;
 
-    public final void a(int param0, EditableTextWidget param1) {
+    public final void onTextSet(int param0, EditableTextWidget param1) {
         try {
           int var3_int = -49 / ((-30 - param0) / 60);
-          this.b(2048);
+          this.markEdited(2048);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "oa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -125,21 +125,21 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return (-param0 & param0) == param0 ? true : false;
     }
 
-    final dj a(boolean param0) {
+    final ValidationState evaluateState(boolean param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        dj stackIn_3_0 = null;
-        dj stackIn_7_0 = null;
-        dj stackIn_10_0 = null;
+        ValidationState stackIn_3_0 = null;
+        ValidationState stackIn_7_0 = null;
+        ValidationState stackIn_10_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_g.e((byte) 90);
+          var2_int = this.field_g.getDay((byte) 90);
           var3 = this.field_g.getMonthIndex(25);
           var4 = this.field_g.c(param0);
-          var5 = wa.b(-80);
+          var5 = wa.currentYear(-80);
           if (1890 > var4) {
             stackIn_3_0 = sk.field_a;
             return stackIn_3_0;
@@ -160,13 +160,13 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return qk.field_g;
     }
 
-    public final void a(EditableTextWidget param0, int param1) {
+    public final void onTextChanged(EditableTextWidget param0, int param1) {
         try {
           if (param1 != 4) {
             this.field_g = (DateInputWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "oa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return this.field_g.m(-1);
     }
 
-    final String c(int param0) {
+    final String computeMessage(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -187,17 +187,17 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         String stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_g.e((byte) -84);
+          var2_int = this.field_g.getDay((byte) -84);
           var3 = this.field_g.getMonthIndex(25);
           var4 = this.field_g.c(true);
-          var5 = wa.b(-127);
+          var5 = wa.currentYear(-127);
           if (var4 >= 1890 &&
             var5 - 3 >= var4) {
             if (dq.a(var2_int, var3, param0 + param0, var4)) {
               return null;
             }
           } else {
-            stackIn_4_0 = sd.a(TextLayout.field_d, 120, new String[]{"1890", Integer.toString(-3 + var5)});
+            stackIn_4_0 = AlphaContainer.a(TextLayout.field_d, 120, new String[]{"1890", Integer.toString(-3 + var5)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

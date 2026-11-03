@@ -3,7 +3,7 @@
  */
 final class jn extends IntrusiveNode {
     static SceneWidget field_p;
-    ae field_o;
+    Vector3 field_o;
     boolean field_k;
     int field_r;
     static String field_m;
@@ -18,19 +18,19 @@ final class jn extends IntrusiveNode {
     int field_u;
     int field_w;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_m = null;
         if (param0 != 29353) {
-          jn.a(-63);
+          jn.releaseStatics(-63);
         }
     }
 
-    final static double a(double param0, int param1) {
+    final static double sine(double param0, int param1) {
         if (param1 == 6802) {
           return TriangleMesh.field_G[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];
         }
-        jn.a(-0.09855271478809768, -30);
+        jn.sine(-0.09855271478809768, -30);
         return TriangleMesh.field_G[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];
     }
 
@@ -39,7 +39,7 @@ final class jn extends IntrusiveNode {
         this.field_u = param0;
         this.field_t = TabbedPanel.a((byte) 41, 640, 240);
         this.field_y = TabbedPanel.a((byte) 41, 768, 256);
-        this.field_o = nh.c((byte) 60);
+        this.field_o = nh.randomUnitVector((byte) 60);
         this.field_l = 0;
         this.field_s = TabbedPanel.a((byte) 41, 50, 20);
         this.field_w = TabbedPanel.a((byte) 41, 75, 25);

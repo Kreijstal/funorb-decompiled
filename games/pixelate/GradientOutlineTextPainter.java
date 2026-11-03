@@ -17,7 +17,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
           }
           super.drawWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -35,22 +35,22 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
             GradientOutlineTextPainter.d(110);
           }
           while (WidgetStyleLayer.a((byte) -91)) {
-            var1.g(8, 15514);
+            var1.writeOpcode(8, 15514);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             AudioService.a(var1, -20);
-            aa.field_f.f(var1.position - var2, param0 ^ -9);
+            aa.field_f.backpatchByteLength(var1.position - var2, param0 ^ -9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "gh.B(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "gh.B(" + param0 + ')');
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_s = null;
         if (param0 >= -72) {

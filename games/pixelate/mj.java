@@ -6,7 +6,7 @@ import java.util.*;
 final class mj {
     private int[] field_a;
     static String field_i;
-    private ma field_f;
+    private ScoreMarkerBar field_f;
     static int field_b;
     static MenuInputState field_c;
     static int field_j;
@@ -36,7 +36,7 @@ final class mj {
             return;
           }
           this.field_a[0] = 0;
-          this.field_a[1] = 300 + ok.a(ea.field_b, DraggableWidget.a(param0, -327), 300);
+          this.field_a[1] = 300 + JavaRandomHelpers.a(ea.field_b, DraggableWidget.a(param0, -327), 300);
           this.field_d = 0;
           if (param0 != 300) {
             mj.c(43);
@@ -44,7 +44,7 @@ final class mj {
           }
           return;
         }
-        this.field_a[0] = ok.a(ea.field_b, -100, 300) + 300;
+        this.field_a[0] = JavaRandomHelpers.a(ea.field_b, -100, 300) + 300;
         this.field_a[1] = 0;
         if (param0 == 300) {
           return;
@@ -70,18 +70,18 @@ final class mj {
           BufferedRandomAccessFile.field_m = param1;
           ProxyAuthenticationException.field_a = param2;
           WidgetStyleLayer.field_b = param4;
-          wg.field_d = param5;
+          Matrix3.field_d = param5;
           if (param3 != 300) {
             sb var7 = (sb) null;
             mj.a(-68, (sb) null, -42, 67, -94, (sb) null);
           }
           ki.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String a(int param0, int param1) {
+    final static String formatPageNumber(int param0, int param1) {
         if (param0 == 4067) {
           return param1 + 1 + "/" + ln.field_m.length;
         }
@@ -109,7 +109,7 @@ final class mj {
         RuntimeException decompiledCaughtException = null;
         try {
           var7 = (CharSequence) ((Object) param1);
-          if (!ai.a((byte) -128, var7)) {
+          if (!Bzip2State.a((byte) -128, var7)) {
             stackIn_3_0 = qn.field_n;
             return stackIn_3_0;
           }
@@ -122,7 +122,7 @@ final class mj {
             return stackIn_9_0;
           }
           if (ImageProducerRasterBuffer.a(-640, param1)) {
-            stackIn_13_0 = sd.a(SpriteState.field_H, 45, new String[]{param1});
+            stackIn_13_0 = AlphaContainer.a(SpriteState.field_H, 45, new String[]{param1});
             return stackIn_13_0;
           }
           if (aj.field_t >= 100) {
@@ -130,16 +130,16 @@ final class mj {
             return stackIn_17_0;
           }
           if (CanvasRasterBuffer.a(param1, (byte) 37)) {
-            stackIn_20_0 = sd.a(ArchiveProvider.field_b, 89, new String[]{param1});
+            stackIn_20_0 = AlphaContainer.a(ArchiveProvider.field_b, 89, new String[]{param1});
             return stackIn_20_0;
           }
           var6 = aa.field_f;
-          var6.g(param2, 15514);
+          var6.writeOpcode(param2, 15514);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(160, 2);
-          var6.b((byte) -41, param1);
-          var6.f(var6.position - var4, -1);
+          var6.writeString((byte) -41, param1);
+          var6.backpatchByteLength(var6.position - var4, -1);
           var5 = 55 / ((param0 - 16) / 45);
           stackIn_22_0 = null;
           return (String) (stackIn_22_0);
@@ -153,7 +153,7 @@ final class mj {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class mj {
         this.field_a = new int[2];
         this.field_a[0] = 0;
         this.field_a[1] = 0;
-        this.field_f = new ma(this.field_a, false, 500, 330);
+        this.field_f = new ScoreMarkerBar(this.field_a, false, 500, 330);
         this.field_f.a(196608, -115);
     }
 

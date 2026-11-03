@@ -25,20 +25,20 @@ final class GameResultsScreen extends MenuScreen {
     private String[] field_p;
     static String field_t;
 
-    final void a(int param0, int param1, boolean param2, boolean param3, boolean param4, boolean param5, int param6, int param7, int param8, int param9) {
+    final void showSinglePlayerResults(int param0, int param1, boolean param2, boolean param3, boolean param4, boolean param5, int param6, int param7, int param8, int param9) {
         int var12;
         String stackIn_8_1 = null;
         String stackIn_12_1 = null;
         var12 = Pixelate.field_H ? 1 : 0;
         this.field_G = 0;
         if (param7 != 2) {
-          GameResultsScreen.f((byte) -64);
+          GameResultsScreen.releaseStatics((byte) -64);
         }
-        this.field_v = this.e(10, param0);
+        this.field_v = this.formatTime(10, param0);
         this.field_E = param1;
         this.field_H = param8;
         this.field_J = param6;
-        this.field_K = di.a(false, param9);
+        this.field_K = di.formatThousands(false, param9);
         if (!param4) {
           if (!param5) {
             if (param2) {
@@ -75,7 +75,7 @@ final class GameResultsScreen extends MenuScreen {
         this.field_x = -1;
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int var5_int = 0;
         int var2;
         int var3;
@@ -87,23 +87,23 @@ final class GameResultsScreen extends MenuScreen {
         Match var9;
         var8 = Pixelate.field_H ? 1 : 0;
         if (this.field_G != 1) {
-          NumericDateInputWidget.field_W[7].b(0, 45);
+          NumericDateInputWidget.field_W[7].drawTransparent(0, 45);
         } else {
-          NumericDateInputWidget.field_W[4].b(0, 45);
+          NumericDateInputWidget.field_W[4].drawTransparent(0, 45);
         }
         this.d((byte) -81);
-        this.b((byte) -71);
+        this.drawRows((byte) -71);
         var2 = 20;
         var3 = 70;
         var4 = 167;
         if (param0 != 11) {
           var9 = (Match) null;
-          this.a((String) null, 91, (Match) null);
+          this.showMultiplayerResults((String) null, 91, (Match) null);
         }
         for (var5_int = 0; 5 > var5_int; var5_int++) {
-          LoginCredentials.field_e.field_a[0].f(var3, var4);
+          LoginCredentials.field_e.field_a[0].drawOpaque(var3, var4);
           var4 = var4 + var2;
-          LoginCredentials.field_e.field_a[1].f(var3 + (var2 >> 2), var4);
+          LoginCredentials.field_e.field_a[1].drawOpaque(var3 + (var2 >> 2), var4);
           var4 = var4 + var2;
         }
         var5 = rk.field_e;
@@ -119,11 +119,11 @@ final class GameResultsScreen extends MenuScreen {
           var5.drawText(MusicCrossfadeStream.field_E, 120, var6, 0, -1);
           var5.drawRightAlignedText(Integer.toString(this.field_H), 540, var6, 1, -1);
           var6 = var6 + var7;
-          var5.drawText(lo.field_Lb, 120, var6, 0, -1);
+          var5.drawText(IconTextComponent.field_Lb, 120, var6, 0, -1);
           var5.drawRightAlignedText(Integer.toString(this.field_J), 540, var6, 1, -1);
           var6 = var6 + var7;
-          SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
-          SoftwareRasterizer.d(120, var6 - 2, 420, 3, 16777215);
+          SoftwareRasterizer.fillRectangle(118, var6 - 5, 424, 9, 0);
+          SoftwareRasterizer.fillRectangle(120, var6 - 2, 420, 3, 16777215);
           var6 = var6 + var7;
           var5.drawText(he.field_c, 120, var6, 0, -1);
           var5.drawRightAlignedText(this.field_K, 540, var6, 1, -1);
@@ -152,8 +152,8 @@ final class GameResultsScreen extends MenuScreen {
             var5.drawText(ep.field_d, 120, var6, 0, -1);
             var5.drawRightAlignedText(this.field_y, 540, var6, 1, -1);
             var6 = var6 + var7;
-            SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
-            SoftwareRasterizer.d(120, var6 - 2, 420, 3, 16777215);
+            SoftwareRasterizer.fillRectangle(118, var6 - 5, 424, 9, 0);
+            SoftwareRasterizer.fillRectangle(120, var6 - 2, 420, 3, 16777215);
             var6 = var6 + var7;
             var5.drawCentered(this.field_u, 330, var6, 0, -1);
           }
@@ -164,7 +164,7 @@ final class GameResultsScreen extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    private final String e(int param0, int param1) {
+    private final String formatTime(int param0, int param1) {
         if (param0 != 10) {
           this.field_H = -21;
         }
@@ -189,7 +189,7 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    final boolean c(int param0, int param1) {
+    final boolean isRowEnabled(int param0, int param1) {
         boolean stackIn_11_0 = false;
         if (param0 >= -112) {
           this.f(-55);
@@ -208,24 +208,24 @@ final class GameResultsScreen extends MenuScreen {
         return stackIn_11_0;
     }
 
-    final int b(int param0, int param1) {
+    final int getRowY(int param0, int param1) {
         int var3 = 120 / ((-13 - param0) / 37);
         return this.field_d;
     }
 
     final void a(int param0, int param1, boolean param2) {
-        super.a(param0, !this.c(-113, 1) ? 0 : 1, param2);
+        super.a(param0, !this.isRowEnabled(-113, 1) ? 0 : 1, param2);
     }
 
     final void a(boolean param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
         this.field_u = !param1 ? qj.field_c : MouseInputHandler.field_a;
         this.field_G = 1;
         this.field_x = param5;
-        this.field_y = sd.a(BoundedRandomAccessFile.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});
+        this.field_y = AlphaContainer.a(BoundedRandomAccessFile.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});
         if (param4 != 34) {
           return;
         }
-        this.field_v = this.e(param4 - 24, param3);
+        this.field_v = this.formatTime(param4 - 24, param3);
         if (this.field_x != -1) {
           this.field_s = !param1 ? vm.field_f : ModalStack.field_P;
         }
@@ -238,10 +238,10 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         this.b((byte) 12, false);
         if (param0 > -13) {
-          GameResultsScreen.f((byte) 29);
+          GameResultsScreen.releaseStatics((byte) 29);
         }
     }
 
@@ -254,11 +254,11 @@ final class GameResultsScreen extends MenuScreen {
         return var2;
     }
 
-    final int a(int param0, boolean param1) {
+    final int getRowRight(int param0, boolean param1) {
         if (param1) {
           field_r = -93;
         }
-        return this.a(param0, (byte) 90) + this.d(-112, param0);
+        return this.getRowLeft(param0, (byte) 90) + this.d(-112, param0);
     }
 
     final void c(int param0) {
@@ -268,8 +268,8 @@ final class GameResultsScreen extends MenuScreen {
         if (null == ro.field_e) {
           super.c(0);
         } else {
-          ro.field_e.a(false, param0 ^ 0);
-          SoftwareRasterizer.a(0, 0, 640, 480);
+          ro.field_e.render(false, param0 ^ 0);
+          SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
           rh.b((byte) -75);
         }
     }
@@ -284,7 +284,7 @@ final class GameResultsScreen extends MenuScreen {
           ArchiveIndex.a(this.field_x, (byte) 126);
           fc.field_e = 14;
           var3 = param0 ? 1 : 0;
-          la.a(!gq.d(121) ? 0 : 12, -3, var3 != 0, -25528);
+          la.changeScreen(!gq.d(121) ? 0 : 12, -3, var3 != 0, -25528);
         } else {
           if (DateOfBirthValidator.field_j == 2) {
             ro.field_e.g(46);
@@ -292,7 +292,7 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    final void a(String param0, int param1, Match param2) {
+    final void showMultiplayerResults(String param0, int param1, Match param2) {
         int var4_int = 0;
         int stackIn_10_1 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -307,7 +307,7 @@ final class GameResultsScreen extends MenuScreen {
         try {
           this.field_G = 2;
           if (param0 != null) {
-            this.field_w = sd.a(TextButton.field_G, param1 ^ -47, new String[]{param0});
+            this.field_w = AlphaContainer.a(TextButton.field_G, param1 ^ -47, new String[]{param0});
           } else {
             this.field_w = td.field_c;
           }
@@ -315,7 +315,7 @@ final class GameResultsScreen extends MenuScreen {
           this.field_p = new String[2];
           for (var4_int = 0; var4_int < 2; var4_int++) {
             this.field_M[var4_int] = param2.playerNames[var4_int];
-            this.field_p[var4_int] = di.a(false, param2.scores[var4_int]);
+            this.field_p[var4_int] = di.formatThousands(false, param2.scores[var4_int]);
           }
           if (param2.scores[0] >= param2.scores[1]) {
             stackIn_10_1 = 0;
@@ -348,13 +348,13 @@ final class GameResultsScreen extends MenuScreen {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getRowLeft(int param0, byte param1) {
         int var3 = 0;
-        if (this.c(-122, 1)) {
+        if (this.isRowEnabled(-122, 1)) {
           var3 = 60;
           if (0 == param0) {
             return var3;
@@ -371,7 +371,7 @@ final class GameResultsScreen extends MenuScreen {
         int var6_int = 0;
         int var4 = param0 * 2;
         if (!param1) {
-          GameResultsScreen.f((byte) -107);
+          GameResultsScreen.releaseStatics((byte) -107);
         }
         int var5 = 128 <= param0 ? param0 * 2 - 256 : 0;
         if (param2) {
@@ -384,11 +384,11 @@ final class GameResultsScreen extends MenuScreen {
         }
         CanvasRasterBuffer var6 = ClientException.field_f;
         ClientException.field_f = EditableTextWidget.field_R;
-        ClientException.field_f.a(19692);
+        ClientException.field_f.bindRaster(19692);
         this.c(0);
         ClientException.field_f = var6;
-        ClientException.field_f.a(19692);
-        fi.a(EditableTextWidget.field_R.field_e, var4, var5);
+        ClientException.field_f.bindRaster(19692);
+        SpriteEffectHelpers.a(EditableTextWidget.field_R.field_e, var4, var5);
     }
 
     final void e(int param0) {
@@ -406,30 +406,30 @@ final class GameResultsScreen extends MenuScreen {
         } else {
           if (var3 == 0) {
             if (3 == (1 << ro.field_e.field_z | var4)) {
-              this.field_s = bm.field_t;
+              this.field_s = EmergentBehaviourBackground.field_t;
             } else {
               this.field_s = dq.field_c;
             }
           } else {
-            this.field_s = sc.field_c;
+            this.field_s = ConditionalTextValue.field_c;
           }
         }
     }
 
-    final void a(String param0, byte param1) {
+    final void setStatusMessage(String param0, byte param1) {
         try {
           this.field_o = param0;
           if (param1 != -4) {
             this.e(79);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hq.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hq.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(byte param0, boolean param1, int param2) {
         if (param2 == 0) {
-          this.a(param1, this.field_A, StripedProgressBar.field_N, -6, this.a(0, (byte) 90) + this.a(0, false) >> 1);
+          this.drawFooterButton(param1, this.field_A, StripedProgressBar.field_N, -6, this.getRowLeft(0, (byte) 90) + this.getRowRight(0, false) >> 1);
         } else {
           super.a(this.field_s, param1, param2, StripedProgressBar.field_N, (byte) 99);
         }
@@ -446,11 +446,11 @@ final class GameResultsScreen extends MenuScreen {
           var3 = this.field_I;
           var4 = param1 ? 1 : 0;
           stackIn_8_0 = (!gq.d(104)) ? 0 : 12;
-          la.a(stackIn_8_0, var3, var4 != 0, -25528);
+          la.changeScreen(stackIn_8_0, var3, var4 != 0, -25528);
         } else {
           if (ValidationHelpWidget.field_Y) {
             var3 = param1 ? 1 : 0;
-            la.a(MidiPcmStream.field_t, -5, var3 != 0, -25528);
+            la.changeScreen(MidiPcmStream.field_t, -5, var3 != 0, -25528);
           }
           if (DateOfBirthValidator.field_i) {
             qj.a(false, 0, 11);
@@ -461,7 +461,7 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_D = null;
         field_q = null;
         if (param0 >= -37) {
@@ -470,7 +470,7 @@ final class GameResultsScreen extends MenuScreen {
         field_t = null;
     }
 
-    final void b(int param0) {
+    final void handleNavigation(int param0) {
         int var2;
         int var3;
         MenuInputState stackIn_16_0 = null;
@@ -480,11 +480,11 @@ final class GameResultsScreen extends MenuScreen {
         var3 = Pixelate.field_H ? 1 : 0;
         var2 = ke.field_a;
         if (!this.field_g.c((byte) 35)) {
-          if (this.field_g.field_j == -1 && (var2 == 98 ||
+          if (this.field_g.selectedIndex == -1 && (var2 == 98 ||
             var2 == 99)) {
             stackIn_16_0 = this.field_g;
             stackIn_16_1 = false;
-            if (!this.c(-118, 1)) {
+            if (!this.isRowEnabled(-118, 1)) {
               stackIn_17_2 = 0;
             } else {
               stackIn_17_2 = 1;
@@ -493,15 +493,15 @@ final class GameResultsScreen extends MenuScreen {
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (this.field_g.field_j == 0 &&
+            if (this.field_g.selectedIndex == 0 &&
               var2 == 97) {
-              if (!(!this.c(-119, 1))) {
+              if (!(!this.isRowEnabled(-119, 1))) {
                 this.field_g.a(false, 1);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (1 == this.field_g.field_j &&
+              if (1 == this.field_g.selectedIndex &&
                 var2 == 96) {
                 this.field_g.a(false, 0);
               }
@@ -509,7 +509,7 @@ final class GameResultsScreen extends MenuScreen {
           }
         }
         if (param0 >= -35) {
-          GameResultsScreen.f((byte) -122);
+          GameResultsScreen.releaseStatics((byte) -122);
         }
         this.field_g.b((byte) -71);
     }

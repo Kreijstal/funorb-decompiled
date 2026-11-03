@@ -14,13 +14,13 @@ final class og extends IntrusiveNode {
 
     final static Sprite[] a(int param0, boolean param1, int param2, int param3, int param4) {
         if (param1) {
-          return ra.a(1, 1, param3, param0, 3, (byte) 126, param4, param2, 1);
+          return ra.buildNineSliceSprites(1, 1, param3, param0, 3, (byte) 126, param4, param2, 1);
         }
         og.a(65, true, -72, -125, 47);
-        return ra.a(1, 1, param3, param0, 3, (byte) 126, param4, param2, 1);
+        return ra.buildNineSliceSprites(1, 1, param3, param0, 3, (byte) 126, param4, param2, 1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         int var1 = 25 / ((param0 + 44) / 41);
     }
@@ -29,7 +29,7 @@ final class og extends IntrusiveNode {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

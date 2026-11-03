@@ -6,15 +6,15 @@ final class CachedTextLayout extends TextLayout {
     static String field_n;
     static Sprite[] field_p;
     static String field_g;
-    private int field_i;
+    private int cachedHorizontalAlignment;
     static String field_j;
     static int field_h;
     private int field_e;
     private int field_q;
     private int field_k;
-    private String field_m;
-    private boolean field_o;
-    private BitmapFont field_l;
+    private String cachedText;
+    private boolean singleLineMode;
+    private BitmapFont cachedFont;
 
     final static void a(int param0, int param1, byte param2, boolean param3, int param4, int param5, LobbyGame param6, int param7) {
         int stackIn_4_0 = 0;
@@ -22,7 +22,7 @@ final class CachedTextLayout extends TextLayout {
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
         int stackIn_36_0 = 0;
-        lo[][] stackIn_41_0 = null;
+        IconTextComponent[][] stackIn_41_0 = null;
         int stackIn_42_1 = 0;
         int stackIn_52_0 = 0;
         int stackIn_65_0 = 0;
@@ -36,7 +36,7 @@ final class CachedTextLayout extends TextLayout {
         String stackIn_116_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
-        lo[] var8 = null;
+        IconTextComponent[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int[] var10_ref_int__ = null;
@@ -44,10 +44,10 @@ final class CachedTextLayout extends TextLayout {
         int var11 = 0;
         int var12 = 0;
         int var13_int = 0;
-        lo var13 = null;
+        IconTextComponent var13 = null;
         int var14 = 0;
         int var15 = 0;
-        lo[] var16 = null;
+        IconTextComponent[] var16 = null;
         int[] var17 = null;
         int[] var18 = null;
         int stackIn_25_0Lifetime1;
@@ -93,7 +93,7 @@ final class CachedTextLayout extends TextLayout {
                               if (var13_int >= param7) {
                                 break scanLoop3;
                               }
-                              if ((kf.field_o[var13_int] & 255) != var14) {
+                              if ((TimerBarDemo.field_o[var13_int] & 255) != var14) {
                                 break scanLoop3;
                               }
                             }
@@ -139,7 +139,7 @@ final class CachedTextLayout extends TextLayout {
                     stackIn_36_0 = var8_int;
                   }
                   if (stackIn_36_0 != 0) {
-                    pb.field_f = true;
+                    PictureStrip.field_f = true;
                   }
                   if (var15 == 0) {
                     decompiledFrameCompleted1 = false;
@@ -219,7 +219,7 @@ final class CachedTextLayout extends TextLayout {
                       }
                       if (-1 != param7 ||
                         var15 != 0) {
-                        kf.field_o[param7] = (byte)var11Lifetime1;
+                        TimerBarDemo.field_o[param7] = (byte)var11Lifetime1;
                       }
                       if (param7 != -1 ||
                         LinkButtonPainter.field_a.length != 1) {
@@ -255,7 +255,7 @@ final class CachedTextLayout extends TextLayout {
                         var10Lifetime1 = 1;
                         CachedTextLayout.a(param0, param1, (byte) 124, param3, param4, param5, param6, 1 + param7);
                       }
-                      if (pb.field_f) {
+                      if (PictureStrip.field_f) {
                         return;
                       }
                       var11Lifetime1++;
@@ -274,12 +274,12 @@ final class CachedTextLayout extends TextLayout {
                         break regionExit1;
                       }
                       if (stackIn_110_0 != stackIn_110_1) {
-                        kf.field_o[param7] = (byte)var11Lifetime1;
+                        TimerBarDemo.field_o[param7] = (byte)var11Lifetime1;
                       } else {
                         param4 = var11Lifetime1;
                       }
                       CachedTextLayout.a(param0, param1, (byte) 83, param3, param4, param5, param6, param7 + 1);
-                      if (pb.field_f) {
+                      if (PictureStrip.field_f) {
                         return;
                       }
                       var11Lifetime1++;
@@ -308,11 +308,11 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_116_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(',').append(param7).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(',').append(param7).append(')').toString());
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_n = null;
         field_j = null;
@@ -327,13 +327,13 @@ final class CachedTextLayout extends TextLayout {
         if (param1 != 34) {
           field_n = (String) null;
         }
-        oj var2 = td.field_b;
+        BirthDateEntryPanel var2 = td.field_b;
         if (var2 != null) {
-          var2.a(ui.field_i.screenY, ui.field_i.field_tb, 104);
+          var2.drawLayers(ui.field_i.screenY, ui.field_i.field_tb, 104);
         }
     }
 
-    final void a(int param0, int param1, String param2, BitmapFont param3, int param4, int param5, int param6, int param7) {
+    final void layoutParagraph(int param0, int param1, String param2, BitmapFont param3, int param4, int param5, int param6, int param7) {
         TextLayoutLine stackIn_34_0;
         TextLayoutLine stackIn_34_1;
         int stackIn_34_2;
@@ -368,25 +368,25 @@ final class CachedTextLayout extends TextLayout {
             this.lines = null;
             return;
           }
-          if (param3 == this.field_l &&
-            !this.field_o &&
-            param5 == this.field_i &&
+          if (param3 == this.cachedFont &&
+            !this.singleLineMode &&
+            param5 == this.cachedHorizontalAlignment &&
             ~param6 == ~this.field_f &&
             this.field_e == param7 &&
             this.field_q == param4 &&
             ~this.field_k == ~param0 &&
-            null != this.field_m &&
-            this.field_m.equals(param2)) {
+            null != this.cachedText &&
+            this.cachedText.equals(param2)) {
             return;
           }
           this.field_q = param4;
           this.field_f = param6;
-          this.field_l = param3;
-          this.field_i = param5;
+          this.cachedFont = param3;
+          this.cachedHorizontalAlignment = param5;
           this.field_e = param7;
           this.field_k = param0;
-          this.field_o = false;
-          this.field_m = param2;
+          this.singleLineMode = false;
+          this.cachedText = param2;
           var16 = new String[1 + param3.wrappedLineCount(param2, param0)];
           var17 = var16;
           var10 = Math.max(1, param3.wrapText(param2, new int[]{param0}, var17));
@@ -475,11 +475,11 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    final void a(String param0, boolean param1, int param2, BitmapFont param3, int param4) {
+    final void layoutCenteredLine(String param0, boolean param1, int param2, BitmapFont param3, int param4) {
         TextLayoutLine var8 = null;
         int var7 = 0;
         if (param0 == null) {
@@ -489,21 +489,21 @@ final class CachedTextLayout extends TextLayout {
         if (param1) {
           field_g = (String) null;
         }
-        if (this.field_l == param3 && this.field_o && 1 == this.field_i && null != this.field_m &&
-          this.field_m.equals(param0)) {
+        if (this.cachedFont == param3 && this.singleLineMode && 1 == this.cachedHorizontalAlignment && null != this.cachedText &&
+          this.cachedText.equals(param0)) {
           return;
         }
         try {
-          this.field_i = 1;
-          this.field_o = true;
-          this.field_l = param3;
+          this.cachedHorizontalAlignment = 1;
+          this.singleLineMode = true;
+          this.cachedFont = param3;
           var8 = this.createSingleLine(param0, 0, param3, param2);
           var7 = param3.textWidth(param0);
           var8.field_g[0] = param4 - (var7 >> 1);
           var8.field_g[param0.length()] = param4 + (var7 >> 1);
           an.a(param3, 0, (byte) -92, var8, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "no.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "no.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -592,16 +592,16 @@ final class CachedTextLayout extends TextLayout {
             var7.field_K = 0;
             if (!AccountRegistrationPanel.m(param1 + 98)) {
               var9_ref_String = io.field_c.field_pc;
-              VerticalScrollbar.field_Qb.field_cb = sd.a(fk.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
-              nk.field_e.a(ai.field_A.height - 40, 40, 0, param1 + 255, ai.field_A.field_K);
-              nk.field_e.field_cb = sd.a(qh.field_a, param1 + 23, new String[]{var9_ref_String});
+              VerticalScrollbar.field_Qb.field_cb = AlphaContainer.a(HowToPlayScreen.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
+              nk.field_e.setBounds(Bzip2State.field_A.height - 40, 40, 0, param1 + 255, Bzip2State.field_A.field_K);
+              nk.field_e.field_cb = AlphaContainer.a(qh.field_a, param1 + 23, new String[]{var9_ref_String});
               var8 = nk.field_e;
               decompiledFrameRemainder3 = (var19 != 0);
             }
             if (decompiledFrameRemainder3) {
               VerticalScrollbar.field_Qb.field_cb = DelegatingCanvas.field_g.toUpperCase();
-              var9 = (ai.field_A.field_K + 2) / 2;
-              wm.field_d.a(ai.field_A.height - 40, 40, 0, 256, var9 - 2);
+              var9 = (Bzip2State.field_A.field_K + 2) / 2;
+              wm.field_d.setBounds(Bzip2State.field_A.height - 40, 40, 0, 256, var9 - 2);
               if (io.field_c.field_ec <= io.field_c.field_mc) {
                 wm.field_d.field_cb = fo.field_m.toUpperCase();
                 wm.field_d.field_rb = false;
@@ -613,7 +613,7 @@ final class CachedTextLayout extends TextLayout {
                 wm.field_d.field_cb = WhirlpoolHasher.field_k.toUpperCase();
                 wm.field_d.field_rb = true;
               }
-              wm.field_d.field_zb = bf.field_k.field_zb;
+              wm.field_d.field_zb = PicturePreview.field_k.field_zb;
               if (ResizableModalPanel.field_X > 0) {
                 boolean decompiledSharedTail1 = (ResizableModalPanel.field_X != 1);
                 if (!decompiledSharedTail1) {
@@ -621,15 +621,15 @@ final class CachedTextLayout extends TextLayout {
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
-                  var10_ref_String = sd.a(d.field_a, 99, new String[]{Integer.toString(ResizableModalPanel.field_X)});
+                  var10_ref_String = AlphaContainer.a(d.field_a, 99, new String[]{Integer.toString(ResizableModalPanel.field_X)});
                 }
                 wm.field_d.field_cb = wm.field_d.field_cb + "<br>" + var10_ref_String;
-                if (0 == (16 & rb.field_o) &&
-                  !bm.field_o) {
-                  wm.field_d.field_zb = bf.field_k.field_ab;
+                if (0 == (16 & AchievementsScreen.field_o) &&
+                  !EmergentBehaviourBackground.field_o) {
+                  wm.field_d.field_zb = PicturePreview.field_k.field_ab;
                 }
               }
-              ep.field_a.a(-40 + ai.field_A.height, 40, var9, 256, -var9 + ai.field_A.field_K);
+              ep.field_a.setBounds(-40 + Bzip2State.field_A.height, 40, var9, 256, -var9 + Bzip2State.field_A.field_K);
               ep.field_a.field_cb = DateInputWidget.field_J.toUpperCase();
               var8 = ep.field_a;
               stackIn_21_0 = ep.field_a;
@@ -637,8 +637,8 @@ final class CachedTextLayout extends TextLayout {
               stackIn_21_0.field_rb = stackIn_22_1;
               var10 = 2;
               if (Checkbox.field_Z != null) {
-                if (kf.field_o == null) {
-                  kf.field_o = new byte[fj.field_b];
+                if (TimerBarDemo.field_o == null) {
+                  TimerBarDemo.field_o = new byte[fj.field_b];
                   lc.field_t = new boolean[fj.field_b];
                 }
                 var11_int = 0;
@@ -784,7 +784,7 @@ final class CachedTextLayout extends TextLayout {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = ae.field_c.field_Fb.children;
+                var17 = Vector3.field_c.content.children;
                 var18_ref = (LobbyPlayer) (var17.c(1504642273));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
@@ -860,13 +860,13 @@ final class CachedTextLayout extends TextLayout {
                   (decompiledFrameRemainder1)) {
                   ep.field_a.field_rb = false;
                   if (ep.field_a.field_R) {
-                    boolean decompiledSharedTail0 = (0 != nd.field_b.field_g.field_Jb);
+                    boolean decompiledSharedTail0 = (0 != nd.field_b.field_g.selectedTab);
                     if (!decompiledSharedTail0) {
                       up.field_o = CipherPacketBuffer.field_u;
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
-                      up.field_o = sd.a(li.field_b, 107, new String[]{fb.field_Gb});
+                      up.field_o = AlphaContainer.a(li.field_b, 107, new String[]{PairedTextColumns.field_Gb});
                     }
                   }
                   decompiledFrameRemainder3 = (var19 != 0);
@@ -911,7 +911,7 @@ final class CachedTextLayout extends TextLayout {
                 if (stackIn_162_0 == var10) {
                   var13_ref = ji.field_a;
                   if (var12 == 0) {
-                    var14 = sd.a(sm.field_n, 80, new String[]{(String) (var11)});
+                    var14 = AlphaContainer.a(sm.field_n, 80, new String[]{(String) (var11)});
                     if (var19 != 0) {
                       var14 = SpriteState.field_x + (String) (var11);
                     }
@@ -921,7 +921,7 @@ final class CachedTextLayout extends TextLayout {
                 } else {
                   var13_ref = aq.field_c;
                   if (var12 == 0) {
-                    var14 = sd.a(ff.field_b, 31, new String[]{(String) (var11)});
+                    var14 = AlphaContainer.a(ff.field_b, 31, new String[]{(String) (var11)});
                     if (var19 != 0) {
                       var14 = fg.field_b + (String) (var11);
                     }
@@ -938,43 +938,43 @@ final class CachedTextLayout extends TextLayout {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_cb = sd.a(AudioService.field_i, 100, new String[]{Integer.toString(var9)});
+              var8.field_cb = AlphaContainer.a(AudioService.field_i, 100, new String[]{Integer.toString(var9)});
             }
-            MatchingTextValidator.field_q.field_cb = sd.a(ReportAbuseDialog.field_Gb, param1 + 68, new String[]{Integer.toString(io.field_c.field_mc), Integer.toString(io.field_c.field_ec)});
+            MatchingTextValidator.field_q.field_cb = AlphaContainer.a(ReportAbuseDialog.field_Gb, param1 + 68, new String[]{Integer.toString(io.field_c.field_mc), Integer.toString(io.field_c.field_ec)});
           }
           stackIn_181_0 = ff.field_h;
           stackIn_181_1 = -28476;
-          stackIn_182_2 = (param4) && (!param3) && (!bm.field_o);
+          stackIn_182_2 = (param4) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_181_0).a(stackIn_181_1, stackIn_182_2);
-          stackIn_186_0 = ai.field_A;
+          stackIn_186_0 = Bzip2State.field_A;
           stackIn_186_1 = -28476;
-          stackIn_187_2 = (param4) && (!param3) && (!bm.field_o);
+          stackIn_187_2 = (param4) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_186_0).a(stackIn_186_1, stackIn_187_2);
           stackIn_191_0 = ra.field_e;
           stackIn_191_1 = -28476;
-          stackIn_192_2 = (param4) && (!param3) && (bm.field_o);
+          stackIn_192_2 = (param4) && (!param3) && (EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_191_0).a(stackIn_191_1, stackIn_192_2);
-          nd.field_b.field_g.b((byte) -122);
+          nd.field_b.field_g.processTabPresses((byte) -122);
           if (null != io.field_c) {
             if (0 != ValidatedTextWidget.field_kb.field_P) {
               qg.a(io.field_c.c((byte) 8), param2, false);
             }
             if (0 != wm.field_d.field_P) {
-              bm.field_o = true;
+              EmergentBehaviourBackground.field_o = true;
             }
             if (ep.field_a.field_P != 0) {
               of.field_c = true;
             }
             if (0 != ContentTransitionDialog.field_eb.field_P) {
-              bm.field_o = false;
+              EmergentBehaviourBackground.field_o = false;
             }
-            be.a(false, io.field_c, param2, -1);
+            LoginForm.a(false, io.field_c, param2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "no.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var5), "no.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -992,9 +992,9 @@ final class CachedTextLayout extends TextLayout {
         int var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
-          SoftwareRasterizer.d(244, 198, 367, 141, 0);
-          if (wg.field_g == null) {
+          SoftwareRasterizer.drawRectangle(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
+          if (Matrix3.field_g == null) {
             if (null != QuickChatCategory.field_A) {
               QuickChatCategory.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
@@ -1003,10 +1003,10 @@ final class CachedTextLayout extends TextLayout {
           if (param0 != -19308) {
             field_p = (Sprite[]) null;
           }
-          var5 = wg.field_g[ae.field_b];
+          var5 = Matrix3.field_g[Vector3.field_b];
           boolean decompiledSharedTail1 = (var5 == null);
           if (!decompiledSharedTail1) {
-            var5.b(245, 199);
+            var5.drawTransparent(245, 199);
             decompiledSharedTail1 = (var4 != 0);
           }
           if ((decompiledSharedTail1) &&
@@ -1014,7 +1014,7 @@ final class CachedTextLayout extends TextLayout {
             QuickChatCategory.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
           }
           if (ui.field_k > jn.field_q) {
-            var6 = wg.field_g[SpriteCheckboxPainter.field_b];
+            var6 = Matrix3.field_g[SpriteCheckboxPainter.field_b];
             if (var6 != null) {
               var2_int = jn.field_q * (var6.field_A + 60) / ui.field_k;
               var3 = var2_int - 30;
@@ -1032,8 +1032,8 @@ final class CachedTextLayout extends TextLayout {
             var2 = null;
             var3Lifetime1 = 0;
             while (true) {
-              if (var3Lifetime1 < wg.field_g.length) {
-                var7 = wg.field_g[var3Lifetime1];
+              if (var3Lifetime1 < Matrix3.field_g.length) {
+                var7 = Matrix3.field_g[var3Lifetime1];
                 stackIn_33_0 = null;
                 if (var4 == 0) {
                   if (stackIn_33_0 != var7 && (var7.field_A != 365 ||
@@ -1061,7 +1061,7 @@ final class CachedTextLayout extends TextLayout {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "no.P(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "no.P(" + param0 + ')');
         }
     }
 
@@ -1072,24 +1072,24 @@ final class CachedTextLayout extends TextLayout {
         return -SpriteCheckboxPainter.field_c + hm.a(64);
     }
 
-    final void a(BitmapFont param0, int param1, int param2, boolean param3, String param4) {
+    final void layoutLeftAlignedLine(BitmapFont param0, int param1, int param2, boolean param3, String param4) {
         TextLayoutLine var8 = null;
         TextLayoutLine var9 = null;
         if (param4 == null) {
           this.lines = null;
           return;
         }
-        if (this.field_l == param0 &&
-          this.field_o &&
-          this.field_i == 2 &&
-          this.field_m != null &&
-          this.field_m.equals(param4)) {
+        if (this.cachedFont == param0 &&
+          this.singleLineMode &&
+          this.cachedHorizontalAlignment == 2 &&
+          this.cachedText != null &&
+          this.cachedText.equals(param4)) {
           return;
         }
-        this.field_m = param4;
-        this.field_i = 2;
-        this.field_o = true;
-        this.field_l = param0;
+        this.cachedText = param4;
+        this.cachedHorizontalAlignment = 2;
+        this.singleLineMode = true;
+        this.cachedFont = param0;
         if (param3) {
           return;
         }
@@ -1100,7 +1100,7 @@ final class CachedTextLayout extends TextLayout {
           var9.field_g[param4.length()] = param2;
           an.a(param0, 0, (byte) -92, var9, param4);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "no.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "no.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1142,35 +1142,35 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
+    final void layoutLeftAligned(String param0, int param1, BitmapFont param2, int param3, int param4) {
         TextLayoutLine var7 = null;
         int var6_int = -72 % ((param4 + 70) / 49);
         if (param0 == null) {
           this.lines = null;
           return;
         }
-        if (this.field_l == param2 &&
-          this.field_o &&
-          0 == this.field_i &&
-          this.field_m != null &&
-          this.field_m.equals(param0)) {
+        if (this.cachedFont == param2 &&
+          this.singleLineMode &&
+          0 == this.cachedHorizontalAlignment &&
+          this.cachedText != null &&
+          this.cachedText.equals(param0)) {
           return;
         }
         try {
-          this.field_o = true;
-          this.field_l = param2;
-          this.field_i = 0;
-          this.field_m = param0;
+          this.singleLineMode = true;
+          this.cachedFont = param2;
+          this.cachedHorizontalAlignment = 0;
+          this.cachedText = param0;
           var7 = this.createSingleLine(param0, 0, param2, param1);
           var7.field_g[0] = param3;
           var7.field_g[param0.length()] = param2.textWidth(param0) + param3;
           an.a(param2, 0, (byte) -92, var7, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "no.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "no.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
     static int field_cb;
     private boolean field_db;
     private String field_kb;
-    private StripedProgressBar field_bb;
+    private StripedProgressBar activityBar;
     private boolean field_ab;
     static int field_fb;
     static SceneWidget field_eb;
@@ -33,13 +33,13 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             var3_int = ba.field_d.paragraphHeight(this.field_gb, 260, ba.field_d.maxAscent);
             this.a(150 + var3_int, (byte) -110, 300);
           }
-          this.field_bb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.activityBar = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_db = false;
-          this.field_bb.field_Y = true;
+          this.activityBar.field_Y = true;
           this.field_ab = false;
-          this.b(this.field_bb, 80);
+          this.addChild(this.activityBar, 80);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,35 +49,35 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final void o(int param0) {
         this.field_db = true;
-        this.field_bb.field_Y = false;
+        this.activityBar.field_Y = false;
         if (param0 != 30) {
           String var3 = (String) null;
           LoadingProgressDialog.a(true, (String) null, -92);
         }
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void drawDialogBackground(int param0, int param1, boolean param2) {
         if (!param2) {
           field_ib = (String) null;
-          super.a(param0, param1, param2);
+          super.drawDialogBackground(param0, param1, param2);
           ba.field_d.drawCentered(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
           if (this.field_gb != null) {
-            SoftwareRasterizer.b(param0 + 20, 120 + param1 - 7, 260, 8421504);
+            SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + param1 - 7, 260, 8421504);
             ba.field_d.drawParagraph(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.maxAscent);
             return;
           }
           return;
         }
-        super.a(param0, param1, param2);
+        super.drawDialogBackground(param0, param1, param2);
         ba.field_d.drawCentered(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
         if (this.field_gb == null) {
           return;
         }
-        SoftwareRasterizer.b(param0 + 20, 120 + param1 - 7, 260, 8421504);
+        SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + param1 - 7, 260, 8421504);
         ba.field_d.drawParagraph(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.maxAscent);
     }
 
-    final void a(String param0, float param1, int param2, boolean param3) {
+    final void setProgress(String param0, float param1, int param2, boolean param3) {
         RuntimeException runtimeException = null;
         int stackIn_3_0 = 0;
         boolean stackIn_7_1 = false;
@@ -91,12 +91,12 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             stackIn_7_1 = (param3);
             this.field_ab = stackIn_7_1;
             if (this.field_ab) {
-              this.field_bb.a((byte) 98, 8405024, 4210752);
-              this.field_bb.field_Y = true;
+              this.activityBar.a((byte) 98, 8405024, 4210752);
+              this.activityBar.field_Y = true;
             } else {
-              this.field_bb.a((byte) 92, 2113632, 4210752);
+              this.activityBar.a((byte) 92, 2113632, 4210752);
               if (this.field_db) {
-                this.field_bb.field_Y = false;
+                this.activityBar.field_Y = false;
               }
             }
           }
@@ -104,7 +104,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             return;
           }
           this.field_kb = param0;
-          this.field_bb.field_Q = (int)(param1 / 100.0f * 65536.0f);
+          this.activityBar.field_Q = (int)(param1 / 100.0f * 65536.0f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,7 +116,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -128,10 +128,10 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             String var4 = (String) null;
             LoadingProgressDialog.a(true, (String) null, -84);
           }
-          to.field_r = new AccountRequestDialog(wa.field_c, ba.field_d, param1, to.field_s, ke.field_d);
-          wa.field_c.b(param2 ^ 32140, to.field_r);
+          MainMenuScreen.field_r = new AccountRequestDialog(wa.field_c, ba.field_d, param1, MainMenuScreen.field_s, ke.field_d);
+          wa.field_c.b(param2 ^ 32140, MainMenuScreen.field_r);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ko.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ko.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

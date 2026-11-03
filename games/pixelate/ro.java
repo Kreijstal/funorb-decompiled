@@ -11,7 +11,7 @@ final class ro {
 
     final static void a(int param0, boolean param1) {
         CipherPacketBuffer var2 = aa.field_f;
-        var2.g(param0, 15514);
+        var2.writeOpcode(param0, 15514);
         var2.writeByte(160, 2);
         var2.writeByte(160, 4);
         if (param1) {
@@ -22,7 +22,7 @@ final class ro {
         var2.writeByte(160, DelegatingCanvas.a((byte) -102));
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         field_e = null;
         if (param0) {
@@ -35,7 +35,7 @@ final class ro {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = aa.field_f;
-        var2.g(param1, 15514);
+        var2.writeOpcode(param1, 15514);
         if (param0 > 124) {
           var2.writeByte(160, 1);
           var2.writeByte(160, 2);
@@ -43,7 +43,7 @@ final class ro {
         }
     }
 
-    final static void a(String[] args, int param1) {
+    final static void setNameSuggestions(String[] args, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -71,7 +71,7 @@ final class ro {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class ro {
           d.a(param16, param13, true, param11, param7, param2, param8, param6, (String[]) null, 1, param0, param12, param9, param10, param1, param4, param5, param15, param14);
           if (param3 != -15690) {
             var18 = (String[]) null;
-            ro.a((String[]) null, -104);
+            ro.setNameSuggestions((String[]) null, -104);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,7 +197,7 @@ final class ro {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -223,8 +223,8 @@ final class ro {
             qk.field_e = qk.field_e + 1;
           }
           var2_int = -1;
-          if (wg.field_g != null) {
-            var2_int = wg.field_g.length;
+          if (Matrix3.field_g != null) {
+            var2_int = Matrix3.field_g.length;
           } else {
             if (li.field_a != null) {
               var2_int = li.field_a.length;
@@ -234,29 +234,29 @@ final class ro {
             boolean decompiledFrameRemainder0 = true;
             if (ui.field_a > jn.field_q) {
               jn.field_q = jn.field_q + 1;
-              if (ui.field_k < jn.field_q && (null == wg.field_g ||
-                null == wg.field_g[ae.field_b])) {
+              if (ui.field_k < jn.field_q && (null == Matrix3.field_g ||
+                null == Matrix3.field_g[Vector3.field_b])) {
                 jn.field_q = jn.field_q - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (jn.field_q >= ui.field_a &&
-                  wg.field_g[(ae.field_b + 1) % var2_int] == null) {
+                  Matrix3.field_g[(Vector3.field_b + 1) % var2_int] == null) {
                   jn.field_q = jn.field_q - 1;
                 }
               }
             }
             if (ui.field_a <= jn.field_q) {
-              SpriteCheckboxPainter.field_b = ae.field_b;
+              SpriteCheckboxPainter.field_b = Vector3.field_b;
               if (!Match.field_e) {
-                ae.field_b = ae.field_b - 1;
-                if (ae.field_b < 0) {
-                  ae.field_b = ae.field_b + var2_int;
+                Vector3.field_b = Vector3.field_b - 1;
+                if (Vector3.field_b < 0) {
+                  Vector3.field_b = Vector3.field_b + var2_int;
                 }
               } else {
-                ae.field_b = ae.field_b + 1;
-                if (ae.field_b >= var2_int) {
-                  ae.field_b = ae.field_b - var2_int;
+                Vector3.field_b = Vector3.field_b + 1;
+                if (Vector3.field_b >= var2_int) {
+                  Vector3.field_b = Vector3.field_b - var2_int;
                 }
               }
               jn.field_q = jn.field_q - ui.field_a;
@@ -289,8 +289,8 @@ final class ro {
             }
             if (var4 == 0 &&
               jn.field_q > ui.field_k &&
-              bg.field_k > var3 &&
-              var3 + ScrollContainer.field_Kb.field_E > bg.field_k) {
+              StatusBar.field_k > var3 &&
+              var3 + ScrollContainer.field_Kb.field_E > StatusBar.field_k) {
               if (ProxyAuthenticationException.field_d > -ScrollContainer.field_Kb.field_F + 269 &&
                 269 > ProxyAuthenticationException.field_d) {
                 jn.field_q = ui.field_k;
@@ -302,13 +302,13 @@ final class ro {
             }
           }
           if (param1) {
-            NameSuggestionsPanel.field_I.a(el.a(ji.field_c, (byte) 126, BufferedRandomAccessFile.field_a), el.a(bg.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
+            NameSuggestionsPanel.field_I.updatePointer(el.a(ji.field_c, (byte) 126, BufferedRandomAccessFile.field_a), el.a(StatusBar.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
             if (NameSuggestionsPanel.field_I.isActivated(19)) {
-              if (NameSuggestionsPanel.field_I.field_j == 0) {
+              if (NameSuggestionsPanel.field_I.selectedIndex == 0) {
                 stackIn_63_0 = 3;
                 return stackIn_63_0;
               }
-              if (NameSuggestionsPanel.field_I.field_j == 1) {
+              if (NameSuggestionsPanel.field_I.selectedIndex == 1) {
                 stackIn_67_0 = 2;
                 return stackIn_67_0;
               }
@@ -317,11 +317,11 @@ final class ro {
             while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(stackIn_70_0)) {
               NameSuggestionsPanel.field_I.a(99, 0);
               if (NameSuggestionsPanel.field_I.isActivated(57)) {
-                if (NameSuggestionsPanel.field_I.field_j == 0) {
+                if (NameSuggestionsPanel.field_I.selectedIndex == 0) {
                   stackIn_75_0 = 3;
                   return stackIn_75_0;
                 }
-                if (NameSuggestionsPanel.field_I.field_j == 1) {
+                if (NameSuggestionsPanel.field_I.selectedIndex == 1) {
                   stackIn_79_0 = 1;
                   return stackIn_79_0;
                 }
@@ -339,7 +339,7 @@ final class ro {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ro.D(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "ro.D(" + param0 + ',' + param1 + ')');
         }
     }
 

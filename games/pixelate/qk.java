@@ -7,7 +7,7 @@ final class qk {
     static int field_e;
     private int field_b;
     private int field_h;
-    static dj field_g;
+    static ValidationState field_g;
     private int field_f;
     private int field_a;
     static int field_i;
@@ -18,9 +18,9 @@ final class qk {
         int var2 = 0;
         if (this.field_f < 12) {
           var2 = 120 - this.field_f * 10;
-          AccountRequestDialog.field_tb[this.field_b].a(42 * this.field_h + 148, 42 * (-1 + this.field_a) - 126, var2);
+          AccountRequestDialog.field_tb[this.field_b].drawAlpha(42 * this.field_h + 148, 42 * (-1 + this.field_a) - 126, var2);
         }
-        AccountRequestDialog.field_tb[this.field_b].a(148 + this.field_h * 42, -126 + 42 * this.field_a, 160);
+        AccountRequestDialog.field_tb[this.field_b].drawAlpha(148 + this.field_h * 42, -126 + 42 * this.field_a, 160);
         if (param0 >= 43) {
           return;
         }
@@ -48,7 +48,7 @@ final class qk {
         this.d(6);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 6) {
           field_d = null;
           field_c = null;
@@ -56,13 +56,13 @@ final class qk {
           return;
         }
         String var2 = (String) null;
-        qk.a((String) null, (String) null, (String) null, -71);
+        qk.replaceAll((String) null, (String) null, (String) null, -71);
         field_d = null;
         field_c = null;
         field_g = null;
     }
 
-    final static String a(String param0, String param1, String param2, int param3) {
+    final static String replaceAll(String param0, String param1, String param2, int param3) {
         int var5 = Pixelate.field_H ? 1 : 0;
         int var4 = param0.indexOf(param1);
         while (var4 != -1) {
@@ -72,16 +72,16 @@ final class qk {
         if (param3 < -122) {
           return param0;
         }
-        qk.a(-3);
+        qk.releaseStatics(-3);
         return param0;
     }
 
     private final void d(int param0) {
         this.field_f = 0;
         if (param0 == -16289) {
-          this.field_h = ok.a(ea.field_b, -104, 6);
+          this.field_h = JavaRandomHelpers.a(ea.field_b, -104, 6);
           this.field_a = 0;
-          this.field_b = ok.a(ea.field_b, -120, 6);
+          this.field_b = JavaRandomHelpers.a(ea.field_b, -120, 6);
           return;
         }
     }
@@ -93,7 +93,7 @@ final class qk {
 
     static {
         field_e = 0;
-        field_g = new dj();
+        field_g = new ValidationState();
         field_c = new int[4];
     }
 }

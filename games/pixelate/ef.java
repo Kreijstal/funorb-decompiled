@@ -21,7 +21,7 @@ final class ef {
         var2.readInt(0);
         var2.readInt(0);
         var2.readInt(0);
-        var1.c(2779);
+        var1.unlink(2779);
         if (param0 != -14439) {
           ef.b(false);
         }
@@ -69,9 +69,9 @@ final class ef {
         var26 = Pixelate.field_H ? 1 : 0;
         try {
           var28 = MusicCrossfadeStream.field_o;
-          var2 = var28.f(255);
+          var2 = var28.readUnsignedByte(255);
           if (var2 == 0) {
-            var3 = var28.a((byte) 86);
+            var3 = var28.readUnsignedShort((byte) 86);
             var4 = (ue) (DialWidgetPainter.field_c.c(1504642273));
             while (var4 != null) {
               if (var4.field_o != var3) {
@@ -84,7 +84,7 @@ final class ef {
               na.a(true);
               return;
             }
-            var5 = var28.f(255);
+            var5 = var28.readUnsignedByte(255);
             if (0 != var5) {
               var6 = var4.field_m;
               rh.field_u[0].field_e = ModalStack.field_J;
@@ -92,10 +92,10 @@ final class ef {
               var7 = var4.field_s;
               rh.field_u[0].field_c = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                rh.field_u[var8_int].field_e = var28.h(5);
+                rh.field_u[var8_int].field_e = var28.readString(5);
                 rh.field_u[var8_int].field_c = false;
-                if (1 == var28.f(255)) {
-                  rh.field_u[var8_int].field_f = var28.h(5);
+                if (1 == var28.readUnsignedByte(255)) {
+                  rh.field_u[var8_int].field_f = var28.readString(5);
                 } else {
                   rh.field_u[var8_int].field_f = null;
                 }
@@ -116,12 +116,12 @@ final class ef {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.f(255);
+              var18 = var28.readUnsignedByte(255);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var28.f(255);
+                  var20 = var28.readUnsignedByte(255);
                   var21 = rh.field_u[var20].field_e;
-                  var22 = var28.a(false);
+                  var22 = var28.readLong(false);
                   var24 = var28.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
@@ -165,10 +165,10 @@ final class ef {
               }
             }
             var4.field_n = true;
-            var4.c(2779);
+            var4.unlink(2779);
           } else if (var2 == 1) {
-            var3 = var28.a((byte) -125);
-            var4_long = var28.a(false);
+            var3 = var28.readUnsignedShort((byte) -125);
+            var4_long = var28.readLong(false);
             var6_ref_rh = (rh) (MenuScreen.field_b.c(1504642273));
             while (var6_ref_rh != null) {
               if (var3 != var6_ref_rh.field_o) {
@@ -182,23 +182,23 @@ final class ef {
               return;
             }
             var6_ref_rh.field_q = var4_long;
-            var6_ref_rh.c(2779);
+            var6_ref_rh.unlink(2779);
           } else {
-            CheckboxPainter.a(1, "HS1: " + jm.b(-63), (Throwable) null);
+            CheckboxPainter.reportClientError(1, "HS1: " + jm.b(-63), (Throwable) null);
             na.a(!param0);
           }
           if (param0) {
-            ef.a(false);
+            ef.releaseStatics(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ef.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ef.C(" + param0 + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         if (!param0) {
           return;

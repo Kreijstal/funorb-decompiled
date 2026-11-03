@@ -14,7 +14,7 @@ final class fq extends MenuScreen {
         field_o = null;
     }
 
-    final int b(int param0, int param1) {
+    final int getRowY(int param0, int param1) {
         int var3 = -58 % ((-13 - param0) / 37);
         if (ArrayWidgetContainer.a((byte) 88)) {
           return (this.field_i >> 1) + this.field_d;
@@ -29,7 +29,7 @@ final class fq extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final int a(int param0, byte param1) {
+    final int getRowLeft(int param0, byte param1) {
         if (param1 != 90) {
           return 74;
         }
@@ -40,7 +40,7 @@ final class fq extends MenuScreen {
         return this.field_m + var3 * 290;
     }
 
-    final void b(int param0) {
+    final void handleNavigation(int param0) {
         int var2;
         int var3;
         int var4;
@@ -51,7 +51,7 @@ final class fq extends MenuScreen {
         }
         boolean decompiledFrameRemainder0 = true;
         if (!this.field_g.c((byte) 35)) {
-          var2 = this.field_g.field_j;
+          var2 = this.field_g.selectedIndex;
           var3 = ke.field_a;
           if (var2 == -1 && (var3 == 96 ||
             var3 == 97 ||
@@ -128,7 +128,7 @@ final class fq extends MenuScreen {
           }
           if (param0.field_d != 0 ||
             param0.field_e != 0) {
-            for (var2_int = 0; var2_int < sd.field_L; var2_int++) {
+            for (var2_int = 0; var2_int < AlphaContainer.field_L; var2_int++) {
               var3 = MenuScreen.field_e[var2_int];
               if (var3.field_j == 2 &&
                 var3.field_d == param0.field_d &&
@@ -143,7 +143,7 @@ final class fq extends MenuScreen {
             up.field_h = param0.field_l;
             hm.field_b = param0.field_j;
           }
-          vd.a(false, param0);
+          vd.appendChatHistory(false, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,39 +155,39 @@ final class fq extends MenuScreen {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final int a(int param0, boolean param1) {
+    final int getRowRight(int param0, boolean param1) {
         if (param1) {
           field_q = -11;
         }
         int var3 = (-(2 * this.field_m) + 640) / 2;
         if (!ArrayWidgetContainer.a((byte) 116)) {
-          return this.a(param0, (byte) 90) + var3;
+          return this.getRowLeft(param0, (byte) 90) + var3;
         }
         if (0 == param0) {
-          return this.a(param0, (byte) 90) + 350;
+          return this.getRowLeft(param0, (byte) 90) + 350;
         }
-        return 100 + this.a(param0, (byte) 90);
+        return 100 + this.getRowLeft(param0, (byte) 90);
     }
 
-    final void c(byte param0) {
-        la.a(this.field_l, TickClock.field_a, false, -25528);
+    final void onCancel(byte param0) {
+        la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
         if (param0 >= -13) {
           field_q = -93;
         }
     }
 
     final static void g(byte param0) {
-        ql.a(AudioService.a(13867), -7624);
+        GreenGrowTheRushesBackground.a(AudioService.a(13867), -7624);
         if (param0 >= -46) {
           fq.g((byte) -70);
         }
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int stackIn_15_0 = 0;
         String stackIn_28_0 = null;
         String var2;
@@ -210,8 +210,8 @@ final class fq extends MenuScreen {
         String var2Lifetime1;
         regionExit1: {
           var16 = Pixelate.field_H ? 1 : 0;
-          NumericDateInputWidget.field_W[5].b(0, 45);
-          this.b((byte) -71);
+          NumericDateInputWidget.field_W[5].drawTransparent(0, 45);
+          this.drawRows((byte) -71);
           this.d((byte) -63);
           if (ArrayWidgetContainer.a((byte) 74)) {
             var2 = wo.field_a;
@@ -226,14 +226,14 @@ final class fq extends MenuScreen {
                 var2 = wo.field_a;
                 var5 = var4.field_r[of.field_a];
                 var20 = var4.field_l[of.field_a];
-                var7 = ge.a(wh.field_p, var4, of.field_a, -7402);
+                var7 = ge.a(HighscoresScreen.field_p, var4, of.field_a, -7402);
                 var8 = 16777215;
                 var9 = 0;
                 var10 = 16711680;
                 var11 = var3_ref_ob.maxAscent + 150;
                 var3_ref_ob.drawRightAlignedText(kh.field_b, 150, var11, 0, 0);
                 var3_ref_ob.drawText(ij.field_q, 170, var11, 0, 0);
-                var3_ref_ob.drawRightAlignedText(lo.field_Kb, 500, var11, 0, 0);
+                var3_ref_ob.drawRightAlignedText(IconTextComponent.field_Kb, 500, var11, 0, 0);
                 var11 += 20;
                 for (var12 = 0; var12 < 10; var12++) {
                   if (var5[var12] != null) {
@@ -248,9 +248,9 @@ final class fq extends MenuScreen {
                   }
                   var11 += 15;
                 }
-                if (((null != wh.field_p)) &&
+                if (((null != HighscoresScreen.field_p)) &&
                   ((var7 == -1))) {
-                  var12Lifetime1 = wh.field_p.field_k[0];
+                  var12Lifetime1 = HighscoresScreen.field_p.field_k[0];
                   qj.field_e.drawText(ModalStack.field_J, 180, var11, var8, var9);
                   qj.field_e.drawRightAlignedText(Integer.toString(var12Lifetime1), 480, var11, var8, var9);
                 }

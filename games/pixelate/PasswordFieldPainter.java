@@ -30,11 +30,11 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_z = null;
         field_y = null;
         if (param0 != 8192) {
@@ -82,7 +82,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -12,7 +12,7 @@ final class of {
     static wm field_e;
     static SceneWidget field_i;
 
-    final static int a(double param0, int param1) {
+    final static int toFixedPoint(double param0, int param1) {
         if (param1 != 65536) {
           field_i = (SceneWidget) null;
           return (int)(65536.0 * param0);
@@ -20,7 +20,7 @@ final class of {
         return (int)(65536.0 * param0);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 <= 59) {
           return;
@@ -38,9 +38,9 @@ final class of {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            of.a(1.9411644295127344, -72);
+            of.toFixedPoint(1.9411644295127344, -72);
           }
-          stackIn_3_0 = ui.a(true, param0, 0, param0.length);
+          stackIn_3_0 = ui.decodeText(true, param0, 0, param0.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,7 +52,7 @@ final class of {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -70,7 +70,7 @@ final class ck {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -104,14 +104,14 @@ final class ck {
         int var4;
         int var5;
         float var6;
-        this.field_f = ok.a(ea.field_b, -101, 50) + 20;
-        this.field_d = 1.5f + (float)ok.a(ea.field_b, -125, 100) / 100.0f;
-        stackIn_3_0 = (ok.a(ea.field_b, param0 ^ 22979, 2) != 1) ? 0 : 1;
+        this.field_f = JavaRandomHelpers.a(ea.field_b, -101, 50) + 20;
+        this.field_d = 1.5f + (float)JavaRandomHelpers.a(ea.field_b, -125, 100) / 100.0f;
+        stackIn_3_0 = (JavaRandomHelpers.a(ea.field_b, param0 ^ 22979, 2) != 1) ? 0 : 1;
         var2 = stackIn_3_0;
-        stackIn_6_0 = (ok.a(ea.field_b, -115, 2) != 1) ? 0 : 1;
+        stackIn_6_0 = (JavaRandomHelpers.a(ea.field_b, -115, 2) != 1) ? 0 : 1;
         var3 = stackIn_6_0;
         if (var2 == 0) {
-          this.field_h = (float)(-100 + ok.a(ea.field_b, param0 ^ 22992, 740));
+          this.field_h = (float)(-100 + JavaRandomHelpers.a(ea.field_b, param0 ^ 22992, 740));
           if (var3 != 0) {
             stackIn_14_1 = 480.0f;
           } else {
@@ -125,7 +125,7 @@ final class ck {
             stackIn_10_1 = 640.0f;
           }
           this.field_h = stackIn_10_1;
-          this.field_a = (float)(ok.a(ea.field_b, -109, 580) - 100);
+          this.field_a = (float)(JavaRandomHelpers.a(ea.field_b, -109, 580) - 100);
         }
         var4 = 320 - (int)this.field_h;
         var5 = 240 - (int)this.field_a;
@@ -163,15 +163,15 @@ final class ck {
             var5 = 5;
           }
           if (SpriteCheckboxPainter.field_d) {
-            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var5, var3, var4);
+            SoftwareRasterizer.fillRoundedRectangleBlended((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var5, var3, var4);
           } else {
-            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, var4);
+            SoftwareRasterizer.fillRectangleAlpha((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, var4);
           }
         } else {
           if (!SpriteCheckboxPainter.field_d) {
-            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, 100);
+            SoftwareRasterizer.fillRectangleAlpha((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, 100);
           } else {
-            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, 5, var3, 32);
+            SoftwareRasterizer.fillRoundedRectangleBlended((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, 5, var3, 32);
           }
         }
     }
@@ -200,17 +200,17 @@ final class ck {
           DraggableWidget.field_I = new SceneWidget(0L, (SceneWidget) null);
           if (param2 == null) {
             var10 = (Throwable) null;
-            CheckboxPainter.a(1, "QC1", (Throwable) null);
+            CheckboxPainter.reportClientError(1, "QC1", (Throwable) null);
             return;
           }
           param2.discardPackedGroups = false;
           param2.field_e = 0;
-          StatefulTextPainter.field_y = new il(var3_int, param2, param2);
-          jd.field_k = new u(var3_int, param2, param2, new dn());
+          StatefulTextPainter.field_y = new QuickChatCategoryCache(var3_int, param2, param2);
+          jd.field_k = new QuickChatPhraseCache(var3_int, param2, param2, new dn());
           var4 = fl.c(-3060);
           if (var4 == null) {
             var11 = (Throwable) null;
-            CheckboxPainter.a(1, "QC2", (Throwable) null);
+            CheckboxPainter.reportClientError(1, "QC2", (Throwable) null);
             return;
           }
           oo.a(-1, var4);
@@ -222,12 +222,12 @@ final class ck {
           var6 = SoftwareRasterizer.field_d;
           var16 = SoftwareRasterizer.field_k;
           fe.field_b = new Sprite(10, 14);
-          fe.field_b.c();
+          fe.field_b.makeRasterTarget();
           for (var8 = 2; var8 < 7; var8++) {
-            SoftwareRasterizer.g(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
-          SoftwareRasterizer.a(var16, var5, var6);
-          ContextActionMenu.field_Rb = BoundedRandomAccessFile.a(ue.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
+          SoftwareRasterizer.setTarget(var16, var5, var6);
+          ContextActionMenu.field_Rb = BoundedRandomAccessFile.buildQuickChatCategoryMenu(ue.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
           DraggableWidget.field_I.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -246,7 +246,7 @@ final class ck {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class ck {
               if (!param0) {
                 return true;
               }
-              var3 = (String) (cq.a("getcookies", (byte) -113, param1));
+              var3 = (String) (JavaScriptBridge.callWindowFunction("getcookies", (byte) -113, param1));
               var4 = Puzzle.a(var3, (byte) -52, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -300,7 +300,7 @@ final class ck {
             } else {
               stackIn_23_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -312,9 +312,9 @@ final class ck {
     ck() {
         int var1;
         this.a(-22970);
-        var1 = ok.a(ea.field_b, -128, 250);
+        var1 = JavaRandomHelpers.a(ea.field_b, -128, 250);
         if (var1 >= 180) {
-          this.field_f = this.field_f + ok.a(ea.field_b, -116, 50);
+          this.field_f = this.field_f + JavaRandomHelpers.a(ea.field_b, -116, 50);
         } else {
           this.field_f = 0;
           this.field_a = this.field_a + this.field_e * (float)var1;

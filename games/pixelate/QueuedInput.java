@@ -48,7 +48,7 @@ final class QueuedInput extends IntrusiveNode {
             var13 = param4;
             var14 = param7;
             var15 = 8355711 & var17[var11] >> 1;
-            var10[var11] = (cm.a(33423531, var13) >> 9) + cm.a(var12 >> 1, 16711680) + cm.a(255, var14 >> 17) + var15;
+            var10[var11] = (cm.bitAnd(33423531, var13) >> 9) + cm.bitAnd(var12 >> 1, 16711680) + cm.bitAnd(255, var14 >> 17) + var15;
             param1++;
             param7 = param7 + param6;
             param4 = param4 + param9;
@@ -64,7 +64,7 @@ final class QueuedInput extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -110,12 +110,12 @@ final class QueuedInput extends IntrusiveNode {
               } else {
                 var5Lifetime6 = var8 + "; Expires=" + SoundCache.a(10, hm.a(64) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
-              cq.a(param2, (byte) -121, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluateScript(param2, (byte) -121, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            ib.a(param2, false);
+            ib.updatePageLinks(param2, false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -133,7 +133,7 @@ final class QueuedInput extends IntrusiveNode {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -167,7 +167,7 @@ final class QueuedInput extends IntrusiveNode {
             if (!(-MusicCrossfadeStream.field_o.position + param0 >= var2_int)) {
               var2_int = param0 - MusicCrossfadeStream.field_o.position;
             }
-            NodeHashTableIterator.field_e.a(MusicCrossfadeStream.field_o.payload, MusicCrossfadeStream.field_o.position, (byte) 119, var2_int);
+            NodeHashTableIterator.field_e.readFully(MusicCrossfadeStream.field_o.payload, MusicCrossfadeStream.field_o.position, (byte) 119, var2_int);
             SpriteCheckboxPainter.field_c = hm.a(64);
             MusicCrossfadeStream.field_o.position = MusicCrossfadeStream.field_o.position + var2_int;
             if (param0 > MusicCrossfadeStream.field_o.position) {
@@ -202,21 +202,21 @@ final class QueuedInput extends IntrusiveNode {
           if (param0 > -111) {
             QueuedInput.a(-27);
           }
-          aj.field_n = param1.a((byte) -121) << 5;
-          var2_int = param1.f(255);
+          aj.field_n = param1.readUnsignedShort((byte) -121) << 5;
+          var2_int = param1.readUnsignedByte(255);
           bq.field_c = (7 & var2_int) << 18;
           aj.field_n = aj.field_n + (var2_int >> 3);
-          bq.field_c = bq.field_c + (param1.a((byte) 47) << 2);
-          var2_intLifetime1 = param1.f(255);
+          bq.field_c = bq.field_c + (param1.readUnsignedShort((byte) 47) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(255);
           bq.field_c = bq.field_c + (var2_intLifetime1 >> 6);
           of.field_g = var2_intLifetime1 << 15 & 2064384;
-          of.field_g = of.field_g + (param1.f(255) << 7);
-          var2_intLifetime2 = param1.f(255);
+          of.field_g = of.field_g + (param1.readUnsignedByte(255) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(255);
           of.field_b = var2_intLifetime2 << 16 & 65536;
           of.field_g = of.field_g + (var2_intLifetime2 >> 1);
-          of.field_b = of.field_b + param1.a((byte) 96);
+          of.field_b = of.field_b + param1.readUnsignedShort((byte) 96);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

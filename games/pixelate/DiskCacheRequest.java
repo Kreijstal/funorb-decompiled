@@ -7,7 +7,7 @@ final class DiskCacheRequest extends ArchiveRequest {
     int field_C;
     byte[] field_D;
     static boolean field_I;
-    static pb field_H;
+    static PictureStrip field_H;
 
     final static String b(boolean param0) {
         if (param0) {
@@ -23,7 +23,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         return ModalStack.field_J;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 100) {
           return;
         }
@@ -81,7 +81,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         Sprite var30Lifetime5;
         Sprite var30Lifetime6;
         try {
-          em.a((String) null, 0L, (String) null, -1, param1, -163, (ScrollContainer) null, (int[]) null, param2);
+          em.openContextMenu((String) null, 0L, (String) null, -1, param1, -163, (ScrollContainer) null, (int[]) null, param2);
           if (0 == param2) {
             var11 = ProxySocketConnector.field_n;
             var12 = Checkbox.field_V[0];
@@ -93,7 +93,7 @@ final class DiskCacheRequest extends ArchiveRequest {
             var15 = Checkbox.field_V[1];
             var30Lifetime3 = var15;
             var30Lifetime4 = var15;
-            var16 = ap.field_b;
+            var16 = IntKeyLookup.field_b;
             var14.field_b.addIconAction(param0 + 13, 12, var15, var16);
             var17 = ProxySocketConnector.field_n;
             var18 = Checkbox.field_V[2];
@@ -105,7 +105,7 @@ final class DiskCacheRequest extends ArchiveRequest {
           if (1 == param2) {
             var20 = ProxySocketConnector.field_n;
             var21 = Checkbox.field_V[0];
-            var22 = bm.field_m;
+            var22 = EmergentBehaviourBackground.field_m;
             var20.field_b.addIconAction(param0 + 13, 11, var21, var22);
             var23 = ProxySocketConnector.field_n;
             var24 = Checkbox.field_V[1];
@@ -136,11 +136,11 @@ final class DiskCacheRequest extends ArchiveRequest {
           var6 = param1.field_K;
           var7 = param1.height;
           if (param0 != -13) {
-            field_H = (pb) null;
+            field_H = (PictureStrip) null;
           }
-          var38.field_b.b(var7, var4, 91, var5, var6);
+          var38.field_b.layoutPopup(var7, var4, 91, var5, var6);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -10,7 +10,7 @@ abstract class ByteStorage {
     static long[] field_a;
     static boolean field_b;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_g = null;
         if (param0 == -8871) {
@@ -36,7 +36,7 @@ abstract class ByteStorage {
           Checkbox.field_U = param3;
           LoadingProgressDialog.a(param1, TriangleMesh.field_e, -26027);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,7 +56,7 @@ abstract class ByteStorage {
           while (var1 instanceof ln) {
             var2 = var1.field_a;
             if (((ln) (var1)).field_o.isSamplePositionOutOfRange()) {
-              var1.c(2779);
+              var1.unlink(2779);
             }
             var1 = var2;
           }
@@ -64,7 +64,7 @@ abstract class ByteStorage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "gf.H(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "gf.H(" + param0 + ')');
         }
     }
 
@@ -80,16 +80,16 @@ abstract class ByteStorage {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.b(-3) &&
+          if (param2.ensureIndex(-3) &&
             param2.ensureGroupAvailableByName("commonui", -1)) {
-            if (!param0.b(-3)) {
+            if (!param0.ensureIndex(-3)) {
               return false;
             }
             if (!param0.ensureGroupAvailableByName("commonui", -1)) {
               return false;
             }
             var4_int = -3 / ((-26 - param1) / 51);
-            if (param3.b(-3) &&
+            if (param3.ensureIndex(-3) &&
               param3.ensureGroupAvailableByName("button.gif", -1)) {
               return true;
             }
@@ -118,7 +118,7 @@ abstract class ByteStorage {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

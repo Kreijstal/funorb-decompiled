@@ -1,0 +1,86 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ScrollPaneWithFooter extends SceneWidget {
+    SceneWidget field_Ib;
+    static el field_Kb;
+    static int field_Jb;
+    SceneWidget field_Hb;
+    static int field_Eb;
+    SceneWidget field_Fb;
+    ScrollContainer field_Gb;
+
+    public static void releaseStatics(byte param0) {
+        field_Kb = null;
+        if (param0 >= -79) {
+          ScrollPaneWithFooter.releaseStatics((byte) -19);
+        }
+    }
+
+    final void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
+        this.field_D = param0;
+        this.field_S = param3;
+        this.height = param7;
+        this.field_K = param1;
+        this.a(param2, true, param6, param5);
+        if (param4) {
+          ScrollPaneWithFooter.j(74);
+        }
+    }
+
+    final void a(int param0, boolean param1, int param2, int param3) {
+        int var5 = (param2 + this.field_K) / 2;
+        int var6 = -param0 + this.height;
+        if (param1) {
+          this.field_Gb.a(0, param2, (byte) 97, this.field_K, 0, var6 - param2, param3);
+          this.field_Ib.field_S = var6;
+          this.field_Ib.height = param0;
+          this.field_Ib.field_K = -param2 + var5;
+          this.field_Ib.field_D = 0;
+          this.field_Hb.field_S = var6;
+          this.field_Hb.field_K = this.field_K - var5;
+          this.field_Hb.field_D = var5;
+          this.field_Hb.height = param0;
+          return;
+        }
+    }
+
+    final static void j(int param0) {
+        ri.field_f = new hp(cm.field_o, pj.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c);
+        int var1 = 40 / ((param0 + 90) / 35);
+    }
+
+    ScrollPaneWithFooter(long param0, SceneWidget param1, SceneWidget param2, VerticalScrollbar param3, SceneWidget param4, String param5, String param6) {
+        super(param0, param1);
+        try {
+          this.field_Fb = new SceneWidget(0L, (SceneWidget) null);
+          this.field_Gb = new ScrollContainer(0L, this.field_Fb, param2, param3);
+          this.field_Ib = new SceneWidget(0L, param4);
+          this.field_Hb = new SceneWidget(0L, param4);
+          this.field_Ib.field_cb = param5;
+          this.field_Hb.field_cb = param6;
+          this.addChild(this.field_Gb, (byte) 26);
+          this.addChild(this.field_Ib, (byte) 26);
+          this.addChild(this.field_Hb, (byte) 26);
+        } catch (RuntimeException runtimeException) {
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static boolean k(int param0) {
+        if (param0 != 0) {
+          ScrollPaneWithFooter.k(-125);
+          return StripedProgressBar.field_J;
+        }
+        return StripedProgressBar.field_J;
+    }
+
+    ScrollPaneWithFooter(long param0, ScrollPaneWithFooter param1, String param2, String param3) {
+        this(param0, param1, param1.field_Gb.field_Ib, param1.field_Gb.field_Gb, param1.field_Ib, param2, param3);
+    }
+
+    static {
+        field_Jb = 2;
+        field_Kb = new el();
+    }
+}

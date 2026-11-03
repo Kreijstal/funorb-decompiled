@@ -16,14 +16,14 @@ final class el {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 >= 87) {
           StatefulTextPainter.field_q = param1;
-          da.field_m = param4;
+          BouncedownBackground.field_m = param4;
           dk.field_d = param0;
           ab.field_b = param2;
           return;
         }
         field_b = -89;
         StatefulTextPainter.field_q = param1;
-        da.field_m = param4;
+        BouncedownBackground.field_m = param4;
         dk.field_d = param0;
         ab.field_b = param2;
     }
@@ -35,7 +35,7 @@ final class el {
         if (null == AccountChoicePanel.field_O) {
           return -1;
         }
-        if (sd.field_K > param2) {
+        if (AlphaContainer.field_K > param2) {
           var3 = 98 / ((38 - param1) / 61);
           if (JaggrabDownloader.field_a > param2) {
             return -1;
@@ -51,7 +51,7 @@ final class el {
           }
           return 1;
         }
-        if (param2 >= sd.field_K + AccountChoicePanel.field_O.field_F) {
+        if (param2 >= AlphaContainer.field_K + AccountChoicePanel.field_O.field_F) {
           var3Lifetime1 = 98 / ((38 - param1) / 61);
           if (JaggrabDownloader.field_a > param2) {
             return -1;
@@ -122,18 +122,18 @@ final class el {
         if (var14 == null) {
           return;
         }
-        ta.a(var18, param2);
+        IntArraySorter.a(var18, param2);
         if (param3 <= -8) {
-          SoftwareRasterizer.c(param4, param0, (int)(param6 - 0.5f), param2);
-          SoftwareRasterizer.c(param1, param5, (int)(-0.5f + param6), param2);
+          SoftwareRasterizer.fillCircle(param4, param0, (int)(param6 - 0.5f), param2);
+          SoftwareRasterizer.fillCircle(param1, param5, (int)(-0.5f + param6), param2);
           return;
         }
         field_b = -46;
-        SoftwareRasterizer.c(param4, param0, (int)(param6 - 0.5f), param2);
-        SoftwareRasterizer.c(param1, param5, (int)(-0.5f + param6), param2);
+        SoftwareRasterizer.fillCircle(param4, param0, (int)(param6 - 0.5f), param2);
+        SoftwareRasterizer.fillCircle(param1, param5, (int)(-0.5f + param6), param2);
     }
 
-    final static ResourceArchive a(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
+    final static ResourceArchive createResourceArchive(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
@@ -141,27 +141,27 @@ final class el {
           ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 >= -100) {
-            el.a(68, true, true, -71, -103, true);
+            el.createResourceArchive(68, true, true, -71, -103, true);
           }
           try {
             var6 = null;
             var7 = null;
-            if (ef.field_e.field_k != null) {
-              Js5NetworkRequest.field_G = new BufferedRandomAccessFile(ef.field_e.field_k, 5200, 0);
-              ef.field_e.field_k = null;
+            if (ef.field_e.cacheDataFile != null) {
+              Js5NetworkRequest.field_G = new BufferedRandomAccessFile(ef.field_e.cacheDataFile, 5200, 0);
+              ef.field_e.cacheDataFile = null;
               var6 = new SectorCacheStore(255, Js5NetworkRequest.field_G, new BufferedRandomAccessFile(ef.field_e.field_m, 12000, 0), 2097152);
             }
             if (null != Js5NetworkRequest.field_G) {
               if (ug.field_l == null) {
-                ug.field_l = new BufferedRandomAccessFile[ef.field_e.field_u.length];
+                ug.field_l = new BufferedRandomAccessFile[ef.field_e.cacheIndexFiles.length];
               }
               if (null == ug.field_l[param3]) {
-                ug.field_l[param3] = new BufferedRandomAccessFile(ef.field_e.field_u[param3], 12000, 0);
-                ef.field_e.field_u[param3] = null;
+                ug.field_l[param3] = new BufferedRandomAccessFile(ef.field_e.cacheIndexFiles[param3], 12000, 0);
+                ef.field_e.cacheIndexFiles[param3] = null;
               }
               var7 = new SectorCacheStore(param3, Js5NetworkRequest.field_G, ug.field_l[param3], 2097152);
             }
-            var8 = ck.field_j.a(param2, 6, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            var8 = ck.field_j.getArchiveSource(param2, 6, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param5) {
               var8.a(true);
             }
@@ -183,19 +183,19 @@ final class el {
         int var2;
         var2 = 0;
         var2 = var2 | 1;
-        if (0 == ok.a(UiTheme.field_f, -105, 2)) {
+        if (0 == JavaRandomHelpers.a(UiTheme.field_f, -105, 2)) {
           var2 = var2 | 2;
         }
-        if (ok.a(UiTheme.field_f, -124, 2) == 0) {
+        if (JavaRandomHelpers.a(UiTheme.field_f, -124, 2) == 0) {
           var2 = var2 | 8;
         }
         if (param1 != -24) {
           el.a(-13);
         }
-        if (ok.a(UiTheme.field_f, param1 ^ 110, 2) == 0) {
+        if (JavaRandomHelpers.a(UiTheme.field_f, param1 ^ 110, 2) == 0) {
           var2 = var2 | 4;
         }
-        if (ok.a(UiTheme.field_f, -116, 2) == 0) {
+        if (JavaRandomHelpers.a(UiTheme.field_f, -116, 2) == 0) {
           var2 = var2 | 16;
         }
         return var2;

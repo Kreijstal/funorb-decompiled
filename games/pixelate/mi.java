@@ -6,21 +6,21 @@ import java.util.*;
 final class mi extends MenuScreen {
     static boolean field_o;
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 >= -13) {
           mi.e(-14);
         }
     }
 
-    final void a(int param0) {
-        this.b((byte) -71);
+    final void draw(int param0) {
+        this.drawRows((byte) -71);
         int var2 = EmailCredentials.field_k != 0 ? 1 : 0;
-        int var3 = null != wh.field_p ? 1 : 0;
+        int var3 = null != HighscoresScreen.field_p ? 1 : 0;
         String var7 = EmailValidator.field_p;
         if (param0 != 11) {
           mi.b(false);
         }
-        String var8 = var7 + " " + ub.a(sd.a(bf.a(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{mj.field_i}), param0 - 11, "<br><br>", '#');
+        String var8 = var7 + " " + ub.replaceCharacter(AlphaContainer.a(PicturePreview.a(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{mj.field_i}), param0 - 11, "<br><br>", '#');
         BinaryBitmapFont var5 = qj.field_e;
         int var6 = 1 + var5.maxDescent + var5.maxAscent;
         var5.drawParagraph(var8, 50, 150, 540, 10 * var6, 16777215, 0, 1, 0, var6);
@@ -78,7 +78,7 @@ final class mi extends MenuScreen {
         var6 = new boolean[var5];
         var7 = new IndexedSprite[param1];
         for (var8 = 0; var7.length > var8; var8++) {
-          var9 = ok.a(UiTheme.field_f, param3 ^ -118, var5);
+          var9 = JavaRandomHelpers.a(UiTheme.field_f, param3 ^ -118, var5);
           while (var6[var9]) {
             var9++;
             if (var5 > var9) {
@@ -95,7 +95,7 @@ final class mi extends MenuScreen {
         return var7;
     }
 
-    final static int d(int param0, int param1) {
+    final static int fixedSine(int param0, int param1) {
         if (param0 != -4096) {
           mi.a(126, 19, (byte) -117);
         }
@@ -148,7 +148,7 @@ final class mi extends MenuScreen {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (ij.field_o == uk.field_s) {
+            if (ij.field_o == GameModeSelectScreen.field_s) {
               if (param4) {
                 var10 = (String) null;
                 li.field_g = ck.a(param2, (String) null, false, vn.field_b, 83);
@@ -157,40 +157,40 @@ final class mi extends MenuScreen {
               }
               aa.field_f.position = 0;
               aa.field_f.writeByte(160, 14);
-              aa.field_f.writeByte(160, li.field_g.b(-27096).field_a);
+              aa.field_f.writeByte(160, li.field_g.getCredentialKind(-27096).field_a);
               SecondaryNodeHashTable.b(-1, 10000);
-              uk.field_s = cn.field_a;
+              GameModeSelectScreen.field_s = cn.field_a;
             }
-            if (uk.field_s == cn.field_a &&
+            if (GameModeSelectScreen.field_s == cn.field_a &&
               QueuedInput.a(1, false)) {
-              var6_int = MusicCrossfadeStream.field_o.f(255);
+              var6_int = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               MusicCrossfadeStream.field_o.position = 0;
               if (var6_int != 0) {
                 TextLayoutLine.field_e = var6_int;
-                uk.field_s = IndexedSpriteState.field_b;
+                GameModeSelectScreen.field_s = IndexedSpriteState.field_b;
                 BackgroundScene.field_b = -1;
               } else {
-                uk.field_s = ke.field_b;
+                GameModeSelectScreen.field_s = ke.field_b;
               }
             }
-            if (uk.field_s == ke.field_b &&
+            if (GameModeSelectScreen.field_s == ke.field_b &&
               QueuedInput.a(8, false)) {
-              NumericDateInputWidget.field_P = MusicCrossfadeStream.field_o.a(false);
+              NumericDateInputWidget.field_P = MusicCrossfadeStream.field_o.readLong(false);
               MusicCrossfadeStream.field_o.position = 0;
               io.a(param4, -67, li.field_g, param3, param0);
-              uk.field_s = BoardView.field_b;
+              GameModeSelectScreen.field_s = BoardView.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (BoardView.field_b == uk.field_s &&
+            if (BoardView.field_b == GameModeSelectScreen.field_s &&
               QueuedInput.a(1, false)) {
-              var6_intLifetime1 = MusicCrossfadeStream.field_o.f(255);
-              sc.field_a = null;
+              var6_intLifetime1 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
+              ConditionalTextValue.field_a = null;
               MusicCrossfadeStream.field_o.position = 0;
               TextLayoutLine.field_e = var6_intLifetime1;
               if (0 != var6_intLifetime1 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
-                  uk.field_s = IndexedSpriteState.field_b;
+                  GameModeSelectScreen.field_s = IndexedSpriteState.field_b;
                   BackgroundScene.field_b = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -203,18 +203,18 @@ final class mi extends MenuScreen {
               }
               if (decompiledFrameRemainder0) {
                 BackgroundScene.field_b = -1;
-                uk.field_s = e.field_d;
+                GameModeSelectScreen.field_s = e.field_d;
               }
             }
-            if (e.field_d == uk.field_s &&
+            if (e.field_d == GameModeSelectScreen.field_s &&
               MusicPatchNode.e(-18481)) {
-              vn.field_b = MusicCrossfadeStream.field_o.a(false);
+              vn.field_b = MusicCrossfadeStream.field_o.readLong(false);
               GameResultsScreen.field_t = param2;
-              wo.field_h = MusicCrossfadeStream.field_o.f(255);
-              Js5NetworkRequest.field_I = MusicCrossfadeStream.field_o.f(255);
-              BufferedRandomAccessFile.field_j = MusicCrossfadeStream.field_o.a((byte) -116);
-              var6 = MusicCrossfadeStream.field_o.e((byte) 79);
-              var7 = MusicCrossfadeStream.field_o.f(255);
+              wo.field_h = MusicCrossfadeStream.field_o.readUnsignedByte(255);
+              Js5NetworkRequest.field_I = MusicCrossfadeStream.field_o.readUnsignedByte(255);
+              BufferedRandomAccessFile.field_j = MusicCrossfadeStream.field_o.readUnsignedShort((byte) -116);
+              var6 = MusicCrossfadeStream.field_o.readOptionalString((byte) 79);
+              var7 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
                 MarkerSlider.d((byte) -51);
               }
@@ -226,30 +226,30 @@ final class mi extends MenuScreen {
                 stackIn_47_0 = ((8 & var7) != 0);
                 ln.field_q = stackIn_47_0;
                 stackIn_50_0 = ((4 & var7) != 0);
-                wg.field_a = stackIn_50_0;
+                Matrix3.field_a = stackIn_50_0;
                 if (ln.field_q) {
                   IsaacRandom.field_g = true;
                 }
               }
               if (vm.field_d) {
-                MusicCrossfadeStream.field_o.f(255);
-                MusicCrossfadeStream.field_o.f(255);
+                MusicCrossfadeStream.field_o.readUnsignedByte(255);
+                MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 MusicCrossfadeStream.field_o.readInt(0);
-                BufferedSocket.field_k = MusicCrossfadeStream.field_o.a((byte) -115);
+                BufferedSocket.field_k = MusicCrossfadeStream.field_o.readUnsignedShort((byte) -115);
                 dc.field_b = new byte[BufferedSocket.field_k];
                 for (var8 = 0; BufferedSocket.field_k > var8; var8++) {
-                  dc.field_b[var8] = MusicCrossfadeStream.field_o.a(0);
+                  dc.field_b[var8] = MusicCrossfadeStream.field_o.readByte(0);
                 }
               }
-              ModalStack.field_J = MusicCrossfadeStream.field_o.h(5);
+              ModalStack.field_J = MusicCrossfadeStream.field_o.readString(5);
               var11 = (CharSequence) ((Object) ModalStack.field_J);
               LobbyGame.field_Hb = dh.a(var11, (byte) 54);
-              ra.field_g = MusicCrossfadeStream.field_o.f(255);
-              uk.field_s = Pixelate.field_G;
-              if (li.field_g.b(-27096) == l.field_r) {
+              ra.field_g = MusicCrossfadeStream.field_o.readUnsignedByte(255);
+              GameModeSelectScreen.field_s = Pixelate.field_G;
+              if (li.field_g.getCredentialKind(-27096) == l.field_r) {
                 ig.field_e.a(AudioService.a(13867), -80419032);
               } else {
-                if (li.field_g.b(-27096) == QuickChatMenu.field_Nb) {
+                if (li.field_g.getCredentialKind(-27096) == QuickChatMenu.field_Nb) {
                   vm.field_a.a(AudioService.a(13867), -80419032);
                 }
               }
@@ -258,16 +258,16 @@ final class mi extends MenuScreen {
                 QueuedInput.a(var6, 126, AudioService.a(13867));
               }
               if (BufferedRandomAccessFile.field_j <= 0 &&
-                !wg.field_a) {
+                !Matrix3.field_a) {
                 try {
-                  cq.a("unzap", (byte) -56, AudioService.a(13867));
+                  JavaScriptBridge.callWindowFunction("unzap", (byte) -56, AudioService.a(13867));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  cq.a(AudioService.a(13867), (byte) -37, new Object[]{PacketBuffer.b(vn.field_b, -7067)}, "zap");
+                  JavaScriptBridge.a(AudioService.a(13867), (byte) -37, new Object[]{PacketBuffer.decodeBase37Name(vn.field_b, -7067)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -276,15 +276,15 @@ final class mi extends MenuScreen {
               if (BufferedRandomAccessFile.field_j > 0) {
                 LobbyPlayer.field_Lb = true;
               }
-              aa.field_f.a(0, ModalPanel.field_L);
+              aa.field_f.initCipher(0, ModalPanel.field_L);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 ModalPanel.field_L[var8Lifetime1] = ModalPanel.field_L[var8Lifetime1] + 50;
               }
-              MusicCrossfadeStream.field_o.a(0, ModalPanel.field_L);
+              MusicCrossfadeStream.field_o.initCipher(0, ModalPanel.field_L);
               stackIn_79_0 = TextLayoutLine.field_e;
               return stackIn_79_0;
             }
-            if (IndexedSpriteState.field_b == uk.field_s &&
+            if (IndexedSpriteState.field_b == GameModeSelectScreen.field_s &&
               MusicPatchNode.e(-18481)) {
               na.a(true);
               if (TextLayoutLine.field_e == 7 &&
@@ -296,7 +296,7 @@ final class mi extends MenuScreen {
               if (TextLayoutLine.field_e == 7) {
                 TextLayoutLine.field_e = 3;
               }
-              gi.field_b = MusicCrossfadeStream.field_o.h(5);
+              gi.field_b = MusicCrossfadeStream.field_o.readString(5);
               qj.field_b = false;
               stackIn_90_0 = TextLayoutLine.field_e;
               return stackIn_90_0;
@@ -305,7 +305,7 @@ final class mi extends MenuScreen {
             if (null == NodeHashTableIterator.field_e) {
               if (qj.field_b) {
                 if (CachedTextLayout.d(8) <= 30000L) {
-                  gi.field_b = ho.field_b;
+                  gi.field_b = TextTableInitializer.field_b;
                 } else {
                   gi.field_b = ValidationIndicator.field_N;
                 }
@@ -336,7 +336,7 @@ final class mi extends MenuScreen {
             } else {
               stackIn_110_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -354,11 +354,11 @@ final class mi extends MenuScreen {
           if (param2 != -1) {
             field_o = false;
           }
-          cn.field_b.a(param3, param1, 7595, param0);
-          SoftwareRasterizer.d();
+          cn.field_b.setProgress(param3, param1, 7595, param0);
+          SoftwareRasterizer.clear();
           Js5NetworkRequest.a(94, true);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -401,16 +401,16 @@ final class mi extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "mi.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "mi.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void b(boolean param0) {
-        ho.field_g.a(0, 18, 0, 256, -(!DialWidgetPainter.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + StripedProgressBar.field_O.field_K);
+        TextTableInitializer.field_g.setBounds(0, 18, 0, 256, -(!DialWidgetPainter.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + StripedProgressBar.field_O.field_K);
         if (param0) {
           field_o = false;
         }
-        l.field_s.a(0, 18, -40 + (-DelegatingCanvas.field_b + (StripedProgressBar.field_O.field_K - 2)), 256, 42 + DelegatingCanvas.field_b);
+        l.field_s.setBounds(0, 18, -40 + (-DelegatingCanvas.field_b + (StripedProgressBar.field_O.field_K - 2)), 256, 42 + DelegatingCanvas.field_b);
         jm.field_b.a(0, 2, (byte) 102, StripedProgressBar.field_O.field_K, 20, StripedProgressBar.field_O.height - 20, DelegatingCanvas.field_b);
     }
 

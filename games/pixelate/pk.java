@@ -78,7 +78,7 @@ final class pk {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class pk {
         try {
           field_b = null;
           if (param0 != 4194303) {
-            pk.a((CipherPacketBuffer) null, -21);
+            pk.readTriangleMesh((CipherPacketBuffer) null, -21);
           }
           field_c = null;
           field_e = null;
@@ -99,7 +99,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "pk.F(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "pk.F(" + param0 + ')');
         }
     }
 
@@ -119,11 +119,11 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "pk.D(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "pk.D(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static TriangleMesh a(CipherPacketBuffer param0, int param1) {
+    final static TriangleMesh readTriangleMesh(CipherPacketBuffer param0, int param1) {
         int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
         TriangleMesh stackIn_36_0 = null;
@@ -141,43 +141,43 @@ final class pk {
         int var8 = 0;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          var2_int = param0.c(8, (byte) -34);
+          var2_int = param0.readBits(8, (byte) -34);
           if (~var2_int < param1) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = tj.a(param0, -32) ? 1 : 0;
           var4 = tj.a(param0, -32) ? 1 : 0;
           var5 = new TriangleMesh();
-          var5.vertexCount = (short)param0.c(16, (byte) -34);
-          var5.vertexX = bm.a(var5.vertexX, (byte) -128, param0, 16);
-          var5.vertexY = bm.a(var5.vertexY, (byte) -128, param0, 16);
-          var5.vertexZ = bm.a(var5.vertexZ, (byte) -128, param0, 16);
-          var5.field_j = (short)param0.c(16, (byte) -34);
-          var5.field_h = bm.a(var5.field_h, (byte) -128, param0, 16);
-          var5.field_I = bm.a(var5.field_I, (byte) -128, param0, 16);
-          var5.field_o = bm.a(var5.field_o, (byte) -128, param0, 16);
+          var5.vertexCount = (short)param0.readBits(16, (byte) -34);
+          var5.vertexX = EmergentBehaviourBackground.a(var5.vertexX, (byte) -128, param0, 16);
+          var5.vertexY = EmergentBehaviourBackground.a(var5.vertexY, (byte) -128, param0, 16);
+          var5.vertexZ = EmergentBehaviourBackground.a(var5.vertexZ, (byte) -128, param0, 16);
+          var5.field_j = (short)param0.readBits(16, (byte) -34);
+          var5.field_h = EmergentBehaviourBackground.a(var5.field_h, (byte) -128, param0, 16);
+          var5.field_I = EmergentBehaviourBackground.a(var5.field_I, (byte) -128, param0, 16);
+          var5.field_o = EmergentBehaviourBackground.a(var5.field_o, (byte) -128, param0, 16);
           if (var3 != 0) {
-            var5.field_a = (short)param0.c(16, (byte) -34);
-            var5.field_K = bm.a(var5.field_K, (byte) -128, param0, 16);
-            var5.field_q = bm.a(var5.field_q, (byte) -128, param0, 16);
-            var5.field_p = bm.a(var5.field_p, (byte) -128, param0, 16);
-            var5.field_J = bm.a(var5.field_J, (byte) -128, param0, 16);
-            var5.field_s = bm.a(var5.field_s, (byte) -128, param0, 16);
-            var5.field_i = bm.a(var5.field_i, (byte) -128, param0, 16);
+            var5.field_a = (short)param0.readBits(16, (byte) -34);
+            var5.field_K = EmergentBehaviourBackground.a(var5.field_K, (byte) -128, param0, 16);
+            var5.field_q = EmergentBehaviourBackground.a(var5.field_q, (byte) -128, param0, 16);
+            var5.field_p = EmergentBehaviourBackground.a(var5.field_p, (byte) -128, param0, 16);
+            var5.field_J = EmergentBehaviourBackground.a(var5.field_J, (byte) -128, param0, 16);
+            var5.field_s = EmergentBehaviourBackground.a(var5.field_s, (byte) -128, param0, 16);
+            var5.field_i = EmergentBehaviourBackground.a(var5.field_i, (byte) -128, param0, 16);
           }
           if (var4 != 0) {
-            param0.c(16, (byte) -34);
-            var5.field_D = bm.a(var5.field_D, (byte) -128, param0, 16);
-            var5.field_L = bm.a(var5.field_L, (byte) -128, param0, 16);
-            var5.field_S = bm.a(var5.field_S, (byte) -128, param0, 16);
-            var5.field_d = bm.a(var5.field_d, (byte) -128, param0, 16);
-            var5.field_z = bm.a(var5.field_z, (byte) -128, param0, 16);
+            param0.readBits(16, (byte) -34);
+            var5.field_D = EmergentBehaviourBackground.a(var5.field_D, (byte) -128, param0, 16);
+            var5.field_L = EmergentBehaviourBackground.a(var5.field_L, (byte) -128, param0, 16);
+            var5.field_S = EmergentBehaviourBackground.a(var5.field_S, (byte) -128, param0, 16);
+            var5.field_d = EmergentBehaviourBackground.a(var5.field_d, (byte) -128, param0, 16);
+            var5.field_z = EmergentBehaviourBackground.a(var5.field_z, (byte) -128, param0, 16);
           }
           if (tj.a(param0, -32)) {
-            var5.field_l = bm.a(var5.field_l, (byte) -128, param0, 16);
+            var5.field_l = EmergentBehaviourBackground.a(var5.field_l, (byte) -128, param0, 16);
           }
           if (tj.a(param0, -32)) {
-            var5.field_n = NodeHashTable.a(param0, var5.field_n, 16, param1 ^ -122);
+            var5.field_n = NodeHashTable.readPackedByteArray(param0, var5.field_n, 16, param1 ^ -122);
             var6 = 0;
             var7 = 0;
             while (true) {
@@ -217,7 +217,7 @@ final class pk {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "pk.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "pk.A(" + param0 + ')');
         }
     }
 
@@ -269,12 +269,12 @@ final class pk {
           if (ce.field_d == 2 &&
             !ra.a((byte) -99)) {
             if (CanvasRasterBuffer.a(fp.field_d, (byte) 37)) {
-              var2 = sd.a(GameApplet.field_m, 34, new String[]{CheckboxPainter.field_k});
+              var2 = AlphaContainer.a(GameApplet.field_m, 34, new String[]{CheckboxPainter.field_k});
               if (var10 != 0) {
-                var2 = sd.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
+                var2 = AlphaContainer.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
               }
             } else {
-              var2 = sd.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
+              var2 = AlphaContainer.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
             }
             if (un.field_l) {
               MidiPcmStream.a(0, (String) null, (String) null, (byte) -82, 2, (String) (var2));
@@ -291,7 +291,7 @@ final class pk {
             var2 = NameSuggestionsPanel.field_M;
           }
           if (null != var2) {
-            ap.a((String) null, 0, VerticalScrollbar.field_Ib, 24092, (String) (var2));
+            IntKeyLookup.a((String) null, 0, VerticalScrollbar.field_Ib, 24092, (String) (var2));
           } else {
             var3 = ModalStack.field_J;
             var3 = th.a(2, var3);
@@ -300,8 +300,8 @@ final class pk {
             var6 = ce.field_d;
             var7 = 0;
             if (2 == var6) {
-              var4 = sd.a(dg.field_b, 73, new String[]{CheckboxPainter.field_k});
-              var8 = sd.a(sk.field_c, 69, new String[]{var3});
+              var4 = AlphaContainer.a(dg.field_b, 73, new String[]{CheckboxPainter.field_k});
+              var8 = AlphaContainer.a(sk.field_c, 69, new String[]{var3});
               var7 = -485 + (nf.field_d.field_K + rh.field_y.field_K + AccountMessagePanel.field_Q.textWidth(var8) - AccountMessagePanel.field_Q.textWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
@@ -312,12 +312,12 @@ final class pk {
               if (0 == var6) {
                 if (null == io.field_c &&
                   ge.field_f) {
-                  var4 = "[" + ul.field_m + "] ";
+                  var4 = "[" + TimerBar.field_m + "] ";
                 }
                 if (null != io.field_c) {
                   if (!TickClock.field_b ||
                     TextLayoutLine.field_f == null) {
-                    var4 = "[" + sd.a(fk.field_q, 40, new String[]{io.field_c.field_pc}) + "] ";
+                    var4 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 40, new String[]{io.field_c.field_pc}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + TextLayoutLine.field_f + "] ";
                     }
@@ -362,12 +362,12 @@ final class pk {
                 }
               }
             }
-            ap.a(var5, var7, ib.field_i[var6], 24092, var4 + BitmapFont.b(mp.field_a.toString()));
+            IntKeyLookup.a(var5, var7, ib.field_i[var6], 24092, var4 + BitmapFont.escapeMarkup(mp.field_a.toString()));
             if (!oo.field_d) {
               rh.field_y.field_W = false;
             }
             if (rh.field_y.field_W) {
-              var1 = sd.a(MatchHud.field_m, 78, new String[]{var3, CheckboxPainter.field_k});
+              var1 = AlphaContainer.a(MatchHud.field_m, 78, new String[]{var3, CheckboxPainter.field_k});
             }
           }
           stackIn_96_0 = var1;
@@ -375,7 +375,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (var1), "pk.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) (var1), "pk.E(" + param0 + ')');
         }
     }
 

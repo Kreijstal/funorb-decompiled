@@ -12,7 +12,7 @@ final class aq {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
-        im var7 = null;
+        SocialListEntry var7 = null;
         CharSequence var8 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -26,32 +26,32 @@ final class aq {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = (CharSequence) ((Object) param0);
-          if (!ai.a((byte) -128, var8)) {
+          if (!Bzip2State.a((byte) -128, var8)) {
             stackIn_2_0 = qn.field_n;
             return stackIn_2_0;
           }
           if (2 != ValidatedTextWidget.field_db) {
-            stackIn_5_0 = ok.field_b;
+            stackIn_5_0 = JavaRandomHelpers.field_b;
             return stackIn_5_0;
           }
           if (param3 != -20867) {
-            aq.a((byte) 117);
+            aq.releaseStatics((byte) 117);
           }
-          var7 = DisplayNameForm.a(param2, 114);
+          var7 = DisplayNameForm.findFriend(param2, 114);
           if (var7 == null) {
-            stackIn_10_0 = sd.a(ug.field_p, param3 + 20935, new String[]{param2});
+            stackIn_10_0 = AlphaContainer.a(ug.field_p, param3 + 20935, new String[]{param2});
             return stackIn_10_0;
           }
-          var7.c(param3 ^ -23386);
-          var7.e(param3 + 20884);
+          var7.unlink(param3 ^ -23386);
+          var7.unlinkSecondary(param3 + 20884);
           aj.field_t = aj.field_t - 1;
           var5 = aa.field_f;
-          var5.g(param1, 15514);
+          var5.writeOpcode(param1, 15514);
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.writeByte(160, 3);
-          var5.b((byte) -41, param0);
-          var5.f(var5.position - var6, -1);
+          var5.writeString((byte) -41, param0);
+          var5.backpatchByteLength(var5.position - var6, -1);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,7 +70,7 @@ final class aq {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class aq {
           var6 = 1;
           var2Lifetime1 = var6;
           while (var1_int > var6) {
-            var3 = var6 + ok.a(ea.field_b, -109, var1_int - var6);
+            var3 = var6 + JavaRandomHelpers.a(ea.field_b, -109, var1_int - var6);
             var4 = jm.field_g[var6];
             jm.field_g[var6] = jm.field_g[var3];
             jm.field_g[var3] = var4;
@@ -103,7 +103,7 @@ final class aq {
           LoadingProgressDialog.field_hb = 0;
           aq.a(jm.field_g[LoadingProgressDialog.field_hb], !param0 ? true : false);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class aq {
         return param1 + var2;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         int var1 = 17 / ((param0 - 13) / 60);
@@ -151,7 +151,7 @@ final class aq {
         LoginCredentials.field_e = Js5NetworkRequest.field_C[param0];
         fq.field_o = null;
         if (!param1) {
-          ci.field_o = param0;
+          NightToRememberBackground.field_o = param0;
           DebouncedValidator.field_d = 0;
           dg.a(param0 + 2, (byte) -100);
           return;
@@ -166,7 +166,7 @@ final class aq {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vf.a((byte) -3, param0)) {
+          if (!vf.isAllowedChar((byte) -3, param0)) {
             return false;
           }
           if (param1 == null) {
@@ -194,7 +194,7 @@ final class aq {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 

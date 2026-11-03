@@ -29,7 +29,7 @@ final class LobbyPlayer extends SceneWidget {
         CipherPacketBuffer var3 = null;
         try {
           var3 = aa.field_f;
-          var3.g(param0, 15514);
+          var3.writeOpcode(param0, 15514);
           if (param2 != 65536) {
             ue var4 = (ue) null;
             LobbyPlayer.a(-62, (ue) null, 81);
@@ -40,7 +40,7 @@ final class LobbyPlayer extends SceneWidget {
           var3.writeByte(160, param1.field_m);
           var3.writeByte(160, param1.field_s);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "uj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class LobbyPlayer extends SceneWidget {
           var6 = (CharSequence) ((Object) this.field_Ub);
           dh.a(var6, (byte) 77);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -77,49 +77,49 @@ final class LobbyPlayer extends SceneWidget {
         }
         var8 = MusicCrossfadeStream.field_o;
         var2 = var8;
-        var3 = var8.f(255);
-        fk.field_o = var3 & 127;
+        var3 = var8.readUnsignedByte(255);
+        HowToPlayScreen.field_o = var3 & 127;
         stackIn_5_0 = (0 != (128 & var3));
         TextWidgetPainter.field_n = stackIn_5_0;
-        BoundedRandomAccessFile.field_d = var8.f(255);
-        cd.field_g = var8.a(false);
-        if (fk.field_o == 2) {
-          qf.field_b = var8.a((byte) 2);
+        BoundedRandomAccessFile.field_d = var8.readUnsignedByte(255);
+        cd.field_g = var8.readLong(false);
+        if (HowToPlayScreen.field_o == 2) {
+          qf.field_b = var8.readUnsignedShort((byte) 2);
           ModalStack.field_I = var8.readUnsignedMedium((byte) 13);
         } else {
           qf.field_b = 0;
           ModalStack.field_I = 0;
         }
-        stackIn_11_0 = (var8.f(255) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        Puzzle.field_a = var8.h(5);
+        Puzzle.field_a = var8.readString(5);
         if (var4 == 0) {
-          op.field_t = Puzzle.field_a;
+          OptionsScreen.field_t = Puzzle.field_a;
         } else {
-          op.field_t = var8.h(5);
+          OptionsScreen.field_t = var8.readString(5);
         }
-        if (fk.field_o == 1) {
-          op.field_s = var8.a((byte) -4);
-          cl.field_h = var8.h(5);
+        if (HowToPlayScreen.field_o == 1) {
+          OptionsScreen.field_s = var8.readUnsignedShort((byte) -4);
+          cl.field_h = var8.readString(5);
         } else {
-          if (fk.field_o == 4) {
-            op.field_s = var8.a((byte) -4);
-            cl.field_h = var8.h(5);
+          if (HowToPlayScreen.field_o == 4) {
+            OptionsScreen.field_s = var8.readUnsignedShort((byte) -4);
+            cl.field_h = var8.readString(5);
           } else {
-            op.field_s = 0;
+            OptionsScreen.field_s = 0;
             cl.field_h = null;
           }
         }
         if (!param0) {
-          pb.field_j = BoundedRandomAccessFile.a(80, -57, var8);
+          PictureStrip.field_j = BoundedRandomAccessFile.a(80, -57, var8);
           HuffmanCodec.field_g = null;
           return new aa(param0);
         }
-        var5 = var8.a((byte) 127);
+        var5 = var8.readUnsignedShort((byte) 127);
         try {
           var9 = jd.field_k.a(-21209, var5);
-          pb.field_j = var9.getPreview((byte) -54);
-          if (op.field_t.equals(ModalStack.field_J)) {
+          PictureStrip.field_j = var9.getPreview((byte) -54);
+          if (OptionsScreen.field_t.equals(ModalStack.field_J)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.field_u;
@@ -128,9 +128,9 @@ final class LobbyPlayer extends SceneWidget {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          CheckboxPainter.a(1, "CC1", (Throwable) ((Object) var6));
+          CheckboxPainter.reportClientError(1, "CC1", (Throwable) ((Object) var6));
           HuffmanCodec.field_g = null;
-          pb.field_j = null;
+          PictureStrip.field_j = null;
           return new aa(param0);
         }
         return new aa(param0);
@@ -139,17 +139,17 @@ final class LobbyPlayer extends SceneWidget {
     final static void a(int param0, String param1) {
         try {
           if (param0 != -1710418464) {
-            ae var3 = (ae) null;
-            LobbyPlayer.a((ae) null, 99, -60);
+            Vector3 var3 = (Vector3) null;
+            LobbyPlayer.a((Vector3) null, 99, -60);
           }
           kh.a(false, param1);
           LoadingProgressDialog.a(false, TriangleMesh.field_e, -26027);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "uj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(LobbyPlayer param0, byte param1) {
+    final boolean sortsBefore(LobbyPlayer param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
@@ -189,12 +189,12 @@ final class LobbyPlayer extends SceneWidget {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void j(int param0) {
-        to.field_s = false;
+        MainMenuScreen.field_s = false;
         dk.field_c = false;
         QuickChatMenu.a(-1, -2671);
         MatchingTextValidator.field_n = wm.field_a;
@@ -209,7 +209,7 @@ final class LobbyPlayer extends SceneWidget {
         return !this.f(0) ? true : false;
     }
 
-    final static wg a(ae param0, int param1, int param2) {
+    final static Matrix3 a(Vector3 param0, int param1, int param2) {
         long var3_long = 0L;
         RuntimeException var3 = null;
         long var5 = 0L;
@@ -225,8 +225,8 @@ final class LobbyPlayer extends SceneWidget {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        sc var20 = null;
-        wg stackIn_3_0 = null;
+        ConditionalTextValue var20 = null;
+        Matrix3 stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -235,22 +235,22 @@ final class LobbyPlayer extends SceneWidget {
           var3_long = (long)param0.field_h;
           var5 = (long)param0.field_g;
           var7 = (long)param0.field_i;
-          var9 = mi.d(-4096, param1);
-          var10 = th.a(param1, 8191);
+          var9 = mi.fixedSine(-4096, param1);
+          var10 = th.fixedCosine(param1, 8191);
           var11 = (int)((long)var9 * var3_long >> 16);
           var12 = (int)(var5 * (long)var9 >> 16);
           var13 = (int)((long)var9 * var7 >> 16);
           var14 = (int)(var3_long * (var3_long * (long)(65536 - var10)) >> 32);
           if (param2 != 0) {
-            var20 = (sc) null;
-            LobbyPlayer.a((byte) -55, (sc) null, (sc) null);
+            var20 = (ConditionalTextValue) null;
+            LobbyPlayer.a((byte) -55, (ConditionalTextValue) null, (ConditionalTextValue) null);
           }
           var15 = (int)((long)(65536 - var10) * var5 * var3_long >> 32);
           var16 = (int)((long)(65536 - var10) * (var3_long * var7) >> 32);
           var17 = (int)((long)(65536 - var10) * var5 * var5 >> 32);
           var18 = (int)((long)(-var10 + 65536) * var5 * var7 >> 32);
           var19 = (int)(var7 * (var7 * (long)(-var10 + 65536)) >> 32);
-          stackIn_3_0 = new wg(var14 + var10, var15 + var13, var16 - var12, var15 - var13, var10 + var17, var11 + var18, var12 + var16, var18 - var11, var19 + var10);
+          stackIn_3_0 = new Matrix3(var14 + var10, var15 + var13, var16 - var12, var15 - var13, var10 + var17, var11 + var18, var12 + var16, var18 - var11, var19 + var10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -262,7 +262,7 @@ final class LobbyPlayer extends SceneWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class LobbyPlayer extends SceneWidget {
         field_Kb = null;
     }
 
-    final static int a(byte param0, sc param1, sc param2) {
+    final static int a(byte param0, ConditionalTextValue param1, ConditionalTextValue param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;
@@ -308,11 +308,11 @@ final class LobbyPlayer extends SceneWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final void a(String param0, String param1, boolean param2) {
+    final void updateNames(String param0, String param1, boolean param2) {
         CharSequence var5 = null;
         this.field_Ub = param1;
         if (param2) {
@@ -323,7 +323,7 @@ final class LobbyPlayer extends SceneWidget {
           var5 = (CharSequence) ((Object) this.field_Ub);
           dh.a(var5, (byte) 125);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "uj.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uj.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

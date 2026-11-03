@@ -45,26 +45,26 @@ final class PlayerBoard {
         int var3_intLifetime2;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          this.pieceColumn = param1.f(param0 + 257);
+          this.pieceColumn = param1.readUnsignedByte(param0 + 257);
           if (param0 != -2) {
             PlayerBoard.d(-62);
           }
-          this.pieceRow = param1.f(255);
-          this.field_u = param1.a((byte) 76);
-          this.field_b = param1.a((byte) -117);
-          stackIn_6_1 = (1 == param1.f(255));
+          this.pieceRow = param1.readUnsignedByte(255);
+          this.field_u = param1.readUnsignedShort((byte) 76);
+          this.field_b = param1.readUnsignedShort((byte) -117);
+          stackIn_6_1 = (1 == param1.readUnsignedByte(255));
           this.fastDrop = stackIn_6_1;
           for (var3_int = 0; var3_int < 4; var3_int++) {
             stackIn_10_0 = this.pieceTones;
             stackIn_10_1 = var3_int;
-            stackIn_11_2 = (param1.f(255) == 1);
+            stackIn_11_2 = (param1.readUnsignedByte(255) == 1);
             stackIn_10_0[stackIn_10_1] = stackIn_11_2;
           }
           for (var3_intLifetime1 = 0; this.cells.length > var3_intLifetime1; var3_intLifetime1++) {
-            this.cells[var3_intLifetime1] = param1.a(0);
+            this.cells[var3_intLifetime1] = param1.readByte(0);
           }
           for (var3_intLifetime2 = 0; this.field_u > var3_intLifetime2; var3_intLifetime2++) {
-            ok.a(this.field_t, -104, 1);
+            JavaRandomHelpers.a(this.field_t, -104, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,7 +77,7 @@ final class PlayerBoard {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class PlayerBoard {
                       var6[0] = this.pieceRow * this.paddedWidth + this.pieceColumn;
                       var6[3] = this.paddedWidth * (1 + this.pieceRow) + (1 + this.pieceColumn);
                       for (var4 = 0; var4 < 4; var4++) {
-                        this.cells[var8[var4]] = (byte)cm.a((int) this.cells[var8[var4]], -4);
+                        this.cells[var8[var4]] = (byte)cm.bitAnd((int) this.cells[var8[var4]], -4);
                         stackIn_18_0 = this.cells;
                         stackIn_18_1 = var8[var4];
                         stackIn_18_2 = this.cells[var8[var4]];
@@ -171,7 +171,7 @@ final class PlayerBoard {
                         } else {
                           stackIn_19_3 = 2;
                         }
-                        stackIn_18_0[stackIn_18_1] = (byte)bq.a((int) stackIn_18_2, stackIn_19_3);
+                        stackIn_18_0[stackIn_18_1] = (byte)bq.bitOr((int) stackIn_18_2, stackIn_19_3);
                       }
                       this.spawnPiece(-91);
                       if (this.pieceColumn == 0 ||
@@ -218,7 +218,7 @@ final class PlayerBoard {
 
     final static void d(int param0) {
         if (param0 >= -72) {
-          PlayerBoard.a((byte) -16);
+          PlayerBoard.releaseStatics((byte) -16);
         }
         lg.field_a = lg.field_a + 100;
         if (255 < lg.field_a) {
@@ -248,7 +248,7 @@ final class PlayerBoard {
           var2 = 0;
           if (DateOfBirthValidator.field_j != 1) {
             this.field_u = this.field_u + 1;
-            var3 = ok.a(this.field_t, -119, 100);
+            var3 = JavaRandomHelpers.a(this.field_t, -119, 100);
             var4 = 0;
             for (var5 = 0; var5 < 6; var5++) {
               var4 = var4 + SceneWidget.field_db[var5];
@@ -272,14 +272,14 @@ final class PlayerBoard {
         }
         if (DateOfBirthValidator.field_j != 1) {
           this.field_u = this.field_u + 1;
-          var3Lifetime2 = ok.a(this.field_t, -116, 4);
+          var3Lifetime2 = JavaRandomHelpers.a(this.field_t, -116, 4);
           for (var4Lifetime1 = 0; var3Lifetime2 > var4Lifetime1; var4Lifetime1++) {
             wm.a(-11825, this.pieceTones);
           }
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_o = null;
         field_c = null;
@@ -330,7 +330,7 @@ final class PlayerBoard {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -399,7 +399,7 @@ final class PlayerBoard {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -415,14 +415,14 @@ final class PlayerBoard {
           for (var4 = 0; param0.field_a > var4; var4++) {
             for (var5 = 0; var5 < param0.field_f; var5++) {
               var6 = 1 + var5 + (1 + var4) * this.paddedWidth;
-              this.cells[var6] = (byte)cm.a((int) this.cells[var6], -4);
-              this.cells[var6] = (byte)bq.a((int) this.cells[var6], (int) var3[param0.field_f * var4 + var5]);
-              this.cells[var6] = (byte)bq.a((int) this.cells[var6], 4);
+              this.cells[var6] = (byte)cm.bitAnd((int) this.cells[var6], -4);
+              this.cells[var6] = (byte)bq.bitOr((int) this.cells[var6], (int) var3[param0.field_f * var4 + var5]);
+              this.cells[var6] = (byte)bq.bitOr((int) this.cells[var6], 4);
             }
           }
           var5Lifetime1 = -8 % ((param1 + 13) / 43);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

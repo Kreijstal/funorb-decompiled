@@ -49,7 +49,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           PacketBuffer.field_n = param1;
           IntrusiveDeque.h(-126);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ad.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ad.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
             return;
           }
           if (!param0.field_D) {
-            stackIn_8_0 = (param0.b(true)) ? 1 : 0;
+            stackIn_8_0 = (param0.containsFocus(true)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
@@ -199,10 +199,10 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
             stackIn_16_0 = this.field_v;
           }
           var7 = stackIn_16_0;
-          td.a(param3 + param0.field_z, param0.field_p + (param2 + (param0.field_C - this.field_s[0].field_B >> 1)), param0.field_E, this.field_s, (byte) 121, var7);
+          td.drawThreeSliceBar(param3 + param0.field_z, param0.field_p + (param2 + (param0.field_C - this.field_s[0].field_B >> 1)), param0.field_E, this.field_s, (byte) 121, var7);
           stackIn_19_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
-          this.field_a.drawParagraph(param0.field_q, param3 + param0.field_z, param2 + param0.field_p - 2, param0.field_E, param0.field_C, var8, -1, 1, 1, this.field_a.maxAscent);
+          this.font.drawParagraph(param0.field_q, param3 + param0.field_z, param2 + param0.field_p - 2, param0.field_E, param0.field_C, var8, -1, 1, 1, this.font.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,7 +214,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         this.field_v = param2;
         this.field_q = param1;
         this.field_t = param0;
-        this.field_a = ba.field_d;
+        this.font = ba.field_d;
         this.field_s = fc.field_d;
     }
 

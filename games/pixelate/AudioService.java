@@ -62,7 +62,7 @@ final class AudioService implements Runnable {
           var21 = null;
           var12 = Pixelate.field_H ? 1 : 0;
           try {
-            var16_ref = (aj) (ma.field_o.c(1504642273));
+            var16_ref = (aj) (ScoreMarkerBar.field_o.c(1504642273));
             if (var16_ref == null) {
               return;
             }
@@ -94,7 +94,7 @@ final class AudioService implements Runnable {
               return;
             }
             var4 = param0.position;
-            param0.d(var16_ref.field_p, -66);
+            param0.writeInt(var16_ref.field_p, -66);
             for (var5 = 0; var16_ref.field_s > var5; var5++) {
               if (var16_ref.field_u[var5] == 0) {
                 try {
@@ -105,7 +105,7 @@ final class AudioService implements Runnable {
                         var14 = (java.lang.reflect.Field) (var16_ref.field_l[var5].field_e);
                         var8 = var14.getModifiers();
                         param0.writeByte(160, 0);
-                        param0.d(var8, -46);
+                        param0.writeInt(var8, -46);
                       }
                     } else {
                       var15 = (java.lang.reflect.Field) (var16_ref.field_l[var5].field_e);
@@ -117,7 +117,7 @@ final class AudioService implements Runnable {
                     var25 = (java.lang.reflect.Field) (var16_ref.field_l[var5].field_e);
                     var8 = var25.getInt((Object) null);
                     param0.writeByte(160, 0);
-                    param0.d(var8, -124);
+                    param0.writeInt(var8, -124);
                   }
                   if (var6_int == 3) {
                     var26 = (java.lang.reflect.Method) (var16_ref.field_v[var5].field_e);
@@ -137,14 +137,14 @@ final class AudioService implements Runnable {
                       param0.writeByte(160, 4);
                     } else {
                       param0.writeByte(160, 2);
-                      param0.b((byte) -41, (String) (var10));
+                      param0.writeString((byte) -41, (String) (var10));
                     }
                   } else {
                     if (4 == var6_int) {
                       var27 = (java.lang.reflect.Method) (var16_ref.field_v[var5].field_e);
                       var8Lifetime1 = var27.getModifiers();
                       param0.writeByte(160, 0);
-                      param0.d(var8Lifetime1, -45);
+                      param0.writeInt(var8Lifetime1, -45);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
@@ -200,8 +200,8 @@ final class AudioService implements Runnable {
                 param0.writeByte(160, var16_ref.field_u[var5]);
               }
             }
-            param0.b(var4, (byte) 111);
-            var16_ref.c(2779);
+            param0.appendCrc32(var4, (byte) 111);
+            var16_ref.unlink(2779);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -213,7 +213,7 @@ final class AudioService implements Runnable {
             } else {
               stackIn_68_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -243,7 +243,7 @@ final class AudioService implements Runnable {
         hm.a((byte) -95);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (!param0) {
           field_b = (String) null;
@@ -272,7 +272,7 @@ final class AudioService implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          CheckboxPainter.a(1, (String) null, (Throwable) ((Object) exception));
+          CheckboxPainter.reportClientError(1, (String) null, (Throwable) ((Object) exception));
         } finally {
           this.field_f = false;
         }
@@ -287,7 +287,7 @@ final class AudioService implements Runnable {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = aa.field_f;
         int var3 = 77 % ((29 - param0) / 46);
-        var2.g(param1, 15514);
+        var2.writeOpcode(param1, 15514);
         var2.writeByte(160, 1);
         var2.writeByte(160, 0);
     }

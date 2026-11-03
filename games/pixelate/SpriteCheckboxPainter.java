@@ -13,14 +13,14 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         CipherPacketBuffer var3 = null;
         try {
           if (param0 != -31) {
-            SpriteCheckboxPainter.a(-63);
+            SpriteCheckboxPainter.releaseStatics(-63);
           }
           var3 = aa.field_f;
-          var3.g(param1, 15514);
+          var3.writeOpcode(param1, 15514);
           var3.writeByte(160, param2.field_m);
           var3.writeShort(param0 + 1276387975, param2.field_k);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           oo.field_a = param0;
           QuickChatMenu.a(12, -2671);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -53,9 +53,9 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           var8 = CanvasRasterBuffer.field_g[1];
           if (param0 instanceof TextButton &&
             ((TextButton) (param0)).field_M) {
-            var8.b((-var8.field_A + param0.field_E >> 1) + var6_int + 1, var7 + (1 + (-var8.field_B + param0.field_C >> 1)), 256);
+            var8.drawAdditive((-var8.field_A + param0.field_E >> 1) + var6_int + 1, var7 + (1 + (-var8.field_B + param0.field_C >> 1)), 256);
           }
-          if (!param0.b(true)) {
+          if (!param0.containsFocus(true)) {
             return;
           }
           ValidatedTextWidget.a(var6_int + 2, 2 + var7, (byte) -128, param0.field_E - 4, param0.field_C - 4);
@@ -70,11 +70,11 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 14518) {
           return;

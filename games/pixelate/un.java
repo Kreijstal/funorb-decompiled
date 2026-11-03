@@ -12,7 +12,7 @@ final class un {
     int field_d;
     int field_e;
     static String[] field_k;
-    static so field_j;
+    static PuzzlePieceQueue field_j;
     byte[] field_b;
     int field_i;
 
@@ -20,10 +20,10 @@ final class un {
         int var1 = 0;
         if (-1 != MatchController.field_q) {
           var1 = -ValidatedTextWidget.field_bb + 50;
-          SoftwareRasterizer.a(var1, 70, MatchHud.field_a, 48, 65793, 160);
-          CanvasRasterBuffer.field_b.a(MatchHud.field_a + var1, 70, 160);
-          MenuScreen.field_c.a(var1 - 22, 70, 160);
-          oo.field_c[MatchController.field_q].e(var1, 78);
+          SoftwareRasterizer.fillRectangleAlpha(var1, 70, MatchHud.field_a, 48, 65793, 160);
+          CanvasRasterBuffer.field_b.drawAlpha(MatchHud.field_a + var1, 70, 160);
+          MenuScreen.field_c.drawAlpha(var1 - 22, 70, 160);
+          oo.field_c[MatchController.field_q].drawQuarterSize(var1, 78);
           qj.field_e.drawText(GameApplet.field_n[MatchController.field_q], var1 + 16 + 32, 99, 16777215, -1);
         }
         if (param0 >= 21) {
@@ -56,7 +56,7 @@ final class un {
     final static void a(boolean param0) {
         ek.field_c = false;
         if (!param0) {
-          field_j = (so) null;
+          field_j = (PuzzlePieceQueue) null;
         }
     }
 

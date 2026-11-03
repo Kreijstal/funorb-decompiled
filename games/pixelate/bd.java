@@ -6,7 +6,7 @@ final class bd {
     static int field_c;
     static java.applet.Applet field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 == 70) {
@@ -45,7 +45,7 @@ final class bd {
             if (!ln.field_q) {
               td.field_b = null;
             } else {
-              td.field_b.a(ui.field_i.screenY, param1, (byte) 99, ui.field_i.field_tb);
+              td.field_b.handlePointerEvents(ui.field_i.screenY, param1, (byte) 99, ui.field_i.field_tb);
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {
@@ -60,7 +60,7 @@ final class bd {
             }
           }
           if (0 != GradientOutlineTextPainter.field_u.field_P) {
-            AccountTermsPanel.field_M = new ReportAbuseDialog(GradientOutlineTextPainter.field_u.field_tb, GradientOutlineTextPainter.field_u.screenY, GradientOutlineTextPainter.field_u.field_K, GradientOutlineTextPainter.field_u.height, param3, cm.field_o, pj.field_i, ae.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, (String) null, 0L);
+            AccountTermsPanel.field_M = new ReportAbuseDialog(GradientOutlineTextPainter.field_u.field_tb, GradientOutlineTextPainter.field_u.screenY, GradientOutlineTextPainter.field_u.field_K, GradientOutlineTextPainter.field_u.height, param3, cm.field_o, pj.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, (String) null, 0L);
           }
           var9 = ah.a((byte) -110, fq.field_q, param2, MouseWheelHandler.field_c);
           if (var9 != null) {
@@ -75,7 +75,7 @@ final class bd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "bd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var4), "bd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -142,17 +142,17 @@ final class bd {
           bq.field_b.e(-127);
           var1 = vm.field_b.a(-89);
           while (var1 != null) {
-            var1.e(17);
+            var1.unlinkSecondary(17);
             var1 = vm.field_b.a((byte) 50);
           }
           var1Lifetime1 = GameResultsScreen.field_q.a(-84);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.e(17);
+            var1Lifetime1.unlinkSecondary(17);
             var1Lifetime1 = GameResultsScreen.field_q.a((byte) 50);
           }
           ValidatedTextWidget.field_db = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ')');
         }
     }
 

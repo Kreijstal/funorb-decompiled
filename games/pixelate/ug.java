@@ -6,7 +6,7 @@ final class ug extends IntrusiveNode {
     int field_m;
     static int[] field_n;
     static VerticalScrollbar field_s;
-    static pb field_q;
+    static PictureStrip field_q;
     static BufferedRandomAccessFile[] field_l;
     long field_o;
     static int field_k;
@@ -25,7 +25,7 @@ final class ug extends IntrusiveNode {
         if (null != wo.field_b) {
           var2 = wo.field_b;
           String var1 = var2;
-          LoginCredentials.a(sd.a(ek.field_d, 113, new String[]{var2}), false);
+          LoginCredentials.a(AlphaContainer.a(ek.field_d, 113, new String[]{var2}), false);
           wo.field_b = null;
         }
         if (param0 == 2586) {
@@ -40,11 +40,11 @@ final class ug extends IntrusiveNode {
           this.field_m = param1;
           this.field_r = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ug.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ug.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 == 24857) {
           field_p = null;

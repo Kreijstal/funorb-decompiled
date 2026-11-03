@@ -40,11 +40,11 @@ abstract class ah extends DualLinkNode {
         int var8Lifetime3;
         int var9Lifetime2Lifetime1;
         var13 = Pixelate.field_H ? 1 : 0;
-        l.field_p.field_Fb.children.e(33);
+        l.field_p.content.children.e(33);
         var4 = null;
         var5 = 0;
         var6 = 0;
-        for (var7 = -1 + sd.field_L; var7 >= 0; var7--) {
+        for (var7 = -1 + AlphaContainer.field_L; var7 >= 0; var7--) {
           var8_ref_aa = MenuScreen.field_e[var7];
           var9 = 0;
           if (!ln.field_q &&
@@ -63,8 +63,8 @@ abstract class ah extends DualLinkNode {
               DialWidget.field_P) {
               if (var8_ref_aa.field_q != null) {
               }
-              var10 = TextWidgetPainter.a(var8_ref_aa, -77);
-              var11 = var10 + BitmapFont.b(var8_ref_aa.field_g);
+              var10 = TextWidgetPainter.formatChatPrefix(var8_ref_aa, -77);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_aa.field_g);
               var12 = lc.a(var8_ref_aa, false);
               var8_ref_aa.field_q = new SceneWidget(0L, oi.field_e, var11);
               var8_ref_aa.field_q.field_y = ((16711423 & oi.field_e.field_y) >> 1) + (var12 - (var12 >> 1 & 8355711));
@@ -77,28 +77,28 @@ abstract class ah extends DualLinkNode {
         }
         var7Lifetime1 = 0;
         if (param0 >= -90) {
-          ah.g(-107);
-          for (var8 = 0; sd.field_L > var8; var8++) {
+          ah.releaseStatics(-107);
+          for (var8 = 0; AlphaContainer.field_L > var8; var8++) {
             var14 = MenuScreen.field_e[var8];
             if (var14.field_q != null) {
-              l.field_p.field_Fb.a(var14.field_q, (byte) 26);
-              var14.field_q.a(var7Lifetime1, param1, param3, 256, var14.field_q.g(0));
+              l.field_p.content.addChild(var14.field_q, (byte) 26);
+              var14.field_q.setBounds(var7Lifetime1, param1, param3, 256, var14.field_q.g(0));
               if (var14.field_q.field_P != 0) {
                 var4 = var14;
               }
               var7Lifetime1 = var7Lifetime1 + param1;
             }
           }
-          var8Lifetime3 = l.field_p.field_Fb.height + l.field_p.field_Fb.pendingHeightDelta + (-var7Lifetime1 + var6);
-          l.field_p.field_Fb.height = l.field_p.field_Fb.height - var8Lifetime3;
-          l.field_p.field_Fb.field_S = l.field_p.field_Fb.field_S + var8Lifetime3;
+          var8Lifetime3 = l.field_p.content.height + l.field_p.content.pendingHeightDelta + (-var7Lifetime1 + var6);
+          l.field_p.content.height = l.field_p.content.height - var8Lifetime3;
+          l.field_p.content.field_S = l.field_p.content.field_S + var8Lifetime3;
           if (DialWidget.field_P) {
-            l.field_p.field_Fb.height = var7Lifetime1;
+            l.field_p.content.height = var7Lifetime1;
           }
-          l.field_p.field_Fb.pendingHeightDelta = var7Lifetime1 - l.field_p.field_Fb.height;
+          l.field_p.content.pendingHeightDelta = var7Lifetime1 - l.field_p.content.height;
           if (DialWidget.field_P) {
-            l.field_p.field_Fb.pendingYDelta = 0;
-            l.field_p.field_Fb.field_S = -l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+            l.field_p.content.pendingYDelta = 0;
+            l.field_p.content.field_S = -l.field_p.content.height + l.field_p.field_Ib.height;
             MatchingTextValidator.field_z = true;
             DialWidget.field_P = false;
           }
@@ -106,110 +106,110 @@ abstract class ah extends DualLinkNode {
             LoadingProgressDialog.field_eb != null) {
             MatchingTextValidator.field_z = true;
           }
-          var9Lifetime1 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+          var9Lifetime1 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
           if (!MatchingTextValidator.field_z) {
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_48_0 = (var9Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            stackIn_48_0 = (var9Lifetime1 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_48_0;
           } else {
-            l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime1;
+            l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime1;
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_44_0 = (var9Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            stackIn_44_0 = (var9Lifetime1 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_44_0;
           }
           return (aa) (var4);
         }
-        for (var8Lifetime1 = 0; sd.field_L > var8Lifetime1; var8Lifetime1++) {
+        for (var8Lifetime1 = 0; AlphaContainer.field_L > var8Lifetime1; var8Lifetime1++) {
           var16 = MenuScreen.field_e[var8Lifetime1];
           if (var16.field_q != null) {
-            l.field_p.field_Fb.a(var16.field_q, (byte) 26);
-            var16.field_q.a(var7Lifetime1, param1, param3, 256, var16.field_q.g(0));
+            l.field_p.content.addChild(var16.field_q, (byte) 26);
+            var16.field_q.setBounds(var7Lifetime1, param1, param3, 256, var16.field_q.g(0));
             if (var16.field_q.field_P != 0) {
               var4 = var16;
             }
             var7Lifetime1 = var7Lifetime1 + param1;
           }
         }
-        var8Lifetime2 = l.field_p.field_Fb.height + l.field_p.field_Fb.pendingHeightDelta + (-var7Lifetime1 + var6);
-        l.field_p.field_Fb.height = l.field_p.field_Fb.height - var8Lifetime2;
-        l.field_p.field_Fb.field_S = l.field_p.field_Fb.field_S + var8Lifetime2;
+        var8Lifetime2 = l.field_p.content.height + l.field_p.content.pendingHeightDelta + (-var7Lifetime1 + var6);
+        l.field_p.content.height = l.field_p.content.height - var8Lifetime2;
+        l.field_p.content.field_S = l.field_p.content.field_S + var8Lifetime2;
         if (!DialWidget.field_P) {
-          l.field_p.field_Fb.pendingHeightDelta = var7Lifetime1 - l.field_p.field_Fb.height;
+          l.field_p.content.pendingHeightDelta = var7Lifetime1 - l.field_p.content.height;
           if (DialWidget.field_P) {
-            l.field_p.field_Fb.pendingYDelta = 0;
-            l.field_p.field_Fb.field_S = -l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+            l.field_p.content.pendingYDelta = 0;
+            l.field_p.content.field_S = -l.field_p.content.height + l.field_p.field_Ib.height;
             MatchingTextValidator.field_z = true;
             DialWidget.field_P = false;
           }
           if (oo.field_d &&
             LoadingProgressDialog.field_eb != null) {
             MatchingTextValidator.field_z = true;
-            var9Lifetime2 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+            var9Lifetime2 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
             if (!MatchingTextValidator.field_z) {
               l.field_p.a(-100, param1, true, param2 * 2 * param1);
-              stackIn_101_0 = (var9Lifetime2 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+              stackIn_101_0 = (var9Lifetime2 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
               MatchingTextValidator.field_z = stackIn_101_0;
             } else {
-              l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime2;
+              l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime2;
               l.field_p.a(-100, param1, true, param2 * 2 * param1);
-              stackIn_105_0 = (var9Lifetime2 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+              stackIn_105_0 = (var9Lifetime2 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
               MatchingTextValidator.field_z = stackIn_105_0;
             }
             return (aa) (var4);
           }
-          var9Lifetime2Lifetime1 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+          var9Lifetime2Lifetime1 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
           if (!MatchingTextValidator.field_z) {
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_111_0 = (var9Lifetime2Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            stackIn_111_0 = (var9Lifetime2Lifetime1 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_111_0;
           } else {
-            l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime2Lifetime1;
+            l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime2Lifetime1;
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_115_0 = (var9Lifetime2Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            stackIn_115_0 = (var9Lifetime2Lifetime1 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_115_0;
           }
           return (aa) (var4);
         }
-        l.field_p.field_Fb.height = var7Lifetime1;
-        l.field_p.field_Fb.pendingHeightDelta = var7Lifetime1 - l.field_p.field_Fb.height;
+        l.field_p.content.height = var7Lifetime1;
+        l.field_p.content.pendingHeightDelta = var7Lifetime1 - l.field_p.content.height;
         if (DialWidget.field_P) {
-          l.field_p.field_Fb.pendingYDelta = 0;
-          l.field_p.field_Fb.field_S = -l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+          l.field_p.content.pendingYDelta = 0;
+          l.field_p.content.field_S = -l.field_p.content.height + l.field_p.field_Ib.height;
           MatchingTextValidator.field_z = true;
           DialWidget.field_P = false;
         }
         if (!oo.field_d) {
-          var9Lifetime3 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+          var9Lifetime3 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
           if (!MatchingTextValidator.field_z) {
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_69_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            stackIn_69_0 = (var9Lifetime3 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_69_0;
           } else {
-            l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime3;
+            l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime3;
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_73_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            stackIn_73_0 = (var9Lifetime3 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_73_0;
           }
         } else {
           if (LoadingProgressDialog.field_eb != null) {
             MatchingTextValidator.field_z = true;
-            var9Lifetime3 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+            var9Lifetime3 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
             if (MatchingTextValidator.field_z) {
-              l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime3;
+              l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime3;
             }
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_81_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            stackIn_81_0 = (var9Lifetime3 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_81_0;
           } else {
-            var9Lifetime3 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+            var9Lifetime3 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
             if (!MatchingTextValidator.field_z) {
               l.field_p.a(-100, param1, true, param2 * 2 * param1);
-              stackIn_86_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+              stackIn_86_0 = (var9Lifetime3 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
               MatchingTextValidator.field_z = stackIn_86_0;
             } else {
-              l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime3;
+              l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime3;
               l.field_p.a(-100, param1, true, param2 * 2 * param1);
-              stackIn_90_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+              stackIn_90_0 = (var9Lifetime3 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
               MatchingTextValidator.field_z = stackIn_90_0;
             }
           }
@@ -220,7 +220,7 @@ abstract class ah extends DualLinkNode {
     final static void a(int param0, byte param1) {
         try {
           try {
-            cq.a(AudioService.a(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
+            JavaScriptBridge.a(AudioService.a(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
           } catch (Throwable throwable) {
           }
           if (param1 > 69) {
@@ -236,9 +236,9 @@ abstract class ah extends DualLinkNode {
 
     abstract Object a(byte param0);
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -520925311) {
-          ah.g(-22);
+          ah.releaseStatics(-22);
           field_u = null;
           return;
         }
@@ -249,7 +249,7 @@ abstract class ah extends DualLinkNode {
         this.field_t = param0;
     }
 
-    abstract boolean b(boolean param0);
+    abstract boolean isSoft(boolean param0);
 
     static {
         field_u = "Highscores";

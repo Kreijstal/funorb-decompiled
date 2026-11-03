@@ -22,12 +22,12 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             } else {
               var2_int = -1;
             }
-            if (ol.field_q >= 0 &&
+            if (PauseMenuScreen.field_q >= 0 &&
               0 <= var2_int) {
-              LabeledField.field_Q[ol.field_q] = ~var2_int;
-              ol.field_q = ol.field_q + 1 & 127;
-              if (ol.field_q == wm.field_c) {
-                ol.field_q = -1;
+              LabeledField.field_Q[PauseMenuScreen.field_q] = ~var2_int;
+              PauseMenuScreen.field_q = PauseMenuScreen.field_q + 1 & 127;
+              if (PauseMenuScreen.field_q == wm.field_c) {
+                PauseMenuScreen.field_q = -1;
               }
             }
           }
@@ -43,29 +43,29 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, String param6, int param7, int param8) {
+    final static void initializeArchiveServices(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, String param6, int param7, int param8) {
         try {
           ArchiveIndex.field_s = param3;
           if (param7 != -21462) {
             String var10 = (String) null;
-            KeyboardInputHandler.a(117, 59, -61, 116, (PlatformTaskDispatcher) null, -123, (String) null, 58, -63);
+            KeyboardInputHandler.initializeArchiveServices(117, 59, -61, 116, (PlatformTaskDispatcher) null, -123, (String) null, 58, -63);
           }
           fj.field_a = param0;
           bl.field_e = param6;
           SceneWidget.field_ib = param2;
-          ql.field_o = param8;
-          pd.field_Eb = param5;
-          lk.field_n = param1;
+          GreenGrowTheRushesBackground.field_o = param8;
+          ScrollPaneWithFooter.field_Eb = param5;
+          AcidSunsetBackground.field_n = param1;
           ef.field_e = param4;
           Match.field_h = (Js5Transport) ((Object) new SocketJs5Transport());
           DisplayNameForm.field_J = new DiskCacheWorker(param4);
           ck.field_j = new Js5ArchiveManager(Match.field_h, DisplayNameForm.field_J);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               var6++;
               incrementValue$1 = var5;
               var5++;
-              var4[incrementValue$0] = param1.field_G[incrementValue$1];
+              var4[incrementValue$0] = param1.pixels[incrementValue$1];
             }
             var6 = var6 + (var2_int - param1.field_F);
           }
@@ -114,7 +114,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           param1.field_D = param1.field_D & -4;
           param1.field_F = var2_int;
           param1.field_E = var3;
-          param1.field_G = var4;
+          param1.pixels = var4;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,21 +126,21 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (mc.field_r != null) {
-            ol.field_q = -1;
+            PauseMenuScreen.field_q = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rp.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rp.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -1) {
           return;
@@ -167,7 +167,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rp.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rp.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -193,12 +193,12 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             } else {
               var2_int = -1;
             }
-            if (0 <= ol.field_q &&
+            if (0 <= PauseMenuScreen.field_q &&
               var2_int >= 0) {
-              LabeledField.field_Q[ol.field_q] = var2_int;
-              ol.field_q = 127 & 1 + ol.field_q;
-              if (ol.field_q == wm.field_c) {
-                ol.field_q = -1;
+              LabeledField.field_Q[PauseMenuScreen.field_q] = var2_int;
+              PauseMenuScreen.field_q = 127 & 1 + PauseMenuScreen.field_q;
+              if (PauseMenuScreen.field_q == wm.field_c) {
+                PauseMenuScreen.field_q = -1;
               }
             }
             if (var2_int >= 0) {
@@ -234,7 +234,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

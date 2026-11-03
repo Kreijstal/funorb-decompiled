@@ -8,7 +8,7 @@ abstract class TickClock {
     static String[] field_c;
     static int field_a;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
@@ -21,9 +21,9 @@ abstract class TickClock {
     final static SceneWidget b(int param0) {
         if (param0 <= 101) {
           TickClock.b(47);
-          return fb.c((byte) 123);
+          return PairedTextColumns.c((byte) 123);
         }
-        return fb.c((byte) 123);
+        return PairedTextColumns.c((byte) 123);
     }
 
     abstract void a(boolean param0);

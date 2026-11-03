@@ -30,7 +30,7 @@ final class df extends IntrusiveNode {
               var9.field_Ub = null;
             }
             var4 = aa.field_f;
-            var4.g(param2, param0 ^ 15513);
+            var4.writeOpcode(param2, param0 ^ 15513);
             var4.writeByte(160, 3);
             var4.writeByte(160, 11);
             var4.writeShort(1276387944, param1);
@@ -47,14 +47,14 @@ final class df extends IntrusiveNode {
             var7.field_Ub = null;
           }
           var4Lifetime1 = aa.field_f;
-          var4Lifetime1.g(param2, param0 ^ 15513);
+          var4Lifetime1.writeOpcode(param2, param0 ^ 15513);
           var4Lifetime1.writeByte(160, 3);
           var4Lifetime1.writeByte(160, 11);
           var4Lifetime1.writeShort(1276387944, param1);
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 3) {
           field_m = (String) null;
           field_r = null;

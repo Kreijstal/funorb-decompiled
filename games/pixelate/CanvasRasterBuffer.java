@@ -14,7 +14,7 @@ abstract class CanvasRasterBuffer {
     static Sprite field_b;
     static String[] field_c;
 
-    abstract void a(java.awt.Graphics param0, boolean param1, int param2, int param3);
+    abstract void drawImage(java.awt.Graphics param0, boolean param1, int param2, int param3);
 
     final static boolean b(int param0) {
         if (param0 != 12742) {
@@ -44,7 +44,7 @@ abstract class CanvasRasterBuffer {
           if (param1 != 37) {
             field_k = (String) null;
           }
-          stackIn_5_0 = (re.a(param0, -1) != null);
+          stackIn_5_0 = (re.findFriend(param0, -1) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,18 +56,18 @@ abstract class CanvasRasterBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0) {
+    final void bindRaster(int param0) {
         if (param0 != 19692) {
           return;
         }
-        SoftwareRasterizer.a(this.field_e, this.field_a, this.field_i);
+        SoftwareRasterizer.setTarget(this.field_e, this.field_a, this.field_i);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -79,7 +79,7 @@ abstract class CanvasRasterBuffer {
         field_b = null;
     }
 
-    abstract void a(int param0, java.awt.Component param1, int param2, byte param3);
+    abstract void initialize(int param0, java.awt.Component param1, int param2, byte param3);
 
     static {
         field_k = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";

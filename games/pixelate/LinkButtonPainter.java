@@ -12,7 +12,7 @@ final class LinkButtonPainter implements WidgetPainter {
     private BitmapFont font;
     static int field_h;
 
-    final static void a(boolean param0, String param1, int param2, java.applet.Applet param3) {
+    final static void openUrlInNewWindow(boolean param0, String param1, int param2, java.applet.Applet param3) {
         try {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
@@ -36,7 +36,7 @@ final class LinkButtonPainter implements WidgetPainter {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              CheckboxPainter.a(1, "MGR1: " + param1, (Throwable) null);
+              CheckboxPainter.reportClientError(1, "MGR1: " + param1, (Throwable) null);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -55,7 +55,7 @@ final class LinkButtonPainter implements WidgetPainter {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -65,14 +65,14 @@ final class LinkButtonPainter implements WidgetPainter {
     }
 
     final static void a(byte param0) {
-        jd var1 = (jd) (oj.field_P.b(param0 - 174));
+        jd var1 = (jd) (BirthDateEntryPanel.field_P.b(param0 - 174));
         if (param0 != 92) {
           field_i = -106;
           if (var1 == null) {
             throw new IllegalStateException();
           }
-          SoftwareRasterizer.a(var1.field_t, var1.field_q, var1.field_u);
-          SoftwareRasterizer.f(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
+          SoftwareRasterizer.setTarget(var1.field_t, var1.field_q, var1.field_u);
+          SoftwareRasterizer.setClip(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
           var1.field_t = null;
           ValidationIndicator.field_O.addFirst(param0 ^ 22065, var1);
           return;
@@ -80,17 +80,17 @@ final class LinkButtonPainter implements WidgetPainter {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.a(var1.field_t, var1.field_q, var1.field_u);
-        SoftwareRasterizer.f(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
+        SoftwareRasterizer.setTarget(var1.field_t, var1.field_q, var1.field_u);
+        SoftwareRasterizer.setClip(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
         var1.field_t = null;
         ValidationIndicator.field_O.addFirst(param0 ^ 22065, var1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         if (param0 >= -74) {
-          LinkButtonPainter.a(92);
+          LinkButtonPainter.releaseStatics(92);
         }
     }
 
@@ -106,7 +106,7 @@ final class LinkButtonPainter implements WidgetPainter {
           this.font = param0;
           this.verticalAlignment = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class LinkButtonPainter implements WidgetPainter {
         var11 = Pixelate.field_H ? 1 : 0;
         try {
           if (!param0.field_D &&
-            !param0.b(true)) {
+            !param0.containsFocus(true)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
@@ -136,7 +136,7 @@ final class LinkButtonPainter implements WidgetPainter {
           if (param1 != -124) {
             return;
           }
-          if (param0.b(true)) {
+          if (param0.containsFocus(true)) {
             var7 = this.font.textWidth(param0.field_q);
             var8 = this.font.maxDescent + this.font.maxAscent;
             var9 = param0.field_z + param3;
@@ -168,7 +168,7 @@ final class LinkButtonPainter implements WidgetPainter {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

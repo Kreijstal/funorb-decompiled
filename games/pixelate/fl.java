@@ -38,7 +38,7 @@ final class fl {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (ln.field_q) {
-          return td.field_b.a(nj.field_f, ke.field_a, false);
+          return td.field_b.processKey(DualLinkDeque.field_f, ke.field_a, false);
         }
         if (un.field_l) {
           return AccountMessagePanel.b(102, param2, param1);
@@ -61,7 +61,7 @@ final class fl {
     }
 
     final static void a(byte param0) {
-        wa.field_c.e((byte) 54);
+        wa.field_c.refreshPanelVisibility((byte) 54);
         int var1 = -119 / ((param0 + 55) / 51);
         if (null != cn.field_b) {
           wa.field_c.b(-6183, cn.field_b);
@@ -90,7 +90,7 @@ final class fl {
         this.field_a = param1 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_c = null;
         field_f = null;
@@ -111,7 +111,7 @@ final class fl {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

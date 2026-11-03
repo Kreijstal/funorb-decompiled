@@ -25,9 +25,9 @@ final class Js5NetworkRequest extends ArchiveRequest {
     }
 
     final static void a(int param0, boolean param1) {
-        wa.field_c.a(0, 0, 120);
+        wa.field_c.drawLayers(0, 0, 120);
         if (param0 <= 73) {
-          Js5NetworkRequest.c((byte) 4);
+          Js5NetworkRequest.releaseStatics((byte) 4);
         }
     }
 
@@ -60,52 +60,52 @@ final class Js5NetworkRequest extends ArchiveRequest {
         int var1 = 16777215;
         gb.field_b = new Sprite(108, 100);
         int var2 = 65793;
-        gb.field_b.c();
-        SoftwareRasterizer.d(4, 0, SoftwareRasterizer.field_j - 8, SoftwareRasterizer.field_d, var1);
-        SoftwareRasterizer.c(4, 0, 4, var2);
-        SoftwareRasterizer.c(-4 + SoftwareRasterizer.field_j - 1, 0, 4, var2);
-        SoftwareRasterizer.c(4, SoftwareRasterizer.field_d, 4, var2);
-        SoftwareRasterizer.c(-4 + (SoftwareRasterizer.field_j - 1), SoftwareRasterizer.field_d, 4, var2);
-        SoftwareRasterizer.g(4, 0, SoftwareRasterizer.field_d, var2);
-        SoftwareRasterizer.g(5, 0, SoftwareRasterizer.field_d, var2);
+        gb.field_b.makeRasterTarget();
+        SoftwareRasterizer.fillRectangle(4, 0, SoftwareRasterizer.field_j - 8, SoftwareRasterizer.field_d, var1);
+        SoftwareRasterizer.fillCircle(4, 0, 4, var2);
+        SoftwareRasterizer.fillCircle(-4 + SoftwareRasterizer.field_j - 1, 0, 4, var2);
+        SoftwareRasterizer.fillCircle(4, SoftwareRasterizer.field_d, 4, var2);
+        SoftwareRasterizer.fillCircle(-4 + (SoftwareRasterizer.field_j - 1), SoftwareRasterizer.field_d, 4, var2);
+        SoftwareRasterizer.drawVerticalLine(4, 0, SoftwareRasterizer.field_d, var2);
+        SoftwareRasterizer.drawVerticalLine(5, 0, SoftwareRasterizer.field_d, var2);
         if (param0 == 7902) {
-          SoftwareRasterizer.g(-5 + SoftwareRasterizer.field_j, 0, SoftwareRasterizer.field_d, var2);
-          SoftwareRasterizer.g(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
-          SoftwareRasterizer.b(4, 0, -8 + SoftwareRasterizer.field_j, var2);
-          SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
-          wh.field_q = new Sprite(gb.field_b.field_A, 4);
-          wh.field_q.c();
-          SoftwareRasterizer.c(4, SoftwareRasterizer.field_d, 4, var2);
-          SoftwareRasterizer.c(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
-          SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
-          of.field_h = new Sprite(wh.field_q.field_A, wh.field_q.field_B);
-          of.field_h.c();
-          wh.field_q.c(0, 0);
-          ClientException.field_f.a(19692);
+          SoftwareRasterizer.drawVerticalLine(-5 + SoftwareRasterizer.field_j, 0, SoftwareRasterizer.field_d, var2);
+          SoftwareRasterizer.drawVerticalLine(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
+          SoftwareRasterizer.drawHorizontalLine(4, 0, -8 + SoftwareRasterizer.field_j, var2);
+          SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
+          HighscoresScreen.field_q = new Sprite(gb.field_b.field_A, 4);
+          HighscoresScreen.field_q.makeRasterTarget();
+          SoftwareRasterizer.fillCircle(4, SoftwareRasterizer.field_d, 4, var2);
+          SoftwareRasterizer.fillCircle(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
+          SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
+          of.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
+          of.field_h.makeRasterTarget();
+          HighscoresScreen.field_q.drawVerticalFlip(0, 0);
+          ClientException.field_f.bindRaster(19692);
           return;
         }
         field_C = (BackgroundScene[]) null;
-        SoftwareRasterizer.g(-5 + SoftwareRasterizer.field_j, 0, SoftwareRasterizer.field_d, var2);
-        SoftwareRasterizer.g(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
-        SoftwareRasterizer.b(4, 0, -8 + SoftwareRasterizer.field_j, var2);
-        SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
-        wh.field_q = new Sprite(gb.field_b.field_A, 4);
-        wh.field_q.c();
-        SoftwareRasterizer.c(4, SoftwareRasterizer.field_d, 4, var2);
-        SoftwareRasterizer.c(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
-        SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
-        of.field_h = new Sprite(wh.field_q.field_A, wh.field_q.field_B);
-        of.field_h.c();
-        wh.field_q.c(0, 0);
-        ClientException.field_f.a(19692);
+        SoftwareRasterizer.drawVerticalLine(-5 + SoftwareRasterizer.field_j, 0, SoftwareRasterizer.field_d, var2);
+        SoftwareRasterizer.drawVerticalLine(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
+        SoftwareRasterizer.drawHorizontalLine(4, 0, -8 + SoftwareRasterizer.field_j, var2);
+        SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
+        HighscoresScreen.field_q = new Sprite(gb.field_b.field_A, 4);
+        HighscoresScreen.field_q.makeRasterTarget();
+        SoftwareRasterizer.fillCircle(4, SoftwareRasterizer.field_d, 4, var2);
+        SoftwareRasterizer.fillCircle(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
+        SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
+        of.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
+        of.field_h.makeRasterTarget();
+        HighscoresScreen.field_q.drawVerticalFlip(0, 0);
+        ClientException.field_f.bindRaster(19692);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_G = null;
         field_F = null;
         field_C = null;
         if (param0 > -44) {
-          Js5NetworkRequest.c((byte) -123);
+          Js5NetworkRequest.releaseStatics((byte) -123);
         }
     }
 

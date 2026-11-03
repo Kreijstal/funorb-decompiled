@@ -51,7 +51,7 @@ final class SectorCacheStore {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -81,18 +81,18 @@ final class SectorCacheStore {
             synchronized (var6) {
               try {
                 if (param0) {
-                  if (this.indexFile.a(param1 + 59) < (long)(6 + param3 * 6)) {
+                  if (this.indexFile.length(param1 + 59) < (long)(6 + param3 * 6)) {
                     return false;
                   }
                   this.indexFile.a((long)(6 * param3), 113);
                   this.indexFile.readFully(MusicCrossfadeStream.field_K, (byte) 24, 6, 0);
                   var7_int = (MusicCrossfadeStream.field_K[4] << 8 & 65280) + ((MusicCrossfadeStream.field_K[3] << 16 & 16711680) + (MusicCrossfadeStream.field_K[5] & 255));
                   if (var7_int <= 0 ||
-                    !(this.dataFile.a(116) / 520L >= (long)var7_int)) {
+                    !(this.dataFile.length(116) / 520L >= (long)var7_int)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((519L + this.dataFile.a(41)) / 520L);
+                  var7_int = (int)((519L + this.dataFile.length(41)) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
@@ -153,7 +153,7 @@ final class SectorCacheStore {
                         var9 == var12 &&
                         var13 == this.field_d) &&
                         (decompiledFrameRemainder0 = (!(0 <= var10) ||
-                        !((long)var10 <= this.dataFile.a(102) / 520L)))) {
+                        !((long)var10 <= this.dataFile.length(102) / 520L)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -162,7 +162,7 @@ final class SectorCacheStore {
                     }
                     if (var10 == 0) {
                       param0 = false;
-                      var10 = (int)((this.dataFile.a(75) + 519L) / 520L);
+                      var10 = (int)((this.dataFile.length(75) + 519L) / 520L);
                       if (0 == var10) {
                         var10++;
                       }
@@ -233,7 +233,7 @@ final class SectorCacheStore {
             } else {
               stackIn_72_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -262,7 +262,7 @@ final class SectorCacheStore {
         try {
           if (an.field_e.d(param1 ^ -49) &&
             !param0.equals(an.field_e.b((byte) 81))) {
-            an.field_e = MatchController.a((byte) 119, param0);
+            an.field_e = MatchController.execute((byte) 119, param0);
           }
           if (param1 == -99) {
             stackIn_8_0 = an.field_e;
@@ -280,7 +280,7 @@ final class SectorCacheStore {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -305,7 +305,7 @@ final class SectorCacheStore {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.f(255);
+          var2_int = param1.readUnsignedByte(255);
           if (param0 <= 32) {
             return false;
           }
@@ -323,11 +323,11 @@ final class SectorCacheStore {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] read(int param0, int param1) {
         try {
           int var17 = 0;
           int incrementValue$2 = 0;
@@ -359,7 +359,7 @@ final class SectorCacheStore {
           var4_ref = this.dataFile;
           synchronized (var4_ref) {
             try {
-              if (this.indexFile.a(39) < (long)(6 * param1 + 6)) {
+              if (this.indexFile.length(39) < (long)(6 * param1 + 6)) {
                 return null;
               }
               this.indexFile.a((long)(param1 * 6), -108);
@@ -375,7 +375,7 @@ final class SectorCacheStore {
               if (0 >= var6) {
                 return null;
               }
-              if ((this.dataFile.a(52) / 520L) < (long)var6) {
+              if ((this.dataFile.length(52) / 520L) < (long)var6) {
                 return null;
               }
               var7 = new byte[var5_int];
@@ -421,7 +421,7 @@ final class SectorCacheStore {
                 if (var13 < 0) {
                   return null;
                 }
-                if ((long)var13 > (this.dataFile.a(81) / 520L)) {
+                if ((long)var13 > (this.dataFile.length(81) / 520L)) {
                   stackIn_44_0 = null;
                   return (byte[]) (stackIn_44_0);
                 }
@@ -460,7 +460,7 @@ final class SectorCacheStore {
           this.indexFile = param2;
           this.field_c = param3;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

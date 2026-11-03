@@ -15,10 +15,10 @@ final class mh {
           if (param1 < 73) {
             field_b = 37;
           }
-          DraggableWidget.field_I.a(bo.field_h, (byte) 26);
+          DraggableWidget.field_I.addChild(bo.field_h, (byte) 26);
           un.field_l = true;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class mh {
           return;
         }
         if (var6 > 0) {
-          GrowableIntList.a(SoftwareRasterizer.field_k, param3 ^ -123, param1, var6, var9, var4, var5, var7, var8, hp.field_Gb.field_G);
+          GrowableIntList.a(SoftwareRasterizer.field_k, param3 ^ -123, param1, var6, var9, var4, var5, var7, var8, hp.field_Gb.pixels);
           return;
         }
     }

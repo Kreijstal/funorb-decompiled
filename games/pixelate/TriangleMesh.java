@@ -63,7 +63,7 @@ final class TriangleMesh {
         this.a(-125);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_O = null;
         field_e = null;
         field_m = null;
@@ -176,7 +176,7 @@ final class TriangleMesh {
             }
             var2 = 1;
           }
-          mj.field_c.a(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, bg.field_k, (byte) -73), -1);
+          mj.field_c.updatePointer(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
           if (param0 <= 74) {
             TriangleMesh.b((byte) -77);
           }
@@ -185,8 +185,8 @@ final class TriangleMesh {
           }
           var3 = 0;
           if (var1_int != 0 &&
-            mj.field_c.field_j >= 0) {
-            var3 = BackgroundScene.field_h[mj.field_c.field_j];
+            mj.field_c.selectedIndex >= 0) {
+            var3 = BackgroundScene.field_h[mj.field_c.selectedIndex];
             if (var3 == 2 ||
               var3 == 5) {
               dh.a(0);
@@ -211,7 +211,7 @@ final class TriangleMesh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "rl.B(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "rl.B(" + param0 + ')');
         }
     }
 

@@ -17,7 +17,7 @@ final class NodeHashTable {
         int var6 = Pixelate.field_H ? 1 : 0;
         if (param0 != -25484) {
           byte[] var7 = (byte[]) null;
-          NodeHashTable.a((CipherPacketBuffer) null, (byte[]) null, -80, 17);
+          NodeHashTable.readPackedByteArray((CipherPacketBuffer) null, (byte[]) null, -80, 17);
         }
         IntrusiveNode var4 = this.field_g[(int)(param1 & (long)(this.field_a - 1))];
         this.field_i = var4.field_a;
@@ -42,23 +42,23 @@ final class NodeHashTable {
     }
 
     final static void a(boolean param0, int param1) {
-        nd.field_b = param0 ? new wo(UiContainer.field_H, an.field_a) : new wo(fb.field_Gb, vd.field_a);
+        nd.field_b = param0 ? new wo(UiContainer.field_H, an.field_a) : new wo(PairedTextColumns.field_Gb, vd.field_a);
         ff.field_h = new SceneWidget(0L, (SceneWidget) null);
         if (param1 >= -68) {
-          NodeHashTable.b(-102);
+          NodeHashTable.releaseStatics(-102);
         }
-        ff.field_h.a(nd.field_b.field_g, (byte) 26);
-        ff.field_h.a(ValidatedTextWidget.field_kb, (byte) 26);
+        ff.field_h.addChild(nd.field_b.field_g, (byte) 26);
+        ff.field_h.addChild(ValidatedTextWidget.field_kb, (byte) 26);
         ra.field_e = new SceneWidget(0L, cm.field_o);
         kh.field_a = new SceneWidget(0L, (SceneWidget) null);
-        ra.field_e.a(ih.field_g, (byte) 26);
-        ra.field_e.a(kh.field_a, (byte) 26);
-        kh.field_a.a(StripedProgressBar.field_O, (byte) 26);
-        kh.field_a.a(ContentTransitionDialog.field_eb, (byte) 26);
+        ra.field_e.addChild(ih.field_g, (byte) 26);
+        ra.field_e.addChild(kh.field_a, (byte) 26);
+        kh.field_a.addChild(StripedProgressBar.field_O, (byte) 26);
+        kh.field_a.addChild(ContentTransitionDialog.field_eb, (byte) 26);
         DebouncedValidator.a((byte) 32, param0);
     }
 
-    final static byte[] a(CipherPacketBuffer param0, byte[] param1, int param2, int param3) {
+    final static byte[] readPackedByteArray(CipherPacketBuffer param0, byte[] param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -78,9 +78,9 @@ final class NodeHashTable {
         try {
           if (param3 < 59) {
             var9 = (byte[]) null;
-            NodeHashTable.a((CipherPacketBuffer) null, (byte[]) null, 62, -90);
+            NodeHashTable.readPackedByteArray((CipherPacketBuffer) null, (byte[]) null, 62, -90);
           }
-          var4_int = param0.c(param2, (byte) -34);
+          var4_int = param0.readBits(param2, (byte) -34);
           if (var4_int == 0) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
@@ -89,15 +89,15 @@ final class NodeHashTable {
             var4_int != param1.length) {
             param1 = new byte[var4_int];
           }
-          var5 = param0.c(3, (byte) -34);
-          var6 = (byte)param0.c(8, (byte) -34);
+          var5 = param0.readBits(3, (byte) -34);
+          var6 = (byte)param0.readBits(8, (byte) -34);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param1[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (byte)(param0.c(var5, (byte) -34) + var6);
+              param1[var7] = (byte)(param0.readBits(var5, (byte) -34) + var6);
             }
           }
           stackIn_18_0 = (byte[]) (param1);
@@ -118,7 +118,7 @@ final class NodeHashTable {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -128,17 +128,17 @@ final class NodeHashTable {
           if (param1 <= 120) {
             this.a(-40);
           }
-          if (param2.field_h != null) {
-            param2.c(2779);
+          if (param2.previous != null) {
+            param2.unlink(2779);
           }
           var5 = this.field_g[(int)(param0 & (long)(-1 + this.field_a))];
-          param2.field_h = var5.field_h;
+          param2.previous = var5.previous;
           param2.field_a = var5;
-          param2.field_h.field_a = param2;
+          param2.previous.field_a = param2;
           param2.field_e = param0;
-          param2.field_a.field_h = param2;
+          param2.field_a.previous = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nl.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nl.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,27 +154,27 @@ final class NodeHashTable {
           return 0;
         }
         if (wo.field_d == 0) {
-          if (!wk.field_j.b(-3)) {
+          if (!wk.field_j.ensureIndex(-3)) {
             return 20;
           }
           if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
             return 40;
           }
-          if (!io.field_g.b(-3)) {
+          if (!io.field_g.ensureIndex(-3)) {
             return 50;
           }
           if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
             return 60;
           }
-          if (!MatchingTextValidator.field_u.b(-3)) {
+          if (!MatchingTextValidator.field_u.ensureIndex(-3)) {
             return 70;
           }
-          if (!MatchingTextValidator.field_u.a((byte) 92)) {
+          if (!MatchingTextValidator.field_u.ensureAllGroupsAvailable((byte) 92)) {
             return 80;
           }
         } else {
           if (null != DebouncedValidator.field_e) {
-            if (!DebouncedValidator.field_e.b(-3)) {
+            if (!DebouncedValidator.field_e.ensureIndex(-3)) {
               return 14;
             }
             if (!DebouncedValidator.field_e.hasGroupName(127, "")) {
@@ -184,22 +184,22 @@ final class NodeHashTable {
               return 29;
             }
           }
-          if (!wk.field_j.b(-3)) {
+          if (!wk.field_j.ensureIndex(-3)) {
             return 43;
           }
           if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
             return 57;
           }
-          if (!io.field_g.b(-3)) {
+          if (!io.field_g.ensureIndex(-3)) {
             return 71;
           }
           if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
             return 80;
           }
-          if (!MatchingTextValidator.field_u.b(-3)) {
+          if (!MatchingTextValidator.field_u.ensureIndex(-3)) {
             return 82;
           }
-          if (!MatchingTextValidator.field_u.a((byte) 92)) {
+          if (!MatchingTextValidator.field_u.ensureAllGroupsAvailable((byte) 92)) {
             return 86;
           }
         }
@@ -220,7 +220,7 @@ final class NodeHashTable {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_g[var2] = dupTemp$0;
-          var3.field_h = var3;
+          var3.previous = var3;
           var3.field_a = var3;
         }
     }
@@ -252,7 +252,7 @@ final class NodeHashTable {
         return var2_ref_fa;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_b = null;
         field_d = null;

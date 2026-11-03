@@ -24,7 +24,7 @@ final class BoardParticle extends IntrusiveNode {
           this.field_n = 31;
         }
         if (this.field_m <= 0.0) {
-          this.c(2779);
+          this.unlink(2779);
         }
         if (param0 != -123) {
           this.field_p = 0.4636507435645844;
@@ -39,10 +39,10 @@ final class BoardParticle extends IntrusiveNode {
           return;
         }
         int var2 = (int)this.field_p;
-        fi.a(-var2 + this.field_r, -var2 + this.field_k, this.field_r + var2, this.field_k - var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
-        fi.a(this.field_r - var2, var2 + this.field_k, var2 + this.field_r, this.field_k + var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
-        fi.a(-var2 + this.field_r, this.field_k - var2, -var2 + this.field_r, this.field_k + var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
-        fi.a(this.field_r + var2, -var2 + this.field_k, this.field_r + var2, var2 + this.field_k, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
+        SpriteEffectHelpers.a(-var2 + this.field_r, -var2 + this.field_k, this.field_r + var2, this.field_k - var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
+        SpriteEffectHelpers.a(this.field_r - var2, var2 + this.field_k, var2 + this.field_r, this.field_k + var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
+        SpriteEffectHelpers.a(-var2 + this.field_r, this.field_k - var2, -var2 + this.field_r, this.field_k + var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
+        SpriteEffectHelpers.a(this.field_r + var2, -var2 + this.field_k, this.field_r + var2, var2 + this.field_k, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
     }
 
     final static Sprite[] a(int param0, int param1, boolean param2, int param3) {
@@ -68,7 +68,7 @@ final class BoardParticle extends IntrusiveNode {
         return 0 <= param1 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 7) {
           BoardParticle.a((byte) -48, 5);
         }

@@ -7,11 +7,11 @@ final class EmailValidator extends TextFieldValidator {
     static boolean[] field_m;
     static SceneWidget field_o;
 
-    final dj validateText(String param0, boolean param1) {
+    final ValidationState validateText(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
-        dj stackIn_8_0 = null;
+        ValidationState stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -37,7 +37,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -46,7 +46,7 @@ final class EmailValidator extends TextFieldValidator {
     }
 
     final static void a(byte param0, int param1) {
-        mc.a(8 * ci.field_o + param1, -127);
+        mc.a(8 * NightToRememberBackground.field_o + param1, -127);
         if (param0 != 96) {
           field_n = (String) null;
         }
@@ -86,7 +86,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -120,18 +120,18 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final static void a(int param0, byte param1) {
         int var2_int = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
-        SingleChildContainer.a(SecondaryNodeDeque.field_e, StatefulTextPainter.field_s, true, aa.field_o, 0, 127, param0);
+        SingleChildContainer.sortRankedEntryRange(SecondaryNodeDeque.field_e, StatefulTextPainter.field_s, true, aa.field_o, 0, 127, param0);
         for (var2_int = 0; var2_int < SecondaryNodeDeque.field_e; var2_int++) {
           ArchiveRequest.field_A[param0 + var2_int] = var2_int;
         }
-        SingleChildContainer.a(param0 + SecondaryNodeDeque.field_e, ro.field_a, false, qn.field_k, param0, 81, param0 + param0);
+        SingleChildContainer.sortRankedEntryRange(param0 + SecondaryNodeDeque.field_e, ro.field_a, false, qn.field_k, param0, 81, param0 + param0);
         if (param1 < 1) {
           return;
         }
@@ -140,7 +140,7 @@ final class EmailValidator extends TextFieldValidator {
             SecondaryNodeDeque.field_e = param0;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bc.K(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bc.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

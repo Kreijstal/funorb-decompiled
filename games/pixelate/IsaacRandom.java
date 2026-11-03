@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IsaacRandom {
-    private int[] field_c;
+    private int[] memory;
     static SceneWidget field_b;
     private int field_d;
     private int[] field_h;
-    private int field_i;
+    private int lastResult;
     static boolean field_g;
     static String field_j;
-    private int field_f;
+    private int accumulator;
     private int remainingResults;
     static String field_a;
 
@@ -37,11 +37,11 @@ final class IsaacRandom {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final void b(int param0) {
+    private final void initialize(int param0) {
         int var2 = 0;
         int var12 = Pixelate.field_H ? 1 : 0;
         int var9 = -1640531527;
@@ -114,24 +114,24 @@ final class IsaacRandom {
           var10 = var10 ^ var3 >>> 9;
           var3 = var3 + var4;
           var5 = var5 + var10;
-          this.field_c[var2Lifetime1] = var3;
-          this.field_c[var2Lifetime1 + 1] = var4;
-          this.field_c[var2Lifetime1 + 2] = var5;
-          this.field_c[3 + var2Lifetime1] = var6;
-          this.field_c[4 + var2Lifetime1] = var7;
-          this.field_c[5 + var2Lifetime1] = var8;
-          this.field_c[6 + var2Lifetime1] = var9;
-          this.field_c[7 + var2Lifetime1] = var10;
+          this.memory[var2Lifetime1] = var3;
+          this.memory[var2Lifetime1 + 1] = var4;
+          this.memory[var2Lifetime1 + 2] = var5;
+          this.memory[3 + var2Lifetime1] = var6;
+          this.memory[4 + var2Lifetime1] = var7;
+          this.memory[5 + var2Lifetime1] = var8;
+          this.memory[6 + var2Lifetime1] = var9;
+          this.memory[7 + var2Lifetime1] = var10;
         }
         for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
-          var3 = var3 + this.field_c[var2Lifetime2];
-          var10 = var10 + this.field_c[7 + var2Lifetime2];
-          var4 = var4 + this.field_c[var2Lifetime2 + 1];
-          var9 = var9 + this.field_c[6 + var2Lifetime2];
-          var5 = var5 + this.field_c[var2Lifetime2 + 2];
-          var7 = var7 + this.field_c[var2Lifetime2 + 4];
-          var6 = var6 + this.field_c[3 + var2Lifetime2];
-          var8 = var8 + this.field_c[5 + var2Lifetime2];
+          var3 = var3 + this.memory[var2Lifetime2];
+          var10 = var10 + this.memory[7 + var2Lifetime2];
+          var4 = var4 + this.memory[var2Lifetime2 + 1];
+          var9 = var9 + this.memory[6 + var2Lifetime2];
+          var5 = var5 + this.memory[var2Lifetime2 + 2];
+          var7 = var7 + this.memory[var2Lifetime2 + 4];
+          var6 = var6 + this.memory[3 + var2Lifetime2];
+          var8 = var8 + this.memory[5 + var2Lifetime2];
           var3 = var3 ^ var4 << 11;
           var6 = var6 + var3;
           var4 = var4 + var5;
@@ -156,33 +156,33 @@ final class IsaacRandom {
           var10 = var10 ^ var3 >>> 9;
           var3 = var3 + var4;
           var5 = var5 + var10;
-          this.field_c[var2Lifetime2] = var3;
-          this.field_c[1 + var2Lifetime2] = var4;
-          this.field_c[var2Lifetime2 + 2] = var5;
-          this.field_c[3 + var2Lifetime2] = var6;
-          this.field_c[4 + var2Lifetime2] = var7;
-          this.field_c[5 + var2Lifetime2] = var8;
-          this.field_c[6 + var2Lifetime2] = var9;
-          this.field_c[var2Lifetime2 + 7] = var10;
+          this.memory[var2Lifetime2] = var3;
+          this.memory[1 + var2Lifetime2] = var4;
+          this.memory[var2Lifetime2 + 2] = var5;
+          this.memory[3 + var2Lifetime2] = var6;
+          this.memory[4 + var2Lifetime2] = var7;
+          this.memory[5 + var2Lifetime2] = var8;
+          this.memory[6 + var2Lifetime2] = var9;
+          this.memory[var2Lifetime2 + 7] = var10;
         }
-        this.a(false);
+        this.generateResults(false);
         this.remainingResults = 256;
     }
 
     final int nextInt(int param0) {
         if (0 == this.remainingResults) {
-          this.a(false);
+          this.generateResults(false);
           this.remainingResults = 256;
         }
         if (param0 != 256) {
-          this.field_f = -113;
+          this.accumulator = -113;
         }
         int fieldTemp$0 = this.remainingResults - 1;
         this.remainingResults = this.remainingResults - 1;
         return this.field_h[fieldTemp$0];
     }
 
-    private final void a(boolean param0) {
+    private final void generateResults(boolean param0) {
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
         int var2;
@@ -192,38 +192,38 @@ final class IsaacRandom {
         var5 = Pixelate.field_H ? 1 : 0;
         int fieldTemp$0 = this.field_d + 1;
         this.field_d = this.field_d + 1;
-        this.field_i = this.field_i + fieldTemp$0;
+        this.lastResult = this.lastResult + fieldTemp$0;
         var2 = 0;
         if (param0) {
-          this.field_f = 19;
+          this.accumulator = 19;
         }
         while (var2 < 256) {
-          var3 = this.field_c[var2];
+          var3 = this.memory[var2];
           if ((2 & var2) == 0) {
             if (0 != (var2 & 1)) {
-              this.field_f = this.field_f ^ this.field_f >>> 6;
+              this.accumulator = this.accumulator ^ this.accumulator >>> 6;
             } else {
-              this.field_f = this.field_f ^ this.field_f << 13;
+              this.accumulator = this.accumulator ^ this.accumulator << 13;
             }
           } else {
             if ((1 & var2) != 0) {
-              this.field_f = this.field_f ^ this.field_f >>> 16;
+              this.accumulator = this.accumulator ^ this.accumulator >>> 16;
             } else {
-              this.field_f = this.field_f ^ this.field_f << 2;
+              this.accumulator = this.accumulator ^ this.accumulator << 2;
             }
           }
-          this.field_f = this.field_f + this.field_c[255 & var2 + 128];
-          dupTemp$1 = this.field_i + this.field_f + this.field_c[cm.a(255, var3 >> 2)];
+          this.accumulator = this.accumulator + this.memory[255 & var2 + 128];
+          dupTemp$1 = this.lastResult + this.accumulator + this.memory[cm.bitAnd(255, var3 >> 2)];
           var4 = dupTemp$1;
-          this.field_c[var2] = dupTemp$1;
-          dupTemp$2 = this.field_c[cm.a(255, var4 >> 8 >> 2)] + var3;
-          this.field_i = dupTemp$2;
+          this.memory[var2] = dupTemp$1;
+          dupTemp$2 = this.memory[cm.bitAnd(255, var4 >> 8 >> 2)] + var3;
+          this.lastResult = dupTemp$2;
           this.field_h[var2] = dupTemp$2;
           var2++;
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 7) {
@@ -232,7 +232,7 @@ final class IsaacRandom {
         field_j = null;
     }
 
-    final static CoverageBitmapFont a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
+    final static CoverageBitmapFont loadFont(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -248,7 +248,7 @@ final class IsaacRandom {
           if (param2 != 48077700) {
             field_j = (String) null;
           }
-          stackIn_6_0 = LoginDialog.a(param3.a(param1, param4, true), param2 ^ 48077726);
+          stackIn_6_0 = LoginDialog.a(param3.getFile(param1, param4, true), param2 ^ 48077726);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -266,7 +266,7 @@ final class IsaacRandom {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -274,13 +274,13 @@ final class IsaacRandom {
         int var2_int = 0;
         try {
           this.field_h = new int[256];
-          this.field_c = new int[256];
+          this.memory = new int[256];
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_h[var2_int] = param0[var2_int];
           }
-          this.b(-60);
+          this.initialize(-60);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

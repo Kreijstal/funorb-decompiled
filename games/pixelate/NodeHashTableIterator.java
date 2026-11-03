@@ -40,11 +40,11 @@ final class NodeHashTableIterator implements Iterator {
         if (this.field_d == null) {
           throw new IllegalStateException();
         }
-        this.field_d.c(2779);
+        this.field_d.unlink(2779);
         this.field_d = null;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         if (!param0) {
           field_c = (String) null;
@@ -111,7 +111,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_g = param0;
           this.a((byte) -39);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

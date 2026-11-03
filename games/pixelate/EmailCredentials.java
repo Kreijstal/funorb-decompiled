@@ -14,7 +14,7 @@ class EmailCredentials extends LoginCredentials {
         return nf.field_c;
     }
 
-    ea b(int param0) {
+    ea getCredentialKind(int param0) {
         if (param0 != -27096) {
           return (ea) null;
         }
@@ -123,8 +123,8 @@ class EmailCredentials extends LoginCredentials {
           nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
           return true;
         }
-        var5 = nj.field_f;
-        if (!MatchController.a(1, (char) var5)) {
+        var5 = DualLinkDeque.field_f;
+        if (!MatchController.isSupportedChar(1, (char) var5)) {
           return false;
         }
         if (var3 == 0) {
@@ -150,7 +150,7 @@ class EmailCredentials extends LoginCredentials {
             if (ce.field_d == 0) {
               if (io.field_c == null &&
                 ge.field_f) {
-                var8Lifetime1Lifetime6 = "[" + ul.field_m + "] ";
+                var8Lifetime1Lifetime6 = "[" + TimerBar.field_m + "] ";
               }
               if (io.field_c == null) {
                 var34 = var8Lifetime1Lifetime6 + var33 + ": ";
@@ -158,13 +158,13 @@ class EmailCredentials extends LoginCredentials {
                 break regionExit1;
               }
               if (!TickClock.field_b) {
-                var37 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
+                var37 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var38 = var37 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var38);
                 break regionExit1;
               }
               if (TextLayoutLine.field_f == null) {
-                var35 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
+                var35 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var36 = var35 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var36);
                 break regionExit1;
@@ -176,8 +176,8 @@ class EmailCredentials extends LoginCredentials {
             break regionExit1;
           }
           var44 = (CharSequence) ((Object) CheckboxPainter.field_k);
-          var40 = sd.a(dg.field_b, 116, new String[]{UiComponent.a(var44, -1)});
-          var41 = sd.a(sk.field_c, 43, new String[]{var17});
+          var40 = AlphaContainer.a(dg.field_b, 116, new String[]{UiComponent.a(var44, -1)});
+          var41 = AlphaContainer.a(sk.field_c, 43, new String[]{var17});
           var10 = AccountMessagePanel.field_Q.textWidth(var40);
           var11 = AccountMessagePanel.field_Q.textWidth(var41);
           if (var11 >= var10) {
@@ -193,15 +193,15 @@ class EmailCredentials extends LoginCredentials {
         return true;
     }
 
-    final void a(byte param0, PacketBuffer param1) {
+    final void writePayload(byte param0, PacketBuffer param1) {
         try {
           if (param0 != -12) {
             this.field_g = -108L;
           }
           param1.writeLong(false, this.field_g);
-          param1.a(-129, this.field_j);
+          param1.writeBase38Name(-129, this.field_j);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "go.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "go.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -237,7 +237,7 @@ class EmailCredentials extends LoginCredentials {
           this.field_j = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "go.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "go.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

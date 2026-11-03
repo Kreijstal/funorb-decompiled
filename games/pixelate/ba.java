@@ -39,10 +39,10 @@ final class ba {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 3) {
-          ba.c(105);
+          ba.releaseStatics(105);
         }
     }
 
@@ -65,15 +65,15 @@ final class ba {
         int var6_int = 0;
         try {
           PlayerBoard.d(-90);
-          this.field_b = ok.a(ea.field_b, -119, param2) + param0;
-          this.field_a = param1 + ok.a(ea.field_b, -103, param3);
-          this.field_e = new wl[50 + ok.a(ea.field_b, -102, 5)];
+          this.field_b = JavaRandomHelpers.a(ea.field_b, -119, param2) + param0;
+          this.field_a = param1 + JavaRandomHelpers.a(ea.field_b, -103, param3);
+          this.field_e = new wl[50 + JavaRandomHelpers.a(ea.field_b, -102, 5)];
           for (var6_int = this.field_e.length - 1; var6_int >= 0; var6_int--) {
-            this.field_e[var6_int] = new wl(this.field_b, this.field_a, ok.a(ea.field_b, -101, 1024), param4);
+            this.field_e[var6_int] = new wl(this.field_b, this.field_a, JavaRandomHelpers.a(ea.field_b, -101, 1024), param4);
           }
-          this.field_c = ok.a(ea.field_b, -100, 3) + 2;
+          this.field_c = JavaRandomHelpers.a(ea.field_b, -100, 3) + 2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ba.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ba.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

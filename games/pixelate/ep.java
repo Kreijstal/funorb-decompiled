@@ -298,7 +298,7 @@ final class ep {
           var15 = new int[ef.field_g];
           var14 = var15;
           var8 = var14;
-          qb.a(qj.field_a, 0, var15, 0, ef.field_g);
+          ArraySupport.a(qj.field_a, 0, var15, 0, ef.field_g);
           stackIn_61_0 = var8;
           return stackIn_61_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -311,7 +311,7 @@ final class ep {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class ep {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -393,7 +393,7 @@ final class ep {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw aa.a((Throwable) ((Object) var1), "ep.C(" + param0 + ')');
+            throw aa.addExceptionContext((Throwable) ((Object) var1), "ep.C(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

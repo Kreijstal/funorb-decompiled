@@ -36,7 +36,7 @@ final class fj {
           } else {
             stackIn_3_3 = param0.field_b;
           }
-          em.a(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, param0.field_q, -163, (ScrollContainer) null, (int[]) null, param0.field_j);
+          em.openContextMenu(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, param0.field_q, -163, (ScrollContainer) null, (int[]) null, param0.field_j);
           if (0 == param0.field_j &&
             !pk.b(121) &&
             io.field_c == null &&
@@ -74,7 +74,7 @@ final class fj {
           var13 = ProxySocketConnector.field_n;
           var3 = BufferedRandomAccessFile.field_a;
           var4 = ji.field_c;
-          var13.field_b.b(0, var3, 88, var4, 0);
+          var13.field_b.layoutPopup(0, var3, 88, var4, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,11 +86,11 @@ final class fj {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, byte param2, java.awt.Canvas param3) {
+    final static void presentToCanvas(int param0, int param1, byte param2, java.awt.Canvas param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -103,7 +103,7 @@ final class fj {
           try {
             var5 = -63 % ((param2 - 41) / 63);
             var4 = param3.getGraphics();
-            ClientException.field_f.a(var4, false, param0, param1);
+            ClientException.field_f.drawImage(var4, false, param0, param1);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -122,7 +122,7 @@ final class fj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

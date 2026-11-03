@@ -37,7 +37,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
               discarded$4 = param3.append(' ');
             }
             var6.appendWidgetDiagnostics(param3, false, param0 + 1, param1);
-            var6 = (UiComponent) (var10.a((byte) -104));
+            var6 = (UiComponent) (var10.first((byte) -104));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,7 +56,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -76,12 +76,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var9 = new IntrusiveDequeCursor(this.children);
           var8 = (UiComponent) (var9.d(0));
           while (var8 != null) {
-            if (var8.b(0)) {
-              if (var8.b(true) &&
+            if (var8.isLinked(0)) {
+              if (var8.containsFocus(true) &&
                 var8.onFocusedKey(param0, param1 + 0, param2, param3)) {
                 return true;
               }
-              var8 = (UiComponent) (var9.a((byte) -104));
+              var8 = (UiComponent) (var9.first((byte) -104));
               continue;
             }
             break;
@@ -110,7 +110,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -133,12 +133,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var12 = new IntrusiveDequeCursor(this.children);
           var9 = (UiComponent) (var12.d(0));
           while (var9 != null) {
-            if (var9.b(0)) {
-              if (var9.b(true) &&
+            if (var9.isLinked(0)) {
+              if (var9.containsFocus(true) &&
                 var9.onMouseWheel(param0, (byte) 112, param2, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (UiComponent) (var12.a((byte) -104));
+              var9 = (UiComponent) (var12.first((byte) -104));
               continue;
             }
             break;
@@ -154,7 +154,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var3 = new IntrusiveDequeCursor(this.children);
           var4 = (UiComponent) (var3.b(~param0));
           while (var4 != null) {
-            if (var4.b(true)) {
+            if (var4.containsFocus(true)) {
               var5 = new IntrusiveDequeCursor(this.children);
               var5.lastFrom((byte) -99, var4);
               var6 = (UiComponent) (var5.previous(-59));
@@ -202,7 +202,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -221,9 +221,9 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var5 = new IntrusiveDequeCursor(this.children);
           var6 = (UiComponent) (var5.d(0));
           while (var6 != null) {
-            if (var6.b(param0 - 40)) {
+            if (var6.isLinked(param0 - 40)) {
               var6.updatePointer(40, param1 + this.field_p, param2 + this.field_z, param3);
-              var6 = (UiComponent) (var5.a((byte) -104));
+              var6 = (UiComponent) (var5.first((byte) -104));
               continue;
             }
             break;
@@ -239,7 +239,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -262,24 +262,24 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var8 = new IntrusiveDequeCursor(this.children);
           var4 = (UiComponent) (var8.d(0));
           while (var4 != null) {
-            if (var4.b(true)) {
+            if (var4.containsFocus(true)) {
               var5 = new IntrusiveDequeCursor(this.children);
               var5.firstFrom((byte) -87, var4);
-              var6 = (UiComponent) (var5.a((byte) -104));
+              var6 = (UiComponent) (var5.first((byte) -104));
               while (var6 != null) {
                 if (!var6.focusNext(param1, 27)) {
-                  var6 = (UiComponent) (var5.a((byte) -104));
+                  var6 = (UiComponent) (var5.first((byte) -104));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (UiComponent) (var8.a((byte) -104));
+            var4 = (UiComponent) (var8.first((byte) -104));
           }
           if (param0 == 10) {
             return false;
           }
-          this.k(-117);
+          this.getFocusedChild(-117);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -291,11 +291,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    final void h(int param0) {
+    final void blur(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         if (param0 != 2) {
           UiComponent var5 = (UiComponent) null;
@@ -304,17 +304,17 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiComponent var3 = (UiComponent) (var2.d(0));
         while (var3 != null) {
-          var3.h(2);
-          var3 = (UiComponent) (var2.a((byte) -104));
+          var3.blur(2);
+          var3 = (UiComponent) (var2.first((byte) -104));
         }
     }
 
-    void a(int param0, byte param1, int param2, int param3, int param4) {
+    void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 <= 19) {
           this.children = (IntrusiveDeque) null;
         }
-        super.a(param0, (byte) 126, param2, param3, param4);
-        this.j(-8133);
+        super.setBounds(param0, (byte) 126, param2, param3, param4);
+        this.clearFocus(-8133);
     }
 
     final boolean handlePointerPress(byte param0, UiComponent param1, int param2, int param3, int param4, int param5, int param6) {
@@ -336,11 +336,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           }
           var9 = (UiComponent) (var12.d(0));
           while (var9 != null) {
-            if (var9.b(0)) {
+            if (var9.isLinked(0)) {
               if (var9.handlePointerPress((byte) -58, param1, param2, this.field_p + param3, param4, this.field_z + param5, param6)) {
                 return true;
               }
-              var9 = (UiComponent) (var12.a((byte) -104));
+              var9 = (UiComponent) (var12.first((byte) -104));
               continue;
             }
             break;
@@ -356,16 +356,16 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean containsFocus(boolean param0) {
         if (!param0) {
           StringBuilder var3 = (StringBuilder) null;
           this.appendDebugChildren(82, (Hashtable) null, -45, (StringBuilder) null);
         }
-        return null != this.k(-105) ? true : false;
+        return null != this.getFocusedChild(-105) ? true : false;
     }
 
     UiContainer(int param0, int param1, int param2, int param3, WidgetPainter param4) {
@@ -373,18 +373,18 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         this.children = new IntrusiveDeque();
     }
 
-    final void b(UiComponent param0, int param1) {
+    final void addChild(UiComponent param0, int param1) {
         try {
           this.children.addFirst(22125, param0);
           if (param1 != 80) {
             field_H = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ch.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ch.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_H = null;
         field_G = null;
         int var1 = -42 / ((3 - param0) / 46);
@@ -404,13 +404,13 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var3 = new IntrusiveDequeCursor(this.children);
           var4 = (UiComponent) (var3.d(0));
           if (param1 != 27) {
-            this.b(false);
+            this.containsFocus(false);
           }
           while (var4 != null) {
             if (var4.focusNext(param0, 27)) {
               return true;
             }
-            var4 = (UiComponent) (var3.a((byte) -104));
+            var4 = (UiComponent) (var3.first((byte) -104));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -423,7 +423,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -441,9 +441,9 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var7 = new IntrusiveDequeCursor(this.children);
           var8 = (UiComponent) (var7.d(param3));
           while (var8 != null) {
-            if (var8.b(0)) {
+            if (var8.isLinked(0)) {
               var8.handlePointerRelease(param0, param1 + this.field_z, param2, 0, param4 + this.field_p, param5);
-              var8 = (UiComponent) (var7.a((byte) -104));
+              var8 = (UiComponent) (var7.first((byte) -104));
               continue;
             }
             break;
@@ -459,7 +459,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -476,8 +476,8 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (param1) {
             field_G = (String) null;
           }
-          if (this.a(-60, param2, param0, param3)) {
-            this.a(param2, (byte) -2, param3, param0);
+          if (this.beginDebugDescription(-60, param2, param0, param3)) {
+            this.appendDebugBody(param2, (byte) -2, param3, param0);
             this.appendDebugChildren(param2, param3, 32, param0);
           }
           stackIn_5_0 = (StringBuilder) (param0);
@@ -498,11 +498,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawLayer(int param0, int param1, int param2, byte param3) {
         int var8 = Pixelate.field_H ? 1 : 0;
         if (param1 == 0 &&
           null != this.field_y) {
@@ -512,12 +512,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var7 = 101 % ((param3 - 70) / 49);
         UiComponent var6 = (UiComponent) (var5.b(-1));
         while (var6 != null) {
-          var6.a(this.field_p + param0, param1, this.field_z + param2, (byte) -68);
+          var6.drawLayer(this.field_p + param0, param1, this.field_z + param2, (byte) -68);
           var6 = (UiComponent) (var5.previous(-91));
         }
     }
 
-    String b(byte param0) {
+    String getTooltip(byte param0) {
         IntrusiveDequeCursor var2;
         UiComponent var3;
         String var4;
@@ -529,30 +529,30 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
         var3 = (UiComponent) (var2.d(0));
         while (var3 != null) {
-          var4 = var3.b((byte) 36);
+          var4 = var3.getTooltip((byte) 36);
           if (var4 != null) {
             return var4;
           }
-          var3 = (UiComponent) (var2.a((byte) -104));
+          var3 = (UiComponent) (var2.first((byte) -104));
         }
         return null;
     }
 
-    UiComponent k(int param0) {
+    UiComponent getFocusedChild(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiComponent var3_ref_ng = (UiComponent) (var2.d(0));
         while (var3_ref_ng != null) {
-          if (var3_ref_ng.b(true)) {
+          if (var3_ref_ng.containsFocus(true)) {
             return var3_ref_ng;
           }
-          var3_ref_ng = (UiComponent) (var2.a((byte) -104));
+          var3_ref_ng = (UiComponent) (var2.first((byte) -104));
         }
         int var3 = 125 % ((-51 - param0) / 39);
         return null;
     }
 
-    final int e(int param0) {
+    final int getTopLayer(int param0) {
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
         int var2 = 0;
@@ -562,22 +562,22 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
         UiComponent var4 = (UiComponent) (var3.d(0));
         while (var4 != null) {
-          var5 = var4.e(58);
+          var5 = var4.getTopLayer(58);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (UiComponent) (var3.a((byte) -104));
+          var4 = (UiComponent) (var3.first((byte) -104));
         }
         return var2;
     }
 
-    private final void j(int param0) {
+    private final void clearFocus(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiComponent var3 = (UiComponent) (var2.d(param0 ^ param0));
         while (var3 != null) {
-          var3.c((byte) 51);
-          var3 = (UiComponent) (var2.a((byte) -104));
+          var3.refreshLayout((byte) 51);
+          var3 = (UiComponent) (var2.first((byte) -104));
         }
     }
 
@@ -627,7 +627,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 

@@ -18,12 +18,12 @@ final class DialWidget extends TextButton {
             Js5ArchiveManager.b(98);
           }
           if (param0 != -1913) {
-            DialWidget.a((byte) -51);
+            DialWidget.releaseStatics((byte) -51);
           }
-          mi.a(EmailCredentials.field_f, bf.field_o, -1, ThreeSliceButtonPainter.field_r);
-          fj.a(0, 0, (byte) 113, param1);
+          mi.a(EmailCredentials.field_f, PicturePreview.field_o, -1, ThreeSliceButtonPainter.field_r);
+          fj.presentToCanvas(0, 0, (byte) 113, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class DialWidget extends TextButton {
 
     final static void a(int param0, byte[] param1, int param2, int param3, boolean param4, byte param5) {
         CipherPacketBuffer var6 = aa.field_f;
-        var6.g(param0, 15514);
+        var6.writeOpcode(param0, 15514);
         var6.position = var6.position + 1;
         int var7 = var6.position;
         var6.writeByte(160, 4);
@@ -50,19 +50,19 @@ final class DialWidget extends TextButton {
         }
         try {
           var6.writeByte(160, var8);
-          var6.a(param1.length, 0, -3493, param1);
-          var6.f(var6.position - var7, param5 + 75);
+          var6.writeBytes(param1.length, 0, -3493, param1);
+          var6.backpatchByteLength(var6.position - var7, param5 + 75);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "si.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "si.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_S = null;
         if (param0 == 95) {
           return;
         }
-        DialWidget.a((byte) 28);
+        DialWidget.releaseStatics((byte) 28);
     }
 
     final boolean handlePointerPress(byte param0, UiComponent param1, int param2, int param3, int param4, int param5, int param6) {
@@ -110,7 +110,7 @@ final class DialWidget extends TextButton {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class DialWidget extends TextButton {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
         }
     }
 

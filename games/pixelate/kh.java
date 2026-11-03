@@ -11,13 +11,13 @@ final class kh {
           if (param0) {
             field_a = (SceneWidget) null;
           }
-          sc.field_a = param1;
+          ConditionalTextValue.field_a = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "kh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         if (param0 == 21601) {

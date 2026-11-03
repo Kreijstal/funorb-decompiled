@@ -16,11 +16,11 @@ final class qh {
         try {
           ri.field_a.selectTrack(1000000, !param3 ? true : false, param1, (byte) 124, param2, 256);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 256) {
           field_a = null;
           field_f = null;
@@ -28,7 +28,7 @@ final class qh {
           field_d = null;
           return;
         }
-        qh.a(3);
+        qh.releaseStatics(3);
         field_a = null;
         field_f = null;
         field_e = null;

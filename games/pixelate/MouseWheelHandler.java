@@ -3,21 +3,21 @@
  */
 abstract class MouseWheelHandler {
     static String[] field_a;
-    static pd field_e;
+    static ScrollPaneWithFooter field_e;
     static int field_d;
     static int field_c;
     static id field_b;
     private static String field_z;
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void attach(int param0, java.awt.Component param1);
 
     abstract int b(boolean param0);
 
     abstract void a(java.awt.Component param0, int param1);
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
-          MouseWheelHandler.a(true);
+          MouseWheelHandler.releaseStatics(true);
           field_b = null;
           field_a = null;
           field_e = null;

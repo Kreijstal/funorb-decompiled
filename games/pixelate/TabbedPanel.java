@@ -8,9 +8,9 @@ final class TabbedPanel extends SceneWidget {
     static String field_Nb;
     static int field_Gb;
     static String field_Hb;
-    int field_Jb;
+    int selectedTab;
     private SceneWidget[] field_Mb;
-    private SceneWidget[] field_Lb;
+    private SceneWidget[] tabButtons;
     static String field_Fb;
     static String field_Eb;
     static String field_Ib;
@@ -25,22 +25,22 @@ final class TabbedPanel extends SceneWidget {
         int var4Lifetime1;
         var7 = Pixelate.field_H ? 1 : 0;
         if (param0 < 103) {
-          this.b((byte) 55);
+          this.processTabPresses((byte) 55);
         }
-        for (var4 = 0; this.field_Lb.length > var4; var4++) {
-          var5 = this.field_K * var4 / this.field_Lb.length;
-          var6 = this.field_K * (var4 + 1) / this.field_Lb.length;
-          this.field_Lb[var4].field_D = var5;
-          this.field_Lb[var4].field_S = 0;
-          this.field_Lb[var4].field_K = var6 - var5;
-          this.field_Lb[var4].height = param1;
+        for (var4 = 0; this.tabButtons.length > var4; var4++) {
+          var5 = this.field_K * var4 / this.tabButtons.length;
+          var6 = this.field_K * (var4 + 1) / this.tabButtons.length;
+          this.tabButtons[var4].field_D = var5;
+          this.tabButtons[var4].field_S = 0;
+          this.tabButtons[var4].field_K = var6 - var5;
+          this.tabButtons[var4].height = param1;
         }
-        this.field_Kb.a(param1, this.height - param1, 0, 256, this.field_K);
+        this.field_Kb.setBounds(param1, this.height - param1, 0, 256, this.field_K);
         var8 = 0;
         var4Lifetime1 = var8;
         while (var8 < this.field_Mb.length) {
-          this.field_Mb[var8].a(param2, -(2 * param2) + this.field_Kb.height, param2, 256, -(param2 * 2) + this.field_Kb.field_K);
-          if (this.field_Jb != var8) {
+          this.field_Mb[var8].setBounds(param2, -(2 * param2) + this.field_Kb.height, param2, 256, -(param2 * 2) + this.field_Kb.field_K);
+          if (this.selectedTab != var8) {
             dupTemp$0 = this.field_Mb[var8];
             dupTemp$0.field_D = dupTemp$0.field_D + 10000;
           }
@@ -85,7 +85,7 @@ final class TabbedPanel extends SceneWidget {
           var14 = Pixelate.field_H ? 1 : 0;
           try {
             var17 = new aj();
-            var17.field_s = param1.f(255);
+            var17.field_s = param1.readUnsignedByte(255);
             var17.field_p = param1.readInt(param0 ^ param0);
             var17.field_r = new int[var17.field_s];
             var17.field_q = new int[var17.field_s];
@@ -95,18 +95,18 @@ final class TabbedPanel extends SceneWidget {
             var17.field_u = new int[var17.field_s];
             for (var5 = 0; var5 < var17.field_s; var5++) {
               try {
-                var6_int = param1.f(255);
+                var6_int = param1.readUnsignedByte(255);
                 if (var6_int != 0 &&
                   1 != var6_int &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var19 = param1.h(param0 + 10);
-                    var8 = param1.h(5);
-                    var9 = param1.f(255);
+                    var19 = param1.readString(param0 + 10);
+                    var8 = param1.readString(5);
+                    var9 = param1.readUnsignedByte(255);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param1.h(5);
+                      var10[var11_int] = param1.readString(5);
                     }
                     var20 = new byte[var9][];
                     var18 = var20;
@@ -116,7 +116,7 @@ final class TabbedPanel extends SceneWidget {
                         var13 = param1.readInt(param0 + 5);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param1.a(var20[var12_int], 0, -76, var13);
+                        param1.readBytes(var20[var12_int], 0, -76, var13);
                       }
                     }
                     var17.field_r[var5] = var6_int;
@@ -124,23 +124,23 @@ final class TabbedPanel extends SceneWidget {
                     var16 = 0;
                     var13Lifetime1 = var16;
                     while (var16 < var9) {
-                      var12[var16] = ImageProducerRasterBuffer.a(var10[var16], -113);
+                      var12[var16] = ImageProducerRasterBuffer.loadClassOrPrimitive(var10[var16], -113);
                       var16++;
                     }
-                    var17.field_v[var5] = param3.a(0, var12, var8, ImageProducerRasterBuffer.a(var19, -115));
+                    var17.field_v[var5] = param3.lookupMethod(0, var12, var8, ImageProducerRasterBuffer.loadClassOrPrimitive(var19, -115));
                     var17.field_w[var5] = var20;
                   }
                 } else {
-                  var15 = param1.h(param0 ^ -2);
+                  var15 = param1.readString(param0 ^ -2);
                   var7 = var15;
-                  var8 = param1.h(param0 + 10);
+                  var8 = param1.readString(param0 + 10);
                   var9 = 0;
                   if (var6_int == 1) {
                     var9 = param1.readInt(param0 + 5);
                   }
                   var17.field_r[var5] = var6_int;
                   var17.field_q[var5] = var9;
-                  var17.field_l[var5] = param3.a(var8, ImageProducerRasterBuffer.a(var15, DraggableWidget.a(param0, 121)), (byte) -94);
+                  var17.field_l[var5] = param3.requestDeclaredField(var8, ImageProducerRasterBuffer.loadClassOrPrimitive(var15, DraggableWidget.a(param0, 121)), (byte) -94);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,7 +164,7 @@ final class TabbedPanel extends SceneWidget {
                 var17.field_u[var5] = -5;
               }
             }
-            ma.field_o.addFirst(22125, var17);
+            ScoreMarkerBar.field_o.addFirst(22125, var17);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -182,7 +182,7 @@ final class TabbedPanel extends SceneWidget {
             } else {
               stackIn_40_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -220,24 +220,24 @@ final class TabbedPanel extends SceneWidget {
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Lb = new SceneWidget[param2.length];
+          this.tabButtons = new SceneWidget[param2.length];
           this.field_Kb = new SceneWidget(0L, param3);
           this.field_Mb = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
             var9 = new SceneWidget(0L, param1);
             var9.field_cb = param2[var8_int];
-            this.field_Lb[var8_int] = var9;
-            this.a(var9, (byte) 26);
+            this.tabButtons[var8_int] = var9;
+            this.addChild(var9, (byte) 26);
           }
-          this.a(this.field_Kb, (byte) 26);
+          this.addChild(this.field_Kb, (byte) 26);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (param4.length > var11) {
-            this.field_Kb.a(param4[var11], (byte) 26);
+            this.field_Kb.addChild(param4[var11], (byte) 26);
             var11++;
           }
-          this.field_Jb = param5;
-          this.field_Lb[param5].field_U = true;
+          this.selectedTab = param5;
+          this.tabButtons[param5].field_U = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -267,7 +267,7 @@ final class TabbedPanel extends SceneWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -275,23 +275,23 @@ final class TabbedPanel extends SceneWidget {
         if (param0 != 41) {
           return 42;
         }
-        return param2 + ok.a(SceneWidgetNode.field_v, -120, -param2 + 1 + param1);
+        return param2 + JavaRandomHelpers.a(SceneWidgetNode.field_v, -120, -param2 + 1 + param1);
     }
 
-    final void b(byte param0) {
+    final void processTabPresses(byte param0) {
         int var2 = 0;
         SceneWidget dupTemp$0 = null;
         SceneWidget dupTemp$1 = null;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
-        for (var2 = 0; this.field_Lb.length > var2; var2++) {
-          if (var2 != this.field_Jb &&
-            this.field_Lb[var2].field_P != 0) {
-            this.field_Lb[this.field_Jb].field_U = false;
-            dupTemp$0 = this.field_Mb[this.field_Jb];
+        for (var2 = 0; this.tabButtons.length > var2; var2++) {
+          if (var2 != this.selectedTab &&
+            this.tabButtons[var2].field_P != 0) {
+            this.tabButtons[this.selectedTab].field_U = false;
+            dupTemp$0 = this.field_Mb[this.selectedTab];
             dupTemp$0.field_D = dupTemp$0.field_D + 10000;
-            this.field_Jb = var2;
-            this.field_Lb[var2].field_U = true;
+            this.selectedTab = var2;
+            this.tabButtons[var2].field_U = true;
             dupTemp$1 = this.field_Mb[var2];
             dupTemp$1.field_D = dupTemp$1.field_D - 10000;
           }
@@ -311,7 +311,7 @@ final class TabbedPanel extends SceneWidget {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param0.b(param1, -110);
+          var4 = param0.getFirstFile(param1, -110);
           var3 = var4;
           if (param2 != -30805) {
             field_Gb = -114;
@@ -331,11 +331,11 @@ final class TabbedPanel extends SceneWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 15967) {
           return;
         }

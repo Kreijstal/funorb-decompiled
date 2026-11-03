@@ -30,7 +30,7 @@ final class ij extends MenuScreen {
           if (DisplayNameForm.field_L == -1 &&
             -1 == Checkbox.field_Q) {
             DisplayNameForm.field_L = ProxyAuthenticationException.field_d;
-            Checkbox.field_Q = bg.field_k;
+            Checkbox.field_Q = StatusBar.field_k;
           }
           boolean decompiledFrameRemainder0 = true;
           CachedTextLayout.field_h = CachedTextLayout.field_h + 1;
@@ -76,7 +76,7 @@ final class ij extends MenuScreen {
           qg.field_b = param1;
           if (!re.field_h &&
             CachedTextLayout.field_h < Js5ArchiveManager.field_c &&
-            im.field_Jb) {
+            SocialListEntry.field_Jb) {
             MarkerSlider.field_V = DisplayNameForm.field_L;
             oo.field_f = Checkbox.field_Q;
             CachedTextLayout.field_h = 0;
@@ -100,7 +100,7 @@ final class ij extends MenuScreen {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
@@ -108,16 +108,16 @@ final class ij extends MenuScreen {
         if (param0 != 0) {
           return;
         }
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clear();
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 >= -13) {
-          this.c((byte) -53);
+          this.onCancel((byte) -53);
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_r = null;
         field_q = null;
@@ -126,7 +126,7 @@ final class ij extends MenuScreen {
         int var1 = 8 / ((-77 - param0) / 47);
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         if (param0 != 11) {
           field_t = (String) null;
         }

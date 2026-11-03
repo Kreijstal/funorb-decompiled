@@ -73,17 +73,17 @@ final class AudioFilter {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.f(255);
+        var3 = param0.readUnsignedByte(255);
         this.pairCounts[0] = var3 >> 4;
         this.pairCounts[1] = var3 & 15;
         if (var3 != 0) {
-          this.gainEndpoints[0] = param0.a((byte) -124);
-          this.gainEndpoints[1] = param0.a((byte) 111);
-          var4 = param0.f(255);
+          this.gainEndpoints[0] = param0.readUnsignedShort((byte) -124);
+          this.gainEndpoints[1] = param0.readUnsignedShort((byte) 111);
+          var4 = param0.readUnsignedByte(255);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.pairCounts[var5]; var6++) {
-              this.frequencies[var5][0][var6] = param0.a((byte) -3);
-              this.field_d[var5][0][var6] = param0.a((byte) 62);
+              this.frequencies[var5][0][var6] = param0.readUnsignedShort((byte) -3);
+              this.field_d[var5][0][var6] = param0.readUnsignedShort((byte) 62);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -94,8 +94,8 @@ final class AudioFilter {
                 this.frequencies[var5Lifetime1][1][var7] = this.frequencies[var5Lifetime1][0][var7];
                 this.field_d[var5Lifetime1][1][var7] = this.field_d[var5Lifetime1][0][var7];
               } else {
-                this.frequencies[var5Lifetime1][1][var7] = param0.a((byte) -121);
-                this.field_d[var5Lifetime1][1][var7] = param0.a((byte) 86);
+                this.frequencies[var5Lifetime1][1][var7] = param0.readUnsignedShort((byte) -121);
+                this.field_d[var5Lifetime1][1][var7] = param0.readUnsignedShort((byte) 86);
               }
               var7++;
             }
@@ -125,10 +125,10 @@ final class AudioFilter {
     private final float interpolateFrequency(int param0, int param1, float param2) {
         float var4 = (float)this.frequencies[param0][0][param1] + param2 * (float)(this.frequencies[param0][1][param1] - this.frequencies[param0][0][param1]);
         var4 = var4 * 0.0001220703125f;
-        return AudioFilter.a(var4);
+        return AudioFilter.normalizeFrequency(var4);
     }
 
-    private final static float a(float param0) {
+    private final static float normalizeFrequency(float param0) {
         float var1 = 32.70319747924805f * (float)Math.pow(2.0, (double)param0);
         return var1 * 3.1415927410125732f / 11025.0f;
     }

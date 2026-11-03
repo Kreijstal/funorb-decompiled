@@ -45,7 +45,7 @@ final class wf {
                 }
               }
             }
-            param1.a(24, 0, -3493, var2);
+            param1.writeBytes(24, 0, -3493, var2);
             if (param0 == 1) {
               return;
             }
@@ -61,7 +61,7 @@ final class wf {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -70,10 +70,10 @@ final class wf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 >= -48) {
-          wf.a((byte) 22);
+          wf.releaseStatics((byte) 22);
         }
     }
 
@@ -102,7 +102,7 @@ final class wf {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_3_0 = pd.field_Kb;
+            stackIn_3_0 = ScrollPaneWithFooter.field_Kb;
             return stackIn_3_0;
           }
           if (var2_int > 64) {
@@ -166,7 +166,7 @@ final class wf {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 

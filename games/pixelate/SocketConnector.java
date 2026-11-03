@@ -28,15 +28,15 @@ abstract class SocketConnector {
         var14 = Pixelate.field_H ? 1 : 0;
         try {
           var6_int = 8 + (param5 + param1 + 8) + 487;
-          ki.field_k.a(3, ui.field_i.height - 6, param0, 256, -6 + var6_int);
+          ki.field_k.setBounds(3, ui.field_i.height - 6, param0, 256, -6 + var6_int);
           var7 = ki.field_k.height - 5;
-          StripedProgressBar.field_U.a(var7 - param2, param2, 5, 256, 487 + param1 + param5);
-          nf.field_d.a(0, param2, param1, 256, -rh.field_y.field_K - param1 + StripedProgressBar.field_U.field_K);
+          StripedProgressBar.field_U.setBounds(var7 - param2, param2, 5, 256, 487 + param1 + param5);
+          nf.field_d.setBounds(0, param2, param1, 256, -rh.field_y.field_K - param1 + StripedProgressBar.field_U.field_K);
           var7 = var7 - (2 + param2);
-          rh.field_y.a(0, param2, param1 + nf.field_d.field_K, 256, rh.field_y.field_K);
+          rh.field_y.setBounds(0, param2, param1 + nf.field_d.field_K, 256, rh.field_y.field_K);
           l.field_p.a(5, 2, (byte) 118, 487 + (param1 + param5), 5, -5 + var7, param5);
           if (null != td.field_b) {
-            td.field_b.a(l.field_p.field_K, (byte) 100, l.field_p.field_S, l.field_p.field_D, l.field_p.height);
+            td.field_b.setBounds(l.field_p.field_K, (byte) 100, l.field_p.field_S, l.field_p.field_D, l.field_p.height);
           }
           var8 = -var6_int + (ui.field_i.field_K - param1);
           var9 = var8 / 2;
@@ -49,12 +49,12 @@ abstract class SocketConnector {
               var11++;
               var7Lifetime1 = -var13 + (-2 + (3 + var11 * (2 + (ui.field_i.height - 6)) / (1 + TextButton.field_F)));
               if (5 <= var12) {
-                GradientOutlineTextPainter.field_u.a(var13, var7Lifetime1, var6_int, 256, var8);
+                GradientOutlineTextPainter.field_u.setBounds(var13, var7Lifetime1, var6_int, 256, var8);
               } else {
-                ResourceArchive.field_f[var12].a(var13, var7Lifetime1, var6_int, 256, var8);
-                CheckboxPainter.field_n[var12].a(0, var7Lifetime1, param1, 256, -param1 + var9);
-                ResourceArchive.field_h[var12].a(param3, var7Lifetime1 + (-param3 - param3), var9, 256, param4);
-                DelegatingCanvas.field_e[var12].a(param3, -param3 + (-param3 + var7Lifetime1), var10, param0 + 253, var8 - (param1 + var10));
+                ResourceArchive.field_f[var12].setBounds(var13, var7Lifetime1, var6_int, 256, var8);
+                CheckboxPainter.field_n[var12].setBounds(0, var7Lifetime1, param1, 256, -param1 + var9);
+                ResourceArchive.field_h[var12].setBounds(param3, var7Lifetime1 + (-param3 - param3), var9, 256, param4);
+                DelegatingCanvas.field_e[var12].setBounds(param3, -param3 + (-param3 + var7Lifetime1), var10, param0 + 253, var8 - (param1 + var10));
               }
             }
           }
@@ -62,7 +62,7 @@ abstract class SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var6), "eh.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var6), "eh.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ abstract class SocketConnector {
         field_g = null;
     }
 
-    final static Sprite[] a(String param0, String param1, byte param2, ResourceArchive param3) {
+    final static Sprite[] loadRgbSpritesByName(String param0, String param1, byte param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -96,7 +96,7 @@ abstract class SocketConnector {
           if (param2 != 47) {
             field_g = (String[]) null;
           }
-          stackIn_3_0 = ff.a(param3, var4_int, var5, param2 - 50);
+          stackIn_3_0 = ff.loadSprites(param3, var4_int, var5, param2 - 50);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ abstract class SocketConnector {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

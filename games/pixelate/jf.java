@@ -6,7 +6,7 @@ final class jf {
     static String field_b;
     static mj field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -30,7 +30,7 @@ final class jf {
         int var7 = 0;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          if (Pixelate.field_G != uk.field_s) {
+          if (Pixelate.field_G != GameModeSelectScreen.field_s) {
             return false;
           }
           if (!param0) {
@@ -42,13 +42,13 @@ final class jf {
             var4_ref_ug = (ug) (id.field_d.c(1504642273));
             if (var4_ref_ug != null &&
               var2_long > var4_ref_ug.field_o) {
-              var4_ref_ug.c(2779);
+              var4_ref_ug.unlink(2779);
               BackgroundScene.field_b = var4_ref_ug.field_r.length;
               MusicCrossfadeStream.field_o.position = 0;
               for (var5_int = 0; BackgroundScene.field_b > var5_int; var5_int++) {
                 MusicCrossfadeStream.field_o.payload[var5_int] = var4_ref_ug.field_r[var5_int];
               }
-              oj.field_G = gb.field_d;
+              BirthDateEntryPanel.field_G = gb.field_d;
               gb.field_d = MarkerSlider.field_U;
               MarkerSlider.field_U = TextLayoutLine.field_e;
               TextLayoutLine.field_e = var4_ref_ug.field_m;
@@ -61,7 +61,7 @@ final class jf {
               if (!QueuedInput.a(1, false)) {
                 return false;
               }
-              AudioService.field_c = MusicCrossfadeStream.field_o.f((byte) 114);
+              AudioService.field_c = MusicCrossfadeStream.field_o.readOpcode((byte) 114);
               MusicCrossfadeStream.field_o.position = 0;
               BackgroundScene.field_b = param1[AudioService.field_c];
             }
@@ -69,7 +69,7 @@ final class jf {
               return false;
             }
             if (0 == ij.field_s) {
-              oj.field_G = gb.field_d;
+              BirthDateEntryPanel.field_G = gb.field_d;
               gb.field_d = MarkerSlider.field_U;
               MarkerSlider.field_U = TextLayoutLine.field_e;
               TextLayoutLine.field_e = AudioService.field_c;
@@ -78,7 +78,7 @@ final class jf {
             }
             var4 = ij.field_s;
             if (NanoTickClock.field_h != 0.0) {
-              var4 = (int)((double)var4 + ai.field_d.nextGaussian() * NanoTickClock.field_h);
+              var4 = (int)((double)var4 + Bzip2State.field_d.nextGaussian() * NanoTickClock.field_h);
               if (var4 < 0) {
                 var4 = 0;
               }
@@ -100,11 +100,11 @@ final class jf {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
-    final static String a(String param0, int param1, byte param2) {
+    final static String requestAddFriend(String param0, int param1, byte param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;
@@ -123,12 +123,12 @@ final class jf {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!ai.a((byte) -126, var6)) {
+          if (!Bzip2State.a((byte) -126, var6)) {
             stackIn_3_0 = qn.field_n;
             return stackIn_3_0;
           }
           if (ValidatedTextWidget.field_db != 2) {
-            stackIn_6_0 = ai.field_C;
+            stackIn_6_0 = Bzip2State.field_C;
             return stackIn_6_0;
           }
           if (sm.a(param0, -1)) {
@@ -136,7 +136,7 @@ final class jf {
             return stackIn_9_0;
           }
           if (CanvasRasterBuffer.a(param0, (byte) 37)) {
-            stackIn_13_0 = sd.a(BufferedSocket.field_b, 34, new String[]{param0});
+            stackIn_13_0 = AlphaContainer.a(BufferedSocket.field_b, 34, new String[]{param0});
             return stackIn_13_0;
           }
           if (DialWidgetPainter.field_q >= 100 &&
@@ -152,16 +152,16 @@ final class jf {
             return stackIn_24_0;
           }
           if (ImageProducerRasterBuffer.a(-640, param0)) {
-            stackIn_27_0 = sd.a(bm.field_r, 85, new String[]{param0});
+            stackIn_27_0 = AlphaContainer.a(EmergentBehaviourBackground.field_r, 85, new String[]{param0});
             return stackIn_27_0;
           }
           var5 = aa.field_f;
-          var5.g(param1, 15514);
+          var5.writeOpcode(param1, 15514);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(160, 0);
-          var5.b((byte) -41, param0);
-          var5.f(-var4 + var5.position, -1);
+          var5.writeString((byte) -41, param0);
+          var5.backpatchByteLength(-var4 + var5.position, -1);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -174,7 +174,7 @@ final class jf {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class jf {
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
-            stackIn_4_0 = pd.field_Kb;
+            stackIn_4_0 = ScrollPaneWithFooter.field_Kb;
             return stackIn_4_0;
           }
           if (var2_int > 255) {
@@ -210,7 +210,7 @@ final class jf {
           }
           var3 = Puzzle.a(param0, (byte) -96, '.');
           if (2 > var3.length) {
-            stackIn_10_0 = pd.field_Kb;
+            stackIn_10_0 = ScrollPaneWithFooter.field_Kb;
             return stackIn_10_0;
           }
           var4 = var3;
@@ -238,7 +238,7 @@ final class jf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -256,10 +256,10 @@ final class jf {
         try {
           if (param4 <= 96) {
             var6 = (String) null;
-            jf.a((String) null, -39, (byte) 9);
+            jf.requestAddFriend((String) null, -39, (byte) 9);
           }
           if (rk.a(param3, false, param2, param1)) {
-            stackIn_6_0 = ed.a(param0.a(param1, param3, true), -28628);
+            stackIn_6_0 = ed.createPaletteBitmapFont(param0.getFile(param1, param3, true), -28628);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -280,7 +280,7 @@ final class jf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -23,13 +23,13 @@ final class InputQueue {
             stackIn_9_0 = -1;
             return stackIn_9_0;
           }
-          var2.c(2779);
+          var2.unlink(2779);
           stackIn_7_0 = var2.field_k;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "ee.D(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "ee.D(" + param0 + ')');
         }
     }
 
@@ -49,48 +49,48 @@ final class InputQueue {
         String var4_ref_String = null;
         int var4 = 0;
         String var5 = null;
-        im var6 = null;
+        SocialListEntry var6 = null;
         String var7 = null;
-        im var7_ref = null;
+        SocialListEntry var7_ref = null;
         String var8 = null;
         int var9 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
-        im var6Lifetime1;
+        SocialListEntry var6Lifetime1;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           var1 = MusicCrossfadeStream.field_o;
-          var2 = var1.f(255);
+          var2 = var1.readUnsignedByte(255);
           if (var2 == 0) {
             if (null == GameResultsScreen.field_q) {
               GameResultsScreen.field_q = new SecondaryNodeHashTable(128);
               aj.field_t = 0;
             }
-            stackIn_11_0 = (var1.f(255) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte(255) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.h(5);
+            var4_ref_String = var1.readString(5);
             if (var3_int != 0) {
-              var5 = var1.h(5);
+              var5 = var1.readString(5);
             }
             if (var3_int == 0 ||
               var9 != 0) {
               var5 = var4_ref_String;
             }
-            var6 = DisplayNameForm.a(var4_ref_String, -106);
-            var7 = var1.h(5);
+            var6 = DisplayNameForm.findFriend(var4_ref_String, -106);
+            var7 = var1.readString(5);
             var8 = dh.a((CharSequence) ((Object) var4_ref_String), (byte) 100);
             if (null == var8) {
               var8 = var4_ref_String;
             }
             if (var6 == null) {
-              var6 = DisplayNameForm.a(var7, 69);
+              var6 = DisplayNameForm.findFriend(var7, 69);
               if (null != var6) {
                 GameResultsScreen.field_q.a(false, var6, (long)var8.hashCode());
               }
             }
             if (var6 == null) {
-              var6 = new im();
+              var6 = new SocialListEntry();
               GameResultsScreen.field_q.a(false, var6, (long)var8.hashCode());
               fieldTemp$0 = aj.field_t;
               aj.field_t = aj.field_t + 1;
@@ -116,7 +116,7 @@ final class InputQueue {
               return;
             }
             if (4 != var2) {
-              CheckboxPainter.a(1, "F1: " + jm.b(-8), (Throwable) null);
+              CheckboxPainter.reportClientError(1, "F1: " + jm.b(-8), (Throwable) null);
               if (param0 >= -89) {
                 return;
               }
@@ -124,9 +124,9 @@ final class InputQueue {
               return;
             }
             ValidatedTextWidget.field_db = 1;
-            var3 = var1.h(5);
+            var3 = var1.readString(5);
             LabeledField.field_L = ((String) (var3)).intern();
-            var4 = var1.f(255);
+            var4 = var1.readUnsignedByte(255);
             vm.b(var4, (byte) -113);
             return;
           }
@@ -134,21 +134,21 @@ final class InputQueue {
             vm.field_b = new SecondaryNodeHashTable(128);
             DialWidgetPainter.field_q = 0;
           }
-          var3Lifetime1 = var1.h(5);
+          var3Lifetime1 = var1.readString(5);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.h(5);
-          var5Lifetime1 = var1.h(5);
-          var6Lifetime1 = re.a(var4_ref_StringLifetime1, -1);
+          var4_ref_StringLifetime1 = var1.readString(5);
+          var5Lifetime1 = var1.readString(5);
+          var6Lifetime1 = re.findFriend(var4_ref_StringLifetime1, -1);
           if (null == var6Lifetime1) {
-            var6Lifetime1 = re.a(var5Lifetime1, -1);
+            var6Lifetime1 = re.findFriend(var5Lifetime1, -1);
             if (null != var6Lifetime1) {
               vm.field_b.a(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 29).hashCode());
             }
           }
           if (null == var6Lifetime1) {
-            var6Lifetime1 = new im();
+            var6Lifetime1 = new SocialListEntry();
             vm.field_b.a(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 70).hashCode());
             fieldTemp$1 = DialWidgetPainter.field_q;
             DialWidgetPainter.field_q = DialWidgetPainter.field_q + 1;
@@ -161,8 +161,8 @@ final class InputQueue {
           var6Lifetime1.field_Fb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Nb = (String) (var3Lifetime1);
           var6Lifetime1.field_Gb = var5Lifetime1;
-          var6Lifetime1.c(2779);
-          var7_ref = (im) (VerticalScrollbar.field_Hb.c(1504642273));
+          var6Lifetime1.unlink(2779);
+          var7_ref = (SocialListEntry) (VerticalScrollbar.field_Hb.c(1504642273));
           scanLoop1: while (true) {
             if (null != var7_ref) {
               stackOut_49_0 = DebouncedValidator.a((byte) 115, var6Lifetime1, var7_ref);
@@ -172,7 +172,7 @@ final class InputQueue {
                 break scanLoop1;
               }
               if (stackIn_50_0) {
-                var7_ref = (im) (VerticalScrollbar.field_Hb.last(1504642273));
+                var7_ref = (SocialListEntry) (VerticalScrollbar.field_Hb.last(1504642273));
                 continue;
               }
             }
@@ -190,7 +190,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "ee.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "ee.C(" + param0 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class InputQueue {
         try {
           this.field_b.e(77);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class InputQueue {
           }
           if (var3 != null &&
             var3.field_m < param0) {
-            var3.c(2779);
+            var3.unlink(2779);
             stackIn_10_0 = var3.field_k;
             return stackIn_10_0;
           }
@@ -228,7 +228,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3_ref), "ee.F(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3_ref), "ee.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ee.H(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ee.H(" + param0 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class InputQueue {
         try {
           var4 = null;
           for (var5 = 0; var5 < this.field_e.length; var5++) {
-            if (this.field_e[var5].b(0)) {
+            if (this.field_e[var5].isLinked(0)) {
               continue;
             }
             var4 = this.field_e[var5];
@@ -275,7 +275,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) (var4), "ee.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) (var4), "ee.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -300,7 +300,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ee.<init>()");
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.<init>()");
         }
     }
 
@@ -317,7 +317,7 @@ final class InputQueue {
           var2 = 1;
           while (var2 < DateInputWidget.field_N.length) {
             var3 = DateInputWidget.field_N[var2];
-            qb.a(nd.field_c, var2 << 4, nd.field_c, var1_int, var3);
+            ArraySupport.a(nd.field_c, var2 << 4, nd.field_c, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
             if (var4 != 0) {
@@ -328,7 +328,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ee.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.A(" + param0 + ')');
         }
     }
 
@@ -339,7 +339,7 @@ final class InputQueue {
             this.a(-120, 48, 81);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

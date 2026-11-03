@@ -8,7 +8,7 @@ final class tj extends ah {
     static int field_y;
     static int field_v;
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_z = null;
         field_w = null;
         if (param0 <= 77) {
@@ -25,7 +25,7 @@ final class tj extends ah {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -32) {
-            stackIn_6_0 = (param0.c(1, (byte) -34) == 1);
+            stackIn_6_0 = (param0.readBits(1, (byte) -34) == 1);
             return stackIn_6_0;
           }
           return false;
@@ -39,7 +39,7 @@ final class tj extends ah {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -48,18 +48,18 @@ final class tj extends ah {
         try {
           this.field_x = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean isSoft(boolean param0) {
         if (!param0) {
           return true;
         }
         return false;
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void attachMouseInput(byte param0, java.awt.Component param1) {
         try {
           if (param0 != -128) {
             field_v = -81;
@@ -68,7 +68,7 @@ final class tj extends ah {
           param1.addMouseMotionListener(fj.field_c);
           param1.addFocusListener(fj.field_c);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "tj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "tj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,11 +84,11 @@ final class tj extends ah {
     final static void h(int param0) {
         LobbyPlayer.j(-705633312);
         NumericDateInputWidget.field_V = true;
-        to.field_s = true;
+        MainMenuScreen.field_s = true;
         if (param0 != 20) {
           field_w = (String) null;
         }
-        wa.field_c.e((byte) 54);
+        wa.field_c.refreshPanelVisibility((byte) 54);
         LoadingProgressDialog.a(false, SecondaryNodeDequeIterator.field_b, param0 ^ -26047);
     }
 
@@ -96,13 +96,13 @@ final class tj extends ah {
         try {
           if (param11 != 122) {
             java.awt.Component var16 = (java.awt.Component) null;
-            tj.a((byte) 102, (java.awt.Component) null);
+            tj.attachMouseInput((byte) 102, (java.awt.Component) null);
           }
           Sprite[] var17 = (Sprite[]) null;
-          da.a((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, IndexedSpriteState.field_l, MatchingTextValidator.field_s, param7);
-          ai.a(param1, param11 ^ 124);
+          BouncedownBackground.a((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, IndexedSpriteState.field_l, MatchingTextValidator.field_s, param7);
+          Bzip2State.a(param1, param11 ^ 124);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "tj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "tj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class tj extends ah {
         return this.field_x;
     }
 
-    final static int a(int param0, CharSequence param1, boolean param2, boolean param3) {
+    final static int parseInt(int param0, CharSequence param1, boolean param2, boolean param3) {
         int var8 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -192,7 +192,7 @@ final class tj extends ah {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ final class tj extends ah {
           nk.a((byte) 93, 256);
         }
         if (param0 != 32) {
-          tj.j(117);
+          tj.releaseStatics(117);
         }
     }
 

@@ -6,7 +6,7 @@ final class m extends IntrusiveNode {
     static String field_l;
     int field_m;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         if (param0 != -10) {
           field_l = (String) null;
@@ -17,7 +17,7 @@ final class m extends IntrusiveNode {
         throw new Error();
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSubscribePage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -49,7 +49,7 @@ final class m extends IntrusiveNode {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -59,14 +59,14 @@ final class m extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        if (!to.field_s) {
+        if (!MainMenuScreen.field_s) {
           throw new IllegalStateException();
         }
-        if (to.field_r != null) {
-          to.field_r.p(param0 ^ 15);
+        if (MainMenuScreen.field_r != null) {
+          MainMenuScreen.field_r.p(param0 ^ 15);
         }
         String var1 = Puzzle.a(0);
-        nf.field_b = new be(var1, (String) null, true, false, false);
+        nf.field_b = new LoginForm(var1, (String) null, true, false, false);
         if (param0 == -102) {
           wa.field_c.b(param0 - 6081, ph.field_l);
           ph.field_l.transitionToContent(nf.field_b, param0 ^ 27);
@@ -74,7 +74,7 @@ final class m extends IntrusiveNode {
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
-        m.a((java.applet.Applet) null, -43);
+        m.openSubscribePage((java.applet.Applet) null, -43);
         wa.field_c.b(param0 - 6081, ph.field_l);
         ph.field_l.transitionToContent(nf.field_b, param0 ^ 27);
         ph.field_l.e(false);

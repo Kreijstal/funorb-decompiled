@@ -3,13 +3,13 @@
  */
 abstract class Js5Transport {
     static dq field_i;
-    nj field_e;
-    nj field_f;
-    nj field_l;
+    DualLinkDeque field_e;
+    DualLinkDeque field_f;
+    DualLinkDeque field_l;
     static TextWidgetPainter field_d;
     static String[] field_j;
     static int field_n;
-    nj field_p;
+    DualLinkDeque field_p;
     int field_o;
     PacketBuffer field_b;
     long field_k;
@@ -37,31 +37,31 @@ abstract class Js5Transport {
 
     abstract void b(byte param0);
 
-    abstract void a(Object param0, boolean param1, int param2);
+    abstract void attachTransport(Object param0, boolean param1, int param2);
 
-    final boolean a(int param0) {
+    final boolean isInFlightFull(int param0) {
         if (param0 != 20) {
           return false;
         }
-        return this.b(127) >= 20 ? true : false;
+        return this.getInFlightRequestCount(127) >= 20 ? true : false;
     }
 
-    final int a(byte param0) {
+    final int getPendingRequestCount(byte param0) {
         if (param0 != 34) {
           return 117;
         }
         return this.field_l.b(param0 + 67) + this.field_p.b(118);
     }
 
-    final boolean d(byte param0) {
+    final boolean isPendingFull(byte param0) {
         if (param0 > 9) {
-          return this.a((byte) 34) >= 20 ? true : false;
+          return this.getPendingRequestCount((byte) 34) >= 20 ? true : false;
         }
-        this.field_f = (nj) null;
-        return this.a((byte) 34) >= 20 ? true : false;
+        this.field_f = (DualLinkDeque) null;
+        return this.getPendingRequestCount((byte) 34) >= 20 ? true : false;
     }
 
-    final Js5NetworkRequest a(byte param0, int param1, boolean param2, int param3, byte param4) {
+    final Js5NetworkRequest createRequest(byte param0, int param1, boolean param2, int param3, byte param4) {
         if (param0 != -31) {
           return (Js5NetworkRequest) null;
         }
@@ -71,13 +71,13 @@ abstract class Js5Transport {
         var8.field_t = param2 ? true : false;
         var8.field_q = var6;
         if (param2) {
-          if (!(this.b(126) < 20)) {
+          if (!(this.getInFlightRequestCount(126) < 20)) {
             throw new RuntimeException();
           }
-          this.field_e.a(-89, var8);
+          this.field_e.addLast(-89, var8);
         } else {
-          if (this.a((byte) 34) < 20) {
-            this.field_l.a(-45, var8);
+          if (this.getPendingRequestCount((byte) 34) < 20) {
+            this.field_l.addLast(-45, var8);
             return var8;
           }
           throw new RuntimeException();
@@ -85,9 +85,9 @@ abstract class Js5Transport {
         return var8;
     }
 
-    abstract void e(byte param0);
+    abstract void reportIntegrityFailure(byte param0);
 
-    final int b(int param0) {
+    final int getInFlightRequestCount(int param0) {
         int var2 = 23 % ((58 - param0) / 55);
         return this.field_e.b(113) + this.field_f.b(102);
     }
@@ -109,18 +109,18 @@ abstract class Js5Transport {
               SecondaryNodeDeque.field_f[2 + (0 + 8 * var3_int)] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_move3", "");
               SecondaryNodeDeque.field_f[3 + var3_int * 8] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_move4", "");
             } else {
-              SecondaryNodeDeque.field_f[0 + var3_int * 8 + 0] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_move1").decodeAllToPcm();
-              SecondaryNodeDeque.field_f[0 + 8 * var3_int + 1] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_move2").decodeAllToPcm();
-              SecondaryNodeDeque.field_f[2 + (0 + var3_int * 8)] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_move3").decodeAllToPcm();
-              SecondaryNodeDeque.field_f[3 + var3_int * 8] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_move4").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[0 + var3_int * 8 + 0] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_move1").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[0 + 8 * var3_int + 1] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_move2").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[2 + (0 + var3_int * 8)] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_move3").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[3 + var3_int * 8] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_move4").decodeAllToPcm();
             }
             SecondaryNodeDeque.field_f[5 + var3_int * 8] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_landing_normal", "");
             if (7 == var3_int) {
               SecondaryNodeDeque.field_f[8 * var3_int + 6] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_landing_special", "");
               SecondaryNodeDeque.field_f[8 * var3_int + 7] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_picture_complete", "");
             } else {
-              SecondaryNodeDeque.field_f[6 + var3_int * 8] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_landing_special").decodeAllToPcm();
-              SecondaryNodeDeque.field_f[7 + var3_int * 8] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_picture_complete").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[6 + var3_int * 8] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_landing_special").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[7 + var3_int * 8] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_picture_complete").decodeAllToPcm();
             }
             SecondaryNodeDeque.field_f[4 + 8 * var3_int] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_tile_rotate", "");
           }
@@ -129,15 +129,15 @@ abstract class Js5Transport {
           SecondaryNodeDeque.field_f[129] = param0.getSoundEffectByName(true, "pix_time_running_out", "");
           SecondaryNodeDeque.field_f[130] = param0.getSoundEffectByName(true, "pix_time_up", "");
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     Js5Transport() {
-        this.field_e = new nj();
-        this.field_f = new nj();
-        this.field_l = new nj();
-        this.field_p = new nj();
+        this.field_e = new DualLinkDeque();
+        this.field_f = new DualLinkDeque();
+        this.field_l = new DualLinkDeque();
+        this.field_p = new DualLinkDeque();
         this.field_b = new PacketBuffer(6);
         this.field_h = 0;
         this.field_a = (byte) 0;

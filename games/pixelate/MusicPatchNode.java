@@ -38,7 +38,7 @@ final class MusicPatchNode extends IntrusiveNode {
           param0.addKeyListener(mc.field_r);
           param0.addFocusListener(mc.field_r);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "in.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "in.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -47,14 +47,14 @@ final class MusicPatchNode extends IntrusiveNode {
           if (!QueuedInput.a(1, false)) {
             return false;
           }
-          BackgroundScene.field_b = MusicCrossfadeStream.field_o.f(255);
+          BackgroundScene.field_b = MusicCrossfadeStream.field_o.readUnsignedByte(255);
           MusicCrossfadeStream.field_o.position = 0;
         }
         if (-2 == BackgroundScene.field_b) {
           if (!QueuedInput.a(2, false)) {
             return false;
           }
-          BackgroundScene.field_b = MusicCrossfadeStream.field_o.a((byte) -113);
+          BackgroundScene.field_b = MusicCrossfadeStream.field_o.readUnsignedShort((byte) -113);
           MusicCrossfadeStream.field_o.position = 0;
         }
         if (param0 == -18481) {
@@ -76,7 +76,7 @@ final class MusicPatchNode extends IntrusiveNode {
         this.field_x = null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         field_B = null;
         field_s = null;

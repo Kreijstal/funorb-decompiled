@@ -5,15 +5,15 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     static Sprite field_hb;
     static SceneWidget field_eb;
     static boolean field_kb;
-    private int field_ib;
-    private dq field_lb;
-    private sd field_bb;
-    private UiComponent field_db;
-    private int field_fb;
-    private int field_cb;
+    private int fadeInDuration;
+    private dq transitionPhase;
+    private AlphaContainer contentWrapper;
+    private UiComponent pendingContent;
+    private int headerHeight;
+    private int phaseTick;
     private int field_gb;
     static String[] field_jb;
-    private int field_ab;
+    private int fadeOutDuration;
 
     final static void a(boolean param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         RuntimeException stackIn_35_0 = null;
@@ -31,10 +31,10 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
                 StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new fq(param2, param6, param3, param1, param5, param4));
               } else {
                 if (param2 == 6) {
-                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new wh(param2, param6, param3, param1, param5, param4));
+                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new HighscoresScreen(param2, param6, param3, param1, param5, param4));
                 } else {
                   if (param2 == 7) {
-                    StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new fk(param2, param6, param3, param1, param5, param4));
+                    StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new HowToPlayScreen(param2, param6, param3, param1, param5, param4));
                   } else {
                     if (param2 != 8 &&
                       param2 != 9) {
@@ -45,16 +45,16 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
                           StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new l(param2, param6, param3, param1, param5, param4));
                         } else {
                           if (param2 == 12) {
-                            StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new ol(param2, param6, param3, param1, param5, param4));
+                            StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new PauseMenuScreen(param2, param6, param3, param1, param5, param4));
                           } else {
                             if (param2 == 13) {
                               StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new GameResultsScreen(param2, param6, param3, param1, param5, param4));
                             } else {
                               if (param2 == 16) {
-                                StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new uk(param2, param6, param3, param1, param5, param4));
+                                StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new GameModeSelectScreen(param2, param6, param3, param1, param5, param4));
                               } else {
                                 if (17 == param2) {
-                                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new op(param2, param6, param3, param1, param5, param4));
+                                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new OptionsScreen(param2, param6, param3, param1, param5, param4));
                                 } else {
                                   if (param2 != 14) {
                                     throw new IllegalStateException("No class defined for id=" + param2);
@@ -67,7 +67,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
                         }
                       }
                     } else {
-                      StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new rb(param2, param6, param3, param1, param5, param4));
+                      StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new AchievementsScreen(param2, param6, param3, param1, param5, param4));
                     }
                   }
                 }
@@ -75,10 +75,10 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
               decompiledFrameRemainder0 = false;
             }
             else {
-              StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new dp(param2, param6, param3, param1, param5, param4));
+              StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new GameplayScreen(param2, param6, param3, param1, param5, param4));
             }
           } else {
-            StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new to(param2, param6, param3, param1, param5, param4));
+            StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new MainMenuScreen(param2, param6, param3, param1, param5, param4));
           }
           if (param0) {
             return;
@@ -95,7 +95,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 59 % ((49 - param1) / 54);
-          stackIn_1_0 = ig.field_b.a((byte) 24, param0, "");
+          stackIn_1_0 = ig.field_b.getNamedFile((byte) 24, param0, "");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -121,28 +121,28 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void f(boolean param0) {
-        if (DisplayNameForm.field_I == this.field_lb) {
+        if (DisplayNameForm.field_I == this.transitionPhase) {
           return;
         }
         if (param0) {
-          this.field_cb = 0;
-          this.field_lb = Js5Transport.field_i;
-          this.d(this.field_db, 114);
-          this.field_bb.field_O = 0;
-          this.field_db = null;
+          this.phaseTick = 0;
+          this.transitionPhase = Js5Transport.field_i;
+          this.installContent(this.pendingContent, 114);
+          this.contentWrapper.field_O = 0;
+          this.pendingContent = null;
           return;
         }
-        this.c(true);
-        this.field_cb = 0;
-        this.field_lb = Js5Transport.field_i;
-        this.d(this.field_db, 114);
-        this.field_bb.field_O = 0;
-        this.field_db = null;
+        this.tickLayerAndCheckHidden(true);
+        this.phaseTick = 0;
+        this.transitionPhase = Js5Transport.field_i;
+        this.installContent(this.pendingContent, 114);
+        this.contentWrapper.field_O = 0;
+        this.pendingContent = null;
     }
 
     boolean onFocusedKey(int param0, int param1, UiComponent param2, char param3) {
@@ -155,14 +155,14 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           if (super.onFocusedKey(param0, param1, param2, param3)) {
             return true;
           }
-          if (null == this.field_bb) {
+          if (null == this.contentWrapper) {
             return false;
           }
           if (param0 == 98) {
-            this.field_bb.focusNext(param2, param1 ^ 24);
+            this.contentWrapper.focusNext(param2, param1 ^ 24);
           }
           if (param0 == 99) {
-            this.field_bb.focusNext(param2, 27);
+            this.contentWrapper.focusNext(param2, 27);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,86 +175,86 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    boolean c(boolean param0) {
+    boolean tickLayerAndCheckHidden(boolean param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         if (!param0) {
-          if (this.field_lb == null) {
-            return super.c(false);
+          if (this.transitionPhase == null) {
+            return super.tickLayerAndCheckHidden(false);
           }
-          if (DisplayNameForm.field_I != this.field_lb) {
-            if (this.field_lb != Js5Transport.field_i) {
-              return super.c(false);
+          if (DisplayNameForm.field_I != this.transitionPhase) {
+            if (this.transitionPhase != Js5Transport.field_i) {
+              return super.tickLayerAndCheckHidden(false);
             }
-            fieldTemp$0 = this.field_cb + 1;
-            this.field_cb = this.field_cb + 1;
-            if (this.field_ib == fieldTemp$0) {
-              this.field_lb = null;
-              this.field_bb.field_O = 256;
-              return super.c(false);
+            fieldTemp$0 = this.phaseTick + 1;
+            this.phaseTick = this.phaseTick + 1;
+            if (this.fadeInDuration == fieldTemp$0) {
+              this.transitionPhase = null;
+              this.contentWrapper.field_O = 256;
+              return super.tickLayerAndCheckHidden(false);
             }
-            this.field_bb.field_O = (this.field_cb << 8) / this.field_ib;
-            return super.c(false);
+            this.contentWrapper.field_O = (this.phaseTick << 8) / this.fadeInDuration;
+            return super.tickLayerAndCheckHidden(false);
           }
-          fieldTemp$1 = this.field_cb + 1;
-          this.field_cb = this.field_cb + 1;
-          if (fieldTemp$1 != this.field_ab) {
-            this.field_bb.field_O = 256 - (this.field_cb << 8) / this.field_ab;
-            return super.c(false);
+          fieldTemp$1 = this.phaseTick + 1;
+          this.phaseTick = this.phaseTick + 1;
+          if (fieldTemp$1 != this.fadeOutDuration) {
+            this.contentWrapper.field_O = 256 - (this.phaseTick << 8) / this.fadeOutDuration;
+            return super.tickLayerAndCheckHidden(false);
           }
-          this.field_lb = ViewportController.field_h;
-          this.a(this.field_db.field_C + this.field_fb + 12, 12 + this.field_db.field_E, this.field_gb, 57);
-          this.field_cb = 0;
-          this.field_bb.field_O = 0;
-          return super.c(false);
+          this.transitionPhase = ViewportController.field_h;
+          this.a(this.pendingContent.field_C + this.headerHeight + 12, 12 + this.pendingContent.field_E, this.field_gb, 57);
+          this.phaseTick = 0;
+          this.contentWrapper.field_O = 0;
+          return super.tickLayerAndCheckHidden(false);
         }
         ContentTransitionDialog.e((byte) 58);
-        if (this.field_lb == null) {
-          return super.c(false);
+        if (this.transitionPhase == null) {
+          return super.tickLayerAndCheckHidden(false);
         }
-        if (DisplayNameForm.field_I != this.field_lb) {
-          if (this.field_lb != Js5Transport.field_i) {
-            return super.c(false);
+        if (DisplayNameForm.field_I != this.transitionPhase) {
+          if (this.transitionPhase != Js5Transport.field_i) {
+            return super.tickLayerAndCheckHidden(false);
           }
-          fieldTemp$2 = this.field_cb + 1;
-          this.field_cb = this.field_cb + 1;
-          if (this.field_ib == fieldTemp$2) {
-            this.field_lb = null;
-            this.field_bb.field_O = 256;
-            return super.c(false);
+          fieldTemp$2 = this.phaseTick + 1;
+          this.phaseTick = this.phaseTick + 1;
+          if (this.fadeInDuration == fieldTemp$2) {
+            this.transitionPhase = null;
+            this.contentWrapper.field_O = 256;
+            return super.tickLayerAndCheckHidden(false);
           }
-          this.field_bb.field_O = (this.field_cb << 8) / this.field_ib;
-          return super.c(false);
+          this.contentWrapper.field_O = (this.phaseTick << 8) / this.fadeInDuration;
+          return super.tickLayerAndCheckHidden(false);
         }
-        int fieldTemp$3 = this.field_cb + 1;
-        this.field_cb = this.field_cb + 1;
-        if (fieldTemp$3 != this.field_ab) {
-          this.field_bb.field_O = 256 - (this.field_cb << 8) / this.field_ab;
-          return super.c(false);
+        int fieldTemp$3 = this.phaseTick + 1;
+        this.phaseTick = this.phaseTick + 1;
+        if (fieldTemp$3 != this.fadeOutDuration) {
+          this.contentWrapper.field_O = 256 - (this.phaseTick << 8) / this.fadeOutDuration;
+          return super.tickLayerAndCheckHidden(false);
         }
-        this.field_lb = ViewportController.field_h;
-        this.a(this.field_db.field_C + this.field_fb + 12, 12 + this.field_db.field_E, this.field_gb, 57);
-        this.field_cb = 0;
-        this.field_bb.field_O = 0;
-        return super.c(false);
+        this.transitionPhase = ViewportController.field_h;
+        this.a(this.pendingContent.field_C + this.headerHeight + 12, 12 + this.pendingContent.field_E, this.field_gb, 57);
+        this.phaseTick = 0;
+        this.contentWrapper.field_O = 0;
+        return super.tickLayerAndCheckHidden(false);
     }
 
     ContentTransitionDialog(ModalStack param0, UiComponent param1, int param2, int param3, int param4) {
         super(param0, param1.field_E + 12, param2 + 12 + param1.field_C);
         try {
           this.field_gb = param4;
-          this.field_fb = param2;
-          this.field_ib = param3;
-          this.field_ab = param3;
-          this.d(param1, 125);
+          this.headerHeight = param2;
+          this.fadeInDuration = param3;
+          this.fadeOutDuration = param3;
+          this.installContent(param1, 125);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -266,15 +266,15 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_db = param0;
-          if (ViewportController.field_h != this.field_lb) {
-            if (DisplayNameForm.field_I != this.field_lb) {
-              this.field_lb = DisplayNameForm.field_I;
-              this.field_cb = 0;
+          this.pendingContent = param0;
+          if (ViewportController.field_h != this.transitionPhase) {
+            if (DisplayNameForm.field_I != this.transitionPhase) {
+              this.transitionPhase = DisplayNameForm.field_I;
+              this.phaseTick = 0;
             }
           } else {
-            this.a(this.field_db.field_C + this.field_fb + 12, 12 + this.field_db.field_E, this.field_gb, 57);
-            this.field_cb = 0;
+            this.a(this.pendingContent.field_C + this.headerHeight + 12, 12 + this.pendingContent.field_E, this.field_gb, 57);
+            this.phaseTick = 0;
           }
           if (param1 < -111) {
             return;
@@ -292,39 +292,39 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void d(UiComponent param0, int param1) {
-        if (null != this.field_bb) {
-          this.field_bb.c(2779);
+    private final void installContent(UiComponent param0, int param1) {
+        if (null != this.contentWrapper) {
+          this.contentWrapper.unlink(2779);
         }
         if (param1 <= 101) {
           return;
         }
         try {
           if (param0 != null) {
-            param0.a(param0.field_E, (byte) 55, this.field_fb + 6, 6, param0.field_C);
-            this.field_bb = new sd(param0);
+            param0.setBounds(param0.field_E, (byte) 55, this.headerHeight + 6, 6, param0.field_C);
+            this.contentWrapper = new AlphaContainer(param0);
           } else {
-            this.field_bb = new sd();
+            this.contentWrapper = new AlphaContainer();
           }
-          this.b(this.field_bb, 80);
-          this.field_db = null;
+          this.addChild(this.contentWrapper, 80);
+          this.pendingContent = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hb.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hb.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void e(boolean param0) {
-        if (null != this.field_lb) {
-          if (Js5Transport.field_i != this.field_lb) {
-            this.a(this.field_fb + 12 + this.field_db.field_C, (byte) -110, 12 + this.field_db.field_E);
-            this.d(this.field_db, 111);
+        if (null != this.transitionPhase) {
+          if (Js5Transport.field_i != this.transitionPhase) {
+            this.a(this.headerHeight + 12 + this.pendingContent.field_C, (byte) -110, 12 + this.pendingContent.field_E);
+            this.installContent(this.pendingContent, 111);
           }
-          this.field_bb.field_O = 256;
-          this.field_lb = null;
+          this.contentWrapper.field_O = 256;
+          this.transitionPhase = null;
         }
         super.e(param0);
     }

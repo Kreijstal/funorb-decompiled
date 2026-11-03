@@ -16,13 +16,13 @@ final class ModalStack extends SingleChildContainer {
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_N);
         ModalPanel var3 = (ModalPanel) (var2.d(0));
         while (var3 != null) {
-          if (var3.c(false)) {
-            var3.c(2779);
+          if (var3.tickLayerAndCheckHidden(false)) {
+            var3.unlink(2779);
           }
-          var3 = (ModalPanel) (var2.a((byte) -104));
+          var3 = (ModalPanel) (var2.first((byte) -104));
         }
         if (param0 < 99) {
-          this.a(-63, 101, 32, (byte) 105);
+          this.drawLayer(-63, 101, 32, (byte) 105);
         }
         this.child = (UiComponent) ((Object) this.n(640));
     }
@@ -41,11 +41,11 @@ final class ModalStack extends SingleChildContainer {
           var3.field_N = true;
           var3.focusNext((UiComponent) (this), 27);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "kn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final UiComponent l(int param0) {
+    final UiComponent getFocusedChild(int param0) {
         IntrusiveDequeCursor var2;
         ModalPanel var3;
         int var4;
@@ -57,14 +57,14 @@ final class ModalStack extends SingleChildContainer {
         var3 = (ModalPanel) (var2.d(0));
         while (var3 != null) {
           if (var3.field_N) {
-            return var3.k(97);
+            return var3.getFocusedChild(97);
           }
-          var3 = (ModalPanel) (var2.a((byte) -104));
+          var3 = (ModalPanel) (var2.first((byte) -104));
         }
         return null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         int var8 = Pixelate.field_H ? 1 : 0;
         if (this.field_y != null) {
           this.field_y.drawWidget((UiComponent) (this), (byte) -124, param0, param2, true);
@@ -73,7 +73,7 @@ final class ModalStack extends SingleChildContainer {
         UiComponent var6 = (UiComponent) (var5.b(-1));
         int var7 = 47 / ((param3 - 70) / 49);
         while (var6 != null) {
-          var6.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) 124);
+          var6.drawLayer(param0 + this.field_p, param1, param2 + this.field_z, (byte) 124);
           var6 = (UiComponent) (var5.previous(-105));
         }
     }
@@ -97,7 +97,7 @@ final class ModalStack extends SingleChildContainer {
           if (var3.field_N) {
             return var3;
           }
-          var3 = (ModalPanel) (var2.a((byte) -104));
+          var3 = (ModalPanel) (var2.first((byte) -104));
         }
         return null;
     }
@@ -109,7 +109,7 @@ final class ModalStack extends SingleChildContainer {
         return param1 >= 2 ? true : false;
     }
 
-    final void e(byte param0) {
+    final void refreshPanelVisibility(byte param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         if (param0 != 54) {
           this.field_N = (IntrusiveDeque) null;
@@ -118,7 +118,7 @@ final class ModalStack extends SingleChildContainer {
         ModalPanel var3 = (ModalPanel) (var2.d(param0 ^ 54));
         while (var3 != null) {
           var3.field_N = false;
-          var3 = (ModalPanel) (var2.a((byte) -104));
+          var3 = (ModalPanel) (var2.first((byte) -104));
         }
         this.child = null;
     }
@@ -141,9 +141,9 @@ final class ModalStack extends SingleChildContainer {
         ModalPanel var3 = (ModalPanel) (var2.d(0));
         while (var3 != null) {
           if (var3.a((byte) 123)) {
-            var3.c(2779);
+            var3.unlink(2779);
           }
-          var3 = (ModalPanel) (var2.a((byte) -104));
+          var3 = (ModalPanel) (var2.first((byte) -104));
         }
     }
 

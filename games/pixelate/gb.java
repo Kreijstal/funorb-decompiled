@@ -20,7 +20,7 @@ final class gb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = ub.a(param1, 0, "", (char)param2);
+          param1 = ub.replaceCharacter(param1, 0, "", (char)param2);
           var3 = EmailValidator.b(param2 ^ 95, param1);
           stackIn_5_0 = (param0.indexOf(param1) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_5_0;
@@ -40,15 +40,15 @@ final class gb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static IndexedSprite[] a(byte param0) {
+    final static IndexedSprite[] buildIndexedSprites(byte param0) {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
-        IndexedSprite[] var1 = new IndexedSprite[im.field_Qb];
-        for (var2 = 0; var2 < im.field_Qb; var2++) {
+        IndexedSprite[] var1 = new IndexedSprite[SocialListEntry.field_Qb];
+        for (var2 = 0; var2 < SocialListEntry.field_Qb; var2++) {
           var1[var2] = new IndexedSprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], wo.field_f[var2], fl.field_g);
         }
         re.b(140);
@@ -58,7 +58,7 @@ final class gb {
         return var1;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         if (param0) {
           field_e = (int[]) null;

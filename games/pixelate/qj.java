@@ -21,7 +21,7 @@ final class qj {
           fp.field_e = param1;
           ib.b(param2 ^ 20550);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -30,21 +30,21 @@ final class qj {
         CipherPacketBuffer var3Lifetime1;
         if (!param0) {
           var3 = aa.field_f;
-          var3.g(param2, 15514);
+          var3.writeOpcode(param2, 15514);
           var3.writeByte(160, 3);
           var3.writeByte(160, 10);
           var3.writeShort(1276387944, param1);
           return;
         }
-        qj.a(false);
+        qj.releaseStaticReferences(false);
         var3Lifetime1 = aa.field_f;
-        var3Lifetime1.g(param2, 15514);
+        var3Lifetime1.writeOpcode(param2, 15514);
         var3Lifetime1.writeByte(160, 3);
         var3Lifetime1.writeByte(160, 10);
         var3Lifetime1.writeShort(1276387944, param1);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStaticReferences(boolean param0) {
         field_c = null;
         field_e = null;
         field_a = null;

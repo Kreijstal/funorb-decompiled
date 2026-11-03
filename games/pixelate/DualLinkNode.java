@@ -4,15 +4,15 @@
 class DualLinkNode extends IntrusiveNode {
     long field_q;
     static wm field_l;
-    DualLinkNode field_r;
-    DualLinkNode field_p;
+    DualLinkNode secondaryPrevious;
+    DualLinkNode secondaryNext;
     static String field_n;
     static BitmapFont field_o;
     static String field_m;
     static int[] field_s;
     static String[] field_k;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_l = null;
         field_o = null;
@@ -26,48 +26,48 @@ class DualLinkNode extends IntrusiveNode {
 
     final long a(boolean param0) {
         if (!param0) {
-          this.e(-120);
+          this.unlinkSecondary(-120);
           return this.field_q;
         }
         return this.field_q;
     }
 
-    final void e(int param0) {
-        if (null == this.field_r) {
+    final void unlinkSecondary(int param0) {
+        if (null == this.secondaryPrevious) {
           return;
         }
-        this.field_r.field_p = this.field_p;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
         if (param0 == 17) {
-          this.field_p.field_r = this.field_r;
-          this.field_r = null;
-          this.field_p = null;
+          this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+          this.secondaryPrevious = null;
+          this.secondaryNext = null;
           return;
         }
     }
 
     final boolean f(int param0) {
         if (param0 != 0) {
-          this.e(-41);
-          if (this.field_r != null) {
+          this.unlinkSecondary(-41);
+          if (this.secondaryPrevious != null) {
             return true;
           }
           return false;
         }
-        if (this.field_r != null) {
+        if (this.secondaryPrevious != null) {
           return true;
         }
         return false;
     }
 
     final void a(long param0, int param1) {
-        if (null != this.field_r) {
+        if (null != this.secondaryPrevious) {
           throw new RuntimeException();
         }
         if (param1 == 29574) {
           this.field_q = param0;
           return;
         }
-        this.field_p = (DualLinkNode) null;
+        this.secondaryNext = (DualLinkNode) null;
         this.field_q = param0;
     }
 

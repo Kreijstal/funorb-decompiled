@@ -26,7 +26,7 @@ final class PlayerController {
     int field_p;
     static char[] field_b;
 
-    final void a(boolean param0) {
+    final void drainInputQueue(boolean param0) {
         int dupTemp$0 = 0;
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
@@ -43,7 +43,7 @@ final class PlayerController {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void enqueueInput(int param0, int param1, int param2) {
         this.field_g.a(param2, 0, param1);
         if (param0 != 6364) {
           PlayerController.a((byte) -64);
@@ -67,7 +67,7 @@ final class PlayerController {
     }
 
     final void b(int param0) {
-        this.field_f.a(false);
+        this.field_f.draw(false);
         if (param0 != -1) {
           PlayerController.f(88);
         }
@@ -85,7 +85,7 @@ final class PlayerController {
         if (param0 != -59) {
           PlayerController.a((byte) 49);
         }
-        stackIn_7_0 = (10 <= el.field_b) && (!lo.field_Nb) && (!ol.b(true));
+        stackIn_7_0 = (10 <= el.field_b) && (!IconTextComponent.field_Nb) && (!PauseMenuScreen.b(true));
         return stackIn_7_0;
     }
 
@@ -100,7 +100,7 @@ final class PlayerController {
           ki.a(this.field_i, -1, param1, this.field_s);
         }
         if (param0 != -20791) {
-          this.a(-23, -70, 98);
+          this.enqueueInput(-23, -70, 98);
         }
     }
 
@@ -116,7 +116,7 @@ final class PlayerController {
         this.field_k.boards[this.field_j].fastDrop = false;
     }
 
-    final void e(int param0) {
+    final void beginPicture(int param0) {
         if (param0 != 2406) {
           this.field_j = -80;
         }
@@ -161,7 +161,7 @@ final class PlayerController {
           }
           var6 = stackIn_4_0;
           if (ProxyAuthenticationException.field_g == 0) {
-            var7 = qn.a(var11, 480, TickClock.field_c, -121, DualLinkNode.field_o);
+            var7 = qn.wrapText(var11, 480, TickClock.field_c, -121, DualLinkNode.field_o);
             var8 = var7 + 3;
             AccountRegistrationPanel.field_J = new String[var8];
             ProxyAuthenticationException.field_e = new int[var8];
@@ -183,7 +183,7 @@ final class PlayerController {
             if (1 != ProxyAuthenticationException.field_g) {
               throw new IllegalArgumentException();
             }
-            var7 = qn.a(var11, 480, TickClock.field_c, -109, DualLinkNode.field_o);
+            var7 = qn.wrapText(var11, 480, TickClock.field_c, -109, DualLinkNode.field_o);
             var8 = var7 + 2;
             AccountRegistrationPanel.field_J = new String[var8];
             ProxyAuthenticationException.field_e = new int[var8];
@@ -221,12 +221,12 @@ final class PlayerController {
             if (ProxyAuthenticationException.field_e[var8Lifetime2] >= 0) {
               stackIn_37_1 = dk.field_d;
             } else {
-              stackIn_37_1 = da.field_m;
+              stackIn_37_1 = BouncedownBackground.field_m;
             }
             nf.field_c = stackIn_36_0 + stackIn_37_1;
           }
           ce.field_c = -(nf.field_c >> 1) + qh.field_b;
-          VerticalScrollbar.field_Gb.a(param0, NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, bg.field_k), param3 ^ 17068, 0);
+          VerticalScrollbar.field_Gb.initializeSelection(param0, NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, StatusBar.field_k), param3 ^ 17068, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -238,7 +238,7 @@ final class PlayerController {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -257,7 +257,7 @@ final class PlayerController {
         int var3;
         int var2Lifetime1;
         var3 = Pixelate.field_H ? 1 : 0;
-        this.field_f.b((byte) -113);
+        this.field_f.tick((byte) -113);
         if (param0 > ~this.field_p) {
           fieldTemp$0 = this.field_p + 1;
           this.field_p = this.field_p + 1;
@@ -306,7 +306,7 @@ final class PlayerController {
         }
         if (this.field_h <= this.field_u) {
           if (AgeValidator.field_p) {
-            ae.a(5, param0 ^ 18655, this.field_e);
+            Vector3.a(5, param0 ^ 18655, this.field_e);
           }
           this.applyInput(0, 5);
         }
@@ -335,7 +335,7 @@ final class PlayerController {
         if (param1 == 5) {
           stackIn_32_0 = (!this.field_k.applyAction(param1, this.field_j, param0 + 92, this.field_e)) ? 0 : 1;
           var3 = stackIn_32_0;
-          this.field_f.d(param0 - 16);
+          this.field_f.spawnPlacementParticles(param0 - 16);
           this.field_q.a(param0 - 122);
           this.field_u = 0;
           this.field_l = this.field_k.boards[this.field_j].isFullyPainted(param0 + 26745);
@@ -376,7 +376,7 @@ final class PlayerController {
               stackIn_13_0 = (!this.field_k.applyAction(param1, this.field_j, 117, this.field_e)) ? 0 : 1;
               var3 = stackIn_13_0;
               if (var3 != 0) {
-                EmailValidator.a((byte) 96, ok.a(ea.field_b, -101, 4) + 0);
+                EmailValidator.a((byte) 96, JavaRandomHelpers.a(ea.field_b, -101, 4) + 0);
               }
             }
           }
@@ -388,7 +388,7 @@ final class PlayerController {
         if (param0 != -1) {
           return true;
         }
-        return this.field_f.a(6);
+        return this.field_f.isIdle(6);
     }
 
     PlayerController(Match param0, int param1, boolean param2, Puzzle param3, int param4, int param5) {
@@ -440,7 +440,7 @@ final class PlayerController {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

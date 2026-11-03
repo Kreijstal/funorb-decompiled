@@ -13,7 +13,7 @@ final class cl {
     static String field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         field_i = null;
@@ -31,7 +31,7 @@ final class cl {
           return;
         }
         ln.field_q = false;
-        IsaacRandom.field_g = 0 == MusicCrossfadeStream.field_o.f(255) ? true : false;
+        IsaacRandom.field_g = 0 == MusicCrossfadeStream.field_o.readUnsignedByte(255) ? true : false;
     }
 
     final static int a(int param0, byte[] param1, int param2, CharSequence param3, int param4, int param5) {
@@ -168,7 +168,7 @@ final class cl {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -180,8 +180,8 @@ final class cl {
         }
         Sprite var6 = new Sprite(param0, param0);
         Sprite var3 = var6;
-        for (var4 = 0; var4 < var3.field_G.length; var4++) {
-          var6.field_G[var4] = param1;
+        for (var4 = 0; var4 < var3.pixels.length; var4++) {
+          var6.pixels[var4] = param1;
         }
         return var3;
     }
@@ -202,7 +202,7 @@ final class cl {
     final static void a(byte param0, boolean param1) {
         int var2 = -93 / ((-55 - param0) / 55);
         if (null != up.field_o) {
-          dp.a(up.field_o, -2);
+          GameplayScreen.a(up.field_o, -2);
         }
         if (null != ProxySocketConnector.field_n) {
           ProxySocketConnector.field_n.a(param1, (byte) 20);

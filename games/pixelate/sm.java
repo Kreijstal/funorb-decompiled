@@ -34,7 +34,7 @@ final class sm extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class sm extends IntrusiveNode {
           if (he.field_f == null) {
             return;
           }
-          var3 = he.field_f.b(-126, param1);
+          var3 = he.field_f.updateAndPollNameInput(-126, param1);
           if (var3 == 0) {
             return;
           }
@@ -68,16 +68,16 @@ final class sm extends IntrusiveNode {
               var4 = he.field_f.field_cb;
             }
             var5 = null;
-            if (il.field_e == 0) {
-              var5 = jf.a((String) (var4), param0, (byte) 108);
+            if (QuickChatCategoryCache.field_e == 0) {
+              var5 = jf.requestAddFriend((String) (var4), param0, (byte) 108);
             }
-            if (il.field_e == 1) {
-              var5 = ff.a(param0, (String) (var4), (byte) -106);
+            if (QuickChatCategoryCache.field_e == 1) {
+              var5 = ff.requestRemoveFriend(param0, (String) (var4), (byte) -106);
             }
-            if (il.field_e == 2) {
+            if (QuickChatCategoryCache.field_e == 2) {
               var5 = mj.a(-34, (String) (var4), param0);
             }
-            if (il.field_e == 3) {
+            if (QuickChatCategoryCache.field_e == 3) {
               var5 = aq.a((String) (var4), param0, (String) (var4), -20867);
               var4 = var5;
               var4 = var5;
@@ -88,29 +88,29 @@ final class sm extends IntrusiveNode {
             }
           }
           he.field_f = null;
-          il.field_e = -1;
+          QuickChatCategoryCache.field_e = -1;
           return;
         }
         if (he.field_f == null) {
           return;
         }
-        var3Lifetime1 = he.field_f.b(-126, param1);
+        var3Lifetime1 = he.field_f.updateAndPollNameInput(-126, param1);
         if (var3Lifetime1 == 0) {
           return;
         }
         if (2 != var3Lifetime1) {
           he.field_f = null;
-          il.field_e = -1;
+          QuickChatCategoryCache.field_e = -1;
           return;
         }
         if (he.field_f.field_cb == null) {
           he.field_f = null;
-          il.field_e = -1;
+          QuickChatCategoryCache.field_e = -1;
           return;
         }
         if (he.field_f.field_cb.equals("")) {
           he.field_f = null;
-          il.field_e = -1;
+          QuickChatCategoryCache.field_e = -1;
           return;
         }
         if (91 != he.field_f.field_cb.charAt(0)) {
@@ -120,36 +120,36 @@ final class sm extends IntrusiveNode {
           var4Lifetime1 = he.field_f.field_cb;
         }
         var5Lifetime1 = null;
-        if (il.field_e == 0) {
-          var5Lifetime1 = jf.a((String) (var4Lifetime1), param0, (byte) 108);
+        if (QuickChatCategoryCache.field_e == 0) {
+          var5Lifetime1 = jf.requestAddFriend((String) (var4Lifetime1), param0, (byte) 108);
         }
-        if (il.field_e == 1) {
-          var5Lifetime1 = ff.a(param0, (String) (var4Lifetime1), (byte) -106);
+        if (QuickChatCategoryCache.field_e == 1) {
+          var5Lifetime1 = ff.requestRemoveFriend(param0, (String) (var4Lifetime1), (byte) -106);
         }
-        if (il.field_e == 2) {
+        if (QuickChatCategoryCache.field_e == 2) {
           var5Lifetime1 = mj.a(-34, (String) (var4Lifetime1), param0);
         }
-        if (il.field_e == 3) {
+        if (QuickChatCategoryCache.field_e == 3) {
           var5Lifetime1 = aq.a((String) (var4Lifetime1), param0, (String) (var4Lifetime1), -20867);
         }
         if (var5Lifetime1 == null) {
           he.field_f = null;
-          il.field_e = -1;
+          QuickChatCategoryCache.field_e = -1;
           return;
         }
         var6Lifetime1 = (String) null;
         MidiPcmStream.a(0, (String) null, (String) (var4Lifetime1), (byte) -59, 2, (String) (var5Lifetime1));
         he.field_f = null;
-        il.field_e = -1;
+        QuickChatCategoryCache.field_e = -1;
         return;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_k = null;
         field_n = null;
         if (param0 >= -99) {
-          sm.a((byte) -113);
+          sm.releaseStatics((byte) -113);
         }
     }
 

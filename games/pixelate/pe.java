@@ -8,7 +8,7 @@ final class pe {
     static Calendar field_a;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 7) {
           pe.a(true);
           field_b = null;
@@ -28,7 +28,7 @@ final class pe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -82) {
-            stackIn_4_0 = param0.a((byte) 92);
+            stackIn_4_0 = param0.ensureAllGroupsAvailable((byte) 92);
             return stackIn_4_0;
           }
           return true;
@@ -42,18 +42,18 @@ final class pe {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, long param2) {
         CipherPacketBuffer var4 = aa.field_f;
-        var4.g(param1, 15514);
+        var4.writeOpcode(param1, 15514);
         var4.position = var4.position + 1;
         int var5 = var4.position;
         var4.writeByte(160, param0);
         var4.writeLong(false, param2);
-        var4.f(var4.position - var5, -1);
+        var4.backpatchByteLength(var4.position - var5, -1);
     }
 
     final static boolean a(boolean param0) {

@@ -179,7 +179,7 @@ final class NanoTickClock extends TickClock {
           var6 = null;
           if (param3.indexOf('@') == -1) {
             var7 = (CharSequence) ((Object) param3);
-            var4_long = nh.a(var7, -29667);
+            var4_long = nh.encodeBase37Name(var7, -29667);
           } else {
             var6 = param3;
           }
@@ -204,7 +204,7 @@ final class NanoTickClock extends TickClock {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

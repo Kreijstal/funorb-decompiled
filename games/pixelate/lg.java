@@ -36,7 +36,7 @@ final class lg {
             return stackIn_10_0;
           }
           if (param2 == 8) {
-            stackIn_14_0 = fb.field_Eb;
+            stackIn_14_0 = PairedTextColumns.field_Eb;
             return stackIn_14_0;
           }
           if (param2 == 9) {
@@ -52,7 +52,7 @@ final class lg {
             return stackIn_26_0;
           }
           if (param2 == 14) {
-            stackIn_29_0 = sd.a(Puzzle.field_m, 28, new String[]{param1});
+            stackIn_29_0 = AlphaContainer.a(Puzzle.field_m, 28, new String[]{param1});
             return stackIn_29_0;
           }
           if (param0 > 113) {
@@ -71,11 +71,11 @@ final class lg {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static String a(int param0, boolean param1, CharSequence param2) {
+    final static String normalizeAccountName(int param0, boolean param1, CharSequence param2) {
         int var6 = 0;
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;
@@ -110,7 +110,7 @@ final class lg {
                 !MatchController.a((byte) 126, var4.charAt(-1 + var4.length()))) {
                 if (param0 != 11) {
                   var9 = (ResourceArchive) null;
-                  lg.a(55, (ResourceArchive) null);
+                  lg.loadMusicTracks(55, (ResourceArchive) null);
                 }
                 var5 = 0;
                 for (var6 = 0; param2.length() > var6; var6++) {
@@ -150,11 +150,11 @@ final class lg {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
-    final static io a(java.applet.Applet param0, int param1) {
+    final static io readLastLoginMethodCookie(java.applet.Applet param0, int param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -175,7 +175,7 @@ final class lg {
             var7 = (sb) null;
             lg.a((sb) null, -23, -37, (sb) null, 119, 116);
           }
-          var2 = qn.a(param0, "jagex-last-login-method", (byte) -85);
+          var2 = qn.readCookie(param0, "jagex-last-login-method", (byte) -85);
           if (var2 == null) {
             stackIn_6_0 = cd.field_c;
             return stackIn_6_0;
@@ -200,39 +200,39 @@ final class lg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;
         int var1 = -115 / ((param0 + 84) / 35);
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadMusicTracks(int param0, ResourceArchive param1) {
         try {
-          bj.field_c[0] = MusicTrack.a(param1, "", "pix_title");
-          bj.field_c[1] = MusicTrack.a(param1, "", "pix_end_game");
-          bj.field_c[2] = MusicTrack.a(param1, "", "skin1");
-          bj.field_c[param0] = MusicTrack.a(param1, "", "skin8");
-          bj.field_c[4] = MusicTrack.a(param1, "", "skin2");
-          bj.field_c[5] = MusicTrack.a(param1, "", "skin9");
-          bj.field_c[6] = MusicTrack.a(param1, "", "skin3");
-          bj.field_c[7] = MusicTrack.a(param1, "", "skin16");
-          bj.field_c[8] = MusicTrack.a(param1, "", "skin4");
-          bj.field_c[9] = MusicTrack.a(param1, "", "skin11");
-          bj.field_c[10] = MusicTrack.a(param1, "", "skin12");
-          bj.field_c[11] = MusicTrack.a(param1, "", "skin7");
-          bj.field_c[12] = MusicTrack.a(param1, "", "skin5");
-          bj.field_c[13] = MusicTrack.a(param1, "", "skin6");
-          bj.field_c[14] = MusicTrack.a(param1, "", "skin13");
-          bj.field_c[15] = MusicTrack.a(param1, "", "skin14");
-          bj.field_c[16] = MusicTrack.a(param1, "", "skin15");
-          bj.field_c[17] = MusicTrack.a(param1, "", "skin10");
+          bj.field_c[0] = MusicTrack.load(param1, "", "pix_title");
+          bj.field_c[1] = MusicTrack.load(param1, "", "pix_end_game");
+          bj.field_c[2] = MusicTrack.load(param1, "", "skin1");
+          bj.field_c[param0] = MusicTrack.load(param1, "", "skin8");
+          bj.field_c[4] = MusicTrack.load(param1, "", "skin2");
+          bj.field_c[5] = MusicTrack.load(param1, "", "skin9");
+          bj.field_c[6] = MusicTrack.load(param1, "", "skin3");
+          bj.field_c[7] = MusicTrack.load(param1, "", "skin16");
+          bj.field_c[8] = MusicTrack.load(param1, "", "skin4");
+          bj.field_c[9] = MusicTrack.load(param1, "", "skin11");
+          bj.field_c[10] = MusicTrack.load(param1, "", "skin12");
+          bj.field_c[11] = MusicTrack.load(param1, "", "skin7");
+          bj.field_c[12] = MusicTrack.load(param1, "", "skin5");
+          bj.field_c[13] = MusicTrack.load(param1, "", "skin6");
+          bj.field_c[14] = MusicTrack.load(param1, "", "skin13");
+          bj.field_c[15] = MusicTrack.load(param1, "", "skin14");
+          bj.field_c[16] = MusicTrack.load(param1, "", "skin15");
+          bj.field_c[17] = MusicTrack.load(param1, "", "skin10");
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -241,13 +241,13 @@ final class lg {
           bd.field_c = param5;
           MarkerSlider.field_N = param3;
           if (param2 >= -114) {
-            lg.a((byte) 57);
+            lg.releaseStatics((byte) 57);
           }
           LoadingProgressDialog.field_fb = param4;
           AccountTermsPanel.field_J = param1;
           AudioService.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class lg {
         try {
           if (param0) {
             var5 = (CharSequence) null;
-            lg.a(-66, true, (CharSequence) null);
+            lg.normalizeAccountName(-66, true, (CharSequence) null);
           }
           var3 = null;
           var4 = null;
@@ -297,7 +297,7 @@ final class lg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

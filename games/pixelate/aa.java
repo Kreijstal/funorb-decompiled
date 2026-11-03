@@ -63,12 +63,12 @@ final class aa {
           return;
         }
         String var2 = (String) null;
-        aa.a((Throwable) null, (String) null);
+        aa.addExceptionContext((Throwable) null, (String) null);
         field_p = null;
         field_f = null;
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException addExceptionContext(Throwable param0, String param1) {
         ClientException var2 = null;
         if (param0 instanceof ClientException) {
           var2 = (ClientException) ((Object) param0);
@@ -80,22 +80,22 @@ final class aa {
     }
 
     aa(boolean param0) {
-        this.field_b = op.field_s;
-        this.field_n = op.field_t;
+        this.field_b = OptionsScreen.field_s;
+        this.field_n = OptionsScreen.field_t;
         this.field_h = cl.field_h;
         if (param0) {
           this.field_l = HuffmanCodec.field_g;
         } else {
           this.field_l = null;
         }
-        this.field_j = fk.field_o;
+        this.field_j = HowToPlayScreen.field_o;
         this.field_m = Puzzle.field_a;
         this.field_i = BoundedRandomAccessFile.field_d;
         this.field_e = ModalStack.field_I;
         this.field_a = TextWidgetPainter.field_n;
         this.field_k = cd.field_g;
         this.field_d = qf.field_b;
-        this.field_g = pb.field_j;
+        this.field_g = PictureStrip.field_j;
     }
 
     aa(int param0, String param1, int param2, String param3, String param4) {
@@ -113,7 +113,7 @@ final class aa {
           this.field_n = param1;
           this.field_l = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

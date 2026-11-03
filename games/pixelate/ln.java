@@ -35,7 +35,7 @@ final class ln extends IntrusiveNode {
               if (param1 != -85) {
                 ln.a(122);
               }
-              var4 = (String) (cq.a("getcookies", (byte) -43, param0));
+              var4 = (String) (JavaScriptBridge.callWindowFunction("getcookies", (byte) -43, param0));
               var5 = Puzzle.a(var4, (byte) -37, ';');
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -64,7 +64,7 @@ final class ln extends IntrusiveNode {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -73,7 +73,7 @@ final class ln extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = (String[][]) null;
         if (param0 != -113) {
           field_m = (String[][]) null;
@@ -83,7 +83,7 @@ final class ln extends IntrusiveNode {
     }
 
     ln(int param0) {
-        this.field_o = PcmSampleStream.a(SecondaryNodeDeque.field_f[param0], 100, ci.field_m[param0]);
+        this.field_o = PcmSampleStream.createAtRatePercent(SecondaryNodeDeque.field_f[param0], 100, NightToRememberBackground.field_m[param0]);
         TextLayoutLine.a(-21317, this.field_o);
     }
 

@@ -62,7 +62,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         try {
           this.matchingValidator = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -81,23 +81,23 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         if (param0 != 16) {
           return (SceneWidget) null;
         }
-        return ae.field_c.field_Fb;
+        return Vector3.field_c.content;
     }
 
-    final dj validateText(String param0, boolean param1) {
+    final ValidationState validateText(String param0, boolean param1) {
         fl var3 = null;
         RuntimeException var3_ref = null;
-        dj stackIn_2_0 = null;
-        dj stackIn_5_0 = null;
-        dj stackIn_11_0 = null;
-        dj stackIn_16_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_11_0 = null;
+        ValidationState stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_2_0 = (dj) null;
+            stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
           if (this.matchingValidator.validateText(param0, param1) == sk.field_a) {
@@ -129,7 +129,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -13,7 +13,7 @@ final class ib {
     static FullscreenFocusCanvas field_f;
     static int field_g;
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void updatePageLinks(java.applet.Applet param0, boolean param1) {
         try {
           RuntimeException stackIn_6_0 = null;
           StringBuilder stackIn_6_1 = null;
@@ -27,12 +27,12 @@ final class ib {
             try {
               var4 = param0.getCodeBase();
               var3 = lg.a(param1, param0, var4).getFile();
-              cq.a(param0, (byte) -62, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
-              cq.a(param0, (byte) -115, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
-              cq.a(param0, (byte) 108, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
-              cq.a(param0, (byte) -44, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
-              cq.a(param0, (byte) 78, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
-              cq.a(param0, (byte) 66, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) -62, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) -115, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) 108, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) -44, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) 78, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) 66, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,7 +49,7 @@ final class ib {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -61,11 +61,11 @@ final class ib {
     final static void b(int param0) {
         mh.a(ContextActionMenu.field_Rb, (byte) 95);
         if (param0 != 20558) {
-          ib.a(-8);
+          ib.releaseStatics(-8);
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_f = null;
         field_h = null;

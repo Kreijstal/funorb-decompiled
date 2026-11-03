@@ -39,7 +39,7 @@ final class dk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ final class dk {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.b(-3)) {
+          if (!param3.ensureIndex(-3)) {
             stackIn_2_0 = (String) (param2);
             return stackIn_2_0;
           }
@@ -65,7 +65,7 @@ final class dk {
             var5 = (ResourceArchive) null;
             dk.a(-69, (ResourceArchive) null, 92, 117);
           }
-          stackIn_6_0 = param0 + " - " + param3.c(0) + "%";
+          stackIn_6_0 = param0 + " - " + param3.getOverallProgress(0) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,11 +89,11 @@ final class dk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_e = null;
         if (param0 >= -81) {
@@ -103,7 +103,7 @@ final class dk {
         field_a = (Sprite[][]) null;
     }
 
-    final static void a(boolean param0, ResourceArchive param1) {
+    final static void loadLogoMesh(boolean param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         TriangleMesh var5 = null;
@@ -121,17 +121,17 @@ final class dk {
         int var4Lifetime1;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          var9 = new CipherPacketBuffer(param1.a((byte) 24, "", "logo.fo3d"));
+          var9 = new CipherPacketBuffer(param1.getNamedFile((byte) 24, "", "logo.fo3d"));
           var11 = var9;
-          var3 = var11.f(255);
-          var11.n(-110);
+          var3 = var11.readUnsignedByte(255);
+          var11.startBitAccess(-110);
           qn.field_q = MenuInputState.a(var11, (byte) 77);
           ck.field_b = new TriangleMesh[var3];
-          wc.field_p = new int[var3][];
+          BlastFromThePastBackground.field_p = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            ck.field_b[var4] = pk.a(var9, -1);
+            ck.field_b[var4] = pk.readTriangleMesh(var9, -1);
           }
-          var11.o(7);
+          var11.endBitAccess(7);
           var10 = 0;
           var4Lifetime1 = var10;
           while (var10 < var3) {
@@ -139,7 +139,7 @@ final class dk {
             var5.a(6, 6, 6, true, 1);
             var5.ensureBounds((byte) -17);
             var6 = new int[]{var5.field_b + var5.field_c >> 1, var5.field_F + var5.field_t >> 1, var5.field_x + var5.field_g >> 1};
-            wc.field_p[var10] = var6;
+            BlastFromThePastBackground.field_p[var10] = var6;
             var5.translateVertices(-var6[0], -var6[2], -var6[1], (byte) -83);
             var10++;
           }
@@ -158,7 +158,7 @@ final class dk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -238,76 +238,76 @@ final class dk {
             }
             var18 = var14;
             var19 = var15;
-            SoftwareRasterizer.a(qk.field_c);
+            SoftwareRasterizer.saveClip(qk.field_c);
             if (var18 > var19) {
               var19 = param3 * var8 / (var9 + var8) + param4;
               var18 = param3 * var8 / (var9 + var8) + param4;
             }
             if (null != param5[0]) {
-              SoftwareRasterizer.d(param1, param4, var16, var18);
-              param5[0].b(param1, param4);
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.intersectClip(param1, param4, var16, var18);
+              param5[0].drawTransparent(param1, param4);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (param5[2] != null) {
-              SoftwareRasterizer.d(var17, param4, var10, var18);
-              param5[2].b(var13, param4);
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.intersectClip(var17, param4, var10, var18);
+              param5[2].drawTransparent(var13, param4);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (param2 != 75) {
               return;
             }
             if (param5[6] != null) {
-              SoftwareRasterizer.d(param1, var19, var16, var11);
-              param5[6].b(param1, var15);
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.intersectClip(param1, var19, var16, var11);
+              param5[6].drawTransparent(param1, var15);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (null != param5[8]) {
-              SoftwareRasterizer.d(var17, var19, var10, var11);
-              param5[8].b(var13, var15);
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
+              param5[8].drawTransparent(var13, var15);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (param5[1] != null &&
               0 != param5[1].field_A) {
-              SoftwareRasterizer.d(var16, param4, var17, var18);
+              SoftwareRasterizer.intersectClip(var16, param4, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param5[1].field_A) {
-                param5[1].b(var20, param4);
+                param5[1].drawTransparent(var20, param4);
               }
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (null != param5[7] &&
               param5[7].field_A != 0) {
-              SoftwareRasterizer.d(var16, var19, var17, var11);
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param5[7].field_A) {
-                param5[7].b(var20Lifetime1, var15);
+                param5[7].drawTransparent(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (param5[3] != null &&
               param5[3].field_B != 0) {
-              SoftwareRasterizer.d(param1, var18, var16, var19);
+              SoftwareRasterizer.intersectClip(param1, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param5[3].field_B) {
-                param5[3].b(param1, var20Lifetime2);
+                param5[3].drawTransparent(param1, var20Lifetime2);
               }
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (null != param5[5] &&
               param5[5].field_B != 0) {
-              SoftwareRasterizer.d(var17, var18, var10, var19);
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param5[5].field_B) {
-                param5[5].b(var13, var20Lifetime3);
+                param5[5].drawTransparent(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
             }
             if (param5[4] != null &&
               param5[4].field_A != 0 &&
               0 != param5[4].field_B) {
-              SoftwareRasterizer.d(var16, var18, var17, var19);
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param5[4].field_B) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param5[4].field_A) {
-                  param5[4].b(var21, var20Lifetime4);
+                  param5[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.b(qk.field_c);
+              SoftwareRasterizer.restoreClip(qk.field_c);
               return;
             }
             return;
@@ -323,7 +323,7 @@ final class dk {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 

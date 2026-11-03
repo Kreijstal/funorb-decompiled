@@ -3,13 +3,13 @@
  */
 final class VerticalScrollbar extends SceneWidget {
     static String field_Nb;
-    private SceneWidget field_Kb;
+    private SceneWidget upButton;
     static int[] field_Fb;
-    private SceneWidget field_Eb;
+    private SceneWidget pageUpRegion;
     private int repeatDelay;
-    private SceneWidget field_Pb;
-    private SceneWidget field_Mb;
-    private SceneWidget field_Rb;
+    private SceneWidget thumb;
+    private SceneWidget downButton;
+    private SceneWidget track;
     static int[] field_Sb;
     static MenuInputState field_Gb;
     private SceneWidget field_Jb;
@@ -18,7 +18,7 @@ final class VerticalScrollbar extends SceneWidget {
     static int field_Lb;
     static IntrusiveDeque field_Hb;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Qb = null;
         field_Hb = null;
         int var1 = -33 % ((49 - param0) / 39);
@@ -35,9 +35,9 @@ final class VerticalScrollbar extends SceneWidget {
         if (param0 != 3) {
           this.e((byte) -58);
         }
-        int var6 = this.field_Rb.height - this.field_Pb.height;
+        int var6 = this.track.height - this.thumb.height;
         if (var6 > 0) {
-          var7 = this.field_Pb.field_S;
+          var7 = this.thumb.field_S;
           var8 = param1 - param3;
           var5 = (var8 * var7 + var6 / 2) / var6;
         }
@@ -69,18 +69,18 @@ final class VerticalScrollbar extends SceneWidget {
     }
 
     VerticalScrollbar(long param0, VerticalScrollbar param1) {
-        this(param0, param1.field_Kb, param1.field_Mb, param1.field_Eb, param1.field_Pb);
+        this(param0, param1.upButton, param1.downButton, param1.pageUpRegion, param1.thumb);
     }
 
     final boolean pollLineDown(byte param0) {
-        if (this.field_Mb.field_P != 0) {
+        if (this.downButton.field_P != 0) {
           this.repeatDelay = 20;
           return true;
         }
         if (param0 < 11) {
           field_Sb = (int[]) null;
         }
-        if (this.field_Mb.heldPressButton == 0) {
+        if (this.downButton.heldPressButton == 0) {
           return false;
         }
         if (this.repeatDelay > 0) {
@@ -94,11 +94,11 @@ final class VerticalScrollbar extends SceneWidget {
     }
 
     final boolean e(byte param0) {
-        if (this.field_Kb.field_P != 0) {
+        if (this.upButton.field_P != 0) {
           this.repeatDelay = 20;
           return true;
         }
-        if (0 != this.field_Kb.heldPressButton) {
+        if (0 != this.upButton.heldPressButton) {
           if (this.repeatDelay > 0) {
             this.repeatDelay = this.repeatDelay - 1;
             if (this.repeatDelay == 0) {
@@ -106,7 +106,7 @@ final class VerticalScrollbar extends SceneWidget {
               return true;
             }
             if (param0 < 118) {
-              VerticalScrollbar.c((byte) -109);
+              VerticalScrollbar.releaseStatics((byte) -109);
               return false;
             }
             return false;
@@ -116,7 +116,7 @@ final class VerticalScrollbar extends SceneWidget {
             return true;
           }
           if (param0 < 118) {
-            VerticalScrollbar.c((byte) -109);
+            VerticalScrollbar.releaseStatics((byte) -109);
             return false;
           }
           return false;
@@ -124,7 +124,7 @@ final class VerticalScrollbar extends SceneWidget {
         if (param0 >= 118) {
           return false;
         }
-        VerticalScrollbar.c((byte) -109);
+        VerticalScrollbar.releaseStatics((byte) -109);
         return false;
     }
 
@@ -132,7 +132,7 @@ final class VerticalScrollbar extends SceneWidget {
         if (param0 <= 70) {
           return true;
         }
-        return this.field_Pb.heldPressButton != 0 ? true : false;
+        return this.thumb.heldPressButton != 0 ? true : false;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -140,13 +140,13 @@ final class VerticalScrollbar extends SceneWidget {
         this.field_K = param5;
         this.field_D = param0;
         this.height = param2;
-        this.a(param3, (byte) 108, param4, param1);
+        this.layoutScrollbar(param3, (byte) 108, param4, param1);
         if (param7 != -1) {
           VerticalScrollbar.a(55, 126);
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void layoutScrollbar(int param0, byte param1, int param2, int param3) {
         int var6 = 0;
         int var5 = 0;
         int var9 = 0;
@@ -186,22 +186,22 @@ final class VerticalScrollbar extends SceneWidget {
             var11 = (var9 / 2 + var10 * param2) / var9;
           }
           var12 = var11 + var8 / 2;
-          var14 = this.field_Kb;
+          var14 = this.upButton;
           var14.field_K = this.field_K;
           var14.field_S = 0;
           var14.field_D = 0;
           var14.height = var5;
-          var15 = this.field_Mb;
+          var15 = this.downButton;
           var15.field_D = 0;
           var15.field_S = var6;
           var15.field_K = this.field_K;
           var15.height = this.height - var6;
-          var16 = this.field_Rb;
+          var16 = this.track;
           var16.field_K = this.field_K;
           var16.height = var7;
           var16.field_S = var5;
           var16.field_D = 0;
-          var17 = this.field_Eb;
+          var17 = this.pageUpRegion;
           var17.height = var12;
           var17.field_S = 0;
           var17.field_D = 0;
@@ -211,13 +211,13 @@ final class VerticalScrollbar extends SceneWidget {
           var18.field_D = 0;
           var18.field_K = this.field_K;
           var18.height = var7 - var12;
-          var19 = this.field_Pb;
+          var19 = this.thumb;
           var19.height = var8;
           if (param1 == 108) {
             var19.field_D = 0;
-            this.field_Rb.field_rb = param3 > param0 ? true : false;
-            this.field_Mb.field_rb = param3 > param0 ? true : false;
-            this.field_Kb.field_rb = param3 > param0 ? true : false;
+            this.track.field_rb = param3 > param0 ? true : false;
+            this.downButton.field_rb = param3 > param0 ? true : false;
+            this.upButton.field_rb = param3 > param0 ? true : false;
             var19.field_K = this.field_K;
             var19.field_S = var11;
             return;
@@ -238,22 +238,22 @@ final class VerticalScrollbar extends SceneWidget {
           var11Lifetime1 = (var9Lifetime1 / 2 + var10Lifetime1 * param2) / var9Lifetime1;
         }
         var12Lifetime1 = var11Lifetime1 + var8 / 2;
-        var14Lifetime1 = this.field_Kb;
+        var14Lifetime1 = this.upButton;
         var14Lifetime1.field_K = this.field_K;
         var14Lifetime1.field_S = 0;
         var14Lifetime1.field_D = 0;
         var14Lifetime1.height = var5;
-        var15Lifetime1 = this.field_Mb;
+        var15Lifetime1 = this.downButton;
         var15Lifetime1.field_D = 0;
         var15Lifetime1.field_S = var6;
         var15Lifetime1.field_K = this.field_K;
         var15Lifetime1.height = this.height - var6;
-        var16Lifetime1 = this.field_Rb;
+        var16Lifetime1 = this.track;
         var16Lifetime1.field_K = this.field_K;
         var16Lifetime1.height = var7;
         var16Lifetime1.field_S = var5;
         var16Lifetime1.field_D = 0;
-        var17Lifetime1 = this.field_Eb;
+        var17Lifetime1 = this.pageUpRegion;
         var17Lifetime1.height = var12Lifetime1;
         var17Lifetime1.field_S = 0;
         var17Lifetime1.field_D = 0;
@@ -263,13 +263,13 @@ final class VerticalScrollbar extends SceneWidget {
         var18Lifetime1.field_D = 0;
         var18Lifetime1.field_K = this.field_K;
         var18Lifetime1.height = var7 - var12Lifetime1;
-        var19Lifetime1 = this.field_Pb;
+        var19Lifetime1 = this.thumb;
         var19Lifetime1.height = var8;
         if (param1 == 108) {
           var19Lifetime1.field_D = 0;
-          this.field_Rb.field_rb = param3 > param0 ? true : false;
-          this.field_Mb.field_rb = param3 > param0 ? true : false;
-          this.field_Kb.field_rb = param3 > param0 ? true : false;
+          this.track.field_rb = param3 > param0 ? true : false;
+          this.downButton.field_rb = param3 > param0 ? true : false;
+          this.upButton.field_rb = param3 > param0 ? true : false;
           var19Lifetime1.field_K = this.field_K;
           var19Lifetime1.field_S = var11Lifetime1;
           return;
@@ -301,21 +301,21 @@ final class VerticalScrollbar extends SceneWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "vp.E(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "vp.E(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final boolean f(byte param0) {
-        if (this.field_Eb.field_P != 0) {
+    final boolean pollPageUp(byte param0) {
+        if (this.pageUpRegion.field_P != 0) {
           this.repeatDelay = 20;
           return true;
         }
-        if (this.field_Eb.heldPressButton != 0) {
+        if (this.pageUpRegion.heldPressButton != 0) {
           if (0 < this.repeatDelay) {
             this.repeatDelay = this.repeatDelay - 1;
           }
           if (this.repeatDelay == 0 &&
-            this.field_Pb.screenY + this.field_Pb.pendingYDelta > bg.field_k) {
+            this.thumb.screenY + this.thumb.pendingYDelta > StatusBar.field_k) {
             this.repeatDelay = 3;
             return true;
           }
@@ -323,7 +323,7 @@ final class VerticalScrollbar extends SceneWidget {
         if (param0 > 24) {
           return false;
         }
-        VerticalScrollbar.c((byte) -65);
+        VerticalScrollbar.releaseStatics((byte) -65);
         return false;
     }
 
@@ -343,23 +343,23 @@ final class VerticalScrollbar extends SceneWidget {
         SceneWidget var9 = null;
         SceneWidget var10 = null;
         try {
-          this.field_Kb = new SceneWidget(0L, param1);
-          this.field_Mb = new SceneWidget(0L, param2);
-          this.a(this.field_Kb, (byte) 26);
-          this.a(this.field_Mb, (byte) 26);
-          this.field_Rb = new SceneWidget(0L, (SceneWidget) null);
-          this.a(this.field_Rb, (byte) 26);
-          this.field_Eb = new SceneWidget(0L, param3);
+          this.upButton = new SceneWidget(0L, param1);
+          this.downButton = new SceneWidget(0L, param2);
+          this.addChild(this.upButton, (byte) 26);
+          this.addChild(this.downButton, (byte) 26);
+          this.track = new SceneWidget(0L, (SceneWidget) null);
+          this.addChild(this.track, (byte) 26);
+          this.pageUpRegion = new SceneWidget(0L, param3);
           this.field_Jb = new SceneWidget(0L, param3);
-          var9 = this.field_Eb;
+          var9 = this.pageUpRegion;
           var10 = var9;
           this.field_Jb.field_A = true;
           var10.field_A = true;
-          this.field_Rb.a(this.field_Eb, (byte) 26);
-          this.field_Rb.a(this.field_Jb, (byte) 26);
-          this.field_Pb = new SceneWidget(0L, param4);
-          this.field_Pb.field_vb = true;
-          this.field_Rb.a(this.field_Pb, (byte) 26);
+          this.track.addChild(this.pageUpRegion, (byte) 26);
+          this.track.addChild(this.field_Jb, (byte) 26);
+          this.thumb = new SceneWidget(0L, param4);
+          this.thumb.field_vb = true;
+          this.track.addChild(this.thumb, (byte) 26);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -389,7 +389,7 @@ final class VerticalScrollbar extends SceneWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ final class VerticalScrollbar extends SceneWidget {
         if (this.repeatDelay != 0) {
           return false;
         }
-        if (bg.field_k >= this.field_Pb.pendingHeightDelta + (this.field_Pb.screenY + this.field_Pb.pendingYDelta + this.field_Pb.height)) {
+        if (StatusBar.field_k >= this.thumb.pendingHeightDelta + (this.thumb.screenY + this.thumb.pendingYDelta + this.thumb.height)) {
           this.repeatDelay = 3;
           return true;
         }

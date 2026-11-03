@@ -49,7 +49,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ca.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ca.C(" + param0 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class WhirlpoolHasher {
             WhirlpoolHasher.a(-91);
           }
           var7 = var5_int - 10;
-          da.e(-98);
+          BouncedownBackground.e(-98);
           if (param1.field_B > 0 &&
             null != param1.field_n) {
             vf.a((byte) -37);
@@ -156,7 +156,7 @@ final class WhirlpoolHasher {
                         if (param1.field_B > 0 &&
                           null != param1.field_n) {
                           dupTemp$0 = param1.field_n[var8];
-                          sc.field_i[dupTemp$0] = sc.field_i[dupTemp$0] + 1;
+                          ConditionalTextValue.field_i[dupTemp$0] = ConditionalTextValue.field_i[dupTemp$0] + 1;
                         }
                         mp.field_b = mp.field_b + 1;
                         break;
@@ -177,9 +177,9 @@ final class WhirlpoolHasher {
             param1.field_n != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(sc.field_i.length <= var9Lifetime1)) {
-              var10Lifetime1 = sc.field_i[var9Lifetime1];
-              sc.field_i[var9Lifetime1] = var8Lifetime1;
+            while (!(ConditionalTextValue.field_i.length <= var9Lifetime1)) {
+              var10Lifetime1 = ConditionalTextValue.field_i[var9Lifetime1];
+              ConditionalTextValue.field_i[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -198,7 +198,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class WhirlpoolHasher {
               var2_int = 0;
               break;
             }
-            this.field_c[var2_int] = fp.a(fp.a(FullscreenFocusCanvas.a(65280L, (long)this.inputBlock[var3 + 6] << 8), fp.a(fp.a(FullscreenFocusCanvas.a((long)this.inputBlock[4 + var3], 255L) << 24, fp.a(fp.a(fp.a(FullscreenFocusCanvas.a((long)this.inputBlock[1 + var3], 255L) << 48, (long)this.inputBlock[var3] << 56), FullscreenFocusCanvas.a(280375465082880L, (long)this.inputBlock[2 + var3] << 40)), FullscreenFocusCanvas.a((long)this.inputBlock[3 + var3], 255L) << 32)), FullscreenFocusCanvas.a((long)this.inputBlock[var3 + 5] << 16, 16711680L))), FullscreenFocusCanvas.a((long)this.inputBlock[7 + var3], 255L));
+            this.field_c[var2_int] = fp.xor(fp.xor(FullscreenFocusCanvas.a(65280L, (long)this.inputBlock[var3 + 6] << 8), fp.xor(fp.xor(FullscreenFocusCanvas.a((long)this.inputBlock[4 + var3], 255L) << 24, fp.xor(fp.xor(fp.xor(FullscreenFocusCanvas.a((long)this.inputBlock[1 + var3], 255L) << 48, (long)this.inputBlock[var3] << 56), FullscreenFocusCanvas.a(280375465082880L, (long)this.inputBlock[2 + var3] << 40)), FullscreenFocusCanvas.a((long)this.inputBlock[3 + var3], 255L) << 32)), FullscreenFocusCanvas.a((long)this.inputBlock[var3 + 5] << 16, 16711680L))), FullscreenFocusCanvas.a((long)this.inputBlock[7 + var3], 255L));
             var2_int++;
             var3 += 8;
           } while (var6 == 0);
@@ -240,7 +240,7 @@ final class WhirlpoolHasher {
             dupTemp$0 = this.field_g[var2_int];
             arrayValue$1 = this.field_c[var2_int];
             this.field_d[var2_int] = dupTemp$0;
-            this.field_e[var2_int] = fp.a(arrayValue$1, dupTemp$0);
+            this.field_e[var2_int] = fp.xor(arrayValue$1, dupTemp$0);
             var2_int++;
           } while (var6 == 0);
           scanLoop1: while (true) {
@@ -256,7 +256,7 @@ final class WhirlpoolHasher {
                 stackIn_32_0 = 56;
                 var5 = stackIn_32_0;
                 while (var4 < 8) {
-                  this.field_b[var3] = fp.a(this.field_b[var3], SecondaryNodeDeque.field_b[var4][cm.a(255, (int)(this.field_d[cm.a(-var4 + var3, 7)] >>> var5))]);
+                  this.field_b[var3] = fp.xor(this.field_b[var3], SecondaryNodeDeque.field_b[var4][cm.bitAnd(255, (int)(this.field_d[cm.bitAnd(-var4 + var3, 7)] >>> var5))]);
                   var4++;
                   var5 -= 8;
                 }
@@ -268,7 +268,7 @@ final class WhirlpoolHasher {
                 this.field_d[var3] = this.field_b[var3];
                 var3++;
               }
-              this.field_d[0] = fp.a(this.field_d[0], SecondaryNodeDeque.field_c[var2_int]);
+              this.field_d[0] = fp.xor(this.field_d[0], SecondaryNodeDeque.field_c[var2_int]);
               var3 = 0;
               while (var3 < 8) {
                 this.field_b[var3] = this.field_d[var3];
@@ -276,7 +276,7 @@ final class WhirlpoolHasher {
                 stackIn_51_0 = 56;
                 var5Lifetime1 = stackIn_51_0;
                 while (var4Lifetime1 < 8) {
-                  this.field_b[var3] = fp.a(this.field_b[var3], SecondaryNodeDeque.field_b[var4Lifetime1][cm.a((int)(this.field_e[cm.a(7, var3 - var4Lifetime1)] >>> var5Lifetime1), 255)]);
+                  this.field_b[var3] = fp.xor(this.field_b[var3], SecondaryNodeDeque.field_b[var4Lifetime1][cm.bitAnd((int)(this.field_e[cm.bitAnd(7, var3 - var4Lifetime1)] >>> var5Lifetime1), 255)]);
                   var5Lifetime1 -= 8;
                   var4Lifetime1++;
                 }
@@ -299,7 +299,7 @@ final class WhirlpoolHasher {
             return;
           }
           while (var2_int < 8) {
-            this.field_g[var2_int] = fp.a(this.field_g[var2_int], fp.a(this.field_c[var2_int], this.field_e[var2_int]));
+            this.field_g[var2_int] = fp.xor(this.field_g[var2_int], fp.xor(this.field_c[var2_int], this.field_e[var2_int]));
             var2_int++;
             if (var6 != 0) {
               return;
@@ -309,7 +309,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ca.F(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2), "ca.F(" + param0 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class WhirlpoolHasher {
           var3 = new int[var1_int];
           var4_int = 0;
           while (var4_int < var1_int) {
-            var3[var4_int] = fl.field_g[cm.a((int) var2[var4_int], 255)];
+            var3[var4_int] = fl.field_g[cm.bitAnd((int) var2[var4_int], 255)];
             var4_int++;
             if (var5 == 0) {
               continue;
@@ -344,7 +344,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ca.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ca.E(" + param0 + ')');
         }
     }
 
@@ -391,7 +391,7 @@ final class WhirlpoolHasher {
                 }
                 if (stackIn_24_0 >= 0 &&
                   256 > var8) {
-                  this.inputBlock[this.field_i] = (byte)bq.a((int) this.inputBlock[this.field_i], var8 >>> var7);
+                  this.inputBlock[this.field_i] = (byte)bq.bitOr((int) this.inputBlock[this.field_i], var8 >>> var7);
                   this.field_h = this.field_h + (8 - var7);
                   this.field_i = this.field_i + 1;
                   if (this.field_h == 512) {
@@ -399,7 +399,7 @@ final class WhirlpoolHasher {
                     this.field_i = 0;
                     this.field_h = 0;
                   }
-                  this.inputBlock[this.field_i] = (byte)cm.a(var8 << -var7 + 8, 255);
+                  this.inputBlock[this.field_i] = (byte)cm.bitAnd(var8 << -var7 + 8, 255);
                   param1 = param1 - 8L;
                   this.field_h = this.field_h + var7;
                   var5_int++;
@@ -417,7 +417,7 @@ final class WhirlpoolHasher {
           if (stackIn_24_0 < 0 ||
             var13 != 0) {
             var8 = param0[var5_int] << var6 & 255;
-            this.inputBlock[this.field_i] = (byte)bq.a((int) this.inputBlock[this.field_i], var8 >>> var7);
+            this.inputBlock[this.field_i] = (byte)bq.bitOr((int) this.inputBlock[this.field_i], var8 >>> var7);
           }
           var11Lifetime1 = -86 % ((param2 - 39) / 48);
           if ((long)var7 + param1 < 8L) {
@@ -434,7 +434,7 @@ final class WhirlpoolHasher {
             this.field_h = 0;
             this.field_i = 0;
           }
-          this.inputBlock[this.field_i] = (byte)cm.a(var8 << -var7 + 8, 255);
+          this.inputBlock[this.field_i] = (byte)cm.bitAnd(var8 << -var7 + 8, 255);
           this.field_h = this.field_h + (int)param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -447,7 +447,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -465,7 +465,7 @@ final class WhirlpoolHasher {
         int var8 = 0;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          this.inputBlock[this.field_i] = (byte)bq.a((int) this.inputBlock[this.field_i], 128 >>> cm.a(this.field_h, 7));
+          this.inputBlock[this.field_i] = (byte)bq.bitOr((int) this.inputBlock[this.field_i], 128 >>> cm.bitAnd(this.field_h, 7));
           this.field_i = this.field_i + 1;
           if (this.field_i > 32) {
             while (true) {
@@ -488,7 +488,7 @@ final class WhirlpoolHasher {
               if (param2 != 16157) {
                 return;
               }
-              qb.a(this.bitLength, 0, this.inputBlock, 32, 32);
+              ArraySupport.a(this.bitLength, 0, this.inputBlock, 32, 32);
               this.b((byte) 41);
               break;
             }
@@ -525,7 +525,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -544,7 +544,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ca.A(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "ca.A(" + param0 + ')');
         }
     }
 

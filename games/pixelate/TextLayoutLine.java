@@ -10,7 +10,7 @@ final class TextLayoutLine {
     static String field_f;
     static int field_e;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 != -26) {
@@ -90,7 +90,7 @@ final class TextLayoutLine {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class TextLayoutLine {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.b(-3)) {
+          if (!param1.ensureIndex(-3)) {
             stackIn_3_0 = (String) (param4);
             return stackIn_3_0;
           }
@@ -163,7 +163,7 @@ final class TextLayoutLine {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

@@ -4,7 +4,7 @@
 final class sf {
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = 110 / ((-2 - param0) / 55);
     }
@@ -23,7 +23,7 @@ final class sf {
           }
           id.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ')');
         }
     }
 

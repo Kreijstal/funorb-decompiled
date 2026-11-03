@@ -14,7 +14,7 @@ final class th {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = fb.a(wo.field_h, (byte) 119, Js5NetworkRequest.field_I);
+          var2_int = PairedTextColumns.a(wo.field_h, (byte) 119, Js5NetworkRequest.field_I);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }
@@ -33,11 +33,11 @@ final class th {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 > -94) {
           field_b = (Sprite) null;
@@ -47,7 +47,7 @@ final class th {
         field_b = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int fixedCosine(int param0, int param1) {
         param0 = param0 & param1;
         if (param0 >= 4096) {
           return param0 >= 6144 ? NanoTickClock.field_i[param0 - 6144] : -NanoTickClock.field_i[-param0 + 6144];

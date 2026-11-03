@@ -5,7 +5,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
     static String[] field_bb;
     private TextButton field_ab;
 
-    private final TextButton a(String param0, byte param1, UiListener param2) {
+    private final TextButton appendButton(String param0, byte param1, UiListener param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -21,12 +21,12 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           var4.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var5 = this.field_C - 6;
           this.field_C = this.field_C + 38;
-          var4.a(-16 + (this.field_E - 14), (byte) 64, var5, 15, 30);
+          var4.setBounds(-16 + (this.field_E - 14), (byte) 64, var5, 15, 30);
           if (param1 > -111) {
             field_bb = (String[]) null;
           }
-          this.b(var4, 80);
-          this.c((byte) 121);
+          this.addChild(var4, 80);
+          this.refreshLayout((byte) 121);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -45,7 +45,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -122,8 +122,8 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           var4.field_C = 80;
           var4.field_p = 50;
           var4.field_y = (WidgetPainter) ((Object) new TextWidgetPainter(ep.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(var4, 80);
-          this.field_ab = this.a(TabbedPanel.field_Hb, (byte) -126, (UiListener) (this));
+          this.addChild(var4, 80);
+          this.field_ab = this.appendButton(TabbedPanel.field_Hb, (byte) -126, (UiListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -141,7 +141,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -196,9 +196,9 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
             nk.field_e.height = 0;
             var6.field_K = 0;
             VerticalScrollbar.field_Qb.field_cb = vn.field_d.toUpperCase();
-            var7 = (ai.field_A.field_K + 2) / 2;
-            nk.field_e.a(ai.field_A.height - 40, 40, 0, 256, -2 + var7);
-            ep.field_a.a(ai.field_A.height - 40, 40, var7, 256, ai.field_A.field_K - var7);
+            var7 = (Bzip2State.field_A.field_K + 2) / 2;
+            nk.field_e.setBounds(Bzip2State.field_A.height - 40, 40, 0, 256, -2 + var7);
+            ep.field_a.setBounds(Bzip2State.field_A.height - 40, 40, var7, 256, Bzip2State.field_A.field_K - var7);
             if (LinkButtonPainter.field_a.length == 1 &&
               LinkButtonPainter.field_a[0] == 2) {
               var8 = 0;
@@ -243,17 +243,17 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               } else {
                 stackIn_38_1 = AccountRequestDialog.field_sb;
               }
-              stackIn_37_0.field_cb = sd.a(stackIn_38_1, 59, new String[]{ep.field_a.field_cb});
+              stackIn_37_0.field_cb = AlphaContainer.a(stackIn_38_1, 59, new String[]{ep.field_a.field_cb});
               ValidatedTextWidget.field_kb.field_rb = true;
               nk.field_e.field_cb = dn.field_b;
-              pb.field_f = true;
+              PictureStrip.field_f = true;
               if (null != Checkbox.field_Z) {
                 ib.field_b = false;
-                if (null == kf.field_o) {
+                if (null == TimerBarDemo.field_o) {
                   lc.field_t = new boolean[fj.field_b];
-                  kf.field_o = new byte[fj.field_b];
+                  TimerBarDemo.field_o = new byte[fj.field_b];
                 }
-                pb.field_f = false;
+                PictureStrip.field_f = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (fj.field_b > var13) {
@@ -263,10 +263,10 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                 CachedTextLayout.a(fj.field_b, 0, (byte) 91, true, -1, -1, DraggableWidget.field_S, -1);
                 if (!(wo.field_h < 2) &&
                   EmailValidator.field_m[12]) {
-                  pb.field_f = true;
+                  PictureStrip.field_f = true;
                 }
               }
-              if (!pb.field_f) {
+              if (!PictureStrip.field_f) {
                 ep.field_a.field_rb = false;
                 if (ep.field_a.field_R) {
                   var9 = null;
@@ -289,7 +289,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                       }
                     }
                   }
-                  up.field_o = "<col=A00000>" + lo.field_Gb + "<br>" + ij.field_p + (String) (var9);
+                  up.field_o = "<col=A00000>" + IconTextComponent.field_Gb + "<br>" + ij.field_p + (String) (var9);
                 }
               }
             } else {
@@ -305,15 +305,15 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               var9 = var16;
               var9 = var16;
               var10Lifetime1 = nk.field_e.font.textWidth(var16) + nk.field_e.font.a('.') * 3;
-              if (16 == (48 & rb.field_o)) {
+              if (16 == (48 & AchievementsScreen.field_o)) {
                 var9 = var16 + ".";
               }
               nk.field_e.field_C = (nk.field_e.field_K - var10Lifetime1) / 2;
               nk.field_e.horizontalAlignment = 0;
-              if ((rb.field_o & 48) == 32) {
+              if ((AchievementsScreen.field_o & 48) == 32) {
                 var9 = (String) (var9) + "..";
               }
-              if ((rb.field_o & 48) == 48) {
+              if ((AchievementsScreen.field_o & 48) == 48) {
                 var9 = (String) (var9) + "...";
               }
               nk.field_e.field_cb = (String) (var9);
@@ -322,23 +322,23 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           }
           stackIn_69_0 = ff.field_h;
           stackIn_69_1 = -28476;
-          stackIn_70_2 = (param1) && (!param3) && (!bm.field_o);
+          stackIn_70_2 = (param1) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_69_0).a(stackIn_69_1, stackIn_70_2);
-          stackIn_74_0 = ai.field_A;
+          stackIn_74_0 = Bzip2State.field_A;
           stackIn_74_1 = param2 - 28479;
-          stackIn_75_2 = (param1) && (!param3) && (!bm.field_o);
+          stackIn_75_2 = (param1) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_74_0).a(stackIn_74_1, stackIn_75_2);
           if (param2 != 3) {
             field_bb = (String[]) null;
           }
           stackIn_81_0 = ra.field_e;
           stackIn_81_1 = param2 ^ -28473;
-          stackIn_82_2 = (param1) && (!param3) && (bm.field_o);
+          stackIn_82_2 = (param1) && (!param3) && (EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_81_0).a(stackIn_81_1, stackIn_82_2);
-          nd.field_b.field_g.b((byte) -108);
+          nd.field_b.field_g.processTabPresses((byte) -108);
           if (null != DraggableWidget.field_S) {
             if (0 != ValidatedTextWidget.field_kb.field_P) {
-              fb.a(1, param0);
+              PairedTextColumns.a(1, param0);
             }
             if (ep.field_a.field_P != 0) {
               if (!TriangleMesh.field_r) {
@@ -347,17 +347,17 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                 wo.c(-1, param0);
               }
             }
-            be.a(true, DraggableWidget.field_S, param0, -1);
+            LoginForm.a(true, DraggableWidget.field_S, param0, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "ic.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var4), "ic.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_bb = null;
         int var1 = 90 / ((param0 - 62) / 41);
     }

@@ -18,14 +18,14 @@ final class wl {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
         int var2 = this.field_a * 240 / 255;
-        SoftwareRasterizer.a((int)this.field_h[0] << 4, (int)this.field_e[0] << 4, 64, this.field_a, this.field_g);
+        SoftwareRasterizer.fillRadialPaletteCircle((int)this.field_h[0] << 4, (int)this.field_e[0] << 4, 64, this.field_a, this.field_g);
         if (param0 >= -91) {
           field_f = (String) null;
         }
         for (var3 = 1; var3 < 20; var3++) {
           var2 = this.field_a * (-var3 + 20) * 12 / 255;
-          SoftwareRasterizer.a((int)this.field_h[var3] << 4, (int)this.field_e[var3] << 4, 32, var2, this.field_g);
-          SoftwareRasterizer.a((int)(this.field_h[var3] + this.field_h[-1 + var3]) << 3, (int)(this.field_e[var3 - 1] + this.field_e[var3]) << 3, 32, var2, this.field_g);
+          SoftwareRasterizer.fillRadialPaletteCircle((int)this.field_h[var3] << 4, (int)this.field_e[var3] << 4, 32, var2, this.field_g);
+          SoftwareRasterizer.fillRadialPaletteCircle((int)(this.field_h[var3] + this.field_h[-1 + var3]) << 3, (int)(this.field_e[var3 - 1] + this.field_e[var3]) << 3, 32, var2, this.field_g);
         }
     }
 
@@ -78,10 +78,10 @@ final class wl {
         return 1;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         if (param0) {
-          wl.a(false);
+          wl.releaseStatics(false);
         }
     }
 
@@ -116,11 +116,11 @@ final class wl {
             this.field_e[var5_int] = -1000.0;
             var6[var7] = -1000.0;
           }
-          var5_double = (double)(ok.a(ea.field_b, -124, 10) + 15) / 10.0;
+          var5_double = (double)(JavaRandomHelpers.a(ea.field_b, -124, 10) + 15) / 10.0;
           this.field_d = var5_double * DialWidget.a(3.141592653589793 * (double)param2 / 512.0, false);
-          this.field_c = var5_double * jn.a((double)param2 * 3.141592653589793 / 512.0, 6802);
+          this.field_c = var5_double * jn.sine((double)param2 * 3.141592653589793 / 512.0, 6802);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

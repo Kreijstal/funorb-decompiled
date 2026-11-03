@@ -6,9 +6,9 @@ final class MenuInputState {
     private int field_k;
     private int field_a;
     private int keyCode;
-    private boolean field_c;
-    private int field_i;
-    int field_j;
+    private boolean pointerSelection;
+    private int heldButton;
+    int selectedIndex;
     int field_h;
     static wm field_f;
     static String field_l;
@@ -18,19 +18,19 @@ final class MenuInputState {
 
     final void a(boolean param0, int param1) {
         if (param0) {
-          this.a(false, -5, -120, 105);
-          if (this.field_i == 0) {
-            this.field_c = false;
-            this.field_j = param1;
+          this.initializeSelection(false, -5, -120, 105);
+          if (this.heldButton == 0) {
+            this.pointerSelection = false;
+            this.selectedIndex = param1;
             return;
           }
           return;
         }
-        if (this.field_i != 0) {
+        if (this.heldButton != 0) {
           return;
         }
-        this.field_c = false;
-        this.field_j = param1;
+        this.pointerSelection = false;
+        this.selectedIndex = param1;
     }
 
     final static int a(boolean param0) {
@@ -49,44 +49,44 @@ final class MenuInputState {
         this.keyCode = 0;
         this.field_k = 0;
         boolean decompiledFrameRemainder0 = true;
-        if (0 == this.field_i) {
+        if (0 == this.heldButton) {
           if (ke.field_a != 98) {
-            if (this.field_i == 0) {
+            if (this.heldButton == 0) {
               this.keyCode = ke.field_a;
             }
-            if (this.field_i != 0) {
+            if (this.heldButton != 0) {
               if (param0 != -48) {
                 this.c(64);
               }
               return;
             }
             if (ke.field_a == 99) {
-              this.field_j = this.field_j + 1;
-              this.field_c = false;
-              if (this.field_h <= this.field_j) {
-                this.field_j = 0;
+              this.selectedIndex = this.selectedIndex + 1;
+              this.pointerSelection = false;
+              if (this.field_h <= this.selectedIndex) {
+                this.selectedIndex = 0;
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (0 >= this.field_j) {
-              this.field_j = this.field_h;
+            if (0 >= this.selectedIndex) {
+              this.selectedIndex = this.field_h;
             }
-            this.field_j = this.field_j - 1;
-            this.field_c = false;
+            this.selectedIndex = this.selectedIndex - 1;
+            this.pointerSelection = false;
           }
         }
         if (decompiledFrameRemainder0) {
-          if (this.field_i == 0) {
+          if (this.heldButton == 0) {
             this.keyCode = ke.field_a;
           }
-          if (this.field_i == 0 &&
+          if (this.heldButton == 0 &&
             ke.field_a == 99) {
-            this.field_j = this.field_j + 1;
-            this.field_c = false;
-            if (this.field_h <= this.field_j) {
-              this.field_j = 0;
+            this.selectedIndex = this.selectedIndex + 1;
+            this.pointerSelection = false;
+            if (this.field_h <= this.selectedIndex) {
+              this.selectedIndex = 0;
             }
           }
         }
@@ -96,7 +96,7 @@ final class MenuInputState {
         this.c(64);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 < 19) {
           return;
@@ -111,207 +111,207 @@ final class MenuInputState {
         if (param0 >= 46) {
           this.field_k = 0;
           this.keyCode = 0;
-          if (0 == this.field_i &&
+          if (0 == this.heldButton &&
             ke.field_a == 96) {
-            if (this.field_j > 0) {
-              this.field_c = false;
-              this.field_j = this.field_j - 1;
-              if (this.field_i == 0) {
+            if (this.selectedIndex > 0) {
+              this.pointerSelection = false;
+              this.selectedIndex = this.selectedIndex - 1;
+              if (this.heldButton == 0) {
                 this.keyCode = ke.field_a;
               }
-              if (this.field_i == 0 &&
+              if (this.heldButton == 0 &&
                 ke.field_a == 97) {
-                this.field_j = this.field_j + 1;
-                if (this.field_j >= this.field_h) {
-                  this.field_j = 0;
+                this.selectedIndex = this.selectedIndex + 1;
+                if (this.selectedIndex >= this.field_h) {
+                  this.selectedIndex = 0;
                 }
-                this.field_c = false;
+                this.pointerSelection = false;
               }
-              if (this.field_i == 0) {
+              if (this.heldButton == 0) {
                 if (ke.field_a != 98 &&
                   ke.field_a != 99) {
                   return;
                 }
-                this.field_c = false;
-                if (this.field_j < 0) {
-                  this.field_j = param1;
+                this.pointerSelection = false;
+                if (this.selectedIndex < 0) {
+                  this.selectedIndex = param1;
                 }
               }
               return;
             }
-            this.field_j = this.field_h;
-            this.field_c = false;
-            this.field_j = this.field_j - 1;
-            if (this.field_i == 0) {
+            this.selectedIndex = this.field_h;
+            this.pointerSelection = false;
+            this.selectedIndex = this.selectedIndex - 1;
+            if (this.heldButton == 0) {
               this.keyCode = ke.field_a;
             }
-            if (this.field_i == 0 &&
+            if (this.heldButton == 0 &&
               ke.field_a == 97) {
-              this.field_j = this.field_j + 1;
-              if (this.field_j >= this.field_h) {
-                this.field_j = 0;
+              this.selectedIndex = this.selectedIndex + 1;
+              if (this.selectedIndex >= this.field_h) {
+                this.selectedIndex = 0;
               }
-              this.field_c = false;
+              this.pointerSelection = false;
             }
-            if (this.field_i == 0) {
+            if (this.heldButton == 0) {
               if (ke.field_a != 98 &&
                 ke.field_a != 99) {
                 return;
               }
-              this.field_c = false;
-              if (this.field_j < 0) {
-                this.field_j = param1;
+              this.pointerSelection = false;
+              if (this.selectedIndex < 0) {
+                this.selectedIndex = param1;
               }
             }
             return;
           }
-          if (this.field_i == 0) {
+          if (this.heldButton == 0) {
             this.keyCode = ke.field_a;
           }
-          if (this.field_i == 0) {
+          if (this.heldButton == 0) {
             if (ke.field_a != 97) {
-              if (this.field_i == 0) {
+              if (this.heldButton == 0) {
                 if (ke.field_a != 98 &&
                   ke.field_a != 99) {
                   return;
                 }
-                this.field_c = false;
-                if (this.field_j < 0) {
-                  this.field_j = param1;
+                this.pointerSelection = false;
+                if (this.selectedIndex < 0) {
+                  this.selectedIndex = param1;
                 }
               }
               return;
             }
-            this.field_j = this.field_j + 1;
-            if (this.field_j >= this.field_h) {
-              this.field_j = 0;
-              this.field_c = false;
-              if (this.field_i == 0) {
+            this.selectedIndex = this.selectedIndex + 1;
+            if (this.selectedIndex >= this.field_h) {
+              this.selectedIndex = 0;
+              this.pointerSelection = false;
+              if (this.heldButton == 0) {
                 if (ke.field_a != 98 &&
                   ke.field_a != 99) {
                   return;
                 }
-                this.field_c = false;
-                if (this.field_j < 0) {
-                  this.field_j = param1;
+                this.pointerSelection = false;
+                if (this.selectedIndex < 0) {
+                  this.selectedIndex = param1;
                 }
               }
               return;
             }
-            this.field_c = false;
+            this.pointerSelection = false;
           }
         } else {
           this.isActivated(6);
           this.field_k = 0;
           this.keyCode = 0;
-          if (0 != this.field_i) {
-            if (this.field_i == 0) {
+          if (0 != this.heldButton) {
+            if (this.heldButton == 0) {
               this.keyCode = ke.field_a;
             }
-            if (this.field_i == 0) {
+            if (this.heldButton == 0) {
               if (ke.field_a != 97) {
-                if (this.field_i == 0) {
+                if (this.heldButton == 0) {
                   if (ke.field_a != 98 &&
                     ke.field_a != 99) {
                     return;
                   }
-                  this.field_c = false;
-                  if (this.field_j < 0) {
-                    this.field_j = param1;
+                  this.pointerSelection = false;
+                  if (this.selectedIndex < 0) {
+                    this.selectedIndex = param1;
                   }
                 }
                 return;
               }
-              this.field_j = this.field_j + 1;
-              if (this.field_j >= this.field_h) {
-                this.field_j = 0;
-                this.field_c = false;
-                if (this.field_i == 0) {
+              this.selectedIndex = this.selectedIndex + 1;
+              if (this.selectedIndex >= this.field_h) {
+                this.selectedIndex = 0;
+                this.pointerSelection = false;
+                if (this.heldButton == 0) {
                   if (ke.field_a != 98 &&
                     ke.field_a != 99) {
                     return;
                   }
-                  this.field_c = false;
-                  if (this.field_j < 0) {
-                    this.field_j = param1;
+                  this.pointerSelection = false;
+                  if (this.selectedIndex < 0) {
+                    this.selectedIndex = param1;
                   }
                 }
                 return;
               }
-              this.field_c = false;
+              this.pointerSelection = false;
             }
           } else {
             if (ke.field_a == 96) {
-              if (this.field_j > 0) {
-                this.field_c = false;
-                this.field_j = this.field_j - 1;
-                if (this.field_i == 0) {
+              if (this.selectedIndex > 0) {
+                this.pointerSelection = false;
+                this.selectedIndex = this.selectedIndex - 1;
+                if (this.heldButton == 0) {
                   this.keyCode = ke.field_a;
                 }
-                if (this.field_i == 0 &&
+                if (this.heldButton == 0 &&
                   ke.field_a == 97) {
-                  this.field_j = this.field_j + 1;
-                  if (this.field_j >= this.field_h) {
-                    this.field_j = 0;
+                  this.selectedIndex = this.selectedIndex + 1;
+                  if (this.selectedIndex >= this.field_h) {
+                    this.selectedIndex = 0;
                   }
-                  this.field_c = false;
+                  this.pointerSelection = false;
                 }
-                if (this.field_i == 0) {
+                if (this.heldButton == 0) {
                   if (ke.field_a != 98 &&
                     ke.field_a != 99) {
                     return;
                   }
-                  this.field_c = false;
-                  if (this.field_j < 0) {
-                    this.field_j = param1;
+                  this.pointerSelection = false;
+                  if (this.selectedIndex < 0) {
+                    this.selectedIndex = param1;
                   }
                 }
                 return;
               }
-              this.field_j = this.field_h;
-              this.field_c = false;
-              this.field_j = this.field_j - 1;
+              this.selectedIndex = this.field_h;
+              this.pointerSelection = false;
+              this.selectedIndex = this.selectedIndex - 1;
             }
-            if (this.field_i == 0) {
+            if (this.heldButton == 0) {
               this.keyCode = ke.field_a;
             }
-            if (this.field_i == 0 &&
+            if (this.heldButton == 0 &&
               ke.field_a == 97) {
-              this.field_j = this.field_j + 1;
-              if (this.field_j >= this.field_h) {
-                this.field_j = 0;
+              this.selectedIndex = this.selectedIndex + 1;
+              if (this.selectedIndex >= this.field_h) {
+                this.selectedIndex = 0;
               }
-              this.field_c = false;
+              this.pointerSelection = false;
             }
           }
         }
-        if (this.field_i != 0) {
+        if (this.heldButton != 0) {
           return;
         }
         if (ke.field_a != 98 &&
           ke.field_a != 99) {
           return;
         }
-        this.field_c = false;
-        if (this.field_j >= 0) {
+        this.pointerSelection = false;
+        if (this.selectedIndex >= 0) {
           return;
         }
-        this.field_j = param1;
+        this.selectedIndex = param1;
     }
 
     final boolean c(byte param0) {
         if (param0 == 35) {
-          return 0 != this.field_i ? true : false;
+          return 0 != this.heldButton ? true : false;
         }
         MenuInputState.b(116, 24);
-        return 0 != this.field_i ? true : false;
+        return 0 != this.heldButton ? true : false;
     }
 
     final void b(byte param0) {
         if (param0 == -71) {
           this.keyCode = 0;
           this.field_k = 0;
-          if (this.field_i == 0) {
+          if (this.heldButton == 0) {
             this.keyCode = ke.field_a;
           }
           return;
@@ -343,12 +343,12 @@ final class MenuInputState {
         RuntimeException decompiledCaughtException = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          var2_int = param0.c(8, (byte) -34);
+          var2_int = param0.readBits(8, (byte) -34);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (jk[]) (stackIn_3_0);
           }
-          var3 = param0.c(12, (byte) -34);
+          var3 = param0.readBits(12, (byte) -34);
           var4 = new jk[var3];
           var5 = 0;
           if (param1 != 77) {
@@ -357,17 +357,17 @@ final class MenuInputState {
           }
           while (var3 > var5) {
             if (!tj.a(param0, -32)) {
-              var6 = param0.c(wg.a(var5 - 1, 15598), (byte) -34);
+              var6 = param0.readBits(Matrix3.a(var5 - 1, 15598), (byte) -34);
               var4[var5] = var4[var6];
             } else {
               var6_ref_jk = new jk();
-              param0.c(24, (byte) -34);
-              param0.c(24, (byte) -34);
-              var6_ref_jk.field_b = param0.c(24, (byte) -34);
-              param0.c(9, (byte) -34);
-              param0.c(12, (byte) -34);
-              param0.c(12, (byte) -34);
-              param0.c(12, (byte) -34);
+              param0.readBits(24, (byte) -34);
+              param0.readBits(24, (byte) -34);
+              var6_ref_jk.field_b = param0.readBits(24, (byte) -34);
+              param0.readBits(9, (byte) -34);
+              param0.readBits(12, (byte) -34);
+              param0.readBits(12, (byte) -34);
+              param0.readBits(12, (byte) -34);
               var4[var5] = var6_ref_jk;
             }
             var5++;
@@ -384,11 +384,11 @@ final class MenuInputState {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void updatePointer(int param0, int param1, int param2) {
         if (this.field_h <= param1) {
           throw new IllegalArgumentException();
         }
@@ -398,7 +398,7 @@ final class MenuInputState {
         this.keyCode = 0;
         this.field_k = 0;
         if (IntrusiveDequeCursor.field_c == 0) {
-          if (this.field_i != 0 &&
+          if (this.heldButton != 0 &&
             ef.field_b != 0) {
             if (this.field_a <= 0) {
               this.field_a = gb.field_a;
@@ -407,54 +407,54 @@ final class MenuInputState {
           }
           if (~IntrusiveDequeCursor.field_c == param2 &&
             0 == ef.field_b) {
-            this.field_i = 0;
+            this.heldButton = 0;
           }
-          if (this.field_i != 0) {
+          if (this.heldButton != 0) {
             return;
           }
-          if (!this.field_c &&
-            !im.field_Jb) {
+          if (!this.pointerSelection &&
+            !SocialListEntry.field_Jb) {
             return;
           }
           if (0 > param1) {
-            if (!this.field_c) {
+            if (!this.pointerSelection) {
               return;
             }
-            this.field_j = -1;
+            this.selectedIndex = -1;
             return;
           }
-          if (param1 != this.field_j) {
+          if (param1 != this.selectedIndex) {
           }
-          this.field_c = true;
-          this.field_j = param1;
+          this.pointerSelection = true;
+          this.selectedIndex = param1;
           return;
         }
-        this.field_j = param0;
-        this.field_c = true;
-        this.field_i = IntrusiveDequeCursor.field_c;
+        this.selectedIndex = param0;
+        this.pointerSelection = true;
+        this.heldButton = IntrusiveDequeCursor.field_c;
         this.field_k = IntrusiveDequeCursor.field_c;
         this.field_a = tj.field_v;
-        if (this.field_i == 0) {
+        if (this.heldButton == 0) {
           if (~IntrusiveDequeCursor.field_c == param2 &&
             0 == ef.field_b) {
-            this.field_i = 0;
+            this.heldButton = 0;
           }
-          if (this.field_i == 0) {
-            if (!this.field_c &&
-              !im.field_Jb) {
+          if (this.heldButton == 0) {
+            if (!this.pointerSelection &&
+              !SocialListEntry.field_Jb) {
               return;
             }
             if (0 > param1) {
-              if (this.field_c) {
-                this.field_j = -1;
+              if (this.pointerSelection) {
+                this.selectedIndex = -1;
               }
             } else {
-              if (param1 != this.field_j) {
-                this.field_c = true;
-                this.field_j = param1;
+              if (param1 != this.selectedIndex) {
+                this.pointerSelection = true;
+                this.selectedIndex = param1;
               } else {
-                this.field_c = true;
-                this.field_j = param1;
+                this.pointerSelection = true;
+                this.selectedIndex = param1;
               }
             }
           }
@@ -463,24 +463,24 @@ final class MenuInputState {
         if (ef.field_b == 0) {
           if (~IntrusiveDequeCursor.field_c == param2 &&
             0 == ef.field_b) {
-            this.field_i = 0;
+            this.heldButton = 0;
           }
-          if (this.field_i == 0) {
-            if (!this.field_c &&
-              !im.field_Jb) {
+          if (this.heldButton == 0) {
+            if (!this.pointerSelection &&
+              !SocialListEntry.field_Jb) {
               return;
             }
             if (0 > param1) {
-              if (this.field_c) {
-                this.field_j = -1;
+              if (this.pointerSelection) {
+                this.selectedIndex = -1;
               }
             } else {
-              if (param1 != this.field_j) {
-                this.field_c = true;
-                this.field_j = param1;
+              if (param1 != this.selectedIndex) {
+                this.pointerSelection = true;
+                this.selectedIndex = param1;
               } else {
-                this.field_c = true;
-                this.field_j = param1;
+                this.pointerSelection = true;
+                this.selectedIndex = param1;
               }
             }
           }
@@ -492,37 +492,37 @@ final class MenuInputState {
         this.field_a = this.field_a - 1;
         if (~IntrusiveDequeCursor.field_c == param2 &&
           0 == ef.field_b) {
-          this.field_i = 0;
+          this.heldButton = 0;
         }
-        if (this.field_i != 0) {
+        if (this.heldButton != 0) {
           return;
         }
-        if (this.field_c) {
+        if (this.pointerSelection) {
           if (0 > param1) {
-            if (!this.field_c) {
+            if (!this.pointerSelection) {
               return;
             }
-            this.field_j = -1;
+            this.selectedIndex = -1;
             return;
           }
-          if (param1 != this.field_j) {
+          if (param1 != this.selectedIndex) {
           }
         } else {
-          if (!im.field_Jb) {
+          if (!SocialListEntry.field_Jb) {
             return;
           }
           if (0 > param1) {
-            if (!this.field_c) {
+            if (!this.pointerSelection) {
               return;
             }
-            this.field_j = -1;
+            this.selectedIndex = -1;
             return;
           }
-          if (param1 == this.field_j) {
+          if (param1 == this.selectedIndex) {
           }
         }
-        this.field_c = true;
-        this.field_j = param1;
+        this.pointerSelection = true;
+        this.selectedIndex = param1;
     }
 
     final static void b(int param0, int param1) {
@@ -1007,7 +1007,7 @@ final class MenuInputState {
         if (param0 == 102) {
           return 97 == this.keyCode ? true : false;
         }
-        this.a(-122, 90, 40);
+        this.updatePointer(-122, 90, 40);
         return 97 == this.keyCode ? true : false;
     }
 
@@ -1018,10 +1018,10 @@ final class MenuInputState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          Js5ArchiveManager.a(-7749, (java.awt.Component) ((Object) param0));
+          Js5ArchiveManager.detachKeyboardInput(-7749, (java.awt.Component) ((Object) param0));
           QuickChatMenu.a((byte) -47, (java.awt.Component) ((Object) param0));
           if (null != ScrollContainer.field_Lb) {
-            ScrollContainer.field_Lb.a(param1 + 18421, (java.awt.Component) ((Object) param0));
+            ScrollContainer.field_Lb.attach(param1 + 18421, (java.awt.Component) ((Object) param0));
           }
           if (param1 != 0) {
             field_d = (ResourceArchive) null;
@@ -1037,26 +1037,26 @@ final class MenuInputState {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
-        this.field_i = 0;
+    final void initializeSelection(boolean param0, int param1, int param2, int param3) {
+        this.heldButton = 0;
         if (param2 != 17068) {
           return;
         }
-        this.field_c = param0 ? true : false;
-        if (this.field_c) {
-          this.field_j = param1;
+        this.pointerSelection = param0 ? true : false;
+        if (this.pointerSelection) {
+          this.selectedIndex = param1;
           return;
         }
-        this.field_j = param3;
+        this.selectedIndex = param3;
     }
 
     MenuInputState(int param0) {
-        this.field_j = 0;
-        this.field_c = false;
+        this.selectedIndex = 0;
+        this.pointerSelection = false;
         this.field_h = param0;
     }
 

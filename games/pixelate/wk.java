@@ -11,13 +11,13 @@ final class wk extends LoginCredentials {
 
     final static Sprite[] a(int param0, int param1, int param2) {
         if (param2 != 1) {
-          wk.c(-57);
+          wk.releaseStatics(-57);
           return BoardParticle.a(1, param1, true, param0);
         }
         return BoardParticle.a(1, param1, true, param0);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -19101) {
           field_j = null;
           field_f = null;
@@ -32,7 +32,7 @@ final class wk extends LoginCredentials {
         field_i = null;
     }
 
-    final ea b(int param0) {
+    final ea getCredentialKind(int param0) {
         if (param0 != -27096) {
           wk.a(45, 71, -79);
           return l.field_r;
@@ -45,7 +45,7 @@ final class wk extends LoginCredentials {
           this.field_k = param1;
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,16 +54,16 @@ final class wk extends LoginCredentials {
         int var12 = -97 % ((param6 + 37) / 37);
     }
 
-    final void a(byte param0, PacketBuffer param1) {
+    final void writePayload(byte param0, PacketBuffer param1) {
         try {
           param1.a((byte) -66, this.field_h);
-          param1.a(-129, this.field_k);
+          param1.writeBase38Name(-129, this.field_k);
           if (param0 != -12) {
             PacketBuffer var4 = (PacketBuffer) null;
-            this.a((byte) -114, (PacketBuffer) null);
+            this.writePayload((byte) -114, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

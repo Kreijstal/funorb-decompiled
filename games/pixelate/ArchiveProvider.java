@@ -7,11 +7,11 @@ abstract class ArchiveProvider {
     static String field_d;
     static String field_c;
 
-    abstract byte[] a(int param0, int param1);
+    abstract byte[] getEncodedGroup(int param0, int param1);
 
     abstract ArchiveIndex getIndex(byte param0);
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -42) {
           return;
         }
@@ -23,19 +23,19 @@ abstract class ArchiveProvider {
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         if (param1 <= 110) {
-          ArchiveProvider.b((byte) -3);
-          DraggableWidget.field_I.a(param5, param0, param4, 256, param2);
+          ArchiveProvider.releaseStatics((byte) -3);
+          DraggableWidget.field_I.setBounds(param5, param0, param4, 256, param2);
           if (null != bo.field_h) {
-            bo.field_h.a(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
+            bo.field_h.layoutMenu(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
             return;
           }
           return;
         }
-        DraggableWidget.field_I.a(param5, param0, param4, 256, param2);
+        DraggableWidget.field_I.setBounds(param5, param0, param4, 256, param2);
         if (null == bo.field_h) {
           return;
         }
-        bo.field_h.a(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
+        bo.field_h.layoutMenu(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
     }
 
     final static void a(int param0) {
@@ -88,11 +88,11 @@ abstract class ArchiveProvider {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupProgress(int param0, int param1);
 
     static {
         field_a = new int[8192];

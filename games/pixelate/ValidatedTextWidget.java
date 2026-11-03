@@ -23,7 +23,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           super.updatePointer(param0, param1, param2, param3);
           this.field_hb = ProxyAuthenticationException.field_d - (this.field_z + param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -143,11 +143,11 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "gk.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var5), "gk.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void f(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_eb = null;
         field_kb = null;
         field_jb = null;
@@ -165,11 +165,11 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           }
           this.field_gb = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gk.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gk.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String b(byte param0) {
+    final String getTooltip(byte param0) {
         if (!this.field_D) {
           return null;
         }
@@ -179,11 +179,11 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         if (param0 <= 16) {
           field_cb = (SceneWidget) null;
         }
-        nk.a(bg.field_k, this.field_E - this.field_hb + ProxyAuthenticationException.field_d, 5818);
+        nk.a(StatusBar.field_k, this.field_E - this.field_hb + ProxyAuthenticationException.field_d, 5818);
         return this.field_l;
     }
 
-    final static byte[] b(CharSequence param0, int param1) {
+    final static byte[] encodeSingleByteText(CharSequence param0, int param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;
@@ -311,14 +311,14 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void n(int param0) {
-        super.n(param0 + 0);
+    final void notifyTextSet(int param0) {
+        super.notifyTextSet(param0 + 0);
         if (this.field_gb != null) {
-          this.field_gb.b(2048);
+          this.field_gb.markEdited(2048);
         }
         if (param0 != 1392153825) {
           UiComponent var3 = (UiComponent) null;

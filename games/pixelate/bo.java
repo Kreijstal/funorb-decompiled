@@ -33,18 +33,18 @@ final class bo {
           }
           var2 = bq.field_a.c(1504642273);
           while (var2 != null) {
-            sd.a(true, param0);
+            AlphaContainer.a(true, param0);
             var2 = bq.field_a.last(1504642273);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "bo.D(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "bo.D(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_a = null;
         field_h = null;

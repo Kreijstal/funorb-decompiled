@@ -28,8 +28,8 @@ final class vn {
 
     final static void a(int param0, boolean param1, boolean param2, String param3) {
         LobbyPlayer.j(param0 - 705633292);
-        wa.field_c.e((byte) 54);
-        nf.field_b = new be(Checkbox.field_U, (String) null, to.field_s, param1, param2);
+        wa.field_c.refreshPanelVisibility((byte) 54);
+        nf.field_b = new LoginForm(Checkbox.field_U, (String) null, MainMenuScreen.field_s, param1, param2);
         ph.field_l = new LoginDialog(wa.field_c, nf.field_b);
         if (param0 != -20) {
           return;
@@ -37,11 +37,11 @@ final class vn {
         try {
           wa.field_c.b(-6183, ph.field_l);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = (boolean[][]) null;
         field_d = null;
         field_c = null;
@@ -101,12 +101,12 @@ final class vn {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
     private final void b(boolean param0) {
-        this.field_f = 90 + ok.a(ea.field_b, -112, 340);
+        this.field_f = 90 + JavaRandomHelpers.a(ea.field_b, -112, 340);
         this.field_a = 480.0f;
         if (param0) {
           field_e = (boolean[][]) null;
@@ -114,7 +114,7 @@ final class vn {
     }
 
     final void a(byte param0) {
-        DebouncedValidator.field_b.b(this.field_f, (int)this.field_a);
+        DebouncedValidator.field_b.drawTransparent(this.field_f, (int)this.field_a);
         if (param0 < 122) {
           field_g = -53;
         }

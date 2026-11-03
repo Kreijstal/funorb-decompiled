@@ -64,14 +64,14 @@ final class LobbyGame extends SceneWidget {
         return !this.f(0) ? true : false;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Xb = null;
         field_Hb = null;
         field_fc = null;
         int var1 = -86 / ((28 - param0) / 46);
     }
 
-    final boolean a(byte param0, LobbyGame param1) {
+    final boolean comesBeforeGame(byte param0, LobbyGame param1) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -179,7 +179,7 @@ final class LobbyGame extends SceneWidget {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 

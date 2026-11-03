@@ -69,7 +69,7 @@ final class JaggrabDownloader implements Runnable {
         this.field_j = null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_g = null;
         field_k = null;
@@ -102,7 +102,7 @@ final class JaggrabDownloader implements Runnable {
         }
         if (this.field_n == 0) {
           if (this.field_e == null) {
-            this.field_e = this.field_h.a((byte) -44, this.field_b);
+            this.field_e = this.field_h.requestUrlStream((byte) -44, this.field_b);
           }
           if (this.field_e.field_b == 0) {
             return false;
@@ -116,7 +116,7 @@ final class JaggrabDownloader implements Runnable {
         boolean decompiledFrameRemainder0 = true;
         if (this.field_n == 1) {
           if (null == this.field_d) {
-            this.field_d = this.field_h.a(20278, this.field_b.getHost(), 443);
+            this.field_d = this.field_h.requestSocket(20278, this.field_b.getHost(), 443);
           }
           if (this.field_d.field_b == 0) {
             return false;
@@ -138,7 +138,7 @@ final class JaggrabDownloader implements Runnable {
                 var3 = var4.getOutputStream();
                 var3.write(17);
                 var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_b.getFile() + "\n\n"));
-                var3.write(ValidatedTextWidget.b(var5, 353));
+                var3.write(ValidatedTextWidget.encodeSingleByteText(var5, 353));
                 this.field_o = new DataInputStream(var4.getInputStream());
               }
               this.field_l.position = 0;
@@ -153,7 +153,7 @@ final class JaggrabDownloader implements Runnable {
             return true;
           }
           if (this.field_j == null) {
-            this.field_j = this.field_h.a(5, (Runnable) (this), (byte) -123);
+            this.field_j = this.field_h.startThread(5, (Runnable) (this), (byte) -123);
           }
           if (this.field_j.field_b == 0) {
             return false;
@@ -217,7 +217,7 @@ final class JaggrabDownloader implements Runnable {
           this.field_b = param1;
           this.field_l = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ll.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ll.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

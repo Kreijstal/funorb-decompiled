@@ -30,7 +30,7 @@ final class DraggableWidget extends SingleChildContainer {
             this.field_O) {
             return true;
           }
-          if (!this.a(param0 ^ -86, param5, param3, param6, param4)) {
+          if (!this.containsPoint(param0 ^ -86, param5, param3, param6, param4)) {
             stackIn_10_0 = var8_int;
             return stackIn_10_0 != 0;
           }
@@ -51,7 +51,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -68,8 +68,8 @@ final class DraggableWidget extends SingleChildContainer {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(-119, param2, param0, param3)) {
-            this.a(param2, (byte) -2, param3, param0);
+          if (this.beginDebugDescription(-119, param2, param0, param3)) {
+            this.appendDebugBody(param2, (byte) -2, param3, param0);
             this.appendDebugChild(param3, (byte) -91, param0, param2);
             discarded$64 = param0.append(" revert=").append(this.field_R);
             if (this.field_T != 2147483647 &&
@@ -99,7 +99,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class DraggableWidget extends SingleChildContainer {
           this.child = param6;
           this.field_O = param8 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bn.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bn.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class DraggableWidget extends SingleChildContainer {
           super.handlePointerRelease(param0, param1, param2, param3 + param3, param4, param5);
           this.field_k = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bn.EA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bn.EA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -167,13 +167,13 @@ final class DraggableWidget extends SingleChildContainer {
             ((TextButton) (this.child)).field_H) &&
             1 == this.field_k) {
             var5_int = -this.field_N + ProxyAuthenticationException.field_d - param2;
-            var6 = -param1 - this.field_K + bg.field_k;
+            var6 = -param1 - this.field_K + StatusBar.field_k;
             if ((var5_int != this.field_z ||
               var6 != this.field_p)) {
               this.field_p = var6;
               this.field_z = var5_int;
-              if (!(!(this.field_n instanceof eo))) {
-                ((eo) (this.field_n)).a(param2, this, param1, 31);
+              if (!(!(this.field_n instanceof WidgetDragListener))) {
+                ((WidgetDragListener) (this.field_n)).onDragged(param2, this, param1, 31);
               }
             }
             decompiledFrameRemainder0 = false;
@@ -222,13 +222,13 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
-    final void j(int param0) {
-        super.j(0);
-        this.child.a(this.field_E, (byte) 67, param0, 0, this.field_C);
+    final void refreshChildLayout(int param0) {
+        super.refreshChildLayout(0);
+        this.child.setBounds(this.field_E, (byte) 67, param0, 0, this.field_C);
         this.field_T = this.field_z;
         this.field_M = this.field_p;
     }

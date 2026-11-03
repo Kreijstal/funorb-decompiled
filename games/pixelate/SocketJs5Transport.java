@@ -10,9 +10,9 @@ final class SocketJs5Transport extends Js5Transport {
     private BufferedSocket transport;
     static int[] field_q;
 
-    final void e(byte param0) {
+    final void reportIntegrityFailure(byte param0) {
         try {
-          this.transport.b(-1);
+          this.transport.close(-1);
         } catch (Exception exception) {
         }
         this.field_h = this.field_h + 1;
@@ -32,7 +32,7 @@ final class SocketJs5Transport extends Js5Transport {
         LoginDialog.field_ob = 0;
     }
 
-    final void a(Object param0, boolean param1, int param2) {
+    final void attachTransport(Object param0, boolean param1, int param2) {
         try {
           RuntimeException stackIn_29_0 = null;
           StringBuilder stackIn_29_1 = null;
@@ -48,11 +48,11 @@ final class SocketJs5Transport extends Js5Transport {
           var6 = Pixelate.field_H ? 1 : 0;
           try {
             if (param2 != 8) {
-              this.e(-125);
+              this.sendOpcodeSixControlPacket(-125);
             }
             if (this.transport != null) {
               try {
-                this.transport.b(-1);
+                this.transport.close(-1);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -60,14 +60,14 @@ final class SocketJs5Transport extends Js5Transport {
               this.transport = null;
             }
             this.transport = (BufferedSocket) (param0);
-            this.e(0);
+            this.sendOpcodeSixControlPacket(0);
             this.sendStateControlPacket((byte) 73, param1);
             this.field_g.position = 0;
             this.field_c = null;
             while (true) {
               var4_ref = (Js5NetworkRequest) (this.field_f.a((byte) 80));
               if (var4_ref != null) {
-                this.field_e.a(param2 ^ 84, var4_ref);
+                this.field_e.addLast(param2 ^ 84, var4_ref);
                 continue;
               }
               break;
@@ -75,7 +75,7 @@ final class SocketJs5Transport extends Js5Transport {
             while (true) {
               var4_refLifetime1 = (Js5NetworkRequest) (this.field_p.a((byte) 80));
               if (var4_refLifetime1 != null) {
-                this.field_l.a(param2 + 104, var4_refLifetime1);
+                this.field_l.addLast(param2 + 104, var4_refLifetime1);
                 continue;
               }
               break;
@@ -85,13 +85,13 @@ final class SocketJs5Transport extends Js5Transport {
                 this.field_b.position = 0;
                 this.field_b.writeByte(160, 4);
                 this.field_b.writeByte(160, (int) this.field_a);
-                this.field_b.d(0, param2 - 126);
-                this.transport.a(this.field_b.payload.length, -89, 0, this.field_b.payload);
+                this.field_b.writeInt(0, param2 - 126);
+                this.transport.write(this.field_b.payload.length, -89, 0, this.field_b.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.transport.b(param2 ^ -9);
+                  this.transport.close(param2 ^ -9);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -114,7 +114,7 @@ final class SocketJs5Transport extends Js5Transport {
             } else {
               stackIn_30_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -161,7 +161,7 @@ final class SocketJs5Transport extends Js5Transport {
             this.field_o = this.field_o + var4;
             if (this.field_o > 30000) {
               try {
-                this.transport.b(-1);
+                this.transport.close(-1);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -170,10 +170,10 @@ final class SocketJs5Transport extends Js5Transport {
             }
           }
           if (this.transport == null) {
-            if (this.b(-97) != 0) {
+            if (this.getInFlightRequestCount(-97) != 0) {
               return false;
             }
-            if (this.a((byte) 34) == 0) {
+            if (this.getPendingRequestCount((byte) 34) == 0) {
               return true;
             }
             return false;
@@ -184,18 +184,18 @@ final class SocketJs5Transport extends Js5Transport {
             while (var2 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(160, 1);
-              this.field_b.a(var2.field_q, 109);
-              this.transport.a(this.field_b.payload.length, -118, 0, this.field_b.payload);
-              this.field_f.a(98, var2);
+              this.field_b.writeLong40(var2.field_q, 109);
+              this.transport.write(this.field_b.payload.length, -118, 0, this.field_b.payload);
+              this.field_f.addLast(98, var2);
               var2 = (Js5NetworkRequest) (this.field_e.a(65151));
             }
             var2Lifetime1 = (Js5NetworkRequest) (this.field_l.c(72));
             while (var2Lifetime1 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(160, 0);
-              this.field_b.a(var2Lifetime1.field_q, 91);
-              this.transport.a(this.field_b.payload.length, -113, 0, this.field_b.payload);
-              this.field_p.a(-114, var2Lifetime1);
+              this.field_b.writeLong40(var2Lifetime1.field_q, 91);
+              this.transport.write(this.field_b.payload.length, -113, 0, this.field_b.payload);
+              this.field_p.addLast(-114, var2Lifetime1);
               var2Lifetime1 = (Js5NetworkRequest) (this.field_l.a(65151));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
@@ -222,7 +222,7 @@ final class SocketJs5Transport extends Js5Transport {
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.transport.a(this.field_c.field_D.payload, this.field_c.field_D.position, (byte) 119, var6);
+                  this.transport.readFully(this.field_c.field_D.payload, this.field_c.field_D.position, (byte) 119, var6);
                   if (this.field_a != 0) {
                     var17 = 0;
                     var7 = var17;
@@ -238,7 +238,7 @@ final class SocketJs5Transport extends Js5Transport {
                       this.field_c.field_H = 0;
                     }
                   } else {
-                    this.field_c.e(17);
+                    this.field_c.unlinkSecondary(17);
                     this.field_c.field_v = false;
                     this.field_c = null;
                   }
@@ -247,7 +247,7 @@ final class SocketJs5Transport extends Js5Transport {
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.transport.a(this.field_g.payload, this.field_g.position, (byte) 119, var5);
+                  this.transport.readFully(this.field_g.payload, this.field_g.position, (byte) 119, var5);
                   if (0 != this.field_a) {
                     for (var6 = 0; var5 > var6; var6++) {
                       this.field_g.payload[var6 + this.field_g.position] = (byte)DraggableWidget.a((int) this.field_g.payload[var6 + this.field_g.position], (int) this.field_a);
@@ -257,9 +257,9 @@ final class SocketJs5Transport extends Js5Transport {
                   if (var4 <= this.field_g.position) {
                     if (null == this.field_c) {
                       this.field_g.position = 0;
-                      var6 = this.field_g.f(255);
+                      var6 = this.field_g.readUnsignedByte(255);
                       var7 = this.field_g.readInt(0);
-                      var8 = this.field_g.f(255);
+                      var8 = this.field_g.readUnsignedByte(255);
                       var9 = this.field_g.readInt(0);
                       var10 = 127 & var8;
                       stackIn_50_0 = ((var8 & 128) == 0) ? 0 : 1;
@@ -297,7 +297,7 @@ final class SocketJs5Transport extends Js5Transport {
                       this.field_c = var14_ref;
                       this.field_c.field_D = new PacketBuffer(var15 + var9 + this.field_c.field_B);
                       this.field_c.field_D.writeByte(160, var10);
-                      this.field_c.field_D.d(var9, -59);
+                      this.field_c.field_D.writeInt(var9, -59);
                       this.field_c.field_H = 10;
                       this.field_g.position = 0;
                     } else {
@@ -325,7 +325,7 @@ final class SocketJs5Transport extends Js5Transport {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.transport.b(-1);
+              this.transport.close(-1);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -333,8 +333,8 @@ final class SocketJs5Transport extends Js5Transport {
             this.field_h = this.field_h + 1;
             this.transport = null;
             this.field_m = -2;
-            if (0 == this.b(-30) &&
-              this.a((byte) 34) == 0) {
+            if (0 == this.getInFlightRequestCount(-30) &&
+              this.getPendingRequestCount((byte) 34) == 0) {
               return true;
             }
             return false;
@@ -354,7 +354,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    private final void e(int param0) {
+    private final void sendOpcodeSixControlPacket(int param0) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
@@ -365,14 +365,14 @@ final class SocketJs5Transport extends Js5Transport {
           try {
             this.field_b.position = 0;
             this.field_b.writeByte(160, 6);
-            this.field_b.a(3, (byte) 109);
+            this.field_b.writeMedium(3, (byte) 109);
             this.field_b.writeShort(1276387944, 0);
-            this.transport.a(this.field_b.payload.length, param0 ^ -103, param0, this.field_b.payload);
+            this.transport.write(this.field_b.payload.length, param0 ^ -103, param0, this.field_b.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.transport.b(-1);
+              this.transport.close(-1);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -408,14 +408,14 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "wn.E(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "wn.E(" + param0 + ')');
         }
     }
 
     final void b(byte param0) {
         int var2 = -89 % ((param0 - 82) / 33);
         if (this.transport != null) {
-          this.transport.b(-1);
+          this.transport.close(-1);
         }
     }
 
@@ -443,13 +443,13 @@ final class SocketJs5Transport extends Js5Transport {
               stackIn_8_2 = 2;
             }
             ((PacketBuffer) (Object) stackIn_7_0).writeByte(stackIn_7_1, stackIn_8_2);
-            this.field_b.a(0L, -59);
-            this.transport.a(this.field_b.payload.length, -85, 0, this.field_b.payload);
+            this.field_b.writeLong40(0L, -59);
+            this.transport.write(this.field_b.payload.length, -85, 0, this.field_b.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.transport.b(-1);
+              this.transport.close(-1);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;

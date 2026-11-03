@@ -8,7 +8,7 @@ abstract class LoginCredentials {
     static byte[] field_d;
     static IntrusiveDeque field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 == 1762) {
@@ -17,7 +17,7 @@ abstract class LoginCredentials {
           field_d = null;
           return;
         }
-        LoginCredentials.a(-41);
+        LoginCredentials.releaseStatics(-41);
         field_c = null;
         field_e = null;
         field_d = null;
@@ -35,18 +35,18 @@ abstract class LoginCredentials {
         }
         try {
           var5 = -(var4 / 2) - 110 + var3 / 2 + 7;
-          TickClock.field_e.a(var5, -(var5 * 2) + (-120 + var3), (-320 + var2_int) / 2, 256, 320);
-          TickClock.field_e.field_zb = op.a(8421504, 16, 11579568, TickClock.field_e.height, 2105376, 3);
-          jm.field_h.a(16, -24 + TickClock.field_e.height - 20, 24, 256, -24 + (TickClock.field_e.field_K - 24));
-          DelegatingCanvas.field_h.a(-24 + (TickClock.field_e.height - 20), 24, 120, 256, 80);
+          TickClock.field_e.setBounds(var5, -(var5 * 2) + (-120 + var3), (-320 + var2_int) / 2, 256, 320);
+          TickClock.field_e.field_zb = OptionsScreen.buildNineSliceSprites(8421504, 16, 11579568, TickClock.field_e.height, 2105376, 3);
+          jm.field_h.setBounds(16, -24 + TickClock.field_e.height - 20, 24, 256, -24 + (TickClock.field_e.field_K - 24));
+          DelegatingCanvas.field_h.setBounds(-24 + (TickClock.field_e.height - 20), 24, 120, 256, 80);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    abstract void a(byte param0, PacketBuffer param1);
+    abstract void writePayload(byte param0, PacketBuffer param1);
 
-    abstract ea b(int param0);
+    abstract ea getCredentialKind(int param0);
 
     static {
         field_a = new String[3];

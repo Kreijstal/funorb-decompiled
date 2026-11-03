@@ -16,13 +16,13 @@ final class ArchiveIndex {
     int[][] fileIds;
     int[] fileCounts;
     private byte[] field_e;
-    ap[] fileNameLookups;
+    IntKeyLookup[] fileNameLookups;
     int[] field_i;
     int[] groupIds;
     byte[][] groupDigests;
-    ap groupNameLookup;
+    IntKeyLookup groupNameLookup;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 47) {
           return;
         }
@@ -44,7 +44,7 @@ final class ArchiveIndex {
           if (param0 != 23949) {
             field_s = 72;
           }
-          il.field_d = null;
+          QuickChatCategoryCache.field_d = null;
           if (null != nk.field_a) {
             nk.field_a.e(117);
             nk.field_a = null;
@@ -55,16 +55,16 @@ final class ArchiveIndex {
             ClientContextMenu.field_a = null;
           }
           SocketConnector.field_f = null;
-          if (il.field_d != null) {
-            var3 = (LobbyPlayer) (il.field_d.a(-109));
+          if (QuickChatCategoryCache.field_d != null) {
+            var3 = (LobbyPlayer) (QuickChatCategoryCache.field_d.a(-109));
             while (var3 != null) {
-              var3.e(17);
-              var3 = (LobbyPlayer) (il.field_d.a((byte) 50));
+              var3.unlinkSecondary(17);
+              var3 = (LobbyPlayer) (QuickChatCategoryCache.field_d.a((byte) 50));
             }
-            il.field_d = null;
+            QuickChatCategoryCache.field_d = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "kj.C(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kj.C(" + param0 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class ArchiveIndex {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "kj.F(" + param0 + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "kj.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -160,8 +160,8 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = Pixelate.field_H ? 1 : 0;
         try {
-          var17 = new PacketBuffer(la.a(param1, 0));
-          var4 = var17.f(255);
+          var17 = new PacketBuffer(la.decompressContainer(param1, 0));
+          var4 = var17.readUnsignedByte(255);
           if (5 <= var4 &&
             var4 <= 7) {
             if (var4 >= 6) {
@@ -169,13 +169,13 @@ final class ArchiveIndex {
             } else {
               this.revision = 0;
             }
-            var5 = var17.f(255);
+            var5 = var17.readUnsignedByte(255);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 >= 7) {
-              this.groupCount = var17.i(9997);
+              this.groupCount = var17.readUnsignedShortOrInt(9997);
             } else {
-              this.groupCount = var17.a((byte) -119);
+              this.groupCount = var17.readUnsignedShort((byte) -119);
             }
             stackIn_17_0 = ((var5 & 2) == 0) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -184,7 +184,7 @@ final class ArchiveIndex {
             this.groupIds = new int[this.groupCount];
             if (var4 < 7) {
               for (var10 = 0; this.groupCount > var10; var10++) {
-                dupTemp$0 = var8 + var17.a((byte) -111);
+                dupTemp$0 = var8 + var17.readUnsignedShort((byte) -111);
                 var8 = dupTemp$0;
                 this.groupIds[var10] = dupTemp$0;
                 if (this.groupIds[var10] > var9) {
@@ -193,7 +193,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; this.groupCount > var10; var10++) {
-                dupTemp$1 = var8 + var17.i(9997);
+                dupTemp$1 = var8 + var17.readUnsignedShortOrInt(9997);
                 var8 = dupTemp$1;
                 this.groupIds[var10] = dupTemp$1;
                 if (var9 < this.groupIds[var10]) {
@@ -218,7 +218,7 @@ final class ArchiveIndex {
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.groupCount; var10Lifetime1Lifetime1++) {
                 this.groupNameHashes[this.groupIds[var10Lifetime1Lifetime1]] = var17.readInt(0);
               }
-              this.groupNameLookup = new ap(this.groupNameHashes);
+              this.groupNameLookup = new IntKeyLookup(this.groupNameHashes);
             }
             for (var10Lifetime2 = 0; this.groupCount > var10Lifetime2; var10Lifetime2++) {
               this.field_k[this.groupIds[var10Lifetime2]] = var17.readInt(0);
@@ -227,7 +227,7 @@ final class ArchiveIndex {
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.groupCount > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(var21, 0, -128, 64);
+                var17.readBytes(var21, 0, -128, 64);
                 this.groupDigests[this.groupIds[var10Lifetime3]] = var21;
               }
             }
@@ -236,7 +236,7 @@ final class ArchiveIndex {
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; this.groupCount > var10Lifetime5; var10Lifetime5++) {
-                this.fileCounts[this.groupIds[var10Lifetime5]] = var17.i(9997);
+                this.fileCounts[this.groupIds[var10Lifetime5]] = var17.readUnsignedShortOrInt(9997);
               }
               for (var10Lifetime5 = 0; this.groupCount > var10Lifetime5; var10Lifetime5++) {
                 var11Lifetime1 = this.groupIds[var10Lifetime5];
@@ -246,7 +246,7 @@ final class ArchiveIndex {
                 array$2 = new int[var12];
                 this.fileIds[var11Lifetime1] = array$2;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.i(9997);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShortOrInt(9997);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.fileIds[var11Lifetime1];
                   dupTemp$4[var14] = dupTemp$3;
@@ -262,7 +262,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime5 = 0; this.groupCount > var10Lifetime5; var10Lifetime5++) {
-                this.fileCounts[this.groupIds[var10Lifetime5]] = var17.a((byte) -123);
+                this.fileCounts[this.groupIds[var10Lifetime5]] = var17.readUnsignedShort((byte) -123);
               }
               for (var10Lifetime5 = 0; this.groupCount > var10Lifetime5; var10Lifetime5++) {
                 var11Lifetime1 = this.groupIds[var10Lifetime5];
@@ -272,7 +272,7 @@ final class ArchiveIndex {
                 this.fileIds[var11Lifetime1] = array$5;
                 var13 = -1;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.a((byte) -119);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort((byte) -119);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.fileIds[var11Lifetime1];
                   dupTemp$7[var14] = dupTemp$6;
@@ -289,7 +289,7 @@ final class ArchiveIndex {
             }
             if (var6 != 0) {
               this.fileNameHashes = new int[var9 + 1][];
-              this.fileNameLookups = new ap[var9 + 1];
+              this.fileNameLookups = new IntKeyLookup[var9 + 1];
               for (var10Lifetime6 = 0; this.groupCount > var10Lifetime6; var10Lifetime6++) {
                 var11Lifetime2 = this.groupIds[var10Lifetime6];
                 var12Lifetime1 = this.fileCounts[var11Lifetime2];
@@ -306,7 +306,7 @@ final class ArchiveIndex {
                   }
                   this.fileNameHashes[var11Lifetime2][var14Lifetime1] = var17.readInt(0);
                 }
-                this.fileNameLookups[var11Lifetime2] = new ap(this.fileNameHashes[var11Lifetime2]);
+                this.fileNameLookups[var11Lifetime2] = new IntKeyLookup(this.fileNameHashes[var11Lifetime2]);
               }
               return;
             }
@@ -323,7 +323,7 @@ final class ArchiveIndex {
           } else {
             stackIn_101_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
         }
     }
 
@@ -416,14 +416,14 @@ final class ArchiveIndex {
                 } else {
                   incrementValue$0 = var10;
                   var10++;
-                  var18 = param1.field_G[incrementValue$0];
+                  var18 = param1.pixels[incrementValue$0];
                   if (var18 != 0) {
                     if (var16 > 255) {
                       SoftwareRasterizer.field_k[var9] = var18;
                     } else {
                       var19 = SoftwareRasterizer.field_k[var9];
                       var20 = 16711935 & (var19 & 16711935) * var17 + (16711935 & var18) * var16 >> 8;
-                      SoftwareRasterizer.field_k[var9] = var20 + (cm.a(var17 * cm.a(65280, var19) + var16 * cm.a(65280, var18), 16711874) >> 8);
+                      SoftwareRasterizer.field_k[var9] = var20 + (cm.bitAnd(var17 * cm.bitAnd(65280, var19) + var16 * cm.bitAnd(65280, var18), 16711874) >> 8);
                     }
                   }
                   var9++;
@@ -445,14 +445,14 @@ final class ArchiveIndex {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_o = wg.a(param0, 125, param0.length);
+          this.field_o = Matrix3.a(param0, 125, param0.length);
           if (param1 != this.field_o) {
             throw new RuntimeException();
           }
@@ -469,7 +469,7 @@ final class ArchiveIndex {
           }
           this.decode(-89, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

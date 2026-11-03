@@ -41,12 +41,12 @@ public class CacheFileLocator {
     public static File a(String param0, byte param1) {
         if (param1 != -61) {
           field_b = (String) null;
-          return CacheFileLocator.a(field_b, field_a, true, param0);
+          return CacheFileLocator.resolveFile(field_b, field_a, true, param0);
         }
-        return CacheFileLocator.a(field_b, field_a, true, param0);
+        return CacheFileLocator.resolveFile(field_b, field_a, true, param0);
     }
 
-    public static File a(String param0, int param1, boolean param2, String param3) {
+    public static File resolveFile(String param0, int param1, boolean param2, String param3) {
         return net.alterorb.launcher.Hook.cacheRedirect(param0, param3);
     }
 

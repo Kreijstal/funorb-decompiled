@@ -63,7 +63,7 @@ class SceneWidget extends SceneWidgetNode {
     int height;
     static int field_ib;
 
-    final void a(SceneWidget param0, byte param1) {
+    final void addChild(SceneWidget param0, byte param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -88,7 +88,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ class SceneWidget extends SceneWidgetNode {
         return var3;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         this.pendingXDelta = 0;
         this.field_D = param2;
         this.pendingWidthDelta = 0;
@@ -144,7 +144,7 @@ class SceneWidget extends SceneWidgetNode {
         }
     }
 
-    final void a(int param0, byte param1, boolean param2, int param3) {
+    final void layoutVerticalContent(int param0, byte param1, boolean param2, int param3) {
         SceneWidget var10_ref_ak = null;
         int var9 = 0;
         int var11 = Pixelate.field_H ? 1 : 0;
@@ -188,10 +188,10 @@ class SceneWidget extends SceneWidgetNode {
 
     final void a(int param0, boolean param1) {
         DiskCacheRequest.field_I = !param1 ? true : false;
-        bm.field_q = !param1 ? true : false;
+        EmergentBehaviourBackground.field_q = !param1 ? true : false;
         if (param0 != -28476) {
           SceneWidget var4 = (SceneWidget) null;
-          this.a((SceneWidget) null, (byte) 61);
+          this.addChild((SceneWidget) null, (byte) 61);
         }
         this.updateInputTree(SoftwareRasterizer.field_j, 0, true, SoftwareRasterizer.field_d, 0, 59);
     }
@@ -240,7 +240,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ class SceneWidget extends SceneWidgetNode {
         var13 = SoftwareRasterizer.field_f;
         var14 = SoftwareRasterizer.field_h;
         var15 = SoftwareRasterizer.field_a;
-        SoftwareRasterizer.d(this.field_tb, this.screenY, this.field_K + this.field_tb, this.screenY + this.height);
+        SoftwareRasterizer.intersectClip(this.field_tb, this.screenY, this.field_K + this.field_tb, this.screenY + this.height);
         if (!this.field_fb) {
           param0 = this.field_U;
           stackIn_5_0 = (this.heldPressButton != 0);
@@ -373,9 +373,9 @@ class SceneWidget extends SceneWidgetNode {
             var24 = var24 + (this.height - var17.field_B);
           }
           if (this.field_jb >= 256) {
-            var17.b(var23_int, var24);
+            var17.drawTransparent(var23_int, var24);
           } else {
-            var17.a(var23_int, var24, this.field_jb);
+            var17.drawAlpha(var23_int, var24, this.field_jb);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -424,7 +424,7 @@ class SceneWidget extends SceneWidgetNode {
             var23_ref = (SceneWidget) (this.children.last(1504642273));
           }
         }
-        SoftwareRasterizer.f(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     private final void updateInputTree(int param0, int param1, boolean param2, int param3, int param4, int param5) {
@@ -479,7 +479,7 @@ class SceneWidget extends SceneWidgetNode {
         var10 = SoftwareRasterizer.field_f;
         var11 = SoftwareRasterizer.field_h;
         var12 = SoftwareRasterizer.field_a;
-        SoftwareRasterizer.d(this.field_tb, this.screenY, this.field_K + this.field_tb, this.screenY + this.height);
+        SoftwareRasterizer.intersectClip(this.field_tb, this.screenY, this.field_K + this.field_tb, this.screenY + this.height);
         var13 = 0;
         if (!DiskCacheRequest.field_I &&
           param2 &&
@@ -499,7 +499,7 @@ class SceneWidget extends SceneWidgetNode {
           }
           this.field_P = 0;
         }
-        stackIn_31_1 = (!bm.field_q) && (SoftwareRasterizer.field_e <= ProxyAuthenticationException.field_d) && (ProxyAuthenticationException.field_d < SoftwareRasterizer.field_h) && (bg.field_k >= SoftwareRasterizer.field_f) && (SoftwareRasterizer.field_a > bg.field_k);
+        stackIn_31_1 = (!EmergentBehaviourBackground.field_q) && (SoftwareRasterizer.field_e <= ProxyAuthenticationException.field_d) && (ProxyAuthenticationException.field_d < SoftwareRasterizer.field_h) && (StatusBar.field_k >= SoftwareRasterizer.field_f) && (SoftwareRasterizer.field_a > StatusBar.field_k);
         this.field_R = stackIn_31_1;
         if (0 == ef.field_b) {
           this.heldPressButton = 0;
@@ -514,16 +514,16 @@ class SceneWidget extends SceneWidgetNode {
           }
         }
         if (this.field_R) {
-          bm.field_q = true;
+          EmergentBehaviourBackground.field_q = true;
         }
         if (var13 != 0) {
           DiskCacheRequest.field_I = true;
         }
-        SoftwareRasterizer.f(var9, var10, var11, var12);
+        SoftwareRasterizer.setClip(var9, var10, var11, var12);
         if (this.heldPressButton != 0 &&
           this.field_vb) {
           this.field_D = -this.field_ub + (ProxyAuthenticationException.field_d - param1);
-          this.field_S = bg.field_k - this.field_Ab - param4;
+          this.field_S = StatusBar.field_k - this.field_Ab - param4;
           if (this.field_D < 0) {
             this.field_D = 0;
           }
@@ -553,7 +553,7 @@ class SceneWidget extends SceneWidgetNode {
         AccountTermsPanel.field_M = null;
         mj.a(false);
         if (param0 != 0) {
-          SceneWidget.a((byte) -43);
+          SceneWidget.releaseStatics((byte) -43);
         }
     }
 
@@ -702,11 +702,11 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_E = null;
         field_db = null;
         if (param0 != 59) {
@@ -806,7 +806,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

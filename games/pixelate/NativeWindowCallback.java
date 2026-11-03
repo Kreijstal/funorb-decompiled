@@ -62,7 +62,7 @@ final class NativeWindowCallback extends com.ms.dll.Callback {
         return 0;
     }
 
-    final void a(java.awt.Component param0, boolean param1, boolean param2) {
+    final void setCursorVisible(java.awt.Component param0, boolean param1, boolean param2) {
         int var5 = 0;
         Object var6 = null;
         Throwable var8 = null;

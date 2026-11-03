@@ -31,55 +31,55 @@ final class ph extends IntrusiveNode {
             return 4;
           }
           try {
-            if (0 == rb.field_q) {
-              se.field_o = ef.field_e.a(20278, bl.field_e, ArchiveIndex.field_s);
-              rb.field_q = rb.field_q + 1;
+            if (0 == AchievementsScreen.field_q) {
+              KiteBackground.field_o = ef.field_e.requestSocket(20278, bl.field_e, ArchiveIndex.field_s);
+              AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
             }
-            if (1 == rb.field_q) {
-              if (se.field_o.field_b == 2) {
+            if (1 == AchievementsScreen.field_q) {
+              if (KiteBackground.field_o.field_b == 2) {
                 stackIn_14_0 = ce.a((byte) -124, -1);
                 return stackIn_14_0;
               }
-              if (se.field_o.field_b == 1) {
-                rb.field_q = rb.field_q + 1;
+              if (KiteBackground.field_o.field_b == 1) {
+                AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
               }
             }
-            if (rb.field_q == 2) {
-              sc.field_d = new BufferedSocket((java.net.Socket) (se.field_o.field_e), ef.field_e);
+            if (AchievementsScreen.field_q == 2) {
+              ConditionalTextValue.field_d = new BufferedSocket((java.net.Socket) (KiteBackground.field_o.field_e), ef.field_e);
               var2 = new PacketBuffer(13);
-              FallingPieceView.a(ql.field_o, (byte) 66, SceneWidget.field_ib, var2, lk.field_n);
+              FallingPieceView.a(GreenGrowTheRushesBackground.field_o, (byte) 66, SceneWidget.field_ib, var2, AcidSunsetBackground.field_n);
               var2.writeByte(160, 15);
-              var2.d(fj.field_a, -76);
-              sc.field_d.a(13, -103, 0, var2.payload);
-              rb.field_q = rb.field_q + 1;
+              var2.writeInt(fj.field_a, -76);
+              ConditionalTextValue.field_d.write(13, -103, 0, var2.payload);
+              AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
               ViewportController.field_a = 30000L + hm.a(64);
             }
-            if (rb.field_q == 3) {
-              if (sc.field_d.a(-120) <= 0) {
+            if (AchievementsScreen.field_q == 3) {
+              if (ConditionalTextValue.field_d.a(-120) <= 0) {
                 if (ViewportController.field_a < hm.a(64)) {
                   stackIn_30_0 = ce.a((byte) -124, -2);
                   return stackIn_30_0;
                 }
               } else {
-                var1_int = sc.field_d.c((byte) -81);
+                var1_int = ConditionalTextValue.field_d.readUnsignedByte((byte) -81);
                 if (0 != var1_int) {
                   stackIn_26_0 = ce.a((byte) -124, var1_int);
                   return stackIn_26_0;
                 }
-                rb.field_q = rb.field_q + 1;
+                AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
               }
             }
             if (param0 != 25960) {
               stackIn_33_0 = -28;
               return stackIn_33_0;
             }
-            if (rb.field_q != 4) {
+            if (AchievementsScreen.field_q != 4) {
               return -1;
             }
-            Match.field_h.a(sc.field_d, ModalStack.field_L, 8);
-            sc.field_d = null;
-            se.field_o = null;
-            rb.field_q = 0;
+            Match.field_h.attachTransport(ConditionalTextValue.field_d, ModalStack.field_L, 8);
+            ConditionalTextValue.field_d = null;
+            KiteBackground.field_o = null;
+            AchievementsScreen.field_q = 0;
             stackIn_37_0 = 0;
             return stackIn_37_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -94,7 +94,7 @@ final class ph extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 < 104) {
           return;
@@ -113,23 +113,23 @@ final class ph extends IntrusiveNode {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          dk.field_e = bi.a("basic", "display_name_changed", param0, (byte) -25);
-          ma.field_z = new pd(0L, rm.field_a, SceneWidgetNode.field_u, op.field_q);
-          MouseWheelHandler.field_e = new pd(0L, rm.field_a, qh.field_e, NanoTickClock.field_n);
+          dk.field_e = bi.loadSprite("basic", "display_name_changed", param0, (byte) -25);
+          ScoreMarkerBar.field_z = new ScrollPaneWithFooter(0L, rm.field_a, SceneWidgetNode.field_u, OptionsScreen.field_q);
+          MouseWheelHandler.field_e = new ScrollPaneWithFooter(0L, rm.field_a, qh.field_e, NanoTickClock.field_n);
           wa.field_f = new SceneWidget(0L, (SceneWidget) null);
           SceneWidget.field_E = new SceneWidget(0L, TextFieldValidator.field_h);
           SceneWidget.field_E.horizontalAlignment = 1;
-          EmailConfirmationValidator.field_u = new SceneWidget(0L, u.field_l, qn.field_m);
-          ae.field_e = new SceneWidget(0L, ni.field_s, ScrollContainer.field_Jb);
+          EmailConfirmationValidator.field_u = new SceneWidget(0L, QuickChatPhraseCache.field_l, qn.field_m);
+          Vector3.field_e = new SceneWidget(0L, ni.field_s, ScrollContainer.field_Jb);
           sk.field_e = new SceneWidget(0L, dn.field_c);
-          wa.field_f.a(SceneWidget.field_E, (byte) 26);
-          wa.field_f.a(EmailConfirmationValidator.field_u, (byte) 26);
-          wa.field_f.a(ae.field_e, (byte) 26);
-          wa.field_f.a(ma.field_z, (byte) 26);
-          wa.field_f.a(sk.field_e, (byte) 26);
-          ma.field_z.field_Gb.field_Ib.applyStyle(param1 ^ 27853, TextFieldValidator.field_h);
-          ma.field_z.field_Gb.field_Ib.verticalAlignment = 1;
-          var5 = ma.field_z.field_Gb.field_Ib;
+          wa.field_f.addChild(SceneWidget.field_E, (byte) 26);
+          wa.field_f.addChild(EmailConfirmationValidator.field_u, (byte) 26);
+          wa.field_f.addChild(Vector3.field_e, (byte) 26);
+          wa.field_f.addChild(ScoreMarkerBar.field_z, (byte) 26);
+          wa.field_f.addChild(sk.field_e, (byte) 26);
+          ScoreMarkerBar.field_z.field_Gb.field_Ib.applyStyle(param1 ^ 27853, TextFieldValidator.field_h);
+          ScoreMarkerBar.field_z.field_Gb.field_Ib.verticalAlignment = 1;
+          var5 = ScoreMarkerBar.field_z.field_Gb.field_Ib;
           var6 = var5;
           var6.horizontalAlignment = 1;
           MouseWheelHandler.field_e.field_Gb.field_Ib.applyStyle(param1 ^ 27853, TextFieldValidator.field_h);
@@ -139,7 +139,7 @@ final class ph extends IntrusiveNode {
           if (param1 == -106) {
             return;
           }
-          ph.a(-30);
+          ph.releaseStatics(-30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -151,7 +151,7 @@ final class ph extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 

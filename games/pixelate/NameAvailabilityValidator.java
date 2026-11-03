@@ -61,7 +61,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
               }
               var4 = var4 + ((WidgetStyleLayer.field_b << 1) + ki.field_e + dk.field_d);
             } else {
-              var4 = var4 + da.field_m;
+              var4 = var4 + BouncedownBackground.field_m;
             }
             var3_int++;
           }
@@ -118,7 +118,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "ec.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var3), "ec.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -127,24 +127,24 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param1.a((byte) 24, "", "final_frame.jpg"), (java.awt.Component) ((Object) field_u));
+          var2 = new Sprite(param1.getNamedFile((byte) 24, "", "final_frame.jpg"), (java.awt.Component) ((Object) field_u));
           var3 = var2.field_F;
           var4 = var2.field_E;
           MidiPcmStream.a(param0);
           th.field_b = new Sprite(var3, 3 * var4 / 4);
-          th.field_b.c();
-          var2.f(0, 0);
+          th.field_b.makeRasterTarget();
+          var2.drawOpaque(0, 0);
           MusicPatchNode.field_s = new Sprite(var3, var4 - th.field_b.field_E);
-          MusicPatchNode.field_s.c();
-          var2.f(0, -th.field_b.field_E);
+          MusicPatchNode.field_s.makeRasterTarget();
+          var2.drawOpaque(0, -th.field_b.field_E);
           MusicPatchNode.field_s.field_y = th.field_b.field_E;
           LinkButtonPainter.a((byte) 92);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ec.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ec.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -155,26 +155,26 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         field_o = null;
     }
 
-    final dj validateText(String param0, boolean param1) {
+    final ValidationState validateText(String param0, boolean param1) {
         id var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
-        dj stackIn_2_0 = null;
-        dj stackIn_5_0 = null;
-        dj stackIn_12_0 = null;
-        dj stackIn_17_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_12_0 = null;
+        ValidationState stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!ResourceArchive.a((byte) 63, var4)) {
+          if (!ResourceArchive.ensureGroupAvailableByName((byte) 63, var4)) {
             stackIn_2_0 = sk.field_a;
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_5_0 = (dj) null;
+            stackIn_5_0 = (ValidationState) null;
             return stackIn_5_0;
           }
           if (!param0.equals(this.checkedName)) {
@@ -204,7 +204,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

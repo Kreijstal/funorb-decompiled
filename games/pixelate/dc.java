@@ -23,7 +23,7 @@ final class dc {
             dc.a((byte) 3, (java.awt.Frame) null, (PlatformTaskDispatcher) null);
           }
           while (true) {
-            var3 = param2.a(param1, -84);
+            var3 = param2.requestExitFullscreen(param1, -84);
             while (var3.field_b == 0) {
               SecondaryNodeHashTable.a(10L, (byte) 23);
             }
@@ -52,11 +52,11 @@ final class dc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 == -1) {

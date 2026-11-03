@@ -13,7 +13,7 @@ final class li {
     static String field_j;
     static LoginCredentials field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_h = null;
         field_d = null;
@@ -56,12 +56,12 @@ final class li {
     final static void a(float param0, int param1, String param2) {
         try {
           ThreeSliceButtonPainter.field_r = param2;
-          bf.field_o = param0;
+          PicturePreview.field_o = param0;
           if (param1 != -1) {
-            li.a((byte) -73);
+            li.releaseStatics((byte) -73);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "li.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "li.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class li {
           this.field_f = param2;
           this.field_c = new ba[param0];
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "li.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "li.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

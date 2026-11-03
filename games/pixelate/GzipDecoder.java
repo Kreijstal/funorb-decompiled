@@ -40,7 +40,7 @@ final class GzipDecoder {
             if (var4 < 0) {
               var5 = PlayerBoard.field_n;
             } else {
-              if (var4 == VerticalScrollbar.field_Gb.field_j) {
+              if (var4 == VerticalScrollbar.field_Gb.selectedIndex) {
                 var5 = mj.field_k;
               } else {
                 var5 = mh.field_a;
@@ -53,10 +53,10 @@ final class GzipDecoder {
             var7 = ArchiveProvider.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
             var8 = bq.field_d - (var7 >> 1);
             if (var4 >= 0) {
-              if (VerticalScrollbar.field_Gb.field_j != var4) {
+              if (VerticalScrollbar.field_Gb.selectedIndex != var4) {
                 stackIn_18_0 = BufferedRandomAccessFile.field_m;
               } else {
-                stackIn_18_0 = wg.field_d;
+                stackIn_18_0 = Matrix3.field_d;
               }
               var9 = stackIn_18_0;
               var2 = var2 + ki.field_e;
@@ -70,14 +70,14 @@ final class GzipDecoder {
               var2 = var2 + (dk.field_d + WidgetStyleLayer.field_b + ki.field_e);
             } else {
               DualLinkNode.field_o.drawText(var6, var8, ab.field_b + var2, var5, -1);
-              var2 = var2 + da.field_m;
+              var2 = var2 + BouncedownBackground.field_m;
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "vh.B(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "vh.B(" + param0 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class GzipDecoder {
             }
             this.inflater.reset();
           } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "vh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

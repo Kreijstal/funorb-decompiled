@@ -32,7 +32,7 @@ final class ri {
             ri.a((String) null, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ri.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ri.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class ri {
         InputQueue.field_d = param0;
         MarkerSlider.field_O = new int[3];
         int var2 = 20 / ((param1 + 94) / 32);
-        sd.field_L = 0;
+        AlphaContainer.field_L = 0;
     }
 
     static {

@@ -15,15 +15,15 @@ final class SecondaryNodeDeque implements Iterable {
         if (param0 < 57) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_a.field_p;
+        DualLinkNode var2 = this.field_a.secondaryNext;
         if (this.field_a == var2) {
           return null;
         }
-        var2.e(17);
+        var2.unlinkSecondary(17);
         return var2;
     }
 
-    final static void a(java.math.BigInteger param0, boolean param1, int param2, int param3, java.math.BigInteger param4, PacketBuffer param5, byte[] param6) {
+    final static void writeEncryptedPayload(java.math.BigInteger param0, boolean param1, int param2, int param3, java.math.BigInteger param4, PacketBuffer param5, byte[] param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -60,9 +60,9 @@ final class SecondaryNodeDeque implements Iterable {
             ed.field_b = new PacketBuffer(var7_int);
           }
           ed.field_b.position = 0;
-          ed.field_b.a(param3, param2, -3493, param6);
-          ed.field_b.c(var7_int, param1);
-          ed.field_b.a(true, var13);
+          ed.field_b.writeBytes(param3, param2, -3493, param6);
+          ed.field_b.padToPosition(var7_int, param1);
+          ed.field_b.xteaEncrypt(true, var13);
           if (null == bi.field_d ||
             !(100 <= bi.field_d.payload.length)) {
             bi.field_d = new PacketBuffer(100);
@@ -72,13 +72,13 @@ final class SecondaryNodeDeque implements Iterable {
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            bi.field_d.d(var13[var11], -127);
+            bi.field_d.writeInt(var13[var11], -127);
             var11++;
           }
           bi.field_d.writeShort(1276387944, param3);
-          bi.field_d.a(param4, param0, 0);
-          param5.a(bi.field_d.position, 0, -3493, bi.field_d.payload);
-          param5.a(ed.field_b.position, 0, -3493, ed.field_b.payload);
+          bi.field_d.rsaEncrypt(param4, param0, 0);
+          param5.writeBytes(bi.field_d.position, 0, -3493, bi.field_d.payload);
+          param5.writeBytes(ed.field_b.position, 0, -3493, ed.field_b.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,11 +108,11 @@ final class SecondaryNodeDeque implements Iterable {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         if (!param0) {
           return;
@@ -134,35 +134,35 @@ final class SecondaryNodeDeque implements Iterable {
         return var2;
     }
 
-    final void a(byte param0, DualLinkNode param1) {
-        if (param1.field_r != null) {
-          param1.e(17);
+    final void addLast(byte param0, DualLinkNode param1) {
+        if (param1.secondaryPrevious != null) {
+          param1.unlinkSecondary(17);
         }
-        param1.field_p = this.field_a;
+        param1.secondaryNext = this.field_a;
         if (param0 <= 0) {
           return;
         }
         try {
-          param1.field_r = this.field_a.field_r;
-          param1.field_r.field_p = param1;
-          param1.field_p.field_r = param1;
+          param1.secondaryPrevious = this.field_a.secondaryPrevious;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean b(int param0) {
         if (param0 != 916440577) {
           byte[] var2 = (byte[]) null;
-          SecondaryNodeDeque.a((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (PacketBuffer) null, (byte[]) null);
+          SecondaryNodeDeque.writeEncryptedPayload((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (PacketBuffer) null, (byte[]) null);
         }
         return ck.field_j.c(32059);
     }
 
     SecondaryNodeDeque() {
         this.field_a = new DualLinkNode();
-        this.field_a.field_p = this.field_a;
-        this.field_a.field_r = this.field_a;
+        this.field_a.secondaryNext = this.field_a;
+        this.field_a.secondaryPrevious = this.field_a;
     }
 
     static {
@@ -203,7 +203,7 @@ final class SecondaryNodeDeque implements Iterable {
         field_c[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = (var0 - 1) * 8;
-            field_c[var0] = fp.a(fp.a(fp.a(fp.a(FullscreenFocusCanvas.a(4278190080L, field_b[4][4 + var1]), fp.a(FullscreenFocusCanvas.a(1095216660480L, field_b[3][var1 + 3]), fp.a(FullscreenFocusCanvas.a(field_b[2][var1 + 2], 280375465082880L), fp.a(FullscreenFocusCanvas.a(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.a(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.a(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.a(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.a(field_b[7][var1 + 7], 255L));
+            field_c[var0] = fp.xor(fp.xor(fp.xor(fp.xor(FullscreenFocusCanvas.a(4278190080L, field_b[4][4 + var1]), fp.xor(FullscreenFocusCanvas.a(1095216660480L, field_b[3][var1 + 3]), fp.xor(FullscreenFocusCanvas.a(field_b[2][var1 + 2], 280375465082880L), fp.xor(FullscreenFocusCanvas.a(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.a(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.a(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.a(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.a(field_b[7][var1 + 7], 255L));
         }
         field_f = new PcmSample[132];
         field_d = "Achievements";

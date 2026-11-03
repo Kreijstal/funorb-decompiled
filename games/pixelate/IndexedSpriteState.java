@@ -20,7 +20,7 @@ abstract class IndexedSpriteState {
 
     abstract void draw(int param0, int param1);
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_j = null;
           field_b = null;
@@ -62,7 +62,7 @@ abstract class IndexedSpriteState {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = pd.field_Kb;
+            stackIn_3_0 = ScrollPaneWithFooter.field_Kb;
             return stackIn_3_0;
           }
           if (var2_int > 63) {
@@ -98,7 +98,7 @@ abstract class IndexedSpriteState {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 

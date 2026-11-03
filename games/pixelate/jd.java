@@ -9,14 +9,14 @@ final class jd extends IntrusiveNode {
     int field_q;
     static byte[][][] field_o;
     int field_l;
-    static u field_k;
+    static QuickChatPhraseCache field_k;
     static int field_n;
     int[] field_t;
     int field_u;
     int field_v;
     int field_m;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_p = null;
         if (param0 != -32301) {
@@ -39,7 +39,7 @@ final class jd extends IntrusiveNode {
             this.a((int[]) null, 104, -115, 98, (byte) -50, -62, -94, 1);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -47,8 +47,8 @@ final class jd extends IntrusiveNode {
         if (param0 != 0) {
           return;
         }
-        ql.field_m = -1;
-        sd.field_N = false;
+        GreenGrowTheRushesBackground.field_m = -1;
+        AlphaContainer.field_N = false;
     }
 
     jd() {

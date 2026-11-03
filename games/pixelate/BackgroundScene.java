@@ -30,23 +30,23 @@ class BackgroundScene {
           var3 = 20 + DateInputWidget.field_L.textWidth(this.field_l) / 2 + 320;
           var4 = -1;
           var5 = 25;
-          SoftwareRasterizer.a(nh.field_a);
+          SoftwareRasterizer.saveClip(nh.field_a);
           if (this.field_d <= RegistrationRequestDialog.field_Cb - var5) {
             if (var5 > this.field_d) {
               var4 = 640 - this.field_d * 640 / var5;
-              SoftwareRasterizer.f(var4, 0, var3, 480);
+              SoftwareRasterizer.setClip(var4, 0, var3, 480);
             }
           } else {
             var4 = 640 * (-this.field_d + RegistrationRequestDialog.field_Cb) / var5;
-            SoftwareRasterizer.f(var2, 0, var4, 480);
+            SoftwareRasterizer.setClip(var2, 0, var4, 480);
           }
-          fi.a(this.field_i, 0, -DateInputWidget.field_L.maxAscent + (140 - pd.field_Jb * 2));
+          SpriteEffectHelpers.drawTransparent(this.field_i, 0, -DateInputWidget.field_L.maxAscent + (140 - ScrollPaneWithFooter.field_Jb * 2));
           DateInputWidget.field_L.drawCentered(this.field_l, 320, 140, 0, 0);
-          SoftwareRasterizer.b(nh.field_a);
+          SoftwareRasterizer.restoreClip(nh.field_a);
           if (var4 > 0) {
             var6 = -((DateInputWidget.field_L.maxAscent + DateInputWidget.field_L.maxDescent) / 2) + 141;
             for (var7 = 0; 10 > var7; var7++) {
-              SoftwareRasterizer.a(-40 + var4 + 4 * var7 << 4, var6 << 4, var7 << 3, 15, bo.field_c);
+              SoftwareRasterizer.fillRadialPaletteCircle(-40 + var4 + 4 * var7 << 4, var6 << 4, var7 << 3, 15, bo.field_c);
             }
           }
         }
@@ -63,7 +63,7 @@ class BackgroundScene {
           return;
         }
         MatchController.field_i = param3;
-        ul.field_q = param2;
+        TimerBar.field_q = param2;
     }
 
     final static bo[] a(PlatformTaskDispatcher param0, int param1) {
@@ -90,11 +90,11 @@ class BackgroundScene {
             stackIn_3_0 = (bo[]) null;
             return stackIn_3_0;
           }
-          if (!param0.a((byte) 115)) {
+          if (!param0.isFullscreenAvailable((byte) 115)) {
             stackIn_7_0 = new bo[]{};
             return stackIn_7_0;
           }
-          var8 = param0.a(true);
+          var8 = param0.requestDisplayModes(true);
           while (0 == var8.field_b) {
             SecondaryNodeHashTable.a(10L, (byte) 23);
           }
@@ -126,7 +126,7 @@ class BackgroundScene {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ class BackgroundScene {
         jd.field_r = jd.field_r + 1;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != -4136) {
           return;
@@ -147,18 +147,18 @@ class BackgroundScene {
         field_h = null;
     }
 
-    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertNodeBefore(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (param2.field_h != null) {
-            param2.c(2779);
+          if (param2.previous != null) {
+            param2.unlink(2779);
           }
           param2.field_a = param1;
           int var3_int = 28 / ((58 - param0) / 36);
-          param2.field_h = param1.field_h;
-          param2.field_h.field_a = param2;
-          param2.field_a.field_h = param2;
+          param2.previous = param1.previous;
+          param2.previous.field_a = param2;
+          param2.field_a.previous = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -213,39 +213,39 @@ class BackgroundScene {
           for (var5 = 0; var5 < this.field_f.length; var5++) {
             this.field_k[var5] = new Sprite(var3_int, var3_int);
             this.field_a[var5] = new Sprite(var4, var4);
-            this.field_k[var5].c();
-            this.field_f[var5].d(0, 0);
-            this.field_a[var5].c();
-            this.field_f[var5].e(0, 0);
-            this.field_f[var5].c();
-            SoftwareRasterizer.a(0, 0, 128, 128, 0, 48);
+            this.field_k[var5].makeRasterTarget();
+            this.field_f[var5].drawHalfSize(0, 0);
+            this.field_a[var5].makeRasterTarget();
+            this.field_f[var5].drawQuarterSize(0, 0);
+            this.field_f[var5].makeRasterTarget();
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, 128, 128, 0, 48);
           }
-          this.field_i = new Sprite(640, 4 * pd.field_Jb + (DateInputWidget.field_L.maxAscent + DateInputWidget.field_L.maxDescent));
-          this.field_i.c();
+          this.field_i = new Sprite(640, 4 * ScrollPaneWithFooter.field_Jb + (DateInputWidget.field_L.maxAscent + DateInputWidget.field_L.maxDescent));
+          this.field_i.makeRasterTarget();
           var5Lifetime1 = 320;
-          var6 = this.field_i.field_E - pd.field_Jb * 2 - DateInputWidget.field_L.maxDescent;
+          var6 = this.field_i.field_E - ScrollPaneWithFooter.field_Jb * 2 - DateInputWidget.field_L.maxDescent;
           DateInputWidget.field_L.drawCentered(this.field_l, -1 + var5Lifetime1, var6 - 1, 0, -1);
           DateInputWidget.field_L.drawCentered(this.field_l, var5Lifetime1 + 1, var6 - 1, 0, -1);
           DateInputWidget.field_L.drawCentered(this.field_l, var5Lifetime1 - 1, var6 + 1, 0, -1);
           DateInputWidget.field_L.drawCentered(this.field_l, 1 + var5Lifetime1, var6 + 1, 0, -1);
-          SoftwareRasterizer.c(pd.field_Jb, pd.field_Jb, 0, 0, this.field_i.field_F, this.field_i.field_E);
+          SoftwareRasterizer.blurRectangle(ScrollPaneWithFooter.field_Jb, ScrollPaneWithFooter.field_Jb, 0, 0, this.field_i.field_F, this.field_i.field_E);
           DateInputWidget.field_L.drawCentered(this.field_l, var5Lifetime1, var6, 0, -1);
-          ClientException.field_f.a(19692);
+          ClientException.field_f.bindRaster(19692);
           this.field_g = new int[2][];
           for (var7 = 0; this.field_k.length > var7; var7++) {
             var8_int = 0;
             var9 = 0;
             var10 = 0;
-            for (var11 = 0; this.field_k[var7].field_G.length > var11; var11++) {
-              var12 = this.field_k[var7].field_G[var11];
+            for (var11 = 0; this.field_k[var7].pixels.length > var11; var11++) {
+              var12 = this.field_k[var7].pixels[var11];
               var9 = var9 + ((var12 & 65280) >> 8);
               var10 = var10 + (255 & var12);
               var8_int = var8_int + (255 & var12 >> 16);
             }
             var11Lifetime1 = 48;
-            var9 = var11Lifetime1 + (255 & var9 / this.field_k[var7].field_G.length);
-            var8_int = var11Lifetime1 + (var8_int / this.field_k[var7].field_G.length & 255);
-            var10 = (var10 / this.field_k[var7].field_G.length & 255) + var11Lifetime1;
+            var9 = var11Lifetime1 + (255 & var9 / this.field_k[var7].pixels.length);
+            var8_int = var11Lifetime1 + (var8_int / this.field_k[var7].pixels.length & 255);
+            var10 = (var10 / this.field_k[var7].pixels.length & 255) + var11Lifetime1;
             if (var9 > 255) {
               var9 = 255;
             }
@@ -262,30 +262,30 @@ class BackgroundScene {
               var13 = 255 & var17 * var8_int / 32;
               var14 = var9 * var17 / 32 & 255;
               var15 = 255 & var10 * var17 / 32;
-              this.field_g[var7][var17] = bq.a(bq.a(var13 << 16, var14 << 8), var15);
+              this.field_g[var7][var17] = bq.bitOr(bq.bitOr(var13 << 16, var14 << 8), var15);
               var17++;
             }
           }
           for (var7Lifetime1 = 0; var7Lifetime1 < 2; var7Lifetime1++) {
             var8 = this.field_f[var7Lifetime1];
-            for (var9Lifetime1 = 0; var9Lifetime1 < var8.field_G.length; var9Lifetime1++) {
-              if (var8.field_G[var9Lifetime1] == 0) {
-                var8.field_G[var9Lifetime1] = 65793;
+            for (var9Lifetime1 = 0; var9Lifetime1 < var8.pixels.length; var9Lifetime1++) {
+              if (var8.pixels[var9Lifetime1] == 0) {
+                var8.pixels[var9Lifetime1] = 65793;
               }
             }
-            var8.field_G[127] = 0;
-            var8.field_G[63] = 0;
-            var8.field_G[64] = 0;
-            var8.field_G[0] = 0;
-            var8.field_G[1] = 0;
-            var8.field_G[62] = 0;
+            var8.pixels[127] = 0;
+            var8.pixels[63] = 0;
+            var8.pixels[64] = 0;
+            var8.pixels[0] = 0;
+            var8.pixels[1] = 0;
+            var8.pixels[62] = 0;
             var9Lifetime1Lifetime1 = (-1 + var8.field_B) * var8.field_A;
-            var8.field_G[var9Lifetime1Lifetime1] = 0;
-            var8.field_G[var9Lifetime1Lifetime1 + 1] = 0;
-            var8.field_G[var9Lifetime1Lifetime1 - 64] = 0;
-            var8.field_G[var9Lifetime1Lifetime1 + 63] = 0;
-            var8.field_G[var9Lifetime1Lifetime1 + 62] = 0;
-            var8.field_G[var9Lifetime1Lifetime1 - 1] = 0;
+            var8.pixels[var9Lifetime1Lifetime1] = 0;
+            var8.pixels[var9Lifetime1Lifetime1 + 1] = 0;
+            var8.pixels[var9Lifetime1Lifetime1 - 64] = 0;
+            var8.pixels[var9Lifetime1Lifetime1 + 63] = 0;
+            var8.pixels[var9Lifetime1Lifetime1 + 62] = 0;
+            var8.pixels[var9Lifetime1Lifetime1 - 1] = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -304,7 +304,7 @@ class BackgroundScene {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -317,16 +317,16 @@ class BackgroundScene {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$2d0b7bdf67eb(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (param2.field_h != null) {
-            param2.c(2779);
+          if (param2.previous != null) {
+            param2.unlink(2779);
           }
           param2.field_a = param1;
           int var3_int = 28 / ((58 - param0) / 36);
-          param2.field_h = param1.field_h;
-          param2.field_h.field_a = param2;
-          param2.field_a.field_h = param2;
+          param2.previous = param1.previous;
+          param2.previous.field_a = param2;
+          param2.field_a.previous = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 }

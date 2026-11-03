@@ -8,7 +8,7 @@ final class rk {
     int field_c;
     static char field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 10934) {
           ResourceArchive var2 = (ResourceArchive) null;
           rk.a(-99, true, (ResourceArchive) null, 69);
@@ -30,12 +30,12 @@ final class rk {
           if (param1) {
             return false;
           }
-          var5 = param2.a(param3, param0, true);
+          var5 = param2.getFile(param3, param0, true);
           var4 = var5;
           if (var5 == null) {
             return false;
           }
-          sd.a((byte) -95, var5);
+          AlphaContainer.decodeSpriteSheet((byte) -95, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,7 +47,7 @@ final class rk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 

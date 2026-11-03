@@ -22,28 +22,28 @@ final class Js5ArchiveManager {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachKeyboardInput(int param0, java.awt.Component param1) {
         try {
           if (param0 != -7749) {
             field_b = (int[]) null;
           }
           param1.removeKeyListener(mc.field_r);
           param1.removeFocusListener(mc.field_r);
-          ol.field_q = -1;
+          PauseMenuScreen.field_q = -1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "am.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "am.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2) {
-        pb.field_n = param0;
+        PictureStrip.field_n = param0;
         if (!param1) {
           return;
         }
         try {
-          kf.field_p = param2;
+          TimerBarDemo.field_p = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "am.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "am.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,9 +60,9 @@ final class Js5ArchiveManager {
         hp.a(SoftwareRasterizer.field_j - 640 >> 1, SoftwareRasterizer.field_d, 640 + SoftwareRasterizer.field_j >> 1, (byte) -91, 0);
         if (oo.field_b > 0) {
           if (CheckboxPainter.field_j != null) {
-            CheckboxPainter.field_j.f(ql.field_n.field_D, 0);
+            CheckboxPainter.field_j.drawOpaque(GreenGrowTheRushesBackground.field_n.field_D, 0);
           }
-          stackIn_8_0 = ql.field_n;
+          stackIn_8_0 = GreenGrowTheRushesBackground.field_n;
           stackIn_9_1 = (param1) && (!LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_8_0).a(stackIn_9_1, 0);
           stackIn_12_0 = MidiPcmStream.field_E;
@@ -72,13 +72,13 @@ final class Js5ArchiveManager {
         if (!(vn.field_g <= 0) ||
           !(Checkbox.field_W <= 0)) {
           if (CheckboxPainter.field_j != null) {
-            CheckboxPainter.field_j.f(ff.field_h.field_D, 0);
+            CheckboxPainter.field_j.drawOpaque(ff.field_h.field_D, 0);
           }
           stackIn_23_0 = ff.field_h;
-          stackIn_24_1 = (param1) && (!bm.field_o);
+          stackIn_24_1 = (param1) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_23_0).a(stackIn_24_1, 0);
-          stackIn_27_0 = ai.field_A;
-          stackIn_28_1 = (param1) && (!bm.field_o);
+          stackIn_27_0 = Bzip2State.field_A;
+          stackIn_28_1 = (param1) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_27_0).a(stackIn_28_1, 0);
         }
         var2 = 127 / ((param0 + 31) / 55);
@@ -91,7 +91,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    final CachedArchiveProvider a(boolean param0, int param1, int param2, SectorCacheStore param3, SectorCacheStore param4) {
+    final CachedArchiveProvider getArchiveSource(boolean param0, int param1, int param2, SectorCacheStore param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -119,7 +119,7 @@ final class Js5ArchiveManager {
             var6_int = this.field_d.readInt(0);
             var7 = this.field_d.readInt(param1 - 6);
             var13 = new byte[64];
-            this.field_d.a(var13, 0, -86, 64);
+            this.field_d.readBytes(var13, 0, -86, 64);
             var9 = new CachedArchiveProvider(param2, param4, param3, this.field_j, this.field_a, var6_int, var13, var7, param0);
             this.field_h[param2] = var9;
             stackIn_12_0 = var9;
@@ -142,7 +142,7 @@ final class Js5ArchiveManager {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class Js5ArchiveManager {
         var2Lifetime1 = var4;
         while (var4 < this.field_h.length) {
           if (this.field_h[var4] != null) {
-            this.field_h[var4].b(0);
+            this.field_h[var4].maintainGroups(0);
           }
           var4++;
         }
@@ -205,8 +205,8 @@ final class Js5ArchiveManager {
           this.field_j = param0;
           this.field_a = param1;
           this.field_f = param2;
-          if (!this.field_j.a(20)) {
-            this.field_g = this.field_j.a((byte) -31, 255, true, 255, (byte) 0);
+          if (!this.field_j.isInFlightFull(20)) {
+            this.field_g = this.field_j.createRequest((byte) -31, 255, true, 255, (byte) 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -237,7 +237,7 @@ final class Js5ArchiveManager {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -258,22 +258,22 @@ final class Js5ArchiveManager {
           return true;
         }
         if (this.field_g == null) {
-          if (this.field_j.a(param0 ^ 32047)) {
+          if (this.field_j.isInFlightFull(param0 ^ 32047)) {
             return false;
           }
-          this.field_g = this.field_j.a((byte) -31, 255, true, 255, (byte) 0);
+          this.field_g = this.field_j.createRequest((byte) -31, 255, true, 255, (byte) 0);
         }
         if (this.field_g.field_v) {
           return false;
         }
         var10 = new PacketBuffer(this.field_g.h(0));
         var10.position = 5;
-        var3 = var10.f(255);
+        var3 = var10.readUnsignedByte(255);
         var10.position = var10.position + 72 * var3;
         var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.a(var4, 0, -79, var13.length);
+        var10.readBytes(var4, 0, -79, var13.length);
         if (null != this.field_f &&
           this.field_k != null) {
           var12 = new java.math.BigInteger(var13);
@@ -324,7 +324,7 @@ final class Js5ArchiveManager {
     }
 
     static {
-        ol.e(2071);
+        PauseMenuScreen.e(2071);
         field_c = 50;
     }
 }

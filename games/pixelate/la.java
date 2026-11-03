@@ -6,7 +6,7 @@ final class la {
     static int field_b;
     static byte[] field_c;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != 4) {
@@ -40,16 +40,16 @@ final class la {
           if (param0 < 120) {
             field_a = (int[]) null;
           }
-          var2 = var13.f(255);
+          var2 = var13.readUnsignedByte(255);
           if (var2 == 0) {
-            var11 = bf.a(false);
+            var11 = PicturePreview.a(false);
             var17 = var11;
             var14 = var17;
             var3 = var14;
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).f(255);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
             for (var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(0);
             }
@@ -61,12 +61,12 @@ final class la {
             var15.field_p = true;
             var15.field_s = var17[0];
             var15.field_l = var3;
-            var15.c(2779);
+            var15.unlink(2779);
             return;
           }
           if (var2 != 1) {
             if (var2 != 2) {
-              CheckboxPainter.a(1, "A1: " + jm.b(-79), (Throwable) null);
+              CheckboxPainter.reportClientError(1, "A1: " + jm.b(-79), (Throwable) null);
               na.a(true);
             } else {
               var16_ref = (mc) (tj.field_z.c(1504642273));
@@ -74,10 +74,10 @@ final class la {
                 na.a(true);
                 return;
               }
-              var16_ref.field_l = bf.a(false);
+              var16_ref.field_l = PicturePreview.a(false);
               var16_ref.field_p = true;
               var16_ref.field_s = var16_ref.field_l[0];
-              var16_ref.c(2779);
+              var16_ref.unlink(2779);
             }
           } else {
             var12 = (hf) (dh.field_a.c(1504642273));
@@ -85,13 +85,13 @@ final class la {
               na.a(true);
               return;
             }
-            var12.c(2779);
+            var12.unlink(2779);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "la.I(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "la.I(" + param0 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class la {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -203,7 +203,7 @@ final class la {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class la {
         if (param0 > -84) {
           la.a((byte) -93);
         }
-        return aj.field_k.field_Fb;
+        return aj.field_k.content;
     }
 
     final static void a(int param0, int param1, ScrollContainer param2, int param3, boolean param4) {
@@ -331,26 +331,26 @@ final class la {
           stackIn_46_2 = (bj.field_d == param2);
           stackIn_49_0 = (!((ScrollContainer) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_46_2, 2, (fq.field_q * 4 + 8) * param3, 0, 2 * fq.field_q + 4)) ? 0 : 1;
           var9Lifetime1 = stackIn_49_0;
-          var10 = param2.field_Fb.children;
+          var10 = param2.content.children;
           var11 = null;
           var12 = (LobbyPlayer) (var10.c(1504642273));
           while (var12 != null) {
             var13 = 0;
             if (var12.children == null) {
               var12.field_Hb = new SceneWidget(0L, SceneWidget.field_T);
-              var12.a(var12.field_Hb, (byte) 26);
+              var12.addChild(var12.field_Hb, (byte) 26);
               var12.field_Gb = new SceneWidget(0L, of.field_i);
               if (DialWidgetPainter.field_n) {
-                var12.a(var12.field_Gb, (byte) 26);
+                var12.addChild(var12.field_Gb, (byte) 26);
               }
               var12.field_Gb.horizontalAlignment = 2;
               var12.field_Sb = new SceneWidget(0L, TextFieldValidator.field_h);
-              var12.a(var12.field_Sb, (byte) 26);
+              var12.addChild(var12.field_Sb, (byte) 26);
               var12.h(-257);
-              var12.field_Zb = new SceneWidget(0L, ul.field_p);
-              var12.a(var12.field_Zb, (byte) 26);
+              var12.field_Zb = new SceneWidget(0L, TimerBar.field_p);
+              var12.addChild(var12.field_Zb, (byte) 26);
               var12.field_Mb = new SceneWidget(0L, ge.field_h);
-              var12.a(var12.field_Mb, (byte) 26);
+              var12.addChild(var12.field_Mb, (byte) 26);
               var13 = 1;
             }
             var12.field_Hb.field_cb = null;
@@ -373,7 +373,7 @@ final class la {
             var12.field_Sb.height = 0;
             var18 = var12.field_Sb;
             var18.field_K = 0;
-            var12.field_K = param2.field_Fb.field_K;
+            var12.field_K = param2.content.field_K;
             var19 = 0;
             var32 = var12.field_Fb;
             var20 = var32;
@@ -382,7 +382,7 @@ final class la {
             if (jm.field_b == param2) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.field_Hb.font, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.field_Hb.font, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -419,19 +419,19 @@ final class la {
               var12.field_Zb.field_Cb = var24_int;
               var12.field_Zb.field_pb = var24_int;
               var12.field_Zb.field_y = var24_int;
-              if (param2 == ae.field_c) {
+              if (param2 == Vector3.field_c) {
                 if (!io.field_c.field_dc) {
                   var12.field_Mb.field_cb = MenuInputState.field_m;
                 }
               } else {
                 if (var12.field_Vb) {
-                  var12.field_Hb.field_cb = sd.a(ByteStorage.field_e, 111, new String[]{var20});
+                  var12.field_Hb.field_cb = AlphaContainer.a(ByteStorage.field_e, 111, new String[]{var20});
                   var12.field_Mb.field_cb = IntrusiveNode.field_f;
                 } else {
                   if (var12.field_Jb) {
-                    var12.field_Hb.field_cb = sd.a(ModalPanel.field_O, 58, new String[]{var20});
+                    var12.field_Hb.field_cb = AlphaContainer.a(ModalPanel.field_O, 58, new String[]{var20});
                     var12.field_Zb.field_cb = DisplayNameForm.field_M;
-                    var12.field_Mb.field_cb = u.field_e;
+                    var12.field_Mb.field_cb = QuickChatPhraseCache.field_e;
                   } else {
                     var12.field_Zb.field_cb = ih.field_b;
                   }
@@ -443,16 +443,16 @@ final class la {
                 DebouncedValidator.field_f != var12.field_Nb) {
                 if (null != var12.field_Zb.field_cb) {
                   var26 = var12.field_Zb.g(0) + MouseWheelHandler.field_c * 2;
-                  var12.field_Zb.a(var19, fq.field_q, var25_int, 256, var26);
+                  var12.field_Zb.setBounds(var19, fq.field_q, var25_int, 256, var26);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Mb.field_cb) {
-                  if (param2 == ae.field_c) {
+                  if (param2 == Vector3.field_c) {
                     var26Lifetime2 = 40;
                   } else {
                     var26Lifetime2 = var12.field_Mb.g(0) + 2 * MouseWheelHandler.field_c;
                   }
-                  var12.field_Mb.a(var19, fq.field_q, var25_int, 256, var26Lifetime2);
+                  var12.field_Mb.setBounds(var19, fq.field_q, var25_int, 256, var26Lifetime2);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -466,9 +466,9 @@ final class la {
               } else {
                 stackIn_98_5 = 42;
               }
-              ((SceneWidget) (Object) stackIn_97_0).a(stackIn_97_1, stackIn_97_2, stackIn_97_3, stackIn_97_4, -stackIn_98_5 + var12.field_K - var25_int);
+              ((SceneWidget) (Object) stackIn_97_0).setBounds(stackIn_97_1, stackIn_97_2, stackIn_97_3, stackIn_97_4, -stackIn_98_5 + var12.field_K - var25_int);
               var12.field_Gb.field_cb = Integer.toString(var12.field_Rb);
-              var12.field_Gb.a(var19, fq.field_q, var12.field_K - 40, 256, 40);
+              var12.field_Gb.setBounds(var19, fq.field_q, var12.field_K - 40, 256, 40);
               if (var12.field_Hb.field_W &&
                 var22 != 0) {
                 up.field_o = var12.field_Fb;
@@ -494,14 +494,14 @@ final class la {
               var24_intLifetime1 = var12.field_Sb.font.wrappedLineCount(var23, -MouseWheelHandler.field_c + (var12.field_K - MouseWheelHandler.field_c));
               var12.field_Sb.field_cb = var23;
               var12.field_Sb.textOpacity = var12.field_Tb * 256 / mh.field_b;
-              var12.field_Sb.a(var19, fq.field_q * var24_intLifetime1, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
+              var12.field_Sb.setBounds(var19, fq.field_q * var24_intLifetime1, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
               var19 = var19 + var24_intLifetime1 * fq.field_q;
             }
             if (var9Lifetime1 == 0) {
               var12.pendingHeightDelta = -var12.height + var19;
             }
             if (var13 != 0) {
-              param2.field_Fb.positionAfter(var12, 2, -1, (SceneWidget) (var11));
+              param2.content.positionAfter(var12, 2, -1, (SceneWidget) (var11));
             }
             if (var12.field_P != 0 &&
               !var12.b((byte) -89)) {
@@ -512,7 +512,7 @@ final class la {
                   pe.a(7, param1, var12.field_Nb);
                 }
               } else {
-                bg.a(var12.field_Nb, param1, -26231);
+                StatusBar.a(var12.field_Nb, param1, -26231);
               }
             }
             var11 = var12;
@@ -522,18 +522,18 @@ final class la {
               if (~DebouncedValidator.field_f != ~var12.field_Nb) {
                 if (var5_int != 0 &&
                   !var12.field_Xb) {
-                  var24Lifetime2 = sd.a(rh.field_w, 46, new String[]{var20});
+                  var24Lifetime2 = AlphaContainer.a(rh.field_w, 46, new String[]{var20});
                 } else {
                   if (var7 <= var12.field_Yb) {
                     if (var6 <= var12.field_Rb) {
                       if ((var8 & ~var12.field_Ib) != 0) {
                         var25_int = cl.a((byte) -101, var8 & ~var12.field_Ib);
-                        var24Lifetime2 = sd.a(MarkerSliderPainter.field_i, 27, new String[]{var20});
+                        var24Lifetime2 = AlphaContainer.a(MarkerSliderPainter.field_i, 27, new String[]{var20});
                         if (var25_int > 0 &&
                           null != lc.field_l &&
                           var25_int <= lc.field_l.length &&
                           lc.field_l[var25_int - 1] != null) {
-                          var24Lifetime2 = sd.a(lc.field_l[var25_int - 1][2], 62, new String[]{var20});
+                          var24Lifetime2 = AlphaContainer.a(lc.field_l[var25_int - 1][2], 62, new String[]{var20});
                           var30Lifetime1 = var24Lifetime2;
                           var25 = var30Lifetime1;
                           var24Lifetime2 = var25;
@@ -542,14 +542,14 @@ final class la {
                         }
                       }
                     } else {
-                      var24Lifetime2 = sd.a(BackgroundScene.field_e, 40, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = AlphaContainer.a(BackgroundScene.field_e, 40, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.field_Yb + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = sd.a(jm.field_k, 22, new String[]{var20});
+                      var24Lifetime2 = AlphaContainer.a(jm.field_k, 22, new String[]{var20});
                     }
-                    var24Lifetime2 = sd.a(UiTheme.field_l, 62, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = AlphaContainer.a(UiTheme.field_l, 62, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               } else {
@@ -562,7 +562,7 @@ final class la {
                     if (var25_int == 1) {
                       var24Lifetime2 = ReportAbuseDialog.field_Mb;
                     }
-                    var24Lifetime2 = sd.a(JaggrabDownloader.field_f, 95, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = AlphaContainer.a(JaggrabDownloader.field_f, 95, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var6 <= var12.field_Rb) {
                       if (0 != (var8 & ~var12.field_Ib)) {
@@ -576,7 +576,7 @@ final class la {
                         }
                       }
                     } else {
-                      var24Lifetime2 = sd.a(jn.field_m, 63, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = AlphaContainer.a(jn.field_m, 63, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -643,24 +643,24 @@ final class la {
                     }
                   }
                 }
-                if (param2 == ae.field_c &&
+                if (param2 == Vector3.field_c &&
                   AccountRegistrationPanel.m(99)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + sd.a(BoardParticle.field_q, 96, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + AlphaContainer.a(BoardParticle.field_q, 96, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + WeightedLruCache.field_i + (String) (var25);
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + sd.a(PacketBuffer.field_l, 102, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + AlphaContainer.a(PacketBuffer.field_l, 102, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + DirectByteStorage.field_i + (String) (var25);
                   }
                 }
-                if (param2 == ae.field_c &&
+                if (param2 == Vector3.field_c &&
                   !AccountRegistrationPanel.m(99)) {
                   var27 = io.field_c.field_pc;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + sd.a(ff.field_c, 93, new String[]{var27});
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + AlphaContainer.a(ff.field_c, 93, new String[]{var27});
                 }
                 up.field_o = (String) (var24Lifetime2);
               }
@@ -681,11 +681,11 @@ final class la {
           } else {
             stackIn_224_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_223_0), ((StringBuilder) (Object) stackIn_223_1).append(stackIn_224_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_223_0), ((StringBuilder) (Object) stackIn_223_1).append(stackIn_224_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void changeScreen(int param0, int param1, boolean param2, int param3) {
         int var4;
         NameAvailabilityValidator.field_t = 0;
         TickClock.field_a = param0;
@@ -703,7 +703,7 @@ final class la {
           if (MidiPcmStream.field_t == 12) {
             var4 = -1;
           }
-          wo.b(-92, MidiPcmStream.field_t).a(2, var4, param2);
+          wo.getScreen(-92, MidiPcmStream.field_t).a(2, var4, param2);
           if (MidiPcmStream.field_t == 12) {
             id.a(param2, (byte) 110);
           }
@@ -720,7 +720,7 @@ final class la {
         return ib.field_g - LoadingProgressDialog.field_cb;
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] decompressContainer(byte[] param0, int param1) {
         byte[] stackIn_19_0 = null;
         byte[] stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
@@ -741,7 +741,7 @@ final class la {
         byte[] var13 = null;
         try {
           var9 = new PacketBuffer(param0);
-          var3 = var9.f(param1 ^ 255);
+          var3 = var9.readUnsignedByte(param1 ^ 255);
           var4 = var9.readInt(0);
           if (var4 >= param1 && (up.field_j == 0 ||
             !(up.field_j < var4))) {
@@ -749,7 +749,7 @@ final class la {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(var13, 0, -80, var4);
+              var9.readBytes(var13, 0, -80, var4);
               stackIn_21_0 = var5;
               return stackIn_21_0;
             }
@@ -760,7 +760,7 @@ final class la {
               var10 = var12;
               var6 = var10;
               if (1 == var3) {
-                Bzip2Decoder.a(var12, var5_int, param0, var4, 9);
+                Bzip2Decoder.decompress(var12, var5_int, param0, var4, 9);
               } else {
                 var7 = fd.field_b;
                 synchronized (var7) {
@@ -783,7 +783,7 @@ final class la {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

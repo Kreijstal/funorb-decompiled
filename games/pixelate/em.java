@@ -20,14 +20,14 @@ final class em {
         try {
           if (param0 != -7) {
             int[] var4 = (int[]) null;
-            em.a((String) null, 12L, (String) null, 43, (SceneWidget) null, -102, (ScrollContainer) null, (int[]) null, 46);
+            em.openContextMenu((String) null, 12L, (String) null, 43, (SceneWidget) null, -102, (ScrollContainer) null, (int[]) null, 46);
           }
           var3 = aa.field_f;
-          var3.g(param2, 15514);
+          var3.writeOpcode(param2, 15514);
           var3.writeByte(160, param1.field_k);
           var3.writeByte(160, param1.field_s);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "em.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "em.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class em {
           var2_int = param0[0].field_A;
           SectorCacheStore.field_b = var2_int;
           hf.field_k = var2_int;
-          lo.field_Jb = (800 - var2_int) / 2;
+          IconTextComponent.field_Jb = (800 - var2_int) / 2;
           PasswordFieldPainter.field_A = rk.field_e.maxAscent + rk.field_e.maxDescent;
           DirectByteStorage.field_k = PasswordFieldPainter.field_A * 50 - 163;
           if (param1 >= -75) {
@@ -66,11 +66,11 @@ final class em {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(String param0, long param1, String param2, int param3, SceneWidget param4, int param5, ScrollContainer param6, int[] param7, int param8) {
+    final static void openContextMenu(String param0, long param1, String param2, int param3, SceneWidget param4, int param5, ScrollContainer param6, int[] param7, int param8) {
         try {
           if (param5 != -163) {
             em.a((byte) 53);
@@ -78,11 +78,11 @@ final class em {
           bj.field_d = param6;
           ProxySocketConnector.field_n = new ClientContextMenu(param4, param1, param2, param0, param3, param8, param7);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "em.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "em.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 <= 88) {
@@ -94,15 +94,15 @@ final class em {
     final static void a(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
         try {
           ub.field_a = MenuInputState.a(true) * param2 / 1000;
-          nj.a(param3, (byte) 14);
-          dk.a(false, param3);
+          DualLinkDeque.a(param3, (byte) 14);
+          dk.loadLogoMesh(false, param3);
           NameAvailabilityValidator.a(false, param3);
-          op.e(260);
+          OptionsScreen.e(260);
           UiComponent.g(0);
-          ga.field_f = -ub.field_a + 0;
+          GameModeCard.field_f = -ub.field_a + 0;
           int var4_int = 26 % ((param1 - 1) / 55);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "em.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "em.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

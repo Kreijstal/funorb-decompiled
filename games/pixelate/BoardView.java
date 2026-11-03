@@ -44,19 +44,19 @@ final class BoardView {
           for (var2_int = 0; var2_int < dn.field_a.length; var2_int++) {
             jb.field_b[var2_int] = new bi(GradientOutlineTextPainter.field_w[var2_int], dn.field_a[var2_int], var2_int == 5 ? true : false);
           }
-          ql.field_m = -1;
+          GreenGrowTheRushesBackground.field_m = -1;
           NetworkGameClient.field_D = 15;
           AccountRegistrationPanel.field_S = 0;
           of.field_d = -1;
           WeightedLruCache.field_j = 45;
           GameApplet.field_i = -1;
-          sd.field_N = true;
+          AlphaContainer.field_N = true;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "kk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -127,7 +127,7 @@ final class BoardView {
         }
     }
 
-    final void d(int param0) {
+    final void spawnPlacementParticles(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4;
@@ -176,10 +176,10 @@ final class BoardView {
         if (param0 <= 41) {
           return;
         }
-        this.field_c.c();
-        SoftwareRasterizer.d();
-        this.a(-20, 0, 0);
-        ClientException.field_f.a(19692);
+        this.field_c.makeRasterTarget();
+        SoftwareRasterizer.clear();
+        this.drawCells(-20, 0, 0);
+        ClientException.field_f.bindRaster(19692);
         for (var2Lifetime1 = 1; -1 + this.field_h > var2Lifetime1; var2Lifetime1++) {
           var6 = 1;
           var3Lifetime1 = var6;
@@ -196,7 +196,7 @@ final class BoardView {
         this.field_v = 1;
     }
 
-    final boolean a(int param0) {
+    final boolean isIdle(int param0) {
         if (param0 != 6) {
           field_y = 31;
         }
@@ -224,7 +224,7 @@ final class BoardView {
           }
           var5_int = param0.getGroupId(param2 + 123, param1);
           var6 = param0.getFileId((byte) -112, param3, var5_int);
-          stackIn_3_0 = IsaacRandom.a(param0, var5_int, 48077700, param4, var6);
+          stackIn_3_0 = IsaacRandom.loadFont(param0, var5_int, 48077700, param4, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -254,11 +254,11 @@ final class BoardView {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawCells(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int stackIn_20_0 = 0;
@@ -306,22 +306,22 @@ final class BoardView {
                 }
                 var12 = stackIn_29_0;
                 if (var12 == 0) {
-                  LoginCredentials.field_e.field_k[var7 - 1].f(var10, var11);
+                  LoginCredentials.field_e.field_k[var7 - 1].drawOpaque(var10, var11);
                 } else {
                   if (var12 != 256) {
-                    LoginCredentials.field_e.field_k[-1 + var7].f(var10, var11);
-                    fq.field_o.field_k[var7 - 1].a(var10, var11, var12);
+                    LoginCredentials.field_e.field_k[-1 + var7].drawOpaque(var10, var11);
+                    fq.field_o.field_k[var7 - 1].drawAlpha(var10, var11, var12);
                   } else {
-                    fq.field_o.field_k[var7 - 1].f(var10, var11);
+                    fq.field_o.field_k[var7 - 1].drawOpaque(var10, var11);
                   }
                 }
                 if (var8 == 0) {
                   var13 = this.field_m[var4 * this.field_h + var5];
                   if (var9 == 0) {
-                    SoftwareRasterizer.a(var10, var11, 32, 32, 0, 64 + var13);
+                    SoftwareRasterizer.fillRectangleAlpha(var10, var11, 32, 32, 0, 64 + var13);
                   } else {
                     if (var13 < 48) {
-                      SoftwareRasterizer.a(var10, var11, 32, 32, 0, -var13 + 48);
+                      SoftwareRasterizer.fillRectangleAlpha(var10, var11, 32, 32, 0, -var13 + 48);
                     }
                   }
                 }
@@ -330,7 +330,7 @@ final class BoardView {
           }
         }
         if (param0 != -20) {
-          this.a(true);
+          this.draw(true);
         }
     }
 
@@ -343,15 +343,15 @@ final class BoardView {
         return stackIn_9_0;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          BoardView.b(true);
+          BoardView.releaseStatics(true);
         }
         field_l = null;
         field_b = null;
     }
 
-    final void a(boolean param0) {
+    final void draw(boolean param0) {
         int var7 = 0;
         int stackIn_35_0 = 0;
         int stackIn_41_0 = 0;
@@ -393,21 +393,21 @@ final class BoardView {
         var4Lifetime1 = -this.field_f + this.field_h;
         var5 = -this.field_e + this.field_j;
         for (var6 = this.field_p; var5 >= var6; var6++) {
-          SoftwareRasterizer.h(32 * this.field_g + var2 - 16, var3 + 32 * var6, 16 + (var4Lifetime1 * 32 + var2), var3 + var6 * 32, 0, 100);
+          SoftwareRasterizer.drawLineBlendedInclusive(32 * this.field_g + var2 - 16, var3 + 32 * var6, 16 + (var4Lifetime1 * 32 + var2), var3 + var6 * 32, 0, 100);
         }
         for (var6Lifetime1 = this.field_g; var4Lifetime1 >= var6Lifetime1; var6Lifetime1++) {
-          SoftwareRasterizer.h(var2 + 32 * var6Lifetime1, this.field_p * 32 - 16 + var3, var2 + var6Lifetime1 * 32, 32 * var5 + var3 + 16, 0, 100);
+          SoftwareRasterizer.drawLineBlendedInclusive(var2 + 32 * var6Lifetime1, this.field_p * 32 - 16 + var3, var2 + var6Lifetime1 * 32, 32 * var5 + var3 + 16, 0, 100);
         }
         if (this.c(-108)) {
-          SoftwareRasterizer.a(DialWidgetPainter.field_d);
+          SoftwareRasterizer.saveClip(DialWidgetPainter.field_d);
           if (this.field_i == 0 &&
             this.field_v > 0) {
-            SoftwareRasterizer.f(-4 + (this.field_A + this.field_t), this.field_u + this.field_x - 4, 640, 480);
+            SoftwareRasterizer.setClip(-4 + (this.field_A + this.field_t), this.field_u + this.field_x - 4, 640, 480);
           }
-          this.field_c.b(var2, var3);
-          SoftwareRasterizer.b(DialWidgetPainter.field_d);
+          this.field_c.drawTransparent(var2, var3);
+          SoftwareRasterizer.restoreClip(DialWidgetPainter.field_d);
         } else {
-          this.a(-20, var3, var2);
+          this.drawCells(-20, var3, var2);
         }
         for (var6Lifetime2 = 0; var6Lifetime2 < this.field_j; var6Lifetime2++) {
           for (var7 = 0; var7 < this.field_h; var7++) {
@@ -438,16 +438,16 @@ final class BoardView {
               var13 = 33;
               if (var9 == 0) {
                 if (var10 != 0) {
-                  fi.a(var11, var12, var13, var13, 16777215, 40);
+                  SpriteEffectHelpers.a(var11, var12, var13, var13, 16777215, 40);
                 }
               } else {
-                SoftwareRasterizer.a(var11, var12, var13, var13, 0, 192);
+                SoftwareRasterizer.fillRectangleAlpha(var11, var12, var13, var13, 0, 192);
               }
               stackIn_48_0 = (var9 != 0) ? 16777215 : 11184810;
               var14 = stackIn_48_0;
-              SoftwareRasterizer.e(var11 + 1, var12 + 1, -1 + var13, var14, 100);
-              SoftwareRasterizer.f(var11 + 1, 2 + var12, -2 + var13, var14, 100);
-              SoftwareRasterizer.a(var11, var12, var13, var13, 0);
+              SoftwareRasterizer.drawHorizontalLineAlpha(var11 + 1, var12 + 1, -1 + var13, var14, 100);
+              SoftwareRasterizer.drawVerticalLineAlpha(var11 + 1, 2 + var12, -2 + var13, var14, 100);
+              SoftwareRasterizer.drawRectangle(var11, var12, var13, var13, 0);
             }
           }
         }
@@ -462,13 +462,13 @@ final class BoardView {
         if (0 < this.field_v &&
           this.field_i == 0 &&
           0 == this.field_r) {
-          SoftwareRasterizer.a(DialWidgetPainter.field_d);
-          SoftwareRasterizer.f(var2 + this.field_g * 32, this.field_p * 32 + var3, (this.field_h - this.field_f) * 32 + var2, var3 + 32 * (-this.field_e + this.field_j));
+          SoftwareRasterizer.saveClip(DialWidgetPainter.field_d);
+          SoftwareRasterizer.setClip(var2 + this.field_g * 32, this.field_p * 32 + var3, (this.field_h - this.field_f) * 32 + var2, var3 + 32 * (-this.field_e + this.field_j));
           for (var6Lifetime3 = 0; 20 > var6Lifetime3; var6Lifetime3 += 3) {
-            fi.a(this.field_g * 32 + (this.field_t - (-this.field_A - var6Lifetime3 * 2 + 40)), -20 + var3, this.field_A + 32 * this.field_g + this.field_t - 2 * (-var6Lifetime3 + 20), this.field_j * 32 + var3 + 20, 4, var6Lifetime3 * 3, sd.field_Q);
-            fi.a(var2 - 20, -(2 * (-var6Lifetime3 + 20)) + this.field_x + (this.field_u + this.field_p * 32), this.field_h * 32 + (var2 + 20), var6Lifetime3 * 2 - 40 + (this.field_p * 32 + this.field_u) + this.field_x, 4, 3 * var6Lifetime3, sd.field_Q);
+            SpriteEffectHelpers.a(this.field_g * 32 + (this.field_t - (-this.field_A - var6Lifetime3 * 2 + 40)), -20 + var3, this.field_A + 32 * this.field_g + this.field_t - 2 * (-var6Lifetime3 + 20), this.field_j * 32 + var3 + 20, 4, var6Lifetime3 * 3, AlphaContainer.field_Q);
+            SpriteEffectHelpers.a(var2 - 20, -(2 * (-var6Lifetime3 + 20)) + this.field_x + (this.field_u + this.field_p * 32), this.field_h * 32 + (var2 + 20), var6Lifetime3 * 2 - 40 + (this.field_p * 32 + this.field_u) + this.field_x, 4, 3 * var6Lifetime3, AlphaContainer.field_Q);
           }
-          SoftwareRasterizer.b(DialWidgetPainter.field_d);
+          SoftwareRasterizer.restoreClip(DialWidgetPainter.field_d);
         }
     }
 
@@ -507,8 +507,8 @@ final class BoardView {
         int var10 = 0;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          SoftwareRasterizer.b(param0, param2, param3 + 1, 10000536);
-          SoftwareRasterizer.b(param0, param1 + param2, 1 + param3, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param0, param2, param3 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param0, param1 + param2, 1 + param3, 12105912);
           var5_int = 1;
           if (param2 + var5_int < SoftwareRasterizer.field_f) {
             var5_int = SoftwareRasterizer.field_f - param2;
@@ -530,7 +530,7 @@ final class BoardView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "kk.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var5), "kk.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -605,7 +605,7 @@ final class BoardView {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -9,7 +9,7 @@ final class e {
     static String field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 200) {
           field_d = null;
           field_c = null;
@@ -17,7 +17,7 @@ final class e {
           field_b = null;
           return;
         }
-        e.a(103);
+        e.releaseStatics(103);
         field_d = null;
         field_c = null;
         field_e = null;

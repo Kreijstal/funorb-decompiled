@@ -16,8 +16,8 @@ final class bi {
         int var4;
         int var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
-        SoftwareRasterizer.a(this.field_f, this.field_e, 250, this.field_c, 12, 0, 180);
-        SoftwareRasterizer.e(this.field_f, this.field_e, 250, this.field_c, 12, 0);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.field_f, this.field_e, 250, this.field_c, 12, 0, 180);
+        SoftwareRasterizer.drawRoundedRectangle(this.field_f, this.field_e, 250, this.field_c, 12, 0);
         var2 = 4 + this.field_e + 8;
         if (!param0) {
           if (null != this.field_a) {
@@ -30,7 +30,7 @@ final class bi {
           }
           return;
         }
-        bi.a(1);
+        bi.releaseStatics(1);
         if (null != this.field_a) {
           DelegatingCanvas.field_d.drawCentered(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
           var2 = var2 + (8 + pe.field_c);
@@ -41,7 +41,7 @@ final class bi {
         }
     }
 
-    final static Sprite a(String param0, String param1, ResourceArchive param2, byte param3) {
+    final static Sprite loadSprite(String param0, String param1, ResourceArchive param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -57,7 +57,7 @@ final class bi {
         try {
           var4_int = param2.getGroupId(127, param0);
           if (param3 >= -19) {
-            bi.b(25);
+            bi.getUiTheme(25);
           }
           var5 = param2.getFileId((byte) -105, param1, var4_int);
           stackIn_3_0 = dk.a(var5, param2, var4_int, -1);
@@ -84,11 +84,11 @@ final class bi {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != -8) {
           field_g = (Sprite[]) null;
@@ -98,12 +98,12 @@ final class bi {
         field_d = null;
     }
 
-    final static UiTheme b(int param0) {
+    final static UiTheme getUiTheme(int param0) {
         if (param0 != 4) {
-          bi.a(-128);
+          bi.releaseStatics(-128);
           if (null == JaggrabDownloader.field_c) {
             JaggrabDownloader.field_c = new UiTheme();
-            JaggrabDownloader.field_c.a(4, he.field_d);
+            JaggrabDownloader.field_c.initializePainters(4, he.field_d);
             JaggrabDownloader.field_c.field_p = 5;
             JaggrabDownloader.field_c.field_d = 7697781;
             JaggrabDownloader.field_c.field_q = 14;
@@ -117,7 +117,7 @@ final class bi {
         }
         if (null == JaggrabDownloader.field_c) {
           JaggrabDownloader.field_c = new UiTheme();
-          JaggrabDownloader.field_c.a(4, he.field_d);
+          JaggrabDownloader.field_c.initializePainters(4, he.field_d);
           JaggrabDownloader.field_c.field_p = 5;
           JaggrabDownloader.field_c.field_d = 7697781;
           JaggrabDownloader.field_c.field_q = 14;
@@ -172,7 +172,7 @@ final class bi {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 

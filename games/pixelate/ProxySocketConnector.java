@@ -13,7 +13,7 @@ final class ProxySocketConnector extends SocketConnector {
     static java.awt.Frame field_i;
     static java.awt.Frame field_j;
 
-    private final java.net.Socket a(int param0, String param1, String param2, byte param3) throws IOException {
+    private final java.net.Socket openHttpTunnel(int param0, String param1, String param2, byte param3) throws IOException {
         java.net.Socket stackIn_11_0 = null;
         Object stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
@@ -113,7 +113,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -220,10 +220,10 @@ final class ProxySocketConnector extends SocketConnector {
           var2Lifetime1 = -48 / ((param0 - 31) / 39);
           for (var3 = 0; 50 > var3; var3++) {
             gd.field_f[var3] = new Sprite(63, 63);
-            gd.field_f[var3].c();
+            gd.field_f[var3].makeRasterTarget();
             var4 = (double)var3 * 6.283185307179586 / 50.0;
             var6 = (int)(16.0 * Math.sin(var4)) >> 1;
-            SoftwareRasterizer.a(512, 512, 48 + var6 << 4, 255, var13);
+            SoftwareRasterizer.fillRadialPaletteCircle(512, 512, 48 + var6 << 4, 255, var13);
             for (var7 = 0; SoftwareRasterizer.field_k.length > var7; var7++) {
               SoftwareRasterizer.field_k[var7] = 16777215 - SoftwareRasterizer.field_k[var7];
             }
@@ -235,7 +235,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "eg.D(" + param0 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) var1), "eg.D(" + param0 + ')');
         }
     }
 
@@ -356,7 +356,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -6835) {
           return;
         }
@@ -393,7 +393,7 @@ final class ProxySocketConnector extends SocketConnector {
             var5 = var9;
             var6 = param2;
             var7 = param4;
-            var9[var6] = var7 + cm.a(var9[var6] >> 1, 8355711);
+            var9[var6] = var7 + cm.bitAnd(var9[var6] >> 1, 8355711);
             param2++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -406,7 +406,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -483,7 +483,7 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_18_0 = this.a(var4.getPort(), var4.getHostName(), (String) (var5), (byte) 115);
+          stackIn_18_0 = this.openHttpTunnel(var4.getPort(), var4.getHostName(), (String) (var5), (byte) 115);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -495,7 +495,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 

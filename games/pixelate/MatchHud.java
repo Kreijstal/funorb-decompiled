@@ -23,10 +23,10 @@ final class MatchHud {
     static boolean field_i;
 
     final static void a(boolean param0) {
-        ma.field_o = new IntrusiveDeque();
+        ScoreMarkerBar.field_o = new IntrusiveDeque();
         if (!param0) {
           ResourceArchive var2 = (ResourceArchive) null;
-          MatchHud.a(-1, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
+          MatchHud.loadCommonUiResources(-1, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 
@@ -81,15 +81,15 @@ final class MatchHud {
               var10.drawCenteredAlpha(this.field_e, 320, -var4Lifetime1 + 130, 0, -1, var5Lifetime1);
             }
             if (this.field_d > 0) {
-              Match.field_l[3 - this.field_d].d(-(this.field_c >> 1) + 320, 40, this.field_c, 90);
+              Match.field_l[3 - this.field_d].drawScaled(-(this.field_c >> 1) + 320, 40, this.field_c, 90);
             }
           }
         } else {
           if (0 < this.field_p) {
-            fi.a(var10, SoundCache.field_j, Integer.toString(this.field_g.field_r), Js5Transport.field_n, 30, 50, 0, -1, this.field_p);
+            SpriteEffectHelpers.a(var10, SoundCache.field_j, Integer.toString(this.field_g.field_r), Js5Transport.field_n, 30, 50, 0, -1, this.field_p);
             var9.drawLeftAlpha(sb.a(this.field_r[0], 3), 30, 415, 0, -1, this.field_p);
             if (null != this.field_f) {
-              fi.a(var10, IntrusiveDeque.field_e, this.field_f, ArrayWidgetContainer.field_J, 30, 390, 0, -1, this.field_p);
+              SpriteEffectHelpers.a(var10, IntrusiveDeque.field_e, this.field_f, ArrayWidgetContainer.field_J, 30, 390, 0, -1, this.field_p);
             }
           }
         }
@@ -162,7 +162,7 @@ final class MatchHud {
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }
-              cq.a(param0, (byte) -115, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.evaluateScript(param0, (byte) -115, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;
@@ -190,7 +190,7 @@ final class MatchHud {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -205,20 +205,20 @@ final class MatchHud {
         if (!(var2 <= this.field_g.puzzle.pictures.length)) {
           var2--;
         }
-        this.field_e = sd.a(field_b, 73, new String[]{Integer.toString(var2), Integer.toString(this.field_g.puzzle.pictures.length)});
+        this.field_e = AlphaContainer.a(field_b, 73, new String[]{Integer.toString(var2), Integer.toString(this.field_g.puzzle.pictures.length)});
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != -1) {
-          MatchHud.c(-122);
+          MatchHud.releaseStatics(-122);
         }
         field_h = null;
         field_m = null;
         field_b = null;
     }
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
+    final static void loadCommonUiResources(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         Sprite var17 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -237,16 +237,16 @@ final class MatchHud {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          fk.field_s = SocketConnector.a("frame_top", "commonui", (byte) 47, param2);
-          PlayerBoard.field_v = SocketConnector.a("frame_bottom", "commonui", (byte) 47, param2);
-          ge.field_g = bi.a("commonui", "jagex_logo_grey", param2, (byte) -74);
-          fc.field_d = SocketConnector.a("button", "commonui", (byte) 47, param2);
+          HowToPlayScreen.field_s = SocketConnector.loadRgbSpritesByName("frame_top", "commonui", (byte) 47, param2);
+          PlayerBoard.field_v = SocketConnector.loadRgbSpritesByName("frame_bottom", "commonui", (byte) 47, param2);
+          ge.field_g = bi.loadSprite("commonui", "jagex_logo_grey", param2, (byte) -74);
+          fc.field_d = SocketConnector.loadRgbSpritesByName("button", "commonui", (byte) 47, param2);
           CanvasRasterBuffer.field_g = MusicCrossfadeStream.a(param2, 20049, "validation", "commonui");
           ep.field_b = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo12", param3));
           he.field_d = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo14", param3));
           ba.field_d = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo14bold", param3));
-          var17 = new Sprite(param1.a((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) NameAvailabilityValidator.field_u));
-          dq.a((byte) 31, "dropdown", "commonui", param2);
+          var17 = new Sprite(param1.getNamedFile((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) NameAvailabilityValidator.field_u));
+          dq.loadIndexedSprite((byte) 31, "dropdown", "commonui", param2);
           var5 = NetworkGameClient.a(param2, param0 ^ 4767934, "commonui", "screen_options");
           UiComponent.field_A = new IndexedSprite[4];
           UiComponent.field_o = new IndexedSprite[4];
@@ -272,22 +272,22 @@ final class MatchHud {
           }
           var9Lifetime1 = var17.field_E;
           MidiPcmStream.a(false);
-          var17.c();
-          SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
+          var17.makeRasterTarget();
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.c();
-          var17.f(0, 0);
+          var18.makeRasterTarget();
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.c();
-          var17.f(var9Lifetime1 - var17.field_F, 0);
+          var11.makeRasterTarget();
+          var17.drawOpaque(var9Lifetime1 - var17.field_F, 0);
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_F, var9Lifetime1);
-          var12.c();
-          var17.f(-var9Lifetime1, 0);
+          var12.makeRasterTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           LinkButtonPainter.a((byte) 92);
           fc.field_d = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -339,7 +339,7 @@ final class MatchHud {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

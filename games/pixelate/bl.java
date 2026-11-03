@@ -19,7 +19,7 @@ final class bl {
         int stackIn_15_3;
         boolean stackIn_16_4 = false;
         if (param0 >= -22) {
-          bl.b(-59);
+          bl.releaseStatics(-59);
         }
         IntrusiveDequeCursor.c(-1);
         if (null != io.field_c) {
@@ -35,16 +35,16 @@ final class bl {
         stackIn_16_4 = (50 >= ce.field_g) ? false : true;
         wk.a(stackIn_11_0, stackIn_11_1, stackIn_13_2, stackIn_15_3 != 0, stackIn_16_4, param1, (byte) 116, true, 0, 13, 11, lp.field_i);
         if (of.field_c) {
-          aa.field_f.g(57, 15514);
+          aa.field_f.writeOpcode(57, 15514);
           of.field_c = false;
         }
         if (fc.field_a) {
-          aa.field_f.g(10, 15514);
+          aa.field_f.writeOpcode(10, 15514);
           fc.field_a = false;
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_d = null;
         if (param0 != -46342) {
@@ -57,12 +57,12 @@ final class bl {
 
     final static int a(boolean param0) {
         if (!param0) {
-          bl.b(-26);
+          bl.releaseStatics(-26);
         }
         return MouseInputHandler.field_b;
     }
 
-    final static MouseWheelHandler a(int param0) {
+    final static MouseWheelHandler createMouseWheelHandler(int param0) {
         try {
           Throwable var1 = null;
           MouseWheelHandler stackIn_2_0 = null;
@@ -95,7 +95,7 @@ final class bl {
           qf.field_c = param1;
           IntrusiveNode.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

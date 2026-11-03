@@ -7,7 +7,7 @@ abstract class TextLayout {
     static String field_d;
     TextLayoutLine[] lines;
 
-    final int a(int param0, int param1, int param2) {
+    final int hitTestCharacter(int param0, int param1, int param2) {
         int var5 = 0;
         TextLayoutLine var6 = null;
         int var7 = 0;
@@ -44,7 +44,7 @@ abstract class TextLayout {
 
     final static void c(boolean param0, int param1) {
         if (null != ri.field_f) {
-          SoftwareRasterizer.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
           ri.field_f.a(param0, 0);
         }
         if (param1 != -24721) {
@@ -102,14 +102,14 @@ abstract class TextLayout {
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0) {
-            param1.field_mc = param3.f(param2 ^ 135);
+            param1.field_mc = param3.readUnsignedByte(param2 ^ 135);
           }
-          param1.field_ec = param3.f(255);
+          param1.field_ec = param3.readUnsignedByte(255);
           if (param2 != 120) {
             field_d = (String) null;
           }
-          param1.field_Ib = param3.f(param2 + 135);
-          var4_int = param3.f(param2 + 135);
+          param1.field_Ib = param3.readUnsignedByte(param2 + 135);
+          var4_int = param3.readUnsignedByte(param2 + 135);
           stackIn_8_0 = (LobbyGame) (param1);
           stackIn_9_1 = (0 != (128 & var4_int));
           stackIn_8_0.field_Pb = stackIn_9_1;
@@ -136,22 +136,22 @@ abstract class TextLayout {
           var5 = stackIn_28_0;
           stackIn_31_0 = ((2 & var4_int) == 0) ? 0 : 1;
           var6 = stackIn_31_0;
-          param3.a(param1.field_Eb, 0, -77, param1.field_Eb.length);
-          param1.field_bc = param3.a((byte) -11);
+          param3.readBytes(param1.field_Eb, 0, -77, param1.field_Eb.length);
+          param1.field_bc = param3.readUnsignedShort((byte) -11);
           param1.field_Lb = hm.a(64) - (long)param3.readInt(param2 - 120);
           if (var5 == 0) {
             param1.field_nc = -1;
           } else {
             param1.field_nc = param3.readInt(param2 - 120);
           }
-          param1.field_kc = param3.a(false);
+          param1.field_kc = param3.readLong(false);
           var7 = param3.position;
-          param1.field_pc = param3.h(5);
+          param1.field_pc = param3.readString(5);
           if (var6 != 0) {
             param1.field_Ub = new String[param1.field_mc];
             param3.position = var7;
             for (var8 = 0; var8 < param1.field_mc; var8++) {
-              param1.field_Ub[var8] = param3.h(param2 - 115);
+              param1.field_Ub[var8] = param3.readString(param2 - 115);
             }
             return;
           }
@@ -173,11 +173,11 @@ abstract class TextLayout {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
-    final int b(int param0) {
+    final int getLayoutHeight(int param0) {
         int stackIn_7_0 = 0;
         if (param0 != 1) {
           field_d = (String) null;
@@ -288,11 +288,11 @@ abstract class TextLayout {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -115) {
           field_c = (String[]) null;
         }

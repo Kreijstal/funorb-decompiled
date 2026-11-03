@@ -58,7 +58,7 @@ final class fo {
         int var3 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         int var3Lifetime1;
-        IntrusiveDequeCursor.field_f.b(1600, 2272, this.field_p << 4, this.field_i << 4, this.field_k, this.field_l);
+        IntrusiveDequeCursor.field_f.rotateNearest(1600, 2272, this.field_p << 4, this.field_i << 4, this.field_k, this.field_l);
         ki[] var6 = this.field_j;
         ki[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
@@ -74,9 +74,9 @@ final class fo {
           var10.b(3887);
           var8++;
         }
-        SoftwareRasterizer.b(this.field_p - 3, this.field_i - 5, 299 + this.field_d, this.field_q, 3355392);
-        SoftwareRasterizer.b(-2 + this.field_p, this.field_i - 5, this.field_d + 0 + 300, this.field_q, 6710784);
-        SoftwareRasterizer.b(-1 + this.field_p, -5 + this.field_i, 300 + this.field_d + param0, this.field_q, 3355392);
+        SoftwareRasterizer.drawLine(this.field_p - 3, this.field_i - 5, 299 + this.field_d, this.field_q, 3355392);
+        SoftwareRasterizer.drawLine(-2 + this.field_p, this.field_i - 5, this.field_d + 0 + 300, this.field_q, 6710784);
+        SoftwareRasterizer.drawLine(-1 + this.field_p, -5 + this.field_i, 300 + this.field_d + param0, this.field_q, 3355392);
     }
 
     final static boolean a(byte param0) {
@@ -86,7 +86,7 @@ final class fo {
         return ek.field_c;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_u = null;
         int var1 = 89 / ((35 - param0) / 41);
         field_a = null;
@@ -105,8 +105,8 @@ final class fo {
         this.field_f = param2;
         this.field_q = param4;
         this.field_d = param3;
-        this.field_e = ok.a(ea.field_b, -128, 400);
-        this.field_n = ok.a(ea.field_b, -120, 172);
+        this.field_e = JavaRandomHelpers.a(ea.field_b, -128, 400);
+        this.field_n = JavaRandomHelpers.a(ea.field_b, -120, 172);
         this.field_c = new int[400];
         this.field_h = new int[400];
         int var6 = 200 * this.field_l >> 12;

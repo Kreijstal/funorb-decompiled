@@ -1,0 +1,128 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ConditionalTextValue {
+    private boolean field_b;
+    static int[] field_i;
+    static SceneWidget field_g;
+    private String field_f;
+    static byte[][] field_e;
+    static PaletteBitmapFont field_h;
+    static BufferedSocket field_d;
+    static String field_a;
+    static String field_c;
+
+    final String a(int param0) {
+        if (param0 != -30491) {
+          field_c = (String) null;
+          return this.field_f;
+        }
+        return this.field_f;
+    }
+
+    final static boolean b(int param0) {
+        if (param0 != -10093) {
+          ConditionalTextValue.b(-27);
+          return he.field_f != null ? true : false;
+        }
+        return he.field_f != null ? true : false;
+    }
+
+    final static String c(int param0) {
+        if (hf.field_q < 2) {
+          return td.field_d;
+        }
+        if (null != DebouncedValidator.field_e) {
+          if (!DebouncedValidator.field_e.ensureIndex(param0 ^ -16421)) {
+            return hm.field_a;
+          }
+          return wa.field_a;
+        }
+        if (!wk.field_j.ensureIndex(-3)) {
+          return SocialListEntry.field_Mb;
+        }
+        if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
+          return PasswordValidator.field_q + " - " + wk.field_j.getGroupProgressByName(119, "commonui") + "%";
+        }
+        if (!io.field_g.ensureIndex(param0 ^ -16421)) {
+          return CanvasRasterBuffer.field_f;
+        }
+        if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
+          return CipherPacketBuffer.field_x + " - " + io.field_g.getGroupProgressByName(param0 ^ 16463, "commonui") + "%";
+        }
+        if (!MatchingTextValidator.field_u.ensureIndex(-3)) {
+          return jd.field_p;
+        }
+        if (param0 != 16422) {
+          ConditionalTextValue.b(34);
+        }
+        if (!MatchingTextValidator.field_u.ensureAllGroupsAvailable((byte) 92)) {
+          return em.field_a + " - " + MatchingTextValidator.field_u.getOverallProgress(0) + "%";
+        }
+        return GrowableIntList.field_b;
+    }
+
+    ConditionalTextValue(String param0) {
+        this(param0, false);
+    }
+
+    ConditionalTextValue(String param0, boolean param1) {
+        RuntimeException var3 = null;
+        boolean stackIn_6_1 = false;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          this.field_f = param0;
+          if (null == this.field_f) {
+            this.field_f = "";
+          }
+          stackIn_6_1 = (param1);
+          this.field_b = stackIn_6_1;
+          if (this.field_f.length() != 0) {
+            return;
+          }
+          this.field_b = false;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = var3;
+          stackIn_12_1 = new StringBuilder().append("sc.<init>(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final boolean b(byte param0) {
+        int var2 = -65 / ((59 - param0) / 43);
+        return this.field_b;
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_a = null;
+        field_h = null;
+        field_c = null;
+        field_g = null;
+        field_i = null;
+        if (param0 < -14) {
+          field_e = (byte[][]) null;
+          field_d = null;
+          return;
+        }
+        field_g = (SceneWidget) null;
+        field_e = (byte[][]) null;
+        field_d = null;
+    }
+
+    static {
+        field_e = new byte[1000][];
+        field_i = new int[128];
+        field_c = "Accept rematch";
+    }
+}

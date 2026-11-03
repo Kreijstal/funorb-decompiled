@@ -11,7 +11,7 @@ final class ClientException extends RuntimeException {
     static Sprite field_g;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_f = null;
         field_b = null;
@@ -23,10 +23,10 @@ final class ClientException extends RuntimeException {
 
     final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param3 == 3) {
-          return ap.a(param1, param0, 5, param2, 1);
+          return IntKeyLookup.a(param1, param0, 5, param2, 1);
         }
         ClientException.a(-72, -103, -103, -51);
-        return ap.a(param1, param0, 5, param2, 1);
+        return IntKeyLookup.a(param1, param0, 5, param2, 1);
     }
 
     ClientException(Throwable param0, String param1) {

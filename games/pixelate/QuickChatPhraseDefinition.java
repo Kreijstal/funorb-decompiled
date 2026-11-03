@@ -26,11 +26,11 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             QuickChatPhraseDefinition.b((byte) -35);
           }
           while (true) {
-            var3_int = param1.f(255);
+            var3_int = param1.readUnsignedByte(255);
             if (var3_int == 0) {
               return;
             }
-            this.a(var3_int, 83, param1);
+            this.decodeOpcode(var3_int, 83, param1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -42,11 +42,11 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, PacketBuffer param2) {
+    private final void decodeOpcode(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -64,25 +64,25 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         try {
           if (1 != param0) {
             if (2 == param0) {
-              var4_int = param2.f(255);
+              var4_int = param2.readUnsignedByte(255);
               this.field_u = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_u[var5] = param2.a((byte) -115);
+                this.field_u[var5] = param2.readUnsignedShort((byte) -115);
               }
             } else {
               if (param0 == 3) {
-                var4_int = param2.f(255);
+                var4_int = param2.readUnsignedByte(255);
                 this.field_B = new int[var4_int][];
                 this.field_x = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param2.a((byte) 52);
+                  var6 = param2.readUnsignedShort((byte) 52);
                   var7 = EmailCredentials.a(var6, -52);
                   if (var7 != null) {
                     this.field_x[var5] = var6;
                     array$0 = new int[var7.field_e];
                     this.field_B[var5] = array$0;
                     for (var8 = 0; var7.field_e > var8; var8++) {
-                      this.field_B[var5][var8] = param2.a((byte) -118);
+                      this.field_B[var5][var8] = param2.readUnsignedShort((byte) -118);
                     }
                   }
                 }
@@ -92,7 +92,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.fragments = Puzzle.a(param2.h(5), (byte) -117, '<');
+            this.fragments = Puzzle.a(param2.readString(5), (byte) -117, '<');
           }
           var4_intLifetime1 = -125 / ((param1 + 17) / 39);
           return;
@@ -106,7 +106,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -143,15 +143,15 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
         if (null != this.field_u) {
           for (var2 = 0; this.field_u.length > var2; var2++) {
-            this.field_u[var2] = bq.a(this.field_u[var2], 32768);
+            this.field_u[var2] = bq.bitOr(this.field_u[var2], 32768);
           }
         }
     }
 
     final static void c(byte param0) {
         int var1 = 75 / ((20 - param0) / 48);
-        if (to.field_t != null) {
-          to.field_t.shutdown();
+        if (MainMenuScreen.field_t != null) {
+          MainMenuScreen.field_t.shutdown();
         }
         if (ib.field_h != null) {
           ib.field_h.shutdown();

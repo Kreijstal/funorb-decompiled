@@ -6,11 +6,11 @@ final class gq extends EmailCredentials {
     static String field_m;
     static int field_n;
 
-    final ea b(int param0) {
+    final ea getCredentialKind(int param0) {
         if (param0 != -27096) {
           field_n = -3;
         }
-        return da.field_o;
+        return BouncedownBackground.field_o;
     }
 
     final static void a(int param0, int param1, int param2, String param3) {
@@ -46,7 +46,7 @@ final class gq extends EmailCredentials {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

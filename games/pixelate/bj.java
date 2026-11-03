@@ -11,7 +11,7 @@ final class bj {
 
     final static void a(byte param0) {
         if (un.field_l) {
-          SoftwareRasterizer.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
           DraggableWidget.field_I.a(false, 0);
         }
         if (param0 == 1) {
@@ -20,7 +20,7 @@ final class bj {
         field_b = (int[]) null;
     }
 
-    final static Puzzle a(int param0, int param1) {
+    final static Puzzle createChallengePuzzle(int param0, int param1) {
         int var2 = 0;
         if (param0 >= 10) {
           if (10 > param0) {
@@ -30,13 +30,13 @@ final class bj {
             param0 = 50;
           }
           int var3 = 85 / ((0 - param1) / 35);
-          var2 = 0 == ok.a(ea.field_b, -111, 4) ? 1 : 0;
+          var2 = 0 == JavaRandomHelpers.a(ea.field_b, -111, 4) ? 1 : 0;
           return mc.a(ea.field_b, 5, var2 != 0, param0, -52);
         }
         return up.field_d[param0];
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 109) {
           field_c = null;
           field_d = null;

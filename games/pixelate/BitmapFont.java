@@ -110,7 +110,7 @@ abstract class BitmapFont extends DualLinkNode {
         }
     }
 
-    final static String a(BitmapFont param0, String param1, int param2) {
+    final static String truncateWithEllipsis(BitmapFont param0, String param1, int param2) {
         int var6 = 0;
         int var3;
         int var4;
@@ -247,7 +247,7 @@ abstract class BitmapFont extends DualLinkNode {
         return this.glyphAdvances[MenuInputState.a((byte) -118, param0) & 255];
     }
 
-    private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
+    private final static int computePairKerning(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
         int var18 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -306,7 +306,7 @@ abstract class BitmapFont extends DualLinkNode {
         this.drawStyledText(param0, param1 - this.textWidth(param0), param2);
     }
 
-    final void a(IndexedSpriteState[] param0, int[] param1) {
+    final void setInlineSprites(IndexedSpriteState[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();
@@ -424,7 +424,7 @@ abstract class BitmapFont extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.pairKerning[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.glyphAdvances, var14, var7Lifetime2, var8Lifetime2);
+                  this.pairKerning[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.computePairKerning(var15, var16, var17, this.glyphAdvances, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -451,7 +451,7 @@ abstract class BitmapFont extends DualLinkNode {
 
     abstract void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    final static String b(String param0) {
+    final static String escapeMarkup(String param0) {
         int var3_int = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -947,10 +947,10 @@ abstract class BitmapFont extends DualLinkNode {
               }
               param1 = param1 + this.glyphAdvances[var8];
               if (field_x != -1) {
-                SoftwareRasterizer.b(var11, param2 + (int)((double)this.lineAdvance * 0.7), param1 - var11, field_x);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.lineAdvance * 0.7), param1 - var11, field_x);
               }
               if (field_A != -1) {
-                SoftwareRasterizer.b(var11, param2 + this.lineAdvance + 1, param1 - var11, field_A);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.lineAdvance + 1, param1 - var11, field_A);
               }
               var5 = var8;
             }

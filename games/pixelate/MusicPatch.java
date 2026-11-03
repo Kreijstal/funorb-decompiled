@@ -37,9 +37,9 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     final static void a(jn param0, int param1) {
-        ae stackIn_12_0 = null;
+        Vector3 stackIn_12_0 = null;
         int stackIn_15_0 = 0;
-        ae stackIn_19_0 = null;
+        Vector3 stackIn_19_0 = null;
         int stackIn_20_1 = 0;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
@@ -48,7 +48,7 @@ final class MusicPatch extends IntrusiveNode {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        ae var5 = null;
+        Vector3 var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
@@ -64,9 +64,9 @@ final class MusicPatch extends IntrusiveNode {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        wg var22 = null;
-        wg var23 = null;
-        wg var24 = null;
+        Matrix3 var22 = null;
+        Matrix3 var23 = null;
+        Matrix3 var24 = null;
         var21 = Pixelate.field_H ? 1 : 0;
         try {
           var22 = LobbyPlayer.a(param0.field_o, param0.field_l, 0);
@@ -74,24 +74,24 @@ final class MusicPatch extends IntrusiveNode {
           var4 = 14;
           if (param0.field_n != 0) {
             if (param0.field_n == 1) {
-              stackIn_12_0 = new ae(0, var3 << var4, 0);
+              stackIn_12_0 = new Vector3(0, var3 << var4, 0);
             } else {
               if (2 == param0.field_n) {
-                stackIn_12_0 = new ae(0, 0, var3 << var4);
+                stackIn_12_0 = new Vector3(0, 0, var3 << var4);
               } else {
                 if (3 == param0.field_n) {
-                  stackIn_12_0 = new ae(-var3 << var4, 0, 0);
+                  stackIn_12_0 = new Vector3(-var3 << var4, 0, 0);
                 } else {
                   if (param0.field_n != 4) {
-                    stackIn_12_0 = new ae(0, 0, -var3 << var4);
+                    stackIn_12_0 = new Vector3(0, 0, -var3 << var4);
                   } else {
-                    stackIn_12_0 = new ae(0, -var3 << var4, 0);
+                    stackIn_12_0 = new Vector3(0, -var3 << var4, 0);
                   }
                 }
               }
             }
           } else {
-            stackIn_12_0 = new ae(var3 << var4, 0, 0);
+            stackIn_12_0 = new Vector3(var3 << var4, 0, 0);
           }
           var5 = stackIn_12_0;
           stackIn_15_0 = (0 >= var22.a(var5, (byte) 106).field_i) ? 0 : 1;
@@ -167,7 +167,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -194,11 +194,11 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_k = null;
         if (param0 != 0) {
@@ -225,8 +225,8 @@ final class MusicPatch extends IntrusiveNode {
         MusicCrossfadeStream.a((byte) -109);
         TextHotspotWidget.a((byte) -94);
         ep.c(-26721);
-        if (se.b(true)) {
-          aa.field_f.g(1, 15514);
+        if (KiteBackground.b(true)) {
+          aa.field_f.writeOpcode(1, 15514);
           SecondaryNodeHashTable.b(0, param0 + 10091);
         }
         na.a(true);
@@ -378,7 +378,7 @@ final class MusicPatch extends IntrusiveNode {
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var3 > var5; var5++) {
-            var4[var5] = var38.a(0);
+            var4[var5] = var38.readByte(0);
           }
           var3++;
           var38.position = var38.position + 1;
@@ -390,7 +390,7 @@ final class MusicPatch extends IntrusiveNode {
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var6 > var8; var8++) {
-            var7[var8] = var38.a(0);
+            var7[var8] = var38.readByte(0);
           }
           var6++;
           var38.position = var38.position + 1;
@@ -402,7 +402,7 @@ final class MusicPatch extends IntrusiveNode {
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var9 > var11_int; var11_int++) {
-            var10[var11_int] = var38.a(0);
+            var10[var11_int] = var38.readByte(0);
           }
           var38.position = var38.position + 1;
           var9++;
@@ -414,7 +414,7 @@ final class MusicPatch extends IntrusiveNode {
             var13_int = 1;
             var12 = 2;
             for (var14 = 2; var14 < var9; var14++) {
-              var15_int = var38.f(255);
+              var15_int = var38.readUnsignedByte(255);
               if (var15_int == 0) {
                 incrementValue$0 = var12;
                 var12++;
@@ -436,17 +436,17 @@ final class MusicPatch extends IntrusiveNode {
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
-            var16_int = var38.f(255);
+            var16_int = var38.readUnsignedByte(255);
             if (0 < var16_int) {
               var15_ref.field_b = new byte[2 * var16_int];
             }
-            var16_intLifetime1 = var38.f(255);
+            var16_intLifetime1 = var38.readUnsignedByte(255);
             if (var16_intLifetime1 > 0) {
               var15_ref.field_h = new byte[2 + var16_intLifetime1 * 2];
               var40.field_h[1] = (byte)64;
             }
           }
-          var14Lifetime2 = var38.f(255);
+          var14Lifetime2 = var38.readUnsignedByte(255);
           if (0 >= var14Lifetime2) {
             stackIn_39_0 = null;
           } else {
@@ -454,7 +454,7 @@ final class MusicPatch extends IntrusiveNode {
           }
           var46 = stackIn_39_0;
           var15 = var46;
-          var14Lifetime3 = var38.f(255);
+          var14Lifetime3 = var38.readUnsignedByte(255);
           if (var14Lifetime3 > 0) {
             stackIn_42_0 = new byte[2 * var14Lifetime3];
           } else {
@@ -469,18 +469,18 @@ final class MusicPatch extends IntrusiveNode {
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var17 > var19; var19++) {
-            var18[var19] = var38.a(0);
+            var18[var19] = var38.readByte(0);
           }
           var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
-            var19Lifetime1 = var19Lifetime1 + var38.f(255);
+            var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte(255);
             this.field_u[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; var20Lifetime1 < 128; var20Lifetime1++) {
-            var19Lifetime2 = var19Lifetime2 + var38.f(255);
+            var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte(255);
             this.field_u[var20Lifetime1] = (short)(this.field_u[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
@@ -493,9 +493,9 @@ final class MusicPatch extends IntrusiveNode {
               } else {
                 var20Lifetime2 = var18[var21++];
               }
-              var22 = var38.j(127);
+              var22 = var38.readVarInt(127);
             }
-            this.field_u[var23] = (short)(this.field_u[var23] + cm.a(var22 - 1 << 14, 32768));
+            this.field_u[var23] = (short)(this.field_u[var23] + cm.bitAnd(var22 - 1 << 14, 32768));
             var20Lifetime2--;
             this.field_r[var23] = var22;
           }
@@ -565,34 +565,34 @@ final class MusicPatch extends IntrusiveNode {
                 var20Lifetime6 = -1;
               }
               if (this.field_r[var27] > 0) {
-                var26Lifetime1 = 1 + var38.f(255);
+                var26Lifetime1 = 1 + var38.readUnsignedByte(255);
               }
             }
             this.field_t[var27] = (byte)var26Lifetime1;
             var20Lifetime6--;
           }
-          this.field_v = 1 + var38.f(255);
+          this.field_v = 1 + var38.readUnsignedByte(255);
           for (var27Lifetime1 = 0; var27Lifetime1 < var12; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
             if (var45.field_b != null) {
               for (var29 = 1; var29 < var45.field_b.length; var29 += 2) {
-                var45.field_b[var29] = var38.a(0);
+                var45.field_b[var29] = var38.readByte(0);
               }
             }
             if (var45.field_h != null) {
               for (var29Lifetime5 = 3; -2 + var45.field_h.length > var29Lifetime5; var29Lifetime5 += 2) {
-                var45.field_h[var29Lifetime5] = var38.a(0);
+                var45.field_h[var29Lifetime5] = var38.readByte(0);
               }
             }
           }
           if (var15 != null) {
             for (var27Lifetime2 = 1; var27Lifetime2 < var46.length; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.a(0);
+              var15[var27Lifetime2] = var38.readByte(0);
             }
           }
           if (var16 != null) {
             for (var27Lifetime3 = 1; var58.length > var27Lifetime3; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.a(0);
+              var16[var27Lifetime3] = var38.readByte(0);
             }
           }
           for (var27Lifetime4 = 0; var27Lifetime4 < var12; var27Lifetime4++) {
@@ -601,7 +601,7 @@ final class MusicPatch extends IntrusiveNode {
             if (null != var48.field_h) {
               var19Lifetime3 = 0;
               for (var29Lifetime1 = 2; var48.field_h.length > var29Lifetime1; var29Lifetime1 += 2) {
-                var19Lifetime3 = var38.f(255) + var19Lifetime3 + 1;
+                var19Lifetime3 = var38.readUnsignedByte(255) + var19Lifetime3 + 1;
                 var48.field_h[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
@@ -611,16 +611,16 @@ final class MusicPatch extends IntrusiveNode {
             if (var49.field_b != null) {
               var19Lifetime4 = 0;
               for (var29Lifetime2 = 2; var29Lifetime2 < var49.field_b.length; var29Lifetime2 += 2) {
-                var19Lifetime4 = var38.f(255) + var19Lifetime4 + 1;
+                var19Lifetime4 = var38.readUnsignedByte(255) + var19Lifetime4 + 1;
                 var49.field_b[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
           }
           if (var15 != null) {
-            var19Lifetime5 = var38.f(255);
+            var19Lifetime5 = var38.readUnsignedByte(255);
             var15[0] = (byte)var19Lifetime5;
             for (var27Lifetime6 = 2; var27Lifetime6 < var46.length; var27Lifetime6 += 2) {
-              var19Lifetime5 = var19Lifetime5 + 1 + var38.f(255);
+              var19Lifetime5 = var19Lifetime5 + 1 + var38.readUnsignedByte(255);
               var15[var27Lifetime6] = (byte)var19Lifetime5;
             }
             var27Lifetime6Lifetime1 = var46[0];
@@ -634,7 +634,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (var30 - var27Lifetime6Lifetime1) / 2 + (-var27Lifetime6Lifetime1 + var30) * var28_int;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = cm.a(var30 - var27Lifetime6Lifetime1, (byte) 120, var32);
+                var34 = cm.floorDivide(var30 - var27Lifetime6Lifetime1, (byte) 120, var32);
                 this.field_t[var33] = (byte)(this.field_t[var33] * var34 + 32 >> 6);
                 var32 = var32 + (var31 - var28_int);
               }
@@ -648,10 +648,10 @@ final class MusicPatch extends IntrusiveNode {
             var15 = null;
           }
           if (var16 != null) {
-            var19Lifetime6 = var38.f(255);
+            var19Lifetime6 = var38.readUnsignedByte(255);
             var16[0] = (byte)var19Lifetime6;
             for (var27Lifetime7 = 2; var27Lifetime7 < var58.length; var27Lifetime7 += 2) {
-              var19Lifetime6 = var38.f(255) + (var19Lifetime6 + 1);
+              var19Lifetime6 = var38.readUnsignedByte(255) + (var19Lifetime6 + 1);
               var16[var27Lifetime7] = (byte)var19Lifetime6;
             }
             var27Lifetime7Lifetime1 = var58[0];
@@ -674,7 +674,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = cm.a(var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, (byte) 124, var32Lifetime1);
+                var34Lifetime1 = cm.floorDivide(var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, (byte) 124, var32Lifetime1);
                 var35 = var34Lifetime1 + (this.field_o[var37] & 255);
                 if (var35 < 0) {
                   var35 = 0;
@@ -703,34 +703,34 @@ final class MusicPatch extends IntrusiveNode {
             }
           }
           for (var27Lifetime8 = 0; var27Lifetime8 < var12; var27Lifetime8++) {
-            var13[var27Lifetime8].field_e = var38.f(255);
+            var13[var27Lifetime8].field_e = var38.readUnsignedByte(255);
           }
           for (var27Lifetime9 = 0; var12 > var27Lifetime9; var27Lifetime9++) {
             var50 = var13[var27Lifetime9];
             var28Lifetime1 = var50;
             if (null != var50.field_b) {
-              var28Lifetime1.field_f = var38.f(255);
+              var28Lifetime1.field_f = var38.readUnsignedByte(255);
             }
             if (var28Lifetime1.field_h != null) {
-              var28Lifetime1.field_d = var38.f(255);
+              var28Lifetime1.field_d = var38.readUnsignedByte(255);
             }
             if (var28Lifetime1.field_e > 0) {
-              var28Lifetime1.field_i = var38.f(255);
+              var28Lifetime1.field_i = var38.readUnsignedByte(255);
             }
           }
           for (var27Lifetime10 = 0; var12 > var27Lifetime10; var27Lifetime10++) {
-            var13[var27Lifetime10].field_g = var38.f(255);
+            var13[var27Lifetime10].field_g = var38.readUnsignedByte(255);
           }
           for (var27Lifetime11 = 0; var12 > var27Lifetime11; var27Lifetime11++) {
             var51 = var13[var27Lifetime11];
             if (var51.field_g > 0) {
-              var51.field_a = var38.f(255);
+              var51.field_a = var38.readUnsignedByte(255);
             }
           }
           for (var27Lifetime12 = 0; var27Lifetime12 < var12; var27Lifetime12++) {
             var52 = var13[var27Lifetime12];
             if (var52.field_a > 0) {
-              var52.field_m = var38.f(255);
+              var52.field_m = var38.readUnsignedByte(255);
             }
           }
           return;
@@ -744,7 +744,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_205_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
         }
     }
 
@@ -779,9 +779,9 @@ final class MusicPatch extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) != 0) {
-                    var7 = param0.a((byte) -46, param1, var9 >> 2);
+                    var7 = param0.getMusicSampleById((byte) -46, param1, var9 >> 2);
                   } else {
-                    var7 = param0.a(var9 >> 2, param1, (byte) 106);
+                    var7 = param0.loadSoundEffectById(var9 >> 2, param1, (byte) 106);
                   }
                   if (var7 == null) {
                     var5_int = 0;
@@ -821,7 +821,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
