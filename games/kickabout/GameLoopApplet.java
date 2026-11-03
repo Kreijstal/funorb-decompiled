@@ -8,19 +8,19 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
     static ClubState field_E;
     static String field_C;
 
-    final void a(int param0, LoadingSequence param1) {
+    final void startWithLoader(int param0, LoadingSequence param1) {
         try {
           try {
             NetworkGameClient.field_t = param1;
             this.enableBaseResponses(true, -1);
-            this.h((byte) 105);
-            this.l(-1);
+            this.enableHandlerGroup1((byte) 105);
+            this.enableHandlerGroup2(-1);
             if (param0 < 97) {
               this.a(108, false);
             }
-            this.m(10);
-            this.g(13);
-            this.e(6);
+            this.enableHandlerGroup5(10);
+            this.enableHandlerGroup4(13);
+            this.enableHandlerGroup(6);
             this.i(13);
             IntTripleCommand.field_A[10] = -1;
             IntTripleCommand.field_A[9] = -1;
@@ -331,7 +331,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
 
     public abstract boolean a(int param0, int param1, char param2);
 
-    final static int a(int param0, int param1, int param2) {
+    final static int fixedPointDistance(int param0, int param1, int param2) {
         if (param2 != -23146) {
           return 89;
         }

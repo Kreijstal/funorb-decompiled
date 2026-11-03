@@ -25,7 +25,7 @@ final class kw {
           return -1;
         }
         if (!bo.field_Cb.a(false, "stadium")) {
-          return bo.field_Cb.a("stadium", -16248);
+          return bo.field_Cb.getGroupProgressByName("stadium", -16248);
         }
         DiskCacheWorker.field_i = new ArgbSprite[4];
         ValidationHelpWidget.field_T = true;

@@ -18,7 +18,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     static int[] field_B;
     static String[] field_M;
 
-    final void h(byte param0) {
+    final void focusFields(byte param0) {
         this.field_N.i((byte) -55);
         this.field_J.i((byte) -70);
         if (param0 >= -65) {
@@ -26,7 +26,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    private final void l(int param0) {
+    private final void submitLogin(int param0) {
         if (cd.a(3) ||
           !(this.field_N.field_q.length() <= 0) &&
           !(this.field_J.field_q.length() <= 0)) {
@@ -72,7 +72,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_J.a((UiWidget) (this), 0);
           }
           if (this.field_J == param1) {
-            this.l(60);
+            this.submitLogin(60);
           }
           int var3_int = 35 / ((param0 - 8) / 47);
         } catch (RuntimeException runtimeException) {
@@ -116,7 +116,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               NameSuggestionsPanel.a((byte) -76);
             }
           } else {
-            this.l(60);
+            this.submitLogin(60);
           }
           if (param3 < 64) {
             field_B = (int[]) null;
@@ -174,7 +174,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final void a(String param0, byte param1) {
+    final void setUsername(String param0, byte param1) {
         TextInputWidget var3 = null;
         String var4 = null;
         try {
@@ -201,7 +201,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     public final void a(byte param0, TextInputWidget param1) {
         try {
           if (param0 < 65) {
-            this.h((byte) -105);
+            this.focusFields((byte) -105);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -372,7 +372,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final String a(int param0) {
+    final String getUsername(int param0) {
         if (param0 <= 84) {
           UiWidget var3 = (UiWidget) null;
           this.a('f', (byte) 111, (UiWidget) null, -119);

@@ -297,24 +297,24 @@ final class ArchivePreloader {
         }
         while (this.field_g < this.field_e) {
           var4 = this.field_d[this.field_g];
-          if (!var4.field_h.d(-118)) {
+          if (!var4.field_h.ensureIndex(-118)) {
             this.a(-1, 0, var4);
             return false;
           }
           if (0 <= var4.field_a &&
             !var4.field_h.b((byte) 20, var4.field_a)) {
-            this.a(-1, var4.field_h.b(var4.field_a, (byte) 56), var4);
+            this.a(-1, var4.field_h.getGroupProgress(var4.field_a, (byte) 56), var4);
             return false;
           }
           if (null != var4.field_g &&
             !var4.field_h.a(false, var4.field_g)) {
-            this.a(-1, var4.field_h.a(var4.field_g, -16248), var4);
+            this.a(-1, var4.field_h.getGroupProgressByName(var4.field_g, -16248), var4);
             return false;
           }
           if (var4.field_a < 0 &&
             null == var4.field_g &&
             var4.field_c != null &&
-            !var4.field_h.a(false)) {
+            !var4.field_h.ensureAllGroupsAvailable(false)) {
             this.a(param0 - 1183118481, var4.field_h.e(param0 ^ -1183116137), var4);
             return false;
           }

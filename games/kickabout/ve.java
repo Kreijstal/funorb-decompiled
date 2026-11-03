@@ -42,7 +42,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           gw.field_d = ng.a("stains", "park", 2, bo.field_Cb);
           return -1;
         }
-        return bo.field_Cb.a("park", -16248);
+        return bo.field_Cb.getGroupProgressByName("park", -16248);
     }
 
     final static void a(GameSetupPanel param0, byte param1) {

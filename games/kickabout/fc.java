@@ -42,7 +42,7 @@ final class fc {
               } else {
                 param0 = OffscreenPlayerArrow.field_j;
               }
-              IsSixCommand.field_E.a(ep.field_b, (byte) 120);
+              IsSixCommand.field_E.setUsername(ep.field_b, (byte) 120);
             }
             if (param1 == 10) {
               pc.a((byte) -126);
@@ -60,7 +60,7 @@ final class fc {
             if (param1 != 256 &&
               param1 != 10 &&
               !AuctionBidDialog.field_G) {
-              IsSixCommand.field_E.h((byte) -76);
+              IsSixCommand.field_E.focusFields((byte) -76);
               return;
             }
           }

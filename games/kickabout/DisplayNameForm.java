@@ -98,7 +98,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           if (param1 != this.field_B) {
             return;
           }
-          this.k(-81);
+          this.submit(-81);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -184,8 +184,8 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         this.a(var4 + (var3 + 55), 1, 0, 496, 0);
     }
 
-    private final boolean l(int param0) {
-        if (!this.a(param0 ^ 484, (ValidationProvider) (this.field_C))) {
+    private final boolean isNameValid(int param0) {
+        if (!this.isFieldValid(param0 ^ 484, (ValidationProvider) (this.field_C))) {
           return false;
         }
         if (param0 == 20) {
@@ -248,7 +248,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         field_F = null;
     }
 
-    private final boolean a(int param0, ValidationProvider param1) {
+    private final boolean isFieldValid(int param0, ValidationProvider param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         ValidationState var4 = null;
@@ -285,14 +285,14 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
     final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_B.field_y = this.l(20);
+          this.field_B.field_y = this.isNameValid(20);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final void k(int param0) {
-        if (!this.l(20)) {
+    private final void submit(int param0) {
+        if (!this.isNameValid(20)) {
           return;
         }
         if (param0 < -58) {

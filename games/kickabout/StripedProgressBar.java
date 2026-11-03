@@ -61,7 +61,7 @@ final class StripedProgressBar extends UiWidget {
         int var4Lifetime1;
         var7 = Kickabout.field_G;
         try {
-          var8 = new CipherPacketBuffer(param1.a("", "logo.fo3d", 48));
+          var8 = new CipherPacketBuffer(param1.takeFileByName("", "logo.fo3d", 48));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -109);
           var10.p(-111);

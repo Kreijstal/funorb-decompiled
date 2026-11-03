@@ -44,7 +44,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
           if (param1 >= -79) {
             field_H = (String) null;
           }
-          stackIn_3_0 = PlayerStats.field_m.a(param0, "", 120);
+          stackIn_3_0 = PlayerStats.field_m.takeFileByName(param0, "", 120);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

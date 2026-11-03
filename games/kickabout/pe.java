@@ -11,27 +11,27 @@ final class pe {
           return 0;
         }
         if (vv.field_r == 0) {
-          if (!bw.field_b.d(-93)) {
+          if (!bw.field_b.ensureIndex(-93)) {
             return 20;
           }
           if (!bw.field_b.a(false, "commonui")) {
             return 40;
           }
-          if (!gs.field_c.d(-58)) {
+          if (!gs.field_c.ensureIndex(-58)) {
             return 50;
           }
           if (!gs.field_c.a(false, "commonui")) {
             return 60;
           }
-          if (!PlayerStats.field_k.d(param0 - 179)) {
+          if (!PlayerStats.field_k.ensureIndex(param0 - 179)) {
             return 70;
           }
-          if (!PlayerStats.field_k.a(false)) {
+          if (!PlayerStats.field_k.ensureAllGroupsAvailable(false)) {
             return 80;
           }
         } else {
           if (null != LoginRequiredDialog.field_H) {
-            if (!LoginRequiredDialog.field_H.d(-94)) {
+            if (!LoginRequiredDialog.field_H.ensureIndex(-94)) {
               return 14;
             }
             if (!LoginRequiredDialog.field_H.a("", (byte) -120)) {
@@ -41,22 +41,22 @@ final class pe {
               return 29;
             }
           }
-          if (!bw.field_b.d(-107)) {
+          if (!bw.field_b.ensureIndex(-107)) {
             return 43;
           }
           if (!bw.field_b.a(false, "commonui")) {
             return 57;
           }
-          if (!gs.field_c.d(-66)) {
+          if (!gs.field_c.ensureIndex(-66)) {
             return 71;
           }
           if (!gs.field_c.a(false, "commonui")) {
             return 80;
           }
-          if (!PlayerStats.field_k.d(-106)) {
+          if (!PlayerStats.field_k.ensureIndex(-106)) {
             return 82;
           }
-          if (!PlayerStats.field_k.a(false)) {
+          if (!PlayerStats.field_k.ensureAllGroupsAvailable(false)) {
             return 86;
           }
         }

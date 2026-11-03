@@ -33,7 +33,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param1.a("", "final_frame.jpg", 8), (java.awt.Component) ((Object) ic.field_d));
+          var2 = new Sprite(param1.takeFileByName("", "final_frame.jpg", 8), (java.awt.Component) ((Object) ic.field_d));
           var3 = var2.field_q;
           var4 = var2.field_w;
           tr.d(-12974);

@@ -49,8 +49,8 @@ final class RenderedFootballer extends FootballerAgent {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.b(param4, -1);
-          var6 = param3.a((byte) -107, param2, var5_int);
+          var5_int = param3.getGroupId(param4, -1);
+          var6 = param3.getFileId((byte) -107, param2, var5_int);
           if (param1 != 10) {
             var7 = (String) null;
             RenderedFootballer.a((ResourceArchive) null, -21, (String) null, (ResourceArchive) null, (String) null);

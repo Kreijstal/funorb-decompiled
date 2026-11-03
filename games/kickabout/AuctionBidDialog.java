@@ -33,7 +33,7 @@ final class AuctionBidDialog extends MessageDialog {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = NetworkGameClient.a((byte) -119, param0, false);
+            stackIn_4_0 = NetworkGameClient.validateAccountName((byte) -119, param0, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

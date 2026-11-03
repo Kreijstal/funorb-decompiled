@@ -84,7 +84,7 @@ final class RenderedBall extends BallAgent {
             var4 != 0) &&
             (8388608 > Math.abs(var3_intLifetime1) &&
             Math.abs(var4) < 8388608)) {
-            var5 = GameLoopApplet.a(var3_intLifetime1, var4, -23146);
+            var5 = GameLoopApplet.fixedPointDistance(var3_intLifetime1, var4, -23146);
             if (var5 != 0) {
               var4 = (int)(((long)var4 << 16) / (long)var5);
               var3_intLifetime1 = (int)(((long)var3_intLifetime1 << 16) / (long)var5);
@@ -97,7 +97,7 @@ final class RenderedBall extends BallAgent {
             if (!this.field_y &&
               this.field_x) {
               var5Lifetime1 = 41;
-              var6 = GameLoopApplet.a(var3_intLifetime1, var4, -23146);
+              var6 = GameLoopApplet.fixedPointDistance(var3_intLifetime1, var4, -23146);
               var7 = var6 >> 10;
               LobbyPlayerRow.a(128, false, 240, we.field_f + var7, var5Lifetime1);
             }

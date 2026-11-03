@@ -131,7 +131,7 @@ final class bl {
         if (param0 != -94) {
           return false;
         }
-        if (!bo.field_Cb.a("scenery", "bleachers", (byte) -10)) {
+        if (!bo.field_Cb.ensureFileAvailableByName("scenery", "bleachers", (byte) -10)) {
           return false;
         }
         TeamSelectionAgent.field_p = ng.a("bleachers", "scenery", 2, bo.field_Cb);

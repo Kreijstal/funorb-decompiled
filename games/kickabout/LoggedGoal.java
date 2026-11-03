@@ -230,7 +230,7 @@ final class LoggedGoal extends IntrusiveNode {
           if (param0 != -2) {
             field_o = (Sprite) null;
           }
-          stackIn_3_0 = param1.a(false);
+          stackIn_3_0 = param1.ensureAllGroupsAvailable(false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

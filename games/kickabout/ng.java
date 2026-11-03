@@ -173,11 +173,11 @@ final class ng {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.b(param1, param2 - 3);
+          var4_int = param3.getGroupId(param1, param2 - 3);
           if (param2 != 2) {
             field_j = (Sprite[]) null;
           }
-          var5 = param3.a((byte) -104, param0, var4_int);
+          var5 = param3.getFileId((byte) -104, param0, var4_int);
           stackIn_3_0 = dk.a(var4_int, var5, (byte) -123, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

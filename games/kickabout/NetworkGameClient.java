@@ -52,7 +52,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         IntTripleCommand.field_A[2] = -2;
     }
 
-    final void m(int param0) {
+    final void enableHandlerGroup5(int param0) {
         if (param0 != 10) {
           return;
         }
@@ -91,10 +91,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         return var2;
     }
 
-    final void l(int param0) {
+    final void enableHandlerGroup2(int param0) {
         if (param0 != -1) {
           String var3 = (String) null;
-          this.a((String) null, 31, 32, -108, 43);
+          this.readAppletParameters((String) null, 31, 32, -108, 43);
         }
         hr.field_h[2] = true;
     }
@@ -104,13 +104,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (param2 != -60) {
             this.field_A = true;
           }
-          this.a(param0, param1, 480, 640, -93);
+          this.readAppletParameters(param0, param1, 480, 640, -93);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ma.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final void e(int param0) {
+    final void enableHandlerGroup(int param0) {
         hr.field_h[param0] = true;
     }
 
@@ -194,7 +194,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    final static String a(byte param0, CharSequence param1, boolean param2) {
+    final static String validateAccountName(byte param0, CharSequence param1, boolean param2) {
         int var4 = 0;
         String var3 = null;
         int var5 = 0;
@@ -236,7 +236,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    final void h(byte param0) {
+    final void enableHandlerGroup1(byte param0) {
         hr.field_h[1] = true;
         int var2 = 110 / ((39 - param0) / 57);
     }
@@ -480,7 +480,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (hl.field_d == 2) {
           if (LoginRequiredDialog.field_H != null &&
-            LoginRequiredDialog.field_H.d(param0 ^ -43)) {
+            LoginRequiredDialog.field_H.ensureIndex(param0 ^ -43)) {
             if (LoginRequiredDialog.field_H.a("", (byte) -81)) {
               if (LoginRequiredDialog.field_H.a(false, "")) {
                 AuctionListing.a(true, LoginRequiredDialog.field_H);
@@ -533,8 +533,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (11 == hl.field_d) {
-          if (null != Trinket.field_b && (!Trinket.field_b.d(-50) ||
-            !Trinket.field_b.a(false))) {
+          if (null != Trinket.field_b && (!Trinket.field_b.ensureIndex(-50) ||
+            !Trinket.field_b.ensureAllGroupsAvailable(false))) {
             ValidationHelpWidget.a(0.0f, ManagerAction.a(ep.field_e, HuffmanCodec.field_g, param0 - 25, Trinket.field_b), (byte) 30);
             decompiledFrameRemainder0 = false;
           }
@@ -571,12 +571,12 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     final int b(int param0, boolean param1) {
         if (param0 != 5) {
-          this.m(-23);
+          this.enableHandlerGroup5(-23);
         }
         return this.a(true, true, param1);
     }
 
-    final void g(int param0) {
+    final void enableHandlerGroup4(int param0) {
         if (param0 != 13) {
           return;
         }
@@ -1328,7 +1328,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    private final void a(String param0, int param1, int param2, int param3, int param4) {
+    private final void readAppletParameters(String param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -1404,7 +1404,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (param0 != 1) {
           CharSequence var2 = (CharSequence) null;
-          NetworkGameClient.a((byte) -6, (CharSequence) null, true);
+          NetworkGameClient.validateAccountName((byte) -6, (CharSequence) null, true);
         }
     }
 

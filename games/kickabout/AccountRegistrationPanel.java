@@ -24,7 +24,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_Q.field_y = this.k(-123);
+          this.field_Q.field_y = this.allFieldsValid(-123);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ae.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -257,7 +257,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         rp dupTemp$1 = new rp(10000536);
         this.field_N.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_T.field_r = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SquadGridWidget.field_Ab, new String[]{this.b(true), this.l(6)});
+        String var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SquadGridWidget.field_Ab, new String[]{this.openLinkMarkup(true), this.closeLinkMarkup(6)});
         int var3 = 20;
         var3 = var3 + this.a(170, ReflectionCheck.field_i, 21621, var3, this.field_S);
         var3 = var3 + (5 + this.a(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
@@ -372,7 +372,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             TextPromptDialog.a((byte) -51, "terms.ws");
           }
           if (param3 < 7) {
-            discarded$1 = this.k(-42);
+            discarded$1 = this.allFieldsValid(-42);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -399,13 +399,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         int var1 = 0 / ((param0 + 32) / 50);
     }
 
-    private final boolean k(int param0) {
-        if (this.a((ValidationProvider) (this.field_E), 120) &&
-          this.a((ValidationProvider) (this.field_S), 120) &&
-          this.a((ValidationProvider) (this.field_K), 120) &&
-          this.a((ValidationProvider) (this.field_T), 120) &&
-          this.a((ValidationProvider) (this.field_N), 120) &&
-          this.a((ValidationProvider) (this.field_J), 120)) {
+    private final boolean allFieldsValid(int param0) {
+        if (this.isFieldValid((ValidationProvider) (this.field_E), 120) &&
+          this.isFieldValid((ValidationProvider) (this.field_S), 120) &&
+          this.isFieldValid((ValidationProvider) (this.field_K), 120) &&
+          this.isFieldValid((ValidationProvider) (this.field_T), 120) &&
+          this.isFieldValid((ValidationProvider) (this.field_N), 120) &&
+          this.isFieldValid((ValidationProvider) (this.field_J), 120)) {
           if (param0 >= -108) {
             AccountRegistrationPanel.a((byte) 127);
           }
@@ -441,13 +441,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    private final boolean h(byte param0) {
+    private final boolean submitRegistration(byte param0) {
         int discarded$0 = 0;
         if (param0 >= -82) {
           String var4 = (String) null;
           discarded$0 = this.a(-122, true, (String) null, (UiWidget) null, 3, (String) null, -84);
         }
-        if (!this.k(-112)) {
+        if (!this.allFieldsValid(-112)) {
           return false;
         }
         int var2 = -1;
@@ -514,7 +514,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           }
           if (this.field_F != param1) {
             if (param1 == this.field_Q) {
-              discarded$1 = this.h((byte) -104);
+              discarded$1 = this.submitRegistration((byte) -104);
             }
           } else {
             MusicPatch.a((byte) -125);
@@ -534,14 +534,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    private final String l(int param0) {
+    private final String closeLinkMarkup(int param0) {
         if (param0 != 6) {
           this.field_J = (ValidatedTextWidget) null;
         }
         return "</col></u>";
     }
 
-    private final String b(boolean param0) {
+    private final String openLinkMarkup(boolean param0) {
         if (!param0) {
           field_M = (String) null;
         }
@@ -627,7 +627,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    private final boolean a(ValidationProvider param0, int param1) {
+    private final boolean isFieldValid(ValidationProvider param0, int param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         ValidationState var4 = null;

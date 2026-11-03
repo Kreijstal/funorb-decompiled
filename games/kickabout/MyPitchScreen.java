@@ -28,8 +28,8 @@ final class MyPitchScreen extends TeamManagementScreen {
             stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var4_int = param0.b(param1, -1);
-          var5 = param0.a((byte) -70, param3, var4_int);
+          var4_int = param0.getGroupId(param1, -1);
+          var5 = param0.getFileId((byte) -70, param3, var4_int);
           stackIn_4_0 = TutorialChoiceDialog.a(var5, var4_int, param0, 2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

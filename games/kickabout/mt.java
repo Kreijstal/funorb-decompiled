@@ -15,20 +15,20 @@ final class mt {
         }
         if (param0 != -43) {
           mt.a((byte) 61);
-          if (!bo.field_Cb.a("scenery", "goal_top", (byte) -10)) {
+          if (!bo.field_Cb.ensureFileAvailableByName("scenery", "goal_top", (byte) -10)) {
             return false;
           }
-          if (bo.field_Cb.a("scenery", "goal_bottom", (byte) -10)) {
+          if (bo.field_Cb.ensureFileAvailableByName("scenery", "goal_bottom", (byte) -10)) {
             IntrusiveNodeHashTable.field_g[1] = QuickChatPhraseDefinition.a("scenery", bo.field_Cb, (byte) 93, "goal_top");
             IntrusiveNodeHashTable.field_g[0] = QuickChatPhraseDefinition.a("scenery", bo.field_Cb, (byte) 127, "goal_bottom");
             return true;
           }
           return false;
         }
-        if (!bo.field_Cb.a("scenery", "goal_top", (byte) -10)) {
+        if (!bo.field_Cb.ensureFileAvailableByName("scenery", "goal_top", (byte) -10)) {
           return false;
         }
-        if (bo.field_Cb.a("scenery", "goal_bottom", (byte) -10)) {
+        if (bo.field_Cb.ensureFileAvailableByName("scenery", "goal_bottom", (byte) -10)) {
           IntrusiveNodeHashTable.field_g[1] = QuickChatPhraseDefinition.a("scenery", bo.field_Cb, (byte) 93, "goal_top");
           IntrusiveNodeHashTable.field_g[0] = QuickChatPhraseDefinition.a("scenery", bo.field_Cb, (byte) 127, "goal_bottom");
           return true;

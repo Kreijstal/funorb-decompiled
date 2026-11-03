@@ -76,11 +76,11 @@ final class AnimationClip {
     }
 
     private AnimationClip(ResourceArchive param0, int param1, String param2) {
-        this(param0, param1, param0.a((byte) -111, param2, param1));
+        this(param0, param1, param0.getFileId((byte) -111, param2, param1));
     }
 
     AnimationClip(ResourceArchive param0, String param1, String param2) {
-        this(param0, param0.b(param1, -1), param2);
+        this(param0, param0.getGroupId(param1, -1), param2);
     }
 
     public static void a(int param0) {

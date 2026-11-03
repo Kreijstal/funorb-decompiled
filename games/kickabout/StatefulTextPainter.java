@@ -196,7 +196,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           EmailSyntaxValidator.field_k = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo12", param3, "commonui"));
           gf.field_a = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14", param3, "commonui"));
           fj.field_b = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14bold", param3, "commonui"));
-          var17 = new Sprite(param0.a("", "button.gif", 34), (java.awt.Component) ((Object) ic.field_d));
+          var17 = new Sprite(param0.takeFileByName("", "button.gif", 34), (java.awt.Component) ((Object) ic.field_d));
           stackIn_3_0 = (ResourceArchive) (param3);
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param2);

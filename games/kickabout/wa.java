@@ -20,8 +20,8 @@ final class wa {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.b(param1, -1);
-          var5 = param2.a((byte) -95, param3, var4_int);
+          var4_int = param2.getGroupId(param1, -1);
+          var5 = param2.getFileId((byte) -95, param3, var4_int);
           if (param0 <= 96) {
             field_b = (String) null;
           }

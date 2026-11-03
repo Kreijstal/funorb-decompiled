@@ -32,7 +32,7 @@ final class k extends IntrusiveNode {
             PacketBuffer.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
             return -1;
           }
-          return bo.field_Cb.a("street", -16248);
+          return bo.field_Cb.getGroupProgressByName("street", -16248);
         }
         if (bo.field_Cb.a(false, "street")) {
           vk.field_b = true;
@@ -41,7 +41,7 @@ final class k extends IntrusiveNode {
           PacketBuffer.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
           return -1;
         }
-        return bo.field_Cb.a("street", -16248);
+        return bo.field_Cb.getGroupProgressByName("street", -16248);
     }
 
     public static void a(int param0) {

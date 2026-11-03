@@ -30,11 +30,11 @@ final class SoundCache {
             stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
-          var5_int = this.field_e.b(param1, -1);
+          var5_int = this.field_e.getGroupId(param1, -1);
           if (var5_int < 0) {
             return null;
           }
-          var6 = this.field_e.a((byte) -98, param0, var5_int);
+          var6 = this.field_e.getFileId((byte) -98, param0, var5_int);
           if (var6 < 0) {
             return null;
           }
@@ -257,7 +257,7 @@ final class SoundCache {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_e.a(123)) {
+          if (1 == this.field_e.getGroupCapacity(123)) {
             stackIn_3_0 = this.a(0, param2, param1, (byte) 117);
             return stackIn_3_0;
           }
@@ -293,7 +293,7 @@ final class SoundCache {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_d.a(126) == 1) {
+          if (this.field_d.getGroupCapacity(126) == 1) {
             stackIn_2_0 = this.a(param2, 0, 0, param0);
             return stackIn_2_0;
           }

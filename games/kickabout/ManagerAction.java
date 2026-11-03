@@ -218,7 +218,7 @@ final class ManagerAction extends IntrusiveNode {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.d(-55)) {
+          if (!param3.ensureIndex(-55)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }

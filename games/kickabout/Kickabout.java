@@ -685,7 +685,7 @@ public final class Kickabout extends GameLoopApplet {
           this.onStartup((byte) 116);
         }
         this.initialiseClient(1, 69, 0, 2, 18, (byte) -4, 4, true);
-        this.a(107, new GameResourceLoader());
+        this.startWithLoader(107, new GameResourceLoader());
         FullscreenFocusCanvas.a(oo.field_c, (byte) 23, (java.awt.Component) ((Object) ic.field_d));
         ListingRow.a((byte) -8, IntTripleCommand.field_A);
     }

@@ -29,7 +29,7 @@ final class ni extends IntrusiveNode {
             var3 = (String) null;
             ni.a((byte) 34, (String) null);
           }
-          stackIn_3_0 = DraggableWidget.field_J.a(param1, "", 4);
+          stackIn_3_0 = DraggableWidget.field_J.takeFileByName(param1, "", 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

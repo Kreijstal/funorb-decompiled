@@ -223,7 +223,7 @@ final class ReceivedAuctionItem extends AuctionItem {
           return -1;
         }
         if (!bo.field_Cb.a(false, "beach")) {
-          return bo.field_Cb.a("beach", -16248);
+          return bo.field_Cb.getGroupProgressByName("beach", -16248);
         }
         tc.field_s = true;
         wn.field_a = ng.a("deckchairs", "beach", 2, bo.field_Cb);

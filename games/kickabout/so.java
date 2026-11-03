@@ -71,15 +71,15 @@ final class so {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.d(-38) &&
+          if (param0.ensureIndex(-38) &&
             param0.a(false, "commonui")) {
-            if (!param2.d(-57)) {
+            if (!param2.ensureIndex(-57)) {
               return false;
             }
             if (!param2.a(false, "commonui")) {
               return false;
             }
-            if (param3.d(-124) &&
+            if (param3.ensureIndex(-124) &&
               param3.a(false, "button.gif")) {
               if (!param1) {
                 var5 = (ResourceArchive) null;

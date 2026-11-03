@@ -166,7 +166,7 @@ final class vr {
           vr.a(22);
         }
         if (!bo.field_Cb.a(false, var6)) {
-          return bo.field_Cb.a(var6, -16248);
+          return bo.field_Cb.getGroupProgressByName(var6, -16248);
         }
         cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
         if (param1 != 1) {

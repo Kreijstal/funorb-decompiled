@@ -519,7 +519,7 @@ final class TextFieldNode extends UiLayoutNode {
         int var1 = 100 / ((36 - param0) / 50);
         String var2 = "";
         if (IsSixCommand.field_E != null) {
-          var2 = IsSixCommand.field_E.a(124);
+          var2 = IsSixCommand.field_E.getUsername(124);
         }
         if (var2.length() == 0) {
           var2 = NamedValueEntry.f((byte) 99);

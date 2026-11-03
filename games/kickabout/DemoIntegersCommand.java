@@ -27,11 +27,11 @@ final class DemoIntegersCommand extends ConsoleCommand {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.b(param2, -1);
+          var4_int = param0.getGroupId(param2, -1);
           if (param1 != 17369) {
             DemoIntegersCommand.g(27);
           }
-          var5 = param0.a((byte) -121, param3, var4_int);
+          var5 = param0.getFileId((byte) -121, param3, var4_int);
           stackIn_3_0 = GoalStateAgent.a(var4_int, var5, param0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

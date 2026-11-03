@@ -61,9 +61,9 @@ final class ModalStack extends SingleChildContainer {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.b(param2, -1);
+          var4_int = param0.getGroupId(param2, -1);
           var5 = -67 % ((-81 - param1) / 38);
-          var6 = param0.a((byte) -102, param3, var4_int);
+          var6 = param0.getFileId((byte) -102, param3, var4_int);
           stackIn_1_0 = fa.a(var4_int, (byte) -89, var6, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
