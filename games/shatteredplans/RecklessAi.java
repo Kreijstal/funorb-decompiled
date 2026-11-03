@@ -116,7 +116,7 @@ final class RecklessAi extends StandardAi {
         return new int[]{16, 18};
     }
 
-    final int d(Star param0, int param1) {
+    final int starPriority(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;

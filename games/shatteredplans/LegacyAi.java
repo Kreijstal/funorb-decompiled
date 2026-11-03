@@ -7,7 +7,7 @@ class LegacyAi extends StandardAi {
     static fg field_r;
     static String field_p;
 
-    void g(int param0) {
+    void chooseTargetPlayer(int param0) {
         int var5_int = 0;
         int var11 = 0;
         int stackIn_52_0 = 0;
@@ -38,7 +38,7 @@ class LegacyAi extends StandardAi {
         var14 = var15;
         var3 = var14;
         if (param0 != -18484) {
-          this.g(93);
+          this.chooseTargetPlayer(93);
         }
         this.field_k = -1;
         var4 = new boolean[this.field_o];
@@ -112,7 +112,7 @@ class LegacyAi extends StandardAi {
         }
     }
 
-    int d(Star param0, int param1) {
+    int starPriority(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
@@ -121,7 +121,7 @@ class LegacyAi extends StandardAi {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = super.d(param0, param1);
+          var3_int = super.starPriority(param0, param1);
           if (1 != this.field_h) {
             stackIn_3_0 = var3_int;
           } else {
@@ -154,7 +154,7 @@ class LegacyAi extends StandardAi {
 
     final int a(int param0, byte param1) {
         if (param1 > -25) {
-          this.g(104);
+          this.chooseTargetPlayer(104);
         }
         return 1 != this.field_h ? param0 * 3 >> 2 : 7 * param0 >> 3;
     }

@@ -4,7 +4,7 @@
 final class th extends nq {
     private byte[][] field_H;
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -46,7 +46,7 @@ final class th extends nq {
           if (!param6) {
             th.a(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            hh.a(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
+            hh.blitGlyphRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }
@@ -79,7 +79,7 @@ final class th extends nq {
         return param1;
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;
@@ -121,13 +121,13 @@ final class th extends nq {
           if (!param7) {
             th.b(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            hh.b(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            hh.blitGlyphAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphTransposedAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;
@@ -170,13 +170,13 @@ final class th extends nq {
           if (!param7) {
             th.a(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           } else {
-            hh.a(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+            hh.blitGlyphTransposedAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           }
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyphTransposed(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -219,7 +219,7 @@ final class th extends nq {
           if (!param6) {
             th.a(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           } else {
-            hh.a(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+            hh.blitGlyphTransposedRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           }
           return;
         }

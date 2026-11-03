@@ -690,7 +690,7 @@ final class GameSession implements AiHost {
           stackIn_6_1 = this.field_P.field_A;
           stackIn_6_2 = this.field_P.field_i;
           stackIn_7_3 = (this.field_j) && (AchievementProgress.field_g);
-          ((MapView) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_7_3, 12114, param0, this.field_P.field_p);
+          ((MapView) (Object) stackIn_6_0).drawMap(stackIn_6_1, stackIn_6_2, stackIn_7_3, 12114, param0, this.field_P.field_p);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1328,7 +1328,7 @@ final class GameSession implements AiHost {
               this.a(SliderWidget.field_P, (byte) -103, PointsVictoryChecker.field_p);
             }
             this.handleMapPointer(-3587, TertiaryListSequence.field_k, bb.field_b);
-            this.field_z.a(this.field_m, 0, TertiaryListSequence.field_k, bb.field_b);
+            this.field_z.updateHoverTarget(this.field_m, 0, TertiaryListSequence.field_k, bb.field_b);
           }
           var3 = this.field_z.field_k;
           var4 = this.field_z.field_E;
@@ -2848,7 +2848,7 @@ final class GameSession implements AiHost {
         int var8 = 0;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.field_z.a(this.field_m, 0, param2, param0);
+          this.field_z.updateHoverTarget(this.field_m, 0, param2, param0);
           if (!this.field_b) {
             return;
           }
@@ -3650,7 +3650,7 @@ final class GameSession implements AiHost {
               this.e(0);
             }
             this.field_z.projectStars(false);
-            this.field_Y.n(106);
+            this.field_Y.refreshAllPanels(106);
             this.field_Y.a(-73, 0);
             this.field_N = 0;
             break;

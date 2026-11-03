@@ -20,7 +20,7 @@ final class im {
           if (WeightedLruCache.a(-128)) {
             param1 = false;
           }
-          GameScreen.a((byte) -57, param1);
+          GameScreen.drawOverlays((byte) -57, param1);
           ChatMessage.b(20975);
           return;
         }
@@ -28,7 +28,7 @@ final class im {
         if (WeightedLruCache.a(-128)) {
           param1 = false;
         }
-        GameScreen.a((byte) -57, param1);
+        GameScreen.drawOverlays((byte) -57, param1);
         ChatMessage.b(20975);
     }
 

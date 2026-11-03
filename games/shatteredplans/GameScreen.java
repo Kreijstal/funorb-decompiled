@@ -373,7 +373,7 @@ final class GameScreen {
         }
     }
 
-    final static void b(String param0, int param1) {
+    final static void runConsoleCommand(String param0, int param1) {
         int stackIn_48_0 = 0;
         RuntimeException stackIn_120_0 = null;
         StringBuilder stackIn_120_1 = null;
@@ -554,7 +554,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(byte param0, Player param1) {
+    private final void refreshDiplomacyRow(byte param0, Player param1) {
         int stackIn_16_0 = 0;
         MenuButton[] stackIn_19_0 = null;
         int stackIn_20_1 = 0;
@@ -1390,8 +1390,8 @@ final class GameScreen {
           var13 = -(var11 * 8) + var10;
           var14 = var9 - 27;
           if (this.field_p[param0] == 0) {
-            this.a(var7, 2, param4, param2 + 10, rs.field_Cb.field_J + param1 + (var14 >> 1));
-            this.a(var8, 2, param4, param2 + 10, param1 - (-rs.field_Cb.field_J - var14));
+            this.drawPlayerRow(var7, 2, param4, param2 + 10, rs.field_Cb.field_J + param1 + (var14 >> 1));
+            this.drawPlayerRow(var8, 2, param4, param2 + 10, param1 - (-rs.field_Cb.field_J - var14));
             if (var21 == 0) {
               return;
             }
@@ -1414,7 +1414,7 @@ final class GameScreen {
               var19 = 256;
             }
             var20 = rs.field_Cb.field_J + param1 + QuickChatCategoryRegistry.a(var17, 32, this.field_p[param0], var18, 0);
-            this.a(param4, var20, var16, var19, (byte) 58, 10 + param2);
+            this.drawPlayerRow(param4, var20, var16, var19, (byte) 58, 10 + param2);
             var16++;
           }
           return;
@@ -1452,7 +1452,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    private final void drawPlayerRow(int param0, int param1, int param2, int param3, byte param4, int param5) {
         Player var7 = null;
         int var8 = 0;
         if (param4 != 58) {
@@ -1575,7 +1575,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawPlayerRow(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         Player var6 = this.field_s.field_P.field_v[param0];
         if (param1 != 2) {
@@ -2102,7 +2102,7 @@ final class GameScreen {
               this.field_cb.field_z.resize(true, this.field_cb.field_z.field_y + 10, this.field_cb.field_z.field_m);
               this.field_cb.translate(-this.field_cb.field_i + var5, 0, 0);
               this.refreshProductionPanel(param1 - 15908);
-              this.i(6);
+              this.buildDiplomacyPanel(6);
               break;
             }
             var3[var5] = this.field_ab[var5];
@@ -2118,7 +2118,7 @@ final class GameScreen {
               break;
             }
             var8_ref_fs = var6[var7_int];
-            this.a((byte) -113, var8_ref_fs);
+            this.refreshDiplomacyRow((byte) -113, var8_ref_fs);
             var7_int++;
           } while (var9 == 0);
           var6_array = new int[param0.length][];
@@ -2411,7 +2411,7 @@ final class GameScreen {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawOverlays(byte param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -2557,7 +2557,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_s = param1;
-          this.i(6);
+          this.buildDiplomacyPanel(6);
           if (param0 != -33) {
             this.field_z = (boolean[]) null;
           }
@@ -2969,7 +2969,7 @@ final class GameScreen {
     final static void c(int param0) {
         try {
           if (param0 != 28164) {
-            GameScreen.a((byte) -86, true);
+            GameScreen.drawOverlays((byte) -86, true);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.VA(" + param0 + ')');
@@ -3111,7 +3111,7 @@ final class GameScreen {
         }
     }
 
-    final void n(int param0) {
+    final void refreshAllPanels(int param0) {
         RuntimeException decompiledCaughtException = null;
         Player[] var2 = null;
         RuntimeException var2_ref = null;
@@ -3127,7 +3127,7 @@ final class GameScreen {
           var2 = this.field_s.field_P.field_v;
           var3 = 0;
           if (param0 < 32) {
-            this.a(27, 32, 20, -85, 71);
+            this.drawPlayerRow(27, 32, 20, -85, 71);
           }
           do {
             if (var3 >= var2.length) {
@@ -3137,7 +3137,7 @@ final class GameScreen {
               break;
             }
             var4 = var2[var3];
-            this.a((byte) -53, var4);
+            this.refreshDiplomacyRow((byte) -53, var4);
             var3++;
           } while (var5 == 0);
           boolean decompiledFrameRemainder0 = true;
@@ -3672,7 +3672,7 @@ final class GameScreen {
         }
     }
 
-    private final void i(int param0) {
+    private final void buildDiplomacyPanel(int param0) {
         RuntimeException decompiledCaughtException = null;
         ListContent var2 = null;
         RuntimeException var2_ref = null;
@@ -3788,7 +3788,7 @@ final class GameScreen {
               break;
             }
             var4_ref_fs = var2_array[var3_int];
-            this.a((byte) -13, var4_ref_fs);
+            this.refreshDiplomacyRow((byte) -13, var4_ref_fs);
             var3_int++;
           } while (var7 == 0);
           var2_int = -63 / ((67 - param0) / 41);
@@ -4402,7 +4402,7 @@ final class GameScreen {
           discarded$23 = var4.append((char)(param1 / 10 + 48));
           discarded$24 = var4.append((char)(param1 % 10 + 48));
           if (param0) {
-            GameScreen.b((String) null, 61);
+            GameScreen.runConsoleCommand((String) null, 61);
           }
           stackIn_4_0 = var4.toString();
           return stackIn_4_0;
@@ -5075,7 +5075,7 @@ final class GameScreen {
             this.field_y.addLast((byte) -113, this.field_j);
           }
           this.field_J = FleetMove.d(28, this.field_s.field_P.field_r);
-          this.i(6);
+          this.buildDiplomacyPanel(6);
           this.field_y.addLast((byte) -113, this.field_J);
           this.field_cb = DisplayModeInfo.a(this.field_s.field_P.field_r, -1);
           this.field_y.addLast((byte) -113, this.field_cb);

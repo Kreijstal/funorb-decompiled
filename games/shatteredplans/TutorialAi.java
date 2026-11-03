@@ -8,7 +8,7 @@ final class TutorialAi extends LegacyAi {
     static String field_t;
     static String field_v;
 
-    final int a(Star param0, byte param1) {
+    final int starWeight(Star param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_8_0 = 0;
@@ -133,7 +133,7 @@ final class TutorialAi extends LegacyAi {
         field_v = null;
     }
 
-    final int d(Star param0, int param1) {
+    final int starPriority(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
@@ -162,7 +162,7 @@ final class TutorialAi extends LegacyAi {
         }
     }
 
-    final void g(int param0) {
+    final void chooseTargetPlayer(int param0) {
         int var3 = 0;
         int var6 = 0;
         int[] stackIn_27_0 = null;
@@ -344,7 +344,7 @@ final class TutorialAi extends LegacyAi {
         int var7;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= -29) {
-          this.g(-98);
+          this.chooseTargetPlayer(-98);
         }
         var3 = 0;
         var4 = mj.field_yb.firstStar(18229);

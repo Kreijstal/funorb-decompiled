@@ -87,7 +87,7 @@ final class DefensiveAi extends StandardAi {
         }
     }
 
-    final int d(Star param0, int param1) {
+    final int starPriority(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Star var4 = null;
@@ -170,7 +170,7 @@ final class DefensiveAi extends StandardAi {
           var5Lifetime1 = 0;
           if (param0 >= -14) {
             var11 = (Star) null;
-            this.d((Star) null, 93);
+            this.starPriority((Star) null, 93);
           }
           while (var5Lifetime1 < var15.length) {
             var16 = var15[var5Lifetime1];
