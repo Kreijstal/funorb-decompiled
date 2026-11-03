@@ -207,7 +207,7 @@ abstract class MapViewState {
             return;
           }
           if (this.field_fb != param0) {
-            var3_int = this.field_o.d((byte) 14);
+            var3_int = this.field_o.getAreaHeight((byte) 14);
             var4_int = 320;
             var5 = var3_int / 2;
             var6_ref_ln = param0.firstStar(18229);
@@ -231,7 +231,7 @@ abstract class MapViewState {
             }
           }
           var10 = this.territoryBounds(22770, param0);
-          var4 = this.field_o.b((byte) 57);
+          var4 = this.field_o.getMapBounds((byte) 57);
           var5Lifetime1 = -var4.field_l + var4.field_o;
           var6 = var4.field_i - var4.field_q;
           var7 = (float)((var10.field_o - var10.field_l) / var5Lifetime1);
@@ -245,7 +245,7 @@ abstract class MapViewState {
           var8 = (float)(var4.field_l + var4.field_o - 640 >> 1);
           var8 = var8 * var7;
           this.field_f = -var8 + (float)(var10.field_o + var10.field_l >> 1);
-          var8Lifetime1 = (float)(var4.field_q + var4.field_i - this.field_o.d((byte) 14) >> 1);
+          var8Lifetime1 = (float)(var4.field_q + var4.field_i - this.field_o.getAreaHeight((byte) 14) >> 1);
           var8Lifetime1 = var8Lifetime1 * var7;
           this.field_x = true;
           this.field_fb = param0;
@@ -449,7 +449,7 @@ abstract class MapViewState {
         BoundsRect var3 = null;
         float var4 = 0.0f;
         try {
-          var3 = this.field_o.b((byte) 51);
+          var3 = this.field_o.getMapBounds((byte) 51);
           var4 = 24000.0f / (float)(var3.field_o - var3.field_l) - 3.0f * (float)param0.field_z;
           if (var4 < this.field_g) {
             var4 = this.field_g;
@@ -540,14 +540,14 @@ abstract class MapViewState {
         BoundsRect var6 = null;
         float var5Lifetime1;
         try {
-          var6 = this.field_o.b((byte) 52);
+          var6 = this.field_o.getMapBounds((byte) 52);
           var5 = (float)(-640 + var6.field_o + var6.field_l >> 1);
           var5 = var5 * (((float)param1.field_z + param2) / 300.0f);
           this.field_f = -var5 + (float)param1.field_A;
           if (0.0f > this.field_f) {
             this.field_f = 0.0f;
           }
-          var5Lifetime1 = (float)(var6.field_i + (var6.field_q - this.field_o.d((byte) 14)) >> 1);
+          var5Lifetime1 = (float)(var6.field_i + (var6.field_q - this.field_o.getAreaHeight((byte) 14)) >> 1);
           var5Lifetime1 = var5Lifetime1 * ((param2 + (float)param1.field_z) / 300.0f);
           this.field_lb = (float)param1.field_S - var5Lifetime1;
           this.field_H = param2;
@@ -695,7 +695,7 @@ abstract class MapViewState {
                 }
                 var5 = param1.nextForward((byte) -71);
               }
-              this.field_o.a(10, 0, sr.field_N);
+              this.field_o.showStatusText(10, 0, sr.field_N);
             }
           } else {
             if (param0 == 1) {
@@ -718,13 +718,13 @@ abstract class MapViewState {
                 var4_ref.c(true);
                 var4_ref = (BattleSnapshot) (this.field_m.nextForward((byte) -71));
               }
-              this.field_o.a(10, 0, pd.field_g);
+              this.field_o.showStatusText(10, 0, pd.field_g);
             } else {
               if (param0 != 2) {
                 if (param0 != 3) {
                   if (param0 == -1) {
                     this.setDisplayState(this.field_G, true, this.field_w, this.field_q, true);
-                    this.field_o.a(10, 0, (String) null);
+                    this.field_o.showStatusText(10, 0, (String) null);
                   }
                 } else {
                   if (this.field_C) {
@@ -740,7 +740,7 @@ abstract class MapViewState {
                       var4 = param1.nextForward((byte) -71);
                     }
                   }
-                  this.field_o.a(10, 0, md.field_G);
+                  this.field_o.showStatusText(10, 0, md.field_G);
                 }
               } else {
                 if (this.field_C) {
@@ -768,7 +768,7 @@ abstract class MapViewState {
                     var5 = param1.nextForward((byte) -71);
                   }
                 }
-                this.field_o.a(10, 0, MouseWheelInput.field_b);
+                this.field_o.showStatusText(10, 0, MouseWheelInput.field_b);
               }
             }
           }
@@ -809,7 +809,7 @@ abstract class MapViewState {
         int var5Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = 320;
-        var3 = this.field_o.d((byte) 14) / 2;
+        var3 = this.field_o.getAreaHeight((byte) 14) / 2;
         if (this.field_D == null ||
           this.field_O.field_e.length != this.field_D.length) {
           var4_int = this.field_O.field_e.length;

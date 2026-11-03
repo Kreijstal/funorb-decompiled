@@ -289,11 +289,11 @@ final class DiskCacheWorker implements Runnable {
         if (lg.field_b) {
           if (null != ce.field_x &&
             ce.field_x.field_Y != null) {
-            ce.field_x.field_Y.i((byte) -47);
+            ce.field_x.field_Y.disposeWidgets((byte) -47);
           }
           if (null != SecondaryNodeHashTable.field_g &&
             SecondaryNodeHashTable.field_g.field_Y != null) {
-            SecondaryNodeHashTable.field_g.field_Y.i((byte) -47);
+            SecondaryNodeHashTable.field_g.field_Y.disposeWidgets((byte) -47);
           }
           lg.field_b = false;
           ce.field_x = null;

@@ -962,7 +962,7 @@ final class GameSession implements AiHost {
             this.field_P.declareWinner(var2_intLifetime2, 3);
             ta.a(0, -1, (byte) 96, false);
             this.field_b = false;
-            this.field_Y.o(-4956);
+            this.field_Y.hidePanels(-4956);
             boolean decompiledSharedTail0 = ((this.field_n == null ||
               (this.field_P.field_w & 1 << this.field_h) == 0) &&
               !(this.field_P.field_x.isLoser((byte) 123, this.field_n)));
@@ -1129,7 +1129,7 @@ final class GameSession implements AiHost {
         try {
           this.field_Q = new TurnEventLog();
           this.field_z.captureStarState(false);
-          var3 = this.c((byte) 44);
+          var3 = this.shipsPerPlayer((byte) 44);
           this.field_P.processTurn(param0, 1, this.field_Q, (AchievementProgress) null);
           this.field_z.clearReplay(0);
           var4 = this.field_Q.field_a.startForward(0);
@@ -1409,7 +1409,7 @@ final class GameSession implements AiHost {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
             var6Lifetime1 = 320;
-            var7Lifetime1 = this.field_Y.d((byte) 14) / 2;
+            var7Lifetime1 = this.field_Y.getAreaHeight((byte) 14) / 2;
             var8 = var3 + (float)(pd.field_k - var6Lifetime1) * this.field_z.field_I / 300.0f;
             var9 = (float)(bb.field_b - var7Lifetime1) * this.field_z.field_I / 300.0f + var4;
             if (0 >= so.field_o) {
@@ -3079,7 +3079,7 @@ final class GameSession implements AiHost {
               }
             }
             this.field_z.endReplay(-18641);
-            this.a(this.field_z.field_p, -83);
+            this.placeUnplacedFleets(this.field_z.field_p, -83);
             if (this.field_x > 3) {
               var5_int = this.field_x - 3;
               var6 = 96 >> (var5_int >> 1);
@@ -3308,7 +3308,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_14_1 = this.field_Q.field_a;
           }
-          ((MapView) (Object) stackIn_13_0).a(stackIn_14_1, 66);
+          ((MapView) (Object) stackIn_13_0).tick(stackIn_14_1, 66);
           scanLoop1: while (true) {
             if (null != this.field_E) {
               stackIn_24_0 = cl.field_n - this.field_E.field_c;
@@ -3683,7 +3683,7 @@ final class GameSession implements AiHost {
           }
           ta.a(stackIn_88_0, stackIn_88_1, (byte) 96, false);
           this.field_b = false;
-          this.field_Y.o(-4956);
+          this.field_Y.hidePanels(-4956);
           if ((this.field_n == null ||
             (1 << this.field_h & this.field_P.field_w) == 0) && !this.field_P.field_x.isLoser((byte) -123, this.field_n)) {
             if (this.field_P.field_z) {
@@ -3904,7 +3904,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(Star param0, int param1) {
+    private final void placeUnplacedFleets(Star param0, int param1) {
         int stackIn_12_0 = 0;
         int stackIn_58_0 = 0;
         Star stackIn_65_0 = null;
@@ -4042,7 +4042,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final int[] c(byte param0) {
+    private final int[] shipsPerPlayer(byte param0) {
         int stackIn_16_0 = 0;
         int stackIn_16_1 = 0;
         int[] stackIn_37_0 = null;

@@ -45,7 +45,7 @@ final class MapView extends MapViewState {
           this.e(param0, -29952);
           this.b(param0, -29496);
           if (this.field_I < 1024.0f) {
-            this.d(param0, 10);
+            this.drawProjectIcons(param0, 10);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "tr.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -98,7 +98,7 @@ final class MapView extends MapViewState {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 29201) {
           var8 = (Player[]) null;
-          this.a(-13, (Player[]) null);
+          this.setPlayers(-13, (Player[]) null);
         }
         if (!(this.field_I > 1024.0f)) {
           var17 = this.field_O.field_e;
@@ -655,7 +655,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    final void a(IntrusiveDeque param0, int param1) {
+    final void tick(IntrusiveDeque param0, int param1) {
         int fieldTemp$0 = 0;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_23_0 = null;
@@ -695,7 +695,7 @@ final class MapView extends MapViewState {
               var3.unlink((byte) -82);
             }
             var4 = 320;
-            var5 = this.field_o.d((byte) 14) / 2;
+            var5 = this.field_o.getAreaHeight((byte) 14) / 2;
             var6 = var3.field_h.field_p;
             var7 = this.field_i[var6] - var4;
             var8 = -var5 + this.field_J[var6];
@@ -1346,15 +1346,15 @@ final class MapView extends MapViewState {
         }
     }
 
-    final void a(int param0, Player[] param1) {
+    final void setPlayers(int param0, Player[] param1) {
         try {
           this.field_ib = param1;
           if (param0 >= -123) {
             Star var4 = (Star) null;
-            this.d((Star) null, -124);
+            this.drawProjectIcons((Star) null, -124);
           }
           this.field_cb = new int[this.field_ib.length][];
-          this.j(0);
+          this.buildPlayerSprites(0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "tr.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1488,7 +1488,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void j(int param0) {
+    private final void buildPlayerSprites(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var5 = 0;
@@ -1865,7 +1865,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void d(Star param0, int param1) {
+    private final void drawProjectIcons(Star param0, int param1) {
         int var6 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -2740,7 +2740,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final FleetMove c(int param0, int param1, byte param2) {
+    private final FleetMove findFleetAt(int param0, int param1, byte param2) {
         int var6 = 0;
         FleetMove var4;
         Star[] var5;
@@ -2883,7 +2883,7 @@ final class MapView extends MapViewState {
     private final void a(int param0, int param1, int param2) {
         FleetMove discarded$0 = null;
         if (param2 != 150) {
-          discarded$0 = this.c(112, 127, (byte) 21);
+          discarded$0 = this.findFleetAt(112, 127, (byte) 21);
         }
         this.a(this.field_v, false, true, true);
         this.a(this.field_v, true, true, true);
@@ -2910,7 +2910,7 @@ final class MapView extends MapViewState {
         if (!param0) {
           this.b((byte) 104);
         }
-        var2 = this.field_o.d((byte) 14) >> 1;
+        var2 = this.field_o.getAreaHeight((byte) 14) >> 1;
         var5 = (so) (this.field_Y.startForward(0));
         while (var5 != null) {
           if (6 <= var5.field_u) {
@@ -3116,7 +3116,7 @@ final class MapView extends MapViewState {
         }
         if (1 != param0 &&
           param0 != 7) {
-          this.field_S = this.c(param3, param2, (byte) 111);
+          this.field_S = this.findFleetAt(param3, param2, (byte) 111);
           if (this.field_S != null) {
             this.field_p = null;
             return;
@@ -3140,9 +3140,9 @@ final class MapView extends MapViewState {
             }
             if (-1 == this.field_T) {
               if (var5 == null) {
-                this.field_o.a(10, 0, ub.field_Bb);
+                this.field_o.showStatusText(10, 0, ub.field_Bb);
               } else {
-                this.field_o.a(10, 0, re.a(vo.field_c, 4371, new String[]{or.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
+                this.field_o.showStatusText(10, 0, re.a(vo.field_c, 4371, new String[]{or.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
               }
             }
           }
@@ -3516,7 +3516,7 @@ final class MapView extends MapViewState {
           this.field_X = stackIn_4_1;
           this.field_B = param2;
           this.field_cb = new int[this.field_ib.length][];
-          this.j(0);
+          this.buildPlayerSprites(0);
           this.field_E = (float)(this.field_O.field_b / 2);
           this.field_g = 200.0f;
           this.field_I = 300.0f;

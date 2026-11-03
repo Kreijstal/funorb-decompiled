@@ -235,7 +235,7 @@ final class no {
             }
             if (var5 != null) {
               oq.field_a.addPlayer(2, (Player) (var5));
-              oq.field_a.field_z.a(-128, oq.field_a.field_P.field_v);
+              oq.field_a.field_z.setPlayers(-128, oq.field_a.field_P.field_v);
               oq.field_a.field_Y.a(oq.field_a.field_P.field_v, 1);
               uq.field_m.a(re.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);
             }

@@ -174,7 +174,7 @@ final class GameScreen {
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
-              this.a(10, 0, ub.field_Bb);
+              this.showStatusText(10, 0, ub.field_Bb);
               if (var9 == 0) {
                 return;
               }
@@ -186,7 +186,7 @@ final class GameScreen {
               (decompiledFrameRemainder3) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, gi.field_b);
+              this.showStatusText(10, 0, gi.field_b);
               if (var9 == 0) {
                 return;
               }
@@ -197,7 +197,7 @@ final class GameScreen {
               (decompiledFrameRemainder4) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, re.a(wp.field_c, 4371, new String[]{this.field_s.field_c.field_q.name, Integer.toString(this.field_s.field_c.field_x)}));
+              this.showStatusText(10, 0, re.a(wp.field_c, 4371, new String[]{this.field_s.field_c.field_q.name, Integer.toString(this.field_s.field_c.field_x)}));
               if (var9 == 0) {
                 return;
               }
@@ -207,7 +207,7 @@ final class GameScreen {
               (decompiledFrameRemainder5) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, WeightedLruCache.field_l);
+              this.showStatusText(10, 0, WeightedLruCache.field_l);
               if (var9 == 0) {
                 return;
               }
@@ -216,7 +216,7 @@ final class GameScreen {
               (decompiledFrameRemainder6) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, DerelictMapReader.field_c);
+              this.showStatusText(10, 0, DerelictMapReader.field_c);
               if (var9 == 0) {
                 return;
               }
@@ -224,25 +224,25 @@ final class GameScreen {
             if ((decompiledFrameRemainder7) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, SocketConnector.field_e);
+              this.showStatusText(10, 0, SocketConnector.field_e);
               if (var9 == 0) {
                 return;
               }
             }
             if ((decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, DialPainter.field_f);
+              this.showStatusText(10, 0, DialPainter.field_f);
               if (var9 == 0) {
                 return;
               }
             }
             if (decompiledFrameRemainder2) {
-              this.a(10, 0, TextFieldValidator.field_k);
+              this.showStatusText(10, 0, TextFieldValidator.field_k);
               if (var9 == 0) {
                 return;
               }
             }
-            this.a(10, 0, (String) null);
+            this.showStatusText(10, 0, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1425,7 +1425,7 @@ final class GameScreen {
         }
     }
 
-    final void o(int param0) {
+    final void hidePanels(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1632,7 +1632,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0) {
+    private final void buildProjectButtons(int param0) {
         RuntimeException runtimeException = null;
         rh var2 = null;
         int var3 = 0;
@@ -1646,7 +1646,7 @@ final class GameScreen {
           this.field_S.d(false);
           var2 = (rh) (this.field_j.field_x);
           if (param0 != 428) {
-            this.a(95, (Territory) null, true);
+            this.selectTerritory(95, (Territory) null, true);
           }
           var3 = 0;
           while (4 > var3) {
@@ -2044,7 +2044,7 @@ final class GameScreen {
             var3.field_b[param0].a((byte) -88, EmailValidator.field_v);
           }
           if (param1 <= 126) {
-            this.a(-90);
+            this.buildProjectButtons(-90);
           }
           var4 = var3.field_c[param0];
           var4.field_o = mm.field_q;
@@ -2228,10 +2228,10 @@ final class GameScreen {
             gf.a(MusicCrossfadeStream.field_F.field_z * 3 + 521, 4, rk.field_j.field_z, -2 + rs.field_Cb.field_J, 2, 0, 128);
             var2_int = (this.field_s.field_S + 49) / 50;
             if (this.field_s.field_S < 0) {
-              rs.field_Cb.drawCentred(this.a(false, Math.abs(var2_int)), 521 + MusicCrossfadeStream.field_F.field_z * 3 + rk.field_j.field_z / 2, rs.field_Cb.field_J * 3 / 4 + 3, 16711680, -1);
+              rs.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), 521 + MusicCrossfadeStream.field_F.field_z * 3 + rk.field_j.field_z / 2, rs.field_Cb.field_J * 3 / 4 + 3, 16711680, -1);
             }
             if (AgeValidator.field_o[this.field_s.field_P.field_J] <= (3 * this.field_s.field_S)) {
-              rs.field_Cb.drawCentred(this.a(false, Math.abs(var2_int)), rk.field_j.field_z / 2 + 3 * MusicCrossfadeStream.field_F.field_z + 521, rs.field_Cb.field_J * 3 / 4 + 3, 16777215, -1);
+              rs.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), rk.field_j.field_z / 2 + 3 * MusicCrossfadeStream.field_F.field_z + 521, rs.field_Cb.field_J * 3 / 4 + 3, 16777215, -1);
               decompiledFrameRemainder0 = (var12 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -2239,10 +2239,10 @@ final class GameScreen {
               if (30 > var3_int) {
                 if ((!(var3_int >= 20)) &&
                   (!(var3_int < 10))) {
-                  rs.field_Cb.drawCentred(this.a(false, Math.abs(var2_int)), MusicCrossfadeStream.field_F.field_z * 3 + 521 + rk.field_j.field_z / 2, 3 * rs.field_Cb.field_J / 4 + 3, 3974311, -1);
+                  rs.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), MusicCrossfadeStream.field_F.field_z * 3 + 521 + rk.field_j.field_z / 2, 3 * rs.field_Cb.field_J / 4 + 3, 3974311, -1);
                 }
               } else {
-                rs.field_Cb.drawCentred(this.a(false, Math.abs(var2_int)), MusicCrossfadeStream.field_F.field_z * 3 + 521 + rk.field_j.field_z / 2, 3 * rs.field_Cb.field_J / 4 + 3, 3974311, -1);
+                rs.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), MusicCrossfadeStream.field_F.field_z * 3 + 521 + rk.field_j.field_z / 2, 3 * rs.field_Cb.field_J / 4 + 3, 3974311, -1);
               }
             }
           }
@@ -2576,7 +2576,7 @@ final class GameScreen {
         }
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void showStatusText(int param0, int param1, String param2) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -2773,7 +2773,7 @@ final class GameScreen {
         }
     }
 
-    final int d(byte param0) {
+    final int getAreaHeight(byte param0) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
@@ -3048,7 +3048,7 @@ final class GameScreen {
         }
     }
 
-    final void i(byte param0) {
+    final void disposeWidgets(byte param0) {
         RuntimeException runtimeException = null;
         vd var2 = null;
         int var3 = 0;
@@ -3122,7 +3122,7 @@ final class GameScreen {
         try {
           this.f(-15907);
           if (null != this.field_j) {
-            this.a(428);
+            this.buildProjectButtons(428);
           }
           var2 = this.field_s.field_P.field_v;
           var3 = 0;
@@ -3551,7 +3551,7 @@ final class GameScreen {
                   if (2 != this.field_s.field_m ||
                     this.field_s.field_c != var7) {
                     if (!(var7.field_x <= 0)) {
-                      this.a(-2, var7, false);
+                      this.selectTerritory(-2, var7, false);
                     }
                     decompiledFrameRemainder3 = false;
                   }
@@ -3762,11 +3762,11 @@ final class GameScreen {
             var2.field_e.a(-2948, (Sprite) null);
             boolean decompiledSharedTail1 = (this.field_s.field_N != 1);
             if (!decompiledSharedTail1) {
-              this.a(10, 0, il.field_Y);
+              this.showStatusText(10, 0, il.field_Y);
               decompiledSharedTail1 = (var7 != 0);
             }
             if (decompiledSharedTail1) {
-              this.a(10, 0, re.a(NanoFrameTimer.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
+              this.showStatusText(10, 0, re.a(NanoFrameTimer.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
             }
             if (var7 != 0) {
               this.field_bb.d(false);
@@ -3783,7 +3783,7 @@ final class GameScreen {
                 this.b(15);
               }
               rh.b((byte) -127);
-              this.field_V.a((byte) 68, this.field_V.field_k, this.d((byte) 14) - this.field_V.field_i / 2);
+              this.field_V.a((byte) 68, this.field_V.field_k, this.getAreaHeight((byte) 14) - this.field_V.field_i / 2);
               this.field_K.a((byte) 45, this.field_K.field_k, this.field_V.field_t);
               break;
             }
@@ -4381,7 +4381,7 @@ final class GameScreen {
         }
     }
 
-    private final String a(boolean param0, int param1) {
+    private final String formatMinutesSeconds(boolean param0, int param1) {
         StringBuilder discarded$20 = null;
         StringBuilder discarded$21 = null;
         StringBuilder discarded$22 = null;
@@ -4413,7 +4413,7 @@ final class GameScreen {
         }
     }
 
-    final BoundsRect b(byte param0) {
+    final BoundsRect getMapBounds(byte param0) {
         IntrusiveDeque stackIn_8_0;
         int stackIn_8_1;
         BoundsRect stackIn_8_2;
@@ -4678,7 +4678,7 @@ final class GameScreen {
             stackIn_40_1 = -15907;
           }
           if (stackIn_40_0 != stackIn_40_1) {
-            this.b((byte) 96);
+            this.getMapBounds((byte) 96);
           }
           var3_ref_fs__ = this.field_s.field_P.field_v;
           var4 = 0;
@@ -4777,7 +4777,7 @@ final class GameScreen {
                   break;
                 }
                 if (stackIn_28_0 > stackIn_28_1) {
-                  this.a(-2, var3, true);
+                  this.selectTerritory(-2, var3, true);
                   return;
                 }
                 var3 = (Territory) (this.field_s.field_n.field_i.nextForward((byte) -71));
@@ -4787,7 +4787,7 @@ final class GameScreen {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (this.field_s.field_n.field_m.field_x > 0)) {
-              this.a(-2, this.field_s.field_n.field_m, true);
+              this.selectTerritory(-2, this.field_s.field_n.field_m, true);
               return;
             }
           }
@@ -4799,12 +4799,12 @@ final class GameScreen {
             stackIn_28_1 = 1;
           }
           if (stackIn_28_0 != stackIn_28_1) {
-            this.a(10, 0, re.a(NanoFrameTimer.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
+            this.showStatusText(10, 0, re.a(NanoFrameTimer.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
             if (var4 == 0) {
               return;
             }
           }
-          this.a(10, 0, il.field_Y);
+          this.showStatusText(10, 0, il.field_Y);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4935,7 +4935,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0, Territory param1, boolean param2) {
+    private final void selectTerritory(int param0, Territory param1, boolean param2) {
         StringBuilder stackIn_17_0 = null;
         String stackIn_18_1 = null;
         StringBuilder stackIn_30_0 = null;
