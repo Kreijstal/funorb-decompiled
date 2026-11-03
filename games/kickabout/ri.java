@@ -271,15 +271,15 @@ class ri extends TextWidgetPainter {
           hl.field_f.field_vb = wa.a((byte) 114, "lobby", param4, "closebutton_mouseover");
           oi.field_i = new UiLayoutNode(0L, var8);
           oi.field_i.field_R = NotCommand.a(40, true, 3815994, 2039583, true, (byte) -46);
-          dn.field_zb = new UiLayoutNode(0L, var10);
-          dn.field_zb.field_kb = 2;
-          dn.field_zb.field_R = NotCommand.a(30, false, 3815994, 2039583, true, (byte) -46);
+          TrinketIcon.field_zb = new UiLayoutNode(0L, var10);
+          TrinketIcon.field_zb.field_kb = 2;
+          TrinketIcon.field_zb.field_R = NotCommand.a(30, false, 3815994, 2039583, true, (byte) -46);
           gw.field_a = new UiLayoutNode(0L, var10);
           gw.field_a.field_kb = 2;
           gw.field_a.field_R = NotCommand.a(30, false, 3815994, 2039583, false, (byte) -46);
-          pq.field_P = new UiLayoutNode(0L, var10);
-          pq.field_P.field_kb = 2;
-          pq.field_P.field_R = NotCommand.a(30, true, 3815994, 2039583, false, (byte) -46);
+          SquadPickerDialog.field_P = new UiLayoutNode(0L, var10);
+          SquadPickerDialog.field_P.field_kb = 2;
+          SquadPickerDialog.field_P.field_R = NotCommand.a(30, true, 3815994, 2039583, false, (byte) -46);
           ConsoleEvaluationException.field_e = new UiLayoutNode(0L, (UiLayoutNode) null);
           ConsoleEvaluationException.field_e.field_X = (BitmapFont) ((Object) ServerMessageScreen.field_E);
           ConsoleEvaluationException.field_e.field_y = 13421772;
@@ -301,12 +301,12 @@ class ri extends TextWidgetPainter {
           kr.field_b = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           kr.field_b.field_R = NotCommand.a(16, false, 1513239, 1513239, false, (byte) -46);
           kr.field_b.field_kb = 2;
-          pw.field_J = new UiLayoutNode(0L, ip.field_c);
-          pw.field_J.a(ul.field_c, (byte) -100);
+          AuctionSettingsDialog.field_J = new UiLayoutNode(0L, ip.field_c);
+          AuctionSettingsDialog.field_J.a(ul.field_c, (byte) -100);
           mp.field_f = new UiLayoutNode(0L, kr.field_b);
           mp.field_f.a(ul.field_c, (byte) -85);
           var16 = ModalStack.a(param4, 108, "lobby", "button_mouseover");
-          su.field_b = new gu(pn.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
+          su.field_b = new ContextMenu(pn.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
           MouseWheelInput.field_e = new UiLayoutNode(0L, ul.field_c);
           MouseWheelInput.field_e.field_R = var13;
           MouseWheelInput.field_e.field_eb = 1;
@@ -327,13 +327,13 @@ class ri extends TextWidgetPainter {
           MouseInputHandler.field_b.field_R = fs.a(206, 3, -1, 1856141, 1127256, (byte) 91);
           cp.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
           cp.field_g.field_R = fs.a(290, 3, -1, 11579568, 6052956, (byte) 118);
-          vg.field_Qb = new UiLayoutNode(0L, var15);
-          vg.field_Qb.field_A = 1;
-          vg.field_Qb.field_eb = 1;
-          vg.field_Qb.field_cb = 1;
-          vg.field_Qb.field_x = 1;
-          vg.field_Qb.field_O = 1;
-          dc.field_a = new UiLayoutNode(0L, vg.field_Qb);
+          TextFieldNode.field_Qb = new UiLayoutNode(0L, var15);
+          TextFieldNode.field_Qb.field_A = 1;
+          TextFieldNode.field_Qb.field_eb = 1;
+          TextFieldNode.field_Qb.field_cb = 1;
+          TextFieldNode.field_Qb.field_x = 1;
+          TextFieldNode.field_Qb.field_O = 1;
+          dc.field_a = new UiLayoutNode(0L, TextFieldNode.field_Qb);
           um.field_d = new UiLayoutNode(0L, ul.field_c);
           um.field_d.field_cb = 1;
           um.field_d.field_O = 1;
@@ -342,8 +342,8 @@ class ri extends TextWidgetPainter {
           um.field_d.field_eb = 1;
           LoggedPlayer.field_r = new UiLayoutNode(0L, um.field_d);
           DisplayNameForm.field_F = new UiLayoutNode(0L, um.field_d);
-          LongPlusOneCommand.field_D = new UiLayoutNode(0L, vg.field_Qb);
-          kn.field_F = new UiLayoutNode(0L, um.field_d);
+          LongPlusOneCommand.field_D = new UiLayoutNode(0L, TextFieldNode.field_Qb);
+          TrinketPickerDialog.field_F = new UiLayoutNode(0L, um.field_d);
           nj.field_d = new UiLayoutNode(0L, um.field_d);
           k.field_f = new UiLayoutNode(0L, um.field_d);
           um.field_d.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "smallbutton"), (byte) 47);
@@ -355,10 +355,10 @@ class ri extends TextWidgetPainter {
           dc.field_a.field_R = ClientException.a(ModalStack.a(param4, -31, "lobby", "mediumbutton"), (byte) -25);
           dc.field_a.field_S = ClientException.a(ModalStack.a(param4, -122, "lobby", "mediumbutton_mouseover"), (byte) 52);
           dc.field_a.field_rb = ClientException.a(ModalStack.a(param4, 62, "lobby", "mediumbutton_mouseheld"), (byte) 87);
-          vg.field_Qb.field_R = ClientException.a(ModalStack.a(param4, 87, "lobby", "bigbutton"), (byte) 7);
-          vg.field_Qb.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "bigbutton_mouseover"), (byte) -127);
-          vg.field_Qb.field_rb = ClientException.a(ModalStack.a(param4, 29, "lobby", "bigbutton_mouseheld"), (byte) -103);
-          vg.field_Qb.field_tb = ClientException.a(ModalStack.a(param4, -123, "lobby", "bigbutton_disabled"), (byte) 126);
+          TextFieldNode.field_Qb.field_R = ClientException.a(ModalStack.a(param4, 87, "lobby", "bigbutton"), (byte) 7);
+          TextFieldNode.field_Qb.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "bigbutton_mouseover"), (byte) -127);
+          TextFieldNode.field_Qb.field_rb = ClientException.a(ModalStack.a(param4, 29, "lobby", "bigbutton_mouseheld"), (byte) -103);
+          TextFieldNode.field_Qb.field_tb = ClientException.a(ModalStack.a(param4, -123, "lobby", "bigbutton_disabled"), (byte) 126);
           LoggedPlayer.field_r.field_R = ClientException.a(ModalStack.a(param4, -10, "lobby", "greenbutton"), (byte) 25);
           LoggedPlayer.field_r.field_S = ClientException.a(ModalStack.a(param4, 92, "lobby", "greenbutton_mouseover"), (byte) -112);
           LoggedPlayer.field_r.field_rb = ClientException.a(ModalStack.a(param4, -39, "lobby", "greenbutton_mouseheld"), (byte) -26);
@@ -375,23 +375,23 @@ class ri extends TextWidgetPainter {
           k.field_f.field_u = dupTemp$1;
           k.field_f.field_rb = dupTemp$1;
           k.field_f.field_tb = ClientException.a(ModalStack.a(param4, 63, "lobby", "gameoptionbutton_disabled"), (byte) -109);
-          kn.field_F.field_R = ClientException.a(ModalStack.a(param4, 31, "lobby", "chatbutton"), (byte) -113);
-          kn.field_F.field_S = ClientException.a(ModalStack.a(param4, -127, "lobby", "chatbutton_mouseover"), (byte) 74);
+          TrinketPickerDialog.field_F.field_R = ClientException.a(ModalStack.a(param4, 31, "lobby", "chatbutton"), (byte) -113);
+          TrinketPickerDialog.field_F.field_S = ClientException.a(ModalStack.a(param4, -127, "lobby", "chatbutton_mouseover"), (byte) 74);
           dupTemp$2 = ClientException.a(ModalStack.a(param4, 11, "lobby", "chatbutton_active"), (byte) -124);
-          kn.field_F.field_u = dupTemp$2;
-          kn.field_F.field_rb = dupTemp$2;
+          TrinketPickerDialog.field_F.field_u = dupTemp$2;
+          TrinketPickerDialog.field_F.field_rb = dupTemp$2;
           nj.field_d.field_R = ClientException.a(ModalStack.a(param4, -123, "lobby", "chatfilterbutton"), (byte) 9);
           nj.field_d.field_S = ClientException.a(ModalStack.a(param4, -127, "lobby", "chatfilterbutton_mouseover"), (byte) 33);
           dupTemp$3 = ClientException.a(ModalStack.a(param4, -123, "lobby", "chatfilterbutton_active"), (byte) -121);
           nj.field_d.field_u = dupTemp$3;
           nj.field_d.field_rb = dupTemp$3;
           var17 = ModalStack.a(param4, -121, "lobby", "checkbox");
-          MatchPhaseView.field_d = new om(0L, var17[1], var17[0], 1, ul.field_c, (String) null);
-          np.field_Hb = new UiLayoutNode(0L, (UiLayoutNode) null);
-          np.field_Hb.field_R = kh.a((byte) -83, wa.a((byte) 98, "lobby", param4, "slideregion"));
-          np.field_Hb.field_S = kh.a((byte) -96, wa.a((byte) 113, "lobby", param4, "slideregion_mouseover"));
-          np.field_Hb.field_rb = kh.a((byte) -86, wa.a((byte) 116, "lobby", param4, "slideregion_mouseheld"));
-          np.field_Hb.field_tb = kh.a((byte) -108, wa.a((byte) 127, "lobby", param4, "slideregion_disabled"));
+          MatchPhaseView.field_d = new IconLabel(0L, var17[1], var17[0], 1, ul.field_c, (String) null);
+          ScrollPane.field_Hb = new UiLayoutNode(0L, (UiLayoutNode) null);
+          ScrollPane.field_Hb.field_R = kh.a((byte) -83, wa.a((byte) 98, "lobby", param4, "slideregion"));
+          ScrollPane.field_Hb.field_S = kh.a((byte) -96, wa.a((byte) 113, "lobby", param4, "slideregion_mouseover"));
+          ScrollPane.field_Hb.field_rb = kh.a((byte) -86, wa.a((byte) 116, "lobby", param4, "slideregion_mouseheld"));
+          ScrollPane.field_Hb.field_tb = kh.a((byte) -108, wa.a((byte) 127, "lobby", param4, "slideregion_disabled"));
           ts.field_a = new UiLayoutNode(0L, (UiLayoutNode) null);
           ts.field_a.field_R = ClientException.a(ModalStack.a(param4, 108, "lobby", "dragbar"), (byte) 8);
           ts.field_a.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "dragbar_mouseover"), (byte) -24);
@@ -407,7 +407,7 @@ class ri extends TextWidgetPainter {
           ci.field_b.field_vb = wa.a((byte) 108, "lobby", param4, "downbutton_mouseover");
           ci.field_b.field_r = wa.a((byte) 115, "lobby", param4, "downbutton_mouseheld");
           ci.field_b.field_t = wa.a((byte) 119, "lobby", param4, "downbutton_disabled");
-          uk.field_b = new na(0L, sd.field_a, ci.field_b, np.field_Hb, ts.field_a);
+          uk.field_b = new VerticalScrollbar(0L, sd.field_a, ci.field_b, ScrollPane.field_Hb, ts.field_a);
           BroadcastServerCommand.field_D = new al(0L, (UiLayoutNode) null, rj.field_b, uk.field_b, um.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -637,7 +637,7 @@ class ri extends TextWidgetPainter {
             } else {
               stackIn_23_0 = GoalStateAgent.field_k;
               if (var9 != 0) {
-                stackIn_24_1 = bm.field_F;
+                stackIn_24_1 = AuctionListingDialog.field_F;
               } else {
                 stackIn_24_1 = wp.field_e;
               }
@@ -667,7 +667,7 @@ class ri extends TextWidgetPainter {
                   var14++;
                 }
                 pl.a(0, ss.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
-                if (!(2 > tk.field_Ib) &&
+                if (!(2 > ScrollContainer.field_Ib) &&
                   GameplayHelpScreen.field_G[12]) {
                   tt.field_c = true;
                 }
@@ -700,7 +700,7 @@ class ri extends TextWidgetPainter {
               }
             }
           }
-          stackIn_65_0 = dn.field_Cb;
+          stackIn_65_0 = TrinketIcon.field_Cb;
           stackIn_65_1 = 0;
           stackIn_66_2 = (param2) && (!param1) && (!td.field_b);
           ((UiLayoutNode) (Object) stackIn_65_0).b(stackIn_65_1, stackIn_66_2);

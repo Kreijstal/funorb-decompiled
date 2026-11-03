@@ -72,12 +72,12 @@ final class DemoIntegersCommand extends ConsoleCommand {
         tv var9 = null;
         var8 = Kickabout.field_G;
         try {
-          if (pg.field_b < rb.field_Bb) {
+          if (pg.field_b < TextPromptDialog.field_Bb) {
             pg.field_b = pg.field_b + 1;
           }
-          if (na.field_Ab != ea.field_f.field_e) {
-            c.field_c = c.field_c + (ea.field_f.field_e - na.field_Ab);
-            na.field_Ab = ea.field_f.field_e;
+          if (VerticalScrollbar.field_Ab != ea.field_f.field_e) {
+            c.field_c = c.field_c + (ea.field_f.field_e - VerticalScrollbar.field_Ab);
+            VerticalScrollbar.field_Ab = ea.field_f.field_e;
           }
           if (pg.field_b <= 0) {
             return;
@@ -104,13 +104,13 @@ final class DemoIntegersCommand extends ConsoleCommand {
             }
           }
           if (0 != uq.field_a.field_sb) {
-            ck.field_b = new rb(uq.field_a.field_F, uq.field_a.field_T, uq.field_a.field_q, uq.field_a.field_mb, param2, tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, (String) null, 0L);
+            ck.field_b = new TextPromptDialog(uq.field_a.field_F, uq.field_a.field_T, uq.field_a.field_q, uq.field_a.field_mb, param2, tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, (String) null, 0L);
           }
-          var9 = rb.a(param1, sh.field_c, (byte) 26, eb.field_b);
+          var9 = TextPromptDialog.a(param1, sh.field_c, (byte) 26, eb.field_b);
           if (var9 != null) {
             LineupView.a(var9, (byte) -60);
           }
-          var5 = fn.f(-3);
+          var5 = Trinket.f(-3);
           if (var5 != null) {
             sn.field_e = var5;
           }

@@ -287,7 +287,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             if (!this.field_C) {
               this.field_F.field_r = (WidgetPainter) ((Object) new cr());
             } else {
-              this.field_F.field_u = pv.field_G;
+              this.field_F.field_u = HelpTipDialog.field_G;
               this.field_F.field_r = (WidgetPainter) ((Object) new cr());
             }
           } else {
@@ -311,7 +311,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var12 = dupTemp$0;
           this.a(-120, dupTemp$0);
           this.field_g = this.field_g + (((UiWidget) ((Object) var12)).field_i + 5);
-          dupTemp$1 = new cg(10, this.field_g, -20 + this.field_n, 25, this.field_J, false, 80, 3, var7, 16777215, at.field_Ib);
+          dupTemp$1 = new cg(10, this.field_g, -20 + this.field_n, 25, this.field_J, false, 80, 3, var7, 16777215, TrinketTile.field_Ib);
           var13 = dupTemp$1;
           this.a(-55, dupTemp$1);
           this.field_K.field_k = (UiListener) (this);

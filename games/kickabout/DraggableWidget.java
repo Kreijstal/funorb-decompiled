@@ -23,7 +23,7 @@ final class DraggableWidget extends SingleChildContainer {
           if (param2 != -46) {
             DraggableWidget.a(-114, (byte) -103, false, 80);
           }
-          aw.field_J = wo.field_m + 20 + param0 >> 1;
+          TutorialChoiceDialog.field_J = wo.field_m + 20 + param0 >> 1;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "jg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

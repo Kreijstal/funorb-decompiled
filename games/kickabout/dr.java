@@ -3,7 +3,7 @@
  */
 final class dr {
     static String field_f;
-    static bb field_g;
+    static CascadingMenu field_g;
     static String[] field_c;
     static String field_e;
     static boolean field_a;
@@ -84,8 +84,8 @@ final class dr {
               return true;
             }
             var4 = cu.field_c;
-            if (0.0 != i.field_B) {
-              var4 = (int)((double)var4 + ac.field_d.nextGaussian() * i.field_B);
+            if (0.0 != MessageDialog.field_B) {
+              var4 = (int)((double)var4 + ac.field_d.nextGaussian() * MessageDialog.field_B);
               if (var4 < 0) {
                 var4 = 0;
               }

@@ -28,9 +28,9 @@ final class ConsoleEvaluationException extends Exception {
 
     final static void a(int param0, int param1) {
         int var2 = (-640 + ea.field_a) / 2;
-        int var3 = rb.field_Bb * rb.field_Bb;
+        int var3 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var4 = -(param1 * param1) + var3;
-        dn.field_Cb.a(true, 199, var2 - var4 * 199 / var3, 90, -210 + (SoftwareRasterizer.field_f - 4));
+        TrinketIcon.field_Cb.a(true, 199, var2 - var4 * 199 / var3, 90, -210 + (SoftwareRasterizer.field_f - 4));
         AuctionItem.field_p.a(true, 438, var4 * 438 / var3 + (202 + var2), 0, -124 + SoftwareRasterizer.field_f);
         int var5 = 66 % ((73 - param0) / 52);
     }

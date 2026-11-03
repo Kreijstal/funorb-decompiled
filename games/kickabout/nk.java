@@ -26,11 +26,11 @@ final class nk extends dg {
         return stackIn_8_0;
     }
 
-    final static he a(int param0, long param1) {
+    final static LobbyPlayerRow a(int param0, long param1) {
         if (param0 != 31253) {
-          return (he) null;
+          return (LobbyPlayerRow) null;
         }
-        return (he) (pu.field_Eb.a(param0 - 34864, param1));
+        return (LobbyPlayerRow) (TrinketSlot.field_Eb.a(param0 - 34864, param1));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {

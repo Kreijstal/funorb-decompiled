@@ -44,7 +44,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             }
           }
           if (this.field_j) {
-            stackIn_17_0 = he.field_yb;
+            stackIn_17_0 = LobbyPlayerRow.field_yb;
           } else {
             stackIn_17_0 = PitchOptionTile.field_Bb;
           }
@@ -88,7 +88,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             field_o = (String) null;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3 = hk.a(var5, false);
+          var3 = AuctionBidDialog.a(var5, false);
           if (var3 != null) {
             stackIn_5_0 = var3;
             return stackIn_5_0;
@@ -171,7 +171,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, he param5, np param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, LobbyPlayerRow param5, ScrollPane param6) {
         uv var12 = null;
         int var8 = 0;
         int var9 = 0;
@@ -347,7 +347,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var10 = 0;
           var11 = 0;
           var12 = 0;
-          bb.field_Mb = new int[FindingOpponentScreen.field_D];
+          CascadingMenu.field_Mb = new int[FindingOpponentScreen.field_D];
           var13 = 0;
           for (var11Lifetime1 = 0; var11Lifetime1 < 33; var11Lifetime1++) {
             for (var12Lifetime1 = 0; var12Lifetime1 < 33; var12Lifetime1++) {
@@ -432,7 +432,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             }
           }
           for (var8Lifetime2 = 0; FindingOpponentScreen.field_D > var8Lifetime2; var8Lifetime2++) {
-            param1[var8Lifetime2] = var18[qj.b(var24[bb.field_Mb[var8Lifetime2]], 255)];
+            param1[var8Lifetime2] = var18[qj.b(var24[CascadingMenu.field_Mb[var8Lifetime2]], 255)];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

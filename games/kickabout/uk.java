@@ -4,7 +4,7 @@
 final class uk {
     static boolean field_d;
     static r field_c;
-    static na field_b;
+    static VerticalScrollbar field_b;
     static int field_a;
     private static String field_z;
 

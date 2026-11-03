@@ -126,7 +126,7 @@ final class SetLagCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(vg.e(-63, param1[0].b(-30368)));
+            stackIn_4_0 = new ConsoleValue(TextFieldNode.e(-63, param1[0].b(-30368)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -190,13 +190,13 @@ final class SetLagCommand extends ConsoleCommand {
     }
 
     final static void b(boolean param0) {
-        if (!hk.field_G) {
+        if (!AuctionBidDialog.field_G) {
           throw new IllegalStateException();
         }
         if (null != rk.field_f) {
           rk.field_f.q(-96);
         }
-        String var1 = vg.a(-110);
+        String var1 = TextFieldNode.a(-110);
         IsSixCommand.field_E = new LoginForm(var1, (String) null, param0, false, false);
         wd.field_l.a(we.field_a, false);
         we.field_a.a((byte) -126, (UiWidget) (IsSixCommand.field_E));

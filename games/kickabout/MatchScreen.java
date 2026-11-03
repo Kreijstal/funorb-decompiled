@@ -206,12 +206,12 @@ final class MatchScreen extends AppScreen {
         if (this.isOnlineMatch) {
           this.field_i.tick(4);
         }
-        ie.g(-128);
+        SellPlayerDialog.g(-128);
         re.b(101);
         this.phaseController.a(true);
         this.phaseController.update(-117, param1);
         if (this.isOnlineMatch &&
-          !pq.field_K) {
+          !SquadPickerDialog.field_K) {
           if (this.isSpectator(-2)) {
             stackIn_18_0 = 0;
           } else {
@@ -287,7 +287,7 @@ final class MatchScreen extends AppScreen {
           bt.field_e = false;
           stackIn_19_1 = (param4);
           this.field_s = stackIn_19_1;
-          var21 = ha.field_F;
+          var21 = WelcomeDialog.field_F;
           var20 = var21;
           var19 = var20;
           var16 = var19;
@@ -349,7 +349,7 @@ final class MatchScreen extends AppScreen {
         if (param1 != 18) {
           this.c(27);
         }
-        ji.k(0);
+        ScrollBar.k(0);
         if (this.isSpectator(param1 ^ -20)) {
           return;
         }
@@ -586,9 +586,9 @@ final class MatchScreen extends AppScreen {
         }
         if (!this.stateReceived) {
           var3_ref_uo = IsSixCommand.field_C;
-          var4 = 90 + ((BitmapFont) ((Object) var3_ref_uo)).a(bm.field_K) >> 1;
+          var4 = 90 + ((BitmapFont) ((Object) var3_ref_uo)).a(AuctionListingDialog.field_K) >> 1;
           SoftwareRasterizer.a(320 - var4, 223, var4 + var4, 34, 6, 65793, 128);
-          ((BitmapFont) ((Object) var3_ref_uo)).d(bm.field_K, 320, 246, 16777215, -1);
+          ((BitmapFont) ((Object) var3_ref_uo)).d(AuctionListingDialog.field_K, 320, 246, 16777215, -1);
           return;
         }
         this.phaseController.drawContent(1);

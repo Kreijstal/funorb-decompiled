@@ -31,7 +31,7 @@ final class sb {
             TextButton.field_v.a(false, 0);
             var4 = TextButton.field_v;
             var5_ref_String = ButtonMenuScreen.field_k;
-            var4.field_j.a(0, 5, var5_ref_String);
+            var4.field_j.addItem(0, 5, var5_ref_String);
             var4Lifetime1 = TextButton.field_v;
             var5 = sm.field_q;
             var6 = ReceivedAuctionItem.field_y;
@@ -88,7 +88,7 @@ final class sb {
         BufferedSocket.field_i[15] = ShopPlayerSlot.field_Eb;
         BufferedSocket.field_i[16] = gd.field_f;
         BufferedSocket.field_i[18] = aj.field_b;
-        BufferedSocket.field_i[11] = aw.field_F;
+        BufferedSocket.field_i[11] = TutorialChoiceDialog.field_F;
         BufferedSocket.field_i[19] = vl.field_f;
         if (param0 < -121) {
           BufferedSocket.field_i[9] = we.field_e;

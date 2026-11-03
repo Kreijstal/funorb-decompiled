@@ -59,7 +59,7 @@ final class IntrusiveNodeHashTable {
         if (param1 != 415422632) {
           return;
         }
-        cf.field_Db = param0;
+        RankingRowNode.field_Db = param0;
         dc.field_d = 0;
         CachedArchiveSource.field_s = 1;
     }

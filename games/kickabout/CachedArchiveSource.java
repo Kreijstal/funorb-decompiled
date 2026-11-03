@@ -112,7 +112,7 @@ final class CachedArchiveSource extends ArchiveSource {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vg.field_Wb) {
+          if (!TextFieldNode.field_Wb) {
             return false;
           }
           var1_int = -4 / ((-84 - param0) / 34);

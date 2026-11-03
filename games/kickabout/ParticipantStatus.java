@@ -265,11 +265,11 @@ final class ParticipantStatus extends MatchAgent {
                   ee.field_b = ee.field_b - 1;
                   return;
                 }
-                if (ns.field_a >= rb.field_Bb) {
+                if (ns.field_a >= TextPromptDialog.field_Bb) {
                   return;
                 }
                 if (ns.field_a == 0) {
-                  na.h(param1 - 1);
+                  VerticalScrollbar.h(param1 - 1);
                 }
                 ns.field_a = ns.field_a + 1;
                 return;
@@ -282,7 +282,7 @@ final class ParticipantStatus extends MatchAgent {
                 ee.field_b = ee.field_b - 1;
                 return;
               }
-              if (rb.field_Bb > fj.field_a) {
+              if (TextPromptDialog.field_Bb > fj.field_a) {
                 if (fj.field_a == 0) {
                   pg.a(-35, true);
                 }
@@ -298,7 +298,7 @@ final class ParticipantStatus extends MatchAgent {
                 fj.field_a = fj.field_a - 1;
                 return;
               }
-              if (ee.field_b < rb.field_Bb) {
+              if (ee.field_b < TextPromptDialog.field_Bb) {
                 if (0 == ee.field_b) {
                   pg.a(-35, false);
                 }

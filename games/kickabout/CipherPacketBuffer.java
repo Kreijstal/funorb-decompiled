@@ -193,7 +193,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         stackIn_14_1 = (param0) ? false : true;
         ((UiLayoutNode) (Object) stackIn_13_0).a(stackIn_14_1, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));
         PlayingView.field_w.a(true, 68, 5, 5, 30);
-        qq.field_G.a(true, 78, 75, 5, 30);
+        LoginRequiredDialog.field_G.a(true, 78, 75, 5, 30);
         TextWidgetPainter.field_n.a(true, 48, 155, 5, 30);
         AuctionsHelpScreen.field_G.a(true, 48, 205, 5, 30);
         stackIn_17_0 = (ui.field_t) ? 250 : 200;

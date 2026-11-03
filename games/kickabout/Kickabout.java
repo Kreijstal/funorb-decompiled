@@ -71,18 +71,18 @@ public final class Kickabout extends GameLoopApplet {
             }
           }
         } else {
-          var3 = (ce.field_I << 8) / 24;
+          var3 = (BuyPlayerDialog.field_I << 8) / 24;
           AuctionLogEntry.field_h.setTransitionProgress(var3, false, -53, GameModesHelpScreen.field_G);
           GameModesHelpScreen.field_G.setTransitionProgress(var3, true, -100, AuctionLogEntry.field_h);
           GameModesHelpScreen.field_G.updateScreen((byte) -51, false);
           if (!ka.field_b) {
-            ce.field_I = ce.field_I + 1;
+            BuyPlayerDialog.field_I = BuyPlayerDialog.field_I + 1;
           }
-          var4 = -ce.field_I + 24;
+          var4 = -BuyPlayerDialog.field_I + 24;
           var5 = (var4 * var4 << 8) / 576;
           var6 = -var5 + 256;
           FormationAgent.field_f = var5 * po.a(AuctionLogEntry.field_h, -4) + po.a(GameModesHelpScreen.field_G, -4) * var6 >> 8;
-          if (ce.field_I == 24) {
+          if (BuyPlayerDialog.field_I == 24) {
             cv.a((byte) 105);
           }
         }
@@ -94,7 +94,7 @@ public final class Kickabout extends GameLoopApplet {
               var9.c((byte) -109);
               stackIn_59_0 = ColourSwatchTile.a(param0 ^ -149, var9);
               if (stackIn_59_0) {
-                gu.a((byte) -25, var9, true);
+                ContextMenu.a((byte) -25, var9, true);
               }
               var9 = (AuctionListing) (GameLoopApplet.field_E.auctionListings.c(33));
               continue;
@@ -106,7 +106,7 @@ public final class Kickabout extends GameLoopApplet {
             var8.c((byte) -109);
             stackIn_59_0Lifetime1 = ColourSwatchTile.a(140, var8);
             if (stackIn_59_0Lifetime1) {
-              gu.a((byte) -25, var8, false);
+              ContextMenu.a((byte) -25, var8, false);
             }
             var8 = (AuctionListing) (vd.field_a.c(33));
           }
@@ -217,11 +217,11 @@ public final class Kickabout extends GameLoopApplet {
         if (GameModesHelpScreen.field_G != null) {
           var5 = ak.a(GameModesHelpScreen.field_G, 4);
           if (var4 > var5) {
-            var6 = Math.min(256, (ce.field_I << 9) / 24);
+            var6 = Math.min(256, (BuyPlayerDialog.field_I << 9) / 24);
             var4 = var4 + ((-var4 + var5) * var6 >> 8);
           } else {
             if (var5 > var4) {
-              var6 = Math.max(0, -256 + 2 * ((ce.field_I << 8) / 24));
+              var6 = Math.max(0, -256 + 2 * ((BuyPlayerDialog.field_I << 8) / 24));
               var4 = var4 + ((-var4 + var5) * var6 >> 8);
             }
           }
@@ -282,7 +282,7 @@ public final class Kickabout extends GameLoopApplet {
         var5 = GameplayHelpScreen.field_G[86] ? 1 : 0;
         if (ka.field_b &&
           83 == param1) {
-          ce.field_I = ce.field_I + 1;
+          BuyPlayerDialog.field_I = BuyPlayerDialog.field_I + 1;
           return true;
         }
         if (param1 == 103 &&
@@ -442,8 +442,8 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (param1 == 24) {
-              stackIn_163_0 = !(pq.field_K);
-              pq.field_K = stackIn_163_0;
+              stackIn_163_0 = !(SquadPickerDialog.field_K);
+              SquadPickerDialog.field_K = stackIn_163_0;
               return true;
             }
             if (param1 == 25) {
@@ -535,11 +535,11 @@ public final class Kickabout extends GameLoopApplet {
             }
           }
           if (87 == param1) {
-            pq.field_J = (pq.field_J + 1) % 10;
+            SquadPickerDialog.field_J = (SquadPickerDialog.field_J + 1) % 10;
             return true;
           }
           if (param1 == 88) {
-            pq.field_J = (9 + pq.field_J) % 10;
+            SquadPickerDialog.field_J = (9 + SquadPickerDialog.field_J) % 10;
             return true;
           }
         }
@@ -994,7 +994,7 @@ public final class Kickabout extends GameLoopApplet {
             if (param0 == 14) {
               cv.a((byte) 81);
               q.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(-116), sn.field_c, dr.a(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
-              DropTargetWidget.a(64, qq.h((byte) -64), ButtonMenuScreen.f((byte) -63));
+              DropTargetWidget.a(64, LoginRequiredDialog.h((byte) -64), ButtonMenuScreen.f((byte) -63));
               ec.field_e = false;
               od.field_n = true;
               if (!QuickChatPhraseCache.field_d) {
@@ -1005,7 +1005,7 @@ public final class Kickabout extends GameLoopApplet {
             if (param0 == 15) {
               if (od.field_n) {
                 ReceivedAuctionItem.f((byte) 119);
-                vu.b(122);
+                ContextMenuItem.b(122);
                 DelayedServerPacket.a(0, false, -2);
                 TextButton.field_B = true;
                 k.field_k = true;
@@ -1019,7 +1019,7 @@ public final class Kickabout extends GameLoopApplet {
             }
             if (10 == param0 &&
               od.field_n) {
-              na.i(14);
+              VerticalScrollbar.i(14);
               return true;
             }
             if (param0 == 67) {
@@ -1058,7 +1058,7 @@ public final class Kickabout extends GameLoopApplet {
               for (var7Lifetime3 = 0; var7Lifetime3 < 8; var7Lifetime3++) {
                 var26[var7Lifetime3] = hf.a(var49[var7Lifetime3], var50[var7Lifetime3]);
               }
-              var51 = ha.field_F;
+              var51 = WelcomeDialog.field_F;
               var38 = var51;
               var28 = var38;
               var5_ref_int__Lifetime2 = var28;
@@ -1346,11 +1346,11 @@ public final class Kickabout extends GameLoopApplet {
               }
               if (var4 == 0 &&
                 var5 != 0) {
-                var3 = var3 + (ce.field_I << 3);
+                var3 = var3 + (BuyPlayerDialog.field_I << 3);
               }
               if (var4 != 0 &&
                 var5 == 0) {
-                var3 = var3 + (24 - ce.field_I << 3);
+                var3 = var3 + (24 - BuyPlayerDialog.field_I << 3);
               }
               if (!(var3 <= 256)) {
                 var3 = 256;
@@ -1443,11 +1443,11 @@ public final class Kickabout extends GameLoopApplet {
           FindingOpponentScreen.g((byte) -119);
         }
         if (ka.field_b) {
-          var5Lifetime2 = -ce.field_I + 24 << 4;
-          if (ce.field_I < 12) {
-            var5Lifetime2 = ce.field_I << 4;
+          var5Lifetime2 = -BuyPlayerDialog.field_I + 24 << 4;
+          if (BuyPlayerDialog.field_I < 12) {
+            var5Lifetime2 = BuyPlayerDialog.field_I << 4;
           }
-          q.field_d.d("Transition: " + ce.field_I + " : " + var5Lifetime2, 320, 100, 16777215, 0);
+          q.field_d.d("Transition: " + BuyPlayerDialog.field_I + " : " + var5Lifetime2, 320, 100, 16777215, 0);
         }
         if (FadingSoundPlayer.field_q &&
           AuctionLogEntry.field_h.screenId != -4) {
@@ -1529,10 +1529,10 @@ public final class Kickabout extends GameLoopApplet {
         eh.d(1);
         ig.a((byte) -13);
         vb.a(0);
-        fn.q(140);
+        Trinket.q(140);
         MatchPhaseView.b(104);
         il.a((byte) 101);
-        jb.c(false);
+        PopupDialog.c(false);
         ar.a((byte) -73);
         RenderedFootballer.i((byte) 14);
         ak.a(17);
@@ -1558,7 +1558,7 @@ public final class Kickabout extends GameLoopApplet {
         ButtonMenuScreen.c((byte) -107);
         fv.b((byte) 108);
         mt.a(param0 ^ 7);
-        ji.a(-123);
+        ScrollBar.a(-123);
         UiLayoutNode.g(-14457);
         MenuButton.a((byte) -6);
         MenuSelection.a((byte) -22);
@@ -1598,16 +1598,16 @@ public final class Kickabout extends GameLoopApplet {
         FootballerAgent.e((byte) -108);
         is.b(116);
         mj.a(param0 ^ 6);
-        om.b(0);
-        na.a(param0 ^ 116);
+        IconLabel.b(0);
+        VerticalScrollbar.a(param0 ^ 116);
         iv.a(false);
-        gu.h((byte) 38);
+        ContextMenu.h((byte) 38);
         al.a(1);
         uv.c(123);
-        np.i((byte) -122);
-        rb.c(true);
-        he.b(240);
-        qb.a(-7);
+        ScrollPane.i((byte) -122);
+        TextPromptDialog.c(true);
+        LobbyPlayerRow.b(240);
+        GameSetupPanel.a(-7);
         em.c((byte) 36);
         sk.a(-5514);
         ph.b(1114366657);
@@ -1640,14 +1640,14 @@ public final class Kickabout extends GameLoopApplet {
         ConsolePanel.d((byte) -53);
         TextLine.a(-64);
         ts.a((byte) 123);
-        vg.m(param0 + 90);
+        TextFieldNode.m(param0 + 90);
         IndexedSpriteState.a(-75);
         rk.a(0);
         PlayerModelPreview.a((byte) 126);
         dr.a((byte) -127);
         AchievementsScreen.g((byte) 81);
         eo.c();
-        tk.i((byte) -69);
+        ScrollContainer.i((byte) -69);
         AuctionsScreen.h((byte) -53);
         CheckboxLabelWidget.a(0);
         AuctionTableWidget.k((byte) 68);
@@ -1655,14 +1655,14 @@ public final class Kickabout extends GameLoopApplet {
         IntrusiveNodeHashTable.a((byte) -111);
         MySquadScreen.f(-2010043359);
         SquadGridWidget.i((byte) -127);
-        pu.i((byte) -108);
+        TrinketSlot.i((byte) -108);
         PlayerShopScreen.h((byte) -111);
         ColumnTableWidget.c(false);
         SquadSlotWidget.i((byte) -123);
-        vu.a(-15410);
+        ContextMenuItem.a(-15410);
         rf.a(-97);
-        kf.c(true);
-        sl.i((byte) 39);
+        TabStrip.c(true);
+        HoverTooltip.i((byte) 39);
         ac.b((byte) 16);
         wa.a((byte) 116);
         rr.a(param0 - 121);
@@ -1673,26 +1673,26 @@ public final class Kickabout extends GameLoopApplet {
         VorbisFloor.a();
         cp.a((byte) 60);
         MyPitchScreen.f(-107);
-        i.f((byte) 90);
-        pv.g((byte) -111);
-        sq.g(13);
-        qq.g(param0 + 2350);
-        aw.h((byte) -117);
-        ha.g(100);
-        hg.h(22100);
-        nq.h(0);
-        no.g((byte) -93);
-        pq.g(-14948);
-        pw.g(-8332);
+        MessageDialog.f((byte) 90);
+        HelpTipDialog.g((byte) -111);
+        SaveChangesDialog.g(13);
+        LoginRequiredDialog.g(param0 + 2350);
+        TutorialChoiceDialog.h((byte) -117);
+        WelcomeDialog.g(100);
+        PromotionDialog.h(22100);
+        TournamentChampionDialog.h(0);
+        LeagueWinnerDialog.g((byte) -93);
+        SquadPickerDialog.g(-14948);
+        AuctionSettingsDialog.g(-8332);
         ColourSwatchTile.h(-31922);
-        hk.g(0);
-        rt.g(param0 ^ 25994);
-        ie.h(24342);
+        AuctionBidDialog.g(0);
+        StatChoiceDialog.g(param0 ^ 25994);
+        SellPlayerDialog.h(24342);
         ek.d(false);
-        kn.g(2);
-        vf.g((byte) -45);
-        ce.g(30);
-        bm.d(false);
+        TrinketPickerDialog.g(2);
+        BuyPitchDialog.g((byte) -45);
+        BuyPlayerDialog.g(30);
+        AuctionListingDialog.d(false);
         lt.a(-122);
         of.a(false);
         ih.a(66049);
@@ -1747,7 +1747,7 @@ public final class Kickabout extends GameLoopApplet {
         mv.a(true);
         ka.a(19044);
         sg.a(false);
-        bb.b(111);
+        CascadingMenu.b(111);
         bt.a(true);
         QuickChatPhraseCache.a(30297);
         QuickChatPhraseDefinition.a(71);
@@ -1890,7 +1890,7 @@ public final class Kickabout extends GameLoopApplet {
         PasswordLoginCredentials.c(85);
         oh.b((byte) -47);
         vs.a(0);
-        cf.a(-13);
+        RankingRowNode.a(-13);
         CachedListingRow.a((byte) -123);
         gd.a(22897);
         SumIntegersCommand.g(10040319);
@@ -1906,10 +1906,10 @@ public final class Kickabout extends GameLoopApplet {
         BytePlusOneCommand.g((byte) 52);
         SetLagCommand.a(false);
         BroadcastServerCommand.g((byte) 96);
-        ej.h((byte) 118);
+        SelectableTrinketIcon.h((byte) 118);
         im.a(-18523);
-        at.h((byte) -117);
-        dn.c(true);
+        TrinketTile.h((byte) -117);
+        TrinketIcon.c(true);
         AccountMessagePanel.a(14);
         hh.a((byte) 121);
         qj.b((byte) -125);

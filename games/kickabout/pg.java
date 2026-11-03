@@ -9,10 +9,10 @@ final class pg {
 
     final static void a(int param0, boolean param1) {
         ni.field_l = param1 ? new rf(TextHotspotWidget.field_H, w.field_e) : new rf(c.field_d, AchievementsScreen.field_C);
-        dn.field_Cb = new UiLayoutNode(0L, (UiLayoutNode) null);
+        TrinketIcon.field_Cb = new UiLayoutNode(0L, (UiLayoutNode) null);
         if (param0 == -35) {
-          dn.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
-          dn.field_Cb.addChild((byte) -126, ac.field_b);
+          TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
+          TrinketIcon.field_Cb.addChild((byte) -126, ac.field_b);
           tn.field_f = new UiLayoutNode(0L, tv.field_e);
           vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
           tn.field_f.addChild((byte) -125, is.field_b);
@@ -23,8 +23,8 @@ final class pg {
           return;
         }
         field_c = (String) null;
-        dn.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
-        dn.field_Cb.addChild((byte) -126, ac.field_b);
+        TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
+        TrinketIcon.field_Cb.addChild((byte) -126, ac.field_b);
         tn.field_f = new UiLayoutNode(0L, tv.field_e);
         vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
         tn.field_f.addChild((byte) -125, is.field_b);

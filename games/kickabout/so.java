@@ -21,7 +21,7 @@ final class so {
               return;
             }
             if (!param3) {
-              gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+              ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
               ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             }
@@ -35,7 +35,7 @@ final class so {
             ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             return;
           }
-          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         } else {
           so.a(44, true, true, false);
           if (!param1) {
@@ -43,7 +43,7 @@ final class so {
           }
           if (2 == param0) {
             if (!param3) {
-              gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+              ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
               ui.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             }
@@ -55,7 +55,7 @@ final class so {
         if (param3) {
           ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
         } else {
-          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         }
     }
 

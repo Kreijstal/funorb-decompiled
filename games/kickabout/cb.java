@@ -24,7 +24,7 @@ final class cb {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param3 != null && (param0 != 2 ||
-            nq.a(false, param1, param4))) {
+            TournamentChampionDialog.a(false, param1, param4))) {
             stackIn_9_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -64,7 +64,7 @@ final class cb {
 
     final static void a(PitchOptionTile param0, byte param1) {
         try {
-          np.field_Jb.a(new vf(param0), 3);
+          ScrollPane.field_Jb.a(new BuyPitchDialog(param0), 3);
           if (param1 < 118) {
             field_d = (PcmPlayerService) null;
           }

@@ -32,7 +32,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           RenderedBall var3 = (RenderedBall) null;
           ValidatedTextWidget.a((RenderedBall) null, true);
         }
-        at.field_Hb = param1;
+        TrinketTile.field_Hb = param1;
         fu.field_b = new tv[param1 * 15];
     }
 
@@ -137,7 +137,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         if (param0 != -1) {
           this.f(54);
         }
-        nq.b(n.field_m, 0, this.field_n - this.field_ab + BytePlusOneCommand.field_A);
+        TournamentChampionDialog.b(n.field_m, 0, this.field_n - this.field_ab + BytePlusOneCommand.field_A);
         return this.field_u;
     }
 

@@ -97,7 +97,7 @@ abstract class ResizableModalPanel extends ModalPanel {
     }
 
     final static void a(int param0, int param1) {
-        no.field_H = 1000000000L / (long)param1;
+        LeagueWinnerDialog.field_H = 1000000000L / (long)param1;
         if (param0 != 922104624) {
           field_M = (int[]) null;
         }

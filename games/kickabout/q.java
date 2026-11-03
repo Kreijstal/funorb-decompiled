@@ -47,7 +47,7 @@ final class q {
           }
           rp.field_B = param0.field_jb;
           rp.field_B.b(22997);
-          pq.field_N = new em(param2);
+          SquadPickerDialog.field_N = new em(param2);
           DelayedServerPacket.field_h = 0;
           mi.field_d = -1;
           MusicPatchNode.field_o = -1;
@@ -63,9 +63,9 @@ final class q {
           }
           lw.field_d = param4.field_jb;
           lw.field_d.b(22997);
-          pu.field_Eb = new em(param3);
+          TrinketSlot.field_Eb = new em(param3);
           mg.field_c = param7;
-          vg.field_Ib = 0L;
+          TextFieldNode.field_Ib = 0L;
           if (param1 <= 114) {
             q.a(123, 125, 58, -75, 34, -38, 61, 107, -70);
           }

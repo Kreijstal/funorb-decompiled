@@ -43,7 +43,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 this.field_p = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   var6 = param2.a((byte) 81);
-                  var7 = bb.a((byte) 127, var6);
+                  var7 = CascadingMenu.a((byte) 127, var6);
                   if (var7 != null) {
                     this.field_p[var5] = var6;
                     array$0 = new int[var7.field_d];
@@ -105,7 +105,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         while (0L != param1) {
           var7 = param1;
           param1 = param1 / 37L;
-          var9 = gu.field_yb[(int)(var7 - 37L * param1)];
+          var9 = ContextMenu.field_yb[(int)(var7 - 37L * param1)];
           if (95 == var9) {
             var10 = var6.length() - 1;
             var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));

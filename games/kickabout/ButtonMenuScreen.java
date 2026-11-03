@@ -165,7 +165,7 @@ class ButtonMenuScreen extends AppScreen {
               ((ButtonMenuScreen) (var4_ref_js)).field_m) {
               AccountTermsPanel.field_E.d(0, 430);
             } else {
-              var5Lifetime1 = (ce.field_I << 9) / 24;
+              var5Lifetime1 = (BuyPlayerDialog.field_I << 9) / 24;
               if (256 < var5Lifetime1) {
                 var5Lifetime1 = 256;
               }
@@ -538,7 +538,7 @@ class ButtonMenuScreen extends AppScreen {
         }
         if (param1) {
           var3 = this.buttonIndexAt(wt.field_x, us.field_j, (byte) 30);
-          this.buttonSelection.a(-21174, var3, this.buttonIndexAt(dn.field_yb, kf.field_Eb, (byte) 110));
+          this.buttonSelection.a(-21174, var3, this.buttonIndexAt(TrinketIcon.field_yb, TabStrip.field_Eb, (byte) 110));
           if (var3 == -1) {
             stackIn_11_0 = -1;
           } else {
@@ -575,7 +575,7 @@ class ButtonMenuScreen extends AppScreen {
     }
 
     final static void a(int param0) {
-        np.field_Jb.a(new qq(), 3);
+        ScrollPane.field_Jb.a(new LoginRequiredDialog(), 3);
         if (param0 != 16144) {
           ButtonMenuScreen.d(-47);
         }
@@ -669,7 +669,7 @@ class ButtonMenuScreen extends AppScreen {
         if (param0 != -63) {
           return (UiLayoutNode) null;
         }
-        return nq.field_F.field_yb;
+        return TournamentChampionDialog.field_F.field_yb;
     }
 
     static {

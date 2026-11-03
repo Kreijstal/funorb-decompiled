@@ -73,7 +73,7 @@ final class kw {
         if (!nb.field_f) {
           throw new IllegalStateException();
         }
-        aw.field_H = true;
+        TutorialChoiceDialog.field_H = true;
         SumIntegersCommand.a(true, -91);
         vj.field_c = param0;
     }
@@ -160,9 +160,9 @@ final class kw {
               kw.d((byte) -40);
             }
             vd.field_c = FootballerAgent.field_p;
-            dn.field_yb = sm.field_q;
+            TrinketIcon.field_yb = sm.field_q;
             ip.field_a = WidgetContainer.field_A;
-            kf.field_Eb = ReceivedAuctionItem.field_y;
+            TabStrip.field_Eb = ReceivedAuctionItem.field_y;
             if (dr.field_a &&
               1 == vd.field_c) {
               stackIn_39_0 = 1;
@@ -177,9 +177,9 @@ final class kw {
                 kw.d((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              dn.field_yb = sm.field_q;
+              TrinketIcon.field_yb = sm.field_q;
               ip.field_a = WidgetContainer.field_A;
-              kf.field_Eb = ReceivedAuctionItem.field_y;
+              TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
                 stackIn_10_0 = 1;
@@ -203,9 +203,9 @@ final class kw {
                 kw.d((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              dn.field_yb = sm.field_q;
+              TrinketIcon.field_yb = sm.field_q;
               ip.field_a = WidgetContainer.field_A;
-              kf.field_Eb = ReceivedAuctionItem.field_y;
+              TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
                 stackIn_26_0 = 1;
@@ -242,9 +242,9 @@ final class kw {
               kw.d((byte) -40);
             }
             vd.field_c = FootballerAgent.field_p;
-            dn.field_yb = sm.field_q;
+            TrinketIcon.field_yb = sm.field_q;
             ip.field_a = WidgetContainer.field_A;
-            kf.field_Eb = ReceivedAuctionItem.field_y;
+            TabStrip.field_Eb = ReceivedAuctionItem.field_y;
             if (dr.field_a &&
               1 == vd.field_c) {
               stackIn_134_0 = 1;
@@ -270,9 +270,9 @@ final class kw {
                 kw.d((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              dn.field_yb = sm.field_q;
+              TrinketIcon.field_yb = sm.field_q;
               ip.field_a = WidgetContainer.field_A;
-              kf.field_Eb = ReceivedAuctionItem.field_y;
+              TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
                 stackIn_88_0 = 1;
@@ -287,9 +287,9 @@ final class kw {
                   kw.d((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                dn.field_yb = sm.field_q;
+                TrinketIcon.field_yb = sm.field_q;
                 ip.field_a = WidgetContainer.field_A;
-                kf.field_Eb = ReceivedAuctionItem.field_y;
+                TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
                   stackIn_59_0 = 1;
@@ -313,9 +313,9 @@ final class kw {
                   kw.d((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                dn.field_yb = sm.field_q;
+                TrinketIcon.field_yb = sm.field_q;
                 ip.field_a = WidgetContainer.field_A;
-                kf.field_Eb = ReceivedAuctionItem.field_y;
+                TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
                   stackIn_75_0 = 1;
@@ -351,9 +351,9 @@ final class kw {
                 kw.d((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              dn.field_yb = sm.field_q;
+              TrinketIcon.field_yb = sm.field_q;
               ip.field_a = WidgetContainer.field_A;
-              kf.field_Eb = ReceivedAuctionItem.field_y;
+              TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
                 stackIn_112_0 = 1;
@@ -369,9 +369,9 @@ final class kw {
                   kw.d((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                dn.field_yb = sm.field_q;
+                TrinketIcon.field_yb = sm.field_q;
                 ip.field_a = WidgetContainer.field_A;
-                kf.field_Eb = ReceivedAuctionItem.field_y;
+                TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
                   stackIn_195_0 = 1;
@@ -406,9 +406,9 @@ final class kw {
                   kw.d((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                dn.field_yb = sm.field_q;
+                TrinketIcon.field_yb = sm.field_q;
                 ip.field_a = WidgetContainer.field_A;
-                kf.field_Eb = ReceivedAuctionItem.field_y;
+                TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
                   stackIn_152_0 = 1;
@@ -422,9 +422,9 @@ final class kw {
                     kw.d((byte) -40);
                   }
                   vd.field_c = FootballerAgent.field_p;
-                  dn.field_yb = sm.field_q;
+                  TrinketIcon.field_yb = sm.field_q;
                   ip.field_a = WidgetContainer.field_A;
-                  kf.field_Eb = ReceivedAuctionItem.field_y;
+                  TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                   if (dr.field_a &&
                     1 == vd.field_c) {
                     stackIn_182_0 = 1;
@@ -448,9 +448,9 @@ final class kw {
                     kw.d((byte) -40);
                   }
                   vd.field_c = FootballerAgent.field_p;
-                  dn.field_yb = sm.field_q;
+                  TrinketIcon.field_yb = sm.field_q;
                   ip.field_a = WidgetContainer.field_A;
-                  kf.field_Eb = ReceivedAuctionItem.field_y;
+                  TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                   if (dr.field_a &&
                     1 == vd.field_c) {
                     stackIn_169_0 = 1;

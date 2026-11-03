@@ -395,7 +395,7 @@ class UiWidget extends IntrusiveNode {
             }
           }
           if (FootballerAgent.field_p == 0 &&
-            vg.field_Ob != 0) {
+            TextFieldNode.field_Ob != 0) {
             this.a(param0, n.field_m, BytePlusOneCommand.field_A, this, param1 ^ -31948, param2);
             var6 = mp.field_g;
             if (var6 != null) {
@@ -411,7 +411,7 @@ class UiWidget extends IntrusiveNode {
             this.g(84);
           }
         }
-        vg.field_Ob = FootballerAgent.field_p;
+        TextFieldNode.field_Ob = FootballerAgent.field_p;
         cg.a(this.f(-1), (byte) -98);
         if (param1 == 31947) {
           return param3;

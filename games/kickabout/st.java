@@ -20,8 +20,8 @@ final class st extends iq {
     final static void a(CommonGame param0, int param1, int param2) {
         try {
           vl.field_d = true;
-          PasswordLoginCredentials.field_i = -pq.field_Q.field_o;
-          bm.field_I = 0;
+          PasswordLoginCredentials.field_i = -SquadPickerDialog.field_Q.field_o;
+          AuctionListingDialog.field_I = 0;
           mk.field_c = param1;
           CachedListingRow.field_i = param2;
           tb.field_w = param0;

@@ -152,7 +152,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
               vb.field_d = 1;
             }
           }
-          sl.field_Eb = true;
+          HoverTooltip.field_Eb = true;
           LoginCredentials.a(-25246, false, param1, false, false, false, false);
           mk.b(-1622);
           et.field_d.field_x = new PlayArea[]{new PlayArea(-800, -800, 1800, 1800)};
@@ -217,7 +217,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
               var5 = stackIn_5_0;
               if (param1 == 46) {
                 if (!this.field_lb) {
-                  stackIn_9_0 = sq.field_F;
+                  stackIn_9_0 = SaveChangesDialog.field_F;
                 } else {
                   stackIn_9_0 = gk.field_a;
                 }
@@ -242,7 +242,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
               }
               this.a(true, (byte) -8);
               if (!this.field_lb) {
-                stackIn_24_0 = sq.field_F;
+                stackIn_24_0 = SaveChangesDialog.field_F;
               } else {
                 stackIn_24_0 = gk.field_a;
               }
@@ -259,7 +259,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
             this.a(true, (byte) -8);
           }
           if (!this.field_lb) {
-            stackIn_48_0 = sq.field_F;
+            stackIn_48_0 = SaveChangesDialog.field_F;
           } else {
             stackIn_48_0 = gk.field_a;
           }

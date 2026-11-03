@@ -433,12 +433,12 @@ final class SectorCacheStore {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        cf var5 = null;
+        RankingRowNode var5 = null;
         ListingRow var6 = null;
         int var7 = 0;
         IntrusiveDeque var8 = null;
-        cf var9 = null;
-        cf var5Lifetime1;
+        RankingRowNode var9 = null;
+        RankingRowNode var5Lifetime1;
         var7 = Kickabout.field_G;
         try {
           var8 = new IntrusiveDeque();
@@ -452,12 +452,12 @@ final class SectorCacheStore {
           var3 = AnimationSkeleton.field_k;
           var4 = 5 + var2 * 18;
           scanLoop1: while (AuctionTableWidget.field_Hb.field_Gb.field_mb - (-15 + AuctionTableWidget.field_Hb.field_Db.field_J) > var4) {
-            if (pu.field_Db[var3] > var2) {
-              var5 = (cf) (var8.g(24009));
+            if (TrinketSlot.field_Db[var3] > var2) {
+              var5 = (RankingRowNode) (var8.g(24009));
               while (var5 != null) {
                 if (var5.field_yb != var2 ||
                   var5.field_Ab != var3) {
-                  var5 = (cf) (var8.c(33));
+                  var5 = (RankingRowNode) (var8.c(33));
                   continue;
                 }
                 break;
@@ -480,13 +480,13 @@ final class SectorCacheStore {
             }
             break;
           }
-          var5Lifetime1 = (cf) (var8.b((byte) 127));
+          var5Lifetime1 = (RankingRowNode) (var8.b((byte) 127));
           if (param0 < 82) {
             return;
           }
           while (var5Lifetime1 != null) {
             var5Lifetime1.c(true);
-            var5Lifetime1 = (cf) (var8.b((byte) 127));
+            var5Lifetime1 = (RankingRowNode) (var8.b((byte) 127));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

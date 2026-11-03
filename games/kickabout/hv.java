@@ -127,7 +127,7 @@ final class hv {
               return;
             }
             gg.a(param2, 0, param1.field_V);
-            ue.steerTowardsPoint(4, pu.field_zb[0], var18, pu.field_zb[1]);
+            ue.steerTowardsPoint(4, TrinketSlot.field_zb[0], var18, TrinketSlot.field_zb[1]);
             if (var19.action == 0 &&
               0 == var19.directionMask) {
               var19.setAction((byte) -31, 14);

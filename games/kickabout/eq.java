@@ -29,11 +29,11 @@ final class eq {
     }
 
     final static void a(int param0) {
-        int var1 = rb.field_Bb * rb.field_Bb;
+        int var1 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var2 = -(pg.field_b * pg.field_b) + var1;
-        int var3 = c.field_c + var2 * (-c.field_c + na.field_Ab) / var1;
+        int var3 = c.field_c + var2 * (-c.field_c + VerticalScrollbar.field_Ab) / var1;
         g.field_a.a(true, 640, AuctionsHelpScreen.field_H, var3, 120);
-        cf.a(124, mj.field_b, 640, 5, eb.field_b, na.field_Ab - 24, param0);
+        RankingRowNode.a(124, mj.field_b, 640, 5, eb.field_b, VerticalScrollbar.field_Ab - 24, param0);
     }
 
     final static boolean a(boolean param0) {
@@ -81,7 +81,7 @@ final class eq {
 
     final static void a(int param0, boolean param1) {
         if (param0 == 1) {
-          nq.field_I = 0;
+          TournamentChampionDialog.field_I = 0;
           ig.field_g = vp.field_c;
           LoginCredentials.field_e = 0;
           AuctionItem.field_l = new MenuSelection(2);

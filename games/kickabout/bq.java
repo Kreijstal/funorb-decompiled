@@ -26,9 +26,9 @@ final class bq {
         int var7 = 0;
         int var8 = 0;
         UiLayoutNode var8_ref_hd = null;
-        vu var9 = null;
+        ContextMenuItem var9 = null;
         int var9_int = 0;
-        vu var10 = null;
+        ContextMenuItem var10 = null;
         int var10_int = 0;
         int var12 = 0;
         int var13 = 0;
@@ -46,7 +46,7 @@ final class bq {
             stackIn_4_1 = ee.field_b;
           }
           ConsoleEvaluationException.a(stackIn_3_0, stackIn_4_1);
-          ni.field_l.a(0, dn.field_Cb.field_q, 0, -2 + (-40 + dn.field_Cb.field_mb), (byte) -80);
+          ni.field_l.a(0, TrinketIcon.field_Cb.field_q, 0, -2 + (-40 + TrinketIcon.field_Cb.field_mb), (byte) -80);
           ka.field_c.a(true, AchievementsScreen.field_C.field_q, 0, 0, sh.field_c);
           stackIn_6_0 = BufferedSocket.field_u;
           stackIn_6_1 = true;
@@ -59,7 +59,7 @@ final class bq {
           ((UiLayoutNode) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
           DoSomethingCommand.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (AchievementsScreen.field_C.field_q - 2), 2 + sh.field_c, 18);
           ClientException.field_c.a(2, 124, -20 - sh.field_c + AchievementsScreen.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, AchievementsScreen.field_C.field_q, TeamSelectionAgent.field_f);
-          ac.field_b.a(true, dn.field_Cb.field_q, 0, -40 + dn.field_Cb.field_mb, 40);
+          ac.field_b.a(true, TrinketIcon.field_Cb.field_q, 0, -40 + TrinketIcon.field_Cb.field_mb, 40);
           ci.field_h.a(true, AuctionItem.field_p.field_q, 0, 0, 30);
           sg.field_a.a(true, AuctionItem.field_p.field_q, 0, 30, -40 + (AuctionItem.field_p.field_mb - 2) - 30);
           var2_int = 3 + ss.field_j;

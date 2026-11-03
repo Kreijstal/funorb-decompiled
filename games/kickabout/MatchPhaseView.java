@@ -3,7 +3,7 @@
  */
 abstract class MatchPhaseView {
     static String field_b;
-    static om field_d;
+    static IconLabel field_d;
     int field_g;
     CommonGame field_a;
     static int field_e;
@@ -119,7 +119,7 @@ abstract class MatchPhaseView {
         var26 = Kickabout.field_G;
         try {
           if (param0) {
-            stackIn_4_0 = pu.a(param9, param2, param4, (byte) -103, param6, param3, param10);
+            stackIn_4_0 = TrinketSlot.a(param9, param2, param4, (byte) -103, param6, param3, param10);
             return stackIn_4_0;
           }
           var27 = new vn(new vn[]{WidgetContainer.field_v[param2][param8]}, 1);
@@ -258,7 +258,7 @@ abstract class MatchPhaseView {
           return;
         }
         if (param1) {
-          this.field_i.a(-21174, this.a(wt.field_x, us.field_j, -74), this.a(dn.field_yb, kf.field_Eb, -106));
+          this.field_i.a(-21174, this.a(wt.field_x, us.field_j, -74), this.a(TrinketIcon.field_yb, TabStrip.field_Eb, -106));
           if (this.field_i.selectedIndex >= 0 &&
             this.field_i.c(-1)) {
             this.onButtonClick(111, this.field_c[this.field_i.selectedIndex].kind);
@@ -298,7 +298,7 @@ abstract class MatchPhaseView {
 
     final void a(int param0) {
         if (param0 != -26254) {
-          field_d = (om) null;
+          field_d = (IconLabel) null;
         }
         this.field_i = new MenuSelection(this.field_c.length);
         this.field_i.a(true, this.a(wt.field_x, us.field_j, -93), (byte) -127);
@@ -377,12 +377,12 @@ abstract class MatchPhaseView {
         var3 = 47;
         var4 = 83;
         var5 = Integer.toString(param1 / 50);
-        PacketBuffer.a(-45, hg.field_G);
+        PacketBuffer.a(-45, PromotionDialog.field_G);
         SoftwareRasterizer.b();
         var6 = SoftwareRasterizer.field_g >> 1;
         var7 = SoftwareRasterizer.field_f >> 1;
         un.field_d.d(var5, var6, var7, 16777215, -1);
-        pw.field_H.c(-16 + var6, var7 - 31);
+        AuctionSettingsDialog.field_H.c(-16 + var6, var7 - 31);
         TeamManagementScreen.e(124);
         var8 = 256;
         if (param0 != -2351) {
@@ -394,14 +394,14 @@ abstract class MatchPhaseView {
             var8 = 256;
           }
         }
-        var9 = hg.field_G.field_o;
-        var10 = hg.field_G.field_v;
+        var9 = PromotionDialog.field_G.field_o;
+        var10 = PromotionDialog.field_G.field_v;
         if (256 == var8) {
-          hg.field_G.c(var3 - (var9 >> 1), -(var10 >> 1) + var4);
+          PromotionDialog.field_G.c(var3 - (var9 >> 1), -(var10 >> 1) + var4);
         } else {
           var10 = var10 * var8 >> 8;
           var9 = var8 * var9 >> 8;
-          hg.field_G.e(var3 + (-(var9 >> 1) - 1), -1 + (var4 - (var10 >> 1)), var9, var10, 256);
+          PromotionDialog.field_G.e(var3 + (-(var9 >> 1) - 1), -1 + (var4 - (var10 >> 1)), var9, var10, 256);
         }
         return;
     }
@@ -444,7 +444,7 @@ abstract class MatchPhaseView {
         if (param0 != 0) {
           stackIn_14_2 = CommonGame.field_a;
         } else {
-          stackIn_14_2 = he.field_Ub;
+          stackIn_14_2 = LobbyPlayerRow.field_Ub;
         }
         WidgetContainer.a(stackIn_13_0, stackIn_13_1, stackIn_14_2, param3, param1, 114);
         param1 += 39;

@@ -236,7 +236,7 @@ final class tb extends ArchiveNetworkClient {
     }
 
     final static void a(byte param0, int param1) {
-        jb var5 = null;
+        PopupDialog var5 = null;
         int var3 = Kickabout.field_G;
         try {
           if (param0 != 126) {
@@ -247,13 +247,13 @@ final class tb extends ArchiveNetworkClient {
             if (su.field_c != null) {
               su.field_c.e(19910);
             }
-            var5 = (jb) (np.field_Jb.g(24009));
+            var5 = (PopupDialog) (ScrollPane.field_Jb.g(24009));
             while (var5 != null) {
               var5.c((byte) -109);
-              var5 = (jb) (np.field_Jb.c(33));
+              var5 = (PopupDialog) (ScrollPane.field_Jb.c(33));
             }
           }
-          np.field_Jb.a(new i(param1), 3);
+          ScrollPane.field_Jb.a(new MessageDialog(param1), 3);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "tb.I(" + param0 + ',' + param1 + ')');
         }
@@ -403,12 +403,12 @@ final class tb extends ArchiveNetworkClient {
         try {
           ll.field_n = wa.a((byte) 126, "basic", param1, "display_name_changed");
           ei.field_d = new al(0L, BroadcastServerCommand.field_D, le.field_a, ButtonMenuScreen.field_k);
-          nq.field_F = new al(0L, BroadcastServerCommand.field_D, md.field_j, IsSixCommand.field_D);
+          TournamentChampionDialog.field_F = new al(0L, BroadcastServerCommand.field_D, md.field_j, IsSixCommand.field_D);
           kk.field_R = new UiLayoutNode(0L, (UiLayoutNode) null);
           du.field_f = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           du.field_f.field_A = 1;
-          AlphaContainer.field_E = new UiLayoutNode(0L, dn.field_zb, oh.field_h);
-          ph.field_f = new UiLayoutNode(0L, pq.field_P, vg.field_Vb);
+          AlphaContainer.field_E = new UiLayoutNode(0L, TrinketIcon.field_zb, oh.field_h);
+          ph.field_f = new UiLayoutNode(0L, SquadPickerDialog.field_P, TextFieldNode.field_Vb);
           BlankScreen.field_h = new UiLayoutNode(0L, ul.field_c);
           kk.field_R.addChild((byte) -109, du.field_f);
           kk.field_R.addChild((byte) -122, AlphaContainer.field_E);
@@ -424,9 +424,9 @@ final class tb extends ArchiveNetworkClient {
           var6 = ei.field_d.field_Cb.field_zb;
           var7 = var6;
           var7.field_A = 1;
-          nq.field_F.field_Cb.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
-          var3 = nq.field_F.field_Cb.field_zb;
-          nq.field_F.field_Cb.field_zb.field_p = 1;
+          TournamentChampionDialog.field_F.field_Cb.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
+          var3 = TournamentChampionDialog.field_F.field_Cb.field_zb;
+          TournamentChampionDialog.field_F.field_Cb.field_zb.field_p = 1;
           var3.field_A = 1;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "tb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

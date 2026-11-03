@@ -21,12 +21,12 @@ final class ColourSwatchTile extends UiLayoutNode {
           if (param0 != 140) {
             ColourSwatchTile.b(108);
           }
-          var4 = (AuctionListing) (ce.field_K.g(param0 ^ 23877));
+          var4 = (AuctionListing) (BuyPlayerDialog.field_K.g(param0 ^ 23877));
           while (var4 != null) {
             if (var4.isSameListing(param1, 5250)) {
               return false;
             }
-            var4 = (AuctionListing) (ce.field_K.c(param0 ^ 173));
+            var4 = (AuctionListing) (BuyPlayerDialog.field_K.c(param0 ^ 173));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

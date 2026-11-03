@@ -123,7 +123,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
           this.a(120);
         }
         gw.b(5);
-        vg.c(0, 0);
+        TextFieldNode.c(0, 0);
         if (hq.a((byte) 10)) {
           var2 = this.pollLoginResult((byte) -65);
           if (var2 == 0 ||
@@ -166,7 +166,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         if (!n.a(false)) {
           if (ng.a(-4)) {
             if (nv.i(0)) {
-              np.h(-1);
+              ScrollPane.h(-1);
             } else {
               var3 = pg.a(-3);
               if (var3 != 2) {
@@ -211,7 +211,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
                   }
                   this.a(-25, false);
                 } else {
-                  np.h(-1);
+                  ScrollPane.h(-1);
                 }
               } else {
                 if (!nv.i(0)) {
@@ -239,7 +239,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
                     }
                   }
                 } else {
-                  np.h(param0 - 18862);
+                  ScrollPane.h(param0 - 18862);
                 }
               }
             }
@@ -288,14 +288,14 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
           FormationAgent.a(var2, -14142);
           return;
         }
-        vg.field_Rb = true;
+        TextFieldNode.field_Rb = true;
         for (var3 = -1 + sn.field_g.size(); var3 >= 0; var3--) {
           ((hc) (sn.field_g.elementAt(var3))).a(109);
         }
         if (param0 < 50) {
           this.a(34, 72, 'ￆ');
         }
-        if (!vg.field_Rb) {
+        if (!TextFieldNode.field_Rb) {
           this.r(10);
         } else {
           md.d(-27302);

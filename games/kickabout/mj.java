@@ -31,8 +31,8 @@ final class mj {
           var6 = var7;
           var5 = var6;
           double[] var2 = var5;
-          LineupView.field_x = fn.field_f.h();
-          LoggedGoal.field_o = kn.field_J.copy();
+          LineupView.field_x = Trinket.field_f.h();
+          LoggedGoal.field_o = TrinketPickerDialog.field_J.copy();
           od.field_p = vl.field_g.copy();
           nh.a(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);
           nh.a(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);

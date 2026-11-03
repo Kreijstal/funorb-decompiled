@@ -153,7 +153,7 @@ final class ei implements WidgetPainter {
           if (null != var44.field_G &&
             1 < var44.field_u) {
             var60 = var44.field_G;
-            th.a(param5 ^ -125, 0, var60, vu.field_zb, 0);
+            th.a(param5 ^ -125, 0, var60, ContextMenuItem.field_zb, 0);
           } else {
             or.b(false);
           }
@@ -162,7 +162,7 @@ final class ei implements WidgetPainter {
           var41 = var49;
           var8 = var41;
           var64 = new int[param6.field_k];
-          var62 = pv.field_F;
+          var62 = HelpTipDialog.field_F;
           if (param5 != -125) {
             ei.a(0);
           }
@@ -200,30 +200,30 @@ final class ei implements WidgetPainter {
             var15Lifetime1 = param6.field_n[var14Lifetime1];
             var16 = param6.field_z[var14Lifetime1];
             var17 = param6.field_T[var14Lifetime1];
-            if (pv.field_F.length <= param6.field_M[var14Lifetime1]) {
+            if (HelpTipDialog.field_F.length <= param6.field_M[var14Lifetime1]) {
               stackIn_25_0 = -1;
             } else {
               stackIn_25_0 = param6.field_M[var14Lifetime1];
             }
             var18 = stackIn_25_0;
-            if (param6.field_U[var14Lifetime1] >= pv.field_F.length) {
+            if (param6.field_U[var14Lifetime1] >= HelpTipDialog.field_F.length) {
               stackIn_28_0 = -1;
             } else {
               stackIn_28_0 = param6.field_U[var14Lifetime1];
             }
             var19 = stackIn_28_0;
-            if (param6.field_l[var14Lifetime1] >= pv.field_F.length) {
+            if (param6.field_l[var14Lifetime1] >= HelpTipDialog.field_F.length) {
               stackIn_31_0 = -1;
             } else {
               stackIn_31_0 = param6.field_l[var14Lifetime1];
             }
             var20 = stackIn_31_0;
-            if (sq.field_H != null &&
+            if (SaveChangesDialog.field_H != null &&
               null != param6.field_o &&
               param6.field_o.length > var14Lifetime1 &&
               -1 != param6.field_o[var14Lifetime1] &&
-              param6.field_o[var14Lifetime1] < sq.field_H.length) {
-              stackIn_39_0 = sq.field_H[param6.field_o[var14Lifetime1]];
+              param6.field_o[var14Lifetime1] < SaveChangesDialog.field_H.length) {
+              stackIn_39_0 = SaveChangesDialog.field_H[param6.field_o[var14Lifetime1]];
             } else {
               stackIn_39_0 = null;
             }

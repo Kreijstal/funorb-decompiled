@@ -45,33 +45,33 @@ final class vp implements hc {
           Runtime.getRuntime().freeMemory();
           if (FormationAgent.field_l != 0 &&
             FormationAgent.field_l != 1) {
-            vf.field_K = new byte[5][][][];
+            BuyPitchDialog.field_K = new byte[5][][][];
             cb.field_b = new byte[5][][];
             var3 = 5;
             for (var4 = 0; var4 < 5; var4++) {
-              var3 = var3 + pv.field_I[var4][5].field_e.length / 3;
+              var3 = var3 + HelpTipDialog.field_I[var4][5].field_e.length / 3;
             }
             var4Lifetime1 = 0;
             if (param0 != -4121) {
               vp.c(9);
             }
             for (var5 = 0; var5 < 5; var5++) {
-              var6 = pv.field_I[var5][5];
-              var7 = pv.field_I[var5][3];
+              var6 = HelpTipDialog.field_I[var5][5];
+              var7 = HelpTipDialog.field_I[var5][3];
               var12.a(var7, (byte) -107);
               cb.field_b[var5] = new byte[8][];
               for (var8 = 0; var8 < 8; var8++) {
                 kh.a(var5, var12, var8 << 8, false, 2150);
-                cb.field_b[var5][var8] = MatchingTextValidator.a(16, vf.field_F);
+                cb.field_b[var5][var8] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
               }
               var12.a(var6, (byte) -107);
               var8Lifetime1 = (2 + var6.field_e.length) / 3;
-              vf.field_K[var5] = new byte[var8Lifetime1][8][];
+              BuyPitchDialog.field_K[var5] = new byte[var8Lifetime1][8][];
               for (var9 = 0; var9 < var8Lifetime1; var9++) {
                 var12.a(var9 * 3, -39);
                 for (var10 = 0; var10 < 8; var10++) {
                   kh.a(var5, var12, var10 << 8, false, 2150);
-                  vf.field_K[var5][var9][var10] = MatchingTextValidator.a(16, vf.field_F);
+                  BuyPitchDialog.field_K[var5][var9][var10] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
                 }
                 var4Lifetime1++;
                 DelayedServerPacket.a(var3, param0 + 13984, var4Lifetime1);
@@ -81,7 +81,7 @@ final class vp implements hc {
             return;
           }
           hq.field_a = true;
-          vf.field_K = (byte[][][][]) null;
+          BuyPitchDialog.field_K = (byte[][][][]) null;
           cb.field_b = (byte[][][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,8 +118,8 @@ final class vp implements hc {
           param0 < rp.field_w + td.field_c.field_w) {
           return 0;
         }
-        if (ha.field_G <= param1 &&
-          ha.field_G + td.field_c.field_q > param1 &&
+        if (WelcomeDialog.field_G <= param1 &&
+          WelcomeDialog.field_G + td.field_c.field_q > param1 &&
           param0 >= FormationView.field_q &&
           param0 < td.field_c.field_w + FormationView.field_q) {
           return 1;
@@ -180,7 +180,7 @@ final class vp implements hc {
         if (param0 <= 63) {
           vp.b((byte) 99);
         }
-        stackIn_6_0 = (this.b(8)) && (vg.field_Wb);
+        stackIn_6_0 = (this.b(8)) && (TextFieldNode.field_Wb);
         return stackIn_6_0;
     }
 

@@ -236,7 +236,7 @@ final class GameOverView extends MatchPhaseView {
           AuctionListing.a(618, param0 ^ -16754303, 22, 305, 110);
           var2_int = this.field_ib;
           un.field_d.d("<u=FFFFFF>" + ConsoleEvaluationException.field_b.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
-          un.field_d.d(he.field_Ub.toUpperCase(), var2_int + 140, this.field_Q + 130, 16777215, -1);
+          un.field_d.d(LobbyPlayerRow.field_Ub.toUpperCase(), var2_int + 140, this.field_Q + 130, 16777215, -1);
           un.field_d.d(CommonGame.field_a.toUpperCase(), 500 + var2_int, this.field_Q + 130, 16777215, -1);
           var3 = this.field_Q + 140;
           var4 = 360 + var2_int;
@@ -411,9 +411,9 @@ final class GameOverView extends MatchPhaseView {
             break;
           }
           stackIn_82_0 = un.field_d;
-          stackIn_82_1 = qb.field_Vb;
+          stackIn_82_1 = GameSetupPanel.field_Vb;
           stackIn_82_2 = this.field_eb + 14;
-          stackIn_82_3 = this.field_db + 97 + (un.field_d.a(qb.field_Vb) >> 1);
+          stackIn_82_3 = this.field_db + 97 + (un.field_d.a(GameSetupPanel.field_Vb) >> 1);
           if (!this.field_K &&
             !this.field_W) {
             stackIn_83_4 = 11184810;
@@ -434,10 +434,10 @@ final class GameOverView extends MatchPhaseView {
           }
           ((CoverageBitmapFont) (Object) stackIn_89_0).b(stackIn_89_1, stackIn_89_2, stackIn_89_3, stackIn_90_4, -1);
           var9 = this.field_Q;
-          un.field_d.d("<u=FFFFFF>" + qb.field_Vb.toUpperCase() + "</u>", 320 + var2_int, 125 + var9, 16777215, -1);
+          un.field_d.d("<u=FFFFFF>" + GameSetupPanel.field_Vb.toUpperCase() + "</u>", 320 + var2_int, 125 + var9, 16777215, -1);
           var9 += 160;
           SoftwareRasterizer.a(var2_int + 42, var9 - 20, 552, 28, 10, 65793, 128);
-          un.field_d.d(he.field_Ub.toUpperCase(), var2_int + 320, var9, param0, -1);
+          un.field_d.d(LobbyPlayerRow.field_Ub.toUpperCase(), var2_int + 320, var9, param0, -1);
           var9 += 20;
           var10_ref = this.field_bb;
           var9 = this.a(var10_ref, var2_int, var9, true);
@@ -490,7 +490,7 @@ final class GameOverView extends MatchPhaseView {
             }
             SoftwareRasterizer.a(stackIn_111_0, stackIn_111_1, stackIn_111_2, stackIn_111_3, stackIn_111_4, stackIn_112_5, 128);
             stackIn_115_0 = un.field_d;
-            stackIn_115_1 = gu.field_Ib;
+            stackIn_115_1 = ContextMenu.field_Ib;
             stackIn_115_2 = this.field_T + 285;
             stackIn_115_3 = this.field_kb + 24 - 1;
             if (this.field_F) {
@@ -527,9 +527,9 @@ final class GameOverView extends MatchPhaseView {
           ((CoverageBitmapFont) (Object) stackIn_128_0).b(stackIn_128_1, stackIn_128_2, stackIn_128_3, stackIn_131_4, -1);
           var2_int += 596;
           stackIn_135_0 = un.field_d;
-          stackIn_135_1 = qb.field_Vb;
+          stackIn_135_1 = GameSetupPanel.field_Vb;
           stackIn_135_2 = 29 + this.field_L;
-          stackIn_135_3 = this.field_r + (97 + (un.field_d.a(qb.field_Vb) >> 1));
+          stackIn_135_3 = this.field_r + (97 + (un.field_d.a(GameSetupPanel.field_Vb) >> 1));
           if (!this.field_C &&
             !this.field_D) {
             stackIn_138_4 = 11184810;
@@ -594,7 +594,7 @@ final class GameOverView extends MatchPhaseView {
             }
             SoftwareRasterizer.a(stackIn_159_0, stackIn_159_1, stackIn_159_2, stackIn_159_3, stackIn_159_4, stackIn_160_5, 128);
             stackIn_163_0 = un.field_d;
-            stackIn_163_1 = gu.field_Ib;
+            stackIn_163_1 = ContextMenu.field_Ib;
             stackIn_163_2 = 285 + this.field_v;
             stackIn_163_3 = -1 + this.field_A + 24;
             if (!this.field_t) {
@@ -788,7 +788,7 @@ final class GameOverView extends MatchPhaseView {
         int var8 = 0;
         try {
           var4 = GameplayHelpScreen.field_G;
-          if (!var4[rb.field_Kb] &&
+          if (!var4[TextPromptDialog.field_Kb] &&
             !var4[98] &&
             param2 != 98) {
             stackIn_10_0 = 0;
@@ -967,7 +967,7 @@ final class GameOverView extends MatchPhaseView {
           if (null != param0.field_X) {
             this.field_Z = ContentTransitionDialog.field_S;
             if (param0.field_X.score[1] > param0.field_X.score[0]) {
-              this.field_Z = qq.field_J;
+              this.field_Z = LoginRequiredDialog.field_J;
             }
             this.field_Z = vo.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_Z, new String[]{Integer.toString(param0.field_X.score[0]), Integer.toString(param0.field_X.score[1])});
           }
@@ -1513,7 +1513,7 @@ final class GameOverView extends MatchPhaseView {
                     ManagerAction.a(8, 14492194, 110, var7, var8, 11184810, ReceivedAuctionItem.field_A);
                   }
                   if (var10.resigned) {
-                    qq.a(110, (byte) -101, 13421772, ss.field_g, var8, var7, 14492194);
+                    LoginRequiredDialog.a(110, (byte) -101, 13421772, ss.field_g, var8, var7, 14492194);
                   }
                   var8 += 23;
                   var9++;
@@ -2111,7 +2111,7 @@ final class GameOverView extends MatchPhaseView {
             return stackIn_2_0;
           }
           if (param0 == 2) {
-            stackIn_5_0 = dn.field_Ab;
+            stackIn_5_0 = TrinketIcon.field_Ab;
             return stackIn_5_0;
           }
           if (param0 == 3) {
@@ -2119,7 +2119,7 @@ final class GameOverView extends MatchPhaseView {
             return stackIn_15_0;
           }
           if (param0 != 1) {
-            stackIn_13_0 = rb.field_Ib;
+            stackIn_13_0 = TextPromptDialog.field_Ib;
             return stackIn_13_0;
           }
           stackIn_11_0 = cu.field_g;

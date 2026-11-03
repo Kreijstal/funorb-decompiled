@@ -224,7 +224,7 @@ abstract class cv {
           GameModesHelpScreen.field_G.setTransitionProgress(256, true, -91, AuctionLogEntry.field_h);
           AuctionLogEntry.field_h = GameModesHelpScreen.field_G;
           GameModesHelpScreen.field_G = null;
-          ce.field_I = 0;
+          BuyPlayerDialog.field_I = 0;
           FormationAgent.field_f = po.a(AuctionLogEntry.field_h, -4);
           if (TextButton.field_B) {
             sr.field_l = null;
@@ -247,7 +247,7 @@ abstract class cv {
             for (var2 = 0; var2 < 8; var2++) {
               var9[var2] = 0;
             }
-            var10 = ha.field_F;
+            var10 = WelcomeDialog.field_F;
             var8 = var10;
             var5 = var8;
             var1Lifetime1 = var5;

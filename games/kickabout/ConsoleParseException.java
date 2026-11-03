@@ -45,9 +45,9 @@ final class ConsoleParseException extends Exception {
           if (null != jl.field_f) {
             return;
           }
-          vg.field_Wb = false;
+          TextFieldNode.field_Wb = false;
           if (PacketBuffer.field_l) {
-            var5 = ie.field_H;
+            var5 = SellPlayerDialog.field_H;
           } else {
             if (!WriteIntegersCommand.field_C) {
               var5 = LineupView.field_n;

@@ -46,32 +46,32 @@ final class vi extends mc {
           var4 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
           var5 = new kk();
           var5.field_b = (short)param1.l(16, 59);
-          var5.field_f = nq.a(var5.field_f, param1, 16, -72);
-          var5.field_r = nq.a(var5.field_r, param1, 16, -61);
-          var5.field_P = nq.a(var5.field_P, param1, 16, -92);
+          var5.field_f = TournamentChampionDialog.a(var5.field_f, param1, 16, -72);
+          var5.field_r = TournamentChampionDialog.a(var5.field_r, param1, 16, -61);
+          var5.field_P = TournamentChampionDialog.a(var5.field_P, param1, 16, -92);
           var5.field_g = (short)param1.l(16, 59);
-          var5.field_n = nq.a(var5.field_n, param1, 16, 105);
-          var5.field_z = nq.a(var5.field_z, param1, 16, 48);
-          var5.field_T = nq.a(var5.field_T, param1, 16, 109);
+          var5.field_n = TournamentChampionDialog.a(var5.field_n, param1, 16, 105);
+          var5.field_z = TournamentChampionDialog.a(var5.field_z, param1, 16, 48);
+          var5.field_T = TournamentChampionDialog.a(var5.field_T, param1, 16, 109);
           if (var3 != 0) {
             var5.field_k = (short)param1.l(16, 59);
-            var5.field_F = nq.a(var5.field_F, param1, 16, -66);
-            var5.field_I = nq.a(var5.field_I, param1, 16, 109);
-            var5.field_v = nq.a(var5.field_v, param1, 16, -79);
-            var5.field_M = nq.a(var5.field_M, param1, 16, 116);
-            var5.field_U = nq.a(var5.field_U, param1, 16, -73);
-            var5.field_l = nq.a(var5.field_l, param1, 16, -106);
+            var5.field_F = TournamentChampionDialog.a(var5.field_F, param1, 16, -66);
+            var5.field_I = TournamentChampionDialog.a(var5.field_I, param1, 16, 109);
+            var5.field_v = TournamentChampionDialog.a(var5.field_v, param1, 16, -79);
+            var5.field_M = TournamentChampionDialog.a(var5.field_M, param1, 16, 116);
+            var5.field_U = TournamentChampionDialog.a(var5.field_U, param1, 16, -73);
+            var5.field_l = TournamentChampionDialog.a(var5.field_l, param1, 16, -106);
           }
           if (var4 != 0) {
             param1.l(16, 59);
-            var5.field_p = nq.a(var5.field_p, param1, 16, 116);
-            var5.field_E = nq.a(var5.field_E, param1, 16, -104);
-            var5.field_N = nq.a(var5.field_N, param1, 16, -76);
-            var5.field_i = nq.a(var5.field_i, param1, 16, -65);
-            var5.field_K = nq.a(var5.field_K, param1, 16, -87);
+            var5.field_p = TournamentChampionDialog.a(var5.field_p, param1, 16, 116);
+            var5.field_E = TournamentChampionDialog.a(var5.field_E, param1, 16, -104);
+            var5.field_N = TournamentChampionDialog.a(var5.field_N, param1, 16, -76);
+            var5.field_i = TournamentChampionDialog.a(var5.field_i, param1, 16, -65);
+            var5.field_K = TournamentChampionDialog.a(var5.field_K, param1, 16, -87);
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            var5.field_o = nq.a(var5.field_o, param1, 16, 106);
+            var5.field_o = TournamentChampionDialog.a(var5.field_o, param1, 16, 106);
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
             var5.field_G = ColumnTableWidget.a(2280703, param1, var5.field_G, 16);

@@ -57,7 +57,7 @@ final class kk {
           if (param0 != -101) {
             field_R = (UiLayoutNode) null;
           }
-          IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, hk.field_G, param2, param1);
+          IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, AuctionBidDialog.field_G, param2, param1);
           we.field_a = new vo(wd.field_l, IsSixCommand.field_E);
           wd.field_l.a(we.field_a, false);
         } catch (RuntimeException runtimeException) {
@@ -318,7 +318,7 @@ final class kk {
           if (param0 != -101) {
             field_R = (UiLayoutNode) null;
           }
-          IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, hk.field_G, param2, param1);
+          IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, AuctionBidDialog.field_G, param2, param1);
           we.field_a = new vo(wd.field_l, IsSixCommand.field_E);
           wd.field_l.a(we.field_a, false);
         } catch (RuntimeException runtimeException) {

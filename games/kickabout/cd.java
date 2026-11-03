@@ -23,9 +23,9 @@ final class cd {
     final static boolean a(int param0) {
         if (param0 != 3) {
           cd.a((byte) -84);
-          return hk.field_G;
+          return AuctionBidDialog.field_G;
         }
-        return hk.field_G;
+        return AuctionBidDialog.field_G;
     }
 
     static {

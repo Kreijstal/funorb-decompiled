@@ -56,12 +56,12 @@ final class rp extends ri {
         int var5 = 0;
         var5 = Kickabout.field_G;
         try {
-          nq.field_I = nq.field_I + 65536;
+          TournamentChampionDialog.field_I = TournamentChampionDialog.field_I + 65536;
           if (param1 != -587) {
             rp.b(-111);
           }
-          while (UnreadMessagesScreen.a(vp.field_a, false, nq.field_I) >= 65536) {
-            nq.field_I = nq.field_I - vp.field_a;
+          while (UnreadMessagesScreen.a(vp.field_a, false, TournamentChampionDialog.field_I) >= 65536) {
+            TournamentChampionDialog.field_I = TournamentChampionDialog.field_I - vp.field_a;
           }
           var2_int = -1;
           if (wo.field_n != null) {
@@ -199,7 +199,7 @@ final class rp extends ri {
           if (param0 > -38) {
             field_D = (String) null;
           }
-          stackIn_3_0 = ce.a('*', (byte) 48, param1.field_q.length());
+          stackIn_3_0 = BuyPlayerDialog.a('*', (byte) 48, param1.field_q.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -217,10 +217,10 @@ final class rp extends ri {
 
     final static ff[] b(int param0) {
         if (param0 == -27666) {
-          return new ff[]{eb.field_c, om.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
+          return new ff[]{eb.field_c, IconLabel.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
         }
         field_A = true;
-        return new ff[]{eb.field_c, om.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
+        return new ff[]{eb.field_c, IconLabel.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
     }
 
     rp(int param0) {

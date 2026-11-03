@@ -29,8 +29,8 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         stackIn_3_0 = ((128 & var3) != 0);
         PasswordValidator.field_l = stackIn_3_0;
         RegistrationRequestDialog.field_ob = 127 & var3;
-        ie.field_F = var8.readUnsignedByte((byte) -108);
-        i.field_z = var8.readLong((byte) -124);
+        SellPlayerDialog.field_F = var8.readUnsignedByte((byte) -108);
+        MessageDialog.field_z = var8.readLong((byte) -124);
         if (RegistrationRequestDialog.field_ob != 2) {
           FindingOpponentScreen.field_E = 0;
           DateInputWidget.field_G = 0;
@@ -216,8 +216,8 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         stackIn_3_0 = ((128 & var3) != 0);
         PasswordValidator.field_l = stackIn_3_0;
         RegistrationRequestDialog.field_ob = 127 & var3;
-        ie.field_F = var8.readUnsignedByte((byte) -108);
-        i.field_z = var8.readLong((byte) -124);
+        SellPlayerDialog.field_F = var8.readUnsignedByte((byte) -108);
+        MessageDialog.field_z = var8.readLong((byte) -124);
         if (RegistrationRequestDialog.field_ob != 2) {
           FindingOpponentScreen.field_E = 0;
           DateInputWidget.field_G = 0;

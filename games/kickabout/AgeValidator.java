@@ -173,7 +173,7 @@ final class AgeValidator extends TextFieldValidator {
           var3_int = rr.a(10, var5);
           if (var3_int > 0 &&
             130 >= var3_int) {
-            stackIn_12_0 = he.field_yb;
+            stackIn_12_0 = LobbyPlayerRow.field_yb;
             return stackIn_12_0;
           }
           stackIn_10_0 = PitchOptionTile.field_Bb;

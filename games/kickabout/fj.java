@@ -92,7 +92,7 @@ final class fj {
               var2.a(tl.a(var3, false), 3);
               continue;
             }
-            var2.a(cf.a(-9323, var3), 3);
+            var2.a(RankingRowNode.a(-9323, var3), 3);
           }
           stackIn_20_0 = var2;
           return stackIn_20_0;

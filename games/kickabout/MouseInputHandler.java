@@ -27,7 +27,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           TextHotspotWidget.field_M = 0;
-          vf.field_G = param0.getX();
+          BuyPitchDialog.field_G = param0.getX();
           gf.field_b = param0.getY();
           rp.field_A = true;
           return;
@@ -121,7 +121,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           TextHotspotWidget.field_M = 0;
-          vf.field_G = param0.getX();
+          BuyPitchDialog.field_G = param0.getX();
           gf.field_b = param0.getY();
           rp.field_A = true;
           return;
@@ -171,7 +171,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != lw.field_e) {
             TextHotspotWidget.field_M = 0;
-            vf.field_G = -1;
+            BuyPitchDialog.field_G = -1;
             gf.field_b = -1;
             rp.field_A = true;
           }
@@ -194,10 +194,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             UiWidget.field_l = param0.getY();
             nj.a(71);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              vu.field_Fb = 2;
+              ContextMenuItem.field_Fb = 2;
               RandomAccessCacheFile.field_d = 2;
             } else {
-              vu.field_Fb = 1;
+              ContextMenuItem.field_Fb = 1;
               RandomAccessCacheFile.field_d = 1;
             }
             var2_int = param0.getModifiers();
@@ -242,7 +242,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           TextHotspotWidget.field_M = 0;
-          vf.field_G = param0.getX();
+          BuyPitchDialog.field_G = param0.getX();
           gf.field_b = param0.getY();
           rp.field_A = true;
           return;
@@ -267,7 +267,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             field_a = (String) null;
           }
           is.field_a = param2;
-          rk.field_f = new AccountRequestDialog(wd.field_l, fj.field_b, param0, hk.field_G, is.field_a);
+          rk.field_f = new AccountRequestDialog(wd.field_l, fj.field_b, param0, AuctionBidDialog.field_G, is.field_a);
           wd.field_l.a(rk.field_f, false);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ku.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

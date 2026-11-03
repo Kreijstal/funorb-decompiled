@@ -67,7 +67,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.field_l instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.field_l)).a((byte) -115);
             if (var3 != null) {
-              if (var3.getValidationState(-24407) == he.field_yb &&
+              if (var3.getValidationState(-24407) == LobbyPlayerRow.field_yb &&
                 !param1.equals(this.field_l.field_q)) {
                 stackIn_6_0 = rl.field_p;
                 return stackIn_6_0;
@@ -132,13 +132,13 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.field_l instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.field_l)).a((byte) -113);
             if (var3 != null &&
-              var3.getValidationState(-24407) != he.field_yb) {
+              var3.getValidationState(-24407) != LobbyPlayerRow.field_yb) {
               stackIn_8_0 = PitchOptionTile.field_Bb;
               return stackIn_8_0;
             }
           }
           if (param0.equals(this.field_l.field_q)) {
-            stackIn_12_0 = he.field_yb;
+            stackIn_12_0 = LobbyPlayerRow.field_yb;
           } else {
             stackIn_12_0 = PitchOptionTile.field_Bb;
           }

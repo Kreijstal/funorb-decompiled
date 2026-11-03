@@ -76,11 +76,11 @@ final class ue extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, int param2) {
-        qb var4 = null;
+        GameSetupPanel var4 = null;
         CipherPacketBuffer var5 = null;
         int var3 = 35 / ((23 - param1) / 35);
         if (DelayedServerPacket.field_h != param0) {
-          var4 = (qb) (sr.field_f.a(-3611, (long)DelayedServerPacket.field_h));
+          var4 = (GameSetupPanel) (sr.field_f.a(-3611, (long)DelayedServerPacket.field_h));
           if (var4 != null) {
             var4.field_Kb = null;
           }
@@ -185,7 +185,7 @@ final class ue extends IntrusiveNode {
               if (var7 != 0) {
                 stackIn_32_1 = CommonGame.field_a;
               } else {
-                stackIn_32_1 = he.field_Ub;
+                stackIn_32_1 = LobbyPlayerRow.field_Ub;
               }
               ((CoverageBitmapFont) (Object) stackIn_31_0).d(((String) (Object) stackIn_32_1).toUpperCase(), var14[var7], 290, 16777215, -1);
               nb.field_j[var7].drawHalfSize(var14[var7] - 50, 170);

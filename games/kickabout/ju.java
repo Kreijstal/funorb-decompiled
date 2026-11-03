@@ -174,7 +174,7 @@ final class ju extends TextHotspotWidget {
           if (PitchOptionTile.field_Bb == var6Lifetime1) {
             var15 = LoggedPlayer.field_g[2];
             var15.drawAdditive(var9, var10 - (var15.field_w >> 1), 256);
-          } else if (var6Lifetime1 == he.field_yb) {
+          } else if (var6Lifetime1 == LobbyPlayerRow.field_yb) {
             var16 = LoggedPlayer.field_g[1];
             var16.drawAdditive(var9, var10 - (var16.field_w >> 1), 256);
           }

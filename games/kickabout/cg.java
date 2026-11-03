@@ -29,9 +29,9 @@ final class cg extends SingleChildContainer {
             return;
           }
           k.field_i = k.field_i + 1;
-          if (ji.field_Hb == -1 &&
+          if (ScrollBar.field_Hb == -1 &&
             TextLine.field_h == -1) {
-            ji.field_Hb = BytePlusOneCommand.field_A;
+            ScrollBar.field_Hb = BytePlusOneCommand.field_A;
             TextLine.field_h = n.field_m;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -65,7 +65,7 @@ final class cg extends SingleChildContainer {
               }
             }
             td.field_d = TextLine.field_h;
-            ws.field_e = ji.field_Hb;
+            ws.field_e = ScrollBar.field_Hb;
             if (param0 == null) {
               if (var2_int != 0) {
                 nc.field_a = true;
@@ -79,7 +79,7 @@ final class cg extends SingleChildContainer {
             BytePlusOneCommand.field_C) {
             k.field_i = 0;
             td.field_d = TextLine.field_h;
-            ws.field_e = ji.field_Hb;
+            ws.field_e = ScrollBar.field_Hb;
           }
           EmailAvailabilityValidator.field_o = param0;
           if (nc.field_a &&
@@ -88,7 +88,7 @@ final class cg extends SingleChildContainer {
             nc.field_a = false;
           }
           TextLine.field_h = -1;
-          ji.field_Hb = -1;
+          ScrollBar.field_Hb = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

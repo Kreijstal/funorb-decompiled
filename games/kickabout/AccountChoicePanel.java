@@ -103,7 +103,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         this.field_E.field_k = (UiListener) (this);
         this.field_H.field_k = (UiListener) (this);
         this.field_E.field_u = so.field_c;
-        this.field_H.field_u = pv.field_G;
+        this.field_H.field_u = HelpTipDialog.field_G;
         this.a(-59, this.field_J);
         this.a(-121, this.field_E);
         this.a(-54, this.field_H);

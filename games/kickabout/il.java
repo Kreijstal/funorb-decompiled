@@ -112,7 +112,7 @@ final class il {
             return stackIn_7_0;
           }
           if (ts.field_d != 2) {
-            stackIn_10_0 = pu.field_Ab;
+            stackIn_10_0 = TrinketSlot.field_Ab;
             return stackIn_10_0;
           }
           if (hi.a(0, param0)) {

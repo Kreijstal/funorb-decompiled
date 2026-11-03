@@ -10,7 +10,7 @@ final class uq {
     static String field_f;
 
     final static void a(byte param0) {
-        vg.field_Wb = true;
+        TextFieldNode.field_Wb = true;
         if (param0 != -122) {
           uq.a(-68);
           NodeHashTableIterator.field_b = 0;

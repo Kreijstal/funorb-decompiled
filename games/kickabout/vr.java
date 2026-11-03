@@ -19,12 +19,12 @@ final class vr {
         int[] var3Lifetime1;
         int[] var2Lifetime1;
         if (param0 == -2) {
-          var3 = na.field_zb[RankingsScreen.field_C];
+          var3 = VerticalScrollbar.field_zb[RankingsScreen.field_C];
           var2 = var3;
           return param1 < var3.length ? var3[param1] : 100;
         }
         field_b = (String) null;
-        var3Lifetime1 = na.field_zb[RankingsScreen.field_C];
+        var3Lifetime1 = VerticalScrollbar.field_zb[RankingsScreen.field_C];
         var2Lifetime1 = var3Lifetime1;
         return param1 < var3Lifetime1.length ? var3Lifetime1[param1] : 100;
     }
@@ -86,7 +86,7 @@ final class vr {
     final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
-        he var3 = null;
+        LobbyPlayerRow var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = Kickabout.field_G;
         try {
@@ -100,7 +100,7 @@ final class vr {
           if (param0 != -2) {
             return;
           }
-          pq.field_N = null;
+          SquadPickerDialog.field_N = null;
           if (SquadSlotWidget.field_yb != null) {
             SquadSlotWidget.field_yb.b(param0 ^ -22997);
             SquadSlotWidget.field_yb = null;
@@ -110,16 +110,16 @@ final class vr {
             lw.field_d.b(param0 ^ -22997);
             lw.field_d = null;
           }
-          pu.field_Eb = null;
-          if (null == pq.field_N) {
+          TrinketSlot.field_Eb = null;
+          if (null == SquadPickerDialog.field_N) {
             return;
           }
-          var3 = (he) (pq.field_N.b((byte) 72));
+          var3 = (LobbyPlayerRow) (SquadPickerDialog.field_N.b((byte) 72));
           while (var3 != null) {
             var3.unlinkSecondary(57);
-            var3 = (he) (pq.field_N.a(0));
+            var3 = (LobbyPlayerRow) (SquadPickerDialog.field_N.a(0));
           }
-          pq.field_N = null;
+          SquadPickerDialog.field_N = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,7 +129,7 @@ final class vr {
     }
 
     final static void b(byte param0) {
-        np.field_Jb.a(new aw(), 3);
+        ScrollPane.field_Jb.a(new TutorialChoiceDialog(), 3);
         if (param0 > -114) {
           vr.a((byte) -74);
         }

@@ -70,7 +70,7 @@ final class ds {
         }
     }
 
-    final static void a(int param0, bb param1) {
+    final static void a(int param0, CascadingMenu param1) {
         try {
           LeaguesHelpScreen.field_E.addChild((byte) -128, (UiLayoutNode) (param1));
           if (param0 != -1) {

@@ -26,7 +26,7 @@ abstract class MouseWheelInput {
         if (eq.a(false)) {
           param1 = false;
         }
-        ji.a((byte) 123, param1);
+        ScrollBar.a((byte) 123, param1);
         NetworkGameClient.k(1);
         if (param0 < -115) {
           return;

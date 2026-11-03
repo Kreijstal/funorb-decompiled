@@ -60,7 +60,7 @@ final class sk {
           return;
         }
         try {
-          np.field_Jb.a(new i(param0, param2), 3);
+          ScrollPane.field_Jb.a(new MessageDialog(param0, param2), 3);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "sk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -98,7 +98,7 @@ final class sk {
           var9 = nm.a((byte) -99, field_c + 1);
           var10 = -var7 + var9;
           var11 = var5 * (float)var10 + (float)var7;
-          var13 = no.field_K[field_c];
+          var13 = LeagueWinnerDialog.field_K[field_c];
           var12 = var13;
           if (var13 != null) {
             var12 = var13 + " - " + var6 + "%";

@@ -209,7 +209,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               }
               var5.a((byte) 114, 9, AccountNameAvailabilityValidator.field_p);
             } else {
-              var5.a((byte) 94, 7, ha.field_J);
+              var5.a((byte) 94, 7, WelcomeDialog.field_J);
             }
           }
           this.a((byte) -122, (UiWidget) (var5));

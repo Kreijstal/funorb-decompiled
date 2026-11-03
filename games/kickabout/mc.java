@@ -30,7 +30,7 @@ abstract class mc {
     }
 
     final static void a(int param0) {
-        vg.field_Wb = true;
+        TextFieldNode.field_Wb = true;
         gl.field_c = null;
         MySquadScreen.field_N = null;
         ContentTransitionDialog.field_Y = null;

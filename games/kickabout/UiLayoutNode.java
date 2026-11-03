@@ -394,7 +394,7 @@ class UiLayoutNode extends iv {
                 if (r.a(0, var5) == 2) {
                   gd.a(-117, 1, var5, param2);
                 }
-                PasswordLoginCredentials.a(-1, 82, NodeHashTableIterator.field_b, param1, at.field_Kb, var4_ref_String);
+                PasswordLoginCredentials.a(-1, 82, NodeHashTableIterator.field_b, param1, TrinketTile.field_Kb, var4_ref_String);
               }
             }
             td.a(99);
@@ -444,7 +444,7 @@ class UiLayoutNode extends iv {
             var16 = var7Lifetime6 + var15 + ": ";
             var5Lifetime1 = var5Lifetime1 - FootballerAgent.field_i.a(var16);
           } else {
-            var18 = (CharSequence) ((Object) at.field_Kb);
+            var18 = (CharSequence) ((Object) TrinketTile.field_Kb);
             var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{hv.a(false, var18)});
             var7Lifetime6 = var14;
             var7Lifetime6 = var14;

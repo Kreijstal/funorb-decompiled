@@ -208,7 +208,7 @@ final class RenderedFootballer extends FootballerAgent {
         }
         if (this.megamode &&
           this.action == 4) {
-          var7 = this.actionTime * (2048 / vf.field_I[4]) + var7 & 2047;
+          var7 = this.actionTime * (2048 / BuyPitchDialog.field_I[4]) + var7 & 2047;
         }
         var8.a(0, var7, 0, param1, 0, 0, 0, param0);
         if (param4 >= -63) {
@@ -267,7 +267,7 @@ final class RenderedFootballer extends FootballerAgent {
           if (ih.field_c == 2) {
             var6 += 10;
           }
-          he.a(var7, false, 240, ConsoleCommand.field_t + var6, var2);
+          LobbyPlayerRow.a(var7, false, 240, ConsoleCommand.field_t + var6, var2);
         }
         this.field_ib = 20;
         return;
@@ -663,7 +663,7 @@ final class RenderedFootballer extends FootballerAgent {
         if (10 == this.action) {
           var7Lifetime1 = 6;
           var8 = 2.0;
-          if (this.actionTime > vf.field_I[10]) {
+          if (this.actionTime > BuyPitchDialog.field_I[10]) {
             var7Lifetime1 = 7;
           }
         }
@@ -732,7 +732,7 @@ final class RenderedFootballer extends FootballerAgent {
         if (this.megamode) {
           if (7 == this.action &&
             this.actionTime == 1) {
-            dn.b(-5, 10);
+            TrinketIcon.b(-5, 10);
           }
           var8 = var8 / 2.0;
           if (4 == this.action) {
@@ -784,7 +784,7 @@ final class RenderedFootballer extends FootballerAgent {
           return;
         }
         this.field_ob = param1;
-        this.field_mb.a(pv.field_I[this.field_U][this.field_ob], (byte) -107);
+        this.field_mb.a(HelpTipDialog.field_I[this.field_U][this.field_ob], (byte) -107);
     }
 
     private final int f(byte param0) {

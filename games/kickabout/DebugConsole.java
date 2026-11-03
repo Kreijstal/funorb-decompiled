@@ -147,7 +147,7 @@ final class DebugConsole extends ConsolePanel {
           if (var5 >= 0) {
             var14 = var4[var5];
             var8_int = -var14.field_f + var3;
-            if (var14.field_k == vu.field_Ab &&
+            if (var14.field_k == ContextMenuItem.field_Ab &&
               var8_int > 0) {
               var6Lifetime2 = var14.field_h.substring(0, Math.min(var14.field_h.length(), var8_int));
               this.field_j.field_s = this.field_d.a(var13.substring(0, var14.field_f));
@@ -168,7 +168,7 @@ final class DebugConsole extends ConsolePanel {
                 break;
               }
               if (var9 > 0 &&
-                var4[var9 - 1].field_k == vu.field_Ab) {
+                var4[var9 - 1].field_k == ContextMenuItem.field_Ab) {
                 var6Lifetime2 = var4[var9 - 1].field_h;
                 this.field_j.field_s = this.field_d.a(var13.substring(0, var4[var9 - 1].field_f));
               }
@@ -489,7 +489,7 @@ final class DebugConsole extends ConsolePanel {
           if (var5 >= 0) {
             var17 = var4[var5];
             var8_int = var3 - var17.field_f;
-            if (var17.field_k == vu.field_Ab &&
+            if (var17.field_k == ContextMenuItem.field_Ab &&
               0 < var8_int &&
               var8_int <= var17.field_h.length()) {
               var6Lifetime2 = var17.field_h.substring(0, var8_int);
@@ -553,7 +553,7 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    final static void a(int param0, qb param1, boolean param2, String param3) {
+    final static void a(int param0, GameSetupPanel param1, boolean param2, String param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -575,21 +575,21 @@ final class DebugConsole extends ConsolePanel {
         try {
           BytePlusOneCommand.a(param1, false, ShopPlayerSlot.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.h((byte) 77));
           if (param1.field_Cb && (param1.field_Mb == 2 ||
-            !(2 > tk.field_Ib))) {
+            !(2 > ScrollContainer.field_Ib))) {
             var7 = TextButton.field_v;
-            var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ej.field_Ab, new String[]{param3});
-            var7.field_j.a(0, 10, var8);
+            var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, SelectableTrinketIcon.field_Ab, new String[]{param3});
+            var7.field_j.addItem(0, 10, var8);
           }
           TextButton.field_v.d(param0 - 14);
           if (param2) {
             if (TextButton.field_v.field_c != DelayedServerPacket.field_h) {
               var11 = TextButton.field_v;
               var12 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, br.field_a, new String[]{param3});
-              var11.field_j.a(param0 - 15, 15, var12);
+              var11.field_j.addItem(param0 - 15, 15, var12);
             } else {
               var9 = TextButton.field_v;
               var10 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, cl.field_h, new String[]{param3});
-              var9.field_j.a(0, 16, var10);
+              var9.field_j.addItem(0, 16, var10);
             }
           }
           var13 = TextButton.field_v;

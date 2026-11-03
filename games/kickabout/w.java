@@ -6,7 +6,7 @@ final class w implements hc {
     static int[] field_a;
     static String field_h;
     static ArgbSprite[] field_f;
-    static vg field_b;
+    static TextFieldNode field_b;
     static String[] field_g;
     static String field_c;
     static UiLayoutNode field_e;
@@ -29,7 +29,7 @@ final class w implements hc {
           var2_int = 119 / ((72 - param1) / 33);
           var3 = new ag(param0, param0);
           IndexedSpriteState.field_c.a(var3, 3);
-          vg.field_Bb.addSubStream(param0);
+          TextFieldNode.field_Bb.addSubStream(param0);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,19 +61,19 @@ final class w implements hc {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        np stackIn_3_0 = null;
+        ScrollPane stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
-        qb stackIn_10_0;
+        GameSetupPanel stackIn_10_0;
         UiLayoutNode stackIn_10_1;
         UiLayoutNode stackIn_10_2;
         long stackIn_10_3;
         UiLayoutNode stackIn_11_1 = null;
         UiLayoutNode stackIn_11_2 = null;
         UiLayoutNode stackIn_11_4 = null;
-        qb stackIn_31_0;
+        GameSetupPanel stackIn_31_0;
         UiLayoutNode stackIn_31_1;
         UiLayoutNode stackIn_31_2;
         long stackIn_31_3;
@@ -102,7 +102,7 @@ final class w implements hc {
         IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
-        qb var12 = null;
+        GameSetupPanel var12 = null;
         int var13 = 0;
         int var14 = 0;
         UiLayoutNode var18 = null;
@@ -170,15 +170,15 @@ final class w implements hc {
           stackIn_3_0 = ShopPlayerSlot.field_Jb;
           stackIn_3_1 = param5 * (sh.field_c * 4 + 8);
           stackIn_4_2 = (ig.field_f == ShopPlayerSlot.field_Jb);
-          var7_int = ((np) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param0, 2, param1, (2 + sh.field_c) * 2) ? 1 : 0;
+          var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param0, 2, param1, (2 + sh.field_c) * 2) ? 1 : 0;
           var8 = ShopPlayerSlot.field_Jb.field_Ab.field_jb;
           var9 = nj.a(97);
           var11 = null;
-          var12 = (qb) (var8.g(24009));
+          var12 = (GameSetupPanel) (var8.g(24009));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_jb == null) {
-              var12.field_Ib = new UiLayoutNode(0L, pw.field_J);
+              var12.field_Ib = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
               stackIn_8_0 = param3;
               stackIn_8_1 = param6;
               var14 = stackIn_8_0 | stackIn_8_1;
@@ -186,10 +186,10 @@ final class w implements hc {
               var12.field_Ib.field_A = 1;
               var12.field_Jb = new UiLayoutNode(0L, mp.field_f);
               var12.addChild((byte) -116, var12.field_Jb);
-              var12.field_kc = new UiLayoutNode(0L, pw.field_J);
+              var12.field_kc = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
               var12.addChild((byte) -109, var12.field_kc);
               var12.field_kc.field_kb = 0;
-              var12.field_jc = new UiLayoutNode(0L, pw.field_J);
+              var12.field_jc = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
               var12.addChild((byte) -110, var12.field_jc);
               var12.field_jc.field_kb = 0;
               var12.field_Hb = new UiLayoutNode(0L, mp.field_f);
@@ -202,7 +202,7 @@ final class w implements hc {
               if (ui.field_t) {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
-                stackIn_11_4 = pw.field_J;
+                stackIn_11_4 = AuctionSettingsDialog.field_J;
               } else {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
@@ -220,7 +220,7 @@ final class w implements hc {
                 var12.field_zb.addChild((byte) -126, var12.field_Rb);
               }
               var12.field_Gb = new UiLayoutNode(0L, (UiLayoutNode) null);
-              if ((var14 & 1 << hk.field_F) != 0) {
+              if ((var14 & 1 << AuctionBidDialog.field_F) != 0) {
                 var12.field_zb.addChild((byte) -111, var12.field_Gb);
               }
               var12.field_cc = new UiLayoutNode(0L, (UiLayoutNode) null);
@@ -252,7 +252,7 @@ final class w implements hc {
               } else {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
-                stackIn_32_4 = pw.field_J;
+                stackIn_32_4 = AuctionSettingsDialog.field_J;
               }
               stackIn_31_0.field_Zb = new UiLayoutNode(stackIn_31_3, stackIn_32_4);
               var12.addChild((byte) -104, var12.field_Zb);
@@ -373,7 +373,7 @@ final class w implements hc {
                     if (2 != var12.field_Mb) {
                       var12.field_Ib.field_E = ph.field_d;
                     } else {
-                      var12.field_Lb.field_E = rb.field_Hb;
+                      var12.field_Lb.field_E = TextPromptDialog.field_Hb;
                     }
                   }
                 }
@@ -434,8 +434,8 @@ final class w implements hc {
                 ((UiLayoutNode) (Object) stackIn_90_0).a(stackIn_91_1, var51_ref.field_o, var34_int, 0, var12.field_zb.field_mb);
                 var34_int = var34_int + (var51_ref.field_o + mj.field_b);
               }
-              if ((1 << hk.field_F & var14Lifetime1) != 0) {
-                var52_ref = i.field_E[var12.field_Mb - 1];
+              if ((1 << AuctionBidDialog.field_F & var14Lifetime1) != 0) {
+                var52_ref = MessageDialog.field_E[var12.field_Mb - 1];
                 var12.field_Gb.field_N = var52_ref;
                 var12.field_Gb.a(true, var52_ref.field_o, var34_int, 0, var12.field_zb.field_mb);
                 var34_int = var34_int + (mj.field_b + var52_ref.field_o);
@@ -498,7 +498,7 @@ final class w implements hc {
               if (var12.field_Kb != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(np.field_Eb);
+                discarded$1 = var37.append(ScrollPane.field_Eb);
                 discarded$2 = var37.append(var12.field_Kb[0]);
                 for (var38_intLifetime1 = 1; var38_intLifetime1 < var12.field_gc; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");
@@ -588,7 +588,7 @@ final class w implements hc {
               if (var12.field_Mb == 2) {
                 stackIn_181_0 = TextInputWidget.field_U;
               } else {
-                stackIn_181_0 = pq.field_G;
+                stackIn_181_0 = SquadPickerDialog.field_G;
               }
               sn.field_e = stackIn_181_0;
             }
@@ -609,7 +609,7 @@ final class w implements hc {
                 }
               }
             }
-            var12 = (qb) (var8.c(33));
+            var12 = (GameSetupPanel) (var8.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -687,25 +687,25 @@ final class w implements hc {
     }
 
     public final void a(int param0, boolean param1) {
-        jb var3;
+        PopupDialog var3;
         int var4;
         boolean stackIn_22_0 = false;
         PcmSampleStream var5;
         var4 = Kickabout.field_G;
         if (dg.field_e ||
           ds.field_g) {
-          var3 = (jb) (np.field_Jb.g(param0 ^ -24018));
+          var3 = (PopupDialog) (ScrollPane.field_Jb.g(param0 ^ -24018));
           while (var3 != null) {
-            if (var3 instanceof hk ||
-              var3 instanceof pw ||
-              var3 instanceof pq) {
+            if (var3 instanceof AuctionBidDialog ||
+              var3 instanceof AuctionSettingsDialog ||
+              var3 instanceof SquadPickerDialog) {
               var3.e(19910);
             }
-            var3 = (jb) (np.field_Jb.c(33));
+            var3 = (PopupDialog) (ScrollPane.field_Jb.c(33));
           }
-          if (su.field_c != null && (su.field_c instanceof hk ||
-            su.field_c instanceof pw ||
-            su.field_c instanceof pq)) {
+          if (su.field_c != null && (su.field_c instanceof AuctionBidDialog ||
+            su.field_c instanceof AuctionSettingsDialog ||
+            su.field_c instanceof SquadPickerDialog)) {
             su.field_c.e(19910);
           }
         }
@@ -713,7 +713,7 @@ final class w implements hc {
           stackIn_22_0 = param1;
           if (stackIn_22_0 &&
             vd.a((byte) 82)) {
-            su.field_c = (jb) (np.field_Jb.b((byte) 125));
+            su.field_c = (PopupDialog) (ScrollPane.field_Jb.b((byte) 125));
           }
         } else {
           su.field_c.b(param0 - 16511, param1);

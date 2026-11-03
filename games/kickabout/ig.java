@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ig {
-    static np field_f;
+    static ScrollPane field_f;
     static String field_e;
     static int field_g;
     static String field_b;
@@ -64,7 +64,7 @@ final class ig {
           if (0 != dc.field_d) {
             var3Lifetime2 = 0;
             AuctionListing.a(param0 + (qj.field_e + vo.field_cb.field_q), -22914, qj.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-vo.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
-            var4Lifetime1 = cf.field_Db;
+            var4Lifetime1 = RankingRowNode.field_Db;
             while (var4Lifetime1 > 0) {
               field_a[var4Lifetime1 % 10].c(qj.field_e + 140 + (-(var3Lifetime2 * field_a[0].field_q) + param0), 9 + (ArchiveNetworkClient.field_i - 2 * (-CachedArchiveSource.field_s + 18)));
               var3Lifetime2++;
@@ -132,7 +132,7 @@ final class ig {
         CharSequence var6 = null;
         try {
           NodeHashTableIterator.field_b = 2;
-          at.field_Kb = param1;
+          TrinketTile.field_Kb = param1;
           if (param2 <= 46) {
             String var5 = (String) null;
             ig.a(127L, (String) null, (byte) 87);
@@ -140,7 +140,7 @@ final class ig {
           var6 = (CharSequence) ((Object) param1);
           qi.field_o = MatchAgent.a(0, var6);
           IntDoubleCommand.field_A = param0;
-          vg.field_Wb = true;
+          TextFieldNode.field_Wb = true;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ig.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -210,7 +210,7 @@ final class ig {
           var19 = stackIn_17_0;
           var5_ref = var19;
           if (!param0) {
-            stackIn_20_0 = fn.field_j;
+            stackIn_20_0 = Trinket.field_j;
           } else {
             stackIn_20_0 = cg.field_G;
           }
@@ -233,18 +233,18 @@ final class ig {
             }
           }
           var9 = 20 + (var4 + var8Lifetime2 + 65);
-          var10Lifetime1 = rb.field_yb * (var6.length + 1) + 20;
+          var10Lifetime1 = TextPromptDialog.field_yb * (var6.length + 1) + 20;
           var11 = -6 + (-var10Lifetime1 + (473 - rn.field_c * vt.field_c.playerCount) - 22);
           SoftwareRasterizer.a(-var9 + 644, var11, var9, var10Lifetime1, 2, 0, param2);
           var12Lifetime1 = 619 - (var4 + 20);
-          var13 = 6 + var11 + rb.field_yb;
+          var13 = 6 + var11 + TextPromptDialog.field_yb;
           ((BitmapFont) ((Object) var3)).c(var20, 599, var13, param1, -1);
-          var13 = var13 + (rb.field_yb + 6);
+          var13 = var13 + (TextPromptDialog.field_yb + 6);
           for (var14 = 0; var6.length > var14; var14++) {
             ((BitmapFont) ((Object) var3)).a(':', var12Lifetime1, var13, 16777215);
             ((BitmapFont) ((Object) var3)).c(var6[var14], -20 + var12Lifetime1, var13, 16777215, -1);
             ((BitmapFont) ((Object) var3)).a(var21[var14], 20 + var12Lifetime1, var13, 16777215, -1);
-            var13 = var13 + (2 + rb.field_yb);
+            var13 = var13 + (2 + TextPromptDialog.field_yb);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

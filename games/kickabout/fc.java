@@ -37,7 +37,7 @@ final class fc {
             if (param1 != 8) {
             } else {
               param1 = 2;
-              if (!hk.field_G) {
+              if (!AuctionBidDialog.field_G) {
                 param0 = cb.field_f;
               } else {
                 param0 = dt.field_j;
@@ -59,7 +59,7 @@ final class fc {
             }
             if (param1 != 256 &&
               param1 != 10 &&
-              !hk.field_G) {
+              !AuctionBidDialog.field_G) {
               IsSixCommand.field_E.h((byte) -76);
               return;
             }

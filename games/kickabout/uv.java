@@ -5,11 +5,11 @@ import java.io.*;
 
 final class uv {
     int field_c;
-    gu field_j;
+    ContextMenu field_j;
     private int[] field_h;
     static int field_e;
     static String[] field_d;
-    static qb field_i;
+    static GameSetupPanel field_i;
     private long field_b;
     UiLayoutNode field_g;
     static boolean field_f;
@@ -20,7 +20,7 @@ final class uv {
 
     private final boolean c(int param0, int param1, int param2) {
         if (param2 == 17) {
-          ck.field_b = new rb(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, this.field_k, this.field_b);
+          ck.field_b = new TextPromptDialog(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, this.field_k, this.field_b);
           return true;
         }
         if (param0 == -8985) {
@@ -32,7 +32,7 @@ final class uv {
 
     final static int b(int param0, int param1, byte param2) {
         if (param2 != 2) {
-          field_i = (qb) null;
+          field_i = (GameSetupPanel) null;
         }
         if (0 == param1) {
           if (param0 == 0) {
@@ -90,10 +90,10 @@ final class uv {
     }
 
     final void a(boolean param0, int param1) {
-        he var4;
+        LobbyPlayerRow var4;
         String var5;
         int var6;
-        he var7;
+        LobbyPlayerRow var7;
         var6 = Kickabout.field_G;
         if (null == this.field_k) {
           if (param1 == 0) {
@@ -116,7 +116,7 @@ final class uv {
           field_m = (Sprite) null;
           return;
         }
-        if (!np.a(param1 + 123)) {
+        if (!ScrollPane.a(param1 + 123)) {
           if (param1 == 0) {
             return;
           }
@@ -128,10 +128,10 @@ final class uv {
         var5 = this.a(-26719);
         if (var4 != null) {
           if (!field_i.field_Cb) {
-            this.field_j.a(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, rn.field_e, new String[]{var5}));
+            this.field_j.addItem(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, rn.field_e, new String[]{var5}));
           } else {
             if (field_i.field_ac >= 0) {
-              this.field_j.a(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, rn.field_e, new String[]{var5}));
+              this.field_j.addItem(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, rn.field_e, new String[]{var5}));
             }
           }
         } else {
@@ -139,16 +139,16 @@ final class uv {
             field_i.field_ic &&
             field_i.field_gc < field_i.field_bc) {
             if (var7.field_Gb) {
-              this.field_j.a(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_f, new String[]{var5}));
+              this.field_j.addItem(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_f, new String[]{var5}));
             } else {
               if (!param0) {
-                this.field_j.a(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, PlayingView.field_F, new String[]{var5}));
+                this.field_j.addItem(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, PlayingView.field_F, new String[]{var5}));
               } else {
                 if (!var7.field_Fb) {
-                  this.field_j.a(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, PlayingView.field_F, new String[]{var5}));
+                  this.field_j.addItem(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, PlayingView.field_F, new String[]{var5}));
                 } else {
-                  this.field_j.a(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, om.field_Ab, new String[]{var5}));
-                  this.field_j.a(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ji.field_Eb, new String[]{var5}));
+                  this.field_j.addItem(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, IconLabel.field_Ab, new String[]{var5}));
+                  this.field_j.addItem(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ScrollBar.field_Eb, new String[]{var5}));
                 }
               }
             }
@@ -178,7 +178,7 @@ final class uv {
           }
           var3 = this.a(-26719);
           String var2 = var3;
-          this.field_j.a(0, 17, vo.$cfr$intArgs$a$53ce4ab4c593(-18, vp.field_m, new String[]{var3}));
+          this.field_j.addItem(0, 17, vo.$cfr$intArgs$a$53ce4ab4c593(-18, vp.field_m, new String[]{var3}));
         }
         if (param0 <= -11) {
           return;
@@ -382,7 +382,7 @@ final class uv {
               AuctionsScreen.sendAuctionAction(this.field_c, param1, (byte) -83);
             } else {
               if (param0 == 3) {
-                gu.a(this.field_c, (byte) -90, param1);
+                ContextMenu.a(this.field_c, (byte) -90, param1);
               } else {
                 if (10 != param0) {
                   if (15 == param0) {
@@ -427,7 +427,7 @@ final class uv {
         String discarded$4 = null;
         String var3;
         int var4;
-        qb var5;
+        GameSetupPanel var5;
         var4 = Kickabout.field_G;
         if (field_i != null) {
           if (param0 == 1) {
@@ -446,8 +446,8 @@ final class uv {
         }
         var3 = var5.field_ec;
         if (var5.field_hc) {
-          this.field_j.a(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tb.field_u, new String[]{var3}));
-          this.field_j.a(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ReceivedAuctionItem.field_z, new String[]{var3}));
+          this.field_j.addItem(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tb.field_u, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ReceivedAuctionItem.field_z, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -455,7 +455,7 @@ final class uv {
           return;
         }
         if (var5.field_Xb) {
-          this.field_j.a(param0 ^ 1, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, gs.field_f, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, gs.field_f, new String[]{var3}));
           if (!var5.field_Tb) {
             if (param0 == 1) {
               return;
@@ -463,7 +463,7 @@ final class uv {
             discarded$11 = this.a(126);
             return;
           }
-          this.field_j.a(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -478,7 +478,7 @@ final class uv {
             discarded$9 = this.a(126);
             return;
           }
-          this.field_j.a(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -493,7 +493,7 @@ final class uv {
             discarded$7 = this.a(126);
             return;
           }
-          this.field_j.a(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -501,7 +501,7 @@ final class uv {
           return;
         }
         if (!var5.field_Cb) {
-          this.field_j.a(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameplayHelpScreen.field_H, new String[]{var3}));
+          this.field_j.addItem(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameplayHelpScreen.field_H, new String[]{var3}));
           if (!var5.field_Tb) {
             if (param0 == 1) {
               return;
@@ -509,7 +509,7 @@ final class uv {
             discarded$1 = this.a(126);
             return;
           }
-          this.field_j.a(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -524,14 +524,14 @@ final class uv {
             discarded$5 = this.a(126);
             return;
           }
-          this.field_j.a(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
           discarded$6 = this.a(126);
           return;
         }
-        this.field_j.a(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameplayHelpScreen.field_H, new String[]{var3}));
+        this.field_j.addItem(0, 2, vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameplayHelpScreen.field_H, new String[]{var3}));
         if (!var5.field_Tb) {
           if (param0 == 1) {
             return;
@@ -539,7 +539,7 @@ final class uv {
           discarded$3 = this.a(126);
           return;
         }
-        this.field_j.a(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+        this.field_j.addItem(param0 ^ 1, 3, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
         if (param0 == 1) {
           return;
         }
@@ -577,31 +577,31 @@ final class uv {
               var7 = hi.a(0, this.field_k) ? 1 : 0;
               if (var6 == null &&
                 var7 == 0) {
-                this.field_j.a(0, 4, vo.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkNode.field_m, new String[]{var5}));
-                this.field_j.a(0, 6, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ij.field_r, new String[]{var5}));
+                this.field_j.addItem(0, 4, vo.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkNode.field_m, new String[]{var5}));
+                this.field_j.addItem(0, 6, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ij.field_r, new String[]{var5}));
                 if (param2 != null &&
                   param0 != 2 &&
                   !PacketBuffer.field_l) {
                   this.field_h = param2;
-                  this.field_j.a(0, 19, vo.$cfr$intArgs$a$53ce4ab4c593(-18, nj.field_a, new String[]{var5}));
+                  this.field_j.addItem(0, 19, vo.$cfr$intArgs$a$53ce4ab4c593(-18, nj.field_a, new String[]{var5}));
                 }
               }
               if (var6 != null) {
                 if (!BufferedCacheFile.a(121, this.field_k) &&
                   !PacketBuffer.field_l) {
                   if (!WriteIntegersCommand.field_C) {
-                    this.field_j.a(0, 8, vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var5}));
+                    this.field_j.addItem(0, 8, vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var5}));
                   }
-                  this.field_j.a(0, 18, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var5}));
+                  this.field_j.addItem(0, 18, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var5}));
                   if (param2 != null) {
                     this.field_h = param2;
-                    this.field_j.a(0, 19, vo.$cfr$intArgs$a$53ce4ab4c593(-18, nj.field_a, new String[]{var5}));
+                    this.field_j.addItem(0, 19, vo.$cfr$intArgs$a$53ce4ab4c593(-18, nj.field_a, new String[]{var5}));
                   }
                 }
-                this.field_j.a(0, 5, vo.$cfr$intArgs$a$53ce4ab4c593(-18, fn.field_i, new String[]{var5}));
+                this.field_j.addItem(0, 5, vo.$cfr$intArgs$a$53ce4ab4c593(-18, Trinket.field_i, new String[]{var5}));
               }
               if (var7 != 0) {
-                this.field_j.a(0, 7, vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_i, new String[]{var5}));
+                this.field_j.addItem(0, 7, vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_i, new String[]{var5}));
                 return;
               }
             }
@@ -635,21 +635,21 @@ final class uv {
           this.field_l = param0.field_c;
           if (param0.field_c == 0) {
             if (ng.field_a == 0) {
-              this.field_j.a(param1 - 11, 12, sd.field_c);
+              this.field_j.addItem(param1 - 11, 12, sd.field_c);
             }
-            this.field_j.a(0, 13, ConsoleParseException.field_a);
+            this.field_j.addItem(0, 13, ConsoleParseException.field_a);
           }
           if (param0.field_c == 1) {
             if (0 == q.field_b) {
-              this.field_j.a(param1 ^ 11, 12, mg.field_d);
+              this.field_j.addItem(param1 ^ 11, 12, mg.field_d);
             }
-            this.field_j.a(param1 - 11, 13, rd.field_a);
+            this.field_j.addItem(param1 - 11, 13, rd.field_a);
           }
           if (param0.field_c == 2) {
             if (0 == fc.field_a) {
-              this.field_j.a(0, 12, SpriteState.field_u);
+              this.field_j.addItem(0, 12, SpriteState.field_u);
             }
-            this.field_j.a(0, 13, TextWidgetPainter.field_g);
+            this.field_j.addItem(0, 13, TextWidgetPainter.field_g);
           }
           if (param1 == 11) {
             return;
@@ -672,7 +672,7 @@ final class uv {
     }
 
     final boolean a(boolean param0, int param1, int param2, int param3, int param4) {
-        int var6 = this.field_j.a((byte) -126, param0);
+        int var6 = this.field_j.getSelectedActionId((byte) -126, param0);
         if (param1 == var6) {
           return false;
         }
@@ -685,7 +685,7 @@ final class uv {
 
     uv(UiLayoutNode param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_j = new gu(su.field_b);
+          this.field_j = new ContextMenu(su.field_b);
           this.field_k = param2;
           this.field_g = param0;
           this.field_l = param5;

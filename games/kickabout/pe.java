@@ -30,14 +30,14 @@ final class pe {
             return 80;
           }
         } else {
-          if (null != qq.field_H) {
-            if (!qq.field_H.d(-94)) {
+          if (null != LoginRequiredDialog.field_H) {
+            if (!LoginRequiredDialog.field_H.d(-94)) {
               return 14;
             }
-            if (!qq.field_H.a("", (byte) -120)) {
+            if (!LoginRequiredDialog.field_H.a("", (byte) -120)) {
               return 29;
             }
-            if (!qq.field_H.a(false, "")) {
+            if (!LoginRequiredDialog.field_H.a(false, "")) {
               return 29;
             }
           }
@@ -80,7 +80,7 @@ final class pe {
             }
             return;
           }
-          ValidatedTextWidget.field_Z.a(gw.field_c, 31947, nq.field_J, true);
+          ValidatedTextWidget.field_Z.a(gw.field_c, 31947, TournamentChampionDialog.field_J, true);
           if (param0 <= 104) {
             pe.b(104);
           }
@@ -188,7 +188,7 @@ final class pe {
     }
 
     final static void a(int param0, byte param1) {
-        fn.a(param0, (byte) -32);
+        Trinket.a(param0, (byte) -32);
         if (param1 >= -114) {
           Sprite var3 = (Sprite) null;
           pe.a((ModelMesh) null, (Sprite) null, -104, -61);

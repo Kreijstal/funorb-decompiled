@@ -263,7 +263,7 @@ final class os {
               stackIn_56_1 = -51;
               if (var30 != 0) {
                 if (stackIn_56_0 < stackIn_56_1) {
-                  stackIn_65_0 = pv.field_F.length;
+                  stackIn_65_0 = HelpTipDialog.field_F.length;
                   break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
@@ -283,7 +283,7 @@ final class os {
                   ld.field_e[var23Lifetime2] = -2147483648;
                 }
                 if (param1) {
-                  vf.field_M[var23Lifetime2] = var27Lifetime1 >> im.field_yb;
+                  BuyPitchDialog.field_M[var23Lifetime2] = var27Lifetime1 >> im.field_yb;
                   MatchTransitionScreen.field_B[var23Lifetime2] = var28Lifetime1 >> im.field_yb;
                   bw.field_f[var23Lifetime2] = var29Lifetime1;
                 }
@@ -314,7 +314,7 @@ final class os {
                   var26Lifetime1Lifetime1 = param0.field_D[var23Lifetime2];
                   AccountMessagePanel.field_I[var23Lifetime2] = (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime2Lifetime1 + var15 * var25Lifetime1Lifetime1) >> 16) + var9;
                   ib.field_C[var23Lifetime2] = var10 + (var26Lifetime1Lifetime1 * var19 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13) >> 16);
-                  hg.field_I[var23Lifetime2] = (var25Lifetime1Lifetime1 * var17 + (var14 * var24Lifetime2Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
+                  PromotionDialog.field_I[var23Lifetime2] = (var25Lifetime1Lifetime1 * var17 + (var14 * var24Lifetime2Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var24Lifetime2Lifetime1 = param0.field_a[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_e[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_d[var23Lifetime2];
@@ -344,7 +344,7 @@ final class os {
                   if (stackIn_56_0Lifetime1 >= stackIn_56_1Lifetime1) {
                     break;
                   }
-                  stackIn_65_0 = pv.field_F.length;
+                  stackIn_65_0 = HelpTipDialog.field_F.length;
                   if (var30 != 0) {
                     break scanLoop1;
                   }
@@ -354,7 +354,7 @@ final class os {
                   var19 = param0.field_F[var18];
                   var20 = param0.field_I[var18];
                   var21Lifetime2 = param0.field_v[var18];
-                  pv.field_F[var18] = var9 * var19 - (-(var12 * var20) - var15 * var21Lifetime2) >> 16;
+                  HelpTipDialog.field_F[var18] = var9 * var19 - (-(var12 * var20) - var15 * var21Lifetime2) >> 16;
                   ba.field_q[var18] = var16 * var21Lifetime2 + (var19 * var10 + var13 * var20) >> 16;
                   BytePlusOneCommand.field_E[var18] = var14 * var20 + (var11 * var19 + var21Lifetime2 * var17) >> 16;
                   var18++;

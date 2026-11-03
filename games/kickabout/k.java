@@ -3,7 +3,7 @@
  */
 final class k extends IntrusiveNode {
     static boolean field_k;
-    static sl field_m;
+    static HoverTooltip field_m;
     static Sprite field_j;
     static UiLayoutNode field_f;
     static ff field_l;
@@ -13,7 +13,7 @@ final class k extends IntrusiveNode {
     static String field_h;
 
     final static void a(boolean param0, int param1) {
-        np.field_Jb.a(new hg(param1), 3);
+        ScrollPane.field_Jb.a(new PromotionDialog(param1), 3);
         if (!param0) {
           k.loadStreetScenery(-78);
         }

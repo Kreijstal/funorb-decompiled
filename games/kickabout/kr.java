@@ -61,26 +61,26 @@ final class kr {
         Sprite var29Lifetime1Lifetime3;
         Sprite var29Lifetime1Lifetime4;
         Sprite var29Lifetime1Lifetime5;
-        BytePlusOneCommand.a(param0, false, (np) null, param2, (String) null, (int[]) null, 0L, (String) null, -1);
+        BytePlusOneCommand.a(param0, false, (ScrollPane) null, param2, (String) null, (int[]) null, 0L, (String) null, -1);
         if (param2 == 0) {
           var9 = TextButton.field_v;
           var11 = il.field_d[0];
           var29 = var11;
           var29Lifetime3 = var11;
           var10 = ig.field_b;
-          var9.field_j.a(var10, param1, 11, var11);
+          var9.field_j.addItemWithIcon(var10, param1, 11, var11);
           var12 = TextButton.field_v;
           var14 = il.field_d[1];
           var29Lifetime4 = var14;
           var29Lifetime5 = var14;
           var13 = oi.field_h;
-          var12.field_j.a(var13, param1, 12, var14);
+          var12.field_j.addItemWithIcon(var13, param1, 12, var14);
           var15 = TextButton.field_v;
           var17 = il.field_d[2];
           var29Lifetime6 = var17;
           var29Lifetime7 = var17;
           var16 = ConsoleParseException.field_a;
-          var15.field_j.a(var16, true, 13, var17);
+          var15.field_j.addItemWithIcon(var16, true, 13, var17);
         }
         if (param2 == 1) {
           var18 = TextButton.field_v;
@@ -88,33 +88,33 @@ final class kr {
           var29Lifetime1 = var20;
           var29Lifetime1Lifetime1 = var20;
           var19 = ef.field_p;
-          var18.field_j.a(var19, true, 11, var20);
+          var18.field_j.addItemWithIcon(var19, true, 11, var20);
           var21 = TextButton.field_v;
           var23 = il.field_d[1];
           var29Lifetime1Lifetime2 = var23;
           var29Lifetime1Lifetime3 = var23;
           var22 = bo.field_Bb;
-          var21.field_j.a(var22, true, 12, var23);
+          var21.field_j.addItemWithIcon(var22, true, 12, var23);
           var24 = TextButton.field_v;
           var26 = il.field_d[2];
           var29Lifetime1Lifetime4 = var26;
           var29Lifetime1Lifetime5 = var26;
           var25 = rd.field_a;
-          var24.field_j.a(var25, param1, 13, var26);
+          var24.field_j.addItemWithIcon(var25, param1, 13, var26);
         }
         if (param2 == 2) {
           var27 = TextButton.field_v;
           var29Lifetime2 = il.field_d[0];
           var28 = gb.field_I;
-          var27.field_j.a(var28, param1, 11, var29Lifetime2);
+          var27.field_j.addItemWithIcon(var28, param1, 11, var29Lifetime2);
           var30 = TextButton.field_v;
           var32 = il.field_d[1];
           var31 = fh.field_c;
-          var30.field_j.a(var31, param1, 12, var32);
+          var30.field_j.addItemWithIcon(var31, param1, 12, var32);
           var33 = TextButton.field_v;
           var35 = il.field_d[2];
           var34 = TextWidgetPainter.field_g;
-          var33.field_j.a(var34, true, 13, var35);
+          var33.field_j.addItemWithIcon(var34, true, 13, var35);
         }
         uv var36 = TextButton.field_v;
         int var4 = param0.field_F;
@@ -167,7 +167,7 @@ final class kr {
             return stackIn_14_0;
           }
           if (param1 == 5) {
-            stackIn_18_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, qb.field_lc, new String[]{param0});
+            stackIn_18_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameSetupPanel.field_lc, new String[]{param0});
             return stackIn_18_0;
           }
           if (param1 == 6) {
@@ -183,7 +183,7 @@ final class kr {
             return stackIn_28_0;
           }
           if (param1 == 11) {
-            stackIn_32_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, cf.field_Cb, new String[]{param0});
+            stackIn_32_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, RankingRowNode.field_Cb, new String[]{param0});
             return stackIn_32_0;
           }
           if (param1 == 12) {

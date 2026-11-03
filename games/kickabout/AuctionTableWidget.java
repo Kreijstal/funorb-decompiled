@@ -4,7 +4,7 @@
 final class AuctionTableWidget extends ColumnTableWidget {
     static long field_Kb;
     static String field_Jb;
-    static tk field_Hb;
+    static ScrollContainer field_Hb;
     static int[] field_Ib;
 
     private final void a(int param0, int param1, int param2) {
@@ -77,11 +77,11 @@ final class AuctionTableWidget extends ColumnTableWidget {
             return stackIn_3_0;
           }
           var5 = param0.a((byte) 82);
-          if (rb.field_Mb != var5.field_k &&
+          if (TextPromptDialog.field_Mb != var5.field_k &&
             var5.field_k != v.field_d &&
-            pv.field_H != var5.field_k &&
+            HelpTipDialog.field_H != var5.field_k &&
             GameModesHelpScreen.field_N != var5.field_k) {
-            if (var5.field_k != vu.field_Ab) {
+            if (var5.field_k != ContextMenuItem.field_Ab) {
               throw new ConsoleParseException(var5.field_f);
             }
             if (param0.a(6)) {

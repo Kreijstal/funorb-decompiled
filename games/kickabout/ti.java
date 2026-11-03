@@ -139,9 +139,9 @@ final class ti {
               if (!(0 >= fj.field_a) ||
                 !(ee.field_b <= 0)) {
                 if (null != IntrusiveDeque.field_e) {
-                  IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
+                  IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
                 }
-                stackIn_19_0 = dn.field_Cb;
+                stackIn_19_0 = TrinketIcon.field_Cb;
                 stackIn_19_1 = 102;
                 stackIn_20_2 = (param1) && (!td.field_b);
                 ((UiLayoutNode) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
@@ -157,9 +157,9 @@ final class ti {
             ti.a((String) null, 87L, (byte) -24, false, (String) null);
             if (0 < fj.field_a) {
               if (null != IntrusiveDeque.field_e) {
-                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
               }
-              stackIn_32_0 = dn.field_Cb;
+              stackIn_32_0 = TrinketIcon.field_Cb;
               stackIn_32_1 = 102;
               stackIn_33_2 = (param1) && (!td.field_b);
               ((UiLayoutNode) (Object) stackIn_32_0).a(stackIn_32_1, stackIn_33_2);
@@ -170,7 +170,7 @@ final class ti {
             } else {
               if (ee.field_b > 0) {
                 if (null == IntrusiveDeque.field_e) {
-                  stackIn_44_0 = dn.field_Cb;
+                  stackIn_44_0 = TrinketIcon.field_Cb;
                   stackIn_44_1 = 102;
                   stackIn_45_2 = (param1) && (!td.field_b);
                   ((UiLayoutNode) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2);
@@ -179,8 +179,8 @@ final class ti {
                   stackIn_49_2 = (param1) && (!td.field_b);
                   ((UiLayoutNode) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_49_2);
                 } else {
-                  IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
-                  stackIn_53_0 = dn.field_Cb;
+                  IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+                  stackIn_53_0 = TrinketIcon.field_Cb;
                   stackIn_53_1 = 102;
                   stackIn_54_2 = (param1) && (!td.field_b);
                   ((UiLayoutNode) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_54_2);
@@ -206,7 +206,7 @@ final class ti {
         if (param0 == 63) {
           if (0 < fj.field_a) {
             if (null == IntrusiveDeque.field_e) {
-              stackIn_140_0 = dn.field_Cb;
+              stackIn_140_0 = TrinketIcon.field_Cb;
               stackIn_140_1 = 102;
               stackIn_141_2 = (param1) && (!td.field_b);
               ((UiLayoutNode) (Object) stackIn_140_0).a(stackIn_140_1, stackIn_141_2);
@@ -215,8 +215,8 @@ final class ti {
               stackIn_145_2 = (param1) && (!td.field_b);
               ((UiLayoutNode) (Object) stackIn_144_0).a(stackIn_144_1, stackIn_145_2);
             } else {
-              IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
-              stackIn_149_0 = dn.field_Cb;
+              IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+              stackIn_149_0 = TrinketIcon.field_Cb;
               stackIn_149_1 = 102;
               stackIn_150_2 = (param1) && (!td.field_b);
               ((UiLayoutNode) (Object) stackIn_149_0).a(stackIn_149_1, stackIn_150_2);
@@ -228,7 +228,7 @@ final class ti {
           } else {
             if (ee.field_b > 0) {
               if (null == IntrusiveDeque.field_e) {
-                stackIn_120_0 = dn.field_Cb;
+                stackIn_120_0 = TrinketIcon.field_Cb;
                 stackIn_120_1 = 102;
                 stackIn_121_2 = (param1) && (!td.field_b);
                 ((UiLayoutNode) (Object) stackIn_120_0).a(stackIn_120_1, stackIn_121_2);
@@ -237,8 +237,8 @@ final class ti {
                 stackIn_125_2 = (param1) && (!td.field_b);
                 ((UiLayoutNode) (Object) stackIn_124_0).a(stackIn_124_1, stackIn_125_2);
               } else {
-                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
-                stackIn_129_0 = dn.field_Cb;
+                IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+                stackIn_129_0 = TrinketIcon.field_Cb;
                 stackIn_129_1 = 102;
                 stackIn_130_2 = (param1) && (!td.field_b);
                 ((UiLayoutNode) (Object) stackIn_129_0).a(stackIn_129_1, stackIn_130_2);
@@ -254,7 +254,7 @@ final class ti {
           ti.a((String) null, 87L, (byte) -24, false, (String) null);
           if (0 < fj.field_a) {
             if (null == IntrusiveDeque.field_e) {
-              stackIn_97_0 = dn.field_Cb;
+              stackIn_97_0 = TrinketIcon.field_Cb;
               stackIn_97_1 = 102;
               stackIn_98_2 = (param1) && (!td.field_b);
               ((UiLayoutNode) (Object) stackIn_97_0).a(stackIn_97_1, stackIn_98_2);
@@ -263,8 +263,8 @@ final class ti {
               stackIn_102_2 = (param1) && (!td.field_b);
               ((UiLayoutNode) (Object) stackIn_101_0).a(stackIn_101_1, stackIn_102_2);
             } else {
-              IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
-              stackIn_106_0 = dn.field_Cb;
+              IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+              stackIn_106_0 = TrinketIcon.field_Cb;
               stackIn_106_1 = 102;
               stackIn_107_2 = (param1) && (!td.field_b);
               ((UiLayoutNode) (Object) stackIn_106_0).a(stackIn_106_1, stackIn_107_2);
@@ -276,7 +276,7 @@ final class ti {
           } else {
             if (ee.field_b > 0) {
               if (null == IntrusiveDeque.field_e) {
-                stackIn_86_0 = dn.field_Cb;
+                stackIn_86_0 = TrinketIcon.field_Cb;
                 stackIn_86_1 = 102;
                 stackIn_87_2 = (param1) && (!td.field_b);
                 ((UiLayoutNode) (Object) stackIn_86_0).a(stackIn_86_1, stackIn_87_2);
@@ -285,8 +285,8 @@ final class ti {
                 stackIn_91_2 = (param1) && (!td.field_b);
                 ((UiLayoutNode) (Object) stackIn_90_0).a(stackIn_90_1, stackIn_91_2);
               } else {
-                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
-                stackIn_77_0 = dn.field_Cb;
+                IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+                stackIn_77_0 = TrinketIcon.field_Cb;
                 stackIn_77_1 = 102;
                 stackIn_78_2 = (param1) && (!td.field_b);
                 ((UiLayoutNode) (Object) stackIn_77_0).a(stackIn_77_1, stackIn_78_2);

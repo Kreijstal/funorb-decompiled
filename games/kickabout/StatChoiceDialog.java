@@ -1,0 +1,406 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StatChoiceDialog extends MessageDialog {
+    private int field_N;
+    static String[] field_G;
+    private int field_P;
+    private int field_H;
+    private PlayerStats field_J;
+    private int[] field_M;
+    static TextFieldNode field_F;
+    private RenderedFootballer field_I;
+    private UiLayoutNode field_L;
+    static String field_K;
+    private UiLayoutNode[] field_O;
+
+    final void a(int param0, boolean param1) {
+        int var3;
+        int var4;
+        int stackIn_8_1 = 0;
+        UiLayoutNode stackIn_12_0 = null;
+        boolean stackIn_13_1 = false;
+        int var3Lifetime1;
+        var4 = Kickabout.field_G;
+        this.field_I.g((byte) 125);
+        this.field_L.b(0, param1);
+        for (var3 = 0; 3 > var3; var3++) {
+          if (1 == this.field_O[var3].field_sb) {
+            if (this.field_H != var3) {
+              stackIn_8_1 = var3;
+            } else {
+              stackIn_8_1 = -1;
+            }
+            this.field_H = stackIn_8_1;
+          }
+        }
+        stackIn_12_0 = this.field_i[0];
+        stackIn_13_1 = (this.field_H == -1) ? false : true;
+        stackIn_12_0.field_lb = stackIn_13_1;
+        var3Lifetime1 = param0;
+        if (this.field_H == 0) {
+          var3Lifetime1 = 16;
+        }
+        if (this.field_H == 1) {
+          var3Lifetime1 = 5;
+        }
+        if (this.field_H == 2) {
+          var3Lifetime1 = 9;
+        }
+        this.field_I.b((byte) -128, var3Lifetime1);
+        this.field_I.field_R = 128;
+    }
+
+    StatChoiceDialog(int param0, int param1, PlayerStats param2) {
+        super(20);
+        int var4_int = 0;
+        UiLayoutNode stackIn_5_0 = null;
+        boolean stackIn_6_1 = false;
+        Object stackIn_10_0;
+        PlayerStats stackIn_10_1;
+        int stackIn_10_2;
+        int stackIn_10_3;
+        PlayerStats stackIn_10_4;
+        int stackIn_10_5;
+        Object stackIn_11_0;
+        boolean stackIn_11_6;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var4 = null;
+        ClubState var6 = null;
+        Object stackIn_10_0Lifetime1;
+        Object stackIn_11_0Lifetime1;
+        this.field_H = -1;
+        this.field_N = -1;
+        try {
+          this.field_J = param2;
+          this.field_P = param0;
+          this.field_N = param1;
+          this.field_L = new UiLayoutNode();
+          this.field_L.field_q = 150;
+          this.field_O = new UiLayoutNode[3];
+          this.field_M = new int[]{this.field_J.power, this.field_J.speed, this.field_J.tackle};
+          this.field_L.field_mb = 110;
+          for (var4_int = 0; 3 > var4_int; var4_int++) {
+            this.field_O[var4_int] = new UiLayoutNode();
+            this.field_O[var4_int].a(true, 150, 0, var4_int * 40, 30);
+            stackIn_5_0 = this.field_O[var4_int];
+            stackIn_6_1 = !(this.field_M[var4_int] >= 100);
+            stackIn_5_0.field_lb = stackIn_6_1;
+            this.field_L.addChild((byte) -127, this.field_O[var4_int]);
+          }
+          regionExit1: {
+            var6 = GameLoopApplet.field_E;
+            stackIn_10_0 = this;
+            stackIn_10_1 = this.field_J;
+            stackIn_10_2 = var6.field_w;
+            stackIn_10_3 = var6.field_k;
+            stackIn_10_4 = this.field_J;
+            stackIn_10_5 = -107;
+            if (!TextFieldValidator.f(-1)) {
+              stackIn_10_0Lifetime1 = this;
+              if (wn.a((byte) -3)) {
+                stackIn_11_0 = this;
+                stackIn_11_6 = true;
+                break regionExit1;
+              }
+            }
+            stackIn_11_0Lifetime1 = this;
+            stackIn_11_6 = false;
+          }
+          this.field_I = mg.a(stackIn_10_1, stackIn_10_2, stackIn_10_3, ((PlayerStats) (Object) stackIn_10_4).c((byte) stackIn_10_5, stackIn_11_6), var6.field_R, (byte) 120);
+          this.field_i[0].field_lb = false;
+          this.field_I.field_nb = true;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_15_0 = var4;
+          stackIn_15_1 = new StringBuilder().append("rt.<init>(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+        }
+    }
+
+    final void handleResult(int param0, int param1) {
+        ManagerAction var4;
+        if (param0 < 60) {
+          this.dialogHeight((byte) 89);
+        }
+        super.handleResult(62, param1);
+        if (param1 == 0 &&
+          this.field_H != -1 &&
+          this.field_M[this.field_H] < 100) {
+          if (!(AuctionLogEntry.field_h instanceof TeamManagementScreen)) {
+            if (!PlayArea.a(100)) {
+              var4 = new ManagerAction(3, new int[]{this.field_P, this.field_H});
+              if (AuctionLogEntry.field_h instanceof MatchScreen &&
+                null != um.field_e &&
+                um.field_e.d((byte) 76)) {
+                um.field_e.a(this.field_N, var4, (byte) -78, this.field_H);
+              }
+            }
+          } else {
+            cu.a((byte) -5, this.field_P, this.field_H);
+          }
+        }
+    }
+
+    final int dialogHeight(byte param0) {
+        if (param0 <= 75) {
+          this.field_N = 96;
+        }
+        return 280;
+    }
+
+    final static java.net.URL a(java.net.URL param0, String param1, int param2, String param3, boolean param4) {
+        try {
+          StringBuilder discarded$0 = null;
+          StringBuilder discarded$1 = null;
+          StringBuilder discarded$2 = null;
+          StringBuilder discarded$3 = null;
+          StringBuilder discarded$4 = null;
+          StringBuilder discarded$5 = null;
+          StringBuilder discarded$6 = null;
+          StringBuilder discarded$7 = null;
+          StringBuilder discarded$8 = null;
+          java.net.URL stackIn_3_0 = null;
+          java.net.URL stackIn_44_0 = null;
+          java.net.URL stackIn_46_0 = null;
+          RuntimeException stackIn_49_0 = null;
+          StringBuilder stackIn_49_1 = null;
+          String stackIn_50_2 = null;
+          StringBuilder stackIn_52_1 = null;
+          String stackIn_53_2 = null;
+          StringBuilder stackIn_55_1 = null;
+          String stackIn_56_2 = null;
+          Throwable decompiledCaughtException = null;
+          String var5 = null;
+          RuntimeException var5_ref = null;
+          int var6 = 0;
+          int var7_int = 0;
+          StringBuilder var7 = null;
+          Exception var8 = null;
+          int var9 = 0;
+          int var7_intLifetime1;
+          int var7_intLifetime2;
+          int var7_intLifetime3;
+          var9 = Kickabout.field_G;
+          try {
+            if (param4) {
+              stackIn_3_0 = (java.net.URL) null;
+              return stackIn_3_0;
+            }
+            var5 = param0.getFile();
+            var6 = 0;
+            while (true) {
+              if (var5.regionMatches(var6, "/l=", 0, 3)) {
+                var7_int = var5.indexOf('/', var6 + 1);
+                if (var7_int >= 0) {
+                  if (param2 < 0) {
+                    var6 = var7_int;
+                    continue;
+                  }
+                  var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                  continue;
+                }
+              }
+              if (var5.regionMatches(var6, "/a=", 0, 3)) {
+                var7_intLifetime1 = var5.indexOf('/', 1 + var6);
+                if (var7_intLifetime1 >= 0) {
+                  var6 = var7_intLifetime1;
+                  continue;
+                }
+              }
+              if (var5.regionMatches(var6, "/p=", 0, 3)) {
+                var7_intLifetime2 = var5.indexOf('/', 1 + var6);
+                if (var7_intLifetime2 >= 0) {
+                  if (param3 != null) {
+                    var5 = var5.substring(0, var6) + var5.substring(var7_intLifetime2);
+                    continue;
+                  }
+                  var6 = var7_intLifetime2;
+                  continue;
+                }
+              }
+              if (var5.regionMatches(var6, "/s=", 0, 3) ||
+                var5.regionMatches(var6, "/c=", 0, 3)) {
+                var7_intLifetime3 = var5.indexOf('/', 1 + var6);
+                if (var7_intLifetime3 >= 0) {
+                  if (param1 != null) {
+                    var5 = var5.substring(0, var6) + var5.substring(var7_intLifetime3);
+                    continue;
+                  }
+                  var6 = var7_intLifetime3;
+                  continue;
+                }
+              }
+              break;
+            }
+            var7 = new StringBuilder(var6);
+            discarded$0 = var7.append(var5.substring(0, var6));
+            if (0 < param2) {
+              discarded$1 = var7.append("/l=");
+              discarded$2 = var7.append(Integer.toString(param2));
+            }
+            if (param3 != null &&
+              param3.length() > 0) {
+              discarded$3 = var7.append("/p=");
+              discarded$4 = var7.append(param3);
+            }
+            if (param1 != null &&
+              0 < param1.length()) {
+              discarded$5 = var7.append("/s=");
+              discarded$6 = var7.append(param1);
+            }
+            if (var6 < var5.length()) {
+              discarded$7 = var7.append(var5.substring(var6, var5.length()));
+            } else {
+              discarded$8 = var7.append('/');
+            }
+            try {
+              stackIn_44_0 = new java.net.URL(param0, var7.toString());
+              return stackIn_44_0;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var8 = (Exception) (Object) decompiledCaughtException;
+              var8.printStackTrace();
+              stackIn_46_0 = (java.net.URL) (param0);
+              return stackIn_46_0;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_49_0 = var5_ref;
+            stackIn_49_1 = new StringBuilder().append("rt.A(");
+            if (param0 == null) {
+              stackIn_50_2 = "null";
+            } else {
+              stackIn_50_2 = "{...}";
+            }
+            stackIn_52_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',');
+            if (param1 == null) {
+              stackIn_53_2 = "null";
+            } else {
+              stackIn_53_2 = "{...}";
+            }
+            stackIn_55_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param2).append(',');
+            if (param3 == null) {
+              stackIn_56_2 = "null";
+            } else {
+              stackIn_56_2 = "{...}";
+            }
+            throw nb.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param4).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public static void g(int param0) {
+        field_G = null;
+        if (param0 != 25996) {
+          StatChoiceDialog.b(-32, 113, 1);
+        }
+        field_F = null;
+        field_K = null;
+    }
+
+    final void a(byte param0, int param1, int param2) {
+        int var4 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        var10 = Kickabout.field_G;
+        super.a((byte) -70, param1, param2);
+        this.field_L.field_J = 95 + param2;
+        this.field_L.field_s = param1 + 180;
+        this.field_L.b(0, true);
+        PacketBuffer.a(-65, c.field_b);
+        SoftwareRasterizer.b();
+        this.field_I.a(1200, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 10, (byte) -68);
+        if (param0 >= -11) {
+          this.field_P = 5;
+        }
+        TeamManagementScreen.e(123);
+        c.field_b.drawHalfSize(40 + param1, param2 + 80);
+        IsSixCommand.field_C.d(this.field_J.getDisplayName(100), param1 + 90, param2 + 190, 16777215, -1);
+        eo.a(param1 + 40, 200 + param2, this.field_J.experience, 3, true, 0);
+        for (var4 = 0; var4 < 3; var4++) {
+          var5 = this.field_O[var4].field_F;
+          var6 = this.field_O[var4].field_T;
+          var7 = this.field_O[var4].field_q;
+          var8 = this.field_O[var4].field_mb;
+          if (var4 != this.field_H) {
+            if (!this.field_O[var4].field_gb) {
+              if (this.field_M[var4] >= 100) {
+                q.field_d.a(GameplayHelpScreen.field_L, 123 + var5, var6 + 19, 13382451, 65793);
+              }
+            } else {
+              SoftwareRasterizer.f(var5, var6, var7, var8, 8, 4473924);
+              q.field_d.a("+1%", 123 + var5, var6 + 19, 5592405, -1);
+            }
+          } else {
+            SoftwareRasterizer.a(var5, var6, var7, var8, 8, 65793, 128);
+            SoftwareRasterizer.f(var5, var6, var7, var8, 8, 10066329);
+            q.field_d.a("+1%", 123 + var5, 19 + var6, 16777215, 65793);
+          }
+          var9 = 0;
+          if (0 == var4) {
+            var9 = this.field_J.c(true, oi.b(-79));
+          }
+          if (var4 == 1) {
+            var9 = this.field_J.a(5205, oi.b(-79));
+          }
+          if (var4 == 2) {
+            var9 = this.field_J.b((byte) 120, oi.b(27));
+          }
+          eo.a(16 + var5, 9 + var6, this.field_M[var4], var4, true, var9);
+        }
+    }
+
+    final int dialogWidth(int param0) {
+        if (param0 != -1379118556) {
+          StatChoiceDialog.g(-26);
+        }
+        return 370;
+    }
+
+    final static void b(int param0, int param1, int param2) {
+        ManagerAction var3 = null;
+        int var4 = Kickabout.field_G;
+        ManagerAction var3Lifetime1;
+        try {
+          var3 = (ManagerAction) (MusicPatchNode.field_h.g(24009));
+          while (var3 != null) {
+            if (8 == var3.actionType) {
+              var3.c((byte) -109);
+            }
+            var3 = (ManagerAction) (MusicPatchNode.field_h.c(33));
+          }
+          if (param1 <= 32) {
+            field_F = (TextFieldNode) null;
+          }
+          var3Lifetime1 = new ManagerAction(8, new int[]{param0, param2});
+          ii.a(var3Lifetime1, 76);
+        } catch (RuntimeException runtimeException) {
+          throw nb.a((Throwable) ((Object) runtimeException), "rt.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    static {
+        field_G = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
+        field_K = "Achievements are awarded during games of Kickabout. Some will only be awarded in <col=ffff00>rated</col> games or Tournaments with at least 8 starting players. No achievements are awarded in <col=ffff00>Exhibition</col> games.";
+    }
+}

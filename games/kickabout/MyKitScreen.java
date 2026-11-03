@@ -122,7 +122,7 @@ final class MyKitScreen extends TeamManagementScreen {
         var5_ref_rd__ = AnimationSkeleton.field_f;
         for (var6_int = 0; var5_ref_rd__.length > var6_int; var6_int++) {
           var7_ref_rd = var5_ref_rd__[var6_int];
-          if (var7_ref_rd.a(ic.field_h.field_e, param0 + 109, tk.field_Ib)) {
+          if (var7_ref_rd.a(ic.field_h.field_e, param0 + 109, ScrollContainer.field_Ib)) {
             var11.a(new KitStyleTile(ic.field_h, var7_ref_rd), 3);
           }
         }
@@ -427,7 +427,7 @@ final class MyKitScreen extends TeamManagementScreen {
           this.field_N = ic.field_h.field_k;
           this.field_bb = ic.field_h.field_w;
           this.field_Q = ic.field_h.field_R;
-          this.field_cb.a(pv.field_I[((PlayerStats) (var3)).playerType][3], (byte) -107);
+          this.field_cb.a(HelpTipDialog.field_I[((PlayerStats) (var3)).playerType][3], (byte) -107);
           this.field_cb.a(30, -81);
           if (((PlayerStats) (var3)).playerType == 2) {
             this.field_cb.a(10, param0 - 36);

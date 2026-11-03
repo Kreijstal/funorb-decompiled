@@ -150,7 +150,7 @@ final class ng {
                 }
               }
             } else {
-              var2[var3] = qb.field_Qb[this.field_h[var3]];
+              var2[var3] = GameSetupPanel.field_Qb[this.field_h[var3]];
             }
           } else {
             var2[var3] = this.field_f[var3];

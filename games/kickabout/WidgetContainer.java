@@ -590,7 +590,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                         if (param1.field_u > 0 &&
                           param1.field_G != null) {
                           dupTemp$0 = param1.field_G[var8];
-                          vu.field_zb[dupTemp$0] = vu.field_zb[dupTemp$0] + 1;
+                          ContextMenuItem.field_zb[dupTemp$0] = ContextMenuItem.field_zb[dupTemp$0] + 1;
                         }
                         ShopPlayerSlot.field_Ob = ShopPlayerSlot.field_Ob + 1;
                         break;
@@ -611,9 +611,9 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             param1.field_G != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(var9Lifetime1 >= vu.field_zb.length)) {
-              var10Lifetime1 = vu.field_zb[var9Lifetime1];
-              vu.field_zb[var9Lifetime1] = var8Lifetime1;
+            while (!(var9Lifetime1 >= ContextMenuItem.field_zb.length)) {
+              var10Lifetime1 = ContextMenuItem.field_zb[var9Lifetime1];
+              ContextMenuItem.field_zb[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

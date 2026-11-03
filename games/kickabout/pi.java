@@ -12,7 +12,7 @@ final class pi {
           return;
         }
         try {
-          np.field_Jb.a(new ce(param1), 3);
+          ScrollPane.field_Jb.a(new BuyPlayerDialog(param1), 3);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "pi.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

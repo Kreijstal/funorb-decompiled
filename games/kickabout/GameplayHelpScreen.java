@@ -9,14 +9,14 @@ final class GameplayHelpScreen extends PagedHelpScreen {
     static String field_H;
     static String field_L;
     static IntrusiveDeque field_I;
-    private tk field_E;
+    private ScrollContainer field_E;
     private PlayerStats[] field_F;
     private SquadSlotWidget[] field_K;
 
     final static UiLayoutNode j(byte param0) {
         int var4 = 0;
         int var8 = 0;
-        ej stackIn_30_0;
+        SelectableTrinketIcon stackIn_30_0;
         boolean stackIn_30_1;
         int stackIn_30_2;
         int stackIn_30_3;
@@ -27,7 +27,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         int var6;
         int var7;
         int var9;
-        ej var10;
+        SelectableTrinketIcon var10;
         int var11;
         UiLayoutNode var12;
         int var7Lifetime1;
@@ -45,8 +45,8 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         }
         for (var4 = 0; var4 < var3; var4++) {
           var5 = new UiLayoutNode();
-          var5.a(true, fn.field_d.field_q, 20, 44 + var4 * 44 - 10, fn.field_d.field_w);
-          var5.field_N = (Sprite) ((Object) fn.field_d);
+          var5.a(true, Trinket.field_d.field_q, 20, 44 + var4 * 44 - 10, Trinket.field_d.field_w);
+          var5.field_N = (Sprite) ((Object) Trinket.field_d);
           var12.addChild((byte) -121, var5);
           var6 = ca.field_f[var4];
           for (var7 = 0; var7 < ca.field_f[var4]; var7++) {
@@ -63,7 +63,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
               var9 = 1;
             }
             if (var9 == 0) {
-              var10 = new ej(bo.field_Ab[var2]);
+              var10 = new SelectableTrinketIcon(bo.field_Ab[var2]);
               stackIn_30_0 = var10;
               stackIn_30_1 = true;
               stackIn_30_2 = 32;
@@ -73,7 +73,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
               } else {
                 stackIn_31_4 = 0;
               }
-              ((ej) (Object) stackIn_30_0).a(stackIn_30_1, stackIn_30_2, stackIn_30_3 + (stackIn_31_4 + var7Lifetime1 * 50), 10 + 44 * var4, 32);
+              ((SelectableTrinketIcon) (Object) stackIn_30_0).a(stackIn_30_1, stackIn_30_2, stackIn_30_3 + (stackIn_31_4 + var7Lifetime1 * 50), 10 + 44 * var4, 32);
               var2++;
               var7Lifetime1++;
               var12.addChild((byte) -121, (UiLayoutNode) (var10));
@@ -119,7 +119,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var5_ref_gmLifetime1 = var10;
           var3_ref_gm = var10;
           var10.directionMask = 0;
-          if (field_G[rb.field_Kb]) {
+          if (field_G[TextPromptDialog.field_Kb]) {
             dupTemp$0 = bk.field_a[0];
             dupTemp$0.directionMask = dupTemp$0.directionMask | 4;
           }
@@ -331,7 +331,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3 = 40 + this.slideOffsetX;
         for (var4 = 0; var4 < 2; var4++) {
           SoftwareRasterizer.a(var3, 150, 210, 200, 10, 65793, 140);
-          un.field_d.a(qq.field_L[var4].toUpperCase(), 20 + var3, 175, 16777215, -1);
+          un.field_d.a(LoginRequiredDialog.field_L[var4].toUpperCase(), 20 + var3, 175, 16777215, -1);
           for (var5 = 0; var5 < 2; var5++) {
             var6 = var5 * 120 + (var3 + 20);
             IsSixCommand.field_C.a(JaggrabDownloader.field_e[var4][var5], 90 + (var3 - 80 * var5), 84 * var5 + 185, 110, 70, 16777215, -1, var5 << 1, 1, 16);
@@ -447,7 +447,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3.speed = 35;
         UiLayoutNode var4 = new UiLayoutNode();
         var4.a(true, 350, 0, 0, 350);
-        this.field_E = new tk(0L, var4, new UiLayoutNode(), rr.field_b);
+        this.field_E = new ScrollContainer(0L, var4, new UiLayoutNode(), rr.field_b);
         this.field_E.a(15, 220 + this.slideOffsetX, 0, (byte) 6, 220, this.field_E.field_Db.field_q + 15, 180);
     }
 
@@ -565,7 +565,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           }
           ((BinaryBitmapFont) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_32_2 + 10 + var3, 185, 160, 70, 16777215, -1, 1, 1, 16);
           if (bk.field_a[var4].action == 4) {
-            stackIn_38_0 = (bk.field_a[var4].actionTime > vf.field_I[4] - 13) ? 1 : 0;
+            stackIn_38_0 = (bk.field_a[var4].actionTime > BuyPitchDialog.field_I[4] - 13) ? 1 : 0;
           } else {
             stackIn_38_0 = 0;
           }

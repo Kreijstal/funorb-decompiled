@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends i {
+final class ek extends MessageDialog {
     private int field_I;
-    private at field_H;
+    private TrinketTile field_H;
     private int field_J;
-    private tk field_L;
+    private ScrollContainer field_L;
     private int field_K;
     static String field_M;
     private int field_F;
@@ -18,10 +18,10 @@ final class ek extends i {
     private final UiLayoutNode g(byte param0) {
         int var4 = 0;
         int var3;
-        fn var5;
+        Trinket var5;
         int var7;
         UiLayoutNode var8;
-        at var6;
+        TrinketTile var6;
         var7 = Kickabout.field_G;
         var8 = new UiLayoutNode();
         var3 = 0;
@@ -35,7 +35,7 @@ final class ek extends i {
             (1 & ic.field_h.field_n >> 0) == 1) &&
             (var5.field_h != 73 ||
             vl.b(0)))) {
-            var6 = new at(var4);
+            var6 = new TrinketTile(var4);
             var6.field_s = 5;
             var6.field_J = var3;
             var3 = var3 + var6.field_mb;
@@ -57,7 +57,7 @@ final class ek extends i {
         return var3;
     }
 
-    final int b(int param0) {
+    final int dialogWidth(int param0) {
         if (param0 != -1379118556) {
           field_M = (String) null;
         }
@@ -71,7 +71,7 @@ final class ek extends i {
         int var9 = 0;
         int var10 = Kickabout.field_G;
         super.a((byte) -25, param1, param2);
-        tk var11 = this.field_L;
+        ScrollContainer var11 = this.field_L;
         this.field_L.a(true, 210, param1 + 250, param2 + 55, 240);
         this.field_L.b(0, true);
         SoftwareRasterizer.a(-4 + var11.field_F, var11.field_T - 5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
@@ -83,7 +83,7 @@ final class ek extends i {
         }
         AuctionListing.a(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
         Object var5 = null;
-        at var6_ref_at = (at) (this.field_L.field_Db.field_jb.g(24009));
+        TrinketTile var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.g(24009));
         while (var6_ref_at != null) {
           if (this.field_H == var6_ref_at) {
             SoftwareRasterizer.a(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
@@ -94,7 +94,7 @@ final class ek extends i {
             }
           }
           var6_ref_at.i((byte) -76);
-          var6_ref_at = (at) (this.field_L.field_Db.field_jb.c(33));
+          var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.c(33));
         }
         if (this.field_t != var5) {
           this.a(this.field_v, (lv) (var5), (Sprite) null, -94, this.field_u);
@@ -113,11 +113,11 @@ final class ek extends i {
           }
         }
         this.field_L.a(117, false);
-        IsSixCommand.field_C.d(CheckboxLabelWidget.field_Bb, (this.b(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
+        IsSixCommand.field_C.d(CheckboxLabelWidget.field_Bb, (this.dialogWidth(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
     }
 
     final static void g(int param0) {
-        np.field_Jb.a(new kn(), 3);
+        ScrollPane.field_Jb.a(new TrinketPickerDialog(), 3);
         if (param0 != -29315) {
           ek.b(true, -105, 126);
         }
@@ -127,7 +127,7 @@ final class ek extends i {
         UiLayoutNode stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int var3;
-        at var4;
+        TrinketTile var4;
         int var5;
         var5 = Kickabout.field_G;
         if (this.field_K > 0) {
@@ -149,7 +149,7 @@ final class ek extends i {
         if (param0 != 3) {
           this.a((byte) 5, 15, 25);
         }
-        var4 = (at) (this.field_L.field_Db.field_jb.g(param0 + 24006));
+        var4 = (TrinketTile) (this.field_L.field_Db.field_jb.g(param0 + 24006));
         while (var4 != null) {
           if (1 == var4.field_sb) {
             kj.a((byte) -98);
@@ -159,7 +159,7 @@ final class ek extends i {
               this.field_H = null;
             }
           }
-          var4 = (at) (this.field_L.field_Db.field_jb.c(param0 + 30));
+          var4 = (TrinketTile) (this.field_L.field_Db.field_jb.c(param0 + 30));
         }
         stackIn_23_0 = this.field_i[0];
         stackIn_24_1 = (this.field_H != null) && (this.field_H.field_Db <= ic.field_h.field_x);
@@ -173,7 +173,7 @@ final class ek extends i {
         this.field_K = 0;
         this.field_I = param1;
         CharSequence var5 = (CharSequence) ((Object) "trinkets");
-        this.field_L = new tk(vb.a(0, var5), this.g((byte) -119), ConsolePanel.field_q, rr.field_b, it.field_m);
+        this.field_L = new ScrollContainer(vb.a(0, var5), this.g((byte) -119), ConsolePanel.field_q, rr.field_b, it.field_m);
         this.field_L.a(15, 0, 2, (byte) 2, 240, 210, 0);
         this.field_i[0].field_lb = false;
     }
@@ -185,7 +185,7 @@ final class ek extends i {
         field_M = null;
     }
 
-    final int a(byte param0) {
+    final int dialogHeight(byte param0) {
         UiLayoutNode discarded$0 = null;
         if (param0 <= 75) {
           discarded$0 = this.g((byte) 21);
@@ -193,7 +193,7 @@ final class ek extends i {
         return 380;
     }
 
-    final void a(int param0, int param1) {
+    final void handleResult(int param0, int param1) {
         int var3;
         if (param0 < 60) {
           return;

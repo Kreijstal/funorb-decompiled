@@ -92,8 +92,8 @@ final class LongPlusOneCommand extends ConsoleCommand {
           return;
         }
         try {
-          var5 = ug.a(0, pu.field_zb[0]);
-          var6 = lf.a((byte) -102, pu.field_zb[1]);
+          var5 = ug.a(0, TrinketSlot.field_zb[0]);
+          var6 = lf.a((byte) -102, TrinketSlot.field_zb[1]);
           SoftwareRasterizer.b(ug.a(0, kk.field_B[0] + kk.field_B[1] >> 1), lf.a((byte) -86, or.field_a[0] + or.field_a[1] >> 1), var5, var6, 16777215);
           SoftwareRasterizer.b(-4 + var5, var6 - 4, var5 + 4, 4 + var6, 16776960);
           SoftwareRasterizer.b(var5 - 4, var6 + 4, var5 + 4, var6 - 4, 16776960);

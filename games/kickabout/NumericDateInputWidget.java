@@ -167,12 +167,12 @@ final class NumericDateInputWidget extends DateInputWidget {
         int var3 = Kickabout.field_G;
         IndexedSprite[] var1 = new IndexedSprite[MenuButton.field_l];
         for (var2 = 0; var2 < MenuButton.field_l; var2++) {
-          var1[var2] = new IndexedSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], pq.field_O[var2], lt.field_a);
+          var1[var2] = new IndexedSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], SquadPickerDialog.field_O[var2], lt.field_a);
         }
         if (param0 <= 78) {
           NumericDateInputWidget.n(-91);
         }
-        tk.h((byte) -118);
+        ScrollContainer.h((byte) -118);
         return var1;
     }
 
@@ -198,7 +198,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         param2 = param2 + this.field_t;
         this.a(this.field_L, ec.field_d, param3, (byte) 117, param2);
         this.a(this.field_K, MatchAgent.field_d, param3, (byte) 96, param2);
-        this.a(this.field_P, at.field_Ab, param3, (byte) 108, param2);
+        this.a(this.field_P, TrinketTile.field_Ab, param3, (byte) 108, param2);
     }
 
     public static void n(int param0) {

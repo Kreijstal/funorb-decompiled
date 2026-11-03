@@ -22,12 +22,12 @@ final class ph {
         int var2 = EmailSyntaxValidator.e((byte) 18);
         if (param0) {
           oi.field_g.a(nb.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
-          na.k(0);
+          VerticalScrollbar.k(0);
           return;
         }
         field_c = (String) null;
         oi.field_g.a(nb.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
-        na.k(0);
+        VerticalScrollbar.k(0);
     }
 
     final static void a(int param0) {

@@ -7,13 +7,13 @@ final class ShopPlayerSlot extends im {
     int field_Fb;
     int field_Qb;
     PlayerStats field_Sb;
-    private pu[] field_Ib;
+    private TrinketSlot[] field_Ib;
     static String field_Db;
     private boolean field_Lb;
     static int field_Ob;
     static String field_Kb;
     UiLayoutNode field_Mb;
-    static np field_Jb;
+    static ScrollPane field_Jb;
     static String field_Rb;
     int field_Gb;
     static String field_Eb;
@@ -57,7 +57,7 @@ final class ShopPlayerSlot extends im {
 
     final static void a(String param0, byte param1) {
         try {
-          pq.a(16, param0, true);
+          SquadPickerDialog.a(16, param0, true);
           if (param1 != 74) {
             fa var3 = (fa) null;
             ShopPlayerSlot.a(40, (fa) null, -96);
@@ -266,8 +266,8 @@ final class ShopPlayerSlot extends im {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        fn var9 = null;
-        pu var10 = null;
+        Trinket var9 = null;
+        TrinketSlot var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var6_intLifetime1;
@@ -295,10 +295,10 @@ final class ShopPlayerSlot extends im {
           this.field_Nb = ad.formatCurrencyAmount(this.field_Gb, 26300);
           var6_intLifetime1 = this.field_Pb[0] + this.field_Pb[1] + (this.field_Pb[2] + (this.field_Pb[3] >> 1));
           var7 = this.field_mb >> 1;
-          this.field_Ib = new pu[this.field_Sb.trinketIds.length];
+          this.field_Ib = new TrinketSlot[this.field_Sb.trinketIds.length];
           for (var8 = 0; var8 < this.field_Ib.length; var8++) {
             var9 = pa.field_g[this.field_Sb.trinketIds[var8]];
-            var10 = new pu(var9, true);
+            var10 = new TrinketSlot(var9, true);
             var11 = var6_intLifetime1;
             var12 = var7;
             if (this.field_Sb.trinketIds.length != 2) {

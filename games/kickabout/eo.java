@@ -428,8 +428,8 @@ final class eo {
         double var7 = (double)nj.a(120);
         double var12Lifetime1;
         int var14Lifetime1;
-        param1 = dn.a(param1, false);
-        param2 = dn.a(param2, false);
+        param1 = TrinketIcon.a(param1, false);
+        param2 = TrinketIcon.a(param2, false);
         int var9 = param0.field_o;
         if (var9 < 0 &&
           param0.field_f >= 5) {

@@ -21,7 +21,7 @@ abstract class sr {
         if (param1 >= -20) {
           field_a = (ConsoleExpression[]) null;
         }
-        vu.a(true, param0);
+        ContextMenuItem.a(true, param0);
     }
 
     abstract int a(int param0);

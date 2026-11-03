@@ -234,7 +234,7 @@ final class AuctionLogEntry extends IntrusiveNode {
         if (param0 != 15137) {
           return false;
         }
-        stackIn_6_0 = (!PlayArea.a(100)) && (2 <= tk.field_Ib);
+        stackIn_6_0 = (!PlayArea.a(100)) && (2 <= ScrollContainer.field_Ib);
         return stackIn_6_0;
     }
 

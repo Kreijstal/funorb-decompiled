@@ -201,7 +201,7 @@ final class DelayedServerPacket extends IntrusiveNode {
               ShopPlayerSlot.c(56, 49);
             }
           }
-          ce.field_I = 0;
+          BuyPlayerDialog.field_I = 0;
           if (GameModesHelpScreen.field_G instanceof UnreadMessagesScreen) {
             ((ButtonMenuScreen) (GameModesHelpScreen.field_G)).enterScreen(0, -1, param1);
             eq.a(1, param1);

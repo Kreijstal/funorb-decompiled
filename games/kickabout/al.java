@@ -3,7 +3,7 @@
  */
 final class al extends UiLayoutNode {
     static double[][] field_Bb;
-    np field_Cb;
+    ScrollPane field_Cb;
     static boolean field_Db;
     UiLayoutNode field_Eb;
     UiLayoutNode field_yb;
@@ -43,11 +43,11 @@ final class al extends UiLayoutNode {
         }
     }
 
-    al(long param0, UiLayoutNode param1, UiLayoutNode param2, na param3, UiLayoutNode param4, String param5, String param6) {
+    al(long param0, UiLayoutNode param1, UiLayoutNode param2, VerticalScrollbar param3, UiLayoutNode param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_yb = new UiLayoutNode(0L, (UiLayoutNode) null);
-          this.field_Cb = new np(0L, this.field_yb, param2, param3);
+          this.field_Cb = new ScrollPane(0L, this.field_yb, param2, param3);
           this.field_Eb = new UiLayoutNode(0L, param4);
           this.field_zb = new UiLayoutNode(0L, param4);
           this.field_Eb.field_E = param5;

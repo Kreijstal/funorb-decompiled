@@ -90,7 +90,7 @@ final class eh implements pk {
           dd.a((byte) 53);
           return false;
         }
-        if (!MyKitScreen.ensureSoundLoaded(111, fn.field_c)) {
+        if (!MyKitScreen.ensureSoundLoaded(111, Trinket.field_c)) {
           return false;
         }
         if (v.field_b != null) {
@@ -144,20 +144,20 @@ final class eh implements pk {
           wt.field_y = wa.a((byte) 107, "menu", bo.field_Cb, "star");
           sk.a(-48, 100, 60);
           var8 = ng.a("trinkets", "menu", 2, bo.field_Cb);
-          tk.field_Fb = new ArgbSprite[4][6];
+          ScrollContainer.field_Fb = new ArgbSprite[4][6];
           var9 = 0;
           for (var10_int = 0; var10_int < 3; var10_int++) {
             for (var11_int = 0; var11_int < 6; var11_int++) {
-              tk.field_Fb[var10_int][var11_int] = (ArgbSprite) (var8[var9]);
+              ScrollContainer.field_Fb[var10_int][var11_int] = (ArgbSprite) (var8[var9]);
               var9++;
             }
           }
           for (var10_intLifetime1 = 0; var10_intLifetime1 < 6; var10_intLifetime1++) {
-            tk.field_Fb[3][var10_intLifetime1] = (ArgbSprite) (var8[var9]);
+            ScrollContainer.field_Fb[3][var10_intLifetime1] = (ArgbSprite) (var8[var9]);
           }
           ca.field_c = new ArgbSprite[4];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < ca.field_c.length; var10_intLifetime2++) {
-            ca.field_c[var10_intLifetime2] = ri.a(tk.field_Fb[var10_intLifetime2][0], param0);
+            ca.field_c[var10_intLifetime2] = ri.a(ScrollContainer.field_Fb[var10_intLifetime2][0], param0);
           }
           ArchiveIndex.field_m = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 96, "help_up"));
           QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 100, "help_dwn");
@@ -173,7 +173,7 @@ final class eh implements pk {
           WriteIntegersCommand.field_E = ng.a("cups", "menu", 2, bo.field_Cb);
           DelayedServerPacket.field_i = ng.a("cups_empty", "menu", 2, bo.field_Cb);
           sk.a(102, 100, 90);
-          fn.field_d = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 88, "shelf"));
+          Trinket.field_d = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 88, "shelf"));
           rk.field_g = QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 76, "scroll_button");
           LeaguesScreen.field_B = this.a("menu", bo.field_Cb, (byte) 26, "scroll_bar");
           su.field_a = wa.a((byte) 106, "menu", bo.field_Cb, "mini_ball");
@@ -215,13 +215,13 @@ final class eh implements pk {
           SetLagCommand.field_B = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_middle.png", "", 97), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-114, 23, 6);
           SquadGridWidget.field_Cb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_right.png", "", 90), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          pw.field_H = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.a("stopwatch.png", "", 101), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          AuctionSettingsDialog.field_H = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.a("stopwatch.png", "", 101), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-58, 23, 8);
           nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-105, 23, 10);
           nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          gu.field_zb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_L.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          ContextMenu.field_zb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_L.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-61, 23, 12);
           AccountRegistrationPanel.field_H = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           fv.field_b = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_R.png", "", 117), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
@@ -230,8 +230,8 @@ final class eh implements pk {
           sk.a(-49, 23, 16);
           ButtonMenuScreen.field_u = nh.a(new ArgbSprite(ResourceArchive.field_f.a("top.png", "", 82), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-98, 23, 18);
-          fn.field_f = new ArgbSprite(ResourceArchive.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          kn.field_J = new Sprite(ResourceArchive.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          Trinket.field_f = new ArgbSprite(ResourceArchive.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          TrinketPickerDialog.field_J = new Sprite(ResourceArchive.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           sk.a(126, 23, 20);
           vl.field_g = new Sprite(ResourceArchive.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           eo.field_a = new ArgbSprite(ResourceArchive.field_f.a("arrow_on.png", "", 63), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
@@ -261,9 +261,9 @@ final class eh implements pk {
           return true;
         }
         CipherPacketBuffer.k(61, 6);
-        rf.a(20113, vu.field_Eb, gd.field_h, KitStyleTile.field_Bb);
+        rf.a(20113, ContextMenuItem.field_Eb, gd.field_h, KitStyleTile.field_Bb);
         KitStyleTile.field_Bb = null;
-        vu.field_Eb = null;
+        ContextMenuItem.field_Eb = null;
         gd.field_h = null;
         dd.a((byte) 48);
         return false;
@@ -505,7 +505,7 @@ final class eh implements pk {
         CipherPacketBuffer.k(param0 ^ 12774, 7);
         TriangleRasterizer.a(0.6000000238418579f);
         g.b(false);
-        fn.i(18);
+        Trinket.i(18);
         ii.b(65280);
         CipherPacketBuffer.k(61, 8);
         td.b(param0 - 12854);
@@ -630,9 +630,9 @@ final class eh implements pk {
 
     public final void a(int param0) {
         this.b((byte) 115);
-        if (fn.field_b != null) {
-          ad.loadLocalizedStrings(fn.field_b, 1);
-          fn.field_b = null;
+        if (Trinket.field_b != null) {
+          ad.loadLocalizedStrings(Trinket.field_b, 1);
+          Trinket.field_b = null;
           dd.a((byte) 85);
         }
         MySquadScreen.field_H = ImageProducerRasterBuffer.a((byte) -126, 3);
@@ -648,7 +648,7 @@ final class eh implements pk {
         }
         Kickabout.field_J = ImageProducerRasterBuffer.a((byte) -126, 12);
         KitStyleTile.field_Bb = ImageProducerRasterBuffer.a((byte) -128, 14);
-        vu.field_Eb = ImageProducerRasterBuffer.a((byte) -126, 15);
+        ContextMenuItem.field_Eb = ImageProducerRasterBuffer.a((byte) -126, 15);
         gd.field_h = ImageProducerRasterBuffer.a((byte) -126, 16);
         ResourceArchive.field_f = ImageProducerRasterBuffer.a((byte) -126, 17);
         ResourceArchive var4 = kh.field_g;
@@ -679,14 +679,14 @@ final class eh implements pk {
         }
         mp.field_h.a(IterableNodeHashTable.field_c, (byte) -115, us.field_f, qj.field_c);
         mp.field_h.a(qj.field_c, d.field_b, -100);
-        mp.field_h.a(vp.field_j, (byte) -109, MyPitchScreen.field_H, ej.field_yb);
-        mp.field_h.a(ni.field_i, (byte) -123, MyPitchScreen.field_H, ej.field_yb);
+        mp.field_h.a(vp.field_j, (byte) -109, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
+        mp.field_h.a(ni.field_i, (byte) -123, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
         mp.field_h.a(Kickabout.field_J, (byte) -124, st.field_d, bl.field_n);
         mp.field_h.a(KitStyleTile.field_Bb, (byte) -122, vp.field_l, cu.field_b);
-        mp.field_h.a(vu.field_Eb, (byte) -126, vp.field_l, cu.field_b);
+        mp.field_h.a(ContextMenuItem.field_Eb, (byte) -126, vp.field_l, cu.field_b);
         mp.field_h.a(gd.field_h, (byte) -106, vp.field_l, cu.field_b);
         mp.field_h.a(MySquadScreen.field_H, (byte) -128, kw.field_g, os.field_d);
-        mp.field_h.a(id.field_y, (byte) -116, bb.field_Ib, ac.field_e);
+        mp.field_h.a(id.field_y, (byte) -116, CascadingMenu.field_Ib, ac.field_e);
     }
 
     private final void a(int param0, ArgbSprite param1) {

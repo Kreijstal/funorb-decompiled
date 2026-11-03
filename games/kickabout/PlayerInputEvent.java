@@ -29,8 +29,8 @@ final class PlayerInputEvent extends DualLinkNode {
         if (!(hl.field_d >= 2)) {
           return sr.field_c;
         }
-        if (null != qq.field_H) {
-          if (!qq.field_H.d(-42)) {
+        if (null != LoginRequiredDialog.field_H) {
+          if (!LoginRequiredDialog.field_H.d(-42)) {
             return ks.field_g;
           }
           return ep.field_e;
@@ -126,7 +126,7 @@ final class PlayerInputEvent extends DualLinkNode {
                 su.a(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, FormationView.field_r, pl.field_d);
               }
             }
-            kf.a(var5, (byte) 63);
+            TabStrip.a(var5, (byte) 63);
             dupTemp$0 = new String[2][var5];
             var3.field_i = dupTemp$0;
             var6 = dupTemp$0;

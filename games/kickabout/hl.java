@@ -120,7 +120,7 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
           numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
           return PitchOptionTile.field_Bb;
         }
-        return he.field_yb;
+        return LobbyPlayerRow.field_yb;
     }
 
     public final boolean isInputEmpty(byte param0) {

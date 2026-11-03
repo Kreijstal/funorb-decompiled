@@ -97,10 +97,10 @@ final class gw {
     final static void c(int param0) {
         if (param0 != 0) {
           gw.b(-31);
-          np.field_Jb.a(new no(), 3);
+          ScrollPane.field_Jb.a(new LeagueWinnerDialog(), 3);
           return;
         }
-        np.field_Jb.a(new no(), 3);
+        ScrollPane.field_Jb.a(new LeagueWinnerDialog(), 3);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5) {

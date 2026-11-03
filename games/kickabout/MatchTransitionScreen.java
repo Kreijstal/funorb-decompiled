@@ -312,7 +312,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           if (td.field_b &&
             uv.field_i.field_gc >= uv.field_i.field_bc) {
             mc.field_d.field_lb = false;
-            LineupView.field_u.field_zb.field_E = no.field_I;
+            LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
             hl.a(true, LineupView.field_u.field_Ab);
           } else {
             LineupView.field_u.field_zb.field_E = null;
@@ -346,7 +346,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   if (td.field_b &&
                     uv.field_i.field_gc >= uv.field_i.field_bc) {
                     mc.field_d.field_lb = false;
-                    LineupView.field_u.field_zb.field_E = no.field_I;
+                    LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
@@ -380,7 +380,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (td.field_b &&
                 uv.field_i.field_gc >= uv.field_i.field_bc) {
                 mc.field_d.field_lb = false;
-                LineupView.field_u.field_zb.field_E = no.field_I;
+                LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
@@ -404,7 +404,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (td.field_b &&
                 uv.field_i.field_gc >= uv.field_i.field_bc) {
                 mc.field_d.field_lb = false;
-                LineupView.field_u.field_zb.field_E = no.field_I;
+                LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
@@ -439,7 +439,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   if (td.field_b &&
                     uv.field_i.field_gc >= uv.field_i.field_bc) {
                     mc.field_d.field_lb = false;
-                    LineupView.field_u.field_zb.field_E = no.field_I;
+                    LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
@@ -473,7 +473,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (td.field_b &&
                 uv.field_i.field_gc >= uv.field_i.field_bc) {
                 mc.field_d.field_lb = false;
-                LineupView.field_u.field_zb.field_E = no.field_I;
+                LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
@@ -496,7 +496,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 if (td.field_b &&
                   uv.field_i.field_gc >= uv.field_i.field_bc) {
                   mc.field_d.field_lb = false;
-                  LineupView.field_u.field_zb.field_E = no.field_I;
+                  LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                   hl.a(true, LineupView.field_u.field_Ab);
                 } else {
                   LineupView.field_u.field_zb.field_E = null;
@@ -514,7 +514,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 } else {
                   if (uv.field_i.field_gc >= uv.field_i.field_bc) {
                     mc.field_d.field_lb = false;
-                    LineupView.field_u.field_zb.field_E = no.field_I;
+                    LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
@@ -550,7 +550,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           return false;
         }
         if (NumericDateInputWidget.field_J == null) {
-          if (!vg.field_Wb) {
+          if (!TextFieldNode.field_Wb) {
             if (DebugConsole.field_s) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
@@ -569,7 +569,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (!ph.a(true)) {
               return false;
             }
-            vg.field_Wb = true;
+            TextFieldNode.field_Wb = true;
             return true;
           }
           if (!ph.a(true)) {
@@ -579,7 +579,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           var4 = stackIn_44_0;
           if (80 == cc.field_e ||
             84 == cc.field_e) {
-            vg.field_Wb = false;
+            TextFieldNode.field_Wb = false;
             var4 = 1;
           }
         } else {
@@ -587,7 +587,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             NumericDateInputWidget.field_J = null;
             return true;
           }
-          if (!vg.field_Wb) {
+          if (!TextFieldNode.field_Wb) {
             if (DebugConsole.field_s) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
@@ -606,7 +606,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (!ph.a(true)) {
               return false;
             }
-            vg.field_Wb = true;
+            TextFieldNode.field_Wb = true;
             return true;
           }
           if (!ph.a(true)) {
@@ -615,11 +615,11 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           stackIn_11_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;
           var4 = stackIn_11_0;
           if (80 == cc.field_e) {
-            vg.field_Wb = false;
+            TextFieldNode.field_Wb = false;
             var4 = 1;
           } else {
             if (84 == cc.field_e) {
-              vg.field_Wb = false;
+              TextFieldNode.field_Wb = false;
               var4 = 1;
             }
           }
@@ -627,7 +627,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         if (13 == cc.field_e) {
           td.a(89);
           var4 = 1;
-          vg.field_Wb = false;
+          TextFieldNode.field_Wb = false;
         }
         return var4 != 0;
     }

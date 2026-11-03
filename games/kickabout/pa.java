@@ -6,7 +6,7 @@ final class pa extends dg {
     private int field_h;
     private Sprite field_k;
     static String field_j;
-    static fn[] field_g;
+    static Trinket[] field_g;
 
     public static void c(byte param0) {
         field_j = null;
@@ -62,7 +62,7 @@ final class pa extends dg {
 
     final static void b(byte param0) {
         int var1 = (ea.field_a - 640) / 2;
-        int var2 = rb.field_Bb * rb.field_Bb;
+        int var2 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var3 = var2 - ns.field_a * ns.field_a;
         if (param0 > 81) {
           ss.field_c.a(true, 199, var1 - 199 * var3 / var2, 90, -90 + (SoftwareRasterizer.field_f - 124));

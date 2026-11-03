@@ -29,7 +29,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
         boolean decompiledFrameRemainder0 = true;
         var5 = et.field_d.field_V;
         if (ks.field_e == 1) {
-          if (sl.field_Eb) {
+          if (HoverTooltip.field_Eb) {
             var2 = EmailAvailabilityValidator.field_k.pixelY(true);
             var3 = (var2 * -200 + 326800) / -490;
             mj.a(256.0, 60, 448.0, (double)(var3 + 1344));
@@ -40,7 +40,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
           if (ks.field_e != 2) {
             if (ks.field_e != 3) {
               if (ks.field_e == 4) {
-                if (!sl.field_Eb) {
+                if (!HoverTooltip.field_Eb) {
                   mj.a(200.0, 60, (double)EmailAvailabilityValidator.field_k.pixelX(param0 - 13564), (double)(EmailAvailabilityValidator.field_k.pixelY(true) - 55));
                 } else {
                   mj.a(160.0, 60, (double)(ld.field_f.pixelX(-119) + EmailAvailabilityValidator.field_k.pixelX(-118) >> 1), (double)(ld.field_f.pixelY(true) + EmailAvailabilityValidator.field_k.pixelY(true) >> 1));
@@ -62,7 +62,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
                             if (ks.field_e != 11) {
                               if (ks.field_e != 12) {
                                 if (ks.field_e == 13) {
-                                  if (!sl.field_Eb &&
+                                  if (!HoverTooltip.field_Eb &&
                                     var5.positionY >= 0) {
                                     if (var5.possessorTeam != 0 &&
                                       var5.horizontalSpeedSquared(-125) < 1638400) {
@@ -96,7 +96,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
                         } else {
                           var3 = 2;
                         }
-                        if (!sl.field_Eb) {
+                        if (!HoverTooltip.field_Eb) {
                           mj.a(190.0, 60, (double)ld.field_f.pixelX(-92), (double)te.field_a[var3]);
                         } else {
                           mj.a(256.0, 60, (double)ld.field_f.pixelX(param0 ^ -13551), (double)ld.field_f.pixelY(true));
@@ -105,7 +105,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
                     }
                   }
                 } else {
-                  if (sl.field_Eb) {
+                  if (HoverTooltip.field_Eb) {
                     mj.a(160.0, 60, (double)ld.field_f.pixelX(-124), (double)ld.field_f.pixelY(true));
                   } else {
                     mj.a(200.0, 60, (double)ld.field_f.pixelX(-118), (double)(ld.field_f.pixelY(true) - 55));
@@ -258,7 +258,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
           ou.a((byte) 49, param1);
           CipherPacketBuffer.a(3, param1);
           ip.a(false);
-          fn.d((byte) -128);
+          Trinket.d((byte) -128);
           PlayerStats.field_p = 0 - ButtonMenuScreen.field_l;
           int var4_int = -119 / ((param2 + 39) / 58);
         } catch (RuntimeException runtimeException) {
@@ -420,8 +420,8 @@ final class KitStyleTile extends UiLayoutNode implements lv {
           this.addChild((byte) -128, this.field_Jb);
           this.field_q = 50;
           this.field_Jb.a(true, 60, (this.field_q - 50 >> 1) - 5, 0, 60);
-          this.field_Ib = this.field_Cb.a(tk.field_Ib, (byte) 54, BufferedSocket.field_f);
-          this.field_Kb = this.field_Cb.a(tk.field_Ib, field_yb, (byte) -81);
+          this.field_Ib = this.field_Cb.a(ScrollContainer.field_Ib, (byte) 54, BufferedSocket.field_f);
+          this.field_Kb = this.field_Cb.a(ScrollContainer.field_Ib, field_yb, (byte) -81);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

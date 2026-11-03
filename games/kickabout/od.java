@@ -118,8 +118,8 @@ final class od extends sr {
             var5[dupTemp$0] = var5[dupTemp$0] + 1;
           }
           stackIn_6_0 = vt.field_c.field_g;
-          if (vu.field_Cb != -2) {
-            stackIn_7_1 = vu.field_Cb;
+          if (ContextMenuItem.field_Cb != -2) {
+            stackIn_7_1 = ContextMenuItem.field_Cb;
           } else {
             stackIn_7_1 = 0;
           }
@@ -143,7 +143,7 @@ final class od extends sr {
             var11 = 0;
             for (var12 = 0; vt.field_c.playerCount > var12; var12++) {
               if (~var9Lifetime1 == ~vt.field_c.field_g[var12].field_p) {
-                var13 = 1 + (rb.field_yb + var11 * rn.field_c) + (var25[var9Lifetime1] + 2) + 3;
+                var13 = 1 + (TextPromptDialog.field_yb + var11 * rn.field_c) + (var25[var9Lifetime1] + 2) + 3;
                 var14 = param0[var12];
                 var15 = SingleChildContainer.a(true, var14);
                 if (JaggrabDownloader.field_c &&
@@ -151,11 +151,11 @@ final class od extends sr {
                   wt.field_x < 640 &&
                   us.field_j > var13 - rn.field_c &&
                   us.field_j < var13) {
-                  wa.a((byte) 52, vo.$cfr$intArgs$a$53ce4ab4c593(-18, "<%0>: <%1>ms", new String[]{kn.field_G[var12], var14 + ""}));
+                  wa.a((byte) 52, vo.$cfr$intArgs$a$53ce4ab4c593(-18, "<%0>: <%1>ms", new String[]{TrinketPickerDialog.field_G[var12], var14 + ""}));
                 }
                 stackIn_29_0 = (vt.field_c.participantStatus[var12].isActive(3511)) ? 16777215 : 11184810;
                 var16 = stackIn_29_0;
-                ((BitmapFont) ((Object) var4)).a(kn.field_G[var12], -et.field_c + 644 + 10, var13, var16, -1);
+                ((BitmapFont) ((Object) var4)).a(TrinketPickerDialog.field_G[var12], -et.field_c + 644 + 10, var13, var16, -1);
                 if (vt.field_c.participantStatus[var12].isActive(3511)) {
                   if (vt.field_c.participantStatus[var12].offerDraw) {
                     var17 = ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A) + 12;
@@ -166,9 +166,9 @@ final class od extends sr {
                   }
                 } else {
                   var17 = 644 + (-et.field_c + 10);
-                  var18 = ((BitmapFont) ((Object) var4)).a(kn.field_G[var12]);
-                  SoftwareRasterizer.b(var17, -2 + (var13 - rb.field_yb), var18 + var17, var13 - 1, 13382451);
-                  SoftwareRasterizer.b(var17, -1 + var13, var17 + var18, -2 - rb.field_yb + var13, 13382451);
+                  var18 = ((BitmapFont) ((Object) var4)).a(TrinketPickerDialog.field_G[var12]);
+                  SoftwareRasterizer.b(var17, -2 + (var13 - TextPromptDialog.field_yb), var18 + var17, var13 - 1, 13382451);
+                  SoftwareRasterizer.b(var17, -1 + var13, var17 + var18, -2 - TextPromptDialog.field_yb + var13, 13382451);
                 }
                 var11++;
                 if (JaggrabDownloader.field_c) {

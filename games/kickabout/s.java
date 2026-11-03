@@ -81,7 +81,7 @@ final class s extends TextButton {
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new ec(BigCommand.g(-26370), gu.b(-20010));
+          return new ec(BigCommand.g(-26370), ContextMenu.b(-20010));
         }
         return (ec) null;
     }
@@ -125,7 +125,7 @@ final class s extends TextButton {
         if (param0 != -1) {
           return;
         }
-        np.field_Jb.a(new ek(param3, param1, param2), 3);
+        ScrollPane.field_Jb.a(new ek(param3, param1, param2), 3);
     }
 
     private s() throws Throwable {

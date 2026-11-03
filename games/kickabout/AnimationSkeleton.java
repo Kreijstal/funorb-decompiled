@@ -29,7 +29,7 @@ final class AnimationSkeleton extends IntrusiveNode {
         field_h = null;
     }
 
-    final static void a(byte param0, pu param1) {
+    final static void a(byte param0, TrinketSlot param1) {
         if (param0 != 100) {
           field_g = (rd[]) null;
         }
@@ -47,7 +47,7 @@ final class AnimationSkeleton extends IntrusiveNode {
 
     final static int a(boolean param0) {
         if (ks.field_e == 1 &&
-          !sl.field_Eb) {
+          !HoverTooltip.field_Eb) {
           return 0;
         }
         if (ks.field_e == 2) {
@@ -66,30 +66,30 @@ final class AnimationSkeleton extends IntrusiveNode {
           AnimationSkeleton.a(false);
         }
         if (ks.field_e == 4 &&
-          !sl.field_Eb) {
+          !HoverTooltip.field_Eb) {
           return 5;
         }
         if (ks.field_e == 5 &&
-          !sl.field_Eb) {
+          !HoverTooltip.field_Eb) {
           return 6;
         }
         if (ks.field_e == 6 &&
-          !sl.field_Eb) {
+          !HoverTooltip.field_Eb) {
           return 7;
         }
         if (ks.field_e != 7) {
           if (ks.field_e == 8) {
-            if (sl.field_Eb) {
+            if (HoverTooltip.field_Eb) {
               return 10;
             }
-            if (!sl.field_Eb &&
+            if (!HoverTooltip.field_Eb &&
               ld.field_f.pixelX(-120) < 248 &&
               400 > ld.field_f.pixelY(true)) {
               return 11;
             }
           } else {
             if (ks.field_e == 9) {
-              if (sl.field_Eb) {
+              if (HoverTooltip.field_Eb) {
                 return 12;
               }
               return 13;
@@ -104,7 +104,7 @@ final class AnimationSkeleton extends IntrusiveNode {
                 }
               } else {
                 if (ks.field_e == 13) {
-                  if (!sl.field_Eb) {
+                  if (!HoverTooltip.field_Eb) {
                     return 17;
                   }
                 } else {
@@ -123,16 +123,16 @@ final class AnimationSkeleton extends IntrusiveNode {
                 }
               }
             } else {
-              if (!sl.field_Eb) {
+              if (!HoverTooltip.field_Eb) {
                 return 14;
               }
             }
           }
         } else {
-          if (!sl.field_Eb) {
+          if (!HoverTooltip.field_Eb) {
             return 9;
           }
-          if (sl.field_Eb &&
+          if (HoverTooltip.field_Eb &&
             1 == et.field_d.field_V.possessorTeam &&
             et.field_d.getBallCarrier((byte) -96).action == 0) {
             return 8;

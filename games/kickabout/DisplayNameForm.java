@@ -264,7 +264,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           }
           var4 = var3.getValidationState(-24407);
           if (param0 == 496) {
-            stackIn_9_0 = (var4 == he.field_yb);
+            stackIn_9_0 = (var4 == LobbyPlayerRow.field_yb);
             return stackIn_9_0;
           }
           return true;
@@ -296,12 +296,12 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           return;
         }
         if (param0 < -58) {
-          fn.a((byte) 19, this.field_C.field_q);
+          Trinket.a((byte) 19, this.field_C.field_q);
           return;
         }
         String var3 = (String) null;
         this.a((String) null, -109);
-        fn.a((byte) 19, this.field_C.field_q);
+        Trinket.a((byte) 19, this.field_C.field_q);
     }
 
     static {

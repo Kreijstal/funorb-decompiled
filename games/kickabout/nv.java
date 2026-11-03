@@ -35,8 +35,8 @@ final class nv extends TextButton {
           if (param1 == null) {
             return null;
           }
-          var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, lt.field_a, pq.field_O);
-          tk.h((byte) -92);
+          var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, lt.field_a, SquadPickerDialog.field_O);
+          ScrollContainer.h((byte) -92);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -69,7 +69,7 @@ final class nv extends TextButton {
             }
           }
         }
-        i.field_B = param2;
+        MessageDialog.field_B = param2;
         cu.field_c = param4;
         if (param3 != go.field_b) {
           if (0 == param0) {

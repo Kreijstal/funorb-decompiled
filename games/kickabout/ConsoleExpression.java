@@ -113,7 +113,7 @@ final class ConsoleExpression extends IntrusiveNode {
         var6 = Kickabout.field_G;
         try {
           try {
-            if (this.field_k == vu.field_Ab) {
+            if (this.field_k == ContextMenuItem.field_Ab) {
               stackIn_5_0 = this.field_j;
               stackIn_6_1 = !(param0);
               var7 = new ConsoleValue[((IntrusiveDeque) (Object) stackIn_5_0).a(stackIn_6_1)];
@@ -129,7 +129,7 @@ final class ConsoleExpression extends IntrusiveNode {
               stackIn_10_0 = PasswordValidator.a(var8, false, param1, this.field_h);
               return stackIn_10_0;
             }
-            if (this.field_k == pv.field_H) {
+            if (this.field_k == HelpTipDialog.field_H) {
               var3_int = Character.toLowerCase(this.field_h.charAt(this.field_h.length() - 1));
               if (var3_int == 102) {
                 stackIn_15_0 = new ConsoleValue(Float.valueOf(this.field_h).floatValue());
@@ -162,7 +162,7 @@ final class ConsoleExpression extends IntrusiveNode {
               stackIn_36_0 = new ConsoleValue(var9.charAt(0));
               return stackIn_36_0;
             }
-            if (rb.field_Mb == this.field_k) {
+            if (TextPromptDialog.field_Mb == this.field_k) {
               stackIn_40_0 = new ConsoleValue(this.field_h.substring(1, -1 + this.field_h.length()));
               return stackIn_40_0;
             }
@@ -191,10 +191,10 @@ final class ConsoleExpression extends IntrusiveNode {
     }
 
     public final String toString() {
-        if (vu.field_Ab == this.field_k) {
+        if (ContextMenuItem.field_Ab == this.field_k) {
           return "Method{" + this.field_h + "}";
         }
-        if (pv.field_H == this.field_k) {
+        if (HelpTipDialog.field_H == this.field_k) {
           return "Number{" + this.field_h + "}";
         }
         if (GameModesHelpScreen.field_N == this.field_k) {
@@ -203,7 +203,7 @@ final class ConsoleExpression extends IntrusiveNode {
         if (this.field_k == v.field_d) {
           return "Char{" + this.field_h + "}";
         }
-        if (this.field_k == rb.field_Mb) {
+        if (this.field_k == TextPromptDialog.field_Mb) {
           return "String{" + this.field_h + "}";
         }
         if (ReflectionCheck.field_g == this.field_k) {

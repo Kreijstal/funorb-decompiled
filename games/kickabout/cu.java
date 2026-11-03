@@ -10,26 +10,26 @@ final class cu {
     static String[] field_d;
     static String[] field_e;
 
-    final static cf a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
-        cf stackIn_6_0 = null;
+    final static RankingRowNode a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
+        RankingRowNode stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        cf stackIn_9_0 = null;
+        RankingRowNode stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        cf stackIn_16_0 = null;
+        RankingRowNode stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
-        cf stackIn_19_0 = null;
+        RankingRowNode stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         Object var6;
-        cf var6_ref;
+        RankingRowNode var6_ref;
         PacketBuffer var7;
-        cf var6_refLifetime1;
+        RankingRowNode var6_refLifetime1;
         var6 = null;
         if (param1 == 0) {
-          var6_ref = (cf) (field_a.b((byte) -32));
+          var6_ref = (RankingRowNode) (field_a.b((byte) -32));
           if (var6_ref == null) {
-            var6_ref = new cf();
+            var6_ref = new RankingRowNode();
           }
           var6_ref.field_Ab = param2;
           var6_ref.field_yb = param3;
@@ -48,9 +48,9 @@ final class cu {
         }
         var7 = (PacketBuffer) null;
         cu.a((byte) 95, (String) null, (PacketBuffer) null);
-        var6_refLifetime1 = (cf) (field_a.b((byte) -32));
+        var6_refLifetime1 = (RankingRowNode) (field_a.b((byte) -32));
         if (var6_refLifetime1 == null) {
-          var6_refLifetime1 = new cf();
+          var6_refLifetime1 = new RankingRowNode();
         }
         var6_refLifetime1.field_Ab = param2;
         var6_refLifetime1.field_yb = param3;

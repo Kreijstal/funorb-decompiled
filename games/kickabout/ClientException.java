@@ -3,7 +3,7 @@
  */
 final class ClientException extends RuntimeException {
     Throwable field_e;
-    static np field_c;
+    static ScrollPane field_c;
     static sr field_a;
     String field_d;
     static int field_f;

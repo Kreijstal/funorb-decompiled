@@ -219,7 +219,7 @@ final class m {
               or.field_d.writeByte(106, 16);
               or.field_d.field_n = or.field_d.field_n + 1;
               var9 = or.field_d.field_n;
-              om.a(ManagerAction.field_h, or.field_d, (byte) -89, gl.field_a, bb.field_Nb);
+              IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -89, gl.field_a, CascadingMenu.field_Nb);
               or.field_d.backpatchByteLength(62, -var9 + or.field_d.field_n);
             } else {
               var9 = 0;
@@ -244,7 +244,7 @@ final class m {
                 var11_ref_String = "";
               }
               or.field_d.writeString(14190, var11_ref_String);
-              om.a(ManagerAction.field_h, or.field_d, (byte) -94, gl.field_a, bb.field_Nb);
+              IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -94, gl.field_a, CascadingMenu.field_Nb);
               or.field_d.backpatchShortLength(-var10 + or.field_d.field_n, 62);
             }
             c.a(-1, false);
@@ -263,7 +263,7 @@ final class m {
                 wc.a((byte) -50, so.a(-71));
                 gd.field_b = ld.field_i;
                 FormationView.b((byte) -116);
-                vu.field_Db = false;
+                ContextMenuItem.field_Db = false;
                 stackIn_35_0 = var9Lifetime1;
                 return stackIn_35_0;
               }
@@ -289,7 +289,7 @@ final class m {
                   ValidatedTextWidget.field_X[var12] = un.field_e.readCircumfixedString(17);
                 }
                 FormationView.b((byte) -116);
-                vu.field_Db = false;
+                ContextMenuItem.field_Db = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
               }
@@ -306,7 +306,7 @@ final class m {
               }
             }
             FormationView.b((byte) -116);
-            vu.field_Db = false;
+            ContextMenuItem.field_Db = false;
             stackIn_53_0 = so.field_b;
             return stackIn_53_0;
           }
@@ -315,20 +315,20 @@ final class m {
             return stackIn_56_0;
           }
           if (null == op.field_y) {
-            if (vu.field_Db) {
+            if (ContextMenuItem.field_Db) {
               if (30000L >= KeyedLoginCredentials.c(29680)) {
                 gd.field_b = ic.field_e;
               } else {
                 gd.field_b = md.field_h;
               }
-              vu.field_Db = false;
+              ContextMenuItem.field_Db = false;
               stackIn_65_0 = 249;
               return stackIn_65_0;
             }
             var9Lifetime3 = rl.field_o;
             rl.field_o = pn.field_y;
             pn.field_y = var9Lifetime3;
-            vu.field_Db = true;
+            ContextMenuItem.field_Db = true;
           }
           stackIn_67_0 = -1;
           return stackIn_67_0;

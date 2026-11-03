@@ -75,7 +75,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             stackIn_5_0 = param4;
             stackIn_5_1 = param1 - 62;
             if (param0) {
-              stackIn_6_2 = gu.field_zb;
+              stackIn_6_2 = ContextMenu.field_zb;
             } else {
               stackIn_6_2 = uv.field_m;
             }
@@ -234,7 +234,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_F = new TextButton(vb.field_e, (UiListener) null);
         this.field_E.field_u = sr.field_b;
         this.field_S.field_u = ColourSwatchTile.field_Bb;
-        this.field_K.field_u = aw.field_G;
+        this.field_K.field_u = TutorialChoiceDialog.field_G;
         this.field_T.field_u = od.field_o;
         this.field_N.field_u = UiLayoutNode.field_Z;
         this.field_J.field_u = SpriteState.field_r;
@@ -261,7 +261,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         int var3 = 20;
         var3 = var3 + this.a(170, ReflectionCheck.field_i, 21621, var3, this.field_S);
         var3 = var3 + (5 + this.a(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
-        var3 = var3 + this.a(170, at.field_Ib, 21621, var3, this.field_T);
+        var3 = var3 + this.a(170, TrinketTile.field_Ib, 21621, var3, this.field_T);
         var3 = var3 + (this.a(this.field_N, fa.field_h, 35, 170, var3, LongPlusOneCommand.field_A) + 5);
         var3 = var3 + (this.a(this.field_E, GoalStateAgent.field_f, 35, 170, var3, MusicPatch.field_i) + 5);
         var3 = var3 + this.a(var3, pl.field_a, 170, this.field_J, (byte) 117);
@@ -363,13 +363,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (param2 != 0) {
             if (1 != param2) {
               if (2 == param2) {
-                rb.a((byte) -51, "conduct.ws");
+                TextPromptDialog.a((byte) -51, "conduct.ws");
               }
             } else {
-              rb.a((byte) -51, "privacy.ws");
+              TextPromptDialog.a((byte) -51, "privacy.ws");
             }
           } else {
-            rb.a((byte) -51, "terms.ws");
+            TextPromptDialog.a((byte) -51, "terms.ws");
           }
           if (param3 < 7) {
             discarded$1 = this.k(-42);

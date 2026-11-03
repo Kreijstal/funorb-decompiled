@@ -91,11 +91,11 @@ final class ts {
               var6 = ec.a(true, j.field_a[var3_int], -23044);
               var4 = var4 + of.field_a;
               var7 = -(var6 >> 1) + RasterStateSnapshot.field_k;
-              if (ec.a(-vg.field_zb + var7, param0, param1, (byte) -124, var4, var6 + (vg.field_zb << 1), (IsSixCommand.field_H << 1) + tk.field_zb)) {
+              if (ec.a(-TextFieldNode.field_zb + var7, param0, param1, (byte) -124, var4, var6 + (TextFieldNode.field_zb << 1), (IsSixCommand.field_H << 1) + ScrollContainer.field_zb)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (tk.field_zb + (IsSixCommand.field_H << 1) + of.field_a);
+              var4 = var4 + (ScrollContainer.field_zb + (IsSixCommand.field_H << 1) + of.field_a);
             }
             var3_int++;
           }

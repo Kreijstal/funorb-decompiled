@@ -18,7 +18,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
           if (et.field_d.field_V.possessorTeam == 1) {
             var1 = et.field_d.getControlledFootballer((byte) 104, 0);
             var2 = et.field_d.getControlledFootballer((byte) -71, 1);
-            ej.b(var1.pixelX(-121) - var2.pixelX(-99), -2, var1.pixelY(true) - var2.pixelY(true), 10);
+            SelectableTrinketIcon.b(var1.pixelX(-121) - var2.pixelX(-99), -2, var1.pixelY(true) - var2.pixelY(true), 10);
           }
           et.field_d.participantStatus[1].controlledSlot = 0;
         }

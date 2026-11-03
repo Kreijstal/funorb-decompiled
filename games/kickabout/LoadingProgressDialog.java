@@ -84,7 +84,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final static void a(int param0, ReceivedAuctionItem param1) {
         try {
-          np.field_Jb.a(new hk(param1, 19), 3);
+          ScrollPane.field_Jb.a(new AuctionBidDialog(param1, 19), 3);
           int var2_int = -76 / ((49 - param0) / 61);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -112,7 +112,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final static void b(int param0, int param1) {
         int var2 = 51 / ((param0 + 28) / 58);
-        np.field_Jb.a(new pw(param1), 3);
+        ScrollPane.field_Jb.a(new AuctionSettingsDialog(param1), 3);
     }
 
     static {

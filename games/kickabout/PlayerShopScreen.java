@@ -218,7 +218,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
                 break scanLoop1;
               }
               for (var4_int = 0; var4_int < 8; var4_int++) {
-                var5 = ha.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
+                var5 = WelcomeDialog.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
                 stackIn_16_0 = (~BufferedSocket.field_k != ~var3) ? 0 : 1;
                 var6 = stackIn_16_0;
                 var7 = (oi) (this.field_I.g(24009));

@@ -129,7 +129,7 @@ final class we {
             if (eq.field_d > 0) {
               NodeHashTableIterator.a(-43, param3);
             } else {
-              if (tk.field_Ib >= 2 &&
+              if (ScrollContainer.field_Ib >= 2 &&
                 GameplayHelpScreen.field_G[12]) {
                 NodeHashTableIterator.a(-43, param3);
               }
@@ -141,7 +141,7 @@ final class we {
             rn.field_d[0] != ThreeCommand.field_D) {
             ThreeCommand.field_D = rn.field_d[0];
           }
-          oa.a(false, param3, ThreeCommand.field_D, true, 0, no.field_J);
+          oa.a(false, param3, ThreeCommand.field_D, true, 0, LeagueWinnerDialog.field_J);
         }
         if (RandomAccessCacheFile.field_a.field_sb != 0) {
           TextWidgetPainter.field_f = false;

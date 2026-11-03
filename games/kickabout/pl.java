@@ -7,8 +7,8 @@ final class pl {
     static String field_b;
     static int field_d;
 
-    final static void a(int param0, int param1, qb param2, int param3, byte param4, int param5, int param6, boolean param7) {
-        vu[][] stackIn_4_0 = null;
+    final static void a(int param0, int param1, GameSetupPanel param2, int param3, byte param4, int param5, int param6, boolean param7) {
+        ContextMenuItem[][] stackIn_4_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_22_0 = 0;
         int stackIn_37_0 = 0;
@@ -18,7 +18,7 @@ final class pl {
         String stackIn_104_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
-        vu[] var8 = null;
+        ContextMenuItem[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int[] var10 = null;
@@ -26,11 +26,11 @@ final class pl {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        vu var13_ref_vu = null;
+        ContextMenuItem var13_ref_vu = null;
         int var14 = 0;
         int var15 = 0;
-        vu[] var16 = null;
-        vu[] var17 = null;
+        ContextMenuItem[] var16 = null;
+        ContextMenuItem[] var17 = null;
         int[] var18 = null;
         int[] var19 = null;
         int var10_intLifetime1;

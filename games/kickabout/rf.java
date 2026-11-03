@@ -4,8 +4,8 @@
 final class rf {
     static boolean field_a;
     static byte[] field_d;
-    kf field_b;
-    static vu[][] field_c;
+    TabStrip field_b;
+    static ContextMenuItem[][] field_c;
 
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         int var5 = 0;
@@ -27,7 +27,7 @@ final class rf {
         RuntimeException var4 = null;
         var8 = Kickabout.field_G;
         try {
-          pv.field_I = new nm[5][17];
+          HelpTipDialog.field_I = new nm[5][17];
           hq.field_b = new nm[5];
           GameKeyHandler.a(param1, param3, (byte) -69);
           var10 = new ef(0);
@@ -35,60 +35,60 @@ final class rf {
           while (!var11.g((byte) 103)) {
           }
           pe.a((byte) 82, var10);
-          pv.field_I[0][0] = new nm(param2, "characters", "ka_tank_aggressive_tackle");
-          pv.field_I[0][1] = new nm(param2, "characters", "ka_tank_fall");
-          pv.field_I[0][2] = new nm(param2, "characters", "ka_tank_fall_stand");
-          pv.field_I[0][3] = new nm(param2, "characters", "ka_tank_idle");
-          pv.field_I[0][4] = new nm(param2, "characters", "ka_striker_kick");
-          pv.field_I[0][5] = new nm(param2, "characters", "ka_tank_run");
-          pv.field_I[0][6] = new nm(param2, "characters", "ka_tank_tackle_stand");
-          pv.field_I[0][8] = new nm(param2, "characters", "ka_tank_diving_header");
-          pv.field_I[0][16] = new nm(param2, "characters", "ka_tank_aeroplane");
-          pv.field_I[0][9] = new nm(param2, "characters", "ka_tank_celebrate_new");
+          HelpTipDialog.field_I[0][0] = new nm(param2, "characters", "ka_tank_aggressive_tackle");
+          HelpTipDialog.field_I[0][1] = new nm(param2, "characters", "ka_tank_fall");
+          HelpTipDialog.field_I[0][2] = new nm(param2, "characters", "ka_tank_fall_stand");
+          HelpTipDialog.field_I[0][3] = new nm(param2, "characters", "ka_tank_idle");
+          HelpTipDialog.field_I[0][4] = new nm(param2, "characters", "ka_striker_kick");
+          HelpTipDialog.field_I[0][5] = new nm(param2, "characters", "ka_tank_run");
+          HelpTipDialog.field_I[0][6] = new nm(param2, "characters", "ka_tank_tackle_stand");
+          HelpTipDialog.field_I[0][8] = new nm(param2, "characters", "ka_tank_diving_header");
+          HelpTipDialog.field_I[0][16] = new nm(param2, "characters", "ka_tank_aeroplane");
+          HelpTipDialog.field_I[0][9] = new nm(param2, "characters", "ka_tank_celebrate_new");
           sk.a(94, 6, 1);
-          pv.field_I[3][0] = new nm(param2, "characters", "ka_scout_aggressive_tackle");
+          HelpTipDialog.field_I[3][0] = new nm(param2, "characters", "ka_scout_aggressive_tackle");
           if (param0 != 20113) {
             var9 = (ResourceArchive) null;
             rf.a(103, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
           }
-          pv.field_I[3][1] = new nm(param2, "characters", "ka_scout_fall");
-          pv.field_I[3][2] = new nm(param2, "characters", "ka_scout_fall_stand");
-          pv.field_I[3][3] = new nm(param2, "characters", "ka_scout_idle");
-          pv.field_I[3][5] = new nm(param2, "characters", "ka_scout_run");
-          pv.field_I[3][6] = new nm(param2, "characters", "ka_scout_tackle_stand");
-          pv.field_I[3][7] = new nm(param2, "characters", "ka_scout_tackle_delay");
-          pv.field_I[3][16] = new nm(param2, "characters", "ka_scout_aeroplane");
-          pv.field_I[3][9] = new nm(param2, "characters", "ka_scout_celebrate_new");
+          HelpTipDialog.field_I[3][1] = new nm(param2, "characters", "ka_scout_fall");
+          HelpTipDialog.field_I[3][2] = new nm(param2, "characters", "ka_scout_fall_stand");
+          HelpTipDialog.field_I[3][3] = new nm(param2, "characters", "ka_scout_idle");
+          HelpTipDialog.field_I[3][5] = new nm(param2, "characters", "ka_scout_run");
+          HelpTipDialog.field_I[3][6] = new nm(param2, "characters", "ka_scout_tackle_stand");
+          HelpTipDialog.field_I[3][7] = new nm(param2, "characters", "ka_scout_tackle_delay");
+          HelpTipDialog.field_I[3][16] = new nm(param2, "characters", "ka_scout_aeroplane");
+          HelpTipDialog.field_I[3][9] = new nm(param2, "characters", "ka_scout_celebrate_new");
           sk.a(-113, 6, 2);
-          pv.field_I[2][0] = new nm(param2, "characters", "ka_specialist_aggressive_tackle");
-          pv.field_I[2][1] = new nm(param2, "characters", "ka_specialist_fall");
-          pv.field_I[2][2] = new nm(param2, "characters", "ka_specialist_fall_stand");
-          pv.field_I[2][3] = new nm(param2, "characters", "ka_specialist_idle");
-          pv.field_I[2][5] = new nm(param2, "characters", "ka_specialist_run");
-          pv.field_I[2][6] = new nm(param2, "characters", "ka_specialist_tackle_stand");
-          pv.field_I[2][16] = new nm(param2, "characters", "ka_specialist_aeroplane");
-          pv.field_I[2][9] = new nm(param2, "characters", "ka_specialist_celebrate_new");
+          HelpTipDialog.field_I[2][0] = new nm(param2, "characters", "ka_specialist_aggressive_tackle");
+          HelpTipDialog.field_I[2][1] = new nm(param2, "characters", "ka_specialist_fall");
+          HelpTipDialog.field_I[2][2] = new nm(param2, "characters", "ka_specialist_fall_stand");
+          HelpTipDialog.field_I[2][3] = new nm(param2, "characters", "ka_specialist_idle");
+          HelpTipDialog.field_I[2][5] = new nm(param2, "characters", "ka_specialist_run");
+          HelpTipDialog.field_I[2][6] = new nm(param2, "characters", "ka_specialist_tackle_stand");
+          HelpTipDialog.field_I[2][16] = new nm(param2, "characters", "ka_specialist_aeroplane");
+          HelpTipDialog.field_I[2][9] = new nm(param2, "characters", "ka_specialist_celebrate_new");
           sk.a(param0 ^ -20164, 6, 3);
-          pv.field_I[1][0] = new nm(param2, "characters", "ka_striker_aggressive_tackle");
-          pv.field_I[1][1] = new nm(param2, "characters", "ka_striker_fall");
-          pv.field_I[1][2] = new nm(param2, "characters", "ka_striker_fall_stand");
-          pv.field_I[1][3] = new nm(param2, "characters", "ka_striker_idle");
-          pv.field_I[1][5] = new nm(param2, "characters", "ka_striker_run");
-          pv.field_I[1][6] = new nm(param2, "characters", "ka_striker_tackle_stand");
-          pv.field_I[1][16] = new nm(param2, "characters", "ka_striker_aeroplane");
-          pv.field_I[1][9] = new nm(param2, "characters", "ka_striker_celebrate_new");
+          HelpTipDialog.field_I[1][0] = new nm(param2, "characters", "ka_striker_aggressive_tackle");
+          HelpTipDialog.field_I[1][1] = new nm(param2, "characters", "ka_striker_fall");
+          HelpTipDialog.field_I[1][2] = new nm(param2, "characters", "ka_striker_fall_stand");
+          HelpTipDialog.field_I[1][3] = new nm(param2, "characters", "ka_striker_idle");
+          HelpTipDialog.field_I[1][5] = new nm(param2, "characters", "ka_striker_run");
+          HelpTipDialog.field_I[1][6] = new nm(param2, "characters", "ka_striker_tackle_stand");
+          HelpTipDialog.field_I[1][16] = new nm(param2, "characters", "ka_striker_aeroplane");
+          HelpTipDialog.field_I[1][9] = new nm(param2, "characters", "ka_striker_celebrate_new");
           sk.a(80, 6, 4);
-          pv.field_I[4][10] = new nm(param2, "characters", "ka_keeper_basic_catch");
-          pv.field_I[4][11] = new nm(param2, "characters", "ka_keeper_l_dive_stand");
-          pv.field_I[4][12] = new nm(param2, "characters", "ka_keeper_l_dive_static");
-          pv.field_I[4][13] = new nm(param2, "characters", "ka_keeper_r_dive_stand");
-          pv.field_I[4][14] = new nm(param2, "characters", "ka_keeper_r_dive_static");
-          pv.field_I[4][3] = new nm(param2, "characters", "ka_keeper_idle");
-          pv.field_I[4][4] = new nm(param2, "characters", "ka_keeper_kick");
-          pv.field_I[4][5] = new nm(param2, "characters", "ka_keeper_run");
-          pv.field_I[4][15] = new nm(param2, "characters", "ka_keeper_l_shuffle");
-          pv.field_I[4][0] = new nm(param2, "characters", "ka_keeper_aggressive_tackle");
-          pv.field_I[4][6] = new nm(param2, "characters", "ka_keeper_tackle_stand");
+          HelpTipDialog.field_I[4][10] = new nm(param2, "characters", "ka_keeper_basic_catch");
+          HelpTipDialog.field_I[4][11] = new nm(param2, "characters", "ka_keeper_l_dive_stand");
+          HelpTipDialog.field_I[4][12] = new nm(param2, "characters", "ka_keeper_l_dive_static");
+          HelpTipDialog.field_I[4][13] = new nm(param2, "characters", "ka_keeper_r_dive_stand");
+          HelpTipDialog.field_I[4][14] = new nm(param2, "characters", "ka_keeper_r_dive_static");
+          HelpTipDialog.field_I[4][3] = new nm(param2, "characters", "ka_keeper_idle");
+          HelpTipDialog.field_I[4][4] = new nm(param2, "characters", "ka_keeper_kick");
+          HelpTipDialog.field_I[4][5] = new nm(param2, "characters", "ka_keeper_run");
+          HelpTipDialog.field_I[4][15] = new nm(param2, "characters", "ka_keeper_l_shuffle");
+          HelpTipDialog.field_I[4][0] = new nm(param2, "characters", "ka_keeper_aggressive_tackle");
+          HelpTipDialog.field_I[4][6] = new nm(param2, "characters", "ka_keeper_tackle_stand");
           sk.a(89, 6, 5);
           hq.field_b[0] = new nm(param2, "fans", "fan01_cheer");
           hq.field_b[1] = new nm(param2, "fans", "fan02_cheer");
@@ -98,10 +98,10 @@ final class rf {
           for (var5 = 0; var5 < 5; var5++) {
             for (var6 = 0; var6 < 17; var6++) {
               var7 = 0;
-              while (pv.field_I[var5][var6] == null) {
+              while (HelpTipDialog.field_I[var5][var6] == null) {
                 incrementValue$1 = var7;
                 var7++;
-                pv.field_I[var5][var6] = pv.field_I[incrementValue$1][var6];
+                HelpTipDialog.field_I[var5][var6] = HelpTipDialog.field_I[incrementValue$1][var6];
               }
             }
           }
@@ -141,7 +141,7 @@ final class rf {
         AlphaContainer.field_E.a(true, -2 - TeamSelectionAgent.field_f + (kk.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
         ph.field_f.a(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + kk.field_R.field_q) - 2, sh.field_c + 2, 18);
         ei.field_d.a(TeamSelectionAgent.field_f, -sh.field_c + (kk.field_R.field_mb - 22), 20, 20 + sh.field_c + 2, kk.field_R.field_q, 92, 2, 0);
-        nq.field_F.a(2, TeamSelectionAgent.field_f, (byte) 19, 20);
+        TournamentChampionDialog.field_F.a(2, TeamSelectionAgent.field_f, (byte) 19, 20);
     }
 
     final static void a(byte param0) {
@@ -214,7 +214,7 @@ final class rf {
 
     final static boolean a(int param0, int param1) {
         if (param1 != 16) {
-          field_c = (vu[][]) null;
+          field_c = (ContextMenuItem[][]) null;
         }
         return (param0 & -param0) == param0 ? true : false;
     }
@@ -224,7 +224,7 @@ final class rf {
         int var4 = 0;
         try {
           if (!param2) {
-            field_c = (vu[][]) null;
+            field_c = (ContextMenuItem[][]) null;
           }
           var5 = or.field_d;
           var5.b(param1, (byte) -75);
@@ -245,7 +245,7 @@ final class rf {
     }
 
     public static void a(int param0) {
-        field_c = (vu[][]) null;
+        field_c = (ContextMenuItem[][]) null;
         if (param0 >= -58) {
           return;
         }
@@ -269,9 +269,9 @@ final class rf {
         String[] var3 = null;
         UiLayoutNode[] var4 = null;
         try {
-          var3 = new String[]{param0, ConsoleExpression.field_n, at.field_Jb};
-          var4 = new UiLayoutNode[]{param1, kk.field_R, (UiLayoutNode) ((Object) nq.field_F)};
-          this.field_b = new kf(0L, MatchingTextValidator.field_n, var3, MouseInputHandler.field_b, var4, 0);
+          var3 = new String[]{param0, ConsoleExpression.field_n, TrinketTile.field_Jb};
+          var4 = new UiLayoutNode[]{param1, kk.field_R, (UiLayoutNode) ((Object) TournamentChampionDialog.field_F)};
+          this.field_b = new TabStrip(0L, MatchingTextValidator.field_n, var3, MouseInputHandler.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

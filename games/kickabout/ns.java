@@ -18,7 +18,7 @@ final class ns {
         if (param0 != 3585) {
           return;
         }
-        hq.field_d = -21 + (480 - om.field_Bb);
+        hq.field_d = -21 + (480 - IconLabel.field_Bb);
     }
 
     static {

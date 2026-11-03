@@ -987,7 +987,7 @@ final class ad {
                 }
                 var2 = ib.a("no_gold_league_winner", -117);
                 if (null != var2) {
-                  om.field_zb = BlackFadeScreen.a(var2, true);
+                  IconLabel.field_zb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("class_name,0", -90);
                 if (var2 != null) {
@@ -1133,7 +1133,7 @@ final class ad {
                 }
                 var2 = ib.a("keycode_up", -94);
                 if (null != var2) {
-                  rb.field_Kb = var2[0] & 255;
+                  TextPromptDialog.field_Kb = var2[0] & 255;
                 }
                 var2 = ib.a("keycode_down", -107);
                 if (var2 != null) {
@@ -1173,15 +1173,15 @@ final class ad {
                 }
                 var2 = ib.a("controls_detached,0", -116);
                 if (var2 != null) {
-                  fn.field_j[0] = BlackFadeScreen.a(var2, true);
+                  Trinket.field_j[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("controls_detached,1", -102);
                 if (null != var2) {
-                  fn.field_j[1] = BlackFadeScreen.a(var2, true);
+                  Trinket.field_j[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("controls_detached,2", param1 - 119);
                 if (null != var2) {
-                  fn.field_j[2] = BlackFadeScreen.a(var2, true);
+                  Trinket.field_j[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("controls_attached2,0", -100);
                 if (var2 != null) {
@@ -1265,7 +1265,7 @@ final class ad {
                 }
                 var2 = ib.a("formation_strong_stagger", -107);
                 if (var2 != null) {
-                  pq.field_M = BlackFadeScreen.a(var2, true);
+                  SquadPickerDialog.field_M = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("formation_diamond", -128);
                 if (null != var2) {
@@ -1421,7 +1421,7 @@ final class ad {
                 }
                 var2 = ib.a("trinket_description,26", -97);
                 if (param1 != 1) {
-                  ad.a((bb) null, (byte) 104);
+                  ad.a((CascadingMenu) null, (byte) 104);
                 }
                 if (null != var2) {
                   us.field_h[26] = BlackFadeScreen.a(var2, true);
@@ -1986,7 +1986,7 @@ final class ad {
                 }
                 var2 = ib.a("menu_back", param1 - 95);
                 if (null != var2) {
-                  at.field_Fb = BlackFadeScreen.a(var2, true);
+                  TrinketTile.field_Fb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("menu_options", param1 ^ -85);
                 if (var2 != null) {
@@ -2070,7 +2070,7 @@ final class ad {
                 }
                 var2 = ib.a("extra_l2", -118);
                 if (var2 != null) {
-                  bb.field_Ib = BlackFadeScreen.a(var2, true);
+                  CascadingMenu.field_Ib = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("loading_menu", -121);
                 if (var2 != null) {
@@ -2098,59 +2098,59 @@ final class ad {
                 }
                 var2 = ib.a("unpack_string,0", -113);
                 if (null != var2) {
-                  no.field_K[0] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,1", -98);
                 if (null != var2) {
-                  no.field_K[1] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,2", -95);
                 if (var2 != null) {
-                  no.field_K[2] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,3", param1 - 111);
                 if (var2 != null) {
-                  no.field_K[3] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,4", param1 ^ -90);
                 if (null != var2) {
-                  no.field_K[4] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[4] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,5", param1 - 121);
                 if (null != var2) {
-                  no.field_K[5] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[5] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,6", -108);
                 if (null != var2) {
-                  no.field_K[6] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[6] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,7", param1 - 121);
                 if (null != var2) {
-                  no.field_K[7] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[7] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,8", -116);
                 if (null != var2) {
-                  no.field_K[8] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[8] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,9", param1 ^ -113);
                 if (null != var2) {
-                  no.field_K[9] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[9] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,10", param1 ^ -122);
                 if (var2 != null) {
-                  no.field_K[10] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[10] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,11", -85);
                 if (var2 != null) {
-                  no.field_K[11] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[11] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,12", -108);
                 if (var2 != null) {
-                  no.field_K[12] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[12] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("unpack_string,13", -82);
                 if (var2 != null) {
-                  no.field_K[13] = BlackFadeScreen.a(var2, true);
+                  LeagueWinnerDialog.field_K[13] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("title_team_selection", -87);
                 if (null != var2) {
@@ -2166,7 +2166,7 @@ final class ad {
                 }
                 var2 = ib.a("ready", -95);
                 if (var2 != null) {
-                  sl.field_Ab = BlackFadeScreen.a(var2, true);
+                  HoverTooltip.field_Ab = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("choose_team_instructions1", -94);
                 if (null != var2) {
@@ -2198,7 +2198,7 @@ final class ad {
                 }
                 var2 = ib.a("title_finished_alt", -120);
                 if (var2 != null) {
-                  qq.field_J = BlackFadeScreen.a(var2, true);
+                  LoginRequiredDialog.field_J = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("title_finished2", -93);
                 if (var2 != null) {
@@ -2230,7 +2230,7 @@ final class ad {
                 }
                 var2 = ib.a("home", -125);
                 if (null != var2) {
-                  he.field_Ub = BlackFadeScreen.a(var2, true);
+                  LobbyPlayerRow.field_Ub = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("away", -80);
                 if (var2 != null) {
@@ -2258,7 +2258,7 @@ final class ad {
                 }
                 var2 = ib.a("left_management_caps", -111);
                 if (var2 != null) {
-                  he.field_Bb = BlackFadeScreen.a(var2, true);
+                  LobbyPlayerRow.field_Bb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("left_records_caps", -117);
                 if (var2 != null) {
@@ -2338,15 +2338,15 @@ final class ad {
                 }
                 var2 = ib.a("surface,0", -87);
                 if (var2 != null) {
-                  ej.field_zb[0] = BlackFadeScreen.a(var2, true);
+                  SelectableTrinketIcon.field_zb[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("surface,1", param1 - 99);
                 if (null != var2) {
-                  ej.field_zb[1] = BlackFadeScreen.a(var2, true);
+                  SelectableTrinketIcon.field_zb[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("surface,2", param1 ^ -118);
                 if (null != var2) {
-                  ej.field_zb[2] = BlackFadeScreen.a(var2, true);
+                  SelectableTrinketIcon.field_zb[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("kit_style", -121);
                 if (var2 != null) {
@@ -2406,7 +2406,7 @@ final class ad {
                 }
                 var2 = ib.a("click_to_select_a_duration", -109);
                 if (var2 != null) {
-                  kn.field_H = BlackFadeScreen.a(var2, true);
+                  TrinketPickerDialog.field_H = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("duration_selected", -90);
                 if (null != var2) {
@@ -2418,7 +2418,7 @@ final class ad {
                 }
                 var2 = ib.a("reserve_at_max", -122);
                 if (null != var2) {
-                  vf.field_H = BlackFadeScreen.a(var2, true);
+                  BuyPitchDialog.field_H = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("reserve_at_min", -82);
                 if (var2 != null) {
@@ -2478,7 +2478,7 @@ final class ad {
                 }
                 var2 = ib.a("gamemodes", -86);
                 if (var2 != null) {
-                  np.field_Gb = BlackFadeScreen.a(var2, true);
+                  ScrollPane.field_Gb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("league_points_colon", -108);
                 if (null != var2) {
@@ -2522,11 +2522,11 @@ final class ad {
                 }
                 var2 = ib.a("leaving_you_with_X_credits", -127);
                 if (null != var2) {
-                  hg.field_F = BlackFadeScreen.a(var2, true);
+                  PromotionDialog.field_F = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("bid", -127);
                 if (null != var2) {
-                  he.field_Eb = BlackFadeScreen.a(var2, true);
+                  LobbyPlayerRow.field_Eb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("buyout", -83);
                 if (null != var2) {
@@ -3148,11 +3148,11 @@ final class ad {
                 }
                 var2 = ib.a("class_colon_space", -106);
                 if (var2 != null) {
-                  hg.field_H = BlackFadeScreen.a(var2, true);
+                  PromotionDialog.field_H = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("player_cant_levelup_auction", -126);
                 if (var2 != null) {
-                  nq.field_H = BlackFadeScreen.a(var2, true);
+                  TournamentChampionDialog.field_H = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("player_cant_levelup", -93);
                 if (var2 != null) {
@@ -3164,7 +3164,7 @@ final class ad {
                 }
                 var2 = ib.a("player_not_inauction", -110);
                 if (null != var2) {
-                  na.field_Eb = BlackFadeScreen.a(var2, true);
+                  VerticalScrollbar.field_Eb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("you_are_winning", -103);
                 if (var2 != null) {
@@ -3184,7 +3184,7 @@ final class ad {
                 }
                 var2 = ib.a("click_player_to_view", -106);
                 if (null != var2) {
-                  gu.field_Db = BlackFadeScreen.a(var2, true);
+                  ContextMenu.field_Db = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("none", param1 - 88);
                 if (null != var2) {
@@ -3228,7 +3228,7 @@ final class ad {
                 }
                 var2 = ib.a("menu_online_leagues", param1 ^ -97);
                 if (null != var2) {
-                  tk.field_Bb = BlackFadeScreen.a(var2, true);
+                  ScrollContainer.field_Bb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("search_for_user", param1 - 125);
                 if (null != var2) {
@@ -3380,7 +3380,7 @@ final class ad {
                 }
                 var2 = ib.a("click_to_decrease_reserve", -109);
                 if (null != var2) {
-                  np.field_Ib = BlackFadeScreen.a(var2, true);
+                  ScrollPane.field_Ib = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("click_to_increase_buyout", param1 - 89);
                 if (null != var2) {
@@ -3500,11 +3500,11 @@ final class ad {
                 }
                 var2 = ib.a("dialog_hidden_ach", param1 ^ -109);
                 if (var2 != null) {
-                  vu.field_Gb = BlackFadeScreen.a(var2, true);
+                  ContextMenuItem.field_Gb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("waiting_for_gamestate", param1 ^ -85);
                 if (null != var2) {
-                  bm.field_K = BlackFadeScreen.a(var2, true);
+                  AuctionListingDialog.field_K = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("keyname_ctrl", -126);
                 if (var2 != null) {
@@ -3544,11 +3544,11 @@ final class ad {
                 }
                 var2 = ib.a("instructions_gameplay6,0", -121);
                 if (null != var2) {
-                  qq.field_L[0] = BlackFadeScreen.a(var2, true);
+                  LoginRequiredDialog.field_L[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay6,1", -83);
                 if (var2 != null) {
-                  qq.field_L[1] = BlackFadeScreen.a(var2, true);
+                  LoginRequiredDialog.field_L[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay7,0,0", -89);
                 if (var2 != null) {
@@ -3834,7 +3834,7 @@ final class ad {
                 }
                 var2 = ib.a("trap_mouse_disabled", -121);
                 if (null != var2) {
-                  aw.field_K = BlackFadeScreen.a(var2, true);
+                  TutorialChoiceDialog.field_K = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("mouseover_lockmouse", -108);
                 if (null != var2) {
@@ -4126,11 +4126,11 @@ final class ad {
                 }
                 var2 = ib.a("goals_text", -101);
                 if (var2 != null) {
-                  qb.field_Vb = BlackFadeScreen.a(var2, true);
+                  GameSetupPanel.field_Vb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("scrollup_text", -93);
                 if (var2 != null) {
-                  gu.field_Ib = BlackFadeScreen.a(var2, true);
+                  ContextMenu.field_Ib = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("scrolldown_text", -113);
                 if (null != var2) {
@@ -4162,7 +4162,7 @@ final class ad {
                 }
                 var2 = ib.a("slide_text", -93);
                 if (var2 != null) {
-                  dn.field_Ab = BlackFadeScreen.a(var2, true);
+                  TrinketIcon.field_Ab = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("header_text", param1 ^ -102);
                 if (null != var2) {
@@ -4174,7 +4174,7 @@ final class ad {
                 }
                 var2 = ib.a("nokick_text", -125);
                 if (var2 != null) {
-                  rb.field_Ib = BlackFadeScreen.a(var2, true);
+                  TextPromptDialog.field_Ib = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("name_owngoal_text", -115);
                 if (null != var2) {
@@ -4230,7 +4230,7 @@ final class ad {
                 }
                 var2 = ib.a("stage_inthefinal", -118);
                 if (var2 != null) {
-                  at.field_Bb = BlackFadeScreen.a(var2, true);
+                  TrinketTile.field_Bb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("stage_inthesemifinal", param1 - 110);
                 if (null != var2) {
@@ -4254,7 +4254,7 @@ final class ad {
                 }
                 var2 = ib.a("stage_tothequarterfinal", -125);
                 if (var2 != null) {
-                  bb.field_Db = BlackFadeScreen.a(var2, true);
+                  CascadingMenu.field_Db = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("stage_tothequalifying", -116);
                 if (null != var2) {
@@ -4362,7 +4362,7 @@ final class ad {
                 }
                 var2 = ib.a("tournament_goal_closinggap", -94);
                 if (null != var2) {
-                  i.field_w = BlackFadeScreen.a(var2, true);
+                  MessageDialog.field_w = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("tournament_goal_intothelead", param1 ^ -112);
                 if (null != var2) {
@@ -4414,7 +4414,7 @@ final class ad {
                 }
                 var2 = ib.a("tournament_draw_passes2", param1 - 118);
                 if (null != var2) {
-                  np.field_yb = BlackFadeScreen.a(var2, true);
+                  ScrollPane.field_yb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("tournament_draw_equal", -103);
                 if (null != var2) {
@@ -4490,7 +4490,7 @@ final class ad {
                 }
                 var2 = ib.a("instructions_gamemode5", -89);
                 if (var2 != null) {
-                  jb.field_h = BlackFadeScreen.a(var2, true);
+                  PopupDialog.field_h = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemodes6,0,0", -94);
                 if (null != var2) {
@@ -4518,7 +4518,7 @@ final class ad {
                 }
                 var2 = ib.a("achievement_description", -103);
                 if (null != var2) {
-                  rt.field_K = BlackFadeScreen.a(var2, true);
+                  StatChoiceDialog.field_K = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("mouseover_clicktospectate", -125);
                 if (var2 != null) {
@@ -4561,7 +4561,7 @@ final class ad {
         decompiledBody.run();
     }
 
-    final static void a(bb param0, byte param1) {
+    final static void a(CascadingMenu param0, byte param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

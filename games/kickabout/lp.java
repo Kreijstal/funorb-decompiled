@@ -3,7 +3,7 @@
  */
 final class lp {
     final static void a(java.awt.Canvas param0, byte param1) {
-        ej.a((java.awt.Component) ((Object) param0), -125);
+        SelectableTrinketIcon.a((java.awt.Component) ((Object) param0), -125);
         if (param1 != -64) {
           return;
         }

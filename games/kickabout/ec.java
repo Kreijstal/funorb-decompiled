@@ -60,7 +60,7 @@ final class ec {
             boolean decompiledFrameRemainder0 = true;
             if (~param1.field_c == ~fu.field_b[var3].field_c) {
               var4 = fu.field_b[var3].b(80);
-              if (at.field_Hb < AlphaContainer.field_C[var4]) {
+              if (TrinketTile.field_Hb < AlphaContainer.field_C[var4]) {
                 AlphaContainer.field_C[var4] = AlphaContainer.field_C[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

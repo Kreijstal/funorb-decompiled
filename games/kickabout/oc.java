@@ -24,7 +24,7 @@ final class oc {
         int var7 = Kickabout.field_G;
         int var1 = MouseInputHandler.field_c[0] * PasswordValidator.field_j[0];
         if (param0 == 75) {
-          var16 = pq.field_O[0];
+          var16 = SquadPickerDialog.field_O[0];
           if (RankingsScreen.field_B[0]) {
             var17 = RowRangeRequest.field_e[0];
             var13 = new int[var1];
@@ -41,7 +41,7 @@ final class oc {
             }
             var3 = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var9);
           }
-          tk.h((byte) -111);
+          ScrollContainer.h((byte) -111);
           return (Sprite) (var3);
         }
         return (Sprite) null;
@@ -52,12 +52,12 @@ final class oc {
         pg.field_a = null;
         cg.field_E = null;
         if (param0 < -10) {
-          dn.field_Eb = null;
+          TrinketIcon.field_Eb = null;
           pn.field_D = null;
           return;
         }
         oc.c((byte) -42);
-        dn.field_Eb = null;
+        TrinketIcon.field_Eb = null;
         pn.field_D = null;
     }
 

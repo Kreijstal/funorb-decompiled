@@ -8,10 +8,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          return 2 <= tk.field_Ib ? true : false;
+          return 2 <= ScrollContainer.field_Ib ? true : false;
         }
         field_A = (String) null;
-        return 2 <= tk.field_Ib ? true : false;
+        return 2 <= ScrollContainer.field_Ib ? true : false;
     }
 
     final void drawScreen(int param0, boolean param1) {
@@ -49,18 +49,18 @@ final class AchievementsScreen extends ButtonMenuScreen {
         int var14Lifetime5;
         var16 = Kickabout.field_G;
         super.drawScreen(param0, param1);
-        SoftwareRasterizer.a(vu.field_Ib.field_F, vu.field_Ib.field_T, vu.field_Ib.field_q, vu.field_Ib.field_mb, 8, 0, 96);
+        SoftwareRasterizer.a(ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_q, ContextMenuItem.field_Ib.field_mb, 8, 0, 96);
         SoftwareRasterizer.a(-4 + bq.field_d.field_F, -4 + bq.field_d.field_T, 2 + bq.field_d.field_q, 4 + (bq.field_d.field_mb << 1), 8, 0, 128);
         bq.field_d.a(46, false);
         ModalPanel.field_D.a(97, false);
-        vu.field_Ib.a(param0 + 84, false);
-        AuctionListing.a(vu.field_Ib.field_F + vu.field_Ib.field_q, param0 - 22909, vu.field_Ib.field_F, vu.field_Ib.field_mb + vu.field_Ib.field_T, vu.field_Ib.field_T);
-        var3 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.g(24009));
+        ContextMenuItem.field_Ib.a(param0 + 84, false);
+        AuctionListing.a(ContextMenuItem.field_Ib.field_F + ContextMenuItem.field_Ib.field_q, param0 - 22909, ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_mb + ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_T);
+        var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
         while (var3 != null) {
-          if (var3 instanceof ej) {
-            ((ej) (var3)).c(true);
+          if (var3 instanceof SelectableTrinketIcon) {
+            ((SelectableTrinketIcon) (var3)).c(true);
           }
-          var3 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.c(33));
+          var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.c(33));
         }
         TeamManagementScreen.e(117);
         var18 = IsSixCommand.field_C;
@@ -84,7 +84,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         SoftwareRasterizer.a(this.slideOffsetX + 135, 280, 244, 145, 8, 0, 148);
         if (-1 == var5) {
           if (!PlayArea.a(100)) {
-            IsSixCommand.field_C.a(rt.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.a(StatChoiceDialog.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
           } else {
             IsSixCommand.field_C.a(sh.field_b, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
           }
@@ -210,8 +210,8 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var3.field_t.d();
         }
         bq.field_d.field_lb = false;
-        vu.field_Ib = new tk("Cabinet", GameplayHelpScreen.j((byte) 15), ConsolePanel.field_q, it.field_m);
-        vu.field_Ib.a(16, 100, 4, (byte) -114, 200, 300, 70);
+        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.j((byte) 15), ConsolePanel.field_q, it.field_m);
+        ContextMenuItem.field_Ib.a(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 == -38) {
           ResourceArchive.field_g = true;
           return;
@@ -235,24 +235,24 @@ final class AchievementsScreen extends ButtonMenuScreen {
         bq.field_d.a(true, 32, 310 + this.slideOffsetX, 144, 32);
         int var3 = 41 % ((param0 - 38) / 60);
         ModalPanel.field_D.a(true, 32, this.slideOffsetX + 310, 176, 32);
-        vu.field_Ib.a(true, 300, 45 + this.slideOffsetX, 70, 200);
+        ContextMenuItem.field_Ib.a(true, 300, 45 + this.slideOffsetX, 70, 200);
         if (0 < this.field_B) {
           this.field_B = this.field_B - 1;
-          var4 = vu.field_Ib.field_Db.field_J;
-          vu.field_Ib.b(0, param1);
+          var4 = ContextMenuItem.field_Ib.field_Db.field_J;
+          ContextMenuItem.field_Ib.b(0, param1);
           bq.field_d.b(0, param1);
           ModalPanel.field_D.b(0, param1);
           RenderedBall.field_C = -1;
-          var5 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.g(24009));
+          var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
           while (var5 != null) {
-            if (var5 instanceof ej) {
-              ((ej) (var5)).a(param1, -60);
+            if (var5 instanceof SelectableTrinketIcon) {
+              ((SelectableTrinketIcon) (var5)).a(param1, -60);
             }
-            var5 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.c(33));
+            var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.c(33));
           }
           this.handleScrollButtons(-1);
-          if (vu.field_Ib.field_Db.field_J <= var4) {
-            if (var4 <= vu.field_Ib.field_Db.field_J) {
+          if (ContextMenuItem.field_Ib.field_Db.field_J <= var4) {
+            if (var4 <= ContextMenuItem.field_Ib.field_Db.field_J) {
               return;
             }
             if (this.field_B == 0) {
@@ -263,7 +263,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             return;
           }
           if (this.field_B != 0) {
-            if (var4 > vu.field_Ib.field_Db.field_J) {
+            if (var4 > ContextMenuItem.field_Ib.field_Db.field_J) {
               if (this.field_B != 0) {
                 return;
               }
@@ -274,7 +274,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           }
           ShopPlayerSlot.c(59, 66);
           this.field_B = 8;
-          if (var4 > vu.field_Ib.field_Db.field_J) {
+          if (var4 > ContextMenuItem.field_Ib.field_Db.field_J) {
             if (this.field_B != 0) {
               return;
             }
@@ -283,24 +283,24 @@ final class AchievementsScreen extends ButtonMenuScreen {
           }
           return;
         }
-        var4Lifetime1 = vu.field_Ib.field_Db.field_J;
-        vu.field_Ib.b(0, param1);
+        var4Lifetime1 = ContextMenuItem.field_Ib.field_Db.field_J;
+        ContextMenuItem.field_Ib.b(0, param1);
         bq.field_d.b(0, param1);
         ModalPanel.field_D.b(0, param1);
         RenderedBall.field_C = -1;
-        var5 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.g(24009));
+        var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
         while (var5 != null) {
-          if (var5 instanceof ej) {
-            ((ej) (var5)).a(param1, -60);
+          if (var5 instanceof SelectableTrinketIcon) {
+            ((SelectableTrinketIcon) (var5)).a(param1, -60);
           }
-          var5 = (UiLayoutNode) (vu.field_Ib.field_Db.field_jb.c(33));
+          var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.c(33));
         }
         this.handleScrollButtons(-1);
-        if (vu.field_Ib.field_Db.field_J > var4Lifetime1 &&
+        if (ContextMenuItem.field_Ib.field_Db.field_J > var4Lifetime1 &&
           this.field_B == 0) {
           ShopPlayerSlot.c(59, 66);
           this.field_B = 8;
-          if (var4Lifetime1 > vu.field_Ib.field_Db.field_J) {
+          if (var4Lifetime1 > ContextMenuItem.field_Ib.field_Db.field_J) {
             if (this.field_B != 0) {
               return;
             }
@@ -309,7 +309,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           }
           return;
         }
-        if (var4Lifetime1 > vu.field_Ib.field_Db.field_J) {
+        if (var4Lifetime1 > ContextMenuItem.field_Ib.field_Db.field_J) {
           if (this.field_B != 0) {
             return;
           }
@@ -333,69 +333,69 @@ final class AchievementsScreen extends ButtonMenuScreen {
         var2 = 0;
         var3 = 0;
         if (bq.field_d.field_qb == 1) {
-          if (0 == ha.field_I % 2) {
+          if (0 == WelcomeDialog.field_I % 2) {
             var2 = 1;
-            vu.field_Ib.field_Db.field_v = vu.field_Ib.field_Db.field_v + 16;
+            ContextMenuItem.field_Ib.field_Db.field_v = ContextMenuItem.field_Ib.field_Db.field_v + 16;
           }
           var3 = 1;
-          ha.field_I = ha.field_I + 1;
+          WelcomeDialog.field_I = WelcomeDialog.field_I + 1;
         }
         if (ModalPanel.field_D.field_qb == 1) {
           var3 = 1;
-          if (ha.field_I % 2 == 0) {
-            vu.field_Ib.field_Db.field_v = vu.field_Ib.field_Db.field_v - 16;
+          if (WelcomeDialog.field_I % 2 == 0) {
+            ContextMenuItem.field_Ib.field_Db.field_v = ContextMenuItem.field_Ib.field_Db.field_v - 16;
             var2 = 1;
           }
-          ha.field_I = ha.field_I + 1;
+          WelcomeDialog.field_I = WelcomeDialog.field_I + 1;
         }
         var4 = id.field_v;
         if (~var4 != param0) {
-          if (!vu.field_Ib.field_gb) {
+          if (!ContextMenuItem.field_Ib.field_gb) {
             if (var3 == 0) {
-              ha.field_I = 0;
+              WelcomeDialog.field_I = 0;
             }
             if (var2 == 0) {
               return;
             }
-            var5 = vu.field_Ib.field_Db.field_J;
-            var6 = vu.field_Ib.field_Db.field_v;
+            var5 = ContextMenuItem.field_Ib.field_Db.field_J;
+            var6 = ContextMenuItem.field_Ib.field_Db.field_v;
             if (-(var5 + var6) >= 0) {
               bq.field_d.field_lb = true;
             } else {
               bq.field_d.field_lb = false;
-              vu.field_Ib.field_Db.field_v = -var5;
+              ContextMenuItem.field_Ib.field_Db.field_v = -var5;
             }
-            var7 = vu.field_Ib.field_Db.field_mb;
-            if (-(var6 + var5) <= vu.field_Ib.field_Db.field_L + (var7 - vu.field_Ib.field_Gb.field_mb)) {
+            var7 = ContextMenuItem.field_Ib.field_Db.field_mb;
+            if (-(var6 + var5) <= ContextMenuItem.field_Ib.field_Db.field_L + (var7 - ContextMenuItem.field_Ib.field_Gb.field_mb)) {
               ModalPanel.field_D.field_lb = true;
             } else {
-              vu.field_Ib.field_Db.field_v = -var5 - (-vu.field_Ib.field_Gb.field_mb + (vu.field_Ib.field_Db.field_L + var7));
+              ContextMenuItem.field_Ib.field_Db.field_v = -var5 - (-ContextMenuItem.field_Ib.field_Gb.field_mb + (ContextMenuItem.field_Ib.field_Db.field_L + var7));
               ModalPanel.field_D.field_lb = false;
             }
             return;
           }
-          vu.field_Ib.field_Db.field_v = vu.field_Ib.field_Db.field_v - 16 * var4;
+          ContextMenuItem.field_Ib.field_Db.field_v = ContextMenuItem.field_Ib.field_Db.field_v - 16 * var4;
           var2 = 1;
         }
         if (var3 == 0) {
-          ha.field_I = 0;
+          WelcomeDialog.field_I = 0;
         }
         if (var2 == 0) {
           return;
         }
-        var5Lifetime1 = vu.field_Ib.field_Db.field_J;
-        var6Lifetime1 = vu.field_Ib.field_Db.field_v;
+        var5Lifetime1 = ContextMenuItem.field_Ib.field_Db.field_J;
+        var6Lifetime1 = ContextMenuItem.field_Ib.field_Db.field_v;
         if (-(var5Lifetime1 + var6Lifetime1) >= 0) {
           bq.field_d.field_lb = true;
         } else {
           bq.field_d.field_lb = false;
-          vu.field_Ib.field_Db.field_v = -var5Lifetime1;
+          ContextMenuItem.field_Ib.field_Db.field_v = -var5Lifetime1;
         }
-        var7Lifetime1 = vu.field_Ib.field_Db.field_mb;
-        if (-(var6Lifetime1 + var5Lifetime1) <= vu.field_Ib.field_Db.field_L + (var7Lifetime1 - vu.field_Ib.field_Gb.field_mb)) {
+        var7Lifetime1 = ContextMenuItem.field_Ib.field_Db.field_mb;
+        if (-(var6Lifetime1 + var5Lifetime1) <= ContextMenuItem.field_Ib.field_Db.field_L + (var7Lifetime1 - ContextMenuItem.field_Ib.field_Gb.field_mb)) {
           ModalPanel.field_D.field_lb = true;
         } else {
-          vu.field_Ib.field_Db.field_v = -var5Lifetime1 - (-vu.field_Ib.field_Gb.field_mb + (vu.field_Ib.field_Db.field_L + var7Lifetime1));
+          ContextMenuItem.field_Ib.field_Db.field_v = -var5Lifetime1 - (-ContextMenuItem.field_Ib.field_Gb.field_mb + (ContextMenuItem.field_Ib.field_Db.field_L + var7Lifetime1));
           ModalPanel.field_D.field_lb = false;
         }
     }
@@ -478,10 +478,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
           super.setTransitionProgress(param0, param1, -70, param3);
           bq.field_d.a(true, 32, 310 + this.slideOffsetX, 144, 32);
           ModalPanel.field_D.a(true, 32, 310 + this.slideOffsetX, 176, 32);
-          vu.field_Ib.a(true, 300, this.slideOffsetX + 45, 70, 200);
+          ContextMenuItem.field_Ib.a(true, 300, this.slideOffsetX + 45, 70, 200);
           bq.field_d.b(0, false);
           ModalPanel.field_D.b(0, false);
-          vu.field_Ib.b(0, false);
+          ContextMenuItem.field_Ib.b(0, false);
           if (param2 >= -28) {
             field_C = (UiLayoutNode) null;
           }

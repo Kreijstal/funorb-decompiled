@@ -12,7 +12,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           PacketBuffer var3 = (PacketBuffer) null;
           this.writeCredentials((PacketBuffer) null, -96);
         }
-        return qq.field_K;
+        return LoginRequiredDialog.field_K;
     }
 
     public static void c(int param0) {
@@ -279,7 +279,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        fn var5 = null;
+        Trinket var5 = null;
         int var6 = 0;
         int stackIn_11_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -301,7 +301,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
             var2_int = (452 * ((var3Lifetime1 - 15) * (var3Lifetime1 - 15)) >> 5) + 10;
             for (var4 = 0; param0.trinketIds.length > var4; var4++) {
               var5 = pa.field_g[param0.trinketIds[var4]];
-              var2_int = var2_int + fn.field_g[var5.field_k];
+              var2_int = var2_int + Trinket.field_g[var5.field_k];
               var2_int = var2_int + (var5.field_e >> 2);
             }
           }

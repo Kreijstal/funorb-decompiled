@@ -21,26 +21,26 @@ final class nc {
         RuntimeException var4_ref = null;
         var8 = Kickabout.field_G;
         try {
-          vu.field_Cb = param2;
+          ContextMenuItem.field_Cb = param2;
           vt.field_c = param0;
           JaggrabDownloader.field_c = param3;
           var9 = un.field_d;
           var4 = var9;
-          kn.field_G = new String[vt.field_c.playerCount];
+          TrinketPickerDialog.field_G = new String[vt.field_c.playerCount];
           var5 = 0;
           for (var6 = 0; var6 < vt.field_c.playerCount; var6++) {
-            kn.field_G[var6] = vt.field_c.field_S[var6].toLowerCase();
-            var7 = ((BitmapFont) ((Object) var9)).a(kn.field_G[var6]);
+            TrinketPickerDialog.field_G[var6] = vt.field_c.field_S[var6].toLowerCase();
+            var7 = ((BitmapFont) ((Object) var9)).a(TrinketPickerDialog.field_G[var6]);
             if (var7 > var5) {
               var5 = var7;
             }
           }
-          rb.field_yb = -8 + ((BitmapFont) ((Object) var4)).field_G + ((BitmapFont) ((Object) var4)).field_p;
+          TextPromptDialog.field_yb = -8 + ((BitmapFont) ((Object) var4)).field_G + ((BitmapFont) ((Object) var4)).field_p;
           et.field_c = 18 + var5 + 20;
           if (param1 != -85) {
             return;
           }
-          rn.field_c = rb.field_yb + 6;
+          rn.field_c = TextPromptDialog.field_yb + 6;
           if (100 > et.field_c) {
             et.field_c = 100;
           }
@@ -117,7 +117,7 @@ final class nc {
           if (BroadcastServerCommand.field_A != null) {
             or.field_d.writeCircumfixedString(BroadcastServerCommand.field_A, (byte) -127);
           }
-          om.a(ManagerAction.field_h, or.field_d, (byte) -116, gl.field_a, bb.field_Nb);
+          IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -116, gl.field_a, CascadingMenu.field_Nb);
           or.field_d.backpatchShortLength(or.field_d.field_n - var5_int, 62);
           c.a(-1, false);
           return;

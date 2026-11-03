@@ -193,7 +193,7 @@ final class vo extends ContentTransitionDialog {
           MouseInputHandler.field_c = new int[MenuButton.field_l];
           IsaacRandom.field_f = new int[MenuButton.field_l];
           fc.field_g = new int[MenuButton.field_l];
-          pq.field_O = new byte[MenuButton.field_l][];
+          SquadPickerDialog.field_O = new byte[MenuButton.field_l][];
           var17.field_n = -(MenuButton.field_l * 8) + param1.length - 7;
           kw.field_i = var17.a((byte) 81);
           AccountTermsPanel.field_J = var17.a((byte) 81);
@@ -226,7 +226,7 @@ final class vo extends ContentTransitionDialog {
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            pq.field_O[var4Lifetime5] = var20;
+            SquadPickerDialog.field_O[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;

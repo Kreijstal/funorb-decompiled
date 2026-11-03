@@ -54,7 +54,7 @@ final class TeamSelectionView extends MatchPhaseView {
             var5_ref_String = FadingSoundPlayer.field_e;
           } else {
             if (var4 == 0) {
-              var5_ref_String = he.field_Ub;
+              var5_ref_String = LobbyPlayerRow.field_Ub;
             } else {
               var5_ref_String = CommonGame.field_a;
             }
@@ -132,21 +132,21 @@ final class TeamSelectionView extends MatchPhaseView {
           if (DebugConsole.field_z.field_sb != 0 &&
             !PacketBuffer.field_l) {
             if (!WriteIntegersCommand.field_C) {
-              vg.field_Wb = true;
+              TextFieldNode.field_Wb = true;
             } else {
               hp.b(0);
             }
           }
-          if (vg.field_Wb) {
+          if (TextFieldNode.field_Wb) {
             m.a((byte) 49, 20, param1, param4, param3, param6, param4, param7, param0);
             ContentTransitionDialog.field_Y.b(0, param2);
             if (param2) {
               if (0 != gl.field_c.field_sb) {
-                vg.field_Wb = false;
+                TextFieldNode.field_Wb = false;
               }
               if (0 != MySquadScreen.field_N.field_sb) {
                 td.a(76);
-                vg.field_Wb = false;
+                TextFieldNode.field_Wb = false;
               }
             }
           }
@@ -218,7 +218,7 @@ final class TeamSelectionView extends MatchPhaseView {
             this.field_t.addChild((byte) -126, this.field_k[var4_int]);
           }
           if (this.isLocalParticipantActive((byte) 13)) {
-            this.field_l = new CheckboxLabelWidget(sl.field_Ab, un.field_d, 120);
+            this.field_l = new CheckboxLabelWidget(HoverTooltip.field_Ab, un.field_d, 120);
             this.field_l.field_s = 442;
             this.field_l.field_J = 322;
             this.field_t.addChild((byte) -121, (UiLayoutNode) (this.field_l));

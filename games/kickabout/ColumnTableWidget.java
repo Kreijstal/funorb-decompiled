@@ -9,7 +9,7 @@ class ColumnTableWidget extends UiLayoutNode {
     private im[] field_Fb;
     private int field_Eb;
     private UiLayoutNode field_Ab;
-    private tk field_Cb;
+    private ScrollContainer field_Cb;
     private UiLayoutNode[] field_Bb;
 
     final void a(boolean param0, boolean param1) {
@@ -280,7 +280,7 @@ class ColumnTableWidget extends UiLayoutNode {
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_35_0 = 0;
-        ji var2_ref_ji;
+        ScrollBar var2_ref_ji;
         int var2;
         int var4;
         im var5;
@@ -440,7 +440,7 @@ class ColumnTableWidget extends UiLayoutNode {
             this.addChild((byte) -106, var8);
           }
           this.field_Ab = new UiLayoutNode();
-          this.field_Cb = new tk(0L, this.field_Ab, new UiLayoutNode(), rr.field_b);
+          this.field_Cb = new ScrollContainer(0L, this.field_Ab, new UiLayoutNode(), rr.field_b);
           this.addChild((byte) -110, (UiLayoutNode) (this.field_Cb));
           this.field_q = 15 + (var5_int + 10);
           return;

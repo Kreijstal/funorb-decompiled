@@ -5,7 +5,7 @@ final class LineupView extends MatchPhaseView {
     private SquadSlotWidget[] field_j;
     private UiLayoutNode field_q;
     private PlayerStats[] field_k;
-    static np field_u;
+    static ScrollPane field_u;
     private int field_r;
     private int field_B;
     private SquadSlotWidget[] field_z;
@@ -266,7 +266,7 @@ final class LineupView extends MatchPhaseView {
           }
         }
         if (param0 >= -92) {
-          field_u = (np) null;
+          field_u = (ScrollPane) null;
         }
     }
 
@@ -320,7 +320,7 @@ final class LineupView extends MatchPhaseView {
           } else {
             stackIn_3_8 = 0;
           }
-          BytePlusOneCommand.a(stackIn_2_0, stackIn_2_1, (np) (stackIn_2_2), stackIn_2_3, stackIn_2_4, (int[]) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
+          BytePlusOneCommand.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), stackIn_2_3, stackIn_2_4, (int[]) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_c == 0 &&
             !CachedArchiveSource.c((byte) -121) &&
             null == uv.field_i &&
@@ -328,11 +328,11 @@ final class LineupView extends MatchPhaseView {
             if (!WriteIntegersCommand.field_C) {
               var5 = TextButton.field_v;
               var6 = ShopPlayerSlot.field_Cb;
-              var5.field_j.a(0, 14, var6);
+              var5.field_j.addItem(0, 14, var6);
             }
             var7 = TextButton.field_v;
             var8 = em.field_c;
-            var7.field_j.a(0, 20, var8);
+            var7.field_j.addItem(0, 20, var8);
           }
           if (param0.field_c == 1 &&
             !CachedArchiveSource.c((byte) -121) &&
@@ -341,11 +341,11 @@ final class LineupView extends MatchPhaseView {
             if (!WriteIntegersCommand.field_C) {
               var9 = TextButton.field_v;
               var10 = vo.field_db;
-              var9.field_j.a(param1 ^ -60, 14, var10);
+              var9.field_j.addItem(param1 ^ -60, 14, var10);
             }
             var11 = TextButton.field_v;
             var12 = st.field_f;
-            var11.field_j.a(0, 20, var12);
+            var11.field_j.addItem(0, 20, var12);
           }
           TextButton.field_v.d(1);
           TextButton.field_v.a(false, 0);
@@ -658,7 +658,7 @@ final class LineupView extends MatchPhaseView {
             this.field_A.a(true, 156, 45, 112, 225);
             this.field_q.addChild((byte) -104, this.field_A);
             this.field_q.b(0, true);
-            this.field_o = new CheckboxLabelWidget(sl.field_Ab, un.field_d, var12.field_q);
+            this.field_o = new CheckboxLabelWidget(HoverTooltip.field_Ab, un.field_d, var12.field_q);
             this.field_o.field_lb = false;
             this.field_o.field_J = 7 + var12.field_mb + var12.field_T;
             this.field_o.field_s = var12.field_F;

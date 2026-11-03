@@ -51,7 +51,7 @@ final class uf {
           if (param7 != 16971) {
             uf.a((byte) -8);
           }
-          na.h(0);
+          VerticalScrollbar.h(0);
           NotCommand.g((byte) -47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

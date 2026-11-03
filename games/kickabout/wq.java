@@ -71,7 +71,7 @@ final class wq {
           if (gk.field_e) {
             var1_int++;
           }
-          if (pq.field_K) {
+          if (SquadPickerDialog.field_K) {
             var1_int++;
           }
           if (wp.field_f) {
@@ -124,7 +124,7 @@ final class wq {
               var2 += 20;
             }
           }
-          if (pq.field_K) {
+          if (SquadPickerDialog.field_K) {
             var11 = "Synchronisation disabled";
             IsSixCommand.field_C.c(var11, 620, var2, 16777215, 0);
             var2 += 20;
@@ -160,8 +160,8 @@ final class wq {
             var2 += 20;
           }
           if (LineupAgent.field_g) {
-            var3Lifetime1 = pq.field_J / 5;
-            var4Lifetime1 = pq.field_J % 5;
+            var3Lifetime1 = SquadPickerDialog.field_J / 5;
+            var4Lifetime1 = SquadPickerDialog.field_J % 5;
             if (var4Lifetime1 != 0) {
               stackIn_70_0 = Integer.toString(var4Lifetime1);
             } else {

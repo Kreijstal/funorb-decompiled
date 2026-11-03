@@ -27,9 +27,9 @@ final class SplashScreen extends AppScreen {
         }
     }
 
-    final static void layoutPlayerRows(np param0, int param1, boolean param2, int param3, int param4) {
+    final static void layoutPlayerRows(ScrollPane param0, int param1, boolean param2, int param3, int param4) {
         int var27_int = 0;
-        np stackIn_44_0 = null;
+        ScrollPane stackIn_44_0 = null;
         int stackIn_44_1 = 0;
         boolean stackIn_45_2 = false;
         int stackIn_48_0 = 0;
@@ -52,7 +52,7 @@ final class SplashScreen extends AppScreen {
         IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
-        he var12 = null;
+        LobbyPlayerRow var12 = null;
         int var13 = 0;
         UiLayoutNode var14 = null;
         UiLayoutNode var15 = null;
@@ -137,23 +137,23 @@ final class SplashScreen extends AppScreen {
               }
             }
           }
-          stackIn_44_0 = (np) (param0);
+          stackIn_44_0 = (ScrollPane) (param0);
           stackIn_44_1 = param1 * (4 * sh.field_c + 8);
           stackIn_45_2 = (ig.field_f == param0);
-          stackIn_48_0 = (!((np) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2, param2, 2, false, (sh.field_c + 2) * 2)) ? 0 : 1;
+          stackIn_48_0 = (!((ScrollPane) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2, param2, 2, false, (sh.field_c + 2) * 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_48_0;
           var10 = param0.field_Ab.field_jb;
           if (param4 < 0) {
             SplashScreen.a(112);
           }
           var11 = null;
-          var12 = (he) (var10.g(24009));
+          var12 = (LobbyPlayerRow) (var10.g(24009));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_jb == null) {
               var12.field_Lb = new UiLayoutNode(0L, mp.field_f);
               var12.addChild((byte) -120, var12.field_Lb);
-              var12.field_Ob = new UiLayoutNode(0L, pw.field_J);
+              var12.field_Ob = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
               if (ui.field_t) {
                 var12.addChild((byte) -127, var12.field_Ob);
               }
@@ -250,7 +250,7 @@ final class SplashScreen extends AppScreen {
               }
               var25_int = 0;
               if (null != uv.field_i &&
-                np.a(38) &&
+                ScrollPane.a(38) &&
                 ~var12.field_Ab != ~dd.field_c) {
                 if (null != var12.field_Tb.field_E) {
                   var26 = var12.field_Tb.g((byte) 122) + eb.field_b * 2;
@@ -329,7 +329,7 @@ final class SplashScreen extends AppScreen {
             var11 = var12;
             if (var12.field_Q) {
               if (var12.h(-13356)) {
-                var12 = (he) (var10.c(33));
+                var12 = (LobbyPlayerRow) (var10.c(33));
                 continue;
               }
               var24Lifetime2 = null;
@@ -458,11 +458,11 @@ final class SplashScreen extends AppScreen {
                   }
                 }
                 if (param0 == ClientException.field_c &&
-                  np.a(47)) {
+                  ScrollPane.a(47)) {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_V, new String[]{(String) (var25)});
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + vg.field_Cb + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + TextFieldNode.field_Cb + (String) (var25);
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
@@ -472,14 +472,14 @@ final class SplashScreen extends AppScreen {
                   }
                 }
                 if (ClientException.field_c == param0 &&
-                  !np.a(111)) {
+                  !ScrollPane.a(111)) {
                   var27 = uv.field_i.field_ec;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, qq.field_F, new String[]{var27});
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, LoginRequiredDialog.field_F, new String[]{var27});
                 }
                 sn.field_e = (String) (var24Lifetime2);
               }
             }
-            var12 = (he) (var10.c(33));
+            var12 = (LobbyPlayerRow) (var10.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

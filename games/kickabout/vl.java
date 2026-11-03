@@ -197,7 +197,7 @@ final class vl {
         if (param0) {
           vl.a(12, -70, true, -119);
         }
-        stackIn_6_0 = (AuctionItem.field_e == -1) && (nq.g(0) < 10);
+        stackIn_6_0 = (AuctionItem.field_e == -1) && (TournamentChampionDialog.g(0) < 10);
         return stackIn_6_0;
     }
 

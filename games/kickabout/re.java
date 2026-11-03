@@ -68,8 +68,8 @@ final class re implements WidgetPainter {
             var6 = eq.field_c[var3];
             if (ck.field_a == 2 &&
               1 == var2) {
-              if (pn.field_D.length <= dn.field_Eb.length) {
-                stackIn_18_0 = dn.field_Eb.length;
+              if (pn.field_D.length <= TrinketIcon.field_Eb.length) {
+                stackIn_18_0 = TrinketIcon.field_Eb.length;
               } else {
                 stackIn_18_0 = pn.field_D.length;
               }
@@ -82,8 +82,8 @@ final class re implements WidgetPainter {
               var8 = stackIn_21_0;
               if (6 <= var3 &&
                 var3 < var7 + 6) {
-                if (-6 + var3 - (-dn.field_Eb.length + var7) >= 0) {
-                  stackIn_26_0 = dn.field_Eb[-var7 - 6 + (var3 + dn.field_Eb.length)];
+                if (-6 + var3 - (-TrinketIcon.field_Eb.length + var7) >= 0) {
+                  stackIn_26_0 = TrinketIcon.field_Eb[-var7 - 6 + (var3 + TrinketIcon.field_Eb.length)];
                 } else {
                   stackIn_26_0 = "";
                 }
@@ -214,7 +214,7 @@ final class re implements WidgetPainter {
             return;
           }
           vd.a(0, 4);
-          if (!MyKitScreen.ensureSoundLoaded(120, kn.a(ih.field_c, 121, vi.field_n, RankingsScreen.field_C))) {
+          if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(ih.field_c, 121, vi.field_n, RankingsScreen.field_C))) {
             DelayedServerPacket.a(4, 9863, 0);
             return;
           }
@@ -304,8 +304,8 @@ final class re implements WidgetPainter {
             return;
           }
           if (param1 >= 0) {
-            if (param1 > pu.field_Db[param3]) {
-              param1 = pu.field_Db[param3];
+            if (param1 > TrinketSlot.field_Db[param3]) {
+              param1 = TrinketSlot.field_Db[param3];
             }
           } else {
             param1 = 0;
@@ -313,8 +313,8 @@ final class re implements WidgetPainter {
           if (param2 < 0) {
             param1 = 0;
           } else {
-            if (pu.field_Db[param3] < param2) {
-              param2 = pu.field_Db[param3];
+            if (TrinketSlot.field_Db[param3] < param2) {
+              param2 = TrinketSlot.field_Db[param3];
             }
           }
           if (param2 <= param1) {

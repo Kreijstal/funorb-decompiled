@@ -54,16 +54,16 @@ final class bl {
         if (param0 < 63) {
           this.field_e = (kp) null;
         }
-        pq.field_Q.b(var2, var3, al.a(false, (byte) 14));
+        SquadPickerDialog.field_Q.b(var2, var3, al.a(false, (byte) 14));
         if (this.field_e.field_f == 4) {
           PacketBuffer.a(-45, DraggableWidget.field_K);
           SoftwareRasterizer.b();
           ea.a(this.field_e.field_h, 0, false, DraggableWidget.field_K.field_q, 0, -52);
           TeamManagementScreen.e(119);
-          DraggableWidget.field_K.b((-50 + PitchOptionTile.field_yb >> 1) + var2, (-20 + om.field_Bb >> 1) + var3, 96);
+          DraggableWidget.field_K.b((-50 + PitchOptionTile.field_yb >> 1) + var2, (-20 + IconLabel.field_Bb >> 1) + var3, 96);
         }
         if (this.field_e.field_f == 4) {
-          AuctionListing.a(var2 + 1 + PitchOptionTile.field_yb, -22914, 1 + var2, om.field_Bb + var3 + 1, var3 + 1);
+          AuctionListing.a(var2 + 1 + PitchOptionTile.field_yb, -22914, 1 + var2, IconLabel.field_Bb + var3 + 1, var3 + 1);
           var4 = 0;
           var5 = 0;
           for (var6 = 0; var6 < 2; var6++) {
@@ -88,12 +88,12 @@ final class bl {
           TeamManagementScreen.e(119);
         } else {
           if (0 > this.field_e.field_f) {
-            un.field_d.a(w.field_d, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, om.field_Bb, 16777215, -1, 1, 1, 0);
+            un.field_d.a(w.field_d, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
           } else {
             if (this.field_e.field_f < 4) {
-              un.field_d.a(mc.field_i, this.field_l + 2, this.field_b, PitchOptionTile.field_yb, om.field_Bb, 16777215, -1, 1, 1, 0);
+              un.field_d.a(mc.field_i, this.field_l + 2, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
             } else {
-              un.field_d.a(ci.field_e, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, om.field_Bb, 16777215, -1, 1, 1, 0);
+              un.field_d.a(ci.field_e, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
             }
           }
         }
@@ -203,7 +203,7 @@ final class bl {
           this.field_a = PitchOptionTile.field_yb;
           this.field_g = param1;
           this.field_b = param3;
-          this.field_j = 32 + om.field_Bb;
+          this.field_j = 32 + IconLabel.field_Bb;
           this.field_k = param4;
           k.field_j = new Sprite(this.field_a, this.field_j - 32);
           DraggableWidget.field_K = new Sprite(50, 20);

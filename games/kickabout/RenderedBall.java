@@ -99,7 +99,7 @@ final class RenderedBall extends BallAgent {
               var5Lifetime1 = 41;
               var6 = GameLoopApplet.a(var3_intLifetime1, var4, -23146);
               var7 = var6 >> 10;
-              he.a(128, false, 240, we.field_f + var7, var5Lifetime1);
+              LobbyPlayerRow.a(128, false, 240, we.field_f + var7, var5Lifetime1);
             }
           } else {
             if (ih.field_c != 0) {
@@ -122,7 +122,7 @@ final class RenderedBall extends BallAgent {
             if (ih.field_c == 2) {
               var6 -= 40;
             }
-            he.a(128, false, 240, var6 + DemoIntegersCommand.field_E, var5Lifetime1);
+            LobbyPlayerRow.a(128, false, 240, var6 + DemoIntegersCommand.field_E, var5Lifetime1);
           }
           if (this.highFriction > 0) {
             var5Lifetime2 = this.horizontalSpeedSquared(92) >> 16;
@@ -353,7 +353,7 @@ final class RenderedBall extends BallAgent {
           for (var4 = 0; var4 < 8; var4++) {
             var6[var4] = hf.a(var6[var4], var7[var4]);
           }
-          var8 = ha.field_F;
+          var8 = WelcomeDialog.field_F;
           var9 = EmailAvailabilityValidator.field_q.field_e;
           var10 = 0;
           var4Lifetime1 = var10;

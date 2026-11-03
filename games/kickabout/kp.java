@@ -49,15 +49,15 @@ final class kp {
 
     final static void a(int param0) {
         RuntimeException decompiledCaughtException = null;
-        he var1 = null;
-        qb var1_ref = null;
+        LobbyPlayerRow var1 = null;
+        GameSetupPanel var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
         int var3 = 0;
-        he var1Lifetime1;
+        LobbyPlayerRow var1Lifetime1;
         var3 = Kickabout.field_G;
         try {
-          var1 = (he) (rp.field_B.g(24009));
+          var1 = (LobbyPlayerRow) (rp.field_B.g(24009));
           while (var1 != null) {
             if (var1.field_Jb > 0) {
               var1.field_Jb = var1.field_Jb - 1;
@@ -68,14 +68,14 @@ final class kp {
                 }
               }
             }
-            var1 = (he) (rp.field_B.c(33));
+            var1 = (LobbyPlayerRow) (rp.field_B.c(33));
           }
-          var1_ref = (qb) (SquadSlotWidget.field_yb.g(24009));
+          var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.g(24009));
           while (var1_ref != null) {
             if (0 < var1_ref.field_Db) {
               var1_ref.field_Db = var1_ref.field_Db - 1;
               if (var1_ref.field_Db != 0) {
-                var1_ref = (qb) (SquadSlotWidget.field_yb.c(33));
+                var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.c(33));
                 continue;
               }
               var1_ref.field_Ab = 0;
@@ -83,9 +83,9 @@ final class kp {
                 var1_ref.c((byte) -109);
               }
             }
-            var1_ref = (qb) (SquadSlotWidget.field_yb.c(33));
+            var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.c(33));
           }
-          var1Lifetime1 = (he) (lw.field_d.g(24009));
+          var1Lifetime1 = (LobbyPlayerRow) (lw.field_d.g(24009));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_Jb > 0) {
               var1Lifetime1.field_Jb = var1Lifetime1.field_Jb - 1;
@@ -96,7 +96,7 @@ final class kp {
                 }
               }
             }
-            var1Lifetime1 = (he) (lw.field_d.c(33));
+            var1Lifetime1 = (LobbyPlayerRow) (lw.field_d.c(33));
           }
           var2 = -47 / ((39 - param0) / 42);
           return;

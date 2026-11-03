@@ -71,10 +71,10 @@ final class te {
         return var5;
     }
 
-    final static bb a(int param0, UiLayoutNode param1, int[] param2, UiLayoutNode param3, UiLayoutNode param4) {
+    final static CascadingMenu a(int param0, UiLayoutNode param1, int[] param2, UiLayoutNode param3, UiLayoutNode param4) {
         int var10_int = 0;
         Object stackIn_7_0 = null;
-        bb stackIn_11_0 = null;
+        CascadingMenu stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -89,7 +89,7 @@ final class te {
         RuntimeException var5 = null;
         String[] var6 = null;
         char[] var7 = null;
-        bb[] var8 = null;
+        CascadingMenu[] var8 = null;
         int var9 = 0;
         Exception var10 = null;
         QuickChatPhraseDefinition var11 = null;
@@ -104,7 +104,7 @@ final class te {
           var15 = new char[var5_int];
           var14 = var15;
           var7 = var14;
-          var8 = new bb[var5_int];
+          var8 = new CascadingMenu[var5_int];
           var9 = 49;
           try {
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
@@ -118,13 +118,13 @@ final class te {
             decompiledCaughtException = decompiledCaughtParameter0;
             var10 = (Exception) (Object) decompiledCaughtException;
             stackIn_7_0 = null;
-            return (bb) (stackIn_7_0);
+            return (CascadingMenu) (stackIn_7_0);
           }
           if (param0 >= -91) {
             var13 = (UiLayoutNode) null;
             te.a(-59, (UiLayoutNode) null, (int[]) null, (UiLayoutNode) null, (UiLayoutNode) null);
           }
-          stackIn_11_0 = new bb(0L, param1, param4, param3, var8, param2, var6, var15);
+          stackIn_11_0 = new CascadingMenu(0L, param1, param4, param3, var8, param2, var6, var15);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

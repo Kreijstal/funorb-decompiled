@@ -88,13 +88,13 @@ abstract class MatchAgent {
         int var4_int = 0;
         int var5 = Kickabout.field_G;
         int var1 = MouseInputHandler.field_c[0] * PasswordValidator.field_j[0];
-        byte[] var2 = pq.field_O[0];
+        byte[] var2 = SquadPickerDialog.field_O[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = lt.field_a[qj.b(255, (int) var2[var4_int])];
         }
         Sprite var4 = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[param0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var3);
-        tk.h((byte) -81);
+        ScrollContainer.h((byte) -81);
         return var4;
     }
 
@@ -369,7 +369,7 @@ abstract class MatchAgent {
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
             if (ws.a((char) var7, (byte) 121)) {
-              var8 = vf.a((byte) -67, (char) var7);
+              var8 = BuyPitchDialog.a((byte) -67, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

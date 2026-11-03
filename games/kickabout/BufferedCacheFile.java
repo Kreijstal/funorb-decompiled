@@ -35,14 +35,14 @@ final class BufferedCacheFile {
         synchronized (var1) {
           FootballerAgent.field_p = RandomAccessCacheFile.field_d;
           TextHotspotWidget.field_M = TextHotspotWidget.field_M + 1;
-          BytePlusOneCommand.field_A = vf.field_G;
+          BytePlusOneCommand.field_A = BuyPitchDialog.field_G;
           n.field_m = gf.field_b;
           BytePlusOneCommand.field_C = rp.field_A;
           rp.field_A = false;
-          WidgetContainer.field_A = vu.field_Fb;
+          WidgetContainer.field_A = ContextMenuItem.field_Fb;
           sm.field_q = AuctionItem.field_w;
           ReceivedAuctionItem.field_y = UiWidget.field_l;
-          vu.field_Fb = 0;
+          ContextMenuItem.field_Fb = 0;
         }
         if (param0 != 58) {
           field_d = (String) null;
@@ -59,7 +59,7 @@ final class BufferedCacheFile {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -11 / ((67 - param0) / 50);
-          if (!vg.field_Wb) {
+          if (!TextFieldNode.field_Wb) {
             return false;
           }
           if (NodeHashTableIterator.field_b == 2 &&
@@ -158,12 +158,12 @@ final class BufferedCacheFile {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         try {
-          BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, kr.field_b, kn.field_F, uk.field_b, nj.field_d, param0, r.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, ip.field_c);
+          BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, kr.field_b, TrinketPickerDialog.field_F, uk.field_b, nj.field_d, param0, r.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, ip.field_c);
           il.field_d = ModalStack.a(param1, -127, "lobby", "chatfilter");
           IntrusiveDeque.field_h[2] = pa.field_j;
           IntrusiveDeque.field_h[param3] = ClubState.field_Q;
           IntrusiveDeque.field_h[1] = ConsoleExpression.field_n;
-          at.a(ServerMessageScreen.field_E, param2, (byte) -32);
+          TrinketTile.a(ServerMessageScreen.field_E, param2, (byte) -32);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ew.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

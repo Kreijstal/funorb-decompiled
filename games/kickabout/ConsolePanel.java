@@ -3,13 +3,13 @@
  */
 abstract class ConsolePanel implements hc {
     private IntrusiveDeque field_m;
-    vg field_k;
+    TextFieldNode field_k;
     static UiLayoutNode field_q;
     BitmapFont field_d;
     private UiLayoutNode field_l;
     UiLayoutNode field_j;
     private int field_f;
-    np field_g;
+    ScrollPane field_g;
     String field_a;
     static IntrusiveDeque field_i;
     private String[] field_c;
@@ -502,7 +502,7 @@ abstract class ConsolePanel implements hc {
         UiLayoutNode var10 = null;
         UiLayoutNode var11 = null;
         UiLayoutNode var12 = null;
-        na var13 = null;
+        VerticalScrollbar var13 = null;
         UiLayoutNode var14 = null;
         UiLayoutNode var15 = null;
         this.field_a = "# ";
@@ -526,10 +526,10 @@ abstract class ConsolePanel implements hc {
           var12 = this.a(65793, 200, 2236962);
           this.field_l = new UiLayoutNode(0L, var5);
           this.field_l.a(true, f.field_d, 0, -200, 200);
-          var13 = new na(0L, var8, var8, var9, var10);
+          var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
           var14 = new UiLayoutNode();
           var14.field_jb = new IntrusiveDeque();
-          this.field_g = new np(0L, var14, var6, var13);
+          this.field_g = new ScrollPane(0L, var14, var6, var13);
           this.field_g.field_Ab.field_jb = new IntrusiveDeque();
           this.field_g.a(0, 94, -var3_int + 185, 5, 5, -10 + this.field_l.field_q, 15);
           this.field_l.addChild((byte) -118, (UiLayoutNode) (this.field_g));
@@ -538,7 +538,7 @@ abstract class ConsolePanel implements hc {
           var15.field_D = 5;
           var15.field_B = 2;
           var15.field_X = this.field_d;
-          this.field_k = new vg(0L, var7, var11, var15);
+          this.field_k = new TextFieldNode(0L, var7, var11, var15);
           this.field_k.a(-630, this.field_g.field_s, 5 + (this.field_g.field_J + this.field_g.field_mb), var3_int, this.field_g.field_q);
           this.field_k.a(param1, -17421);
           this.field_l.addChild((byte) -119, (UiLayoutNode) (this.field_k));

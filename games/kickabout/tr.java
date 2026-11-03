@@ -12,7 +12,7 @@ final class tr implements hc {
     static String[] field_f;
 
     final static void d(int param0) {
-        RasterStateSnapshot var1 = (RasterStateSnapshot) (tk.field_Ab.h(-125));
+        RasterStateSnapshot var1 = (RasterStateSnapshot) (ScrollContainer.field_Ab.h(-125));
         if (var1 == null) {
           var1 = new RasterStateSnapshot();
         }
@@ -292,7 +292,7 @@ final class tr implements hc {
             this.field_a = this.field_a - 1;
           }
           var3 = -(this.field_a * this.field_a) + 400;
-          var4 = var3 * (-np.field_Bb + 480) / 400 + np.field_Bb;
+          var4 = var3 * (-ScrollPane.field_Bb + 480) / 400 + ScrollPane.field_Bb;
           PlayerStats.a(var4, (byte) -124);
           this.field_h = this.field_h + 1;
           kp.a(-121);
@@ -309,7 +309,7 @@ final class tr implements hc {
           stackIn_21_0 = 0;
           stackIn_21_1 = -117;
           stackIn_21_2 = 15;
-          stackIn_22_3 = (nq.g(0) <= 50) ? false : true;
+          stackIn_22_3 = (TournamentChampionDialog.g(0) <= 50) ? false : true;
           stackIn_24_4 = 14;
           stackIn_24_5 = var5;
           stackIn_24_6 = id.field_v;
@@ -349,7 +349,7 @@ final class tr implements hc {
         if (param0 != 11516) {
           this.field_a = -5;
         }
-        if ((tk.field_Ib >= 2 || eq.field_d > 0) &&
+        if ((ScrollContainer.field_Ib >= 2 || eq.field_d > 0) &&
           GameplayHelpScreen.field_G[86]) {
           if (84 != param1) {
           } else {

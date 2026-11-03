@@ -77,8 +77,8 @@ final class gg extends UiLayoutNode {
             }
             var9++;
           }
-          pu.field_zb[0] = kk.field_B[param1] + kk.field_B[1] >> 1;
-          stackIn_17_0 = pu.field_zb;
+          TrinketSlot.field_zb[0] = kk.field_B[param1] + kk.field_B[1] >> 1;
+          stackIn_17_0 = TrinketSlot.field_zb;
           stackIn_17_1 = 1;
           if (param0 != 1) {
             stackIn_18_2 = 1324;
@@ -149,19 +149,19 @@ final class gg extends UiLayoutNode {
             } else {
               stackIn_10_0 = ka.field_d;
             }
-            gu.field_Jb = stackIn_10_0;
+            ContextMenu.field_Jb = stackIn_10_0;
             var4 = 0;
             var2_intLifetime1 = var4;
             while (var4 < ConsoleValue.field_c.length) {
-              gu.field_Jb = gu.field_Jb + ConsoleValue.field_c[var4];
+              ContextMenu.field_Jb = ContextMenu.field_Jb + ConsoleValue.field_c[var4];
               if (ConsoleValue.field_c.length - 1 > var4) {
-                gu.field_Jb = gu.field_Jb + "   ";
+                ContextMenu.field_Jb = ContextMenu.field_Jb + "   ";
               }
               var4++;
             }
             return;
           }
-          gu.field_Jb = om.field_zb;
+          ContextMenu.field_Jb = IconLabel.field_zb;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

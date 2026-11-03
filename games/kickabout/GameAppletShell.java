@@ -200,7 +200,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          pq.field_I = 4000L + nj.a(-58);
+          SquadPickerDialog.field_I = 4000L + nj.a(-58);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ah.stop()");
         }
@@ -462,7 +462,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (this == MatchScreen.field_p &&
             !hp.field_b) {
-            pq.field_I = 0L;
+            SquadPickerDialog.field_I = 0L;
             return;
           }
           return;
@@ -620,8 +620,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 SplashScreen.field_k = SumIntegersCommand.h(3);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (pq.field_I != 0L) {
-                    stackIn_99_0 = compareLongs(~nj.a(-51), ~pq.field_I);
+                  if (SquadPickerDialog.field_I != 0L) {
+                    stackIn_99_0 = compareLongs(~nj.a(-51), ~SquadPickerDialog.field_I);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_99_0 <= 0)) {
@@ -629,7 +629,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    SectorCacheStore.field_b = SplashScreen.field_k.a((byte) -113, no.field_H);
+                    SectorCacheStore.field_b = SplashScreen.field_k.a((byte) -113, LeagueWinnerDialog.field_H);
                     stackIn_99_0 = 0;
                   }
                   var3 = stackIn_99_0;
@@ -673,7 +673,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          pq.field_I = nj.a(-99);
+          SquadPickerDialog.field_I = nj.a(-99);
           aj.a(5000L, 1);
           DelegatingCanvas.field_a = null;
           this.shutdownShell(false, (byte) -113);

@@ -152,7 +152,7 @@ final class wk {
             var5.playerType = 0;
           }
           var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-126, td.field_a.length, var3);
-          var5.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, -1 + ce.field_G[var5.playerType].length, var3);
+          var5.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, -1 + BuyPlayerDialog.field_G[var5.playerType].length, var3);
           var5.experience = 0;
           if (param0 &&
             var4 != 3) {

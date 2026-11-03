@@ -106,7 +106,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_9_0;
           }
           if (!this.b(param0, (byte) -77)) {
-            return he.field_yb;
+            return LobbyPlayerRow.field_yb;
           }
           stackIn_13_0 = PitchOptionTile.field_Bb;
           return stackIn_13_0;
@@ -222,11 +222,11 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static he a(long param0, boolean param1) {
+    final static LobbyPlayerRow a(long param0, boolean param1) {
         if (param1) {
           field_j = (int[]) null;
         }
-        return (he) (pq.field_N.a(-3611, param0));
+        return (LobbyPlayerRow) (SquadPickerDialog.field_N.a(-3611, param0));
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, byte param4) {
@@ -283,7 +283,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_15_0;
           }
           if (this.b(param1, (byte) -67)) {
-            stackIn_18_0 = no.field_G;
+            stackIn_18_0 = LeagueWinnerDialog.field_G;
             return stackIn_18_0;
           }
           if (0 >= var6.length()) {

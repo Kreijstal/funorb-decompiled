@@ -85,8 +85,8 @@ final class tv {
         this.field_c = RegistrationRequestDialog.field_ob;
         this.field_j = FindingOpponentScreen.field_E;
         this.field_m = PasswordValidator.field_l;
-        this.field_d = i.field_z;
-        this.field_o = ie.field_F;
+        this.field_d = MessageDialog.field_z;
+        this.field_o = SellPlayerDialog.field_F;
         this.field_q = hr.field_f;
     }
 

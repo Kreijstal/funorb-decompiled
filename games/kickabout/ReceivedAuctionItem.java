@@ -119,7 +119,7 @@ final class ReceivedAuctionItem extends AuctionItem {
             var8 = (String) null;
             ReceivedAuctionItem.a((String) null, 94);
           }
-          if (sl.field_Eb) {
+          if (HoverTooltip.field_Eb) {
             return;
           }
           var9 = et.field_d.field_V;

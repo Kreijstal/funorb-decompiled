@@ -96,7 +96,7 @@ final class ca {
 
     final static void a(ReceivedAuctionItem param0, int param1) {
         try {
-          np.field_Jb.a(new hk(param0, 37), param1 ^ 252);
+          ScrollPane.field_Jb.a(new AuctionBidDialog(param0, 37), param1 ^ 252);
           if (param1 != 255) {
             ReceivedAuctionItem var3 = (ReceivedAuctionItem) null;
             ca.a((ReceivedAuctionItem) null, 5);

@@ -17,7 +17,7 @@ final class bt {
         var2 = Kickabout.field_G;
         if (sr.field_l != null) {
           if (sr.field_l.c(0)) {
-            gu.a(uv.field_i.h((byte) -77), (byte) -88, 11);
+            ContextMenu.a(uv.field_i.h((byte) -77), (byte) -88, 11);
           } else {
             GameLoopApplet.b(15848, 11, 0);
           }
@@ -26,7 +26,7 @@ final class bt {
             !um.field_e.b(-21660)) {
             GameLoopApplet.b(param0 + 15848, 11, 0);
           } else {
-            gu.a(uv.field_i.h((byte) 74), (byte) -114, 11);
+            ContextMenu.a(uv.field_i.h((byte) 74), (byte) -114, 11);
             QuickChatPhraseCache.field_d = true;
           }
         }
@@ -227,7 +227,7 @@ final class bt {
           if (var2Lifetime6 != 0 &&
             EmailAvailabilityValidator.field_k.action == 0 &&
             0 == et.field_d.field_V.possessorTeam) {
-            ej.b(200, -2, -100, 30);
+            SelectableTrinketIcon.b(200, -2, -100, 30);
           }
           var2Lifetime6 = var2Lifetime6 != 0 & tc.advanceToPoint(8, (byte) 86, 29360128, fc.field_c, 36438016) ? 1 : 0;
           stackIn_26_0 = var2Lifetime6;

@@ -65,7 +65,7 @@ final class ou extends UiWidget {
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -109);
           var10.p(-111);
-          sq.field_H = ds.a(var10, (byte) -4);
+          SaveChangesDialog.field_H = ds.a(var10, (byte) -4);
           sm.field_l = new int[var3][];
           ba.field_n = new kk[var3];
           for (var4 = 0; var4 < var3; var4++) {
@@ -161,7 +161,7 @@ final class ou extends UiWidget {
           ou.a(-7);
         }
         wq.field_g = false;
-        hk.field_G = false;
+        AuctionBidDialog.field_G = false;
         IndexedSpriteState.b(38, -1);
         mj.field_a = vj.field_a;
         wk.field_f = vj.field_a;
@@ -301,7 +301,7 @@ final class ou extends UiWidget {
         if (param1 != -1951459327) {
           return 80;
         }
-        return hg.g(100);
+        return PromotionDialog.g(100);
     }
 
     private ou(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

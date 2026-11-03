@@ -63,7 +63,7 @@ final class r {
           if (this == ClubState.field_c) {
             return true;
           }
-          if (this != bm.field_H) {
+          if (this != AuctionListingDialog.field_H) {
             return RegistrationRequestDialog.field_rb == this ? true : false;
           }
           return true;
@@ -71,7 +71,7 @@ final class r {
         if (this == ClubState.field_c) {
           return true;
         }
-        if (this == bm.field_H) {
+        if (this == AuctionListingDialog.field_H) {
           return true;
         }
         if (RegistrationRequestDialog.field_rb != this) {

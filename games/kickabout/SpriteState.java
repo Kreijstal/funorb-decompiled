@@ -67,7 +67,7 @@ abstract class SpriteState extends DualLinkNode {
         int var17_int = 0;
         IntrusiveDeque var17 = null;
         Object var18 = null;
-        he var18_ref = null;
+        LobbyPlayerRow var18_ref = null;
         int var18_int = 0;
         int var19 = 0;
         UiLayoutNode var21 = null;
@@ -103,40 +103,40 @@ abstract class SpriteState extends DualLinkNode {
             nv.field_F.field_mb = 0;
             var7 = nv.field_F;
             var7.field_q = 0;
-            if (!np.a(113)) {
+            if (!ScrollPane.a(113)) {
               var9_ref_String = uv.field_i.field_ec;
               ci.field_h.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{var9_ref_String}).toUpperCase();
               nv.field_F.a(true, AuctionItem.field_p.field_q, 0, AuctionItem.field_p.field_mb - 40, 40);
               nv.field_F.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, wa.field_c, new String[]{var9_ref_String});
               var8 = nv.field_F;
             } else {
-              ci.field_h.field_E = kf.field_zb.toUpperCase();
+              ci.field_h.field_E = TabStrip.field_zb.toUpperCase();
               var9 = (AuctionItem.field_p.field_q + 2) / 2;
               em.field_d.a(true, var9 - 2, 0, -40 + AuctionItem.field_p.field_mb, 40);
               if (uv.field_i.field_bc <= uv.field_i.field_gc) {
-                em.field_d.field_E = no.field_I.toUpperCase();
+                em.field_d.field_E = LeagueWinnerDialog.field_I.toUpperCase();
                 em.field_d.field_lb = false;
               } else {
                 em.field_d.field_E = po.field_b.toUpperCase();
                 em.field_d.field_lb = true;
               }
-              em.field_d.field_R = vg.field_Qb.field_R;
+              em.field_d.field_R = TextFieldNode.field_Qb.field_R;
               if (fh.field_b > 0) {
                 if (fh.field_b == 1) {
                   var10_ref_String = kp.field_i;
                 } else {
-                  var10_ref_String = vo.$cfr$intArgs$a$53ce4ab4c593(-18, jb.field_f, new String[]{Integer.toString(fh.field_b)});
+                  var10_ref_String = vo.$cfr$intArgs$a$53ce4ab4c593(-18, PopupDialog.field_f, new String[]{Integer.toString(fh.field_b)});
                 }
                 em.field_d.field_E = em.field_d.field_E + "<br>" + var10_ref_String;
                 if ((16 & GameKeyHandler.field_c) == 0 &&
                   !td.field_b) {
-                  em.field_d.field_R = vg.field_Qb.field_S;
+                  em.field_d.field_R = TextFieldNode.field_Qb.field_S;
                 }
               }
               GoalStateAgent.field_k.a(true, AuctionItem.field_p.field_q - var9, var9, -40 + AuctionItem.field_p.field_mb, 40);
               GoalStateAgent.field_k.field_E = BlankScreen.field_g.toUpperCase();
               stackIn_18_0 = GoalStateAgent.field_k;
-              stackIn_19_1 = (param3) && (0L == vg.field_Ib);
+              stackIn_19_1 = (param3) && (0L == TextFieldNode.field_Ib);
               stackIn_18_0.field_lb = stackIn_19_1;
               var8 = GoalStateAgent.field_k;
               var10 = 2;
@@ -204,7 +204,7 @@ abstract class SpriteState extends DualLinkNode {
                   }
                   break;
                 }
-                if (!(2 > tk.field_Ib) &&
+                if (!(2 > ScrollContainer.field_Ib) &&
                   GameplayHelpScreen.field_G[12]) {
                   var10 = 2;
                 }
@@ -263,7 +263,7 @@ abstract class SpriteState extends DualLinkNode {
                   }
                   var16Lifetime1Lifetime1 = 0;
                   var17 = ClientException.field_c.field_Ab.field_jb;
-                  var18_ref = (he) (var17.g(24009));
+                  var18_ref = (LobbyPlayerRow) (var17.g(24009));
                   scanLoop4: while (true) {
                     if (var18_ref != null) {
                       if (!var18_ref.h(-13356)) {
@@ -289,12 +289,12 @@ abstract class SpriteState extends DualLinkNode {
                           break scanLoop4;
                         }
                       }
-                      var18_ref = (he) (var17.c(param2 ^ -33));
+                      var18_ref = (LobbyPlayerRow) (var17.c(param2 ^ -33));
                       continue;
                     }
                     break;
                   }
-                  if (tk.field_Ib >= 2 &&
+                  if (ScrollContainer.field_Ib >= 2 &&
                     GameplayHelpScreen.field_G[12]) {
                     var16Lifetime1Lifetime1 = 0;
                   }
@@ -302,7 +302,7 @@ abstract class SpriteState extends DualLinkNode {
                     GoalStateAgent.field_k.field_lb = false;
                     if (!(!GoalStateAgent.field_k.field_Q)) {
                       if (ni.field_l.field_b.field_Db != 0) {
-                        sn.field_e = vo.$cfr$intArgs$a$53ce4ab4c593(-18, pu.field_Fb, new String[]{c.field_d});
+                        sn.field_e = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketSlot.field_Fb, new String[]{c.field_d});
                       } else {
                         sn.field_e = pp.field_m;
                       }
@@ -346,8 +346,8 @@ abstract class SpriteState extends DualLinkNode {
                 }
               }
             }
-            if (vg.field_Ib != 0L) {
-              var9 = (int)(-nj.a(22) + vg.field_Ib);
+            if (TextFieldNode.field_Ib != 0L) {
+              var9 = (int)(-nj.a(22) + TextFieldNode.field_Ib);
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;
@@ -356,7 +356,7 @@ abstract class SpriteState extends DualLinkNode {
             }
             ka.field_c.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ib.field_F, new String[]{Integer.toString(uv.field_i.field_gc), Integer.toString(uv.field_i.field_bc)});
           }
-          stackIn_156_0 = dn.field_Cb;
+          stackIn_156_0 = TrinketIcon.field_Cb;
           stackIn_156_1 = param2 ^ param2;
           stackIn_157_2 = (param0) && (!param4) && (!td.field_b);
           ((UiLayoutNode) (Object) stackIn_156_0).b(stackIn_156_1, stackIn_157_2);
@@ -371,7 +371,7 @@ abstract class SpriteState extends DualLinkNode {
           ni.field_l.field_b.h((byte) 71);
           if (null != uv.field_i) {
             if (ac.field_b.field_sb != 0) {
-              gu.a(uv.field_i.h((byte) 73), (byte) -108, param1);
+              ContextMenu.a(uv.field_i.h((byte) 73), (byte) -108, param1);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {
               gs.field_e = true;

@@ -6,7 +6,7 @@ abstract class ArchiveSource {
     static String[] field_d;
     static int[] field_c;
     static String field_e;
-    static qb field_b;
+    static GameSetupPanel field_b;
     static String field_a;
 
     abstract int a(int param0, int param1);

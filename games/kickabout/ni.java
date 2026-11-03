@@ -71,7 +71,7 @@ final class ni extends IntrusiveNode {
         if (DebugConsole.field_s) {
           return NodeHashTableIterator.a(param1, -14, param0);
         }
-        if (sq.b(param3 + 20963, param0, param1)) {
+        if (SaveChangesDialog.b(param3 + 20963, param0, param1)) {
           return true;
         }
         if (!WriteIntegersCommand.field_C) {

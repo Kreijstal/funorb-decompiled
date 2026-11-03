@@ -22,13 +22,13 @@ final class ee {
         }
         if (param0 == -25) {
           IndexedSpriteState.field_c = null;
-          vg.field_Bb = null;
+          TextFieldNode.field_Bb = null;
           ServerMessageScreen.field_D = null;
           return;
         }
         field_e = false;
         IndexedSpriteState.field_c = null;
-        vg.field_Bb = null;
+        TextFieldNode.field_Bb = null;
         ServerMessageScreen.field_D = null;
     }
 

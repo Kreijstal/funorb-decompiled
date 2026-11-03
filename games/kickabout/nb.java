@@ -99,7 +99,7 @@ final class nb {
 
     final static int b(byte param0) {
         int var1 = 47 / ((49 - param0) / 51);
-        return (int)(1000000000L / no.field_H);
+        return (int)(1000000000L / LeagueWinnerDialog.field_H);
     }
 
     final static ClientException a(Throwable param0, String param1) {

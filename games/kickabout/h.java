@@ -9,12 +9,12 @@ final class h {
     static UiLayoutNode field_e;
     static String field_f;
 
-    final static bb a(int param0, tc param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4) {
+    final static CascadingMenu a(int param0, tc param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        bb stackIn_12_0 = null;
-        bb stackIn_28_0 = null;
+        CascadingMenu stackIn_12_0 = null;
+        CascadingMenu stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -32,7 +32,7 @@ final class h {
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        bb[] var11 = null;
+        CascadingMenu[] var11 = null;
         int var12 = 0;
         tc var13_ref_tc = null;
         int var13 = 0;
@@ -69,9 +69,9 @@ final class h {
           var20 = new int[var7];
           var18 = var20;
           var10 = var18;
-          var11 = new bb[var7];
+          var11 = new CascadingMenu[var7];
           if (param0 != 0) {
-            stackIn_12_0 = (bb) null;
+            stackIn_12_0 = (CascadingMenu) null;
             return stackIn_12_0;
           }
           if (param1.field_o != null) {
@@ -103,7 +103,7 @@ final class h {
               }
             }
           }
-          stackIn_28_0 = new bb(0L, param3, param2, param4, var11, var20, var8, var21);
+          stackIn_28_0 = new CascadingMenu(0L, param3, param2, param4, var11, var20, var8, var21);
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

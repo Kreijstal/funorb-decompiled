@@ -76,10 +76,10 @@ final class gs {
     }
 
     final static void a(int param0) {
-        gu.b(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
-        ji.k(param0);
+        ContextMenu.b(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
+        ScrollBar.k(param0);
         tc.a(vi.field_n, param0 ^ 8710, ih.field_c, RankingsScreen.field_C);
-        ui.a(1, kn.a(ih.field_c, param0 ^ 77, vi.field_n, RankingsScreen.field_C), ReceivedAuctionItem.field_E[2], 2147483647);
+        ui.a(1, TrinketPickerDialog.a(ih.field_c, param0 ^ 77, vi.field_n, RankingsScreen.field_C), ReceivedAuctionItem.field_E[2], 2147483647);
     }
 
     public static void b(byte param0) {

@@ -22,8 +22,8 @@ final class ba extends sr {
         PlayerStats var5 = null;
         int var6 = 0;
         int var7 = 0;
-        fn var8_ref_fn = null;
-        fn var9 = null;
+        Trinket var8_ref_fn = null;
+        Trinket var9 = null;
         int var10 = 0;
         PlayerStats var11 = null;
         PlayerStats var12 = null;
@@ -142,7 +142,7 @@ final class ba extends sr {
               eq.field_c[var5] = TeamManagementScreen.field_C[var5];
             }
             eq.field_c[-3 + var4] = "";
-            eq.field_c[var4 - 2] = tk.field_Jb;
+            eq.field_c[var4 - 2] = ScrollContainer.field_Jb;
             dk.field_g[-2 + var4] = 0;
             sh.field_f[0] = 4;
             eq.field_c[var4 - 1] = pg.field_c;
@@ -225,7 +225,7 @@ final class ba extends sr {
               sh.field_f[1] = 5;
             }
           } else {
-            var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, vg.field_Kb, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
+            var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, TextFieldNode.field_Kb, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(TeamManagementScreen.field_C[var5])) {
@@ -237,8 +237,8 @@ final class ba extends sr {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            dn.field_Eb = new String[var4];
-            ArrayOperations.a(TeamManagementScreen.field_C, 0, dn.field_Eb, 0, var4);
+            TrinketIcon.field_Eb = new String[var4];
+            ArrayOperations.a(TeamManagementScreen.field_C, 0, TrinketIcon.field_Eb, 0, var4);
             pg.field_a = new String[-1 + (-var4 + var3_int)];
             ArrayOperations.a(TeamManagementScreen.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
             var4 = -1;
@@ -257,10 +257,10 @@ final class ba extends sr {
             ArrayOperations.a(TeamManagementScreen.field_C, 0, pn.field_D, 0, var4);
             cg.field_E = new String[var3_int - var4 - 1];
             ArrayOperations.a(TeamManagementScreen.field_C, 1 + var4, cg.field_E, 0, -var4 + (var3_int - 1));
-            if (pn.field_D.length > dn.field_Eb.length) {
+            if (pn.field_D.length > TrinketIcon.field_Eb.length) {
               stackIn_22_0 = pn.field_D.length;
             } else {
-              stackIn_22_0 = dn.field_Eb.length;
+              stackIn_22_0 = TrinketIcon.field_Eb.length;
             }
             var5 = stackIn_22_0;
             if (pg.field_a.length >= cg.field_E.length) {
@@ -327,7 +327,7 @@ final class ba extends sr {
             }
           }
           if (2 == ck.field_a) {
-            var10 = dn.field_Eb;
+            var10 = TrinketIcon.field_Eb;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];

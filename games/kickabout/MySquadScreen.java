@@ -5,7 +5,7 @@ final class MySquadScreen extends TeamManagementScreen {
     private SquadGridWidget field_L;
     private UiLayoutNode field_X;
     private UiLayoutNode field_W;
-    private pu[] field_T;
+    private TrinketSlot[] field_T;
     private UiLayoutNode field_R;
     static String field_F;
     private UiLayoutNode field_P;
@@ -34,7 +34,7 @@ final class MySquadScreen extends TeamManagementScreen {
         this.field_L.field_J = 36;
         this.field_L.field_s = 6;
         for (var4 = 0; var4 < 9; var4++) {
-          i.field_A[var4] = null;
+          MessageDialog.field_A[var4] = null;
         }
         gb.field_F = false;
         if (PlayArea.a(100)) {
@@ -94,9 +94,9 @@ final class MySquadScreen extends TeamManagementScreen {
         SquadSlotWidget var3;
         PlayerStats var4_ref_up;
         int var4;
-        pu[] var5_ref_pu__;
-        fn var6;
-        pu var7;
+        TrinketSlot[] var5_ref_pu__;
+        Trinket var6;
+        TrinketSlot var7;
         int var8;
         var8 = Kickabout.field_G;
         super.updateScreen((byte) -55, param1);
@@ -156,7 +156,7 @@ final class MySquadScreen extends TeamManagementScreen {
         int var13;
         int var14;
         int var15_int;
-        pu[] var15;
+        TrinketSlot[] var15;
         ReceivedAuctionItem var15_ref;
         int var16;
         String var17;
@@ -165,11 +165,11 @@ final class MySquadScreen extends TeamManagementScreen {
         String var20;
         int var21;
         int var22;
-        pu[] var23;
-        pu var24;
+        TrinketSlot[] var23;
+        TrinketSlot var24;
         UiLayoutNode var25;
         PlayerStats var26;
-        pu var27;
+        TrinketSlot var27;
         ReceivedAuctionItem var28;
         int var11Lifetime1;
         int var16Lifetime1;
@@ -193,7 +193,7 @@ final class MySquadScreen extends TeamManagementScreen {
         var4 = this.field_L.j((byte) 21);
         var5 = IsSixCommand.field_C;
         if (var4 == null) {
-          var5.a(gu.field_Db, 20 + this.field_I.field_F, this.field_I.field_T + 10, this.field_I.field_q - 40, -10 + this.field_I.field_mb, 14540253, -1, 1, 1, 16);
+          var5.a(ContextMenu.field_Db, 20 + this.field_I.field_F, this.field_I.field_T + 10, this.field_I.field_q - 40, -10 + this.field_I.field_mb, 14540253, -1, 1, 1, 16);
         } else {
           var26 = this.field_L.j((byte) 21).field_Eb;
           stackIn_6_0 = var26;
@@ -216,7 +216,7 @@ final class MySquadScreen extends TeamManagementScreen {
           var5.c(field_O, var10, var11, 268435455, -1);
           var5.a(var26.getDisplayName(100), var10 + var12, var11, 268435455, -1);
           var11 += 22;
-          var5.c(hg.field_H, var10, var11, 268435455, -1);
+          var5.c(PromotionDialog.field_H, var10, var11, 268435455, -1);
           var5.a(uf.field_e[var26.playerType], var10 + var12, var11, 268435455, -1);
           var11Lifetime1 = -10 + (this.field_I.field_T + this.field_I.field_mb);
           var13 = this.field_W.field_F + (-100 + this.field_W.field_q >> 1);
@@ -238,7 +238,7 @@ final class MySquadScreen extends TeamManagementScreen {
               if (!this.field_L.j((byte) 21).field_Gb) {
                 stackIn_22_0 = qr.field_a;
               } else {
-                stackIn_22_0 = nq.field_H;
+                stackIn_22_0 = TournamentChampionDialog.field_H;
               }
               var17 = stackIn_22_0;
               var5.a(var17, this.field_P.field_F + 10, 51 + this.field_P.field_T, -20 + this.field_P.field_q, this.field_P.field_mb - 60, 11184810, -1, 0, 1, 16);
@@ -257,7 +257,7 @@ final class MySquadScreen extends TeamManagementScreen {
               q.field_d.d(ValidationState.field_b[var24.field_Bb.field_h], var27.field_F + (var27.field_q >> 1), var27.field_mb + var27.field_T + 14, 16777215, -1);
             }
           }
-          var28 = i.field_A[ic.field_h.field_q[this.field_L.field_Fb]];
+          var28 = MessageDialog.field_A[ic.field_h.field_q[this.field_L.field_Fb]];
           var15_ref = var28;
           if (!ds.field_g) {
             if (var15_ref != null &&
@@ -303,7 +303,7 @@ final class MySquadScreen extends TeamManagementScreen {
               decompiledFrameRemainder0 = false;
             }
             else {
-              var5.a(na.field_Eb, 10 + this.field_G.field_F, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
+              var5.a(VerticalScrollbar.field_Eb, 10 + this.field_G.field_F, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
             }
           } else {
             var5.a(BufferedCacheFile.field_d, this.field_G.field_F + 10, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
@@ -337,8 +337,8 @@ final class MySquadScreen extends TeamManagementScreen {
         PlayerStats var4;
         PlayerStats var5;
         int var6;
-        fn var8;
-        pu var9;
+        Trinket var8;
+        TrinketSlot var9;
         String var10;
         int var11;
         int var12;
@@ -360,12 +360,12 @@ final class MySquadScreen extends TeamManagementScreen {
           }
           var5 = var13.field_Eb;
           this.field_K = new UiLayoutNode[var5.trinketIds.length];
-          this.field_T = new pu[var5.trinketIds.length];
+          this.field_T = new TrinketSlot[var5.trinketIds.length];
           var6 = this.field_X.field_q - 150 * (-1 + var5.trinketIds.length) >> 1;
           for (var7 = 0; var7 < this.field_K.length; var7++) {
             var8 = pa.field_g[var5.trinketIds[var7]];
-            var9 = new pu(var8, false);
-            if (var8.j(256)) {
+            var9 = new TrinketSlot(var8, false);
+            if (var8.isEmpty(256)) {
               stackIn_15_0 = mc.field_f;
             } else {
               stackIn_15_0 = DateInputWidget.field_E;
@@ -413,7 +413,7 @@ final class MySquadScreen extends TeamManagementScreen {
         this.field_X.field_E = mp.field_k.toLowerCase();
         this.field_Q = eo.a(NodeHashTableIterator.field_c, 7126504);
         this.field_K = new UiLayoutNode[]{};
-        this.field_T = new pu[]{};
+        this.field_T = new TrinketSlot[]{};
         this.field_Q.field_s = -this.field_Q.field_q + this.field_P.field_q >> 1;
         this.field_Q.field_J = 66;
         this.field_Y.addChild((byte) -115, this.field_X);

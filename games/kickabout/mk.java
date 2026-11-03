@@ -381,7 +381,7 @@ final class mk {
                     var4.a(ss.field_b, param0 ^ -1623);
                   } else {
                     if (var2_int == 5) {
-                      if (!sl.field_Eb) {
+                      if (!HoverTooltip.field_Eb) {
                         for (var2_int = 720; var2_int < 826; var2_int += 24) {
                           var4.a(ek.b(true, var2_int, 920), 3);
                         }
@@ -393,7 +393,7 @@ final class mk {
                     } else {
                       switch (var2_int) {
                         case 8:
-                          if (sl.field_Eb) {
+                          if (HoverTooltip.field_Eb) {
                             um.field_e.a((byte) -119, var4);
                             return;
                           }
@@ -413,7 +413,7 @@ final class mk {
                           if (var2_int != 10 &&
                             var2_int != 11) {
                             if (12 == var2_int) {
-                              if (sl.field_Eb) {
+                              if (HoverTooltip.field_Eb) {
                                 break;
                               }
                               nm.a(916, 28, 544, 544, -20, var4, (byte) -65);
@@ -424,13 +424,13 @@ final class mk {
                               break;
                             }
                             nm.a(916, 28, 544, 544, -20, var4, (byte) -72);
-                            if (sl.field_Eb) {
+                            if (HoverTooltip.field_Eb) {
                               break;
                             }
                             var4.a(ss.field_b, param0 ^ -1623);
                             break;
                           }
-                          if (!sl.field_Eb) {
+                          if (!HoverTooltip.field_Eb) {
                             IndexedSpriteState.a(-48, var4, new java.awt.Point[]{new java.awt.Point(286, 452), new java.awt.Point(864, 452), new java.awt.Point(864, 660), new java.awt.Point(286, 660)});
                           }
                           var4.a(ss.field_b, 3);
@@ -439,7 +439,7 @@ final class mk {
                           var4.a(ss.field_b, param0 + 1625);
                           break;
                         case 7:
-                          if (!sl.field_Eb) {
+                          if (!HoverTooltip.field_Eb) {
                             IndexedSpriteState.a(-109, var4, new java.awt.Point[]{new java.awt.Point(46, 236), new java.awt.Point(314, 236), new java.awt.Point(314, 714), new java.awt.Point(46, 714)});
                           }
                           var4.a(ss.field_b, 3);

@@ -23,7 +23,7 @@ final class in {
             MusicPatchNode.b(98);
           }
           DualLinkDequeIterator.a(param1 - 6, param5, param3);
-          dn.a(param3, param6, true);
+          TrinketIcon.a(param3, param6, true);
           param3 = false;
         }
         if (param1 == 50) {

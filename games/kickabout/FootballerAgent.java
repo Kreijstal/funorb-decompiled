@@ -544,7 +544,7 @@ class FootballerAgent extends MatchAgent {
         if (param0 != -99) {
           this.pixelX(-27);
         }
-        return 200 - (this.stats.d(this.member, (byte) -127) * 2 - 120) + vf.field_I[4];
+        return 200 - (this.stats.d(this.member, (byte) -127) * 2 - 120) + BuyPitchDialog.field_I[4];
     }
 
     final void applyPlayerStats(boolean param0, PlayerStats param1, int param2) {
@@ -576,7 +576,7 @@ class FootballerAgent extends MatchAgent {
             stackIn_9_0 = this.archetype;
           }
           var5 = stackIn_9_0;
-          this.field_q = g.field_b[var5] + (-g.field_b[var5] + pv.field_J[var5]) * this.stats.a(this.member, param2 - 3) / 100;
+          this.field_q = g.field_b[var5] + (-g.field_b[var5] + HelpTipDialog.field_J[var5]) * this.stats.a(this.member, param2 - 3) / 100;
           if (param2 != 3) {
             this.field_m = 74;
           }
@@ -643,7 +643,7 @@ class FootballerAgent extends MatchAgent {
     final void setAction(byte param0, int param1) {
         String discarded$0 = null;
         this.action = param1;
-        this.actionTime = vf.field_I[this.action];
+        this.actionTime = BuyPitchDialog.field_I[this.action];
         if (this.megamode) {
           if (8 == this.action) {
             this.actionTime = this.actionTime + 60;

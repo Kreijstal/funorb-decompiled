@@ -70,7 +70,7 @@ abstract class AppScreen {
     final static void setServerConnectionParameters(String param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
         try {
           hf.field_e = param2;
-          tk.field_yb = param0;
+          ScrollContainer.field_yb = param0;
           if (param8) {
             AppScreen.a((byte) 44);
           }
@@ -175,21 +175,21 @@ abstract class AppScreen {
                 }
                 else {
                   FormationView.b((byte) -116);
-                  vu.field_Db = false;
+                  ContextMenuItem.field_Db = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
                 }
               }
               if (decompiledFrameRemainder0) {
-                un.field_c = bm.field_H;
+                un.field_c = AuctionListingDialog.field_H;
                 ms.field_b = -1;
               }
             }
-            if (bm.field_H == un.field_c &&
+            if (AuctionListingDialog.field_H == un.field_c &&
               LoginCredentials.a(180)) {
               wq.field_d = un.field_e.readLong((byte) -124);
               vl.field_e = param4;
-              tk.field_Ib = un.field_e.readUnsignedByte((byte) -118);
+              ScrollContainer.field_Ib = un.field_e.readUnsignedByte((byte) -118);
               bl.field_c = un.field_e.readUnsignedByte((byte) -112);
               eq.field_d = un.field_e.a((byte) 81);
               var11 = un.field_e.a(true);
@@ -238,14 +238,14 @@ abstract class AppScreen {
               DebugConsole.field_w = MatchAgent.a(0, var12);
               rl.field_n = un.field_e.readUnsignedByte((byte) -128);
               un.field_c = RegistrationRequestDialog.field_rb;
-              if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -109) != qq.field_K) {
+              if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -109) != LoginRequiredDialog.field_K) {
                 if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -115) == MatchScreen.field_w) {
                   AccountRegistrationPanel.field_I.a(-122, so.a(-115));
                 }
               } else {
                 IsSixCommand.field_F.a(-123, so.a(36));
               }
-              vu.field_Db = false;
+              ContextMenuItem.field_Db = false;
               if (var11 != null) {
                 mp.writeSettingsCookie(so.a(47), true, var11);
               }
@@ -280,8 +280,8 @@ abstract class AppScreen {
               LoginCredentials.a(180)) {
               FormationView.b((byte) -116);
               if (so.field_b == 7 &&
-                !vu.field_Db) {
-                vu.field_Db = true;
+                !ContextMenuItem.field_Db) {
+                ContextMenuItem.field_Db = true;
                 stackIn_97_0 = -1;
                 return stackIn_97_0;
               }
@@ -289,7 +289,7 @@ abstract class AppScreen {
                 so.field_b = 3;
               }
               gd.field_b = un.field_e.readString(4);
-              vu.field_Db = false;
+              ContextMenuItem.field_Db = false;
               stackIn_102_0 = so.field_b;
               return stackIn_102_0;
             }
@@ -297,20 +297,20 @@ abstract class AppScreen {
               field_d = (IntrusiveDeque) null;
             }
             if (op.field_y == null) {
-              if (vu.field_Db) {
+              if (ContextMenuItem.field_Db) {
                 if (30000L >= KeyedLoginCredentials.c(29680)) {
                   gd.field_b = ic.field_e;
                 } else {
                   gd.field_b = md.field_h;
                 }
-                vu.field_Db = false;
+                ContextMenuItem.field_Db = false;
                 stackIn_113_0 = 3;
                 return stackIn_113_0;
               }
               var6_intLifetime2 = rl.field_o;
               rl.field_o = pn.field_y;
               pn.field_y = var6_intLifetime2;
-              vu.field_Db = true;
+              ContextMenuItem.field_Db = true;
             }
             stackIn_115_0 = -1;
             return stackIn_115_0;

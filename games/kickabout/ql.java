@@ -19,12 +19,12 @@ final class ql {
 
     final static void a(int param0) {
         if (param0 == 31663) {
-          np.field_Jb.a(new ha(), 3);
+          ScrollPane.field_Jb.a(new WelcomeDialog(), 3);
           return;
         }
         String var2 = (String) null;
         ql.a((byte) 32, false, (String) null);
-        np.field_Jb.a(new ha(), 3);
+        ScrollPane.field_Jb.a(new WelcomeDialog(), 3);
     }
 
     final static SocketConnector a(String param0, int param1, int param2) {
@@ -76,7 +76,7 @@ final class ql {
     final static void a(byte param0, boolean param1, String param2) {
         try {
           eq.field_a = we.field_c;
-          sq.field_G = param1 ? true : false;
+          SaveChangesDialog.field_G = param1 ? true : false;
           if (param0 <= 11) {
             String var4 = (String) null;
             ql.a(true, (String) null, (String) null, -26);
@@ -114,8 +114,8 @@ final class ql {
           if (4 == vt.field_c.phase) {
             sk.a(1, var3_int);
             od.a(param2, var3_int, vt.field_c.participantStatus, 14839);
-            if (vu.field_Cb == -2 ||
-              !vt.field_c.participantStatus[vu.field_Cb].isActive(3511)) {
+            if (ContextMenuItem.field_Cb == -2 ||
+              !vt.field_c.participantStatus[ContextMenuItem.field_Cb].isActive(3511)) {
               ig.a(param1, 16777215, var3_int);
             }
           }

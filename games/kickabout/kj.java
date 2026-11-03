@@ -7,7 +7,7 @@ final class kj {
     static byte[][] field_b;
 
     final static void a(int param0, int param1) {
-        np.field_Jb.a(new pv(param1), 3);
+        ScrollPane.field_Jb.a(new HelpTipDialog(param1), 3);
         if (param0 != 63) {
           field_c = (String) null;
         }

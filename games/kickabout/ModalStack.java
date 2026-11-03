@@ -93,7 +93,7 @@ final class ModalStack extends SingleChildContainer {
     }
 
     final static gg a(boolean param0, int param1, int param2) {
-        np stackIn_4_0 = null;
+        ScrollPane stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         gg stackIn_9_0 = null;
@@ -132,7 +132,7 @@ final class ModalStack extends SingleChildContainer {
           stackIn_4_1 = (sh.field_c * 3 + 6) * param2;
           stackIn_5_2 = (ei.field_d.field_Cb == ig.field_f);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((np) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, param0, 2, false, param1 + sh.field_c) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, param0, 2, false, param1 + sh.field_c) ? 1 : 0;
           var4 = ei.field_d.field_yb.field_jb;
           var5 = null;
           if (ts.field_d == 2) {
@@ -151,7 +151,7 @@ final class ModalStack extends SingleChildContainer {
                 if (stackIn_9_0.field_jb == null) {
                   var7.field_Bb = new UiLayoutNode(0L, mp.field_f);
                   var7.addChild((byte) -112, var7.field_Bb);
-                  var7.field_Ab = new UiLayoutNode(0L, pw.field_J);
+                  var7.field_Ab = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
                   var7.addChild((byte) -122, var7.field_Ab);
                   var7.field_Fb = new UiLayoutNode(0L, mp.field_f);
                   var7.addChild((byte) -117, var7.field_Fb);
@@ -234,11 +234,11 @@ final class ModalStack extends SingleChildContainer {
                     if (!WriteIntegersCommand.field_C) {
                       var17 = TextButton.field_v;
                       var18 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var16});
-                      var17.field_j.a(param1 ^ 2, 8, var18);
+                      var17.field_j.addItem(param1 ^ 2, 8, var18);
                     }
                     var17Lifetime1 = TextButton.field_v;
                     var18Lifetime1 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var16});
-                    var17Lifetime1.field_j.a(0, 18, var18Lifetime1);
+                    var17Lifetime1.field_j.addItem(0, 18, var18Lifetime1);
                   }
                 } else {
                   if (var7.field_Bb.field_gb &&
@@ -255,11 +255,11 @@ final class ModalStack extends SingleChildContainer {
               stackIn_86_0 = ei.field_d.field_Eb;
             }
             if (((UiLayoutNode) (stackIn_86_0)).field_sb != 0) {
-              k.field_m = new sl(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, MainMenuScreen.field_G, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+              k.field_m = new HoverTooltip(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, MainMenuScreen.field_G, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               fs.field_b = 0;
             }
             if (ei.field_d.field_zb.field_sb != 0) {
-              k.field_m = new sl(ei.field_d.field_zb.field_F, ei.field_d.field_zb.field_T, ei.field_d.field_zb.field_q, ei.field_d.field_zb.field_mb, kf.field_yb, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+              k.field_m = new HoverTooltip(ei.field_d.field_zb.field_F, ei.field_d.field_zb.field_T, ei.field_d.field_zb.field_q, ei.field_d.field_zb.field_mb, TabStrip.field_yb, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               fs.field_b = 1;
             }
             decompiledFrameRemainder0 = false;
@@ -268,7 +268,7 @@ final class ModalStack extends SingleChildContainer {
             du.field_f.field_E = uf.field_a;
             kk.field_R.field_lb = false;
             if (ts.field_d == 1) {
-              ei.field_d.field_Cb.field_zb.field_E = aw.field_I;
+              ei.field_d.field_Cb.field_zb.field_E = TutorialChoiceDialog.field_I;
               if (var19 != 0) {
                 ei.field_d.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
               }

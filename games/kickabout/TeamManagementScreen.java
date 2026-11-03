@@ -34,14 +34,14 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
         var10 = Kickabout.field_G;
         try {
           var7_int = ql.a(param2, (byte) 122);
-          if (jb.field_g == null) {
-            jb.field_g = new java.security.SecureRandom();
+          if (PopupDialog.field_g == null) {
+            PopupDialog.field_g = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = jb.field_g.nextInt();
+            var8[var9] = PopupDialog.field_g.nextInt();
           }
           if (AuctionsHelpScreen.field_I == null ||
             !(AuctionsHelpScreen.field_I.field_f.length >= var7_int)) {
@@ -119,7 +119,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
         SoftwareRasterizer.a(var1.field_h, var1.field_g, var1.field_j);
         SoftwareRasterizer.setClip(var1.field_e, var1.field_l, var1.field_i, var1.field_f);
         var1.field_h = null;
-        tk.field_Ab.a(var1, 3);
+        ScrollContainer.field_Ab.a(var1, 3);
     }
 
     void updateScreen(byte param0, boolean param1) {

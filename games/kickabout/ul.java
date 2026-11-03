@@ -158,7 +158,7 @@ final class ul {
           return;
         }
         if (ks.field_e == 5) {
-          if (sl.field_Eb) {
+          if (HoverTooltip.field_Eb) {
             ss.field_b.a(0, 0, -102);
           } else {
             ss.field_b.a(EmailAvailabilityValidator.field_k.pixelX(-107), EmailAvailabilityValidator.field_k.pixelY(true), param0 - 84);

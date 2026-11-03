@@ -47,7 +47,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
             EmailSyntaxValidator.c((byte) -62);
           }
           if (var3_int != 0) {
-            stackIn_9_0 = he.field_yb;
+            stackIn_9_0 = LobbyPlayerRow.field_yb;
             return stackIn_9_0;
           }
           stackIn_7_0 = PitchOptionTile.field_Bb;
@@ -112,7 +112,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.validateText(param1, param0 ^ -30) == PitchOptionTile.field_Bb) {
-            stackIn_2_0 = tk.field_Cb;
+            stackIn_2_0 = ScrollContainer.field_Cb;
             return stackIn_2_0;
           }
           if (param0 != 25) {

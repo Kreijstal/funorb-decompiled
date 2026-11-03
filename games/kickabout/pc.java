@@ -6,7 +6,7 @@ final class pc {
     static boolean field_e;
     static String field_d;
     static String field_b;
-    static pu field_a;
+    static TrinketSlot field_a;
 
     final static int a(int param0, int param1) {
         int var2;
@@ -61,7 +61,7 @@ final class pc {
           param0 = param0 >> (var2Lifetime3 << 1);
           return MenuSelection.field_f[param0 - 32768] << var2Lifetime3;
         }
-        field_a = (pu) null;
+        field_a = (TrinketSlot) null;
         if (0 > param0) {
           throw new IllegalArgumentException("");
         }

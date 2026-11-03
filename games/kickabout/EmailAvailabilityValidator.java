@@ -88,7 +88,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           if (!this.field_n) {
             stackIn_13_0 = PitchOptionTile.field_Bb;
           } else {
-            stackIn_13_0 = he.field_yb;
+            stackIn_13_0 = LobbyPlayerRow.field_yb;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

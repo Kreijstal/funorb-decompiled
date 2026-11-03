@@ -65,7 +65,7 @@ final class md implements hc {
           } else {
             stackIn_13_1 = true;
           }
-          ha.c(stackIn_12_0, stackIn_13_1);
+          WelcomeDialog.c(stackIn_12_0, stackIn_13_1);
           var1 = 1;
         }
         if (nv.i(0)) {

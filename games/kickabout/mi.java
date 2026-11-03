@@ -73,7 +73,7 @@ final class mi {
     }
 
     final static boolean a(long param0, String param1, byte param2, int param3, int[] param4) {
-        bb var6 = null;
+        CascadingMenu var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
         RuntimeException stackIn_12_0 = null;
@@ -89,7 +89,7 @@ final class mi {
           if (1 == param3) {
             param3 = 0;
           }
-          at.field_Kb = param1;
+          TrinketTile.field_Kb = param1;
           NodeHashTableIterator.field_b = param3;
           var7 = (CharSequence) ((Object) param1);
           qi.field_o = MatchAgent.a(0, var7);

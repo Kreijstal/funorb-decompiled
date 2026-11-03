@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class su {
-    static jb field_c;
+    static PopupDialog field_c;
     static Sprite field_a;
-    static gu field_b;
+    static ContextMenu field_b;
 
     final static kw a(int param0, String param1) {
         RuntimeException var2 = null;
@@ -15,7 +15,7 @@ final class su {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -3505) {
-            field_c = (jb) null;
+            field_c = (PopupDialog) null;
           }
           stackIn_3_0 = new kw(param1);
           return stackIn_3_0;
@@ -94,7 +94,7 @@ final class su {
           while (param1 != 0L) {
             var7 = param1;
             param1 = param1 / 37L;
-            discarded$0 = var6.append(gu.field_yb[(int)(var7 - param1 * 37L)]);
+            discarded$0 = var6.append(ContextMenu.field_yb[(int)(var7 - param1 * 37L)]);
           }
           return var6.reverse().toString();
         }
@@ -134,7 +134,7 @@ final class su {
             if (param1 == -106) {
               return;
             }
-            field_b = (gu) null;
+            field_b = (ContextMenu) null;
             return;
           }
           vi.field_s = param4;
@@ -186,7 +186,7 @@ final class su {
         if (param1 == -106) {
           return;
         }
-        field_b = (gu) null;
+        field_b = (ContextMenu) null;
     }
 
     public static void a(byte param0) {
@@ -237,7 +237,7 @@ final class su {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param3) {
-            field_c = (jb) null;
+            field_c = (PopupDialog) null;
           }
           var13 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var13.field_R = ih.a(param4, 0, param11);

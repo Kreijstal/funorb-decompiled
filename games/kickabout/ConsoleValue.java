@@ -32,7 +32,7 @@ final class ConsoleValue {
 
     final static void a(int param0, String param1) {
         try {
-          np.field_Jb.a(new nq(param1), 3);
+          ScrollPane.field_Jb.a(new TournamentChampionDialog(param1), 3);
           if (param0 != 2009) {
             String var3 = (String) null;
             ConsoleValue.a(79, (String) null);

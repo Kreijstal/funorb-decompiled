@@ -13,7 +13,7 @@ final class ib extends wt implements ButtonListener {
     final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_D.field_y = this.field_G.a((byte) -125).getValidationState(-24407) == he.field_yb ? true : false;
+          this.field_D.field_y = this.field_G.a((byte) -125).getValidationState(-24407) == LobbyPlayerRow.field_yb ? true : false;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ib.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -23,11 +23,11 @@ final class ib extends wt implements ButtonListener {
         if (param3 < 64) {
           return;
         }
-        if (this.field_G.a((byte) -125).getValidationState(-24407) != he.field_yb) {
+        if (this.field_G.a((byte) -125).getValidationState(-24407) != LobbyPlayerRow.field_yb) {
           return;
         }
         try {
-          pu.a((byte) -113, this.field_G.m(-1), this.field_G.h((byte) 48), this.field_G.l(85));
+          TrinketSlot.a((byte) -113, this.field_G.m(-1), this.field_G.h((byte) 48), this.field_G.l(85));
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ib.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

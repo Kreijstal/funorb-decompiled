@@ -44,7 +44,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
             var5 = (AuctionLogEntry) (ic.field_h.auctionLog.g(24009));
             while (var5 != null) {
               if (~var5.auctionId == ~var3) {
-                i.field_A[var5.slotIndex] = param1[var2_int];
+                MessageDialog.field_A[var5.slotIndex] = param1[var2_int];
                 break;
               }
               var5 = (AuctionLogEntry) (ic.field_h.auctionLog.c(33));
@@ -58,7 +58,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
 
     final void b(int param0) {
         if (this.field_r) {
-          he.a(this.stream, true);
+          LobbyPlayerRow.a(this.stream, true);
         } else {
           mj.a(true, this.stream);
         }
@@ -72,7 +72,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
         if (param0 != 99) {
           this.stepFadeOut(81);
         }
-        this.stream = PcmSampleStream.createAtRatePercentQ6(vg.field_Db[this.soundId].field_l, 100, var2, this.field_f);
+        this.stream = PcmSampleStream.createAtRatePercentQ6(TextFieldNode.field_Db[this.soundId].field_l, 100, var2, this.field_f);
         if (this.field_j) {
           this.stream.playBackwardFromEnd();
         }

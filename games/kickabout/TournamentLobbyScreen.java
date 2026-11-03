@@ -232,7 +232,7 @@ final class TournamentLobbyScreen extends AppScreen {
         }
         if (this.field_h != 0) {
           SoftwareRasterizer.a(this.field_G, this.field_q, 570, 12, 3, this.field_U ? 11184810 : this.field_s, 128);
-          un.field_d.d(gu.field_Ib, this.field_G + 285, 12 + (this.field_q - 1), !this.field_U ? 11184810 : 65793, -1);
+          un.field_d.d(ContextMenu.field_Ib, this.field_G + 285, 12 + (this.field_q - 1), !this.field_U ? 11184810 : 65793, -1);
         }
     }
 
@@ -334,7 +334,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
         }
         if (param1) {
-          this.field_Z.a(-21174, this.tabIndexAt(wt.field_x, 77, us.field_j), this.tabIndexAt(dn.field_yb, 88, kf.field_Eb));
+          this.field_Z.a(-21174, this.tabIndexAt(wt.field_x, 77, us.field_j), this.tabIndexAt(TrinketIcon.field_yb, 88, TabStrip.field_Eb));
           if (this.field_Z.selectedIndex >= 0 &&
             this.field_Z.c(-1)) {
             this.selectStatTab(this.field_X[this.field_Z.selectedIndex].kind, false);
@@ -518,7 +518,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (ph.field_a == 2) {
           var8 = GameplayHelpScreen.field_G;
           var4 = var8;
-          if (!var8[rb.field_Kb]) {
+          if (!var8[TextPromptDialog.field_Kb]) {
             if (!var8[98]) {
               stackIn_20_0 = (param0 == 98) ? 1 : 0;
             } else {
@@ -1237,8 +1237,8 @@ final class TournamentLobbyScreen extends AppScreen {
           var7 = Math.abs(255 - var5) | Math.abs(-var5 + 255) << 8 | Math.abs(255 - var5) << 16;
           AuctionListing.a(40 + (du.field_n + var3), -22914, -2 + var3, var4, -16 + var4);
           SoftwareRasterizer.a(var3, var4 - 11, 33 + du.field_n, 20, 6, var6, al.a(false, (byte) -96));
-          np.a(var4, -123, 14 + var3);
-          np.a(var4, param0 + 113, du.field_n + (30 + var3));
+          ScrollPane.a(var4, -123, 14 + var3);
+          ScrollPane.a(var4, param0 + 113, du.field_n + (30 + var3));
           var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, vi.field_o, new String[]{mk.field_b[il.field_h]});
           q.field_d.a(var8, var3 + 20, var4, var7, -1);
           TeamManagementScreen.e(118);

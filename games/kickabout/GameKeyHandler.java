@@ -311,17 +311,17 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (param0 != 40) {
           field_c = -21;
         }
-        int var1 = pq.field_Q.field_o + 5;
+        int var1 = SquadPickerDialog.field_Q.field_o + 5;
         if (vl.field_d &&
-          -1 + pq.field_L.length > bm.field_I) {
-          bm.field_I = bm.field_I + 1;
-          PasswordLoginCredentials.field_i = pq.field_L[bm.field_I] * var1 >> 12;
+          -1 + SquadPickerDialog.field_L.length > AuctionListingDialog.field_I) {
+          AuctionListingDialog.field_I = AuctionListingDialog.field_I + 1;
+          PasswordLoginCredentials.field_i = SquadPickerDialog.field_L[AuctionListingDialog.field_I] * var1 >> 12;
         }
         if (!vl.field_d &&
-          !(bm.field_I <= 0)) {
-          bm.field_I = bm.field_I - 1;
-          var2 = -1 + pq.field_L.length;
-          PasswordLoginCredentials.field_i = var1 - (-bm.field_I + var2) * ((var2 - bm.field_I) * var1) / (var2 * var2);
+          !(AuctionListingDialog.field_I <= 0)) {
+          AuctionListingDialog.field_I = AuctionListingDialog.field_I - 1;
+          var2 = -1 + SquadPickerDialog.field_L.length;
+          PasswordLoginCredentials.field_i = var1 - (-AuctionListingDialog.field_I + var2) * ((var2 - AuctionListingDialog.field_I) * var1) / (var2 * var2);
         }
     }
 

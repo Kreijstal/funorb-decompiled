@@ -206,7 +206,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               }
             }
           } else {
-            var7.a((byte) 54, 7, ha.field_J);
+            var7.a((byte) 54, 7, WelcomeDialog.field_J);
           }
           if (param1 < 96) {
             var6 = (java.awt.Point[]) null;

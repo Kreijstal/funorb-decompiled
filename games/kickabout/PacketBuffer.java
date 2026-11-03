@@ -477,8 +477,8 @@ class PacketBuffer extends IntrusiveNode {
         field_k = null;
         field_m = null;
         if (param0 != 88) {
-          he var2 = (he) null;
-          PacketBuffer.a((byte) 23, (he) null);
+          LobbyPlayerRow var2 = (LobbyPlayerRow) null;
+          PacketBuffer.a((byte) 23, (LobbyPlayerRow) null);
         }
     }
 
@@ -685,8 +685,8 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, he param1) {
-        he var2 = null;
+    final static void a(byte param0, LobbyPlayerRow param1) {
+        LobbyPlayerRow var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -698,10 +698,10 @@ class PacketBuffer extends IntrusiveNode {
         try {
           param1.c((byte) -109);
           var3 = -54 / ((param0 + 29) / 55);
-          var2 = (he) (rp.field_B.g(24009));
+          var2 = (LobbyPlayerRow) (rp.field_B.g(24009));
           while (var2 != null) {
             if (var2.a(param1, (byte) -82)) {
-              var2 = (he) (rp.field_B.c(33));
+              var2 = (LobbyPlayerRow) (rp.field_B.c(33));
               continue;
             }
             break;

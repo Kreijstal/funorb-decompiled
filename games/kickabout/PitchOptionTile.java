@@ -39,12 +39,12 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
         var4.field_k = param2;
         ak.field_i.a(var4, 3);
         if (param1 == 100) {
-          vg.a(true, var4, param3);
+          TextFieldNode.a(true, var4, param3);
           return var4;
         }
         CommonGame var6 = (CommonGame) null;
         PitchOptionTile.updateOutfielderAI((CommonGame) null, (byte) 12, -47, -89);
-        vg.a(true, var4, param3);
+        TextFieldNode.a(true, var4, param3);
         return var4;
     }
 

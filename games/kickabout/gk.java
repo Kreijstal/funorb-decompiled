@@ -8,7 +8,7 @@ final class gk {
     static boolean field_e;
     static int[] field_f;
     static String field_d;
-    static bb field_h;
+    static CascadingMenu field_h;
     static int field_g;
 
     final static void a(String param0, int param1, long param2, int param3, byte param4) {

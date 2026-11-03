@@ -619,7 +619,7 @@ final class ClubState {
             var15.playerType = 1;
           }
           var15.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, td.field_a.length, var14);
-          var15.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(106, -1 + ce.field_G[var15.playerType].length, var14);
+          var15.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(106, -1 + BuyPlayerDialog.field_G[var15.playerType].length, var14);
           var15.power = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-86, 10, var14) + 6;
           var15.tackle = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(97, 10, var14) + 6;
           var15.speed = 6 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-111, 10, var14);
@@ -775,9 +775,9 @@ final class ClubState {
         int var7 = 0;
         PlayerStats var7_ref_up = null;
         int var8 = 0;
-        fn var9 = null;
+        Trinket var9 = null;
         int var9_int = 0;
-        fn var10 = null;
+        Trinket var10 = null;
         int var10_int = 0;
         int var11 = 0;
         PlayerStats var12 = null;
@@ -821,7 +821,7 @@ final class ClubState {
                   boolean decompiledFrameRemainder0 = true;
                   boolean decompiledFrameCompleted0 = true;
                   if (-1 != var5) {
-                    var13 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
+                    var13 = WelcomeDialog.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
                     var7_ref_up = var13;
                     var8 = 0;
                     if (-1 != var5) {
@@ -859,7 +859,7 @@ final class ClubState {
                     if (!param1) {
                       throw new IllegalStateException("User tried to buy a MOD player when they are not a MOD" + param0.toString());
                     }
-                    var12 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
+                    var12 = WelcomeDialog.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
                     var7_ref_upLifetime1 = var12;
                     var8 = 0;
                     if (-1 != var5) {

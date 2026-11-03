@@ -50,7 +50,7 @@ final class ug {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        np stackIn_3_0 = null;
+        ScrollPane stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
         UiLayoutNode stackIn_18_0 = null;
@@ -75,20 +75,20 @@ final class ug {
         uv var17 = null;
         var15 = Kickabout.field_G;
         try {
-          stackIn_3_0 = nq.field_F.field_Cb;
+          stackIn_3_0 = TournamentChampionDialog.field_F.field_Cb;
           stackIn_3_1 = (3 * sh.field_c + 6) * param0;
-          stackIn_4_2 = (nq.field_F.field_Cb == ig.field_f);
-          var3_int = ((np) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param2, param1, false, 2 + sh.field_c) ? 1 : 0;
-          var4 = nq.field_F.field_yb.field_jb;
+          stackIn_4_2 = (TournamentChampionDialog.field_F.field_Cb == ig.field_f);
+          var3_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param2, param1, false, 2 + sh.field_c) ? 1 : 0;
+          var4 = TournamentChampionDialog.field_F.field_yb.field_jb;
           if (ts.field_d != 2 &&
             1 != ts.field_d) {
-            nq.field_F.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
-            nq.field_F.field_lb = false;
-            hl.a(true, nq.field_F.field_yb);
+            TournamentChampionDialog.field_F.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
+            TournamentChampionDialog.field_F.field_lb = false;
+            hl.a(true, TournamentChampionDialog.field_F.field_yb);
             return;
           }
-          nq.field_F.field_lb = true;
-          nq.field_F.field_Cb.field_zb.field_E = null;
+          TournamentChampionDialog.field_F.field_lb = true;
+          TournamentChampionDialog.field_F.field_Cb.field_zb.field_E = null;
           var5 = null;
           var6 = (gg) (var4.g(24009));
           while (var6 != null) {
@@ -101,7 +101,7 @@ final class ug {
               var6.invalidateChildren(false);
               var7 = 1;
             }
-            var6.field_q = nq.field_F.field_yb.field_q;
+            var6.field_q = TournamentChampionDialog.field_F.field_yb.field_q;
             var6.field_Bb.a(true, var6.field_q, 0, 0, sh.field_c);
             var8 = 0;
             if (null != var6.field_Eb &&
@@ -131,7 +131,7 @@ final class ug {
               var6.field_L = -var6.field_mb + sh.field_c;
             }
             if (var7 != 0) {
-              nq.field_F.field_yb.a(true, 2, var6, (UiLayoutNode) (var5));
+              TournamentChampionDialog.field_F.field_yb.a(true, 2, var6, (UiLayoutNode) (var5));
             }
             if (var6.field_Fb != null &&
               var6.field_Fb.field_gb) {
@@ -143,10 +143,10 @@ final class ug {
               }
             }
             if (var6.field_sb != 0) {
-              BytePlusOneCommand.a(var6, false, nq.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.field_Gb, -1);
+              BytePlusOneCommand.a(var6, false, TournamentChampionDialog.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.field_Gb, -1);
               var16 = TextButton.field_v;
               var13_ref_String = IsSixCommand.field_D;
-              var16.field_j.a(0, 7, var13_ref_String);
+              var16.field_j.addItem(0, 7, var13_ref_String);
               var17 = TextButton.field_v;
               var13 = sm.field_q;
               var14 = ReceivedAuctionItem.field_y;
@@ -155,14 +155,14 @@ final class ug {
             var5 = var6;
             var6 = (gg) (var4.c(33));
           }
-          if (nq.field_F.field_Eb.field_sb != 0) {
-            k.field_m = new sl(nq.field_F.field_Eb.field_F, nq.field_F.field_Eb.field_T, nq.field_F.field_Eb.field_q, nq.field_F.field_Eb.field_mb, ParticipantStatus.field_j, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+          if (TournamentChampionDialog.field_F.field_Eb.field_sb != 0) {
+            k.field_m = new HoverTooltip(TournamentChampionDialog.field_F.field_Eb.field_F, TournamentChampionDialog.field_F.field_Eb.field_T, TournamentChampionDialog.field_F.field_Eb.field_q, TournamentChampionDialog.field_F.field_Eb.field_mb, ParticipantStatus.field_j, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
             fs.field_b = 2;
           }
-          if (0 == nq.field_F.field_zb.field_sb) {
+          if (0 == TournamentChampionDialog.field_F.field_zb.field_sb) {
             return;
           }
-          k.field_m = new sl(nq.field_F.field_zb.field_F, nq.field_F.field_zb.field_T, nq.field_F.field_zb.field_q, nq.field_F.field_zb.field_mb, oo.field_d, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+          k.field_m = new HoverTooltip(TournamentChampionDialog.field_F.field_zb.field_F, TournamentChampionDialog.field_F.field_zb.field_T, TournamentChampionDialog.field_F.field_zb.field_q, TournamentChampionDialog.field_F.field_zb.field_mb, oo.field_d, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
           fs.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

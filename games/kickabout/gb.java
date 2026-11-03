@@ -60,70 +60,70 @@ final class gb extends TextButton {
           var15 = LoggedPlayer.field_g[0];
           var9 = var15.field_o << 1;
           var10 = var15.field_v << 1;
-          if (null == nq.field_G) {
-            nq.field_G = new Sprite(var9, var10);
-            PacketBuffer.a(-54, nq.field_G);
+          if (null == TournamentChampionDialog.field_G) {
+            TournamentChampionDialog.field_G = new Sprite(var9, var10);
+            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
             var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
-            nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
+            TournamentChampionDialog.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
-          if (nq.field_G.field_q < var9) {
-            nq.field_G = new Sprite(var9, var10);
-            PacketBuffer.a(-54, nq.field_G);
+          if (TournamentChampionDialog.field_G.field_q < var9) {
+            TournamentChampionDialog.field_G = new Sprite(var9, var10);
+            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
             var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
-            nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
+            TournamentChampionDialog.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
-          if (nq.field_G.field_w < var10) {
-            nq.field_G = new Sprite(var9, var10);
-            PacketBuffer.a(-54, nq.field_G);
+          if (TournamentChampionDialog.field_G.field_w < var10) {
+            TournamentChampionDialog.field_G = new Sprite(var9, var10);
+            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
             var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
-            nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
+            TournamentChampionDialog.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
-          PacketBuffer.a(116, nq.field_G);
+          PacketBuffer.a(116, TournamentChampionDialog.field_G);
           SoftwareRasterizer.b();
           var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
           TeamManagementScreen.e(120);
-          nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
+          TournamentChampionDialog.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
           return;
         }
         if (var8 == en.field_p) {
           var16 = LoggedPlayer.field_g[0];
           var9Lifetime1 = var16.field_o << 1;
           var10Lifetime1 = var16.field_v << 1;
-          if (null == nq.field_G) {
-            nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
-            PacketBuffer.a(-54, nq.field_G);
+          if (null == TournamentChampionDialog.field_G) {
+            TournamentChampionDialog.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
+            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
             var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
-            nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
+            TournamentChampionDialog.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
-          if (nq.field_G.field_q < var9Lifetime1) {
-            nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
-            PacketBuffer.a(-54, nq.field_G);
+          if (TournamentChampionDialog.field_G.field_q < var9Lifetime1) {
+            TournamentChampionDialog.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
+            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
             var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
-            nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
+            TournamentChampionDialog.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
-          if (nq.field_G.field_w < var10Lifetime1) {
-            nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
-            PacketBuffer.a(-54, nq.field_G);
+          if (TournamentChampionDialog.field_G.field_w < var10Lifetime1) {
+            TournamentChampionDialog.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
+            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
             var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
-            nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
+            TournamentChampionDialog.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
-          PacketBuffer.a(116, nq.field_G);
+          PacketBuffer.a(116, TournamentChampionDialog.field_G);
           SoftwareRasterizer.b();
           var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
           TeamManagementScreen.e(120);
-          nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
+          TournamentChampionDialog.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
           return;
         }
         if (PitchOptionTile.field_Bb == var8) {
@@ -131,7 +131,7 @@ final class gb extends TextButton {
           var13.drawAdditive(-(var13.field_q >> 1) + var5, -(var13.field_w >> 1) + var6, 256);
           return;
         }
-        if (var8 != he.field_yb) {
+        if (var8 != LobbyPlayerRow.field_yb) {
           return;
         }
         Sprite var12 = LoggedPlayer.field_g[1];

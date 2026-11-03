@@ -9,7 +9,7 @@ final class rr {
     static String field_d;
     static String field_h;
     static String field_c;
-    static ji field_b;
+    static ScrollBar field_b;
 
     final static MenuButton[] a(int[] param0, MenuButton[] param1, int param2) {
         int var4 = 0;
@@ -119,7 +119,7 @@ final class rr {
     final static void a(String param0, byte param1, long param2) {
         CharSequence var5 = null;
         try {
-          at.field_Kb = param0;
+          TrinketTile.field_Kb = param0;
           if (param1 != -70) {
             rr.a(36, '+');
           }

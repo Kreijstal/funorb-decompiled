@@ -101,8 +101,8 @@ final class en extends sr {
           if (param0 != 2) {
             en.b(83, 32);
           }
-          var6 = ce.field_G[var8.playerType][var8.surnameIndex];
-          var7 = ce.field_G[var5.playerType][var5.surnameIndex];
+          var6 = BuyPlayerDialog.field_G[var8.playerType][var8.surnameIndex];
+          var7 = BuyPlayerDialog.field_G[var5.playerType][var5.surnameIndex];
           stackIn_3_0 = var6.compareTo(var7) ^ this.field_i << 31;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

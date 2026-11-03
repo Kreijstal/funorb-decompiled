@@ -11,9 +11,9 @@ abstract class ModalPanel extends WidgetContainer {
     static UiLayoutNode field_D;
 
     final static IndexedSprite h(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], pq.field_O[0], lt.field_a);
+        IndexedSprite var1 = new IndexedSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], SquadPickerDialog.field_O[0], lt.field_a);
         int var2 = 103 / ((param0 + 65) / 46);
-        tk.h((byte) -98);
+        ScrollContainer.h((byte) -98);
         return var1;
     }
 
@@ -78,14 +78,14 @@ abstract class ModalPanel extends WidgetContainer {
         if (param0 == 78) {
           for (var2 = 0; MenuButton.field_l > var2; var2++) {
             var3 = MouseInputHandler.field_c[var2] * PasswordValidator.field_j[var2];
-            var4 = pq.field_O[var2];
+            var4 = SquadPickerDialog.field_O[var2];
             var5 = new int[var3];
             for (var6 = 0; var3 > var6; var6++) {
               var5[var6] = lt.field_a[qj.b((int) var4[var6], 255)];
             }
             var1[var2] = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var5);
           }
-          tk.h((byte) -70);
+          ScrollContainer.h((byte) -70);
           return var1;
         }
         return (Sprite[]) null;

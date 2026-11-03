@@ -31,7 +31,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         AnimationSkeleton.field_k = GameLoopApplet.field_E.field_t;
         uv.field_f = false;
         LineupView.field_y.b(72);
-        nq.b(AnimationSkeleton.field_k, 500);
+        TournamentChampionDialog.b(AnimationSkeleton.field_k, 500);
     }
 
     final static String a(char param0, byte param1) {
@@ -86,15 +86,15 @@ final class LeaguesScreen extends ButtonMenuScreen {
           FadingSoundPlayer.field_w = FadingSoundPlayer.field_w - 1;
         }
         var5 = AnimationSkeleton.field_k;
-        if (sd.field_b + un.field_d.a(gu.field_Jb) >= 20) {
+        if (sd.field_b + un.field_d.a(ContextMenu.field_Jb) >= 20) {
           sd.field_b = sd.field_b - 1;
         } else {
           sd.field_b = 370;
         }
         var6 = 0;
-        for (var7 = 0; var7 < ha.field_H.length; var7++) {
-          if (ha.field_H[var7].field_sb == 1) {
-            nq.b(var7, 500);
+        for (var7 = 0; var7 < WelcomeDialog.field_H.length; var7++) {
+          if (WelcomeDialog.field_H[var7].field_sb == 1) {
+            TournamentChampionDialog.b(var7, 500);
             AnimationSkeleton.field_k = var7;
             SquadGridWidget.field_Gb = 0;
             var5 = var7;
@@ -103,7 +103,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
             var6 = 1;
           }
         }
-        if (1 == np.field_Cb.field_sb &&
+        if (1 == ScrollPane.field_Cb.field_sb &&
           w.field_b.j((byte) -16).length() > 0) {
           ShopPlayerSlot.a(w.field_b.j((byte) -16), (byte) 74);
           w.field_b.b("", -23174);
@@ -139,8 +139,8 @@ final class LeaguesScreen extends ButtonMenuScreen {
           IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, IterableNodeHashTable.field_a);
         }
         var7 = 0;
-        while (var7 < ha.field_H.length) {
-          stackIn_42_0 = ha.field_H[var7].field_gb;
+        while (var7 < WelcomeDialog.field_H.length) {
+          stackIn_42_0 = WelcomeDialog.field_H[var7].field_gb;
           if (stackIn_42_0) {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, fu.field_f, new String[]{q.field_h[var7]}));
           }
@@ -162,10 +162,10 @@ final class LeaguesScreen extends ButtonMenuScreen {
     final void buildWidgets(int param0) {
         int var6 = 0;
         int var7 = Kickabout.field_G;
-        if (gu.field_Jb == null) {
-          gu.field_Jb = om.field_zb;
+        if (ContextMenu.field_Jb == null) {
+          ContextMenu.field_Jb = IconLabel.field_zb;
           if (PlayArea.a(100)) {
-            gu.field_Jb = SectorCacheStore.field_g;
+            ContextMenu.field_Jb = SectorCacheStore.field_g;
           }
         }
         MenuButton.field_e = new UiLayoutNode();
@@ -177,7 +177,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         var8.field_X = (BitmapFont) ((Object) q.field_d);
         UiLayoutNode var3 = new UiLayoutNode();
         var3.a(true, 317, 5, 5, 18);
-        AuctionTableWidget.field_Hb = new tk(0L, var3, var8, rr.field_b);
+        AuctionTableWidget.field_Hb = new ScrollContainer(0L, var3, var8, rr.field_b);
         AuctionTableWidget.field_Hb.a(15, 20, 2, (byte) 37, 230, 344, 175);
         AuctionTableWidget.field_Hb.field_A = 1;
         AuctionTableWidget.field_Hb.field_y = 16777215;
@@ -189,21 +189,21 @@ final class LeaguesScreen extends ButtonMenuScreen {
         var5.field_B = 2;
         var5.field_X = (BitmapFont) ((Object) q.field_d);
         var5.field_D = 5;
-        w.field_b = new vg(0L, var8, var4, var5, 20);
+        w.field_b = new TextFieldNode(0L, var8, var4, var5, 20);
         w.field_b.a(param0 - 592, 145, 64, 4 + (q.field_d.field_G + q.field_d.field_p), 160);
         var8.field_X = (BitmapFont) ((Object) q.field_d);
         w.field_b.field_R = null;
-        np.field_Cb = eo.a(ic.field_j, 7126504);
-        np.field_Cb.a(true, np.field_Cb.field_q, 310, 61, np.field_Cb.field_mb);
-        ha.field_H = new UiLayoutNode[7];
+        ScrollPane.field_Cb = eo.a(ic.field_j, 7126504);
+        ScrollPane.field_Cb.a(true, ScrollPane.field_Cb.field_q, 310, 61, ScrollPane.field_Cb.field_mb);
+        WelcomeDialog.field_H = new UiLayoutNode[7];
         for (var6 = 6; var6 >= 0; var6--) {
-          ha.field_H[var6] = new UiLayoutNode();
-          ha.field_H[var6].a(true, 48, 20 + 50 * var6, 96, 48);
-          MenuButton.field_e.addChild((byte) -127, ha.field_H[var6]);
+          WelcomeDialog.field_H[var6] = new UiLayoutNode();
+          WelcomeDialog.field_H[var6].a(true, 48, 20 + 50 * var6, 96, 48);
+          MenuButton.field_e.addChild((byte) -127, WelcomeDialog.field_H[var6]);
         }
         MenuButton.field_e.addChild((byte) -126, (UiLayoutNode) (AuctionTableWidget.field_Hb));
         MenuButton.field_e.addChild((byte) -106, (UiLayoutNode) (w.field_b));
-        MenuButton.field_e.addChild((byte) -112, np.field_Cb);
+        MenuButton.field_e.addChild((byte) -112, ScrollPane.field_Cb);
         if (!PlayArea.a(100)) {
           ShopPlayerSlot.a(ArchiveSource.field_e, (byte) 74);
         }
@@ -249,16 +249,16 @@ final class LeaguesScreen extends ButtonMenuScreen {
         UiLayoutNode stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         boolean stackIn_27_2 = false;
-        ji var3;
+        ScrollBar var3;
         String var3_ref;
         int var4;
         int var5;
         int var6;
-        cf var7;
+        RankingRowNode var7;
         int var4Lifetime1;
         var6 = Kickabout.field_G;
         SoftwareRasterizer.a(AuctionTableWidget.field_Hb.field_F + this.slideOffsetX, -4 + AuctionTableWidget.field_Hb.field_T, AuctionTableWidget.field_Hb.field_q + 4, AuctionTableWidget.field_Hb.field_mb + 6, 0, 128);
-        SoftwareRasterizer.a(this.slideOffsetX + 20, 60, 134 + w.field_b.field_q + np.field_Cb.field_q, 29, 10, 0, 128);
+        SoftwareRasterizer.a(this.slideOffsetX + 20, 60, 134 + w.field_b.field_q + ScrollPane.field_Cb.field_q, 29, 10, 0, 128);
         q.field_d.c(ArchiveNetworkClient.field_e.toUpperCase(), w.field_b.field_F, w.field_b.field_T + 15, 16777215, -1);
         SoftwareRasterizer.a(w.field_b.field_F, w.field_b.field_T + 4, w.field_b.field_q, w.field_b.field_mb - 5, 7829367, 128);
         if (AuctionTableWidget.field_Hb.field_Eb.isLinked((byte) -113)) {
@@ -266,16 +266,16 @@ final class LeaguesScreen extends ButtonMenuScreen {
           SoftwareRasterizer.darkenRectangle(3 + (((UiLayoutNode) ((Object) var3)).field_F + this.slideOffsetX), ((UiLayoutNode) ((Object) var3)).field_T, ((UiLayoutNode) ((Object) var3)).field_q - 6, ((UiLayoutNode) ((Object) var3)).field_mb);
         }
         AuctionListing.a(640, -22914, 0, 135, 60);
-        for (var3_int = 0; ha.field_H.length > var3_int; var3_int++) {
+        for (var3_int = 0; WelcomeDialog.field_H.length > var3_int; var3_int++) {
           stackIn_7_0 = (~AnimationSkeleton.field_k != ~var3_int) ? 0 : 1;
           var4 = stackIn_7_0;
           stackIn_10_0 = (var4 != 0) ? 256 : 128;
           var5 = stackIn_10_0;
-          SoftwareRasterizer.a(ha.field_H[var3_int].field_F, ha.field_H[var3_int].field_T, ha.field_H[var3_int].field_q, ha.field_H[var3_int].field_mb, 10, 0, var5);
+          SoftwareRasterizer.a(WelcomeDialog.field_H[var3_int].field_F, WelcomeDialog.field_H[var3_int].field_T, WelcomeDialog.field_H[var3_int].field_q, WelcomeDialog.field_H[var3_int].field_mb, 10, 0, var5);
           if (var4 == 0) {
-            DelayedServerPacket.field_i[var3_int].b(ha.field_H[var3_int].field_F + 4, ha.field_H[var3_int].field_T - 2, 48);
+            DelayedServerPacket.field_i[var3_int].b(WelcomeDialog.field_H[var3_int].field_F + 4, WelcomeDialog.field_H[var3_int].field_T - 2, 48);
           } else {
-            WriteIntegersCommand.field_E[var3_int].c(ha.field_H[var3_int].field_F + 4, ha.field_H[var3_int].field_T - 2);
+            WriteIntegersCommand.field_E[var3_int].c(WelcomeDialog.field_H[var3_int].field_F + 4, WelcomeDialog.field_H[var3_int].field_T - 2);
           }
         }
         TeamManagementScreen.e(param0 ^ -122);
@@ -298,10 +298,10 @@ final class LeaguesScreen extends ButtonMenuScreen {
         ((UiLayoutNode) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2);
         if (AuctionTableWidget.field_Hb.field_Db.field_jb != null) {
           AuctionListing.a(-2 + AuctionTableWidget.field_Hb.field_q + (AuctionTableWidget.field_Hb.field_F - 15), -22914, AuctionTableWidget.field_Hb.field_F, 12 + (AuctionTableWidget.field_Hb.field_T - (-AuctionTableWidget.field_Hb.field_mb + 15)), AuctionTableWidget.field_Hb.field_T);
-          var7 = (cf) (AuctionTableWidget.field_Hb.field_Db.field_jb.g(24009));
+          var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.g(24009));
           while (var7 != null) {
             var7.b(-104);
-            var7 = (cf) (AuctionTableWidget.field_Hb.field_Db.field_jb.c(param0 ^ -38));
+            var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.c(param0 ^ -38));
           }
           TeamManagementScreen.e(118);
         }
@@ -322,7 +322,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         if (FadingSoundPlayer.field_w > 0) {
           un.field_d.d(SectorCacheStore.field_e.toLowerCase(), (AuctionTableWidget.field_Hb.field_q >> 1) + AuctionTableWidget.field_Hb.field_F, 423, 16679959, -1);
         } else {
-          un.field_d.a(gu.field_Jb.toLowerCase(), sd.field_b + this.slideOffsetX, 423, 16679959, -1);
+          un.field_d.a(ContextMenu.field_Jb.toLowerCase(), sd.field_b + this.slideOffsetX, 423, 16679959, -1);
         }
         TeamManagementScreen.e(param0 + 128);
         if (PlayArea.a(100) ||

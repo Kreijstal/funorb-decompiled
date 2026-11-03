@@ -257,7 +257,7 @@ final class ea {
           return;
         }
         if (null == su.field_c) {
-          su.field_c = (jb) ((Object) new i(param0));
+          su.field_c = (PopupDialog) ((Object) new MessageDialog(param0));
         }
     }
 

@@ -229,12 +229,12 @@ final class IsaacRandom {
             }
             var7 = stackIn_8_0;
             var8 = param0.substring(var6, var7);
-            if (rb.field_Mb == var5.field_k) {
+            if (TextPromptDialog.field_Mb == var5.field_k) {
               discarded$0 = var3.append("<col=66ffff>").append(var8).append("</col>");
             } else {
               if (var5.field_k != v.field_d) {
-                if (vu.field_Ab != var5.field_k) {
-                  if (pv.field_H == var5.field_k) {
+                if (ContextMenuItem.field_Ab != var5.field_k) {
+                  if (HelpTipDialog.field_H == var5.field_k) {
                     discarded$1 = var3.append("<col=ffaaff>").append(var8).append("</col>");
                   } else {
                     if (var5.field_k != GameModesHelpScreen.field_N) {

@@ -16,19 +16,19 @@ final class GameModesHelpScreen extends PagedHelpScreen {
     static ArgbSprite field_L;
     static AppScreen field_G;
 
-    final static void a(boolean param0, int param1, PacketBuffer param2, qb param3) {
+    final static void a(boolean param0, int param1, PacketBuffer param2, GameSetupPanel param3) {
         int var8 = 0;
-        qb stackIn_5_0 = null;
+        GameSetupPanel stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
-        qb stackIn_8_0 = null;
+        GameSetupPanel stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        qb stackIn_11_0 = null;
+        GameSetupPanel stackIn_11_0 = null;
         int stackIn_12_1 = 0;
-        qb stackIn_14_0 = null;
+        GameSetupPanel stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
-        qb stackIn_18_0 = null;
+        GameSetupPanel stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        qb stackIn_21_0 = null;
+        GameSetupPanel stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
@@ -44,7 +44,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
-        qb var10 = null;
+        GameSetupPanel var10 = null;
         var9 = Kickabout.field_G;
         try {
           if (param0) {
@@ -53,26 +53,26 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           param3.field_bc = param2.readUnsignedByte((byte) -123);
           param3.field_Wb = param2.readUnsignedByte((byte) -126);
           var4_int = param2.readUnsignedByte((byte) -109);
-          stackIn_5_0 = (qb) (param3);
+          stackIn_5_0 = (GameSetupPanel) (param3);
           stackIn_6_1 = (0 != (128 & var4_int));
           stackIn_5_0.field_yb = stackIn_6_1;
-          stackIn_8_0 = (qb) (param3);
+          stackIn_8_0 = (GameSetupPanel) (param3);
           stackIn_9_1 = ((var4_int & 64) != 0);
           stackIn_8_0.field_Cb = stackIn_9_1;
-          stackIn_11_0 = (qb) (param3);
+          stackIn_11_0 = (GameSetupPanel) (param3);
           if ((var4_int & 16) != 0) {
             stackIn_12_1 = 2;
           } else {
             stackIn_12_1 = 1;
           }
           stackIn_11_0.field_Mb = stackIn_12_1;
-          stackIn_14_0 = (qb) (param3);
+          stackIn_14_0 = (GameSetupPanel) (param3);
           stackIn_15_1 = ((var4_int & 32) != 0);
           stackIn_14_0.field_Ub = stackIn_15_1;
-          stackIn_18_0 = (qb) (param3);
+          stackIn_18_0 = (GameSetupPanel) (param3);
           stackIn_19_1 = (param3.field_yb) && (param3.field_bc > param3.field_gc);
           stackIn_18_0.field_Xb = stackIn_19_1;
-          stackIn_21_0 = (qb) (param3);
+          stackIn_21_0 = (GameSetupPanel) (param3);
           stackIn_22_1 = ((8 & var4_int) != 0);
           stackIn_21_0.field_ic = stackIn_22_1;
           stackIn_25_0 = ((4 & var4_int) == 0) ? 0 : 1;
@@ -89,8 +89,8 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           }
           param3.field_Nb = param2.readLong((byte) -124);
           if (param1 < 113) {
-            var10 = (qb) null;
-            GameModesHelpScreen.a(true, -32, (PacketBuffer) null, (qb) null);
+            var10 = (GameSetupPanel) null;
+            GameModesHelpScreen.a(true, -32, (PacketBuffer) null, (GameSetupPanel) null);
           }
           var7 = param2.field_n;
           param3.field_ec = param2.readString(22);
@@ -282,7 +282,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         if (this.pageIndex == 1) {
           SoftwareRasterizer.a(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
           var6 -= 50;
-          IsSixCommand.field_C.a(jb.field_h, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
+          IsSixCommand.field_C.a(PopupDialog.field_h, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           var4 += 50;
           for (var11Lifetime1 = 0; var11Lifetime1 < 2; var11Lifetime1++) {
             stackIn_26_0 = (1 != var11Lifetime1) ? 0 : 1;
@@ -489,7 +489,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           var5.speed = 50;
           var5.playerType = var4;
           var5.tackle = 50;
-          var5.surnameIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-110, ce.field_G[var5.playerType].length, var7);
+          var5.surnameIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-110, BuyPlayerDialog.field_G[var5.playerType].length, var7);
           var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-92, td.field_a.length, var7);
           var5.appearance = var5.appearance | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, 3, var7);
           var5.appearance = var5.appearance | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, 3, var7) << 4;

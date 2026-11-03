@@ -131,12 +131,12 @@ final class RankingsScreen extends ButtonMenuScreen {
         }
     }
 
-    final static qb b(int param0, byte param1) {
+    final static GameSetupPanel b(int param0, byte param1) {
         if (param1 == -52) {
-          return null != sr.field_f ? (qb) (sr.field_f.a(param1 - 3559, (long)param0)) : null;
+          return null != sr.field_f ? (GameSetupPanel) (sr.field_f.a(param1 - 3559, (long)param0)) : null;
         }
         field_B = (boolean[]) null;
-        return null != sr.field_f ? (qb) (sr.field_f.a(param1 - 3559, (long)param0)) : null;
+        return null != sr.field_f ? (GameSetupPanel) (sr.field_f.a(param1 - 3559, (long)param0)) : null;
     }
 
     private final void drawLoginRequiredText(byte param0) {
@@ -152,7 +152,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         if (param0 != 25) {
           return;
         }
-        np.field_Jb.a(new pq(), 3);
+        ScrollPane.field_Jb.a(new SquadPickerDialog(), 3);
     }
 
     final int buttonCenterX(int param0, int param1) {

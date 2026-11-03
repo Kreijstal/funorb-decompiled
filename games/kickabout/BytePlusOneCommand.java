@@ -10,7 +10,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
     static int[] field_E;
     static boolean field_C;
 
-    final static void a(UiLayoutNode param0, boolean param1, np param2, int param3, String param4, int[] param5, long param6, String param7, int param8) {
+    final static void a(UiLayoutNode param0, boolean param1, ScrollPane param2, int param3, String param4, int[] param5, long param6, String param7, int param8) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -69,7 +69,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         }
     }
 
-    final static void a(BitmapFont param0, UiLayoutNode param1, UiLayoutNode param2, na param3, UiLayoutNode param4, boolean param5, UiLayoutNode param6, UiLayoutNode param7, UiLayoutNode param8, UiLayoutNode param9, int param10, UiLayoutNode param11) {
+    final static void a(BitmapFont param0, UiLayoutNode param1, UiLayoutNode param2, VerticalScrollbar param3, UiLayoutNode param4, boolean param5, UiLayoutNode param6, UiLayoutNode param7, UiLayoutNode param8, UiLayoutNode param9, int param10, UiLayoutNode param11) {
         String stackIn_13_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_41_0 = null;
@@ -135,8 +135,8 @@ final class BytePlusOneCommand extends ConsoleCommand {
           g.field_a.addChild((byte) -121, uf.field_b);
           var17 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var17.field_jb = new IntrusiveDeque();
-          pw.field_G = new np(0L, var17, param1, param3);
-          uf.field_b.addChild((byte) -110, (UiLayoutNode) (pw.field_G));
+          AuctionSettingsDialog.field_G = new ScrollPane(0L, var17, param1, param3);
+          uf.field_b.addChild((byte) -110, (UiLayoutNode) (AuctionSettingsDialog.field_G));
           DebugConsole.field_z = new UiLayoutNode(0L, param11);
           uf.field_b.addChild((byte) -128, DebugConsole.field_z);
           ei.field_b = new UiLayoutNode(0L, param9);
@@ -308,7 +308,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         try {
           field_G = null;
           if (param0 != 52) {
-            BytePlusOneCommand.a((BitmapFont) null, (UiLayoutNode) null, (UiLayoutNode) null, (na) null, (UiLayoutNode) null, true, (UiLayoutNode) null, (UiLayoutNode) null, (UiLayoutNode) null, (UiLayoutNode) null, -39, (UiLayoutNode) null);
+            BytePlusOneCommand.a((BitmapFont) null, (UiLayoutNode) null, (UiLayoutNode) null, (VerticalScrollbar) null, (UiLayoutNode) null, true, (UiLayoutNode) null, (UiLayoutNode) null, (UiLayoutNode) null, (UiLayoutNode) null, -39, (UiLayoutNode) null);
           }
           field_D = null;
           field_E = null;

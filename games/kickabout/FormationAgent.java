@@ -161,7 +161,7 @@ final class FormationAgent extends MatchAgent {
         RuntimeException var2 = null;
         try {
           if (vj.field_c == 11) {
-            dn.a(-127);
+            TrinketIcon.a(-127);
           }
           IntDoubleCommand.a(InstrumentNoteMask.field_j, ts.field_b, m.field_h, (byte) 84);
           su.a(param1 ^ -23390, 0, 0, param0);

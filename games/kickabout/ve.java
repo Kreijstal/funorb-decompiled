@@ -45,8 +45,8 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         return bo.field_Cb.a("park", -16248);
     }
 
-    final static void a(qb param0, byte param1) {
-        qb var2 = null;
+    final static void a(GameSetupPanel param0, byte param1) {
+        GameSetupPanel var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -59,10 +59,10 @@ final class ve extends ResizableModalPanel implements ButtonListener {
             return;
           }
           param0.c((byte) -109);
-          var2 = (qb) (SquadSlotWidget.field_yb.g(24009));
+          var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.g(24009));
           while (var2 != null) {
             if (var2.a(param1 + 20843, param0)) {
-              var2 = (qb) (SquadSlotWidget.field_yb.c(33));
+              var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.c(33));
               continue;
             }
             break;

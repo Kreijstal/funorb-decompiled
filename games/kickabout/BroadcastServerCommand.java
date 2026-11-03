@@ -73,7 +73,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             return stackIn_20_0;
           }
           if (hi.a(0, param2)) {
-            stackIn_24_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, at.field_Gb, new String[]{param2});
+            stackIn_24_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketTile.field_Gb, new String[]{param2});
             return stackIn_24_0;
           }
           var5 = or.field_d;

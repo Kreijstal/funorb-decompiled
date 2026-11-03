@@ -41,7 +41,7 @@ class TextInputWidget extends TextButton {
           if (param0) {
             field_E = (Sprite) null;
           }
-          var2_int = PlayerInputEvent.a(bl.field_c, (byte) -105, tk.field_Ib);
+          var2_int = PlayerInputEvent.a(bl.field_c, (byte) -105, ScrollContainer.field_Ib);
           if (1 == var2_int) {
             param1 = "<img=0>" + param1;
           }

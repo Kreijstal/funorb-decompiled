@@ -75,20 +75,20 @@ final class ThreeCommand extends ConsoleCommand {
 
     final static void a(float param0, int param1, float param2, float param3, float param4, float param5, float param6) {
         if (ServerMessageScreen.field_D == null) {
-          vg.field_Bb = new PcmStreamMixer();
-          ServerMessageScreen.field_D = new ReverbPcmStream(vg.field_Bb);
+          TextFieldNode.field_Bb = new PcmStreamMixer();
+          ServerMessageScreen.field_D = new ReverbPcmStream(TextFieldNode.field_Bb);
           pi.field_b.addSubStream(ServerMessageScreen.field_D);
           IndexedSpriteState.field_c = new IntrusiveDeque();
         } else {
-          if (null == vg.field_Bb) {
-            vg.field_Bb = new PcmStreamMixer();
-            ServerMessageScreen.field_D = new ReverbPcmStream(vg.field_Bb);
+          if (null == TextFieldNode.field_Bb) {
+            TextFieldNode.field_Bb = new PcmStreamMixer();
+            ServerMessageScreen.field_D = new ReverbPcmStream(TextFieldNode.field_Bb);
             pi.field_b.addSubStream(ServerMessageScreen.field_D);
             IndexedSpriteState.field_c = new IntrusiveDeque();
           } else {
             if (null == IndexedSpriteState.field_c) {
-              vg.field_Bb = new PcmStreamMixer();
-              ServerMessageScreen.field_D = new ReverbPcmStream(vg.field_Bb);
+              TextFieldNode.field_Bb = new PcmStreamMixer();
+              ServerMessageScreen.field_D = new ReverbPcmStream(TextFieldNode.field_Bb);
               pi.field_b.addSubStream(ServerMessageScreen.field_D);
               IndexedSpriteState.field_c = new IntrusiveDeque();
             }

@@ -277,7 +277,7 @@ final class MenuButton {
         if (this.field_r &&
           param2 &&
           param4 != this.field_f) {
-          param4 = param4 + (wo.field_m - aw.field_J);
+          param4 = param4 + (wo.field_m - TutorialChoiceDialog.field_J);
           var6 = DateInputWidget.k(param3 + 240);
           var7 = param4 * var6 / wo.field_m;
           if (var7 < 0) {
@@ -303,14 +303,14 @@ final class MenuButton {
         }
         ok.field_c = param5;
         CachedListingRow.field_j = param2 ? true : false;
-        na.field_Ib = param3;
+        VerticalScrollbar.field_Ib = param3;
         if (param1 != 0) {
           return;
         }
         try {
           AccountTermsPanel.field_G = param4;
           AuctionItem.field_e = 3;
-          i.field_x = param0;
+          MessageDialog.field_x = param0;
           cr.field_c = param6;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "io.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
@@ -457,7 +457,7 @@ final class MenuButton {
         }
         if (this.field_r) {
           var5 = this.field_k >> 1;
-          param1 = param1 + (-20 + (-wo.field_m + aw.field_J) - var5);
+          param1 = param1 + (-20 + (-wo.field_m + TutorialChoiceDialog.field_J) - var5);
           var6 = param1 - (-var5 - 20);
           SoftwareRasterizer.e(var6, param0 - 2, wo.field_m, 4, 65793);
           if (this.kind != 17) {

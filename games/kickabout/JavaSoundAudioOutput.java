@@ -102,7 +102,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
           this.field_y.start();
           this.field_w = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (pq.b(170, param0) != 1) {
+          if (SquadPickerDialog.b(170, param0) != 1) {
             this.openDevice(ig.a((byte) 6, param0));
             return;
           }

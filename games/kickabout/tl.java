@@ -231,9 +231,9 @@ final class tl {
             !var5.equals("false")) {
             if (var5.charAt(0) != 45 &&
               !Character.isDigit(var5.charAt(0))) {
-              var4Lifetime1 = vu.field_Ab;
+              var4Lifetime1 = ContextMenuItem.field_Ab;
             } else {
-              var4Lifetime1 = pv.field_H;
+              var4Lifetime1 = HelpTipDialog.field_H;
             }
           } else {
             var4Lifetime1 = GameModesHelpScreen.field_N;

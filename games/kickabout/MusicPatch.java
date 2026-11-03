@@ -77,17 +77,17 @@ final class MusicPatch extends IntrusiveNode {
         var10 = Kickabout.field_G;
         try {
           if (!vl.field_d &&
-            bm.field_I == 0) {
+            AuctionListingDialog.field_I == 0) {
             return;
           }
-          var1_int = -pq.field_Q.field_o + PasswordLoginCredentials.field_i;
+          var1_int = -SquadPickerDialog.field_Q.field_o + PasswordLoginCredentials.field_i;
           var2 = hq.field_d;
           if (param0 != 16777215) {
             MusicPatch.a(32);
           }
-          pq.field_Q.b(var1_int, var2, al.a(false, (byte) 51));
+          SquadPickerDialog.field_Q.b(var1_int, var2, al.a(false, (byte) 51));
           if (tb.field_w != null) {
-            AuctionListing.a(1 + var1_int + PitchOptionTile.field_yb, param0 ^ -16754303, 1 + var1_int, 1 + var2 + om.field_Bb, 1 + var2);
+            AuctionListing.a(1 + var1_int + PitchOptionTile.field_yb, param0 ^ -16754303, 1 + var1_int, 1 + var2 + IconLabel.field_Bb, 1 + var2);
             for (var3_int = 0; 2 > var3_int; var3_int++) {
               if (mk.field_c != -2) {
                 stackIn_17_0 = (var3_int != tb.field_w.field_g[mk.field_c].field_p) ? 0 : 1;

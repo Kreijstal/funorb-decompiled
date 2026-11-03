@@ -1906,7 +1906,7 @@ final class CommonGame {
           var5.field_z = param1.value;
           var8Lifetime1 = var5.directionMask(5339);
           var9 = uv.a(true, var7, var6);
-          stackIn_41_0 = (pq.b(170, var8Lifetime1 ^ var9) <= 1) ? 0 : 1;
+          stackIn_41_0 = (SquadPickerDialog.b(170, var8Lifetime1 ^ var9) <= 1) ? 0 : 1;
           var10 = stackIn_41_0;
           var5.field_h = var9;
           var5.setAction((byte) -31, 2);

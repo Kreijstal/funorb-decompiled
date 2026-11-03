@@ -90,8 +90,8 @@ final class fv implements hc {
             return stackIn_3_0;
           }
           var2_int = 0;
-          for (var3 = 0; vg.field_Db.length > var3; var3++) {
-            if (vg.field_Db[var3].field_c == param0) {
+          for (var3 = 0; TextFieldNode.field_Db.length > var3; var3++) {
+            if (TextFieldNode.field_Db[var3].field_c == param0) {
               var2_int++;
             }
           }
@@ -101,10 +101,10 @@ final class fv implements hc {
             var6 = (String) null;
             fv.a((byte) 41, (String) null);
           }
-          while (var4 < vg.field_Db.length) {
-            if (param0 == vg.field_Db[var4].field_c) {
-              if (!vg.field_Db[var4].field_d &&
-                !vg.field_Db[var4].b(32)) {
+          while (var4 < TextFieldNode.field_Db.length) {
+            if (param0 == TextFieldNode.field_Db[var4].field_c) {
+              if (!TextFieldNode.field_Db[var4].field_d &&
+                !TextFieldNode.field_Db[var4].b(32)) {
                 stackIn_19_0 = (int)(100.0 * (double)var3Lifetime1 / (double)var2_int);
                 return stackIn_19_0;
               }
@@ -165,7 +165,7 @@ final class fv implements hc {
             stackIn_20_0[stackIn_20_1] = stackIn_21_2;
           }
           if (ag.field_h != 0) {
-            var6[2] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, hg.field_F, new String[]{ad.formatCurrencyAmount(ag.field_h + ReflectionCheck.field_k, 26300)});
+            var6[2] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, PromotionDialog.field_F, new String[]{ad.formatCurrencyAmount(ag.field_h + ReflectionCheck.field_k, 26300)});
           }
           var7 = 0;
           var8 = 0;
@@ -201,7 +201,7 @@ final class fv implements hc {
             var3 = var24[1];
             var2 = var24[0];
             SoftwareRasterizer.a(var2 - 2, var3 - 2, 4 + var6_int, var7 + 4, 6, 65793, 200);
-            AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, na.field_Ib, i.field_x, cr.field_c, var3 + 3, CachedListingRow.field_j);
+            AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, VerticalScrollbar.field_Ib, MessageDialog.field_x, cr.field_c, var3 + 3, CachedListingRow.field_j);
           } else {
             if (AuctionItem.field_e == 6) {
               var6_int = pc.field_a.b(0) + 6;

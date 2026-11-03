@@ -12,7 +12,7 @@ final class jr extends im {
     private ReceivedAuctionItem field_Hb;
     static double field_Gb;
     private UiLayoutNode field_Jb;
-    private pu[] field_Eb;
+    private TrinketSlot[] field_Eb;
 
     final void c(int param0, boolean param1) {
         int var4 = 0;
@@ -27,7 +27,7 @@ final class jr extends im {
         var5 = Kickabout.field_G;
         if (!this.field_Lb) {
           if (AuctionLogEntry.e(15137)) {
-            stackIn_8_0 = (!np.h((byte) 19)) ? 1 : 0;
+            stackIn_8_0 = (!ScrollPane.h((byte) 19)) ? 1 : 0;
           } else {
             stackIn_8_0 = 0;
           }
@@ -353,8 +353,8 @@ final class jr extends im {
         Object var5 = null;
         int var6 = 0;
         int var7 = 0;
-        fn var9 = null;
-        pu var10 = null;
+        Trinket var9 = null;
+        TrinketSlot var10 = null;
         int var11 = 0;
         int var12 = 0;
         try {
@@ -381,7 +381,7 @@ final class jr extends im {
             stackIn_14_0 = un.field_d;
           }
           var5 = stackIn_14_0;
-          this.field_Jb = eo.a(he.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
+          this.field_Jb = eo.a(LobbyPlayerRow.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
           this.field_Cb = eo.a(mc.field_f, 7126504, (BitmapFont) (var5), 50, true);
           this.addChild((byte) -117, this.field_Jb);
           this.addChild((byte) -120, this.field_Cb);
@@ -392,10 +392,10 @@ final class jr extends im {
           this.field_Cb.field_J = 20;
           var6 = (this.field_Db[3] >> 1) + this.field_Db[2] + (this.field_Db[1] + this.field_Db[0]);
           var7 = this.field_mb >> 1;
-          this.field_Eb = new pu[this.field_Hb.playerStats.trinketIds.length];
+          this.field_Eb = new TrinketSlot[this.field_Hb.playerStats.trinketIds.length];
           for (var8 = 0; this.field_Eb.length > var8; var8++) {
             var9 = pa.field_g[this.field_Hb.playerStats.trinketIds[var8]];
-            var10 = new pu(var9, true);
+            var10 = new TrinketSlot(var9, true);
             var11 = var6;
             var12 = var7;
             if (this.field_Hb.playerStats.trinketIds.length == 2) {

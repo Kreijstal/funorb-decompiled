@@ -143,7 +143,7 @@ final class IntTripleCommand extends ConsoleCommand {
 
     final static void g(byte param0) {
         ou.a(0);
-        hk.field_G = true;
+        AuctionBidDialog.field_G = true;
         if (param0 != -54) {
           return;
         }
