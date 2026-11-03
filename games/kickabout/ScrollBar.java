@@ -121,7 +121,7 @@ final class ScrollBar extends UiLayoutNode {
               ee.field_b <= 0) {
               return;
             }
-            if (!td.field_b) {
+            if (!TrinketCatalog.field_b) {
               return;
             }
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
@@ -129,7 +129,7 @@ final class ScrollBar extends UiLayoutNode {
             return;
           }
           if (fj.field_a > 0) {
-            if (!td.field_b) {
+            if (!TrinketCatalog.field_b) {
               return;
             }
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
@@ -139,7 +139,7 @@ final class ScrollBar extends UiLayoutNode {
           if (ee.field_b <= 0) {
             return;
           }
-          if (td.field_b) {
+          if (TrinketCatalog.field_b) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
             tn.field_f.a(125, param1);
           }
@@ -153,24 +153,24 @@ final class ScrollBar extends UiLayoutNode {
             ee.field_b <= 0) {
             return;
           }
-          if (!td.field_b) {
+          if (!TrinketCatalog.field_b) {
             return;
           }
         } else {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-          kk.field_j.a(77, param1);
+          TriangleMesh.field_j.a(77, param1);
           if (param0 <= 10) {
             field_Eb = (String) null;
           }
           if (fj.field_a > 0) {
-            if (!td.field_b) {
+            if (!TrinketCatalog.field_b) {
               return;
             }
           } else {
             if (ee.field_b <= 0) {
               return;
             }
-            if (!td.field_b) {
+            if (!TrinketCatalog.field_b) {
               return;
             }
           }
@@ -244,7 +244,7 @@ final class ScrollBar extends UiLayoutNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -453,7 +453,7 @@ final class ScrollBar extends UiLayoutNode {
         if (0 != this.field_Gb) {
           return false;
         }
-        if (n.field_m < this.field_yb.field_v + this.field_yb.field_T - (-this.field_yb.field_mb - this.field_yb.field_L)) {
+        if (ArchiveManager.field_m < this.field_yb.field_v + this.field_yb.field_T - (-this.field_yb.field_mb - this.field_yb.field_L)) {
           return false;
         }
         this.field_Gb = 3;
@@ -667,7 +667,7 @@ final class ScrollBar extends UiLayoutNode {
             this.field_Gb = this.field_Gb - 1;
           }
           if (this.field_Gb == 0 &&
-            this.field_yb.field_v + this.field_yb.field_T > n.field_m) {
+            this.field_yb.field_v + this.field_yb.field_T > ArchiveManager.field_m) {
             this.field_Gb = 3;
             return true;
           }
@@ -683,10 +683,10 @@ final class ScrollBar extends UiLayoutNode {
         th.a((byte) -99);
         if (param0 != 0) {
           field_Eb = (String) null;
-          pn.field_z.b(22997);
+          StrongCacheEntry.field_z.b(22997);
           return;
         }
-        pn.field_z.b(22997);
+        StrongCacheEntry.field_z.b(22997);
     }
 
     static {

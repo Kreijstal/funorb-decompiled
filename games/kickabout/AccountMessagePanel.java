@@ -57,7 +57,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           }
           this.field_M[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qp.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qp.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           var4_int = null == this.field_D ? 0 : this.field_B.paragraphHeight(this.field_D, 260, this.field_B.field_G);
           this.a(22 + var4_int, 1, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

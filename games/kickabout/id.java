@@ -3,35 +3,35 @@
  */
 final class id extends TextWidgetPainter {
     static byte[] field_u;
-    private hf[] field_w;
+    private PainterStyle[] field_w;
     static r field_t;
-    private hf field_x;
+    private PainterStyle field_x;
     static ResourceArchive field_y;
     static String field_r;
     static int field_v;
     static UiLayoutNode field_s;
 
-    final hf a(int param0, int param1) {
+    final PainterStyle a(int param0, int param1) {
         if (param1 != -12085) {
-          return (hf) null;
+          return (PainterStyle) null;
         }
-        hf dupTemp$0 = new hf();
+        PainterStyle dupTemp$0 = new PainterStyle();
         this.field_w[param0] = dupTemp$0;
         return dupTemp$0;
     }
 
     private final void a(id param0, boolean param1, int param2) {
         int var4_int = 0;
-        hf dupTemp$0 = null;
-        hf stackIn_7_0 = null;
-        hf stackIn_8_1 = null;
+        PainterStyle dupTemp$0 = null;
+        PainterStyle stackIn_7_0 = null;
+        PainterStyle stackIn_8_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        hf var5 = null;
-        hf var6 = null;
+        PainterStyle var5 = null;
+        PainterStyle var6 = null;
         int var7 = 0;
         UiWidget var8 = null;
         var7 = Kickabout.field_G;
@@ -46,13 +46,13 @@ final class id extends TextWidgetPainter {
                 var6 = param0.field_w[var4_int];
                 stackIn_7_0 = var5;
                 if (var6 == null) {
-                  dupTemp$0 = new hf();
+                  dupTemp$0 = new PainterStyle();
                   param0.field_w[var4_int] = dupTemp$0;
                   stackIn_8_1 = dupTemp$0;
                 } else {
                   stackIn_8_1 = var6;
                 }
-                ((hf) (Object) stackIn_7_0).a(stackIn_8_1, -2147483648);
+                ((PainterStyle) (Object) stackIn_7_0).a(stackIn_8_1, -2147483648);
               }
             }
           } else {
@@ -73,7 +73,7 @@ final class id extends TextWidgetPainter {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -112,16 +112,16 @@ final class id extends TextWidgetPainter {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final void a(Sprite[] param0, int param1) {
         int var4 = 0;
-        hf[] var3 = null;
-        hf var5 = null;
+        PainterStyle[] var3 = null;
+        PainterStyle var5 = null;
         int var6 = 0;
-        hf[] var7 = null;
+        PainterStyle[] var7 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -151,7 +151,7 @@ final class id extends TextWidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -204,8 +204,8 @@ final class id extends TextWidgetPainter {
           var5 = DemoIntegersCommand.a(param3, 17369, "commonui", "screen_options");
           ConsoleEvaluationException.field_d = new IndexedSprite[4];
           BallAgent.field_f = new IndexedSprite[4];
-          kk.field_Q = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{kk.field_Q, BallAgent.field_f, ConsoleEvaluationException.field_d};
+          TriangleMesh.field_Q = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{TriangleMesh.field_Q, BallAgent.field_f, ConsoleEvaluationException.field_d};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -266,7 +266,7 @@ final class id extends TextWidgetPainter {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -277,14 +277,14 @@ final class id extends TextWidgetPainter {
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        hf var7 = null;
+        PainterStyle var7 = null;
         int var8 = 0;
         TextButton var10 = null;
-        hf var11 = null;
-        hf var12 = null;
-        hf var13 = null;
-        hf var14 = null;
-        hf var15 = null;
+        PainterStyle var11 = null;
+        PainterStyle var12 = null;
+        PainterStyle var13 = null;
+        PainterStyle var14 = null;
+        PainterStyle var15 = null;
         try {
           if (param3 instanceof TextButton) {
             stackIn_3_0 = (UiWidget) (param3);
@@ -345,16 +345,16 @@ final class id extends TextWidgetPainter {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param4).append(')').toString());
         }
     }
 
     public id() {
-        this.field_w = new hf[6];
-        this.field_x = new hf();
-        hf dupTemp$0 = new hf();
+        this.field_w = new PainterStyle[6];
+        this.field_x = new PainterStyle();
+        PainterStyle dupTemp$0 = new PainterStyle();
         this.field_w[0] = dupTemp$0;
-        hf var1 = dupTemp$0;
+        PainterStyle var1 = dupTemp$0;
         var1.a(-13136);
     }
 
@@ -374,14 +374,14 @@ final class id extends TextWidgetPainter {
         try {
           param0.a(this, param1, -116);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(Sprite param0, byte param1) {
-        hf[] var3 = null;
+        PainterStyle[] var3 = null;
         int var4 = 0;
-        hf var5 = null;
+        PainterStyle var5 = null;
         int var6 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -413,7 +413,7 @@ final class id extends TextWidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -423,11 +423,11 @@ final class id extends TextWidgetPainter {
           int var4_int = -99 / ((11 - param2) / 60);
           var5 = param0;
           if (this.field_w[var5] == null) {
-            this.field_w[var5] = new hf();
+            this.field_w[var5] = new PainterStyle();
           }
           this.field_w[param0].field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "id.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "id.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

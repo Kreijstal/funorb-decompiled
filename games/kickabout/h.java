@@ -133,18 +133,18 @@ final class h {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
-    final static tv a(int param0) {
+    final static ChatMessage a(int param0) {
         if (vb.field_j == 0) {
           return null;
         }
         if (param0 != 17475) {
-          return (tv) null;
+          return (ChatMessage) null;
         }
-        return fu.field_b[-1 + vb.field_j];
+        return GrowableIntList.field_b[-1 + vb.field_j];
     }
 
     public static void a(boolean param0) {

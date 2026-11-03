@@ -99,7 +99,7 @@ abstract class RasterBuffer {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ abstract class RasterBuffer {
             }
             if (var3_int > param1 &&
               var5 >= 0) {
-              n.field_f[var8] = c.field_a.toString().substring(var4, var5 - var7);
+              ArchiveManager.field_f[var8] = c.field_a.toString().substring(var4, var5 - var7);
               var8++;
               var4 = var5;
               var3_int = var3_int - var6;
@@ -183,13 +183,13 @@ abstract class RasterBuffer {
             }
           }
           if (var4 < c.field_a.length()) {
-            n.field_f[var8] = c.field_a.toString().substring(var4, c.field_a.length());
+            ArchiveManager.field_f[var8] = c.field_a.toString().substring(var4, c.field_a.length());
             var8++;
           }
           var10Lifetime1 = -13 % ((param2 - 77) / 44);
           var11 = new String[var8];
           for (var12 = 0; var8 > var12; var12++) {
-            var11[var12] = n.field_f[var12];
+            var11[var12] = ArchiveManager.field_f[var12];
           }
           stackIn_27_0 = var11;
           return stackIn_27_0;
@@ -203,7 +203,7 @@ abstract class RasterBuffer {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

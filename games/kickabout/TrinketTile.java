@@ -72,8 +72,8 @@ final class TrinketTile extends UiLayoutNode {
           var5 = SoftwareRasterizer.field_g;
           var6 = SoftwareRasterizer.field_f;
           var16 = SoftwareRasterizer.field_a;
-          ci.field_g = new Sprite(10, 14);
-          ci.field_g.e();
+          IterableDualLinkDeque.field_g = new Sprite(10, 14);
+          IterableDualLinkDeque.field_g.e();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
@@ -97,7 +97,7 @@ final class TrinketTile extends UiLayoutNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 

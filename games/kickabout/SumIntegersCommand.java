@@ -56,7 +56,7 @@ final class SumIntegersCommand extends ConsoleCommand {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class SumIntegersCommand extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class SumIntegersCommand extends ConsoleCommand {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class SumIntegersCommand extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "hm.A(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "hm.A(" + param0 + ',' + param1 + ')');
         }
     }
 

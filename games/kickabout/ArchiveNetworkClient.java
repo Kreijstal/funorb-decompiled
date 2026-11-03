@@ -54,10 +54,10 @@ abstract class ArchiveNetworkClient {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (hf.a(param0, -3)) {
+          if (PainterStyle.a(param0, -3)) {
             return false;
           }
-          if (qe.a(true, param0)) {
+          if (ArchivePreloader.a(true, param0)) {
             return false;
           }
           if (DebouncedValidationProvider.a(param0, (byte) 79)) {
@@ -95,7 +95,7 @@ abstract class ArchiveNetworkClient {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 

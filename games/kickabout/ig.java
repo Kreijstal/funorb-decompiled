@@ -45,17 +45,17 @@ final class ig {
         var5 = Kickabout.field_G;
         try {
           param0 = param0 >> 1;
-          vo.field_cb.c(param0 + qj.field_e, ArchiveNetworkClient.field_i);
-          AccountChoicePanel.field_C.c(param0 + qj.field_e, 18 + ArchiveNetworkClient.field_i);
+          vo.field_cb.c(param0 + TextLayoutLine.field_e, ArchiveNetworkClient.field_i);
+          AccountChoicePanel.field_C.c(param0 + TextLayoutLine.field_e, 18 + ArchiveNetworkClient.field_i);
           var2_int = 2;
           if (CachedArchiveSource.field_s > 1) {
             for (var3 = 1; var3 < CachedArchiveSource.field_s; var3++) {
-              AccountChoicePanel.field_C.c(qj.field_e + param0, 18 + ArchiveNetworkClient.field_i + var2_int);
+              AccountChoicePanel.field_C.c(TextLayoutLine.field_e + param0, 18 + ArchiveNetworkClient.field_i + var2_int);
               var2_int += 2;
             }
           }
-          du.field_i.c(qj.field_e + param0, ArchiveNetworkClient.field_i + (18 + var2_int));
-          un.field_d.a(qn.field_c, 13 + qj.field_e + param0, var2_int / 2 + (20 + ArchiveNetworkClient.field_i), 16777215, -1);
+          du.field_i.c(TextLayoutLine.field_e + param0, ArchiveNetworkClient.field_i + (18 + var2_int));
+          un.field_d.a(qn.field_c, 13 + TextLayoutLine.field_e + param0, var2_int / 2 + (20 + ArchiveNetworkClient.field_i), 16777215, -1);
           var3Lifetime1 = 0;
           if (param1 != -12452) {
             field_c = -16;
@@ -63,10 +63,10 @@ final class ig {
           var4 = 0;
           if (0 != dc.field_d) {
             var3Lifetime2 = 0;
-            AuctionListing.a(param0 + (qj.field_e + vo.field_cb.field_q), -22914, qj.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-vo.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
+            AuctionListing.a(param0 + (TextLayoutLine.field_e + vo.field_cb.field_q), -22914, TextLayoutLine.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-vo.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
             var4Lifetime1 = RankingRowNode.field_Db;
             while (var4Lifetime1 > 0) {
-              field_a[var4Lifetime1 % 10].c(qj.field_e + 140 + (-(var3Lifetime2 * field_a[0].field_q) + param0), 9 + (ArchiveNetworkClient.field_i - 2 * (-CachedArchiveSource.field_s + 18)));
+              field_a[var4Lifetime1 % 10].c(TextLayoutLine.field_e + 140 + (-(var3Lifetime2 * field_a[0].field_q) + param0), 9 + (ArchiveNetworkClient.field_i - 2 * (-CachedArchiveSource.field_s + 18)));
               var3Lifetime2++;
               var4Lifetime1 = var4Lifetime1 / 10;
             }
@@ -74,28 +74,28 @@ final class ig {
             var3Lifetime2Lifetime1 = 0;
             while (var4Lifetime1Lifetime1 > 0) {
               if (dc.field_d < 0) {
-                wk.field_d[var4Lifetime1Lifetime1 % 10].c(param0 - wk.field_d[0].field_q * var3Lifetime2Lifetime1 + (140 + qj.field_e), -36 - (-(2 * CachedArchiveSource.field_s) - (24 + ArchiveNetworkClient.field_i)));
+                wk.field_d[var4Lifetime1Lifetime1 % 10].c(param0 - wk.field_d[0].field_q * var3Lifetime2Lifetime1 + (140 + TextLayoutLine.field_e), -36 - (-(2 * CachedArchiveSource.field_s) - (24 + ArchiveNetworkClient.field_i)));
               } else {
-                gb.field_G[var4Lifetime1Lifetime1 % 10].c(param0 + qj.field_e + (140 - gb.field_G[0].field_q * var3Lifetime2Lifetime1), 24 + ArchiveNetworkClient.field_i - (18 - CachedArchiveSource.field_s) * 2);
+                gb.field_G[var4Lifetime1Lifetime1 % 10].c(param0 + TextLayoutLine.field_e + (140 - gb.field_G[0].field_q * var3Lifetime2Lifetime1), 24 + ArchiveNetworkClient.field_i - (18 - CachedArchiveSource.field_s) * 2);
               }
               var4Lifetime1Lifetime1 = var4Lifetime1Lifetime1 / 10;
               var3Lifetime2Lifetime1++;
             }
             if (dc.field_d < 0) {
-              un.field_d.a(vl.field_b, qj.field_e + (140 - var3Lifetime2Lifetime1 * field_a[0].field_q + param0), ArchiveNetworkClient.field_i - (-35 + 2 * (-CachedArchiveSource.field_s + 18)), 16729156, -1);
+              un.field_d.a(LoginMethod.field_b, TextLayoutLine.field_e + (140 - var3Lifetime2Lifetime1 * field_a[0].field_q + param0), ArchiveNetworkClient.field_i - (-35 + 2 * (-CachedArchiveSource.field_s + 18)), 16729156, -1);
             } else {
-              un.field_d.a(ks.field_b, -(var3Lifetime2Lifetime1 * field_a[0].field_q) + (qj.field_e + 140 + param0), 35 + ArchiveNetworkClient.field_i - 2 * (18 - CachedArchiveSource.field_s), 4521796, -1);
+              un.field_d.a(HuffmanCodec.field_b, -(var3Lifetime2Lifetime1 * field_a[0].field_q) + (TextLayoutLine.field_e + 140 + param0), 35 + ArchiveNetworkClient.field_i - 2 * (18 - CachedArchiveSource.field_s), 4521796, -1);
             }
-            un.field_d.a("-----------", 64 + qj.field_e, -(2 * (18 - CachedArchiveSource.field_s)) + 44 + ArchiveNetworkClient.field_i, 16777215, -1);
+            un.field_d.a("-----------", 64 + TextLayoutLine.field_e, -(2 * (18 - CachedArchiveSource.field_s)) + 44 + ArchiveNetworkClient.field_i, 16777215, -1);
             TeamManagementScreen.e(param1 ^ -12506);
           }
           var4Lifetime2 = GoalStateAgent.field_l;
           var3Lifetime3 = 0;
           if (var4Lifetime2 == 0) {
-            field_a[0].c(param0 + (140 + (qj.field_e - field_a[0].field_q * var3Lifetime3)), ArchiveNetworkClient.field_i + 7 + CachedArchiveSource.field_s * 2);
+            field_a[0].c(param0 + (140 + (TextLayoutLine.field_e - field_a[0].field_q * var3Lifetime3)), ArchiveNetworkClient.field_i + 7 + CachedArchiveSource.field_s * 2);
           }
           while (var4Lifetime2 > 0) {
-            field_a[var4Lifetime2 % 10].c(qj.field_e + 140 - (var3Lifetime3 * field_a[0].field_q - param0), ArchiveNetworkClient.field_i + 7 + 2 * CachedArchiveSource.field_s);
+            field_a[var4Lifetime2 % 10].c(TextLayoutLine.field_e + 140 - (var3Lifetime3 * field_a[0].field_q - param0), ArchiveNetworkClient.field_i + 7 + 2 * CachedArchiveSource.field_s);
             var3Lifetime3++;
             var4Lifetime2 = var4Lifetime2 / 10;
           }
@@ -103,7 +103,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "ig.C(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "ig.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class ig {
         int var4 = sh.a(70, param2);
         int var5 = AchievementsScreen.a((byte) -27, param3);
         RenderedFootballer var6 = (RenderedFootballer) (et.field_d.field_P[param3][param2]);
-        int var7 = !param0 ? 80 + qj.a(-6779, 480) : qj.a(-6779, 0) - 50;
+        int var7 = !param0 ? 80 + TextLayoutLine.a(-6779, 480) : TextLayoutLine.a(-6779, 0) - 50;
         if (var6.positionY != var5 &&
           tc.advanceToPoint(4, (byte) 106, var6.positionX, var6, var7 << 16)) {
           var6.a(var4, false, 0, var5);
@@ -142,7 +142,7 @@ final class ig {
           IntDoubleCommand.field_A = param0;
           TextFieldNode.field_Wb = true;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ig.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ig.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class ig {
               var4 = var8;
             }
           }
-          var5Lifetime1 = w.field_g;
+          var5Lifetime1 = DialogOverlay.field_g;
           for (var6_intLifetime1 = 0; var5Lifetime1.length > var6_intLifetime1; var6_intLifetime1++) {
             var18 = var5Lifetime1[var6_intLifetime1];
             var8Lifetime1 = ((BitmapFont) ((Object) var3)).a(var18);
@@ -219,7 +219,7 @@ final class ig {
           if (param0) {
             stackIn_23_0 = po.field_a;
           } else {
-            stackIn_23_0 = w.field_g;
+            stackIn_23_0 = DialogOverlay.field_g;
           }
           var21 = stackIn_23_0;
           var7 = var21;
@@ -250,7 +250,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3_ref), "ig.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3_ref), "ig.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

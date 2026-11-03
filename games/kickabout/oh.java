@@ -20,7 +20,7 @@ final class oh {
         return stackIn_6_0;
     }
 
-    final static void a(sr param0, int param1, Object[] param2, int param3, int param4) {
+    final static void a(SortCriterion param0, int param1, Object[] param2, int param3, int param4) {
         int var8 = 0;
         int incrementValue$0 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -47,7 +47,7 @@ final class oh {
             param2[var5_int] = param2[param1];
             param2[param1] = var7;
             for (var8 = param4; var8 < param1; var8++) {
-              if (param0.a(2, param2[var8], var7) <= 0) {
+              if (param0.compare(2, param2[var8], var7) <= 0) {
                 var9 = param2[var8];
                 param2[var8] = param2[var6];
                 incrementValue$0 = var6;
@@ -78,7 +78,7 @@ final class oh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class oh {
           this.field_c = param0;
           this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "oh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

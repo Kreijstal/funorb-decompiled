@@ -37,7 +37,7 @@ final class SellPlayerDialog extends MessageDialog {
         try {
           if (null != et.field_d &&
             et.field_d.phase == 4 &&
-            ks.field_e == 14 &&
+            HuffmanCodec.field_e == 14 &&
             0 < AnimationSkeleton.field_m) {
             fieldTemp$0 = AnimationSkeleton.field_m - 1;
             AnimationSkeleton.field_m = AnimationSkeleton.field_m - 1;
@@ -58,7 +58,7 @@ final class SellPlayerDialog extends MessageDialog {
             }
           } else {
             if (ButtonMenuScreen.d(-8)) {
-              CheckboxLabelWidget.c(ks.field_e + 1, false);
+              CheckboxLabelWidget.c(HuffmanCodec.field_e + 1, false);
             }
           }
           var1_int = AnimationSkeleton.a(false);
@@ -84,12 +84,12 @@ final class SellPlayerDialog extends MessageDialog {
             }
           }
           var3Lifetime1 = 640;
-          if (ks.field_e == 1 &&
+          if (HuffmanCodec.field_e == 1 &&
             !HoverTooltip.field_Eb &&
             (1050 > EmailAvailabilityValidator.field_k.pixelY(true) ||
             640 != AuctionLogEntry.field_g) ||
-            (2 == ks.field_e ||
-            ks.field_e == 3)) {
+            (2 == HuffmanCodec.field_e ||
+            HuffmanCodec.field_e == 3)) {
             var3Lifetime1 = 470;
           }
           if (var3Lifetime1 != AuctionLogEntry.field_g) {
@@ -102,11 +102,11 @@ final class SellPlayerDialog extends MessageDialog {
           }
           ul.b(11);
           ReceivedAuctionItem.h((byte) 125);
-          if (ks.field_e == 6) {
+          if (HuffmanCodec.field_e == 6) {
             DualLinkDeque.a((byte) -127);
           }
           boolean decompiledFrameRemainder0 = true;
-          if (ks.field_e == 7) {
+          if (HuffmanCodec.field_e == 7) {
             for (var4Lifetime1 = 1; var4Lifetime1 < 4; var4Lifetime1++) {
               ig.a(true, (byte) 85, var4Lifetime1, 1);
             }
@@ -134,7 +134,7 @@ final class SellPlayerDialog extends MessageDialog {
               }
             }
           }
-          if (ks.field_e == 8) {
+          if (HuffmanCodec.field_e == 8) {
             if (!HoverTooltip.field_Eb) {
               et.field_d.participantStatus[1].controlledSlot = 0;
               var4Lifetime2 = et.field_d.field_V.pixelX(true);
@@ -147,7 +147,7 @@ final class SellPlayerDialog extends MessageDialog {
               ig.a(false, (byte) 109, 4, 1);
             }
           }
-          if (ks.field_e == 9) {
+          if (HuffmanCodec.field_e == 9) {
             for (var4Lifetime3 = 1; var4Lifetime3 < 3; var4Lifetime3++) {
               ig.a(true, (byte) 83, var4Lifetime3, 1);
             }
@@ -160,22 +160,22 @@ final class SellPlayerDialog extends MessageDialog {
             AuctionsHelpScreen.d(true);
           }
           var4Lifetime4 = -97 / ((param0 - 88) / 34);
-          if (ks.field_e == 10) {
+          if (HuffmanCodec.field_e == 10) {
             ig.a(false, (byte) 124, 3, 1);
             ig.a(false, (byte) 90, 4, 1);
             ig.a(false, (byte) 52, 3, 0);
           }
-          if (ks.field_e == 11) {
+          if (HuffmanCodec.field_e == 11) {
             ig.a(false, (byte) 85, 1, 0);
           }
-          if (ks.field_e == 12 &&
+          if (HuffmanCodec.field_e == 12 &&
             et.field_d.field_X.goalCount > 25) {
             et.field_d.field_X.goalCount = 0;
             if (et.field_d.field_V.horizontalSpeedSquared(-1) == 0) {
               CheckboxLabelWidget.c(13, false);
             }
           }
-          if (ks.field_e == 13) {
+          if (HuffmanCodec.field_e == 13) {
             if (!HoverTooltip.field_Eb) {
               if (et.field_d.field_X.goalCount > 25) {
                 et.field_d.field_X.goalCount = 0;
@@ -194,7 +194,7 @@ final class SellPlayerDialog extends MessageDialog {
               et.field_d.participantStatus[0].controlledSlot = 0;
             }
           }
-          if (ks.field_e == 14 &&
+          if (HuffmanCodec.field_e == 14 &&
             MyKitScreen.field_O &&
             et.field_d.phase == 4) {
             MyKitScreen.field_O = false;
@@ -220,7 +220,7 @@ final class SellPlayerDialog extends MessageDialog {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "ie.C(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "ie.C(" + param0 + ')');
         }
     }
 
@@ -260,7 +260,7 @@ final class SellPlayerDialog extends MessageDialog {
             return stackIn_3_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = st.field_j;
+            stackIn_7_0 = CachedTextLayout.field_j;
             return stackIn_7_0;
           }
           var3 = FormationAgent.a(param0, 2, '.');
@@ -295,7 +295,7 @@ final class SellPlayerDialog extends MessageDialog {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -316,10 +316,10 @@ final class SellPlayerDialog extends MessageDialog {
           var6 = param1.getDisplayName(100);
           String var3 = var6;
           var4 = ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(param1, true), 26300);
-          var5 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[34], new String[]{var6, var4});
+          var5 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[34], new String[]{var6, var4});
           this.a(var5, this.field_t, this.field_D, -71, this.field_u);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ie.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ie.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

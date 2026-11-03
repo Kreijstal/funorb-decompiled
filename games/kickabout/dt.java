@@ -26,7 +26,7 @@ final class dt {
         this.field_c = param2;
         this.field_k = false;
         var5 = ug.a(0, this.field_i.field_kb >> 16);
-        var6 = lf.a((byte) -94, this.field_i.field_bb >> 16);
+        var6 = IntKeyLookup.a((byte) -94, this.field_i.field_bb >> 16);
         if (param0 >= 10 &&
           param1 >= 10 &&
           630 >= param0 &&
@@ -34,7 +34,7 @@ final class dt {
           if (TextHotspotWidget.a(var5, var6, 480)) {
             return;
           }
-          this.field_a = -uv.b(-param1 + var6, -param0 + var5, (byte) 2);
+          this.field_a = -ChatLine.b(-param1 + var6, -param0 + var5, (byte) 2);
           var7 = var5 - param0;
           var8 = -param1 + var6;
           this.field_g = GameKeyHandler.a(var8 * var8 + var7 * var7, (byte) -88) * 100 >> 10;
@@ -102,7 +102,7 @@ final class dt {
     final static int b(byte param0) {
         int var1 = 0;
         int var2 = 0;
-        if (ks.field_e == 1) {
+        if (HuffmanCodec.field_e == 1) {
           var1 = et.field_d.field_P[0][1].pixelY(true);
           var2 = 30 + (var1 - 1634 << 8) / -490;
           return Math.max(0, Math.min(256, 768 - var2 * 3));
@@ -119,7 +119,7 @@ final class dt {
           this.field_h = param1;
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "dt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "dt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class dt {
             TeamManagementScreen.e(param0 + 113);
             TriangleRasterizer.useRasterClip();
             for (var10_int = 0; var10_int < TextInputWidget.field_N.field_y.length; var10_int++) {
-              TextInputWidget.field_N.field_y[var10_int] = hf.a(TextInputWidget.field_N.field_y[var10_int], UiWidget.field_e.field_y[var10_int]);
+              TextInputWidget.field_N.field_y[var10_int] = PainterStyle.a(TextInputWidget.field_N.field_y[var10_int], UiWidget.field_e.field_y[var10_int]);
             }
             TextInputWidget.field_N.drawHalfSize(this.field_b - (TextInputWidget.field_N.field_o >> 2), this.field_d - (TextInputWidget.field_N.field_v >> 2));
           }

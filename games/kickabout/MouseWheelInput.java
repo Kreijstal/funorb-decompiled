@@ -23,7 +23,7 @@ abstract class MouseWheelInput {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (eq.a(false)) {
+        if (WeightedLruCache.a(false)) {
           param1 = false;
         }
         ScrollBar.a((byte) 123, param1);

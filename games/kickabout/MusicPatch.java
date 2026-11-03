@@ -26,7 +26,7 @@ final class MusicPatch extends IntrusiveNode {
         if (param0 != 0) {
           field_g = (int[]) null;
         }
-        var1 = nj.a(-128);
+        var1 = nj.monotonicMillis(-128);
         var3 = var1 - pc.field_c;
         if (30000L < var3) {
           cv.field_d = 0;
@@ -76,7 +76,7 @@ final class MusicPatch extends IntrusiveNode {
         int var7Lifetime1;
         var10 = Kickabout.field_G;
         try {
-          if (!vl.field_d &&
+          if (!LoginMethod.field_d &&
             AuctionListingDialog.field_I == 0) {
             return;
           }
@@ -139,11 +139,11 @@ final class MusicPatch extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "jk.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "jk.A(" + param0 + ')');
         }
     }
 
-    final boolean prepareSamples(rj param0, int[] param1, byte param2, byte[] param3) {
+    final boolean prepareSamples(SoundCache param0, int[] param1, byte param2, byte[] param3) {
         int var8 = 0;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -216,7 +216,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -498,7 +498,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.l(-35);
             }
-            this.field_r[var23] = (short)(this.field_r[var23] + (qj.b(-1 + var22, 2) << 14));
+            this.field_r[var23] = (short)(this.field_r[var23] + (TextLayoutLine.b(-1 + var22, 2) << 14));
             this.field_q[var23] = var22;
             var20Lifetime2--;
           }
@@ -745,7 +745,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_206_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
         }
     }
 

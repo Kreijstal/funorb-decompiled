@@ -58,7 +58,7 @@ final class IconLabel extends UiLayoutNode {
           this.field_Cb.field_p = param3;
           this.field_Cb.field_W = param1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class IconLabel extends UiLayoutNode {
           var8 = un.field_e;
           var2 = var8.readUnsignedByte((byte) -114);
           if (param0 == var2) {
-            var3_ref_k = (k) (ci.field_f.g(param0 ^ 24009));
+            var3_ref_k = (k) (IterableDualLinkDeque.field_f.g(param0 ^ 24009));
             if (var3_ref_k == null) {
               FormationView.b((byte) -116);
               return;
@@ -122,7 +122,7 @@ final class IconLabel extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "om.D(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "om.D(" + param0 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class IconLabel extends UiLayoutNode {
           }
           TeamManagementScreen.writeEncryptedLoginBlock(param1, param4, param3.field_n, 0, param3.field_f, 10, param0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "om.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "om.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class IconLabel extends UiLayoutNode {
           this.addChild((byte) -114, this.field_Db);
           this.invalidateChildren(false);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

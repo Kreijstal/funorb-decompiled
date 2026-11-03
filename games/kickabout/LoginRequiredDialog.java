@@ -32,7 +32,7 @@ final class LoginRequiredDialog extends MessageDialog {
           TeamManagementScreen.e(119);
           un.field_d.a(param3, 10 + (param5 + 160), param4, param2, -1);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

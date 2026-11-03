@@ -50,7 +50,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           ScrollPane.field_Jb.a(new AuctionBidDialog(param1, 19), 3);
           int var2_int = -76 / ((49 - param0) / 61);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_Y.field_w = true;
           this.a(-120, this.field_Y);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

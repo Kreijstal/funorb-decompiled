@@ -39,7 +39,7 @@ final class ColourSwatchTile extends UiLayoutNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class ColourSwatchTile extends UiLayoutNode {
           this.field_zb = param0;
           this.field_Cb = TriangleRasterizer.field_l[LongPlusOneCommand.field_B[this.field_yb]];
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -123,10 +123,10 @@ final class ColourSwatchTile extends UiLayoutNode {
         var2 = Kickabout.field_G;
         try {
           PasswordLoginCredentials.b((byte) -28);
-          var3 = (FadingSoundPlayer) (pn.field_z.g(24009));
+          var3 = (FadingSoundPlayer) (StrongCacheEntry.field_z.g(24009));
           while (var3 != null) {
             var3.update((byte) -127);
-            var3 = (FadingSoundPlayer) (pn.field_z.c(33));
+            var3 = (FadingSoundPlayer) (StrongCacheEntry.field_z.c(33));
           }
           if (param0 == 17702) {
             return;
@@ -136,7 +136,7 @@ final class ColourSwatchTile extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "gi.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "gi.B(" + param0 + ')');
         }
     }
 

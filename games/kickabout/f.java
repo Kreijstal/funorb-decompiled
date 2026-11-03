@@ -43,7 +43,7 @@ final class f {
           sk.a(-53, 8, 6);
           ad.field_d[7] = MusicTrack.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl4");
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "f.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "f.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

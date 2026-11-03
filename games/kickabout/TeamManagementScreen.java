@@ -96,7 +96,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 

@@ -62,7 +62,7 @@ final class gs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "gs.D(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "gs.D(" + param0 + ')');
         }
     }
 

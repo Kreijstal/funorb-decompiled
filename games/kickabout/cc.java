@@ -48,7 +48,7 @@ final class cc {
           this.field_b = var4;
           this.a(62);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "cc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "cc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class cc {
         param4 = param4 >> 1;
         if (param1) {
           var6 = rn.b(param4, 3);
-          var7 = sb.a(param4, -127);
+          var7 = StringCursor.a(param4, -127);
           this.field_a = var7;
           this.field_b = EmailSyntaxValidator.a(-8905, (long)param3, (long)var6);
           this.field_c = EmailSyntaxValidator.a(-8905, (long)param0, (long)var6);
@@ -70,7 +70,7 @@ final class cc {
         cc var8 = (cc) null;
         this.a((cc) null, 27);
         var6Lifetime1 = rn.b(param4, 3);
-        var7Lifetime1 = sb.a(param4, -127);
+        var7Lifetime1 = StringCursor.a(param4, -127);
         this.field_a = var7Lifetime1;
         this.field_b = EmailSyntaxValidator.a(-8905, (long)param3, (long)var6Lifetime1);
         this.field_c = EmailSyntaxValidator.a(-8905, (long)param0, (long)var6Lifetime1);
@@ -109,7 +109,7 @@ final class cc {
           param1[6] = var8 - var6 + var8 - var6;
           param1[param0] = var4 + var11 + (var11 + var4);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "cc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "cc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

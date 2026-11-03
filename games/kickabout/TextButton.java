@@ -8,7 +8,7 @@ class TextButton extends UiWidget {
     private boolean field_D;
     static boolean field_B;
     private boolean field_w;
-    static uv field_v;
+    static ChatLine field_v;
     boolean field_y;
     static boolean[] field_z;
     static int field_C;
@@ -22,15 +22,15 @@ class TextButton extends UiWidget {
     }
 
     final static void a(String param0, String param1, int param2, int param3, String param4, int param5) {
-        tv var6 = null;
+        ChatMessage var6 = null;
         try {
           if (param5 >= -112) {
             field_x = (String) null;
           }
-          var6 = new tv(param3, param1, param2, param0, param4);
+          var6 = new ChatMessage(param3, param1, param2, param0, param4);
           ec.a(true, var6);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wi.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wi.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ class TextButton extends UiWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ class TextButton extends UiWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -145,12 +145,12 @@ class TextButton extends UiWidget {
           }
           this.field_p = 0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wi.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wi.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     TextButton(String param0, UiListener param1) {
-        this(param0, nb.field_i.field_l, param1);
+        this(param0, GameSoundEffect.field_i.field_l, param1);
     }
 
     void a(byte param0, UiWidget param1, int param2, int param3) {
@@ -158,14 +158,14 @@ class TextButton extends UiWidget {
           super.a(param0, param1, param2, param3);
           if (this.field_p != 0 &&
             this.field_p != FootballerAgent.field_p) {
-            if (this.a((byte) -70, param2, param3, BytePlusOneCommand.field_A, n.field_m) &&
+            if (this.a((byte) -70, param2, param3, BytePlusOneCommand.field_A, ArchiveManager.field_m) &&
               0 == FootballerAgent.field_p) {
-              this.b(this.field_p, -param2 + BytePlusOneCommand.field_A, n.field_m - param3, -1);
+              this.b(this.field_p, -param2 + BytePlusOneCommand.field_A, ArchiveManager.field_m - param3, -1);
             }
-            this.a(param3, n.field_m, BytePlusOneCommand.field_A, param1, param0 - 13, param2);
+            this.a(param3, ArchiveManager.field_m, BytePlusOneCommand.field_A, param1, param0 - 13, param2);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wi.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wi.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ class TextButton extends UiWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ class TextButton extends UiWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ class TextButton extends UiWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -308,7 +308,7 @@ class TextButton extends UiWidget {
         this.field_D = false;
         this.field_w = true;
         this.field_y = true;
-        this.field_r = nb.field_i.field_n;
+        this.field_r = GameSoundEffect.field_i.field_n;
     }
 
     static {

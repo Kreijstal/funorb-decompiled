@@ -97,7 +97,7 @@ final class cu {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class cu {
           var5 = (CharSequence) ((Object) param1);
           var4 = ok.a(var5, (byte) 106);
           param2.writeUnsignedSmart(-53, var4.length);
-          param2.field_n = param2.field_n + os.field_I.a(-1, var4.length, param2.field_n, param2.field_f, var4, 0);
+          param2.field_n = param2.field_n + Bzip2State.field_I.a(-1, var4.length, param2.field_n, param2.field_f, var4, 0);
           stackIn_3_0 = param2.field_n - var3_int;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,7 +168,7 @@ final class cu {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

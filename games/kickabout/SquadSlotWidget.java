@@ -25,12 +25,12 @@ final class SquadSlotWidget extends UiLayoutNode {
             this.field_Fb = null;
             this.field_Gb = false;
           } else {
-            this.field_Fb = param1.hasOwnEntry(1, var4.auctionId) ? (Sprite) ((Object) eq.field_h) : (Sprite) ((Object) CipherPacketBuffer.field_q);
+            this.field_Fb = param1.hasOwnEntry(1, var4.auctionId) ? (Sprite) ((Object) WeightedLruCache.field_h) : (Sprite) ((Object) CipherPacketBuffer.field_q);
             this.field_Gb = true;
           }
           int var5 = -66 / ((-50 - param0) / 34);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "kq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -62,8 +62,8 @@ final class SquadSlotWidget extends UiLayoutNode {
             return;
           }
           SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
-          uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
-          q.field_d.a(eq.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
+          ChatLine.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
+          ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
           if (param0 < -114) {
             if (this.field_Fb == null) {
               return;
@@ -99,8 +99,8 @@ final class SquadSlotWidget extends UiLayoutNode {
             dc.field_b.drawHalfSize(this.field_F, this.field_T);
             if (this.field_Hb) {
               SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
-              uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
-              q.field_d.a(eq.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
+              ChatLine.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
+              ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
             }
             if (param0 >= -114) {
               this.h((byte) -68);
@@ -114,8 +114,8 @@ final class SquadSlotWidget extends UiLayoutNode {
         dc.field_b.drawHalfSize(this.field_F, this.field_T);
         if (this.field_Hb) {
           SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
-          uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
-          q.field_d.a(eq.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
+          ChatLine.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
+          ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
         }
         if (param0 >= -114) {
           this.h((byte) -68);
@@ -177,7 +177,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

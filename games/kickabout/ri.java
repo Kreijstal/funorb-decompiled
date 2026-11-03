@@ -4,7 +4,7 @@
 class ri extends TextWidgetPainter {
     static int field_t;
     static String field_s;
-    static sr field_u;
+    static SortCriterion field_u;
     static String field_v;
     static int field_r;
 
@@ -113,7 +113,7 @@ class ri extends TextWidgetPainter {
           if (var16.directionMask == 0 &&
             0 == var16.action &&
             var5 % 10 == 0) {
-            var16.setDirectionFromMask(uv.a(true, -var7 + var9, -var6 + var8), 26214);
+            var16.setDirectionFromMask(ChatLine.a(true, -var7 + var9, -var6 + var8), 26214);
             return;
           }
           return;
@@ -127,7 +127,7 @@ class ri extends TextWidgetPainter {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ class ri extends TextWidgetPainter {
             }
           }
           sh.field_c = 15;
-          eb.field_b = 4;
+          DiskCacheWorker.field_b = 4;
           ig.field_c = 11;
           BytePlusOneCommand.field_I = 2;
           mj.field_b = 2;
@@ -259,8 +259,8 @@ class ri extends TextWidgetPainter {
           DoSomethingCommand.field_B.field_R = NotCommand.a(120, false, 8421504, 4210752, false, (byte) -46);
           r.field_c = new UiLayoutNode(0L, (UiLayoutNode) null);
           r.field_c.field_R = fs.a(114, 3, 1, 6316128, 6316128, (byte) 92);
-          pn.field_u = new UiLayoutNode(0L, (UiLayoutNode) null);
-          pn.field_u.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "popup"), (byte) 63);
+          StrongCacheEntry.field_u = new UiLayoutNode(0L, (UiLayoutNode) null);
+          StrongCacheEntry.field_u.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "popup"), (byte) 63);
           var12 = ClientException.a(ModalStack.a(param4, -125, "lobby", "popup_mouseover"), (byte) -4);
           var13 = ModalStack.a(param4, -122, "lobby", "button");
           var14 = ClientException.a(ModalStack.a(param4, -122, "lobby", "tab_active"), (byte) 61);
@@ -306,7 +306,7 @@ class ri extends TextWidgetPainter {
           mp.field_f = new UiLayoutNode(0L, kr.field_b);
           mp.field_f.a(ul.field_c, (byte) -85);
           var16 = ModalStack.a(param4, 108, "lobby", "button_mouseover");
-          su.field_b = new ContextMenu(pn.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
+          su.field_b = new ContextMenu(StrongCacheEntry.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
           MouseWheelInput.field_e = new UiLayoutNode(0L, ul.field_c);
           MouseWheelInput.field_e.field_R = var13;
           MouseWheelInput.field_e.field_eb = 1;
@@ -402,13 +402,13 @@ class ri extends TextWidgetPainter {
           sd.field_a.field_vb = wa.a((byte) 116, "lobby", param4, "upbutton_mouseover");
           sd.field_a.field_r = wa.a((byte) 117, "lobby", param4, "upbutton_mouseheld");
           sd.field_a.field_t = wa.a((byte) 99, "lobby", param4, "upbutton_disabled");
-          ci.field_b = new UiLayoutNode(0L, (UiLayoutNode) null);
-          ci.field_b.field_N = wa.a((byte) 108, "lobby", param4, "downbutton");
-          ci.field_b.field_vb = wa.a((byte) 108, "lobby", param4, "downbutton_mouseover");
-          ci.field_b.field_r = wa.a((byte) 115, "lobby", param4, "downbutton_mouseheld");
-          ci.field_b.field_t = wa.a((byte) 119, "lobby", param4, "downbutton_disabled");
-          uk.field_b = new VerticalScrollbar(0L, sd.field_a, ci.field_b, ScrollPane.field_Hb, ts.field_a);
-          BroadcastServerCommand.field_D = new al(0L, (UiLayoutNode) null, rj.field_b, uk.field_b, um.field_d, (String) null, (String) null);
+          IterableDualLinkDeque.field_b = new UiLayoutNode(0L, (UiLayoutNode) null);
+          IterableDualLinkDeque.field_b.field_N = wa.a((byte) 108, "lobby", param4, "downbutton");
+          IterableDualLinkDeque.field_b.field_vb = wa.a((byte) 108, "lobby", param4, "downbutton_mouseover");
+          IterableDualLinkDeque.field_b.field_r = wa.a((byte) 115, "lobby", param4, "downbutton_mouseheld");
+          IterableDualLinkDeque.field_b.field_t = wa.a((byte) 119, "lobby", param4, "downbutton_disabled");
+          uk.field_b = new VerticalScrollbar(0L, sd.field_a, IterableDualLinkDeque.field_b, ScrollPane.field_Hb, ts.field_a);
+          BroadcastServerCommand.field_D = new al(0L, (UiLayoutNode) null, SoundCache.field_b, uk.field_b, um.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -438,7 +438,7 @@ class ri extends TextWidgetPainter {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -487,7 +487,7 @@ class ri extends TextWidgetPainter {
           var11 = 0;
           var4Lifetime1 = var11;
           while (var3.field_y.length > var11) {
-            var3.field_y[var11] = hf.a(qj.b(var3.field_y[var11], 16777215), qj.b(param0.field_y[var11], -16777216));
+            var3.field_y[var11] = PainterStyle.a(TextLayoutLine.b(var3.field_y[var11], 16777215), TextLayoutLine.b(param0.field_y[var11], -16777216));
             var11++;
           }
           stackIn_15_0 = var3;
@@ -502,7 +502,7 @@ class ri extends TextWidgetPainter {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -514,7 +514,7 @@ class ri extends TextWidgetPainter {
           super.a(-21, param1, param2, param3, param4);
           int var6_int = 92 % ((59 - param0) / 53);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -565,8 +565,8 @@ class ri extends TextWidgetPainter {
           var4_int = -109 / ((-55 - param0) / 60);
           ConsoleEvaluationException.a(127, fj.field_a);
           if (null != ArchiveSource.field_b) {
-            var5 = em.field_d;
-            em.field_d.field_mb = 0;
+            var5 = DualLinkHashTable.field_d;
+            DualLinkHashTable.field_d.field_mb = 0;
             var5.field_q = 0;
             GoalStateAgent.field_k.field_mb = 0;
             var6 = GoalStateAgent.field_k;
@@ -574,7 +574,7 @@ class ri extends TextWidgetPainter {
             nv.field_F.field_mb = 0;
             var7 = nv.field_F;
             var7.field_q = 0;
-            ci.field_h.field_E = qn.field_d.toUpperCase();
+            IterableDualLinkDeque.field_h.field_E = qn.field_d.toUpperCase();
             var8 = (2 + AuctionItem.field_p.field_q) / 2;
             nv.field_F.a(true, -2 + var8, 0, -40 + AuctionItem.field_p.field_mb, 40);
             GoalStateAgent.field_k.a(true, -var8 + AuctionItem.field_p.field_q, var8, -40 + AuctionItem.field_p.field_mb, 40);
@@ -610,7 +610,7 @@ class ri extends TextWidgetPainter {
             GoalStateAgent.field_k.field_lb = true;
             if (InstrumentNoteMask.field_k) {
               ac.field_b.field_lb = false;
-              w.field_e.field_E = qr.field_c;
+              DialogOverlay.field_e.field_E = qr.field_c;
               if (var9 == 0) {
                 stackIn_54_0 = ea.field_g;
               } else {
@@ -642,7 +642,7 @@ class ri extends TextWidgetPainter {
                 stackIn_24_1 = wp.field_e;
               }
               stackIn_23_0.field_E = ((String) (Object) stackIn_24_1).toUpperCase();
-              stackIn_26_0 = w.field_e;
+              stackIn_26_0 = DialogOverlay.field_e;
               stackIn_26_1 = -18;
               if (var9 != 0) {
                 stackIn_27_2 = MenuSelection.field_j;
@@ -695,22 +695,22 @@ class ri extends TextWidgetPainter {
                       }
                     }
                   }
-                  sn.field_e = "<col=A00000>" + op.field_t + "<br>" + ll.field_h + (String) (var10);
+                  UrlRequest.field_e = "<col=A00000>" + op.field_t + "<br>" + DirectByteStorage.field_h + (String) (var10);
                 }
               }
             }
           }
           stackIn_65_0 = TrinketIcon.field_Cb;
           stackIn_65_1 = 0;
-          stackIn_66_2 = (param2) && (!param1) && (!td.field_b);
+          stackIn_66_2 = (param2) && (!param1) && (!TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_65_0).b(stackIn_65_1, stackIn_66_2);
           stackIn_70_0 = AuctionItem.field_p;
           stackIn_70_1 = 0;
-          stackIn_71_2 = (param2) && (!param1) && (!td.field_b);
+          stackIn_71_2 = (param2) && (!param1) && (!TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_70_0).b(stackIn_70_1, stackIn_71_2);
           stackIn_75_0 = tn.field_f;
           stackIn_75_1 = 0;
-          stackIn_76_2 = (param2) && (!param1) && (td.field_b);
+          stackIn_76_2 = (param2) && (!param1) && (TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_75_0).b(stackIn_75_1, stackIn_76_2);
           ni.field_l.field_b.h((byte) 118);
           if (null != ArchiveSource.field_b) {
@@ -731,7 +731,7 @@ class ri extends TextWidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var4), "ri.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var4), "ri.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -793,7 +793,7 @@ class ri extends TextWidgetPainter {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -810,6 +810,6 @@ class ri extends TextWidgetPainter {
         field_s = "Pending";
         field_v = "to go straight into a multiplayer Exhibition Game with a preset team";
         field_r = 200;
-        field_u = (sr) ((Object) new ba());
+        field_u = (SortCriterion) ((Object) new ba());
     }
 }

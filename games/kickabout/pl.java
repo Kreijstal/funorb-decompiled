@@ -184,9 +184,9 @@ final class pl {
                   var12 = stackIn_46_0;
                 } else {
                   if (param6 != -1) {
-                    stackIn_37_0 = ((uv.field_i.field_Eb[param6] & 255) != var11) ? 0 : 1;
+                    stackIn_37_0 = ((ChatLine.field_i.field_Eb[param6] & 255) != var11) ? 0 : 1;
                   } else {
-                    stackIn_37_0 = (rn.field_d[var11] != uv.field_i.field_bc) ? 0 : 1;
+                    stackIn_37_0 = (rn.field_d[var11] != ChatLine.field_i.field_bc) ? 0 : 1;
                   }
                   var12 = stackIn_37_0;
                 }
@@ -215,7 +215,7 @@ final class pl {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

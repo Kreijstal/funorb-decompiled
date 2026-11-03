@@ -4,7 +4,7 @@
 final class TrinketSlot extends UiLayoutNode implements lv {
     private ArgbSprite field_Cb;
     private String field_Hb;
-    static em field_Eb;
+    static DualLinkHashTable field_Eb;
     private String field_Gb;
     Trinket field_Bb;
     static int[] field_zb;
@@ -32,15 +32,15 @@ final class TrinketSlot extends UiLayoutNode implements lv {
           SoftwareRasterizer.a(var6, var7, var4, 50, 16777215, 60);
         }
         SoftwareRasterizer.e(var6, var7, var4, var5, 65793);
-        q.field_d.c(this.field_yb, -10 + (var6 + var4), 22 + var7, 16777215, 65793);
-        q.field_d.c(this.field_Hb, -10 + (var6 + var4), var7 + 36, 16777215, 65793);
+        ConsoleTokenCursor.field_d.c(this.field_yb, -10 + (var6 + var4), 22 + var7, 16777215, 65793);
+        ConsoleTokenCursor.field_d.c(this.field_Hb, -10 + (var6 + var4), var7 + 36, 16777215, 65793);
         if (param1 != 23) {
           this.field_Hb = (String) null;
         }
         this.field_Cb.c(var6 + 8, 9 + var7);
         if (0 != this.field_Bb.field_h) {
           SoftwareRasterizer.drawHorizontalLine(var6, var7 + 50, var4, 65793);
-          q.field_d.a(this.field_Gb, 5 + var6, var7 + 50, var4 - 10, var5 - 50 - 2, 16777215, 65793, 0, 1, 12);
+          ConsoleTokenCursor.field_d.a(this.field_Gb, 5 + var6, var7 + 50, var4 - 10, var5 - 50 - 2, 16777215, 65793, 0, 1, 12);
         }
     }
 
@@ -151,7 +151,7 @@ final class TrinketSlot extends UiLayoutNode implements lv {
                 var21 = var20;
                 stackIn_29_0 = (param2[-var18 + 12][var21]) ? var11 : var9Lifetime1;
                 var14 = stackIn_29_0;
-                var13Lifetime1 = ks.a(var19, var17Lifetime1, -67, 7);
+                var13Lifetime1 = HuffmanCodec.a(var19, var17Lifetime1, -67, 7);
                 var19 += 5;
                 for (var22 = 0; var30.length > var22; var22++) {
                   if (~var30[var22] == ~var13Lifetime1) {
@@ -170,7 +170,7 @@ final class TrinketSlot extends UiLayoutNode implements lv {
                 var21Lifetime1 = 9 - var20Lifetime1;
                 stackIn_45_0 = (param4[12 - var18Lifetime1][var21Lifetime1]) ? var11 : var9Lifetime1;
                 var14Lifetime1 = stackIn_45_0;
-                var13Lifetime2 = ks.a(var19Lifetime1, var17Lifetime2, -45, 6);
+                var13Lifetime2 = HuffmanCodec.a(var19Lifetime1, var17Lifetime2, -45, 6);
                 var19Lifetime1 += 5;
                 var25 = 0;
                 var22Lifetime1 = var25;
@@ -202,7 +202,7 @@ final class TrinketSlot extends UiLayoutNode implements lv {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -237,7 +237,7 @@ final class TrinketSlot extends UiLayoutNode implements lv {
           return -84;
         }
         if (this.field_Bb.field_h != 0) {
-          var2 = var2 + (20 + q.field_d.paragraphHeight(us.field_h[this.field_Bb.field_h], this.b(param0 ^ 15) - 10, 12));
+          var2 = var2 + (20 + ConsoleTokenCursor.field_d.paragraphHeight(us.field_h[this.field_Bb.field_h], this.b(param0 ^ 15) - 10, 12));
         }
         return var2;
     }
@@ -272,7 +272,7 @@ final class TrinketSlot extends UiLayoutNode implements lv {
           }
           this.field_Gb = us.field_h[this.field_Bb.field_h];
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

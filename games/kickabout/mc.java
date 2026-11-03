@@ -39,7 +39,7 @@ abstract class mc {
           mc.a((byte) 24);
           if (null != jl.field_f) {
             ei.field_b = jl.field_f;
-            ij.field_s = ButtonMenuScreen.field_n;
+            WeightedCacheEntry.field_s = ButtonMenuScreen.field_n;
             ButtonMenuScreen.field_n = null;
             ei.field_b.field_ab = -1;
             ei.field_b.field_ub = -1;
@@ -55,7 +55,7 @@ abstract class mc {
           return;
         }
         ei.field_b = jl.field_f;
-        ij.field_s = ButtonMenuScreen.field_n;
+        WeightedCacheEntry.field_s = ButtonMenuScreen.field_n;
         ButtonMenuScreen.field_n = null;
         ei.field_b.field_ab = -1;
         ei.field_b.field_ub = -1;

@@ -128,7 +128,7 @@ final class rf {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -136,11 +136,11 @@ final class rf {
         int var6 = 24;
         int var7 = 5;
         this.field_b.a(true, param3, param0, var6, var7, param2, param1);
-        du.field_f.a(true, kk.field_R.field_q, 0, 0, sh.field_c);
+        du.field_f.a(true, TriangleMesh.field_R.field_q, 0, 0, sh.field_c);
         int var8 = 17 % ((-10 - param4) / 63);
-        AlphaContainer.field_E.a(true, -2 - TeamSelectionAgent.field_f + (kk.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
-        ph.field_f.a(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + kk.field_R.field_q) - 2, sh.field_c + 2, 18);
-        ei.field_d.a(TeamSelectionAgent.field_f, -sh.field_c + (kk.field_R.field_mb - 22), 20, 20 + sh.field_c + 2, kk.field_R.field_q, 92, 2, 0);
+        AlphaContainer.field_E.a(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
+        ph.field_f.a(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + TriangleMesh.field_R.field_q) - 2, sh.field_c + 2, 18);
+        ei.field_d.a(TeamSelectionAgent.field_f, -sh.field_c + (TriangleMesh.field_R.field_mb - 22), 20, 20 + sh.field_c + 2, TriangleMesh.field_R.field_q, 92, 2, 0);
         TournamentChampionDialog.field_F.a(2, TeamSelectionAgent.field_f, (byte) 19, 20);
     }
 
@@ -208,7 +208,7 @@ final class rf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "rf.C(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "rf.C(" + param0 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class rf {
           var5.appendCrc32(var4, !param2 ? true : false);
           var5.backpatchByteLength(62, var5.field_n - var4);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "rf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -270,10 +270,10 @@ final class rf {
         UiLayoutNode[] var4 = null;
         try {
           var3 = new String[]{param0, ConsoleExpression.field_n, TrinketTile.field_Jb};
-          var4 = new UiLayoutNode[]{param1, kk.field_R, (UiLayoutNode) ((Object) TournamentChampionDialog.field_F)};
+          var4 = new UiLayoutNode[]{param1, TriangleMesh.field_R, (UiLayoutNode) ((Object) TournamentChampionDialog.field_F)};
           this.field_b = new TabStrip(0L, MatchingTextValidator.field_n, var3, MouseInputHandler.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

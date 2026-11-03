@@ -15,7 +15,7 @@ final class oi extends IntrusiveNode {
         if (TextFieldValidator.f(-1)) {
           return false;
         }
-        if (eq.field_d > 0) {
+        if (WeightedLruCache.field_d > 0) {
           return true;
         }
         return false;

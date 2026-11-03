@@ -42,7 +42,7 @@ final class ld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ld.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ld.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class ld {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param5).append(')').toString());
         }
     }
 

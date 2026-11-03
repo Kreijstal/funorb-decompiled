@@ -22,7 +22,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
           this.field_e = param2;
           this.field_i = param7;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qg.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qg.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
           }
           ts.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qg.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qg.A(" + param0 + ')');
         }
     }
 

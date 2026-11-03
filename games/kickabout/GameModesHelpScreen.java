@@ -5,7 +5,7 @@ import java.util.*;
 
 final class GameModesHelpScreen extends PagedHelpScreen {
     private SquadSlotWidget[] field_K;
-    static sr field_H;
+    static SortCriterion field_H;
     static int[][][] field_F;
     private PlayerStats[] field_M;
     private String[] field_E;
@@ -81,7 +81,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           stackIn_28_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_28_0;
           param3.field_Ob = param2.a((byte) 81);
-          param3.field_Fb = nj.a(-128) - (long)param2.readInt(4);
+          param3.field_Fb = nj.monotonicMillis(-128) - (long)param2.readInt(4);
           if (var5 != 0) {
             param3.field_ac = param2.readInt(4);
           } else {
@@ -120,7 +120,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
@@ -257,7 +257,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
               var11 = var12;
             }
           }
-          gd.a(-1, 178, this.slideOffsetX + 45, (byte) -96, var11);
+          ListingRowCache.a(-1, 178, this.slideOffsetX + 45, (byte) -96, var11);
           for (var12Lifetime4 = 0; var12Lifetime4 < 9; var12Lifetime4++) {
             this.field_K[var12Lifetime4].field_s = this.slideOffsetX + 45 + var12Lifetime4 % 3 * 52;
             this.field_K[var12Lifetime4].b(0, false);
@@ -304,7 +304,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         }
         if (this.pageIndex == 2) {
           SoftwareRasterizer.a(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
-          IsSixCommand.field_C.a(ll.field_l, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
+          IsSixCommand.field_C.a(DirectByteStorage.field_l, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           SoftwareRasterizer.a(40 + this.slideOffsetX, 178, 275, 225, 10, 65793, 140);
           var4 = 195;
           var11Lifetime2 = 0;
@@ -462,7 +462,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           }
         }
         if (this.pageIndex == 2) {
-          var4 = (double)(nj.a(61) >> 5);
+          var4 = (double)(nj.monotonicMillis(61) >> 5);
           this.field_J = (int)(Math.sin(var4 * 3.141592653589793 / 256.0) * 140.0);
         }
     }
@@ -490,7 +490,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           var5.playerType = var4;
           var5.tackle = 50;
           var5.surnameIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-110, BuyPlayerDialog.field_G[var5.playerType].length, var7);
-          var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-92, td.field_a.length, var7);
+          var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-92, TrinketCatalog.field_a.length, var7);
           var5.appearance = var5.appearance | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, 3, var7);
           var5.appearance = var5.appearance | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, 3, var7) << 4;
           var5.appearance = var5.appearance | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(91, 5, var7) << 8;
@@ -540,7 +540,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
 
     static {
         field_F = new int[33][33][33];
-        field_H = (sr) ((Object) new en());
+        field_H = (SortCriterion) ((Object) new en());
         field_N = 7;
         field_O = "Play free version";
     }

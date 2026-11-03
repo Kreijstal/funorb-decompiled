@@ -60,7 +60,7 @@ class ButtonMenuScreen extends AppScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ class ButtonMenuScreen extends AppScreen {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ class ButtonMenuScreen extends AppScreen {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -414,31 +414,31 @@ class ButtonMenuScreen extends AppScreen {
         int var3 = 0;
         var3 = Kickabout.field_G;
         try {
-          if (ks.field_e == 1) {
+          if (HuffmanCodec.field_e == 1) {
             stackIn_70_0 = (et.field_d.field_V.possessorTeam == 0);
             return stackIn_70_0;
           }
-          if (2 == ks.field_e) {
+          if (2 == HuffmanCodec.field_e) {
             stackIn_6_0 = !(EmailAvailabilityValidator.field_k.pixelY(true) >= 285);
             return stackIn_6_0;
           }
-          if (ks.field_e == 3) {
+          if (HuffmanCodec.field_e == 3) {
             stackIn_12_0 = (790 < EmailAvailabilityValidator.field_k.pixelX(param0 - 85)) && (1000 < EmailAvailabilityValidator.field_k.pixelY(true));
             return stackIn_12_0;
           }
-          if (ks.field_e == 4) {
+          if (HuffmanCodec.field_e == 4) {
             stackIn_66_0 = (et.field_d.field_V.possessorTeam == 0) && (et.field_d.field_V.possessorSlot == 3);
             return stackIn_66_0;
           }
-          if (5 == ks.field_e) {
+          if (5 == HuffmanCodec.field_e) {
             stackIn_19_0 = (et.field_d.field_V.possessorTeam == 0) && (et.field_d.field_V.possessorSlot == 1);
             return stackIn_19_0;
           }
-          if (ks.field_e == 6) {
+          if (HuffmanCodec.field_e == 6) {
             stackIn_61_0 = (et.field_d.field_V.possessorTeam == 0) && (3 == et.field_d.field_V.possessorSlot);
             return stackIn_61_0;
           }
-          if (ks.field_e == 7) {
+          if (HuffmanCodec.field_e == 7) {
             stackIn_49_0 = (et.field_d.field_V.possessorTeam != 0) ? 0 : 1;
             var1_int = stackIn_49_0;
             for (var2 = 1; 4 > var2; var2++) {
@@ -453,19 +453,19 @@ class ButtonMenuScreen extends AppScreen {
             stackIn_56_0 = var1_int;
             return stackIn_56_0 != 0;
           }
-          if (8 == ks.field_e) {
+          if (8 == HuffmanCodec.field_e) {
             stackIn_28_0 = (et.field_d.field_V.possessorTeam == 0) && (ld.field_f.pixelX(-115) > 760) && (ld.field_f.pixelY(true) > 1000);
             return stackIn_28_0;
           }
-          if (9 == ks.field_e) {
+          if (9 == HuffmanCodec.field_e) {
             stackIn_34_0 = (0 == et.field_d.field_V.possessorTeam) && (et.field_d.field_V.possessorSlot == 1);
             return stackIn_34_0;
           }
-          if (ks.field_e == 10) {
+          if (HuffmanCodec.field_e == 10) {
             stackIn_39_0 = (et.field_d.participantStatus[0].controlledSlot == 4);
             return stackIn_39_0;
           }
-          if (11 == ks.field_e) {
+          if (11 == HuffmanCodec.field_e) {
             stackIn_45_0 = (et.field_d.field_V.possessorTeam == 0);
             return stackIn_45_0;
           }
@@ -476,7 +476,7 @@ class ButtonMenuScreen extends AppScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "qt.V(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "qt.V(" + param0 + ')');
         }
     }
 
@@ -661,7 +661,7 @@ class ButtonMenuScreen extends AppScreen {
         try {
           this.buttonSelection = new MenuSelection(this.buttons.length);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qt.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qt.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

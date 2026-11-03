@@ -124,7 +124,7 @@ final class StatChoiceDialog extends MessageDialog {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -296,7 +296,7 @@ final class StatChoiceDialog extends MessageDialog {
             } else {
               stackIn_56_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param4).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -345,16 +345,16 @@ final class StatChoiceDialog extends MessageDialog {
           if (var4 != this.field_H) {
             if (!this.field_O[var4].field_gb) {
               if (this.field_M[var4] >= 100) {
-                q.field_d.a(GameplayHelpScreen.field_L, 123 + var5, var6 + 19, 13382451, 65793);
+                ConsoleTokenCursor.field_d.a(GameplayHelpScreen.field_L, 123 + var5, var6 + 19, 13382451, 65793);
               }
             } else {
               SoftwareRasterizer.f(var5, var6, var7, var8, 8, 4473924);
-              q.field_d.a("+1%", 123 + var5, var6 + 19, 5592405, -1);
+              ConsoleTokenCursor.field_d.a("+1%", 123 + var5, var6 + 19, 5592405, -1);
             }
           } else {
             SoftwareRasterizer.a(var5, var6, var7, var8, 8, 65793, 128);
             SoftwareRasterizer.f(var5, var6, var7, var8, 8, 10066329);
-            q.field_d.a("+1%", 123 + var5, 19 + var6, 16777215, 65793);
+            ConsoleTokenCursor.field_d.a("+1%", 123 + var5, 19 + var6, 16777215, 65793);
           }
           var9 = 0;
           if (0 == var4) {
@@ -395,7 +395,7 @@ final class StatChoiceDialog extends MessageDialog {
           var3Lifetime1 = new ManagerAction(8, new int[]{param0, param2});
           ii.a(var3Lifetime1, 76);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "rt.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rt.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

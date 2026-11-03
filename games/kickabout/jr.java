@@ -169,7 +169,7 @@ final class jr extends im {
             stackIn_14_3 = -107;
             stackIn_15_4 = !(TextFieldValidator.f(-1));
             stackIn_19_2 = (((PlayerStats) (Object) stackIn_14_2).c((byte) stackIn_14_3, stackIn_15_4)) && (wn.a((byte) 1));
-            var5 = kk.a(stackIn_14_0, stackIn_14_1, stackIn_19_2);
+            var5 = TriangleMesh.a(stackIn_14_0, stackIn_14_1, stackIn_19_2);
             if (var5 != null) {
               var5.c(1 + var4, this.field_T + 4);
             } else {
@@ -178,14 +178,14 @@ final class jr extends im {
             this.field_X.a(var12.getDisplayName(100), 45 + var4, (this.field_mb >> 1) + this.field_T + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[0];
             if (GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79)) {
-              q.field_d.c(IntrusiveDeque.field_b.toUpperCase(), var4 - 10, -7 + (this.field_mb + this.field_T), 6745702, -1);
+              ConsoleTokenCursor.field_d.c(IntrusiveDeque.field_b.toUpperCase(), var4 - 10, -7 + (this.field_mb + this.field_T), 6745702, -1);
             } else {
               if (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) {
                 if (GameLoopApplet.field_E.hasOutbidEntry(30524, this.field_Hb.field_a)) {
-                  q.field_d.c(NumericDateInputWidget.field_O.toUpperCase(), -10 + var4, -7 + this.field_mb + this.field_T, 16777028, -1);
+                  ConsoleTokenCursor.field_d.c(NumericDateInputWidget.field_O.toUpperCase(), -10 + var4, -7 + this.field_mb + this.field_T, 16777028, -1);
                 }
               } else {
-                q.field_d.c(bk.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
+                ConsoleTokenCursor.field_d.c(bk.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
               }
             }
             this.field_X.a(uf.field_e[var12.playerType], 12 + var4, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
@@ -222,7 +222,7 @@ final class jr extends im {
             }
             var4 = var4 + this.field_Db[2];
             if (this.field_Hb.playerStats.trinketIds.length == 0) {
-              IsSixCommand.field_C.d(hi.field_w, var4 + (this.field_Db[3] >> 1), 4 + (this.field_T + (this.field_mb >> 1)), 16777215, -1);
+              IsSixCommand.field_C.d(DiskCacheRequest.field_w, var4 + (this.field_Db[3] >> 1), 4 + (this.field_T + (this.field_mb >> 1)), 16777215, -1);
             }
             var4 = var4 + this.field_Db[3];
             var7Lifetime1 = this.field_y;
@@ -265,9 +265,9 @@ final class jr extends im {
         if (param1 > -16) {
           field_Mb = -60;
         }
-        int var3 = (int)(nj.a(75) % 600L);
+        int var3 = (int)(nj.monotonicMillis(75) % 600L);
         var3 = var3 * 6 / 600;
-        w.field_f[var3].c(param0 - 19, param2 - 23);
+        DialogOverlay.field_f[var3].c(param0 - 19, param2 - 23);
     }
 
     final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
@@ -304,7 +304,7 @@ final class jr extends im {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -324,7 +324,7 @@ final class jr extends im {
           this.field_Ib = param0;
           this.field_Lb = true;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -333,7 +333,7 @@ final class jr extends im {
           this.field_Lb = true;
           this.field_Db = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -376,7 +376,7 @@ final class jr extends im {
           }
           var4 = stackIn_11_0;
           if (var4 != 0) {
-            stackIn_14_0 = q.field_d;
+            stackIn_14_0 = ConsoleTokenCursor.field_d;
           } else {
             stackIn_14_0 = un.field_d;
           }
@@ -432,7 +432,7 @@ final class jr extends im {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

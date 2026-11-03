@@ -35,7 +35,7 @@ final class ConsoleExpression extends IntrusiveNode {
           }
           stackIn_2_0.directionY = stackIn_3_1;
           param3.directionX = 0;
-          param3.field_z = -hf.findClosestOutfielder(param0, param1, 27);
+          param3.field_z = -PainterStyle.findClosestOutfielder(param0, param1, 27);
           var7 = param1.field_P[param0][-param3.field_z];
           var5 = var7.positionY;
           var6 = var7.positionX;
@@ -46,7 +46,7 @@ final class ConsoleExpression extends IntrusiveNode {
             var5 = 44040192;
             var6 = 29360128;
           }
-          param3.field_h = uv.a(true, var5 - param3.positionY, var6 - param3.positionX);
+          param3.field_h = ChatLine.a(true, var5 - param3.positionY, var6 - param3.positionX);
           param3.setAction((byte) -31, 2);
           param3.actionTime = param3.actionTime + 25;
           if (15 <= param3.field_o) {
@@ -70,7 +70,7 @@ final class ConsoleExpression extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class ConsoleExpression extends IntrusiveNode {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class ConsoleExpression extends IntrusiveNode {
           this.field_f = param1;
           this.field_h = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

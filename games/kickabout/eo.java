@@ -23,7 +23,7 @@ final class eo {
     private static int field_e;
     private static int[] field_o;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawRectangleOutline(int param0, int param1, int param2, int param3, int param4, int param5) {
         eo.a(param0, param1, param2, param4, param5);
         eo.a(param0, param1 + param3 - 1, param2, param4, param5);
         eo.c(param0 + param2 - 1, param1, param3, param4, param5);
@@ -200,7 +200,7 @@ final class eo {
         }
     }
 
-    final static void a(Sprite param0, ArgbSprite param1) {
+    final static void downscaleByHalf(Sprite param0, ArgbSprite param1) {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -301,7 +301,7 @@ final class eo {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3) {
+    final static void darkenRectangle(int param0, int param1, int param2, int param3) {
         int var8 = 0;
         int var10 = 0;
         int var4;
@@ -341,7 +341,7 @@ final class eo {
         }
     }
 
-    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawSpriteClipped(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param3 > 640) {
           param3 = 640;
         }
@@ -375,7 +375,7 @@ final class eo {
         var8.c(param2, param3, param7, 4096);
     }
 
-    private final static boolean a(int param0, int param1, int param2) {
+    private final static boolean isAngleInRange(int param0, int param1, int param2) {
         int var3;
         boolean stackIn_7_0 = false;
         boolean decompiledFrameRemainder0 = true;
@@ -425,7 +425,7 @@ final class eo {
     final static void a(kp param0, String param1, String param2, int param3, int param4, int param5, int param6) {
         double var12 = 0.0;
         int var14 = 0;
-        double var7 = (double)nj.a(120);
+        double var7 = (double)nj.monotonicMillis(120);
         double var12Lifetime1;
         int var14Lifetime1;
         param1 = TrinketIcon.a(param1, false);
@@ -508,7 +508,7 @@ final class eo {
         SoftwareRasterizer.drawVerticalLine(param0, param1 - param2, param2 << 1, param3);
     }
 
-    final static UiLayoutNode a(boolean param0, int param1) {
+    final static UiLayoutNode createButtonNode(boolean param0, int param1) {
         ArgbSprite[] var2 = param0 ? field_c[param1] : field_r[param1];
         UiLayoutNode var3 = new UiLayoutNode();
         var3.field_N = (Sprite) ((Object) var2[0].h());
@@ -614,7 +614,7 @@ final class eo {
         if (var1Lifetime1 == 0) {
           stackIn_23_0 = un.field_d;
         } else {
-          stackIn_23_0 = q.field_d;
+          stackIn_23_0 = ConsoleTokenCursor.field_d;
         }
         var2 = stackIn_23_0;
         stackIn_26_0 = (var1Lifetime1 == 0) ? 24 : 12;
@@ -678,7 +678,7 @@ final class eo {
         }
     }
 
-    final static UiLayoutNode b() {
+    final static UiLayoutNode createDefaultButtonNode() {
         UiLayoutNode var0 = new UiLayoutNode();
         var0.field_N = field_n[0];
         var0.field_vb = field_n[1];
@@ -739,7 +739,7 @@ final class eo {
         }
     }
 
-    final static IndexedSprite a(Sprite param0) {
+    final static IndexedSprite toIndexedSprite(Sprite param0) {
         int var3 = 0;
         IndexedSprite var1;
         int[] var2;
@@ -996,7 +996,7 @@ final class eo {
           param5 = param5 + (param2 - 100);
           param2 = 100;
         }
-        int var6 = (int)(nj.a(74) % 220L);
+        int var6 = (int)(nj.monotonicMillis(74) % 220L);
         var6 = (var6 << 2) / 220;
         field_g.d(param0 - 1, param1 - 1);
         AuctionListing.a(param0 + param2, -22914, param0, param1 + 11, param1);
@@ -1009,7 +1009,7 @@ final class eo {
           var7 = 131586;
           var8 = 10;
           var9 = 54 - (param5 != 0 ? var8 : 0);
-          q.field_d.c(AccountChoicePanel.field_G[param3], var9, 10, 16777215, var7);
+          ConsoleTokenCursor.field_d.c(AccountChoicePanel.field_G[param3], var9, 10, 16777215, var7);
           var10 = new StringBuilder(Integer.toString(param2));
           if (param5 != 0) {
             discarded$12 = var10.append("<col=");
@@ -1020,7 +1020,7 @@ final class eo {
             discarded$41 = var10.append("</col>");
           }
           discarded$42 = var10.append('%');
-          q.field_d.a(var10.toString(), var9 + 4, 10, 16777215, var7);
+          ConsoleTokenCursor.field_d.a(var10.toString(), var9 + 4, 10, 16777215, var7);
           TeamManagementScreen.e(127);
           eo.a(field_d, 65793);
           field_d.c(param0, param1);
@@ -1447,9 +1447,9 @@ final class eo {
           for (var10 = -36; var10 < 36; var10++) {
             var11 = var6.field_y[var8];
             if (var11 != 0) {
-              var12 = uv.b(var9, var10, (byte) 2) + 8192 + 2048 & 8191;
-              if (eo.a(var12, var4, var5) ||
-                eo.a(var12, var4 + 4096, var5)) {
+              var12 = ChatLine.b(var9, var10, (byte) 2) + 8192 + 2048 & 8191;
+              if (eo.isAngleInRange(var12, var4, var5) ||
+                eo.isAngleInRange(var12, var4 + 4096, var5)) {
                 var13 = Math.min(255, Math.min(Math.min(Math.abs((var4 + 4096 & 8191) - var12), Math.abs((var4 + var5 + 4096 & 8191) - var12)), Math.min(Math.abs((var4 & 8191) - var12), Math.abs((var4 + var5 & 8191) - var12))));
                 var7[var8] = (byte)(var11 * var13 >> 8);
               }
@@ -1637,7 +1637,7 @@ final class eo {
     }
 
     final static UiLayoutNode a(boolean param0) {
-        return eo.a(param0, 0);
+        return eo.createButtonNode(param0, 0);
     }
 
     static {

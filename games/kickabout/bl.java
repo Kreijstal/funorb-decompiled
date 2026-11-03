@@ -46,7 +46,7 @@ final class bl {
           SoftwareRasterizer.a(-2 + var2, -2 + var3, this.field_a + 6, 6 + this.field_j, 4, 16777215, 48);
           PacketBuffer.a(-47, k.field_j);
           SoftwareRasterizer.b();
-          un.field_d.a(pp.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
+          un.field_d.a(MusicPatchPcmStream.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           un.field_d.a(du.field_g.toUpperCase(), 0, -32 + this.field_j >> 1, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           TeamManagementScreen.e(121);
           k.field_j.b(var2, var3, 96);
@@ -88,12 +88,12 @@ final class bl {
           TeamManagementScreen.e(119);
         } else {
           if (0 > this.field_e.field_f) {
-            un.field_d.a(w.field_d, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
+            un.field_d.a(DialogOverlay.field_d, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
           } else {
             if (this.field_e.field_f < 4) {
               un.field_d.a(mc.field_i, this.field_l + 2, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
             } else {
-              un.field_d.a(ci.field_e, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
+              un.field_d.a(IterableDualLinkDeque.field_e, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
             }
           }
         }
@@ -108,7 +108,7 @@ final class bl {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         String var4 = (String) null;
-        kk.$cfr$intArgs$a$842e35442ba4(-101, param1, param0, (String) null);
+        TriangleMesh.$cfr$intArgs$a$842e35442ba4(-101, param1, param0, (String) null);
         if (param2 > -35) {
           field_n = (String) null;
         }
@@ -158,8 +158,8 @@ final class bl {
           }
           if (this.field_l <= BytePlusOneCommand.field_A &&
             BytePlusOneCommand.field_A <= this.field_a + this.field_l &&
-            this.field_b <= n.field_m &&
-            this.field_b + this.field_j >= n.field_m) {
+            this.field_b <= ArchiveManager.field_m &&
+            this.field_b + this.field_j >= ArchiveManager.field_m) {
             this.field_f = true;
           } else {
             this.field_f = false;
@@ -192,7 +192,7 @@ final class bl {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class bl {
           k.field_j = new Sprite(this.field_a, this.field_j - 32);
           DraggableWidget.field_K = new Sprite(50, 20);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

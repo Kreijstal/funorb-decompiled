@@ -15,7 +15,7 @@ final class ib extends wt implements ButtonListener {
           super.a(param0, param1, param2, param3);
           this.field_D.field_y = this.field_G.a((byte) -125).getValidationState(-24407) == LobbyPlayerRow.field_yb ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ib.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ib.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -27,9 +27,9 @@ final class ib extends wt implements ButtonListener {
           return;
         }
         try {
-          TrinketSlot.a((byte) -113, this.field_G.m(-1), this.field_G.h((byte) 48), this.field_G.l(85));
+          TrinketSlot.a((byte) -113, this.field_G.getYear(-1), this.field_G.getMonthIndex((byte) 48), this.field_G.getDay(85));
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ib.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ib.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class ib extends wt implements ButtonListener {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

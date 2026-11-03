@@ -73,7 +73,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var3 = Kickabout.field_G;
         if (this.field_n != null) {
           for (var2 = 0; this.field_n.length > var2; var2++) {
-            this.field_n[var2] = hf.a(this.field_n[var2], 32768);
+            this.field_n[var2] = PainterStyle.a(this.field_n[var2], 32768);
           }
         }
         if (param0) {
@@ -247,7 +247,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

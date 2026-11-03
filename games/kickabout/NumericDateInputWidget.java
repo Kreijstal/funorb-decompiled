@@ -27,7 +27,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final int l(int param0) {
+    final int getDay(int param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -74,7 +74,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         return null != this.field_u ? this.field_u : this.field_q;
     }
 
-    final int h(byte param0) {
+    final int getMonthIndex(byte param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -110,7 +110,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           }
           this.a(-57, this.field_P);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -121,11 +121,11 @@ final class NumericDateInputWidget extends DateInputWidget {
           this.field_K.field_k = (UiListener) ((Object) param0);
           this.field_P.field_k = (UiListener) ((Object) param0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final int m(int param0) {
+    final int getYear(int param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -147,7 +147,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         try {
           this.a(param5, 1, param2, param4, param3);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           }
           EmailSyntaxValidator.field_k.d(param1, param4 + param0.field_t + (param0.field_n >> 1), -5 + param0.field_g + param2, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fb.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fb.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

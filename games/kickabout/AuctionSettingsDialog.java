@@ -119,9 +119,9 @@ final class AuctionSettingsDialog extends MessageDialog {
         var4Lifetime1 = stackIn_15_0 | (stackIn_16_1 | stackIn_20_2);
         stackIn_28_0 = var4Lifetime1;
         if (this.b(-111, param2) && (this.field_F &&
-          UnreadMessagesScreen.field_A.j((byte) -16).length() < BlackFadeScreen.field_l ||
+          UnreadMessagesScreen.field_A.getText((byte) -16).length() < BlackFadeScreen.field_l ||
           this.field_I &&
-          !(StatChoiceDialog.field_F.j((byte) -16).length() >= BlackFadeScreen.field_l))) {
+          !(StatChoiceDialog.field_F.getText((byte) -16).length() >= BlackFadeScreen.field_l))) {
           stackIn_29_1 = 1;
           decompiledFrameRemainder1 = false;
         }
@@ -132,11 +132,11 @@ final class AuctionSettingsDialog extends MessageDialog {
         var4Lifetime2 = stackIn_28_0 | stackIn_29_1;
         stackIn_39_0 = var4Lifetime2;
         if (this.b(-118, param2) && (this.field_F &&
-          UnreadMessagesScreen.field_A.j((byte) -16).length() == BlackFadeScreen.field_l &&
-          UnreadMessagesScreen.field_A.i((byte) 35).length() > 0 ||
+          UnreadMessagesScreen.field_A.getText((byte) -16).length() == BlackFadeScreen.field_l &&
+          UnreadMessagesScreen.field_A.getSelectedText((byte) 35).length() > 0 ||
           this.field_I &&
-          StatChoiceDialog.field_F.j((byte) -16).length() == BlackFadeScreen.field_l &&
-          !(StatChoiceDialog.field_F.i((byte) 35).length() <= 0))) {
+          StatChoiceDialog.field_F.getText((byte) -16).length() == BlackFadeScreen.field_l &&
+          !(StatChoiceDialog.field_F.getSelectedText((byte) 35).length() <= 0))) {
           stackIn_40_1 = 1;
           decompiledFrameRemainder0 = false;
         }
@@ -154,11 +154,11 @@ final class AuctionSettingsDialog extends MessageDialog {
         }
         if (this.field_F) {
           if (param2 == 48 &&
-            UnreadMessagesScreen.field_A.j((byte) -16).length() == 0) {
+            UnreadMessagesScreen.field_A.getText((byte) -16).length() == 0) {
             return true;
           }
-          UnreadMessagesScreen.field_A.a(param0, param2, 875);
-          var8 = UnreadMessagesScreen.field_A.j((byte) -16);
+          UnreadMessagesScreen.field_A.handleKey(param0, param2, 875);
+          var8 = UnreadMessagesScreen.field_A.getText((byte) -16);
           if (var8 != null &&
             var8.length() > 0) {
             stackIn_62_0 = Integer.parseInt(var8);
@@ -172,11 +172,11 @@ final class AuctionSettingsDialog extends MessageDialog {
             return true;
           }
           if (48 == param2 &&
-            0 == StatChoiceDialog.field_F.j((byte) -16).length()) {
+            0 == StatChoiceDialog.field_F.getText((byte) -16).length()) {
             return true;
           }
-          StatChoiceDialog.field_F.a(param0, param2, param1 + 896);
-          var7 = StatChoiceDialog.field_F.j((byte) -16);
+          StatChoiceDialog.field_F.handleKey(param0, param2, param1 + 896);
+          var7 = StatChoiceDialog.field_F.getText((byte) -16);
           if (var7 != null &&
             0 < var7.length()) {
             stackIn_53_0 = Integer.parseInt(var7);
@@ -238,8 +238,8 @@ final class AuctionSettingsDialog extends MessageDialog {
         SoftwareRasterizer.a(var4, var9, 260, 120, 10, 65793, 128);
         un.field_d.d(gl.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
         un.field_d.d(Kickabout.field_F.toLowerCase(), var4 + 130, var9 + 21, 16777215, -1);
-        if (pn.g(2368)) {
-          stackIn_8_0 = (nj.a(-51) % 500L < 250L) ? 1 : 0;
+        if (StrongCacheEntry.g(2368)) {
+          stackIn_8_0 = (nj.monotonicMillis(-51) % 500L < 250L) ? 1 : 0;
         } else {
           stackIn_8_0 = 0;
         }
@@ -377,10 +377,10 @@ final class AuctionSettingsDialog extends MessageDialog {
         kr.field_a = new CheckboxLabelWidget(LoggedPlayer.field_k.toLowerCase(), un.field_d);
         kr.field_a.field_J = 5;
         kr.field_a.field_s = 5 + (oa.field_b.field_q - kr.field_a.field_q >> 1);
-        AuctionBidDialog.field_I = eo.a(false, 0);
-        AccountMessagePanel.field_L = eo.a(true, 0);
-        hq.field_c = eo.a(false, 0);
-        Trinket.field_a = eo.a(true, 0);
+        AuctionBidDialog.field_I = eo.createButtonNode(false, 0);
+        AccountMessagePanel.field_L = eo.createButtonNode(true, 0);
+        hq.field_c = eo.createButtonNode(false, 0);
+        Trinket.field_a = eo.createButtonNode(true, 0);
         AccountMessagePanel.field_L.field_s = (uq.field_b.field_q >> 1) + ((AccountMessagePanel.field_L.field_q >> 1) + AccountMessagePanel.field_L.field_q);
         Trinket.field_a.field_s = Trinket.field_a.field_q - (-(Trinket.field_a.field_q >> 1) - (oa.field_b.field_q >> 1));
         AuctionBidDialog.field_I.field_s = -(AuctionBidDialog.field_I.field_q >> 1) + (-(AuctionBidDialog.field_I.field_q * 2) + (uq.field_b.field_q >> 1));
@@ -392,8 +392,8 @@ final class AuctionSettingsDialog extends MessageDialog {
         oa.field_b.addChild((byte) -117, hq.field_c);
         oa.field_b.addChild((byte) -115, Trinket.field_a);
         oa.field_b.addChild((byte) -113, (UiLayoutNode) (kr.field_a));
-        UnreadMessagesScreen.field_A.b(Integer.toString(ad.field_f), -23174);
-        StatChoiceDialog.field_F.b(Integer.toString(AuctionBidDialog.field_L), -23174);
+        UnreadMessagesScreen.field_A.setText(Integer.toString(ad.field_f), -23174);
+        StatChoiceDialog.field_F.setText(Integer.toString(AuctionBidDialog.field_L), -23174);
         this.field_F = true;
         this.field_I = false;
     }
@@ -467,8 +467,8 @@ final class AuctionSettingsDialog extends MessageDialog {
         }
         uq.field_b.b(0, param1);
         oa.field_b.b(0, param1);
-        UnreadMessagesScreen.field_A.b(param0 + 11567);
-        StatChoiceDialog.field_F.b(11570);
+        UnreadMessagesScreen.field_A.updatePointer(param0 + 11567);
+        StatChoiceDialog.field_F.updatePointer(11570);
         for (var3 = 0; var3 < 5; var3++) {
           if (of.field_d[var3].field_gb) {
             if (var3 == ee.field_d) {
@@ -486,7 +486,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               ad.field_f == AuctionBidDialog.field_L) {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ad.field_a);
             } else {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ij.field_q, new String[]{ad.formatCurrencyAmount(1, 26300)}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, WeightedCacheEntry.field_q, new String[]{ad.formatCurrencyAmount(1, 26300)}));
             }
           }
         }
@@ -555,9 +555,9 @@ final class AuctionSettingsDialog extends MessageDialog {
           ng.field_e = stackIn_66_0;
           ShopPlayerSlot.c(61, -17);
           if (ng.field_e) {
-            StatChoiceDialog.field_F.b(Integer.toString(AuctionBidDialog.field_L), -23174);
+            StatChoiceDialog.field_F.setText(Integer.toString(AuctionBidDialog.field_L), -23174);
           } else {
-            StatChoiceDialog.field_F.b("", -23174);
+            StatChoiceDialog.field_F.setText("", -23174);
           }
         }
         kr.field_a.field_Gb = ng.field_e;
@@ -657,7 +657,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         if (var4 != 0) {
           this.field_F = false;
           this.field_I = false;
-          var6_ref_String = UnreadMessagesScreen.field_A.j((byte) -16);
+          var6_ref_String = UnreadMessagesScreen.field_A.getText((byte) -16);
           if (var6_ref_String != null &&
             var6_ref_String.length() > 0) {
             stackIn_135_0 = Integer.parseInt(var6_ref_String);
@@ -672,10 +672,10 @@ final class AuctionSettingsDialog extends MessageDialog {
             } else {
               stackIn_139_1 = "";
             }
-            ((TextFieldNode) (Object) stackIn_138_0).b(stackIn_139_1, -23174);
+            ((TextFieldNode) (Object) stackIn_138_0).setText(stackIn_139_1, -23174);
           }
           if (ng.field_e) {
-            var8 = StatChoiceDialog.field_F.j((byte) -16);
+            var8 = StatChoiceDialog.field_F.getText((byte) -16);
             if (var8 != null &&
               var8.length() > 0) {
               stackIn_145_0 = Integer.parseInt(var8);
@@ -690,7 +690,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               } else {
                 stackIn_150_1 = Integer.toString(AuctionBidDialog.field_L);
               }
-              ((TextFieldNode) (Object) stackIn_149_0).b(stackIn_150_1, -23174);
+              ((TextFieldNode) (Object) stackIn_149_0).setText(stackIn_150_1, -23174);
             }
           }
         }
@@ -702,9 +702,9 @@ final class AuctionSettingsDialog extends MessageDialog {
             this.field_F = false;
           }
         }
-        if (UnreadMessagesScreen.field_A.j((byte) -16) != null &&
-          UnreadMessagesScreen.field_A.j((byte) -16).length() > 0) {
-          stackIn_163_0 = Integer.parseInt(UnreadMessagesScreen.field_A.j((byte) -16));
+        if (UnreadMessagesScreen.field_A.getText((byte) -16) != null &&
+          UnreadMessagesScreen.field_A.getText((byte) -16).length() > 0) {
+          stackIn_163_0 = Integer.parseInt(UnreadMessagesScreen.field_A.getText((byte) -16));
         } else {
           stackIn_163_0 = 0;
         }
@@ -713,16 +713,16 @@ final class AuctionSettingsDialog extends MessageDialog {
         if (var6Lifetime2 >= QuickChatPhraseCache.field_c &&
           IndexedSpriteState.field_g >= var6Lifetime2 && (!ng.field_e ||
           !(var6Lifetime2 > AuctionBidDialog.field_L))) {
-          UnreadMessagesScreen.field_A.b(16777215, (byte) 120);
+          UnreadMessagesScreen.field_A.setTextColour(16777215, (byte) 120);
           decompiledFrameRemainder0 = false;
         }
         else {
-          UnreadMessagesScreen.field_A.b(16711680, (byte) 125);
+          UnreadMessagesScreen.field_A.setTextColour(16711680, (byte) 125);
         }
         if (ng.field_e) {
-          if (StatChoiceDialog.field_F.j((byte) -16) != null &&
-            StatChoiceDialog.field_F.j((byte) -16).length() > 0) {
-            stackIn_176_0 = Integer.parseInt(StatChoiceDialog.field_F.j((byte) -16));
+          if (StatChoiceDialog.field_F.getText((byte) -16) != null &&
+            StatChoiceDialog.field_F.getText((byte) -16).length() > 0) {
+            stackIn_176_0 = Integer.parseInt(StatChoiceDialog.field_F.getText((byte) -16));
           } else {
             stackIn_176_0 = 0;
           }
@@ -730,9 +730,9 @@ final class AuctionSettingsDialog extends MessageDialog {
           if (QuickChatPhraseCache.field_c <= var7Lifetime1 &&
             var7Lifetime1 <= IndexedSpriteState.field_g &&
             ad.field_f <= var7Lifetime1) {
-            StatChoiceDialog.field_F.b(16777215, (byte) 126);
+            StatChoiceDialog.field_F.setTextColour(16777215, (byte) 126);
           } else {
-            StatChoiceDialog.field_F.b(16711680, (byte) -127);
+            StatChoiceDialog.field_F.setTextColour(16711680, (byte) -127);
           }
         }
         var7Lifetime2 = 1;

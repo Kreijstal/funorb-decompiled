@@ -62,7 +62,7 @@ final class sk {
         try {
           ScrollPane.field_Jb.a(new MessageDialog(param0, param2), 3);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "sk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class sk {
         float var11 = 0.0f;
         String var13 = null;
         String var12 = null;
-        long var3 = nj.a(108);
+        long var3 = nj.monotonicMillis(108);
         if (var3 >= GameAppletShell.field_c) {
           GameAppletShell.field_c = var3 + 25L;
           var5 = (float)param2 / (float)param1;
@@ -132,7 +132,7 @@ final class sk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
         }
     }
 

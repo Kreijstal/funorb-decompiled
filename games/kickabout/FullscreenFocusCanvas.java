@@ -22,7 +22,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_b = true;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             this.focusGained((java.awt.event.FocusEvent) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           pi.field_b = new PcmStreamMixer();
           pg.field_d.a(pi.field_b);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

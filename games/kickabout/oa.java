@@ -89,18 +89,18 @@ final class oa {
           var10.writeBytes(0, param5.length, 1991220144, param5);
           var10.backpatchByteLength(62, -var7 + var10.field_n);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(boolean param0, hc param1) {
+    final static void registerOverlay(boolean param0, OverlayLayer param1) {
         try {
           if (param0) {
             field_a = (Calendar) null;
           }
-          sn.field_g.insertElementAt(param1, 0);
+          UrlRequest.field_g.insertElementAt(param1, 0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "oa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

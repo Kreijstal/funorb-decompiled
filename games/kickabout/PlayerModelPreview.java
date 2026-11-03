@@ -36,7 +36,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         RuntimeException var21 = null;
         try {
           BufferedCacheFile.a(126, param5, param10, param11);
-          sb.a(param18, param0, param13, param7, (byte) 5);
+          StringCursor.a(param18, param0, param13, param7, (byte) 5);
           if (param2 <= 25) {
             field_q = (GameKeyHandler) null;
           }
@@ -79,7 +79,7 @@ final class PlayerModelPreview extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param20).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class PlayerModelPreview extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -30,17 +30,17 @@ final class ThreeCommand extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static void a(boolean param0, int param1) {
-        if (eq.a(false)) {
+        if (WeightedLruCache.a(false)) {
           param0 = false;
         }
         if (param1 != 16355) {
           ThreeCommand.a(false, 111);
-          ti.a(63, param0);
+          NamedValueContainer.a(63, param0);
           if (gs.field_b) {
             SoftwareRasterizer.darkenRectangle(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
             ni.field_l.field_b.a(122, param0);
@@ -50,7 +50,7 @@ final class ThreeCommand extends ConsoleCommand {
           PasswordLoginCredentials.a(param0, (byte) -93);
           return;
         }
-        ti.a(63, param0);
+        NamedValueContainer.a(63, param0);
         if (!gs.field_b) {
           PasswordLoginCredentials.a(param0, (byte) -93);
           return;

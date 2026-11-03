@@ -71,7 +71,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
             IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].isActive(3511)) {
             var10 = (RenderedFootballer) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, ek.field_G));
             var2 = ug.a(param0, var10.field_kb >> 16);
-            var3 = lf.a((byte) -119, var10.field_bb >> 16);
+            var3 = IntKeyLookup.a((byte) -119, var10.field_bb >> 16);
             if (!TextHotspotWidget.a(var2, var3, param0 ^ 480)) {
               var2 = 320;
               var3 = 240;
@@ -180,7 +180,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "he.F(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "he.F(" + param0 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
           var6 = (CharSequence) ((Object) this.field_Rb);
           MatchAgent.a(0, var6);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         if (param2 != 240) {
           field_Ub = (String) null;
         }
-        return wt.a(param3, TextInputWidget.field_O[param4], em.field_e ? !param1 ? true : false : param1, param4, param0, -121);
+        return wt.a(param3, TextInputWidget.field_O[param4], DualLinkHashTable.field_e ? !param1 ? true : false : param1, param4, param0, -121);
     }
 
     final static void a(PcmSampleStream param0, boolean param1) {
@@ -236,7 +236,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -251,7 +251,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
           var5 = (CharSequence) ((Object) this.field_Rb);
           MatchAgent.a(param0 ^ -2, var5);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

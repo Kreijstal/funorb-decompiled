@@ -33,7 +33,7 @@ final class ii extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "ii.C(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "ii.C(" + param0 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class ii extends IntrusiveNode {
             field_h = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ii.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ii.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

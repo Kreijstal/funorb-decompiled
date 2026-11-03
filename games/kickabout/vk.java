@@ -11,9 +11,9 @@ final class vk {
         var3 = Kickabout.field_G;
         iv.field_o = null;
         AnimationSkeleton.field_e = null;
-        ci.field_a = 0;
-        var2 = nb.field_b;
-        nb.field_b = PlayerModelPreview.field_e;
+        IterableDualLinkDeque.field_a = 0;
+        var2 = GameSoundEffect.field_b;
+        GameSoundEffect.field_b = PlayerModelPreview.field_e;
         if (param1 == 51) {
           ParticipantStatus.field_t.field_l = 2;
         } else {

@@ -47,7 +47,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
         var4.field_P = param2;
         var4.field_z = param3;
         int var5 = var4.directionMask(5339);
-        int var6 = uv.a(true, param2, param0);
+        int var6 = ChatLine.a(true, param2, param0);
         int var7 = param1 > ~SquadPickerDialog.b(param1 ^ -172, var6 ^ var5) ? 1 : 0;
         var4.field_h = var6;
         var4.setAction((byte) -31, 2);
@@ -65,7 +65,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
           param0.addKeyListener(PlayerModelPreview.field_q);
           param0.addFocusListener(PlayerModelPreview.field_q);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ej.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ej.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -77,18 +77,18 @@ final class SelectableTrinketIcon extends UiLayoutNode {
           SoftwareRasterizer.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           if (param0) {
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
-              qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
+              ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
             } else {
               if (pc.field_e) {
-                qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
+                ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
               } else {
                 if (this.field_Bb != 32) {
-                  pn.field_w.drawQuarterSize(this.field_F, this.field_T);
+                  StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                 } else {
                   if (TextFieldValidator.f(-1)) {
                     GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
                   } else {
-                    pn.field_w.drawQuarterSize(this.field_F, this.field_T);
+                    StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                   }
                 }
               }
@@ -96,20 +96,20 @@ final class SelectableTrinketIcon extends UiLayoutNode {
           } else {
             this.c(true);
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
-              qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
+              ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
             } else {
               if (!pc.field_e) {
                 if (this.field_Bb == 32) {
                   if (!TextFieldValidator.f(-1)) {
-                    pn.field_w.drawQuarterSize(this.field_F, this.field_T);
+                    StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
                     GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
                   }
                 } else {
-                  pn.field_w.drawQuarterSize(this.field_F, this.field_T);
+                  StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                 }
               } else {
-                qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
+                ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
               }
             }
           }
@@ -120,16 +120,16 @@ final class SelectableTrinketIcon extends UiLayoutNode {
           }
           if (param0) {
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
-              qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
+              ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
             } else {
               if (pc.field_e) {
-                qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
+                ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
               } else {
                 if (this.field_Bb != 32) {
-                  pn.field_w.drawQuarterSize(this.field_F, this.field_T);
+                  StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                 } else {
                   if (!TextFieldValidator.f(-1)) {
-                    pn.field_w.drawQuarterSize(this.field_F, this.field_T);
+                    StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
                     GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
                   }
@@ -139,20 +139,20 @@ final class SelectableTrinketIcon extends UiLayoutNode {
           } else {
             this.c(true);
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
-              qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
+              ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
             } else {
               if (!pc.field_e) {
                 if (this.field_Bb == 32) {
                   if (!TextFieldValidator.f(-1)) {
-                    pn.field_w.drawQuarterSize(this.field_F, this.field_T);
+                    StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
                     GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
                   }
                 } else {
-                  pn.field_w.drawQuarterSize(this.field_F, this.field_T);
+                  StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                 }
               } else {
-                qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
+                ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
               }
             }
           }

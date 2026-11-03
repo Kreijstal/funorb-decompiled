@@ -61,7 +61,7 @@ final class SectorCacheStore {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -187,9 +187,9 @@ final class SectorCacheStore {
         }
     }
 
-    final static void a(byte param0, tv param1) {
+    final static void a(byte param0, ChatMessage param1) {
         int var2_int = 0;
-        tv var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -205,7 +205,7 @@ final class SectorCacheStore {
           if (0 != param1.field_j ||
             param1.field_p != 0) {
             for (var2_int = 0; vb.field_j > var2_int; var2_int++) {
-              var3 = fu.field_b[var2_int];
+              var3 = GrowableIntList.field_b[var2_int];
               if (var3.field_c == 2 &&
                 var3.field_j == param1.field_j &&
                 var3.field_p == param1.field_p) {
@@ -232,7 +232,7 @@ final class SectorCacheStore {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -414,7 +414,7 @@ final class SectorCacheStore {
             } else {
               stackIn_70_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param4).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -468,7 +468,7 @@ final class SectorCacheStore {
                 var9.a(true, 327, 5, var4, 16);
               }
               AuctionTableWidget.field_Hb.field_Db.addChild((byte) -109, (UiLayoutNode) (var5));
-              var6 = LineupView.field_y.a(var2, (byte) 116, var3);
+              var6 = LineupView.field_y.get(var2, (byte) 116, var3);
               var4 += 18;
               var2++;
               if (var6 == null) {
@@ -492,7 +492,7 @@ final class SectorCacheStore {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "qh.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "qh.A(" + param0 + ')');
         }
     }
 
@@ -506,7 +506,7 @@ final class SectorCacheStore {
           this.field_f = param2;
           this.field_d = param3;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -202,7 +202,7 @@ final class MySquadScreen extends TeamManagementScreen {
           stackIn_6_3 = -107;
           stackIn_7_4 = !(TextFieldValidator.f(param0 ^ 4));
           stackIn_11_2 = (((PlayerStats) (Object) stackIn_6_2).c((byte) stackIn_6_3, stackIn_7_4)) && (wn.a((byte) 47));
-          var7 = kk.a(stackIn_6_0, stackIn_6_1, stackIn_11_2);
+          var7 = TriangleMesh.a(stackIn_6_0, stackIn_6_1, stackIn_11_2);
           var8 = -36 + this.field_I.field_F + this.field_I.field_q;
           var9 = this.field_I.field_T + 40;
           if (var7 != null) {
@@ -254,7 +254,7 @@ final class MySquadScreen extends TeamManagementScreen {
             for (var16Lifetime1 = 0; var23.length > var16Lifetime1; var16Lifetime1++) {
               var24 = var23[var16Lifetime1];
               var27 = var24;
-              q.field_d.d(ValidationState.field_b[var24.field_Bb.field_h], var27.field_F + (var27.field_q >> 1), var27.field_mb + var27.field_T + 14, 16777215, -1);
+              ConsoleTokenCursor.field_d.d(ValidationState.field_b[var24.field_Bb.field_h], var27.field_F + (var27.field_q >> 1), var27.field_mb + var27.field_T + 14, 16777215, -1);
             }
           }
           var28 = MessageDialog.field_A[ic.field_h.field_q[this.field_L.field_Fb]];
@@ -272,7 +272,7 @@ final class MySquadScreen extends TeamManagementScreen {
                   var21 = 16777215;
                   if (var17_int == 0) {
                     if (var16Lifetime2 == -1) {
-                      var20 = gd.field_d;
+                      var20 = ListingRowCache.field_d;
                       var21 = 13421772;
                     } else {
                       var20 = ad.formatCurrencyAmount(var16Lifetime2, param0 ^ -26297);
@@ -315,7 +315,7 @@ final class MySquadScreen extends TeamManagementScreen {
             stackIn_61_0 = -1;
             stackIn_61_1 = ~this.field_L.j((byte) 21).field_Eb.trinketIds.length;
             if (stackIn_61_0 > stackIn_61_1) {
-              eo.d(this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb);
+              eo.darkenRectangle(this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb);
             }
             var6 = AuctionsScreen.field_M;
             var5.c(var6, this.field_X.field_q + this.field_X.field_F - 20, 22 + this.field_X.field_T, 16777215, -1);
@@ -407,7 +407,7 @@ final class MySquadScreen extends TeamManagementScreen {
           this.field_L = (SquadGridWidget) null;
         }
         this.field_I.field_E = tr.field_g.toLowerCase();
-        this.field_W.field_E = q.field_f.toLowerCase();
+        this.field_W.field_E = ConsoleTokenCursor.field_f.toLowerCase();
         this.field_P.field_E = ConsoleParseException.field_d.toLowerCase();
         this.field_G.field_E = ca.field_d.toLowerCase();
         this.field_X.field_E = mp.field_k.toLowerCase();

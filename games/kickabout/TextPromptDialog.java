@@ -20,16 +20,16 @@ final class TextPromptDialog extends UiLayoutNode {
     private int field_Ob;
     private UiLayoutNode field_Gb;
 
-    final static tv a(int param0, int param1, byte param2, int param3) {
+    final static ChatMessage a(int param0, int param1, byte param2, int param3) {
         boolean stackIn_47_0 = false;
         Object var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        tv var8_ref_tv;
+        ChatMessage var8_ref_tv;
         int var9;
-        tv var9_ref_tv;
+        ChatMessage var9_ref_tv;
         int var10_int;
         String var10;
         String var11;
@@ -44,13 +44,13 @@ final class TextPromptDialog extends UiLayoutNode {
         var5 = 0;
         var6 = 0;
         for (var7 = vb.field_j - 1; var7 >= 0; var7--) {
-          var8_ref_tv = fu.field_b[var7];
+          var8_ref_tv = GrowableIntList.field_b[var7];
           var9 = 0;
           if (!PacketBuffer.field_l &&
             var5 < TrinketTile.field_Hb) {
             var10_int = r.a(0, var8_ref_tv.field_c);
             if (var10_int <= var8_ref_tv.b(80) && (var8_ref_tv.field_m ||
-              !hi.a(param2 ^ 26, var8_ref_tv.field_q))) {
+              !DiskCacheRequest.a(param2 ^ 26, var8_ref_tv.field_q))) {
               var9 = 1;
             }
           }
@@ -76,7 +76,7 @@ final class TextPromptDialog extends UiLayoutNode {
         }
         var7Lifetime1 = 0;
         for (var8 = 0; vb.field_j > var8; var8++) {
-          var9_ref_tv = fu.field_b[var8];
+          var9_ref_tv = GrowableIntList.field_b[var8];
           if (null != var9_ref_tv.field_s) {
             AuctionSettingsDialog.field_G.field_Ab.addChild((byte) -105, var9_ref_tv.field_s);
             var9_ref_tv.field_s.a(true, var9_ref_tv.field_s.g((byte) -44), param3, var7Lifetime1, param1);
@@ -93,7 +93,7 @@ final class TextPromptDialog extends UiLayoutNode {
           AuctionSettingsDialog.field_G.field_Ab.field_mb = var7Lifetime1;
         }
         if (param2 != 26) {
-          return (tv) null;
+          return (ChatMessage) null;
         }
         AuctionSettingsDialog.field_G.field_Ab.field_L = var7Lifetime1 - AuctionSettingsDialog.field_G.field_Ab.field_mb;
         if (WidgetContainer.field_z) {
@@ -113,7 +113,7 @@ final class TextPromptDialog extends UiLayoutNode {
         AuctionSettingsDialog.field_G.a(param1, param0 * param1 * 2, true, param2 ^ 26);
         stackIn_47_0 = (AuctionSettingsDialog.field_G.field_Ab.field_J + AuctionSettingsDialog.field_G.field_Ab.field_v == var9Lifetime1);
         dg.field_a = stackIn_47_0;
-        return (tv) (var4);
+        return (ChatMessage) (var4);
     }
 
     final static void a(byte param0, String param1) {
@@ -124,7 +124,7 @@ final class TextPromptDialog extends UiLayoutNode {
             field_Ib = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "rb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class TextPromptDialog extends UiLayoutNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -544,7 +544,7 @@ final class TextPromptDialog extends UiLayoutNode {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -585,7 +585,7 @@ final class TextPromptDialog extends UiLayoutNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

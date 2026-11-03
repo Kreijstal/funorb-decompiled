@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Bzip2Decoder {
-    private static os field_a;
+    private static Bzip2State field_a;
 
-    private final static int readBits(int param0, os param1) {
+    private final static int readBits(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_q < param0) {
           param1.field_z = param1.field_z << 8 | param1.field_y[param1.field_K] & 255;
@@ -24,11 +24,11 @@ final class Bzip2Decoder {
         field_a = null;
     }
 
-    private final static byte e(os param0) {
+    private final static byte e(Bzip2State param0) {
         return (byte)Bzip2Decoder.readBits(1, param0);
     }
 
-    private final static byte b(os param0) {
+    private final static byte b(Bzip2State param0) {
         return (byte)Bzip2Decoder.readBits(8, param0);
     }
 
@@ -77,7 +77,7 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void buildSymbolMap(os param0) {
+    private final static void buildSymbolMap(Bzip2State param0) {
         int var1 = 0;
         param0.field_t = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -88,7 +88,7 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void decodeBlocks(os param0) {
+    private final static void decodeBlocks(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -460,7 +460,7 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void emitBlock(os param0) {
+    private final static void emitBlock(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -616,6 +616,6 @@ final class Bzip2Decoder {
     }
 
     static {
-        field_a = new os();
+        field_a = new Bzip2State();
     }
 }

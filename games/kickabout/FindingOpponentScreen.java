@@ -23,7 +23,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
         SoftwareRasterizer.a(this.field_A.field_F - 150, this.field_A.field_T - 150, this.field_A.field_q + 300, this.field_A.field_mb + 160, 8, 65793, this.field_C >> 1);
         this.field_A.a(50, param0);
         String var3 = SingleChildContainer.field_w.toLowerCase();
-        int var4 = (int)Math.abs(-(nj.a(-58) / 1000L % 6L) + 3L);
+        int var4 = (int)Math.abs(-(nj.monotonicMillis(-58) / 1000L % 6L) + 3L);
         un.field_d.c(hv.field_d.toUpperCase(), (this.field_A.field_q >> 1) + this.field_A.field_F, this.field_A.field_T + (this.field_A.field_mb >> 1) + 6, 16777215, -1, this.field_C);
         for (var5 = 0; var4 > var5; var5++) {
           var3 = var3 + ".";
@@ -70,17 +70,17 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void g(byte param0) {
         if (param0 < -112) {
-          eo.b(ug.a(0, (int)CachedArchiveSource.field_C), lf.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
+          eo.b(ug.a(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
           return;
         }
         FindingOpponentScreen.e(70);
-        eo.b(ug.a(0, (int)CachedArchiveSource.field_C), lf.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
+        eo.b(ug.a(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
     }
 
     private final void a(boolean param0) {

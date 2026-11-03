@@ -25,7 +25,7 @@ final class mg {
     }
 
     final static void a(byte param0) {
-        FadingSoundPlayer var1 = wt.a(72, false, em.field_e, 43, 128, 34);
+        FadingSoundPlayer var1 = wt.a(72, false, DualLinkHashTable.field_e, 43, 128, 34);
         if (var1 != null) {
           var1.startFadeOut(150, (byte) -4);
           if (param0 != -25) {
@@ -71,7 +71,7 @@ final class mg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

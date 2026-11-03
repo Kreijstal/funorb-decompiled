@@ -65,7 +65,7 @@ final class TeamSelectionView extends MatchPhaseView {
           if (var2 != 0) {
             stackIn_22_0 = kp.field_a;
           } else {
-            stackIn_22_0 = kk.field_A;
+            stackIn_22_0 = TriangleMesh.field_A;
           }
           var4_ref_String = stackIn_22_0;
           TeamSelectionView.a(var4_ref_String, 302, 46, 316, 88, 0);
@@ -145,7 +145,7 @@ final class TeamSelectionView extends MatchPhaseView {
                 TextFieldNode.field_Wb = false;
               }
               if (0 != MySquadScreen.field_N.field_sb) {
-                td.a(76);
+                TrinketCatalog.a(76);
                 TextFieldNode.field_Wb = false;
               }
             }
@@ -165,7 +165,7 @@ final class TeamSelectionView extends MatchPhaseView {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class TeamSelectionView extends MatchPhaseView {
         if (param0 > -35) {
           field_r = (int[]) null;
         }
-        return al.field_Ab.a((byte) -45);
+        return al.field_Ab.pollMasterIndex((byte) -45);
     }
 
     private final void a(byte param0, int param1) {
@@ -234,7 +234,7 @@ final class TeamSelectionView extends MatchPhaseView {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ final class TeamSelectionView extends MatchPhaseView {
           }
           ar.field_c = EmailSyntaxValidator.g(-22976);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wb.J(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wb.J(" + param0 + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class TeamSelectionView extends MatchPhaseView {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ final class TeamSelectionView extends MatchPhaseView {
           this.field_o.a(true, 21, 2, 0, 21);
           this.field_s.a(true, 21, -21 + param0.field_q - 2, 0, 21);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -411,7 +411,7 @@ final class TeamSelectionView extends MatchPhaseView {
         try {
           ul.a(param2, 1, param3, true, (byte) -120, param1, 16, param4, 1, param0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

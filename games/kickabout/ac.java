@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ac implements hc {
+final class ac implements OverlayLayer {
     static Random field_d;
     private static int field_c;
     static UiLayoutNode field_b;
@@ -26,8 +26,8 @@ final class ac implements hc {
           var2 = -AuctionsScreen.field_A + 20;
           SoftwareRasterizer.f(-1 + var2, 19, 2 + sh.field_d, 50, 10, 16777215);
           SoftwareRasterizer.a(var2, 20, sh.field_d, 48, 10, 65793, 160);
-          if (qe.field_i != null) {
-            qe.field_i[PacketBuffer.field_e[field_c]].drawQuarterSize(var2, 28);
+          if (ArchivePreloader.field_i != null) {
+            ArchivePreloader.field_i[PacketBuffer.field_e[field_c]].drawQuarterSize(var2, 28);
           }
           un.field_d.a(kw.field_c[field_c], var2 + 16 + 32, 49, 16777215, -1);
         }

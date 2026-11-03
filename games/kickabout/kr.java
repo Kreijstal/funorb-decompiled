@@ -19,30 +19,30 @@ final class kr {
     }
 
     final static void a(UiLayoutNode param0, boolean param1, int param2) {
-        uv var9 = null;
+        ChatLine var9 = null;
         Sprite var11 = null;
         String var10 = null;
-        uv var12 = null;
+        ChatLine var12 = null;
         Sprite var14 = null;
         String var13 = null;
-        uv var15 = null;
+        ChatLine var15 = null;
         Sprite var17 = null;
         String var16 = null;
-        uv var18 = null;
+        ChatLine var18 = null;
         Sprite var20 = null;
         String var19 = null;
-        uv var21 = null;
+        ChatLine var21 = null;
         Sprite var23 = null;
         String var22 = null;
-        uv var24 = null;
+        ChatLine var24 = null;
         Sprite var26 = null;
         String var25 = null;
-        uv var27 = null;
+        ChatLine var27 = null;
         String var28 = null;
-        uv var30 = null;
+        ChatLine var30 = null;
         Sprite var32 = null;
         String var31 = null;
-        uv var33 = null;
+        ChatLine var33 = null;
         Sprite var35 = null;
         String var34 = null;
         int var5 = 0;
@@ -99,7 +99,7 @@ final class kr {
           var26 = il.field_d[2];
           var29Lifetime1Lifetime4 = var26;
           var29Lifetime1Lifetime5 = var26;
-          var25 = rd.field_a;
+          var25 = GameModeDefinition.field_a;
           var24.field_j.addItemWithIcon(var25, param1, 13, var26);
         }
         if (param2 == 2) {
@@ -116,7 +116,7 @@ final class kr {
           var34 = TextWidgetPainter.field_g;
           var33.field_j.addItemWithIcon(var34, true, 13, var35);
         }
-        uv var36 = TextButton.field_v;
+        ChatLine var36 = TextButton.field_v;
         int var4 = param0.field_F;
         if (!param1) {
           return;
@@ -127,7 +127,7 @@ final class kr {
           var7 = param0.field_mb;
           var36.field_j.a(0, var6, var4, var5, var7);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "kr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class kr {
             return stackIn_6_0;
           }
           if (param1 == 3) {
-            stackIn_10_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, pn.field_E, new String[]{param0});
+            stackIn_10_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, StrongCacheEntry.field_E, new String[]{param0});
             return stackIn_10_0;
           }
           if (param1 == 4) {
@@ -171,7 +171,7 @@ final class kr {
             return stackIn_18_0;
           }
           if (param1 == 6) {
-            stackIn_22_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, rc.field_c, new String[]{param0});
+            stackIn_22_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, GzipDecoder.field_c, new String[]{param0});
             return stackIn_22_0;
           }
           if (param1 == 7) {
@@ -187,7 +187,7 @@ final class kr {
             return stackIn_32_0;
           }
           if (param1 == 12) {
-            stackIn_35_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, sr.field_e, new String[]{param0});
+            stackIn_35_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, SortCriterion.field_e, new String[]{param0});
             return stackIn_35_0;
           }
           if (param2 != 73) {
@@ -209,7 +209,7 @@ final class kr {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class kr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class kr {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

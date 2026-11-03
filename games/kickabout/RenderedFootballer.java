@@ -55,7 +55,7 @@ final class RenderedFootballer extends FootballerAgent {
             var7 = (String) null;
             RenderedFootballer.a((ResourceArchive) null, -21, (String) null, (ResourceArchive) null, (String) null);
           }
-          stackIn_3_0 = kk.a(var5_int, param3, param1 - 84, var6, param0);
+          stackIn_3_0 = TriangleMesh.a(var5_int, param3, param1 - 84, var6, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class RenderedFootballer extends FootballerAgent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class RenderedFootballer extends FootballerAgent {
             stackIn_7_3 = -107;
             stackIn_8_4 = !(TextFieldValidator.f(param0 ^ 5185));
             stackIn_12_2 = (((PlayerStats) (Object) stackIn_7_2).c((byte) stackIn_7_3, stackIn_8_4)) && (wn.a((byte) 83));
-            var4 = kk.a(stackIn_7_0, stackIn_7_1, stackIn_12_2);
+            var4 = TriangleMesh.a(stackIn_7_0, stackIn_7_1, stackIn_12_2);
             var5 = param2.field_q + param2.field_F - 38;
             var6 = param2.field_T + 58;
             if (var4 == null) {
@@ -143,7 +143,7 @@ final class RenderedFootballer extends FootballerAgent {
               IsSixCommand.field_C.a(var9, var10, 73 + param2.field_T, 13369344, 65793);
             }
           } else {
-            IsSixCommand.field_C.a(pn.field_A, param2.field_F + 18, 40 + param2.field_T, param2.field_q - 36, param2.field_mb - 50, 11184810, -1, 1, 0, 16);
+            IsSixCommand.field_C.a(StrongCacheEntry.field_A, param2.field_F + 18, 40 + param2.field_T, param2.field_q - 36, param2.field_mb - 50, 11184810, -1, 1, 0, 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class RenderedFootballer extends FootballerAgent {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -310,7 +310,7 @@ final class RenderedFootballer extends FootballerAgent {
         var21 = Kickabout.field_G;
         var2 = 1900;
         var3 = ug.a(0, this.g(1606384336));
-        var4 = lf.a((byte) -119, this.h(1000));
+        var4 = IntKeyLookup.a((byte) -119, this.h(1000));
         var5 = InstrumentNoteMask.field_i * 40 >> 8;
         var6 = InstrumentNoteMask.field_i * 70 >> 8;
         var7 = InstrumentNoteMask.field_i * 10 >> 8;
@@ -319,25 +319,25 @@ final class RenderedFootballer extends FootballerAgent {
           var8_ref_String__ = new String[]{"action:", "action_time:", "dash_delay"};
           var9_ref_String__ = new String[]{Integer.toString(this.action), Integer.toString(this.actionTime), Integer.toString(this.dashCooldown)};
           var10 = new StringBuilder("(");
-          eh.a(this.positionX, 100, var10);
+          GameResourceLoader.a(this.positionX, 100, var10);
           discarded$6 = var10.append(", ");
-          eh.a(this.positionY, 100, var10);
+          GameResourceLoader.a(this.positionY, 100, var10);
           discarded$7 = var10.append(", ");
-          eh.a(this.height, 100, var10);
+          GameResourceLoader.a(this.height, 100, var10);
           discarded$8 = var10.append(')');
           var11_ref_StringBuilder = new StringBuilder("(");
-          eh.a(this.field_kb, 100, var11_ref_StringBuilder);
+          GameResourceLoader.a(this.field_kb, 100, var11_ref_StringBuilder);
           discarded$9 = var11_ref_StringBuilder.append(", ");
-          eh.a(this.field_bb, 100, var11_ref_StringBuilder);
+          GameResourceLoader.a(this.field_bb, 100, var11_ref_StringBuilder);
           discarded$10 = var11_ref_StringBuilder.append(", ");
-          eh.a(this.field_X, 100, var11_ref_StringBuilder);
+          GameResourceLoader.a(this.field_X, 100, var11_ref_StringBuilder);
           discarded$11 = var11_ref_StringBuilder.append(')');
           var12 = this.stats.b(0);
           var13 = this.stats.a(15);
           var14 = new Sprite(var12, 10 * var8_ref_String__.length + 5 + var13 + 20);
           PacketBuffer.a(-64, var14);
           this.stats.a(var13 >> 1, 23, var12 >> 1);
-          var15 = q.field_d;
+          var15 = ConsoleTokenCursor.field_d;
           var16 = var13 + 11;
           for (var17 = 0; var8_ref_String__.length > var17; var17++) {
             var15.c(var8_ref_String__[var17], 10 + (var12 >> 1), var16, 16777215, -1);
@@ -399,8 +399,8 @@ final class RenderedFootballer extends FootballerAgent {
             }
           }
           if (this.field_ab) {
-            var9 = (double)(nj.a(95) % 1000L) / 1000.0;
-            var11 = (double)(nj.a(35) % 300L) / 300.0;
+            var9 = (double)(nj.monotonicMillis(95) % 1000L) / 1000.0;
+            var11 = (double)(nj.monotonicMillis(35) % 300L) / 300.0;
             nh.a(kw.field_f, var9, 1.0, var11 + 1.0);
           }
           kw.field_f.drawHalfSize(-64 + var3, -95 + var4);
@@ -425,7 +425,7 @@ final class RenderedFootballer extends FootballerAgent {
           this.a(param3, false);
           this.a(this.positionX, false, this.height, this.positionY);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -466,7 +466,7 @@ final class RenderedFootballer extends FootballerAgent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -524,7 +524,7 @@ final class RenderedFootballer extends FootballerAgent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -796,7 +796,7 @@ final class RenderedFootballer extends FootballerAgent {
           this.action == 12) &&
           (this.field_s ||
           !this.stats.a((byte) 44, this.member))) {
-          return (uv.b(this.field_m >> 8, this.field_k >> 8, (byte) 2) + 6144) % 8192 >> 2;
+          return (ChatLine.b(this.field_m >> 8, this.field_k >> 8, (byte) 2) + 6144) % 8192 >> 2;
         }
         var2 = -68 / ((param0 + 17) / 51);
         if (this.directionX < 0) {
@@ -822,11 +822,11 @@ final class RenderedFootballer extends FootballerAgent {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11, int param12, int param13) {
-        sn.field_e = null;
+        UrlRequest.field_e = null;
         NetworkGameClient.b(true);
         param11 = in.a(param4, 50, param5, param11, param13, param12, param1);
         MatchTransitionScreen.a(false, param7, param9, param8, param10, param6, param5, param11, param3, param2);
-        sb.a(param9, false, param8);
+        StringCursor.a(param9, false, param8);
         if (param0 >= -42) {
           field_S = (String) null;
         }
@@ -849,7 +849,7 @@ final class RenderedFootballer extends FootballerAgent {
           }
           this.b(this.field_W, (byte) 68);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gm.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gm.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -918,7 +918,7 @@ final class RenderedFootballer extends FootballerAgent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -942,7 +942,7 @@ final class RenderedFootballer extends FootballerAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "gm.CA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "gm.CA(" + param0 + ')');
         }
     }
 
@@ -970,7 +970,7 @@ final class RenderedFootballer extends FootballerAgent {
           this.b((byte) -128, 3);
           this.a(this.positionX, false, this.height, this.positionY);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

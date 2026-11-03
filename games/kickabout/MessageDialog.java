@@ -77,14 +77,14 @@ class MessageDialog extends PopupDialog {
           if (param0 != 70) {
             return;
           }
-          if (1 != ks.field_e) {
-            stackIn_12_0 = (ks.field_e == 3) ? 1 : 0;
+          if (1 != HuffmanCodec.field_e) {
+            stackIn_12_0 = (HuffmanCodec.field_e == 3) ? 1 : 0;
           } else {
             stackIn_12_0 = 1;
           }
           var1_int = stackIn_12_0;
-          if (ks.field_e != 2) {
-            stackIn_18_0 = (ks.field_e == 3) ? 1 : 0;
+          if (HuffmanCodec.field_e != 2) {
+            stackIn_18_0 = (HuffmanCodec.field_e == 3) ? 1 : 0;
           } else {
             stackIn_18_0 = 1;
           }
@@ -135,7 +135,7 @@ class MessageDialog extends PopupDialog {
               var13 = stackIn_43_0[stackIn_44_1];
               var14 = InstrumentNoteMask.field_i * var13.field_o >> 8;
               var15 = var13.field_v * InstrumentNoteMask.field_i >> 8;
-              var13.b(ug.a(param0 ^ 70, var8_ref_int__[var11]) - (var14 >> 1), lf.a((byte) -90, var9_ref_int__[var11]) - (var15 >> 1), var14, var15);
+              var13.b(ug.a(param0 ^ 70, var8_ref_int__[var11]) - (var14 >> 1), IntKeyLookup.a((byte) -90, var9_ref_int__[var11]) - (var15 >> 1), var14, var15);
             }
           }
           if (var2 != 0) {
@@ -164,13 +164,13 @@ class MessageDialog extends PopupDialog {
             }
             var8 = InstrumentNoteMask.field_i * var18.field_o >> 8;
             var9 = InstrumentNoteMask.field_i * var18.field_v >> 8;
-            var5_ref.b(ug.a(0, var6) - (var8 >> 1), -(var9 >> 1) + lf.a((byte) -77, var7), var8, var9);
+            var5_ref.b(ug.a(0, var6) - (var8 >> 1), -(var9 >> 1) + IntKeyLookup.a((byte) -77, var7), var8, var9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "i.R(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "i.R(" + param0 + ')');
         }
     }
 
@@ -388,12 +388,12 @@ class MessageDialog extends PopupDialog {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
     MessageDialog(int param0, lv param1) {
-        this(param0, param1, IsSixCommand.field_G[param0], gd.field_e[param0]);
+        this(param0, param1, IsSixCommand.field_G[param0], ListingRowCache.field_e[param0]);
     }
 
     void handleResult(int param0, int param1) {
@@ -419,7 +419,7 @@ class MessageDialog extends PopupDialog {
             this.a(wo.field_j, (byte) 90);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "i.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "i.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -60,7 +60,7 @@ final class m {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_g[var3Lifetime1] = sd.a(this.field_g[var3Lifetime1], ju.field_W[var4][qj.b((int)(this.field_p[qj.b(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
+              this.field_g[var3Lifetime1] = sd.a(this.field_g[var3Lifetime1], ju.field_W[var4][TextLayoutLine.b((int)(this.field_p[TextLayoutLine.b(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -75,7 +75,7 @@ final class m {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_g[var3Lifetime1Lifetime2] = sd.a(this.field_g[var3Lifetime1Lifetime2], ju.field_W[var7][qj.b(255, (int)(this.field_c[qj.b(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
+              this.field_g[var3Lifetime1Lifetime2] = sd.a(this.field_g[var3Lifetime1Lifetime2], ju.field_W[var7][TextLayoutLine.b(255, (int)(this.field_c[TextLayoutLine.b(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -121,8 +121,8 @@ final class m {
           var9_int = 495;
           var10 = 5;
           Kickabout.field_H.a(true, var9_int - 10, 5, var10, param6);
-          ei.field_b.a(true, Kickabout.field_H.field_q - ij.field_s.field_q, 0, 0, param6);
-          ij.field_s.a(true, ij.field_s.field_q, ei.field_b.field_q, 0, param6);
+          ei.field_b.a(true, Kickabout.field_H.field_q - WeightedCacheEntry.field_s.field_q, 0, 0, param6);
+          WeightedCacheEntry.field_s.a(true, WeightedCacheEntry.field_s.field_q, ei.field_b.field_q, 0, param6);
           var10 = var10 + (param7 + param6);
           gl.field_c.a(true, gl.field_c.g((byte) -99), 5, var10, param3);
           var11 = MySquadScreen.field_N.g((byte) -19);
@@ -147,7 +147,7 @@ final class m {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -248,9 +248,9 @@ final class m {
               or.field_d.backpatchShortLength(-var10 + or.field_d.field_n, 62);
             }
             c.a(-1, false);
-            un.field_c = pf.field_e;
+            un.field_c = ByteStorage.field_e;
           }
-          if (pf.field_e == un.field_c &&
+          if (ByteStorage.field_e == un.field_c &&
             SetLagCommand.a((byte) 55, 1)) {
             var9Lifetime1 = un.field_e.readUnsignedByte((byte) -116);
             un.field_e.field_n = 0;
@@ -261,7 +261,7 @@ final class m {
             } else {
               if (var9Lifetime1 == 248) {
                 wc.a((byte) -50, so.a(-71));
-                gd.field_b = ld.field_i;
+                ListingRowCache.field_b = ld.field_i;
                 FormationView.b((byte) -116);
                 ContextMenuItem.field_Db = false;
                 stackIn_35_0 = var9Lifetime1;
@@ -298,7 +298,7 @@ final class m {
           if (TournamentLobbyScreen.field_N == un.field_c &&
             LoginCredentials.a(180)) {
             if (so.field_b != 255) {
-              gd.field_b = un.field_e.readString(61);
+              ListingRowCache.field_b = un.field_e.readString(61);
             } else {
               var9_ref_String = un.field_e.a(true);
               if (var9_ref_String != null) {
@@ -317,17 +317,17 @@ final class m {
           if (null == op.field_y) {
             if (ContextMenuItem.field_Db) {
               if (30000L >= KeyedLoginCredentials.c(29680)) {
-                gd.field_b = ic.field_e;
+                ListingRowCache.field_b = ic.field_e;
               } else {
-                gd.field_b = md.field_h;
+                ListingRowCache.field_b = CheatCodeListener.field_h;
               }
               ContextMenuItem.field_Db = false;
               stackIn_65_0 = 249;
               return stackIn_65_0;
             }
             var9Lifetime3 = rl.field_o;
-            rl.field_o = pn.field_y;
-            pn.field_y = var9Lifetime3;
+            rl.field_o = StrongCacheEntry.field_y;
+            StrongCacheEntry.field_y = var9Lifetime3;
             ContextMenuItem.field_Db = true;
           }
           stackIn_67_0 = -1;
@@ -354,7 +354,7 @@ final class m {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ final class m {
         String var9 = null;
         var8 = Kickabout.field_G;
         try {
-          this.field_e[this.field_l] = (byte)hf.a((int) this.field_e[this.field_l], 128 >>> qj.b(7, this.field_o));
+          this.field_e[this.field_l] = (byte)PainterStyle.a((int) this.field_e[this.field_l], 128 >>> TextLayoutLine.b(7, this.field_o));
           this.field_l = this.field_l + 1;
           if (this.field_l > 32) {
             while (this.field_l < 64) {
@@ -421,7 +421,7 @@ final class m {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -431,7 +431,7 @@ final class m {
             field_a = 1.2037987668274452;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "m.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "m.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -472,7 +472,7 @@ final class m {
             var8 = 255 & param2[var5_int] << var6 | (255 & param2[1 + var5_int]) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_e[this.field_l] = (byte)hf.a((int) this.field_e[this.field_l], var8 >>> var7);
+              this.field_e[this.field_l] = (byte)PainterStyle.a((int) this.field_e[this.field_l], var8 >>> var7);
               this.field_o = this.field_o + (8 - var7);
               this.field_l = this.field_l + 1;
               if (512 == this.field_o) {
@@ -480,7 +480,7 @@ final class m {
                 this.field_l = 0;
                 this.field_o = 0;
               }
-              this.field_e[this.field_l] = (byte)qj.b(255, var8 << -var7 + 8);
+              this.field_e[this.field_l] = (byte)TextLayoutLine.b(255, var8 << -var7 + 8);
               this.field_o = this.field_o + var7;
               var5_int++;
               param1 = param1 - 8L;
@@ -492,7 +492,7 @@ final class m {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_e[this.field_l] = (byte)hf.a((int) this.field_e[this.field_l], var8Lifetime1 >>> var7);
+            this.field_e[this.field_l] = (byte)PainterStyle.a((int) this.field_e[this.field_l], var8Lifetime1 >>> var7);
           }
           if (8L > param1 + (long)var7) {
             this.field_o = (int)((long)this.field_o + param1);
@@ -505,7 +505,7 @@ final class m {
               this.field_o = 0;
               this.field_l = 0;
             }
-            this.field_e[this.field_l] = (byte)qj.b(255, var8Lifetime1 << -var7 + 8);
+            this.field_e[this.field_l] = (byte)TextLayoutLine.b(255, var8Lifetime1 << -var7 + 8);
             this.field_o = this.field_o + (int)param1;
           }
           return;
@@ -519,7 +519,7 @@ final class m {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

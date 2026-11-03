@@ -9,7 +9,7 @@ final class DropTargetWidget extends SingleChildContainer {
         try {
           this.field_z = param6;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ln.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ln.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class DropTargetWidget extends SingleChildContainer {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ln.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ln.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -48,16 +48,16 @@ final class DropTargetWidget extends SingleChildContainer {
         }
         try {
           if (null == kw.field_b) {
-            kw.field_b = new em(64);
+            kw.field_b = new DualLinkHashTable(64);
           }
           if (null == ni.field_m) {
-            ni.field_m = new em(64);
+            ni.field_m = new DualLinkHashTable(64);
           }
           GameplayHelpScreen.field_I = param1.field_jb;
           qn.field_b = param2.field_jb;
           RasterStateSnapshot.a(0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ln.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ln.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

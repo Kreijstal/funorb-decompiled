@@ -51,7 +51,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -63,11 +63,11 @@ final class DelayedServerPacket extends IntrusiveNode {
     final static void b(int param0) {
         if (param0 <= 25) {
           DelayedServerPacket.a(111);
-          pc.field_c = nj.a(82);
+          pc.field_c = nj.monotonicMillis(82);
           cv.field_d = 0;
           return;
         }
-        pc.field_c = nj.a(82);
+        pc.field_c = nj.monotonicMillis(82);
         cv.field_d = 0;
     }
 
@@ -95,7 +95,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             return;
           }
           if (AuctionLogEntry.field_h instanceof TeamManagementScreen &&
-            nb.a(param2 + 66)) {
+            GameSoundEffect.a(param2 + 66)) {
             RasterBuffer.a(false);
             return;
           }
@@ -130,7 +130,7 @@ final class DelayedServerPacket extends IntrusiveNode {
               stackIn_31_0 = (GameLoopApplet.field_E.field_A) ? 0 : 1;
               if (stackIn_31_0 != (ei.field_n ? 1 : 0)) {
                 stackIn_35_0 = (GameLoopApplet.field_E.field_d) ? 0 : 1;
-                if (pf.field_c) {
+                if (ByteStorage.field_c) {
                   stackIn_38_1 = 0;
                 } else {
                   stackIn_38_1 = 1;
@@ -150,7 +150,7 @@ final class DelayedServerPacket extends IntrusiveNode {
               if (tb.field_v == 1) {
                 var3_int = var3_int | 2;
               }
-              if (pf.field_c) {
+              if (ByteStorage.field_c) {
                 var3_int = var3_int | 4;
               }
               var4Lifetime1 = IntrusiveNode.b((byte) -65);
@@ -169,7 +169,7 @@ final class DelayedServerPacket extends IntrusiveNode {
               }
               GameLoopApplet.field_E.field_p = sk.a((byte) 97);
               GameLoopApplet.field_E.field_F = IntrusiveNode.b((byte) -95);
-              GameLoopApplet.field_E.field_d = pf.field_c;
+              GameLoopApplet.field_E.field_d = ByteStorage.field_c;
               GameLoopApplet.field_E.field_A = ei.field_n;
             }
           }
@@ -204,7 +204,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           BuyPlayerDialog.field_I = 0;
           if (GameModesHelpScreen.field_G instanceof UnreadMessagesScreen) {
             ((ButtonMenuScreen) (GameModesHelpScreen.field_G)).enterScreen(0, -1, param1);
-            eq.a(1, param1);
+            WeightedLruCache.a(1, param1);
             return;
           }
           if (!(GameModesHelpScreen.field_G instanceof ButtonMenuScreen)) {
@@ -215,13 +215,13 @@ final class DelayedServerPacket extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "jm.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "jm.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2) {
         int var8 = 0;
-        long var3 = nj.a(-127);
+        long var3 = nj.monotonicMillis(-127);
         int var8Lifetime1;
         if (var3 < PlayerStats.field_b) {
           return;
@@ -256,7 +256,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           this.opcode = param1;
           this.data = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jm.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jm.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

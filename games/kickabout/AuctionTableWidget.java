@@ -8,11 +8,11 @@ final class AuctionTableWidget extends ColumnTableWidget {
     static int[] field_Ib;
 
     private final void a(int param0, int param1, int param2) {
-        sr var4 = this.field_zb[param2];
+        SortCriterion var4 = this.field_zb[param2];
         if (param1 == -23061) {
           if (var4 != null) {
             if (this.field_Db == param2) {
-              var4.a(true, 125);
+              var4.cycleDirection(true, 125);
             }
             this.field_Db = param2;
           }
@@ -21,7 +21,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
         AuctionTableWidget.a(108, (byte) -45);
         if (var4 != null) {
           if (this.field_Db == param2) {
-            var4.a(true, 125);
+            var4.cycleDirection(true, 125);
           }
           this.field_Db = param2;
         }
@@ -37,13 +37,13 @@ final class AuctionTableWidget extends ColumnTableWidget {
     final static void a(int param0, byte param1) {
         if (param1 != -25) {
           AuctionTableWidget.a(-62, (byte) -61);
-          sb.field_h[4] = param0;
+          StringCursor.field_h[4] = param0;
           return;
         }
-        sb.field_h[4] = param0;
+        StringCursor.field_h[4] = param0;
     }
 
-    AuctionTableWidget(int[] param0, String[] param1, sr[] param2, int param3) {
+    AuctionTableWidget(int[] param0, String[] param1, SortCriterion[] param2, int param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -56,7 +56,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
         field_Ib = null;
     }
 
-    final static ConsoleExpression a(q param0, int param1) throws ConsoleParseException {
+    final static ConsoleExpression a(ConsoleTokenCursor param0, int param1) throws ConsoleParseException {
         ConsoleExpression stackIn_3_0 = null;
         ConsoleExpression stackIn_10_0 = null;
         ConsoleExpression stackIn_23_0 = null;
@@ -76,7 +76,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
             stackIn_3_0 = (ConsoleExpression) null;
             return stackIn_3_0;
           }
-          var5 = param0.a((byte) 82);
+          var5 = param0.readToken((byte) 82);
           if (TextPromptDialog.field_Mb != var5.field_k &&
             var5.field_k != v.field_d &&
             HelpTipDialog.field_H != var5.field_k &&
@@ -84,28 +84,28 @@ final class AuctionTableWidget extends ColumnTableWidget {
             if (var5.field_k != ContextMenuItem.field_Ab) {
               throw new ConsoleParseException(var5.field_f);
             }
-            if (param0.a(6)) {
+            if (param0.isAtEnd(6)) {
               throw new ConsoleParseException(var5.field_f);
             }
-            var6 = param0.a((byte) 94);
+            var6 = param0.readToken((byte) 94);
             if (ReflectionCheck.field_g != var6.field_k) {
               throw new ConsoleParseException(var6.field_f);
             }
             var5.field_j = new IntrusiveDeque();
             while (true) {
-              if (param0.a(6)) {
+              if (param0.isAtEnd(6)) {
                 throw new ConsoleParseException(var5.field_f);
               }
-              if (param0.a((byte) 90).field_k == RasterBuffer.field_c) {
+              if (param0.readToken((byte) 90).field_k == RasterBuffer.field_c) {
                 stackIn_23_0 = var5;
                 return stackIn_23_0;
               }
               param0.field_a = param0.field_a - 1;
               var5.field_j.a(AuctionTableWidget.a(param0, 1422), 3);
-              if (param0.a(6)) {
+              if (param0.isAtEnd(6)) {
                 throw new ConsoleParseException(var5.field_f);
               }
-              var7 = param0.a((byte) 72);
+              var7 = param0.readToken((byte) 72);
               if (RasterBuffer.field_c == var7.field_k) {
                 stackIn_28_0 = var5;
                 return stackIn_28_0;
@@ -129,7 +129,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 

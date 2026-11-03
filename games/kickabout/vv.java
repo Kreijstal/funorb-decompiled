@@ -10,7 +10,7 @@ abstract class vv extends DualLinkNode {
     static String field_s;
     private static String field_z;
 
-    abstract byte[] b(int param0);
+    abstract byte[] getBytes(int param0);
 
     public static void g(byte param0) {
         field_s = null;
@@ -20,7 +20,7 @@ abstract class vv extends DualLinkNode {
         }
     }
 
-    abstract int a(int param0);
+    abstract int progress(int param0);
 
     vv() {
         this.field_p = true;

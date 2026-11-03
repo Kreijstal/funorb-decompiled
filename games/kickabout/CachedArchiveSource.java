@@ -12,7 +12,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private int field_h;
     static AccountRegistrationPanel field_u;
     private byte[] field_x;
-    private eb field_w;
+    private DiskCacheWorker field_w;
     private byte[] field_r;
     static int field_s;
     static double field_C;
@@ -38,7 +38,7 @@ final class CachedArchiveSource extends ArchiveSource {
         try {
           var3 = (vv) (this.field_v.a(true, (long)param1));
           if (var3 != null) {
-            stackIn_2_0 = var3.a(0);
+            stackIn_2_0 = var3.progress(0);
             return stackIn_2_0;
           }
           if (param0 == 6999) {
@@ -50,7 +50,7 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3_ref), "wm.E(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3_ref), "wm.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "wm.F(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "wm.F(" + param0 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "wm.L(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "wm.L(" + param0 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class CachedArchiveSource extends ArchiveSource {
             field_u = (AccountRegistrationPanel) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wm.J(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wm.J(" + param0 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "wm.G(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "wm.G(" + param0 + ')');
         }
     }
 
@@ -191,11 +191,11 @@ final class CachedArchiveSource extends ArchiveSource {
             stackIn_15_0 = null;
             return (ArchiveIndex) (stackIn_15_0);
           }
-          var7 = this.field_B.b(12802);
+          var7 = this.field_B.getBytes(12802);
           var6 = var7;
           var5 = var6;
           var2 = var5;
-          if (this.field_B instanceof hi) {
+          if (this.field_B instanceof DiskCacheRequest) {
             try {
               if (var5 == null) {
                 throw new RuntimeException();
@@ -236,7 +236,7 @@ final class CachedArchiveSource extends ArchiveSource {
               return (ArchiveIndex) (stackIn_27_0);
             }
             if (this.field_q != null) {
-              this.field_w.a(this.field_h, this.field_q, var7, (byte) 11);
+              this.field_w.enqueueOperation(this.field_h, this.field_q, var7, (byte) 11);
             }
           }
           if (param0 != -24854) {
@@ -251,7 +251,7 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "wm.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "wm.B(" + param0 + ')');
         }
     }
 
@@ -371,7 +371,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   if (!this.field_A) {
                     return;
                   }
-                  if (nj.a(-58) < this.field_y) {
+                  if (nj.monotonicMillis(-58) < this.field_y) {
                     return;
                   }
                   var3_ref = (vv) (this.field_v.b(0));
@@ -402,7 +402,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (!this.field_A) {
               return;
             }
-            if (nj.a(-58) < this.field_y) {
+            if (nj.monotonicMillis(-58) < this.field_y) {
               return;
             }
             var3_refLifetime1 = (vv) (this.field_v.b(0));
@@ -420,12 +420,12 @@ final class CachedArchiveSource extends ArchiveSource {
               var3_refLifetime1 = (vv) (this.field_v.a(-1));
             }
           }
-          this.field_y = 1000L + nj.a(116);
+          this.field_y = 1000L + nj.monotonicMillis(116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "wm.I(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "wm.I(" + param0 + ')');
         }
     }
 
@@ -439,7 +439,7 @@ final class CachedArchiveSource extends ArchiveSource {
           field_u = null;
           field_o = null;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wm.M(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wm.M(" + param0 + ')');
         }
     }
 
@@ -483,7 +483,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (param0 == 0) {
               if (null != this.field_k &&
                 -1 != this.field_r[param1]) {
-                var4 = this.field_w.a(-913, this.field_k, param1);
+                var4 = this.field_w.readImmediate(-913, this.field_k, param1);
               } else {
                 if (this.field_l.a(25533)) {
                   stackIn_34_0 = null;
@@ -496,7 +496,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 if (null == this.field_k) {
                   throw new RuntimeException();
                 }
-                var4 = this.field_w.a(param2 + 8977, param1, this.field_k);
+                var4 = this.field_w.enqueueRead(param2 + 8977, param1, this.field_k);
               } else {
                 if (param0 != 2) {
                   throw new RuntimeException();
@@ -523,10 +523,10 @@ final class CachedArchiveSource extends ArchiveSource {
             stackIn_43_0 = (vv) null;
             return stackIn_43_0;
           }
-          var18 = ((vv) (var4)).b(12802);
+          var18 = ((vv) (var4)).getBytes(12802);
           var13 = var18;
           var5 = var13;
-          if (var4 instanceof hi) {
+          if (var4 instanceof DiskCacheRequest) {
             try {
               if (var5 != null &&
                 var18.length > 2) {
@@ -624,7 +624,7 @@ final class CachedArchiveSource extends ArchiveSource {
           var5[-2 + var18.length] = (byte)(this.field_z.field_f[param1] >>> 8);
           var5[-1 + var18.length] = (byte)this.field_z.field_f[param1];
           if (null != this.field_k) {
-            this.field_w.a(param1, this.field_k, var18, (byte) 66);
+            this.field_w.enqueueOperation(param1, this.field_k, var18, (byte) 66);
             if (this.field_r[param1] != 1) {
               this.field_r[param1] = (byte) 1;
             }
@@ -637,7 +637,7 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw nb.a((Throwable) (var4), "wm.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) (var4), "wm.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -672,7 +672,7 @@ final class CachedArchiveSource extends ArchiveSource {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -687,7 +687,7 @@ final class CachedArchiveSource extends ArchiveSource {
           if (var3 == null) {
             return null;
           }
-          var4 = var3.b(12802);
+          var4 = var3.getBytes(12802);
           if (param1 != 4) {
             this.a(21);
           }
@@ -697,11 +697,11 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3_ref), "wm.D(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3_ref), "wm.D(" + param0 + ',' + param1 + ')');
         }
     }
 
-    CachedArchiveSource(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, eb param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveSource(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -746,7 +746,7 @@ final class CachedArchiveSource extends ArchiveSource {
           this.field_l = param3;
           this.field_q = param2;
           if (null != this.field_q) {
-            this.field_B = (vv) ((Object) this.field_w.a(-913, this.field_q, this.field_h));
+            this.field_B = (vv) ((Object) this.field_w.readImmediate(-913, this.field_q, this.field_h));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -795,7 +795,7 @@ final class CachedArchiveSource extends ArchiveSource {
             stackIn_32_0 = stackIn_28_0;
             stackIn_32_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

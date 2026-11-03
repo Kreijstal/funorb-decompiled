@@ -211,10 +211,10 @@ final class BuyPitchDialog extends MessageDialog {
           var5 = h.field_b[this.field_L][this.field_J];
           String var2 = var5;
           var3 = param0.field_Eb;
-          var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[29], new String[]{var5, var3});
+          var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[29], new String[]{var5, var3});
           this.a(var4, this.field_t, this.field_D, -90, this.field_u);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

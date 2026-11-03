@@ -23,28 +23,28 @@ final class or {
         RuntimeException var1 = null;
         var4 = Kickabout.field_G;
         try {
-          var1_int = qe.field_b[0];
+          var1_int = ArchivePreloader.field_b[0];
           if (param0) {
             or.a((byte) -13);
           }
-          for (var2 = 1; var2 < qe.field_b.length; var2++) {
-            var3 = qe.field_b[var2];
-            ArrayOperations.a(nb.field_e, var2 << 4, nb.field_e, var1_int, var3);
+          for (var2 = 1; var2 < ArchivePreloader.field_b.length; var2++) {
+            var3 = ArchivePreloader.field_b[var2];
+            ArrayOperations.a(GameSoundEffect.field_e, var2 << 4, GameSoundEffect.field_e, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "or.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "or.B(" + param0 + ')');
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void printError(String param0, int param1) {
         if (param1 != 1) {
           return;
         }
-        System.out.println("Error: " + aj.a(-1, "%0a", "\n", param0));
+        System.out.println("Error: " + aj.replaceAll(-1, "%0a", "\n", param0));
     }
 
     public static void a(byte param0) {
@@ -53,7 +53,7 @@ final class or {
         field_a = null;
         if (param0 <= 33) {
           String var2 = (String) null;
-          or.a((String) null, 5);
+          or.printError((String) null, 5);
         }
     }
 
@@ -100,9 +100,9 @@ final class or {
           }
           ParticipantStatus.a(param1, param2, (byte) 112, param0.field_r[param2]);
           var12 = ug.a(param3 - 99, var5);
-          var13 = lf.a((byte) -96, var6);
+          var13 = IntKeyLookup.a((byte) -96, var6);
           var14 = ug.a(0, MatchingTextValidator.field_m[0]);
-          var15 = lf.a((byte) -76, MatchingTextValidator.field_m[1]);
+          var15 = IntKeyLookup.a((byte) -76, MatchingTextValidator.field_m[1]);
           var16 = InstrumentNoteMask.field_i * 10 >> 8;
           var17 = (-1 + (1 << var30.aiWait) & (1 + param1) * ((1 + param2) * 19) + param0.aiTick) * InstrumentNoteMask.field_i >> 8;
           if (param3 != 99) {
@@ -120,14 +120,14 @@ final class or {
           }
           var20 = InstrumentNoteMask.field_i * (var20 << 1) >> 8;
           var21 = InstrumentNoteMask.field_i * (var21 << 1) >> 8;
-          eo.a(ug.a(0, var10), lf.a((byte) -126, var11), InstrumentNoteMask.field_i * var8 >> 8, InstrumentNoteMask.field_i * var9 >> 8, var19, 100);
+          eo.drawRectangleOutline(ug.a(0, var10), IntKeyLookup.a((byte) -126, var11), InstrumentNoteMask.field_i * var8 >> 8, InstrumentNoteMask.field_i * var9 >> 8, var19, 100);
           var22 = in.field_c[param2][-1 + param1];
           for (var23 = 0; 4 > var23; var23++) {
             for (var24 = 0; var24 < -1 + var22[var23].length; var24++) {
               var25 = ug.a(param3 ^ 99, var22[var23][var24][0]);
-              var26 = lf.a((byte) -79, var22[var23][var24][1]);
+              var26 = IntKeyLookup.a((byte) -79, var22[var23][var24][1]);
               var27 = ug.a(0, var22[var23][var24 + 1][0]);
-              var28 = lf.a((byte) -99, var22[var23][var24 + 1][1]);
+              var28 = IntKeyLookup.a((byte) -99, var22[var23][var24 + 1][1]);
               SoftwareRasterizer.e(var25, var26, var27, var28, var19, 128);
             }
           }
@@ -139,7 +139,7 @@ final class or {
           SoftwareRasterizer.c(1 + (var12 - (var18 >> 1)), var13 + 12, -2 + (var18 - var17), 16777215, 220);
           SoftwareRasterizer.c(-(var18 >> 1) + var12 + 1, var13 + 13, var18 - var17 - 2, 16777215, 120);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "or.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "or.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

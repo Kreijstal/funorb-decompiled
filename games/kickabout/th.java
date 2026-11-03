@@ -46,10 +46,10 @@ final class th {
         try {
           var5_int = param0;
           while (true) {
-            if (qe.field_b.length <= var5_int) {
+            if (ArchivePreloader.field_b.length <= var5_int) {
               return;
             }
-            param4 = qe.field_b[var5_int];
+            param4 = ArchivePreloader.field_b[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param4;
@@ -60,11 +60,11 @@ final class th {
               }
               incrementValue$1 = var6;
               var6++;
-              param1 = nb.field_e[incrementValue$1];
+              param1 = GameSoundEffect.field_e[incrementValue$1];
               dupTemp$2 = param2[param1];
               dupTemp$3 = param3[dupTemp$2];
               param3[dupTemp$2] = dupTemp$3 + 1;
-              nb.field_e[dupTemp$3] = param1;
+              GameSoundEffect.field_e[dupTemp$3] = param1;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -83,7 +83,7 @@ final class th {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class th {
         var3 = Kickabout.field_G;
         try {
           var2 = -16 % ((param0 - 22) / 35);
-          var1 = pn.field_z.g(24009);
+          var1 = StrongCacheEntry.field_z.g(24009);
           while (var1 instanceof FadingSoundPlayer) {
             ((FadingSoundPlayer) (var1)).b(112);
             var1 = var1.field_d;
@@ -105,7 +105,7 @@ final class th {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "th.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "th.B(" + param0 + ')');
         }
     }
 

@@ -33,7 +33,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           ValidatedTextWidget.a((RenderedBall) null, true);
         }
         TrinketTile.field_Hb = param1;
-        fu.field_b = new tv[param1 * 15];
+        GrowableIntList.field_b = new ChatMessage[param1 * 15];
     }
 
     public static void n(byte param0) {
@@ -81,7 +81,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           super.a(param0, param1, param2, param3);
           this.field_ab = -param2 + BytePlusOneCommand.field_A - this.field_t;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mr.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mr.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           }
           ii.a(var2Lifetime1, 71);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mr.DB(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mr.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
             field_F = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mr.CB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mr.CB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         if (param0 != -1) {
           this.f(54);
         }
-        TournamentChampionDialog.b(n.field_m, 0, this.field_n - this.field_ab + BytePlusOneCommand.field_A);
+        TournamentChampionDialog.b(ArchiveManager.field_m, 0, this.field_n - this.field_ab + BytePlusOneCommand.field_A);
         return this.field_u;
     }
 
@@ -189,7 +189,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

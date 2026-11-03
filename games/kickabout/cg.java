@@ -32,7 +32,7 @@ final class cg extends SingleChildContainer {
           if (ScrollBar.field_Hb == -1 &&
             TextLine.field_h == -1) {
             ScrollBar.field_Hb = BytePlusOneCommand.field_A;
-            TextLine.field_h = n.field_m;
+            TextLine.field_h = ArchiveManager.field_m;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {
@@ -43,7 +43,7 @@ final class cg extends SingleChildContainer {
           if (decompiledFrameRemainder0) {
             if (!nc.field_a) {
               if (us.field_e <= k.field_i) {
-                stackIn_19_0 = (k.field_i < us.field_e + rd.field_i) ? 1 : 0;
+                stackIn_19_0 = (k.field_i < us.field_e + GameModeDefinition.field_i) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }
@@ -64,7 +64,7 @@ final class cg extends SingleChildContainer {
                 }
               }
             }
-            td.field_d = TextLine.field_h;
+            TrinketCatalog.field_d = TextLine.field_h;
             ws.field_e = ScrollBar.field_Hb;
             if (param0 == null) {
               if (var2_int != 0) {
@@ -78,7 +78,7 @@ final class cg extends SingleChildContainer {
             us.field_e > k.field_i &&
             BytePlusOneCommand.field_C) {
             k.field_i = 0;
-            td.field_d = TextLine.field_h;
+            TrinketCatalog.field_d = TextLine.field_h;
             ws.field_e = ScrollBar.field_Hb;
           }
           EmailAvailabilityValidator.field_o = param0;
@@ -100,7 +100,7 @@ final class cg extends SingleChildContainer {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class cg extends SingleChildContainer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

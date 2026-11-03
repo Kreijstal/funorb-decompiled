@@ -8,7 +8,7 @@ final class ni extends IntrusiveNode {
     static String field_e;
     static String field_q;
     static String field_p;
-    static em field_m;
+    static DualLinkHashTable field_m;
     int field_g;
     static String[] field_k;
     static ResourceArchive field_i;
@@ -41,7 +41,7 @@ final class ni extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

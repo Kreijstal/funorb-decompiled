@@ -22,7 +22,7 @@ final class TabStrip extends UiLayoutNode {
           }
           VerticalScrollbar.a(BlackFadeScreen.field_g, true, AuctionsScreen.field_O, er.field_k, 1, param0, 0);
           for (var2_int = 0; var2_int < AuctionsScreen.field_O; var2_int++) {
-            pf.field_d[var2_int + param0] = var2_int;
+            ByteStorage.field_d[var2_int + param0] = var2_int;
           }
           VerticalScrollbar.a(TournamentLobbyScreen.field_V, false, AuctionsScreen.field_O + param0, vi.field_s, 1, param0 + param0, param0);
           if (AuctionsScreen.field_O > param0) {
@@ -32,7 +32,7 @@ final class TabStrip extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "kf.C(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "kf.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class TabStrip extends UiLayoutNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 

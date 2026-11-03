@@ -12,7 +12,7 @@ final class is {
     static boolean field_c;
     static String field_f;
 
-    final static void a(BitmapFont param0, String param1, qj param2, int param3, int param4) {
+    final static void a(BitmapFont param0, String param1, TextLayoutLine param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -74,7 +74,7 @@ final class is {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class is {
           int var2_int = 119 % ((-72 - param0) / 44);
           ScrollPane.field_Jb.a(new AuctionBidDialog(param1, 32), 3);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "is.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "is.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class is {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "is.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "is.A(" + param0 + ')');
         }
     }
 

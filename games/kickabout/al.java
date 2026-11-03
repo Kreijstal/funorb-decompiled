@@ -8,7 +8,7 @@ final class al extends UiLayoutNode {
     UiLayoutNode field_Eb;
     UiLayoutNode field_yb;
     UiLayoutNode field_zb;
-    static n field_Ab;
+    static ArchiveManager field_Ab;
 
     final static int a(boolean param0, byte param1) {
         int var2 = 0;
@@ -56,7 +56,7 @@ final class al extends UiLayoutNode {
           this.addChild((byte) -113, this.field_Eb);
           this.addChild((byte) -109, this.field_zb);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

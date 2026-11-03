@@ -32,7 +32,7 @@ final class TournamentChampionDialog extends MessageDialog {
             var4.field_zb != null) {
             return true;
           }
-          stackIn_11_0 = (null != uv.field_i) && (nk.a(31253, param2) != null);
+          stackIn_11_0 = (null != ChatLine.field_i) && (nk.a(31253, param2) != null);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,7 +44,7 @@ final class TournamentChampionDialog extends MessageDialog {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class TournamentChampionDialog extends MessageDialog {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -112,12 +112,12 @@ final class TournamentChampionDialog extends MessageDialog {
         String var2 = null;
         Sprite var3 = null;
         try {
-          var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[42], new String[]{param0});
+          var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[42], new String[]{param0});
           var3 = WriteIntegersCommand.field_E[6];
           this.a(var2, this.field_t, var3, -99, this.field_u);
           this.a(ds.a(this.field_y, 1), pg.a(false, 42), 1054928844);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "nq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class TournamentChampionDialog extends MessageDialog {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -186,13 +186,13 @@ final class TournamentChampionDialog extends MessageDialog {
         if (PlayArea.a(100)) {
           return;
         }
-        if (uv.field_f) {
+        if (ChatLine.field_f) {
           return;
         }
         or.field_d.b(77, (byte) 85);
         or.field_d.writeByte(105, param0);
         ri.field_t = param1;
-        uv.field_f = true;
+        ChatLine.field_f = true;
     }
 
     final static void b(int param0, int param1, int param2) {

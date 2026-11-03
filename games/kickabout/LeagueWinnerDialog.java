@@ -30,25 +30,25 @@ final class LeagueWinnerDialog extends MessageDialog {
         int var2;
         var2 = Kickabout.field_G;
         var1 = -24 % ((param0 - 38) / 56);
-        if (1 == ks.field_e) {
+        if (1 == HuffmanCodec.field_e) {
           LoginCredentials.a(-25246, true, false, false, false, false, false);
         } else {
-          if (ks.field_e != 2) {
-            if (3 != ks.field_e) {
-              if (ks.field_e != 4) {
-                if (ks.field_e != 5) {
-                  if (ks.field_e != 6) {
-                    if (ks.field_e != 7) {
-                      if (8 != ks.field_e) {
-                        if (ks.field_e == 9) {
+          if (HuffmanCodec.field_e != 2) {
+            if (3 != HuffmanCodec.field_e) {
+              if (HuffmanCodec.field_e != 4) {
+                if (HuffmanCodec.field_e != 5) {
+                  if (HuffmanCodec.field_e != 6) {
+                    if (HuffmanCodec.field_e != 7) {
+                      if (8 != HuffmanCodec.field_e) {
+                        if (HuffmanCodec.field_e == 9) {
                           LoginCredentials.a(-25246, false, false, true, true, false, false);
                         } else {
-                          if (ks.field_e != 10) {
-                            if (ks.field_e == 11) {
+                          if (HuffmanCodec.field_e != 10) {
+                            if (HuffmanCodec.field_e == 11) {
                               LoginCredentials.a(-25246, true, true, true, true, false, true);
                             } else {
-                              if (ks.field_e != 12) {
-                                if (ks.field_e == 13) {
+                              if (HuffmanCodec.field_e != 12) {
+                                if (HuffmanCodec.field_e == 13) {
                                   LoginCredentials.a(-25246, true, true, true, true, false, true);
                                 } else {
                                   LoginCredentials.a(-25246, true, true, true, true, true, true);
@@ -110,14 +110,14 @@ final class LeagueWinnerDialog extends MessageDialog {
                 JaggrabDownloader.field_h = TeamSelectionView.a(-124, param2, param1);
               } else {
                 var7 = args;
-                pp.a(18267, var7);
+                MusicPatchPcmStream.a(18267, var7);
                 JaggrabDownloader.field_h = wt.a(-117, args);
               }
             }
           } else {
             stackIn_7_0 = !(tn.field_b >= 13);
             JaggrabDownloader.field_h = SquadGridWidget.a(stackIn_7_0, param3 ^ -42);
-            pp.a(param3 ^ -18268, (String[]) null);
+            MusicPatchPcmStream.a(param3 ^ -18268, (String[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -136,15 +136,15 @@ final class LeagueWinnerDialog extends MessageDialog {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
     LeagueWinnerDialog() {
         super(9);
         Sprite var1 = WriteIntegersCommand.field_E[-1 + WriteIntegersCommand.field_E.length];
-        String var2 = q.field_h[-1 + q.field_h.length];
-        String var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[9], new String[]{var2});
+        String var2 = ConsoleTokenCursor.field_h[-1 + ConsoleTokenCursor.field_h.length];
+        String var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[9], new String[]{var2});
         this.a(var3, this.field_t, var1, -117, this.field_u);
     }
 
@@ -182,7 +182,7 @@ final class LeagueWinnerDialog extends MessageDialog {
             return stackIn_3_0;
           }
           if (var2_int > 63) {
-            stackIn_7_0 = st.field_j;
+            stackIn_7_0 = CachedTextLayout.field_j;
             return stackIn_7_0;
           }
           if (param1 != 134217728) {
@@ -215,7 +215,7 @@ final class LeagueWinnerDialog extends MessageDialog {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 

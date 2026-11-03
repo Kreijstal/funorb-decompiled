@@ -25,10 +25,10 @@ final class LoggedGoal extends IntrusiveNode {
         int var4_intLifetime1;
         try {
           GameModesHelpScreen.field_L = param1;
-          pn.field_w = param2;
-          qe.field_i = new ArgbSprite[73];
-          for (var4_int = 0; var4_int < qe.field_i.length; var4_int++) {
-            qe.field_i[var4_int] = param2;
+          StrongCacheEntry.field_w = param2;
+          ArchivePreloader.field_i = new ArgbSprite[73];
+          for (var4_int = 0; var4_int < ArchivePreloader.field_i.length; var4_int++) {
+            ArchivePreloader.field_i[var4_int] = param2;
           }
           PlayerShopScreen.field_R = new Sprite(32, 32);
           PacketBuffer.a(-49, PlayerShopScreen.field_R);
@@ -36,7 +36,7 @@ final class LoggedGoal extends IntrusiveNode {
           param0.b(0, 0, 32, 32);
           TeamManagementScreen.e(123);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ch.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ch.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class LoggedGoal extends IntrusiveNode {
           this.keeperState = param0.readUnsignedByte((byte) -118);
           this.time = param0.a((byte) 81);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ch.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ch.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class LoggedGoal extends IntrusiveNode {
             this.kickVelocityY = -65;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ch.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ch.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class LoggedGoal extends IntrusiveNode {
             LoggedGoal.a(-13, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ch.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ch.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class LoggedGoal extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class LoggedGoal extends IntrusiveNode {
         try {
           this.captureGoal(param1, param4, param6, param5, 0, param7, param0 ^ 91, param3);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class LoggedGoal extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -26,16 +26,16 @@ final class rp extends ri {
 
     final static int a(int param0, int param1, int param2) {
         if (param0 == 1) {
-          if (rd.a(-16143, param1)) {
+          if (GameModeDefinition.isLeapYear(-16143, param1)) {
             return 29;
           }
           if (param2 <= -123) {
-            return sr.field_j[param0];
+            return SortCriterion.field_j[param0];
           }
           return -2;
         }
         if (param2 <= -123) {
-          return sr.field_j[param0];
+          return SortCriterion.field_j[param0];
         }
         return -2;
     }
@@ -67,8 +67,8 @@ final class rp extends ri {
           if (wo.field_n != null) {
             var2_int = wo.field_n.length;
           } else {
-            if (null != sb.field_b) {
-              var2_int = sb.field_b.length;
+            if (null != StringCursor.field_b) {
+              var2_int = StringCursor.field_b.length;
             }
           }
           if (-1 != var2_int) {
@@ -126,8 +126,8 @@ final class rp extends ri {
             }
             if (var4 == 0 &&
               ig.field_g > vp.field_c &&
-              var3 < n.field_m &&
-              var3 + TextInputWidget.field_E.field_w > n.field_m) {
+              var3 < ArchiveManager.field_m &&
+              var3 + TextInputWidget.field_E.field_w > ArchiveManager.field_m) {
               if (BytePlusOneCommand.field_A > 269 - TextInputWidget.field_E.field_q &&
                 269 > BytePlusOneCommand.field_A) {
                 ig.field_g = vp.field_c;
@@ -141,7 +141,7 @@ final class rp extends ri {
           if (!param0) {
             return 0;
           }
-          AuctionItem.field_l.a(-21174, vp.a(n.field_m, BytePlusOneCommand.field_A, (byte) 98), vp.a(ReceivedAuctionItem.field_y, sm.field_q, (byte) 69));
+          AuctionItem.field_l.a(-21174, vp.a(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 98), vp.a(ReceivedAuctionItem.field_y, sm.field_q, (byte) 69));
           if (AuctionItem.field_l.c(-1)) {
             if (AuctionItem.field_l.selectedIndex == 0) {
               stackIn_58_0 = 3;
@@ -180,7 +180,7 @@ final class rp extends ri {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "rp.BA(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "rp.BA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -211,16 +211,16 @@ final class rp extends ri {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static ff[] b(int param0) {
         if (param0 == -27666) {
-          return new ff[]{eb.field_c, IconLabel.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
+          return new ff[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
         }
         field_A = true;
-        return new ff[]{eb.field_c, IconLabel.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
+        return new ff[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
     }
 
     rp(int param0) {

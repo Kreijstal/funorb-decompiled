@@ -14,7 +14,7 @@ final class LineupView extends MatchPhaseView {
     private UiLayoutNode field_A;
     private boolean field_v;
     private UiLayoutNode[] field_t;
-    static gd field_y;
+    static ListingRowCache field_y;
     private int field_l;
     static IndexedSprite[][] field_s;
     private int field_w;
@@ -150,7 +150,7 @@ final class LineupView extends MatchPhaseView {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class LineupView extends MatchPhaseView {
         int var1 = -57 / ((param0 - 52) / 45);
     }
 
-    final static void a(tv param0, byte param1) {
+    final static void a(ChatMessage param0, byte param1) {
         UiLayoutNode stackIn_2_0;
         boolean stackIn_2_1;
         Object stackIn_2_2;
@@ -297,15 +297,15 @@ final class LineupView extends MatchPhaseView {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        uv var5 = null;
+        ChatLine var5 = null;
         String var6 = null;
-        uv var7 = null;
+        ChatLine var7 = null;
         String var8 = null;
-        uv var9 = null;
+        ChatLine var9 = null;
         String var10 = null;
-        uv var11 = null;
+        ChatLine var11 = null;
         String var12 = null;
-        uv var13 = null;
+        ChatLine var13 = null;
         try {
           stackIn_2_0 = param0.field_s;
           stackIn_2_1 = false;
@@ -323,7 +323,7 @@ final class LineupView extends MatchPhaseView {
           BytePlusOneCommand.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), stackIn_2_3, stackIn_2_4, (int[]) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_c == 0 &&
             !CachedArchiveSource.c((byte) -121) &&
-            null == uv.field_i &&
+            null == ChatLine.field_i &&
             ArchiveSource.field_b == null) {
             if (!WriteIntegersCommand.field_C) {
               var5 = TextButton.field_v;
@@ -331,20 +331,20 @@ final class LineupView extends MatchPhaseView {
               var5.field_j.addItem(0, 14, var6);
             }
             var7 = TextButton.field_v;
-            var8 = em.field_c;
+            var8 = DualLinkHashTable.field_c;
             var7.field_j.addItem(0, 20, var8);
           }
           if (param0.field_c == 1 &&
             !CachedArchiveSource.c((byte) -121) &&
-            uv.field_i != null &&
-            param0.field_n == uv.field_i.h((byte) -105)) {
+            ChatLine.field_i != null &&
+            param0.field_n == ChatLine.field_i.h((byte) -105)) {
             if (!WriteIntegersCommand.field_C) {
               var9 = TextButton.field_v;
               var10 = vo.field_db;
               var9.field_j.addItem(param1 ^ -60, 14, var10);
             }
             var11 = TextButton.field_v;
-            var12 = st.field_f;
+            var12 = CachedTextLayout.field_f;
             var11.field_j.addItem(0, 20, var12);
           }
           TextButton.field_v.d(1);
@@ -370,7 +370,7 @@ final class LineupView extends MatchPhaseView {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -431,7 +431,7 @@ final class LineupView extends MatchPhaseView {
           this.a((byte) -108, true, var2, true);
         }
         if (this.isLocalParticipantActive((byte) 13)) {
-          gd.a(-1, this.field_A.field_T, this.field_A.field_F, (byte) -96, var3);
+          ListingRowCache.a(-1, this.field_A.field_T, this.field_A.field_F, (byte) -96, var3);
           stackIn_34_0 = this.field_o;
           stackIn_35_1 = (this.field_o.field_lb) && (!this.field_o.field_Gb);
           ((CheckboxLabelWidget) (Object) stackIn_34_0).a(stackIn_35_1, (byte) 46);
@@ -455,7 +455,7 @@ final class LineupView extends MatchPhaseView {
             var7 = -16 + this.field_t[var4Lifetime4].field_T + this.field_t[var4Lifetime4].field_mb;
             PacketBuffer.a(67, ff.field_b);
             SoftwareRasterizer.b();
-            q.field_d.d(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
+            ConsoleTokenCursor.field_d.d(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
             TeamManagementScreen.e(param0 + 116);
             eo.a(ff.field_b, 65793);
             ff.field_b.c(-(ff.field_b.field_o >> 1) + var6, var7 - ff.field_b.field_v);
@@ -523,9 +523,9 @@ final class LineupView extends MatchPhaseView {
         RuntimeException var6_ref = null;
         var8 = Kickabout.field_G;
         try {
-          rd.field_c = param3.getParameter("overxgames");
-          if (null == rd.field_c) {
-            rd.field_c = "0";
+          GameModeDefinition.field_c = param3.getParameter("overxgames");
+          if (null == GameModeDefinition.field_c) {
+            GameModeDefinition.field_c = "0";
           }
           RenderedFootballer.field_lb = param3.getParameter("overxachievements");
           if (null == RenderedFootballer.field_lb) {
@@ -539,9 +539,9 @@ final class LineupView extends MatchPhaseView {
             ClubState.a((byte) 15, (CharSequence) ((Object) var6))) {
             rr.a(10, (CharSequence) ((Object) var6));
           }
-          sb.field_b = new Sprite[param1.length];
+          StringCursor.field_b = new Sprite[param1.length];
           for (var7 = 0; param1.length > var7; var7++) {
-            sb.field_b[var7] = new Sprite(317, 34);
+            StringCursor.field_b[var7] = new Sprite(317, 34);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -560,7 +560,7 @@ final class LineupView extends MatchPhaseView {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -630,7 +630,7 @@ final class LineupView extends MatchPhaseView {
           this.field_q.a(true, 640, 0, 0, 480);
           var11 = new UiLayoutNode();
           var12 = var11;
-          var12.field_N = qj.field_f;
+          var12.field_N = TextLayoutLine.field_f;
           var12.a(true, var12.field_N.field_o, 220, 100, var12.field_N.field_v);
           this.field_q.addChild((byte) -114, var11);
           var6 = param0.field_r[this.field_h];
@@ -696,7 +696,7 @@ final class LineupView extends MatchPhaseView {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -722,7 +722,7 @@ final class LineupView extends MatchPhaseView {
     }
 
     static {
-        field_y = new gd();
+        field_y = new ListingRowCache();
         field_m = new ic();
         field_n = "Press TAB to chat or F10 to open Quick Chat.";
     }

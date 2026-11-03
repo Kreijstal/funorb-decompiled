@@ -20,14 +20,14 @@ final class d {
     final static void a(byte param0) {
         k.field_i = 0;
         if (param0 > 126) {
-          td.field_d = -1;
+          TrinketCatalog.field_d = -1;
           nc.field_a = false;
           EmailAvailabilityValidator.field_o = null;
           ws.field_e = -1;
           return;
         }
         d.a((byte) -102);
-        td.field_d = -1;
+        TrinketCatalog.field_d = -1;
         nc.field_a = false;
         EmailAvailabilityValidator.field_o = null;
         ws.field_e = -1;

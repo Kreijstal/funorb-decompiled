@@ -21,10 +21,10 @@ final class vi extends mc {
         return IntrusiveDeque.field_f;
     }
 
-    final static kk a(byte param0, CipherPacketBuffer param1) {
+    final static TriangleMesh a(byte param0, CipherPacketBuffer param1) {
         int var7 = 0;
-        kk stackIn_26_0 = null;
-        kk stackIn_28_0 = null;
+        TriangleMesh stackIn_26_0 = null;
+        TriangleMesh stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -33,7 +33,7 @@ final class vi extends mc {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        kk var5 = null;
+        TriangleMesh var5 = null;
         int var6 = 0;
         int var8 = 0;
         var8 = Kickabout.field_G;
@@ -44,7 +44,7 @@ final class vi extends mc {
           }
           var3 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
           var4 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
-          var5 = new kk();
+          var5 = new TriangleMesh();
           var5.field_b = (short)param1.l(16, 59);
           var5.field_f = TournamentChampionDialog.a(var5.field_f, param1, 16, -72);
           var5.field_r = TournamentChampionDialog.a(var5.field_r, param1, 16, -61);
@@ -91,7 +91,7 @@ final class vi extends mc {
             stackIn_28_0 = var5;
             return stackIn_28_0;
           }
-          stackIn_26_0 = (kk) null;
+          stackIn_26_0 = (TriangleMesh) null;
           return stackIn_26_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,7 +103,7 @@ final class vi extends mc {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class vi extends mc {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -184,8 +184,8 @@ final class vi extends mc {
           um.field_e.field_A) {
           var1 = um.field_e.field_B;
         } else {
-          if (null != sr.field_l) {
-            var1 = sr.field_l.f(123);
+          if (null != SortCriterion.field_l) {
+            var1 = SortCriterion.field_l.f(123);
           }
         }
         if (-1 == var1) {

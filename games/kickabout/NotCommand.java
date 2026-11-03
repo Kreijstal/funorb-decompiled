@@ -10,13 +10,13 @@ final class NotCommand extends ConsoleCommand {
 
     final static void g(byte param0) {
         if (param0 == -47) {
-          eq.a(0);
-          qn.a(param0 - 24776, il.field_d[0].field_o, BytePlusOneCommand.field_I, eb.field_b, sh.field_c, TeamSelectionAgent.field_f);
+          WeightedLruCache.a(0);
+          qn.a(param0 - 24776, il.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, sh.field_c, TeamSelectionAgent.field_f);
           return;
         }
         NotCommand.a(83, false, -82, 24, true, (byte) 68);
-        eq.a(0);
-        qn.a(param0 - 24776, il.field_d[0].field_o, BytePlusOneCommand.field_I, eb.field_b, sh.field_c, TeamSelectionAgent.field_f);
+        WeightedLruCache.a(0);
+        qn.a(param0 - 24776, il.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, sh.field_c, TeamSelectionAgent.field_f);
     }
 
     final static Sprite[] a(int param0, boolean param1, int param2, int param3, boolean param4, byte param5) {
@@ -112,7 +112,7 @@ final class NotCommand extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

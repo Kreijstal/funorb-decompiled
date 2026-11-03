@@ -23,30 +23,30 @@ final class lw extends IOException {
         int var8Lifetime5;
         if (param2 > param0) {
           if (param1 > param2) {
-            qe.a(param2, param6, -2178, param1, param7, SoftwareRasterizer.field_a, param0, param4, param5);
+            ArchivePreloader.a(param2, param6, -2178, param1, param7, SoftwareRasterizer.field_a, param0, param4, param5);
             var8 = 91 / ((-2 - param3) / 51);
             return;
           }
           if (param1 > param0) {
-            qe.a(param1, param5, -2178, param2, param7, SoftwareRasterizer.field_a, param0, param4, param6);
+            ArchivePreloader.a(param1, param5, -2178, param2, param7, SoftwareRasterizer.field_a, param0, param4, param6);
             var8Lifetime4 = 91 / ((-2 - param3) / 51);
             return;
           }
-          qe.a(param0, param5, -2178, param2, param7, SoftwareRasterizer.field_a, param1, param6, param4);
+          ArchivePreloader.a(param0, param5, -2178, param2, param7, SoftwareRasterizer.field_a, param1, param6, param4);
           var8Lifetime5 = 91 / ((-2 - param3) / 51);
           return;
         }
         if (param1 > param0) {
-          qe.a(param0, param6, -2178, param1, param7, SoftwareRasterizer.field_a, param2, param5, param4);
+          ArchivePreloader.a(param0, param6, -2178, param1, param7, SoftwareRasterizer.field_a, param2, param5, param4);
           var8Lifetime1 = 91 / ((-2 - param3) / 51);
           return;
         }
         if (param2 < param1) {
-          qe.a(param1, param4, -2178, param0, param7, SoftwareRasterizer.field_a, param2, param5, param6);
+          ArchivePreloader.a(param1, param4, -2178, param0, param7, SoftwareRasterizer.field_a, param2, param5, param6);
           var8Lifetime2 = 91 / ((-2 - param3) / 51);
           return;
         }
-        qe.a(param2, param4, -2178, param0, param7, SoftwareRasterizer.field_a, param1, param6, param5);
+        ArchivePreloader.a(param2, param4, -2178, param0, param7, SoftwareRasterizer.field_a, param1, param6, param5);
         var8Lifetime3 = 91 / ((-2 - param3) / 51);
     }
 

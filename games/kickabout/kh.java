@@ -31,7 +31,7 @@ final class kh {
           if (this.field_e > IntrusiveDequeCursor.field_d) {
             return false;
           }
-          if (0 < eq.field_d) {
+          if (0 < WeightedLruCache.field_d) {
             return true;
           }
           return false;
@@ -39,7 +39,7 @@ final class kh {
         if (this.field_e > IntrusiveDequeCursor.field_d) {
           return false;
         }
-        if (0 < eq.field_d) {
+        if (0 < WeightedLruCache.field_d) {
           return true;
         }
         return false;
@@ -75,7 +75,7 @@ final class kh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class kh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class kh {
         if (SplashScreen.field_m != null) {
           return;
         }
-        if (eq.field_d <= param0) {
+        if (WeightedLruCache.field_d <= param0) {
           this.field_l = false;
         }
         if (this.field_l) {

@@ -24,7 +24,7 @@ final class ad {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "ad.A(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "ad.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class ad {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ad.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ad.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class ad {
             ad.formatCurrencyAmount(15, -14);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ad.D(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ad.D(" + param0 + ')');
         }
     }
 
@@ -1101,15 +1101,15 @@ final class ad {
                 }
                 var2 = ib.a("gameratedoptions,0", -102);
                 if (null != var2) {
-                  os.field_i[0] = BlackFadeScreen.a(var2, true);
+                  Bzip2State.field_i[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("gameratedoptions,1", -100);
                 if (var2 != null) {
-                  os.field_i[1] = BlackFadeScreen.a(var2, true);
+                  Bzip2State.field_i[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("gameratedoptions,2", -124);
                 if (null != var2) {
-                  os.field_i[2] = BlackFadeScreen.a(var2, true);
+                  Bzip2State.field_i[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("gameratedoptions_tooltips,0", -119);
                 if (null != var2) {
@@ -1125,7 +1125,7 @@ final class ad {
                 }
                 var2 = ib.a("keycode_left", -97);
                 if (null != var2) {
-                  uv.field_e = 255 & var2[0];
+                  ChatLine.field_e = 255 & var2[0];
                 }
                 var2 = ib.a("keycode_right", -96);
                 if (var2 != null) {
@@ -1193,15 +1193,15 @@ final class ad {
                 }
                 var2 = ib.a("controls_detached2,0", -110);
                 if (var2 != null) {
-                  w.field_g[0] = BlackFadeScreen.a(var2, true);
+                  DialogOverlay.field_g[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("controls_detached2,1", -106);
                 if (null != var2) {
-                  w.field_g[1] = BlackFadeScreen.a(var2, true);
+                  DialogOverlay.field_g[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("controls_detached2,2", -92);
                 if (null != var2) {
-                  w.field_g[2] = BlackFadeScreen.a(var2, true);
+                  DialogOverlay.field_g[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("tutorial", -106);
                 if (null != var2) {
@@ -1912,45 +1912,45 @@ final class ad {
                 }
                 var2 = ib.a("instructions_headings_gameplay,0", -115);
                 if (null != var2) {
-                  iq.field_a[0] = BlackFadeScreen.a(var2, true);
+                  TextLayout.field_a[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_gameplay,1", -101);
                 if (var2 != null) {
-                  iq.field_a[1] = BlackFadeScreen.a(var2, true);
+                  TextLayout.field_a[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_gameplay,2", -116);
                 if (var2 != null) {
-                  iq.field_a[2] = BlackFadeScreen.a(var2, true);
+                  TextLayout.field_a[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_gameplay,3", param1 ^ -113);
                 if (null != var2) {
-                  iq.field_a[3] = BlackFadeScreen.a(var2, true);
+                  TextLayout.field_a[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_gameplay,4", -104);
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  iq.field_a[4] = BlackFadeScreen.a(var2, true);
+                  TextLayout.field_a[4] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_gameplay,5", -90);
                 if (null != var2) {
-                  iq.field_a[5] = BlackFadeScreen.a(var2, true);
+                  TextLayout.field_a[5] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_gamemode,0", -100);
                 if (null != var2) {
-                  uv.field_d[0] = BlackFadeScreen.a(var2, true);
+                  ChatLine.field_d[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_gamemode,1", param1 - 87);
                 if (null != var2) {
-                  uv.field_d[1] = BlackFadeScreen.a(var2, true);
+                  ChatLine.field_d[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_gamemode,2", -90);
                 if (var2 != null) {
-                  uv.field_d[2] = BlackFadeScreen.a(var2, true);
+                  ChatLine.field_d[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_gamemode,3", -88);
                 if (var2 != null) {
-                  uv.field_d[3] = BlackFadeScreen.a(var2, true);
+                  ChatLine.field_d[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_auctions,0", -105);
                 if (null != var2) {
@@ -1962,11 +1962,11 @@ final class ad {
                 }
                 var2 = ib.a("instructions_headings_leagues,0", param1 ^ -110);
                 if (var2 != null) {
-                  ue.field_g[0] = BlackFadeScreen.a(var2, true);
+                  NamedValueEntry.field_g[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_headings_leagues,1", -110);
                 if (null != var2) {
-                  ue.field_g[1] = BlackFadeScreen.a(var2, true);
+                  NamedValueEntry.field_g[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("menu_training", param1 - 129);
                 if (var2 != null) {
@@ -1978,7 +1978,7 @@ final class ad {
                 }
                 var2 = ib.a("menu_management", -102);
                 if (null != var2) {
-                  nb.field_h = BlackFadeScreen.a(var2, true);
+                  GameSoundEffect.field_h = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("menu_management_pitch", param1 - 129);
                 if (null != var2) {
@@ -2058,7 +2058,7 @@ final class ad {
                 }
                 var2 = ib.a("extra_w1", -113);
                 if (null != var2) {
-                  os.field_d = BlackFadeScreen.a(var2, true);
+                  Bzip2State.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("extra_w2", -84);
                 if (null != var2) {
@@ -2082,7 +2082,7 @@ final class ad {
                 }
                 var2 = ib.a("loading_lobby", -123);
                 if (null != var2) {
-                  pn.field_B = BlackFadeScreen.a(var2, true);
+                  StrongCacheEntry.field_B = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("loading_park", -80);
                 if (null != var2) {
@@ -2170,7 +2170,7 @@ final class ad {
                 }
                 var2 = ib.a("choose_team_instructions1", -94);
                 if (null != var2) {
-                  kk.field_A = BlackFadeScreen.a(var2, true);
+                  TriangleMesh.field_A = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("choose_team_instructions2", param1 ^ -89);
                 if (var2 != null) {
@@ -2450,11 +2450,11 @@ final class ad {
                 }
                 var2 = ib.a("minus", param1 ^ -111);
                 if (null != var2) {
-                  vl.field_b = BlackFadeScreen.a(var2, true);
+                  LoginMethod.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("plus", param1 ^ -116);
                 if (null != var2) {
-                  ks.field_b = BlackFadeScreen.a(var2, true);
+                  HuffmanCodec.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("auctions", param1 - 89);
                 if (var2 != null) {
@@ -2550,175 +2550,175 @@ final class ad {
                 }
                 var2 = ib.a("popup_text,0", -95);
                 if (var2 != null) {
-                  gd.field_e[0] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,1", -110);
                 if (null != var2) {
-                  gd.field_e[1] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,2", -119);
                 if (var2 != null) {
-                  gd.field_e[2] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,3", -121);
                 if (var2 != null) {
-                  gd.field_e[3] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,4", -114);
                 if (null != var2) {
-                  gd.field_e[4] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[4] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,5", -121);
                 if (var2 != null) {
-                  gd.field_e[5] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[5] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,6", -85);
                 if (var2 != null) {
-                  gd.field_e[6] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[6] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,7", -103);
                 if (null != var2) {
-                  gd.field_e[7] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[7] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,8", -109);
                 if (null != var2) {
-                  gd.field_e[8] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[8] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,9", -119);
                 if (var2 != null) {
-                  gd.field_e[9] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[9] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,10", param1 ^ -121);
                 if (null != var2) {
-                  gd.field_e[10] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[10] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,11", param1 ^ -90);
                 if (null != var2) {
-                  gd.field_e[11] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[11] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,12", param1 ^ -118);
                 if (var2 != null) {
-                  gd.field_e[12] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[12] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,13", -125);
                 if (var2 != null) {
-                  gd.field_e[13] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[13] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,14", -94);
                 if (null != var2) {
-                  gd.field_e[14] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[14] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,15", param1 ^ -100);
                 if (null != var2) {
-                  gd.field_e[15] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[15] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,16", -127);
                 if (null != var2) {
-                  gd.field_e[16] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[16] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,17", -116);
                 if (null != var2) {
-                  gd.field_e[17] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[17] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,18", -118);
                 if (null != var2) {
-                  gd.field_e[18] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[18] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,19", param1 - 99);
                 if (var2 != null) {
-                  gd.field_e[19] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[19] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,20", -80);
                 if (var2 != null) {
-                  gd.field_e[20] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[20] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,21", param1 - 99);
                 if (null != var2) {
-                  gd.field_e[21] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[21] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,22", -121);
                 if (var2 != null) {
-                  gd.field_e[22] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[22] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,23", -124);
                 if (null != var2) {
-                  gd.field_e[23] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[23] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,24", param1 - 108);
                 if (var2 != null) {
-                  gd.field_e[24] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[24] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,25", -112);
                 if (null != var2) {
-                  gd.field_e[25] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[25] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,26", -117);
                 if (null != var2) {
-                  gd.field_e[26] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[26] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,27", -115);
                 if (var2 != null) {
-                  gd.field_e[27] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[27] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,28", -103);
                 if (null != var2) {
-                  gd.field_e[28] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[28] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,29", -88);
                 if (var2 != null) {
-                  gd.field_e[29] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[29] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,30", param1 - 97);
                 if (null != var2) {
-                  gd.field_e[30] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[30] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,31", -113);
                 if (var2 != null) {
-                  gd.field_e[31] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[31] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,32", -94);
                 if (null != var2) {
-                  gd.field_e[32] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[32] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,33", -128);
                 if (var2 != null) {
-                  gd.field_e[33] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[33] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,34", -119);
                 if (null != var2) {
-                  gd.field_e[34] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[34] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,35", -127);
                 if (var2 != null) {
-                  gd.field_e[35] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[35] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,36", -115);
                 if (null != var2) {
-                  gd.field_e[36] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[36] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,37", -94);
                 if (null != var2) {
-                  gd.field_e[37] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[37] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,38", -86);
                 if (null != var2) {
-                  gd.field_e[38] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[38] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,39", param1 ^ -92);
                 if (var2 != null) {
-                  gd.field_e[39] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[39] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,40", param1 - 88);
                 if (null != var2) {
-                  gd.field_e[40] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[40] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,41", -105);
                 if (var2 != null) {
-                  gd.field_e[41] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[41] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_text,42", -91);
                 if (var2 != null) {
-                  gd.field_e[42] = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_e[42] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("popup_header,0", -109);
                 if (var2 != null) {
@@ -2992,35 +2992,35 @@ final class ad {
                 }
                 var2 = ib.a("click_to_view_league_X", -94);
                 if (null != var2) {
-                  fu.field_f = BlackFadeScreen.a(var2, true);
+                  GrowableIntList.field_f = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("leagues,0", -90);
                 if (null != var2) {
-                  q.field_h[0] = BlackFadeScreen.a(var2, true);
+                  ConsoleTokenCursor.field_h[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("leagues,1", param1 ^ -105);
                 if (null != var2) {
-                  q.field_h[1] = BlackFadeScreen.a(var2, true);
+                  ConsoleTokenCursor.field_h[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("leagues,2", -122);
                 if (null != var2) {
-                  q.field_h[2] = BlackFadeScreen.a(var2, true);
+                  ConsoleTokenCursor.field_h[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("leagues,3", param1 ^ -116);
                 if (null != var2) {
-                  q.field_h[3] = BlackFadeScreen.a(var2, true);
+                  ConsoleTokenCursor.field_h[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("leagues,4", -120);
                 if (var2 != null) {
-                  q.field_h[4] = BlackFadeScreen.a(var2, true);
+                  ConsoleTokenCursor.field_h[4] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("leagues,5", param1 - 83);
                 if (var2 != null) {
-                  q.field_h[5] = BlackFadeScreen.a(var2, true);
+                  ConsoleTokenCursor.field_h[5] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("leagues,6", -111);
                 if (null != var2) {
-                  q.field_h[6] = BlackFadeScreen.a(var2, true);
+                  ConsoleTokenCursor.field_h[6] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("stadium_locked_first_buy_X", -125);
                 if (null != var2) {
@@ -3128,7 +3128,7 @@ final class ad {
                 }
                 var2 = ib.a("stats", -119);
                 if (null != var2) {
-                  q.field_f = BlackFadeScreen.a(var2, true);
+                  ConsoleTokenCursor.field_f = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("experience", -123);
                 if (null != var2) {
@@ -3188,7 +3188,7 @@ final class ad {
                 }
                 var2 = ib.a("none", param1 - 88);
                 if (null != var2) {
-                  hi.field_w = BlackFadeScreen.a(var2, true);
+                  DiskCacheRequest.field_w = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("refresh", -83);
                 if (var2 != null) {
@@ -3204,7 +3204,7 @@ final class ad {
                 }
                 var2 = ib.a("kit_lock_achievement2", -127);
                 if (var2 != null) {
-                  qe.field_f = BlackFadeScreen.a(var2, true);
+                  ArchivePreloader.field_f = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("kit_lock_achievement3", -94);
                 if (var2 != null) {
@@ -3220,7 +3220,7 @@ final class ad {
                 }
                 var2 = ib.a("sell_price", param1 ^ -83);
                 if (null != var2) {
-                  ti.field_g = BlackFadeScreen.a(var2, true);
+                  NamedValueContainer.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("select_your_pitch", -105);
                 if (null != var2) {
@@ -3240,15 +3240,15 @@ final class ad {
                 }
                 var2 = ib.a("click_player_in_squad", -80);
                 if (null != var2) {
-                  pn.field_A = BlackFadeScreen.a(var2, true);
+                  StrongCacheEntry.field_A = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("new_entry", -116);
                 if (null != var2) {
-                  eq.field_b = BlackFadeScreen.a(var2, true);
+                  WeightedLruCache.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("management_mouseover_kit", -128);
                 if (null != var2) {
-                  iq.field_b = BlackFadeScreen.a(var2, true);
+                  TextLayout.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("management_mouseover_squad", -126);
                 if (var2 != null) {
@@ -3256,7 +3256,7 @@ final class ad {
                 }
                 var2 = ib.a("management_mouseover_pitch", -92);
                 if (var2 != null) {
-                  rd.field_b = BlackFadeScreen.a(var2, true);
+                  GameModeDefinition.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("management_mouseover_shop", -124);
                 if (var2 != null) {
@@ -3264,7 +3264,7 @@ final class ad {
                 }
                 var2 = ib.a("management_mouseover_auctions", -83);
                 if (var2 != null) {
-                  pn.field_C = BlackFadeScreen.a(var2, true);
+                  StrongCacheEntry.field_C = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("management_squad_in_auction", param1 - 105);
                 if (var2 != null) {
@@ -3376,7 +3376,7 @@ final class ad {
                 }
                 var2 = ib.a("click_to_increase_reserve", -108);
                 if (var2 != null) {
-                  ij.field_q = BlackFadeScreen.a(var2, true);
+                  WeightedCacheEntry.field_q = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("click_to_decrease_reserve", -109);
                 if (null != var2) {
@@ -3412,7 +3412,7 @@ final class ad {
                 }
                 var2 = ib.a("management_auctions_no_bids", -118);
                 if (null != var2) {
-                  gd.field_d = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("management_auctions_no_buyout", param1 ^ -127);
                 if (null != var2) {
@@ -3540,7 +3540,7 @@ final class ad {
                 }
                 var2 = ib.a("instructions_gameplay5", -108);
                 if (var2 != null) {
-                  gd.field_g = BlackFadeScreen.a(var2, true);
+                  ListingRowCache.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay6,0", -121);
                 if (null != var2) {
@@ -4138,7 +4138,7 @@ final class ad {
                 }
                 var2 = ib.a("tackles_and_kicks_text", -90);
                 if (null != var2) {
-                  rd.field_d = BlackFadeScreen.a(var2, true);
+                  GameModeDefinition.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("tackles_text", -94);
                 if (null != var2) {
@@ -4182,19 +4182,19 @@ final class ad {
                 }
                 var2 = ib.a("tackle_col_names,0", -82);
                 if (null != var2) {
-                  qe.field_j[0] = BlackFadeScreen.a(var2, true);
+                  ArchivePreloader.field_j[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("tackle_col_names,1", -113);
                 if (null != var2) {
-                  qe.field_j[1] = BlackFadeScreen.a(var2, true);
+                  ArchivePreloader.field_j[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("tackle_col_names,2", -101);
                 if (null != var2) {
-                  qe.field_j[2] = BlackFadeScreen.a(var2, true);
+                  ArchivePreloader.field_j[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("tackle_col_names,3", -122);
                 if (var2 != null) {
-                  qe.field_j[3] = BlackFadeScreen.a(var2, true);
+                  ArchivePreloader.field_j[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("kick_col_names,0", -122);
                 if (var2 != null) {
@@ -4222,7 +4222,7 @@ final class ad {
                 }
                 var2 = ib.a("stage_quarterfinal", param1 ^ -122);
                 if (null != var2) {
-                  ij.field_n = BlackFadeScreen.a(var2, true);
+                  WeightedCacheEntry.field_n = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("stage_qualifying", -125);
                 if (var2 != null) {
@@ -4274,7 +4274,7 @@ final class ad {
                 }
                 var2 = ib.a("scheduled_game", param1 - 125);
                 if (null != var2) {
-                  w.field_d = BlackFadeScreen.a(var2, true);
+                  DialogOverlay.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("awaiting_game", -95);
                 if (var2 != null) {
@@ -4282,11 +4282,11 @@ final class ad {
                 }
                 var2 = ib.a("concluded_game", param1 ^ -104);
                 if (var2 != null) {
-                  ci.field_e = BlackFadeScreen.a(var2, true);
+                  IterableDualLinkDeque.field_e = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("winner_string", -117);
                 if (null != var2) {
-                  eq.field_g = BlackFadeScreen.a(var2, true);
+                  WeightedLruCache.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("players_text", param1 - 95);
                 if (null != var2) {
@@ -4302,7 +4302,7 @@ final class ad {
                 }
                 var2 = ib.a("miniview_click_to", param1 ^ -115);
                 if (var2 != null) {
-                  pp.field_k = BlackFadeScreen.a(var2, true);
+                  MusicPatchPcmStream.field_k = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("miniview_spectate", -106);
                 if (null != var2) {
@@ -4314,11 +4314,11 @@ final class ad {
                 }
                 var2 = ib.a("goals_and_posession_col_names,0", -104);
                 if (null != var2) {
-                  sr.field_g[0] = BlackFadeScreen.a(var2, true);
+                  SortCriterion.field_g[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("goals_and_posession_col_names,1", -100);
                 if (var2 != null) {
-                  sr.field_g[1] = BlackFadeScreen.a(var2, true);
+                  SortCriterion.field_g[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("countdown_text", -94);
                 if (null != var2) {
@@ -4334,7 +4334,7 @@ final class ad {
                 }
                 var2 = ib.a("nextround_string", -126);
                 if (var2 != null) {
-                  ks.field_f = BlackFadeScreen.a(var2, true);
+                  HuffmanCodec.field_f = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("tournament_starts_in_X_seconds", -109);
                 if (var2 != null) {
@@ -4386,7 +4386,7 @@ final class ad {
                 }
                 var2 = ib.a("tournament_resignquit2", -106);
                 if (null != var2) {
-                  md.field_g = BlackFadeScreen.a(var2, true);
+                  CheatCodeListener.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("tournament_draw", -105);
                 if (null != var2) {
@@ -4422,7 +4422,7 @@ final class ad {
                 }
                 var2 = ib.a("tournament_draw_equal2", -103);
                 if (var2 != null) {
-                  pf.field_a = BlackFadeScreen.a(var2, true);
+                  ByteStorage.field_a = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("tournament_wildcard", -99);
                 if (null != var2) {
@@ -4474,7 +4474,7 @@ final class ad {
                 }
                 var2 = ib.a("instructions_gamemode2", param1 ^ -106);
                 if (null != var2) {
-                  ll.field_l = BlackFadeScreen.a(var2, true);
+                  DirectByteStorage.field_l = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemode4,0", -91);
                 if (var2 != null) {
@@ -4549,7 +4549,7 @@ final class ad {
                   } else {
                     stackIn_3809_2 = "{...}";
                   }
-                  throw nb.a((Throwable) ((Object) stackIn_3808_0), ((StringBuilder) (Object) stackIn_3808_1).append(stackIn_3809_2).append(',').append(param1).append(')').toString());
+                  throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_3808_0), ((StringBuilder) (Object) stackIn_3808_1).append(stackIn_3809_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_3817_0 = (!GameAppletShell.field_d);
@@ -4589,7 +4589,7 @@ final class ad {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

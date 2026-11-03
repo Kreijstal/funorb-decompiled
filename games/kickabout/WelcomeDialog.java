@@ -253,7 +253,7 @@ final class WelcomeDialog extends MessageDialog {
             }
           }
         }
-        var9.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-67, td.field_a.length, var8);
+        var9.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-67, TrinketCatalog.field_a.length, var8);
         var9.surnameIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-98, BuyPlayerDialog.field_G[var9.playerType].length - 1, var8) + 1;
         var10Lifetime1 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, 5, var8);
         var11Lifetime1 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-114, 3, var8);
@@ -276,7 +276,7 @@ final class WelcomeDialog extends MessageDialog {
 
     static {
         field_J = "To server list";
-        field_F = st.c(-23091);
+        field_F = CachedTextLayout.c(-23091);
         field_I = 0;
     }
 }

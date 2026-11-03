@@ -161,7 +161,7 @@ final class fs {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class fs {
             field_c = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fs.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fs.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

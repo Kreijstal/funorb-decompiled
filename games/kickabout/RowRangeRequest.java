@@ -21,7 +21,7 @@ final class RowRangeRequest extends IntrusiveNode {
             this.writeToPacket((CipherPacketBuffer) null, (byte) 107);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "es.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "es.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class RowRangeRequest extends IntrusiveNode {
             RowRangeRequest.tryKeeperTackle(-29, (FootballerAgent) null, -8, (FootballerAgent) null, (BallAgent) null);
           }
           var6 = param1.pixelY(true) - param4.pixelY(879306160);
-          var7 = nb.keeperReach(param1, 170);
+          var7 = GameSoundEffect.keeperReach(param1, 170);
           if (var7 * var7 <= var5_int * var5_int + var6 * var6) {
             return;
           }
@@ -94,7 +94,7 @@ final class RowRangeRequest extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

@@ -56,7 +56,7 @@ final class nc {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -70,15 +70,15 @@ final class nc {
         int var6 = 0;
         String var7 = null;
         try {
-          sn.field_f[0] = ac.field_d.nextInt();
-          sn.field_f[1] = ac.field_d.nextInt();
+          UrlRequest.field_f[0] = ac.field_d.nextInt();
+          UrlRequest.field_f[1] = ac.field_d.nextInt();
           gl.field_a.field_n = 0;
-          sn.field_f[3] = (int)ld.field_c;
-          sn.field_f[2] = (int)(ld.field_c >> 32);
-          gl.field_a.writeInt(-116, sn.field_f[0]);
-          gl.field_a.writeInt(-55, sn.field_f[1]);
-          gl.field_a.writeInt(-92, sn.field_f[2]);
-          gl.field_a.writeInt(-102, sn.field_f[3]);
+          UrlRequest.field_f[3] = (int)ld.field_c;
+          UrlRequest.field_f[2] = (int)(ld.field_c >> 32);
+          gl.field_a.writeInt(-116, UrlRequest.field_f[0]);
+          gl.field_a.writeInt(-55, UrlRequest.field_f[1]);
+          gl.field_a.writeInt(-92, UrlRequest.field_f[2]);
+          gl.field_a.writeInt(-102, UrlRequest.field_f[3]);
           qr.a(param3 ^ -16185, gl.field_a);
           gl.field_a.writeShort(param3 ^ 1207442647, param4);
           param2.writeCredentials(gl.field_a, param3 + 33214);
@@ -96,7 +96,7 @@ final class nc {
           or.field_d.writeInt(-116, ResizableModalPanel.field_J);
           or.field_d.writeLong(il.field_f, param3 ^ 1781875959);
           var6 = 0;
-          if (fu.field_c) {
+          if (GrowableIntList.field_c) {
             var6 = var6 | 1;
           }
           if (it.field_n) {
@@ -131,7 +131,7 @@ final class nc {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

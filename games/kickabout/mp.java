@@ -10,7 +10,7 @@ final class mp extends IntrusiveNode {
     static long field_i;
     static String field_e;
     static String field_n;
-    static qe field_h;
+    static ArchivePreloader field_h;
     static String field_l;
     int field_m;
     static UiLayoutNode field_f;
@@ -53,7 +53,7 @@ final class mp extends IntrusiveNode {
               var5Lifetime4 = var8;
               var5Lifetime5 = var8;
               if (0 != param2.length()) {
-                var5Lifetime6 = var8 + "; Expires=" + rj.a(nj.a(118) + 94608000000L, -128) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + SoundCache.a(nj.monotonicMillis(118) + 94608000000L, -128) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
@@ -80,7 +80,7 @@ final class mp extends IntrusiveNode {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -150,7 +150,7 @@ final class mp extends IntrusiveNode {
           var8.appendCrc32(var4, false);
           var8.backpatchByteLength(62, var8.field_n - var4);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mp.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mp.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

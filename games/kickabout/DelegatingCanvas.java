@@ -12,7 +12,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "sa.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sa.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -95,7 +95,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "sa.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sa.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

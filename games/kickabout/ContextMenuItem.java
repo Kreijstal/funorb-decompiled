@@ -30,7 +30,7 @@ final class ContextMenuItem extends UiLayoutNode {
         var2 = Kickabout.field_G;
         try {
           for (var1_int = 0; vb.field_j > var1_int; var1_int++) {
-            fu.field_b[var1_int] = null;
+            GrowableIntList.field_b[var1_int] = null;
           }
           vb.field_j = 0;
           if (param0 < 84) {
@@ -40,7 +40,7 @@ final class ContextMenuItem extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "vu.D(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "vu.D(" + param0 + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class ContextMenuItem extends UiLayoutNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -205,8 +205,8 @@ final class ContextMenuItem extends UiLayoutNode {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (null != sn.field_e) {
-          ar.a(15707, sn.field_e);
+        if (null != UrlRequest.field_e) {
+          ar.a(15707, UrlRequest.field_e);
         }
         if (param0) {
           if (TextButton.field_v != null) {

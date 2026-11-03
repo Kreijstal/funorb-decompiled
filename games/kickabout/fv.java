@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fv implements hc {
+final class fv implements OverlayLayer {
     static Sprite field_b;
     static String field_a;
     static boolean field_d;
@@ -15,7 +15,7 @@ final class fv implements hc {
         return false;
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean openUrlWithShell(byte param0, String param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -67,7 +67,7 @@ final class fv implements hc {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -99,12 +99,12 @@ final class fv implements hc {
           var4 = 0;
           if (param1 != 19) {
             var6 = (String) null;
-            fv.a((byte) 41, (String) null);
+            fv.openUrlWithShell((byte) 41, (String) null);
           }
           while (var4 < TextFieldNode.field_Db.length) {
             if (param0 == TextFieldNode.field_Db[var4].field_c) {
               if (!TextFieldNode.field_Db[var4].field_d &&
-                !TextFieldNode.field_Db[var4].b(32)) {
+                !TextFieldNode.field_Db[var4].loadSound(32)) {
                 stackIn_19_0 = (int)(100.0 * (double)var3Lifetime1 / (double)var2_int);
                 return stackIn_19_0;
               }
@@ -118,7 +118,7 @@ final class fv implements hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fv.A(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fv.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class fv implements hc {
         var2 = wt.field_x;
         var3 = us.field_j + 18;
         var5 = 44 / ((param0 - 50) / 45);
-        var4 = q.field_d;
+        var4 = ConsoleTokenCursor.field_d;
         if (AuctionItem.field_e == 2) {
           var6 = new String[3];
           var6[0] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{ad.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});

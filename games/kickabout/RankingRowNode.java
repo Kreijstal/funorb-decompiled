@@ -22,7 +22,7 @@ final class RankingRowNode extends UiLayoutNode {
         field_Gb = null;
     }
 
-    final static ConsoleExpression a(int param0, sb param1) {
+    final static ConsoleExpression a(int param0, StringCursor param1) {
         int fieldTemp$5 = 0;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$7 = null;
@@ -48,11 +48,11 @@ final class RankingRowNode extends UiLayoutNode {
           param1.field_c = param1.field_c - 1;
           var2_int = fieldTemp$5;
           var3 = new StringBuilder();
-          var4 = param1.b(-123);
+          var4 = param1.nextChar(-123);
           discarded$6 = var3.append((char) var4);
           var5 = 0;
-          while (!param1.a((byte) 82)) {
-            var6 = param1.b(-51);
+          while (!param1.isAtEnd((byte) 82)) {
+            var6 = param1.nextChar(-51);
             if (var5 != 0) {
               discarded$7 = var3.append((char) var6);
               var5 = 0;
@@ -90,7 +90,7 @@ final class RankingRowNode extends UiLayoutNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -116,22 +116,22 @@ final class RankingRowNode extends UiLayoutNode {
         SoftwareRasterizer.a(46 + this.field_F, this.field_T, 196, this.field_mb, 0, var2);
         SoftwareRasterizer.a(248 + this.field_F, this.field_T, 70, this.field_mb, 0, var2);
         if (null == this.field_Hb) {
-          q.field_d.a(uf.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
+          ConsoleTokenCursor.field_d.a(uf.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
           var3 = 52 % ((-31 - param0) / 59);
           return;
         }
         if (null != this.field_Eb) {
-          q.field_d.a(this.field_Bb, this.field_F + 5, 4 + this.field_mb / 2 + this.field_T, this.field_Jb, -1);
-          q.field_d.a(this.field_Eb.toUpperCase(), 60 + this.field_F, this.field_mb / 2 + this.field_T + 4, this.field_Jb, -1);
+          ConsoleTokenCursor.field_d.a(this.field_Bb, this.field_F + 5, 4 + this.field_mb / 2 + this.field_T, this.field_Jb, -1);
+          ConsoleTokenCursor.field_d.a(this.field_Eb.toUpperCase(), 60 + this.field_F, this.field_mb / 2 + this.field_T + 4, this.field_Jb, -1);
           var3Lifetime1 = this.field_Jb;
           if (this.field_Ab == 6) {
             var3Lifetime1 = 16777028;
           }
-          q.field_d.a(this.field_zb, 258 + this.field_F, 4 + this.field_mb / 2 + this.field_T, var3Lifetime1, -1);
+          ConsoleTokenCursor.field_d.a(this.field_zb, 258 + this.field_F, 4 + this.field_mb / 2 + this.field_T, var3Lifetime1, -1);
           var3Lifetime1Lifetime1 = 52 % ((-31 - param0) / 59);
           return;
         }
-        q.field_d.a(uf.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
+        ConsoleTokenCursor.field_d.a(uf.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
         var3Lifetime2 = 52 % ((-31 - param0) / 59);
     }
 
@@ -218,7 +218,7 @@ final class RankingRowNode extends UiLayoutNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

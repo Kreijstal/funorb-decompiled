@@ -149,7 +149,7 @@ final class GameSetupPanel extends UiLayoutNode {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(')').toString());
         }
     }
 

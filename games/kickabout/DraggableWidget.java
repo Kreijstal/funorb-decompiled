@@ -19,13 +19,13 @@ final class DraggableWidget extends SingleChildContainer {
     final static void a(int param0, CoverageBitmapFont param1, byte param2) {
         try {
           wo.field_m = 150;
-          ll.field_o = param1;
+          DirectByteStorage.field_o = param1;
           if (param2 != -46) {
             DraggableWidget.a(-114, (byte) -103, false, 80);
           }
           TutorialChoiceDialog.field_J = wo.field_m + 20 + param0 >> 1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class DraggableWidget extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var7_ref), "jg.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var7_ref), "jg.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class DraggableWidget extends SingleChildContainer {
             ((TextButton) (this.field_z)).field_y) &&
             this.field_p == 1) {
             var5_int = BytePlusOneCommand.field_A - (this.field_E + param2);
-            var6 = -this.field_D + n.field_m - param3;
+            var6 = -this.field_D + ArchiveManager.field_m - param3;
             if (var5_int != this.field_t ||
               this.field_g != var6) {
               this.field_t = var5_int;
@@ -219,7 +219,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class DraggableWidget extends SingleChildContainer {
             this.field_L = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jg.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jg.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ final class DraggableWidget extends SingleChildContainer {
           this.field_B = param8 ? true : false;
           this.field_L = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 

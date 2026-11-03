@@ -4,7 +4,7 @@
 final class ClientException extends RuntimeException {
     Throwable field_e;
     static ScrollPane field_c;
-    static sr field_a;
+    static SortCriterion field_a;
     String field_d;
     static int field_f;
     static String field_b;
@@ -60,7 +60,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -83,6 +83,6 @@ final class ClientException extends RuntimeException {
 
     static {
         field_b = "This is your auction.";
-        field_a = (sr) ((Object) new qi());
+        field_a = (SortCriterion) ((Object) new qi());
     }
 }

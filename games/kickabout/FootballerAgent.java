@@ -245,7 +245,7 @@ class FootballerAgent extends MatchAgent {
           } else {
             stackIn_92_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_91_1).append(stackIn_92_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_91_1).append(stackIn_92_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ class FootballerAgent extends MatchAgent {
           this.field_o = param1.l(12, 59);
           this.field_t = param1.l(26, 59);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "nl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -390,7 +390,7 @@ class FootballerAgent extends MatchAgent {
           this.field_m = var4.field_m;
           this.positionX = var4.positionX;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "nl.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nl.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -456,7 +456,7 @@ class FootballerAgent extends MatchAgent {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -594,7 +594,7 @@ class FootballerAgent extends MatchAgent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -714,22 +714,22 @@ class FootballerAgent extends MatchAgent {
         StringBuilder discarded$130 = null;
         StringBuilder var2 = new StringBuilder("AgentFootballer[" + this.archetypeName(9) + "]");
         StringBuilder discarded$0 = var2.append("\n\t\tloc=\t[");
-        eh.a(this.positionX, 100, var2);
+        GameResourceLoader.a(this.positionX, 100, var2);
         StringBuilder discarded$1 = var2.append(", ");
-        eh.a(this.positionY, 100, var2);
+        GameResourceLoader.a(this.positionY, 100, var2);
         StringBuilder discarded$2 = var2.append(", ");
-        eh.a(this.height, 100, var2);
+        GameResourceLoader.a(this.height, 100, var2);
         StringBuilder discarded$3 = var2.append(", ");
-        eh.a(this.verticalVelocity, 100, var2);
+        GameResourceLoader.a(this.verticalVelocity, 100, var2);
         StringBuilder discarded$4 = var2.append(", " + this.dashCooldown + "]");
         StringBuilder discarded$5 = var2.append("\n\t\tspd=[");
-        eh.a(this.field_A, 100, var2);
+        GameResourceLoader.a(this.field_A, 100, var2);
         StringBuilder discarded$6 = var2.append(", ");
-        eh.a(this.field_g, 100, var2);
+        GameResourceLoader.a(this.field_g, 100, var2);
         StringBuilder discarded$7 = var2.append(", ");
-        eh.a(this.field_q, 100, var2);
+        GameResourceLoader.a(this.field_q, 100, var2);
         StringBuilder discarded$8 = var2.append(", ");
-        eh.a(this.field_D, 100, var2);
+        GameResourceLoader.a(this.field_D, 100, var2);
         StringBuilder discarded$9 = var2.append("]");
         StringBuilder discarded$10 = var2.append("\n\t\tstathash=" + this.stats.computeChecksum(0));
         StringBuilder discarded$33 = var2.append("\n\t\tact=\t[" + this.actionTime + ", " + this.actionName(true) + ", ai_wait=" + this.aiWait + "]");

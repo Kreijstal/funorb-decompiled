@@ -97,7 +97,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             GameModesHelpScreen.field_L.c(5 + this.slideOffsetX, 290);
             var10 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
             var11 = var8 + var10 * 16 + 5;
-            q.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
+            ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
             var11 += 10;
             var12 = lw.field_a[var5];
             if (th.field_a[var5]) {
@@ -122,10 +122,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
             var18.a(var12, var7, var11, var9, 200, 16777215, -1, 0, 0, var14Lifetime5);
             return;
           }
-          pn.field_w.c(5 + this.slideOffsetX, 290);
+          StrongCacheEntry.field_w.c(5 + this.slideOffsetX, 290);
           var10Lifetime2 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
           var11Lifetime2 = var8 + var10Lifetime2 * 16 + 5;
-          q.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
+          ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
           var11Lifetime2 += 10;
           var12Lifetime2 = lw.field_a[var5];
           if (th.field_a[var5]) {
@@ -150,11 +150,11 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var18.a(var12Lifetime2, var7, var11Lifetime2, var9, 200, 16777215, -1, 0, 0, var14Lifetime4);
           return;
         }
-        qe.field_i[PacketBuffer.field_e[var5]].c(5 + this.slideOffsetX, 290);
+        ArchivePreloader.field_i[PacketBuffer.field_e[var5]].c(5 + this.slideOffsetX, 290);
         var10Lifetime1 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
         var11Lifetime1 = var8 + var10Lifetime1 * 16 + 5;
         if (var6 == 0) {
-          q.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
+          ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
           var11Lifetime1 += 10;
           var12Lifetime1 = lw.field_a[var5];
           if (th.field_a[var5]) {
@@ -464,7 +464,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -486,7 +486,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             field_C = (UiLayoutNode) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fm.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fm.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -40,7 +40,7 @@ final class ConsoleEvaluationException extends Exception {
         int var3;
         var3 = Kickabout.field_G;
         if (param1 == 0) {
-          if (eq.field_d <= 0) {
+          if (WeightedLruCache.field_d <= 0) {
             if (!PlayArea.a(100)) {
               var2 = 1;
             } else {
@@ -76,7 +76,7 @@ final class ConsoleEvaluationException extends Exception {
           }
         } else {
           ConsoleEvaluationException.a(-109);
-          if (eq.field_d <= 0) {
+          if (WeightedLruCache.field_d <= 0) {
             if (!PlayArea.a(100)) {
               var2 = 1;
               if (ArchiveIndex.field_h == null &&
@@ -120,7 +120,7 @@ final class ConsoleEvaluationException extends Exception {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "dw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "dw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

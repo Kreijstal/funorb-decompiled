@@ -36,7 +36,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_J.h((byte) -48);
-        sr var6 = this.field_J.field_zb[this.field_J.field_Db];
+        SortCriterion var6 = this.field_J.field_zb[this.field_J.field_Db];
         this.field_I.a(new oi(param0 | param3 << 16), 3);
         this.rebuildShopRows(true);
         this.field_J.a(var6, 94);
@@ -188,7 +188,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "qs.I(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "qs.I(" + param0 + ')');
         }
     }
 
@@ -255,12 +255,12 @@ final class PlayerShopScreen extends TeamManagementScreen {
     }
 
     final void buildWidgets(int param0) {
-        sr[] var3 = new sr[MainMenuScreen.field_D.length];
-        sr[] var4 = var3;
+        SortCriterion[] var3 = new SortCriterion[MainMenuScreen.field_D.length];
+        SortCriterion[] var4 = var3;
         var3[1] = vs.field_k;
         var3[2] = ClientException.field_a;
         var3[0] = GameModesHelpScreen.field_H;
-        var3[4] = sr.field_k;
+        var3[4] = SortCriterion.field_k;
         var3[3] = ri.field_u;
         this.field_J = new ColumnTableWidget(MusicPatchNode.field_x, MainMenuScreen.field_D, var4, 50);
         this.field_J.a(369, (byte) -111, 54, 175);

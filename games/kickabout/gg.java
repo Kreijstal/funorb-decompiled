@@ -39,8 +39,8 @@ final class gg extends UiLayoutNode {
         int var5Lifetime3;
         var8 = Kickabout.field_G;
         try {
-          kk.field_B[1] = 525;
-          kk.field_B[0] = 370;
+          TriangleMesh.field_B[1] = 525;
+          TriangleMesh.field_B[0] = 370;
           stackIn_3_0 = or.field_a;
           stackIn_3_1 = 0;
           stackIn_3_2 = or.field_a;
@@ -55,15 +55,15 @@ final class gg extends UiLayoutNode {
           var3_int = param2.pixelX(true);
           var4 = param2.pixelY(param1 ^ 879306160);
           if (var3_int > 448) {
-            var5 = kk.field_B[0];
-            kk.field_B[0] = kk.field_B[1];
-            kk.field_B[1] = var5;
+            var5 = TriangleMesh.field_B[0];
+            TriangleMesh.field_B[0] = TriangleMesh.field_B[1];
+            TriangleMesh.field_B[1] = var5;
             var5Lifetime3 = or.field_a[0];
             or.field_a[0] = or.field_a[1];
             or.field_a[1] = var5Lifetime3;
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
-            var6 = -var3_int + kk.field_B[var5Lifetime1];
+            var6 = -var3_int + TriangleMesh.field_B[var5Lifetime1];
             var7 = -var4 + or.field_a[var5Lifetime1];
             ContentTransitionDialog.field_Q[var5Lifetime1] = GameKeyHandler.a(var6 * var6 + var7 * var7, (byte) -128);
           }
@@ -72,12 +72,12 @@ final class gg extends UiLayoutNode {
           var6Lifetime1 = var9;
           while (var9 < 2) {
             if (0 != ContentTransitionDialog.field_Q[var9]) {
-              kk.field_B[var9] = var5Lifetime2 * (-var3_int + kk.field_B[var9]) / ContentTransitionDialog.field_Q[var9] + var3_int;
+              TriangleMesh.field_B[var9] = var5Lifetime2 * (-var3_int + TriangleMesh.field_B[var9]) / ContentTransitionDialog.field_Q[var9] + var3_int;
               or.field_a[var9] = var5Lifetime2 * (or.field_a[var9] - var4) / ContentTransitionDialog.field_Q[var9] + var4;
             }
             var9++;
           }
-          TrinketSlot.field_zb[0] = kk.field_B[param1] + kk.field_B[1] >> 1;
+          TrinketSlot.field_zb[0] = TriangleMesh.field_B[param1] + TriangleMesh.field_B[1] >> 1;
           stackIn_17_0 = TrinketSlot.field_zb;
           stackIn_17_1 = 1;
           if (param0 != 1) {
@@ -97,7 +97,7 @@ final class gg extends UiLayoutNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class gg extends UiLayoutNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

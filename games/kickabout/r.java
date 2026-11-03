@@ -14,7 +14,7 @@ final class r {
           var2 = ng.field_a;
         }
         if (param1 == 1) {
-          var2 = q.field_b;
+          var2 = ConsoleTokenCursor.field_b;
         }
         if (2 == param1) {
           var2 = fc.field_a;

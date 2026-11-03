@@ -54,7 +54,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class PasswordValidator extends TextFieldValidator {
           this.field_n = param1;
           this.field_o = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class PasswordValidator extends TextFieldValidator {
           TeamManagementScreen.e(121);
           PacketBuffer.a(65, PacketBuffer.field_g);
           SoftwareRasterizer.b();
-          var8Lifetime1 = uv.b(-gb.field_K, TextButton.field_C, (byte) 2);
+          var8Lifetime1 = ChatLine.b(-gb.field_K, TextButton.field_C, (byte) 2);
           if (param0 != 706856675) {
             field_j = (int[]) null;
           }
@@ -184,7 +184,7 @@ final class PasswordValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var6), "lo.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var6), "lo.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -233,7 +233,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (param4 != -55) {
           PasswordValidator.a(124L, false);
         }
-        int var5 = (int)(nj.a(-62) % 2000L * 100L) / 2000;
+        int var5 = (int)(nj.monotonicMillis(-62) % 2000L * 100L) / 2000;
         var5 = (var5 + (param0 * 100 >> 16)) % 100;
         Sprite var6 = lt.field_c[var5];
         if (!param3) {
@@ -274,11 +274,11 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = MySquadScreen.field_M;
             return stackIn_8_0;
           }
-          if (hf.a(var5, -3)) {
+          if (PainterStyle.a(var5, -3)) {
             stackIn_11_0 = GoalStateAgent.field_h;
             return stackIn_11_0;
           }
-          if (qe.a(true, var5)) {
+          if (ArchivePreloader.a(true, var5)) {
             stackIn_15_0 = NotCommand.field_D;
             return stackIn_15_0;
           }
@@ -313,7 +313,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -357,7 +357,7 @@ final class PasswordValidator extends TextFieldValidator {
           ((BitmapFont) ((Object) var3)).d("-10", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
           ((BitmapFont) ((Object) var3)).d("0", -2 + (var4 + var7 - (-var5 - (var5 >> 1))), var9Lifetime1, 16777215, 65793);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lo.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lo.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -429,7 +429,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

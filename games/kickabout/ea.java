@@ -71,7 +71,7 @@ final class ea {
             SoftwareRasterizer.b();
           }
           var15 = un.field_d;
-          if (nj.a(107) % 1000L < 500L) {
+          if (nj.monotonicMillis(107) % 1000L < 500L) {
             ((BitmapFont) ((Object) var15)).d(":", var11, var12, 16777215, -1);
           }
           ((BitmapFont) ((Object) var15)).c(Integer.toString(var7), var11 - 3, var12, 16777215, -1);
@@ -165,7 +165,7 @@ final class ea {
             }
             var19 = var15;
             var20 = var16;
-            SoftwareRasterizer.saveClip(ll.field_j);
+            SoftwareRasterizer.saveClip(DirectByteStorage.field_j);
             if (var20 < var19) {
               var20 = param0 + param1 * var9 / (var10 + var9);
               var19 = param0 + param1 * var9 / (var10 + var9);
@@ -173,22 +173,22 @@ final class ea {
             if (null != param4[0]) {
               SoftwareRasterizer.intersectClip(param2, param0, var17, var19);
               param4[0].c(param2, param0);
-              SoftwareRasterizer.restoreClip(ll.field_j);
+              SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (param4[2] != null) {
               SoftwareRasterizer.intersectClip(var18, param0, var11, var19);
               param4[2].c(var14, param0);
-              SoftwareRasterizer.restoreClip(ll.field_j);
+              SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (param4[6] != null) {
               SoftwareRasterizer.intersectClip(param2, var20, var17, var12);
               param4[6].c(param2, var16);
-              SoftwareRasterizer.restoreClip(ll.field_j);
+              SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (param4[8] != null) {
               SoftwareRasterizer.intersectClip(var18, var20, var11, var12);
               param4[8].c(var14, var16);
-              SoftwareRasterizer.restoreClip(ll.field_j);
+              SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (null != param4[1] &&
               param4[1].field_o != 0) {
@@ -196,7 +196,7 @@ final class ea {
               for (var21 = var13; var14 > var21; var21 = var21 + param4[1].field_o) {
                 param4[1].c(var21, param0);
               }
-              SoftwareRasterizer.restoreClip(ll.field_j);
+              SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (null != param4[7] &&
               param4[7].field_o != 0) {
@@ -204,7 +204,7 @@ final class ea {
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param4[7].field_o) {
                 param4[7].c(var21Lifetime1, var16);
               }
-              SoftwareRasterizer.restoreClip(ll.field_j);
+              SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (param4[3] != null &&
               0 != param4[3].field_v) {
@@ -212,7 +212,7 @@ final class ea {
               for (var21Lifetime2 = var15; var16 > var21Lifetime2; var21Lifetime2 = var21Lifetime2 + param4[3].field_v) {
                 param4[3].c(param2, var21Lifetime2);
               }
-              SoftwareRasterizer.restoreClip(ll.field_j);
+              SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (param4[5] != null &&
               param4[5].field_v != 0) {
@@ -220,7 +220,7 @@ final class ea {
               for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param4[5].field_v) {
                 param4[5].c(var14, var21Lifetime3);
               }
-              SoftwareRasterizer.restoreClip(ll.field_j);
+              SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (null != param4[4] &&
               param4[4].field_o != 0) {
@@ -233,7 +233,7 @@ final class ea {
                   param4[4].c(var22, var21Lifetime4);
                 }
               }
-              SoftwareRasterizer.restoreClip(ll.field_j);
+              SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             return;
           }
@@ -248,7 +248,7 @@ final class ea {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
         }
     }
 

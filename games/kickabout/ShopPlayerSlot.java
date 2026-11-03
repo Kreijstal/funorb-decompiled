@@ -46,7 +46,7 @@ final class ShopPlayerSlot extends im {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ final class ShopPlayerSlot extends im {
             ShopPlayerSlot.a(40, (fa) null, -96);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "sp.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sp.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -89,13 +89,13 @@ final class ShopPlayerSlot extends im {
         if (SoftwareRasterizer.field_h >= this.field_T &&
           SoftwareRasterizer.field_e <= this.field_T + this.field_mb) {
           if (this.field_Lb) {
-            uv.a(56 + this.field_F, (byte) 95, 39 + this.field_T);
-            var3 = q.field_d.a(eq.field_b);
-            q.field_d.a(eq.field_b, 70 + this.field_F, this.field_T + 44, 16763955, 5583616);
+            ChatLine.a(56 + this.field_F, (byte) 95, 39 + this.field_T);
+            var3 = ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b);
+            ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, 70 + this.field_F, this.field_T + 44, 16763955, 5583616);
             c.a(31, 28 + (this.field_F + 56 + var3), this.field_T + 39, 8000);
           }
           var3Lifetime1 = this.field_F;
-          var4 = kk.a(this.field_Sb, param0 + 0, false);
+          var4 = TriangleMesh.a(this.field_Sb, param0 + 0, false);
           if (var4 != null) {
             var4.c(1 + var3Lifetime1, 4 + this.field_T);
           } else {
@@ -137,7 +137,7 @@ final class ShopPlayerSlot extends im {
           }
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[2];
           if (this.field_Sb.trinketIds.length == 0) {
-            IsSixCommand.field_C.d(hi.field_w, var3Lifetime1 + (this.field_Pb[3] >> 1), (this.field_mb >> 1) + this.field_T + 4, 16777215, -1);
+            IsSixCommand.field_C.d(DiskCacheRequest.field_w, var3Lifetime1 + (this.field_Pb[3] >> 1), (this.field_mb >> 1) + this.field_T + 4, 16777215, -1);
           }
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[3];
           var3Lifetime1 = var3Lifetime1 + (this.field_Pb[4] + IsSixCommand.field_C.a(this.field_Nb) >> 1);
@@ -237,7 +237,7 @@ final class ShopPlayerSlot extends im {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ final class ShopPlayerSlot extends im {
           this.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
           this.field_Pb = param1;
           this.field_Qb = param3;
-          this.field_Mb = eo.b();
+          this.field_Mb = eo.createDefaultButtonNode();
           this.addChild((byte) -121, this.field_Mb);
           this.field_Mb.field_s = this.field_Pb[-1 + this.field_Pb.length] - this.field_Mb.field_q >> 1;
           for (var6_int = 0; var6_int < this.field_Pb.length - 1; var6_int++) {
@@ -335,7 +335,7 @@ final class ShopPlayerSlot extends im {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

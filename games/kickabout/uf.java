@@ -47,7 +47,7 @@ final class uf {
           tb.a(-92, param6);
           wp.a(param2, param11, param18, param19, param13, param17, param8, param0, param14, param6, param15, param12, param9, (byte) 117, param4);
           BufferedCacheFile.a(param3, param6, param1, 0);
-          sb.b((byte) -124);
+          StringCursor.b((byte) -124);
           if (param7 != 16971) {
             uf.a((byte) -8);
           }
@@ -148,7 +148,7 @@ final class uf {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 
@@ -225,15 +225,15 @@ final class uf {
               var6 = (var4 << 16) / 6;
               var8.a(608, 736, 608, 736, var6, 4096);
             }
-            w.field_f[-var3 + 5] = new ArgbSprite(38, 46);
-            eo.a(var2, w.field_f[5 - var3]);
+            DialogOverlay.field_f[-var3 + 5] = new ArgbSprite(38, 46);
+            eo.downscaleByHalf(var2, DialogOverlay.field_f[5 - var3]);
           }
           TeamManagementScreen.e(param0 ^ -100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "uf.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "uf.B(" + param0 + ')');
         }
     }
 

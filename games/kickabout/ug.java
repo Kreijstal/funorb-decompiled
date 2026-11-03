@@ -45,7 +45,7 @@ final class ug {
           param2.field_b.field_d = param2;
           param2.field_d.field_b = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ug.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ug.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,8 +71,8 @@ final class ug {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        uv var16 = null;
-        uv var17 = null;
+        ChatLine var16 = null;
+        ChatLine var17 = null;
         var15 = Kickabout.field_G;
         try {
           stackIn_3_0 = TournamentChampionDialog.field_F.field_Cb;
@@ -107,14 +107,14 @@ final class ug {
             if (null != var6.field_Eb &&
               !var6.field_Eb.equals("")) {
               var6.field_Fb.field_ub = 16737894;
-              var6.field_Fb.field_N = ll.field_n;
-              var6.field_Fb.a(true, 3 + ll.field_n.field_o, 0, 0, sh.field_c);
+              var6.field_Fb.field_N = DirectByteStorage.field_n;
+              var6.field_Fb.a(true, 3 + DirectByteStorage.field_n.field_o, 0, 0, sh.field_c);
               var8 = 1;
             }
             var9 = 0;
             var10 = var6.field_q;
             if (var8 != 0) {
-              var9 = ll.field_n.field_o + 3;
+              var9 = DirectByteStorage.field_n.field_o + 3;
               var10 = var10 - var9;
             }
             stackIn_18_0 = var6.field_Bb;
@@ -135,11 +135,11 @@ final class ug {
             }
             if (var6.field_Fb != null &&
               var6.field_Fb.field_gb) {
-              sn.field_e = var6.field_Eb;
+              UrlRequest.field_e = var6.field_Eb;
             } else {
               if (var6.field_Bb.field_gb &&
                 var11 != 0) {
-                sn.field_e = var6.field_Gb;
+                UrlRequest.field_e = var6.field_Gb;
               }
             }
             if (var6.field_sb != 0) {
@@ -156,19 +156,19 @@ final class ug {
             var6 = (gg) (var4.c(33));
           }
           if (TournamentChampionDialog.field_F.field_Eb.field_sb != 0) {
-            k.field_m = new HoverTooltip(TournamentChampionDialog.field_F.field_Eb.field_F, TournamentChampionDialog.field_F.field_Eb.field_T, TournamentChampionDialog.field_F.field_Eb.field_q, TournamentChampionDialog.field_F.field_Eb.field_mb, ParticipantStatus.field_j, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+            k.field_m = new HoverTooltip(TournamentChampionDialog.field_F.field_Eb.field_F, TournamentChampionDialog.field_F.field_Eb.field_T, TournamentChampionDialog.field_F.field_Eb.field_q, TournamentChampionDialog.field_F.field_Eb.field_mb, ParticipantStatus.field_j, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
             fs.field_b = 2;
           }
           if (0 == TournamentChampionDialog.field_F.field_zb.field_sb) {
             return;
           }
-          k.field_m = new HoverTooltip(TournamentChampionDialog.field_F.field_zb.field_F, TournamentChampionDialog.field_F.field_zb.field_T, TournamentChampionDialog.field_F.field_zb.field_q, TournamentChampionDialog.field_F.field_zb.field_mb, oo.field_d, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+          k.field_m = new HoverTooltip(TournamentChampionDialog.field_F.field_zb.field_F, TournamentChampionDialog.field_F.field_zb.field_T, TournamentChampionDialog.field_F.field_zb.field_q, TournamentChampionDialog.field_F.field_zb.field_mb, oo.field_d, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
           fs.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ug.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ug.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

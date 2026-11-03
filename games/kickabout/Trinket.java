@@ -27,7 +27,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.W(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.W(" + param0 + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.DA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.DA(" + param0 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.O(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.O(" + param0 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.U(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.U(" + param0 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.P(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.P(" + param0 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.T(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.T(" + param0 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.N(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.N(" + param0 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.B(" + param0 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.S(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.S(" + param0 + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.L(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.L(" + param0 + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class Trinket {
           this.field_h = param1;
           this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fn.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fn.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -225,7 +225,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.G(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.G(" + param0 + ')');
         }
     }
 
@@ -251,7 +251,7 @@ final class Trinket {
             return;
           }
           var2_int = ug.a(0, param0.g(1606384336));
-          var3 = lf.a((byte) -64, param0.field_bb >> 16);
+          var3 = IntKeyLookup.a((byte) -64, param0.field_bb >> 16);
           if (param1 != 100) {
             return;
           }
@@ -310,7 +310,7 @@ final class Trinket {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -349,7 +349,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) runtimeException), "fn.F(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fn.F(" + param0 + ')');
         }
     }
 
@@ -366,7 +366,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.V(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.V(" + param0 + ')');
         }
     }
 
@@ -383,7 +383,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.J(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.J(" + param0 + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) runtimeException), "fn.R(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fn.R(" + param0 + ')');
         }
     }
 
@@ -481,7 +481,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "fn.Q(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "fn.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -508,7 +508,7 @@ final class Trinket {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -525,7 +525,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.GA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.GA(" + param0 + ')');
         }
     }
 
@@ -554,7 +554,7 @@ final class Trinket {
           }
           if (~NodeHashTableIterator.field_b == param0 &&
             !LoggedPlayer.b(param0 - 3194)) {
-            boolean decompiledSharedTail1 = !(lf.a(qi.field_o, -39));
+            boolean decompiledSharedTail1 = !(IntKeyLookup.a(qi.field_o, -39));
             if (!decompiledSharedTail1) {
               var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gk.field_c, new String[]{TrinketTile.field_Kb});
               decompiledSharedTail1 = (var10 != 0);
@@ -587,7 +587,7 @@ final class Trinket {
             if (var6 == 2) {
               var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{TrinketTile.field_Kb});
               var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{var3});
-              var7 = -485 + ij.field_s.field_q + (ei.field_b.field_q + (FootballerAgent.field_i.a(var8) - FootballerAgent.field_i.a(var4)));
+              var7 = -485 + WeightedCacheEntry.field_s.field_q + (ei.field_b.field_q + (FootballerAgent.field_i.a(var8) - FootballerAgent.field_i.a(var4)));
               if (0 > var7) {
                 var7 = 0;
               }
@@ -595,14 +595,14 @@ final class Trinket {
             if (var6 != 2 ||
               var10 != 0) {
               if (var6 == 0) {
-                if (null == uv.field_i &&
+                if (null == ChatLine.field_i &&
                   uk.field_d) {
                   var4 = "[" + ButtonMenuScreen.field_z + "] ";
                 }
-                if (uv.field_i != null) {
+                if (ChatLine.field_i != null) {
                   if (!GameOverView.field_R ||
                     SingleChildContainer.field_x == null) {
-                    var4 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{uv.field_i.field_ec}) + "] ";
+                    var4 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{ChatLine.field_i.field_ec}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + SingleChildContainer.field_x + "] ";
                     }
@@ -649,9 +649,9 @@ final class Trinket {
             }
             nv.a(var7, sg.field_c[var6], var4 + BitmapFont.escapeMarkup(AuctionLogEntry.field_m.toString()), var5, (byte) 34);
             if (!TextFieldNode.field_Wb) {
-              ij.field_s.field_gb = false;
+              WeightedCacheEntry.field_s.field_gb = false;
             }
-            if (ij.field_s.field_gb) {
+            if (WeightedCacheEntry.field_s.field_gb) {
               var1 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_s, new String[]{var3, TrinketTile.field_Kb});
             }
           }
@@ -660,7 +660,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (var1), "fn.EA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) (var1), "fn.EA(" + param0 + ')');
         }
     }
 
@@ -677,7 +677,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.HA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.HA(" + param0 + ')');
         }
     }
 
@@ -694,7 +694,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.K(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.K(" + param0 + ')');
         }
     }
 
@@ -708,7 +708,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "fn.toString()");
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "fn.toString()");
         }
     }
 
@@ -725,7 +725,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.C(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.C(" + param0 + ')');
         }
     }
 
@@ -742,7 +742,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.M(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.M(" + param0 + ')');
         }
     }
 
@@ -764,7 +764,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "fn.FA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "fn.FA(" + param0 + ')');
         }
     }
 
@@ -781,7 +781,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.BA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.BA(" + param0 + ')');
         }
     }
 
@@ -798,7 +798,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.AA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.AA(" + param0 + ')');
         }
     }
 
@@ -814,7 +814,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.CA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.CA(" + param0 + ')');
         }
     }
 
@@ -831,7 +831,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.H(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.H(" + param0 + ')');
         }
     }
 
@@ -848,7 +848,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.IA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.IA(" + param0 + ')');
         }
     }
 
@@ -865,7 +865,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.A(" + param0 + ')');
         }
     }
 
@@ -882,7 +882,7 @@ final class Trinket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fn.D(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fn.D(" + param0 + ')');
         }
     }
 

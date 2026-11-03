@@ -35,7 +35,7 @@ abstract class im extends UiLayoutNode {
           var1 = DropTargetWidget.l(param0 ^ 634588136);
           oo.field_c.a((byte) 53, us.field_j, wt.field_x, (java.awt.Component) ((Object) var1));
           oo.field_c.a(-118, (java.awt.Component) ((Object) var1), true);
-          n.field_m = us.field_j;
+          ArchiveManager.field_m = us.field_j;
           BytePlusOneCommand.field_A = wt.field_x;
         }
         if (param0 == 634588072) {
@@ -67,7 +67,7 @@ abstract class im extends UiLayoutNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ abstract class im extends UiLayoutNode {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -150,7 +150,7 @@ abstract class im extends UiLayoutNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

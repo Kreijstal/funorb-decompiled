@@ -60,7 +60,7 @@ final class ak extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class ak extends IntrusiveNode {
           }
           var2 = stackIn_12_0;
           var3 = ug.a(0, this.field_k);
-          var4 = lf.a((byte) -59, this.field_g + var2);
+          var4 = IntKeyLookup.a((byte) -59, this.field_g + var2);
           var5_int = this.field_e.field_o * InstrumentNoteMask.field_i >> 8;
           var6 = this.field_e.field_v * InstrumentNoteMask.field_i >> 8;
           this.field_e.a(var3 - (var5_int >> 1), -(var6 >> 1) + var4, var5_int, var6);
@@ -131,16 +131,16 @@ final class ak extends IntrusiveNode {
           }
           var2Lifetime1 = stackIn_5_0;
           var3Lifetime1 = ug.a(0, this.field_k);
-          var4Lifetime1 = lf.a((byte) -59, this.field_g + var2Lifetime1);
+          var4Lifetime1 = IntKeyLookup.a((byte) -59, this.field_g + var2Lifetime1);
           var5_intLifetime1 = this.field_e.field_o * InstrumentNoteMask.field_i >> 8;
           var6Lifetime1 = this.field_e.field_v * InstrumentNoteMask.field_i >> 8;
           this.field_e.a(var3Lifetime1 - (var5_intLifetime1 >> 1), -(var6Lifetime1 >> 1) + var4Lifetime1, var5_intLifetime1, var6Lifetime1);
         } else {
           if (this.field_j == 5) {
             var2Lifetime1 = ug.a(param0 ^ 192, this.field_k);
-            var3Lifetime1 = lf.a((byte) -110, (this.field_e.field_v >> 1) + this.field_g);
+            var3Lifetime1 = IntKeyLookup.a((byte) -110, (this.field_e.field_v >> 1) + this.field_g);
             var4Lifetime1 = InstrumentNoteMask.field_i << 4;
-            var5 = nj.a(param0 - 126);
+            var5 = nj.monotonicMillis(param0 - 126);
             var7 = (int)(var5 % 1050L);
             if (var7 < 700) {
               var8 = (65536 + we.a((var7 << 13) / 700, false) >> 11) + 192;

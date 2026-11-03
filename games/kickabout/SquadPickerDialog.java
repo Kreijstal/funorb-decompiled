@@ -6,7 +6,7 @@ final class SquadPickerDialog extends MessageDialog {
     private SquadGridWidget field_H;
     static String field_G;
     static byte[][] field_O;
-    static em field_N;
+    static DualLinkHashTable field_N;
     static boolean field_K;
     static long field_I;
     static UiLayoutNode field_P;
@@ -20,7 +20,7 @@ final class SquadPickerDialog extends MessageDialog {
         if (PlayArea.a(100)) {
           return;
         }
-        if (uv.field_f) {
+        if (ChatLine.field_f) {
           return;
         }
         try {
@@ -33,9 +33,9 @@ final class SquadPickerDialog extends MessageDialog {
           or.field_d.writeByte(102, param0);
           or.field_d.backpatchByteLength(62, -var3_int + or.field_d.field_n);
           ri.field_t = 500;
-          uv.field_f = param2 ? true : false;
+          ChatLine.field_f = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class SquadPickerDialog extends MessageDialog {
     }
 
     final static void g(byte param0) {
-        if (!nb.field_f) {
+        if (!GameSoundEffect.field_f) {
           throw new IllegalStateException();
         }
         TutorialChoiceDialog.field_H = true;
@@ -225,7 +225,7 @@ final class SquadPickerDialog extends MessageDialog {
         if (param0 == 66) {
           return;
         }
-        field_N = (em) null;
+        field_N = (DualLinkHashTable) null;
     }
 
     public static void g(int param0) {

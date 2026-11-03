@@ -188,7 +188,7 @@ abstract class MatchPhaseView {
                 var24 = var23;
                 stackIn_57_0 = (!param4[-var21Lifetime1 + 12][var24]) ? var13Lifetime1 : var14;
                 var17 = stackIn_57_0;
-                var16Lifetime1 = ks.a(var22Lifetime1, var20Lifetime1, 114, 7);
+                var16Lifetime1 = HuffmanCodec.a(var22Lifetime1, var20Lifetime1, 114, 7);
                 for (var25 = 0; var25 < var33.length; var25++) {
                   if (~var16Lifetime1 == ~var33[var25]) {
                     var19[var25] = (short)var17;
@@ -207,7 +207,7 @@ abstract class MatchPhaseView {
                 var24Lifetime1 = 9 - var23Lifetime1;
                 stackIn_72_0 = (!param6[-var21Lifetime2 + 12][var24Lifetime1]) ? var13Lifetime1 : var14;
                 var17Lifetime1 = stackIn_72_0;
-                var16Lifetime2 = ks.a(var22Lifetime2, var20Lifetime2, 110, 6);
+                var16Lifetime2 = HuffmanCodec.a(var22Lifetime2, var20Lifetime2, 110, 6);
                 var28 = 0;
                 var25Lifetime1 = var28;
                 while (var33.length > var28) {
@@ -239,7 +239,7 @@ abstract class MatchPhaseView {
           } else {
             stackIn_87_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_86_1).append(stackIn_87_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_86_1).append(stackIn_87_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -482,7 +482,7 @@ abstract class MatchPhaseView {
           }
           un.field_d.d(param1.toUpperCase(), 320, 83, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hs.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hs.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -508,7 +508,7 @@ abstract class MatchPhaseView {
             this.a(-26254);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

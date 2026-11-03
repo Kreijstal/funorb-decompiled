@@ -31,7 +31,7 @@ final class IntDoubleCommand extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -254,7 +254,7 @@ final class IntDoubleCommand extends ConsoleCommand {
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
           if (nm.field_d == null) {
-            nm.field_d = new LoadingProgressDialog(wd.field_l, st.field_m);
+            nm.field_d = new LoadingProgressDialog(wd.field_l, CachedTextLayout.field_m);
             wd.field_l.a(nm.field_d, false);
           }
           if (param3 < 71) {
@@ -264,7 +264,7 @@ final class IntDoubleCommand extends ConsoleCommand {
           SoftwareRasterizer.b();
           oa.a((byte) -106, true);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -9,7 +9,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
     static int[] field_g;
     private TextInputWidget field_f;
 
-    final static tv a(byte param0, boolean param1) {
+    final static ChatMessage a(byte param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
@@ -40,11 +40,11 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -116) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        sr.field_d = var8.readString(-114);
+        SortCriterion.field_d = var8.readString(-114);
         if (var4 != 0) {
           hr.field_f = var8.readString(69);
         } else {
-          hr.field_f = sr.field_d;
+          hr.field_f = SortCriterion.field_d;
         }
         if (RegistrationRequestDialog.field_ob == 1) {
           oh.field_f = var8.a((byte) 81);
@@ -62,10 +62,10 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           ee.field_a = gw.a(80, (byte) -96, var8);
           gk.field_b = null;
           if (param0 > 84) {
-            return new tv(param1);
+            return new ChatMessage(param1);
           }
           TextFieldValidator.b((byte) 82);
-          return new tv(param1);
+          return new ChatMessage(param1);
         }
         var5 = var8.a((byte) 81);
         try {
@@ -84,16 +84,16 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           ee.field_a = null;
           gk.field_b = null;
           if (param0 > 84) {
-            return new tv(param1);
+            return new ChatMessage(param1);
           }
           TextFieldValidator.b((byte) 82);
-          return new tv(param1);
+          return new ChatMessage(param1);
         }
         if (param0 > 84) {
-          return new tv(param1);
+          return new ChatMessage(param1);
         }
         TextFieldValidator.b((byte) 82);
-        return new tv(param1);
+        return new ChatMessage(param1);
     }
 
     abstract ValidationState validateText(String param0, int param1);
@@ -127,7 +127,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         try {
           int var3_int = -82 % ((param0 - 8) / 47);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -138,7 +138,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         try {
           this.validationChanged(116);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -161,7 +161,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -183,7 +183,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         if (PlayArea.a(100)) {
           return true;
         }
-        if (eq.field_d > 0) {
+        if (WeightedLruCache.field_d > 0) {
           return false;
         }
         return true;
@@ -196,7 +196,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static tv $cfr$intArgs$a$e7eed804270c(int param0, boolean param1) {
+    final static ChatMessage $cfr$intArgs$a$e7eed804270c(int param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
@@ -227,11 +227,11 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -116) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        sr.field_d = var8.readString(-114);
+        SortCriterion.field_d = var8.readString(-114);
         if (var4 != 0) {
           hr.field_f = var8.readString(69);
         } else {
-          hr.field_f = sr.field_d;
+          hr.field_f = SortCriterion.field_d;
         }
         if (RegistrationRequestDialog.field_ob == 1) {
           oh.field_f = var8.a((byte) 81);
@@ -249,10 +249,10 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           ee.field_a = gw.a(80, (byte) -96, var8);
           gk.field_b = null;
           if (param0 > 84) {
-            return new tv(param1);
+            return new ChatMessage(param1);
           }
           TextFieldValidator.b((byte) 82);
-          return new tv(param1);
+          return new ChatMessage(param1);
         }
         var5 = var8.a((byte) 81);
         try {
@@ -271,15 +271,15 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           ee.field_a = null;
           gk.field_b = null;
           if (param0 > 84) {
-            return new tv(param1);
+            return new ChatMessage(param1);
           }
           TextFieldValidator.b((byte) 82);
-          return new tv(param1);
+          return new ChatMessage(param1);
         }
         if (param0 > 84) {
-          return new tv(param1);
+          return new ChatMessage(param1);
         }
         TextFieldValidator.b((byte) 82);
-        return new tv(param1);
+        return new ChatMessage(param1);
     }
 }

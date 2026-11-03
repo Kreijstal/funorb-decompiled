@@ -11,7 +11,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract boolean b(boolean param0);
 
-    abstract int m(int param0);
+    abstract int getYear(int param0);
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6) {
         String var7 = null;
@@ -36,11 +36,11 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           }
           this.field_B.field_g = this;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "cj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "cj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    abstract int l(int param0);
+    abstract int getDay(int param0);
 
     DateInputWidget(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);
@@ -66,7 +66,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         return 256;
     }
 
-    abstract int h(byte param0);
+    abstract int getMonthIndex(byte param0);
 
     public final ValidationSource a(byte param0) {
         if (param0 > -107) {

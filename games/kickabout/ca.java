@@ -74,7 +74,7 @@ final class ca {
             var13 = param8;
             var14 = param3;
             var15 = 8355711 & var17[var11] >> 1;
-            var10[var11] = qj.b(var13 >> 9, 65280) + qj.b(var12 >> 1, 16711680) + qj.b(255, var14 >> 17) + var15;
+            var10[var11] = TextLayoutLine.b(var13 >> 9, 65280) + TextLayoutLine.b(var12 >> 1, 16711680) + TextLayoutLine.b(255, var14 >> 17) + var15;
             param8 = param8 + param1;
             param3 = param3 + param7;
             param2++;
@@ -90,7 +90,7 @@ final class ca {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class ca {
             ca.a((ReceivedAuctionItem) null, 5);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ca.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ca.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

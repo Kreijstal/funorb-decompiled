@@ -46,7 +46,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           po.field_e.field_n = AppScreen.field_a.field_w;
           TeamManagementScreen.e(123);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ml.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ml.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param1 < 34) {
           CipherPacketBuffer.m(35);
         }
-        param2 = param2 & ti.field_b[param0];
+        param2 = param2 & NamedValueContainer.field_b[param0];
         while (this.field_u < param0) {
           param0 = param0 - this.field_u;
           fieldTemp$1 = this.field_n;
@@ -139,7 +139,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -270,14 +270,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_f[incrementValue$0] & ti.field_b[var4]) << -var4 + param0);
+          var5 = var5 + ((this.field_f[incrementValue$0] & NamedValueContainer.field_b[var4]) << -var4 + param0);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (var4 == param0) {
-          var5 = var5 + (this.field_f[var3] & ti.field_b[var4]);
+          var5 = var5 + (this.field_f[var3] & NamedValueContainer.field_b[var4]);
         } else {
-          var5 = var5 + (this.field_f[var3] >> var4 - param0 & ti.field_b[param0]);
+          var5 = var5 + (this.field_f[var3] >> var4 - param0 & NamedValueContainer.field_b[param0]);
         }
         return var5;
     }
@@ -289,7 +289,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             this.field_u = 93;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ml.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ml.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

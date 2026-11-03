@@ -143,7 +143,7 @@ final class RenderedBall extends BallAgent {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -185,8 +185,8 @@ final class RenderedBall extends BallAgent {
         TriangleRasterizer.useRasterClip();
         TriangleRasterizer.setProjectionCenter(param1, param2);
         if (param4 != 300) {
-          tv var7 = (tv) null;
-          RenderedBall.a((byte) -13, (tv) null);
+          ChatMessage var7 = (ChatMessage) null;
+          RenderedBall.a((byte) -13, (ChatMessage) null);
         }
         if (this.field_L) {
           this.field_Q.a(8, this.field_G);
@@ -246,7 +246,7 @@ final class RenderedBall extends BallAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "ob.MA(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "ob.MA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class RenderedBall extends BallAgent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -351,14 +351,14 @@ final class RenderedBall extends BallAgent {
           var6 = BufferedSocket.field_f;
           var7 = EmailAvailabilityValidator.field_q.field_e;
           for (var4 = 0; var4 < 8; var4++) {
-            var6[var4] = hf.a(var6[var4], var7[var4]);
+            var6[var4] = PainterStyle.a(var6[var4], var7[var4]);
           }
           var8 = WelcomeDialog.field_F;
           var9 = EmailAvailabilityValidator.field_q.field_e;
           var10 = 0;
           var4Lifetime1 = var10;
           while (8 > var10) {
-            var8[var10] = qj.b(var8[var10], ~var9[var10]);
+            var8[var10] = TextLayoutLine.b(var8[var10], ~var9[var10]);
             var10++;
           }
           EmailAvailabilityValidator.field_q = null;
@@ -366,7 +366,7 @@ final class RenderedBall extends BallAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "ob.HA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "ob.HA(" + param0 + ')');
         }
     }
 
@@ -393,7 +393,7 @@ final class RenderedBall extends BallAgent {
         int var5 = 4 * InstrumentNoteMask.field_i >> 8;
         int var6 = -1 + m.field_d.length;
         int var7 = (var2Lifetime1 * (var6 >> 1) >> 8) + (var6 >> 1);
-        nh.a(ug.a(0, this.field_N >> 16) + var4 << 4, lf.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, m.field_d);
+        nh.a(ug.a(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, m.field_d);
     }
 
     final void a(MatchAgent param0, int param1, int param2, int param3) {
@@ -440,7 +440,7 @@ final class RenderedBall extends BallAgent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -458,7 +458,7 @@ final class RenderedBall extends BallAgent {
         this.field_D[7] = -var5;
     }
 
-    final static String a(byte param0, tv param1) {
+    final static String a(byte param0, ChatMessage param1) {
         String stackIn_31_0 = null;
         Object stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -527,7 +527,7 @@ final class RenderedBall extends BallAgent {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw nb.a((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -642,7 +642,7 @@ final class RenderedBall extends BallAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var5), "ob.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var5), "ob.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -652,7 +652,7 @@ final class RenderedBall extends BallAgent {
         }
         int var2 = this.j(-1);
         int var3 = ug.a(0, this.k(param0 + 14899));
-        int var4 = lf.a((byte) -107, this.c(true));
+        int var4 = IntKeyLookup.a((byte) -107, this.c(true));
         if (tb.field_v != 1) {
           var2 = (var2 << 8) / InstrumentNoteMask.field_i;
           this.a(300, var3, var4, var2, 300);
@@ -679,7 +679,7 @@ final class RenderedBall extends BallAgent {
           this.field_M = this.height;
           this.field_E = this.positionY;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

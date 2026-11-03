@@ -153,7 +153,7 @@ final class CascadingMenu extends UiLayoutNode {
             var14 = null;
             if (this.field_Ob[var13] != null ||
               this.field_Jb[var13] == -1) {
-              var14 = ci.field_g;
+              var14 = IterableDualLinkDeque.field_g;
             }
             this.field_Eb[var13] = new ContextMenuItem(0L, param2, (UiLayoutNode) null, param3, (Sprite) (var14), param6[var13]);
             this.addChild((byte) -112, (UiLayoutNode) (this.field_Eb[var13]));
@@ -162,7 +162,7 @@ final class CascadingMenu extends UiLayoutNode {
               this.field_Gb = var15;
             }
           }
-          this.field_Gb = this.field_Gb + (ci.field_g.field_o + 10);
+          this.field_Gb = this.field_Gb + (IterableDualLinkDeque.field_g.field_o + 10);
           this.b(-88, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,7 +211,7 @@ final class CascadingMenu extends UiLayoutNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -290,11 +290,11 @@ final class CascadingMenu extends UiLayoutNode {
               var5 = this.field_Jb[param0] | 32768;
               var6 = NodeHashTableIterator.field_b;
               if (var6 == 0 &&
-                uv.field_i != null) {
+                ChatLine.field_i != null) {
                 var6 = 1;
               }
               if (r.a(0, var6) == 2) {
-                gd.a(21, 1, var6, param2);
+                ListingRowCache.a(21, 1, var6, param2);
               }
               String var8 = (String) null;
               PasswordLoginCredentials.a(var5, -128, NodeHashTableIterator.field_b, param3, TrinketTile.field_Kb, (String) null);

@@ -78,7 +78,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
             var17 = var16;
             stackIn_7_0 = (!var20[-var14 + 12][var17]) ? var6 : var7;
             var10 = stackIn_7_0;
-            var9 = ks.a(var15, var13, 120, 7);
+            var9 = HuffmanCodec.a(var15, var13, 120, 7);
             for (var18 = 0; var18 < var29.length; var18++) {
               if (var29[var18] == var9) {
                 var12[var18] = (short)var10;
@@ -96,7 +96,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
             var17Lifetime1 = 9 - var16Lifetime1;
             stackIn_24_0 = (var5[-var14Lifetime1 + 12][var17Lifetime1]) ? var7 : var6;
             var10Lifetime1 = stackIn_24_0;
-            var9Lifetime1 = ks.a(var15Lifetime1, var13Lifetime1, 119, 6);
+            var9Lifetime1 = HuffmanCodec.a(var15Lifetime1, var13Lifetime1, 119, 6);
             var15Lifetime1 += 5;
             var21 = 0;
             var18Lifetime1 = var21;
@@ -157,7 +157,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
             }
             for (var3 = 0; var3 < 4; var3++) {
               if (0 == (var3 & 1)) {
-                stackIn_23_0 = eq.field_h;
+                stackIn_23_0 = WeightedLruCache.field_h;
               } else {
                 stackIn_23_0 = CipherPacketBuffer.field_q;
               }
@@ -197,7 +197,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
           if (param0 >= -35) {
             AuctionsHelpScreen.c(true);
           }
-          re.field_c.a(-21174, ts.b(n.field_m, BytePlusOneCommand.field_A, 16756), ts.b(ReceivedAuctionItem.field_y, sm.field_q, 16756));
+          re.field_c.a(-21174, ts.b(ArchiveManager.field_m, BytePlusOneCommand.field_A, 16756), ts.b(ReceivedAuctionItem.field_y, sm.field_q, 16756));
           if (re.field_c.c(-1)) {
             var1_int = 1;
           }
@@ -214,7 +214,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "df.K(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "df.K(" + param0 + ')');
         }
     }
 

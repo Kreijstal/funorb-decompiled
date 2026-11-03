@@ -18,7 +18,7 @@ final class vo extends ContentTransitionDialog {
           }
           super.a((byte) -127, param1);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vo.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vo.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class vo extends ContentTransitionDialog {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class vo extends ContentTransitionDialog {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
         }
     }
 
@@ -424,7 +424,7 @@ final class vo extends ContentTransitionDialog {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 }

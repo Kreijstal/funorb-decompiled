@@ -118,7 +118,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -328,7 +328,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -408,7 +408,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -526,7 +526,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -536,7 +536,7 @@ final class MatchScreen extends AppScreen {
             this.c((byte) 62);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ap.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ap.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -561,7 +561,7 @@ final class MatchScreen extends AppScreen {
             this.field_v = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ap.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ap.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -679,7 +679,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -738,7 +738,7 @@ final class MatchScreen extends AppScreen {
           return false;
         }
         if (param0 == tt.field_b) {
-          vl.field_d = !vl.field_d ? true : false;
+          LoginMethod.field_d = !LoginMethod.field_d ? true : false;
         }
         if (!this.stateReceived) {
           return false;
@@ -804,7 +804,7 @@ final class MatchScreen extends AppScreen {
             this.matchState.phase < 5 && (RankingsScreen.field_C != this.matchState.tier ||
             ih.field_c != this.matchState.surface ||
             !vi.field_n)) {
-            sb.a(true, (byte) -125, this.matchState.tier, this.matchState.surface);
+            StringCursor.a(true, (byte) -125, this.matchState.tier, this.matchState.surface);
           }
           if (5 == this.matchState.phase &&
             param1.readUnsignedByte((byte) -113) == 1) {
@@ -854,7 +854,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 

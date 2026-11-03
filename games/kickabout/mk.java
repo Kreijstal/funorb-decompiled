@@ -344,7 +344,7 @@ final class mk {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -362,7 +362,7 @@ final class mk {
             if (param0 != -1622) {
               return;
             }
-            var2_int = ks.field_e;
+            var2_int = HuffmanCodec.field_e;
             if (1 != var2_int) {
               if (2 == var2_int) {
                 IndexedSpriteState.a(-78, var4, new java.awt.Point[]{new java.awt.Point(354, 226), new java.awt.Point(542, 226), new java.awt.Point(542, 784), new java.awt.Point(354, 784)});
@@ -464,7 +464,7 @@ final class mk {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = decompiledCaughtException;
-            throw nb.a((Throwable) ((Object) var1), "mk.B(" + param0 + ')');
+            throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "mk.B(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -514,7 +514,7 @@ final class mk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

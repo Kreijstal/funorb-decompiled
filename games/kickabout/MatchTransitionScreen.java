@@ -81,7 +81,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -309,8 +309,8 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           if (ee.field_b > 0) {
             SpriteState.a(param7, param6, -2, param9, param4);
           }
-          if (td.field_b &&
-            uv.field_i.field_gc >= uv.field_i.field_bc) {
+          if (TrinketCatalog.field_b &&
+            ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
             mc.field_d.field_lb = false;
             LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
             hl.a(true, LineupView.field_u.field_Ab);
@@ -323,7 +323,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           if (ea.field_a != SoftwareRasterizer.field_g) {
             if (ea.field_f.field_e == SoftwareRasterizer.field_f &&
               ea.field_f.field_a == SoftwareRasterizer.field_g) {
-              if (null == uv.field_i) {
+              if (null == ChatLine.field_i) {
                 if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
@@ -343,8 +343,8 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   if (ee.field_b > 0) {
                     SpriteState.a(param7, param6, -2, param9, param4);
                   }
-                  if (td.field_b &&
-                    uv.field_i.field_gc >= uv.field_i.field_bc) {
+                  if (TrinketCatalog.field_b &&
+                    ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
                     mc.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
@@ -353,7 +353,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     mc.field_d.field_lb = true;
                     SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
-                  w.a(param2, param0, param6, param8, param5, param3, param1);
+                  DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
                   SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
                   GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
                   return;
@@ -377,8 +377,8 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (ee.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
-              if (td.field_b &&
-                uv.field_i.field_gc >= uv.field_i.field_bc) {
+              if (TrinketCatalog.field_b &&
+                ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
                 mc.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
@@ -401,8 +401,8 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (ee.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
-              if (td.field_b &&
-                uv.field_i.field_gc >= uv.field_i.field_bc) {
+              if (TrinketCatalog.field_b &&
+                ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
                 mc.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
@@ -416,7 +416,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (SoftwareRasterizer.field_f != BufferedSocket.field_s &&
               ea.field_f.field_e == SoftwareRasterizer.field_f &&
               ea.field_f.field_a == SoftwareRasterizer.field_g) {
-              if (null == uv.field_i) {
+              if (null == ChatLine.field_i) {
                 if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
@@ -436,8 +436,8 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   if (ee.field_b > 0) {
                     SpriteState.a(param7, param6, -2, param9, param4);
                   }
-                  if (td.field_b &&
-                    uv.field_i.field_gc >= uv.field_i.field_bc) {
+                  if (TrinketCatalog.field_b &&
+                    ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
                     mc.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
@@ -446,7 +446,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     mc.field_d.field_lb = true;
                     SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
-                  w.a(param2, param0, param6, param8, param5, param3, param1);
+                  DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
                   SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
                   GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
                   return;
@@ -470,8 +470,8 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (ee.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
-              if (td.field_b &&
-                uv.field_i.field_gc >= uv.field_i.field_bc) {
+              if (TrinketCatalog.field_b &&
+                ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
                 mc.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
@@ -493,8 +493,8 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 if (ee.field_b > 0) {
                   SpriteState.a(param7, param6, -2, param9, param4);
                 }
-                if (td.field_b &&
-                  uv.field_i.field_gc >= uv.field_i.field_bc) {
+                if (TrinketCatalog.field_b &&
+                  ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
                   mc.field_d.field_lb = false;
                   LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                   hl.a(true, LineupView.field_u.field_Ab);
@@ -507,12 +507,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 if (ee.field_b > 0) {
                   SpriteState.a(param7, param6, -2, param9, param4);
                 }
-                if (!td.field_b) {
+                if (!TrinketCatalog.field_b) {
                   LineupView.field_u.field_zb.field_E = null;
                   mc.field_d.field_lb = true;
                   SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                 } else {
-                  if (uv.field_i.field_gc >= uv.field_i.field_bc) {
+                  if (ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
                     mc.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
@@ -526,7 +526,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             }
           }
         }
-        w.a(param2, param0, param6, param8, param5, param3, param1);
+        DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
         SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
         GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
     }
@@ -625,7 +625,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           }
         }
         if (13 == cc.field_e) {
-          td.a(89);
+          TrinketCatalog.a(89);
           var4 = 1;
           TextFieldNode.field_Wb = false;
         }

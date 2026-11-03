@@ -29,7 +29,7 @@ final class wq {
         try {
           ul.a(param1, 1, param2, false, (byte) 117, param5, 16, param0, 1, param4);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wq.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wq.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class wq {
           if (hr.field_k) {
             var1_int++;
           }
-          if (gd.field_a) {
+          if (ListingRowCache.field_a) {
             var1_int++;
           }
           if (gk.field_e) {
@@ -102,7 +102,7 @@ final class wq {
             return;
           }
           var2 = 30;
-          if (gd.field_a) {
+          if (ListingRowCache.field_a) {
             var3_long = Runtime.getRuntime().totalMemory();
             var5_long = Runtime.getRuntime().freeMemory();
             var7 = (-var5_long + var3_long) / 1024L + " kB / " + var3_long / 1024L + " kB";
@@ -177,7 +177,7 @@ final class wq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "wq.F(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "wq.F(" + param0 + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class vs {
     int field_b;
     static int field_f;
     static sm field_g;
-    static sr field_k;
+    static SortCriterion field_k;
     boolean field_j;
     PlayerStats field_d;
     static String field_l;
@@ -25,7 +25,7 @@ final class vs {
           if (param0 <= 70) {
             vs.a(50);
           }
-          var2 = pn.field_z.g(24009);
+          var2 = StrongCacheEntry.field_z.g(24009);
           while (var2 instanceof FadingSoundPlayer) {
             if (((FadingSoundPlayer) (var2)).getSoundId(false) == param1) {
               return true;
@@ -36,7 +36,7 @@ final class vs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "vs.F(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "vs.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -119,19 +119,19 @@ final class vs {
           SoftwareRasterizer.b();
           var12.a(var8[this.field_d.playerType], 0, SoftwareRasterizer.field_g >> 1, var17[this.field_d.playerType], (byte) -118);
           TeamManagementScreen.e(122);
-          eo.a(ConsoleCommand.field_u, this.field_h);
+          eo.downscaleByHalf(ConsoleCommand.field_u, this.field_h);
           var13 = (this.field_h.field_v - 2) * this.field_h.field_o;
           for (var14 = -this.field_h.field_o; 0 > var14; var14++) {
             var15 = this.field_h.field_y[var13];
             incrementValue$4 = var13;
             var13++;
-            this.field_h.field_y[incrementValue$4] = hf.a(qj.b(var15, -33554431) >>> 1, qj.b(var15, 16777215));
+            this.field_h.field_y[incrementValue$4] = PainterStyle.a(TextLayoutLine.b(var15, -33554431) >>> 1, TextLayoutLine.b(var15, 16777215));
           }
           for (var14Lifetime1 = -this.field_h.field_o; 0 > var14Lifetime1; var14Lifetime1++) {
             var15Lifetime1 = this.field_h.field_y[var13];
             incrementValue$3 = var13;
             var13++;
-            this.field_h.field_y[incrementValue$3] = hf.a(qj.b(var15Lifetime1, 16777215), qj.b(-1090519040, var15Lifetime1 >>> 2));
+            this.field_h.field_y[incrementValue$3] = PainterStyle.a(TextLayoutLine.b(var15Lifetime1, 16777215), TextLayoutLine.b(-1090519040, var15Lifetime1 >>> 2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,7 +144,7 @@ final class vs {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class vs {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class vs {
 
     static {
         field_g = null;
-        field_k = (sr) ((Object) new rl());
+        field_k = (SortCriterion) ((Object) new rl());
         field_l = "trapping the mouse prevents you from clicking outside the game during a match";
         field_i = 0;
         field_c = "Your request to join has been declined.";

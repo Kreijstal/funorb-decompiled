@@ -56,7 +56,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
         UiLayoutNode var6 = null;
         int var7 = 0;
         int var8 = 0;
-        tv var9 = null;
+        ChatMessage var9 = null;
         var8 = Kickabout.field_G;
         try {
           if (pg.field_b < TextPromptDialog.field_Bb) {
@@ -82,7 +82,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           if (pg.field_b <= 0) {
             return;
           }
-          eq.a(0);
+          WeightedLruCache.a(0);
           g.field_a.b(0, param0);
           if (null != PlayArea.field_a) {
             if (PacketBuffer.field_l) {
@@ -104,21 +104,21 @@ final class DemoIntegersCommand extends ConsoleCommand {
             }
           }
           if (0 != uq.field_a.field_sb) {
-            ck.field_b = new TextPromptDialog(uq.field_a.field_F, uq.field_a.field_T, uq.field_a.field_q, uq.field_a.field_mb, param2, tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, (String) null, 0L);
+            ck.field_b = new TextPromptDialog(uq.field_a.field_F, uq.field_a.field_T, uq.field_a.field_q, uq.field_a.field_mb, param2, ChatMessage.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, (String) null, 0L);
           }
-          var9 = TextPromptDialog.a(param1, sh.field_c, (byte) 26, eb.field_b);
+          var9 = TextPromptDialog.a(param1, sh.field_c, (byte) 26, DiskCacheWorker.field_b);
           if (var9 != null) {
             LineupView.a(var9, (byte) -60);
           }
           var5 = Trinket.f(-3);
           if (var5 != null) {
-            sn.field_e = var5;
+            UrlRequest.field_e = var5;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var4), "jo.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var4), "jo.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

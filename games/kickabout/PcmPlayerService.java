@@ -144,7 +144,7 @@ class PcmPlayerService {
         if (this.field_c != null) {
           this.field_c.mixInto(param0, 0, param1);
         }
-        this.field_t = nj.a(-96);
+        this.field_t = nj.monotonicMillis(-96);
     }
 
     final static void a(int param0, boolean param1, int param2) {
@@ -262,7 +262,7 @@ class PcmPlayerService {
           if (this.field_s) {
             return;
           }
-          var1 = nj.a(-92);
+          var1 = nj.monotonicMillis(-92);
           try {
             if (var1 > this.field_t + 6000L) {
               this.field_t = var1 - 6000L;
@@ -270,7 +270,7 @@ class PcmPlayerService {
             while (var1 > this.field_t + 5000L) {
               this.a(256);
               this.field_t = this.field_t + (long)(256000 / field_i);
-              var1 = nj.a(109);
+              var1 = nj.monotonicMillis(109);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -404,7 +404,7 @@ class PcmPlayerService {
     PcmPlayerService() {
         this.field_s = false;
         this.field_j = 32;
-        this.field_t = nj.a(24);
+        this.field_t = nj.monotonicMillis(24);
         this.field_u = 0;
         this.field_f = new PcmStream[8];
         this.field_g = 0L;

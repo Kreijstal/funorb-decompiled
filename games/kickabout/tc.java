@@ -85,7 +85,7 @@ final class tc extends DualLinkNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -138,8 +138,8 @@ final class tc extends DualLinkNode {
               CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             }
           }
-          if (wt.field_x > qj.field_e &&
-            vo.field_cb.field_q + qj.field_e > wt.field_x &&
+          if (wt.field_x > TextLayoutLine.field_e &&
+            vo.field_cb.field_q + TextLayoutLine.field_e > wt.field_x &&
             ArchiveNetworkClient.field_i < us.field_j &&
             AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
             ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
@@ -168,8 +168,8 @@ final class tc extends DualLinkNode {
                 CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
               }
             }
-            if (wt.field_x > qj.field_e &&
-              vo.field_cb.field_q + qj.field_e > wt.field_x &&
+            if (wt.field_x > TextLayoutLine.field_e &&
+              vo.field_cb.field_q + TextLayoutLine.field_e > wt.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
               AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
@@ -195,8 +195,8 @@ final class tc extends DualLinkNode {
               CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             }
           }
-          if (wt.field_x > qj.field_e &&
-            vo.field_cb.field_q + qj.field_e > wt.field_x &&
+          if (wt.field_x > TextLayoutLine.field_e &&
+            vo.field_cb.field_q + TextLayoutLine.field_e > wt.field_x &&
             ArchiveNetworkClient.field_i < us.field_j &&
             AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
             ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
@@ -208,8 +208,8 @@ final class tc extends DualLinkNode {
         if (dc.field_d == 0) {
           if (CachedArchiveSource.field_s > 1) {
             CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
-            if (wt.field_x > qj.field_e &&
-              vo.field_cb.field_q + qj.field_e > wt.field_x &&
+            if (wt.field_x > TextLayoutLine.field_e &&
+              vo.field_cb.field_q + TextLayoutLine.field_e > wt.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
               AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
@@ -219,8 +219,8 @@ final class tc extends DualLinkNode {
         } else {
           if (CachedArchiveSource.field_s < 18) {
             CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
-            if (wt.field_x > qj.field_e &&
-              vo.field_cb.field_q + qj.field_e > wt.field_x &&
+            if (wt.field_x > TextLayoutLine.field_e &&
+              vo.field_cb.field_q + TextLayoutLine.field_e > wt.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
               AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
@@ -228,10 +228,10 @@ final class tc extends DualLinkNode {
             return;
           }
         }
-        if (wt.field_x <= qj.field_e) {
+        if (wt.field_x <= TextLayoutLine.field_e) {
           return;
         }
-        if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+        if (vo.field_cb.field_q + TextLayoutLine.field_e <= wt.field_x) {
           return;
         }
         if (ArchiveNetworkClient.field_i < us.field_j &&
@@ -313,7 +313,7 @@ final class tc extends DualLinkNode {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -348,13 +348,13 @@ final class tc extends DualLinkNode {
           var4 = 0;
           var2 = var4;
           while (var4 < this.field_o.length) {
-            this.field_o[var4] = hf.a(this.field_o[var4], 32768);
+            this.field_o[var4] = PainterStyle.a(this.field_o[var4], 32768);
             var4++;
           }
           return;
         }
         for (var2Lifetime1 = 0; this.field_n.length > var2Lifetime1; var2Lifetime1++) {
-          this.field_n[var2Lifetime1] = hf.a(this.field_n[var2Lifetime1], 32768);
+          this.field_n[var2Lifetime1] = PainterStyle.a(this.field_n[var2Lifetime1], 32768);
         }
         if (param0 >= -81) {
           return;
@@ -365,7 +365,7 @@ final class tc extends DualLinkNode {
         var4Lifetime1 = 0;
         var2Lifetime2 = var4Lifetime1;
         while (var4Lifetime1 < this.field_o.length) {
-          this.field_o[var4Lifetime1] = hf.a(this.field_o[var4Lifetime1], 32768);
+          this.field_o[var4Lifetime1] = PainterStyle.a(this.field_o[var4Lifetime1], 32768);
           var4Lifetime1++;
         }
         return;
@@ -403,7 +403,7 @@ final class tc extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -52,7 +52,7 @@ final class ts {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ts.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ts.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class ts {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ts.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ts.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

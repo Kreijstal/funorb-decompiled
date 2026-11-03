@@ -13,7 +13,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
     private int field_Ab;
     static ResourceArchive field_Bb;
     private int field_Fb;
-    rd field_Cb;
+    GameModeDefinition field_Cb;
     private ClubState field_Hb;
 
     final static void j(int param0) {
@@ -28,7 +28,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
         }
         boolean decompiledFrameRemainder0 = true;
         var5 = et.field_d.field_V;
-        if (ks.field_e == 1) {
+        if (HuffmanCodec.field_e == 1) {
           if (HoverTooltip.field_Eb) {
             var2 = EmailAvailabilityValidator.field_k.pixelY(true);
             var3 = (var2 * -200 + 326800) / -490;
@@ -37,31 +37,31 @@ final class KitStyleTile extends UiLayoutNode implements lv {
             mj.a(256.0, param0 ^ 13487, (double)EmailAvailabilityValidator.field_k.pixelX(-122), (double)EmailAvailabilityValidator.field_k.pixelY(true));
           }
         } else {
-          if (ks.field_e != 2) {
-            if (ks.field_e != 3) {
-              if (ks.field_e == 4) {
+          if (HuffmanCodec.field_e != 2) {
+            if (HuffmanCodec.field_e != 3) {
+              if (HuffmanCodec.field_e == 4) {
                 if (!HoverTooltip.field_Eb) {
                   mj.a(200.0, 60, (double)EmailAvailabilityValidator.field_k.pixelX(param0 - 13564), (double)(EmailAvailabilityValidator.field_k.pixelY(true) - 55));
                 } else {
                   mj.a(160.0, 60, (double)(ld.field_f.pixelX(-119) + EmailAvailabilityValidator.field_k.pixelX(-118) >> 1), (double)(ld.field_f.pixelY(true) + EmailAvailabilityValidator.field_k.pixelY(true) >> 1));
                 }
               } else {
-                if (5 != ks.field_e) {
-                  if (6 == ks.field_e) {
+                if (5 != HuffmanCodec.field_e) {
+                  if (6 == HuffmanCodec.field_e) {
                     mj.a(180.0, 60, (double)(EmailAvailabilityValidator.field_k.pixelX(-99) + ld.field_f.pixelX(-97) >> 1), (double)EmailAvailabilityValidator.field_k.pixelY(true));
                   } else {
-                    if (ks.field_e == 7) {
+                    if (HuffmanCodec.field_e == 7) {
                       var2_ref_nl = et.field_d.field_P[1][4];
                       mj.a(220.0, 60, (double)(ld.field_f.pixelX(-107) + var2_ref_nl.pixelX(-89) >> 1), (double)(ld.field_f.pixelY(true) + var2_ref_nl.pixelY(true) >> 1));
                     } else {
-                      if (ks.field_e != 8) {
-                        if (ks.field_e == 9) {
+                      if (HuffmanCodec.field_e != 8) {
+                        if (HuffmanCodec.field_e == 9) {
                           mj.a(220.0, 60, (double)(EmailAvailabilityValidator.field_k.pixelX(-128) + ld.field_f.pixelX(-121) >> 1), (double)EmailAvailabilityValidator.field_k.pixelY(true));
                         } else {
-                          if (ks.field_e != 10) {
-                            if (ks.field_e != 11) {
-                              if (ks.field_e != 12) {
-                                if (ks.field_e == 13) {
+                          if (HuffmanCodec.field_e != 10) {
+                            if (HuffmanCodec.field_e != 11) {
+                              if (HuffmanCodec.field_e != 12) {
+                                if (HuffmanCodec.field_e == 13) {
                                   if (!HoverTooltip.field_Eb &&
                                     var5.positionY >= 0) {
                                     if (var5.possessorTeam != 0 &&
@@ -238,7 +238,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
           var10.c(-(var10.field_q >> 1) + var5, var6 - (var10.field_w >> 1));
           var8 = new ArgbSprite(18, 13);
           PacketBuffer.a(param0 ^ -24576, var8);
-          q.field_d.d("10", SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 2, -1, -1);
+          ConsoleTokenCursor.field_d.d("10", SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 2, -1, -1);
           eo.a(var8, -16711423);
           eo.a(var8, 1996554497);
           TeamManagementScreen.e(122);
@@ -253,7 +253,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
 
     final static void a(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         try {
-          ButtonMenuScreen.field_l = nb.b((byte) 119) * param0 / 1000;
+          ButtonMenuScreen.field_l = GameSoundEffect.b((byte) 119) * param0 / 1000;
           GameAppletShell.a(param1, (byte) 60);
           ou.a((byte) 49, param1);
           CipherPacketBuffer.a(3, param1);
@@ -262,7 +262,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
           PlayerStats.field_p = 0 - ButtonMenuScreen.field_l;
           int var4_int = -119 / ((param2 + 39) / 58);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "nt.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nt.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -312,7 +312,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
               stackIn_23_0 = -67;
               stackIn_23_1 = -18;
               if (!this.field_Ib) {
-                stackIn_24_2 = qe.field_f;
+                stackIn_24_2 = ArchivePreloader.field_f;
               } else {
                 stackIn_24_2 = RenderedBall.field_R;
               }
@@ -397,7 +397,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -406,7 +406,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
         }
     }
 
-    KitStyleTile(ClubState param0, rd param1) {
+    KitStyleTile(ClubState param0, GameModeDefinition param1) {
         this.field_Eb = null;
         this.field_Ib = false;
         this.field_Gb = false;
@@ -423,7 +423,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
           this.field_Ib = this.field_Cb.a(ScrollContainer.field_Ib, (byte) 54, BufferedSocket.field_f);
           this.field_Kb = this.field_Cb.a(ScrollContainer.field_Ib, field_yb, (byte) -81);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

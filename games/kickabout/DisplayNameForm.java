@@ -19,7 +19,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           var4 = param0;
           ((TextInputWidget) ((Object) var3)).a(var4, (byte) -17, false);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -159,7 +159,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         UiWidget var2 = new UiWidget(vt.field_b, var1, (UiListener) null);
         this.field_B = new TextButton(MatchScreen.field_x, (UiListener) null);
         this.field_E = new TextButton(vt.field_a, (UiListener) null);
-        this.field_C.field_u = sr.field_b;
+        this.field_C.field_u = SortCriterion.field_b;
         this.field_C.a(6, new AccountNameAvailabilityValidator(this.field_C));
         this.field_B.field_y = false;
         this.field_B.field_r = (WidgetPainter) ((Object) new op());
@@ -235,7 +235,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           super.a(param0, param1, param2, param3);
           this.field_B.field_y = this.l(20);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

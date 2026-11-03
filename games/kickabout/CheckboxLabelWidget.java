@@ -68,21 +68,21 @@ final class CheckboxLabelWidget extends UiLayoutNode {
             }
           }
           et.field_d.participantStatus[0].controlledSlot = 0;
-          ks.field_e = param0;
+          HuffmanCodec.field_e = param0;
           ic.field_i = false;
           et.field_d.participantStatus[1].controlledSlot = 0;
-          if (ks.field_e == 1) {
+          if (HuffmanCodec.field_e == 1) {
             EmailAvailabilityValidator.field_k.a(29360128, false, 0, 107085824);
             EmailAvailabilityValidator.field_k.field_R = 1024;
             EmailAvailabilityValidator.field_k.setDirectionFromMask(4, 26214);
             et.field_d.field_V.a(29360128, 0, (byte) 26, 44040192);
             vb.field_d = 1;
           } else {
-            if (ks.field_e != 2) {
-              if (ks.field_e != 3) {
-                if (4 != ks.field_e) {
-                  if (ks.field_e != 5) {
-                    if (6 == ks.field_e) {
+            if (HuffmanCodec.field_e != 2) {
+              if (HuffmanCodec.field_e != 3) {
+                if (4 != HuffmanCodec.field_e) {
+                  if (HuffmanCodec.field_e != 5) {
+                    if (6 == HuffmanCodec.field_e) {
                       ld.field_f.a(655360, param1, 0, 19005440);
                       vb.field_d = 1;
                       var5 = 0;
@@ -93,7 +93,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                         var5++;
                       }
                     } else {
-                      if (ks.field_e == 7) {
+                      if (HuffmanCodec.field_e == 7) {
                         vb.field_d = 3;
                         var8 = (RenderedFootballer) (et.field_d.field_P[1][4]);
                         var8.a(-13107200, false, 0, 22937600);
@@ -101,19 +101,19 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                         var8.directionMask = 8;
                         ld.field_f.directionMask = 4;
                       } else {
-                        if (ks.field_e == 8) {
+                        if (HuffmanCodec.field_e == 8) {
                           vb.field_d = 3;
                         } else {
-                          if (ks.field_e != 9) {
-                            if (ks.field_e != 10) {
-                              if (ks.field_e == 11) {
+                          if (HuffmanCodec.field_e != 9) {
+                            if (HuffmanCodec.field_e != 10) {
+                              if (HuffmanCodec.field_e == 11) {
                                 vb.field_d = 4;
                               } else {
-                                if (12 == ks.field_e) {
+                                if (12 == HuffmanCodec.field_e) {
                                   vb.field_d = 4;
                                 } else {
-                                  if (ks.field_e != 13) {
-                                    if (ks.field_e == 14) {
+                                  if (HuffmanCodec.field_e != 13) {
+                                    if (HuffmanCodec.field_e == 14) {
                                       um.field_e.beginPhase(26415, 2);
                                       et.field_d.disableLocal = false;
                                       AnimationSkeleton.field_m = 500;
@@ -161,7 +161,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "jw.C(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "jw.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -287,7 +287,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           this.field_mb = 30;
           this.field_q = -1 == param2 ? this.field_zb : param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -13,7 +13,7 @@ final class lp {
             ag.field_f.b((byte) -83, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

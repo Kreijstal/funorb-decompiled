@@ -68,7 +68,7 @@ final class ResourceArchive {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ final class ResourceArchive {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) (stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) (stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class ResourceArchive {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class ResourceArchive {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -464,7 +464,7 @@ final class ResourceArchive {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -499,7 +499,7 @@ final class ResourceArchive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -543,7 +543,7 @@ final class ResourceArchive {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -627,13 +627,13 @@ final class ResourceArchive {
           }
           var3_int = 0;
           var4 = uq.field_c;
-          while (eq.field_c.length > var3_int) {
+          while (WeightedLruCache.field_c.length > var3_int) {
             var5 = dk.field_g[var3_int];
             if (var5 >= 0) {
-              var6 = MatchTransitionScreen.a(10, eq.field_c[var3_int], true);
+              var6 = MatchTransitionScreen.a(10, WeightedLruCache.field_c[var3_int], true);
               var7 = -(var6 >> 1) + TeamManagementScreen.field_A;
               var4 = var4 + aj.field_a;
-              if (ec.a(-eb.field_d + var7, param1, param0, (byte) -124, var4, var6 + (eb.field_d << 1), PlayerModelPreview.field_j + (pr.field_d << 1))) {
+              if (ec.a(-DiskCacheWorker.field_d + var7, param1, param0, (byte) -124, var4, var6 + (DiskCacheWorker.field_d << 1), PlayerModelPreview.field_j + (pr.field_d << 1))) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
@@ -648,7 +648,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "sj.U(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "sj.U(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -773,7 +773,7 @@ final class ResourceArchive {
             stackIn_35_0 = var11_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param1 != null);
-            throw nb.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(er.a(false, var9.length, var9)).append(" ").append(er.a(false, var9.length - 2, var9)).append(" ").append(this.field_d.field_c[param0]).append(" ").append(this.field_d.field_g).toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(er.a(false, var9.length, var9)).append(" ").append(er.a(false, var9.length - 2, var9)).append(" ").append(this.field_d.field_c[param0]).append(" ").append(this.field_d.field_g).toString());
           }
           if (this.field_b) {
             this.field_e[param0] = null;
@@ -899,7 +899,7 @@ final class ResourceArchive {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -954,7 +954,7 @@ final class ResourceArchive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -969,7 +969,7 @@ final class ResourceArchive {
           this.field_i = param0;
           this.field_b = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -29,7 +29,7 @@ final class AuctionListingDialog extends MessageDialog {
           this.field_i[1].field_J = this.field_i[0].field_J;
           this.field_i[1].field_s = this.field_i[0].field_s + (this.field_i[0].field_q + 20);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

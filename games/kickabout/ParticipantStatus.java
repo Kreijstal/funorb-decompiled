@@ -46,7 +46,7 @@ final class ParticipantStatus extends MatchAgent {
           MatchingTextValidator.field_m[0] = Math.min(896, Math.max(0, var8));
           MatchingTextValidator.field_m[1] = Math.min(1344, Math.max(0, var9));
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gt.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gt.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class ParticipantStatus extends MatchAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "gt.F(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "gt.F(" + param0 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class ParticipantStatus extends MatchAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "gt.G(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "gt.G(" + param0 + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class ParticipantStatus extends MatchAgent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class ParticipantStatus extends MatchAgent {
           var4_int = -54 / ((param2 - 2) / 63);
           stackIn_3_0 = nm.field_i[param3];
           stackIn_3_1 = TextInputWidget.field_O[param3];
-          if (em.field_e) {
+          if (DualLinkHashTable.field_e) {
             stackIn_6_0 = stackIn_3_0;
             stackIn_6_1 = stackIn_3_1;
             if (param0) {
@@ -164,7 +164,7 @@ final class ParticipantStatus extends MatchAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var4), "gt.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var4), "gt.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class ParticipantStatus extends MatchAgent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class ParticipantStatus extends MatchAgent {
           field_o = null;
           field_m = null;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gt.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gt.B(" + param0 + ')');
         }
     }
 
@@ -237,8 +237,8 @@ final class ParticipantStatus extends MatchAgent {
             return;
           }
           if (param0 ||
-            null == uv.field_i) {
-            td.field_b = false;
+            null == ChatLine.field_i) {
+            TrinketCatalog.field_b = false;
           }
           if (param0) {
             if (ns.field_a > 0) {
@@ -254,9 +254,9 @@ final class ParticipantStatus extends MatchAgent {
               return;
             }
           } else {
-            if (uv.field_i == null) {
+            if (ChatLine.field_i == null) {
               if (null == ArchiveSource.field_b) {
-                td.field_b = false;
+                TrinketCatalog.field_b = false;
                 if (fj.field_a > 0) {
                   fj.field_a = fj.field_a - 1;
                   return;
@@ -311,7 +311,7 @@ final class ParticipantStatus extends MatchAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "gt.D(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "gt.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -580,7 +580,7 @@ final class ParticipantStatus extends MatchAgent {
           var4_int = -54 / ((param2 - 2) / 63);
           stackIn_3_0 = nm.field_i[param3];
           stackIn_3_1 = TextInputWidget.field_O[param3];
-          if (em.field_e) {
+          if (DualLinkHashTable.field_e) {
             stackIn_6_0 = stackIn_3_0;
             stackIn_6_1 = stackIn_3_1;
             if (param0) {
@@ -602,7 +602,7 @@ final class ParticipantStatus extends MatchAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var4), "gt.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var4), "gt.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 }

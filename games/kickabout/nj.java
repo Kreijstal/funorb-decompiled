@@ -14,7 +14,7 @@ final class nj {
           }
           return;
         }
-        nj.a(108);
+        nj.monotonicMillis(108);
         if (k.field_m != null) {
           k.field_m.a(73, param0);
         }
@@ -72,7 +72,7 @@ final class nj {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -81,7 +81,7 @@ final class nj {
         }
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long monotonicMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (!(AuctionTableWidget.field_Kb <= var1)) {
           in.field_b = in.field_b + (-var1 + AuctionTableWidget.field_Kb);

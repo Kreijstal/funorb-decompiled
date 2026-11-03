@@ -26,16 +26,16 @@ final class ProxySocketConnector extends SocketConnector {
             KeyedLoginCredentials.a((byte) 20, param1, var4);
             var4 = (mp) (le.field_d.c(33));
           }
-          var2 = ci.field_f.g(24009);
+          var2 = IterableDualLinkDeque.field_f.g(24009);
           while (var2 != null) {
             AuctionListing.a(true, param1);
-            var2 = ci.field_f.c(33);
+            var2 = IterableDualLinkDeque.field_f.c(33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "dq.J(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "dq.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -422,7 +422,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -472,7 +472,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

@@ -194,7 +194,7 @@ abstract class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "cv.J(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "cv.J(" + param0 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ abstract class cv {
           BuyPlayerDialog.field_I = 0;
           FormationAgent.field_f = po.a(AuctionLogEntry.field_h, -4);
           if (TextButton.field_B) {
-            sr.field_l = null;
+            SortCriterion.field_l = null;
             TextButton.field_B = false;
           }
           if (al.field_Db) {
@@ -272,7 +272,7 @@ abstract class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "cv.I(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "cv.I(" + param0 + ')');
         }
     }
 

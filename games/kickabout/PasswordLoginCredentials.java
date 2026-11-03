@@ -60,7 +60,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "gp.M(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "gp.M(" + param0 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            stackIn_8_0 = st.field_j;
+            stackIn_8_0 = CachedTextLayout.field_j;
             return stackIn_8_0;
           }
           if (param1.charAt(0) == 34) {
@@ -166,7 +166,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           wd.field_l.a(var8, false);
           if (!wq.c((byte) 59)) {
             ArchiveIndex.field_a = null;
-            n.field_c = param2;
+            ArchiveManager.field_c = param2;
             tn.field_b = param5;
             wn.field_i = param6;
             wk.field_f = PlayerModelPreview.field_f;
@@ -233,7 +233,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           }
           var9.backpatchByteLength(62, -var7 + var9.field_n);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gp.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gp.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -270,7 +270,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         try {
           param0.writeBase38Password((byte) 124, this.field_h);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gp.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gp.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -317,7 +317,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -326,7 +326,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           this.field_h = param1;
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

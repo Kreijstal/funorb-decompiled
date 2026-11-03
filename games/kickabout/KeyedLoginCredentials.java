@@ -50,7 +50,7 @@ class KeyedLoginCredentials extends LoginCredentials {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ class KeyedLoginCredentials extends LoginCredentials {
             KeyedLoginCredentials.a((byte) 56, -49, (mp) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "aa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "aa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -81,9 +81,9 @@ class KeyedLoginCredentials extends LoginCredentials {
     final static long c(int param0) {
         if (param0 != 29680) {
           KeyedLoginCredentials.c(42);
-          return nj.a(108) - ci.field_c;
+          return nj.monotonicMillis(108) - IterableDualLinkDeque.field_c;
         }
-        return nj.a(108) - ci.field_c;
+        return nj.monotonicMillis(108) - IterableDualLinkDeque.field_c;
     }
 
     kj getLoginKind(byte param0) {
@@ -98,7 +98,7 @@ class KeyedLoginCredentials extends LoginCredentials {
           this.field_i = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

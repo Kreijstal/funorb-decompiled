@@ -34,7 +34,7 @@ final class DoSomethingCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(os.a(106, (String) (param1[0].field_d)));
+            stackIn_4_0 = new ConsoleValue(Bzip2State.a(106, (String) (param1[0].field_d)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -49,7 +49,7 @@ final class DoSomethingCommand extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ final class DoSomethingCommand extends ConsoleCommand {
           ScrollPane.field_Jb.a(new SellPlayerDialog(param2, param1), 3);
           int var3_int = -77 % ((param0 + 44) / 63);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -48,7 +48,7 @@ final class un {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -121,11 +121,11 @@ final class un {
             }
             return new byte[param0];
           }
-          if (fu.field_h > 0) {
-            fieldTemp$6 = fu.field_h - 1;
-            fu.field_h = fu.field_h - 1;
+          if (GrowableIntList.field_h > 0) {
+            fieldTemp$6 = GrowableIntList.field_h - 1;
+            GrowableIntList.field_h = GrowableIntList.field_h - 1;
             var2_ref_byte__Lifetime5 = sg.field_b[fieldTemp$6];
-            sg.field_b[fu.field_h] = null;
+            sg.field_b[GrowableIntList.field_h] = null;
             return var2_ref_byte__Lifetime5;
           }
           if (30000 == param0 &&
@@ -185,11 +185,11 @@ final class un {
           }
           return new byte[param0];
         }
-        if (fu.field_h > 0) {
-          fieldTemp$12 = fu.field_h - 1;
-          fu.field_h = fu.field_h - 1;
+        if (GrowableIntList.field_h > 0) {
+          fieldTemp$12 = GrowableIntList.field_h - 1;
+          GrowableIntList.field_h = GrowableIntList.field_h - 1;
           var2_ref_byte__Lifetime3 = sg.field_b[fieldTemp$12];
-          sg.field_b[fu.field_h] = null;
+          sg.field_b[GrowableIntList.field_h] = null;
           return var2_ref_byte__Lifetime3;
         }
         if (30000 != param0) {

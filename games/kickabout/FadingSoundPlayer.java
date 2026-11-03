@@ -52,7 +52,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
           }
           gb.field_F = true;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
         if (!this.field_r) {
           TextInputWidget.a(this.stream, 114);
         } else {
-          w.a(this.stream, param0 ^ 14);
+          DialogOverlay.a(this.stream, param0 ^ 14);
         }
         this.startDelay = this.startDelay - 1;
         this.field_o = false;

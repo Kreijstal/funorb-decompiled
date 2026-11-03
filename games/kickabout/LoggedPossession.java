@@ -20,34 +20,34 @@ final class LoggedPossession {
         }
         boolean decompiledFrameRemainder0 = true;
         et.field_d.field_x = wk.field_g;
-        if (ks.field_e == 1) {
+        if (HuffmanCodec.field_e == 1) {
           et.field_d.field_x = new PlayArea[]{new PlayArea(368, 600, 528, 1200)};
           et.field_d.field_B = et.field_d.field_x;
         } else {
-          if (ks.field_e != 2) {
-            if (ks.field_e != 3) {
-              if (ks.field_e != 4) {
-                if (ks.field_e != 5) {
-                  if (6 == ks.field_e) {
+          if (HuffmanCodec.field_e != 2) {
+            if (HuffmanCodec.field_e != 3) {
+              if (HuffmanCodec.field_e != 4) {
+                if (HuffmanCodec.field_e != 5) {
+                  if (6 == HuffmanCodec.field_e) {
                     et.field_d.field_x = new PlayArea[]{new PlayArea(320, 0, 660, 1344)};
                     et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
                   } else {
-                    if (ks.field_e != 7) {
-                      if (ks.field_e == 8) {
+                    if (HuffmanCodec.field_e != 7) {
+                      if (HuffmanCodec.field_e == 8) {
                         et.field_d.field_x = new PlayArea[]{new PlayArea(10, 200, 860, 300), new PlayArea(348, 100, 648, 400), new PlayArea(10, 610, 860, 710), new PlayArea(258, 510, 558, 810), new PlayArea(10, 1000, 860, 1100), new PlayArea(298, 900, 748, 1200), new PlayArea(760, 200, 860, 710), new PlayArea(10, 610, 110, 1100)};
                         et.field_d.field_B = et.field_d.field_x;
                       } else {
-                        if (ks.field_e == 9) {
+                        if (HuffmanCodec.field_e == 9) {
                           et.field_d.field_x = new PlayArea[]{new PlayArea(0, 0, 896, 800)};
                           et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
                         } else {
-                          if (ks.field_e != 10 &&
-                            ks.field_e != 11) {
-                            if (ks.field_e == 12) {
+                          if (HuffmanCodec.field_e != 10 &&
+                            HuffmanCodec.field_e != 11) {
+                            if (HuffmanCodec.field_e == 12) {
                               et.field_d.field_x = new PlayArea[]{};
                               et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 530), new PlayArea(370, -45, 525, 530, 0, 45)};
                             } else {
-                              if ((ks.field_e == 13)) {
+                              if ((HuffmanCodec.field_e == 13)) {
                                 et.field_d.field_x = new PlayArea[]{new PlayArea(0, 0, 896, 530)};
                                 et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 530), new PlayArea(370, -45, 525, 530, 0, 45)};
                               }
@@ -110,7 +110,7 @@ final class LoggedPossession {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class LoggedPossession {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class LoggedPossession {
           }
           this.nobody = param1.nobody;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "p.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "p.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

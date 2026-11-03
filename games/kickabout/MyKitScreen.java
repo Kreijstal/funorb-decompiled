@@ -103,11 +103,11 @@ final class MyKitScreen extends TeamManagementScreen {
     final void enterScreen(int param0, int param1, boolean param2) {
         int var6_int = 0;
         int var7 = 0;
-        rd[] var5_ref_rd__;
+        GameModeDefinition[] var5_ref_rd__;
         int var5;
         UiLayoutNode var6;
         PlayerStats[] var6_array;
-        rd var7_ref_rd;
+        GameModeDefinition var7_ref_rd;
         PlayerStats var8;
         int var9;
         PlayerStats[] var10;
@@ -447,7 +447,7 @@ final class MyKitScreen extends TeamManagementScreen {
           this.field_U = -111;
         }
         if (this.field_db != null) {
-          var3 = ((int)(nj.a(75) % 5000L) << 11) / 5000;
+          var3 = ((int)(nj.monotonicMillis(75) % 5000L) << 11) / 5000;
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(532 + this.slideOffsetX, 410);
           var12 = dt.field_f;
@@ -475,7 +475,7 @@ final class MyKitScreen extends TeamManagementScreen {
     }
 
     final static boolean ensureSoundLoaded(int param0, int param1) {
-        if (rj.field_a[param1]) {
+        if (SoundCache.field_a[param1]) {
           return true;
         }
         if (param0 <= 100) {
@@ -485,7 +485,7 @@ final class MyKitScreen extends TeamManagementScreen {
           dd.a((byte) 113);
           return false;
         }
-        rj.field_a[param1] = true;
+        SoundCache.field_a[param1] = true;
         return true;
     }
 

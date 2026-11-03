@@ -72,11 +72,11 @@ final class pe {
         RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
-          if (!n.a(false)) {
+          if (!ArchiveManager.a(false)) {
             if (null != SplashScreen.field_m &&
               SplashScreen.field_m.field_b) {
               UiWidget.h(0);
-              ValidatedTextWidget.field_Z.a(new ve(ValidatedTextWidget.field_Z, hf.field_a), false);
+              ValidatedTextWidget.field_Z.a(new ve(ValidatedTextWidget.field_Z, PainterStyle.field_a), false);
             }
             return;
           }
@@ -92,7 +92,7 @@ final class pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "pe.H(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "pe.H(" + param0 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class pe {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class pe {
           param0.a(0, 0, 0, 0, 0, 0, 0, 700);
           TeamManagementScreen.e(param3 + 77);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pe.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pe.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class pe {
         try {
           ModalStack.field_C = param1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

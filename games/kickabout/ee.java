@@ -47,14 +47,14 @@ final class ee {
         PacketBuffer.field_g.e(param1 - var5 - (var3 >> 1), -var6 + (param2 - (var4 >> 1)), var3, var4, 256);
     }
 
-    final static void a(ks param0, boolean param1) {
+    final static void a(HuffmanCodec param0, boolean param1) {
         try {
-          os.field_I = param0;
+          Bzip2State.field_I = param0;
           if (param1) {
             ee.b((byte) 1);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ee.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ee.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

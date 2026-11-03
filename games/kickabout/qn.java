@@ -29,8 +29,8 @@ final class qn {
             field_c = (String) null;
           }
           DebugConsole.field_z.a(true, param3 + 485 - (-2 - param5), 5, -param4 + var7, param4);
-          ei.field_b.a(true, -param3 + DebugConsole.field_z.field_q - ij.field_s.field_q, param3, 0, param4);
-          ij.field_s.a(true, ij.field_s.field_q, ei.field_b.field_q + param3, 0, param4);
+          ei.field_b.a(true, -param3 + DebugConsole.field_z.field_q - WeightedCacheEntry.field_s.field_q, param3, 0, param4);
+          WeightedCacheEntry.field_s.a(true, WeightedCacheEntry.field_s.field_q, ei.field_b.field_q + param3, 0, param4);
           var7 = var7 - (param4 + 2);
           AuctionSettingsDialog.field_G.a(2, 110, var7 - 5, 5, 5, 485 + (param3 - (-2 - param5)), param5);
           if (null != PlayArea.field_a) {
@@ -60,7 +60,7 @@ final class qn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var6), "qn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var6), "qn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

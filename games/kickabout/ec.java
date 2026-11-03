@@ -26,7 +26,7 @@ final class ec {
         return stackIn_8_0;
     }
 
-    final static void a(boolean param0, tv param1) {
+    final static void a(boolean param0, ChatMessage param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -48,8 +48,8 @@ final class ec {
             AlphaContainer.field_C[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; vb.field_j > var2_intLifetime1; var2_intLifetime1++) {
-            if (fu.field_b[var2_intLifetime1].field_c == param1.field_c) {
-              dupTemp$3 = fu.field_b[var2_intLifetime1].b(80);
+            if (GrowableIntList.field_b[var2_intLifetime1].field_c == param1.field_c) {
+              dupTemp$3 = GrowableIntList.field_b[var2_intLifetime1].b(80);
               AlphaContainer.field_C[dupTemp$3] = AlphaContainer.field_C[dupTemp$3] + 1;
             }
           }
@@ -58,8 +58,8 @@ final class ec {
           var2_intLifetime2 = 0;
           for (var3 = 0; vb.field_j > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (~param1.field_c == ~fu.field_b[var3].field_c) {
-              var4 = fu.field_b[var3].b(80);
+            if (~param1.field_c == ~GrowableIntList.field_b[var3].field_c) {
+              var4 = GrowableIntList.field_b[var3].b(80);
               if (TrinketTile.field_Hb < AlphaContainer.field_C[var4]) {
                 AlphaContainer.field_C[var4] = AlphaContainer.field_C[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -68,7 +68,7 @@ final class ec {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              fu.field_b[incrementValue$2] = fu.field_b[var3];
+              GrowableIntList.field_b[incrementValue$2] = GrowableIntList.field_b[var3];
             }
           }
           if (!param0) {
@@ -77,7 +77,7 @@ final class ec {
           vb.field_j = var2_intLifetime2;
           fieldTemp$1 = vb.field_j;
           vb.field_j = vb.field_j + 1;
-          fu.field_b[fieldTemp$1] = param1;
+          GrowableIntList.field_b[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class ec {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -108,10 +108,10 @@ final class ec {
             return stackIn_2_0;
           }
           if (!param0) {
-            stackIn_7_0 = sn.field_i.a(param1);
+            stackIn_7_0 = UrlRequest.field_i.a(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = sn.field_a.a(param1);
+          stackIn_5_0 = UrlRequest.field_a.a(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,7 +123,7 @@ final class ec {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class ec {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

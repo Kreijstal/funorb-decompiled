@@ -18,7 +18,7 @@ final class TextFieldNode extends UiLayoutNode {
     private long field_Sb;
     static int field_zb;
     static UiLayoutNode field_Qb;
-    static nb[] field_Db;
+    static GameSoundEffect[] field_Db;
     private UiLayoutNode field_yb;
     static String field_Kb;
     static PcmStreamMixer field_Bb;
@@ -28,7 +28,7 @@ final class TextFieldNode extends UiLayoutNode {
     private UiLayoutNode field_Nb;
     UiLayoutNode field_Lb;
 
-    private final void l(int param0) {
+    private final void deleteSelection(int param0) {
         int var2 = 0;
         int var3 = 0;
         String var4 = null;
@@ -120,7 +120,7 @@ final class TextFieldNode extends UiLayoutNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -136,28 +136,28 @@ final class TextFieldNode extends UiLayoutNode {
         field_Qb = null;
     }
 
-    private final void c(boolean param0) {
+    private final void copySelectionToClipboard(boolean param0) {
         if (param0) {
           field_Wb = false;
         }
         if (null == this.field_Pb) {
           return;
         }
-        String var2 = this.i((byte) 35);
+        String var2 = this.getSelectedText((byte) 35);
         if (var2.length() == 0) {
           return;
         }
-        java.awt.datatransfer.StringSelection var3 = new java.awt.datatransfer.StringSelection(this.i((byte) 35));
+        java.awt.datatransfer.StringSelection var3 = new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) 35));
         this.field_Pb.a((byte) 68, (java.awt.datatransfer.Transferable) ((Object) var3));
     }
 
-    final void k(int param0) {
+    final void clear(int param0) {
         int discarded$0 = 0;
         PagedHelpScreen.a(0, ' ', -11407, this.field_Ub);
         this.field_Mb = 0;
         this.field_Fb = 0;
         if (param0 != -19174) {
-          discarded$0 = this.h(-14);
+          discarded$0 = this.previousWordBoundary(-14);
         }
         this.field_Lb.field_E = this.field_Ub.toString();
     }
@@ -181,7 +181,7 @@ final class TextFieldNode extends UiLayoutNode {
         var7 = Kickabout.field_G;
         try {
           if (go.field_b != 0) {
-            var2_long = nj.a(param1 - 75);
+            var2_long = nj.monotonicMillis(param1 - 75);
             var4 = go.field_b;
             if (0.0 != m.field_a) {
               var4 = (int)((double)var4 + ac.field_d.nextGaussian() * m.field_a);
@@ -223,22 +223,22 @@ final class TextFieldNode extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "vg.A(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "vg.A(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final void a(PlatformTaskDispatcher param0, int param1) {
+    final void setPlatformDispatcher(PlatformTaskDispatcher param0, int param1) {
         if (param1 != -17421) {
           return;
         }
         try {
           this.field_Pb = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vg.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vg.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void b(int param0, byte param1) {
+    final void setTextColour(int param0, byte param1) {
         int var3 = 20 / ((62 - param1) / 58);
         if (null != this.field_Lb) {
           this.field_Lb.field_y = param0;
@@ -256,11 +256,11 @@ final class TextFieldNode extends UiLayoutNode {
           var3.writeByte(127, param1.field_k);
           var3.writeByte(115, param1.field_p);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vg.RA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vg.RA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final int j(int param0) {
+    final int getCaretPosition(int param0) {
         if (param0 != -1) {
           return 64;
         }
@@ -276,14 +276,14 @@ final class TextFieldNode extends UiLayoutNode {
         return true;
     }
 
-    final void b(String param0, int param1) {
+    final void setText(String param0, int param1) {
         int var3_int = 0;
         StringBuilder discarded$0 = null;
         int dupTemp$1 = 0;
         try {
           this.field_Ub.setLength(0);
           if (param1 != -23174) {
-            this.f(24, 5);
+            this.setCaret(24, 5);
           }
           var3_int = param0.length();
           if (this.field_Eb != -1 &&
@@ -296,31 +296,31 @@ final class TextFieldNode extends UiLayoutNode {
           this.field_Mb = dupTemp$1;
           this.field_Lb.field_E = this.field_Ub.toString();
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vg.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vg.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void b(int param0, int param1) {
-        sr.field_c = StatChoiceDialog.field_G[param0];
-        ks.field_g = ConsoleParseException.field_g[param0];
+        SortCriterion.field_c = StatChoiceDialog.field_G[param0];
+        HuffmanCodec.field_g = ConsoleParseException.field_g[param0];
         if (param1 != 31900) {
           field_Qb = (UiLayoutNode) null;
         }
         ep.field_e = ss.field_a[param0];
     }
 
-    private final void h(byte param0) {
+    private final void cutSelection(byte param0) {
         if (null == this.field_Pb) {
           return;
         }
-        this.c(false);
+        this.copySelectionToClipboard(false);
         if (param0 <= 42) {
-          this.b(-41);
+          this.updatePointer(-41);
         }
-        this.l(32);
+        this.deleteSelection(32);
     }
 
-    private final void k(byte param0) {
+    private final void requestPaste(byte param0) {
         if (param0 != 38) {
           return;
         }
@@ -330,7 +330,7 @@ final class TextFieldNode extends UiLayoutNode {
         this.field_Gb = this.field_Pb.requestDisplayModes(15);
     }
 
-    private final int d(int param0, int param1) {
+    private final int characterIndexAtWidth(int param0, int param1) {
         int incrementValue$1 = 0;
         int var3;
         int var4;
@@ -352,7 +352,7 @@ final class TextFieldNode extends UiLayoutNode {
         return var3;
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean handleKey(int param0, char param1, int param2) {
         int discarded$0 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -364,12 +364,12 @@ final class TextFieldNode extends UiLayoutNode {
         if (param1 != 60 &&
           param1 != 62) {
           if (param2 != 875) {
-            discarded$0 = this.d(-84, 20);
+            discarded$0 = this.characterIndexAtWidth(-84, 20);
           }
           if (param1 >= 32 &&
             param1 <= 126) {
             if (this.field_Fb != this.field_Mb) {
-              this.l(32);
+              this.deleteSelection(32);
             }
             if (this.field_Eb != -1 &&
               this.field_Ub.length() >= this.field_Eb) {
@@ -390,25 +390,25 @@ final class TextFieldNode extends UiLayoutNode {
           }
           if (85 == param0) {
             if (this.field_Mb != this.field_Fb) {
-              this.l(32);
+              this.deleteSelection(32);
               return true;
             }
             if (this.field_Mb > 0) {
               this.field_Fb = -1 + this.field_Mb;
-              this.l(32);
+              this.deleteSelection(32);
               return true;
             }
           } else {
             if (param0 != 101) {
               if (param0 == 13) {
-                this.k(-19174);
+                this.clear(-19174);
                 return true;
               }
               if (param0 != 96) {
                 if (param0 == 97) {
                   if (this.field_Mb < this.field_Ub.length()) {
                     if (GameplayHelpScreen.field_G[82]) {
-                      stackIn_52_0 = this.i(-100);
+                      stackIn_52_0 = this.nextWordBoundary(-100);
                     } else {
                       stackIn_52_0 = this.field_Mb + 1;
                     }
@@ -427,24 +427,24 @@ final class TextFieldNode extends UiLayoutNode {
                   }
                   if (GameplayHelpScreen.field_G[82] &&
                     65 == param0) {
-                    this.h((byte) 74);
+                    this.cutSelection((byte) 74);
                     return true;
                   }
                   if (GameplayHelpScreen.field_G[82] &&
                     param0 == 66) {
-                    this.c(false);
+                    this.copySelectionToClipboard(false);
                     return true;
                   }
                   if (GameplayHelpScreen.field_G[82] &&
                     param0 == 67) {
-                    this.k((byte) 38);
+                    this.requestPaste((byte) 38);
                     return true;
                   }
                 }
               } else {
                 if (this.field_Mb > 0) {
                   if (GameplayHelpScreen.field_G[82]) {
-                    stackIn_31_0 = this.h(26864);
+                    stackIn_31_0 = this.previousWordBoundary(26864);
                   } else {
                     stackIn_31_0 = this.field_Mb - 1;
                   }
@@ -455,12 +455,12 @@ final class TextFieldNode extends UiLayoutNode {
               }
             } else {
               if (this.field_Fb != this.field_Mb) {
-                this.l(32);
+                this.deleteSelection(32);
                 return true;
               }
               if (this.field_Mb < this.field_Ub.length()) {
                 this.field_Fb = 1 + this.field_Mb;
-                this.l(32);
+                this.deleteSelection(32);
                 return true;
               }
             }
@@ -470,14 +470,14 @@ final class TextFieldNode extends UiLayoutNode {
         return false;
     }
 
-    final String j(byte param0) {
+    final String getText(byte param0) {
         if (param0 != -16) {
           return (String) null;
         }
         return this.field_Ub.toString();
     }
 
-    final String i(byte param0) {
+    final String getSelectedText(byte param0) {
         if (param0 != 35) {
           this.field_yb = (UiLayoutNode) null;
         }
@@ -487,7 +487,7 @@ final class TextFieldNode extends UiLayoutNode {
         return var2.substring(var3, var4);
     }
 
-    private final int i(int param0) {
+    private final int nextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;
@@ -507,7 +507,7 @@ final class TextFieldNode extends UiLayoutNode {
         return var4;
     }
 
-    final void f(int param0, int param1) {
+    final void setCaret(int param0, int param1) {
         this.field_Mb = param1;
         this.field_Fb = param1;
         if (param0 > -22) {
@@ -522,7 +522,7 @@ final class TextFieldNode extends UiLayoutNode {
           var2 = IsSixCommand.field_E.a(124);
         }
         if (var2.length() == 0) {
-          var2 = ue.f((byte) 99);
+          var2 = NamedValueEntry.f((byte) 99);
         }
         if (0 == var2.length()) {
           var2 = pc.field_d;
@@ -540,12 +540,12 @@ final class TextFieldNode extends UiLayoutNode {
         }
     }
 
-    private final int h(int param0) {
+    private final int previousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = Kickabout.field_G;
         if (param0 != 26864) {
-          this.l(11);
+          this.deleteSelection(11);
         }
         if (this.field_Mb == 0) {
           return this.field_Mb;
@@ -559,7 +559,7 @@ final class TextFieldNode extends UiLayoutNode {
         return var2;
     }
 
-    private final void a(String param0, int param1) {
+    private final void insertText(String param0, int param1) {
         StringBuilder discarded$4 = null;
         StringBuilder discarded$5 = null;
         StringBuilder discarded$6 = null;
@@ -603,7 +603,7 @@ final class TextFieldNode extends UiLayoutNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -611,7 +611,7 @@ final class TextFieldNode extends UiLayoutNode {
         this(param0, param1, param2, param3, -1);
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void setSelection(int param0, byte param1, int param2) {
         int var4;
         int var5;
         var5 = Kickabout.field_G;
@@ -624,7 +624,7 @@ final class TextFieldNode extends UiLayoutNode {
           }
         }
         if (param1 >= -83) {
-          this.c(false);
+          this.copySelectionToClipboard(false);
         }
         if (param2 >= 0) {
           if (var4 < param2) {
@@ -637,7 +637,7 @@ final class TextFieldNode extends UiLayoutNode {
         this.field_Fb = param2;
     }
 
-    final void b(int param0) {
+    final void updatePointer(int param0) {
         try {
           int dupTemp$0 = 0;
           boolean stackIn_14_1 = false;
@@ -653,16 +653,16 @@ final class TextFieldNode extends UiLayoutNode {
           java.awt.datatransfer.Transferable var7 = null;
           String var8 = null;
           var6 = Kickabout.field_G;
-          var2 = this.d(BytePlusOneCommand.field_A - this.field_F - this.field_Lb.field_D, param0 ^ param0);
+          var2 = this.characterIndexAtWidth(BytePlusOneCommand.field_A - this.field_F - this.field_Lb.field_D, param0 ^ param0);
           if (this.field_sb == 1) {
             this.a(var2, (byte) -112);
             this.field_Jb = true;
-            var3_long = nj.a(-69);
+            var3_long = nj.monotonicMillis(-69);
             stackIn_14_1 = !(var3_long - this.field_Sb >= 250L);
             this.field_Hb = stackIn_14_1;
             if (this.field_Hb) {
-              this.field_Fb = this.h(26864);
-              this.field_Mb = this.i(-26);
+              this.field_Fb = this.previousWordBoundary(26864);
+              this.field_Mb = this.nextWordBoundary(-26);
               if (this.field_Mb > 0 &&
                 32 == this.field_Ub.charAt(this.field_Mb - 1)) {
                 this.field_Mb = this.field_Mb - 1;
@@ -707,8 +707,8 @@ final class TextFieldNode extends UiLayoutNode {
             var7 = (java.awt.datatransfer.Transferable) (this.field_Gb.field_b);
             try {
               var8 = (String) (var7.getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-              this.l(32);
-              this.a(var8, -41);
+              this.deleteSelection(32);
+              this.insertText(var8, -41);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -724,7 +724,7 @@ final class TextFieldNode extends UiLayoutNode {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != -630) {
-          field_Db = (nb[]) null;
+          field_Db = (GameSoundEffect[]) null;
         }
         this.a(true, param4, param1, param2, param3);
         this.field_Lb.a(true, param4, 0, 0, param3);
@@ -737,7 +737,7 @@ final class TextFieldNode extends UiLayoutNode {
         field_Ob = 0;
         field_Vb = "Location";
         field_Bb = null;
-        field_Db = new nb[89];
+        field_Db = new GameSoundEffect[89];
         field_Kb = "If you do nothing the game will revert to normal view in <%0> second.";
         field_Cb = "Try changing the following settings:  ";
         field_Wb = true;

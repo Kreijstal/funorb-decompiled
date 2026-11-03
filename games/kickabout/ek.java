@@ -34,7 +34,7 @@ final class ek extends MessageDialog {
             0 != var5.field_h && ((72 != var5.field_h ||
             (1 & ic.field_h.field_n >> 0) == 1) &&
             (var5.field_h != 73 ||
-            vl.b(0)))) {
+            LoginMethod.b(0)))) {
             var6 = new TrinketTile(var4);
             var6.field_s = 5;
             var6.field_J = var3;

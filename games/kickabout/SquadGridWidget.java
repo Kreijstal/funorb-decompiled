@@ -29,7 +29,7 @@ final class SquadGridWidget extends UiLayoutNode {
           }
           vb.field_l = gk.field_a[2];
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -199,10 +199,10 @@ final class SquadGridWidget extends UiLayoutNode {
           for (var8 = 0; var4 > var8; var8++) {
             var7[var8] = BroadcastServerCommand.a(un.field_e, param0 + 18758);
           }
-          LineupView.field_y.a(param0 ^ -107, var7, nj.a(param0 + 186));
+          LineupView.field_y.addAll(param0 ^ -107, var7, nj.monotonicMillis(param0 + 186));
           if (!param2 &&
             var6 != 0) {
-            uv.field_f = false;
+            ChatLine.field_f = false;
             return;
           }
           AnimationSkeleton.field_k = var5;
@@ -263,7 +263,7 @@ final class SquadGridWidget extends UiLayoutNode {
             }
           }
           SectorCacheStore.a(94);
-          uv.field_f = false;
+          ChatLine.field_f = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -275,7 +275,7 @@ final class SquadGridWidget extends UiLayoutNode {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -384,7 +384,7 @@ final class SquadGridWidget extends UiLayoutNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -422,7 +422,7 @@ final class SquadGridWidget extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) runtimeException), "mf.K(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mf.K(" + param0 + ')');
         }
     }
 
@@ -456,7 +456,7 @@ final class SquadGridWidget extends UiLayoutNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -554,7 +554,7 @@ final class SquadGridWidget extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "mf.L(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "mf.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -578,7 +578,7 @@ final class SquadGridWidget extends UiLayoutNode {
             var3 = var4_int;
           }
         }
-        gd.a(var3, this.field_T, this.field_F, (byte) -96, var2);
+        ListingRowCache.a(var3, this.field_T, this.field_F, (byte) -96, var2);
         var5 = -84 % ((param0 + 35) / 60);
         var4 = null;
         AuctionListing.a(this.field_F + this.field_q, -22914, this.field_F, this.field_mb + this.field_T, this.field_T);
@@ -611,7 +611,7 @@ final class SquadGridWidget extends UiLayoutNode {
         AuctionsHelpScreen.field_F = new String[8];
         AuctionsHelpScreen.field_F[7] = kr.field_c;
         fs.field_a = new String[]{s.field_F, MouseInputHandler.field_a};
-        rd.field_e = new String[]{RenderedFootballer.field_Q};
+        GameModeDefinition.field_e = new String[]{RenderedFootballer.field_Q};
         AuctionsHelpScreen.field_F[1] = uq.field_f;
         AuctionsHelpScreen.field_F[4] = kr.field_d;
         AuctionsHelpScreen.field_F[6] = SquadPickerDialog.field_M;
@@ -645,7 +645,7 @@ final class SquadGridWidget extends UiLayoutNode {
         MatchingTextValidator.field_o[15] = ManagerAction.field_e;
         MatchingTextValidator.field_o[24] = GameAppletShell.field_f;
         MatchingTextValidator.field_o[18] = DualLinkDeque.field_b;
-        MatchingTextValidator.field_o[23] = nb.field_h;
+        MatchingTextValidator.field_o[23] = GameSoundEffect.field_h;
         MatchingTextValidator.field_o[40] = ms.field_a;
         MatchingTextValidator.field_o[14] = FadingSoundPlayer.field_h;
         MatchingTextValidator.field_o[43] = TrinketTile.field_Fb;
@@ -688,9 +688,9 @@ final class SquadGridWidget extends UiLayoutNode {
         if (param0 != -19) {
           return;
         }
-        fa.field_g[28] = rd.field_b;
-        fa.field_g[26] = pn.field_C;
-        fa.field_g[46] = iq.field_b;
+        fa.field_g[28] = GameModeDefinition.field_b;
+        fa.field_g[26] = StrongCacheEntry.field_C;
+        fa.field_g[46] = TextLayout.field_b;
         ValidationState.field_d = new String[24];
         fa.field_g[48] = ep.field_a;
         fa.field_g[45] = nd.field_a;
@@ -705,13 +705,13 @@ final class SquadGridWidget extends UiLayoutNode {
         ValidationState.field_d[10] = SumIntegersCommand.field_C;
         ValidationState.field_d[17] = ParticipantStatus.field_r;
         ValidationState.field_d[20] = ParticipantStatus.field_m;
-        ValidationState.field_d[21] = pf.field_a;
+        ValidationState.field_d[21] = ByteStorage.field_a;
         ValidationState.field_d[15] = dr.field_f;
         ValidationState.field_d[16] = Checkbox.field_F;
         ValidationState.field_d[23] = aj.field_d;
         ValidationState.field_d[6] = MessageDialog.field_w;
         ValidationState.field_d[9] = cg.field_L;
-        ValidationState.field_d[12] = md.field_g;
+        ValidationState.field_d[12] = CheatCodeListener.field_g;
         ValidationState.field_d[19] = ScrollPane.field_yb;
         ValidationState.field_d[3] = PlayerModelPreview.field_l;
         ValidationState.field_d[14] = mc.field_c;
@@ -720,19 +720,19 @@ final class SquadGridWidget extends UiLayoutNode {
         ValidationState.field_d[13] = ld.field_d;
         ValidationState.field_d[11] = bw.field_c;
         kp.field_g[0] = lt.field_b;
-        kp.field_g[2] = ij.field_n;
+        kp.field_g[2] = WeightedCacheEntry.field_n;
         kp.field_g[3] = AccountMessagePanel.field_C;
         kp.field_g[1] = Checkbox.field_G;
         GameSetupPanel.field_Qb = new String[4];
-        eb.field_g = new String[4];
+        DiskCacheWorker.field_g = new String[4];
         GameSetupPanel.field_Qb[0] = TrinketTile.field_Bb;
         GameSetupPanel.field_Qb[3] = op.field_u;
         GameSetupPanel.field_Qb[1] = FormationAgent.field_g;
         GameSetupPanel.field_Qb[2] = MatchAgent.field_a;
-        eb.field_g[1] = LeaguesHelpScreen.field_F;
-        eb.field_g[3] = AccountNameAvailabilityValidator.field_n;
-        eb.field_g[0] = SocketConnector.field_d;
-        eb.field_g[2] = CascadingMenu.field_Db;
+        DiskCacheWorker.field_g[1] = LeaguesHelpScreen.field_F;
+        DiskCacheWorker.field_g[3] = AccountNameAvailabilityValidator.field_n;
+        DiskCacheWorker.field_g[0] = SocketConnector.field_d;
+        DiskCacheWorker.field_g[2] = CascadingMenu.field_Db;
     }
 
     final static PlayerInputEvent a(int param0, int param1, byte param2) {
@@ -782,10 +782,10 @@ final class SquadGridWidget extends UiLayoutNode {
           for (var8 = 0; var4 > var8; var8++) {
             var7[var8] = BroadcastServerCommand.a(un.field_e, param0 + 18758);
           }
-          LineupView.field_y.a(param0 ^ -107, var7, nj.a(param0 + 186));
+          LineupView.field_y.addAll(param0 ^ -107, var7, nj.monotonicMillis(param0 + 186));
           if (!param2 &&
             var6 != 0) {
-            uv.field_f = false;
+            ChatLine.field_f = false;
             return;
           }
           AnimationSkeleton.field_k = var5;
@@ -846,7 +846,7 @@ final class SquadGridWidget extends UiLayoutNode {
             }
           }
           SectorCacheStore.a(94);
-          uv.field_f = false;
+          ChatLine.field_f = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -858,7 +858,7 @@ final class SquadGridWidget extends UiLayoutNode {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
         }
     }
 }

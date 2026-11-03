@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rl extends sr {
+final class rl extends SortCriterion {
     static String field_s;
     static String field_t;
     static int field_n;
@@ -11,7 +11,7 @@ final class rl extends sr {
     static int field_r;
     static int field_o;
 
-    final int a(int param0) {
+    final int directionCount(int param0) {
         if (param0 >= -69) {
           field_n = -39;
           return 2;
@@ -22,7 +22,7 @@ final class rl extends sr {
     rl() {
     }
 
-    final int a(int param0, Object param1, Object param2) {
+    final int compare(int param0, Object param1, Object param2) {
         PlayerStats var4 = null;
         RuntimeException var4_ref = null;
         PlayerStats var5 = null;
@@ -63,7 +63,7 @@ final class rl extends sr {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

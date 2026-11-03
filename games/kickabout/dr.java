@@ -43,9 +43,9 @@ final class dr {
           if (param0 >= -1) {
             dr.a((byte) 127);
           }
-          var2_long = nj.a(-90);
+          var2_long = nj.monotonicMillis(-90);
           if (cu.field_c != 0 &&
-            ll.field_i < 0) {
+            DirectByteStorage.field_i < 0) {
             var4_ref_jm = (DelayedServerPacket) (ConsolePanel.field_i.g(24009));
             if (var4_ref_jm != null &&
               var4_ref_jm.dueTime < var2_long) {
@@ -63,14 +63,14 @@ final class dr {
             }
           }
           while (true) {
-            if (0 > ll.field_i) {
+            if (0 > DirectByteStorage.field_i) {
               un.field_e.field_n = 0;
               if (!SetLagCommand.a((byte) 83, 1)) {
                 return false;
               }
-              ll.field_i = un.field_e.k((byte) 107);
+              DirectByteStorage.field_i = un.field_e.k((byte) 107);
               un.field_e.field_n = 0;
-              ms.field_b = param1[ll.field_i];
+              ms.field_b = param1[DirectByteStorage.field_i];
             }
             if (!LoginCredentials.a(180)) {
               return false;
@@ -79,8 +79,8 @@ final class dr {
               PagedHelpScreen.field_A = TeamSelectionView.field_n;
               TeamSelectionView.field_n = SquadSlotWidget.field_Ab;
               SquadSlotWidget.field_Ab = so.field_b;
-              so.field_b = ll.field_i;
-              ll.field_i = -1;
+              so.field_b = DirectByteStorage.field_i;
+              DirectByteStorage.field_i = -1;
               return true;
             }
             var4 = cu.field_c;
@@ -90,12 +90,12 @@ final class dr {
                 var4 = 0;
               }
             }
-            var5 = new DelayedServerPacket(var2_long + (long)var4, ll.field_i, new byte[ms.field_b]);
+            var5 = new DelayedServerPacket(var2_long + (long)var4, DirectByteStorage.field_i, new byte[ms.field_b]);
             for (var6 = 0; var6 < ms.field_b; var6++) {
               var5.data[var6] = un.field_e.field_f[var6];
             }
             ConsolePanel.field_i.a(var5, 3);
-            ll.field_i = -1;
+            DirectByteStorage.field_i = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class dr {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class dr {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

@@ -11,8 +11,8 @@ final class PromotionDialog extends MessageDialog {
         super(10);
         String var6 = Integer.toString(LoginCredentials.field_d[param0]);
         String var2 = var6;
-        String var3 = q.field_h[param0];
-        String var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[10], new String[]{var6, var3});
+        String var3 = ConsoleTokenCursor.field_h[param0];
+        String var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[10], new String[]{var6, var3});
         Sprite var5 = WriteIntegersCommand.field_E[param0];
         this.a(var4, this.field_t, var5, -110, this.field_u);
         this.a(ds.a(this.field_y, 1), pg.a(false, 10), 1054928844);
@@ -26,24 +26,24 @@ final class PromotionDialog extends MessageDialog {
         RuntimeException var2 = null;
         var3 = Kickabout.field_G;
         try {
-          var4 = (hr) (ti.field_c.g(24009));
+          var4 = (hr) (NamedValueContainer.field_c.g(24009));
           while (var4 != null) {
             rf.a(var4, param0, true);
-            var4 = (hr) (ti.field_c.c(33));
+            var4 = (hr) (NamedValueContainer.field_c.c(33));
           }
           if (param1 >= -120) {
             PromotionDialog.h(96);
           }
           var5 = (dl) (MidiPcmStream.field_M.g(24009));
           while (var5 != null) {
-            pf.a(param0, var5, (byte) -114);
+            ByteStorage.a(param0, var5, (byte) -114);
             var5 = (dl) (MidiPcmStream.field_M.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "hg.B(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "hg.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class PromotionDialog extends MessageDialog {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "hg.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "hg.A(" + param0 + ')');
         }
     }
 

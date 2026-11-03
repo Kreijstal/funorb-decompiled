@@ -50,7 +50,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           double[] var2 = var3;
           nh.a(param0, var3[0], var3[1], var3[2]);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           ia.field_d.a(param2, param0 - 67);
           mp.a(125, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pd.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           int var3_int = 35 / ((param0 - 8) / 47);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                     PacketBuffer.g(4);
                   }
                 } else {
-                  uv.a(false);
+                  ChatLine.a(false);
                 }
               }
             } else {
@@ -132,7 +132,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var3.a(var4, (byte) -17, false);
           this.field_J.i((byte) -41);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pd.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.h((byte) -105);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
-        vl var9 = null;
+        LoginMethod var9 = null;
         cg var12 = null;
         cg var13 = null;
         try {
@@ -304,7 +304,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             var8 = SetLagCommand.field_A;
           } else {
             if (var9 == AccountRegistrationPanel.field_I) {
-              var8 = q.field_c;
+              var8 = ConsoleTokenCursor.field_c;
             }
           }
           dupTemp$0 = new cg(10, this.field_g, -20 + this.field_n, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
@@ -368,7 +368,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -432,7 +432,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "pd.F(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "pd.F(" + param0 + ')');
         }
     }
 

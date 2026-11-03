@@ -29,7 +29,7 @@ final class su {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -66,11 +66,11 @@ final class su {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final static String a(int param0, long param1) {
+    final static String decodeBase37Name(int param0, long param1) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -109,7 +109,7 @@ final class su {
         int var6;
         int var7;
         oo.field_e[AuctionsScreen.field_O] = param3;
-        pf.field_d[AuctionsScreen.field_O] = AuctionsScreen.field_O;
+        ByteStorage.field_d[AuctionsScreen.field_O] = AuctionsScreen.field_O;
         bl.field_m[AuctionsScreen.field_O] = param4;
         if (BlackFadeScreen.field_g >= param4) {
           if (er.field_k <= param4) {
@@ -123,7 +123,7 @@ final class su {
               stackIn_45_0 = param5 * 1000 / var6;
             }
             var7 = stackIn_45_0;
-            w.field_a[AuctionsScreen.field_O] = var7;
+            DialogOverlay.field_a[AuctionsScreen.field_O] = var7;
             AuctionsScreen.field_O = AuctionsScreen.field_O + 1;
             if (vi.field_s > var7) {
               vi.field_s = var7;
@@ -175,7 +175,7 @@ final class su {
             var7 = stackIn_18_0;
           }
         }
-        w.field_a[AuctionsScreen.field_O] = var7;
+        DialogOverlay.field_a[AuctionsScreen.field_O] = var7;
         AuctionsScreen.field_O = AuctionsScreen.field_O + 1;
         if (vi.field_s > var7) {
           vi.field_s = var7;
@@ -223,7 +223,7 @@ final class su {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class su {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 

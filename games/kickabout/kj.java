@@ -30,7 +30,7 @@ final class kj {
         var8 = Kickabout.field_G;
         try {
           for (var6_int = param1; var6_int < 64; var6_int++) {
-            var7 = ue.field_f[var6_int];
+            var7 = NamedValueEntry.field_f[var6_int];
             if (param0 == var7.field_e &&
               param4 == var7.field_b &&
               param3 == var7.field_a &&
@@ -42,13 +42,13 @@ final class kj {
                 stackIn_10_1 = 1;
               }
               if ((stackIn_9_0 ? 1 : 0) != stackIn_10_1) {
-                dc.a(var6_int, (byte) 46);
-                stackIn_13_0 = ue.field_f[0].field_h;
+                dc.moveToFront(var6_int, (byte) 46);
+                stackIn_13_0 = NamedValueEntry.field_f[0].field_h;
                 return stackIn_13_0;
               }
             }
           }
-          var6_long = nj.a(-53);
+          var6_long = nj.monotonicMillis(-53);
           if (-bk.field_b + var6_long < 80L) {
             return null;
           }
@@ -56,9 +56,9 @@ final class kj {
             return null;
           }
           bk.field_b = var6_long;
-          ue.field_f[63].a(param1 + 184, param3, param0, param2, param5, param4);
-          dc.a(63, (byte) 88);
-          stackIn_21_0 = ue.field_f[0].field_h;
+          NamedValueEntry.field_f[63].a(param1 + 184, param3, param0, param2, param5, param4);
+          dc.moveToFront(63, (byte) 88);
+          stackIn_21_0 = NamedValueEntry.field_f[0].field_h;
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class kj {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class kj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var5), "kj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var5), "kj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -10,7 +10,7 @@ final class SplashScreen extends AppScreen {
     static FullscreenFocusCanvas field_m;
     static int field_j;
     private boolean field_g;
-    static eb field_i;
+    static DiskCacheWorker field_i;
 
     final void setTransitionProgress(int param0, boolean param1, int param2, AppScreen param3) {
         this.field_h = param0;
@@ -23,7 +23,7 @@ final class SplashScreen extends AppScreen {
             this.field_h = 256 - this.field_h;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "e.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "e.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -98,12 +98,12 @@ final class SplashScreen extends AppScreen {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (null != uv.field_i && (null != ds.field_h ||
+          if (null != ChatLine.field_i && (null != ds.field_h ||
             BroadcastServerCommand.field_E != null ||
             null != so.field_f ||
             SumIntegersCommand.field_D != null)) {
             for (var9 = 0; var9 < ss.field_j; var9++) {
-              var10_int = uv.field_i.field_Eb[var9] & 255;
+              var10_int = ChatLine.field_i.field_Eb[var9] & 255;
               if (ds.field_h != null &&
                 null != ds.field_h[var9] &&
                 ds.field_h[var9][var10_int]) {
@@ -231,7 +231,7 @@ final class SplashScreen extends AppScreen {
               var12.field_Tb.field_ab = var24_int;
               var12.field_Tb.field_ub = var24_int;
               if (param0 == ClientException.field_c) {
-                if (!uv.field_i.field_Cb) {
+                if (!ChatLine.field_i.field_Cb) {
                   var12.field_Hb.field_E = wk.field_a;
                 }
               } else {
@@ -249,17 +249,17 @@ final class SplashScreen extends AppScreen {
                 }
               }
               var25_int = 0;
-              if (null != uv.field_i &&
+              if (null != ChatLine.field_i &&
                 ScrollPane.a(38) &&
                 ~var12.field_Ab != ~dd.field_c) {
                 if (null != var12.field_Tb.field_E) {
-                  var26 = var12.field_Tb.g((byte) 122) + eb.field_b * 2;
+                  var26 = var12.field_Tb.g((byte) 122) + DiskCacheWorker.field_b * 2;
                   var12.field_Tb.a(true, var26, var25_int, var19, sh.field_c);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Hb.field_E) {
                   if (param0 != ClientException.field_c) {
-                    var26Lifetime2 = var12.field_Hb.g((byte) 113) + eb.field_b * 2;
+                    var26Lifetime2 = var12.field_Hb.g((byte) 113) + DiskCacheWorker.field_b * 2;
                   } else {
                     var26Lifetime2 = 40;
                   }
@@ -281,10 +281,10 @@ final class SplashScreen extends AppScreen {
               var19 = var19 + sh.field_c;
               if (var12.field_Lb.field_gb &&
                 var22 != 0) {
-                sn.field_e = var12.field_Nb;
+                UrlRequest.field_e = var12.field_Nb;
                 if (((CachedArchiveSource.field_o != null)) &&
                   ((null != CachedArchiveSource.field_o[var12.field_Sb]))) {
-                  sn.field_e = sn.field_e + " - " + CachedArchiveSource.field_o[var12.field_Sb];
+                  UrlRequest.field_e = UrlRequest.field_e + " - " + CachedArchiveSource.field_o[var12.field_Sb];
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -292,7 +292,7 @@ final class SplashScreen extends AppScreen {
                 if (var12.field_Lb.field_gb &&
                   null != CachedArchiveSource.field_o &&
                   null != CachedArchiveSource.field_o[var12.field_Sb]) {
-                  sn.field_e = CachedArchiveSource.field_o[var12.field_Sb];
+                  UrlRequest.field_e = CachedArchiveSource.field_o[var12.field_Sb];
                 }
               }
             }
@@ -302,10 +302,10 @@ final class SplashScreen extends AppScreen {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_zb.field_X.b(var23, -eb.field_b + var12.field_q - eb.field_b);
+              var24_intLifetime1 = var12.field_zb.field_X.b(var23, -DiskCacheWorker.field_b + var12.field_q - DiskCacheWorker.field_b);
               var12.field_zb.field_E = var23;
               var12.field_zb.field_U = var12.field_Jb * 256 / mg.field_c;
-              var12.field_zb.a(true, -(2 * eb.field_b) + var12.field_q, eb.field_b, var19, sh.field_c * var24_intLifetime1);
+              var12.field_zb.a(true, -(2 * DiskCacheWorker.field_b) + var12.field_q, DiskCacheWorker.field_b, var19, sh.field_c * var24_intLifetime1);
               var19 = var19 + var24_intLifetime1 * sh.field_c;
             }
             if (var9Lifetime1 == 0) {
@@ -405,7 +405,7 @@ final class SplashScreen extends AppScreen {
                 var25 = null;
                 var26Lifetime1 = 0;
                 for (var27_int = 0; var27_int < ss.field_j; var27_int++) {
-                  var28 = uv.field_i.field_Eb[var27_int] & 255;
+                  var28 = ChatLine.field_i.field_Eb[var27_int] & 255;
                   var29 = 0;
                   if (ds.field_h != null &&
                     null != ds.field_h[var27_int] &&
@@ -473,10 +473,10 @@ final class SplashScreen extends AppScreen {
                 }
                 if (ClientException.field_c == param0 &&
                   !ScrollPane.a(111)) {
-                  var27 = uv.field_i.field_ec;
+                  var27 = ChatLine.field_i.field_ec;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, LoginRequiredDialog.field_F, new String[]{var27});
                 }
-                sn.field_e = (String) (var24Lifetime2);
+                UrlRequest.field_e = (String) (var24Lifetime2);
               }
             }
             var12 = (LobbyPlayerRow) (var10.c(33));
@@ -492,7 +492,7 @@ final class SplashScreen extends AppScreen {
           } else {
             stackIn_218_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_217_0), ((StringBuilder) (Object) stackIn_217_1).append(stackIn_218_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_217_0), ((StringBuilder) (Object) stackIn_217_1).append(stackIn_218_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

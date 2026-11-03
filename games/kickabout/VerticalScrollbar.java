@@ -76,7 +76,7 @@ final class VerticalScrollbar extends UiLayoutNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ final class VerticalScrollbar extends UiLayoutNode {
           this.field_Db = this.field_Db - 1;
         }
         if (0 == this.field_Db &&
-          !(n.field_m >= this.field_Hb.field_T + this.field_Hb.field_v)) {
+          !(ArchiveManager.field_m >= this.field_Hb.field_T + this.field_Hb.field_v)) {
           this.field_Db = 3;
           return true;
         }
@@ -145,7 +145,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             this.field_Db = this.field_Db - 1;
           }
           if (this.field_Db == 0) {
-            if (this.field_Hb.field_T + this.field_Hb.field_v + this.field_Hb.field_mb + this.field_Hb.field_L > n.field_m) {
+            if (this.field_Hb.field_T + this.field_Hb.field_v + this.field_Hb.field_mb + this.field_Hb.field_L > ArchiveManager.field_m) {
               return false;
             }
             this.field_Db = 3;
@@ -335,10 +335,10 @@ final class VerticalScrollbar extends UiLayoutNode {
         int var10 = 0;
         var10 = Kickabout.field_G;
         try {
-          var1_int = -nb.field_k + so.field_e;
-          nb.field_k = RasterStateSnapshot.field_k - (var1_int >> 1);
-          so.field_e = nb.field_k + var1_int;
-          SumIntegersCommand.field_I = -(NameSuggestionsPanel.field_G >> 1) + eh.field_e;
+          var1_int = -GameSoundEffect.field_k + so.field_e;
+          GameSoundEffect.field_k = RasterStateSnapshot.field_k - (var1_int >> 1);
+          so.field_e = GameSoundEffect.field_k + var1_int;
+          SumIntegersCommand.field_I = -(NameSuggestionsPanel.field_G >> 1) + GameResourceLoader.field_e;
           var2 = SumIntegersCommand.field_I;
           for (var3 = param0; j.field_a.length > var3; var3++) {
             var4 = WidgetContainer.field_x[var3];
@@ -369,10 +369,10 @@ final class VerticalScrollbar extends UiLayoutNode {
               var2 = var2 + IsSixCommand.field_H;
             }
             if (var4 < 0) {
-              sn.field_i.a(var6, var8, var2 + ClientException.field_f, var5, -1);
+              UrlRequest.field_i.a(var6, var8, var2 + ClientException.field_f, var5, -1);
               var2 = var2 + AccountMessagePanel.field_H;
             } else {
-              sn.field_a.a(var6, var8, var2 + ag.field_g, var5, -1);
+              UrlRequest.field_a.a(var6, var8, var2 + ag.field_g, var5, -1);
               var2 = var2 + (IsSixCommand.field_H + of.field_a + ScrollContainer.field_zb);
             }
           }
@@ -380,7 +380,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "na.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "na.B(" + param0 + ')');
         }
     }
 
@@ -423,11 +423,11 @@ final class VerticalScrollbar extends UiLayoutNode {
             var9 = param0;
             var10 = param3;
             for (var11 = param6; var11 < param2; var11++) {
-              var12 = pf.field_d[var11];
+              var12 = ByteStorage.field_d[var11];
               if (param1) {
                 stackIn_24_0 = bl.field_m[var12];
               } else {
-                stackIn_24_0 = w.field_a[var12];
+                stackIn_24_0 = DialogOverlay.field_a[var12];
               }
               var13 = stackIn_24_0;
               if (var13 <= var7_int) {
@@ -435,10 +435,10 @@ final class VerticalScrollbar extends UiLayoutNode {
                   var10 = var13;
                 }
               } else {
-                pf.field_d[var11] = pf.field_d[var8];
+                ByteStorage.field_d[var11] = ByteStorage.field_d[var8];
                 incrementValue$0 = var8;
                 var8++;
-                pf.field_d[incrementValue$0] = var12;
+                ByteStorage.field_d[incrementValue$0] = var12;
                 if (var13 < var9) {
                   var9 = var13;
                 }
@@ -450,11 +450,11 @@ final class VerticalScrollbar extends UiLayoutNode {
           }
           for (var7_intLifetime1 = -1 + param2; var7_intLifetime1 > param6; var7_intLifetime1--) {
             for (var8Lifetime1 = param6; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = pf.field_d[var8Lifetime1];
-              var10Lifetime1 = pf.field_d[1 + var8Lifetime1];
+              var9Lifetime1 = ByteStorage.field_d[var8Lifetime1];
+              var10Lifetime1 = ByteStorage.field_d[1 + var8Lifetime1];
               if (IntrusiveNode.a((byte) 8, param1, var9Lifetime1, var10Lifetime1)) {
-                pf.field_d[var8Lifetime1] = var10Lifetime1;
-                pf.field_d[var8Lifetime1 + 1] = var9Lifetime1;
+                ByteStorage.field_d[var8Lifetime1] = var10Lifetime1;
+                ByteStorage.field_d[var8Lifetime1 + 1] = var9Lifetime1;
               }
             }
           }
@@ -462,7 +462,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var7), "na.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var7), "na.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -557,7 +557,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                 var8 = new LobbyPlayerRow(var27, var28, var3);
                 SquadPickerDialog.field_N.a(var8, (byte) -4, var3);
               }
-              var8.field_Ib = nj.a(-93) - (long)((PacketBuffer) ((Object) var1)).readInt(4);
+              var8.field_Ib = nj.monotonicMillis(-93) - (long)((PacketBuffer) ((Object) var1)).readInt(4);
               var8.field_Qb = ((PacketBuffer) ((Object) var1)).a((byte) 81);
               var10 = ((PacketBuffer) ((Object) var1)).l(127);
               var8.field_Db = var10 >> 1;
@@ -600,10 +600,10 @@ final class VerticalScrollbar extends UiLayoutNode {
             }
             if (var2 == 8) {
               var3_int = ((PacketBuffer) ((Object) var1)).a((byte) 81);
-              var4_ref_qb = (GameSetupPanel) (sr.field_f.a(-3611, (long)var3_int));
+              var4_ref_qb = (GameSetupPanel) (SortCriterion.field_f.a(-3611, (long)var3_int));
               if (var4_ref_qb == null) {
                 var4_ref_qb = new GameSetupPanel(ss.field_j);
-                sr.field_f.a(var4_ref_qb, (byte) -4, (long)var3_int);
+                SortCriterion.field_f.a(var4_ref_qb, (byte) -4, (long)var3_int);
               }
               GameModesHelpScreen.a(true, 116, var1, var4_ref_qb);
               ve.a(var4_ref_qb, (byte) -119);
@@ -612,7 +612,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             if (var2 == 9) {
               var3_intLifetime4 = ((PacketBuffer) ((Object) var1)).a((byte) 81);
               var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -108);
-              var31 = (GameSetupPanel) (sr.field_f.a(-3611, (long)var3_intLifetime4));
+              var31 = (GameSetupPanel) (SortCriterion.field_f.a(-3611, (long)var3_intLifetime4));
               if (var31 != null) {
                 if (var4 != 0) {
                   var31.field_Ab = var4;
@@ -638,7 +638,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               if (var2 == 13) {
                 var3_intLifetime5 = ((PacketBuffer) ((Object) var1)).a((byte) 81);
                 var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -110);
-                var23_ref = (GameSetupPanel) (sr.field_f.a(-3611, (long)var3_intLifetime5));
+                var23_ref = (GameSetupPanel) (SortCriterion.field_f.a(-3611, (long)var3_intLifetime5));
                 if (var23_ref == null) {
                   return;
                 }
@@ -665,7 +665,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     if (var7 == null) {
                       var7 = new LobbyPlayerRow(var20, var21, var3Lifetime2);
                       TrinketSlot.field_Eb.a(var7, (byte) -4, var3Lifetime2);
-                      uv.field_i.field_gc = uv.field_i.field_gc + 1;
+                      ChatLine.field_i.field_gc = ChatLine.field_i.field_gc + 1;
                     }
                     var7.field_Qb = ((PacketBuffer) ((Object) var1)).a((byte) 81);
                     var8_int = ((PacketBuffer) ((Object) var1)).l(param0 ^ 120);
@@ -692,11 +692,11 @@ final class VerticalScrollbar extends UiLayoutNode {
                       var22.c((byte) -109);
                     }
                     var22.unlinkSecondary(-111);
-                    uv.field_i.field_gc = uv.field_i.field_gc - 1;
+                    ChatLine.field_i.field_gc = ChatLine.field_i.field_gc - 1;
                     return;
                   }
                   if (var2 == 20) {
-                    GameModesHelpScreen.a(false, param0 ^ 116, var1, uv.field_i);
+                    GameModesHelpScreen.a(false, param0 ^ 116, var1, ChatLine.field_i);
                     return;
                   }
                   if (21 == var2) {
@@ -705,7 +705,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                       TextFieldNode.field_Ib = 0L;
                       return;
                     }
-                    TextFieldNode.field_Ib = (long)var3_intLifetime5 + nj.a(36);
+                    TextFieldNode.field_Ib = (long)var3_intLifetime5 + nj.monotonicMillis(36);
                     return;
                   }
                   if (var2 == 22) {
@@ -758,7 +758,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               return;
             }
             var3_intLifetime6 = ((PacketBuffer) ((Object) var1)).a((byte) 81);
-            var17_ref = (GameSetupPanel) (sr.field_f.a(-3611, (long)var3_intLifetime6));
+            var17_ref = (GameSetupPanel) (SortCriterion.field_f.a(-3611, (long)var3_intLifetime6));
             var24 = var17_ref;
             if (var24 == null) {
               return;
@@ -791,16 +791,16 @@ final class VerticalScrollbar extends UiLayoutNode {
             var3_ref_heLifetime1 = (LobbyPlayerRow) (SquadPickerDialog.field_N.a(param0 - 14));
           }
           if (var2 == 1 &&
-            null != uv.field_i) {
-            h.field_f = uv.field_i.field_ec;
+            null != ChatLine.field_i) {
+            h.field_f = ChatLine.field_i.field_ec;
           }
           if (var2 != 4) {
-            uv.field_i = null;
+            ChatLine.field_i = null;
           } else {
             var3_intLifetime1 = ((PacketBuffer) ((Object) var1)).a((byte) 81);
-            uv.field_i = new GameSetupPanel(ss.field_j);
-            uv.field_i.a((long)var3_intLifetime1, (byte) -113);
-            GameModesHelpScreen.a(false, 114, var1, uv.field_i);
+            ChatLine.field_i = new GameSetupPanel(ss.field_j);
+            ChatLine.field_i.a((long)var3_intLifetime1, (byte) -113);
+            GameModesHelpScreen.a(false, 114, var1, ChatLine.field_i);
             TextFieldNode.field_Ib = 0L;
           }
           if (var2 != 2 &&
@@ -828,7 +828,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "na.E(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "na.E(" + param0 + ')');
         }
     }
 

@@ -5,7 +5,7 @@ final class bq {
     static String field_b;
     static UiLayoutNode field_d;
     static int field_c;
-    static rj field_a;
+    static SoundCache field_a;
 
     final static void a(int param0, boolean param1) {
         int var6 = 0;
@@ -60,7 +60,7 @@ final class bq {
           DoSomethingCommand.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (AchievementsScreen.field_C.field_q - 2), 2 + sh.field_c, 18);
           ClientException.field_c.a(2, 124, -20 - sh.field_c + AchievementsScreen.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, AchievementsScreen.field_C.field_q, TeamSelectionAgent.field_f);
           ac.field_b.a(true, TrinketIcon.field_Cb.field_q, 0, -40 + TrinketIcon.field_Cb.field_mb, 40);
-          ci.field_h.a(true, AuctionItem.field_p.field_q, 0, 0, 30);
+          IterableDualLinkDeque.field_h.a(true, AuctionItem.field_p.field_q, 0, 0, 30);
           sg.field_a.a(true, AuctionItem.field_p.field_q, 0, 30, -40 + (AuctionItem.field_p.field_mb - 2) - 30);
           var2_int = 3 + ss.field_j;
           if (rn.field_d.length < 2) {
@@ -174,7 +174,7 @@ final class bq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "bq.B(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "bq.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -226,7 +226,7 @@ final class bq {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

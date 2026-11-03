@@ -49,7 +49,7 @@ final class wa {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class wa {
           var8.drawHalfSize(0, 0);
           TeamManagementScreen.e(119);
           for (var4 = 0; var9.field_y.length > var4; var4++) {
-            var9.field_y[var4] = hf.a(var9.field_y[var4] << 24, 1118668);
+            var9.field_y[var4] = PainterStyle.a(var9.field_y[var4] << 24, 1118668);
           }
           return var9;
         }
@@ -94,7 +94,7 @@ final class wa {
         var6.drawHalfSize(0, 0);
         TeamManagementScreen.e(119);
         for (var4Lifetime1 = 0; var7.field_y.length > var4Lifetime1; var4Lifetime1++) {
-          var7.field_y[var4Lifetime1] = hf.a(var7.field_y[var4Lifetime1] << 24, 1118668);
+          var7.field_y[var4Lifetime1] = PainterStyle.a(var7.field_y[var4Lifetime1] << 24, 1118668);
         }
         return var7;
     }
@@ -109,7 +109,7 @@ final class wa {
         RuntimeException var1_ref = null;
         var4 = Kickabout.field_G;
         try {
-          var5 = qe.field_b;
+          var5 = ArchivePreloader.field_b;
           var1 = var5;
           var2 = 0;
           if (param0 > -84) {
@@ -130,7 +130,7 @@ final class wa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "wa.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "wa.B(" + param0 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class wa {
           }
           et.field_b = true;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

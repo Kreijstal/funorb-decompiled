@@ -41,7 +41,7 @@ final class c {
           if (op.field_y != null && (param0 < 0 ||
             un.field_c == RegistrationRequestDialog.field_rb)) {
             if (0 == or.field_d.field_n &&
-              (mp.field_i + 10000L) < nj.a(86)) {
+              (mp.field_i + 10000L) < nj.monotonicMillis(86)) {
               or.field_d.b(param0, (byte) 101);
             }
             if (param1) {
@@ -50,7 +50,7 @@ final class c {
             if (or.field_d.field_n > 0) {
               try {
                 op.field_y.a(or.field_d.field_n, (byte) -127, 0, or.field_d.field_f);
-                mp.field_i = nj.a(-117);
+                mp.field_i = nj.monotonicMillis(-117);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -91,7 +91,7 @@ final class c {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

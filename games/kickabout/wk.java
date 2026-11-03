@@ -81,12 +81,12 @@ final class wk {
           var10 = (int)(0.5f + var7 * (float)param1);
           var11 = (int)(7.0f * var8 + 0.5f);
           var12 = (int)(0.5f + var9 * 127.0f);
-          stackIn_34_0 = ks.a(var12, var10, -87, var11);
+          stackIn_34_0 = HuffmanCodec.a(var12, var10, -87, var11);
           return stackIn_34_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "wk.D(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "wk.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class wk {
           }
           MusicPatchNode.field_h.b(22997);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wk.E(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wk.E(" + param0 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class wk {
           if (param0) {
             var5.playerType = 0;
           }
-          var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-126, td.field_a.length, var3);
+          var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-126, TrinketCatalog.field_a.length, var3);
           var5.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, -1 + BuyPlayerDialog.field_G[var5.playerType].length, var3);
           var5.experience = 0;
           if (param0 &&

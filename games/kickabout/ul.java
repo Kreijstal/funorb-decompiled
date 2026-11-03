@@ -7,7 +7,7 @@ final class ul {
     static String field_a;
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
-        DateInputWidget.a(eb.field_b, BytePlusOneCommand.field_I, sh.field_c, param2, false, param1, param3);
+        DateInputWidget.a(DiskCacheWorker.field_b, BytePlusOneCommand.field_I, sh.field_c, param2, false, param1, param3);
         if (!param0) {
           int[] var5 = (int[]) null;
           ul.a((IndexedSprite) null, (byte) -34, (int[]) null);
@@ -55,7 +55,7 @@ final class ul {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class ul {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -137,11 +137,11 @@ final class ul {
         if (param0 != 11) {
           return;
         }
-        if (1 == ks.field_e) {
+        if (1 == HuffmanCodec.field_e) {
           ss.field_b.a(var5.pixelX(true), var5.pixelY(879306160), -100);
           return;
         }
-        if (2 == ks.field_e) {
+        if (2 == HuffmanCodec.field_e) {
           if (EmailAvailabilityValidator.field_k.pixelY(true) <= 477) {
             ss.field_b.a(448, 282, -76);
           } else {
@@ -149,15 +149,15 @@ final class ul {
           }
           return;
         }
-        if (ks.field_e == 3) {
+        if (HuffmanCodec.field_e == 3) {
           ss.field_b.a(810, 1110, param0 ^ -105);
           return;
         }
-        if (ks.field_e == 4) {
+        if (HuffmanCodec.field_e == 4) {
           ss.field_b.a(ld.field_f.pixelX(param0 - 102), ld.field_f.pixelY(true), -93);
           return;
         }
-        if (ks.field_e == 5) {
+        if (HuffmanCodec.field_e == 5) {
           if (HoverTooltip.field_Eb) {
             ss.field_b.a(0, 0, -102);
           } else {
@@ -165,15 +165,15 @@ final class ul {
           }
           return;
         }
-        if (ks.field_e == 6) {
+        if (HuffmanCodec.field_e == 6) {
           ss.field_b.a(ld.field_f.pixelX(-106), ld.field_f.pixelY(true), -49);
           return;
         }
-        if (ks.field_e == 7) {
+        if (HuffmanCodec.field_e == 7) {
           ss.field_b.a(var5.pixelX(true), var5.pixelY(879306160), -87);
           return;
         }
-        if (ks.field_e == 8) {
+        if (HuffmanCodec.field_e == 8) {
           if (et.field_d.field_V.possessorTeam != 0) {
             ss.field_b.a(var5.pixelX(true), var5.pixelY(879306160), -112);
           } else {
@@ -181,19 +181,19 @@ final class ul {
           }
           return;
         }
-        if (ks.field_e == 9) {
+        if (HuffmanCodec.field_e == 9) {
           ss.field_b.a(EmailAvailabilityValidator.field_k.pixelX(-92), EmailAvailabilityValidator.field_k.pixelY(true), -72);
           return;
         }
-        if (ks.field_e == 10) {
+        if (HuffmanCodec.field_e == 10) {
           ss.field_b.a(fc.field_c.pixelX(param0 ^ -104), fc.field_c.pixelY(true), -109);
           return;
         }
-        if (ks.field_e == 11) {
+        if (HuffmanCodec.field_e == 11) {
           ss.field_b.a(var5.pixelX(true), var5.pixelY(879306160), -87);
           return;
         }
-        if (ks.field_e == 12) {
+        if (HuffmanCodec.field_e == 12) {
           if (var5.possessorTeam == 0) {
             ss.field_b.a(448, -20, -57);
           } else {
@@ -209,7 +209,7 @@ final class ul {
           }
           return;
         }
-        if (ks.field_e != 13) {
+        if (HuffmanCodec.field_e != 13) {
           return;
         }
         if (var5.positionY < 0) {
@@ -277,7 +277,7 @@ final class ul {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

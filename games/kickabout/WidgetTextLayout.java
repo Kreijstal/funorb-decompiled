@@ -8,7 +8,7 @@ interface WidgetTextLayout {
 
     public abstract int a(UiWidget param0, int param1);
 
-    public abstract iq a(int param0, UiWidget param1);
+    public abstract TextLayout a(int param0, UiWidget param1);
 
     public abstract int a(boolean param0, UiWidget param1, int param2);
 

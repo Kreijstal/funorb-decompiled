@@ -3,7 +3,7 @@
  */
 final class QuickChatPhraseCache {
     static boolean field_d;
-    private eq field_e;
+    private WeightedLruCache field_e;
     private ResourceArchive field_b;
     static int field_c;
     static String field_f;
@@ -11,7 +11,7 @@ final class QuickChatPhraseCache {
 
     final QuickChatPhraseDefinition getPhrase(int param0, int param1) {
         byte[] var4 = null;
-        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_e.a((long)param1, (byte) 43));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_e.get((long)param1, (byte) 43));
         if (var3 != null) {
           return var3;
         }
@@ -26,11 +26,11 @@ final class QuickChatPhraseCache {
         }
         int var5 = 37 % ((param0 - 83) / 36);
         if (32768 > param1) {
-          this.field_e.a((long)param1, var3, (byte) -116);
+          this.field_e.put((long)param1, var3, (byte) -116);
           return var3;
         }
         var3.a(false);
-        this.field_e.a((long)param1, var3, (byte) -116);
+        this.field_e.put((long)param1, var3, (byte) -116);
         return var3;
     }
 
@@ -51,7 +51,7 @@ final class QuickChatPhraseCache {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_e = new eq(64);
+        this.field_e = new WeightedLruCache(64);
         try {
           this.field_a = param1;
           this.field_b = param2;
@@ -85,7 +85,7 @@ final class QuickChatPhraseCache {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

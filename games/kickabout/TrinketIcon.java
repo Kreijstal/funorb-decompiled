@@ -16,10 +16,10 @@ final class TrinketIcon extends UiLayoutNode {
 
     TrinketIcon(int param0) {
         this.field_Bb = param0;
-        Sprite var3 = new Sprite(qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_q >> 2, qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_w >> 2);
+        Sprite var3 = new Sprite(ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].field_q >> 2, ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].field_w >> 2);
         Sprite var2 = var3;
         PacketBuffer.a(-59, var3);
-        qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(0, 0);
+        ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(0, 0);
         TeamManagementScreen.e(121);
         this.field_N = var2;
         this.field_mb = 5 + var2.field_v + 5;
@@ -68,7 +68,7 @@ final class TrinketIcon extends UiLayoutNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

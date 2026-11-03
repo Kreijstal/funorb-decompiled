@@ -46,7 +46,7 @@ final class IsaacRandom {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class IsaacRandom {
         ConsoleExpression[] var11 = null;
         var9 = Kickabout.field_G;
         try {
-          var11 = w.a(param0, (byte) -21);
+          var11 = DialogOverlay.a(param0, (byte) -21);
           var2 = var11;
           if (param1 < 103) {
             var10 = (String) null;
@@ -263,7 +263,7 @@ final class IsaacRandom {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -313,10 +313,10 @@ final class IsaacRandom {
             }
           }
           this.field_g = this.field_g + this.field_i[var2 + 128 & 255];
-          dupTemp$1 = this.field_d + this.field_g + this.field_i[qj.b(255, var3 >> 2)];
+          dupTemp$1 = this.field_d + this.field_g + this.field_i[TextLayoutLine.b(255, var3 >> 2)];
           var4 = dupTemp$1;
           this.field_i[var2] = dupTemp$1;
-          dupTemp$2 = this.field_i[qj.b(var4 >> 8 >> 2, 255)] + var3;
+          dupTemp$2 = this.field_i[TextLayoutLine.b(var4 >> 8 >> 2, 255)] + var3;
           this.field_d = dupTemp$2;
           this.field_a[var2] = dupTemp$2;
         }
@@ -344,7 +344,7 @@ final class IsaacRandom {
           }
           this.initializeState((byte) -113);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "aq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "aq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

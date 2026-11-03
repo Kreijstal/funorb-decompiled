@@ -73,7 +73,7 @@ final class il {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class il {
             stackIn_10_0 = TrinketSlot.field_Ab;
             return stackIn_10_0;
           }
-          if (hi.a(0, param0)) {
+          if (DiskCacheRequest.a(0, param0)) {
             stackIn_13_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, of.field_b, new String[]{param0});
             return stackIn_13_0;
           }
@@ -123,7 +123,7 @@ final class il {
             stackIn_17_0 = QuickChatPhraseCache.field_f;
             return stackIn_17_0;
           }
-          if (lf.a(param0, 108)) {
+          if (IntKeyLookup.a(param0, 108)) {
             stackIn_20_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionListing.field_i, new String[]{param0});
             return stackIn_20_0;
           }
@@ -150,7 +150,7 @@ final class il {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

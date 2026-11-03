@@ -84,7 +84,7 @@ final class FormationView extends MatchPhaseView {
         SoftwareRasterizer.a(220, 332, 150, 26, 8, 65793, 128);
         var3 = AuctionsHelpScreen.field_F[var2].toLowerCase();
         un.field_d.d(var3, 293, 351, 16777215, -1);
-        qj.field_f.c(220, 100);
+        TextLayoutLine.field_f.c(220, 100);
         for (var4Lifetime2 = 0; 4 > var4Lifetime2; var4Lifetime2++) {
           var5Lifetime1 = -(RowRangeRequest.field_f.field_o >> 1) + 147 * ws.field_b[var2][var4Lifetime2] / 896 + 220;
           var6Lifetime1 = -(RowRangeRequest.field_f.field_v >> 1) + ws.field_d[var2][var4Lifetime2] * 220 / 1344 + 100;
@@ -124,7 +124,7 @@ final class FormationView extends MatchPhaseView {
           this.field_p.field_s = 3 + this.buttonX(117, 0) + (this.field_c[0].width >> 1);
           this.field_p.field_J = this.buttonY(342, 0) - (var5 >> 1);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -135,9 +135,9 @@ final class FormationView extends MatchPhaseView {
             field_s = (String) null;
           }
           param0.removeFocusListener(PlayerModelPreview.field_q);
-          rc.field_d = -1;
+          GzipDecoder.field_d = -1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vp implements hc {
+final class vp implements OverlayLayer {
     private int field_i;
     static String field_d;
     static ResourceArchive field_j;
@@ -87,7 +87,7 @@ final class vp implements hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "vp.A(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "vp.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -109,19 +109,19 @@ final class vp implements hc {
     }
 
     final static int a(int param0, int param1, byte param2) {
-        if (null == td.field_c) {
+        if (null == TrinketCatalog.field_c) {
           return -1;
         }
         if (param1 >= IntDoubleCommand.field_D &&
-          IntDoubleCommand.field_D + td.field_c.field_q > param1 &&
+          IntDoubleCommand.field_D + TrinketCatalog.field_c.field_q > param1 &&
           rp.field_w <= param0 &&
-          param0 < rp.field_w + td.field_c.field_w) {
+          param0 < rp.field_w + TrinketCatalog.field_c.field_w) {
           return 0;
         }
         if (WelcomeDialog.field_G <= param1 &&
-          WelcomeDialog.field_G + td.field_c.field_q > param1 &&
+          WelcomeDialog.field_G + TrinketCatalog.field_c.field_q > param1 &&
           param0 >= FormationView.field_q &&
-          param0 < td.field_c.field_w + FormationView.field_q) {
+          param0 < TrinketCatalog.field_c.field_w + FormationView.field_q) {
           return 1;
         }
         if (param2 < 0) {
@@ -157,7 +157,7 @@ final class vp implements hc {
           field_a = -18;
         }
         if (this.b(8)) {
-          if (sr.field_l == null) {
+          if (SortCriterion.field_l == null) {
             if (um.field_e != null &&
               um.field_e.field_A && (!um.field_e.isSpectator(param0 ^ 25) ||
               um.field_e.b(-21660))) {

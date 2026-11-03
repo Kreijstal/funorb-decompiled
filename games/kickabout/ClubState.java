@@ -219,7 +219,7 @@ final class ClubState {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -342,7 +342,7 @@ final class ClubState {
         String var27Lifetime2;
         String var27Lifetime3;
         var5 = Kickabout.field_G;
-        var6 = "=====PROFILE[" + su.a(0, this.field_e) + "]=====\n";
+        var6 = "=====PROFILE[" + su.decodeBase37Name(0, this.field_e) + "]=====\n";
         var1 = var6;
         var1Lifetime1 = var6;
         if (this.field_M) {
@@ -365,7 +365,7 @@ final class ClubState {
         var11 = var10 + "Diamond Pts - " + this.field_r + "\n";
         var1Lifetime11 = var11;
         var1Lifetime12 = var11;
-        var12 = var11 + "League - " + q.field_h[this.field_t] + "\n";
+        var12 = var11 + "League - " + ConsoleTokenCursor.field_h[this.field_t] + "\n";
         var1Lifetime13 = var12;
         var1Lifetime14 = var12;
         var13 = var12 + "Trophies - " + this.field_s + "\n";
@@ -514,7 +514,7 @@ final class ClubState {
         var36 = var35 + "Total Halloween Goals - " + this.field_j + "\n";
         var37 = var36 + "Total 8+ Tournament Wins - " + this.field_u + "\n";
         var38 = var37 + "Total 8+ Tournament Knockouts - " + this.field_D + "\n";
-        var39 = var38 + "Nemesis - " + su.a(0, this.field_H) + "\n";
+        var39 = var38 + "Nemesis - " + su.decodeBase37Name(0, this.field_H) + "\n";
         var40 = var39 + "\n";
         var41 = var40 + "Misc Unlockables - " + Integer.toBinaryString(this.field_n) + "\n";
         stackIn_49_0 = new StringBuilder().append(var41).append("Refunded Trinkets? - ");
@@ -618,7 +618,7 @@ final class ClubState {
           if (var4 == 3) {
             var15.playerType = 1;
           }
-          var15.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, td.field_a.length, var14);
+          var15.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, TrinketCatalog.field_a.length, var14);
           var15.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(106, -1 + BuyPlayerDialog.field_G[var15.playerType].length, var14);
           var15.power = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-86, 10, var14) + 6;
           var15.tackle = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(97, 10, var14) + 6;
@@ -668,7 +668,7 @@ final class ClubState {
           if (param0 != 15) {
             field_l = (String[]) null;
           }
-          stackIn_3_0 = vl.a(10, true, true, param1);
+          stackIn_3_0 = LoginMethod.a(10, true, true, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -680,7 +680,7 @@ final class ClubState {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1105,7 +1105,7 @@ final class ClubState {
           } else {
             stackIn_176_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_175_0), ((StringBuilder) (Object) stackIn_175_1).append(stackIn_176_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_175_0), ((StringBuilder) (Object) stackIn_175_1).append(stackIn_176_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1249,8 +1249,8 @@ final class ClubState {
           }
           for (var13Lifetime1 = 0; 40 > var13Lifetime1; var13Lifetime1++) {
             var14 = param1.readUnsignedByte((byte) -109);
-            this.field_N[2 * var13Lifetime1] = qj.b(15, var14);
-            this.field_N[1 + var13Lifetime1 * 2] = qj.b(241, var14) >> 4;
+            this.field_N[2 * var13Lifetime1] = TextLayoutLine.b(15, var14);
+            this.field_N[1 + var13Lifetime1 * 2] = TextLayoutLine.b(241, var14) >> 4;
           }
           this.field_C = param1.a((byte) 81);
           this.field_b = param1.a((byte) 81);
@@ -1292,7 +1292,7 @@ final class ClubState {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param2).append(')').toString());
         }
     }
 

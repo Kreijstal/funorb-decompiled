@@ -32,7 +32,7 @@ final class IntTripleCommand extends ConsoleCommand {
         if (param0 > -7) {
           return -31;
         }
-        return -nb.field_k + so.field_e;
+        return -GameSoundEffect.field_k + so.field_e;
     }
 
     final ConsoleValue a(byte param0, ConsoleValue[] param1) {
@@ -58,12 +58,12 @@ final class IntTripleCommand extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static int h(int param0) {
-        int var1 = (int)(nj.a(-109) % 1440L) - 1000;
+        int var1 = (int)(nj.monotonicMillis(-109) % 1440L) - 1000;
         if (var1 > 0) {
           return 256 - (var1 % 220 << 8) / 220;
         }
@@ -92,7 +92,7 @@ final class IntTripleCommand extends ConsoleCommand {
             return;
           }
           stackIn_7_0 = -27054;
-          while (!kk.a(stackIn_7_0, param0)) {
+          while (!TriangleMesh.a(stackIn_7_0, param0)) {
             var2 = param0.g(24009);
             while (var2 instanceof ak) {
               if (var2.field_d instanceof ak) {
@@ -124,7 +124,7 @@ final class IntTripleCommand extends ConsoleCommand {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

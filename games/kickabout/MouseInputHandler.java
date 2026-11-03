@@ -13,7 +13,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.a(param2 - 8, param4 - 11, du.field_n, 20, 6, param5, param1);
         String var6 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, !bt.field_e ? ag.field_l : h.field_a, new String[]{mk.field_b[il.field_h]});
-        q.field_d.a(var6, param2, param4, param0, param3);
+        ConsoleTokenCursor.field_d.a(var6, param2, param4, param0, param3);
     }
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
@@ -41,7 +41,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             RandomAccessCacheFile.field_d = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ku.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ku.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             rp.field_A = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ku.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ku.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             TextHotspotWidget.field_M = 0;
             AuctionItem.field_w = param0.getX();
             UiWidget.field_l = param0.getY();
-            nj.a(71);
+            nj.monotonicMillis(71);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               ContextMenuItem.field_Fb = 2;
               RandomAccessCacheFile.field_d = 2;
@@ -224,7 +224,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           rk.field_f = new AccountRequestDialog(wd.field_l, fj.field_b, param0, AuctionBidDialog.field_G, is.field_a);
           wd.field_l.a(rk.field_f, false);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ku.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ku.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

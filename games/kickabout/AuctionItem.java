@@ -45,7 +45,7 @@ class AuctionItem extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ class AuctionItem extends IntrusiveNode {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        kk var4_ref_kk = null;
+        TriangleMesh var4_ref_kk = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -82,7 +82,7 @@ class AuctionItem extends IntrusiveNode {
         int var14 = 0;
         int var15 = 0;
         int var17 = 0;
-        kk var18 = null;
+        TriangleMesh var18 = null;
         int var20 = 0;
         int[] var21 = null;
         int[] var22 = null;
@@ -106,7 +106,7 @@ class AuctionItem extends IntrusiveNode {
           var2 = var21;
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_kk = ba.field_n[var3];
-            var4_ref_kk.a(false);
+            var4_ref_kk.computeBounds(false);
             MouseWheelInput.a(var3, 1);
             var5 = var4_ref_kk.field_y + var4_ref_kk.field_h >> 1;
             var6 = var4_ref_kk.field_s + var4_ref_kk.field_x >> 1;
@@ -128,10 +128,10 @@ class AuctionItem extends IntrusiveNode {
           var9Lifetime1 = we.a(var6Lifetime1, false) >> 8;
           var12Lifetime1 = -33 / ((-50 - param0) / 49);
           if (BytePlusOneCommand.field_A != -1 &&
-            -1 != n.field_m) {
+            -1 != ArchiveManager.field_m) {
             var9Lifetime1 = -128;
             var7Lifetime1 = -320 + BytePlusOneCommand.field_A;
-            var8Lifetime1 = -n.field_m + 240;
+            var8Lifetime1 = -ArchiveManager.field_m + 240;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1));
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);
@@ -157,14 +157,14 @@ class AuctionItem extends IntrusiveNode {
             for (var19 = 0; var19 < 3; var19++) {
               hh.field_g[var19] = hh.field_g[var19] + sm.field_l[var16][var19];
             }
-            os.a(var18, false, hh.field_g, ImageProducerRasterBuffer.field_i, (byte) -96, false, true);
+            Bzip2State.a(var18, false, hh.field_g, ImageProducerRasterBuffer.field_i, (byte) -96, false, true);
             ei.a(var8Lifetime1, var7Lifetime1, var13Lifetime1, var9Lifetime1, var14, (byte) -125, var18, var15);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "fp.L(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "fp.L(" + param0 + ')');
         }
     }
 

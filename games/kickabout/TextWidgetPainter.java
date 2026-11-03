@@ -28,7 +28,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           }
           this.a(this.field_b, this.field_j, param3, 118, param1, 0, 0, param0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qv.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qv.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           this.a(param2, param3, -88, param4);
           int var6_int = 66 / ((59 - param0) / 53);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qv.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qv.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           param0.field_k = this.field_k;
           param0.field_c = this.field_c;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qv.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qv.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             this.b(-77, (UiWidget) null);
           }
           if (null == param1.field_h) {
-            param1.field_h = (iq) ((Object) new st());
+            param1.field_h = (TextLayout) ((Object) new CachedTextLayout());
           }
           var3_int = this.a((byte) -124, param1);
           var4 = this.c((byte) -110, param1);
@@ -108,23 +108,23 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (var6Lifetime1 != 0 &&
             3 != var6Lifetime1) {
             if (var6Lifetime1 == 1) {
-              if (!(param1.field_h instanceof st)) {
+              if (!(param1.field_h instanceof CachedTextLayout)) {
                 return;
               }
-              ((st) (param1.field_h)).a(1, var3_int >> 1, this.field_a, this.b((byte) -71, param1), var5);
+              ((CachedTextLayout) (param1.field_h)).a(1, var3_int >> 1, this.field_a, this.b((byte) -71, param1), var5);
               return;
             }
             if (var6Lifetime1 != 2) {
               return;
             }
-            if (!(param1.field_h instanceof st)) {
+            if (!(param1.field_h instanceof CachedTextLayout)) {
               return;
             }
-            ((st) (param1.field_h)).a((byte) 123, this.b((byte) -112, param1), var5, var3_int, this.field_a);
+            ((CachedTextLayout) (param1.field_h)).a((byte) 123, this.b((byte) -112, param1), var5, var3_int, this.field_a);
             return;
           }
-          if (param1.field_h instanceof st) {
-            ((st) (param1.field_h)).a(0, this.b((byte) -85, param1), (byte) 80, this.field_a, var5);
+          if (param1.field_h instanceof CachedTextLayout) {
+            ((CachedTextLayout) (param1.field_h)).a(0, this.b((byte) -85, param1), (byte) 80, this.field_a, var5);
             return;
           }
           return;
@@ -138,7 +138,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -170,19 +170,19 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int var7 = 0;
-        qj var8 = null;
+        TextLayoutLine var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        iq var13 = null;
-        iq var14 = null;
+        TextLayout var13 = null;
+        TextLayout var14 = null;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
@@ -211,7 +211,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
             AuctionListing.a(param1 - (-param4.field_t - param4.field_n), -22914, param1 + param4.field_t, param4.field_i + (param2 + param4.field_g), param2 + param4.field_g);
-            nb.field_i.a(this.field_i, var12, var10, var11, var10, param3);
+            GameSoundEffect.field_i.a(this.field_i, var12, var10, var11, var10, param3);
             TeamManagementScreen.e(127);
           }
           if (!param3) {
@@ -228,7 +228,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -304,7 +304,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -333,7 +333,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -360,7 +360,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -389,7 +389,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -428,7 +428,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -456,7 +456,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -483,7 +483,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -512,7 +512,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -656,7 +656,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             } else {
               stackIn_43_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -690,7 +690,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -719,7 +719,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -736,12 +736,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        qj var13 = null;
+        TextLayoutLine var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        iq var17 = null;
-        iq var18 = null;
+        TextLayout var17 = null;
+        TextLayout var18 = null;
         var16 = Kickabout.field_G;
         try {
           if (param2 == param1) {
@@ -781,7 +781,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 }
               }
               var15 = stackIn_19_0;
-              nb.field_i.a(this.b(-31112, param3, param0, var14), var13.field_d, this.field_c, var15 - var14, var13.field_g + (this.field_q + param5) + (param3.field_g + param3.field_o), this.field_c >>> 24, (byte) -2);
+              GameSoundEffect.field_i.a(this.b(-31112, param3, param0, var14), var13.field_d, this.field_c, var15 - var14, var13.field_g + (this.field_q + param5) + (param3.field_g + param3.field_o), this.field_c >>> 24, (byte) -2);
             }
             TeamManagementScreen.e(125);
             return;
@@ -797,28 +797,28 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    public final iq a(int param0, UiWidget param1) {
+    public final TextLayout a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        iq stackIn_5_0 = null;
-        iq stackIn_10_0 = null;
+        TextLayout stackIn_5_0 = null;
+        TextLayout stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1.field_h == null) {
-            param1.field_h = (iq) ((Object) new st());
+            param1.field_h = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (param0 != 5035) {
-            stackIn_5_0 = (iq) null;
+            stackIn_5_0 = (TextLayout) null;
             return stackIn_5_0;
           }
           if (this.field_k) {
-            ((st) (param1.field_h)).a(this.a((byte) -124, param1), this.field_a, this.field_m, this.c((byte) -120, param1), this.field_e, (byte) 102, this.b((byte) -97, param1), this.field_p);
+            ((CachedTextLayout) (param1.field_h)).a(this.a((byte) -124, param1), this.field_a, this.field_m, this.c((byte) -120, param1), this.field_e, (byte) 102, this.b((byte) -97, param1), this.field_p);
           } else {
             this.d((byte) -66, param1);
           }
@@ -834,7 +834,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -857,7 +857,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           this.field_p = param9;
           this.field_c = param11;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

@@ -48,7 +48,7 @@ abstract class AppScreen {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -69,22 +69,22 @@ abstract class AppScreen {
 
     final static void setServerConnectionParameters(String param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
         try {
-          hf.field_e = param2;
+          PainterStyle.field_e = param2;
           ScrollContainer.field_yb = param0;
           if (param8) {
             AppScreen.a((byte) 44);
           }
           PlayerModelPreview.field_e = param4;
-          nb.field_b = param7;
+          GameSoundEffect.field_b = param7;
           gg.field_Db = param6;
-          rc.field_f = param1;
+          GzipDecoder.field_f = param1;
           wo.field_k = param5;
           or.field_c = param3;
           ParticipantStatus.field_t = (ArchiveNetworkClient) ((Object) new tb());
-          SplashScreen.field_i = new eb(param2);
-          al.field_Ab = new n(ParticipantStatus.field_t, SplashScreen.field_i);
+          SplashScreen.field_i = new DiskCacheWorker(param2);
+          al.field_Ab = new ArchiveManager(ParticipantStatus.field_t, SplashScreen.field_i);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "js.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "js.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ abstract class AppScreen {
             if (sd.field_d == un.field_c) {
               if (param3) {
                 var10 = (String) null;
-                FullscreenFocusCanvas.field_h = ti.a(param4, wq.field_d, (byte) 30, false, (String) null);
+                FullscreenFocusCanvas.field_h = NamedValueContainer.a(param4, wq.field_d, (byte) 30, false, (String) null);
               } else {
                 FullscreenFocusCanvas.field_h = wp.a(-111, param4, false, param1);
               }
@@ -188,10 +188,10 @@ abstract class AppScreen {
             if (AuctionListingDialog.field_H == un.field_c &&
               LoginCredentials.a(180)) {
               wq.field_d = un.field_e.readLong((byte) -124);
-              vl.field_e = param4;
+              LoginMethod.field_e = param4;
               ScrollContainer.field_Ib = un.field_e.readUnsignedByte((byte) -118);
               bl.field_c = un.field_e.readUnsignedByte((byte) -112);
-              eq.field_d = un.field_e.a((byte) 81);
+              WeightedLruCache.field_d = un.field_e.a((byte) 81);
               var11 = un.field_e.a(true);
               var7 = un.field_e.readUnsignedByte((byte) -106);
               if ((1 & var7) != 0) {
@@ -240,16 +240,16 @@ abstract class AppScreen {
               un.field_c = RegistrationRequestDialog.field_rb;
               if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -109) != LoginRequiredDialog.field_K) {
                 if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -115) == MatchScreen.field_w) {
-                  AccountRegistrationPanel.field_I.a(-122, so.a(-115));
+                  AccountRegistrationPanel.field_I.saveLastLoginMethod(-122, so.a(-115));
                 }
               } else {
-                IsSixCommand.field_F.a(-123, so.a(36));
+                IsSixCommand.field_F.saveLastLoginMethod(-123, so.a(36));
               }
               ContextMenuItem.field_Db = false;
               if (var11 != null) {
                 mp.writeSettingsCookie(so.a(47), true, var11);
               }
-              if (eq.field_d <= 0 &&
+              if (WeightedLruCache.field_d <= 0 &&
                 !fc.field_f) {
                 try {
                   AppletJavaScriptBridge.a(30858, "unzap", so.a(-110));
@@ -265,14 +265,14 @@ abstract class AppScreen {
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (eq.field_d > 0) {
-                fu.field_c = true;
+              if (WeightedLruCache.field_d > 0) {
+                GrowableIntList.field_c = true;
               }
-              or.field_d.a((byte) 117, sn.field_f);
+              or.field_d.a((byte) 117, UrlRequest.field_f);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                sn.field_f[var8Lifetime1] = sn.field_f[var8Lifetime1] + 50;
+                UrlRequest.field_f[var8Lifetime1] = UrlRequest.field_f[var8Lifetime1] + 50;
               }
-              un.field_e.a((byte) 125, sn.field_f);
+              un.field_e.a((byte) 125, UrlRequest.field_f);
               stackIn_91_0 = so.field_b;
               return stackIn_91_0;
             }
@@ -288,7 +288,7 @@ abstract class AppScreen {
               if (7 == so.field_b) {
                 so.field_b = 3;
               }
-              gd.field_b = un.field_e.readString(4);
+              ListingRowCache.field_b = un.field_e.readString(4);
               ContextMenuItem.field_Db = false;
               stackIn_102_0 = so.field_b;
               return stackIn_102_0;
@@ -299,17 +299,17 @@ abstract class AppScreen {
             if (op.field_y == null) {
               if (ContextMenuItem.field_Db) {
                 if (30000L >= KeyedLoginCredentials.c(29680)) {
-                  gd.field_b = ic.field_e;
+                  ListingRowCache.field_b = ic.field_e;
                 } else {
-                  gd.field_b = md.field_h;
+                  ListingRowCache.field_b = CheatCodeListener.field_h;
                 }
                 ContextMenuItem.field_Db = false;
                 stackIn_113_0 = 3;
                 return stackIn_113_0;
               }
               var6_intLifetime2 = rl.field_o;
-              rl.field_o = pn.field_y;
-              pn.field_y = var6_intLifetime2;
+              rl.field_o = StrongCacheEntry.field_y;
+              StrongCacheEntry.field_y = var6_intLifetime2;
               ContextMenuItem.field_Db = true;
             }
             stackIn_115_0 = -1;
@@ -330,7 +330,7 @@ abstract class AppScreen {
             } else {
               stackIn_122_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_118_0), ((StringBuilder) (Object) stackIn_121_1).append(stackIn_122_2).append(',').append(param5).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_118_0), ((StringBuilder) (Object) stackIn_121_1).append(stackIn_122_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

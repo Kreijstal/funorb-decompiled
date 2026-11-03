@@ -42,7 +42,7 @@ final class ws {
           if (vt.a(param0, true)) {
             return true;
           }
-          var8 = ij.field_p;
+          var8 = WeightedCacheEntry.field_p;
           var7 = var8;
           var6 = var7;
           var2 = var6;
@@ -66,7 +66,7 @@ final class ws {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "ws.C(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "ws.C(" + param0 + ',' + param1 + ')');
         }
     }
 

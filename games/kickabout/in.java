@@ -15,7 +15,7 @@ final class in {
     }
 
     final static boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        if (eq.a(false)) {
+        if (WeightedLruCache.a(false)) {
           TextFieldValidator.a(param5, param3, 14686, param0);
           if (TextButton.field_v != null &&
             TextButton.field_v.a(param3, param1 - 52, param4, param2, param5)) {

@@ -37,7 +37,7 @@ final class hv {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class hv {
           }
           var14 = stackIn_16_0;
           if (3 == var19.action) {
-            var19.directionMask = uv.a(true, var9 - var7, -var6 + var8);
+            var19.directionMask = ChatLine.a(true, var9 - var7, -var6 + var8);
             if (-1 == param1.field_V.possessorTeam) {
               var19.setAction((byte) -31, 0);
               return;
@@ -120,14 +120,14 @@ final class hv {
               -1 == param1.field_V.possessorTeam &&
               var10 < 400000) {
               var19.action = 0;
-              ue.steerTowardsPoint(4, var8, var19, var9);
+              NamedValueEntry.steerTowardsPoint(4, var8, var19, var9);
               return;
             }
             if (wt.tryKeeperDive(param1.field_V, var19, (byte) -75, param2)) {
               return;
             }
             gg.a(param2, 0, param1.field_V);
-            ue.steerTowardsPoint(4, TrinketSlot.field_zb[0], var18, TrinketSlot.field_zb[1]);
+            NamedValueEntry.steerTowardsPoint(4, TrinketSlot.field_zb[0], var18, TrinketSlot.field_zb[1]);
             if (var19.action == 0 &&
               0 == var19.directionMask) {
               var19.setAction((byte) -31, 14);
@@ -136,7 +136,7 @@ final class hv {
               RowRangeRequest.tryKeeperTackle(-120, var19, param2, param1.getBallCarrier((byte) -96), param1.field_V);
             }
             if (var19.action == 14) {
-              var19.setDirectionFromMask(uv.a(param0, -var19.pixelY(true) + var9, var8 - var19.pixelX(-98)), 26214);
+              var19.setDirectionFromMask(ChatLine.a(param0, -var19.pixelY(true) + var9, var8 - var19.pixelX(-98)), 26214);
               return;
             }
           }
@@ -151,7 +151,7 @@ final class hv {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class hv {
           AppScreen.field_d = new IntrusiveDeque();
           bk.field_c = new FadingChatMessage[6];
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hv.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hv.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -23,10 +23,10 @@ abstract class SpriteState extends DualLinkNode {
           return;
         }
         var2.writeByte(param0 - 6660, 5);
-        var2.writeByte(123, uv.field_i.field_bc);
-        int var4 = (uv.field_i.field_Mb << 6) + uv.field_i.field_Wb;
+        var2.writeByte(123, ChatLine.field_i.field_bc);
+        int var4 = (ChatLine.field_i.field_Mb << 6) + ChatLine.field_i.field_Wb;
         var2.writeByte(106, var4);
-        var2.writeBytes(0, uv.field_i.field_Eb.length, param0 ^ 1991213509, uv.field_i.field_Eb);
+        var2.writeBytes(0, ChatLine.field_i.field_Eb.length, param0 ^ 1991213509, ChatLine.field_i.field_Eb);
         var2.backpatchByteLength(62, var2.field_n - var3);
     }
 
@@ -90,11 +90,11 @@ abstract class SpriteState extends DualLinkNode {
         var19 = Kickabout.field_G;
         try {
           ConsoleEvaluationException.a(7, ee.field_b);
-          if (uv.field_i != null) {
+          if (ChatLine.field_i != null) {
             boolean decompiledFrameRemainder0 = true;
             ac.field_b.field_lb = true;
-            em.field_d.field_mb = 0;
-            var21 = em.field_d;
+            DualLinkHashTable.field_d.field_mb = 0;
+            var21 = DualLinkHashTable.field_d;
             var26 = var21;
             var26.field_q = 0;
             GoalStateAgent.field_k.field_mb = 0;
@@ -104,33 +104,33 @@ abstract class SpriteState extends DualLinkNode {
             var7 = nv.field_F;
             var7.field_q = 0;
             if (!ScrollPane.a(113)) {
-              var9_ref_String = uv.field_i.field_ec;
-              ci.field_h.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{var9_ref_String}).toUpperCase();
+              var9_ref_String = ChatLine.field_i.field_ec;
+              IterableDualLinkDeque.field_h.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{var9_ref_String}).toUpperCase();
               nv.field_F.a(true, AuctionItem.field_p.field_q, 0, AuctionItem.field_p.field_mb - 40, 40);
               nv.field_F.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, wa.field_c, new String[]{var9_ref_String});
               var8 = nv.field_F;
             } else {
-              ci.field_h.field_E = TabStrip.field_zb.toUpperCase();
+              IterableDualLinkDeque.field_h.field_E = TabStrip.field_zb.toUpperCase();
               var9 = (AuctionItem.field_p.field_q + 2) / 2;
-              em.field_d.a(true, var9 - 2, 0, -40 + AuctionItem.field_p.field_mb, 40);
-              if (uv.field_i.field_bc <= uv.field_i.field_gc) {
-                em.field_d.field_E = LeagueWinnerDialog.field_I.toUpperCase();
-                em.field_d.field_lb = false;
+              DualLinkHashTable.field_d.a(true, var9 - 2, 0, -40 + AuctionItem.field_p.field_mb, 40);
+              if (ChatLine.field_i.field_bc <= ChatLine.field_i.field_gc) {
+                DualLinkHashTable.field_d.field_E = LeagueWinnerDialog.field_I.toUpperCase();
+                DualLinkHashTable.field_d.field_lb = false;
               } else {
-                em.field_d.field_E = po.field_b.toUpperCase();
-                em.field_d.field_lb = true;
+                DualLinkHashTable.field_d.field_E = po.field_b.toUpperCase();
+                DualLinkHashTable.field_d.field_lb = true;
               }
-              em.field_d.field_R = TextFieldNode.field_Qb.field_R;
+              DualLinkHashTable.field_d.field_R = TextFieldNode.field_Qb.field_R;
               if (fh.field_b > 0) {
                 if (fh.field_b == 1) {
                   var10_ref_String = kp.field_i;
                 } else {
                   var10_ref_String = vo.$cfr$intArgs$a$53ce4ab4c593(-18, PopupDialog.field_f, new String[]{Integer.toString(fh.field_b)});
                 }
-                em.field_d.field_E = em.field_d.field_E + "<br>" + var10_ref_String;
+                DualLinkHashTable.field_d.field_E = DualLinkHashTable.field_d.field_E + "<br>" + var10_ref_String;
                 if ((16 & GameKeyHandler.field_c) == 0 &&
-                  !td.field_b) {
-                  em.field_d.field_R = TextFieldNode.field_Qb.field_S;
+                  !TrinketCatalog.field_b) {
+                  DualLinkHashTable.field_d.field_R = TextFieldNode.field_Qb.field_S;
                 }
               }
               GoalStateAgent.field_k.a(true, AuctionItem.field_p.field_q - var9, var9, -40 + AuctionItem.field_p.field_mb, 40);
@@ -180,14 +180,14 @@ abstract class SpriteState extends DualLinkNode {
                           var15 = var25[var14_int];
                           var16 = var13[var14_int + 1];
                           if (var15 != -1) {
-                            if ((uv.field_i.field_Eb[var15] & 255) != var16) {
+                            if ((ChatLine.field_i.field_Eb[var15] & 255) != var16) {
                               break scanLoop2;
                             }
                           } else {
                             if (0 == var10) {
-                              stackIn_37_0 = uv.field_i.field_bc;
+                              stackIn_37_0 = ChatLine.field_i.field_bc;
                             } else {
-                              stackIn_37_0 = uv.field_i.field_gc;
+                              stackIn_37_0 = ChatLine.field_i.field_gc;
                             }
                             var17_int = stackIn_37_0;
                             if (var17_int != var16) {
@@ -220,7 +220,7 @@ abstract class SpriteState extends DualLinkNode {
                   var14_intLifetime1 = 0;
                   var15Lifetime1 = 0;
                   for (var16Lifetime1 = 0; var16Lifetime1 < ss.field_j; var16Lifetime1++) {
-                    var17_intLifetime1 = 255 & uv.field_i.field_Eb[var16Lifetime1];
+                    var17_intLifetime1 = 255 & ChatLine.field_i.field_Eb[var16Lifetime1];
                     if (null != ds.field_h &&
                       ds.field_h[var16Lifetime1] != null &&
                       ds.field_h[var16Lifetime1][var17_intLifetime1]) {
@@ -302,9 +302,9 @@ abstract class SpriteState extends DualLinkNode {
                     GoalStateAgent.field_k.field_lb = false;
                     if (!(!GoalStateAgent.field_k.field_Q)) {
                       if (ni.field_l.field_b.field_Db != 0) {
-                        sn.field_e = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketSlot.field_Fb, new String[]{c.field_d});
+                        UrlRequest.field_e = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketSlot.field_Fb, new String[]{c.field_d});
                       } else {
-                        sn.field_e = pp.field_m;
+                        UrlRequest.field_e = MusicPatchPcmStream.field_m;
                       }
                     }
                   }
@@ -328,67 +328,67 @@ abstract class SpriteState extends DualLinkNode {
                     }
                   }
                   if (var10 != 0) {
-                    var13_ref = os.field_w;
+                    var13_ref = Bzip2State.field_w;
                     if (var12Lifetime2 == 0) {
                       var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ColumnTableWidget.field_yb, new String[]{(String) (var11)});
                     } else {
                       var14 = oi.field_k + (String) (var11);
                     }
                   } else {
-                    var13_ref = sb.field_g;
+                    var13_ref = StringCursor.field_g;
                     if (var12Lifetime2 != 0) {
                       var14 = RenderedFootballer.field_S + (String) (var11);
                     } else {
                       var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, WriteIntegersCommand.field_D, new String[]{(String) (var11)});
                     }
                   }
-                  sn.field_e = "<col=A00000>" + var13_ref + "<br>" + var14;
+                  UrlRequest.field_e = "<col=A00000>" + var13_ref + "<br>" + var14;
                 }
               }
             }
             if (TextFieldNode.field_Ib != 0L) {
-              var9 = (int)(-nj.a(22) + TextFieldNode.field_Ib);
+              var9 = (int)(-nj.monotonicMillis(22) + TextFieldNode.field_Ib);
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;
               }
               var8.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gf.field_h, new String[]{Integer.toString(var9)});
             }
-            ka.field_c.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ib.field_F, new String[]{Integer.toString(uv.field_i.field_gc), Integer.toString(uv.field_i.field_bc)});
+            ka.field_c.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ib.field_F, new String[]{Integer.toString(ChatLine.field_i.field_gc), Integer.toString(ChatLine.field_i.field_bc)});
           }
           stackIn_156_0 = TrinketIcon.field_Cb;
           stackIn_156_1 = param2 ^ param2;
-          stackIn_157_2 = (param0) && (!param4) && (!td.field_b);
+          stackIn_157_2 = (param0) && (!param4) && (!TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_156_0).b(stackIn_156_1, stackIn_157_2);
           stackIn_161_0 = AuctionItem.field_p;
           stackIn_161_1 = 0;
-          stackIn_162_2 = (param0) && (!param4) && (!td.field_b);
+          stackIn_162_2 = (param0) && (!param4) && (!TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_161_0).b(stackIn_161_1, stackIn_162_2);
           stackIn_166_0 = tn.field_f;
           stackIn_166_1 = 0;
-          stackIn_167_2 = (param0) && (!param4) && (td.field_b);
+          stackIn_167_2 = (param0) && (!param4) && (TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_166_0).b(stackIn_166_1, stackIn_167_2);
           ni.field_l.field_b.h((byte) 71);
-          if (null != uv.field_i) {
+          if (null != ChatLine.field_i) {
             if (ac.field_b.field_sb != 0) {
-              ContextMenu.a(uv.field_i.h((byte) 73), (byte) -108, param1);
+              ContextMenu.a(ChatLine.field_i.h((byte) 73), (byte) -108, param1);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {
               gs.field_e = true;
             }
-            if (em.field_d.field_sb != 0) {
-              td.field_b = true;
+            if (DualLinkHashTable.field_d.field_sb != 0) {
+              TrinketCatalog.field_b = true;
             }
             if (BlackFadeScreen.field_i.field_sb != 0) {
-              td.field_b = false;
+              TrinketCatalog.field_b = false;
             }
-            NetworkGameClient.a(param1, (byte) -57, uv.field_i, false);
+            NetworkGameClient.a(param1, (byte) -57, ChatLine.field_i, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var5), "lu.DB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var5), "lu.DB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -497,7 +497,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
         }
     }
 

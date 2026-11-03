@@ -47,7 +47,7 @@ final class ou extends UiWidget {
     final static void a(byte param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
-        kk var5 = null;
+        TriangleMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
@@ -67,7 +67,7 @@ final class ou extends UiWidget {
           var10.p(-111);
           SaveChangesDialog.field_H = ds.a(var10, (byte) -4);
           sm.field_l = new int[var3][];
-          ba.field_n = new kk[var3];
+          ba.field_n = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
             ba.field_n[var4] = vi.a((byte) 80, var8);
           }
@@ -79,11 +79,11 @@ final class ou extends UiWidget {
           var4Lifetime1 = var9;
           while (var3 > var9) {
             var5 = ba.field_n[var9];
-            var5.a(6, 6, 256, 1, 6);
-            var5.a(false);
+            var5.scale(6, 6, 256, 1, 6);
+            var5.computeBounds(false);
             var6 = new int[]{var5.field_h + var5.field_y >> 1, var5.field_s + var5.field_x >> 1, var5.field_t + var5.field_w >> 1};
             sm.field_l[var9] = var6;
-            var5.a(-var6[2], -var6[0], param0 ^ 49, -var6[1]);
+            var5.translate(-var6[2], -var6[0], param0 ^ 49, -var6[1]);
             var9++;
           }
           return;
@@ -97,7 +97,7 @@ final class ou extends UiWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class ou extends UiWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class ou extends UiWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

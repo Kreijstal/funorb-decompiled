@@ -81,19 +81,19 @@ class UiLayoutNode extends iv {
               var10.d(var7, var8);
             }
           }
-          td.a(param0, 15, param2, param1, param3, false);
+          TrinketCatalog.a(param0, 15, param2, param1, param3, false);
           if (ih.field_c == 0) {
             RasterBuffer.a(75, gw.field_d, 15, 15);
           }
           if (1 == ih.field_c) {
-            RasterBuffer.a(116, tv.field_b, 15, 15);
+            RasterBuffer.a(116, ChatMessage.field_b, 15, 15);
           }
           if (2 == ih.field_c) {
             wd.a(15, 15, 124);
           }
           TeamManagementScreen.e(param0 ^ 122);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hd.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hd.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -320,7 +320,7 @@ class UiLayoutNode extends iv {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -378,7 +378,7 @@ class UiLayoutNode extends iv {
             if (NodeHashTableIterator.field_b == 0) {
               return true;
             }
-            td.a(-108);
+            TrinketCatalog.a(-108);
           } else {
             if (AuctionLogEntry.field_m.length() > 0) {
               var4_ref_String = AuctionLogEntry.field_m.toString();
@@ -388,16 +388,16 @@ class UiLayoutNode extends iv {
               } else {
                 var5 = NodeHashTableIterator.field_b;
                 if (var5 == 0 &&
-                  uv.field_i != null) {
+                  ChatLine.field_i != null) {
                   var5 = 1;
                 }
                 if (r.a(0, var5) == 2) {
-                  gd.a(-117, 1, var5, param2);
+                  ListingRowCache.a(-117, 1, var5, param2);
                 }
                 PasswordLoginCredentials.a(-1, 82, NodeHashTableIterator.field_b, param1, TrinketTile.field_Kb, var4_ref_String);
               }
             }
-            td.a(99);
+            TrinketCatalog.a(99);
           }
           return true;
         }
@@ -428,16 +428,16 @@ class UiLayoutNode extends iv {
           if (2 != NodeHashTableIterator.field_b) {
             var7Lifetime6 = "";
             if (NodeHashTableIterator.field_b == 0) {
-              if (uv.field_i == null &&
+              if (ChatLine.field_i == null &&
                 uk.field_d) {
                 var7Lifetime6 = "[" + ButtonMenuScreen.field_z + "] ";
               }
-              if (uv.field_i != null) {
+              if (ChatLine.field_i != null) {
                 if (GameOverView.field_R &&
                   null != SingleChildContainer.field_x) {
                   var7Lifetime6 = "[" + SingleChildContainer.field_x + "] ";
                 } else {
-                  var7Lifetime6 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{uv.field_i.field_ec}) + "] ";
+                  var7Lifetime6 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{ChatLine.field_i.field_ec}) + "] ";
                 }
               }
             }
@@ -554,7 +554,7 @@ class UiLayoutNode extends iv {
           }
           this.field_sb = 0;
         }
-        stackIn_31_1 = (!UnreadMessagesScreen.field_D) && (SoftwareRasterizer.field_b <= BytePlusOneCommand.field_A) && (BytePlusOneCommand.field_A < SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_e <= n.field_m) && (n.field_m < SoftwareRasterizer.field_h);
+        stackIn_31_1 = (!UnreadMessagesScreen.field_D) && (SoftwareRasterizer.field_b <= BytePlusOneCommand.field_A) && (BytePlusOneCommand.field_A < SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_e <= ArchiveManager.field_m) && (ArchiveManager.field_m < SoftwareRasterizer.field_h);
         this.field_Q = stackIn_31_1;
         if (FootballerAgent.field_p == 0) {
           this.field_qb = 0;
@@ -577,7 +577,7 @@ class UiLayoutNode extends iv {
         SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_qb != 0 &&
           this.field_Y) {
-          this.field_J = -param4 - this.field_M + n.field_m;
+          this.field_J = -param4 - this.field_M + ArchiveManager.field_m;
           this.field_s = -param0 + (-this.field_bb + BytePlusOneCommand.field_A);
           if (this.field_s < 0) {
             this.field_s = 0;
@@ -634,7 +634,7 @@ class UiLayoutNode extends iv {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -648,7 +648,7 @@ class UiLayoutNode extends iv {
         try {
           this.field_jb.a(param1, 3);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hd.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hd.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -885,7 +885,7 @@ class UiLayoutNode extends iv {
           }
           int var3_int = -75 % ((39 - param0) / 48);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hd.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hd.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -959,7 +959,7 @@ class UiLayoutNode extends iv {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

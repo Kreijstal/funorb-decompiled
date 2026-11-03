@@ -103,7 +103,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "ol.I(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "ol.I(" + param0 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class GameOverView extends MatchPhaseView {
           un.field_d.d(CommonGame.field_a.toUpperCase(), 500 + var2_int, this.field_Q + 130, 16777215, -1);
           var3 = this.field_Q + 140;
           var4 = 360 + var2_int;
-          st.b(var4, param0 ^ 16777113, var3);
+          CachedTextLayout.b(var4, param0 ^ 16777113, var3);
           MusicPatch.a(param0 ^ 0);
           var5 = this.field_u[this.field_h];
           var6 = this.field_u[1 - this.field_h];
@@ -515,9 +515,9 @@ final class GameOverView extends MatchPhaseView {
           }
           SoftwareRasterizer.a(stackIn_121_0, stackIn_121_1, stackIn_121_2, stackIn_121_3, stackIn_121_4, stackIn_124_5, 128);
           stackIn_128_0 = un.field_d;
-          stackIn_128_1 = rd.field_d;
+          stackIn_128_1 = GameModeDefinition.field_d;
           stackIn_128_2 = this.field_L + 14;
-          stackIn_128_3 = this.field_r - (-97 - (un.field_d.a(rd.field_d) >> 1));
+          stackIn_128_3 = this.field_r - (-97 - (un.field_d.a(GameModeDefinition.field_d) >> 1));
           if (!this.field_C &&
             !this.field_D) {
             stackIn_131_4 = 11184810;
@@ -538,13 +538,13 @@ final class GameOverView extends MatchPhaseView {
           }
           ((CoverageBitmapFont) (Object) stackIn_135_0).b(stackIn_135_1, stackIn_135_2, stackIn_135_3, stackIn_138_4, -1);
           var9 = this.field_Q;
-          un.field_d.d("<u=FFFFFF>" + rd.field_d.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
+          un.field_d.d("<u=FFFFFF>" + GameModeDefinition.field_d.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
           var9 += 160;
           SoftwareRasterizer.a(42 + var2_int, -20 + var9, 552, 28, 10, 65793, 128);
           un.field_d.d(lw.field_f.toUpperCase(), var2_int + 320, var9, 16777215, -1);
           var11Lifetime2 = var2_int + 240;
           var12Lifetime2 = 80 + var9;
-          eo.a(var11Lifetime2, var12Lifetime2, qe.field_j, this.field_p, (String[]) null, 160, 21, this.field_a.playerCount, this.field_a.field_S, this.field_g);
+          eo.a(var11Lifetime2, var12Lifetime2, ArchivePreloader.field_j, this.field_p, (String[]) null, 160, 21, this.field_a.playerCount, this.field_a.field_S, this.field_g);
           var9 = var9 + (140 + 25 * (this.field_a.playerCount + 1));
           SoftwareRasterizer.a(var2_int + 42, -20 + var9, 552, 28, 10, 65793, 128);
           var12Lifetime3 = var9 + 80;
@@ -611,7 +611,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "ol.K(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "ol.K(" + param0 + ')');
         }
     }
 
@@ -670,7 +670,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ol.N(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ol.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -770,7 +770,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) runtimeException), "ol.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ol.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -796,7 +796,7 @@ final class GameOverView extends MatchPhaseView {
             stackIn_10_0 = 1;
           }
           var5 = stackIn_10_0;
-          if (!var4[uv.field_e] &&
+          if (!var4[ChatLine.field_e] &&
             !var4[96] &&
             param2 != 96) {
             stackIn_20_0 = 0;
@@ -860,7 +860,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var4_ref), "ol.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var4_ref), "ol.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -879,7 +879,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "ol.E(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "ol.E(" + param0 + ')');
         }
     }
 
@@ -1081,7 +1081,7 @@ final class GameOverView extends MatchPhaseView {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameCompleted0)) {
-            st.a((CommonGame) null, this.field_g, 50);
+            CachedTextLayout.a((CommonGame) null, this.field_g, 50);
             oa.b(-23217);
             stackIn_76_0 = 111;
           }
@@ -1109,7 +1109,7 @@ final class GameOverView extends MatchPhaseView {
           } else {
             stackIn_89_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1153,8 +1153,8 @@ final class GameOverView extends MatchPhaseView {
             AuctionListing.a(31 + var3, -22914, var3 - 31, var4 - 17, var4 - 37);
             SoftwareRasterizer.a(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
             TeamManagementScreen.e(param0 + 116);
-            uv.a(var3 - 19, (byte) -82, -22 + var4);
-            IsSixCommand.field_C.a(eq.field_b, -6 + var3, -16 + var4, 16777215, -1);
+            ChatLine.a(var3 - 19, (byte) -82, -22 + var4);
+            IsSixCommand.field_C.a(WeightedLruCache.field_b, -6 + var3, -16 + var4, 16777215, -1);
           }
           var2_int = 245;
           if (this.isButtonEnabled(0, param0 ^ 51) &&
@@ -1166,8 +1166,8 @@ final class GameOverView extends MatchPhaseView {
             AuctionListing.a(31 + var3Lifetime1, -22914, -31 + var3Lifetime1, var4Lifetime1 - 17, -37 + var4Lifetime1);
             SoftwareRasterizer.a(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
             TeamManagementScreen.e(126);
-            uv.a(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
-            IsSixCommand.field_C.a(eq.field_b, var3Lifetime1 - 6, -16 + var4Lifetime1, 16777215, -1);
+            ChatLine.a(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
+            IsSixCommand.field_C.a(WeightedLruCache.field_b, var3Lifetime1 - 6, -16 + var4Lifetime1, 16777215, -1);
           }
           if (this.field_S != 2) {
             if (0 == this.field_S ||
@@ -1201,7 +1201,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "ol.S(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "ol.S(" + param0 + ')');
         }
     }
 
@@ -1269,7 +1269,7 @@ final class GameOverView extends MatchPhaseView {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1388,7 +1388,7 @@ final class GameOverView extends MatchPhaseView {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1445,7 +1445,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ol.D(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ol.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1499,7 +1499,7 @@ final class GameOverView extends MatchPhaseView {
                   stackIn_40_0 = stackOut_16_0 ? 1 : 0;
                   stackIn_17_0 = stackOut_16_0;
                   if (stackIn_17_0) {
-                    uv.a(var7 + 10, (byte) -119, var8 - 6);
+                    ChatLine.a(var7 + 10, (byte) -119, var8 - 6);
                   }
                   MySquadScreen.field_U[this.field_a.field_g[this.field_O[var5][var9]].field_f].c(var7, var8 - 16);
                   stackIn_26_0 = (var11 == 0) ? 16777215 : 11184810;
@@ -1570,7 +1570,7 @@ final class GameOverView extends MatchPhaseView {
                 if (!um.field_e.field_q &&
                   this.field_a.field_g[this.field_g].field_l &&
                   pr.field_a[var5] > this.field_a.field_g[this.field_g].field_h) {
-                  var4 = var4 + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, MyKitScreen.field_L, new String[]{q.field_h[var5], Integer.toString(pr.field_a[var5]), Integer.toString(this.field_a.field_g[this.field_g].field_h)});
+                  var4 = var4 + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, MyKitScreen.field_L, new String[]{ConsoleTokenCursor.field_h[var5], Integer.toString(pr.field_a[var5]), Integer.toString(this.field_a.field_g[this.field_g].field_h)});
                 }
               }
             }
@@ -1581,7 +1581,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "ol.P(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "ol.P(" + param0 + ')');
         }
     }
 
@@ -1661,7 +1661,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ol.O(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ol.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1706,7 +1706,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var4), "ol.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var4), "ol.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1808,7 +1808,7 @@ final class GameOverView extends MatchPhaseView {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1860,9 +1860,9 @@ final class GameOverView extends MatchPhaseView {
               if (var15 != 0) {
                 if (0 != this.field_S) {
                   this.field_c[1].field_p = oh.field_g.toLowerCase();
-                  this.field_c[1].field_p = q.field_f.toLowerCase();
+                  this.field_c[1].field_p = ConsoleTokenCursor.field_f.toLowerCase();
                 } else {
-                  this.field_c[1].field_p = q.field_f.toLowerCase();
+                  this.field_c[1].field_p = ConsoleTokenCursor.field_f.toLowerCase();
                 }
               }
             }
@@ -1870,10 +1870,10 @@ final class GameOverView extends MatchPhaseView {
             if (0 != this.field_S) {
               this.field_c[1].field_p = oh.field_g.toLowerCase();
               if (var15 != 0) {
-                this.field_c[1].field_p = q.field_f.toLowerCase();
+                this.field_c[1].field_p = ConsoleTokenCursor.field_f.toLowerCase();
               }
             } else {
-              this.field_c[1].field_p = q.field_f.toLowerCase();
+              this.field_c[1].field_p = ConsoleTokenCursor.field_f.toLowerCase();
             }
           }
           if (this.field_j <= -255) {
@@ -1897,21 +1897,21 @@ final class GameOverView extends MatchPhaseView {
             this.field_eb = 600 + this.field_ib;
             this.field_x = 32 + (this.field_ib + 596);
             this.field_L = 1196 + this.field_ib;
-            stackIn_60_1 = (BytePlusOneCommand.field_A >= this.field_H) && (BytePlusOneCommand.field_A <= 570 + this.field_H) && (n.field_m >= this.field_jb) && (n.field_m <= this.field_jb + 12);
+            stackIn_60_1 = (BytePlusOneCommand.field_A >= this.field_H) && (BytePlusOneCommand.field_A <= 570 + this.field_H) && (ArchiveManager.field_m >= this.field_jb) && (ArchiveManager.field_m <= this.field_jb + 12);
             this.field_U = stackIn_60_1;
-            stackIn_73_1 = (BytePlusOneCommand.field_A >= 16 + this.field_L) && (32 + this.field_L >= BytePlusOneCommand.field_A) && (this.field_r <= n.field_m) && (n.field_m <= this.field_r + 195);
+            stackIn_73_1 = (BytePlusOneCommand.field_A >= 16 + this.field_L) && (32 + this.field_L >= BytePlusOneCommand.field_A) && (this.field_r <= ArchiveManager.field_m) && (ArchiveManager.field_m <= this.field_r + 195);
             this.field_D = stackIn_73_1;
-            stackIn_86_1 = (BytePlusOneCommand.field_A >= this.field_T) && (BytePlusOneCommand.field_A <= this.field_T + 570) && (this.field_kb + 12 <= n.field_m) && (n.field_m <= (this.field_kb + 24));
+            stackIn_86_1 = (BytePlusOneCommand.field_A >= this.field_T) && (BytePlusOneCommand.field_A <= this.field_T + 570) && (this.field_kb + 12 <= ArchiveManager.field_m) && (ArchiveManager.field_m <= (this.field_kb + 24));
             this.field_F = stackIn_86_1;
-            stackIn_99_1 = (this.field_L <= BytePlusOneCommand.field_A) && (16 + this.field_L >= BytePlusOneCommand.field_A) && (this.field_r <= n.field_m) && (n.field_m <= (this.field_r + 195));
+            stackIn_99_1 = (this.field_L <= BytePlusOneCommand.field_A) && (16 + this.field_L >= BytePlusOneCommand.field_A) && (this.field_r <= ArchiveManager.field_m) && (ArchiveManager.field_m <= (this.field_r + 195));
             this.field_C = stackIn_99_1;
-            stackIn_112_1 = ((16 + this.field_eb) <= BytePlusOneCommand.field_A) && (BytePlusOneCommand.field_A <= 32 + this.field_eb) && (n.field_m >= this.field_db) && (this.field_db + 195 >= n.field_m);
+            stackIn_112_1 = ((16 + this.field_eb) <= BytePlusOneCommand.field_A) && (BytePlusOneCommand.field_A <= 32 + this.field_eb) && (ArchiveManager.field_m >= this.field_db) && (this.field_db + 195 >= ArchiveManager.field_m);
             this.field_W = stackIn_112_1;
-            stackIn_125_1 = (this.field_v <= BytePlusOneCommand.field_A) && ((this.field_v + 570) >= BytePlusOneCommand.field_A) && (n.field_m >= (12 + this.field_A)) && ((this.field_A + 24) >= n.field_m);
+            stackIn_125_1 = (this.field_v <= BytePlusOneCommand.field_A) && ((this.field_v + 570) >= BytePlusOneCommand.field_A) && (ArchiveManager.field_m >= (12 + this.field_A)) && ((this.field_A + 24) >= ArchiveManager.field_m);
             this.field_t = stackIn_125_1;
-            stackIn_138_1 = (BytePlusOneCommand.field_A >= this.field_eb) && (BytePlusOneCommand.field_A <= (this.field_eb + 16)) && (this.field_db <= n.field_m) && (n.field_m <= this.field_db + 195);
+            stackIn_138_1 = (BytePlusOneCommand.field_A >= this.field_eb) && (BytePlusOneCommand.field_A <= (this.field_eb + 16)) && (this.field_db <= ArchiveManager.field_m) && (ArchiveManager.field_m <= this.field_db + 195);
             this.field_K = stackIn_138_1;
-            stackIn_151_1 = (BytePlusOneCommand.field_A >= this.field_x) && (BytePlusOneCommand.field_A <= 570 + this.field_x) && (n.field_m >= this.field_B) && (this.field_B + 12 >= n.field_m);
+            stackIn_151_1 = (BytePlusOneCommand.field_A >= this.field_x) && (BytePlusOneCommand.field_A <= 570 + this.field_x) && (ArchiveManager.field_m >= this.field_B) && (this.field_B + 12 >= ArchiveManager.field_m);
             this.field_y = stackIn_151_1;
             if (this.field_K &&
               WidgetContainer.field_A == 1 &&
@@ -2081,7 +2081,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ol.H(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ol.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2093,7 +2093,7 @@ final class GameOverView extends MatchPhaseView {
             field_E = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ')');
         }
     }
 
@@ -2127,7 +2127,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ol.L(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ol.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2160,7 +2160,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ol.R(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ol.R(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2177,7 +2177,7 @@ final class GameOverView extends MatchPhaseView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ol.B(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ol.B(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -130,7 +130,7 @@ final class MusicPatchNode extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        ConsoleParseException.a(tv.field_e, AccountTermsPanel.field_H, 14594, ConsoleEvaluationException.field_e, rj.field_b);
+        ConsoleParseException.a(ChatMessage.field_e, AccountTermsPanel.field_H, 14594, ConsoleEvaluationException.field_e, SoundCache.field_b);
         int var1 = -41 / ((47 - param0) / 45);
     }
 
@@ -142,11 +142,11 @@ final class MusicPatchNode extends IntrusiveNode {
         try {
           DualLinkDequeIterator.field_e.a(false, (byte) 108);
           id.a(param0, param3, false, param2);
-          lf.a(-93);
+          IntKeyLookup.a(-93);
           mj.field_a = vj.field_a;
           wk.field_f = vj.field_a;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class MusicPatchNode extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "da.D(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "da.D(" + param0 + ',' + param1 + ')');
         }
     }
 

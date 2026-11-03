@@ -74,7 +74,7 @@ final class vr {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -91,7 +91,7 @@ final class vr {
         var2 = Kickabout.field_G;
         try {
           InstrumentNoteMask.field_k = false;
-          uv.field_i = null;
+          ChatLine.field_i = null;
           ArchiveSource.field_b = null;
           if (rp.field_B != null) {
             rp.field_B.b(param0 + 22999);
@@ -105,7 +105,7 @@ final class vr {
             SquadSlotWidget.field_yb.b(param0 ^ -22997);
             SquadSlotWidget.field_yb = null;
           }
-          sr.field_f = null;
+          SortCriterion.field_f = null;
           if (null != lw.field_d) {
             lw.field_d.b(param0 ^ -22997);
             lw.field_d = null;
@@ -124,7 +124,7 @@ final class vr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "vr.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "vr.B(" + param0 + ')');
         }
     }
 

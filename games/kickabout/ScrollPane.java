@@ -175,7 +175,7 @@ final class ScrollPane extends UiLayoutNode {
         if (param0 < 11) {
           return true;
         }
-        return dd.field_c == uv.field_i.field_Nb ? true : false;
+        return dd.field_c == ChatLine.field_i.field_Nb ? true : false;
     }
 
     final static void b(int param0) {
@@ -221,7 +221,7 @@ final class ScrollPane extends UiLayoutNode {
           this.field_Ab = param1;
           this.field_zb.addChild((byte) -125, param1);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "np.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "np.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -272,7 +272,7 @@ final class ScrollPane extends UiLayoutNode {
         if (param0 != -1) {
           return;
         }
-        if (we.field_c == eq.field_a) {
+        if (we.field_c == WeightedLruCache.field_a) {
           fieldTemp$1 = vo.field_bb;
           vo.field_bb = vo.field_bb + 1;
           if (fieldTemp$1 < 16) {
@@ -283,11 +283,11 @@ final class ScrollPane extends UiLayoutNode {
           } else {
             kw.b(0);
           }
-          eq.field_a = ContextMenuItem.field_Hb;
+          WeightedLruCache.field_a = ContextMenuItem.field_Hb;
           return;
         }
-        if (eq.field_a != ContextMenuItem.field_Hb) {
-          if (LeaguesScreen.field_A != eq.field_a) {
+        if (WeightedLruCache.field_a != ContextMenuItem.field_Hb) {
+          if (LeaguesScreen.field_A != WeightedLruCache.field_a) {
             return;
           }
           fieldTemp$2 = vo.field_bb;
@@ -295,7 +295,7 @@ final class ScrollPane extends UiLayoutNode {
           if (fieldTemp$2 > 0) {
             return;
           }
-          eq.field_a = eq.field_j;
+          WeightedLruCache.field_a = WeightedLruCache.field_j;
           return;
         }
         if (!PlayArea.a(100)) {
@@ -308,7 +308,7 @@ final class ScrollPane extends UiLayoutNode {
             ConsoleEvaluationException.a(false, 0);
           }
         }
-        eq.field_a = LeaguesScreen.field_A;
+        WeightedLruCache.field_a = LeaguesScreen.field_A;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

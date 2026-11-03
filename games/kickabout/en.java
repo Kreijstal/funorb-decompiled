@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class en extends sr {
+final class en extends SortCriterion {
     static ValidationState field_p;
     static int[] field_n;
     static int field_o;
     static long[] field_q;
 
-    final int a(int param0) {
+    final int directionCount(int param0) {
         if (param0 >= -69) {
           field_q = (long[]) null;
           return 2;
@@ -63,15 +63,15 @@ final class en extends sr {
 
     final static void a(int param0, int param1) {
         ng.field_a = (param0 & 60) >> 4;
-        q.field_b = (param0 & 14) >> 2;
+        ConsoleTokenCursor.field_b = (param0 & 14) >> 2;
         if (ng.field_a > 2) {
           ng.field_a = 2;
         }
         if (param1 != -1) {
           field_p = (ValidationState) null;
         }
-        if (2 < q.field_b) {
-          q.field_b = 2;
+        if (2 < ConsoleTokenCursor.field_b) {
+          ConsoleTokenCursor.field_b = 2;
         }
         fc.field_a = param0 & 3;
         if (fc.field_a <= 2) {
@@ -80,7 +80,7 @@ final class en extends sr {
         fc.field_a = 2;
     }
 
-    final int a(int param0, Object param1, Object param2) {
+    final int compare(int param0, Object param1, Object param2) {
         PlayerStats var4 = null;
         RuntimeException var4_ref = null;
         PlayerStats var5 = null;
@@ -121,7 +121,7 @@ final class en extends sr {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
