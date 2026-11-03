@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class tb extends ArchiveNetworkClient {
+final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     static int field_s;
     static ff field_t;
     private BufferedSocket field_x;
@@ -13,7 +13,7 @@ final class tb extends ArchiveNetworkClient {
     static CommonGame field_w;
     static String field_u;
 
-    final boolean a(byte param0) {
+    final boolean pollResponses(byte param0) {
         try {
           int var2_int = 0;
           int stackIn_46_0 = 0;
@@ -61,10 +61,10 @@ final class tb extends ArchiveNetworkClient {
             }
           }
           if (null == this.field_x) {
-            if (0 != this.e(0)) {
+            if (0 != this.countPriorityRequests(0)) {
               return false;
             }
-            if (0 == this.b(-21)) {
+            if (0 == this.countBackgroundRequests(-21)) {
               return true;
             }
             return false;
@@ -222,8 +222,8 @@ final class tb extends ArchiveNetworkClient {
             this.field_o = this.field_o + 1;
             this.field_l = -2;
             this.field_x = null;
-            if (this.e(0) == 0 &&
-              this.b(-21) == 0) {
+            if (this.countPriorityRequests(0) == 0 &&
+              this.countBackgroundRequests(-21) == 0) {
               return true;
             }
             return false;
@@ -241,7 +241,7 @@ final class tb extends ArchiveNetworkClient {
         try {
           if (param0 != 126) {
             ResourceArchive var4 = (ResourceArchive) null;
-            tb.a(5, (ResourceArchive) null);
+            SocketArchiveNetworkClient.a(5, (ResourceArchive) null);
           }
           if (param1 == 28) {
             if (su.field_c != null) {
@@ -259,7 +259,7 @@ final class tb extends ArchiveNetworkClient {
         }
     }
 
-    private final void g(int param0) {
+    private final void sendSetupPacket(int param0) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
@@ -293,7 +293,7 @@ final class tb extends ArchiveNetworkClient {
         }
     }
 
-    final void a(Object param0, int param1, boolean param2) {
+    final void attachSocket(Object param0, int param1, boolean param2) {
         try {
           RuntimeException stackIn_25_0 = null;
           StringBuilder stackIn_25_1 = null;
@@ -318,11 +318,11 @@ final class tb extends ArchiveNetworkClient {
               this.field_x = null;
             }
             this.field_x = (BufferedSocket) (param0);
-            this.g(0);
+            this.sendSetupPacket(0);
             if (param1 != 20) {
-              this.b((byte) 19);
+              this.closeSocket((byte) 19);
             }
-            this.a(param2, false);
+            this.sendControlPacket(param2, false);
             this.field_k = null;
             this.field_n.field_n = 0;
             while (true) {
@@ -384,7 +384,7 @@ final class tb extends ArchiveNetworkClient {
         }
     }
 
-    final void c(int param0) {
+    final void resetAfterValidationFailure(int param0) {
         try {
           this.field_x.close(1);
         } catch (Exception exception) {
@@ -418,7 +418,7 @@ final class tb extends ArchiveNetworkClient {
           ei.field_d.field_Cb.field_zb.applyStyle(ConsoleEvaluationException.field_e, (byte) 87);
           if (param0 >= -59) {
             ResourceArchive var4 = (ResourceArchive) null;
-            tb.a(-39, (ResourceArchive) null);
+            SocketArchiveNetworkClient.a(-39, (ResourceArchive) null);
           }
           ei.field_d.field_Cb.field_zb.field_p = 1;
           var6 = ei.field_d.field_Cb.field_zb;
@@ -433,7 +433,7 @@ final class tb extends ArchiveNetworkClient {
         }
     }
 
-    private final void a(boolean param0, boolean param1) {
+    private final void sendControlPacket(boolean param0, boolean param1) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_5_0 = null;
@@ -470,7 +470,7 @@ final class tb extends ArchiveNetworkClient {
             this.field_x = null;
           }
           if (param1) {
-            this.a(true, true);
+            this.sendControlPacket(true, true);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -487,7 +487,7 @@ final class tb extends ArchiveNetworkClient {
         field_u = null;
         if (param0 >= -89) {
           String var2 = (String) null;
-          tb.a((String) null, -77);
+          SocketArchiveNetworkClient.a((String) null, -77);
         }
     }
 
@@ -520,7 +520,7 @@ final class tb extends ArchiveNetworkClient {
         }
     }
 
-    final void b(byte param0) {
+    final void closeSocket(byte param0) {
         if (param0 != 109) {
           field_w = (CommonGame) null;
         }
@@ -529,7 +529,7 @@ final class tb extends ArchiveNetworkClient {
         }
     }
 
-    public tb() {
+    public SocketArchiveNetworkClient() {
     }
 
     static {

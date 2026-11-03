@@ -382,7 +382,7 @@ class UiLayoutNode extends iv {
           } else {
             if (AuctionLogEntry.field_m.length() > 0) {
               var4_ref_String = AuctionLogEntry.field_m.toString();
-              if (tb.a(var4_ref_String, -125)) {
+              if (SocketArchiveNetworkClient.a(var4_ref_String, -125)) {
                 TextButton.a((String) null, (String) null, 0, 2, ng.field_i, -125);
                 TextButton.a((String) null, (String) null, 0, 2, mg.field_e, -126);
               } else {

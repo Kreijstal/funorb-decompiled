@@ -80,7 +80,7 @@ abstract class AppScreen {
           GzipDecoder.field_f = param1;
           wo.field_k = param5;
           or.field_c = param3;
-          ParticipantStatus.field_t = (ArchiveNetworkClient) ((Object) new tb());
+          ParticipantStatus.field_t = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           SplashScreen.field_i = new DiskCacheWorker(param2);
           FriendsListPanel.field_Ab = new ArchiveManager(ParticipantStatus.field_t, SplashScreen.field_i);
         } catch (RuntimeException runtimeException) {

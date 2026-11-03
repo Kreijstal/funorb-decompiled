@@ -357,7 +357,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             }
             BufferedSocket.field_j = stackIn_114_0 + stackIn_115_1;
           }
-          uq.field_c = -(BufferedSocket.field_j >> 1) + tb.field_s;
+          uq.field_c = -(BufferedSocket.field_j >> 1) + SocketArchiveNetworkClient.field_s;
           ld.field_j = new int[WeightedLruCache.field_c.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = uq.field_c;
@@ -428,7 +428,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
           var3 = Kickabout.field_G;
           try {
             if (null != ParticipantStatus.field_t) {
-              ParticipantStatus.field_t.b((byte) 109);
+              ParticipantStatus.field_t.closeSocket((byte) 109);
             }
             if (null != SplashScreen.field_i) {
               SplashScreen.field_i.shutdown(109);

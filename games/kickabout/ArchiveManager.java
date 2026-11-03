@@ -515,10 +515,10 @@ final class ArchiveManager {
           return true;
         }
         if (this.field_a == null) {
-          if (this.field_g.a(25533)) {
+          if (this.field_g.isPriorityQueueFull(25533)) {
             return false;
           }
-          this.field_a = this.field_g.a(255, 255, (byte) 0, (byte) 89, true);
+          this.field_a = this.field_g.queueRequest(255, 255, (byte) 0, (byte) 89, true);
         }
         if (this.field_a.field_p) {
           return false;
@@ -600,8 +600,8 @@ final class ArchiveManager {
           this.field_l = param3;
           this.field_b = param2;
           this.field_g = param0;
-          if (!this.field_g.a(25533)) {
-            this.field_a = this.field_g.a(255, 255, (byte) 0, (byte) 89, true);
+          if (!this.field_g.isPriorityQueueFull(25533)) {
+            this.field_a = this.field_g.queueRequest(255, 255, (byte) 0, (byte) 89, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

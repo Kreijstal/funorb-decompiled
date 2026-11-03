@@ -42,7 +42,7 @@ final class MenuButton {
                 AuctionsScreen.startComputerMatch(10, true);
               }
             } else {
-              tb.a((byte) 126, 5);
+              SocketArchiveNetworkClient.a((byte) 126, 5);
             }
           } else {
             if (this.kind != 1) {
@@ -138,8 +138,8 @@ final class MenuButton {
                                                                                       }
                                                                                     } else {
                                                                                       if (30 == this.kind) {
-                                                                                        stackIn_76_0 = (tb.field_v != 1) ? 1 : 0;
-                                                                                        tb.field_v = stackIn_76_0;
+                                                                                        stackIn_76_0 = (SocketArchiveNetworkClient.field_v != 1) ? 1 : 0;
+                                                                                        SocketArchiveNetworkClient.field_v = stackIn_76_0;
                                                                                       } else {
                                                                                         if (this.kind == 15) {
                                                                                           AppScreen.openQuitPage(20338, so.a(101));
@@ -221,10 +221,10 @@ final class MenuButton {
             } else {
               if (!PlayArea.a(100)) {
                 if (!GameLoopApplet.field_E.field_J[0]) {
-                  tb.a((byte) 126, 26);
+                  SocketArchiveNetworkClient.a((byte) 126, 26);
                 } else {
                   if (!GameLoopApplet.field_E.d((byte) 64)) {
-                    tb.a((byte) 126, 5);
+                    SocketArchiveNetworkClient.a((byte) 126, 5);
                   } else {
                     MouseWheelInput.a(-1822);
                   }
@@ -434,7 +434,7 @@ final class MenuButton {
             this.field_p = ((String) (Object) stackIn_40_1[stackIn_41_2]).toLowerCase();
           } else {
             if (this.kind == 30) {
-              this.field_p = TextWidgetPainter.field_d[tb.field_v].toLowerCase();
+              this.field_p = TextWidgetPainter.field_d[SocketArchiveNetworkClient.field_v].toLowerCase();
             } else {
               if (this.kind == 9) {
                 this.field_p = NumericDateInputWidget.field_N.toLowerCase();

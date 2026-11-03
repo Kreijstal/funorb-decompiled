@@ -190,7 +190,7 @@ final class NamedValueEntry extends IntrusiveNode {
               ((CoverageBitmapFont) (Object) stackIn_31_0).d(((String) (Object) stackIn_32_1).toUpperCase(), var14[var7], 290, 16777215, -1);
               GameSoundEffect.field_j[var7].drawHalfSize(var14[var7] - 50, 170);
             }
-            tb.field_q[10].drawAdditive(285, 180, var3);
+            SocketArchiveNetworkClient.field_q[10].drawAdditive(285, 180, var3);
             stackIn_35_0 = DemoIntegersCommand.field_F.field_X.score;
             if (var5Lifetime1 == 0) {
               stackIn_36_1 = 0;

@@ -653,7 +653,7 @@ final class RenderedBall extends BallAgent {
         int var2 = this.getRenderedScale(-1);
         int var3 = ug.a(0, this.getRenderedX(param0 + 14899));
         int var4 = IntKeyLookup.a((byte) -107, this.getRenderedY(true));
-        if (tb.field_v != 1) {
+        if (SocketArchiveNetworkClient.field_v != 1) {
           var2 = (var2 << 8) / InstrumentNoteMask.field_i;
           this.drawBall(300, var3, var4, var2, 300);
         } else {

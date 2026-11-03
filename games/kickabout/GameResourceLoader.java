@@ -134,7 +134,7 @@ final class GameResourceLoader implements LoadingSequence {
           sk.a(86, 100, 30);
           sk.a(103, 100, 35);
           sk.a(-94, 100, 40);
-          tb.field_q = ng.a("digits", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
+          SocketArchiveNetworkClient.field_q = ng.a("digits", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
           MouseInputHandler.field_g = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -121, "hud", "cones");
           SpriteState.field_p = ng.a("tutorial", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
           tn.field_e = wa.a((byte) 114, "hud", QuickChatKeysHelpPanel.field_Cb, "arrow");

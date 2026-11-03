@@ -149,7 +149,7 @@ final class OffscreenPlayerArrow {
           var7 = var2 * ei.sine(-var3 + this.field_a, (byte) -23) * 40 >> 24;
           var8 = 40 * (var2 * we.cosine(var3 + this.field_a, false)) >> 24;
           var9 = 40 * var2 * ei.sine(var3 + this.field_a, (byte) -23) >> 24;
-          if (0 == tb.field_v) {
+          if (0 == SocketArchiveNetworkClient.field_v) {
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(this.field_b, this.field_d);
             TriangleRasterizer.a(this.field_d, var7 + this.field_d, this.field_d + var5, this.field_b, -var6 + this.field_b, -var4 + this.field_b, 4487082);

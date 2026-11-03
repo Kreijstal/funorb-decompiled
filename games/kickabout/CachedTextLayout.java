@@ -24,7 +24,7 @@ final class CachedTextLayout extends TextLayout {
           AuctionListingDialog.field_I = 0;
           mk.field_c = param1;
           CachedListingRow.field_i = param2;
-          tb.field_w = param0;
+          SocketArchiveNetworkClient.field_w = param0;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "st.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

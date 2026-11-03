@@ -249,7 +249,7 @@ final class MyPitchScreen extends TeamManagementScreen {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            ParticipantStatus.field_t.a(AnimationSkeleton.field_e, 20, TrinketUnlockNotice.field_f);
+            ParticipantStatus.field_t.attachSocket(AnimationSkeleton.field_e, 20, TrinketUnlockNotice.field_f);
             AnimationSkeleton.field_e = null;
             IterableDualLinkDeque.field_a = 0;
             iv.field_o = null;

@@ -14,12 +14,12 @@ final class f {
           param4 = f.$cfr$intArgs$a$8e2a9e3a0d15(120, param1 / 10, param2, param3, param4);
         }
         if (param0 > 109) {
-          var5 = tb.field_q[param1 % 10];
+          var5 = SocketArchiveNetworkClient.field_q[param1 % 10];
           var5.drawAdditive(-var5.field_s + param4, param3, param2);
           return var5.field_q + param4 + 3;
         }
         f.$cfr$intArgs$a$8e2a9e3a0d15(-108, -67, -1, 23, 75);
-        var5Lifetime1 = tb.field_q[param1 % 10];
+        var5Lifetime1 = SocketArchiveNetworkClient.field_q[param1 % 10];
         var5Lifetime1.drawAdditive(-var5Lifetime1.field_s + param4, param3, param2);
         return var5Lifetime1.field_q + param4 + 3;
     }
@@ -67,12 +67,12 @@ final class f {
           param4 = f.$cfr$intArgs$a$8e2a9e3a0d15(120, param1 / 10, param2, param3, param4);
         }
         if (param0 > 109) {
-          var5 = tb.field_q[param1 % 10];
+          var5 = SocketArchiveNetworkClient.field_q[param1 % 10];
           var5.drawAdditive(-var5.field_s + param4, param3, param2);
           return var5.field_q + param4 + 3;
         }
         f.$cfr$intArgs$a$8e2a9e3a0d15(-108, -67, -1, 23, 75);
-        var5Lifetime1 = tb.field_q[param1 % 10];
+        var5Lifetime1 = SocketArchiveNetworkClient.field_q[param1 % 10];
         var5Lifetime1.drawAdditive(-var5Lifetime1.field_s + param4, param3, param2);
         return var5Lifetime1.field_q + param4 + 3;
     }

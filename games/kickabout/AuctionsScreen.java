@@ -635,11 +635,11 @@ final class AuctionsScreen extends ButtonMenuScreen {
               RankingsScreen.queueNewAuctionDialog(25);
               ShopPlayerSlot.c(49, 55);
             } else {
-              tb.a((byte) 126, 33);
+              SocketArchiveNetworkClient.a((byte) 126, 33);
               ShopPlayerSlot.c(53, -126);
             }
           } else {
-            tb.a((byte) 126, 6);
+            SocketArchiveNetworkClient.a((byte) 126, 6);
             ShopPlayerSlot.c(53, -120);
           }
         }

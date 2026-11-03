@@ -86,17 +86,17 @@ final class MusicPatch extends IntrusiveNode {
             MusicPatch.a(32);
           }
           SquadPickerDialog.field_Q.b(var1_int, var2, FriendsListPanel.a(false, (byte) 51));
-          if (tb.field_w != null) {
+          if (SocketArchiveNetworkClient.field_w != null) {
             AuctionListing.a(1 + var1_int + PitchOptionTile.field_yb, param0 ^ -16754303, 1 + var1_int, 1 + var2 + IconLabel.field_Bb, 1 + var2);
             for (var3_int = 0; 2 > var3_int; var3_int++) {
               if (mk.field_c != -2) {
-                stackIn_17_0 = (var3_int != tb.field_w.field_g[mk.field_c].field_p) ? 0 : 1;
+                stackIn_17_0 = (var3_int != SocketArchiveNetworkClient.field_w.field_g[mk.field_c].field_p) ? 0 : 1;
               } else {
                 stackIn_17_0 = (var3_int != 0) ? 0 : 1;
               }
               var4 = stackIn_17_0;
               for (var5 = 0; var5 < 5; var5++) {
-                var11 = (RenderedFootballer) (tb.field_w.field_P[var3_int][var5]);
+                var11 = (RenderedFootballer) (SocketArchiveNetworkClient.field_w.field_P[var3_int][var5]);
                 stackIn_22_0 = (var4 != 0) ? 2271999 : 16716032;
                 var7 = stackIn_22_0;
                 if (var5 == 0) {
@@ -114,11 +114,11 @@ final class MusicPatch extends IntrusiveNode {
                 SoftwareRasterizer.drawCircle(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
               }
             }
-            var3 = (RenderedBall) (tb.field_w.field_V);
+            var3 = (RenderedBall) (SocketArchiveNetworkClient.field_w.field_V);
             var4Lifetime1 = var3.field_N >> 16;
             var5Lifetime1 = var3.field_E >> 16;
-            if (tb.field_w.field_V.possessorTeam != -1) {
-              var12 = (RenderedFootballer) (tb.field_w.getBallCarrier((byte) -96));
+            if (SocketArchiveNetworkClient.field_w.field_V.possessorTeam != -1) {
+              var12 = (RenderedFootballer) (SocketArchiveNetworkClient.field_w.getBallCarrier((byte) -96));
               stackIn_34_0 = (!var12.isMovingDiagonally(false)) ? 40 : 30;
               var7Lifetime1 = stackIn_34_0;
               var5Lifetime1 = (var12.field_bb >> 16) + var12.directionY * var7Lifetime1;

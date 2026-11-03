@@ -446,7 +446,7 @@ final class PlayerContextMenu {
         }
         var3 = var5.field_ec;
         if (var5.field_hc) {
-          this.field_j.addItem(0, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, tb.field_u, new String[]{var3}));
+          this.field_j.addItem(0, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocketArchiveNetworkClient.field_u, new String[]{var3}));
           this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ReceivedAuctionItem.field_z, new String[]{var3}));
           if (param0 == 1) {
             return;

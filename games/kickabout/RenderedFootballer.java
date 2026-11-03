@@ -378,7 +378,7 @@ final class RenderedFootballer extends FootballerAgent {
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!this.megamode && (1 == tb.field_v ||
+        if (!this.megamode && (1 == SocketArchiveNetworkClient.field_v ||
           this.field_ab ||
           this.field_T)) {
           PacketBuffer.a(-88, kw.field_f);

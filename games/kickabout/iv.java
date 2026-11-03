@@ -362,10 +362,10 @@ class iv extends DualLinkNode {
                 if (var5 <= param0) {
                   return null;
                 }
-                stackIn_34_0 = tb.field_r;
+                stackIn_34_0 = SocketArchiveNetworkClient.field_r;
                 return stackIn_34_0;
               }
-              stackIn_19_0 = tb.field_r;
+              stackIn_19_0 = SocketArchiveNetworkClient.field_r;
               return stackIn_19_0;
             }
             stackIn_14_0 = TeamSelectionView.field_m;

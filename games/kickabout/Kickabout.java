@@ -286,12 +286,12 @@ public final class Kickabout extends GameLoopApplet {
           return true;
         }
         if (param1 == 103 &&
-          tb.field_v == 1) {
-          tb.field_v = 0;
+          SocketArchiveNetworkClient.field_v == 1) {
+          SocketArchiveNetworkClient.field_v = 0;
         }
         if (102 == param1 &&
-          tb.field_v == 0) {
-          tb.field_v = 1;
+          SocketArchiveNetworkClient.field_v == 0) {
+          SocketArchiveNetworkClient.field_v = 1;
         }
         if (AchievementsScreen.a(false)) {
           boolean decompiledFrameRemainder2 = true;
@@ -932,7 +932,7 @@ public final class Kickabout extends GameLoopApplet {
                   return true;
                 }
                 ((ButtonMenuScreen) (AuctionLogEntry.field_h)).enterScreen(param2 ^ 1, 0, true);
-                tb.a((byte) 126, 28);
+                SocketArchiveNetworkClient.a((byte) 126, 28);
               }
               return true;
             }
@@ -950,9 +950,9 @@ public final class Kickabout extends GameLoopApplet {
               GameLoopApplet.field_E.readFromPacket(85, param1, 4);
               ByteStorage.field_c = GameLoopApplet.field_E.field_d;
               if (GameLoopApplet.field_E.field_L) {
-                tb.field_v = 1;
+                SocketArchiveNetworkClient.field_v = 1;
               } else {
-                tb.field_v = 0;
+                SocketArchiveNetworkClient.field_v = 0;
               }
               ei.field_n = GameLoopApplet.field_E.field_A;
               if (!CachedListingRow.field_h) {
@@ -962,7 +962,7 @@ public final class Kickabout extends GameLoopApplet {
               if (AuctionLogEntry.field_h instanceof TeamManagementScreen &&
                 GameModesHelpScreen.field_G == null) {
                 ((ButtonMenuScreen) (AuctionLogEntry.field_h)).enterScreen(0, 0, true);
-                tb.a((byte) 126, 28);
+                SocketArchiveNetworkClient.a((byte) 126, 28);
               }
               param1.p(param2 ^ -105);
               stackIn_88_0 = (param1.readBits(1, 59) == 1);
@@ -1102,7 +1102,7 @@ public final class Kickabout extends GameLoopApplet {
                 return true;
               }
               if (82 == param0) {
-                tb.a((byte) 126, 38);
+                SocketArchiveNetworkClient.a((byte) 126, 38);
                 return true;
               }
               if (um.field_e != null &&
@@ -1335,7 +1335,7 @@ public final class Kickabout extends GameLoopApplet {
           stackIn_4_0 = (po.a(AuctionLogEntry.field_h, -4) < 640) ? 0 : 1;
           var4 = stackIn_4_0;
           if ((var4 == 0 ||
-            GameModesHelpScreen.field_G != null) && 0 != tb.field_v) {
+            GameModesHelpScreen.field_G != null) && 0 != SocketArchiveNetworkClient.field_v) {
             var3 = 240;
             if ((GameModesHelpScreen.field_G != null)) {
               stackIn_14_0 = (po.a(GameModesHelpScreen.field_G, -4) < 640) ? 0 : 1;
@@ -1784,7 +1784,7 @@ public final class Kickabout extends GameLoopApplet {
         MidiFileReader.releaseStatics();
         MusicPatchPcmStream.a(false);
         PagedHelpScreen.e(param0 - 29110);
-        tb.releaseStatics((byte) -115);
+        SocketArchiveNetworkClient.releaseStatics((byte) -115);
         ui.a(true);
         SectorCacheStore.releaseStatics(-1);
         DiskCacheRequest.g(-26236);

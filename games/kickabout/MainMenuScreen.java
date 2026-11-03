@@ -271,10 +271,10 @@ final class MainMenuScreen extends ButtonMenuScreen {
             ButtonMenuScreen.a(16144);
           } else {
             if (!GameLoopApplet.field_E.field_J[0]) {
-              tb.a((byte) 126, 40);
+              SocketArchiveNetworkClient.a((byte) 126, 40);
             } else {
               if (!GameLoopApplet.field_E.d((byte) 116)) {
-                tb.a((byte) 126, 5);
+                SocketArchiveNetworkClient.a((byte) 126, 5);
               } else {
                 or.field_d.b(90, (byte) 93);
                 DelayedServerPacket.a(26, true, -2);
@@ -295,10 +295,10 @@ final class MainMenuScreen extends ButtonMenuScreen {
           ButtonMenuScreen.a(16144);
         } else {
           if (!GameLoopApplet.field_E.field_J[0]) {
-            tb.a((byte) 126, 40);
+            SocketArchiveNetworkClient.a((byte) 126, 40);
           } else {
             if (!GameLoopApplet.field_E.d((byte) 116)) {
-              tb.a((byte) 126, 5);
+              SocketArchiveNetworkClient.a((byte) 126, 5);
             } else {
               or.field_d.b(90, (byte) 93);
               DelayedServerPacket.a(26, true, -2);

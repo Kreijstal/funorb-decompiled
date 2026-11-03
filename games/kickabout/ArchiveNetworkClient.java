@@ -19,30 +19,30 @@ abstract class ArchiveNetworkClient {
     PacketBuffer field_n;
     ui field_k;
 
-    final int b(int param0) {
+    final int countBackgroundRequests(int param0) {
         if (param0 == -21) {
           return this.field_c.c(-1976587888) + this.field_j.c(-1976587888);
         }
-        this.e(124);
+        this.countPriorityRequests(124);
         return this.field_c.c(-1976587888) + this.field_j.c(-1976587888);
     }
 
-    final boolean d(int param0) {
+    final boolean isBackgroundQueueFull(int param0) {
         if (param0 == 10770) {
-          return this.b(param0 ^ -10759) >= 20 ? true : false;
+          return this.countBackgroundRequests(param0 ^ -10759) >= 20 ? true : false;
         }
         this.field_f = -107;
-        return this.b(param0 ^ -10759) >= 20 ? true : false;
+        return this.countBackgroundRequests(param0 ^ -10759) >= 20 ? true : false;
     }
 
-    abstract void a(Object param0, int param1, boolean param2);
+    abstract void attachSocket(Object param0, int param1, boolean param2);
 
-    final boolean a(int param0) {
+    final boolean isPriorityQueueFull(int param0) {
         if (param0 == 25533) {
-          return this.e(0) >= 20 ? true : false;
+          return this.countPriorityRequests(0) >= 20 ? true : false;
         }
         this.field_g = (byte) -15;
-        return this.e(0) >= 20 ? true : false;
+        return this.countPriorityRequests(0) >= 20 ? true : false;
     }
 
     final static boolean a(String param0, int param1, String param2) {
@@ -107,7 +107,7 @@ abstract class ArchiveNetworkClient {
         field_e = null;
     }
 
-    final ui a(int param0, int param1, byte param2, byte param3, boolean param4) {
+    final ui queueRequest(int param0, int param1, byte param2, byte param3, boolean param4) {
         ui stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         ui stackIn_16_0 = null;
@@ -130,22 +130,22 @@ abstract class ArchiveNetworkClient {
         }
         var8.field_x = param2;
         if (!param4) {
-          if (this.b(-21) >= 20) {
+          if (this.countBackgroundRequests(-21) >= 20) {
             throw new RuntimeException();
           }
           this.field_c.addLast(param3 + 38, var8);
           return var8;
         }
-        if (this.e(0) >= 20) {
+        if (this.countPriorityRequests(0) >= 20) {
           throw new RuntimeException();
         }
         this.field_h.addLast(127, var8);
         return var8;
     }
 
-    abstract void c(int param0);
+    abstract void resetAfterValidationFailure(int param0);
 
-    abstract void b(byte param0);
+    abstract void closeSocket(byte param0);
 
     final static void a(int param0, int param1, int param2, int param3) {
         NumericDateInputWidget.field_R = param2;
@@ -156,14 +156,14 @@ abstract class ArchiveNetworkClient {
         du.field_k = param1;
     }
 
-    abstract boolean a(byte param0);
+    abstract boolean pollResponses(byte param0);
 
-    final int e(int param0) {
+    final int countPriorityRequests(int param0) {
         if (param0 == 0) {
           return this.field_h.c(-1976587888) + this.field_b.c(-1976587888);
         }
         Object var3 = (Object) null;
-        this.a((Object) null, -67, false);
+        this.attachSocket((Object) null, -67, false);
         return this.field_h.c(-1976587888) + this.field_b.c(-1976587888);
     }
 

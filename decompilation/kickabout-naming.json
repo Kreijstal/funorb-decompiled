@@ -2844,6 +2844,14 @@
       "renamedSymbol": "C:TeamManagementScreen"
     },
     {
+      "symbol": "C:tb",
+      "originalName": "tb",
+      "to": "SocketArchiveNetworkClient",
+      "evidence": "Socket-based ArchiveNetworkClient subclass with the same attach, close, poll and control packet methods as GeoBlox SocketArchiveNetworkClient.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SocketArchiveNetworkClient"
+    },
+    {
       "symbol": "C:td",
       "originalName": "td",
       "to": "TrinketCatalog",
@@ -5530,6 +5538,78 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BufferedSocket.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:bi.a(B)Z",
+      "originalName": "a",
+      "to": "pollResponses",
+      "evidence": "Abstract poll that reads available archive responses from the connection.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveNetworkClient.pollResponses(B)Z"
+    },
+    {
+      "symbol": "M:bi.a(I)Z",
+      "originalName": "a",
+      "to": "isPriorityQueueFull",
+      "evidence": "True when twenty or more priority requests are outstanding.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveNetworkClient.isPriorityQueueFull(I)Z"
+    },
+    {
+      "symbol": "M:bi.a(IIBBZ)Lui;",
+      "originalName": "a",
+      "to": "queueRequest",
+      "evidence": "Creates a request keyed by archive and group id and queues it as priority or background, throwing past twenty.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;"
+    },
+    {
+      "symbol": "M:bi.a(Ljava/lang/Object;IZ)V",
+      "originalName": "a",
+      "to": "attachSocket",
+      "evidence": "Abstract attach of a freshly opened socket object to the client.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V"
+    },
+    {
+      "symbol": "M:bi.b(B)V",
+      "originalName": "b",
+      "to": "closeSocket",
+      "evidence": "Abstract close of the underlying connection.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveNetworkClient.closeSocket(B)V"
+    },
+    {
+      "symbol": "M:bi.b(I)I",
+      "originalName": "b",
+      "to": "countBackgroundRequests",
+      "evidence": "Returns the number of pending plus sent background archive requests.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveNetworkClient.countBackgroundRequests(I)I"
+    },
+    {
+      "symbol": "M:bi.c(I)V",
+      "originalName": "c",
+      "to": "resetAfterValidationFailure",
+      "evidence": "Abstract reset after the server rejected the handshake validation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveNetworkClient.resetAfterValidationFailure(I)V"
+    },
+    {
+      "symbol": "M:bi.d(I)Z",
+      "originalName": "d",
+      "to": "isBackgroundQueueFull",
+      "evidence": "True when twenty or more background requests are outstanding.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveNetworkClient.isBackgroundQueueFull(I)Z"
+    },
+    {
+      "symbol": "M:bi.e(I)I",
+      "originalName": "e",
+      "to": "countPriorityRequests",
+      "evidence": "Returns the number of pending plus sent priority archive requests.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveNetworkClient.countPriorityRequests(I)I"
     },
     {
       "symbol": "M:bi.f(I)V",
@@ -11444,6 +11524,14 @@
       "renamedSymbol": "M:TickClock.advanceTicks(IJ)I"
     },
     {
+      "symbol": "M:mc.b(B)J",
+      "originalName": "b",
+      "to": "delayMillis",
+      "evidence": "Returns how many milliseconds remain before the next tick is due, or zero when it is overdue.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TickClock.delayMillis(B)J"
+    },
+    {
       "symbol": "M:mc.b(I)V",
       "originalName": "b",
       "to": "resetTiming",
@@ -14996,12 +15084,60 @@
       "renamedSymbol": "M:TeamManagementScreen.writeEncryptedLoginBlock(LPacketBuffer;Ljava/math/BigInteger;II[BILjava/math/BigInteger;)V"
     },
     {
+      "symbol": "M:tb.a(B)Z",
+      "originalName": "a",
+      "to": "pollResponses",
+      "evidence": "Abstract poll that reads available archive responses from the connection. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.pollResponses(B)Z"
+    },
+    {
+      "symbol": "M:tb.a(Ljava/lang/Object;IZ)V",
+      "originalName": "a",
+      "to": "attachSocket",
+      "evidence": "Abstract attach of a freshly opened socket object to the client. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V"
+    },
+    {
+      "symbol": "M:tb.a(ZZ)V",
+      "originalName": "a",
+      "to": "sendControlPacket",
+      "evidence": "Writes a control packet whose second byte is 2 or 3 to the socket.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.sendControlPacket(ZZ)V"
+    },
+    {
+      "symbol": "M:tb.b(B)V",
+      "originalName": "b",
+      "to": "closeSocket",
+      "evidence": "Abstract close of the underlying connection. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.closeSocket(B)V"
+    },
+    {
       "symbol": "M:tb.c(B)V",
       "originalName": "c",
       "to": "releaseStatics",
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:tb.releaseStatics(B)V"
+      "renamedSymbol": "M:SocketArchiveNetworkClient.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:tb.c(I)V",
+      "originalName": "c",
+      "to": "resetAfterValidationFailure",
+      "evidence": "Abstract reset after the server rejected the handshake validation. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.resetAfterValidationFailure(I)V"
+    },
+    {
+      "symbol": "M:tb.g(I)V",
+      "originalName": "g",
+      "to": "sendSetupPacket",
+      "evidence": "Writes the setup packet to the socket right after connecting.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.sendSetupPacket(I)V"
     },
     {
       "symbol": "M:tc.a(IBILnl;I)Z",
@@ -16418,6 +16554,22 @@
       "evidence": "Matches escapevector/steelsentinels NanoTickClock.advanceTicks by signature and body shape.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NanoTickClock.advanceTicks(IJ)I"
+    },
+    {
+      "symbol": "M:vi.a(Z)J",
+      "originalName": "a",
+      "to": "averageFrameNanos",
+      "evidence": "Records the nanoTime delta since the last call in a ring buffer and returns the frame time used for pacing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoTickClock.averageFrameNanos(Z)J"
+    },
+    {
+      "symbol": "M:vi.b(B)J",
+      "originalName": "b",
+      "to": "delayMillis",
+      "evidence": "Returns how many milliseconds remain before the next tick is due, or zero when it is overdue. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoTickClock.delayMillis(B)J"
     },
     {
       "symbol": "M:vi.b(I)V",
@@ -23375,9 +23527,9 @@
     },
     {
       "symbol": "C:tb",
-      "renamedSymbol": "C:tb",
+      "renamedSymbol": "C:SocketArchiveNetworkClient",
       "originalName": "tb",
-      "renamedName": "tb",
+      "renamedName": "SocketArchiveNetworkClient",
       "declaration": {
         "file": "tb.java",
         "start": 69,
@@ -66946,7 +67098,7 @@
     },
     {
       "symbol": "F:tb.field_q:[Lut;",
-      "renamedSymbol": "F:tb.field_q:[LSprite;",
+      "renamedSymbol": "F:SocketArchiveNetworkClient.field_q:[LSprite;",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -66957,7 +67109,7 @@
     },
     {
       "symbol": "F:tb.field_r:Ljava/lang/String;",
-      "renamedSymbol": "F:tb.field_r:Ljava/lang/String;",
+      "renamedSymbol": "F:SocketArchiveNetworkClient.field_r:Ljava/lang/String;",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -66968,7 +67120,7 @@
     },
     {
       "symbol": "F:tb.field_s:I",
-      "renamedSymbol": "F:tb.field_s:I",
+      "renamedSymbol": "F:SocketArchiveNetworkClient.field_s:I",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -66979,7 +67131,7 @@
     },
     {
       "symbol": "F:tb.field_t:Lff;",
-      "renamedSymbol": "F:tb.field_t:Lff;",
+      "renamedSymbol": "F:SocketArchiveNetworkClient.field_t:Lff;",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -66990,7 +67142,7 @@
     },
     {
       "symbol": "F:tb.field_u:Ljava/lang/String;",
-      "renamedSymbol": "F:tb.field_u:Ljava/lang/String;",
+      "renamedSymbol": "F:SocketArchiveNetworkClient.field_u:Ljava/lang/String;",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -67001,7 +67153,7 @@
     },
     {
       "symbol": "F:tb.field_v:I",
-      "renamedSymbol": "F:tb.field_v:I",
+      "renamedSymbol": "F:SocketArchiveNetworkClient.field_v:I",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -67012,7 +67164,7 @@
     },
     {
       "symbol": "F:tb.field_w:Lnu;",
-      "renamedSymbol": "F:tb.field_w:LCommonGame;",
+      "renamedSymbol": "F:SocketArchiveNetworkClient.field_w:LCommonGame;",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -67023,7 +67175,7 @@
     },
     {
       "symbol": "F:tb.field_x:Lbh;",
-      "renamedSymbol": "F:tb.field_x:LBufferedSocket;",
+      "renamedSymbol": "F:SocketArchiveNetworkClient.field_x:LBufferedSocket;",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -94105,7 +94257,7 @@
     },
     {
       "symbol": "L:bi.a(IIBBZ)Lui;#0",
-      "renamedSymbol": "L:ArchiveNetworkClient.a(IIBBZ)Lui;#0",
+      "renamedSymbol": "L:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -94116,7 +94268,7 @@
     },
     {
       "symbol": "L:bi.a(IIBBZ)Lui;#1",
-      "renamedSymbol": "L:ArchiveNetworkClient.a(IIBBZ)Lui;#1",
+      "renamedSymbol": "L:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#1",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -94127,7 +94279,7 @@
     },
     {
       "symbol": "L:bi.a(IIBBZ)Lui;#2",
-      "renamedSymbol": "L:ArchiveNetworkClient.a(IIBBZ)Lui;#2",
+      "renamedSymbol": "L:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#2",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -94138,7 +94290,7 @@
     },
     {
       "symbol": "L:bi.a(IIBBZ)Lui;#3",
-      "renamedSymbol": "L:ArchiveNetworkClient.a(IIBBZ)Lui;#3",
+      "renamedSymbol": "L:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#3",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -94149,7 +94301,7 @@
     },
     {
       "symbol": "L:bi.a(IIBBZ)Lui;#4",
-      "renamedSymbol": "L:ArchiveNetworkClient.a(IIBBZ)Lui;#4",
+      "renamedSymbol": "L:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -94160,7 +94312,7 @@
     },
     {
       "symbol": "L:bi.a(IIBBZ)Lui;#5",
-      "renamedSymbol": "L:ArchiveNetworkClient.a(IIBBZ)Lui;#5",
+      "renamedSymbol": "L:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -94259,7 +94411,7 @@
     },
     {
       "symbol": "L:bi.e(I)I#0",
-      "renamedSymbol": "L:ArchiveNetworkClient.e(I)I#0",
+      "renamedSymbol": "L:ArchiveNetworkClient.countPriorityRequests(I)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -288079,7 +288231,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#0",
-      "renamedSymbol": "L:tb.a(B)Z#0",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -288090,7 +288242,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#1",
-      "renamedSymbol": "L:tb.a(B)Z#1",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#1",
       "originalName": "stackIn_46_0",
       "renamedName": "stackIn_46_0",
       "declaration": {
@@ -288101,7 +288253,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#10",
-      "renamedSymbol": "L:tb.a(B)Z#10",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#10",
       "originalName": "var5_ref_Exception",
       "renamedName": "var5_ref_Exception",
       "declaration": {
@@ -288112,7 +288264,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#11",
-      "renamedSymbol": "L:tb.a(B)Z#11",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -288123,7 +288275,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#12",
-      "renamedSymbol": "L:tb.a(B)Z#12",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -288134,7 +288286,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#13",
-      "renamedSymbol": "L:tb.a(B)Z#13",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -288145,7 +288297,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#14",
-      "renamedSymbol": "L:tb.a(B)Z#14",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#14",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -288156,7 +288308,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#15",
-      "renamedSymbol": "L:tb.a(B)Z#15",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#15",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -288167,7 +288319,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#16",
-      "renamedSymbol": "L:tb.a(B)Z#16",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#16",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -288178,7 +288330,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#17",
-      "renamedSymbol": "L:tb.a(B)Z#17",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#17",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -288189,7 +288341,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#18",
-      "renamedSymbol": "L:tb.a(B)Z#18",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#18",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -288200,7 +288352,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#19",
-      "renamedSymbol": "L:tb.a(B)Z#19",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#19",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -288211,7 +288363,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#2",
-      "renamedSymbol": "L:tb.a(B)Z#2",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#2",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -288222,7 +288374,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#20",
-      "renamedSymbol": "L:tb.a(B)Z#20",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#20",
       "originalName": "var14_ref",
       "renamedName": "var14_ref",
       "declaration": {
@@ -288233,7 +288385,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#21",
-      "renamedSymbol": "L:tb.a(B)Z#21",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#21",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -288244,7 +288396,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#22",
-      "renamedSymbol": "L:tb.a(B)Z#22",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#22",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -288255,7 +288407,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#23",
-      "renamedSymbol": "L:tb.a(B)Z#23",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#23",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -288266,7 +288418,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#24",
-      "renamedSymbol": "L:tb.a(B)Z#24",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#24",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -288277,7 +288429,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#25",
-      "renamedSymbol": "L:tb.a(B)Z#25",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#25",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -288288,7 +288440,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#26",
-      "renamedSymbol": "L:tb.a(B)Z#26",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#26",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -288299,7 +288451,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#27",
-      "renamedSymbol": "L:tb.a(B)Z#27",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#27",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -288310,7 +288462,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#28",
-      "renamedSymbol": "L:tb.a(B)Z#28",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#28",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -288321,7 +288473,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#29",
-      "renamedSymbol": "L:tb.a(B)Z#29",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#29",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -288332,7 +288484,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#3",
-      "renamedSymbol": "L:tb.a(B)Z#3",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -288343,7 +288495,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#30",
-      "renamedSymbol": "L:tb.a(B)Z#30",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#30",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -288354,7 +288506,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#31",
-      "renamedSymbol": "L:tb.a(B)Z#31",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#31",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -288365,7 +288517,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#32",
-      "renamedSymbol": "L:tb.a(B)Z#32",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#32",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -288376,7 +288528,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#4",
-      "renamedSymbol": "L:tb.a(B)Z#4",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#4",
       "originalName": "var2_long",
       "renamedName": "var2_long",
       "declaration": {
@@ -288387,7 +288539,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#5",
-      "renamedSymbol": "L:tb.a(B)Z#5",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -288398,7 +288550,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#6",
-      "renamedSymbol": "L:tb.a(B)Z#6",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#6",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -288409,7 +288561,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#7",
-      "renamedSymbol": "L:tb.a(B)Z#7",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#7",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -288420,7 +288572,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#8",
-      "renamedSymbol": "L:tb.a(B)Z#8",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -288431,7 +288583,7 @@
     },
     {
       "symbol": "L:tb.a(B)Z#9",
-      "renamedSymbol": "L:tb.a(B)Z#9",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.pollResponses(B)Z#9",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -288442,7 +288594,7 @@
     },
     {
       "symbol": "L:tb.a(BI)V#0",
-      "renamedSymbol": "L:tb.a(BI)V#0",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(BI)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -288453,7 +288605,7 @@
     },
     {
       "symbol": "L:tb.a(BI)V#1",
-      "renamedSymbol": "L:tb.a(BI)V#1",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(BI)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -288464,7 +288616,7 @@
     },
     {
       "symbol": "L:tb.a(BI)V#2",
-      "renamedSymbol": "L:tb.a(BI)V#2",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(BI)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -288475,7 +288627,7 @@
     },
     {
       "symbol": "L:tb.a(BI)V#3",
-      "renamedSymbol": "L:tb.a(BI)V#3",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(BI)V#3",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -288486,7 +288638,7 @@
     },
     {
       "symbol": "L:tb.a(ILsj;)V#0",
-      "renamedSymbol": "L:tb.a(ILResourceArchive;)V#0",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(ILResourceArchive;)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -288497,7 +288649,7 @@
     },
     {
       "symbol": "L:tb.a(ILsj;)V#1",
-      "renamedSymbol": "L:tb.a(ILResourceArchive;)V#1",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(ILResourceArchive;)V#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -288508,7 +288660,7 @@
     },
     {
       "symbol": "L:tb.a(ILsj;)V#2",
-      "renamedSymbol": "L:tb.a(ILResourceArchive;)V#2",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(ILResourceArchive;)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -288519,7 +288671,7 @@
     },
     {
       "symbol": "L:tb.a(ILsj;)V#3",
-      "renamedSymbol": "L:tb.a(ILResourceArchive;)V#3",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(ILResourceArchive;)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -288530,7 +288682,7 @@
     },
     {
       "symbol": "L:tb.a(ILsj;)V#4",
-      "renamedSymbol": "L:tb.a(ILResourceArchive;)V#4",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(ILResourceArchive;)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -288541,7 +288693,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#0",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#0",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#0",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -288552,7 +288704,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#1",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#1",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#1",
       "originalName": "stackIn_25_1",
       "renamedName": "stackIn_25_1",
       "declaration": {
@@ -288563,7 +288715,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#10",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#10",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#10",
       "originalName": "var4_refLifetime1",
       "renamedName": "var4_refLifetime1",
       "declaration": {
@@ -288574,7 +288726,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#11",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#11",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -288585,7 +288737,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#12",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#12",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#12",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -288596,7 +288748,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#13",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#13",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#13",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -288607,7 +288759,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#14",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#14",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#14",
       "originalName": "decompiledCaughtParameter3",
       "renamedName": "decompiledCaughtParameter3",
       "declaration": {
@@ -288618,7 +288770,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#15",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#15",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#15",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -288629,7 +288781,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#16",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#16",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#16",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -288640,7 +288792,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#2",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#2",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#2",
       "originalName": "stackIn_26_2",
       "renamedName": "stackIn_26_2",
       "declaration": {
@@ -288651,7 +288803,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#3",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#3",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -288662,7 +288814,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#4",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#4",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -288673,7 +288825,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#5",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#5",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#5",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -288684,7 +288836,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#6",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#6",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#6",
       "originalName": "var4_ref2",
       "renamedName": "var4_ref2",
       "declaration": {
@@ -288695,7 +288847,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#7",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#7",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#7",
       "originalName": "var4_ref3",
       "renamedName": "var4_ref3",
       "declaration": {
@@ -288706,7 +288858,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#8",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#8",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -288717,7 +288869,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/Object;IZ)V#9",
-      "renamedSymbol": "L:tb.a(Ljava/lang/Object;IZ)V#9",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -288728,7 +288880,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/String;I)Z#0",
-      "renamedSymbol": "L:tb.a(Ljava/lang/String;I)Z#0",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -288739,7 +288891,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/String;I)Z#1",
-      "renamedSymbol": "L:tb.a(Ljava/lang/String;I)Z#1",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -288750,7 +288902,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/String;I)Z#2",
-      "renamedSymbol": "L:tb.a(Ljava/lang/String;I)Z#2",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -288761,7 +288913,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/String;I)Z#3",
-      "renamedSymbol": "L:tb.a(Ljava/lang/String;I)Z#3",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z#3",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -288772,7 +288924,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/String;I)Z#4",
-      "renamedSymbol": "L:tb.a(Ljava/lang/String;I)Z#4",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z#4",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -288783,7 +288935,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/String;I)Z#5",
-      "renamedSymbol": "L:tb.a(Ljava/lang/String;I)Z#5",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z#5",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -288794,7 +288946,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/String;I)Z#6",
-      "renamedSymbol": "L:tb.a(Ljava/lang/String;I)Z#6",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -288805,7 +288957,7 @@
     },
     {
       "symbol": "L:tb.a(Ljava/lang/String;I)Z#7",
-      "renamedSymbol": "L:tb.a(Ljava/lang/String;I)Z#7",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -288816,7 +288968,7 @@
     },
     {
       "symbol": "L:tb.a(ZZ)V#0",
-      "renamedSymbol": "L:tb.a(ZZ)V#0",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#0",
       "originalName": "iOException",
       "renamedName": "iOException",
       "declaration": {
@@ -288827,7 +288979,7 @@
     },
     {
       "symbol": "L:tb.a(ZZ)V#1",
-      "renamedSymbol": "L:tb.a(ZZ)V#1",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#1",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -288838,7 +288990,7 @@
     },
     {
       "symbol": "L:tb.a(ZZ)V#2",
-      "renamedSymbol": "L:tb.a(ZZ)V#2",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#2",
       "originalName": "stackIn_5_1",
       "renamedName": "stackIn_5_1",
       "declaration": {
@@ -288849,7 +289001,7 @@
     },
     {
       "symbol": "L:tb.a(ZZ)V#3",
-      "renamedSymbol": "L:tb.a(ZZ)V#3",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#3",
       "originalName": "stackIn_6_2",
       "renamedName": "stackIn_6_2",
       "declaration": {
@@ -288860,7 +289012,7 @@
     },
     {
       "symbol": "L:tb.a(ZZ)V#4",
-      "renamedSymbol": "L:tb.a(ZZ)V#4",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -288871,7 +289023,7 @@
     },
     {
       "symbol": "L:tb.a(ZZ)V#5",
-      "renamedSymbol": "L:tb.a(ZZ)V#5",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -288882,7 +289034,7 @@
     },
     {
       "symbol": "L:tb.a(ZZ)V#6",
-      "renamedSymbol": "L:tb.a(ZZ)V#6",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -288893,7 +289045,7 @@
     },
     {
       "symbol": "L:tb.a(ZZ)V#7",
-      "renamedSymbol": "L:tb.a(ZZ)V#7",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#7",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -288904,7 +289056,7 @@
     },
     {
       "symbol": "L:tb.a(ZZ)V#8",
-      "renamedSymbol": "L:tb.a(ZZ)V#8",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#8",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -288915,7 +289067,7 @@
     },
     {
       "symbol": "L:tb.a(ZZ)V#9",
-      "renamedSymbol": "L:tb.a(ZZ)V#9",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#9",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -288926,7 +289078,7 @@
     },
     {
       "symbol": "L:tb.c(B)V#0",
-      "renamedSymbol": "L:tb.releaseStatics(B)V#0",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.releaseStatics(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -288937,7 +289089,7 @@
     },
     {
       "symbol": "L:tb.c(I)V#0",
-      "renamedSymbol": "L:tb.c(I)V#0",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.resetAfterValidationFailure(I)V#0",
       "originalName": "exception",
       "renamedName": "exception",
       "declaration": {
@@ -288948,7 +289100,7 @@
     },
     {
       "symbol": "L:tb.c(I)V#1",
-      "renamedSymbol": "L:tb.c(I)V#1",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.resetAfterValidationFailure(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -288959,7 +289111,7 @@
     },
     {
       "symbol": "L:tb.g(I)V#0",
-      "renamedSymbol": "L:tb.g(I)V#0",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendSetupPacket(I)V#0",
       "originalName": "iOException",
       "renamedName": "iOException",
       "declaration": {
@@ -288970,7 +289122,7 @@
     },
     {
       "symbol": "L:tb.g(I)V#1",
-      "renamedSymbol": "L:tb.g(I)V#1",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendSetupPacket(I)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -288981,7 +289133,7 @@
     },
     {
       "symbol": "L:tb.g(I)V#2",
-      "renamedSymbol": "L:tb.g(I)V#2",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendSetupPacket(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -288992,7 +289144,7 @@
     },
     {
       "symbol": "L:tb.g(I)V#3",
-      "renamedSymbol": "L:tb.g(I)V#3",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendSetupPacket(I)V#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -289003,7 +289155,7 @@
     },
     {
       "symbol": "L:tb.g(I)V#4",
-      "renamedSymbol": "L:tb.g(I)V#4",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendSetupPacket(I)V#4",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -289014,7 +289166,7 @@
     },
     {
       "symbol": "L:tb.g(I)V#5",
-      "renamedSymbol": "L:tb.g(I)V#5",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendSetupPacket(I)V#5",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -289025,7 +289177,7 @@
     },
     {
       "symbol": "L:tb.g(I)V#6",
-      "renamedSymbol": "L:tb.g(I)V#6",
+      "renamedSymbol": "L:SocketArchiveNetworkClient.sendSetupPacket(I)V#6",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -320199,7 +320351,7 @@
     },
     {
       "symbol": "L:vi.a(Z)J#0",
-      "renamedSymbol": "L:NanoTickClock.a(Z)J#0",
+      "renamedSymbol": "L:NanoTickClock.averageFrameNanos(Z)J#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -320210,7 +320362,7 @@
     },
     {
       "symbol": "L:vi.a(Z)J#1",
-      "renamedSymbol": "L:NanoTickClock.a(Z)J#1",
+      "renamedSymbol": "L:NanoTickClock.averageFrameNanos(Z)J#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -320221,7 +320373,7 @@
     },
     {
       "symbol": "L:vi.a(Z)J#2",
-      "renamedSymbol": "L:NanoTickClock.a(Z)J#2",
+      "renamedSymbol": "L:NanoTickClock.averageFrameNanos(Z)J#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -320232,7 +320384,7 @@
     },
     {
       "symbol": "L:vi.a(Z)J#3",
-      "renamedSymbol": "L:NanoTickClock.a(Z)J#3",
+      "renamedSymbol": "L:NanoTickClock.averageFrameNanos(Z)J#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -320243,7 +320395,7 @@
     },
     {
       "symbol": "L:vi.a(Z)J#4",
-      "renamedSymbol": "L:NanoTickClock.a(Z)J#4",
+      "renamedSymbol": "L:NanoTickClock.averageFrameNanos(Z)J#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -347072,9 +347224,9 @@
     },
     {
       "symbol": "M:bi.a(B)Z",
-      "renamedSymbol": "M:ArchiveNetworkClient.a(B)Z",
+      "renamedSymbol": "M:ArchiveNetworkClient.pollResponses(B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollResponses",
       "declaration": {
         "file": "bi.java",
         "start": 4571,
@@ -347083,9 +347235,9 @@
     },
     {
       "symbol": "M:bi.a(I)Z",
-      "renamedSymbol": "M:ArchiveNetworkClient.a(I)Z",
+      "renamedSymbol": "M:ArchiveNetworkClient.isPriorityQueueFull(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isPriorityQueueFull",
       "declaration": {
         "file": "bi.java",
         "start": 939,
@@ -347094,9 +347246,9 @@
     },
     {
       "symbol": "M:bi.a(IIBBZ)Lui;",
-      "renamedSymbol": "M:ArchiveNetworkClient.a(IIBBZ)Lui;",
+      "renamedSymbol": "M:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "queueRequest",
       "declaration": {
         "file": "bi.java",
         "start": 3166,
@@ -347116,9 +347268,9 @@
     },
     {
       "symbol": "M:bi.a(Ljava/lang/Object;IZ)V",
-      "renamedSymbol": "M:ArchiveNetworkClient.a(Ljava/lang/Object;IZ)V",
+      "renamedSymbol": "M:ArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "attachSocket",
       "declaration": {
         "file": "bi.java",
         "start": 874,
@@ -347138,9 +347290,9 @@
     },
     {
       "symbol": "M:bi.b(B)V",
-      "renamedSymbol": "M:ArchiveNetworkClient.b(B)V",
+      "renamedSymbol": "M:ArchiveNetworkClient.closeSocket(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "closeSocket",
       "declaration": {
         "file": "bi.java",
         "start": 4309,
@@ -347149,9 +347301,9 @@
     },
     {
       "symbol": "M:bi.b(I)I",
-      "renamedSymbol": "M:ArchiveNetworkClient.b(I)I",
+      "renamedSymbol": "M:ArchiveNetworkClient.countBackgroundRequests(I)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "countBackgroundRequests",
       "declaration": {
         "file": "bi.java",
         "start": 388,
@@ -347160,9 +347312,9 @@
     },
     {
       "symbol": "M:bi.c(I)V",
-      "renamedSymbol": "M:ArchiveNetworkClient.c(I)V",
+      "renamedSymbol": "M:ArchiveNetworkClient.resetAfterValidationFailure(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "resetAfterValidationFailure",
       "declaration": {
         "file": "bi.java",
         "start": 4275,
@@ -347171,9 +347323,9 @@
     },
     {
       "symbol": "M:bi.d(I)Z",
-      "renamedSymbol": "M:ArchiveNetworkClient.d(I)Z",
+      "renamedSymbol": "M:ArchiveNetworkClient.isBackgroundQueueFull(I)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "isBackgroundQueueFull",
       "declaration": {
         "file": "bi.java",
         "start": 639,
@@ -347182,9 +347334,9 @@
     },
     {
       "symbol": "M:bi.e(I)I",
-      "renamedSymbol": "M:ArchiveNetworkClient.e(I)I",
+      "renamedSymbol": "M:ArchiveNetworkClient.countPriorityRequests(I)I",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "countPriorityRequests",
       "declaration": {
         "file": "bi.java",
         "start": 4602,
@@ -368423,9 +368575,9 @@
     },
     {
       "symbol": "M:mc.b(B)J",
-      "renamedSymbol": "M:TickClock.b(B)J",
+      "renamedSymbol": "M:TickClock.delayMillis(B)J",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "delayMillis",
       "declaration": {
         "file": "mc.java",
         "start": 2281,
@@ -382668,9 +382820,9 @@
     },
     {
       "symbol": "M:tb.<init>()V",
-      "renamedSymbol": "M:tb.<init>()V",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.<init>()V",
       "originalName": "tb",
-      "renamedName": "tb",
+      "renamedName": "SocketArchiveNetworkClient",
       "declaration": {
         "file": "tb.java",
         "start": 20971,
@@ -382679,9 +382831,9 @@
     },
     {
       "symbol": "M:tb.a(B)Z",
-      "renamedSymbol": "M:tb.a(B)Z",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.pollResponses(B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollResponses",
       "declaration": {
         "file": "tb.java",
         "start": 301,
@@ -382690,7 +382842,7 @@
     },
     {
       "symbol": "M:tb.a(BI)V",
-      "renamedSymbol": "M:tb.a(BI)V",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.a(BI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -382701,7 +382853,7 @@
     },
     {
       "symbol": "M:tb.a(ILsj;)V",
-      "renamedSymbol": "M:tb.a(ILResourceArchive;)V",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.a(ILResourceArchive;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -382712,9 +382864,9 @@
     },
     {
       "symbol": "M:tb.a(Ljava/lang/Object;IZ)V",
-      "renamedSymbol": "M:tb.a(Ljava/lang/Object;IZ)V",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "attachSocket",
       "declaration": {
         "file": "tb.java",
         "start": 11822,
@@ -382723,7 +382875,7 @@
     },
     {
       "symbol": "M:tb.a(Ljava/lang/String;I)Z",
-      "renamedSymbol": "M:tb.a(Ljava/lang/String;I)Z",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -382734,9 +382886,9 @@
     },
     {
       "symbol": "M:tb.a(ZZ)V",
-      "renamedSymbol": "M:tb.a(ZZ)V",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.sendControlPacket(ZZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sendControlPacket",
       "declaration": {
         "file": "tb.java",
         "start": 17554,
@@ -382745,9 +382897,9 @@
     },
     {
       "symbol": "M:tb.b(B)V",
-      "renamedSymbol": "M:tb.b(B)V",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.closeSocket(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "closeSocket",
       "declaration": {
         "file": "tb.java",
         "start": 20780,
@@ -382756,7 +382908,7 @@
     },
     {
       "symbol": "M:tb.c(B)V",
-      "renamedSymbol": "M:tb.releaseStatics(B)V",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.releaseStatics(B)V",
       "originalName": "c",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -382767,9 +382919,9 @@
     },
     {
       "symbol": "M:tb.c(I)V",
-      "renamedSymbol": "M:tb.c(I)V",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.resetAfterValidationFailure(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "resetAfterValidationFailure",
       "declaration": {
         "file": "tb.java",
         "start": 15580,
@@ -382778,9 +382930,9 @@
     },
     {
       "symbol": "M:tb.g(I)V",
-      "renamedSymbol": "M:tb.g(I)V",
+      "renamedSymbol": "M:SocketArchiveNetworkClient.sendSetupPacket(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "sendSetupPacket",
       "declaration": {
         "file": "tb.java",
         "start": 10415,
@@ -388058,9 +388210,9 @@
     },
     {
       "symbol": "M:vi.a(Z)J",
-      "renamedSymbol": "M:NanoTickClock.a(Z)J",
+      "renamedSymbol": "M:NanoTickClock.averageFrameNanos(Z)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "averageFrameNanos",
       "declaration": {
         "file": "vi.java",
         "start": 7473,
@@ -388069,9 +388221,9 @@
     },
     {
       "symbol": "M:vi.b(B)J",
-      "renamedSymbol": "M:NanoTickClock.b(B)J",
+      "renamedSymbol": "M:NanoTickClock.delayMillis(B)J",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "delayMillis",
       "declaration": {
         "file": "vi.java",
         "start": 6923,
@@ -398354,7 +398506,7 @@
     },
     {
       "symbol": "P:bi.a(B)Z#0",
-      "renamedSymbol": "P:ArchiveNetworkClient.a(B)Z#0",
+      "renamedSymbol": "P:ArchiveNetworkClient.pollResponses(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398365,7 +398517,7 @@
     },
     {
       "symbol": "P:bi.a(I)Z#0",
-      "renamedSymbol": "P:ArchiveNetworkClient.a(I)Z#0",
+      "renamedSymbol": "P:ArchiveNetworkClient.isPriorityQueueFull(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398376,7 +398528,7 @@
     },
     {
       "symbol": "P:bi.a(IIBBZ)Lui;#0",
-      "renamedSymbol": "P:ArchiveNetworkClient.a(IIBBZ)Lui;#0",
+      "renamedSymbol": "P:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398387,7 +398539,7 @@
     },
     {
       "symbol": "P:bi.a(IIBBZ)Lui;#1",
-      "renamedSymbol": "P:ArchiveNetworkClient.a(IIBBZ)Lui;#1",
+      "renamedSymbol": "P:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -398398,7 +398550,7 @@
     },
     {
       "symbol": "P:bi.a(IIBBZ)Lui;#2",
-      "renamedSymbol": "P:ArchiveNetworkClient.a(IIBBZ)Lui;#2",
+      "renamedSymbol": "P:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -398409,7 +398561,7 @@
     },
     {
       "symbol": "P:bi.a(IIBBZ)Lui;#3",
-      "renamedSymbol": "P:ArchiveNetworkClient.a(IIBBZ)Lui;#3",
+      "renamedSymbol": "P:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -398420,7 +398572,7 @@
     },
     {
       "symbol": "P:bi.a(IIBBZ)Lui;#4",
-      "renamedSymbol": "P:ArchiveNetworkClient.a(IIBBZ)Lui;#4",
+      "renamedSymbol": "P:ArchiveNetworkClient.queueRequest(IIBBZ)Lui;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -398475,7 +398627,7 @@
     },
     {
       "symbol": "P:bi.a(Ljava/lang/Object;IZ)V#0",
-      "renamedSymbol": "P:ArchiveNetworkClient.a(Ljava/lang/Object;IZ)V#0",
+      "renamedSymbol": "P:ArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398486,7 +398638,7 @@
     },
     {
       "symbol": "P:bi.a(Ljava/lang/Object;IZ)V#1",
-      "renamedSymbol": "P:ArchiveNetworkClient.a(Ljava/lang/Object;IZ)V#1",
+      "renamedSymbol": "P:ArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -398497,7 +398649,7 @@
     },
     {
       "symbol": "P:bi.a(Ljava/lang/Object;IZ)V#2",
-      "renamedSymbol": "P:ArchiveNetworkClient.a(Ljava/lang/Object;IZ)V#2",
+      "renamedSymbol": "P:ArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -398541,7 +398693,7 @@
     },
     {
       "symbol": "P:bi.b(B)V#0",
-      "renamedSymbol": "P:ArchiveNetworkClient.b(B)V#0",
+      "renamedSymbol": "P:ArchiveNetworkClient.closeSocket(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398552,7 +398704,7 @@
     },
     {
       "symbol": "P:bi.b(I)I#0",
-      "renamedSymbol": "P:ArchiveNetworkClient.b(I)I#0",
+      "renamedSymbol": "P:ArchiveNetworkClient.countBackgroundRequests(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398563,7 +398715,7 @@
     },
     {
       "symbol": "P:bi.c(I)V#0",
-      "renamedSymbol": "P:ArchiveNetworkClient.c(I)V#0",
+      "renamedSymbol": "P:ArchiveNetworkClient.resetAfterValidationFailure(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398574,7 +398726,7 @@
     },
     {
       "symbol": "P:bi.d(I)Z#0",
-      "renamedSymbol": "P:ArchiveNetworkClient.d(I)Z#0",
+      "renamedSymbol": "P:ArchiveNetworkClient.isBackgroundQueueFull(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398585,7 +398737,7 @@
     },
     {
       "symbol": "P:bi.e(I)I#0",
-      "renamedSymbol": "P:ArchiveNetworkClient.e(I)I#0",
+      "renamedSymbol": "P:ArchiveNetworkClient.countPriorityRequests(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -447150,7 +447302,7 @@
     },
     {
       "symbol": "P:mc.b(B)J#0",
-      "renamedSymbol": "P:TickClock.b(B)J#0",
+      "renamedSymbol": "P:TickClock.delayMillis(B)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -481448,7 +481600,7 @@
     },
     {
       "symbol": "P:tb.a(B)Z#0",
-      "renamedSymbol": "P:tb.a(B)Z#0",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.pollResponses(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -481459,7 +481611,7 @@
     },
     {
       "symbol": "P:tb.a(BI)V#0",
-      "renamedSymbol": "P:tb.a(BI)V#0",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.a(BI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -481470,7 +481622,7 @@
     },
     {
       "symbol": "P:tb.a(BI)V#1",
-      "renamedSymbol": "P:tb.a(BI)V#1",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.a(BI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -481481,7 +481633,7 @@
     },
     {
       "symbol": "P:tb.a(ILsj;)V#0",
-      "renamedSymbol": "P:tb.a(ILResourceArchive;)V#0",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.a(ILResourceArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -481492,7 +481644,7 @@
     },
     {
       "symbol": "P:tb.a(ILsj;)V#1",
-      "renamedSymbol": "P:tb.a(ILResourceArchive;)V#1",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.a(ILResourceArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -481503,7 +481655,7 @@
     },
     {
       "symbol": "P:tb.a(Ljava/lang/Object;IZ)V#0",
-      "renamedSymbol": "P:tb.a(Ljava/lang/Object;IZ)V#0",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -481514,7 +481666,7 @@
     },
     {
       "symbol": "P:tb.a(Ljava/lang/Object;IZ)V#1",
-      "renamedSymbol": "P:tb.a(Ljava/lang/Object;IZ)V#1",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -481525,7 +481677,7 @@
     },
     {
       "symbol": "P:tb.a(Ljava/lang/Object;IZ)V#2",
-      "renamedSymbol": "P:tb.a(Ljava/lang/Object;IZ)V#2",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.attachSocket(Ljava/lang/Object;IZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -481536,7 +481688,7 @@
     },
     {
       "symbol": "P:tb.a(Ljava/lang/String;I)Z#0",
-      "renamedSymbol": "P:tb.a(Ljava/lang/String;I)Z#0",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -481547,7 +481699,7 @@
     },
     {
       "symbol": "P:tb.a(Ljava/lang/String;I)Z#1",
-      "renamedSymbol": "P:tb.a(Ljava/lang/String;I)Z#1",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.a(Ljava/lang/String;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -481558,7 +481710,7 @@
     },
     {
       "symbol": "P:tb.a(ZZ)V#0",
-      "renamedSymbol": "P:tb.a(ZZ)V#0",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -481569,7 +481721,7 @@
     },
     {
       "symbol": "P:tb.a(ZZ)V#1",
-      "renamedSymbol": "P:tb.a(ZZ)V#1",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.sendControlPacket(ZZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -481580,7 +481732,7 @@
     },
     {
       "symbol": "P:tb.b(B)V#0",
-      "renamedSymbol": "P:tb.b(B)V#0",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.closeSocket(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -481591,7 +481743,7 @@
     },
     {
       "symbol": "P:tb.c(B)V#0",
-      "renamedSymbol": "P:tb.releaseStatics(B)V#0",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -481602,7 +481754,7 @@
     },
     {
       "symbol": "P:tb.c(I)V#0",
-      "renamedSymbol": "P:tb.c(I)V#0",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.resetAfterValidationFailure(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -481613,7 +481765,7 @@
     },
     {
       "symbol": "P:tb.g(I)V#0",
-      "renamedSymbol": "P:tb.g(I)V#0",
+      "renamedSymbol": "P:SocketArchiveNetworkClient.sendSetupPacket(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -494538,7 +494690,7 @@
     },
     {
       "symbol": "P:vi.a(Z)J#0",
-      "renamedSymbol": "P:NanoTickClock.a(Z)J#0",
+      "renamedSymbol": "P:NanoTickClock.averageFrameNanos(Z)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -494549,7 +494701,7 @@
     },
     {
       "symbol": "P:vi.b(B)J#0",
-      "renamedSymbol": "P:NanoTickClock.b(B)J#0",
+      "renamedSymbol": "P:NanoTickClock.delayMillis(B)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -505212,7 +505364,7 @@
       "original": "Kickabout.java",
       "renamed": "Kickabout.java",
       "inputSha256": "5d14d4972d6e4017842856f8df09e4446dfe4b433e7552af0462ecdd073b46a4",
-      "outputSha256": "b39286e83ddaa59b064549f21ba1ca1c72fb879ce50f278b464d5ae33099bdb7",
+      "outputSha256": "e5b246e4e95091bae7b2df6cb219ea456784fac53d0571256606d01489353ae9",
       "edits": [
         {
           "start": 75,
@@ -506081,6 +506233,34 @@
           "symbol": "C:ce",
           "original": "ce",
           "renamed": "BuyPlayerDialog"
+        },
+        {
+          "start": 8571,
+          "end": 8573,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
+          "start": 8600,
+          "end": 8602,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
+          "start": 8665,
+          "end": 8667,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
+          "start": 8694,
+          "end": 8696,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 8732,
@@ -507371,6 +507551,13 @@
           "renamed": "enterScreen"
         },
         {
+          "start": 30363,
+          "end": 30365,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 30514,
           "end": 30515,
           "symbol": "M:iw.a(B)I",
@@ -507425,6 +507612,20 @@
           "symbol": "C:tu",
           "original": "tu",
           "renamed": "GameLoopApplet"
+        },
+        {
+          "start": 31018,
+          "end": 31020,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
+          "start": 31073,
+          "end": 31075,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 31132,
@@ -507502,6 +507703,13 @@
           "symbol": "M:qt.a(IIZ)V",
           "original": "a",
           "renamed": "enterScreen"
+        },
+        {
+          "start": 31460,
+          "end": 31462,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 31574,
@@ -507915,6 +508123,13 @@
           "symbol": "C:an",
           "original": "an",
           "renamed": "QuickChatPhraseCache"
+        },
+        {
+          "start": 36661,
+          "end": 36663,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 36795,
@@ -508510,6 +508725,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "GameModesHelpScreen"
+        },
+        {
+          "start": 46499,
+          "end": 46501,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 46554,
@@ -511891,6 +512113,13 @@
           "symbol": "C:dj",
           "original": "dj",
           "renamed": "PagedHelpScreen"
+        },
+        {
+          "start": 58115,
+          "end": 58117,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 58118,
@@ -543798,7 +544027,7 @@
       "original": "ba.java",
       "renamed": "TrinketCountSortCriterion.java",
       "inputSha256": "804bf11d29d0d0ef0626c88a0c76e5cc99393902895975f2d778920cacc997e3",
-      "outputSha256": "40fef928feb5c5fe5d0c097f8afc54d8664361d7a1c8f1bc50ea9cbe53c200eb",
+      "outputSha256": "8c47503994d06bad550f3f07337cd979d90f682e6a7520ea3776927ac9c78b45",
       "edits": [
         {
           "start": 69,
@@ -544788,6 +545017,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 13974,
+          "end": 13976,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 14017,
           "end": 14019,
           "symbol": "C:eq",
@@ -544982,6 +545218,13 @@
           "symbol": "C:gt",
           "original": "gt",
           "renamed": "ParticipantStatus"
+        },
+        {
+          "start": 16494,
+          "end": 16495,
+          "symbol": "M:bi.b(B)V",
+          "original": "b",
+          "renamed": "closeSocket"
         },
         {
           "start": 16547,
@@ -548811,7 +549054,7 @@
       "original": "bi.java",
       "renamed": "ArchiveNetworkClient.java",
       "inputSha256": "a1abf14bf465a6a4576755a4b318e0c8b989aae5fafdd2bc64540a34a3cd612e",
-      "outputSha256": "d7517432a17640cd20364344683bda020459e2213e5fe7faf116e982d9b9d80a",
+      "outputSha256": "348a1c2eb600c9e1860c32c68525ede40756d6a86796ad84b8d2d1505cff83de",
       "edits": [
         {
           "start": 53,
@@ -548861,6 +549104,69 @@
           "symbol": "C:iw",
           "original": "iw",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 388,
+          "end": 389,
+          "symbol": "M:bi.b(I)I",
+          "original": "b",
+          "renamed": "countBackgroundRequests"
+        },
+        {
+          "start": 532,
+          "end": 533,
+          "symbol": "M:bi.e(I)I",
+          "original": "e",
+          "renamed": "countPriorityRequests"
+        },
+        {
+          "start": 639,
+          "end": 640,
+          "symbol": "M:bi.d(I)Z",
+          "original": "d",
+          "renamed": "isBackgroundQueueFull"
+        },
+        {
+          "start": 708,
+          "end": 709,
+          "symbol": "M:bi.b(I)I",
+          "original": "b",
+          "renamed": "countBackgroundRequests"
+        },
+        {
+          "start": 808,
+          "end": 809,
+          "symbol": "M:bi.b(I)I",
+          "original": "b",
+          "renamed": "countBackgroundRequests"
+        },
+        {
+          "start": 874,
+          "end": 875,
+          "symbol": "M:bi.a(Ljava/lang/Object;IZ)V",
+          "original": "a",
+          "renamed": "attachSocket"
+        },
+        {
+          "start": 939,
+          "end": 940,
+          "symbol": "M:bi.a(I)Z",
+          "original": "a",
+          "renamed": "isPriorityQueueFull"
+        },
+        {
+          "start": 1008,
+          "end": 1009,
+          "symbol": "M:bi.e(I)I",
+          "original": "e",
+          "renamed": "countPriorityRequests"
+        },
+        {
+          "start": 1100,
+          "end": 1101,
+          "symbol": "M:bi.e(I)I",
+          "original": "e",
+          "renamed": "countPriorityRequests"
         },
         {
           "start": 1534,
@@ -548919,11 +549225,25 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 3166,
+          "end": 3167,
+          "symbol": "M:bi.a(IIBBZ)Lui;",
+          "original": "a",
+          "renamed": "queueRequest"
+        },
+        {
           "start": 3702,
           "end": 3704,
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "ArchiveNetworkClient"
+        },
+        {
+          "start": 3965,
+          "end": 3966,
+          "symbol": "M:bi.b(I)I",
+          "original": "b",
+          "renamed": "countBackgroundRequests"
         },
         {
           "start": 4058,
@@ -548933,11 +549253,32 @@
           "renamed": "addLast"
         },
         {
+          "start": 4130,
+          "end": 4131,
+          "symbol": "M:bi.e(I)I",
+          "original": "e",
+          "renamed": "countPriorityRequests"
+        },
+        {
           "start": 4215,
           "end": 4216,
           "symbol": "M:o.a(ILam;)V",
           "original": "a",
           "renamed": "addLast"
+        },
+        {
+          "start": 4275,
+          "end": 4276,
+          "symbol": "M:bi.c(I)V",
+          "original": "c",
+          "renamed": "resetAfterValidationFailure"
+        },
+        {
+          "start": 4309,
+          "end": 4310,
+          "symbol": "M:bi.b(B)V",
+          "original": "b",
+          "renamed": "closeSocket"
         },
         {
           "start": 4408,
@@ -548952,6 +549293,27 @@
           "symbol": "C:wt",
           "original": "wt",
           "renamed": "ArrayWidgetContainer"
+        },
+        {
+          "start": 4571,
+          "end": 4572,
+          "symbol": "M:bi.a(B)Z",
+          "original": "a",
+          "renamed": "pollResponses"
+        },
+        {
+          "start": 4602,
+          "end": 4603,
+          "symbol": "M:bi.e(I)I",
+          "original": "e",
+          "renamed": "countPriorityRequests"
+        },
+        {
+          "start": 4781,
+          "end": 4782,
+          "symbol": "M:bi.a(Ljava/lang/Object;IZ)V",
+          "original": "a",
+          "renamed": "attachSocket"
         },
         {
           "start": 4896,
@@ -553574,7 +553936,7 @@
       "original": "bs.java",
       "renamed": "ClientException.java",
       "inputSha256": "92debfec2d505970d524aec8b5d7c6a4022140ade4e2e7fc23fa5f349d9afcd2",
-      "outputSha256": "e31c274a238fc307ff731cc0503bc9837c10c020f7f036918c1bd5a1cd50251e",
+      "outputSha256": "648f3283de30f09873855967ab093903913e3378b4ec3b8470dbb7484e9e2b5c",
       "edits": [
         {
           "start": 50,
@@ -553759,6 +554121,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 2428,
+          "end": 2430,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 2459,
           "end": 2461,
           "symbol": "C:ta",
@@ -553792,6 +554161,13 @@
           "symbol": "C:ut",
           "original": "ut",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2586,
+          "end": 2588,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 2615,
@@ -559966,7 +560342,7 @@
       "original": "cp.java",
       "renamed": "AudioService.java",
       "inputSha256": "f2a15571f100ce6c56caac8f7943991bd89a1b22240a787a2eb3f099044ea5ed",
-      "outputSha256": "5ef406fddf6cfad1853745a8760a7ed5b058c55bff6bd1c0a8ac2c5d4c765e51",
+      "outputSha256": "8b274805e62e7c5b1cb195edef2162298d6ccb451dd78e590f07ac95d6b006f0",
       "edits": [
         {
           "start": 50,
@@ -560086,6 +560462,13 @@
           "symbol": "C:gt",
           "original": "gt",
           "renamed": "ParticipantStatus"
+        },
+        {
+          "start": 3222,
+          "end": 3223,
+          "symbol": "M:bi.a(B)Z",
+          "original": "a",
+          "renamed": "pollResponses"
         },
         {
           "start": 3256,
@@ -568441,7 +568824,7 @@
       "original": "dt.java",
       "renamed": "OffscreenPlayerArrow.java",
       "inputSha256": "b3347cc8d5cd2b9e51f3be8aa3cfa92c4598de8f34da25bae1de7d9868ab4c0e",
-      "outputSha256": "fc3c5d511d58437c0b42d992afab15cea65a488efbf690209a2a8de88c277c8b",
+      "outputSha256": "07ac4a031142c7c303846c9abca385a9480fdebc36b5c232483e5abb49125b03",
       "edits": [
         {
           "start": 50,
@@ -568596,6 +568979,13 @@
           "symbol": "M:ei.a(IB)I",
           "original": "a",
           "renamed": "sine"
+        },
+        {
+          "start": 4813,
+          "end": 4815,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 4839,
@@ -573378,7 +573768,7 @@
       "original": "eh.java",
       "renamed": "GameResourceLoader.java",
       "inputSha256": "2dda5489aab03a69daccc0405e9a1bc66550933ad60478970b6ba77d67b1e8f0",
-      "outputSha256": "e8a2508254f6c75dc6db0ceb2e4929c4cbbe9a6b129891e33dab66783f563ed1",
+      "outputSha256": "c2c36c8c217c0ab27494065c666fc3c8057c741954e5e4528273c229473d019c",
       "edits": [
         {
           "start": 71,
@@ -574121,6 +574511,13 @@
           "symbol": "C:ot",
           "original": "ot",
           "renamed": "ArgbSprite"
+        },
+        {
+          "start": 4905,
+          "end": 4907,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 4943,
@@ -585868,7 +586265,7 @@
       "original": "f.java",
       "renamed": "f.java",
       "inputSha256": "8f2ae852be4ade0b6e018fd1844de915987715123810fb66f5bdc124622313d2",
-      "outputSha256": "966d28f510a7be725878ade60eec4ecc5f71f453de90b4203d7ad17ec0b5e8cb",
+      "outputSha256": "f1e195471a111af62c51e10532c4d57b62648a3206bb481ce176e43116da468b",
       "edits": [
         {
           "start": 252,
@@ -585885,11 +586282,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 469,
+          "end": 471,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 509,
           "end": 510,
           "symbol": "M:ut.c(III)V",
           "original": "c",
           "renamed": "drawAdditive"
+        },
+        {
+          "start": 692,
+          "end": 694,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 739,
@@ -586046,11 +586457,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 2608,
+          "end": 2610,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 2648,
           "end": 2649,
           "symbol": "M:ut.c(III)V",
           "original": "c",
           "renamed": "drawAdditive"
+        },
+        {
+          "start": 2831,
+          "end": 2833,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 2878,
@@ -590487,7 +590912,7 @@
       "original": "fn.java",
       "renamed": "Trinket.java",
       "inputSha256": "719bddf5cf72087be9c89162b65dbd6cd4079275600fe5980823c12aed2baa9c",
-      "outputSha256": "e5ca2f8b1a44143dac2e2d3816c1397dae2b8138d9b5ec0a36f8071a72967967",
+      "outputSha256": "a6c6ea8634889525a796ad58598ec9edda8f073affd7a905626eeb4c34e3db6f",
       "edits": [
         {
           "start": 50,
@@ -590873,6 +591298,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "IntKeyLookup"
+        },
+        {
+          "start": 8941,
+          "end": 8943,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 8974,
@@ -594655,7 +595087,7 @@
       "original": "fw.java",
       "renamed": "MyPitchScreen.java",
       "inputSha256": "091b8f1cd8e55b350317489411a83360c34d5a30fc23d4a483bdab19b1bdf6f2",
-      "outputSha256": "cd0b614fa64067204bf7fa0378679def828d0b26ff29ae0665aef3056693103b",
+      "outputSha256": "da8d489d49802aab92fccef1b16e92c2546d3e4476672eb0bdd8040b5c9589c9",
       "edits": [
         {
           "start": 69,
@@ -595475,6 +595907,13 @@
           "symbol": "C:gt",
           "original": "gt",
           "renamed": "ParticipantStatus"
+        },
+        {
+          "start": 9042,
+          "end": 9043,
+          "symbol": "M:bi.a(Ljava/lang/Object;IZ)V",
+          "original": "a",
+          "renamed": "attachSocket"
         },
         {
           "start": 9044,
@@ -599393,7 +599832,7 @@
       "original": "gm.java",
       "renamed": "RenderedFootballer.java",
       "inputSha256": "3e6ad043279f7f91d7b62f35493aeccdcf3973d21b61a7811746b70c677a1df9",
-      "outputSha256": "cc654637f5ea7be4e6b2f841456a54c888742073325fef21d33c12c44bcbc258",
+      "outputSha256": "1fa7bbf1b5af42a9c285bcaba0967162d0f925e0c81755bca625135c8727f706",
       "edits": [
         {
           "start": 71,
@@ -600227,6 +600666,13 @@
           "symbol": "F:nl.field_l:Z",
           "original": "field_l",
           "renamed": "megamode"
+        },
+        {
+          "start": 13487,
+          "end": 13489,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 13565,
@@ -608375,7 +608821,7 @@
       "original": "hd.java",
       "renamed": "UiLayoutNode.java",
       "inputSha256": "021e0d32a0bcda06cf510048574c72657aed75860d407bb25949f3e3a420625a",
-      "outputSha256": "ca54fbc59157546e0a772a6f6991512b9a047513c96249931fb57ccd9f553c73",
+      "outputSha256": "97dfc5a904a3ef9292823fdce20558d0d8ec67dece7dd6ba47c65b13959991db",
       "edits": [
         {
           "start": 44,
@@ -608796,6 +609242,13 @@
           "symbol": "C:cq",
           "original": "cq",
           "renamed": "AuctionLogEntry"
+        },
+        {
+          "start": 11385,
+          "end": 11387,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 11432,
@@ -623298,7 +623751,7 @@
       "original": "io.java",
       "renamed": "MenuButton.java",
       "inputSha256": "b43fca74cc155db3f205d9a174d85b8ca13ec18b13796945f82141df8cab81fc",
-      "outputSha256": "5986266269ebe1e0c328cacc04ed852ea0c154dbf02f18705ccda4b6cb4b869c",
+      "outputSha256": "870c2f58520b36f5fa08304812607028b979129e7fc3afc523d5b59e1b13891c",
       "edits": [
         {
           "start": 50,
@@ -623411,6 +623864,13 @@
           "symbol": "M:wf.b(IZ)V",
           "original": "b",
           "renamed": "startComputerMatch"
+        },
+        {
+          "start": 1132,
+          "end": 1134,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 1207,
@@ -623861,6 +624321,20 @@
           "renamed": "kind"
         },
         {
+          "start": 7675,
+          "end": 7677,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
+          "start": 7789,
+          "end": 7791,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 8008,
           "end": 8015,
           "symbol": "F:io.field_m:I",
@@ -624015,11 +624489,25 @@
           "renamed": "GameLoopApplet"
         },
         {
+          "start": 12995,
+          "end": 12997,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 13065,
           "end": 13067,
           "symbol": "C:tu",
           "original": "tu",
           "renamed": "GameLoopApplet"
+        },
+        {
+          "start": 13112,
+          "end": 13114,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 13180,
@@ -624650,6 +625138,13 @@
           "symbol": "C:qv",
           "original": "qv",
           "renamed": "TextWidgetPainter"
+        },
+        {
+          "start": 20053,
+          "end": 20055,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 20124,
@@ -625309,7 +625804,7 @@
       "original": "iq.java",
       "renamed": "TextLayout.java",
       "inputSha256": "37e8430b6c256b76ff43041f62f5897f00c3beda7d4b2b43072c7c2b796772fe",
-      "outputSha256": "a98a6c98034819d185d77e446f0360716d02036155f0b16eec2b2ec3035698f7",
+      "outputSha256": "920c14335bdbfe44a3b03ae9054ec47da39e3a8c6d0c1d6f02aed7bb5d1e1694",
       "edits": [
         {
           "start": 53,
@@ -625366,6 +625861,13 @@
           "symbol": "C:ut",
           "original": "ut",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1470,
+          "end": 1472,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 1608,
@@ -625436,6 +625938,13 @@
           "symbol": "C:ut",
           "original": "ut",
           "renamed": "Sprite"
+        },
+        {
+          "start": 6198,
+          "end": 6200,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 6336,
@@ -627533,7 +628042,7 @@
       "original": "iv.java",
       "renamed": "iv.java",
       "inputSha256": "f26dd48b4dcdbe8eeaf6bfda647f0dedbf2cd01c3b89d726a466b4e0550091bb",
-      "outputSha256": "1f9fb167ed37133860f1d1056a827b4c36ad51e1e7970128888aa0057568ef0e",
+      "outputSha256": "01414e1cb059c134bfcb30f8dafa91b71ee1805dfaafe2ed97c012e49cf99b85",
       "edits": [
         {
           "start": 55,
@@ -628556,6 +629065,20 @@
           "symbol": "C:lb",
           "original": "lb",
           "renamed": "TextHotspotWidget"
+        },
+        {
+          "start": 13220,
+          "end": 13222,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
+          "start": 13314,
+          "end": 13316,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 13402,
@@ -635654,7 +636177,7 @@
       "original": "jk.java",
       "renamed": "MusicPatch.java",
       "inputSha256": "37edc47c341e0fa8c709896a04897c80f4816ee95443c46f1d8139ada9d3ad0c",
-      "outputSha256": "bb98740bb72a8639f8e7162c491d2b85b4c46fd7421c6ebfc93f9f6d21be3bc7",
+      "outputSha256": "ae365363d855f166370982d6b99064f3b51b11e8ee312642caf500065afeb02c",
       "edits": [
         {
           "start": 50,
@@ -635797,6 +636320,13 @@
           "renamed": "FriendsListPanel"
         },
         {
+          "start": 2168,
+          "end": 2170,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 2202,
           "end": 2204,
           "symbol": "C:pt",
@@ -635818,11 +636348,25 @@
           "renamed": "IconLabel"
         },
         {
+          "start": 2445,
+          "end": 2447,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 2698,
           "end": 2700,
           "symbol": "C:gm",
           "original": "gm",
           "renamed": "RenderedFootballer"
+        },
+        {
+          "start": 2703,
+          "end": 2705,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 3241,
@@ -635853,6 +636397,20 @@
           "renamed": "RenderedBall"
         },
         {
+          "start": 3423,
+          "end": 3425,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
+          "start": 3556,
+          "end": 3558,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 3575,
           "end": 3582,
           "symbol": "F:tj.field_m:I",
@@ -635865,6 +636423,13 @@
           "symbol": "C:gm",
           "original": "gm",
           "renamed": "RenderedFootballer"
+        },
+        {
+          "start": 3620,
+          "end": 3622,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 3631,
@@ -636314,7 +636879,7 @@
       "original": "jm.java",
       "renamed": "DelayedServerPacket.java",
       "inputSha256": "21083d01284178d17152b36eb866cfd6bd817f89155f4cbec1b560456cbf9065",
-      "outputSha256": "76d0c498014f28e7b58f9c5b80dc3d4c6223d06dc044476e3770e03bd2b5189d",
+      "outputSha256": "b0c130815792e14a14d4dc899cdb9c6dbaba65e1adf3ef0cbdc6d0f14b702811",
       "edits": [
         {
           "start": 50,
@@ -636745,6 +637310,13 @@
           "renamed": "ByteStorage"
         },
         {
+          "start": 4987,
+          "end": 4989,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 5024,
           "end": 5026,
           "symbol": "C:tu",
@@ -636752,11 +637324,25 @@
           "renamed": "GameLoopApplet"
         },
         {
+          "start": 5096,
+          "end": 5098,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 5166,
           "end": 5168,
           "symbol": "C:tu",
           "original": "tu",
           "renamed": "GameLoopApplet"
+        },
+        {
+          "start": 5415,
+          "end": 5417,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 5509,
@@ -638202,7 +638788,7 @@
       "original": "jr.java",
       "renamed": "ReceivedAuctionItemRow.java",
       "inputSha256": "7d5e58738c606da4bbfa96fe897ffb2fd83d7458426cb74a0c6c1146a979c0f2",
-      "outputSha256": "bbe4533dd5f53daf930a1f80c400ae95ebe5182e570022f093f8e3d59c95152f",
+      "outputSha256": "87f83e79f29556faabdf6034dc8019f53b2e02d269850d0a259b0c92fce36b48",
       "edits": [
         {
           "start": 50,
@@ -638359,6 +638945,13 @@
           "renamed": "hasOwnEntry"
         },
         {
+          "start": 1877,
+          "end": 1879,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 1913,
           "end": 1915,
           "symbol": "C:sp",
@@ -638378,6 +638971,13 @@
           "symbol": "M:gr.a(JB)Z",
           "original": "a",
           "renamed": "hasBidOrBuyEntry"
+        },
+        {
+          "start": 2041,
+          "end": 2043,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 2078,
@@ -638408,6 +639008,13 @@
           "renamed": "GameLoopApplet"
         },
         {
+          "start": 2223,
+          "end": 2225,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 2264,
           "end": 2266,
           "symbol": "C:sp",
@@ -638422,6 +639029,13 @@
           "renamed": "GameLoopApplet"
         },
         {
+          "start": 2398,
+          "end": 2400,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 2441,
           "end": 2443,
           "symbol": "C:sp",
@@ -638434,6 +639048,13 @@
           "symbol": "C:oj",
           "original": "oj",
           "renamed": "LoadingProgressDialog"
+        },
+        {
+          "start": 2616,
+          "end": 2618,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 2655,
@@ -638464,6 +639085,13 @@
           "renamed": "GameLoopApplet"
         },
         {
+          "start": 2921,
+          "end": 2923,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 2958,
           "end": 2960,
           "symbol": "C:sp",
@@ -638490,6 +639118,13 @@
           "symbol": "C:tu",
           "original": "tu",
           "renamed": "GameLoopApplet"
+        },
+        {
+          "start": 3230,
+          "end": 3232,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 3269,
@@ -638520,6 +639155,13 @@
           "renamed": "GameLoopApplet"
         },
         {
+          "start": 3423,
+          "end": 3425,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 3466,
           "end": 3468,
           "symbol": "C:sp",
@@ -638527,11 +639169,25 @@
           "renamed": "ShopPlayerSlot"
         },
         {
+          "start": 3634,
+          "end": 3636,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 3675,
           "end": 3677,
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "ShopPlayerSlot"
+        },
+        {
+          "start": 3767,
+          "end": 3769,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 3805,
@@ -639267,7 +639923,7 @@
       "original": "js.java",
       "renamed": "AppScreen.java",
       "inputSha256": "3a9f0cb4faa6f0cc99aa1f03039260943fc1c00dcf20f7e3cc096be11734850e",
-      "outputSha256": "12e2ea48f9c403f32778cd4ed16e6bfead8e8d1890759c01e82aa44d345d71af",
+      "outputSha256": "fbd6ec27671b1978167c8b3866a66ce82d27213f7718ab83ac342993c58b3a4a",
       "edits": [
         {
           "start": 53,
@@ -639527,6 +640183,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "ArchiveNetworkClient"
+        },
+        {
+          "start": 2691,
+          "end": 2693,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 2708,
@@ -665261,7 +665924,7 @@
       "original": "mc.java",
       "renamed": "TickClock.java",
       "inputSha256": "d2dc310019c0f324bbf9f02a6b8cc149389d9433d0161269d31689fa9d95b595",
-      "outputSha256": "69fa38d1f7e50093f888d6eaff9d80610fd1997688e2839461d0d41ba38b8bc6",
+      "outputSha256": "8f592e0f92eb01afd6e6a0291784c7d0963b1771ff8f1260fa20b1d26cdb19e5",
       "edits": [
         {
           "start": 53,
@@ -665369,6 +666032,13 @@
           "renamed": "ButtonMenuScreen"
         },
         {
+          "start": 2004,
+          "end": 2005,
+          "symbol": "M:mc.b(B)J",
+          "original": "b",
+          "renamed": "delayMillis"
+        },
+        {
           "start": 2130,
           "end": 2131,
           "symbol": "M:mc.a(IJ)I",
@@ -665395,6 +666065,13 @@
           "symbol": "M:mc.a(IJ)I",
           "original": "a",
           "renamed": "advanceTicks"
+        },
+        {
+          "start": 2281,
+          "end": 2282,
+          "symbol": "M:mc.b(B)J",
+          "original": "b",
+          "renamed": "delayMillis"
         },
         {
           "start": 2316,
@@ -672925,7 +673602,7 @@
       "original": "n.java",
       "renamed": "ArchiveManager.java",
       "inputSha256": "2de6489e2dc5b647757108d618c9b2975c6060612a2f81475219418a15f95722",
-      "outputSha256": "fbfeaa0c1adca620a434198b51bc0bd59d81ce9c155ae4d912e1d74de3c6188f",
+      "outputSha256": "9256ad090ba5022eb62cc87c3eabd5ebf1a835474cd10a6c8084a3020f0718db",
       "edits": [
         {
           "start": 50,
@@ -674083,6 +674760,20 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 19189,
+          "end": 19190,
+          "symbol": "M:bi.a(I)Z",
+          "original": "a",
+          "renamed": "isPriorityQueueFull"
+        },
+        {
+          "start": 19277,
+          "end": 19278,
+          "symbol": "M:bi.a(IIBBZ)Lui;",
+          "original": "a",
+          "renamed": "queueRequest"
+        },
+        {
           "start": 19417,
           "end": 19419,
           "symbol": "C:iw",
@@ -674172,6 +674863,20 @@
           "symbol": "C:eb",
           "original": "eb",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 22090,
+          "end": 22091,
+          "symbol": "M:bi.a(I)Z",
+          "original": "a",
+          "renamed": "isPriorityQueueFull"
+        },
+        {
+          "start": 22142,
+          "end": 22143,
+          "symbol": "M:bi.a(IIBBZ)Lui;",
+          "original": "a",
+          "renamed": "queueRequest"
         },
         {
           "start": 23358,
@@ -686056,7 +686761,7 @@
       "original": "nt.java",
       "renamed": "KitStyleTile.java",
       "inputSha256": "67f7bbdbe68f0a69557fa93e0f9804978fa4f1964f3e12283e8cd54ea47d7456",
-      "outputSha256": "09c47266640af8cef161c714e030c98f07229846e47d52ef9c7684eafdb79f13",
+      "outputSha256": "f1aa6cf0e398db7d2b7de2a87df75106a6c80f724eee06ec2da033f5ffd65732",
       "edits": [
         {
           "start": 50,
@@ -687289,6 +687994,13 @@
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "AccountTermsPanel"
+        },
+        {
+          "start": 12874,
+          "end": 12876,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 13096,
@@ -695753,7 +696465,7 @@
       "original": "ob.java",
       "renamed": "RenderedBall.java",
       "inputSha256": "788c8c6fa7ca5b030859d22a13021040a5865fd87c3e99fda102d0ef06fbe09c",
-      "outputSha256": "ce590570d6c336f06c23fd75c8dc332329c114547dabbdca75cf8e18e06e1bf6",
+      "outputSha256": "9db0f41afb6c51e5bc17091121555506c641da12ffee63ee7235596d2484ab88",
       "edits": [
         {
           "start": 50,
@@ -696797,6 +697509,13 @@
           "symbol": "M:ob.c(Z)I",
           "original": "c",
           "renamed": "getRenderedY"
+        },
+        {
+          "start": 21724,
+          "end": 21726,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 21774,
@@ -714514,7 +715233,7 @@
       "original": "pt.java",
       "renamed": "AuctionListing.java",
       "inputSha256": "aa23b0a0b3cbecc5f0fbd969e25a40891e94cd61597ee4c63bfec3a97dcb4755",
-      "outputSha256": "87645cc5ce058b1a0b7c1aa6300cdf28850b5a57299ccc8acc0235f268fdf911",
+      "outputSha256": "3123bef0f18432318a55df13ec2d1423218aa6e3f0614aee5c7c6b591db38f93",
       "edits": [
         {
           "start": 50,
@@ -716097,6 +716816,13 @@
           "symbol": "C:kt",
           "original": "kt",
           "renamed": "BlackFadeScreen"
+        },
+        {
+          "start": 23413,
+          "end": 23415,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 23426,
@@ -719184,6 +719910,13 @@
           "symbol": "C:kt",
           "original": "kt",
           "renamed": "BlackFadeScreen"
+        },
+        {
+          "start": 74075,
+          "end": 74077,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 74088,
@@ -731580,7 +732313,7 @@
       "original": "qs.java",
       "renamed": "PlayerShopScreen.java",
       "inputSha256": "dddb720fa0352bc1c9a7777c224622ca9c09341d063b7af287102bf782ebc5db",
-      "outputSha256": "b2a288cc9e9caba8bbda43db11035d74bcf2bb828851239098d7e6df7b4df569",
+      "outputSha256": "b4fae717793efa4d18bed9488fa096c056e28ca76eac46fc03e9df046fa89a61",
       "edits": [
         {
           "start": 50,
@@ -731931,6 +732664,13 @@
           "symbol": "M:gr.c(B)Z",
           "original": "c",
           "renamed": "hasEmptySquadSlot"
+        },
+        {
+          "start": 4219,
+          "end": 4221,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 4384,
@@ -746207,7 +746947,7 @@
       "original": "rp.java",
       "renamed": "rp.java",
       "inputSha256": "9eb214cf4ee521842786ebf364a355b5ebecc0e7502249acf61d0c2f4bb41a5f",
-      "outputSha256": "bf61b74f4de537721c631a2c5bbbed5084e190fcc07f41e748f741a995beabc2",
+      "outputSha256": "95adb3003533eb9756fb4c81e345320d68fe385a680fe9f4fce5362d594fcf2e",
       "edits": [
         {
           "start": 221,
@@ -746721,6 +747461,13 @@
           "renamed": "IconLabel"
         },
         {
+          "start": 7206,
+          "end": 7208,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 7218,
           "end": 7220,
           "symbol": "C:wr",
@@ -746768,6 +747515,13 @@
           "symbol": "C:om",
           "original": "om",
           "renamed": "IconLabel"
+        },
+        {
+          "start": 7433,
+          "end": 7435,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 7445,
@@ -752223,7 +752977,7 @@
       "original": "sf.java",
       "renamed": "MainMenuScreen.java",
       "inputSha256": "964458721e28aabc2225281213b9e885102f1bad980575a677fa36bb6783a2fd",
-      "outputSha256": "eede7e3014797ac46b2ced11c432b15e63ecfe3194b442a5cf6e46b951200452",
+      "outputSha256": "2b6f1eddf7ac3cd66fe411b9615fbbfb5ec5c0539c10c9cff609b7d235a27059",
       "edits": [
         {
           "start": 50,
@@ -752842,11 +753596,25 @@
           "renamed": "GameLoopApplet"
         },
         {
+          "start": 8639,
+          "end": 8641,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 8701,
           "end": 8703,
           "symbol": "C:tu",
           "original": "tu",
           "renamed": "GameLoopApplet"
+        },
+        {
+          "start": 8745,
+          "end": 8747,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 8850,
@@ -752884,11 +753652,25 @@
           "renamed": "GameLoopApplet"
         },
         {
+          "start": 9281,
+          "end": 9283,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 9339,
           "end": 9341,
           "symbol": "C:tu",
           "original": "tu",
           "renamed": "GameLoopApplet"
+        },
+        {
+          "start": 9381,
+          "end": 9383,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 9480,
@@ -756852,7 +757634,7 @@
       "original": "st.java",
       "renamed": "CachedTextLayout.java",
       "inputSha256": "6a58b719d0cec6bbc0292d7c6df0ac04f87e472388d4acfbc4bc952590c061d3",
-      "outputSha256": "e660f26ca86296211354487553b80f9e4f03f85caa17790706f0a41c89d11b95",
+      "outputSha256": "510d662d43823c2be64ba6d1d78dfdade1697e7c0e307dc31a77d51dc2ddba6f",
       "edits": [
         {
           "start": 50,
@@ -756923,6 +757705,13 @@
           "symbol": "C:iu",
           "original": "iu",
           "renamed": "CachedListingRow"
+        },
+        {
+          "start": 673,
+          "end": 675,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 764,
@@ -759966,10 +760755,17 @@
     },
     {
       "original": "tb.java",
-      "renamed": "tb.java",
+      "renamed": "SocketArchiveNetworkClient.java",
       "inputSha256": "41faef796785c6238ba5b176df64286185700294688ca39761ae01edabe50fb7",
-      "outputSha256": "b1ed59d74a1d231fcf1f7bdb731153b6197c13b451ed491ef5e4017f2d94784a",
+      "outputSha256": "b36ab75f3741676309acf923dd5ee1a945955ffeb11b16aafdea30c3124fbda6",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
         {
           "start": 80,
           "end": 82,
@@ -759999,6 +760795,13 @@
           "renamed": "CommonGame"
         },
         {
+          "start": 301,
+          "end": 302,
+          "symbol": "M:tb.a(B)Z",
+          "original": "a",
+          "renamed": "pollResponses"
+        },
+        {
           "start": 1203,
           "end": 1204,
           "symbol": "M:nj.a(I)J",
@@ -760011,6 +760814,20 @@
           "symbol": "M:bh.a(I)V",
           "original": "a",
           "renamed": "close"
+        },
+        {
+          "start": 1886,
+          "end": 1887,
+          "symbol": "M:bi.e(I)I",
+          "original": "e",
+          "renamed": "countPriorityRequests"
+        },
+        {
+          "start": 1962,
+          "end": 1963,
+          "symbol": "M:bi.b(I)I",
+          "original": "b",
+          "renamed": "countBackgroundRequests"
         },
         {
           "start": 2092,
@@ -760153,6 +760970,20 @@
           "renamed": "close"
         },
         {
+          "start": 9247,
+          "end": 9248,
+          "symbol": "M:bi.e(I)I",
+          "original": "e",
+          "renamed": "countPriorityRequests"
+        },
+        {
+          "start": 9279,
+          "end": 9280,
+          "symbol": "M:bi.b(I)I",
+          "original": "b",
+          "renamed": "countBackgroundRequests"
+        },
+        {
           "start": 9692,
           "end": 9694,
           "symbol": "C:jb",
@@ -760172,6 +761003,13 @@
           "symbol": "C:sj",
           "original": "sj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 9836,
+          "end": 9838,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 9845,
@@ -760251,6 +761089,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 10415,
+          "end": 10416,
+          "symbol": "M:tb.g(I)V",
+          "original": "g",
+          "renamed": "sendSetupPacket"
+        },
+        {
           "start": 10728,
           "end": 10729,
           "symbol": "M:iw.a(II)V",
@@ -760286,6 +761131,13 @@
           "renamed": "close"
         },
         {
+          "start": 11822,
+          "end": 11823,
+          "symbol": "M:tb.a(Ljava/lang/Object;IZ)V",
+          "original": "a",
+          "renamed": "attachSocket"
+        },
+        {
           "start": 12446,
           "end": 12447,
           "symbol": "M:bh.a(I)V",
@@ -760298,6 +761150,27 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 12802,
+          "end": 12803,
+          "symbol": "M:tb.g(I)V",
+          "original": "g",
+          "renamed": "sendSetupPacket"
+        },
+        {
+          "start": 12859,
+          "end": 12860,
+          "symbol": "M:tb.b(B)V",
+          "original": "b",
+          "renamed": "closeSocket"
+        },
+        {
+          "start": 12904,
+          "end": 12905,
+          "symbol": "M:tb.a(ZZ)V",
+          "original": "a",
+          "renamed": "sendControlPacket"
         },
         {
           "start": 13064,
@@ -760382,6 +761255,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 15580,
+          "end": 15581,
+          "symbol": "M:tb.c(I)V",
+          "original": "c",
+          "renamed": "resetAfterValidationFailure"
         },
         {
           "start": 15633,
@@ -760692,6 +761572,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 16951,
+          "end": 16953,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 16962,
           "end": 16964,
           "symbol": "C:sj",
@@ -760748,6 +761635,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 17554,
+          "end": 17555,
+          "symbol": "M:tb.a(ZZ)V",
+          "original": "a",
+          "renamed": "sendControlPacket"
+        },
+        {
           "start": 17656,
           "end": 17658,
           "symbol": "C:iw",
@@ -760783,11 +761677,25 @@
           "renamed": "close"
         },
         {
+          "start": 19003,
+          "end": 19004,
+          "symbol": "M:tb.a(ZZ)V",
+          "original": "a",
+          "renamed": "sendControlPacket"
+        },
+        {
           "start": 19313,
           "end": 19314,
           "symbol": "M:tb.c(B)V",
           "original": "c",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 19528,
+          "end": 19530,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 19997,
@@ -760818,6 +761726,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 20780,
+          "end": 20781,
+          "symbol": "M:tb.b(B)V",
+          "original": "b",
+          "renamed": "closeSocket"
+        },
+        {
           "start": 20847,
           "end": 20849,
           "symbol": "C:nu",
@@ -760830,6 +761745,13 @@
           "symbol": "M:bh.a(I)V",
           "original": "a",
           "renamed": "close"
+        },
+        {
+          "start": 20971,
+          "end": 20973,
+          "symbol": "M:tb.<init>()V",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         }
       ]
     },
@@ -775907,7 +776829,7 @@
       "original": "ue.java",
       "renamed": "NamedValueEntry.java",
       "inputSha256": "6717efc08042e52e01db660bdd126076e7df291327608e77c46f1825951d0424",
-      "outputSha256": "1f103b110683638d381f1bf2c9b9a2c41468dfdc919b8ea3f96a126025c136bd",
+      "outputSha256": "9f622bab34a412a2a0ccb525aa8a9717b4b7867e7776c67fb48de1599b30d4a7",
       "edits": [
         {
           "start": 50,
@@ -776295,6 +777217,13 @@
           "renamed": "drawHalfSize"
         },
         {
+          "start": 6223,
+          "end": 6225,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 6238,
           "end": 6239,
           "symbol": "M:ut.c(III)V",
@@ -776426,7 +777355,7 @@
       "original": "uf.java",
       "renamed": "uf.java",
       "inputSha256": "6fb70bf6090b26a747448c075233669825d2632eddc517113a8648b16e457aef",
-      "outputSha256": "1065a6a1b603956efe9b759165d36d91884afc12fa54942ccaea2568e741c6ba",
+      "outputSha256": "833bfa7792b73e2b5778a735d5f0434200e202e94df6cc02b5146727eaaf9efa",
       "edits": [
         {
           "start": 120,
@@ -776483,6 +777412,13 @@
           "symbol": "C:ut",
           "original": "ut",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1924,
+          "end": 1926,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 2101,
@@ -784571,7 +785507,7 @@
       "original": "uv.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "6e122f9eb2e8f11d136af29fe441272f2d3b90ac869ece0034411e90a887ab73",
-      "outputSha256": "e4c721f01b52ccc7342db3e4991f0c82ff2b07c5e3243d6f5fd21824351cff13",
+      "outputSha256": "9f7ca071333d70309c3e47d43da85bcff5973a2fee2ec261f8b43acfd0b3446c",
       "edits": [
         {
           "start": 69,
@@ -785258,6 +786194,13 @@
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "LoginDialog"
+        },
+        {
+          "start": 13845,
+          "end": 13847,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 13902,
@@ -786120,7 +787063,7 @@
       "original": "va.java",
       "renamed": "PlayingView.java",
       "inputSha256": "b3400f2acb443a491ff0196d693bafa7d49b5cae3aa38486473e42d2e4dc5cf3",
-      "outputSha256": "1695b9544c5fec6cc2eb17c1bcebb41e7267319f7ea0cb2d6f96b9c5fe34a67e",
+      "outputSha256": "a4bbc8e33acbcd7241df1b2caa523c95ccff4b28b451491a9aed22c2eff3db3b",
       "edits": [
         {
           "start": 71,
@@ -788146,6 +789089,13 @@
           "symbol": "M:va.f(II)V",
           "original": "f",
           "renamed": "onButtonClick"
+        },
+        {
+          "start": 34980,
+          "end": 34982,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 35525,
@@ -792045,7 +792995,7 @@
       "original": "vi.java",
       "renamed": "NanoTickClock.java",
       "inputSha256": "514bd4599627ea72425a529a96dc97dc40b3247fdb88bfbb30719fc05799021b",
-      "outputSha256": "698e288f4dc73a2fec59bbfe9776119cb4cbe22a03d2fecdb27c872ed8390a7d",
+      "outputSha256": "5f565e3ee9072fb82149ed85b782f4288f560175a99d8fa43e8c4332c86154a6",
       "edits": [
         {
           "start": 50,
@@ -792414,11 +793364,32 @@
           "renamed": "QuickChatPhraseCache"
         },
         {
+          "start": 6923,
+          "end": 6924,
+          "symbol": "M:vi.b(B)J",
+          "original": "b",
+          "renamed": "delayMillis"
+        },
+        {
+          "start": 6983,
+          "end": 6984,
+          "symbol": "M:vi.a(Z)J",
+          "original": "a",
+          "renamed": "averageFrameNanos"
+        },
+        {
           "start": 7212,
           "end": 7213,
           "symbol": "M:vi.b(I)V",
           "original": "b",
           "renamed": "resetTiming"
+        },
+        {
+          "start": 7473,
+          "end": 7474,
+          "symbol": "M:vi.a(Z)J",
+          "original": "a",
+          "renamed": "averageFrameNanos"
         },
         {
           "start": 8213,
@@ -801664,7 +802635,7 @@
       "original": "wf.java",
       "renamed": "AuctionsScreen.java",
       "inputSha256": "27325d67f9165c9ac74ef2bf64c41392fba856e57571748dc8161366741c0dba",
-      "outputSha256": "eed997dbc82f91499756c5b88e20e61dcf8b5206af97cb4ef4cdad27b2035eec",
+      "outputSha256": "158072f0e450537120e65624822ff0ed1624aa1a314b17484356d621dde1698e",
       "edits": [
         {
           "start": 50,
@@ -803179,11 +804150,25 @@
           "renamed": "ShopPlayerSlot"
         },
         {
+          "start": 22356,
+          "end": 22358,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 22392,
           "end": 22394,
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "ShopPlayerSlot"
+        },
+        {
+          "start": 22453,
+          "end": 22455,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 22486,
@@ -807566,7 +808551,7 @@
       "original": "wm.java",
       "renamed": "CachedArchiveSource.java",
       "inputSha256": "265dbc3aee71cc735455d4e83ca34e022f340c7765204a1bd79ef626238e68ea",
-      "outputSha256": "95e8326eaceab80da258fdfdf6b041171297dae4b82af663bf328f408aefe50b",
+      "outputSha256": "30aa543d20e5f92fcc9c3b7727f085c3c7d5e4a8225393defa422ab6841c1ddd",
       "edits": [
         {
           "start": 50,
@@ -807793,11 +808778,25 @@
           "renamed": "ArchiveIndex"
         },
         {
+          "start": 5712,
+          "end": 5713,
+          "symbol": "M:bi.a(I)Z",
+          "original": "a",
+          "renamed": "isPriorityQueueFull"
+        },
+        {
           "start": 5781,
           "end": 5783,
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 5870,
+          "end": 5871,
+          "symbol": "M:bi.a(IIBBZ)Lui;",
+          "original": "a",
+          "renamed": "queueRequest"
         },
         {
           "start": 6023,
@@ -807828,6 +808827,20 @@
           "renamed": "ArchiveIndex"
         },
         {
+          "start": 6775,
+          "end": 6776,
+          "symbol": "M:bi.a(I)Z",
+          "original": "a",
+          "renamed": "isPriorityQueueFull"
+        },
+        {
+          "start": 6915,
+          "end": 6916,
+          "symbol": "M:bi.a(IIBBZ)Lui;",
+          "original": "a",
+          "renamed": "queueRequest"
+        },
+        {
           "start": 7038,
           "end": 7040,
           "symbol": "C:kl",
@@ -807840,6 +808853,27 @@
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 7499,
+          "end": 7500,
+          "symbol": "M:bi.c(I)V",
+          "original": "c",
+          "renamed": "resetAfterValidationFailure"
+        },
+        {
+          "start": 7574,
+          "end": 7575,
+          "symbol": "M:bi.a(I)Z",
+          "original": "a",
+          "renamed": "isPriorityQueueFull"
+        },
+        {
+          "start": 7654,
+          "end": 7655,
+          "symbol": "M:bi.a(IIBBZ)Lui;",
+          "original": "a",
+          "renamed": "queueRequest"
         },
         {
           "start": 7837,
@@ -807910,6 +808944,13 @@
           "symbol": "M:tf.a(Lgn;I)V",
           "original": "a",
           "renamed": "addLast"
+        },
+        {
+          "start": 11918,
+          "end": 11919,
+          "symbol": "M:bi.d(I)Z",
+          "original": "d",
+          "renamed": "isBackgroundQueueFull"
         },
         {
           "start": 12176,
@@ -807989,11 +809030,39 @@
           "renamed": "readImmediate"
         },
         {
+          "start": 16784,
+          "end": 16785,
+          "symbol": "M:bi.a(I)Z",
+          "original": "a",
+          "renamed": "isPriorityQueueFull"
+        },
+        {
+          "start": 16935,
+          "end": 16936,
+          "symbol": "M:bi.a(IIBBZ)Lui;",
+          "original": "a",
+          "renamed": "queueRequest"
+        },
+        {
           "start": 17203,
           "end": 17204,
           "symbol": "M:eb.a(IILqh;)Lhi;",
           "original": "a",
           "renamed": "enqueueRead"
+        },
+        {
+          "start": 17626,
+          "end": 17627,
+          "symbol": "M:bi.d(I)Z",
+          "original": "d",
+          "renamed": "isBackgroundQueueFull"
+        },
+        {
+          "start": 17723,
+          "end": 17724,
+          "symbol": "M:bi.a(IIBBZ)Lui;",
+          "original": "a",
+          "renamed": "queueRequest"
         },
         {
           "start": 17831,
@@ -808031,6 +809100,20 @@
           "renamed": "MusicTrackMixer"
         },
         {
+          "start": 20126,
+          "end": 20127,
+          "symbol": "M:bi.a(I)Z",
+          "original": "a",
+          "renamed": "isPriorityQueueFull"
+        },
+        {
+          "start": 20223,
+          "end": 20224,
+          "symbol": "M:bi.a(IIBBZ)Lui;",
+          "original": "a",
+          "renamed": "queueRequest"
+        },
+        {
           "start": 20304,
           "end": 20305,
           "symbol": "M:kc.a(Lgn;IJ)V",
@@ -808050,6 +809133,27 @@
           "symbol": "C:jj",
           "original": "jj",
           "renamed": "MusicTrackMixer"
+        },
+        {
+          "start": 21724,
+          "end": 21725,
+          "symbol": "M:bi.c(I)V",
+          "original": "c",
+          "renamed": "resetAfterValidationFailure"
+        },
+        {
+          "start": 21884,
+          "end": 21885,
+          "symbol": "M:bi.a(I)Z",
+          "original": "a",
+          "renamed": "isPriorityQueueFull"
+        },
+        {
+          "start": 21969,
+          "end": 21970,
+          "symbol": "M:bi.a(IIBBZ)Lui;",
+          "original": "a",
+          "renamed": "queueRequest"
         },
         {
           "start": 22046,
@@ -808352,7 +809456,7 @@
       "original": "wo.java",
       "renamed": "wo.java",
       "inputSha256": "4f91bce09b092323abfe426e6f7e0e1b17cafd23efd9f0254b0b68657ed4c084",
-      "outputSha256": "25fbe972146a1560b83572d8a77ccf4dac17c6d15350513a6fc3eb33e6dd1e02",
+      "outputSha256": "da966b7d4b13d6d1350c134df8493a66e111930697a2a506afcb5e8c45f2f4fe",
       "edits": [
         {
           "start": 61,
@@ -808397,11 +809501,25 @@
           "renamed": "InstrumentNoteMask"
         },
         {
+          "start": 1173,
+          "end": 1175,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
+        },
+        {
           "start": 1361,
           "end": 1363,
           "symbol": "C:hw",
           "original": "hw",
           "renamed": "InstrumentNoteMask"
+        },
+        {
+          "start": 1392,
+          "end": 1394,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocketArchiveNetworkClient"
         },
         {
           "start": 2309,
@@ -813321,10 +814439,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/kickabout"
     },
-    "rulesSha256": "70506b59695a511b1e21c2306348581922bec2a538737e187e8d64b4025ae5c6",
+    "rulesSha256": "d7adf4c7b6067ba443cd96c283a2d3dd7e5e63bec5a2e4dea7f5e04c6837facc",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
-    "outputTreeSha256": "f0cad662b096af514b2c29e9cfa8d2c63d8a3d573a165c58803054d94128ff57",
+    "outputTreeSha256": "9ae5caabfc04ab2a1a44f9f30c7aa4e2720a98425cdfae183788891ae3b16b1e",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

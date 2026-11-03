@@ -135,9 +135,9 @@ final class DelayedServerPacket extends IntrusiveNode {
                 } else {
                   stackIn_38_1 = 1;
                 }
-                if ((stackIn_35_0 == stackIn_38_1 && (tb.field_v != 1 ||
+                if ((stackIn_35_0 == stackIn_38_1 && (SocketArchiveNetworkClient.field_v != 1 ||
                   GameLoopApplet.field_E.field_L)) &&
-                  (decompiledFrameRemainder0 = (tb.field_v == 0))) {
+                  (decompiledFrameRemainder0 = (SocketArchiveNetworkClient.field_v == 0))) {
                   decompiledFrameRemainder0 = !(!GameLoopApplet.field_E.field_L);
                 }
               }
@@ -147,7 +147,7 @@ final class DelayedServerPacket extends IntrusiveNode {
               if (ei.field_n) {
                 var3_int = var3_int | 1;
               }
-              if (tb.field_v == 1) {
+              if (SocketArchiveNetworkClient.field_v == 1) {
                 var3_int = var3_int | 2;
               }
               if (ByteStorage.field_c) {

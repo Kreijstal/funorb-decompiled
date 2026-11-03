@@ -131,7 +131,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
             if (ic.field_h.hasEmptySquadSlot((byte) -86)) {
               pi.a(6022, this.field_F[var7]);
             } else {
-              tb.a((byte) 126, 0);
+              SocketArchiveNetworkClient.a((byte) 126, 0);
             }
           }
           var7++;

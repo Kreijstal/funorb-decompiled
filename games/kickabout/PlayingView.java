@@ -1096,7 +1096,7 @@ final class PlayingView extends MatchPhaseView {
           this.onButtonClick(-113, 91);
         }
         if (var2 < 120) {
-          var3 = tb.field_q[var2 / 40 + 1];
+          var3 = SocketArchiveNetworkClient.field_q[var2 / 40 + 1];
           var4 = var3.field_o;
           var5 = var3.field_v;
           var2 = var2 % 40;

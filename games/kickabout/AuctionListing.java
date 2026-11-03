@@ -603,7 +603,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -52, "invite_accept_xs_game");
                 if (null != var2) {
-                  tb.field_u = BlackFadeScreen.a(var2, true);
+                  SocketArchiveNetworkClient.field_u = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -73, "invite_decline_xs_game");
                 if (null != var2) {
@@ -1836,7 +1836,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -68, "create_alert_nameleadingspace");
                 if (null != var2) {
-                  tb.field_r = BlackFadeScreen.a(var2, true);
+                  SocketArchiveNetworkClient.field_r = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -50, "create_alert_doublespace");
                 if (var2 != null) {

@@ -196,8 +196,8 @@ final class NanoTickClock extends TickClock {
         QuickChatPhraseCache.field_d = true;
     }
 
-    final long b(byte param0) {
-        this.field_p = this.field_p + this.a(false);
+    final long delayMillis(byte param0) {
+        this.field_p = this.field_p + this.averageFrameNanos(false);
         if (param0 != -36) {
           field_n = true;
         }
@@ -217,7 +217,7 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    private final long a(boolean param0) {
+    private final long averageFrameNanos(boolean param0) {
         int var8 = 0;
         int var9 = Kickabout.field_G;
         long var2 = System.nanoTime();

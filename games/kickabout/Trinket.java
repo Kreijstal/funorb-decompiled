@@ -259,7 +259,7 @@ final class Trinket {
             48 + var3 >= 0 &&
             640 >= -48 + var2_int &&
             48 + var2_int >= 0) {
-            if (tb.field_v != 0 &&
+            if (SocketArchiveNetworkClient.field_v != 0 &&
               FormationAgent.field_l >= 2) {
               var4 = param0.field_U;
               var5 = param0.field_ob;
