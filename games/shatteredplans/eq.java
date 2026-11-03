@@ -11,7 +11,7 @@ final class eq extends IntrusiveNode {
     PlatformTask[] field_q;
     int field_j;
     PlatformTask[] field_n;
-    static qh field_k;
+    static MenuWindow field_k;
     int field_l;
 
     final static void d(byte param0) {
@@ -46,7 +46,7 @@ final class eq extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "eq.B(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "eq.B(" + param0 + ')');
         }
     }
 
@@ -88,11 +88,11 @@ final class eq extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != -70) {
           return;
         }

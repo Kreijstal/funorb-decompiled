@@ -45,7 +45,7 @@ final class CheckboxPainter implements WidgetPainter {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -60,7 +60,7 @@ final class CheckboxPainter implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "tf.A(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "tf.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class CheckboxPainter implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "tf.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "tf.C(" + param0 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class CheckboxPainter implements WidgetPainter {
           ql.field_n = param1;
           PlayerStats.field_c = param3;
           FrameTimer.field_c = param2;
-          BattleEvent.b(gf.field_b / 2, gf.field_k / 2, 0);
+          BattleEvent.b(SoftwareRasterizer.field_b / 2, SoftwareRasterizer.field_k / 2, 0);
           id.a(param3.field_K + param3.field_q, param3.field_K, 26883, param1.field_K, param1.field_q + param1.field_K);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,7 +118,7 @@ final class CheckboxPainter implements WidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class CheckboxPainter implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "tf.D(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "tf.D(" + param0 + ')');
         }
     }
 
@@ -256,20 +256,20 @@ final class CheckboxPainter implements WidgetPainter {
             param2 = param2 & var6.field_y;
           }
           var7 = 5592405;
-          gf.d(param0.field_m + param1, param0.field_q + param3, param0.field_x, param0.field_n, this.field_m);
+          SoftwareRasterizer.fillRect(param0.field_m + param1, param0.field_q + param3, param0.field_x, param0.field_n, this.field_m);
           if (param2) {
             var7 = 16777215;
           }
           var8 = this.field_h + param0.field_m + param1;
           var9 = this.field_k + param0.field_q + param3;
-          gf.a(var8, var9, this.field_e, this.field_s, 5592405);
-          gf.d(var8, var9, this.field_e, this.field_s, var7);
+          SoftwareRasterizer.drawFadingBorder(var8, var9, this.field_e, this.field_s, 5592405);
+          SoftwareRasterizer.fillRect(var8, var9, this.field_e, this.field_s, var7);
           if (param4 != 12) {
             return;
           }
           if (var6.field_z) {
-            gf.g(var8, var9, this.field_e + var8, this.field_s + var9, 1);
-            gf.g(this.field_e + var8, var9, var8, var9 + this.field_s, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_e + var8, this.field_s + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_e + var8, var9, var8, var9 + this.field_s, 1);
           }
           if (this.field_i != null) {
             var10 = this.field_q + this.field_e + this.field_h;
@@ -286,7 +286,7 @@ final class CheckboxPainter implements WidgetPainter {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ final class CheckboxPainter implements WidgetPainter {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 

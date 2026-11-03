@@ -7,7 +7,7 @@ final class SolMapReader implements MapGenerator {
     static int field_b;
     private int field_d;
 
-    public final GalaxyMap a(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws jn {
         int var8 = 0;
         int var2;
         int var3;
@@ -29,7 +29,7 @@ final class SolMapReader implements MapGenerator {
         var5 = -65 / ((-67 - param0) / 44);
         var4 = new GalaxyMap(var2, var3, this.field_d, 73);
         var6 = new SolMapGenerator(this.field_d, 2);
-        var6.a(false, var4);
+        var6.placeStars(false, var4);
         var7 = var4.field_e;
         for (var8 = 0; var8 < var7.length; var8++) {
           var9 = var7[var8];
@@ -43,10 +43,10 @@ final class SolMapReader implements MapGenerator {
           var11Lifetime1 = 0;
           while (var11Lifetime1 < 4) {
             var12Lifetime1 = this.field_a.readUnsignedByte(-75);
-            var9.field_G[var11Lifetime1] = we.a(var12Lifetime1, 15);
+            var9.field_G[var11Lifetime1] = we.intAnd(var12Lifetime1, 15);
             var11Lifetime1++;
             if (var11Lifetime1 < 4) {
-              var9.field_G[var11Lifetime1] = we.a(var12Lifetime1, 240) >> 4;
+              var9.field_G[var11Lifetime1] = we.intAnd(var12Lifetime1, 240) >> 4;
               var11Lifetime1++;
               continue;
             }
@@ -111,7 +111,7 @@ final class SolMapReader implements MapGenerator {
           param0.field_r = var4;
           param0.field_w = EmailValidator.a((byte) 74, var12);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class SolMapReader implements MapGenerator {
         int var7;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var1 = 52 / ((param0 + 16) / 49);
-        var2 = pr.a(14274);
+        var2 = pr.currentTimeMillis(14274);
         var4 = var2 - NetworkArchiveRequest.field_z;
         if (var4 > 30000L) {
           vj.field_C = 0;
@@ -154,7 +154,7 @@ final class SolMapReader implements MapGenerator {
         ae.field_b = ~sa.field_a.readUnsignedByte(-99) == param0 ? true : false;
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != 87) {
           SolMapReader.a(false, 42, -4, 3);
         }
@@ -166,7 +166,7 @@ final class SolMapReader implements MapGenerator {
           this.field_d = param1;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class SolMapReader implements MapGenerator {
           var8_ref_nf = wm.field_d[var7];
           var9 = 0;
           if (!bg.field_g &&
-            kp.field_i > var5) {
+            TargetedChatMessage.field_i > var5) {
             var10_int = id.a(-7019, var8_ref_nf.field_n);
             if (var10_int <= var8_ref_nf.a((byte) 116) && (var8_ref_nf.field_h ||
               !IntrusiveNodeHashTable.a(var8_ref_nf.field_b, true))) {
@@ -211,7 +211,7 @@ final class SolMapReader implements MapGenerator {
             var8_ref_nf.field_j = null;
           } else {
             if (null != var8_ref_nf.field_j &&
-              !qh.field_v) {
+              !MenuWindow.field_v) {
               var5++;
             } else {
               if (null != var8_ref_nf.field_j) {
@@ -219,7 +219,7 @@ final class SolMapReader implements MapGenerator {
               var10 = IsolationistAi.a(param0, var8_ref_nf);
               var11 = var10 + nq.a(var8_ref_nf.field_k);
               var12 = jl.a(var8_ref_nf, (byte) -73);
-              var8_ref_nf.field_j = new qr(0L, BoundsRect.field_k, var11);
+              var8_ref_nf.field_j = new AnimatedPanel(0L, BoundsRect.field_k, var11);
               var8_ref_nf.field_j.field_nb = ho.field_f;
               var8_ref_nf.field_j.field_jb = -(var12 >> 1 & 8355711) + var12 + (8355711 & BoundsRect.field_k.field_jb >> 1);
               var8_ref_nf.field_j.field_x = var12;
@@ -233,8 +233,8 @@ final class SolMapReader implements MapGenerator {
         for (var8 = 0; DebouncedValidator.field_g > var8; var8++) {
           var9_ref_nf = wm.field_d[var8];
           if (null != var9_ref_nf.field_j) {
-            ji.field_I.field_xb.a(4, var9_ref_nf.field_j);
-            var9_ref_nf.field_j.a(var9_ref_nf.field_j.e(false), param3, (byte) 111, var7Lifetime1, param2);
+            ji.field_I.field_xb.addChild(4, var9_ref_nf.field_j);
+            var9_ref_nf.field_j.setTarget(var9_ref_nf.field_j.measureWidthUnbounded(false), param3, (byte) 111, var7Lifetime1, param2);
             if (0 != var9_ref_nf.field_j.field_rb) {
               var4 = var9_ref_nf;
             }
@@ -244,12 +244,12 @@ final class SolMapReader implements MapGenerator {
         var8Lifetime1 = -var7Lifetime1 + var6 + (ji.field_I.field_xb.field_mb + ji.field_I.field_xb.field_gb);
         ji.field_I.field_xb.field_mb = ji.field_I.field_xb.field_mb - var8Lifetime1;
         ji.field_I.field_xb.field_db = ji.field_I.field_xb.field_db + var8Lifetime1;
-        if (qh.field_v) {
+        if (MenuWindow.field_v) {
           ji.field_I.field_xb.field_mb = var7Lifetime1;
         }
         ji.field_I.field_xb.field_gb = -ji.field_I.field_xb.field_mb + var7Lifetime1;
-        if (qh.field_v) {
-          qh.field_v = false;
+        if (MenuWindow.field_v) {
+          MenuWindow.field_v = false;
           ji.field_I.field_xb.field_w = 0;
           ShatteredPlansClient.field_K = true;
           ji.field_I.field_xb.field_db = -ji.field_I.field_xb.field_mb + ji.field_I.field_zb.field_mb;

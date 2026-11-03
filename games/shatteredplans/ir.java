@@ -28,7 +28,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           }
           var10 = new pg(20, param1, 120 + param2, 25, param3, false, 120, 3, gn.field_u, 16777215, param5);
           this.b((byte) -68, var10);
-          var9 = new ah(((ValidatableWidget) ((Object) param3)).a((byte) 80), param4, 126, var10.field_n + param1, param2 + 25, param0);
+          var9 = new ah(((ValidatableWidget) ((Object) param3)).getValidationSource((byte) 80), param4, 126, var10.field_n + param1, param2 + 25, param0);
           var9.field_u = (WidgetListener) (this);
           this.b((byte) -100, var9);
           stackIn_3_0 = var9.field_n + var10.field_n;
@@ -55,27 +55,27 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.field_I.field_y = this.k(-60);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ir.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ir.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public final void a(int param0) {
         if (param0 == 2147483647) {
-          ((UsernameAvailabilityValidator) (this.field_H.a((byte) 63))).d(0);
+          ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).d(0);
           return;
         }
         String var3 = (String) null;
         int discarded$0 = this.a(-61, -100, -33, (UiWidget) null, (String) null, (String) null, true);
-        ((UsernameAvailabilityValidator) (this.field_H.a((byte) 63))).d(0);
+        ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).d(0);
     }
 
     public final void a(int param0, String param1) {
@@ -87,9 +87,9 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           }
           var3 = this.field_H;
           var4 = param1;
-          ((TextFieldWidget) ((Object) var3)).a(63, var4, false);
+          ((TextFieldWidget) ((Object) var3)).setText(63, var4, false);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ir.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ir.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,11 +110,11 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         FullscreenFocusCanvas.field_f[7] = ls.field_c;
         FullscreenFocusCanvas.field_f[16] = MidiPcmStream.field_o;
         FullscreenFocusCanvas.field_f[18] = no.field_a;
-        FullscreenFocusCanvas.field_f[4] = la.field_o;
+        FullscreenFocusCanvas.field_f[4] = RichTextLayout.field_o;
         FullscreenFocusCanvas.field_f[9] = qj.field_a;
         FullscreenFocusCanvas.field_f[15] = Archive.field_h;
         if (param0 == 1062) {
-          FullscreenFocusCanvas.field_f[20] = qh.field_w;
+          FullscreenFocusCanvas.field_f[20] = MenuWindow.field_w;
           FullscreenFocusCanvas.field_f[19] = pl.field_a;
           FullscreenFocusCanvas.field_f[5] = qf.field_b;
           FullscreenFocusCanvas.field_f[13] = cg.field_G;
@@ -123,7 +123,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           return;
         }
         ir.l(-42);
-        FullscreenFocusCanvas.field_f[20] = qh.field_w;
+        FullscreenFocusCanvas.field_f[20] = MenuWindow.field_w;
         FullscreenFocusCanvas.field_f[19] = pl.field_a;
         FullscreenFocusCanvas.field_f[5] = qf.field_b;
         FullscreenFocusCanvas.field_f[13] = cg.field_G;
@@ -143,7 +143,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
               this.a((byte) -1);
             }
           } else {
-            la.a(false);
+            RichTextLayout.a(false);
           }
           if (param1 == 6) {
             return;
@@ -160,7 +160,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         return false;
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         boolean stackIn_5_0 = false;
@@ -233,21 +233,21 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2 ^ 0, param3)) {
+          if (super.handleKey(param0, param1, param2 ^ 0, param3)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_5_0 = this.a(param3, true);
+            stackIn_5_0 = this.isBeforeFocusedChild(param3, true);
             return stackIn_5_0;
           }
           if (param2 != 13) {
             var6 = (UiWidget) null;
-            this.a(59, 66, (UiWidget) null, (byte) 56);
+            this.updateHover(59, 66, (UiWidget) null, (byte) 56);
           }
           if (99 != param0) {
             return false;
           }
-          stackIn_10_0 = this.a(param3, 92);
+          stackIn_10_0 = this.isAfterFocusedChild(param3, 92);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -259,7 +259,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -276,11 +276,11 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           if (param1 != 13) {
             return true;
           }
-          var3 = param0.a((byte) 92);
+          var3 = param0.getValidationSource((byte) 92);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.c(param1 ^ 26);
+          var4 = var3.getState(param1 ^ 26);
           stackIn_9_0 = (var4 == CachedArchiveSource.field_g);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -293,7 +293,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -305,7 +305,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         this.field_I = new FocusableWidget(ck.field_c, (WidgetListener) null);
         this.field_G = new FocusableWidget(fb.field_bc, (WidgetListener) null);
         this.field_H.field_v = WeightedLruCache.field_i;
-        this.field_H.a(new UsernameAvailabilityValidator(this.field_H), 8945);
+        this.field_H.setValidationSource(new UsernameAvailabilityValidator(this.field_H), 8945);
         this.field_I.field_y = false;
         this.field_I.field_p = (WidgetPainter) ((Object) new qp());
         this.field_G.field_p = (WidgetPainter) ((Object) new LinkPainter());
@@ -313,20 +313,20 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(var3, 50, (byte) 121, 20, 270);
+        var2.setBounds(var3, 50, (byte) 121, 20, 270);
         this.b((byte) -47, var2);
         var3 += 50;
         var3 = var3 + (this.a((byte) -110, 170, var3, this.field_H, AllianceExpiredEvent.field_m, MapView.field_zb) + 5);
-        this.field_I.a(var3, 40, (byte) 123, 496 - var5 >> 1, var5);
-        this.field_G.a(var3 + 15, 40, (byte) 127, var4 + 3, 60);
+        this.field_I.setBounds(var3, 40, (byte) 123, 496 - var5 >> 1, var5);
+        this.field_G.setBounds(var3 + 15, 40, (byte) 127, var4 + 3, 60);
         this.field_G.field_u = (WidgetListener) (this);
         this.field_I.field_u = (WidgetListener) (this);
         this.b((byte) -63, this.field_I);
         this.b((byte) -48, this.field_G);
         this.field_F = new bj((dl) (this));
-        this.field_F.a(20, 150, (byte) 115, this.field_H.field_m - (-this.field_H.field_x - 60), this.field_x - this.field_H.field_m + (-this.field_H.field_x - 60));
+        this.field_F.setBounds(20, 150, (byte) 115, this.field_H.field_m - (-this.field_H.field_x - 60), this.field_x - this.field_H.field_m + (-this.field_H.field_x - 60));
         this.b((byte) -98, this.field_F);
-        this.a(0, 55 + var3 + var4, (byte) 117, 0, 496);
+        this.setBounds(0, 55 + var3 + var4, (byte) 117, 0, 496);
     }
 
     static {

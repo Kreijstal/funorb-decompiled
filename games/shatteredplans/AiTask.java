@@ -13,21 +13,21 @@ class AiTask extends IntrusiveNode {
     final static void a(int param0) {
         String var2 = null;
         if (param0 == -15887) {
-          if (la.field_h != null) {
-            var2 = la.field_h;
+          if (RichTextLayout.field_h != null) {
+            var2 = RichTextLayout.field_h;
             String var1 = var2;
-            bf.a(113, re.a(ei.field_b, param0 ^ -12062, new String[]{var2}));
-            la.field_h = null;
+            bf.a(113, QuickChatCategoryRegistry.a(ei.field_b, param0 ^ -12062, new String[]{var2}));
+            RichTextLayout.field_h = null;
           }
           return;
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_m = null;
         field_h = null;
         if (param0 != -122) {
-          AiTask.a((byte) 113);
+          AiTask.clearStatics((byte) 113);
           field_k = null;
           return;
         }
@@ -38,7 +38,7 @@ class AiTask extends IntrusiveNode {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

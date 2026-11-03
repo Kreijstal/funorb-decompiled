@@ -15,11 +15,11 @@ abstract class ArchiveRequest extends DualLinkNode {
         MusicEnvelope.field_i = param0;
         CachedArchiveSource.field_n = true;
         if (param0 == 1) {
-          jo.a(32767, sf.field_d, true, 476);
+          QuickChatPhraseRegistry.a(32767, sf.field_d, true, 476);
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -18301) {
           return;
         }
@@ -76,26 +76,26 @@ abstract class ArchiveRequest extends DualLinkNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, Archive param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.b(param1.getFileByName(true, "", "headers.packvorbis"));
-          var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
-          var2.b();
+          VorbisSample.readSetup(param1.getFileByName(true, "", "headers.packvorbis"));
+          var2 = VorbisSample.load(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAll();
           int var3 = 38 / ((param0 - 28) / 50);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean f(int param0) {
         if (param0 != -11) {
           field_s = (String) null;
-          if (gm.field_i < 10) {
+          if (SoundPlayback.field_i < 10) {
             return false;
           }
           if (!eh.field_P) {
@@ -103,7 +103,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           }
           return false;
         }
-        if (gm.field_i < 10) {
+        if (SoundPlayback.field_i < 10) {
           return false;
         }
         if (!eh.field_P) {
@@ -124,21 +124,21 @@ abstract class ArchiveRequest extends DualLinkNode {
           ks.field_h = new Sprite(256, 256);
           ks.field_h.bindAsRenderTarget();
           DerelictMapGenerator.field_n.drawScaled(0, 0, 256, 256);
-          gf.b(3, 3, 0, 0, 256, 256);
+          SoftwareRasterizer.b(3, 3, 0, 0, 256, 256);
           lq.field_o = new Sprite(32, 32);
           lq.field_o.bindAsRenderTarget();
           DerelictMapGenerator.field_n.drawQuarterSize(0, 0);
           n.field_k = new Sprite(256, 256);
           n.field_k.bindAsRenderTarget();
           DerelictMapGenerator.field_n.draw(64, 64);
-          gf.b(12, 12, 0, 0, 256, 256);
+          SoftwareRasterizer.b(12, 12, 0, 0, 256, 256);
           MouseInputHandler.field_b = new Sprite(64, 64);
           MouseInputHandler.field_b.bindAsRenderTarget();
           lq.field_o.draw(16, 16);
-          gf.b(3, 3, 0, 0, 64, 64);
+          SoftwareRasterizer.b(3, 3, 0, 0, 64, 64);
           cg.i(0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class GameRules {
     boolean field_f;
     boolean field_k;
     boolean field_h;
-    static sp field_a;
+    static WidgetStyle field_a;
     static int field_c;
     boolean field_j;
     static int field_m;
@@ -43,7 +43,7 @@ final class GameRules {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class GameRules {
         return var2.toString();
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_a = null;
         field_d = null;
         if (!param0) {
@@ -143,7 +143,7 @@ final class GameRules {
     final static void a(int param0, int param1) {
         try {
           try {
-            ll.a(GameScreen.f((byte) 124), "resizing", new Object[]{new Integer(param1)}, param0 + 15355);
+            ll.callJavaScriptWithArguments(GameScreen.getHostApplet((byte) 124), "resizing", new Object[]{new Integer(param1)}, param0 + 15355);
           } catch (Throwable throwable) {
           }
           if (param0 == -15469) {

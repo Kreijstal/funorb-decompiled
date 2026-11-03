@@ -39,21 +39,21 @@ final class ij {
         return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
-    final static qh b(byte param0) {
-        tm.field_k = new qh(250, 60, 150, 186, MouseWheelInput.field_c.toUpperCase());
-        fe var1 = new fe(-16 + (tm.field_k.field_k + tm.field_k.field_m), tm.field_k.field_t + 2, 11, 11, -1, (Sprite) null, "X", 16711680);
+    final static MenuWindow b(byte param0) {
+        tm.field_k = new MenuWindow(250, 60, 150, 186, MouseWheelInput.field_c.toUpperCase());
+        MenuButton var1 = new MenuButton(-16 + (tm.field_k.field_k + tm.field_k.field_m), tm.field_k.field_t + 2, 11, 11, -1, (Sprite) null, "X", 16711680);
         var1.field_h = tm.field_k;
-        tm.field_k.a(var1, 8);
-        lp var2 = new lp(9 + tm.field_k.field_k, 20 + tm.field_k.field_t, 132, 158);
-        tm.field_k.a(var2, 8);
+        tm.field_k.addChild(var1, 8);
+        MenuList var2 = new MenuList(9 + tm.field_k.field_k, 20 + tm.field_k.field_t, 132, 158);
+        tm.field_k.addChild(var2, 8);
         tm.field_k.field_z = var2;
-        rh var3 = new rh();
+        ProjectsContent var3 = new ProjectsContent();
         int var4 = -110 % ((param0 + 14) / 61);
-        tm.field_k.field_x = (jk) ((Object) var3);
+        tm.field_k.field_x = (MenuContent) ((Object) var3);
         return tm.field_k;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != -29) {
           field_a = (kj) null;
           field_a = null;

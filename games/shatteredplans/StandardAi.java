@@ -130,7 +130,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -381,7 +381,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -409,7 +409,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -522,13 +522,13 @@ class StandardAi implements Ai {
                 stackIn_51_0 = 3;
                 return stackIn_51_0;
               }
-              dupTemp$0 = ff.field_x[this.field_n.field_x];
+              dupTemp$0 = SpriteButton.field_x[this.field_n.field_x];
               var17 = dupTemp$0;
               var9_array = dupTemp$0;
               var10Lifetime1 = param0;
               for (var11 = 0; var11 < this.field_o; var11++) {
                 if (DefendTask.field_q[var11] &&
-                  ff.field_x[var4_int][var11] <= var17[var11]) {
+                  SpriteButton.field_x[var4_int][var11] <= var17[var11]) {
                   var10Lifetime1--;
                 }
               }
@@ -555,7 +555,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
         }
     }
 
@@ -668,7 +668,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -741,7 +741,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -889,7 +889,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -1006,7 +1006,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1155,7 +1155,7 @@ class StandardAi implements Ai {
               }
               var5.unlink((byte) -93);
               var5.unlinkSecondary(16);
-              var5.d(true);
+              var5.unlinkTertiary(true);
               var5.field_y.field_J = var5.field_y.field_J + var5.field_z;
               param2 = param2 - var5.field_z;
             }
@@ -1201,7 +1201,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1267,7 +1267,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -1427,7 +1427,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1587,7 +1587,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1650,7 +1650,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -1826,7 +1826,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -1865,7 +1865,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1932,7 +1932,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -1963,11 +1963,11 @@ class StandardAi implements Ai {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         field_f = null;
         int var1 = -25 / ((2 - param0) / 56);
         field_e = null;
@@ -2020,7 +2020,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2057,7 +2057,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2184,7 +2184,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2252,13 +2252,13 @@ class StandardAi implements Ai {
         int var6Lifetime1;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = this.field_g.field_r;
-        ff.field_x = new int[var2][];
+        SpriteButton.field_x = new int[var2][];
         this.field_k = -1;
         DefendTask.field_q = new boolean[this.field_o];
         for (var3_int = 0; var3_int < var2; var3_int++) {
-          ff.field_x[var3_int] = this.a((byte) -64, this.field_g.field_v[var3_int]);
+          SpriteButton.field_x[var3_int] = this.a((byte) -64, this.field_g.field_v[var3_int]);
         }
-        var3 = ff.field_x[this.field_n.field_x];
+        var3 = SpriteButton.field_x[this.field_n.field_x];
         var4 = 0;
         for (var5 = 0; var5 < this.field_o; var5++) {
           regionExit1: {
@@ -2268,7 +2268,7 @@ class StandardAi implements Ai {
               while (var7 < var2) {
                 if (~var7 != ~this.field_n.field_x &&
                   this.field_n.field_h[var7] &&
-                  var3[var5] >= ff.field_x[var7][var5]) {
+                  var3[var5] >= SpriteButton.field_x[var7][var5]) {
                   var6 = 0;
                 } else {
                   var7++;
@@ -2289,7 +2289,7 @@ class StandardAi implements Ai {
           this.d(-52);
         }
         for (var5Lifetime1 = 0; var2 > var5Lifetime1; var5Lifetime1++) {
-          this.field_b[var5Lifetime1] = this.a(var4, nc.a(param0, -18484), this.field_g.field_v[var5Lifetime1]);
+          this.field_b[var5Lifetime1] = this.a(var4, CandidateLink.intXor(param0, -18484), this.field_g.field_v[var5Lifetime1]);
         }
         for (var5Lifetime2 = 0; var2 > var5Lifetime2; var5Lifetime2++) {
           var6Lifetime1 = this.field_g.field_m[var5Lifetime2];
@@ -2299,7 +2299,7 @@ class StandardAi implements Ai {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isChatEnabled(byte param0) {
         if (param0 >= -19) {
           this.b(102, -64);
         }
@@ -2346,7 +2346,7 @@ class StandardAi implements Ai {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -2365,7 +2365,7 @@ class StandardAi implements Ai {
           this.field_k = -1;
           kd.a(23299, this.field_o);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

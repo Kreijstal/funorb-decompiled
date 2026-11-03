@@ -7,7 +7,7 @@ final class oi {
     static Archive field_h;
     static String field_g;
     static int field_e;
-    static ds field_b;
+    static MessageKind field_b;
     static Sprite[][] field_i;
     static boolean field_f;
     static Sprite field_d;
@@ -36,7 +36,7 @@ final class oi {
             mp.field_e[var2_int] = GameRules.a(param1, var2_int + 1, 1);
           }
           ce.field_v = EmailValidator.a(param1, "", "win", false);
-          dp.field_s = EmailValidator.a(param1, "", "lose", false);
+          QuickChatCategoryDefinition.field_s = EmailValidator.a(param1, "", "lose", false);
           if (param0 != -126) {
             var4 = (Archive) null;
             oi.a((byte) -117, (Archive) null);
@@ -52,15 +52,15 @@ final class oi {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_h = null;
         field_b = null;
         if (param0 != -1) {
-          oi.a(52);
+          oi.clearStatics(52);
         }
         field_d = null;
         field_i = (Sprite[][]) null;
@@ -82,13 +82,13 @@ final class oi {
           cg.i(0);
         }
         if (param1 != 66) {
-          oi.a(-57);
+          oi.clearStatics(-57);
         }
         return var2;
     }
 
     static {
         field_g = "You cannot chat to <%0> because <%0> is offline in your friend list.";
-        field_b = new ds(2);
+        field_b = new MessageKind(2);
     }
 }

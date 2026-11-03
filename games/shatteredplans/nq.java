@@ -20,7 +20,7 @@ abstract class nq extends DualLinkNode {
     private static int field_w;
     private static String[] field_D;
     private static int field_s;
-    private bq[] field_z;
+    private IndexedSpriteState[] field_z;
     int field_J;
     private static int field_A;
     private static int field_u;
@@ -120,7 +120,7 @@ abstract class nq extends DualLinkNode {
         return var13;
     }
 
-    public static void a() {
+    public static void clearStatics() {
         field_B = null;
         field_D = null;
     }
@@ -150,7 +150,7 @@ abstract class nq extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        bq var11_ref_bq = null;
+        IndexedSpriteState var11_ref_bq = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -257,10 +257,10 @@ abstract class nq extends DualLinkNode {
               }
               param1 = param1 + this.field_y[var8];
               if (field_w != -1) {
-                gf.f(var11, param2 + (int)((double)this.field_L * 0.7), param1 - var11, field_w);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_L * 0.7), param1 - var11, field_w);
               }
               if (field_p != -1) {
-                gf.f(var11, param2 + this.field_L + 1, param1 - var11, field_p);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_L + 1, param1 - var11, field_p);
               }
               var5 = var8;
             }
@@ -487,10 +487,10 @@ abstract class nq extends DualLinkNode {
                 }
               }
               if (field_w != -1) {
-                gf.j(param1 + (int)((double)this.field_L * 0.7), param2, var10, field_w);
+                SoftwareRasterizer.drawVerticalLine(param1 + (int)((double)this.field_L * 0.7), param2, var10, field_w);
               }
               if (field_p != -1) {
-                gf.j(param1 + this.field_L + 1, param2, var10, field_p);
+                SoftwareRasterizer.drawVerticalLine(param1 + this.field_L + 1, param2, var10, field_p);
               }
               var5 = var8;
             }
@@ -502,7 +502,7 @@ abstract class nq extends DualLinkNode {
 
     abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
-    final void a(bq[] param0, int[] param1) {
+    final void a(IndexedSpriteState[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();
@@ -603,7 +603,7 @@ abstract class nq extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        aj.a(field_B, 0, -127, ' ');
+        aj.padWithChar(field_B, 0, -127, ' ');
         var4 = 0;
         var5 = 0;
         var6 = -1;

@@ -7,10 +7,10 @@ final class cg extends SingleChildWidget {
     static String field_F;
     static java.awt.Frame field_K;
     static int field_I;
-    static qr field_A;
+    static AnimatedPanel field_A;
     static String[] field_B;
     static String field_G;
-    static qr field_C;
+    static AnimatedPanel field_C;
 
     public cg() {
         super(0, 0, 0, 0, (WidgetPainter) null, (WidgetListener) null);
@@ -43,11 +43,11 @@ final class cg extends SingleChildWidget {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         Sprite var6 = null;
         if (0 != param0) {
           return;
@@ -61,12 +61,12 @@ final class cg extends SingleChildWidget {
         if (this.field_J != 256) {
           var6 = new Sprite(this.field_z.field_x, this.field_z.field_n);
           aq.a((byte) 114, var6);
-          this.field_z.a(param0, param1, 0, 0);
+          this.field_z.drawLayer(param0, param1, 0, 0);
           Star.f((byte) -78);
           var6.drawAlpha(param3 + this.field_m, param2 + this.field_q, this.field_J);
           return;
         }
-        this.field_z.a(param0, -11857, param2 + this.field_q, param3 + this.field_m);
+        this.field_z.drawLayer(param0, -11857, param2 + this.field_q, param3 + this.field_m);
     }
 
     final static Sprite[] a(int param0, Sprite param1) {
@@ -99,7 +99,7 @@ final class cg extends SingleChildWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -120,16 +120,16 @@ final class cg extends SingleChildWidget {
           if (param6 != -13037) {
             return false;
           }
-          if (oj.field_Fb != ee.field_l) {
+          if (oj.field_Fb != PrivateChatMessage.field_l) {
             return false;
           }
           var8 = new oj(le.field_e, param5);
-          le.field_e.a(true, var8);
+          le.field_e.addDialog(true, var8);
           if (TextFieldWidget.j(0)) {
             var8.f(false);
             return true;
           }
-          ee.field_l = ue.field_a;
+          PrivateChatMessage.field_l = ue.field_a;
           np.field_m = param1;
           aa.field_G = param4;
           PlayerStats.field_j = param2;
@@ -165,24 +165,24 @@ final class cg extends SingleChildWidget {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param6).append(')').toString());
         }
     }
 
     final static void i(int param0) {
         RandomAccessCacheFile.field_k = RandomAccessCacheFile.field_k - 1;
-        gf.a(Archive.field_c[RandomAccessCacheFile.field_k], oj.field_Cb[RandomAccessCacheFile.field_k], TertiaryLinkNode.field_s[RandomAccessCacheFile.field_k]);
-        gf.field_i = cb.field_f[RandomAccessCacheFile.field_k];
+        SoftwareRasterizer.setTarget(Archive.field_c[RandomAccessCacheFile.field_k], oj.field_Cb[RandomAccessCacheFile.field_k], TertiaryLinkNode.field_s[RandomAccessCacheFile.field_k]);
+        SoftwareRasterizer.field_i = cb.field_f[RandomAccessCacheFile.field_k];
         if (param0 == 0) {
-          gf.field_l = dk.field_b[RandomAccessCacheFile.field_k];
-          gf.field_a = bf.field_c[RandomAccessCacheFile.field_k];
-          gf.field_f = DebouncedValidator.field_d[RandomAccessCacheFile.field_k];
+          SoftwareRasterizer.field_l = dk.field_b[RandomAccessCacheFile.field_k];
+          SoftwareRasterizer.field_a = bf.field_c[RandomAccessCacheFile.field_k];
+          SoftwareRasterizer.field_f = DebouncedValidator.field_d[RandomAccessCacheFile.field_k];
           return;
         }
-        field_A = (qr) null;
-        gf.field_l = dk.field_b[RandomAccessCacheFile.field_k];
-        gf.field_a = bf.field_c[RandomAccessCacheFile.field_k];
-        gf.field_f = DebouncedValidator.field_d[RandomAccessCacheFile.field_k];
+        field_A = (AnimatedPanel) null;
+        SoftwareRasterizer.field_l = dk.field_b[RandomAccessCacheFile.field_k];
+        SoftwareRasterizer.field_a = bf.field_c[RandomAccessCacheFile.field_k];
+        SoftwareRasterizer.field_f = DebouncedValidator.field_d[RandomAccessCacheFile.field_k];
     }
 
     final static MouseWheelInput e(boolean param0) {
@@ -228,11 +228,11 @@ final class cg extends SingleChildWidget {
     cg(UiWidget param0) {
         super(param0.field_m, param0.field_q, param0.field_x, param0.field_n, (WidgetPainter) null, (WidgetListener) null);
         try {
-          param0.a(0, this.field_n, (byte) 120, 0, this.field_x);
+          param0.setBounds(0, this.field_n, (byte) 120, 0, this.field_x);
           this.field_z = param0;
           this.field_J = 256;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

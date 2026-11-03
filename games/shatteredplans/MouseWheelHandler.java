@@ -9,26 +9,26 @@ final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.
         param0.consume();
     }
 
-    final void a(java.awt.Component param0, int param1) {
+    final void detachFrom(java.awt.Component param0, int param1) {
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 <= 63) {
           java.awt.Component var4 = (java.awt.Component) null;
-          this.a((java.awt.Component) null, false);
+          this.attachTo((java.awt.Component) null, false);
         }
     }
 
-    final synchronized int b(int param0) {
+    final synchronized int takeRotation(int param0) {
         int var2 = 124 / ((param0 - 36) / 44);
         int var3 = this.field_g;
         this.field_g = 0;
         return var3;
     }
 
-    final void a(java.awt.Component param0, boolean param1) {
+    final void attachTo(java.awt.Component param0, boolean param1) {
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (!param1) {
           java.awt.Component var4 = (java.awt.Component) null;
-          this.a((java.awt.Component) null, -90);
+          this.detachFrom((java.awt.Component) null, -90);
         }
     }
 

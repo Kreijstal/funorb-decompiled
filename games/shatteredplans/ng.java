@@ -5,7 +5,7 @@ final class ng {
     static String field_b;
     static int[] field_a;
 
-    final static boolean a(CipherPacketBuffer param0, byte param1) {
+    final static boolean readBoolean(CipherPacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -28,11 +28,11 @@ final class ng {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         int var1 = -9 / ((39 - param0) / 63);
         field_b = null;
         field_a = null;

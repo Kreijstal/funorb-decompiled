@@ -5,7 +5,7 @@ final class fc {
     private int[] field_i;
     static String field_c;
     private String field_h;
-    qr field_e;
+    AnimatedPanel field_e;
     private int field_l;
     static boolean field_a;
     int field_f;
@@ -55,23 +55,23 @@ final class fc {
         if (var4 != null) {
           if (!np.field_a.field_Ab ||
             !(np.field_a.field_lc < 0)) {
-            this.field_j.a(1, 1, re.a(il.field_fb, 4371, new String[]{var5}));
+            this.field_j.a(1, 1, QuickChatCategoryRegistry.a(il.field_fb, 4371, new String[]{var5}));
           }
         } else {
           if (var7 != null &&
             np.field_a.field_mc &&
             np.field_a.field_Lb < np.field_a.field_Eb) {
             if (var7.field_Tb) {
-              this.field_j.a(1, 1, re.a(field_c, 4371, new String[]{var5}));
+              this.field_j.a(1, 1, QuickChatCategoryRegistry.a(field_c, 4371, new String[]{var5}));
             } else {
               if (!param0) {
-                this.field_j.a(1, 0, re.a(WeightedLruCache.field_f, 4371, new String[]{var5}));
+                this.field_j.a(1, 0, QuickChatCategoryRegistry.a(WeightedLruCache.field_f, 4371, new String[]{var5}));
               } else {
                 if (!var7.field_Vb) {
-                  this.field_j.a(1, 0, re.a(WeightedLruCache.field_f, 4371, new String[]{var5}));
+                  this.field_j.a(1, 0, QuickChatCategoryRegistry.a(WeightedLruCache.field_f, 4371, new String[]{var5}));
                 } else {
-                  this.field_j.a(param1 ^ -16662, 0, re.a(ad.field_g, 4371, new String[]{var5}));
-                  this.field_j.a(1, 1, re.a(BufferedCacheFile.field_f, 4371, new String[]{var5}));
+                  this.field_j.a(param1 ^ -16662, 0, QuickChatCategoryRegistry.a(StatusContent.field_g, 4371, new String[]{var5}));
+                  this.field_j.a(1, 1, QuickChatCategoryRegistry.a(BufferedCacheFile.field_f, 4371, new String[]{var5}));
                 }
               }
             }
@@ -120,7 +120,7 @@ final class fc {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_d = null;
         field_c = null;
         field_g = null;
@@ -134,7 +134,7 @@ final class fc {
         if (param1 != 17) {
           return false;
         }
-        DialogRoot.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, this.field_k, this.field_b);
+        DialogRoot.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, this.field_k, this.field_b);
         return true;
     }
 
@@ -244,35 +244,35 @@ final class fc {
             param1 == 2) && po.field_b == 2) {
             var7 = this.a(-121);
             var4 = var7;
-            var5 = hb.a((byte) -90, this.field_k);
+            var5 = NodeSequence.a((byte) -90, this.field_k);
             var6 = IntrusiveNodeHashTable.a(this.field_k, true) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_j.a(1, 4, re.a(IntrusiveNodeHashTable.field_j, 4371, new String[]{var7}));
-              this.field_j.a(1, 6, re.a(ts.field_F, 4371, new String[]{var7}));
+              this.field_j.a(1, 4, QuickChatCategoryRegistry.a(IntrusiveNodeHashTable.field_j, 4371, new String[]{var7}));
+              this.field_j.a(1, 6, QuickChatCategoryRegistry.a(ts.field_F, 4371, new String[]{var7}));
               if (param0 != null &&
                 param1 != 2 &&
                 !bg.field_g) {
                 this.field_i = param0;
-                this.field_j.a(1, 19, re.a(ri.field_G, 4371, new String[]{var7}));
+                this.field_j.a(1, 19, QuickChatCategoryRegistry.a(ri.field_G, 4371, new String[]{var7}));
               }
             }
             if (var5 != null) {
               if (!Player.a(-68, this.field_k) &&
                 !bg.field_g) {
                 if (!ae.field_b) {
-                  this.field_j.a(1, 8, re.a(NetworkArchiveRequest.field_B, 4371, new String[]{var7}));
+                  this.field_j.a(1, 8, QuickChatCategoryRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var7}));
                 }
-                this.field_j.a(1, 18, re.a(AchievementProgress.field_e, 4371, new String[]{var7}));
+                this.field_j.a(1, 18, QuickChatCategoryRegistry.a(AchievementProgress.field_e, 4371, new String[]{var7}));
                 if (param0 != null) {
                   this.field_i = param0;
-                  this.field_j.a(1, 19, re.a(ri.field_G, 4371, new String[]{var7}));
+                  this.field_j.a(1, 19, QuickChatCategoryRegistry.a(ri.field_G, 4371, new String[]{var7}));
                 }
               }
-              this.field_j.a(1, 5, re.a(FocusableWidget.field_C, 4371, new String[]{var7}));
+              this.field_j.a(1, 5, QuickChatCategoryRegistry.a(FocusableWidget.field_C, 4371, new String[]{var7}));
             }
             if (var6 != 0) {
-              this.field_j.a(1, 7, re.a(ByteArrayNode.field_m, 4371, new String[]{var7}));
+              this.field_j.a(1, 7, QuickChatCategoryRegistry.a(ByteArrayNode.field_m, 4371, new String[]{var7}));
             }
           }
           if (param2 >= -13) {
@@ -289,7 +289,7 @@ final class fc {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -316,7 +316,7 @@ final class fc {
             if (~UsernameAvailabilityValidator.field_p != ~this.field_b) {
               var3 = this.a(-127);
               var2 = var3;
-              this.field_j.a(1, 17, re.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
+              this.field_j.a(1, 17, QuickChatCategoryRegistry.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
             }
             return;
           }
@@ -328,7 +328,7 @@ final class fc {
         if (~UsernameAvailabilityValidator.field_p != ~this.field_b) {
           var3 = this.a(-127);
           var2Lifetime1 = var3;
-          this.field_j.a(1, 17, re.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
+          this.field_j.a(1, 17, QuickChatCategoryRegistry.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
           return;
         }
     }
@@ -411,17 +411,17 @@ final class fc {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, boolean param1) {
         if (param0 == 13505) {
-          this.field_j.b(param1, 122);
+          this.field_j.drawFullRaster(param1, 122);
           return;
         }
-        this.field_e = (qr) null;
-        this.field_j.b(param1, 122);
+        this.field_e = (AnimatedPanel) null;
+        this.field_j.drawFullRaster(param1, 122);
     }
 
     final void a(nf param0, byte param1) {
@@ -467,7 +467,7 @@ final class fc {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -487,39 +487,39 @@ final class fc {
           }
           var3 = var6.field_Xb;
           if (var6.field_Jb) {
-            this.field_j.a(1, 2, re.a(Archive.field_i, 4371, new String[]{var3}));
-            this.field_j.a(1, 3, re.a(sq.field_i, 4371, new String[]{var3}));
+            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(Archive.field_i, 4371, new String[]{var3}));
+            this.field_j.a(1, 3, QuickChatCategoryRegistry.a(sq.field_i, 4371, new String[]{var3}));
             return;
           }
           if (var6.field_cc) {
-            this.field_j.a(1, 2, re.a(ta.field_c, 4371, new String[]{var3}));
+            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(ta.field_c, 4371, new String[]{var3}));
             if (var6.field_Yb) {
-              this.field_j.a(1, 3, re.a(im.field_a, 4371, new String[]{var3}));
+              this.field_j.a(1, 3, QuickChatCategoryRegistry.a(im.field_a, 4371, new String[]{var3}));
             }
             return;
           }
           if (!var6.field_Yb &&
             var6.field_mc) {
             if (!var6.field_Ab) {
-              this.field_j.a(1, 2, re.a(GarrisonTask.field_r, 4371, new String[]{var3}));
+              this.field_j.a(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
               if (var6.field_Yb) {
-                this.field_j.a(1, 3, re.a(im.field_a, 4371, new String[]{var3}));
+                this.field_j.a(1, 3, QuickChatCategoryRegistry.a(im.field_a, 4371, new String[]{var3}));
               }
               return;
             }
             if (!var6.field_cc) {
               if (var6.field_Yb) {
-                this.field_j.a(1, 3, re.a(im.field_a, 4371, new String[]{var3}));
+                this.field_j.a(1, 3, QuickChatCategoryRegistry.a(im.field_a, 4371, new String[]{var3}));
               }
               return;
             }
-            this.field_j.a(1, 2, re.a(GarrisonTask.field_r, 4371, new String[]{var3}));
+            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
           }
           if (!var6.field_Yb) {
             return;
           }
         } else {
-          this.field_e = (qr) null;
+          this.field_e = (AnimatedPanel) null;
           if (null != np.field_a) {
             return;
           }
@@ -529,20 +529,20 @@ final class fc {
           }
           var3 = var7.field_Xb;
           if (var7.field_Jb) {
-            this.field_j.a(1, 2, re.a(Archive.field_i, 4371, new String[]{var3}));
-            this.field_j.a(1, 3, re.a(sq.field_i, 4371, new String[]{var3}));
+            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(Archive.field_i, 4371, new String[]{var3}));
+            this.field_j.a(1, 3, QuickChatCategoryRegistry.a(sq.field_i, 4371, new String[]{var3}));
             return;
           }
           if (var7.field_cc) {
-            this.field_j.a(1, 2, re.a(ta.field_c, 4371, new String[]{var3}));
+            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(ta.field_c, 4371, new String[]{var3}));
           } else {
             if (!var7.field_Yb &&
               var7.field_mc) {
               if (!var7.field_Ab) {
-                this.field_j.a(1, 2, re.a(GarrisonTask.field_r, 4371, new String[]{var3}));
+                this.field_j.a(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
               } else {
                 if (var7.field_cc) {
-                  this.field_j.a(1, 2, re.a(GarrisonTask.field_r, 4371, new String[]{var3}));
+                  this.field_j.a(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
                 }
               }
             }
@@ -551,7 +551,7 @@ final class fc {
             return;
           }
         }
-        this.field_j.a(1, 3, re.a(im.field_a, 4371, new String[]{var3}));
+        this.field_j.a(1, 3, QuickChatCategoryRegistry.a(im.field_a, 4371, new String[]{var3}));
     }
 
     private final boolean c(int param0, int param1, int param2) {
@@ -622,7 +622,7 @@ final class fc {
         return true;
     }
 
-    fc(qr param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    fc(AnimatedPanel param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_j = new ul(hd.field_t);
           this.field_i = param6;
@@ -634,7 +634,7 @@ final class fc {
           this.field_e = param0;
           this.field_h = param3;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

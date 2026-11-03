@@ -4,12 +4,12 @@
 final class dd {
     static String field_a;
 
-    final static ms a(boolean param0, String param1, String param2, int param3, long param4) {
+    final static ChatMessage a(boolean param0, String param1, String param2, int param3, long param4) {
         RuntimeException var6 = null;
         jm stackIn_6_0 = null;
-        ee stackIn_8_0 = null;
-        ms stackIn_11_0 = null;
-        kp stackIn_13_0 = null;
+        PrivateChatMessage stackIn_8_0 = null;
+        ChatMessage stackIn_11_0 = null;
+        TargetedChatMessage stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -19,18 +19,18 @@ final class dd {
         try {
           if (param4 == 0L &&
             param2 != null) {
-            stackIn_8_0 = new ee(param2, param1);
-            return (ms) ((Object) stackIn_8_0);
+            stackIn_8_0 = new PrivateChatMessage(param2, param1);
+            return (ChatMessage) ((Object) stackIn_8_0);
           }
           if (param0) {
             stackIn_6_0 = new jm(param4, param1);
-            return (ms) ((Object) stackIn_6_0);
+            return (ChatMessage) ((Object) stackIn_6_0);
           }
           if (param3 == 4684) {
-            stackIn_13_0 = new kp(param4, param1);
-            return (ms) ((Object) stackIn_13_0);
+            stackIn_13_0 = new TargetedChatMessage(param4, param1);
+            return (ChatMessage) ((Object) stackIn_13_0);
           }
-          stackIn_11_0 = (ms) null;
+          stackIn_11_0 = (ChatMessage) null;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -48,11 +48,11 @@ final class dd {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -14279) {
           return;
         }
@@ -85,82 +85,82 @@ final class dd {
         try {
           var5_int = param3 + param2;
           var6 = param0 + param4;
-          if (param3 <= gf.field_i) {
-            stackIn_4_0 = gf.field_i;
+          if (param3 <= SoftwareRasterizer.field_i) {
+            stackIn_4_0 = SoftwareRasterizer.field_i;
           } else {
             stackIn_4_0 = param3;
           }
           var7 = stackIn_4_0;
-          if (gf.field_a >= param4) {
-            stackIn_7_0 = gf.field_a;
+          if (SoftwareRasterizer.field_a >= param4) {
+            stackIn_7_0 = SoftwareRasterizer.field_a;
           } else {
             stackIn_7_0 = param4;
           }
           var8 = stackIn_7_0;
-          if (gf.field_l <= var5_int) {
-            stackIn_10_0 = gf.field_l;
+          if (SoftwareRasterizer.field_l <= var5_int) {
+            stackIn_10_0 = SoftwareRasterizer.field_l;
           } else {
             stackIn_10_0 = var5_int;
           }
           var9 = stackIn_10_0;
           if (param1 != 1) {
-            dd.a(-10);
+            dd.clearStatics(-10);
           }
-          if (gf.field_f > var6) {
+          if (SoftwareRasterizer.field_f > var6) {
             stackIn_15_0 = var6;
           } else {
-            stackIn_15_0 = gf.field_f;
+            stackIn_15_0 = SoftwareRasterizer.field_f;
           }
           var10 = stackIn_15_0;
-          if (gf.field_i <= param3 &&
-            gf.field_l > param3) {
-            var11 = gf.field_b * var8 + param3;
+          if (SoftwareRasterizer.field_i <= param3 &&
+            SoftwareRasterizer.field_l > param3) {
+            var11 = SoftwareRasterizer.field_b * var8 + param3;
             var12 = var10 + 1 - var8 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              gf.field_h[var11] = 16777215;
-              var11 = var11 + gf.field_b * 2;
+              SoftwareRasterizer.field_h[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.field_b * 2;
             }
           }
-          if (param4 >= gf.field_a &&
-            gf.field_f > var6) {
-            var11Lifetime1 = var7 + param4 * gf.field_b;
+          if (param4 >= SoftwareRasterizer.field_a &&
+            SoftwareRasterizer.field_f > var6) {
+            var11Lifetime1 = var7 + param4 * SoftwareRasterizer.field_b;
             var12Lifetime1 = -var7 + (1 + var9) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              gf.field_h[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_h[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (gf.field_i <= var5_int &&
-            var5_int < gf.field_l) {
-            var11Lifetime2 = gf.field_b * ((1 & var5_int - param3) + var8) + var5_int;
+          if (SoftwareRasterizer.field_i <= var5_int &&
+            var5_int < SoftwareRasterizer.field_l) {
+            var11Lifetime2 = SoftwareRasterizer.field_b * ((1 & var5_int - param3) + var8) + var5_int;
             var12Lifetime2 = 1 - (-var10 + var8) >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              gf.field_h[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + gf.field_b * 2;
+              SoftwareRasterizer.field_h[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_b * 2;
             }
           }
-          if (param4 >= gf.field_a &&
-            gf.field_f > var6) {
-            var11Lifetime3 = (1 & var6 - param4) + (var6 * gf.field_b + var7);
+          if (param4 >= SoftwareRasterizer.field_a &&
+            SoftwareRasterizer.field_f > var6) {
+            var11Lifetime3 = (1 & var6 - param4) + (var6 * SoftwareRasterizer.field_b + var7);
             var12Lifetime3 = -var7 + (1 + var9) >> 1;
             while (true) {
               var12Lifetime3--;
               if (0 > var12Lifetime3) {
                 return;
               }
-              gf.field_h[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_h[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -168,7 +168,7 @@ final class dd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var5), "dd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var5), "dd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class dd {
         CipherPacketBuffer var5 = null;
         int var3 = -27 % ((12 - param2) / 47);
         if (param0 != GameApplet.field_g) {
-          var4 = (fb) (IsaacBackedRandom.field_b.a(65280, (long)GameApplet.field_g));
+          var4 = (fb) (IsaacBackedRandom.field_b.get(65280, (long)GameApplet.field_g));
           GameApplet.field_g = param0;
           if (var4 != null) {
             var4.field_jc = null;

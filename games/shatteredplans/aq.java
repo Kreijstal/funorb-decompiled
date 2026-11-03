@@ -8,7 +8,7 @@ final class aq extends IntrusiveNode {
     int field_l;
     int field_m;
     static boolean[] field_p;
-    static qr field_j;
+    static AnimatedPanel field_j;
     static int[] field_o;
     static double field_h;
 
@@ -66,7 +66,7 @@ final class aq extends IntrusiveNode {
         return !(param0 <= param2);
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_j = null;
         field_i = null;
         field_o = null;
@@ -90,9 +90,9 @@ final class aq extends IntrusiveNode {
         try {
           int var2_int = -121 % ((29 - param0) / 51);
           wh.a(false);
-          gf.a(param1.field_B, param1.field_o, param1.field_p);
+          SoftwareRasterizer.setTarget(param1.field_B, param1.field_o, param1.field_p);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class aq extends IntrusiveNode {
         int var4;
         gq[] var5;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        var5 = dn.a(4);
+        var5 = DualLinkDequeSequence.a(4);
         var2 = var5;
         for (var3 = param1; var5.length > var3; var3++) {
           if (var5[var3].field_c == param0) {

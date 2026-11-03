@@ -5,7 +5,7 @@ final class pr {
     static int[] field_d;
     static String field_e;
     static Sprite field_a;
-    static qr field_c;
+    static AnimatedPanel field_c;
     static String field_b;
     static int field_g;
     static String field_f;
@@ -13,13 +13,13 @@ final class pr {
     final static void a(java.awt.Component param0, int param1) {
         try {
           if (param1 != -9194) {
-            field_c = (qr) null;
+            field_c = (AnimatedPanel) null;
           }
           param0.setFocusTraversalKeysEnabled(false);
           param0.addKeyListener(im.field_c);
           param0.addFocusListener(im.field_c);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "pr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "pr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -40,11 +40,11 @@ final class pr {
         field_f = null;
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long currentTimeMillis(int param0) {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 != 14274) {
-          pr.a(81);
+          pr.currentTimeMillis(81);
           var1 = System.currentTimeMillis();
           if (lh.field_z > var1) {
             wd.field_N = wd.field_N + (-var1 + lh.field_z);

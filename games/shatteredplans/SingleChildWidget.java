@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class SingleChildWidget extends UiWidget implements ni {
     UiWidget field_z;
-    static ub field_y;
+    static ScrollPane field_y;
 
     private final boolean a(UiWidget param0, int param1) {
         int var3_int = 0;
@@ -17,7 +17,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 36 / ((33 - param1) / 61);
-          stackIn_5_0 = (null != this.field_z) && (!this.field_z.f(1)) && (this.field_z.a((byte) 125, param0));
+          stackIn_5_0 = (null != this.field_z) && (!this.field_z.isFocused(1)) && (this.field_z.containsWidget((byte) 125, param0));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -29,7 +29,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
             discarded$13 = param3.append("null");
             return;
           }
-          this.field_z.a((byte) -121, param1, 1 + param2, param3);
+          this.field_z.describeTree((byte) -121, param1, 1 + param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,11 +77,11 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean containsWidget(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
@@ -91,7 +91,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -6 % ((param0 - 61) / 59);
-          stackIn_4_0 = (this.field_z != null) && (this.field_z.a((byte) -97, param1));
+          stackIn_4_0 = (this.field_z != null) && (this.field_z.containsWidget((byte) -97, param1));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,49 +103,49 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final void e(byte param0) {
+    final void blur(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (null == this.field_z) {
           var2 = 31 % ((-84 - param0) / 33);
           return;
         }
-        this.field_z.e((byte) -124);
+        this.field_z.blur((byte) -124);
         var2Lifetime1 = 31 % ((-84 - param0) / 33);
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         if (param4 != -600269855) {
           return;
         }
         try {
           if (null != this.field_z) {
-            this.field_z.a(param0, this.field_q + param1, param2 + this.field_m, param3, -600269855, param5);
+            this.field_z.handleRelease(param0, this.field_q + param1, param2 + this.field_m, param3, -600269855, param5);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qs.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qs.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     void h(int param0) {
         if (null != this.field_z) {
-          this.field_z.d((byte) 70);
+          this.field_z.reapplyBounds((byte) 70);
         }
         if (param0 == 1) {
           return;
         }
         UiWidget var3 = (UiWidget) null;
-        this.a(-10, 20, (UiWidget) null, (byte) 94);
+        this.updateHover(-10, 20, (UiWidget) null, (byte) 94);
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_y = null;
         if (param0 < 6) {
-          field_y = (ub) null;
+          field_y = (ScrollPane) null;
         }
     }
 
@@ -158,9 +158,9 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            field_y = (ub) null;
+            field_y = (ScrollPane) null;
           }
-          stackIn_7_0 = (null != this.field_z) && (this.field_z.f(param0 + 1)) && (this.field_z.a(param0 ^ 0, param1, param2, param3, param4, param5, param6));
+          stackIn_7_0 = (null != this.field_z) && (this.field_z.isFocused(param0 + 1)) && (this.field_z.a(param0 ^ 0, param1, param2, param3, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,7 +172,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -202,9 +202,9 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         try {
           if (param0 != 9501) {
             var4 = (UiWidget) null;
-            this.a((byte) -63, (UiWidget) null);
+            this.containsWidget((byte) -63, (UiWidget) null);
           }
-          stackIn_7_0 = (this.field_z != null) && (!this.field_z.f(1)) && (this.field_z.a((byte) 1, param1));
+          stackIn_7_0 = (this.field_z != null) && (!this.field_z.isFocused(1)) && (this.field_z.containsWidget((byte) 1, param1));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,32 +216,32 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final int e(int param0) {
+    final int maxLayer(int param0) {
         if (param0 != -600269855) {
           return -125;
         }
-        return null == this.field_z ? 0 : this.field_z.e(param0 ^ 0);
+        return null == this.field_z ? 0 : this.field_z.maxLayer(param0 ^ 0);
     }
 
-    final boolean f(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != 1) {
           return true;
         }
-        return null != this.a(2) ? true : false;
+        return null != this.findFocusedWidget(2) ? true : false;
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 >= 99) {
-          super.a(param0, param1, (byte) 108, param3, param4);
+          super.setBounds(param0, param1, (byte) 108, param3, param4);
           this.h(1);
           return;
         }
-        this.e(73);
-        super.a(param0, param1, (byte) 108, param3, param4);
+        this.maxLayer(73);
+        super.setBounds(param0, param1, (byte) 108, param3, param4);
         this.h(1);
     }
 
@@ -249,7 +249,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    String c(boolean param0) {
+    String getTooltip(boolean param0) {
         boolean discarded$0 = false;
         String var2 = null;
         String var3 = null;
@@ -258,9 +258,9 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         if (!param0) {
           UiWidget var4 = (UiWidget) null;
           discarded$0 = this.a(112, (UiWidget) null);
-          var2 = super.c(param0);
+          var2 = super.getTooltip(param0);
           if (this.field_z != null) {
-            var3 = this.field_z.c(param0);
+            var3 = this.field_z.getTooltip(param0);
             if (var3 != null) {
               return var3;
             }
@@ -268,18 +268,18 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           }
           return var2;
         }
-        var2Lifetime1 = super.c(param0);
+        var2Lifetime1 = super.getTooltip(param0);
         if (this.field_z == null) {
           return var2Lifetime1;
         }
-        var3Lifetime1 = this.field_z.c(param0);
+        var3Lifetime1 = this.field_z.getTooltip(param0);
         if (var3Lifetime1 == null) {
           return var2Lifetime1;
         }
         return var3Lifetime1;
     }
 
-    StringBuilder a(byte param0, Hashtable param1, int param2, StringBuilder param3) {
+    StringBuilder describeTree(byte param0, Hashtable param1, int param2, StringBuilder param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_3_0 = null;
@@ -290,8 +290,8 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(false, param2, param3, param1)) {
-            this.a(param1, param2, false, param3);
+          if (this.markVisited(false, param2, param3, param1)) {
+            this.appendDescription(param1, param2, false, param3);
             this.a(81, param1, param2, param3);
           }
           var5_int = -117 % ((param0 - 64) / 61);
@@ -313,11 +313,11 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
+    boolean handlePress(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -328,7 +328,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           if (param2 <= 95) {
             this.field_z = (UiWidget) null;
           }
-          stackIn_6_0 = (null != this.field_z) && (this.field_z.a(param0, param1, (byte) 112, param3, param4 + this.field_m, this.field_q + param5, param6));
+          stackIn_6_0 = (null != this.field_z) && (this.field_z.handlePress(param0, param1, (byte) 112, param3, param4 + this.field_m, this.field_q + param5, param6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -340,11 +340,11 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    UiWidget a(int param0) {
+    UiWidget findFocusedWidget(int param0) {
         UiWidget var2 = null;
         UiWidget var2Lifetime1;
         if (param0 != 2) {
@@ -353,7 +353,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           if (var2 == null) {
             return null;
           }
-          if (var2.f(param0 ^ 3)) {
+          if (var2.isFocused(param0 ^ 3)) {
             return var2;
           }
           return null;
@@ -362,24 +362,24 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         if (var2Lifetime1 == null) {
           return null;
         }
-        if (var2Lifetime1.f(param0 ^ 3)) {
+        if (var2Lifetime1.isFocused(param0 ^ 3)) {
           return var2Lifetime1;
         }
         return null;
     }
 
-    void a(int param0, int param1, UiWidget param2, byte param3) {
+    void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           if (null == this.field_z) {
             return;
           }
-          this.field_z.a(this.field_m + param0, this.field_q + param1, param2, (byte) 91);
+          this.field_z.updateHover(this.field_m + param0, this.field_q + param1, param2, (byte) 91);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -391,24 +391,24 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         if (param1 != -11857) {
-          field_y = (ub) null;
+          field_y = (ScrollPane) null;
         }
         if (param0 == 0 &&
           this.field_p != null) {
           this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
         }
         if (null != this.field_z) {
-          this.field_z.a(param0, -11857, this.field_q + param2, this.field_m + param3);
+          this.field_z.drawLayer(param0, -11857, this.field_q + param2, this.field_m + param3);
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_14_0 = false;
@@ -418,8 +418,8 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != this.field_z &&
-            this.field_z.f(1) &&
-            this.field_z.a(param0, param1, 13, param3)) {
+            this.field_z.isFocused(1) &&
+            this.field_z.handleKey(param0, param1, 13, param3)) {
             return true;
           }
           if (param2 != 13) {
@@ -445,7 +445,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

@@ -76,7 +76,7 @@ final class og implements WidgetPainter {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -87,16 +87,16 @@ final class og implements WidgetPainter {
         if (param0) {
           field_b = (bg) null;
         }
-        if (null == pd.field_j) {
+        if (null == TertiaryListSequence.field_j) {
           return;
         }
-        var1 = pd.field_j;
+        var1 = TertiaryListSequence.field_j;
         synchronized (var1) {
-          pd.field_j = null;
+          TertiaryListSequence.field_j = null;
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -106,7 +106,7 @@ final class og implements WidgetPainter {
     }
 
     final static void a(int param0, boolean param1) {
-        le.field_e.a(0, param0, (byte) -66);
+        le.field_e.draw(0, param0, (byte) -66);
     }
 
     public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
@@ -125,12 +125,12 @@ final class og implements WidgetPainter {
           }
           var7 = param3 + param0.field_q;
           ClientException.a((byte) -73, var7, param0.field_n, var6_int, param0.field_x);
-          var8 = lp.field_w[1];
+          var8 = MenuList.field_w[1];
           if (param0 instanceof FocusableWidget &&
             ((FocusableWidget) (param0)).field_z) {
             var8.c(1 + (var6_int + (param0.field_x - var8.field_o >> 1)), (-var8.field_p + param0.field_n >> 1) + 1 + var7, 256);
           }
-          if (!param0.f(param4 ^ 13)) {
+          if (!param0.isFocused(param4 ^ 13)) {
             return;
           }
           dd.a(-4 + param0.field_n, 1, -4 + param0.field_x, var6_int + 2, 2 + var7);
@@ -145,7 +145,7 @@ final class og implements WidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ final class og implements WidgetPainter {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jp extends qr {
+final class jp extends AnimatedPanel {
     static v field_Cb;
-    private qr field_yb;
-    private qr field_zb;
+    private AnimatedPanel field_yb;
+    private AnimatedPanel field_zb;
     static String field_xb;
     static PcmStreamMixer field_Bb;
     private StringBuilder field_Db;
@@ -61,7 +61,7 @@ final class jp extends qr {
             if (hq.a(-103, (char) var2)) {
               discarded$11 = this.field_Db.append((char) var2);
             } else {
-              if (dk.a((byte) 55, (char) var2)) {
+              if (dk.isDigit((byte) 55, (char) var2)) {
                 discarded$12 = this.field_Db.append((char) var2);
               }
             }
@@ -99,7 +99,7 @@ final class jp extends qr {
             }
             return true;
           }
-          if (dk.a((byte) 55, (char) var2)) {
+          if (dk.isDigit((byte) 55, (char) var2)) {
             discarded$14 = this.field_Db.append((char) var2);
             if (oq.field_j == 84) {
               if (this.field_Db.length() > 0) {
@@ -154,7 +154,7 @@ final class jp extends qr {
               if (hq.a(-103, (char) var2Lifetime1)) {
                 discarded$6 = this.field_Db.append((char) var2Lifetime1);
               } else {
-                if (dk.a((byte) 55, (char) var2Lifetime1)) {
+                if (dk.isDigit((byte) 55, (char) var2Lifetime1)) {
                   discarded$7 = this.field_Db.append((char) var2Lifetime1);
                 }
               }
@@ -192,7 +192,7 @@ final class jp extends qr {
               }
               return true;
             }
-            if (dk.a((byte) 55, (char) var2Lifetime1)) {
+            if (dk.isDigit((byte) 55, (char) var2Lifetime1)) {
               discarded$9 = this.field_Db.append((char) var2Lifetime1);
               if (oq.field_j == 84) {
                 if (this.field_Db.length() > 0) {
@@ -227,7 +227,7 @@ final class jp extends qr {
           }
           return true;
         }
-        aj.a(this.field_Db, this.field_Db.length() - 1, -121, ' ');
+        aj.padWithChar(this.field_Db, this.field_Db.length() - 1, -121, ' ');
         if (this.field_Db.length() >= 12) {
           if (oq.field_j == 84) {
             if (this.field_Db.length() > 0) {
@@ -255,7 +255,7 @@ final class jp extends qr {
           if (hq.a(-103, (char) var2Lifetime2)) {
             discarded$1 = this.field_Db.append((char) var2Lifetime2);
           } else {
-            if (dk.a((byte) 55, (char) var2Lifetime2)) {
+            if (dk.isDigit((byte) 55, (char) var2Lifetime2)) {
               discarded$2 = this.field_Db.append((char) var2Lifetime2);
             }
           }
@@ -293,7 +293,7 @@ final class jp extends qr {
           }
           return true;
         }
-        if (!dk.a((byte) 55, (char) var2Lifetime2)) {
+        if (!dk.isDigit((byte) 55, (char) var2Lifetime2)) {
           if (oq.field_j == 84) {
             if (this.field_Db.length() <= 0) {
               this.field_Ab = 1;
@@ -353,11 +353,11 @@ final class jp extends qr {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    jp(int param0, int param1, int param2, int param3, String param4, qr param5, qr param6, qr param7) {
+    jp(int param0, int param1, int param2, int param3, String param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -377,21 +377,21 @@ final class jp extends qr {
         int var13 = 0;
         this.field_Ab = 0;
         try {
-          this.field_yb = new qr(0L, param6, param4);
-          this.a(4, this.field_yb);
-          this.field_zb = new qr(0L, param7);
+          this.field_yb = new AnimatedPanel(0L, param6, param4);
+          this.addChild(4, this.field_yb);
+          this.field_zb = new AnimatedPanel(0L, param7);
           this.field_zb.field_x = 16764006;
-          this.a(4, this.field_zb);
+          this.addChild(4, this.field_zb);
           this.field_zb.field_u = "|";
           this.field_Db = new StringBuilder(12);
-          var9_int = this.field_yb.e(false);
-          this.field_yb.a(var9_int, cr.field_c, (byte) 96, 3, 5);
-          this.field_zb.a(var9_int, cr.field_c, (byte) 76, cr.field_c + 3, 5);
+          var9_int = this.field_yb.measureWidthUnbounded(false);
+          this.field_yb.setTarget(var9_int, cr.field_c, (byte) 96, 3, 5);
+          this.field_zb.setTarget(var9_int, cr.field_c, (byte) 76, cr.field_c + 3, 5);
           var10 = 5 + var9_int + 5;
           var11 = 3 + cr.field_c * 2 + 3;
           var12 = uh.a(-57, param0, var10, param2);
           var13 = uq.a(param3, 0, var11, param1);
-          this.a(var10, var11, (byte) 63, var13, var12);
+          this.setTarget(var10, var11, (byte) 63, var13, var12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -421,7 +421,7 @@ final class jp extends qr {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -477,7 +477,7 @@ final class jp extends qr {
           }
           if (85 == oq.field_j &&
             0 < this.field_Db.length()) {
-            aj.a(this.field_Db, this.field_Db.length() - 1, 29, ' ');
+            aj.padWithChar(this.field_Db, this.field_Db.length() - 1, 29, ' ');
           }
           if (TutorialMapGenerator.a(ho.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
             discarded$0 = this.field_Db.append(ho.field_h);
@@ -515,26 +515,26 @@ final class jp extends qr {
         try {
           if (MouseInputHandler.field_h == null) {
             MouseInputHandler.field_h = new eo(le.field_e, tl.field_z);
-            le.field_e.a(true, MouseInputHandler.field_h);
+            le.field_e.addDialog(true, MouseInputHandler.field_h);
           }
           MouseInputHandler.field_h.a(param3, param0, 65536, param1);
           if (param2 <= 118) {
             jp.g(-100);
           }
-          gf.b();
+          SoftwareRasterizer.clear();
           og.a(0, true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static void g(byte param0) {
         String[] var2 = null;
         String[] var2Lifetime1;
-        dp.field_t = false;
+        QuickChatCategoryDefinition.field_t = false;
         if (DerelictMapReader.field_h != null) {
           DerelictMapReader.field_h.h(0);
-          if (0 != em.field_h) {
+          if (0 != ProductionContent.field_h) {
             MusicVoice.c(false);
           }
           ConquestVictoryChecker.field_m = 0;
@@ -545,7 +545,7 @@ final class jp extends qr {
           }
           return;
         }
-        if (0 != em.field_h) {
+        if (0 != ProductionContent.field_h) {
           MusicVoice.c(false);
         }
         ConquestVictoryChecker.field_m = 0;
@@ -568,7 +568,7 @@ final class jp extends qr {
             sj.field_b.field_F.a(args, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jp.D(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jp.D(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

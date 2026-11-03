@@ -37,21 +37,21 @@ abstract class MouseWheelInput {
             param2 = param2 + param0;
             param0 = 0;
           }
-          if (param0 + param2 > gf.field_k) {
-            param2 = gf.field_k - param0;
+          if (param0 + param2 > SoftwareRasterizer.field_k) {
+            param2 = SoftwareRasterizer.field_k - param0;
           }
           if (param5 != 24074) {
             field_d = (String) null;
           }
-          if (param3 + param4 > gf.field_b) {
-            param4 = -param3 + gf.field_b;
+          if (param3 + param4 > SoftwareRasterizer.field_b) {
+            param4 = -param3 + SoftwareRasterizer.field_b;
           }
           var6_int = -param1 + 256;
           var7 = param0 + param2;
           for (var8 = param0; var8 < var7; var8++) {
-            var9 = param3 + var8 * gf.field_b;
+            var9 = param3 + var8 * SoftwareRasterizer.field_b;
             for (var10 = param4; var10 > 0; var10--) {
-              var11 = gf.field_h[var9];
+              var11 = SoftwareRasterizer.field_h[var9];
               var12 = (var11 & 16711680) >> 16;
               var13 = (var11 & 65280) >> 8;
               var14 = var11 & 255;
@@ -60,7 +60,7 @@ abstract class MouseWheelInput {
               var17 = (var6_int * var15 >> 12) + (param1 * var13 >> 8);
               var18 = (param1 * var14 >> 8) + (var15 * var6_int >> 12);
               var19 = var16 << 16 | var17 << 8 | var18;
-              gf.field_h[var9] = var19;
+              SoftwareRasterizer.field_h[var9] = var19;
               var9++;
             }
           }
@@ -68,11 +68,11 @@ abstract class MouseWheelInput {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var6), "ib.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var6), "ib.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         int var1 = 104 % ((-36 - param0) / 56);
         field_b = null;
@@ -82,11 +82,11 @@ abstract class MouseWheelInput {
         field_f = null;
     }
 
-    abstract void a(java.awt.Component param0, boolean param1);
+    abstract void attachTo(java.awt.Component param0, boolean param1);
 
-    abstract int b(int param0);
+    abstract int takeRotation(int param0);
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detachFrom(java.awt.Component param0, int param1);
 
     static {
         field_c = "Projects";

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bd extends qk {
-    static qr field_E;
+final class bd extends MenuLabel {
+    static AnimatedPanel field_E;
     static boolean field_A;
     static Sprite[] field_C;
     static String field_F;
@@ -29,7 +29,7 @@ final class bd extends qk {
         try {
           this.field_B = param5;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -41,11 +41,11 @@ final class bd extends qk {
           this.field_u = param1;
           this.field_B = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStatics(int param0) {
         field_E = null;
         if (param0 <= -104) {
           field_G = null;

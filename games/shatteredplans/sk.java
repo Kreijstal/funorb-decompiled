@@ -4,11 +4,11 @@
 final class sk extends IntrusiveNode {
     int field_j;
     long field_l;
-    static qr field_k;
+    static AnimatedPanel field_k;
     byte[] field_h;
     static String field_i;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_i = null;
         field_k = null;
         if (param0 >= -6) {
@@ -27,7 +27,7 @@ final class sk extends IntrusiveNode {
         Exception var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
-        dp var9 = null;
+        QuickChatCategoryDefinition var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var8 = sa.field_a;
         var3 = var8.readUnsignedByte(param1 ^ 113);
@@ -35,7 +35,7 @@ final class sk extends IntrusiveNode {
         kr.field_b = stackIn_3_0;
         PacketBuffer.field_k = var3 & 127;
         nj.field_a = var8.readUnsignedByte(-77);
-        sp.field_j = var8.readLong(param1 ^ -31);
+        WidgetStyle.field_j = var8.readLong(param1 ^ -31);
         if (PacketBuffer.field_k != 2) {
           TertiaryNodeList.field_f = 0;
           va.field_b = 0;
@@ -47,16 +47,16 @@ final class sk extends IntrusiveNode {
         var4 = stackIn_9_0;
         ArchiveRequest.field_s = var8.readString(param1 ^ 0);
         if (var4 == 0) {
-          em.field_a = ArchiveRequest.field_s;
+          ProductionContent.field_a = ArchiveRequest.field_s;
         } else {
-          em.field_a = var8.readString(-1);
+          ProductionContent.field_a = var8.readString(-1);
         }
         if (PacketBuffer.field_k != 1 &&
           PacketBuffer.field_k != 4) {
-          fm.field_f = 0;
+          HuffmanCodec.field_f = 0;
           WeightedCacheEntry.field_q = null;
         } else {
-          fm.field_f = var8.readUnsignedShort(param1 - 20975);
+          HuffmanCodec.field_f = var8.readUnsignedShort(param1 - 20975);
           WeightedCacheEntry.field_q = var8.readString(param1 + 0);
         }
         if (!param0) {
@@ -68,7 +68,7 @@ final class sk extends IntrusiveNode {
         try {
           var9 = dh.field_c.a((byte) 47, var5);
           BufferedSocket.field_h = var9.f(80);
-          if (em.field_a.equals(Star.field_o)) {
+          if (ProductionContent.field_a.equals(Star.field_o)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var9.field_o;
@@ -91,7 +91,7 @@ final class sk extends IntrusiveNode {
           this.field_j = param1;
           this.field_h = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b extends vd {
+final class b extends MenuComponent {
     private int field_w;
     private int field_v;
     static int field_u;
@@ -25,17 +25,17 @@ final class b extends vd {
         int var2 = 68 % ((67 - param0) / 47);
         if (0 == this.field_w) {
           if (this.field_v > 16777215) {
-            gf.c(this.field_k, this.field_t, this.field_m, this.field_i, 16777215 & this.field_v, this.field_v >> 24);
+            SoftwareRasterizer.fillRectAlpha(this.field_k, this.field_t, this.field_m, this.field_i, 16777215 & this.field_v, this.field_v >> 24);
             return;
           }
-          gf.d(this.field_k, this.field_t, this.field_m, this.field_i, this.field_v);
+          SoftwareRasterizer.fillRect(this.field_k, this.field_t, this.field_m, this.field_i, this.field_v);
           return;
         }
         if (16777215 < this.field_v) {
-          gf.a(this.field_k, this.field_t, this.field_m, this.field_i, this.field_w, 16777215 & this.field_v, this.field_v >> 24);
+          SoftwareRasterizer.fillRoundedRectAlpha(this.field_k, this.field_t, this.field_m, this.field_i, this.field_w, 16777215 & this.field_v, this.field_v >> 24);
           return;
         }
-        gf.a(this.field_k, this.field_t, this.field_m, this.field_i, this.field_w, this.field_v);
+        SoftwareRasterizer.fillRoundedRect(this.field_k, this.field_t, this.field_m, this.field_i, this.field_w, this.field_v);
     }
 
     final static void a(int param0, PacketBuffer param1, String param2) {
@@ -79,7 +79,7 @@ final class b extends vd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

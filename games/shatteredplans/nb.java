@@ -77,7 +77,7 @@ final class nb {
         if (null == ji.field_G) {
           var1 = Dialog.l(param0 ^ param0);
           no.field_e = new ri(var1, (String) null, true, false, false);
-          le.field_e.a(true, ae.field_f);
+          le.field_e.addDialog(true, ae.field_f);
           ae.field_f.b(no.field_e, param0 - 18);
           ae.field_f.n(param0 + 7363);
           return;
@@ -85,7 +85,7 @@ final class nb {
         ji.field_G.i((byte) -104);
         var1Lifetime1 = Dialog.l(param0 ^ param0);
         no.field_e = new ri(var1Lifetime1, (String) null, true, false, false);
-        le.field_e.a(true, ae.field_f);
+        le.field_e.addDialog(true, ae.field_f);
         ae.field_f.b(no.field_e, param0 - 18);
         ae.field_f.n(param0 + 7363);
     }
@@ -101,7 +101,7 @@ final class nb {
           if (param1 <= 94) {
             nb.a((byte) -57);
           }
-          stackIn_3_0 = ek.field_D.getFileByName(true, param0, "");
+          stackIn_3_0 = ArrayWidgetGroup.field_D.getFileByName(true, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,7 +113,7 @@ final class nb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

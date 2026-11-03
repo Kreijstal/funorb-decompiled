@@ -15,7 +15,7 @@ final class WeightedLruCache {
     private int field_b;
     static String field_d;
 
-    private final void a(long param0, int param1, int param2, Object param3) {
+    private final void insert(long param0, int param1, int param2, Object param3) {
         WeightedCacheEntry var6 = null;
         StrongCacheEntry var6_ref = null;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -23,22 +23,22 @@ final class WeightedLruCache {
           if (param1 > this.field_b) {
             throw new IllegalStateException();
           }
-          this.a(false, param0);
+          this.remove(false, param0);
           this.field_k = this.field_k - param1;
           while (this.field_k < 0) {
             var6 = (WeightedCacheEntry) (this.field_c.pollFirst((byte) -20));
-            this.a(var6, (byte) -88);
+            this.removeEntry(var6, (byte) -88);
           }
           var6_ref = new StrongCacheEntry(param3, param1);
           this.field_h.put(var6_ref, true, param0);
           this.field_c.addLast(var6_ref, 6);
           ((WeightedCacheEntry) ((Object) var6_ref)).field_l = (long)param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final Object a(long param0, int param1) {
+    final Object get(long param0, int param1) {
         Object var8 = null;
         StrongCacheEntry var6 = null;
         WeightedCacheEntry var7 = (WeightedCacheEntry) (this.field_h.get(-78, param0));
@@ -133,27 +133,27 @@ final class WeightedLruCache {
     }
 
     final static os a(byte param0) {
-        ff var2 = null;
+        SpriteButton var2 = null;
         bd var3 = null;
         bd var4 = null;
         TextFieldWidget.field_E = new os(5, 5, 500, 45);
-        ad var1 = new ad();
-        TextFieldWidget.field_E.field_v = (jk) ((Object) var1);
+        StatusContent var1 = new StatusContent();
+        TextFieldWidget.field_E.field_v = (MenuContent) ((Object) var1);
         if (param0 == 69) {
-          var2 = new ff(15, 10, 36, 36, (Sprite) null);
-          TextFieldWidget.field_E.a(var2, 8);
+          var2 = new SpriteButton(15, 10, 36, 36, (Sprite) null);
+          TextFieldWidget.field_E.addChild(var2, 8);
           var1.field_e = var2;
           var3 = new bd(15, 5 - (-(TextFieldWidget.field_E.field_i / 2) + rs.field_Cb.field_J / 2), 450, rs.field_Cb.field_J, (String) null, 0);
           var4 = new bd(15, TextFieldWidget.field_E.field_i - rs.field_Cb.field_J, 450, rs.field_Cb.field_J, (String) null, 2);
           var1.field_f = var3;
-          TextFieldWidget.field_E.a(var3, 8);
-          TextFieldWidget.field_E.a(var4, param0 ^ 77);
+          TextFieldWidget.field_E.addChild(var3, 8);
+          TextFieldWidget.field_E.addChild(var4, param0 ^ 77);
           return TextFieldWidget.field_E;
         }
         return (os) null;
     }
 
-    private final void a(WeightedCacheEntry param0, byte param1) {
+    private final void removeEntry(WeightedCacheEntry param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -161,7 +161,7 @@ final class WeightedLruCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -88) {
-            this.a(89L, -55);
+            this.get(89L, -55);
           }
           if (param0 == null) {
             return;
@@ -180,13 +180,13 @@ final class WeightedLruCache {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(boolean param0, long param1) {
+    private final void remove(boolean param0, long param1) {
         WeightedCacheEntry var4 = (WeightedCacheEntry) (this.field_h.get(-99, param1));
-        this.a(var4, (byte) -88);
+        this.removeEntry(var4, (byte) -88);
         if (param0) {
           field_l = (String) null;
           return;
@@ -197,14 +197,14 @@ final class WeightedLruCache {
         this(param0, param0);
     }
 
-    final void a(long param0, Object param1, byte param2) {
+    final void put(long param0, Object param1, byte param2) {
         if (param2 != -108) {
           return;
         }
         try {
-          this.a(param0, 1, 0, param1);
+          this.insert(param0, 1, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ol.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ol.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -4,9 +4,9 @@
 final class AgeValidator extends TextFieldValidator {
     static int[] field_o;
     static int[] field_p;
-    static qr field_n;
+    static AnimatedPanel field_n;
 
-    final String a(boolean param0, String param1) {
+    final String computeMessageFor(boolean param0, String param1) {
         RuntimeException var3 = null;
         String stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -17,7 +17,7 @@ final class AgeValidator extends TextFieldValidator {
           if (param0) {
             field_o = (int[]) null;
           }
-          if (this.b(-11196, param1) != ArchiveSourceManager.field_b) {
+          if (this.computeStateFor(-11196, param1) != ArchiveSourceManager.field_b) {
             return null;
           }
           stackIn_5_0 = hr.field_f;
@@ -32,7 +32,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class AgeValidator extends TextFieldValidator {
           id.a(param20, param5, param3 + 26883, param10, param7);
           BattleEvent.b(param2, param8, param3);
           te.a(-4440, param19, param13, param14, param9, param12);
-          ad.a(param4, param15, param1, (byte) 106);
+          StatusContent.a(param4, param15, param1, (byte) 106);
           gn.a(param0, param18, false, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,7 +92,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param20).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -177,16 +177,16 @@ final class AgeValidator extends TextFieldValidator {
         super(param0);
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_o = null;
         field_p = null;
         field_n = null;
         if (param0 <= 77) {
-          field_n = (qr) null;
+          field_n = (AnimatedPanel) null;
         }
     }
 
-    final ValidationState b(int param0, String param1) {
+    final ValidationState computeStateFor(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -228,7 +228,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

@@ -10,14 +10,14 @@ class TextFieldWidget extends FocusableWidget {
     static boolean field_D;
     static String field_G;
     private long field_F;
-    static qr field_I;
+    static AnimatedPanel field_I;
     static Sprite field_L;
     private boolean field_P;
     private int field_O;
     private long field_Q;
     private boolean field_M;
 
-    private final void k(byte param0) {
+    private final void deleteSelection(byte param0) {
         int var3 = 0;
         int var2 = 0;
         int var2Lifetime1;
@@ -27,23 +27,23 @@ class TextFieldWidget extends FocusableWidget {
           this.field_N = var2;
           this.field_H = var2;
           this.field_s = this.field_s.substring(0, var2) + this.field_s.substring(var3, this.field_s.length());
-          this.i(5018);
+          this.notifyTextChanged(5018);
         }
         var2Lifetime1 = 75 % ((-61 - param0) / 54);
     }
 
-    private final void h(byte param0) {
+    private final void cutSelection(byte param0) {
         if (param0 <= -33) {
-          this.h(-1);
-          this.k((byte) 120);
+          this.copyToClipboard(-1);
+          this.deleteSelection((byte) 120);
           return;
         }
         field_E = (os) null;
-        this.h(-1);
-        this.k((byte) 120);
+        this.copyToClipboard(-1);
+        this.deleteSelection((byte) 120);
     }
 
-    private final void a(byte param0, String param1) {
+    private final void insertText(byte param0, String param1) {
         int var3_int = 0;
         if (this.field_O != -1) {
           var3_int = this.field_O - this.field_s.length();
@@ -63,23 +63,23 @@ class TextFieldWidget extends FocusableWidget {
         }
         try {
           this.field_N = this.field_H;
-          this.i(5018);
+          this.notifyTextChanged(5018);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "go.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "go.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void e(boolean param0) {
+    final void clear(boolean param0) {
         if (!param0) {
           return;
         }
         this.field_N = 0;
         this.field_H = 0;
         this.field_s = "";
-        this.i(5018);
+        this.notifyTextChanged(5018);
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePress(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -91,22 +91,22 @@ class TextFieldWidget extends FocusableWidget {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (super.a(param0, param1, (byte) 100, param3, param4, param5, param6) &&
+          if (super.handlePress(param0, param1, (byte) 100, param3, param4, param5, param6) &&
             this.field_p instanceof WidgetMetrics) {
-            var8_int = ((WidgetMetrics) ((Object) this.field_p)).a(param4, pd.field_k, param5, (UiWidget) (this), true, bb.field_b);
+            var8_int = ((WidgetMetrics) ((Object) this.field_p)).getCharacterIndexAt(param4, TertiaryListSequence.field_k, param5, (UiWidget) (this), true, bb.field_b);
             stackIn_5_1 = 119;
             if (var8_int == -1) {
               stackIn_6_2 = 0;
             } else {
               stackIn_6_2 = var8_int;
             }
-            this.a(stackIn_5_1, stackIn_6_2);
-            var8_long = pr.a(14274);
+            this.moveCaret(stackIn_5_1, stackIn_6_2);
+            var8_long = pr.currentTimeMillis(14274);
             stackIn_9_1 = !(-this.field_F + var8_long >= 250L);
             this.field_P = stackIn_9_1;
             if (this.field_P) {
-              this.field_N = this.g((byte) 96);
-              this.field_H = this.a(-1);
+              this.field_N = this.findPreviousWordBoundary((byte) 96);
+              this.field_H = this.findNextWordBoundary(-1);
               if (this.field_H > 0 &&
                 this.field_s.charAt(-1 + this.field_H) == 32) {
                 this.field_H = this.field_H - 1;
@@ -131,12 +131,12 @@ class TextFieldWidget extends FocusableWidget {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
     private final void j(byte param0) {
-        qo var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
@@ -153,13 +153,13 @@ class TextFieldWidget extends FocusableWidget {
           return;
         }
         var9 = (WidgetMetrics) ((Object) this.field_p);
-        var3 = var9.a((UiWidget) (this), true);
-        var4 = var3.c(126);
+        var3 = var9.getTextLayout((UiWidget) (this), true);
+        var4 = var3.getMaxLineWidth(126);
         if (param0 != -59) {
           return;
         }
-        var5 = var9.a(120, (UiWidget) (this));
-        var6 = var9.a(false) >> 1;
+        var5 = var9.getInnerWidth(120, (UiWidget) (this));
+        var6 = var9.getLineHeight(false) >> 1;
         if (var4 < -var6 + var5) {
           this.field_l = 0;
           this.field_h = 0;
@@ -184,7 +184,7 @@ class TextFieldWidget extends FocusableWidget {
         return;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param1 != -11857) {
           return;
         }
@@ -200,16 +200,16 @@ class TextFieldWidget extends FocusableWidget {
         }
         WidgetMetrics var5 = (WidgetMetrics) ((Object) this.field_p);
         if (this.field_H != this.field_N) {
-          var5.a(this.field_N, param2, param3, this.field_H, 0, (UiWidget) (this));
+          var5.drawSelection(this.field_N, param2, param3, this.field_H, 0, (UiWidget) (this));
         }
-        long var6 = pr.a(param1 + 26131);
+        long var6 = pr.currentTimeMillis(param1 + 26131);
         if ((var6 - this.field_Q) % 1000L < 500L) {
-          var5.a(this.field_H, param3, -127, param2, (UiWidget) (this));
+          var5.drawCaret(this.field_H, param3, -127, param2, (UiWidget) (this));
           return;
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void moveCaret(int param0, int param1) {
         if (param0 < 64) {
           return;
         }
@@ -220,7 +220,7 @@ class TextFieldWidget extends FocusableWidget {
         this.field_N = this.field_H;
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_49_1 = 0;
         int stackIn_50_2 = 0;
@@ -235,13 +235,13 @@ class TextFieldWidget extends FocusableWidget {
           if (param2 != 13) {
             this.field_F = -52L;
           }
-          this.field_Q = pr.a(param2 ^ 14287);
+          this.field_Q = pr.currentTimeMillis(param2 ^ 14287);
           if (param1 != 60 &&
             62 != param1) {
             if (param1 >= 32 &&
               param1 <= 126) {
               if (this.field_H != this.field_N) {
-                this.k((byte) -116);
+                this.deleteSelection((byte) -116);
               }
               if (this.field_O == -1 ||
                 !(this.field_s.length() >= this.field_O)) {
@@ -255,46 +255,46 @@ class TextFieldWidget extends FocusableWidget {
                   this.field_H = dupTemp$0;
                   this.field_N = dupTemp$0;
                 }
-                this.i(5018);
+                this.notifyTextChanged(5018);
               }
               return true;
             }
             if (85 == param0) {
               if (this.field_N != this.field_H) {
-                this.k((byte) 22);
+                this.deleteSelection((byte) 22);
                 return true;
               }
               if (this.field_H <= 0) {
                 return false;
               }
               this.field_N = -1 + this.field_H;
-              this.k((byte) -120);
+              this.deleteSelection((byte) -120);
               return true;
             }
             if (param0 == 101) {
               if (this.field_N != this.field_H) {
-                this.k((byte) -117);
+                this.deleteSelection((byte) -117);
                 return true;
               }
               if (this.field_H < this.field_s.length()) {
                 this.field_N = 1 + this.field_H;
-                this.k((byte) -117);
+                this.deleteSelection((byte) -117);
                 return true;
               }
             } else {
               if (13 == param0) {
-                this.e(true);
+                this.clear(true);
                 return true;
               }
               if (param0 == 96) {
                 if (this.field_H > 0) {
                   stackIn_56_1 = 127;
                   if (di.field_p[82]) {
-                    stackIn_57_2 = this.g((byte) 88);
+                    stackIn_57_2 = this.findPreviousWordBoundary((byte) 88);
                   } else {
                     stackIn_57_2 = -1 + this.field_H;
                   }
-                  this.a(stackIn_56_1, stackIn_57_2);
+                  this.moveCaret(stackIn_56_1, stackIn_57_2);
                   return true;
                 }
               } else {
@@ -304,37 +304,37 @@ class TextFieldWidget extends FocusableWidget {
                     if (!di.field_p[82]) {
                       stackIn_50_2 = 1 + this.field_H;
                     } else {
-                      stackIn_50_2 = this.a(-1);
+                      stackIn_50_2 = this.findNextWordBoundary(-1);
                     }
-                    this.a(stackIn_49_1, stackIn_50_2);
+                    this.moveCaret(stackIn_49_1, stackIn_50_2);
                     return true;
                   }
                 } else {
                   if (102 == param0) {
-                    this.a(97, 0);
+                    this.moveCaret(97, 0);
                     return true;
                   }
                   if (param0 == 103) {
-                    this.a(88, this.field_s.length());
+                    this.moveCaret(88, this.field_s.length());
                     return true;
                   }
                   if (param0 == 84) {
-                    this.i((byte) 2);
+                    this.fireEnter((byte) 2);
                     return true;
                   }
                   if (di.field_p[82] &&
                     param0 == 65) {
-                    this.h((byte) -95);
+                    this.cutSelection((byte) -95);
                     return true;
                   }
                   if (di.field_p[82] &&
                     param0 == 66) {
-                    this.h(param2 - 14);
+                    this.copyToClipboard(param2 - 14);
                     return true;
                   }
                   if (di.field_p[82] &&
                     67 == param0) {
-                    this.m((byte) -7);
+                    this.pasteFromClipboard((byte) -7);
                     return true;
                   }
                 }
@@ -353,7 +353,7 @@ class TextFieldWidget extends FocusableWidget {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(')').toString());
         }
     }
 
@@ -361,10 +361,10 @@ class TextFieldWidget extends FocusableWidget {
         if (param0 != 0) {
           return false;
         }
-        return js.a(-83, GameScreen.f((byte) 127));
+        return js.a(-83, GameScreen.getHostApplet((byte) 127));
     }
 
-    private final int a(int param0) {
+    private final int findNextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;
@@ -379,7 +379,7 @@ class TextFieldWidget extends FocusableWidget {
             if (param0 == -1) {
               return var3;
             }
-            this.h((byte) 17);
+            this.cutSelection((byte) 17);
             return var3;
           }
           if (this.field_s.charAt(-1 + var3) != 32) {
@@ -391,7 +391,7 @@ class TextFieldWidget extends FocusableWidget {
         if (param0 == -1) {
           return var3;
         }
-        this.h((byte) 17);
+        this.cutSelection((byte) 17);
         return var3;
     }
 
@@ -403,24 +403,24 @@ class TextFieldWidget extends FocusableWidget {
         try {
           this.field_p = MusicVoice.field_I.field_f;
           this.field_O = param2;
-          this.a(67, param0, true);
+          this.setText(67, param0, true);
           this.field_M = true;
-          this.field_Q = pr.a(14274);
+          this.field_Q = pr.currentTimeMillis(14274);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    void a(int param0, int param1, UiWidget param2, byte param3) {
+    void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         WidgetMetrics var5 = null;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.j((byte) -59);
           if (1 == this.field_o) {
             if (this.field_p instanceof WidgetMetrics) {
               var5 = (WidgetMetrics) ((Object) this.field_p);
-              var6 = var5.a(param0, pd.field_k, param1, (UiWidget) (this), true, bb.field_b);
+              var6 = var5.getCharacterIndexAt(param0, TertiaryListSequence.field_k, param1, (UiWidget) (this), true, bb.field_b);
               if (var6 != -1) {
                 if (this.field_P &&
                   this.field_R > var6 &&
@@ -430,16 +430,16 @@ class TextFieldWidget extends FocusableWidget {
                 this.field_H = var6;
               }
             }
-            this.field_Q = pr.a(14274);
+            this.field_Q = pr.currentTimeMillis(14274);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "go.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "go.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    void i(int param0) {
+    void notifyTextChanged(int param0) {
         if (this.field_u instanceof TextFieldListener) {
-          ((TextFieldListener) (this.field_u)).a(this, 95);
+          ((TextFieldListener) (this.field_u)).onTextChanged(this, 95);
         }
         if (param0 != 5018) {
           this.field_N = -127;
@@ -447,7 +447,7 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    final void a(int param0, String param1, boolean param2) {
+    final void setText(int param0, String param1, boolean param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -473,7 +473,7 @@ class TextFieldWidget extends FocusableWidget {
           if (param2) {
             return;
           }
-          this.i(5018);
+          this.notifyTextChanged(5018);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -485,18 +485,18 @@ class TextFieldWidget extends FocusableWidget {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final String l(byte param0) {
+    private final String getSelectedText(byte param0) {
         int var2 = this.field_H > this.field_N ? this.field_N : this.field_H;
         int var3 = this.field_N < this.field_H ? this.field_H : this.field_N;
         if (param0 >= 78) {
           return this.field_s.substring(var2, var3);
         }
         String var4 = (String) null;
-        this.a((byte) 98, (String) null);
+        this.insertText((byte) 98, (String) null);
         return this.field_s.substring(var2, var3);
     }
 
@@ -523,19 +523,19 @@ class TextFieldWidget extends FocusableWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    private final void m(byte param0) {
+    private final void pasteFromClipboard(byte param0) {
         try {
           Throwable decompiledCaughtException = null;
           String var2 = null;
           Exception var2_ref = null;
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.k((byte) -117);
-            this.a((byte) -109, var2);
+            this.deleteSelection((byte) -117);
+            this.insertText((byte) -109, var2);
             if (param0 != -7) {
               this.field_R = -30;
               return;
@@ -604,15 +604,15 @@ class TextFieldWidget extends FocusableWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    private final void h(int param0) {
+    private final void copyToClipboard(int param0) {
         try {
-          String var2 = this.l((byte) 102);
+          String var2 = this.getSelectedText((byte) 102);
           if (param0 > ~var2.length()) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.l((byte) 120))), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) 120))), (java.awt.datatransfer.ClipboardOwner) null);
             return;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -622,7 +622,7 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStatics(int param0) {
         field_G = null;
         if (param0 <= 73) {
           return;
@@ -633,7 +633,7 @@ class TextFieldWidget extends FocusableWidget {
         field_L = null;
     }
 
-    private final int g(byte param0) {
+    private final int findPreviousWordBoundary(byte param0) {
         int var2;
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -653,19 +653,19 @@ class TextFieldWidget extends FocusableWidget {
         return var2;
     }
 
-    private final void i(byte param0) {
+    private final void fireEnter(byte param0) {
         String discarded$0 = null;
         String discarded$1 = null;
         if (this.field_u instanceof TextFieldListener) {
-          ((TextFieldListener) (this.field_u)).a(4340, this);
+          ((TextFieldListener) (this.field_u)).onEnter(4340, this);
           if (param0 != 2) {
-            discarded$0 = this.l((byte) -113);
+            discarded$0 = this.getSelectedText((byte) -113);
             return;
           }
           return;
         }
         if (param0 != 2) {
-          discarded$1 = this.l((byte) -113);
+          discarded$1 = this.getSelectedText((byte) -113);
           return;
         }
     }

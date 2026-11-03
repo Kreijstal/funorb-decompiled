@@ -13,7 +13,7 @@ final class uh {
     String field_c;
     static String[] field_g;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_g = null;
         field_d = null;
         field_e = null;
@@ -62,19 +62,19 @@ final class uh {
     final static int a(int param0, int param1, int param2, int param3) {
         if (param0 >= -8) {
           field_e = (String) null;
-          if (!(gf.field_b < param2 + param1)) {
+          if (!(SoftwareRasterizer.field_b < param2 + param1)) {
             return param1;
           }
           if (param3 + param1 - param2 < 0) {
-            return -param2 + gf.field_b;
+            return -param2 + SoftwareRasterizer.field_b;
           }
           return -param2 + param3 + param1;
         }
-        if (!(gf.field_b < param2 + param1)) {
+        if (!(SoftwareRasterizer.field_b < param2 + param1)) {
           return param1;
         }
         if (param3 + param1 - param2 < 0) {
-          return -param2 + gf.field_b;
+          return -param2 + SoftwareRasterizer.field_b;
         }
         return -param2 + param3 + param1;
     }
@@ -108,7 +108,7 @@ final class uh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

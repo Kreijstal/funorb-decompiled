@@ -15,7 +15,7 @@ abstract class MapViewState {
     float field_H;
     float field_k;
     float field_I;
-    static qr field_j;
+    static AnimatedPanel field_j;
     float field_F;
     float field_g;
     Player field_B;
@@ -69,7 +69,7 @@ abstract class MapViewState {
     IntrusiveDeque field_V;
     IntrusiveDeque field_mb;
 
-    final void a(Star param0, int param1, int param2, Player param3) {
+    final void addAnnotation(Star param0, int param1, int param2, Player param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -84,7 +84,7 @@ abstract class MapViewState {
           if (param1 > -116) {
             this.field_E = 0.7882997989654541f;
           }
-          for (var5_int = 0; !this.a(var5_int, 0, param0); var5_int++) {
+          for (var5_int = 0; !this.isSlotFree(var5_int, 0, param0); var5_int++) {
           }
           this.field_ab.addLast((byte) -113, new StarAnnotation(param0, param3, param2, var5_int));
           if (this.field_W <= var5_int) {
@@ -107,11 +107,11 @@ abstract class MapViewState {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final void b(boolean param0) {
+    final void captureStarState(boolean param0) {
         int var3 = 0;
         Star var4 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -135,7 +135,7 @@ abstract class MapViewState {
         }
     }
 
-    final void a(GalaxyMap param0, int param1) {
+    final void setMap(GalaxyMap param0, int param1) {
         int[] var7 = null;
         int[] var3 = null;
         boolean[] var4 = null;
@@ -153,13 +153,13 @@ abstract class MapViewState {
           }
           this.field_z = var3;
           this.field_P = var4;
-          this.a(false);
+          this.projectStars(false);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0) {
+    final void clearReplay(int param0) {
         this.field_c.clear(0);
         this.field_m.clear(0);
         this.field_ab.clear(0);
@@ -170,18 +170,18 @@ abstract class MapViewState {
         this.field_W = 0;
     }
 
-    final void a(GameScreen param0, int param1) {
+    final void setScreen(GameScreen param0, int param1) {
         if (param1 < 93) {
           return;
         }
         try {
           this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ia.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ia.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(Territory param0, int param1) {
+    final void focusOnTerritory(Territory param0, int param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -207,7 +207,7 @@ abstract class MapViewState {
             return;
           }
           if (this.field_fb != param0) {
-            var3_int = this.field_o.d((byte) 14);
+            var3_int = this.field_o.getAreaHeight((byte) 14);
             var4_int = 320;
             var5 = var3_int / 2;
             var6_ref_ln = param0.firstStar(18229);
@@ -230,8 +230,8 @@ abstract class MapViewState {
               return;
             }
           }
-          var10 = this.a(22770, param0);
-          var4 = this.field_o.b((byte) 57);
+          var10 = this.territoryBounds(22770, param0);
+          var4 = this.field_o.getMapBounds((byte) 57);
           var5Lifetime1 = -var4.field_l + var4.field_o;
           var6 = var4.field_i - var4.field_q;
           var7 = (float)((var10.field_o - var10.field_l) / var5Lifetime1);
@@ -245,7 +245,7 @@ abstract class MapViewState {
           var8 = (float)(var4.field_l + var4.field_o - 640 >> 1);
           var8 = var8 * var7;
           this.field_f = -var8 + (float)(var10.field_o + var10.field_l >> 1);
-          var8Lifetime1 = (float)(var4.field_q + var4.field_i - this.field_o.d((byte) 14) >> 1);
+          var8Lifetime1 = (float)(var4.field_q + var4.field_i - this.field_o.getAreaHeight((byte) 14) >> 1);
           var8Lifetime1 = var8Lifetime1 * var7;
           this.field_x = true;
           this.field_fb = param0;
@@ -262,11 +262,11 @@ abstract class MapViewState {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(Player param0, Star param1, boolean param2, int param3) {
+    final void addCountAnnotation(Player param0, Star param1, boolean param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -279,7 +279,7 @@ abstract class MapViewState {
           if (param2) {
             return;
           }
-          for (var5_int = 0; !this.a(var5_int, 0, param1); var5_int++) {
+          for (var5_int = 0; !this.isSlotFree(var5_int, 0, param1); var5_int++) {
           }
           this.field_ab.addLast((byte) -113, new StarAnnotation(param1, param0, -1, param3, var5_int));
           if (var5_int >= this.field_W) {
@@ -302,7 +302,7 @@ abstract class MapViewState {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -313,14 +313,14 @@ abstract class MapViewState {
           this.field_kb = param4;
           this.field_A = param3;
           if (param8 != 0) {
-            this.a(true);
+            this.projectStars(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ia.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ia.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
-    final void a(Player param0, Star param1, byte param2, Star param3) {
+    final void addWormholeAnnotation(Player param0, Star param1, byte param2, Star param3) {
         int var5_int = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -338,8 +338,8 @@ abstract class MapViewState {
           var5_int = 0;
           while (true) {
             if (this.a(-4, var5_int) &&
-              this.a(var5_int, 0, param3) &&
-              this.a(var5_int, 0, param1)) {
+              this.isSlotFree(var5_int, 0, param3) &&
+              this.isSlotFree(var5_int, 0, param1)) {
               this.field_ab.addLast((byte) -113, new StarAnnotation(param3, param0, 3, var5_int));
               this.field_ab.addLast((byte) -113, new StarAnnotation(param1, param0, 3, var5_int));
               if (var5_int >= this.field_W) {
@@ -371,11 +371,11 @@ abstract class MapViewState {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    private final BoundsRect a(int param0, Territory param1) {
+    private final BoundsRect territoryBounds(int param0, Territory param1) {
         int var6 = 0;
         BoundsRect stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
@@ -426,7 +426,7 @@ abstract class MapViewState {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -441,37 +441,37 @@ abstract class MapViewState {
           var5 = var4;
           var4.drawScaled(-1 + this.field_i[param1.field_p] - (int)(this.field_g * (float)var5.field_z / (this.field_I * 2.0f)), -1 + this.field_J[param1.field_p] - (int)((float)var5.field_z * this.field_g / (this.field_I * 2.0f)), (int)(this.field_g * (float)var5.field_z / this.field_I), (int)(this.field_g * (float)var5.field_z / this.field_I));
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ia.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ia.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(Star param0, int param1) {
+    final void focusOnStar(Star param0, int param1) {
         BoundsRect var3 = null;
         float var4 = 0.0f;
         try {
-          var3 = this.field_o.b((byte) 51);
+          var3 = this.field_o.getMapBounds((byte) 51);
           var4 = 24000.0f / (float)(var3.field_o - var3.field_l) - 3.0f * (float)param0.field_z;
           if (var4 < this.field_g) {
             var4 = this.field_g;
           }
           int var5 = 80 / ((72 - param1) / 52);
-          this.a(78, param0, var4);
+          this.centerOnStar(78, param0, var4);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ia.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ia.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void e(int param0) {
+    final void endReplay(int param0) {
         this.field_T = -1;
         this.field_t = 0;
-        this.field_o.field_X.d(false);
+        this.field_o.field_X.setSelected(false);
         this.field_o.field_X.field_o = DebouncedValidator.field_f;
         if (param0 != -18641) {
-          this.a(17, false, -42);
+          this.findStarAt(17, false, -42);
         }
     }
 
-    private final boolean a(int param0, int param1, Star param2) {
+    private final boolean isSlotFree(int param0, int param1, Star param2) {
         StarAnnotation var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -500,11 +500,11 @@ abstract class MapViewState {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final Star a(int param0, boolean param1, int param2) {
+    final Star findStarAt(int param0, boolean param1, int param2) {
         int var5 = 0;
         Star var6 = null;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -518,7 +518,7 @@ abstract class MapViewState {
         Star[] var4 = var9;
         for (var5 = 0; var9.length > var5; var5++) {
           var6 = var9[var5];
-          if (cp.a(0, param2, this.field_D[var6.field_p], this.field_h[var6.field_p], param0)) {
+          if (CanvasResizeController.a(0, param2, this.field_D[var6.field_p], this.field_h[var6.field_p], param0)) {
             return var6;
           }
         }
@@ -526,11 +526,11 @@ abstract class MapViewState {
           return null;
         }
         Star var8 = (Star) null;
-        boolean discarded$0 = this.a(-16, -79, (Star) null);
+        boolean discarded$0 = this.isSlotFree(-16, -79, (Star) null);
         return null;
     }
 
-    final void a(int param0, Star param1, float param2) {
+    final void centerOnStar(int param0, Star param1, float param2) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -540,14 +540,14 @@ abstract class MapViewState {
         BoundsRect var6 = null;
         float var5Lifetime1;
         try {
-          var6 = this.field_o.b((byte) 52);
+          var6 = this.field_o.getMapBounds((byte) 52);
           var5 = (float)(-640 + var6.field_o + var6.field_l >> 1);
           var5 = var5 * (((float)param1.field_z + param2) / 300.0f);
           this.field_f = -var5 + (float)param1.field_A;
           if (0.0f > this.field_f) {
             this.field_f = 0.0f;
           }
-          var5Lifetime1 = (float)(var6.field_i + (var6.field_q - this.field_o.d((byte) 14)) >> 1);
+          var5Lifetime1 = (float)(var6.field_i + (var6.field_q - this.field_o.getAreaHeight((byte) 14)) >> 1);
           var5Lifetime1 = var5Lifetime1 * ((param2 + (float)param1.field_z) / 300.0f);
           this.field_lb = (float)param1.field_S - var5Lifetime1;
           this.field_H = param2;
@@ -570,7 +570,7 @@ abstract class MapViewState {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -592,7 +592,7 @@ abstract class MapViewState {
         }
     }
 
-    final void b(int param0) {
+    final void scrollBackground(int param0) {
         int var2 = -640 + Star.field_K.field_z;
         int var3 = -480 + Star.field_K.field_w;
         int var5 = -108 % ((-29 - param0) / 51);
@@ -601,7 +601,7 @@ abstract class MapViewState {
         Star.field_K.draw(var4 >> 4, var6 >> 4);
     }
 
-    final void c(boolean param0) {
+    final void resetCamera(boolean param0) {
         this.field_fb = null;
         if (param0) {
           return;
@@ -612,7 +612,7 @@ abstract class MapViewState {
         this.field_f = (float)(this.field_O.field_k / 2);
     }
 
-    public static void c(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -11784) {
           return;
         }
@@ -620,7 +620,7 @@ abstract class MapViewState {
         field_M = null;
     }
 
-    final void a(int[] param0, boolean param1, Territory[] param2, Player[] param3, boolean param4) {
+    final void setDisplayState(int[] param0, boolean param1, Territory[] param2, Player[] param3, boolean param4) {
         try {
           if (param4) {
             this.field_Z = (Player[]) ((Object) param3.clone());
@@ -634,11 +634,11 @@ abstract class MapViewState {
           this.field_G = param0;
           this.field_q = param3;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ia.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ia.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0, IntrusiveDeque param1, boolean param2) {
+    final void beginReplayPhase(int param0, IntrusiveDeque param1, boolean param2) {
         RuntimeException stackIn_68_0 = null;
         StringBuilder stackIn_68_1 = null;
         String stackIn_69_2 = null;
@@ -695,7 +695,7 @@ abstract class MapViewState {
                 }
                 var5 = param1.nextForward((byte) -71);
               }
-              this.field_o.a(10, 0, sr.field_N);
+              this.field_o.showStatusText(10, 0, sr.field_N);
             }
           } else {
             if (param0 == 1) {
@@ -718,13 +718,13 @@ abstract class MapViewState {
                 var4_ref.c(true);
                 var4_ref = (BattleSnapshot) (this.field_m.nextForward((byte) -71));
               }
-              this.field_o.a(10, 0, pd.field_g);
+              this.field_o.showStatusText(10, 0, TertiaryListSequence.field_g);
             } else {
               if (param0 != 2) {
                 if (param0 != 3) {
                   if (param0 == -1) {
-                    this.a(this.field_G, true, this.field_w, this.field_q, true);
-                    this.field_o.a(10, 0, (String) null);
+                    this.setDisplayState(this.field_G, true, this.field_w, this.field_q, true);
+                    this.field_o.showStatusText(10, 0, (String) null);
                   }
                 } else {
                   if (this.field_C) {
@@ -740,7 +740,7 @@ abstract class MapViewState {
                       var4 = param1.nextForward((byte) -71);
                     }
                   }
-                  this.field_o.a(10, 0, md.field_G);
+                  this.field_o.showStatusText(10, 0, md.field_G);
                 }
               } else {
                 if (this.field_C) {
@@ -768,12 +768,12 @@ abstract class MapViewState {
                     var5 = param1.nextForward((byte) -71);
                   }
                 }
-                this.field_o.a(10, 0, MouseWheelInput.field_b);
+                this.field_o.showStatusText(10, 0, MouseWheelInput.field_b);
               }
             }
           }
           if (param2) {
-            MapViewState.c(104);
+            MapViewState.clearStatics(104);
           }
           this.field_T = param0;
           this.field_t = 0;
@@ -788,11 +788,11 @@ abstract class MapViewState {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    void a(boolean param0) {
+    void projectStars(boolean param0) {
         int[] array$0 = null;
         int var8 = 0;
         int var2;
@@ -809,7 +809,7 @@ abstract class MapViewState {
         int var5Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = 320;
-        var3 = this.field_o.d((byte) 14) / 2;
+        var3 = this.field_o.getAreaHeight((byte) 14) / 2;
         if (this.field_D == null ||
           this.field_O.field_e.length != this.field_D.length) {
           var4_int = this.field_O.field_e.length;
@@ -863,7 +863,7 @@ abstract class MapViewState {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         StarAnnotation var3 = (StarAnnotation) (this.field_ab.startForward(0));
         if (param0 != -4) {
-          this.c(false);
+          this.resetCamera(false);
         }
         while (var3 != null) {
           if (var3.field_o == 3 &&

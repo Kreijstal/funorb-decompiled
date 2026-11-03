@@ -15,7 +15,7 @@ final class SecondaryNodeHashTable {
     static GameSession field_g;
     static Sprite field_f;
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode nextInTraversal(byte param0) {
         int fieldTemp$0 = 0;
         DualLinkNode var2;
         int var3;
@@ -58,8 +58,8 @@ final class SecondaryNodeHashTable {
           if (param0 != 15) {
             field_f = (Sprite) null;
           }
-          var2 = new th(param1, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, cm.field_g, eo.field_fb, hd.field_q);
-          pd.a(param0 - 15);
+          var2 = new th(param1, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, eo.field_fb, hd.field_q);
+          TertiaryListSequence.a(param0 - 15);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -72,7 +72,7 @@ final class SecondaryNodeHashTable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -164,10 +164,10 @@ final class SecondaryNodeHashTable {
               var9 = param1 >> 4;
               var10 = param0;
               var11 = (16 - (15 & param4)) * (16 - (param1 & 15));
-              if (var8 >= gf.field_i &&
-                var8 < gf.field_l &&
-                var9 >= gf.field_a &&
-                var9 < gf.field_f) {
+              if (var8 >= SoftwareRasterizer.field_i &&
+                var8 < SoftwareRasterizer.field_l &&
+                var9 >= SoftwareRasterizer.field_a &&
+                var9 < SoftwareRasterizer.field_f) {
                 var11 = (int)(256.0 * Math.pow((double)var11 / 256.0, 0.55));
                 var12 = var10 & 65280;
                 var12 = var12 * var11;
@@ -176,19 +176,19 @@ final class SecondaryNodeHashTable {
                 var10 = var10 * var11;
                 var10 = var10 & -16711936;
                 var13 = 640 * var9 + var8;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + (-16711936 & (16711935 & var14) * (-var11 + 256));
                 var12 = var12 + (16711680 & (var14 & 65280) * (256 - var11));
-                gf.field_h[var13] = ee.a(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
               var8 = param5 >> 4;
               var9 = param1 >> 4;
               var10 = param0;
               var11 = (param5 & 15) * (16 - (15 & param1));
-              if (gf.field_i <= var8 &&
-                var8 < gf.field_l &&
-                var9 >= gf.field_a &&
-                gf.field_f > var9) {
+              if (SoftwareRasterizer.field_i <= var8 &&
+                var8 < SoftwareRasterizer.field_l &&
+                var9 >= SoftwareRasterizer.field_a &&
+                SoftwareRasterizer.field_f > var9) {
                 var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
                 var12 = 65280 & var10;
                 var12 = var12 * var11;
@@ -197,20 +197,20 @@ final class SecondaryNodeHashTable {
                 var12 = var12 & 16711680;
                 var10 = var10 & -16711936;
                 var13 = var8 + 640 * var9;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + (-16711936 & (16711935 & var14) * (256 - var11));
                 var12 = var12 + (16711680 & (var14 & 65280) * (-var11 + 256));
-                gf.field_h[var13] = ee.a(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
-              gf.f((param4 >> 4) + 1, param1 >> 4, (var6_intLifetime1 >> 4) - 2, param0, (16 - (15 & param1)) * 16);
+              SoftwareRasterizer.drawHorizontalLineAlpha((param4 >> 4) + 1, param1 >> 4, (var6_intLifetime1 >> 4) - 2, param0, (16 - (15 & param1)) * 16);
               var8 = param4 >> 4;
               var9 = (param1 >> 4) + 1;
               var10 = param0;
               var11 = (param4 & 15) * (16 - (15 & param1));
-              if (gf.field_i <= var8 &&
-                gf.field_l > var8 &&
-                gf.field_a <= var9 &&
-                gf.field_f > var9) {
+              if (SoftwareRasterizer.field_i <= var8 &&
+                SoftwareRasterizer.field_l > var8 &&
+                SoftwareRasterizer.field_a <= var9 &&
+                SoftwareRasterizer.field_f > var9) {
                 var11 = (int)(256.0 * Math.pow((double)var11 / 256.0, 0.55));
                 var12 = 65280 & var10;
                 var10 = var10 & 16711935;
@@ -219,19 +219,19 @@ final class SecondaryNodeHashTable {
                 var10 = var10 * var11;
                 var10 = var10 & -16711936;
                 var13 = var9 * 640 + var8;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + ((var14 & 16711935) * (-var11 + 256) & -16711936);
                 var12 = var12 + (16711680 & (-var11 + 256) * (65280 & var14));
-                gf.field_h[var13] = ee.a(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
               var8 = param5 >> 4;
               var9 = 1 + (param1 >> 4);
               var10 = param0;
               var11 = (15 & param4) * (15 & param3);
-              if (var8 >= gf.field_i &&
-                gf.field_l > var8 &&
-                gf.field_a <= var9 &&
-                gf.field_f > var9) {
+              if (var8 >= SoftwareRasterizer.field_i &&
+                SoftwareRasterizer.field_l > var8 &&
+                SoftwareRasterizer.field_a <= var9 &&
+                SoftwareRasterizer.field_f > var9) {
                 var11 = (int)(256.0 * Math.pow((double)var11 / 256.0, 0.55));
                 var12 = 65280 & var10;
                 var10 = var10 & 16711935;
@@ -240,21 +240,21 @@ final class SecondaryNodeHashTable {
                 var12 = var12 & 16711680;
                 var10 = var10 & -16711936;
                 var13 = var9 * 640 + var8;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + ((256 - var11) * (var14 & 16711935) & -16711936);
                 var12 = var12 + ((-var11 + 256) * (var14 & 65280) & 16711680);
-                gf.field_h[var13] = ee.a(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
-              gf.f((param4 >> 4) + 1, (param1 >> 4) + 1, -2 + (var6_intLifetime1 >> 4), param0, 16 * (15 & param1));
+              SoftwareRasterizer.drawHorizontalLineAlpha((param4 >> 4) + 1, (param1 >> 4) + 1, -2 + (var6_intLifetime1 >> 4), param0, 16 * (15 & param1));
             } else {
               var8 = param4 >> 4;
               var9 = param1 >> 4;
               var10 = param0;
               var11 = (16 - (param1 & 15)) * var6_intLifetime1;
-              if (var8 >= gf.field_i &&
-                var8 < gf.field_l &&
-                gf.field_a <= var9 &&
-                gf.field_f > var9) {
+              if (var8 >= SoftwareRasterizer.field_i &&
+                var8 < SoftwareRasterizer.field_l &&
+                SoftwareRasterizer.field_a <= var9 &&
+                SoftwareRasterizer.field_f > var9) {
                 var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
                 var12 = 65280 & var10;
                 var10 = var10 & 16711935;
@@ -263,19 +263,19 @@ final class SecondaryNodeHashTable {
                 var12 = var12 & 16711680;
                 var10 = var10 & -16711936;
                 var13 = 640 * var9 + var8;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + (16711680 & (65280 & var14) * (256 - var11));
                 var10 = var10 + ((16711935 & var14) * (-var11 + 256) & -16711936);
-                gf.field_h[var13] = ee.a(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
               var8 = param4 >> 4;
               var9 = (param1 >> 4) + 1;
               var10 = param0;
               var11 = var6_intLifetime1 * (param1 & 15);
-              if (var8 >= gf.field_i &&
-                var8 < gf.field_l &&
-                var9 >= gf.field_a) {
-                if (var9 >= gf.field_f) {
+              if (var8 >= SoftwareRasterizer.field_i &&
+                var8 < SoftwareRasterizer.field_l &&
+                var9 >= SoftwareRasterizer.field_a) {
+                if (var9 >= SoftwareRasterizer.field_f) {
                   return;
                 }
                 var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
@@ -286,10 +286,10 @@ final class SecondaryNodeHashTable {
                 var10 = var10 * var11;
                 var10 = var10 & -16711936;
                 var13 = var8 + 640 * var9;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + ((var14 & 65280) * (-var11 + 256) & 16711680);
                 var10 = var10 + ((16711935 & var14) * (-var11 + 256) & -16711936);
-                gf.field_h[var13] = ee.a(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
             }
             return;
@@ -304,10 +304,10 @@ final class SecondaryNodeHashTable {
           var15 = var12Lifetime1;
           var16 = param0;
           var17 = (-((var10Lifetime1 & 65015) >> 12) + 16) * var11Lifetime1;
-          if (var14Lifetime1 >= gf.field_i &&
-            gf.field_l > var14Lifetime1 &&
-            gf.field_a <= var15 &&
-            var15 < gf.field_f) {
+          if (var14Lifetime1 >= SoftwareRasterizer.field_i &&
+            SoftwareRasterizer.field_l > var14Lifetime1 &&
+            SoftwareRasterizer.field_a <= var15 &&
+            var15 < SoftwareRasterizer.field_f) {
             var17 = (int)(256.0 * Math.pow((double)var17 / 256.0, 0.55));
             var18 = var16 & 65280;
             var16 = var16 & 16711935;
@@ -316,20 +316,20 @@ final class SecondaryNodeHashTable {
             var18 = var18 & 16711680;
             var16 = var16 & -16711936;
             var19 = var15 * 640 + var14Lifetime1;
-            var20 = gf.field_h[var19];
+            var20 = SoftwareRasterizer.field_h[var19];
             var16 = var16 + ((16711935 & var20) * (-var17 + 256) & -16711936);
             var18 = var18 + ((-var17 + 256) * (65280 & var20) & 16711680);
-            gf.field_h[var19] = ee.a(var16, var18) >>> 8;
+            SoftwareRasterizer.field_h[var19] = PrivateChatMessage.intOr(var16, var18) >>> 8;
           }
           var14Lifetime2 = 1 + var13Lifetime1;
           var16Lifetime1 = 57 / ((param2 - 20) / 42);
           var15Lifetime1 = var12Lifetime1;
           var17Lifetime1 = param0;
           var18Lifetime1 = var11Lifetime1 * (15 & var10Lifetime1 >> 12);
-          if (var14Lifetime2 >= gf.field_i &&
-            var14Lifetime2 < gf.field_l &&
-            gf.field_a <= var15Lifetime1 &&
-            gf.field_f > var15Lifetime1) {
+          if (var14Lifetime2 >= SoftwareRasterizer.field_i &&
+            var14Lifetime2 < SoftwareRasterizer.field_l &&
+            SoftwareRasterizer.field_a <= var15Lifetime1 &&
+            SoftwareRasterizer.field_f > var15Lifetime1) {
             var18Lifetime1 = (int)(Math.pow((double)var18Lifetime1 / 256.0, 0.55) * 256.0);
             var19Lifetime1 = var17Lifetime1 & 65280;
             var19Lifetime1 = var19Lifetime1 * var18Lifetime1;
@@ -338,10 +338,10 @@ final class SecondaryNodeHashTable {
             var19Lifetime1 = var19Lifetime1 & 16711680;
             var17Lifetime1 = var17Lifetime1 & -16711936;
             var20Lifetime1 = var15Lifetime1 * 640 + var14Lifetime2;
-            var21 = gf.field_h[var20Lifetime1];
+            var21 = SoftwareRasterizer.field_h[var20Lifetime1];
             var17Lifetime1 = var17Lifetime1 + (-16711936 & (var21 & 16711935) * (256 - var18Lifetime1));
             var19Lifetime1 = var19Lifetime1 + ((-var18Lifetime1 + 256) * (65280 & var21) & 16711680);
-            gf.field_h[var20Lifetime1] = ee.a(var19Lifetime1, var17Lifetime1) >>> 8;
+            SoftwareRasterizer.field_h[var20Lifetime1] = PrivateChatMessage.intOr(var19Lifetime1, var17Lifetime1) >>> 8;
           }
           var9Lifetime2 = param3 + 7 >> 4;
           var14Lifetime3 = var10Lifetime1 + var8Lifetime1;
@@ -353,10 +353,10 @@ final class SecondaryNodeHashTable {
           var18Lifetime2 = var16Lifetime2;
           var19Lifetime2 = param0;
           var20Lifetime2 = (16 - ((63052 & var10Lifetime2) >> 12)) * var11Lifetime2;
-          if (var17Lifetime2 >= gf.field_i &&
-            gf.field_l > var17Lifetime2 &&
-            var18Lifetime2 >= gf.field_a &&
-            gf.field_f > var18Lifetime2) {
+          if (var17Lifetime2 >= SoftwareRasterizer.field_i &&
+            SoftwareRasterizer.field_l > var17Lifetime2 &&
+            var18Lifetime2 >= SoftwareRasterizer.field_a &&
+            SoftwareRasterizer.field_f > var18Lifetime2) {
             var20Lifetime2 = (int)(256.0 * Math.pow((double)var20Lifetime2 / 256.0, 0.55));
             var21Lifetime1 = var19Lifetime2 & 65280;
             var21Lifetime1 = var21Lifetime1 * var20Lifetime2;
@@ -365,19 +365,19 @@ final class SecondaryNodeHashTable {
             var19Lifetime2 = var19Lifetime2 * var20Lifetime2;
             var19Lifetime2 = var19Lifetime2 & -16711936;
             var22 = 640 * var18Lifetime2 + var17Lifetime2;
-            var23 = gf.field_h[var22];
+            var23 = SoftwareRasterizer.field_h[var22];
             var19Lifetime2 = var19Lifetime2 + ((var23 & 16711935) * (256 - var20Lifetime2) & -16711936);
             var21Lifetime1 = var21Lifetime1 + ((-var20Lifetime2 + 256) * (var23 & 65280) & 16711680);
-            gf.field_h[var22] = ee.a(var19Lifetime2, var21Lifetime1) >>> 8;
+            SoftwareRasterizer.field_h[var22] = PrivateChatMessage.intOr(var19Lifetime2, var21Lifetime1) >>> 8;
           }
           var17Lifetime3 = 1 + var15Lifetime2;
           var18Lifetime3 = var16Lifetime2;
           var19Lifetime3 = param0;
           var20Lifetime3 = var11Lifetime2 * (15 & var10Lifetime2 >> 12);
-          if (var17Lifetime3 >= gf.field_i &&
-            gf.field_l > var17Lifetime3 &&
-            gf.field_a <= var18Lifetime3 &&
-            gf.field_f > var18Lifetime3) {
+          if (var17Lifetime3 >= SoftwareRasterizer.field_i &&
+            SoftwareRasterizer.field_l > var17Lifetime3 &&
+            SoftwareRasterizer.field_a <= var18Lifetime3 &&
+            SoftwareRasterizer.field_f > var18Lifetime3) {
             var20Lifetime3 = (int)(Math.pow((double)var20Lifetime3 / 256.0, 0.55) * 256.0);
             var21Lifetime2 = var19Lifetime3 & 65280;
             var21Lifetime2 = var21Lifetime2 * var20Lifetime3;
@@ -386,10 +386,10 @@ final class SecondaryNodeHashTable {
             var21Lifetime2 = var21Lifetime2 & 16711680;
             var19Lifetime3 = var19Lifetime3 & -16711936;
             var22Lifetime1 = var17Lifetime3 + 640 * var18Lifetime3;
-            var23Lifetime1 = gf.field_h[var22Lifetime1];
+            var23Lifetime1 = SoftwareRasterizer.field_h[var22Lifetime1];
             var19Lifetime3 = var19Lifetime3 + ((-var20Lifetime3 + 256) * (var23Lifetime1 & 16711935) & -16711936);
             var21Lifetime2 = var21Lifetime2 + ((var23Lifetime1 & 65280) * (256 - var20Lifetime3) & 16711680);
-            gf.field_h[var22Lifetime1] = ee.a(var21Lifetime2, var19Lifetime3) >>> 8;
+            SoftwareRasterizer.field_h[var22Lifetime1] = PrivateChatMessage.intOr(var21Lifetime2, var19Lifetime3) >>> 8;
           }
           var8Lifetime1 = var8Lifetime1 << 4;
           var12Lifetime1++;
@@ -398,10 +398,10 @@ final class SecondaryNodeHashTable {
             var18Lifetime4 = var12Lifetime1;
             var19Lifetime4 = param0;
             var20Lifetime4 = 256 - (var14Lifetime3 >> 8 & 255);
-            if (var17Lifetime4 >= gf.field_i &&
-              gf.field_l > var17Lifetime4 &&
-              var18Lifetime4 >= gf.field_a &&
-              gf.field_f > var18Lifetime4) {
+            if (var17Lifetime4 >= SoftwareRasterizer.field_i &&
+              SoftwareRasterizer.field_l > var17Lifetime4 &&
+              var18Lifetime4 >= SoftwareRasterizer.field_a &&
+              SoftwareRasterizer.field_f > var18Lifetime4) {
               var20Lifetime4 = (int)(256.0 * Math.pow((double)var20Lifetime4 / 256.0, 0.55));
               var21Lifetime3 = 65280 & var19Lifetime4;
               var19Lifetime4 = var19Lifetime4 & 16711935;
@@ -410,19 +410,19 @@ final class SecondaryNodeHashTable {
               var21Lifetime3 = var21Lifetime3 & 16711680;
               var19Lifetime4 = var19Lifetime4 & -16711936;
               var22Lifetime2 = var17Lifetime4 + 640 * var18Lifetime4;
-              var23Lifetime2 = gf.field_h[var22Lifetime2];
+              var23Lifetime2 = SoftwareRasterizer.field_h[var22Lifetime2];
               var19Lifetime4 = var19Lifetime4 + (-16711936 & (16711935 & var23Lifetime2) * (256 - var20Lifetime4));
               var21Lifetime3 = var21Lifetime3 + ((65280 & var23Lifetime2) * (256 - var20Lifetime4) & 16711680);
-              gf.field_h[var22Lifetime2] = ee.a(var19Lifetime4, var21Lifetime3) >>> 8;
+              SoftwareRasterizer.field_h[var22Lifetime2] = PrivateChatMessage.intOr(var19Lifetime4, var21Lifetime3) >>> 8;
             }
             var17Lifetime4Lifetime1 = (var14Lifetime3 >> 16) + 1;
             var18Lifetime4Lifetime1 = var12Lifetime1;
             var19Lifetime4Lifetime1 = param0;
             var20Lifetime4Lifetime1 = 255 & var14Lifetime3 >> 8;
-            if (gf.field_i <= var17Lifetime4Lifetime1 &&
-              var17Lifetime4Lifetime1 < gf.field_l &&
-              gf.field_a <= var18Lifetime4Lifetime1 &&
-              var18Lifetime4Lifetime1 < gf.field_f) {
+            if (SoftwareRasterizer.field_i <= var17Lifetime4Lifetime1 &&
+              var17Lifetime4Lifetime1 < SoftwareRasterizer.field_l &&
+              SoftwareRasterizer.field_a <= var18Lifetime4Lifetime1 &&
+              var18Lifetime4Lifetime1 < SoftwareRasterizer.field_f) {
               var20Lifetime4Lifetime1 = (int)(256.0 * Math.pow((double)var20Lifetime4Lifetime1 / 256.0, 0.55));
               var21Lifetime3Lifetime1 = 65280 & var19Lifetime4Lifetime1;
               var21Lifetime3Lifetime1 = var21Lifetime3Lifetime1 * var20Lifetime4Lifetime1;
@@ -431,10 +431,10 @@ final class SecondaryNodeHashTable {
               var21Lifetime3Lifetime1 = var21Lifetime3Lifetime1 & 16711680;
               var19Lifetime4Lifetime1 = var19Lifetime4Lifetime1 & -16711936;
               var22Lifetime2Lifetime1 = var18Lifetime4Lifetime1 * 640 + var17Lifetime4Lifetime1;
-              var23Lifetime2Lifetime1 = gf.field_h[var22Lifetime2Lifetime1];
+              var23Lifetime2Lifetime1 = SoftwareRasterizer.field_h[var22Lifetime2Lifetime1];
               var21Lifetime3Lifetime1 = var21Lifetime3Lifetime1 + (16711680 & (-var20Lifetime4Lifetime1 + 256) * (var23Lifetime2Lifetime1 & 65280));
               var19Lifetime4Lifetime1 = var19Lifetime4Lifetime1 + ((var23Lifetime2Lifetime1 & 16711935) * (-var20Lifetime4Lifetime1 + 256) & -16711936);
-              gf.field_h[var22Lifetime2Lifetime1] = ee.a(var21Lifetime3Lifetime1, var19Lifetime4Lifetime1) >>> 8;
+              SoftwareRasterizer.field_h[var22Lifetime2Lifetime1] = PrivateChatMessage.intOr(var21Lifetime3Lifetime1, var19Lifetime4Lifetime1) >>> 8;
             }
             var14Lifetime3 = var14Lifetime3 + var8Lifetime1;
             var12Lifetime1++;
@@ -443,27 +443,27 @@ final class SecondaryNodeHashTable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var6), "in.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var6), "in.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static qh a(int param0, boolean param1) {
-        fe var2 = null;
-        lp var3 = null;
-        tq.field_j = new qh(320, -param0 + 479 - 28, 200, param0 + 28, ih.field_a.toUpperCase());
+    final static MenuWindow a(int param0, boolean param1) {
+        MenuButton var2 = null;
+        MenuList var3 = null;
+        tq.field_j = new MenuWindow(320, -param0 + 479 - 28, 200, param0 + 28, ih.field_a.toUpperCase());
         if (param1) {
-          var2 = new fe(tq.field_j.field_k + 200 - 16, 2 + tq.field_j.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
+          var2 = new MenuButton(tq.field_j.field_k + 200 - 16, 2 + tq.field_j.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
           var2.field_h = tq.field_j;
-          tq.field_j.a(var2, 8);
-          var3 = new lp(tq.field_j.field_k + 9, tq.field_j.field_t + 20, 182, param0);
-          tq.field_j.a(var3, 8);
+          tq.field_j.addChild(var2, 8);
+          var3 = new MenuList(tq.field_j.field_k + 9, tq.field_j.field_t + 20, 182, param0);
+          tq.field_j.addChild(var3, 8);
           tq.field_j.field_z = var3;
           return tq.field_j;
         }
-        return (qh) null;
+        return (MenuWindow) null;
     }
 
-    final void a(long param0, DualLinkNode param1, boolean param2) {
+    final void put(long param0, DualLinkNode param1, boolean param2) {
         DualLinkNode var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -494,7 +494,7 @@ final class SecondaryNodeHashTable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -520,14 +520,14 @@ final class SecondaryNodeHashTable {
                 return stackIn_2_0;
               }
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(param3, param0, (byte) -111, param2);
+              var5.allocate(param3, param0, (byte) -111, param2);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(param3, param0, (byte) -99, param2);
+              ((RasterBuffer) ((Object) var5_ref)).allocate(param3, param0, (byte) -99, param2);
               stackIn_6_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_6_0);
             }
@@ -541,7 +541,7 @@ final class SecondaryNodeHashTable {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -550,7 +550,7 @@ final class SecondaryNodeHashTable {
         }
     }
 
-    final DualLinkNode d(byte param0) {
+    final DualLinkNode getNextWithKey(byte param0) {
         int var2;
         DualLinkNode var3;
         DualLinkNode var4;
@@ -578,30 +578,30 @@ final class SecondaryNodeHashTable {
     }
 
     final static void a(byte param0) {
-        cp.field_a = new qr(0L, (qr) null);
+        CanvasResizeController.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
         if (ns.field_pb) {
-          cp.field_a.a(4, nm.field_c);
+          CanvasResizeController.field_a.addChild(4, nm.field_c);
         }
-        cp.field_a.a(4, lp.field_v);
-        Archive.field_g = new wh(ds.field_a, cp.field_a);
+        CanvasResizeController.field_a.addChild(4, MenuList.field_v);
+        Archive.field_g = new wh(MessageKind.field_a, CanvasResizeController.field_a);
         if (param0 != -83) {
           field_i = (Sprite) null;
         }
-        MapViewState.field_j = new qr(0L, (qr) null);
-        MapViewState.field_j.a(param0 + 87, Archive.field_g.field_d);
-        MapViewState.field_j.a(4, vm.field_Ab);
+        MapViewState.field_j = new AnimatedPanel(0L, (AnimatedPanel) null);
+        MapViewState.field_j.addChild(param0 + 87, Archive.field_g.field_d);
+        MapViewState.field_j.addChild(4, vm.field_Ab);
         DialogRoot.j(96);
     }
 
-    final DualLinkNode c(byte param0) {
+    final DualLinkNode startTraversal(byte param0) {
         if (param0 > -66) {
           this.field_c = -75;
         }
         this.field_c = 0;
-        return this.b((byte) -107);
+        return this.nextInTraversal((byte) -107);
     }
 
-    final DualLinkNode a(int param0, long param1) {
+    final DualLinkNode get(int param0, long param1) {
         DualLinkNode var4;
         DualLinkNode var5;
         int var6;
@@ -628,7 +628,7 @@ final class SecondaryNodeHashTable {
         return var5;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_i = null;
         field_e = null;
         if (!param0) {

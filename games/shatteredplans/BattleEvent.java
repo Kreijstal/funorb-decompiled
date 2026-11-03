@@ -8,7 +8,7 @@ final class BattleEvent extends IntrusiveNode {
     Star field_p;
     IntrusiveDeque field_v;
     Player field_i;
-    static qr field_u;
+    static AnimatedPanel field_u;
     int field_n;
     static String[] field_x;
     int[] field_j;
@@ -24,10 +24,10 @@ final class BattleEvent extends IntrusiveNode {
         if (param1 != 30888) {
           return (fb) null;
         }
-        return IsaacBackedRandom.field_b == null ? null : (fb) (IsaacBackedRandom.field_b.a(65280, (long)param0));
+        return IsaacBackedRandom.field_b == null ? null : (fb) (IsaacBackedRandom.field_b.get(65280, (long)param0));
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_q = null;
         field_u = null;
         if (param0 <= 5) {
@@ -79,7 +79,7 @@ final class BattleEvent extends IntrusiveNode {
           var8.writeChecksum(var4, -24);
           var8.patchLengthByte(-var4 + var8.position, (byte) 127);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "eg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class BattleEvent extends IntrusiveNode {
     final static tq c(int param0, int param1) {
         tq var2 = new tq(param0, false);
         if (param1 != 0) {
-          field_u = (qr) null;
+          field_u = (AnimatedPanel) null;
         }
         return var2;
     }
@@ -105,7 +105,7 @@ final class BattleEvent extends IntrusiveNode {
           }
           this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "eg.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eg.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class BattleEvent extends IntrusiveNode {
             this.field_w = (Player) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "eg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -130,16 +130,16 @@ final class BattleEvent extends IntrusiveNode {
           this.field_v = new IntrusiveDeque();
           this.field_n = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0, int param1, int param2) {
         QuaternaryLinkNode.field_w = param0;
         if (param2 != 0) {
-          field_u = (qr) null;
+          field_u = (AnimatedPanel) null;
         }
-        dm.field_i = param1;
+        ObjectList.field_i = param1;
     }
 
     static {

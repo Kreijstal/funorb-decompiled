@@ -39,7 +39,7 @@ final class IsaacRandom {
           }
           try {
             if (gb.field_i == 0) {
-              oj.field_Gb = dh.field_a.a(65535, hn.field_i, StandardMapReader.field_d);
+              oj.field_Gb = dh.field_a.requestSocket(65535, hn.field_i, StandardMapReader.field_d);
               gb.field_i = gb.field_i + 1;
             }
             if (gb.field_i == 1) {
@@ -54,21 +54,21 @@ final class IsaacRandom {
             if (gb.field_i == 2) {
               js.field_a = new BufferedSocket((java.net.Socket) (oj.field_Gb.field_e), dh.field_a);
               var2 = new PacketBuffer(13);
-              hq.a(ae.field_h, si.field_u, var2, (byte) 20, sr.field_q);
+              hq.a(ae.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
               var2.writeByte(15, (byte) -69);
               var2.writeInt(11135, sg.field_Cb);
-              js.field_a.a(13, 0, var2.payload, -13976);
+              js.field_a.write(13, 0, var2.payload, -13976);
               gb.field_i = gb.field_i + 1;
-              am.field_Cb = 30000L + pr.a(14274);
+              am.field_Cb = 30000L + pr.currentTimeMillis(14274);
             }
             if (gb.field_i == 3) {
-              if (js.field_a.a(-1) <= 0) {
-                if (am.field_Cb < pr.a(14274)) {
+              if (js.field_a.available(-1) <= 0) {
+                if (am.field_Cb < pr.currentTimeMillis(14274)) {
                   stackIn_31_0 = is.a((byte) -94, -2);
                   return stackIn_31_0;
                 }
               } else {
-                var1_int = js.field_a.a((byte) 127);
+                var1_int = js.field_a.readByte((byte) 127);
                 if (0 != var1_int) {
                   stackIn_26_0 = is.a((byte) -94, var1_int);
                   return stackIn_26_0;
@@ -97,9 +97,9 @@ final class IsaacRandom {
         }
     }
 
-    final int d(int param0) {
+    final int nextInt(int param0) {
         if (this.field_c == 0) {
-          this.c(5);
+          this.refill(5);
           this.field_c = 256;
         }
         if (param0 != 13) {
@@ -110,7 +110,7 @@ final class IsaacRandom {
         return this.field_j[fieldTemp$0];
     }
 
-    private final void a(byte param0) {
+    private final void seed(byte param0) {
         int var2 = 0;
         int var11 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3 = -1640531527;
@@ -236,7 +236,7 @@ final class IsaacRandom {
           this.field_e[var2Lifetime2 + 6] = var9;
           this.field_e[var2Lifetime2 + 7] = var10;
         }
-        this.c(5);
+        this.refill(5);
         this.field_c = 256;
     }
 
@@ -248,27 +248,27 @@ final class IsaacRandom {
         int var7 = 0;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (gf.field_i <= param1 &&
-            param1 < gf.field_l) {
-            if (gf.field_a > param2) {
-              param0 = param0 + (param2 - gf.field_a);
-              param2 = gf.field_a;
+          if (SoftwareRasterizer.field_i <= param1 &&
+            param1 < SoftwareRasterizer.field_l) {
+            if (SoftwareRasterizer.field_a > param2) {
+              param0 = param0 + (param2 - SoftwareRasterizer.field_a);
+              param2 = SoftwareRasterizer.field_a;
             }
-            if (gf.field_f < param0 + param2) {
-              param0 = -param2 + gf.field_f;
+            if (SoftwareRasterizer.field_f < param0 + param2) {
+              param0 = -param2 + SoftwareRasterizer.field_f;
             }
-            var6 = param1 + gf.field_b * param2;
+            var6 = param1 + SoftwareRasterizer.field_b * param2;
             if (param4) {
               field_b = (Sprite[]) null;
             }
             while (param0 > 0) {
-              param1 = gf.field_h[var6];
+              param1 = SoftwareRasterizer.field_h[var6];
               var5_int = param3;
               param2 = var5_int + param1;
               var5_int = (var5_int & 16711935) + (param1 & 16711935);
               param1 = (var5_int & 16777472) + (65536 & param2 - var5_int);
-              gf.field_h[var6] = ee.a(-(param1 >>> 8) + param1, -param1 + param2);
-              var6 = var6 + gf.field_b;
+              SoftwareRasterizer.field_h[var6] = PrivateChatMessage.intOr(-(param1 >>> 8) + param1, -param1 + param2);
+              var6 = var6 + SoftwareRasterizer.field_b;
               param0--;
             }
             return;
@@ -277,7 +277,7 @@ final class IsaacRandom {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var5), "mh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var5), "mh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -290,7 +290,7 @@ final class IsaacRandom {
         np.field_f = new int[600];
     }
 
-    private final void c(int param0) {
+    private final void refill(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -317,19 +317,19 @@ final class IsaacRandom {
             }
           }
           this.field_g = this.field_g + this.field_e[255 & var2 + 128];
-          dupTemp$1 = this.field_g + (this.field_e[we.a(var3 >> 2, 255)] + this.field_i);
+          dupTemp$1 = this.field_g + (this.field_e[we.intAnd(var3 >> 2, 255)] + this.field_i);
           var4 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_e[we.a(255, var4 >> 8 >> 2)];
+          dupTemp$2 = var3 + this.field_e[we.intAnd(255, var4 >> 8 >> 2)];
           this.field_i = dupTemp$2;
           this.field_j[var2] = dupTemp$2;
         }
         if (param0 != 5) {
-          this.a((byte) 6);
+          this.seed((byte) 6);
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_h = null;
         if (param0 >= -25) {
           field_h = (String[]) null;
@@ -347,9 +347,9 @@ final class IsaacRandom {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_j[var2_int] = param0[var2_int];
           }
-          this.a((byte) 75);
+          this.seed((byte) 75);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

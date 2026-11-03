@@ -26,11 +26,11 @@ final class ih {
           if (param4 == null) {
             var8.writeShort(param2, 255);
           } else {
-            ee.a(var8, (byte) -87, param4);
+            PrivateChatMessage.a(var8, (byte) -87, param4);
           }
           var8.patchLengthByte(-var7 + var8.position, (byte) 122);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class ih {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = pd.a((byte) 102, oq.a(5722, param0));
+          var2 = TertiaryListSequence.a((byte) 102, oq.a(5722, param0));
           if (var2 == null) {
             var2 = "";
           }
@@ -61,11 +61,11 @@ final class ih {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_f = null;
         if (param0 != -1) {
           return;

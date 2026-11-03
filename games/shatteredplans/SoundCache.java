@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoundCache {
-    static qr field_c;
+    static AnimatedPanel field_c;
     private Archive field_b;
     private IntrusiveNodeHashTable field_a;
     private Archive field_e;
@@ -30,7 +30,7 @@ final class SoundCache {
           var5_int = param3 ^ (param0 << 4 & 65523 | param0 >>> 12);
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int;
-          var8 = (PcmSample) (this.field_d.a(var6, -25064));
+          var8 = (PcmSample) (this.field_d.get(var6, -25064));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -39,14 +39,14 @@ final class SoundCache {
             param1[0] <= 0) {
             return null;
           }
-          var9 = SynthesizedSoundEffect.a(this.field_b, param0, param3);
+          var9 = SynthesizedSoundEffect.load(this.field_b, param0, param3);
           if (var9 == null) {
             stackIn_12_0 = null;
             return (PcmSample) (stackIn_12_0);
           }
-          var10 = var9.b();
+          var10 = var9.toSample();
           var8Lifetime1 = var10;
-          this.field_d.a(var8Lifetime1, 13, var6);
+          this.field_d.put(var8Lifetime1, 13, var6);
           if (param1 != null) {
             param1[0] = param1[0] - var10.field_m.length;
           }
@@ -62,7 +62,7 @@ final class SoundCache {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class SoundCache {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class SoundCache {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class SoundCache {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class SoundCache {
           var5_int = (param2 >>> 12 | 65520 & param2 << 4) ^ param1;
           var5_int = var5_int | param2 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (PcmSample) (this.field_d.a(var6, -25064));
+          var8 = (PcmSample) (this.field_d.get(var6, -25064));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -218,20 +218,20 @@ final class SoundCache {
             0 >= param3[0]) {
             return null;
           }
-          var9 = (VorbisSample) (this.field_a.a(var6, -25064));
+          var9 = (VorbisSample) (this.field_a.get(var6, -25064));
           if (var9 == null) {
             var9 = VorbisSample.a(this.field_e, param2, param1);
             if (var9 == null) {
               return null;
             }
-            this.field_a.a(var9, 66, var6);
+            this.field_a.put(var9, 66, var6);
           }
-          var8Lifetime1 = var9.a(param3);
+          var8Lifetime1 = var9.decodeSome(param3);
           if (var8Lifetime1 == null) {
             return null;
           }
           var9.unlink((byte) -98);
-          this.field_d.a(var8Lifetime1, -128, var6);
+          this.field_d.put(var8Lifetime1, -128, var6);
           if (param0 == -12203) {
             stackIn_20_0 = var8Lifetime1;
             return stackIn_20_0;
@@ -248,13 +248,13 @@ final class SoundCache {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 < 104) {
-          SoundCache.a((byte) -77);
+          SoundCache.clearStatics((byte) -77);
           field_c = null;
           return;
         }
@@ -294,7 +294,7 @@ final class SoundCache {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class SoundCache {
         if (param1 >= 27) {
           return PasswordValidator.a(1, false, param0, 12000, true, false);
         }
-        field_c = (qr) null;
+        field_c = (AnimatedPanel) null;
         return PasswordValidator.a(1, false, param0, 12000, true, false);
     }
 
@@ -361,7 +361,7 @@ final class SoundCache {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -372,7 +372,7 @@ final class SoundCache {
           this.field_e = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "io.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "io.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class SoundCache {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

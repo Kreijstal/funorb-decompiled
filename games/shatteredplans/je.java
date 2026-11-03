@@ -10,7 +10,7 @@ final class je {
     static int field_g;
     static int field_c;
 
-    final static int a(int param0, byte param1) {
+    final static int sine(int param0, byte param1) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
@@ -58,7 +58,7 @@ final class je {
           var2.writeByte(1, (byte) -93);
           return;
         }
-        je.a(-116, (byte) -104);
+        je.sine(-116, (byte) -104);
         var2.writeByte(1, (byte) -104);
         var2.writeByte(1, (byte) -93);
     }

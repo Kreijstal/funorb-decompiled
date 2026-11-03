@@ -11,25 +11,25 @@ final class lg extends IOException {
     static int[] field_d;
     static int[] field_a;
 
-    final static nk[] a(int param0, Archive param1, int param2, int param3) {
+    final static IndexedSprite[] a(int param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        nk[] stackIn_5_0 = null;
-        nk[] stackIn_7_0 = null;
+        IndexedSprite[] stackIn_5_0 = null;
+        IndexedSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vd.a(param3, param1, param2, 2)) {
+          if (!MenuComponent.a(param3, param1, param2, 2)) {
             stackIn_2_0 = null;
-            return (nk[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param0 == -20435) {
             stackIn_7_0 = ConquestVictoryChecker.c(true);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (nk[]) null;
+          stackIn_5_0 = (IndexedSprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -41,27 +41,27 @@ final class lg extends IOException {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static nk a(int param0, int param1, int param2, Archive param3) {
+    final static IndexedSprite a(int param0, int param1, int param2, Archive param3) {
         RuntimeException var4 = null;
-        nk stackIn_5_0 = null;
-        nk stackIn_7_0 = null;
+        IndexedSprite stackIn_5_0 = null;
+        IndexedSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vd.a(param2, param3, param1, 2)) {
+          if (!MenuComponent.a(param2, param3, param1, 2)) {
             return null;
           }
           if (param0 < -71) {
             stackIn_7_0 = ta.c((byte) 118);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (nk) null;
+          stackIn_5_0 = (IndexedSprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class lg extends IOException {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class lg extends IOException {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_e = null;
         field_f = null;
         int var1 = -34 / ((23 - param0) / 53);
@@ -127,11 +127,11 @@ final class lg extends IOException {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (0L <= param0) {
-                var7Lifetime4 = var9 + "; Expires=" + vm.a(pr.a(14274) + 1000L * param0, 10) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + vm.a(pr.currentTimeMillis(14274) + 1000L * param0, 10) + "; Max-Age=" + param0;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              ll.a(param1, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) 123);
+              ll.evalJavaScript(param1, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) 123);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ final class lg extends IOException {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -200,7 +200,7 @@ final class lg extends IOException {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

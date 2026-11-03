@@ -21,7 +21,7 @@ abstract class Dialog extends WidgetContainer {
             Dialog.a(-61);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "w.BA(" + (args != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "w.BA(" + (args != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ abstract class Dialog extends WidgetContainer {
         int var4 = 0;
         String var8 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        String var6 = "(" + IterableNodeHashTable.field_e + " " + SliderPainter.field_g + " " + kp.field_n + ") " + BufferedCacheFile.field_e;
+        String var6 = "(" + IterableNodeHashTable.field_e + " " + SliderPainter.field_g + " " + TargetedChatMessage.field_n + ") " + BufferedCacheFile.field_e;
         String var1 = var6;
         if (param0 != 16738) {
           return (String) null;
@@ -62,7 +62,7 @@ abstract class Dialog extends WidgetContainer {
         return var1;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_G == 0) {
           return;
         }
@@ -71,7 +71,7 @@ abstract class Dialog extends WidgetContainer {
             return;
           }
           this.a(param3 + this.field_m, 103, this.field_q + param2);
-          super.a(param0, -11857, param2, param3);
+          super.drawLayer(param0, -11857, param2, param3);
           return;
         }
         if (ArchiveIndex.field_r == null ||
@@ -80,14 +80,14 @@ abstract class Dialog extends WidgetContainer {
           ArchiveIndex.field_r = new Sprite(this.field_x, this.field_n);
         }
         aq.a((byte) 110, ArchiveIndex.field_r);
-        gf.b();
+        SoftwareRasterizer.clear();
         this.a(0, 103, 0);
-        super.a(param0, param1, -param2 - this.field_q, -param3 - this.field_m);
+        super.drawLayer(param0, param1, -param2 - this.field_q, -param3 - this.field_m);
         Star.f((byte) -50);
         ArchiveIndex.field_r.drawAlpha(this.field_m + param3, this.field_q + param2, this.field_G);
     }
 
-    boolean k(int param0) {
+    boolean isClosed(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
           field_D = (Sprite) null;
@@ -97,15 +97,15 @@ abstract class Dialog extends WidgetContainer {
         return stackIn_6_0;
     }
 
-    final UiWidget i(int param0) {
-        UiWidget var2 = super.i(param0);
+    final UiWidget findFocusedChild(int param0) {
+        UiWidget var2 = super.findFocusedChild(param0);
         if (var2 != null) {
           return var2;
         }
         return (UiWidget) (this);
     }
 
-    boolean a(byte param0) {
+    boolean animate(byte param0) {
         int var2;
         int var3;
         boolean stackIn_10_0 = false;
@@ -123,11 +123,11 @@ abstract class Dialog extends WidgetContainer {
         return stackIn_10_0;
     }
 
-    final void b(int param0, int param1, byte param2) {
+    final void centre(int param0, int param1, byte param2) {
         if (param2 >= -103) {
-          Dialog.m(11);
+          Dialog.clearStatics(11);
         }
-        this.a(UsernameAvailabilityValidator.field_q - param0 >> 1, param0, (byte) 122, ep.field_a - param1 >> 1, param1);
+        this.setBounds(UsernameAvailabilityValidator.field_q - param0 >> 1, param0, (byte) 122, ep.field_a - param1 >> 1, param1);
     }
 
     final static ro a(byte param0, String param1) {
@@ -153,7 +153,7 @@ abstract class Dialog extends WidgetContainer {
             return stackIn_4_0;
           }
           if (var2_int > 63) {
-            stackIn_7_0 = cm.field_e;
+            stackIn_7_0 = IntHashIndex.field_e;
             return stackIn_7_0;
           }
           var3 = 121 % ((param0 + 23) / 41);
@@ -162,12 +162,12 @@ abstract class Dialog extends WidgetContainer {
             if (var5 == 45) {
               if (var4 == 0 ||
                 var2_int - 1 == var4) {
-                stackIn_17_0 = as.field_t;
+                stackIn_17_0 = FleetVisual.field_t;
                 return stackIn_17_0;
               }
             } else {
               if (DefensiveAi.field_q.indexOf(var5) == -1) {
-                stackIn_21_0 = as.field_t;
+                stackIn_21_0 = FleetVisual.field_t;
                 return stackIn_21_0;
               }
             }
@@ -183,7 +183,7 @@ abstract class Dialog extends WidgetContainer {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ abstract class Dialog extends WidgetContainer {
           this.field_F = param0;
           this.field_G = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -216,7 +216,7 @@ abstract class Dialog extends WidgetContainer {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -1) {
           Dialog.a(56);
         }
@@ -227,9 +227,9 @@ abstract class Dialog extends WidgetContainer {
 
     private final int e(boolean param0) {
         if (param0) {
-          this.a(-109, -11, -57, 34);
+          this.drawLayer(-109, -11, -57, 34);
         }
-        return this.field_E ? this != this.field_F.g((byte) 119) ? 0 : 256 : 0;
+        return this.field_E ? this != this.field_F.getActiveDialog((byte) 119) ? 0 : 256 : 0;
     }
 
     abstract void a(int param0, int param1, int param2);
@@ -243,14 +243,14 @@ abstract class Dialog extends WidgetContainer {
           var1 = id.a(-106);
         }
         if (var1.length() == 0) {
-          var1 = hb.field_c;
+          var1 = NodeSequence.field_c;
         }
         return var1;
     }
 
     final static boolean d(boolean param0) {
         if (!param0) {
-          Dialog.m(-66);
+          Dialog.clearStatics(-66);
         }
         return eh.field_P;
     }

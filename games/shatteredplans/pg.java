@@ -14,10 +14,10 @@ final class pg extends SingleChildWidget {
     static byte[] field_C;
     static String field_F;
 
-    final String c(boolean param0) {
+    final String getTooltip(boolean param0) {
         int var2 = this.field_z.field_k ? 1 : 0;
         this.field_z.field_k = this.field_k;
-        String var3 = this.field_z.c(param0);
+        String var3 = this.field_z.getTooltip(param0);
         this.field_z.field_k = var2 != 0 ? true : false;
         return var3;
     }
@@ -50,7 +50,7 @@ final class pg extends SingleChildWidget {
           var12_int = -this.field_K + this.field_H;
           var13 = this.field_G.textHeight(param10, var12_int, this.field_G.field_J) + this.field_K * 2;
           if (param3 < var13) {
-            this.a(param1, var13, (byte) 102, param0, param2);
+            this.setBounds(param1, var13, (byte) 102, param0, param2);
           } else {
             var13 = param3;
           }
@@ -60,7 +60,7 @@ final class pg extends SingleChildWidget {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.field_z.a((-param3 + var13 >> 1) + this.field_K, param3 - 2 * this.field_K, (byte) 115, var14, -this.field_H + param2 - 3 * this.field_K);
+          this.field_z.setBounds((-param3 + var13 >> 1) + this.field_K, param3 - 2 * this.field_K, (byte) 115, var14, -this.field_H + param2 - 3 * this.field_K);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,11 +84,11 @@ final class pg extends SingleChildWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != -43) {
           return;
         }
@@ -202,17 +202,17 @@ final class pg extends SingleChildWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "pg.D(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "pg.D(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.field_m + param3;
         if (param1 != -11857) {
           pg.a(40, -66, 111, (byte) -124, 52, 3, 0, 73, -122);
         }
         int var6 = this.field_q + param2;
-        super.a(param0, param1 ^ 0, param2, param3);
+        super.drawLayer(param0, param1 ^ 0, param2, param3);
         if (0 != param0) {
           return;
         }

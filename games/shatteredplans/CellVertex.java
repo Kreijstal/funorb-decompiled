@@ -50,11 +50,11 @@ final class CellVertex {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_h = null;
         field_j = null;
         field_a = null;
@@ -65,15 +65,15 @@ final class CellVertex {
         field_d = null;
     }
 
-    final static void a(int param0, fm param1) {
+    final static void a(int param0, HuffmanCodec param1) {
         try {
           DiskArchiveRequest.field_v = param1;
           if (param0 != 1) {
-            fm var3 = (fm) null;
-            CellVertex.a(-29, (fm) null);
+            HuffmanCodec var3 = (HuffmanCodec) null;
+            CellVertex.a(-29, (HuffmanCodec) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class CellVertex {
           this.field_c = param3;
           this.field_f = param4;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

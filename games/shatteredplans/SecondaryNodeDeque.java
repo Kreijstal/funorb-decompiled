@@ -14,7 +14,7 @@ final class SecondaryNodeDeque implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         field_c = null;
         int var1 = 115 / ((23 - param0) / 47);
@@ -34,7 +34,7 @@ final class SecondaryNodeDeque implements Iterable {
           param0.field_j.field_h = param0;
           param0.field_h.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "up.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "up.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

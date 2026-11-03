@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends vd {
+final class kb extends MenuComponent {
     private int field_D;
     private boolean field_B;
     private int field_u;
@@ -38,30 +38,30 @@ final class kb extends vd {
           this.field_C.bindAsRenderTarget();
           for (var8_int = 0; this.field_C.field_w > var8_int; var8_int++) {
             var9 = (this.field_C.field_w / 2 - var8_int) * (this.field_C.field_w / 2 - var8_int);
-            gf.f(0, var8_int, this.field_C.field_z, SolVictoryChecker.a(0, this.field_D, -80, -(256 * var9 / (this.field_C.field_w / 2 * (this.field_C.field_w / 2))) + 256));
+            SoftwareRasterizer.drawHorizontalLine(0, var8_int, this.field_C.field_z, SolVictoryChecker.blendColours(0, this.field_D, -80, -(256 * var9 / (this.field_C.field_w / 2 * (this.field_C.field_w / 2))) + 256));
           }
           var11 = 0;
           var8_intLifetime1 = var11;
           while (var11 < this.field_C.field_w) {
-            gf.a(0, var11, SolVictoryChecker.a(0, this.field_C.field_B[var11 * this.field_C.field_z], -105, 128));
-            gf.a(-1 + this.field_C.field_z, var11, SolVictoryChecker.a(0, this.field_C.field_B[-1 + this.field_C.field_z * (1 + var11)], -112, 128));
+            SoftwareRasterizer.setPixel(0, var11, SolVictoryChecker.blendColours(0, this.field_C.field_B[var11 * this.field_C.field_z], -105, 128));
+            SoftwareRasterizer.setPixel(-1 + this.field_C.field_z, var11, SolVictoryChecker.blendColours(0, this.field_C.field_B[-1 + this.field_C.field_z * (1 + var11)], -112, 128));
             var11++;
           }
-          gf.a(1, 1, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z], -93, 128));
-          gf.a(2, 1, SolVictoryChecker.a(0, this.field_C.field_B[this.field_C.field_z + 2], -113, 192));
-          gf.a(1, 2, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * 2], -87, 192));
-          gf.a(1, this.field_C.field_w - 2, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-2 + this.field_C.field_w)], -90, 128));
-          gf.a(2, -2 + this.field_C.field_w, SolVictoryChecker.a(0, this.field_C.field_B[2 + (-2 + this.field_C.field_w) * this.field_C.field_z], -82, 192));
-          gf.a(1, this.field_C.field_w - 3, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-3 + this.field_C.field_w)], -78, 192));
-          gf.a(-2 + this.field_C.field_z, 1, SolVictoryChecker.a(0, this.field_C.field_B[2 * this.field_C.field_z - 2], -99, 128));
-          gf.a(-3 + this.field_C.field_z, 1, SolVictoryChecker.a(0, this.field_C.field_B[-3 + this.field_C.field_z * 2], -85, 192));
-          gf.a(this.field_C.field_z - 2, 2, SolVictoryChecker.a(0, this.field_C.field_B[-2 + 3 * this.field_C.field_z], -124, 192));
-          gf.a(this.field_C.field_z - 2, this.field_C.field_w - 2, SolVictoryChecker.a(0, this.field_C.field_B[-2 + this.field_C.field_z * (this.field_C.field_w - 1)], -88, 128));
-          gf.a(-3 + this.field_C.field_z, -2 + this.field_C.field_w, SolVictoryChecker.a(0, this.field_C.field_B[-3 + (this.field_C.field_w - 1) * this.field_C.field_z], -83, 192));
-          gf.a(-2 + this.field_C.field_z, this.field_C.field_w - 3, SolVictoryChecker.a(0, this.field_C.field_B[-2 + (this.field_C.field_w - 2) * this.field_C.field_z], -94, 192));
+          SoftwareRasterizer.setPixel(1, 1, SolVictoryChecker.blendColours(0, this.field_C.field_B[1 + this.field_C.field_z], -93, 128));
+          SoftwareRasterizer.setPixel(2, 1, SolVictoryChecker.blendColours(0, this.field_C.field_B[this.field_C.field_z + 2], -113, 192));
+          SoftwareRasterizer.setPixel(1, 2, SolVictoryChecker.blendColours(0, this.field_C.field_B[1 + this.field_C.field_z * 2], -87, 192));
+          SoftwareRasterizer.setPixel(1, this.field_C.field_w - 2, SolVictoryChecker.blendColours(0, this.field_C.field_B[1 + this.field_C.field_z * (-2 + this.field_C.field_w)], -90, 128));
+          SoftwareRasterizer.setPixel(2, -2 + this.field_C.field_w, SolVictoryChecker.blendColours(0, this.field_C.field_B[2 + (-2 + this.field_C.field_w) * this.field_C.field_z], -82, 192));
+          SoftwareRasterizer.setPixel(1, this.field_C.field_w - 3, SolVictoryChecker.blendColours(0, this.field_C.field_B[1 + this.field_C.field_z * (-3 + this.field_C.field_w)], -78, 192));
+          SoftwareRasterizer.setPixel(-2 + this.field_C.field_z, 1, SolVictoryChecker.blendColours(0, this.field_C.field_B[2 * this.field_C.field_z - 2], -99, 128));
+          SoftwareRasterizer.setPixel(-3 + this.field_C.field_z, 1, SolVictoryChecker.blendColours(0, this.field_C.field_B[-3 + this.field_C.field_z * 2], -85, 192));
+          SoftwareRasterizer.setPixel(this.field_C.field_z - 2, 2, SolVictoryChecker.blendColours(0, this.field_C.field_B[-2 + 3 * this.field_C.field_z], -124, 192));
+          SoftwareRasterizer.setPixel(this.field_C.field_z - 2, this.field_C.field_w - 2, SolVictoryChecker.blendColours(0, this.field_C.field_B[-2 + this.field_C.field_z * (this.field_C.field_w - 1)], -88, 128));
+          SoftwareRasterizer.setPixel(-3 + this.field_C.field_z, -2 + this.field_C.field_w, SolVictoryChecker.blendColours(0, this.field_C.field_B[-3 + (this.field_C.field_w - 1) * this.field_C.field_z], -83, 192));
+          SoftwareRasterizer.setPixel(-2 + this.field_C.field_z, this.field_C.field_w - 3, SolVictoryChecker.blendColours(0, this.field_C.field_B[-2 + (this.field_C.field_w - 2) * this.field_C.field_z], -94, 192));
           cg.i(0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class kb extends vd {
         int var8Lifetime2;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          na.field_r = param3;
+          Bzip2State.field_r = param3;
           TurnEventLog.field_b = param1;
           var11 = param4;
           if (param2) {
@@ -96,50 +96,50 @@ final class kb extends vd {
             stackIn_7_0 = jm.field_s;
           }
           var6 = stackIn_7_0;
-          if (na.field_r == 0) {
+          if (Bzip2State.field_r == 0) {
             var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
             var8 = 3 + var7;
-            t.field_c = new String[var8];
+            StarLinkPlanner.field_c = new String[var8];
             pr.field_d = new int[var8];
             for (var9 = 0; var9 < var8; var9++) {
               pr.field_d[var9] = -1;
             }
             Player.field_y = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
-              t.field_c[var9] = ks.field_b[var9];
+              StarLinkPlanner.field_c[var9] = ks.field_b[var9];
             }
-            t.field_c[var8 - 3] = "";
-            t.field_c[-2 + var8] = var6;
+            StarLinkPlanner.field_c[var8 - 3] = "";
+            StarLinkPlanner.field_c[-2 + var8] = var6;
             pr.field_d[var8 - 2] = 0;
             Player.field_y[0] = 1;
-            t.field_c[-1 + var8] = nf.field_i;
+            StarLinkPlanner.field_c[-1 + var8] = nf.field_i;
             pr.field_d[-1 + var8] = 1;
             Player.field_y[1] = 2;
           } else {
-            if (1 != na.field_r) {
+            if (1 != Bzip2State.field_r) {
               throw new IllegalArgumentException();
             }
             var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
             var8 = var7 + 2;
-            t.field_c = new String[var8];
+            StarLinkPlanner.field_c = new String[var8];
             pr.field_d = new int[var8];
             for (var9 = 0; var9 < var8; var9++) {
               pr.field_d[var9] = -1;
             }
             Player.field_y = new int[1];
             for (var9 = 0; var9 < var7; var9++) {
-              t.field_c[var9] = ks.field_b[var9];
+              StarLinkPlanner.field_c[var9] = ks.field_b[var9];
             }
-            t.field_c[-2 + var8] = "";
-            t.field_c[var8 - 1] = nf.field_i;
+            StarLinkPlanner.field_c[-2 + var8] = "";
+            StarLinkPlanner.field_c[var8 - 1] = nf.field_i;
             pr.field_d[-1 + var8] = 0;
             Player.field_y[0] = 2;
           }
           ns.field_nb.field_b = Player.field_y.length;
           var7Lifetime1 = 0;
-          for (var8Lifetime1 = 0; t.field_c.length > var8Lifetime1; var8Lifetime1++) {
+          for (var8Lifetime1 = 0; StarLinkPlanner.field_c.length > var8Lifetime1; var8Lifetime1++) {
             stackIn_29_0 = !(pr.field_d[var8Lifetime1] < 0);
-            var9Lifetime1 = or.a(stackIn_29_0, t.field_c[var8Lifetime1], true);
+            var9Lifetime1 = or.a(stackIn_29_0, StarLinkPlanner.field_c[var8Lifetime1], true);
             if (pr.field_d[var8Lifetime1] != -1) {
               var9Lifetime1 = var9Lifetime1 + 2 * js.field_g;
             }
@@ -150,17 +150,17 @@ final class kb extends vd {
           ah.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + WeightedLruCache.field_e;
           ld.field_j = -(var7Lifetime1 >> 1) + WeightedLruCache.field_e;
           DiskCacheWorker.field_b = (js.field_e + uo.field_g << 1) * ns.field_nb.field_b;
-          for (var8Lifetime2 = 0; var8Lifetime2 < t.field_c.length; var8Lifetime2++) {
+          for (var8Lifetime2 = 0; var8Lifetime2 < StarLinkPlanner.field_c.length; var8Lifetime2++) {
             stackIn_40_0 = DiskCacheWorker.field_b;
             if (pr.field_d[var8Lifetime2] >= 0) {
               stackIn_41_1 = vh.field_b;
             } else {
-              stackIn_41_1 = fe.field_A;
+              stackIn_41_1 = MenuButton.field_A;
             }
             DiskCacheWorker.field_b = stackIn_40_0 + stackIn_41_1;
           }
           vo.field_b = ri.field_O - (DiskCacheWorker.field_b >> 1);
-          ns.field_nb.a(ch.a(-15073, bb.field_b, pd.field_k), 0, param0, 123);
+          ns.field_nb.a(ch.a(-15073, bb.field_b, TertiaryListSequence.field_k), 0, param0, 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,11 +172,11 @@ final class kb extends vd {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 
-    public static void d(boolean param0) {
+    public static void clearStatics(boolean param0) {
         if (!param0) {
           kb.f(-97);
         }
@@ -204,8 +204,8 @@ final class kb extends vd {
         int[] var6 = var8;
         int[] var5 = var6;
         int[] var11 = var5;
-        gf.a(var8);
-        gf.i(this.field_k, this.field_t, this.field_m + this.field_k, this.field_i + this.field_t);
+        SoftwareRasterizer.saveClip(var8);
+        SoftwareRasterizer.intersectClip(this.field_k, this.field_t, this.field_m + this.field_k, this.field_i + this.field_t);
         int var3 = rs.field_Cb.field_J;
         int var4 = -24 / ((param0 - 67) / 47);
         this.field_C.draw(this.field_k, this.field_t);
@@ -216,7 +216,7 @@ final class kb extends vd {
             rs.field_Cb.drawString(this.field_z, this.field_k + var3 / 2, (rs.field_Cb.field_q + rs.field_Cb.field_J) / 2 + this.field_t + 3, this.field_u, -1);
           }
         }
-        gf.b(var11);
+        SoftwareRasterizer.restoreClip(var11);
     }
 
     static {

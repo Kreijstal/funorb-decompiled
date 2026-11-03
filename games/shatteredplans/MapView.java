@@ -36,7 +36,7 @@ final class MapView extends MapViewState {
     static String field_pb;
     static int field_Lb;
 
-    private final void c(Star param0, int param1) {
+    private final void drawStarLayers(Star param0, int param1) {
         if (param1 != 2) {
           return;
         }
@@ -45,10 +45,10 @@ final class MapView extends MapViewState {
           this.e(param0, -29952);
           this.b(param0, -29496);
           if (this.field_I < 1024.0f) {
-            this.d(param0, 10);
+            this.drawProjectIcons(param0, 10);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tr.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tr.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class MapView extends MapViewState {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 29201) {
           var8 = (Player[]) null;
-          this.a(-13, (Player[]) null);
+          this.setPlayers(-13, (Player[]) null);
         }
         if (!(this.field_I > 1024.0f)) {
           var17 = this.field_O.field_e;
@@ -117,7 +117,7 @@ final class MapView extends MapViewState {
               this.a(-91, var18);
               if (this.field_I < 330.0f &&
                 var18.field_u) {
-                this.a(var18, (byte) 101);
+                this.drawStarSprite(var18, (byte) 101);
               }
             }
           }
@@ -141,10 +141,10 @@ final class MapView extends MapViewState {
               480 >= var23.field_q &&
               var23.field_o >= 0 &&
               0 <= var23.field_i) {
-              this.c(var22, 2);
+              this.drawStarLayers(var22, 2);
               if (this.field_I > 330.0f &&
                 var22.field_u) {
-                this.a(var22, (byte) 102);
+                this.drawStarSprite(var22, (byte) 102);
               }
             }
           }
@@ -184,7 +184,7 @@ final class MapView extends MapViewState {
               var12.field_i >= 0) {
               this.a(param0 ^ 24563, var11Lifetime1, var2_int);
               if (var11Lifetime1.field_u) {
-                this.a(var11Lifetime1, (byte) 99);
+                this.drawStarSprite(var11Lifetime1, (byte) 99);
               }
             }
           }
@@ -223,7 +223,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final FleetMove a(Star param0, int param1, int param2, int param3) {
+    private final FleetMove findFleetNear(Star param0, int param1, int param2, int param3) {
         int var10_int = 0;
         FleetMove stackIn_10_0 = null;
         Object stackIn_20_0 = null;
@@ -388,11 +388,11 @@ final class MapView extends MapViewState {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_Fb = null;
         field_Eb = null;
         field_zb = null;
@@ -591,10 +591,10 @@ final class MapView extends MapViewState {
           }
           if (this.field_I < 700.0f &&
             12 >= var4) {
-            gf.b(var5, var6, 30, 16777215);
-            gf.c(var5, var6, 30, 16777215, 92);
+            SoftwareRasterizer.drawCircle(var5, var6, 30, 16777215);
+            SoftwareRasterizer.fillCircleAlpha(var5, var6, 30, 16777215, 92);
             ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var5 * 16, var6 * 16, 3800 + (var17Lifetime1 - 16384), 4096);
-            gf.c(var5, var6, 9, 0, 92);
+            SoftwareRasterizer.fillCircleAlpha(var5, var6, 9, 0, 92);
             rs.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var5, var6 + 4, 16777215, -1);
             di.field_i[0].draw(30 + (var5 - di.field_i[0].field_z / 2), -(di.field_i[0].field_w / 2) + var6);
             di.field_i[1].draw(-30 + (var5 - di.field_i[0].field_z / 2), var6 - di.field_i[0].field_w / 2);
@@ -603,10 +603,10 @@ final class MapView extends MapViewState {
             var18 = this.field_ub[0];
             var19 = this.field_ub[1];
             var19--;
-            gf.b(var18, var19, 30, 16777215);
-            gf.c(var18, var19, 30, 16777215, 92);
+            SoftwareRasterizer.drawCircle(var18, var19, 30, 16777215);
+            SoftwareRasterizer.fillCircleAlpha(var18, var19, 30, 16777215, 92);
             ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, 16 * var18, 16 * var19, var17Lifetime1 - 16384, 4096);
-            gf.c(var18, var19, 9, 0, 92);
+            SoftwareRasterizer.fillCircleAlpha(var18, var19, 9, 0, 92);
             rs.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var18, var19 + 4, 16777215, -1);
             di.field_i[0].draw(30 + var18 - di.field_i[0].field_z / 2, -(di.field_i[0].field_w / 2) + var19);
             di.field_i[1].draw(-30 + var18 - di.field_i[0].field_z / 2, var19 - di.field_i[0].field_w / 2);
@@ -644,10 +644,10 @@ final class MapView extends MapViewState {
               var6 = (var4 > 0) ? 0 : 32768;
             }
           }
-          gf.b(var2, var3, 30, 16777215);
-          gf.c(var2, var3, 30, 16777215, 92);
+          SoftwareRasterizer.drawCircle(var2, var3, 30, 16777215);
+          SoftwareRasterizer.fillCircleAlpha(var2, var3, 30, 16777215, 92);
           ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var2 * 16, 16 * var3, var6 - 16384, 4096);
-          gf.c(var2, var3, 9, 0, 92);
+          SoftwareRasterizer.fillCircleAlpha(var2, var3, 9, 0, 92);
           rs.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var2, 4 + var3, 16777215, -1);
           di.field_i[0].draw(var2 + (30 - di.field_i[0].field_z / 2), -(di.field_i[0].field_w / 2) + var3);
           di.field_i[1].draw(-(di.field_i[0].field_z / 2) + (var2 - 30), var3 - di.field_i[0].field_w / 2);
@@ -655,7 +655,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    final void a(IntrusiveDeque param0, int param1) {
+    final void tick(IntrusiveDeque param0, int param1) {
         int fieldTemp$0 = 0;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_23_0 = null;
@@ -686,7 +686,7 @@ final class MapView extends MapViewState {
             this.field_E = this.field_E + 0.10000000149011612f * var4_float;
             this.field_k = this.field_k + 0.10000000149011612f * var3_float;
           }
-          this.a(false);
+          this.projectStars(false);
           var3 = (so) (this.field_Y.startForward(0));
           while (var3 != null) {
             fieldTemp$0 = var3.field_u + 1;
@@ -695,12 +695,12 @@ final class MapView extends MapViewState {
               var3.unlink((byte) -82);
             }
             var4 = 320;
-            var5 = this.field_o.d((byte) 14) / 2;
+            var5 = this.field_o.getAreaHeight((byte) 14) / 2;
             var6 = var3.field_h.field_p;
             var7 = this.field_i[var6] - var4;
             var8 = -var5 + this.field_J[var6];
             var9 = (float)Math.sqrt((double)((float)(var7 * var7 + var8 * var8) + this.field_I * this.field_I)) / 300.0f;
-            var3.field_i.a((byte) 120, (int)((float)(CheckboxPainter.field_p * pd.field_m.field_a << 6) / (var9 * 96.0f)));
+            var3.field_i.setVolume((byte) 120, (int)((float)(CheckboxPainter.field_p * TertiaryListSequence.field_m.field_a << 6) / (var9 * 96.0f)));
             var3 = (so) (this.field_Y.nextForward((byte) -71));
           }
           this.a(-3, param0);
@@ -723,14 +723,14 @@ final class MapView extends MapViewState {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1, boolean param2, int param3) {
         int var4;
         int var5;
-        if (!dp.field_t) {
+        if (!QuickChatCategoryDefinition.field_t) {
           return;
         }
         SectorCacheStore.field_f.a(param1, -20429);
@@ -757,7 +757,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void drawBattleSummaries(byte param0, int param1, int param2) {
         int var14_int = 0;
         Sprite stackIn_6_0 = null;
         Sprite stackIn_9_0 = null;
@@ -835,7 +835,7 @@ final class MapView extends MapViewState {
               stackIn_19_0[stackIn_19_1] = stackIn_20_2;
               var12[var14_int] = var4.field_q[var14_int];
             }
-            DiskArchiveRequest.a(var27, -65, var12);
+            DiskArchiveRequest.sortParallel(var27, -65, var12);
             var14 = new Player[var12.length];
             var15 = (-1 + var14.length) / 2;
             var14[var15] = var12[0];
@@ -864,7 +864,7 @@ final class MapView extends MapViewState {
             var21 = 5;
             stackIn_38_0 = (this.field_I < 700.0f) ? 10 : 0;
             var22 = stackIn_38_0;
-            gf.a(-2 + var20, -(var18Lifetime1 / 2) + this.field_J[var6.field_p] - 5, 4 + var19, 10 + var18Lifetime1 + var22, var21, 0, 128);
+            SoftwareRasterizer.fillRoundedRectAlpha(-2 + var20, -(var18Lifetime1 / 2) + this.field_J[var6.field_p] - 5, 4 + var19, 10 + var18Lifetime1 + var22, var21, 0, 128);
             var19 = var19 / var12.length;
             var23 = (int)((double)this.field_J[var6.field_p] + 0.5 * (double)var18Lifetime1);
             for (var24 = 0; var14.length > var24; var24++) {
@@ -923,7 +923,7 @@ final class MapView extends MapViewState {
             if (var4.field_j != null) {
               stackIn_9_0 = var4.field_j.field_o;
             } else {
-              stackIn_9_0 = fm.field_b;
+              stackIn_9_0 = HuffmanCodec.field_b;
             }
             var31 = stackIn_9_0;
             var11Lifetime1 = var31;
@@ -933,7 +933,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(Star param0, byte param1) {
+    private final void drawStarSprite(Star param0, byte param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -973,7 +973,7 @@ final class MapView extends MapViewState {
               return;
             }
             var6Lifetime2 = this.field_Mb[0].field_o;
-            qk.field_y[0].drawScaled(-var3_int - var6Lifetime2 / 2 + this.field_i[param0.field_p], -var4 - var6Lifetime2 / 2 + this.field_J[param0.field_p], var6Lifetime2, var6Lifetime2);
+            MenuLabel.field_y[0].drawScaled(-var3_int - var6Lifetime2 / 2 + this.field_i[param0.field_p], -var4 - var6Lifetime2 / 2 + this.field_J[param0.field_p], var6Lifetime2, var6Lifetime2);
             if (var5 > 4) {
               if (var5 > 48) {
                 return;
@@ -1000,7 +1000,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1089,11 +1089,11 @@ final class MapView extends MapViewState {
               for (var15 = cl.field_n / 2 % 10; var14 > var15; var15 += 10) {
                 var16 = (1 + 2 * (var15 * (var12 - var10_int))) / (var14 * 2) + var10_int;
                 var17 = var11_int + (var15 * 2 * (var13 - var11_int) + 1) / (var14 * 2);
-                gf.b(var16 << 4, var17 << 4, 30, 3, var5_ref_int__);
+                SoftwareRasterizer.b(var16 << 4, var17 << 4, 30, 3, var5_ref_int__);
               }
               var15Lifetime2 = (var10_int + var12) / 2;
               var16Lifetime2 = (var11_int + var13) / 2;
-              gf.c(var15Lifetime2, var16Lifetime2 - 1, 9, 16777215, 192);
+              SoftwareRasterizer.fillCircleAlpha(var15Lifetime2, var16Lifetime2 - 1, 9, 16777215, 192);
               rs.field_Cb.drawCentred(Integer.toString(var6_ref.field_z), var15Lifetime2, 3 + var16Lifetime2, 0, -1);
               if (var6_ref == this.field_rb) {
                 var17Lifetime2 = (var10_int + var12) / 2;
@@ -1203,10 +1203,10 @@ final class MapView extends MapViewState {
                   if (700.0f > this.field_I &&
                     var7 <= 12) {
                     ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, 16 * var20Lifetime1, var21Lifetime1 * 16, -16384 + (var29 + 3800), 4096);
-                    gf.c(var20Lifetime1, var21Lifetime1, 9, 0, 92);
+                    SoftwareRasterizer.fillCircleAlpha(var20Lifetime1, var21Lifetime1, 9, 0, 92);
                     rs.field_Cb.drawCentred(Integer.toString(var6_refLifetime2.field_z), var20Lifetime1, 4 + var21Lifetime1, 16777215, -1);
                   } else {
-                    gf.b(16 * var20Lifetime1, var21Lifetime1 * 16, 60, -1 + r.field_j.length, new int[]{-65536, -65536, 0, -65536, -65536});
+                    SoftwareRasterizer.b(16 * var20Lifetime1, var21Lifetime1 * 16, 60, -1 + UrlLoader.field_j.length, new int[]{-65536, -65536, 0, -65536, -65536});
                   }
                   if (700.0f < this.field_I) {
                     var30 = (var20Lifetime1 + var18Lifetime1) / 2;
@@ -1214,7 +1214,7 @@ final class MapView extends MapViewState {
                     var30 = var30 - (int)(var26Lifetime1 * (var22Lifetime1 / 10.0));
                     var31 = var31 + (int)(var24Lifetime1 * (var22Lifetime1 / 10.0));
                     rs.field_Cb.stringWidth(Integer.toString(var6_refLifetime2.field_z));
-                    gf.c(var30, -1 + var31, 9, 16777215, 192);
+                    SoftwareRasterizer.fillCircleAlpha(var30, -1 + var31, 9, 16777215, 192);
                     rs.field_Cb.drawCentred(Integer.toString(var6_refLifetime2.field_z), var30, 3 + var31, 0, -1);
                   }
                 } else {
@@ -1287,7 +1287,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_88_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_87_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_87_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1311,7 +1311,7 @@ final class MapView extends MapViewState {
             stackIn_3_0 = 8421504;
           }
           var5 = stackIn_3_0;
-          var5 = SolVictoryChecker.a(var5, 0, -80, -(this.field_eb[param1.field_p] * 160 / param2) + 160);
+          var5 = SolVictoryChecker.blendColours(var5, 0, -80, -(this.field_eb[param1.field_p] * 160 / param2) + 160);
           SocketArchiveNetworkClient.a(var5, 18117, this.field_D[param1.field_p], 160);
           if (this.field_T == -1) {
             this.a(param1, false);
@@ -1323,13 +1323,13 @@ final class MapView extends MapViewState {
             if (var6 < 10) {
               var6 = 10;
             }
-            gf.c(this.field_i[param1.field_p] - 1, -1 + this.field_J[param1.field_p], var6, 0, 128);
+            SoftwareRasterizer.fillCircleAlpha(this.field_i[param1.field_p] - 1, -1 + this.field_J[param1.field_p], var6, 0, 128);
           }
           if (param1.name.equalsIgnoreCase("sol")) {
             this.a(-71, param1);
           }
           if (param0 != 11746) {
-            this.a((byte) -83, -5, -104);
+            this.drawBattleSummaries((byte) -83, -5, -104);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1342,31 +1342,31 @@ final class MapView extends MapViewState {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(int param0, Player[] param1) {
+    final void setPlayers(int param0, Player[] param1) {
         try {
           this.field_ib = param1;
           if (param0 >= -123) {
             Star var4 = (Star) null;
-            this.d((Star) null, -124);
+            this.drawProjectIcons((Star) null, -124);
           }
           this.field_cb = new int[this.field_ib.length][];
-          this.j(0);
+          this.buildPlayerSprites(0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tr.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tr.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(IntrusiveDeque param0, boolean param1, boolean param2, boolean param3) {
+    private final void drawFleetVisuals(IntrusiveDeque param0, boolean param1, boolean param2, boolean param3) {
         Sprite stackIn_30_0 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
-        as var5 = null;
+        FleetVisual var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
@@ -1405,7 +1405,7 @@ final class MapView extends MapViewState {
           if (!param3) {
             this.a(75, 11, (byte) -71);
           }
-          var5 = (as) (param0.startForward(0));
+          var5 = (FleetVisual) (param0.startForward(0));
           while (var5 != null) {
             var6 = this.field_i[var5.field_q.field_p];
             var7 = this.field_J[var5.field_q.field_p];
@@ -1466,12 +1466,12 @@ final class MapView extends MapViewState {
               }
               var37_ref = (ArgbSprite) (stackIn_30_0);
               ie.a(var37_ref, MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var34, var35, var36Lifetime1, 4096);
-              gf.c(var34 >> 4, var35 >> 4, 9, 0, 92);
+              SoftwareRasterizer.fillCircleAlpha(var34 >> 4, var35 >> 4, 9, 0, 92);
               rs.field_Cb.drawCentred(Integer.toString(var5.field_x), var34 >> 4, (var35 >> 4) + 4, 16777215, -1);
             } else {
               eo.a(false, var17, var19, (byte) 99, this.field_t, var18, var16);
             }
-            var5 = (as) (param0.nextForward((byte) -71));
+            var5 = (FleetVisual) (param0.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1484,11 +1484,11 @@ final class MapView extends MapViewState {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final void j(int param0) {
+    private final void buildPlayerSprites(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var5 = 0;
@@ -1506,19 +1506,19 @@ final class MapView extends MapViewState {
           this.field_ib[var2].field_v.bindAsRenderTarget();
           cf.field_F.b(0, 0, var3);
           for (var4 = 0; var4 < cf.field_F.field_B.length; var4++) {
-            this.field_ib[var2].field_v.field_B[var4] = we.a(-16777216, cf.field_F.field_B[var4]) + we.a(16777215, this.field_ib[var2].field_v.field_B[var4]);
+            this.field_ib[var2].field_v.field_B[var4] = we.intAnd(-16777216, cf.field_F.field_B[var4]) + we.intAnd(16777215, this.field_ib[var2].field_v.field_B[var4]);
           }
           this.field_ib[var2].field_n = (Sprite) ((Object) new ArgbSprite(MatchingTextValidator.field_p.field_o, MatchingTextValidator.field_p.field_p));
           this.field_ib[var2].field_n.bindAsRenderTarget();
           MatchingTextValidator.field_p.drawTinted(0, 0, var3);
           for (var4Lifetime1 = 0; var4Lifetime1 < MatchingTextValidator.field_p.field_B.length; var4Lifetime1++) {
-            this.field_ib[var2].field_n.field_B[var4Lifetime1] = we.a(-16777216, MatchingTextValidator.field_p.field_B[var4Lifetime1]) + we.a(this.field_ib[var2].field_n.field_B[var4Lifetime1], 16777215);
+            this.field_ib[var2].field_n.field_B[var4Lifetime1] = we.intAnd(-16777216, MatchingTextValidator.field_p.field_B[var4Lifetime1]) + we.intAnd(this.field_ib[var2].field_n.field_B[var4Lifetime1], 16777215);
           }
           this.field_ib[var2].field_b = (Sprite) ((Object) new ArgbSprite(eq.field_o.field_o, eq.field_o.field_p));
           this.field_ib[var2].field_b.bindAsRenderTarget();
           eq.field_o.drawTinted(0, 0, var3);
           for (var4Lifetime2 = 0; eq.field_o.field_B.length > var4Lifetime2; var4Lifetime2++) {
-            this.field_ib[var2].field_b.field_B[var4Lifetime2] = we.a(16777215, this.field_ib[var2].field_b.field_B[var4Lifetime2]) + we.a(eq.field_o.field_B[var4Lifetime2], -16777216);
+            this.field_ib[var2].field_b.field_B[var4Lifetime2] = we.intAnd(16777215, this.field_ib[var2].field_b.field_B[var4Lifetime2]) + we.intAnd(eq.field_o.field_B[var4Lifetime2], -16777216);
           }
           this.field_ib[var2].field_o = new Sprite(10, 12);
           this.field_ib[var2].field_o.bindAsRenderTarget();
@@ -1534,8 +1534,8 @@ final class MapView extends MapViewState {
           TextFieldWidget.field_L.drawTinted(0, 0, var3);
           for (var4Lifetime3 = 0; var4Lifetime3 < this.field_ib[var2].field_e.field_B.length; var4Lifetime3++) {
             if (this.field_ib[var2].field_e.field_B[var4Lifetime3] != 0) {
-              gf.c(var4Lifetime3 % this.field_ib[var2].field_e.field_z, var4Lifetime3 / this.field_ib[var2].field_e.field_z, this.field_ib[var2].field_k, 128);
-              this.field_ib[var2].field_e.field_B[var4Lifetime3] = ee.a(this.field_ib[var2].field_e.field_B[var4Lifetime3], -16777216);
+              SoftwareRasterizer.blendPixel(var4Lifetime3 % this.field_ib[var2].field_e.field_z, var4Lifetime3 / this.field_ib[var2].field_e.field_z, this.field_ib[var2].field_k, 128);
+              this.field_ib[var2].field_e.field_B[var4Lifetime3] = PrivateChatMessage.intOr(this.field_ib[var2].field_e.field_B[var4Lifetime3], -16777216);
             }
           }
           this.field_ib[var2].field_c = new Sprite(18, 12);
@@ -1556,7 +1556,7 @@ final class MapView extends MapViewState {
             var6 = var6 * var4Lifetime4;
             var5 = var5 & -16711936;
             var6 = var6 & 16711680;
-            this.field_cb[var2][var4Lifetime4] = ee.a(var6, var5) >>> 8;
+            this.field_cb[var2][var4Lifetime4] = PrivateChatMessage.intOr(var6, var5) >>> 8;
           }
         }
         cg.i(0);
@@ -1608,7 +1608,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -1619,7 +1619,7 @@ final class MapView extends MapViewState {
           }
           this.a(false, param1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tr.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tr.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1700,7 +1700,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -1782,17 +1782,17 @@ final class MapView extends MapViewState {
             var4 = 24;
             if (!(this.field_I < 330.0f)) {
               if (this.field_I < 1024.0f) {
-                gf.c(this.field_i[var3_int], this.field_J[var3_int], 25, 0, 128);
+                SoftwareRasterizer.fillCircleAlpha(this.field_i[var3_int], this.field_J[var3_int], 25, 0, 128);
                 if (param0.field_G[0] != 0) {
                   var14 = new ik[2 + 2 * param0.field_G[0]];
                   var5 = var14;
                   var5[0] = TertiaryNodeList.a(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
-                  var5[1] = TertiaryNodeList.a(0, this.field_J[var3_int] + var4 / 2 << 4, -(int)((double)var4 * rh.field_e) + this.field_i[var3_int] << 4);
+                  var5[1] = TertiaryNodeList.a(0, this.field_J[var3_int] + var4 / 2 << 4, -(int)((double)var4 * ProjectsContent.field_e) + this.field_i[var3_int] << 4);
                   for (var6 = 0; param0.field_G[0] > var6; var6++) {
                     var5[2 + 2 * var6] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin((double)(24 - 12 * var6) * 3.141592653589793 / 180.0)) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.cos((double)(24 - var6 * 12) * 3.141592653589793 / 180.0)) << 4);
                     var5[var6 * 2 + 2 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin(3.141592653589793 * (double)(-(var6 * 12) + 18) / 180.0)) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.cos(3.141592653589793 * (double)(-(12 * var6) + 18) / 180.0)) << 4);
                   }
-                  qn.a(var14, gm.field_k[0], param1);
+                  qn.a(var14, SoundPlayback.field_k[0], param1);
                 }
                 if (param0.field_G[1] != 0) {
                   var15 = new ik[2 + 2 * param0.field_G[1]];
@@ -1803,7 +1803,7 @@ final class MapView extends MapViewState {
                     var5Lifetime1[2 + 2 * var6Lifetime1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.cos((double)(6 + 12 * var6Lifetime1) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.sin((double)(6 + var6Lifetime1 * 12) * 3.141592653589793 / 180.0)) << 4);
                     var5Lifetime1[2 + 2 * var6Lifetime1 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.cos(3.141592653589793 * (double)(var6Lifetime1 * 12 + 12) / 180.0) * (double)var4) << 4, this.field_i[var3_int] - (int)(Math.sin(3.141592653589793 * (double)(12 + 12 * var6Lifetime1) / 180.0) * (double)var4) << 4);
                   }
-                  qn.a(var15, gm.field_k[1], true);
+                  qn.a(var15, SoundPlayback.field_k[1], true);
                 }
                 if (param0.field_G[2] != 0) {
                   var16 = new ik[2 + param0.field_G[2] * 2];
@@ -1814,34 +1814,34 @@ final class MapView extends MapViewState {
                     var5Lifetime2[var6Lifetime2 * 2 + 2] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.cos((double)(6 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] + (int)(Math.sin(3.141592653589793 * (double)(6 + var6Lifetime2 * 12) / 180.0) * (double)var4) << 4);
                     var5Lifetime2[2 + var6Lifetime2 * 2 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.cos((double)(12 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0)) << 4, this.field_i[var3_int] + (int)((double)var4 * Math.sin((double)(12 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0)) << 4);
                   }
-                  qn.a(var16, gm.field_k[2], param1);
+                  qn.a(var16, SoundPlayback.field_k[2], param1);
                 }
                 if (param0.field_G[3] != 0) {
                   var17 = new ik[2 * param0.field_G[3] + 2];
                   var5Lifetime3 = var17;
                   var5Lifetime3[0] = TertiaryNodeList.a(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
-                  var5Lifetime3[1] = TertiaryNodeList.a(0, var4 / 2 + this.field_J[var3_int] << 4, (int)(rh.field_e * (double)var4) + this.field_i[var3_int] << 4);
+                  var5Lifetime3[1] = TertiaryNodeList.a(0, var4 / 2 + this.field_J[var3_int] << 4, (int)(ProjectsContent.field_e * (double)var4) + this.field_i[var3_int] << 4);
                   for (var6Lifetime3 = 0; param0.field_G[3] > var6Lifetime3; var6Lifetime3++) {
                     var5Lifetime3[2 + 2 * var6Lifetime3] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin(3.141592653589793 * (double)(-(12 * var6Lifetime3) + 24) / 180.0)) << 4, this.field_i[var3_int] + (int)(Math.cos(3.141592653589793 * (double)(24 - 12 * var6Lifetime3) / 180.0) * (double)var4) << 4);
                     var5Lifetime3[2 + var6Lifetime3 * 2 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.sin((double)(18 - 12 * var6Lifetime3) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] + (int)((double)var4 * Math.cos(3.141592653589793 * (double)(18 - var6Lifetime3 * 12) / 180.0)) << 4);
                   }
-                  qn.a(var17, gm.field_k[3], param1);
+                  qn.a(var17, SoundPlayback.field_k[3], param1);
                 }
               }
             } else {
               var5_double = (double)(this.field_g * (float)this.field_Hb / ((float)this.field_n * this.field_I));
               this.field_qb[0][param0.field_G[0]].drawScaled(-(int)(var5_double * 35.0) + this.field_i[var3_int] - this.field_Hb, -((int)(var5_double * (double)this.field_qb[0][0].field_w) / 2) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[0][0].field_z), (int)((double)this.field_qb[0][0].field_w * var5_double));
-              this.field_qb[1][param0.field_G[1]].drawScaled(-(int)(rh.field_e * (var5_double * 32.0)) + (-this.field_Hb + this.field_i[var3_int]), (int)(var5_double * 33.0) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[1][0].field_z), (int)(var5_double * (double)this.field_qb[1][0].field_w));
-              this.field_qb[2][param0.field_G[2]].drawScaled(-2 + (this.field_i[var3_int] - this.field_Hb + (int)(rh.field_e * (62.0 * var5_double))), (int)(33.0 * var5_double) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[2][0].field_z), (int)(var5_double * (double)this.field_qb[2][0].field_w));
+              this.field_qb[1][param0.field_G[1]].drawScaled(-(int)(ProjectsContent.field_e * (var5_double * 32.0)) + (-this.field_Hb + this.field_i[var3_int]), (int)(var5_double * 33.0) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[1][0].field_z), (int)(var5_double * (double)this.field_qb[1][0].field_w));
+              this.field_qb[2][param0.field_G[2]].drawScaled(-2 + (this.field_i[var3_int] - this.field_Hb + (int)(ProjectsContent.field_e * (62.0 * var5_double))), (int)(33.0 * var5_double) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[2][0].field_z), (int)(var5_double * (double)this.field_qb[2][0].field_w));
               this.field_qb[3][param0.field_G[3]].drawScaled(this.field_Hb + (this.field_i[var3_int] + (int)(var5_double * 4.0)), -((int)(var5_double * (double)this.field_qb[3][0].field_w) / 2) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[3][0].field_z), (int)((double)this.field_qb[3][0].field_w * var5_double));
               if (this.field_X &&
                 SliderWidget.field_L) {
                 mj.field_Nb[param0.field_G[0]].drawScaledAlpha(-(int)(var5_double * 35.0) - this.field_Hb + this.field_i[var3_int], -((int)(var5_double * (double)this.field_qb[0][0].field_w) / 2) + this.field_J[var3_int], (int)((double)this.field_qb[0][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[0][0].field_w), RasterBuffer.field_f);
-                ts.field_L[param0.field_G[1]].drawScaledAlpha(this.field_i[var3_int] + (-this.field_Hb - (int)(rh.field_e * (32.0 * var5_double))), this.field_J[var3_int] + (int)(33.0 * var5_double), (int)(var5_double * (double)this.field_qb[1][0].field_z), (int)((double)this.field_qb[1][0].field_w * var5_double), RasterBuffer.field_f);
+                ts.field_L[param0.field_G[1]].drawScaledAlpha(this.field_i[var3_int] + (-this.field_Hb - (int)(ProjectsContent.field_e * (32.0 * var5_double))), this.field_J[var3_int] + (int)(33.0 * var5_double), (int)(var5_double * (double)this.field_qb[1][0].field_z), (int)((double)this.field_qb[1][0].field_w * var5_double), RasterBuffer.field_f);
                 var10 = (ArgbSprite) (ts.field_L[param0.field_G[2]]);
                 var11 = var10.h();
                 var11.flipHorizontal();
-                var11.drawScaledAlpha((int)(rh.field_e * (var5_double * 62.0)) + (this.field_i[var3_int] - this.field_Hb - 2), this.field_J[var3_int] + (int)(var5_double * 33.0), (int)((double)this.field_qb[2][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[2][0].field_w), RasterBuffer.field_f);
+                var11.drawScaledAlpha((int)(ProjectsContent.field_e * (var5_double * 62.0)) + (this.field_i[var3_int] - this.field_Hb - 2), this.field_J[var3_int] + (int)(var5_double * 33.0), (int)((double)this.field_qb[2][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[2][0].field_w), RasterBuffer.field_f);
                 var12 = (ArgbSprite) (mj.field_Nb[param0.field_G[3]]);
                 var13 = var12.h();
                 var13.flipHorizontal();
@@ -1861,11 +1861,11 @@ final class MapView extends MapViewState {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void d(Star param0, int param1) {
+    private final void drawProjectIcons(Star param0, int param1) {
         int var6 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -1911,7 +1911,7 @@ final class MapView extends MapViewState {
                 var4 -= 13;
                 var5 -= 21;
               }
-              GarrisonTask.field_s.drawTinted(var4, var5, gm.field_k[var8[var6].field_o]);
+              GarrisonTask.field_s.drawTinted(var4, var5, SoundPlayback.field_k[var8[var6].field_o]);
             }
           }
           return;
@@ -1925,7 +1925,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1971,11 +1971,11 @@ final class MapView extends MapViewState {
                 }
                 if (var8 < 25) {
                   if (125 >= this.field_t) {
-                    re.a(var9, 25, this.field_t, 0, 0);
+                    QuickChatCategoryRegistry.a(var9, 25, this.field_t, 0, 0);
                   } else {
-                    re.a(0, 25, -125 + this.field_t, -var9, 0);
+                    QuickChatCategoryRegistry.a(0, 25, -125 + this.field_t, -var9, 0);
                   }
-                  var9 = re.a(var9 / 2, 25, var8, var9, 0);
+                  var9 = QuickChatCategoryRegistry.a(var9 / 2, 25, var8, var9, 0);
                 }
               }
             }
@@ -2007,11 +2007,11 @@ final class MapView extends MapViewState {
                 }
                 if (25 > var9Lifetime1) {
                   if (this.field_t > 125) {
-                    var10 = re.a(0, 25, this.field_t - 125, -var11, 0);
+                    var10 = QuickChatCategoryRegistry.a(0, 25, this.field_t - 125, -var11, 0);
                   } else {
-                    var10 = re.a(var11, 25, this.field_t, 0, 0);
+                    var10 = QuickChatCategoryRegistry.a(var11, 25, this.field_t, 0, 0);
                   }
-                  var11 = re.a(var11 / 2, 25, var9Lifetime1, var11, 0);
+                  var11 = QuickChatCategoryRegistry.a(var11 / 2, 25, var9Lifetime1, var11, 0);
                 }
                 GarrisonTask.field_p[4].drawScaled(this.field_i[var8Lifetime1] - var11, -var11 + (this.field_J[var8Lifetime1] + var10), 2 * var11, var11 * 2);
               }
@@ -2019,8 +2019,8 @@ final class MapView extends MapViewState {
           }
           var5Lifetime1++;
         }
-        this.a(this.field_hb, false, true, true);
-        this.a(this.field_hb, true, true, true);
+        this.drawFleetVisuals(this.field_hb, false, true, true);
+        this.drawFleetVisuals(this.field_hb, true, true, true);
     }
 
     private final void a(Star param0, boolean param1) {
@@ -2125,7 +2125,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2155,41 +2155,41 @@ final class MapView extends MapViewState {
             if (!(this.field_I < 1024.0f)) {
               return;
             }
-            ek.field_z.drawTinted(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], this.field_J[param0.field_p] - ek.field_z.field_w / 2, var5);
+            ArrayWidgetGroup.field_z.drawTinted(-(ArrayWidgetGroup.field_z.field_z / 2) + this.field_i[param0.field_p], this.field_J[param0.field_p] - ArrayWidgetGroup.field_z.field_w / 2, var5);
             UiWidget.field_t.draw(this.field_i[param0.field_p] - UiWidget.field_t.field_z / 2, -3 + this.field_J[param0.field_p] - UiWidget.field_t.field_w / 2);
             rs.field_Cb.drawCentred(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], this.field_J[var3_int] + 4, 16777215, -1);
             if (param0.field_L > 0 &&
               6 > param0.field_B) {
-              gf.b((this.field_i[var3_int] << 4) + em.field_c[0], (this.field_J[var3_int] << 4) + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
+              SoftwareRasterizer.b((this.field_i[var3_int] << 4) + ProductionContent.field_c[0], (this.field_J[var3_int] << 4) + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
               if (param0.field_L == 2) {
-                gf.b((this.field_i[var3_int] << 4) + em.field_c[1], ul.field_Db[1] + (this.field_J[var3_int] << 4), 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.b((this.field_i[var3_int] << 4) + ProductionContent.field_c[1], ul.field_Db[1] + (this.field_J[var3_int] << 4), 50, 7, MusicCrossfadeStream.field_s);
               }
               if (param0.field_L == 3) {
-                gf.b(em.field_c[2] + (this.field_i[var3_int] << 4), ul.field_Db[2] + (this.field_J[var3_int] << 4), 50, 7, MusicCrossfadeStream.field_s);
-                gf.b((this.field_i[var3_int] << 4) + em.field_c[3], (this.field_J[var3_int] << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.b(ProductionContent.field_c[2] + (this.field_i[var3_int] << 4), ul.field_Db[2] + (this.field_J[var3_int] << 4), 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.b((this.field_i[var3_int] << 4) + ProductionContent.field_c[3], (this.field_J[var3_int] << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
                 return;
               }
             }
           } else {
-            ek.field_z.drawTinted(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, var5);
+            ArrayWidgetGroup.field_z.drawTinted(-(ArrayWidgetGroup.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, var5);
             if (this.field_X &&
               VictoryChecker.field_j) {
-              ek.field_z.drawAlpha(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, RasterBuffer.field_f);
+              ArrayWidgetGroup.field_z.drawAlpha(-(ArrayWidgetGroup.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, RasterBuffer.field_f);
             }
             SpriteState.field_y.draw(-(SpriteState.field_y.field_z / 2) + this.field_i[param0.field_p], -72 + (-(this.field_n * 7 / 10) + this.field_J[param0.field_p]));
             rs.field_Cb.drawCentred(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], -41 + this.field_J[var3_int] - 7 * this.field_n / 10, 16777215, -1);
             rs.field_Cb.drawCentred(param0.name, this.field_i[var3_int], this.field_J[var3_int] - 7 * this.field_n / 10 - 11, 16777215, -1);
             if (param0.field_L > 0 &&
               param0.field_B < 6) {
-              gf.b(em.field_c[0] + (this.field_i[var3_int] << 4), (this.field_J[var3_int] - (7 * this.field_n / 10 + 45) << 4) + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
+              SoftwareRasterizer.b(ProductionContent.field_c[0] + (this.field_i[var3_int] << 4), (this.field_J[var3_int] - (7 * this.field_n / 10 + 45) << 4) + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
               if (2 == param0.field_L) {
-                gf.b(em.field_c[1] + (this.field_i[var3_int] << 4), ul.field_Db[1] + (-45 + this.field_J[var3_int] - this.field_n * 7 / 10 << 4), 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.b(ProductionContent.field_c[1] + (this.field_i[var3_int] << 4), ul.field_Db[1] + (-45 + this.field_J[var3_int] - this.field_n * 7 / 10 << 4), 50, 7, MusicCrossfadeStream.field_s);
               }
               if (param0.field_L != 3) {
                 return;
               }
-              gf.b(em.field_c[2] + (this.field_i[var3_int] << 4), ul.field_Db[2] + (this.field_J[var3_int] + (-(this.field_n * 7 / 10) - 45) << 4), 50, 7, MusicCrossfadeStream.field_s);
-              gf.b((this.field_i[var3_int] << 4) + em.field_c[3], ul.field_Db[3] + (this.field_J[var3_int] - 7 * this.field_n / 10 - 45 << 4), 50, 7, MusicCrossfadeStream.field_s);
+              SoftwareRasterizer.b(ProductionContent.field_c[2] + (this.field_i[var3_int] << 4), ul.field_Db[2] + (this.field_J[var3_int] + (-(this.field_n * 7 / 10) - 45) << 4), 50, 7, MusicCrossfadeStream.field_s);
+              SoftwareRasterizer.b((this.field_i[var3_int] << 4) + ProductionContent.field_c[3], ul.field_Db[3] + (this.field_J[var3_int] - 7 * this.field_n / 10 - 45 << 4), 50, 7, MusicCrossfadeStream.field_s);
               return;
             }
           }
@@ -2204,7 +2204,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2218,7 +2218,7 @@ final class MapView extends MapViewState {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var5 = 0;
-        as var6 = null;
+        FleetVisual var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -2226,14 +2226,14 @@ final class MapView extends MapViewState {
         int var11 = 0;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          stackIn_4_0 = (!this.field_o.field_d.f(244874369)) ? 1 : 2;
+          stackIn_4_0 = (!this.field_o.field_d.isSelected(244874369)) ? 1 : 2;
           var3_int = stackIn_4_0;
           if (param0 >= -100) {
             return;
           }
           for (var4 = this.field_t; this.field_t + var3_int > var4; var4++) {
             var5 = var4 % 20;
-            var6 = (as) (param1.startForward(0));
+            var6 = (FleetVisual) (param1.startForward(0));
             while (var6 != null) {
               var7 = (-var6.field_r + var6.field_j << 4) * var4 / 200 + (var6.field_r << 4);
               var8 = (var6.field_n << 4) + (-var6.field_n + var6.field_k << 4) * var4 / 200;
@@ -2249,7 +2249,7 @@ final class MapView extends MapViewState {
                 var10.field_h = var7;
                 this.field_V.addLast((byte) -113, var10);
               }
-              var6 = (as) (param1.nextForward((byte) -71));
+              var6 = (FleetVisual) (param1.nextForward((byte) -71));
             }
           }
           return;
@@ -2263,7 +2263,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -2292,7 +2292,7 @@ final class MapView extends MapViewState {
         int var5Lifetime2;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          stackIn_4_0 = (this.field_o.field_d.f(param0 + 244874372)) ? 2 : 1;
+          stackIn_4_0 = (this.field_o.field_d.isSelected(param0 + 244874372)) ? 2 : 1;
           boolean decompiledFrameRemainder1 = true;
           var3_int = stackIn_4_0;
           if (this.field_T != 0) {
@@ -2349,7 +2349,7 @@ final class MapView extends MapViewState {
               var5Lifetime1 = 200;
               this.field_t = this.field_t + var3_int;
               if (!(var5Lifetime1 > this.field_t)) {
-                this.a(2, param1, false);
+                this.beginReplayPhase(2, param1, false);
               }
               decompiledFrameRemainder1 = false;
             }
@@ -2361,15 +2361,15 @@ final class MapView extends MapViewState {
                   }
                   this.field_t = this.field_t + var3_int;
                   if (this.field_t >= 200) {
-                    this.a(-1, param1, false);
-                    this.field_o.field_X.d(false);
+                    this.beginReplayPhase(-1, param1, false);
+                    this.field_o.field_X.setSelected(false);
                     this.field_o.field_X.field_o = DebouncedValidator.field_f;
                   }
                 }
               } else {
                 this.field_t = this.field_t + var3_int;
                 if (150 <= this.field_t) {
-                  this.a(3, param1, false);
+                  this.beginReplayPhase(3, param1, false);
                 }
               }
             }
@@ -2388,7 +2388,7 @@ final class MapView extends MapViewState {
             }
             this.field_t = this.field_t + var3_int;
             if (this.field_t >= var4_int) {
-              this.a(1, param1, false);
+              this.beginReplayPhase(1, param1, false);
             }
           }
           if (param0 != -3) {
@@ -2415,7 +2415,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(')').toString());
         }
     }
 
@@ -2481,7 +2481,7 @@ final class MapView extends MapViewState {
             var13 = 1;
           }
           var13 = var13 + var11 * 2;
-          gf.a(-2 - var10 / 2 + (param2 / 2 + param5), -2 + (param1 - var13), var10 + 4, 4 + var13, 2 + var11, 0);
+          SoftwareRasterizer.fillRoundedRect(-2 - var10 / 2 + (param2 / 2 + param5), -2 + (param1 - var13), var10 + 4, 4 + var13, 2 + var11, 0);
           if (param0 == null) {
             stackIn_27_0 = 8421504;
           } else {
@@ -2490,7 +2490,7 @@ final class MapView extends MapViewState {
           var14 = stackIn_27_0;
           if (param0 == param6.field_j &&
             param6.field_o.field_u) {
-            gf.f(-(var10 / 2) + param2 / 2 + param5 - 2, param1 - var13 - 2, 4 + var10, var13 + 4, 2 + var11, gm.field_k[0]);
+            SoftwareRasterizer.drawRoundedRect(-(var10 / 2) + param2 / 2 + param5 - 2, param1 - var13 - 2, 4 + var10, var13 + 4, 2 + var11, SoundPlayback.field_k[0]);
           } else {
             GameKeyHandler.a(2 + var11, var14, 4 + var10, param1 - var13 - 2, -2 + (param2 / 2 + param5 - var10 / 2), (byte) -126, 4 + var13);
           }
@@ -2499,17 +2499,17 @@ final class MapView extends MapViewState {
             return;
           }
           var15 = var15 + 2 * var11;
-          gf.a(-(var10 / 2) + param5 + param2 / 2, param1 - var15, var10, var15, var11, var14);
+          SoftwareRasterizer.fillRoundedRect(-(var10 / 2) + param5 + param2 / 2, param1 - var15, var10, var15, var11, var14);
           var16 = var15 / 3;
           if (var11 * 2 + 1 > var16) {
             var16 = 1 + var11 * 2;
           }
-          gf.b(-(var10 / 2) + (param2 / 2 + param5), -var15 + param1, var10, var16, var11, 0, var14);
+          SoftwareRasterizer.fillRoundedRectGradient(-(var10 / 2) + (param2 / 2 + param5), -var15 + param1, var10, var16, var11, 0, var14);
           var21 = new int[4];
-          gf.a(var21);
-          gf.d(param5 - (-(param2 / 2) + var10 / 2), param1 - var13, param2 / 2 + (param5 + var10 / 2), param1);
+          SoftwareRasterizer.saveClip(var21);
+          SoftwareRasterizer.setClip(param5 - (-(param2 / 2) + var10 / 2), param1 - var13, param2 / 2 + (param5 + var10 / 2), param1);
           ie.a(SpriteState.field_q, param5 + (param2 / 2 - var10 / 2), -var13 + param1);
-          gf.b(var21);
+          SoftwareRasterizer.restoreClip(var21);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2527,7 +2527,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -2573,13 +2573,13 @@ final class MapView extends MapViewState {
             var15.bindAsRenderTarget();
             for (var9 = 0; var9 < 10; var9++) {
               var10 = 16777215 - 218103808 * var9 - 2113929216;
-              gf.j(var9, 0, 200, var10);
+              SoftwareRasterizer.drawVerticalLine(var9, 0, 200, var10);
             }
             var8_ref_om = new ArgbSprite(15, (int)(200.0 * this.field_wb));
             var8_ref_om.bindAsRenderTarget();
             for (var9Lifetime1 = 0; var9Lifetime1 < 15; var9Lifetime1++) {
               var10Lifetime1 = 16777215 + 285212672 * (-var9Lifetime1 + 15);
-              gf.j(var9Lifetime1, 0, 200, var10Lifetime1);
+              SoftwareRasterizer.drawVerticalLine(var9Lifetime1, 0, 200, var10Lifetime1);
             }
             var9Lifetime2 = (int)(0.5 + 345.0 * this.field_wb);
             var10Lifetime2 = (int)(400.0 * this.field_wb + 0.5);
@@ -2587,27 +2587,27 @@ final class MapView extends MapViewState {
             this.field_ob.bindAsRenderTarget();
             var15.draw(0, (int)(this.field_wb * 100.0 + 0.5));
             var15.h(-10 + var9Lifetime2, (int)(100.0 * this.field_wb + 0.5));
-            var15.a(15, -5 + var10Lifetime2 - (int)(100.0 * this.field_wb * 0.5 + 0.5), 4096, (int)(this.field_wb * 100.0 * rh.field_e) + 3, 10923);
-            var15.a(15, -5 - (int)(0.5 + 0.5 * (this.field_wb * 100.0)) + var10Lifetime2, 4096, -3 + var9Lifetime2 - (int)(100.0 * this.field_wb * rh.field_e), 21845);
-            var15.a(15, 4 + (int)(0.5 * (this.field_wb * 100.0)), 4096, -3 + (var9Lifetime2 - (int)(rh.field_e * (100.0 * this.field_wb))), 43691);
-            var15.a(15, 4 + (int)(100.0 * this.field_wb * 0.5), 4096, (int)(this.field_wb * 100.0 * rh.field_e) + 3, 54613);
+            var15.a(15, -5 + var10Lifetime2 - (int)(100.0 * this.field_wb * 0.5 + 0.5), 4096, (int)(this.field_wb * 100.0 * ProjectsContent.field_e) + 3, 10923);
+            var15.a(15, -5 - (int)(0.5 + 0.5 * (this.field_wb * 100.0)) + var10Lifetime2, 4096, -3 + var9Lifetime2 - (int)(100.0 * this.field_wb * ProjectsContent.field_e), 21845);
+            var15.a(15, 4 + (int)(0.5 * (this.field_wb * 100.0)), 4096, -3 + (var9Lifetime2 - (int)(ProjectsContent.field_e * (100.0 * this.field_wb))), 43691);
+            var15.a(15, 4 + (int)(100.0 * this.field_wb * 0.5), 4096, (int)(this.field_wb * 100.0 * ProjectsContent.field_e) + 3, 54613);
             this.field_Ib = new ArgbSprite(var9Lifetime2, var10Lifetime2);
             this.field_Ib.bindAsRenderTarget();
             var8_ref_om.draw(0, (int)(0.5 + this.field_wb * 100.0));
             var8_ref_om.h(var9Lifetime2 - 15, (int)(0.5 + this.field_wb * 100.0));
-            var8_ref_om.a(15, -7 - (int)(0.5 * (100.0 * this.field_wb) + 0.5) + var10Lifetime2, 4096, (int)(rh.field_e * (this.field_wb * 100.0)) + 3, 10923);
-            var8_ref_om.a(param3 - 12099, var10Lifetime2 - ((int)(0.5 + 0.5 * (this.field_wb * 100.0)) + 7), 4096, -5 - (int)(rh.field_e * (100.0 * this.field_wb)) + var9Lifetime2, 21845);
-            var8_ref_om.a(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, -5 + var9Lifetime2 - (int)(rh.field_e * (this.field_wb * 100.0)), 43691);
-            var8_ref_om.a(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, (int)(rh.field_e * (this.field_wb * 100.0)) + 3, 54613);
+            var8_ref_om.a(15, -7 - (int)(0.5 * (100.0 * this.field_wb) + 0.5) + var10Lifetime2, 4096, (int)(ProjectsContent.field_e * (this.field_wb * 100.0)) + 3, 10923);
+            var8_ref_om.a(param3 - 12099, var10Lifetime2 - ((int)(0.5 + 0.5 * (this.field_wb * 100.0)) + 7), 4096, -5 - (int)(ProjectsContent.field_e * (100.0 * this.field_wb)) + var9Lifetime2, 21845);
+            var8_ref_om.a(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, -5 + var9Lifetime2 - (int)(ProjectsContent.field_e * (this.field_wb * 100.0)), 43691);
+            var8_ref_om.a(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, (int)(ProjectsContent.field_e * (this.field_wb * 100.0)) + 3, 54613);
             cg.i(0);
             for (var11 = 0; var10Lifetime2 * var9Lifetime2 > var11; var11++) {
-              this.field_ob.field_B[var11] = ee.a(16777215, this.field_ob.field_B[var11] << 8);
-              this.field_Ib.field_B[var11] = ee.a(16777215, this.field_Ib.field_B[var11] << 8);
+              this.field_ob.field_B[var11] = PrivateChatMessage.intOr(16777215, this.field_ob.field_B[var11] << 8);
+              this.field_Ib.field_B[var11] = PrivateChatMessage.intOr(16777215, this.field_Ib.field_B[var11] << 8);
             }
             var11Lifetime1 = -this.field_Hb - (int)(150.0 * this.field_wb) + (int)(300.0 * this.field_Jb + 0.5);
             this.field_Cb = new ArgbSprite(var11Lifetime1 + 4, var11Lifetime1 / 10 + 8);
-            this.field_K = new ArgbSprite((int)(4.0 + (double)var11Lifetime1 * 0.5), (int)(4.0 + rh.field_e * (double)var11Lifetime1));
-            this.field_Ob = new ArgbSprite((int)(4.0 + (double)var11Lifetime1 * 0.5), (int)(4.0 + rh.field_e * (double)var11Lifetime1));
+            this.field_K = new ArgbSprite((int)(4.0 + (double)var11Lifetime1 * 0.5), (int)(4.0 + ProjectsContent.field_e * (double)var11Lifetime1));
+            this.field_Ob = new ArgbSprite((int)(4.0 + (double)var11Lifetime1 * 0.5), (int)(4.0 + ProjectsContent.field_e * (double)var11Lifetime1));
             RandomAccessCacheFile.a(-113);
             this.field_Cb.bindAsRenderTarget();
             eo.a(true, 4, 4, (byte) 115, 200, var11Lifetime1, 0);
@@ -2645,7 +2645,7 @@ final class MapView extends MapViewState {
               this.field_Kb[var12] = new Sprite(var13Lifetime1, var13Lifetime1);
               this.field_Kb[var12].bindAsRenderTarget();
               PlacementOrder.field_p[var12].drawScaled(0, 0, var13Lifetime1, var13Lifetime1);
-              var13Lifetime2 = (int)(this.field_Jb * (double)qk.field_y[var12].field_o);
+              var13Lifetime2 = (int)(this.field_Jb * (double)MenuLabel.field_y[var12].field_o);
               if (!(var13Lifetime2 >= 20 + UiWidget.field_t.field_w)) {
                 var13Lifetime2 = UiWidget.field_t.field_w + 20;
               }
@@ -2655,11 +2655,11 @@ final class MapView extends MapViewState {
               }
               this.field_Mb[var12] = new Sprite(var13Lifetime2, var13Lifetime2);
               this.field_Mb[var12].bindAsRenderTarget();
-              qk.field_y[var12].drawScaled(0, 0, var13Lifetime2, var13Lifetime2);
+              MenuLabel.field_y[var12].drawScaled(0, 0, var13Lifetime2, var13Lifetime2);
             }
             cg.i(0);
           }
-          this.b(-94);
+          this.scrollBackground(-94);
           if (param3 != 12114) {
             this.field_Bb = true;
           }
@@ -2681,11 +2681,11 @@ final class MapView extends MapViewState {
           }
           this.field_o.l(123);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tr.FA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tr.FA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0) {
+    final void projectStars(boolean param0) {
         int var5 = 0;
         int[] dupTemp$0 = null;
         int[] dupTemp$1 = null;
@@ -2698,7 +2698,7 @@ final class MapView extends MapViewState {
         int[] dupTemp$8 = null;
         int[] dupTemp$9 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        super.a(param0);
+        super.projectStars(param0);
         this.field_Hb = this.field_n;
         if (!(UiWidget.field_t.field_z / 2 <= this.field_Hb)) {
           this.field_Hb = UiWidget.field_t.field_z / 2;
@@ -2714,7 +2714,7 @@ final class MapView extends MapViewState {
         }
         float var2 = 10.0f;
         var2 = var2 * (300.0f / this.field_I);
-        float var3 = (float)(rh.field_e * (double)var2);
+        float var3 = (float)(ProjectsContent.field_e * (double)var2);
         float var4 = (float)(0.5 * (double)var2);
         for (var5 = 0; var5 < this.field_Qb.length; var5++) {
           dupTemp$0 = this.field_Qb[var5];
@@ -2740,7 +2740,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final FleetMove c(int param0, int param1, byte param2) {
+    private final FleetMove findFleetAt(int param0, int param1, byte param2) {
         int var6 = 0;
         FleetMove var4;
         Star[] var5;
@@ -2772,7 +2772,7 @@ final class MapView extends MapViewState {
           MapView.a(43, true, true, 77);
         }
         if (null != this.field_p) {
-          var4 = this.a(this.field_p, param1, param0, -1);
+          var4 = this.findFleetNear(this.field_p, param1, param0, -1);
           if (var4 != null) {
             return var4;
           }
@@ -2780,7 +2780,7 @@ final class MapView extends MapViewState {
         var5 = this.field_O.field_e;
         for (var6 = 0; var6 < var5.length; var6++) {
           var7 = var5[var6];
-          var4Lifetime1 = this.a(var7, param1, param0, -1);
+          var4Lifetime1 = this.findFleetNear(var7, param1, param0, -1);
           if (var4Lifetime1 != null) {
             return var4Lifetime1;
           }
@@ -2825,11 +2825,11 @@ final class MapView extends MapViewState {
             }
             if (25 > var6) {
               if (125 < var5) {
-                re.a(0, 25, var5 - 125, -var8, 0);
+                QuickChatCategoryRegistry.a(0, 25, var5 - 125, -var8, 0);
               } else {
-                re.a(var8, 25, var5, 0, 0);
+                QuickChatCategoryRegistry.a(var8, 25, var5, 0, 0);
               }
-              var8 = re.a(var8 / 2, 25, var6, var8, 0);
+              var8 = QuickChatCategoryRegistry.a(var8 / 2, 25, var6, var8, 0);
             }
             SocketArchiveNetworkClient.a(0, 18117, this.field_D[var7], 64);
           }
@@ -2862,11 +2862,11 @@ final class MapView extends MapViewState {
             var9 = 0;
             if (var6Lifetime1 < 25) {
               if (var5Lifetime1 <= 125) {
-                var9 = re.a(var8Lifetime1, 25, var5Lifetime1, 0, 0);
+                var9 = QuickChatCategoryRegistry.a(var8Lifetime1, 25, var5Lifetime1, 0, 0);
               } else {
-                var9 = re.a(0, 25, -125 + var5Lifetime1, -var8Lifetime1, 0);
+                var9 = QuickChatCategoryRegistry.a(0, 25, -125 + var5Lifetime1, -var8Lifetime1, 0);
               }
-              var8Lifetime1 = re.a(var8Lifetime1 / 2, 25, var6Lifetime1, var8Lifetime1, 0);
+              var8Lifetime1 = QuickChatCategoryRegistry.a(var8Lifetime1 / 2, 25, var6Lifetime1, var8Lifetime1, 0);
             }
             if (var4Lifetime1.field_o != -1) {
               GarrisonTask.field_p[var4Lifetime1.field_o].drawScaled(-var8Lifetime1 + this.field_i[var7Lifetime1], this.field_J[var7Lifetime1] + var9 - var8Lifetime1, var8Lifetime1 * 2, var8Lifetime1 * 2);
@@ -2883,10 +2883,10 @@ final class MapView extends MapViewState {
     private final void a(int param0, int param1, int param2) {
         FleetMove discarded$0 = null;
         if (param2 != 150) {
-          discarded$0 = this.c(112, 127, (byte) 21);
+          discarded$0 = this.findFleetAt(112, 127, (byte) 21);
         }
-        this.a(this.field_v, false, true, true);
-        this.a(this.field_v, true, true, true);
+        this.drawFleetVisuals(this.field_v, false, true, true);
+        this.drawFleetVisuals(this.field_v, true, true, true);
     }
 
     private final void d(boolean param0) {
@@ -2910,7 +2910,7 @@ final class MapView extends MapViewState {
         if (!param0) {
           this.b((byte) 104);
         }
-        var2 = this.field_o.d((byte) 14) >> 1;
+        var2 = this.field_o.getAreaHeight((byte) 14) >> 1;
         var5 = (so) (this.field_Y.startForward(0));
         while (var5 != null) {
           if (6 <= var5.field_u) {
@@ -2922,7 +2922,7 @@ final class MapView extends MapViewState {
           var7 = var5.field_h.field_p;
           var3 = (var5.field_p * this.field_n >> 10) + (this.field_i[var7] << 4);
           var4 = (var5.field_n * this.field_n >> 10) + (this.field_J[var7] << 4);
-          gf.b(var3, var4, this.field_n + 4 << 1, var6_int, vj.field_F);
+          SoftwareRasterizer.b(var3, var4, this.field_n + 4 << 1, var6_int, vj.field_F);
           var5 = (so) (this.field_Y.nextForward((byte) -71));
         }
         var6 = (di) (this.field_V.startForward(0));
@@ -2939,13 +2939,13 @@ final class MapView extends MapViewState {
           var9 = (int)(300.0f / ((float)var6.field_o + this.field_I) * (float)var4Lifetime1) + (var2 << 4);
           var10 = (int)(32000.0f / (this.field_I + (float)var6.field_o)) + 64;
           if (var10 < 400) {
-            gf.b(var8, var9, var10, var7Lifetime1, vj.field_F);
+            SoftwareRasterizer.b(var8, var9, var10, var7Lifetime1, vj.field_F);
           }
           var6 = (di) (this.field_V.nextForward((byte) -71));
         }
         if (this.field_T == 0) {
-          this.a(this.field_c, false, false, true);
-          this.a(this.field_c, true, false, true);
+          this.drawFleetVisuals(this.field_c, false, false, true);
+          this.drawFleetVisuals(this.field_c, true, false, true);
           this.b(320, var2, (byte) 101);
         } else {
           if (this.field_T != 1) {
@@ -2958,7 +2958,7 @@ final class MapView extends MapViewState {
             }
           } else {
             this.a(var2, 320, 150);
-            this.a((byte) 82, var2, 320);
+            this.drawBattleSummaries((byte) 82, var2, 320);
           }
         }
     }
@@ -3107,7 +3107,7 @@ final class MapView extends MapViewState {
         Object var5;
         int var6;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (ds.field_c != null) {
+        if (MessageKind.field_c != null) {
           this.field_nb[0] = -1;
           this.field_p = null;
           this.field_S = null;
@@ -3116,12 +3116,12 @@ final class MapView extends MapViewState {
         }
         if (1 != param0 &&
           param0 != 7) {
-          this.field_S = this.c(param3, param2, (byte) 111);
+          this.field_S = this.findFleetAt(param3, param2, (byte) 111);
           if (this.field_S != null) {
             this.field_p = null;
             return;
           }
-          this.field_p = this.a(param2, false, param3);
+          this.field_p = this.findStarAt(param2, false, param3);
           if (param0 == param1) {
             var5 = null;
             if (this.field_p != null) {
@@ -3140,9 +3140,9 @@ final class MapView extends MapViewState {
             }
             if (-1 == this.field_T) {
               if (var5 == null) {
-                this.field_o.a(10, 0, ub.field_Bb);
+                this.field_o.showStatusText(10, 0, ScrollPane.field_Bb);
               } else {
-                this.field_o.a(10, 0, re.a(vo.field_c, 4371, new String[]{or.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
+                this.field_o.showStatusText(10, 0, QuickChatCategoryRegistry.a(vo.field_c, 4371, new String[]{or.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
               }
             }
           }
@@ -3151,7 +3151,7 @@ final class MapView extends MapViewState {
         this.field_nb[1] = -1;
         this.field_S = null;
         this.field_nb[0] = -1;
-        this.field_p = this.a(param2, false, param3);
+        this.field_p = this.findStarAt(param2, false, param3);
     }
 
     private final void b(int param0, int param1, int param2) {
@@ -3208,11 +3208,11 @@ final class MapView extends MapViewState {
                 }
                 if (25 > var10_int) {
                   if (this.field_t > 125) {
-                    re.a(0, 25, -125 + this.field_t, -var11, 0);
+                    QuickChatCategoryRegistry.a(0, 25, -125 + this.field_t, -var11, 0);
                   } else {
-                    re.a(var11, 25, this.field_t, 0, 0);
+                    QuickChatCategoryRegistry.a(var11, 25, this.field_t, 0, 0);
                   }
-                  var11 = re.a(var11 / 2, 25, var10_int, var11, 0);
+                  var11 = QuickChatCategoryRegistry.a(var11 / 2, 25, var10_int, var11, 0);
                 }
               }
             }
@@ -3258,11 +3258,11 @@ final class MapView extends MapViewState {
                 }
                 if (var11Lifetime1 < 25) {
                   if (this.field_t > 125) {
-                    var12 = re.a(0, 25, -125 + this.field_t, -var13, 0);
+                    var12 = QuickChatCategoryRegistry.a(0, 25, -125 + this.field_t, -var13, 0);
                   } else {
-                    var12 = re.a(var13, 25, this.field_t, 0, 0);
+                    var12 = QuickChatCategoryRegistry.a(var13, 25, this.field_t, 0, 0);
                   }
-                  var13 = re.a(var13 / 2, 25, var11Lifetime1, var13, 0);
+                  var13 = QuickChatCategoryRegistry.a(var13 / 2, 25, var11Lifetime1, var13, 0);
                 }
                 var10.drawScaled(-var13 + this.field_i[var7Lifetime1], this.field_J[var7Lifetime1] + var12 - var13, 2 * var13, 2 * var13);
               }
@@ -3289,7 +3289,7 @@ final class MapView extends MapViewState {
         int var2Lifetime1;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5 = fe.field_y;
+          var5 = MenuButton.field_y;
           var1 = var5;
           for (var2 = 0; var5.length > var2; var2++) {
             var8 = var5[var2];
@@ -3311,7 +3311,7 @@ final class MapView extends MapViewState {
           if (param0 != 119) {
             field_Pb = (String) null;
           }
-          var6 = fe.field_H;
+          var6 = MenuButton.field_H;
           var1Lifetime1 = var6;
           var7 = 0;
           var2Lifetime1 = var7;
@@ -3346,7 +3346,7 @@ final class MapView extends MapViewState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "tr.CA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "tr.CA(" + param0 + ')');
         }
     }
 
@@ -3448,9 +3448,9 @@ final class MapView extends MapViewState {
                 } else {
                   stackIn_57_1 = 0;
                 }
-                gf.b(stackIn_56_0, -stackIn_57_1 + this.field_J[param0.field_p] << 4, var10, 255, this.field_bb[var4[var8Lifetime1].field_o]);
+                SoftwareRasterizer.b(stackIn_56_0, -stackIn_57_1 + this.field_J[param0.field_p] << 4, var10, 255, this.field_bb[var4[var8Lifetime1].field_o]);
               } else {
-                gf.b(this.field_i[param0.field_p] << 4, this.field_J[param0.field_p] - this.field_n * 7 / 10 - 44 << 4, 550, 255, this.field_bb[var4[var8Lifetime1].field_o]);
+                SoftwareRasterizer.b(this.field_i[param0.field_p] << 4, this.field_J[param0.field_p] - this.field_n * 7 / 10 - 44 << 4, 550, 255, this.field_bb[var4[var8Lifetime1].field_o]);
               }
               if (var9 > 2000) {
                 var9 = 2000;
@@ -3474,7 +3474,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3516,7 +3516,7 @@ final class MapView extends MapViewState {
           this.field_X = stackIn_4_1;
           this.field_B = param2;
           this.field_cb = new int[this.field_ib.length][];
-          this.j(0);
+          this.buildPlayerSprites(0);
           this.field_E = (float)(this.field_O.field_b / 2);
           this.field_g = 200.0f;
           this.field_I = 300.0f;
@@ -3526,10 +3526,10 @@ final class MapView extends MapViewState {
             this.field_bb[var6_int] = new int[256];
           }
           for (var6_intLifetime1 = 0; 256 > var6_intLifetime1; var6_intLifetime1++) {
-            this.field_bb[0][var6_intLifetime1] = ee.a(we.a(254, var6_intLifetime1) << 7, var6_intLifetime1);
+            this.field_bb[0][var6_intLifetime1] = PrivateChatMessage.intOr(we.intAnd(254, var6_intLifetime1) << 7, var6_intLifetime1);
             this.field_bb[1][var6_intLifetime1] = var6_intLifetime1 << 8;
-            this.field_bb[2][var6_intLifetime1] = ee.a(var6_intLifetime1 << 8, var6_intLifetime1 << 16);
-            this.field_bb[3][var6_intLifetime1] = ee.a(var6_intLifetime1 << 16, var6_intLifetime1);
+            this.field_bb[2][var6_intLifetime1] = PrivateChatMessage.intOr(var6_intLifetime1 << 8, var6_intLifetime1 << 16);
+            this.field_bb[3][var6_intLifetime1] = PrivateChatMessage.intOr(var6_intLifetime1 << 16, var6_intLifetime1);
           }
           this.field_z = new int[this.field_O.field_e.length];
           this.field_c = new IntrusiveDeque();
@@ -3552,7 +3552,7 @@ final class MapView extends MapViewState {
             this.field_qb[2][var6_intLifetime2].flipHorizontal();
           }
           for (var6_intLifetime3 = 0; var6_intLifetime3 < 4; var6_intLifetime3++) {
-            var7 = gm.field_k[var6_intLifetime3];
+            var7 = SoundPlayback.field_k[var6_intLifetime3];
             var8 = 255 & var7 >> 16;
             var9 = (65280 & var7) >> 8;
             var10 = 255 & var7;
@@ -3564,9 +3564,9 @@ final class MapView extends MapViewState {
                 if (var14 == var13 &&
                   var13 == var15) {
                   if (128 < var13) {
-                    this.field_qb[var6_intLifetime3][var11].field_B[var12] = we.a(-16777216, this.field_qb[var6_intLifetime3][var11].field_B[var12]) + ((var10 * (256 - var15) - (32640 - 255 * var15) >> 7) + ((-var14 + 256) * var9 - 32640 + var14 * 255 >> 7 << 8) + (255 * (var13 - 128) + var8 * (-var13 + 256) >> 7 << 16));
+                    this.field_qb[var6_intLifetime3][var11].field_B[var12] = we.intAnd(-16777216, this.field_qb[var6_intLifetime3][var11].field_B[var12]) + ((var10 * (256 - var15) - (32640 - 255 * var15) >> 7) + ((-var14 + 256) * var9 - 32640 + var14 * 255 >> 7 << 8) + (255 * (var13 - 128) + var8 * (-var13 + 256) >> 7 << 16));
                   } else {
-                    this.field_qb[var6_intLifetime3][var11].field_B[var12] = we.a(-16777216, this.field_qb[var6_intLifetime3][var11].field_B[var12]) + (var10 * var15 >> 7) + (var9 * var14 >> 7 << 8) + (var8 * var13 >> 7 << 16);
+                    this.field_qb[var6_intLifetime3][var11].field_B[var12] = we.intAnd(-16777216, this.field_qb[var6_intLifetime3][var11].field_B[var12]) + (var10 * var15 >> 7) + (var9 * var14 >> 7 << 8) + (var8 * var13 >> 7 << 16);
                   }
                 }
               }
@@ -3595,24 +3595,24 @@ final class MapView extends MapViewState {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static hb a(byte param0, DualLinkDeque param1) {
+    final static NodeSequence a(byte param0, DualLinkDeque param1) {
         RuntimeException var2 = null;
-        hb stackIn_2_0 = null;
-        dn stackIn_4_0 = null;
+        NodeSequence stackIn_2_0 = null;
+        DualLinkDequeSequence stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 26) {
-            stackIn_4_0 = new dn(param1);
-            return (hb) ((Object) stackIn_4_0);
+            stackIn_4_0 = new DualLinkDequeSequence(param1);
+            return (NodeSequence) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (hb) null;
+          stackIn_2_0 = (NodeSequence) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3624,7 +3624,7 @@ final class MapView extends MapViewState {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

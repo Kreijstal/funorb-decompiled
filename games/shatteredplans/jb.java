@@ -11,7 +11,7 @@ final class jb {
     static String field_a;
     static int field_g;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         field_f = null;
         field_e = null;
@@ -24,14 +24,14 @@ final class jb {
     final static void a(boolean param0, byte param1) {
         ta.a(param0, 121);
         if (param1 != -27) {
-          jb.a(11);
+          jb.clearStatics(11);
           im.a(true, param0);
           return;
         }
         im.a(true, param0);
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleep(byte param0, long param1) {
         if (0L >= param1) {
           return;
         }

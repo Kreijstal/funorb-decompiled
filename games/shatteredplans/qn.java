@@ -8,17 +8,17 @@ final class qn {
     static String field_d;
     static int[] field_b;
 
-    final static as a(int param0, FleetMove param1) {
-        as var2 = null;
+    final static FleetVisual a(int param0, FleetMove param1) {
+        FleetVisual var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        as stackIn_1_0 = null;
+        FleetVisual stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new as(param1);
+          var2 = new FleetVisual(param1);
           var3 = -54 % ((-34 - param0) / 45);
           stackIn_1_0 = var2;
           return stackIn_1_0;
@@ -32,7 +32,7 @@ final class qn {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -45,7 +45,7 @@ final class qn {
           }
           TertiaryLinkNode.c(-20677, param1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class qn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "qn.D(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "qn.D(" + param0 + ')');
         }
     }
 
@@ -108,11 +108,11 @@ final class qn {
           }
           DebouncedValidator.field_g = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qn.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qn.C(" + param0 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         field_b = null;
         field_e = null;

@@ -11,7 +11,7 @@ abstract class DebouncedValidator implements ValidationSource {
     static int[] field_d;
     static String field_f;
 
-    abstract ValidationState a(boolean param0);
+    abstract ValidationState computeState(boolean param0);
 
     final static boolean a(int param0, String param1) {
         RuntimeException var2 = null;
@@ -22,7 +22,7 @@ abstract class DebouncedValidator implements ValidationSource {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -30106) {
-            stackIn_6_0 = (hb.a((byte) -90, param1) != null);
+            stackIn_6_0 = (NodeSequence.a((byte) -90, param1) != null);
             return stackIn_6_0;
           }
           return false;
@@ -36,38 +36,38 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    public final String a(byte param0) {
+    public final String getMessage(byte param0) {
         if (param0 != -63) {
           MusicCrossfadeStream var3 = (MusicCrossfadeStream) null;
           DebouncedValidator.a((java.awt.Component) null, (PlatformTaskDispatcher) null, (MusicCrossfadeStream) null, -88, true, -43, 7, true);
         }
-        if (this.a(16647)) {
+        if (this.isEmpty(16647)) {
           return null;
         }
-        if (pr.a(14274) < (this.field_b + 350L)) {
+        if (pr.currentTimeMillis(14274) < (this.field_b + 350L)) {
           return null;
         }
-        return this.c((byte) 125);
+        return this.computeMessage((byte) 125);
     }
 
-    final static gm a(int param0, PcmSampleStream param1) {
-        gm var2 = null;
+    final static SoundPlayback a(int param0, PcmSampleStream param1) {
+        SoundPlayback var2 = null;
         RuntimeException var2_ref = null;
-        gm stackIn_2_0 = null;
-        gm stackIn_4_0 = null;
+        SoundPlayback stackIn_2_0 = null;
+        SoundPlayback stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new gm(param1, param1);
+          var2 = new SoundPlayback(param1, param1);
           eo.field_ab.addLast((byte) -113, var2);
           if (param0 > -121) {
-            stackIn_2_0 = (gm) null;
+            stackIn_2_0 = (SoundPlayback) null;
             return stackIn_2_0;
           }
           jp.field_Bb.addChild(param1);
@@ -83,11 +83,11 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_e = null;
         field_d = null;
         field_c = null;
@@ -99,20 +99,20 @@ abstract class DebouncedValidator implements ValidationSource {
         field_f = null;
     }
 
-    public final void b(int param0) {
-        this.field_b = pr.a(14274);
+    public final void notifyChanged(int param0) {
+        this.field_b = pr.currentTimeMillis(14274);
         int var2 = -57 / ((param0 + 1) / 58);
     }
 
-    public final ValidationState c(int param0) {
-        if (this.a(16647)) {
-          return un.field_i;
+    public final ValidationState getState(int param0) {
+        if (this.isEmpty(16647)) {
+          return IntrusiveDequeSequence.field_i;
         }
         int var2 = -29 / ((-80 - param0) / 35);
-        if (!(this.field_b + 350L <= pr.a(14274))) {
-          return pd.field_h;
+        if (!(this.field_b + 350L <= pr.currentTimeMillis(14274))) {
+          return TertiaryListSequence.field_h;
         }
-        return this.a(false);
+        return this.computeState(false);
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -147,7 +147,7 @@ abstract class DebouncedValidator implements ValidationSource {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -172,11 +172,11 @@ abstract class DebouncedValidator implements ValidationSource {
           ValidationState.field_b.a(wm.field_b, 0);
           aj.field_e.setSourceStream(ValidationState.field_b);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "da.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "da.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    abstract String c(byte param0);
+    abstract String computeMessage(byte param0);
 
     static {
         int var2 = 0;

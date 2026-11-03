@@ -11,11 +11,11 @@ final class hk extends il {
           int var3_int = 113 / ((51 - param1) / 57);
           super.b(param0, 125);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hk.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hk.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void p(int param0) {
+    public static void clearStatics(int param0) {
         field_nb = null;
         if (param0 != 20) {
           return;
@@ -28,7 +28,7 @@ final class hk extends il {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static void a(int param0, byte param1) {
+    final static void setTargetFrameRate(int param0, byte param1) {
         if (param1 < 33) {
           return;
         }

@@ -47,7 +47,7 @@ final class GameSession implements AiHost {
     boolean field_f;
     boolean field_W;
     private boolean field_T;
-    static qr field_e;
+    static AnimatedPanel field_e;
     private int field_O;
     boolean field_M;
     private boolean field_y;
@@ -55,7 +55,7 @@ final class GameSession implements AiHost {
     static String field_X;
     Player field_n;
 
-    private final void a(Player param0, String param1, byte param2) {
+    private final void addChatLine(Player param0, String param1, byte param2) {
         int stackIn_16_0 = 0;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -84,7 +84,7 @@ final class GameSession implements AiHost {
           var4 = param0.name + ": ";
           var5 = ji.field_I.field_K;
           if (this.field_f) {
-            var5 = var5 - ho.field_f.stringWidth("[" + re.a(he.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
+            var5 = var5 - ho.field_f.stringWidth("[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
           }
           if (this.field_f) {
             stackIn_16_0 = 0;
@@ -127,11 +127,11 @@ final class GameSession implements AiHost {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(byte param0, Player param1) {
+    private final void clearPlayerStars(byte param0, Player param1) {
         RuntimeException runtimeException = null;
         Territory var3 = null;
         Star var4_ref_ln = null;
@@ -178,7 +178,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -204,7 +204,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "km.WA(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -557,7 +557,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_145_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_144_0), ((StringBuilder) (Object) stackIn_144_1).append(stackIn_145_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_144_0), ((StringBuilder) (Object) stackIn_144_1).append(stackIn_145_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -598,7 +598,7 @@ final class GameSession implements AiHost {
           if (decompiledNaturalLoopExit1) {
             stackIn_14_0 = this.field_P;
           }
-          var5 = (FleetMove) (((TertiaryNodeList) (Object) stackIn_14_0.field_p).a(true));
+          var5 = (FleetMove) (((TertiaryNodeList) (Object) stackIn_14_0.field_p).startForward(true));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5 == null))) {
             var5.field_y.field_J = var5.field_y.field_J - var5.field_z;
@@ -636,7 +636,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -648,7 +648,7 @@ final class GameSession implements AiHost {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_P.rebindMap(92, param0);
-          this.field_z.a(param0, 0);
+          this.field_z.setMap(param0, 0);
           this.field_p = new int[param0.field_e.length];
           this.field_t = new int[param0.field_e.length];
           if (param1 != 6) {
@@ -672,7 +672,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -695,11 +695,11 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "km.D(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.D(" + param0 + ',' + param1 + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void handleMapPointer(int param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         ProjectUse var4 = null;
         RuntimeException var4_ref = null;
@@ -727,7 +727,7 @@ final class GameSession implements AiHost {
             this.field_y = false;
             if (!this.field_T) {
               if (this.field_m != 0) {
-                qk.a(us.field_d, param0 ^ -3671);
+                MenuLabel.a(us.field_d, param0 ^ -3671);
                 this.field_Y.a(-76, 0);
                 if (var5 == 0) {
                   return;
@@ -759,7 +759,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var4_ref), "km.L(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var4_ref), "km.L(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -804,7 +804,7 @@ final class GameSession implements AiHost {
             stackIn_14_0 = this.field_P.field_g.field_e[param0].name;
           }
           var9 = vm.a(stackIn_14_0, 100, "system", var9);
-          this.a(param3, var9, (byte) 51);
+          this.addChatLine(param3, var9, (byte) 51);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -822,11 +822,11 @@ final class GameSession implements AiHost {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final boolean c(int param0) {
+    final boolean handleTurnResultPacket(int param0) {
         int stackIn_77_0 = 0;
         int stackIn_128_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -962,21 +962,21 @@ final class GameSession implements AiHost {
             this.field_P.declareWinner(var2_intLifetime2, 3);
             ta.a(0, -1, (byte) 96, false);
             this.field_b = false;
-            this.field_Y.o(-4956);
+            this.field_Y.hidePanels(-4956);
             boolean decompiledSharedTail0 = ((this.field_n == null ||
               (this.field_P.field_w & 1 << this.field_h) == 0) &&
               !(this.field_P.field_x.isLoser((byte) 123, this.field_n)));
             if (!decompiledSharedTail0) {
-              jo.a(param0 ^ 18008, wh.field_b, false, 10);
+              QuickChatPhraseRegistry.a(param0 ^ 18008, wh.field_b, false, 10);
               decompiledSharedTail0 = (var11 != 0);
             }
             if ((decompiledSharedTail0) &&
               (this.field_P.field_z)) {
-              jo.a(32767, PlacementEvent.field_n, false, 10);
+              QuickChatPhraseRegistry.a(32767, PlacementEvent.field_n, false, 10);
             }
             if (sm.field_e &&
               (1 << this.field_h & this.field_P.field_e) == 0) {
-              this.b(-116);
+              this.sendReady(-116);
             }
             return true;
           }
@@ -1006,7 +1006,7 @@ final class GameSession implements AiHost {
               if (var11 == 0) {
                 var6Lifetime1 = stackIn_128_0;
                 var7 = "My personality type is " + wk.field_a[var5Lifetime1] + " and my rating is " + var6Lifetime1;
-                this.a(this.field_P.field_v[var4Lifetime2], var7, (byte) 51);
+                this.addChatLine(this.field_P.field_v[var4Lifetime2], var7, (byte) 51);
                 var3Lifetime2++;
                 continue;
               }
@@ -1021,11 +1021,11 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.M(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.M(" + param0 + ')');
         }
     }
 
-    private final void a(int param0, Star param1, Star param2, int param3) {
+    private final void queueProjectUse(int param0, Star param1, Star param2, int param3) {
         RuntimeException runtimeException = null;
         ProjectUse var5 = null;
         int var6 = 0;
@@ -1086,11 +1086,11 @@ final class GameSession implements AiHost {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void runTurnAndPrepareReplay(int param0, int param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         boolean stackIn_4_0 = false;
@@ -1120,7 +1120,7 @@ final class GameSession implements AiHost {
         int var8_int = 0;
         Player[] var8_array = null;
         FleetMove var9 = null;
-        as var10 = null;
+        FleetVisual var10 = null;
         int var11 = 0;
         Object stackIn_74_0Lifetime1;
         int stackIn_98_0Lifetime1;
@@ -1128,10 +1128,10 @@ final class GameSession implements AiHost {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           this.field_Q = new TurnEventLog();
-          this.field_z.b(false);
-          var3 = this.c((byte) 44);
+          this.field_z.captureStarState(false);
+          var3 = this.shipsPerPlayer((byte) 44);
           this.field_P.processTurn(param0, 1, this.field_Q, (AchievementProgress) null);
-          this.field_z.a(0);
+          this.field_z.clearReplay(0);
           var4 = this.field_Q.field_a.startForward(0);
           var5 = 0;
           var6 = new StringBuilder();
@@ -1193,20 +1193,20 @@ final class GameSession implements AiHost {
                     }
                   } else {
                     var7_ref_qi = (StellarBombEvent) (var4);
-                    this.field_z.a(var7_ref_qi.field_l, -123, 2, var7_ref_qi.field_k);
+                    this.field_z.addAnnotation(var7_ref_qi.field_l, -123, 2, var7_ref_qi.field_k);
                   }
                 } else {
                   var7_ref_qm = (ProjectUse) (var4);
                   if (0 != var7_ref_qm.field_o) {
                     if (var7_ref_qm.field_o != 1) {
                       if (var7_ref_qm.field_o == 3) {
-                        this.field_z.a(var7_ref_qm.field_p, var7_ref_qm.field_r, (byte) -128, var7_ref_qm.field_q);
+                        this.field_z.addWormholeAnnotation(var7_ref_qm.field_p, var7_ref_qm.field_r, (byte) -128, var7_ref_qm.field_q);
                       }
                     } else {
-                      this.field_z.a(var7_ref_qm.field_q, -117, 1, var7_ref_qm.field_p);
+                      this.field_z.addAnnotation(var7_ref_qm.field_q, -117, 1, var7_ref_qm.field_p);
                     }
                   } else {
-                    this.field_z.a(var7_ref_qm.field_q, -124, 0, var7_ref_qm.field_p);
+                    this.field_z.addAnnotation(var7_ref_qm.field_q, -124, 0, var7_ref_qm.field_p);
                   }
                   if (this.field_n != var7_ref_qm.field_p) {
                   }
@@ -1231,7 +1231,7 @@ final class GameSession implements AiHost {
                     discarded$1 = var6.append("Construction event at " + var7_ref_hj.field_i.name + " has no owner.\n");
                   } else {
                     if (var7_ref_hj.field_j != this.field_n) {
-                      this.field_z.a(var7_ref_hj.field_j, var7_ref_hj.field_i, false, var7_ref_hj.field_h);
+                      this.field_z.addCountAnnotation(var7_ref_hj.field_j, var7_ref_hj.field_i, false, var7_ref_hj.field_h);
                       if (this.field_z.field_u < var7_ref_hj.field_h) {
                         this.field_z.field_u = var7_ref_hj.field_h;
                       }
@@ -1269,7 +1269,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3_ref), "km.AB(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3_ref), "km.AB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1288,11 +1288,11 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.H(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.H(" + param0 + ')');
         }
     }
 
-    private final void j(int param0) {
+    private final void handleCameraInput(int param0) {
         boolean discarded$0 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -1327,8 +1327,8 @@ final class GameSession implements AiHost {
             if (je.field_d == 1) {
               this.a(SliderWidget.field_P, (byte) -103, PointsVictoryChecker.field_p);
             }
-            this.a(-3587, pd.field_k, bb.field_b);
-            this.field_z.a(this.field_m, 0, pd.field_k, bb.field_b);
+            this.handleMapPointer(-3587, TertiaryListSequence.field_k, bb.field_b);
+            this.field_z.a(this.field_m, 0, TertiaryListSequence.field_k, bb.field_b);
           }
           var3 = this.field_z.field_k;
           var4 = this.field_z.field_E;
@@ -1382,7 +1382,7 @@ final class GameSession implements AiHost {
           }
           if (decompiledFrameRemainder1) {
             if (this.field_G) {
-              var6 = -this.field_z.field_db + pd.field_k;
+              var6 = -this.field_z.field_db + TertiaryListSequence.field_k;
               var7 = -this.field_z.field_e + bb.field_b;
               var3 = var3 - this.field_z.field_I * (float)var6 / 300.0f;
               if (0.0f > var3) {
@@ -1401,7 +1401,7 @@ final class GameSession implements AiHost {
             }
             this.field_z.field_e = bb.field_b;
             this.field_G = true;
-            this.field_z.field_db = pd.field_k;
+            this.field_z.field_db = TertiaryListSequence.field_k;
           }
           if (var2_int == 0 &&
             so.field_o != 0) {
@@ -1409,8 +1409,8 @@ final class GameSession implements AiHost {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
             var6Lifetime1 = 320;
-            var7Lifetime1 = this.field_Y.d((byte) 14) / 2;
-            var8 = var3 + (float)(pd.field_k - var6Lifetime1) * this.field_z.field_I / 300.0f;
+            var7Lifetime1 = this.field_Y.getAreaHeight((byte) 14) / 2;
+            var8 = var3 + (float)(TertiaryListSequence.field_k - var6Lifetime1) * this.field_z.field_I / 300.0f;
             var9 = (float)(bb.field_b - var7Lifetime1) * this.field_z.field_I / 300.0f + var4;
             if (0 >= so.field_o) {
               var10 = 2 * so.field_o;
@@ -1446,7 +1446,7 @@ final class GameSession implements AiHost {
             }
             if ((decompiledFrameCompleted1) &&
               (decompiledFrameCompleted0)) {
-              var3 = var8 - var5 * (float)(-var6Lifetime1 + pd.field_k) / 300.0f;
+              var3 = var8 - var5 * (float)(-var6Lifetime1 + TertiaryListSequence.field_k) / 300.0f;
               var4 = var9 - var5 * (float)(bb.field_b - var7Lifetime1) / 300.0f;
             }
             if (0.0f > var3) {
@@ -1470,7 +1470,7 @@ final class GameSession implements AiHost {
             this.field_z.field_fb = null;
             this.field_z.field_E = var4;
             this.field_z.field_k = var3;
-            this.field_z.a(false);
+            this.field_z.projectStars(false);
           }
           boolean decompiledSharedTail0 = (AllianceExpiredEvent.field_n != 0);
           if (!decompiledSharedTail0) {
@@ -1480,18 +1480,18 @@ final class GameSession implements AiHost {
           }
           if ((decompiledSharedTail0) &&
             (this.field_z.field_S != null)) {
-            discarded$0 = this.a((byte) 121, this.field_z.field_S);
+            discarded$0 = this.handleFleetClick((byte) 121, this.field_z.field_S);
           }
-          this.field_z.c(pd.field_k, bb.field_b, param0 ^ 69);
+          this.field_z.c(TertiaryListSequence.field_k, bb.field_b, param0 ^ 69);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.W(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.W(" + param0 + ')');
         }
     }
 
-    private final void a(boolean param0, int param1, Star param2, Star param3) {
+    private final void queueFleetMove(boolean param0, int param1, Star param2, Star param3) {
         Star stackIn_18_0 = null;
         Star stackIn_18_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -1526,7 +1526,7 @@ final class GameSession implements AiHost {
               var5 = new FleetMove(param3, param2, param1);
               param3.field_T.addLast((byte) -113, var5);
               param2.field_s.addLast(var5, 32);
-              this.field_P.field_p.a((byte) 62, var5);
+              this.field_P.field_p.addLast((byte) 62, var5);
               if (var6 != 0) {
                 var5.field_z = var5.field_z + param1;
               }
@@ -1543,7 +1543,7 @@ final class GameSession implements AiHost {
           NodeHashTableIterator.a(param2, (byte) 75);
           this.a(this.field_n, -95);
           if (this.field_f) {
-            this.field_v.a((byte) 9, var5);
+            this.field_v.addLast((byte) 9, var5);
             this.e(0);
           }
           return;
@@ -1563,11 +1563,11 @@ final class GameSession implements AiHost {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
-    private final void l(int param0) {
+    private final void sendOrders(int param0) {
         RuntimeException runtimeException = null;
         CipherPacketBuffer var2 = null;
         int var3 = 0;
@@ -1584,22 +1584,22 @@ final class GameSession implements AiHost {
           AchievementProgress.a(MapView.a((byte) 81, this.field_o), -256, MapView.a((byte) 93, this.field_ab), DialWidget.a(-125, this.field_v), var2);
           this.field_ab.clear((byte) 35);
           this.field_o.clear((byte) 87);
-          this.field_v.a((byte) 112);
+          this.field_v.clear((byte) 112);
           var2.patchLengthShort(-549342136, -var3 + var2.position);
           this.field_g = -1;
           this.field_k = -1;
           if (sm.field_e) {
-            this.m(126);
+            this.submitTurn(126);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "km.VA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.VA(" + param0 + ')');
         }
     }
 
-    private final void a(FleetMove param0, int param1, int param2) {
+    private final void changeMoveSize(FleetMove param0, int param1, int param2) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -1610,7 +1610,7 @@ final class GameSession implements AiHost {
           this.field_C[param0.field_y.field_p] = this.field_C[param0.field_y.field_p] - param1;
           param0.field_z = param0.field_z + param1;
           if (param2 != 10755) {
-            this.a(101);
+            this.refreshMapView(101);
           }
           if (param0.field_z < 0) {
             throw new RuntimeException();
@@ -1618,11 +1618,11 @@ final class GameSession implements AiHost {
           if (0 == param0.field_z) {
             param0.unlink((byte) -106);
             param0.unlinkSecondary(16);
-            param0.d(true);
+            param0.unlinkTertiary(true);
           }
           this.a(this.field_n, -117);
           if (this.field_f) {
-            this.field_v.a((byte) 9, param0);
+            this.field_v.addLast((byte) 9, param0);
             this.e(0);
           }
           return;
@@ -1636,7 +1636,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1674,11 +1674,11 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.PA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.PA(" + param0 + ')');
         }
     }
 
-    final void b(int param0) {
+    final void sendReady(int param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -1693,11 +1693,11 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.C(" + param0 + ')');
         }
     }
 
-    private final boolean a(byte param0, FleetMove param1) {
+    private final boolean handleFleetClick(byte param0, FleetMove param1) {
         int fieldTemp$0 = 0;
         int stackIn_42_0 = 0;
         int stackIn_70_0 = 0;
@@ -1755,7 +1755,7 @@ final class GameSession implements AiHost {
                 } else {
                   var3_int = -this.field_z.field_S.field_z;
                 }
-                this.a(this.field_z.field_S, var3_int, 10755);
+                this.changeMoveSize(this.field_z.field_S, var3_int, 10755);
                 if (this.field_z.field_S.field_z == 0) {
                   this.field_z.field_nb[1] = -1;
                   this.field_z.field_nb[0] = -1;
@@ -1768,7 +1768,7 @@ final class GameSession implements AiHost {
                 (decompiledFrameRemainder0 = (AllianceExpiredEvent.field_n == 1)) &&
                 (decompiledFrameRemainder0 = !(!this.field_z.field_Bb))) {
                 var3_intLifetime2 = -param1.field_z;
-                this.a(this.field_z.field_S, var3_intLifetime2, 10755);
+                this.changeMoveSize(this.field_z.field_S, var3_intLifetime2, 10755);
                 this.field_z.field_nb[1] = -1;
                 this.field_z.field_S = null;
                 this.field_z.field_nb[0] = -1;
@@ -1810,12 +1810,12 @@ final class GameSession implements AiHost {
                 var3_intLifetime1 = var5.field_J - var6;
               }
               if (var3_intLifetime1 <= 0) {
-                qk.a(ConquestVictoryChecker.field_l, 47);
+                MenuLabel.a(ConquestVictoryChecker.field_l, 47);
                 if (var7 != 0) {
-                  this.a(this.field_z.field_S, var3_intLifetime1, 10755);
+                  this.changeMoveSize(this.field_z.field_S, var3_intLifetime1, 10755);
                 }
               } else {
-                this.a(this.field_z.field_S, var3_intLifetime1, 10755);
+                this.changeMoveSize(this.field_z.field_S, var3_intLifetime1, 10755);
               }
             }
             fieldTemp$0 = this.field_I - 5;
@@ -1824,7 +1824,7 @@ final class GameSession implements AiHost {
               this.field_I = 0;
             }
             this.field_O = this.field_I;
-            this.a(2);
+            this.refreshMapView(2);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1837,11 +1837,11 @@ final class GameSession implements AiHost {
           } else {
             stackIn_93_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_92_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_92_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(')').toString());
         }
     }
 
-    final void a(int param0) {
+    final void refreshMapView(int param0) {
         Star[] var2 = null;
         int var3 = 0;
         Star var4 = null;
@@ -1885,16 +1885,16 @@ final class GameSession implements AiHost {
             (param0 != 2)) {
             this.field_l = (Territory[]) null;
           }
-          this.field_z.a(this.field_C, true, this.field_l, this.field_R, true);
+          this.field_z.setDisplayState(this.field_C, true, this.field_l, this.field_R, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.A(" + param0 + ')');
         }
     }
 
-    final void m(int param0) {
+    final void submitTurn(int param0) {
         CipherPacketBuffer var2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -1904,12 +1904,12 @@ final class GameSession implements AiHost {
           }
           if (this.field_f) {
             if (-1 != this.field_k) {
-              this.l(-113);
+              this.sendOrders(-113);
             }
             var2 = js.field_f;
             var2.h(61, 255);
             var2.writeByte(this.field_P.field_O, (byte) -93);
-            var2.writeInt(11135, this.f(-41));
+            var2.writeInt(11135, this.checksumOrders(-41));
             this.field_L = true;
             if (this.field_N > 1) {
               this.field_N = this.field_N - 1;
@@ -1923,11 +1923,11 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.QA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.QA(" + param0 + ')');
         }
     }
 
-    private final void k(int param0) {
+    private final void sendResultAck(int param0) {
         CipherPacketBuffer var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1945,7 +1945,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.N(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.N(" + param0 + ')');
         }
     }
 
@@ -1961,22 +1961,22 @@ final class GameSession implements AiHost {
         try {
           if (this.field_n != param0) {
             if (param1 == this.field_n) {
-              var4 = re.a(AiTask.field_h, 4371, new String[]{param0.name});
+              var4 = QuickChatCategoryRegistry.a(AiTask.field_h, 4371, new String[]{param0.name});
               this.field_H.addFirst(new n(param0, (Player) null, var4), 0);
               if (ShatteredPlansClient.field_F) {
-                var4 = re.a(ud.field_b, 4371, new String[]{param1.name});
+                var4 = QuickChatCategoryRegistry.a(ud.field_b, 4371, new String[]{param1.name});
                 this.field_H.addFirst(new n(param1, (Player) null, var4), 0);
               }
             }
           } else {
-            var4 = re.a(ud.field_b, 4371, new String[]{param1.name});
+            var4 = QuickChatCategoryRegistry.a(ud.field_b, 4371, new String[]{param1.name});
             this.field_H.addFirst(new n(param1, (Player) null, var4), 0);
           }
           if (null != this.field_s[param1.field_x]) {
             this.field_s[param1.field_x].a(param0, 7686);
           }
           if (!param2) {
-            this.a(true, 25, (Star) null, (Star) null);
+            this.queueFleetMove(true, 25, (Star) null, (Star) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1995,7 +1995,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2004,7 +2004,7 @@ final class GameSession implements AiHost {
         RuntimeException var2 = null;
         try {
           if (this.field_L) {
-            this.k(-92);
+            this.sendResultAck(-92);
           }
           if (param0 == ~this.field_g) {
             this.field_g = 250;
@@ -2014,7 +2014,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.E(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.E(" + param0 + ')');
         }
     }
 
@@ -2027,17 +2027,17 @@ final class GameSession implements AiHost {
           if (param0 <= 89) {
             this.field_n = (Player) null;
           }
-          this.b(param1, 123);
+          this.runTurnAndPrepareReplay(param1, 123);
           this.field_z.field_d = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var4), "km.NA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var4), "km.NA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final int f(int param0) {
+    private final int checksumOrders(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
@@ -2085,7 +2085,7 @@ final class GameSession implements AiHost {
           if (decompiledNaturalLoopExit1) {
             stackIn_13_0 = this.field_P;
           }
-          var6 = (FleetMove) (((TertiaryNodeList) (Object) stackIn_13_0.field_p).a(true));
+          var6 = (FleetMove) (((TertiaryNodeList) (Object) stackIn_13_0.field_p).startForward(true));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6 == null))) {
             stackIn_18_0 = var2_int + ((1 + var6.field_y.field_p) * (1 + (var6.field_B.field_p + 65536)) + var6.field_z * ((1 + var6.field_B.field_p) * (1 + var6.field_y.field_p)));
@@ -2103,7 +2103,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.AA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.AA(" + param0 + ')');
         }
     }
 
@@ -2184,7 +2184,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2235,7 +2235,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2497,7 +2497,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_163_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_162_0), ((StringBuilder) (Object) stackIn_162_1).append(stackIn_163_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_162_0), ((StringBuilder) (Object) stackIn_162_1).append(stackIn_163_2).append(')').toString());
         }
     }
 
@@ -2517,7 +2517,7 @@ final class GameSession implements AiHost {
             if (!sm.field_e) {
               throw new RuntimeException();
             }
-            this.a(param2, (byte) 50);
+            this.proposeAlliance(param2, (byte) 50);
           }
           if (param2 == param1) {
             return;
@@ -2564,7 +2564,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -2583,11 +2583,11 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.LA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.LA(" + param0 + ')');
         }
     }
 
-    final void a(int param0, Player param1) {
+    final void addPlayer(int param0, Player param1) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -2638,7 +2638,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -2720,7 +2720,7 @@ final class GameSession implements AiHost {
                   var4 = var2[var3_intLifetime1];
                   if (var8 == 0) {
                     if (this.field_n != var4) {
-                      this.a((byte) -66, var4);
+                      this.clearPlayerStars((byte) -66, var4);
                     }
                     var3_intLifetime1++;
                     continue;
@@ -2728,12 +2728,12 @@ final class GameSession implements AiHost {
                 }
                 break;
               }
-              this.m(126);
+              this.submitTurn(126);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if (decompiledFrameRemainder0) {
-              this.a((byte) -2, this.field_n);
-              this.m(123);
+              this.clearPlayerStars((byte) -2, this.field_n);
+              this.submitTurn(123);
             }
           }
           if (AchievementProgress.field_g &&
@@ -2743,11 +2743,11 @@ final class GameSession implements AiHost {
             di.field_p[81] &&
             oq.field_j == 16) {
             sm.field_e = true;
-            em.a(mq.c((byte) 73), 1);
+            ProductionContent.a(mq.c((byte) 73), 1);
             this.field_s[this.field_h] = (Ai) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
-            var2_ref = (FleetMove) (this.field_P.field_p.a(true));
+            var2_ref = (FleetMove) (this.field_P.field_p.startForward(true));
             while (null != var2_ref) {
-              this.a(var2_ref, -var2_ref.field_z, 10755);
+              this.changeMoveSize(var2_ref, -var2_ref.field_z, 10755);
               var2_ref = (FleetMove) (this.field_P.field_p.a((byte) -68));
               if (var8 != 0) {
                 return;
@@ -2783,7 +2783,7 @@ final class GameSession implements AiHost {
             var6 = 0;
             do {
               if (var6 >= var5.length) {
-                var2_ref = (FleetMove) (this.field_P.field_p.a(true));
+                var2_ref = (FleetMove) (this.field_P.field_p.startForward(true));
                 break;
               }
               var7 = var5[var6];
@@ -2796,7 +2796,7 @@ final class GameSession implements AiHost {
                 var3 = (PlacementOrder) (this.field_P.field_q.startForward(0));
                 break;
               }
-              this.field_v.a((byte) 9, var2_ref);
+              this.field_v.addLast((byte) 9, var2_ref);
               var2_ref = (FleetMove) (this.field_P.field_p.a((byte) -68));
             } while (var8 == 0);
             do {
@@ -2821,7 +2821,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref2), "km.G(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref2), "km.G(" + param0 + ')');
         }
     }
 
@@ -2835,7 +2835,7 @@ final class GameSession implements AiHost {
         int var4_int = 0;
         Star[] var4 = null;
         Star var4_ref = null;
-        gm var4_ref2 = null;
+        SoundPlayback var4_ref2 = null;
         RuntimeException var4_ref3 = null;
         int var5_int = 0;
         Star[] var5 = null;
@@ -2863,7 +2863,7 @@ final class GameSession implements AiHost {
                     this.field_K != this.field_z.field_p &&
                     this.field_K.field_R == this.field_z.field_p.field_R &&
                     this.field_P.isWithinMovementRange(this.field_K, this.field_z.field_p, -1)) {
-                    this.field_z.e(-18641);
+                    this.field_z.endReplay(-18641);
                     var4_int = -this.field_K.field_N + this.field_K.field_J;
                     if (0 < var4_int) {
                       stackIn_33_0 = (1 + var4_int) / 2;
@@ -2901,18 +2901,18 @@ final class GameSession implements AiHost {
                       var5_int = this.field_K.field_J - var7_int;
                     }
                     if (var5_int > 0) {
-                      this.a(false, var5_int, this.field_z.field_p, this.field_K);
+                      this.queueFleetMove(false, var5_int, this.field_z.field_p, this.field_K);
                       if (this.field_n != this.field_z.field_p.field_y && (null != this.field_z.field_p.field_y ||
                         this.field_z.field_p.field_x != 0)) {
-                        qk.a(ConquestVictoryChecker.field_l, 78);
+                        MenuLabel.a(ConquestVictoryChecker.field_l, 78);
                         if (var8 != 0) {
-                          qk.a(StandardMapGenerator.field_l, 89);
+                          MenuLabel.a(StandardMapGenerator.field_l, 89);
                         }
                       } else {
-                        qk.a(StandardMapGenerator.field_l, 89);
+                        MenuLabel.a(StandardMapGenerator.field_l, 89);
                       }
                     }
-                    this.a(2);
+                    this.refreshMapView(2);
                   }
                   this.field_Y.a(-125, 0);
                   if (var8 == 0) {
@@ -2927,8 +2927,8 @@ final class GameSession implements AiHost {
                     if (this.field_z.field_p.field_L != 0) {
                       return;
                     }
-                    this.field_z.e(-18641);
-                    this.a(2);
+                    this.field_z.endReplay(-18641);
+                    this.refreshMapView(2);
                     this.a(1, this.field_z.field_p, 0);
                     this.field_Y.a(-122, 0);
                     this.field_Y.b(1, 2);
@@ -2947,9 +2947,9 @@ final class GameSession implements AiHost {
                       if (this.field_K == this.field_z.field_p) {
                         return;
                       }
-                      this.field_z.e(-18641);
-                      this.a(2);
-                      this.a(41, this.field_z.field_p, this.field_K, 3);
+                      this.field_z.endReplay(-18641);
+                      this.refreshMapView(2);
+                      this.queueProjectUse(41, this.field_z.field_p, this.field_K, 3);
                       this.field_Y.a(-117, 0);
                       this.field_Y.b(3, 2);
                       if (var8 == 0) {
@@ -2959,8 +2959,8 @@ final class GameSession implements AiHost {
                     if (this.field_z.field_p.field_y != this.field_n) {
                       return;
                     }
-                    this.field_z.e(-18641);
-                    this.a(2);
+                    this.field_z.endReplay(-18641);
+                    this.refreshMapView(2);
                     this.field_K = this.field_z.field_p;
                     this.field_Y.a(-84, 7);
                     var4 = this.field_P.field_g.field_e;
@@ -3004,8 +3004,8 @@ final class GameSession implements AiHost {
                   if (var4_int != 0 &&
                     this.field_n != var5_ref && (null == var5_ref ||
                     !this.field_n.field_h[var5_ref.field_x])) {
-                    this.field_z.e(-18641);
-                    this.a(2);
+                    this.field_z.endReplay(-18641);
+                    this.refreshMapView(2);
                     this.a(2, this.field_z.field_p, 0);
                     this.field_Y.a(-81, 0);
                     this.field_Y.b(2, 2);
@@ -3020,8 +3020,8 @@ final class GameSession implements AiHost {
                 if (this.field_z.field_p.field_u) {
                   return;
                 }
-                this.field_z.e(-18641);
-                this.a(2);
+                this.field_z.endReplay(-18641);
+                this.refreshMapView(2);
                 this.a(0, this.field_z.field_p, 0);
                 this.field_Y.a(-119, 0);
                 this.field_Y.b(0, 2);
@@ -3039,7 +3039,7 @@ final class GameSession implements AiHost {
                 return;
               }
               this.field_K = this.field_z.field_p;
-              qk.a(us.field_d, 74);
+              MenuLabel.a(us.field_d, 74);
               this.field_Y.a(-107, 1);
               this.field_z.field_z[this.field_K.field_p] = 1;
               var4 = this.field_K.field_D;
@@ -3078,8 +3078,8 @@ final class GameSession implements AiHost {
                 return;
               }
             }
-            this.field_z.e(-18641);
-            this.a(this.field_z.field_p, -83);
+            this.field_z.endReplay(-18641);
+            this.placeUnplacedFleets(this.field_z.field_p, -83);
             if (this.field_x > 3) {
               var5_int = this.field_x - 3;
               var6 = 96 >> (var5_int >> 1);
@@ -3091,10 +3091,10 @@ final class GameSession implements AiHost {
               }
               var4_ref2 = DialWidget.a(96, SocketArchiveNetworkClient.field_w, var6);
               if (var8 != 0) {
-                var4_ref2 = qk.a(SocketArchiveNetworkClient.field_w, 78);
+                var4_ref2 = MenuLabel.a(SocketArchiveNetworkClient.field_w, 78);
               }
             } else {
-              var4_ref2 = qk.a(SocketArchiveNetworkClient.field_w, 78);
+              var4_ref2 = MenuLabel.a(SocketArchiveNetworkClient.field_w, 78);
             }
             if (null != this.field_E) {
               var5_ref2 = this.field_E;
@@ -3116,13 +3116,13 @@ final class GameSession implements AiHost {
               this.field_E = new sf(var4_ref2, cl.field_n);
             }
             this.field_x = this.field_x + 1;
-            this.a(2);
+            this.refreshMapView(2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref3 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var4_ref3), "km.BA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var4_ref3), "km.BA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3189,8 +3189,8 @@ final class GameSession implements AiHost {
               this.field_n = this.field_P.field_v[0];
               this.field_h = 0;
               this.field_P.c(0);
-              this.b(lr.a((byte) 27), 79);
-              this.field_z.field_d = lr.a((byte) 27);
+              this.runTurnAndPrepareReplay(lr.nextRandomInt((byte) 27), 79);
+              this.field_z.field_d = lr.nextRandomInt((byte) 27);
               this.field_P.chooseYearName((byte) 119);
               var2_int = 0;
               while (!(this.field_P.field_r <= var2_int)) {
@@ -3205,7 +3205,7 @@ final class GameSession implements AiHost {
             }
           }
           if (param0 != -81) {
-            this.a(false, 84, (Star) null, (Star) null);
+            this.queueFleetMove(false, 84, (Star) null, (Star) null);
           }
           this.field_n = this.field_P.field_v[this.field_h];
           this.field_S = AgeValidator.field_o[this.field_P.field_J];
@@ -3214,11 +3214,11 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.TA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.TA(" + param0 + ')');
         }
     }
 
-    final void a(int param0, int param1) {
+    final void cancelProjects(int param0, int param1) {
         ProjectUse var3 = null;
         int var4 = 0;
         int stackIn_15_0 = 0;
@@ -3259,7 +3259,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3_ref), "km.BB(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3_ref), "km.BB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3274,7 +3274,7 @@ final class GameSession implements AiHost {
             GameSession.h(24);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "km.JA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.JA(" + param0 + ')');
         }
     }
 
@@ -3294,7 +3294,7 @@ final class GameSession implements AiHost {
         try {
           if (param0 &&
             !WeightedLruCache.a(-114)) {
-            this.j(50);
+            this.handleCameraInput(50);
             if (var4 != 0) {
               this.field_Y.a(false, (byte) 110);
             }
@@ -3308,7 +3308,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_14_1 = this.field_Q.field_a;
           }
-          ((MapView) (Object) stackIn_13_0).a(stackIn_14_1, 66);
+          ((MapView) (Object) stackIn_13_0).tick(stackIn_14_1, 66);
           scanLoop1: while (true) {
             if (null != this.field_E) {
               stackIn_24_0 = cl.field_n - this.field_E.field_c;
@@ -3341,7 +3341,7 @@ final class GameSession implements AiHost {
               if (fieldTemp$0 == 1 &&
                 !this.field_L &&
                 this.field_b) {
-                this.m(123);
+                this.submitTurn(123);
               }
             }
             if (this.field_S % 200 == 0 &&
@@ -3349,7 +3349,7 @@ final class GameSession implements AiHost {
               var3 = js.field_f;
               var3.h(61, 255);
               var3.writeByte(this.field_P.field_O, (byte) -110);
-              var3.writeInt(11135, this.f(109));
+              var3.writeInt(11135, this.checksumOrders(109));
             }
           }
           if (this.field_f &&
@@ -3364,13 +3364,13 @@ final class GameSession implements AiHost {
                 return;
               }
             }
-            this.l(-106);
+            this.sendOrders(-106);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3_ref), "km.GA(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3_ref), "km.GA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3387,28 +3387,28 @@ final class GameSession implements AiHost {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_n == param0) {
-            var4 = re.a(jb.field_a, 4371, new String[]{param2.name});
+            var4 = QuickChatCategoryRegistry.a(jb.field_a, 4371, new String[]{param2.name});
             this.field_H.addFirst(new n(param0, param2, var4), 0);
             if (var5 != 0) {
               if (param2 == this.field_n) {
-                var4 = re.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
+                var4 = QuickChatCategoryRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
                 this.field_H.addFirst(new n(param2, param0, var4), 0);
-                var4 = re.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
+                var4 = QuickChatCategoryRegistry.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
                 this.field_H.addFirst(new n(param2, param0, var4), 0);
               } else {
-                var4 = re.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
+                var4 = QuickChatCategoryRegistry.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
                 this.field_H.addFirst(new n(param2, param0, var4), 0);
               }
             }
           } else {
             boolean decompiledSharedTail0 = (param2 != this.field_n);
             if (!decompiledSharedTail0) {
-              var4 = re.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
+              var4 = QuickChatCategoryRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
               this.field_H.addFirst(new n(param2, param0, var4), 0);
               decompiledSharedTail0 = (var5 != 0);
             }
             if (decompiledSharedTail0) {
-              var4 = re.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
+              var4 = QuickChatCategoryRegistry.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
               this.field_H.addFirst(new n(param2, param0, var4), 0);
             }
           }
@@ -3439,7 +3439,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -3511,7 +3511,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.DA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.DA(" + param0 + ')');
         }
     }
 
@@ -3579,7 +3579,7 @@ final class GameSession implements AiHost {
             var3_int = 0;
             do {
               if (var2.length <= var3_int) {
-                this.field_z.a(this.field_C, param0, this.field_l, this.field_R, false);
+                this.field_z.setDisplayState(this.field_C, param0, this.field_l, this.field_R, false);
                 this.field_z.a(this.field_p, this.field_t, this.field_U, this.field_V, this.field_w, this.field_d, this.field_r, this.field_J, 0);
                 this.field_z.d(0);
                 this.a(this.field_n, -83);
@@ -3623,9 +3623,9 @@ final class GameSession implements AiHost {
                   break scanLoop1;
                 }
               }
-              var2_ref2 = (FleetMove) (this.field_P.field_p.a(true));
+              var2_ref2 = (FleetMove) (this.field_P.field_p.startForward(true));
               while (var2_ref2 != null) {
-                this.field_v.a((byte) 9, var2_ref2);
+                this.field_v.addLast((byte) 9, var2_ref2);
                 var2_ref2 = (FleetMove) (this.field_P.field_p.a((byte) -68));
                 if (var6 != 0) {
                   break scanLoop1;
@@ -3649,7 +3649,7 @@ final class GameSession implements AiHost {
               }
               this.e(0);
             }
-            this.field_z.a(false);
+            this.field_z.projectStars(false);
             this.field_Y.n(106);
             this.field_Y.a(-73, 0);
             this.field_N = 0;
@@ -3683,27 +3683,27 @@ final class GameSession implements AiHost {
           }
           ta.a(stackIn_88_0, stackIn_88_1, (byte) 96, false);
           this.field_b = false;
-          this.field_Y.o(-4956);
+          this.field_Y.hidePanels(-4956);
           if ((this.field_n == null ||
             (1 << this.field_h & this.field_P.field_w) == 0) && !this.field_P.field_x.isLoser((byte) -123, this.field_n)) {
             if (this.field_P.field_z) {
-              jo.a(32767, PlacementEvent.field_n, false, 10);
+              QuickChatPhraseRegistry.a(32767, PlacementEvent.field_n, false, 10);
               if (var6 != 0) {
-                jo.a(32767, wh.field_b, false, 10);
+                QuickChatPhraseRegistry.a(32767, wh.field_b, false, 10);
               }
             }
           } else {
-            jo.a(32767, wh.field_b, false, 10);
+            QuickChatPhraseRegistry.a(32767, wh.field_b, false, 10);
           }
           if (sm.field_e &&
             (this.field_P.field_e & 1 << this.field_h) == 0) {
-            this.b(-118);
+            this.sendReady(-118);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref3), "km.J(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref3), "km.J(" + param0 + ')');
         }
     }
 
@@ -3771,7 +3771,7 @@ final class GameSession implements AiHost {
             this.field_Y = new GameScreen(this);
           }
           boolean decompiledFrameCompleted0 = true;
-          this.field_z.a(this.field_Y, param0 + 205);
+          this.field_z.setScreen(this.field_Y, param0 + 205);
           if (!this.field_f &&
             !this.field_W) {
             var2_int = 0;
@@ -3784,7 +3784,7 @@ final class GameSession implements AiHost {
                 this.field_s[var2_int].broadcastChat(param0 + 7);
                 if (AchievementProgress.field_g) {
                   var3_ref_String = "My personality is " + wk.field_a[this.field_s[var2_int].getPersonality(false)];
-                  this.a(this.field_P.field_v[var2_int], var3_ref_String, (byte) 51);
+                  this.addChatLine(this.field_P.field_v[var2_int], var3_ref_String, (byte) 51);
                 }
               }
               var2_int++;
@@ -3830,7 +3830,7 @@ final class GameSession implements AiHost {
             break;
           }
           if (decompiledNaturalLoopExit1) {
-            this.field_z.b(false);
+            this.field_z.captureStarState(false);
             this.a(true);
             stackIn_49_0 = 0;
           }
@@ -3848,7 +3848,7 @@ final class GameSession implements AiHost {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.a(param0 + 83);
+            this.refreshMapView(param0 + 83);
             stackIn_60_0 = null;
           }
           boolean decompiledSharedTail0 = (stackIn_60_0 != this.field_n &&
@@ -3859,14 +3859,14 @@ final class GameSession implements AiHost {
             decompiledSharedTail0 = (var6 != 0);
           }
           if (decompiledSharedTail0) {
-            this.field_z.a((Territory) (this.field_n.field_i.startForward(0)), param0 ^ -82);
+            this.field_z.focusOnTerritory((Territory) (this.field_n.field_i.startForward(0)), param0 ^ -82);
           }
-          this.field_z.a(false);
+          this.field_z.projectStars(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.T(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.T(" + param0 + ')');
         }
     }
 
@@ -3887,24 +3887,24 @@ final class GameSession implements AiHost {
           AchievementProgress.a(FrameTimer.a(this.field_P.field_q, -71), -256, FrameTimer.a(this.field_P.field_i, -88), eh.a(25, this.field_P.field_p), var2);
           this.field_ab.clear((byte) 108);
           this.field_o.clear((byte) 127);
-          this.field_v.a((byte) 112);
+          this.field_v.clear((byte) 112);
           var2.patchLengthShort(-549342136, -var3 + var2.position);
           this.field_k = -1;
           this.field_g = -1;
           if (this.field_L) {
             var2.h(61, 255);
             var2.writeByte(this.field_P.field_O, (byte) -74);
-            var2.writeInt(11135, this.f(-78));
+            var2.writeInt(11135, this.checksumOrders(-78));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "km.CA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.CA(" + param0 + ')');
         }
     }
 
-    private final void a(Star param0, int param1) {
+    private final void placeUnplacedFleets(Star param0, int param1) {
         int stackIn_12_0 = 0;
         int stackIn_58_0 = 0;
         Star stackIn_65_0 = null;
@@ -4038,11 +4038,11 @@ final class GameSession implements AiHost {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final int[] c(byte param0) {
+    private final int[] shipsPerPlayer(byte param0) {
         int stackIn_16_0 = 0;
         int stackIn_16_1 = 0;
         int[] stackIn_37_0 = null;
@@ -4077,7 +4077,7 @@ final class GameSession implements AiHost {
           }
           if ((decompiledNaturalLoopExit0) &&
             (param0 != 44)) {
-            this.a((Player) null, (String) null, (byte) -53);
+            this.addChatLine((Player) null, (String) null, (byte) -53);
           }
           var3_array = this.field_P.field_v;
           var4Lifetime1 = 0;
@@ -4120,11 +4120,11 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.UA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.UA(" + param0 + ')');
         }
     }
 
-    final void a(Player param0, byte param1) {
+    final void proposeAlliance(Player param0, byte param1) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -4195,7 +4195,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4239,17 +4239,17 @@ final class GameSession implements AiHost {
               this.field_P = AudioService.a(param3, param5, param2, -22379, 4);
               PacketBuffer.a(-126, this);
               if (var13 != 0) {
-                this.field_P = qr.a(param2, 50, param5, param3, param4, 2);
-                this.field_P = uq.a(param4, param2, -27579, param5, param3);
+                this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);
+                this.field_P = uq.createGameState(param4, param2, -27579, param5, param3);
               }
             } else {
-              this.field_P = qr.a(param2, 50, param5, param3, param4, 2);
+              this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);
               if (var13 != 0) {
-                this.field_P = uq.a(param4, param2, -27579, param5, param3);
+                this.field_P = uq.createGameState(param4, param2, -27579, param5, param3);
               }
             }
           } else {
-            this.field_P = uq.a(param4, param2, -27579, param5, param3);
+            this.field_P = uq.createGameState(param4, param2, -27579, param5, param3);
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameRemainder0 = true;
@@ -4399,7 +4399,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_100_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
         }
     }
 

@@ -44,7 +44,7 @@ final class wp {
         field_a = (MusicTrack) null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 != -90) {
@@ -92,7 +92,7 @@ final class wp {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -131,19 +131,19 @@ final class wp {
                 stackIn_16_0 = (String) null;
                 return stackIn_16_0;
               }
-              if (!DialogRoot.a(var4.charAt(0), 2) &&
-                !DialogRoot.a(var4.charAt(-1 + var4.length()), 2)) {
+              if (!DialogRoot.isNameSeparator(var4.charAt(0), 2) &&
+                !DialogRoot.isNameSeparator(var4.charAt(-1 + var4.length()), 2)) {
                 var5 = 0;
                 for (var6 = 0; param1.length() > var6; var6++) {
                   var7 = param1.charAt(var6);
-                  if (!DialogRoot.a((char) var7, 2)) {
+                  if (!DialogRoot.isNameSeparator((char) var7, 2)) {
                     var5 = 0;
                   } else {
                     var5++;
                   }
                   if (var5 >= 2 &&
                     !param2) {
-                    stackIn_30_0 = ms.field_g;
+                    stackIn_30_0 = ChatMessage.field_g;
                     return stackIn_30_0;
                   }
                 }
@@ -171,7 +171,7 @@ final class wp {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class wp {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 }

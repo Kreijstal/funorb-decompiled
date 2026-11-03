@@ -8,10 +8,10 @@ abstract class FrameTimer {
 
     abstract long a(int param0);
 
-    final static hb a(IntrusiveDeque param0, int param1) {
+    final static NodeSequence a(IntrusiveDeque param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
-        un stackIn_3_0 = null;
+        IntrusiveDequeSequence stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -21,8 +21,8 @@ abstract class FrameTimer {
             var3 = (int[]) null;
             FrameTimer.a(-79, 121, 76, -123, 0, -125, (int[]) null, -35, -114);
           }
-          stackIn_3_0 = new un(param0);
-          return (hb) ((Object) stackIn_3_0);
+          stackIn_3_0 = new IntrusiveDequeSequence(param0);
+          return (NodeSequence) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -33,14 +33,14 @@ abstract class FrameTimer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final int a(long param0, int param1) {
         long var4 = this.a(0);
         if (var4 > 0L) {
-          jb.a((byte) -115, var4);
+          jb.sleep((byte) -115, var4);
         }
         if (param1 == -1) {
           return this.a(18907, param0);
@@ -52,7 +52,7 @@ abstract class FrameTimer {
 
     abstract void b(int param0);
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         if (param0 != 47) {
           return;
@@ -171,14 +171,14 @@ abstract class FrameTimer {
                         var18 = -1 + wn.field_c - var17;
                       }
                       if (var17 >= 0) {
-                        dp.a(var17 + var16Lifetime2, param6, -1, param4, var18);
+                        QuickChatCategoryDefinition.a(var17 + var16Lifetime2, param6, -1, param4, var18);
                       } else {
-                        dp.a(var16Lifetime2, param6, -1, param4, var17 + var18);
+                        QuickChatCategoryDefinition.a(var16Lifetime2, param6, -1, param4, var17 + var18);
                       }
                     } else {
                       if (var17 >= 0 &&
                         var17 < wn.field_c) {
-                        dp.a(var17 + var16Lifetime2, param6, -1, param4, var18);
+                        QuickChatCategoryDefinition.a(var17 + var16Lifetime2, param6, -1, param4, var18);
                       }
                     }
                   }
@@ -187,7 +187,7 @@ abstract class FrameTimer {
                     return;
                   }
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + gf.field_b;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_b;
                   var9_int = var9_int + var11;
                 }
               }
@@ -220,16 +220,16 @@ abstract class FrameTimer {
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     wn.field_c > var16Lifetime1) {
-                    dp.a(var15Lifetime1 + var16Lifetime1, param6, -1, param4, var17Lifetime1);
+                    QuickChatCategoryDefinition.a(var15Lifetime1 + var16Lifetime1, param6, -1, param4, var17Lifetime1);
                   }
                 } else {
                   if (var16Lifetime1 + var17Lifetime1 >= wn.field_c) {
                     var17Lifetime1 = -1 + wn.field_c - var16Lifetime1;
                   }
                   if (var16Lifetime1 < 0) {
-                    dp.a(var15Lifetime1, param6, -1, param4, var17Lifetime1 + var16Lifetime1);
+                    QuickChatCategoryDefinition.a(var15Lifetime1, param6, -1, param4, var17Lifetime1 + var16Lifetime1);
                   } else {
-                    dp.a(var16Lifetime1 + var15Lifetime1, param6, -1, param4, var17Lifetime1);
+                    QuickChatCategoryDefinition.a(var16Lifetime1 + var15Lifetime1, param6, -1, param4, var17Lifetime1);
                   }
                 }
               }
@@ -237,7 +237,7 @@ abstract class FrameTimer {
               if (param7 >= wn.field_e) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + gf.field_b;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_b;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }
@@ -254,7 +254,7 @@ abstract class FrameTimer {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

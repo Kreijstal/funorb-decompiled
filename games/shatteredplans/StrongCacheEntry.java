@@ -21,7 +21,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         boolean stackIn_9_0 = false;
         if (param0 < 111) {
           var2 = (Archive) null;
-          StrongCacheEntry.a((byte) -50, (int[]) null, (Archive) null, (nk[]) null, (Archive) null);
+          StrongCacheEntry.a((byte) -50, (int[]) null, (Archive) null, (IndexedSprite[]) null, (Archive) null);
         }
         stackIn_9_0 = ((IsolationistAi.field_r &&
           MusicCrossfadeStream.field_q) ||
@@ -29,7 +29,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         return stackIn_9_0;
     }
 
-    public static void e(int param0) {
+    public static void clearStatics(int param0) {
         field_A = null;
         field_z = null;
         if (param0 >= -107) {
@@ -100,14 +100,14 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           for (var11Lifetime1 = 0; param1.length > var11Lifetime1; var11Lifetime1++) {
             var12_ref = (Territory) (param1[var11Lifetime1].field_i.startForward(0));
             while (var12_ref != null) {
-              im.a(var12_ref.field_o, param2, 9555);
-              di.a(var12_ref.field_q, false, param2);
+              im.writePlayer(var12_ref.field_o, param2, 9555);
+              di.writeStar(var12_ref.field_q, false, param2);
               var13 = var12_ref.starCount(89);
               param2.writeByte(var13, (byte) -112);
               var14_ref_ln = var12_ref.firstStar(18229);
               while (var14_ref_ln != null) {
                 if (var14_ref_ln != var12_ref.field_q) {
-                  di.a(var14_ref_ln, false, param2);
+                  di.writeStar(var14_ref_ln, false, param2);
                 }
                 var14_ref_ln = var12_ref.nextStar(-23410);
               }
@@ -126,14 +126,14 @@ final class StrongCacheEntry extends WeightedCacheEntry {
             var13_ref_lo = param1[var12_intLifetime1].field_m;
             if (var13_ref_lo != null &&
               var13_ref_lo.starCount(122) > 0) {
-              im.a(param1[var12_intLifetime1], param2, 9555);
-              di.a(var13_ref_lo.field_q, false, param2);
+              im.writePlayer(param1[var12_intLifetime1], param2, 9555);
+              di.writeStar(var13_ref_lo.field_q, false, param2);
               var14 = var13_ref_lo.starCount(-127);
               param2.writeByte(var14, (byte) -69);
               var15 = var13_ref_lo.firstStar(18229);
               while (var15 != null) {
                 if (var15 != var13_ref_lo.field_q) {
-                  di.a(var15, false, param2);
+                  di.writeStar(var15, false, param2);
                 }
                 var15 = var13_ref_lo.nextStar(-23410);
               }
@@ -159,8 +159,8 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           param2.writeByte(param4.size(0), (byte) -67);
           var12 = (Wormhole) (param4.startForward(0));
           while (var12 != null) {
-            di.a(var12.field_n, false, param2);
-            di.a(var12.field_k, false, param2);
+            di.writeStar(var12.field_n, false, param2);
+            di.writeStar(var12.field_k, false, param2);
             param2.writeByte(var12.field_m, (byte) -82);
             var12 = (Wormhole) (param4.nextForward((byte) -71));
           }
@@ -208,7 +208,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param9).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -217,22 +217,22 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         try {
           this.field_y = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "m.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "m.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(byte param0, int[] param1, Archive param2, nk[] param3, Archive param4) {
+    final static void a(byte param0, int[] param1, Archive param2, IndexedSprite[] param3, Archive param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
         Sprite[] dupTemp$3 = null;
-        nk[] var5 = null;
-        nk[] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var19 = null;
-        nk[] var20 = null;
+        IndexedSprite[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
@@ -249,14 +249,14 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         hh var7 = null;
-        qr var8 = null;
-        qr var9 = null;
-        qr var10 = null;
-        qr var11 = null;
+        AnimatedPanel var8 = null;
+        AnimatedPanel var9 = null;
+        AnimatedPanel var10 = null;
+        AnimatedPanel var11 = null;
         Sprite[] var12 = null;
         Sprite[] var13 = null;
         Sprite[] var14 = null;
-        qr var15 = null;
+        AnimatedPanel var15 = null;
         Sprite[] var16 = null;
         Sprite[] var17 = null;
         int var7_intLifetime1;
@@ -268,7 +268,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var5 = var20;
           ClientException.field_d = var20.length;
           if (param3 != null) {
-            var6 = new nk[param3.length + ClientException.field_d];
+            var6 = new IndexedSprite[param3.length + ClientException.field_d];
             for (var7_int = 0; ClientException.field_d > var7_int; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
@@ -301,82 +301,82 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           GzipInflater.field_i = 11;
           tg.field_a = 4;
           cr.field_c = 15;
-          qo.field_b = 2;
+          TextLayout.field_b = 2;
           var7 = TextFieldWidget.a(115, "largefont", param4, param2, "lobby");
           ImageProducerRasterBuffer.field_p = TextFieldWidget.a(117, "generalfont", param4, param2, "lobby");
           ul.field_xb = TextFieldWidget.a(123, "chatfont", param4, param2, "lobby");
           var7.a(var5, var24);
           ImageProducerRasterBuffer.field_p.a(var5, var24);
           ul.field_xb.a(var5, var24);
-          var8 = new qr(0L, (qr) null);
+          var8 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var8.field_nb = (nq) ((Object) var7);
           var8.field_x = 16777215;
           var8.field_Y = cr.field_c;
           var8.field_G = 1;
           var9 = var8;
           var9.field_y = 1;
-          var10 = new qr(0L, (qr) null);
+          var10 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var10.field_x = 16777215;
           var10.field_Y = cr.field_c;
           var10.field_nb = (nq) ((Object) ImageProducerRasterBuffer.field_p);
           var10.field_G = 1;
           var11 = var10;
           var11.field_y = 1;
-          gg.field_d = new qr(0L, var8);
-          gg.field_d.field_F = re.a(ae.a(-82, "lobby", param4, "heading"), 123);
-          IntrusiveNode.field_a = new qr(0L, (qr) null);
+          gg.field_d = new AnimatedPanel(0L, var8);
+          gg.field_d.field_F = QuickChatCategoryRegistry.a(ae.a(-82, "lobby", param4, "heading"), 123);
+          IntrusiveNode.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
           IntrusiveNode.field_a.field_F = ArchiveSourceManager.a(false, 4210752, false, 120, 8421504, (byte) -63);
-          GalaxyMap.field_a = new qr(0L, (qr) null);
+          GalaxyMap.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
           GalaxyMap.field_a.field_F = Wormhole.a(16, 3, 114, 6316128, 6316128, 1);
-          MusicCrossfadeStream.field_v = new qr(0L, (qr) null);
-          MusicCrossfadeStream.field_v.field_F = re.a(ae.a(-113, "lobby", param4, "popup"), 122);
-          var12 = re.a(ae.a(124, "lobby", param4, "popup_mouseover"), 117);
+          MusicCrossfadeStream.field_v = new AnimatedPanel(0L, (AnimatedPanel) null);
+          MusicCrossfadeStream.field_v.field_F = QuickChatCategoryRegistry.a(ae.a(-113, "lobby", param4, "popup"), 122);
+          var12 = QuickChatCategoryRegistry.a(ae.a(124, "lobby", param4, "popup_mouseover"), 117);
           var13 = ae.a(32, "lobby", param4, "button");
-          var14 = re.a(ae.a(-97, "lobby", param4, "tab_active"), 82);
-          un.field_g = new qr(0L, var8);
-          un.field_g.field_F = var14;
-          po.field_d = new qr(0L, (qr) null);
+          var14 = QuickChatCategoryRegistry.a(ae.a(-97, "lobby", param4, "tab_active"), 82);
+          IntrusiveDequeSequence.field_g = new AnimatedPanel(0L, var8);
+          IntrusiveDequeSequence.field_g.field_F = var14;
+          po.field_d = new AnimatedPanel(0L, (AnimatedPanel) null);
           po.field_d.field_pb = id.a(2, param4, "lobby", "closebutton");
           po.field_d.field_fb = id.a(2, param4, "lobby", "closebutton_mouseover");
-          nl.field_b = new qr(0L, var8);
+          nl.field_b = new AnimatedPanel(0L, var8);
           nl.field_b.field_F = ArchiveSourceManager.a(true, 2039583, true, 40, 3815994, (byte) -47);
-          SliderWidget.field_N = new qr(0L, var10);
+          SliderWidget.field_N = new AnimatedPanel(0L, var10);
           SliderWidget.field_N.field_kb = 2;
           SliderWidget.field_N.field_F = ArchiveSourceManager.a(true, 2039583, false, 30, 3815994, (byte) -111);
-          jr.field_h = new qr(0L, var10);
+          jr.field_h = new AnimatedPanel(0L, var10);
           jr.field_h.field_kb = 2;
           jr.field_h.field_F = ArchiveSourceManager.a(false, 2039583, false, 30, 3815994, (byte) -35);
-          vm.field_Cb = new qr(0L, var10);
+          vm.field_Cb = new AnimatedPanel(0L, var10);
           vm.field_Cb.field_kb = 2;
           vm.field_Cb.field_F = ArchiveSourceManager.a(false, 2039583, true, 30, 3815994, (byte) -64);
-          SpriteState.field_u = new qr(0L, (qr) null);
+          SpriteState.field_u = new AnimatedPanel(0L, (AnimatedPanel) null);
           SpriteState.field_u.field_x = 13421772;
           SpriteState.field_u.field_Y = cr.field_c;
           SpriteState.field_u.field_G = 1;
           SpriteState.field_u.field_nb = (nq) ((Object) ImageProducerRasterBuffer.field_p);
-          gn.field_w = new qr(0L, SpriteState.field_u);
+          gn.field_w = new AnimatedPanel(0L, SpriteState.field_u);
           gn.field_w.field_ab = 16777215;
           gn.field_w.field_W = 8421504;
           gn.field_w.field_jb = 16777215;
           gn.field_w.field_x = 16764006;
           gn.field_w.field_qb = 16777215;
-          var15 = new qr(0L, gn.field_w);
+          var15 = new AnimatedPanel(0L, gn.field_w);
           var15.field_x = 16777215;
           var15.field_Y = cr.field_c;
           var15.field_nb = (nq) ((Object) var7);
-          fg.field_b = new qr(0L, SpriteState.field_u);
+          fg.field_b = new AnimatedPanel(0L, SpriteState.field_u);
           fg.field_b.field_F = ArchiveSourceManager.a(false, 2236962, false, 16, 2236962, (byte) -40);
           fg.field_b.field_kb = 2;
-          dm.field_h = new qr(0L, SpriteState.field_u);
-          dm.field_h.field_F = ArchiveSourceManager.a(false, 1513239, false, 16, 1513239, (byte) -36);
-          dm.field_h.field_kb = 2;
-          oj.field_zb = new qr(0L, fg.field_b);
-          oj.field_zb.a(gn.field_w, false);
-          ek.field_E = new qr(0L, dm.field_h);
-          ek.field_E.a(gn.field_w, false);
+          ObjectList.field_h = new AnimatedPanel(0L, SpriteState.field_u);
+          ObjectList.field_h.field_F = ArchiveSourceManager.a(false, 1513239, false, 16, 1513239, (byte) -36);
+          ObjectList.field_h.field_kb = 2;
+          oj.field_zb = new AnimatedPanel(0L, fg.field_b);
+          oj.field_zb.copyFrom(gn.field_w, false);
+          ArrayWidgetGroup.field_E = new AnimatedPanel(0L, ObjectList.field_h);
+          ArrayWidgetGroup.field_E.copyFrom(gn.field_w, false);
           var16 = ae.a(-82, "lobby", param4, "button_mouseover");
-          hd.field_t = new ul(MusicCrossfadeStream.field_v, var12, SpriteState.field_u, gn.field_w, 3, 2, qo.field_b, 3, cr.field_c);
-          StandardMapReader.field_h = new qr(0L, gn.field_w);
+          hd.field_t = new ul(MusicCrossfadeStream.field_v, var12, SpriteState.field_u, gn.field_w, 3, 2, TextLayout.field_b, 3, cr.field_c);
+          StandardMapReader.field_h = new AnimatedPanel(0L, gn.field_w);
           StandardMapReader.field_h.field_lb = var16;
           StandardMapReader.field_h.field_T = 1;
           StandardMapReader.field_h.field_t = 1;
@@ -390,97 +390,97 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           StandardMapReader.field_h.field_sb = ae.a(62, "lobby", param4, "button_active");
           StandardMapReader.field_h.field_wb = ae.a(-104, "lobby", param4, "button_disabled");
           StandardMapReader.field_h.field_y = 1;
-          re.field_h = new qr(0L, gn.field_w);
-          re.field_h.field_y = 1;
-          re.field_h.field_F = re.a(ae.a(73, "lobby", param4, "tab_inactive"), 127);
-          re.field_h.field_lb = re.a(ae.a(100, "lobby", param4, "tab_mouseover"), 85);
-          re.field_h.field_sb = var14;
-          tm.field_t = new qr(0L, (qr) null);
+          QuickChatCategoryRegistry.field_h = new AnimatedPanel(0L, gn.field_w);
+          QuickChatCategoryRegistry.field_h.field_y = 1;
+          QuickChatCategoryRegistry.field_h.field_F = QuickChatCategoryRegistry.a(ae.a(73, "lobby", param4, "tab_inactive"), 127);
+          QuickChatCategoryRegistry.field_h.field_lb = QuickChatCategoryRegistry.a(ae.a(100, "lobby", param4, "tab_mouseover"), 85);
+          QuickChatCategoryRegistry.field_h.field_sb = var14;
+          tm.field_t = new AnimatedPanel(0L, (AnimatedPanel) null);
           tm.field_t.field_F = Wormhole.a(16, 3, 206, 1856141, 1127256, -1);
-          rs.field_Eb = new qr(0L, (qr) null);
+          rs.field_Eb = new AnimatedPanel(0L, (AnimatedPanel) null);
           rs.field_Eb.field_F = Wormhole.a(16, 3, 290, 11579568, 6052956, -1);
-          IsaacBackedRandom.field_a = new qr(0L, var15);
+          IsaacBackedRandom.field_a = new AnimatedPanel(0L, var15);
           IsaacBackedRandom.field_a.field_T = 1;
           IsaacBackedRandom.field_a.field_y = 1;
           IsaacBackedRandom.field_a.field_J = 1;
           IsaacBackedRandom.field_a.field_t = 1;
           IsaacBackedRandom.field_a.field_V = 1;
-          DelegatingCanvas.field_f = new qr(0L, IsaacBackedRandom.field_a);
-          jf.field_b = new qr(0L, gn.field_w);
+          DelegatingCanvas.field_f = new AnimatedPanel(0L, IsaacBackedRandom.field_a);
+          jf.field_b = new AnimatedPanel(0L, gn.field_w);
           jf.field_b.field_V = 1;
           jf.field_b.field_t = 1;
           jf.field_b.field_y = 1;
           jf.field_b.field_T = 1;
           jf.field_b.field_J = 1;
-          GameScreen.field_h = new qr(0L, jf.field_b);
-          AllianceExpiredEvent.field_l = new qr(0L, jf.field_b);
-          bd.field_E = new qr(0L, IsaacBackedRandom.field_a);
-          n.field_o = new qr(0L, jf.field_b);
-          WeightedCacheEntry.field_o = new qr(0L, jf.field_b);
-          an.field_d = new qr(0L, jf.field_b);
-          jf.field_b.field_F = re.a(ae.a(106, "lobby", param4, "smallbutton"), 47);
-          jf.field_b.field_lb = re.a(ae.a(-79, "lobby", param4, "smallbutton_mouseover"), 103);
-          dupTemp$0 = re.a(ae.a(-114, "lobby", param4, "smallbutton_active"), 51);
+          GameScreen.field_h = new AnimatedPanel(0L, jf.field_b);
+          AllianceExpiredEvent.field_l = new AnimatedPanel(0L, jf.field_b);
+          bd.field_E = new AnimatedPanel(0L, IsaacBackedRandom.field_a);
+          n.field_o = new AnimatedPanel(0L, jf.field_b);
+          WeightedCacheEntry.field_o = new AnimatedPanel(0L, jf.field_b);
+          an.field_d = new AnimatedPanel(0L, jf.field_b);
+          jf.field_b.field_F = QuickChatCategoryRegistry.a(ae.a(106, "lobby", param4, "smallbutton"), 47);
+          jf.field_b.field_lb = QuickChatCategoryRegistry.a(ae.a(-79, "lobby", param4, "smallbutton_mouseover"), 103);
+          dupTemp$0 = QuickChatCategoryRegistry.a(ae.a(-114, "lobby", param4, "smallbutton_active"), 51);
           jf.field_b.field_sb = dupTemp$0;
           jf.field_b.field_vb = dupTemp$0;
-          jf.field_b.field_wb = re.a(ae.a(109, "lobby", param4, "smallbutton_disabled"), 65);
-          DelegatingCanvas.field_f.field_F = re.a(ae.a(-99, "lobby", param4, "mediumbutton"), 41);
-          DelegatingCanvas.field_f.field_lb = re.a(ae.a(80, "lobby", param4, "mediumbutton_mouseover"), 126);
-          DelegatingCanvas.field_f.field_vb = re.a(ae.a(113, "lobby", param4, "mediumbutton_mouseheld"), 95);
-          IsaacBackedRandom.field_a.field_F = re.a(ae.a(-121, "lobby", param4, "bigbutton"), 53);
-          IsaacBackedRandom.field_a.field_lb = re.a(ae.a(92, "lobby", param4, "bigbutton_mouseover"), 76);
-          IsaacBackedRandom.field_a.field_vb = re.a(ae.a(-108, "lobby", param4, "bigbutton_mouseheld"), 127);
-          IsaacBackedRandom.field_a.field_wb = re.a(ae.a(-98, "lobby", param4, "bigbutton_disabled"), 122);
-          GameScreen.field_h.field_F = re.a(ae.a(-86, "lobby", param4, "greenbutton"), 76);
-          GameScreen.field_h.field_lb = re.a(ae.a(-78, "lobby", param4, "greenbutton_mouseover"), 91);
-          GameScreen.field_h.field_vb = re.a(ae.a(-98, "lobby", param4, "greenbutton_mouseheld"), 39);
-          AllianceExpiredEvent.field_l.field_F = re.a(ae.a(-126, "lobby", param4, "redbutton"), 56);
-          AllianceExpiredEvent.field_l.field_lb = re.a(ae.a(120, "lobby", param4, "redbutton_mouseover"), 55);
-          AllianceExpiredEvent.field_l.field_vb = re.a(ae.a(126, "lobby", param4, "redbutton_mouseheld"), 103);
-          bd.field_E.field_F = re.a(ae.a(-101, "lobby", param4, "backbutton"), 48);
-          bd.field_E.field_lb = re.a(ae.a(-103, "lobby", param4, "backbutton_mouseover"), 60);
-          bd.field_E.field_vb = re.a(ae.a(-104, "lobby", param4, "backbutton_mouseheld"), 123);
-          bd.field_E.field_wb = re.a(ae.a(53, "lobby", param4, "backbutton_disabled"), 40);
-          an.field_d.field_F = re.a(ae.a(115, "lobby", param4, "gameoptionbutton"), 57);
-          an.field_d.field_lb = re.a(ae.a(54, "lobby", param4, "gameoptionbutton_mouseover"), 117);
-          dupTemp$1 = re.a(ae.a(77, "lobby", param4, "gameoptionbutton_active"), 52);
+          jf.field_b.field_wb = QuickChatCategoryRegistry.a(ae.a(109, "lobby", param4, "smallbutton_disabled"), 65);
+          DelegatingCanvas.field_f.field_F = QuickChatCategoryRegistry.a(ae.a(-99, "lobby", param4, "mediumbutton"), 41);
+          DelegatingCanvas.field_f.field_lb = QuickChatCategoryRegistry.a(ae.a(80, "lobby", param4, "mediumbutton_mouseover"), 126);
+          DelegatingCanvas.field_f.field_vb = QuickChatCategoryRegistry.a(ae.a(113, "lobby", param4, "mediumbutton_mouseheld"), 95);
+          IsaacBackedRandom.field_a.field_F = QuickChatCategoryRegistry.a(ae.a(-121, "lobby", param4, "bigbutton"), 53);
+          IsaacBackedRandom.field_a.field_lb = QuickChatCategoryRegistry.a(ae.a(92, "lobby", param4, "bigbutton_mouseover"), 76);
+          IsaacBackedRandom.field_a.field_vb = QuickChatCategoryRegistry.a(ae.a(-108, "lobby", param4, "bigbutton_mouseheld"), 127);
+          IsaacBackedRandom.field_a.field_wb = QuickChatCategoryRegistry.a(ae.a(-98, "lobby", param4, "bigbutton_disabled"), 122);
+          GameScreen.field_h.field_F = QuickChatCategoryRegistry.a(ae.a(-86, "lobby", param4, "greenbutton"), 76);
+          GameScreen.field_h.field_lb = QuickChatCategoryRegistry.a(ae.a(-78, "lobby", param4, "greenbutton_mouseover"), 91);
+          GameScreen.field_h.field_vb = QuickChatCategoryRegistry.a(ae.a(-98, "lobby", param4, "greenbutton_mouseheld"), 39);
+          AllianceExpiredEvent.field_l.field_F = QuickChatCategoryRegistry.a(ae.a(-126, "lobby", param4, "redbutton"), 56);
+          AllianceExpiredEvent.field_l.field_lb = QuickChatCategoryRegistry.a(ae.a(120, "lobby", param4, "redbutton_mouseover"), 55);
+          AllianceExpiredEvent.field_l.field_vb = QuickChatCategoryRegistry.a(ae.a(126, "lobby", param4, "redbutton_mouseheld"), 103);
+          bd.field_E.field_F = QuickChatCategoryRegistry.a(ae.a(-101, "lobby", param4, "backbutton"), 48);
+          bd.field_E.field_lb = QuickChatCategoryRegistry.a(ae.a(-103, "lobby", param4, "backbutton_mouseover"), 60);
+          bd.field_E.field_vb = QuickChatCategoryRegistry.a(ae.a(-104, "lobby", param4, "backbutton_mouseheld"), 123);
+          bd.field_E.field_wb = QuickChatCategoryRegistry.a(ae.a(53, "lobby", param4, "backbutton_disabled"), 40);
+          an.field_d.field_F = QuickChatCategoryRegistry.a(ae.a(115, "lobby", param4, "gameoptionbutton"), 57);
+          an.field_d.field_lb = QuickChatCategoryRegistry.a(ae.a(54, "lobby", param4, "gameoptionbutton_mouseover"), 117);
+          dupTemp$1 = QuickChatCategoryRegistry.a(ae.a(77, "lobby", param4, "gameoptionbutton_active"), 52);
           an.field_d.field_sb = dupTemp$1;
           an.field_d.field_vb = dupTemp$1;
-          an.field_d.field_wb = re.a(ae.a(-114, "lobby", param4, "gameoptionbutton_disabled"), 121);
-          n.field_o.field_F = re.a(ae.a(-117, "lobby", param4, "chatbutton"), 75);
-          n.field_o.field_lb = re.a(ae.a(84, "lobby", param4, "chatbutton_mouseover"), 122);
-          dupTemp$2 = re.a(ae.a(124, "lobby", param4, "chatbutton_active"), 53);
+          an.field_d.field_wb = QuickChatCategoryRegistry.a(ae.a(-114, "lobby", param4, "gameoptionbutton_disabled"), 121);
+          n.field_o.field_F = QuickChatCategoryRegistry.a(ae.a(-117, "lobby", param4, "chatbutton"), 75);
+          n.field_o.field_lb = QuickChatCategoryRegistry.a(ae.a(84, "lobby", param4, "chatbutton_mouseover"), 122);
+          dupTemp$2 = QuickChatCategoryRegistry.a(ae.a(124, "lobby", param4, "chatbutton_active"), 53);
           n.field_o.field_sb = dupTemp$2;
           n.field_o.field_vb = dupTemp$2;
-          WeightedCacheEntry.field_o.field_F = re.a(ae.a(74, "lobby", param4, "chatfilterbutton"), 104);
-          WeightedCacheEntry.field_o.field_lb = re.a(ae.a(-95, "lobby", param4, "chatfilterbutton_mouseover"), 101);
-          dupTemp$3 = re.a(ae.a(91, "lobby", param4, "chatfilterbutton_active"), 77);
+          WeightedCacheEntry.field_o.field_F = QuickChatCategoryRegistry.a(ae.a(74, "lobby", param4, "chatfilterbutton"), 104);
+          WeightedCacheEntry.field_o.field_lb = QuickChatCategoryRegistry.a(ae.a(-95, "lobby", param4, "chatfilterbutton_mouseover"), 101);
+          dupTemp$3 = QuickChatCategoryRegistry.a(ae.a(91, "lobby", param4, "chatfilterbutton_active"), 77);
           WeightedCacheEntry.field_o.field_sb = dupTemp$3;
           WeightedCacheEntry.field_o.field_vb = dupTemp$3;
           var17 = ae.a(-118, "lobby", param4, "checkbox");
           ByteArrayNode.field_i = new rs(0L, var17[1], var17[0], 1, gn.field_w, (String) null);
-          sj.field_c = new qr(0L, (qr) null);
+          sj.field_c = new AnimatedPanel(0L, (AnimatedPanel) null);
           sj.field_c.field_F = cg.a(-15338, id.a(2, param4, "lobby", "slideregion"));
           sj.field_c.field_lb = cg.a(-15338, id.a(2, param4, "lobby", "slideregion_mouseover"));
           sj.field_c.field_vb = cg.a(-15338, id.a(2, param4, "lobby", "slideregion_mouseheld"));
           sj.field_c.field_wb = cg.a(-15338, id.a(2, param4, "lobby", "slideregion_disabled"));
-          TextFieldValidator.field_l = new qr(0L, (qr) null);
-          TextFieldValidator.field_l.field_F = re.a(ae.a(126, "lobby", param4, "dragbar"), 33);
-          TextFieldValidator.field_l.field_lb = re.a(ae.a(-109, "lobby", param4, "dragbar_mouseover"), 118);
-          TextFieldValidator.field_l.field_vb = re.a(ae.a(-77, "lobby", param4, "dragbar_mouseheld"), 67);
-          TextFieldValidator.field_l.field_wb = re.a(ae.a(57, "lobby", param4, "dragbar_disabled"), 126);
-          sk.field_k = new qr(0L, (qr) null);
+          TextFieldValidator.field_l = new AnimatedPanel(0L, (AnimatedPanel) null);
+          TextFieldValidator.field_l.field_F = QuickChatCategoryRegistry.a(ae.a(126, "lobby", param4, "dragbar"), 33);
+          TextFieldValidator.field_l.field_lb = QuickChatCategoryRegistry.a(ae.a(-109, "lobby", param4, "dragbar_mouseover"), 118);
+          TextFieldValidator.field_l.field_vb = QuickChatCategoryRegistry.a(ae.a(-77, "lobby", param4, "dragbar_mouseheld"), 67);
+          TextFieldValidator.field_l.field_wb = QuickChatCategoryRegistry.a(ae.a(57, "lobby", param4, "dragbar_disabled"), 126);
+          sk.field_k = new AnimatedPanel(0L, (AnimatedPanel) null);
           sk.field_k.field_pb = id.a(2, param4, "lobby", "upbutton");
           sk.field_k.field_fb = id.a(2, param4, "lobby", "upbutton_mouseover");
           sk.field_k.field_U = id.a(2, param4, "lobby", "upbutton_mouseheld");
           sk.field_k.field_ob = id.a(2, param4, "lobby", "upbutton_disabled");
-          BattleEvent.field_u = new qr(0L, (qr) null);
+          BattleEvent.field_u = new AnimatedPanel(0L, (AnimatedPanel) null);
           BattleEvent.field_u.field_pb = id.a(2, param4, "lobby", "downbutton");
           BattleEvent.field_u.field_fb = id.a(2, param4, "lobby", "downbutton_mouseover");
           BattleEvent.field_u.field_U = id.a(2, param4, "lobby", "downbutton_mouseheld");
           BattleEvent.field_u.field_ob = id.a(2, param4, "lobby", "downbutton_disabled");
-          AchievementProgress.field_m = new ur(0L, sk.field_k, BattleEvent.field_u, sj.field_c, TextFieldValidator.field_l);
-          ih.field_g = new am(0L, (qr) null, VictoryChecker.field_d, AchievementProgress.field_m, jf.field_b, (String) null, (String) null);
+          AchievementProgress.field_m = new ScrollBar(0L, sk.field_k, BattleEvent.field_u, sj.field_c, TextFieldValidator.field_l);
+          ih.field_g = new am(0L, (AnimatedPanel) null, VictoryChecker.field_d, AchievementProgress.field_m, jf.field_b, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -510,7 +510,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -570,7 +570,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
         }
     }
 

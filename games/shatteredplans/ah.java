@@ -20,9 +20,9 @@ final class ah extends ts {
         try {
           this.field_M = param0;
           this.field_W = param1;
-          this.a(param3, param5, (byte) 113, param2, param4);
+          this.setBounds(param3, param5, (byte) 113, param2, param4);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -34,16 +34,16 @@ final class ah extends ts {
         return DiskCacheWorker.field_b;
     }
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
           this.field_N = this.field_N + 1;
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ah.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ah.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         String var5;
         ValidationState var6;
         int var9;
@@ -103,20 +103,20 @@ final class ah extends ts {
         var30 = null;
         var38 = null;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
-        var6 = this.field_M.c(126);
-        if (var6 == pd.field_h) {
-          var17 = qr.field_R;
+        var6 = this.field_M.getState(126);
+        if (var6 == TertiaryListSequence.field_h) {
+          var17 = AnimatedPanel.field_R;
           if (!var17.equals(this.field_s)) {
             this.field_s = var17;
             this.e(false);
           }
-          super.a(param0, param1, param2, param3);
-          var6 = this.field_M.c(-123);
+          super.drawLayer(param0, param1, param2, param3);
+          var6 = this.field_M.getState(-123);
           var43 = (WidgetMetrics) ((Object) this.field_p);
           var9 = this.field_m + param3;
-          var10 = var43.a(param2, (UiWidget) (this), 66) + (var43.a((UiWidget) (this), true).b(438) >> 1);
-          if (pd.field_h == var6) {
-            var20 = lp.field_w[0];
+          var10 = var43.getTextY(param2, (UiWidget) (this), 66) + (var43.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
+          if (TertiaryListSequence.field_h == var6) {
+            var20 = MenuList.field_w[0];
             var11 = var20.field_o << 1;
             var12 = var20.field_p << 1;
             if (this.field_V == null) {
@@ -129,7 +129,7 @@ final class ah extends ts {
               } else {
                 if (this.field_V.field_w >= var12) {
                   aq.a((byte) 106, this.field_V);
-                  gf.b();
+                  SoftwareRasterizer.clear();
                 } else {
                   this.field_V = new Sprite(var11, var12);
                   aq.a((byte) -31, this.field_V);
@@ -143,25 +143,25 @@ final class ah extends ts {
           }
           if (var6 != lm.field_d) {
             if (var6 == ArchiveSourceManager.field_b) {
-              var22 = lp.field_w[2];
+              var22 = MenuList.field_w[2];
               var22.c(var9, var10 - (var22.field_w >> 1), 256);
               return;
             }
             if (CachedArchiveSource.field_g != var6) {
               return;
             }
-            var21 = lp.field_w[1];
+            var21 = MenuList.field_w[1];
             var21.c(var9, -(var21.field_w >> 1) + var10, 256);
             return;
           }
-          var19 = lp.field_w[0];
+          var19 = MenuList.field_w[0];
           var11Lifetime5 = var19.field_o << 1;
           var12Lifetime5 = var19.field_p << 1;
           if (this.field_V != null &&
             this.field_V.field_z >= var11Lifetime5 &&
             this.field_V.field_w >= var12Lifetime5) {
             aq.a((byte) 106, this.field_V);
-            gf.b();
+            SoftwareRasterizer.clear();
           } else {
             this.field_V = new Sprite(var11Lifetime5, var12Lifetime5);
             aq.a((byte) -31, this.field_V);
@@ -172,18 +172,18 @@ final class ah extends ts {
           return;
         }
         if (var6 == lm.field_d) {
-          var23 = qr.field_R;
+          var23 = AnimatedPanel.field_R;
           if (!var23.equals(this.field_s)) {
             this.field_s = var23;
             this.e(false);
           }
-          super.a(param0, param1, param2, param3);
-          var6 = this.field_M.c(-123);
+          super.drawLayer(param0, param1, param2, param3);
+          var6 = this.field_M.getState(-123);
           var44 = (WidgetMetrics) ((Object) this.field_p);
           var9Lifetime1 = this.field_m + param3;
-          var10Lifetime1 = var44.a(param2, (UiWidget) (this), 66) + (var44.a((UiWidget) (this), true).b(438) >> 1);
-          if (pd.field_h == var6) {
-            var26 = lp.field_w[0];
+          var10Lifetime1 = var44.getTextY(param2, (UiWidget) (this), 66) + (var44.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
+          if (TertiaryListSequence.field_h == var6) {
+            var26 = MenuList.field_w[0];
             var11Lifetime1 = var26.field_o << 1;
             var12Lifetime1 = var26.field_p << 1;
             if (this.field_V == null) {
@@ -196,7 +196,7 @@ final class ah extends ts {
               } else {
                 if (this.field_V.field_w >= var12Lifetime1) {
                   aq.a((byte) 106, this.field_V);
-                  gf.b();
+                  SoftwareRasterizer.clear();
                 } else {
                   this.field_V = new Sprite(var11Lifetime1, var12Lifetime1);
                   aq.a((byte) -31, this.field_V);
@@ -210,25 +210,25 @@ final class ah extends ts {
           }
           if (var6 != lm.field_d) {
             if (var6 == ArchiveSourceManager.field_b) {
-              var28 = lp.field_w[2];
+              var28 = MenuList.field_w[2];
               var28.c(var9Lifetime1, var10Lifetime1 - (var28.field_w >> 1), 256);
               return;
             }
             if (CachedArchiveSource.field_g != var6) {
               return;
             }
-            var27 = lp.field_w[1];
+            var27 = MenuList.field_w[1];
             var27.c(var9Lifetime1, -(var27.field_w >> 1) + var10Lifetime1, 256);
             return;
           }
-          var25 = lp.field_w[0];
+          var25 = MenuList.field_w[0];
           var11Lifetime1Lifetime1 = var25.field_o << 1;
           var12Lifetime1Lifetime1 = var25.field_p << 1;
           if (this.field_V != null &&
             this.field_V.field_z >= var11Lifetime1Lifetime1 &&
             this.field_V.field_w >= var12Lifetime1Lifetime1) {
             aq.a((byte) 106, this.field_V);
-            gf.b();
+            SoftwareRasterizer.clear();
           } else {
             this.field_V = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
             aq.a((byte) -31, this.field_V);
@@ -238,7 +238,7 @@ final class ah extends ts {
           this.field_V.c(var9Lifetime1 - (var25.field_o >> 1), -var25.field_p + var10Lifetime1, 256);
           return;
         }
-        var5 = this.field_M.a((byte) -63);
+        var5 = this.field_M.getMessage((byte) -63);
         if (var5 == null) {
           var29 = this.field_W;
           var5 = var29;
@@ -246,26 +246,26 @@ final class ah extends ts {
             this.field_s = var29;
             this.e(false);
           }
-          super.a(param0, param1, param2, param3);
-          var6Lifetime1 = this.field_M.c(-123);
+          super.drawLayer(param0, param1, param2, param3);
+          var6Lifetime1 = this.field_M.getState(-123);
           var45 = (WidgetMetrics) ((Object) this.field_p);
           var9Lifetime2 = this.field_m + param3;
-          var10Lifetime2 = var45.a(param2, (UiWidget) (this), 66) + (var45.a((UiWidget) (this), true).b(438) >> 1);
-          if (pd.field_h != var6Lifetime1 &&
+          var10Lifetime2 = var45.getTextY(param2, (UiWidget) (this), 66) + (var45.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
+          if (TertiaryListSequence.field_h != var6Lifetime1 &&
             var6Lifetime1 != lm.field_d) {
             if (var6Lifetime1 == ArchiveSourceManager.field_b) {
-              var37 = lp.field_w[2];
+              var37 = MenuList.field_w[2];
               var37.c(var9Lifetime2, var10Lifetime2 - (var37.field_w >> 1), 256);
               return;
             }
             if (CachedArchiveSource.field_g != var6Lifetime1) {
               return;
             }
-            var35 = lp.field_w[1];
+            var35 = MenuList.field_w[1];
             var35.c(var9Lifetime2, -(var35.field_w >> 1) + var10Lifetime2, 256);
             return;
           }
-          var31 = lp.field_w[0];
+          var31 = MenuList.field_w[0];
           var14 = var31;
           var11Lifetime2 = var31.field_o << 1;
           var12Lifetime2 = var31.field_p << 1;
@@ -282,7 +282,7 @@ final class ah extends ts {
                 aq.a((byte) -31, this.field_V);
               } else {
                 aq.a((byte) 106, this.field_V);
-                gf.b();
+                SoftwareRasterizer.clear();
               }
             }
           }
@@ -295,20 +295,20 @@ final class ah extends ts {
           this.field_s = var5;
           this.e(false);
         }
-        super.a(param0, param1, param2, param3);
-        var6Lifetime2 = this.field_M.c(-123);
+        super.drawLayer(param0, param1, param2, param3);
+        var6Lifetime2 = this.field_M.getState(-123);
         var46 = (WidgetMetrics) ((Object) this.field_p);
         var9Lifetime3 = this.field_m + param3;
-        var10Lifetime3 = var46.a(param2, (UiWidget) (this), 66) + (var46.a((UiWidget) (this), true).b(438) >> 1);
-        if (pd.field_h == var6Lifetime2) {
-          var40 = lp.field_w[0];
+        var10Lifetime3 = var46.getTextY(param2, (UiWidget) (this), 66) + (var46.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
+        if (TertiaryListSequence.field_h == var6Lifetime2) {
+          var40 = MenuList.field_w[0];
           var11Lifetime3 = var40.field_o << 1;
           var12Lifetime3 = var40.field_p << 1;
           if (this.field_V != null &&
             this.field_V.field_z >= var11Lifetime3 &&
             this.field_V.field_w >= var12Lifetime3) {
             aq.a((byte) 106, this.field_V);
-            gf.b();
+            SoftwareRasterizer.clear();
           } else {
             this.field_V = new Sprite(var11Lifetime3, var12Lifetime3);
             aq.a((byte) -31, this.field_V);
@@ -320,25 +320,25 @@ final class ah extends ts {
         }
         if (var6Lifetime2 != lm.field_d) {
           if (var6Lifetime2 == ArchiveSourceManager.field_b) {
-            var42 = lp.field_w[2];
+            var42 = MenuList.field_w[2];
             var42.c(var9Lifetime3, var10Lifetime3 - (var42.field_w >> 1), 256);
           } else {
             if (CachedArchiveSource.field_g == var6Lifetime2) {
-              var41 = lp.field_w[1];
+              var41 = MenuList.field_w[1];
               var41.c(var9Lifetime3, -(var41.field_w >> 1) + var10Lifetime3, 256);
               return;
             }
           }
           return;
         }
-        var39 = lp.field_w[0];
+        var39 = MenuList.field_w[0];
         var11Lifetime4 = var39.field_o << 1;
         var12Lifetime4 = var39.field_p << 1;
         if (this.field_V != null &&
           this.field_V.field_z >= var11Lifetime4 &&
           this.field_V.field_w >= var12Lifetime4) {
           aq.a((byte) 106, this.field_V);
-          gf.b();
+          SoftwareRasterizer.clear();
         } else {
           this.field_V = new Sprite(var11Lifetime4, var12Lifetime4);
           aq.a((byte) -31, this.field_V);
@@ -348,7 +348,7 @@ final class ah extends ts {
         this.field_V.c(var9Lifetime3 - (var39.field_o >> 1), -var39.field_p + var10Lifetime3, 256);
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean containsWidget(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -368,7 +368,7 @@ final class ah extends ts {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -402,11 +402,11 @@ final class ah extends ts {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "ah.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "ah.A(" + param0 + ')');
         }
     }
 
-    final String c(boolean param0) {
+    final String getTooltip(boolean param0) {
         if (param0) {
           return null;
         }
@@ -414,7 +414,7 @@ final class ah extends ts {
         return null;
     }
 
-    public static void i(int param0) {
+    public static void clearStatics(int param0) {
         field_S = null;
         field_Q = null;
         if (param0 != 4096) {

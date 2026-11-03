@@ -5,10 +5,10 @@ final class wo {
     static int field_a;
     static Sprite field_b;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         if (param0 != -103) {
-          wo.a((byte) 30);
+          wo.clearStatics((byte) 30);
         }
     }
 
@@ -32,7 +32,7 @@ final class wo {
             var6 = (String) null;
             wo.a(10, (byte) 112, (String[]) null, (String) null);
           }
-          MatchingTextValidator.field_s = rh.field_g;
+          MatchingTextValidator.field_s = ProjectsContent.field_g;
           if (param0 != 255) {
             if (100 <= param0 &&
               param0 <= 105) {
@@ -46,7 +46,7 @@ final class wo {
           }
           stackIn_6_0 = 93;
           stackIn_7_1 = !(jm.field_t >= 13);
-          ij.field_a = ub.$cfr$intArgs$a$be17d4c2d3e3(stackIn_6_0, stackIn_7_1);
+          ij.field_a = ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
           jp.a((String[]) null, false);
           return;
@@ -66,7 +66,7 @@ final class wo {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

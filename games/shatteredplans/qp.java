@@ -105,18 +105,18 @@ final class qp extends WidgetTheme {
             var4 = var6;
             var5 = param1[var7_int];
             var6 = param1[var7_int + 1];
-            if (gf.field_i <= var5) {
-              if (gf.field_i > var3) {
+            if (SoftwareRasterizer.field_i <= var5) {
+              if (SoftwareRasterizer.field_i > var3) {
                 var8_int = var5;
                 var9 = var6;
                 var10 = var3;
                 var11 = var4;
                 fieldTemp$18 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$18] = gf.field_i;
+                ai.field_b[fieldTemp$18] = SoftwareRasterizer.field_i;
                 fieldTemp$19 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$19] = var9 + (-var8_int + gf.field_i) * (-var9 + var11) / (var10 - var8_int);
+                ai.field_b[fieldTemp$19] = var9 + (-var8_int + SoftwareRasterizer.field_i) * (-var9 + var11) / (var10 - var8_int);
               }
               fieldTemp$20 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
@@ -125,17 +125,17 @@ final class qp extends WidgetTheme {
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$21] = var6;
             } else {
-              if (gf.field_i <= var3) {
+              if (SoftwareRasterizer.field_i <= var3) {
                 var8_int = var3;
                 var9 = var4;
                 var10 = var5;
                 var11 = var6;
                 fieldTemp$22 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$22] = gf.field_i;
+                ai.field_b[fieldTemp$22] = SoftwareRasterizer.field_i;
                 fieldTemp$23 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$23] = var9 + (var11 - var9) * (gf.field_i - var8_int) / (-var8_int + var10);
+                ai.field_b[fieldTemp$23] = var9 + (var11 - var9) * (SoftwareRasterizer.field_i - var8_int) / (-var8_int + var10);
               }
             }
           }
@@ -155,18 +155,18 @@ final class qp extends WidgetTheme {
             var4Lifetime1 = var6Lifetime1;
             var6Lifetime1 = en.field_b[1 + var8_intLifetime1];
             var5Lifetime1 = en.field_b[var8_intLifetime1];
-            if (gf.field_l > var5Lifetime1) {
-              if (var3Lifetime1 >= gf.field_l) {
+            if (SoftwareRasterizer.field_l > var5Lifetime1) {
+              if (var3Lifetime1 >= SoftwareRasterizer.field_l) {
                 var9Lifetime1 = var5Lifetime1;
                 var10Lifetime1 = var6Lifetime1;
                 var11Lifetime1 = var3Lifetime1;
                 var12 = var4Lifetime1;
                 fieldTemp$12 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$12] = gf.field_l;
+                ai.field_b[fieldTemp$12] = SoftwareRasterizer.field_l;
                 fieldTemp$13 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$13] = (var12 - var10Lifetime1) * (-var9Lifetime1 + gf.field_l) / (var11Lifetime1 - var9Lifetime1) + var10Lifetime1;
+                ai.field_b[fieldTemp$13] = (var12 - var10Lifetime1) * (-var9Lifetime1 + SoftwareRasterizer.field_l) / (var11Lifetime1 - var9Lifetime1) + var10Lifetime1;
               }
               fieldTemp$14 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
@@ -175,17 +175,17 @@ final class qp extends WidgetTheme {
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$15] = var6Lifetime1;
             } else {
-              if (var3Lifetime1 < gf.field_l) {
+              if (var3Lifetime1 < SoftwareRasterizer.field_l) {
                 var9Lifetime1 = var3Lifetime1;
                 var10Lifetime1 = var4Lifetime1;
                 var11Lifetime1 = var5Lifetime1;
                 var12 = var6Lifetime1;
                 fieldTemp$16 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$16] = gf.field_l;
+                ai.field_b[fieldTemp$16] = SoftwareRasterizer.field_l;
                 fieldTemp$17 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$17] = var10Lifetime1 + (-var10Lifetime1 + var12) * (gf.field_l - var9Lifetime1) / (-var9Lifetime1 + var11Lifetime1);
+                ai.field_b[fieldTemp$17] = var10Lifetime1 + (-var10Lifetime1 + var12) * (SoftwareRasterizer.field_l - var9Lifetime1) / (-var9Lifetime1 + var11Lifetime1);
               }
             }
           }
@@ -207,18 +207,18 @@ final class qp extends WidgetTheme {
             var3Lifetime2 = var5Lifetime2;
             var6Lifetime2 = en.field_b[var8_intLifetime2 + 1];
             var5Lifetime2 = en.field_b[var8_intLifetime2];
-            if (var6Lifetime2 >= gf.field_a) {
-              if (var4Lifetime2 < gf.field_a) {
+            if (var6Lifetime2 >= SoftwareRasterizer.field_a) {
+              if (var4Lifetime2 < SoftwareRasterizer.field_a) {
                 var9Lifetime2 = var5Lifetime2;
                 var10Lifetime2 = var6Lifetime2;
                 var11Lifetime2 = var3Lifetime2;
                 var12Lifetime1 = var4Lifetime2;
                 fieldTemp$6 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$6] = var9Lifetime2 + (-var9Lifetime2 + var11Lifetime2) * (-var10Lifetime2 + gf.field_a) / (var12Lifetime1 - var10Lifetime2);
+                ai.field_b[fieldTemp$6] = var9Lifetime2 + (-var9Lifetime2 + var11Lifetime2) * (-var10Lifetime2 + SoftwareRasterizer.field_a) / (var12Lifetime1 - var10Lifetime2);
                 fieldTemp$7 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$7] = gf.field_a;
+                ai.field_b[fieldTemp$7] = SoftwareRasterizer.field_a;
               }
               fieldTemp$8 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
@@ -227,17 +227,17 @@ final class qp extends WidgetTheme {
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$9] = var6Lifetime2;
             } else {
-              if (var4Lifetime2 >= gf.field_a) {
+              if (var4Lifetime2 >= SoftwareRasterizer.field_a) {
                 var9Lifetime2 = var3Lifetime2;
                 var10Lifetime2 = var4Lifetime2;
                 var11Lifetime2 = var5Lifetime2;
                 var12Lifetime1 = var6Lifetime2;
                 fieldTemp$10 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$10] = var9Lifetime2 + (gf.field_a - var10Lifetime2) * (-var9Lifetime2 + var11Lifetime2) / (-var10Lifetime2 + var12Lifetime1);
+                ai.field_b[fieldTemp$10] = var9Lifetime2 + (SoftwareRasterizer.field_a - var10Lifetime2) * (-var9Lifetime2 + var11Lifetime2) / (-var10Lifetime2 + var12Lifetime1);
                 fieldTemp$11 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$11] = gf.field_a;
+                ai.field_b[fieldTemp$11] = SoftwareRasterizer.field_a;
               }
             }
           }
@@ -256,31 +256,31 @@ final class qp extends WidgetTheme {
             var4Lifetime3 = var6Lifetime3;
             var5Lifetime3 = en.field_b[var8_intLifetime3];
             var6Lifetime3 = en.field_b[1 + var8_intLifetime3];
-            if (var6Lifetime3 >= gf.field_f) {
-              if (var4Lifetime3 < gf.field_f) {
+            if (var6Lifetime3 >= SoftwareRasterizer.field_f) {
+              if (var4Lifetime3 < SoftwareRasterizer.field_f) {
                 var9Lifetime3 = var3Lifetime3;
                 var10Lifetime3 = var4Lifetime3;
                 var11Lifetime3 = var5Lifetime3;
                 var12Lifetime2 = var6Lifetime3;
                 fieldTemp$0 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$0] = (gf.field_f - var10Lifetime3) * (var11Lifetime3 - var9Lifetime3) / (var12Lifetime2 - var10Lifetime3) + var9Lifetime3;
+                ai.field_b[fieldTemp$0] = (SoftwareRasterizer.field_f - var10Lifetime3) * (var11Lifetime3 - var9Lifetime3) / (var12Lifetime2 - var10Lifetime3) + var9Lifetime3;
                 fieldTemp$1 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$1] = gf.field_f;
+                ai.field_b[fieldTemp$1] = SoftwareRasterizer.field_f;
               }
             } else {
-              if (gf.field_f <= var4Lifetime3) {
+              if (SoftwareRasterizer.field_f <= var4Lifetime3) {
                 var9Lifetime3 = var5Lifetime3;
                 var10Lifetime3 = var6Lifetime3;
                 var11Lifetime3 = var3Lifetime3;
                 var12Lifetime2 = var4Lifetime3;
                 fieldTemp$2 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$2] = (-var9Lifetime3 + var11Lifetime3) * (gf.field_f - var10Lifetime3) / (var12Lifetime2 - var10Lifetime3) + var9Lifetime3;
+                ai.field_b[fieldTemp$2] = (-var9Lifetime3 + var11Lifetime3) * (SoftwareRasterizer.field_f - var10Lifetime3) / (var12Lifetime2 - var10Lifetime3) + var9Lifetime3;
                 fieldTemp$3 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$3] = gf.field_f;
+                ai.field_b[fieldTemp$3] = SoftwareRasterizer.field_f;
               }
               fieldTemp$4 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
@@ -297,7 +297,7 @@ final class qp extends WidgetTheme {
           var15 = new int[CipherPacketBuffer.field_r];
           var14 = var15;
           var8 = var14;
-          ps.a(ai.field_b, 0, var15, 0, CipherPacketBuffer.field_r);
+          ArrayOperations.copyInts(ai.field_b, 0, var15, 0, CipherPacketBuffer.field_r);
           stackIn_65_0 = var8;
           return stackIn_65_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -310,7 +310,7 @@ final class qp extends WidgetTheme {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
         }
     }
 
@@ -335,7 +335,7 @@ final class qp extends WidgetTheme {
             field_v = (String) null;
           }
           if (!param0.field_k) {
-            stackIn_8_0 = (param0.f(1)) ? 1 : 0;
+            stackIn_8_0 = (param0.isFocused(1)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
@@ -368,7 +368,7 @@ final class qp extends WidgetTheme {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -377,7 +377,7 @@ final class qp extends WidgetTheme {
         return cr.a(param0, 1, -10, param2);
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_w = null;
         if (param0 >= -126) {
           return;

@@ -9,11 +9,11 @@ final class ArchiveSourceManager {
     private DiskCacheWorker field_d;
     private java.math.BigInteger field_g;
     private java.math.BigInteger field_j;
-    static qr field_f;
+    static AnimatedPanel field_f;
     private NetworkArchiveRequest field_c;
     static int field_h;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_f = null;
         int var1 = -35 / ((param0 - 66) / 45);
         field_b = null;
@@ -73,32 +73,32 @@ final class ArchiveSourceManager {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static Sprite[] a(boolean param0, int param1, boolean param2, int param3, int param4, byte param5) {
         Sprite var13 = null;
         Sprite var14 = null;
-        int[] var16 = gf.field_h;
+        int[] var16 = SoftwareRasterizer.field_h;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = gf.field_b;
-        int var8 = gf.field_k;
+        int var7 = SoftwareRasterizer.field_b;
+        int var8 = SoftwareRasterizer.field_k;
         Sprite var9 = new Sprite(16, param3);
         var9.bindAsRenderTarget();
-        gf.i(0, 0, 16, param3, param4, param1);
+        SoftwareRasterizer.fillRectGradient(0, 0, 16, param3, param4, param1);
         Object var10 = null;
         if (param0) {
           var13 = var9.copy();
           var10 = var13;
           var13.bindAsRenderTarget();
-          gf.f(0, 0, 5, 0);
-          gf.f(0, 1, 3, 0);
-          gf.f(0, 2, 2, 0);
-          gf.f(0, 3, 1, 0);
-          gf.f(0, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         if (param5 >= -22) {
           field_b = (ValidationState) null;
@@ -108,19 +108,19 @@ final class ArchiveSourceManager {
           var14 = var9.copy();
           var11 = var14;
           var14.bindAsRenderTarget();
-          gf.f(11, 0, 5, 0);
-          gf.f(13, 1, 3, 0);
-          gf.f(14, 2, 2, 0);
-          gf.f(15, 3, 1, 0);
-          gf.f(15, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
-        gf.a(var16, var7, var8);
+        SoftwareRasterizer.setTarget(var16, var7, var8);
         return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
-    final static int a(int param0) {
+    final static int getTargetFrameRate(int param0) {
         if (param0 != 0) {
-          field_f = (qr) null;
+          field_f = (AnimatedPanel) null;
         }
         return (int)(1000000000L / UiWidget.field_i);
     }
@@ -206,7 +206,7 @@ final class ArchiveSourceManager {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = dp.a(var10.payload, -5 - var13.length + var10.position, -26131, 5);
+        var15 = QuickChatCategoryDefinition.a(var10.payload, -5 - var13.length + var10.position, -26131, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (~var5[var7 + 1] != ~var15[var7]) {
             throw new RuntimeException();
@@ -231,7 +231,7 @@ final class ArchiveSourceManager {
             this.field_c = this.field_e.a(true, 255, (byte) 0, -2057056416, 255);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

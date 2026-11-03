@@ -4,11 +4,11 @@
 class qe extends IntrusiveNode {
     static String field_l;
     Star field_h;
-    gm field_i;
+    SoundPlayback field_i;
     static fg field_k;
     static Sprite field_j;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_l = null;
         field_j = null;
         if (param0 != 93) {
@@ -49,7 +49,7 @@ class qe extends IntrusiveNode {
         if (DialWidget.field_I == null) {
           return false;
         }
-        if (DialWidget.field_I.g((byte) 105) == null) {
+        if (DialWidget.field_I.getActiveDialog((byte) 105) == null) {
           return false;
         }
         return true;

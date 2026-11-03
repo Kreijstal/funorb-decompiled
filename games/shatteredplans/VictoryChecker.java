@@ -6,7 +6,7 @@ abstract class VictoryChecker {
     static boolean field_a;
     static String field_c;
     Player[] field_i;
-    static qr field_d;
+    static AnimatedPanel field_d;
     Player[] field_g;
     static String field_f;
     static boolean field_j;
@@ -22,13 +22,13 @@ abstract class VictoryChecker {
         if (param0 < 19) {
           field_e = 28;
         }
-        stackIn_6_0 = (qh.f(29443)) && (0 == (8 & cl.field_n));
+        stackIn_6_0 = (MenuWindow.f(29443)) && (0 == (8 & cl.field_n));
         return stackIn_6_0;
     }
 
     abstract Player[] projectedWinners(int param0);
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_d = null;
         field_f = null;
         if (!param0) {
@@ -118,7 +118,7 @@ abstract class VictoryChecker {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ abstract class VictoryChecker {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ abstract class VictoryChecker {
             var4 = (byte[]) null;
             VictoryChecker.a(-118, (byte[]) null, -21);
           }
-          stackIn_3_0 = bs.a(param2, param1, (byte) -53, 0);
+          stackIn_3_0 = bs.crc32(param2, param1, (byte) -53, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -198,7 +198,7 @@ abstract class VictoryChecker {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -226,7 +226,7 @@ abstract class VictoryChecker {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

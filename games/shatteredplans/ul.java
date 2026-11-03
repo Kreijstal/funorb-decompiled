@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul extends qr {
+final class ul extends AnimatedPanel {
     static String[] field_Qb;
     static int field_Hb;
     static int[] field_Db;
     private int field_yb;
     static String field_Ob;
-    private qr field_Nb;
+    private AnimatedPanel field_Nb;
     private Sprite[] field_Lb;
     static hh field_xb;
-    private qr field_Mb;
+    private AnimatedPanel field_Mb;
     private int field_Eb;
     static String[] field_Fb;
     private int field_Kb;
@@ -43,14 +43,14 @@ final class ul extends qr {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        re.field_d[wm.field_c] = param4;
+        QuickChatCategoryRegistry.field_d[wm.field_c] = param4;
         lg.field_d[wm.field_c] = wm.field_c;
         GameApplet.field_f[wm.field_c] = param1;
         if (!(us.field_b >= param1)) {
           GzipInflater.field_e = param1;
         }
         if (!(ef.field_a <= param1)) {
-          ff.field_u = param1;
+          SpriteButton.field_u = param1;
         }
         fb.field_zb[wm.field_c] = param2;
         aj.field_d[wm.field_c] = param3;
@@ -60,32 +60,32 @@ final class ul extends qr {
         GameState.field_c[wm.field_c] = var7;
         if (var7 <= GzipInflater.field_e) {
           wm.field_c = wm.field_c + 1;
-          if (!(ff.field_u <= var7)) {
-            ff.field_u = var7;
+          if (!(SpriteButton.field_u <= var7)) {
+            SpriteButton.field_u = var7;
           }
           return;
         }
         GzipInflater.field_e = var7;
         wm.field_c = wm.field_c + 1;
-        if (!(ff.field_u <= var7)) {
-          ff.field_u = var7;
+        if (!(SpriteButton.field_u <= var7)) {
+          SpriteButton.field_u = var7;
         }
     }
 
     final void a(boolean param0, Sprite param1, String param2, int param3) {
         try {
-          this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Mb, param1, param2);
+          this.field_Gb[this.field_Pb] = new sg(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Mb, param1, param2);
           if (param0) {
             field_Ab = (String) null;
           }
           this.field_Gb[this.field_Pb].field_lb = this.field_Lb;
           this.field_Gb[this.field_Pb].field_r = true;
           this.field_Gb[this.field_Pb].field_G = 1;
-          this.a(4, this.field_Gb[this.field_Pb]);
+          this.addChild(4, this.field_Gb[this.field_Pb]);
           this.field_Ib[this.field_Pb] = param3;
           this.field_Pb = this.field_Pb + 1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ul.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ul.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -106,15 +106,15 @@ final class ul extends qr {
 
     final void a(int param0, int param1, String param2) {
         try {
-          this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Mb, (Sprite) null, param2);
+          this.field_Gb[this.field_Pb] = new sg(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Mb, (Sprite) null, param2);
           this.field_Gb[this.field_Pb].field_lb = this.field_Lb;
           this.field_Gb[this.field_Pb].field_r = true;
           this.field_Gb[this.field_Pb].field_G = param0;
-          this.a(4, this.field_Gb[this.field_Pb]);
+          this.addChild(4, this.field_Gb[this.field_Pb]);
           this.field_Ib[this.field_Pb] = param1;
           this.field_Pb = this.field_Pb + 1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,15 +171,15 @@ final class ul extends qr {
           var7Lifetime3 = this.field_yb + this.field_yb + this.field_Pb * this.field_zb;
           var8Lifetime3 = uh.a(param2 - 60, param3, var6, param0);
           var9 = uq.a(param1, param2 + 0, var7Lifetime3, param4);
-          this.a(var6, var7Lifetime3, (byte) 46, var9, var8Lifetime3);
+          this.setTarget(var6, var7Lifetime3, (byte) 46, var9, var8Lifetime3);
           for (var10 = 0; this.field_Pb > var10; var10++) {
             this.field_Gb[var10].a(50, this.field_zb, this.field_yb + var10 * this.field_zb, this.field_Eb, this.field_Jb, -(2 * this.field_Kb) + var6, this.field_Kb);
           }
           return;
         }
-        this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Nb, (Sprite) null, we.field_a);
+        this.field_Gb[this.field_Pb] = new sg(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Nb, (Sprite) null, we.field_a);
         this.field_Gb[this.field_Pb].field_G = 1;
-        this.a(param2 + 4, this.field_Gb[this.field_Pb]);
+        this.addChild(param2 + 4, this.field_Gb[this.field_Pb]);
         this.field_Ib[this.field_Pb] = -1;
         this.field_Pb = this.field_Pb + 1;
         var6Lifetime1 = 0;
@@ -193,7 +193,7 @@ final class ul extends qr {
         var7Lifetime2 = this.field_yb + this.field_yb + this.field_Pb * this.field_zb;
         var8Lifetime2 = uh.a(param2 - 60, param3, var6Lifetime1, param0);
         var9Lifetime1 = uq.a(param1, param2 + 0, var7Lifetime2, param4);
-        this.a(var6Lifetime1, var7Lifetime2, (byte) 46, var9Lifetime1, var8Lifetime2);
+        this.setTarget(var6Lifetime1, var7Lifetime2, (byte) 46, var9Lifetime1, var8Lifetime2);
         for (var10Lifetime1 = 0; this.field_Pb > var10Lifetime1; var10Lifetime1++) {
           this.field_Gb[var10Lifetime1].a(50, this.field_zb, this.field_yb + var10Lifetime1 * this.field_zb, this.field_Eb, this.field_Jb, -(2 * this.field_Kb) + var6Lifetime1, this.field_Kb);
         }
@@ -223,7 +223,7 @@ final class ul extends qr {
         return this.field_Bb;
     }
 
-    ul(qr param0, Sprite[] param1, qr param2, qr param3, int param4, int param5, int param6, int param7, int param8) {
+    ul(AnimatedPanel param0, Sprite[] param1, AnimatedPanel param2, AnimatedPanel param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Ib = new int[256];
         this.field_Gb = new sg[256];
@@ -238,7 +238,7 @@ final class ul extends qr {
           this.field_Eb = param5;
           this.field_yb = param7;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

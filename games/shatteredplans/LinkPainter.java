@@ -6,7 +6,7 @@ final class LinkPainter implements WidgetPainter {
     static int[] field_j;
     static int field_i;
     static int field_e;
-    static qr field_b;
+    static AnimatedPanel field_b;
     private nq field_f;
     static Archive field_g;
     static String field_h;
@@ -24,7 +24,7 @@ final class LinkPainter implements WidgetPainter {
           field_j = null;
           field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rq.B(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rq.B(" + param0 + ')');
         }
     }
 
@@ -44,14 +44,14 @@ final class LinkPainter implements WidgetPainter {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!param0.field_k &&
-            !param0.f(1)) {
+            !param0.isFocused(1)) {
             stackIn_8_0 = 2188450;
           } else {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
           this.field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_s + "</u>", param1 + param0.field_m, param3 + param0.field_q, param0.field_x, param0.field_n, var6_int, -1, this.field_a, this.field_d, this.field_f.field_q + this.field_f.field_J);
-          if (param0.f(1)) {
+          if (param0.isFocused(1)) {
             var7 = this.field_f.stringWidth(param0.field_s);
             var8 = this.field_f.field_J + this.field_f.field_q;
             var9 = param0.field_m + param1;
@@ -91,7 +91,7 @@ final class LinkPainter implements WidgetPainter {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class LinkPainter implements WidgetPainter {
           var2 = 0;
           scanLoop1: while (true) {
             if (var2 < en.field_c) {
-              var3 = WeightedCacheEntry.field_s[var2] * cm.field_g[var2];
+              var3 = WeightedCacheEntry.field_s[var2] * IntHashIndex.field_g[var2];
               var4 = hd.field_q[var2];
               var5 = new int[var3];
               stackIn_13_0 = 0;
@@ -122,34 +122,34 @@ final class LinkPainter implements WidgetPainter {
               }
               var6 = stackIn_13_0;
               while (var6 < var3) {
-                var5[var6] = eo.field_fb[we.a(255, (int) var4[var6])];
+                var5[var6] = eo.field_fb[we.intAnd(255, (int) var4[var6])];
                 var6++;
               }
-              var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], var5);
+              var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var5);
               var2++;
               continue scanLoop1;
             }
             stackIn_13_0 = param0 + param0;
             break;
           }
-          pd.a(stackIn_13_0);
+          TertiaryListSequence.a(stackIn_13_0);
           stackIn_14_0 = var1;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "rq.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "rq.C(" + param0 + ')');
         }
     }
 
     final static ve a(boolean param0, int param1, boolean param2) {
-        ub stackIn_4_0 = null;
+        ScrollPane stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         int stackIn_4_2 = 0;
         boolean stackIn_5_3 = false;
-        qr stackIn_46_0 = null;
+        AnimatedPanel stackIn_46_0 = null;
         String stackIn_47_1 = null;
-        qr stackIn_50_0 = null;
+        AnimatedPanel stackIn_50_0 = null;
         String stackIn_51_1 = null;
         int stackIn_55_0 = 0;
         Object stackIn_102_0 = null;
@@ -180,7 +180,7 @@ final class LinkPainter implements WidgetPainter {
           stackIn_4_1 = param1 * ((cr.field_c + 2) * 3);
           stackIn_4_2 = cr.field_c + 2;
           stackIn_5_3 = (DerelictVictoryChecker.field_l == d.field_a.field_Db);
-          var3_int = ((ub) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_5_3, -103, param2, 2) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_5_3, -103, param2, 2) ? 1 : 0;
           var4 = d.field_a.field_Eb.field_M;
           if (!param0) {
             field_e = 100;
@@ -203,7 +203,7 @@ final class LinkPainter implements WidgetPainter {
           }
           if (decompiledFrameRemainder0) {
             cg.field_A.field_s = true;
-            RecklessAi.field_p.field_z = re.a(DelegatingCanvas.field_b, 4371, new String[]{jo.field_d});
+            RecklessAi.field_p.field_z = QuickChatCategoryRegistry.a(DelegatingCanvas.field_b, 4371, new String[]{QuickChatPhraseRegistry.field_d});
             d.field_a.field_Db.field_zb.field_z = null;
             var6 = null;
             var7 = (ve) (var4.startForward(0));
@@ -212,22 +212,22 @@ final class LinkPainter implements WidgetPainter {
                 var8 = 0;
                 if (var19 == 0) {
                   if (null == var7.field_M) {
-                    var7.field_Cb = new qr(0L, ek.field_E);
-                    var7.a(4, var7.field_Cb);
-                    var7.field_Fb = new qr(0L, oj.field_zb);
-                    var7.a(4, var7.field_Fb);
-                    var7.field_Db = new qr(0L, ek.field_E);
-                    var7.a(4, var7.field_Db);
+                    var7.field_Cb = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
+                    var7.addChild(4, var7.field_Cb);
+                    var7.field_Fb = new AnimatedPanel(0L, oj.field_zb);
+                    var7.addChild(4, var7.field_Fb);
+                    var7.field_Db = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
+                    var7.addChild(4, var7.field_Db);
                     var7.field_Fb.field_y = 2;
                     var8 = 1;
-                    var7.e((byte) -125);
+                    var7.markDirty((byte) -125);
                   }
                   var7.field_K = d.field_a.field_Eb.field_K;
                   var9 = 0;
                   if (var7.field_xb == null) {
                     var10 = 13369344;
                     var11 = 16737894;
-                  } else if (jo.field_d == var7.field_xb) {
+                  } else if (QuickChatPhraseRegistry.field_d == var7.field_xb) {
                     var11 = 6750054;
                     var10 = 52224;
                   } else {
@@ -239,7 +239,7 @@ final class LinkPainter implements WidgetPainter {
                     !var7.field_Bb.equals("")) {
                     var7.field_Db.field_pb = BufferedSocket.field_i;
                     var7.field_Db.field_jb = var11;
-                    var7.field_Db.a(BufferedSocket.field_i.field_o + 3, cr.field_c, (byte) 88, var9, 0);
+                    var7.field_Db.setTarget(BufferedSocket.field_i.field_o + 3, cr.field_c, (byte) 88, var9, 0);
                     var12 = 1;
                   }
                   var7.field_Fb.field_x = var10;
@@ -263,7 +263,7 @@ final class LinkPainter implements WidgetPainter {
                     stackIn_47_1 = var7.field_Ab;
                   }
                   stackIn_46_0.field_z = stackIn_47_1;
-                  var7.field_Cb.a(var14, cr.field_c, (byte) 110, var9, var13);
+                  var7.field_Cb.setTarget(var14, cr.field_c, (byte) 110, var9, var13);
                   stackIn_50_0 = var7.field_Fb;
                   if (null != var7.field_xb) {
                     stackIn_51_1 = var7.field_xb;
@@ -271,7 +271,7 @@ final class LinkPainter implements WidgetPainter {
                     stackIn_51_1 = ConquestVictoryChecker.field_p;
                   }
                   stackIn_50_0.field_z = stackIn_51_1;
-                  var7.field_Fb.a(80, cr.field_c, (byte) 109, var9, -80 + var7.field_K);
+                  var7.field_Fb.setTarget(80, cr.field_c, (byte) 109, var9, -80 + var7.field_K);
                   stackIn_55_0 = (var7.field_Cb.field_z.equals(var7.field_Ab)) ? 0 : 1;
                   var15 = stackIn_55_0;
                   var9 = var9 + cr.field_c;
@@ -279,7 +279,7 @@ final class LinkPainter implements WidgetPainter {
                     var7.field_gb = -var7.field_mb + var9;
                   }
                   if (var8 != 0) {
-                    d.field_a.field_Eb.a(2, (qr) (var6), var7, (byte) 98);
+                    d.field_a.field_Eb.layoutAfter(2, (AnimatedPanel) (var6), var7, (byte) 98);
                   }
                   if (var7.field_Db == null ||
                     !var7.field_Db.field_L) {
@@ -291,20 +291,20 @@ final class LinkPainter implements WidgetPainter {
                         !bg.field_g) {
                         if (!ae.field_b) {
                           var17 = DerelictVictoryChecker.field_m;
-                          var18 = re.a(NetworkArchiveRequest.field_B, 4371, new String[]{var16});
+                          var18 = QuickChatCategoryRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var16});
                           var17.field_j.a(1, 8, var18);
                         }
                         var17Lifetime1 = DerelictVictoryChecker.field_m;
-                        var18Lifetime1 = re.a(AchievementProgress.field_e, 4371, new String[]{var16});
+                        var18Lifetime1 = QuickChatCategoryRegistry.a(AchievementProgress.field_e, 4371, new String[]{var16});
                         var17Lifetime1.field_j.a(1, 18, var18Lifetime1);
                       }
                       var5 = var7;
                     } else if (var7.field_Cb.field_L &&
                       var15 != 0) {
-                      dn.field_k = var7.field_Ab;
+                      DualLinkDequeSequence.field_k = var7.field_Ab;
                     }
                   } else {
-                    dn.field_k = var7.field_Bb;
+                    DualLinkDequeSequence.field_k = var7.field_Bb;
                   }
                   var6 = var7;
                   var7 = (ve) (var4.nextForward((byte) -71));
@@ -329,7 +329,7 @@ final class LinkPainter implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3), "rq.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3), "rq.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -339,7 +339,7 @@ final class LinkPainter implements WidgetPainter {
           this.field_a = 1;
           this.field_d = 1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rq.<init>()");
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rq.<init>()");
         }
     }
 
@@ -364,7 +364,7 @@ final class LinkPainter implements WidgetPainter {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -388,7 +388,7 @@ final class LinkPainter implements WidgetPainter {
           var2 = CheckboxPainter.field_n;
           if (var2 > 0) {
             if (1 != var2) {
-              tl.field_z = re.a(MapViewState.field_M, 4371, new String[]{Integer.toString(var2)});
+              tl.field_z = QuickChatCategoryRegistry.a(MapViewState.field_M, 4371, new String[]{Integer.toString(var2)});
             }
             if (1 == var2 ||
               var3 != 0) {
@@ -402,7 +402,7 @@ final class LinkPainter implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "rq.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rq.A(" + param0 + ')');
         }
     }
 

@@ -22,37 +22,37 @@ final class ch implements wr {
           var13 = var14;
           var12 = var13;
           var8 = var12;
-          gf.a(var14);
+          SoftwareRasterizer.saveClip(var14);
           if (param2 * 2 > param3) {
             return;
           }
-          gf.f(param2 + param4, param5, param3 - 2 * param2, param1);
-          gf.f(param2 + param4, param5 + param7, -(2 * param2) + param3, param6);
-          gf.i(param4, param5, param4 + param2, param5 + param2);
-          gf.b(param2 + param4, param5 + param2, param2, param1);
-          gf.b(var14);
-          gf.i(param4 + (param3 - param2), param5, param4 + param3, param5 + param2);
-          gf.b(-param2 + param3 + (param4 - 1), param5 + param2, param2, param1);
-          gf.b(var14);
-          gf.i(param4, -param2 + (param7 + param5), param4 + param2, param5 + param7);
-          gf.b(param4 + param2, -1 + (param7 + param5 - param2), param2, param6);
-          gf.b(var14);
-          gf.i(-param2 + (param3 + param4), param5 + param7 - param2, param4 + param3, param5 + param7);
-          gf.b(-1 + param4 - (-param3 + param2), param7 + param5 - (param2 + 1), param2, param6);
-          gf.b(var14);
+          SoftwareRasterizer.drawHorizontalLine(param2 + param4, param5, param3 - 2 * param2, param1);
+          SoftwareRasterizer.drawHorizontalLine(param2 + param4, param5 + param7, -(2 * param2) + param3, param6);
+          SoftwareRasterizer.intersectClip(param4, param5, param4 + param2, param5 + param2);
+          SoftwareRasterizer.drawCircle(param2 + param4, param5 + param2, param2, param1);
+          SoftwareRasterizer.restoreClip(var14);
+          SoftwareRasterizer.intersectClip(param4 + (param3 - param2), param5, param4 + param3, param5 + param2);
+          SoftwareRasterizer.drawCircle(-param2 + param3 + (param4 - 1), param5 + param2, param2, param1);
+          SoftwareRasterizer.restoreClip(var14);
+          SoftwareRasterizer.intersectClip(param4, -param2 + (param7 + param5), param4 + param2, param5 + param7);
+          SoftwareRasterizer.drawCircle(param4 + param2, -1 + (param7 + param5 - param2), param2, param6);
+          SoftwareRasterizer.restoreClip(var14);
+          SoftwareRasterizer.intersectClip(-param2 + (param3 + param4), param5 + param7 - param2, param4 + param3, param5 + param7);
+          SoftwareRasterizer.drawCircle(-1 + param4 - (-param3 + param2), param7 + param5 - (param2 + 1), param2, param6);
+          SoftwareRasterizer.restoreClip(var14);
           if (param0 != 20) {
             field_a = (String) null;
           }
           for (var9 = 0; -20 + param7 > var9; var9++) {
-            var10 = SolVictoryChecker.a(param1, param6, param0 ^ -72, 256 * var9 / (param7 - 20));
-            gf.a(param4, param2 + (param5 + var9), var10);
-            gf.a(-1 + (param3 + param4), var9 + (param5 + param2), var10);
+            var10 = SolVictoryChecker.blendColours(param1, param6, param0 ^ -72, 256 * var9 / (param7 - 20));
+            SoftwareRasterizer.setPixel(param4, param2 + (param5 + var9), var10);
+            SoftwareRasterizer.setPixel(-1 + (param3 + param4), var9 + (param5 + param2), var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var8_ref), "ch.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var8_ref), "ch.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -74,19 +74,19 @@ final class ch implements wr {
           }
           var3_int = 0;
           var4 = vo.field_b;
-          while (t.field_c.length > var3_int) {
+          while (StarLinkPlanner.field_c.length > var3_int) {
             var5 = pr.field_d[var3_int];
             if (0 <= var5) {
-              var6 = or.a(true, t.field_c[var3_int], true);
+              var6 = or.a(true, StarLinkPlanner.field_c[var3_int], true);
               var4 = var4 + js.field_e;
               var7 = -(var6 >> 1) + WeightedLruCache.field_e;
-              if (ek.a((uo.field_g << 1) + vh.field_b, param2, var7 - js.field_g, (byte) -100, var4, (js.field_g << 1) + var6, param1)) {
+              if (ArrayWidgetGroup.a((uo.field_g << 1) + vh.field_b, param2, var7 - js.field_g, (byte) -100, var4, (js.field_g << 1) + var6, param1)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
               var4 = var4 + (vh.field_b + (js.field_e + (uo.field_g << 1)));
             } else {
-              var4 = var4 + fe.field_A;
+              var4 = var4 + MenuButton.field_A;
             }
             var3_int++;
           }
@@ -95,7 +95,7 @@ final class ch implements wr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3), "ch.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3), "ch.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class ch implements wr {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vd.a(param3, param0, param2, 2)) {
+          if (!MenuComponent.a(param3, param0, param2, 2)) {
             return null;
           }
           if (param1 < -104) {
@@ -127,24 +127,24 @@ final class ch implements wr {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static qh a(byte param0) {
-        BattleContribution.field_l = new qh(0, 60, 238, 300, ShatteredPlansClient.field_L.toUpperCase());
-        fe var1 = new fe(-16 + BattleContribution.field_l.field_k + BattleContribution.field_l.field_m, 2 + BattleContribution.field_l.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
+    final static MenuWindow a(byte param0) {
+        BattleContribution.field_l = new MenuWindow(0, 60, 238, 300, ShatteredPlansClient.field_L.toUpperCase());
+        MenuButton var1 = new MenuButton(-16 + BattleContribution.field_l.field_k + BattleContribution.field_l.field_m, 2 + BattleContribution.field_l.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
         var1.field_h = BattleContribution.field_l;
         lh var2 = new lh(-20 + BattleContribution.field_l.field_m, BattleContribution.field_l.field_t + 20, -28 + BattleContribution.field_l.field_i, 3974311);
         int var3 = -24 / ((param0 - 57) / 47);
-        BattleContribution.field_l.a(var1, 8);
-        BattleContribution.field_l.a(var2, 8);
-        lp var4 = new lp(BattleContribution.field_l.field_k + 9, 20 + BattleContribution.field_l.field_t, 209, BattleContribution.field_l.field_i - 28);
-        BattleContribution.field_l.a(var4, 8);
+        BattleContribution.field_l.addChild(var1, 8);
+        BattleContribution.field_l.addChild(var2, 8);
+        MenuList var4 = new MenuList(BattleContribution.field_l.field_k + 9, 20 + BattleContribution.field_l.field_t, 209, BattleContribution.field_l.field_i - 28);
+        BattleContribution.field_l.addChild(var4, 8);
         BattleContribution.field_l.field_z = var4;
         var2.field_x = (gj) ((Object) var4);
-        em var5 = new em();
-        BattleContribution.field_l.field_x = (jk) ((Object) var5);
+        ProductionContent var5 = new ProductionContent();
+        BattleContribution.field_l.field_x = (MenuContent) ((Object) var5);
         var5.field_e = var2;
         return BattleContribution.field_l;
     }
@@ -163,7 +163,7 @@ final class ch implements wr {
             var5 = (Archive) null;
             ch.a((Archive) null, 22, -122, 78);
           }
-          if (vd.a(param3, param2, param0, 2)) {
+          if (MenuComponent.a(param3, param2, param0, 2)) {
             stackIn_6_0 = LinkPainter.a(0);
             return stackIn_6_0;
           }
@@ -179,7 +179,7 @@ final class ch implements wr {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class ch implements wr {
             }
             var1_int = 1;
           }
-          ns.field_nb.a(-1, ch.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), ch.a(-15073, bb.field_b, pd.field_k));
+          ns.field_nb.a(-1, ch.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), ch.a(-15073, bb.field_b, TertiaryListSequence.field_k));
           if (ns.field_nb.a((byte) 36)) {
             var1_int = 1;
           }
@@ -222,11 +222,11 @@ final class ch implements wr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "ch.D(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "ch.D(" + param0 + ')');
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = 1 % ((-34 - param0) / 52);
         field_c = null;
         field_a = null;

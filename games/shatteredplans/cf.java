@@ -26,7 +26,7 @@ final class cf extends WidgetContainer implements ButtonListener {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vd.a(param3, param2, param4, param1 ^ 3)) {
+          if (!MenuComponent.a(param3, param2, param4, param1 ^ 3)) {
             stackIn_2_0 = null;
             return (hh) (stackIn_2_0);
           }
@@ -52,7 +52,7 @@ final class cf extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class cf extends WidgetContainer implements ButtonListener {
         int var3 = 0;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          ds.field_c = rr.a(param0, bb.field_b, pd.field_k, 2);
+          MessageKind.field_c = rr.a(param0, bb.field_b, TertiaryListSequence.field_k, 2);
           if (param1 != 39) {
             field_D = -63;
           }
@@ -78,7 +78,7 @@ final class cf extends WidgetContainer implements ButtonListener {
               } else {
                 PlayerEliminatedEvent.field_h = BattleSnapshot.field_s;
                 if (null != PlayerEliminatedEvent.field_h) {
-                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.field_l + pd.field_k, -PlayerEliminatedEvent.field_h.field_h + bb.field_b, -30872);
+                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.field_l + TertiaryListSequence.field_k, -PlayerEliminatedEvent.field_h.field_h + bb.field_b, -30872);
                 }
               }
               BattleSnapshot.field_s = null;
@@ -86,14 +86,14 @@ final class cf extends WidgetContainer implements ButtonListener {
             } else {
               uq.field_i = uq.field_i + 1;
               if (il.field_bb == null) {
-                var2_int = (ba.field_c - bb.field_b) * (ba.field_c - bb.field_b) + (-pd.field_k + ck.field_e) * (-pd.field_k + ck.field_e);
+                var2_int = (ba.field_c - bb.field_b) * (ba.field_c - bb.field_b) + (-TertiaryListSequence.field_k + ck.field_e) * (-TertiaryListSequence.field_k + ck.field_e);
                 if (5 < var2_int &&
                   uq.field_i > 5) {
                   il.field_bb = BattleSnapshot.field_s;
                 }
               }
               if (il.field_bb != null) {
-                il.field_bb.c(bb.field_b - il.field_bb.field_h, 2, -il.field_bb.field_l + pd.field_k);
+                il.field_bb.c(bb.field_b - il.field_bb.field_h, 2, -il.field_bb.field_l + TertiaryListSequence.field_k);
               }
             }
           } else {
@@ -113,7 +113,7 @@ final class cf extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -189,12 +189,12 @@ final class cf extends WidgetContainer implements ButtonListener {
           var4 = new FocusableWidget(param2, param0);
           var4.field_p = (WidgetPainter) ((Object) new qp());
           var5 = -2 + this.field_n;
-          this.a(0, this.field_n + 34, (byte) 127, 0, this.field_x);
+          this.setBounds(0, this.field_n + 34, (byte) 127, 0, this.field_x);
           if (param1 <= 119) {
             stackIn_2_0 = (FocusableWidget) null;
             return stackIn_2_0;
           }
-          var4.a(var5, 30, (byte) 103, 7, -14 + this.field_x);
+          var4.setBounds(var5, 30, (byte) 103, 7, -14 + this.field_x);
           this.b((byte) -82, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;
@@ -214,11 +214,11 @@ final class cf extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_H = null;
         field_I = null;
         if (param0 != 240) {
@@ -245,9 +245,9 @@ final class cf extends WidgetContainer implements ButtonListener {
           this.field_K = param0;
           this.field_L = param2;
           var4_int = this.field_L != null ? this.field_J.textHeight(this.field_L, 260, this.field_J.field_J) : 0;
-          this.a(0, 22 + var4_int, (byte) 121, 0, 288);
+          this.setBounds(0, 22 + var4_int, (byte) 121, 0, 288);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -262,12 +262,12 @@ final class cf extends WidgetContainer implements ButtonListener {
           }
           this.field_N[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "cf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1 ^ 0, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1 ^ 0, param2, param3);
         this.field_J.a(this.field_L, param3 + (this.field_m + 14), 10 + this.field_q + param2, this.field_x - 28, this.field_n, 16777215, -1, 0, 0, this.field_J.field_J);
         if (param1 != -11857) {
           field_D = 28;
@@ -311,7 +311,7 @@ final class cf extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

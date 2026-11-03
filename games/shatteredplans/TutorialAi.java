@@ -41,7 +41,7 @@ final class TutorialAi extends LegacyAi {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -122,13 +122,13 @@ final class TutorialAi extends LegacyAi {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_w = null;
         field_t = null;
         field_u = null;
         if (param0) {
-          qr var2 = (qr) null;
-          TutorialAi.a(40, -110, (qr) null);
+          AnimatedPanel var2 = (AnimatedPanel) null;
+          TutorialAi.a(40, -110, (AnimatedPanel) null);
         }
         field_v = null;
     }
@@ -143,7 +143,7 @@ final class TutorialAi extends LegacyAi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 2) {
-            TutorialAi.c(true);
+            TutorialAi.clearStatics(true);
           }
           var3_int = param0.field_x + param0.field_D.length;
           stackIn_5_0 = (var3_int == 0) ? 1 : var3_int;
@@ -158,7 +158,7 @@ final class TutorialAi extends LegacyAi {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class TutorialAi extends LegacyAi {
         }
     }
 
-    final static void a(int param0, int param1, qr param2) {
+    final static void a(int param0, int param1, AnimatedPanel param2) {
         fc var11 = null;
         Sprite var12 = null;
         String var13 = null;
@@ -260,7 +260,7 @@ final class TutorialAi extends LegacyAi {
         Sprite var30Lifetime1Lifetime4;
         Sprite var30Lifetime1Lifetime5;
         try {
-          SliderPainter.a((int[]) null, 0L, (String) null, (String) null, 293, (ub) null, param2, param0, -1);
+          SliderPainter.a((int[]) null, 0L, (String) null, (String) null, 293, (ScrollPane) null, param2, param0, -1);
           if (0 == param0) {
             var11 = DerelictVictoryChecker.field_m;
             var12 = BoundsRect.field_m[0];
@@ -328,7 +328,7 @@ final class TutorialAi extends LegacyAi {
           var7 = param2.field_mb;
           var38.field_j.b(var6, var7, 0, var4, var5);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "cj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

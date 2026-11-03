@@ -5,12 +5,12 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
     static String field_k;
     static int field_j;
     static String field_m;
-    static qr field_l;
+    static AnimatedPanel field_l;
     private TextFieldWidget field_i;
 
-    public final boolean a(int param0) {
+    public final boolean isEmpty(int param0) {
         if (param0 != 16647) {
-          field_l = (qr) null;
+          field_l = (AnimatedPanel) null;
           if (null != this.field_i.field_s) {
             return this.field_i.field_s.length() == 0 ? true : false;
           }
@@ -25,17 +25,17 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         return true;
     }
 
-    final ValidationState a(boolean param0) {
+    final ValidationState computeState(boolean param0) {
         if (!param0) {
-          return this.b(-11196, this.field_i.field_s);
+          return this.computeStateFor(-11196, this.field_i.field_s);
         }
         field_m = (String) null;
-        return this.b(-11196, this.field_i.field_s);
+        return this.computeStateFor(-11196, this.field_i.field_s);
     }
 
-    abstract ValidationState b(int param0, String param1);
+    abstract ValidationState computeStateFor(int param0, String param1);
 
-    abstract String a(boolean param0, String param1);
+    abstract String computeMessageFor(boolean param0, String param1);
 
     final static void a(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6) {
         int incrementValue$4 = 0;
@@ -60,7 +60,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
             field_k = (String) null;
           }
           var7_int = param5 + param4.field_z * param2;
-          var8 = param3 + param0 * gf.field_b;
+          var8 = param3 + param0 * SoftwareRasterizer.field_b;
           while (true) {
             param1--;
             if (param1 < 0) {
@@ -69,13 +69,13 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
             incrementValue$4 = var7_int;
             var7_int++;
             var9 = param4.field_B[incrementValue$4];
-            var10 = gf.field_h[var8];
+            var10 = SoftwareRasterizer.field_h[var8];
             var11 = var9 + var10;
             var9 = (var9 & 16711935) + (var10 & 16711935);
             var10Lifetime1 = (var9 & 16777472) + (-var9 + var11 & 65536);
             incrementValue$5 = var8;
             var8++;
-            gf.field_h[incrementValue$5] = ee.a(-(var10Lifetime1 >>> 8) + var10Lifetime1, var11 - var10Lifetime1);
+            SoftwareRasterizer.field_h[incrementValue$5] = PrivateChatMessage.intOr(-(var10Lifetime1 >>> 8) + var10Lifetime1, var11 - var10Lifetime1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,29 +87,29 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    public final void a(int param0, TextFieldWidget param1) {
+    public final void onEnter(int param0, TextFieldWidget param1) {
         try {
           if (param0 != 4340) {
             TextFieldWidget var4 = (TextFieldWidget) null;
-            this.a(27, (TextFieldWidget) null);
+            this.onEnter(27, (TextFieldWidget) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ml.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ml.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(TextFieldWidget param0, int param1) {
+    public final void onTextChanged(TextFieldWidget param0, int param1) {
         try {
-          this.b(-85);
+          this.notifyChanged(-85);
           if (param1 != 95) {
-            this.c((byte) -44);
+            this.computeMessage((byte) -44);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ml.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ml.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -117,24 +117,24 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         eh var2 = null;
         eh var2Lifetime1;
         if (param0 < 96) {
-          field_l = (qr) null;
-          tg.field_c.b(param1, -43);
+          field_l = (AnimatedPanel) null;
+          tg.field_c.drawFullRaster(param1, -43);
           var2 = wi.field_c;
           if (var2 != null) {
-            var2.a(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
+            var2.draw(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
             return;
           }
           return;
         }
-        tg.field_c.b(param1, -43);
+        tg.field_c.drawFullRaster(param1, -43);
         var2Lifetime1 = wi.field_c;
         if (var2Lifetime1 == null) {
           return;
         }
-        var2Lifetime1.a(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
+        var2Lifetime1.draw(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
     }
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         field_l = null;
         field_m = null;
         if (param0 != -65) {
@@ -143,19 +143,19 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         field_k = null;
     }
 
-    final String c(byte param0) {
+    final String computeMessage(byte param0) {
         if (param0 > 61) {
-          return this.a(false, this.field_i.field_s);
+          return this.computeMessageFor(false, this.field_i.field_s);
         }
         field_k = (String) null;
-        return this.a(false, this.field_i.field_s);
+        return this.computeMessageFor(false, this.field_i.field_s);
     }
 
     TextFieldValidator(TextFieldWidget param0) {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ml.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ml.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

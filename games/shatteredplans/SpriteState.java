@@ -8,7 +8,7 @@ abstract class SpriteState extends DualLinkNode {
     int field_x;
     int field_z;
     static String field_s;
-    static qr field_u;
+    static AnimatedPanel field_u;
     static Sprite field_q;
     int field_w;
     static Sprite field_y;
@@ -16,15 +16,15 @@ abstract class SpriteState extends DualLinkNode {
     int field_p;
 
     final static void a(Archive param0, Archive param1, int param2) {
-        sf.field_d = MusicTrack.a(param0, "", "shattered_plans_intro");
-        wp.field_a = MusicTrack.a(param0, "", "shattered_plans_ingame_two");
-        js.field_i = MusicTrack.a(param0, "", "shattered_plans_ingame");
+        sf.field_d = MusicTrack.load(param0, "", "shattered_plans_intro");
+        wp.field_a = MusicTrack.load(param0, "", "shattered_plans_ingame_two");
+        js.field_i = MusicTrack.load(param0, "", "shattered_plans_ingame");
         hk.field_nb = wp.field_a;
-        PlacementEvent.field_n = MusicTrack.a(param0, "", "shattered_plans_win");
-        wh.field_b = MusicTrack.a(param0, "", "shattered_plans_lose");
-        ValidationState.field_b.field_u.a(param1, sf.field_d, 50, 0, mj.field_Sb);
-        ValidationState.field_b.field_u.a(param1, wp.field_a, 41, 0, mj.field_Sb);
-        ValidationState.field_b.field_u.a(param1, js.field_i, 111, 0, mj.field_Sb);
+        PlacementEvent.field_n = MusicTrack.load(param0, "", "shattered_plans_win");
+        wh.field_b = MusicTrack.load(param0, "", "shattered_plans_lose");
+        ValidationState.field_b.field_u.preparePatches(param1, sf.field_d, 50, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.preparePatches(param1, wp.field_a, 41, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.preparePatches(param1, js.field_i, 111, 0, mj.field_Sb);
         if (param2 < 26) {
           return;
         }
@@ -32,7 +32,7 @@ abstract class SpriteState extends DualLinkNode {
           ValidationState.field_b.field_u.f(256);
           mj.field_Sb = null;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ii.WB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ii.WB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

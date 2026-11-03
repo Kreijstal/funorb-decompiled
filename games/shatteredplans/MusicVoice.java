@@ -31,11 +31,11 @@ final class MusicVoice extends IntrusiveNode {
     static String field_N;
     static String[] field_w;
     static String field_x;
-    static sp field_I;
+    static WidgetStyle field_I;
     static String field_t;
     static Sprite field_n;
 
-    final static FleetMove a(GameState param0, int param1, PacketBuffer param2) {
+    final static FleetMove readFleetMove(GameState param0, int param1, PacketBuffer param2) {
         Star var3 = null;
         RuntimeException var3_ref = null;
         Star var4 = null;
@@ -49,9 +49,9 @@ final class MusicVoice extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = FleetMove.a(param0, param2, 20);
+          var3 = FleetMove.readStar(param0, param2, 20);
           var5 = 21 / ((param1 + 64) / 43);
-          var4 = FleetMove.a(param0, param2, 20);
+          var4 = FleetMove.readStar(param0, param2, 20);
           var6 = param2.readUnsignedShort(-20976);
           stackIn_1_0 = new FleetMove(var3, var4, var6);
           return stackIn_1_0;
@@ -71,7 +71,7 @@ final class MusicVoice extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_w = null;
         field_N = null;
         field_I = null;
@@ -107,7 +107,7 @@ final class MusicVoice extends IntrusiveNode {
           return;
         }
         cg.field_E.setLength(0);
-        em.field_h = 0;
+        ProductionContent.field_h = 0;
     }
 
     MusicVoice() {

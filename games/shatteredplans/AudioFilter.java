@@ -11,12 +11,12 @@ final class AudioFilter {
     static int[][] field_e;
     private static float field_h;
 
-    public static void a() {
+    public static void clearStatics() {
         field_f = (float[][]) null;
         field_e = (int[][]) null;
     }
 
-    final void a(PacketBuffer param0, SoundEnvelope param1) {
+    final void decode(PacketBuffer param0, SoundEnvelope param1) {
         int var3;
         int var4;
         int var5;
@@ -54,7 +54,7 @@ final class AudioFilter {
           }
           if (var4 != 0 ||
             this.field_b[1] != this.field_b[0]) {
-            param1.a(param0);
+            param1.readSegments(param0);
           }
         } else {
           var11 = this.field_b;
@@ -63,7 +63,7 @@ final class AudioFilter {
         }
     }
 
-    final int a(int param0, float param1) {
+    final int computeCoefficients(int param0, float param1) {
         float var5 = 0.0f;
         float var6 = 0.0f;
         int var7 = 0;
@@ -116,7 +116,7 @@ final class AudioFilter {
         return this.field_d[param0] * 2;
     }
 
-    private final static float a(float param0) {
+    private final static float pitchToAngle(float param0) {
         float var1 = 32.70319747924805f * (float)Math.pow(2.0, (double)param0);
         return var1 * 3.1415927410125732f / 11025.0f;
     }
@@ -124,7 +124,7 @@ final class AudioFilter {
     private final float a(int param0, int param1, float param2) {
         float var4 = (float)this.field_a[param0][0][param1] + param2 * (float)(this.field_a[param0][1][param1] - this.field_a[param0][0][param1]);
         var4 = var4 * 0.0001220703125f;
-        return AudioFilter.a(var4);
+        return AudioFilter.pitchToAngle(var4);
     }
 
     AudioFilter() {

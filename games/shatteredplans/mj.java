@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj extends qr {
+final class mj extends AnimatedPanel {
     int field_Qb;
     boolean field_Ub;
     long field_zb;
     int field_Fb;
-    qr field_xb;
+    AnimatedPanel field_xb;
     int field_Wb;
     boolean field_Vb;
     static Sprite[] field_Nb;
     int field_Gb;
-    qr field_Ob;
-    qr field_Mb;
+    AnimatedPanel field_Ob;
+    AnimatedPanel field_Mb;
     static sm[] field_Hb;
     int field_Eb;
     int field_Lb;
     String field_Cb;
     boolean field_Tb;
-    qr field_Jb;
+    AnimatedPanel field_Jb;
     String field_Db;
     static long field_Pb;
     static Sprite field_Kb;
-    qr field_Ab;
+    AnimatedPanel field_Ab;
     static bg field_Rb;
     static byte[][] field_Bb;
     long field_Ib;
@@ -30,15 +30,15 @@ final class mj extends qr {
     static SoundCache field_Sb;
 
     final static void a(int param0, boolean param1) {
-        if (dn.field_k != null) {
-          dk.a((byte) 54, dn.field_k);
+        if (DualLinkDequeSequence.field_k != null) {
+          dk.a((byte) 54, DualLinkDequeSequence.field_k);
         }
         if (DerelictVictoryChecker.field_m != null) {
           DerelictVictoryChecker.field_m.a(13505, param1);
           if (param0 == 0) {
-            r.a((byte) -82, param1);
+            UrlLoader.a((byte) -82, param1);
             if (null != DialogRoot.field_G) {
-              DialogRoot.field_G.b(param1, -68);
+              DialogRoot.field_G.drawFullRaster(param1, -68);
             }
             ho.a(param1, param0 + 8323199);
             return;
@@ -46,9 +46,9 @@ final class mj extends qr {
           return;
         }
         if (param0 == 0) {
-          r.a((byte) -82, param1);
+          UrlLoader.a((byte) -82, param1);
           if (null != DialogRoot.field_G) {
-            DialogRoot.field_G.b(param1, -68);
+            DialogRoot.field_G.drawFullRaster(param1, -68);
           }
           ho.a(param1, param0 + 8323199);
           return;
@@ -104,7 +104,7 @@ final class mj extends qr {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -119,11 +119,11 @@ final class mj extends qr {
           var5 = (CharSequence) ((Object) this.field_Db);
           ji.a(var5, true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mj.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mj.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_Rb = null;
         if (param0 == -4923) {
           field_yb = null;
@@ -157,14 +157,14 @@ final class mj extends qr {
             var8 = param5[1].field_o;
             param5[0].drawTinted(param4, param3, param2);
             param5[2].drawTinted(-var7 + (param4 + param0), param3, param2);
-            gf.a(fc.field_g);
-            gf.i(var6_int + param4, param3, param4 + (param0 - var7), param5[1].field_p + param3);
+            SoftwareRasterizer.saveClip(fc.field_g);
+            SoftwareRasterizer.intersectClip(var6_int + param4, param3, param4 + (param0 - var7), param5[1].field_p + param3);
             var9 = param4 + var6_int;
             var10 = param0 + param4 - var7;
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
               param5[1].drawTinted(param4, param3, param2);
             }
-            gf.b(fc.field_g);
+            SoftwareRasterizer.restoreClip(fc.field_g);
             return;
           }
           return;
@@ -178,7 +178,7 @@ final class mj extends qr {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -186,12 +186,12 @@ final class mj extends qr {
         if (param0 < -58) {
           return !this.isSecondaryLinked((byte) 96) ? true : false;
         }
-        mj.g(-58);
+        mj.clearStatics(-58);
         return !this.isSecondaryLinked((byte) 96) ? true : false;
     }
 
     mj(String param0, String param1, long param2) {
-        super(0L, (qr) null);
+        super(0L, (AnimatedPanel) null);
         CharSequence var6 = null;
         try {
           this.field_Db = param0;
@@ -200,7 +200,7 @@ final class mj extends qr {
           var6 = (CharSequence) ((Object) this.field_Db);
           ji.a(var6, true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

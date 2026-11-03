@@ -8,25 +8,25 @@ final class pl {
     final static void a(boolean param0, byte param1) {
         if (param1 != -26) {
           field_a = (String) null;
-          if (bq.field_h == null) {
+          if (IndexedSpriteState.field_h == null) {
             return;
           }
-          if (bq.field_h.c(param0, -1)) {
-            bq.field_h = null;
+          if (IndexedSpriteState.field_h.c(param0, -1)) {
+            IndexedSpriteState.field_h = null;
             return;
           }
           return;
         }
-        if (bq.field_h == null) {
+        if (IndexedSpriteState.field_h == null) {
           return;
         }
-        if (bq.field_h.c(param0, -1)) {
-          bq.field_h = null;
+        if (IndexedSpriteState.field_h.c(param0, -1)) {
+          IndexedSpriteState.field_h = null;
           return;
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         if (param0 != 7526) {
           pl.a(false, (byte) -123);

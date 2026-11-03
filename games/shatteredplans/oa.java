@@ -27,23 +27,23 @@ final class oa {
             param0 = param0 + param4;
             param4 = 0;
           }
-          if (gf.field_k < param0 + param4) {
-            param0 = gf.field_k - param4;
+          if (SoftwareRasterizer.field_k < param0 + param4) {
+            param0 = SoftwareRasterizer.field_k - param4;
           }
-          if (gf.field_b < param2 + param1) {
-            param2 = gf.field_b - param1;
+          if (SoftwareRasterizer.field_b < param2 + param1) {
+            param2 = SoftwareRasterizer.field_b - param1;
           }
           param1--;
           var5_int = param0 + param4;
           var6 = param4;
           var7 = -15 % ((6 - param3) / 48);
           while (var5_int > var6) {
-            var8 = param1 + gf.field_b * var6;
+            var8 = param1 + SoftwareRasterizer.field_b * var6;
             for (var9 = param2; var9 > 0; var9--) {
               var8++;
-              var10 = gf.field_h[var8];
+              var10 = SoftwareRasterizer.field_h[var8];
               var10 = (var10 >> 2 & 4144959) + (8355711 & var10 >> 1);
-              gf.field_h[var8] = var10;
+              SoftwareRasterizer.field_h[var8] = var10;
             }
             var6++;
           }
@@ -51,7 +51,7 @@ final class oa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var5), "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var5), "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class oa {
           int var3 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             if (param0 != 0) {
-              oa.b(-14);
+              oa.clearStatics(-14);
             }
             if (TertiaryLinkNode.field_o != null) {
               TertiaryLinkNode.field_o.e(param0 - 16363);
@@ -86,7 +86,7 @@ final class oa {
               }
             }
           } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "oa.C(" + param0 + ')');
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "oa.C(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -99,7 +99,7 @@ final class oa {
         throw new IllegalStateException();
     }
 
-    final static char a(int param0, byte param1) {
+    final static char cp1252ToChar(int param0, byte param1) {
         int var3 = 0;
         int var2 = 255 & param1;
         if (var2 == 0) {
@@ -126,7 +126,7 @@ final class oa {
         return ao.a((byte) 97, param0, param2, 1, param3);
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         if (param0 <= 7) {
           return;

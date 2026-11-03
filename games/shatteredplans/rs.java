@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rs extends qr {
+final class rs extends AnimatedPanel {
     static IntrusiveDeque field_Bb;
-    private qr field_Ab;
-    private qr field_xb;
+    private AnimatedPanel field_Ab;
+    private AnimatedPanel field_xb;
     static int field_Fb;
-    static vd field_Db;
+    static MenuComponent field_Db;
     static String field_yb;
     static String field_zb;
     static th field_Cb;
-    static qr field_Eb;
+    static AnimatedPanel field_Eb;
 
-    private rs(long param0, qr param1, qr param2, String param3) {
-        super(param0, (qr) null);
+    private rs(long param0, AnimatedPanel param1, AnimatedPanel param2, String param3) {
+        super(param0, (AnimatedPanel) null);
         try {
-          this.field_xb = new qr(0L, param1);
-          this.field_Ab = new qr(0L, param2);
+          this.field_xb = new AnimatedPanel(0L, param1);
+          this.field_Ab = new AnimatedPanel(0L, param2);
           this.field_Ab.field_z = param3;
-          this.a(4, this.field_xb);
-          this.a(4, this.field_Ab);
-          this.e((byte) -123);
+          this.addChild(4, this.field_xb);
+          this.addChild(4, this.field_Ab);
+          this.markDirty((byte) -123);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,13 +31,13 @@ final class rs extends qr {
     }
 
     private final void b(int param0, byte param1) {
-        this.field_xb.a(this.field_xb.e(false), this.field_mb, (byte) 69, 0, 0);
+        this.field_xb.setTarget(this.field_xb.measureWidthUnbounded(false), this.field_mb, (byte) 69, 0, 0);
         int var3 = this.field_xb.field_K + param0;
-        this.field_Ab.a(-var3 + this.field_K, this.field_mb, (byte) 112, 0, var3);
+        this.field_Ab.setTarget(-var3 + this.field_K, this.field_mb, (byte) 112, 0, var3);
         int var4 = 8 / ((23 - param1) / 43);
     }
 
-    public static void h(int param0) {
+    public static void clearStatics(int param0) {
         field_yb = null;
         field_zb = null;
         field_Eb = null;
@@ -53,14 +53,14 @@ final class rs extends qr {
         field_Db = null;
     }
 
-    rs(long param0, Sprite param1, Sprite param2, int param3, qr param4, String param5) {
-        this(param0, (qr) null, param4, param5);
+    rs(long param0, Sprite param1, Sprite param2, int param3, AnimatedPanel param4, String param5) {
+        this(param0, (AnimatedPanel) null, param4, param5);
         try {
           this.field_xb.field_pb = param2;
           this.field_xb.field_G = param3;
           this.field_xb.field_Z = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class rs extends qr {
           if (param0 < -70) {
             return;
           }
-          field_Db = (vd) null;
+          field_Db = (MenuComponent) null;
           return;
         }
         var1 = im.field_c;
@@ -80,20 +80,20 @@ final class rs extends qr {
           im.field_c = null;
         }
         if (param0 >= -70) {
-          field_Db = (vd) null;
+          field_Db = (MenuComponent) null;
         }
     }
 
     final int c(int param0, int param1) {
         if (param1 == 0) {
-          return this.field_xb.e(false) + (param0 + this.field_Ab.e(false));
+          return this.field_xb.measureWidthUnbounded(false) + (param0 + this.field_Ab.measureWidthUnbounded(false));
         }
         field_Fb = 86;
-        return this.field_xb.e(false) + (param0 + this.field_Ab.e(false));
+        return this.field_xb.measureWidthUnbounded(false) + (param0 + this.field_Ab.measureWidthUnbounded(false));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.a(param0, param4, (byte) 42, param5, param1);
+        this.setTarget(param0, param4, (byte) 42, param5, param1);
         int var7 = 89 % ((1 - param2) / 60);
         this.b(param3, (byte) -34);
     }

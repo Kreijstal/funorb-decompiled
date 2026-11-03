@@ -31,7 +31,7 @@ class QuaternaryLinkNode extends TertiaryLinkNode {
           var7 = var8;
           var3 = var7;
           if (param1 != 53) {
-            QuaternaryLinkNode.e(false);
+            QuaternaryLinkNode.clearStatics(false);
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             var5 = param0.charAt(var4);
@@ -59,24 +59,24 @@ class QuaternaryLinkNode extends TertiaryLinkNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void f(byte param0) {
+    final void unlinkQuaternary(byte param0) {
         if (this.field_u == null) {
           return;
         }
         this.field_u.field_x = this.field_x;
         this.field_x.field_u = this.field_u;
         if (param0 != -62) {
-          this.f((byte) -89);
+          this.unlinkQuaternary((byte) -89);
         }
         this.field_x = null;
         this.field_u = null;
     }
 
-    public static void e(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_v = null;
         if (!param0) {
           CharSequence var2 = (CharSequence) null;
@@ -87,7 +87,7 @@ class QuaternaryLinkNode extends TertiaryLinkNode {
     protected QuaternaryLinkNode() {
     }
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int floorDiv(byte param0, int param1, int param2) {
         if (param0 > -67) {
           field_v = (String) null;
         }

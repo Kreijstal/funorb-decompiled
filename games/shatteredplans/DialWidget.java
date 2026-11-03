@@ -19,9 +19,9 @@ final class DialWidget extends FocusableWidget {
         return wm.field_d[DebouncedValidator.field_g - 1];
     }
 
-    final static hb a(int param0, QuaternaryNodeList param1) {
+    final static NodeSequence a(int param0, QuaternaryNodeList param1) {
         RuntimeException var2 = null;
-        vf stackIn_3_0 = null;
+        QuaternaryListSequence stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -30,8 +30,8 @@ final class DialWidget extends FocusableWidget {
           if (param0 >= -102) {
             DialWidget.h(-96);
           }
-          stackIn_3_0 = new vf(param1);
-          return (hb) ((Object) stackIn_3_0);
+          stackIn_3_0 = new QuaternaryListSequence(param1);
+          return (NodeSequence) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -42,13 +42,13 @@ final class DialWidget extends FocusableWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static gm a(int param0, qf param1, int param2) {
+    final static SoundPlayback a(int param0, qf param1, int param2) {
         RuntimeException var3 = null;
-        gm stackIn_3_0 = null;
+        SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -69,11 +69,11 @@ final class DialWidget extends FocusableWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_K = null;
         field_I = null;
         field_J = null;
@@ -82,7 +82,7 @@ final class DialWidget extends FocusableWidget {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePress(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -94,7 +94,7 @@ final class DialWidget extends FocusableWidget {
         int var12 = 0;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (!super.a(param0, param1, (byte) 98, param3, param4, param5, param6)) {
+          if (!super.handlePress(param0, param1, (byte) 98, param3, param4, param5, param6)) {
             if (param2 <= 95) {
               DialWidget.i(34);
             }
@@ -131,7 +131,7 @@ final class DialWidget extends FocusableWidget {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -228,9 +228,9 @@ final class DialWidget extends FocusableWidget {
                 }
               } else {
                 var8_ref_mj = new mj(var20, var21, var3_long);
-                ShatteredPlansClient.field_H.a(var3_long, var8_ref_mj, true);
+                ShatteredPlansClient.field_H.put(var3_long, var8_ref_mj, true);
               }
-              var8_ref_mj.field_zb = pr.a(14274) - (long)((PacketBuffer) ((Object) var1)).readInt(16711680);
+              var8_ref_mj.field_zb = pr.currentTimeMillis(14274) - (long)((PacketBuffer) ((Object) var1)).readInt(16711680);
               var8_ref_mj.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
               var10 = ((PacketBuffer) ((Object) var1)).readVariableInt(false);
               var8_ref_mj.field_Fb = var10 >> 1;
@@ -274,10 +274,10 @@ final class DialWidget extends FocusableWidget {
             }
             if (8 == var2) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
-              var4 = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3));
+              var4 = (fb) (IsaacBackedRandom.field_b.get(65280, (long)var3));
               if (var4 == null) {
-                var4 = new fb(em.field_k);
-                IsaacBackedRandom.field_b.a((long)var3, var4, true);
+                var4 = new fb(ProductionContent.field_k);
+                IsaacBackedRandom.field_b.put((long)var3, var4, true);
               }
               mi.a((byte) -89, var4, var1, true);
               ei.a(0, var4);
@@ -286,7 +286,7 @@ final class DialWidget extends FocusableWidget {
             if (9 == var2) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
               var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-98);
-              var32 = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3Lifetime4));
+              var32 = (fb) (IsaacBackedRandom.field_b.get(65280, (long)var3Lifetime4));
               if (var32 == null) {
                 return;
               }
@@ -313,7 +313,7 @@ final class DialWidget extends FocusableWidget {
               if (var2 == 13) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-60);
-                var30_ref = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3Lifetime5));
+                var30_ref = (fb) (IsaacBackedRandom.field_b.get(65280, (long)var3Lifetime5));
                 if (var30_ref == null) {
                   return;
                 }
@@ -339,7 +339,7 @@ final class DialWidget extends FocusableWidget {
                     var7 = ik.a(-121, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new mj(var26, var27, var3_longLifetime2);
-                      qp.field_w.a(var3_longLifetime2, var7, true);
+                      qp.field_w.put(var3_longLifetime2, var7, true);
                       np.field_a.field_Lb = np.field_a.field_Lb + 1;
                     }
                     var7.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
@@ -376,7 +376,7 @@ final class DialWidget extends FocusableWidget {
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
                     if (var3Lifetime5 != 0) {
-                      sf.field_e = pr.a(14274) + (long)var3Lifetime5;
+                      sf.field_e = pr.currentTimeMillis(14274) + (long)var3Lifetime5;
                       return;
                     }
                     sf.field_e = 0L;
@@ -433,7 +433,7 @@ final class DialWidget extends FocusableWidget {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
-            var18_ref = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3Lifetime6));
+            var18_ref = (fb) (IsaacBackedRandom.field_b.get(65280, (long)var3Lifetime6));
             var24 = var18_ref;
             if (var24 == null) {
               return;
@@ -452,7 +452,7 @@ final class DialWidget extends FocusableWidget {
             var3_ref_mj.unlinkSecondary(16);
             var3_ref_mj = (mj) (uo.field_a.nextForward((byte) -71));
           }
-          var3_ref_mjLifetime1 = (mj) (ShatteredPlansClient.field_H.c((byte) -109));
+          var3_ref_mjLifetime1 = (mj) (ShatteredPlansClient.field_H.startTraversal((byte) -109));
           while (var3_ref_mjLifetime1 != null) {
             if (var3_ref_mjLifetime1.field_Tb ||
               var3_ref_mjLifetime1.field_Vb) {
@@ -463,17 +463,17 @@ final class DialWidget extends FocusableWidget {
               }
               WidgetContainer.a((byte) -60, var3_ref_mjLifetime1);
             }
-            var3_ref_mjLifetime1 = (mj) (ShatteredPlansClient.field_H.b((byte) -107));
+            var3_ref_mjLifetime1 = (mj) (ShatteredPlansClient.field_H.nextInTraversal((byte) -107));
           }
           if (var2 == 1 &&
             null != np.field_a) {
-            la.field_h = np.field_a.field_Xb;
+            RichTextLayout.field_h = np.field_a.field_Xb;
           }
           if (4 != var2) {
             np.field_a = null;
           } else {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
-            np.field_a = new fb(em.field_k);
+            np.field_a = new fb(ProductionContent.field_k);
             np.field_a.setSecondaryKey(16, (long)var3Lifetime1);
             mi.a((byte) -89, np.field_a, var1, false);
             sf.field_e = 0L;
@@ -483,7 +483,7 @@ final class DialWidget extends FocusableWidget {
             he.field_p = null;
           } else {
             if (he.field_p == null) {
-              he.field_p = new fb(em.field_k);
+              he.field_p = new fb(ProductionContent.field_k);
             }
           }
           if (var2 != 3) {
@@ -503,7 +503,7 @@ final class DialWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "rp.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "rp.A(" + param0 + ')');
         }
     }
 
@@ -528,7 +528,7 @@ final class DialWidget extends FocusableWidget {
           var7 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             try {
-              var3 = (String) (ll.a("getcookies", param2, (byte) 70));
+              var3 = (String) (ll.callJavaScript("getcookies", param2, (byte) 70));
               var4 = so.a(var3, ';', -116);
               var5 = 0;
               if (param0) {
@@ -566,7 +566,7 @@ final class DialWidget extends FocusableWidget {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh extends ek implements ButtonListener {
+final class eh extends ArrayWidgetGroup implements ButtonListener {
     static Sprite[] field_L;
     static int field_C;
     private wd field_J;
@@ -11,18 +11,18 @@ final class eh extends ek implements ButtonListener {
     static boolean field_P;
     static int field_Q;
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_M.field_y = this.field_J.a((byte) 127).c(100) == CachedArchiveSource.field_g ? true : false;
+          super.updateHover(param0, param1, param2, param3);
+          this.field_M.field_y = this.field_J.getValidationSource((byte) 127).getState(100) == CachedArchiveSource.field_g ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "eh.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eh.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static hb a(int param0, TertiaryNodeList param1) {
+    final static NodeSequence a(int param0, TertiaryNodeList param1) {
         RuntimeException var2 = null;
-        pd stackIn_3_0 = null;
+        TertiaryListSequence stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -31,8 +31,8 @@ final class eh extends ek implements ButtonListener {
           if (param0 != 25) {
             field_N = (String) null;
           }
-          stackIn_3_0 = new pd(param1);
-          return (hb) ((Object) stackIn_3_0);
+          stackIn_3_0 = new TertiaryListSequence(param1);
+          return (NodeSequence) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -43,11 +43,11 @@ final class eh extends ek implements ButtonListener {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStatics(int param0) {
         field_N = null;
         field_I = null;
         field_L = null;
@@ -56,27 +56,27 @@ final class eh extends ek implements ButtonListener {
 
     final void h(int param0) {
         int var2 = 250;
-        this.field_J.a(this.field_n + 20 - 25 >> 1, 25, (byte) 118, -var2 + this.field_x >> 1, 140);
-        this.field_M.a((this.field_n - 10 >> 1) + 2, 30, (byte) 103, 140 + ((this.field_x - var2 >> 1) + 10), 100);
+        this.field_J.setBounds(this.field_n + 20 - 25 >> 1, 25, (byte) 118, -var2 + this.field_x >> 1, 140);
+        this.field_M.setBounds((this.field_n - 10 >> 1) + 2, 30, (byte) 103, 140 + ((this.field_x - var2 >> 1) + 10), 100);
         int var3 = -95 / ((param0 + 31) / 62);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
         EmailValidator.field_x.drawString(kr.field_c, this.field_m + (param3 + 4), this.field_q + (param2 + (EmailValidator.field_x.field_J + 4)), 16777215, -1);
     }
 
     public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
-        if (this.field_J.a((byte) 111).c(-123) != CachedArchiveSource.field_g) {
+        if (this.field_J.getValidationSource((byte) 111).getState(-123) != CachedArchiveSource.field_g) {
           return;
         }
         try {
-          vf.a(this.field_J.l(88), this.field_J.f((byte) 96), 4, this.field_J.d(false));
+          QuaternaryListSequence.a(this.field_J.l(88), this.field_J.f((byte) 96), 4, this.field_J.d(false));
           if (param1 != 6) {
             field_Q = -62;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "eh.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eh.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class eh extends ek implements ButtonListener {
         this.field_M = new FocusableWidget(gq.field_b, (WidgetListener) (this));
         this.field_B = new UiWidget[]{(UiWidget) ((Object) this.field_J), (UiWidget) ((Object) this.field_M)};
         this.field_M.field_p = (WidgetPainter) ((Object) new qp());
-        this.d((byte) -118);
+        this.reapplyBounds((byte) -118);
     }
 
     static {

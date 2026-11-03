@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kh extends qr {
-    private qr field_Bb;
-    static qr field_Ib;
+final class kh extends AnimatedPanel {
+    private AnimatedPanel field_Bb;
+    static AnimatedPanel field_Ib;
     long field_Gb;
     static int field_Mb;
     static String field_Db;
-    private qr[] field_Hb;
-    private qr field_Ab;
+    private AnimatedPanel[] field_Hb;
+    private AnimatedPanel field_Ab;
     static volatile boolean field_Lb;
     static String field_Eb;
-    private qr field_Ob;
+    private AnimatedPanel field_Ob;
     private int field_yb;
-    static qr field_Nb;
-    private qr field_Cb;
+    static AnimatedPanel field_Nb;
+    private AnimatedPanel field_Cb;
     static String field_Kb;
-    private qr field_Fb;
+    private AnimatedPanel field_Fb;
     private rs field_zb;
     private StringBuilder field_xb;
-    private qr field_Jb;
+    private AnimatedPanel field_Jb;
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_Nb = null;
         field_Kb = null;
         field_Ib = null;
@@ -32,7 +32,7 @@ final class kh extends qr {
         }
     }
 
-    kh(int param0, int param1, int param2, int param3, int param4, qr param5, qr param6, qr param7, qr param8, rs param9, qr param10, String param11, long param12) {
+    kh(int param0, int param1, int param2, int param3, int param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7, AnimatedPanel param8, rs param9, AnimatedPanel param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
@@ -45,7 +45,7 @@ final class kh extends qr {
         rs stackIn_8_1;
         rs stackIn_8_2;
         String stackIn_8_5;
-        qr stackIn_14_0 = null;
+        AnimatedPanel stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -64,7 +64,7 @@ final class kh extends qr {
         String stackIn_70_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var15_int = 0;
-        qr[] var15 = null;
+        AnimatedPanel[] var15 = null;
         RuntimeException var15_ref = null;
         int var16 = 0;
         int var17 = 0;
@@ -77,7 +77,7 @@ final class kh extends qr {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        qr[] var28 = null;
+        AnimatedPanel[] var28 = null;
         Object stackIn_6_0Lifetime1;
         Object stackIn_8_0Lifetime1;
         rs stackIn_8_1Lifetime1;
@@ -102,25 +102,25 @@ final class kh extends qr {
         this.field_yb = -2;
         try {
           this.field_Gb = param12;
-          this.field_Jb = new qr(0L, param6, bd.field_F.toUpperCase());
+          this.field_Jb = new AnimatedPanel(0L, param6, bd.field_F.toUpperCase());
           this.field_Jb.field_y = 1;
-          this.a(4, this.field_Jb);
-          this.field_Ob = new qr(0L, param7);
-          this.field_Jb.a(4, this.field_Ob);
-          this.field_Cb = new qr(0L, (qr) null);
-          this.a(4, this.field_Cb);
+          this.addChild(4, this.field_Jb);
+          this.field_Ob = new AnimatedPanel(0L, param7);
+          this.field_Jb.addChild(4, this.field_Ob);
+          this.field_Cb = new AnimatedPanel(0L, (AnimatedPanel) null);
+          this.addChild(4, this.field_Cb);
           if (param11 != null) {
-            this.field_Ab = new qr(0L, param8, WidgetTheme.field_a);
+            this.field_Ab = new AnimatedPanel(0L, param8, WidgetTheme.field_a);
             this.field_Ab.field_y = 1;
             this.field_Ab.field_x = 11184810;
-            this.field_Cb.a(4, this.field_Ab);
-            this.field_Fb = new qr(0L, param8, dn.field_j);
+            this.field_Cb.addChild(4, this.field_Ab);
+            this.field_Fb = new AnimatedPanel(0L, param8, DualLinkDequeSequence.field_j);
             this.field_Fb.field_y = 1;
             this.field_Fb.field_x = 11184810;
-            this.field_Cb.a(4, this.field_Fb);
-            this.field_Bb = new qr(0L, param8);
+            this.field_Cb.addChild(4, this.field_Fb);
+            this.field_Bb = new AnimatedPanel(0L, param8);
             this.field_Bb.field_x = 16764006;
-            this.field_Cb.a(4, this.field_Bb);
+            this.field_Cb.addChild(4, this.field_Bb);
             this.field_Bb.field_u = "|";
             if (!(5 > CellVertex.field_i) ||
               !(bs.field_b < 2)) {
@@ -137,7 +137,7 @@ final class kh extends qr {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
-                    stackIn_8_5 = t.field_e;
+                    stackIn_8_5 = StarLinkPlanner.field_e;
                     break regionExit1;
                   }
                 }
@@ -147,25 +147,25 @@ final class kh extends qr {
                 stackIn_8_5 = SolMapGenerator.field_n;
               }
               this.field_zb = new rs(stackIn_6_3, stackIn_6_4, stackIn_8_5);
-              this.field_Cb.a(4, this.field_zb);
+              this.field_Cb.addChild(4, this.field_zb);
             }
-            var28 = new qr[3];
+            var28 = new AnimatedPanel[3];
             var15 = var28;
-            var28[0] = new qr(0L, (qr) null);
-            this.field_Cb.a(4, var28[0]);
-            var28[1] = new qr(0L, (qr) null);
-            this.field_Cb.a(4, var28[1]);
-            var28[2] = new qr(0L, (qr) null);
-            this.field_Cb.a(4, var28[2]);
-            this.field_Hb = new qr[cb.field_j];
+            var28[0] = new AnimatedPanel(0L, (AnimatedPanel) null);
+            this.field_Cb.addChild(4, var28[0]);
+            var28[1] = new AnimatedPanel(0L, (AnimatedPanel) null);
+            this.field_Cb.addChild(4, var28[1]);
+            var28[2] = new AnimatedPanel(0L, (AnimatedPanel) null);
+            this.field_Cb.addChild(4, var28[2]);
+            this.field_Hb = new AnimatedPanel[cb.field_j];
             for (var16 = 0; var16 < cb.field_j; var16++) {
               if (null != FullscreenFocusCanvas.field_f[var16]) {
-                this.field_Hb[var16] = new qr(0L, param10, FullscreenFocusCanvas.field_f[var16]);
+                this.field_Hb[var16] = new AnimatedPanel(0L, param10, FullscreenFocusCanvas.field_f[var16]);
                 this.field_Hb[var16].field_y = 0;
                 stackIn_14_0 = this.field_Hb[var16];
                 stackIn_15_1 = (param11 != null);
                 stackIn_14_0.field_s = stackIn_15_1;
-                this.field_Cb.a(4, this.field_Hb[var16]);
+                this.field_Cb.addChild(4, this.field_Hb[var16]);
               }
             }
             this.field_xb = new StringBuilder(12);
@@ -187,7 +187,7 @@ final class kh extends qr {
             }
             for (var17Lifetime4 = 0; var17Lifetime4 < cb.field_j; var17Lifetime4++) {
               if (this.field_Hb[var17Lifetime4] != null) {
-                var18 = this.field_Hb[var17Lifetime4].e(false);
+                var18 = this.field_Hb[var17Lifetime4].measureWidthUnbounded(false);
                 if (var16Lifetime2 < var18) {
                   var16Lifetime2 = var18;
                 }
@@ -228,7 +228,7 @@ final class kh extends qr {
               var17Lifetime5 = var18Lifetime5;
             }
             var19 = 3 * var16Lifetime2 + 26;
-            var20 = this.field_Jb.e(false);
+            var20 = this.field_Jb.measureWidthUnbounded(false);
             if (var20 > var19) {
               var19 = var20;
             }
@@ -238,49 +238,49 @@ final class kh extends qr {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Jb.a(var19 + 26, 24, (byte) 43, 0, 0);
-            this.field_Ob.a(15, 15, (byte) 72, 5, -20 + this.field_Jb.field_K);
+            this.field_Jb.setTarget(var19 + 26, 24, (byte) 43, 0, 0);
+            this.field_Ob.setTarget(15, 15, (byte) 72, 5, -20 + this.field_Jb.field_K);
             var21 = 10;
-            this.field_Ab.a(var19, cr.field_c * 2, (byte) 114, var21, 13);
+            this.field_Ab.setTarget(var19, cr.field_c * 2, (byte) 114, var21, 13);
             var21 = var21 + cr.field_c * 2;
-            this.field_Fb.a(var19, cr.field_c * 2, (byte) 96, var21, 13);
+            this.field_Fb.setTarget(var19, cr.field_c * 2, (byte) 96, var21, 13);
             var21 = var21 + (cr.field_c * 2 + 10);
-            this.field_Bb.a(0, cr.field_c, (byte) 80, var21, 0);
+            this.field_Bb.setTarget(0, cr.field_c, (byte) 80, var21, 0);
             var21 = var21 + (cr.field_c + 10);
             if (this.field_zb != null) {
               var20Lifetime3 = this.field_zb.c(4, 0);
               this.field_zb.a(var20Lifetime3, 13 + (var19 - var20Lifetime3) / 2, -101, 4, cr.field_c, var21);
               var21 = var21 + (cr.field_c + 10);
             }
-            var28[0].a(var16Lifetime2, var17Lifetime5, (byte) 108, var21, 13);
-            var28[1].a(var16Lifetime2, var17Lifetime5, (byte) 65, var21, 13 + var16Lifetime2 + 13);
-            var28[2].a(var16Lifetime2, var17Lifetime5, (byte) 73, var21, 39 + var16Lifetime2 * 2);
+            var28[0].setTarget(var16Lifetime2, var17Lifetime5, (byte) 108, var21, 13);
+            var28[1].setTarget(var16Lifetime2, var17Lifetime5, (byte) 65, var21, 13 + var16Lifetime2 + 13);
+            var28[2].setTarget(var16Lifetime2, var17Lifetime5, (byte) 73, var21, 39 + var16Lifetime2 * 2);
             var22 = var21;
-            this.field_Cb.a(13 + var19 + 13, var17Lifetime5 + var22 + 10, (byte) 51, 24, 0);
+            this.field_Cb.setTarget(13 + var19 + 13, var17Lifetime5 + var22 + 10, (byte) 51, 24, 0);
             this.field_Cb.field_F = Wormhole.a(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
             var23 = 13 + (13 + var19);
             var24 = var17Lifetime5 + (24 + var22 + 10);
             var25 = uh.a(-47, param0, var23, param2);
             var26 = uq.a(param3, 0, var24, param1);
-            this.a(var23, var24, (byte) 84, var26, var25);
+            this.setTarget(var23, var24, (byte) 84, var26, var25);
             return;
           }
-          this.field_Ab = new qr(0L, param8, mk.field_g);
+          this.field_Ab = new AnimatedPanel(0L, param8, mk.field_g);
           this.field_Ab.field_y = 1;
           this.field_Ab.field_x = 11184810;
-          this.field_Cb.a(4, this.field_Ab);
+          this.field_Cb.addChild(4, this.field_Ab);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Ab.field_nb.lineCount(this.field_Ab.field_z, var15_int);
-          this.field_Ab.a(var15_int, cr.field_c * var17Lifetime1, (byte) 60, var16Lifetime1, 13);
+          this.field_Ab.setTarget(var15_int, cr.field_c * var17Lifetime1, (byte) 60, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + cr.field_c * var17Lifetime1;
-          this.field_Cb.a(var15_int + 26, var16Lifetime1 + 10, (byte) 77, 24, 0);
+          this.field_Cb.setTarget(var15_int + 26, var16Lifetime1 + 10, (byte) 77, 24, 0);
           this.field_Cb.field_F = Wormhole.a(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
           var18Lifetime1 = 13 + (13 + var15_int);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = uh.a(-107, param0, var18Lifetime1, param2);
           var21Lifetime1 = uq.a(param3, 0, var19Lifetime1, param1);
-          this.a(var18Lifetime1, var19Lifetime1, (byte) 92, var21Lifetime1, var20Lifetime1);
+          this.setTarget(var18Lifetime1, var19Lifetime1, (byte) 92, var21Lifetime1, var20Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -328,12 +328,12 @@ final class kh extends qr {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
-    private final int a(qr param0, qr param1, String param2, int param3, int param4, int param5) {
-        qr var7 = null;
+    private final int a(AnimatedPanel param0, AnimatedPanel param1, String param2, int param3, int param4, int param5) {
+        AnimatedPanel var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
         int stackIn_1_0 = 0;
@@ -346,10 +346,10 @@ final class kh extends qr {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new qr(0L, param0, 0, param5, param3, 24, param2);
+          var7 = new AnimatedPanel(0L, param0, 0, param5, param3, 24, param2);
           var8 = -24 % ((54 - param4) / 55);
           param5 += 32;
-          param1.a(4, var7);
+          param1.addChild(4, var7);
           stackIn_1_0 = param5;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -374,7 +374,7 @@ final class kh extends qr {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -383,8 +383,8 @@ final class kh extends qr {
           return;
         }
         us.a(param1, param0);
-        if (dn.field_k != null) {
-          dk.a((byte) 121, dn.field_k);
+        if (DualLinkDequeSequence.field_k != null) {
+          dk.a((byte) 121, DualLinkDequeSequence.field_k);
         }
     }
 
@@ -393,11 +393,11 @@ final class kh extends qr {
         if (param0 != -67) {
           kh.a(false, false);
         }
-        SecondaryNodeDequeIterator.field_b = pr.a(param0 + 14341) + 15000L;
-        return gm.field_i == 11 ? true : false;
+        SecondaryNodeDequeIterator.field_b = pr.currentTimeMillis(param0 + 14341) + 15000L;
+        return SoundPlayback.field_i == 11 ? true : false;
     }
 
-    private final int a(byte param0, qr param1, qr param2, int param3, int param4) {
+    private final int a(byte param0, AnimatedPanel param1, AnimatedPanel param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -412,9 +412,9 @@ final class kh extends qr {
           param3 += 8;
           var6_int = param2.field_nb.textHeight(param2.field_z, param4 - 2 * param2.field_kb, param2.field_Y);
           var7 = -13 % ((param0 + 85) / 38);
-          param2.a(param4, var6_int, (byte) 91, param3, 0);
+          param2.setTarget(param4, var6_int, (byte) 91, param3, 0);
           param3 = param3 + (0 + var6_int);
-          param1.a(4, param2);
+          param1.addChild(4, param2);
           stackIn_1_0 = param3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -433,7 +433,7 @@ final class kh extends qr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -462,7 +462,7 @@ final class kh extends qr {
         int var3 = 0;
         rs stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        qr stackIn_15_0 = null;
+        AnimatedPanel stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -505,11 +505,11 @@ final class kh extends qr {
 
     final boolean i(int param0) {
         int discarded$1 = 0;
-        qr var3;
+        AnimatedPanel var3;
         boolean stackIn_6_0 = false;
         if (param0 > -51) {
-          var3 = (qr) null;
-          discarded$1 = this.a((byte) 10, (qr) null, (qr) null, -105, 9);
+          var3 = (AnimatedPanel) null;
+          discarded$1 = this.a((byte) 10, (AnimatedPanel) null, (AnimatedPanel) null, -105, 9);
         }
         stackIn_6_0 = (null != this.field_zb) && (this.field_zb.field_bb);
         return stackIn_6_0;

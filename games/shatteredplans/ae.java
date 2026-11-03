@@ -180,7 +180,7 @@ final class ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "ae.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "ae.A(" + param0 + ')');
         }
     }
 
@@ -206,13 +206,13 @@ final class ae {
         Throwable decompiledCaughtException = null;
         Object var2 = null;
         var1 = 59 / ((param0 + 53) / 32);
-        var2 = pd.field_j;
+        var2 = TertiaryListSequence.field_j;
         synchronized (var2) {
           ql.field_q = ql.field_q + 1;
           AllianceExpiredEvent.field_n = v.field_d;
-          pd.field_k = aj.field_f;
+          TertiaryListSequence.field_k = aj.field_f;
           bb.field_b = AllianceExpiredEvent.field_i;
-          r.field_d = kh.field_Lb;
+          UrlLoader.field_d = kh.field_Lb;
           kh.field_Lb = false;
           je.field_d = vh.field_c;
           PointsVictoryChecker.field_p = ArchiveSource.field_c;
@@ -230,7 +230,7 @@ final class ae {
           }
           qn.field_c = -1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ae.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ae.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class ae {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

@@ -18,7 +18,7 @@ final class wm {
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_f = null;
         field_d = null;
         field_e = null;
@@ -51,7 +51,7 @@ final class wm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -62,7 +62,7 @@ final class wm {
         nj.b(-120);
     }
 
-    final static double a(int param0, byte param1, int param2) {
+    final static double smoothStep(int param0, byte param1, int param2) {
         if (param1 > 90) {
           return (double)(param0 * param0) * (double)(param2 * 3 - param0 * 2) / (double)(param2 * (param2 * param2));
         }

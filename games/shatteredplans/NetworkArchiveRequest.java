@@ -93,7 +93,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           if (param4 == 1) {
             param4 = 0;
           }
-          em.field_h = param4;
+          ProductionContent.field_h = param4;
           gi.field_a = param1;
           stackIn_11_0 = (String) (param1);
           stackIn_12_1 = !(param2);
@@ -118,7 +118,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 

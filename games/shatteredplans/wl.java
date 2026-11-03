@@ -7,7 +7,7 @@ final class wl {
     static String field_b;
     static String field_c;
     static TutorialMapGenerator field_a;
-    static vd field_f;
+    static MenuComponent field_f;
 
     final static void a(int param0, int param1, Orderable[] param2) {
         int var4 = 0;
@@ -45,7 +45,7 @@ final class wl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

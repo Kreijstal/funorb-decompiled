@@ -8,7 +8,7 @@ final class oq {
     String field_h;
     static int field_j;
     String field_d;
-    static qr[] field_b;
+    static AnimatedPanel[] field_b;
     static String[] field_i;
     static GameSession field_a;
     static BufferedCacheFile field_g;
@@ -39,7 +39,7 @@ final class oq {
         try {
           var2 = IterableNodeHashTable.a(param0, param1 ^ -17731);
           if (param1 != -17) {
-            field_b = (qr[]) null;
+            field_b = (AnimatedPanel[]) null;
           }
           var3 = so.a(var2, '\n', -123);
           for (var4 = 0; var4 < var3.length; var4++) {
@@ -57,7 +57,7 @@ final class oq {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class oq {
         var2.writeByte(3, (byte) -73);
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_g = null;
         field_i = null;
         field_b = null;
@@ -88,7 +88,7 @@ final class oq {
         }
         or.field_a = true;
         wk.a(param0, false);
-        gm.field_i = 0;
+        SoundPlayback.field_i = 0;
     }
 
     oq(String param0, String param1, oq param2) {
@@ -97,7 +97,7 @@ final class oq {
           this.field_h = param1;
           this.field_f = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "oq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "oq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class oq {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ final class oq {
           var3 = 0;
           while (true) {
             if (var2_int <= var3) {
-              stackIn_12_0 = as.field_t;
+              stackIn_12_0 = FleetVisual.field_t;
               return stackIn_12_0;
             }
             var4 = param0.charAt(var3);
@@ -213,7 +213,7 @@ final class oq {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class oq {
         try {
           var4 = (ByteArrayNode) (MapView.field_vb.startForward(0));
           while (var4 != null) {
-            dn.a(param0, var4, (byte) 13);
+            DualLinkDequeSequence.a(param0, var4, (byte) 13);
             var4 = (ByteArrayNode) (MapView.field_vb.nextForward((byte) -71));
           }
           var2 = SectorCacheStore.field_d.startForward(0);
@@ -235,14 +235,14 @@ final class oq {
             field_i = (String[]) null;
           }
           while (var2 != null) {
-            cp.a(param0, 1);
+            CanvasResizeController.a(param0, 1);
             var2 = SectorCacheStore.field_d.nextForward((byte) -71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "oq.G(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "oq.G(" + param0 + ',' + param1 + ')');
         }
     }
 

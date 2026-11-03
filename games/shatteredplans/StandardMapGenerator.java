@@ -18,7 +18,7 @@ class StandardMapGenerator implements MapGenerator {
     static String field_g;
     int field_a;
 
-    private final void a(GalaxyMap param0, int param1) {
+    private final void finishMap(GalaxyMap param0, int param1) {
         int var3_int = 0;
         Star[] var8 = null;
         Star var11 = null;
@@ -32,7 +32,7 @@ class StandardMapGenerator implements MapGenerator {
         try {
           og.a(-119, this.field_f, this.field_c, this.field_b);
           var3_int = nn.a(param0.field_e, 0);
-          vf.a(this.field_c, var3_int, (int)(200.0 * rh.field_d / 2.0), true, param0.field_e, param0.field_j, this.field_f);
+          QuaternaryListSequence.a(this.field_c, var3_int, (int)(200.0 * ProjectsContent.field_d / 2.0), true, param0.field_e, param0.field_j, this.field_f);
           var8 = param0.field_e;
           for (var5 = 0; var8.length > var5; var5++) {
             var11 = var8[var5];
@@ -51,7 +51,7 @@ class StandardMapGenerator implements MapGenerator {
           }
           param0.a(param1 + 26253);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hs.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -88,11 +88,11 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0) {
+    final void findHexNeighbours(int param0) {
         int var2 = 0;
         int var8 = 0;
         int stackIn_10_0 = 0;
@@ -173,14 +173,14 @@ class StandardMapGenerator implements MapGenerator {
               var6[5] = this.field_f[var7Lifetime5];
             }
             var3.field_r = new CellVertex[6];
-            var3.field_r[0] = new CellVertex(var3, var6[0], (Star) null, var3.field_A, (int)(-(0.5 * (200.0 * rh.field_d)) + (double)var3.field_S), 0);
-            var3.field_r[1] = new CellVertex(var3, var6[1], (Star) null, 100 + var3.field_A, (int)(-(0.25 * (rh.field_d * 200.0)) + (double)var3.field_S), 0);
-            var3.field_r[2] = new CellVertex(var3, var6[2], (Star) null, 100 + var3.field_A, (int)(0.25 * (rh.field_d * 200.0) + (double)var3.field_S), 0);
-            var3.field_r[3] = new CellVertex(var3, var6[3], (Star) null, var3.field_A, (int)(rh.field_d * 200.0 * 0.5 + (double)var3.field_S), 0);
-            var3.field_r[4] = new CellVertex(var3, var6[4], (Star) null, -100 + var3.field_A, (int)((double)var3.field_S + 0.25 * (rh.field_d * 200.0)), 0);
-            var3.field_r[5] = new CellVertex(var3, var6[5], (Star) null, -100 + var3.field_A, (int)((double)var3.field_S - 200.0 * rh.field_d * 0.25), 0);
+            var3.field_r[0] = new CellVertex(var3, var6[0], (Star) null, var3.field_A, (int)(-(0.5 * (200.0 * ProjectsContent.field_d)) + (double)var3.field_S), 0);
+            var3.field_r[1] = new CellVertex(var3, var6[1], (Star) null, 100 + var3.field_A, (int)(-(0.25 * (ProjectsContent.field_d * 200.0)) + (double)var3.field_S), 0);
+            var3.field_r[2] = new CellVertex(var3, var6[2], (Star) null, 100 + var3.field_A, (int)(0.25 * (ProjectsContent.field_d * 200.0) + (double)var3.field_S), 0);
+            var3.field_r[3] = new CellVertex(var3, var6[3], (Star) null, var3.field_A, (int)(ProjectsContent.field_d * 200.0 * 0.5 + (double)var3.field_S), 0);
+            var3.field_r[4] = new CellVertex(var3, var6[4], (Star) null, -100 + var3.field_A, (int)((double)var3.field_S + 0.25 * (ProjectsContent.field_d * 200.0)), 0);
+            var3.field_r[5] = new CellVertex(var3, var6[5], (Star) null, -100 + var3.field_A, (int)((double)var3.field_S - 200.0 * ProjectsContent.field_d * 0.25), 0);
             for (var8 = 0; 6 > var8; var8++) {
-              var3.field_r[var8].field_g = (int)(0.5 * (rh.field_d * 200.0));
+              var3.field_r[var8].field_g = (int)(0.5 * (ProjectsContent.field_d * 200.0));
             }
           }
         }
@@ -385,7 +385,7 @@ class StandardMapGenerator implements MapGenerator {
             } else {
               stackIn_66_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -394,13 +394,13 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    public GalaxyMap a(byte param0) throws jn {
+    public GalaxyMap generate(byte param0) throws jn {
         int var6 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         GalaxyMap var8 = new GalaxyMap(pe.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
         int var6Lifetime1;
-        this.a(false, var8);
-        this.a(var8, 0);
+        this.placeStars(false, var8);
+        this.finishMap(var8, 0);
         int[] var14 = this.a(var8.field_j, var8.field_e, var8.field_c, 4, (byte) -84, 4, 4, (int[]) null, this.field_a);
         int[] var5 = this.a(var8.field_j, var8.field_e, var8.field_c, 2, (byte) -126, 16, 2, var14, this.field_e + this.field_a);
         int[] var12 = new int[this.field_e];
@@ -422,13 +422,13 @@ class StandardMapGenerator implements MapGenerator {
         try {
           if (param0 != 95) {
             Random var6 = (Random) null;
-            this.a((Star) null, (byte) 67, (Random) null);
+            this.assignRichResources((Star) null, (byte) 67, (Random) null);
           }
           this.a(param1, param3, 4);
-          this.a(param3, param2, 0);
+          this.assignStarResources(param3, param2, 0);
           this.b(param3, param0 ^ 92);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hs.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -442,24 +442,24 @@ class StandardMapGenerator implements MapGenerator {
           }
           var5_intLifetime1 = -105 % ((param2 + 36) / 38);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hs.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(java.awt.Canvas param0, byte param1) {
         try {
           ae.a((java.awt.Component) ((Object) param0), 18014);
-          sb.a((byte) 89, (java.awt.Component) ((Object) param0));
+          Particle.a((byte) 89, (java.awt.Component) ((Object) param0));
           if (aj.field_b != null) {
-            aj.field_b.a((java.awt.Component) ((Object) param0), 120);
+            aj.field_b.detachFrom((java.awt.Component) ((Object) param0), 120);
           }
           int var2_int = 84 % ((param1 + 39) / 45);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hs.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(boolean param0, GalaxyMap param1) throws jn {
+    void placeStars(boolean param0, GalaxyMap param1) throws jn {
         Star stackIn_39_0 = null;
         Object stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
@@ -471,7 +471,7 @@ class StandardMapGenerator implements MapGenerator {
         int var6_int = 0;
         Star[] var6 = null;
         int var7_int = 0;
-        t var7 = null;
+        StarLinkPlanner var7 = null;
         Star var8 = null;
         int var9 = 0;
         int[] var10 = null;
@@ -570,9 +570,9 @@ class StandardMapGenerator implements MapGenerator {
             }
           }
           param1.field_e = var6Lifetime1;
-          var7 = new t(param1.field_e);
-          var7.a(true, 1);
-          this.a(-11);
+          var7 = new StarLinkPlanner(param1.field_e);
+          var7.buildLinks(true, 1);
+          this.findHexNeighbours(-11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -584,11 +584,11 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 
-    private final void a(GalaxyMap param0, int[] param1, int param2) {
+    private final void assignStarResources(GalaxyMap param0, int[] param1, int param2) {
         int var4_int = 0;
         int dupTemp$1 = 0;
         Star var5 = null;
@@ -631,11 +631,11 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(Star param0, byte param1, Random param2) {
+    private final void assignRichResources(Star param0, byte param1, Random param2) {
         int dupTemp$2 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -680,7 +680,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -693,12 +693,12 @@ class StandardMapGenerator implements MapGenerator {
           for (var4_int = 0; var4_int < param0.length; var4_int++) {
             var5 = param0[var4_int];
             var6 = param1.field_e[var5];
-            this.a(var6, (byte) 84, param1.field_j);
+            this.assignRichResources(var6, (byte) 84, param1.field_j);
           }
           this.a(1, 0, param0, param1, 2, (byte) 96, param2);
           this.a(4, 4, param0, param1, 4, (byte) 105, 12);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hs.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -831,7 +831,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -931,7 +931,7 @@ class StandardMapGenerator implements MapGenerator {
             }
           }
           if (param1 != 3) {
-            StandardMapGenerator.b(-112);
+            StandardMapGenerator.clearStatics(-112);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -944,7 +944,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -993,7 +993,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -1003,8 +1003,8 @@ class StandardMapGenerator implements MapGenerator {
         int var7 = var6 % 2 == 0 ? 1 : 0;
         int var9 = var7 != 0 ? 100 : 200;
         var9 = 200 * (param0 - var6 * param1) + var9;
-        int var10 = (int)(0.5 * (200.0 * rh.field_d));
-        var10 = (int)((double)var6 * (0.75 * (rh.field_d * 200.0))) + var10;
+        int var10 = (int)(0.5 * (200.0 * ProjectsContent.field_d));
+        var10 = (int)((double)var6 * (0.75 * (ProjectsContent.field_d * 200.0))) + var10;
         int var11 = 0;
         return new Star(param4, var9, var10, var11);
     }
@@ -1116,7 +1116,7 @@ class StandardMapGenerator implements MapGenerator {
           }
           if (param4 >= -3) {
             var25 = (GalaxyMap) null;
-            this.a((GalaxyMap) null, -72);
+            this.finishMap((GalaxyMap) null, -72);
           }
           for (var15Lifetime2 = 0; var15Lifetime2 < var10_int; var15Lifetime2++) {
             for (var16Lifetime1 = var14Lifetime1; param8 > var16Lifetime1; var16Lifetime1++) {
@@ -1182,11 +1182,11 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param8).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param8).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 0) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
           StandardMapGenerator.a((CipherPacketBuffer) null, (byte) 120);

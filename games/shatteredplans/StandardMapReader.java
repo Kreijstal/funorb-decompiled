@@ -5,13 +5,13 @@ final class StandardMapReader implements MapGenerator {
     private int field_a;
     private PacketBuffer field_e;
     private int field_b;
-    static qr field_h;
+    static AnimatedPanel field_h;
     static String field_d;
     static wa field_g;
     private int field_f;
     private int field_c;
 
-    public final GalaxyMap a(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws jn {
         int var5 = 0;
         StandardMapGenerator var3;
         Star[] var4_ref_ln__;
@@ -28,7 +28,7 @@ final class StandardMapReader implements MapGenerator {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         var12 = new GalaxyMap(pe.a((byte) 34, this.field_f), ls.a(this.field_c, 2), this.field_a, this.field_b);
         var3 = new StandardMapGenerator(this.field_f, this.field_c, this.field_a, this.field_b, 1);
-        var3.a(false, var12);
+        var3.placeStars(false, var12);
         var4_ref_ln__ = var12.field_e;
         for (var5 = 0; var5 < var4_ref_ln__.length; var5++) {
           var6 = var4_ref_ln__[var5];
@@ -42,10 +42,10 @@ final class StandardMapReader implements MapGenerator {
           var8Lifetime1 = 0;
           while (var8Lifetime1 < 4) {
             var9Lifetime1 = this.field_e.readUnsignedByte(-91);
-            var6.field_G[var8Lifetime1] = we.a(15, var9Lifetime1);
+            var6.field_G[var8Lifetime1] = we.intAnd(15, var9Lifetime1);
             var8Lifetime1++;
             if (4 > var8Lifetime1) {
-              var6.field_G[var8Lifetime1] = we.a(var9Lifetime1, 240) >> 4;
+              var6.field_G[var8Lifetime1] = we.intAnd(var9Lifetime1, 240) >> 4;
               var8Lifetime1++;
               continue;
             }
@@ -65,10 +65,10 @@ final class StandardMapReader implements MapGenerator {
         return var12;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         if (param0 >= -63) {
-          StandardMapReader.a(-45);
+          StandardMapReader.clearStatics(-45);
         }
         field_g = null;
         field_h = null;
@@ -82,21 +82,21 @@ final class StandardMapReader implements MapGenerator {
           this.field_b = param4;
           this.field_c = param3;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static qr a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, nq param8, int param9, int param10, int param11, int param12) {
-        qr var13 = null;
+    final static AnimatedPanel a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, nq param8, int param9, int param10, int param11, int param12) {
+        AnimatedPanel var13 = null;
         RuntimeException var13_ref = null;
-        qr stackIn_2_0 = null;
-        qr stackIn_4_0 = null;
+        AnimatedPanel stackIn_2_0 = null;
+        AnimatedPanel stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new qr(0L, (qr) null);
+          var13 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var13.field_F = qp.a(param7, -114, param3);
           var13.field_lb = qp.a(param12, -79, param11);
           var13.field_vb = qp.a(param10, param5 ^ 28, param6);
@@ -104,7 +104,7 @@ final class StandardMapReader implements MapGenerator {
           var13.field_wb = qp.a(param0, param5 - 213, param2);
           var13.field_nb = param8;
           if (param5 != 99) {
-            stackIn_2_0 = (qr) null;
+            stackIn_2_0 = (AnimatedPanel) null;
             return stackIn_2_0;
           }
           var13.field_x = param9;
@@ -120,7 +120,7 @@ final class StandardMapReader implements MapGenerator {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 

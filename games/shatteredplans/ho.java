@@ -3,7 +3,7 @@
  */
 final class ho {
     static int field_b;
-    static qr field_j;
+    static AnimatedPanel field_j;
     static nq field_f;
     static int field_c;
     static int field_a;
@@ -14,9 +14,9 @@ final class ho {
     static int[] field_e;
 
     final static void a(boolean param0, int param1) {
-        if (null != bq.field_h) {
-          gf.h(gf.field_i, gf.field_a, gf.field_l - gf.field_i, -gf.field_a + gf.field_f);
-          bq.field_h.b(param0, -100);
+        if (null != IndexedSpriteState.field_h) {
+          SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l - SoftwareRasterizer.field_i, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
+          IndexedSpriteState.field_h.drawFullRaster(param0, -100);
           if (param1 != 8323199) {
             ho.a(-86);
             return;
@@ -29,7 +29,7 @@ final class ho {
         ho.a(-86);
     }
 
-    final static SocketConnector a(int param0, int param1, String param2) {
+    final static SocketConnector createSocketConnector(int param0, int param1, String param2) {
         ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         ProxySocketConnector stackIn_3_0 = null;
@@ -56,7 +56,7 @@ final class ho {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -15,7 +15,7 @@ final class DialogRoot extends SingleChildWidget {
         this.field_H = new IntrusiveDeque();
     }
 
-    final void k(int param0) {
+    final void deactivateAll(int param0) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 <= 77) {
           return;
@@ -29,21 +29,21 @@ final class DialogRoot extends SingleChildWidget {
         this.field_z = null;
     }
 
-    final void i(int param0) {
+    final void updateDialogs(int param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         Dialog var3 = (Dialog) (var2.a(2));
         while (var3 != null) {
-          if (var3.a((byte) 92)) {
+          if (var3.animate((byte) 92)) {
             var3.unlink((byte) -80);
           }
           var3 = (Dialog) (var2.a((byte) 125));
         }
         int var4 = 18 % ((46 - param0) / 54);
-        this.field_z = (UiWidget) ((Object) this.g((byte) 115));
+        this.field_z = (UiWidget) ((Object) this.getActiveDialog((byte) 115));
     }
 
-    final Dialog g(byte param0) {
+    final Dialog getActiveDialog(byte param0) {
         IntrusiveDequeCursor var2;
         Dialog var3;
         int var4;
@@ -63,8 +63,8 @@ final class DialogRoot extends SingleChildWidget {
 
     final static void f(byte param0) {
         if (!IsolationistAi.field_r &&
-          ur.field_zb == null) {
-          ur.field_zb = vs.a((byte) 88, 4);
+          ScrollBar.field_zb == null) {
+          ScrollBar.field_zb = vs.a((byte) 88, 4);
         }
         if (param0 <= 118) {
           field_G = (kh) null;
@@ -112,14 +112,14 @@ final class DialogRoot extends SingleChildWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 != -11857) {
-          DialogRoot.e(false);
+          DialogRoot.clearStatics(false);
         }
         if (null != this.field_p) {
           this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
@@ -127,12 +127,12 @@ final class DialogRoot extends SingleChildWidget {
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
         UiWidget var6 = (UiWidget) (var5.c(105));
         while (var6 != null) {
-          var6.a(param0, -11857, this.field_q + param2, param3 + this.field_m);
+          var6.drawLayer(param0, -11857, this.field_q + param2, param3 + this.field_m);
           var6 = (UiWidget) (var5.b((byte) -124));
         }
     }
 
-    final void a(boolean param0, UiWidget param1) {
+    final void addDialog(boolean param0, UiWidget param1) {
         Dialog var3 = null;
         try {
           if (!(param1 instanceof Dialog)) {
@@ -141,19 +141,19 @@ final class DialogRoot extends SingleChildWidget {
           var3 = (Dialog) (param1);
           this.field_H.addFirst(var3, 0);
           var3.field_E = param0 ? true : false;
-          var3.a((byte) 126, (UiWidget) (this));
+          var3.containsWidget((byte) 126, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void h(byte param0) {
+    final void removeClosedDialogs(byte param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         int var4 = 71 % ((param0 + 34) / 44);
         Dialog var3 = (Dialog) (var2.a(2));
         while (var3 != null) {
-          if (var3.k(0)) {
+          if (var3.isClosed(0)) {
             var3.unlink((byte) -101);
           }
           var3 = (Dialog) (var2.a((byte) 47));
@@ -437,11 +437,11 @@ final class DialogRoot extends SingleChildWidget {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
         }
     }
 
-    final UiWidget a(int param0) {
+    final UiWidget findFocusedWidget(int param0) {
         IntrusiveDequeCursor var2;
         Dialog var3;
         int var4;
@@ -450,7 +450,7 @@ final class DialogRoot extends SingleChildWidget {
         var3 = (Dialog) (var2.a(param0));
         while (var3 != null) {
           if (var3.field_E) {
-            return var3.i(param0 ^ 3);
+            return var3.findFocusedChild(param0 ^ 3);
           }
           var3 = (Dialog) (var2.a((byte) 115));
         }
@@ -458,34 +458,34 @@ final class DialogRoot extends SingleChildWidget {
     }
 
     final static void a(boolean param0, boolean param1) {
-        n.field_h = !param1 ? new wh(jo.field_c, so.field_t) : new wh(ve.field_yb, IntrusiveNode.field_c);
-        am.field_xb = new qr(0L, (qr) null);
-        am.field_xb.a(4, n.field_h.field_d);
-        am.field_xb.a(4, DialPainter.field_g);
-        MouseInputHandler.field_d = new qr(0L, ho.field_j);
+        n.field_h = !param1 ? new wh(QuickChatPhraseRegistry.field_c, so.field_t) : new wh(ve.field_yb, IntrusiveNode.field_c);
+        am.field_xb = new AnimatedPanel(0L, (AnimatedPanel) null);
+        am.field_xb.addChild(4, n.field_h.field_d);
+        am.field_xb.addChild(4, DialPainter.field_g);
+        MouseInputHandler.field_d = new AnimatedPanel(0L, ho.field_j);
         if (!param0) {
-          DialogRoot.a('x', 117);
+          DialogRoot.isNameSeparator('x', 117);
         }
-        jo.field_a = new qr(0L, (qr) null);
-        MouseInputHandler.field_d.a(4, ValidationIndicator.field_K);
-        MouseInputHandler.field_d.a(4, jo.field_a);
-        jo.field_a.a(4, lp.field_v);
-        jo.field_a.a(4, oo.field_c);
+        QuickChatPhraseRegistry.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
+        MouseInputHandler.field_d.addChild(4, ValidationIndicator.field_K);
+        MouseInputHandler.field_d.addChild(4, QuickChatPhraseRegistry.field_a);
+        QuickChatPhraseRegistry.field_a.addChild(4, MenuList.field_v);
+        QuickChatPhraseRegistry.field_a.addChild(4, oo.field_c);
         en.a(15471, param1);
     }
 
     final static void a(byte param0, byte[] param1) {
         try {
-          ql.a((byte) 50, qk.a(param1, 13));
+          ql.a((byte) 50, MenuLabel.a(param1, 13));
           if (param0 <= 21) {
-            DialogRoot.e(false);
+            DialogRoot.clearStatics(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tc.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tc.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void e(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_E = null;
         field_F = null;
         field_D = null;
@@ -495,7 +495,7 @@ final class DialogRoot extends SingleChildWidget {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isNameSeparator(char param0, int param1) {
         boolean stackIn_9_0 = false;
         if (param1 != 2) {
           return false;
@@ -505,34 +505,34 @@ final class DialogRoot extends SingleChildWidget {
     }
 
     final static void j(int param0) {
-        TertiaryNodeList.field_c = gf.field_k;
-        kh.field_Mb = gf.field_b;
+        TertiaryNodeList.field_c = SoftwareRasterizer.field_k;
+        kh.field_Mb = SoftwareRasterizer.field_b;
         nj.a(438);
         Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
-        nm.field_c.a(cp.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
+        nm.field_c.setTarget(CanvasResizeController.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
         int var1 = cr.field_c + 2;
-        lp.field_v.a(cp.field_a.field_K, cp.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
+        MenuList.field_v.setTarget(CanvasResizeController.field_a.field_K, CanvasResizeController.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
         CachedArchiveSource.d(18);
-        vm.field_Ab.a(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
-        sg.field_zb.a(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
-        qf.field_e.a(AchievementProgress.field_i.field_K, -40 + AchievementProgress.field_i.field_mb - 32, (byte) 48, 30, 0);
-        BattleSnapshot.field_y.a(68, 30, (byte) 64, 5, 5);
-        GameSession.field_e.a(78, 30, (byte) 42, 5, 75);
-        WeightedCacheEntry.field_t.a(48, 30, (byte) 61, 5, 155);
-        ta.field_d.a(48, 30, (byte) 39, 5, 205);
+        vm.field_Ab.setTarget(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
+        sg.field_zb.setTarget(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
+        qf.field_e.setTarget(AchievementProgress.field_i.field_K, -40 + AchievementProgress.field_i.field_mb - 32, (byte) 48, 30, 0);
+        BattleSnapshot.field_y.setTarget(68, 30, (byte) 64, 5, 5);
+        GameSession.field_e.setTarget(78, 30, (byte) 42, 5, 75);
+        WeightedCacheEntry.field_t.setTarget(48, 30, (byte) 61, 5, 155);
+        ta.field_d.setTarget(48, 30, (byte) 39, 5, 205);
         int var2 = !ns.field_pb ? 200 : 250;
-        IsaacBackedRandom.field_c.a(363 - var2, 30, (byte) 95, 5, var2 + 5);
-        hq.field_b.a(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);
+        IsaacBackedRandom.field_c.setTarget(363 - var2, 30, (byte) 95, 5, var2 + 5);
+        hq.field_b.setTarget(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);
         SingleChildWidget.field_y.a(-5 + qf.field_e.field_K - 5, 37, 5, 2, -125, -5 + (qf.field_e.field_mb - 32) - 5, pe.field_K);
         if (param0 < 93) {
           field_C = -10;
         }
         int var3 = (2 + AchievementProgress.field_i.field_K) / 2;
-        gb.field_m.a(-2 + var3, 40, (byte) 114, -40 + AchievementProgress.field_i.field_mb, 0);
+        gb.field_m.setTarget(-2 + var3, 40, (byte) 114, -40 + AchievementProgress.field_i.field_mb, 0);
         if (!ns.field_pb) {
           var3 = 0;
         }
-        LinkPainter.field_b.a(AchievementProgress.field_i.field_K - var3, 40, (byte) 85, -40 + AchievementProgress.field_i.field_mb, var3);
+        LinkPainter.field_b.setTarget(AchievementProgress.field_i.field_K - var3, 40, (byte) 85, -40 + AchievementProgress.field_i.field_mb, var3);
     }
 
     static {

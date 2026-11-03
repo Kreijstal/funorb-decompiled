@@ -8,7 +8,7 @@ final class GalaxyMap {
     int field_k;
     static String field_i;
     static String field_d;
-    static qr field_a;
+    static AnimatedPanel field_a;
     Star[] field_e;
     int[][] field_h;
     int field_b;
@@ -17,18 +17,18 @@ final class GalaxyMap {
     Random field_j;
     static int field_f;
 
-    final void b(byte param0) {
-        this.field_h = QuaternaryNodeList.a(this.field_e, 0);
+    final void computeDistances(byte param0) {
+        this.field_h = QuaternaryNodeList.computeShortestHops(this.field_e, 0);
         if (param0 != 80) {
           PacketBuffer var3 = (PacketBuffer) null;
           this.a((byte) 42, (Player[]) null, (PacketBuffer) null);
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_d = null;
         if (param0 > -94) {
-          GalaxyMap.a((byte) -50);
+          GalaxyMap.clearStatics((byte) -50);
         }
         field_i = null;
         field_a = null;
@@ -42,7 +42,7 @@ final class GalaxyMap {
         this.field_c = AgeValidator.a(this.field_e, false);
     }
 
-    private final void a(Player param0, GameRules param1, int param2, Star param3) {
+    private final void assignHomeStar(Player param0, GameRules param1, int param2, Star param3) {
         Territory var5 = null;
         lo var6 = null;
         try {
@@ -60,7 +60,7 @@ final class GalaxyMap {
           param0.field_m = var6;
           kd.a(param1, false, param3, (byte) -2);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "l.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "l.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class GalaxyMap {
             for (var10Lifetime1 = 0; var10Lifetime1 < var9_ref_ln__Lifetime1.length; var10Lifetime1++) {
               var15Lifetime3 = var9_ref_ln__Lifetime1[var10Lifetime1];
               if (var7.field_p < var15Lifetime3.field_p) {
-                di.a(var15Lifetime3, false, param0);
+                di.writeStar(var15Lifetime3, false, param0);
               }
             }
             var9 = 0;
@@ -168,11 +168,11 @@ final class GalaxyMap {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(Player[] param0, GameRules param1, int param2) {
+    final void assignHomeStars(Player[] param0, GameRules param1, int param2) {
         int var4_int = 0;
         Star[] var5 = null;
         int var6 = 0;
@@ -194,7 +194,7 @@ final class GalaxyMap {
             if (var5.length > var6) {
               var7 = var5[var6];
               if (var7.field_L == 3) {
-                this.a(param0[var4_int], param1, param2 ^ 32443, var7);
+                this.assignHomeStar(param0[var4_int], param1, param2 ^ 32443, var7);
                 var4_int++;
                 if (var4_int == param0.length) {
                   break scanLoop1;
@@ -207,9 +207,9 @@ final class GalaxyMap {
           }
           if (param2 != 4) {
             field_g = (Archive) null;
-            this.b((byte) 80);
+            this.computeDistances((byte) 80);
           } else {
-            this.b((byte) 80);
+            this.computeDistances((byte) 80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,7 +228,7 @@ final class GalaxyMap {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class GalaxyMap {
             var8 = var7.field_D.length;
             param2.writeByte(var8, (byte) -122);
             for (var9 = 0; var9 < var8; var9++) {
-              di.a(var7.field_D[var9], false, param2);
+              di.writeStar(var7.field_D[var9], false, param2);
             }
             var9Lifetime1 = 0;
             while (4 > var9Lifetime1) {
@@ -313,7 +313,7 @@ final class GalaxyMap {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -339,7 +339,7 @@ final class GalaxyMap {
           var4 = var8;
           for (var5 = 0; var5 < var8.length; var5++) {
             var6 = var8[var5];
-            im.a(var6.field_t, param1, 9555);
+            im.writePlayer(var6.field_t, param1, 9555);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -358,7 +358,7 @@ final class GalaxyMap {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

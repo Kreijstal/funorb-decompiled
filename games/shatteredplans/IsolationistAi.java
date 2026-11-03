@@ -5,7 +5,7 @@ final class IsolationistAi extends StandardAi {
     static boolean field_r;
     static int field_t;
     static char field_p;
-    static ds field_u;
+    static MessageKind field_u;
     static String field_s;
     static PcmPlayerService field_q;
 
@@ -84,7 +84,7 @@ final class IsolationistAi extends StandardAi {
               stackIn_33_0 = -1;
               return stackIn_33_0;
             }
-            var8 = ArchiveSource.a(param1 + 12330, (1 << this.field_g.field_r) - 1 ^ this.field_g.field_w);
+            var8 = ArchiveSource.bitCount(param1 + 12330, (1 << this.field_g.field_r) - 1 ^ this.field_g.field_w);
             if (var8 * var6 < var7 &&
               this.field_g.field_D[this.field_n.field_x] > this.field_g.field_D[var4_int] * var8) {
               stackIn_38_0 = 4;
@@ -105,7 +105,7 @@ final class IsolationistAi extends StandardAi {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class IsolationistAi extends StandardAi {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStatics(boolean param0) {
         if (param0) {
           return;
         }
@@ -169,18 +169,18 @@ final class IsolationistAi extends StandardAi {
             if (!param1.field_h) {
               if (param1.field_l == 0 &&
                 param1.field_e == 0) {
-                var3 = re.a(MatchingTextValidator.field_q, 4371, new String[]{(String) (var2)});
+                var3 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{(String) (var2)});
               } else {
-                var3 = re.a(cf.field_M, 4371, new String[]{(String) (var2)});
+                var3 = QuickChatCategoryRegistry.a(cf.field_M, 4371, new String[]{(String) (var2)});
               }
             }
           } else {
             if (param1.field_n == 0 &&
               je.field_e) {
-              var3 = "[" + ds.field_a + "] ";
+              var3 = "[" + MessageKind.field_a + "] ";
             }
             if (param1.field_n == 1) {
-              var3 = "[" + re.a(he.field_q, 4371, new String[]{param1.field_o}) + "] ";
+              var3 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{param1.field_o}) + "] ";
             }
             if (param1.field_n == 4 &&
               AiTask.field_m != null) {
@@ -205,7 +205,7 @@ final class IsolationistAi extends StandardAi {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class IsolationistAi extends StandardAi {
             this.field_i[var4] = 3;
           }
         }
-        if (this.c((byte) -116)) {
+        if (this.isChatEnabled((byte) -116)) {
           this.g(-18484);
           for (var4Lifetime1 = 0; this.field_g.field_r > var4Lifetime1; var4Lifetime1++) {
             if (this.field_b[var4Lifetime1] < 0) {
@@ -287,7 +287,7 @@ final class IsolationistAi extends StandardAi {
 
     static {
         field_p = '/';
-        field_u = new ds(3);
+        field_u = new MessageKind(3);
         field_s = "<%0> points per turn";
     }
 }

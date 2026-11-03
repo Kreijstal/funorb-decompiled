@@ -10,7 +10,7 @@ final class bg {
     static int[] field_c;
     static int[] field_e;
 
-    static long a(long param0, long param1) {
+    static long longXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
@@ -25,11 +25,11 @@ final class bg {
             this.field_b = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_d = null;
         if (param0 == 16928) {
@@ -74,7 +74,7 @@ final class bg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,15 +84,15 @@ final class bg {
         IntrusiveDeque.field_d = new Sprite(var2 + IntrusiveDeque.field_a[0].field_z / 4, 2);
         RandomAccessCacheFile.a(param0 + 2499);
         GameState.field_F.bindAsRenderTarget();
-        gf.f(0, 0, GameState.field_F.field_z, 10790052);
-        gf.f(0, 1, GameState.field_F.field_z, 16777215);
-        GameState.field_F.field_B[0] = SolVictoryChecker.a(0, GameState.field_F.field_B[0], -90, 185);
-        GameState.field_F.field_B[1] = SolVictoryChecker.a(0, GameState.field_F.field_B[1], -94, 220);
-        GameState.field_F.field_B[var2] = SolVictoryChecker.a(0, GameState.field_F.field_B[var2], -118, 185);
-        GameState.field_F.field_B[1 + var2] = SolVictoryChecker.a(0, GameState.field_F.field_B[var2 + 1], -96, 220);
+        SoftwareRasterizer.drawHorizontalLine(0, 0, GameState.field_F.field_z, 10790052);
+        SoftwareRasterizer.drawHorizontalLine(0, 1, GameState.field_F.field_z, 16777215);
+        GameState.field_F.field_B[0] = SolVictoryChecker.blendColours(0, GameState.field_F.field_B[0], -90, 185);
+        GameState.field_F.field_B[1] = SolVictoryChecker.blendColours(0, GameState.field_F.field_B[1], -94, 220);
+        GameState.field_F.field_B[var2] = SolVictoryChecker.blendColours(0, GameState.field_F.field_B[var2], -118, 185);
+        GameState.field_F.field_B[1 + var2] = SolVictoryChecker.blendColours(0, GameState.field_F.field_B[var2 + 1], -96, 220);
         IntrusiveDeque.field_d.bindAsRenderTarget();
-        gf.f(0, 0, IntrusiveDeque.field_d.field_z, 10790052);
-        gf.f(0, 1, IntrusiveDeque.field_d.field_z, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, 0, IntrusiveDeque.field_d.field_z, 10790052);
+        SoftwareRasterizer.drawHorizontalLine(0, 1, IntrusiveDeque.field_d.field_z, 16777215);
         cg.i(0);
         if (param0 == -2612) {
           return;
@@ -122,7 +122,7 @@ final class bg {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class bg {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

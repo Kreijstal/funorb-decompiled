@@ -8,13 +8,13 @@ final class tm extends IntrusiveNode {
     private String field_l;
     private boolean field_n;
     static Sprite field_r;
-    static ds field_p;
-    static qh field_k;
+    static MessageKind field_p;
+    static MenuWindow field_k;
     static java.awt.Canvas field_i;
     static int field_h;
     static String field_j;
     static String field_o;
-    static qr field_t;
+    static AnimatedPanel field_t;
 
     public static void d(int param0) {
         field_j = null;
@@ -59,7 +59,7 @@ final class tm extends IntrusiveNode {
         if (this.field_q == 0) {
           return;
         }
-        gf.a(88, 1 + param1, this.field_s, 17, 6, 0, this.field_q);
+        SoftwareRasterizer.fillRoundedRectAlpha(88, 1 + param1, this.field_s, 17, 6, 0, this.field_q);
         if (param0 != -208410008) {
           field_r = (Sprite) null;
         }
@@ -80,7 +80,7 @@ final class tm extends IntrusiveNode {
           var3_int = 20 + ss.field_b.stringWidth(this.field_l);
           this.field_s = Math.max(400, var3_int);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class tm extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -150,6 +150,6 @@ final class tm extends IntrusiveNode {
         field_j = "Invalid name";
         field_h = 0;
         field_o = "Return to lobby";
-        field_p = new ds(0);
+        field_p = new MessageKind(0);
     }
 }

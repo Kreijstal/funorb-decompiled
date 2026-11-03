@@ -19,7 +19,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           field_D = (int[][]) null;
           field_J = null;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "pe.E(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "pe.E(" + param0 + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "pe.D(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "pe.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           this.field_I = param0;
           this.field_H = new FocusableWidget(gq.field_b, (WidgetListener) null);
           this.field_H.field_p = (WidgetPainter) ((Object) new qp());
-          var2 = re.a(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
+          var2 = QuickChatCategoryRegistry.a(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
           var3 = 20;
           var4 = new WidgetTheme(gn.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
           this.field_G = new ts(var2, var4);
@@ -70,10 +70,10 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           this.b((byte) -46, this.field_G);
           var5 = 4;
           var6 = 200;
-          this.field_H.a(var3, 40, (byte) 115, -var6 + 300 >> 1, var6);
+          this.field_H.setBounds(var3, 40, (byte) 115, -var6 + 300 >> 1, var6);
           this.field_H.field_u = (WidgetListener) (this);
           this.b((byte) -126, this.field_H);
-          this.a(0, var3 + 55 + var5, (byte) 121, 0, 300);
+          this.setBounds(0, var3 + 55 + var5, (byte) 121, 0, 300);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -100,22 +100,22 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         try {
           if (0 != param1) {
             if (param1 == 1) {
-              gm.a(param2 ^ 104, "privacy.ws");
+              SoundPlayback.a(param2 ^ 104, "privacy.ws");
               if ((var6 != 0) &&
                 (param1 == 2)) {
-                gm.a(param2 ^ 127, "conduct.ws");
-                gm.a(57, "terms.ws");
+                SoundPlayback.a(param2 ^ 127, "conduct.ws");
+                SoundPlayback.a(57, "terms.ws");
               }
             } else {
               if (param1 == 2) {
-                gm.a(param2 ^ 127, "conduct.ws");
+                SoundPlayback.a(param2 ^ 127, "conduct.ws");
                 if (var6 != 0) {
-                  gm.a(57, "terms.ws");
+                  SoundPlayback.a(57, "terms.ws");
                 }
               }
             }
           } else {
-            gm.a(57, "terms.ws");
+            SoundPlayback.a(57, "terms.ws");
           }
           if (param2 != 2) {
             pe.a(false, (int[]) null, false, 25, (int[]) null, true, (sr) null);
@@ -131,7 +131,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "pe.I(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "pe.I(" + param0 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "pe.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "pe.A(" + param0 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + DiskArchiveRequest.field_v.a(var4, param0.payload, var3_int, 7, param0.position, param1);
+            param0.position = param0.position + DiskArchiveRequest.field_v.decode(var4, param0.payload, var3_int, 7, param0.position, param1);
             var5 = StellarBombEvent.a(var4, var3_int, 0, param1 ^ -127);
             stackIn_3_0 = var5;
             return stackIn_3_0;
@@ -209,11 +209,11 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_10_0 = false;
@@ -222,15 +222,15 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param0) {
-            stackIn_5_0 = this.a(param3, true);
+            stackIn_5_0 = this.isBeforeFocusedChild(param3, true);
             return stackIn_5_0;
           }
           if (param0 == 99) {
-            stackIn_10_0 = this.a(param3, -97);
+            stackIn_10_0 = this.isAfterFocusedChild(param3, -97);
             return stackIn_10_0;
           }
           return false;
@@ -244,7 +244,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -307,14 +307,14 @@ final class pe extends WidgetContainer implements op, ButtonListener {
               stackIn_40_0 = var3.field_y.field_s;
             }
             var4 = stackIn_40_0;
-            uq.field_m.a(re.a("<col=<%0>>" + var3.name + "</col>", 4371, new String[]{Integer.toString(var4, 16)}), 27275, "star" + var3.field_p);
+            uq.field_m.a(QuickChatCategoryRegistry.a("<col=<%0>>" + var3.name + "</col>", 4371, new String[]{Integer.toString(var4, 16)}), 27275, "star" + var3.field_p);
             var2++;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "pe.J(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "pe.J(" + param0 + ')');
         }
     }
 
@@ -461,7 +461,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
                   var26Lifetime1 = param6.field_Q[var23Lifetime2];
                   aq.field_o[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16);
                   ByteArrayNode.field_h[var23Lifetime2] = var10 + (var24Lifetime1 * var13 + var16 * var25Lifetime1 + var19 * var26Lifetime1 >> 16);
-                  qo.field_c[var23Lifetime2] = var11 + (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var26Lifetime1 * var20) >> 16);
+                  TextLayout.field_c[var23Lifetime2] = var11 + (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var26Lifetime1 * var20) >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
                     return;
@@ -480,7 +480,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
                 var17 = param4[11];
                 var18 = 0;
                 while (!(param6.field_e <= var18)) {
-                  stackIn_65_0 = fm.field_c.length;
+                  stackIn_65_0 = HuffmanCodec.field_c.length;
                   stackIn_65_1 = var18;
                   if (var30 != 0) {
                     break scanLoop1;
@@ -491,7 +491,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
                   var19 = param6.field_I[var18];
                   var20 = param6.field_y[var18];
                   var21Lifetime2 = param6.field_v[var18];
-                  fm.field_c[var18] = var21Lifetime2 * var15 + (var20 * var12 + var9 * var19) >> 16;
+                  HuffmanCodec.field_c[var18] = var21Lifetime2 * var15 + (var20 * var12 + var9 * var19) >> 16;
                   RandomAccessCacheFile.field_f[var18] = var21Lifetime2 * var16 + (var19 * var10 + var13 * var20) >> 16;
                   hk.field_ob[var18] = var11 * var19 - (-(var14 * var20) - var21Lifetime2 * var17) >> 16;
                   var18++;
@@ -526,13 +526,13 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
-    final static qr m(int param0) {
+    final static AnimatedPanel m(int param0) {
         RuntimeException var1 = null;
-        qr stackIn_4_0 = null;
+        AnimatedPanel stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 20) {
@@ -543,7 +543,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "pe.H(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "pe.H(" + param0 + ')');
         }
     }
 
@@ -572,7 +572,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

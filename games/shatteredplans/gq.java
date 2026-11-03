@@ -44,12 +44,12 @@ final class gq {
           var4 = ji.a(param0, true);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!DialogRoot.a(var4.charAt(0), param2 + 6) &&
-              !DialogRoot.a(var4.charAt(var4.length() - 1), 2)) {
+            if (!DialogRoot.isNameSeparator(var4.charAt(0), param2 + 6) &&
+              !DialogRoot.isNameSeparator(var4.charAt(var4.length() - 1), 2)) {
               var5 = 0;
               for (var6 = 0; var6 < param0.length(); var6++) {
                 var7 = param0.charAt(var6);
-                if (DialogRoot.a((char) var7, 2)) {
+                if (DialogRoot.isNameSeparator((char) var7, 2)) {
                   var5++;
                 } else {
                   var5 = 0;
@@ -80,7 +80,7 @@ final class gq {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -92,9 +92,9 @@ final class gq {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 <= 30) {
-            gq.a(-49);
+            gq.clearStatics(-49);
           }
-          var6 = fe.field_C;
+          var6 = MenuButton.field_C;
           nd[] var1 = var6;
           for (var2 = 0; var6.length > var2; var2++) {
             var3 = var6[var2];
@@ -104,7 +104,7 @@ final class gq {
           }
           DialWidget.field_K.clear(0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "gq.E(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gq.E(" + param0 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class gq {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class gq {
         int var13Lifetime1;
         int var16Lifetime1;
         try {
-          nc.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          CandidateLink.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = vc.field_d.length;
           var21 = new int[var1_int];
           var20 = var21;
@@ -198,24 +198,24 @@ final class gq {
             var5 = var4_ref_sr.field_O + var4_ref_sr.field_k >> 1;
             var6 = var4_ref_sr.field_j + var4_ref_sr.field_t >> 1;
             var7 = var4_ref_sr.field_r + var4_ref_sr.field_E >> 1;
-            var8 = nc.field_p[9] >> 2;
-            var9 = nc.field_p[10] >> 2;
-            var10_int = nc.field_p[11] >> 2;
+            var8 = CandidateLink.field_p[9] >> 2;
+            var9 = CandidateLink.field_p[10] >> 2;
+            var10_int = CandidateLink.field_p[11] >> 2;
             var11 = MouseWheelInput.field_a[3] * var8 + (MouseWheelInput.field_a[4] * var9 + MouseWheelInput.field_a[5] * var10_int) >> 14;
             var12 = var8 * MouseWheelInput.field_a[6] + (var9 * MouseWheelInput.field_a[7] + var10_int * MouseWheelInput.field_a[8]) >> 14;
             var13 = MouseWheelInput.field_a[11] * var10_int + (var9 * MouseWheelInput.field_a[10] + MouseWheelInput.field_a[9] * var8) >> 14;
             var2[var3] = var13 * var7 + var11 * var5 + var6 * var12 >> 16;
           }
-          var3Lifetime1 = nc.field_p[9] >> 8;
-          var4 = nc.field_p[10] >> 8;
-          var5Lifetime1 = nc.field_p[11] >> 8;
+          var3Lifetime1 = CandidateLink.field_p[9] >> 8;
+          var4 = CandidateLink.field_p[10] >> 8;
+          var5Lifetime1 = CandidateLink.field_p[11] >> 8;
           var6Lifetime1 = js.field_j << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = je.a(var6Lifetime1, (byte) -104) >> 8;
-          var9Lifetime1 = IntrusiveNode.b(var6Lifetime1, -123) >> 8;
-          if (-1 != pd.field_k &&
+          var8Lifetime1 = je.sine(var6Lifetime1, (byte) -104) >> 8;
+          var9Lifetime1 = IntrusiveNode.cosine(var6Lifetime1, -123) >> 8;
+          if (-1 != TertiaryListSequence.field_k &&
             bb.field_b != -1) {
-            var7Lifetime1 = pd.field_k - 320;
+            var7Lifetime1 = TertiaryListSequence.field_k - 320;
             var9Lifetime1 = -128;
             var8Lifetime1 = 240 - bb.field_b;
           }
@@ -243,12 +243,12 @@ final class gq {
             for (var18 = 0; var18 < 3; var18++) {
               MouseWheelInput.field_a[var18] = MouseWheelInput.field_a[var18] + fa.field_Z[var15][var18];
             }
-            pe.a(true, nc.field_p, false, 80, MouseWheelInput.field_a, false, var17);
+            pe.a(true, CandidateLink.field_p, false, 80, MouseWheelInput.field_a, false, var17);
             WhirlpoolHasher.a(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
           }
           var16Lifetime1 = -47 / ((47 - param0) / 46);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "gq.F(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gq.F(" + param0 + ')');
         }
     }
 
@@ -259,14 +259,14 @@ final class gq {
     final static Sprite d(int param0) {
         int var4_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var1 = cm.field_g[0] * WeightedCacheEntry.field_s[0];
+        int var1 = IntHashIndex.field_g[0] * WeightedCacheEntry.field_s[0];
         byte[] var2 = hd.field_q[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = eo.field_fb[we.a((int) var2[var4_int], 255)];
+          var3[var4_int] = eo.field_fb[we.intAnd((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[param0], var3);
-        pd.a(0);
+        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[param0], var3);
+        TertiaryListSequence.a(0);
         return var4;
     }
 
@@ -275,7 +275,7 @@ final class gq {
         this.field_e = param3;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         field_g = null;
         field_f = null;

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class so extends qe {
-    static qr field_v;
+    static AnimatedPanel field_v;
     static RasterBuffer field_q;
     int field_u;
     static int field_m;
     static byte[] field_r;
-    static qr field_t;
+    static AnimatedPanel field_t;
     int field_p;
     static String field_s;
     static int field_o;
@@ -29,40 +29,40 @@ final class so extends qe {
         int var10Lifetime1;
         int var10Lifetime2;
         try {
-          var4_int = param1 + gf.field_b * param2;
+          var4_int = param1 + SoftwareRasterizer.field_b * param2;
           var5 = param0;
           var6 = param3.field_w;
           var7 = param3.field_z;
-          var8 = -var7 + gf.field_b;
+          var8 = -var7 + SoftwareRasterizer.field_b;
           var9 = 0;
-          if (gf.field_a > param2) {
-            var10 = gf.field_a - param2;
+          if (SoftwareRasterizer.field_a > param2) {
+            var10 = SoftwareRasterizer.field_a - param2;
             var6 = var6 - var10;
-            param2 = gf.field_a;
+            param2 = SoftwareRasterizer.field_a;
             var5 = var5 + var10 * var7;
-            var4_int = var4_int + gf.field_b * var10;
+            var4_int = var4_int + SoftwareRasterizer.field_b * var10;
           }
-          if (param1 < gf.field_i) {
-            var10Lifetime1 = -param1 + gf.field_i;
+          if (param1 < SoftwareRasterizer.field_i) {
+            var10Lifetime1 = -param1 + SoftwareRasterizer.field_i;
             var5 = var5 + var10Lifetime1;
             var9 = var9 + var10Lifetime1;
             var8 = var8 + var10Lifetime1;
             var4_int = var4_int + var10Lifetime1;
             var7 = var7 - var10Lifetime1;
-            param1 = gf.field_i;
+            param1 = SoftwareRasterizer.field_i;
           }
-          if (var6 + param2 > gf.field_f) {
-            var6 = var6 - (param2 - (-var6 + gf.field_f));
+          if (var6 + param2 > SoftwareRasterizer.field_f) {
+            var6 = var6 - (param2 - (-var6 + SoftwareRasterizer.field_f));
           }
-          if (gf.field_l < param1 + var7) {
-            var10Lifetime2 = -gf.field_l + (param1 + var7);
+          if (SoftwareRasterizer.field_l < param1 + var7) {
+            var10Lifetime2 = -SoftwareRasterizer.field_l + (param1 + var7);
             var7 = var7 - var10Lifetime2;
             var9 = var9 + var10Lifetime2;
             var8 = var8 + var10Lifetime2;
           }
           if (0 < var7 &&
             var6 > 0) {
-            ImageProducerRasterBuffer.a(param3.field_B, var5, gf.field_h, 0, param0 - 28646, var7, var4_int, var9, var6, var8);
+            ImageProducerRasterBuffer.a(param3.field_B, var5, SoftwareRasterizer.field_h, 0, param0 - 28646, var7, var4_int, var9, var6, var8);
             return;
           }
           return;
@@ -76,12 +76,12 @@ final class so extends qe {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11, int param12, boolean param13) {
-        dn.field_k = null;
+        DualLinkDequeSequence.field_k = null;
         AiTask.a(-15887);
         param13 = DiskArchiveRequest.a(true, param7, param5, param13, param8, param10, param9);
         fb.a(param13, param11, param10, param2, param12, param6, param4, param3, param1, param0 + param0);
@@ -120,7 +120,7 @@ final class so extends qe {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param0);
-          var3_int = DiskArchiveRequest.a(-116, var10, param1);
+          var3_int = DiskArchiveRequest.countChar(-116, var10, param1);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -146,7 +146,7 @@ final class so extends qe {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -155,14 +155,14 @@ final class so extends qe {
         int var4 = 0;
         try {
           this.field_h = param0;
-          this.field_i = DialWidget.a(96, pd.field_m, 0);
+          this.field_i = DialWidget.a(96, TertiaryListSequence.field_m, 0);
           var2_double = Math.random() * 3.141592653589793 * 2.0;
           var4 = 16384 + vc.a((byte) -39, 16384);
           this.field_p = (int)((double)var4 * Math.sin(var2_double));
           this.field_n = (int)(Math.cos(var2_double) * (double)var4);
           this.field_u = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "so.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "so.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

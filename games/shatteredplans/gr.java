@@ -38,18 +38,18 @@ final class gr extends IntrusiveNode {
           c.d();
           while (c.a()) {
             var7 = c.field_e;
-            if (gf.field_i > var7) {
-              var7 = gf.field_i;
+            if (SoftwareRasterizer.field_i > var7) {
+              var7 = SoftwareRasterizer.field_i;
             }
             var8 = c.field_a;
-            if (gf.field_l < var8) {
-              var8 = gf.field_l;
+            if (SoftwareRasterizer.field_l < var8) {
+              var8 = SoftwareRasterizer.field_l;
             }
             var9 = (var7 & -8) - (7 & c.field_h);
             var9 = var9 + (8 + (-8 & -var9 + var7));
-            var10 = var9 + c.field_h * gf.field_b;
+            var10 = var9 + c.field_h * SoftwareRasterizer.field_b;
             while (var8 > var9) {
-              gf.field_h[var10] = we.a(16711935, we.a(16711935, gf.field_h[var10]) * var4_int + var5 * param0 >>> 8) + (we.a(we.a(65280, gf.field_h[var10]) * var4_int + var6 * param0, 16711680) >>> 8);
+              SoftwareRasterizer.field_h[var10] = we.intAnd(16711935, we.intAnd(16711935, SoftwareRasterizer.field_h[var10]) * var4_int + var5 * param0 >>> 8) + (we.intAnd(we.intAnd(65280, SoftwareRasterizer.field_h[var10]) * var4_int + var6 * param0, 16711680) >>> 8);
               var10 += 8;
               var9 += 8;
             }
@@ -69,11 +69,11 @@ final class gr extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 >= -25) {
           gr.a((byte) -99, 47, -15);
           field_p = null;
@@ -103,11 +103,11 @@ final class gr extends IntrusiveNode {
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (!param0) {
-          gf.b();
+          SoftwareRasterizer.clear();
           og.a(param2, param0);
           return;
         }
-        gf.c(0, 0, gf.field_b, gf.field_k, 0, 192);
+        SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k, 0, 192);
         og.a(param2, param0);
     }
 

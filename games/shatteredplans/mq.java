@@ -3,10 +3,10 @@
  */
 final class mq {
     static String field_b;
-    static ms field_c;
+    static ChatMessage field_c;
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 < 114) {
@@ -16,10 +16,10 @@ final class mq {
     }
 
     final static int[] a(int param0, byte param1, int param2) {
-        int var3 = je.a(param0, (byte) -104);
-        int var4 = IntrusiveNode.b(param0, param1 ^ 96);
-        int var5 = je.a(param2, (byte) -104);
-        int var6 = IntrusiveNode.b(param2, param1 - 207);
+        int var3 = je.sine(param0, (byte) -104);
+        int var4 = IntrusiveNode.cosine(param0, param1 ^ 96);
+        int var5 = je.sine(param2, (byte) -104);
+        int var6 = IntrusiveNode.cosine(param2, param1 - 207);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);
@@ -48,14 +48,14 @@ final class mq {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (null == WeightedLruCache.field_g &&
-            null == hm.field_q) {
+            null == PanelNode.field_q) {
             return;
           }
           if (-e.field_f + ei.field_e > 20 &&
             -ByteArrayNode.field_k + AttackTask.field_o > 20) {
-            ei.a(true, -ByteArrayNode.field_k + AttackTask.field_o, -e.field_f + ei.field_e, param0 - 12350, ByteArrayNode.field_k, e.field_f, SolVictoryChecker.a(3974311, 0, -120, 128));
+            ei.a(true, -ByteArrayNode.field_k + AttackTask.field_o, -e.field_f + ei.field_e, param0 - 12350, ByteArrayNode.field_k, e.field_f, SolVictoryChecker.blendColours(3974311, 0, -120, 128));
           }
-          if (WeightedLruCache.field_g == hm.field_q) {
+          if (WeightedLruCache.field_g == PanelNode.field_q) {
             var1_int = e.field_f + 13;
             var2 = 6 + ByteArrayNode.field_k;
             var3 = te.field_c;
@@ -88,7 +88,7 @@ final class mq {
                     sa.a(var3, var1_int, (byte) 89, 16, var5[var7_int], var2);
                   }
                 } else {
-                  var7 = sp.field_m[var4Lifetime1];
+                  var7 = WidgetStyle.field_m[var4Lifetime1];
                   if (var6 <= 32) {
                     var6 = (var6 << 8) / 32;
                     var10 = 0;
@@ -130,7 +130,7 @@ final class mq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "mq.D(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "mq.D(" + param0 + ')');
         }
     }
 

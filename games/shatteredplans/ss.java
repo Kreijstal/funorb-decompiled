@@ -9,7 +9,7 @@ final class ss {
     static nq field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 1) {
           return;
         }

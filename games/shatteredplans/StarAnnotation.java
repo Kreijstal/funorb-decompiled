@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class StarAnnotation extends IntrusiveNode {
-    static qr field_l;
+    static AnimatedPanel field_l;
     static int field_n;
     static Archive field_j;
     static int field_m;
@@ -28,7 +28,7 @@ final class StarAnnotation extends IntrusiveNode {
           }
           try {
             var3 = 52 % ((param0 - 38) / 63);
-            var2_int = wg.field_f.a(-1);
+            var2_int = wg.field_f.available(-1);
             if (var2_int <= 0) {
               if (var2_int < 0) {
                 q.g(-114);
@@ -43,8 +43,8 @@ final class StarAnnotation extends IntrusiveNode {
             if (var2_int > param1 - sa.field_a.position) {
               var2_int = param1 - sa.field_a.position;
             }
-            wg.field_f.a(sa.field_a.payload, var2_int, sa.field_a.position, (byte) 119);
-            IntrusiveDeque.field_e = pr.a(14274);
+            wg.field_f.readFully(sa.field_a.payload, var2_int, sa.field_a.position, (byte) 119);
+            IntrusiveDeque.field_e = pr.currentTimeMillis(14274);
             sa.field_a.position = sa.field_a.position + var2_int;
             if (sa.field_a.position < param1) {
               return false;
@@ -154,7 +154,7 @@ final class StarAnnotation extends IntrusiveNode {
         return var2Lifetime2;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -1) {
           return;
         }
@@ -170,7 +170,7 @@ final class StarAnnotation extends IntrusiveNode {
           this.field_k = param3;
           this.field_h = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "es.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "es.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class StarAnnotation extends IntrusiveNode {
           this.field_k = param4;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "es.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "es.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

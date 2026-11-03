@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oo {
-    static qr field_c;
+    static AnimatedPanel field_c;
     static Sprite field_a;
     static String field_f;
     static int field_e;
@@ -25,7 +25,7 @@ final class oo {
           fr.field_H = param0;
           int var2_int = 81 % ((param1 - 0) / 43);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "oo.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "oo.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -34,29 +34,29 @@ final class oo {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= param3) {
           if (param0 < param2) {
-            FrameTimer.a(param1, param7, -99, param5, param4, param0, gf.field_h, param3, param2);
+            FrameTimer.a(param1, param7, -99, param5, param4, param0, SoftwareRasterizer.field_h, param3, param2);
           } else {
             if (param3 < param2) {
-              FrameTimer.a(param7, param1, -116, param5, param4, param2, gf.field_h, param3, param0);
+              FrameTimer.a(param7, param1, -116, param5, param4, param2, SoftwareRasterizer.field_h, param3, param0);
             } else {
-              FrameTimer.a(param7, param5, -92, param1, param4, param3, gf.field_h, param2, param0);
+              FrameTimer.a(param7, param5, -92, param1, param4, param3, SoftwareRasterizer.field_h, param2, param0);
             }
           }
         } else {
           if (param3 < param2) {
-            FrameTimer.a(param1, param5, -113, param7, param4, param3, gf.field_h, param0, param2);
+            FrameTimer.a(param1, param5, -113, param7, param4, param3, SoftwareRasterizer.field_h, param0, param2);
           } else {
             if (param0 >= param2) {
-              FrameTimer.a(param5, param7, -98, param1, param4, param0, gf.field_h, param2, param3);
+              FrameTimer.a(param5, param7, -98, param1, param4, param0, SoftwareRasterizer.field_h, param2, param3);
             } else {
-              FrameTimer.a(param5, param1, -101, param7, param4, param2, gf.field_h, param0, param3);
+              FrameTimer.a(param5, param1, -101, param7, param4, param2, SoftwareRasterizer.field_h, param0, param3);
             }
           }
         }
         if (param6) {
           return;
         }
-        field_c = (qr) null;
+        field_c = (AnimatedPanel) null;
     }
 
     final static boolean a(int param0, int param1, int param2, boolean param3, int param4) {
@@ -69,14 +69,14 @@ final class oo {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_d = null;
         field_f = null;
         field_b = null;
         field_a = null;
         if (param0 != 4) {
-          field_c = (qr) null;
+          field_c = (AnimatedPanel) null;
         }
     }
 

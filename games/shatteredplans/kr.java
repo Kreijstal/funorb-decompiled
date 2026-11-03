@@ -9,7 +9,7 @@ final class kr extends Exception {
     static v field_a;
     static String[] field_f;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_f = null;
         field_e = null;
         if (param0 != 16) {
@@ -75,7 +75,7 @@ final class kr extends Exception {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -94,8 +94,8 @@ final class kr extends Exception {
         int var14Lifetime1;
         var6 = 0;
         var7 = 0;
-        var8 = gf.field_i << 4;
-        var9 = gf.field_l << 4;
+        var8 = SoftwareRasterizer.field_i << 4;
+        var9 = SoftwareRasterizer.field_l << 4;
         if (param3 > param2) {
           var10_int = param3;
           param3 = param2;
@@ -117,11 +117,11 @@ final class kr extends Exception {
           if (param3 < var8) {
             var6 = (int)((long)(-param3 + var8) * 65536L / var10);
           }
-          var9 = gf.field_f << 4;
+          var9 = SoftwareRasterizer.field_f << 4;
           param5 = param5 - (int)((long)var7 * var12 >> 16);
           param2 = param2 - (int)(var10 * (long)var7 >> 16);
           param1 = param1 + (int)(var12 * (long)var6 >> 16);
-          var8 = gf.field_a << 4;
+          var8 = SoftwareRasterizer.field_a << 4;
           param3 = param3 + (int)(var10 * (long)var6 >> 16);
           if (param5 < param1) {
             var14 = param3;
@@ -241,10 +241,10 @@ final class kr extends Exception {
               var9 = param5 >> 4;
               var10 = param4;
               var11 = (-(param2 & 15) + 16) * (16 - (param5 & 15));
-              if (gf.field_i <= var8 &&
-                var8 < gf.field_l &&
-                var9 >= gf.field_a &&
-                var9 < gf.field_f) {
+              if (SoftwareRasterizer.field_i <= var8 &&
+                var8 < SoftwareRasterizer.field_l &&
+                var9 >= SoftwareRasterizer.field_a &&
+                var9 < SoftwareRasterizer.field_f) {
                 var11 = (int)(256.0 * Math.pow((double)var11 / 256.0, 0.55));
                 var12 = 65280 & var10;
                 var10 = var10 & 16711935;
@@ -253,19 +253,19 @@ final class kr extends Exception {
                 var12 = var12 & 16711680;
                 var10 = var10 & -16711936;
                 var13 = var9 * 640 + var8;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + ((-var11 + 256) * (65280 & var14) & 16711680);
                 var10 = var10 + (-16711936 & (var14 & 16711935) * (256 - var11));
-                gf.field_h[var13] = ee.a(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
               var8 = param2 >> 4;
               var9 = param0 >> 4;
               var10 = param4;
               var11 = (15 & param0) * (16 - (15 & param2));
-              if (gf.field_i <= var8 &&
-                gf.field_l > var8 &&
-                gf.field_a <= var9 &&
-                gf.field_f > var9) {
+              if (SoftwareRasterizer.field_i <= var8 &&
+                SoftwareRasterizer.field_l > var8 &&
+                SoftwareRasterizer.field_a <= var9 &&
+                SoftwareRasterizer.field_f > var9) {
                 var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
                 var12 = var10 & 65280;
                 var12 = var12 * var11;
@@ -274,20 +274,20 @@ final class kr extends Exception {
                 var12 = var12 & 16711680;
                 var10 = var10 & -16711936;
                 var13 = var9 * 640 + var8;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + ((-var11 + 256) * (var14 & 65280) & 16711680);
                 var10 = var10 + (-16711936 & (-var11 + 256) * (var14 & 16711935));
-                gf.field_h[var13] = ee.a(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
-              gf.e(param2 >> 4, 1 + (param5 >> 4), (var7 >> 4) - 2, param4, 256 - 16 * (15 & param2));
+              SoftwareRasterizer.drawVerticalLineAlpha(param2 >> 4, 1 + (param5 >> 4), (var7 >> 4) - 2, param4, 256 - 16 * (15 & param2));
               var8 = (param2 >> 4) + 1;
               var9 = param5 >> 4;
               var10 = param4;
               var11 = (15 & param2) * (16 - (param5 & 15));
-              if (var8 >= gf.field_i &&
-                gf.field_l > var8 &&
-                var9 >= gf.field_a &&
-                var9 < gf.field_f) {
+              if (var8 >= SoftwareRasterizer.field_i &&
+                SoftwareRasterizer.field_l > var8 &&
+                var9 >= SoftwareRasterizer.field_a &&
+                var9 < SoftwareRasterizer.field_f) {
                 var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
                 var12 = var10 & 65280;
                 var10 = var10 & 16711935;
@@ -296,19 +296,19 @@ final class kr extends Exception {
                 var12 = var12 & 16711680;
                 var10 = var10 & -16711936;
                 var13 = var9 * 640 + var8;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + ((65280 & var14) * (256 - var11) & 16711680);
                 var10 = var10 + ((16711935 & var14) * (-var11 + 256) & -16711936);
-                gf.field_h[var13] = ee.a(var10, var12) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var10, var12) >>> 8;
               }
               var8 = (param2 >> 4) + 1;
               var9 = param0 >> 4;
               var10 = param4;
               var11 = (15 & param2) * (15 & param0);
-              if (gf.field_i <= var8 &&
-                var8 < gf.field_l &&
-                gf.field_a <= var9 &&
-                gf.field_f > var9) {
+              if (SoftwareRasterizer.field_i <= var8 &&
+                var8 < SoftwareRasterizer.field_l &&
+                SoftwareRasterizer.field_a <= var9 &&
+                SoftwareRasterizer.field_f > var9) {
                 var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
                 var12 = var10 & 65280;
                 var12 = var12 * var11;
@@ -317,21 +317,21 @@ final class kr extends Exception {
                 var10 = var10 * var11;
                 var10 = var10 & -16711936;
                 var13 = var9 * 640 + var8;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + ((var14 & 16711935) * (-var11 + 256) & -16711936);
                 var12 = var12 + (16711680 & (var14 & 65280) * (256 - var11));
-                gf.field_h[var13] = ee.a(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
-              gf.e(1 + (param2 >> 4), 1 + (param5 >> 4), -2 + (var7 >> 4), param4, (15 & param2) * 16);
+              SoftwareRasterizer.drawVerticalLineAlpha(1 + (param2 >> 4), 1 + (param5 >> 4), -2 + (var7 >> 4), param4, (15 & param2) * 16);
             } else {
               var8 = param2 >> 4;
               var9 = param5 >> 4;
               var10 = param4;
               var11 = (16 - (15 & param2)) * var7;
-              if (gf.field_i <= var8 &&
-                gf.field_l > var8 &&
-                var9 >= gf.field_a &&
-                var9 < gf.field_f) {
+              if (SoftwareRasterizer.field_i <= var8 &&
+                SoftwareRasterizer.field_l > var8 &&
+                var9 >= SoftwareRasterizer.field_a &&
+                var9 < SoftwareRasterizer.field_f) {
                 var11 = (int)(256.0 * Math.pow((double)var11 / 256.0, 0.55));
                 var12 = var10 & 65280;
                 var10 = var10 & 16711935;
@@ -340,19 +340,19 @@ final class kr extends Exception {
                 var10 = var10 * var11;
                 var10 = var10 & -16711936;
                 var13 = var8 + var9 * 640;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var10 = var10 + (-16711936 & (var14 & 16711935) * (256 - var11));
                 var12 = var12 + (16711680 & (-var11 + 256) * (65280 & var14));
-                gf.field_h[var13] = ee.a(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
               var8 = 1 + (param2 >> 4);
               var9 = param5 >> 4;
               var10 = param4;
               var11 = (15 & param2) * var7;
-              if (gf.field_i <= var8 &&
-                gf.field_l > var8 &&
-                gf.field_a <= var9 &&
-                gf.field_f > var9) {
+              if (SoftwareRasterizer.field_i <= var8 &&
+                SoftwareRasterizer.field_l > var8 &&
+                SoftwareRasterizer.field_a <= var9 &&
+                SoftwareRasterizer.field_f > var9) {
                 var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
                 var12 = 65280 & var10;
                 var10 = var10 & 16711935;
@@ -361,10 +361,10 @@ final class kr extends Exception {
                 var10 = var10 * var11;
                 var10 = var10 & -16711936;
                 var13 = var9 * 640 + var8;
-                var14 = gf.field_h[var13];
+                var14 = SoftwareRasterizer.field_h[var13];
                 var12 = var12 + (16711680 & (-var11 + 256) * (var14 & 65280));
                 var10 = var10 + (-16711936 & (16711935 & var14) * (-var11 + 256));
-                gf.field_h[var13] = ee.a(var12, var10) >>> 8;
+                SoftwareRasterizer.field_h[var13] = PrivateChatMessage.intOr(var12, var10) >>> 8;
               }
             }
             return;
@@ -379,10 +379,10 @@ final class kr extends Exception {
           var16 = var13Lifetime1;
           var17 = param4;
           var18 = (16 - ((var10Lifetime1 & 62246) >> 12)) * var11Lifetime1;
-          if (gf.field_i <= var15 &&
-            var15 < gf.field_l &&
-            gf.field_a <= var16 &&
-            var16 < gf.field_f) {
+          if (SoftwareRasterizer.field_i <= var15 &&
+            var15 < SoftwareRasterizer.field_l &&
+            SoftwareRasterizer.field_a <= var16 &&
+            var16 < SoftwareRasterizer.field_f) {
             var18 = (int)(Math.pow((double)var18 / 256.0, 0.55) * 256.0);
             var19 = var17 & 65280;
             var17 = var17 & 16711935;
@@ -391,20 +391,20 @@ final class kr extends Exception {
             var19 = var19 & 16711680;
             var17 = var17 & -16711936;
             var20 = var15 + 640 * var16;
-            var21 = gf.field_h[var20];
+            var21 = SoftwareRasterizer.field_h[var20];
             var19 = var19 + ((var21 & 65280) * (256 - var18) & 16711680);
             var17 = var17 + (-16711936 & (var21 & 16711935) * (-var18 + 256));
-            gf.field_h[var20] = ee.a(var19, var17) >>> 8;
+            SoftwareRasterizer.field_h[var20] = PrivateChatMessage.intOr(var19, var17) >>> 8;
           }
           var14Lifetime1 = var8Lifetime1 + var10Lifetime1;
           var15Lifetime1 = var12Lifetime1;
           var16Lifetime1 = 1 + var13Lifetime1;
           var17Lifetime1 = param4;
           var18Lifetime1 = (15 & var10Lifetime1 >> 12) * var11Lifetime1;
-          if (gf.field_i <= var15Lifetime1 &&
-            gf.field_l > var15Lifetime1 &&
-            gf.field_a <= var16Lifetime1 &&
-            gf.field_f > var16Lifetime1) {
+          if (SoftwareRasterizer.field_i <= var15Lifetime1 &&
+            SoftwareRasterizer.field_l > var15Lifetime1 &&
+            SoftwareRasterizer.field_a <= var16Lifetime1 &&
+            SoftwareRasterizer.field_f > var16Lifetime1) {
             var18Lifetime1 = (int)(Math.pow((double)var18Lifetime1 / 256.0, 0.55) * 256.0);
             var19Lifetime1 = var17Lifetime1 & 65280;
             var19Lifetime1 = var19Lifetime1 * var18Lifetime1;
@@ -413,10 +413,10 @@ final class kr extends Exception {
             var19Lifetime1 = var19Lifetime1 & 16711680;
             var17Lifetime1 = var17Lifetime1 & -16711936;
             var20Lifetime1 = var15Lifetime1 + var16Lifetime1 * 640;
-            var21Lifetime1 = gf.field_h[var20Lifetime1];
+            var21Lifetime1 = SoftwareRasterizer.field_h[var20Lifetime1];
             var19Lifetime1 = var19Lifetime1 + ((var21Lifetime1 & 65280) * (-var18Lifetime1 + 256) & 16711680);
             var17Lifetime1 = var17Lifetime1 + ((-var18Lifetime1 + 256) * (16711935 & var21Lifetime1) & -16711936);
-            gf.field_h[var20Lifetime1] = ee.a(var19Lifetime1, var17Lifetime1) >>> 8;
+            SoftwareRasterizer.field_h[var20Lifetime1] = PrivateChatMessage.intOr(var19Lifetime1, var17Lifetime1) >>> 8;
           }
           var9Lifetime2 = param3 + 7 >> 4;
           var10Lifetime2 = var8Lifetime1 * (-param3 + (var9Lifetime2 << 4)) + (param0 << 12);
@@ -427,10 +427,10 @@ final class kr extends Exception {
           var18Lifetime2 = var16Lifetime2;
           var19Lifetime2 = param4;
           var20Lifetime2 = (16 - (var10Lifetime2 >> 12 & 15)) * var11Lifetime2;
-          if (gf.field_i <= var17Lifetime2 &&
-            gf.field_l > var17Lifetime2 &&
-            var18Lifetime2 >= gf.field_a &&
-            gf.field_f > var18Lifetime2) {
+          if (SoftwareRasterizer.field_i <= var17Lifetime2 &&
+            SoftwareRasterizer.field_l > var17Lifetime2 &&
+            var18Lifetime2 >= SoftwareRasterizer.field_a &&
+            SoftwareRasterizer.field_f > var18Lifetime2) {
             var20Lifetime2 = (int)(Math.pow((double)var20Lifetime2 / 256.0, 0.55) * 256.0);
             var21Lifetime2 = 65280 & var19Lifetime2;
             var21Lifetime2 = var21Lifetime2 * var20Lifetime2;
@@ -439,19 +439,19 @@ final class kr extends Exception {
             var21Lifetime2 = var21Lifetime2 & 16711680;
             var19Lifetime2 = var19Lifetime2 & -16711936;
             var22 = var18Lifetime2 * 640 + var17Lifetime2;
-            var23 = gf.field_h[var22];
+            var23 = SoftwareRasterizer.field_h[var22];
             var21Lifetime2 = var21Lifetime2 + ((65280 & var23) * (-var20Lifetime2 + 256) & 16711680);
             var19Lifetime2 = var19Lifetime2 + ((256 - var20Lifetime2) * (var23 & 16711935) & -16711936);
-            gf.field_h[var22] = ee.a(var19Lifetime2, var21Lifetime2) >>> 8;
+            SoftwareRasterizer.field_h[var22] = PrivateChatMessage.intOr(var19Lifetime2, var21Lifetime2) >>> 8;
           }
           var17Lifetime3 = var15Lifetime2;
           var18Lifetime3 = 1 + var16Lifetime2;
           var19Lifetime3 = param4;
           var20Lifetime3 = var11Lifetime2 * (var10Lifetime2 >> 12 & 15);
-          if (var17Lifetime3 >= gf.field_i &&
-            gf.field_l > var17Lifetime3 &&
-            gf.field_a <= var18Lifetime3 &&
-            var18Lifetime3 < gf.field_f) {
+          if (var17Lifetime3 >= SoftwareRasterizer.field_i &&
+            SoftwareRasterizer.field_l > var17Lifetime3 &&
+            SoftwareRasterizer.field_a <= var18Lifetime3 &&
+            var18Lifetime3 < SoftwareRasterizer.field_f) {
             var20Lifetime3 = (int)(256.0 * Math.pow((double)var20Lifetime3 / 256.0, 0.55));
             var21Lifetime3 = 65280 & var19Lifetime3;
             var21Lifetime3 = var21Lifetime3 * var20Lifetime3;
@@ -460,10 +460,10 @@ final class kr extends Exception {
             var21Lifetime3 = var21Lifetime3 & 16711680;
             var19Lifetime3 = var19Lifetime3 & -16711936;
             var22Lifetime1 = 640 * var18Lifetime3 + var17Lifetime3;
-            var23Lifetime1 = gf.field_h[var22Lifetime1];
+            var23Lifetime1 = SoftwareRasterizer.field_h[var22Lifetime1];
             var19Lifetime3 = var19Lifetime3 + ((var23Lifetime1 & 16711935) * (-var20Lifetime3 + 256) & -16711936);
             var21Lifetime3 = var21Lifetime3 + ((65280 & var23Lifetime1) * (256 - var20Lifetime3) & 16711680);
-            gf.field_h[var22Lifetime1] = ee.a(var21Lifetime3, var19Lifetime3) >>> 8;
+            SoftwareRasterizer.field_h[var22Lifetime1] = PrivateChatMessage.intOr(var21Lifetime3, var19Lifetime3) >>> 8;
           }
           if (param1 != -55) {
             kr.b((byte) 124);
@@ -475,10 +475,10 @@ final class kr extends Exception {
             var18Lifetime4 = var14Lifetime1 >> 16;
             var19Lifetime4 = param4;
             var20Lifetime4 = 256 - (var14Lifetime1 >> 8 & 255);
-            if (gf.field_i <= var17Lifetime4 &&
-              var17Lifetime4 < gf.field_l &&
-              var18Lifetime4 >= gf.field_a &&
-              gf.field_f > var18Lifetime4) {
+            if (SoftwareRasterizer.field_i <= var17Lifetime4 &&
+              var17Lifetime4 < SoftwareRasterizer.field_l &&
+              var18Lifetime4 >= SoftwareRasterizer.field_a &&
+              SoftwareRasterizer.field_f > var18Lifetime4) {
               var20Lifetime4 = (int)(Math.pow((double)var20Lifetime4 / 256.0, 0.55) * 256.0);
               var21Lifetime4 = var19Lifetime4 & 65280;
               var19Lifetime4 = var19Lifetime4 & 16711935;
@@ -487,19 +487,19 @@ final class kr extends Exception {
               var19Lifetime4 = var19Lifetime4 * var20Lifetime4;
               var19Lifetime4 = var19Lifetime4 & -16711936;
               var22Lifetime2 = var17Lifetime4 + 640 * var18Lifetime4;
-              var23Lifetime2 = gf.field_h[var22Lifetime2];
+              var23Lifetime2 = SoftwareRasterizer.field_h[var22Lifetime2];
               var19Lifetime4 = var19Lifetime4 + (-16711936 & (-var20Lifetime4 + 256) * (16711935 & var23Lifetime2));
               var21Lifetime4 = var21Lifetime4 + (16711680 & (256 - var20Lifetime4) * (var23Lifetime2 & 65280));
-              gf.field_h[var22Lifetime2] = ee.a(var21Lifetime4, var19Lifetime4) >>> 8;
+              SoftwareRasterizer.field_h[var22Lifetime2] = PrivateChatMessage.intOr(var21Lifetime4, var19Lifetime4) >>> 8;
             }
             var17Lifetime4Lifetime1 = var12Lifetime1;
             var18Lifetime4Lifetime1 = (var14Lifetime1 >> 16) + 1;
             var19Lifetime4Lifetime1 = param4;
             var20Lifetime4Lifetime1 = (var14Lifetime1 & 65489) >> 8;
-            if (var17Lifetime4Lifetime1 >= gf.field_i &&
-              gf.field_l > var17Lifetime4Lifetime1 &&
-              var18Lifetime4Lifetime1 >= gf.field_a &&
-              gf.field_f > var18Lifetime4Lifetime1) {
+            if (var17Lifetime4Lifetime1 >= SoftwareRasterizer.field_i &&
+              SoftwareRasterizer.field_l > var17Lifetime4Lifetime1 &&
+              var18Lifetime4Lifetime1 >= SoftwareRasterizer.field_a &&
+              SoftwareRasterizer.field_f > var18Lifetime4Lifetime1) {
               var20Lifetime4Lifetime1 = (int)(256.0 * Math.pow((double)var20Lifetime4Lifetime1 / 256.0, 0.55));
               var21Lifetime4Lifetime1 = 65280 & var19Lifetime4Lifetime1;
               var21Lifetime4Lifetime1 = var21Lifetime4Lifetime1 * var20Lifetime4Lifetime1;
@@ -508,10 +508,10 @@ final class kr extends Exception {
               var19Lifetime4Lifetime1 = var19Lifetime4Lifetime1 * var20Lifetime4Lifetime1;
               var19Lifetime4Lifetime1 = var19Lifetime4Lifetime1 & -16711936;
               var22Lifetime2Lifetime1 = var18Lifetime4Lifetime1 * 640 + var17Lifetime4Lifetime1;
-              var23Lifetime2Lifetime1 = gf.field_h[var22Lifetime2Lifetime1];
+              var23Lifetime2Lifetime1 = SoftwareRasterizer.field_h[var22Lifetime2Lifetime1];
               var21Lifetime4Lifetime1 = var21Lifetime4Lifetime1 + ((256 - var20Lifetime4Lifetime1) * (65280 & var23Lifetime2Lifetime1) & 16711680);
               var19Lifetime4Lifetime1 = var19Lifetime4Lifetime1 + (-16711936 & (16711935 & var23Lifetime2Lifetime1) * (256 - var20Lifetime4Lifetime1));
-              gf.field_h[var22Lifetime2Lifetime1] = ee.a(var19Lifetime4Lifetime1, var21Lifetime4Lifetime1) >>> 8;
+              SoftwareRasterizer.field_h[var22Lifetime2Lifetime1] = PrivateChatMessage.intOr(var19Lifetime4Lifetime1, var21Lifetime4Lifetime1) >>> 8;
             }
             var14Lifetime1 = var14Lifetime1 + var8Lifetime1;
             var12Lifetime1++;
@@ -520,7 +520,7 @@ final class kr extends Exception {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var6), "kr.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var6), "kr.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

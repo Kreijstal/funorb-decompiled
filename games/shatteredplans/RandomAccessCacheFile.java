@@ -41,7 +41,7 @@ final class RandomAccessCacheFile {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -72,7 +72,7 @@ final class RandomAccessCacheFile {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class RandomAccessCacheFile {
         int var9Lifetime1;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var7_int = ef.a(param6, 57);
+          var7_int = ef.roundUpToMultipleOfEight(param6, 57);
           if (ro.field_b == null) {
             ro.field_b = new java.security.SecureRandom();
           }
@@ -178,7 +178,7 @@ final class RandomAccessCacheFile {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -193,19 +193,19 @@ final class RandomAccessCacheFile {
         im.field_b = new int[3];
         wm.field_d = new nf[param1 * 15];
         DebouncedValidator.field_g = 0;
-        kp.field_i = param1;
+        TargetedChatMessage.field_i = param1;
         int var2 = -27 % ((param0 + 56) / 49);
     }
 
     final void seek(long param0, byte param1) throws IOException {
         this.field_d.seek(param0);
         if (param1 <= 25) {
-          RandomAccessCacheFile.a(false);
+          RandomAccessCacheFile.clearStatics(false);
         }
         this.field_h = param0;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         if (param0) {
           field_j = (String) null;
         }
@@ -229,21 +229,21 @@ final class RandomAccessCacheFile {
           this.field_d.write(param0, param3, param1);
           this.field_h = this.field_h + (long)param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ra.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ra.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static void a(int param0) {
-        Archive.field_c[field_k] = gf.field_h;
-        cb.field_f[field_k] = gf.field_i;
-        dk.field_b[field_k] = gf.field_l;
+        Archive.field_c[field_k] = SoftwareRasterizer.field_h;
+        cb.field_f[field_k] = SoftwareRasterizer.field_i;
+        dk.field_b[field_k] = SoftwareRasterizer.field_l;
         if (param0 >= -103) {
           RandomAccessCacheFile.a(109, 107);
         }
-        bf.field_c[field_k] = gf.field_a;
-        DebouncedValidator.field_d[field_k] = gf.field_f;
-        oj.field_Cb[field_k] = gf.field_b;
-        TertiaryLinkNode.field_s[field_k] = gf.field_k;
+        bf.field_c[field_k] = SoftwareRasterizer.field_a;
+        DebouncedValidator.field_d[field_k] = SoftwareRasterizer.field_f;
+        oj.field_Cb[field_k] = SoftwareRasterizer.field_b;
+        TertiaryLinkNode.field_s[field_k] = SoftwareRasterizer.field_k;
         field_k = field_k + 1;
     }
 
@@ -267,7 +267,7 @@ final class RandomAccessCacheFile {
           }
           this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

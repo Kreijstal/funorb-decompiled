@@ -22,7 +22,7 @@ final class BufferedSocket implements Runnable {
     private InputStream field_f;
     static String field_h;
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -53,7 +53,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_p) {
-              this.field_p = this.field_m.a(true, 3, (Runnable) (this));
+              this.field_p = this.field_m.requestThread(true, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -71,11 +71,11 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void b(int param0) {
+    final void close(int param0) {
         try {
           int var4 = 0;
           var4 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -88,7 +88,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_p != null) {
             while (this.field_p.field_d == 0) {
-              jb.a((byte) -111, 1L);
+              jb.sleep((byte) -111, 1L);
             }
             if (this.field_p.field_d == 1) {
               try {
@@ -108,7 +108,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_l = (long[][]) null;
         field_h = null;
         field_k = null;
@@ -119,7 +119,7 @@ final class BufferedSocket implements Runnable {
         field_i = null;
     }
 
-    final int a(byte param0) throws IOException {
+    final int readByte(byte param0) throws IOException {
         if (this.field_c) {
           return 0;
         }
@@ -129,7 +129,7 @@ final class BufferedSocket implements Runnable {
         return this.field_f.read();
     }
 
-    final void a(boolean param0) throws IOException {
+    final void checkError(boolean param0) throws IOException {
         if (this.field_c) {
           return;
         }
@@ -143,18 +143,18 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.b(104);
+        this.close(104);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         wh.a(false);
         if (param0 != -6187) {
-          BufferedSocket.b((byte) 13);
+          BufferedSocket.clearStatics((byte) 13);
         }
-        gf.i(param4, param3, param1, param2);
+        SoftwareRasterizer.intersectClip(param4, param3, param1, param2);
     }
 
-    final int a(int param0) throws IOException {
+    final int available(int param0) throws IOException {
         if (this.field_c) {
           return 0;
         }
@@ -259,7 +259,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, byte param3) throws IOException {
+    final void readFully(byte[] param0, int param1, int param2, byte param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -293,7 +293,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final static void a(int param0, si param1) {
+    final static void a(int param0, QuickChatPhraseDefinition param1) {
         try {
           param1.field_s = new char[]{(char)63};
           if (param0 >= -39) {
@@ -309,7 +309,7 @@ final class BufferedSocket implements Runnable {
           }
           param1.field_x = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ke.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ke.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class BufferedSocket implements Runnable {
           this.field_n = this.field_o.getOutputStream();
           this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ke.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ke.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -368,16 +368,16 @@ final class BufferedSocket implements Runnable {
             var10 = var10 ^ 285L;
           }
           var12 = var10 ^ var2;
-          field_l[0][var0] = ff.a(var12, ff.a(ff.a(var8 << 16, ff.a(var10 << 24, ff.a(var2 << 32, ff.a(ff.a(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8));
+          field_l[0][var0] = SpriteButton.longOr(var12, SpriteButton.longOr(SpriteButton.longOr(var8 << 16, SpriteButton.longOr(var10 << 24, SpriteButton.longOr(var2 << 32, SpriteButton.longOr(SpriteButton.longOr(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8));
           for (var14 = 1; var14 < 8; var14++) {
-            field_l[var14][var0] = ff.a(field_l[-1 + var14][var0] >>> 8, field_l[-1 + var14][var0] << 56);
+            field_l[var14][var0] = SpriteButton.longOr(field_l[-1 + var14][var0] >>> 8, field_l[-1 + var14][var0] << 56);
           }
           var0++;
         }
         field_k[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
           var1 = (var0 - 1) * 8;
-          field_k[var0] = bg.a(bg.a(GarrisonTask.a(65280L, field_l[6][var1 + 6]), bg.a(bg.a(GarrisonTask.a(4278190080L, field_l[4][var1 + 4]), bg.a(GarrisonTask.a(1095216660480L, field_l[3][var1 + 3]), bg.a(GarrisonTask.a(field_l[2][2 + var1], 280375465082880L), bg.a(GarrisonTask.a(field_l[1][var1 + 1], 71776119061217280L), GarrisonTask.a(field_l[0][var1], -72057594037927936L))))), GarrisonTask.a(field_l[5][var1 + 5], 16711680L))), GarrisonTask.a(field_l[7][var1 + 7], 255L));
+          field_k[var0] = bg.longXor(bg.longXor(GarrisonTask.longAnd(65280L, field_l[6][var1 + 6]), bg.longXor(bg.longXor(GarrisonTask.longAnd(4278190080L, field_l[4][var1 + 4]), bg.longXor(GarrisonTask.longAnd(1095216660480L, field_l[3][var1 + 3]), bg.longXor(GarrisonTask.longAnd(field_l[2][2 + var1], 280375465082880L), bg.longXor(GarrisonTask.longAnd(field_l[1][var1 + 1], 71776119061217280L), GarrisonTask.longAnd(field_l[0][var1], -72057594037927936L))))), GarrisonTask.longAnd(field_l[5][var1 + 5], 16711680L))), GarrisonTask.longAnd(field_l[7][var1 + 7], 255L));
         }
     }
 }

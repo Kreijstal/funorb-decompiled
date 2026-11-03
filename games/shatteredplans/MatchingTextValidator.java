@@ -15,39 +15,39 @@ final class MatchingTextValidator extends TextFieldValidator {
         try {
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(boolean param0, qr param1) {
-        qr var4 = null;
-        qr var2 = null;
+    final static void a(boolean param0, AnimatedPanel param1) {
+        AnimatedPanel var4 = null;
+        AnimatedPanel var2 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        qr var2Lifetime1;
+        AnimatedPanel var2Lifetime1;
         try {
-          var4 = (qr) (param1.field_M.startForward(0));
+          var4 = (AnimatedPanel) (param1.field_M.startForward(0));
           var2 = var4;
           while (var4 != null) {
             var4.field_mb = 0;
             var4.field_gb = 0;
             var4.field_w = 0;
             var4.field_db = 0;
-            var4 = (qr) (param1.field_M.nextForward((byte) -71));
+            var4 = (AnimatedPanel) (param1.field_M.nextForward((byte) -71));
             var2Lifetime1 = var4;
           }
           if (param0) {
-            MatchingTextValidator.d(-29);
+            MatchingTextValidator.clearStatics(-29);
           }
           param1.field_mb = 0;
           param1.field_w = 0;
           param1.field_db = 0;
           param1.field_gb = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fj.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fj.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String a(boolean param0, String param1) {
+    final String computeMessageFor(boolean param0, String param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_2_0 = null;
@@ -64,14 +64,14 @@ final class MatchingTextValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (this.field_n instanceof ValidatableWidget) {
-            var3 = ((ValidatableWidget) ((Object) this.field_n)).a((byte) 73);
+            var3 = ((ValidatableWidget) ((Object) this.field_n)).getValidationSource((byte) 73);
             if (var3 != null) {
-              if (var3.c(-126) == CachedArchiveSource.field_g &&
+              if (var3.getState(-126) == CachedArchiveSource.field_g &&
                 !param1.equals(this.field_n.field_s)) {
                 stackIn_8_0 = IsaacRandom.field_a;
                 return stackIn_8_0;
               }
-              stackIn_10_0 = var3.a((byte) -63);
+              stackIn_10_0 = var3.getMessage((byte) -63);
               return stackIn_10_0;
             }
           }
@@ -90,11 +90,11 @@ final class MatchingTextValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    final ValidationState b(int param0, String param1) {
+    final ValidationState computeStateFor(int param0, String param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         ValidationState stackIn_5_0 = null;
@@ -105,9 +105,9 @@ final class MatchingTextValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_n instanceof ValidatableWidget) {
-            var3 = ((ValidatableWidget) ((Object) this.field_n)).a((byte) 120);
+            var3 = ((ValidatableWidget) ((Object) this.field_n)).getValidationSource((byte) 120);
             if (var3 != null &&
-              var3.c(param0 + 11321) != CachedArchiveSource.field_g) {
+              var3.getState(param0 + 11321) != CachedArchiveSource.field_g) {
               stackIn_5_0 = ArchiveSourceManager.field_b;
               return stackIn_5_0;
             }
@@ -131,11 +131,11 @@ final class MatchingTextValidator extends TextFieldValidator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_t = null;
         field_s = null;
         field_r = null;

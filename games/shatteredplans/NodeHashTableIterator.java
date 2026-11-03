@@ -13,7 +13,7 @@ final class NodeHashTableIterator implements Iterator {
     private int field_d;
     static int field_h;
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_e = null;
         field_b = null;
         if (param0 != -1) {
@@ -30,7 +30,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_c = null;
     }
 
-    final static qr a(int param0) {
+    final static AnimatedPanel a(int param0) {
         int var1 = -56 % ((-22 - param0) / 48);
         return wg.field_a.field_Eb;
     }
@@ -98,7 +98,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class NodeHashTableIterator implements Iterator {
             NodeHashTableIterator.a((Star) null, (byte) 103);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_g = param0;
           this.c(-107);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

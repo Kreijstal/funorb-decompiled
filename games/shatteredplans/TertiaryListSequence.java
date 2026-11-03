@@ -1,0 +1,123 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TertiaryListSequence extends NodeSequence {
+    static MouseInputHandler field_j;
+    private TertiaryNodeList field_i;
+    static ValidationState field_h;
+    static qf field_m;
+    static int field_k;
+    static IntrusiveDeque field_f;
+    static long field_l;
+    static String field_g;
+
+    final IntrusiveNode first(byte param0) {
+        if (param0 <= 99) {
+          TertiaryListSequence.clearStatics(11);
+          return (IntrusiveNode) ((Object) this.field_i.startForward(true));
+        }
+        return (IntrusiveNode) ((Object) this.field_i.startForward(true));
+    }
+
+    final static String a(byte param0, long param1) {
+        int var3 = 0;
+        long var4 = 0L;
+        StringBuilder var6 = null;
+        long var8 = 0L;
+        int var10 = 0;
+        int var11 = 0;
+        StringBuilder discarded$0 = null;
+        int var12 = ShatteredPlansClient.field_F ? 1 : 0;
+        if (param1 <= 0L) {
+          return null;
+        }
+        if (6582952005840035281L <= param1) {
+          return null;
+        }
+        if (0L != param1 % 37L) {
+          var3 = 0;
+          var4 = param1;
+          while (var4 != 0L) {
+            var3++;
+            var4 = var4 / 37L;
+          }
+          int var7 = -67 / ((param0 - 32) / 63);
+          var6 = new StringBuilder(var3);
+          while (param1 != 0L) {
+            var8 = param1;
+            param1 = param1 / 37L;
+            var10 = TurnEventLog.field_f[(int)(var8 - param1 * 37L)];
+            if (var10 == 95) {
+              var11 = -1 + var6.length();
+              var6.setCharAt(var11, Character.toUpperCase(var6.charAt(var11)));
+              var10 = 160;
+            }
+            discarded$0 = var6.append((char) var10);
+          }
+          var6.reverse();
+          var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+          return var6.toString();
+        }
+        return null;
+    }
+
+    final int size(byte param0) {
+        if (param0 != -61) {
+          this.size((byte) 6);
+          return this.field_i.size(0);
+        }
+        return this.field_i.size(0);
+    }
+
+    TertiaryListSequence(TertiaryNodeList param0) {
+        try {
+          this.field_i = param0;
+        } catch (RuntimeException runtimeException) {
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final IntrusiveNode next(boolean param0) {
+        if (param0) {
+          field_l = -98L;
+          return (IntrusiveNode) ((Object) this.field_i.a((byte) -68));
+        }
+        return (IntrusiveNode) ((Object) this.field_i.a((byte) -68));
+    }
+
+    final static void a(int param0) {
+        hd.field_q = (byte[][]) null;
+        IntHashIndex.field_g = null;
+        if (param0 == 0) {
+          cf.field_H = null;
+          WeightedCacheEntry.field_s = null;
+          sj.field_a = null;
+          eo.field_fb = null;
+          return;
+        }
+        TertiaryListSequence.clearStatics(-53);
+        cf.field_H = null;
+        WeightedCacheEntry.field_s = null;
+        sj.field_a = null;
+        eo.field_fb = null;
+    }
+
+    public static void clearStatics(int param0) {
+        field_g = null;
+        field_j = null;
+        field_f = null;
+        field_m = null;
+        field_h = null;
+        if (param0 != 0) {
+          field_m = (qf) null;
+        }
+    }
+
+    static {
+        field_j = new MouseInputHandler();
+        field_h = new ValidationState();
+        field_k = 0;
+        field_f = new IntrusiveDeque();
+        field_g = "Showing combat and damaged fleets retreating.";
+    }
+}

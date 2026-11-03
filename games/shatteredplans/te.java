@@ -14,7 +14,7 @@ final class te {
     }
 
     final static void a(boolean param0) {
-        bq.a(127);
+        IndexedSpriteState.a(127);
         hr.a(BoundsRect.field_m[0].field_o, cr.field_c, tg.field_a, 113, pe.field_K, MusicVoiceMixer.field_l);
         if (!param0) {
           v var2 = (v) null;
@@ -22,7 +22,7 @@ final class te {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         if (param0 != 0) {
           return;
@@ -41,7 +41,7 @@ final class te {
           kr.field_a = param1;
           MapView.field_Lb = param4;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

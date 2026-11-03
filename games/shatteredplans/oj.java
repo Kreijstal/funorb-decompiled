@@ -7,7 +7,7 @@ final class oj extends ns implements ButtonListener {
     static String field_Ib;
     static PlatformTask field_Gb;
     static int[] field_Cb;
-    static qr field_zb;
+    static AnimatedPanel field_zb;
     static mp field_Fb;
     private aa field_Db;
     private boolean field_Hb;
@@ -66,11 +66,11 @@ final class oj extends ns implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    public static void q(int param0) {
+    public static void clearStatics(int param0) {
         field_Cb = null;
         field_zb = null;
         field_Ib = null;
@@ -95,7 +95,7 @@ final class oj extends ns implements ButtonListener {
             field_Fb = (mp) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "oj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "oj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -104,34 +104,34 @@ final class oj extends ns implements ButtonListener {
           DerelictVictoryChecker.a((byte) 28, param1, "");
           hr.a(param1, (byte) -127);
           if (param0 != 0) {
-            oj.q(13);
+            oj.clearStatics(13);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "oj.KB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "oj.KB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean animate(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
         if (!this.field_E) {
           var2 = -50 / ((param0 + 23) / 52);
-          return super.a((byte) 30);
+          return super.animate((byte) 30);
         }
         if (this.field_Hb) {
           var2Lifetime1 = -50 / ((param0 + 23) / 52);
-          return super.a((byte) 30);
+          return super.animate((byte) 30);
         }
         kj var2_ref_kj = MusicPatch.a(65536);
         if (var2_ref_kj != null) {
           this.a(17, false, var2_ref_kj);
           var2Lifetime2 = -50 / ((param0 + 23) / 52);
-          return super.a((byte) 30);
+          return super.animate((byte) 30);
         }
         var2Lifetime3 = -50 / ((param0 + 23) / 52);
-        return super.a((byte) 30);
+        return super.animate((byte) 30);
     }
 
     oj(DialogRoot param0, aa param1) {
@@ -139,7 +139,7 @@ final class oj extends ns implements ButtonListener {
         try {
           this.field_Db = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class oj extends ns implements ButtonListener {
               var4 = param2.field_g;
               if (param2.field_c == 248) {
                 if (!param1) {
-                  kp.c(-1);
+                  TargetedChatMessage.c(-1);
                 }
                 var4 = sg.field_xb;
                 this.field_Eb = true;
@@ -182,7 +182,7 @@ final class oj extends ns implements ButtonListener {
             if (!this.field_Eb) {
               if (param2.field_c == 5) {
                 var5.a(gg.field_b, (byte) 100, 11);
-                var5.a(em.field_g, (byte) 100, 17);
+                var5.a(ProductionContent.field_g, (byte) 100, 17);
               } else {
                 var5.a(ss.field_e, (byte) 106, -1);
               }
@@ -215,7 +215,7 @@ final class oj extends ns implements ButtonListener {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

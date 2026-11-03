@@ -10,7 +10,7 @@ abstract class a extends IntrusiveNode {
     static int field_j;
     int field_h;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != 15) {
           a.a(-111, -63);
           field_i = null;
@@ -25,9 +25,9 @@ abstract class a extends IntrusiveNode {
         }
     }
 
-    final static qr a(int param0) {
+    final static AnimatedPanel a(int param0) {
         if (param0 != 20605) {
-          a.a((byte) -50);
+          a.clearStatics((byte) -50);
           return SingleChildWidget.field_y.field_xb;
         }
         return SingleChildWidget.field_y.field_xb;

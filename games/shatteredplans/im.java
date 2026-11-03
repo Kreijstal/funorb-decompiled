@@ -6,7 +6,7 @@ final class im {
     static String field_a;
     static int[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -27153) {
           return;
         }
@@ -21,7 +21,7 @@ final class im {
             param1 = false;
           }
           GameScreen.a((byte) -57, param1);
-          ms.b(20975);
+          ChatMessage.b(20975);
           return;
         }
         field_a = (String) null;
@@ -29,10 +29,10 @@ final class im {
           param1 = false;
         }
         GameScreen.a((byte) -57, param1);
-        ms.b(20975);
+        ChatMessage.b(20975);
     }
 
-    final static void a(Player param0, PacketBuffer param1, int param2) {
+    final static void writePlayer(Player param0, PacketBuffer param1, int param2) {
         RuntimeException var3 = null;
         PacketBuffer var4 = null;
         PacketBuffer stackIn_2_0 = null;
@@ -55,7 +55,7 @@ final class im {
             return;
           }
           var4 = (PacketBuffer) null;
-          im.a((Player) null, (PacketBuffer) null, -30);
+          im.writePlayer((Player) null, (PacketBuffer) null, -30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class im {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class im {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

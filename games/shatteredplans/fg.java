@@ -3,7 +3,7 @@
  */
 final class fg {
     static ro field_a;
-    static qr field_b;
+    static AnimatedPanel field_b;
     static int[] field_c;
 
     final boolean a(int param0) {
@@ -46,7 +46,7 @@ final class fg {
             return stackIn_4_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = cm.field_e;
+            stackIn_7_0 = IntHashIndex.field_e;
             return stackIn_7_0;
           }
           var3 = so.a(param0, '.', -92);
@@ -76,16 +76,16 @@ final class fg {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;
         if (param0 < 123) {
-          field_b = (qr) null;
+          field_b = (AnimatedPanel) null;
         }
     }
 

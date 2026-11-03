@@ -6,7 +6,7 @@ final class jr extends IntrusiveNode {
     int field_j;
     int field_i;
     int field_k;
-    static qr field_h;
+    static AnimatedPanel field_h;
 
     final static void a(String param0, int param1, String param2) {
         try {
@@ -16,15 +16,15 @@ final class jr extends IntrusiveNode {
             jr.a((String) null, 27, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_l = null;
         field_h = null;
         if (param0 != 1885) {
-          jr.a(97);
+          jr.clearStatics(97);
         }
     }
 

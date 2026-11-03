@@ -16,7 +16,7 @@ final class nf {
     int[] field_f;
     String field_b;
     int field_n;
-    qr field_j;
+    AnimatedPanel field_j;
     int field_e;
 
     final int a(byte param0) {
@@ -101,13 +101,13 @@ final class nf {
             return stackIn_11_0;
           }
           if (var2_int == 0) {
-            stackIn_14_0 = bq.field_f;
+            stackIn_14_0 = IndexedSpriteState.field_f;
             return stackIn_14_0;
           }
           if (1 == var2_int) {
             stackIn_18_0 = bk.field_d;
           } else {
-            stackIn_18_0 = re.a(rl.field_e, 4371, new String[]{Integer.toString(var2_int)});
+            stackIn_18_0 = QuickChatCategoryRegistry.a(rl.field_e, 4371, new String[]{Integer.toString(var2_int)});
           }
           var9 = stackIn_18_0;
           var5 = var9;
@@ -121,9 +121,9 @@ final class nf {
                 var4.field_r != 0 &&
                 null != var4.field_k) {
                 if (var4.field_r != 1) {
-                  var7 = re.a(wl.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
+                  var7 = QuickChatCategoryRegistry.a(wl.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
                 } else {
-                  var7 = re.a(lh.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
+                  var7 = QuickChatCategoryRegistry.a(lh.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
                 }
                 incrementValue$0 = var3;
                 var3++;
@@ -145,7 +145,7 @@ final class nf {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class nf {
           var2_int = param0.length;
           var3 = new int[var2_int];
           if (param1 != 3718) {
-            nf.b((byte) -75);
+            nf.clearStatics((byte) -75);
           }
           var4 = 1;
           while (true) {
@@ -197,11 +197,11 @@ final class nf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static String a(String param0, String param1, byte param2, String param3) {
+    final static String replaceAll(String param0, String param1, byte param2, String param3) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var4 = param1.indexOf(param0);
         if (param2 <= 57) {
@@ -242,19 +242,19 @@ final class nf {
         } else {
           this.field_f = null;
         }
-        this.field_b = em.field_a;
+        this.field_b = ProductionContent.field_a;
         this.field_k = BufferedSocket.field_h;
         this.field_c = nj.field_a;
         this.field_h = kr.field_b;
         this.field_o = WeightedCacheEntry.field_q;
-        this.field_p = sp.field_j;
+        this.field_p = WidgetStyle.field_j;
         this.field_l = TertiaryNodeList.field_f;
-        this.field_g = fm.field_f;
+        this.field_g = HuffmanCodec.field_f;
         this.field_n = PacketBuffer.field_k;
         this.field_d = ArchiveRequest.field_s;
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_i = null;
         if (param0 != -25) {
           field_i = (String) null;
@@ -281,7 +281,7 @@ final class nf {
           this.field_b = param1;
           this.field_l = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "nf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "nf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

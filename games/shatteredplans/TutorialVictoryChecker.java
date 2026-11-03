@@ -19,7 +19,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
             this.resultsPanelHeight(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -41,11 +41,11 @@ final class TutorialVictoryChecker extends VictoryChecker {
           ig.field_d = 2064384 & var2_intLifetime1 << 15;
           ig.field_d = ig.field_d + (param0.readUnsignedByte(-122) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(-127);
-          na.field_L = (1 & var2_intLifetime2) << 16;
+          Bzip2State.field_L = (1 & var2_intLifetime2) << 16;
           ig.field_d = ig.field_d + (var2_intLifetime2 >> 1);
-          na.field_L = na.field_L + param0.readUnsignedShort(-20976);
+          Bzip2State.field_L = Bzip2State.field_L + param0.readUnsignedShort(-20976);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         int[] var24 = null;
         int[] var25 = null;
         int[] var26 = null;
-        qk[] var27 = null;
+        MenuLabel[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
@@ -102,7 +102,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
             var28[var5] = var5;
           }
           if (param0 >= -9) {
-            TutorialVictoryChecker.c(-41);
+            TutorialVictoryChecker.clearStatics(-41);
           }
           var5Lifetime1 = 0;
           var29 = this.field_n;
@@ -116,7 +116,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           if (var5Lifetime1 > 0) {
             lh.a((byte) 50, var4, (int[]) ((Object) this.field_n.clone()));
           }
-          var27 = new qk[]{new qk(0, 0, 182, rs.field_Cb.field_J, re.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(10)}))};
+          var27 = new MenuLabel[]{new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(10)}))};
           var7 = new Player[this.field_i.length];
           var32 = new int[this.field_i.length];
           var26 = var32;
@@ -169,7 +169,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
             var10 = this.field_g;
             var11 = 0;
           }
-          param2.a(10, var7, var31, var32, var10, var27, (byte) -47, var11);
+          param2.showResultsDialog(10, var7, var31, var32, var10, var27, (byte) -47, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,7 +187,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           this.field_n = new int[this.field_i.length];
           this.field_s = new int[this.field_i.length];
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -260,11 +260,11 @@ final class TutorialVictoryChecker extends VictoryChecker {
         return new Player[]{};
     }
 
-    public static void c(int param0) {
+    public static void clearStatics(int param0) {
         field_k = null;
         if (param0 >= -93) {
-          ub var2 = (ub) null;
-          TutorialVictoryChecker.a(-23, (mj) null, -88, (ub) null, -99, 99, (byte) 109);
+          ScrollPane var2 = (ScrollPane) null;
+          TutorialVictoryChecker.a(-23, (mj) null, -88, (ScrollPane) null, -99, 99, (byte) 109);
         }
         field_r = null;
         field_o = null;
@@ -278,11 +278,11 @@ final class TutorialVictoryChecker extends VictoryChecker {
         try {
           int var3_int = 1 / ((-72 - param0) / 45);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, mj param1, int param2, ub param3, int param4, int param5, byte param6) {
+    final static void a(int param0, mj param1, int param2, ScrollPane param3, int param4, int param5, byte param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -326,7 +326,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

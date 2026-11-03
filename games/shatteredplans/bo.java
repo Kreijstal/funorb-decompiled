@@ -5,7 +5,7 @@ final class bo extends jl implements ButtonListener {
     private FocusableWidget field_X;
     static String field_Y;
 
-    public static void p(int param0) {
+    public static void clearStatics(int param0) {
         field_Y = null;
         if (param0 != 0) {
           field_Y = (String) null;
@@ -31,7 +31,7 @@ final class bo extends jl implements ButtonListener {
                 var3 = AggressiveAi.field_p;
               }
             } else {
-              var3 = lp.field_z;
+              var3 = MenuList.field_z;
               this.field_n = this.field_n + 10;
               if (cb.c((byte) 58)) {
                 this.field_n = this.field_n + 20;
@@ -66,7 +66,7 @@ final class bo extends jl implements ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -96,11 +96,11 @@ final class bo extends jl implements ButtonListener {
           var5 = -6 + this.field_n;
           this.field_n = this.field_n + 38;
           if (param2 != 0) {
-            bo.p(-92);
+            bo.clearStatics(-92);
           }
-          var4.a(var5, 30, (byte) 126, 15, this.field_x - 14 - 16);
+          var4.setBounds(var5, 30, (byte) 126, 15, this.field_x - 14 - 16);
           this.b((byte) -50, var4);
-          this.d((byte) 90);
+          this.reapplyBounds((byte) 90);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -119,7 +119,7 @@ final class bo extends jl implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -165,18 +165,18 @@ final class bo extends jl implements ButtonListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static vm a(int[] param0, byte param1, qr param2, qr param3, qr param4) {
+    final static vm a(int[] param0, byte param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
         char[] var7 = null;
         vm[] var8 = null;
         int var9 = 0;
-        dp var11 = null;
+        QuickChatCategoryDefinition var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
@@ -252,7 +252,7 @@ final class bo extends jl implements ButtonListener {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

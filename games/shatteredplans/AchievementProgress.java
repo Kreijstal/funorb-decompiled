@@ -11,12 +11,12 @@ final class AchievementProgress {
     int[] field_l;
     static String field_e;
     int[] field_h;
-    static ur field_m;
+    static ScrollBar field_m;
     boolean[][] field_d;
-    static qr field_i;
+    static AnimatedPanel field_i;
     static String field_c;
 
-    final static void a(hb param0, int param1, hb param2, hb param3, CipherPacketBuffer param4) {
+    final static void a(NodeSequence param0, int param1, NodeSequence param2, NodeSequence param3, CipherPacketBuffer param4) {
         int var9 = 0;
         int var10 = 0;
         RuntimeException stackIn_32_0 = null;
@@ -38,51 +38,51 @@ final class AchievementProgress {
         FleetMove var12 = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5_int = param0.b((byte) -61);
-          var6 = param3.b((byte) -61);
-          var7 = (ProjectUse) (param2.a((byte) 124));
+          var5_int = param0.size((byte) -61);
+          var6 = param3.size((byte) -61);
+          var7 = (ProjectUse) (param2.first((byte) 124));
           if (param1 != -256) {
-            AchievementProgress.a((byte) -9);
+            AchievementProgress.clearStatics((byte) -9);
           }
           while (var7 != null) {
             param4.writeByte(var7.field_o + 251, (byte) -125);
-            im.a(var7.field_p, param4, 9555);
-            di.a(var7.field_q, false, param4);
+            im.writePlayer(var7.field_p, param4, 9555);
+            di.writeStar(var7.field_q, false, param4);
             if (var7.field_o == 3) {
-              di.a(var7.field_r, false, param4);
+              di.writeStar(var7.field_r, false, param4);
             }
-            var7 = (ProjectUse) (param2.a(false));
+            var7 = (ProjectUse) (param2.next(false));
           }
-          var8 = (PlacementOrder) (param0.a((byte) 111));
+          var8 = (PlacementOrder) (param0.first((byte) 111));
           while (var5_int >= 59) {
             param4.writeByte(250, (byte) -61);
             for (var9 = 0; var9 < 59; var9++) {
-              hm.a(var8, param4, true);
-              var8 = (PlacementOrder) (param0.a(false));
+              PanelNode.writePlacementOrder(var8, param4, true);
+              var8 = (PlacementOrder) (param0.next(false));
             }
             var5_int -= 59;
           }
           if (var5_int > 0) {
             param4.writeByte(192 + var5_int - 1, (byte) -86);
             while (var8 != null) {
-              hm.a(var8, param4, true);
-              var8 = (PlacementOrder) (param0.a(false));
+              PanelNode.writePlacementOrder(var8, param4, true);
+              var8 = (PlacementOrder) (param0.next(false));
             }
           }
-          var12 = (FleetMove) (param3.a((byte) 110));
+          var12 = (FleetMove) (param3.first((byte) 110));
           while (var6 >= 192) {
             param4.writeByte(191, (byte) -104);
             for (var10 = 0; var10 < 192; var10++) {
-              lp.a(var12, (byte) -106, param4);
-              var12 = (FleetMove) (param3.a(false));
+              MenuList.writeFleetMove(var12, (byte) -106, param4);
+              var12 = (FleetMove) (param3.next(false));
             }
             var6 -= 192;
           }
           if (var6 > 0) {
             param4.writeByte(var6 - 1, (byte) -103);
             while (var12 != null) {
-              lp.a(var12, (byte) -88, param4);
-              var12 = (FleetMove) (param3.a(false));
+              MenuList.writeFleetMove(var12, (byte) -88, param4);
+              var12 = (FleetMove) (param3.next(false));
             }
             return;
           }
@@ -115,7 +115,7 @@ final class AchievementProgress {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class AchievementProgress {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "se.B(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "se.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -272,7 +272,7 @@ final class AchievementProgress {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -280,9 +280,9 @@ final class AchievementProgress {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != -37) {
-          AchievementProgress.a((byte) 121);
+          AchievementProgress.clearStatics((byte) 121);
         }
         field_m = null;
         field_a = null;

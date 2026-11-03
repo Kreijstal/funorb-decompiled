@@ -10,7 +10,7 @@ final class PlacementEvent extends IntrusiveNode {
     static int field_k;
     static tm[] field_l;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_l = null;
         field_m = null;
         field_n = null;
@@ -25,7 +25,7 @@ final class PlacementEvent extends IntrusiveNode {
           this.field_j = param0;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

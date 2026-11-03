@@ -6,7 +6,7 @@ final class EmailValidator extends TextFieldValidator {
     static nq field_x;
     static boolean field_r;
     static String field_u;
-    static nk[] field_o;
+    static IndexedSprite[] field_o;
     static String[] field_w;
     static sq[] field_q;
     static String field_v;
@@ -26,7 +26,7 @@ final class EmailValidator extends TextFieldValidator {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vd.a(param1, param2, param0, 2)) {
+          if (!MenuComponent.a(param1, param2, param0, 2)) {
             return null;
           }
           if (param4 > -83) {
@@ -53,17 +53,17 @@ final class EmailValidator extends TextFieldValidator {
             stackIn_16_0 = stackIn_11_0;
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static lp a(qk[] param0, boolean param1) {
+    final static MenuList a(MenuLabel[] param0, boolean param1) {
         int var3 = 0;
-        lp var2 = null;
+        MenuList var2 = null;
         int var4 = 0;
-        lp var5 = null;
-        lp stackIn_7_0 = null;
-        lp stackIn_9_0 = null;
+        MenuList var5 = null;
+        MenuList stackIn_7_0 = null;
+        MenuList stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -71,17 +71,17 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException var2_ref = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5 = new lp(0, 0, 182, param0.length * rs.field_Cb.field_J);
+          var5 = new MenuList(0, 0, 182, param0.length * rs.field_Cb.field_J);
           var2 = var5;
           for (var3 = 0; param0.length > var3; var3++) {
-            param0[var3].a((byte) 119, 0, rs.field_Cb.field_J * var3);
-            var5.a(param0[var3], 8);
+            param0[var3].moveTo((byte) 119, 0, rs.field_Cb.field_J * var3);
+            var5.addChild(param0[var3], 8);
           }
           if (param1) {
             stackIn_9_0 = var2;
             return stackIn_9_0;
           }
-          stackIn_7_0 = (lp) null;
+          stackIn_7_0 = (MenuList) null;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,11 +93,11 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final String a(boolean param0, String param1) {
+    final String computeMessageFor(boolean param0, String param1) {
         String stackIn_4_0 = null;
         String stackIn_7_0 = null;
         String stackIn_12_0 = null;
@@ -108,19 +108,19 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_s.b(-11196, param1) == ArchiveSourceManager.field_b) {
-            stackIn_4_0 = this.field_s.a(false, param1);
+          if (this.field_s.computeStateFor(-11196, param1) == ArchiveSourceManager.field_b) {
+            stackIn_4_0 = this.field_s.computeMessageFor(false, param1);
             return stackIn_4_0;
           }
           if (param0) {
             stackIn_7_0 = (String) null;
             return stackIn_7_0;
           }
-          if (this.b(-11196, param1) == ArchiveSourceManager.field_b) {
+          if (this.computeStateFor(-11196, param1) == ArchiveSourceManager.field_b) {
             stackIn_12_0 = ab.field_d;
             return stackIn_12_0;
           }
-          stackIn_14_0 = dn.field_g;
+          stackIn_14_0 = DualLinkDequeSequence.field_g;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,11 +132,11 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final ValidationState b(int param0, String param1) {
+    final ValidationState computeStateFor(int param0, String param1) {
         ValidationState stackIn_2_0 = null;
         ValidationState stackIn_8_0 = null;
         ValidationState stackIn_14_0 = null;
@@ -147,7 +147,7 @@ final class EmailValidator extends TextFieldValidator {
         ks var3 = null;
         RuntimeException var3_ref = null;
         try {
-          if (this.field_s.b(param0, param1) == ArchiveSourceManager.field_b) {
+          if (this.field_s.computeStateFor(param0, param1) == ArchiveSourceManager.field_b) {
             stackIn_2_0 = ArchiveSourceManager.field_b;
             return stackIn_2_0;
           }
@@ -176,7 +176,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -195,8 +195,8 @@ final class EmailValidator extends TextFieldValidator {
               PlacementOrder.field_t = PlacementOrder.field_t - 1;
             } else {
               if (Archive.field_b <= 0) {
-                if (0 < ee.field_k) {
-                  ee.field_k = ee.field_k - 1;
+                if (0 < PrivateChatMessage.field_k) {
+                  PrivateChatMessage.field_k = PrivateChatMessage.field_k - 1;
                 }
               } else {
                 Archive.field_b = Archive.field_b - 1;
@@ -207,7 +207,7 @@ final class EmailValidator extends TextFieldValidator {
               if (null == he.field_p) {
                 IntrusiveNodeHashTable.field_e = false;
                 if (Archive.field_b <= 0) {
-                  if (0 >= ee.field_k) {
+                  if (0 >= PrivateChatMessage.field_k) {
                     if (MouseInputHandler.field_f > PlacementOrder.field_t) {
                       if (PlacementOrder.field_t == 0) {
                         SecondaryNodeHashTable.a((byte) -83);
@@ -215,14 +215,14 @@ final class EmailValidator extends TextFieldValidator {
                       PlacementOrder.field_t = PlacementOrder.field_t + 1;
                     }
                   } else {
-                    ee.field_k = ee.field_k - 1;
+                    PrivateChatMessage.field_k = PrivateChatMessage.field_k - 1;
                   }
                 } else {
                   Archive.field_b = Archive.field_b - 1;
                 }
               } else {
                 if (PlacementOrder.field_t <= 0) {
-                  if (ee.field_k <= 0) {
+                  if (PrivateChatMessage.field_k <= 0) {
                     if (MouseInputHandler.field_f > Archive.field_b) {
                       if (0 == Archive.field_b) {
                         DialogRoot.a(true, true);
@@ -230,7 +230,7 @@ final class EmailValidator extends TextFieldValidator {
                       Archive.field_b = Archive.field_b + 1;
                     }
                   } else {
-                    ee.field_k = ee.field_k - 1;
+                    PrivateChatMessage.field_k = PrivateChatMessage.field_k - 1;
                   }
                 } else {
                   PlacementOrder.field_t = PlacementOrder.field_t - 1;
@@ -243,11 +243,11 @@ final class EmailValidator extends TextFieldValidator {
                 if (Archive.field_b > 0) {
                   Archive.field_b = Archive.field_b - 1;
                 } else {
-                  if (ee.field_k < MouseInputHandler.field_f) {
-                    if (0 == ee.field_k) {
+                  if (PrivateChatMessage.field_k < MouseInputHandler.field_f) {
+                    if (0 == PrivateChatMessage.field_k) {
                       DialogRoot.a(true, false);
                     }
-                    ee.field_k = ee.field_k + 1;
+                    PrivateChatMessage.field_k = PrivateChatMessage.field_k + 1;
                   }
                 }
               }
@@ -261,7 +261,7 @@ final class EmailValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "mf.U(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "mf.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class EmailValidator extends TextFieldValidator {
           field_q = null;
           field_v = null;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mf.T(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mf.T(" + param0 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class EmailValidator extends TextFieldValidator {
             stackIn_11_0 = stackIn_6_0;
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -351,7 +351,7 @@ final class EmailValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "mf.O(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "mf.O(" + param0 + ')');
         }
     }
 
@@ -434,7 +434,7 @@ final class EmailValidator extends TextFieldValidator {
             stackIn_24_0 = stackIn_20_0;
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -497,7 +497,7 @@ final class EmailValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref3 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref3), "mf.V(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref3), "mf.V(" + param0 + ')');
         }
     }
 
@@ -549,7 +549,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

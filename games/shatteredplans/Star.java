@@ -66,12 +66,12 @@ final class Star extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStatics(int param0) {
         field_E = null;
         field_H = null;
         field_P = null;
         if (param0 != 0) {
-          Star.e(-26);
+          Star.clearStatics(-26);
         }
         field_o = null;
         field_K = null;
@@ -114,7 +114,7 @@ final class Star extends DualLinkNode {
           this.field_D = var8;
           param0.removeNeighbour(this, (byte) -123);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ln.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ln.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class Star extends DualLinkNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class Star extends DualLinkNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class Star extends DualLinkNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -292,8 +292,8 @@ final class Star extends DualLinkNode {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        gf.a(var1.field_i, var1.field_r, var1.field_k);
-        gf.d(var1.field_o, var1.field_h, var1.field_j, var1.field_l);
+        SoftwareRasterizer.setTarget(var1.field_i, var1.field_r, var1.field_k);
+        SoftwareRasterizer.setClip(var1.field_o, var1.field_h, var1.field_j, var1.field_l);
         var1.field_i = null;
         ql.field_p.addLast((byte) -113, var1);
     }

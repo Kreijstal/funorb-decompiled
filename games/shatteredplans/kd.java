@@ -60,7 +60,7 @@ final class kd {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class kd {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class kd {
           var1_int = uq.field_k;
           var2 = 0;
           if (2 == eh.field_C) {
-            var3_long = pr.a(14274) - MusicPatch.field_p;
+            var3_long = pr.currentTimeMillis(14274) - MusicPatch.field_p;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -256,24 +256,24 @@ final class kd {
             var6 = kr.field_f[var3];
             if (eh.field_C == 2 &&
               var2 == 1) {
-              if (kp.field_o.length >= TertiaryNodeList.field_d.length) {
-                stackIn_20_0 = kp.field_o.length;
+              if (TargetedChatMessage.field_o.length >= TertiaryNodeList.field_d.length) {
+                stackIn_20_0 = TargetedChatMessage.field_o.length;
               } else {
                 stackIn_20_0 = TertiaryNodeList.field_d.length;
               }
               var7 = stackIn_20_0;
-              if (hm.field_p.length > field_b.length) {
-                stackIn_23_0 = hm.field_p.length;
+              if (PanelNode.field_p.length > field_b.length) {
+                stackIn_23_0 = PanelNode.field_p.length;
               } else {
                 stackIn_23_0 = field_b.length;
               }
               var8 = stackIn_23_0;
               if (var3 >= 6 &&
                 var3 < var7 + 6) {
-                if (kp.field_o.length + var3 + (-6 - var7) < 0) {
+                if (TargetedChatMessage.field_o.length + var3 + (-6 - var7) < 0) {
                   stackIn_29_0 = "";
                 } else {
-                  stackIn_29_0 = kp.field_o[-6 + var3 - (-kp.field_o.length + var7)];
+                  stackIn_29_0 = TargetedChatMessage.field_o[-6 + var3 - (-TargetedChatMessage.field_o.length + var7)];
                 }
                 var6 = stackIn_29_0;
               }
@@ -312,7 +312,7 @@ final class kd {
               ql.field_n.drawString(var6, var8Lifetime1, var1_int + je.field_g, var5, -1);
               var1_int = var1_int + (id.field_b + (sm.field_b + ArchiveNetworkClient.field_i));
             } else {
-              PlayerStats.field_c.drawString(var6, var8Lifetime1, dp.field_v + var1_int, var5, -1);
+              PlayerStats.field_c.drawString(var6, var8Lifetime1, QuickChatCategoryDefinition.field_v + var1_int, var5, -1);
               var1_int = var1_int + e.field_d;
             }
           }
@@ -320,11 +320,11 @@ final class kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "kd.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "kd.C(" + param0 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 <= 74) {

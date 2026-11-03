@@ -9,21 +9,21 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
     static String field_k;
     static int[] field_i;
 
-    public final void a(TextFieldWidget param0, int param1) {
+    public final void onTextChanged(TextFieldWidget param0, int param1) {
         try {
           if (param1 != 95) {
-            this.a(25);
+            this.isEmpty(25);
           }
-          this.b(param1 - 158);
+          this.notifyChanged(param1 - 158);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ja.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ja.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         field_i = null;
         if (param0 <= 123) {
-          ja.d((byte) 15);
+          ja.clearStatics((byte) 15);
         }
         field_l = null;
         field_n = null;
@@ -110,11 +110,11 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final String c(byte param0) {
+    final String computeMessage(byte param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -129,10 +129,10 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
           var3 = this.field_m.f((byte) 119);
           if (param0 < 61) {
             var6 = (TextFieldWidget) null;
-            this.a((TextFieldWidget) null, 80);
+            this.onTextChanged((TextFieldWidget) null, 80);
           }
           var4 = this.field_m.l(115);
-          var5 = BattleSnapshot.e(-13299);
+          var5 = BattleSnapshot.getCurrentYear(-13299);
           if (1890 <= var4 &&
             var4 <= -3 + var5) {
             if (tg.a(var2_int, var3, (byte) -126, var4)) {
@@ -140,7 +140,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
               return (String) (stackIn_9_0);
             }
           } else {
-            stackIn_6_0 = re.a(PlayerStats.field_b, 4371, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_6_0 = QuickChatCategoryRegistry.a(PlayerStats.field_b, 4371, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_6_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -153,7 +153,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
     public ja() {
     }
 
-    final ValidationState a(boolean param0) {
+    final ValidationState computeState(boolean param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -167,7 +167,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
           var2_int = this.field_m.d(param0);
           var3 = this.field_m.f((byte) 108);
           var4 = this.field_m.l(66);
-          var5 = BattleSnapshot.e(-13299);
+          var5 = BattleSnapshot.getCurrentYear(-13299);
           if (1890 > var4) {
             stackIn_3_0 = ArchiveSourceManager.field_b;
             return stackIn_3_0;
@@ -188,17 +188,17 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
         return CachedArchiveSource.field_g;
     }
 
-    public final void a(int param0, TextFieldWidget param1) {
+    public final void onEnter(int param0, TextFieldWidget param1) {
         try {
           if (param0 != 4340) {
             field_l = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ja.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ja.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final boolean a(int param0) {
+    public final boolean isEmpty(int param0) {
         if (param0 != 16647) {
           return true;
         }

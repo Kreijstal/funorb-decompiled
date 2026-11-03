@@ -6,13 +6,13 @@ final class PlacementOrder extends DualLinkNode {
     static int field_t;
     Star field_u;
     static IntrusiveDeque field_r;
-    static vd field_w;
+    static MenuComponent field_w;
     static Sprite field_q;
     static String[][] field_s;
     static String[] field_o;
     static Sprite[] field_p;
 
-    public static void e(int param0) {
+    public static void clearStatics(int param0) {
         field_o = null;
         if (param0 == 21758) {
           field_q = null;
@@ -35,7 +35,7 @@ final class PlacementOrder extends DualLinkNode {
           this.field_u = param0;
           this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

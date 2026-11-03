@@ -4,15 +4,15 @@
 abstract class WeightedCacheEntry extends DualLinkNode {
     static gq field_r;
     static Sprite field_u;
-    static qr field_t;
+    static AnimatedPanel field_t;
     int field_p;
     static String field_q;
     static int[] field_s;
-    static qr field_o;
+    static AnimatedPanel field_o;
 
     abstract boolean e(boolean param0);
 
-    public static void d(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_t = null;
         field_r = null;
         field_u = null;
@@ -41,7 +41,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
         try {
           try {
             var4 = param2.getGraphics();
-            so.field_q.a(var4, param3, (byte) -92, param1);
+            so.field_q.paint(var4, param3, (byte) -92, param1);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,7 +51,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
           if (param0 >= 21) {
             return;
           }
-          field_o = (qr) null;
+          field_o = (AnimatedPanel) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -63,7 +63,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends vd {
+final class lh extends MenuComponent {
     static IntrusiveDeque field_v;
     private int field_C;
     static int[] field_y;
@@ -39,7 +39,7 @@ final class lh extends vd {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void resize(boolean param0, int param1, int param2) {
         if (param1 < 10) {
           param1 = 10;
         }
@@ -53,7 +53,7 @@ final class lh extends vd {
         this.field_i = param1;
     }
 
-    public static void f(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 == 5) {
           field_G = null;
           field_H = null;
@@ -107,7 +107,7 @@ final class lh extends vd {
         super(param0, param1, 11, param2);
         this.field_C = 5;
         this.field_F = param3;
-        this.field_B = SolVictoryChecker.a(this.field_F, 0, -85, 128);
+        this.field_B = SolVictoryChecker.blendColours(this.field_F, 0, -85, 128);
     }
 
     final static void a(byte param0, int[] param1, int[] param2) {
@@ -115,7 +115,7 @@ final class lh extends vd {
           ClientException.a(0, -2147483648, param2.length - 1, param1, param2);
           int var3_int = -92 % ((-25 - param0) / 57);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "lh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "lh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,10 +123,10 @@ final class lh extends vd {
         if (!this.field_s) {
           return;
         }
-        gf.j(this.field_k + 5, this.field_t, this.field_i, this.field_p ? this.field_F : this.field_B);
+        SoftwareRasterizer.drawVerticalLine(this.field_k + 5, this.field_t, this.field_i, this.field_p ? this.field_F : this.field_B);
         int var2 = 28 / ((param0 - 67) / 47);
         if (this.field_p) {
-          gf.g(this.field_k + 5, this.field_p ? this.field_C + this.field_t : 5 + this.field_t, 5, !this.field_p ? this.field_B : this.field_F);
+          SoftwareRasterizer.fillCircle(this.field_k + 5, this.field_p ? this.field_C + this.field_t : 5 + this.field_t, 5, !this.field_p ? this.field_B : this.field_F);
         }
     }
 

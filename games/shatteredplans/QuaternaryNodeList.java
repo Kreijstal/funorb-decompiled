@@ -9,9 +9,9 @@ final class QuaternaryNodeList {
     private QuaternaryLinkNode field_e;
     static String[] field_a;
 
-    final QuaternaryLinkNode d(int param0) {
+    final QuaternaryLinkNode nextForward(int param0) {
         if (param0 > -96) {
-          QuaternaryNodeList.a(79);
+          QuaternaryNodeList.clearStatics(79);
         }
         QuaternaryLinkNode var2 = this.field_e;
         if (var2 == this.field_c) {
@@ -22,26 +22,26 @@ final class QuaternaryNodeList {
         return var2;
     }
 
-    final void a(byte param0) {
+    final void clear(byte param0) {
         QuaternaryLinkNode var2;
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         while (true) {
           var2 = this.field_c.field_x;
           if (this.field_c != var2) {
-            var2.f((byte) -62);
+            var2.unlinkQuaternary((byte) -62);
             continue;
           }
           break;
         }
         this.field_e = null;
         if (param0 != 112) {
-          this.a((byte) 101);
+          this.clear((byte) 101);
         }
         return;
     }
 
-    final int c(int param0) {
+    final int size(int param0) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 0;
         QuaternaryLinkNode var3 = this.field_c.field_x;
@@ -50,12 +50,12 @@ final class QuaternaryNodeList {
           var2++;
         }
         if (param0 != -7432) {
-          this.c(107);
+          this.size(107);
         }
         return var2;
     }
 
-    final static int[][] a(Star[] param0, int param1) {
+    final static int[][] computeShortestHops(Star[] param0, int param1) {
         int[][] stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -125,28 +125,28 @@ final class QuaternaryNodeList {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(byte param0, QuaternaryLinkNode param1) {
+    final void addLast(byte param0, QuaternaryLinkNode param1) {
         if (param0 != 9) {
           return;
         }
         try {
           if (null != param1.field_u) {
-            param1.f((byte) -62);
+            param1.unlinkQuaternary((byte) -62);
           }
           param1.field_x = this.field_c;
           param1.field_u = this.field_c.field_u;
           param1.field_u.field_x = param1;
           param1.field_x.field_u = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_f = null;
         field_d = null;
         field_b = null;
@@ -165,13 +165,13 @@ final class QuaternaryNodeList {
     final static boolean b(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 <= 79) {
-          QuaternaryNodeList.a(25);
+          QuaternaryNodeList.clearStatics(25);
         }
-        stackIn_6_0 = (gm.field_i >= 10) && (DefensiveAi.field_p >= 13);
+        stackIn_6_0 = (SoundPlayback.field_i >= 10) && (DefensiveAi.field_p >= 13);
         return stackIn_6_0;
     }
 
-    final QuaternaryLinkNode e(int param0) {
+    final QuaternaryLinkNode startForward(int param0) {
         QuaternaryLinkNode var2 = this.field_c.field_x;
         if (this.field_c == var2) {
           this.field_e = null;

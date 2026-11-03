@@ -8,7 +8,7 @@ final class DerelictMapReader implements MapGenerator {
     private int field_b;
     static Sprite field_g;
     static boolean field_f;
-    static qr[] field_d;
+    static AnimatedPanel[] field_d;
     static Sprite[] field_i;
     private int field_k;
     static String field_c;
@@ -16,7 +16,7 @@ final class DerelictMapReader implements MapGenerator {
     private int field_e;
     private int field_j;
 
-    public final GalaxyMap a(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws jn {
         int var6 = 0;
         GalaxyMap var3;
         Star[] var4;
@@ -34,7 +34,7 @@ final class DerelictMapReader implements MapGenerator {
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_e = this.field_e - 1;
         var13 = new DerelictMapGenerator(this.field_b, this.field_j, this.field_l, this.field_e, this.field_k);
-        var3 = var13.a((byte) 77);
+        var3 = var13.generate((byte) 77);
         var4 = var3.field_e;
         var5 = -23 % ((-67 - param0) / 44);
         for (var6 = 0; var4.length > var6; var6++) {
@@ -51,10 +51,10 @@ final class DerelictMapReader implements MapGenerator {
           var9Lifetime1 = 0;
           while (var9Lifetime1 < 4) {
             var10Lifetime1 = this.field_m.readUnsignedByte(-119);
-            var7.field_G[var9Lifetime1] = we.a(15, var10Lifetime1);
+            var7.field_G[var9Lifetime1] = we.intAnd(15, var10Lifetime1);
             var9Lifetime1++;
             if (var9Lifetime1 < 4) {
-              var7.field_G[var9Lifetime1] = we.a(var10Lifetime1, 240) >> 4;
+              var7.field_G[var9Lifetime1] = we.intAnd(var10Lifetime1, 240) >> 4;
               var9Lifetime1++;
               continue;
             }
@@ -77,7 +77,7 @@ final class DerelictMapReader implements MapGenerator {
         return var3;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_g = null;
         field_d = null;
         if (param0) {
@@ -99,7 +99,7 @@ final class DerelictMapReader implements MapGenerator {
           MapView.field_sb[param0] = dupTemp$0;
           bs.a(var3, 100);
           CellVertex.field_j[param0].draw(64, 64);
-          gf.b(12, 12, 0, 0, 256, 256);
+          SoftwareRasterizer.b(12, 12, 0, 0, 256, 256);
           cg.i(0);
         }
         if (param1 >= -28) {
@@ -110,7 +110,7 @@ final class DerelictMapReader implements MapGenerator {
 
     final static int a(int param0) {
         if (param0 != 0) {
-          DerelictMapReader.a(false);
+          DerelictMapReader.clearStatics(false);
         }
         return ul.field_Hb + (sq.field_a << 2) + (vm.field_Bb << 4);
     }
@@ -124,7 +124,7 @@ final class DerelictMapReader implements MapGenerator {
           this.field_m = param0;
           this.field_b = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

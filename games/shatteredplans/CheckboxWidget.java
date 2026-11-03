@@ -9,7 +9,7 @@ final class CheckboxWidget extends FocusableWidget {
         try {
           this.field_z = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -17,7 +17,7 @@ final class CheckboxWidget extends FocusableWidget {
         StandardMapReader.field_g = null;
         SolVictoryChecker.field_p = nm.field_a;
         if (param0 != -15365) {
-          CheckboxWidget.h(-36);
+          CheckboxWidget.clearStatics(-36);
         }
     }
 
@@ -26,7 +26,7 @@ final class CheckboxWidget extends FocusableWidget {
         try {
           this.field_p = MusicVoice.field_I.field_a;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,16 +35,16 @@ final class CheckboxWidget extends FocusableWidget {
         try {
           this.field_p = MusicVoice.field_I.field_a;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void fireAction(int param0, int param1, int param2, byte param3) {
         this.field_z = !this.field_z ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.fireAction(param0, param1, param2, param3);
     }
 
-    public static void h(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -22429) {
           field_D = (String) null;
           field_D = null;

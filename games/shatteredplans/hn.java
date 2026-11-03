@@ -101,7 +101,7 @@ final class hn {
           throw new ArrayIndexOutOfBoundsException(param0);
         }
         if (this.field_b != param0) {
-          ps.a(this.field_e, 1 + param0, this.field_e, param0, this.field_b - param0);
+          ArrayOperations.copyInts(this.field_e, 1 + param0, this.field_e, param0, this.field_b - param0);
         }
         this.field_b = this.field_b - 1;
         if (!param1) {
@@ -121,7 +121,7 @@ final class hn {
     private final void b(byte param0, int param1) {
         int[] var4 = new int[this.b(param1, 0)];
         int[] var3 = var4;
-        ps.a(this.field_e, 0, var4, 0, this.field_e.length);
+        ArrayOperations.copyInts(this.field_e, 0, var4, 0, this.field_e.length);
         this.field_e = var4;
         if (param0 == 107) {
           return;

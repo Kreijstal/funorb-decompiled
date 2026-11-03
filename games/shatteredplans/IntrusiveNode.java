@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    static qr field_c;
-    static qr field_a;
+    static AnimatedPanel field_c;
+    static AnimatedPanel field_a;
     IntrusiveNode next;
     static String field_g;
     long key;
     static Sprite[] field_d;
     IntrusiveNode previous;
 
-    final static int b(int param0, int param1) {
+    final static int cosine(int param0, int param1) {
         int var2 = 94 % ((-61 - param1) / 58);
         param0 = param0 & 8191;
         if (param0 < 4096) {
@@ -20,15 +20,15 @@ class IntrusiveNode {
     }
 
     final static void b(int param0) {
-        if (param0 == ~gm.field_i) {
-          qk.g(-125);
-          gm.field_i = 11;
+        if (param0 == ~SoundPlayback.field_i) {
+          MenuLabel.g(-125);
+          SoundPlayback.field_i = 11;
           oi.field_f = true;
           return;
         }
         if (!dh.a(-12165)) {
-          qk.g(-125);
-          gm.field_i = 11;
+          MenuLabel.g(-125);
+          SoundPlayback.field_i = 11;
           oi.field_f = true;
           return;
         }
@@ -37,10 +37,10 @@ class IntrusiveNode {
 
     final static bg[] c(byte param0) {
         if (param0 == -90) {
-          return new bg[]{og.field_b, dm.field_f, mj.field_Rb};
+          return new bg[]{og.field_b, ObjectList.field_f, mj.field_Rb};
         }
         IntrusiveNode.a(false);
-        return new bg[]{og.field_b, dm.field_f, mj.field_Rb};
+        return new bg[]{og.field_b, ObjectList.field_f, mj.field_Rb};
     }
 
     final void unlink(byte param0) {

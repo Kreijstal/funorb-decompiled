@@ -37,7 +37,7 @@ final class SliderPainter implements WidgetPainter {
             stackIn_4_0 = (UiWidget) (param0);
           }
           var12 = (SliderWidget) (stackIn_4_0);
-          gf.d(param1 + param0.field_m, param3 + param0.field_q, param0.field_x, param0.field_n, this.field_l);
+          SoftwareRasterizer.fillRect(param1 + param0.field_m, param3 + param0.field_q, param0.field_x, param0.field_n, this.field_l);
           if (var12 != null) {
           }
           var7 = -(2 * var12.field_M) + param0.field_x;
@@ -46,9 +46,9 @@ final class SliderPainter implements WidgetPainter {
           if (param4 != 12) {
             return;
           }
-          gf.g(var8, var9, var7 + var8, var9, this.field_f);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_f);
           for (var10 = -1 + var12.g((byte) 93); var10 >= 0; var10--) {
-            gf.g(var8 + var12.a(var10, (byte) -58) * var7 / var12.a((byte) -13), var9, this.field_a, this.field_h);
+            SoftwareRasterizer.fillCircle(var8 + var12.a(var10, (byte) -58) * var7 / var12.a((byte) -13), var9, this.field_a, this.field_h);
           }
           if (null == this.field_c) {
             return;
@@ -65,7 +65,7 @@ final class SliderPainter implements WidgetPainter {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -78,11 +78,11 @@ final class SliderPainter implements WidgetPainter {
         }
     }
 
-    final static nk[] a(String param0, Archive param1, String param2, byte param3) {
+    final static IndexedSprite[] a(String param0, Archive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        nk[] stackIn_3_0 = null;
+        IndexedSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -121,11 +121,11 @@ final class SliderPainter implements WidgetPainter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(int[] param0, long param1, String param2, String param3, int param4, ub param5, qr param6, int param7, int param8) {
+    final static void a(int[] param0, long param1, String param2, String param3, int param4, ScrollPane param5, AnimatedPanel param6, int param7, int param8) {
         try {
           if (param4 != 293) {
             field_k = (String) null;
@@ -133,7 +133,7 @@ final class SliderPainter implements WidgetPainter {
           DerelictVictoryChecker.field_l = param5;
           DerelictVictoryChecker.field_m = new fc(param6, param1, param3, param2, param8, param7, param0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class SliderPainter implements WidgetPainter {
           this.field_i = param2;
           this.field_h = param6;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

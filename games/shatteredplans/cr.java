@@ -26,7 +26,7 @@ final class cr {
         return var4;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_e = null;
         if (param0 != 41) {
           return;

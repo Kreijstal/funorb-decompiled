@@ -13,7 +13,7 @@ final class ClientException extends RuntimeException {
     static int field_a;
 
     final static void a(boolean param0) {
-        em.field_h = 0;
+        ProductionContent.field_h = 0;
         bo.r(0);
         if (!param0) {
           int[] var2 = (int[]) null;
@@ -33,28 +33,28 @@ final class ClientException extends RuntimeException {
         RuntimeException var5 = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          gf.f(param3, param1, param4 + 1, 10000536);
-          gf.f(param3, param2 + param1, 1 + param4, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param3, param1, param4 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param3, param2 + param1, 1 + param4, 12105912);
           var5_int = 1;
           var6 = param2;
-          if (var5_int + param1 < gf.field_a) {
-            var5_int = -param1 + gf.field_a;
+          if (var5_int + param1 < SoftwareRasterizer.field_a) {
+            var5_int = -param1 + SoftwareRasterizer.field_a;
           }
-          if (gf.field_f < param1 + var6) {
-            var6 = -param1 + gf.field_f;
+          if (SoftwareRasterizer.field_f < param1 + var6) {
+            var6 = -param1 + SoftwareRasterizer.field_f;
           }
           var7 = -57 % ((param0 - 36) / 45);
           for (var8 = var5_int; var8 < var6; var8++) {
             var9 = 48 * var8 / param2 + 152;
             var10 = var9 << 8 | var9 << 16 | var9;
-            gf.field_h[param3 + gf.field_b * (var8 + param1)] = var10;
-            gf.field_h[param4 + param3 + (param1 + var8) * gf.field_b] = var10;
+            SoftwareRasterizer.field_h[param3 + SoftwareRasterizer.field_b * (var8 + param1)] = var10;
+            SoftwareRasterizer.field_h[param4 + param3 + (param1 + var8) * SoftwareRasterizer.field_b] = var10;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var5), "rg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var5), "rg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -89,10 +89,10 @@ final class ClientException extends RuntimeException {
           if (param0 <= 32) {
             return;
           }
-          for (var3 = 0; t.field_c.length > var3; var3++) {
+          for (var3 = 0; StarLinkPlanner.field_c.length > var3; var3++) {
             var4 = pr.field_d[var3];
             if (0 > var4) {
-              var5 = em.field_j;
+              var5 = ProductionContent.field_j;
             } else {
               if (var4 == ns.field_nb.field_c) {
                 var5 = wo.field_a;
@@ -100,7 +100,7 @@ final class ClientException extends RuntimeException {
                 var5 = ih.field_b;
               }
             }
-            var6 = t.field_c[var3];
+            var6 = StarLinkPlanner.field_c[var3];
             stackIn_13_0 = !(var4 < 0);
             var7 = or.a(stackIn_13_0, var6, true);
             var8 = WeightedLruCache.field_e - (var7 >> 1);
@@ -121,15 +121,15 @@ final class ClientException extends RuntimeException {
               MusicEnvelope.field_g.drawString(var6, var8, var2 + we.field_c, var5, -1);
               var2 = var2 + (vh.field_b + js.field_e + uo.field_g);
             } else {
-              lq.field_k.drawString(var6, var8, var2 + sp.field_r, var5, -1);
-              var2 = var2 + fe.field_A;
+              lq.field_k.drawString(var6, var8, var2 + WidgetStyle.field_r, var5, -1);
+              var2 = var2 + MenuButton.field_A;
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "rg.B(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "rg.B(" + param0 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

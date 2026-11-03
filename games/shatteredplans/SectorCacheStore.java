@@ -5,7 +5,7 @@ import java.io.*;
 
 final class SectorCacheStore {
     private int field_e;
-    static qr field_f;
+    static AnimatedPanel field_f;
     private BufferedCacheFile field_a;
     private BufferedCacheFile field_b;
     static IntrusiveDeque field_d;
@@ -190,7 +190,7 @@ final class SectorCacheStore {
             } else {
               stackIn_70_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -331,7 +331,7 @@ final class SectorCacheStore {
         return "" + this.field_i;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_h = null;
         field_g = null;
         field_c = null;
@@ -381,7 +381,7 @@ final class SectorCacheStore {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -423,7 +423,7 @@ final class SectorCacheStore {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -437,7 +437,7 @@ final class SectorCacheStore {
           this.field_i = param0;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ua.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ua.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

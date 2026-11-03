@@ -53,7 +53,7 @@ final class ik extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -72,7 +72,7 @@ final class ik extends IntrusiveNode {
         if (param0 > -87) {
           return (mj) null;
         }
-        return (mj) (qp.field_w.a(65280, param1));
+        return (mj) (qp.field_w.get(65280, param1));
     }
 
     final static int a(int param0) {

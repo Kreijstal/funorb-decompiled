@@ -75,7 +75,7 @@ final class sr {
             return stackIn_2_0;
           }
           var8 = new e(param5);
-          stackIn_4_0 = si.a(param1, param3, var8, var7, 125, param4, param6);
+          stackIn_4_0 = QuickChatPhraseDefinition.a(param1, param3, var8, var7, 125, param4, param6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,7 +99,7 @@ final class sr {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class sr {
         this.a(107);
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = 19 % ((24 - param0) / 60);
         field_N = null;
         field_F = null;
@@ -234,7 +234,7 @@ final class sr {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

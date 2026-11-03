@@ -15,7 +15,7 @@ final class StarAbandonedEvent extends IntrusiveNode {
     static Sprite[] field_r;
     static PlatformTaskDispatcher field_l;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_r = null;
         field_o = null;
         field_l = null;
@@ -26,18 +26,18 @@ final class StarAbandonedEvent extends IntrusiveNode {
         field_h = null;
         field_q = (boolean[][]) null;
         if (param0 != 48) {
-          StarAbandonedEvent.a(-27);
+          StarAbandonedEvent.getAppletContainer(-27);
         }
     }
 
-    final static java.awt.Container a(int param0) {
+    final static java.awt.Container getAppletContainer(int param0) {
         if (param0 < 53) {
           return (java.awt.Container) null;
         }
         if (null != uf.field_b) {
           return (java.awt.Container) ((Object) uf.field_b);
         }
-        return (java.awt.Container) ((Object) GameScreen.f((byte) 125));
+        return (java.awt.Container) ((Object) GameScreen.getHostApplet((byte) 125));
     }
 
     StarAbandonedEvent(Star param0, int param1) {
@@ -45,7 +45,7 @@ final class StarAbandonedEvent extends IntrusiveNode {
           this.field_j = null;
           this.field_p = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "nr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "nr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class StarAbandonedEvent extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

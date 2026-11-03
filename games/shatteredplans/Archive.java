@@ -37,13 +37,13 @@ final class Archive {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var7 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_b.a(24396, DerelictMapGenerator.a(false, var7));
+          var4_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var7));
           var5 = -116 / ((58 - param0) / 34);
           if (var4_int < 0) {
             return false;
           }
           var8 = (CharSequence) ((Object) param1);
-          var6 = this.field_f.field_i[var4_int].a(24396, DerelictMapGenerator.a(false, var8));
+          var6 = this.field_f.field_i[var4_int].get(24396, DerelictMapGenerator.a(false, var8));
           if (var6 >= 0) {
             return true;
           }
@@ -64,7 +64,7 @@ final class Archive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class Archive {
           }
           param2 = param2.toLowerCase();
           var5 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_i[param0].a(24396, DerelictMapGenerator.a(false, var5));
+          var4_int = this.field_f.field_i[param0].get(24396, DerelictMapGenerator.a(false, var5));
           if (param1 != 106) {
             ((boolean[]) (this.field_m[2]))[1] = true;
           }
@@ -106,7 +106,7 @@ final class Archive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class Archive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_b.a(24396, DerelictMapGenerator.a(false, var4));
+          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var4));
           stackIn_7_0 = this.getGroupProgress((byte) 36, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -158,7 +158,7 @@ final class Archive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class Archive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_f.field_b.a(24396, DerelictMapGenerator.a(false, var4));
+          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var4));
           if (param0 <= 121) {
             field_h = (String) null;
           }
@@ -250,7 +250,7 @@ final class Archive {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -279,12 +279,12 @@ final class Archive {
           }
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_f.field_b.a(param1 + 24391, DerelictMapGenerator.a(false, var6));
+          var4_int = this.field_f.field_b.get(param1 + 24391, DerelictMapGenerator.a(false, var6));
           if (!this.isValidGroup((byte) -63, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_f.field_i[var4_int].a(param1 ^ 24393, DerelictMapGenerator.a(false, var7));
+          var5 = this.field_f.field_i[var4_int].get(param1 ^ 24393, DerelictMapGenerator.a(false, var7));
           stackIn_11_0 = this.a((byte) 125, var5, var4_int);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -303,7 +303,7 @@ final class Archive {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -344,7 +344,7 @@ final class Archive {
           var4 = 2 % ((param1 + 1) / 49);
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_b.a(24396, DerelictMapGenerator.a(false, var5));
+          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var5));
           stackIn_4_0 = this.b(87, var3_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -357,11 +357,11 @@ final class Archive {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -466) {
           return;
         }
@@ -458,7 +458,7 @@ final class Archive {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -477,7 +477,7 @@ final class Archive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_b.a(24396, DerelictMapGenerator.a(false, var4));
+          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var4));
           if (0 > var3_int) {
             return false;
           }
@@ -496,7 +496,7 @@ final class Archive {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -543,10 +543,10 @@ final class Archive {
         CharSequence var6 = null;
         CharSequence var7 = null;
         Object stackIn_4_0 = null;
-        cm stackIn_7_0 = null;
+        IntHashIndex stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
-        cm stackIn_13_0 = null;
+        IntHashIndex stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         boolean stackIn_14_2 = false;
         byte[] stackIn_15_0 = null;
@@ -570,7 +570,7 @@ final class Archive {
           stackIn_7_1 = 24396;
           stackIn_8_2 = !(param0);
           var6 = (CharSequence) ((Object) param2);
-          var4_int = ((cm) (Object) stackIn_7_0).a(stackIn_7_1, DerelictMapGenerator.a(stackIn_8_2, var6));
+          var4_int = ((IntHashIndex) (Object) stackIn_7_0).get(stackIn_7_1, DerelictMapGenerator.a(stackIn_8_2, var6));
           if (!this.isValidGroup((byte) -63, var4_int)) {
             return null;
           }
@@ -578,7 +578,7 @@ final class Archive {
           stackIn_13_1 = 24396;
           stackIn_14_2 = !(param0);
           var7 = (CharSequence) ((Object) param1);
-          var5 = ((cm) (Object) stackIn_13_0).a(stackIn_13_1, DerelictMapGenerator.a(stackIn_14_2, var7));
+          var5 = ((IntHashIndex) (Object) stackIn_13_0).get(stackIn_13_1, DerelictMapGenerator.a(stackIn_14_2, var7));
           stackIn_15_0 = this.getFile(var4_int, -1, var5);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -597,7 +597,7 @@ final class Archive {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -794,7 +794,7 @@ final class Archive {
             stackIn_36_0 = var11_ref_RuntimeException;
             stackIn_36_1 = new StringBuilder();
             stackIn_37_2 = (param1 != null);
-            throw r.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(VictoryChecker.a(63, var9, var9.length)).append(" ").append(VictoryChecker.a(59, var9, var9.length - 2)).append(" ").append(this.field_f.field_f[param2]).append(" ").append(this.field_f.field_c).toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(VictoryChecker.a(63, var9, var9.length)).append(" ").append(VictoryChecker.a(59, var9, var9.length - 2)).append(" ").append(this.field_f.field_f[param2]).append(" ").append(this.field_f.field_c).toString());
           }
           if (this.field_j) {
             this.field_m[param2] = null;
@@ -841,7 +841,7 @@ final class Archive {
                     var21 = var32[var20];
                   }
                   if (param0 == var21) {
-                    ps.a(var41, var17Lifetime4, var42, var14_intLifetime1, var19Lifetime2);
+                    ArrayOperations.copyBytes(var41, var17Lifetime4, var42, var14_intLifetime1, var19Lifetime2);
                     var14_intLifetime1 = var14_intLifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -880,7 +880,7 @@ final class Archive {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var13Lifetime1.readInt(16711680);
-                ps.a(var41, var16Lifetime3, var38[var19Lifetime1], var37[var19Lifetime1], var18Lifetime1);
+                ArrayOperations.copyBytes(var41, var16Lifetime3, var38[var19Lifetime1], var37[var19Lifetime1], var18Lifetime1);
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
               }
@@ -920,7 +920,7 @@ final class Archive {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -934,15 +934,15 @@ final class Archive {
             if (null != bj.field_K &&
               bj.field_K.field_c) {
               BufferedCacheFile.c(0);
-              DialWidget.field_I.a(true, new bo(DialWidget.field_I, bg.field_f));
+              DialWidget.field_I.addDialog(true, new bo(DialWidget.field_I, bg.field_f));
             }
             return;
           }
           if (param0 > -11) {
             field_h = (String) null;
           }
-          DialWidget.field_I.a(BattleEvent.field_o, true, re.field_b, (byte) 0);
-          DialWidget.field_I.i(125);
+          DialWidget.field_I.a(BattleEvent.field_o, true, QuickChatCategoryRegistry.field_b, (byte) 0);
+          DialWidget.field_I.updateDialogs(125);
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             DialWidget.field_I.a(oq.field_j, ho.field_h, true);
           }
@@ -950,7 +950,7 @@ final class Archive {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "bc.V(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "bc.V(" + param0 + ')');
         }
     }
 
@@ -983,7 +983,7 @@ final class Archive {
           this.field_j = param1 ? true : false;
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -30,7 +30,7 @@ abstract class il extends jl {
             this.field_eb.unlink((byte) -124);
           }
           if (param1 != null) {
-            param1.a(6 + this.field_db, param1.field_n, (byte) 121, 6, param1.field_x);
+            param1.setBounds(6 + this.field_db, param1.field_n, (byte) 121, 6, param1.field_x);
             this.field_eb = new cg(param1);
           } else {
             this.field_eb = new cg();
@@ -40,7 +40,7 @@ abstract class il extends jl {
           if (param0 <= -5) {
             return;
           }
-          this.k(-80);
+          this.isClosed(-80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,7 +52,7 @@ abstract class il extends jl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -65,26 +65,26 @@ abstract class il extends jl {
           this.field_X = param3;
           this.a(-75, param1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "il.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "il.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    boolean a(int param0, char param1, int param2, UiWidget param3) {
+    boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_eb != null) {
             if (98 == param0) {
-              this.field_eb.a((byte) -60, param3);
+              this.field_eb.containsWidget((byte) -60, param3);
             }
             if (param0 == 99) {
-              this.field_eb.a((byte) -23, param3);
+              this.field_eb.containsWidget((byte) -23, param3);
               return false;
             }
           }
@@ -99,7 +99,7 @@ abstract class il extends jl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ abstract class il extends jl {
         }
     }
 
-    boolean a(byte param0) {
+    boolean animate(byte param0) {
         int fieldTemp$0 = 0;
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -149,7 +149,7 @@ abstract class il extends jl {
         int var2Lifetime1Lifetime1;
         if (null == this.field_ab) {
           var2 = -108 % ((param0 + 23) / 52);
-          return super.a((byte) 81);
+          return super.animate((byte) 81);
         }
         if (NanoFrameTimer.field_j == this.field_ab) {
           fieldTemp$0 = this.field_Z + 1;
@@ -157,18 +157,18 @@ abstract class il extends jl {
           if (this.field_X != fieldTemp$0) {
             this.field_eb.field_J = -((this.field_Z << 8) / this.field_X) + 256;
             var2Lifetime1 = -108 % ((param0 + 23) / 52);
-            return super.a((byte) 81);
+            return super.animate((byte) 81);
           }
           this.field_ab = hd.field_s;
           this.b(-127, this.field_mb, 12 + this.field_ib.field_x, this.field_ib.field_n + this.field_db + 12);
           this.field_Z = 0;
           this.field_eb.field_J = 0;
           var2Lifetime1Lifetime1 = -108 % ((param0 + 23) / 52);
-          return super.a((byte) 81);
+          return super.animate((byte) 81);
         }
         if (this.field_ab != je.field_a) {
           var2Lifetime2 = -108 % ((param0 + 23) / 52);
-          return super.a((byte) 81);
+          return super.animate((byte) 81);
         }
         int fieldTemp$1 = this.field_Z + 1;
         this.field_Z = this.field_Z + 1;
@@ -176,11 +176,11 @@ abstract class il extends jl {
           this.field_eb.field_J = 256;
           this.field_ab = null;
           var2Lifetime3 = -108 % ((param0 + 23) / 52);
-          return super.a((byte) 81);
+          return super.animate((byte) 81);
         }
         this.field_eb.field_J = (this.field_Z << 8) / this.field_jb;
         var2Lifetime4 = -108 % ((param0 + 23) / 52);
-        return super.a((byte) 81);
+        return super.animate((byte) 81);
     }
 
     void b(UiWidget param0, int param1) {
@@ -214,14 +214,14 @@ abstract class il extends jl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void n(int param0) {
         if (null != this.field_ab) {
           if (this.field_ab != je.field_a) {
-            this.b(12 + this.field_db + this.field_ib.field_n, 12 + this.field_ib.field_x, (byte) -109);
+            this.centre(12 + this.field_db + this.field_ib.field_n, 12 + this.field_ib.field_x, (byte) -109);
             this.a(-107, this.field_ib);
           }
           this.field_eb.field_J = 256;
@@ -260,8 +260,8 @@ abstract class il extends jl {
         var18 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (null == RandomAccessCacheFile.field_a ||
-            RandomAccessCacheFile.field_a.length != gf.field_b) {
-            RandomAccessCacheFile.field_a = new int[gf.field_b];
+            RandomAccessCacheFile.field_a.length != SoftwareRasterizer.field_b) {
+            RandomAccessCacheFile.field_a = new int[SoftwareRasterizer.field_b];
           }
           var4_int = param2 & 15;
           param2 = param2 >> 4;
@@ -269,11 +269,11 @@ abstract class il extends jl {
           param0 = param0 >> 4;
           var12 = param1;
           var13 = param3.field_z * param2 + param0;
-          var14 = -gf.field_b + param3.field_z;
-          var15 = -gf.field_k;
+          var14 = -SoftwareRasterizer.field_b + param3.field_z;
+          var15 = -SoftwareRasterizer.field_k;
           while (0 > var15) {
             var16 = 0;
-            for (var17 = -1 + gf.field_b; 0 <= var17; var17--) {
+            for (var17 = -1 + SoftwareRasterizer.field_b; 0 <= var17; var17--) {
               var6 = param3.field_B[var13];
               var8 = var6 & 65280;
               var7 = var6 & 16711935;
@@ -287,7 +287,7 @@ abstract class il extends jl {
               var10Lifetime1 = -16711936 & var4_int * var7Lifetime1;
               var11Lifetime1 = 16711680 & var6Lifetime1 * var4_int;
               var9Lifetime1 = var10Lifetime1 | var11Lifetime1;
-              gf.field_h[var12] = RandomAccessCacheFile.field_a[var17] + var9Lifetime1 >> 8;
+              SoftwareRasterizer.field_h[var12] = RandomAccessCacheFile.field_a[var17] + var9Lifetime1 >> 8;
               RandomAccessCacheFile.field_a[var17] = (var8Lifetime1 << 4) - var9Lifetime1;
               var12++;
               var13++;
@@ -306,16 +306,16 @@ abstract class il extends jl {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final boolean k(int param0) {
+    final boolean isClosed(int param0) {
         if (param0 != 0) {
           return true;
         }
         this.n(7489);
-        return super.k(0);
+        return super.isClosed(0);
     }
 
     static {

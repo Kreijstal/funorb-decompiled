@@ -16,7 +16,7 @@ final class MusicPatch extends IntrusiveNode {
     static int field_m;
     byte[] field_s;
 
-    final boolean a(SoundCache param0, byte[] param1, int[] param2, int param3) {
+    final boolean loadSamples(SoundCache param0, byte[] param1, int[] param2, int param3) {
         int var8 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -89,11 +89,11 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void e(int param0) {
+    final void release(int param0) {
         this.field_n = null;
         if (param0 != 26005) {
           field_o = (int[]) null;
@@ -101,11 +101,11 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     final static kj a(int param0) {
-        if (oj.field_Fb == ee.field_l) {
+        if (oj.field_Fb == PrivateChatMessage.field_l) {
           throw new IllegalStateException();
         }
-        if (ee.field_l == rh.field_g) {
-          ee.field_l = oj.field_Fb;
+        if (PrivateChatMessage.field_l == ProjectsContent.field_g) {
+          PrivateChatMessage.field_l = oj.field_Fb;
           return wh.field_c;
         }
         if (param0 == 65536) {
@@ -115,7 +115,7 @@ final class MusicPatch extends IntrusiveNode {
         return null;
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_l = null;
         if (param0 != 59114) {
           MusicPatch.a(7);
@@ -380,7 +380,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVariableInt(false);
             }
-            this.field_k[var23] = (short)(this.field_k[var23] + (we.a(-1 + var22, 2) << 14));
+            this.field_k[var23] = (short)(this.field_k[var23] + (we.intAnd(-1 + var22, 2) << 14));
             var20Lifetime2--;
             this.field_n[var23] = var22;
           }
@@ -529,7 +529,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[var29Lifetime3 + 1];
               var32 = (-var27Lifetime6 + var30) / 2 + var28 * (var30 - var27Lifetime6);
               for (var33 = var27Lifetime6; var30 > var33; var33++) {
-                var34 = QuaternaryLinkNode.a((byte) -118, var32, var30 - var27Lifetime6);
+                var34 = QuaternaryLinkNode.floorDiv((byte) -118, var32, var30 - var27Lifetime6);
                 this.field_s[var33] = (byte)(32 + this.field_s[var33] * var34 >> 6);
                 var32 = var32 + (-var28 + var31);
               }
@@ -572,7 +572,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime6Lifetime1;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime2) {
-                var34Lifetime1 = QuaternaryLinkNode.a((byte) -78, var32Lifetime1, -var27Lifetime6Lifetime1 + var30Lifetime2);
+                var34Lifetime1 = QuaternaryLinkNode.floorDiv((byte) -78, var32Lifetime1, -var27Lifetime6Lifetime1 + var30Lifetime2);
                 var35 = var34Lifetime1 + (255 & this.field_t[var37]);
                 if (var35 < 0) {
                   var35 = 0;
@@ -641,7 +641,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_210_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_209_0), ((StringBuilder) (Object) stackIn_209_1).append(stackIn_210_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_209_0), ((StringBuilder) (Object) stackIn_209_1).append(stackIn_210_2).append(')').toString());
         }
     }
 

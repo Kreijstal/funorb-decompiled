@@ -22,8 +22,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             of.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              ms.field_e.length > var2_int) {
-              var2_int = ms.field_e[var2_int] & -129;
+              ChatMessage.field_e.length > var2_int) {
+              var2_int = ChatMessage.field_e[var2_int] & -129;
             } else {
               var2_int = -1;
             }
@@ -31,7 +31,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int >= 0) {
               StrongCacheEntry.field_x[qn.field_c] = ~var2_int;
               qn.field_c = 1 + qn.field_c & 127;
-              if (qn.field_c == hb.field_e) {
+              if (qn.field_c == NodeSequence.field_e) {
                 qn.field_c = -1;
               }
             }
@@ -48,7 +48,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -66,8 +66,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             of.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < ms.field_e.length) {
-              var2_int = ms.field_e[var2_int];
+              var2_int < ChatMessage.field_e.length) {
+              var2_int = ChatMessage.field_e[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }
@@ -78,7 +78,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               0 <= var2_int) {
               StrongCacheEntry.field_x[qn.field_c] = var2_int;
               qn.field_c = 1 + qn.field_c & 127;
-              if (hb.field_e == qn.field_c) {
+              if (NodeSequence.field_e == qn.field_c) {
                 qn.field_c = -1;
               }
             }
@@ -115,7 +115,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jq.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jq.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -197,11 +197,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               }
               var3 = var3 + param2;
             }
-            aj.a(var3, false);
-            var7 = nf.a(":", var3, (byte) 103, "%3a");
-            var8 = nf.a("@", var7, (byte) 121, "%40");
-            var9 = nf.a("&", var8, (byte) 80, "%26");
-            var10 = nf.a("#", var9, (byte) 112, "%23");
+            aj.printError(var3, false);
+            var7 = nf.replaceAll(":", var3, (byte) 103, "%3a");
+            var8 = nf.replaceAll("@", var7, (byte) 121, "%40");
+            var9 = nf.replaceAll("&", var8, (byte) 80, "%26");
+            var10 = nf.replaceAll("#", var9, (byte) 112, "%23");
             if (null == ei.field_c) {
               return;
             }
@@ -219,9 +219,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               stackIn_14_2 = null;
               stackIn_14_5 = bj.field_E;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_i).append("&e=").append(var10).toString()), false);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrl(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_i).append("&e=").append(var10).toString()), false);
             while (0 == var4.field_d) {
-              jb.a((byte) -106, 1L);
+              jb.sleep((byte) -106, 1L);
             }
             if (var4.field_d == 1) {
               var5 = (DataInputStream) (var4.field_e);
@@ -265,7 +265,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -290,32 +290,32 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var8_int = param2 - var9 - 1;
             }
             stackIn_12_0 = (param6) ? 1 : 0;
-            gf.f(stackIn_12_0 + param4 + var9, param5 + 1, var8_int, param7, param0 * (param2 - var9 * var9 / param2) / param2);
+            SoftwareRasterizer.drawHorizontalLineAlpha(stackIn_12_0 + param4 + var9, param5 + 1, var8_int, param7, param0 * (param2 - var9 * var9 / param2) / param2);
           }
           if (param1 < 74) {
             field_c = (Sprite) null;
           }
           for (var9Lifetime1 = 4; var9Lifetime1 < param2; var9Lifetime1 += 16) {
-            gf.g(param4 + var9Lifetime1, param5 + 6, param4 + var9Lifetime1 + 3, param5 + 1, param7, param0 * (param2 - var9Lifetime1 * var9Lifetime1 / param2) / param2);
-            gf.g(3 + param4 + var9Lifetime1, 11 + param5, var9Lifetime1 + param4, 6 + param5, param7, (param3 + param0) * (-(var9Lifetime1 * var9Lifetime1 / param2) + param2) / 2 / param2);
+            SoftwareRasterizer.drawLineAlphaExclusive(param4 + var9Lifetime1, param5 + 6, param4 + var9Lifetime1 + 3, param5 + 1, param7, param0 * (param2 - var9Lifetime1 * var9Lifetime1 / param2) / param2);
+            SoftwareRasterizer.drawLineAlphaExclusive(3 + param4 + var9Lifetime1, 11 + param5, var9Lifetime1 + param4, 6 + param5, param7, (param3 + param0) * (-(var9Lifetime1 * var9Lifetime1 / param2) + param2) / 2 / param2);
           }
           for (var9Lifetime2 = 12; param2 > var9Lifetime2; var9Lifetime2 += 16) {
-            gf.g(3 + (param4 + var9Lifetime2), 6 + param5, param4 + var9Lifetime2, 1 + param5, param7, param0 * (-(var9Lifetime2 * var9Lifetime2 / param2) + param2) / param2);
-            gf.g(param4 + var9Lifetime2, param5 + 11, param4 + var9Lifetime2 + 3, param5 + 6, param7, (param0 + param3) * (-(var9Lifetime2 * var9Lifetime2 / param2) + param2) / 2 / param2);
+            SoftwareRasterizer.drawLineAlphaExclusive(3 + (param4 + var9Lifetime2), 6 + param5, param4 + var9Lifetime2, 1 + param5, param7, param0 * (-(var9Lifetime2 * var9Lifetime2 / param2) + param2) / param2);
+            SoftwareRasterizer.drawLineAlphaExclusive(param4 + var9Lifetime2, param5 + 11, param4 + var9Lifetime2 + 3, param5 + 6, param7, (param0 + param3) * (-(var9Lifetime2 * var9Lifetime2 / param2) + param2) / 2 / param2);
           }
-          gf.h(1 + param4, param5 + 6, param4 + 3, param5 + 6, param7, (param0 + param3) / 2);
+          SoftwareRasterizer.drawLineAlpha(1 + param4, param5 + 6, param4 + 3, param5 + 6, param7, (param0 + param3) / 2);
           for (var9Lifetime3 = 16; var9Lifetime3 < param2; var9Lifetime3 += 16) {
             var8_intLifetime1 = 4;
             if (param2 <= 1 + var8_intLifetime1 + var9Lifetime3) {
               var8_intLifetime1 = -1 + (param2 - var9Lifetime3);
             }
-            gf.f(var9Lifetime3 + param4, 6 + param5, var8_intLifetime1, param7, (param0 + param3) * (param2 - var9Lifetime3 * var9Lifetime3 / param2) / 2 / param2);
+            SoftwareRasterizer.drawHorizontalLineAlpha(var9Lifetime3 + param4, 6 + param5, var8_intLifetime1, param7, (param0 + param3) * (param2 - var9Lifetime3 * var9Lifetime3 / param2) / 2 / param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var8), "jq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var8), "jq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -336,7 +336,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             sa.field_a = new CipherPacketBuffer(param4);
             js.field_f = new CipherPacketBuffer(param2);
             StandardAi.field_a = param6;
-            ee.field_o = param7;
+            PrivateChatMessage.field_o = param7;
             of.field_f = param3;
             StarAbandonedEvent.field_l = param1;
             if (param0 != 0) {
@@ -348,7 +348,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             DualLinkDeque.field_b = param8;
             uk.field_a = param9;
             e.field_b = param10;
-            sp.field_g = param11;
+            WidgetStyle.field_g = param11;
             if (StarAbandonedEvent.field_l.field_a == null) {
               return;
             }
@@ -376,7 +376,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param13).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

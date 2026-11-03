@@ -6,7 +6,7 @@ final class SynthesizedSoundEffect {
     private int field_c;
     private int field_a;
 
-    private final byte[] a() {
+    private final byte[] mixVoices() {
         int var4 = 0;
         int var8 = 0;
         int var1;
@@ -33,7 +33,7 @@ final class SynthesizedSoundEffect {
           if (this.field_b[var4] != null) {
             var5 = this.field_b[var4].field_a * 22050 / 1000;
             var6 = this.field_b[var4].field_s * 22050 / 1000;
-            var13 = this.field_b[var4].a(var5, this.field_b[var4].field_a);
+            var13 = this.field_b[var4].render(var5, this.field_b[var4].field_a);
             for (var8 = 0; var8 < var5; var8++) {
               var9 = var3[var8 + var6] + (var13[var8] >> 8);
               if ((var9 + 128 & -256) != 0) {
@@ -46,8 +46,8 @@ final class SynthesizedSoundEffect {
         return var3;
     }
 
-    final PcmSample b() {
-        byte[] var1 = this.a();
+    final PcmSample toSample() {
+        byte[] var1 = this.mixVoices();
         return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
@@ -60,14 +60,14 @@ final class SynthesizedSoundEffect {
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_b[var2] = new SynthInstrument();
-            this.field_b[var2].a(param0);
+            this.field_b[var2].decode(param0);
           }
         }
         this.field_c = param0.readUnsignedShort(-20976);
         this.field_a = param0.readUnsignedShort(-20976);
     }
 
-    final static SynthesizedSoundEffect a(Archive param0, int param1, int param2) {
+    final static SynthesizedSoundEffect load(Archive param0, int param1, int param2) {
         byte[] var3 = param0.getFile(param1, -1, param2);
         if (var3 == null) {
           return null;

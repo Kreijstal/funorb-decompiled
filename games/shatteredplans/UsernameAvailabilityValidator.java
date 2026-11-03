@@ -20,11 +20,11 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           }
           mj.field_Hb[param2] = new sm(param2);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ec.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ec.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final ValidationState b(int param0, String param1) {
+    final ValidationState computeStateFor(int param0, String param1) {
         kj var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
@@ -73,7 +73,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -103,19 +103,19 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           }
           qp.field_w = null;
           if (ShatteredPlansClient.field_H != null) {
-            var3 = (mj) (ShatteredPlansClient.field_H.c((byte) -102));
+            var3 = (mj) (ShatteredPlansClient.field_H.startTraversal((byte) -102));
             while (var3 != null) {
               var3.unlinkSecondary(16);
-              var3 = (mj) (ShatteredPlansClient.field_H.b((byte) -107));
+              var3 = (mj) (ShatteredPlansClient.field_H.nextInTraversal((byte) -107));
             }
             ShatteredPlansClient.field_H = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ec.S(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ec.S(" + param0 + ')');
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_u = null;
         field_s = null;
         if (!param0) {
@@ -139,16 +139,16 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         RandomAccessCacheFile.a(-104);
         var4.bindAsRenderTarget();
         for (var5 = 0; var4.field_z > var5; var5++) {
-          gf.j(var5, 0, var4.field_w, SolVictoryChecker.a(0, gm.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));
+          SoftwareRasterizer.drawVerticalLine(var5, 0, var4.field_w, SolVictoryChecker.blendColours(0, SoundPlayback.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));
         }
         for (var5Lifetime1 = 0; -1 + var4.field_z > var5Lifetime1; var5Lifetime1++) {
-          var4.field_B[var5Lifetime1] = SolVictoryChecker.a(0, var4.field_B[var5Lifetime1], -92, 128);
-          var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1] = SolVictoryChecker.a(0, var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1], -118, 64);
+          var4.field_B[var5Lifetime1] = SolVictoryChecker.blendColours(0, var4.field_B[var5Lifetime1], -92, 128);
+          var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1] = SolVictoryChecker.blendColours(0, var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1], -118, 64);
         }
         for (var5Lifetime2 = 0; var5Lifetime2 < var4.field_w; var5Lifetime2++) {
-          var4.field_B[var4.field_z - 1 + var5Lifetime2 * var4.field_z] = SolVictoryChecker.a(0, var4.field_B[var5Lifetime2 * var4.field_z + (-1 + var4.field_z)], -86, 128);
+          var4.field_B[var4.field_z - 1 + var5Lifetime2 * var4.field_z] = SolVictoryChecker.blendColours(0, var4.field_B[var5Lifetime2 * var4.field_z + (-1 + var4.field_z)], -86, 128);
         }
-        var4.field_B[var4.field_z * var4.field_w - 1] = SolVictoryChecker.a(0, var4.field_B[-1 + var4.field_w * var4.field_z], -85, 190);
+        var4.field_B[var4.field_z * var4.field_w - 1] = SolVictoryChecker.blendColours(0, var4.field_B[-1 + var4.field_w * var4.field_z], -85, 190);
         cg.i(0);
         if (!param2) {
           field_r = (boolean[]) null;
@@ -261,8 +261,8 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = ng.a(param0, (byte) -95) ? 1 : 0;
-          var4 = ng.a(param0, (byte) -95) ? 1 : 0;
+          var3 = ng.readBoolean(param0, (byte) -95) ? 1 : 0;
+          var4 = ng.readBoolean(param0, (byte) -95) ? 1 : 0;
           var5 = new sr();
           var5.field_x = (short)param0.b((byte) 115, 16);
           var5.field_w = tm.a((byte) 39, param0, 16, var5.field_w);
@@ -290,10 +290,10 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             var5.field_J = tm.a((byte) 39, param0, 16, var5.field_J);
             var5.field_G = tm.a((byte) 39, param0, 16, var5.field_G);
           }
-          if (ng.a(param0, (byte) -95)) {
+          if (ng.readBoolean(param0, (byte) -95)) {
             var5.field_b = tm.a((byte) 39, param0, 16, var5.field_b);
           }
-          if (ng.a(param0, (byte) -95)) {
+          if (ng.readBoolean(param0, (byte) -95)) {
             var5.field_p = DualLinkNode.a(16, false, param0, var5.field_p);
             var7 = 0;
             for (var8 = 0; var5.field_p.length > var8; var8++) {
@@ -319,7 +319,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final String a(boolean param0, String param1) {
+    final String computeMessageFor(boolean param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         kj var4 = null;
@@ -383,7 +383,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

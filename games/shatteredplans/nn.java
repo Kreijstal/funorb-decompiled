@@ -6,7 +6,7 @@ final class nn {
     static byte[][][] field_c;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = 50 / ((param0 - 1) / 38);
         field_c = (byte[][][]) null;
         field_a = null;
@@ -37,7 +37,7 @@ final class nn {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -72,7 +72,7 @@ final class nn {
             }
             break;
           }
-          stackIn_10_0 = as.field_i;
+          stackIn_10_0 = FleetVisual.field_i;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,7 +84,7 @@ final class nn {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

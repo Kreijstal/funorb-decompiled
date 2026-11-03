@@ -9,11 +9,11 @@ final class cq extends WidgetContainer implements ButtonListener {
     static int field_E;
     static String field_I;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = param3 + this.field_m;
         int var6 = param2 + this.field_q;
         gn.field_u.a(StarLink.field_j, var5 + 20, var6 + 20, this.field_x - 40, -50 + this.field_n, 16777215, -1, 1, 0, gn.field_u.field_J);
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
     final static int d(boolean param0) {
@@ -40,7 +40,7 @@ final class cq extends WidgetContainer implements ButtonListener {
             }
             var2 = 1;
           }
-          GameState.field_l.a(-1, GameScreen.a(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.a(pd.field_k, bb.field_b, 16777215));
+          GameState.field_l.a(-1, GameScreen.a(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.a(TertiaryListSequence.field_k, bb.field_b, 16777215));
           if (GameState.field_l.a((byte) -76)) {
             var1_int = 1;
           }
@@ -60,11 +60,11 @@ final class cq extends WidgetContainer implements ButtonListener {
           }
           if (var3 == 0 &&
             eh.field_C == 2) {
-            var4 = pr.a(14274) - MusicPatch.field_p;
+            var4 = pr.currentTimeMillis(14274) - MusicPatch.field_p;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
-              gm.a(true, 56, 5);
+              SoundPlayback.a(true, 56, 5);
             }
           }
           stackIn_26_0 = var3;
@@ -72,13 +72,13 @@ final class cq extends WidgetContainer implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "cq.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "cq.A(" + param0 + ')');
         }
     }
 
     final static void a(int param0) {
         if (null != le.field_e) {
-          le.field_e.h((byte) 121);
+          le.field_e.removeClosedDialogs((byte) 121);
         }
         if (param0 == -50) {
           if (MouseInputHandler.field_h != null) {
@@ -89,7 +89,7 @@ final class cq extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -98,17 +98,17 @@ final class cq extends WidgetContainer implements ButtonListener {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_7_0 = this.a(param3, true);
+            stackIn_7_0 = this.isBeforeFocusedChild(param3, true);
             return stackIn_7_0;
           }
           if (99 != param0) {
             return false;
           }
-          stackIn_10_0 = this.a(param3, param2 ^ -74);
+          stackIn_10_0 = this.isAfterFocusedChild(param3, param2 ^ -74);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class cq extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class cq extends WidgetContainer implements ButtonListener {
             return;
           }
           if (this.field_J == param0) {
-            la.a(false);
+            RichTextLayout.a(false);
             return;
           }
           if (this.field_H == param0) {
@@ -159,7 +159,7 @@ final class cq extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -174,11 +174,11 @@ final class cq extends WidgetContainer implements ButtonListener {
           ld.field_p = new IntrusiveDeque();
           PlacementEvent.field_l = new tm[7];
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "cq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = 69 / ((23 - param0) / 59);
         field_I = null;
         field_F = null;
@@ -198,7 +198,7 @@ final class cq extends WidgetContainer implements ButtonListener {
           uq.field_j.field_K = uq.field_j.field_K - cg.field_C.field_K;
           cg.field_C.field_hb = cg.field_C.field_hb - cg.field_C.field_K;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "cq.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cq.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -214,13 +214,13 @@ final class cq extends WidgetContainer implements ButtonListener {
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_J.a(this.field_n - 48 - var2, 30, (byte) 113, -var3 + this.field_x >> 1, var4);
-        this.field_G.a(-var2 - 48 + this.field_n, 30, (byte) 104, var2 + var4 + (this.field_x - var3 >> 1), var4);
-        this.field_H.a(this.field_n - (78 + var2 * 2), 30, (byte) 104, this.field_x - var3 >> 1, var3);
+        this.field_J.setBounds(this.field_n - 48 - var2, 30, (byte) 113, -var3 + this.field_x >> 1, var4);
+        this.field_G.setBounds(-var2 - 48 + this.field_n, 30, (byte) 104, var2 + var4 + (this.field_x - var3 >> 1), var4);
+        this.field_H.setBounds(this.field_n - (78 + var2 * 2), 30, (byte) 104, this.field_x - var3 >> 1, var3);
         this.field_J.field_u = (WidgetListener) (this);
         this.field_H.field_u = (WidgetListener) (this);
         this.field_G.field_u = (WidgetListener) (this);
-        this.field_H.field_v = nc.field_m;
+        this.field_H.field_v = CandidateLink.field_m;
         this.field_G.field_v = bs.field_c;
         this.b((byte) -46, this.field_J);
         this.b((byte) -62, this.field_H);

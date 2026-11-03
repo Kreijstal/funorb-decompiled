@@ -11,7 +11,7 @@ final class WhirlpoolHasher {
     static String field_p;
     static String field_l;
     private int field_d;
-    static qr field_j;
+    static AnimatedPanel field_j;
     private int field_o;
     private long[] field_f;
     static int field_i;
@@ -20,7 +20,7 @@ final class WhirlpoolHasher {
     private long[] field_m;
     private byte[] field_k;
 
-    final void a(byte param0, long param1, byte[] param2) {
+    final void update(byte param0, long param1, byte[] param2) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -57,15 +57,15 @@ final class WhirlpoolHasher {
             var8 = 255 & param2[var5_int] << var6 | (param2[1 + var5_int] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_a[this.field_o] = (byte)ee.a((int) this.field_a[this.field_o], var8 >>> var7);
+              this.field_a[this.field_o] = (byte)PrivateChatMessage.intOr((int) this.field_a[this.field_o], var8 >>> var7);
               this.field_o = this.field_o + 1;
               this.field_d = this.field_d + (8 - var7);
               if (this.field_d == 512) {
-                this.a((byte) -55);
+                this.processBlock((byte) -55);
                 this.field_o = 0;
                 this.field_d = 0;
               }
-              this.field_a[this.field_o] = (byte)we.a(255, var8 << -var7 + 8);
+              this.field_a[this.field_o] = (byte)we.intAnd(255, var8 << -var7 + 8);
               param1 = param1 - 8L;
               this.field_d = this.field_d + var7;
               var5_int++;
@@ -77,7 +77,7 @@ final class WhirlpoolHasher {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_a[this.field_o] = (byte)ee.a((int) this.field_a[this.field_o], var8Lifetime1 >>> var7);
+            this.field_a[this.field_o] = (byte)PrivateChatMessage.intOr((int) this.field_a[this.field_o], var8Lifetime1 >>> var7);
           }
           if ((long)var7 + param1 < 8L) {
             this.field_d = (int)((long)this.field_d + param1);
@@ -86,11 +86,11 @@ final class WhirlpoolHasher {
             this.field_o = this.field_o + 1;
             this.field_d = this.field_d + (8 - var7);
             if (this.field_d == 512) {
-              this.a((byte) -55);
+              this.processBlock((byte) -55);
               this.field_o = 0;
               this.field_d = 0;
             }
-            this.field_a[this.field_o] = (byte)we.a(var8Lifetime1 << -var7 + 8, 255);
+            this.field_a[this.field_o] = (byte)we.intAnd(var8Lifetime1 << -var7 + 8, 255);
             this.field_d = this.field_d + (int)param1;
           }
           return;
@@ -104,7 +104,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -235,7 +235,7 @@ final class WhirlpoolHasher {
           var41 = var49;
           var8 = var41;
           var64 = new int[param5.field_e];
-          var61 = fm.field_c;
+          var61 = HuffmanCodec.field_c;
           var62 = RandomAccessCacheFile.field_f;
           var63 = hk.field_ob;
           for (var13 = 0; param5.field_e > var13; var13++) {
@@ -273,19 +273,19 @@ final class WhirlpoolHasher {
             var15Lifetime1 = param5.field_s[var14Lifetime1];
             var16 = param5.field_i[var14Lifetime1];
             var17 = param5.field_B[var14Lifetime1];
-            if (param5.field_M[var14Lifetime1] >= fm.field_c.length) {
+            if (param5.field_M[var14Lifetime1] >= HuffmanCodec.field_c.length) {
               stackIn_26_0 = -1;
             } else {
               stackIn_26_0 = param5.field_M[var14Lifetime1];
             }
             var18 = stackIn_26_0;
-            if (param5.field_P[var14Lifetime1] >= fm.field_c.length) {
+            if (param5.field_P[var14Lifetime1] >= HuffmanCodec.field_c.length) {
               stackIn_29_0 = -1;
             } else {
               stackIn_29_0 = param5.field_P[var14Lifetime1];
             }
             var19 = stackIn_29_0;
-            if (param5.field_n[var14Lifetime1] < fm.field_c.length) {
+            if (param5.field_n[var14Lifetime1] < HuffmanCodec.field_c.length) {
               stackIn_32_0 = param5.field_n[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;
@@ -364,7 +364,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -386,7 +386,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final void a(int param0, byte param1, byte[] param2) {
+    final void finish(int param0, byte param1, byte[] param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -401,7 +401,7 @@ final class WhirlpoolHasher {
         int var9 = 0;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.field_a[this.field_o] = (byte)ee.a((int) this.field_a[this.field_o], 128 >>> we.a(7, this.field_d));
+          this.field_a[this.field_o] = (byte)PrivateChatMessage.intOr((int) this.field_a[this.field_o], 128 >>> we.intAnd(7, this.field_d));
           this.field_o = this.field_o + 1;
           if (this.field_o > 32) {
             while (this.field_o < 64) {
@@ -409,7 +409,7 @@ final class WhirlpoolHasher {
               this.field_o = this.field_o + 1;
               this.field_a[fieldTemp$0] = (byte) 0;
             }
-            this.a((byte) -55);
+            this.processBlock((byte) -55);
             this.field_o = 0;
           }
           while (this.field_o < 32) {
@@ -417,8 +417,8 @@ final class WhirlpoolHasher {
             this.field_o = this.field_o + 1;
             this.field_a[fieldTemp$1] = (byte) 0;
           }
-          ps.a(this.field_k, 0, this.field_a, 32, 32);
-          this.a((byte) -55);
+          ArrayOperations.copyBytes(this.field_k, 0, this.field_a, 32, 32);
+          this.processBlock((byte) -55);
           var4_int = 0;
           var5 = param0;
           var6 = 59 % ((param1 - 19) / 32);
@@ -446,7 +446,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -488,30 +488,30 @@ final class WhirlpoolHasher {
           var8.bindAsRenderTarget();
           if (param4 <= 0) {
             var7 = var7 + IntrusiveDeque.field_a[param3.field_x].field_z / 2;
-            var9 = SolVictoryChecker.a(2105376, param3.field_k, -90, 128);
+            var9 = SolVictoryChecker.blendColours(2105376, param3.field_k, -90, 128);
             for (var10 = 0; var7 > var10; var10++) {
-              gf.j(var10, 0, var8.field_w, var9);
+              SoftwareRasterizer.drawVerticalLine(var10, 0, var8.field_w, var9);
             }
           } else {
             var6 = var6 + IntrusiveDeque.field_a[param3.field_x].field_z / 2;
             for (var9 = 0; var9 < var6; var9++) {
-              gf.j(var9, 0, var8.field_w, SolVictoryChecker.a(0, param3.field_k, -81, 128 + var9 * 128 / var6));
+              SoftwareRasterizer.drawVerticalLine(var9, 0, var8.field_w, SolVictoryChecker.blendColours(0, param3.field_k, -81, 128 + var9 * 128 / var6));
             }
             if (param0 > 0) {
-              var9 = SolVictoryChecker.a(2105376, param3.field_k, -106, 128);
+              var9 = SolVictoryChecker.blendColours(2105376, param3.field_k, -106, 128);
               for (var10 = 0; var10 < var7; var10++) {
-                gf.j(var6 + var10, 0, var8.field_w, var9);
+                SoftwareRasterizer.drawVerticalLine(var6 + var10, 0, var8.field_w, var9);
               }
             }
           }
           for (var9Lifetime1 = 0; var8.field_z - 1 > var9Lifetime1; var9Lifetime1++) {
-            var8.field_B[var9Lifetime1] = SolVictoryChecker.a(0, var8.field_B[var9Lifetime1], -124, 128);
-            var8.field_B[(var8.field_w - 1) * var8.field_z + var9Lifetime1] = SolVictoryChecker.a(0, var8.field_B[var9Lifetime1 + (-1 + var8.field_w) * var8.field_z], -97, 64);
+            var8.field_B[var9Lifetime1] = SolVictoryChecker.blendColours(0, var8.field_B[var9Lifetime1], -124, 128);
+            var8.field_B[(var8.field_w - 1) * var8.field_z + var9Lifetime1] = SolVictoryChecker.blendColours(0, var8.field_B[var9Lifetime1 + (-1 + var8.field_w) * var8.field_z], -97, 64);
           }
           for (var9Lifetime2 = 0; var8.field_w > var9Lifetime2; var9Lifetime2++) {
-            var8.field_B[var8.field_z - 1 + var9Lifetime2 * var8.field_z] = SolVictoryChecker.a(0, var8.field_B[var9Lifetime2 * var8.field_z - 1 + var8.field_z], -109, 128);
+            var8.field_B[var8.field_z - 1 + var9Lifetime2 * var8.field_z] = SolVictoryChecker.blendColours(0, var8.field_B[var9Lifetime2 * var8.field_z - 1 + var8.field_z], -109, 128);
           }
-          var8.field_B[var8.field_w * var8.field_z - 1] = SolVictoryChecker.a(0, var8.field_B[var8.field_w * var8.field_z - 1], -92, 190);
+          var8.field_B[var8.field_w * var8.field_z - 1] = SolVictoryChecker.blendColours(0, var8.field_B[var8.field_w * var8.field_z - 1], -92, 190);
           cg.i(0);
           stackIn_29_0 = var8;
           return stackIn_29_0;
@@ -525,11 +525,11 @@ final class WhirlpoolHasher {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final void a(byte param0) {
+    private final void processBlock(byte param0) {
         long dupTemp$0 = 0L;
         long arrayValue$1 = 0L;
         int var2;
@@ -551,7 +551,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_m[var2] = bg.a(bg.a(bg.a(GarrisonTask.a((long)this.field_a[5 + var3] << 16, 16711680L), bg.a(bg.a(GarrisonTask.a((long)this.field_a[var3 + 3], 255L) << 32, bg.a(bg.a(GarrisonTask.a((long)this.field_a[1 + var3], 255L) << 48, (long)this.field_a[var3] << 56), GarrisonTask.a((long)this.field_a[2 + var3] << 40, 280375465082880L))), GarrisonTask.a(4278190080L, (long)this.field_a[4 + var3] << 24))), GarrisonTask.a((long)this.field_a[6 + var3], 255L) << 8), GarrisonTask.a(255L, (long)this.field_a[7 + var3]));
+          this.field_m[var2] = bg.longXor(bg.longXor(bg.longXor(GarrisonTask.longAnd((long)this.field_a[5 + var3] << 16, 16711680L), bg.longXor(bg.longXor(GarrisonTask.longAnd((long)this.field_a[var3 + 3], 255L) << 32, bg.longXor(bg.longXor(GarrisonTask.longAnd((long)this.field_a[1 + var3], 255L) << 48, (long)this.field_a[var3] << 56), GarrisonTask.longAnd((long)this.field_a[2 + var3] << 40, 280375465082880L))), GarrisonTask.longAnd(4278190080L, (long)this.field_a[4 + var3] << 24))), GarrisonTask.longAnd((long)this.field_a[6 + var3], 255L) << 8), GarrisonTask.longAnd(255L, (long)this.field_a[7 + var3]));
           var2++;
           var3 += 8;
         }
@@ -559,7 +559,7 @@ final class WhirlpoolHasher {
           dupTemp$0 = this.field_c[var2Lifetime1];
           arrayValue$1 = this.field_m[var2Lifetime1];
           this.field_e[var2Lifetime1] = dupTemp$0;
-          this.field_f[var2Lifetime1] = bg.a(arrayValue$1, dupTemp$0);
+          this.field_f[var2Lifetime1] = bg.longXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; 10 >= var2Lifetime2; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -567,7 +567,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_h[var3Lifetime1] = bg.a(this.field_h[var3Lifetime1], BufferedSocket.field_l[var4][we.a(255, (int)(this.field_e[we.a(7, -var4 + var3Lifetime1)] >>> var5))]);
+              this.field_h[var3Lifetime1] = bg.longXor(this.field_h[var3Lifetime1], BufferedSocket.field_l[var4][we.intAnd(255, (int)(this.field_e[we.intAnd(7, -var4 + var3Lifetime1)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -575,14 +575,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_e[var3Lifetime1Lifetime1] = this.field_h[var3Lifetime1Lifetime1];
           }
-          this.field_e[0] = bg.a(this.field_e[0], BufferedSocket.field_k[var2Lifetime2]);
+          this.field_e[0] = bg.longXor(this.field_e[0], BufferedSocket.field_k[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_h[var3Lifetime1Lifetime2] = this.field_e[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_h[var3Lifetime1Lifetime2] = bg.a(this.field_h[var3Lifetime1Lifetime2], BufferedSocket.field_l[var7][we.a((int)(this.field_f[we.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_h[var3Lifetime1Lifetime2] = bg.longXor(this.field_h[var3Lifetime1Lifetime2], BufferedSocket.field_l[var7][we.intAnd((int)(this.field_f[we.intAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -596,12 +596,12 @@ final class WhirlpoolHasher {
           this.field_m = (long[]) null;
         }
         while (var2Lifetime3 < 8) {
-          this.field_c[var2Lifetime3] = bg.a(this.field_c[var2Lifetime3], bg.a(this.field_f[var2Lifetime3], this.field_m[var2Lifetime3]));
+          this.field_c[var2Lifetime3] = bg.longXor(this.field_c[var2Lifetime3], bg.longXor(this.field_f[var2Lifetime3], this.field_m[var2Lifetime3]));
           var2Lifetime3++;
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_l = null;
         field_q = null;
         field_j = null;
@@ -613,7 +613,7 @@ final class WhirlpoolHasher {
         field_p = null;
     }
 
-    final void b(int param0) {
+    final void reset(int param0) {
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2Lifetime1;

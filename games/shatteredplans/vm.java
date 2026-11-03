@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class vm extends qr {
+final class vm extends AnimatedPanel {
     private int field_xb;
     static int field_Bb;
     private int field_Eb;
@@ -11,7 +11,7 @@ final class vm extends qr {
     private vm field_Ob;
     private sg[] field_Kb;
     private int field_Mb;
-    static qr field_Cb;
+    static AnimatedPanel field_Cb;
     static boolean field_Nb;
     static String field_Lb;
     private int field_Ib;
@@ -22,7 +22,7 @@ final class vm extends qr {
     private int field_Db;
     private vm[] field_yb;
     private int field_Gb;
-    static qr field_Ab;
+    static AnimatedPanel field_Ab;
     static Sprite field_Jb;
 
     final void h(int param0) {
@@ -51,7 +51,7 @@ final class vm extends qr {
         int var9 = ShatteredPlansClient.field_F ? 1 : 0;
         int var7Lifetime1;
         this.field_Eb = this.field_Ib + param1 * 2;
-        this.a(this.field_Eb, this.field_xb, (byte) 77, param5 - this.field_xb, param3);
+        this.setTarget(this.field_Eb, this.field_xb, (byte) 77, param5 - this.field_xb, param3);
         if (this.field_Mb != param2) {
           this.field_Mb = param2;
           this.c(false, this.field_Db);
@@ -78,7 +78,7 @@ final class vm extends qr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            vm.g(-38);
+            vm.clearStatics(-38);
           }
           if (!param2) {
             stackIn_6_0 = PlayerStats.field_c.stringWidth(param0);
@@ -96,7 +96,7 @@ final class vm extends qr {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class vm extends qr {
           }
         }
         if (param2 > -101) {
-          vm.g(96);
+          vm.clearStatics(96);
         }
         if (this.field_Gb != -1) {
           var7 = this.field_yb[this.field_Gb];
@@ -171,12 +171,12 @@ final class vm extends qr {
             this.c(false, 0);
             this.field_Gb = param2;
             this.field_Ob = this.field_yb[this.field_Gb];
-            ee.a(this.field_Ob, true);
+            PrivateChatMessage.a(this.field_Ob, true);
             this.field_Ob.c(false, 12);
           } else {
             if (this.field_Hb[param2] != -1) {
               var5 = 32768 | this.field_Hb[param2];
-              var6 = em.field_h;
+              var6 = ProductionContent.field_h;
               if (var6 == 0 &&
                 null != np.field_a) {
                 var6 = 1;
@@ -185,8 +185,8 @@ final class vm extends qr {
                 gb.a((byte) 75, param1, 1, var6);
               }
               String var8 = (String) null;
-              ih.a(gi.field_a, 2, var5, em.field_h, (String) null, param3);
-              un.a(gi.field_a, (byte) 123, hd.field_k, em.field_h, var5);
+              ih.a(gi.field_a, 2, var5, ProductionContent.field_h, (String) null, param3);
+              IntrusiveDequeSequence.a(gi.field_a, (byte) 123, hd.field_k, ProductionContent.field_h, var5);
               jp.g((byte) 119);
               GameState.a(-5883);
             } else {
@@ -268,7 +268,7 @@ final class vm extends qr {
         return false;
     }
 
-    vm(long param0, qr param1, qr param2, qr param3, vm[] param4, int[] param5, String[] param6, char[] param7) {
+    vm(long param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, vm[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -310,15 +310,15 @@ final class vm extends qr {
           var12 = "</col>";
           for (var13 = 0; this.field_Pb > var13; var13++) {
             if (0 < this.field_zb[var13]) {
-              param6[var13] = var11 + sn.a(this.field_zb[var13], (byte) -86).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + sn.charToString(this.field_zb[var13], (byte) -86).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.field_yb[var13] != null ||
               this.field_Hb[var13] == -1) {
               var14 = GameKeyHandler.field_c;
             }
-            this.field_Kb[var13] = new sg(0L, param2, (qr) null, param3, (Sprite) (var14), param6[var13]);
-            this.a(4, this.field_Kb[var13]);
+            this.field_Kb[var13] = new sg(0L, param2, (AnimatedPanel) null, param3, (Sprite) (var14), param6[var13]);
+            this.addChild(4, this.field_Kb[var13]);
             var15 = var17.stringWidth(param6[var13]);
             if (this.field_Ib < var15) {
               this.field_Ib = var15;
@@ -373,15 +373,15 @@ final class vm extends qr {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_Jb = null;
         field_Fb = null;
         if (param0 != -22521) {
-          vm.g(-73);
+          vm.clearStatics(-73);
         }
         field_Cb = null;
         field_Ab = null;
@@ -466,7 +466,7 @@ final class vm extends qr {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

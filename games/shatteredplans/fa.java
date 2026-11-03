@@ -10,14 +10,14 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
     static int[][] field_Z;
     private ValidationSource field_V;
     private int field_U;
-    static qr field_X;
+    static AnimatedPanel field_X;
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_U = pd.field_k - (this.field_m + param0);
+          super.updateHover(param0, param1, param2, param3);
+          this.field_U = TertiaryListSequence.field_k - (this.field_m + param0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -25,41 +25,41 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
         super(param0, param1, param2);
     }
 
-    final String c(boolean param0) {
+    final String getTooltip(boolean param0) {
         if (!this.field_k) {
           return null;
         }
         if (this.field_v == null) {
           return null;
         }
-        ur.a(bb.field_b, !param0 ? true : false, this.field_x - this.field_U + pd.field_k);
+        ScrollBar.a(bb.field_b, !param0 ? true : false, this.field_x - this.field_U + TertiaryListSequence.field_k);
         if (param0) {
           return this.field_v;
         }
         return (String) null;
     }
 
-    final void i(int param0) {
-        super.i(param0);
+    final void notifyTextChanged(int param0) {
+        super.notifyTextChanged(param0);
         if (this.field_V != null) {
-          this.field_V.b(-72);
+          this.field_V.notifyChanged(-72);
         }
     }
 
-    final void a(ValidationSource param0, int param1) {
+    final void setValidationSource(ValidationSource param0, int param1) {
         try {
           if (param1 != 8945) {
             field_T = (String) null;
           }
           this.field_V = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final ValidationSource a(byte param0) {
+    public final ValidationSource getValidationSource(byte param0) {
         if (param0 <= 58) {
-          this.a((byte) -52);
+          this.getValidationSource((byte) -52);
           return this.field_V;
         }
         return this.field_V;
@@ -74,16 +74,16 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
           var3 = -(pg.field_J * pg.field_J) + var2;
           param0 = param0 + (-param0 + DerelictMapGenerator.field_m) * var3 / var2;
         }
-        tg.field_c.a(640, 120, (byte) 66, param0, tm.field_h);
+        tg.field_c.setTarget(640, 120, (byte) 66, param0, tm.field_h);
         if (param1 <= -35) {
-          SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
+          SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, TextLayout.field_b);
           return;
         }
         fa.a(-2, (byte) -122);
-        SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
+        SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, TextLayout.field_b);
     }
 
-    public static void l(int param0) {
+    public static void clearStatics(int param0) {
         field_T = null;
         field_W = null;
         field_Y = null;

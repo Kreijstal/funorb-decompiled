@@ -26,7 +26,7 @@ final class ql extends IntrusiveNode {
         sq var6 = null;
         int var7 = 0;
         int var8 = 0;
-        dm var9 = null;
+        ObjectList var9 = null;
         int var4Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -40,10 +40,10 @@ final class ql extends IntrusiveNode {
           }
           PlayerStats.field_k = 0;
           SliderPainter.b((byte) 93);
-          var9 = new dm();
+          var9 = new ObjectList();
           var3 = nd.a((byte) -106);
           while (var3 != null) {
-            var9.a(false, var3);
+            var9.add(false, var3);
             var3 = nd.a((byte) 118);
           }
           EmailValidator.field_q = new sq[var9.field_g];
@@ -78,45 +78,45 @@ final class ql extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        gm var1 = null;
+        SoundPlayback var1 = null;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
-        gm var1Lifetime1;
+        SoundPlayback var1Lifetime1;
         try {
           aj.field_e.service();
           IsolationistAi.field_q.service();
           if (param0 != -26848) {
-            ql.a((byte) 108);
+            ql.clearStatics((byte) 108);
           }
-          dp.field_u = dp.field_u - 1;
-          if (dp.field_u == 0) {
-            dp.field_u = 200;
-            var1 = (gm) (eo.field_ab.startForward(param0 ^ -26848));
+          QuickChatCategoryDefinition.field_u = QuickChatCategoryDefinition.field_u - 1;
+          if (QuickChatCategoryDefinition.field_u == 0) {
+            QuickChatCategoryDefinition.field_u = 200;
+            var1 = (SoundPlayback) (eo.field_ab.startForward(param0 ^ -26848));
             while (var1 != null) {
               if (!var1.field_n.isLinked(2048)) {
                 var1.unlink((byte) -108);
               }
-              var1 = (gm) (eo.field_ab.nextForward((byte) -71));
+              var1 = (SoundPlayback) (eo.field_ab.nextForward((byte) -71));
             }
-            if (nc.field_v != null) {
-              var1Lifetime1 = (gm) (nc.field_v.startForward(0));
+            if (CandidateLink.field_v != null) {
+              var1Lifetime1 = (SoundPlayback) (CandidateLink.field_v.startForward(0));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_n.isLinked(2048)) {
                   var1Lifetime1.unlink((byte) -84);
                 }
-                var1Lifetime1 = (gm) (nc.field_v.nextForward((byte) -71));
+                var1Lifetime1 = (SoundPlayback) (CandidateLink.field_v.nextForward((byte) -71));
               }
             }
           }
-          if (jh.field_B != null &&
-            jh.field_B.h(5309)) {
+          if (ToggleButton.field_B != null &&
+            ToggleButton.field_B.isPlaying(5309)) {
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ql.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ql.A(" + param0 + ')');
         }
     }
 
@@ -133,12 +133,12 @@ final class ql extends IntrusiveNode {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           while (true) {
-            var3 = param2.a(param0, (byte) 127);
+            var3 = param2.requestFrame(param0, (byte) 127);
             while (var3.field_d == 0) {
-              jb.a((byte) -94, 10L);
+              jb.sleep((byte) -94, 10L);
             }
             if (var3.field_d != 1) {
-              jb.a((byte) -93, 100L);
+              jb.sleep((byte) -93, 100L);
               continue;
             }
             break;
@@ -165,11 +165,11 @@ final class ql extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_p = null;
         field_o = null;
         if (param0 > -46) {

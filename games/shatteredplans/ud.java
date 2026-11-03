@@ -7,7 +7,7 @@ final class ud {
     static String field_b;
     static boolean[] field_c;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;
@@ -38,7 +38,7 @@ final class ud {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param1.field_q.peekEvent()) {
-              jb.a((byte) -113, 1L);
+              jb.sleep((byte) -113, 1L);
               continue;
             }
             break;
@@ -70,7 +70,7 @@ final class ud {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

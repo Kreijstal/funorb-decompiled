@@ -55,7 +55,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             field_d = (String) null;
           }
           for (var5 = 0; var3 > var5; var5++) {
-            if (!ng.a(param1, (byte) -95)) {
+            if (!ng.readBoolean(param1, (byte) -95)) {
               var6 = param1.b((byte) 127, a.a(var5 - 1, 1));
               var4[var5] = var4[var6];
             } else {
@@ -82,7 +82,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_e = this.field_a.field_a.field_h;
           this.field_c = null;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ip.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ip.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

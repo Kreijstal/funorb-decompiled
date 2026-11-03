@@ -37,7 +37,7 @@ final class AggressiveAi extends StandardAi {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class AggressiveAi extends StandardAi {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -163,14 +163,14 @@ final class AggressiveAi extends StandardAi {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         field_p = null;
         if (param0 != 97) {
-          AggressiveAi.f((byte) -65);
+          AggressiveAi.clearStatics((byte) -65);
         }
     }
 
@@ -326,9 +326,9 @@ final class AggressiveAi extends StandardAi {
             }
             if (ByteArrayNode.field_p[0][2].field_v) {
               if (!SecondaryNodeDequeIterator.a((byte) -126)) {
-                dn.field_k = re.a(ef.field_b, 4371, new String[]{np.field_a.field_Xb});
+                DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(ef.field_b, 4371, new String[]{np.field_a.field_Xb});
               } else {
-                dn.field_k = po.field_c;
+                DualLinkDequeSequence.field_k = po.field_c;
               }
             }
           }
@@ -344,7 +344,7 @@ final class AggressiveAi extends StandardAi {
               for (var9_int = 0; var9_int < id.field_c.length; var9_int++) {
                 id.field_c[var9_int] = (byte) 0;
               }
-              id.field_c[var8 / 8] = (byte)ee.a((int) id.field_c[var8 / 8], 1 << var8 % 8);
+              id.field_c[var8 / 8] = (byte)PrivateChatMessage.intOr((int) id.field_c[var8 / 8], 1 << var8 % 8);
             }
             stackIn_52_0 = (param1) ? -1 : 0;
             for (var8 = stackIn_52_0; var8 < nl.field_a.length; var8++) {
@@ -426,7 +426,7 @@ final class AggressiveAi extends StandardAi {
                           id.field_c[var10] = (byte) 0;
                         }
                       } else {
-                        id.field_c[var8 / 8] = (byte)nc.a((int) id.field_c[var8 / 8], 1 << we.a(7, var8));
+                        id.field_c[var8 / 8] = (byte)CandidateLink.intXor((int) id.field_c[var8 / 8], 1 << we.intAnd(7, var8));
                       }
                     }
                   } else {
@@ -522,7 +522,7 @@ final class AggressiveAi extends StandardAi {
                 }
                 var9 = stackIn_156_0;
                 if (var9 != null) {
-                  dn.field_k = var9;
+                  DualLinkDequeSequence.field_k = var9;
                 }
               }
               stackIn_160_0 = var30;
@@ -534,7 +534,7 @@ final class AggressiveAi extends StandardAi {
             }
           }
           var7Lifetime4 = 0;
-          for (var8 = 0; em.field_k > var8; var8++) {
+          for (var8 = 0; ProductionContent.field_k > var8; var8++) {
             var31 = ByteArrayNode.field_p[var8 + 4];
             var9_array = var31;
             stackIn_170_0 = (!param1) ? 0 : -1;
@@ -551,7 +551,7 @@ final class AggressiveAi extends StandardAi {
                   null != ji.field_D[var8] &&
                   (~GameRules.field_m & ji.field_D[var8][var10]) > 0) {
                   var15 = 1;
-                  var16 = DualLinkDeque.a(107, ji.field_D[var8][var10] & ~GameRules.field_m);
+                  var16 = DualLinkDeque.highestOneBit(107, ji.field_D[var8][var10] & ~GameRules.field_m);
                 }
                 if (SliderWidget.field_E != null &&
                   SliderWidget.field_E[var8] != null &&
@@ -563,7 +563,7 @@ final class AggressiveAi extends StandardAi {
                   null != ArchiveIndex.field_h[var8]) {
                   var17 = ArchiveIndex.field_h[var8][var10];
                   if (var17 != 0 &&
-                    !hm.field_o &&
+                    !PanelNode.field_o &&
                     StarAnnotation.field_m <= 0) {
                     var11 = 1;
                   }
@@ -580,7 +580,7 @@ final class AggressiveAi extends StandardAi {
                     var12 = 1;
                   }
                   if (var17Lifetime2 != 0 &&
-                    !hm.field_o &&
+                    !PanelNode.field_o &&
                     StarAnnotation.field_m <= 0) {
                     var11 = 1;
                   }
@@ -628,12 +628,12 @@ final class AggressiveAi extends StandardAi {
                 !TurnEventLog.field_i)) {
                 wg.field_d = false;
                 if (lr.field_c == null) {
-                  lr.field_c = new byte[em.field_k];
-                  ek.field_F = new boolean[em.field_k];
+                  lr.field_c = new byte[ProductionContent.field_k];
+                  ArrayWidgetGroup.field_F = new boolean[ProductionContent.field_k];
                 }
                 RasterBuffer.field_h = false;
                 for (var18_int = 0; var18_int < var8; var18_int++) {
-                  ek.field_F[var18_int] = false;
+                  ArrayWidgetGroup.field_F[var18_int] = false;
                 }
                 js.a(-1, 1, param2, var8, 0, param1, var10, -1);
                 if (bs.field_b >= 2 &&
@@ -650,10 +650,10 @@ final class AggressiveAi extends StandardAi {
                 if (param1) {
                   if (var10 == -1) {
                     for (var19 = var7Lifetime4; var19 < var31.length + (var7Lifetime4 - 1); var19++) {
-                      qj.field_f[var19 / 8] = (byte)we.a((int) qj.field_f[var19 / 8], ~(1 << we.a(var19, 7)));
+                      qj.field_f[var19 / 8] = (byte)we.intAnd((int) qj.field_f[var19 / 8], ~(1 << we.intAnd(var19, 7)));
                     }
                   } else {
-                    qj.field_f[(var10 + var7Lifetime4) / 8] = (byte)nc.a((int) qj.field_f[(var10 + var7Lifetime4) / 8], 1 << we.a(var10 + var7Lifetime4, 7));
+                    qj.field_f[(var10 + var7Lifetime4) / 8] = (byte)CandidateLink.intXor((int) qj.field_f[(var10 + var7Lifetime4) / 8], 1 << we.intAnd(var10 + var7Lifetime4, 7));
                   }
                 } else {
                   if (var17Lifetime1 == 0 &&
@@ -665,7 +665,7 @@ final class AggressiveAi extends StandardAi {
               }
               if (param1 &&
                 var17Lifetime1 != 0) {
-                qj.field_f[(var10 + var7Lifetime4) / 8] = (byte)we.a((int) qj.field_f[(var10 + var7Lifetime4) / 8], ~(1 << we.a(7, var7Lifetime4 + var10)));
+                qj.field_f[(var10 + var7Lifetime4) / 8] = (byte)we.intAnd((int) qj.field_f[(var10 + var7Lifetime4) / 8], ~(1 << we.intAnd(7, var7Lifetime4 + var10)));
               }
               if (var10 >= 0 &&
                 var18.field_v) {
@@ -695,7 +695,7 @@ final class AggressiveAi extends StandardAi {
                 var22 = null;
                 if (var14 == 0) {
                   if (var11 != 0) {
-                    var22 = vd.field_r;
+                    var22 = MenuComponent.field_r;
                     var23 = var22;
                     var26 = var23;
                     var23 = var26;
@@ -710,13 +710,13 @@ final class AggressiveAi extends StandardAi {
                     if (var12 != 0) {
                       var23_int = -BoundsRect.field_h + pg.field_A[var8][var10];
                       if (var23_int != 1) {
-                        var22 = re.a(nc.field_n, 4371, new String[]{Integer.toString(var23_int)});
+                        var22 = QuickChatCategoryRegistry.a(CandidateLink.field_n, 4371, new String[]{Integer.toString(var23_int)});
                       } else {
                         var22 = SecondaryNodeDequeIterator.field_g;
                       }
                     }
                     if (var13 != 0) {
-                      var32 = re.a(dh.field_d, 4371, new String[]{Integer.toString(a.field_j), Integer.toString(ArchiveIndex.field_h[var8][var10])});
+                      var32 = QuickChatCategoryRegistry.a(dh.field_d, 4371, new String[]{Integer.toString(a.field_j), Integer.toString(ArchiveIndex.field_h[var8][var10])});
                       var23 = var32;
                       var26 = var23;
                       var23 = var26;
@@ -745,7 +745,7 @@ final class AggressiveAi extends StandardAi {
                     }
                   }
                 } else {
-                  var22 = qh.field_D;
+                  var22 = MenuWindow.field_D;
                 }
                 if (var4_int != 0 &&
                   !wg.field_d) {
@@ -760,8 +760,8 @@ final class AggressiveAi extends StandardAi {
                     var22 = var23;
                   }
                   for (var25 = 0; var8 > var25; var25++) {
-                    if (ek.field_F[var25]) {
-                      var26_refLifetime1 = "</col>" + gm.field_l[var25] + "<col=A00000>";
+                    if (ArrayWidgetGroup.field_F[var25]) {
+                      var26_refLifetime1 = "</col>" + SoundPlayback.field_l[var25] + "<col=A00000>";
                       var23 = var26_refLifetime1;
                       var22 = var23;
                       var23 = var26_refLifetime1;
@@ -776,14 +776,14 @@ final class AggressiveAi extends StandardAi {
                     }
                   }
                   if (var24 == 0) {
-                    var22 = re.a(n.field_q, 4371, new String[]{(String) (var23)});
+                    var22 = QuickChatCategoryRegistry.a(n.field_q, 4371, new String[]{(String) (var23)});
                   } else {
                     var22 = mp.field_d + (String) (var23);
                   }
                 }
                 if (var22 != null) {
                   var22 = "<col=A00000>" + (String) (var22);
-                  var33 = qr.a((String) (var22), (byte) -125, "<br><col=A00000>", "<br>");
+                  var33 = AnimatedPanel.a((String) (var22), (byte) -125, "<br><col=A00000>", "<br>");
                   if (var21 == null) {
                     var21 = var33;
                   } else {
@@ -791,7 +791,7 @@ final class AggressiveAi extends StandardAi {
                   }
                 }
                 if (var21 != null) {
-                  dn.field_k = (String) (var21);
+                  DualLinkDequeSequence.field_k = (String) (var21);
                 }
               }
               if (param1) {
@@ -842,7 +842,7 @@ final class AggressiveAi extends StandardAi {
           } else {
             stackIn_358_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_357_0), ((StringBuilder) (Object) stackIn_357_1).append(stackIn_358_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_357_0), ((StringBuilder) (Object) stackIn_357_1).append(stackIn_358_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1042,7 +1042,7 @@ final class AggressiveAi extends StandardAi {
           }
           super.planTerritory(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sc.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sc.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class uq extends IntrusiveNode {
     static int field_k;
-    static qr field_j;
+    static AnimatedPanel field_j;
     static String field_n;
     static String field_l;
     static int field_i;
@@ -51,11 +51,11 @@ final class uq extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static GameState a(int param0, int param1, int param2, String[] param3, GameRules param4) {
+    final static GameState createGameState(int param0, int param1, int param2, String[] param3, GameRules param4) {
         GameState var5 = null;
         RuntimeException var5_ref = null;
         GameState stackIn_3_0 = null;
@@ -88,16 +88,16 @@ final class uq extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (!(gf.field_k < param2 + param0 + param3)) {
+        if (!(SoftwareRasterizer.field_k < param2 + param0 + param3)) {
           return param3 + param0;
         }
         if (param1 > -param2 + param3) {
-          return gf.field_k - param2;
+          return SoftwareRasterizer.field_k - param2;
         }
         return -param2 + param3;
     }

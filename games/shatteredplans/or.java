@@ -7,7 +7,7 @@ final class or {
     static int[] field_b;
     static String field_c;
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         if (param0 <= 124) {
           or.a(-80);
@@ -47,7 +47,7 @@ final class or {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 

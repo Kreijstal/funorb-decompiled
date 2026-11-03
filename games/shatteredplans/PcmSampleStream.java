@@ -745,8 +745,8 @@ final class PcmSampleStream extends PcmStream {
 
     private final void k() {
         this.field_s = this.field_w;
-        this.field_y = PcmSampleStream.e(this.field_w, this.field_z);
-        this.field_m = PcmSampleStream.d(this.field_w, this.field_z);
+        this.field_y = PcmSampleStream.leftGain(this.field_w, this.field_z);
+        this.field_m = PcmSampleStream.rightGain(this.field_w, this.field_z);
     }
 
     final synchronized boolean isRamping() {
@@ -1064,8 +1064,8 @@ final class PcmSampleStream extends PcmStream {
           this.c(param1, param2);
           return;
         }
-        int var4 = PcmSampleStream.e(param1, param2);
-        int var5 = PcmSampleStream.d(param1, param2);
+        int var4 = PcmSampleStream.leftGain(param1, param2);
+        int var5 = PcmSampleStream.rightGain(param1, param2);
         if (this.field_y != var4) {
           var6 = param1 - this.field_s;
           if (this.field_s - param1 > var6) {
@@ -1137,7 +1137,7 @@ final class PcmSampleStream extends PcmStream {
         return 1;
     }
 
-    private final static int d(int param0, int param1) {
+    private final static int rightGain(int param0, int param1) {
         return param1 < 0 ? -param0 : (int)((double)param0 * Math.sqrt((double)param1 * 0.0001220703125) + 0.5);
     }
 
@@ -1506,8 +1506,8 @@ final class PcmSampleStream extends PcmStream {
         int var3;
         var1 = this.field_w;
         if (var1 != -2147483648) {
-          var2 = PcmSampleStream.e(var1, this.field_z);
-          var3 = PcmSampleStream.d(var1, this.field_z);
+          var2 = PcmSampleStream.leftGain(var1, this.field_z);
+          var3 = PcmSampleStream.rightGain(var1, this.field_z);
         } else {
           var3 = 0;
           var2 = 0;
@@ -1732,7 +1732,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    private final static int e(int param0, int param1) {
+    private final static int leftGain(int param0, int param1) {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 }

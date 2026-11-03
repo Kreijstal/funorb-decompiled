@@ -21,7 +21,7 @@ class Territory extends DualLinkNode {
         try {
           this.field_s.addLast((byte) -113, param1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ class Territory extends DualLinkNode {
         return (Star) (this.field_s.pollFirst(43));
     }
 
-    public static void f(int param0) {
+    public static void clearStatics(int param0) {
         field_y = null;
         if (param0 != -28714) {
           return;
@@ -63,7 +63,7 @@ class Territory extends DualLinkNode {
             this.removeFirstStar(-14);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ class Territory extends DualLinkNode {
           this.field_o = param0;
           this.field_s = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

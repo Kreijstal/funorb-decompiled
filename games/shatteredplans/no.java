@@ -234,17 +234,17 @@ final class no {
               var28.field_q = new PlayerStats(var31.field_x + var8.field_x + (var30.field_x + var29Lifetime2.field_x) + var10.field_x);
             }
             if (var5 != null) {
-              oq.field_a.a(2, (Player) (var5));
-              oq.field_a.field_z.a(-128, oq.field_a.field_P.field_v);
-              oq.field_a.field_Y.a(oq.field_a.field_P.field_v, 1);
-              uq.field_m.a(re.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);
+              oq.field_a.addPlayer(2, (Player) (var5));
+              oq.field_a.field_z.setPlayers(-128, oq.field_a.field_P.field_v);
+              oq.field_a.field_Y.updatePlayerList(oq.field_a.field_P.field_v, 1);
+              uq.field_m.a(QuickChatCategoryRegistry.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);
             }
             qj.a(WeightedLruCache.field_g, -1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw r.a((Throwable) ((Object) var2), "no.C(" + param0 + ',' + param1 + ')');
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "no.C(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -272,11 +272,11 @@ final class no {
             ImageProducerRasterBuffer.a(vj.g((byte) 120), ei.a(82), var3_int != 0, 0, po.field_h);
           } else {
             if (!or.a(250)) {
-              gf.b();
+              SoftwareRasterizer.clear();
               sn.a(240, 28318, 320);
               WeightedCacheEntry.a(param1 ^ 37, 0, param2, 0);
             } else {
-              if (gm.field_i == 0) {
+              if (SoundPlayback.field_i == 0) {
                 gr.a(false, param0, param1 ^ 10);
                 WeightedCacheEntry.a(64, 0, param2, 0);
               } else {
@@ -295,7 +295,7 @@ final class no {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -338,11 +338,11 @@ final class no {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_e = null;
         field_d = null;
         field_a = null;

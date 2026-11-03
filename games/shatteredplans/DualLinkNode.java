@@ -22,7 +22,7 @@ class DualLinkNode extends IntrusiveNode {
           js.a(0, 197126152);
         }
         if (!param0) {
-          DualLinkNode.d(101);
+          DualLinkNode.clearStatics(101);
         }
     }
 
@@ -84,7 +84,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ class DualLinkNode extends IntrusiveNode {
           vh.field_a[param0] = dupTemp$0;
           bs.a(var2, param1 ^ 93);
           oi.a(param0, (byte) 66).draw(16, 16);
-          gf.b(3, 3, 0, 0, 64, 64);
+          SoftwareRasterizer.b(3, 3, 0, 0, 64, 64);
           cg.i(0);
         }
         return var2;
@@ -144,7 +144,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_n = null;
         if (param0 != 9768448) {
           field_i = (String) null;

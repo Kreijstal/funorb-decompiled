@@ -22,7 +22,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
     nq field_c;
     int field_l;
 
-    public final int a(byte param0, UiWidget param1) {
+    public final int getTextHeight(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -30,11 +30,11 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param1, true);
+          this.getTextLayout(param1, true);
           if (param0 != -52) {
             field_q = (String) null;
           }
-          stackIn_3_0 = param1.field_j.c(param0 ^ 83) - (-this.field_o - this.field_g);
+          stackIn_3_0 = param1.field_j.getMaxLineWidth(param0 ^ 83) - (-this.field_o - this.field_g);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,7 +46,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -55,11 +55,11 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         MapView.a(param3, param0, param2, param1);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
-        qo var13 = null;
-        qo var14 = null;
+    public final void drawCaret(int param0, int param1, int param2, int param3, UiWidget param4) {
+        TextLayout var13 = null;
+        TextLayout var14 = null;
         int var7 = 0;
-        ha var8 = null;
+        TextLayoutLine var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -68,42 +68,42 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           return;
         }
         try {
-          if (param4.f(1)) {
-            var13 = this.a(param4, true);
+          if (param4.isFocused(1)) {
+            var13 = this.getTextLayout(param4, true);
             var14 = var13;
-            var7 = var14.a((byte) 81, param0);
+            var7 = var14.getLineIndexOfCharacter((byte) 81, param0);
             var8 = var13.field_d[var7];
             var9 = var14.a(true, param0);
             var10 = this.b((byte) -14, param4, var9, param1);
-            var11 = this.a(param3, param4, 68) + Math.max(0, var8.field_e);
-            var12 = this.a(param3, param4, -122) + Math.min(this.a(param4, 0), Math.min(var8.field_c, var14.field_d.length > 1 + var7 ? var13.field_d[1 + var7].field_e : var8.field_c));
+            var11 = this.getTextY(param3, param4, 68) + Math.max(0, var8.field_e);
+            var12 = this.getTextY(param3, param4, -122) + Math.min(this.a(param4, 0), Math.min(var8.field_c, var14.field_d.length > 1 + var7 ? var13.field_d[1 + var7].field_e : var8.field_c));
             BufferedSocket.a(-6187, param4.field_x + (param1 + param4.field_m), param4.field_n + (param4.field_q + param3), param4.field_q + param3, param1 + param4.field_m);
             MusicVoice.field_I.a(var10, -110, var10, this.field_i, var11, var12);
             Star.f((byte) -122);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "o.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "o.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final qo a(UiWidget param0, boolean param1) {
+    public final TextLayout getTextLayout(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
-        qo stackIn_2_0 = null;
-        qo stackIn_10_0 = null;
+        TextLayout stackIn_2_0 = null;
+        TextLayout stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_2_0 = (qo) null;
+            stackIn_2_0 = (TextLayout) null;
             return stackIn_2_0;
           }
           if (param0.field_j == null) {
-            param0.field_j = (qo) ((Object) new la());
+            param0.field_j = (TextLayout) ((Object) new RichTextLayout());
           }
           if (this.field_d) {
-            ((la) (param0.field_j)).a(this.b(true, param0), 0, this.field_r, this.field_l, this.a(124, param0), this.a(param0, 0), this.field_c, this.field_j);
+            ((RichTextLayout) (param0.field_j)).a(this.b(true, param0), 0, this.field_r, this.field_l, this.getInnerWidth(124, param0), this.a(param0, 0), this.field_c, this.field_j);
           } else {
             this.b((byte) 104, param0);
           }
@@ -119,11 +119,11 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public final int a(int param0, int param1, int param2, UiWidget param3, boolean param4, int param5) {
+    public final int getCharacterIndexAt(int param0, int param1, int param2, UiWidget param3, boolean param4, int param5) {
         RuntimeException var7 = null;
         UiWidget var8 = null;
         int stackIn_3_0 = 0;
@@ -132,12 +132,12 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param3, param4);
+          this.getTextLayout(param3, param4);
           if (!param4) {
             var8 = (UiWidget) null;
-            this.a(67, 67, -1, 15, (UiWidget) null);
+            this.drawCaret(67, 67, -1, 15, (UiWidget) null);
           }
-          stackIn_3_0 = param3.field_j.a(-this.b(0, param3, param0) + param1, 3357, param5 - this.a(param2, param3, -78));
+          stackIn_3_0 = param3.field_j.a(-this.getTextX(0, param3, param0) + param1, 3357, param5 - this.getTextY(param2, param3, -78));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -175,11 +175,11 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    public final void drawSelection(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var12 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -192,20 +192,20 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ha var13 = null;
+        TextLayoutLine var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
         WidgetTheme var17 = null;
-        qo var18 = null;
-        qo var19 = null;
+        TextLayout var18 = null;
+        TextLayout var19 = null;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 == param3) {
             return;
           }
-          if (param5.f(1)) {
-            var18 = this.a(param5, true);
+          if (param5.isFocused(1)) {
+            var18 = this.getTextLayout(param5, true);
             var19 = var18;
             if (param0 < param3) {
               var8 = param0;
@@ -214,8 +214,8 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
               var9 = param0;
               var8 = param3;
             }
-            var10 = var19.a((byte) 120, var8);
-            var11 = var19.a((byte) 100, var9);
+            var10 = var19.getLineIndexOfCharacter((byte) 120, var8);
+            var11 = var19.getLineIndexOfCharacter((byte) 100, var9);
             BufferedSocket.a(param4 - 6187, param2 + param5.field_m + param5.field_x, param1 + param5.field_q + param5.field_n, param1 + param5.field_q, param2 + param5.field_m);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var18.field_d[var12];
@@ -255,7 +255,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -264,11 +264,11 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           this.a(param2, param3, this.field_p, 2, param1, this.field_h, 0, 0);
           int var5_int = 20 / ((param0 - 54) / 41);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "o.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "o.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public final int a(int param0, UiWidget param1, int param2) {
+    public final int getTextY(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;
@@ -290,20 +290,20 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
         if (param0 != 0) {
-          WidgetTheme.a((byte) 47);
+          WidgetTheme.clearStatics((byte) 47);
           qj.a((byte) -127, 17);
           return;
         }
         qj.a((byte) -127, 17);
     }
 
-    public final int b(int param0, UiWidget param1, int param2) {
+    public final int getTextX(int param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
         UiWidget var5 = null;
         int stackIn_3_0 = 0;
@@ -314,7 +314,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         try {
           if (param0 != 0) {
             var5 = (UiWidget) null;
-            this.a(123, 88, -66, 47, (UiWidget) null);
+            this.drawCaret(123, 88, -66, 47, (UiWidget) null);
           }
           stackIn_3_0 = this.b((byte) -14, param1, 0, param2);
           return stackIn_3_0;
@@ -328,7 +328,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -357,11 +357,11 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    public final int a(int param0, UiWidget param1) {
+    public final int getInnerWidth(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -386,7 +386,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -417,14 +417,14 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             stackIn_6_0 = StandardAi.field_f;
             return stackIn_6_0;
           }
-          var8 = hb.a((byte) -90, param2);
+          var8 = NodeSequence.a((byte) -90, param2);
           if (var8 == null) {
-            stackIn_9_0 = re.a(us.field_e, 4371, new String[]{param2});
+            stackIn_9_0 = QuickChatCategoryRegistry.a(us.field_e, 4371, new String[]{param2});
             return stackIn_9_0;
           }
-          vd.field_j.startForwardFrom(var8, -9189);
+          MenuComponent.field_j.startForwardFrom(var8, -9189);
           while (true) {
-            var7 = (ve) (vd.field_j.nextForward((byte) -71));
+            var7 = (ve) (MenuComponent.field_j.nextForward((byte) -71));
             if (var7 != null) {
               var7.field_zb = var7.field_zb - 1;
               continue;
@@ -433,12 +433,12 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           }
           var8.unlink((byte) -76);
           var8.unlinkSecondary(16);
-          r.field_c = r.field_c - 1;
+          UrlLoader.field_c = UrlLoader.field_c - 1;
           var9 = js.field_f;
           var9.h(param1, 255);
           var9.position = var9.position + 1;
           if (param0 > -71) {
-            WidgetTheme.a((byte) 60);
+            WidgetTheme.clearStatics((byte) 60);
           }
           var5 = var9.position;
           var9.writeByte(1, (byte) -91);
@@ -456,7 +456,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -464,7 +464,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int a(boolean param0, UiWidget param1) {
+    public final int getTextWidth(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -472,8 +472,8 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param1, param0);
-          stackIn_1_0 = param1.field_j.b(438) + (this.field_b + this.field_f);
+          this.getTextLayout(param1, param0);
+          stackIn_1_0 = param1.field_j.getHeight(438) + (this.field_b + this.field_f);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -485,7 +485,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -507,9 +507,9 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             this.field_p = -125;
           }
           if (param1.field_j == null) {
-            param1.field_j = (qo) ((Object) new la());
+            param1.field_j = (TextLayout) ((Object) new RichTextLayout());
           }
-          var3_int = this.a(120, param1);
+          var3_int = this.getInnerWidth(120, param1);
           var4 = this.a(param1, 0);
           var6 = this.field_l;
           if (0 != var6) {
@@ -528,23 +528,23 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           if (var6Lifetime1 != 0 &&
             var6Lifetime1 != 3) {
             if (var6Lifetime1 == 1) {
-              if (!(param1.field_j instanceof la)) {
+              if (!(param1.field_j instanceof RichTextLayout)) {
                 return;
               }
-              ((la) (param1.field_j)).a(var5, this.b(true, param1), 0, this.field_c, var3_int >> 1);
+              ((RichTextLayout) (param1.field_j)).layoutSingleLine(var5, this.b(true, param1), 0, this.field_c, var3_int >> 1);
               return;
             }
             if (var6Lifetime1 != 2) {
               return;
             }
-            if (!(param1.field_j instanceof la)) {
+            if (!(param1.field_j instanceof RichTextLayout)) {
               return;
             }
-            ((la) (param1.field_j)).a(108, var5, this.field_c, this.b(true, param1), var3_int);
+            ((RichTextLayout) (param1.field_j)).a(108, var5, this.field_c, this.b(true, param1), var3_int);
             return;
           }
-          if (param1.field_j instanceof la) {
-            ((la) (param1.field_j)).a(this.field_c, var5, -4, this.b(true, param1), 0);
+          if (param1.field_j instanceof RichTextLayout) {
+            ((RichTextLayout) (param1.field_j)).a(this.field_c, var5, -4, this.b(true, param1), 0);
             return;
           }
           return;
@@ -558,7 +558,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -581,7 +581,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           }
           boolean decompiledFrameRemainder0 = true;
           BufferedSocket.a(-6187, param4.field_m + (param0 + param4.field_x), param4.field_q + (param1 + param4.field_n), param4.field_q + param1, param0 + param4.field_m);
-          var9_int = this.a(123, param4);
+          var9_int = this.getInnerWidth(123, param4);
           var10 = this.a(param4, 0);
           if (this.field_d) {
             this.field_c.a(this.b(true, param4), this.b((byte) -14, param4, param7, param0), this.a((byte) -43, param4, param6, param1), var9_int, var10, param2, param5, this.field_r, this.field_l, this.field_j);
@@ -627,7 +627,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -656,20 +656,20 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final int a(boolean param0) {
+    public final int getLineHeight(boolean param0) {
         if (!param0) {
           return this.field_c.field_q + this.field_c.field_J;
         }
         UiWidget var3 = (UiWidget) null;
-        this.a(6, 90, 120, (UiWidget) null, false, -78);
+        this.getCharacterIndexAt(6, 90, 120, (UiWidget) null, false, -78);
         return this.field_c.field_q + this.field_c.field_J;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_q = null;
         if (param0 >= -62) {
           return;
@@ -690,7 +690,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         try {
           if (param1 != 0) {
             var4 = (UiWidget) null;
-            this.a(-5, (UiWidget) null);
+            this.getInnerWidth(-5, (UiWidget) null);
           }
           stackIn_3_0 = -this.field_f + param0.field_n - this.field_b;
           return stackIn_3_0;
@@ -704,7 +704,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -718,7 +718,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           }
           this.a(102, param0, param1, param3);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "o.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "o.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -739,10 +739,10 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           param0.field_p = this.field_p;
           if (param1 != 42) {
             UiWidget var4 = (UiWidget) null;
-            this.a(107, -23, -128, -77, 34, (UiWidget) null);
+            this.drawSelection(107, -23, -128, -77, 34, (UiWidget) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "o.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "o.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -765,7 +765,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           this.field_g = param2;
           this.field_i = param10;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

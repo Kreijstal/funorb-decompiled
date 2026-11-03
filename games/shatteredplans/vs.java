@@ -19,7 +19,7 @@ final class vs {
         return (gb) null;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_e = null;
         field_f = null;
@@ -53,7 +53,7 @@ final class vs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "vs.A(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "vs.A(" + param0 + ',' + param1 + ')');
         }
     }
 

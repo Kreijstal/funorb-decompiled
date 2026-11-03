@@ -18,10 +18,10 @@ final class ks {
           nf var3 = (nf) null;
           ks.a((nf) null, -105);
           if (WeightedLruCache.field_g != null) {
-            if (pd.field_k < e.field_f) {
+            if (TertiaryListSequence.field_k < e.field_f) {
               return false;
             }
-            if (pd.field_k >= ei.field_e) {
+            if (TertiaryListSequence.field_k >= ei.field_e) {
               return false;
             }
             if (ByteArrayNode.field_k > bb.field_b) {
@@ -36,7 +36,7 @@ final class ks {
             if (!param0) {
               return true;
             }
-            if (WeightedLruCache.field_g != hm.field_q) {
+            if (WeightedLruCache.field_g != PanelNode.field_q) {
               js.a((byte) -10);
               if (BattleSnapshot.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
@@ -49,13 +49,13 @@ final class ks {
             }
             return true;
           }
-          if (null == hm.field_q) {
+          if (null == PanelNode.field_q) {
             return false;
           }
-          if (pd.field_k < e.field_f) {
+          if (TertiaryListSequence.field_k < e.field_f) {
             return false;
           }
-          if (pd.field_k >= ei.field_e) {
+          if (TertiaryListSequence.field_k >= ei.field_e) {
             return false;
           }
           if (ByteArrayNode.field_k <= bb.field_b) {
@@ -66,7 +66,7 @@ final class ks {
               if (!param0) {
                 return true;
               }
-              if (WeightedLruCache.field_g != hm.field_q) {
+              if (WeightedLruCache.field_g != PanelNode.field_q) {
                 js.a((byte) -10);
                 if (BattleSnapshot.a(0)) {
                   NodeHashTableIterator.a(0, "enter");
@@ -84,13 +84,13 @@ final class ks {
           return false;
         }
         if (WeightedLruCache.field_g == null) {
-          if (null == hm.field_q) {
+          if (null == PanelNode.field_q) {
             return false;
           }
-          if (pd.field_k < e.field_f) {
+          if (TertiaryListSequence.field_k < e.field_f) {
             return false;
           }
-          if (pd.field_k < ei.field_e &&
+          if (TertiaryListSequence.field_k < ei.field_e &&
             ByteArrayNode.field_k <= bb.field_b) {
             if (AttackTask.field_o <= bb.field_b) {
               return false;
@@ -99,7 +99,7 @@ final class ks {
               if (!param0) {
                 return true;
               }
-              if (WeightedLruCache.field_g != hm.field_q) {
+              if (WeightedLruCache.field_g != PanelNode.field_q) {
                 js.a((byte) -10);
                 if (BattleSnapshot.a(0)) {
                   NodeHashTableIterator.a(0, "enter");
@@ -116,8 +116,8 @@ final class ks {
           }
           return false;
         }
-        if (pd.field_k >= e.field_f &&
-          pd.field_k < ei.field_e &&
+        if (TertiaryListSequence.field_k >= e.field_f &&
+          TertiaryListSequence.field_k < ei.field_e &&
           ByteArrayNode.field_k <= bb.field_b) {
           if (AttackTask.field_o <= bb.field_b) {
             return false;
@@ -126,7 +126,7 @@ final class ks {
             if (!param0) {
               return true;
             }
-            if (WeightedLruCache.field_g != hm.field_q) {
+            if (WeightedLruCache.field_g != PanelNode.field_q) {
               js.a((byte) -10);
               if (BattleSnapshot.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
@@ -182,13 +182,13 @@ final class ks {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final static sp c(int param0) {
+    final static WidgetStyle c(int param0) {
         if (GameRules.field_a == null) {
-          GameRules.field_a = new sp();
+          GameRules.field_a = new WidgetStyle();
           GameRules.field_a.a(gn.field_u, true);
           GameRules.field_a.field_h = EmailValidator.field_x;
           GameRules.field_a.field_l = 14;
@@ -232,30 +232,30 @@ final class ks {
         nf var11 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (gf.field_a > param5) {
-            param4 = param4 + (param5 - gf.field_a) * param3;
-            param1 = param1 + (param5 - gf.field_a);
-            param5 = gf.field_a;
+          if (SoftwareRasterizer.field_a > param5) {
+            param4 = param4 + (param5 - SoftwareRasterizer.field_a) * param3;
+            param1 = param1 + (param5 - SoftwareRasterizer.field_a);
+            param5 = SoftwareRasterizer.field_a;
           }
-          if (gf.field_f < param5 + param1) {
-            param1 = gf.field_f - param5;
+          if (SoftwareRasterizer.field_f < param5 + param1) {
+            param1 = SoftwareRasterizer.field_f - param5;
           }
-          var6_int = gf.field_b + param3;
+          var6_int = SoftwareRasterizer.field_b + param3;
           if (param0 != -18166) {
             var11 = (nf) null;
             ks.a((nf) null, -32);
           }
-          var8 = gf.field_b * param5 + param4;
+          var8 = SoftwareRasterizer.field_b * param5 + param4;
           var9 = param4;
           while (param1 > 0) {
-            if (gf.field_i <= var9 &&
-              var9 < gf.field_l) {
-              param4 = gf.field_h[var8];
+            if (SoftwareRasterizer.field_i <= var9 &&
+              var9 < SoftwareRasterizer.field_l) {
+              param4 = SoftwareRasterizer.field_h[var8];
               var7 = param2;
               param5 = var7 + param4;
               var7 = (16711935 & param4) + (16711935 & var7);
               param4 = (16777472 & var7) + (param5 - var7 & 65536);
-              gf.field_h[var8] = ee.a(-(param4 >>> 8) + param4, param5 - param4);
+              SoftwareRasterizer.field_h[var8] = PrivateChatMessage.intOr(-(param4 >>> 8) + param4, param5 - param4);
             }
             var8 = var8 + var6_int;
             param1--;
@@ -265,7 +265,7 @@ final class ks {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var6), "ks.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var6), "ks.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -281,7 +281,7 @@ final class ks {
         String stackIn_2_3;
         int stackIn_2_4;
         Object stackIn_2_5;
-        qr stackIn_2_6;
+        AnimatedPanel stackIn_2_6;
         int stackIn_2_7;
         int stackIn_3_8 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -314,9 +314,9 @@ final class ks {
           } else {
             stackIn_3_8 = 0;
           }
-          SliderPainter.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ub) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
+          SliderPainter.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ScrollPane) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_n == 0 &&
-            !ha.a((byte) 95) &&
+            !TextLayoutLine.a((byte) 95) &&
             null == np.field_a &&
             he.field_p == null) {
             if (!ae.field_b) {
@@ -329,12 +329,12 @@ final class ks {
             var7.field_j.a(param1 + 1, 20, var8);
           }
           if (1 == param0.field_n &&
-            !ha.a((byte) 111) &&
+            !TextLayoutLine.a((byte) 111) &&
             null != np.field_a &&
             param0.field_g == np.field_a.g(-101)) {
             if (!ae.field_b) {
               var9 = DerelictVictoryChecker.field_m;
-              var10 = qk.field_z;
+              var10 = MenuLabel.field_z;
               var9.field_j.a(1, 14, var10);
             }
             var11 = DerelictVictoryChecker.field_m;
@@ -361,7 +361,7 @@ final class ks {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -371,7 +371,7 @@ final class ks {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ks.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ks.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class ks {
           }
           BattleEvent.a(param2, param1, true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ks.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ks.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

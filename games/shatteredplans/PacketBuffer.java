@@ -54,7 +54,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ob.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ob.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -92,7 +92,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param1 > -22) {
           this.readLong(102);
         }
-        int var3 = bs.a(this.position, this.payload, (byte) -76, param0);
+        int var3 = bs.crc32(this.position, this.payload, (byte) -76, param0);
         this.writeInt(11135, var3);
         return var3;
     }
@@ -212,7 +212,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ob.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ob.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -359,7 +359,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -451,7 +451,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -514,7 +514,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -559,7 +559,7 @@ class PacketBuffer extends IntrusiveNode {
         return this.readString(-1);
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != 78) {
           return;
         }
@@ -661,7 +661,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -669,7 +669,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           int var2_int = -35 % ((param0 + 60) / 50);
           kb.field_x = 1;
-          hm.field_q = null;
+          PanelNode.field_q = null;
           oq.field_a = param1;
           ei.field_e = -1;
           WeightedLruCache.field_g = null;
@@ -686,13 +686,13 @@ class PacketBuffer extends IntrusiveNode {
           SliderWidget.field_L = false;
           ImageProducerRasterBuffer.field_i = 0;
           WhirlpoolHasher.field_g = false;
-          ph.field_g = false;
+          ListContent.field_g = false;
           VictoryChecker.field_j = false;
           AchievementProgress.field_k = false;
           js.field_b = new sq[8];
           wl.field_a = new TutorialMapGenerator();
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ob.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ob.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -717,7 +717,7 @@ class PacketBuffer extends IntrusiveNode {
           this.writeShort(var8.length, 255);
           this.writeBytes(0, var8.length, var8, 22186);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ob.TA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ob.TA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -734,7 +734,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyChecksum(byte param0) {
         this.position = this.position - 4;
-        int var2 = bs.a(this.position, this.payload, (byte) -83, 0);
+        int var2 = bs.crc32(this.position, this.payload, (byte) -83, 0);
         if (param0 <= 54) {
           this.writeLong48((byte) -45, 52L);
         }
@@ -753,7 +753,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int param0) {
-        this.payload = lr.a(param0, 101);
+        this.payload = lr.allocateByteArray(param0, 101);
         this.position = 0;
     }
 
@@ -777,7 +777,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = 0;
           this.payload = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

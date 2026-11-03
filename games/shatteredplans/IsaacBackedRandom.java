@@ -6,10 +6,10 @@ import java.util.*;
 final class IsaacBackedRandom extends Random {
     static String field_d;
     private IsaacRandom field_f;
-    static qr field_a;
+    static AnimatedPanel field_a;
     static String field_e;
     static SecondaryNodeHashTable field_b;
-    static qr field_c;
+    static AnimatedPanel field_c;
 
     final static void a(int param0) {
         if (param0 > 111) {
@@ -17,7 +17,7 @@ final class IsaacBackedRandom extends Random {
           TertiaryLinkNode.field_o.field_p = 0;
           return;
         }
-        field_c = (qr) null;
+        field_c = (AnimatedPanel) null;
         TertiaryLinkNode.field_o.field_a = 0;
         TertiaryLinkNode.field_o.field_p = 0;
     }
@@ -56,14 +56,14 @@ final class IsaacBackedRandom extends Random {
     }
 
     protected final int next(int param0) {
-        return this.field_f.d(13) >> -param0 + 32;
+        return this.field_f.nextInt(13) >> -param0 + 32;
     }
 
     public final void setSeed(long param0) {
         int[] var4 = new int[2];
         int[] var3 = var4;
-        var4[0] = (int)GarrisonTask.a(65535L, param0);
-        var4[1] = (int)GarrisonTask.a(param0 >> 32, 65535L);
+        var4[0] = (int)GarrisonTask.longAnd(65535L, param0);
+        var4[1] = (int)GarrisonTask.longAnd(param0 >> 32, 65535L);
         this.field_f = new IsaacRandom(var4);
     }
 
@@ -78,7 +78,7 @@ final class IsaacBackedRandom extends Random {
         return MusicVoice.field_o;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 != -109) {

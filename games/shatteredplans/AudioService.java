@@ -50,7 +50,7 @@ final class AudioService implements Runnable {
             var13 = param4;
             var14 = param1;
             var15 = (var17[var11] & 16711422) >> 1;
-            var10[var11] = var15 + (we.a(33471547, var14) >> 17) - (-we.a(65280, var13 >> 9) - (we.a(33423360, var12) >> 1));
+            var10[var11] = var15 + (we.intAnd(33471547, var14) >> 17) - (-we.intAnd(65280, var13 >> 9) - (we.intAnd(33423360, var12) >> 1));
             param2++;
             param1 = param1 + param7;
             param6 = param6 + param9;
@@ -65,7 +65,7 @@ final class AudioService implements Runnable {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param9).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param9).append(')').toString());
           }
           param0--;
         }
@@ -90,12 +90,12 @@ final class AudioService implements Runnable {
             try {
               if (false) throw (jn) null;
               var6 = new TutorialMapGenerator();
-              var5.field_g = var6.a((byte) -116);
+              var5.field_g = var6.generate((byte) -116);
               if (param3 != -22379) {
                 stackIn_3_0 = (GameState) null;
                 return stackIn_3_0;
               }
-              var5.field_g.a(var5.field_v, param0, param3 + 22383);
+              var5.field_g.assignHomeStars(var5.field_v, param0, param3 + 22383);
               var5.e(0);
               var5.recomputePlayerTotals(-124);
               stackIn_8_0 = var5;
@@ -121,7 +121,7 @@ final class AudioService implements Runnable {
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -151,7 +151,7 @@ final class AudioService implements Runnable {
                   var2.service();
                 }
               }
-              jb.a((byte) -98, 10L);
+              jb.sleep((byte) -98, 10L);
               var5 = (Object) null;
               ud.a(-106, this.field_c, (Object) null);
             }
@@ -221,7 +221,7 @@ final class AudioService implements Runnable {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

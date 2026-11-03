@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve extends qr {
+final class ve extends AnimatedPanel {
     String field_Ab;
     String field_Eb;
-    qr field_Fb;
-    qr field_Db;
+    AnimatedPanel field_Fb;
+    AnimatedPanel field_Db;
     int field_zb;
     static String field_Gb;
     String field_xb;
     String field_Bb;
-    qr field_Cb;
+    AnimatedPanel field_Cb;
     static String field_yb;
 
     final static String a(Archive param0, int param1, String param2, String param3, int param4) {
@@ -59,20 +59,20 @@ final class ve extends qr {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_yb = null;
         field_Gb = null;
         if (param0 != 0) {
-          ve.g(15);
+          ve.clearStatics(15);
         }
     }
 
     ve() {
-        super(0L, (qr) null);
+        super(0L, (AnimatedPanel) null);
     }
 
     static {

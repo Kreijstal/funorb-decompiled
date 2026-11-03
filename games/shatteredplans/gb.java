@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gb extends IntrusiveNode {
-    static qh field_n;
+    static MenuWindow field_n;
     int[] field_k;
     boolean field_l;
     boolean field_j;
     static String field_o;
-    static qr field_m;
+    static AnimatedPanel field_m;
     int field_h;
     static int field_i;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_n = null;
         field_m = null;
         field_o = null;
@@ -22,21 +22,21 @@ final class gb extends IntrusiveNode {
         int var4;
         if (param3 == 0 &&
           vm.field_Bb != param2) {
-          qh.field_v = true;
+          MenuWindow.field_v = true;
           vm.field_Bb = param2;
           kb.a(68, param1);
         }
         if (param3 == 1 &&
           sq.field_a != param2) {
           sq.field_a = param2;
-          qh.field_v = true;
+          MenuWindow.field_v = true;
           kb.a(55, param1);
         }
         var4 = 40 % ((-21 - param0) / 59);
         if (param3 == 2 &&
           ul.field_Hb != param2) {
           ul.field_Hb = param2;
-          qh.field_v = true;
+          MenuWindow.field_v = true;
           kb.a(95, param1);
         }
     }
@@ -78,7 +78,7 @@ final class gb extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

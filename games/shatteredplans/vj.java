@@ -24,7 +24,7 @@ final class vj extends SingleChildWidget {
         try {
           if (GzipInflater.field_c == -1 &&
             cb.field_n == -1) {
-            GzipInflater.field_c = pd.field_k;
+            GzipInflater.field_c = TertiaryListSequence.field_k;
             cb.field_n = bb.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -71,7 +71,7 @@ final class vj extends SingleChildWidget {
           GameKeyHandler.field_d = param0;
           if (!AggressiveAi.field_q &&
             LinkPainter.field_e < ri.field_F &&
-            r.field_d) {
+            UrlLoader.field_d) {
             LinkPainter.field_e = 0;
             rs.field_Fb = cb.field_n;
             RandomAccessCacheFile.field_g = GzipInflater.field_c;
@@ -82,7 +82,7 @@ final class vj extends SingleChildWidget {
           }
           cb.field_n = -1;
           if (AggressiveAi.field_q &&
-            LinkPainter.field_e == t.field_f) {
+            LinkPainter.field_e == StarLinkPlanner.field_f) {
             AggressiveAi.field_q = false;
             LinkPainter.field_e = 0;
             return;
@@ -98,7 +98,7 @@ final class vj extends SingleChildWidget {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class vj extends SingleChildWidget {
           return MouseInputHandler.field_e;
         }
         if (!GalaxyMap.field_g.preloadAll(-1)) {
-          return jh.field_v + " - " + GalaxyMap.field_g.getOverallProgress(100) + "%";
+          return ToggleButton.field_v + " - " + GalaxyMap.field_g.getOverallProgress(100) + "%";
         }
         return IsaacBackedRandom.field_d;
     }
@@ -152,15 +152,15 @@ final class vj extends SingleChildWidget {
         field_H = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
-        super.a(param0, param1, param2, param3, param4 + 0, param5);
+    final void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+        super.handleRelease(param0, param1, param2, param3, param4 + 0, param5);
         fr var8 = oa.field_b;
         if (param4 != -600269855) {
           return;
         }
         try {
           if (var8 != null &&
-            this.a(param0, 87, param3, param1, param2)) {
+            this.containsPoint(param0, 87, param3, param1, param2)) {
             if (this.field_u instanceof lf) {
               ((lf) (this.field_u)).a(-27619, this, var8);
               oa.field_b = null;
@@ -173,7 +173,7 @@ final class vj extends SingleChildWidget {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vj.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vj.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -182,19 +182,19 @@ final class vj extends SingleChildWidget {
         try {
           this.field_z = param6;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String i(int param0) {
         if (param0 >= -90) {
           field_B = (String) null;
-          if (ue.field_a == ee.field_l) {
+          if (ue.field_a == PrivateChatMessage.field_l) {
             return aa.field_G;
           }
           return oj.field_Ib;
         }
-        if (ue.field_a == ee.field_l) {
+        if (ue.field_a == PrivateChatMessage.field_l) {
           return aa.field_G;
         }
         return oj.field_Ib;
@@ -213,7 +213,7 @@ final class vj extends SingleChildWidget {
           field_F[var0] = 65793 * var0;
           field_A[var0] = 65793 * (var0 >> 2);
           field_I[var0] = var0 * 65536;
-          field_G[var0] = ee.a(we.a(var0, -1912602370) << 7, var0);
+          field_G[var0] = PrivateChatMessage.intOr(we.intAnd(var0, -1912602370) << 7, var0);
           field_H[var0] = (var0 >> 1) * 65537;
         }
     }

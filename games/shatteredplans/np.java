@@ -165,7 +165,7 @@ final class np {
               }
               if (this.field_n == 0) {
                 if (!this.field_e &&
-                  !r.field_d) {
+                  !UrlLoader.field_d) {
                   return;
                 }
                 if (param2 < 0) {
@@ -190,7 +190,7 @@ final class np {
             if (0 != AllianceExpiredEvent.field_n) {
               if (this.field_n == 0) {
                 if (!this.field_e &&
-                  !r.field_d) {
+                  !UrlLoader.field_d) {
                   return;
                 }
                 if (param2 < 0) {
@@ -228,7 +228,7 @@ final class np {
             this.field_e = true;
             return;
           }
-          if (!r.field_d) {
+          if (!UrlLoader.field_d) {
             return;
           }
           if (param2 < 0) {
@@ -254,7 +254,7 @@ final class np {
             if (0 != AllianceExpiredEvent.field_n) {
               if (this.field_n == 0) {
                 if (!this.field_e &&
-                  !r.field_d) {
+                  !UrlLoader.field_d) {
                   return;
                 }
                 if (param2 < 0) {
@@ -292,7 +292,7 @@ final class np {
             this.field_e = true;
             return;
           }
-          if (!r.field_d) {
+          if (!UrlLoader.field_d) {
             return;
           }
           if (param2 < 0) {
@@ -315,7 +315,7 @@ final class np {
                 return;
               }
               if (!this.field_e &&
-                !r.field_d) {
+                !UrlLoader.field_d) {
                 return;
               }
               decompiledFrameRemainder0 = false;
@@ -329,7 +329,7 @@ final class np {
               return;
             }
             if (!this.field_e &&
-              !r.field_d) {
+              !UrlLoader.field_d) {
               return;
             }
           }
@@ -353,7 +353,7 @@ final class np {
           if (je.field_d != 0) {
             if (this.field_n == 0) {
               if (!this.field_e &&
-                !r.field_d) {
+                !UrlLoader.field_d) {
                 return;
               }
               if (param2 < 0) {
@@ -377,7 +377,7 @@ final class np {
           }
           if (this.field_n == 0) {
             if (!this.field_e &&
-              !r.field_d) {
+              !UrlLoader.field_d) {
               return;
             }
             if (param2 < 0) {
@@ -401,7 +401,7 @@ final class np {
           if (0 != AllianceExpiredEvent.field_n) {
             if (this.field_n == 0) {
               if (!this.field_e &&
-                !r.field_d) {
+                !UrlLoader.field_d) {
                 return;
               }
               if (param2 >= 0) {
@@ -437,7 +437,7 @@ final class np {
             }
             this.field_c = -1;
           } else {
-            if (r.field_d) {
+            if (UrlLoader.field_d) {
               if (param2 < 0) {
                 if (!this.field_e) {
                   return;
@@ -586,7 +586,7 @@ final class np {
             } else {
               stackIn_56_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

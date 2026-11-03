@@ -5,7 +5,7 @@ final class bj extends WidgetContainer implements ButtonListener {
     private dl field_F;
     static wa[] field_J;
     static String field_E;
-    static qr field_D;
+    static AnimatedPanel field_D;
     static String field_M;
     static int field_L;
     private FocusableWidget[] field_I;
@@ -13,9 +13,9 @@ final class bj extends WidgetContainer implements ButtonListener {
     static Sprite field_H;
     private String[] field_G;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 9075) {
-          bj.a(-83);
+          bj.clearStatics(-83);
         }
         field_E = null;
         field_D = null;
@@ -32,29 +32,29 @@ final class bj extends WidgetContainer implements ButtonListener {
         RuntimeException var1 = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          nm.field_a = -1 + gf.field_k;
+          nm.field_a = -1 + SoftwareRasterizer.field_k;
           if (param0 != 26987) {
             field_H = (Sprite) null;
           }
           WhirlpoolHasher.field_i = 0;
           if (field_J != null &&
-            gf.field_k <= field_J.length) {
-            for (var1_int = 0; var1_int < gf.field_k; var1_int++) {
+            SoftwareRasterizer.field_k <= field_J.length) {
+            for (var1_int = 0; var1_int < SoftwareRasterizer.field_k; var1_int++) {
               field_J[var1_int] = null;
             }
             return;
           }
-          field_J = new wa[gf.field_k];
+          field_J = new wa[SoftwareRasterizer.field_k];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "bj.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "bj.A(" + param0 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
         if (param0 != 0) {
           return;
         }
@@ -80,7 +80,7 @@ final class bj extends WidgetContainer implements ButtonListener {
             }
           }
           if (param1 != 6) {
-            this.a(105, -29, -115, 86);
+            this.drawLayer(105, -29, -115, 86);
           }
           if (this.field_I[this.field_G.length] == param0) {
             this.field_F.a(2147483647);
@@ -96,7 +96,7 @@ final class bj extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class bj extends WidgetContainer implements ButtonListener {
         try {
           this.field_F = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -136,12 +136,12 @@ final class bj extends WidgetContainer implements ButtonListener {
               this.field_I[var5] = new FocusableWidget(this.field_G[var5], (WidgetListener) (this));
               this.field_I[var5].field_p = (WidgetPainter) ((Object) var4);
               this.field_I[var5].field_v = SecondaryNodeDequeIterator.field_f;
-              this.field_I[var5].a(20 + var5 * 16, 15, (byte) 112, 0, 80);
+              this.field_I[var5].setBounds(20 + var5 * 16, 15, (byte) 112, 0, 80);
               this.b((byte) -107, this.field_I[var5]);
             }
             this.field_I[var3_int] = new FocusableWidget(SolMapGenerator.field_p, (WidgetListener) (this));
             this.field_I[var3_int].field_p = (WidgetPainter) ((Object) var4);
-            this.field_I[var3_int].a(16 + (var3_int * 16 + 20), 15, (byte) 102, 0, 100);
+            this.field_I[var3_int].setBounds(16 + (var3_int * 16 + 20), 15, (byte) 102, 0, 100);
             this.b((byte) -65, this.field_I[var3_int]);
             return;
           }
@@ -157,11 +157,11 @@ final class bj extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_13_0 = false;
@@ -170,11 +170,11 @@ final class bj extends WidgetContainer implements ButtonListener {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2 + 0, param3)) {
+          if (super.handleKey(param0, param1, param2 + 0, param3)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a(param3, true);
+            stackIn_6_0 = this.isBeforeFocusedChild(param3, true);
             return stackIn_6_0;
           }
           if (param2 != 13) {
@@ -183,7 +183,7 @@ final class bj extends WidgetContainer implements ButtonListener {
           if (param0 != 99) {
             return false;
           }
-          stackIn_13_0 = this.a(param3, 116);
+          stackIn_13_0 = this.isAfterFocusedChild(param3, 116);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -195,7 +195,7 @@ final class bj extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

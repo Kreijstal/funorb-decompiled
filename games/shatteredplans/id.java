@@ -8,7 +8,7 @@ final class id {
     static byte[] field_c;
     static Star field_d;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_d = null;
         field_a = null;
         field_c = null;
@@ -50,7 +50,7 @@ final class id {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -110,7 +110,7 @@ final class id {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class id {
           }
           param2.a((byte) 33, var3);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "id.C(" + (args != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "id.C(" + (args != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -165,12 +165,12 @@ final class id {
         field_b = param4;
         e.field_d = param0;
         if (param2 == 26883) {
-          dp.field_v = param1;
+          QuickChatCategoryDefinition.field_v = param1;
           je.field_g = param3;
           return;
         }
         field_b = 22;
-        dp.field_v = param1;
+        QuickChatCategoryDefinition.field_v = param1;
         je.field_g = param3;
     }
 

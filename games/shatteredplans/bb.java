@@ -7,21 +7,21 @@ final class bb {
     static String field_a;
     static int field_b;
 
-    final static as a(int param0, FleetMove param1) {
-        as var2 = null;
+    final static FleetVisual a(int param0, FleetMove param1) {
+        FleetVisual var2 = null;
         RuntimeException var2_ref = null;
-        as stackIn_2_0 = null;
-        as stackIn_4_0 = null;
+        FleetVisual stackIn_2_0 = null;
+        FleetVisual stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2) {
-            stackIn_2_0 = (as) null;
+            stackIn_2_0 = (FleetVisual) null;
             return stackIn_2_0;
           }
-          var2 = new as(param1);
+          var2 = new FleetVisual(param1);
           var2.field_v = -var2.field_v;
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -35,11 +35,11 @@ final class bb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final static qr a(byte param0) {
+    final static AnimatedPanel a(byte param0) {
         if (param0 != 100) {
           bb.a(false, false, (byte) 25, -35);
         }
@@ -61,11 +61,11 @@ final class bb {
           js.field_f.writeByte(param3 ? 1 : 0, (byte) -96);
           js.field_f.patchLengthByte(js.field_f.position - var7_int, (byte) 118);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_d = null;
         if (param0 != 26) {
           return;
@@ -75,22 +75,22 @@ final class bb {
 
     final static void a(boolean param0, boolean param1, byte param2, int param3) {
         int stackIn_13_0 = 0;
-        qr stackIn_25_0 = null;
+        AnimatedPanel stackIn_25_0 = null;
         String stackIn_26_1 = null;
-        qr stackIn_28_0 = null;
+        AnimatedPanel stackIn_28_0 = null;
         String stackIn_29_1 = null;
         String stackIn_57_0 = null;
-        qr stackIn_70_0 = null;
+        AnimatedPanel stackIn_70_0 = null;
         boolean stackIn_71_1 = false;
-        qr stackIn_75_0 = null;
+        AnimatedPanel stackIn_75_0 = null;
         boolean stackIn_76_1 = false;
-        qr stackIn_80_0 = null;
+        AnimatedPanel stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
         int stackIn_83_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        qr var5 = null;
-        qr var6 = null;
+        AnimatedPanel var5 = null;
+        AnimatedPanel var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -101,15 +101,15 @@ final class bb {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        qr var15 = null;
+        AnimatedPanel var15 = null;
         String var16 = null;
-        qr var17 = null;
+        AnimatedPanel var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          qo.a(22353, Archive.field_b);
+          TextLayout.a(22353, Archive.field_b);
           if (param2 != -2) {
             field_d = (String) null;
           }
@@ -121,13 +121,13 @@ final class bb {
             var5 = aq.field_j;
             aq.field_j.field_mb = 0;
             var5.field_K = 0;
-            var6 = dn.field_f;
-            dn.field_f.field_mb = 0;
+            var6 = DualLinkDequeSequence.field_f;
+            DualLinkDequeSequence.field_f.field_mb = 0;
             var6.field_K = 0;
             ArchiveSourceManager.field_f.field_z = le.field_c.toUpperCase();
             var7 = (2 + IntrusiveDeque.field_g.field_K) / 2;
-            dn.field_f.a(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
-            aq.field_j.a(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
+            DualLinkDequeSequence.field_f.setTarget(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
+            aq.field_j.setTarget(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
             if (nl.field_a.length == 1 &&
               2 == nl.field_a[0]) {
               var8 = 0;
@@ -162,7 +162,7 @@ final class bb {
               DialPainter.field_g.field_s = false;
               IntrusiveNode.field_c.field_z = nb.field_c;
               if (var8 == 0) {
-                stackIn_57_0 = cm.field_c;
+                stackIn_57_0 = IntHashIndex.field_c;
               } else {
                 stackIn_57_0 = mp.field_f;
               }
@@ -170,19 +170,19 @@ final class bb {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = dn.field_f.field_nb.stringWidth(var16) + 3 * dn.field_f.field_nb.charWidth('.');
-              dn.field_f.field_kb = (-var10Lifetime1 + dn.field_f.field_K) / 2;
+              var10Lifetime1 = DualLinkDequeSequence.field_f.field_nb.stringWidth(var16) + 3 * DualLinkDequeSequence.field_f.field_nb.charWidth('.');
+              DualLinkDequeSequence.field_f.field_kb = (-var10Lifetime1 + DualLinkDequeSequence.field_f.field_K) / 2;
               if (16 == (Star.field_w & 48)) {
                 var9 = var16 + ".";
               }
-              dn.field_f.field_y = 0;
+              DualLinkDequeSequence.field_f.field_y = 0;
               if ((48 & Star.field_w) == 32) {
                 var9 = (String) (var9) + "..";
               }
               if ((48 & Star.field_w) == 48) {
                 var9 = (String) (var9) + "...";
               }
-              dn.field_f.field_z = (String) (var9);
+              DualLinkDequeSequence.field_f.field_z = (String) (var9);
               aq.field_j.field_z = fb.field_bc.toUpperCase();
             } else {
               stackIn_25_0 = aq.field_j;
@@ -198,24 +198,24 @@ final class bb {
               } else {
                 stackIn_29_1 = qp.field_v;
               }
-              stackIn_28_0.field_z = re.a(stackIn_29_1, 4371, new String[]{aq.field_j.field_z});
-              dn.field_f.field_z = wg.field_b;
+              stackIn_28_0.field_z = QuickChatCategoryRegistry.a(stackIn_29_1, 4371, new String[]{aq.field_j.field_z});
+              DualLinkDequeSequence.field_f.field_z = wg.field_b;
               DialPainter.field_g.field_s = true;
               wg.field_d = true;
               if (null != pe.field_D) {
                 wg.field_d = false;
                 RasterBuffer.field_h = false;
                 if (lr.field_c == null) {
-                  lr.field_c = new byte[em.field_k];
-                  ek.field_F = new boolean[em.field_k];
+                  lr.field_c = new byte[ProductionContent.field_k];
+                  ArrayWidgetGroup.field_F = new boolean[ProductionContent.field_k];
                 }
                 var13 = 0;
                 var9_intLifetime1 = var13;
-                while (var13 < em.field_k) {
-                  ek.field_F[var13] = false;
+                while (var13 < ProductionContent.field_k) {
+                  ArrayWidgetGroup.field_F[var13] = false;
                   var13++;
                 }
-                js.a(-1, param2 + 3, he.field_p, em.field_k, 0, true, -1, -1);
+                js.a(-1, param2 + 3, he.field_p, ProductionContent.field_k, 0, true, -1, -1);
                 if (!(bs.field_b < 2) &&
                   di.field_p[12]) {
                   wg.field_d = true;
@@ -232,9 +232,9 @@ final class bb {
                     var11Lifetime1 = var9;
                     var9 = var11Lifetime1;
                   }
-                  for (var10Lifetime1 = 0; em.field_k > var10Lifetime1; var10Lifetime1++) {
-                    if (ek.field_F[var10Lifetime1]) {
-                      var11_ref = "<col=A00000>" + gm.field_l[var10Lifetime1] + "</col>";
+                  for (var10Lifetime1 = 0; ProductionContent.field_k > var10Lifetime1; var10Lifetime1++) {
+                    if (ArrayWidgetGroup.field_F[var10Lifetime1]) {
+                      var11_ref = "<col=A00000>" + SoundPlayback.field_l[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
                       if (var9 == null) {
@@ -244,20 +244,20 @@ final class bb {
                       }
                     }
                   }
-                  dn.field_k = "<col=A00000>" + gg.field_c + "<br>" + ji.field_F + (String) (var9);
+                  DualLinkDequeSequence.field_k = "<col=A00000>" + gg.field_c + "<br>" + ji.field_F + (String) (var9);
                 }
               }
             }
           }
           stackIn_70_0 = am.field_xb;
           stackIn_71_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_70_0).a(stackIn_71_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_70_0).a(stackIn_71_1, -20429);
           stackIn_75_0 = IntrusiveDeque.field_g;
           stackIn_76_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_75_0).a(stackIn_76_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_75_0).a(stackIn_76_1, -20429);
           stackIn_80_0 = MouseInputHandler.field_d;
           stackIn_81_1 = (param1) && (!param0) && (IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
           n.field_h.field_d.f(false);
           if (he.field_p != null) {
             stackIn_83_0 = ~DialPainter.field_g.field_rb;
@@ -277,7 +277,7 @@ final class bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var4), "bb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var4), "bb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

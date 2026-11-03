@@ -6,9 +6,9 @@ final class ro {
     static String field_e;
     static String field_d;
     static java.security.SecureRandom field_b;
-    static ub field_a;
+    static ScrollPane field_a;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_c = null;
         field_b = null;
         field_e = null;
@@ -17,7 +17,7 @@ final class ro {
           field_d = null;
           return;
         }
-        field_a = (ub) null;
+        field_a = (ScrollPane) null;
         field_a = null;
         field_d = null;
     }
@@ -54,7 +54,7 @@ final class ro {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

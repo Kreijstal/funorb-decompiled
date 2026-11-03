@@ -14,18 +14,18 @@ class ts extends FocusableWidget {
     static GameApplet field_G;
     static String field_F;
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         if (0 != param0) {
           return;
         }
         WidgetMetrics var5 = (WidgetMetrics) ((Object) this.field_p);
         ql var6 = this.field_I;
         if (var6 != null) {
-          var7 = var5.b(0, (UiWidget) (this), param3);
-          var8 = var5.a(param2, (UiWidget) (this), 100);
+          var7 = var5.getTextX(0, (UiWidget) (this), param3);
+          var8 = var5.getTextY(param2, (UiWidget) (this), 100);
           do {
             dd.a(2 + var6.field_l, param1 ^ -11858, 2 + var6.field_j, var6.field_k + var7 - 2, var8 + (var6.field_m - 2));
             var6 = var6.field_h;
@@ -74,7 +74,7 @@ class ts extends FocusableWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -84,19 +84,19 @@ class ts extends FocusableWidget {
         try {
           this.field_p = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ts.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ts.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        super.a(param0, param1, (byte) 122, param3, param4);
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
+        super.setBounds(param0, param1, (byte) 122, param3, param4);
         this.e(false);
         if (param2 < 99) {
-          this.a(23, -42, -29, 82);
+          this.drawLayer(23, -42, -29, 82);
         }
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean containsWidget(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -116,11 +116,11 @@ class ts extends FocusableWidget {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_F = null;
         field_E = null;
         int var1 = -63 / ((-15 - param0) / 60);
@@ -138,12 +138,12 @@ class ts extends FocusableWidget {
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
           if (DebouncedValidator.field_e == null) {
-            DebouncedValidator.field_e = StarAbandonedEvent.field_l.a(65535, of.field_f, mk.field_c);
+            DebouncedValidator.field_e = StarAbandonedEvent.field_l.requestSocket(65535, of.field_f, mk.field_c);
           }
           if (DebouncedValidator.field_e.field_d == 0) {
             return false;
           }
-          dupTemp$1 = pr.a(14274);
+          dupTemp$1 = pr.currentTimeMillis(14274);
           mj.field_Pb = dupTemp$1;
           IntrusiveDeque.field_e = dupTemp$1;
           if (param1 != ~DebouncedValidator.field_e.field_d) {
@@ -157,10 +157,10 @@ class ts extends FocusableWidget {
               stackIn_9_0 = (param0) ? -2 : -1;
               IterableNodeHashTable.field_e = stackIn_9_0;
               SliderPainter.field_g = stackIn_9_0;
-              kp.field_n = stackIn_9_0;
+              TargetedChatMessage.field_n = stackIn_9_0;
               Wormhole.field_j = LegacyAi.field_r;
               var5.position = 0;
-              hq.a(sp.field_g, ee.field_o, js.field_f, (byte) 20, uk.field_a);
+              hq.a(WidgetStyle.field_g, PrivateChatMessage.field_o, js.field_f, (byte) 20, uk.field_a);
               d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -211,7 +211,7 @@ class ts extends FocusableWidget {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -221,7 +221,7 @@ class ts extends FocusableWidget {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        this.a(param1, ((WidgetMetrics) ((Object) this.field_p)).a(true, (UiWidget) (this)), (byte) 100, param0, param3);
+        this.setBounds(param1, ((WidgetMetrics) ((Object) this.field_p)).getTextWidth(true, (UiWidget) (this)), (byte) 100, param0, param3);
         if (param2 != 57) {
           field_E = (String) null;
         }
@@ -282,8 +282,8 @@ class ts extends FocusableWidget {
         Object var17;
         Object var22;
         String var23;
-        qo var24;
-        ha var25;
+        TextLayout var24;
+        TextLayoutLine var25;
         ql var26;
         WidgetMetrics var27;
         int stackIn_9_0 = 0;
@@ -291,8 +291,8 @@ class ts extends FocusableWidget {
         int stackIn_29_0 = 0;
         int stackIn_34_0 = 0;
         String var18;
-        qo var19;
-        ha var20;
+        TextLayout var19;
+        TextLayoutLine var20;
         ql var21;
         WidgetMetrics var28;
         int var2Lifetime1;
@@ -313,7 +313,7 @@ class ts extends FocusableWidget {
         if (!param0) {
           var2 = 0;
           var27 = (WidgetMetrics) ((Object) this.field_p);
-          var24 = var27.a((UiWidget) (this), true);
+          var24 = var27.getTextLayout((UiWidget) (this), true);
           while (true) {
             var5 = this.field_s.indexOf("<hotspot=", var2);
             if (var5 == -1) {
@@ -323,8 +323,8 @@ class ts extends FocusableWidget {
             var23 = this.field_s.substring(var5 + 9, var7);
             var7Lifetime2 = Integer.parseInt(var23);
             var2 = this.field_s.indexOf("</hotspot>", var5);
-            var8 = var24.a((byte) 87, var5);
-            var9 = var24.a((byte) 103, var2);
+            var8 = var24.getLineIndexOfCharacter((byte) 87, var5);
+            var9 = var24.getLineIndexOfCharacter((byte) 103, var2);
             var10 = null;
             for (var11 = var8; var9 >= var11; var11++) {
               var25 = var24.field_d[var11];
@@ -344,7 +344,7 @@ class ts extends FocusableWidget {
                 }
               }
               var14 = stackIn_14_0;
-              var26 = new ql(var7Lifetime2, var13, var25.field_e, var14 - var13, Math.max(var27.a(false), -var25.field_e + var25.field_c));
+              var26 = new ql(var7Lifetime2, var13, var25.field_e, var14 - var13, Math.max(var27.getLineHeight(false), -var25.field_e + var25.field_c));
               if (var10 == null) {
                 var10 = var26;
                 this.field_D.addLast((byte) -113, var26);
@@ -359,7 +359,7 @@ class ts extends FocusableWidget {
         field_L = (Sprite[]) null;
         var2Lifetime1 = 0;
         var28 = (WidgetMetrics) ((Object) this.field_p);
-        var19 = var28.a((UiWidget) (this), true);
+        var19 = var28.getTextLayout((UiWidget) (this), true);
         while (true) {
           var5Lifetime1 = this.field_s.indexOf("<hotspot=", var2Lifetime1);
           if (var5Lifetime1 == -1) {
@@ -369,8 +369,8 @@ class ts extends FocusableWidget {
           var18 = this.field_s.substring(var5Lifetime1 + 9, var7Lifetime1);
           var7Lifetime1Lifetime1 = Integer.parseInt(var18);
           var2Lifetime1 = this.field_s.indexOf("</hotspot>", var5Lifetime1);
-          var8Lifetime1 = var19.a((byte) 87, var5Lifetime1);
-          var9Lifetime1 = var19.a((byte) 103, var2Lifetime1);
+          var8Lifetime1 = var19.getLineIndexOfCharacter((byte) 87, var5Lifetime1);
+          var9Lifetime1 = var19.getLineIndexOfCharacter((byte) 103, var2Lifetime1);
           var10Lifetime1 = null;
           for (var11Lifetime1 = var8Lifetime1; var9Lifetime1 >= var11Lifetime1; var11Lifetime1++) {
             var20 = var19.field_d[var11Lifetime1];
@@ -390,7 +390,7 @@ class ts extends FocusableWidget {
               }
             }
             var14Lifetime1 = stackIn_34_0;
-            var21 = new ql(var7Lifetime1Lifetime1, var13Lifetime1, var20.field_e, var14Lifetime1 - var13Lifetime1, Math.max(var28.a(false), -var20.field_e + var20.field_c));
+            var21 = new ql(var7Lifetime1Lifetime1, var13Lifetime1, var20.field_e, var14Lifetime1 - var13Lifetime1, Math.max(var28.getLineHeight(false), -var20.field_e + var20.field_c));
             if (var10Lifetime1 == null) {
               var10Lifetime1 = var21;
               this.field_D.addLast((byte) -113, var21);
@@ -438,7 +438,7 @@ class ts extends FocusableWidget {
         return null;
     }
 
-    String c(boolean param0) {
+    String getTooltip(boolean param0) {
         if (null == this.field_I) {
           return null;
         }
@@ -455,24 +455,24 @@ class ts extends FocusableWidget {
         return this.field_J[this.field_I.field_i];
     }
 
-    void a(int param0, int param1, UiWidget param2, byte param3) {
+    void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.field_I = null;
           if (this.field_k) {
-            var5_int = -this.field_m + (-param0 + pd.field_k);
+            var5_int = -this.field_m + (-param0 + TertiaryListSequence.field_k);
             var6 = bb.field_b - param1 - this.field_q;
             this.field_I = this.b(var5_int, var6, (byte) -66);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ts.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ts.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, param3);
+    final void fireAction(int param0, int param1, int param2, byte param3) {
+        super.fireAction(param0, param1, param2, param3);
         int var5 = -this.field_m + param1;
         int var6 = -this.field_q + param2;
         ql var7 = this.b(var5, var6, (byte) -66);

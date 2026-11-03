@@ -8,8 +8,8 @@ final class nj {
         int var1 = (kh.field_Mb - 640) / 2;
         int var2 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var3 = var2 - PlacementOrder.field_t * PlacementOrder.field_t;
-        MapViewState.field_j.a(199, -124 + (gf.field_k - 90), (byte) 49, 90, -(199 * var3 / var2) + var1);
-        AchievementProgress.field_i.a(param0, gf.field_k - 124, (byte) 56, 0, var1 + (202 + var3 * 438 / var2));
+        MapViewState.field_j.setTarget(199, -124 + (SoftwareRasterizer.field_k - 90), (byte) 49, 90, -(199 * var3 / var2) + var1);
+        AchievementProgress.field_i.setTarget(param0, SoftwareRasterizer.field_k - 124, (byte) 56, 0, var1 + (202 + var3 * 438 / var2));
     }
 
     final static String a(String param0, int param1, byte param2) {
@@ -45,10 +45,10 @@ final class nj {
             return stackIn_8_0;
           }
           if (DebouncedValidator.a(-30106, param0)) {
-            stackIn_12_0 = re.a(MapView.field_pb, 4371, new String[]{param0});
+            stackIn_12_0 = QuickChatCategoryRegistry.a(MapView.field_pb, 4371, new String[]{param0});
             return stackIn_12_0;
           }
-          if (r.field_c >= 100 &&
+          if (UrlLoader.field_c >= 100 &&
             StarAnnotation.field_m <= 0) {
             stackIn_17_0 = hd.field_p;
             return stackIn_17_0;
@@ -57,12 +57,12 @@ final class nj {
             var5 = (String) null;
             nj.a((String) null, -114, (byte) -20);
           }
-          if (r.field_c >= 200) {
+          if (UrlLoader.field_c >= 200) {
             stackIn_22_0 = hd.field_p;
             return stackIn_22_0;
           }
           if (IntrusiveNodeHashTable.a(param0, true)) {
-            stackIn_26_0 = re.a(TextFieldWidget.field_G, 4371, new String[]{param0});
+            stackIn_26_0 = QuickChatCategoryRegistry.a(TextFieldWidget.field_G, 4371, new String[]{param0});
             return stackIn_26_0;
           }
           var6 = js.field_f;
@@ -84,7 +84,7 @@ final class nj {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class nj {
             field_a = 17;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "nj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "nj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

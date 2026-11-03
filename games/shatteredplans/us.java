@@ -11,10 +11,10 @@ final class us {
     final static void a(boolean param0, boolean param1) {
         if (param0) {
           field_b = -58;
-          fa.field_X.b(param1, 97);
+          fa.field_X.drawFullRaster(param1, 97);
           return;
         }
-        fa.field_X.b(param1, 97);
+        fa.field_X.drawFullRaster(param1, 97);
     }
 
     final static void a(int param0, int param1) {
@@ -35,21 +35,21 @@ final class us {
             us.a(false, true);
             return;
           }
-          BattleContribution.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
+          BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 256, 5 * param1, SoftwareRasterizer.field_k);
           if (param0 == 0) {
             return;
           }
           us.a(false, true);
           return;
         }
-        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
+        BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 256, 5 * param1, SoftwareRasterizer.field_k);
         if (param0 == 0) {
           return;
         }
         us.a(false, true);
     }
 
-    final static Player a(PacketBuffer param0, Player[] param1, int param2) {
+    final static Player readPlayer(PacketBuffer param0, Player[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Player stackIn_7_0 = null;
@@ -61,7 +61,7 @@ final class us {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 2) {
-            us.a(-12);
+            us.clearStatics(-12);
           }
           var3_int = param0.readUnsignedByte(-85);
           if (param1.length <= var3_int) {
@@ -88,7 +88,7 @@ final class us {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -108,12 +108,12 @@ final class us {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_e = null;
         field_a = null;
         field_d = null;
         if (param0 != 0) {
-          us.a(-56);
+          us.clearStatics(-56);
         }
     }
 

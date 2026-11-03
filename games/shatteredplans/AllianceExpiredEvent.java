@@ -8,7 +8,7 @@ final class AllianceExpiredEvent extends IntrusiveNode {
     static int field_n;
     static volatile int field_i;
     static wq[] field_j;
-    static qr field_l;
+    static AnimatedPanel field_l;
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = js.field_f;
@@ -29,7 +29,7 @@ final class AllianceExpiredEvent extends IntrusiveNode {
     AllianceExpiredEvent(Player param0, Player param1) {
     }
 
-    public static void c(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_m = null;
         field_l = null;
         if (!param0) {

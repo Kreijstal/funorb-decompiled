@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta {
-    static qr field_d;
+    static AnimatedPanel field_d;
     static IntrusiveDeque field_b;
     static Sprite field_a;
     static String field_c;
     static String field_e;
 
-    final static void a(String param0, ha param1, int param2, int param3, nq param4) {
+    final static void a(String param0, TextLayoutLine param1, int param2, int param3, nq param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -70,7 +70,7 @@ final class ta {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -80,8 +80,8 @@ final class ta {
         }
         di.a(false, param0);
         if (WidgetContainer.field_C) {
-          gf.h(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
-          n.field_h.field_d.b(param0, -68);
+          SoftwareRasterizer.clearRect(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
+          n.field_h.field_d.drawFullRaster(param0, -68);
           TextFieldValidator.a((byte) 99, param0);
           if (param1 < 38) {
             field_c = (String) null;
@@ -96,9 +96,9 @@ final class ta {
         field_c = (String) null;
     }
 
-    final static nk c(byte param0) {
-        nk var1 = new nk(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], hd.field_q[0], eo.field_fb);
-        pd.a(0);
+    final static IndexedSprite c(byte param0) {
+        IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], hd.field_q[0], eo.field_fb);
+        TertiaryListSequence.a(0);
         if (param0 > 82) {
           return var1;
         }
@@ -106,7 +106,7 @@ final class ta {
         return var1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         field_a = null;
         field_d = null;
@@ -141,7 +141,7 @@ final class ta {
           var1 = var2;
           var2[0] = (byte) 0;
           var2[1] = (byte)de.field_j;
-          r.a(var2, (byte) -78, 6);
+          UrlLoader.a(var2, (byte) -78, 6);
           uc.field_A = de.field_j;
           return;
         }
@@ -159,13 +159,13 @@ final class ta {
         var1Lifetime1 = var2Lifetime1;
         var2Lifetime1[0] = (byte) 0;
         var2Lifetime1[1] = (byte)de.field_j;
-        r.a(var2Lifetime1, (byte) -78, 6);
+        UrlLoader.a(var2Lifetime1, (byte) -78, 6);
         uc.field_A = de.field_j;
     }
 
     final static mj a(int param0, long param1) {
         int var3 = -91 % ((59 - param0) / 56);
-        return (mj) (ShatteredPlansClient.field_H.a(65280, param1));
+        return (mj) (ShatteredPlansClient.field_H.get(65280, param1));
     }
 
     final static void a(int param0, int param1, byte param2, boolean param3) {

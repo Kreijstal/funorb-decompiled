@@ -7,7 +7,7 @@ final class ValidationState {
     static int[] field_c;
     static int field_a;
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         if (param0 > -22) {
           return;
@@ -19,7 +19,7 @@ final class ValidationState {
     final static void a(boolean param0, boolean param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1) {
-          ValidationState.b(58);
+          ValidationState.clearStatics(58);
           if (GameRules.field_c == -3) {
             ts.a(6493);
           } else {
@@ -73,10 +73,10 @@ final class ValidationState {
           param0 = param4;
           param4 = var6Lifetime2;
         }
-        if (param2 < gf.field_i) {
+        if (param2 < SoftwareRasterizer.field_i) {
           return;
         }
-        if (param3 > gf.field_l) {
+        if (param3 > SoftwareRasterizer.field_l) {
           return;
         }
         if (param4 < param0) {
@@ -90,13 +90,13 @@ final class ValidationState {
         if (param1 > -7) {
           return;
         }
-        if (param4 < gf.field_a) {
+        if (param4 < SoftwareRasterizer.field_a) {
           return;
         }
-        if (!(gf.field_f >= param0)) {
+        if (!(SoftwareRasterizer.field_f >= param0)) {
           return;
         }
-        gf.g(param3, param0, param2, param4, param5);
+        SoftwareRasterizer.drawLine(param3, param0, param2, param4, param5);
     }
 
     final static void c(int param0) {
@@ -116,7 +116,7 @@ final class ValidationState {
         try {
           DerelictVictoryChecker.field_p = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "u.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "u.A(" + param0 + ')');
         }
     }
 

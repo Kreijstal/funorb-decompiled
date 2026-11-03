@@ -19,24 +19,24 @@ final class TertiaryNodeList {
         return var3;
     }
 
-    final void a(byte param0, TertiaryLinkNode param1) {
+    final void addLast(byte param0, TertiaryLinkNode param1) {
         if (param0 < 9) {
           return;
         }
         try {
           if (param1.field_p != null) {
-            param1.d(true);
+            param1.unlinkTertiary(true);
           }
           param1.field_q = this.field_g;
           param1.field_p = this.field_g.field_p;
           param1.field_p.field_q = param1;
           param1.field_q.field_p = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "el.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "el.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final TertiaryLinkNode a(boolean param0) {
+    final TertiaryLinkNode startForward(boolean param0) {
         TertiaryLinkNode var2 = this.field_g.field_q;
         if (!param0) {
           return (TertiaryLinkNode) null;
@@ -63,7 +63,7 @@ final class TertiaryNodeList {
           param0.field_j.field_h = param0;
           param0.field_h.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "el.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "el.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class TertiaryNodeList {
         }
     }
 
-    final int b(int param0) {
+    final int size(int param0) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = param0;
         TertiaryLinkNode var3 = this.field_g.field_q;
@@ -89,7 +89,7 @@ final class TertiaryNodeList {
         TertiaryLinkNode var2 = null;
         TertiaryLinkNode var2Lifetime1;
         if (param0 != -68) {
-          this.a(true);
+          this.startForward(true);
           var2 = this.field_a;
           if (this.field_g != var2) {
             this.field_a = var2.field_q;

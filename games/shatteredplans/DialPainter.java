@@ -11,7 +11,7 @@ final class DialPainter implements WidgetPainter {
     private nq field_d;
     private int field_i;
     private int field_k;
-    static qr field_g;
+    static AnimatedPanel field_g;
     static Calendar field_e;
     private int field_l;
     static String field_f;
@@ -30,7 +30,7 @@ final class DialPainter implements WidgetPainter {
         CharSequence var5 = null;
         try {
           gi.field_a = param1;
-          em.field_h = 2;
+          ProductionContent.field_h = 2;
           var5 = (CharSequence) ((Object) param1);
           nd.field_k = ji.a(var5, true);
           hd.field_k = param2;
@@ -39,7 +39,7 @@ final class DialPainter implements WidgetPainter {
             field_e = (Calendar) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "i.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "i.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -71,36 +71,36 @@ final class DialPainter implements WidgetPainter {
             param0 = param0 + param5;
             param5 = 0;
           }
-          if (param2 + param1 > gf.field_k) {
-            param1 = gf.field_k - param2;
+          if (param2 + param1 > SoftwareRasterizer.field_k) {
+            param1 = SoftwareRasterizer.field_k - param2;
           }
           var7 = -116 % ((-62 - param4) / 53);
-          if (param5 + param0 > gf.field_b) {
-            param0 = gf.field_b - param5;
+          if (param5 + param0 > SoftwareRasterizer.field_b) {
+            param0 = SoftwareRasterizer.field_b - param5;
           }
           var6_int = param1 + param2;
           for (var8 = param2; var8 < var6_int; var8++) {
-            var9 = var8 * gf.field_b + param5;
+            var9 = var8 * SoftwareRasterizer.field_b + param5;
             for (var10 = param0; var10 > 0; var10--) {
-              param1 = gf.field_h[var9];
+              param1 = SoftwareRasterizer.field_h[var9];
               var11 = 65793 * param3;
               param2 = param1 + var11;
               var11 = (16711935 & var11) + (16711935 & param1);
               param1 = (65536 & -var11 + param2) + (16777472 & var11);
               incrementValue$0 = var9;
               var9++;
-              gf.field_h[incrementValue$0] = ee.a(-(param1 >>> 8) + param1, param2 - param1);
+              SoftwareRasterizer.field_h[incrementValue$0] = PrivateChatMessage.intOr(-(param1 >>> 8) + param1, param2 - param1);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var6), "i.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var6), "i.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_f = null;
         field_a = null;
         field_g = null;
@@ -137,24 +137,24 @@ final class DialPainter implements WidgetPainter {
           var14 = (DialWidget) (stackIn_3_0);
           if (var14 != null) {
           }
-          gf.d(param1 + param0.field_m, param3 + param0.field_q, param0.field_x, param0.field_n, this.field_b);
+          SoftwareRasterizer.fillRect(param1 + param0.field_m, param3 + param0.field_q, param0.field_x, param0.field_n, this.field_b);
           var7 = param1 + (param0.field_m + var14.field_M);
           var8 = var14.field_L + param0.field_q + param3;
-          gf.g(var7, var8, var14.field_E, this.field_l);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_E, this.field_l);
           if (-1 != var14.field_D) {
             var9 = (double)var14.field_D * 3.141592653589793 * 2.0 / (double)var14.field_F;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_E);
             var12 = (int)(Math.cos(var9) * (double)var14.field_E);
-            gf.g(var7 + var11, var12 + var8, 1, this.field_m);
+            SoftwareRasterizer.fillCircle(var7 + var11, var12 + var8, 1, this.field_m);
           }
           if (param4 != 12) {
             DialPainter.a(-18);
           }
-          gf.g(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_H * 2.0 / (double)var14.field_F;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_E);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_E);
-          gf.g(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (this.field_d != null) {
             var13 = this.field_h + var14.field_E + var14.field_M;
             this.field_d.a(param0.field_s, var13 + param1 + param0.field_m, param3 + (param0.field_q + this.field_j), -var13 - (this.field_h - param0.field_x), -(this.field_h << 1) + param0.field_n, this.field_i, this.field_k, 1, 1, 0);
@@ -170,7 +170,7 @@ final class DialPainter implements WidgetPainter {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class DialPainter implements WidgetPainter {
           this.field_b = param7;
           this.field_m = param6;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "i.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "i.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

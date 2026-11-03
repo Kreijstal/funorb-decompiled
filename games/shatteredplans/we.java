@@ -9,11 +9,11 @@ final class we {
     static String field_b;
     static Sprite field_f;
 
-    static int a(int param0, int param1) {
+    static int intAnd(int param0, int param1) {
         return param0 & param1;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         if (param0 >= -62) {
           field_d = (String) null;
@@ -53,7 +53,7 @@ final class we {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class we {
           var1 = im.field_c;
           synchronized (var1) {
             of.field_e = of.field_e + 1;
-            DialogRoot.field_B = fe.field_J;
+            DialogRoot.field_B = MenuButton.field_J;
             if (param0 != -59) {
               we.a(49, -95, -50, 61, 66, -88, -81, -110, -20);
             }
@@ -76,11 +76,11 @@ final class we {
               for (var2 = 0; var2 < 112; var2++) {
                 di.field_p[var2] = false;
               }
-              qn.field_c = hb.field_e;
+              qn.field_c = NodeSequence.field_e;
             } else {
-              while (hb.field_e != qn.field_c) {
-                var2 = StrongCacheEntry.field_x[hb.field_e];
-                hb.field_e = 127 & 1 + hb.field_e;
+              while (NodeSequence.field_e != qn.field_c) {
+                var2 = StrongCacheEntry.field_x[NodeSequence.field_e];
+                NodeSequence.field_e = 127 & 1 + NodeSequence.field_e;
                 if (var2 < 0) {
                   di.field_p[~var2] = false;
                   continue;
@@ -88,13 +88,13 @@ final class we {
                 di.field_p[var2] = true;
               }
             }
-            fe.field_J = cg.field_I;
+            MenuButton.field_J = cg.field_I;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "we.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "we.A(" + param0 + ')');
         }
     }
 
@@ -144,8 +144,8 @@ final class we {
           }
           var10 = 0;
           var11 = 0;
-          var12 = gf.field_i << 4;
-          var13 = gf.field_l << 4;
+          var12 = SoftwareRasterizer.field_i << 4;
+          var13 = SoftwareRasterizer.field_l << 4;
           if (param3 > param1) {
             var14_int = param3;
             param3 = param1;
@@ -169,8 +169,8 @@ final class we {
           param2 = param2 + (int)((long)var10 * var16 >> 16);
           param1 = param1 - (int)((long)var11 * var14 >> 16);
           param6 = param6 - (int)((long)var11 * var16 >> 16);
-          var13Lifetime1 = gf.field_f << 4;
-          var12Lifetime1 = gf.field_a << 4;
+          var13Lifetime1 = SoftwareRasterizer.field_f << 4;
+          var12Lifetime1 = SoftwareRasterizer.field_a << 4;
           var11Lifetime1 = 0;
           var10Lifetime1 = 0;
           if (param2 > param6) {
@@ -239,7 +239,7 @@ final class we {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var9), "we.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var9), "we.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

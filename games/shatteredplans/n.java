@@ -9,11 +9,11 @@ final class n extends IntrusiveNode {
     static String field_m;
     static String field_l;
     static Sprite field_k;
-    static qr field_o;
+    static AnimatedPanel field_o;
     static String field_j;
-    static qr[] field_n;
+    static AnimatedPanel[] field_n;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_n = null;
         field_k = null;
         field_m = null;
@@ -32,7 +32,7 @@ final class n extends IntrusiveNode {
         try {
           this.field_i = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class n extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

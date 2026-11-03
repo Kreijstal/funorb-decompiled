@@ -84,7 +84,7 @@ final class vq {
                       var12[var17] = ImageProducerRasterBuffer.a(-134, var10[var17]);
                       var17++;
                     }
-                    var18.field_n[var5] = param1.a(var12, var8, param3 + 83, ImageProducerRasterBuffer.a(-134, var20));
+                    var18.field_n[var5] = param1.requestMethod(var12, var8, param3 + 83, ImageProducerRasterBuffer.a(-134, var20));
                     var18.field_h[var5] = var21;
                   }
                 } else {
@@ -98,7 +98,7 @@ final class vq {
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_r[var5] = var9;
-                  var18.field_q[var5] = param1.a(ImageProducerRasterBuffer.a(-134, var15), (byte) 77, var16);
+                  var18.field_q[var5] = param1.requestField(ImageProducerRasterBuffer.a(-134, var15), (byte) 77, var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,7 +143,7 @@ final class vq {
             } else {
               stackIn_43_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -183,7 +183,7 @@ final class vq {
             return stackIn_10_0;
           }
           if (IntrusiveNodeHashTable.a(param1, true)) {
-            stackIn_13_0 = re.a(or.field_c, 4371, new String[]{param1});
+            stackIn_13_0 = QuickChatCategoryRegistry.a(or.field_c, 4371, new String[]{param1});
             return stackIn_13_0;
           }
           if (100 <= oi.field_e) {
@@ -191,7 +191,7 @@ final class vq {
             return stackIn_17_0;
           }
           if (DebouncedValidator.a(param0 - 30108, param1)) {
-            stackIn_21_0 = re.a(MusicVoice.field_N, 4371, new String[]{param1});
+            stackIn_21_0 = QuickChatCategoryRegistry.a(MusicVoice.field_N, 4371, new String[]{param1});
             return stackIn_21_0;
           }
           var5 = js.field_f;
@@ -213,7 +213,7 @@ final class vq {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(')').toString());
         }
     }
 

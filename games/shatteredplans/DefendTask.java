@@ -6,7 +6,7 @@ final class DefendTask extends AiTask {
     static String field_v;
     static int field_w;
     static String field_r;
-    static qr field_x;
+    static AnimatedPanel field_x;
     static long field_o;
     static String field_p;
     static boolean field_u;
@@ -21,8 +21,8 @@ final class DefendTask extends AiTask {
           return;
         }
         try {
-          if (null != hm.field_q) {
-            var3 = !hm.field_q.field_k ? hm.field_q : hm.field_q.field_l;
+          if (null != PanelNode.field_q) {
+            var3 = !PanelNode.field_q.field_k ? PanelNode.field_q : PanelNode.field_q.field_l;
             var2 = var3;
             if (var2 != null) {
               fieldTemp$0 = ImageProducerRasterBuffer.field_i;
@@ -30,9 +30,9 @@ final class DefendTask extends AiTask {
               js.field_b[fieldTemp$0] = var3;
             }
           }
-          lp.a(param0 + 1546006976, param1);
+          MenuList.a(param0 + 1546006976, param1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ac.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ac.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,11 +113,11 @@ final class DefendTask extends AiTask {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStatics(int param0) {
         field_t = null;
         field_s = null;
         field_r = null;

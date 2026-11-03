@@ -6,11 +6,11 @@ final class DiskArchiveRequest extends ArchiveRequest {
     byte[] field_w;
     int field_y;
     static Sprite field_x;
-    static fm field_v;
+    static HuffmanCodec field_v;
     SectorCacheStore field_B;
     static Sprite field_z;
 
-    public static void h(int param0) {
+    public static void clearStatics(int param0) {
         field_z = null;
         field_v = null;
         field_x = null;
@@ -69,21 +69,21 @@ final class DiskArchiveRequest extends ArchiveRequest {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     final static void a(Archive param0, byte param1, boolean param2, Archive param3) {
         try {
           int var4_int = -57 / ((param1 - 22) / 37);
-          ba.a(n.field_o, dm.field_h, 124, fg.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, gn.field_w);
+          ba.a(n.field_o, ObjectList.field_h, 124, fg.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, gn.field_w);
           BoundsRect.field_m = ae.a(93, "lobby", param3, "chatfilter");
-          jf.field_d[1] = gm.field_o;
+          jf.field_d[1] = SoundPlayback.field_o;
           jf.field_d[0] = bf.field_b;
           jf.field_d[2] = ue.field_d;
           BattleContribution.a(param0, (byte) -64, ImageProducerRasterBuffer.field_p);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ak.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ak.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         int fieldTemp$0 = 0;
         if (param0 != 118) {
           CharSequence var2 = (CharSequence) null;
-          DiskArchiveRequest.a(22, (CharSequence) null, '\001');
+          DiskArchiveRequest.countChar(22, (CharSequence) null, '\001');
           if (di.field_m == 0) {
             sg.a(true, false, 50, GameRules.field_d, NetworkArchiveRequest.field_C);
           }
@@ -148,14 +148,14 @@ final class DiskArchiveRequest extends ArchiveRequest {
         int var2 = 0;
         int var2Lifetime1;
         wm.field_b = param1;
-        if (jh.field_B == null) {
+        if (ToggleButton.field_B == null) {
           if (null != ValidationState.field_b) {
             ValidationState.field_b.a(param1, 0);
           }
           var2 = -9 / ((62 - param0) / 62);
           return;
         }
-        jh.field_B.c(598, param1);
+        ToggleButton.field_B.c(598, param1);
         if (null != ValidationState.field_b) {
           ValidationState.field_b.a(param1, 0);
         }
@@ -171,8 +171,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
           if (Archive.field_b > 0) {
             Archive.field_b = Archive.field_b - 1;
           } else {
-            if (ee.field_k > 0) {
-              ee.field_k = ee.field_k - 1;
+            if (PrivateChatMessage.field_k > 0) {
+              PrivateChatMessage.field_k = PrivateChatMessage.field_k - 1;
             }
           }
         }
@@ -183,14 +183,14 @@ final class DiskArchiveRequest extends ArchiveRequest {
           nj.a(438);
         }
         if (Archive.field_b > 0) {
-          qo.a(22353, Archive.field_b);
+          TextLayout.a(22353, Archive.field_b);
         }
-        if (ee.field_k > 0) {
-          qo.a(22353, ee.field_k);
+        if (PrivateChatMessage.field_k > 0) {
+          TextLayout.a(22353, PrivateChatMessage.field_k);
         }
     }
 
-    final static int a(int param0, CharSequence param1, char param2) {
+    final static int countChar(int param0, CharSequence param1, char param2) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -224,7 +224,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -245,12 +245,12 @@ final class DiskArchiveRequest extends ArchiveRequest {
         return this.field_w;
     }
 
-    final static void a(int[] param0, int param1, Object[] param2) {
+    final static void sortParallel(int[] param0, int param1, Object[] param2) {
         try {
           int var3_int = 105 / ((param1 - 42) / 55);
-          lr.a(0, param0.length - 1, param0, (byte) 78, param2);
+          lr.quickSort(0, param0.length - 1, param0, (byte) 78, param2);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -32,7 +32,7 @@ final class eo extends jl {
           this.field_gb = param1;
           if (this.field_gb != null) {
             var3_int = CipherPacketBuffer.field_p.textHeight(this.field_gb, 260, CipherPacketBuffer.field_p.field_J);
-            this.b(150 + var3_int, 300, (byte) -122);
+            this.centre(150 + var3_int, 300, (byte) -122);
           }
           this.field_bb = new md(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_bb.field_L = true;
@@ -40,11 +40,11 @@ final class eo extends jl {
           this.field_jb = false;
           this.b((byte) -73, this.field_bb);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "eo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isPowerOfTwo(int param0, int param1) {
         if (param1 != 7433) {
           field_Z = (ih) null;
         }
@@ -203,9 +203,9 @@ final class eo extends jl {
                   if (decompiledSharedTail0) {
                     var17 = (int)(160.0 * (var18 - var30) / var18);
                     if (!param0) {
-                      gf.c(var13 + var57, var56 + var15, 16777215, var17);
+                      SoftwareRasterizer.blendPixel(var13 + var57, var56 + var15, 16777215, var17);
                     } else {
-                      gf.a(var57, var56, var17 << 24 | 16777215);
+                      SoftwareRasterizer.setPixel(var57, var56, var17 << 24 | 16777215);
                     }
                   }
                 }
@@ -216,7 +216,7 @@ final class eo extends jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var7), "eo.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var7), "eo.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -224,12 +224,12 @@ final class eo extends jl {
         super.a(param0, param1 + 0, param2);
         CipherPacketBuffer.field_p.drawCentred(this.field_eb, (this.field_x >> 1) + param0, param1 + param2, 16777215, -1);
         if (null != this.field_gb) {
-          gf.f(20 + param0, param2 + 113, 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param0, param2 + 113, 260, 8421504);
           CipherPacketBuffer.field_p.a(this.field_gb, param0 + 20, 8 + (param2 + 120), 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_p.field_J);
         }
     }
 
-    final static void a(nc param0, boolean param1, int param2, nc param3) {
+    final static void a(CandidateLink param0, boolean param1, int param2, CandidateLink param3) {
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -329,7 +329,7 @@ final class eo extends jl {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 
@@ -378,11 +378,11 @@ final class eo extends jl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void h(byte param0) {
+    public static void clearStatics(byte param0) {
         field_kb = null;
         int var1 = 16 / ((47 - param0) / 37);
         field_X = null;
@@ -462,12 +462,12 @@ final class eo extends jl {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void f(boolean param0) {
-        if (dp.field_t) {
+        if (QuickChatCategoryDefinition.field_t) {
           jp.g((byte) 118);
         }
         if (param0) {

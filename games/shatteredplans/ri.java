@@ -27,10 +27,10 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         try {
           var3 = this.field_H;
           var4 = param1;
-          var3.a(108, var4, false);
-          this.field_R.e(true);
+          var3.setText(108, var4, false);
+          this.field_R.clear(true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ri.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ri.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -60,17 +60,17 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a(param3, true);
+            stackIn_6_0 = this.isBeforeFocusedChild(param3, true);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(param3, 102);
+          stackIn_9_0 = this.isAfterFocusedChild(param3, 102);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,7 +82,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -136,17 +136,17 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    public final void a(TextFieldWidget param0, int param1) {
+    public final void onTextChanged(TextFieldWidget param0, int param1) {
         try {
           if (param1 != 95) {
             this.field_K = (FocusableWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ri.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ri.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -161,17 +161,17 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_J != null) {
           gn.field_u.a(this.field_J, 20 + (param3 + this.field_m), 15 + this.field_q + param2, -40 + this.field_x, this.field_n, 16777215, -1, 1, 0, gn.field_u.field_J);
         }
         if (this.field_Q != null) {
-          gf.f(param3 + 10, 134 + param2, this.field_x - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param3 + 10, 134 + param2, this.field_x - 20, 4210752);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
-    public final void a(int param0, TextFieldWidget param1) {
+    public final void onEnter(int param0, TextFieldWidget param1) {
         Archive var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -180,7 +180,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         RuntimeException var3 = null;
         try {
           if (param1 == this.field_H) {
-            this.field_R.a((byte) -21, (UiWidget) (this));
+            this.field_R.containsWidget((byte) -21, (UiWidget) (this));
           }
           if (this.field_R == param1) {
             this.a(param0 - 4468);
@@ -200,7 +200,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -262,7 +262,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
             }
           } else {
             this.field_K = new FocusableWidget(ts.field_E, (WidgetListener) null);
-            this.field_P = new FocusableWidget(em.field_g, (WidgetListener) null);
+            this.field_P = new FocusableWidget(ProductionContent.field_g, (WidgetListener) null);
             this.field_H.field_y = false;
           }
           this.field_H.field_p = (WidgetPainter) ((Object) new rr(10000536));
@@ -277,7 +277,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
           }
           this.field_H.field_v = sf.field_a;
           if (null != this.field_Q) {
-            this.field_Q.field_v = nc.field_m;
+            this.field_Q.field_v = CandidateLink.field_m;
           }
           if (this.field_L) {
             this.field_P.field_v = MouseInputHandler.field_a;
@@ -294,12 +294,12 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
           if (null != this.field_J) {
             this.field_q = this.field_q + (var7.textHeight(this.field_J, this.field_x - 40, var7.field_J) + 5);
           }
-          var8 = ph.field_e;
-          var9 = ArchiveRequest.a(GameScreen.f((byte) 124), true);
+          var8 = ListContent.field_e;
+          var9 = ArchiveRequest.a(GameScreen.getHostApplet((byte) 124), true);
           if (var9 == og.field_b) {
             var8 = QuaternaryLinkNode.field_v;
           } else {
-            if (dm.field_f == var9) {
+            if (ObjectList.field_f == var9) {
               var8 = ba.field_b;
             }
           }
@@ -319,27 +319,27 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
             this.field_P.field_u = (WidgetListener) (this);
           }
           if (null == this.field_Q) {
-            this.field_K.a(this.field_q, 30, (byte) 106, 8, -6 + (this.field_x - 10));
+            this.field_K.setBounds(this.field_q, 30, (byte) 106, 8, -6 + (this.field_x - 10));
             this.field_q = this.field_q + 35;
           } else {
-            this.field_K.a(this.field_q, 30, (byte) 110, 85, this.field_x - 95);
+            this.field_K.setBounds(this.field_q, 30, (byte) 110, 85, this.field_x - 95);
             this.field_q = this.field_q + 60;
           }
           if (null != this.field_Q) {
-            this.field_Q.a(this.field_q, 30, (byte) 115, 8, this.field_x - 16);
+            this.field_Q.setBounds(this.field_q, 30, (byte) 115, 8, this.field_x - 16);
             this.field_q = this.field_q + 35;
           }
           if (this.field_P != null) {
             if (!this.field_L &&
               !this.field_D) {
-              this.field_P.a(this.field_q, 20, (byte) 108, 8, 40);
+              this.field_P.setBounds(this.field_q, 20, (byte) 108, 8, 40);
               this.field_q = this.field_q + 25;
             } else {
-              this.field_P.a(this.field_q, 30, (byte) 124, 8, -10 + this.field_x - 6);
+              this.field_P.setBounds(this.field_q, 30, (byte) 124, 8, -10 + this.field_x - 6);
               this.field_q = this.field_q + 35;
             }
           }
-          this.a(0, this.field_q + 3, (byte) 100, 0, this.field_x);
+          this.setBounds(0, this.field_q + 3, (byte) 100, 0, this.field_x);
           this.b((byte) -98, this.field_K);
           if (null != this.field_Q) {
             this.b((byte) -44, this.field_Q);
@@ -364,7 +364,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -410,16 +410,16 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_M = null;
         field_I = null;
         field_N = null;
         if (param0 > -55) {
-          ri.a((byte) 58);
+          ri.clearStatics((byte) 58);
         }
         field_G = null;
     }
@@ -438,8 +438,8 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         if (param0 != 8) {
           return;
         }
-        this.field_H.e(true);
-        this.field_R.e(true);
+        this.field_H.clear(true);
+        this.field_R.clear(true);
     }
 
     static {

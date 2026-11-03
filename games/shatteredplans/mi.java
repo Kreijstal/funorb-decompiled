@@ -41,7 +41,7 @@ final class mi {
           }
           param1.field_Eb = param2.readUnsignedByte(-64);
           if (param0 != -89) {
-            mi.a((byte) -67);
+            mi.clearStatics((byte) -67);
           }
           param1.field_nc = param2.readUnsignedByte(-123);
           var4_int = param2.readUnsignedByte(-111);
@@ -73,7 +73,7 @@ final class mi {
           var6 = stackIn_30_0;
           param2.readBytes(param1.field_dc.length, 0, 17469032, param1.field_dc);
           param1.field_Zb = param2.readUnsignedShort(-20976);
-          param1.field_Gb = pr.a(param0 + 14363) - (long)param2.readInt(16711680);
+          param1.field_Gb = pr.currentTimeMillis(param0 + 14363) - (long)param2.readInt(16711680);
           if (var5 == 0) {
             param1.field_lc = -1;
           } else {
@@ -108,11 +108,11 @@ final class mi {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_a = null;
         if (param0 < 95) {
           field_a = (String) null;

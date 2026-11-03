@@ -18,7 +18,7 @@ final class TurnEventLog {
           this.field_a.addLast((byte) -113, new ProjectUse(3, param3, param1, param2));
           int var5_int = -23 / ((param0 + 43) / 44);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "k.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "k.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,7 +29,7 @@ final class TurnEventLog {
           var7 = new FleetMove(param5, param0, param1, param4);
           this.field_a.addLast((byte) -113, var7);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "k.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "k.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class TurnEventLog {
             field_d = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "k.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "k.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -120,11 +120,11 @@ final class TurnEventLog {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_h = null;
         field_e = null;
         field_j = null;
@@ -144,7 +144,7 @@ final class TurnEventLog {
             this.field_a = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "k.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "k.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class TurnEventLog {
         try {
           this.field_a.addLast((byte) -113, new ProjectUse(param0, param2, param1));
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "k.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "k.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class TurnEventLog {
           int var5_int = 48 / ((param3 + 6) / 60);
           this.field_a.addLast((byte) -113, new StellarBombEvent(param1, param2, param0));
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "k.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "k.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ final class TurnEventLog {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class TurnEventLog {
             this.recordPlacement(-87, (Star) null, -32);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "k.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "k.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -274,7 +274,7 @@ final class TurnEventLog {
           var17 = var16;
           var17.position = param0.length - 2;
           en.field_c = var17.readUnsignedShort(-20976);
-          cm.field_g = new int[en.field_c];
+          IntHashIndex.field_g = new int[en.field_c];
           MusicEnvelope.field_l = new byte[en.field_c][];
           SectorCacheStore.field_h = new boolean[en.field_c];
           hd.field_q = new byte[en.field_c][];
@@ -296,7 +296,7 @@ final class TurnEventLog {
           }
           var5 = -25 % ((-23 - param1) / 52);
           for (var4Lifetime3 = 0; en.field_c > var4Lifetime3; var4Lifetime3++) {
-            cm.field_g[var4Lifetime3] = var17.readUnsignedShort(-20976);
+            IntHashIndex.field_g[var4Lifetime3] = var17.readUnsignedShort(-20976);
           }
           var17.position = -(3 * (var3 - 1)) - en.field_c * 8 + (param0.length - 7);
           eo.field_fb = new int[var3];
@@ -309,7 +309,7 @@ final class TurnEventLog {
           var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < en.field_c; var4Lifetime5++) {
             var5Lifetime1 = WeightedCacheEntry.field_s[var4Lifetime5];
-            var6 = cm.field_g[var4Lifetime5];
+            var6 = IntHashIndex.field_g[var4Lifetime5];
             var7 = var6 * var5Lifetime1;
             var20 = new byte[var7];
             var18 = var20;
@@ -377,7 +377,7 @@ final class TurnEventLog {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -386,7 +386,7 @@ final class TurnEventLog {
           this.field_a.addLast((byte) -113, new ProjectUse(1, param0, param1));
           int var4_int = 21 % ((-27 - param2) / 52);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "k.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "k.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -397,7 +397,7 @@ final class TurnEventLog {
           }
           this.field_a.addLast((byte) -113, new PlacementEvent(param1.field_y, param1, param0));
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "k.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "k.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

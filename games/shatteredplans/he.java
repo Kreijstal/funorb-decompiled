@@ -22,7 +22,7 @@ final class he extends IntrusiveNode {
             he.a(62, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class he extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_q = null;
         field_m = null;
         field_p = null;

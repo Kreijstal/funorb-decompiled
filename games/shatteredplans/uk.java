@@ -5,7 +5,7 @@ final class uk {
     static int field_a;
     static Sprite[] field_b;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         int var1 = 36 / ((-14 - param0) / 59);
     }
@@ -65,7 +65,7 @@ final class uk {
           if (var2_int != 8) {
             throw new RuntimeException("No image for this type of system: " + param1.field_B);
           }
-          stackIn_30_0 = cp.field_t;
+          stackIn_30_0 = CanvasResizeController.field_t;
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,7 +77,7 @@ final class uk {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -183,13 +183,13 @@ final class uk {
           } else {
             var14 = new StandardMapReader(param2, var8_int, var12, var13, var11);
           }
-          var15 = ((MapGenerator) (var14)).a((byte) -115);
+          var15 = ((MapGenerator) (var14)).generate((byte) -115);
           var16_ref_ln__ = var15.field_e;
           for (var17_int = 0; var16_ref_ln__.length > var17_int; var17_int++) {
             var18_ref_ln = var16_ref_ln__[var17_int];
             var22_ref_ln = var18_ref_ln;
             var22_ref_lnLifetime2 = var18_ref_ln;
-            var18_ref_ln.field_t = us.a(param2, param4, 2);
+            var18_ref_ln.field_t = us.readPlayer(param2, param4, 2);
           }
           var16 = param2.readUnsignedByte(-71);
           var17 = new Territory[var16];
@@ -227,12 +227,12 @@ final class uk {
               var32[var20].addStar(-21771, var33);
             }
           }
-          var15.b((byte) 80);
+          var15.computeDistances((byte) 80);
           for (var20Lifetime1 = 0; var20Lifetime1 < param4.length; var20Lifetime1++) {
             if (!param7.field_i) {
               var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.startForward(0));
               while (var21_ref_sd != null) {
-                vf.a(127, var21_ref_sd);
+                QuaternaryListSequence.a(127, var21_ref_sd);
                 SolMapReader.a(var21_ref_sd, -5);
                 var22_ref_lnLifetime1 = var21_ref_sd.firstStar(18229);
                 while (var22_ref_lnLifetime1 != null) {
@@ -243,7 +243,7 @@ final class uk {
               }
             } else {
               if (null != param4[var20Lifetime1].field_m) {
-                vf.a(123, param4[var20Lifetime1].field_m);
+                QuaternaryListSequence.a(123, param4[var20Lifetime1].field_m);
                 SolMapReader.a(param4[var20Lifetime1].field_m, -5);
                 var21_ref_ln = param4[var20Lifetime1].field_m.firstStar(18229);
                 while (var21_ref_ln != null) {
@@ -347,7 +347,7 @@ final class uk {
           } else {
             stackIn_100_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
         }
     }
 

@@ -30,7 +30,7 @@ final class SynthInstrument {
     private static int[] field_c;
     private static int[] field_w;
 
-    public static void a() {
+    public static void clearStatics() {
         field_u = null;
         field_v = null;
         field_j = null;
@@ -41,7 +41,7 @@ final class SynthInstrument {
         field_w = null;
     }
 
-    final int[] a(int param0, int param1) {
+    final int[] render(int param0, int param1) {
         int stackIn_41_0 = 0;
         double var3;
         int var5;
@@ -85,19 +85,19 @@ final class SynthInstrument {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        ps.a(field_u, 0, param0);
+        ArrayOperations.zeroFill(field_u, 0, param0);
         if (param1 < 10) {
           return field_u;
         }
         var3 = (double)param0 / ((double)param1 + 0.0);
-        this.field_m.a();
-        this.field_i.a();
+        this.field_m.reset();
+        this.field_i.reset();
         var5 = 0;
         var6 = 0;
         var7 = 0;
         if (this.field_l != null) {
-          this.field_l.a();
-          this.field_d.a();
+          this.field_l.reset();
+          this.field_d.reset();
           var5 = (int)((double)(this.field_l.field_i - this.field_l.field_d) * 32.768 / var3);
           var6 = (int)((double)this.field_l.field_d * 32.768 / var3);
         }
@@ -105,8 +105,8 @@ final class SynthInstrument {
         var9 = 0;
         var10 = 0;
         if (this.field_g != null) {
-          this.field_g.a();
-          this.field_o.a();
+          this.field_g.reset();
+          this.field_o.reset();
           var8 = (int)((double)(this.field_g.field_i - this.field_g.field_d) * 32.768 / var3);
           var9 = (int)((double)this.field_g.field_d * 32.768 / var3);
         }
@@ -120,39 +120,39 @@ final class SynthInstrument {
           }
         }
         for (var11Lifetime1 = 0; var11Lifetime1 < param0; var11Lifetime1++) {
-          var12 = this.field_m.a(param0);
-          var13 = this.field_i.a(param0);
+          var12 = this.field_m.step(param0);
+          var13 = this.field_i.step(param0);
           if (this.field_l != null) {
-            var14 = this.field_l.a(param0);
-            var15 = this.field_d.a(param0);
-            var12 = var12 + (this.a(var7, var15, this.field_l.field_f) >> 1);
+            var14 = this.field_l.step(param0);
+            var15 = this.field_d.step(param0);
+            var12 = var12 + (this.oscillator(var7, var15, this.field_l.field_f) >> 1);
             var7 = var7 + ((var14 * var5 >> 16) + var6);
           }
           if (this.field_g != null) {
-            var14Lifetime3 = this.field_g.a(param0);
-            var15Lifetime3 = this.field_o.a(param0);
-            var13 = var13 * ((this.a(var10, var15Lifetime3, this.field_g.field_f) >> 1) + 32768) >> 15;
+            var14Lifetime3 = this.field_g.step(param0);
+            var15Lifetime3 = this.field_o.step(param0);
+            var13 = var13 * ((this.oscillator(var10, var15Lifetime3, this.field_g.field_f) >> 1) + 32768) >> 15;
             var10 = var10 + ((var14Lifetime3 * var8 >> 16) + var9);
           }
           for (var14Lifetime4 = 0; var14Lifetime4 < 5; var14Lifetime4++) {
             if (this.field_y[var14Lifetime4] != 0) {
               var15Lifetime4 = var11Lifetime1 + field_q[var14Lifetime4];
               if (var15Lifetime4 < param0) {
-                field_u[var15Lifetime4] = field_u[var15Lifetime4] + this.a(field_c[var14Lifetime4], var13 * field_p[var14Lifetime4] >> 15, this.field_m.field_f);
+                field_u[var15Lifetime4] = field_u[var15Lifetime4] + this.oscillator(field_c[var14Lifetime4], var13 * field_p[var14Lifetime4] >> 15, this.field_m.field_f);
                 field_c[var14Lifetime4] = field_c[var14Lifetime4] + ((var12 * field_t[var14Lifetime4] >> 16) + field_w[var14Lifetime4]);
               }
             }
           }
         }
         if (this.field_e != null) {
-          this.field_e.a();
-          this.field_r.a();
+          this.field_e.reset();
+          this.field_r.reset();
           var11Lifetime2 = 0;
           var12Lifetime1 = 0;
           var13Lifetime1 = 1;
           for (var14Lifetime1 = 0; var14Lifetime1 < param0; var14Lifetime1++) {
-            var15Lifetime1 = this.field_e.a(param0);
-            var16 = this.field_r.a(param0);
+            var15Lifetime1 = this.field_e.step(param0);
+            var16 = this.field_r.step(param0);
             if (var13Lifetime1 == 0) {
               var12Lifetime1Lifetime1 = this.field_e.field_d + ((this.field_e.field_i - this.field_e.field_d) * var16 >> 8);
             } else {
@@ -178,10 +178,10 @@ final class SynthInstrument {
         }
         if (!(this.field_k.field_d[0] <= 0) ||
           !(this.field_k.field_d[1] <= 0)) {
-          this.field_n.a();
-          var11Lifetime4 = this.field_n.a(param0 + 1);
-          var12Lifetime3 = this.field_k.a(0, (float)var11Lifetime4 / 65536.0f);
-          var13Lifetime2 = this.field_k.a(1, (float)var11Lifetime4 / 65536.0f);
+          this.field_n.reset();
+          var11Lifetime4 = this.field_n.step(param0 + 1);
+          var12Lifetime3 = this.field_k.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+          var13Lifetime2 = this.field_k.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
           if (param0 >= var12Lifetime3 + var13Lifetime2) {
             var14Lifetime2 = 0;
             var15Lifetime2 = var13Lifetime2;
@@ -197,7 +197,7 @@ final class SynthInstrument {
                 var16Lifetime1 = var16Lifetime1 - (int)((long)field_u[var14Lifetime2 - 1 - var17Lifetime3] * (long)AudioFilter.field_e[1][var17Lifetime3] >> 16);
               }
               field_u[var14Lifetime2] = var16Lifetime1;
-              var11Lifetime4 = this.field_n.a(param0 + 1);
+              var11Lifetime4 = this.field_n.step(param0 + 1);
               var14Lifetime2++;
             }
             var15Lifetime2Lifetime1 = 128;
@@ -214,12 +214,12 @@ final class SynthInstrument {
                   var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 - (int)((long)field_u[var14Lifetime2 - 1 - var17Lifetime1Lifetime1] * (long)AudioFilter.field_e[1][var17Lifetime1Lifetime1] >> 16);
                 }
                 field_u[var14Lifetime2] = var16Lifetime1Lifetime1;
-                var11Lifetime4 = this.field_n.a(param0 + 1);
+                var11Lifetime4 = this.field_n.step(param0 + 1);
                 var14Lifetime2++;
               }
               if (var14Lifetime2 < param0 - var12Lifetime3) {
-                var12Lifetime3 = this.field_k.a(0, (float)var11Lifetime4 / 65536.0f);
-                var13Lifetime2 = this.field_k.a(1, (float)var11Lifetime4 / 65536.0f);
+                var12Lifetime3 = this.field_k.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+                var13Lifetime2 = this.field_k.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
                 var15Lifetime2Lifetime1 += 128;
                 continue;
               }
@@ -234,7 +234,7 @@ final class SynthInstrument {
                 var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 - (int)((long)field_u[var14Lifetime2 - 1 - var17Lifetime2Lifetime1] * (long)AudioFilter.field_e[1][var17Lifetime2Lifetime1] >> 16);
               }
               field_u[var14Lifetime2] = var16Lifetime1Lifetime2;
-              var11Lifetime4 = this.field_n.a(param0 + 1);
+              var11Lifetime4 = this.field_n.step(param0 + 1);
               var14Lifetime2++;
             }
           }
@@ -250,36 +250,36 @@ final class SynthInstrument {
         return field_u;
     }
 
-    final void a(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_m = new SoundEnvelope();
-        this.field_m.b(param0);
+        this.field_m.decode(param0);
         this.field_i = new SoundEnvelope();
-        this.field_i.b(param0);
+        this.field_i.decode(param0);
         int var2 = param0.readUnsignedByte(-127);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_l = new SoundEnvelope();
-          this.field_l.b(param0);
+          this.field_l.decode(param0);
           this.field_d = new SoundEnvelope();
-          this.field_d.b(param0);
+          this.field_d.decode(param0);
         }
         var2 = param0.readUnsignedByte(-79);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_g = new SoundEnvelope();
-          this.field_g.b(param0);
+          this.field_g.decode(param0);
           this.field_o = new SoundEnvelope();
-          this.field_o.b(param0);
+          this.field_o.decode(param0);
         }
         var2 = param0.readUnsignedByte(-60);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_e = new SoundEnvelope();
-          this.field_e.b(param0);
+          this.field_e.decode(param0);
           this.field_r = new SoundEnvelope();
-          this.field_r.b(param0);
+          this.field_r.decode(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
           var4 = param0.readUnsignedSmart(-1282738780);
@@ -296,10 +296,10 @@ final class SynthInstrument {
         this.field_s = param0.readUnsignedShort(-20976);
         this.field_k = new AudioFilter();
         this.field_n = new SoundEnvelope();
-        this.field_k.a(param0, this.field_n);
+        this.field_k.decode(param0, this.field_n);
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int oscillator(int param0, int param1, int param2) {
         if (param2 == 1) {
           if ((param0 & 32767) < 16384) {
             return param1;

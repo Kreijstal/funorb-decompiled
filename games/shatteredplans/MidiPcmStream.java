@@ -38,7 +38,7 @@ final class MidiPcmStream extends PcmStream {
     private MusicTrack field_z;
 
     final synchronized void e(int param0) {
-        this.b(16384, true);
+        this.stopTrack(16384, true);
         if (param0 != 15) {
           this.field_r = (int[]) null;
         }
@@ -55,7 +55,7 @@ final class MidiPcmStream extends PcmStream {
         return (PcmStream) ((Object) this.field_l);
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void setPitchBend(int param0, int param1, int param2) {
         int var4 = -117 / ((param0 + 22) / 39);
         this.field_E[param2] = param1;
         this.field_u[param2] = (int)(0.5 + 2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)param1));
@@ -70,7 +70,7 @@ final class MidiPcmStream extends PcmStream {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vd.a(param2, param0, param1, 2)) {
+          if (!MenuComponent.a(param2, param0, param1, 2)) {
             return null;
           }
           if (param3 == -20487) {
@@ -89,7 +89,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -145,10 +145,10 @@ final class MidiPcmStream extends PcmStream {
         if (param0 != 256) {
           this.field_r = (int[]) null;
         }
-        MusicPatch var4 = (MusicPatch) (this.field_Q.c(83));
+        MusicPatch var4 = (MusicPatch) (this.field_Q.startTraversal(83));
         while (var4 != null) {
-          var4.e(26005);
-          var4 = (MusicPatch) (this.field_Q.a(false));
+          var4.release(26005);
+          var4 = (MusicPatch) (this.field_Q.nextInTraversal(false));
         }
     }
 
@@ -194,7 +194,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void c(int param0, boolean param1) {
+    final synchronized void setTempoScale(int param0, boolean param1) {
         this.field_M = param0;
         if (param1) {
           this.field_t = (int[]) null;
@@ -209,12 +209,12 @@ final class MidiPcmStream extends PcmStream {
 
     private final void c(int param0, byte param1, int param2) {
         this.field_m[param2] = param0;
-        this.field_P[param2] = we.a(-128, param0);
+        this.field_P[param2] = we.intAnd(-128, param0);
         int var4 = 120 % ((51 - param1) / 40);
         this.a(param2, param0, (byte) -16);
     }
 
-    final synchronized void a(byte param0, int param1, int param2) {
+    final synchronized void setChannelVolume(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 > -67) {
@@ -229,7 +229,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(Archive param0, MusicTrack param1, int param2, int param3, SoundCache param4) {
+    final synchronized boolean preparePatches(Archive param0, MusicTrack param1, int param2, int param3, SoundCache param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -258,28 +258,28 @@ final class MidiPcmStream extends PcmStream {
           if (0 < param3) {
             var7 = new int[]{param3};
           }
-          var8 = (be) (param1.field_i.c(-126));
+          var8 = (be) (param1.field_i.startTraversal(-126));
           while (var8 != null) {
             var9 = (int)var8.key;
-            var12 = (MusicPatch) (this.field_Q.a((long)var9, -25064));
+            var12 = (MusicPatch) (this.field_Q.get((long)var9, -25064));
             if (var12 == null) {
               var13 = lo.a(param0, (byte) 125, var9);
               if (var13 != null) {
-                this.field_Q.a(var13, 87, (long)var9);
-                if (!var13.a(param4, var8.field_j, (int[]) (var7), 1)) {
+                this.field_Q.put(var13, 87, (long)var9);
+                if (!var13.loadSamples(param4, var8.field_j, (int[]) (var7), 1)) {
                   var6_int = 0;
                 }
               } else {
                 var6_int = 0;
               }
             } else {
-              if (!var12.a(param4, var8.field_j, (int[]) (var7), 1)) {
+              if (!var12.loadSamples(param4, var8.field_j, (int[]) (var7), 1)) {
                 var6_int = 0;
-                var8 = (be) (param1.field_i.a(false));
+                var8 = (be) (param1.field_i.nextInTraversal(false));
                 continue;
               }
             }
-            var8 = (be) (param1.field_i.a(false));
+            var8 = (be) (param1.field_i.nextInTraversal(false));
           }
           if (var6_int != 0) {
             param1.b();
@@ -308,7 +308,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -349,29 +349,29 @@ final class MidiPcmStream extends PcmStream {
     final static void a(boolean param0, byte param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var18_int = 0;
         int var22_int = 0;
-        qr dupTemp$0 = null;
+        AnimatedPanel dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        ub stackIn_3_0 = null;
+        ScrollPane stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
         boolean stackIn_4_3 = false;
         fb stackIn_12_0;
-        qr stackIn_12_1;
-        qr stackIn_12_2;
+        AnimatedPanel stackIn_12_1;
+        AnimatedPanel stackIn_12_2;
         long stackIn_12_3;
-        qr stackIn_13_1 = null;
-        qr stackIn_13_2 = null;
-        qr stackIn_13_4 = null;
+        AnimatedPanel stackIn_13_1 = null;
+        AnimatedPanel stackIn_13_2 = null;
+        AnimatedPanel stackIn_13_4 = null;
         fb stackIn_31_0;
-        qr stackIn_31_1;
-        qr stackIn_31_2;
+        AnimatedPanel stackIn_31_1;
+        AnimatedPanel stackIn_31_2;
         long stackIn_31_3;
-        qr stackIn_32_1;
-        qr stackIn_32_2;
-        qr stackIn_32_4;
+        AnimatedPanel stackIn_32_1;
+        AnimatedPanel stackIn_32_2;
+        AnimatedPanel stackIn_32_4;
         int stackIn_36_0 = 0;
         int stackIn_71_0 = 0;
         int stackIn_80_0 = 0;
@@ -391,19 +391,19 @@ final class MidiPcmStream extends PcmStream {
         fb var12 = null;
         int var13 = 0;
         int var14 = 0;
-        qr var18 = null;
-        qr var19 = null;
-        qr var20 = null;
-        qr var21 = null;
-        qr var22 = null;
-        qr var23 = null;
-        qr var24 = null;
-        qr var25 = null;
-        qr var26 = null;
-        qr var27 = null;
-        qr var28 = null;
-        qr var29 = null;
-        qr var30 = null;
+        AnimatedPanel var18 = null;
+        AnimatedPanel var19 = null;
+        AnimatedPanel var20 = null;
+        AnimatedPanel var21 = null;
+        AnimatedPanel var22 = null;
+        AnimatedPanel var23 = null;
+        AnimatedPanel var24 = null;
+        AnimatedPanel var25 = null;
+        AnimatedPanel var26 = null;
+        AnimatedPanel var27 = null;
+        AnimatedPanel var28 = null;
+        AnimatedPanel var29 = null;
+        AnimatedPanel var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -420,13 +420,13 @@ final class MidiPcmStream extends PcmStream {
         int var40 = 0;
         int var41 = 0;
         Sprite var42 = null;
-        qr var43 = null;
-        qr var44 = null;
-        qr var45 = null;
-        qr var46 = null;
-        qr var47 = null;
-        qr var48 = null;
-        qr var49 = null;
+        AnimatedPanel var43 = null;
+        AnimatedPanel var44 = null;
+        AnimatedPanel var45 = null;
+        AnimatedPanel var46 = null;
+        AnimatedPanel var47 = null;
+        AnimatedPanel var48 = null;
+        AnimatedPanel var49 = null;
         Object var50 = null;
         Sprite var50_ref = null;
         Object var51 = null;
@@ -455,31 +455,31 @@ final class MidiPcmStream extends PcmStream {
           stackIn_3_1 = (cr.field_c * 4 + 8) * param5;
           stackIn_3_2 = (2 + cr.field_c) * 2;
           stackIn_4_3 = (DerelictVictoryChecker.field_l == SingleChildWidget.field_y);
-          var7_int = ((ub) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
+          var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
           var8 = SingleChildWidget.field_y.field_xb.field_M;
           if (param1 <= 109) {
-            MidiPcmStream.a((nk[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
+            MidiPcmStream.a((IndexedSprite[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
           }
-          var9 = pr.a(14274);
+          var9 = pr.currentTimeMillis(14274);
           var11 = null;
           var12 = (fb) (var8.startForward(0));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
               var14 = param2 | param3;
-              var12.field_Ub = new qr(0L, oj.field_zb);
-              var12.a(4, var12.field_Ub);
+              var12.field_Ub = new AnimatedPanel(0L, oj.field_zb);
+              var12.addChild(4, var12.field_Ub);
               var12.field_Ub.field_y = 1;
-              var12.field_Pb = new qr(0L, ek.field_E);
-              var12.a(4, var12.field_Pb);
-              var12.field_Rb = new qr(0L, oj.field_zb);
-              var12.a(4, var12.field_Rb);
+              var12.field_Pb = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
+              var12.addChild(4, var12.field_Pb);
+              var12.field_Rb = new AnimatedPanel(0L, oj.field_zb);
+              var12.addChild(4, var12.field_Rb);
               var12.field_Rb.field_kb = 0;
-              var12.field_Wb = new qr(0L, oj.field_zb);
-              var12.a(4, var12.field_Wb);
+              var12.field_Wb = new AnimatedPanel(0L, oj.field_zb);
+              var12.addChild(4, var12.field_Wb);
               var12.field_Wb.field_kb = 0;
-              var12.field_Ib = new qr(0L, ek.field_E);
-              var12.a(4, var12.field_Ib);
+              var12.field_Ib = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
+              var12.addChild(4, var12.field_Ib);
               var12.field_Ib.field_y = 2;
               stackIn_12_0 = var12;
               stackIn_12_1 = null;
@@ -492,26 +492,26 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = ek.field_E;
+                stackIn_13_4 = ArrayWidgetGroup.field_E;
               }
-              stackIn_12_0.field_Mb = new qr(stackIn_12_3, stackIn_13_4);
-              var12.a(4, var12.field_Mb);
-              var12.field_xb = new qr[em.field_k];
-              var12.field_Bb = new qr(0L, (qr) null);
-              if ((1 << cp.field_q & var14) != 0) {
-                var12.field_Mb.a(4, var12.field_Bb);
+              stackIn_12_0.field_Mb = new AnimatedPanel(stackIn_12_3, stackIn_13_4);
+              var12.addChild(4, var12.field_Mb);
+              var12.field_xb = new AnimatedPanel[ProductionContent.field_k];
+              var12.field_Bb = new AnimatedPanel(0L, (AnimatedPanel) null);
+              if ((1 << CanvasResizeController.field_q & var14) != 0) {
+                var12.field_Mb.addChild(4, var12.field_Bb);
               }
-              var12.field_oc = new qr(0L, (qr) null);
+              var12.field_oc = new AnimatedPanel(0L, (AnimatedPanel) null);
               if ((1 << GameRules.field_g & var14) != 0) {
-                var12.field_Mb.a(4, var12.field_oc);
+                var12.field_Mb.addChild(4, var12.field_oc);
               }
-              var12.field_ac = new qr(0L, (qr) null);
+              var12.field_ac = new AnimatedPanel(0L, (AnimatedPanel) null);
               if ((var14 & 1 << GameApplet.field_i) != 0) {
-                var12.field_Mb.a(4, var12.field_ac);
+                var12.field_Mb.addChild(4, var12.field_ac);
               }
-              var12.field_Kb = new qr(0L, (qr) null);
+              var12.field_Kb = new AnimatedPanel(0L, (AnimatedPanel) null);
               if (0 != (1 << v.field_e & var14)) {
-                var12.field_Mb.a(4, var12.field_Kb);
+                var12.field_Mb.addChild(4, var12.field_Kb);
               }
               var45 = var12.field_Bb;
               var44 = var12.field_Kb;
@@ -520,10 +520,10 @@ final class MidiPcmStream extends PcmStream {
               var43.field_G = 1;
               var44.field_G = 1;
               var45.field_G = 1;
-              for (var18_int = 0; em.field_k > var18_int; var18_int++) {
-                var12.field_xb[var18_int] = new qr(0L, (qr) null);
+              for (var18_int = 0; ProductionContent.field_k > var18_int; var18_int++) {
+                var12.field_xb[var18_int] = new AnimatedPanel(0L, (AnimatedPanel) null);
                 if (0 != (var14 & 1 << var18_int + TextFieldValidator.field_j)) {
-                  var12.field_Mb.a(4, var12.field_xb[var18_int]);
+                  var12.field_Mb.addChild(4, var12.field_xb[var18_int]);
                 }
                 var12.field_xb[var18_int].field_G = 1;
               }
@@ -534,27 +534,27 @@ final class MidiPcmStream extends PcmStream {
               if (ns.field_pb) {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
-                stackIn_32_4 = ek.field_E;
+                stackIn_32_4 = ArrayWidgetGroup.field_E;
               } else {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
                 stackIn_32_4 = oj.field_zb;
               }
-              stackIn_31_0.field_Ob = new qr(stackIn_31_3, stackIn_32_4);
-              var12.a(4, var12.field_Ob);
+              stackIn_31_0.field_Ob = new AnimatedPanel(stackIn_31_3, stackIn_32_4);
+              var12.addChild(4, var12.field_Ob);
               var12.field_Ob.field_y = 2;
-              var12.field_Tb = new qr(0L, ek.field_E);
-              var12.a(4, var12.field_Tb);
-              var12.field_Sb = new qr(0L, gn.field_w);
-              var12.a(4, var12.field_Sb);
-              var12.field_Hb = new qr(0L, gn.field_w);
-              var12.a(4, var12.field_Hb);
-              var12.field_ic = new qr(0L, SpriteState.field_u);
-              var12.a(4, var12.field_ic);
-              var12.e((byte) -126);
-              var12.field_Db = new qr(0L, GameScreen.field_h);
+              var12.field_Tb = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
+              var12.addChild(4, var12.field_Tb);
+              var12.field_Sb = new AnimatedPanel(0L, gn.field_w);
+              var12.addChild(4, var12.field_Sb);
+              var12.field_Hb = new AnimatedPanel(0L, gn.field_w);
+              var12.addChild(4, var12.field_Hb);
+              var12.field_ic = new AnimatedPanel(0L, SpriteState.field_u);
+              var12.addChild(4, var12.field_ic);
+              var12.markDirty((byte) -126);
+              var12.field_Db = new AnimatedPanel(0L, GameScreen.field_h);
               var13 = 1;
-              var12.a(4, var12.field_Db);
+              var12.addChild(4, var12.field_Db);
             }
             stackIn_36_0 = (!var12.field_Ab) ? param2 : param3;
             var14Lifetime1 = stackIn_36_0;
@@ -586,7 +586,7 @@ final class MidiPcmStream extends PcmStream {
             var21 = var12.field_Mb;
             var12.field_Mb.field_mb = 0;
             var21.field_K = 0;
-            for (var22_int = 0; em.field_k > var22_int; var22_int++) {
+            for (var22_int = 0; ProductionContent.field_k > var22_int; var22_int++) {
               var12.field_xb[var22_int].field_pb = null;
               var23 = var12.field_xb[var22_int];
               var12.field_xb[var22_int].field_mb = 0;
@@ -665,38 +665,38 @@ final class MidiPcmStream extends PcmStream {
                 }
               }
               if (var12.field_Db.field_z == null) {
-                var12.field_Ub.a(68, cr.field_c, (byte) 48, var31, 0);
+                var12.field_Ub.setTarget(68, cr.field_c, (byte) 48, var31, 0);
               } else {
-                var12.field_Db.a(68, cr.field_c, (byte) 72, var31, 0);
+                var12.field_Db.setTarget(68, cr.field_c, (byte) 72, var31, 0);
               }
               var12.field_Pb.field_z = nq.a(var12.field_Pb.field_nb, var32, 78);
-              var12.field_Pb.a(78, cr.field_c, (byte) 85, var31, 70);
+              var12.field_Pb.setTarget(78, cr.field_c, (byte) 85, var31, 70);
               if (var12.field_Pb.field_L &&
                 !var12.field_Pb.field_z.equals(var32)) {
-                dn.field_k = var32;
+                DualLinkDequeSequence.field_k = var32;
               }
               var12.field_Rb.field_z = Integer.toString(var12.field_Lb);
               if (var12.field_mc) {
                 var12.field_Wb.field_z = "/" + var12.field_Eb;
                 var12.field_Rb.field_y = 2;
                 var33_int = (348 - var12.field_Wb.field_nb.stringWidth("/")) / 2;
-                var12.field_Rb.a(var33_int - 150, cr.field_c, (byte) 83, var31, 150);
-                var12.field_Wb.a(-var33_int + 198, cr.field_c, (byte) 84, var31, var33_int);
+                var12.field_Rb.setTarget(var33_int - 150, cr.field_c, (byte) 83, var31, 150);
+                var12.field_Wb.setTarget(-var33_int + 198, cr.field_c, (byte) 84, var31, var33_int);
               } else {
                 var12.field_Rb.field_y = 1;
-                var12.field_Rb.a(48, cr.field_c, (byte) 108, var31, 150);
+                var12.field_Rb.setTarget(48, cr.field_c, (byte) 108, var31, 150);
               }
               var12.field_Ib.field_z = Integer.toString(var12.field_Zb);
-              var12.field_Ib.a(48, cr.field_c, (byte) 47, var31, 200);
+              var12.field_Ib.setTarget(48, cr.field_c, (byte) 47, var31, 200);
               stackIn_71_0 = (!ns.field_pb) ? 200 : 250;
               var33_intLifetime1 = stackIn_71_0;
-              var12.field_Mb.a(-2 + (365 - var33_intLifetime1), cr.field_c, (byte) 46, var31, var33_intLifetime1);
-              var34_int = qo.field_b;
-              if ((var14Lifetime1 & 1 << cp.field_q) != 0) {
+              var12.field_Mb.setTarget(-2 + (365 - var33_intLifetime1), cr.field_c, (byte) 46, var31, var33_intLifetime1);
+              var34_int = TextLayout.field_b;
+              if ((var14Lifetime1 & 1 << CanvasResizeController.field_q) != 0) {
                 var50_ref = uk.field_b[var12.field_nc];
                 var12.field_Bb.field_pb = var50_ref;
-                var12.field_Bb.a(var50_ref.field_o, var12.field_Mb.field_mb, (byte) 111, 0, var34_int);
-                var34_int = var34_int + (var50_ref.field_o + qo.field_b);
+                var12.field_Bb.setTarget(var50_ref.field_o, var12.field_Mb.field_mb, (byte) 111, 0, var34_int);
+                var34_int = var34_int + (var50_ref.field_o + TextLayout.field_b);
               }
               if ((var14Lifetime1 & 1 << GameRules.field_g) != 0) {
                 if (!var12.field_cc) {
@@ -713,14 +713,14 @@ final class MidiPcmStream extends PcmStream {
                 }
                 var51_ref = stackIn_82_0[stackIn_83_1];
                 var12.field_oc.field_pb = var51_ref;
-                var12.field_oc.a(var51_ref.field_o, var12.field_Mb.field_mb, (byte) 124, 0, var34_int);
-                var34_int = var34_int + (qo.field_b + var51_ref.field_o);
+                var12.field_oc.setTarget(var51_ref.field_o, var12.field_Mb.field_mb, (byte) 124, 0, var34_int);
+                var34_int = var34_int + (TextLayout.field_b + var51_ref.field_o);
               }
               if (0 != (1 << GameApplet.field_i & var14Lifetime1)) {
                 var52_ref = LegacyAi.field_s[-1 + var12.field_Fb];
                 var12.field_ac.field_pb = var52_ref;
-                var12.field_ac.a(var52_ref.field_o, var12.field_Mb.field_mb, (byte) 41, 0, var34_int);
-                var34_int = var34_int + (qo.field_b + var52_ref.field_o);
+                var12.field_ac.setTarget(var52_ref.field_o, var12.field_Mb.field_mb, (byte) 41, 0, var34_int);
+                var34_int = var34_int + (TextLayout.field_b + var52_ref.field_o);
               }
               if ((1 << v.field_e & var14Lifetime1) != 0) {
                 stackIn_88_0 = CheckboxPainter.field_l;
@@ -731,18 +731,18 @@ final class MidiPcmStream extends PcmStream {
                 }
                 var53_ref = stackIn_88_0[stackIn_91_1];
                 var12.field_Kb.field_pb = var53_ref;
-                var12.field_Kb.a(var53_ref.field_o, var12.field_Mb.field_mb, (byte) 127, 0, var34_int);
-                var34_int = var34_int + (qo.field_b + var53_ref.field_o);
+                var12.field_Kb.setTarget(var53_ref.field_o, var12.field_Mb.field_mb, (byte) 127, 0, var34_int);
+                var34_int = var34_int + (TextLayout.field_b + var53_ref.field_o);
               }
               if (null != Star.field_O) {
-                for (var36Lifetime1 = 0; var36Lifetime1 < em.field_k; var36Lifetime1++) {
+                for (var36Lifetime1 = 0; var36Lifetime1 < ProductionContent.field_k; var36Lifetime1++) {
                   if (Star.field_O[var36Lifetime1] != null &&
                     0 != (var14Lifetime1 & 1 << var36Lifetime1 + TextFieldValidator.field_j)) {
                     var42 = Star.field_O[var36Lifetime1][var12.field_dc[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_xb[var36Lifetime1].field_pb = var42;
-                    var12.field_xb[var36Lifetime1].a(var54.field_o, var12.field_Mb.field_mb, (byte) 92, 0, var34_int);
-                    var34_int = var34_int + (qo.field_b + var54.field_o);
+                    var12.field_xb[var36Lifetime1].setTarget(var54.field_o, var12.field_Mb.field_mb, (byte) 92, 0, var34_int);
+                    var34_int = var34_int + (TextLayout.field_b + var54.field_o);
                   }
                 }
               }
@@ -752,7 +752,7 @@ final class MidiPcmStream extends PcmStream {
                 var12.field_oc.field_hb = var12.field_oc.field_hb + var36Lifetime2;
                 var12.field_ac.field_hb = var12.field_ac.field_hb + var36Lifetime2;
                 var12.field_Kb.field_hb = var12.field_Kb.field_hb + var36Lifetime2;
-                for (var37_int = 0; em.field_k > var37_int; var37_int++) {
+                for (var37_int = 0; ProductionContent.field_k > var37_int; var37_int++) {
                   dupTemp$0 = var12.field_xb[var37_int];
                   dupTemp$0.field_hb = dupTemp$0.field_hb + var36Lifetime2;
                 }
@@ -773,7 +773,7 @@ final class MidiPcmStream extends PcmStream {
                   var12.field_Ob.field_z = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Ob.a(var12.field_K - 365, cr.field_c, (byte) 57, var31, 365);
+              var12.field_Ob.setTarget(var12.field_K - 365, cr.field_c, (byte) 57, var31, 365);
               var31 = var31 + cr.field_c;
               if (var12.field_jc != null) {
                 var31 += 2;
@@ -787,17 +787,17 @@ final class MidiPcmStream extends PcmStream {
                 var38 = var37.toString();
                 var12.field_Tb.field_z = var38;
                 var39Lifetime1 = var12.field_Tb.field_nb.lineCount(var38, var12.field_K - 2 * var12.field_Tb.field_kb);
-                var12.field_Tb.a(var12.field_K, cr.field_c * var39Lifetime1, (byte) 73, var31, 0);
+                var12.field_Tb.setTarget(var12.field_K, cr.field_c * var39Lifetime1, (byte) 73, var31, 0);
                 var31 = var31 + var39Lifetime1 * cr.field_c;
               }
               if (var12.field_Jb) {
-                var12.field_Sb.field_z = re.a(tq.field_a, 4371, new String[]{var32});
-                var12.field_Sb.a(var12.field_K - tg.field_a * 2, cr.field_c, (byte) 80, var31, tg.field_a);
+                var12.field_Sb.field_z = QuickChatCategoryRegistry.a(tq.field_a, 4371, new String[]{var32});
+                var12.field_Sb.setTarget(var12.field_K - tg.field_a * 2, cr.field_c, (byte) 80, var31, tg.field_a);
                 var31 = var31 + cr.field_c;
               }
               if (var12.field_Yb) {
-                var12.field_Hb.field_z = re.a(wj.field_n, 4371, new String[]{var32});
-                var12.field_Hb.a(-(2 * tg.field_a) + var12.field_K, cr.field_c, (byte) 91, var31, tg.field_a);
+                var12.field_Hb.field_z = QuickChatCategoryRegistry.a(wj.field_n, 4371, new String[]{var32});
+                var12.field_Hb.setTarget(-(2 * tg.field_a) + var12.field_K, cr.field_c, (byte) 91, var31, tg.field_a);
                 var31 = var31 + cr.field_c;
               }
             }
@@ -806,16 +806,16 @@ final class MidiPcmStream extends PcmStream {
               var34_intLifetime1 = var12.field_ic.field_nb.lineCount(var33, -tg.field_a - tg.field_a + var12.field_K);
               var12.field_ic.field_z = var33;
               var12.field_ic.field_I = 256 * var12.field_Nb / ks.field_i;
-              var12.field_ic.a(var12.field_K - tg.field_a * 2, cr.field_c * var34_intLifetime1, (byte) 112, var31, tg.field_a);
+              var12.field_ic.setTarget(var12.field_K - tg.field_a * 2, cr.field_c * var34_intLifetime1, (byte) 112, var31, tg.field_a);
               var31 = var31 + var34_intLifetime1 * cr.field_c;
             }
             if (var7_int == 0) {
               var12.field_gb = -var12.field_mb + var31;
             }
             if (var13 != 0) {
-              SingleChildWidget.field_y.field_xb.a(2, (qr) (var11), var12, (byte) 65);
+              SingleChildWidget.field_y.field_xb.layoutAfter(2, (AnimatedPanel) (var11), var12, (byte) 65);
             }
-            for (var34_intLifetime2 = 0; em.field_k > var34_intLifetime2; var34_intLifetime2++) {
+            for (var34_intLifetime2 = 0; ProductionContent.field_k > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_xb[var34_intLifetime2].field_L) {
                 if (null == ei.field_f) {
                   var35 = null;
@@ -827,9 +827,9 @@ final class MidiPcmStream extends PcmStream {
                   }
                 }
                 if (var35 == null) {
-                  dn.field_k = gm.field_l[var34_intLifetime2];
+                  DualLinkDequeSequence.field_k = SoundPlayback.field_l[var34_intLifetime2];
                 } else {
-                  dn.field_k = gm.field_l[var34_intLifetime2] + " - " + (String) (var35);
+                  DualLinkDequeSequence.field_k = SoundPlayback.field_l[var34_intLifetime2] + " - " + (String) (var35);
                 }
               }
             }
@@ -839,15 +839,15 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 var34 = mk.field_e[var12.field_nc];
               }
-              dn.field_k = SolMapGenerator.field_r + " - " + var34;
+              DualLinkDequeSequence.field_k = SolMapGenerator.field_r + " - " + var34;
             }
             if (var12.field_Kb.field_L) {
               if (!var12.field_ec) {
-                stackIn_155_0 = ek.field_G;
+                stackIn_155_0 = ArrayWidgetGroup.field_G;
               } else {
                 stackIn_155_0 = le.field_c;
               }
-              dn.field_k = stackIn_155_0;
+              DualLinkDequeSequence.field_k = stackIn_155_0;
             }
             if (var12.field_oc.field_L) {
               if (!var12.field_cc &&
@@ -860,7 +860,7 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 stackIn_165_0 = ns.field_qb;
               }
-              dn.field_k = stackIn_165_0;
+              DualLinkDequeSequence.field_k = stackIn_165_0;
             }
             if (var12.field_ac.field_L) {
               if (var12.field_Fb == 2) {
@@ -868,7 +868,7 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 stackIn_170_0 = wd.field_K;
               }
-              dn.field_k = stackIn_170_0;
+              DualLinkDequeSequence.field_k = stackIn_170_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_rb != 0 &&
@@ -893,7 +893,7 @@ final class MidiPcmStream extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var7), "ga.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var7), "ga.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -904,7 +904,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static void a(nk[] param0, int param1, Archive param2, int[] param3, Sprite[][] param4, String[] param5, int param6, Archive param7, byte[] param8, String[][] param9, Archive param10, byte[] param11, boolean param12, String[][] param13, int param14, int[] param15, Sprite[][] param16) {
+    final static void a(IndexedSprite[] param0, int param1, Archive param2, int[] param3, Sprite[][] param4, String[] param5, int param6, Archive param7, byte[] param8, String[][] param9, Archive param10, byte[] param11, boolean param12, String[][] param13, int param14, int[] param15, Sprite[][] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -937,7 +937,7 @@ final class MidiPcmStream extends PcmStream {
         String[] var18 = null;
         try {
           var18 = (String[]) null;
-          ur.a(param4, param1, param8, param12, param10, param15, param16, param5, (String[]) null, -82, param11, param7, param2, param0, param13, 1, param9, param3, param6);
+          ScrollBar.a(param4, param1, param8, param12, param10, param15, param16, param5, (String[]) null, -82, param11, param7, param2, param0, param13, 1, param9, param3, param6);
           if (param14 != 16384) {
             field_o = (String) null;
           }
@@ -1024,20 +1024,20 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
-    private final synchronized void b(int param0, boolean param1) {
+    private final synchronized void stopTrack(int param0, boolean param1) {
         this.field_x.release();
         if (param0 != 16384) {
-          this.h(18);
+          this.isPlaying(18);
         }
         this.field_z = null;
         this.a(-1, param1);
     }
 
-    private final void b(int param0, byte param1) {
+    private final void removeChannelVoices(int param0, byte param1) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         MusicVoice var3 = (MusicVoice) (this.field_l.field_n.startForward(0));
         if (param1 != 68) {
@@ -1091,18 +1091,18 @@ final class MidiPcmStream extends PcmStream {
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         ij.a(3974311, param4, true, param2, param0, param1);
         if (param3 > -57) {
-          MidiPcmStream.a((nk[]) null, 95, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, -102, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, 52, (int[]) null, (Sprite[][]) null);
+          MidiPcmStream.a((IndexedSprite[]) null, 95, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, -102, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, 52, (int[]) null, (Sprite[][]) null);
         }
     }
 
-    final synchronized void a(MusicTrack param0, byte param1, boolean param2) {
+    final synchronized void playTrack(MusicTrack param0, byte param1, boolean param2) {
         try {
-          this.a(param2, param0, 114, true);
+          this.startTrack(param2, param0, 114, true);
           if (param1 != 101) {
             this.field_n = -99L;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ga.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ga.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1151,16 +1151,16 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void resetChannel(byte param0, int param1) {
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 < 0) {
           for (param1 = 0; param1 < 16; param1++) {
-            this.a((byte) -63, param1);
+            this.resetChannel((byte) -63, param1);
           }
         } else {
           this.field_y[param1] = 12800;
@@ -1178,7 +1178,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_q[param1] = 32767;
           this.field_r[param1] = 256;
           this.field_t[param1] = 0;
-          this.a(70, 8192, param1);
+          this.setPitchBend(70, 8192, param1);
         }
     }
 
@@ -1189,16 +1189,16 @@ final class MidiPcmStream extends PcmStream {
         if (!param1) {
           this.a(-1, 2);
         } else {
-          this.b(-1, (byte) 68);
+          this.removeChannelVoices(-1, (byte) 68);
         }
-        this.a((byte) -63, param0);
+        this.resetChannel((byte) -63, param0);
         for (var3 = 0; var3 < 16; var3++) {
           this.field_I[var3] = this.field_m[var3];
         }
         int var5 = 0;
         var3Lifetime1 = var5;
         while (16 > var5) {
-          this.field_P[var5] = we.a(this.field_m[var5], -128);
+          this.field_P[var5] = we.intAnd(this.field_m[var5], -128);
           var5++;
         }
     }
@@ -1234,7 +1234,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -1320,73 +1320,73 @@ final class MidiPcmStream extends PcmStream {
         var6Lifetime4 = 127 & param0 >> 8;
         var7Lifetime3 = 127 & param0 >> 16;
         if (var6Lifetime4 == 0) {
-          this.field_P[var5Lifetime4] = (var7Lifetime3 << 14) + we.a(-2080769, this.field_P[var5Lifetime4]);
+          this.field_P[var5Lifetime4] = (var7Lifetime3 << 14) + we.intAnd(-2080769, this.field_P[var5Lifetime4]);
         }
         if (var6Lifetime4 == 32) {
-          this.field_P[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(-16257, this.field_P[var5Lifetime4]);
+          this.field_P[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(-16257, this.field_P[var5Lifetime4]);
         }
         if (var6Lifetime4 == 1) {
-          this.field_p[var5Lifetime4] = we.a(-16257, this.field_p[var5Lifetime4]) + (var7Lifetime3 << 7);
+          this.field_p[var5Lifetime4] = we.intAnd(-16257, this.field_p[var5Lifetime4]) + (var7Lifetime3 << 7);
         }
         if (33 == var6Lifetime4) {
-          this.field_p[var5Lifetime4] = var7Lifetime3 + we.a(this.field_p[var5Lifetime4], -128);
+          this.field_p[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_p[var5Lifetime4], -128);
         }
         if (var6Lifetime4 == 5) {
-          this.field_J[var5Lifetime4] = we.a(-16257, this.field_J[var5Lifetime4]) + (var7Lifetime3 << 7);
+          this.field_J[var5Lifetime4] = we.intAnd(-16257, this.field_J[var5Lifetime4]) + (var7Lifetime3 << 7);
         }
         if (37 == var6Lifetime4) {
-          this.field_J[var5Lifetime4] = var7Lifetime3 + we.a(this.field_J[var5Lifetime4], -128);
+          this.field_J[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_J[var5Lifetime4], -128);
         }
         if (var6Lifetime4 == 7) {
-          this.field_y[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(-16257, this.field_y[var5Lifetime4]);
+          this.field_y[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(-16257, this.field_y[var5Lifetime4]);
         }
         if (39 == var6Lifetime4) {
-          this.field_y[var5Lifetime4] = we.a(-128, this.field_y[var5Lifetime4]) + var7Lifetime3;
+          this.field_y[var5Lifetime4] = we.intAnd(-128, this.field_y[var5Lifetime4]) + var7Lifetime3;
         }
         if (var6Lifetime4 == 10) {
-          this.field_G[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(this.field_G[var5Lifetime4], -16257);
+          this.field_G[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(this.field_G[var5Lifetime4], -16257);
         }
         if (42 == var6Lifetime4) {
-          this.field_G[var5Lifetime4] = we.a(this.field_G[var5Lifetime4], -128) + var7Lifetime3;
+          this.field_G[var5Lifetime4] = we.intAnd(this.field_G[var5Lifetime4], -128) + var7Lifetime3;
         }
         if (var6Lifetime4 == 11) {
-          this.field_s[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(-16257, this.field_s[var5Lifetime4]);
+          this.field_s[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(-16257, this.field_s[var5Lifetime4]);
         }
         if (var6Lifetime4 == 43) {
-          this.field_s[var5Lifetime4] = var7Lifetime3 + we.a(this.field_s[var5Lifetime4], -128);
+          this.field_s[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_s[var5Lifetime4], -128);
         }
         if (var6Lifetime4 == 64) {
           if (var7Lifetime3 < 64) {
-            this.field_F[var5Lifetime4] = we.a(this.field_F[var5Lifetime4], -2);
+            this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -2);
           } else {
-            this.field_F[var5Lifetime4] = ee.a(this.field_F[var5Lifetime4], 1);
+            this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 1);
           }
         }
         if (var6Lifetime4 == 65) {
           if (var7Lifetime3 < 64) {
             this.a(true, var5Lifetime4);
-            this.field_F[var5Lifetime4] = we.a(this.field_F[var5Lifetime4], -3);
+            this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -3);
           } else {
-            this.field_F[var5Lifetime4] = ee.a(this.field_F[var5Lifetime4], 2);
+            this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 2);
           }
         }
         if (var6Lifetime4 == 99) {
-          this.field_q[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(127, this.field_q[var5Lifetime4]);
+          this.field_q[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(127, this.field_q[var5Lifetime4]);
         }
         if (98 == var6Lifetime4) {
-          this.field_q[var5Lifetime4] = var7Lifetime3 + we.a(16256, this.field_q[var5Lifetime4]);
+          this.field_q[var5Lifetime4] = var7Lifetime3 + we.intAnd(16256, this.field_q[var5Lifetime4]);
         }
         if (var6Lifetime4 == 101) {
-          this.field_q[var5Lifetime4] = we.a(this.field_q[var5Lifetime4], 127) + (16384 + (var7Lifetime3 << 7));
+          this.field_q[var5Lifetime4] = we.intAnd(this.field_q[var5Lifetime4], 127) + (16384 + (var7Lifetime3 << 7));
         }
         if (var6Lifetime4 == 100) {
-          this.field_q[var5Lifetime4] = 16384 + (we.a(this.field_q[var5Lifetime4], 16256) + var7Lifetime3);
+          this.field_q[var5Lifetime4] = 16384 + (we.intAnd(this.field_q[var5Lifetime4], 16256) + var7Lifetime3);
         }
         if (var6Lifetime4 == 120) {
-          this.b(var5Lifetime4, (byte) 68);
+          this.removeChannelVoices(var5Lifetime4, (byte) 68);
         }
         if (var6Lifetime4 == 121) {
-          this.a((byte) -63, var5Lifetime4);
+          this.resetChannel((byte) -63, var5Lifetime4);
         }
         if (var6Lifetime4 == 123) {
           this.a(var5Lifetime4, 2);
@@ -1394,34 +1394,34 @@ final class MidiPcmStream extends PcmStream {
         if (var6Lifetime4 == 6) {
           var8 = this.field_q[var5Lifetime4];
           if (var8 == 16384) {
-            this.field_r[var5Lifetime4] = we.a(this.field_r[var5Lifetime4], -16257) + (var7Lifetime3 << 7);
+            this.field_r[var5Lifetime4] = we.intAnd(this.field_r[var5Lifetime4], -16257) + (var7Lifetime3 << 7);
           }
         }
         if (var6Lifetime4 == 38) {
           var8Lifetime1 = this.field_q[var5Lifetime4];
           if (var8Lifetime1 == 16384) {
-            this.field_r[var5Lifetime4] = var7Lifetime3 + we.a(this.field_r[var5Lifetime4], -128);
+            this.field_r[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_r[var5Lifetime4], -128);
           }
         }
         if (var6Lifetime4 == 16) {
-          this.field_t[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(this.field_t[var5Lifetime4], -16257);
+          this.field_t[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(this.field_t[var5Lifetime4], -16257);
         }
         if (var6Lifetime4 == 48) {
-          this.field_t[var5Lifetime4] = we.a(this.field_t[var5Lifetime4], -128) + var7Lifetime3;
+          this.field_t[var5Lifetime4] = we.intAnd(this.field_t[var5Lifetime4], -128) + var7Lifetime3;
         }
         if (81 == var6Lifetime4) {
           if (var7Lifetime3 < 64) {
             this.d(0, var5Lifetime4);
-            this.field_F[var5Lifetime4] = we.a(this.field_F[var5Lifetime4], -5);
+            this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -5);
           } else {
-            this.field_F[var5Lifetime4] = ee.a(this.field_F[var5Lifetime4], 4);
+            this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 4);
           }
         }
         if (var6Lifetime4 == 17) {
-          this.a(-72, (var7Lifetime3 << 7) + (-16257 & this.field_E[var5Lifetime4]), var5Lifetime4);
+          this.setPitchBend(-72, (var7Lifetime3 << 7) + (-16257 & this.field_E[var5Lifetime4]), var5Lifetime4);
         }
         if (var6Lifetime4 == 49) {
-          this.a(46, (this.field_E[var5Lifetime4] & -128) + var7Lifetime3, var5Lifetime4);
+          this.setPitchBend(46, (this.field_E[var5Lifetime4] & -128) + var7Lifetime3, var5Lifetime4);
         }
     }
 
@@ -1446,7 +1446,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void a(boolean param0, MusicTrack param1, int param2, boolean param3) {
+    private final synchronized void startTrack(boolean param0, MusicTrack param1, int param2, boolean param3) {
         int var6 = 0;
         int var5_int = 0;
         int var7 = 0;
@@ -1458,7 +1458,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException var5 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.b(16384, param3);
+          this.stopTrack(16384, param3);
           this.field_x.load(param1.field_h);
           stackIn_4_1 = (param0);
           this.field_v = stackIn_4_1;
@@ -1473,7 +1473,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_D = this.field_x.field_b[this.field_C];
           this.field_n = this.field_x.eventTime(this.field_D);
           if (param2 < 32) {
-            this.b(-59, true);
+            this.stopTrack(-59, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1486,7 +1486,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1541,7 +1541,7 @@ final class MidiPcmStream extends PcmStream {
             var5 = (MusicVoice) (this.field_l.field_n.nextReverse(-123));
           }
         }
-        var11 = (MusicPatch) (this.field_Q.a((long)this.field_I[param1], -25064));
+        var11 = (MusicPatch) (this.field_Q.get((long)this.field_I[param1], -25064));
         var12 = var11;
         if (var12 == null) {
           return;
@@ -1689,7 +1689,7 @@ final class MidiPcmStream extends PcmStream {
           }
           if (var8 == 0) {
             if (param2 != 2) {
-              this.a(-71, -84, -11);
+              this.setPitchBend(-71, -84, -11);
             }
             param3.field_K.a(param3.field_p, this.a(param3, -1481279096), this.a(param3, (byte) 122));
             return false;
@@ -1728,7 +1728,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1744,7 +1744,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -17876) {
           field_o = (String) null;
         }
@@ -1783,7 +1783,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1802,7 +1802,7 @@ final class MidiPcmStream extends PcmStream {
         var4 = this.field_n;
         if (null != this.field_z &&
           this.field_S == var3) {
-          this.a(this.field_v, this.field_z, 33, this.field_B);
+          this.startTrack(this.field_v, this.field_z, 33, this.field_B);
           this.a((byte) 109);
           return;
         }
@@ -1838,7 +1838,7 @@ final class MidiPcmStream extends PcmStream {
             this.field_x.savePosition(var2);
             if (this.field_x.isFinished()) {
               if (null != this.field_z) {
-                this.a(this.field_z, (byte) 101, this.field_v);
+                this.playTrack(this.field_z, (byte) 101, this.field_v);
                 this.a((byte) 29);
                 return;
               }
@@ -1897,7 +1897,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1973,7 +1973,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1984,7 +1984,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean h(int param0) {
+    final synchronized boolean isPlaying(int param0) {
         if (param0 != 5309) {
           field_L = (String) null;
         }
@@ -2015,7 +2015,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_x = new MidiFileReader();
         this.field_l = new MusicVoiceMixer(this);
         this.field_Q = new IntrusiveNodeHashTable(128);
-        this.a((byte) -90, -1, 256);
+        this.setChannelVolume((byte) -90, -1, 256);
         this.a(-1, true);
     }
 
@@ -2044,10 +2044,10 @@ final class MidiPcmStream extends PcmStream {
         this.field_l = new MusicVoiceMixer(this);
         try {
           this.field_Q = param0.field_Q;
-          this.a((byte) -75, -1, 256);
+          this.setChannelVolume((byte) -75, -1, 256);
           this.a(-1, true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

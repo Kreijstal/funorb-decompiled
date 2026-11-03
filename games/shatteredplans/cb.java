@@ -9,7 +9,7 @@ final class cb extends le {
     static int[] field_f;
     static int[] field_o;
     static int[] field_i;
-    static qr field_l;
+    static AnimatedPanel field_l;
     static int field_j;
     static int field_n;
 
@@ -25,7 +25,7 @@ final class cb extends le {
           }
           this.field_k.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "cb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

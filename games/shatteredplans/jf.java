@@ -5,7 +5,7 @@ final class jf {
     static byte[][] field_c;
     static boolean[] field_e;
     static Sprite field_a;
-    static qr field_b;
+    static AnimatedPanel field_b;
     static String[] field_d;
 
     final static void a(int param0, String param1, java.applet.Applet param2) {
@@ -48,9 +48,9 @@ final class jf {
               if (param1.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var8 + "; Expires=" + vm.a(94608000000L + pr.a(param0 ^ -21444), param0 + 25612) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + vm.a(94608000000L + pr.currentTimeMillis(param0 ^ -21444), param0 + 25612) + "; Max-Age=" + 94608000L;
               }
-              ll.a(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 123);
+              ll.evalJavaScript(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 123);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -73,7 +73,7 @@ final class jf {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -91,14 +91,14 @@ final class jf {
           field_e = null;
           return;
         }
-        jf.a(96, 113, -78);
+        jf.floorMod(96, 113, -78);
         field_b = null;
         field_c = (byte[][]) null;
         field_d = null;
         field_e = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int floorMod(int param0, int param1, int param2) {
         int var3 = 79 % ((param2 - 39) / 60);
         int var4 = -1 + param0 & param1 >> 31;
         return (param1 + (param1 >>> 31)) % param0 + var4;
@@ -107,16 +107,16 @@ final class jf {
     final static void b(byte param0) {
         BoundsRect.field_j = false;
         if (param0 == -15) {
-          hm.field_p = null;
+          PanelNode.field_p = null;
           TertiaryNodeList.field_d = null;
-          kp.field_o = null;
+          TargetedChatMessage.field_o = null;
           kd.field_b = null;
           return;
         }
         field_c = (byte[][]) null;
-        hm.field_p = null;
+        PanelNode.field_p = null;
         TertiaryNodeList.field_d = null;
-        kp.field_o = null;
+        TargetedChatMessage.field_o = null;
         kd.field_b = null;
     }
 

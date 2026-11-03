@@ -14,13 +14,13 @@ final class ByteArrayNode extends IntrusiveNode {
 
     final static void a(String param0, int param1, boolean param2) {
         try {
-          jh.field_D = param2;
+          ToggleButton.field_D = param2;
           FleetMove.field_C = true;
-          ji.field_G = new ns(le.field_e, CipherPacketBuffer.field_p, param0, TertiaryNodeList.field_b, jh.field_D);
-          le.field_e.a(true, ji.field_G);
+          ji.field_G = new ns(le.field_e, CipherPacketBuffer.field_p, param0, TertiaryNodeList.field_b, ToggleButton.field_D);
+          le.field_e.addDialog(true, ji.field_G);
           int var3_int = -116 / ((-1 - param1) / 54);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class ByteArrayNode extends IntrusiveNode {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

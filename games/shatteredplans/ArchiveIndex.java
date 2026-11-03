@@ -3,7 +3,7 @@
  */
 final class ArchiveIndex {
     int[] field_q;
-    cm[] field_i;
+    IntHashIndex[] field_i;
     static boolean field_o;
     int[] field_n;
     private byte[] field_u;
@@ -16,7 +16,7 @@ final class ArchiveIndex {
     static String field_g;
     static Sprite field_r;
     private int[] field_s;
-    cm field_b;
+    IntHashIndex field_b;
     byte[][] field_j;
     private int field_l;
     int[] field_v;
@@ -25,7 +25,7 @@ final class ArchiveIndex {
     int field_a;
     int field_e;
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_d = null;
         if (!param0) {
           return;
@@ -140,7 +140,7 @@ final class ArchiveIndex {
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_l; var10Lifetime1Lifetime1++) {
                 this.field_s[this.field_q[var10Lifetime1Lifetime1]] = var17.readInt(16711680);
               }
-              this.field_b = new cm(this.field_s);
+              this.field_b = new IntHashIndex(this.field_s);
             }
             for (var10Lifetime2 = 0; this.field_l > var10Lifetime2; var10Lifetime2++) {
               this.field_f[this.field_q[var10Lifetime2]] = var17.readInt(16711680);
@@ -220,7 +220,7 @@ final class ArchiveIndex {
             }
             if (var6 != 0) {
               this.field_t = new int[1 + var9][];
-              this.field_i = new cm[var9 + 1];
+              this.field_i = new IntHashIndex[var9 + 1];
               for (var10Lifetime5 = 0; this.field_l > var10Lifetime5; var10Lifetime5++) {
                 var11Lifetime1 = this.field_q[var10Lifetime5];
                 var12Lifetime1 = this.field_n[var11Lifetime1];
@@ -237,7 +237,7 @@ final class ArchiveIndex {
                   }
                   this.field_t[var11Lifetime1][var14Lifetime1] = var17.readInt(16711680);
                 }
-                this.field_i[var11Lifetime1] = new cm(this.field_t[var11Lifetime1]);
+                this.field_i[var11Lifetime1] = new IntHashIndex(this.field_t[var11Lifetime1]);
               }
               return;
             }
@@ -254,7 +254,7 @@ final class ArchiveIndex {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -269,7 +269,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_u = dp.a(param0, param0.length, -26131, 0);
+            this.field_u = QuickChatCategoryDefinition.a(param0, param0.length, -26131, 0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_u[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();
@@ -278,7 +278,7 @@ final class ArchiveIndex {
           }
           this.a(param0, (byte) 86);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

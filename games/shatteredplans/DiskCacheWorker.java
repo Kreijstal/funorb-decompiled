@@ -28,23 +28,23 @@ final class DiskCacheWorker implements Runnable {
         oi.field_d = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
         SliderPainter.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
         DualLinkDeque.field_a.bindAsRenderTarget();
-        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 64, gf.field_k);
+        BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 64, SoftwareRasterizer.field_k);
         Dialog.field_D.bindAsRenderTarget();
-        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 128, gf.field_k);
+        BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 128, SoftwareRasterizer.field_k);
         vm.field_Jb.bindAsRenderTarget();
-        MouseWheelInput.a(0, 0, gf.field_k, 0, gf.field_b, param0 + 24024);
+        MouseWheelInput.a(0, 0, SoftwareRasterizer.field_k, 0, SoftwareRasterizer.field_b, param0 + 24024);
         id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
         DefendTask.field_s = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
         oe.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
         ja.a(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
         ja.a(param0 ^ -174137062, oe.field_c.field_z / 2, oe.field_c, oe.field_c.field_w / 4);
-        ds.field_b = new Sprite(640, 430);
-        ds.field_b.bindAsRenderTarget();
+        MessageKind.field_b = new Sprite(640, 430);
+        MessageKind.field_b.bindAsRenderTarget();
         for (var1_int = 1; var1_int < 64; var1_int++) {
           var2 = (int)(20.0 * Math.log((double)(63.0f / (float)var1_int)) / Math.log(2.0));
-          gf.g(320, 527, var2 + 400, (var1_int << 2) * 65793);
+          SoftwareRasterizer.fillCircle(320, 527, var2 + 400, (var1_int << 2) * 65793);
         }
-        gf.b(4, 4, 0, 0, gf.field_b, gf.field_k);
+        SoftwareRasterizer.b(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k);
         DefensiveAi.field_r = new Sprite(640, 624 - DefendTask.field_s.field_x);
         DefensiveAi.field_r.bindAsRenderTarget();
         for (var1_int = 254; var1_int >= 1; var1_int--) {
@@ -80,9 +80,9 @@ final class DiskCacheWorker implements Runnable {
           return;
         }
         try {
-          gf.b(60, 60, 0, 0, he.field_h.field_z, he.field_h.field_w);
+          SoftwareRasterizer.b(60, 60, 0, 0, he.field_h.field_z, he.field_h.field_w);
           we.field_f.bindAsRenderTarget();
-          gf.b(60, 60, 0, 0, we.field_f.field_z, we.field_f.field_w);
+          SoftwareRasterizer.b(60, 60, 0, 0, we.field_f.field_z, we.field_f.field_w);
           ks.field_j = va.field_e.copy();
           ks.field_j.rotate180();
           for (var3 = 0; var3 < ks.field_j.field_B.length; var3++) {
@@ -96,7 +96,7 @@ final class DiskCacheWorker implements Runnable {
               var6 = 65280;
             }
             var7 = 255 & var4;
-            ks.field_j.field_B[var3] = ee.a(ee.a(var6, var5), var7);
+            ks.field_j.field_B[var3] = PrivateChatMessage.intOr(PrivateChatMessage.intOr(var6, var5), var7);
           }
           MusicVoice.field_n = DefendTask.field_s.flippedCopy();
           uo.a((byte) 110, MusicVoice.field_n, 32768);
@@ -105,11 +105,11 @@ final class DiskCacheWorker implements Runnable {
           CheckboxPainter.field_b = new Sprite(var1_int, var2);
           CheckboxPainter.field_b.bindAsRenderTarget();
           MusicVoice.field_n.drawSilhouette(0, 120, 4259648);
-          gf.b(120, 120, 0, 0, var1_int, var2);
+          SoftwareRasterizer.b(120, 120, 0, 0, var1_int, var2);
           cg.i(0);
           jn.field_a = true;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rn.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rn.C(" + param0 + ')');
         }
     }
 
@@ -159,11 +159,11 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_a = null;
         if (!param0) {
           return;
@@ -260,7 +260,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class DiskCacheWorker implements Runnable {
         }
         if (0 == gr.field_o &&
           !ValidationState.field_b.a(hk.field_nb, (byte) -23)) {
-          jo.a(param0 - 1015809, hk.field_nb, true, 1048576);
+          QuickChatPhraseRegistry.a(param0 - 1015809, hk.field_nb, true, 1048576);
         }
         if (gr.field_o == -6) {
           js.field_f.h(9, 255);
@@ -289,11 +289,11 @@ final class DiskCacheWorker implements Runnable {
         if (lg.field_b) {
           if (null != ce.field_x &&
             ce.field_x.field_Y != null) {
-            ce.field_x.field_Y.i((byte) -47);
+            ce.field_x.field_Y.disposeWidgets((byte) -47);
           }
           if (null != SecondaryNodeHashTable.field_g &&
             SecondaryNodeHashTable.field_g.field_Y != null) {
-            SecondaryNodeHashTable.field_g.field_Y.i((byte) -47);
+            SecondaryNodeHashTable.field_g.field_Y.disposeWidgets((byte) -47);
           }
           lg.field_b = false;
           ce.field_x = null;
@@ -309,7 +309,7 @@ final class DiskCacheWorker implements Runnable {
           return;
         }
         if (DiskArchiveRequest.field_A) {
-          rh.a((byte) -120);
+          ProjectsContent.a((byte) -120);
           UsernameAvailabilityValidator.e((byte) -66);
           an.a(true);
           DiskArchiveRequest.field_A = false;
@@ -357,7 +357,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -370,10 +370,10 @@ final class DiskCacheWorker implements Runnable {
           wh.field_a.a(false, 37);
           SolMapGenerator.a((byte) 87, param1, param4, param3);
           AudioService.a(0);
-          ee.field_l = oj.field_Fb;
+          PrivateChatMessage.field_l = oj.field_Fb;
           MatchingTextValidator.field_s = oj.field_Fb;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rn.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rn.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -409,7 +409,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -434,15 +434,15 @@ final class DiskCacheWorker implements Runnable {
 
     final static void a(PcmStreamMixer param0, int param1, int param2, Archive param3) {
         try {
-          aj.field_c = param1 * ArchiveSourceManager.a(param2 ^ param2) / 1000;
+          aj.field_c = param1 * ArchiveSourceManager.getTargetFrameRate(param2 ^ param2) / 1000;
           ArchiveRequest.a(param2 - 1102, param3);
           oj.a(param2 ^ 902, param3);
-          qr.a(param3, (byte) 56);
+          AnimatedPanel.a(param3, (byte) 56);
           eq.d((byte) -47);
-          r.b((byte) -112);
+          UrlLoader.b((byte) -112);
           js.field_j = -aj.field_c + 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -452,16 +452,16 @@ final class DiskCacheWorker implements Runnable {
         this.field_f = false;
         this.field_d = 0;
         try {
-          var2 = param0.a(true, 5, (Runnable) (this));
+          var2 = param0.requestThread(true, 5, (Runnable) (this));
           while (var2.field_d == 0) {
-            jb.a((byte) -107, 10L);
+            jb.sleep((byte) -107, 10L);
           }
           if (var2.field_d == 2) {
             throw new RuntimeException();
           }
           this.field_h = (Thread) (var2.field_e);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

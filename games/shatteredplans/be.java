@@ -43,8 +43,8 @@ final class be extends IntrusiveNode {
             param1 = param8 - param1;
           }
           var9_int = 0;
-          if (gf.field_i <= param2 &&
-            param6 <= gf.field_l) {
+          if (SoftwareRasterizer.field_i <= param2 &&
+            param6 <= SoftwareRasterizer.field_l) {
             if (param4 > param7) {
               var10Lifetime1 = param6;
               param6 = param2;
@@ -54,8 +54,8 @@ final class be extends IntrusiveNode {
               param7 = var10Lifetime1;
               param1 = param8 - param1;
             }
-            if (param7 >= gf.field_a &&
-              param4 <= gf.field_f) {
+            if (param7 >= SoftwareRasterizer.field_a &&
+              param4 <= SoftwareRasterizer.field_f) {
               var9_int = var9_int + param1 / param8;
               param1 = param1 % param8;
               if (param1 < 0) {
@@ -80,7 +80,7 @@ final class be extends IntrusiveNode {
                 } else {
                   stackIn_23_4 = param3;
                 }
-                gf.g(stackIn_22_0, stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4);
+                SoftwareRasterizer.drawLine(stackIn_22_0, stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4);
                 var12 = var14;
                 var11 = var13;
                 var9_int++;
@@ -95,7 +95,7 @@ final class be extends IntrusiveNode {
               } else {
                 stackIn_27_4 = param5;
               }
-              gf.g(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4);
+              SoftwareRasterizer.drawLine(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4);
               return;
             }
             return;
@@ -104,11 +104,11 @@ final class be extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var9), "be.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var9), "be.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    final static void a(qr param0, int param1, qr param2, int param3, int param4, byte param5, int param6, qr param7, byte[] param8, int param9) {
+    final static void a(AnimatedPanel param0, int param1, AnimatedPanel param2, int param3, int param4, byte param5, int param6, AnimatedPanel param7, byte[] param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -128,13 +128,13 @@ final class be extends IntrusiveNode {
           if (param5 != -122) {
             return;
           }
-          sb.field_h = param6;
+          Particle.field_h = param6;
           ks.field_e = param8;
           UsernameAvailabilityValidator.field_p = -1L;
-          em.field_k = param8.length;
+          ProductionContent.field_k = param8.length;
           he.field_p = null;
           np.field_a = null;
-          id.field_c = new byte[(sb.field_h + 7) / 8];
+          id.field_c = new byte[(Particle.field_h + 7) / 8];
           TurnEventLog.field_i = false;
           var10_int = 0;
           for (var11 = 0; var11 < ks.field_e.length; var11++) {
@@ -195,11 +195,11 @@ final class be extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param9).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param9).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_k = null;
         if (param0 < 67) {
           be.a((byte) -90, 116, 111, -79, -48, 35, -128, -23, -56);
@@ -211,7 +211,7 @@ final class be extends IntrusiveNode {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

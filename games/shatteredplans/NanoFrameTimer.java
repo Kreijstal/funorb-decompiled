@@ -48,7 +48,7 @@ final class NanoFrameTimer extends FrameTimer {
         return 0L;
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_m = null;
         field_j = null;
         if (param0 < 53) {
@@ -152,10 +152,10 @@ final class NanoFrameTimer extends FrameTimer {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         String var7 = null;
-        if (em.field_h == 2) {
-          var7 = ad.field_d;
+        if (ProductionContent.field_h == 2) {
+          var7 = StatusContent.field_d;
         } else {
-          var7 = qk.field_z;
+          var7 = MenuLabel.field_z;
         }
         if (param3 <= -56) {
           WhirlpoolHasher.a(param4, param6, var7, param0, (byte) 122, param1, param2, param5);
@@ -180,7 +180,7 @@ final class NanoFrameTimer extends FrameTimer {
           RasterBuffer.field_a = 0;
           PlacementEvent.field_l[0] = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "gs.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gs.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

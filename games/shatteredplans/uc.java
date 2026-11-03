@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends vd {
+final class uc extends MenuComponent {
     static int field_v;
     static String field_z;
     static String field_y;
@@ -41,12 +41,12 @@ final class uc extends vd {
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            stackIn_7_0 = cm.field_e;
+            stackIn_7_0 = IntHashIndex.field_e;
             return stackIn_7_0;
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(-1 + var2_int) != 34) {
-              stackIn_11_0 = as.field_t;
+              stackIn_11_0 = FleetVisual.field_t;
               return stackIn_11_0;
             }
             var3 = 0;
@@ -58,7 +58,7 @@ final class uc extends vd {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_24_0 = as.field_t;
+                  stackIn_24_0 = FleetVisual.field_t;
                   return stackIn_24_0;
                 }
                 var3 = 0;
@@ -78,13 +78,13 @@ final class uc extends vd {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_38_0 = as.field_t;
+                stackIn_38_0 = FleetVisual.field_t;
                 return stackIn_38_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (hr.field_c.indexOf(var5Lifetime1) == -1) {
-                stackIn_42_0 = as.field_t;
+                stackIn_42_0 = FleetVisual.field_t;
                 return stackIn_42_0;
               }
               var3Lifetime1 = 0;
@@ -105,7 +105,7 @@ final class uc extends vd {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
         }
     }
 
@@ -123,8 +123,8 @@ final class uc extends vd {
             stackIn_2_0 = null;
             return (hh) (stackIn_2_0);
           }
-          var2 = new hh(param0, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, cm.field_g, hd.field_q);
-          pd.a(param1 ^ param1);
+          var2 = new hh(param0, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, hd.field_q);
+          TertiaryListSequence.a(param1 ^ param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,7 +137,7 @@ final class uc extends vd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -156,10 +156,10 @@ final class uc extends vd {
           if (param8 != -87) {
             uc.e((byte) -47);
           }
-          ub.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, em.field_j, 0, param1, new v(param10), param2, ih.field_b, wo.field_a, param13, param0, dn.field_l, StellarBombEvent.field_j, new v(param7));
+          ScrollPane.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, ProductionContent.field_j, 0, param1, new v(param10), param2, ih.field_b, wo.field_a, param13, param0, DualLinkDequeSequence.field_l, StellarBombEvent.field_j, new v(param7));
           kb.a(param6, true, param12, param14, param5);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + param14 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -199,8 +199,8 @@ final class uc extends vd {
           return;
         }
         for (var3 = 0; this.field_m > var3; var3++) {
-          var2 = SolVictoryChecker.a(this.field_x, this.field_u, -115, 256 * var3 / this.field_m);
-          gf.j(var3 + this.field_k, this.field_t, this.field_i, var2);
+          var2 = SolVictoryChecker.blendColours(this.field_x, this.field_u, -115, 256 * var3 / this.field_m);
+          SoftwareRasterizer.drawVerticalLine(var3 + this.field_k, this.field_t, this.field_i, var2);
         }
         int var4 = 3 % ((67 - param0) / 47);
     }

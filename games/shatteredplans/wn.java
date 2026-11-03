@@ -18,20 +18,20 @@ final class wn {
         field_e = param3 - param1;
         wn.a();
         if (field_h.length < field_e) {
-          field_h = new int[js.a(field_e, (byte) 122)];
+          field_h = new int[js.nextPowerOfTwo(field_e, (byte) 122)];
         }
-        int var4 = param1 * gf.field_b + param0;
+        int var4 = param1 * SoftwareRasterizer.field_b + param0;
         for (var5 = 0; var5 < field_e; var5++) {
           field_h[var5] = var4;
-          var4 = var4 + gf.field_b;
+          var4 = var4 + SoftwareRasterizer.field_b;
         }
     }
 
     final static void c() {
-        wn.a(gf.field_i, gf.field_a, gf.field_l, gf.field_f);
+        wn.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, SoftwareRasterizer.field_f);
     }
 
-    public static void b() {
+    public static void clearStatics() {
         field_h = null;
         field_d = null;
         field_b = null;

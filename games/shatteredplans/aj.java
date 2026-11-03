@@ -9,7 +9,7 @@ final class aj {
     static IntrusiveDeque field_a;
     static int[] field_d;
 
-    final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
+    final static StringBuilder padWithChar(StringBuilder param0, int param1, int param2, char param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -40,7 +40,7 @@ final class aj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -66,18 +66,18 @@ final class aj {
           if (param2.field_Ab && (param2.field_Fb == 2 ||
             !(bs.field_b < 2))) {
             var7 = DerelictVictoryChecker.field_m;
-            var8 = re.a(ByteArrayNode.field_o, 4371, new String[]{param3});
+            var8 = QuickChatCategoryRegistry.a(ByteArrayNode.field_o, 4371, new String[]{param3});
             var7.field_j.a(1, 10, var8);
           }
           DerelictVictoryChecker.field_m.a(false);
           if (param0) {
             if (GameApplet.field_g == DerelictVictoryChecker.field_m.field_f) {
               var11 = DerelictVictoryChecker.field_m;
-              var12 = re.a(id.field_e, 4371, new String[]{param3});
+              var12 = QuickChatCategoryRegistry.a(id.field_e, 4371, new String[]{param3});
               var11.field_j.a(1, 16, var12);
             } else {
               var9 = DerelictVictoryChecker.field_m;
-              var10 = re.a(cb.field_g, 4371, new String[]{param3});
+              var10 = QuickChatCategoryRegistry.a(cb.field_g, 4371, new String[]{param3});
               var9.field_j.a(1, 15, var10);
             }
           }
@@ -105,7 +105,7 @@ final class aj {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -149,26 +149,26 @@ final class aj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void printError(String param0, boolean param1) {
         if (!param1) {
-          System.out.println("Error: " + nf.a("%0a", param0, (byte) 82, "\n"));
+          System.out.println("Error: " + nf.replaceAll("%0a", param0, (byte) 82, "\n"));
           return;
         }
         field_f = -71;
-        System.out.println("Error: " + nf.a("%0a", param0, (byte) 82, "\n"));
+        System.out.println("Error: " + nf.replaceAll("%0a", param0, (byte) 82, "\n"));
     }
 
-    final static ms a(String param0, boolean param1, boolean param2, String param3) {
+    final static ChatMessage a(String param0, boolean param1, boolean param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        ms stackIn_5_0 = null;
-        ms stackIn_7_0 = null;
+        ChatMessage stackIn_5_0 = null;
+        ChatMessage stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -188,7 +188,7 @@ final class aj {
             stackIn_7_0 = dd.a(param1, param3, (String) (var6), 4684, var4_long);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ms) null;
+          stackIn_5_0 = (ChatMessage) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -206,7 +206,7 @@ final class aj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

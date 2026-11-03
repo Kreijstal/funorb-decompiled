@@ -3,7 +3,7 @@
  */
 final class DerelictVictoryChecker extends VictoryChecker {
     static int[] field_k;
-    static ub field_l;
+    static ScrollPane field_l;
     static fc field_m;
     static Archive field_n;
     private int[] field_q;
@@ -12,7 +12,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
 
     final int resultsPanelHeight(boolean param0) {
         if (param0) {
-          DerelictVictoryChecker.b((byte) -59);
+          DerelictVictoryChecker.clearStatics((byte) -59);
         }
         return rs.field_Cb.field_J + this.field_o.length * PasswordValidator.field_n;
     }
@@ -106,7 +106,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
           this.field_o = new int[this.field_i.length];
           this.field_q = new int[this.field_i.length];
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
           }
           int var4 = -49 % ((-72 - param0) / 45);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -194,13 +194,13 @@ final class DerelictVictoryChecker extends VictoryChecker {
             if (param2.length() == 0) {
               var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             }
-            ll.a(param1, "document.cookie=\"" + var5 + "\"", (byte) 123);
+            ll.evalJavaScript(param1, "document.cookie=\"" + var5 + "\"", (byte) 123);
             if (param0 <= 7) {
               field_n = (Archive) null;
             }
             MusicCrossfadeStream.a(-1, param1);
           } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "hp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -209,7 +209,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_m = null;
         field_k = null;
         field_n = null;
@@ -246,7 +246,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
         int[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
-        qk[] var23 = null;
+        MenuLabel[] var23 = null;
         int[] var24 = null;
         int[] var25 = null;
         int[] var26 = null;
@@ -312,7 +312,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
           if (var5Lifetime1 > 0) {
             lh.a((byte) 35, var4, (int[]) ((Object) this.field_o.clone()));
           }
-          var23 = new qk[]{new qk(0, 0, 182, rs.field_Cb.field_J, re.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(50)}))};
+          var23 = new MenuLabel[]{new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(50)}))};
           var7 = new Player[this.field_i.length];
           var28 = new int[this.field_i.length];
           var22 = var28;
@@ -334,7 +334,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
           } else {
             var11 = 0;
           }
-          param2.a(50, var7, var27, var28, var10, var23, (byte) -47, var11);
+          param2.showResultsDialog(50, var7, var27, var28, var10, var23, (byte) -47, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -352,7 +352,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

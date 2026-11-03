@@ -22,8 +22,8 @@ final class BattleSnapshot extends IntrusiveNode {
     static String field_i;
     static DiskCacheWorker field_w;
     static a field_s;
-    static qr field_t;
-    static qr field_y;
+    static AnimatedPanel field_t;
+    static AnimatedPanel field_y;
 
     final static void d(int param0) {
         int var2 = 0;
@@ -44,20 +44,20 @@ final class BattleSnapshot extends IntrusiveNode {
             break;
           }
           if (param0 != -14145) {
-            BattleSnapshot.e(-71);
+            BattleSnapshot.getCurrentYear(-71);
           }
           Star.f((byte) -101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "vn.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vn.A(" + param0 + ')');
         }
     }
 
-    final static int e(int param0) {
+    final static int getCurrentYear(int param0) {
         if (param0 != -13299) {
-          BattleSnapshot.a((byte) 41);
+          BattleSnapshot.clearStatics((byte) 41);
         }
         return new Date().getYear() + 1900;
     }
@@ -95,7 +95,7 @@ final class BattleSnapshot extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "vn.F(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "vn.F(" + param0 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class BattleSnapshot extends IntrusiveNode {
         return;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_p = null;
         field_s = null;
         field_y = null;
@@ -158,7 +158,7 @@ final class BattleSnapshot extends IntrusiveNode {
         field_A = null;
         field_i = null;
         if (param0 != 68) {
-          BattleSnapshot.e(52);
+          BattleSnapshot.getCurrentYear(52);
         }
     }
 
@@ -181,7 +181,7 @@ final class BattleSnapshot extends IntrusiveNode {
           }
           this.c(true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class BattleSnapshot extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

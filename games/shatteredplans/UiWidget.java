@@ -4,7 +4,7 @@
 import java.util.*;
 
 class UiWidget extends IntrusiveNode {
-    qo field_j;
+    TextLayout field_j;
     WidgetListener field_u;
     String field_v;
     int field_x;
@@ -22,12 +22,12 @@ class UiWidget extends IntrusiveNode {
     static String field_r;
     static Sprite field_t;
 
-    final void d(byte param0) {
+    final void reapplyBounds(byte param0) {
         int var2 = 10 / ((-44 - param0) / 63);
-        this.a(this.field_q, this.field_n, (byte) 108, this.field_m, this.field_x);
+        this.setBounds(this.field_q, this.field_n, (byte) 108, this.field_m, this.field_x);
     }
 
-    final void a(Hashtable param0, int param1, boolean param2, StringBuilder param3) {
+    final void appendDescription(Hashtable param0, int param1, boolean param2, StringBuilder param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -56,7 +56,7 @@ class UiWidget extends IntrusiveNode {
           if (param2) {
             return;
           }
-          if (this.f(1)) {
+          if (this.isFocused(1)) {
             discarded$3 = param3.append(" focused");
           }
           if (this.field_p != null) {
@@ -64,7 +64,7 @@ class UiWidget extends IntrusiveNode {
             if (!(this.field_p instanceof UiWidget)) {
               discarded$5 = param3.append(this.field_p);
             } else {
-              param3 = this.a((byte) 125, param0, param1 + 1, param3);
+              param3 = this.describeTree((byte) 125, param0, param1 + 1, param3);
             }
           }
           if (null != this.field_u) {
@@ -72,7 +72,7 @@ class UiWidget extends IntrusiveNode {
             if (!(this.field_u instanceof UiWidget)) {
               discarded$7 = param3.append(this.field_u);
             } else {
-              param3 = this.a((byte) 125, param0, param1 + 1, param3);
+              param3 = this.describeTree((byte) 125, param0, param1 + 1, param3);
             }
           }
           return;
@@ -92,7 +92,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -101,22 +101,22 @@ class UiWidget extends IntrusiveNode {
         fr var6;
         int var7;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        this.a(param0, param2, this, (byte) 91);
-        var5 = this.f(1) ? 1 : 0;
+        this.updateHover(param0, param2, this, (byte) 91);
+        var5 = this.isFocused(1) ? 1 : 0;
         if (!param1) {
           if (var5 != 0 &&
             je.field_d != 0) {
-            this.e((byte) 21);
+            this.blur((byte) 21);
           }
         } else {
           if (so.field_o != 0 &&
             var5 != 0) {
-            this.a(0, bb.field_b, pd.field_k, this, param2, param0, so.field_o);
+            this.a(0, bb.field_b, TertiaryListSequence.field_k, this, param2, param0, so.field_o);
           }
           if (je.field_d != 0) {
-            if (!this.a(je.field_d, PointsVictoryChecker.field_p, (byte) 96, SliderWidget.field_P, param0, param2, this)) {
+            if (!this.handlePress(je.field_d, PointsVictoryChecker.field_p, (byte) 96, SliderWidget.field_P, param0, param2, this)) {
               if (var5 != 0) {
-                this.e((byte) -126);
+                this.blur((byte) -126);
               }
             } else {
               param1 = false;
@@ -124,7 +124,7 @@ class UiWidget extends IntrusiveNode {
           }
           if (AllianceExpiredEvent.field_n == 0 &&
             so.field_m != 0) {
-            this.a(pd.field_k, param2, param0, bb.field_b, -600269855, this);
+            this.handleRelease(TertiaryListSequence.field_k, param2, param0, bb.field_b, -600269855, this);
             var6 = oa.field_b;
             if (var6 != null) {
               if (var6.field_u instanceof lf) {
@@ -135,14 +135,14 @@ class UiWidget extends IntrusiveNode {
           }
         }
         so.field_m = AllianceExpiredEvent.field_n;
-        vj.a(this.c(true), 0);
+        vj.a(this.getTooltip(true), 0);
         if (param3 != 0) {
-          this.d((byte) 58);
+          this.reapplyBounds((byte) 58);
         }
         return param1;
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean containsWidget(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -162,18 +162,18 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           this.field_o = 0;
           if (param4 != -600269855) {
-            this.a((Hashtable) null, 103, false, (StringBuilder) null);
+            this.appendDescription((Hashtable) null, 103, false, (StringBuilder) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vg.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vg.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -205,17 +205,17 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    void e(byte param0) {
+    void blur(byte param0) {
         int var2 = -22 % ((-84 - param0) / 33);
     }
 
     final boolean a(int param0, char param1, boolean param2) {
-        if (this.f(1) &&
-          this.a(param0, param1, 13, this)) {
+        if (this.isFocused(1) &&
+          this.handleKey(param0, param1, 13, this)) {
           return true;
         }
         if (!param2) {
@@ -225,10 +225,10 @@ class UiWidget extends IntrusiveNode {
         if (var4 != 80) {
           return false;
         }
-        return this.a((byte) -33, this);
+        return this.containsWidget((byte) -33, this);
     }
 
-    int e(int param0) {
+    int maxLayer(int param0) {
         if (param0 != -600269855) {
           this.field_k = true;
           return 0;
@@ -236,7 +236,7 @@ class UiWidget extends IntrusiveNode {
         return 0;
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         if (param0 == 0 &&
           null != this.field_p) {
           this.field_p.a(this, param3, true, param2, (byte) 12);
@@ -246,7 +246,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
+    boolean handlePress(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -256,7 +256,7 @@ class UiWidget extends IntrusiveNode {
           if (param2 < 95) {
             this.field_p = (WidgetPainter) null;
           }
-          if (!this.a(param1, 88, param3, param5, param4)) {
+          if (!this.containsPoint(param1, 88, param3, param5, param4)) {
             return false;
           }
           this.field_o = param0;
@@ -271,11 +271,11 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, UiWidget param2, byte param3) {
+    void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         int var5_int = 0;
         int stackIn_3_0 = 0;
         boolean stackIn_7_1 = false;
@@ -285,7 +285,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(pd.field_k, 62, bb.field_b, param1, param0) ? 1 : 0;
+          var5_int = this.containsPoint(TertiaryListSequence.field_k, 62, bb.field_b, param1, param0) ? 1 : 0;
           stackIn_3_0 = (this.field_k) ? 0 : 1;
           if (stackIn_3_0 == var5_int) {
             stackIn_7_1 = (var5_int != 0);
@@ -309,11 +309,11 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPoint(int param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_8_0 = false;
         if (param1 < 36) {
           this.a(126, '￡', false);
@@ -323,25 +323,25 @@ class UiWidget extends IntrusiveNode {
     }
 
     public final String toString() {
-        return this.a((byte) -103, new Hashtable(), 0, new StringBuilder()).toString();
+        return this.describeTree((byte) -103, new Hashtable(), 0, new StringBuilder()).toString();
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_r = null;
         field_t = null;
         field_w = null;
         if (param0 != 0) {
-          UiWidget.d(-30);
+          UiWidget.clearStatics(-30);
         }
     }
 
-    void a(int param0, int param1, byte param2, int param3, int param4) {
+    void setBounds(int param0, int param1, byte param2, int param3, int param4) {
         this.field_m = param3;
         this.field_q = param0;
         this.field_x = param4;
         this.field_n = param1;
         if (param2 <= 99) {
-          this.e(127);
+          this.maxLayer(127);
         }
     }
 
@@ -366,19 +366,19 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void draw(int param0, int param1, byte param2) {
         int var5_int = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var4 = this.e(-600269855);
+        int var4 = this.maxLayer(-600269855);
         if (param2 != -66) {
           return;
         }
         for (var5_int = 0; var5_int <= var4; var5_int++) {
-          this.a(var5_int, -11857, param0, param1);
+          this.drawLayer(var5_int, -11857, param0, param1);
         }
         String var5 = IntrusiveDequeCursor.a(false);
         if (var5 != null) {
@@ -386,7 +386,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    String c(boolean param0) {
+    String getTooltip(boolean param0) {
         if (!param0) {
           return (String) null;
         }
@@ -396,7 +396,7 @@ class UiWidget extends IntrusiveNode {
         return this.field_v;
     }
 
-    final boolean a(boolean param0, int param1, StringBuilder param2, Hashtable param3) {
+    final boolean markVisited(boolean param0, int param1, StringBuilder param2, Hashtable param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -431,11 +431,11 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    StringBuilder a(byte param0, Hashtable param1, int param2, StringBuilder param3) {
+    StringBuilder describeTree(byte param0, Hashtable param1, int param2, StringBuilder param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_3_0 = null;
@@ -446,8 +446,8 @@ class UiWidget extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(false, param2, param3, param1)) {
-            this.a(param1, param2, false, param3);
+          if (this.markVisited(false, param2, param3, param1)) {
+            this.appendDescription(param1, param2, false, param3);
           }
           var5_int = -116 / ((64 - param0) / 61);
           stackIn_3_0 = (StringBuilder) (param3);
@@ -468,18 +468,18 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    boolean f(int param0) {
+    boolean isFocused(int param0) {
         if (param0 != 1) {
           return false;
         }
         return false;
     }
 
-    boolean a(int param0, char param1, int param2, UiWidget param3) {
+    boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -500,7 +500,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -523,11 +523,11 @@ class UiWidget extends IntrusiveNode {
           this.field_u = param2;
           if (this.field_p instanceof WidgetMetrics) {
             var4 = (WidgetMetrics) ((Object) this.field_p);
-            this.field_x = var4.a((byte) -52, this);
-            this.field_n = var4.a(true, this);
+            this.field_x = var4.getTextHeight((byte) -52, this);
+            this.field_n = var4.getTextWidth(true, this);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -542,7 +542,7 @@ class UiWidget extends IntrusiveNode {
           this.field_m = param0;
           this.field_x = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

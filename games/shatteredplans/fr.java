@@ -22,7 +22,7 @@ final class fr extends SingleChildWidget {
         }
         if (MatchingTextValidator.field_t.field_k) {
           il.a(var1, 0, var2, Star.field_K);
-          gf.f(0, 0, 640, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 0, 640, 0);
           return;
         }
         Star.field_K.drawOpaque(-var1 >> 4, -var2 >> 4);
@@ -30,12 +30,12 @@ final class fr extends SingleChildWidget {
 
     final void h(int param0) {
         super.h(param0);
-        this.field_z.a(0, this.field_n, (byte) 101, 0, this.field_x);
+        this.field_z.setBounds(0, this.field_n, (byte) 101, 0, this.field_x);
         this.field_J = this.field_m;
         this.field_C = this.field_q;
     }
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         int stackIn_17_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_25_1 = 0;
@@ -51,7 +51,7 @@ final class fr extends SingleChildWidget {
           if ((!(this.field_z instanceof FocusableWidget) ||
             ((FocusableWidget) (this.field_z)).field_y) &&
             this.field_o == 1) {
-            var5_int = -param0 + (pd.field_k - this.field_A);
+            var5_int = -param0 + (TertiaryListSequence.field_k - this.field_A);
             var6 = -this.field_G + (bb.field_b - param1);
             if (this.field_m != var5_int ||
               var6 != this.field_q) {
@@ -93,7 +93,7 @@ final class fr extends SingleChildWidget {
               }
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,7 +105,7 @@ final class fr extends SingleChildWidget {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -176,16 +176,16 @@ final class fr extends SingleChildWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    final void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.handleRelease(param0, param1, param2, param3, param4, param5);
           this.field_o = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fr.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fr.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -198,11 +198,11 @@ final class fr extends SingleChildWidget {
           this.field_B = param7 ? true : false;
           this.field_z = param6;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fr.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fr.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    final StringBuilder a(byte param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder describeTree(byte param0, Hashtable param1, int param2, StringBuilder param3) {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         int var5_int = 0;
@@ -216,8 +216,8 @@ final class fr extends SingleChildWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 6 % ((64 - param0) / 61);
-          if (this.a(false, param2, param3, param1)) {
-            this.a(param1, param2, false, param3);
+          if (this.markVisited(false, param2, param3, param1)) {
+            this.appendDescription(param1, param2, false, param3);
             this.a(81, param1, param2, param3);
             discarded$64 = param3.append(" revert=").append(this.field_B);
             if (this.field_J != 2147483647 &&
@@ -243,7 +243,7 @@ final class fr extends SingleChildWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class fr extends SingleChildWidget {
         return var1;
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePress(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_13_0 = 0;
@@ -265,7 +265,7 @@ final class fr extends SingleChildWidget {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8_int = super.a(param0, param1, (byte) 118, param3, param4, param5, param6) ? 1 : 0;
+          var8_int = super.handlePress(param0, param1, (byte) 118, param3, param4, param5, param6) ? 1 : 0;
           if (param2 <= 95) {
             return true;
           }
@@ -273,7 +273,7 @@ final class fr extends SingleChildWidget {
             this.field_E) {
             return true;
           }
-          if (!this.a(param1, 101, param3, param5, param4)) {
+          if (!this.containsPoint(param1, 101, param3, param5, param4)) {
             stackIn_13_0 = var8_int;
             return stackIn_13_0 != 0;
           }
@@ -294,11 +294,11 @@ final class fr extends SingleChildWidget {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStatics(int param0) {
         field_H = null;
         if (param0 != -950540796) {
           return;

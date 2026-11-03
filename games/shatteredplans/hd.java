@@ -6,7 +6,7 @@ final class hd extends IntrusiveNode {
     int field_h;
     static oa field_s;
     Sprite field_i;
-    static qr field_m;
+    static AnimatedPanel field_m;
     static byte[][] field_q;
     static String field_p;
     static String field_j;
@@ -34,32 +34,32 @@ final class hd extends IntrusiveNode {
         int var4Lifetime1;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          gf.b();
+          SoftwareRasterizer.clear();
           var2 = 300 - di.field_m;
           var1_int = -25 + var2 / 8;
           DualLinkDeque.field_a.b(var1_int, 0, 33023);
           var1_intLifetime1 = var2 / 6 - 100;
           Dialog.field_D.b(var1_intLifetime1, 0, 4227327);
-          oi.field_d.drawAlpha(var1_intLifetime1, 0, dp.field_r / 8);
-          var7 = fe.field_y;
+          oi.field_d.drawAlpha(var1_intLifetime1, 0, QuickChatCategoryDefinition.field_r / 8);
+          var7 = MenuButton.field_y;
           var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
             var9 = var7[var4];
             if (var9.field_a != 0) {
-              gf.b(var1_intLifetime1 + var9.field_e << 4, var9.field_j << 4, var9.field_f, var9.field_a, fe.field_u);
+              SoftwareRasterizer.b(var1_intLifetime1 + var9.field_e << 4, var9.field_j << 4, var9.field_f, var9.field_a, MenuButton.field_u);
             }
           }
           var1_intLifetime2 = -250 + var2 / 4;
           vm.field_Jb.b(var1_intLifetime2, 120, 8421631);
-          SliderPainter.field_e.drawAlpha(var1_intLifetime2, param0, dp.field_r / 4);
-          sr.field_F.drawAlpha(var1_intLifetime2, 120, dp.field_r);
-          var3Lifetime1 = fe.field_H;
+          SliderPainter.field_e.drawAlpha(var1_intLifetime2, param0, QuickChatCategoryDefinition.field_r / 4);
+          sr.field_F.drawAlpha(var1_intLifetime2, 120, QuickChatCategoryDefinition.field_r);
+          var3Lifetime1 = MenuButton.field_H;
           var8 = 0;
           var4Lifetime1 = var8;
           while (var3Lifetime1.length > var8) {
             var10 = var3Lifetime1[var8];
             if (0 != var10.field_a) {
-              gf.b(var10.field_e + var1_intLifetime2 << 4, var10.field_j + 120 << 4, var10.field_f, var10.field_a, fe.field_u);
+              SoftwareRasterizer.b(var10.field_e + var1_intLifetime2 << 4, var10.field_j + 120 << 4, var10.field_f, var10.field_a, MenuButton.field_u);
             }
             var8++;
           }
@@ -67,11 +67,11 @@ final class hd extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "hd.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "hd.A(" + param0 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_p = null;
         field_j = null;
         field_r = null;
@@ -118,10 +118,10 @@ final class hd extends IntrusiveNode {
           }
           this.field_o.bindAsRenderTarget();
           this.field_i.drawOpaque(3, 3);
-          gf.b(1, 1, 0, 0, 6 + var4_int, var5 + 6);
+          SoftwareRasterizer.b(1, 1, 0, 0, 6 + var4_int, var5 + 6);
           for (var7 = (var4_int + 6) * (6 + var5) - 1; var7 >= 0; var7--) {
-            if (0 == (128 & gf.field_h[var7])) {
-              gf.field_h[var7] = gf.field_h[var7] << 1;
+            if (0 == (128 & SoftwareRasterizer.field_h[var7])) {
+              SoftwareRasterizer.field_h[var7] = SoftwareRasterizer.field_h[var7] << 1;
             }
           }
           cg.i(0);
@@ -143,7 +143,7 @@ final class hd extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class hd extends IntrusiveNode {
         }
         ld var2 = new ld();
         SectorCacheStore.field_d.addLast((byte) -113, var2);
-        cp.a(param0, 1);
+        CanvasResizeController.a(param0, 1);
         return var2;
     }
 
@@ -178,7 +178,7 @@ final class hd extends IntrusiveNode {
           }
           kb.field_A = kb.field_A - 294;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hd.B(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hd.B(" + param0 + ')');
         }
     }
 

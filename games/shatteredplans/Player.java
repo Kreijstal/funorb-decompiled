@@ -42,7 +42,7 @@ final class Player {
           if (!sr.field_h) {
             return false;
           }
-          if (em.field_h == 2 &&
+          if (ProductionContent.field_h == 2 &&
             null != nd.field_k) {
             var3 = (CharSequence) ((Object) param1);
             if (nd.field_k.equals(ji.a(var3, true))) {
@@ -61,7 +61,7 @@ final class Player {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class Player {
           this.field_A = 0;
           this.field_m = null;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

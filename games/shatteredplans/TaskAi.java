@@ -6,7 +6,7 @@ import java.util.*;
 final class TaskAi implements Ai {
     private Player field_w;
     static String field_d;
-    static qr field_o;
+    static AnimatedPanel field_o;
     private int field_x;
     private int field_j;
     private IntrusiveDeque field_l;
@@ -649,7 +649,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -727,7 +727,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -776,7 +776,7 @@ final class TaskAi implements Ai {
           var2Lifetime1++;
           var4_ref = (AttackTask) (this.field_k.nextForward((byte) -71));
         }
-        DiskArchiveRequest.a(var10, -43, this.field_e);
+        DiskArchiveRequest.sortParallel(var10, -43, this.field_e);
         return;
     }
 
@@ -813,7 +813,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         if (param0 > -42) {
           field_a = (GameRules) null;
@@ -823,11 +823,11 @@ final class TaskAi implements Ai {
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
-        qr stackIn_11_0 = null;
+        AnimatedPanel stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        qr stackIn_18_0 = null;
+        AnimatedPanel stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        qr stackIn_23_0 = null;
+        AnimatedPanel stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -836,26 +836,26 @@ final class TaskAi implements Ai {
           field_d = (String) null;
         }
         if (0 <= a.field_j) {
-          nm.field_c.field_z = re.a(BattleSnapshot.field_A, 4371, new String[]{Integer.toString(a.field_j)});
+          nm.field_c.field_z = QuickChatCategoryRegistry.a(BattleSnapshot.field_A, 4371, new String[]{Integer.toString(a.field_j)});
         } else {
           nm.field_c.field_z = null;
         }
         stackIn_11_0 = MapViewState.field_j;
         stackIn_12_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (np.field_a == null) && (he.field_p == null);
-        ((qr) (Object) stackIn_11_0).a(stackIn_12_1, -20429);
+        ((AnimatedPanel) (Object) stackIn_11_0).a(stackIn_12_1, -20429);
         stackIn_18_0 = AchievementProgress.field_i;
         stackIn_19_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (null == np.field_a) && (null == he.field_p);
-        ((qr) (Object) stackIn_18_0).a(stackIn_19_1, -20429);
+        ((AnimatedPanel) (Object) stackIn_18_0).a(stackIn_19_1, -20429);
         stackIn_23_0 = so.field_v;
         stackIn_24_1 = (param0) && (!param2) && (IntrusiveDequeCursor.field_b);
-        ((qr) (Object) stackIn_23_0).a(stackIn_24_1, param1 ^ 10210);
+        ((AnimatedPanel) (Object) stackIn_23_0).a(stackIn_24_1, param1 ^ 10210);
         Archive.field_g.field_d.f(false);
         if (0 != vm.field_Ab.field_rb) {
           GzipInflater.field_d = true;
         }
         boolean decompiledFrameRemainder0 = true;
         if (gb.field_m.field_rb != 0) {
-          if (!hm.field_o &&
+          if (!PanelNode.field_o &&
             0 >= StarAnnotation.field_m && (!(bs.field_b >= 2) ||
             !di.field_p[12])) {
             uc.field_B = true;
@@ -867,10 +867,10 @@ final class TaskAi implements Ai {
         }
         if (LinkPainter.field_b.field_rb != 0) {
           if (1 == nl.field_a.length &&
-            nl.field_a[0] != qk.field_x) {
-            qk.field_x = nl.field_a[0];
+            nl.field_a[0] != MenuLabel.field_x) {
+            MenuLabel.field_x = nl.field_a[0];
           }
-          ei.a(param3, qk.field_x, mk.field_d, true, false, 0);
+          ei.a(param3, MenuLabel.field_x, mk.field_d, true, false, 0);
         }
         if (SocketConnector.field_d.field_rb != 0) {
           IntrusiveDequeCursor.field_b = false;
@@ -989,7 +989,7 @@ final class TaskAi implements Ai {
               }
               var5.unlink((byte) -82);
               var5.unlinkSecondary(16);
-              var5.d(true);
+              var5.unlinkTertiary(true);
               var5.field_y.field_J = var5.field_y.field_J + var5.field_z;
               param0 = param0 - var5.field_z;
             }
@@ -1040,7 +1040,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 
@@ -1175,7 +1175,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1232,7 +1232,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1256,7 +1256,7 @@ final class TaskAi implements Ai {
             }
             vj.field_E.addLast((byte) -113, new ProjectUse(0, this.field_w, param0));
             no.field_b = true;
-            qo.field_e = param0;
+            TextLayout.field_e = param0;
             if (param1 != 31308) {
               this.field_t = -21;
             }
@@ -1286,7 +1286,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1436,7 +1436,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1503,7 +1503,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -1545,7 +1545,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1646,7 +1646,7 @@ final class TaskAi implements Ai {
           if (param0 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (eo.a(param0, 7433)) {
+          if (eo.isPowerOfTwo(param0, 7433)) {
             stackIn_5_0 = (int)((long)param0 * ((long)param1.nextInt() & 4294967295L) >> 32);
             return stackIn_5_0;
           }
@@ -1657,7 +1657,7 @@ final class TaskAi implements Ai {
           do {
             var4 = param1.nextInt();
           } while (var4 >= var3_int);
-          stackIn_11_0 = jf.a(param0, var4, -102);
+          stackIn_11_0 = jf.floorMod(param0, var4, -102);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1669,7 +1669,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1758,7 +1758,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2047,7 +2047,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2313,7 +2313,7 @@ final class TaskAi implements Ai {
             if (no.field_f[var10_ref_ln.field_p]) {
               var8 = var10_ref_ln.field_J;
               if (var10_ref_ln.field_u ||
-                var10_ref_ln == qo.field_e) {
+                var10_ref_ln == TextLayout.field_e) {
                 var8 = var8 * 2;
               }
               if (var9_int < var8) {
@@ -2335,7 +2335,7 @@ final class TaskAi implements Ai {
             if (no.field_f[var10_ref_lnLifetime1.field_p]) {
               var8Lifetime2 = var10_ref_lnLifetime1.field_J;
               if (var10_ref_lnLifetime1.field_u ||
-                qo.field_e == var10_ref_lnLifetime1) {
+                TextLayout.field_e == var10_ref_lnLifetime1) {
                 var8Lifetime2 = var8Lifetime2 * 2;
               }
               if (var8Lifetime2 > var9_intLifetime1) {
@@ -2372,7 +2372,7 @@ final class TaskAi implements Ai {
         while (var7Lifetime1 != null) {
           var4 = ((Star) (var7Lifetime1)).field_x;
           if (((Star) (var7Lifetime1)).field_u ||
-            qo.field_e == var7Lifetime1) {
+            TextLayout.field_e == var7Lifetime1) {
             var4 = var4 * 2;
           }
           if (var4 > var5) {
@@ -2517,7 +2517,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -2843,7 +2843,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_159_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_158_0), ((StringBuilder) (Object) stackIn_158_1).append(stackIn_159_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_158_0), ((StringBuilder) (Object) stackIn_158_1).append(stackIn_159_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2903,7 +2903,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

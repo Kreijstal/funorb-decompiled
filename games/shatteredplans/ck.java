@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ck {
-    static qr field_a;
+    static AnimatedPanel field_a;
     static int field_e;
     static String field_d;
     static String field_b;
@@ -52,38 +52,38 @@ final class ck {
         try {
           mp.field_b = ri.a("font", "", param0, param4, (byte) 89);
           rs.field_Cb = ri.a("smallfont", "", param0, param4, (byte) 111);
-          SecondaryNodeHashTable.field_f = ds.a(true, param0, "", "logo");
+          SecondaryNodeHashTable.field_f = MessageKind.a(true, param0, "", "logo");
           var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
           var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;
           RandomAccessCacheFile.a(-110);
           jf.field_a = new Sprite(var7_int, var8);
           jf.field_a.bindAsRenderTarget();
-          gf.d(0, 0, var7_int, var8, 16777215);
+          SoftwareRasterizer.fillRect(0, 0, var7_int, var8, 16777215);
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 0);
-          gf.b(3, 3, 0, 0, var7_int, var8);
+          SoftwareRasterizer.b(3, 3, 0, 0, var7_int, var8);
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 255);
           cg.i(param6 + 8);
-          fm.field_d = ae.a(101, "", param0, "edge_orbs");
+          HuffmanCodec.field_d = ae.a(101, "", param0, "edge_orbs");
           IsaacRandom.field_b = new Sprite[4];
           RandomAccessCacheFile.a(param6 ^ 108);
           for (var9_int = 0; 4 > var9_int; var9_int++) {
-            var19 = fm.field_d[var9_int];
+            var19 = HuffmanCodec.field_d[var9_int];
             var20 = new Sprite(var19.field_z + 32, 32 + var19.field_w);
             var20.bindAsRenderTarget();
             var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 16777215);
-            gf.b(8, 8, 0, 0, var20.field_z, var20.field_w);
+            SoftwareRasterizer.b(8, 8, 0, 0, var20.field_z, var20.field_w);
             var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 0);
             IsaacRandom.field_b[var9_int] = var20;
           }
           cg.i(0);
-          hn.field_c = ds.a(true, param0, "", "menu_hex");
+          hn.field_c = MessageKind.a(true, param0, "", "menu_hex");
           jm.field_r = id.a(2, param0, "", "instr_mainview");
-          hb.field_d = id.a(param6 ^ -6, param0, "", "instr_starframe");
+          NodeSequence.field_d = id.a(param6 ^ -6, param0, "", "instr_starframe");
           ae.a(-100, "", param0, "zoomicons");
           var9 = va.a("hud_icons", 0, "", param0);
           TurnEventLog.field_d = var9[3];
           MusicCrossfadeStream.field_F = var9[2];
-          fm.field_e = var9[0];
+          HuffmanCodec.field_e = var9[0];
           wl.field_d = var9[4];
           tm.field_r = var9[1];
           var21 = va.a("hud_icons_red", param6 + 8, "", param0);
@@ -99,57 +99,57 @@ final class ck {
           GameKeyHandler.field_b = var22[1];
           ArchiveIndex.field_p = var22[2];
           Player.field_a = va.a("icon_circles", param6 + 8, "", param0);
-          dm.field_d = va.a("production_icons", 0, "", param0);
-          aq.field_i = ds.a(true, param0, "", "production_button");
-          hq.field_a = ds.a(true, param0, "", "production_button_down");
+          ObjectList.field_d = va.a("production_icons", 0, "", param0);
+          aq.field_i = MessageKind.a(true, param0, "", "production_button");
+          hq.field_a = MessageKind.a(true, param0, "", "production_button_down");
           d.field_b = va.a("project_icons", 0, "", param0);
           IntrusiveDeque.field_a = va.a("faction_icons", 0, "", param0);
-          hb.field_b = va.a("faction_icons_large", 0, "", param0);
+          NodeSequence.field_b = va.a("faction_icons_large", 0, "", param0);
           var23_ref = IntrusiveDeque.field_a[1];
           IntrusiveDeque.field_a[1] = IntrusiveDeque.field_a[5];
           IntrusiveDeque.field_a[5] = var23_ref;
           var24_ref = IntrusiveDeque.field_a[2];
           IntrusiveDeque.field_a[2] = IntrusiveDeque.field_a[4];
           IntrusiveDeque.field_a[4] = var24_ref;
-          var25_ref = hb.field_b[1];
-          hb.field_b[1] = hb.field_b[5];
-          hb.field_b[5] = var25_ref;
-          var26_ref = hb.field_b[2];
-          hb.field_b[2] = hb.field_b[4];
-          hb.field_b[4] = var26_ref;
-          rk.field_j = ds.a(true, param0, "", "ready_button");
-          ei.field_a = ds.a(true, param0, "", "ready_button_down");
-          jl.field_W = ds.a(true, param0, "", "shine_left");
-          DerelictMapReader.field_g = ds.a(true, param0, "", "shine_right");
-          VictoryChecker.field_h = ds.a(true, param0, "", "shine_mid");
-          SpriteState.field_q = ds.a(true, param0, "", "combat_hex_white");
+          var25_ref = NodeSequence.field_b[1];
+          NodeSequence.field_b[1] = NodeSequence.field_b[5];
+          NodeSequence.field_b[5] = var25_ref;
+          var26_ref = NodeSequence.field_b[2];
+          NodeSequence.field_b[2] = NodeSequence.field_b[4];
+          NodeSequence.field_b[4] = var26_ref;
+          rk.field_j = MessageKind.a(true, param0, "", "ready_button");
+          ei.field_a = MessageKind.a(true, param0, "", "ready_button_down");
+          jl.field_W = MessageKind.a(true, param0, "", "shine_left");
+          DerelictMapReader.field_g = MessageKind.a(true, param0, "", "shine_right");
+          VictoryChecker.field_h = MessageKind.a(true, param0, "", "shine_mid");
+          SpriteState.field_q = MessageKind.a(true, param0, "", "combat_hex_white");
           RandomAccessCacheFile.a(-116);
           SpriteState.field_q.bindAsRenderTarget();
           SpriteState.field_q.b(0, 0, 2105376);
           cg.i(0);
-          bj.field_H = ds.a(true, param0, "", "planet_burnt");
-          qe.field_j = ds.a(true, param0, "", "planet_scorchedearth");
-          NetworkArchiveRequest.field_x = ds.a(true, param0, "", "planet_earthlike");
-          ta.field_a = ds.a(true, param0, "", "planet_exotic");
-          be.field_k = ds.a(true, param0, "", "planet_gas");
-          rl.field_c = ds.a(true, param0, "", "planet_ringed");
-          kr.field_d = ds.a(true, param0, "", "planet_rock");
-          rk.field_k = ds.a(true, param0, "", "alien_miner");
-          IntrusiveNodeHashTable.field_h = ds.a(true, param0, "", "alien_ship");
-          cp.field_t = ds.a(true, param0, "", "alien_base");
+          bj.field_H = MessageKind.a(true, param0, "", "planet_burnt");
+          qe.field_j = MessageKind.a(true, param0, "", "planet_scorchedearth");
+          NetworkArchiveRequest.field_x = MessageKind.a(true, param0, "", "planet_earthlike");
+          ta.field_a = MessageKind.a(true, param0, "", "planet_exotic");
+          be.field_k = MessageKind.a(true, param0, "", "planet_gas");
+          rl.field_c = MessageKind.a(true, param0, "", "planet_ringed");
+          kr.field_d = MessageKind.a(true, param0, "", "planet_rock");
+          rk.field_k = MessageKind.a(true, param0, "", "alien_miner");
+          IntrusiveNodeHashTable.field_h = MessageKind.a(true, param0, "", "alien_ship");
+          CanvasResizeController.field_t = MessageKind.a(true, param0, "", "alien_base");
           kb.field_y = id.a(2, param0, "", "ship");
           wo.field_b = id.a(2, param0, "", "shield");
           oo.field_a = id.a(param6 ^ -6, param0, "", "defensegrid");
           ab.field_e = id.a(2, param0, "", "chevron");
-          TextFieldWidget.field_L = ds.a(true, param0, "", "warning");
+          TextFieldWidget.field_L = MessageKind.a(true, param0, "", "warning");
           bd.field_G = id.a(2, param0, "", "hammer");
           e.field_e = id.a(param6 ^ -6, param0, "", "beaker");
-          UiWidget.field_t = ds.a(true, param0, "", "factionring");
-          SpriteState.field_y = ds.a(true, param0, "", "factionringtag");
-          ek.field_z = ds.a(true, param0, "", "factionringcentre");
-          MatchingTextValidator.field_p = ds.a(true, param0, "", "arrowship");
-          eq.field_o = ds.a(true, param0, "", "arrowshipdamaged");
-          cf.field_F = ds.a(true, param0, "", "fleetsarrowship");
+          UiWidget.field_t = MessageKind.a(true, param0, "", "factionring");
+          SpriteState.field_y = MessageKind.a(true, param0, "", "factionringtag");
+          ArrayWidgetGroup.field_z = MessageKind.a(true, param0, "", "factionringcentre");
+          MatchingTextValidator.field_p = MessageKind.a(true, param0, "", "arrowship");
+          eq.field_o = MessageKind.a(true, param0, "", "arrowshipdamaged");
+          cf.field_F = MessageKind.a(true, param0, "", "fleetsarrowship");
           di.field_i = va.a("fleetbuttons", 0, "", param0);
           StarAbandonedEvent.field_r = va.a("anim_icons", 0, "", param0);
           GarrisonTask.field_s = new ArgbSprite(6, 6);
@@ -192,17 +192,17 @@ final class ck {
           GarrisonTask.field_s.field_B[23] = 1207959552;
           GarrisonTask.field_s.field_B[21] = -10066330;
           for (var13_int = 0; mj.field_Nb.length > var13_int; var13_int++) {
-            mj.field_Nb[var13_int] = ds.a(true, param0, "", "res_side_" + var13_int);
-            ts.field_L[var13_int] = ds.a(true, param0, "", "res_low_" + var13_int);
+            mj.field_Nb[var13_int] = MessageKind.a(true, param0, "", "res_side_" + var13_int);
+            ts.field_L[var13_int] = MessageKind.a(true, param0, "", "res_low_" + var13_int);
           }
-          qk.field_y = va.a("defnet_anim_small", 0, "", param0);
-          for (var13_intLifetime1 = 0; var13_intLifetime1 < qk.field_y[0].field_B.length; var13_intLifetime1++) {
-            if (qk.field_y[0].field_B[var13_intLifetime1] != 0) {
-              qk.field_y[0].field_B[var13_intLifetime1] = ((qk.field_y[0].field_B[var13_intLifetime1] >>> 24) / 4 << 24) + 6006988;
+          MenuLabel.field_y = va.a("defnet_anim_small", 0, "", param0);
+          for (var13_intLifetime1 = 0; var13_intLifetime1 < MenuLabel.field_y[0].field_B.length; var13_intLifetime1++) {
+            if (MenuLabel.field_y[0].field_B[var13_intLifetime1] != 0) {
+              MenuLabel.field_y[0].field_B[var13_intLifetime1] = ((MenuLabel.field_y[0].field_B[var13_intLifetime1] >>> 24) / 4 << 24) + 6006988;
             }
           }
           for (var13_intLifetime2 = 1; 13 > var13_intLifetime2; var13_intLifetime2++) {
-            var27 = qk.field_y[var13_intLifetime2];
+            var27 = MenuLabel.field_y[var13_intLifetime2];
             for (var15_int = 0; var27.field_B.length > var15_int; var15_int++) {
               if ((var27.field_B[var15_int] & -16777216) == 0) {
                 var27.field_B[var15_int] = 0;
@@ -245,8 +245,8 @@ final class ck {
           kb.field_y.drawHalfSize(0, 0);
           pr.field_a.bindAsRenderTarget();
           AllianceExpiredEvent.field_k.b(1, 1, 8421504);
-          fm.field_b = new Sprite(10, 12);
-          fm.field_b.bindAsRenderTarget();
+          HuffmanCodec.field_b = new Sprite(10, 12);
+          HuffmanCodec.field_b.bindAsRenderTarget();
           wo.field_b.b(1, 1, 8421504);
           ef.field_f = new Sprite(12, 12);
           ef.field_f.bindAsRenderTarget();
@@ -259,8 +259,8 @@ final class ck {
           TextFieldWidget.field_L.draw(0, 0);
           for (var13_intLifetime7 = 0; var13_intLifetime7 < wa.field_b.field_B.length; var13_intLifetime7++) {
             if (wa.field_b.field_B[var13_intLifetime7] != 0) {
-              gf.c(var13_intLifetime7 % wa.field_b.field_z, var13_intLifetime7 / wa.field_b.field_z, 16777215, 128);
-              wa.field_b.field_B[var13_intLifetime7] = ee.a(wa.field_b.field_B[var13_intLifetime7], -16777216);
+              SoftwareRasterizer.blendPixel(var13_intLifetime7 % wa.field_b.field_z, var13_intLifetime7 / wa.field_b.field_z, 16777215, 128);
+              wa.field_b.field_B[var13_intLifetime7] = PrivateChatMessage.intOr(wa.field_b.field_B[var13_intLifetime7], -16777216);
             }
           }
           fb.field_Vb = new Sprite(18, 12);
@@ -268,9 +268,9 @@ final class ck {
           bd.field_G.b(1, 1, 8421504);
           cg.i(0);
           pr.field_a.addOutline(16777215);
-          fm.field_b.addOutline(16777215);
+          HuffmanCodec.field_b.addOutline(16777215);
           if (param6 != -8) {
-            ck.a(-23);
+            ck.clearStatics(-23);
           }
           ef.field_f.addOutline(16777215);
           mj.field_Kb.addOutline(16777215);
@@ -278,7 +278,7 @@ final class ck {
           kj.field_f = ValidationIndicator.a((byte) 111, 80);
           DerelictVictoryChecker.field_n = param0;
           DerelictMapReader.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);
-          cm.field_b = id.a(param6 + 10, param2, "basic", "orbcoin");
+          IntHashIndex.field_b = id.a(param6 + 10, param2, "basic", "orbcoin");
           var13 = StarAnnotation.field_m > 0 ? "unachieved" : "locked";
           ArchiveRequest.a(14, id.a(param6 ^ -6, param2, "basic", var13));
           CellVertex.field_j = ae.a(param6 + 70, "", param0, "achievements");
@@ -291,13 +291,13 @@ final class ck {
           PlayerEliminatedEvent.a(param1, param2, param3, param5, true, param0);
           GameScreen.field_R = new Sprite(15, 15);
           bs.a(GameScreen.field_R, 78);
-          gf.g(15, 15, 15, 65793);
-          gf.g(15, 15, 5, 0);
+          SoftwareRasterizer.fillCircle(15, 15, 15, 65793);
+          SoftwareRasterizer.fillCircle(15, 15, 5, 0);
           le.field_d = new Sprite(15, 20);
           le.field_d.bindAsRenderTarget();
-          gf.d(0, 0, 15, 20, 65793);
-          gf.g(0, -1, 5, 0);
-          gf.g(0, 20, 5, 0);
+          SoftwareRasterizer.fillRect(0, 0, 15, 20, 65793);
+          SoftwareRasterizer.fillCircle(0, -1, 5, 0);
+          SoftwareRasterizer.fillCircle(0, 20, 5, 0);
           var15Lifetime1 = id.a(2, param0, "", "menu_pip");
           GameKeyHandler.field_e = new Sprite(2 + var15Lifetime1.field_z, 2 + var15Lifetime1.field_w);
           GameKeyHandler.field_e.bindAsRenderTarget();
@@ -306,7 +306,7 @@ final class ck {
           bg.field_a.bindAsRenderTarget();
           for (var16 = 0; var16 < 20; var16++) {
             var17 = var16 > 10 ? 20 - var16 : 3;
-            gf.f(11 - var17, 1 + var16, 2 * var17, 65793);
+            SoftwareRasterizer.drawHorizontalLine(11 - var17, 1 + var16, 2 * var17, 65793);
           }
           cg.i(0);
           GameKeyHandler.field_e.addOutline(2458760);
@@ -314,7 +314,7 @@ final class ck {
           WidgetTheme.field_k = bg.field_a.copy();
           WidgetTheme.field_k.flipVertical();
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ck.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ck.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ final class ck {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -376,7 +376,7 @@ final class ck {
               var10 = param1.getParameter("cookieprefix");
               var3 = var10 + "settings";
               var6 = -67 / ((-84 - param0) / 42);
-              var4 = (String) (ll.a("getcookies", param1, (byte) 53));
+              var4 = (String) (ll.callJavaScript("getcookies", param1, (byte) 53));
               var5 = so.a(var4, ';', 111);
               for (var7 = 0; var5.length > var7; var7++) {
                 var8 = var5[var7].indexOf('=');
@@ -406,7 +406,7 @@ final class ck {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -428,7 +428,7 @@ final class ck {
         try {
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          ps.a(param0, 0, var3, 0, var2_int);
+          ArrayOperations.copyBytes(param0, 0, var3, 0, var2_int);
           if (param1) {
             var4 = (Archive) null;
             ck.a((Archive) null, (java.applet.Applet) null, (Archive) null, (Archive) null, (Archive) null, (Archive) null, (byte) 57);
@@ -445,11 +445,11 @@ final class ck {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_a = null;
         if (param0 <= 83) {

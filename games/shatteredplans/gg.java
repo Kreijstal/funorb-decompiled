@@ -4,7 +4,7 @@
 final class gg {
     static String field_b;
     static Sprite field_e;
-    static qr field_d;
+    static AnimatedPanel field_d;
     static String field_c;
     static int field_a;
 
@@ -33,11 +33,11 @@ final class gg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         field_c = null;
         field_d = null;
@@ -54,7 +54,7 @@ final class gg {
           }
           int var2_int = -79 / ((-55 - param1) / 60);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "gg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

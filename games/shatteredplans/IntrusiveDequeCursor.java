@@ -87,7 +87,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_i = null;
         field_g = null;
         field_a = null;
@@ -136,7 +136,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -144,7 +144,7 @@ final class IntrusiveDequeCursor {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "on.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "on.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class IntrusiveDequeCursor {
               }
               var2 = stackIn_94_0;
               stackIn_99_0 = (param1) && (var2 == 0) && (VictoryChecker.a(45));
-              qr.a(stackIn_99_0, (byte) 112);
+              AnimatedPanel.a(stackIn_99_0, (byte) 112);
               if (v.field_b) {
                 if (!sr.field_h) {
                   return;
@@ -258,7 +258,7 @@ final class IntrusiveDequeCursor {
             }
             var2Lifetime4 = stackIn_74_0;
             stackIn_79_0 = (param1) && (var2Lifetime4 == 0) && (VictoryChecker.a(45));
-            qr.a(stackIn_79_0, (byte) 112);
+            AnimatedPanel.a(stackIn_79_0, (byte) 112);
             if (v.field_b) {
               if (!sr.field_h) {
                 return;
@@ -288,7 +288,7 @@ final class IntrusiveDequeCursor {
           }
           var2Lifetime1 = stackIn_14_0;
           stackIn_19_0 = (param1) && (var2Lifetime1 == 0) && (VictoryChecker.a(45));
-          qr.a(stackIn_19_0, (byte) 112);
+          AnimatedPanel.a(stackIn_19_0, (byte) 112);
           if (v.field_b) {
             if (!sr.field_h) {
               return;
@@ -308,7 +308,7 @@ final class IntrusiveDequeCursor {
         if (!v.field_b) {
           var2Lifetime2 = 0;
           stackIn_39_0 = (param1) && (var2Lifetime2 == 0) && (VictoryChecker.a(45));
-          qr.a(stackIn_39_0, (byte) 112);
+          AnimatedPanel.a(stackIn_39_0, (byte) 112);
           if (v.field_b) {
             if (!sr.field_h) {
               return;
@@ -321,7 +321,7 @@ final class IntrusiveDequeCursor {
         stackIn_51_0 = (!sr.field_h) ? 0 : 1;
         var2Lifetime3 = stackIn_51_0;
         stackIn_56_0 = (param1) && (var2Lifetime3 == 0) && (VictoryChecker.a(45));
-        qr.a(stackIn_56_0, (byte) 112);
+        AnimatedPanel.a(stackIn_56_0, (byte) 112);
         if (v.field_b) {
           if (!sr.field_h) {
             return;

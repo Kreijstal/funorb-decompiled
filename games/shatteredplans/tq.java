@@ -10,7 +10,7 @@ final class tq {
     static String field_i;
     private String[] field_d;
     static char[] field_g;
-    static qh field_j;
+    static MenuWindow field_j;
     static String field_k;
     static wj field_b;
 
@@ -43,7 +43,7 @@ final class tq {
           }
           this.a(95, this.field_e + 1, param0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class tq {
         try {
           this.field_d[param1] = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tq.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tq.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class tq {
           return;
         }
         String[] var3 = new String[this.a(param1, 231)];
-        ps.a(this.field_d, 0, var3, 0, this.field_d.length);
+        ArrayOperations.copyObjects(this.field_d, 0, var3, 0, this.field_d.length);
         this.field_d = var3;
     }
 
@@ -96,11 +96,11 @@ final class tq {
         if (param0 != 220) {
           this.field_e = 1;
         }
-        ps.a(this.field_d, 0, var2, 0, this.field_e + 1);
+        ArrayOperations.copyObjects(this.field_d, 0, var2, 0, this.field_e + 1);
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_k = null;
         field_f = null;
         if (param0 != -31203) {
