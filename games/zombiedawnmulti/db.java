@@ -8,7 +8,7 @@ final class db {
     static int field_c;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 < 8) {
           field_a = (IntrusiveDeque) null;

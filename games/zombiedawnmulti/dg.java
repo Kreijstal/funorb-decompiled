@@ -82,7 +82,7 @@ final class dg extends WidgetContainer implements ButtonActivationListener {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_K = null;
         field_O = null;
         field_I = null;

@@ -7,11 +7,11 @@ final class kc {
     static String field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 >= -98) {
-          kc.a(115);
+          kc.releaseStatics(115);
         }
     }
 

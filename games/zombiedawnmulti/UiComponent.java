@@ -517,7 +517,7 @@ class UiComponent extends qo {
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_C = null;
         field_db = null;
         if (param0) {
@@ -739,7 +739,7 @@ class UiComponent extends qo {
         try {
           var2_int = wj.field_g;
           if (param1 >= -45) {
-            UiComponent.c(false);
+            UiComponent.releaseStatics(false);
           }
           if (param0.field_l == 2) {
             if (!param0.field_k) {

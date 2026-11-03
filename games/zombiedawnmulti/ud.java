@@ -130,10 +130,10 @@ final class ud extends ButtonWidget {
         if (param1 == 1000) {
           return;
         }
-        ud.f(-127);
+        ud.releaseStatics(-127);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 14) {
           field_Z = null;
           field_Q = null;
@@ -146,7 +146,7 @@ final class ud extends ButtonWidget {
           field_Y = null;
           return;
         }
-        ud.f(-15);
+        ud.releaseStatics(-15);
         field_Z = null;
         field_Q = null;
         field_V = null;

@@ -44,7 +44,7 @@ final class fd extends SceneObject {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_G = null;
         field_M = null;
         field_L = null;

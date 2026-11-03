@@ -24,7 +24,7 @@ final class nn {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 72 % ((-49 - param0) / 56);
         field_b = null;
         field_a = null;
@@ -79,7 +79,7 @@ final class nn {
         SoftwareRasterizer.fillRectAlpha(0, 84, 640, 335, 0, 128);
         cc.field_c.a(0, 84);
         if (param0) {
-          nn.b(126);
+          nn.releaseStatics(126);
         }
     }
 
@@ -88,7 +88,7 @@ final class nn {
           return (java.awt.Container) ((Object) cg.field_m);
         }
         if (param0 < 21) {
-          nn.b(-111);
+          nn.releaseStatics(-111);
           return (java.awt.Container) ((Object) StatefulTextPainter.b(0));
         }
         return (java.awt.Container) ((Object) StatefulTextPainter.b(0));

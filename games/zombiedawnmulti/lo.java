@@ -75,7 +75,7 @@ final class lo {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_a = null;
         field_h = null;
@@ -125,7 +125,7 @@ final class lo {
             }
           }
           if (param0 != 8192) {
-            lo.a(50);
+            lo.releaseStatics(50);
           }
           var12 = SecondaryNodeDequeIterator.field_d;
           var10 = var12;

@@ -7,7 +7,7 @@ final class fk extends MenuScreen {
     static String field_o;
     static IntrusiveDeque field_n;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_n = null;
         field_l = null;
@@ -61,7 +61,7 @@ final class fk extends MenuScreen {
           param2.b(var16, SpriteState.field_q[2], param9, param5, param3);
           var17 = param10 + "%";
           if (param8) {
-            fk.e(53);
+            fk.releaseStatics(53);
           }
           param2.b(var17, SpriteState.field_q[3], param9, param5, param3);
           var18 = param7 + "%";

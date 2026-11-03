@@ -48,7 +48,7 @@ final class ik {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         field_e = null;

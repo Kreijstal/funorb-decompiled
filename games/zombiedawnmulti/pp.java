@@ -8,11 +8,11 @@ class pp extends ic {
     static String field_o;
     private String field_m;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_o = null;
         field_q = null;
         if (param0) {
-          pp.a(true);
+          pp.releaseStatics(true);
         }
     }
 

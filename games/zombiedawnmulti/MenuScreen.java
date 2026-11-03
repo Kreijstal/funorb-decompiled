@@ -65,7 +65,7 @@ class MenuScreen {
         LevelActorSpawner.a(var3Lifetime1 != 0, -5, 126, sp.field_g);
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         if (param0) {
           return;

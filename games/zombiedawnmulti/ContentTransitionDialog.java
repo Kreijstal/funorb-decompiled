@@ -16,7 +16,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     static UiComponent field_jb;
     private na field_hb;
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 7181) {
           return;
         }

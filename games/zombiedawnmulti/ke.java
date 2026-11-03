@@ -62,7 +62,7 @@ final class ke {
         return ud.field_O[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + EmailValidator.field_q[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         field_c = null;
         if (!param0) {

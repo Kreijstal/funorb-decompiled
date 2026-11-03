@@ -8,7 +8,7 @@ final class cr extends IntrusiveNode {
     static int field_j;
     static String field_g;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_g = (String) null;
           field_i = null;

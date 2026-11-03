@@ -42,7 +42,7 @@ abstract class FadingDialog extends WidgetContainer {
 
     abstract void drawDialogFrame(boolean param0, int param1, int param2);
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Q = null;
         field_G = null;
         field_O = null;
@@ -133,7 +133,7 @@ abstract class FadingDialog extends WidgetContainer {
           this.setWidgetBounds(ub.field_wb - param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
           return;
         }
-        FadingDialog.g((byte) -100);
+        FadingDialog.releaseStatics((byte) -100);
         this.setWidgetBounds(ub.field_wb - param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
     }
 

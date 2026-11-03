@@ -208,7 +208,7 @@ final class mq extends MenuScreen {
             return stackIn_21_0;
           }
           if (param1 >= -16) {
-            mq.e(-4);
+            mq.releaseStatics(-4);
           }
           if (param0.equals("D")) {
             stackIn_26_0 = Double.TYPE;
@@ -234,13 +234,13 @@ final class mq extends MenuScreen {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_l = null;
         field_q = null;
         field_p = null;
         if (param0 != 22324) {
-          mq.e(-115);
+          mq.releaseStatics(-115);
         }
     }
 
@@ -272,7 +272,7 @@ final class mq extends MenuScreen {
     private final boolean e(int param0, int param1) {
         boolean stackIn_8_0 = false;
         if (param0 != -17) {
-          mq.e(-71);
+          mq.releaseStatics(-71);
         }
         boolean decompiledFrameRemainder0 = true;
         if (param1 != 13 && (param1 != 16 ||

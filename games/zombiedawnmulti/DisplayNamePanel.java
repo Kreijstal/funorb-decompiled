@@ -174,7 +174,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         this.setWidgetBounds(0, 0, 28972, 496, var4 + 55 + var3);
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_S = (String[][]) null;
         if (param0) {
           field_J = (String[][]) null;

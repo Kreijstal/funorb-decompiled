@@ -15,7 +15,7 @@ final class cq {
         return a.field_b == 11 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_b = null;
         field_d = null;

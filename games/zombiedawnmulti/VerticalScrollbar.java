@@ -560,7 +560,7 @@ final class VerticalScrollbar extends UiComponent {
         this(param0, param1.field_Jb, param1.field_Ib, param1.field_Hb, param1.field_Kb);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Mb = null;
         field_Nb = null;
         if (param0 <= -23) {

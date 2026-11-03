@@ -212,7 +212,7 @@ final class SecondaryNodeDeque implements Iterable {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -114 / ((63 - param0) / 51);
         field_e = null;
         field_c = null;

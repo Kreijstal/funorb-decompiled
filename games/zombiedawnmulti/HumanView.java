@@ -52,7 +52,7 @@ abstract class HumanView extends UnitView {
         return n.field_i;
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 24461) {
           field_ob = (String) null;
         }

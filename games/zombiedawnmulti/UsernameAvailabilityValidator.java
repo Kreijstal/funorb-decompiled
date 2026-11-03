@@ -9,11 +9,11 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
     static int field_s;
     static int[] field_t;
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_t = null;
         if (param0 != 66) {
-          UsernameAvailabilityValidator.h(102);
+          UsernameAvailabilityValidator.releaseStatics(102);
           field_v = null;
           return;
         }
@@ -133,7 +133,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
 
     final void i(int param0) {
         if (param0 != -22837) {
-          UsernameAvailabilityValidator.h(-36);
+          UsernameAvailabilityValidator.releaseStatics(-36);
           this.field_r = null;
           return;
         }

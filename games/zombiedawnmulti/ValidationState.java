@@ -39,7 +39,7 @@ final class ValidationState {
         try {
           var2_int = param1.length;
           if (param0 != 255) {
-            ValidationState.a(80);
+            ValidationState.releaseStatics(80);
           }
           var3 = new byte[var2_int];
           ArrayOperations.a(param1, 0, var3, 0, var2_int);
@@ -100,7 +100,7 @@ final class ValidationState {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 102 % ((param0 + 29) / 54);
         field_a = null;
     }

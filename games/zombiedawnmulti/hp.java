@@ -22,7 +22,7 @@ final class hp extends IntrusiveNode {
     static String field_h;
     static int field_k;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_p = null;
         field_g = null;
@@ -87,7 +87,7 @@ final class hp extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1020) {
-            hp.a(-13);
+            hp.releaseStatics(-13);
           }
           stackIn_5_0 = (TriangleMesh.a((byte) -11, param0) != null);
           return stackIn_5_0;

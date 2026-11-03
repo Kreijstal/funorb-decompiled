@@ -15,7 +15,7 @@ final class jk {
     static UiComponent field_d;
     static int[] field_k;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 2) {
           return;

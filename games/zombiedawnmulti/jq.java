@@ -12,7 +12,7 @@ final class jq {
     static PcmSampleStream field_d;
     static IndexedSprite field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 8) {
           return;
         }

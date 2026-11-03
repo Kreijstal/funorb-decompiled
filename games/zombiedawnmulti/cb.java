@@ -230,10 +230,10 @@ final class cb extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != 0) {
-          cb.a(-85);
+          cb.releaseStatics(-85);
           field_r = null;
           field_j = null;
           return;

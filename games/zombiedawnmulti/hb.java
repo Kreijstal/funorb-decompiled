@@ -80,7 +80,7 @@ final class hb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           hb.b(87);
           field_b = null;

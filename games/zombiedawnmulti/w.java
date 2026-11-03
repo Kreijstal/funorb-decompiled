@@ -505,7 +505,7 @@ final class w extends PcmStream {
         return null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -81) {
           return;
         }

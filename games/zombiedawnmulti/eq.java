@@ -165,10 +165,10 @@ final class eq {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 0) {
-          eq.a(-117);
+          eq.releaseStatics(-117);
         }
     }
 

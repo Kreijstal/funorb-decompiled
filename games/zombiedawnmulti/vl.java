@@ -138,7 +138,7 @@ final class vl extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_f = (IndexedSprite) null;
         }

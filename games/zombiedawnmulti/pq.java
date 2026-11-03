@@ -78,7 +78,7 @@ final class pq extends IntrusiveNode {
           var5 = -this.field_l + param2;
           return 67600 > var4 * var4 + var5 * var5 ? true : false;
         }
-        pq.a((byte) -103);
+        pq.releaseStatics((byte) -103);
         var4Lifetime1 = param0 - this.field_g;
         var5Lifetime1 = -this.field_l + param2;
         return 67600 > var4Lifetime1 * var4Lifetime1 + var5Lifetime1 * var5Lifetime1 ? true : false;
@@ -99,7 +99,7 @@ final class pq extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_m = null;
         field_p = null;

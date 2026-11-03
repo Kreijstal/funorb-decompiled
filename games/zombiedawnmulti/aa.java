@@ -52,7 +52,7 @@ final class aa extends ii {
         return IntrusiveDequeCursor.field_e;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }

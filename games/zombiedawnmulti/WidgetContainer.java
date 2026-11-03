@@ -472,7 +472,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

@@ -27,7 +27,7 @@ final class ok {
     static int[] field_r;
     private boolean field_a;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 8) {
           field_p = (QuickChatCategoryRegistry) null;
         }
@@ -470,7 +470,7 @@ final class ok {
         }
         try {
           if (param0 >= -95) {
-            ok.e(112);
+            ok.releaseStatics(112);
           }
           param2.b((byte) -35, 59);
           param2.writeShort(param3, (byte) -87);

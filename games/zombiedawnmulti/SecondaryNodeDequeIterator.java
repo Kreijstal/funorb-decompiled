@@ -35,14 +35,14 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.field_a = null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 18358) {
           field_d = null;
           field_c = null;
           field_f = null;
           return;
         }
-        SecondaryNodeDequeIterator.a(-56);
+        SecondaryNodeDequeIterator.releaseStatics(-56);
         field_d = null;
         field_c = null;
         field_f = null;

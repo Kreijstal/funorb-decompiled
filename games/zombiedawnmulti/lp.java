@@ -24,7 +24,7 @@ final class lp extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_f = (byte[][]) null;
         field_s = null;

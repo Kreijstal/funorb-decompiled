@@ -15,7 +15,7 @@ final class InflaterDecompressor {
     static byte[] field_b;
     static String field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -54 % ((param0 + 24) / 59);
         field_b = null;
         field_h = null;
@@ -191,7 +191,7 @@ final class InflaterDecompressor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 19) {
-            InflaterDecompressor.a((byte) -85);
+            InflaterDecompressor.releaseStatics((byte) -85);
           }
           var4_int = param1.a(param3, (byte) -65);
           var5 = param1.a(param0, var4_int, param2 ^ -20);

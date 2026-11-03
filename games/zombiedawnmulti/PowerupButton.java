@@ -25,7 +25,7 @@ final class PowerupButton {
         return this.field_k;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_d = null;
         field_g = null;
@@ -80,7 +80,7 @@ final class PowerupButton {
     final static void a(int param0, int param1) {
         jk.field_j = param0;
         if (param1 < 43) {
-          PowerupButton.d(-36);
+          PowerupButton.releaseStatics(-36);
         }
     }
 
@@ -283,7 +283,7 @@ final class PowerupButton {
                     this.field_h = 65;
                   }
                   if (param2 != 255) {
-                    PowerupButton.d(30);
+                    PowerupButton.releaseStatics(30);
                   }
                   if (!this.field_b &&
                     this.field_h < 55) {
@@ -314,7 +314,7 @@ final class PowerupButton {
               this.field_h = 65;
             }
             if (param2 != 255) {
-              PowerupButton.d(30);
+              PowerupButton.releaseStatics(30);
             }
             if (!this.field_b &&
               this.field_h < 55) {
@@ -330,7 +330,7 @@ final class PowerupButton {
             if (!this.field_k) {
               if (this.field_h <= 65) {
                 if (param2 != 255) {
-                  PowerupButton.d(30);
+                  PowerupButton.releaseStatics(30);
                 }
                 if (!this.field_b &&
                   this.field_h < 55) {
@@ -341,7 +341,7 @@ final class PowerupButton {
               this.field_h = 65;
             }
             if (param2 != 255) {
-              PowerupButton.d(30);
+              PowerupButton.releaseStatics(30);
             }
             if (this.field_b) {
               return;
@@ -373,7 +373,7 @@ final class PowerupButton {
                 this.field_h = 65;
               }
               if (param2 != 255) {
-                PowerupButton.d(30);
+                PowerupButton.releaseStatics(30);
               }
               if (!this.field_b &&
                 this.field_h < 55) {
@@ -395,7 +395,7 @@ final class PowerupButton {
               this.field_h = 65;
             }
             if (param2 != 255) {
-              PowerupButton.d(30);
+              PowerupButton.releaseStatics(30);
             }
             if (!this.field_b &&
               this.field_h < 55) {
@@ -424,7 +424,7 @@ final class PowerupButton {
           this.field_h = 65;
         }
         if (param2 != 255) {
-          PowerupButton.d(30);
+          PowerupButton.releaseStatics(30);
         }
         if (this.field_b) {
           return;

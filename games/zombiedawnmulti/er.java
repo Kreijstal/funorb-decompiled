@@ -13,7 +13,7 @@ final class er extends IntrusiveNode {
         this.field_g = param0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         if (param0 != 4) {
           return;

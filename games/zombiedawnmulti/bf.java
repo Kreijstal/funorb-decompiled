@@ -103,7 +103,7 @@ final class bf extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 29919) {
           return;

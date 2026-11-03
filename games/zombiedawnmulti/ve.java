@@ -21,7 +21,7 @@ final class ve {
         try {
           vc.field_d = param3;
           if (param1 != 196) {
-            ve.a((byte) 2);
+            ve.releaseStatics((byte) 2);
           }
           pk.field_b = new PlayerContextMenu(param5, param0, param4, param2, param8, param6, param7);
         } catch (RuntimeException runtimeException) {
@@ -103,7 +103,7 @@ final class ve {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 < 61) {
           return;

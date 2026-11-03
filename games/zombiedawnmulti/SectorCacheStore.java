@@ -136,7 +136,7 @@ final class SectorCacheStore {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_a = null;
         field_f = null;

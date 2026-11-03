@@ -154,7 +154,7 @@ class qo extends DualLinkNode {
     qo() {
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_q = null;
         field_r = null;
         if (param0) {

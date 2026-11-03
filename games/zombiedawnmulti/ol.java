@@ -34,7 +34,7 @@ final class ol extends MenuScreen {
         return stackIn_10_0;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_l = null;
         field_q = null;
@@ -118,7 +118,7 @@ final class ol extends MenuScreen {
         int var3 = 0;
         this.field_m = this.field_m + 1;
         if (param0 != 1) {
-          ol.c((byte) 94);
+          ol.releaseStatics((byte) 94);
         }
         if (!param1 &&
           DisplayNamePanel.field_S.length == this.field_m) {

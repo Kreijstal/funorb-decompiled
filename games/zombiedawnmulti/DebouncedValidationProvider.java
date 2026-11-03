@@ -13,7 +13,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
     static String field_a;
     static int field_j;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         if (!param0) {
           return;
@@ -55,7 +55,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
             }
           }
           if (param0 <= 92) {
-            DebouncedValidationProvider.a(true);
+            DebouncedValidationProvider.releaseStatics(true);
           }
           if (HotspotTextWidget.field_N) {
             ce.a(param6, param5, param3, 20, (byte) 110, param2, param1, param6, param4);

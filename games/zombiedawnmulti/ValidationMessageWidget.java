@@ -142,7 +142,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         try {
           this.field_X = this.field_X + 1;
           if (param0 != -5407) {
-            ValidationMessageWidget.i(56);
+            ValidationMessageWidget.releaseStatics(56);
           }
           super.updatePointerState(param0 ^ 0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
@@ -150,7 +150,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }

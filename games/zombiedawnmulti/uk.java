@@ -174,7 +174,7 @@ final class uk extends ButtonWidget {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1562977759) {
           return;
         }

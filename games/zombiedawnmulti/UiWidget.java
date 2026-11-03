@@ -597,7 +597,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = null;
         field_t = null;
         if (param0 < -61) {

@@ -112,11 +112,11 @@ final class lb {
           wj.field_i.h((byte) 49);
           return;
         }
-        lb.a((byte) -43);
+        lb.releaseStatics((byte) -43);
         wj.field_i.h((byte) 49);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 43) {
           field_c = null;
           field_d = null;

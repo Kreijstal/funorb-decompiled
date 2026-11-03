@@ -4333,7 +4333,7 @@ final class GameScreen {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

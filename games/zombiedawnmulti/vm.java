@@ -89,7 +89,7 @@ final class vm extends ResizableDialog implements ButtonActivationListener {
         }
     }
 
-    public static void k(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_lb = null;
         if (param0 != -29) {
           field_lb = (Sprite) null;

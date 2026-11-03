@@ -221,7 +221,7 @@ final class vo extends MenuScreen {
 
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_n = null;
         field_r = null;

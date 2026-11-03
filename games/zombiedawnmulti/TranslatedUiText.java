@@ -9,7 +9,7 @@ final class TranslatedUiText {
     static double[] field_d;
     static PaletteBitmapFont field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

@@ -54,7 +54,7 @@ final class SimZombie extends SimUnit {
         return true;
     }
 
-    public static void r(int param0) {
+    public static void releaseStatics(int param0) {
         field_qb = null;
         field_pb = null;
         if (param0 >= -7) {

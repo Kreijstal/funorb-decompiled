@@ -18,7 +18,7 @@ final class v {
         cm.field_a.setBounds(-120 + (SoftwareRasterizer.height - 4), 0, 438, var1 + 202 + var3 * 438 / var2, -3344);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_e = null;
         field_g = null;

@@ -172,12 +172,12 @@ final class WhirlpoolHasher {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         field_k = null;
         field_g = null;
         if (!param0) {
-          WhirlpoolHasher.a(true);
+          WhirlpoolHasher.releaseStatics(true);
         }
         field_i = null;
     }

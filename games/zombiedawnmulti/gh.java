@@ -233,7 +233,7 @@ final class gh {
         return 0 != (w.field_m & 1 << -param0) ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         int var1 = 2 / ((param0 + 7) / 59);
     }

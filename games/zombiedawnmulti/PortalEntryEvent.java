@@ -109,7 +109,7 @@ final class PortalEntryEvent extends GameEvent {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_l = null;
         field_m = null;

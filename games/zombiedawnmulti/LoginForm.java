@@ -332,7 +332,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 19 % ((-23 - param0) / 59);
         field_N = null;
         field_I = null;
@@ -391,7 +391,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var4 = param0.readUnsignedShort((byte) 69);
           var5 = param0.readUnsignedShort((byte) 69);
           if (!param1) {
-            LoginForm.a(16);
+            LoginForm.releaseStatics(16);
           }
           var6 = param0.readUnsignedShort((byte) 69);
           stackIn_3_0 = ClientException.a(var6, var4, var3, (byte) 104, var2_int, var5);

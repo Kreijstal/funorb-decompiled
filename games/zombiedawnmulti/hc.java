@@ -41,9 +41,9 @@ final class hc {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          hc.a(44);
+          hc.releaseStatics(44);
           field_a = null;
           field_b = null;
           return;

@@ -8,7 +8,7 @@ final class ScoreUpdateEvent extends GameEvent {
     static Sprite field_m;
     private int[] field_i;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_m = null;
         field_l = null;
@@ -40,7 +40,7 @@ final class ScoreUpdateEvent extends GameEvent {
         try {
           param1.setTeamScores(this.field_i, false);
           if (param0 != 0) {
-            ScoreUpdateEvent.c(-54);
+            ScoreUpdateEvent.releaseStatics(-54);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

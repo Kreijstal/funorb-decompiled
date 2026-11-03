@@ -130,9 +130,9 @@ final class MidiPcmStream extends PcmStream {
         this.field_r = param1;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          MidiPcmStream.e(70);
+          MidiPcmStream.releaseStatics(70);
         }
         field_Q = null;
     }

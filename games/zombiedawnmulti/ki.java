@@ -20,7 +20,7 @@ final class ki {
     static QuickChatHelpDialog field_e;
     static String field_l;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_e = null;
         field_a = null;
@@ -51,7 +51,7 @@ final class ki {
         if (param0 > 3) {
           return this.field_b.b(this.field_q, this.field_g, MouseInputHandler.field_g, bo.field_d);
         }
-        ki.b(-41);
+        ki.releaseStatics(-41);
         return this.field_b.b(this.field_q, this.field_g, MouseInputHandler.field_g, bo.field_d);
     }
 

@@ -23,7 +23,7 @@ final class PlayerContextMenu {
         this.field_j.c(param0, -1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -2) {
           return;
         }

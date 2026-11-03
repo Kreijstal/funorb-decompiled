@@ -164,14 +164,14 @@ final class PortalView extends SceneObject {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           field_K = null;
           field_H = null;
           if (param0) {
-            PortalView.b(true);
+            PortalView.releaseStatics(true);
           }
           field_L = null;
           field_F = null;

@@ -15,7 +15,7 @@ final class wm extends ButtonWidget {
     int field_M;
     static String field_T;
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_P = null;
         field_S = null;
         field_Q = null;

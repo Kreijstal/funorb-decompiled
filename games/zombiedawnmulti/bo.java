@@ -148,11 +148,11 @@ final class bo {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 6) {
-          bo.a(-72);
+          bo.releaseStatics(-72);
         }
         field_c = null;
     }

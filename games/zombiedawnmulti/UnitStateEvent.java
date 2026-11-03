@@ -55,7 +55,7 @@ final class UnitStateEvent extends GameEvent {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_j = null;
         field_t = null;
@@ -238,7 +238,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[56][1] = lh.field_a;
         wq.field_g[55][1] = ResourceArchive.field_c;
         if (param0 != -6445) {
-          UnitStateEvent.a(-95);
+          UnitStateEvent.releaseStatics(-95);
         }
         wq.field_g[54][1] = ResourceArchive.field_h;
         wq.field_g[53][1] = cr.field_g;

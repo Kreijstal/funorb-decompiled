@@ -138,7 +138,7 @@ final class aj extends GameEvent {
         this.field_k = param1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 >= -28) {
           return;

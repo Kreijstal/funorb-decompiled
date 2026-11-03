@@ -19,12 +19,12 @@ final class mn extends ic {
         return uq.field_b;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_q = null;
         field_n = null;
         if (param0 != 3) {
-          mn.c(96);
+          mn.releaseStatics(96);
         }
     }
 

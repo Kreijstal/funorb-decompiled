@@ -223,7 +223,7 @@ final class nk extends IntrusiveNode {
         }
         var2 = this.field_p * this.field_p;
         if (param0 < 91) {
-          nk.a((byte) -1);
+          nk.releaseStatics((byte) -1);
         }
         var3 = this.field_l.c(49);
         while (var3 instanceof ha) {
@@ -253,7 +253,7 @@ final class nk extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_j = null;
         field_n = null;

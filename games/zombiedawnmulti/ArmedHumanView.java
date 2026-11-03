@@ -131,7 +131,7 @@ final class ArmedHumanView extends HumanView {
           }
           return new String(var6);
         }
-        ArmedHumanView.c(false);
+        ArmedHumanView.releaseStatics(false);
         for (var4Lifetime1 = 0; param2 > var4Lifetime1; var4Lifetime1++) {
           var6[var4Lifetime1] = param1;
         }
@@ -176,7 +176,7 @@ final class ArmedHumanView extends HumanView {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_tb = null;
         field_vb = null;
         if (param0) {

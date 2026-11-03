@@ -7,12 +7,12 @@ final class ma {
     static AlignedIconLabel[][] field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = (AlignedIconLabel[][]) null;
         field_a = null;
         field_c = null;
         if (param0 != 64) {
-          ma.a(-89);
+          ma.releaseStatics(-89);
         }
     }
 

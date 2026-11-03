@@ -12,7 +12,7 @@ final class we extends IntrusiveNode {
     IntrusiveNode field_h;
     PcmSampleStream field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         if (param0 != 103) {
           return;

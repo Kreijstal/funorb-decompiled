@@ -130,7 +130,7 @@ final class ClickMarker extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_m = null;
         int var1 = -50 / ((-24 - param0) / 43);

@@ -166,7 +166,7 @@ final class mb extends IntrusiveNode {
         this.field_C = null;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_n = null;
         if (param0) {
           field_j = (Sprite) null;

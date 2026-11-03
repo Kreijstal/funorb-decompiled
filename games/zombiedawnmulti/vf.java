@@ -7,7 +7,7 @@ final class vf {
     static String field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = (byte[][]) null;
         field_a = null;
         field_c = null;

@@ -32,7 +32,7 @@ final class rq extends IntrusiveNode {
         return stackIn_6_0;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_q = null;
         field_g = null;
         field_u = null;

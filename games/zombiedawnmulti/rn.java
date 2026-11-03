@@ -10,7 +10,7 @@ final class rn {
     static String field_b;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_e = null;
         field_g = null;

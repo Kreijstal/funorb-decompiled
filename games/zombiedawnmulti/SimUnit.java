@@ -29,7 +29,7 @@ abstract class SimUnit extends SimEntity {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         this.speedMultiplier = 1;
         if (param1 > -14) {
-          SimUnit.i((byte) -35);
+          SimUnit.releaseStatics((byte) -35);
           this.speedEffectTicks = this.simulation.world.computeEffectDuration((byte) 32, param0, 600);
           if (!(this instanceof SimHuman)) {
             if (this.state != 5) {
@@ -815,7 +815,7 @@ abstract class SimUnit extends SimEntity {
         this.baseSpeed = param3;
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_O = null;
         if (param0 != -86) {
           return;

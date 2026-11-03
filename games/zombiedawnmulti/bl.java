@@ -11,7 +11,7 @@ final class bl {
     static int field_a;
     static IndexedSprite field_g;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_d = null;
         if (param0 != 0) {

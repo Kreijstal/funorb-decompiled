@@ -275,7 +275,7 @@ final class PowerupEvent extends GameEvent {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_r = null;
         if (param0 != 17) {

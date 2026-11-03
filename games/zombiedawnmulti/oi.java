@@ -32,7 +32,7 @@ final class oi {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_a = null;
         field_e = null;

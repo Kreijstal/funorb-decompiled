@@ -96,7 +96,7 @@ final class oq extends TextWidgetPainter {
         this.field_A = ui.field_k;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 121 % ((12 - param0) / 43);
         field_z = null;
         field_v = null;

@@ -10,7 +10,7 @@ final class ei {
     static String[][] field_g;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_d = null;
         field_g = (String[][]) null;

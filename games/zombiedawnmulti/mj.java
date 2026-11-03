@@ -97,7 +97,7 @@ final class mj extends UiComponent {
         return false;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_Fb = null;
         field_Ob = null;
         field_Mb = null;

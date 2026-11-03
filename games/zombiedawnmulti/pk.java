@@ -8,17 +8,17 @@ final class pk {
 
     final static UiComponent b(int param0) {
         if (param0 != -11834) {
-          pk.a(85);
+          pk.releaseStatics(85);
           return bf.field_n.field_Gb;
         }
         return bf.field_n.field_Gb;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 619119521) {
-          pk.a(38);
+          pk.releaseStatics(38);
           field_c = null;
           return;
         }

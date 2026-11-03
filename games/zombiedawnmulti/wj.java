@@ -43,7 +43,7 @@ final class wj extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -6298) {
           field_h = null;
           field_k = null;

@@ -203,7 +203,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_k = null;
         if (param0 != 3) {

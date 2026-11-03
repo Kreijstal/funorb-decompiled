@@ -18,7 +18,7 @@ final class IntrusiveDequeCursor {
 
     final static boolean a(int param0, boolean param1) {
         if (param1) {
-          IntrusiveDequeCursor.d(76);
+          IntrusiveDequeCursor.releaseStatics(76);
           if (param0 < 32) {
             return false;
           }
@@ -122,7 +122,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         if (param0 == -1) {
@@ -132,7 +132,7 @@ final class IntrusiveDequeCursor {
           field_j = null;
           return;
         }
-        IntrusiveDequeCursor.d(-29);
+        IntrusiveDequeCursor.releaseStatics(-29);
         field_g = (boolean[][]) null;
         field_h = null;
         field_b = null;

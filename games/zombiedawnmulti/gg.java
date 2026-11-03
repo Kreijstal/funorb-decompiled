@@ -245,7 +245,7 @@ final class gg {
         return ReportAbuseDialog.field_Ib;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 > -99) {
           return;

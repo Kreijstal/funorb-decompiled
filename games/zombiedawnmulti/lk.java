@@ -112,7 +112,7 @@ final class lk extends SceneObject {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 11041) {
           field_G = (int[][]) null;
           field_J = null;
@@ -120,7 +120,7 @@ final class lk extends SceneObject {
           field_I = null;
           return;
         }
-        lk.i(-25);
+        lk.releaseStatics(-25);
         field_G = (int[][]) null;
         field_J = null;
         field_P = null;

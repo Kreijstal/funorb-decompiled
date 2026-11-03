@@ -25,7 +25,7 @@ final class IsaacRandom {
             TabbedPane.field_Ib[var1_int] = 0L;
           }
           if (param0 != 26673) {
-            IsaacRandom.b(-5);
+            IsaacRandom.releaseStatics(-5);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             Under13NoticePanel.field_K[var1_intLifetime1] = 0L;
@@ -90,12 +90,12 @@ final class IsaacRandom {
         return this.field_g[fieldTemp$0];
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_d = null;
         field_h = null;
         if (param0 != -13532) {
-          IsaacRandom.b(-51);
+          IsaacRandom.releaseStatics(-51);
         }
     }
 

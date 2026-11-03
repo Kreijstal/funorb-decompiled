@@ -11,7 +11,7 @@ final class vn {
     static String field_a;
     static TriangleMesh[] field_c;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_g = null;
         field_h = null;
@@ -28,7 +28,7 @@ final class vn {
         }
         eb.a(false, false, 4);
         if (param0 != -29507) {
-          vn.b(75);
+          vn.releaseStatics(75);
         }
     }
 

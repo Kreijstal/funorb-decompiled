@@ -10,7 +10,7 @@ final class tm {
     static String[] field_a;
     static boolean field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         if (param0 < -21) {
@@ -20,7 +20,7 @@ final class tm {
           field_d = null;
           return;
         }
-        tm.a(97);
+        tm.releaseStatics(97);
         field_e = null;
         field_g = null;
         field_f = null;

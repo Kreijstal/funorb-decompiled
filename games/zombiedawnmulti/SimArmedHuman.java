@@ -239,7 +239,7 @@ final class SimArmedHuman extends SimHuman {
         return;
     }
 
-    public static void o(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Cb = null;
         field_Eb = null;
         field_Gb = null;

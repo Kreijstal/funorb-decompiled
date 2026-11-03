@@ -29,9 +29,9 @@ abstract class NetworkGameClient extends GameApplet {
         wj.field_l[1] = true;
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 10) {
-          NetworkGameClient.o(-41);
+          NetworkGameClient.releaseStatics(-41);
         }
         field_u = null;
         field_r = null;
@@ -664,7 +664,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (ClientException.field_i == 3 &&
           PortalView.areGraphicsArchivesReady(AccountCreationForm.field_L, param0 ^ -3795, ra.field_l, wm.field_V) &&
           jo.a(wm.field_V, 0)) {
-          sc.b(1);
+          sc.releaseStatics(1);
           lc.a(62);
           hh.field_m = false;
           SimArmedHuman.field_Bb = hj.field_e;

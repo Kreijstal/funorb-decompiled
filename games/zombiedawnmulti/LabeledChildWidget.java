@@ -329,7 +329,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         return var3;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_H = null;
         if (param0 != 3) {

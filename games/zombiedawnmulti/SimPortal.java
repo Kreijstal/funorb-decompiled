@@ -8,7 +8,7 @@ final class SimPortal extends SimEntity {
     static String field_P;
     static boolean field_L;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_N = null;
         field_M = null;
         if (!param0) {
@@ -21,7 +21,7 @@ final class SimPortal extends SimEntity {
 
     final void tick(int param0) {
         if (param0 <= 30) {
-          SimPortal.b(false);
+          SimPortal.releaseStatics(false);
         }
     }
 

@@ -12,7 +12,7 @@ final class pn {
     static char field_d;
     static String field_i;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 31) {
           return;
         }
@@ -84,7 +84,7 @@ final class pn {
         if (param0 > 51) {
           return;
         }
-        pn.a(74);
+        pn.releaseStatics(74);
     }
 
     static {

@@ -746,7 +746,7 @@ abstract class SimHuman extends SimUnit {
         return n.field_i;
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_ob = (String) null;
         }

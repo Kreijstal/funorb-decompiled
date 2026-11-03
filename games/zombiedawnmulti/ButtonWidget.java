@@ -370,7 +370,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_I = null;
         field_C = null;

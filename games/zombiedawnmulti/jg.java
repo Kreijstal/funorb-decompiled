@@ -26,7 +26,7 @@ final class jg {
             var4 = new byte[var3_int];
             param0.position = param0.position + r.field_a.decompress(var3_int, param2 - 3574, 0, param0.payload, var4, param0.position);
             if (param2 != 3460) {
-              jg.b(43);
+              jg.releaseStatics(43);
             }
             var5 = oe.a(var3_int, var4, false, 0);
             stackIn_6_0 = var5;
@@ -186,7 +186,7 @@ final class jg {
         a.field_b = param0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 7) {
           return;
         }

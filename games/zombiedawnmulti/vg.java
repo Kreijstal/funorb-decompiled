@@ -22,7 +22,7 @@ final class vg extends IntrusiveNode {
         return param0 ^ param1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_h = null;
         field_r = null;

@@ -850,7 +850,7 @@ abstract class UnitView extends SceneObject {
         return false;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_H = null;
         field_M = null;
         if (param0 < 23) {

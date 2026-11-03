@@ -207,7 +207,7 @@ final class jh extends UiComponent {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Hb = null;
         int var1 = 18 / ((82 - param0) / 43);
     }

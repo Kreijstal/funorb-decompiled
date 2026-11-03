@@ -44,7 +44,7 @@ final class ql {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_a = null;
         if (param0 == 4) {
@@ -53,7 +53,7 @@ final class ql {
           field_b = null;
           return;
         }
-        ql.a(-69);
+        ql.releaseStatics(-69);
         field_e = null;
         field_f = null;
         field_b = null;

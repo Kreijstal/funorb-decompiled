@@ -30,7 +30,7 @@ class TextWidgetPainter implements WidgetPainter, rk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            TextWidgetPainter.a((byte) -88);
+            TextWidgetPainter.releaseStatics((byte) -88);
           }
           stackIn_3_0 = -this.field_r + param0.field_n - this.field_n;
           return stackIn_3_0;
@@ -506,7 +506,7 @@ class TextWidgetPainter implements WidgetPainter, rk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_o = null;
         int var1 = 77 / ((param0 - 7) / 43);

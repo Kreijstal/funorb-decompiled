@@ -22,7 +22,7 @@ final class AlignedIconLabel extends UiComponent {
         this.layoutIconLabel(param0, -17369, param6);
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Nb = null;
         field_Hb = null;
         field_Lb = null;

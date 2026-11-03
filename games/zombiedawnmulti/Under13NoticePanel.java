@@ -89,7 +89,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_K = null;
         field_I = null;
         if (!param0) {

@@ -99,7 +99,7 @@ final class ak {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -5937) {
           field_c = null;
           field_a = null;

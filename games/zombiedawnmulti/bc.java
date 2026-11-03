@@ -8,7 +8,7 @@ final class bc {
     static String field_d;
     static String field_c;
 
-    final static void b(int param0) {
+    final static void releaseStatics(int param0) {
         gi.field_i = null;
         if (param0 != 10) {
           field_d = (String) null;

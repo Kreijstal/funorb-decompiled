@@ -8,7 +8,7 @@ final class cm {
     static long field_d;
     static UiComponent field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 <= 125) {
@@ -43,7 +43,7 @@ final class cm {
           if (param0 > 28) {
             return;
           }
-          cm.a((byte) 67);
+          cm.releaseStatics((byte) 67);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

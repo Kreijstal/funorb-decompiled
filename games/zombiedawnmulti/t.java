@@ -29,7 +29,7 @@ abstract class t {
         return BirthDateInputWidget.field_cb;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_f = null;
         field_c = null;

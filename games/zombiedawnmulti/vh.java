@@ -116,7 +116,7 @@ final class vh extends UiComponent {
         try {
           var3_int = 0;
           if (param1 != 12) {
-            vh.c((byte) 47);
+            vh.releaseStatics((byte) 47);
           }
           while (param0.height > var3_int) {
             for (var4 = 0; var4 < param0.width; var4++) {
@@ -141,7 +141,7 @@ final class vh extends UiComponent {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -97) {
           return;
         }

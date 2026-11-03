@@ -233,7 +233,7 @@ final class JaggrabDownloader implements Runnable {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != 17) {
           JaggrabDownloader.c(29);

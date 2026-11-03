@@ -53,7 +53,7 @@ final class np extends GameEvent {
         this.field_j = param2;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }

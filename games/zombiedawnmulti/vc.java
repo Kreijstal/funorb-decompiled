@@ -11,7 +11,7 @@ final class vc {
     static String field_b;
     static String field_e;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_h = null;
         field_a = null;
@@ -28,7 +28,7 @@ final class vc {
     final static void b(byte param0) {
         i.field_a.field_n = 0;
         if (param0 >= -87) {
-          vc.b(-65);
+          vc.releaseStatics(-65);
           i.field_a.field_p = 0;
           return;
         }

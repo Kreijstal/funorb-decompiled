@@ -14,7 +14,7 @@ class DualLinkNode extends IntrusiveNode {
     static int[] field_f;
     long secondaryKey;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_m = null;
         field_n = null;
@@ -119,7 +119,7 @@ class DualLinkNode extends IntrusiveNode {
           }
         }
         if (param4 <= 59) {
-          DualLinkNode.a((byte) -29);
+          DualLinkNode.releaseStatics((byte) -29);
         }
         for (var11Lifetime3 = 0; param3 >> 1 > var11Lifetime3; var11Lifetime3++) {
           for (var12Lifetime4 = 0; var12Lifetime4 < param8; var12Lifetime4++) {

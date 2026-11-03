@@ -27,7 +27,7 @@ final class UiTheme {
         return Waypoint.field_j;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_q = null;
         if (param0 != -1020346174) {

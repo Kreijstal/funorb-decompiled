@@ -181,7 +181,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         this.a(-6, true, p.a(-97, MusicPatchPcmStream.field_p, param0));
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         field_Cb = null;
         field_Hb = null;
         int var1 = -24 / ((10 - param0) / 37);

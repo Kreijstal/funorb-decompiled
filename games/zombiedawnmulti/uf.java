@@ -19,7 +19,7 @@ final class uf {
         Camera.b(-128, 59);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_c = null;
         field_b = (int[][]) null;

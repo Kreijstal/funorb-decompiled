@@ -142,7 +142,7 @@ final class GameSimulation {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

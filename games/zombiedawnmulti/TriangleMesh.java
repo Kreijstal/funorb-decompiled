@@ -70,7 +70,7 @@ final class TriangleMesh {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_N = null;
         if (param0 != 119) {
           return;
@@ -636,7 +636,7 @@ final class TriangleMesh {
     private final void invalidateBounds(int param0) {
         this.field_d = false;
         if (param0 != 255) {
-          TriangleMesh.b((byte) 18);
+          TriangleMesh.releaseStatics((byte) 18);
         }
     }
 

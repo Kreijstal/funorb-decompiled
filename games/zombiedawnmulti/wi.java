@@ -41,7 +41,7 @@ final class wi extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_m = null;
         field_h = null;
@@ -64,7 +64,7 @@ final class wi extends IntrusiveNode {
           rp.field_l.a((byte) 50, mj.field_Ib);
           ee.field_b = true;
           if (param0 != 4) {
-            wi.a(-50);
+            wi.releaseStatics(-50);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

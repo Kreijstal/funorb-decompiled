@@ -69,7 +69,7 @@ final class tn extends qc {
         return 100 * this.field_y.position / (this.field_y.payload.length - this.field_B);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_A = null;
         if (param0 != 0) {
           field_C = (IntrusiveDeque) null;

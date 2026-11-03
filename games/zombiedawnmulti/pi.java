@@ -16,7 +16,7 @@ final class pi {
         this.field_d = param0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_h = null;
         field_c = null;

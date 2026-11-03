@@ -8,7 +8,7 @@ final class ji {
     static String field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_d = null;
         if (param0 != 13377) {

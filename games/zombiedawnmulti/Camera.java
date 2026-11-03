@@ -128,7 +128,7 @@ final class Camera {
         SoftwareRasterizer.intersectClip(param0, param4, param3, param1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_u = null;
         if (param0 != 6) {

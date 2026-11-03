@@ -23,7 +23,7 @@ final class DualLinkDeque {
         return var2;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         if (param0 >= 74) {
@@ -72,7 +72,7 @@ final class DualLinkDeque {
         try {
           var2_int = param1.length();
           if (param0 != 1) {
-            DualLinkDeque.c(-68);
+            DualLinkDeque.releaseStatics(-68);
           }
           if (0 == var2_int) {
             stackIn_5_0 = jo.field_e;
@@ -117,7 +117,7 @@ final class DualLinkDeque {
         DualLinkNode var4 = null;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != -1) {
-          DualLinkDeque.c(-67);
+          DualLinkDeque.releaseStatics(-67);
           while (true) {
             var5 = this.field_e.secondaryPrevious;
             if (this.field_e == var5) {
@@ -162,7 +162,7 @@ final class DualLinkDeque {
 
     final static boolean b(int param0) {
         if (param0 != 0) {
-          DualLinkDeque.c(72);
+          DualLinkDeque.releaseStatics(72);
           return NavigationGrid.field_m != null ? true : false;
         }
         return NavigationGrid.field_m != null ? true : false;

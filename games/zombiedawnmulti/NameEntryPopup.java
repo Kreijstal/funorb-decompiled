@@ -60,7 +60,7 @@ final class NameEntryPopup extends UiComponent {
         boolean stackIn_129_1 = false;
         Camera.a(SoftwareRasterizer.width - 640 >> 1, SoftwareRasterizer.height, (byte) 105, 640 + SoftwareRasterizer.width >> 1, 0);
         if (param1 != -7579) {
-          NameEntryPopup.c((byte) -88);
+          NameEntryPopup.releaseStatics((byte) -88);
           if (0 < JaggrabDownloader.field_h) {
             if (null == vm.field_lb) {
               stackIn_6_0 = qe.field_k;
@@ -416,7 +416,7 @@ final class NameEntryPopup extends UiComponent {
         return true;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Ib = null;
         if (param0 < 4) {
           return;

@@ -9,7 +9,7 @@ final class AttackEvent extends GameEvent {
     static IndexedSprite field_n;
     private int field_i;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 116) {
           return;
         }

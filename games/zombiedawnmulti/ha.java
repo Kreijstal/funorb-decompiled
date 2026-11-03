@@ -14,7 +14,7 @@ final class ha extends IntrusiveNode {
     static ao field_i;
     static Sprite field_l;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_g = null;
         field_i = null;
@@ -23,7 +23,7 @@ final class ha extends IntrusiveNode {
         field_k = null;
         field_j = null;
         if (param0 != 21342) {
-          ha.a(-3);
+          ha.releaseStatics(-3);
         }
     }
 

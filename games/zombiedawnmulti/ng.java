@@ -139,7 +139,7 @@ abstract class ng {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_f = null;
         field_b = null;
@@ -187,7 +187,7 @@ abstract class ng {
           var7.a(-4564);
           ClientException.field_d = ClientException.field_d - 1;
           if (param2 > -21) {
-            ng.a(-125);
+            ng.releaseStatics(-125);
           }
           var5 = ma.field_a;
           var5.b((byte) -35, param3);

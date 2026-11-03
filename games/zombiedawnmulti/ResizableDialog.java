@@ -87,7 +87,7 @@ abstract class ResizableDialog extends FadingDialog {
         ProgressDialog.field_hb = mp.field_b;
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_U = null;
         field_cb = null;
         int var1 = -15 % ((-22 - param0) / 60);

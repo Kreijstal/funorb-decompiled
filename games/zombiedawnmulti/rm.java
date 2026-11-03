@@ -5,7 +5,7 @@ final class rm {
     static StringBuilder field_a;
     static PcmPlayerService field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 80) {
           return;

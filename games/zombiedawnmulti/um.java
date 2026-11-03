@@ -80,7 +80,7 @@ final class um {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 48 / ((param0 + 1) / 58);
         field_c = null;
         field_b = null;

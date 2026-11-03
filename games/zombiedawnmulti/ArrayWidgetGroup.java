@@ -403,7 +403,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         this.layoutChildren(140);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_J = null;
         field_L = null;

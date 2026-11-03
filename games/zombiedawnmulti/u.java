@@ -209,7 +209,7 @@ final class u extends IntrusiveNode {
         return wm.a(param1, 1, true, false, 19, false);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_f = null;
         if (param0 != -7406) {

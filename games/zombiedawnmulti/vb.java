@@ -24,7 +24,7 @@ final class vb {
         return null;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_a = (byte[][]) null;
         field_e = null;
@@ -34,7 +34,7 @@ final class vb {
           field_b = null;
           return;
         }
-        vb.a(false);
+        vb.releaseStatics(false);
         field_b = null;
     }
 

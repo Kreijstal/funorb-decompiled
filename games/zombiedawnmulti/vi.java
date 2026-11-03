@@ -5,7 +5,7 @@ final class vi {
     static int[] field_b;
     static String[] field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 <= 68) {

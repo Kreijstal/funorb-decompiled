@@ -21,7 +21,7 @@ final class na extends SingleChildWidget {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_K = null;
         field_H = (IndexedSprite[][]) null;
         field_F = null;

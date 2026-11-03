@@ -88,7 +88,7 @@ class TertiaryLinkNode extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_u = null;
         field_t = null;

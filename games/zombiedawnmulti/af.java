@@ -12,7 +12,7 @@ final class af {
     static char[] field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         field_g = null;
@@ -23,7 +23,7 @@ final class af {
           field_e = null;
           return;
         }
-        af.a(-39);
+        af.releaseStatics(-39);
         field_a = null;
         field_h = null;
         field_d = null;

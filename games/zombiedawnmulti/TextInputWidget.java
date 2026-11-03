@@ -153,7 +153,7 @@ class TextInputWidget extends ButtonWidget {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_P = (String) null;
         }
@@ -240,7 +240,7 @@ class TextInputWidget extends ButtonWidget {
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 <= 110) {
-          TextInputWidget.d(true);
+          TextInputWidget.releaseStatics(true);
         }
         var2 = this.field_j.length();
         if (this.field_O == var2) {

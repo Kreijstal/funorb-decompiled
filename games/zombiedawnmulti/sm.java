@@ -11,11 +11,11 @@ final class sm {
     int field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_b = null;
         if (param0 != -12970) {
-          sm.a(-117);
+          sm.releaseStatics(-117);
           field_g = null;
           return;
         }

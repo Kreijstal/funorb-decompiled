@@ -207,7 +207,7 @@ final class ReportAbuseDialog extends UiComponent {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Qb = (Sprite[][]) null;
         field_Gb = null;
         int var1 = -52 % ((-4 - param0) / 45);

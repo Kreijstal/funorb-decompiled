@@ -23,7 +23,7 @@ final class TabbedPane extends UiComponent {
         this.layoutTabs(param3, param4, (byte) 119);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Lb = null;
         int var1 = -12 / ((8 - param0) / 54);
         field_Ib = null;

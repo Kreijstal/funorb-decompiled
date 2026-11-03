@@ -213,7 +213,7 @@ final class hl {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 16777215) {
           field_e = (int[]) null;

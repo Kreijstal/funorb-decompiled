@@ -18,7 +18,7 @@ final class uc {
         return this.field_a;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= 115) {
           field_d = null;
           field_c = null;
@@ -26,7 +26,7 @@ final class uc {
           field_g = null;
           return;
         }
-        uc.c(-77);
+        uc.releaseStatics(-77);
         field_d = null;
         field_c = null;
         field_b = null;
@@ -61,7 +61,7 @@ final class uc {
     final static void b(int param0, boolean param1) {
         tg.field_g.a(param0 ^ -1081, param1);
         if (param0 != 16772) {
-          uc.c(69);
+          uc.releaseStatics(69);
         }
     }
 

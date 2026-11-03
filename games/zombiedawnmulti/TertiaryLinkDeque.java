@@ -258,7 +258,7 @@ final class TertiaryLinkDeque {
         return tj.field_a.c(param0 - 224);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -6) {
           return;
         }
@@ -283,7 +283,7 @@ final class TertiaryLinkDeque {
             var4_int = var4_int >>> 8 ^ LevelFileCatalog.field_a[255 & (param0[var5] ^ var4_int)];
           }
           if (!param2) {
-            TertiaryLinkDeque.a(104);
+            TertiaryLinkDeque.releaseStatics(104);
           }
           var4_int = ~var4_int;
           stackIn_7_0 = var4_int;

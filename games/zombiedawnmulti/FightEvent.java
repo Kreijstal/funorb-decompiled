@@ -23,7 +23,7 @@ final class FightEvent extends GameEvent {
     final void a(byte param0) {
         super.a((byte) -54);
         if (param0 > -47) {
-          FightEvent.c((byte) 116);
+          FightEvent.releaseStatics((byte) 116);
         }
         MouseWheelInput.field_b.a((IntrusiveNode) (this), false);
     }
@@ -61,7 +61,7 @@ final class FightEvent extends GameEvent {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_n = null;
         field_l = null;

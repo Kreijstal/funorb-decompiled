@@ -29,7 +29,7 @@ final class Waypoint extends IntrusiveNode {
             var4[var5] = param0.readUnsignedShort((byte) 69);
           }
           if (param1 != -114) {
-            Waypoint.b(true);
+            Waypoint.releaseStatics(true);
           }
           stackIn_7_0 = new ScoreUpdateEvent(var2_int, var4);
           return (GameEvent) ((Object) stackIn_7_0);
@@ -47,7 +47,7 @@ final class Waypoint extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

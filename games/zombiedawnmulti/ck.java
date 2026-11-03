@@ -434,7 +434,7 @@ final class ck {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         int var1 = -20 % ((param0 - 40) / 63);
         field_b = null;

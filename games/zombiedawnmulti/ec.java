@@ -6,7 +6,7 @@ final class ec {
     static String field_a;
     static boolean field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != -12) {

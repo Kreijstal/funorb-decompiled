@@ -19,7 +19,7 @@ abstract class SpriteState extends DualLinkNode {
         int var1 = -5 % ((33 - param0) / 60);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         if (param0 >= -92) {
           return;

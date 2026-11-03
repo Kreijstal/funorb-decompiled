@@ -45,7 +45,7 @@ final class og extends SimEntity {
         var2.e(91, -var4 + var2.position);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_T = null;
         if (param0 >= -76) {
           return;

@@ -10,7 +10,7 @@ final class bi {
     static String field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 == 4302) {
@@ -18,7 +18,7 @@ final class bi {
           field_f = null;
           return;
         }
-        bi.a(-50);
+        bi.releaseStatics(-50);
         field_d = null;
         field_f = null;
     }

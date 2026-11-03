@@ -72,7 +72,7 @@ final class DraggableWidget extends SingleChildWidget {
         return IntrusiveDequeCursor.b(19352);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_E = null;
         field_I = null;
         field_K = null;

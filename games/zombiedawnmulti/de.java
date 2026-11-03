@@ -11,7 +11,7 @@ final class de {
     static String field_d;
     static volatile int field_g;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_d = null;
         if (param0 == 19091) {
@@ -22,7 +22,7 @@ final class de {
           field_c = null;
           return;
         }
-        de.a(-77);
+        de.releaseStatics(-77);
         field_e = null;
         field_h = null;
         field_b = null;
@@ -47,7 +47,7 @@ final class de {
             return;
           }
           if (param1 != 99) {
-            de.a(-110);
+            de.releaseStatics(-110);
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (param0.field_j.peekEvent() != null) {

@@ -12,7 +12,7 @@ final class qf {
     static int field_f;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -222,7 +222,7 @@ final class qf {
           }
           return '_';
         }
-        qf.a(5);
+        qf.releaseStatics(5);
         var2Lifetime1 = param1;
         if (var2Lifetime1 == 32) {
           return '_';

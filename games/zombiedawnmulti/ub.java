@@ -164,7 +164,7 @@ final class ub extends ContentTransitionDialog {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         field_xb = null;
         field_ub = null;
         if (param0 <= 49) {
@@ -176,7 +176,7 @@ final class ub extends ContentTransitionDialog {
 
     final static void n(int param0) {
         if (param0 != 33423425) {
-          ub.o(-45);
+          ub.releaseStatics(-45);
         }
         if (ee.field_b) {
           NavigationGrid.b(31706);

@@ -61,7 +61,7 @@ abstract class SceneObject extends TertiaryLinkNode {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_B = null;
         if (param0 < 60) {
           field_x = (String) null;
