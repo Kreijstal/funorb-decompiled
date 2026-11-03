@@ -123,7 +123,7 @@ final class hv {
               NamedValueEntry.steerTowardsPoint(4, var8, var19, var9);
               return;
             }
-            if (wt.tryKeeperDive(param1.field_V, var19, (byte) -75, param2)) {
+            if (ArrayWidgetContainer.tryKeeperDive(param1.field_V, var19, (byte) -75, param2)) {
               return;
             }
             gg.a(param2, 0, param1.field_V);

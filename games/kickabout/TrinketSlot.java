@@ -261,10 +261,10 @@ final class TrinketSlot extends UiLayoutNode implements lv {
           if (param1) {
             this.field_q = this.field_q >> 1;
             this.field_mb = this.field_mb >> 1;
-            this.field_N = (Sprite) ((Object) nh.b(this.field_Cb));
+            this.field_N = (Sprite) ((Object) nh.downscaleArgbByHalf(this.field_Cb));
           }
           this.field_yb = ValidationState.field_b[this.field_Bb.field_h].toUpperCase();
-          this.field_Hb = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DebugConsole.field_u, new String[]{wq.field_a[this.field_Bb.field_k]}).toLowerCase();
+          this.field_Hb = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DebugConsole.field_u, new String[]{wq.field_a[this.field_Bb.field_k]}).toLowerCase();
           if (0 == this.field_Bb.field_h) {
             this.field_yb = '(' + this.field_yb + ')';
           } else {

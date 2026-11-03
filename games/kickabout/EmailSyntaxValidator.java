@@ -146,20 +146,20 @@ final class EmailSyntaxValidator extends TextFieldValidator {
     final static boolean a(boolean param0, byte param1) {
         try {
           CipherPacketBuffer var2_ref_ml = null;
-          if (wt.field_A == null) {
-            wt.field_A = LoginMethod.field_c.a(true, IntTripleCommand.field_E, rl.field_o);
+          if (ArrayWidgetContainer.field_A == null) {
+            ArrayWidgetContainer.field_A = LoginMethod.field_c.a(true, IntTripleCommand.field_E, rl.field_o);
           }
-          if (wt.field_A.field_a == 0) {
+          if (ArrayWidgetContainer.field_A.field_a == 0) {
             return false;
           }
           long dupTemp$0 = nj.monotonicMillis(-100);
           mp.field_i = dupTemp$0;
           IterableDualLinkDeque.field_c = dupTemp$0;
-          if (1 != wt.field_A.field_a) {
-            un.field_c = cp.field_h;
+          if (1 != ArrayWidgetContainer.field_A.field_a) {
+            un.field_c = AudioService.field_h;
           } else {
             try {
-              op.field_y = new BufferedSocket((java.net.Socket) (wt.field_A.field_b), LoginMethod.field_c);
+              op.field_y = new BufferedSocket((java.net.Socket) (ArrayWidgetContainer.field_A.field_b), LoginMethod.field_c);
               or.field_d.field_n = 0;
               var2_ref_ml = un.field_e;
               un.field_c = sd.field_d;
@@ -170,10 +170,10 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               ImageProducerRasterBuffer.a(AuctionItem.field_g, il.field_g, or.field_d, -3210, s.field_E);
               c.a(-1, false);
             } catch (IOException iOException) {
-              un.field_c = cp.field_h;
+              un.field_c = AudioService.field_h;
             }
           }
-          wt.field_A = null;
+          ArrayWidgetContainer.field_A = null;
           int var2 = -53 / ((-57 - param1) / 43);
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {

@@ -53,7 +53,7 @@ final class tt {
           if (var2 == 0) {
             if (ni.field_m == null) {
               ni.field_m = new DualLinkHashTable(128);
-              ou.field_y = 0;
+              StripedProgressBar.field_y = 0;
             }
             stackIn_12_0 = (var1.readUnsignedByte((byte) -110) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
@@ -80,8 +80,8 @@ final class tt {
             if (var6 == null) {
               var6 = new gg();
               ni.field_m.a(var6, (byte) -4, (long)var8.hashCode());
-              fieldTemp$0 = ou.field_y;
-              ou.field_y = ou.field_y + 1;
+              fieldTemp$0 = StripedProgressBar.field_y;
+              StripedProgressBar.field_y = StripedProgressBar.field_y + 1;
               var6.field_Cb = fieldTemp$0;
               qn.field_b.a(var6, 3);
             }

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dd {
+final class AnimationPlayer {
     int field_b;
     private int field_j;
-    private nm field_e;
-    private nm[] field_d;
+    private AnimationClip field_e;
+    private AnimationClip[] field_d;
     private int field_a;
     static int field_f;
     private int[] field_g;
@@ -110,10 +110,10 @@ final class dd {
             mi.field_b[var1_int] = 0L;
           }
           if (param0 <= 40) {
-            dd.a((byte) 120);
+            AnimationPlayer.a((byte) 120);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            cp.field_d[var1_intLifetime1] = 0L;
+            AudioService.field_d[var1_intLifetime1] = 0L;
           }
           SectorCacheStore.field_b = 0;
         } catch (RuntimeException runtimeException) {
@@ -148,7 +148,7 @@ final class dd {
         }
         this.field_j = this.field_e.field_e[this.field_b];
         if (param0 != 0) {
-          dd.b(-93);
+          AnimationPlayer.b(-93);
         }
         this.field_h = this.field_e.field_c[this.field_b];
         return false;
@@ -161,7 +161,7 @@ final class dd {
         this.field_h = 0;
     }
 
-    final void a(nm param0, byte param1) {
+    final void a(AnimationClip param0, byte param1) {
         try {
           this.b(true);
           this.field_e = param0;
@@ -216,12 +216,12 @@ final class dd {
         }
     }
 
-    public dd() {
+    public AnimationPlayer() {
     }
 
-    dd(int param0) {
+    AnimationPlayer(int param0) {
         this.field_i = -1;
-        this.field_d = new nm[param0];
+        this.field_d = new AnimationClip[param0];
         this.field_g = new int[param0];
     }
 

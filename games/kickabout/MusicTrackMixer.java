@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends PcmStream {
+final class MusicTrackMixer extends PcmStream {
     private int[][] field_j;
     private MusicTrack[] field_p;
     static String field_m;
@@ -211,7 +211,7 @@ final class jj extends PcmStream {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        m var6 = null;
+        WhirlpoolHasher var6 = null;
         byte[] var7 = null;
         var8 = Kickabout.field_G;
         try {
@@ -225,7 +225,7 @@ final class jj extends PcmStream {
           } else {
             var4 = param1;
           }
-          var6 = new m();
+          var6 = new WhirlpoolHasher();
           var6.a(true);
           var6.a((byte) 126, (long)(param0 * 8), var4);
           var7 = new byte[64];
@@ -302,7 +302,7 @@ final class jj extends PcmStream {
         return null;
     }
 
-    jj(int param0) {
+    MusicTrackMixer(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         this.field_o = 3;

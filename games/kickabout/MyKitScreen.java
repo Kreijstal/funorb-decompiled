@@ -10,7 +10,7 @@ final class MyKitScreen extends TeamManagementScreen {
     private UiLayoutNode field_ab;
     private int field_U;
     private UiLayoutNode field_X;
-    private dd field_cb;
+    private AnimationPlayer field_cb;
     private int field_Q;
     private UiLayoutNode field_G;
     private UiLayoutNode field_Y;
@@ -84,10 +84,10 @@ final class MyKitScreen extends TeamManagementScreen {
           var4Lifetime1++;
           kj.a((byte) -116);
         }
-        if (FormationAgent.field_f < wt.field_x &&
-          id.field_v != 0) {
+        if (FormationAgent.field_f < ArrayWidgetContainer.field_x &&
+          StatefulTextPainter.field_v != 0) {
           stackIn_28_0 = var4Lifetime1;
-          stackIn_29_1 = (id.field_v >= 0) ? 1 : -1;
+          stackIn_29_1 = (StatefulTextPainter.field_v >= 0) ? 1 : -1;
           var4Lifetime1 = stackIn_28_0 + stackIn_29_1;
         }
         if (var4Lifetime1 != 0) {
@@ -189,7 +189,7 @@ final class MyKitScreen extends TeamManagementScreen {
           }
           this.field_R = this.field_R + 1;
         }
-        var3 = id.field_v;
+        var3 = StatefulTextPainter.field_v;
         if (0 != var3 &&
           this.field_X.field_gb) {
           this.field_F.field_fb = this.field_F.field_fb - 16 * var3;
@@ -355,7 +355,7 @@ final class MyKitScreen extends TeamManagementScreen {
         if (param0 != -38) {
           this.field_R = -25;
         }
-        this.field_cb = new dd(1);
+        this.field_cb = new AnimationPlayer(1);
     }
 
     private final void refreshPlayerPreview(int param0) {
@@ -482,7 +482,7 @@ final class MyKitScreen extends TeamManagementScreen {
           MyKitScreen.ensureSoundLoaded(98, 120);
         }
         if (!sk.field_d.field_k[0].a(1, 176400, vp.field_j, bq.field_a, ad.field_d[param1])) {
-          dd.a((byte) 113);
+          AnimationPlayer.a((byte) 113);
           return false;
         }
         SoundCache.field_a[param1] = true;

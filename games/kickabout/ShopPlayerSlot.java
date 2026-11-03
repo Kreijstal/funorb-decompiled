@@ -217,7 +217,7 @@ final class ShopPlayerSlot extends im {
           boolean decompiledFrameRemainder0 = true;
           if (param3 >= 2 &&
             param3 <= param2 &&
-            !vi.a(param3, 127, MusicPatchNode.field_k, param0) && (param0[3] == 0 ||
+            !NanoTickClock.a(param3, 127, MusicPatchNode.field_k, param0) && (param0[3] == 0 ||
             param0[3] == 1 &&
             param3 >= 4)) {
             stackIn_11_0 = true;

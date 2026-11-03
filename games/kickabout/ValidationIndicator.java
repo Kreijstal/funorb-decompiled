@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gb extends TextButton {
+final class ValidationIndicator extends TextButton {
     private int field_L;
     static int field_K;
     static String field_I;
@@ -164,7 +164,7 @@ final class gb extends TextButton {
         }
     }
 
-    gb(ValidationSource param0) {
+    ValidationIndicator(ValidationSource param0) {
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {

@@ -129,7 +129,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
         int var2 = Kickabout.field_G;
         DualLinkNode var1Lifetime1;
         try {
-          ou.field_y = 0;
+          StripedProgressBar.field_y = 0;
           ListingRow.field_d = 0;
           BufferedSocket.field_h = null;
           GameplayHelpScreen.field_I.b(22997);

@@ -90,7 +90,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         this.processIncomingPackets(-113);
         if (!CachedListingRow.field_h) {
-          CachedListingRow.a(17, id.field_v);
+          CachedListingRow.a(17, StatefulTextPainter.field_v);
           if (NetworkGameClient.field_t.pollArchives(true)) {
             NetworkGameClient.field_t.buildAssets(12763);
             CachedListingRow.field_h = true;
@@ -203,7 +203,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                 }
               }
             } else {
-              if (vi.c(2915)) {
+              if (NanoTickClock.c(2915)) {
                 if (!nv.i(0)) {
                   var3 = AuctionsHelpScreen.g(-61);
                   if (var3 == 1) {
@@ -284,7 +284,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         if (!MouseWheelInput.field_b &&
           !PlayArea.a(100)) {
-          ju.a(100.0f, SumIntegersCommand.field_H, (byte) 30);
+          ValidationHelpWidget.a(100.0f, SumIntegersCommand.field_H, (byte) 30);
           FormationAgent.a(var2, -14142);
           return;
         }
@@ -313,13 +313,13 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         var2 = Kickabout.field_G;
         try {
           wk.field_d = new Sprite[ig.field_a.length];
-          gb.field_G = new Sprite[ig.field_a.length];
+          ValidationIndicator.field_G = new Sprite[ig.field_a.length];
           if (param0 != -10) {
             return;
           }
           for (var1_int = 0; ig.field_a.length > var1_int; var1_int++) {
-            wk.field_d[var1_int] = nm.a(16729156, ek.b((int) param0, 85), ig.field_a[var1_int]);
-            gb.field_G[var1_int] = nm.a(4521796, -92, ig.field_a[var1_int]);
+            wk.field_d[var1_int] = AnimationClip.a(16729156, TrinketShopDialog.b((int) param0, 85), ig.field_a[var1_int]);
+            ValidationIndicator.field_G[var1_int] = AnimationClip.a(4521796, -92, ig.field_a[var1_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

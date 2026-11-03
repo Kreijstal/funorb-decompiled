@@ -147,25 +147,25 @@ final class fv implements OverlayLayer {
         if (AuctionItem.field_e == -1) {
           return;
         }
-        var2 = wt.field_x;
+        var2 = ArrayWidgetContainer.field_x;
         var3 = us.field_j + 18;
         var5 = 44 / ((param0 - 50) / 45);
         var4 = ConsoleTokenCursor.field_d;
         if (AuctionItem.field_e == 2) {
           var6 = new String[3];
-          var6[0] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{ad.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});
+          var6[0] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{ad.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});
           if (ag.field_h != 0) {
             stackIn_20_0 = var6;
             stackIn_20_1 = 1;
             if (0 >= ag.field_h) {
-              stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
+              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
             } else {
-              stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_h, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
+              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_h, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
             }
             stackIn_20_0[stackIn_20_1] = stackIn_21_2;
           }
           if (ag.field_h != 0) {
-            var6[2] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, PromotionDialog.field_F, new String[]{ad.formatCurrencyAmount(ag.field_h + ReflectionCheck.field_k, 26300)});
+            var6[2] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PromotionDialog.field_F, new String[]{ad.formatCurrencyAmount(ag.field_h + ReflectionCheck.field_k, 26300)});
           }
           var7 = 0;
           var8 = 0;

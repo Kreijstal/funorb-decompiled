@@ -35,7 +35,7 @@ final class TeamSelectionView extends MatchPhaseView {
         int var4Lifetime1;
         var10 = Kickabout.field_G;
         this.drawPanelBackground(108);
-        this.drawTitle(false, gb.field_H);
+        this.drawTitle(false, ValidationIndicator.field_H);
         this.drawCountdown(-2351, this.field_a.phaseTime);
         if (~this.field_g != param0) {
           stackIn_6_0 = (this.field_a.field_n.isReadyOrInactive(8658, this.field_g)) ? 1 : 0;
@@ -138,7 +138,7 @@ final class TeamSelectionView extends MatchPhaseView {
             }
           }
           if (TextFieldNode.field_Wb) {
-            m.a((byte) 49, 20, param1, param4, param3, param6, param4, param7, param0);
+            WhirlpoolHasher.a((byte) 49, 20, param1, param4, param3, param6, param4, param7, param0);
             ContentTransitionDialog.field_Y.b(0, param2);
             if (param2) {
               if (0 != gl.field_c.field_sb) {

@@ -253,14 +253,14 @@ final class IntDoubleCommand extends ConsoleCommand {
 
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
-          if (nm.field_d == null) {
-            nm.field_d = new LoadingProgressDialog(wd.field_l, CachedTextLayout.field_m);
-            wd.field_l.a(nm.field_d, false);
+          if (AnimationClip.field_d == null) {
+            AnimationClip.field_d = new LoadingProgressDialog(wd.field_l, CachedTextLayout.field_m);
+            wd.field_l.a(AnimationClip.field_d, false);
           }
           if (param3 < 71) {
             IntDoubleCommand.a((byte) -14, 61, 24, 8, -65, -11, 102, -101);
           }
-          nm.field_d.a(param1, param0, 9255, param2);
+          AnimationClip.field_d.a(param1, param0, 9255, param2);
           SoftwareRasterizer.b();
           oa.a((byte) -106, true);
         } catch (RuntimeException runtimeException) {

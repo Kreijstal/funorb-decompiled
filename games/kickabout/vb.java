@@ -86,7 +86,7 @@ final class vb {
           if (RankingsScreen.field_C == 0) {
             AccountNameAvailabilityValidator.field_l = null;
           } else {
-            if (!vi.field_n) {
+            if (!NanoTickClock.field_n) {
               AccountNameAvailabilityValidator.field_l = null;
             } else {
               if (RankingsScreen.field_C == 1) {

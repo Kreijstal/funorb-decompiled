@@ -332,12 +332,12 @@ public final class Kickabout extends GameLoopApplet {
             if ((decompiledFrameRemainder2) &&
               (var5 != 0)) {
               if (param1 == 1) {
-                nm.a(RankingsScreen.field_C, param0 - 11592, false, ih.field_c);
+                AnimationClip.a(RankingsScreen.field_C, param0 - 11592, false, ih.field_c);
                 gs.a(0);
                 return true;
               }
               if (2 == param1) {
-                nm.a(RankingsScreen.field_C, -76, true, ih.field_c);
+                AnimationClip.a(RankingsScreen.field_C, -76, true, ih.field_c);
                 gs.a(0);
                 return true;
               }
@@ -497,39 +497,39 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (param1 == 1) {
-              nm.a(0, param0 - 11592, vi.field_n, ih.field_c);
+              AnimationClip.a(0, param0 - 11592, NanoTickClock.field_n, ih.field_c);
               gs.a(0);
               return true;
             }
             if (param1 == 2) {
-              nm.a(1, -76, vi.field_n, ih.field_c);
+              AnimationClip.a(1, -76, NanoTickClock.field_n, ih.field_c);
               gs.a(param0 - 11516);
               return true;
             }
             if (param1 == 3) {
-              nm.a(2, -76, vi.field_n, ih.field_c);
+              AnimationClip.a(2, -76, NanoTickClock.field_n, ih.field_c);
               gs.a(0);
               return true;
             }
             if (param1 == 4) {
-              nm.a(3, param0 ^ -11448, vi.field_n, ih.field_c);
+              AnimationClip.a(3, param0 ^ -11448, NanoTickClock.field_n, ih.field_c);
               gs.a(0);
               return true;
             }
           }
           if (var5 != 0) {
             if (param1 == 1) {
-              nm.a(RankingsScreen.field_C, -76, vi.field_n, 0);
+              AnimationClip.a(RankingsScreen.field_C, -76, NanoTickClock.field_n, 0);
               gs.a(param0 ^ 11516);
               return true;
             }
             if (param1 == 2) {
-              nm.a(RankingsScreen.field_C, -76, vi.field_n, 1);
+              AnimationClip.a(RankingsScreen.field_C, -76, NanoTickClock.field_n, 1);
               gs.a(0);
               return true;
             }
             if (param1 == 3) {
-              nm.a(RankingsScreen.field_C, param0 ^ -11448, vi.field_n, 2);
+              AnimationClip.a(RankingsScreen.field_C, param0 ^ -11448, NanoTickClock.field_n, 2);
               gs.a(0);
               return true;
             }
@@ -562,7 +562,7 @@ public final class Kickabout extends GameLoopApplet {
         SoftwareRasterizer.a(0, 300, 640, 87, 0, 190);
         int var2 = (int)(250.0f * TextInputWidget.field_R / 100.0f);
         int var3 = var2 + 196;
-        un.field_d.d(vo.$cfr$intArgs$a$53ce4ab4c593(-18, mc.field_e, new String[]{h.field_b[ih.field_c][RankingsScreen.field_C].toUpperCase()}), 320, 332, 16777215, 0);
+        un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TickClock.field_e, new String[]{h.field_b[ih.field_c][RankingsScreen.field_C].toUpperCase()}), 320, 332, 16777215, 0);
         SoftwareRasterizer.f(193, 348, 254, 19, 8, 268435455);
         if (param0 != 81) {
           return;
@@ -588,7 +588,7 @@ public final class Kickabout extends GameLoopApplet {
     public Kickabout() {
         CharSequence var2 = (CharSequence) ((Object) gw.field_b);
         GameLoopApplet.field_E = new ClubState(LoggedPlayer.a(var2, false));
-        nm.field_g = this;
+        AnimationClip.field_g = this;
     }
 
     final static void t(int param0) {
@@ -918,7 +918,7 @@ public final class Kickabout extends GameLoopApplet {
               var31 = new ReceivedAuctionItem[var4_intLifetime2];
               var5_ref_vc__Lifetime1 = var31;
               for (var6Lifetime2 = 0; var6Lifetime2 < var4_intLifetime2; var6Lifetime2++) {
-                var5_ref_vc__Lifetime1[var6Lifetime2] = ReceivedAuctionItem.readAuctionItem(ek.b(param2, -21831), un.field_e);
+                var5_ref_vc__Lifetime1[var6Lifetime2] = ReceivedAuctionItem.readAuctionItem(TrinketShopDialog.b(param2, -21831), un.field_e);
               }
               ((AuctionsScreen) (rn.a(-53, 16))).setAuctionList(true, var31);
               return true;
@@ -940,7 +940,7 @@ public final class Kickabout extends GameLoopApplet {
               var32 = new String[param1.a((byte) 81)];
               var4 = var32;
               for (var5Lifetime1 = 0; var32.length > var5Lifetime1; var5Lifetime1++) {
-                var4[var5Lifetime1] = param1.readString(ek.b(param2, -112));
+                var4[var5Lifetime1] = param1.readString(TrinketShopDialog.b(param2, -112));
               }
               gg.a(var32, (byte) 88);
               return true;
@@ -993,7 +993,7 @@ public final class Kickabout extends GameLoopApplet {
             }
             if (param0 == 14) {
               cv.a((byte) 81);
-              ConsoleTokenCursor.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(-116), UrlRequest.field_c, dr.a(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
+              ConsoleTokenCursor.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), AnimationPlayer.b(-116), UrlRequest.field_c, dr.a(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
               DropTargetWidget.a(64, LoginRequiredDialog.h((byte) -64), ButtonMenuScreen.f((byte) -63));
               ec.field_e = false;
               od.field_n = true;
@@ -1028,7 +1028,7 @@ public final class Kickabout extends GameLoopApplet {
               var35 = var48;
               var4_array = var35;
               for (var5Lifetime2 = 0; 2 >= var5Lifetime2; var5Lifetime2++) {
-                var23[var5Lifetime2] = param1.readInt(ek.b(param2, 5));
+                var23[var5Lifetime2] = param1.readInt(TrinketShopDialog.b(param2, 5));
               }
               var46 = var4_array;
               var33 = var46;
@@ -1510,7 +1510,7 @@ public final class Kickabout extends GameLoopApplet {
         ChatMessage.a(2);
         hp.a(0);
         ns.a((byte) 60);
-        mc.a((byte) -116);
+        TickClock.a((byte) -116);
         ArchivePreloader.a(true);
         FullscreenFocusCanvas.a((byte) 25);
         kh.d(param0 - 1712);
@@ -1554,7 +1554,7 @@ public final class Kickabout extends GameLoopApplet {
         SoundCache.a((byte) -116);
         HuffmanCodec.a(0);
         PcmPlayerService.a();
-        jj.a((byte) -99);
+        MusicTrackMixer.a((byte) -99);
         ButtonMenuScreen.c((byte) -107);
         fv.b((byte) 108);
         mt.a(param0 ^ 7);
@@ -1671,7 +1671,7 @@ public final class Kickabout extends GameLoopApplet {
         GzipDecoder.a(113);
         ArchiveSource.a(false);
         VorbisFloor.a();
-        cp.a((byte) 60);
+        AudioService.a((byte) 60);
         MyPitchScreen.f(-107);
         MessageDialog.f((byte) 90);
         HelpTipDialog.g((byte) -111);
@@ -1688,7 +1688,7 @@ public final class Kickabout extends GameLoopApplet {
         AuctionBidDialog.g(0);
         StatChoiceDialog.g(param0 ^ 25994);
         SellPlayerDialog.h(24342);
-        ek.d(false);
+        TrinketShopDialog.d(false);
         TrinketPickerDialog.g(2);
         BuyPitchDialog.g((byte) -45);
         BuyPlayerDialog.g(30);
@@ -1700,7 +1700,7 @@ public final class Kickabout extends GameLoopApplet {
         ModalStack.m(-1);
         RegistrationRequestDialog.releaseStatics(248);
         LoadingProgressDialog.j((byte) 110);
-        vo.j((byte) 53);
+        LoginDialog.j((byte) 53);
         AccountRequestDialog.j((byte) -108);
         AccountRegistrationPanel.a((byte) -94);
         AccountChoicePanel.k(2);
@@ -1740,7 +1740,7 @@ public final class Kickabout extends GameLoopApplet {
         ReflectionCheck.a(0);
         un.a((byte) 106);
         re.a((byte) 109);
-        id.a(-116);
+        StatefulTextPainter.a(-116);
         ei.a(-19485);
         du.a(-24229);
         ql.b(7);
@@ -1753,8 +1753,8 @@ public final class Kickabout extends GameLoopApplet {
         QuickChatPhraseDefinition.a(71);
         WeightedLruCache.a((byte) -32);
         SocketConnector.b(99);
-        lw.a((byte) -125);
-        vi.d(125);
+        ProxyAuthenticationRequiredException.a((byte) -125);
+        NanoTickClock.d(125);
         ImageProducerRasterBuffer.a((byte) -29);
         hq.a(param0 + 55);
         cl.a(-1);
@@ -1765,17 +1765,17 @@ public final class Kickabout extends GameLoopApplet {
         WaitForPlayersView.f(1);
         FormationView.f(param0 - 15646);
         LineupView.b((byte) -113);
-        ib.a(param0 + 905215451);
+        DateOfBirthPanel.a(param0 + 905215451);
         cv.b((byte) -39);
         ia.a((byte) 107);
         rn.a(-66);
         AnimationSkeleton.a(-1);
         ok.a(param0 + 121);
         ef.h((byte) -31);
-        db.a();
+        AnimationFrame.a();
         mk.a(17437);
         uk.a((byte) -128);
-        nm.a(256);
+        AnimationClip.a(256);
         g.a(true);
         us.f((byte) 40);
         ip.a(-123);
@@ -1798,8 +1798,8 @@ public final class Kickabout extends GameLoopApplet {
         ContentTransitionDialog.p(12);
         NameSuggestionsPanel.a(param0 - 6);
         TextHotspotWidget.i(param0 + 9568);
-        gb.a((byte) 38);
-        ju.h((byte) -120);
+        ValidationIndicator.a((byte) 38);
+        ValidationHelpWidget.h((byte) -120);
         Checkbox.a((byte) 108);
         TextFieldValidator.b((byte) -124);
         br.a(true);
@@ -1816,13 +1816,13 @@ public final class Kickabout extends GameLoopApplet {
         RowRangeRequest.a((byte) -49);
         hl.f(param0 ^ -5);
         NumericDateInputWidget.n(-23192);
-        wt.b(false);
+        ArrayWidgetContainer.b(false);
         go.a(99);
         mg.a(param0 ^ 136);
         hv.a(23);
         MusicPatch.f((byte) -37);
         gl.a(93);
-        m.a(0);
+        WhirlpoolHasher.a(0);
         s.i(-1);
         nv.j(696);
         CachedTextLayout.b((byte) -103);

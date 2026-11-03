@@ -29,7 +29,7 @@ final class ConsoleTokenCursor {
         var12 = Kickabout.field_G;
         try {
           rp.field_x = param5;
-          dd.field_c = -1L;
+          AnimationPlayer.field_c = -1L;
           qi.field_p = param8;
           ss.field_j = param5.length;
           InstrumentNoteMask.field_k = false;
@@ -61,8 +61,8 @@ final class ConsoleTokenCursor {
           if (param4.field_jb == null) {
             param4.field_jb = new IntrusiveDeque();
           }
-          lw.field_d = param4.field_jb;
-          lw.field_d.b(22997);
+          ProxyAuthenticationRequiredException.field_d = param4.field_jb;
+          ProxyAuthenticationRequiredException.field_d.b(22997);
           TrinketSlot.field_Eb = new DualLinkHashTable(param3);
           mg.field_c = param7;
           TextFieldNode.field_Ib = 0L;

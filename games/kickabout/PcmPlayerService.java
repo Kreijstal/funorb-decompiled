@@ -8,7 +8,7 @@ class PcmPlayerService {
     static boolean field_o;
     int[] field_k;
     static int field_i;
-    private static cp field_d;
+    private static AudioService field_d;
     private PcmStream field_c;
     private static int field_h;
     private int field_m;
@@ -211,7 +211,7 @@ class PcmPlayerService {
               ((PcmPlayerService) ((Object) var4)).openDevice(((PcmPlayerService) ((Object) var4)).field_r);
               if (field_h > 0 &&
                 field_d == null) {
-                field_d = new cp();
+                field_d = new AudioService();
                 field_d.field_f = param0;
                 param0.a(field_h, (byte) 125, (Runnable) ((Object) field_d));
               }

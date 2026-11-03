@@ -81,7 +81,7 @@ final class ContextMenu extends UiLayoutNode {
         }
         var6 = var6 + 2 * this.field_Mb;
         var7Lifetime1 = this.field_Fb + this.field_Ab * this.field_Cb + this.field_Fb;
-        var8Lifetime1 = ou.b(var6, param2, param1, param0 ^ 127);
+        var8Lifetime1 = StripedProgressBar.b(var6, param2, param1, param0 ^ 127);
         var9 = nj.a(param3, param4, var7Lifetime1, 29079);
         this.a(true, var6, var8Lifetime1, var9, var7Lifetime1);
         for (var10 = param0; var10 < this.field_Ab; var10++) {

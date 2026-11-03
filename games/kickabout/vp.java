@@ -27,11 +27,11 @@ final class vp implements OverlayLayer {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        nm var6 = null;
-        nm var7 = null;
+        AnimationClip var6 = null;
+        AnimationClip var7 = null;
         int var8 = 0;
         int var11 = 0;
-        dd var12 = null;
+        AnimationPlayer var12 = null;
         int var4Lifetime1;
         int var8Lifetime1;
         var11 = Kickabout.field_G;
@@ -41,7 +41,7 @@ final class vp implements OverlayLayer {
           }
           hq.field_a = false;
           FormationAgent.field_l = param1;
-          var12 = new dd();
+          var12 = new AnimationPlayer();
           Runtime.getRuntime().freeMemory();
           if (FormationAgent.field_l != 0 &&
             FormationAgent.field_l != 1) {
@@ -137,10 +137,10 @@ final class vp implements OverlayLayer {
     final static void c(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (null != lw.field_e) {
-          var1 = lw.field_e;
+        if (null != ProxyAuthenticationRequiredException.field_e) {
+          var1 = ProxyAuthenticationRequiredException.field_e;
           synchronized (var1) {
-            lw.field_e = null;
+            ProxyAuthenticationRequiredException.field_e = null;
           }
         }
         if (param0 > -103) {

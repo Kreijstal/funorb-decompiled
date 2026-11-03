@@ -147,11 +147,11 @@ final class od extends SortCriterion {
                 var14 = param0[var12];
                 var15 = SingleChildContainer.a(true, var14);
                 if (JaggrabDownloader.field_c &&
-                  644 - et.field_c < wt.field_x &&
-                  wt.field_x < 640 &&
+                  644 - et.field_c < ArrayWidgetContainer.field_x &&
+                  ArrayWidgetContainer.field_x < 640 &&
                   us.field_j > var13 - rn.field_c &&
                   us.field_j < var13) {
-                  wa.a((byte) 52, vo.$cfr$intArgs$a$53ce4ab4c593(-18, "<%0>: <%1>ms", new String[]{TrinketPickerDialog.field_G[var12], var14 + ""}));
+                  wa.a((byte) 52, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, "<%0>: <%1>ms", new String[]{TrinketPickerDialog.field_G[var12], var14 + ""}));
                 }
                 stackIn_29_0 = (vt.field_c.participantStatus[var12].isActive(3511)) ? 16777215 : 11184810;
                 var16 = stackIn_29_0;

@@ -183,8 +183,8 @@ final class TextFieldNode extends UiLayoutNode {
           if (go.field_b != 0) {
             var2_long = nj.monotonicMillis(param1 - 75);
             var4 = go.field_b;
-            if (0.0 != m.field_a) {
-              var4 = (int)((double)var4 + ac.field_d.nextGaussian() * m.field_a);
+            if (0.0 != WhirlpoolHasher.field_a) {
+              var4 = (int)((double)var4 + ac.field_d.nextGaussian() * WhirlpoolHasher.field_a);
               if (0 > var4) {
                 var4 = 0;
               }
@@ -269,7 +269,7 @@ final class TextFieldNode extends UiLayoutNode {
 
     final static boolean e(int param0, int param1) {
         int var2 = param1;
-        nv.a(var2, m.field_a, MessageDialog.field_B, 0, var2);
+        nv.a(var2, WhirlpoolHasher.field_a, MessageDialog.field_B, 0, var2);
         if (param0 != -63) {
           TextFieldNode.b(-62, 88);
         }

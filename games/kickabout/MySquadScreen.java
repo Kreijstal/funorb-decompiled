@@ -36,11 +36,11 @@ final class MySquadScreen extends TeamManagementScreen {
         for (var4 = 0; var4 < 9; var4++) {
           MessageDialog.field_A[var4] = null;
         }
-        gb.field_F = false;
+        ValidationIndicator.field_F = false;
         if (PlayArea.a(100)) {
         } else {
           if (!ic.field_h.a(-4)) {
-            gb.field_F = true;
+            ValidationIndicator.field_F = true;
           } else {
             or.field_d.b(63, (byte) -86);
           }
@@ -262,7 +262,7 @@ final class MySquadScreen extends TeamManagementScreen {
           if (!ds.field_g) {
             if (var15_ref != null &&
               !PlayArea.a(param0 + 105)) {
-              if (!gb.field_F) {
+              if (!ValidationIndicator.field_F) {
                 jr.a(this.field_G.field_F + (this.field_G.field_q >> 1), -32, (this.field_G.field_mb >> 1) + this.field_G.field_T);
               } else {
                 var16Lifetime2 = var28.field_v;
@@ -366,7 +366,7 @@ final class MySquadScreen extends TeamManagementScreen {
             var8 = pa.field_g[var5.trinketIds[var7]];
             var9 = new TrinketSlot(var8, false);
             if (var8.isEmpty(256)) {
-              stackIn_15_0 = mc.field_f;
+              stackIn_15_0 = TickClock.field_f;
             } else {
               stackIn_15_0 = DateInputWidget.field_E;
             }

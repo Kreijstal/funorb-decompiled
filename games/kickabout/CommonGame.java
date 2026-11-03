@@ -1211,7 +1211,7 @@ final class CommonGame {
         var4 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
-            IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].isActive(3511)) {
+            IntrusiveDequeCursor.field_b.participantStatus[TrinketShopDialog.field_G].isActive(3511)) {
             var1 = af.field_a;
             var2 = 0;
             if (param0) {
@@ -1782,7 +1782,7 @@ final class CommonGame {
                     !this.disableLocal) && (var5 == 0 ||
                     !this.disableOpponent)) {
                     var6.positionX = ts.a(var4_int, param0, var3_int, 448) << 16;
-                    var6.positionY = cp.a((byte) 21, var4_int, var3_int, param0) << 16;
+                    var6.positionY = AudioService.a((byte) 21, var4_int, var3_int, param0) << 16;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -3069,7 +3069,7 @@ final class CommonGame {
               }
               var5 = stackIn_38_0;
               while (4 > var5) {
-                this.field_i[var4_int][var5] = param0.l(3, ek.b(param2, 58));
+                this.field_i[var4_int][var5] = param0.l(3, TrinketShopDialog.b(param2, 58));
                 var5++;
               }
               var4_int++;
@@ -3276,7 +3276,7 @@ final class CommonGame {
         this.disableOpponent = false;
         this.winner = -2;
         this.disableLocal = false;
-        this.field_B = vi.field_t;
+        this.field_B = NanoTickClock.field_t;
         this.field_y = false;
         this.field_Y = false;
         this.bigHeadMode = false;

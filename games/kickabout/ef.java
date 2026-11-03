@@ -7,7 +7,7 @@ final class ef extends DualLinkNode {
     static String field_n;
     private byte[][] field_r;
     static String field_s;
-    db[] field_q;
+    AnimationFrame[] field_q;
 
     public static void h(byte param0) {
         int var1 = 35 % ((-83 - param0) / 36);
@@ -116,7 +116,7 @@ final class ef extends DualLinkNode {
         var5 = 57 % ((param0 - 36) / 42);
         var3 = new IntrusiveDeque();
         var4 = ListingRowCache.field_c.a(true, this.field_o);
-        this.field_q = new db[var4];
+        this.field_q = new AnimationFrame[var4];
         var29 = ListingRowCache.field_c.c(this.field_o, 4);
         for (var7 = 0; var29.length > var7; var7++) {
           var30 = this.field_r[var7];
@@ -138,7 +138,7 @@ final class ef extends DualLinkNode {
             var11 = var15;
             var3.a(var15, 3);
           }
-          this.field_q[var29[var7]] = new db(var30, (AnimationSkeleton) (var11));
+          this.field_q[var29[var7]] = new AnimationFrame(var30, (AnimationSkeleton) (var11));
         }
         this.field_r = (byte[][]) null;
         return true;

@@ -111,7 +111,7 @@ final class LeagueWinnerDialog extends MessageDialog {
               } else {
                 var7 = args;
                 MusicPatchPcmStream.a(18267, var7);
-                JaggrabDownloader.field_h = wt.a(-117, args);
+                JaggrabDownloader.field_h = ArrayWidgetContainer.a(-117, args);
               }
             }
           } else {
@@ -144,7 +144,7 @@ final class LeagueWinnerDialog extends MessageDialog {
         super(9);
         Sprite var1 = WriteIntegersCommand.field_E[-1 + WriteIntegersCommand.field_E.length];
         String var2 = ConsoleTokenCursor.field_h[-1 + ConsoleTokenCursor.field_h.length];
-        String var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[9], new String[]{var2});
+        String var3 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[9], new String[]{var2});
         this.a(var3, this.field_t, var1, -117, this.field_u);
     }
 

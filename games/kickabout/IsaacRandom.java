@@ -52,7 +52,7 @@ final class IsaacRandom {
 
     final static String c(int param0) {
         int var1 = 55 / ((3 - param0) / 40);
-        return ek.field_M;
+        return TrinketShopDialog.field_M;
     }
 
     private final void initializeState(byte param0) {
@@ -327,7 +327,7 @@ final class IsaacRandom {
         if (param0 > -91) {
           return;
         }
-        nm.field_k = null;
+        AnimationClip.field_k = null;
     }
 
     static long a(long param0, long param1) {

@@ -234,14 +234,14 @@ final class DelayedServerPacket extends IntrusiveNode {
           var8 = var7 - var6;
           TextInputWidget.field_R = (float)var6 + (float)var8 * var5;
           SquadGridWidget.field_Db = dg.field_c + ": " + (int)TextInputWidget.field_R + "%";
-          nm.field_g.paintFrame((byte) 63);
+          AnimationClip.field_g.paintFrame((byte) 63);
           return;
         }
         field_h = -66;
         var8Lifetime1 = var7 - var6;
         TextInputWidget.field_R = (float)var6 + (float)var8Lifetime1 * var5;
         SquadGridWidget.field_Db = dg.field_c + ": " + (int)TextInputWidget.field_R + "%";
-        nm.field_g.paintFrame((byte) 63);
+        AnimationClip.field_g.paintFrame((byte) 63);
     }
 
     public static void a(int param0) {

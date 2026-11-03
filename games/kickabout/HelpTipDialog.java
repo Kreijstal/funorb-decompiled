@@ -4,7 +4,7 @@
 final class HelpTipDialog extends MessageDialog {
     private int field_K;
     static int[] field_F;
-    static nm[][] field_I;
+    static AnimationClip[][] field_I;
     static String field_G;
     static int[] field_J;
     static int field_H;
@@ -14,11 +14,11 @@ final class HelpTipDialog extends MessageDialog {
         field_G = null;
         field_J = null;
         if (param0 < -92) {
-          field_I = (nm[][]) null;
+          field_I = (AnimationClip[][]) null;
           return;
         }
-        field_I = (nm[][]) null;
-        field_I = (nm[][]) null;
+        field_I = (AnimationClip[][]) null;
+        field_I = (AnimationClip[][]) null;
     }
 
     final void handleResult(int param0, int param1) {

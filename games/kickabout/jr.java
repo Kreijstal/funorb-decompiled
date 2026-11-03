@@ -382,7 +382,7 @@ final class jr extends im {
           }
           var5 = stackIn_14_0;
           this.field_Jb = eo.a(LobbyPlayerRow.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
-          this.field_Cb = eo.a(mc.field_f, 7126504, (BitmapFont) (var5), 50, true);
+          this.field_Cb = eo.a(TickClock.field_f, 7126504, (BitmapFont) (var5), 50, true);
           this.addChild((byte) -117, this.field_Jb);
           this.addChild((byte) -120, this.field_Cb);
           this.field_Jb.field_J = this.field_T + 20;

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vo extends ContentTransitionDialog {
+final class LoginDialog extends ContentTransitionDialog {
     static String field_db;
     static Sprite field_cb;
     static int field_bb;
     static int[][] field_eb;
 
-    vo(ModalStack param0, UiWidget param1) {
+    LoginDialog(ModalStack param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -140,7 +140,7 @@ final class vo extends ContentTransitionDialog {
         field_db = null;
         field_eb = (int[][]) null;
         if (param0 <= 29) {
-          vo.j((byte) -47);
+          LoginDialog.j((byte) -47);
         }
     }
 

@@ -57,10 +57,10 @@ class iv extends DualLinkNode {
           rr.field_b = new ScrollBar("scrollbar", var6, var7, var5, var4, true);
           it.field_m = new ScrollBar("scrollbar", ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, true);
           ug.field_b = new Sprite[2][2];
-          ug.field_b[0][0] = nm.a(16679959, -87, ButtonMenuScreen.field_u);
-          ug.field_b[0][1] = nm.a(16679959, -104, mg.field_g);
-          ug.field_b[1][0] = nm.a(7126504, -119, ButtonMenuScreen.field_u);
-          ug.field_b[1][1] = nm.a(7126504, -76, mg.field_g);
+          ug.field_b[0][0] = AnimationClip.a(16679959, -87, ButtonMenuScreen.field_u);
+          ug.field_b[0][1] = AnimationClip.a(16679959, -104, mg.field_g);
+          ug.field_b[1][0] = AnimationClip.a(7126504, -119, ButtonMenuScreen.field_u);
+          ug.field_b[1][1] = AnimationClip.a(7126504, -76, mg.field_g);
           var8 = new MenuButton[57];
           var8[0] = new MenuButton(-2, 7465472, 0);
           var8[1] = new MenuButton(-2, 15147554, 1);

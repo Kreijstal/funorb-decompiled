@@ -69,7 +69,7 @@ final class DraggableWidget extends SingleChildContainer {
             PacketBuffer.a(-56, kp.field_m);
             SoftwareRasterizer.b();
             var7.c(4, 4);
-            nh.a(kp.field_m, 0.0, 1.3, 1.2);
+            nh.adjustSpriteHsv(kp.field_m, 0.0, 1.3, 1.2);
             eo.a(kp.field_m, 65793);
             eo.a(kp.field_m, 16777215);
             eo.a(kp.field_m, 7829367);

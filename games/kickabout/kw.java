@@ -21,14 +21,14 @@ final class kw {
     }
 
     final static int c(byte param0) {
-        if (ju.field_T) {
+        if (ValidationHelpWidget.field_T) {
           return -1;
         }
         if (!bo.field_Cb.a(false, "stadium")) {
           return bo.field_Cb.a("stadium", -16248);
         }
         DiskCacheWorker.field_i = new ArgbSprite[4];
-        ju.field_T = true;
+        ValidationHelpWidget.field_T = true;
         DiskCacheWorker.field_i[0] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 74, "top_left_seats"));
         DiskCacheWorker.field_i[1] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 86, "top_right_seats"));
         DiskCacheWorker.field_i[2] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 46, "bot_left_seats"));
@@ -53,7 +53,7 @@ final class kw {
         ph.field_e[2][1] = MyPitchScreen.a(bo.field_Cb, "stadium", true, "right_seats_2");
         ph.field_e[2][2] = MyPitchScreen.a(bo.field_Cb, "stadium", true, "right_seats_3");
         LineupView.field_s = new IndexedSprite[3][];
-        LineupView.field_s[0] = DemoIntegersCommand.a(bo.field_Cb, ek.b((int) param0, 17349), "stadium", "top_seats_1_mask");
+        LineupView.field_s[0] = DemoIntegersCommand.a(bo.field_Cb, TrinketShopDialog.b((int) param0, 17349), "stadium", "top_seats_1_mask");
         LineupView.field_s[1] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "top_seats_2_mask");
         LineupView.field_s[2] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "top_seats_3_mask");
         LoginCredentials.field_c = new IndexedSprite[3][];
@@ -154,7 +154,7 @@ final class kw {
         var3 = Kickabout.field_G;
         if (!EmailSyntaxValidator.c((byte) -42)) {
           if (!dr.field_a) {
-            wt.field_x = BytePlusOneCommand.field_A;
+            ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
             us.field_j = ArchiveManager.field_m;
             if (param1 >= -99) {
               kw.d((byte) -40);
@@ -188,9 +188,9 @@ final class kw {
               }
               var2 = stackIn_10_0;
             } else {
-              wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
+              ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
               us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
-              wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+              ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
               us.field_j = Math.max(0, Math.min(479, us.field_j));
               if (SplashScreen.field_m == null) {
                 stackIn_20_0 = ic.field_d;
@@ -220,14 +220,14 @@ final class kw {
             !dr.field_a) {
             RankingsScreen.a(false);
             if (!dr.field_a) {
-              wt.field_x = BytePlusOneCommand.field_A;
+              ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
               us.field_j = ArchiveManager.field_m;
             } else {
               if (320 != BytePlusOneCommand.field_A ||
                 ArchiveManager.field_m != 240) {
-                wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
+                ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
                 us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
-                wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+                ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
                 us.field_j = Math.max(0, Math.min(479, us.field_j));
                 if (SplashScreen.field_m == null) {
                   stackIn_126_0 = ic.field_d;
@@ -264,7 +264,7 @@ final class kw {
           }
           if (param0) {
             if (!dr.field_a) {
-              wt.field_x = BytePlusOneCommand.field_A;
+              ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
               us.field_j = ArchiveManager.field_m;
               if (param1 >= -99) {
                 kw.d((byte) -40);
@@ -298,9 +298,9 @@ final class kw {
                 }
                 var2 = stackIn_59_0;
               } else {
-                wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
+                ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
                 us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
-                wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+                ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
                 us.field_j = Math.max(0, Math.min(479, us.field_j));
                 if (SplashScreen.field_m == null) {
                   stackIn_69_0 = ic.field_d;
@@ -329,14 +329,14 @@ final class kw {
             if (dr.field_a) {
               im.h(634588072);
               if (!dr.field_a) {
-                wt.field_x = BytePlusOneCommand.field_A;
+                ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
                 us.field_j = ArchiveManager.field_m;
               } else {
                 if (320 != BytePlusOneCommand.field_A ||
                   ArchiveManager.field_m != 240) {
-                  wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
+                  ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
                   us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
-                  wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+                  ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
                   us.field_j = Math.max(0, Math.min(479, us.field_j));
                   if (SplashScreen.field_m == null) {
                     stackIn_104_0 = ic.field_d;
@@ -363,7 +363,7 @@ final class kw {
               var2 = stackIn_112_0;
             } else {
               if (!dr.field_a) {
-                wt.field_x = BytePlusOneCommand.field_A;
+                ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
                 us.field_j = ArchiveManager.field_m;
                 if (param1 >= -99) {
                   kw.d((byte) -40);
@@ -391,9 +391,9 @@ final class kw {
                 return;
               }
               if (320 != BytePlusOneCommand.field_A) {
-                wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
+                ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
                 us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
-                wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+                ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
                 us.field_j = Math.max(0, Math.min(479, us.field_j));
                 if (SplashScreen.field_m == null) {
                   stackIn_146_0 = ic.field_d;
@@ -433,9 +433,9 @@ final class kw {
                   }
                   var2 = stackIn_182_0;
                 } else {
-                  wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
+                  ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
                   us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
-                  wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+                  ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
                   us.field_j = Math.max(0, Math.min(479, us.field_j));
                   if (SplashScreen.field_m == null) {
                     stackIn_163_0 = ic.field_d;

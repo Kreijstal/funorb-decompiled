@@ -25,7 +25,7 @@ final class mg {
     }
 
     final static void a(byte param0) {
-        FadingSoundPlayer var1 = wt.a(72, false, DualLinkHashTable.field_e, 43, 128, 34);
+        FadingSoundPlayer var1 = ArrayWidgetContainer.a(72, false, DualLinkHashTable.field_e, 43, 128, 34);
         if (var1 != null) {
           var1.startFadeOut(150, (byte) -4);
           if (param0 != -25) {

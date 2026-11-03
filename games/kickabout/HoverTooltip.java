@@ -43,7 +43,7 @@ final class HoverTooltip extends UiLayoutNode {
           this.field_Db.a(true, var9_int, 5, sh.field_c + 3, sh.field_c);
           var10 = 5 + var9_int + 5;
           var11 = 3 + (sh.field_c * 2 + 3);
-          var12 = ou.b(var10, param0, param2, 127);
+          var12 = StripedProgressBar.b(var10, param0, param2, 127);
           var13 = nj.a(param1, param3, var11, 29079);
           this.a(true, var10, var12, var13, var11);
           return;
@@ -135,7 +135,7 @@ final class HoverTooltip extends UiLayoutNode {
             0 < this.field_yb.length()) {
             PagedHelpScreen.a(-1 + this.field_yb.length(), ' ', -11407, this.field_yb);
           }
-          if (id.a(false, (CharSequence) ((Object) this.field_yb), il.field_c)) {
+          if (StatefulTextPainter.a(false, (CharSequence) ((Object) this.field_yb), il.field_c)) {
             discarded$1 = this.field_yb.append(il.field_c);
           } else {
             if (this.field_yb.length() == 0 &&

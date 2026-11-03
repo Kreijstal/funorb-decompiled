@@ -699,8 +699,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           try {
             try {
               if (MatchScreen.field_p != null) {
-                nm.field_l = nm.field_l + 1;
-                if (nm.field_l < 3) {
+                AnimationClip.field_l = AnimationClip.field_l + 1;
+                if (AnimationClip.field_l < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
@@ -846,8 +846,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         Object var6 = null;
         try {
           var2_long = nj.monotonicMillis(88);
-          var4 = cp.field_d[gf.field_c];
-          cp.field_d[gf.field_c] = var2_long;
+          var4 = AudioService.field_d[gf.field_c];
+          AudioService.field_d[gf.field_c] = var2_long;
           gf.field_c = 1 + gf.field_c & 31;
           if (var4 != 0L &&
             var4 < var2_long) {

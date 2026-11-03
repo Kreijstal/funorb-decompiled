@@ -90,7 +90,7 @@ final class bo extends UiLayoutNode {
         try {
           var3_int = 52 % ((param1 + 39) / 59);
           var4 = (String) null;
-          stackIn_1_0 = m.a(0, param2, param0, 0, false, (String) null, false);
+          stackIn_1_0 = WhirlpoolHasher.a(0, param2, param0, 0, false, (String) null, false);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

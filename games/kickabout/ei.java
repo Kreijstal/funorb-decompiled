@@ -248,7 +248,7 @@ final class ei implements WidgetPainter {
               var32 = var30 & 65280;
               var33 = var28 * var31 >>> 8 & -671153921 | -1090453760 & var28 * var32 >>> 8;
               var33 = var33 + var29 * 65793;
-              lw.a(var23, var27, var25, (byte) -56, var22, var24, var26, (var33 & 16711422) >> 1);
+              ProxyAuthenticationRequiredException.a(var23, var27, var25, (byte) -56, var22, var24, var26, (var33 & 16711422) >> 1);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];

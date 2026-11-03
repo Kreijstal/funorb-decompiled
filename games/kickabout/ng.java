@@ -36,7 +36,7 @@ final class ng {
         var14 = Kickabout.field_G;
         var15 = new IndexedSprite[6];
         var6 = var15;
-        if (!vi.field_n) {
+        if (!NanoTickClock.field_n) {
           var7_ref_kg = eo.toIndexedSprite(bt.a(-126, param4, param3));
           for (var8_int = 0; 6 > var8_int; var8_int++) {
             var15[var8_int] = var7_ref_kg;
@@ -156,7 +156,7 @@ final class ng {
             var2[var3] = this.field_f[var3];
           }
         }
-        return vo.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_d[this.field_b], var5);
+        return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_d[this.field_b], var5);
     }
 
     final static Sprite[] a(String param0, String param1, int param2, ResourceArchive param3) {

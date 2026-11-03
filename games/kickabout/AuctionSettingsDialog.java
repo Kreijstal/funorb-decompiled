@@ -472,9 +472,9 @@ final class AuctionSettingsDialog extends MessageDialog {
         for (var3 = 0; var3 < 5; var3++) {
           if (of.field_d[var3].field_gb) {
             if (var3 == ee.field_d) {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionTableWidget.field_Jb, new String[]{ni.field_k[var3]}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionTableWidget.field_Jb, new String[]{ni.field_k[var3]}));
             } else {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketPickerDialog.field_H, new String[]{ni.field_k[var3]}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketPickerDialog.field_H, new String[]{ni.field_k[var3]}));
             }
           }
         }
@@ -486,13 +486,13 @@ final class AuctionSettingsDialog extends MessageDialog {
               ad.field_f == AuctionBidDialog.field_L) {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ad.field_a);
             } else {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, WeightedCacheEntry.field_q, new String[]{ad.formatCurrencyAmount(1, 26300)}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WeightedCacheEntry.field_q, new String[]{ad.formatCurrencyAmount(1, 26300)}));
             }
           }
         }
         if (AuctionBidDialog.field_I.field_Q) {
           if (QuickChatPhraseCache.field_c != ad.field_f) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ScrollPane.field_Ib, new String[]{ad.formatCurrencyAmount(1, 26300)}));
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ScrollPane.field_Ib, new String[]{ad.formatCurrencyAmount(1, 26300)}));
           } else {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, UiWidget.field_j);
           }
@@ -502,7 +502,7 @@ final class AuctionSettingsDialog extends MessageDialog {
             if (AuctionBidDialog.field_L == IndexedSpriteState.field_g) {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, SumIntegersCommand.field_E);
             } else {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, IntrusiveDequeCursor.field_c, new String[]{ad.formatCurrencyAmount(1, param0 ^ 26303)}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, IntrusiveDequeCursor.field_c, new String[]{ad.formatCurrencyAmount(1, param0 ^ 26303)}));
             }
           } else {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, im.field_zb);
@@ -514,7 +514,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               if (ad.field_f == AuctionBidDialog.field_L) {
                 IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, sd.field_e);
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, PlayerStats.field_d, new String[]{ad.formatCurrencyAmount(1, 26300)}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PlayerStats.field_d, new String[]{ad.formatCurrencyAmount(1, 26300)}));
               }
             } else {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LeaguesScreen.field_C);

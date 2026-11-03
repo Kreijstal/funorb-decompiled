@@ -133,9 +133,9 @@ final class MatchScreen extends AppScreen {
         boolean decompiledFrameRemainder0 = true;
         if (!this.isSpectator(-2) &&
           this.matchState.participantStatus[this.localSeat].isActive(3511) &&
-          wt.field_x >= 0 &&
+          ArrayWidgetContainer.field_x >= 0 &&
           us.field_j >= 0 &&
-          wt.field_x < 640 &&
+          ArrayWidgetContainer.field_x < 640 &&
           us.field_j < 480 && (((PlayingView) (this.phaseController)).b((byte) -82) ||
           !ArchiveIndex.b(640))) {
           stackIn_16_0 = true;
@@ -443,7 +443,7 @@ final class MatchScreen extends AppScreen {
           }
         }
         if (var6 != null) {
-          RenderedFootballer.a(vo.$cfr$intArgs$a$53ce4ab4c593(-18, (String) (var6), new String[]{this.matchState.field_S[param2]}), false, (byte) -108);
+          RenderedFootballer.a(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, (String) (var6), new String[]{this.matchState.field_S[param2]}), false, (byte) -108);
         }
     }
 
@@ -803,7 +803,7 @@ final class MatchScreen extends AppScreen {
           if (this.matchState.phase > 0 &&
             this.matchState.phase < 5 && (RankingsScreen.field_C != this.matchState.tier ||
             ih.field_c != this.matchState.surface ||
-            !vi.field_n)) {
+            !NanoTickClock.field_n)) {
             StringCursor.a(true, (byte) -125, this.matchState.tier, this.matchState.surface);
           }
           if (5 == this.matchState.phase &&

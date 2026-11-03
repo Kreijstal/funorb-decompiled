@@ -32,7 +32,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
 
     private final int a(String param0, int param1, int param2, UiWidget param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
-        ju var9 = null;
+        ValidationHelpWidget var9 = null;
         int var10 = 0;
         cg var11 = null;
         int stackIn_1_0 = 0;
@@ -47,7 +47,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         try {
           var11 = new cg(20, param5, param1 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param0);
           this.a(-55, var11);
-          var9 = new ju(((ValidationProvider) ((Object) param3)).a((byte) -120), param6, 126, var11.field_i + param5, param1 + 25, param2);
+          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).a((byte) -120), param6, 126, var11.field_i + param5, param1 + 25, param2);
           var9.field_k = (UiListener) (this);
           var10 = -123 % ((param4 - 24) / 41);
           this.a(-58, var9);

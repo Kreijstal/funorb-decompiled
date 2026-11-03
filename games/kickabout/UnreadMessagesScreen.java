@@ -79,7 +79,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
           var1 = rl.field_n;
           if (var1 > 0) {
             if (var1 != 1) {
-              CachedTextLayout.field_m = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ScrollContainer.field_Lb, new String[]{Integer.toString(var1)});
+              CachedTextLayout.field_m = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ScrollContainer.field_Lb, new String[]{Integer.toString(var1)});
             } else {
               CachedTextLayout.field_m = ProxySocketConnector.field_h;
             }

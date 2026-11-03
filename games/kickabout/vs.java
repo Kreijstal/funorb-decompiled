@@ -176,7 +176,7 @@ final class vs {
           }
           if (param3 >= 100 &&
             105 >= param3) {
-            ArchiveIndex.field_a = wt.a(-111, param1);
+            ArchiveIndex.field_a = ArrayWidgetContainer.a(-111, param1);
             return;
           }
           ArchiveIndex.field_a = TeamSelectionView.a(-126, param0, param3);

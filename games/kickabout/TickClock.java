@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mc {
+abstract class TickClock {
     static int field_a;
     static String field_c;
     static String field_h;
@@ -36,7 +36,7 @@ abstract class mc {
         ContentTransitionDialog.field_Y = null;
         h.field_e = null;
         if (param0 >= -82) {
-          mc.a((byte) 24);
+          TickClock.a((byte) 24);
           if (null != jl.field_f) {
             ei.field_b = jl.field_f;
             WeightedCacheEntry.field_s = ButtonMenuScreen.field_n;
@@ -84,7 +84,7 @@ abstract class mc {
         if (param0 <= -51) {
           return this.a(114, param1);
         }
-        mc.a(19);
+        TickClock.a(19);
         return this.a(114, param1);
     }
 
@@ -96,7 +96,7 @@ abstract class mc {
 
     final static double a(double param0, double param1, boolean param2) {
         if (param2) {
-          mc.a((byte) -58);
+          TickClock.a((byte) -58);
           return Math.sqrt(param0 * (1.7 * param1));
         }
         return Math.sqrt(param0 * (1.7 * param1));

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ModelMeshBase extends cv {
-    private final void a(AnimationSkeleton param0, db param1, db param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
+    private final void a(AnimationSkeleton param0, AnimationFrame param1, AnimationFrame param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
         int var11;
         int var12;
         int var13;
@@ -207,16 +207,16 @@ abstract class ModelMeshBase extends cv {
         if (!this.beginAnimation()) {
           return;
         }
-        db var8 = param0.field_q[param1];
+        AnimationFrame var8 = param0.field_q[param1];
         AnimationSkeleton var9 = var8.field_e;
         Object var10 = null;
         if (param2 != null) {
           var10 = param2.field_q[param3];
-          if (((db) (var10)).field_e != var9) {
+          if (((AnimationFrame) (var10)).field_e != var9) {
             var10 = null;
           }
         }
-        this.a(var9, var8, (db) (var10), param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
+        this.a(var9, var8, (AnimationFrame) (var10), param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
         this.finishAnimation();
     }
 

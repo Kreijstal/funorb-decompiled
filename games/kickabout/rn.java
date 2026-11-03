@@ -64,12 +64,12 @@ final class rn {
           }
           var7 = AchievementsScreen.a(param0, 145);
           if (var7 == null) {
-            stackIn_10_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DoSomethingCommand.field_A, new String[]{param0});
+            stackIn_10_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DoSomethingCommand.field_A, new String[]{param0});
             return stackIn_10_0;
           }
           var7.c((byte) -109);
           var7.unlinkSecondary(66);
-          ou.field_y = ou.field_y - 1;
+          StripedProgressBar.field_y = StripedProgressBar.field_y - 1;
           var5 = or.field_d;
           var5.b(param2, (byte) 110);
           var5.field_n = var5.field_n + 1;

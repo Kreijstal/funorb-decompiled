@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id extends TextWidgetPainter {
+final class StatefulTextPainter extends TextWidgetPainter {
     static byte[] field_u;
     private PainterStyle[] field_w;
     static r field_t;
@@ -20,7 +20,7 @@ final class id extends TextWidgetPainter {
         return dupTemp$0;
     }
 
-    private final void a(id param0, boolean param1, int param2) {
+    private final void a(StatefulTextPainter param0, boolean param1, int param2) {
         int var4_int = 0;
         PainterStyle dupTemp$0 = null;
         PainterStyle stackIn_7_0 = null;
@@ -241,7 +241,7 @@ final class id extends TextWidgetPainter {
           TeamManagementScreen.e(119);
           IntrusiveDequeCursor.field_a = new Sprite[]{var15, var12, var11};
           if (param2) {
-            id.a(false, (CharSequence) null, 'ﾺ');
+            StatefulTextPainter.a(false, (CharSequence) null, 'ﾺ');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -349,7 +349,7 @@ final class id extends TextWidgetPainter {
         }
     }
 
-    public id() {
+    public StatefulTextPainter() {
         this.field_w = new PainterStyle[6];
         this.field_x = new PainterStyle();
         PainterStyle dupTemp$0 = new PainterStyle();
@@ -369,7 +369,7 @@ final class id extends TextWidgetPainter {
         field_t = null;
     }
 
-    id(id param0, boolean param1) {
+    StatefulTextPainter(StatefulTextPainter param0, boolean param1) {
         this();
         try {
           param0.a(this, param1, -116);
@@ -393,7 +393,7 @@ final class id extends TextWidgetPainter {
           var3 = this.field_w;
           var4 = 0;
           if (param1 > -86) {
-            id.a(false, (CharSequence) null, 'ﾴ');
+            StatefulTextPainter.a(false, (CharSequence) null, 'ﾴ');
           }
           while (var3.length > var4) {
             var5 = var3[var4];

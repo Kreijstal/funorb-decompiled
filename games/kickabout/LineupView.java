@@ -132,7 +132,7 @@ final class LineupView extends MatchPhaseView {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = wt.field_x;
+          var3_int = ArrayWidgetContainer.field_x;
           if (param0) {
             var5 = (java.applet.Applet) null;
             LineupView.a(43, (String[]) null, 37, (java.applet.Applet) null, -63, -56);
@@ -196,8 +196,8 @@ final class LineupView extends MatchPhaseView {
             if (!var11.field_Eb.isEmpty(-2) &&
               var11.field_qb != 0 &&
               !var11.field_Gb) {
-              var11.field_F = -(var11.field_q >> 1) + wt.field_x;
-              var11.field_s = -(var11.field_q >> 1) + wt.field_x;
+              var11.field_F = -(var11.field_q >> 1) + ArrayWidgetContainer.field_x;
+              var11.field_s = -(var11.field_q >> 1) + ArrayWidgetContainer.field_x;
               var11.field_T = us.field_j - (var11.field_mb >> 1);
               var11.field_J = us.field_j - (var11.field_mb >> 1);
               this.field_l = var3;
@@ -340,7 +340,7 @@ final class LineupView extends MatchPhaseView {
             param0.field_n == ChatLine.field_i.h((byte) -105)) {
             if (!WriteIntegersCommand.field_C) {
               var9 = TextButton.field_v;
-              var10 = vo.field_db;
+              var10 = LoginDialog.field_db;
               var9.field_j.addItem(param1 ^ -60, 14, var10);
             }
             var11 = TextButton.field_v;
@@ -494,9 +494,9 @@ final class LineupView extends MatchPhaseView {
               }
             }
             if (var7 != -1) {
-              var5 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ss.field_i, new String[]{Integer.toString(1 + var6), Integer.toString(var7 + 1)});
+              var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ss.field_i, new String[]{Integer.toString(1 + var6), Integer.toString(var7 + 1)});
             } else {
-              var5 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, sm.field_p, new String[]{Integer.toString(var6 + 1)});
+              var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, sm.field_p, new String[]{Integer.toString(var6 + 1)});
             }
           } else {
             var5 = ig.field_j;

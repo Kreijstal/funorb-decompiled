@@ -125,8 +125,8 @@ final class su {
             var7 = stackIn_45_0;
             DialogOverlay.field_a[AuctionsScreen.field_O] = var7;
             AuctionsScreen.field_O = AuctionsScreen.field_O + 1;
-            if (vi.field_s > var7) {
-              vi.field_s = var7;
+            if (NanoTickClock.field_s > var7) {
+              NanoTickClock.field_s = var7;
             }
             if (var7 > TournamentLobbyScreen.field_V) {
               TournamentLobbyScreen.field_V = var7;
@@ -137,7 +137,7 @@ final class su {
             field_b = (ContextMenu) null;
             return;
           }
-          vi.field_s = param4;
+          NanoTickClock.field_s = param4;
           AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;
           AgeValidator.field_j[AuctionsScreen.field_O] = param0;
           DropTargetWidget.field_B[AuctionsScreen.field_O] = param2;
@@ -162,7 +162,7 @@ final class su {
             }
             var7 = stackIn_5_0;
           } else {
-            vi.field_s = param4;
+            NanoTickClock.field_s = param4;
             AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;
             AgeValidator.field_j[AuctionsScreen.field_O] = param0;
             DropTargetWidget.field_B[AuctionsScreen.field_O] = param2;
@@ -177,8 +177,8 @@ final class su {
         }
         DialogOverlay.field_a[AuctionsScreen.field_O] = var7;
         AuctionsScreen.field_O = AuctionsScreen.field_O + 1;
-        if (vi.field_s > var7) {
-          vi.field_s = var7;
+        if (NanoTickClock.field_s > var7) {
+          NanoTickClock.field_s = var7;
         }
         if (var7 > TournamentLobbyScreen.field_V) {
           TournamentLobbyScreen.field_V = var7;

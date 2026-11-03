@@ -32,7 +32,7 @@ abstract class PopupDialog extends IntrusiveNode {
           return;
         }
         this.a(3, param1);
-        this.field_j.a(param0 ^ 4642, this.a(true, us.field_j, wt.field_x), this.a(true, TabStrip.field_Eb, TrinketIcon.field_yb));
+        this.field_j.a(param0 ^ 4642, this.a(true, us.field_j, ArrayWidgetContainer.field_x), this.a(true, TabStrip.field_Eb, TrinketIcon.field_yb));
         if (this.field_n == 0 &&
           0 == this.field_m) {
           ShopPlayerSlot.c(this.a(false), -104);

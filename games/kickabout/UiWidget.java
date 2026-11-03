@@ -381,9 +381,9 @@ class UiWidget extends IntrusiveNode {
         this.a((byte) 12, this, param2, param0);
         var5 = this.b(73) ? 1 : 0;
         if (param3) {
-          if (id.field_v != 0 &&
+          if (StatefulTextPainter.field_v != 0 &&
             var5 != 0) {
-            this.a(ArchiveManager.field_m, this, param2, BytePlusOneCommand.field_A, param0, id.field_v, param1 ^ 31923);
+            this.a(ArchiveManager.field_m, this, param2, BytePlusOneCommand.field_A, param0, StatefulTextPainter.field_v, param1 ^ 31923);
           }
           if (WidgetContainer.field_A != 0) {
             if (this.handlePointerPress(true, param0, sm.field_q, this, ReceivedAuctionItem.field_y, param2, WidgetContainer.field_A)) {

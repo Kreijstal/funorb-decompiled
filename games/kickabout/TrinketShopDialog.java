@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends MessageDialog {
+final class TrinketShopDialog extends MessageDialog {
     private int field_I;
     private TrinketTile field_H;
     private int field_J;
@@ -119,7 +119,7 @@ final class ek extends MessageDialog {
     final static void g(int param0) {
         ScrollPane.field_Jb.a(new TrinketPickerDialog(), 3);
         if (param0 != -29315) {
-          ek.b(true, -105, 126);
+          TrinketShopDialog.b(true, -105, 126);
         }
     }
 
@@ -135,7 +135,7 @@ final class ek extends MessageDialog {
         }
         var3 = this.field_L.field_Db.field_J;
         this.field_L.b(0, param1);
-        this.field_L.a(id.field_v * 32, true, (byte) -78, 32);
+        this.field_L.a(StatefulTextPainter.field_v * 32, true, (byte) -78, 32);
         if (var3 < this.field_L.field_Db.field_J &&
           this.field_K == 0) {
           ShopPlayerSlot.c(59, 52);
@@ -166,7 +166,7 @@ final class ek extends MessageDialog {
         stackIn_23_0.field_lb = stackIn_24_1;
     }
 
-    ek(int param0, int param1, int param2) {
+    TrinketShopDialog(int param0, int param1, int param2) {
         super(24);
         this.field_J = param0;
         this.field_F = param2;

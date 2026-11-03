@@ -20,7 +20,7 @@ class ColumnTableWidget extends UiLayoutNode {
         im var5;
         im[] var7;
         var6 = Kickabout.field_G;
-        this.field_Cb.a(32 * id.field_v, param1, (byte) -108, 32);
+        this.field_Cb.a(32 * StatefulTextPainter.field_v, param1, (byte) -108, 32);
         for (var3_int = 0; var3_int < this.field_Bb.length; var3_int++) {
           if (this.field_Bb[var3_int].field_sb == 1) {
             ShopPlayerSlot.c(45, 81);

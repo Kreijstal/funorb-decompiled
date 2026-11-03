@@ -22,7 +22,7 @@ final class SquadGridWidget extends UiLayoutNode {
           SaveChangesDialog.field_F = new Sprite[2];
           for (var2_int = 0; 2 > var2_int; var2_int++) {
             SaveChangesDialog.field_F[var2_int] = gk.field_a[var2_int].copy();
-            nh.a(SaveChangesDialog.field_F[var2_int], 0.0, 0.0, 1.0);
+            nh.adjustSpriteHsv(SaveChangesDialog.field_F[var2_int], 0.0, 0.0, 1.0);
           }
           if (!param1) {
             field_Ib = true;
@@ -71,7 +71,7 @@ final class SquadGridWidget extends UiLayoutNode {
           var3_ref_kq.a((byte) 25, this.field_Hb, var4_int);
           if (!var3_ref_kq.field_Eb.isEmpty(-2) &&
             var3_ref_kq.field_qb != 0) {
-            var3_ref_kq.field_s = -var3_ref_kq.field_bb + (-this.field_F + wt.field_x);
+            var3_ref_kq.field_s = -var3_ref_kq.field_bb + (-this.field_F + ArrayWidgetContainer.field_x);
             var3_ref_kq.field_J = -var3_ref_kq.field_M - this.field_T + us.field_j;
             var5 = 10 + (this.field_q - var3_ref_kq.field_q);
             var6 = 10 - var3_ref_kq.field_mb + this.field_mb;
@@ -617,13 +617,13 @@ final class SquadGridWidget extends UiLayoutNode {
         AuctionsHelpScreen.field_F[6] = SquadPickerDialog.field_M;
         AuctionsHelpScreen.field_F[0] = PlayerShopScreen.field_H;
         MatchingTextValidator.field_o = new String[57];
-        LoginForm.field_M = new String[]{mc.field_g, MouseInputHandler.field_a};
+        LoginForm.field_M = new String[]{TickClock.field_g, MouseInputHandler.field_a};
         ArchiveSource.field_d = new String[]{NumericDateInputWidget.field_C, iv.field_n, MouseInputHandler.field_a};
         ReflectionCheck.field_q = new String[]{s.field_F, BroadcastServerCommand.field_F};
         AuctionsHelpScreen.field_F[3] = rl.field_t;
-        FullscreenFocusCanvas.field_i = new String[]{s.field_F, mc.field_g};
+        FullscreenFocusCanvas.field_i = new String[]{s.field_F, TickClock.field_g};
         AuctionItem.field_u = new String[]{s.field_F};
-        AuctionsHelpScreen.field_F[2] = m.field_i;
+        AuctionsHelpScreen.field_F[2] = WhirlpoolHasher.field_i;
         AuctionsHelpScreen.field_F[5] = fc.field_e;
         AccountChoicePanel.field_I = new String[]{RenderedBall.field_H, in.field_a, MouseInputHandler.field_a};
         MatchingTextValidator.field_o[10] = nj.field_b;
@@ -672,7 +672,7 @@ final class SquadGridWidget extends UiLayoutNode {
         MatchingTextValidator.field_o[34] = PasswordValidator.field_m;
         MatchingTextValidator.field_o[48] = oc.field_b.toUpperCase();
         MatchingTextValidator.field_o[30] = "";
-        MatchingTextValidator.field_o[50] = lw.field_h;
+        MatchingTextValidator.field_o[50] = ProxyAuthenticationRequiredException.field_h;
         MatchingTextValidator.field_o[46] = ii.field_h;
         MatchingTextValidator.field_o[52] = ia.field_h;
         MatchingTextValidator.field_o[32] = "";
@@ -696,7 +696,7 @@ final class SquadGridWidget extends UiLayoutNode {
         fa.field_g[45] = nd.field_a;
         ValidationState.field_d[18] = ef.field_s;
         ValidationState.field_d[1] = DemoIntegersCommand.field_C;
-        ValidationState.field_d[4] = cp.field_a;
+        ValidationState.field_d[4] = AudioService.field_a;
         ValidationState.field_d[7] = rr.field_a;
         kp.field_g = new String[4];
         ValidationState.field_d[22] = ni.field_n;
@@ -714,7 +714,7 @@ final class SquadGridWidget extends UiLayoutNode {
         ValidationState.field_d[12] = CheatCodeListener.field_g;
         ValidationState.field_d[19] = ScrollPane.field_yb;
         ValidationState.field_d[3] = PlayerModelPreview.field_l;
-        ValidationState.field_d[14] = mc.field_c;
+        ValidationState.field_d[14] = TickClock.field_c;
         ValidationState.field_d[2] = mt.field_c;
         ValidationState.field_d[8] = MusicPatch.field_o;
         ValidationState.field_d[13] = ld.field_d;

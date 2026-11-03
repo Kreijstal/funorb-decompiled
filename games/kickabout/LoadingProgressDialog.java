@@ -11,7 +11,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
     private boolean field_X;
     private String field_S;
     static String field_R;
-    private ou field_Y;
+    private StripedProgressBar field_Y;
 
     final void a(String param0, float param1, int param2, boolean param3) {
         boolean stackIn_4_1 = false;
@@ -100,7 +100,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             var3_int = fj.field_b.paragraphHeight(this.field_S, 260, fj.field_b.field_G);
             this.a((byte) 110, var3_int + 150, 300);
           }
-          this.field_Y = new ou(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_Y = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_X = false;
           this.field_W = false;
           this.field_Y.field_w = true;

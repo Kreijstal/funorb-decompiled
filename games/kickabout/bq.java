@@ -167,7 +167,7 @@ final class bq {
           is.field_b.a(true, tn.field_f.field_q, 0, 0, 24);
           vj.field_g.a(true, tn.field_f.field_q, 0, 24, -24 + tn.field_f.field_mb);
           vj.field_g.field_R = fs.a(vj.field_g.field_mb, 3, 1, 11579568, 8421504, (byte) 97);
-          mc.field_d.a(true, vj.field_g.field_q - 10, 5, 5, -10 + (vj.field_g.field_mb - 24) - 2);
+          TickClock.field_d.a(true, vj.field_g.field_q - 10, 5, 5, -10 + (vj.field_g.field_mb - 24) - 2);
           BlackFadeScreen.field_i.a(true, 80, (-80 + vj.field_g.field_q) / 2, -24 + (-5 + vj.field_g.field_mb), 24);
           ClientException.a(0);
           return;

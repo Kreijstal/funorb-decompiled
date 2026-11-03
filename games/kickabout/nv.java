@@ -84,7 +84,7 @@ final class nv extends TextButton {
             }
           }
         }
-        m.field_a = param1;
+        WhirlpoolHasher.field_a = param1;
         go.field_b = param0;
     }
 

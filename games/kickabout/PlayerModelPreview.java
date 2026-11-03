@@ -8,7 +8,7 @@ final class PlayerModelPreview extends IntrusiveNode {
     private int field_i;
     private ModelMesh field_p;
     private int field_n;
-    private dd field_h;
+    private AnimationPlayer field_h;
     static String field_l;
     private int field_g;
     static int field_j;
@@ -162,7 +162,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         var8 = var8;
         this.field_o = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-34, 6, var8);
         this.field_p = ok.a(-49, this.field_s, var8);
-        this.field_h = new dd(1);
+        this.field_h = new AnimationPlayer(1);
         int var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-48, 5, var8);
         this.field_h.a(hq.field_b[var6], (byte) -107);
     }

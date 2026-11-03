@@ -325,8 +325,8 @@ class ri extends TextWidgetPainter {
           MatchingTextValidator.field_n.field_u = var14;
           MouseInputHandler.field_b = new UiLayoutNode(0L, (UiLayoutNode) null);
           MouseInputHandler.field_b.field_R = fs.a(206, 3, -1, 1856141, 1127256, (byte) 91);
-          cp.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
-          cp.field_g.field_R = fs.a(290, 3, -1, 11579568, 6052956, (byte) 118);
+          AudioService.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
+          AudioService.field_g.field_R = fs.a(290, 3, -1, 11579568, 6052956, (byte) 118);
           TextFieldNode.field_Qb = new UiLayoutNode(0L, var15);
           TextFieldNode.field_Qb.field_A = 1;
           TextFieldNode.field_Qb.field_eb = 1;
@@ -649,7 +649,7 @@ class ri extends TextWidgetPainter {
               } else {
                 stackIn_27_2 = vr.field_b;
               }
-              stackIn_26_0.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
+              stackIn_26_0.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
               nv.field_F.field_E = CheckboxLabelWidget.field_Db;
               ac.field_b.field_lb = true;
               tt.field_c = true;
@@ -657,13 +657,13 @@ class ri extends TextWidgetPainter {
                 ee.field_e = false;
                 tt.field_c = false;
                 if (SumIntegersCommand.field_G == null) {
-                  m.field_f = new boolean[ss.field_j];
+                  WhirlpoolHasher.field_f = new boolean[ss.field_j];
                   SumIntegersCommand.field_G = new byte[ss.field_j];
                 }
                 var14 = 0;
                 var10_intLifetime1 = var14;
                 while (var14 < ss.field_j) {
-                  m.field_f[var14] = false;
+                  WhirlpoolHasher.field_f[var14] = false;
                   var14++;
                 }
                 pl.a(0, ss.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
@@ -684,7 +684,7 @@ class ri extends TextWidgetPainter {
                     var10 = var12Lifetime1;
                   }
                   for (var11Lifetime1 = 0; var11Lifetime1 < ss.field_j; var11Lifetime1++) {
-                    if (m.field_f[var11Lifetime1]) {
+                    if (WhirlpoolHasher.field_f[var11Lifetime1]) {
                       var12_ref = "<col=A00000>" + ok.field_b[var11Lifetime1] + "</col>";
                       var10 = var12_ref;
                       var10 = var12_ref;

@@ -258,7 +258,7 @@ abstract class MatchPhaseView {
           return;
         }
         if (param1) {
-          this.field_i.a(-21174, this.a(wt.field_x, us.field_j, -74), this.a(TrinketIcon.field_yb, TabStrip.field_Eb, -106));
+          this.field_i.a(-21174, this.a(ArrayWidgetContainer.field_x, us.field_j, -74), this.a(TrinketIcon.field_yb, TabStrip.field_Eb, -106));
           if (this.field_i.selectedIndex >= 0 &&
             this.field_i.c(-1)) {
             this.onButtonClick(111, this.field_c[this.field_i.selectedIndex].kind);
@@ -287,7 +287,7 @@ abstract class MatchPhaseView {
             stackIn_30_0 = 0;
           }
           var6 = stackIn_30_0;
-          var7 = wt.field_x - this.buttonX(124, var3);
+          var7 = ArrayWidgetContainer.field_x - this.buttonX(124, var3);
           this.field_c[var3].a(var4 != 0, var5 != 0, var6 != 0, 16, var7);
         }
         if (param0 >= -92) {
@@ -301,7 +301,7 @@ abstract class MatchPhaseView {
           field_d = (IconLabel) null;
         }
         this.field_i = new MenuSelection(this.field_c.length);
-        this.field_i.a(true, this.a(wt.field_x, us.field_j, -93), (byte) -127);
+        this.field_i.a(true, this.a(ArrayWidgetContainer.field_x, us.field_j, -93), (byte) -127);
     }
 
     public static void b(int param0) {

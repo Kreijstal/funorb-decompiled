@@ -17,7 +17,7 @@ final class pg {
           vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
           tn.field_f.addChild((byte) -125, is.field_b);
           tn.field_f.addChild((byte) -105, vj.field_g);
-          vj.field_g.addChild((byte) -124, mc.field_d);
+          vj.field_g.addChild((byte) -124, TickClock.field_d);
           vj.field_g.addChild((byte) -119, BlackFadeScreen.field_i);
           bq.a(93, param1);
           return;
@@ -29,7 +29,7 @@ final class pg {
         vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
         tn.field_f.addChild((byte) -125, is.field_b);
         tn.field_f.addChild((byte) -105, vj.field_g);
-        vj.field_g.addChild((byte) -124, mc.field_d);
+        vj.field_g.addChild((byte) -124, TickClock.field_d);
         vj.field_g.addChild((byte) -119, BlackFadeScreen.field_i);
         bq.a(93, param1);
     }

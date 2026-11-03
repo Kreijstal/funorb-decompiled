@@ -152,7 +152,7 @@ abstract class ArchiveNetworkClient {
         if (param3 != 20) {
           return;
         }
-        wt.field_v = param0;
+        ArrayWidgetContainer.field_v = param0;
         du.field_k = param1;
     }
 

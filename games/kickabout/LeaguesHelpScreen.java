@@ -38,7 +38,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
             if (4 == param0.field_c) {
               var2_intLifetime1 = StringCursor.field_h[param0.field_c];
             } else {
-              if (param0.field_d == dd.field_c) {
+              if (param0.field_d == AnimationPlayer.field_c) {
                 var2_intLifetime1 = sg.field_c[param0.field_c];
               } else {
                 var2_intLifetime1 = StringCursor.field_h[param0.field_c];

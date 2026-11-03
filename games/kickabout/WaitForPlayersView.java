@@ -45,7 +45,7 @@ final class WaitForPlayersView extends MatchPhaseView {
 
     final void drawContent(int param0) {
         this.drawPanelBackground(112);
-        this.drawTitle(false, vo.$cfr$intArgs$a$53ce4ab4c593(-18, mc.field_e, new String[]{h.field_b[this.field_a.surface][this.field_a.tier]}));
+        this.drawTitle(false, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TickClock.field_e, new String[]{h.field_b[this.field_a.surface][this.field_a.tier]}));
         this.drawCountdown(param0 - 2352, this.field_a.phaseTime);
         this.a(150, 17709);
         if (param0 != 1) {

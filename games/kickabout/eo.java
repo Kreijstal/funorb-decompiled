@@ -585,7 +585,7 @@ final class eo {
           field_r[var0_int][1] = eo.b((Sprite) (field_r[var0_int][0]));
           field_r[var0_int][2] = field_i[var0_int];
           field_r[var0_int][3] = field_k[var0_int].h();
-          nh.a(field_r[var0_int][3], 0.0, 0.0, 0.7);
+          nh.adjustSpriteHsv(field_r[var0_int][3], 0.0, 0.0, 0.7);
         }
         for (var0_intLifetime1 = 0; var0_intLifetime1 < 3; var0_intLifetime1++) {
           for (var1 = 0; var1 < 4; var1++) {
@@ -598,9 +598,9 @@ final class eo {
           field_l[var0_intLifetime2] = (Sprite) ((Object) field_a.h());
           field_l[var0_intLifetime2].a();
         }
-        nh.a(field_l[0], 0.321875, 1.0, 1.0);
-        nh.a(field_l[2], 0.74375, 1.0, 1.0);
-        var0 = mc.field_f.toLowerCase();
+        nh.adjustSpriteHsv(field_l[0], 0.321875, 1.0, 1.0);
+        nh.adjustSpriteHsv(field_l[2], 0.74375, 1.0, 1.0);
+        var0 = TickClock.field_f.toLowerCase();
         if (vv.field_r != 3) {
           if (vv.field_r != 2) {
             stackIn_20_0 = (vv.field_r == 1) ? 1 : 0;

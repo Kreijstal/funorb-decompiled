@@ -12,7 +12,7 @@ final class nh {
     private static int field_e;
     private static int field_g;
 
-    private final static int b(int param0) {
+    private final static int rgbToHsv(int param0) {
         int var4 = 0;
         int var1 = param0 >> 16 & 255;
         int var2 = param0 >> 8 & 255;
@@ -208,7 +208,7 @@ final class nh {
         nh.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_a, var12 * SoftwareRasterizer.field_g + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_g - (var13 - var11));
     }
 
-    private final static int a(int param0) {
+    private final static int hsvToRgb(int param0) {
         int var1 = param0 >>> 19 & 8191;
         int var2 = param0 >>> 8 & 2047;
         int var3 = param0 & 255;
@@ -388,7 +388,7 @@ final class nh {
         nh.b(SoftwareRasterizer.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final static void a(int[] param0, double param1, double param2, double param3) {
+    final static void adjustHsv(int[] param0, double param1, double param2, double param3) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -400,7 +400,7 @@ final class nh {
         int var10Lifetime1;
         for (var8 = 0; var8 < param0.length; var8++) {
           var9 = param0[var8];
-          var10 = nh.b(var9);
+          var10 = nh.rgbToHsv(var9);
           var11 = var10 >>> 19 & 8191;
           var12 = var10 >> 8 & 2047;
           var13 = var10 & 255;
@@ -414,7 +414,7 @@ final class nh {
             var13 = 255;
           }
           var10Lifetime1 = var11 << 19 | var12 << 8 | var13;
-          var14 = nh.a(var10Lifetime1);
+          var14 = nh.hsvToRgb(var10Lifetime1);
           if (var14 == 0 &&
             (var9 & 16777215) != 0) {
             var14 = 65793;
@@ -465,7 +465,7 @@ final class nh {
         nh.a(0, 0, 0, 0, 0, var15, var5, var22, SoftwareRasterizer.field_a, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
-    final static Sprite a(ArgbSprite param0) {
+    final static Sprite toMaskedSprite(ArgbSprite param0) {
         int var3 = 0;
         Sprite var1;
         int var2;
@@ -607,11 +607,11 @@ final class nh {
         nh.a(SoftwareRasterizer.field_a, param0.field_y, 0, var7, var8, var13Lifetime2, var14, param3, param4, var11, var12, var5);
     }
 
-    final static void a(Sprite param0, double param1, double param2, double param3) {
-        nh.a(param0.field_y, param1, param2, param3);
+    final static void adjustSpriteHsv(Sprite param0, double param1, double param2, double param3) {
+        nh.adjustHsv(param0.field_y, param1, param2, param3);
     }
 
-    final static ArgbSprite b(ArgbSprite param0) {
+    final static ArgbSprite downscaleArgbByHalf(ArgbSprite param0) {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;

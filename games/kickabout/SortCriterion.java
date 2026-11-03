@@ -98,7 +98,7 @@ abstract class SortCriterion {
         var12 = stackIn_23_0;
         stackIn_26_0 = (!param2) ? 5 : 3;
         var13 = stackIn_26_0;
-        if (!vi.field_n) {
+        if (!NanoTickClock.field_n) {
           var23 = oa.a(param2, param5, (byte) 95);
           PacketBuffer.a(121, var23);
           for (var15 = 0; var13 > var15; var15++) {

@@ -50,7 +50,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
               var5 = (AuctionLogEntry) (ic.field_h.auctionLog.c(33));
             }
           }
-          gb.field_F = true;
+          ValidationIndicator.field_F = true;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

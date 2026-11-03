@@ -106,9 +106,9 @@ final class vr {
             SquadSlotWidget.field_yb = null;
           }
           SortCriterion.field_f = null;
-          if (null != lw.field_d) {
-            lw.field_d.b(param0 ^ -22997);
-            lw.field_d = null;
+          if (null != ProxyAuthenticationRequiredException.field_d) {
+            ProxyAuthenticationRequiredException.field_d.b(param0 ^ -22997);
+            ProxyAuthenticationRequiredException.field_d = null;
           }
           TrinketSlot.field_Eb = null;
           if (null == SquadPickerDialog.field_N) {
@@ -175,12 +175,12 @@ final class vr {
         if (param0 != 3) {
           return -1;
         }
-        nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
+        nh.adjustSpriteHsv(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
         return -1;
     }
 
     final static void b(int param0) {
-        mc.a(-106);
+        TickClock.a(-106);
         if (param0 != 1) {
           field_b = (String) null;
         }

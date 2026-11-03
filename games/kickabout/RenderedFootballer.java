@@ -20,7 +20,7 @@ final class RenderedFootballer extends FootballerAgent {
     int field_bb;
     static int[][][] field_fb;
     int field_U;
-    dd field_mb;
+    AnimationPlayer field_mb;
     private int field_X;
     private ModelMesh field_gb;
     boolean field_nb;
@@ -401,7 +401,7 @@ final class RenderedFootballer extends FootballerAgent {
           if (this.field_ab) {
             var9 = (double)(nj.monotonicMillis(95) % 1000L) / 1000.0;
             var11 = (double)(nj.monotonicMillis(35) % 300L) / 300.0;
-            nh.a(kw.field_f, var9, 1.0, var11 + 1.0);
+            nh.adjustSpriteHsv(kw.field_f, var9, 1.0, var11 + 1.0);
           }
           kw.field_f.drawHalfSize(-64 + var3, -95 + var4);
           decompiledFrameRemainder0 = false;
@@ -965,7 +965,7 @@ final class RenderedFootballer extends FootballerAgent {
           }
           this.field_U = param1;
           this.a(param0, (byte) -117);
-          this.field_mb = new dd(1);
+          this.field_mb = new AnimationPlayer(1);
           this.field_ob = -1;
           this.b((byte) -128, 3);
           this.a(this.positionX, false, this.height, this.positionY);

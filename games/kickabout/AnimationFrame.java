@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db {
+final class AnimationFrame {
     int field_i;
     short[] field_f;
     private static byte[] field_k;
@@ -26,7 +26,7 @@ final class db {
         field_k = null;
     }
 
-    db(byte[] param0, AnimationSkeleton param1) {
+    AnimationFrame(byte[] param0, AnimationSkeleton param1) {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
         PacketBuffer var4 = null;

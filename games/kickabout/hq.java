@@ -3,7 +3,7 @@
  */
 final class hq {
     static UiLayoutNode field_c;
-    static nm[] field_b;
+    static AnimationClip[] field_b;
     static boolean field_a;
     static int field_d;
     static IndexedSprite[] field_e;

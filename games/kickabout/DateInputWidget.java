@@ -18,7 +18,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         if (NodeHashTableIterator.field_b == 2) {
           var7 = ds.field_e;
         } else {
-          var7 = vo.field_db;
+          var7 = LoginDialog.field_db;
         }
         if (!param4) {
           TeamSelectionView.a(param0, var7, param6, param3, param2, 73, param5, param1);

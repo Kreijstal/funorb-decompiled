@@ -14,7 +14,7 @@ final class LoggedPossession {
     final static void a(boolean param0) {
         int var2;
         var2 = Kickabout.field_G;
-        et.field_d.field_B = vi.field_t;
+        et.field_d.field_B = NanoTickClock.field_t;
         if (param0) {
           LoggedPossession.a(-10);
         }

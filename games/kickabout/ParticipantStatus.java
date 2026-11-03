@@ -140,7 +140,7 @@ final class ParticipantStatus extends MatchAgent {
         RuntimeException var4 = null;
         try {
           var4_int = -54 / ((param2 - 2) / 63);
-          stackIn_3_0 = nm.field_i[param3];
+          stackIn_3_0 = AnimationClip.field_i[param3];
           stackIn_3_1 = TextInputWidget.field_O[param3];
           if (DualLinkHashTable.field_e) {
             stackIn_6_0 = stackIn_3_0;
@@ -159,7 +159,7 @@ final class ParticipantStatus extends MatchAgent {
             stackIn_7_1 = stackIn_3_1;
             stackIn_7_2 = param0;
           }
-          stackIn_8_0 = wt.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, param3, param1, -123);
+          stackIn_8_0 = ArrayWidgetContainer.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, param3, param1, -123);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -578,7 +578,7 @@ final class ParticipantStatus extends MatchAgent {
         RuntimeException var4 = null;
         try {
           var4_int = -54 / ((param2 - 2) / 63);
-          stackIn_3_0 = nm.field_i[param3];
+          stackIn_3_0 = AnimationClip.field_i[param3];
           stackIn_3_1 = TextInputWidget.field_O[param3];
           if (DualLinkHashTable.field_e) {
             stackIn_6_0 = stackIn_3_0;
@@ -597,7 +597,7 @@ final class ParticipantStatus extends MatchAgent {
             stackIn_7_1 = stackIn_3_1;
             stackIn_7_2 = param0;
           }
-          stackIn_8_0 = wt.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, param3, param1, -123);
+          stackIn_8_0 = ArrayWidgetContainer.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, param3, param1, -123);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

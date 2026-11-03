@@ -312,7 +312,7 @@ final class tr implements OverlayLayer {
           stackIn_22_3 = (TournamentChampionDialog.g(0) <= 50) ? false : true;
           stackIn_24_4 = 14;
           stackIn_24_5 = var5;
-          stackIn_24_6 = id.field_v;
+          stackIn_24_6 = StatefulTextPainter.field_v;
           stackIn_24_7 = param1;
           stackIn_24_8 = 11;
           stackIn_24_9 = true;

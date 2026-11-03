@@ -155,7 +155,7 @@ final class PainterStyle {
         return this;
     }
 
-    final void a(int param0, int param1, id param2, UiWidget param3, int param4, PainterStyle param5) {
+    final void a(int param0, int param1, StatefulTextPainter param2, UiWidget param3, int param4, PainterStyle param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -335,7 +335,7 @@ final class PainterStyle {
         }
     }
 
-    final void a(UiWidget param0, id param1, int param2, int param3, int param4) {
+    final void a(UiWidget param0, StatefulTextPainter param1, int param2, int param3, int param4) {
         BitmapFont stackIn_21_0;
         String stackIn_21_1;
         int stackIn_21_2;

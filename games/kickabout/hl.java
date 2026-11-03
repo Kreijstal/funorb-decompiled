@@ -62,7 +62,7 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
               return null;
             }
           } else {
-            stackIn_4_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, StringCursor.field_e, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_4_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, StringCursor.field_e, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

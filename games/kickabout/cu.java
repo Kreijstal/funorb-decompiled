@@ -85,7 +85,7 @@ final class cu {
           if (var5 == null) {
             return false;
           }
-          vo.a((byte) -77, var5);
+          LoginDialog.a((byte) -77, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

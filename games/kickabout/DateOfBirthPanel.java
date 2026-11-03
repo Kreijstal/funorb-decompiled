@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ib extends wt implements ButtonListener {
+final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListener {
     static String field_F;
     static String field_H;
     private NumericDateInputWidget field_G;
@@ -75,7 +75,7 @@ final class ib extends wt implements ButtonListener {
         EmailSyntaxValidator.field_k.a(DebugConsole.field_v, 4 + param2 + this.field_t, 4 + EmailSyntaxValidator.field_k.field_G + (this.field_g + param3), 16777215, -1);
     }
 
-    ib(int param0, int param1, int param2, int param3) {
+    DateOfBirthPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_G = new NumericDateInputWidget(new ri(10000536), field_E, 0, 0, 140, 25);
         this.field_G.a(new hl(), -20274);
@@ -90,7 +90,7 @@ final class ib extends wt implements ButtonListener {
         field_B = null;
         field_H = null;
         if (param0 != 905215457) {
-          ib.a(-67);
+          DateOfBirthPanel.a(-67);
           field_C = null;
           return;
         }

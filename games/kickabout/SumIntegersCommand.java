@@ -130,10 +130,10 @@ final class SumIntegersCommand extends ConsoleCommand {
             var5 = (sm) (ia.field_d.c(33));
           }
           var3 = -93 % ((param0 - 72) / 43);
-          var6 = (ni) (lw.field_g.g(24009));
+          var6 = (ni) (ProxyAuthenticationRequiredException.field_g.g(24009));
           while (var6 != null) {
             FadingChatMessage.a(param1, 112, var6);
-            var6 = (ni) (lw.field_g.c(33));
+            var6 = (ni) (ProxyAuthenticationRequiredException.field_g.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -143,13 +143,13 @@ final class SumIntegersCommand extends ConsoleCommand {
         }
     }
 
-    final static mc h(int param0) {
+    final static TickClock h(int param0) {
         if (param0 != 3) {
           String var2 = (String) null;
           SumIntegersCommand.a((byte) 22, (String) null);
-          return (mc) ((Object) new vi());
+          return (TickClock) ((Object) new NanoTickClock());
         }
-        return (mc) ((Object) new vi());
+        return (TickClock) ((Object) new NanoTickClock());
     }
 
     public static void g(int param0) {

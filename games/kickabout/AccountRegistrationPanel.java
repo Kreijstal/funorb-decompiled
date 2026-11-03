@@ -67,7 +67,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         var11 = Kickabout.field_G;
         var6 = 0;
         if (param3 == -1) {
-          var17 = nm.a(param4, -74, DirectByteStorage.field_m);
+          var17 = AnimationClip.a(param4, -74, DirectByteStorage.field_m);
           var5 = var17;
           PacketBuffer.a(param1 + 13, var17);
         } else {
@@ -79,7 +79,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             } else {
               stackIn_6_2 = ChatLine.field_m;
             }
-            var14 = nm.a(stackIn_5_0, stackIn_5_1, stackIn_6_2);
+            var14 = AnimationClip.a(stackIn_5_0, stackIn_5_1, stackIn_6_2);
             stackIn_8_0 = param4;
             stackIn_8_1 = -95;
             if (param0) {
@@ -87,7 +87,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             } else {
               stackIn_9_2 = SetLagCommand.field_B;
             }
-            var16 = nm.a(stackIn_8_0, stackIn_8_1, stackIn_9_2);
+            var16 = AnimationClip.a(stackIn_8_0, stackIn_8_1, stackIn_9_2);
             stackIn_11_0 = param4;
             stackIn_11_1 = -113;
             if (!param0) {
@@ -95,7 +95,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             } else {
               stackIn_12_2 = fv.field_b;
             }
-            var9_ref_ut = nm.a(stackIn_11_0, stackIn_11_1, stackIn_12_2);
+            var9_ref_ut = AnimationClip.a(stackIn_11_0, stackIn_11_1, stackIn_12_2);
             var15 = new Sprite(param3, var14.field_v);
             var5 = var15;
             PacketBuffer.a(-116, var15);
@@ -106,7 +106,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             var6 = 1;
             var14.d(0, 0);
           } else {
-            var13 = nm.a(param4, -85, TextHotspotWidget.field_L);
+            var13 = AnimationClip.a(param4, -85, TextHotspotWidget.field_L);
             var5 = var13;
             PacketBuffer.a(98, var13);
           }
@@ -154,7 +154,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           nh.a(4, 6, SoftwareRasterizer.field_g, 6, 8, -40 + var23.length, var23);
         } else {
           if (3 == param2) {
-            nh.a(var5, 0.0, 0.0, 0.7);
+            nh.adjustSpriteHsv(var5, 0.0, 0.0, 0.7);
           }
         }
         TeamManagementScreen.e(117);
@@ -257,7 +257,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         rp dupTemp$1 = new rp(10000536);
         this.field_N.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_T.field_r = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, SquadGridWidget.field_Ab, new String[]{this.b(true), this.l(6)});
+        String var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SquadGridWidget.field_Ab, new String[]{this.b(true), this.l(6)});
         int var3 = 20;
         var3 = var3 + this.a(170, ReflectionCheck.field_i, 21621, var3, this.field_S);
         var3 = var3 + (5 + this.a(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
@@ -293,7 +293,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
 
     private final int a(int param0, boolean param1, String param2, UiWidget param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
-        ju var9 = null;
+        ValidationHelpWidget var9 = null;
         cg var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -312,7 +312,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             return stackIn_2_0;
           }
           this.a(-84, var10);
-          var9 = new ju(((ValidationProvider) ((Object) param3)).a((byte) -128), param5, 126, var10.field_i + param6, 50 + param4, param0);
+          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).a((byte) -128), param5, 126, var10.field_i + param6, 50 + param4, param0);
           var9.field_k = (UiListener) (this);
           this.a(-42, var9);
           stackIn_4_0 = var10.field_i + var9.field_i;
@@ -552,7 +552,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         int var6_int = 0;
         RuntimeException var6 = null;
         cg var7 = null;
-        gb var8 = null;
+        ValidationIndicator var8 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -564,7 +564,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           var6_int = 94 / ((10 - param4) / 49);
           var7 = new cg(20, param0, param2 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param1);
           this.a(-111, var7);
-          var8 = new gb(((ValidationProvider) ((Object) param3)).a((byte) -117));
+          var8 = new ValidationIndicator(((ValidationProvider) ((Object) param3)).a((byte) -117));
           this.a(-48, var8);
           var8.a(15, 1, 3 + (var7.field_n + var7.field_t), 15, var7.field_g + (var7.field_i - 15 >> 1));
           stackIn_1_0 = var7.field_i;

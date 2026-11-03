@@ -183,7 +183,7 @@ final class RankingsScreen extends ButtonMenuScreen {
           if (!dr.field_a) {
             dr.field_a = true;
             var1 = DropTargetWidget.l(64);
-            wt.field_x = BytePlusOneCommand.field_A;
+            ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
             us.field_j = ArchiveManager.field_m;
             oo.field_c.a((byte) 76, 240, 320, (java.awt.Component) ((Object) var1));
             oo.field_c.a(-126, (java.awt.Component) ((Object) var1), false);
@@ -196,7 +196,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         if (!dr.field_a) {
           dr.field_a = true;
           var1Lifetime1 = DropTargetWidget.l(64);
-          wt.field_x = BytePlusOneCommand.field_A;
+          ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
           us.field_j = ArchiveManager.field_m;
           oo.field_c.a((byte) 76, 240, 320, (java.awt.Component) ((Object) var1Lifetime1));
           oo.field_c.a(-126, (java.awt.Component) ((Object) var1Lifetime1), false);

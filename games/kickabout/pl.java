@@ -69,7 +69,7 @@ final class pl {
                       ee.field_e = true;
                     } else {
                       if (var13 < param6) {
-                        m.field_f[var13] = true;
+                        WhirlpoolHasher.field_f[var13] = true;
                       }
                     }
                   }

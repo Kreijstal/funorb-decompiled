@@ -33,7 +33,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_k)) {
-            var3 = cp.a(param1 - 86, param0);
+            var3 = AudioService.a(param1 - 86, param0);
             if (var3 != null &&
               null == var3.field_d) {
               this.field_k = param0;
@@ -94,7 +94,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param1.equals(this.field_k)) {
-            var4 = cp.a(-37, param1);
+            var4 = AudioService.a(-37, param1);
             if (var4 == null) {
               return null;
             }

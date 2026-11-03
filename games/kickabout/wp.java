@@ -98,15 +98,15 @@ final class wp {
           WidgetContainer.field_w[3] = bq.field_b;
           WidgetContainer.field_w[2] = bl.field_h;
           WidgetContainer.field_w[1] = mn.field_d;
-          mc.field_d = new UiLayoutNode(0L, (UiLayoutNode) null);
-          id.field_s = new UiLayoutNode(0L, TrinketIcon.field_zb, oh.field_h);
+          TickClock.field_d = new UiLayoutNode(0L, (UiLayoutNode) null);
+          StatefulTextPainter.field_s = new UiLayoutNode(0L, TrinketIcon.field_zb, oh.field_h);
           ck.field_c = new UiLayoutNode(0L, SquadPickerDialog.field_P, mt.field_b);
           LineupView.field_u = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, uk.field_b);
-          mc.field_d.addChild((byte) -114, id.field_s);
+          TickClock.field_d.addChild((byte) -114, StatefulTextPainter.field_s);
           if (ui.field_t) {
-            mc.field_d.addChild((byte) -107, ck.field_c);
+            TickClock.field_d.addChild((byte) -107, ck.field_c);
           }
-          mc.field_d.addChild((byte) -119, (UiLayoutNode) (LineupView.field_u));
+          TickClock.field_d.addChild((byte) -119, (UiLayoutNode) (LineupView.field_u));
           LineupView.field_u.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
           var23 = LineupView.field_u.field_zb;
           var24 = var23;
@@ -116,7 +116,7 @@ final class wp {
           ConsoleValue.field_a.field_A = 1;
           MouseWheelInput.field_a = new UiLayoutNode(0L, LongPlusOneCommand.field_D, ic.field_g.toUpperCase());
           AuctionItem.field_o = new UiLayoutNode(0L, LeaguesHelpScreen.field_H, ConsoleValue.field_f.toUpperCase());
-          bt.field_b = new UiLayoutNode(0L, cp.field_g);
+          bt.field_b = new UiLayoutNode(0L, AudioService.field_g);
           PlayingView.field_w = new UiLayoutNode(0L, TrinketIcon.field_zb, NameSuggestionsPanel.field_B);
           LoginRequiredDialog.field_G = new UiLayoutNode(0L, gw.field_a, UrlRequest.field_j);
           if (param13 <= 23) {
@@ -185,7 +185,7 @@ final class wp {
           AchievementsScreen.field_C.addChild((byte) -122, (UiLayoutNode) (ClientException.field_c));
           ac.field_b = new UiLayoutNode(0L, LongPlusOneCommand.field_D, ns.field_b.toUpperCase());
           IterableDualLinkDeque.field_h = new UiLayoutNode(0L, LeaguesHelpScreen.field_H);
-          sg.field_a = new UiLayoutNode(0L, cp.field_g);
+          sg.field_a = new UiLayoutNode(0L, AudioService.field_g);
           MouseInputHandler.field_d = new UiLayoutNode(0L, oi.field_i, IntDoubleCommand.field_F.toUpperCase());
           rf.field_c = new ContextMenuItem[param4 + 4][];
           qr.field_b = new UiLayoutNode[4 + param4];

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ju extends TextHotspotWidget {
+final class ValidationHelpWidget extends TextHotspotWidget {
     private String field_O;
     private int field_S;
     static boolean field_T;
@@ -17,7 +17,7 @@ final class ju extends TextHotspotWidget {
           return null;
         }
         String var3 = (String) null;
-        ju.a(2.5262746810913086f, (String) null, (byte) 100);
+        ValidationHelpWidget.a(2.5262746810913086f, (String) null, (byte) 100);
         return null;
     }
 
@@ -45,14 +45,14 @@ final class ju extends TextHotspotWidget {
             var7 = param3[1].field_o;
             param3[0].c(param0, param2);
             param3[2].c(param4 + param0 - var6, param2);
-            SoftwareRasterizer.saveClip(vi.field_q);
+            SoftwareRasterizer.saveClip(NanoTickClock.field_q);
             SoftwareRasterizer.intersectClip(var5_int + param0, param2, -var6 + param4 + param0, param3[1].field_v + param2);
             var8 = param0 + var5_int;
             var9 = param4 + (param0 - var6);
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {
               param3[1].c(param0, param2);
             }
-            SoftwareRasterizer.restoreClip(vi.field_q);
+            SoftwareRasterizer.restoreClip(NanoTickClock.field_q);
             return;
           }
           return;
@@ -86,7 +86,7 @@ final class ju extends TextHotspotWidget {
         }
         if (param0 != 19805) {
           String var3 = (String) null;
-          ju.a(1.7499217987060547f, (String) null, (byte) -94);
+          ValidationHelpWidget.a(1.7499217987060547f, (String) null, (byte) -94);
         }
         return Character.toTitleCase(param1);
     }
@@ -101,7 +101,7 @@ final class ju extends TextHotspotWidget {
         try {
           if (param1 != 0) {
             var4 = (Sprite[]) null;
-            ju.a(-120, -71, -85, (Sprite[]) null, -72);
+            ValidationHelpWidget.a(-120, -71, -85, (Sprite[]) null, -72);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,7 +118,7 @@ final class ju extends TextHotspotWidget {
         }
     }
 
-    ju(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
+    ValidationHelpWidget(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, NameSuggestionsPanel.h((byte) 66));
         try {
           this.field_R = param0;

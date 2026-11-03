@@ -99,9 +99,9 @@ final class SectorCacheStore {
                 return null;
               }
               this.field_f.a((byte) 4, (long)(param0 * 6));
-              this.field_f.a(6, 0, (byte) 93, id.field_u);
-              var4_int = (param1 & id.field_u[1] << 8) + ((255 & id.field_u[0]) << 16) + (id.field_u[2] & 255);
-              var5 = (255 & id.field_u[5]) + (((255 & id.field_u[3]) << 16) + (id.field_u[4] << 8 & 65280));
+              this.field_f.a(6, 0, (byte) 93, StatefulTextPainter.field_u);
+              var4_int = (param1 & StatefulTextPainter.field_u[1] << 8) + ((255 & StatefulTextPainter.field_u[0]) << 16) + (StatefulTextPainter.field_u[2] & 255);
+              var5 = (255 & StatefulTextPainter.field_u[5]) + (((255 & StatefulTextPainter.field_u[3]) << 16) + (StatefulTextPainter.field_u[4] << 8 & 65280));
               if (0 > var4_int) {
                 return null;
               }
@@ -130,21 +130,21 @@ final class SectorCacheStore {
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_i.a(var14 + var9, 0, (byte) 113, id.field_u);
-                  var13 = 255 & id.field_u[9];
-                  var12 = (id.field_u[8] & 255) + ((id.field_u[7] & 255) << 8) + ((255 & id.field_u[6]) << 16);
-                  var10 = (16711680 & id.field_u[1] << 16) + (((id.field_u[0] & 255) << 24) - (-(id.field_u[2] << 8 & 65280) - (id.field_u[3] & 255)));
-                  var11 = (id.field_u[4] << 8 & 65280) + (255 & id.field_u[5]);
+                  this.field_i.a(var14 + var9, 0, (byte) 113, StatefulTextPainter.field_u);
+                  var13 = 255 & StatefulTextPainter.field_u[9];
+                  var12 = (StatefulTextPainter.field_u[8] & 255) + ((StatefulTextPainter.field_u[7] & 255) << 8) + ((255 & StatefulTextPainter.field_u[6]) << 16);
+                  var10 = (16711680 & StatefulTextPainter.field_u[1] << 16) + (((StatefulTextPainter.field_u[0] & 255) << 24) - (-(StatefulTextPainter.field_u[2] << 8 & 65280) - (StatefulTextPainter.field_u[3] & 255)));
+                  var11 = (StatefulTextPainter.field_u[4] << 8 & 65280) + (255 & StatefulTextPainter.field_u[5]);
                 } else {
                   var14 = 8;
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_i.a(var14 + var9, 0, (byte) 116, id.field_u);
-                  var11 = (id.field_u[2] << 8 & 65280) + (255 & id.field_u[3]);
-                  var10 = (id.field_u[0] << 8 & 65280) + (255 & id.field_u[1]);
-                  var13 = 255 & id.field_u[7];
-                  var12 = (id.field_u[4] << 16 & 16711680) - (-(65280 & id.field_u[5] << 8) - (255 & id.field_u[6]));
+                  this.field_i.a(var14 + var9, 0, (byte) 116, StatefulTextPainter.field_u);
+                  var11 = (StatefulTextPainter.field_u[2] << 8 & 65280) + (255 & StatefulTextPainter.field_u[3]);
+                  var10 = (StatefulTextPainter.field_u[0] << 8 & 65280) + (255 & StatefulTextPainter.field_u[1]);
+                  var13 = 255 & StatefulTextPainter.field_u[7];
+                  var12 = (StatefulTextPainter.field_u[4] << 16 & 16711680) - (-(65280 & StatefulTextPainter.field_u[5] << 8) - (255 & StatefulTextPainter.field_u[6]));
                 }
                 if (var10 != param0) {
                   return null;
@@ -168,7 +168,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = id.field_u[var16];
+                  var6[incrementValue$2] = StatefulTextPainter.field_u[var16];
                 }
               }
               stackIn_50_0 = var6;
@@ -266,8 +266,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_f.a((byte) 4, (long)(6 * param2));
-                  this.field_f.a(6, 0, (byte) 103, id.field_u);
-                  var7_int = (255 & id.field_u[5]) + ((id.field_u[3] & 255) << 16) + ((id.field_u[4] & 255) << 8);
+                  this.field_f.a(6, 0, (byte) 103, StatefulTextPainter.field_u);
+                  var7_int = (255 & StatefulTextPainter.field_u[5]) + ((StatefulTextPainter.field_u[3] & 255) << 16) + ((StatefulTextPainter.field_u[4] & 255) << 8);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= (this.field_i.a(107) / 520L))) {
                     return false;
@@ -278,17 +278,17 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                id.field_u[0] = (byte)(param4 >> 16);
-                id.field_u[3] = (byte)(var7_int >> 16);
-                id.field_u[4] = (byte)(var7_int >> 8);
-                id.field_u[5] = (byte)var7_int;
-                id.field_u[1] = (byte)(param4 >> 8);
+                StatefulTextPainter.field_u[0] = (byte)(param4 >> 16);
+                StatefulTextPainter.field_u[3] = (byte)(var7_int >> 16);
+                StatefulTextPainter.field_u[4] = (byte)(var7_int >> 8);
+                StatefulTextPainter.field_u[5] = (byte)var7_int;
+                StatefulTextPainter.field_u[1] = (byte)(param4 >> 8);
                 if (param1 != 16) {
                   SectorCacheStore.a(-25);
                 }
-                id.field_u[2] = (byte)param4;
+                StatefulTextPainter.field_u[2] = (byte)param4;
                 this.field_f.a((byte) 4, (long)(6 * param2));
-                this.field_f.a(0, 56, 6, id.field_u);
+                this.field_f.a(0, 56, 6, StatefulTextPainter.field_u);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -299,7 +299,7 @@ final class SectorCacheStore {
                       this.field_i.a((byte) 4, (long)(520 * var7_int));
                       if (param2 <= 65535) {
                         try {
-                          this.field_i.a(8, 0, (byte) 118, id.field_u);
+                          this.field_i.a(8, 0, (byte) 118, StatefulTextPainter.field_u);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -309,13 +309,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (id.field_u[1] & 255) + (65280 & id.field_u[0] << 8);
-                        var10 = (id.field_u[6] & 255) + (((id.field_u[5] & 255) << 8) + (16711680 & id.field_u[4] << 16));
-                        var13 = id.field_u[7] & 255;
-                        var12 = ((id.field_u[2] & 255) << 8) + (id.field_u[3] & 255);
+                        var11 = (StatefulTextPainter.field_u[1] & 255) + (65280 & StatefulTextPainter.field_u[0] << 8);
+                        var10 = (StatefulTextPainter.field_u[6] & 255) + (((StatefulTextPainter.field_u[5] & 255) << 8) + (16711680 & StatefulTextPainter.field_u[4] << 16));
+                        var13 = StatefulTextPainter.field_u[7] & 255;
+                        var12 = ((StatefulTextPainter.field_u[2] & 255) << 8) + (StatefulTextPainter.field_u[3] & 255);
                       } else {
                         try {
-                          this.field_i.a(10, 0, (byte) 104, id.field_u);
+                          this.field_i.a(10, 0, (byte) 104, StatefulTextPainter.field_u);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -325,10 +325,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var12 = ((id.field_u[4] & 255) << 8) + (255 & id.field_u[5]);
-                        var13 = id.field_u[9] & 255;
-                        var11 = (65280 & id.field_u[2] << 8) + ((255 & id.field_u[1]) << 16) + (-16777216 & id.field_u[0] << 24) + (id.field_u[3] & 255);
-                        var10 = ((255 & id.field_u[6]) << 16) + ((id.field_u[7] & 255) << 8) + (id.field_u[8] & 255);
+                        var12 = ((StatefulTextPainter.field_u[4] & 255) << 8) + (255 & StatefulTextPainter.field_u[5]);
+                        var13 = StatefulTextPainter.field_u[9] & 255;
+                        var11 = (65280 & StatefulTextPainter.field_u[2] << 8) + ((255 & StatefulTextPainter.field_u[1]) << 16) + (-16777216 & StatefulTextPainter.field_u[0] << 24) + (StatefulTextPainter.field_u[3] & 255);
+                        var10 = ((255 & StatefulTextPainter.field_u[6]) << 16) + ((StatefulTextPainter.field_u[7] & 255) << 8) + (StatefulTextPainter.field_u[8] & 255);
                       }
                       if ((var11 == param2 &&
                         var12 == var9 &&
@@ -355,18 +355,18 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param2 > 65535) {
-                      id.field_u[3] = (byte)param2;
-                      id.field_u[2] = (byte)(param2 >> 8);
-                      id.field_u[1] = (byte)(param2 >> 16);
-                      id.field_u[5] = (byte)var9;
-                      id.field_u[6] = (byte)(var10 >> 16);
-                      id.field_u[4] = (byte)(var9 >> 8);
-                      id.field_u[8] = (byte)var10;
-                      id.field_u[0] = (byte)(param2 >> 24);
-                      id.field_u[7] = (byte)(var10 >> 8);
-                      id.field_u[9] = (byte)this.field_h;
+                      StatefulTextPainter.field_u[3] = (byte)param2;
+                      StatefulTextPainter.field_u[2] = (byte)(param2 >> 8);
+                      StatefulTextPainter.field_u[1] = (byte)(param2 >> 16);
+                      StatefulTextPainter.field_u[5] = (byte)var9;
+                      StatefulTextPainter.field_u[6] = (byte)(var10 >> 16);
+                      StatefulTextPainter.field_u[4] = (byte)(var9 >> 8);
+                      StatefulTextPainter.field_u[8] = (byte)var10;
+                      StatefulTextPainter.field_u[0] = (byte)(param2 >> 24);
+                      StatefulTextPainter.field_u[7] = (byte)(var10 >> 8);
+                      StatefulTextPainter.field_u[9] = (byte)this.field_h;
                       this.field_i.a((byte) 4, (long)(520 * var7_int));
-                      this.field_i.a(0, 125, 10, id.field_u);
+                      this.field_i.a(0, 125, 10, StatefulTextPainter.field_u);
                       var11 = param4 - var8;
                       if (510 < var11) {
                         var11 = 510;
@@ -374,16 +374,16 @@ final class SectorCacheStore {
                       this.field_i.a(var8, param1 + 84, var11, param3);
                       var8 = var8 + var11;
                     } else {
-                      id.field_u[4] = (byte)(var10 >> 16);
-                      id.field_u[3] = (byte)var9;
-                      id.field_u[2] = (byte)(var9 >> 8);
-                      id.field_u[1] = (byte)param2;
-                      id.field_u[0] = (byte)(param2 >> 8);
-                      id.field_u[7] = (byte)this.field_h;
-                      id.field_u[6] = (byte)var10;
-                      id.field_u[5] = (byte)(var10 >> 8);
+                      StatefulTextPainter.field_u[4] = (byte)(var10 >> 16);
+                      StatefulTextPainter.field_u[3] = (byte)var9;
+                      StatefulTextPainter.field_u[2] = (byte)(var9 >> 8);
+                      StatefulTextPainter.field_u[1] = (byte)param2;
+                      StatefulTextPainter.field_u[0] = (byte)(param2 >> 8);
+                      StatefulTextPainter.field_u[7] = (byte)this.field_h;
+                      StatefulTextPainter.field_u[6] = (byte)var10;
+                      StatefulTextPainter.field_u[5] = (byte)(var10 >> 8);
                       this.field_i.a((byte) 4, (long)(520 * var7_int));
-                      this.field_i.a(0, 76, 8, id.field_u);
+                      this.field_i.a(0, 76, 8, StatefulTextPainter.field_u);
                       var11 = -var8 + param4;
                       if (var11 > 512) {
                         var11 = 512;

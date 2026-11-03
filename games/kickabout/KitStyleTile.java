@@ -255,7 +255,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
         try {
           ButtonMenuScreen.field_l = GameSoundEffect.b((byte) 119) * param0 / 1000;
           GameAppletShell.a(param1, (byte) 60);
-          ou.a((byte) 49, param1);
+          StripedProgressBar.a((byte) 49, param1);
           CipherPacketBuffer.a(3, param1);
           ip.a(false);
           Trinket.d((byte) -128);
@@ -316,7 +316,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
               } else {
                 stackIn_24_2 = RenderedBall.field_R;
               }
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_23_0, vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{kw.field_c[this.field_Cb.field_k].toLowerCase()}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_23_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{kw.field_c[this.field_Cb.field_k].toLowerCase()}));
             }
           }
           if (-1 != this.field_Cb.field_g) {
@@ -325,9 +325,9 @@ final class KitStyleTile extends UiLayoutNode implements lv {
             if (!this.field_Kb) {
               stackIn_30_2 = bk.field_h;
             } else {
-              stackIn_30_2 = mc.field_l;
+              stackIn_30_2 = TickClock.field_l;
             }
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_29_0, vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_29_1, stackIn_30_2, new String[]{}));
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_29_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_29_1, stackIn_30_2, new String[]{}));
           }
           if (this.field_Cb.field_j) {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, BytePlusOneCommand.field_G);

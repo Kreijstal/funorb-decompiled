@@ -556,11 +556,11 @@ final class Trinket {
             !LoggedPlayer.b(param0 - 3194)) {
             boolean decompiledSharedTail1 = !(IntKeyLookup.a(qi.field_o, -39));
             if (!decompiledSharedTail1) {
-              var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gk.field_c, new String[]{TrinketTile.field_Kb});
+              var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, gk.field_c, new String[]{TrinketTile.field_Kb});
               decompiledSharedTail1 = (var10 != 0);
             }
             if (decompiledSharedTail1) {
-              var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ar.field_a, new String[]{TrinketTile.field_Kb});
+              var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ar.field_a, new String[]{TrinketTile.field_Kb});
             }
             if (DebugConsole.field_s) {
               TextButton.a((String) null, (String) null, 0, 2, (String) (var2), -115);
@@ -585,8 +585,8 @@ final class Trinket {
             var6 = NodeHashTableIterator.field_b;
             var7 = 0;
             if (var6 == 2) {
-              var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{TrinketTile.field_Kb});
-              var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{var3});
+              var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{TrinketTile.field_Kb});
+              var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{var3});
               var7 = -485 + WeightedCacheEntry.field_s.field_q + (ei.field_b.field_q + (FootballerAgent.field_i.a(var8) - FootballerAgent.field_i.a(var4)));
               if (0 > var7) {
                 var7 = 0;
@@ -602,7 +602,7 @@ final class Trinket {
                 if (ChatLine.field_i != null) {
                   if (!GameOverView.field_R ||
                     SingleChildContainer.field_x == null) {
-                    var4 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{ChatLine.field_i.field_ec}) + "] ";
+                    var4 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{ChatLine.field_i.field_ec}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + SingleChildContainer.field_x + "] ";
                     }
@@ -652,7 +652,7 @@ final class Trinket {
               WeightedCacheEntry.field_s.field_gb = false;
             }
             if (WeightedCacheEntry.field_s.field_gb) {
-              var1 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_s, new String[]{var3, TrinketTile.field_Kb});
+              var1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_s, new String[]{var3, TrinketTile.field_Kb});
             }
           }
           stackIn_99_0 = var1;

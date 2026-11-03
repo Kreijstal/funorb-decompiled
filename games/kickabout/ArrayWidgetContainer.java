@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class wt extends UiWidget implements UiContainerMarker {
+abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarker {
     static int field_v;
     static int field_x;
     static Sprite field_y;
@@ -313,15 +313,15 @@ abstract class wt extends UiWidget implements UiContainerMarker {
         var5 = Kickabout.field_G;
         try {
           IntrusiveDequeCursor.field_b = param1;
-          ek.field_G = param2;
+          TrinketShopDialog.field_G = param2;
           ConsoleCommand.field_n = param3;
           if (param0 != 0) {
             return;
           }
-          if (ek.field_G != -2) {
+          if (TrinketShopDialog.field_G != -2) {
             af.field_a = new dt[4];
             for (var4_int = 0; var4_int < 4; var4_int++) {
-              af.field_a[var4_int] = new dt((RenderedFootballer) (IntrusiveDequeCursor.field_b.field_P[IntrusiveDequeCursor.field_b.field_g[ek.field_G].field_p][var4_int + 1]), var4_int + 1);
+              af.field_a[var4_int] = new dt((RenderedFootballer) (IntrusiveDequeCursor.field_b.field_P[IntrusiveDequeCursor.field_b.field_g[TrinketShopDialog.field_G].field_p][var4_int + 1]), var4_int + 1);
             }
             return;
           }
@@ -368,7 +368,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
             var4_int = -(param1.field_o >> 1) + 20;
             if (param2 != -75) {
               var8 = (String[]) null;
-              wt.a(69, (String[]) null);
+              ArrayWidgetContainer.a(69, (String[]) null);
             }
             var5 = (param1.positionY - param0.positionY) / param0.velocityY;
             var5 = 9 * var5 >> 3;
@@ -528,7 +528,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
         return var2;
     }
 
-    wt(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+    ArrayWidgetContainer(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4, (UiListener) null);
     }
 
@@ -626,7 +626,7 @@ abstract class wt extends UiWidget implements UiContainerMarker {
             }
           }
           if (param4 != -1) {
-            wt.a(-45, false, false, 110, 69, -102);
+            ArrayWidgetContainer.a(-45, false, false, 110, 69, -102);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

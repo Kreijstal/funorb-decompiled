@@ -28,7 +28,7 @@ final class ArchiveIndex {
         if (param0 != 640) {
           return false;
         }
-        stackIn_9_0 = !(wt.field_x >= 0) || !(640 > wt.field_x) || !(us.field_j >= 0) || !(g.field_a.field_T >= us.field_j);
+        stackIn_9_0 = !(ArrayWidgetContainer.field_x >= 0) || !(640 > ArrayWidgetContainer.field_x) || !(us.field_j >= 0) || !(g.field_a.field_T >= us.field_j);
         return stackIn_9_0;
     }
 
@@ -279,7 +279,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_o = jj.a(param0.length, param0, (byte) 91, 0);
+            this.field_o = MusicTrackMixer.a(param0.length, param0, (byte) 91, 0);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (param2[var4_int] != this.field_o[var4_int]) {
                 throw new RuntimeException();

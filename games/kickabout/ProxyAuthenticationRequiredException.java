@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class lw extends IOException {
+final class ProxyAuthenticationRequiredException extends IOException {
     static IntrusiveDeque field_d;
     static String[] field_a;
     static MouseInputHandler field_e;
@@ -62,7 +62,7 @@ final class lw extends IOException {
         field_g = null;
     }
 
-    lw(String param0) {
+    ProxyAuthenticationRequiredException(String param0) {
         super(param0);
     }
 

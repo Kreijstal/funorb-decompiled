@@ -47,7 +47,7 @@ final class TrinketIcon extends UiLayoutNode {
           for (var4 = 0; var4 < var2_int; var4++) {
             var5 = param0.charAt(var4);
             if (var4 == 0) {
-              var5 = ju.b(19805, (char) var5);
+              var5 = ValidationHelpWidget.b(19805, (char) var5);
             } else {
               var5 = Character.toLowerCase((char) var5);
             }

@@ -358,8 +358,8 @@ final class PlayerStats implements lv {
         if (param0 != -1456) {
           PlayerStats.g(3);
         }
-        if (null != nm.field_d) {
-          nm.field_d.p(param0 ^ 1496);
+        if (null != AnimationClip.field_d) {
+          AnimationClip.field_d.p(param0 ^ 1496);
         }
         d.a((byte) 127);
     }
@@ -1014,7 +1014,7 @@ final class PlayerStats implements lv {
             }
             param6 = param6 + var26[2];
             if (param2) {
-              var17 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, NamedValueContainer.field_g, new String[]{ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(this, true), 26300)});
+              var17 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NamedValueContainer.field_g, new String[]{ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(this, true), 26300)});
               ConsoleTokenCursor.field_d.a(var17, param1 + 10, param6 + 15, 16777215, 65793);
             }
             return;

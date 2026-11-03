@@ -139,11 +139,11 @@ final class PasswordValidator extends TextFieldValidator {
           if (FadingChatMessage.field_h == param2 &&
             param1 == jr.field_Kb &&
             TextButton.field_C == param3 &&
-            param4 == gb.field_K &&
+            param4 == ValidationIndicator.field_K &&
             MouseWheelInput.field_f == param5) {
             return;
           }
-          gb.field_K = param4;
+          ValidationIndicator.field_K = param4;
           FadingChatMessage.field_h = param2;
           TextButton.field_C = param3;
           stackIn_11_0 = param5;
@@ -171,7 +171,7 @@ final class PasswordValidator extends TextFieldValidator {
           TeamManagementScreen.e(121);
           PacketBuffer.a(65, PacketBuffer.field_g);
           SoftwareRasterizer.b();
-          var8Lifetime1 = ChatLine.b(-gb.field_K, TextButton.field_C, (byte) 2);
+          var8Lifetime1 = ChatLine.b(-ValidationIndicator.field_K, TextButton.field_C, (byte) 2);
           if (param0 != 706856675) {
             field_j = (int[]) null;
           }

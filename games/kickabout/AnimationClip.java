@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nm {
+final class AnimationClip {
     static Kickabout field_g;
     int[] field_e;
     static LoadingProgressDialog field_d;
@@ -75,11 +75,11 @@ final class nm {
         return 55 + var2 * 45 / 100;
     }
 
-    private nm(ResourceArchive param0, int param1, String param2) {
+    private AnimationClip(ResourceArchive param0, int param1, String param2) {
         this(param0, param1, param0.a((byte) -111, param2, param1));
     }
 
-    nm(ResourceArchive param0, String param1, String param2) {
+    AnimationClip(ResourceArchive param0, String param1, String param2) {
         this(param0, param0.b(param1, -1), param2);
     }
 
@@ -111,7 +111,7 @@ final class nm {
           } else {
             stackIn_7_1 = 1;
           }
-          if (stackIn_7_1 != (vi.field_n ? 1 : 0)) {
+          if (stackIn_7_1 != (NanoTickClock.field_n ? 1 : 0)) {
             stackIn_10_1 = false;
             decompiledFrameRemainder0 = false;
           }
@@ -122,7 +122,7 @@ final class nm {
         ArchiveIndex.field_t = stackIn_8_0 | stackIn_10_1;
         FadingSoundPlayer.field_q = true;
         rl.field_r = -1;
-        vi.field_n = param2;
+        NanoTickClock.field_n = param2;
         RankingsScreen.field_C = param0;
         ih.field_c = param3;
     }
@@ -272,7 +272,7 @@ final class nm {
             return;
           }
           for (var11 = 0; -1 + var10 > var11; var11++) {
-            param5.a(ek.b(true, param4 + (param0 - param4) * var11 / (-1 + var10), param3 + var11 * (-param3 + param2) / (-1 + var10)), 3);
+            param5.a(TrinketShopDialog.b(true, param4 + (param0 - param4) * var11 / (-1 + var10), param3 + var11 * (-param3 + param2) / (-1 + var10)), 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -325,7 +325,7 @@ final class nm {
         }
     }
 
-    private nm(ResourceArchive param0, int param1, int param2) {
+    private AnimationClip(ResourceArchive param0, int param1, int param2) {
         int var7 = 0;
         byte[] var4 = null;
         int var5 = 0;

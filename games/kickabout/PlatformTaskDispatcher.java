@@ -96,7 +96,7 @@ final class PlatformTaskDispatcher implements Runnable {
           RandomAccessCacheFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
-          lw var3_ref3 = null;
+          ProxyAuthenticationRequiredException var3_ref3 = null;
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -300,11 +300,11 @@ final class PlatformTaskDispatcher implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (lw) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       var8.field_b = ql.a((String) (var8.field_g), var8.field_d, -13067).a(1);
-                    } catch (lw decompiledCaughtParameter2) {
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref3 = (lw) (Object) decompiledCaughtException;
+                      var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.field_b = var3_ref3.getMessage();
                       throw var3_ref3;
                     }

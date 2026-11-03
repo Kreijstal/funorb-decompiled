@@ -170,7 +170,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (h.field_f != null) {
           var2 = h.field_f;
           String var1 = var2;
-          ArchiveManager.a(126, vo.$cfr$intArgs$a$53ce4ab4c593(-18, EmailSyntaxValidator.field_j, new String[]{var2}));
+          ArchiveManager.a(126, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, EmailSyntaxValidator.field_j, new String[]{var2}));
           h.field_f = null;
         }
         if (!param0) {
@@ -335,7 +335,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               fs.a((byte) -126);
             } else {
               if (vj.field_c != 0) {
-                CachedListingRow.a(59, id.field_v);
+                CachedListingRow.a(59, StatefulTextPainter.field_v);
               } else {
                 discarded$2 = this.a(false, true, false);
               }
@@ -372,7 +372,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           pe.a(127);
         }
         if (null != ag.field_f) {
-          id.field_v = ag.field_f.b((byte) -22);
+          StatefulTextPainter.field_v = ag.field_f.b((byte) -22);
         }
         if (oh.b(-14954)) {
           var3 = 1200 * GameSoundEffect.b((byte) 126);
@@ -392,7 +392,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           RowRangeRequest.field_h == 0) {
           stackIn_24_0 = (RowRangeRequest.field_h != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          RowRangeRequest.field_h = cp.a(522);
+          RowRangeRequest.field_h = AudioService.a(522);
           if (var3Lifetime1 != 0 &&
             RowRangeRequest.field_h == 0 &&
             11 == vj.field_c &&
@@ -461,7 +461,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (0 == RowRangeRequest.field_h &&
           !hq.a((byte) 10)) {
-          m.field_h = false;
+          WhirlpoolHasher.field_h = false;
         }
         if (hl.field_d == 0 &&
           TeamSelectionView.h(param0 - 96)) {
@@ -485,7 +485,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (LoginRequiredDialog.field_H.a(false, "")) {
                 AuctionListing.a(true, LoginRequiredDialog.field_H);
                 LoginRequiredDialog.field_H = null;
-                dd.a((byte) 51);
+                AnimationPlayer.a((byte) 51);
               }
             } else {
               LoginRequiredDialog.field_H = null;
@@ -522,7 +522,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           gs.field_c = null;
           PlayerStats.field_k = null;
           PasswordValidator.a((byte) -127, (java.applet.Applet) (this));
-          dd.a((byte) 120);
+          AnimationPlayer.a((byte) 120);
           hl.field_d = 10;
         }
         if (hl.field_d == 10) {
@@ -535,7 +535,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (11 == hl.field_d) {
           if (null != Trinket.field_b && (!Trinket.field_b.d(-50) ||
             !Trinket.field_b.a(false))) {
-            ju.a(0.0f, ManagerAction.a(ep.field_e, HuffmanCodec.field_g, param0 - 25, Trinket.field_b), (byte) 30);
+            ValidationHelpWidget.a(0.0f, ManagerAction.a(ep.field_e, HuffmanCodec.field_g, param0 - 25, Trinket.field_b), (byte) 30);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -552,7 +552,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (mp.field_h != null) {
             stackIn_134_0 = (!mp.field_h.a(param0 + 1183118480)) ? 0 : 1;
             var3Lifetime2 = stackIn_134_0;
-            ju.a(mp.field_h.field_h, mp.field_h.field_a, (byte) 30);
+            ValidationHelpWidget.a(mp.field_h.field_h, mp.field_h.field_a, (byte) 30);
           }
           if (var3Lifetime2 != 0) {
             hl.field_d = 20;
@@ -741,9 +741,9 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
             if (rf.field_c[0][2].field_Q) {
               if (!ScrollPane.a(77)) {
-                UrlRequest.field_e = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ClubState.field_v, new String[]{ChatLine.field_i.field_ec});
+                UrlRequest.field_e = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClubState.field_v, new String[]{ChatLine.field_i.field_ec});
               } else {
-                UrlRequest.field_e = ib.field_B;
+                UrlRequest.field_e = DateOfBirthPanel.field_B;
               }
             }
             if (param1 >= -48) {
@@ -788,7 +788,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                         er.field_h[var9] = (byte) 0;
                       }
                     } else {
-                      er.field_h[var7 / 8] = (byte)ek.b((int) er.field_h[var7 / 8], 1 << TextLayoutLine.b(7, var7));
+                      er.field_h[var7 / 8] = (byte)TrinketShopDialog.b((int) er.field_h[var7 / 8], 1 << TextLayoutLine.b(7, var7));
                     }
                   }
                 } else {
@@ -983,13 +983,13 @@ abstract class NetworkGameClient extends GameAppletShell {
                 PlayArea.field_k != null && (!param3 ||
                 !InstrumentNoteMask.field_k)) {
                 if (null == SumIntegersCommand.field_G) {
-                  m.field_f = new boolean[ss.field_j];
+                  WhirlpoolHasher.field_f = new boolean[ss.field_j];
                   SumIntegersCommand.field_G = new byte[ss.field_j];
                 }
                 tt.field_c = false;
                 ee.field_e = false;
                 for (var17_int = 0; var7 > var17_int; var17_int++) {
-                  m.field_f[var17_int] = false;
+                  WhirlpoolHasher.field_f[var17_int] = false;
                 }
                 pl.a(0, var7, param2, -1, (byte) -125, var9, -1, param3);
                 if (ScrollContainer.field_Ib >= 2 &&
@@ -1009,7 +1009,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                       rf.field_d[var18 / 8] = (byte)TextLayoutLine.b((int) rf.field_d[var18 / 8], ~(1 << TextLayoutLine.b(var18, 7)));
                     }
                   } else {
-                    rf.field_d[(var9 + var6Lifetime3) / 8] = (byte)ek.b((int) rf.field_d[(var9 + var6Lifetime3) / 8], 1 << TextLayoutLine.b(var6Lifetime3 + var9, 7));
+                    rf.field_d[(var9 + var6Lifetime3) / 8] = (byte)TrinketShopDialog.b((int) rf.field_d[(var9 + var6Lifetime3) / 8], 1 << TextLayoutLine.b(var6Lifetime3 + var9, 7));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -1054,13 +1054,13 @@ abstract class NetworkGameClient extends GameAppletShell {
                     if (var11 != 0) {
                       var22_int = -MusicPatchNode.field_o + so.field_f[var7][var9];
                       if (var22_int != 1) {
-                        var21 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, wq.field_c, new String[]{Integer.toString(var22_int)});
+                        var21 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wq.field_c, new String[]{Integer.toString(var22_int)});
                       } else {
                         var21 = ss.field_d;
                       }
                     }
                     if (var12 != 0) {
-                      var31 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, IsaacRandom.field_h, new String[]{Integer.toString(mi.field_d), Integer.toString(BroadcastServerCommand.field_E[var7][var9])});
+                      var31 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, IsaacRandom.field_h, new String[]{Integer.toString(mi.field_d), Integer.toString(BroadcastServerCommand.field_E[var7][var9])});
                       var21 = var31;
                       var21 = var31;
                       if (var21 != null) {
@@ -1102,7 +1102,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   }
                   var23 = 0;
                   for (var24 = 0; var7 > var24; var24++) {
-                    if (m.field_f[var24]) {
+                    if (WhirlpoolHasher.field_f[var24]) {
                       var25_ref = "</col>" + ok.field_b[var24] + "<col=A00000>";
                       var22 = var25_ref;
                       var21 = var22;
@@ -1120,7 +1120,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   if (var23 != 0) {
                     var21 = PlayerModelPreview.field_m + (String) (var22);
                   } else {
-                    var21 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gk.field_d, new String[]{(String) (var22)});
+                    var21 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, gk.field_d, new String[]{(String) (var22)});
                   }
                 }
                 if (var21 != null) {
@@ -1203,7 +1203,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Kickabout.field_G;
-          var4 = ou.b(id.field_v, -1951459327, vv.field_r, param2);
+          var4 = StripedProgressBar.b(StatefulTextPainter.field_v, -1951459327, vv.field_r, param2);
           if (var4 == 0) {
             throw new IllegalStateException();
           }

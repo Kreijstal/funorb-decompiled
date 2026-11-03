@@ -437,7 +437,7 @@ class UiLayoutNode extends iv {
                   null != SingleChildContainer.field_x) {
                   var7Lifetime6 = "[" + SingleChildContainer.field_x + "] ";
                 } else {
-                  var7Lifetime6 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{ChatLine.field_i.field_ec}) + "] ";
+                  var7Lifetime6 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{ChatLine.field_i.field_ec}) + "] ";
                 }
               }
             }
@@ -445,10 +445,10 @@ class UiLayoutNode extends iv {
             var5Lifetime1 = var5Lifetime1 - FootballerAgent.field_i.a(var16);
           } else {
             var18 = (CharSequence) ((Object) TrinketTile.field_Kb);
-            var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{hv.a(false, var18)});
+            var14 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{hv.a(false, var18)});
             var7Lifetime6 = var14;
             var7Lifetime6 = var14;
-            var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, field_ib, new String[]{var12});
+            var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, field_ib, new String[]{var12});
             var7Lifetime6 = var8;
             var7Lifetime6 = var8;
             var9 = FootballerAgent.field_i.a(var14);

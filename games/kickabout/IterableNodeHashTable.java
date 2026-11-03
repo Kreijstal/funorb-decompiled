@@ -125,7 +125,7 @@ final class IterableNodeHashTable implements Iterable {
           var8 = PlayArea.field_d - InstrumentNoteMask.field_f;
           var10 = Math.sqrt(var4 * var4 + var6 * var6 + var8 * var8);
           if (var10 > 0.0001) {
-            var12_double = mc.a(var10, var2, false) / var10;
+            var12_double = TickClock.a(var10, var2, false) / var10;
             var14 = var12_double * var4;
             var16 = var12_double * var6;
             var18 = var12_double * var8;
@@ -191,7 +191,7 @@ final class IterableNodeHashTable implements Iterable {
         var8Lifetime1 = PlayArea.field_d - InstrumentNoteMask.field_f;
         var10Lifetime1 = Math.sqrt(var4 * var4 + var6 * var6 + var8Lifetime1 * var8Lifetime1);
         if (var10Lifetime1 > 0.0001) {
-          var12_doubleLifetime1 = mc.a(var10Lifetime1, var2, false) / var10Lifetime1;
+          var12_doubleLifetime1 = TickClock.a(var10Lifetime1, var2, false) / var10Lifetime1;
           var14Lifetime1 = var12_doubleLifetime1 * var4;
           var16Lifetime1 = var12_doubleLifetime1 * var6;
           var18Lifetime1 = var12_doubleLifetime1 * var8Lifetime1;

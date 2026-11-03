@@ -152,7 +152,7 @@ final class ScrollPane extends UiLayoutNode {
 
     final static boolean h(byte param0) {
         int var1 = -35 % ((-48 - param0) / 50);
-        return mc.a(wq.field_d, true);
+        return TickClock.a(wq.field_d, true);
     }
 
     private final void a(int param0, byte param1, int param2) {
@@ -175,7 +175,7 @@ final class ScrollPane extends UiLayoutNode {
         if (param0 < 11) {
           return true;
         }
-        return dd.field_c == ChatLine.field_i.field_Nb ? true : false;
+        return AnimationPlayer.field_c == ChatLine.field_i.field_Nb ? true : false;
     }
 
     final static void b(int param0) {
@@ -273,8 +273,8 @@ final class ScrollPane extends UiLayoutNode {
           return;
         }
         if (we.field_c == WeightedLruCache.field_a) {
-          fieldTemp$1 = vo.field_bb;
-          vo.field_bb = vo.field_bb + 1;
+          fieldTemp$1 = LoginDialog.field_bb;
+          LoginDialog.field_bb = LoginDialog.field_bb + 1;
           if (fieldTemp$1 < 16) {
             return;
           }
@@ -290,8 +290,8 @@ final class ScrollPane extends UiLayoutNode {
           if (LeaguesScreen.field_A != WeightedLruCache.field_a) {
             return;
           }
-          fieldTemp$2 = vo.field_bb;
-          vo.field_bb = vo.field_bb - 1;
+          fieldTemp$2 = LoginDialog.field_bb;
+          LoginDialog.field_bb = LoginDialog.field_bb - 1;
           if (fieldTemp$2 > 0) {
             return;
           }

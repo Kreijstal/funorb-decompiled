@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mq {
+final class ReverbAllPassFilter {
     int field_b;
     int[] field_a;
 
@@ -12,7 +12,7 @@ final class mq {
         }
     }
 
-    mq(int param0) {
+    ReverbAllPassFilter(int param0) {
         this.field_a = new int[param0];
     }
 }

@@ -12,7 +12,7 @@ final class PlayArea {
     static int[][] field_k;
     static double field_d;
     static String field_f;
-    static ib field_a;
+    static DateOfBirthPanel field_a;
     static int field_c;
 
     final static boolean b(int param0) {
@@ -51,7 +51,7 @@ final class PlayArea {
           }
           ld.field_f = (RenderedFootballer) (et.field_d.field_P[0][3]);
           fc.field_c = (RenderedFootballer) (et.field_d.field_P[0][4]);
-          mc.field_a = 0;
+          TickClock.field_a = 0;
           AuctionLogEntry.field_g = 640;
           EmailAvailabilityValidator.field_k = (RenderedFootballer) (et.field_d.field_P[param1][1]);
           CheckboxLabelWidget.c(1, false);

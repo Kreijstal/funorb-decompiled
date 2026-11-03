@@ -24,7 +24,7 @@ final class TabStrip extends UiLayoutNode {
           for (var2_int = 0; var2_int < AuctionsScreen.field_O; var2_int++) {
             ByteStorage.field_d[var2_int + param0] = var2_int;
           }
-          VerticalScrollbar.a(TournamentLobbyScreen.field_V, false, AuctionsScreen.field_O + param0, vi.field_s, 1, param0 + param0, param0);
+          VerticalScrollbar.a(TournamentLobbyScreen.field_V, false, AuctionsScreen.field_O + param0, NanoTickClock.field_s, 1, param0 + param0, param0);
           if (AuctionsScreen.field_O > param0) {
             AuctionsScreen.field_O = param0;
           }

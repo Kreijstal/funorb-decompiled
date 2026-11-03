@@ -239,9 +239,9 @@ final class PlayingView extends MatchPhaseView {
           this.field_a.field_X.goalCount < 40) {
           stackIn_61_1 = (var6 != 0);
           this.field_L = stackIn_61_1;
-          so.a(RankingsScreen.field_C, vi.field_n, true, this.field_L);
+          so.a(RankingsScreen.field_C, NanoTickClock.field_n, true, this.field_L);
         }
-        if (vi.field_n) {
+        if (NanoTickClock.field_n) {
           if (RankingsScreen.field_C == 1 ||
             2 == RankingsScreen.field_C) {
             this.a(var3 != 0, 4, var5 != 0);
@@ -263,10 +263,10 @@ final class PlayingView extends MatchPhaseView {
             ShopPlayerSlot.c(35, param0 - 2024);
           }
         }
-        if (vi.field_n) {
+        if (NanoTickClock.field_n) {
           this.a(var3 != 0, param0 - 2112, var2);
         }
-        if (vi.field_n && (this.field_a.field_V.field_y ||
+        if (NanoTickClock.field_n && (this.field_a.field_V.field_y ||
           this.field_a.field_V.field_x)) {
           if (24248320 < this.field_a.field_V.positionX) {
             if (this.field_a.field_V.positionX < 34603008) {
@@ -302,11 +302,11 @@ final class PlayingView extends MatchPhaseView {
           this.field_a.field_X.score[1] != this.field_v[1]) {
           ScrollBar.k(param0 - 2115);
           stackIn_116_0 = RankingsScreen.field_C;
-          stackIn_116_1 = vi.field_n;
+          stackIn_116_1 = NanoTickClock.field_n;
           stackIn_116_2 = true;
           stackIn_117_3 = (var5 == 0);
           so.a(stackIn_116_0, stackIn_116_1, stackIn_116_2, stackIn_117_3);
-          if (vi.field_n) {
+          if (NanoTickClock.field_n) {
             if (RankingsScreen.field_C == 1) {
               stackIn_122_0 = false;
               stackIn_122_1 = -1;
@@ -598,12 +598,12 @@ final class PlayingView extends MatchPhaseView {
             var4 = this.field_a.getControlledFootballer((byte) 122, this.field_g);
             if (0 == this.field_I ||
               var2 != 0) {
-              if (wt.field_x == -1 &&
+              if (ArrayWidgetContainer.field_x == -1 &&
                 us.field_j == -1) {
                 this.field_z = -1;
                 this.field_G = -1;
               } else {
-                this.field_z = AccountTermsPanel.a(wt.field_x, 6784) - var4.pixelX(-103);
+                this.field_z = AccountTermsPanel.a(ArrayWidgetContainer.field_x, 6784) - var4.pixelX(-103);
                 this.field_G = TextLayoutLine.a(-6779, us.field_j) - var4.pixelY(true);
               }
             }
@@ -613,7 +613,7 @@ final class PlayingView extends MatchPhaseView {
                 this.c(this.field_z, this.field_G, -1);
               }
             } else {
-              if (-1 != wt.field_x ||
+              if (-1 != ArrayWidgetContainer.field_x ||
                 us.field_j != -1) {
                 if (!this.field_a.c(this.field_g, -115)) {
                   if (var2 != 0 &&
@@ -622,7 +622,7 @@ final class PlayingView extends MatchPhaseView {
                     this.field_k = false;
                   }
                   if (this.field_m) {
-                    this.b(TextLayoutLine.a(-6779, us.field_j), AccountTermsPanel.a(wt.field_x, 6784), 1);
+                    this.b(TextLayoutLine.a(-6779, us.field_j), AccountTermsPanel.a(ArrayWidgetContainer.field_x, 6784), 1);
                     this.field_m = false;
                   }
                 } else {
@@ -643,7 +643,7 @@ final class PlayingView extends MatchPhaseView {
             }
           }
         }
-        var2Lifetime1 = id.field_v;
+        var2Lifetime1 = StatefulTextPainter.field_v;
         if (this.field_l) {
           if (var2Lifetime1 > 0) {
             this.field_q = this.field_q - 16;
@@ -1156,7 +1156,7 @@ final class PlayingView extends MatchPhaseView {
           this.field_C = SetLagCommand.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].field_p);
           this.field_l = true;
           MainMenuScreen.a(this.field_h, param1, param0, true);
-          wt.a(0, param0, var6_int, this.field_C);
+          ArrayWidgetContainer.a(0, param0, var6_int, this.field_C);
           CachedTextLayout.a(param0, var6_int, 50);
           ih.a(-3, param0, this.field_h);
           un.a(param0, this.field_h, 101);

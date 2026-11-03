@@ -6,7 +6,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
     private boolean field_db;
     private boolean field_cb;
     private boolean field_gb;
-    private ou field_jb;
+    private StripedProgressBar field_jb;
     private boolean field_hb;
     static r field_fb;
     private BitmapFont field_eb;
@@ -29,7 +29,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           for (var4_int = 0; var4_int < param3.length; var4_int++) {
             var5 = param3[var4_int];
             var6 = param3[(var4_int + 1) % param3.length];
-            nm.a(var6.x, param1, var6.y, var5.y, var5.x, param2, (byte) -109);
+            AnimationClip.a(var6.x, param1, var6.y, var5.y, var5.x, param2, (byte) -109);
           }
           if (param0 != -108) {
             field_bb = (String) null;
@@ -236,7 +236,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           this.field_hb = false;
           this.field_db = param4 ? true : false;
           this.field_gb = param3 ? true : false;
-          this.field_jb = new ou(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_jb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_jb.field_w = true;
           this.a(-42, this.field_jb);
         } catch (RuntimeException runtimeException) {

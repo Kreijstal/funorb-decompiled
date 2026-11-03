@@ -237,7 +237,7 @@ abstract class cv {
             mv.$cfr$intArgs$a$6121ff5511c4(119);
             BytePlusOneCommand.g(0);
           }
-          if (mc.field_j) {
+          if (TickClock.field_j) {
             vs.field_g = null;
             ve.field_R = new IntrusiveDeque();
             var9 = BufferedSocket.field_f;
@@ -257,7 +257,7 @@ abstract class cv {
               var10[var6] = 0;
               var6++;
             }
-            mc.field_j = false;
+            TickClock.field_j = false;
           }
           if (k.field_k) {
             ReceivedAuctionItem.f((byte) 119);

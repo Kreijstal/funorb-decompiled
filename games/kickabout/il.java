@@ -116,15 +116,15 @@ final class il {
             return stackIn_10_0;
           }
           if (DiskCacheRequest.a(0, param0)) {
-            stackIn_13_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, of.field_b, new String[]{param0});
+            stackIn_13_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, of.field_b, new String[]{param0});
             return stackIn_13_0;
           }
-          if (ou.field_y >= 100) {
+          if (StripedProgressBar.field_y >= 100) {
             stackIn_17_0 = QuickChatPhraseCache.field_f;
             return stackIn_17_0;
           }
           if (IntKeyLookup.a(param0, 108)) {
-            stackIn_20_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionListing.field_i, new String[]{param0});
+            stackIn_20_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionListing.field_i, new String[]{param0});
             return stackIn_20_0;
           }
           var5 = or.field_d;

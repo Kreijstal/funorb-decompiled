@@ -166,7 +166,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var4Lifetime1 = -13 / ((38 - param0) / 60);
         if (this.pageIndex == 2) {
           for (var5 = 0; ip.field_b.length > var5; var5++) {
-            var6 = -ChatMessage.field_f[var5][0] + wt.field_x;
+            var6 = -ChatMessage.field_f[var5][0] + ArrayWidgetContainer.field_x;
             var7 = us.field_j - ChatMessage.field_f[var5][1];
             var8 = var7 * var7 + var6 * var6;
             if (var3 > var8) {
@@ -178,7 +178,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             ip.field_b[var5Lifetime2].g((byte) 125);
           }
         }
-        if (wt.field_x == -1 ||
+        if (ArrayWidgetContainer.field_x == -1 ||
           us.field_j == -1 ||
           4900 < var3) {
           ArchiveManager.field_d = -1;
@@ -190,7 +190,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           }
           this.field_E.field_s = this.slideOffsetX + 220;
           this.field_E.b(0, param1);
-          this.field_E.a(32 * id.field_v, true, (byte) -115, 32);
+          this.field_E.a(32 * StatefulTextPainter.field_v, true, (byte) -115, 32);
         }
     }
 

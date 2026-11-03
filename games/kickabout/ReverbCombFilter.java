@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tp {
+final class ReverbCombFilter {
     int field_a;
     int field_b;
     int[] field_c;
@@ -14,7 +14,7 @@ final class tp {
         }
     }
 
-    tp(int param0) {
+    ReverbCombFilter(int param0) {
         this.field_c = new int[param0];
     }
 }

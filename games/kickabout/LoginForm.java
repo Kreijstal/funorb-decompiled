@@ -48,7 +48,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           var3 = oh.field_a[ih.field_c];
           double[] var2 = var3;
-          nh.a(param0, var3[0], var3[1], var3[2]);
+          nh.adjustSpriteHsv(param0, var3[0], var3[1], var3[2]);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -248,7 +248,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           this.field_N = (TextInputWidget) ((Object) new ValidatedTextWidget(param0, (UiListener) (this), 100));
           this.field_J = (TextInputWidget) ((Object) new ValidatedTextWidget("", (UiListener) (this), 20));
           if (!this.field_H) {
-            this.field_K = new TextButton(ju.field_P, (UiListener) null);
+            this.field_K = new TextButton(ValidationHelpWidget.field_P, (UiListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_C) {

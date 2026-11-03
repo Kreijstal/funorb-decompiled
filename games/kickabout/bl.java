@@ -91,7 +91,7 @@ final class bl {
             un.field_d.a(DialogOverlay.field_d, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
           } else {
             if (this.field_e.field_f < 4) {
-              un.field_d.a(mc.field_i, this.field_l + 2, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
+              un.field_d.a(TickClock.field_i, this.field_l + 2, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
             } else {
               un.field_d.a(IterableDualLinkDeque.field_e, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
             }

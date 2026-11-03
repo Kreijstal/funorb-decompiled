@@ -511,12 +511,12 @@ final class DialogOverlay implements OverlayLayer {
                 var31 = var31 + sh.field_c * var39Lifetime1;
               }
               if (var12.field_hc) {
-                var12.field_dc.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TextButton.field_x, new String[]{var32});
+                var12.field_dc.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TextButton.field_x, new String[]{var32});
                 var12.field_dc.a(true, -(2 * DiskCacheWorker.field_b) + var12.field_q, DiskCacheWorker.field_b, var31, sh.field_c);
                 var31 = var31 + sh.field_c;
               }
               if (var12.field_Tb) {
-                var12.field_Yb.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, SetLagCommand.field_C, new String[]{var32});
+                var12.field_Yb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SetLagCommand.field_C, new String[]{var32});
                 var12.field_Yb.a(true, var12.field_q - 2 * DiskCacheWorker.field_b, DiskCacheWorker.field_b, var31, sh.field_c);
                 var31 = var31 + sh.field_c;
               }

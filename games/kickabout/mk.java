@@ -383,7 +383,7 @@ final class mk {
                     if (var2_int == 5) {
                       if (!HoverTooltip.field_Eb) {
                         for (var2_int = 720; var2_int < 826; var2_int += 24) {
-                          var4.a(ek.b(true, var2_int, 920), 3);
+                          var4.a(TrinketShopDialog.b(true, var2_int, 920), 3);
                         }
                         var4.a(ss.field_b, 3);
                         var2 = ParticipantStatus.c(0);
@@ -416,14 +416,14 @@ final class mk {
                               if (HoverTooltip.field_Eb) {
                                 break;
                               }
-                              nm.a(916, 28, 544, 544, -20, var4, (byte) -65);
+                              AnimationClip.a(916, 28, 544, 544, -20, var4, (byte) -65);
                               var4.a(ss.field_b, param0 ^ -1623);
                               break;
                             }
                             if (var2_int != 13) {
                               break;
                             }
-                            nm.a(916, 28, 544, 544, -20, var4, (byte) -72);
+                            AnimationClip.a(916, 28, 544, 544, -20, var4, (byte) -72);
                             if (HoverTooltip.field_Eb) {
                               break;
                             }

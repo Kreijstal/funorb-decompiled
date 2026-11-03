@@ -222,9 +222,9 @@ final class WelcomeDialog extends MessageDialog {
             var9.trinketIds[0] = 3;
             for (var13 = 1; var9.trinketIds.length > var13; var13++) {
               var14 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-89, 100, var8);
-              for (var15 = 0; var15 < vo.field_eb[param4].length; var15++) {
-                if (var14 > vo.field_eb[param4][var15]) {
-                  var14 = var14 - vo.field_eb[param4][var15];
+              for (var15 = 0; var15 < LoginDialog.field_eb[param4].length; var15++) {
+                if (var14 > LoginDialog.field_eb[param4][var15]) {
+                  var14 = var14 - LoginDialog.field_eb[param4][var15];
                   continue;
                 }
                 var9.trinketIds[var13] = var15;

@@ -4,13 +4,13 @@
 final class sk {
     static int field_c;
     static String field_b;
-    static jj field_d;
+    static MusicTrackMixer field_d;
     static Sprite[] field_a;
 
     final static void a(int param0, int param1) {
         ea.a(vt.field_c.phaseTime, 5, true, 636, param1, -51);
         if (param0 != 1) {
-          field_d = (jj) null;
+          field_d = (MusicTrackMixer) null;
         }
     }
 
@@ -94,8 +94,8 @@ final class sk {
           var5 = (float)param2 / (float)param1;
           var6 = (int)(var5 * 100.0f);
           int var8 = -80 / ((param0 - 12) / 58);
-          var7 = nm.a((byte) -100, field_c);
-          var9 = nm.a((byte) -99, field_c + 1);
+          var7 = AnimationClip.a((byte) -100, field_c);
+          var9 = AnimationClip.a((byte) -99, field_c + 1);
           var10 = -var7 + var9;
           var11 = var5 * (float)var10 + (float)var7;
           var13 = LeagueWinnerDialog.field_K[field_c];
@@ -103,8 +103,8 @@ final class sk {
           if (var13 != null) {
             var12 = var13 + " - " + var6 + "%";
           }
-          ju.a(var11, var12, (byte) 30);
-          nm.field_g.paintFrame((byte) 118);
+          ValidationHelpWidget.a(var11, var12, (byte) 30);
+          AnimationClip.field_g.paintFrame((byte) 118);
           return;
         }
     }

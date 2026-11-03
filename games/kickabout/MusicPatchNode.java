@@ -44,58 +44,58 @@ final class MusicPatchNode extends IntrusiveNode {
 
     final static Sprite b(int param0, int param1) {
         if (param1 == 0) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (param1 == 1) {
-          return mc.field_k[0];
+          return TickClock.field_k[0];
         }
         if (param1 == 25) {
-          return mc.field_k[0];
+          return TickClock.field_k[0];
         }
         if (param0 == param1) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (3 == param1) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (4 == param1) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (param1 == 5) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (param1 == 6) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (param1 == 7) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (param1 == 22) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (param1 == 8) {
-          return mc.field_k[0];
+          return TickClock.field_k[0];
         }
         if (param1 == 28) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (9 == param1) {
           return WriteIntegersCommand.field_E[6];
         }
         if (param1 == 35) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (param1 == 36) {
           return (Sprite) ((Object) sh.field_g);
         }
         if (param1 == 38) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (param1 == 39) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         if (param1 == 40) {
-          return mc.field_k[1];
+          return TickClock.field_k[1];
         }
         return null;
     }
@@ -141,7 +141,7 @@ final class MusicPatchNode extends IntrusiveNode {
         }
         try {
           DualLinkDequeIterator.field_e.a(false, (byte) 108);
-          id.a(param0, param3, false, param2);
+          StatefulTextPainter.a(param0, param3, false, param2);
           IntKeyLookup.a(-93);
           mj.field_a = vj.field_a;
           wk.field_f = vj.field_a;

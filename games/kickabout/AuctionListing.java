@@ -407,7 +407,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -127, "mu_x_left_lobby");
                 if (null != var2) {
-                  jj.field_m = BlackFadeScreen.a(var2, param0);
+                  MusicTrackMixer.field_m = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -120, "mu_x_lost_con");
                 if (null != var2) {
@@ -419,7 +419,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -105, "mu_x_cannot_join_inprogress");
                 if (null != var2) {
-                  m.field_b = BlackFadeScreen.a(var2, param0);
+                  WhirlpoolHasher.field_b = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -99, "mu_x_declined_invite");
                 if (null != var2) {
@@ -467,7 +467,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -109, "mu_all_players_have_left");
                 if (null != var2) {
-                  nm.field_a = BlackFadeScreen.a(var2, true);
+                  AnimationClip.field_a = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -113, "mu_lobby_name");
                 if (null != var2) {
@@ -687,7 +687,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -98, "mu_chat_pm_show_all");
                 if (null != var2) {
-                  gb.field_I = BlackFadeScreen.a(var2, true);
+                  ValidationIndicator.field_I = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -111, "mu_chat_pm_friends_only");
                 if (var2 != null) {
@@ -707,7 +707,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -110, "your_rating_is_x");
                 if (var2 != null) {
-                  id.field_r = BlackFadeScreen.a(var2, true);
+                  StatefulTextPainter.field_r = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -119, "you_are_on_x_server");
                 if (var2 != null) {
@@ -783,7 +783,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -107, "players_x_of_y");
                 if (null != var2) {
-                  ib.field_F = BlackFadeScreen.a(var2, true);
+                  DateOfBirthPanel.field_F = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -99, "message_lobby");
                 if (null != var2) {
@@ -795,7 +795,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -112, "message_game");
                 if (var2 != null) {
-                  vo.field_db = BlackFadeScreen.a(var2, param0);
+                  LoginDialog.field_db = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -121, "message_team");
                 if (null != var2) {
@@ -999,7 +999,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -124, "thisisrunescapeclan");
                 if (var2 != null) {
-                  ib.field_B = BlackFadeScreen.a(var2, true);
+                  DateOfBirthPanel.field_B = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -111, "thisisrunescapeclan_notowner");
                 if (var2 != null) {
@@ -1153,7 +1153,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -103, "ra_mutethisplayer");
                 if (var2 != null) {
-                  mc.field_h = BlackFadeScreen.a(var2, param0);
+                  TickClock.field_h = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -104, "ra_suggestmute");
                 if (var2 != null) {
@@ -1305,7 +1305,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -100, "login");
                 if (var2 != null) {
-                  ju.field_P = BlackFadeScreen.a(var2, param0);
+                  ValidationHelpWidget.field_P = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -83, "goback");
                 if (null != var2) {

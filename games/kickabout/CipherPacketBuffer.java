@@ -164,22 +164,22 @@ final class CipherPacketBuffer extends PacketBuffer {
         BufferedSocket.field_s = SoftwareRasterizer.field_f;
         pa.b((byte) 92);
         tn.field_d.a(0, ss.field_c.field_q, 0, -2 + ss.field_c.field_mb - 40, (byte) -123);
-        ConsoleValue.field_a.a(true, m.field_m.field_q, 0, 0, sh.field_c);
+        ConsoleValue.field_a.a(true, WhirlpoolHasher.field_m.field_q, 0, 0, sh.field_c);
         var1 = sh.field_c + 2;
         if (param0) {
           var4 = (ResourceArchive) null;
           CipherPacketBuffer.a(-41, (ResourceArchive) null);
         }
-        stackIn_4_0 = mc.field_d;
+        stackIn_4_0 = TickClock.field_d;
         stackIn_5_1 = (param0) ? false : true;
-        stackIn_7_2 = m.field_m.field_q;
+        stackIn_7_2 = WhirlpoolHasher.field_m.field_q;
         stackIn_7_3 = 0;
         if (!ui.field_t) {
           stackIn_8_4 = 0;
         } else {
           stackIn_8_4 = var1;
         }
-        stackIn_10_5 = m.field_m.field_mb;
+        stackIn_10_5 = WhirlpoolHasher.field_m.field_mb;
         if (!ui.field_t) {
           stackIn_11_6 = 0;
         } else {

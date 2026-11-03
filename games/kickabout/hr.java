@@ -110,10 +110,10 @@ final class hr extends IntrusiveNode {
             if (LeaguesScreen.field_G != var15) {
               MyKitScreen.field_S = var15.copy();
               LeaguesScreen.field_G = var15;
-              ou.field_B = -1;
+              StripedProgressBar.field_B = -1;
             }
-            if (InstrumentNoteMask.field_i != ou.field_B) {
-              ou.field_B = InstrumentNoteMask.field_i;
+            if (InstrumentNoteMask.field_i != StripedProgressBar.field_B) {
+              StripedProgressBar.field_B = InstrumentNoteMask.field_i;
               var2_intLifetime1 = var15.field_o * InstrumentNoteMask.field_i >> 8;
               var3Lifetime1 = InstrumentNoteMask.field_i * var15.field_v >> 8;
               PacketBuffer.a(param0 ^ 10, MyKitScreen.field_S);

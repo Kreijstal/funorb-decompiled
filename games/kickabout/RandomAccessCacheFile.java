@@ -107,9 +107,9 @@ final class RandomAccessCacheFile {
           return;
         }
         try {
-          param1.removeMouseListener(lw.field_e);
-          param1.removeMouseMotionListener(lw.field_e);
-          param1.removeFocusListener(lw.field_e);
+          param1.removeMouseListener(ProxyAuthenticationRequiredException.field_e);
+          param1.removeMouseMotionListener(ProxyAuthenticationRequiredException.field_e);
+          param1.removeFocusListener(ProxyAuthenticationRequiredException.field_e);
           field_d = 0;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ao.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

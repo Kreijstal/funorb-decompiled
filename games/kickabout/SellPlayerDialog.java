@@ -63,24 +63,24 @@ final class SellPlayerDialog extends MessageDialog {
           }
           var1_int = AnimationSkeleton.a(false);
           var2 = RenderedBall.a(var1_int, -128);
-          if (mc.field_a != var2) {
-            dd.field_f = 60;
-            var3 = -mc.field_a + (mc.field_a + var2 >> 1);
+          if (TickClock.field_a != var2) {
+            AnimationPlayer.field_f = 60;
+            var3 = -TickClock.field_a + (TickClock.field_a + var2 >> 1);
             if (0 == var3) {
-              stackIn_25_0 = (mc.field_a < var2) ? 1 : -1;
+              stackIn_25_0 = (TickClock.field_a < var2) ? 1 : -1;
               var3 = stackIn_25_0;
             }
             var3 = Math.min(Math.max(-30, var3), 30);
-            mc.field_a = mc.field_a + var3;
+            TickClock.field_a = TickClock.field_a + var3;
             if (var3 > 0 &&
-              mc.field_a > var2 ||
+              TickClock.field_a > var2 ||
               var3 < 0 &&
-              !(var2 <= mc.field_a)) {
-              mc.field_a = var2;
+              !(var2 <= TickClock.field_a)) {
+              TickClock.field_a = var2;
             }
           } else {
-            if (dd.field_f > 0) {
-              dd.field_f = dd.field_f - 1;
+            if (AnimationPlayer.field_f > 0) {
+              AnimationPlayer.field_f = AnimationPlayer.field_f - 1;
             }
           }
           var3Lifetime1 = 640;
@@ -316,7 +316,7 @@ final class SellPlayerDialog extends MessageDialog {
           var6 = param1.getDisplayName(100);
           String var3 = var6;
           var4 = ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(param1, true), 26300);
-          var5 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[34], new String[]{var6, var4});
+          var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[34], new String[]{var6, var4});
           this.a(var5, this.field_t, this.field_D, -71, this.field_u);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ie.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

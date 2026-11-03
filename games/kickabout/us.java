@@ -30,7 +30,7 @@ final class us extends IntrusiveNode {
           return;
         }
         WriteIntegersCommand.h(-92);
-        if (mc.field_a == 0) {
+        if (TickClock.field_a == 0) {
           return;
         }
         Object var1 = null;
@@ -45,13 +45,13 @@ final class us extends IntrusiveNode {
         if (-1 == var2) {
           return;
         }
-        if (dd.field_f < 60) {
+        if (AnimationPlayer.field_f < 60) {
           var9 = ep.field_c[var2];
           var3 = var9;
-          var4 = IsSixCommand.field_C.b(var9, mc.field_a - 44);
-          if (!(dd.field_f <= 0)) {
+          var4 = IsSixCommand.field_C.b(var9, TickClock.field_a - 44);
+          if (!(AnimationPlayer.field_f <= 0)) {
             var6 = 60;
-            var7 = dd.field_f;
+            var7 = AnimationPlayer.field_f;
             if (!(var9.length() >= 70)) {
               var6 = 10;
               var7 = Math.max(0, var6 - (60 - var7));
@@ -61,7 +61,7 @@ final class us extends IntrusiveNode {
           }
           var5 = var4 != 1 ? var4 != 2 ? 0 : 6 : 16;
           var3 = WidgetContainer.a("</>", "</shad></col>", true, WidgetContainer.a("<>", "<col=ffff00><shad=010101>", true, var3));
-          IsSixCommand.field_C.a(var3, (-mc.field_a + 640 >> 1) + 72, -10 + (var5 + 458) - 48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
+          IsSixCommand.field_C.a(var3, (-TickClock.field_a + 640 >> 1) + 72, -10 + (var5 + 458) - 48, -44 + TickClock.field_a - 50, 48, 16777215, -1, 0, 0, 16);
           return;
         }
     }

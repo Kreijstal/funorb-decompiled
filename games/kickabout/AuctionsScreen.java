@@ -626,7 +626,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         }
         for (var3 = 0; var3 < this.field_E.length; var3++) {
           if (this.field_E[var3].field_gb) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{uf.field_e[var3]}));
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{uf.field_e[var3]}));
           }
         }
         if (this.field_R.field_sb == 1) {

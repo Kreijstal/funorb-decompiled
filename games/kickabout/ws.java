@@ -18,7 +18,7 @@ final class ws {
           IntTripleCommand.g((byte) -54);
           vj.field_c = 11;
         }
-        m.field_h = true;
+        WhirlpoolHasher.field_h = true;
     }
 
     final static boolean a(char param0, byte param1) {

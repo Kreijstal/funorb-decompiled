@@ -137,7 +137,7 @@ final class ModalStack extends SingleChildContainer {
           var5 = null;
           if (ts.field_d == 2) {
             TriangleMesh.field_R.field_lb = true;
-            du.field_f.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, uf.field_d, new String[]{BufferedSocket.field_h});
+            du.field_f.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, uf.field_d, new String[]{BufferedSocket.field_h});
             ei.field_d.field_Cb.field_zb.field_E = null;
             var6 = null;
             var7 = (gg) (var4.g(24009));
@@ -233,11 +233,11 @@ final class ModalStack extends SingleChildContainer {
                     !PacketBuffer.field_l) {
                     if (!WriteIntegersCommand.field_C) {
                       var17 = TextButton.field_v;
-                      var18 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var16});
+                      var18 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var16});
                       var17.field_j.addItem(param1 ^ 2, 8, var18);
                     }
                     var17Lifetime1 = TextButton.field_v;
-                    var18Lifetime1 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var16});
+                    var18Lifetime1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var16});
                     var17Lifetime1.field_j.addItem(0, 18, var18Lifetime1);
                   }
                 } else {
@@ -424,12 +424,12 @@ final class ModalStack extends SingleChildContainer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          param1.addMouseListener(lw.field_e);
+          param1.addMouseListener(ProxyAuthenticationRequiredException.field_e);
           if (param0 != 15282) {
             ModalStack.m(110);
           }
-          param1.addMouseMotionListener(lw.field_e);
-          param1.addFocusListener(lw.field_e);
+          param1.addMouseMotionListener(ProxyAuthenticationRequiredException.field_e);
+          param1.addFocusListener(ProxyAuthenticationRequiredException.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

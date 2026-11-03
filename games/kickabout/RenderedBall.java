@@ -374,12 +374,12 @@ final class RenderedBall extends BallAgent {
         int var2 = 0;
         int var8 = Kickabout.field_G;
         int var2Lifetime1;
-        m.field_d = new int[32];
+        WhirlpoolHasher.field_d = new int[32];
         if (param0 >= -7) {
           return;
         }
-        for (var2 = 0; var2 < m.field_d.length; var2++) {
-          m.field_d[var2] = 65793 * (var2 << 3);
+        for (var2 = 0; var2 < WhirlpoolHasher.field_d.length; var2++) {
+          WhirlpoolHasher.field_d[var2] = 65793 * (var2 << 3);
         }
         var2Lifetime1 = this.field_M >> 16;
         if (var2Lifetime1 > 256) {
@@ -391,9 +391,9 @@ final class RenderedBall extends BallAgent {
         int var3 = InstrumentNoteMask.field_i * (14 - (var2Lifetime1 * 14 >> 10)) >> 8;
         int var4 = -5 * InstrumentNoteMask.field_i >> 8;
         int var5 = 4 * InstrumentNoteMask.field_i >> 8;
-        int var6 = -1 + m.field_d.length;
+        int var6 = -1 + WhirlpoolHasher.field_d.length;
         int var7 = (var2Lifetime1 * (var6 >> 1) >> 8) + (var6 >> 1);
-        nh.a(ug.a(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, m.field_d);
+        nh.a(ug.a(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
     }
 
     final void a(MatchAgent param0, int param1, int param2, int param3) {
@@ -493,7 +493,7 @@ final class RenderedBall extends BallAgent {
               var3 = "[" + ButtonMenuScreen.field_z + "] ";
             }
             if (1 == param1.field_c) {
-              var3 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{param1.field_l}) + "] ";
+              var3 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{param1.field_l}) + "] ";
             }
             if (param1.field_c == 4 &&
               null != SingleChildContainer.field_x) {
@@ -509,9 +509,9 @@ final class RenderedBall extends BallAgent {
             if (!param1.field_m) {
               if (param1.field_j == 0 &&
                 param1.field_p == 0) {
-                var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{(String) (var2)});
+                var3 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{(String) (var2)});
               } else {
-                var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{(String) (var2)});
+                var3 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{(String) (var2)});
               }
             }
           }

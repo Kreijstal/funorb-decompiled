@@ -118,7 +118,7 @@ final class TextPromptDialog extends UiLayoutNode {
 
     final static void a(byte param0, String param1) {
         try {
-          ek.field_M = param1;
+          TrinketShopDialog.field_M = param1;
           IndexedSpriteState.b(38, 12);
           if (param0 != -51) {
             field_Ib = (String) null;
@@ -360,7 +360,7 @@ final class TextPromptDialog extends UiLayoutNode {
                 stackIn_8_0Lifetime1 = this;
                 stackIn_8_1Lifetime1 = null;
                 stackIn_8_2Lifetime1 = null;
-                stackIn_8_5 = mc.field_h;
+                stackIn_8_5 = TickClock.field_h;
               }
               this.field_zb = new IconLabel(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Nb.addChild((byte) -118, (UiLayoutNode) (this.field_zb));
@@ -476,7 +476,7 @@ final class TextPromptDialog extends UiLayoutNode {
             this.field_Nb.field_R = fs.a(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 127);
             var23 = var19 + 13 + 13;
             var24 = 10 + (var17Lifetime5 + 24) + var22;
-            var25 = ou.b(var23, param0, param2, 127);
+            var25 = StripedProgressBar.b(var23, param0, param2, 127);
             var26 = nj.a(param1, param3, var24, 29079);
             this.a(true, var23, var25, var26, var24);
             return;
@@ -494,7 +494,7 @@ final class TextPromptDialog extends UiLayoutNode {
           this.field_Nb.field_R = fs.a(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 96);
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
-          var20Lifetime1 = ou.b(var18Lifetime1, param0, param2, 127);
+          var20Lifetime1 = StripedProgressBar.b(var18Lifetime1, param0, param2, 127);
           var21Lifetime1 = nj.a(param1, param3, var19Lifetime1, 29079);
           this.a(true, var18Lifetime1, var20Lifetime1, var21Lifetime1, var19Lifetime1);
           return;

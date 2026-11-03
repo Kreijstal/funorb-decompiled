@@ -34,9 +34,9 @@ final class mj {
           LineupView.field_x = Trinket.field_f.h();
           LoggedGoal.field_o = TrinketPickerDialog.field_J.copy();
           od.field_p = LoginMethod.field_g.copy();
-          nh.a(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);
-          nh.a(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
-          nh.a(od.field_p.field_y, var7[0], var7[1], var7[2]);
+          nh.adjustHsv(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);
+          nh.adjustHsv(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
+          nh.adjustHsv(od.field_p.field_y, var7[0], var7[1], var7[2]);
           FadingSoundPlayer.field_p = eo.b(LineupView.field_x);
           ConsoleCommand.field_z = eo.a(FadingSoundPlayer.field_p);
           ByteStorage.field_b = eo.b(ConsoleCommand.field_z);

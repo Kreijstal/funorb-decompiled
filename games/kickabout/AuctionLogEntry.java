@@ -172,7 +172,7 @@ final class AuctionLogEntry extends IntrusiveNode {
           if (param0 != 14) {
             return null;
           }
-          stackIn_30_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, nm.field_a, new String[]{param1});
+          stackIn_30_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AnimationClip.field_a, new String[]{param1});
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

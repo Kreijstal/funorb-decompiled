@@ -8,7 +8,7 @@ final class ts {
     static char[] field_c;
 
     final static int a(int param0, int param1, int param2, int param3) {
-        int var4 = lw.field_b[param0];
+        int var4 = ProxyAuthenticationRequiredException.field_b[param0];
         if (param3 != 448) {
           field_b = (String) null;
         }

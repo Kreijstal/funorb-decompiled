@@ -20,7 +20,7 @@ final class BuyPlayerDialog extends MessageDialog {
           var5 = param0.field_Sb.getDisplayName(100);
           String var2 = var5;
           var3 = param0.field_Nb;
-          var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[30], new String[]{var5, var3});
+          var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[30], new String[]{var5, var3});
           this.a(var4, this.field_t, this.field_D, -91, this.field_u);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');

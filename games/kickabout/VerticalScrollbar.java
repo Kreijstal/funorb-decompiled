@@ -167,12 +167,12 @@ final class VerticalScrollbar extends UiLayoutNode {
     }
 
     final static void h(int param0) {
-        m.field_m = new UiLayoutNode(0L, (UiLayoutNode) null);
+        WhirlpoolHasher.field_m = new UiLayoutNode(0L, (UiLayoutNode) null);
         if (ui.field_t) {
-          m.field_m.addChild((byte) -127, ConsoleValue.field_a);
+          WhirlpoolHasher.field_m.addChild((byte) -127, ConsoleValue.field_a);
         }
-        m.field_m.addChild((byte) -114, mc.field_d);
-        tn.field_d = new rf(ButtonMenuScreen.field_z, m.field_m);
+        WhirlpoolHasher.field_m.addChild((byte) -114, TickClock.field_d);
+        tn.field_d = new rf(ButtonMenuScreen.field_z, WhirlpoolHasher.field_m);
         ss.field_c = new UiLayoutNode((long)param0, (UiLayoutNode) null);
         ss.field_c.addChild((byte) -127, (UiLayoutNode) (tn.field_d.field_b));
         ss.field_c.addChild((byte) -116, MouseWheelInput.field_a);
@@ -348,7 +348,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               if (re.field_c.selectedIndex == var4) {
                 var5 = ParticipantStatus.field_w;
               } else {
-                var5 = ju.field_U;
+                var5 = ValidationHelpWidget.field_U;
               }
             }
             var6 = j.field_a[var3];
@@ -675,7 +675,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     var7.field_Db = var8_int >> 1;
                     var7.field_Sb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -113);
                     var7.field_Pb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -119);
-                    lw.field_d.a(var7, 3);
+                    ProxyAuthenticationRequiredException.field_d.a(var7, 3);
                     return;
                   }
                   if (var2 == 19) {
@@ -714,7 +714,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     return;
                   }
                   if (23 == var2) {
-                    dd.field_c = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
+                    AnimationPlayer.field_c = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
                     return;
                   }
                   UnreadMessagesScreen.a("L1: " + tr.b(0), (Throwable) null, param0 ^ 15);
@@ -771,11 +771,11 @@ final class VerticalScrollbar extends UiLayoutNode {
             ve.a(var24, (byte) -119);
             return;
           }
-          var3_ref_he = (LobbyPlayerRow) (lw.field_d.g(24009));
+          var3_ref_he = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.g(24009));
           while (var3_ref_he != null) {
             var3_ref_he.c((byte) -109);
             var3_ref_he.unlinkSecondary(9);
-            var3_ref_he = (LobbyPlayerRow) (lw.field_d.c(33));
+            var3_ref_he = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.c(33));
           }
           var3_ref_heLifetime1 = (LobbyPlayerRow) (SquadPickerDialog.field_N.b((byte) 72));
           while (var3_ref_heLifetime1 != null) {

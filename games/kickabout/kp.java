@@ -85,7 +85,7 @@ final class kp {
             }
             var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.c(33));
           }
-          var1Lifetime1 = (LobbyPlayerRow) (lw.field_d.g(24009));
+          var1Lifetime1 = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.g(24009));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_Jb > 0) {
               var1Lifetime1.field_Jb = var1Lifetime1.field_Jb - 1;
@@ -96,7 +96,7 @@ final class kp {
                 }
               }
             }
-            var1Lifetime1 = (LobbyPlayerRow) (lw.field_d.c(33));
+            var1Lifetime1 = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.c(33));
           }
           var2 = -47 / ((39 - param0) / 42);
           return;

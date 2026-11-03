@@ -39,10 +39,10 @@ final class fj {
 
     final static void a(int param0) {
         wd.field_l.k(119);
-        if (nm.field_d == null) {
-          nm.field_d = new LoadingProgressDialog(wd.field_l, CachedTextLayout.field_m);
+        if (AnimationClip.field_d == null) {
+          AnimationClip.field_d = new LoadingProgressDialog(wd.field_l, CachedTextLayout.field_m);
         }
-        wd.field_l.a(nm.field_d, false);
+        wd.field_l.a(AnimationClip.field_d, false);
         if (param0 == -45) {
           return;
         }

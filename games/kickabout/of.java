@@ -48,7 +48,7 @@ final class of {
           }
           var8 = tr.a(param2, (byte) 40);
           if (var8 == null) {
-            stackIn_11_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, af.field_c, new String[]{param2});
+            stackIn_11_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, af.field_c, new String[]{param2});
             return stackIn_11_0;
           }
           GameplayHelpScreen.field_I.b(-7584, var8);

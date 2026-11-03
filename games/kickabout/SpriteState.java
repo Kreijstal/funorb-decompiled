@@ -105,9 +105,9 @@ abstract class SpriteState extends DualLinkNode {
             var7.field_q = 0;
             if (!ScrollPane.a(113)) {
               var9_ref_String = ChatLine.field_i.field_ec;
-              IterableDualLinkDeque.field_h.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{var9_ref_String}).toUpperCase();
+              IterableDualLinkDeque.field_h.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{var9_ref_String}).toUpperCase();
               nv.field_F.a(true, AuctionItem.field_p.field_q, 0, AuctionItem.field_p.field_mb - 40, 40);
-              nv.field_F.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, wa.field_c, new String[]{var9_ref_String});
+              nv.field_F.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wa.field_c, new String[]{var9_ref_String});
               var8 = nv.field_F;
             } else {
               IterableDualLinkDeque.field_h.field_E = TabStrip.field_zb.toUpperCase();
@@ -125,7 +125,7 @@ abstract class SpriteState extends DualLinkNode {
                 if (fh.field_b == 1) {
                   var10_ref_String = kp.field_i;
                 } else {
-                  var10_ref_String = vo.$cfr$intArgs$a$53ce4ab4c593(-18, PopupDialog.field_f, new String[]{Integer.toString(fh.field_b)});
+                  var10_ref_String = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PopupDialog.field_f, new String[]{Integer.toString(fh.field_b)});
                 }
                 DualLinkHashTable.field_d.field_E = DualLinkHashTable.field_d.field_E + "<br>" + var10_ref_String;
                 if ((16 & GameKeyHandler.field_c) == 0 &&
@@ -142,11 +142,11 @@ abstract class SpriteState extends DualLinkNode {
               var10 = 2;
               if (PlayArea.field_k != null) {
                 if (SumIntegersCommand.field_G == null) {
-                  m.field_f = new boolean[ss.field_j];
+                  WhirlpoolHasher.field_f = new boolean[ss.field_j];
                   SumIntegersCommand.field_G = new byte[ss.field_j];
                 }
                 for (var11_int = 0; ss.field_j > var11_int; var11_int++) {
-                  m.field_f[var11_int] = false;
+                  WhirlpoolHasher.field_f[var11_int] = false;
                 }
                 var10 = 0;
                 scanLoop1: while (true) {
@@ -175,7 +175,7 @@ abstract class SpriteState extends DualLinkNode {
                               var14_int = var16;
                             }
                           }
-                          m.field_f[var14_int] = true;
+                          WhirlpoolHasher.field_f[var14_int] = true;
                         } else {
                           var15 = var25[var14_int];
                           var16 = var13[var14_int + 1];
@@ -302,7 +302,7 @@ abstract class SpriteState extends DualLinkNode {
                     GoalStateAgent.field_k.field_lb = false;
                     if (!(!GoalStateAgent.field_k.field_Q)) {
                       if (ni.field_l.field_b.field_Db != 0) {
-                        UrlRequest.field_e = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketSlot.field_Fb, new String[]{c.field_d});
+                        UrlRequest.field_e = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketSlot.field_Fb, new String[]{c.field_d});
                       } else {
                         UrlRequest.field_e = MusicPatchPcmStream.field_m;
                       }
@@ -317,7 +317,7 @@ abstract class SpriteState extends DualLinkNode {
                   var11 = null;
                   var12Lifetime2 = 0;
                   for (var13_intLifetime1 = 0; ss.field_j > var13_intLifetime1; var13_intLifetime1++) {
-                    if (m.field_f[var13_intLifetime1]) {
+                    if (WhirlpoolHasher.field_f[var13_intLifetime1]) {
                       var24 = "<col=A00000>" + ok.field_b[var13_intLifetime1] + "</col>";
                       if (var11 == null) {
                         var11 = var24;
@@ -330,7 +330,7 @@ abstract class SpriteState extends DualLinkNode {
                   if (var10 != 0) {
                     var13_ref = Bzip2State.field_w;
                     if (var12Lifetime2 == 0) {
-                      var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ColumnTableWidget.field_yb, new String[]{(String) (var11)});
+                      var14 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ColumnTableWidget.field_yb, new String[]{(String) (var11)});
                     } else {
                       var14 = oi.field_k + (String) (var11);
                     }
@@ -339,7 +339,7 @@ abstract class SpriteState extends DualLinkNode {
                     if (var12Lifetime2 != 0) {
                       var14 = RenderedFootballer.field_S + (String) (var11);
                     } else {
-                      var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, WriteIntegersCommand.field_D, new String[]{(String) (var11)});
+                      var14 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WriteIntegersCommand.field_D, new String[]{(String) (var11)});
                     }
                   }
                   UrlRequest.field_e = "<col=A00000>" + var13_ref + "<br>" + var14;
@@ -352,9 +352,9 @@ abstract class SpriteState extends DualLinkNode {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gf.field_h, new String[]{Integer.toString(var9)});
+              var8.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, gf.field_h, new String[]{Integer.toString(var9)});
             }
-            ka.field_c.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ib.field_F, new String[]{Integer.toString(ChatLine.field_i.field_gc), Integer.toString(ChatLine.field_i.field_bc)});
+            ka.field_c.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DateOfBirthPanel.field_F, new String[]{Integer.toString(ChatLine.field_i.field_gc), Integer.toString(ChatLine.field_i.field_bc)});
           }
           stackIn_156_0 = TrinketIcon.field_Cb;
           stackIn_156_1 = param2 ^ param2;

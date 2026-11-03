@@ -80,14 +80,14 @@ final class GameResourceLoader implements LoadingSequence {
           }
           d.field_b = null;
           IterableNodeHashTable.field_c = null;
-          dd.a((byte) 49);
+          AnimationPlayer.a((byte) 49);
           return false;
         }
         if (ni.field_i != null) {
           CipherPacketBuffer.k(61, 1);
           f.a(ni.field_i, (byte) -122);
           ni.field_i = null;
-          dd.a((byte) 53);
+          AnimationPlayer.a((byte) 53);
           return false;
         }
         if (!MyKitScreen.ensureSoundLoaded(111, Trinket.field_c)) {
@@ -117,7 +117,7 @@ final class GameResourceLoader implements LoadingSequence {
           sk.a(83, 100, 10);
           var6 = wa.a((byte) 100, "basic", var16, "orbcoin");
           LoggedGoal.a(var6, (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 77, "locked")), (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 77, "unachieved")), -123);
-          sh.field_g = nh.b(nh.a(var6));
+          sh.field_g = nh.downscaleArgbByHalf(nh.a(var6));
           AccountChoicePanel.field_B = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 69, "divider"));
           tt.field_e = wa.a((byte) 122, "menu", bo.field_Cb, "button_left_shine");
           GameAppletShell.field_l = wa.a((byte) 106, "menu", bo.field_Cb, "button_middle_shine");
@@ -127,7 +127,7 @@ final class GameResourceLoader implements LoadingSequence {
           MatchScreen.field_l = wa.a((byte) 101, "menu", bo.field_Cb, "button_large_shine");
           ig.field_a = ModalStack.a(bo.field_Cb, -119, "menu", "digifont");
           sk.a(90, 100, 25);
-          wt.field_z = ng.a("swatch_overlay", "menu", 2, bo.field_Cb);
+          ArrayWidgetContainer.field_z = ng.a("swatch_overlay", "menu", 2, bo.field_Cb);
           var7 = ng.a("arrows", "menu", 2, bo.field_Cb);
           eo.field_k = new ArgbSprite[]{(ArgbSprite) (var7[0]), (ArgbSprite) (var7[2]), (ArgbSprite) (var7[4])};
           eo.field_i = new ArgbSprite[]{(ArgbSprite) (var7[1]), (ArgbSprite) (var7[3]), (ArgbSprite) (var7[5])};
@@ -140,8 +140,8 @@ final class GameResourceLoader implements LoadingSequence {
           tn.field_e = wa.a((byte) 114, "hud", bo.field_Cb, "arrow");
           IntrusiveDequeCursor.a(-128, wa.a((byte) 114, "hud", bo.field_Cb, "cursor"));
           sk.a(86, 100, 45);
-          mc.field_k = ng.a("dialog_icon", "menu", 2, bo.field_Cb);
-          wt.field_y = wa.a((byte) 107, "menu", bo.field_Cb, "star");
+          TickClock.field_k = ng.a("dialog_icon", "menu", 2, bo.field_Cb);
+          ArrayWidgetContainer.field_y = wa.a((byte) 107, "menu", bo.field_Cb, "star");
           sk.a(-48, 100, 60);
           var8 = ng.a("trinkets", "menu", 2, bo.field_Cb);
           ScrollContainer.field_Fb = new ArgbSprite[4][6];
@@ -182,18 +182,18 @@ final class GameResourceLoader implements LoadingSequence {
           var11 = new Sprite[][]{eo.field_p, null, eo.field_m, eo.field_j};
           var12 = new Sprite[][]{eo.field_p, null, eo.field_m, eo.field_j};
           int[] var15 = (int[]) null;
-          uf.a(var11, id.field_y, ArchiveSource.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, UrlRequest.field_c, rp.field_y, ld.field_h, Bzip2State.field_i, var12, (int[]) null, 8, 3, TextFieldValidator.field_i);
+          uf.a(var11, StatefulTextPainter.field_y, ArchiveSource.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, UrlRequest.field_c, rp.field_y, ld.field_h, Bzip2State.field_i, var12, (int[]) null, 8, 3, TextFieldValidator.field_i);
           PlayArea.field_k = MusicPatchNode.field_k;
           IndexedSpriteState.field_e = FormationView.field_n;
           TextButton.field_z = MyKitScreen.field_Z;
           StrongCacheEntry.field_t = 0;
           ValidatedTextWidget.a(false, 200);
           sk.a(-61, 100, 95);
-          m.a(var17, var16, 5198);
-          LineupView.a(-70, RankingsScreen.field_A, 0, nm.field_g, 0, 16777215);
+          WhirlpoolHasher.a(var17, var16, 5198);
+          LineupView.a(-70, RankingsScreen.field_A, 0, AnimationClip.field_g, 0, 16777215);
           Object var3 = null;
           v.field_b = null;
-          dd.a((byte) 104);
+          AnimationPlayer.a((byte) 104);
           return false;
         }
         if (ResourceArchive.field_f != null) {
@@ -203,32 +203,32 @@ final class GameResourceLoader implements LoadingSequence {
           CachedListingRow.field_k = new Sprite(ResourceArchive.field_f.a("splash.jpg", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           AccountTermsPanel.field_E = new Sprite(ResourceArchive.field_f.a("botbar.png", "", 66), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           sk.a(-114, 23, 2);
-          vo.field_cb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_top.png", "", 3), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          AccountChoicePanel.field_C = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_mid.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          du.field_i = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_bot.png", "", 123), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          TextHotspotWidget.field_L = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_lrg.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          DirectByteStorage.field_m = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_sml.png", "", 81), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          LoginDialog.field_cb = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("bank_top.png", "", 3), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          AccountChoicePanel.field_C = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("bank_mid.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          du.field_i = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("bank_bot.png", "", 123), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          TextHotspotWidget.field_L = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("button_lrg.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          DirectByteStorage.field_m = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("button_sml.png", "", 81), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(122, 23, 4);
           AccountChoicePanel.field_K = new ArgbSprite(ResourceArchive.field_f.a("cone_1.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           re.field_o = new ArgbSprite(ResourceArchive.field_f.a("cone_2.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          ChatLine.field_m = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_left.png", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          SetLagCommand.field_B = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_middle.png", "", 97), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          ChatLine.field_m = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("button_left.png", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SetLagCommand.field_B = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("button_middle.png", "", 97), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-114, 23, 6);
-          SquadGridWidget.field_Cb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_right.png", "", 90), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SquadGridWidget.field_Cb = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("button_right.png", "", 90), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           AuctionSettingsDialog.field_H = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.a("stopwatch.png", "", 101), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-58, 23, 8);
-          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-105, 23, 10);
-          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          ContextMenu.field_zb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_L.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          ContextMenu.field_zb = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("small_button_L.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-61, 23, 12);
-          AccountRegistrationPanel.field_H = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          fv.field_b = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_R.png", "", 117), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          AccountRegistrationPanel.field_H = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          fv.field_b = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("small_button_R.png", "", 117), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-85, 23, 14);
-          mg.field_g = nh.a(new ArgbSprite(ResourceArchive.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          mg.field_g = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-49, 23, 16);
-          ButtonMenuScreen.field_u = nh.a(new ArgbSprite(ResourceArchive.field_f.a("top.png", "", 82), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          ButtonMenuScreen.field_u = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.a("top.png", "", 82), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-98, 23, 18);
           Trinket.field_f = new ArgbSprite(ResourceArchive.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           TrinketPickerDialog.field_J = new Sprite(ResourceArchive.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
@@ -240,21 +240,21 @@ final class GameResourceLoader implements LoadingSequence {
           this.a(11264, new ArgbSprite(ResourceArchive.field_f.a("achievements_large.png", "", 63), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           MainMenuScreen.field_C = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.a("ka_logo.png", "", 37), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           ResourceArchive.field_f = null;
-          dd.a((byte) 99);
+          AnimationPlayer.a((byte) 99);
           return false;
         }
         if (MySquadScreen.field_H != null) {
           CipherPacketBuffer.k(61, 4);
           ee.a(new HuffmanCodec(MySquadScreen.field_H.a("huffman", "", 93)), false);
           MySquadScreen.field_H = null;
-          dd.a((byte) 78);
+          AnimationPlayer.a((byte) 78);
           return false;
         }
         if (null != Kickabout.field_J) {
           CipherPacketBuffer.k(61, 5);
           MatchScreen.loadMatchSprites((byte) -34, Kickabout.field_J);
           Kickabout.field_J = null;
-          dd.a((byte) 81);
+          AnimationPlayer.a((byte) 81);
           return false;
         }
         if (KitStyleTile.field_Bb == null) {
@@ -265,7 +265,7 @@ final class GameResourceLoader implements LoadingSequence {
         KitStyleTile.field_Bb = null;
         ContextMenuItem.field_Eb = null;
         ListingRowCache.field_h = null;
-        dd.a((byte) 48);
+        AnimationPlayer.a((byte) 48);
         return false;
     }
 
@@ -273,7 +273,7 @@ final class GameResourceLoader implements LoadingSequence {
         if (param0 != 115) {
           return;
         }
-        wc.field_k = new UrlRequest(nm.field_g);
+        wc.field_k = new UrlRequest(AnimationClip.field_g);
     }
 
     final static void a(byte param0) {
@@ -337,8 +337,8 @@ final class GameResourceLoader implements LoadingSequence {
           }
           var10 = ChatMessage.field_b[2];
           var11 = var10;
-          var2 = nh.a((ArgbSprite) (c.field_e));
-          var3 = nh.a((ArgbSprite) (CachedTextLayout.field_q));
+          var2 = nh.toMaskedSprite((ArgbSprite) (c.field_e));
+          var3 = nh.toMaskedSprite((ArgbSprite) (CachedTextLayout.field_q));
           if (RankingsScreen.field_C == 0) {
             oi.field_e = new oh[30];
             var4 = 0;
@@ -501,7 +501,7 @@ final class GameResourceLoader implements LoadingSequence {
         ArgbSprite var3;
         int var5;
         var5 = Kickabout.field_G;
-        nm.a(0, -76, false, ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, 3, new Random()));
+        AnimationClip.a(0, -76, false, ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, 3, new Random()));
         CipherPacketBuffer.k(param0 ^ 12774, 7);
         TriangleRasterizer.a(0.6000000238418579f);
         g.b(false);
@@ -541,7 +541,7 @@ final class GameResourceLoader implements LoadingSequence {
           }
           var3.a(-16777216);
           var3.a(2130706432);
-          MySquadScreen.field_U[var2] = (Sprite) ((Object) nh.b(var3));
+          MySquadScreen.field_U[var2] = (Sprite) ((Object) nh.downscaleArgbByHalf(var3));
         }
         CipherPacketBuffer.k(61, 11);
         if (param0 != 12763) {
@@ -610,7 +610,7 @@ final class GameResourceLoader implements LoadingSequence {
             var8.field_n = var10.field_i;
             var14 = new byte[var10.field_h];
             var8.readBytes(var14, 0, (byte) -6, var10.field_h);
-            DelayedServerPacket.field_g = new ArgbSprite(var14, (java.awt.Component) ((Object) nm.field_g));
+            DelayedServerPacket.field_g = new ArgbSprite(var14, (java.awt.Component) ((Object) AnimationClip.field_g));
             if (-1 == DelayedServerPacket.field_g.field_q &&
               DelayedServerPacket.field_g.field_w == -1) {
               DelayedServerPacket.field_g = null;
@@ -633,10 +633,10 @@ final class GameResourceLoader implements LoadingSequence {
         if (Trinket.field_b != null) {
           ad.loadLocalizedStrings(Trinket.field_b, 1);
           Trinket.field_b = null;
-          dd.a((byte) 85);
+          AnimationPlayer.a((byte) 85);
         }
         MySquadScreen.field_H = ImageProducerRasterBuffer.a((byte) -126, 3);
-        id.field_y = ImageProducerRasterBuffer.a((byte) -128, 11);
+        StatefulTextPainter.field_y = ImageProducerRasterBuffer.a((byte) -128, 11);
         bo.field_Cb = ImageProducerRasterBuffer.a((byte) -128, 5);
         v.field_b = ImageProducerRasterBuffer.a((byte) -125, 6);
         IterableNodeHashTable.field_c = ImageProducerRasterBuffer.a((byte) -127, 7);
@@ -686,7 +686,7 @@ final class GameResourceLoader implements LoadingSequence {
         mp.field_h.a(ContextMenuItem.field_Eb, (byte) -126, vp.field_l, cu.field_b);
         mp.field_h.a(ListingRowCache.field_h, (byte) -106, vp.field_l, cu.field_b);
         mp.field_h.a(MySquadScreen.field_H, (byte) -128, kw.field_g, Bzip2State.field_d);
-        mp.field_h.a(id.field_y, (byte) -116, CascadingMenu.field_Ib, ac.field_e);
+        mp.field_h.a(StatefulTextPainter.field_y, (byte) -116, CascadingMenu.field_Ib, ac.field_e);
     }
 
     private final void a(int param0, ArgbSprite param1) {

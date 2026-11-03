@@ -487,7 +487,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
         this.field_n = this.field_n + 1;
         this.field_l.b(0, param1);
-        this.field_g.a(this.field_f, id.field_v * (this.field_f * 2), true, 0);
+        this.field_g.a(this.field_f, StatefulTextPainter.field_v * (this.field_f * 2), true, 0);
         this.field_k.updatePointer(11570);
     }
 

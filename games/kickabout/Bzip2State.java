@@ -313,7 +313,7 @@ final class Bzip2State {
                   var25Lifetime1Lifetime1 = param0.field_H[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_D[var23Lifetime2];
                   AccountMessagePanel.field_I[var23Lifetime2] = (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime2Lifetime1 + var15 * var25Lifetime1Lifetime1) >> 16) + var9;
-                  ib.field_C[var23Lifetime2] = var10 + (var26Lifetime1Lifetime1 * var19 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13) >> 16);
+                  DateOfBirthPanel.field_C[var23Lifetime2] = var10 + (var26Lifetime1Lifetime1 * var19 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13) >> 16);
                   PromotionDialog.field_I[var23Lifetime2] = (var25Lifetime1Lifetime1 * var17 + (var14 * var24Lifetime2Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var24Lifetime2Lifetime1 = param0.field_a[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_e[var23Lifetime2];

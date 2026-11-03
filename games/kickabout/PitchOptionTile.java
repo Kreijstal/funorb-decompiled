@@ -657,7 +657,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
             if (param0.disableOpponent) {
               var7 = 0;
             }
-            go.moveToTarget(cp.a((byte) 21, param2, param3, var7), param0, 0, param3, param2, ts.a(param2, var7, param3, 448));
+            go.moveToTarget(AudioService.a((byte) 21, param2, param3, var7), param0, 0, param3, param2, ts.a(param2, var7, param3, 448));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -710,9 +710,9 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
               this.field_Ab.field_Q &&
               this.field_lb) {
               if (!this.field_Ab.field_lb) {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
               }
             }
             if (var3 != 0) {
@@ -749,9 +749,9 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
               this.field_Ab.field_Q &&
               this.field_lb) {
               if (!this.field_Ab.field_lb) {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
               }
             }
             if (var3 != 0 ||
@@ -785,7 +785,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_78_0, stackIn_79_1);
           } else {
             if (var5 != 0) {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleValue.field_e, new String[]{h.field_b[this.field_Db][this.field_zb], h.field_b[this.field_Db][this.field_zb - 1]}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleValue.field_e, new String[]{h.field_b[this.field_Db][this.field_zb], h.field_b[this.field_Db][this.field_zb - 1]}));
               if (null != this.field_Ab) {
                 var6Lifetime2 = ResizableModalPanel.field_M[this.field_zb];
                 stackIn_59_0 = this.field_Ab;
@@ -795,9 +795,9 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
                   this.field_Ab.field_Q &&
                   this.field_lb) {
                   if (!this.field_Ab.field_lb) {
-                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
                   } else {
-                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
                   }
                 }
                 this.field_Ab.c((byte) -109);
@@ -827,14 +827,14 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
               }
             } else {
               if (!this.field_Ab.field_lb) {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
                 if (var3 != 0 ||
                   var5 != 0) {
                   this.field_Ab.c((byte) -109);
                   this.field_Ab = null;
                 }
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
                 if (var3 != 0 ||
                   var5 != 0) {
                   this.field_Ab.c((byte) -109);

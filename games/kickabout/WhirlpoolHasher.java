@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class m {
+final class WhirlpoolHasher {
     private long[] field_k;
     static double field_a;
     private long[] field_c;
@@ -60,7 +60,7 @@ final class m {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_g[var3Lifetime1] = sd.a(this.field_g[var3Lifetime1], ju.field_W[var4][TextLayoutLine.b((int)(this.field_p[TextLayoutLine.b(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
+              this.field_g[var3Lifetime1] = sd.a(this.field_g[var3Lifetime1], ValidationHelpWidget.field_W[var4][TextLayoutLine.b((int)(this.field_p[TextLayoutLine.b(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -68,14 +68,14 @@ final class m {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_p[var3Lifetime1Lifetime1] = this.field_g[var3Lifetime1Lifetime1];
           }
-          this.field_p[0] = sd.a(this.field_p[0], ju.field_V[var2Lifetime2]);
+          this.field_p[0] = sd.a(this.field_p[0], ValidationHelpWidget.field_V[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_g[var3Lifetime1Lifetime2] = this.field_p[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_g[var3Lifetime1Lifetime2] = sd.a(this.field_g[var3Lifetime1Lifetime2], ju.field_W[var7][TextLayoutLine.b(255, (int)(this.field_c[TextLayoutLine.b(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
+              this.field_g[var3Lifetime1Lifetime2] = sd.a(this.field_g[var3Lifetime1Lifetime2], ValidationHelpWidget.field_W[var7][TextLayoutLine.b(255, (int)(this.field_c[TextLayoutLine.b(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -94,7 +94,7 @@ final class m {
         field_f = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          m.a(96, (ec) null, (ec) null, 12, false, (String) null, true);
+          WhirlpoolHasher.a(96, (ec) null, (ec) null, 12, false, (String) null, true);
         }
         field_b = null;
         field_m = null;
@@ -256,7 +256,7 @@ final class m {
             un.field_e.field_n = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              un.field_c = id.field_t;
+              un.field_c = StatefulTextPainter.field_t;
               ValidatedTextWidget.field_X = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
@@ -278,7 +278,7 @@ final class m {
               }
             }
           }
-          if (id.field_t == un.field_c) {
+          if (StatefulTextPainter.field_t == un.field_c) {
             var9Lifetime2 = 2;
             if (SetLagCommand.a((byte) -96, var9Lifetime2)) {
               var10Lifetime1 = un.field_e.a((byte) 81);
@@ -391,7 +391,7 @@ final class m {
           }
           if (param1 != 21024) {
             var9 = (String) null;
-            m.a(64, (ec) null, (ec) null, -29, false, (String) null, true);
+            WhirlpoolHasher.a(64, (ec) null, (ec) null, -29, false, (String) null, true);
           }
           ArrayOperations.a(this.field_j, 0, this.field_e, 32, 32);
           this.a((byte) 18);
@@ -541,7 +541,7 @@ final class m {
         }
     }
 
-    m() {
+    WhirlpoolHasher() {
         this.field_e = new byte[64];
         this.field_l = 0;
         this.field_c = new long[8];

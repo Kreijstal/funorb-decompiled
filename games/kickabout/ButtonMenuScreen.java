@@ -537,7 +537,7 @@ class ButtonMenuScreen extends AppScreen {
           this.buttonSelection.selectedIndex = -1;
         }
         if (param1) {
-          var3 = this.buttonIndexAt(wt.field_x, us.field_j, (byte) 30);
+          var3 = this.buttonIndexAt(ArrayWidgetContainer.field_x, us.field_j, (byte) 30);
           this.buttonSelection.a(-21174, var3, this.buttonIndexAt(TrinketIcon.field_yb, TabStrip.field_Eb, (byte) 110));
           if (var3 == -1) {
             stackIn_11_0 = -1;
@@ -567,7 +567,7 @@ class ButtonMenuScreen extends AppScreen {
             stackIn_32_0 = 0;
           }
           var6 = stackIn_32_0;
-          var7 = wt.field_x - this.buttonCenterX(var9, -22667);
+          var7 = ArrayWidgetContainer.field_x - this.buttonCenterX(var9, -22667);
           this.buttons[var9].a(var4Lifetime1 != 0, var5 != 0, var6 != 0, 16, var7);
           var9++;
         }

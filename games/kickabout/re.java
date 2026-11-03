@@ -60,7 +60,7 @@ final class re implements WidgetPainter {
               var5 = du.field_k;
             } else {
               if (var4 != DirectByteStorage.field_k.selectedIndex) {
-                var5 = wt.field_v;
+                var5 = ArrayWidgetContainer.field_v;
               } else {
                 var5 = NumericDateInputWidget.field_R;
               }
@@ -214,7 +214,7 @@ final class re implements WidgetPainter {
             return;
           }
           vd.a(0, 4);
-          if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(ih.field_c, 121, vi.field_n, RankingsScreen.field_C))) {
+          if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(ih.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
             DelayedServerPacket.a(4, 9863, 0);
             return;
           }

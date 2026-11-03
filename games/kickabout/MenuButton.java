@@ -63,7 +63,7 @@ final class MenuButton {
                   } else {
                     if (20 == this.kind) {
                       DelayedServerPacket.a(11, param1, -2);
-                      mc.field_j = true;
+                      TickClock.field_j = true;
                     } else {
                       if (18 != this.kind) {
                         if (this.kind != 23) {
@@ -121,7 +121,7 @@ final class MenuButton {
                                                                           bt.a(param0 + 1);
                                                                         } else {
                                                                           if (this.kind == 55) {
-                                                                            vi.c((byte) -59);
+                                                                            NanoTickClock.c((byte) -59);
                                                                           } else {
                                                                             if (this.kind == 13) {
                                                                               AccountRequestDialog.field_ib = 0;
@@ -401,8 +401,8 @@ final class MenuButton {
           !GameLoopApplet.field_E.field_J[0]) {
           this.field_g = false;
         }
-        if (param1 - (this.width >> 1) < wt.field_x &&
-          wt.field_x < param1 + (this.width >> 1) &&
+        if (param1 - (this.width >> 1) < ArrayWidgetContainer.field_x &&
+          ArrayWidgetContainer.field_x < param1 + (this.width >> 1) &&
           param0 - (this.height >> 1) < us.field_j &&
           us.field_j < param0 + (this.height >> 1)) {
           if (49 == this.kind) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class we {
-    static vo field_a;
+    static LoginDialog field_a;
     static String field_b;
     static String field_d;
     static String field_e;
@@ -84,7 +84,7 @@ final class we {
         boolean stackIn_66_2 = false;
         pa.b((byte) 123);
         if (mi.field_d >= 0) {
-          ConsoleValue.field_a.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, id.field_r, new String[]{Integer.toString(mi.field_d)});
+          ConsoleValue.field_a.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, StatefulTextPainter.field_r, new String[]{Integer.toString(mi.field_d)});
           stackIn_51_0 = ss.field_c;
           stackIn_51_1 = 0;
           stackIn_52_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (ChatLine.field_i == null) && (null == ArchiveSource.field_b);

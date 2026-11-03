@@ -76,19 +76,19 @@ final class ul {
           if (param0 != -126) {
             field_c = (UiLayoutNode) null;
           }
-          var2_int = -mc.field_a + 640 >> 1;
+          var2_int = -TickClock.field_a + 640 >> 1;
           var3 = 358;
-          AuctionListing.a(mc.field_a + var2_int, -22914, var2_int, var3 + 112, var3);
-          for (var4 = 0; mc.field_a > var4; var4++) {
+          AuctionListing.a(TickClock.field_a + var2_int, -22914, var2_int, var3 + 112, var3);
+          for (var4 = 0; TickClock.field_a > var4; var4++) {
             mk.field_a.d(var2_int + var4, var3 - 368);
           }
-          SoftwareRasterizer.c(var2_int, var3, mc.field_a, 112, 2, 65793);
+          SoftwareRasterizer.c(var2_int, var3, TickClock.field_a, 112, 2, 65793);
           if (param1 != null) {
             un.field_d.a(param1.toLowerCase(), 20 + var2_int, var3 + 22, 16777215, -1);
           }
           var2_int += 10;
           TeamManagementScreen.e(param0 ^ -7);
-          var4Lifetime1 = 12 + ((mc.field_a + 640 >> 1) - 22);
+          var4Lifetime1 = 12 + ((TickClock.field_a + 640 >> 1) - 22);
           AuctionListing.a(320, param0 - 22788, var2_int, 480, 0);
           SoftwareRasterizer.a(var2_int, 388, 640, 72, 8, 65793, 128);
           TeamManagementScreen.e(122);
@@ -107,7 +107,7 @@ final class ul {
               of.field_e = 4;
             }
           }
-          AuctionListing.a(-20 + (var2_int + mc.field_a), param0 ^ 23036, var2_int + 22 - 12, 112 + var3, var3);
+          AuctionListing.a(-20 + (var2_int + TickClock.field_a), param0 ^ 23036, var2_int + 22 - 12, 112 + var3, var3);
           kj.a(et.field_d.field_H[0], param0 ^ -126, et.field_d.field_P[0][of.field_e].stats, et.field_d.field_Q[0], et.field_d.field_d[0], false).c(12 + var2_int, var3 + 40);
           TeamManagementScreen.e(120);
           return;

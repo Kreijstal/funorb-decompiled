@@ -47,7 +47,7 @@ final class CheatCodeListener implements OverlayLayer {
           gg.a(-32053);
         } else {
           if (!ng.a(param0 ^ 27302)) {
-            if (vi.c(2915)) {
+            if (NanoTickClock.c(2915)) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
               var1 = 1;
               ph.b(true);
@@ -69,7 +69,7 @@ final class CheatCodeListener implements OverlayLayer {
           var1 = 1;
         }
         if (nv.i(0)) {
-          var2 = (-1 + vo.field_bb << 8) / 16;
+          var2 = (-1 + LoginDialog.field_bb << 8) / 16;
           if (0 < var2) {
             var1 = 1;
             SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, var2);

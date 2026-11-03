@@ -99,7 +99,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           if (param1 != 23) {
             FullscreenFocusCanvas.a((byte) 30);
           }
-          sk.field_d = new jj(3);
+          sk.field_d = new MusicTrackMixer(3);
           sk.field_d.a(param1 - 23, 128, 9);
           var5 = 0;
           var3_intLifetime1 = var5;

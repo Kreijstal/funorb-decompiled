@@ -103,19 +103,19 @@ final class ic {
     }
 
     final static void a(float param0, float param1, float param2, float param3, float param4, byte param5, float param6) {
-        jj var7 = null;
+        MusicTrackMixer var7 = null;
         if (param5 == -113) {
-          if (nm.field_k == null) {
+          if (AnimationClip.field_k == null) {
             var7 = sk.field_d;
-            nm.field_k = new ReverbPcmStream(var7);
-            cb.field_d.a(nm.field_k);
+            AnimationClip.field_k = new ReverbPcmStream(var7);
+            cb.field_d.a(AnimationClip.field_k);
           }
-          nm.field_k.a(param3);
-          nm.field_k.f(param6);
-          nm.field_k.setDampingTimeMicros(param4);
-          nm.field_k.b(param2);
-          nm.field_k.e(param0);
-          nm.field_k.d(param1);
+          AnimationClip.field_k.a(param3);
+          AnimationClip.field_k.f(param6);
+          AnimationClip.field_k.setDampingTimeMicros(param4);
+          AnimationClip.field_k.b(param2);
+          AnimationClip.field_k.e(param0);
+          AnimationClip.field_k.d(param1);
           return;
         }
     }

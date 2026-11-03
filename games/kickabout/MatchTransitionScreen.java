@@ -27,14 +27,14 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           return;
         }
         if (ih.field_c != gk.field_g) {
-          nm.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+          AnimationClip.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
         } else {
           if (hh.field_f != RankingsScreen.field_C) {
-            nm.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+            AnimationClip.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
           } else {
-            stackIn_9_0 = (vi.field_n) ? 0 : 1;
+            stackIn_9_0 = (NanoTickClock.field_n) ? 0 : 1;
             if (stackIn_9_0 == (TeamSelectionView.field_j ? 1 : 0)) {
-              nm.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+              AnimationClip.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
             }
           }
         }
@@ -47,7 +47,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         }
         gg.h((byte) -125);
         System.gc();
-        dd.a((byte) 98);
+        AnimationPlayer.a((byte) 98);
         DelayedServerPacket.a(-1, false, -2);
     }
 
@@ -311,12 +311,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           }
           if (TrinketCatalog.field_b &&
             ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
-            mc.field_d.field_lb = false;
+            TickClock.field_d.field_lb = false;
             LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
             hl.a(true, LineupView.field_u.field_Ab);
           } else {
             LineupView.field_u.field_zb.field_E = null;
-            mc.field_d.field_lb = true;
+            TickClock.field_d.field_lb = true;
             SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
           }
         } else {
@@ -345,12 +345,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   }
                   if (TrinketCatalog.field_b &&
                     ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
-                    mc.field_d.field_lb = false;
+                    TickClock.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
-                    mc.field_d.field_lb = true;
+                    TickClock.field_d.field_lb = true;
                     SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
                   DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
@@ -379,12 +379,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               }
               if (TrinketCatalog.field_b &&
                 ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
-                mc.field_d.field_lb = false;
+                TickClock.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
-                mc.field_d.field_lb = true;
+                TickClock.field_d.field_lb = true;
                 SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
               }
             } else {
@@ -403,12 +403,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               }
               if (TrinketCatalog.field_b &&
                 ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
-                mc.field_d.field_lb = false;
+                TickClock.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
-                mc.field_d.field_lb = true;
+                TickClock.field_d.field_lb = true;
                 SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
               }
             }
@@ -438,12 +438,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   }
                   if (TrinketCatalog.field_b &&
                     ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
-                    mc.field_d.field_lb = false;
+                    TickClock.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
-                    mc.field_d.field_lb = true;
+                    TickClock.field_d.field_lb = true;
                     SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
                   DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
@@ -472,12 +472,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               }
               if (TrinketCatalog.field_b &&
                 ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
-                mc.field_d.field_lb = false;
+                TickClock.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
-                mc.field_d.field_lb = true;
+                TickClock.field_d.field_lb = true;
                 SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
               }
             } else {
@@ -495,12 +495,12 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 }
                 if (TrinketCatalog.field_b &&
                   ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
-                  mc.field_d.field_lb = false;
+                  TickClock.field_d.field_lb = false;
                   LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                   hl.a(true, LineupView.field_u.field_Ab);
                 } else {
                   LineupView.field_u.field_zb.field_E = null;
-                  mc.field_d.field_lb = true;
+                  TickClock.field_d.field_lb = true;
                   SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                 }
               } else {
@@ -509,16 +509,16 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 }
                 if (!TrinketCatalog.field_b) {
                   LineupView.field_u.field_zb.field_E = null;
-                  mc.field_d.field_lb = true;
+                  TickClock.field_d.field_lb = true;
                   SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                 } else {
                   if (ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
-                    mc.field_d.field_lb = false;
+                    TickClock.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
-                    mc.field_d.field_lb = true;
+                    TickClock.field_d.field_lb = true;
                     SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
                 }

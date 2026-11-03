@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cp implements Runnable {
+final class AudioService implements Runnable {
     static r field_h;
     static String field_a;
     static UiLayoutNode field_g;
@@ -90,7 +90,7 @@ final class cp implements Runnable {
         if (param0 != 21) {
           return 53;
         }
-        int var4 = lw.field_c[param1];
+        int var4 = ProxyAuthenticationRequiredException.field_c[param1];
         if (param2 == param3 &&
           param1 == 3) {
           var4 = 522;
@@ -113,7 +113,7 @@ final class cp implements Runnable {
         return 0;
     }
 
-    cp() {
+    AudioService() {
         this.field_b = new PcmPlayerService[2];
         this.field_e = false;
         this.field_c = false;

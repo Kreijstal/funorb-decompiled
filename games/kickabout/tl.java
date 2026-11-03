@@ -67,10 +67,10 @@ final class tl {
           }
           if (var2 == 0) {
             var3 = var28.a((byte) 81);
-            var4 = (ni) (lw.field_g.g(24009));
+            var4 = (ni) (ProxyAuthenticationRequiredException.field_g.g(24009));
             while (var4 != null) {
               if (var3 != var4.field_o) {
-                var4 = (ni) (lw.field_g.c(33));
+                var4 = (ni) (ProxyAuthenticationRequiredException.field_g.c(33));
                 continue;
               }
               break;

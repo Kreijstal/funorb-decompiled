@@ -46,7 +46,7 @@ final class ChatMessage {
             return 2;
           }
           if (param0 == 80) {
-            if (this.field_d == dd.field_c) {
+            if (this.field_d == AnimationPlayer.field_c) {
               return 1;
             }
             if (ts.field_d != 2) {
@@ -59,7 +59,7 @@ final class ChatMessage {
           }
           this.field_l = (String) null;
         }
-        if (this.field_d == dd.field_c) {
+        if (this.field_d == AnimationPlayer.field_c) {
           return 1;
         }
         if (ts.field_d != 2) {

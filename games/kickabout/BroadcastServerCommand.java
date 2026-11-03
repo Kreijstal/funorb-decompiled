@@ -60,7 +60,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             return stackIn_10_0;
           }
           if (IntKeyLookup.a(param2, -64)) {
-            stackIn_13_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameAppletShell.field_m, new String[]{param2});
+            stackIn_13_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameAppletShell.field_m, new String[]{param2});
             return stackIn_13_0;
           }
           if (param1 <= ListingRow.field_d &&
@@ -73,7 +73,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             return stackIn_20_0;
           }
           if (DiskCacheRequest.a(0, param2)) {
-            stackIn_24_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketTile.field_Gb, new String[]{param2});
+            stackIn_24_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketTile.field_Gb, new String[]{param2});
             return stackIn_24_0;
           }
           var5 = or.field_d;

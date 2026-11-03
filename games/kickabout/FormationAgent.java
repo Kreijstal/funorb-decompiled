@@ -163,7 +163,7 @@ final class FormationAgent extends MatchAgent {
           if (vj.field_c == 11) {
             TrinketIcon.a(-127);
           }
-          IntDoubleCommand.a(InstrumentNoteMask.field_j, ts.field_b, m.field_h, (byte) 84);
+          IntDoubleCommand.a(InstrumentNoteMask.field_j, ts.field_b, WhirlpoolHasher.field_h, (byte) 84);
           su.a(param1 ^ -23390, 0, 0, param0);
           if (param1 != -14142) {
             var3 = (String) null;

@@ -73,9 +73,9 @@ final class ColourSwatchTile extends UiLayoutNode {
         SoftwareRasterizer.fillRect(2 + var5, var6 + 2, -4 + var7, -4 + var7, this.field_Cb);
         if (var2 != 0) {
           if (!this.field_gb) {
-            wt.field_z[0].d(var5 + 2, var6 + 2, -4 + var7, var7 - 4, 140);
-            wt.field_z[1].d(var5 + 2, var6 + 2, -4 + var7, -4 + var7, 128);
-            wt.field_z[3].e(2 + var5, var6 + 2, -4 + var7, -4 + var7, 256);
+            ArrayWidgetContainer.field_z[0].d(var5 + 2, var6 + 2, -4 + var7, var7 - 4, 140);
+            ArrayWidgetContainer.field_z[1].d(var5 + 2, var6 + 2, -4 + var7, -4 + var7, 128);
+            ArrayWidgetContainer.field_z[3].e(2 + var5, var6 + 2, -4 + var7, -4 + var7, 256);
           }
           su.field_a.c((-su.field_a.field_o + var7 >> 1) + var5, (var7 - su.field_a.field_v >> 1) + var6);
           SoftwareRasterizer.c(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
@@ -89,9 +89,9 @@ final class ColourSwatchTile extends UiLayoutNode {
           SoftwareRasterizer.f(2 + var5, 2 + var6, var7 - 5, 0, 90);
           return;
         }
-        wt.field_z[0].b(var5 + 2, var6 + 2, 140);
-        wt.field_z[1].b(var5 + 2, var6 + 2, 128);
-        wt.field_z[3].drawAdditive(2 + var5, 2 + var6, 128);
+        ArrayWidgetContainer.field_z[0].b(var5 + 2, var6 + 2, 140);
+        ArrayWidgetContainer.field_z[1].b(var5 + 2, var6 + 2, 128);
+        ArrayWidgetContainer.field_z[3].drawAdditive(2 + var5, 2 + var6, 128);
         SoftwareRasterizer.c(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
         SoftwareRasterizer.f(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);
         SoftwareRasterizer.f(2 + var5, 2 + var6, var7 - 5, 0, 90);

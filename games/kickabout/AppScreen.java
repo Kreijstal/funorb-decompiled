@@ -208,7 +208,7 @@ abstract class AppScreen {
                   WriteIntegersCommand.field_C = true;
                 }
                 stackIn_62_0 = ((16 & var7) != 0);
-                ib.field_E = stackIn_62_0;
+                DateOfBirthPanel.field_E = stackIn_62_0;
                 if (it.field_n) {
                   un.field_e.readUnsignedByte((byte) -118);
                   vp.field_h = un.field_e.readUnsignedByte((byte) -124);
@@ -221,7 +221,7 @@ abstract class AppScreen {
                 }
               } else {
                 stackIn_43_0 = ((16 & var7) != 0);
-                ib.field_E = stackIn_43_0;
+                DateOfBirthPanel.field_E = stackIn_43_0;
                 if (it.field_n) {
                   un.field_e.readUnsignedByte((byte) -118);
                   vp.field_h = un.field_e.readUnsignedByte((byte) -124);

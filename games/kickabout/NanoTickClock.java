@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vi extends mc {
+final class NanoTickClock extends TickClock {
     private int field_m;
     private long field_u;
     private long[] field_w;
@@ -16,7 +16,7 @@ final class vi extends mc {
 
     final static boolean c(int param0) {
         if (param0 != 2915) {
-          vi.c((byte) 16);
+          NanoTickClock.c((byte) 16);
         }
         return IntrusiveDeque.field_f;
     }
@@ -124,7 +124,7 @@ final class vi extends mc {
         var9 = Kickabout.field_G;
         try {
           if (param1 < 123) {
-            vi.c((byte) 59);
+            NanoTickClock.c((byte) 59);
           }
           if (param2 == null) {
             return false;
@@ -274,7 +274,7 @@ final class vi extends mc {
         return var5;
     }
 
-    vi() {
+    NanoTickClock() {
         this.field_u = 0L;
         this.field_m = 0;
         this.field_r = 1;

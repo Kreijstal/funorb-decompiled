@@ -123,7 +123,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         }
         ChatLine.field_f = stackIn_29_0;
         AuctionTableWidget.field_Hb.b(0, param1);
-        AuctionTableWidget.field_Hb.a(32 * id.field_v, false, (byte) -111, 32);
+        AuctionTableWidget.field_Hb.a(32 * StatefulTextPainter.field_v, false, (byte) -111, 32);
         if (var6 == 0) {
           var7 = ReceivedAuctionItem.a(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
           LineupView.field_y.evictExpired(30 + var7, -20 + var7, -108);
@@ -142,7 +142,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         while (var7 < WelcomeDialog.field_H.length) {
           stackIn_42_0 = WelcomeDialog.field_H[var7].field_gb;
           if (stackIn_42_0) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, GrowableIntList.field_f, new String[]{ConsoleTokenCursor.field_h[var7]}));
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GrowableIntList.field_f, new String[]{ConsoleTokenCursor.field_h[var7]}));
           }
           var7++;
         }

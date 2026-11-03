@@ -99,7 +99,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             var11 = var8 + var10 * 16 + 5;
             ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
             var11 += 10;
-            var12 = lw.field_a[var5];
+            var12 = ProxyAuthenticationRequiredException.field_a[var5];
             if (th.field_a[var5]) {
               var12 = field_A;
             }
@@ -127,7 +127,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var11Lifetime2 = var8 + var10Lifetime2 * 16 + 5;
           ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
           var11Lifetime2 += 10;
-          var12Lifetime2 = lw.field_a[var5];
+          var12Lifetime2 = ProxyAuthenticationRequiredException.field_a[var5];
           if (th.field_a[var5]) {
             var12Lifetime2 = field_A;
           }
@@ -156,7 +156,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         if (var6 == 0) {
           ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
           var11Lifetime1 += 10;
-          var12Lifetime1 = lw.field_a[var5];
+          var12Lifetime1 = ProxyAuthenticationRequiredException.field_a[var5];
           if (th.field_a[var5]) {
             var12Lifetime1 = field_A;
           }
@@ -171,7 +171,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
           }
         } else {
-          var12Lifetime1 = lw.field_a[var5];
+          var12Lifetime1 = ProxyAuthenticationRequiredException.field_a[var5];
           if (th.field_a[var5] &&
             var6 == 0) {
             var12Lifetime1 = field_A;
@@ -348,7 +348,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           }
           WelcomeDialog.field_I = WelcomeDialog.field_I + 1;
         }
-        var4 = id.field_v;
+        var4 = StatefulTextPainter.field_v;
         if (~var4 != param0) {
           if (!ContextMenuItem.field_Ib.field_gb) {
             if (var3 == 0) {

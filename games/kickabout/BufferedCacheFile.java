@@ -31,7 +31,7 @@ final class BufferedCacheFile {
     final static void a(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = lw.field_e;
+        var1 = ProxyAuthenticationRequiredException.field_e;
         synchronized (var1) {
           FootballerAgent.field_p = RandomAccessCacheFile.field_d;
           TextHotspotWidget.field_M = TextHotspotWidget.field_M + 1;

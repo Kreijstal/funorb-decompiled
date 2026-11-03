@@ -872,7 +872,7 @@ final class ResourceArchive {
                 if (this.field_c != 0) {
                   var7[var18] = var40[var17];
                 } else {
-                  var7[var18] = AuctionLogEntry.a(var40[var17], false, ek.b(param3, 138));
+                  var7[var18] = AuctionLogEntry.a(var40[var17], false, TrinketShopDialog.b(param3, 138));
                 }
               }
             }

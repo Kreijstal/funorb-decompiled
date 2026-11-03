@@ -154,8 +154,8 @@ final class LobbyPlayerRow extends UiLayoutNode {
         var9 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
-            IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].isActive(3511)) {
-            var10 = (RenderedFootballer) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, ek.field_G));
+            IntrusiveDequeCursor.field_b.participantStatus[TrinketShopDialog.field_G].isActive(3511)) {
+            var10 = (RenderedFootballer) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, TrinketShopDialog.field_G));
             var2 = ug.a(param0, var10.field_kb >> 16);
             var3 = IntKeyLookup.a((byte) -119, var10.field_bb >> 16);
             if (!TextHotspotWidget.a(var2, var3, param0 ^ 480)) {
@@ -167,7 +167,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
               var6 = var4[var5];
               var7 = -1;
               for (var8 = 0; IntrusiveDequeCursor.field_b.playerCount > var8; var8++) {
-                if (IntrusiveDequeCursor.field_b.field_g[ek.field_G].field_p == IntrusiveDequeCursor.field_b.field_g[var8].field_p &&
+                if (IntrusiveDequeCursor.field_b.field_g[TrinketShopDialog.field_G].field_p == IntrusiveDequeCursor.field_b.field_g[var8].field_p &&
                   var6.field_h == IntrusiveDequeCursor.field_b.participantStatus[var8].controlledSlot) {
                   var7 = var8;
                 }
@@ -209,7 +209,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         if (param2 != 240) {
           field_Ub = (String) null;
         }
-        return wt.a(param3, TextInputWidget.field_O[param4], DualLinkHashTable.field_e ? !param1 ? true : false : param1, param4, param0, -121);
+        return ArrayWidgetContainer.a(param3, TextInputWidget.field_O[param4], DualLinkHashTable.field_e ? !param1 ? true : false : param1, param4, param0, -121);
     }
 
     final static void a(PcmSampleStream param0, boolean param1) {

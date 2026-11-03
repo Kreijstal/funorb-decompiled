@@ -45,7 +45,7 @@ final class ig {
         var5 = Kickabout.field_G;
         try {
           param0 = param0 >> 1;
-          vo.field_cb.c(param0 + TextLayoutLine.field_e, ArchiveNetworkClient.field_i);
+          LoginDialog.field_cb.c(param0 + TextLayoutLine.field_e, ArchiveNetworkClient.field_i);
           AccountChoicePanel.field_C.c(param0 + TextLayoutLine.field_e, 18 + ArchiveNetworkClient.field_i);
           var2_int = 2;
           if (CachedArchiveSource.field_s > 1) {
@@ -63,7 +63,7 @@ final class ig {
           var4 = 0;
           if (0 != dc.field_d) {
             var3Lifetime2 = 0;
-            AuctionListing.a(param0 + (TextLayoutLine.field_e + vo.field_cb.field_q), -22914, TextLayoutLine.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-vo.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
+            AuctionListing.a(param0 + (TextLayoutLine.field_e + LoginDialog.field_cb.field_q), -22914, TextLayoutLine.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-LoginDialog.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
             var4Lifetime1 = RankingRowNode.field_Db;
             while (var4Lifetime1 > 0) {
               field_a[var4Lifetime1 % 10].c(TextLayoutLine.field_e + 140 + (-(var3Lifetime2 * field_a[0].field_q) + param0), 9 + (ArchiveNetworkClient.field_i - 2 * (-CachedArchiveSource.field_s + 18)));
@@ -76,7 +76,7 @@ final class ig {
               if (dc.field_d < 0) {
                 wk.field_d[var4Lifetime1Lifetime1 % 10].c(param0 - wk.field_d[0].field_q * var3Lifetime2Lifetime1 + (140 + TextLayoutLine.field_e), -36 - (-(2 * CachedArchiveSource.field_s) - (24 + ArchiveNetworkClient.field_i)));
               } else {
-                gb.field_G[var4Lifetime1Lifetime1 % 10].c(param0 + TextLayoutLine.field_e + (140 - gb.field_G[0].field_q * var3Lifetime2Lifetime1), 24 + ArchiveNetworkClient.field_i - (18 - CachedArchiveSource.field_s) * 2);
+                ValidationIndicator.field_G[var4Lifetime1Lifetime1 % 10].c(param0 + TextLayoutLine.field_e + (140 - ValidationIndicator.field_G[0].field_q * var3Lifetime2Lifetime1), 24 + ArchiveNetworkClient.field_i - (18 - CachedArchiveSource.field_s) * 2);
               }
               var4Lifetime1Lifetime1 = var4Lifetime1Lifetime1 / 10;
               var3Lifetime2Lifetime1++;

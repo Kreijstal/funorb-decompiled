@@ -577,18 +577,18 @@ final class DebugConsole extends ConsolePanel {
           if (param1.field_Cb && (param1.field_Mb == 2 ||
             !(2 > ScrollContainer.field_Ib))) {
             var7 = TextButton.field_v;
-            var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, SelectableTrinketIcon.field_Ab, new String[]{param3});
+            var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SelectableTrinketIcon.field_Ab, new String[]{param3});
             var7.field_j.addItem(0, 10, var8);
           }
           TextButton.field_v.d(param0 - 14);
           if (param2) {
             if (TextButton.field_v.field_c != DelayedServerPacket.field_h) {
               var11 = TextButton.field_v;
-              var12 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, br.field_a, new String[]{param3});
+              var12 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, br.field_a, new String[]{param3});
               var11.field_j.addItem(param0 - 15, 15, var12);
             } else {
               var9 = TextButton.field_v;
-              var10 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, cl.field_h, new String[]{param3});
+              var10 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, cl.field_h, new String[]{param3});
               var9.field_j.addItem(0, 16, var10);
             }
           }
@@ -661,7 +661,7 @@ final class DebugConsole extends ConsolePanel {
         try {
           var16 = new IndexedSprite[6];
           var6 = var16;
-          if (!vi.field_n) {
+          if (!NanoTickClock.field_n) {
             var7_ref_kg = AlphaContainer.a(param2, -87, new IntrusiveDeque(), 0);
             for (var8 = 0; var16.length > var8; var8++) {
               var16[var8] = var7_ref_kg;

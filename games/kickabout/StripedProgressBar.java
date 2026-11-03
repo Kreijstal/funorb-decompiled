@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ou extends UiWidget {
+final class StripedProgressBar extends UiWidget {
     private Sprite field_I;
     private Sprite field_D;
     static int field_y;
@@ -69,7 +69,7 @@ final class ou extends UiWidget {
           sm.field_l = new int[var3][];
           ba.field_n = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
-            ba.field_n[var4] = vi.a((byte) 80, var8);
+            ba.field_n[var4] = NanoTickClock.a((byte) 80, var8);
           }
           var10.l((byte) -63);
           if (param0 != 49) {
@@ -158,7 +158,7 @@ final class ou extends UiWidget {
 
     final static void a(int param0) {
         if (param0 != 0) {
-          ou.a(-7);
+          StripedProgressBar.a(-7);
         }
         wq.field_g = false;
         AuctionBidDialog.field_G = false;
@@ -172,7 +172,7 @@ final class ou extends UiWidget {
         this.field_F = 8355711 & param2 >> 1;
         if (param0 != 21) {
           ResourceArchive var5 = (ResourceArchive) null;
-          ou.a((byte) -30, (ResourceArchive) null);
+          StripedProgressBar.a((byte) -30, (ResourceArchive) null);
         }
         this.field_E = param2;
         this.field_x = (16711422 & param1) >> 1;
@@ -221,7 +221,7 @@ final class ou extends UiWidget {
         return var14;
     }
 
-    ou(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    StripedProgressBar(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, param6 >> 1 & 8355711);
     }
 
@@ -233,7 +233,7 @@ final class ou extends UiWidget {
           return -param0 + (param1 + param2);
         }
         if (param3 < 126) {
-          ou.b(80, 123, -76, -16);
+          StripedProgressBar.b(80, 123, -76, -16);
         }
         return -param0 + SoftwareRasterizer.field_g;
     }
@@ -263,7 +263,7 @@ final class ou extends UiWidget {
         RuntimeException var5 = null;
         try {
           if (param0 != 12) {
-            ou.a(27);
+            StripedProgressBar.a(27);
           }
           if (this.field_w) {
             this.field_H = this.field_H + 1;
@@ -304,7 +304,7 @@ final class ou extends UiWidget {
         return PromotionDialog.g(100);
     }
 
-    private ou(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private StripedProgressBar(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.field_G = param4;
         this.field_x = param8;
         this.field_A = param6;

@@ -79,8 +79,8 @@ final class kh {
         }
     }
 
-    final static void a(int param0, dd param1, int param2, boolean param3, int param4) {
-        dd stackIn_2_0;
+    final static void a(int param0, AnimationPlayer param1, int param2, boolean param3, int param4) {
+        AnimationPlayer stackIn_2_0;
         ModelMesh stackIn_2_1;
         boolean stackIn_2_2;
         boolean stackIn_2_3;
@@ -93,12 +93,12 @@ final class kh {
         int var6 = 0;
         ModelMesh var7 = null;
         try {
-          stackIn_2_0 = (dd) (param1);
+          stackIn_2_0 = (AnimationPlayer) (param1);
           stackIn_2_1 = WriteIntegersCommand.field_B[param0];
           stackIn_2_2 = param3;
           stackIn_2_3 = true;
           stackIn_3_4 = !(param3);
-          var7 = (ModelMesh) (((dd) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
+          var7 = (ModelMesh) (((AnimationPlayer) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
           PacketBuffer.a(102, BuyPitchDialog.field_F);
           SoftwareRasterizer.b();
           TriangleRasterizer.useRasterClip();

@@ -138,10 +138,10 @@ final class tc extends DualLinkNode {
               CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             }
           }
-          if (wt.field_x > TextLayoutLine.field_e &&
-            vo.field_cb.field_q + TextLayoutLine.field_e > wt.field_x &&
+          if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
+            LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
             ArchiveNetworkClient.field_i < us.field_j &&
-            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
             ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
           }
           return;
@@ -168,10 +168,10 @@ final class tc extends DualLinkNode {
                 CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
               }
             }
-            if (wt.field_x > TextLayoutLine.field_e &&
-              vo.field_cb.field_q + TextLayoutLine.field_e > wt.field_x &&
+            if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
+              LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
-              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
@@ -195,10 +195,10 @@ final class tc extends DualLinkNode {
               CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             }
           }
-          if (wt.field_x > TextLayoutLine.field_e &&
-            vo.field_cb.field_q + TextLayoutLine.field_e > wt.field_x &&
+          if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
+            LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
             ArchiveNetworkClient.field_i < us.field_j &&
-            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
             ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
             return;
           }
@@ -208,10 +208,10 @@ final class tc extends DualLinkNode {
         if (dc.field_d == 0) {
           if (CachedArchiveSource.field_s > 1) {
             CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
-            if (wt.field_x > TextLayoutLine.field_e &&
-              vo.field_cb.field_q + TextLayoutLine.field_e > wt.field_x &&
+            if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
+              LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
-              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
@@ -219,23 +219,23 @@ final class tc extends DualLinkNode {
         } else {
           if (CachedArchiveSource.field_s < 18) {
             CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
-            if (wt.field_x > TextLayoutLine.field_e &&
-              vo.field_cb.field_q + TextLayoutLine.field_e > wt.field_x &&
+            if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
+              LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
-              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
           }
         }
-        if (wt.field_x <= TextLayoutLine.field_e) {
+        if (ArrayWidgetContainer.field_x <= TextLayoutLine.field_e) {
           return;
         }
-        if (vo.field_cb.field_q + TextLayoutLine.field_e <= wt.field_x) {
+        if (LoginDialog.field_cb.field_q + TextLayoutLine.field_e <= ArrayWidgetContainer.field_x) {
           return;
         }
         if (ArchiveNetworkClient.field_i < us.field_j &&
-          AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+          AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
           ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
           return;
         }
