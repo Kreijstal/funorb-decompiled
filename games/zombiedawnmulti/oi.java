@@ -23,7 +23,7 @@ final class oi {
         try {
           ResizableDialog.j(-1);
           nb.field_a.h(-92);
-          b.field_c = new qm(ReportAbuseDialog.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
+          b.field_c = new LoginForm(ReportAbuseDialog.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
           wj.field_i = new ub(nb.field_a, b.field_c);
           int var4_int = 120 / ((64 - param2) / 61);
           nb.field_a.showDialog(3016, wj.field_i);
@@ -61,7 +61,7 @@ final class oi {
         try {
           ResizableDialog.j(-1);
           nb.field_a.h(-92);
-          b.field_c = new qm(ReportAbuseDialog.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
+          b.field_c = new LoginForm(ReportAbuseDialog.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
           wj.field_i = new ub(nb.field_a, b.field_c);
           int var4_int = 120 / ((64 - param2) / 61);
           nb.field_a.showDialog(3016, wj.field_i);

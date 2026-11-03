@@ -105,7 +105,7 @@ final class ih {
         }
     }
 
-    final static void a(byte param0, ab param1, int param2) {
+    final static void a(byte param0, MusicPatchNode param1, int param2) {
         CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {

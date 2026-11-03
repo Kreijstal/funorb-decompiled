@@ -102,7 +102,7 @@ final class InflaterDecompressor {
               i.field_a.f(31);
             }
             if (null != rn.field_d) {
-              rn.field_d.a((byte) 77);
+              rn.field_d.shutdown((byte) 77);
             }
             if (param0 != -8) {
               field_g = (String) null;

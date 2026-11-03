@@ -51,15 +51,15 @@ final class pi {
         int var6 = 0;
         String var7 = null;
         try {
-          mj.field_Fb[0] = TertiaryLinkDeque.field_c.nextInt();
-          mj.field_Fb[1] = TertiaryLinkDeque.field_c.nextInt();
-          mj.field_Fb[2] = (int)(Camera.field_c >> 32);
-          mj.field_Fb[3] = (int)Camera.field_c;
+          VerticalScrollbar.field_Fb[0] = TertiaryLinkDeque.field_c.nextInt();
+          VerticalScrollbar.field_Fb[1] = TertiaryLinkDeque.field_c.nextInt();
+          VerticalScrollbar.field_Fb[2] = (int)(Camera.field_c >> 32);
+          VerticalScrollbar.field_Fb[3] = (int)Camera.field_c;
           TextInputWidget.field_R.position = 0;
-          TextInputWidget.field_R.writeInt(33, mj.field_Fb[0]);
-          TextInputWidget.field_R.writeInt(param0 ^ 84, mj.field_Fb[1]);
-          TextInputWidget.field_R.writeInt(-111, mj.field_Fb[2]);
-          TextInputWidget.field_R.writeInt(param0 ^ 88, mj.field_Fb[3]);
+          TextInputWidget.field_R.writeInt(33, VerticalScrollbar.field_Fb[0]);
+          TextInputWidget.field_R.writeInt(param0 ^ 84, VerticalScrollbar.field_Fb[1]);
+          TextInputWidget.field_R.writeInt(-111, VerticalScrollbar.field_Fb[2]);
+          TextInputWidget.field_R.writeInt(param0 ^ 88, VerticalScrollbar.field_Fb[3]);
           jq.a(TextInputWidget.field_R, 13746);
           TextInputWidget.field_R.writeShort(param4, (byte) -54);
           if (param0 != -59) {

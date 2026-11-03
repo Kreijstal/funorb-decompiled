@@ -12,7 +12,7 @@ final class cn extends ng {
     static ao field_j;
     private SectorCacheStore field_t;
     private qc field_l;
-    private ai field_z;
+    private DiskCacheWorker field_z;
     private int field_B;
     static String field_u;
     private int field_w;
@@ -198,7 +198,7 @@ final class cn extends ng {
             return null;
           }
           if (this.field_t != null) {
-            this.field_z.a(this.field_B, this.field_t, var7, 100);
+            this.field_z.queueWrite(this.field_B, this.field_t, var7, 100);
           }
         }
         this.field_l = null;
@@ -463,7 +463,7 @@ final class cn extends ng {
           } else {
             if (this.field_x != null &&
               this.field_A[param2] != -1) {
-              var4 = this.field_z.a(param2, this.field_x, -3);
+              var4 = this.field_z.readNow(param2, this.field_x, -3);
             } else {
               if (this.field_h.e(param1 + 116)) {
                 return null;
@@ -575,7 +575,7 @@ final class cn extends ng {
         var5[-2 + var18.length] = (byte)(this.field_s.field_p[param2] >>> 8);
         var5[-1 + var18.length] = (byte)this.field_s.field_p[param2];
         if (null != this.field_x) {
-          this.field_z.a(param2, this.field_x, var18, param1 + 108);
+          this.field_z.queueWrite(param2, this.field_x, var18, param1 + 108);
           if (1 != this.field_A[param2]) {
             this.field_A[param2] = (byte) 1;
           }
@@ -742,7 +742,7 @@ final class cn extends ng {
         field_u = null;
     }
 
-    cn(int param0, SectorCacheStore param1, SectorCacheStore param2, qb param3, ai param4, int param5, byte[] param6, int param7, boolean param8) {
+    cn(int param0, SectorCacheStore param1, SectorCacheStore param2, qb param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -779,7 +779,7 @@ final class cn extends ng {
           this.field_o = param5;
           this.field_k = param6;
           if (null != this.field_t) {
-            this.field_l = (qc) ((Object) this.field_z.a(this.field_B, this.field_t, -3));
+            this.field_l = (qc) ((Object) this.field_z.readNow(this.field_B, this.field_t, -3));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

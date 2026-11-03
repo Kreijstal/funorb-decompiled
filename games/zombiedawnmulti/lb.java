@@ -105,7 +105,7 @@ final class lb {
           PortalView.field_L.dismissDialog(-7435);
         }
         String var1 = ob.e(-24093);
-        b.field_c = new qm(var1, (String) null, true, false, false);
+        b.field_c = new LoginForm(var1, (String) null, true, false, false);
         nb.field_a.showDialog(3016, wj.field_i);
         wj.field_i.a((UiWidget) (b.field_c), (byte) -123);
         if (param0 == 9047) {

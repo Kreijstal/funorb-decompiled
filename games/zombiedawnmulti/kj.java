@@ -109,7 +109,7 @@ final class kj extends IntrusiveNode {
           } else {
             stackIn_3_8 = 0;
           }
-          ve.a(stackIn_2_0, stackIn_2_1, stackIn_2_2, (tq) (stackIn_2_3), stackIn_2_4, stackIn_2_5, stackIn_2_6, (int[]) (stackIn_2_7), stackIn_3_8);
+          ve.a(stackIn_2_0, stackIn_2_1, stackIn_2_2, (ScrollPane) (stackIn_2_3), stackIn_2_4, stackIn_2_5, stackIn_2_6, (int[]) (stackIn_2_7), stackIn_3_8);
           if (param1.field_l == 0 &&
             !um.b(-127) &&
             JaggrabDownloader.field_c == null &&

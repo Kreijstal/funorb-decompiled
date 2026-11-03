@@ -323,11 +323,11 @@ final class TertiaryLinkDeque {
 
     final static void a(boolean param0, byte param1, float param2, String param3) {
         try {
-          if (null == pj.field_I) {
-            pj.field_I = new ta(nb.field_a, TextInputWidget.field_P);
-            nb.field_a.showDialog(3016, pj.field_I);
+          if (null == Under13NoticePanel.field_I) {
+            Under13NoticePanel.field_I = new ProgressDialog(nb.field_a, TextInputWidget.field_P);
+            nb.field_a.showDialog(3016, Under13NoticePanel.field_I);
           }
-          pj.field_I.a(param3, param2, 66, param0);
+          Under13NoticePanel.field_I.updateProgress(param3, param2, 66, param0);
           SoftwareRasterizer.clear();
           int var4_int = 30 % ((param1 + 45) / 37);
           wj.b(true, -114);

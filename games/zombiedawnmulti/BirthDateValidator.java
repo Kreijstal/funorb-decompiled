@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BirthDateValidator extends DebouncedValidationProvider implements TextInputListener, qg {
-    wk field_n;
+final class BirthDateValidator extends DebouncedValidationProvider implements TextInputListener, BirthDateValidationMarker {
+    DateInputWidget field_n;
     static ak field_k;
     static IndexedSprite field_p;
     static int field_m;
@@ -15,7 +15,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
     public final void onTextInputSubmitted(TextInputWidget param0, boolean param1) {
         try {
           if (!param1) {
-            this.field_n = (wk) null;
+            this.field_n = (DateInputWidget) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dj.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

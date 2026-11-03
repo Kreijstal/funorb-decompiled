@@ -95,7 +95,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    void a(int param0) {
+    void refreshChildLayout(int param0) {
         if (param0 != -18384) {
           this.field_B = (UiWidget) null;
         }
@@ -124,7 +124,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         return null != this.field_B ? this.field_B.f((byte) 44) : 0;
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
+    void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -132,7 +132,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         RuntimeException var7 = null;
         try {
           if (null != this.field_B) {
-            this.field_B.a(param0, param1, this.field_i + param2, param3, true, this.field_y + param5);
+            this.field_B.handlePointerRelease(param0, param1, this.field_i + param2, param3, true, this.field_y + param5);
           }
           if (!param4) {
             field_C = (IndexedSprite) null;
@@ -253,7 +253,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
 
     final void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setWidgetBounds(param0, param1, param2, param3, param4);
-        this.a(param2 ^ -14052);
+        this.refreshChildLayout(param2 ^ -14052);
     }
 
     final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
@@ -383,7 +383,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           lh.field_g.field_e = 0;
           lh.field_g.field_c = 5;
           lh.field_g.field_l = 6;
-          lh.field_g.field_h = cp.field_H;
+          lh.field_g.field_h = DisplayNamePanel.field_H;
           lh.field_g.field_b = 7697781;
           lh.field_g.field_m = 4;
         }

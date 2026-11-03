@@ -7,14 +7,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     static Sprite[] field_Ab;
     private boolean field_ub;
     private boolean field_yb;
-    private le field_Bb;
+    private ProgressBarWidget field_Bb;
     private BitmapFont field_zb;
     static String field_vb;
     static int field_tb;
 
     final void installErrorContent(String param0, int param1, int param2) {
         boolean stackIn_6_1 = false;
-        wd stackIn_11_0 = null;
+        MessageDialogContent stackIn_11_0 = null;
         String stackIn_12_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -23,7 +23,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        wd var7 = null;
+        MessageDialogContent var7 = null;
         int var5Lifetime1;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -34,10 +34,10 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           this.field_yb = stackIn_6_1;
           this.field_ub = true;
           this.field_Bb.a(4210752, 8405024, (byte) -31);
-          var7 = new wd(this, this.field_zb, param0);
+          var7 = new MessageDialogContent(this, this.field_zb, param0);
           if (5 != param2) {
             if (param2 == 256) {
-              var7.a(ci.field_g, -76, (WidgetListener) (this));
+              var7.addButton(ci.field_g, -76, (WidgetListener) (this));
             } else {
               stackIn_11_0 = var7;
               if (!this.field_wb) {
@@ -45,15 +45,15 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               } else {
                 stackIn_12_1 = ci.field_g;
               }
-              ((wd) (Object) stackIn_11_0).a(stackIn_12_1, -1, true);
+              ((MessageDialogContent) (Object) stackIn_11_0).addActionButton(stackIn_12_1, -1, true);
             }
           } else {
-            var7.a(lc.field_g, 11, true);
-            var7.a(oe.field_b, 17, true);
+            var7.addActionButton(lc.field_g, 11, true);
+            var7.addActionButton(oe.field_b, 17, true);
           }
           if (3 != param2) {
             if (param2 == 4) {
-              var7.a(bc.field_c, 8, true);
+              var7.addActionButton(bc.field_c, 8, true);
             } else {
               if (6 != param2) {
                 if (param2 != 9) {
@@ -61,13 +61,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                   var5 = -3 % ((-15 - param1) / 46);
                   return;
                 }
-                var7.a(RasterSnapshot.field_l, -74, (WidgetListener) (this));
+                var7.addButton(RasterSnapshot.field_l, -74, (WidgetListener) (this));
               } else {
-                var7.a(wm.field_S, 9, true);
+                var7.addActionButton(wm.field_S, 9, true);
               }
             }
           } else {
-            var7.a(SimArmedHuman.field_zb, 7, true);
+            var7.addActionButton(SimArmedHuman.field_zb, 7, true);
           }
           this.a((UiWidget) (var7), (byte) 119);
           var5Lifetime1 = -3 % ((-15 - param1) / 46);
@@ -129,9 +129,9 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
 
     final void c(boolean param0) {
         this.field_Bb.a(4210752, 2121792, (byte) 116);
-        wd var2 = new wd(this, this.field_zb, DualLinkDeque.field_c);
+        MessageDialogContent var2 = new MessageDialogContent(this, this.field_zb, DualLinkDeque.field_c);
         if (!param0) {
-          var2.a(og.field_T, 15, true);
+          var2.addActionButton(og.field_T, 15, true);
           this.a((UiWidget) (var2), (byte) -18);
           return;
         }
@@ -170,14 +170,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     }
 
     MessageDialog(DialogLayer param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new wd((MessageDialog) null, param1, param2), 77, 10, 10);
+        super(param0, new MessageDialogContent((MessageDialog) null, param1, param2), 77, 10, 10);
         try {
           this.field_yb = false;
           this.field_wb = param3 ? true : false;
           this.field_ub = false;
           this.field_xb = param4 ? true : false;
           this.field_zb = param1;
-          this.field_Bb = new le(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_Bb = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Bb.field_L = true;
           this.b((byte) 104, this.field_Bb);
         } catch (RuntimeException runtimeException) {

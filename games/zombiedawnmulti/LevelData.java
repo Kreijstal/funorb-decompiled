@@ -124,12 +124,12 @@ class LevelData {
         if (param0 != -8927) {
           this.field_h = (int[][]) null;
         }
-        this.field_k[param1][param2] = cr.b(param3 ? 1 : 0, tq.b(14, this.field_k[param1][param2]));
+        this.field_k[param1][param2] = cr.b(param3 ? 1 : 0, ScrollPane.b(14, this.field_k[param1][param2]));
         if (this.field_k[param1].length > param2 + 1) {
-          this.field_k[param1][param2 + 1] = cr.b(tq.b(this.field_k[param1][1 + param2], -3), param3 ? 2 : 0);
+          this.field_k[param1][param2 + 1] = cr.b(ScrollPane.b(this.field_k[param1][1 + param2], -3), param3 ? 2 : 0);
         }
         if (0 < param2 - 1) {
-          this.field_k[param1][-1 + param2] = cr.b(tq.b(this.field_k[param1][-1 + param2], -5), param3 ? 4 : 0);
+          this.field_k[param1][-1 + param2] = cr.b(ScrollPane.b(this.field_k[param1][-1 + param2], -5), param3 ? 4 : 0);
         }
     }
 

@@ -85,10 +85,10 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             ih.a(var4, 1, param1);
             var4 = (n) (SpriteState.field_s.b(6));
           }
-          var2 = dc.field_Gb.c(84);
+          var2 = TabbedPane.field_Gb.c(84);
           while (var2 != null) {
             mi.b(1, param1);
-            var2 = dc.field_Gb.b(6);
+            var2 = TabbedPane.field_Gb.b(6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -311,7 +311,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         RuntimeException var6 = null;
         uk var7 = null;
         int var8 = 0;
-        el var9 = null;
+        LabeledChildWidget var9 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -320,7 +320,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new el(20, param4, 120 + param2, 25, param0, false, 120, 3, ke.field_h, 16777215, param3);
+          var9 = new LabeledChildWidget(20, param4, 120 + param2, 25, param0, false, 120, 3, ke.field_h, 16777215, param3);
           this.b((byte) 45, var9);
           var7 = new uk(((ValidationProviderSource) ((Object) param0)).getValidationProvider((byte) -109));
           this.b((byte) 57, var7);
@@ -393,7 +393,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     private final int a(int param0, boolean param1, UiWidget param2, String param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         km var9 = null;
-        el var10 = null;
+        LabeledChildWidget var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -404,7 +404,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new el(20, param5, 120 + param6, 25, param2, false, 120, 3, ke.field_h, 16777215, param3);
+          var10 = new LabeledChildWidget(20, param5, 120 + param6, 25, param2, false, 120, 3, ke.field_h, 16777215, param3);
           if (!param1) {
             this.field_J = (UsernameSuggestionsPanel) null;
           }
@@ -441,7 +441,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     }
 
     private final int a(int param0, UiWidget param1, int param2, int param3, String param4) {
-        el var6 = null;
+        LabeledChildWidget var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -452,7 +452,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new el(20, param2, param0 + 120, 25, param1, false, 120, 3, ke.field_h, 16777215, param4);
+          var6 = new LabeledChildWidget(20, param2, param0 + 120, 25, param1, false, 120, 3, ke.field_h, 16777215, param4);
           this.b((byte) 86, var6);
           if (param3 > 38) {
             stackIn_4_0 = var6.field_w;
@@ -507,7 +507,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.field_N.a((byte) -27, new AgeValidator(this.field_N));
         this.field_S.field_F = false;
         this.field_S.painter = (WidgetPainter) ((Object) new oq());
-        this.field_O.painter = (WidgetPainter) ((Object) new he());
+        this.field_O.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
         this.field_V.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
         GradientOutlineTextPainter dupTemp$0 = new GradientOutlineTextPainter(10000536);
         this.field_T.painter = (WidgetPainter) ((Object) dupTemp$0);
@@ -525,7 +525,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(oi.field_f, MouseInputHandler.field_b, var3, 170, this.field_I, 35));
         var3 = var3 + (this.addLabeledFieldWithDefaultMessageWidth(r.field_e, PasswordValidator.field_w, var3, 170, this.field_V, 35) + 5);
         var3 = var3 + this.a(this.field_N, -99, 170, gj.field_a, var3);
-        el var4 = new el(46, var3, -90 + this.field_n, 25, this.field_H, true, -120 + this.field_n, 5, cp.field_H, 11579568, uq.field_e);
+        LabeledChildWidget var4 = new LabeledChildWidget(46, var3, -90 + this.field_n, 25, this.field_H, true, -120 + this.field_n, 5, DisplayNamePanel.field_H, 11579568, uq.field_e);
         this.b((byte) 115, var4);
         var3 = var3 + var4.field_w;
         TextWidgetPainter var5 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, ke.field_h.maxAscent, -1, 2147483647, true);

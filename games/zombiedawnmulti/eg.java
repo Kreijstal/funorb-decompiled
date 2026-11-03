@@ -3,7 +3,7 @@
  */
 final class eg extends kk {
     private Object field_A;
-    static cd field_B;
+    static ScrollPaneWithFooter field_B;
     static byte[] field_E;
     static String field_z;
     static Sprite field_D;
@@ -38,7 +38,7 @@ final class eg extends kk {
             return (ic) ((Object) stackIn_6_0);
           }
           if (param0 != 64) {
-            field_B = (cd) null;
+            field_B = (ScrollPaneWithFooter) null;
           }
           stackIn_12_0 = new pp(param1, param4);
           return (ic) ((Object) stackIn_12_0);

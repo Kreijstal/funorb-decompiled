@@ -7,14 +7,14 @@ final class ValidationState {
 
     final static void a(boolean param0) {
         CharSequence var3 = null;
-        ta.field_lb = s.field_e.readString((byte) -107);
+        ProgressDialog.field_lb = s.field_e.readString((byte) -107);
         if (!param0) {
-          var3 = (CharSequence) ((Object) ta.field_lb);
+          var3 = (CharSequence) ((Object) ProgressDialog.field_lb);
           ProxySocketConnector.field_k = tg.a(var3, param0);
           return;
         }
         field_a = (UiComponent) null;
-        CharSequence var2 = (CharSequence) ((Object) ta.field_lb);
+        CharSequence var2 = (CharSequence) ((Object) ProgressDialog.field_lb);
         ProxySocketConnector.field_k = tg.a(var2, param0);
     }
 

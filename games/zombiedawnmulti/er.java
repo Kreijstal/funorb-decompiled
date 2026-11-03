@@ -28,15 +28,15 @@ final class er extends IntrusiveNode {
         int var2;
         int var1Lifetime1;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (ai.field_b != ma.field_d) {
+        if (DiskCacheWorker.field_b != ma.field_d) {
           WidgetContainer.field_E = WidgetContainer.field_E - 40;
           if (WidgetContainer.field_E <= 0) {
             WidgetContainer.field_E = 0;
             ml.field_Jb = ButtonWidget.field_I[ArmedHumanView.field_rb];
-            ma.field_d = ai.field_b;
+            ma.field_d = DiskCacheWorker.field_b;
             stackIn_51_0 = !(ArmedHumanView.field_rb >= -1 + SimHuman.field_pb);
             dg.field_J = stackIn_51_0;
-            if (0 <= ai.field_b &&
+            if (0 <= DiskCacheWorker.field_b &&
               ml.field_Jb >= 0) {
               var1 = pb.field_e.countWrappedLines(ei.field_g[ma.field_d][ml.field_Jb], 400);
               hj.field_g = 4 + (20 + var1 * (pb.field_e.maxAscent + pb.field_e.maxDescent));
@@ -45,7 +45,7 @@ final class er extends IntrusiveNode {
               }
             }
           }
-          if (ai.field_b == 21 &&
+          if (DiskCacheWorker.field_b == 21 &&
             10 == ArmedHumanView.field_rb &&
             !PowerupButton.field_e.field_I.a(true)) {
             FadingDialog.a(param0 - 16504, 9);
@@ -62,11 +62,11 @@ final class er extends IntrusiveNode {
           if (WidgetContainer.field_E <= 0) {
             WidgetContainer.field_E = 0;
             ml.field_Jb = ButtonWidget.field_I[ArmedHumanView.field_rb];
-            ma.field_d = ai.field_b;
+            ma.field_d = DiskCacheWorker.field_b;
             stackIn_7_0 = !(ArmedHumanView.field_rb >= -1 + SimHuman.field_pb);
             dg.field_J = stackIn_7_0;
-            if (0 > ai.field_b) {
-              if (ai.field_b == 21 &&
+            if (0 > DiskCacheWorker.field_b) {
+              if (DiskCacheWorker.field_b == 21 &&
                 10 == ArmedHumanView.field_rb &&
                 !PowerupButton.field_e.field_I.a(true)) {
                 FadingDialog.a(param0 - 16504, 9);
@@ -89,7 +89,7 @@ final class er extends IntrusiveNode {
         } else {
           if (!io.field_g) {
             if (io.field_g) {
-              if (ai.field_b == 21 &&
+              if (DiskCacheWorker.field_b == 21 &&
                 10 == ArmedHumanView.field_rb &&
                 !PowerupButton.field_e.field_I.a(true)) {
                 FadingDialog.a(param0 - 16504, 9);
@@ -97,7 +97,7 @@ final class er extends IntrusiveNode {
               }
             } else {
               if (WidgetContainer.field_E <= 0) {
-                if (ai.field_b == 21 &&
+                if (DiskCacheWorker.field_b == 21 &&
                   10 == ArmedHumanView.field_rb &&
                   !PowerupButton.field_e.field_I.a(true)) {
                   FadingDialog.a(param0 - 16504, 9);
@@ -108,7 +108,7 @@ final class er extends IntrusiveNode {
                 if (WidgetContainer.field_E <= 0) {
                   WidgetContainer.field_E = 0;
                 }
-                if (ai.field_b == 21 &&
+                if (DiskCacheWorker.field_b == 21 &&
                   10 == ArmedHumanView.field_rb &&
                   !PowerupButton.field_e.field_I.a(true)) {
                   FadingDialog.a(param0 - 16504, 9);
@@ -127,7 +127,7 @@ final class er extends IntrusiveNode {
             if (WidgetContainer.field_E > 400) {
               WidgetContainer.field_E = 400;
             }
-            if (ai.field_b == 21 &&
+            if (DiskCacheWorker.field_b == 21 &&
               10 == ArmedHumanView.field_rb &&
               !PowerupButton.field_e.field_I.a(true)) {
               FadingDialog.a(param0 - 16504, 9);
@@ -147,7 +147,7 @@ final class er extends IntrusiveNode {
             }
           }
         }
-        if (ai.field_b == 21 &&
+        if (DiskCacheWorker.field_b == 21 &&
           10 == ArmedHumanView.field_rb &&
           !PowerupButton.field_e.field_I.a(true)) {
           FadingDialog.a(param0 - 16504, 9);

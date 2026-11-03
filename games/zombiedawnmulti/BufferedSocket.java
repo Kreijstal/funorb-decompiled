@@ -149,7 +149,7 @@ final class BufferedSocket implements Runnable {
           BufferedSocket.b((byte) 24);
         }
         cr var2 = new cr();
-        dc.field_Gb.a(var2, false);
+        TabbedPane.field_Gb.a(var2, false);
         mi.b(1, param1);
         return var2;
     }

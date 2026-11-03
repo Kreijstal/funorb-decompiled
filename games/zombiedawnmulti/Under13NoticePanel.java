@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pj extends WidgetContainer implements HotspotActivationListener, ButtonActivationListener {
+final class Under13NoticePanel extends WidgetContainer implements HotspotActivationListener, ButtonActivationListener {
     private AccountCreationDialog field_H;
     static long[] field_K;
     private HotspotTextWidget field_L;
-    static ta field_I;
+    static ProgressDialog field_I;
     private ButtonWidget field_G;
     static String field_J;
 
@@ -55,7 +55,7 @@ final class pj extends WidgetContainer implements HotspotActivationListener, But
         }
     }
 
-    pj(AccountCreationDialog param0) {
+    Under13NoticePanel(AccountCreationDialog param0) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
@@ -127,7 +127,7 @@ final class pj extends WidgetContainer implements HotspotActivationListener, But
         try {
           var5_int = param0.a(param4, (byte) 105);
           if (param1 != 4) {
-            field_I = (ta) null;
+            field_I = (ProgressDialog) null;
           }
           var6 = param0.a(param3, var5_int, param1 - 5);
           stackIn_3_0 = er.a(param2, var5_int, 0, var6, param0);

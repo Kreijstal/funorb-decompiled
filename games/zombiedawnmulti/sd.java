@@ -18,7 +18,7 @@ final class sd extends SingleChildWidget {
           return ra.field_f.a(0, pn.field_d, InfectionEvent.field_p);
         }
         if (ee.field_b) {
-          return ai.a(false, param2, param3);
+          return DiskCacheWorker.a(false, param2, param3);
         }
         if (eo.a(param3, true, param2)) {
           return true;
@@ -61,10 +61,10 @@ final class sd extends SingleChildWidget {
         field_G = (int[][]) null;
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
-        ua var7 = null;
+    final void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
+        DraggableWidget var7 = null;
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           var7 = qi.field_a;
           if (var7 != null &&
             this.a(81, param5, param0, param3, param2)) {

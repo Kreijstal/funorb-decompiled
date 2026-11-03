@@ -50,7 +50,7 @@ final class NodeHashTableIterator implements Iterator {
               var5 = kk.field_x;
             } else {
               if (var4 == mo.field_Jb.field_d) {
-                var5 = ua.field_N;
+                var5 = DraggableWidget.field_N;
               } else {
                 var5 = IndexedSpriteState.field_c;
               }

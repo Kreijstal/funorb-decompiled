@@ -77,7 +77,7 @@ final class uk extends ButtonWidget {
           AgeValidator.field_s.drawAdditive(var5 - var15.fullWidth, var6 - var15.field_u, 256);
           return;
         }
-        if (ua.field_I == var8) {
+        if (DraggableWidget.field_I == var8) {
           var18 = rj.field_I[0];
           var9Lifetime1 = var18.fullWidth << 1;
           var10Lifetime1 = var18.field_u << 1;

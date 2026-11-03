@@ -119,7 +119,7 @@ final class FightEvent extends GameEvent {
             }
             return false;
           }
-          return ai.a(false, param0, param2);
+          return DiskCacheWorker.a(false, param0, param2);
         }
         ki.field_e = null;
         return true;

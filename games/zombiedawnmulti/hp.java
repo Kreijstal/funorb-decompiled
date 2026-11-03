@@ -126,14 +126,14 @@ final class hp extends IntrusiveNode {
         var2Lifetime1 = var4;
         while (field_j[0].length > var4) {
           var3 = 16 * var4;
-          field_j[0][var4] = cr.b(tq.b(var3, 255), tq.b(-1174404865, var3) << 8);
+          field_j[0][var4] = cr.b(ScrollPane.b(var3, 255), ScrollPane.b(-1174404865, var3) << 8);
           field_j[1][var4] = cr.b(var3 << 16, var3 << 8);
-          field_j[2][var4] = cr.b(tq.b(255, var3 / 2), tq.b(var3, -234880769) << 8);
+          field_j[2][var4] = cr.b(ScrollPane.b(255, var3 / 2), ScrollPane.b(var3, -234880769) << 8);
           field_j[3][var4] = var3 * 65793;
-          field_j[4][var4] = cr.b(tq.b(1744830974, var3) << 7, var3 << 16);
+          field_j[4][var4] = cr.b(ScrollPane.b(1744830974, var3) << 7, var3 << 16);
           field_j[5][var4] = var3 << 16;
           field_j[6][var4] = var3 << 16;
-          field_j[7][var4] = cr.b(cr.b(tq.b(var3, 1020) << 6, tq.b(var3 << 14, 16718971)), var3);
+          field_j[7][var4] = cr.b(cr.b(ScrollPane.b(var3, 1020) << 6, ScrollPane.b(var3 << 14, 16718971)), var3);
           var4++;
         }
         field_i = "You can ask to join this game";

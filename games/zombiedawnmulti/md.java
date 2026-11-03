@@ -51,14 +51,14 @@ final class md {
         RuntimeException var2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          InfectionEvent.a(NodeHashTableIterator.field_d, -891231071, param0, true, lj.field_n, 0, ab.field_j);
+          InfectionEvent.a(NodeHashTableIterator.field_d, -891231071, param0, true, lj.field_n, 0, MusicPatchNode.field_j);
           for (var2_int = 0; var2_int < lj.field_n; var2_int++) {
             la.field_c[var2_int + param0] = var2_int;
           }
           if (param1 > -27) {
             field_u = (IntrusiveDeque) null;
           }
-          InfectionEvent.a(ba.field_m, -891231071, param0 + param0, false, param0 + lj.field_n, param0, mj.field_Ub);
+          InfectionEvent.a(MusicPatchPcmStream.field_m, -891231071, param0 + param0, false, param0 + lj.field_n, param0, VerticalScrollbar.field_Ub);
           if (param0 < lj.field_n) {
             lj.field_n = param0;
           }
@@ -261,14 +261,14 @@ final class md {
             field_N = (Sprite[]) null;
           }
           var3_int = param0.field_Mb - param2.field_Mb;
-          if (param0.field_Nb != ta.field_ob) {
+          if (param0.field_Nb != ProgressDialog.field_ob) {
             if (param0.field_Nb == null) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (param2.field_Nb == ta.field_ob) {
+          if (param2.field_Nb == ProgressDialog.field_ob) {
             var3_int += 200;
           } else {
             if (null == param2.field_Nb) {
@@ -376,7 +376,7 @@ final class md {
           pd.field_b = new UiComponent(0L, (UiComponent) null);
           dm.field_ac = new UiComponent(0L, vd.field_a, GameScreen.field_r);
           mo.field_Hb = new UiComponent(0L, pn.field_g, cg.field_j);
-          hf.field_e = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
+          hf.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
           pd.field_b.a((byte) 50, dm.field_ac);
           if (GradientOutlineTextPainter.field_u) {
             pd.field_b.a((byte) 50, mo.field_Hb);
@@ -389,7 +389,7 @@ final class md {
           var25.field_R = 1;
           ql.field_b = new UiComponent(0L, vo.field_m);
           ql.field_b.field_R = 1;
-          kj.field_u = new UiComponent(0L, ai.field_c, SecondaryNodeDeque.field_b.toUpperCase());
+          kj.field_u = new UiComponent(0L, DiskCacheWorker.field_c, SecondaryNodeDeque.field_b.toUpperCase());
           ro.field_O = new UiComponent(0L, LevelFileCatalog.field_d, AttackEvent.field_j.toUpperCase());
           ml.field_Lb = new UiComponent(0L, cg.field_f);
           PacketBuffer.field_g = new UiComponent(0L, vd.field_a, vh.field_Nb);
@@ -398,13 +398,13 @@ final class md {
           sc.field_d = new UiComponent(0L, ResizableDialog.field_fb, StatefulTextPainter.field_t);
           InflaterDecompressor.field_h = new UiComponent(0L, ResizableDialog.field_fb, PortalEntryEvent.field_k);
           AgeValidator.field_w = new UiComponent(0L, pn.field_g, fd.field_N);
-          SimEntity.field_H = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
-          PasswordValidator.field_t = new UiComponent(0L, he.field_i, ContextMenu.field_Gb.toUpperCase());
+          SimEntity.field_H = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
+          PasswordValidator.field_t = new UiComponent(0L, LinkButtonPainter.field_i, ContextMenu.field_Gb.toUpperCase());
           PasswordValidator.field_t.field_Z = GradientOutlineTextPainter.field_u;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
           stackIn_5_2 = 0L;
-          stackIn_5_3 = he.field_i;
+          stackIn_5_3 = LinkButtonPainter.field_i;
           if (!GradientOutlineTextPainter.field_u) {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
@@ -452,15 +452,15 @@ final class md {
           ClientException.field_h.field_R = 1;
           ContentTransitionDialog.field_jb = new UiComponent(0L, vd.field_a, GameScreen.field_r);
           bf.field_h = new UiComponent(0L, pn.field_g, cg.field_j);
-          bf.field_n = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
+          bf.field_n = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
           CipherPacketBuffer.field_r.a((byte) 50, ClientException.field_h);
           CipherPacketBuffer.field_r.a((byte) 50, ContentTransitionDialog.field_jb);
           if (GradientOutlineTextPainter.field_u) {
             CipherPacketBuffer.field_r.a((byte) 50, bf.field_h);
           }
           CipherPacketBuffer.field_r.a((byte) 50, bf.field_n);
-          jp.field_b = new UiComponent(0L, ai.field_c, pi.field_b.toUpperCase());
-          MessageDialogContent.field_m = new UiComponent(0L, LevelFileCatalog.field_d);
+          jp.field_b = new UiComponent(0L, DiskCacheWorker.field_c, pi.field_b.toUpperCase());
+          gg.field_m = new UiComponent(0L, LevelFileCatalog.field_d);
           SocketConnector.field_a = new UiComponent(0L, cg.field_f);
           ik.field_d = new UiComponent(0L, EmailAvailabilityValidator.field_x, vb.field_d.toUpperCase());
           mi.field_Ib = new UiComponent[4 + param9];
@@ -492,7 +492,7 @@ final class md {
           }
           for (var17_intLifetime3 = 0; param9 > var17_intLifetime3; var17_intLifetime3++) {
             mi.field_Ib[4 + var17_intLifetime3] = new UiComponent(0L, m.field_B, UiWidget.field_f[var17_intLifetime3]);
-            array$2 = new mo[1 + tq.b(255, (int) ng.field_b[var17_intLifetime3])];
+            array$2 = new mo[1 + ScrollPane.b(255, (int) ng.field_b[var17_intLifetime3])];
             ma.field_b[var17_intLifetime3 + 4] = array$2;
             ma.field_b[var17_intLifetime3 + 4][0] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, hi.field_Mb);
             for (var18 = 0; var18 < (255 & ng.field_b[var17_intLifetime3]); var18++) {
@@ -530,15 +530,15 @@ final class md {
               }
             }
           }
-          en.field_b = new UiComponent(0L, he.field_i);
-          GameKeyHandler.field_a = new UiComponent(0L, he.field_i);
+          en.field_b = new UiComponent(0L, LinkButtonPainter.field_i);
+          GameKeyHandler.field_a = new UiComponent(0L, LinkButtonPainter.field_i);
           eb.field_B = new UiComponent(0L, qc.field_u);
           eb.field_B.copyStyle((byte) -32, vo.field_m);
           eb.field_B.field_lb = 1;
           var17 = eb.field_B;
           var17.field_R = 1;
           LevelData.field_a = new UiComponent(0L, (UiComponent) null);
-          LevelData.field_a.a((byte) 50, MessageDialogContent.field_m);
+          LevelData.field_a.a((byte) 50, gg.field_m);
           LevelData.field_a.a((byte) 50, SocketConnector.field_a);
           SocketConnector.field_a.a((byte) 50, ik.field_d);
           for (var18Lifetime2 = 0; 4 + param9 > var18Lifetime2; var18Lifetime2++) {

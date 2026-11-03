@@ -325,7 +325,7 @@ final class NavigationGrid {
         int[] var10 = null;
         int[] var11 = null;
         ra var12 = null;
-        ab var13 = null;
+        MusicPatchNode var13 = null;
         CipherPacketBuffer var14 = null;
         ra var15 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -356,7 +356,7 @@ final class NavigationGrid {
             return;
           }
           if (1 == var2) {
-            var13 = (ab) (ig.field_a.c(param0 ^ 73));
+            var13 = (MusicPatchNode) (ig.field_a.c(param0 ^ 73));
             if (var13 == null) {
               ak.a((byte) -117);
               return;
@@ -607,7 +607,7 @@ final class NavigationGrid {
           this.field_p = new int[var8.length][var8[0].length];
           for (var3 = 0; var8.length > var3; var3++) {
             for (var4 = 0; var4 < var8[0].length; var4++) {
-              this.field_p[var3][var4] = tq.b(1, var8[var3][var4]) == 0 ? 33554432 : 0;
+              this.field_p[var3][var4] = ScrollPane.b(1, var8[var3][var4]) == 0 ? 33554432 : 0;
             }
           }
           this.field_k = new boolean[this.level.field_e][this.level.field_d];
@@ -756,8 +756,8 @@ final class NavigationGrid {
 
     final static void b(int param0) {
         ee.field_b = false;
-        if (null != mj.field_Ib) {
-          mj.field_Ib.c((byte) 123);
+        if (null != VerticalScrollbar.field_Ib) {
+          VerticalScrollbar.field_Ib.c((byte) 123);
         }
         if (0 != va.field_a) {
           pf.a(89);

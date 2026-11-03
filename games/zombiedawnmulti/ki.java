@@ -41,10 +41,10 @@ final class ki {
 
     final static String a(byte param0) {
         int var1 = -112 / ((-77 - param0) / 37);
-        if (null == ta.field_lb) {
+        if (null == ProgressDialog.field_lb) {
           return "";
         }
-        return ta.field_lb;
+        return ProgressDialog.field_lb;
     }
 
     final boolean b(byte param0) {

@@ -278,23 +278,23 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-124, "gameopttooltips,0,0");
                 if (null != var2) {
-                  he.field_d[0][0] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_d[0][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "gameopttooltips,0,1");
                 if (null != var2) {
-                  he.field_d[0][1] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_d[0][1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "gameopttooltips,0,2");
                 if (null != var2) {
-                  he.field_d[0][2] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_d[0][2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "gameopttooltips,0,3");
                 if (var2 != null) {
-                  he.field_d[0][3] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_d[0][3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "gameopttooltips,0,4");
                 if (var2 != null) {
-                  he.field_d[0][4] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_d[0][4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "lobby_hint_1");
                 if (var2 != null) {
@@ -686,215 +686,215 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "zombiespeech,0");
                 if (var2 != null) {
-                  he.field_b[0] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "zombiespeech,1");
                 if (null != var2) {
-                  he.field_b[1] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "zombiespeech,2");
                 if (var2 != null) {
-                  he.field_b[2] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "zombiespeech,3");
                 if (var2 != null) {
-                  he.field_b[3] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,4");
                 if (var2 != null) {
-                  he.field_b[4] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "zombiespeech,5");
                 if (var2 != null) {
-                  he.field_b[5] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[5] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,6");
                 if (var2 != null) {
-                  he.field_b[6] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[6] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,7");
                 if (var2 != null) {
-                  he.field_b[7] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[7] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,8");
                 if (null != var2) {
-                  he.field_b[8] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[8] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "zombiespeech,9");
                 if (var2 != null) {
-                  he.field_b[9] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[9] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "zombiespeech,10");
                 if (var2 != null) {
-                  he.field_b[10] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[10] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "zombiespeech,11");
                 if (null != var2) {
-                  he.field_b[11] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[11] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "zombiespeech,12");
                 if (null != var2) {
-                  he.field_b[12] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[12] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "zombiespeech,13");
                 if (var2 != null) {
-                  he.field_b[13] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[13] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,14");
                 if (var2 != null) {
-                  he.field_b[14] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[14] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "zombiespeech,15");
                 if (var2 != null) {
-                  he.field_b[15] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[15] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "zombiespeech,16");
                 if (null != var2) {
-                  he.field_b[16] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[16] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "zombiespeech,17");
                 if (null != var2) {
-                  he.field_b[17] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[17] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "zombiespeech,18");
                 if (var2 != null) {
-                  he.field_b[18] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[18] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "zombiespeech,19");
                 if (null != var2) {
-                  he.field_b[19] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[19] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,20");
                 if (var2 != null) {
-                  he.field_b[20] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[20] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "zombiespeech,21");
                 if (var2 != null) {
-                  he.field_b[21] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[21] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "zombiespeech,22");
                 if (null != var2) {
-                  he.field_b[22] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[22] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "zombiespeech,23");
                 if (var2 != null) {
-                  he.field_b[23] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[23] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,24");
                 if (null != var2) {
-                  he.field_b[24] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[24] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "zombiespeech,25");
                 if (null != var2) {
-                  he.field_b[25] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[25] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "zombiespeech,26");
                 if (var2 != null) {
-                  he.field_b[26] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[26] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "zombiespeech,27");
                 if (var2 != null) {
-                  he.field_b[27] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[27] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "zombiespeech,28");
                 if (null != var2) {
-                  he.field_b[28] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[28] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "zombiespeech,29");
                 if (null != var2) {
-                  he.field_b[29] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[29] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "zombiespeech,30");
                 if (null != var2) {
-                  he.field_b[30] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[30] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,31");
                 if (var2 != null) {
-                  he.field_b[31] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[31] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "zombiespeech,32");
                 if (var2 != null) {
-                  he.field_b[32] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[32] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,33");
                 if (null != var2) {
-                  he.field_b[33] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[33] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "zombiespeech,34");
                 if (null != var2) {
-                  he.field_b[34] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[34] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "zombiespeech,35");
                 if (var2 != null) {
-                  he.field_b[35] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[35] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "zombiespeech,36");
                 if (var2 != null) {
-                  he.field_b[36] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[36] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "zombiespeech,37");
                 if (null != var2) {
-                  he.field_b[37] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[37] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "zombiespeech,38");
                 if (null != var2) {
-                  he.field_b[38] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[38] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "zombiespeech,39");
                 if (null != var2) {
-                  he.field_b[39] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[39] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,40");
                 if (null != var2) {
-                  he.field_b[40] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[40] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "zombiespeech,41");
                 if (null != var2) {
-                  he.field_b[41] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[41] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "zombiespeech,42");
                 if (null != var2) {
-                  he.field_b[42] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[42] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "zombiespeech,43");
                 if (var2 != null) {
-                  he.field_b[43] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[43] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "zombiespeech,44");
                 if (null != var2) {
-                  he.field_b[44] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[44] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "zombiespeech,45");
                 if (var2 != null) {
-                  he.field_b[45] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[45] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "zombiespeech,46");
                 if (var2 != null) {
-                  he.field_b[46] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[46] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,47");
                 if (var2 != null) {
-                  he.field_b[47] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[47] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "zombiespeech,48");
                 if (var2 != null) {
-                  he.field_b[48] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[48] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "zombiespeech,49");
                 if (var2 != null) {
-                  he.field_b[49] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[49] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiespeech,50");
                 if (var2 != null) {
-                  he.field_b[50] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[50] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "zombiespeech,51");
                 if (null != var2) {
-                  he.field_b[51] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[51] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "zombiespeech,52");
                 if (null != var2) {
-                  he.field_b[52] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[52] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "locked_level");
                 if (var2 != null) {
@@ -914,159 +914,159 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-122, "instructions,0,0");
                 if (null != var2) {
-                  cp.field_S[0][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[0][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "instructions,0,1");
                 if (null != var2) {
-                  cp.field_S[0][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[0][1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "instructions,1,0");
                 if (var2 != null) {
-                  cp.field_S[1][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[1][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "instructions,1,1");
                 if (null != var2) {
-                  cp.field_S[1][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[1][1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "instructions,1,2");
                 if (null != var2) {
-                  cp.field_S[1][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[1][2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "instructions,1,3");
                 if (var2 != null) {
-                  cp.field_S[1][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[1][3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "instructions,1,4");
                 if (null != var2) {
-                  cp.field_S[1][4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[1][4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "instructions,2,0");
                 if (null != var2) {
-                  cp.field_S[2][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[2][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "instructions,2,1");
                 if (null != var2) {
-                  cp.field_S[2][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[2][1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "instructions,2,2");
                 if (var2 != null) {
-                  cp.field_S[2][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[2][2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "instructions,2,3");
                 if (null != var2) {
-                  cp.field_S[2][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[2][3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "instructions,3,0");
                 if (var2 != null) {
-                  cp.field_S[3][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[3][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "instructions,4,0");
                 if (null != var2) {
-                  cp.field_S[4][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[4][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "instructions,5,0");
                 if (var2 != null) {
-                  cp.field_S[5][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[5][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "instructions_titles,0,0");
                 if (var2 != null) {
-                  cp.field_J[0][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[0][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "instructions_titles,0,1");
                 if (null != var2) {
-                  cp.field_J[0][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[0][1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "instructions_titles,1,0");
                 if (var2 != null) {
-                  cp.field_J[1][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[1][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "instructions_titles,2,0");
                 if (null != var2) {
-                  cp.field_J[2][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[2][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "instructions_titles,3,0");
                 if (null != var2) {
-                  cp.field_J[3][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[3][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "instructions_titles,4,0");
                 if (null != var2) {
-                  cp.field_J[4][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[4][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "instructions_titles,5,0");
                 if (null != var2) {
-                  cp.field_J[5][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[5][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "instructions_titles,6,0");
                 if (null != var2) {
-                  cp.field_J[6][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[6][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "instructions_powerups,0");
                 if (var2 != null) {
-                  cp.field_I[0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_I[0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "instructions_powerups,1");
                 if (null != var2) {
-                  cp.field_I[1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_I[1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "instructions_powerups,2");
                 if (null != var2) {
-                  cp.field_I[2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_I[2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "instructions_powerups,3");
                 if (null != var2) {
-                  cp.field_I[3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_I[3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "instructions_powerups,4");
                 if (null != var2) {
-                  cp.field_I[4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_I[4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "instructions_traits,0");
                 if (null != var2) {
-                  cp.field_Q[0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "instructions_traits,1");
                 if (null != var2) {
-                  cp.field_Q[1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "instructions_traits,2");
                 if (var2 != null) {
-                  cp.field_Q[2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "instructions_traits,3");
                 if (var2 != null) {
-                  cp.field_Q[3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "instructions_traits,4");
                 if (var2 != null) {
-                  cp.field_Q[4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "instructions_traits,5");
                 if (null != var2) {
-                  cp.field_Q[5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[5] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "intro_text,0");
                 if (var2 != null) {
-                  cp.field_R[0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "intro_text,1");
                 if (var2 != null) {
-                  cp.field_R[1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "intro_text,2");
                 if (var2 != null) {
-                  cp.field_R[2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "intro_text,3");
                 if (var2 != null) {
-                  cp.field_R[3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "intro_text,4");
                 if (null != var2) {
-                  cp.field_R[4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "intro_text,5");
                 if (var2 != null) {
-                  cp.field_R[5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[5] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "ZOMBIE_COUNTER");
                 if (null != var2) {
@@ -1196,7 +1196,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-124, "name_POWERUP_CURSE");
                 if (null != var2) {
-                  cd.field_Mb = qe.a(-2739, var2);
+                  ScrollPaneWithFooter.field_Mb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "name_POWERUP_HAMMER");
                 if (var2 != null) {
@@ -1232,7 +1232,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "name_POWERUP_CHARM");
                 if (null != var2) {
-                  cp.field_L = qe.a(-2739, var2);
+                  DisplayNamePanel.field_L = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "name_POWERUP_COUNTER");
                 if (null != var2) {
@@ -1407,7 +1407,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-126, "teaser_POWERUP_SHACKLES");
                 if (null != var2) {
-                  he.field_c = qe.a(-2739, var2);
+                  LinkButtonPainter.field_c = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "teaser_POWERUP_CHARM");
                 if (null != var2) {
@@ -1651,7 +1651,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "tip_TRAIT_WISE");
                 if (var2 != null) {
-                  oj.field_O = qe.a(-2739, var2);
+                  BirthDateEntryPanel.field_O = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "tip_TRAIT_FAST");
                 if (var2 != null) {
@@ -1795,7 +1795,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-122, "summary_traits");
                 if (var2 != null) {
-                  qm.field_N = qe.a(-2739, var2);
+                  LoginForm.field_N = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "summary_new");
                 if (var2 != null) {
@@ -1811,7 +1811,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "selectazombieenemy");
                 if (var2 != null) {
-                  mj.field_Sb = qe.a(-2739, var2);
+                  VerticalScrollbar.field_Sb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "selectahuman");
                 if (null != var2) {
@@ -1851,99 +1851,99 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "levelname,0,0");
                 if (null != var2) {
-                  cp.field_N[0][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "levelname,0,1");
                 if (null != var2) {
-                  cp.field_N[0][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "levelname,0,2");
                 if (null != var2) {
-                  cp.field_N[0][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "levelname,0,3");
                 if (null != var2) {
-                  cp.field_N[0][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "levelname,0,4");
                 if (null != var2) {
-                  cp.field_N[0][4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "levelname,0,5");
                 if (null != var2) {
-                  cp.field_N[0][5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][5] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "levelname,1,0");
                 if (null != var2) {
-                  cp.field_N[1][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "levelname,1,1");
                 if (null != var2) {
-                  cp.field_N[1][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "levelname,1,2");
                 if (null != var2) {
-                  cp.field_N[1][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "levelname,1,3");
                 if (null != var2) {
-                  cp.field_N[1][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "levelname,1,4");
                 if (var2 != null) {
-                  cp.field_N[1][4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "levelname,1,5");
                 if (var2 != null) {
-                  cp.field_N[1][5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][5] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "levelname,2,0");
                 if (var2 != null) {
-                  cp.field_N[2][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "levelname,2,1");
                 if (var2 != null) {
-                  cp.field_N[2][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "levelname,2,2");
                 if (var2 != null) {
-                  cp.field_N[2][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "levelname,2,3");
                 if (var2 != null) {
-                  cp.field_N[2][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "levelname,2,4");
                 if (var2 != null) {
-                  cp.field_N[2][4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "levelname,2,5");
                 if (null != var2) {
-                  cp.field_N[2][5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][5] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "levelname,3,0");
                 if (var2 != null) {
-                  cp.field_N[3][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "levelname,3,1");
                 if (null != var2) {
-                  cp.field_N[3][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "levelname,3,2");
                 if (null != var2) {
-                  cp.field_N[3][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "levelname,3,3");
                 if (var2 != null) {
-                  cp.field_N[3][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "levelname,3,4");
                 if (null != var2) {
-                  cp.field_N[3][4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "levelname,3,5");
                 if (null != var2) {
-                  cp.field_N[3][5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][5] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "bonuslevel");
                 if (var2 != null) {
@@ -2321,7 +2321,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-123, "ready");
                 if (var2 != null) {
-                  pj.field_J = qe.a(-2739, var2);
+                  Under13NoticePanel.field_J = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "go");
                 if (var2 != null) {
@@ -2603,11 +2603,11 @@ final class PortalView extends SceneObject {
               if (stackIn_67_0 != stackIn_67_1) {
                 if (0 == (65535 & var10)) {
                   var11 = var10 >> 16;
-                  var8[var9] = cr.b(tq.b(var11 * tq.b(var7 >> 16, 255), -855572736) << 8, cr.b(tq.b(var7, 255) * var11 >> 8, tq.b(var11 * tq.b(var7 >> 8, 255), 65280)));
+                  var8[var9] = cr.b(ScrollPane.b(var11 * ScrollPane.b(var7 >> 16, 255), -855572736) << 8, cr.b(ScrollPane.b(var7, 255) * var11 >> 8, ScrollPane.b(var11 * ScrollPane.b(var7 >> 8, 255), 65280)));
                 } else {
                   if ((16711935 & var10) == 0) {
                     var11 = var10 >> 8;
-                    var8[var9] = cr.b(tq.b(var11 * (tq.b(var6, 16730352) >> 16), -201261312) << 8, cr.b(tq.b(65280, tq.b(var6 >> 8, 255) * var11), var11 * tq.b(var6, 255) >> 8));
+                    var8[var9] = cr.b(ScrollPane.b(var11 * (ScrollPane.b(var6, 16730352) >> 16), -201261312) << 8, cr.b(ScrollPane.b(65280, ScrollPane.b(var6 >> 8, 255) * var11), var11 * ScrollPane.b(var6, 255) >> 8));
                   }
                 }
               }

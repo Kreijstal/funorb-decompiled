@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends ArrayWidgetGroup implements ButtonActivationListener {
+final class BirthDateEntryPanel extends ArrayWidgetGroup implements ButtonActivationListener {
     private BirthDateInputWidget field_P;
     static Sprite[] field_M;
     static String field_H;
-    static cd field_Q;
+    static ScrollPaneWithFooter field_Q;
     private ButtonWidget field_B;
     static byte[][] field_N;
     static String field_O;
@@ -17,14 +17,14 @@ final class oj extends ArrayWidgetGroup implements ButtonActivationListener {
         try {
           mp.a(0, this.field_P.j(-194), this.field_P.i(1), this.field_P.getMonthIndex((byte) -126));
           if (param3 >= -83) {
-            oj.h(103);
+            BirthDateEntryPanel.clearSharedReferences(103);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void g(int param0) {
+    final void layoutChildren(int param0) {
         int var2 = 250;
         this.field_P.setWidgetBounds(-var2 + this.field_n >> 1, 20 + (this.field_w - 25) >> 1, 28972, param0, 25);
         this.field_B.setWidgetBounds((-var2 + this.field_n >> 1) + 150, (20 + (this.field_w - 30) >> 1) + 2, param0 ^ 29088, 100, 30);
@@ -32,10 +32,10 @@ final class oj extends ArrayWidgetGroup implements ButtonActivationListener {
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
         super.renderWidget(param0, param1, param2, param3);
-        cp.field_H.c(DualLinkNode.field_m, 4 + param3 + this.field_y, 4 + param1 - (-this.field_i - cp.field_H.maxAscent), 16777215, -1);
+        DisplayNamePanel.field_H.c(DualLinkNode.field_m, 4 + param3 + this.field_y, 4 + param1 - (-this.field_i - DisplayNamePanel.field_H.maxAscent), 16777215, -1);
     }
 
-    oj(int param0, int param1, int param2, int param3) {
+    BirthDateEntryPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_P = new BirthDateInputWidget(new GradientOutlineTextPainter(10000536), tm.field_b, 0, 0, 140, 25);
         this.field_P.setBirthDateValidator(3, new BirthDateValidator());
@@ -53,7 +53,7 @@ final class oj extends ArrayWidgetGroup implements ButtonActivationListener {
         return wm.a(param1, param2, param4, false, -127, param0);
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_M = null;
         if (param0 != 16777215) {
           return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends UiComponent {
+final class TabbedPane extends UiComponent {
     static long[] field_Ib;
     static int field_Hb;
     int field_Kb;
@@ -12,7 +12,7 @@ final class dc extends UiComponent {
     static IntrusiveDeque field_Gb;
     static BitmapFont field_Lb;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setTabbedPaneBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_x = param1;
         if (param0 != 9736) {
           return;
@@ -20,7 +20,7 @@ final class dc extends UiComponent {
         this.field_z = param5;
         this.field_Q = param6;
         this.field_zb = param2;
-        this.a(param3, param4, (byte) 119);
+        this.layoutTabs(param3, param4, (byte) 119);
     }
 
     public static void c(byte param0) {
@@ -30,7 +30,7 @@ final class dc extends UiComponent {
         field_Gb = null;
     }
 
-    dc(long param0, UiComponent param1, String[] param2, UiComponent param3, UiComponent[] param4, int param5) {
+    TabbedPane(long param0, UiComponent param1, String[] param2, UiComponent param3, UiComponent[] param4, int param5) {
         super(param0, (UiComponent) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -99,7 +99,7 @@ final class dc extends UiComponent {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void layoutTabs(int param0, int param1, byte param2) {
         UiComponent dupTemp$0 = null;
         int var4;
         int var5;
@@ -117,7 +117,7 @@ final class dc extends UiComponent {
           this.field_Nb[var4].field_z = param1;
         }
         if (param2 < 72) {
-          this.a(-74, 39, -109, 35, 100, -8, 71);
+          this.setTabbedPaneBounds(-74, 39, -109, 35, 100, -8, 71);
         }
         this.field_Mb.setBounds(this.field_z - param1, param1, this.field_zb, 0, -3344);
         var8 = 0;
@@ -204,7 +204,7 @@ final class dc extends UiComponent {
         }
     }
 
-    final void h(int param0) {
+    final void processTabPresses(int param0) {
         int var2 = 0;
         UiComponent dupTemp$0 = null;
         UiComponent dupTemp$1 = null;

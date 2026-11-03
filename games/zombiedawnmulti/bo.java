@@ -70,7 +70,7 @@ final class bo {
 
     final void a(int param0, java.applet.Applet param1) {
         try {
-          dc.a(31536000L, param1, "jagex-last-login-method", -120, this.field_f);
+          TabbedPane.a(31536000L, param1, "jagex-last-login-method", -120, this.field_f);
           if (param0 > -63) {
             field_e = false;
           }
@@ -112,7 +112,7 @@ final class bo {
           }
           PlayerLoadout.field_e = param0;
           pf.field_c = param4;
-          MessageDialogContent.field_c = param1;
+          gg.field_c = param1;
           ao.field_h = new Sprite[param3.length];
           for (var7 = param2; var7 < param3.length; var7++) {
             ao.field_h[var7] = new Sprite(317, 34);

@@ -107,7 +107,7 @@ final class oa {
         RuntimeException var1 = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (he.field_a) {
+          if (LinkButtonPainter.field_a) {
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }

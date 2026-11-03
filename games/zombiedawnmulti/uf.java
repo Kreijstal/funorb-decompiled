@@ -105,7 +105,7 @@ final class uf {
     }
 
     final static void a(int param0, boolean param1, byte param2) {
-        tq stackIn_5_0;
+        ScrollPane stackIn_5_0;
         int stackIn_5_1;
         boolean stackIn_5_2;
         int stackIn_5_3;
@@ -140,7 +140,7 @@ final class uf {
           stackIn_5_2 = param1;
           stackIn_5_3 = 2 + jk.field_f;
           stackIn_6_4 = (vc.field_d == UsernameSuggestionsPanel.field_L.field_Jb);
-          var3_int = ((tq) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param0 * (3 * jk.field_f + 6), -90) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param0 * (3 * jk.field_f + 6), -90) ? 1 : 0;
           var4 = UsernameSuggestionsPanel.field_L.field_Ib.field_Cb;
           if (SimZombie.field_zb != 2 &&
             SimZombie.field_zb != 1) {

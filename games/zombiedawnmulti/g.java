@@ -10,7 +10,7 @@ final class g {
     private static String field_z;
 
     final static int b(int param0) {
-        return le.a(param0, (byte) -80) >> 8;
+        return ProgressBarWidget.a(param0, (byte) -80) >> 8;
     }
 
     final static void a(Sprite param0, int param1, int param2) {

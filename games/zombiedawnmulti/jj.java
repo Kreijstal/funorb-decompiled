@@ -223,7 +223,7 @@ final class jj extends SceneObject {
           BufferedSocket.field_q = param3;
           FullscreenFocusCanvas.field_b = param7;
           i.field_a = (qb) ((Object) new ap());
-          rn.field_d = new ai(param5);
+          rn.field_d = new DiskCacheWorker(param5);
           tj.field_a = new eq(i.field_a, rn.field_d);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jj.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');

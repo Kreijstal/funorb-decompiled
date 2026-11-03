@@ -80,16 +80,16 @@ final class UnitStateEvent extends GameEvent {
           return;
         }
         uc.field_b = new String[4];
-        uc.field_b[2] = wk.field_K;
+        uc.field_b[2] = DateInputWidget.field_K;
         uc.field_b[3] = bb.field_h;
         uc.field_b[0] = Camera.field_b;
         we.field_g = new String[51];
         uc.field_b[1] = ji.field_a;
-        we.field_g[4] = cd.field_Lb;
+        we.field_g[4] = ScrollPaneWithFooter.field_Lb;
         we.field_g[14] = FightEvent.field_p;
         we.field_g[21] = r.field_d;
-        we.field_g[1] = ua.field_K;
-        we.field_g[12] = cd.field_Fb;
+        we.field_g[1] = DraggableWidget.field_K;
+        we.field_g[12] = ScrollPaneWithFooter.field_Fb;
         we.field_g[16] = kj.field_s;
         we.field_g[18] = ci.field_h;
         we.field_g[13] = DialogLayer.field_K;
@@ -135,7 +135,7 @@ final class UnitStateEvent extends GameEvent {
         gh.field_f[3] = lf.field_b;
         gh.field_f[55] = wn.field_s;
         gh.field_f[50] = w.field_n;
-        gh.field_f[16] = cp.field_L;
+        gh.field_f[16] = DisplayNamePanel.field_L;
         gh.field_f[15] = i.field_c;
         gh.field_f[12] = wi.field_m;
         gh.field_f[5] = wa.field_j;
@@ -145,7 +145,7 @@ final class UnitStateEvent extends GameEvent {
         gh.field_f[34] = ic.field_i;
         gh.field_f[18] = ob.field_u;
         gh.field_f[59] = TextInputValidator.field_o;
-        gh.field_f[7] = cd.field_Mb;
+        gh.field_f[7] = ScrollPaneWithFooter.field_Mb;
         gh.field_f[60] = uc.field_c;
         gh.field_f[49] = dg.field_O;
         gh.field_f[2] = EmailAvailabilityValidator.field_t;
@@ -182,7 +182,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[12][0] = no.field_Kb;
         wq.field_g[13][0] = SecondaryNodeDeque.field_f;
         wq.field_g[14][0] = TextInputValidator.field_n;
-        wq.field_g[15][0] = he.field_c;
+        wq.field_g[15][0] = LinkButtonPainter.field_c;
         wq.field_g[16][0] = ha.field_h;
         wq.field_g[17][0] = bb.field_i;
         wq.field_g[18][0] = UnitView.field_Z;
@@ -246,7 +246,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[51][1] = qj.field_l;
         wq.field_g[50][1] = dd.field_b;
         wq.field_g[49][1] = PowerupButton.field_g;
-        wq.field_g[48][1] = oj.field_O;
+        wq.field_g[48][1] = BirthDateEntryPanel.field_O;
         wq.field_g[47][1] = ResourceArchive.field_i;
         wq.field_g[46][1] = AccountCreationForm.field_X;
         wq.field_g[45][1] = ip.field_d;
@@ -401,7 +401,7 @@ final class UnitStateEvent extends GameEvent {
             var7 = eb.field_B;
             var7.field_zb = 0;
             if (hl.b(0)) {
-              MessageDialogContent.field_m.field_wb = ClientException.field_l.toUpperCase();
+              gg.field_m.field_wb = ClientException.field_l.toUpperCase();
               var9 = (2 + LevelData.field_a.field_zb) / 2;
               en.field_b.setBounds(40, LevelData.field_a.field_z - 40, var9 - 2, 0, -3344);
               if (JaggrabDownloader.field_c.field_mc > JaggrabDownloader.field_c.field_cc) {
@@ -415,7 +415,7 @@ final class UnitStateEvent extends GameEvent {
                 en.field_b.field_wb = ka.field_p.toUpperCase();
                 en.field_b.field_Z = false;
               }
-              en.field_b.field_ab = he.field_i.field_ab;
+              en.field_b.field_ab = LinkButtonPainter.field_i.field_ab;
               if (cb.field_i > 0) {
                 boolean decompiledSharedTail2 = (cb.field_i != 1);
                 if (!decompiledSharedTail2) {
@@ -428,7 +428,7 @@ final class UnitStateEvent extends GameEvent {
                 en.field_b.field_wb = en.field_b.field_wb + "<br>" + var10_ref_String;
                 if ((qj.field_i & 16) == 0 &&
                   !io.field_b) {
-                  en.field_b.field_ab = he.field_i.field_X;
+                  en.field_b.field_ab = LinkButtonPainter.field_i.field_X;
                 }
               }
               GameKeyHandler.field_a.setBounds(40, -40 + LevelData.field_a.field_z, LevelData.field_a.field_zb - var9, var9, -3344);
@@ -568,7 +568,7 @@ final class UnitStateEvent extends GameEvent {
                     break;
                   }
                   if (stackIn_88_0 == ~var10) {
-                    var13_ref_String = ai.field_d;
+                    var13_ref_String = DiskCacheWorker.field_d;
                     boolean decompiledSharedTail1 = (var12 == 0);
                     if (!decompiledSharedTail1) {
                       var14_ref_String = NetworkGameClient.field_n + (String) (var11_ref);
@@ -719,14 +719,14 @@ final class UnitStateEvent extends GameEvent {
               if ((decompiledFrameCompleted0) &&
                 (var19 != 0)) {
                 var9_ref_String = JaggrabDownloader.field_c.field_Nb;
-                MessageDialogContent.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
+                gg.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
                 eb.field_B.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
                 eb.field_B.field_wb = vl.a(mp.field_a, new String[]{var9_ref_String}, 2);
                 var8 = eb.field_B;
               }
             } else {
               var9_ref_String = JaggrabDownloader.field_c.field_Nb;
-              MessageDialogContent.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
+              gg.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
               eb.field_B.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
               eb.field_B.field_wb = vl.a(mp.field_a, new String[]{var9_ref_String}, 2);
               var8 = eb.field_B;
@@ -759,7 +759,7 @@ final class UnitStateEvent extends GameEvent {
             stackIn_186_1 = -11838;
             stackIn_187_2 = (param1) && (!param2) && (io.field_b);
             ((UiComponent) (Object) stackIn_186_0).a(stackIn_186_1, stackIn_187_2);
-            BirthDateInputWidget.field_U.field_c.h(-40);
+            BirthDateInputWidget.field_U.field_c.processTabPresses(-40);
             stackIn_188_0 = null;
           }
           if (stackIn_188_0 != JaggrabDownloader.field_c) {
@@ -861,7 +861,7 @@ final class UnitStateEvent extends GameEvent {
               var5 = var9;
               var6 = param2;
               var7 = param4;
-              var9[var6] = var7 + tq.b(8355711, var9[var6] >> 1);
+              var9[var6] = var7 + ScrollPane.b(8355711, var9[var6] >> 1);
               param2++;
               if (var8 != 0) {
                 return;

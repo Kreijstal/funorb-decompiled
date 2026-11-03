@@ -3,7 +3,7 @@
  */
 final class qi {
     static String field_b;
-    static ua field_a;
+    static DraggableWidget field_a;
     static long field_c;
 
     final static void a(byte param0) {
@@ -32,7 +32,7 @@ final class qi {
           var2 = var11.readUnsignedByte(31365);
           var3 = var11.readUnsignedByte(31365);
           if (var2 == 0) {
-            var4_ref_u = (u) (cp.field_T.c(83));
+            var4_ref_u = (u) (DisplayNamePanel.field_T.c(83));
             if (var4_ref_u == null) {
               ak.a((byte) -119);
               return;
@@ -45,7 +45,7 @@ final class qi {
               var5_int = var13.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var11.readUnsignedByte(31365) << tq.b(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var11.readUnsignedByte(31365) << ScrollPane.b(768, var7 << 8));
             }
             var4_ref_u.unlink(true);
             return;

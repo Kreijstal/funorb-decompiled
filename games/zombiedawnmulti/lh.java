@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lh {
-    private MessageDialogContent[] field_f;
+    private gg[] field_f;
     private int field_k;
     String field_j;
     static UiTheme field_g;
@@ -18,7 +18,7 @@ final class lh {
 
     final boolean a(int param0) {
         int var3;
-        MessageDialogContent var4;
+        gg var4;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         while (this.field_k < this.field_c) {
           var4 = this.field_f[this.field_k];
@@ -134,7 +134,7 @@ final class lh {
         return gh.field_f[param1];
     }
 
-    private final void a(int param0, byte param1, MessageDialogContent param2) {
+    private final void a(int param0, byte param1, gg param2) {
         float var4_float = 0.0f;
         try {
           var4_float = (float)(this.field_k + 1) + (float)param0 / 100.0f;

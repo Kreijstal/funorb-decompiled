@@ -117,7 +117,7 @@ final class lf {
             cm.field_e = param8;
             ok.field_m = param6;
             gj.field_e = param0;
-            dc.field_Hb = param3;
+            TabbedPane.field_Hb = param3;
             jo.field_b = param13;
             rp.field_q = param7;
             lo.field_b = param5;

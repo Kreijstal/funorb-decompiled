@@ -162,7 +162,7 @@ final class ee {
         ui.field_j = null;
         no.c((byte) 75);
         param8 = ih.a(param10, 4, param3, param2, param7, param8, param4);
-        el.a(param9, param13, param12, 2, param8, param0, param6, param2, param5, param11);
+        LabeledChildWidget.a(param9, param13, param12, 2, param8, param0, param6, param2, param5, param11);
         if (!param1) {
           ee.a(-102, true, -123, -91, -93, false, false, -65, false, 82, -99, true, 54, true);
         }

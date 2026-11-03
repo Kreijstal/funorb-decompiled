@@ -8,7 +8,7 @@ final class ra extends IntrusiveNode {
     static int[] field_n;
     static w field_m;
     static String field_g;
-    static oj field_f;
+    static BirthDateEntryPanel field_f;
     static UiComponent field_j;
     boolean field_k;
     static UiTheme field_o;

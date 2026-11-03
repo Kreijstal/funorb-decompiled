@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bf extends IntrusiveNode {
-    static tq field_n;
+    static ScrollPane field_n;
     static Sprite field_f;
     private IntrusiveDeque field_p;
     private int[][] field_k;
@@ -171,7 +171,7 @@ final class bf extends IntrusiveNode {
             }
             if (param1 == 10) {
               var3_int = 0;
-              ua.i(-2);
+              DraggableWidget.i(-2);
             }
             if (var3_int != 0) {
               if (ud.field_ab) {

@@ -165,7 +165,7 @@ final class en extends IOException {
           ImageProducerRasterBuffer.field_k.a((byte) 50, qe.field_q);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.field_Cb = new IntrusiveDeque();
-          tn.field_A = new tq(0L, var17, param1, param7);
+          tn.field_A = new ScrollPane(0L, var17, param1, param7);
           qe.field_q.a((byte) 50, tn.field_A);
           SimEntity.field_z = new UiComponent(0L, param3);
           qe.field_q.a((byte) 50, SimEntity.field_z);
@@ -173,9 +173,9 @@ final class en extends IOException {
           ec.field_b.field_yb = w.field_A;
           SimEntity.field_z.a((byte) 50, ec.field_b);
           SimEntity.field_z.markDescendantsToInheritVisualState(-128);
-          ua.field_E = new UiComponent(0L, (UiComponent) null);
-          ua.field_E.field_ab = var16;
-          SimEntity.field_z.a((byte) 50, ua.field_E);
+          DraggableWidget.field_E = new UiComponent(0L, (UiComponent) null);
+          DraggableWidget.field_E.field_ab = var16;
+          SimEntity.field_z.a((byte) 50, DraggableWidget.field_E);
           la.field_h = new UiComponent[5];
           pf.field_d = new UiComponent[5];
           ij.field_k = new UiComponent[5];
@@ -235,7 +235,7 @@ final class en extends IOException {
             !nh.field_m) {
             return;
           }
-          ra.field_f = new oj(0, 0, 0, 0);
+          ra.field_f = new BirthDateEntryPanel(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

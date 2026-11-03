@@ -5,7 +5,7 @@ final class qe {
     static int field_g;
     private int field_h;
     private int field_m;
-    static cp field_e;
+    static DisplayNamePanel field_e;
     static int[] field_o;
     private boolean field_p;
     static UiComponent field_q;
@@ -119,7 +119,7 @@ final class qe {
           TextWidgetPainter.field_e = fl.a("commonui", "jagex_logo_grey", param2, 11091);
           ui.field_k = pb.a("commonui", param2, -256, "button");
           rj.field_I = cn.a(true, "validation", param2, "commonui");
-          cp.field_H = (BitmapFont) ((Object) vo.a((byte) -46, "commonui", "arezzo12", param0, param2));
+          DisplayNamePanel.field_H = (BitmapFont) ((Object) vo.a((byte) -46, "commonui", "arezzo12", param0, param2));
           ke.field_h = (BitmapFont) ((Object) vo.a((byte) -46, "commonui", "arezzo14", param0, param2));
           ci.field_d = (BitmapFont) ((Object) vo.a((byte) -46, "commonui", "arezzo14bold", param0, param2));
           var17 = new Sprite(param3.a("button.gif", "", false), (java.awt.Component) ((Object) dk.field_Ib));

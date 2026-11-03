@@ -46,19 +46,19 @@ final class ke {
     final static String formatCookieDate(int param0, long param1) {
         int var9 = 0;
         int var9Lifetime1;
-        cp.field_U.setTime(new Date(param1));
-        int var3 = cp.field_U.get(7);
-        int var4 = cp.field_U.get(5);
-        int var5 = cp.field_U.get(2);
-        int var6 = cp.field_U.get(1);
-        int var7 = cp.field_U.get(11);
-        int var8 = cp.field_U.get(12);
+        DisplayNamePanel.field_U.setTime(new Date(param1));
+        int var3 = DisplayNamePanel.field_U.get(7);
+        int var4 = DisplayNamePanel.field_U.get(5);
+        int var5 = DisplayNamePanel.field_U.get(2);
+        int var6 = DisplayNamePanel.field_U.get(1);
+        int var7 = DisplayNamePanel.field_U.get(11);
+        int var8 = DisplayNamePanel.field_U.get(12);
         if (param0 == -29971) {
-          var9 = cp.field_U.get(13);
+          var9 = DisplayNamePanel.field_U.get(13);
           return ud.field_O[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + EmailValidator.field_q[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         field_b = -87;
-        var9Lifetime1 = cp.field_U.get(13);
+        var9Lifetime1 = DisplayNamePanel.field_U.get(13);
         return ud.field_O[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + EmailValidator.field_q[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 

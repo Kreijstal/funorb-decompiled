@@ -111,8 +111,8 @@ final class eo {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         rp.field_l.setBounds(param6, param2, param5, param4, -3344);
-        if (mj.field_Ib != null) {
-          mj.field_Ib.a(-UnitView.field_Y + param0, param6, param3 ^ 77, param1, param0, param6);
+        if (VerticalScrollbar.field_Ib != null) {
+          VerticalScrollbar.field_Ib.a(-UnitView.field_Y + param0, param6, param3 ^ 77, param1, param0, param6);
           if (param3 != -10) {
             eo.a(114, -96, -86, -58, 125, -101, 21);
             return;

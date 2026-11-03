@@ -10,7 +10,7 @@ final class gk {
         if (param0 != 2) {
           field_c = 127;
         }
-        return mj.field_Hb[param1];
+        return VerticalScrollbar.field_Hb[param1];
     }
 
     public static void a(int param0) {

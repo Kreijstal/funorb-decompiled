@@ -276,7 +276,7 @@ final class s {
         if (param0 != 32) {
           return (String) null;
         }
-        if (BirthDateValidator.field_k == ta.field_hb) {
+        if (BirthDateValidator.field_k == ProgressDialog.field_hb) {
           return ih.field_a;
         }
         if (!tg.field_g.d(-107)) {
@@ -320,11 +320,11 @@ final class s {
           LevelData.field_c = new boolean[param0 * 2];
         }
         lj.field_n = 0;
-        ba.field_m = -2147483648;
+        MusicPatchPcmStream.field_m = -2147483648;
         NodeHashTableIterator.field_d = -2147483648;
         var3 = -105 / ((param1 - 6) / 47);
-        ab.field_j = 2147483647;
-        mj.field_Ub = 2147483647;
+        MusicPatchNode.field_j = 2147483647;
+        VerticalScrollbar.field_Ub = 2147483647;
     }
 
     static {

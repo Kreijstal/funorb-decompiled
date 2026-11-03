@@ -51,7 +51,7 @@ abstract class SceneObject extends TertiaryLinkNode {
           }
           wp.b(127);
           if (null != td.field_b &&
-            !wd.field_L.c(-37)) {
+            !MessageDialogContent.field_L.c(-37)) {
             fk.a(td.field_b, true);
             td.field_b = null;
             return;

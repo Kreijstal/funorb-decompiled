@@ -580,14 +580,14 @@ final class rp {
             }
             SimZombie.field_zb = 1;
             var3_ref = var1.readString((byte) -119);
-            ta.field_ob = ((String) (var3_ref)).intern();
+            ProgressDialog.field_ob = ((String) (var3_ref)).intern();
             var4 = var1.readUnsignedByte(31365);
             gi.a((byte) -97, var4);
             return;
           }
           if (ol.field_o == null) {
             ol.field_o = new sc(128);
-            dc.field_Fb = 0;
+            TabbedPane.field_Fb = 0;
           }
           var3_refLifetime1 = var1.readString((byte) -49);
           if (((String) (var3_refLifetime1)).equals("")) {
@@ -605,8 +605,8 @@ final class rp {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new ml();
             ol.field_o.a(-1, var6Lifetime1, (long)tg.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode());
-            fieldTemp$1 = dc.field_Fb;
-            dc.field_Fb = dc.field_Fb + 1;
+            fieldTemp$1 = TabbedPane.field_Fb;
+            TabbedPane.field_Fb = TabbedPane.field_Fb + 1;
             var6Lifetime1.field_Mb = fieldTemp$1;
             ro.field_M.a(var6Lifetime1, false);
           }
@@ -761,7 +761,7 @@ final class rp {
           }
           fieldTemp$1 = this.field_u;
           this.field_u = this.field_u + 1;
-          this.field_o[fieldTemp$1] = (byte)tq.b(255, param0);
+          this.field_o[fieldTemp$1] = (byte)ScrollPane.b(255, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -941,20 +941,20 @@ final class rp {
         int fieldTemp$3 = 0;
         int fieldTemp$0 = this.field_u;
         this.field_u = this.field_u + 1;
-        this.field_o[fieldTemp$0] = (byte)tq.b(255, param1 >> 24);
+        this.field_o[fieldTemp$0] = (byte)ScrollPane.b(255, param1 >> 24);
         int fieldTemp$1 = this.field_u;
         this.field_u = this.field_u + 1;
-        this.field_o[fieldTemp$1] = (byte)tq.b(param1 >> 16, 255);
+        this.field_o[fieldTemp$1] = (byte)ScrollPane.b(param1 >> 16, 255);
         int fieldTemp$2 = this.field_u;
         this.field_u = this.field_u + 1;
-        this.field_o[fieldTemp$2] = (byte)tq.b(255, param1 >> 8);
+        this.field_o[fieldTemp$2] = (byte)ScrollPane.b(255, param1 >> 8);
         if (param0 < 8) {
           return;
         }
         try {
           fieldTemp$3 = this.field_u;
           this.field_u = this.field_u + 1;
-          this.field_o[fieldTemp$3] = (byte)tq.b(255, param1);
+          this.field_o[fieldTemp$3] = (byte)ScrollPane.b(255, param1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rp.N(" + param0 + ',' + param1 + ')');
         }
@@ -988,10 +988,10 @@ final class rp {
         try {
           fieldTemp$0 = this.field_u;
           this.field_u = this.field_u + 1;
-          this.field_o[fieldTemp$0] = (byte)tq.b(param1 >> 8, 255);
+          this.field_o[fieldTemp$0] = (byte)ScrollPane.b(param1 >> 8, 255);
           fieldTemp$1 = this.field_u;
           this.field_u = this.field_u + 1;
-          this.field_o[fieldTemp$1] = (byte)(tq.b(param1, 255) >> 0);
+          this.field_o[fieldTemp$1] = (byte)(ScrollPane.b(param1, 255) >> 0);
           if (param0 != -23) {
             this.field_c = (int[]) null;
           }

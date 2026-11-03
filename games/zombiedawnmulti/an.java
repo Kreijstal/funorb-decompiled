@@ -53,7 +53,7 @@ final class an {
     }
 
     final static void a(int param0, boolean param1) {
-        oj var2 = null;
+        BirthDateEntryPanel var2 = null;
         ImageProducerRasterBuffer.field_k.c(param1, -1);
         if (param0 == 1) {
           var2 = ra.field_f;
@@ -68,7 +68,7 @@ final class an {
         if (param0 != 1) {
           return (hf) null;
         }
-        return new hf(MessageDialogContent.a(91), MusicPatch.c(128));
+        return new hf(gg.a(91), MusicPatch.c(128));
     }
 
     an(int param0, ResourceArchive param1, ResourceArchive param2, dr param3) {

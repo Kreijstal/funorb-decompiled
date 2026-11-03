@@ -273,7 +273,7 @@ final class no extends UiComponent {
         UiComponent var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new UiComponent(0L, param1, le.field_I.toUpperCase());
+          var17 = new UiComponent(0L, param1, ProgressBarWidget.field_I.toUpperCase());
           var17.field_R = 1;
           this.field_Ib = new UiComponent(0L, param2);
           var8 = new UiComponent(0L, param3);

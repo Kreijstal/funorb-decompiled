@@ -185,7 +185,7 @@ final class mg extends SceneObject {
           }
           if (ki.field_h == null) {
             if (UiTheme.field_j) {
-              if (he.b((byte) -22) > 30000L) {
+              if (LinkButtonPainter.b((byte) -22) > 30000L) {
                 ol.field_q = aj.field_l;
               } else {
                 ol.field_q = CipherPacketBuffer.field_w;
@@ -283,14 +283,14 @@ final class mg extends SceneObject {
         }
         for (var4Lifetime2 = 0; hp.field_j[0].length > var4Lifetime2; var4Lifetime2++) {
           var5Lifetime1 = 16 * var4Lifetime2;
-          hp.field_j[0][var4Lifetime2] = cr.b(tq.b(65410, var5Lifetime1 << 8), tq.b(var5Lifetime1, 255));
+          hp.field_j[0][var4Lifetime2] = cr.b(ScrollPane.b(65410, var5Lifetime1 << 8), ScrollPane.b(var5Lifetime1, 255));
           hp.field_j[1][var4Lifetime2] = cr.b(var5Lifetime1 << 8, var5Lifetime1 << 16);
-          hp.field_j[2][var4Lifetime2] = cr.b(tq.b(65493, var5Lifetime1 << 8), tq.b(255, var5Lifetime1 / 2));
+          hp.field_j[2][var4Lifetime2] = cr.b(ScrollPane.b(65493, var5Lifetime1 << 8), ScrollPane.b(255, var5Lifetime1 / 2));
           hp.field_j[3][var4Lifetime2] = var5Lifetime1 * 65793;
-          hp.field_j[4][var4Lifetime2] = cr.b(tq.b(var5Lifetime1, 771752446) << 7, var5Lifetime1 << 16);
+          hp.field_j[4][var4Lifetime2] = cr.b(ScrollPane.b(var5Lifetime1, 771752446) << 7, var5Lifetime1 << 16);
           hp.field_j[5][var4Lifetime2] = var5Lifetime1 << 16;
           hp.field_j[6][var4Lifetime2] = var5Lifetime1 << 16;
-          hp.field_j[7][var4Lifetime2] = cr.b(var5Lifetime1, cr.b(tq.b(var5Lifetime1 << 6, 65326), tq.b(var5Lifetime1, 1477444604) << 14));
+          hp.field_j[7][var4Lifetime2] = cr.b(var5Lifetime1, cr.b(ScrollPane.b(var5Lifetime1 << 6, 65326), ScrollPane.b(var5Lifetime1, 1477444604) << 14));
         }
         return;
     }

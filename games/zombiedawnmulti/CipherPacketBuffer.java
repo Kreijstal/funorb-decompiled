@@ -74,7 +74,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
           var4 = var15.readUnsignedByte(31365);
           if (var4 != 0) {
-            kk.field_v[0] = ta.field_lb;
+            kk.field_v[0] = ProgressDialog.field_lb;
             var5 = var3.field_p;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               kk.field_v[var6_int] = var13.readString((byte) -116);
@@ -260,7 +260,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           field_r = (UiComponent) null;
         }
         if (param0 == 2) {
-          var2 = ba.field_q;
+          var2 = MusicPatchPcmStream.field_q;
         }
         return var2;
     }

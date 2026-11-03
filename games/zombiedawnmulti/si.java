@@ -112,7 +112,7 @@ final class si extends MenuScreen {
               this.field_t > 0) {
               stackIn_14_1 = CipherPacketBuffer.field_s;
             } else {
-              stackIn_14_1 = wk.field_L;
+              stackIn_14_1 = DateInputWidget.field_L;
             }
             this.field_j = stackIn_14_1;
           }
@@ -217,7 +217,7 @@ final class si extends MenuScreen {
           qe.a(param4, -8995, param3, param2);
           dg.i(4);
           SceneObject.field_B = mp.field_b;
-          ta.field_hb = mp.field_b;
+          ProgressDialog.field_hb = mp.field_b;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "si.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -330,7 +330,7 @@ final class si extends MenuScreen {
     }
 
     si(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
-        super(param0, param1, param2, param3, param4, param5, wk.field_L);
+        super(param0, param1, param2, param3, param4, param5, DateInputWidget.field_L);
         int var8_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -485,7 +485,7 @@ final class si extends MenuScreen {
             return;
           }
           MatchingTextValidator.field_w.a(BirthDateValidator.field_o, 90, 134, 16777215, 1, var6);
-          MatchingTextValidator.field_w.a(qm.field_N, 478, 134, 16777215, 1, var6);
+          MatchingTextValidator.field_w.a(LoginForm.field_N, 478, 134, 16777215, 1, var6);
           var8_int = 555;
           if (this.field_z.field_i) {
             MatchingTextValidator.field_w.a(IntrusiveDeque.field_d, var8_int, 122, 16777215, 1, var6);
@@ -584,9 +584,9 @@ final class si extends MenuScreen {
             var21 = PortalEntryEvent.field_m.field_D[var13][0];
             var22 = PortalEntryEvent.field_m.field_D[var13][1];
             var23 = 4;
-            var24 = PowerupEvent.field_m / MessageDialogContent.field_b[var23];
-            var24 = var24 % MessageDialogContent.field_j[var23];
-            var24 = var24 + MessageDialogContent.field_l[var23];
+            var24 = PowerupEvent.field_m / gg.field_b[var23];
+            var24 = var24 % gg.field_j[var23];
+            var24 = var24 + gg.field_l[var23];
             am.a(var24, var22, var11, 1, var21).c(8, var10 - 11, var6);
             var25 = am.a(var24, var22, -var11 + 1, 1, var21);
             var25.flipHorizontal();
@@ -734,7 +734,7 @@ final class si extends MenuScreen {
               }
               ((BinaryBitmapFont) (Object) stackIn_144_0).drawLeftAlpha(stackIn_144_1, stackIn_144_2, stackIn_144_3, stackIn_145_4, 1, var6Lifetime1);
             } else {
-              wk.field_J.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
+              DateInputWidget.field_J.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
               hn.field_i.a(var11Lifetime1Lifetime1 * 209 + 91, 280, var6Lifetime1);
             }
           }

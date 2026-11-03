@@ -115,11 +115,11 @@ final class iq {
             io.field_g = false;
             return;
           }
-          if (21 != ai.field_b) {
-            if (19 != ai.field_b &&
-              ai.field_b != 20) {
+          if (21 != DiskCacheWorker.field_b) {
+            if (19 != DiskCacheWorker.field_b &&
+              DiskCacheWorker.field_b != 20) {
               if (-1 == param0) {
-                ai.field_b = -1;
+                DiskCacheWorker.field_b = -1;
                 io.field_g = false;
                 ml.field_Jb = -1;
                 ArmedHumanView.field_rb = -1;
@@ -274,18 +274,18 @@ final class iq {
           var3_int = 0;
           var4 = ce.field_k;
           while (var3_int < TextWidgetPainter.field_m.length) {
-            var5 = wd.field_Q[var3_int];
+            var5 = MessageDialogContent.field_Q[var3_int];
             if (var5 < 0) {
               var4 = var4 + WidgetContainer.field_C;
             } else {
               var6 = hn.a(0, TextWidgetPainter.field_m[var3_int], true);
               var7 = am.field_c - (var6 >> 1);
               var4 = var4 + ResizableDialog.field_bb;
-              if (IntrusiveDeque.a(param0, var7 - no.field_Gb, param2, var6 + (no.field_Gb << 1), var4, (wk.field_G << 1) + me.field_h, -18)) {
+              if (IntrusiveDeque.a(param0, var7 - no.field_Gb, param2, var6 + (no.field_Gb << 1), var4, (DateInputWidget.field_G << 1) + me.field_h, -18)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (ResizableDialog.field_bb + (wk.field_G << 1) + me.field_h);
+              var4 = var4 + (ResizableDialog.field_bb + (DateInputWidget.field_G << 1) + me.field_h);
             }
             var3_int++;
           }

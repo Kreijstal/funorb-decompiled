@@ -46,19 +46,19 @@ final class lp extends IntrusiveNode {
             return;
           }
           rp.field_l.a(-11838, param2);
-          var4 = mj.field_Ib.k(-26899) ? 1 : 0;
+          var4 = VerticalScrollbar.field_Ib.k(-26899) ? 1 : 0;
           if (0 != kd.field_b &&
             var4 == 0) {
             param2 = false;
             ub.n(33423425);
           }
           if (param2) {
-            mj.field_Ib.b(param3, 255, param1);
+            VerticalScrollbar.field_Ib.b(param3, 255, param1);
           }
           if (var4 != 0) {
             rp.field_l.a(-11838, param2);
           }
-          var5 = mj.field_Ib.i(param0 ^ 29767) + mj.field_Ib.field_w;
+          var5 = VerticalScrollbar.field_Ib.i(param0 ^ 29767) + VerticalScrollbar.field_Ib.field_w;
           if (var5 > 640) {
             UnitView.field_Y = UnitView.field_Y + 5;
             return;
@@ -75,18 +75,18 @@ final class lp extends IntrusiveNode {
           return;
         }
         rp.field_l.a(-11838, param2);
-        var4Lifetime1 = mj.field_Ib.k(-26899) ? 1 : 0;
+        var4Lifetime1 = VerticalScrollbar.field_Ib.k(-26899) ? 1 : 0;
         if (0 != kd.field_b &&
           var4Lifetime1 == 0) {
           param2 = false;
           ub.n(33423425);
         }
         if (param2) {
-          mj.field_Ib.b(param3, 255, param1);
+          VerticalScrollbar.field_Ib.b(param3, 255, param1);
           if (var4Lifetime1 != 0) {
             rp.field_l.a(-11838, param2);
           }
-          var5Lifetime1 = mj.field_Ib.i(param0 ^ 29767) + mj.field_Ib.field_w;
+          var5Lifetime1 = VerticalScrollbar.field_Ib.i(param0 ^ 29767) + VerticalScrollbar.field_Ib.field_w;
           if (var5Lifetime1 > 640) {
             UnitView.field_Y = UnitView.field_Y + 5;
             return;
@@ -101,7 +101,7 @@ final class lp extends IntrusiveNode {
           return;
         }
         if (var4Lifetime1 == 0) {
-          var5Lifetime2 = mj.field_Ib.i(param0 ^ 29767) + mj.field_Ib.field_w;
+          var5Lifetime2 = VerticalScrollbar.field_Ib.i(param0 ^ 29767) + VerticalScrollbar.field_Ib.field_w;
           if (var5Lifetime2 > 640) {
             UnitView.field_Y = UnitView.field_Y + 5;
             return;
@@ -114,7 +114,7 @@ final class lp extends IntrusiveNode {
           return;
         }
         rp.field_l.a(-11838, param2);
-        var5Lifetime3 = mj.field_Ib.i(param0 ^ 29767) + mj.field_Ib.field_w;
+        var5Lifetime3 = VerticalScrollbar.field_Ib.i(param0 ^ 29767) + VerticalScrollbar.field_Ib.field_w;
         if (var5Lifetime3 > 640) {
           UnitView.field_Y = UnitView.field_Y + 5;
         } else {

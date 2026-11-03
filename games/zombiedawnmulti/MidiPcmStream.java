@@ -26,7 +26,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_K;
     private int[] field_v;
     private MidiFileReader field_p;
-    private ba field_P;
+    private MusicPatchPcmStream field_P;
     private long field_l;
     private boolean field_L;
     private long field_A;
@@ -52,7 +52,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           dd.field_f[param1] = param2;
           dd.field_f[param1][dd.field_f[param1].length - 2].bindAsRenderTarget();
-          if (!he.field_a) {
+          if (!LinkButtonPainter.field_a) {
             SoftwareRasterizer.clear();
           }
           if (param0) {
@@ -345,7 +345,7 @@ final class MidiPcmStream extends PcmStream {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (var5 < 16) {
-          this.field_z[var5] = tq.b(this.field_j[var5], -128);
+          this.field_z[var5] = ScrollPane.b(this.field_j[var5], -128);
           var5++;
         }
     }
@@ -925,44 +925,44 @@ final class MidiPcmStream extends PcmStream {
         var5Lifetime4 = param1 >> 8 & 127;
         var6Lifetime3 = (param1 & 8361407) >> 16;
         if (0 == var5Lifetime4) {
-          this.field_z[var4Lifetime4] = tq.b(this.field_z[var4Lifetime4], -2080769) + (var6Lifetime3 << 14);
+          this.field_z[var4Lifetime4] = ScrollPane.b(this.field_z[var4Lifetime4], -2080769) + (var6Lifetime3 << 14);
         }
         if (var5Lifetime4 == 32) {
-          this.field_z[var4Lifetime4] = (var6Lifetime3 << 7) + tq.b(this.field_z[var4Lifetime4], -16257);
+          this.field_z[var4Lifetime4] = (var6Lifetime3 << 7) + ScrollPane.b(this.field_z[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 1) {
-          this.field_K[var4Lifetime4] = (var6Lifetime3 << 7) + tq.b(this.field_K[var4Lifetime4], -16257);
+          this.field_K[var4Lifetime4] = (var6Lifetime3 << 7) + ScrollPane.b(this.field_K[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 33) {
-          this.field_K[var4Lifetime4] = var6Lifetime3 + tq.b(this.field_K[var4Lifetime4], -128);
+          this.field_K[var4Lifetime4] = var6Lifetime3 + ScrollPane.b(this.field_K[var4Lifetime4], -128);
         }
         if (5 == var5Lifetime4) {
-          this.field_k[var4Lifetime4] = (var6Lifetime3 << 7) + tq.b(-16257, this.field_k[var4Lifetime4]);
+          this.field_k[var4Lifetime4] = (var6Lifetime3 << 7) + ScrollPane.b(-16257, this.field_k[var4Lifetime4]);
         }
         if (var5Lifetime4 == 37) {
-          this.field_k[var4Lifetime4] = tq.b(-128, this.field_k[var4Lifetime4]) + var6Lifetime3;
+          this.field_k[var4Lifetime4] = ScrollPane.b(-128, this.field_k[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 7) {
-          this.field_E[var4Lifetime4] = tq.b(-16257, this.field_E[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.field_E[var4Lifetime4] = ScrollPane.b(-16257, this.field_E[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 39) {
-          this.field_E[var4Lifetime4] = var6Lifetime3 + tq.b(-128, this.field_E[var4Lifetime4]);
+          this.field_E[var4Lifetime4] = var6Lifetime3 + ScrollPane.b(-128, this.field_E[var4Lifetime4]);
         }
         if (var5Lifetime4 == 10) {
-          this.field_J[var4Lifetime4] = (var6Lifetime3 << 7) + tq.b(this.field_J[var4Lifetime4], -16257);
+          this.field_J[var4Lifetime4] = (var6Lifetime3 << 7) + ScrollPane.b(this.field_J[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 42) {
-          this.field_J[var4Lifetime4] = var6Lifetime3 + tq.b(-128, this.field_J[var4Lifetime4]);
+          this.field_J[var4Lifetime4] = var6Lifetime3 + ScrollPane.b(-128, this.field_J[var4Lifetime4]);
         }
         if (var5Lifetime4 == 11) {
-          this.field_v[var4Lifetime4] = (var6Lifetime3 << 7) + tq.b(-16257, this.field_v[var4Lifetime4]);
+          this.field_v[var4Lifetime4] = (var6Lifetime3 << 7) + ScrollPane.b(-16257, this.field_v[var4Lifetime4]);
         }
         if (43 == var5Lifetime4) {
-          this.field_v[var4Lifetime4] = var6Lifetime3 + tq.b(this.field_v[var4Lifetime4], -128);
+          this.field_v[var4Lifetime4] = var6Lifetime3 + ScrollPane.b(this.field_v[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 64) {
           if (64 > var6Lifetime3) {
-            this.field_H[var4Lifetime4] = tq.b(this.field_H[var4Lifetime4], -2);
+            this.field_H[var4Lifetime4] = ScrollPane.b(this.field_H[var4Lifetime4], -2);
           } else {
             this.field_H[var4Lifetime4] = cr.b(this.field_H[var4Lifetime4], 1);
           }
@@ -970,22 +970,22 @@ final class MidiPcmStream extends PcmStream {
         if (var5Lifetime4 == 65) {
           if (64 > var6Lifetime3) {
             this.b(var4Lifetime4, (byte) -83);
-            this.field_H[var4Lifetime4] = tq.b(this.field_H[var4Lifetime4], -3);
+            this.field_H[var4Lifetime4] = ScrollPane.b(this.field_H[var4Lifetime4], -3);
           } else {
             this.field_H[var4Lifetime4] = cr.b(this.field_H[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
-          this.field_w[var4Lifetime4] = (var6Lifetime3 << 7) + tq.b(this.field_w[var4Lifetime4], 127);
+          this.field_w[var4Lifetime4] = (var6Lifetime3 << 7) + ScrollPane.b(this.field_w[var4Lifetime4], 127);
         }
         if (98 == var5Lifetime4) {
-          this.field_w[var4Lifetime4] = tq.b(16256, this.field_w[var4Lifetime4]) + var6Lifetime3;
+          this.field_w[var4Lifetime4] = ScrollPane.b(16256, this.field_w[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 101) {
-          this.field_w[var4Lifetime4] = (var6Lifetime3 << 7) + (tq.b(127, this.field_w[var4Lifetime4]) + 16384);
+          this.field_w[var4Lifetime4] = (var6Lifetime3 << 7) + (ScrollPane.b(127, this.field_w[var4Lifetime4]) + 16384);
         }
         if (var5Lifetime4 == 100) {
-          this.field_w[var4Lifetime4] = 16384 + (tq.b(this.field_w[var4Lifetime4], 16256) + var6Lifetime3);
+          this.field_w[var4Lifetime4] = 16384 + (ScrollPane.b(this.field_w[var4Lifetime4], 16256) + var6Lifetime3);
         }
         if (var5Lifetime4 == 120) {
           this.c(var4Lifetime4, 0);
@@ -999,27 +999,27 @@ final class MidiPcmStream extends PcmStream {
         if (var5Lifetime4 == 6) {
           var7 = this.field_w[var4Lifetime4];
           if (var7 == 16384) {
-            this.field_D[var4Lifetime4] = tq.b(this.field_D[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+            this.field_D[var4Lifetime4] = ScrollPane.b(this.field_D[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.field_w[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.field_D[var4Lifetime4] = var6Lifetime3 + tq.b(this.field_D[var4Lifetime4], -128);
+            this.field_D[var4Lifetime4] = var6Lifetime3 + ScrollPane.b(this.field_D[var4Lifetime4], -128);
           }
         }
         if (var5Lifetime4 == 16) {
-          this.field_y[var4Lifetime4] = tq.b(-16257, this.field_y[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.field_y[var4Lifetime4] = ScrollPane.b(-16257, this.field_y[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 48) {
-          this.field_y[var4Lifetime4] = tq.b(-128, this.field_y[var4Lifetime4]) + var6Lifetime3;
+          this.field_y[var4Lifetime4] = ScrollPane.b(-128, this.field_y[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 81) {
           if (var6Lifetime3 >= 64) {
             this.field_H[var4Lifetime4] = cr.b(this.field_H[var4Lifetime4], 4);
           } else {
             this.b(param0 - 24973, var4Lifetime4);
-            this.field_H[var4Lifetime4] = tq.b(this.field_H[var4Lifetime4], -5);
+            this.field_H[var4Lifetime4] = ScrollPane.b(this.field_H[var4Lifetime4], -5);
           }
         }
         if (var5Lifetime4 == 17) {
@@ -1323,7 +1323,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_y[param1] = 0;
           this.b(15, param1, 8192);
           if (param0 <= 65) {
-            this.field_P = (ba) null;
+            this.field_P = (MusicPatchPcmStream) null;
           }
         }
     }
@@ -1333,7 +1333,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_C = (int[]) null;
         }
         this.field_j[param2] = param0;
-        this.field_z[param2] = tq.b(-128, param0);
+        this.field_z[param2] = ScrollPane.b(-128, param0);
         this.e(-13961, param0, param2);
     }
 
@@ -1359,7 +1359,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_u = new int[16];
         this.field_K = new int[16];
         this.field_p = new MidiFileReader();
-        this.field_P = new ba(this);
+        this.field_P = new MusicPatchPcmStream(this);
         this.field_G = new f(128);
         this.a(256, -1, false);
         this.b(-1, true);

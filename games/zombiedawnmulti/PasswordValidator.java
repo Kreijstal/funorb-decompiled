@@ -75,7 +75,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_22_0;
           }
           if (a.a(var5, var6, (byte) -86)) {
-            stackIn_26_0 = tq.field_Hb;
+            stackIn_26_0 = ScrollPane.field_Hb;
             return stackIn_26_0;
           }
           if (!PasswordValidator.a(101, var6, var5)) {

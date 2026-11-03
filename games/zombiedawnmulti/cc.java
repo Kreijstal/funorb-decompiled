@@ -36,7 +36,7 @@ final class cc {
           iq.field_c = null;
           RandomAccessCacheFile.field_g = param2;
           am.field_a = param0;
-          ab.field_k = param6;
+          MusicPatchNode.field_k = param6;
           SceneObject.field_B = BirthDateValidator.field_k;
           rj.field_J = param3;
           IntrusiveDequeCursor.field_j = param1;

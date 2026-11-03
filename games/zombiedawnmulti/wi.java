@@ -59,9 +59,9 @@ final class wi extends IntrusiveNode {
           return;
         }
         try {
-          mj.field_Ib = param1;
+          VerticalScrollbar.field_Ib = param1;
           rp.field_l.field_Cb.e(-30986);
-          rp.field_l.a((byte) 50, mj.field_Ib);
+          rp.field_l.a((byte) 50, VerticalScrollbar.field_Ib);
           ee.field_b = true;
           if (param0 != 4) {
             wi.a(-50);

@@ -13,9 +13,9 @@ final class vi {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, tq param3, boolean param4) {
+    final static void a(int param0, int param1, byte param2, ScrollPane param3, boolean param4) {
         int var27_int = 0;
-        tq stackIn_48_0;
+        ScrollPane stackIn_48_0;
         int stackIn_48_1;
         boolean stackIn_48_2;
         int stackIn_48_3;
@@ -67,7 +67,7 @@ final class vi {
         String var30_ref = null;
         int var30_int = 0;
         int var31 = 0;
-        tq var32 = null;
+        ScrollPane var32 = null;
         String var33 = null;
         String var34 = null;
         String var35 = null;
@@ -137,12 +137,12 @@ final class vi {
               }
             }
           }
-          stackIn_48_0 = (tq) (param3);
+          stackIn_48_0 = (ScrollPane) (param3);
           stackIn_48_1 = 2;
           stackIn_48_2 = param4;
           stackIn_48_3 = (2 + jk.field_f) * 2;
           stackIn_49_4 = (vc.field_d == param3);
-          stackIn_52_0 = (!((tq) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_49_4, 4 * (2 + jk.field_f) * param0, param2 ^ -126)) ? 0 : 1;
+          stackIn_52_0 = (!((ScrollPane) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_49_4, 4 * (2 + jk.field_f) * param0, param2 ^ -126)) ? 0 : 1;
           var9Lifetime1 = stackIn_52_0;
           var10 = param3.field_Gb.field_Cb;
           var11 = null;
@@ -298,7 +298,7 @@ final class vi {
               }
               var19 = var19 + jk.field_f;
             }
-            var23 = ua.a((byte) -61, var12.field_Fb, var20);
+            var23 = DraggableWidget.a((byte) -61, var12.field_Fb, var20);
             var24 = var23;
             var30 = var24;
             var25 = var30;
@@ -472,7 +472,7 @@ final class vi {
                 if (bf.field_n == param3 &&
                   !hl.b(0)) {
                   var27 = JaggrabDownloader.field_c.field_Nb;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + vl.a(mj.field_Ob, new String[]{var27}, param2 - 43);
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + vl.a(VerticalScrollbar.field_Ob, new String[]{var27}, param2 - 43);
                 }
                 ui.field_j = (String) (var24Lifetime2);
               }
@@ -481,8 +481,8 @@ final class vi {
             var12 = (dm) (var10.b(6));
           }
           if (param2 != 45) {
-            var32 = (tq) null;
-            vi.a(80, -48, (byte) -35, (tq) null, false);
+            var32 = (ScrollPane) null;
+            vi.a(80, -48, (byte) -35, (ScrollPane) null, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

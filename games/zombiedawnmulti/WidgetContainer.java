@@ -113,7 +113,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
+    final void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var7 = null;
         UiWidget var8 = null;
@@ -133,7 +133,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var8 = (UiWidget) (var7.c(-3));
           while (var8 != null) {
             if (var8.b(4)) {
-              var8.a(param0, param1, param2 + this.field_i, param3, true, param5 + this.field_y);
+              var8.handlePointerRelease(param0, param1, param2 + this.field_i, param3, true, param5 + this.field_y);
               var8 = (UiWidget) (var7.a((byte) -80));
               continue;
             }

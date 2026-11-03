@@ -89,7 +89,7 @@ final class lk extends SceneObject {
               if (!io.a(var3_int, var4, (byte) -112, param1)) {
                 return;
               }
-              if (!he.field_a &&
+              if (!LinkButtonPainter.field_a &&
                 PowerupButton.field_e.navigation.field_k[this.getY(82) / 24][this.getX(-95) / 24]) {
                 return;
               }
@@ -145,7 +145,7 @@ final class lk extends SceneObject {
           }
           nb.field_a.a(hj.field_c, (byte) -27, nk.field_s, true);
           nb.field_a.h((byte) -104);
-          while (ba.c(-1)) {
+          while (MusicPatchPcmStream.c(-1)) {
             nb.field_a.a(0, pn.field_d, InfectionEvent.field_p);
           }
           if (-1 != jk.field_j) {
@@ -158,7 +158,7 @@ final class lk extends SceneObject {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (ta.field_hb == BirthDateValidator.field_k) {
+          if (ProgressDialog.field_hb == BirthDateValidator.field_k) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }

@@ -4,7 +4,7 @@
 final class rn {
     static Sprite[] field_a;
     static FullscreenFocusCanvas field_f;
-    static ai field_d;
+    static DiskCacheWorker field_d;
     static ResourceArchive field_e;
     static String field_g;
     static String field_b;

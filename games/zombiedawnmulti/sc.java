@@ -16,7 +16,7 @@ final class sc {
 
     final static void a(int param0, Sprite[] param1, String param2, boolean param3, int param4, int param5, int param6, BitmapFont param7, int param8, byte param9, int param10, int param11, int param12, boolean param13, Sprite[] param14) {
         try {
-          aj.a(qf.field_c, param8, param4, param0, param5, param10, kk.field_x, param7, param0, param6, SecondaryNodeDeque.field_a, param12, new pd(param14), param12, new pd(param1), param7, ua.field_N, ic.field_g, IndexedSpriteState.field_c, (byte) 70);
+          aj.a(qf.field_c, param8, param4, param0, param5, param10, kk.field_x, param7, param0, param6, SecondaryNodeDeque.field_a, param12, new pd(param14), param12, new pd(param1), param7, DraggableWidget.field_N, ic.field_g, IndexedSpriteState.field_c, (byte) 70);
           gk.a(param13, 2, param2, param11, param3);
           if (param9 != -103) {
             field_a = true;
@@ -200,7 +200,7 @@ final class sc {
     final static void d(byte param0) {
         if (NavigationGrid.field_m != null) {
           ec.field_b = NavigationGrid.field_m;
-          ua.field_E = ke.field_j;
+          DraggableWidget.field_E = ke.field_j;
           ec.field_b.field_ob = -1;
           NavigationGrid.field_m = null;
           ec.field_b.field_xb = -1;

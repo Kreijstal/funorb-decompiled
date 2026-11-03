@@ -52,7 +52,7 @@ class IntrusiveNode {
         if (cr.a((byte) 27)) {
           param0 = false;
         }
-        MessageDialogContent.a(124, param0);
+        gg.a(124, param0);
         TextWidgetPainter.b((byte) 117);
         if (param1 != 2) {
           field_a = -119;

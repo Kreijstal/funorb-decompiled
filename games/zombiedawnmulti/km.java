@@ -29,7 +29,7 @@ final class km extends HotspotTextWidget {
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         var6 = this.field_Y.getDebouncedValidationState(102);
         if (var6 != PortalView.field_H &&
-          var6 != ua.field_I) {
+          var6 != DraggableWidget.field_I) {
           var5 = this.field_Y.getDebouncedValidationMessage(-120);
           if (var5 == null) {
             var5 = this.field_bb;
@@ -72,7 +72,7 @@ final class km extends HotspotTextWidget {
           this.field_Z.drawAdditive(var9 - (var18.fullWidth >> 1), var10 - var18.field_u, 256);
           return;
         }
-        if (ua.field_I != var6Lifetime1) {
+        if (DraggableWidget.field_I != var6Lifetime1) {
           if (jq.field_b == var6Lifetime1) {
             var15 = rj.field_I[2];
             var15.drawAdditive(var9, var10 - (var15.height >> 1), 256);
@@ -114,15 +114,15 @@ final class km extends HotspotTextWidget {
         int var2_int = 0;
         IntrusiveNode var3 = null;
         int var4 = 0;
-        ab var5 = null;
+        MusicPatchNode var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var5 = (ab) (ig.field_a.c(92));
+          var5 = (MusicPatchNode) (ig.field_a.c(92));
           while (var5 != null) {
             ih.a((byte) 99, var5, param0);
-            var5 = (ab) (ig.field_a.b(6));
+            var5 = (MusicPatchNode) (ig.field_a.b(6));
           }
           var2_int = -37 / ((-63 - param1) / 58);
           var3 = UnitStateEvent.field_j.c(48);
@@ -164,8 +164,8 @@ final class km extends HotspotTextWidget {
         UiComponent var3 = null;
         try {
           SimUnit.field_T = fl.a("basic", "display_name_changed", param0, 11091);
-          eg.field_B = new cd(0L, oj.field_Q, iq.field_a, dg.field_I);
-          UsernameSuggestionsPanel.field_L = new cd(0L, oj.field_Q, kg.field_i, qh.field_d);
+          eg.field_B = new ScrollPaneWithFooter(0L, BirthDateEntryPanel.field_Q, iq.field_a, dg.field_I);
+          UsernameSuggestionsPanel.field_L = new ScrollPaneWithFooter(0L, BirthDateEntryPanel.field_Q, kg.field_i, qh.field_d);
           SimUnit.field_O = new UiComponent(0L, (UiComponent) null);
           dp.field_b = new UiComponent(0L, vo.field_m);
           dp.field_b.field_R = 1;

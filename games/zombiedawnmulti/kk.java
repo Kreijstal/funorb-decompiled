@@ -20,10 +20,10 @@ abstract class kk extends DualLinkNode {
           bh.field_a = new PcmStreamMixer();
           DualLinkDeque.field_d = param6 * 1000 / param0;
           CipherPacketBuffer.field_u.setSourceStream(bh.field_a);
-          wd.field_L = param7;
-          wd.field_L.a(uk.field_S, (byte) 116);
+          MessageDialogContent.field_L = param7;
+          MessageDialogContent.field_L.a(uk.field_S, (byte) 116);
           int var8_int = 37 / ((param3 - 49) / 49);
-          rm.field_b.setSourceStream(wd.field_L);
+          rm.field_b.setSourceStream(MessageDialogContent.field_L);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }

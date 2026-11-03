@@ -122,15 +122,15 @@ final class IterableNodeHashTable implements Iterable {
         ec.field_b.field_vb = param4;
         ec.field_b.field_wb = param3;
         ec.field_b.field_M = param1;
-        ec.field_b.field_zb = ec.field_b.field_zb + ua.field_E.field_zb;
-        ua.field_E.field_x = ua.field_E.field_x + ua.field_E.field_zb;
+        ec.field_b.field_zb = ec.field_b.field_zb + DraggableWidget.field_E.field_zb;
+        DraggableWidget.field_E.field_x = DraggableWidget.field_E.field_x + DraggableWidget.field_E.field_zb;
         if (param0 != 6) {
           return;
         }
         try {
-          ua.field_E.field_zb = param2;
-          ec.field_b.field_zb = ec.field_b.field_zb - ua.field_E.field_zb;
-          ua.field_E.field_x = ua.field_E.field_x - ua.field_E.field_zb;
+          DraggableWidget.field_E.field_zb = param2;
+          ec.field_b.field_zb = ec.field_b.field_zb - DraggableWidget.field_E.field_zb;
+          DraggableWidget.field_E.field_x = DraggableWidget.field_E.field_x - DraggableWidget.field_E.field_zb;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

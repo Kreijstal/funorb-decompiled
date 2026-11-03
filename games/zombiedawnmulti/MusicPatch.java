@@ -335,7 +335,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.a(0);
             }
-            this.field_g[var23] = (short)(this.field_g[var23] + (tq.b(2, -1 + var22) << 14));
+            this.field_g[var23] = (short)(this.field_g[var23] + (ScrollPane.b(2, -1 + var22) << 14));
             var20Lifetime2--;
             this.field_r[var23] = var22;
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class le extends UiWidget {
+final class ProgressBarWidget extends UiWidget {
     static String field_I;
     int field_B;
     private int field_N;
@@ -85,7 +85,7 @@ final class le extends UiWidget {
         return (1 << param0 & pb.field_d) != 0 ? true : false;
     }
 
-    private final Sprite b(int param0, int param1, int param2) {
+    private final Sprite buildStripeSprite(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -122,7 +122,7 @@ final class le extends UiWidget {
         return var14;
     }
 
-    private final Sprite g(int param0) {
+    private final Sprite buildEndMask(int param0) {
         int var4 = 0;
         double var6 = 0.0;
         int var8 = 0;
@@ -152,14 +152,14 @@ final class le extends UiWidget {
         field_G = null;
         field_I = null;
         if (param0 != 0) {
-          le.$cfr$intArgs$b$c86821474a52(67, 68);
+          ProgressBarWidget.$cfr$intArgs$b$c86821474a52(67, 68);
         }
         field_P = null;
     }
 
     final void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setWidgetBounds(param0, param1, param2, param3, param4);
-        this.f(-506198655);
+        this.rebuildSprites(-506198655);
     }
 
     final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
@@ -202,15 +202,15 @@ final class le extends UiWidget {
           return;
         }
         int var6 = this.field_i + param1;
-        this.a((byte) 116, this.field_F[0], var5, var6);
+        this.drawRoundedStripes((byte) 116, this.field_F[0], var5, var6);
         if (this.field_B < 65536) {
           Camera.a(var5 + (this.field_n * this.field_B >> 16), this.field_w + var6, (byte) 105, this.field_n + var5, var6);
-          this.a((byte) 116, this.field_F[1], var5, var6);
+          this.drawRoundedStripes((byte) 116, this.field_F[1], var5, var6);
           ql.a(true);
         }
     }
 
-    le(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    ProgressBarWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this(param0, param1, param2, param3, param4, param5, param6, (param5 & 16711422) >> 1, 8355711 & param6 >> 1);
     }
 
@@ -220,10 +220,10 @@ final class le extends UiWidget {
         this.field_E = param1;
         this.field_N = param0;
         this.field_K = param0 >> 1 & 8355711;
-        this.f(-506198655);
+        this.rebuildSprites(-506198655);
     }
 
-    private final void a(byte param0, Sprite param1, int param2, int param3) {
+    private final void drawRoundedStripes(byte param0, Sprite param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -278,7 +278,7 @@ final class le extends UiWidget {
         }
     }
 
-    private le(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private ProgressBarWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.field_E = param5;
         this.field_N = param6;
         this.field_H = param7;
@@ -287,9 +287,9 @@ final class le extends UiWidget {
         this.setWidgetBounds(param0, param1, 28972, param2, param3);
     }
 
-    private final void f(int param0) {
-        this.field_F = new Sprite[]{this.b(param0 + 489486719, this.field_N, this.field_E), this.b(-16711936, this.field_K, this.field_H)};
-        this.field_M = this.g(param0 ^ -506198544);
+    private final void rebuildSprites(int param0) {
+        this.field_F = new Sprite[]{this.buildStripeSprite(param0 + 489486719, this.field_N, this.field_E), this.buildStripeSprite(-16711936, this.field_K, this.field_H)};
+        this.field_M = this.buildEndMask(param0 ^ -506198544);
         this.field_O = this.field_M.copyFlippedHorizontal();
         this.field_C = new Sprite(this.field_w >> 1, this.field_w);
         if (param0 != -506198655) {

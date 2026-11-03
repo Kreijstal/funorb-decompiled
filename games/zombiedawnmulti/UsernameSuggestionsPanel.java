@@ -6,7 +6,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
     static String field_K;
     static hh field_H;
     private String[] field_G;
-    static cd field_L;
+    static ScrollPaneWithFooter field_L;
     private UsernameSuggestionListener field_J;
 
     final static void b(boolean param0, int param1) {
@@ -25,10 +25,10 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           if (!param0) {
             UsernameSuggestionsPanel.c(false);
           }
-          var5 = (u) (cp.field_T.c(59));
+          var5 = (u) (DisplayNamePanel.field_T.c(59));
           while (var5 != null) {
             IsaacRandom.a(var5, param1, -85);
-            var5 = (u) (cp.field_T.b(6));
+            var5 = (u) (DisplayNamePanel.field_T.b(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,7 +56,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        he var4 = null;
+        LinkButtonPainter var4 = null;
         int var6 = 0;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -71,12 +71,12 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_G[var4_int] = ld.a((byte) 0, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
-            var4 = new he(ke.field_h, 0, 1);
+            var4 = new LinkButtonPainter(ke.field_h, 0, 1);
             this.field_I = new ButtonWidget[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_I[var5] = new ButtonWidget(this.field_G[var5], (WidgetListener) (this));
               this.field_I[var5].painter = (WidgetPainter) ((Object) var4);
-              this.field_I[var5].field_x = wd.field_I;
+              this.field_I[var5].field_x = MessageDialogContent.field_I;
               this.field_I[var5].setWidgetBounds(0, 20 + var5 * 16, 28972, 80, 15);
               this.b((byte) 94, this.field_I[var5]);
             }
@@ -126,7 +126,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           field_K = (String) null;
         }
         while (var1 > var4_int) {
-          var3[var4_int] = UsernameAvailabilityValidator.field_t[tq.b(255, (int) var2[var4_int])];
+          var3[var4_int] = UsernameAvailabilityValidator.field_t[ScrollPane.b(255, (int) var2[var4_int])];
           var4_int++;
         }
         Sprite var4 = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], var3);

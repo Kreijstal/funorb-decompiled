@@ -18,22 +18,22 @@ final class LevelFileCatalog {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (BirthDateValidator.field_k == ta.field_hb) {
+          if (BirthDateValidator.field_k == ProgressDialog.field_hb) {
             return null;
           }
           if (param0 != 127) {
             var3 = (String) null;
             LevelFileCatalog.a((byte) -55, (String) null);
           }
-          if (oi.field_j == ta.field_hb &&
+          if (oi.field_j == ProgressDialog.field_hb &&
             param1.equals(ih.field_a)) {
-            ta.field_hb = mp.field_b;
-            stackIn_8_0 = ai.field_g;
+            ProgressDialog.field_hb = mp.field_b;
+            stackIn_8_0 = DiskCacheWorker.field_g;
             return stackIn_8_0;
           }
-          ai.field_g = null;
+          DiskCacheWorker.field_g = null;
           ih.field_a = param1;
-          ta.field_hb = BirthDateValidator.field_k;
+          ProgressDialog.field_hb = BirthDateValidator.field_k;
           stackIn_10_0 = null;
           return (gh) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

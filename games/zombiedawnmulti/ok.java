@@ -143,8 +143,8 @@ final class ok {
             PasswordValidator.field_y = fl.a("benefits", "menu_text", ArrayWidgetGroup.field_C, 11091);
             er.field_j = fl.a("benefits", "button_frame", ArrayWidgetGroup.field_C, 11091);
             ReportAbuseDialog.field_Tb = fl.a("benefits", "arrow", ArrayWidgetGroup.field_C, 11091);
-            dc.field_Lb = (BitmapFont) ((Object) pj.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "large_font", "benefits"));
-            DebouncedValidationProvider.field_e = (BitmapFont) ((Object) pj.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "small_font", "benefits"));
+            TabbedPane.field_Lb = (BitmapFont) ((Object) Under13NoticePanel.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "large_font", "benefits"));
+            DebouncedValidationProvider.field_e = (BitmapFont) ((Object) Under13NoticePanel.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "small_font", "benefits"));
             var27 = SoftwareRasterizer.pixels;
             var2 = SoftwareRasterizer.width;
             var3 = SoftwareRasterizer.height;
@@ -158,11 +158,11 @@ final class ok {
             var12 = new Sprite(195, 221);
             var6 = var12.width / 2;
             var12.bindAsRenderTarget();
-            dc.field_Lb.b(vl.a(t.field_b, new String[]{ql.field_e}, 2), var6, 40, 16777215, -1);
+            TabbedPane.field_Lb.b(vl.a(t.field_b, new String[]{ql.field_e}, 2), var6, 40, 16777215, -1);
             DebouncedValidationProvider.field_e.b(vl.a(ob.field_w, new String[]{ql.field_e}, 2), var6, 60, 16777215, -1);
-            dc.field_Lb.b(vl.a(ck.field_c, new String[]{eo.field_b}, 2), var6, 110, 16777215, -1);
+            TabbedPane.field_Lb.b(vl.a(ck.field_c, new String[]{eo.field_b}, 2), var6, 110, 16777215, -1);
             DebouncedValidationProvider.field_e.b(vl.a(wc.field_G, new String[]{eo.field_b}, 2), var6, 130, 16777215, -1);
-            dc.field_Lb.b(ContextMenu.field_Yb, var6, 180, 16777215, -1);
+            TabbedPane.field_Lb.b(ContextMenu.field_Yb, var6, 180, 16777215, -1);
             DebouncedValidationProvider.field_e.b(um.field_f, var6, 200, 16777215, -1);
             HotspotTextWidget.a(5, var12.width, 3, var12.height, var12, 1, 0, 0);
             pn.field_a.bindAsRenderTarget();
@@ -188,16 +188,16 @@ final class ok {
             return;
           }
           if (q.field_c != null &&
-            dc.field_Lb != null) {
+            TabbedPane.field_Lb != null) {
             var28 = SoftwareRasterizer.pixels;
             var2Lifetime1 = SoftwareRasterizer.width;
             var3Lifetime1 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(b.field_f);
             var14 = vl.a(HuffmanCodec.field_h, new String[]{DialogLayer.field_L[hj.field_f]}, 2);
-            var5 = dc.field_Lb.c(var14, ol.field_p);
-            var6Lifetime1 = dc.field_Lb.measureWrappedHeight(var14, ol.field_p, dc.field_Lb.maxAscent + dc.field_Lb.maxDescent);
+            var5 = TabbedPane.field_Lb.c(var14, ol.field_p);
+            var6Lifetime1 = TabbedPane.field_Lb.measureWrappedHeight(var14, ol.field_p, TabbedPane.field_Lb.maxAscent + TabbedPane.field_Lb.maxDescent);
             var7Lifetime1 = (-var5 + ol.field_p) / 2 + pg.field_c;
-            var8 = (ai.field_a - var6Lifetime1) / 2 + BirthDateInputWidget.field_bb;
+            var8 = (DiskCacheWorker.field_a - var6Lifetime1) / 2 + BirthDateInputWidget.field_bb;
             var7Lifetime1 -= 3;
             var5 += 6;
             var8 -= 3;
@@ -241,7 +241,7 @@ final class ok {
             q.field_c.normalizeCanvas();
             var9 = new Sprite(q.field_c.fullWidth, q.field_c.field_u);
             var9.bindAsRenderTarget();
-            dc.field_Lb.drawParagraph(var14, pg.field_c, BirthDateInputWidget.field_bb, ol.field_p, ai.field_a, 16777215, -1, 1, 1, dc.field_Lb.maxDescent + dc.field_Lb.maxAscent);
+            TabbedPane.field_Lb.drawParagraph(var14, pg.field_c, BirthDateInputWidget.field_bb, ol.field_p, DiskCacheWorker.field_a, 16777215, -1, 1, 1, TabbedPane.field_Lb.maxDescent + TabbedPane.field_Lb.maxAscent);
             HotspotTextWidget.a(5, var9.fullWidth, 3, var9.field_u, var9, 1, 0, 0);
             q.field_c.bindAsRenderTarget();
             var9.g(0, 0);
@@ -290,8 +290,8 @@ final class ok {
             MouseInputHandler.field_e = null;
           }
           SoftwareRasterizer.saveClip(b.field_f);
-          SoftwareRasterizer.fillRoundedRectAlpha(16, 16, 608, 112, 15, MessageDialogContent.field_c, pf.field_c);
-          SoftwareRasterizer.fillRoundedRectAlpha(231, 144, 393, 232, 15, MessageDialogContent.field_c, pf.field_c);
+          SoftwareRasterizer.fillRoundedRectAlpha(16, 16, 608, 112, 15, gg.field_c, pf.field_c);
+          SoftwareRasterizer.fillRoundedRectAlpha(231, 144, 393, 232, 15, gg.field_c, pf.field_c);
           if (null != GameApplet.field_b) {
             GameApplet.field_b.g(0, 0);
           }
@@ -373,7 +373,7 @@ final class ok {
               }
             }
           }
-          cd.c((byte) -57);
+          ScrollPaneWithFooter.c((byte) -57);
           if (!param0) {
             return;
           }

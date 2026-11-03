@@ -179,7 +179,7 @@ final class PowerupButton {
         if (var3 > 255) {
           var3 = 255;
         }
-        el.field_H[this.field_a].c(this.field_m, -this.field_h + 480, var3);
+        LabeledChildWidget.field_H[this.field_a].c(this.field_m, -this.field_h + 480, var3);
         if (this.field_a != 2) {
           var4 = wa.field_b[this.field_n].height - wa.field_b[this.field_n].height * (-this.field_c + this.field_l) / this.field_l;
           wa.field_b[this.field_n].c(this.field_m + 8, -this.field_h + 504, var3);
@@ -192,13 +192,13 @@ final class PowerupButton {
         }
         if (this.field_l > this.field_c) {
           if (this.field_k) {
-            el.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
+            LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
           }
           wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
             wa.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
           }
-          el.field_H[3].g(this.field_m, 480 - this.field_h);
+          LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
           return;
         }
         var4Lifetime1 = (this.field_i + this.field_m / 3) % 50;
@@ -206,19 +206,19 @@ final class PowerupButton {
           SoftwareRasterizer.fillCircleAlpha(wa.field_b[this.field_n].width / 2 + 8 + this.field_m, 504 - (this.field_h - wa.field_b[this.field_n].height / 2), lh.field_b[var4Lifetime1] * 5 / 8, 13421772, 68 - var4Lifetime1);
           SoftwareRasterizer.fillCircleAlpha(wa.field_b[this.field_n].width / 2 + (this.field_m + 8), -this.field_h + 480 + (24 + wa.field_b[this.field_n].height / 2), 4 * lh.field_b[var4Lifetime1] / 8, 11206570, 118 - var4Lifetime1);
           if (this.field_k) {
-            el.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
+            LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
             wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
             if (this.field_k) {
               wa.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
             }
-            el.field_H[3].g(this.field_m, 480 - this.field_h);
+            LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
             return;
           }
           wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
             wa.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
           }
-          el.field_H[3].g(this.field_m, 480 - this.field_h);
+          LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
           return;
         }
         if (!this.field_k) {
@@ -226,15 +226,15 @@ final class PowerupButton {
           if (this.field_k) {
             wa.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
           }
-          el.field_H[3].g(this.field_m, 480 - this.field_h);
+          LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
           return;
         }
-        el.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
+        LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
         wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
         if (this.field_k) {
           wa.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
         }
-        el.field_H[3].g(this.field_m, 480 - this.field_h);
+        LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
     }
 
     final void a(int param0, int param1, int param2) {

@@ -73,7 +73,7 @@ final class io {
           }
           var7 = (String) null;
           IterableNodeHashTable.a(6, wj.field_g, 0, var5, (String) null);
-          ke.field_j = ua.field_E;
+          ke.field_j = DraggableWidget.field_E;
           NavigationGrid.field_m = ec.field_b;
           ec.field_b.field_xb = (8355711 & qq.field_f.field_xb >> 1) + wj.field_g - (8355711 & wj.field_g >> 1);
           ec.field_b.field_Db = (8355711 & qq.field_f.field_Db >> 1) + (wj.field_g - (8355711 & wj.field_g >> 1));
@@ -85,8 +85,8 @@ final class io {
           ec.field_b = new UiComponent(0L, param4);
           ec.field_b.field_yb = w.field_A;
           IntrusiveNode.field_c.a((byte) 50, ec.field_b);
-          ua.field_E = new UiComponent(0L, ke.field_j);
-          IntrusiveNode.field_c.a((byte) 50, ua.field_E);
+          DraggableWidget.field_E = new UiComponent(0L, ke.field_j);
+          IntrusiveNode.field_c.a((byte) 50, DraggableWidget.field_E);
           dp.field_c = new UiComponent(0L, qq.field_f, bg.field_o);
           jk.field_d = new UiComponent(0L, qq.field_f);
           lj.field_v.a((byte) 50, SpriteState.field_t);

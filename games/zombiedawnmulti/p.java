@@ -46,7 +46,7 @@ final class p {
           p.a(35);
         }
         kk.field_x = param1;
-        ua.field_N = param3;
+        DraggableWidget.field_N = param3;
     }
 
     public static void a(int param0) {
@@ -103,16 +103,16 @@ final class p {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_f[0][var0] = cp.a(cp.a(var4 << 8, cp.a(cp.a(var10 << 24, cp.a(cp.a(var6 << 40, cp.a(var2 << 56, var2 << 48)), var2 << 32)), var8 << 16)), var12);
+            field_f[0][var0] = DisplayNamePanel.a(DisplayNamePanel.a(var4 << 8, DisplayNamePanel.a(DisplayNamePanel.a(var10 << 24, DisplayNamePanel.a(DisplayNamePanel.a(var6 << 40, DisplayNamePanel.a(var2 << 56, var2 << 48)), var2 << 32)), var8 << 16)), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_f[var14][var0] = cp.a(field_f[-1 + var14][var0] << 56, field_f[-1 + var14][var0] >>> 8);
+                field_f[var14][var0] = DisplayNamePanel.a(field_f[-1 + var14][var0] << 56, field_f[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
         field_d[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = 8 * (-1 + var0);
-            field_d[var0] = tq.a(en.a(255L, field_f[7][var1 + 7]), tq.a(en.a(65280L, field_f[6][var1 + 6]), tq.a(tq.a(tq.a(tq.a(en.a(field_f[2][var1 + 2], 280375465082880L), tq.a(en.a(-72057594037927936L, field_f[0][var1]), en.a(field_f[1][var1 + 1], 71776119061217280L))), en.a(field_f[3][var1 + 3], 1095216660480L)), en.a(4278190080L, field_f[4][4 + var1])), en.a(field_f[5][5 + var1], 16711680L))));
+            field_d[var0] = ScrollPane.a(en.a(255L, field_f[7][var1 + 7]), ScrollPane.a(en.a(65280L, field_f[6][var1 + 6]), ScrollPane.a(ScrollPane.a(ScrollPane.a(ScrollPane.a(en.a(field_f[2][var1 + 2], 280375465082880L), ScrollPane.a(en.a(-72057594037927936L, field_f[0][var1]), en.a(field_f[1][var1 + 1], 71776119061217280L))), en.a(field_f[3][var1 + 3], 1095216660480L)), en.a(4278190080L, field_f[4][4 + var1])), en.a(field_f[5][5 + var1], 16711680L))));
         }
     }
 }

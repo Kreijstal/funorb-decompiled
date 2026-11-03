@@ -28,8 +28,8 @@ final class kp extends MenuScreen {
             if (param0 == 1) {
               if (param2 == qe.field_g) {
                 if (param0 == 2 &&
-                  param2 != ba.field_q) {
-                  ba.field_q = param2;
+                  param2 != MusicPatchPcmStream.field_q) {
+                  MusicPatchPcmStream.field_q = param2;
                   bn.field_b = true;
                   RasterBuffer.a(param1, (byte) -51);
                 }
@@ -44,8 +44,8 @@ final class kp extends MenuScreen {
               if (param0 == 1) {
                 if (param2 == qe.field_g) {
                   if (param0 == 2 &&
-                    param2 != ba.field_q) {
-                    ba.field_q = param2;
+                    param2 != MusicPatchPcmStream.field_q) {
+                    MusicPatchPcmStream.field_q = param2;
                     bn.field_b = true;
                     RasterBuffer.a(param1, (byte) -51);
                   }
@@ -71,10 +71,10 @@ final class kp extends MenuScreen {
         if (param0 != 2) {
           return;
         }
-        if (param2 == ba.field_q) {
+        if (param2 == MusicPatchPcmStream.field_q) {
           return;
         }
-        ba.field_q = param2;
+        MusicPatchPcmStream.field_q = param2;
         bn.field_b = true;
         RasterBuffer.a(param1, (byte) -51);
     }

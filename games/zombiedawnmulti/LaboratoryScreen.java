@@ -62,7 +62,7 @@ final class LaboratoryScreen extends MenuScreen {
             SoftwareRasterizer.fillRect(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_18_4);
             if (PortalView.i(51603) &&
               jk.a((byte) -70, var6)) {
-              el.field_E.a(var5 + 419, 345);
+              LabeledChildWidget.field_E.a(var5 + 419, 345);
             }
           }
         }
@@ -96,7 +96,7 @@ final class LaboratoryScreen extends MenuScreen {
         super.a(param0);
         b.field_a.a(41, b.field_a.field_zb, 850, wa.field_g);
         b.field_a.c(false, -1);
-        cp.field_O = -1;
+        DisplayNamePanel.field_O = -1;
         kn.field_b = -1;
         q.field_d = -1;
         SoftwareRasterizer.setClip(0, 53, 640, 85);
@@ -457,32 +457,32 @@ final class LaboratoryScreen extends MenuScreen {
                   if (FullscreenFocusCanvas.field_k.a(45, -126) &&
                     var8 != 255 &&
                     17 != var8) {
-                    el.field_E.a(84 + var7, 340);
+                    LabeledChildWidget.field_E.a(84 + var7, 340);
                   }
                 } else {
                   if (FullscreenFocusCanvas.field_k.a(45, -126) &&
                     var8 != 255 &&
                     17 != var8) {
-                    el.field_E.a(84 + var7, 340);
+                    LabeledChildWidget.field_E.a(84 + var7, 340);
                   }
                 }
               } else {
                 if (FullscreenFocusCanvas.field_k.a(45, -126) &&
                   var8 != 255 &&
                   17 != var8) {
-                  el.field_E.a(84 + var7, 340);
+                  LabeledChildWidget.field_E.a(84 + var7, 340);
                 }
               }
             } else {
               if (FullscreenFocusCanvas.field_k.a(45, -126) &&
                 var8 != 255 &&
                 17 != var8) {
-                el.field_E.a(84 + var7, 340);
+                LabeledChildWidget.field_E.a(84 + var7, 340);
               }
             }
             if (PortalView.i(51603) && (jk.a((byte) -51, var8) ||
               jk.a((byte) -103, var9))) {
-              el.field_E.a(84 + var7, 340);
+              LabeledChildWidget.field_E.a(84 + var7, 340);
             }
           } else {
             pf.field_a.a(var7 + 84, 340, 32);
@@ -518,7 +518,7 @@ final class LaboratoryScreen extends MenuScreen {
           }
           AgeValidator.field_u.field_ab = wc.field_M;
           cr.field_i.field_ab = FadingDialog.field_Q;
-          b.field_a = new mj(0L, ih.field_d, var12, var9, AgeValidator.field_u, cr.field_i, false);
+          b.field_a = new VerticalScrollbar(0L, ih.field_d, var12, var9, AgeValidator.field_u, cr.field_i, false);
           b.field_a.field_Q = 315;
           b.field_a.field_zb = 631;
           this.field_p = 0;
@@ -574,9 +574,9 @@ final class LaboratoryScreen extends MenuScreen {
         var6 = FullscreenFocusCanvas.field_k;
         var7 = -1;
         var8 = -1;
-        if (cp.field_O != 255 &&
-          cp.field_O != -1) {
-          var7 = cp.field_O;
+        if (DisplayNamePanel.field_O != 255 &&
+          DisplayNamePanel.field_O != -1) {
+          var7 = DisplayNamePanel.field_O;
         } else {
           if (q.field_d < 5) {
             if (0 <= q.field_d) {
@@ -759,7 +759,7 @@ final class LaboratoryScreen extends MenuScreen {
                 if (on.field_bb[var13].b((byte) 39) &&
                   lh.field_l == 255 &&
                   !ud.field_S) {
-                  cp.field_O = var13;
+                  DisplayNamePanel.field_O = var13;
                   on.field_bb[var13].field_b.drawAdditive(on.field_bb[var13].field_q, on.field_bb[var13].field_g, (q.$cfr$intArgs$a$f0c91481eb80(-60, PowerupEvent.field_m << 4) >> 9) + 128);
                 }
                 var14Lifetime1 = on.field_bb[var13].field_c;
@@ -923,9 +923,9 @@ final class LaboratoryScreen extends MenuScreen {
         TertiaryLinkDeque.field_b = stackIn_60_0;
         if (kk.field_u) {
           regionExit1: {
-            if (FullscreenFocusCanvas.field_k.c(127, cp.field_O)) {
-              if (0 <= cp.field_O &&
-                cp.field_O < 19) {
+            if (FullscreenFocusCanvas.field_k.c(127, DisplayNamePanel.field_O)) {
+              if (0 <= DisplayNamePanel.field_O &&
+                DisplayNamePanel.field_O < 19) {
                 var4 = var10.g((byte) -42);
                 var5 = 0;
                 if ((var5 == 0)) {
@@ -940,16 +940,16 @@ final class LaboratoryScreen extends MenuScreen {
                     }
                     break;
                   }
-                  var10.field_m[var6] = cp.field_O;
+                  var10.field_m[var6] = DisplayNamePanel.field_O;
                   Camera.b(-128, 87);
                 }
                 break regionExit1;
               }
-              if (cp.field_O >= 44 &&
-                cp.field_O <= 62) {
+              if (DisplayNamePanel.field_O >= 44 &&
+                DisplayNamePanel.field_O <= 62) {
                 var4Lifetime2 = 0;
                 for (var5Lifetime2 = 0; var5Lifetime2 < 3; var5Lifetime2++) {
-                  if (var10.field_s[var5Lifetime2] != cp.field_O) {
+                  if (var10.field_s[var5Lifetime2] != DisplayNamePanel.field_O) {
                     continue;
                   }
                   var4Lifetime2 = 1;
@@ -962,7 +962,7 @@ final class LaboratoryScreen extends MenuScreen {
                       var5Lifetime2Lifetime1++;
                       continue;
                     }
-                    var10.field_s[var5Lifetime2Lifetime1] = cp.field_O;
+                    var10.field_s[var5Lifetime2Lifetime1] = DisplayNamePanel.field_O;
                     Camera.b(-127, 87);
                     break;
                   }
@@ -983,11 +983,11 @@ final class LaboratoryScreen extends MenuScreen {
           }
         }
         b.field_a.a(-11838, true);
-        wa.field_g = b.field_a.a(850, b.field_a.field_zb, -18367);
+        wa.field_g = b.field_a.setScrollbarBounds(850, b.field_a.field_zb, -18367);
         var4Lifetime1 = -10;
         wa.field_g = wa.field_g + var4Lifetime1 * t.field_d;
         var5Lifetime1 = -100;
-        if (b.field_a.k(20)) {
+        if (b.field_a.pollLineUp(20)) {
           wa.field_g = wa.field_g + var4Lifetime1;
         }
         if (b.field_a.h(4690)) {
@@ -1006,9 +1006,9 @@ final class LaboratoryScreen extends MenuScreen {
           wa.field_g = -b.field_a.field_zb + 850;
         }
         if (1 == kd.field_b) {
-          if (255 != cp.field_O &&
-            var10.c(127, cp.field_O)) {
-            lh.field_l = cp.field_O;
+          if (255 != DisplayNamePanel.field_O &&
+            var10.c(127, DisplayNamePanel.field_O)) {
+            lh.field_l = DisplayNamePanel.field_O;
             Camera.b(-126, 90);
           }
           if (kn.field_b == -1) {

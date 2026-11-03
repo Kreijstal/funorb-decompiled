@@ -23,7 +23,7 @@ final class ub extends ContentTransitionDialog {
         RuntimeException var1 = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (he.field_a) {
+          if (LinkButtonPainter.field_a) {
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }
@@ -210,7 +210,7 @@ final class ub extends ContentTransitionDialog {
             var13 = param7;
             var14 = param2;
             var15 = (var17[var11] & 16711422) >> 1;
-            var10[var11] = var15 - (-(tq.b(var14, 33428544) >> 17) + (-(tq.b(var12, 33423360) >> 1) - (tq.b(33423425, var13) >> 9)));
+            var10[var11] = var15 - (-(ScrollPane.b(var14, 33428544) >> 17) + (-(ScrollPane.b(var12, 33423360) >> 1) - (ScrollPane.b(33423425, var13) >> 9)));
             param2 = param2 + param6;
             param1 = param1 + param9;
             param7 = param7 + param5;

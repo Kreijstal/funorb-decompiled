@@ -232,7 +232,7 @@ final class ro extends GameWorld {
         if (param0 < 116) {
           return 69;
         }
-        return (li.field_C << 4) + ((qe.field_g << 2) + ba.field_q);
+        return (li.field_C << 4) + ((qe.field_g << 2) + MusicPatchPcmStream.field_q);
     }
 
     static {

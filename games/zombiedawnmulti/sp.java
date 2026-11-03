@@ -108,14 +108,14 @@ final class sp extends mp {
 
     final static void c(int param0) {
         nb.field_a.h(param0 ^ -123);
-        if (pj.field_I == null) {
-          pj.field_I = new ta(nb.field_a, TextInputWidget.field_P);
+        if (Under13NoticePanel.field_I == null) {
+          Under13NoticePanel.field_I = new ProgressDialog(nb.field_a, TextInputWidget.field_P);
         }
         if (param0 != 0) {
           java.awt.Frame var2 = (java.awt.Frame) null;
           sp.a((PlatformTaskDispatcher) null, -50, (java.awt.Frame) null);
         }
-        nb.field_a.showDialog(param0 + 3016, pj.field_I);
+        nb.field_a.showDialog(param0 + 3016, Under13NoticePanel.field_I);
     }
 
     final void a(String param0, int param1, int param2, int param3, byte param4, int param5, int param6, BitmapFont param7) {

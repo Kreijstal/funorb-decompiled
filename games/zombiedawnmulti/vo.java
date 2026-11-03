@@ -96,7 +96,7 @@ final class vo extends MenuScreen {
         this.field_t = this.field_t + 1;
         stackIn_3_0 = (kd.field_b != 1) ? 0 : 1;
         var2 = stackIn_3_0;
-        while (ba.c(-1)) {
+        while (MusicPatchPcmStream.c(-1)) {
           if (InfectionEvent.field_p != 13) {
             continue;
           }
@@ -126,7 +126,7 @@ final class vo extends MenuScreen {
           field_o = (PlatformTask) null;
         }
         bl.field_g = null;
-        wd.field_P = null;
+        MessageDialogContent.field_P = null;
         jo.field_d = null;
         eq.field_c = null;
     }
@@ -166,7 +166,7 @@ final class vo extends MenuScreen {
           if (this.field_t >= 388) {
             if (508 > this.field_t) {
               this.b(0, 0, -115);
-              wd.field_P.a(0, 480 - wd.field_P.field_a);
+              MessageDialogContent.field_P.a(0, 480 - MessageDialogContent.field_P.field_a);
             } else {
               if (this.field_t >= 1564) {
                 if (1724 > this.field_t) {
@@ -195,13 +195,13 @@ final class vo extends MenuScreen {
                 this.b(-(var2 >> 2), 0, -115);
                 var3 = var2 * 7 >> 3;
                 var4 = 9 * var2 >> 4;
-                wd.field_P.a(-var4, -wd.field_P.field_a + 480);
+                MessageDialogContent.field_P.a(-var4, -MessageDialogContent.field_P.field_a + 480);
                 bl.field_g.a(-var3 + 622, 0);
               }
             }
           } else {
             this.b(0, 0, -115);
-            wd.field_P.a(0, -wd.field_P.field_a + 480);
+            MessageDialogContent.field_P.a(0, -MessageDialogContent.field_P.field_a + 480);
             SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, 256 - (-520 + 2 * this.field_t));
           }
           if (decompiledFrameRemainder0) {
@@ -265,7 +265,7 @@ final class vo extends MenuScreen {
             if (ui.field_f[var5] + 10 < var6) {
               var3 = 256 - (-ui.field_f[var5] + var6 - 10 << 8) / 50;
             }
-            var2 = cp.field_R[var5];
+            var2 = DisplayNamePanel.field_R[var5];
           }
           var5++;
         }
@@ -273,14 +273,14 @@ final class vo extends MenuScreen {
           stackIn_18_0 = ah.field_e.maxAscent + ah.field_e.maxDescent;
           stackIn_18_1 = -5;
           var5Lifetime1 = stackIn_18_0 + stackIn_18_1;
-          stackIn_21_0 = (var2 != cp.field_R[5]) ? 0 : 1;
+          stackIn_21_0 = (var2 != DisplayNamePanel.field_R[5]) ? 0 : 1;
           var6Lifetime1 = stackIn_21_0;
           if (var6Lifetime1 != 0 ||
-            cp.field_R[5] == var2) {
+            DisplayNamePanel.field_R[5] == var2) {
             var4 = 180;
           }
           if (var6Lifetime1 != 0) {
-            ah.field_e.drawParagraph(cp.field_R[5], 60, var4, 520, 200, 1, 0, 1, 0, var5Lifetime1);
+            ah.field_e.drawParagraph(DisplayNamePanel.field_R[5], 60, var4, 520, 200, 1, 0, 1, 0, var5Lifetime1);
           }
           if (ml.field_Ob == null ||
             ml.field_Ob != var2) {

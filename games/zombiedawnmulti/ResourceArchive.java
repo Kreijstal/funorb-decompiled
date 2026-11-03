@@ -143,7 +143,7 @@ final class ResourceArchive {
 
     private final synchronized void c(int param0, int param1) {
         if (!this.field_j) {
-          this.field_g[param1] = ai.a(-137, false, this.field_a.a(-123, param1));
+          this.field_g[param1] = DiskCacheWorker.a(-137, false, this.field_a.a(-123, param1));
         } else {
           this.field_g[param1] = this.field_a.a(-123, param1);
         }
@@ -435,7 +435,7 @@ final class ResourceArchive {
                 if (this.field_b != 0) {
                   var7[var18] = var40[var17];
                 } else {
-                  var7[var18] = ai.a(-137, false, var40[var17]);
+                  var7[var18] = DiskCacheWorker.a(-137, false, var40[var17]);
                 }
               }
             }
@@ -446,7 +446,7 @@ final class ResourceArchive {
               var11 = var34[0];
             }
             if (this.field_b == 0) {
-              var7[var11] = ai.a(-137, false, var36);
+              var7[var11] = DiskCacheWorker.a(-137, false, var36);
               return true;
             }
             var7[var11] = var43;

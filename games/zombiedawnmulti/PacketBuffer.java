@@ -81,11 +81,11 @@ class PacketBuffer extends IntrusiveNode {
         ka.field_f[lj.field_n] = param4;
         la.field_c[lj.field_n] = lj.field_n;
         lb.field_c[lj.field_n] = param3;
-        if (ab.field_j > param3) {
-          mj.field_Ub = param3;
+        if (MusicPatchNode.field_j > param3) {
+          VerticalScrollbar.field_Ub = param3;
         }
         if (!(param3 <= NodeHashTableIterator.field_d)) {
-          ba.field_m = param3;
+          MusicPatchPcmStream.field_m = param3;
         }
         DialogLayer.field_J[lj.field_n] = param2;
         kj.field_p[lj.field_n] = param1;
@@ -96,12 +96,12 @@ class PacketBuffer extends IntrusiveNode {
         if (param0 != 1000) {
           field_h = (String) null;
         }
-        if (!(var7 <= ba.field_m)) {
-          ba.field_m = var7;
+        if (!(var7 <= MusicPatchPcmStream.field_m)) {
+          MusicPatchPcmStream.field_m = var7;
         }
         lj.field_n = lj.field_n + 1;
-        if (var7 < mj.field_Ub) {
-          mj.field_Ub = var7;
+        if (var7 < VerticalScrollbar.field_Ub) {
+          VerticalScrollbar.field_Ub = var7;
         }
     }
 

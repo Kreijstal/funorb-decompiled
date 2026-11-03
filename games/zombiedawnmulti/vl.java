@@ -124,7 +124,7 @@ final class vl extends IntrusiveNode {
 
     final static void a(pd param0, pd param1, int param2, int param3, int param4, int param5) {
         try {
-          wk.field_G = param4;
+          DateInputWidget.field_G = param4;
           no.field_Gb = param3;
           ResizableDialog.field_bb = param5;
           RandomAccessCacheFile.field_a = param0;

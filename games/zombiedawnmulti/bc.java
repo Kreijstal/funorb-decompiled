@@ -54,7 +54,7 @@ final class bc {
         if (!(var1 <= ok.field_l)) {
           ok.field_l = var1;
         }
-        ((ho) (mj.field_Hb[1])).c((byte) 74);
+        ((ho) (VerticalScrollbar.field_Hb[1])).c((byte) 74);
         if (param0 < 8) {
           bc.a((byte) -52);
         }

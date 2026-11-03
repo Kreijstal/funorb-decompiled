@@ -48,7 +48,7 @@ final class nh extends IntrusiveNode {
         if (param0 >= -25) {
           return true;
         }
-        return ab.field_k;
+        return MusicPatchNode.field_k;
     }
 
     public static void a(byte param0) {

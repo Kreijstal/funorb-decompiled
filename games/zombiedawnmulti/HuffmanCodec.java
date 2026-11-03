@@ -154,7 +154,7 @@ final class HuffmanCodec {
             for (var14 = 0; param4.field_B.length > var14; var14++) {
               var15 = param4.field_B[var14];
               if (var15 == -1) {
-                var8[var14 + var12Lifetime1] = le.field_I;
+                var8[var14 + var12Lifetime1] = ProgressBarWidget.field_I;
                 var9[var14 + var12Lifetime1] = param4.field_D[var14];
                 var10[var12Lifetime1 + var14] = param4.field_B[var14];
               } else {

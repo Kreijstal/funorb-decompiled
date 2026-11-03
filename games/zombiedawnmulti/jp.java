@@ -38,7 +38,7 @@ final class jp {
           if (va.field_a == 2 &&
             !QuickChatPhraseDefinition.d((byte) -20)) {
             if (!kj.a((byte) -94, ql.field_a)) {
-              var2 = vl.a(ta.field_jb, new String[]{qf.field_g}, 2);
+              var2 = vl.a(ProgressDialog.field_jb, new String[]{qf.field_g}, 2);
               if (var10 != 0) {
                 var2 = vl.a(hn.field_k, new String[]{qf.field_g}, 2);
               }
@@ -61,7 +61,7 @@ final class jp {
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var3 = ta.field_lb;
+            var3 = ProgressDialog.field_lb;
             var3 = nh.a(2, var3);
             var4 = "";
             var5 = "|";
@@ -70,7 +70,7 @@ final class jp {
             if (var6 == 2) {
               var4 = vl.a(v.field_c, new String[]{qf.field_g}, 2);
               var8 = vl.a(lc.field_n, new String[]{var3}, param0 + 106);
-              var7 = -485 + ua.field_E.field_zb + (ec.field_b.field_zb - (-w.field_A.textWidth(var8) + w.field_A.textWidth(var4)));
+              var7 = -485 + DraggableWidget.field_E.field_zb + (ec.field_b.field_zb - (-w.field_A.textWidth(var8) + w.field_A.textWidth(var4)));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -132,9 +132,9 @@ final class jp {
             }
             IterableNodeHashTable.a(6, pq.field_m[var6], var7, var4 + BitmapFont.escapeMarkup(rm.field_a.toString()), var5);
             if (!HotspotTextWidget.field_N) {
-              ua.field_E.field_L = false;
+              DraggableWidget.field_E.field_L = false;
             }
-            if (ua.field_E.field_L) {
+            if (DraggableWidget.field_E.field_L) {
               var1 = vl.a(jg.field_b, new String[]{var3, qf.field_g}, param0 + 106);
             }
           }

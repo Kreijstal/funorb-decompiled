@@ -73,8 +73,8 @@ final class GameSimulation {
           if (param0 >= -125) {
             return;
           }
-          if (null != pj.field_I) {
-            pj.field_I.l(124);
+          if (null != Under13NoticePanel.field_I) {
+            Under13NoticePanel.field_I.stopNormalAnimation(124);
           }
           qe.d(0);
           return;

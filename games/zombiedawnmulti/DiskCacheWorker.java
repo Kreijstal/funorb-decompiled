@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai implements Runnable {
+final class DiskCacheWorker implements Runnable {
     private DualLinkDeque field_e;
     static gh field_g;
     static String field_d;
@@ -24,7 +24,7 @@ final class ai implements Runnable {
         try {
           if (param2 != 10) {
             var5 = (SectorCacheStore) null;
-            this.a(-98, (SectorCacheStore) null, -12);
+            this.readNow(-98, (SectorCacheStore) null, -12);
           }
           var4 = new li();
           var4.field_B = param1;
@@ -50,7 +50,7 @@ final class ai implements Runnable {
 
     final static void a(String param0, byte param1) {
         try {
-          wk.a(param0, (byte) 48);
+          DateInputWidget.a(param0, (byte) 48);
           qj.a(StatefulTextPainter.field_v, false, 102);
           int var2_int = -102 % ((52 - param1) / 40);
         } catch (RuntimeException runtimeException) {
@@ -127,7 +127,7 @@ final class ai implements Runnable {
         }
     }
 
-    final li a(int param0, SectorCacheStore param1, byte[] param2, int param3) {
+    final li queueWrite(int param0, SectorCacheStore param1, byte[] param2, int param3) {
         li var5 = null;
         RuntimeException var5_ref = null;
         li stackIn_2_0 = null;
@@ -286,7 +286,7 @@ final class ai implements Runnable {
             }
           }
           while (true) {
-            if (!ba.c(param1 ^ -111)) {
+            if (!MusicPatchPcmStream.c(param1 ^ -111)) {
               stackIn_81_0 = 0;
               return stackIn_81_0;
             }
@@ -315,7 +315,7 @@ final class ai implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 < 126) {
           field_a = 104;
@@ -327,7 +327,7 @@ final class ai implements Runnable {
         field_g = null;
     }
 
-    final li a(int param0, SectorCacheStore param1, int param2) {
+    final li readNow(int param0, SectorCacheStore param1, int param2) {
         li var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -433,7 +433,7 @@ final class ai implements Runnable {
         }
     }
 
-    final void a(byte param0) {
+    final void shutdown(byte param0) {
         try {
           String var4 = null;
           this.field_f = true;
@@ -441,7 +441,7 @@ final class ai implements Runnable {
             this.field_e.notifyAll();
             if (param0 != 77) {
               var4 = (String) null;
-              ai.a((String) null, (byte) 75);
+              DiskCacheWorker.a((String) null, (byte) 75);
             }
           }
           try {
@@ -462,29 +462,29 @@ final class ai implements Runnable {
           return true;
         }
         if (InfectionEvent.field_p == 102) {
-          mj.field_Ib.c((byte) 113);
+          VerticalScrollbar.field_Ib.c((byte) 113);
           return true;
         }
         if (param0) {
-          ai.a(true, (byte) 112);
-          if (null == mj.field_Ib) {
+          DiskCacheWorker.a(true, (byte) 112);
+          if (null == VerticalScrollbar.field_Ib) {
             return false;
           }
-          if (mj.field_Ib.a(96, param2, param1)) {
+          if (VerticalScrollbar.field_Ib.a(96, param2, param1)) {
             return true;
           }
           return false;
         }
-        if (null == mj.field_Ib) {
+        if (null == VerticalScrollbar.field_Ib) {
           return false;
         }
-        if (mj.field_Ib.a(96, param2, param1)) {
+        if (VerticalScrollbar.field_Ib.a(96, param2, param1)) {
           return true;
         }
         return false;
     }
 
-    ai(PlatformTaskDispatcher param0) {
+    DiskCacheWorker(PlatformTaskDispatcher param0) {
         PlatformTask var2 = null;
         this.field_e = new DualLinkDeque();
         this.field_f = false;

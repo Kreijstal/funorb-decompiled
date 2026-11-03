@@ -60,12 +60,12 @@ final class rj extends SceneObject {
             !(480.0f * param1.zoom < (float)var4)) {
             if (!this.field_G) {
               if (!this.field_H) {
-                cp.field_X[this.field_C].g(var3_int, var4);
+                DisplayNamePanel.field_X[this.field_C].g(var3_int, var4);
               } else {
-                cp.field_X[this.field_C].drawVerticalFlip(var3_int, var4);
+                DisplayNamePanel.field_X[this.field_C].drawVerticalFlip(var3_int, var4);
               }
             } else {
-              cp.field_X[this.field_C].drawHorizontalFlip(var3_int, var4);
+              DisplayNamePanel.field_X[this.field_C].drawHorizontalFlip(var3_int, var4);
             }
             if (param0 != -10136) {
               rj.i(-46);
@@ -158,7 +158,7 @@ final class rj extends SceneObject {
             }
             var6 = var4.field_k;
             ha.field_j[0].field_g = false;
-            ha.field_j[0].field_d = ta.field_lb;
+            ha.field_j[0].field_d = ProgressDialog.field_lb;
             ha.field_j[0].field_c = null;
             var7 = var4.field_f;
             for (var8_int = 1; var5 > var8_int; var8_int++) {
@@ -203,7 +203,7 @@ final class rj extends SceneObject {
               }
               if (var21 != null &&
                 sf.a(1, var21)) {
-                var8[1][var13] = ta.field_lb;
+                var8[1][var13] = ProgressDialog.field_lb;
                 var9[1][var13] = null;
                 var35[1][var13] = var22;
                 var13++;

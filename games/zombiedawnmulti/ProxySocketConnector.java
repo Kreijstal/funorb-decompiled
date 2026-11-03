@@ -168,8 +168,8 @@ final class ProxySocketConnector extends SocketConnector {
           qe.field_q.setBounds(-6 + ImageProducerRasterBuffer.field_k.field_z, 3, var6_int - 6, 3, -3344);
           var7 = qe.field_q.field_z - 5;
           SimEntity.field_z.setBounds(param5, var7 - param5, param2 + 487 + param3, 5, param0 ^ -3342);
-          ec.field_b.setBounds(param5, 0, -ua.field_E.field_zb + (SimEntity.field_z.field_zb - param2), param2, -3344);
-          ua.field_E.setBounds(param5, 0, ua.field_E.field_zb, param2 + ec.field_b.field_zb, param0 - 3346);
+          ec.field_b.setBounds(param5, 0, -DraggableWidget.field_E.field_zb + (SimEntity.field_z.field_zb - param2), param2, -3344);
+          DraggableWidget.field_E.setBounds(param5, 0, DraggableWidget.field_E.field_zb, param2 + ec.field_b.field_zb, param0 - 3346);
           var7 = var7 - (2 + param5);
           tn.field_A.a(param3, 2, param3 + (param0 + param2) + 485, 5, var7 - 5, param0 ^ -31467, 5);
           if (ra.field_f != null) {

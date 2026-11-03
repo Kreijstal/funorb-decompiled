@@ -136,7 +136,7 @@ final class on extends TextInputWidget implements ValidationProviderSource {
     }
 
     final static void j(byte param0) {
-        ai.field_b = -1;
+        DiskCacheWorker.field_b = -1;
         if (param0 > 43) {
           WidgetContainer.field_E = 0;
           io.field_g = false;

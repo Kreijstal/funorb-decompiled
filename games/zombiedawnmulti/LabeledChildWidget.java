@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class el extends SingleChildWidget {
+final class LabeledChildWidget extends SingleChildWidget {
     private String field_J;
     private int field_I;
     private boolean field_K;
@@ -63,7 +63,7 @@ final class el extends SingleChildWidget {
             eb.field_B.field_R = 1;
             eb.field_B.field_V = qc.field_u.field_V;
             if (HotspotTextWidget.field_Q > 0) {
-              MessageDialogContent.a(param7, param4, param9, true);
+              gg.a(param7, param4, param9, true);
             }
             if (0 < InflaterDecompressor.field_a) {
               UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -86,7 +86,7 @@ final class el extends SingleChildWidget {
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
-                MessageDialogContent.a(param7, param4, param9, true);
+                gg.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
                 UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -105,7 +105,7 @@ final class el extends SingleChildWidget {
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
-                MessageDialogContent.a(param7, param4, param9, true);
+                gg.a(param7, param4, param9, true);
                 if (0 < InflaterDecompressor.field_a) {
                   UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
                 }
@@ -165,7 +165,7 @@ final class el extends SingleChildWidget {
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
-                MessageDialogContent.a(param7, param4, param9, true);
+                gg.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
                 UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -189,7 +189,7 @@ final class el extends SingleChildWidget {
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
-                MessageDialogContent.a(param7, param4, param9, true);
+                gg.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
                 UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -232,7 +232,7 @@ final class el extends SingleChildWidget {
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
-                MessageDialogContent.a(param7, param4, param9, true);
+                gg.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
                 UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -255,7 +255,7 @@ final class el extends SingleChildWidget {
                 eb.field_B.field_R = 1;
                 eb.field_B.field_V = qc.field_u.field_V;
                 if (HotspotTextWidget.field_Q > 0) {
-                  MessageDialogContent.a(param7, param4, param9, true);
+                  gg.a(param7, param4, param9, true);
                 }
                 if (0 < InflaterDecompressor.field_a) {
                   UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -274,7 +274,7 @@ final class el extends SingleChildWidget {
                 eb.field_B.field_R = 1;
                 eb.field_B.field_V = qc.field_u.field_V;
                 if (HotspotTextWidget.field_Q > 0) {
-                  MessageDialogContent.a(param7, param4, param9, true);
+                  gg.a(param7, param4, param9, true);
                   if (0 < InflaterDecompressor.field_a) {
                     UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
                   }
@@ -344,7 +344,7 @@ final class el extends SingleChildWidget {
           Throwable decompiledCaughtException = null;
           try {
             if (param0) {
-              el.b(true);
+              LabeledChildWidget.b(true);
             }
             stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
@@ -379,7 +379,7 @@ final class el extends SingleChildWidget {
         this.field_G.drawParagraph(this.field_J, this.field_I + (var7Lifetime1 + var5), this.field_I + var6, -this.field_I + this.field_L, -(2 * this.field_I) + this.field_w, this.field_F, -1, this.field_K ? 0 : 2, 1, this.field_G.maxAscent);
     }
 
-    el(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+    LabeledChildWidget(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (WidgetPainter) null, (WidgetListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

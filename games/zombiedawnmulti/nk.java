@@ -22,15 +22,15 @@ final class nk extends IntrusiveNode {
         IntrusiveDeque discarded$0 = null;
         if (SimArmedHuman.field_Db == 0 &&
           param2 > 0) {
-          he.field_k = new IntrusiveDeque();
+          LinkButtonPainter.field_k = new IntrusiveDeque();
         } else {
           if (0 == param2) {
-            he.field_k = null;
+            LinkButtonPainter.field_k = null;
           }
         }
         SimArmedHuman.field_Db = param2;
         la.field_n = param1;
-        if (param3 == ab.field_o &&
+        if (param3 == MusicPatchNode.field_o &&
           param0 > 0) {
           discarded$0 = new IntrusiveDeque();
         } else {
@@ -38,7 +38,7 @@ final class nk extends IntrusiveNode {
           }
         }
         si.field_C = param4;
-        ab.field_o = param0;
+        MusicPatchNode.field_o = param0;
     }
 
     final static GameEvent a(int param0, CipherPacketBuffer param1) {
@@ -170,11 +170,11 @@ final class nk extends IntrusiveNode {
               if (0 != (65535 & var6)) {
                 if ((16711935 & var6) == 0) {
                   var7 = var6 >> 8;
-                  var4[var5] = cr.b(tq.b(16711696, var7 * tq.b(255, param1 >> 16) << 8), cr.b(tq.b(255, param1) * var7 >> 8, tq.b(tq.b(param1 >> 8, 255) * var7, 65280)));
+                  var4[var5] = cr.b(ScrollPane.b(16711696, var7 * ScrollPane.b(255, param1 >> 16) << 8), cr.b(ScrollPane.b(255, param1) * var7 >> 8, ScrollPane.b(ScrollPane.b(param1 >> 8, 255) * var7, 65280)));
                 }
               } else {
                 var7 = var6 >> 16;
-                var4[var5] = cr.b(tq.b(1107361536, var7 * tq.b(255, param3 >> 16)) << 8, cr.b(var7 * tq.b(255, param3) >> 8, tq.b(65280, var7 * (tq.b(65362, param3) >> 8))));
+                var4[var5] = cr.b(ScrollPane.b(1107361536, var7 * ScrollPane.b(255, param3 >> 16)) << 8, cr.b(var7 * ScrollPane.b(255, param3) >> 8, ScrollPane.b(65280, var7 * (ScrollPane.b(65362, param3) >> 8))));
               }
             }
           }

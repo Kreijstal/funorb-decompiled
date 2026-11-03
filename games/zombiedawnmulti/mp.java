@@ -98,7 +98,7 @@ abstract class mp {
     }
 
     final static ml a(int param0, boolean param1, byte param2) {
-        tq stackIn_4_0;
+        ScrollPane stackIn_4_0;
         int stackIn_4_1;
         boolean stackIn_4_2;
         int stackIn_4_3;
@@ -138,12 +138,12 @@ abstract class mp {
           stackIn_4_3 = 2 + jk.field_f;
           stackIn_5_4 = (eg.field_B.field_Jb == vc.field_d);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((tq) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, (jk.field_f * 3 + 6) * param0, -106) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, (jk.field_f * 3 + 6) * param0, -106) ? 1 : 0;
           var4 = eg.field_B.field_Ib.field_Cb;
           var5 = null;
           if (2 == SimZombie.field_zb) {
             SimUnit.field_O.field_Z = true;
-            dp.field_b.field_wb = vl.a(kg.field_m, new String[]{ta.field_ob}, 2);
+            dp.field_b.field_wb = vl.a(kg.field_m, new String[]{ProgressDialog.field_ob}, 2);
             eg.field_B.field_Jb.field_Jb.field_wb = null;
             var6 = null;
             var7 = (ml) (var4.c(42));
@@ -167,7 +167,7 @@ abstract class mp {
                 if (var7.field_Nb == null) {
                   var10 = 13369344;
                   var11 = 16737894;
-                } else if (var7.field_Nb == ta.field_ob) {
+                } else if (var7.field_Nb == ProgressDialog.field_ob) {
                   var11 = 6750054;
                   var10 = 52224;
                 } else {

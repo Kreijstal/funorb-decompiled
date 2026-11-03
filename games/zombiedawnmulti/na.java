@@ -111,7 +111,7 @@ final class na extends SingleChildWidget {
             for (var4 = 0; var4 < var2[0].length; var4++) {
               stackIn_8_0 = ImageProducerRasterBuffer.field_j[var3];
               stackIn_8_1 = var4;
-              if (0 != tq.b(1, var2[var3][var4])) {
+              if (0 != ScrollPane.b(1, var2[var3][var4])) {
                 stackIn_9_2 = 0;
               } else {
                 stackIn_9_2 = -1;

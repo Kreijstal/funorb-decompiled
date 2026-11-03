@@ -84,7 +84,7 @@ abstract class ResizableDialog extends FadingDialog {
         nj.field_f = false;
         PowerupButton.a(param0, 99);
         SceneObject.field_B = mp.field_b;
-        ta.field_hb = mp.field_b;
+        ProgressDialog.field_hb = mp.field_b;
     }
 
     public static void i(byte param0) {

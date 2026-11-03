@@ -68,10 +68,10 @@ final class bl {
         if (param0 < 38) {
           return 127L;
         }
-        if (var1 < he.field_e) {
-          vn.field_b = vn.field_b + (-var1 + he.field_e);
+        if (var1 < LinkButtonPainter.field_e) {
+          vn.field_b = vn.field_b + (-var1 + LinkButtonPainter.field_e);
         }
-        he.field_e = var1;
+        LinkButtonPainter.field_e = var1;
         return vn.field_b + var1;
     }
 
@@ -106,7 +106,7 @@ final class bl {
           if (bi.field_e) {
             wp.field_h = null;
             hh.field_b = false;
-            cp.field_K = false;
+            DisplayNamePanel.field_K = false;
             FadingDialog.field_I = false;
             bi.field_e = false;
             af.field_e = null;

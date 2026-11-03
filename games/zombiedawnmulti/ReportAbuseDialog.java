@@ -192,7 +192,7 @@ final class ReportAbuseDialog extends UiComponent {
               field_Gb = (String) null;
             }
             if (var2_int >= 0 &&
-              he.b((byte) -22) <= 30000L) {
+              LinkButtonPainter.b((byte) -22) <= 30000L) {
               return false;
             }
             ak.a((byte) -124);

@@ -66,7 +66,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        wd var5 = null;
+        MessageDialogContent var5 = null;
         int var6 = 0;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -86,38 +86,38 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 if (!param1) {
                   SpriteState.f(-42);
                 }
-                var4 = ba.field_p;
+                var4 = MusicPatchPcmStream.field_p;
                 this.field_Ib = true;
               }
             }
           } else {
             var4 = DualLinkNode.field_g;
           }
-          var5 = new wd((MessageDialog) (this), ci.field_d, var4);
+          var5 = new MessageDialogContent((MessageDialog) (this), ci.field_d, var4);
           if (!param2.field_d) {
             if (!this.field_Ib) {
               if (param2.field_c != 5) {
-                var5.a(ContextMenu.field_Zb, -1, true);
+                var5.addActionButton(ContextMenu.field_Zb, -1, true);
               } else {
-                var5.a(lc.field_g, 11, true);
-                var5.a(oe.field_b, 17, true);
+                var5.addActionButton(lc.field_g, 11, true);
+                var5.addActionButton(oe.field_b, 17, true);
               }
             } else {
-              var5.a(ub.field_xb, param0 ^ 58, (WidgetListener) (this));
+              var5.addButton(ub.field_xb, param0 ^ 58, (WidgetListener) (this));
             }
             if (param2.field_c == 3) {
-              var5.a(SimArmedHuman.field_zb, 7, true);
+              var5.addActionButton(SimArmedHuman.field_zb, 7, true);
             } else {
               if (param2.field_c == 6) {
-                var5.a(wm.field_S, 9, true);
+                var5.addActionButton(wm.field_S, 9, true);
               }
             }
           } else {
             if (param2.field_e) {
-              this.a((UiWidget) (new pj(this)), (byte) 122);
+              this.a((UiWidget) (new Under13NoticePanel(this)), (byte) 122);
               return;
             }
-            var5.a(ub.field_xb, -112, (WidgetListener) (this));
+            var5.addButton(ub.field_xb, -112, (WidgetListener) (this));
           }
           this.a((UiWidget) (var5), (byte) 125);
           return;
@@ -178,7 +178,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     final void p(int param0) {
-        this.a(-6, true, p.a(-97, ba.field_p, param0));
+        this.a(-6, true, p.a(-97, MusicPatchPcmStream.field_p, param0));
     }
 
     public static void o(int param0) {

@@ -105,7 +105,7 @@ final class og extends SimEntity {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        tq stackIn_3_0;
+        ScrollPane stackIn_3_0;
         int stackIn_3_1;
         boolean stackIn_3_2;
         int stackIn_3_3;
@@ -210,7 +210,7 @@ final class og extends SimEntity {
           stackIn_3_2 = param5;
           stackIn_3_3 = 2 * (jk.field_f + 2);
           stackIn_4_4 = (vc.field_d == SimEntity.field_H);
-          var7_int = ((tq) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, (4 * jk.field_f + 8) * param6, -108) ? 1 : 0;
+          var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, (4 * jk.field_f + 8) * param6, -108) ? 1 : 0;
           var8 = SimEntity.field_H.field_Gb.field_Cb;
           var9 = bl.a((byte) 99);
           var11 = null;
@@ -258,7 +258,7 @@ final class og extends SimEntity {
                 var12.field_jc.a((byte) 50, var12.field_kc);
               }
               var12.field_Tb = new UiComponent(0L, (UiComponent) null);
-              if ((1 << el.field_M & var14) != 0) {
+              if ((1 << LabeledChildWidget.field_M & var14) != 0) {
                 var12.field_jc.a((byte) 50, var12.field_Tb);
               }
               var12.field_ec = new UiComponent(0L, (UiComponent) null);
@@ -468,7 +468,7 @@ final class og extends SimEntity {
                 var12.field_kc.setBounds(var12.field_jc.field_z, 0, var51_ref.fullWidth, var34_int, -3344);
                 var34_int = var34_int + (LevelFileCatalog.field_c + var51_ref.fullWidth);
               }
-              if (0 != (1 << el.field_M & var14Lifetime1)) {
+              if (0 != (1 << LabeledChildWidget.field_M & var14Lifetime1)) {
                 var52_ref = we.field_j[var12.field_fc - 1];
                 var12.field_Tb.field_rb = var52_ref;
                 var12.field_Tb.setBounds(var12.field_jc.field_z, 0, var52_ref.fullWidth, var34_int, -3344);
@@ -641,7 +641,7 @@ final class og extends SimEntity {
                   ArrayWidgetGroup.a(param3, (byte) 92, var12.i(6));
                 }
               } else {
-                qm.a(var12, param0, var32, -123);
+                LoginForm.a(var12, param0, var32, -123);
               }
             }
             var12 = (jh) (var8.b(6));
@@ -715,7 +715,7 @@ final class og extends SimEntity {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
-          dc.a(var4, param1, var2, -100, var3);
+          TabbedPane.a(var4, param1, var2, -100, var3);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "og.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

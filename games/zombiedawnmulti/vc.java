@@ -6,7 +6,7 @@ final class vc {
     static String field_f;
     static String field_g;
     static String field_a;
-    static tq field_d;
+    static ScrollPane field_d;
     static String field_c;
     static String field_b;
     static String field_e;

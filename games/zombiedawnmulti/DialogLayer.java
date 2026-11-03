@@ -292,30 +292,30 @@ final class DialogLayer extends SingleChildWidget {
           boolean decompiledFrameRemainder0 = true;
           var9_int = 13 / ((param4 - 48) / 58);
           if (param2 == 1) {
-            mj.field_Hb[param2] = (MenuScreen) ((Object) new ho(param2, param1, param3, param6, param8, param7, param5));
+            VerticalScrollbar.field_Hb[param2] = (MenuScreen) ((Object) new ho(param2, param1, param3, param6, param8, param7, param5));
           } else {
             if (3 != param2) {
               if (param2 == 4) {
-                mj.field_Hb[param2] = (MenuScreen) ((Object) new ol(param2, param1, param3, param6, param8, param7, param5));
+                VerticalScrollbar.field_Hb[param2] = (MenuScreen) ((Object) new ol(param2, param1, param3, param6, param8, param7, param5));
               } else {
                 if (5 != param2 &&
                   param2 != 6) {
                   if (10 == param2) {
-                    mj.field_Hb[param2] = (MenuScreen) ((Object) new si(param2, param1, param3, param6, param8, param7, param5));
+                    VerticalScrollbar.field_Hb[param2] = (MenuScreen) ((Object) new si(param2, param1, param3, param6, param8, param7, param5));
                   } else {
                     if (param2 == 12) {
-                      mj.field_Hb[param2] = (MenuScreen) ((Object) new vo(param2, param1, param3, param6, param8, param7, param5));
+                      VerticalScrollbar.field_Hb[param2] = (MenuScreen) ((Object) new vo(param2, param1, param3, param6, param8, param7, param5));
                     } else {
                       if (param2 == 14) {
-                        mj.field_Hb[param2] = (MenuScreen) ((Object) new vj(param2, param1, param3, param6, param8, param7, param5));
+                        VerticalScrollbar.field_Hb[param2] = (MenuScreen) ((Object) new vj(param2, param1, param3, param6, param8, param7, param5));
                       } else {
                         if (param2 == 15) {
-                          mj.field_Hb[param2] = (MenuScreen) ((Object) new LaboratoryScreen(param2, param1, param3, param6, param8, param7, param5));
+                          VerticalScrollbar.field_Hb[param2] = (MenuScreen) ((Object) new LaboratoryScreen(param2, param1, param3, param6, param8, param7, param5));
                         } else {
                           if (13 == param2) {
-                            mj.field_Hb[param2] = (MenuScreen) ((Object) new kp(param2, param1, param3, param6, param8, param7, param5));
+                            VerticalScrollbar.field_Hb[param2] = (MenuScreen) ((Object) new kp(param2, param1, param3, param6, param8, param7, param5));
                           } else {
-                            mj.field_Hb[param2] = new MenuScreen(param2, param1, param3, param6, param8, param7, param5);
+                            VerticalScrollbar.field_Hb[param2] = new MenuScreen(param2, param1, param3, param6, param8, param7, param5);
                           }
                         }
                       }
@@ -324,14 +324,14 @@ final class DialogLayer extends SingleChildWidget {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  mj.field_Hb[param2] = (MenuScreen) ((Object) new mq(param2, param1, param3, param6, param8, param7, param5));
+                  VerticalScrollbar.field_Hb[param2] = (MenuScreen) ((Object) new mq(param2, param1, param3, param6, param8, param7, param5));
                 }
               }
             } else {
-              mj.field_Hb[param2] = (MenuScreen) ((Object) new fk(param2, param1, param3, param6, param8, param7, param5));
+              VerticalScrollbar.field_Hb[param2] = (MenuScreen) ((Object) new fk(param2, param1, param3, param6, param8, param7, param5));
             }
           }
-          ab.field_h = (si) (mj.field_Hb[10]);
+          MusicPatchNode.field_h = (si) (VerticalScrollbar.field_Hb[10]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

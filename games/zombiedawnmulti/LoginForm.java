@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends WidgetContainer implements TextInputListener, ButtonActivationListener {
+final class LoginForm extends WidgetContainer implements TextInputListener, ButtonActivationListener {
     static String field_I;
     private TextInputWidget field_M;
     private boolean field_L;
@@ -106,7 +106,7 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
             return;
           }
           if (this.field_G == param2) {
-            this.a((byte) -95);
+            this.submitLogin((byte) -95);
           } else {
             if (this.field_P == param2) {
               hb.a(0);
@@ -149,7 +149,7 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
         super.renderWidget(param0, param1, param2, param3);
     }
 
-    final String h(int param0) {
+    final String getEnteredName(int param0) {
         if (param0 != 6728) {
           return (String) null;
         }
@@ -168,10 +168,10 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
         this.field_M.clearInputText(true);
     }
 
-    qm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
+    LoginForm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (WidgetPainter) null);
-        el dupTemp$0 = null;
-        el dupTemp$1 = null;
+        LabeledChildWidget dupTemp$0 = null;
+        LabeledChildWidget dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
@@ -191,8 +191,8 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
         BitmapFont var7 = null;
         String var8 = null;
         bo var9 = null;
-        el var12 = null;
-        el var13 = null;
+        LabeledChildWidget var12 = null;
+        LabeledChildWidget var13 = null;
         try {
           stackIn_4_1 = (param3);
           this.field_Q = stackIn_4_1;
@@ -248,9 +248,9 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
           } else {
             if (this.field_L) {
               this.field_J.field_x = de.field_a;
-              this.field_J.painter = (WidgetPainter) ((Object) new he());
+              this.field_J.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
             } else {
-              this.field_J.painter = (WidgetPainter) ((Object) new he());
+              this.field_J.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
             }
           }
           this.field_i = 15;
@@ -267,11 +267,11 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
           } else {
             var8 = ReportAbuseDialog.field_Gb;
           }
-          dupTemp$0 = new el(10, this.field_i, -20 + this.field_n, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledChildWidget(10, this.field_i, -20 + this.field_n, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.b((byte) 112, dupTemp$0);
           this.field_i = this.field_i + (((UiWidget) ((Object) var12)).field_w + 5);
-          dupTemp$1 = new el(10, this.field_i, -20 + this.field_n, 25, this.field_M, false, 80, 3, var7, 16777215, ButtonWidget.field_D);
+          dupTemp$1 = new LabeledChildWidget(10, this.field_i, -20 + this.field_n, 25, this.field_M, false, 80, 3, var7, 16777215, ButtonWidget.field_D);
           var13 = dupTemp$1;
           this.b((byte) 108, dupTemp$1);
           this.field_i = this.field_i + (5 + ((UiWidget) ((Object) var13)).field_w);
@@ -391,7 +391,7 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
           var4 = param0.readUnsignedShort((byte) 69);
           var5 = param0.readUnsignedShort((byte) 69);
           if (!param1) {
-            qm.a(16);
+            LoginForm.a(16);
           }
           var6 = param0.readUnsignedShort((byte) 69);
           stackIn_3_0 = ClientException.a(var6, var4, var3, (byte) 104, var2_int, var5);
@@ -414,7 +414,7 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
         try {
           if (param1 != 0) {
             String var4 = (String) null;
-            qm.a(-1.2370823621749878f, -17, (String) null);
+            LoginForm.a(-1.2370823621749878f, -17, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qm.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -432,7 +432,7 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
             this.field_M.requestKeyboardFocus((UiWidget) (this), 0);
           }
           if (this.field_M == param0) {
-            this.a((byte) -99);
+            this.submitLogin((byte) -99);
           }
           if (!param1) {
             this.field_G = (ButtonWidget) null;
@@ -480,7 +480,7 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
           lh.field_i = param0;
           if (param1 != 80) {
             String var4 = (String) null;
-            qm.a(-1.1143913269042969f, -113, (String) null);
+            LoginForm.a(-1.1143913269042969f, -113, (String) null);
           }
           SimArmedHuman.field_Bb = param2;
         } catch (RuntimeException runtimeException) {
@@ -488,7 +488,7 @@ final class qm extends WidgetContainer implements TextInputListener, ButtonActiv
         }
     }
 
-    private final void a(byte param0) {
+    private final void submitLogin(byte param0) {
         int var2;
         var2 = 12 % ((param0 - 8) / 49);
         if (aa.e(0) ||

@@ -808,7 +808,7 @@ final class GameScreen {
               var10 = (on.a(var7, -18924) * 48 >> 16) + param1;
               var7 = var7 + var6_int;
               var8_ref.startMoveCommand((byte) 68, PortalEntryEvent.field_m.currentTick + 100, var9, var10);
-              wd.a(var8_ref.objectId, PortalEntryEvent.field_m.currentTick, ma.field_a, param2, 65, param1);
+              MessageDialogContent.a(var8_ref.objectId, PortalEntryEvent.field_m.currentTick, ma.field_a, param2, 65, param1);
               var8_ref = (GameCharacter) (this.selection.next((byte) 117));
               if (var20 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -942,7 +942,7 @@ final class GameScreen {
                 var18Lifetime1 = MusicPatch.d(12949) + 24 * var16Lifetime1;
                 var19Lifetime1 = 24 * var17Lifetime1 + MusicPatch.d(12949);
                 var15.startMoveCommand((byte) 95, 100 + PortalEntryEvent.field_m.currentTick, var18Lifetime1, var19Lifetime1);
-                wd.a(var15.objectId, PortalEntryEvent.field_m.currentTick, ma.field_a, var18Lifetime1, 61, var19Lifetime1);
+                MessageDialogContent.a(var15.objectId, PortalEntryEvent.field_m.currentTick, ma.field_a, var18Lifetime1, 61, var19Lifetime1);
                 var15 = (GameCharacter) (this.selection.next((byte) 108));
                 continue;
               }
@@ -1010,7 +1010,7 @@ final class GameScreen {
           if (!param0) {
             return;
           }
-          if (!he.field_a) {
+          if (!LinkButtonPainter.field_a) {
             SoftwareRasterizer.setClip(0, 40, 640, 440);
             if (var4 != 0) {
               SoftwareRasterizer.resetClip();
@@ -1203,8 +1203,8 @@ final class GameScreen {
               return;
             }
           }
-          pj.a(0, 16, -16384, 22, 21, (byte) -27, 3);
-          pj.a(0, 21, 16384, 23, 16, (byte) 122, 3);
+          Under13NoticePanel.a(0, 16, -16384, 22, 21, (byte) -27, 3);
+          Under13NoticePanel.a(0, 21, 16384, 23, 16, (byte) 122, 3);
           SimZombie.s(9);
           ck.a(59, -23838);
           ck.a(60, -23838);
@@ -2194,7 +2194,7 @@ final class GameScreen {
         int var5 = 0;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          wd.field_G = null;
+          MessageDialogContent.field_G = null;
           if (!param0) {
             this.update((byte) 76, false);
           }
@@ -2227,7 +2227,7 @@ final class GameScreen {
               }
               if (decompiledFrameRemainder0) {
                 this.centerCameraOn(this.portal.getY(-102), -92, this.portal.getX(61));
-                wd.field_G = (SceneObject) ((Object) this.portal);
+                MessageDialogContent.field_G = (SceneObject) ((Object) this.portal);
                 if (var5 == 0) {
                   return;
                 }
@@ -2241,7 +2241,7 @@ final class GameScreen {
                   var4 = (HumanView) (var3);
                   if (var4.field_C == 4) {
                     this.centerCameraOn(var4.getY(-96), -49, var4.getX(63));
-                    wd.field_G = (SceneObject) ((Object) var4);
+                    MessageDialogContent.field_G = (SceneObject) ((Object) var4);
                     return;
                   }
                 }
@@ -2259,7 +2259,7 @@ final class GameScreen {
               var4_ref = (GameCharacter) (var3);
               if (var4_ref.team == this.localTeam) {
                 this.centerCameraOn(var4_ref.getY(87), -61, var4_ref.getX(73));
-                wd.field_G = (SceneObject) ((Object) var4_ref);
+                MessageDialogContent.field_G = (SceneObject) ((Object) var4_ref);
                 return;
               }
             }
@@ -2796,7 +2796,7 @@ final class GameScreen {
                 return;
               }
             } else {
-              if (ai.field_b != 21 ||
+              if (DiskCacheWorker.field_b != 21 ||
                 ArmedHumanView.field_rb != 11) {
                 ec.field_c = false;
                 if (var3 != 0) {
@@ -3377,7 +3377,7 @@ final class GameScreen {
         var20 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           g.c(ki.field_k);
-          if (!he.field_a) {
+          if (!LinkButtonPainter.field_a) {
             SoftwareRasterizer.setClip(0, 40, (int)(640.0f * this.camera.zoom), (int)(480.0f * this.camera.zoom) - 40);
             if (var20 != 0) {
               SoftwareRasterizer.resetClip();
@@ -3695,7 +3695,7 @@ final class GameScreen {
                       if ((var10_ref_wb.field_Ib + var10_ref_wb.objectId) % 7 == 0 &&
                         var10_ref_wb.state == 5 &&
                         var10_ref_wb.field_Ib > PortalEntryEvent.field_m.currentTick) {
-                        var13 = (3 + var10_ref_wb.objectId) * var10_ref_wb.field_Ib % he.field_b.length;
+                        var13 = (3 + var10_ref_wb.objectId) * var10_ref_wb.field_Ib % LinkButtonPainter.field_b.length;
                         if (0 != var13 ||
                           q.field_b) {
                           if (var13 == 1 &&
@@ -3705,7 +3705,7 @@ final class GameScreen {
                         } else {
                           var13 = 1;
                         }
-                        pb.field_e.a(he.field_b[var13], var11, -48 + var12, 14540253, 0, 253);
+                        pb.field_e.a(LinkButtonPainter.field_b[var13], var11, -48 + var12, 14540253, 0, 253);
                       }
                     }
                     if (var8_int != 0 &&
@@ -3884,7 +3884,7 @@ final class GameScreen {
           }
           if (decompiledFrameRemainder0) {
             if (this.field_l <= 0) {
-              var9_ref = pj.field_J;
+              var9_ref = Under13NoticePanel.field_J;
               ah.field_e.b(var9_ref, 320, 240, 0, -1);
               decompiledFrameRemainder0 = (var20 != 0);
             }
@@ -4763,7 +4763,7 @@ final class GameScreen {
         this.field_g = 1;
         try {
           PowerupButton.field_e = this;
-          mj.field_Hb[2].field_g.field_d = 0;
+          VerticalScrollbar.field_Hb[2].field_g.field_d = 0;
           DebouncedValidationProvider.field_h = !(param2 >= 0);
           tg.field_e = param1;
           stackIn_8_0 = (((int)(bl.a((byte) 124) / 86400000L) - 11745) % 7 == 5);

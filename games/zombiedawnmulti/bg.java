@@ -125,10 +125,10 @@ final class bg implements WidgetPainter {
 
     final static boolean a(int param0) {
         if (param0 == 2) {
-          return BirthDateValidator.field_k == ta.field_hb ? true : false;
+          return BirthDateValidator.field_k == ProgressDialog.field_hb ? true : false;
         }
         bg.a(-5, (byte) 74, true);
-        return BirthDateValidator.field_k == ta.field_hb ? true : false;
+        return BirthDateValidator.field_k == ProgressDialog.field_hb ? true : false;
     }
 
     bg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

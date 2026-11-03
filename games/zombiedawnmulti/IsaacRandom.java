@@ -22,13 +22,13 @@ final class IsaacRandom {
         try {
           kj.field_r.b(-102);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            dc.field_Ib[var1_int] = 0L;
+            TabbedPane.field_Ib[var1_int] = 0L;
           }
           if (param0 != 26673) {
             IsaacRandom.b(-5);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            pj.field_K[var1_intLifetime1] = 0L;
+            Under13NoticePanel.field_K[var1_intLifetime1] = 0L;
           }
           ic.field_a = 0;
         } catch (RuntimeException runtimeException) {
@@ -67,10 +67,10 @@ final class IsaacRandom {
             }
           }
           this.field_a = this.field_a + this.field_c[255 & var2 + 128];
-          dupTemp$1 = this.field_c[tq.b(var3 >> 2, 255)] - (-this.field_a - this.field_e);
+          dupTemp$1 = this.field_c[ScrollPane.b(var3 >> 2, 255)] - (-this.field_a - this.field_e);
           var4 = dupTemp$1;
           this.field_c[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_c[tq.b(var4 >> 8, 1020) >> 2];
+          dupTemp$2 = var3 + this.field_c[ScrollPane.b(var4 >> 8, 1020) >> 2];
           this.field_e = dupTemp$2;
           this.field_g[var2] = dupTemp$2;
           var2++;

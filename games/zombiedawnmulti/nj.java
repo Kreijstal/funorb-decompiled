@@ -88,7 +88,7 @@ final class nj {
         try {
           var9 = MouseInputHandler.field_c.a(var5, -11452);
           pg.field_b = var9.e(-18572);
-          if (!IntrusiveDequeCursor.field_h.equals(ta.field_lb)) {
+          if (!IntrusiveDequeCursor.field_h.equals(ProgressDialog.field_lb)) {
             stackIn_25_0 = var9.field_r;
           } else {
             stackIn_25_0 = null;

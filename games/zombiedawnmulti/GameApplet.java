@@ -185,8 +185,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = bl.a((byte) 88);
-          var4 = pj.field_K[ik.field_c];
-          pj.field_K[ik.field_c] = var2_long;
+          var4 = Under13NoticePanel.field_K[ik.field_c];
+          Under13NoticePanel.field_K[ik.field_c] = var2_long;
           ik.field_c = 1 + ik.field_c & 31;
           if (param0 < 84) {
             this.focusGained((java.awt.event.FocusEvent) null);
@@ -429,7 +429,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_83_0 > stackIn_83_1) {
                     break;
                   }
-                  mj.field_Rb = true;
+                  VerticalScrollbar.field_Rb = true;
                   break;
                 }
               }
@@ -636,8 +636,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           var2_long = bl.a((byte) 47);
-          var4 = dc.field_Ib[ResizableDialog.field_Z];
-          dc.field_Ib[ResizableDialog.field_Z] = var2_long;
+          var4 = TabbedPane.field_Ib[ResizableDialog.field_Z];
+          TabbedPane.field_Ib[ResizableDialog.field_Z] = var2_long;
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);
@@ -849,7 +849,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (this == tg.field_i &&
             !NetworkGameClient.field_t) {
             UiComponent.field_ub = true;
-            if (mj.field_Rb &&
+            if (VerticalScrollbar.field_Rb &&
               bl.a((byte) 124) - eo.field_d > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {

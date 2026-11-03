@@ -32,7 +32,7 @@ class ButtonWidget extends UiWidget {
               pq.field_f == 0) {
               this.activateButton((byte) -49, this.field_u, MouseInputHandler.field_g - param2, bo.field_d - param3);
             }
-            this.a(MouseInputHandler.field_g, param1, param3, bo.field_d, true, param2);
+            this.handlePointerRelease(MouseInputHandler.field_g, param1, param3, bo.field_d, true, param2);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gn.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -210,7 +210,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
+    final void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
         try {
           if (null != this.field_A &&
             this.field_A instanceof ph) {
@@ -346,7 +346,7 @@ class ButtonWidget extends UiWidget {
           }
           var8.unlink(true);
           var8.a(-4564);
-          dc.field_Fb = dc.field_Fb - 1;
+          TabbedPane.field_Fb = TabbedPane.field_Fb - 1;
           var9 = ma.field_a;
           var9.b((byte) -35, param2);
           var9.position = var9.position + 1;

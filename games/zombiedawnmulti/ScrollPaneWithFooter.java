@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cd extends UiComponent {
+final class ScrollPaneWithFooter extends UiComponent {
     UiComponent field_Hb;
     static String field_Kb;
-    tq field_Jb;
+    ScrollPane field_Jb;
     UiComponent field_Gb;
     static String field_Lb;
     static String field_Fb;
     static String field_Mb;
     UiComponent field_Ib;
 
-    cd(long param0, cd param1, String param2, String param3) {
+    ScrollPaneWithFooter(long param0, ScrollPaneWithFooter param1, String param2, String param3) {
         this(param0, param1, param1.field_Jb.field_Jb, param1.field_Jb.field_Ib, param1.field_Gb, param2, param3);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setPaneFooterBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.field_z = param2;
         if (param0 != 0) {
           field_Mb = (String) null;
@@ -23,14 +23,14 @@ final class cd extends UiComponent {
         this.field_x = param5;
         this.field_Q = param6;
         this.field_zb = param3;
-        this.a(param4, (byte) -67, param1, param7);
+        this.layoutPaneFooter(param4, (byte) -67, param1, param7);
     }
 
-    cd(long param0, UiComponent param1, UiComponent param2, hi param3, UiComponent param4, String param5, String param6) {
+    ScrollPaneWithFooter(long param0, UiComponent param1, UiComponent param2, hi param3, UiComponent param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_Ib = new UiComponent(0L, (UiComponent) null);
-          this.field_Jb = new tq(0L, this.field_Ib, param2, param3);
+          this.field_Jb = new ScrollPane(0L, this.field_Ib, param2, param3);
           this.field_Gb = new UiComponent(0L, param4);
           this.field_Hb = new UiComponent(0L, param4);
           this.field_Gb.field_wb = param5;
@@ -43,7 +43,7 @@ final class cd extends UiComponent {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void layoutPaneFooter(int param0, byte param1, int param2, int param3) {
         int var5 = (this.field_zb + param0) / 2;
         int var6 = -param3 + this.field_z;
         this.field_Jb.a(param2, param0, this.field_zb, 0, -param0 + var6, -31465, 0);
@@ -133,7 +133,7 @@ final class cd extends UiComponent {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_Mb = null;
         field_Fb = null;
         field_Lb = null;

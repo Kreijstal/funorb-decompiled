@@ -44,7 +44,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           if (!param1.equals(this.field_v)) {
             var3 = CipherPacketBuffer.a(param1, false);
             if (!var3.d(-99)) {
-              stackIn_7_0 = ua.field_I;
+              stackIn_7_0 = DraggableWidget.field_I;
               return stackIn_7_0;
             }
             this.field_v = param1;

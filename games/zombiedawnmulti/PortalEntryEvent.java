@@ -39,7 +39,7 @@ final class PortalEntryEvent extends GameEvent {
           }
           me.field_k.a(jk.field_g, (byte) -27, ScoreUpdateEvent.field_j, true);
           me.field_k.h((byte) -109);
-          while (ba.c(-1)) {
+          while (MusicPatchPcmStream.c(-1)) {
             me.field_k.a(param0 - 2, pn.field_d, InfectionEvent.field_p);
           }
           return;

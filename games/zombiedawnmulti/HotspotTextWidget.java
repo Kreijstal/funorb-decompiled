@@ -406,7 +406,7 @@ class HotspotTextWidget extends ButtonWidget {
             }
           }
           for (var3 = 0; TextWidgetPainter.field_m.length > var3; var3++) {
-            var4 = wd.field_Q[var3];
+            var4 = MessageDialogContent.field_Q[var3];
             if (var4 >= 0) {
               if (var4 != NetworkGameClient.field_B.field_d) {
                 var5 = hp.field_k;
@@ -467,13 +467,13 @@ class HotspotTextWidget extends ButtonWidget {
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(var1_int, -no.field_Gb + var8Lifetime1, var7Lifetime1 + (no.field_Gb << 1), me.field_h + (wk.field_G << 1), 12018);
+                var9.a(var1_int, -no.field_Gb + var8Lifetime1, var7Lifetime1 + (no.field_Gb << 1), me.field_h + (DateInputWidget.field_G << 1), 12018);
               }
-              var1_int = var1_int + wk.field_G;
+              var1_int = var1_int + DateInputWidget.field_G;
             }
             if (var4 >= 0) {
               m.field_C.c(var6, var8Lifetime1, var1_int + MenuScreen.field_h, var5, -1);
-              var1_int = var1_int + (ResizableDialog.field_bb + (wk.field_G + me.field_h));
+              var1_int = var1_int + (ResizableDialog.field_bb + (DateInputWidget.field_G + me.field_h));
             } else {
               uq.field_f.c(var6, var8Lifetime1, var1_int + bf.field_g, var5, -1);
               var1_int = var1_int + WidgetContainer.field_C;

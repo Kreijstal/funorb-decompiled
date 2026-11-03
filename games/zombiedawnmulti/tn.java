@@ -6,7 +6,7 @@ final class tn extends qc {
     int field_D;
     byte field_B;
     static IntrusiveDeque field_C;
-    static tq field_A;
+    static ScrollPane field_A;
     PacketBuffer field_y;
 
     final static void a(boolean param0, int param1, java.awt.Canvas param2) {

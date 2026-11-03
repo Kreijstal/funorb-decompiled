@@ -128,7 +128,7 @@ final class dg extends WidgetContainer implements ButtonActivationListener {
         this.field_P.setWidgetBounds(this.field_n - var3 >> 1, -(var2 * 2) + (-78 + this.field_w), 28972, var3, 30);
         this.field_N.field_A = (WidgetListener) (this);
         this.field_P.field_A = (WidgetListener) (this);
-        this.field_P.field_x = qm.field_I;
+        this.field_P.field_x = LoginForm.field_I;
         this.field_H.field_A = (WidgetListener) (this);
         this.field_H.field_x = de.field_a;
         this.b((byte) 45, this.field_N);

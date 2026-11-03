@@ -147,7 +147,7 @@ final class cb extends IntrusiveNode {
                     if (255 >= var15) {
                       var18 = SoftwareRasterizer.pixels[var8];
                       var19 = (var18 & 16711935) * var16 + var15 * (var17 & 16711935) >> 8 & 16711935;
-                      SoftwareRasterizer.pixels[var8] = (tq.b(var15 * tq.b(var17, 65280) + var16 * tq.b(var18, 65280), 16711705) >> 8) + var19;
+                      SoftwareRasterizer.pixels[var8] = (ScrollPane.b(var15 * ScrollPane.b(var17, 65280) + var16 * ScrollPane.b(var18, 65280), 16711705) >> 8) + var19;
                     } else {
                       SoftwareRasterizer.pixels[var8] = var17;
                     }
@@ -223,7 +223,7 @@ final class cb extends IntrusiveNode {
           if (PortalView.field_L != null) {
             PortalView.field_L.dismissDialog(-7435);
           }
-          b.field_c = new qm(param2, param0, false, true, true);
+          b.field_c = new LoginForm(param2, param0, false, true, true);
           wj.field_i.a((UiWidget) (b.field_c), (byte) -110);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

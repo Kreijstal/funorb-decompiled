@@ -457,7 +457,7 @@ final class dk extends UiComponent {
           return this.field_Fb;
         }
         while (true) {
-          if (!ba.c(-1)) {
+          if (!MusicPatchPcmStream.c(-1)) {
             this.field_Gb.field_wb = this.field_Hb.toString();
             if (param0 < 84) {
               this.field_Hb = (StringBuilder) null;

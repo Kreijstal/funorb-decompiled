@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ab extends IntrusiveNode {
+final class MusicPatchNode extends IntrusiveNode {
     int field_g;
     static si field_h;
     int field_l;
@@ -13,7 +13,7 @@ final class ab extends IntrusiveNode {
     static int field_j;
     static int field_o;
 
-    private ab() throws Throwable {
+    private MusicPatchNode() throws Throwable {
         throw new Error();
     }
 

@@ -235,7 +235,7 @@ final class u extends IntrusiveNode {
         try {
           var1_int = 0;
           var2 = 0;
-          while (ba.c(-1)) {
+          while (MusicPatchPcmStream.c(-1)) {
             NetworkGameClient.field_B.d(99);
             if (NetworkGameClient.field_B.c(-85)) {
               var1_int = 1;

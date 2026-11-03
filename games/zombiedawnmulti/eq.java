@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eq {
-    private ai field_d;
+    private DiskCacheWorker field_d;
     private java.math.BigInteger field_e;
     static IndexedSprite field_c;
     private qb field_i;
@@ -23,7 +23,7 @@ final class eq {
         }
     }
 
-    eq(qb param0, ai param1) {
+    eq(qb param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -172,7 +172,7 @@ final class eq {
         }
     }
 
-    private eq(qb param0, ai param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private eq(qb param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

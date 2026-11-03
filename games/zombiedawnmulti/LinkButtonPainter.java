@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he implements WidgetPainter {
+final class LinkButtonPainter implements WidgetPainter {
     static String[] field_b;
     private int field_j;
     static String field_c;
@@ -93,12 +93,12 @@ final class he implements WidgetPainter {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 != -9355) {
-            he.a(-53);
+            LinkButtonPainter.a(-53);
           }
           var10 = s.field_e;
           var2 = var10.readUnsignedByte(31365);
           if (var2 == 0) {
-            var9 = (cr) (dc.field_Gb.c(param0 + 9430));
+            var9 = (cr) (TabbedPane.field_Gb.c(param0 + 9430));
             if (var9 == null) {
               ak.a((byte) -128);
               return;
@@ -150,10 +150,10 @@ final class he implements WidgetPainter {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 > -3) {
-          he.a((byte) 77);
+          LinkButtonPainter.releaseStatics((byte) 77);
         }
         field_c = null;
         field_f = null;
@@ -162,13 +162,13 @@ final class he implements WidgetPainter {
         field_k = null;
     }
 
-    public he() {
+    public LinkButtonPainter() {
         this.field_g = ke.field_h;
         this.field_j = 1;
         this.field_h = 1;
     }
 
-    he(BitmapFont param0, int param1, int param2) {
+    LinkButtonPainter(BitmapFont param0, int param1, int param2) {
         try {
           this.field_g = param0;
           this.field_h = param2;

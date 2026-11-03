@@ -45,7 +45,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
               this.field_r = param1;
               this.field_q = var3.field_d;
             } else {
-              stackIn_9_0 = ua.field_I;
+              stackIn_9_0 = DraggableWidget.field_I;
               return stackIn_9_0;
             }
           }
@@ -108,7 +108,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             this.field_r = param0;
           }
           if (this.field_q) {
-            return ba.field_j;
+            return MusicPatchPcmStream.field_j;
           }
           stackIn_17_0 = wg.field_d;
           return stackIn_17_0;

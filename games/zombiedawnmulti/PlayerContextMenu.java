@@ -204,7 +204,7 @@ final class PlayerContextMenu {
         var3 = var5.field_Nb;
         if (var5.field_lc) {
           this.field_j.a((byte) -118, vl.a(ke.field_d, new String[]{var3}, 2), 2);
-          this.field_j.a((byte) -118, vl.a(MessageDialogContent.field_e, new String[]{var3}, 2), 3);
+          this.field_j.a((byte) -118, vl.a(gg.field_e, new String[]{var3}, 2), 3);
         } else {
           if (var5.field_Ob) {
             this.field_j.a((byte) -118, vl.a(jo.field_c, new String[]{var3}, 2), 2);
@@ -305,10 +305,10 @@ final class PlayerContextMenu {
           if (param0.field_l != 2) {
             return;
           }
-          if (0 == ba.field_q) {
+          if (0 == MusicPatchPcmStream.field_q) {
             this.field_j.a((byte) -118, aj.field_i, 12);
           }
-          this.field_j.a((byte) -118, MessageDialogContent.field_n, 13);
+          this.field_j.a((byte) -118, gg.field_n, 13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

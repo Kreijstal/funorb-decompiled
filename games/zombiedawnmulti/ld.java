@@ -214,7 +214,7 @@ final class ld extends UiComponent {
                         ScoreUpdateEvent.field_k[var9] = (byte) 0;
                       }
                     } else {
-                      ScoreUpdateEvent.field_k[var7 / 8] = (byte)vg.a((int) ScoreUpdateEvent.field_k[var7 / 8], 1 << tq.b(var7, 7));
+                      ScoreUpdateEvent.field_k[var7 / 8] = (byte)vg.a((int) ScoreUpdateEvent.field_k[var7 / 8], 1 << ScrollPane.b(var7, 7));
                     }
                   }
                 } else {
@@ -438,10 +438,10 @@ final class ld extends UiComponent {
                 if (param1) {
                   if (-1 == var9) {
                     for (var18 = var6Lifetime4; var18 < var30.length + var6Lifetime4 - 1; var18++) {
-                      tg.field_a[var18 / 8] = (byte)tq.b((int) tg.field_a[var18 / 8], ~(1 << tq.b(var18, 7)));
+                      tg.field_a[var18 / 8] = (byte)ScrollPane.b((int) tg.field_a[var18 / 8], ~(1 << ScrollPane.b(var18, 7)));
                     }
                   } else {
-                    tg.field_a[(var6Lifetime4 + var9) / 8] = (byte)vg.a((int) tg.field_a[(var6Lifetime4 + var9) / 8], 1 << tq.b(var6Lifetime4 + var9, 7));
+                    tg.field_a[(var6Lifetime4 + var9) / 8] = (byte)vg.a((int) tg.field_a[(var6Lifetime4 + var9) / 8], 1 << ScrollPane.b(var6Lifetime4 + var9, 7));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -453,7 +453,7 @@ final class ld extends UiComponent {
               }
               if (param1 &&
                 var16Lifetime1 != 0) {
-                tg.field_a[(var9 + var6Lifetime4) / 8] = (byte)tq.b((int) tg.field_a[(var9 + var6Lifetime4) / 8], ~(1 << tq.b(var9 + var6Lifetime4, 7)));
+                tg.field_a[(var9 + var6Lifetime4) / 8] = (byte)ScrollPane.b((int) tg.field_a[(var9 + var6Lifetime4) / 8], ~(1 << ScrollPane.b(var9 + var6Lifetime4, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_pb) {
@@ -519,7 +519,7 @@ final class ld extends UiComponent {
                     var21 = ReportAbuseDialog.field_Ub;
                   }
                 } else {
-                  var21 = oj.field_H;
+                  var21 = BirthDateEntryPanel.field_H;
                 }
                 if (var4_int != 0 &&
                   !BirthDateValidator.field_l) {
@@ -1146,7 +1146,7 @@ final class ld extends UiComponent {
           return this.field_Ib.a(-119, param1, param2);
         }
         if (null == this.field_Ib &&
-          mj.field_Ib == this &&
+          VerticalScrollbar.field_Ib == this &&
           var4 != 0) {
           NavigationGrid.b(31706);
           return true;

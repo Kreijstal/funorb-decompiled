@@ -80,7 +80,7 @@ final class wg {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var1_int = 0;
-          while (ba.c(-1)) {
+          while (MusicPatchPcmStream.c(-1)) {
             mo.field_Jb.d(99);
             if (!mo.field_Jb.c(-85)) {
               continue;

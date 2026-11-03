@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class cp extends WidgetContainer implements UsernameSuggestionListener, ButtonActivationListener {
+final class DisplayNamePanel extends WidgetContainer implements UsernameSuggestionListener, ButtonActivationListener {
     static String field_L;
     static BitmapFont field_H;
     private ButtonWidget field_M;
@@ -63,7 +63,7 @@ final class cp extends WidgetContainer implements UsernameSuggestionListener, Bu
         if (!this.h(param0 - 16777195)) {
           return;
         }
-        ai.a(this.field_G.field_j, (byte) 126);
+        DiskCacheWorker.a(this.field_G.field_j, (byte) 126);
         if (param0 != 16777215) {
           discarded$0 = this.h(-58);
         }
@@ -109,7 +109,7 @@ final class cp extends WidgetContainer implements UsernameSuggestionListener, Bu
         }
     }
 
-    private final boolean a(ValidationProviderSource param0, int param1) {
+    private final boolean isInputValid(ValidationProviderSource param0, int param1) {
         ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -142,7 +142,7 @@ final class cp extends WidgetContainer implements UsernameSuggestionListener, Bu
         }
     }
 
-    public cp() {
+    public DisplayNamePanel() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_G = new on("", (WidgetListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(field_H, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.maxAscent, -1, 2147483647, true);
@@ -153,7 +153,7 @@ final class cp extends WidgetContainer implements UsernameSuggestionListener, Bu
         this.field_G.a((byte) -27, new UsernameAvailabilityValidator(this.field_G));
         this.field_M.field_F = false;
         this.field_M.painter = (WidgetPainter) ((Object) new oq());
-        this.field_W.painter = (WidgetPainter) ((Object) new he());
+        this.field_W.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
         this.field_G.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
         int var3 = 20;
         int var4 = 4;
@@ -281,7 +281,7 @@ final class cp extends WidgetContainer implements UsernameSuggestionListener, Bu
     private final int a(int param0, UiWidget param1, String param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         km var9 = null;
-        el var10 = null;
+        LabeledChildWidget var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -295,7 +295,7 @@ final class cp extends WidgetContainer implements UsernameSuggestionListener, Bu
           if (param5 != 12352) {
             field_U = (Calendar) null;
           }
-          var10 = new el(20, param0, 120 + param6, 25, param1, false, 120, 3, ke.field_h, 16777215, param4);
+          var10 = new LabeledChildWidget(20, param0, 120 + param6, 25, param1, false, 120, 3, ke.field_h, 16777215, param4);
           this.b((byte) 115, var10);
           var9 = new km(((ValidationProviderSource) ((Object) param1)).getValidationProvider((byte) -61), param2, 126, var10.field_w + param0, 25 + param6, param3);
           var9.field_A = (WidgetListener) (this);
@@ -329,7 +329,7 @@ final class cp extends WidgetContainer implements UsernameSuggestionListener, Bu
     }
 
     private final boolean h(int param0) {
-        if (!this.a((ValidationProviderSource) (this.field_G), param0 + 104)) {
+        if (!this.isInputValid((ValidationProviderSource) (this.field_G), param0 + 104)) {
           return false;
         }
         if (param0 == 20) {

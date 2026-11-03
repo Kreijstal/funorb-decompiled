@@ -276,7 +276,7 @@ final class mq extends MenuScreen {
         }
         boolean decompiledFrameRemainder0 = true;
         if (param1 != 13 && (param1 != 16 ||
-          le.$cfr$intArgs$b$c86821474a52(0, -70))) {
+          ProgressBarWidget.$cfr$intArgs$b$c86821474a52(0, -70))) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
         }

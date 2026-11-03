@@ -48,14 +48,14 @@ class TertiaryLinkNode extends DualLinkNode {
         int var2 = 0;
         int var2Lifetime1;
         uk.field_S = param0;
-        if (wd.field_L == null) {
+        if (MessageDialogContent.field_L == null) {
           var2 = 8 % ((-28 - param1) / 48);
           if (ra.field_m != null) {
             ra.field_m.a(param0, 18813);
           }
           return;
         }
-        wd.field_L.a(param0, (byte) 116);
+        MessageDialogContent.field_L.a(param0, (byte) 116);
         var2Lifetime1 = 8 % ((-28 - param1) / 48);
         if (ra.field_m != null) {
           ra.field_m.a(param0, 18813);

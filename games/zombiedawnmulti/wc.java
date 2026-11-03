@@ -125,7 +125,7 @@ final class wc extends SceneObject {
             stackIn_7_2 = (ib.field_a <= 50) ? false : true;
             FadingDialog.a(stackIn_4_0 != 0, stackIn_4_1, stackIn_7_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
           } else {
-            if (cp.field_K) {
+            if (DisplayNamePanel.field_K) {
               stackIn_33_1 = true;
               stackIn_34_2 = (ib.field_a <= 50) ? false : true;
               FadingDialog.a(stackIn_17_0 != 0, stackIn_33_1, stackIn_34_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
@@ -145,7 +145,7 @@ final class wc extends SceneObject {
               stackIn_141_2 = (ib.field_a <= 50) ? false : true;
               FadingDialog.a(stackIn_138_0 != 0, stackIn_138_1, stackIn_141_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             } else {
-              if (cp.field_K) {
+              if (DisplayNamePanel.field_K) {
                 stackIn_167_1 = true;
                 stackIn_168_2 = (ib.field_a <= 50) ? false : true;
                 FadingDialog.a(stackIn_151_0 != 0, stackIn_167_1, stackIn_168_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
@@ -178,7 +178,7 @@ final class wc extends SceneObject {
               stackIn_97_2 = (ib.field_a <= 50) ? false : true;
               FadingDialog.a(stackIn_94_0 != 0, stackIn_94_1, stackIn_97_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             } else {
-              if (cp.field_K) {
+              if (DisplayNamePanel.field_K) {
                 stackIn_123_1 = true;
                 stackIn_124_2 = (ib.field_a <= 50) ? false : true;
                 FadingDialog.a(stackIn_107_0 != 0, stackIn_123_1, stackIn_124_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
@@ -197,7 +197,7 @@ final class wc extends SceneObject {
               stackIn_53_2 = (ib.field_a <= 50) ? false : true;
               FadingDialog.a(stackIn_50_0 != 0, stackIn_50_1, stackIn_53_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             } else {
-              if (cp.field_K) {
+              if (DisplayNamePanel.field_K) {
                 stackIn_79_1 = true;
                 stackIn_80_2 = (ib.field_a <= 50) ? false : true;
                 FadingDialog.a(stackIn_63_0 != 0, stackIn_79_1, stackIn_80_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);

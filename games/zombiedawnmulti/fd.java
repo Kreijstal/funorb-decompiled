@@ -83,7 +83,7 @@ final class fd extends SceneObject {
           }
           var5 = this.getX(-128) / 24;
           var6 = this.getY(-51) / 24;
-          if (!he.field_a &&
+          if (!LinkButtonPainter.field_a &&
             var5 >= 0 &&
             var5 < PowerupButton.field_e.navigation.field_k[0].length &&
             var6 >= 0 &&
@@ -299,8 +299,8 @@ final class fd extends SceneObject {
                   }
                 }
               }
-              ta.field_lb = s.field_e.readString((byte) -48);
-              var12 = (CharSequence) ((Object) ta.field_lb);
+              ProgressDialog.field_lb = s.field_e.readString((byte) -48);
+              var12 = (CharSequence) ((Object) ProgressDialog.field_lb);
               ProxySocketConnector.field_k = tg.a(var12, false);
               qq.field_a = s.field_e.readUnsignedByte(31365);
               vo.field_l = pi.field_a;
@@ -334,11 +334,11 @@ final class fd extends SceneObject {
               if (vl.field_h > 0) {
                 cm.field_e = true;
               }
-              ma.field_a.a((byte) -77, mj.field_Fb);
+              ma.field_a.a((byte) -77, VerticalScrollbar.field_Fb);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
-                mj.field_Fb[var8Lifetime1] = mj.field_Fb[var8Lifetime1] + 50;
+                VerticalScrollbar.field_Fb[var8Lifetime1] = VerticalScrollbar.field_Fb[var8Lifetime1] + 50;
               }
-              s.field_e.a((byte) -116, mj.field_Fb);
+              s.field_e.a((byte) -116, VerticalScrollbar.field_Fb);
               stackIn_90_0 = PortalEntryEvent.field_i;
               return stackIn_90_0;
             }
@@ -361,7 +361,7 @@ final class fd extends SceneObject {
             }
             if (ki.field_h == null) {
               if (UiTheme.field_j) {
-                if (he.b((byte) -22) > 30000L) {
+                if (LinkButtonPainter.b((byte) -22) > 30000L) {
                   ol.field_q = aj.field_l;
                 } else {
                   ol.field_q = CipherPacketBuffer.field_w;

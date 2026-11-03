@@ -157,9 +157,9 @@ final class gi extends IntrusiveNode {
         if (qe.field_g > 2) {
           qe.field_g = 2;
         }
-        ba.field_q = 3 & param1;
-        if (!(ba.field_q <= 2)) {
-          ba.field_q = 2;
+        MusicPatchPcmStream.field_q = 3 & param1;
+        if (!(MusicPatchPcmStream.field_q <= 2)) {
+          MusicPatchPcmStream.field_q = 2;
         }
     }
 

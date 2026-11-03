@@ -12,7 +12,7 @@ abstract class SimEntity extends TertiaryLinkNode {
     int positionX;
     static String field_I;
     int cellY;
-    static tq field_H;
+    static ScrollPane field_H;
     static long field_K;
     static String field_F;
     GameSimulation simulation;

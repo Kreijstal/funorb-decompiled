@@ -148,7 +148,7 @@ final class ci {
           bf.field_h.setBounds(18, 2 + jk.field_f, 42 + DualLinkNode.field_o, -42 - DualLinkNode.field_o + CipherPacketBuffer.field_r.field_zb, -3344);
           bf.field_n.a(DualLinkNode.field_o, 2, CipherPacketBuffer.field_r.field_zb, 0, -2 - jk.field_f + (CipherPacketBuffer.field_r.field_z - 20), -31465, 20 + (2 + jk.field_f));
           jp.field_b.setBounds(40, JaggrabDownloader.field_i.field_z - 40, JaggrabDownloader.field_i.field_zb, 0, -3344);
-          MessageDialogContent.field_m.setBounds(30, 0, LevelData.field_a.field_zb, 0, -3344);
+          gg.field_m.setBounds(30, 0, LevelData.field_a.field_zb, 0, -3344);
           SocketConnector.field_a.setBounds(-2 + LevelData.field_a.field_z - 70, 30, LevelData.field_a.field_zb, 0, -3344);
           var2_int = 3 + kj.field_h;
           if (2 > qo.field_r.length) {

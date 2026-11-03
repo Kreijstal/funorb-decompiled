@@ -95,7 +95,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_ineligible", (byte) 83);
                 if (null != var2) {
-                  ba.field_p = qe.a(-2739, var2);
+                  MusicPatchPcmStream.field_p = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("usernameprompt", (byte) 83);
                 if (var2 != null) {
@@ -199,7 +199,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_x_declined_invite", (byte) 83);
                 if (null != var2) {
-                  tq.field_Fb = qe.a(-2739, var2);
+                  ScrollPane.field_Fb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_x_withdrew_request", (byte) 83);
                 if (var2 != null) {
@@ -386,7 +386,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("invite_decline_xs_game", (byte) 83);
                 if (var2 != null) {
-                  MessageDialogContent.field_e = qe.a(-2739, var2);
+                  gg.field_e = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("join_xs_game", (byte) 83);
                 if (var2 != null) {
@@ -478,7 +478,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_chat_invisible_and_silent_mode", (byte) 83);
                 if (null != var2) {
-                  MessageDialogContent.field_n = qe.a(-2739, var2);
+                  gg.field_n = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("you_have_been_removed_from_xs_game", (byte) 83);
                 if (null != var2) {
@@ -770,7 +770,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("privatechat_friend_notlisted", (byte) 83);
                 if (null != var2) {
-                  ta.field_jb = qe.a(-2739, var2);
+                  ProgressDialog.field_jb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("chatviewscrolledup", (byte) 83);
                 if (null != var2) {
@@ -810,7 +810,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("gameopt_unratedonly", (byte) 83);
                 if (var2 != null) {
-                  oj.field_H = qe.a(-2739, var2);
+                  BirthDateEntryPanel.field_H = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("gameopt_notunlocked", (byte) 83);
                 if (null != var2) {
@@ -882,7 +882,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("gameopt_mightchange", (byte) 83);
                 if (var2 != null) {
-                  mj.field_Ob = qe.a(-2739, var2);
+                  VerticalScrollbar.field_Ob = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("gameopt_playersdontqualify", (byte) 83);
                 if (null != var2) {
@@ -894,7 +894,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("gameopt_unselectedoptions", (byte) 83);
                 if (null != var2) {
-                  ai.field_d = qe.a(-2739, var2);
+                  DiskCacheWorker.field_d = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("gameopt_pleaseselectoption1", (byte) 83);
                 if (var2 != null) {
@@ -1472,7 +1472,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_select_alternative", (byte) 83);
                 if (null != var2) {
-                  wd.field_I = qe.a(-2739, var2);
+                  MessageDialogContent.field_I = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("create_optin_news", (byte) 83);
                 if (null != var2) {
@@ -1512,7 +1512,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("login_create_tooltip", (byte) 83);
                 if (var2 != null) {
-                  qm.field_I = qe.a(-2739, var2);
+                  LoginForm.field_I = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("login_justplay_tooltip", (byte) 83);
                 if (var2 != null) {
@@ -1600,7 +1600,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_username_available", (byte) 83);
                 if (var2 != null) {
-                  ba.field_j = qe.a(-2739, var2);
+                  MusicPatchPcmStream.field_j = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("create_alert_namelength", (byte) 83);
                 if (var2 != null) {
@@ -1640,7 +1640,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_alert_passcontainsname_partial", (byte) 83);
                 if (null != var2) {
-                  tq.field_Hb = qe.a(-2739, var2);
+                  ScrollPane.field_Hb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("create_alert_checkname", (byte) 83);
                 if (var2 != null) {
@@ -1692,7 +1692,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("unable_to_add_friend", (byte) 83);
                 if (null != var2) {
-                  le.field_G = qe.a(-2739, var2);
+                  ProgressBarWidget.field_G = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("unable_to_add_ignore", (byte) 83);
                 if (null != var2) {
@@ -1910,7 +1910,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("sound_colon", (byte) 83);
                 if (var2 != null) {
-                  cd.field_Fb = qe.a(-2739, var2);
+                  ScrollPaneWithFooter.field_Fb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("music_colon", (byte) 83);
                 if (var2 != null) {
@@ -1918,7 +1918,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("fullscreen", (byte) 83);
                 if (var2 != null) {
-                  cd.field_Lb = qe.a(-2739, var2);
+                  ScrollPaneWithFooter.field_Lb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("screensize", (byte) 83);
                 if (var2 != null) {
@@ -2006,7 +2006,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("resumegame", (byte) 83);
                 if (var2 != null) {
-                  ua.field_K = qe.a(-2739, var2);
+                  DraggableWidget.field_K = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("resumetutorial", (byte) 83);
                 if (null != var2) {
@@ -2482,7 +2482,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("quickchat_help", (byte) 83);
                 if (null != var2) {
-                  le.field_I = qe.a(-2739, var2);
+                  ProgressBarWidget.field_I = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("quickchat_help_title", (byte) 83);
                 if (null != var2) {
@@ -2570,7 +2570,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("benefits_noadverts", (byte) 83);
                 if (null != var2) {
-                  wk.field_K = qe.a(-2739, var2);
+                  DateInputWidget.field_K = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("benefits_price", (byte) 83);
                 if (var2 != null) {
@@ -2682,7 +2682,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("fs_accept_countdown_sing", (byte) 83);
                 if (var2 != null) {
-                  ba.field_l = qe.a(-2739, var2);
+                  MusicPatchPcmStream.field_l = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("fs_accept_countdown_pl", (byte) 83);
                 if (var2 != null) {
@@ -2956,31 +2956,31 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mustlogin_alternate,1", (byte) 83);
                 if (var2 != null) {
-                  le.field_P[1] = qe.a(-2739, var2);
+                  ProgressBarWidget.field_P[1] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mustlogin_alternate,2", (byte) 83);
                 if (var2 != null) {
-                  le.field_P[2] = qe.a(-2739, var2);
+                  ProgressBarWidget.field_P[2] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mustlogin_alternate,3", (byte) 83);
                 if (null != var2) {
-                  le.field_P[3] = qe.a(-2739, var2);
+                  ProgressBarWidget.field_P[3] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mustlogin_alternate,4", (byte) 83);
                 if (null != var2) {
-                  le.field_P[4] = qe.a(-2739, var2);
+                  ProgressBarWidget.field_P[4] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mustlogin_alternate,5", (byte) 83);
                 if (null != var2) {
-                  le.field_P[5] = qe.a(-2739, var2);
+                  ProgressBarWidget.field_P[5] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mustlogin_alternate,6", (byte) 83);
                 if (null != var2) {
-                  le.field_P[6] = qe.a(-2739, var2);
+                  ProgressBarWidget.field_P[6] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mustlogin_alternate,7", (byte) 83);
                 if (var2 != null) {
-                  le.field_P[7] = qe.a(-2739, var2);
+                  ProgressBarWidget.field_P[7] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,0", (byte) 83);
                 if (null != var2) {
@@ -3084,24 +3084,24 @@ final class ah {
         int var2_intLifetime1;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (ai.field_b == 21 &&
+          if (DiskCacheWorker.field_b == 21 &&
             io.field_g) {
             return;
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
-          ma.field_d = ai.field_b;
+          ma.field_d = DiskCacheWorker.field_b;
           SimHuman.field_pb = 0;
-          ai.field_b = param1;
+          DiskCacheWorker.field_b = param1;
           fieldTemp$0 = SimHuman.field_pb;
           SimHuman.field_pb = SimHuman.field_pb + 1;
           ButtonWidget.field_I[fieldTemp$0] = 0;
-          if (!(ai.field_b >= 0) ||
-            !(19 > ai.field_b)) {
-            if (ai.field_b == -1) {
+          if (!(DiskCacheWorker.field_b >= 0) ||
+            !(19 > DiskCacheWorker.field_b)) {
+            if (DiskCacheWorker.field_b == -1) {
               stackIn_14_0 = 0;
             } else {
-              stackIn_14_0 = ei.field_g[ai.field_b].length;
+              stackIn_14_0 = ei.field_g[DiskCacheWorker.field_b].length;
             }
             SimHuman.field_pb = stackIn_14_0;
             var2_int = 0;
@@ -3123,7 +3123,7 @@ final class ah {
             var3 = 32;
             while (true) {
               if (38 >= var3) {
-                stackOut_23_0 = pb.a(ai.field_b, -20, var3);
+                stackOut_23_0 = pb.a(DiskCacheWorker.field_b, -20, var3);
                 stackIn_35_0 = stackOut_23_0 ? 1 : 0;
                 stackIn_24_0 = stackOut_23_0;
                 if (var4 == 0) {
@@ -3141,10 +3141,10 @@ final class ah {
               } else {
                 stackIn_35_0 = ~SimHuman.field_pb;
               }
-              if (stackIn_35_0 >= ~ei.field_g[ai.field_b].length) {
+              if (stackIn_35_0 >= ~ei.field_g[DiskCacheWorker.field_b].length) {
                 break;
               }
-              SimHuman.field_pb = ei.field_g[ai.field_b].length;
+              SimHuman.field_pb = ei.field_g[DiskCacheWorker.field_b].length;
               break;
             }
           }

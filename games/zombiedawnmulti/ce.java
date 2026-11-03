@@ -195,9 +195,9 @@ final class ce extends IntrusiveNode {
           var9_int = 495;
           var10 = 5;
           IntrusiveNode.field_c.setBounds(param0, var10, var9_int - 10, 5, -3344);
-          ec.field_b.setBounds(param0, 0, IntrusiveNode.field_c.field_zb - ua.field_E.field_zb, 0, -3344);
+          ec.field_b.setBounds(param0, 0, IntrusiveNode.field_c.field_zb - DraggableWidget.field_E.field_zb, 0, -3344);
           var10 = var10 + (param6 + param0);
-          ua.field_E.setBounds(param0, 0, ua.field_E.field_zb, ec.field_b.field_zb, -3344);
+          DraggableWidget.field_E.setBounds(param0, 0, DraggableWidget.field_E.field_zb, ec.field_b.field_zb, -3344);
           dp.field_c.setBounds(param7, var10, dp.field_c.e(0), 5, -3344);
           var11 = jk.field_d.e(0);
           jk.field_d.setBounds(param7, var10, var11, -5 + var9_int - var11, -3344);

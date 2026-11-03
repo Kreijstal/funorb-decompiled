@@ -99,7 +99,7 @@ final class cm {
         Sprite var32Lifetime5;
         Sprite var32Lifetime6;
         try {
-          ve.a(0L, 196, (String) null, (tq) null, (String) null, param2, param1, (int[]) null, -1);
+          ve.a(0L, 196, (String) null, (ScrollPane) null, (String) null, param2, param1, (int[]) null, -1);
           if (param1 == 0) {
             var13 = pk.field_b;
             var14 = wp.field_j[0];
@@ -146,7 +146,7 @@ final class cm {
             var34.field_j.a(var35, 12, var36, true);
             var37 = pk.field_b;
             var38 = wp.field_j[2];
-            var39 = MessageDialogContent.field_n;
+            var39 = gg.field_n;
             var37.field_j.a(var38, 13, var39, true);
           }
           var40 = pk.field_b;

@@ -109,8 +109,8 @@ final class wp {
             }
           }
           var1_int = 107 / ((param0 - 76) / 39);
-          if (wd.field_L != null) {
-            if (wd.field_L.c(-119)) {
+          if (MessageDialogContent.field_L != null) {
+            if (MessageDialogContent.field_L.c(-119)) {
               return;
             }
             bb.field_g = null;

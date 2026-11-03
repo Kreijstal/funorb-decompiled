@@ -46,20 +46,20 @@ final class fl {
           0 < ci.field_a) {
           fieldTemp$2 = ci.field_a - 1;
           ci.field_a = ci.field_a - 1;
-          var2_ref_byte__Lifetime2 = oj.field_N[fieldTemp$2];
-          oj.field_N[ci.field_a] = null;
+          var2_ref_byte__Lifetime2 = BirthDateEntryPanel.field_N[fieldTemp$2];
+          BirthDateEntryPanel.field_N[ci.field_a] = null;
           return var2_ref_byte__Lifetime2;
         }
         var2 = -104 / ((param0 - 39) / 61);
         if (null != GameKeyHandler.field_b) {
           for (var3 = 0; var3 < lk.field_P.length; var3++) {
             if (param1 == lk.field_P[var3] &&
-              ta.field_ib[var3] > 0) {
-              dupTemp$3 = ta.field_ib[var3] - 1;
+              ProgressDialog.field_ib[var3] > 0) {
+              dupTemp$3 = ProgressDialog.field_ib[var3] - 1;
               arrayValue$4 = GameKeyHandler.field_b[var3];
-              ta.field_ib[var3] = dupTemp$3;
+              ProgressDialog.field_ib[var3] = dupTemp$3;
               var4 = arrayValue$4[dupTemp$3];
-              GameKeyHandler.field_b[var3][ta.field_ib[var3]] = null;
+              GameKeyHandler.field_b[var3][ProgressDialog.field_ib[var3]] = null;
               return var4;
             }
           }

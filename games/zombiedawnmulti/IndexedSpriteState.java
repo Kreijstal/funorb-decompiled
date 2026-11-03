@@ -88,7 +88,7 @@ abstract class IndexedSpriteState {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (cd.field_Kb.indexOf(var5Lifetime1) == -1) {
+              if (ScrollPaneWithFooter.field_Kb.indexOf(var5Lifetime1) == -1) {
                 stackIn_44_0 = UnitStateEvent.field_t;
                 return stackIn_44_0;
               }

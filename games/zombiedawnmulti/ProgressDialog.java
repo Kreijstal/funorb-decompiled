@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta extends ResizableDialog {
+final class ProgressDialog extends ResizableDialog {
     static String field_jb;
     static String field_ob;
     static int[] field_ib;
@@ -11,11 +11,11 @@ final class ta extends ResizableDialog {
     private String field_rb;
     private boolean field_nb;
     static char[] field_pb;
-    private le field_qb;
+    private ProgressBarWidget field_qb;
     private String field_mb;
     static ak field_hb;
 
-    public static void k(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= -61) {
           field_ob = null;
           field_ib = null;
@@ -28,7 +28,7 @@ final class ta extends ResizableDialog {
         }
     }
 
-    final void l(int param0) {
+    final void stopNormalAnimation(int param0) {
         this.field_qb.field_L = false;
         this.field_nb = true;
         if (param0 <= 110) {
@@ -36,7 +36,7 @@ final class ta extends ResizableDialog {
         }
     }
 
-    ta(DialogLayer param0, String param1) {
+    ProgressDialog(DialogLayer param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
@@ -45,7 +45,7 @@ final class ta extends ResizableDialog {
             var3_int = ci.field_d.measureWrappedHeight(this.field_mb, 260, ci.field_d.maxAscent);
             this.b(300, var3_int + 150, 78);
           }
-          this.field_qb = new le(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_qb = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_kb = false;
           this.field_qb.field_L = true;
           this.field_nb = false;
@@ -55,7 +55,7 @@ final class ta extends ResizableDialog {
         }
     }
 
-    final void a(String param0, float param1, int param2, boolean param3) {
+    final void updateProgress(String param0, float param1, int param2, boolean param3) {
         int stackIn_3_0 = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_17_0 = null;

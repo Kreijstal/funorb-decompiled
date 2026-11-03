@@ -256,27 +256,27 @@ final class SimZombie extends SimUnit {
                                       if (this.state != 19 &&
                                         this.state != 24) {
                                         if (this.state == 27) {
-                                          if (this.animationFrame == MessageDialogContent.field_j[27] / 2) {
+                                          if (this.animationFrame == gg.field_j[27] / 2) {
                                             this.field_Bb = false;
                                             this.field_ub = 0;
                                             this.field_xb = this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 2250);
                                           }
-                                          if ((~(-1 + MessageDialogContent.field_j[27]) == ~this.animationFrame)) {
+                                          if ((~(-1 + gg.field_j[27]) == ~this.animationFrame)) {
                                             this.setState(4, (byte) -89);
                                           }
                                         } else {
                                           if (this.state == 31) {
-                                            if ((~this.animationFrame == ~(MessageDialogContent.field_j[31] - 1))) {
+                                            if ((~this.animationFrame == ~(gg.field_j[31] - 1))) {
                                               this.setState(4, (byte) -89);
                                             }
                                           } else {
                                             if ((this.state == 28)) {
-                                              if (MessageDialogContent.field_j[28] / 2 == this.animationFrame) {
+                                              if (gg.field_j[28] / 2 == this.animationFrame) {
                                                 this.field_xb = 0;
                                                 this.field_Bb = false;
                                                 this.field_ub = this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 2250);
                                               }
-                                              if ((MessageDialogContent.field_j[28] - 1 == this.animationFrame)) {
+                                              if ((gg.field_j[28] - 1 == this.animationFrame)) {
                                                 this.setState(4, (byte) -89);
                                               }
                                             }

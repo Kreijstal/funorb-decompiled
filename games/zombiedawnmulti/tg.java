@@ -213,14 +213,14 @@ final class tg implements Runnable {
             return 80;
           }
         } else {
-          if (null != cp.field_P) {
-            if (!cp.field_P.a((byte) -116)) {
+          if (null != DisplayNamePanel.field_P) {
+            if (!DisplayNamePanel.field_P.a((byte) -116)) {
               return 14;
             }
-            if (!cp.field_P.a("", 2)) {
+            if (!DisplayNamePanel.field_P.a("", 2)) {
               return 29;
             }
-            if (!cp.field_P.a(false, "")) {
+            if (!DisplayNamePanel.field_P.a(false, "")) {
               return 29;
             }
           }
@@ -443,9 +443,9 @@ final class tg implements Runnable {
               SoftwareRasterizer.setClip(3 + var18.field_w, var18.field_qb, var18.field_zb + (var18.field_w - 6), -3 + (var18.field_qb + var18.field_z));
               var12 = 1;
               var6Lifetime3 = (int)(1.1 * (double)PowerupEvent.field_m) / 64 % 10;
-              var8Lifetime2 = MessageDialogContent.field_l[var12];
-              var7Lifetime3 = MessageDialogContent.field_b[var12];
-              var9Lifetime1 = MessageDialogContent.field_j[var12];
+              var8Lifetime2 = gg.field_l[var12];
+              var7Lifetime3 = gg.field_b[var12];
+              var9Lifetime1 = gg.field_j[var12];
               var13 = (int)((double)PowerupEvent.field_m * 1.1) % 64;
               var10Lifetime2 = (8 + PowerupEvent.field_m) / var7Lifetime3 % var9Lifetime1 + var8Lifetime2;
               var14 = var4 + 8;
@@ -592,7 +592,7 @@ final class tg implements Runnable {
           try {
             pp.field_n = param1;
             FadingDialog.field_I = true;
-            var2 = ta.field_lb;
+            var2 = ProgressDialog.field_lb;
             if (var2 == null) {
               var2 = oe.field_d;
             }
@@ -615,7 +615,7 @@ final class tg implements Runnable {
               if (!pp.field_n && (!PortalView.i(51603) ||
                 !jk.a((byte) -128, FullscreenFocusCanvas.field_k.field_s[var9_int]))) {
                 var8[0].field_c[var9_int] = FullscreenFocusCanvas.field_k.field_s[var9_int];
-                var7.teamUpgradeMask[0] = cp.a(var7.teamUpgradeMask[0], 1L << FullscreenFocusCanvas.field_k.field_s[var9_int]);
+                var7.teamUpgradeMask[0] = DisplayNamePanel.a(var7.teamUpgradeMask[0], 1L << FullscreenFocusCanvas.field_k.field_s[var9_int]);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -707,7 +707,7 @@ final class tg implements Runnable {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
-              var10[var6] = UsernameAvailabilityValidator.field_t[tq.b(255, (int) var21[var6])];
+              var10[var6] = UsernameAvailabilityValidator.field_t[ScrollPane.b(255, (int) var21[var6])];
             }
             var1[var2] = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var22);
           } else {
@@ -719,7 +719,7 @@ final class tg implements Runnable {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = cr.b(UsernameAvailabilityValidator.field_t[tq.b((int) var21[var7], 255)], tq.b(255, (int) var16[var7]) << 24);
+              var6_ref_int__[var7] = cr.b(UsernameAvailabilityValidator.field_t[ScrollPane.b((int) var21[var7], 255)], ScrollPane.b(255, (int) var16[var7]) << 24);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var17));
           }

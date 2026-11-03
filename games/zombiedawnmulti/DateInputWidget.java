@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wk extends WidgetContainer implements ValidationProviderSource {
+abstract class DateInputWidget extends WidgetContainer implements ValidationProviderSource {
     static String field_K;
     static IndexedSprite field_J;
     static JaggrabDownloader field_I;
@@ -14,7 +14,7 @@ abstract class wk extends WidgetContainer implements ValidationProviderSource {
         return (ValidationProvider) ((Object) this.field_H);
     }
 
-    wk(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+    DateInputWidget(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);
     }
 
@@ -41,7 +41,7 @@ abstract class wk extends WidgetContainer implements ValidationProviderSource {
     final static void a(String param0, byte param1) {
         try {
           if (param1 <= 27) {
-            wk.h(-110);
+            DateInputWidget.releaseStatics(-110);
           }
           oe.field_f = param0;
         } catch (RuntimeException runtimeException) {
@@ -49,7 +49,7 @@ abstract class wk extends WidgetContainer implements ValidationProviderSource {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_L = null;
         field_I = null;
         int var1 = 52 % ((-10 - param0) / 50);

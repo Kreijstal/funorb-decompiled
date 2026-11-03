@@ -522,7 +522,7 @@ final class GameCharacter extends UnitView {
               default:
                 var5 = 0;
             }
-            if (MessageDialogContent.field_j[var5] <= var6) {
+            if (gg.field_j[var5] <= var6) {
               var6 = 0;
             }
           }
@@ -580,7 +580,7 @@ final class GameCharacter extends UnitView {
                 mo.field_Ib = PortalEntryEvent.field_m.field_D[this.team][1];
                 this.n(0);
                 this.s(2);
-                var12_ref_ja = nk.a(ig.field_d[var6 + (MessageDialogContent.field_l[var5] + this.field_fb)], mo.field_Ib, 255, MidiPcmStream.field_B);
+                var12_ref_ja = nk.a(ig.field_d[var6 + (gg.field_l[var5] + this.field_fb)], mo.field_Ib, 255, MidiPcmStream.field_B);
                 var12_ref_ja.g(var7 + this.field_mb - 3, var8 + this.field_cb - 3);
                 return;
               }
@@ -648,11 +648,11 @@ final class GameCharacter extends UnitView {
                 }
               }
               var14 = var6;
-              if (null != MessageDialogContent.field_i[var5]) {
-                var14 = MessageDialogContent.field_i[var5][var6];
+              if (null != gg.field_i[var5]) {
+                var14 = gg.field_i[var5][var6];
               }
               boolean decompiledFrameRemainder4 = true;
-              var15 = var14 + MessageDialogContent.field_l[var5];
+              var15 = var14 + gg.field_l[var5];
               if (this.field_xb) {
                 if (this.isOwnedByLocalPlayer((byte) 122) &&
                   var4 == 0) {
@@ -729,7 +729,7 @@ final class GameCharacter extends UnitView {
                 var17 = wq.field_c;
               }
               boolean decompiledFrameRemainder3 = true;
-              if (!he.field_a &&
+              if (!LinkButtonPainter.field_a &&
                 !this.field_xb &&
                 var4 == 0 &&
                 this.field_Ib > PortalEntryEvent.field_m.currentTick &&
@@ -781,11 +781,11 @@ final class GameCharacter extends UnitView {
                     if ((var25 & 65535) != 0) {
                       if (0 == (16711935 & var25)) {
                         var26 = var25 >> 8;
-                        var23[var24] = cr.b(cr.b(tq.b(65280, tq.b(255, mo.field_Ib >> 8) * var26), tq.b(mo.field_Ib, 255) * var26 >> 8), tq.b(16711777, (tq.b(mo.field_Ib, 16754034) >> 16) * var26 << 8));
+                        var23[var24] = cr.b(cr.b(ScrollPane.b(65280, ScrollPane.b(255, mo.field_Ib >> 8) * var26), ScrollPane.b(mo.field_Ib, 255) * var26 >> 8), ScrollPane.b(16711777, (ScrollPane.b(mo.field_Ib, 16754034) >> 16) * var26 << 8));
                       }
                     } else {
                       var26 = var25 >> 16;
-                      var23[var24] = cr.b(cr.b(var26 * tq.b(255, MidiPcmStream.field_B) >> 8, tq.b(65280, var26 * (tq.b(65430, MidiPcmStream.field_B) >> 8))), tq.b(1895890688, var26 * tq.b(255, MidiPcmStream.field_B >> 16)) << 8);
+                      var23[var24] = cr.b(cr.b(var26 * ScrollPane.b(255, MidiPcmStream.field_B) >> 8, ScrollPane.b(65280, var26 * (ScrollPane.b(65430, MidiPcmStream.field_B) >> 8))), ScrollPane.b(1895890688, var26 * ScrollPane.b(255, MidiPcmStream.field_B >> 16)) << 8);
                     }
                   }
                   var24++;
@@ -1223,11 +1223,11 @@ final class GameCharacter extends UnitView {
         try {
           if (!this.field_nb) {
             var5_int = 0;
-            var6 = this.animationFrame % MessageDialogContent.field_j[var5_int];
+            var6 = this.animationFrame % gg.field_j[var5_int];
             var7 = PortalEntryEvent.field_m.field_h.field_j;
             stackIn_6_0 = (var7 != 0) ? 6 : 2;
             var8 = stackIn_6_0;
-            var9 = MessageDialogContent.field_l[var5_int] + var6;
+            var9 = gg.field_l[var5_int] + var6;
             if (param2 >= 256) {
               if (this.facing != 1) {
                 wq.field_c[var8][var9].g(param0, param1);
@@ -1495,12 +1495,12 @@ final class GameCharacter extends UnitView {
                           if (this.state != 19 &&
                             this.state != 24) {
                             if (this.state == 27) {
-                              if (~(MessageDialogContent.field_j[27] / 2) == ~this.animationFrame) {
+                              if (~(gg.field_j[27] / 2) == ~this.animationFrame) {
                                 this.field_ub = 0;
                                 this.field_xb = false;
                                 this.field_Nb = PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 2250);
                               }
-                              if (MessageDialogContent.field_j[27] - 1 != this.animationFrame) {
+                              if (gg.field_j[27] - 1 != this.animationFrame) {
                                 break regionExit1;
                               }
                               this.setState(4, -27655);
@@ -1511,13 +1511,13 @@ final class GameCharacter extends UnitView {
                             if (this.state != 28) {
                               break regionExit1;
                             }
-                            if (this.animationFrame == MessageDialogContent.field_j[28] / 2) {
+                            if (this.animationFrame == gg.field_j[28] / 2) {
                               this.field_xb = false;
                               this.field_Nb = 0;
                               this.field_Mb = PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 2250);
                               this.field_ub = this.field_Mb;
                             }
-                            if (this.animationFrame != -1 + MessageDialogContent.field_j[28]) {
+                            if (this.animationFrame != -1 + gg.field_j[28]) {
                               break regionExit1;
                             }
                             this.setState(4, -27655);
@@ -1657,7 +1657,7 @@ final class GameCharacter extends UnitView {
                 break regionExit1;
               }
             }
-            if (this.animationFrame == MessageDialogContent.field_j[31] / 4) {
+            if (this.animationFrame == gg.field_j[31] / 4) {
               if (this.isOwnedByLocalPlayer((byte) -54)) {
                 if (this.field_Bb) {
                   this.t(16);
@@ -1667,7 +1667,7 @@ final class GameCharacter extends UnitView {
               }
               this.team = this.field_ib;
             }
-            if (~(-1 + MessageDialogContent.field_j[31]) == ~this.animationFrame) {
+            if (~(-1 + gg.field_j[31]) == ~this.animationFrame) {
               this.setState(4, -27655);
             }
           }

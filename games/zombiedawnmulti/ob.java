@@ -23,7 +23,7 @@ final class ob extends DualLinkNode {
           return (String) null;
         }
         if (null != b.field_c) {
-          var1 = b.field_c.h(6728);
+          var1 = b.field_c.getEnteredName(6728);
         }
         if (var1.length() == 0) {
           var1 = ki.a((byte) -127);

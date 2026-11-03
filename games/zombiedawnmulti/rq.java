@@ -134,13 +134,13 @@ final class rq extends IntrusiveNode {
         if (!qj.field_p) {
           return;
         }
-        if (null != wd.field_G) {
+        if (null != MessageDialogContent.field_G) {
           var1 = wn.a(-125, PowerupEvent.field_m << 7) * 4 >> 16;
           stackIn_7_0 = PowerupButton.field_e.camera;
-          stackIn_7_1 = 9 + wd.field_G.getX(119);
-          stackIn_8_2 = (wd.field_G instanceof PortalView) ? 30 : 0;
+          stackIn_7_1 = 9 + MessageDialogContent.field_G.getX(119);
+          stackIn_8_2 = (MessageDialogContent.field_G instanceof PortalView) ? 30 : 0;
           var2 = (int)((float)((Camera) (Object) stackIn_7_0).worldToScreenX(stackIn_7_1 + stackIn_8_2, -20126) / PowerupButton.field_e.camera.zoom);
-          var3 = (int)((float)PowerupButton.field_e.camera.worldToScreenY(-72 + (wd.field_G.getY(param0 ^ -80) + 6), 112) / PowerupButton.field_e.camera.zoom);
+          var3 = (int)((float)PowerupButton.field_e.camera.worldToScreenY(-72 + (MessageDialogContent.field_G.getY(param0 ^ -80) + 6), 112) / PowerupButton.field_e.camera.zoom);
           var4_int = 2 + (var2 + var1);
           var5_int = -var1 + var3 - 2;
           if (0 == var1) {
@@ -191,7 +191,7 @@ final class rq extends IntrusiveNode {
           }
           g.b();
         }
-        if (21 == ai.field_b &&
+        if (21 == DiskCacheWorker.field_b &&
           ArmedHumanView.field_rb == 9) {
           var1Lifetime2 = 4 * wn.a(-125, PowerupEvent.field_m << 7) >> 16;
           var2Lifetime2 = var1Lifetime2 + 222;
@@ -214,25 +214,25 @@ final class rq extends IntrusiveNode {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           g.c();
-          el.field_H = param0;
+          LabeledChildWidget.field_H = param0;
           ve.field_b = new Sprite(55, 130);
           ve.field_b.bindAsRenderTarget();
-          el.field_H[2].f(5, -5, param1);
-          el.field_H[3].f(5, -5, 16777215);
+          LabeledChildWidget.field_H[2].f(5, -5, param1);
+          LabeledChildWidget.field_H[3].f(5, -5, 16777215);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
-          el.field_H[2].f(5, -5, 0);
-          el.field_H[3].f(5, -5, 0);
-          oj.field_M = new Sprite[39];
-          AccountCreationForm.field_W = new Sprite[oj.field_M.length];
-          for (var2_int = 0; var2_int < oj.field_M.length; var2_int++) {
-            oj.field_M[var2_int] = new Sprite(200, 25);
-            oj.field_M[var2_int].bindAsRenderTarget();
+          LabeledChildWidget.field_H[2].f(5, -5, 0);
+          LabeledChildWidget.field_H[3].f(5, -5, 0);
+          BirthDateEntryPanel.field_M = new Sprite[39];
+          AccountCreationForm.field_W = new Sprite[BirthDateEntryPanel.field_M.length];
+          for (var2_int = 0; var2_int < BirthDateEntryPanel.field_M.length; var2_int++) {
+            BirthDateEntryPanel.field_M[var2_int] = new Sprite(200, 25);
+            BirthDateEntryPanel.field_M[var2_int].bindAsRenderTarget();
             var3 = lh.a((byte) -12, var2_int);
             pb.field_e.b(var3, 100, 17, 16777215, -1);
-            AccountCreationForm.field_W[var2_int] = g.b(oj.field_M[var2_int]);
+            AccountCreationForm.field_W[var2_int] = g.b(BirthDateEntryPanel.field_M[var2_int]);
           }
           SocketConnector.field_c = InflaterDecompressor.a(9, np.field_l);
-          AccountCreationForm.field_U = InflaterDecompressor.a(param1 ^ -16777125, mj.field_Sb);
+          AccountCreationForm.field_U = InflaterDecompressor.a(param1 ^ -16777125, VerticalScrollbar.field_Sb);
           mi.field_Mb = InflaterDecompressor.a(104, mq.field_o);
           NodeHashTableIterator.field_f = InflaterDecompressor.a(4, wm.field_U);
           la.field_j = InflaterDecompressor.a(70, vc.field_a);

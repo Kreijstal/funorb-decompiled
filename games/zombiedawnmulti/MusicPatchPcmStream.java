@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends PcmStream {
+final class MusicPatchPcmStream extends PcmStream {
     private MidiPcmStream field_n;
     static String field_j;
     IntrusiveDeque field_k;
@@ -33,7 +33,7 @@ final class ba extends PcmStream {
               var4_int = param1;
               var5 = param2;
               while (var5 > var6.field_D) {
-                this.a(var4_int, 14531, var6.field_D, var6, param0, var5 + var4_int);
+                this.renderNote(var4_int, 14531, var6.field_D, var6, param0, var5 + var4_int);
                 var5 = var5 - var6.field_D;
                 var4_int = var4_int + var6.field_D;
                 if (this.field_n.a(var6, var5, var4_int, param0, -115)) {
@@ -42,7 +42,7 @@ final class ba extends PcmStream {
                 }
               }
               if (decompiledFrameCompleted0) {
-                this.a(var4_int, 14531, var5, var6, param0, var4_int + var5);
+                this.renderNote(var4_int, 14531, var5, var6, param0, var4_int + var5);
                 var6.field_D = var6.field_D - var5;
               }
             }
@@ -63,7 +63,7 @@ final class ba extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, int param2, mb param3, int[] param4, int param5) {
+    private final void renderNote(int param0, int param1, int param2, mb param3, int[] param4, int param5) {
         MidiPcmStream stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
         RuntimeException stackIn_27_0 = null;
@@ -156,7 +156,7 @@ final class ba extends PcmStream {
         return this.d();
     }
 
-    private final void a(mb param0, int param1, boolean param2) {
+    private final void skipNote(mb param0, int param1, boolean param2) {
         MidiPcmStream stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_17_0 = null;
@@ -211,7 +211,7 @@ final class ba extends PcmStream {
         field_j = null;
         field_p = null;
         if (param0 != 16652) {
-          ba.c(-110);
+          MusicPatchPcmStream.c(-110);
           field_l = null;
           return;
         }
@@ -230,11 +230,11 @@ final class ba extends PcmStream {
             var2 = param0;
             do {
               if (var3.field_D >= var2) {
-                this.a(var3, var2, false);
+                this.skipNote(var3, var2, false);
                 var3.field_D = var3.field_D - var2;
                 break;
               }
-              this.a(var3, var3.field_D, false);
+              this.skipNote(var3, var3.field_D, false);
               var2 = var2 - var3.field_D;
             } while (!this.field_n.a(var3, var2, 0, (int[]) null, 22));
           }
@@ -271,7 +271,7 @@ final class ba extends PcmStream {
             return false;
           }
           InfectionEvent.field_p = td.field_a[lp.field_j];
-          pn.field_d = ta.field_pb[lp.field_j];
+          pn.field_d = ProgressDialog.field_pb[lp.field_j];
           if (param0 != -1) {
             field_m = -21;
           }
@@ -281,7 +281,7 @@ final class ba extends PcmStream {
         return stackIn_7_0;
     }
 
-    ba(MidiPcmStream param0) {
+    MusicPatchPcmStream(MidiPcmStream param0) {
         this.field_k = new IntrusiveDeque();
         this.field_o = new PcmStreamMixer();
         try {

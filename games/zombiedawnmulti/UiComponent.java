@@ -698,8 +698,8 @@ class UiComponent extends qo {
         if (2 > ClientException.field_i) {
           return lo.field_f;
         }
-        if (null != cp.field_P) {
-          if (!cp.field_P.a((byte) -122)) {
+        if (null != DisplayNamePanel.field_P) {
+          if (!DisplayNamePanel.field_P.a((byte) -122)) {
             return ud.field_Y;
           }
           return nh.field_n;

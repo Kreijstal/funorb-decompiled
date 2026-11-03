@@ -50,7 +50,7 @@ final class WhirlpoolHasher {
         dm var9 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          this.field_m[this.field_c] = (byte)cr.b((int) this.field_m[this.field_c], 128 >>> tq.b(this.field_f, 7));
+          this.field_m[this.field_c] = (byte)cr.b((int) this.field_m[this.field_c], 128 >>> ScrollPane.b(this.field_f, 7));
           this.field_c = this.field_c + 1;
           if (this.field_c > 32) {
             while (this.field_c < 64) {
@@ -71,7 +71,7 @@ final class WhirlpoolHasher {
           var4_int = 0;
           if (param1 != 1) {
             var9 = (dm) null;
-            WhirlpoolHasher.a(-29, (tq) null, -43, 102, (byte) 41, -126, (dm) null);
+            WhirlpoolHasher.a(-29, (ScrollPane) null, -43, 102, (byte) 41, -126, (dm) null);
           }
           var5 = param2;
           while (var4_int < 8) {
@@ -127,7 +127,7 @@ final class WhirlpoolHasher {
         }
         var3 = 0;
         while (var2 < 8) {
-          this.field_h[var2] = tq.a(en.a(255L, (long)this.field_m[7 + var3]), tq.a(en.a(255L, (long)this.field_m[6 + var3]) << 8, tq.a(en.a(255L, (long)this.field_m[var3 + 5]) << 16, tq.a(tq.a(tq.a(en.a(280375465082880L, (long)this.field_m[var3 + 2] << 40), tq.a((long)this.field_m[var3] << 56, en.a((long)this.field_m[var3 + 1], 255L) << 48)), en.a((long)this.field_m[var3 + 3] << 32, 1095216660480L)), en.a((long)this.field_m[var3 + 4] << 24, 4278190080L)))));
+          this.field_h[var2] = ScrollPane.a(en.a(255L, (long)this.field_m[7 + var3]), ScrollPane.a(en.a(255L, (long)this.field_m[6 + var3]) << 8, ScrollPane.a(en.a(255L, (long)this.field_m[var3 + 5]) << 16, ScrollPane.a(ScrollPane.a(ScrollPane.a(en.a(280375465082880L, (long)this.field_m[var3 + 2] << 40), ScrollPane.a((long)this.field_m[var3] << 56, en.a((long)this.field_m[var3 + 1], 255L) << 48)), en.a((long)this.field_m[var3 + 3] << 32, 1095216660480L)), en.a((long)this.field_m[var3 + 4] << 24, 4278190080L)))));
           var2++;
           var3 += 8;
         }
@@ -135,7 +135,7 @@ final class WhirlpoolHasher {
           dupTemp$0 = this.field_j[var2Lifetime1];
           arrayValue$1 = this.field_h[var2Lifetime1];
           this.field_d[var2Lifetime1] = dupTemp$0;
-          this.field_b[var2Lifetime1] = tq.a(arrayValue$1, dupTemp$0);
+          this.field_b[var2Lifetime1] = ScrollPane.a(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -143,7 +143,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_a[var3Lifetime1] = tq.a(this.field_a[var3Lifetime1], p.field_f[var4][tq.b(255, (int)(this.field_d[tq.b(7, -var4 + var3Lifetime1)] >>> var5))]);
+              this.field_a[var3Lifetime1] = ScrollPane.a(this.field_a[var3Lifetime1], p.field_f[var4][ScrollPane.b(255, (int)(this.field_d[ScrollPane.b(7, -var4 + var3Lifetime1)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -151,14 +151,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_d[var3Lifetime1Lifetime1] = this.field_a[var3Lifetime1Lifetime1];
           }
-          this.field_d[0] = tq.a(this.field_d[0], p.field_d[var2Lifetime2]);
+          this.field_d[0] = ScrollPane.a(this.field_d[0], p.field_d[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_a[var3Lifetime1Lifetime2] = this.field_d[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_a[var3Lifetime1Lifetime2] = tq.a(this.field_a[var3Lifetime1Lifetime2], p.field_f[var7][tq.b((int)(this.field_b[tq.b(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_a[var3Lifetime1Lifetime2] = ScrollPane.a(this.field_a[var3Lifetime1Lifetime2], p.field_f[var7][ScrollPane.b((int)(this.field_b[ScrollPane.b(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -168,7 +168,7 @@ final class WhirlpoolHasher {
           }
         }
         for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
-          this.field_j[var2Lifetime3] = tq.a(this.field_j[var2Lifetime3], tq.a(this.field_h[var2Lifetime3], this.field_b[var2Lifetime3]));
+          this.field_j[var2Lifetime3] = ScrollPane.a(this.field_j[var2Lifetime3], ScrollPane.a(this.field_h[var2Lifetime3], this.field_b[var2Lifetime3]));
         }
     }
 
@@ -228,7 +228,7 @@ final class WhirlpoolHasher {
                 this.field_f = 0;
                 this.field_c = 0;
               }
-              this.field_m[this.field_c] = (byte)tq.b(var9 << 8 - var8, 255);
+              this.field_m[this.field_c] = (byte)ScrollPane.b(var9 << 8 - var8, 255);
               param2 = param2 - 8L;
               this.field_f = this.field_f + var8;
               var6++;
@@ -253,7 +253,7 @@ final class WhirlpoolHasher {
               this.field_c = 0;
               this.field_f = 0;
             }
-            this.field_m[this.field_c] = (byte)tq.b(255, var9Lifetime1 << -var8 + 8);
+            this.field_m[this.field_c] = (byte)ScrollPane.b(255, var9Lifetime1 << -var8 + 8);
             this.field_f = this.field_f + (int)param2;
           } else {
             this.field_f = (int)((long)this.field_f + param2);
@@ -368,7 +368,7 @@ final class WhirlpoolHasher {
           }
           discarded$0 = rm.field_a.append((char) var4);
           var5Lifetime1 = 485;
-          var17 = ta.field_lb;
+          var17 = ProgressDialog.field_lb;
           var7 = var17;
           var7Lifetime1 = var17;
           var16 = nh.a(2, var17);
@@ -418,7 +418,7 @@ final class WhirlpoolHasher {
         return true;
     }
 
-    final static void a(int param0, tq param1, int param2, int param3, byte param4, int param5, dm param6) {
+    final static void a(int param0, ScrollPane param1, int param2, int param3, byte param4, int param5, dm param6) {
         PlayerContextMenu var13 = null;
         int var8 = 0;
         int var9 = 0;

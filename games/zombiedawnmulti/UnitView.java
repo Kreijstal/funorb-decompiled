@@ -943,9 +943,9 @@ abstract class UnitView extends SceneObject {
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
-        if (MessageDialogContent.field_j[param1] > this.animationFrame) {
+        if (gg.field_j[param1] > this.animationFrame) {
           if (param0 == 30818) {
-            var3 = MessageDialogContent.field_b[param1];
+            var3 = gg.field_b[param1];
             if (0 < this.slowTicks) {
               var3 = var3 * 2;
             }
@@ -954,7 +954,7 @@ abstract class UnitView extends SceneObject {
             if (var3 < fieldTemp$2) {
               fieldTemp$3 = this.animationFrame + 1;
               this.animationFrame = this.animationFrame + 1;
-              if (fieldTemp$3 == MessageDialogContent.field_j[param1]) {
+              if (fieldTemp$3 == gg.field_j[param1]) {
                 this.animationFrame = 0;
               }
               this.animationTicks = 0;
@@ -962,7 +962,7 @@ abstract class UnitView extends SceneObject {
             return;
           }
           field_Y = 103;
-          var3Lifetime3 = MessageDialogContent.field_b[param1];
+          var3Lifetime3 = gg.field_b[param1];
           if (0 < this.slowTicks) {
             var3Lifetime3 = var3Lifetime3 * 2;
           }
@@ -971,7 +971,7 @@ abstract class UnitView extends SceneObject {
           if (var3Lifetime3 < fieldTemp$0) {
             fieldTemp$1 = this.animationFrame + 1;
             this.animationFrame = this.animationFrame + 1;
-            if (fieldTemp$1 == MessageDialogContent.field_j[param1]) {
+            if (fieldTemp$1 == gg.field_j[param1]) {
               this.animationFrame = 0;
             }
             this.animationTicks = 0;
@@ -980,7 +980,7 @@ abstract class UnitView extends SceneObject {
         }
         this.animationFrame = 0;
         if (param0 == 30818) {
-          var3Lifetime1 = MessageDialogContent.field_b[param1];
+          var3Lifetime1 = gg.field_b[param1];
           if (0 < this.slowTicks) {
             var3Lifetime1 = var3Lifetime1 * 2;
           }
@@ -989,7 +989,7 @@ abstract class UnitView extends SceneObject {
           if (var3Lifetime1 < fieldTemp$4) {
             fieldTemp$5 = this.animationFrame + 1;
             this.animationFrame = this.animationFrame + 1;
-            if (fieldTemp$5 == MessageDialogContent.field_j[param1]) {
+            if (fieldTemp$5 == gg.field_j[param1]) {
               this.animationFrame = 0;
             }
             this.animationTicks = 0;
@@ -997,7 +997,7 @@ abstract class UnitView extends SceneObject {
           return;
         }
         field_Y = 103;
-        var3Lifetime2 = MessageDialogContent.field_b[param1];
+        var3Lifetime2 = gg.field_b[param1];
         if (0 < this.slowTicks) {
           var3Lifetime2 = var3Lifetime2 * 2;
         }
@@ -1006,7 +1006,7 @@ abstract class UnitView extends SceneObject {
         if (var3Lifetime2 < fieldTemp$6) {
           fieldTemp$7 = this.animationFrame + 1;
           this.animationFrame = this.animationFrame + 1;
-          if (fieldTemp$7 == MessageDialogContent.field_j[param1]) {
+          if (fieldTemp$7 == gg.field_j[param1]) {
             this.animationFrame = 0;
           }
           this.animationTicks = 0;

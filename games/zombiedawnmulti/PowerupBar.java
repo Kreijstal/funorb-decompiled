@@ -212,7 +212,7 @@ final class PowerupBar {
           stackIn_28_1 = -11838;
           stackIn_29_2 = (param0) && (!param3) && (ee.field_a);
           ((UiComponent) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_29_2);
-          de.field_b.field_c.h(-37);
+          de.field_b.field_c.processTabPresses(-37);
           if (0 != kj.field_u.field_T) {
             uk.field_N = true;
           }
@@ -295,10 +295,10 @@ final class PowerupBar {
             var3Lifetime1 = tg.field_e.field_f[this.field_a];
             if (255 != var2_int) {
               g.a(AccountCreationForm.field_W[var2_int], this.field_f - 100, 453);
-              oj.field_M[var2_int].g(-100 + this.field_f, 453);
+              BirthDateEntryPanel.field_M[var2_int].g(-100 + this.field_f, 453);
               if (var3Lifetime1 != 255) {
                 g.a(AccountCreationForm.field_W[var3Lifetime1], -100 + this.field_f, 438);
-                oj.field_M[var3Lifetime1].g(-100 + this.field_f, 438);
+                BirthDateEntryPanel.field_M[var3Lifetime1].g(-100 + this.field_f, 438);
               }
             }
           }
@@ -345,7 +345,7 @@ final class PowerupBar {
             if (bk.field_g) {
               return;
             }
-            el.field_E.drawHalfSize(1 + var3Lifetime2, var4 + 1);
+            LabeledChildWidget.field_E.drawHalfSize(1 + var3Lifetime2, var4 + 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -653,7 +653,7 @@ final class PowerupBar {
                     if (var7 != null &&
                       var7.q(-14945) &&
                       !var7.isBusy(127)) {
-                      wd.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
+                      MessageDialogContent.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
                       break regionExit1;
                     }
                     return;
@@ -668,12 +668,12 @@ final class PowerupBar {
                     if (var8 != 7 &&
                       var8 == 0) {
                     }
-                    wd.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
+                    MessageDialogContent.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
                     break regionExit1;
                   }
                   if (var7 != null &&
                     !var7.isBusy(88)) {
-                    wd.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
+                    MessageDialogContent.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
                     break regionExit1;
                   }
                   return;
@@ -683,7 +683,7 @@ final class PowerupBar {
               }
               nn.a(ma.field_a, PortalEntryEvent.field_m.currentTick, this.field_l, (byte) 102);
             } else {
-              wd.a(param1.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
+              MessageDialogContent.a(param1.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
             }
           }
           tg.field_e.powerupReadyTick[this.field_l] = PortalEntryEvent.field_m.currentTick + PortalEntryEvent.field_m.getPowerupCooldown(FullscreenFocusCanvas.field_k.field_g[this.field_l], var5_int, PowerupButton.field_e.localTeam, false);

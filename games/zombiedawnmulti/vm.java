@@ -65,7 +65,7 @@ final class vm extends ResizableDialog implements ButtonActivationListener {
           var4.field_i = 50;
           var4.field_w = 80;
           var4.field_y = 0;
-          var4.painter = (WidgetPainter) ((Object) new TextWidgetPainter(cp.field_H, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.painter = (WidgetPainter) ((Object) new TextWidgetPainter(DisplayNamePanel.field_H, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 70, var4);
           this.field_kb = this.a((byte) -103, (WidgetListener) (this), ic.field_f);
           return;

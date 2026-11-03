@@ -60,7 +60,7 @@ final class Camera {
           return;
         }
         if (!(var2 > (float)this.centerX)) {
-          if (!he.field_a) {
+          if (!LinkButtonPainter.field_a) {
             stackIn_24_0 = this.zoom * 200.0f;
           } else {
             stackIn_24_0 = this.zoom * 240.0f;
@@ -91,7 +91,7 @@ final class Camera {
           return;
         }
         this.centerX = (int)var2;
-        if (!he.field_a) {
+        if (!LinkButtonPainter.field_a) {
           stackIn_6_0 = this.zoom * 200.0f;
         } else {
           stackIn_6_0 = this.zoom * 240.0f;

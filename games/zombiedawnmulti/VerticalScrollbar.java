@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj extends UiComponent {
+final class VerticalScrollbar extends UiComponent {
     private UiComponent field_Gb;
     static boolean field_Rb;
     private int field_Kb;
@@ -71,7 +71,7 @@ final class mj extends UiComponent {
         return -51;
     }
 
-    final boolean k(int param0) {
+    final boolean pollLineUp(int param0) {
         if (0 != this.field_Tb.field_T) {
           this.field_Kb = 20;
           return true;
@@ -97,7 +97,7 @@ final class mj extends UiComponent {
         return false;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_Fb = null;
         field_Ob = null;
         field_Mb = null;
@@ -115,7 +115,7 @@ final class mj extends UiComponent {
           return true;
         }
         if (param0 != 4690) {
-          this.a(14, 117, 55);
+          this.setScrollbarBounds(14, 117, 55);
         }
         if (this.field_Nb.field_jb == 0) {
           return false;
@@ -130,9 +130,9 @@ final class mj extends UiComponent {
         return true;
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int setScrollbarBounds(int param0, int param1, int param2) {
         if (param2 != -18367) {
-          this.k(33);
+          this.pollLineUp(33);
           if (!this.field_Jb) {
             return this.a(param0, false, 69, param1);
           }
@@ -566,7 +566,7 @@ final class mj extends UiComponent {
         return var5;
     }
 
-    mj(long param0, UiComponent param1, Sprite param2, Sprite param3, UiComponent param4, UiComponent param5, boolean param6) {
+    VerticalScrollbar(long param0, UiComponent param1, Sprite param2, Sprite param3, UiComponent param4, UiComponent param5, boolean param6) {
         this(param0, param1, param1, param4, param5, param6);
         try {
           this.field_Tb.field_rb = param2;
@@ -600,7 +600,7 @@ final class mj extends UiComponent {
         return true;
     }
 
-    private mj(long param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, boolean param5) {
+    private VerticalScrollbar(long param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, boolean param5) {
         super(param0, (UiComponent) null);
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_8_0 = null;

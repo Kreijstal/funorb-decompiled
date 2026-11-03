@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hf {
-    static tq field_e;
+    static ScrollPane field_e;
     private boolean field_c;
     static String field_a;
     static String field_b;

@@ -196,7 +196,7 @@ final class fk extends MenuScreen {
                   if ((var13 == 0)) {
                     var8Lifetime6 = 16777215;
                     var7 += 4;
-                    this.a(RandomAccessCacheFile.field_i.field_l, -1, var5, var9, ta.field_lb, var8Lifetime6, RandomAccessCacheFile.field_i.field_o, RandomAccessCacheFile.field_i.field_g, false, var7, RandomAccessCacheFile.field_i.field_m);
+                    this.a(RandomAccessCacheFile.field_i.field_l, -1, var5, var9, ProgressDialog.field_lb, var8Lifetime6, RandomAccessCacheFile.field_i.field_o, RandomAccessCacheFile.field_i.field_g, false, var7, RandomAccessCacheFile.field_i.field_m);
                   }
                   break regionExit1;
                 }
@@ -257,7 +257,7 @@ final class fk extends MenuScreen {
                   if ((var13Lifetime1 == 0)) {
                     var8Lifetime1Lifetime2 = 16777215;
                     var7Lifetime1 += 4;
-                    this.a(RandomAccessCacheFile.field_i.field_l, -1, var5Lifetime1, var9Lifetime1, ta.field_lb, var8Lifetime1Lifetime2, RandomAccessCacheFile.field_i.field_o, RandomAccessCacheFile.field_i.field_g, false, var7Lifetime1, RandomAccessCacheFile.field_i.field_m);
+                    this.a(RandomAccessCacheFile.field_i.field_l, -1, var5Lifetime1, var9Lifetime1, ProgressDialog.field_lb, var8Lifetime1Lifetime2, RandomAccessCacheFile.field_i.field_o, RandomAccessCacheFile.field_i.field_g, false, var7Lifetime1, RandomAccessCacheFile.field_i.field_m);
                   }
                   break regionExit2;
                 }
@@ -268,7 +268,7 @@ final class fk extends MenuScreen {
           ((BitmapFont) ((Object) var2)).drawParagraph(var4Lifetime1, 40, 150, 560, 200, 0, -1, 1, 1, var3);
           return;
         }
-        RandomAccessCacheFile.field_i = qm.b(117, 7, 0, 10);
+        RandomAccessCacheFile.field_i = LoginForm.b(117, 7, 0, 10);
         if (wc.j(111)) {
           var4Lifetime2 = PhaseChangeEvent.field_j;
           ((BitmapFont) ((Object) var2)).drawParagraph(var4Lifetime2, 40, 150, 560, 200, 0, -1, 1, 1, var3);
@@ -325,7 +325,7 @@ final class fk extends MenuScreen {
         if (var13Lifetime2 == 0) {
           var8Lifetime4 = 16777215;
           var7Lifetime2 += 4;
-          this.a(RandomAccessCacheFile.field_i.field_l, -1, var5Lifetime2, var9Lifetime2, ta.field_lb, var8Lifetime4, RandomAccessCacheFile.field_i.field_o, RandomAccessCacheFile.field_i.field_g, false, var7Lifetime2, RandomAccessCacheFile.field_i.field_m);
+          this.a(RandomAccessCacheFile.field_i.field_l, -1, var5Lifetime2, var9Lifetime2, ProgressDialog.field_lb, var8Lifetime4, RandomAccessCacheFile.field_i.field_o, RandomAccessCacheFile.field_i.field_g, false, var7Lifetime2, RandomAccessCacheFile.field_i.field_m);
         }
         ((BitmapFont) ((Object) var2)).drawParagraph(var4Lifetime3, 40, 150, 560, 200, 0, -1, 1, 1, var3);
         return;

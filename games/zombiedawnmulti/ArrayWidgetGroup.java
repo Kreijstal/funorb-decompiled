@@ -74,7 +74,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           }
         }
         if (param0 != 44) {
-          this.g(-103);
+          this.layoutChildren(-103);
         }
         return var2;
     }
@@ -222,7 +222,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    abstract void g(int param0);
+    abstract void layoutChildren(int param0);
 
     final String getHoverText(byte param0) {
         int var4 = 0;
@@ -275,7 +275,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         return null;
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
+    final void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
         int var8 = 0;
         UiWidget[] var7 = null;
         UiWidget var9 = null;
@@ -299,7 +299,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           for (var8 = 0; var8 < var11.length; var8++) {
             var9 = var11[var8];
             if (var9 != null) {
-              var9.a(param0, param1, param2 + this.field_i, param3, true, param5 + this.field_y);
+              var9.handlePointerRelease(param0, param1, param2 + this.field_i, param3, true, param5 + this.field_y);
             }
           }
           return;
@@ -400,7 +400,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
 
     final void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setWidgetBounds(param0, param1, param2, param3, param4);
-        this.g(140);
+        this.layoutChildren(140);
     }
 
     public static void f(int param0) {
@@ -456,7 +456,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           }
           if (param1) {
             var8 = (UiWidget) null;
-            this.a(127, (UiWidget) null, -44, -22, false, 122);
+            this.handlePointerRelease(127, (UiWidget) null, -44, -22, false, 122);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

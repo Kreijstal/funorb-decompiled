@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tq extends UiComponent {
+final class ScrollPane extends UiComponent {
     hi field_Ib;
     static String field_Fb;
     UiComponent field_Gb;
@@ -12,7 +12,7 @@ final class tq extends UiComponent {
         return param0 ^ param1;
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void layoutScrollPane(int param0, int param1, int param2) {
         this.field_Jb.field_zb = -param1 + (this.field_zb - param2);
         this.field_Gb.field_x = param0;
         this.field_Jb.field_z = this.field_z;
@@ -26,7 +26,7 @@ final class tq extends UiComponent {
           this.field_Q = param6;
           this.field_z = param4;
           this.field_zb = param2;
-          this.a(0, param0, param1);
+          this.layoutScrollPane(0, param0, param1);
           return;
         }
         this.a(67, 91, -23, -43, 80, -90, 37);
@@ -34,7 +34,7 @@ final class tq extends UiComponent {
         this.field_Q = param6;
         this.field_z = param4;
         this.field_zb = param2;
-        this.a(0, param0, param1);
+        this.layoutScrollPane(0, param0, param1);
     }
 
     private final boolean a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
@@ -46,7 +46,7 @@ final class tq extends UiComponent {
           if (!this.field_L) {
             var8 = 0;
             this.field_Gb.layoutVerticalContent((byte) 109, this.field_Jb.field_z, param1, var8 != 0);
-            this.a(param3, param4 + 4719, param2, false, param6);
+            this.applyScrollInput(param3, param4 + 4719, param2, false, param6);
             if (param4 == -4719) {
               return var8 != 0;
             }
@@ -55,7 +55,7 @@ final class tq extends UiComponent {
           if (param5) {
             var8Lifetime2 = 0;
             this.field_Gb.layoutVerticalContent((byte) 109, this.field_Jb.field_z, param1, var8Lifetime2 != 0);
-            this.a(param3, param4 + 4719, param2, false, param6);
+            this.applyScrollInput(param3, param4 + 4719, param2, false, param6);
             if (param4 == -4719) {
               return var8Lifetime2 != 0;
             }
@@ -63,7 +63,7 @@ final class tq extends UiComponent {
           }
           var8Lifetime3 = 1;
           this.field_Gb.layoutVerticalContent((byte) 109, this.field_Jb.field_z, param1, var8Lifetime3 != 0);
-          this.a(param3, param4 + 4719, param2, false, param6);
+          this.applyScrollInput(param3, param4 + 4719, param2, false, param6);
           if (param4 == -4719) {
             return var8Lifetime3 != 0;
           }
@@ -71,7 +71,7 @@ final class tq extends UiComponent {
         }
         var8Lifetime1 = 1;
         this.field_Gb.layoutVerticalContent((byte) 109, this.field_Jb.field_z, param1, var8Lifetime1 != 0);
-        this.a(param3, param4 + 4719, param2, false, param6);
+        this.applyScrollInput(param3, param4 + 4719, param2, false, param6);
         if (param4 == -4719) {
           return var8Lifetime1 != 0;
         }
@@ -79,16 +79,16 @@ final class tq extends UiComponent {
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        this.a(param2, 0, this.field_Jb.field_z, param3, param0);
+        this.applyScrollInput(param2, 0, this.field_Jb.field_z, param3, param0);
         if (param1 < 104) {
           field_Hb = (String) null;
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Fb = null;
         if (param0 != 0) {
-          tq.h(58);
+          ScrollPane.releaseStatics(58);
           field_Hb = null;
           return;
         }
@@ -103,7 +103,7 @@ final class tq extends UiComponent {
         return this.a(param3, param0, this.field_Jb.field_z, param2, -4719, param1, param4);
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, int param4) {
+    private final void applyScrollInput(int param0, int param1, int param2, boolean param3, int param4) {
         if (this.field_Ib.d(false)) {
           this.field_Gb.field_mb = this.field_Gb.field_mb + param0;
         }
@@ -170,7 +170,7 @@ final class tq extends UiComponent {
         return param0 & param1;
     }
 
-    tq(long param0, UiComponent param1, UiComponent param2, hi param3) {
+    ScrollPane(long param0, UiComponent param1, UiComponent param2, hi param3) {
         super(param0, (UiComponent) null);
         try {
           this.field_Jb = new UiComponent(0L, param2);

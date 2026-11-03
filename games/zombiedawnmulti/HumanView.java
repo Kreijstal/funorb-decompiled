@@ -177,10 +177,10 @@ abstract class HumanView extends UnitView {
             g.a(stackIn_27_0, stackIn_27_1 + stackIn_28_2, 43 + var4);
           }
           var5Lifetime1 = this.animationFrame;
-          if (MessageDialogContent.field_i[this.state] != null) {
-            var5Lifetime1 = MessageDialogContent.field_i[this.state][this.animationFrame];
+          if (gg.field_i[this.state] != null) {
+            var5Lifetime1 = gg.field_i[this.state][this.animationFrame];
           }
-          var6 = var5Lifetime1 + MessageDialogContent.field_l[this.state];
+          var6 = var5Lifetime1 + gg.field_l[this.state];
           if (param0 != -10136) {
             return;
           }

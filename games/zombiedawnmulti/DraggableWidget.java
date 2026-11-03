@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ua extends SingleChildWidget {
+final class DraggableWidget extends SingleChildWidget {
     private boolean field_O;
     static ValidationState field_I;
     private boolean field_H;
@@ -81,8 +81,8 @@ final class ua extends SingleChildWidget {
         }
     }
 
-    final void a(int param0) {
-        super.a(param0);
+    final void refreshChildLayout(int param0) {
+        super.refreshChildLayout(param0);
         this.field_B.setWidgetBounds(0, 0, 28972, this.field_n, this.field_w);
         this.field_G = this.field_y;
         this.field_M = this.field_i;
@@ -121,7 +121,7 @@ final class ua extends SingleChildWidget {
           }
           if (param0 != -61) {
             var4 = (ResourceArchive) null;
-            ua.a((ResourceArchive) null, (ResourceArchive) null, (byte) 0);
+            DraggableWidget.a((ResourceArchive) null, (ResourceArchive) null, (byte) 0);
           }
           if (4 == param1) {
             stackIn_14_0 = vl.a(NavigationGrid.field_f, new String[]{param2}, 2);
@@ -140,7 +140,7 @@ final class ua extends SingleChildWidget {
             return stackIn_25_0;
           }
           if (8 == param1) {
-            stackIn_28_0 = vl.a(tq.field_Fb, new String[]{param2}, 2);
+            stackIn_28_0 = vl.a(ScrollPane.field_Fb, new String[]{param2}, 2);
             return stackIn_28_0;
           }
           if (param1 == 11) {
@@ -214,25 +214,25 @@ final class ua extends SingleChildWidget {
         if (PortalView.field_L != null) {
           PortalView.field_L.dismissDialog(-7435);
         }
-        qe.field_e = new cp();
+        qe.field_e = new DisplayNamePanel();
         if (param0 == -2) {
           wj.field_i.a((UiWidget) (qe.field_e), (byte) 123);
           return;
         }
-        ua.h(-84);
+        DraggableWidget.h(-84);
         wj.field_i.a((UiWidget) (qe.field_e), (byte) 123);
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
+    final void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           this.field_u = 0;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ua.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    private ua(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
+    private DraggableWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_M = 2147483647;
         this.field_G = 2147483647;

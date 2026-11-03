@@ -58,7 +58,7 @@ abstract class ii {
             return;
           }
           ap.field_s = true;
-          var6 = mj.field_Hb;
+          var6 = VerticalScrollbar.field_Hb;
           var1 = var6;
           for (var2 = 0; var6.length > var2; var2++) {
             var3 = var6[var2];
@@ -103,7 +103,7 @@ abstract class ii {
             return stackIn_3_0;
           }
           if (SimZombie.field_zb != 2) {
-            stackIn_6_0 = le.field_G;
+            stackIn_6_0 = ProgressBarWidget.field_G;
             return stackIn_6_0;
           }
           if (sf.a(1, param0)) {
@@ -117,12 +117,12 @@ abstract class ii {
           if (param1 != 116) {
             ii.b((byte) -55);
           }
-          if (100 <= dc.field_Fb &&
+          if (100 <= TabbedPane.field_Fb &&
             0 >= vl.field_h) {
             stackIn_19_0 = HuffmanCodec.field_g;
             return stackIn_19_0;
           }
-          if (200 <= dc.field_Fb) {
+          if (200 <= TabbedPane.field_Fb) {
             stackIn_23_0 = HuffmanCodec.field_g;
             return stackIn_23_0;
           }

@@ -34,9 +34,9 @@ class UiWidget extends IntrusiveNode {
         RuntimeException var1_ref = null;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          dc.field_Fb = 0;
+          TabbedPane.field_Fb = 0;
           ClientException.field_d = 0;
-          ta.field_ob = null;
+          ProgressDialog.field_ob = null;
           ro.field_M.e(param0 ^ 22926);
           jf.field_d.e(-30986);
           if (param0 != -8328) {
@@ -143,7 +143,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
+    void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
         try {
           if (!param4) {
             field_g = 71L;
@@ -181,12 +181,12 @@ class UiWidget extends IntrusiveNode {
     final boolean a(int param0, byte param1, int param2, boolean param3) {
         int var5;
         int var7;
-        ua var8;
-        ua var9;
-        ua var10;
-        ua var11;
-        ua var12;
-        ua var13;
+        DraggableWidget var8;
+        DraggableWidget var9;
+        DraggableWidget var10;
+        DraggableWidget var11;
+        DraggableWidget var12;
+        DraggableWidget var13;
         regionExit1: {
           var7 = ZombieDawnMulti.field_E ? 1 : 0;
           this.updatePointerState(-5407, this, param0, param2);
@@ -196,7 +196,7 @@ class UiWidget extends IntrusiveNode {
               if (kd.field_b == 0) {
                 if (0 == pq.field_f &&
                   aj.field_j != 0) {
-                  this.a(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
+                  this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
                   var8 = qi.field_a;
                   if (var8 != null) {
                     if (!(var8.field_A instanceof vq)) {
@@ -223,7 +223,7 @@ class UiWidget extends IntrusiveNode {
                 if (var5 == 0) {
                   if (0 == pq.field_f &&
                     aj.field_j != 0) {
-                    this.a(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
+                    this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
                     var9 = qi.field_a;
                     if (var9 != null) {
                       if (!(var9.field_A instanceof vq)) {
@@ -255,7 +255,7 @@ class UiWidget extends IntrusiveNode {
               }
               if (0 == pq.field_f &&
                 aj.field_j != 0) {
-                this.a(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
+                this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
                 var10 = qi.field_a;
                 if (var10 != null) {
                   if (!(var10.field_A instanceof vq)) {
@@ -313,7 +313,7 @@ class UiWidget extends IntrusiveNode {
                 return param3;
               }
               if (aj.field_j != 0) {
-                this.a(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
+                this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
                 var11 = qi.field_a;
                 if (var11 != null) {
                   if (!(var11.field_A instanceof vq)) {
@@ -340,7 +340,7 @@ class UiWidget extends IntrusiveNode {
               if (var5 == 0) {
                 if (0 == pq.field_f &&
                   aj.field_j != 0) {
-                  this.a(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
+                  this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
                   var12 = qi.field_a;
                   if (var12 != null) {
                     if (!(var12.field_A instanceof vq)) {
@@ -367,7 +367,7 @@ class UiWidget extends IntrusiveNode {
             }
             if ((0 == pq.field_f) &&
               (aj.field_j != 0)) {
-              this.a(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
+              this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
               var13 = qi.field_a;
               if (var13 != null) {
                 if (!(var13.field_A instanceof vq)) {
