@@ -87,7 +87,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         if (0 == this.field_b * this.field_c % 2) {
           var3 = var3 - this.field_c / 2;
         }
-        var4 = this.a(var3, this.field_c, this.field_b, -120, var13.field_e.length);
+        var4 = this.createHexStar(var3, this.field_c, this.field_b, -120, var13.field_e.length);
         var4.field_L = 2;
         for (var5 = 0; var5 < 4; var5++) {
           var4.field_G[var5] = -5;

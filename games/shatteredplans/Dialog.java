@@ -201,7 +201,7 @@ abstract class Dialog extends WidgetContainer {
     final static void f(byte param0) {
         BufferedCacheFile.c(0);
         if (tm.field_i != null) {
-          StandardMapGenerator.a(tm.field_i, (byte) -101);
+          StandardMapGenerator.attachInputListeners(tm.field_i, (byte) -101);
         }
         rs.g(-96);
         og.a(false);

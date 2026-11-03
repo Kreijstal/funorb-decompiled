@@ -457,7 +457,7 @@ final class BufferedCacheFile {
           if (bj.field_K == null) {
             return;
           }
-          StandardMapGenerator.a(bj.field_K, (byte) 9);
+          StandardMapGenerator.attachInputListeners(bj.field_K, (byte) 9);
           bj.field_K.a(fa.field_W, -17115);
           bj.field_K = null;
           if (null != BoundsRect.field_p) {

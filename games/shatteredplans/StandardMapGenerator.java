@@ -426,7 +426,7 @@ class StandardMapGenerator implements MapGenerator {
           }
           this.a(param1, param3, 4);
           this.assignStarResources(param3, param2, 0);
-          this.b(param3, param0 ^ 92);
+          this.fillMissingResources(param3, param0 ^ 92);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -446,7 +446,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    final static void a(java.awt.Canvas param0, byte param1) {
+    final static void attachInputListeners(java.awt.Canvas param0, byte param1) {
         try {
           ae.a((java.awt.Component) ((Object) param0), 18014);
           Particle.a((byte) 89, (java.awt.Component) ((Object) param0));
@@ -534,7 +534,7 @@ class StandardMapGenerator implements MapGenerator {
               if (null != this.field_f[var6_intLifetime1]) {
                 continue;
               }
-              this.field_f[var6_intLifetime1] = this.a(var6_intLifetime1, this.field_c, this.field_b, 107, var5Lifetime1);
+              this.field_f[var6_intLifetime1] = this.createHexStar(var6_intLifetime1, this.field_c, this.field_b, 107, var5Lifetime1);
               var5Lifetime1++;
             }
           } else {
@@ -549,7 +549,7 @@ class StandardMapGenerator implements MapGenerator {
             var6_intLifetime1 = 0;
             for (var7_intLifetime2 = 0; this.field_f.length > var7_intLifetime2; var7_intLifetime2++) {
               if (null == this.field_f[var7_intLifetime2]) {
-                this.field_f[var7_intLifetime2] = this.a(var7_intLifetime2, this.field_c, this.field_b, 123, var6_intLifetime1);
+                this.field_f[var7_intLifetime2] = this.createHexStar(var7_intLifetime2, this.field_c, this.field_b, 123, var6_intLifetime1);
                 var6_intLifetime1++;
               }
             }
@@ -656,7 +656,7 @@ class StandardMapGenerator implements MapGenerator {
           var4_intLifetime1 = 0;
           if (param1 < 66) {
             var6 = (java.awt.Canvas) null;
-            StandardMapGenerator.a((java.awt.Canvas) null, (byte) 94);
+            StandardMapGenerator.attachInputListeners((java.awt.Canvas) null, (byte) 94);
           }
           while (var4_intLifetime1 < 2) {
             dupTemp$2 = qf.a((byte) 44, 4, param2);
@@ -835,7 +835,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    private final void b(GalaxyMap param0, int param1) {
+    private final void fillMissingResources(GalaxyMap param0, int param1) {
         int var4 = 0;
         int stackIn_17_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -997,7 +997,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    final Star a(int param0, int param1, int param2, int param3, int param4) {
+    final Star createHexStar(int param0, int param1, int param2, int param3, int param4) {
         int var6 = param0 / param1;
         int var8 = -123 / ((52 - param3) / 52);
         int var7 = var6 % 2 == 0 ? 1 : 0;

@@ -788,7 +788,7 @@ public final class ShatteredPlansClient extends tl {
         ij.clearStatics((byte) -29);
         SoundCache.clearStatics((byte) 120);
         sm.clearStatics(-25370);
-        GameSession.h(11);
+        GameSession.clearStatics(11);
         te.clearStatics(param0 + 24069);
         nn.clearStatics((byte) 63);
         MidiPcmStream.clearStatics(-17876);

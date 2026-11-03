@@ -640,7 +640,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    final void a(GalaxyMap param0, int param1) {
+    final void setGalaxyMap(GalaxyMap param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -984,7 +984,7 @@ final class GameSession implements AiHost {
             return true;
           }
           if (BufferedCacheFile.field_e == 72) {
-            this.i(-126);
+            this.writeOrdersPacket(-126);
             return true;
           }
           if (BufferedCacheFile.field_e == 73) {
@@ -1482,7 +1482,7 @@ final class GameSession implements AiHost {
             (this.field_z.field_S != null)) {
             discarded$0 = this.handleFleetClick((byte) 121, this.field_z.field_S);
           }
-          this.field_z.c(TertiaryListSequence.field_k, bb.field_b, param0 ^ 69);
+          this.field_z.updateHoverFade(TertiaryListSequence.field_k, bb.field_b, param0 ^ 69);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1640,7 +1640,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final int a(byte param0) {
+    private final int getPressedCommandKey(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_14_0 = 0;
@@ -1739,7 +1739,7 @@ final class GameSession implements AiHost {
               if (AllianceExpiredEvent.field_n == 1 &&
                 this.field_z.field_Gb) {
                 var3_int = -1;
-                var4 = this.a((byte) 55);
+                var4 = this.getPressedCommandKey((byte) 55);
                 if (var4 != 82) {
                   if (var4 == 86) {
                     if (this.field_z.field_S.field_z < 5) {
@@ -1778,7 +1778,7 @@ final class GameSession implements AiHost {
             }
             if (decompiledFrameRemainder0) {
               var3_intLifetime1 = 1;
-              var4Lifetime1 = this.a((byte) 57);
+              var4Lifetime1 = this.getPressedCommandKey((byte) 57);
               var5 = this.field_z.field_S.field_y;
               if (82 != var4Lifetime1) {
                 if (var4Lifetime1 == 86) {
@@ -2871,7 +2871,7 @@ final class GameSession implements AiHost {
                       stackIn_33_0 = 1;
                     }
                     var5_int = stackIn_33_0;
-                    var6 = this.a((byte) 105);
+                    var6 = this.getPressedCommandKey((byte) 105);
                     switch (var6) {
                       case 81:
                         var5_int = 1;
@@ -3263,7 +3263,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStatics(int param0) {
         try {
           field_e = null;
           field_u = null;
@@ -3271,7 +3271,7 @@ final class GameSession implements AiHost {
           field_X = null;
           field_A = null;
           if (param0 != 11) {
-            GameSession.h(24);
+            GameSession.clearStatics(24);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.JA(" + param0 + ')');
@@ -3870,7 +3870,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void i(int param0) {
+    private final void writeOrdersPacket(int param0) {
         RuntimeException runtimeException = null;
         CipherPacketBuffer var2 = null;
         int var3 = 0;
@@ -3923,7 +3923,7 @@ final class GameSession implements AiHost {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var3_int = 1;
-          var4 = this.a((byte) 82);
+          var4 = this.getPressedCommandKey((byte) 82);
           if (param1 == ~var4) {
             var3_int = this.field_c.field_x;
           }
@@ -3964,7 +3964,7 @@ final class GameSession implements AiHost {
                 this.e(0);
               }
               this.field_c.field_x = this.field_c.field_x - var3_int;
-              this.field_Y.e((byte) 43);
+              this.field_Y.refreshTerritoryRows((byte) 43);
               if (this.field_c.field_x <= 0) {
                 if (null == this.field_n ||
                   this.field_P.field_o.field_i) {
@@ -4351,7 +4351,7 @@ final class GameSession implements AiHost {
             }
             if (decompiledFrameCompleted0) {
               if (param8 != null) {
-                param8.a((byte) -33, this);
+                param8.setSession((byte) -33, this);
                 this.field_Y = param8;
               }
               this.field_H = new IntrusiveDeque();

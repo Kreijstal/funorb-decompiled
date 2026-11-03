@@ -256,7 +256,7 @@ final class SolMapGenerator extends StandardMapGenerator {
           var6_intLifetime1 = var11;
           while (this.field_f.length > var11) {
             if (DefendTask.field_t[var11]) {
-              var4[var5Lifetime1] = this.a(var11, this.field_c, this.field_b, -8, var5Lifetime1);
+              var4[var5Lifetime1] = this.createHexStar(var11, this.field_c, this.field_b, -8, var5Lifetime1);
               var4[var5Lifetime1].name = IsaacRandom.field_h[((int[]) (var3))[var5Lifetime1]];
               if (var5Lifetime1 == 36) {
                 var4[var5Lifetime1].name = "SOL";

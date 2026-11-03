@@ -1704,7 +1704,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void updateHoverFade(int param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var5;

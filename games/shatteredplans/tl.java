@@ -584,7 +584,7 @@ abstract class tl extends GameApplet {
         }
         if (!param0 &&
           IntrusiveDeque.field_c) {
-          StandardMapGenerator.a(tm.field_i, (byte) 125);
+          StandardMapGenerator.attachInputListeners(tm.field_i, (byte) 125);
           this.createCanvas(0);
           QuickChatCategoryRegistry.a(tm.field_i, false);
         }
