@@ -50,7 +50,7 @@ final class ShuffleSpecial extends SpecialOrder {
         try {
           var15 = this.creature.a(40, param0);
           var4 = new ShuffleEvent(this.moveId, new CreatureRef(var15));
-          var18 = new int[param0.g((byte) 79)][2];
+          var18 = new int[param0.countCreatures((byte) 79)][2];
           var16 = var18;
           var5 = var16;
           var6 = 0;

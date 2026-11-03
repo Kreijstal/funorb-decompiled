@@ -32,7 +32,7 @@ final class ShieldAnimation extends EventAnimation {
             var7 = var3.target.a(-27449, this.screen);
             if (var7 != null) {
               this.addChild(27799, new ActorAnimation(this.screen, var7));
-              this.addChild(27799, new fha(new nd(this.screen, var7.field_s.tileX, var7.field_s.tileY)));
+              this.addChild(27799, new TileEffectAnimation(new nd(this.screen, var7.field_s.tileX, var7.field_s.tileY)));
               this.addChild(27799, new wn(var7, kna.field_g[3], 24831));
             }
             var3.apply(var6, this.screen.field_h, 12);
@@ -45,7 +45,7 @@ final class ShieldAnimation extends EventAnimation {
           var8 = var3.target.a(-27449, this.screen);
           if (var8 != null) {
             this.addChild(27799, new ActorAnimation(this.screen, var8));
-            this.addChild(27799, new fha(new nd(this.screen, var8.field_s.tileX, var8.field_s.tileY)));
+            this.addChild(27799, new TileEffectAnimation(new nd(this.screen, var8.field_s.tileX, var8.field_s.tileY)));
             this.addChild(27799, new wn(var8, kna.field_g[3], 24831));
           }
           var3.apply(var6, this.screen.field_h, 12);

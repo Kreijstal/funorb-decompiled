@@ -48,7 +48,7 @@ final class HazmatAnimation extends EventAnimation {
           }
           if (ut.field_m.a(false) &&
             !param1.equals(ut.field_m.b(param0 ^ -2930))) {
-            ut.field_m = ida.a(param1, param0 ^ 26686);
+            ut.field_m = MovementAnimation.a(param1, param0 ^ 26686);
           }
           stackIn_6_0 = ut.field_m;
           return stackIn_6_0;

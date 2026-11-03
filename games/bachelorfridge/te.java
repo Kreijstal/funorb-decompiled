@@ -90,7 +90,7 @@ final class te extends TileEffect {
         int fieldTemp$0 = this.field_g - 1;
         this.field_g = this.field_g - 1;
         if (fieldTemp$0 < 0) {
-          this.field_e.field_h.b((byte) 106, 35, this.field_d, this.field_c);
+          this.field_e.field_h.setTerrain((byte) 106, 35, this.field_d, this.field_c);
           jja.a(128, -1, 24);
           return true;
         }

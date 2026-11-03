@@ -67,7 +67,7 @@ final class lr extends IntrusiveNode {
         }
         GasCloudAnimation.a(param7, param8, -6, param1, param2, param4, param3);
         vt.a(SnowEvent.field_q, param4, 0, param8, param1);
-        qf.field_v = qf.field_v + 1;
+        MoveEventAnimation.field_v = MoveEventAnimation.field_v + 1;
     }
 
     final static void a(int param0, int param1, int param2, IntrusiveDeque param3, int param4, byte param5) {

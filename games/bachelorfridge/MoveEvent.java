@@ -40,7 +40,7 @@ final class MoveEvent extends CreatureEvent {
     final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         BattleState var4 = null;
-        qf stackIn_3_0 = null;
+        MoveEventAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -50,7 +50,7 @@ final class MoveEvent extends CreatureEvent {
             var4 = (BattleState) null;
             this.apply((BattleState) null, false);
           }
-          stackIn_3_0 = new qf(param1, this);
+          stackIn_3_0 = new MoveEventAnimation(param1, this);
           return (AnimationNode) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

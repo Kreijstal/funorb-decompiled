@@ -67,26 +67,26 @@ final class BattleState {
         RuntimeException var4 = null;
         try {
           if (this.tiles[param1.tileX][param1.tileY].terrain != 20) {
-            this.b((byte) 123, param2, param1.tileX, param1.tileY);
+            this.setTerrain((byte) 123, param2, param1.tileX, param1.tileY);
           }
           if (0 <= -1 + param1.tileX &&
             this.tiles[-1 + param1.tileX][param1.tileY].terrain != 20) {
-            this.b((byte) -63, param2, -1 + param1.tileX, param1.tileY);
+            this.setTerrain((byte) -63, param2, -1 + param1.tileX, param1.tileY);
           }
           if (1 + param1.tileX < this.width &&
             20 != this.tiles[1 + param1.tileX][param1.tileY].terrain) {
-            this.b((byte) 91, param2, param1.tileX + 1, param1.tileY);
+            this.setTerrain((byte) 91, param2, param1.tileX + 1, param1.tileY);
           }
           if (param0 != -25) {
             this.a((byte) 64, -97);
           }
           if (-1 + param1.tileY >= 0 &&
             this.tiles[param1.tileX][param1.tileY - 1].terrain != 20) {
-            this.b((byte) -82, param2, param1.tileX, -1 + param1.tileY);
+            this.setTerrain((byte) -82, param2, param1.tileX, -1 + param1.tileY);
           }
           if (this.height > param1.tileY + 1 &&
             this.tiles[param1.tileX][param1.tileY + 1].terrain != 20) {
-            this.b((byte) 119, param2, param1.tileX, param1.tileY + 1);
+            this.setTerrain((byte) 119, param2, param1.tileX, param1.tileY + 1);
             return;
           }
           return;
@@ -270,15 +270,15 @@ final class BattleState {
 
     }
 
-    final void b(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           param0.b(this.field_A, -126);
           param0.writeByte(this.field_N ? 1 : 0, 0);
           int var3_int = -55 / ((param1 - 85) / 37);
           param0.writeByte(this.field_M, 0);
           param0.writeByte(this.field_Q, 0);
-          this.c(param0, (byte) 92);
-          this.d(param0, (byte) -115);
+          this.writeBoard(param0, (byte) 92);
+          this.writeTurnOrder(param0, (byte) -115);
           this.a(param0, (byte) 113);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "op.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -318,7 +318,7 @@ final class BattleState {
         }
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void read(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         BattleCreature var5 = null;
@@ -343,7 +343,7 @@ final class BattleState {
               }
             }
           }
-          this.j(-1);
+          this.assignTurnOrderIndices(-1);
           this.g(127);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "op.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -419,7 +419,7 @@ final class BattleState {
                 var10.terrain != 24 &&
                 25 != var10.terrain &&
                 var10.terrain != 26) {
-                this.b((byte) -73, param3, var8, var9);
+                this.setTerrain((byte) -73, param3, var8, var9);
               }
             }
           }
@@ -547,7 +547,7 @@ final class BattleState {
                 24 != var8.terrain &&
                 25 != var8.terrain &&
                 var8.terrain != 26) {
-                this.b((byte) 111, param2, var6, var7);
+                this.setTerrain((byte) 111, param2, var6, var7);
               }
             }
           }
@@ -607,7 +607,7 @@ final class BattleState {
         }
     }
 
-    private final BattleUpdate a(CreatureOrder param0, byte param1) {
+    private final BattleUpdate executeOrder(CreatureOrder param0, byte param1) {
         RuntimeException var3 = null;
         CreatureEvent var4 = null;
         int var5 = 0;
@@ -638,7 +638,7 @@ final class BattleState {
           var7.field_z = true;
           var5 = this.field_T.field_w[var6.ownerIndex];
           if (param1 != 91) {
-            this.e(-72, 2, 10);
+            this.isTileFree(-72, 2, 10);
           }
           ((BattleUpdate) ((Object) var4)).apply(this, false);
           if (3 <= -var5 + this.field_T.field_w[var6.ownerIndex]) {
@@ -886,14 +886,14 @@ final class BattleState {
         }
     }
 
-    final void h(byte param0) {
+    final void clearOrders(byte param0) {
         this.field_j = new CreatureOrder[this.playerCount][7];
         int var2 = -34 % ((-46 - param0) / 53);
     }
 
     private final String a(byte param0) {
         if (param0 > -46) {
-          this.c((byte) 75);
+          this.computeChecksum((byte) 75);
         }
         return ArenaTheme.a((byte) 48, this.field_E, new String[]{"Pizza", "Dessert", "Curry"});
     }
@@ -955,7 +955,7 @@ final class BattleState {
         this.field_A = param0;
         this.field_N = param2 ? true : false;
         if (param1 != -16292) {
-          this.e(-69, 112, 35);
+          this.isTileFree(-69, 112, 35);
         }
     }
 
@@ -992,7 +992,7 @@ final class BattleState {
         }
     }
 
-    final int c(byte param0) {
+    final int computeChecksum(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -1058,7 +1058,7 @@ final class BattleState {
         }
         CreatureOrder var5 = (CreatureOrder) (this.field_P.b((byte) 90));
         while (var5 != null) {
-          discarded$0 = this.a(var5, (byte) 91);
+          discarded$0 = this.executeOrder(var5, (byte) 91);
           var5 = (CreatureOrder) (this.field_P.c(param0 - 26125));
         }
     }
@@ -1072,7 +1072,7 @@ final class BattleState {
         return stackIn_6_0;
     }
 
-    final BattleCreature c(int param0, int param1, int param2) {
+    final BattleCreature getCreatureAt(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
         BattleCreature var6;
@@ -1093,7 +1093,7 @@ final class BattleState {
         return null;
     }
 
-    final int g(byte param0) {
+    final int countCreatures(byte param0) {
         int var4 = 0;
         PlayerRoster var5 = null;
         int var6 = BachelorFridge.field_y;
@@ -1109,7 +1109,7 @@ final class BattleState {
         return var2;
     }
 
-    private final void d(PacketBuffer param0, byte param1) {
+    private final void writeTurnOrder(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         CreatureRef[] var5_ref_nq__ = null;
@@ -1118,7 +1118,7 @@ final class BattleState {
         int var5 = 0;
         int var8 = BachelorFridge.field_y;
         try {
-          this.j(-1);
+          this.assignTurnOrderIndices(-1);
           var3_int = param0.position;
           var4 = 0;
           if (param1 > -80) {
@@ -1204,7 +1204,7 @@ final class BattleState {
         return this.field_j[this.field_n[param1].field_g][this.field_n[param1].field_f];
     }
 
-    final void b(byte param0, int param1, int param2, int param3) {
+    final void setTerrain(byte param0, int param1, int param2, int param3) {
         int var5;
         var5 = -64 / ((0 - param0) / 39);
         if (20 != this.tiles[param2][param3].terrain &&
@@ -1304,7 +1304,7 @@ final class BattleState {
         return -1;
     }
 
-    final boolean e(int param0, int param1, int param2) {
+    final boolean isTileFree(int param0, int param1, int param2) {
         if (this.tiles[param0][param1].occupant != null) {
           return false;
         }
@@ -1324,7 +1324,7 @@ final class BattleState {
         return false;
     }
 
-    private final void c(PacketBuffer param0, byte param1) {
+    private final void writeBoard(PacketBuffer param0, byte param1) {
         int var5 = 0;
         PacketBuffer stackIn_10_0 = null;
         int stackIn_11_1 = 0;
@@ -1670,7 +1670,7 @@ final class BattleState {
                     var15.terrain != 25 &&
                     var15.terrain != 26 && (param3 ||
                     var15.occupant == null)) {
-                    this.b((byte) -66, param5, var13, var14);
+                    this.setTerrain((byte) -66, param5, var13, var14);
                   }
                 }
               }
@@ -1759,7 +1759,7 @@ final class BattleState {
         return new int[]{-1, -1};
     }
 
-    final void a(boolean param0, int param1) {
+    final void endMatch(boolean param0, int param1) {
         boolean stackIn_3_1 = false;
         int var3;
         int var4;
@@ -1895,7 +1895,7 @@ final class BattleState {
         }
     }
 
-    final void j(int param0) {
+    final void assignTurnOrderIndices(int param0) {
         int var2 = 0;
         CreatureRef var3;
         int var4;
@@ -2290,18 +2290,18 @@ final class BattleState {
             this.field_w = (Random) null;
           }
           if (param3 == 2) {
-            this.b((byte) -65, param2, -param0 + param1.tileX, param1.tileY);
+            this.setTerrain((byte) -65, param2, -param0 + param1.tileX, param1.tileY);
           } else {
             if (param3 != 4) {
               if (param3 != 1) {
                 if (param3 == 3) {
-                  this.b((byte) -45, param2, param1.tileX, param0 + param1.tileY);
+                  this.setTerrain((byte) -45, param2, param1.tileX, param0 + param1.tileY);
                 }
               } else {
-                this.b((byte) 62, param2, param1.tileX, param1.tileY - param0);
+                this.setTerrain((byte) 62, param2, param1.tileX, param1.tileY - param0);
               }
             } else {
-              this.b((byte) 50, param2, param1.tileX + param0, param1.tileY);
+              this.setTerrain((byte) 50, param2, param1.tileX + param0, param1.tileY);
             }
           }
           return;
@@ -2720,7 +2720,7 @@ final class BattleState {
           if (param1 != -1) {
             this.d(52, -96, -42);
           }
-          this.d(param0, (byte) -116);
+          this.writeTurnOrder(param0, (byte) -116);
           param0.writeByte(this.field_O, 0);
           var3 = (BattleUpdate) (this.field_U.b((byte) 90));
           while (var3 != null) {
@@ -2819,7 +2819,7 @@ final class BattleState {
         boolean discarded$0 = this.b((byte) 10);
         this.i((byte) 56);
         this.i(0);
-        this.j(-1);
+        this.assignTurnOrderIndices(-1);
         var8 = new BoardChangeBatch();
         this.a(23189);
         for (var3 = param0; var3 < this.width; var3++) {
@@ -3140,7 +3140,7 @@ final class BattleState {
           var8.a(101, -2);
           var3Lifetime3++;
         }
-        var8.a("Resultant checksum: " + Integer.toHexString(this.c((byte) -87)), 4819);
+        var8.a("Resultant checksum: " + Integer.toHexString(this.computeChecksum((byte) -87)), 4819);
         return var8.a((byte) -128);
     }
 

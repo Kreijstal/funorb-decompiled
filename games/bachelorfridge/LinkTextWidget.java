@@ -893,7 +893,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("actions", (byte) 111);
                 if (var2 != null) {
-                  ida.field_o = qq.a(var2, false);
+                  MovementAnimation.field_o = qq.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("exit_stats", (byte) 82);
                 if (null != var2) {
@@ -1271,15 +1271,15 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("MOVEMENT_TYPES,0", (byte) 121);
                 if (null != var2) {
-                  qf.field_A[0] = qq.a(var2, false);
+                  MoveEventAnimation.field_A[0] = qq.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("MOVEMENT_TYPES,1", (byte) 87);
                 if (null != var2) {
-                  qf.field_A[1] = qq.a(var2, false);
+                  MoveEventAnimation.field_A[1] = qq.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("MOVEMENT_TYPES,2", (byte) 120);
                 if (null != var2) {
-                  qf.field_A[2] = qq.a(var2, false);
+                  MoveEventAnimation.field_A[2] = qq.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("STATUS_EFFECTS_TEXT,0", (byte) 107);
                 if (var2 != null) {
@@ -2176,7 +2176,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("TUT_ARENA_WELCOME", (byte) 112);
                 if (var2 != null) {
-                  ek.field_k = qq.a(var2, false);
+                  DamagePopupAnimation.field_k = qq.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("TUT_TEAM_SELECT", (byte) 111);
                 if (null != var2) {

@@ -105,7 +105,7 @@ final class wa extends lw {
               var1 = (kr) (qg.field_b.children.c(0));
             }
           }
-          qf.e(20434);
+          MoveEventAnimation.e(20434);
           MeshObject.a(-119);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "wa.F(" + param0 + ')');

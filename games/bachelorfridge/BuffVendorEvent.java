@@ -42,12 +42,12 @@ final class BuffVendorEvent extends SpecialEvent {
     final void a(BattleState param0, int param1) {
         try {
           this.creature.a(107, param0);
-          this.field_p = !param0.e(this.field_r, this.field_u, -11066) ? true : false;
+          this.field_p = !param0.isTileFree(this.field_r, this.field_u, -11066) ? true : false;
           if (null != param0.tiles[this.field_r][this.field_u].occupant) {
             this.field_p = true;
           }
           if (!this.field_p) {
-            param0.b((byte) 91, 36, this.field_r, this.field_u);
+            param0.setTerrain((byte) 91, 36, this.field_r, this.field_u);
           }
           int var3_int = -2 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {

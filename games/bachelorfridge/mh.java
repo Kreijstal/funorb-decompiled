@@ -147,7 +147,7 @@ final class mh extends EventEffect {
                   var10_ref_String = mu.field_m;
                 }
                 ik.field_i.field_Z = ik.field_i.field_Z + "<br>" + var10_ref_String;
-                if ((16 & qf.field_v) == 0 &&
+                if ((16 & MoveEventAnimation.field_v) == 0 &&
                   !w.field_e) {
                   ik.field_i.field_eb = vo.field_b.field_A;
                 }

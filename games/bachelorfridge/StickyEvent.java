@@ -299,7 +299,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_x_withdrew_request");
                 if (var2 != null) {
-                  ek.field_o = qq.a(var2, param0);
+                  DamagePopupAnimation.field_o = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_x_removed");
                 if (null != var2) {
@@ -775,7 +775,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "connecting_to_friend_server_twoline");
                 if (var2 != null) {
-                  ek.field_m = qq.a(var2, false);
+                  DamagePopupAnimation.field_m = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "loading");
                 if (var2 != null) {
@@ -1649,7 +1649,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "create_email_tooltip");
                 if (var2 != null) {
-                  qf.field_w = qq.a(var2, false);
+                  MoveEventAnimation.field_w = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_email_confirm_tooltip");
                 if (var2 != null) {
@@ -1701,7 +1701,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "create_alert_namechars");
                 if (null != var2) {
-                  fha.field_k = qq.a(var2, false);
+                  TileEffectAnimation.field_k = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_nameleadingspace");
                 if (var2 != null) {

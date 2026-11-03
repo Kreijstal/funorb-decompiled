@@ -417,7 +417,7 @@ class PacketBuffer extends IntrusiveNode {
         if (this.payload.length < this.position + var4) {
           throw new IllegalStateException("");
         }
-        String var5 = ida.a(var4, this.payload, this.position, 258048);
+        String var5 = MovementAnimation.a(var4, this.payload, this.position, 258048);
         this.position = this.position + var4;
         return var5;
     }

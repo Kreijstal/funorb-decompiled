@@ -24,7 +24,7 @@ final class RefreshingAnimation extends EventAnimation {
           if (!param1) {
             RefreshingAnimation.d(126);
           }
-          qq.a(uaa.field_i, gfa.field_f, qf.field_y, rea.field_g, hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c, param2);
+          qq.a(uaa.field_i, gfa.field_f, MoveEventAnimation.field_y, rea.field_g, hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c, param2);
           ClientException.field_b = gw.a("lobby", "chatfilter", param3, -112);
           qo.field_a[0] = UiWidget.field_x;
           qo.field_a[2] = PlaceCreatureEffect.field_i;

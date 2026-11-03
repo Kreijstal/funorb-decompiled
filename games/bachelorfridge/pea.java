@@ -13,7 +13,7 @@ final class pea extends EventEffect {
           var4 = this.target.a(116, param1);
         }
         if (var4 == null) {
-          var4 = param1.c(this.field_j, this.field_i, 112);
+          var4 = param1.getCreatureAt(this.field_j, this.field_i, 112);
         }
         if (var4 == null) {
           return;

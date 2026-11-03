@@ -52,7 +52,7 @@ final class EffectBatchAnimation extends AnimationNode {
                       var3_ref_ad.a(24831, 17, kna.field_g[((lia) (var2)).field_k]);
                     }
                   } else {
-                    this.addChild(27799, new ek(this.field_l, var3_ref_ad, var2.field_f));
+                    this.addChild(27799, new DamagePopupAnimation(this.field_l, var3_ref_ad, var2.field_f));
                   }
                 } else {
                   var3_ref_ad.a(65280, 22, Integer.toString(-var2.field_f));

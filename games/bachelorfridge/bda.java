@@ -71,7 +71,7 @@ final class bda extends lw {
     }
 
     bda() {
-        super(true, new String[]{ek.field_k, el.field_g}, au.field_a);
+        super(true, new String[]{DamagePopupAnimation.field_k, el.field_g}, au.field_a);
         this.field_c = new int[][]{new int[]{180, 160}, new int[]{180, 390}};
     }
 

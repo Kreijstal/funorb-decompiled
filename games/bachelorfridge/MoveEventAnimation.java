@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qf extends ida {
+final class MoveEventAnimation extends MovementAnimation {
     static cw field_y;
     static String field_w;
     static int field_v;
@@ -214,7 +214,7 @@ final class qf extends ida {
         var3.field_s.statusTurns = var3.field_s.statusTurns - 1;
     }
 
-    qf(BattleScreen param0, MoveEvent param1) {
+    MoveEventAnimation(BattleScreen param0, MoveEvent param1) {
         this(param0, param1.creature, param1.moveId, param1.field_p, param1.field_n, param1.field_t);
         CreatureActor var3 = null;
         try {
@@ -225,7 +225,7 @@ final class qf extends ida {
         }
     }
 
-    qf(BattleScreen param0, CreatureRef param1, int param2, int param3, int param4, boolean param5) {
+    MoveEventAnimation(BattleScreen param0, CreatureRef param1, int param2, int param3, int param4, boolean param5) {
         super(param0, param1, param3, param4);
         CreatureActor var8 = null;
         BattleCreature var10 = null;
@@ -279,7 +279,7 @@ final class qf extends ida {
         field_x = null;
         field_y = null;
         if (param0 != 28766) {
-          qf.e(-13);
+          MoveEventAnimation.e(-13);
         }
     }
 

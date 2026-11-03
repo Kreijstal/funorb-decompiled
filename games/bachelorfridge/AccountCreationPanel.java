@@ -176,7 +176,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         this.field_L = new InteractiveWidget(dp.field_p, (WidgetListener) null);
         this.field_M = new InteractiveWidget(SuperSpeedAllAnimation.field_x, (WidgetListener) null);
         this.field_C.tooltip = FloodAnimation.field_z;
-        this.field_I.tooltip = qf.field_w;
+        this.field_I.tooltip = MoveEventAnimation.field_w;
         this.field_K.tooltip = bv.field_d;
         this.field_G.tooltip = UiWidget.field_r;
         this.field_F.tooltip = eu.field_a;

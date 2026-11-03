@@ -92,7 +92,7 @@ final class lfa extends k {
               return false;
             }
             if (ri.field_a == 73) {
-              ((BattleScreen) (var1)).field_h.a(-2, ig.field_m);
+              ((BattleScreen) (var1)).field_h.read(-2, ig.field_m);
               ((BattleScreen) (var1)).l(-67);
               ((BattleScreen) (var1)).d((byte) 77);
               return true;
@@ -164,7 +164,7 @@ final class lfa extends k {
               for (var5Lifetime2 = 0; var3.playerCount > var5Lifetime2; var5Lifetime2++) {
                 var4[var5Lifetime2] = ika.a((byte) 85, ig.field_m);
               }
-              var3.a(true, var2Lifetime3);
+              var3.endMatch(true, var2Lifetime3);
               var3.field_H = var4;
               if (0 == var3.field_A) {
                 var14 = (Sprite) null;
@@ -220,7 +220,7 @@ final class lfa extends k {
           }
           var8 = new BattleState(var1_int, var2Lifetime1, var3_intLifetime1, var4_intLifetime1, var5Lifetime1, var6_ref_String__);
           var9 = ig.field_m.readUnsignedShort((byte) 80);
-          var8.a(-2, ig.field_m);
+          var8.read(-2, ig.field_m);
           var10 = null;
           if (var8.field_A == 0 &&
             var7Lifetime1 >= 0) {

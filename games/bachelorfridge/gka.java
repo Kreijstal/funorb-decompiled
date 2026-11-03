@@ -90,7 +90,7 @@ final class gka extends AnimationNode {
           MartyrAnimation.a(43, (byte) 126);
         }
         if (this.field_j) {
-          this.addChild(27799, new fha(this.field_l));
+          this.addChild(27799, new TileEffectAnimation(this.field_l));
           this.d(91);
           return true;
         }

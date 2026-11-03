@@ -45,7 +45,7 @@ final class mc extends IntrusiveNode {
             }
             break;
           }
-          stackIn_10_0 = fha.field_k;
+          stackIn_10_0 = TileEffectAnimation.field_k;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

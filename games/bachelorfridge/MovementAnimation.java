@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ida extends AnimationNode {
+abstract class MovementAnimation extends AnimationNode {
     static String field_o;
     int field_l;
     int field_j;
@@ -48,7 +48,7 @@ abstract class ida extends AnimationNode {
           var5 = 0;
           if (param3 != 258048) {
             var11 = (vr) null;
-            ida.a(-52, (vr) null, -120);
+            MovementAnimation.a(-52, (vr) null, -120);
           }
           var6 = param2;
           var7 = param2 + param0;
@@ -236,7 +236,7 @@ abstract class ida extends AnimationNode {
         try {
           if (param1 != -203) {
             var3 = (String) null;
-            ida.a((String) null, -32);
+            MovementAnimation.a((String) null, -32);
           }
           stackIn_3_0 = new n(param0);
           return stackIn_3_0;
@@ -254,7 +254,7 @@ abstract class ida extends AnimationNode {
         }
     }
 
-    ida(BattleScreen param0, CreatureRef param1, int param2, int param3) {
+    MovementAnimation(BattleScreen param0, CreatureRef param1, int param2, int param3) {
         try {
           this.field_k = param2;
           this.field_s = param0;

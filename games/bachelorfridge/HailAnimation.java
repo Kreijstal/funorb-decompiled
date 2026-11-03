@@ -140,7 +140,7 @@ final class HailAnimation extends EventAnimation {
           var4 = var3.target.a(param0 - 27324, this.screen);
           var4.b(param0 + 124, 6);
           var3.apply(var2, this.screen.field_h, 12);
-          this.addChild(27799, new ek(this.screen, var4, var3.field_f));
+          this.addChild(27799, new DamagePopupAnimation(this.screen, var4, var3.field_f));
           var3 = (EventEffect) (this.field_z.effects.c(0));
         }
     }

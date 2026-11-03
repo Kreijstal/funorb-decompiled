@@ -55,7 +55,7 @@ final class rja extends mv {
               var5.a(16761024, 110, dc.field_o);
             }
           }
-          this.addChild(27799, new qf(this.field_p, this.field_q.creature, this.field_q.moveId, this.field_q.field_q, this.field_q.field_v, false));
+          this.addChild(27799, new MoveEventAnimation(this.field_p, this.field_q.creature, this.field_q.moveId, this.field_q.field_q, this.field_q.field_v, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

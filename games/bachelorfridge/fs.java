@@ -29,9 +29,9 @@ final class fs {
           this.field_d.i((byte) -99);
           this.field_d.i(param0 ^ 0);
           RaiseEvent.field_t.position = 0;
-          this.field_d.b(RaiseEvent.field_t, (byte) 123);
+          this.field_d.write(RaiseEvent.field_t, (byte) 123);
           RaiseEvent.field_t.position = 0;
-          dj.field_c.field_h.a(-2, RaiseEvent.field_t);
+          dj.field_c.field_h.read(-2, RaiseEvent.field_t);
           this.c(15467);
         } else {
           sja.field_fb.writeCipheredByte(68, (byte) 108);
@@ -104,7 +104,7 @@ final class fs {
         this.field_b.d((byte) 96);
         if (af.field_a &&
           this.field_b.field_h.field_e == 0) {
-          this.field_b.field_h.a(true, 0);
+          this.field_b.field_h.endMatch(true, 0);
           this.field_b.e(param0 - 15528);
         }
         this.field_b.m(10);
@@ -142,7 +142,7 @@ final class fs {
           }
           sja.field_fb.writeCipheredByte(96, (byte) 102);
           this.field_c = true;
-          var2 = this.field_b.field_h.c((byte) -81);
+          var2 = this.field_b.field_h.computeChecksum((byte) -81);
           if (this.field_b.field_h.field_A > 3 &&
             this.field_b.field_g != var2) {
             var3 = sja.field_fb;
@@ -151,7 +151,7 @@ final class fs {
             var4 = var3.position;
             var3.writeInt(var2, -1615464796);
             var3.writeInt(this.field_b.field_g, -1615464796);
-            this.field_b.field_h.b((PacketBuffer) (var3), (byte) 127);
+            this.field_b.field_h.write((PacketBuffer) (var3), (byte) 127);
             var3.writeLengthShort((byte) -88, var3.position - var4);
             hna.a(0, param0 ^ -100);
             vc.a((byte) -99);
@@ -192,7 +192,7 @@ final class fs {
             this.c(15467);
             RaiseEvent.field_t.position = 0;
             this.field_d.a(RaiseEvent.field_t, -1);
-            this.field_d.h((byte) -111);
+            this.field_d.clearOrders((byte) -111);
             var4_int = RaiseEvent.field_t.position;
             RaiseEvent.field_t.position = 0;
             this.field_b.field_h.a(var4_int, true, RaiseEvent.field_t);
@@ -226,9 +226,9 @@ final class fs {
             var3 = this.field_b.field_h;
             this.field_d = new BattleState(var3.field_G, var3.field_E, var3.field_k, var3.field_o, var3.field_m, var3.field_y);
             RaiseEvent.field_t.position = 0;
-            this.field_b.field_h.b(RaiseEvent.field_t, (byte) 126);
+            this.field_b.field_h.write(RaiseEvent.field_t, (byte) 126);
             RaiseEvent.field_t.position = 0;
-            this.field_d.a(-2, RaiseEvent.field_t);
+            this.field_d.read(-2, RaiseEvent.field_t);
           }
           this.field_c = true;
         } catch (RuntimeException runtimeException) {

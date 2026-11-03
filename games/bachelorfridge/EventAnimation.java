@@ -98,7 +98,7 @@ abstract class EventAnimation extends AnimationNode {
                   return;
                 }
                 var7.b(param3 - 1, 6);
-                this.addChild(param3 ^ 27799, new ek(this.screen, var7, var10.field_f));
+                this.addChild(param3 ^ 27799, new DamagePopupAnimation(this.screen, var7, var10.field_f));
                 var5.unlink(false);
                 return;
               }

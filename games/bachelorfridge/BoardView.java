@@ -2160,8 +2160,8 @@ final class BoardView {
                 if (this.field_q != -1 &&
                   this.field_r != -1 &&
                   93 == var46_ref.field_j &&
-                  null != this.field_i.field_h.c(this.field_q, this.field_r, 121) &&
-                  this.field_i.field_h.c(this.field_q, this.field_r, 116).field_A) {
+                  null != this.field_i.field_h.getCreatureAt(this.field_q, this.field_r, 121) &&
+                  this.field_i.field_h.getCreatureAt(this.field_q, this.field_r, 116).field_A) {
                   var2 = 1;
                   this.a(true, var6, 18503);
                 }
@@ -2593,7 +2593,7 @@ final class BoardView {
         try {
           this.field_i = param0;
           this.field_I = this.field_i.field_h.tiles;
-          this.field_k = ida.a(0, (vr) null, this.field_i.field_h.field_E);
+          this.field_k = MovementAnimation.a(0, (vr) null, this.field_i.field_h.field_E);
           hga.field_U.a((byte) 127);
           this.field_z = this.field_i.field_h.height;
           this.field_a = this.field_i.field_h.width;

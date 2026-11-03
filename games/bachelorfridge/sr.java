@@ -192,14 +192,14 @@ final class sr {
               var9 = var16;
               var10Lifetime1 = cw.field_yb.field_jb.a(var16) + cw.field_yb.field_jb.a('.') * 3;
               cw.field_yb.field_N = 0;
-              if ((qf.field_v & 48) == 16) {
+              if ((MoveEventAnimation.field_v & 48) == 16) {
                 var9 = var16 + ".";
               }
               cw.field_yb.field_L = (cw.field_yb.field_sb - var10Lifetime1) / 2;
-              if ((qf.field_v & 48) == 32) {
+              if ((MoveEventAnimation.field_v & 48) == 32) {
                 var9 = (String) (var9) + "..";
               }
-              if ((48 & qf.field_v) == 48) {
+              if ((48 & MoveEventAnimation.field_v) == 48) {
                 var9 = (String) (var9) + "...";
               }
               cw.field_yb.field_Z = (String) (var9);

@@ -232,7 +232,7 @@ final class DiveBomberAnimation extends EventAnimation {
           var4 = var3.target.a(-27449, this.screen);
           var4.b(-1, 6);
           var3.apply(var2, this.screen.field_h, 12);
-          this.addChild(27799, new ek(this.screen, var4, 40));
+          this.addChild(27799, new DamagePopupAnimation(this.screen, var4, 40));
           var3 = (DamageEffect) (this.field_v.effects.c(0));
         }
     }

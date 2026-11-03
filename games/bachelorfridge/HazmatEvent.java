@@ -10,7 +10,7 @@ final class HazmatEvent extends SpecialEvent {
 
     final void a(BattleState param0, int param1) {
         try {
-          param0.b((byte) 40, 33, this.field_t, this.field_r);
+          param0.setTerrain((byte) 40, 33, this.field_t, this.field_r);
           int var3_int = -24 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jaa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

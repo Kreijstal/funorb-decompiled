@@ -68,7 +68,7 @@ final class ih extends lw {
             return;
           }
           ShieldSpecial.b(param1 + 23548);
-          dj.field_c.field_h.a(true, 0);
+          dj.field_c.field_h.endMatch(true, 0);
           dj.field_c.e(-60);
           if (param1 != 73) {
             var4Lifetime2 = (PacketBuffer) null;

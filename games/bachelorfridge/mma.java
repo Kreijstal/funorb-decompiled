@@ -69,7 +69,7 @@ final class mma {
               CreatureEvent.b(8, 0)) {
               bi.field_j = ig.field_m.readLong(-121);
               ig.field_m.position = 0;
-              fha.a(param5, 0, uaa.field_f, param0, param3);
+              TileEffectAnimation.a(param5, 0, uaa.field_f, param0, param3);
               eia.field_a = lba.field_c;
             }
             boolean decompiledFrameRemainder0 = true;

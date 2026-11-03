@@ -49,13 +49,13 @@ final class TBomberEvent extends SpecialEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           this.creature.a(78, param0);
-          stackIn_3_1 = !(param0.e(this.field_q, this.field_t, -11066));
+          stackIn_3_1 = !(param0.isTileFree(this.field_q, this.field_t, -11066));
           this.field_p = stackIn_3_1;
           var3_int = -82 % ((param1 - 12) / 35);
           if (this.field_p) {
             return;
           }
-          param0.b((byte) 103, 35, this.field_q, this.field_t);
+          param0.setTerrain((byte) 103, 35, this.field_q, this.field_t);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

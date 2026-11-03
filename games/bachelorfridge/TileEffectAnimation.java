@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fha extends AnimationNode {
+final class TileEffectAnimation extends AnimationNode {
     private int field_m;
     static String field_k;
     static String[][] field_j;
@@ -13,7 +13,7 @@ final class fha extends AnimationNode {
         if (param0 == 9) {
           return;
         }
-        fha.d((byte) 101);
+        TileEffectAnimation.d((byte) 101);
     }
 
     final boolean isFinished(byte param0) {
@@ -116,7 +116,7 @@ final class fha extends AnimationNode {
         return 10;
     }
 
-    fha(TileEffect param0) {
+    TileEffectAnimation(TileEffect param0) {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {

@@ -215,7 +215,7 @@ final class SplitSpecial extends SpecialOrder {
             FullscreenFocusCanvas.field_d.field_Z = fo.field_b;
             ov.field_d.field_u = false;
             if (um.field_c == 1) {
-              rba.field_a.field_xb.field_wb.field_Z = ek.field_m;
+              rba.field_a.field_xb.field_wb.field_Z = DamagePopupAnimation.field_m;
               if (var19 != 0) {
                 rba.field_a.field_xb.field_wb.field_Z = ema.field_Ab;
               }

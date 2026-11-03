@@ -77,7 +77,7 @@ final class InsanoSauceAnimation extends EventAnimation {
           } else {
             var3.apply(var7, this.screen.field_h, 12);
           }
-          this.addChild(27799, new ek(this.screen, var5, var3.field_f));
+          this.addChild(27799, new DamagePopupAnimation(this.screen, var5, var3.field_f));
           var4++;
           var3 = (EventEffect) (this.field_w.effects.c(0));
         }

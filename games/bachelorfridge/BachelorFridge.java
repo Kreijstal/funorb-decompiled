@@ -283,14 +283,14 @@ public final class BachelorFridge extends NetworkGameClient {
         try {
           ShieldSpecial.field_r = param0;
           if (!param1) {
-            this.a((byte) 111);
+            this.draw((byte) 111);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "BachelorFridge.I(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0) {
+    final void draw(byte param0) {
         int stackIn_69_0 = 0;
         boolean stackIn_70_1 = false;
         RuntimeException decompiledCaughtException = null;
@@ -444,7 +444,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    final void d(int param0) {
+    final void onShutdown(int param0) {
         boolean discarded$1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -587,7 +587,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    final void b(int param0) {
+    final void releaseGame(int param0) {
         GameKeyHandler.releaseStatics(0);
         jr.releaseStatics(86);
         fo.releaseStatics(-15135);
@@ -1018,11 +1018,11 @@ public final class BachelorFridge extends NetworkGameClient {
           AnimationNode.releaseStatics(5849);
           iha.d(111);
           BattleUpdate.releaseStatics(-51);
-          ida.releaseStatics(true);
-          qf.releaseStatics(28766);
+          MovementAnimation.releaseStatics(true);
+          MoveEventAnimation.releaseStatics(28766);
           ActorAnimation.d((byte) -41);
           fu.releaseStatics((byte) 70);
-          fha.d((byte) 9);
+          TileEffectAnimation.d((byte) 9);
           wn.releaseStatics(10);
           cb.releaseStatics((byte) 106);
           iu.e(-15434);
@@ -1035,7 +1035,7 @@ public final class BachelorFridge extends NetworkGameClient {
           ra.releaseStatics(11919);
           AttackOrder.d((byte) -74);
           fl.releaseStatics(false);
-          ek.releaseStatics(8);
+          DamagePopupAnimation.releaseStatics(8);
           vla.releaseStatics((byte) -103);
           mv.e((byte) 126);
           rea.c((byte) -108);
@@ -1407,7 +1407,7 @@ public final class BachelorFridge extends NetworkGameClient {
                                                     waa.a(0, 19);
                                                     SlowAllSpecial.b(108);
                                                     this.a(78.5999984741211f, true);
-                                                    this.a((byte) 50);
+                                                    this.draw((byte) 50);
                                                     waa.a(0, 20);
                                                     pu.a(JaggrabDownloader.field_m, fda.field_l, -21201, HomingMissileAnimation.field_w, FullHealAnimation.field_B);
                                                     oe.a(230, (byte) 108);
@@ -1495,7 +1495,7 @@ public final class BachelorFridge extends NetworkGameClient {
           this.a(85.30000305175781f, true);
           waa.a(0, 24);
           if (null != FullHealAnimation.field_B) {
-            this.a((byte) 100);
+            this.draw((byte) 100);
             FullHealAnimation.field_B = null;
             mia.b(32);
             return false;
@@ -1503,7 +1503,7 @@ public final class BachelorFridge extends NetworkGameClient {
           this.a(85.9000015258789f, true);
           waa.a(0, 25);
           if (null != JaggrabDownloader.field_m) {
-            this.a((byte) 125);
+            this.draw((byte) 125);
             if (lha.b(18)) {
               JaggrabDownloader.field_m = null;
             }
@@ -1544,7 +1544,7 @@ public final class BachelorFridge extends NetworkGameClient {
             }
             this.a(99.69999694824219f, true);
             waa.a(0, 33);
-            ek.d((byte) -19);
+            DamagePopupAnimation.d((byte) -19);
             uw.g(-128);
             DiveBomberEvent.field_r.a((java.awt.Component) ((Object) TBomberAnimation.field_y), false, 123);
             var2_int = 0;
@@ -1567,7 +1567,7 @@ public final class BachelorFridge extends NetworkGameClient {
             } while (var7 == 0);
             return true;
           }
-          this.a((byte) 3);
+          this.draw((byte) 3);
           var2 = BoardTile.field_b.a((byte) 123, "menufont", "basic");
           var3 = RageSpecial.a(29611, "basic", "menufont", vb.field_j);
           p.a(2, var2, 256);
@@ -1578,9 +1578,9 @@ public final class BachelorFridge extends NetworkGameClient {
           TBomberEvent.a(3, dja.field_l);
           DiveBomberAnimation.field_w = jr.a("basic", (byte) 124, vb.field_j, "smallfridgefont", BoardTile.field_b);
           iia.a(DiveBomberAnimation.field_w, 1);
-          fha.field_j = new String[2][2];
-          DiveBomberAnimation.field_w.a(fu.field_l[0], new int[]{60}, fha.field_j[0]);
-          DiveBomberAnimation.field_w.a(fu.field_l[1], new int[]{60}, fha.field_j[1]);
+          TileEffectAnimation.field_j = new String[2][2];
+          DiveBomberAnimation.field_w.a(fu.field_l[0], new int[]{60}, TileEffectAnimation.field_j[0]);
+          DiveBomberAnimation.field_w.a(fu.field_l[1], new int[]{60}, TileEffectAnimation.field_j[1]);
           var2Lifetime1 = BoardTile.field_b.a((byte) 123, "tinyfont", "basic");
           var3Lifetime1 = RageSpecial.a(29611, "basic", "tinyfont", vb.field_j);
           CreatureActor.field_h = hl.a(16777215, (byte) 107, var3Lifetime1, 65793, var2Lifetime1);
@@ -1644,7 +1644,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    final void b(byte param0) {
+    final void update(byte param0) {
         int stackIn_11_1 = 0;
         boolean stackIn_12_2 = false;
         boolean stackIn_74_1 = false;
@@ -2029,7 +2029,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    final void c(byte param0) {
+    final void initialize(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {

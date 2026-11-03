@@ -195,7 +195,7 @@ final class OhNoEvent extends SpecialEvent {
     final void a(BattleState param0, int param1) {
         try {
           this.creature.a(91, param0);
-          param0.b((byte) -85, 34, this.field_q, this.field_r);
+          param0.setTerrain((byte) -85, 34, this.field_q, this.field_r);
           int var3_int = -88 % ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "iba.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -414,7 +414,7 @@ final class vaa {
             return stackIn_28_0;
           }
           if (param1 == 11) {
-            stackIn_31_0 = lga.a(true, new String[]{param0}, ek.field_o);
+            stackIn_31_0 = lga.a(true, new String[]{param0}, DamagePopupAnimation.field_o);
             return stackIn_31_0;
           }
           if (param1 == 12) {

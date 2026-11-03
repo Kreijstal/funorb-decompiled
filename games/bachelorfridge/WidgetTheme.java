@@ -62,9 +62,9 @@ final class WidgetTheme {
           this.field_k = 3;
           this.field_n = -1;
           this.field_p = 3;
-          var4.a(0, (byte) 78).b(15658734, -25251).a(ida.a(7829367, -95, 10066329, 8947848), (byte) -40);
-          var4.a(1, (byte) 78).a(ida.a(13421772, -34, 10066329, 11184810), (byte) -40);
-          var4.a(3, (byte) 78).a(ida.a(10066329, -32, 7829367, 8947848), (byte) -40).b((byte) -88, 1).a((byte) 0, 1);
+          var4.a(0, (byte) 78).b(15658734, -25251).a(MovementAnimation.a(7829367, -95, 10066329, 8947848), (byte) -40);
+          var4.a(1, (byte) 78).a(MovementAnimation.a(13421772, -34, 10066329, 11184810), (byte) -40);
+          var4.a(3, (byte) 78).a(MovementAnimation.a(10066329, -32, 7829367, 8947848), (byte) -40).b((byte) -88, 1).a((byte) 0, 1);
           if (!param1) {
             this.field_i = (WidgetRenderer) null;
           }
@@ -89,7 +89,7 @@ final class WidgetTheme {
           discarded$1 = new bka(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new wd();
           var17.a(-24, var8);
-          var8.a(0, (byte) 78).a(ida.a(10066329, -99, 7829367, 15658734), (byte) -40).b(1118481, -25251).c(127, -1);
+          var8.a(0, (byte) 78).a(MovementAnimation.a(10066329, -99, 7829367, 15658734), (byte) -40).b(1118481, -25251).c(127, -1);
           var8.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
           this.field_s = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];

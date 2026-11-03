@@ -13,7 +13,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public static int field_b;
     public static boolean field_c;
 
-    private final void a(int param0, boolean param1) {
+    private final void shutdown(int param0, boolean param1) {
         Exception exception = null;
         Throwable throwable = null;
         RuntimeException runtimeException = null;
@@ -31,13 +31,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             ov.field_f.destroy();
           }
           try {
-            this.d(76);
+            this.onShutdown(76);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
           if (param0 != 0) {
-            this.d(-15);
+            this.onShutdown(-15);
           }
           if (TBomberAnimation.field_y != null) {
             try {
@@ -56,7 +56,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.b(84);
+          this.releaseGame(84);
           if (null != fda.field_j) {
             try {
               System.exit(0);
@@ -74,7 +74,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void b(int param0);
+    abstract void releaseGame(int param0);
 
     public final void run() {
         try {
@@ -192,9 +192,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   }
                 }
                 pr.a((byte) -21);
-                this.a(50);
+                this.createCanvas(50);
                 hga.field_U = GasCloudEvent.a(dda.field_j, MouseInputHandler.field_b, (java.awt.Component) ((Object) TBomberAnimation.field_y), 29548);
-                this.c((byte) 91);
+                this.initialize((byte) 91);
                 ena.field_m = us.a(-4127);
                 do {
                   boolean decompiledFrameRemainder0 = true;
@@ -213,11 +213,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   var3 = stackIn_98_0;
                   do {
                     if (!(DiskCacheWorker.field_f > var3)) {
-                      this.c(-2100834399);
+                      this.renderFrame(-2100834399);
                       he.a(DiveBomberEvent.field_r, false, TBomberAnimation.field_y);
                       break;
                     }
-                    this.f(-84);
+                    this.tickOnce(-84);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -228,7 +228,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               SpiltMilkEvent.a(1, (String) null, (Throwable) (var1));
               this.a("crash", (byte) -48);
             }
-            this.a(0, true);
+            this.shutdown(0, true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -327,7 +327,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void b(byte param0);
+    abstract void update(byte param0);
 
     public final java.net.URL getDocumentBase() {
         RuntimeException var1 = null;
@@ -408,9 +408,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void d(int param0);
+    abstract void onShutdown(int param0);
 
-    abstract void a(byte param0);
+    abstract void draw(byte param0);
 
     public final String getParameter(String param0) {
         RuntimeException var2 = null;
@@ -503,7 +503,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void f(int param0) {
+    private final void tickOnce(int param0) {
         RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;
@@ -524,7 +524,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
             kt.field_i = BoardChangeAnimation.field_l;
           }
-          this.b((byte) 120);
+          this.update((byte) 120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -558,7 +558,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void createCanvas(int param0) {
         Object var2 = null;
         java.awt.Insets var3 = null;
         int var4 = 0;
@@ -706,7 +706,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           am.field_K = f.b((byte) 73);
           gda.a(false, 5000L);
           BufferedCacheFile.field_d = null;
-          this.a(0, false);
+          this.shutdown(0, false);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ck.destroy()");
         }
@@ -729,7 +729,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public abstract void init();
 
-    abstract void c(byte param0);
+    abstract void initialize(byte param0);
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
@@ -776,7 +776,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowDeactivated(java.awt.event.WindowEvent param0) {
     }
 
-    private final void c(int param0) {
+    private final void renderFrame(int param0) {
         int fieldTemp$1 = 0;
         RuntimeException runtimeException = null;
         long var2_long = 0L;
@@ -812,7 +812,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               TBomberAnimation.field_y.setLocation(qw.field_d, wk.field_g);
             }
           }
-          this.a((byte) 32);
+          this.draw((byte) 32);
           if (param0 != -2100834399) {
             this.windowDeactivated((java.awt.event.WindowEvent) null);
           }

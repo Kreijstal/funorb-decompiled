@@ -52,7 +52,7 @@ final class bm extends EventEffect {
             PacketBuffer var5 = (PacketBuffer) null;
             this.write((PacketBuffer) null, (byte) 36);
           }
-          param1.b((byte) 76, this.field_j, this.field_k, this.field_l);
+          param1.setTerrain((byte) 76, this.field_j, this.field_k, this.field_l);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

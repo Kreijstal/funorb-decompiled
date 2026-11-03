@@ -34,7 +34,7 @@ final class wp extends tga {
         }
         try {
           var7.field_s.g(48, 45);
-          param0.addChild(27799, new ek(var8, var7, 45));
+          param0.addChild(27799, new DamagePopupAnimation(var8, var7, 45));
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "wp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -731,7 +731,7 @@ final class wp extends tga {
           } else {
             param0.addChild(27799, new iu(60, 128));
           }
-          param0.addChild(27799, new fha(new dw(var5, this.field_n, this.field_o)));
+          param0.addChild(27799, new TileEffectAnimation(new dw(var5, this.field_n, this.field_o)));
           this.a(param0, this.field_o, this.field_n, (byte) 83);
           this.a(param0, this.field_o, -1 + this.field_n, (byte) 83);
           this.a(param0, this.field_o, this.field_n + 1, (byte) 83);

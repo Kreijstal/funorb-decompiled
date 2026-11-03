@@ -10,7 +10,7 @@ final class SauceOfFlameAnimation extends EventAnimation {
 
     final static void a(boolean param0, int param1, vr param2, vr param3, vr param4) {
         try {
-          ut.field_m = ida.a("", -203);
+          ut.field_m = MovementAnimation.a("", -203);
           if (param1 != -12472) {
             SauceOfFlameAnimation.releaseStatics((byte) -127);
           }
@@ -112,8 +112,8 @@ final class SauceOfFlameAnimation extends EventAnimation {
           var4 = var3.target.a(-27449, this.screen);
           this.addChild(27799, new ActorAnimation(this.screen, var4));
           this.addChild(27799, new cb(var4, 6));
-          this.addChild(27799, new fha(new ip(this.screen, var4.field_s.tileX, var4.field_s.tileY)));
-          this.addChild(27799, new fha(new oia(this.screen, var4.field_s.tileX, var4.field_s.tileY)));
+          this.addChild(27799, new TileEffectAnimation(new ip(this.screen, var4.field_s.tileX, var4.field_s.tileY)));
+          this.addChild(27799, new TileEffectAnimation(new oia(this.screen, var4.field_s.tileX, var4.field_s.tileY)));
           var3.apply(var6, this.screen.field_h, 12);
           var3 = (EventEffect) (this.field_z.effects.c(param0 - 69));
         }

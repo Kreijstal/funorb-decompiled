@@ -1024,8 +1024,8 @@ final class GasCloudAnimation extends EventAnimation {
           lla.field_l.field_U = hca.a("lobby", param2, 120, "downbutton_mouseover");
           lla.field_l.field_y = hca.a("lobby", param2, param0 ^ -30859, "downbutton_mouseheld");
           lla.field_l.field_H = hca.a("lobby", param2, param0 ^ -30898, "downbutton_disabled");
-          qf.field_y = new cw(0L, LinkTextWidget.field_F, lla.field_l, cd.field_n, dj.field_d);
-          ob.field_g = new ok(0L, (UiComponent) null, vg.field_k, qf.field_y, ria.field_k, (String) null, (String) null);
+          MoveEventAnimation.field_y = new cw(0L, LinkTextWidget.field_F, lla.field_l, cd.field_n, dj.field_d);
+          ob.field_g = new ok(0L, (UiComponent) null, vg.field_k, MoveEventAnimation.field_y, ria.field_k, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -12,7 +12,7 @@ final class haa extends TileEffect {
         int fieldTemp$0 = this.field_g - 1;
         this.field_g = this.field_g - 1;
         if (fieldTemp$0 < 0) {
-          this.field_e.field_h.b((byte) -72, 38, this.field_d, this.field_c);
+          this.field_e.field_h.setTerrain((byte) -72, 38, this.field_d, this.field_c);
           this.field_e.field_h.tiles[this.field_d][this.field_c].field_j = this.field_f ? 1 : 0;
           return true;
         }

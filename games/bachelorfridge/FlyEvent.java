@@ -13,7 +13,7 @@ final class FlyEvent extends SpecialEvent {
         try {
           int var3_int = -69 % ((param1 - 12) / 35);
           this.a(param0, (byte) -2);
-          param0.b((byte) -64, this.field_q, this.field_s, this.field_u);
+          param0.setTerrain((byte) -64, this.field_q, this.field_s, this.field_u);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "cja.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

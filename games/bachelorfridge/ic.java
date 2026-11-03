@@ -37,7 +37,7 @@ final class ic extends EventEffect {
           if (ImageProducerRasterBuffer.field_h.field_c.field_R == 1) {
             ShieldSpecial.b(23621);
             if (CreatureType.field_n == 10) {
-              dj.field_c.field_h.a(true, 0);
+              dj.field_c.field_h.endMatch(true, 0);
               dj.field_c.e(-114);
             }
           }

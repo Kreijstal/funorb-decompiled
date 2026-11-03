@@ -19,7 +19,7 @@ class tga extends BoardChange {
 
     void a(BoardChangeAnimation param0, int param1) {
         BattleScreen var3 = param0.field_o;
-        param0.addChild(27799, new fha(new uea(var3, this.field_n, this.field_o, 16777215)));
+        param0.addChild(27799, new TileEffectAnimation(new uea(var3, this.field_n, this.field_o, 16777215)));
         if (param1 >= -2) {
           return;
         }
@@ -42,7 +42,7 @@ class tga extends BoardChange {
             param1.field_L.field_o[this.field_n][this.field_o].field_a < 9) {
             var3_int = param1.field_L.field_o[this.field_n][this.field_o].field_a + 6;
           }
-          param1.b((byte) 76, var3_int, this.field_n, this.field_o);
+          param1.setTerrain((byte) 76, var3_int, this.field_n, this.field_o);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "tga.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

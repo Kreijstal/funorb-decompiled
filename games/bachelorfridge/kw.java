@@ -60,7 +60,7 @@ final class kw extends TileEffect {
               return false;
             }
             if (this.field_o) {
-              this.field_e.field_h.b((byte) -126, 28, this.field_d, this.field_c);
+              this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
             }
             jja.a(64, -1, 24);
             return true;
@@ -72,7 +72,7 @@ final class kw extends TileEffect {
             return false;
           }
           if (this.field_o) {
-            this.field_e.field_h.b((byte) -126, 28, this.field_d, this.field_c);
+            this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
           }
           jja.a(64, -1, 24);
           return true;
@@ -85,7 +85,7 @@ final class kw extends TileEffect {
             return false;
           }
           if (this.field_o) {
-            this.field_e.field_h.b((byte) -126, 28, this.field_d, this.field_c);
+            this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
           }
           jja.a(64, -1, 24);
           return true;
@@ -97,7 +97,7 @@ final class kw extends TileEffect {
           return false;
         }
         if (this.field_o) {
-          this.field_e.field_h.b((byte) -126, 28, this.field_d, this.field_c);
+          this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
         }
         jja.a(64, -1, 24);
         return true;

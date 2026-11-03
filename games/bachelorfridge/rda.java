@@ -112,7 +112,7 @@ final class rda {
             var5 = 1;
             var4 = 1;
           }
-          dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+          dl.field_j = DamagePopupAnimation.a(var4 * var2, var5 * var2, false);
           return;
         }
         if (var3 < 105) {
@@ -174,7 +174,7 @@ final class rda {
           var5Lifetime1 = 1;
           var4Lifetime1 = 1;
         }
-        dl.field_j = ek.a(var4Lifetime1 * var2, var5Lifetime1 * var2, false);
+        dl.field_j = DamagePopupAnimation.a(var4Lifetime1 * var2, var5Lifetime1 * var2, false);
     }
 
     public static void releaseStatics(boolean param0) {

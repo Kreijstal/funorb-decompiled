@@ -115,14 +115,14 @@ final class DisableEvent extends SpecialEvent {
                         var18 = -var17 + (TriangleRasterizer.field_o - 1);
                       }
                       if (var17 >= 0) {
-                        ek.a(var18, param3, param6, (byte) 109, var17 + var16Lifetime2);
+                        DamagePopupAnimation.a(var18, param3, param6, (byte) 109, var17 + var16Lifetime2);
                       } else {
-                        ek.a(var17 + var18, param3, param6, (byte) 127, var16Lifetime2);
+                        DamagePopupAnimation.a(var17 + var18, param3, param6, (byte) 127, var16Lifetime2);
                       }
                     } else {
                       if (var17 >= 0 &&
                         TriangleRasterizer.field_o > var17) {
-                        ek.a(var18, param3, param6, (byte) -127, var17 + var16Lifetime2);
+                        DamagePopupAnimation.a(var18, param3, param6, (byte) -127, var17 + var16Lifetime2);
                       }
                     }
                   }
@@ -166,14 +166,14 @@ final class DisableEvent extends SpecialEvent {
                     var17Lifetime1 = -1 + (-var16Lifetime1 + TriangleRasterizer.field_o);
                   }
                   if (var16Lifetime1 < 0) {
-                    ek.a(var16Lifetime1 + var17Lifetime1, param3, param6, (byte) -128, var15Lifetime1);
+                    DamagePopupAnimation.a(var16Lifetime1 + var17Lifetime1, param3, param6, (byte) -128, var15Lifetime1);
                   } else {
-                    ek.a(var17Lifetime1, param3, param6, (byte) 10, var16Lifetime1 + var15Lifetime1);
+                    DamagePopupAnimation.a(var17Lifetime1, param3, param6, (byte) 10, var16Lifetime1 + var15Lifetime1);
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
                     TriangleRasterizer.field_o > var16Lifetime1) {
-                    ek.a(var17Lifetime1, param3, param6, (byte) -127, var15Lifetime1 + var16Lifetime1);
+                    DamagePopupAnimation.a(var17Lifetime1, param3, param6, (byte) -127, var15Lifetime1 + var16Lifetime1);
                   }
                 }
               }

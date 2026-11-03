@@ -27,7 +27,7 @@ final class FishRainAnimation extends EventAnimation {
             var9.b(-1, 6);
             var3_ref.apply(var8, this.screen.field_h, 12);
             if (var3_ref instanceof DamageEffect) {
-              this.addChild(27799, new ek(this.screen, var9, var3_ref.field_f));
+              this.addChild(27799, new DamagePopupAnimation(this.screen, var9, var3_ref.field_f));
             }
             var3_ref = (EventEffect) (this.field_x.effects.c(0));
           }
@@ -44,7 +44,7 @@ final class FishRainAnimation extends EventAnimation {
           var7.b(-1, 6);
           var3_ref.apply(var6, this.screen.field_h, 12);
           if (var3_ref instanceof DamageEffect) {
-            this.addChild(27799, new ek(this.screen, var7, var3_ref.field_f));
+            this.addChild(27799, new DamagePopupAnimation(this.screen, var7, var3_ref.field_f));
           }
           var3_ref = (EventEffect) (this.field_x.effects.c(0));
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends AnimationNode {
+final class DamagePopupAnimation extends AnimationNode {
     private BattleScreen field_l;
     private int field_j;
     private int field_n;
@@ -84,7 +84,7 @@ final class ek extends AnimationNode {
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
         int[] var11 = (int[]) null;
-        ek.a((byte) -49, (int[]) null);
+        DamagePopupAnimation.a((byte) -49, (int[]) null);
         var3 = via.a(param0, (byte) 73);
         var4 = ft.a(param0, (byte) -128);
         var5 = via.a(param1, (byte) 84);
@@ -96,7 +96,7 @@ final class ek extends AnimationNode {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    ek(BattleScreen param0, CreatureActor param1, int param2) {
+    DamagePopupAnimation(BattleScreen param0, CreatureActor param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -154,7 +154,7 @@ final class ek extends AnimationNode {
     public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 8) {
-          ek.releaseStatics(-98);
+          DamagePopupAnimation.releaseStatics(-98);
           field_o = null;
           field_m = null;
           return;

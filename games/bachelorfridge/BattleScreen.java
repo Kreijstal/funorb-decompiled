@@ -241,16 +241,16 @@ final class BattleScreen extends dfa {
                 if (param3 != 4) {
                   if (1 != param3) {
                     if (3 == param3) {
-                      this.field_h.b((byte) -72, 29, param4.field_s.tileX, param4.field_s.tileY + var8);
+                      this.field_h.setTerrain((byte) -72, 29, param4.field_s.tileX, param4.field_s.tileY + var8);
                     }
                   } else {
-                    this.field_h.b((byte) -122, 29, param4.field_s.tileX, param4.field_s.tileY - var8);
+                    this.field_h.setTerrain((byte) -122, 29, param4.field_s.tileX, param4.field_s.tileY - var8);
                   }
                 } else {
-                  this.field_h.b((byte) 66, 29, param4.field_s.tileX + var8, param4.field_s.tileY);
+                  this.field_h.setTerrain((byte) 66, 29, param4.field_s.tileX + var8, param4.field_s.tileY);
                 }
               } else {
-                this.field_h.b((byte) -76, 29, param4.field_s.tileX - var8, param4.field_s.tileY);
+                this.field_h.setTerrain((byte) -76, 29, param4.field_s.tileX - var8, param4.field_s.tileY);
               }
             }
           }
@@ -445,7 +445,7 @@ final class BattleScreen extends dfa {
           }
         }
         if (BananarangSpecial.field_r >= 2) {
-          var3Lifetime1 = this.field_h.c((byte) -10);
+          var3Lifetime1 = this.field_h.computeChecksum((byte) -10);
           jha.field_g.a("Client: " + Integer.toHexString(var3Lifetime1), 320, 20, 8421631, -1);
           jha.field_g.a("Server: " + Integer.toHexString(this.field_g), 320, 40, 8421504, -1);
           var4Lifetime1 = var3Lifetime1 ^ this.field_g;
@@ -985,8 +985,8 @@ final class BattleScreen extends dfa {
         if (var4.c(0) != 1) {
           if (var4.c(0) == 3) {
             if (93 == var4.field_j &&
-              this.field_h.c(this.field_N, this.field_H, -123) != null &&
-              this.field_h.c(this.field_N, this.field_H, 127).field_A) {
+              this.field_h.getCreatureAt(this.field_N, this.field_H, -123) != null &&
+              this.field_h.getCreatureAt(this.field_N, this.field_H, 127).field_A) {
               return true;
             }
             if (this.field_h.tiles[this.field_N][this.field_H].occupant != null) {
@@ -1324,7 +1324,7 @@ final class BattleScreen extends dfa {
         int var6 = 0;
         Object var7 = null;
         int var7_int = 0;
-        ek var8_ref_ek = null;
+        DamagePopupAnimation var8_ref_ek = null;
         jha var10 = null;
         int var11 = 0;
         BoardTile var13 = null;
@@ -1382,11 +1382,11 @@ final class BattleScreen extends dfa {
           if (var5 != 0) {
             if (var6 != 0) {
               var7 = new bn(this, param0.field_s.tileX, param0.field_s.tileY);
-              var8_ref_ek = new ek(this, param0, -30);
+              var8_ref_ek = new DamagePopupAnimation(this, param0, -30);
               this.field_j.a(var8_ref_ek, true);
             } else {
               var7 = new oia(this, param0.field_s.tileX, param0.field_s.tileY);
-              var8_ref_ek = new ek(this, param0, 75);
+              var8_ref_ek = new DamagePopupAnimation(this, param0, 75);
               this.field_j.a(var8_ref_ek, param2);
             }
             ((TileEffect) (var7)).a(0);
@@ -1666,7 +1666,7 @@ final class BattleScreen extends dfa {
             break;
           }
         }
-        this.field_h.j(-1);
+        this.field_h.assignTurnOrderIndices(-1);
         this.field_h.field_j = new CreatureOrder[this.field_h.playerCount][7];
         this.j(-15503);
     }
@@ -1791,7 +1791,7 @@ final class BattleScreen extends dfa {
             }
           }
         }
-        this.field_h.j(-1);
+        this.field_h.assignTurnOrderIndices(-1);
         this.field_s = new BoardView(this);
         this.j(-15503);
         if (af.field_a) {
@@ -1856,7 +1856,7 @@ final class BattleScreen extends dfa {
             if (var7.c(0) == 3) {
               var6 = this.field_h.tiles[this.field_N][this.field_H].occupant;
               if (var7.field_j == 93) {
-                var6 = this.field_h.c(this.field_N, this.field_H, param0 + 19);
+                var6 = this.field_h.getCreatureAt(this.field_N, this.field_H, param0 + 19);
               }
             }
             if (var5 != 0) {
@@ -2387,8 +2387,8 @@ final class BattleScreen extends dfa {
     }
 
     private final void b(int param0) {
-        ej.a(592, 16776960, fha.field_j[-1 + this.field_M][0], true, 16, 86);
-        ej.a(592, 16776960, fha.field_j[-1 + this.field_M][1], true, 30, -66);
+        ej.a(592, 16776960, TileEffectAnimation.field_j[-1 + this.field_M][0], true, 16, 86);
+        ej.a(592, 16776960, TileEffectAnimation.field_j[-1 + this.field_M][1], true, 30, -66);
         if (this.field_e.field_a) {
           ika.a(3, 2, 563, 16777215, -54, 52, this.field_p / 50, 256);
           ika.a(3, 1, 597, 16777215, -120, 52, this.field_p / 50, 256);

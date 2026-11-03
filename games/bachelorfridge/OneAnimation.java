@@ -204,7 +204,7 @@ final class OneAnimation extends EventAnimation {
             var4.b(-1, 6);
             if (var3 instanceof DamageEffect) {
               var3.apply(var2, this.screen.field_h, 12);
-              this.addChild(27799, new ek(this.screen, var4, var3.field_f));
+              this.addChild(27799, new DamagePopupAnimation(this.screen, var4, var3.field_f));
             }
             var3 = (EventEffect) (this.field_D.effects.c(0));
           }

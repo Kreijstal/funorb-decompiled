@@ -26,7 +26,7 @@ final class tka extends TileEffect {
             if (fieldTemp$0 >= 0) {
               return false;
             }
-            this.field_e.field_h.b((byte) 68, 36, this.field_d, this.field_c);
+            this.field_e.field_h.setTerrain((byte) 68, 36, this.field_d, this.field_c);
             jja.a(64, -1, 24);
             return true;
           }
@@ -36,7 +36,7 @@ final class tka extends TileEffect {
           if (fieldTemp$1 >= 0) {
             return false;
           }
-          this.field_e.field_h.b((byte) 68, 36, this.field_d, this.field_c);
+          this.field_e.field_h.setTerrain((byte) 68, 36, this.field_d, this.field_c);
           jja.a(64, -1, 24);
           return true;
         }
@@ -47,7 +47,7 @@ final class tka extends TileEffect {
           if (fieldTemp$2 >= 0) {
             return false;
           }
-          this.field_e.field_h.b((byte) 68, 36, this.field_d, this.field_c);
+          this.field_e.field_h.setTerrain((byte) 68, 36, this.field_d, this.field_c);
           jja.a(64, -1, 24);
           return true;
         }
@@ -56,7 +56,7 @@ final class tka extends TileEffect {
         if (fieldTemp$3 >= 0) {
           return false;
         }
-        this.field_e.field_h.b((byte) 68, 36, this.field_d, this.field_c);
+        this.field_e.field_h.setTerrain((byte) 68, 36, this.field_d, this.field_c);
         jja.a(64, -1, 24);
         return true;
     }

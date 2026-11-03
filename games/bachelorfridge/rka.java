@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rka extends ida {
+final class rka extends MovementAnimation {
     private CreatureRef field_t;
 
     final boolean isFinished(byte param0) {

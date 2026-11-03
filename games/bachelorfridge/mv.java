@@ -82,7 +82,7 @@ class mv extends AnimationNode {
                           var19 = this.field_l.field_h.tiles[var7][var8_int].occupant;
                           if (var19 != null) {
                             var20 = new CreatureRef(var19).a(-27449, this.field_l);
-                            this.addChild(27799, new ek(this.field_l, var20, var4_ref.field_f));
+                            this.addChild(27799, new DamagePopupAnimation(this.field_l, var20, var4_ref.field_f));
                           }
                         }
                       }
@@ -99,7 +99,7 @@ class mv extends AnimationNode {
                 var16 = var4_ref.target.a(54, this.field_l.field_h);
                 if (var16.a(13, (byte) 104)) {
                   var3.a(5, var16, (byte) 2);
-                  this.addChild(27799, new ek(this.field_l, this.field_k.creature.a(-27449, this.field_l), 5));
+                  this.addChild(27799, new DamagePopupAnimation(this.field_l, this.field_k.creature.a(-27449, this.field_l), 5));
                 }
                 var8_int = this.field_k.field_q;
                 if (this instanceof ba) {
@@ -127,10 +127,10 @@ class mv extends AnimationNode {
                   if (0 >= var4_ref.field_f) {
                     if (var5_ref.field_p != 4 ||
                       var4_ref.field_f != 0) {
-                      this.addChild(27799, new ek(this.field_l, var18, var4_ref.field_f));
+                      this.addChild(27799, new DamagePopupAnimation(this.field_l, var18, var4_ref.field_f));
                     }
                   } else {
-                    this.addChild(27799, new ek(this.field_l, var18, var4_ref.field_f));
+                    this.addChild(27799, new DamagePopupAnimation(this.field_l, var18, var4_ref.field_f));
                     var11_ref = new fa(this.field_l, var18.field_s.tileX, var18.field_s.tileY, var18.field_f);
                     ((TileEffect) ((Object) var11_ref)).a(0);
                   }
@@ -138,7 +138,7 @@ class mv extends AnimationNode {
                   var18.a(16777215, 106, bja.field_n);
                   if (var5_ref.field_p != 4 ||
                     0 != var4_ref.field_f) {
-                    this.addChild(27799, new ek(this.field_l, var18, var4_ref.field_f));
+                    this.addChild(27799, new DamagePopupAnimation(this.field_l, var18, var4_ref.field_f));
                   }
                 }
                 if (0 != var5_ref.field_u &&

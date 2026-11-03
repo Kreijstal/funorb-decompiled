@@ -56,7 +56,7 @@ final class lv extends iha {
             var6 = this.field_o.field_h.tiles[var5.field_c][var5.field_a].occupant;
             if (var6 != null) {
               var6.g(-76, 40);
-              this.addChild(27799, new ek(this.field_o, this.field_o.b(var6, -23990), 40));
+              this.addChild(27799, new DamagePopupAnimation(this.field_o, this.field_o.b(var6, -23990), 40));
             }
           }
           return;

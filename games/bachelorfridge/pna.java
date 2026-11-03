@@ -193,7 +193,7 @@ final class pna extends UiComponent {
           tv.field_o = new UiComponent(0L, (UiComponent) null);
           fja.field_a = new UiComponent(0L, iia.field_m, bs.field_j);
           oca.field_n = new UiComponent(0L, vda.field_a, tv.field_m);
-          qba.field_m = new sga(0L, new UiComponent(0L, (UiComponent) null), vg.field_k, qf.field_y);
+          qba.field_m = new sga(0L, new UiComponent(0L, (UiComponent) null), vg.field_k, MoveEventAnimation.field_y);
           tv.field_o.a(-1, fja.field_a);
           if (IntrusiveDeque.field_c) {
             tv.field_o.a(-1, oca.field_n);
@@ -215,7 +215,7 @@ final class pna extends UiComponent {
           SplitSpecial.field_p = new UiComponent(0L, DisableAnimation.field_z, oda.field_a);
           vf.field_F = new UiComponent(0L, DisableAnimation.field_z, iga.field_b);
           TextLinkRegion.field_l = new UiComponent(0L, vda.field_a, fu.field_s);
-          p.field_n = new sga(0L, new UiComponent(0L, (UiComponent) null), vg.field_k, qf.field_y);
+          p.field_n = new sga(0L, new UiComponent(0L, (UiComponent) null), vg.field_k, MoveEventAnimation.field_y);
           ae.field_a = new UiComponent(0L, vo.field_b, si.field_d.toUpperCase());
           ae.field_a.field_u = IntrusiveDeque.field_c;
           stackIn_8_0 = null;
@@ -265,7 +265,7 @@ final class pna extends UiComponent {
           StampedeSpecial.field_t.field_N = 1;
           FlirtEvent.field_t = new UiComponent(0L, iia.field_m, bs.field_j);
           ut.field_q = new UiComponent(0L, vda.field_a, tv.field_m);
-          SnowEvent.field_q = new sga(0L, new UiComponent(0L, (UiComponent) null), vg.field_k, qf.field_y);
+          SnowEvent.field_q = new sga(0L, new UiComponent(0L, (UiComponent) null), vg.field_k, MoveEventAnimation.field_y);
           nu.field_f.a(-1, StampedeSpecial.field_t);
           nu.field_f.a(-1, FlirtEvent.field_t);
           if (IntrusiveDeque.field_c) {

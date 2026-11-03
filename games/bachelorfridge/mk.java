@@ -312,8 +312,8 @@ final class mk {
         WidgetWrapper.field_z.a(hl.field_G[1], 408, 259, 65793, -1);
         jha.field_g.a(DelegatingCanvas.field_a, 180, 428, 16776960, -1);
         WidgetWrapper.field_z.a(DelegatingCanvas.field_a, 180, 428, 65793, -1);
-        jha.field_g.a(ida.field_o, 180, 32, 16776960, -1);
-        WidgetWrapper.field_z.a(ida.field_o, 180, 32, 65793, -1);
+        jha.field_g.a(MovementAnimation.field_o, 180, 32, 16776960, -1);
+        WidgetWrapper.field_z.a(MovementAnimation.field_o, 180, 32, 65793, -1);
         if (!this.field_s.field_A) {
           this.field_s.a(8);
         }

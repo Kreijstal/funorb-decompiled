@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ba extends mv {
-    private qf field_q;
+    private MoveEventAnimation field_q;
     static String field_r;
     private BattleScreen field_p;
     private hba field_o;
@@ -356,7 +356,7 @@ final class ba extends mv {
                 al.a(-115, this.field_o.moveId);
                 this.f(-109);
                 this.field_j = 50;
-                this.field_q = new qf(this.field_p, this.field_o.creature, this.field_o.moveId, this.field_o.field_q, this.field_o.field_w, false);
+                this.field_q = new MoveEventAnimation(this.field_p, this.field_o.creature, this.field_o.moveId, this.field_o.field_q, this.field_o.field_w, false);
                 this.addChild(27799, this.field_q);
               } else {
                 var5.a(16761024, 41, MoveCreatureEffect.field_j);

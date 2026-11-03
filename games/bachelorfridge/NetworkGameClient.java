@@ -366,7 +366,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (!param1 &&
           daa.field_vb) {
           wd.a((byte) 70, TBomberAnimation.field_y);
-          this.a(44);
+          this.createCanvas(44);
           nl.a(TBomberAnimation.field_y, (byte) 106);
         }
         if (cl.field_p[8]) {

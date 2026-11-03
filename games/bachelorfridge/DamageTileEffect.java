@@ -126,7 +126,7 @@ final class DamageTileEffect extends EventEffect {
           var6.field_h = var6.field_h - this.field_f;
           if (0 > var6.field_h) {
             var4.field_h = 0;
-            param1.b((byte) -56, param1.field_L.field_o[this.field_i][this.field_l].terrain, this.field_i, this.field_l);
+            param1.setTerrain((byte) -56, param1.field_L.field_o[this.field_i][this.field_l].terrain, this.field_i, this.field_l);
             param1.field_e = param1.field_e - 1;
             if (param0 != null) {
               param1.field_T.field_w[param0.ownerIndex] = param1.field_T.field_w[param0.ownerIndex] + 1;

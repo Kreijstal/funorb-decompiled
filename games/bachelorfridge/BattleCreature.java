@@ -702,7 +702,7 @@ final class BattleCreature extends CreatureProfile {
             } else {
               this.g(-67, 75);
             }
-            this.battle.b((byte) 47, 0, this.tileX, this.tileY);
+            this.battle.setTerrain((byte) 47, 0, this.tileX, this.tileY);
           }
           if (param1 >= -20) {
             this.field_v = -90;
@@ -1473,17 +1473,17 @@ final class BattleCreature extends CreatureProfile {
                 break;
               }
               if (stackIn_47_0 == stackIn_47_1) {
-                this.battle.b((byte) -49, 29, -var6 + this.tileX, this.tileY);
+                this.battle.setTerrain((byte) -49, 29, -var6 + this.tileX, this.tileY);
               } else if (param2 != 4) {
                 if (param2 != 1) {
                   if (param2 == 3) {
-                    this.battle.b((byte) -54, 29, this.tileX, var6 + this.tileY);
+                    this.battle.setTerrain((byte) -54, 29, this.tileX, var6 + this.tileY);
                   }
                 } else {
-                  this.battle.b((byte) -80, 29, this.tileX, -var6 + this.tileY);
+                  this.battle.setTerrain((byte) -80, 29, this.tileX, -var6 + this.tileY);
                 }
               } else {
-                this.battle.b((byte) 50, 29, this.tileX + var6, this.tileY);
+                this.battle.setTerrain((byte) 50, 29, this.tileX + var6, this.tileY);
               }
               var6++;
             }

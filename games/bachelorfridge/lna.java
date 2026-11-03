@@ -123,7 +123,7 @@ final class lna {
           return;
         }
         this.field_D = UiWidget.a(-863, this.field_l);
-        ek.a((byte) -25, this.field_l);
+        DamagePopupAnimation.a((byte) -25, this.field_l);
         this.field_A = true;
         if (param0 != 8) {
           this.a(-65);
