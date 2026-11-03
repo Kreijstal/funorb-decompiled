@@ -31,13 +31,13 @@ final class IterableDualLinkDeque implements Iterable {
         if (param4 < -84) {
           var8 = SoftwareRasterizer.height;
           var20 = new Sprite(16, param3);
-          var20.e();
+          var20.bindAsRenderTarget();
           SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param0, param1);
           var10 = null;
           if (param5) {
             var21 = var20.copy();
             var10 = var21;
-            var21.e();
+            var21.bindAsRenderTarget();
             SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
             SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
             SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -48,7 +48,7 @@ final class IterableDualLinkDeque implements Iterable {
           if (param2) {
             var22 = var20.copy();
             var11 = var22;
-            var22.e();
+            var22.bindAsRenderTarget();
             SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
             SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
             SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
@@ -61,13 +61,13 @@ final class IterableDualLinkDeque implements Iterable {
         field_e = 98;
         var8Lifetime1 = SoftwareRasterizer.height;
         Sprite var17 = new Sprite(16, param3);
-        var17.e();
+        var17.bindAsRenderTarget();
         SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param0, param1);
         var10 = null;
         if (param5) {
           var18 = var17.copy();
           var10 = var18;
-          var18.e();
+          var18.bindAsRenderTarget();
           SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -78,7 +78,7 @@ final class IterableDualLinkDeque implements Iterable {
         if (param2) {
           var19 = var17.copy();
           var11 = var19;
-          var19.e();
+          var19.bindAsRenderTarget();
           SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);

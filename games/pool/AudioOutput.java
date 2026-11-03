@@ -24,10 +24,10 @@ class AudioOutput {
     private boolean field_n;
     private int field_k;
 
-    void b() throws Exception {
+    void writeFrames() throws Exception {
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void configure(int param0, boolean param1, int param2) {
         if (param0 < 8000 ||
           param0 > 48000) {
           throw new IllegalArgumentException();
@@ -122,7 +122,7 @@ class AudioOutput {
         }
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void setRootStream(PcmStream param0) {
         this.rootStream = param0;
     }
 
@@ -190,8 +190,8 @@ class AudioOutput {
               }
             }
             while (var3_int < var4) {
-              this.a(this.field_l, 256);
-              this.b();
+              this.mixFrames(this.field_l, 256);
+              this.writeFrames();
               var3_int += 256;
             }
             if (var1 > this.field_d) {
@@ -236,7 +236,7 @@ class AudioOutput {
         }
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void mixFrames(int[] param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -267,7 +267,7 @@ class AudioOutput {
         if (this.rootStream != null &&
           this.framesUntilScheduling <= 0) {
           this.framesUntilScheduling = this.framesUntilScheduling + (sampleRate >> 4);
-          AudioOutput.b(this.rootStream);
+          AudioOutput.resetStreamTree(this.rootStream);
           this.enqueueByPriority(this.rootStream, this.rootStream.priority());
           var4 = 0;
           var5 = 255;
@@ -359,14 +359,14 @@ class AudioOutput {
         this.field_g = rl.monotonicTimeMillis((byte) -125);
     }
 
-    private final static void b(PcmStream param0) {
+    private final static void resetStreamTree(PcmStream param0) {
         param0.field_l = false;
         if (param0.field_n != null) {
           param0.field_n.field_l = 0;
         }
         PcmStream var1 = param0.firstChildStream();
         while (var1 != null) {
-          AudioOutput.b(var1);
+          AudioOutput.resetStreamTree(var1);
           var1 = param0.nextChildStream();
         }
     }

@@ -80,7 +80,7 @@ final class ln extends IntrusiveNode {
           param0[0] = var4;
           param0[2] = var6;
           param0[1] = var5;
-          param2.a();
+          param2.clearCaches();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

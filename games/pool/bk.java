@@ -125,7 +125,7 @@ final class bk extends IntrusiveNode {
             }
           }
           this.field_z = new Sprite(PoolGameModel.field_k.width, this.field_t + 10);
-          this.field_z.e();
+          this.field_z.bindAsRenderTarget();
           sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
           sa.field_h.drawParagraph(ef.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
           this.field_r = SocketArchiveNetworkClient.a(new int[]{this.field_y}, this.field_n, this.field_p, 7, sa.field_h, true, 10);

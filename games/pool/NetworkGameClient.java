@@ -772,8 +772,8 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (QuickChatCategoryDefinition.field_y == 2) {
           if (QuickChatPhraseRegistry.field_a != null &&
-            QuickChatPhraseRegistry.field_a.d(85)) {
-            if (!QuickChatPhraseRegistry.field_a.a((byte) -122, "")) {
+            QuickChatPhraseRegistry.field_a.isIndexReady(85)) {
+            if (!QuickChatPhraseRegistry.field_a.hasGroupNamed((byte) -122, "")) {
               QuickChatPhraseRegistry.field_a = null;
             } else {
               if (QuickChatPhraseRegistry.field_a.ensureGroupAvailableByName("", param0 ^ -4)) {
@@ -825,7 +825,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (QuickChatCategoryDefinition.field_y == 11) {
-          if (GameApplet.field_m != null && (!GameApplet.field_m.d(param0 ^ -52) ||
+          if (GameApplet.field_m != null && (!GameApplet.field_m.isIndexReady(param0 ^ -52) ||
             !GameApplet.field_m.ensureAllGroupsAvailable(param0 ^ 61))) {
             KeyHandler.a(hp.a(GameApplet.field_m, BufferedFile.field_b, -641, SingleChildWidget.field_F), 0.0f, false);
             decompiledFrameRemainder0 = false;
@@ -913,7 +913,7 @@ abstract class NetworkGameClient extends GameApplet {
             NetworkGameClient.a((byte) -107, (PoolMatchController) null);
           }
           var4_int = param1.getGroupId(param3, -1);
-          var5 = param1.a(var4_int, 0, param2);
+          var5 = param1.getFileId(var4_int, 0, param2);
           stackIn_3_0 = LobbyPlayer.a(var4_int, var5, 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

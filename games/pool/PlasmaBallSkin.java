@@ -637,9 +637,9 @@ final class PlasmaBallSkin extends BallSkin {
           var17 = var9 * (long)param3[7] + (var7 * (long)param3[6] + var11 * (long)param3[8]);
           var15 = (var15 << 13) / var13 + (long)(SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 4);
           var17 = (var17 << 13) / var13 + (long)(SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 4);
-          SoftwareRasterizer.a((int)(var15 >> 4), (int)(var17 >> 4), -2 + ((int)(2147483648L / var13) * (256 - param0) >> 8), 0, 224);
+          SoftwareRasterizer.fillCircleBlended((int)(var15 >> 4), (int)(var17 >> 4), -2 + ((int)(2147483648L / var13) * (256 - param0) >> 8), 0, 224);
           if (2147483647L > 127L * (34359738368L / var13) * (34359738368L / var13)) {
-            SoftwareRasterizer.a((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - param0) >> 8, 127, dg.a(-9, param2));
+            SoftwareRasterizer.fillRadialGlow((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - param0) >> 8, 127, dg.a(-9, param2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

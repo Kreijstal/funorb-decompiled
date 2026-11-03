@@ -34,7 +34,7 @@ final class jl {
             var4 = (ResourceArchive) null;
             jl.a((byte) -59, (ResourceArchive) null, -110);
           }
-          var5 = param1.b(param2, -31413);
+          var5 = param1.getOnlyFileBytes(param2, -31413);
           var3 = var5;
           if (var5 == null) {
             return false;

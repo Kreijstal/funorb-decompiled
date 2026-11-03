@@ -27,7 +27,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
           if (BirthDateValidator.h(-3)) {
             return true;
           }
-          if (Pool.a(param3, param2, param1, -80)) {
+          if (Pool.handleKeyPress(param3, param2, param1, -80)) {
             return true;
           }
           return false;
@@ -42,7 +42,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
           if (BirthDateValidator.h(-3)) {
             return true;
           }
-          if (Pool.a(param3, param2, param1, -80)) {
+          if (Pool.handleKeyPress(param3, param2, param1, -80)) {
             return true;
           }
           return false;
@@ -52,7 +52,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
           if (BirthDateValidator.h(-3)) {
             return true;
           }
-          if (Pool.a(param3, param2, param1, -80)) {
+          if (Pool.handleKeyPress(param3, param2, param1, -80)) {
             return true;
           }
           return false;
@@ -65,7 +65,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
         if (BirthDateValidator.h(-3)) {
           return true;
         }
-        if (!Pool.a(param3, param2, param1, -80)) {
+        if (!Pool.handleKeyPress(param3, param2, param1, -80)) {
           return false;
         }
         return true;

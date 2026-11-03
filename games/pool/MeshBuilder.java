@@ -65,7 +65,7 @@ final class MeshBuilder extends um {
         return fieldTemp$0;
     }
 
-    final void a(um param0, int param1, int param2, int param3, boolean param4) {
+    final void mergeFrom(um param0, int param1, int param2, int param3, boolean param4) {
         int var15 = 0;
         ah dupTemp$0 = null;
         ah dupTemp$1 = null;
@@ -86,8 +86,8 @@ final class MeshBuilder extends um {
         ah var16Lifetime1;
         ah var16Lifetime2;
         var6 = (MeshBuilder) (param0);
-        var6.e();
-        var6.d();
+        var6.computeBounds();
+        var6.computeNormals();
         field_G = field_G + 1;
         var7 = 0;
         var22 = var6.vertexX;
@@ -174,8 +174,8 @@ final class MeshBuilder extends um {
         }
     }
 
-    final fa a(int param0, int param1, int param2, int param3, int param4, int[] param5) {
-        return this.a(param0, param1, param2 * param5[3] + param3 * param5[4] + param4 * param5[5] >> 16, param2 * param5[6] + param3 * param5[7] + param4 * param5[8] >> 16, param2 * param5[9] + param3 * param5[10] + param4 * param5[11] >> 16);
+    final fa createModelMeshTransformed(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+        return this.createModelMesh(param0, param1, param2 * param5[3] + param3 * param5[4] + param4 * param5[5] >> 16, param2 * param5[6] + param3 * param5[7] + param4 * param5[8] >> 16, param2 * param5[9] + param3 * param5[10] + param4 * param5[11] >> 16);
     }
 
     final static MeshBuilder loadFromArchive(ResourceArchive param0, String param1, String param2) {
@@ -186,7 +186,7 @@ final class MeshBuilder extends um {
         return new MeshBuilder(var3);
     }
 
-    final fa a(int param0, int param1, int param2, int param3, int param4) {
+    final fa createModelMesh(int param0, int param1, int param2, int param3, int param4) {
         return (fa) ((Object) new ModelMesh(this, param0, param1, param2, param3, param4));
     }
 
@@ -197,10 +197,10 @@ final class MeshBuilder extends um {
           this.vertexY[var5] = this.vertexY[var5] * param1 / param3;
           this.vertexZ[var5] = this.vertexZ[var5] * param2 / param3;
         }
-        this.a();
+        this.clearCaches();
     }
 
-    final void a() {
+    final void clearCaches() {
         this.field_Z = null;
         this.field_m = null;
         this.field_J = null;
@@ -225,7 +225,7 @@ final class MeshBuilder extends um {
         return this.vertexCount - 1;
     }
 
-    final void e() {
+    final void computeBounds() {
         int var7 = 0;
         int var1;
         int var2;
@@ -277,14 +277,14 @@ final class MeshBuilder extends um {
         this.field_x = (short)var6;
     }
 
-    final void c() {
+    final void releaseNormals() {
         this.field_A = null;
         this.field_ab = null;
         this.field_U = (int[][]) null;
         this.field_s = (int[][]) null;
     }
 
-    private final int a(MeshBuilder param0, int param1, short param2) {
+    private final int addMergedVertex(MeshBuilder param0, int param1, short param2) {
         int var7 = 0;
         int var4;
         int var5;
@@ -312,7 +312,7 @@ final class MeshBuilder extends um {
         return fieldTemp$0;
     }
 
-    final void a(int[] param0) {
+    final void transform(int[] param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -325,7 +325,7 @@ final class MeshBuilder extends um {
           this.vertexY[var2] = param0[1] + (var3 * param0[4] + var4 * param0[7] + var5 * param0[10] >> 16);
           this.vertexZ[var2] = param0[2] + (var3 * param0[5] + var4 * param0[8] + var5 * param0[11] >> 16);
         }
-        this.a();
+        this.clearCaches();
     }
 
     public static void releaseStatics() {
@@ -333,7 +333,7 @@ final class MeshBuilder extends um {
         field_O = null;
     }
 
-    final void d() {
+    final void computeNormals() {
         ef dupTemp$0 = null;
         int var1;
         int var2;
@@ -437,7 +437,7 @@ final class MeshBuilder extends um {
         }
     }
 
-    private final void b(byte[] param0) {
+    private final void decodeTrailer18Model(byte[] param0) {
         int var2;
         int var3;
         PacketBuffer var4;
@@ -756,7 +756,7 @@ final class MeshBuilder extends um {
         }
     }
 
-    final void b() {
+    final void buildVertexGroups() {
         int[] array$2 = null;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;
@@ -825,7 +825,7 @@ final class MeshBuilder extends um {
         }
     }
 
-    private final void a(byte[] param0) {
+    private final void decodeTrailer23Model(byte[] param0) {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -1244,7 +1244,7 @@ final class MeshBuilder extends um {
         }
     }
 
-    final byte a(short param0, short param1, short param2) {
+    final byte addTextureTriangle(short param0, short param1, short param2) {
         if (this.field_l >= 255) {
           throw new IllegalStateException();
         }
@@ -1265,9 +1265,9 @@ final class MeshBuilder extends um {
         this.faceCount = 0;
         if (param0[param0.length - 1] == -1 &&
           param0[param0.length - 2] == -1) {
-          this.a(param0);
+          this.decodeTrailer23Model(param0);
         } else {
-          this.b(param0);
+          this.decodeTrailer18Model(param0);
         }
     }
 
@@ -1495,9 +1495,9 @@ final class MeshBuilder extends um {
               }
               this.faceColors[this.faceCount] = var15.faceColors[var12];
               this.field_W[this.faceCount] = (short)var10;
-              this.faceVertexA[this.faceCount] = this.a(var15, var15.faceVertexA[var12], (short) var10);
-              this.faceVertexB[this.faceCount] = this.a(var15, var15.faceVertexB[var12], (short) var10);
-              this.faceVertexC[this.faceCount] = this.a(var15, var15.faceVertexC[var12], (short) var10);
+              this.faceVertexA[this.faceCount] = this.addMergedVertex(var15, var15.faceVertexA[var12], (short) var10);
+              this.faceVertexB[this.faceCount] = this.addMergedVertex(var15, var15.faceVertexB[var12], (short) var10);
+              this.faceVertexC[this.faceCount] = this.addMergedVertex(var15, var15.faceVertexC[var12], (short) var10);
               this.faceCount = this.faceCount + 1;
             }
           }
@@ -1532,9 +1532,9 @@ final class MeshBuilder extends um {
               this.field_o[this.field_l] = dupTemp$0;
               var14 = dupTemp$0;
               if (var14 == 0) {
-                this.field_p[this.field_l] = (short)this.a(var16, (int) var16.field_p[var17], (short) var12Lifetime1);
-                this.field_H[this.field_l] = (short)this.a(var16, (int) var16.field_H[var17], (short) var12Lifetime1);
-                this.field_C[this.field_l] = (short)this.a(var16, (int) var16.field_C[var17], (short) var12Lifetime1);
+                this.field_p[this.field_l] = (short)this.addMergedVertex(var16, (int) var16.field_p[var17], (short) var12Lifetime1);
+                this.field_H[this.field_l] = (short)this.addMergedVertex(var16, (int) var16.field_H[var17], (short) var12Lifetime1);
+                this.field_C[this.field_l] = (short)this.addMergedVertex(var16, (int) var16.field_C[var17], (short) var12Lifetime1);
               }
               if (var14 >= 1 &&
                 var14 <= 3) {

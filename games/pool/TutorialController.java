@@ -27,7 +27,7 @@ final class TutorialController {
         PoolGameModel.field_k.localX = PoolGameModel.field_k.localX - var5;
         int var6 = -NetworkGameClient.field_s.field_A + SoftwareRasterizer.height;
         PoolGameModel.field_k.localY = PoolGameModel.field_k.localY - var6;
-        NetworkGameClient.field_s.e();
+        NetworkGameClient.field_s.bindAsRenderTarget();
         SoftwareRasterizer.clear();
         this.drawStepProgress((byte) -109);
         PoolGameModel.field_k.drawRoot((byte) -79, false);
@@ -221,10 +221,10 @@ final class TutorialController {
             PoolGameModel.field_k.localX = PoolGameModel.field_k.localX - 160;
             var3 = PoolGameModel.field_k.localY;
             PoolGameModel.field_k.localY = PoolGameModel.field_k.localY - 240;
-            NetworkGameClient.field_s.e();
+            NetworkGameClient.field_s.bindAsRenderTarget();
             SoftwareRasterizer.clear();
             this.previousStep.a(false);
-            NanoTickClock.field_r.e();
+            NanoTickClock.field_r.bindAsRenderTarget();
             SoftwareRasterizer.clear();
             this.drawStepProgress((byte) -109);
             this.currentStep.a(false);
@@ -312,7 +312,7 @@ final class TutorialController {
         if (param0 < 120) {
           field_i = 107;
         }
-        var1.c();
+        var1.releaseNormals();
         return var1;
     }
 

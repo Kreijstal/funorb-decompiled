@@ -32,7 +32,7 @@ final class dk {
           param4 = param4 / var9;
           if (param4 > -23170 &&
             param4 < 23170) {
-            SoftwareRasterizer.a(var10, var11, param4, 4, bc.field_c);
+            SoftwareRasterizer.fillRadialGlow(var10, var11, param4, 4, bc.field_c);
           }
         }
     }
@@ -309,12 +309,12 @@ final class dk {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.d(58)) {
+          if (!param2.isIndexReady(58)) {
             stackIn_4_0 = (String) (param4);
             return stackIn_4_0;
           }
           var5_int = -40 / ((param0 - 48) / 49);
-          stackIn_6_0 = param3 + " - " + param2.a(100, param1) + "%";
+          stackIn_6_0 = param3 + " - " + param2.getGroupProgressByName(100, param1) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

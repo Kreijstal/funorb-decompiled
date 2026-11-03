@@ -22,7 +22,7 @@ final class SpaceBallSkin extends BallSkin {
             var3.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          DebugTuningSlider.field_h.e();
+          DebugTuningSlider.field_h.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
           TriangleMesh.a(126);
         } catch (RuntimeException runtimeException) {

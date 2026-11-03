@@ -278,7 +278,7 @@ final class DialWidget extends ButtonWidget {
               var10 = 480 - var8;
             }
           }
-          SoftwareRasterizer.a(var9, var10, var7_int, var8, 3, 0, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var9, var10, var7_int, var8, 3, 0, 128);
           param4.drawCentered(param1, param2, param0, param6, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

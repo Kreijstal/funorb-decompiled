@@ -63,25 +63,25 @@ final class rp {
         if (param0 == 32450) {
           var8 = SoftwareRasterizer.height;
           var25 = new Sprite(param1, -(param1 * 2) + param3);
-          var25.e();
+          var25.bindAsRenderTarget();
           SoftwareRasterizer.fillVerticalGradient(0, 0, param1, -(param1 * 2) + param3, param4, param5);
           var26 = new Sprite(param1, param1);
-          var26.e();
+          var26.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param4);
           var27 = new Sprite(16, param1);
-          var27.e();
+          var27.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param4);
           var28 = new Sprite(param1, param1);
-          var28.e();
+          var28.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param5);
           var29 = new Sprite(16, param1);
-          var29.e();
+          var29.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param5);
           var14 = null;
           if (param2 > 0) {
             var30 = new Sprite(16, 16);
             var14 = var30;
-            var30.e();
+            var30.bindAsRenderTarget();
             SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param2);
           }
           SoftwareRasterizer.setTarget(var18, var7, var8);
@@ -90,25 +90,25 @@ final class rp {
         rp.releaseStatics((byte) -47);
         var8Lifetime1 = SoftwareRasterizer.height;
         Sprite var19 = new Sprite(param1, -(param1 * 2) + param3);
-        var19.e();
+        var19.bindAsRenderTarget();
         SoftwareRasterizer.fillVerticalGradient(0, 0, param1, -(param1 * 2) + param3, param4, param5);
         Sprite var20 = new Sprite(param1, param1);
-        var20.e();
+        var20.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param4);
         Sprite var21 = new Sprite(16, param1);
-        var21.e();
+        var21.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param4);
         Sprite var22 = new Sprite(param1, param1);
-        var22.e();
+        var22.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param5);
         Sprite var23 = new Sprite(16, param1);
-        var23.e();
+        var23.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param5);
         var14 = null;
         if (param2 > 0) {
           var24 = new Sprite(16, 16);
           var14 = var24;
-          var24.e();
+          var24.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param2);
         }
         SoftwareRasterizer.setTarget(var18, var7, var8Lifetime1);

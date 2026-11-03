@@ -131,7 +131,7 @@ final class NameEntryPopup extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = param2.getGroupId(param1, param0 - 1);
-          var5 = param2.a(var4_int, param0, param3);
+          var5 = param2.getFileId(var4_int, param0, param3);
           stackIn_1_0 = ln.a(var4_int, (byte) 110, param2, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

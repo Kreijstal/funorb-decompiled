@@ -102,7 +102,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void e() {
+    final void bindAsRenderTarget() {
         SoftwareRasterizer.setTarget(this.field_D, this.field_z, this.field_A);
     }
 
@@ -242,7 +242,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4) {
+    private final static void copyInts(int[] param0, int[] param1, int param2, int param3, int param4) {
         param4 = param3 + param4 - 3;
         while (param3 < param4) {
           param0[param3++] = param1[param2++];
@@ -578,7 +578,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void d(int param0, int param1, int param2) {
+    void drawRow(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -609,7 +609,7 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.pixels, this.field_D, var5, var4, var6);
+          Sprite.copyInts(SoftwareRasterizer.pixels, this.field_D, var5, var4, var6);
           return;
         }
     }
@@ -808,12 +808,12 @@ class Sprite extends SpriteState {
         this.field_D = var2;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawRotated(int param0, int param1, int param2, int param3) {
         int var5 = this.field_w << 3;
         int var6 = this.field_y << 3;
         param0 = (param0 << 4) + (var5 & 15);
         param1 = (param1 << 4) + (var6 & 15);
-        this.b(var5, var6, param0, param1, param2, param3);
+        this.drawRotatedAboutPivot(var5, var6, param0, param1, param2, param3);
     }
 
     private final static void recolorNeutralPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -914,7 +914,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRotatedAboutPivot(int param0, int param1, int param2, int param3, int param4, int param5) {
         double var7;
         int var9;
         int var10;

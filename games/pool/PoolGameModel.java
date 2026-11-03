@@ -237,7 +237,7 @@ final class PoolGameModel {
         int var3 = 110 % ((-57 - param0) / 53);
         ShotRecord var2 = this.currentShot(20);
         var2.stateBefore = this.writeStateSnapshot((byte) 91);
-        var2.c(2, this.rules.h(-1));
+        var2.setEndResolution(2, this.rules.timeoutResolution(-1));
         var2.phase = 2;
     }
 
@@ -580,7 +580,7 @@ final class PoolGameModel {
         if ((ag.field_e & var2.endResolution) != 0) {
           return true;
         }
-        if (var2.d(116)) {
+        if (var2.isAnyChoicePending(116)) {
           return false;
         }
         return this.beginNextShot((byte) 116);
@@ -1359,7 +1359,7 @@ final class PoolGameModel {
         if (param0 > -76) {
           return;
         }
-        var21 = this.rules.a(var4.breakSeed, (byte) -32);
+        var21 = this.rules.rackOrder(var4.breakSeed, (byte) -32);
         if (var4.breakSeed < 0) {
           var4.breakSeed = ga.nextRandomInt(512, true, ea.field_r);
         }
@@ -1772,7 +1772,7 @@ final class PoolGameModel {
         }
         if (1 != var4 &&
           2 == var4) {
-          var7.c(2, this.rules.a((byte) 121));
+          var7.setEndResolution(2, this.rules.evaluateShot((byte) 121));
         }
         return;
     }

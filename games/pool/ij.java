@@ -111,7 +111,7 @@ final class ij extends IntrusiveNode {
           stackIn_7_0 = (var5 >= 320) ? var5 : 320;
           var8 = stackIn_7_0;
           this.field_K = new Sprite(var8, var7);
-          this.field_K.e();
+          this.field_K.bindAsRenderTarget();
           var14.draw(var8 - var14.field_z >> 1, 0);
           var9 = 0;
           var10 = new String[16];

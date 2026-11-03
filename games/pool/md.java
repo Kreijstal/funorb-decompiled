@@ -21,11 +21,11 @@ final class md {
     }
 
     final static void a(int param0) {
-        TriangleRasterizer.b(0.6000000238418579f);
+        TriangleRasterizer.setBrightness(0.6000000238418579f);
         TriangleRasterizer.useRasterClip();
         TriangleRasterizer.setProjectionCenter(320, 240);
         ViewportController.field_q.field_k = 0;
-        TriangleRasterizer.a(new TextureCache(NetworkGameClient.field_F, ViewportController.field_q, param0, 128));
+        TriangleRasterizer.setTextureProvider(new TextureCache(NetworkGameClient.field_F, ViewportController.field_q, param0, 128));
         ResourceArchive.a(0);
     }
 

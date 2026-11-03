@@ -110,15 +110,15 @@ final class DropTargetWidget extends SingleChildWidget {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.d(85)) {
+          if (!param0.isIndexReady(85)) {
             return false;
           }
           if (!param0.ensureGroupAvailableByName("commonui", 0)) {
             return false;
           }
-          if (param1.d(71) &&
+          if (param1.isIndexReady(71) &&
             param1.ensureGroupAvailableByName("commonui", 0)) {
-            if (param2.d(122) &&
+            if (param2.isIndexReady(122) &&
               param2.ensureGroupAvailableByName("button.gif", 0)) {
               if (param3) {
                 return true;

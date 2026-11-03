@@ -91,25 +91,25 @@ final class ArchiveLoadSequence {
         while (this.stepCount > this.currentStepIndex) {
           var4 = this.steps[this.currentStepIndex];
           var2 = var4;
-          if (!var4.archive.d(-114)) {
+          if (!var4.archive.isIndexReady(-114)) {
             this.updateStepProgress(var4, false, 0);
             return false;
           }
           if (0 <= var4.groupId &&
-            !var4.archive.a(var4.groupId, (byte) -114)) {
-            this.updateStepProgress(var2, false, var4.archive.d(-29867, var4.groupId));
+            !var4.archive.loadGroup(var4.groupId, (byte) -114)) {
+            this.updateStepProgress(var2, false, var4.archive.getGroupProgress(-29867, var4.groupId));
             return false;
           }
           if (var4.groupName != null &&
             !var4.archive.ensureGroupAvailableByName(var4.groupName, 0)) {
-            this.updateStepProgress(var2, false, var4.archive.a(100, var4.groupName));
+            this.updateStepProgress(var2, false, var4.archive.getGroupProgressByName(100, var4.groupName));
             return false;
           }
           if (var4.groupId < 0 &&
             var4.groupName == null &&
             var4.loadingText != null &&
             !var4.archive.ensureAllGroupsAvailable(-63)) {
-            this.updateStepProgress(var2, false, var4.archive.b(0));
+            this.updateStepProgress(var2, false, var4.archive.getOverallProgress(0));
             return false;
           }
           this.currentStepIndex = this.currentStepIndex + 1;

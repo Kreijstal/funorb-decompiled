@@ -48,17 +48,17 @@ final class RasterSnapshot extends IntrusiveNode {
           }
           var5 = stackIn_14_0;
           if (var4 != 0 &&
-            var7.c(true)) {
+            var7.isGroupChoicePending(true)) {
             ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.gameModel.field_h[var6.playerIndex]}, -1, AgeValidator.whichGroupDoYouWant), dq.field_a.groupName((byte) 99, 1), dq.field_a.groupName((byte) 120, 0), 40, 2, 1);
             return;
           }
           if (var4 != 0 &&
-            var7.a(-110)) {
+            var7.isPlayPassChoicePending(-110)) {
             ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.gameModel.field_h[var6.playerIndex]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, ImageProducerRasterBuffer.decisionButtonPlay, param1 + 16877, 16, 8);
             return;
           }
           if (var5 != 0) {
-            if (!var7.c((byte) 91)) {
+            if (!var7.isOpponentChoicePending((byte) 91)) {
               return;
             }
             ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.gameModel.field_h[(1 + var7.playerIndex) % param0.gameModel.playerCount]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, ImageProducerRasterBuffer.decisionButtonPlay, -122, 64, 32);

@@ -22,7 +22,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             openinpopupwindow = (String) null;
           }
           if (TextLineLayout.a(param2, param0, param1, (byte) 121)) {
-            stackIn_6_0 = cl.createAlphaFont(param3.a(param4 - 24766, param1, param2), true);
+            stackIn_6_0 = cl.createAlphaFont(param3.getFileBytesUnkeyed(param4 - 24766, param1, param2), true);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

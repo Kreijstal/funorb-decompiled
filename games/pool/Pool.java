@@ -14,7 +14,7 @@ public final class Pool extends NetworkGameClient {
     static HuffmanCodec field_J;
     public static int field_O;
 
-    private final void a(boolean param0, int param1) {
+    private final void updateScreenTransition(boolean param0, int param1) {
         int fieldTemp$0 = 0;
         PoolMatchController stackIn_26_0 = null;
         boolean stackIn_27_1 = false;
@@ -899,7 +899,7 @@ public final class Pool extends NetworkGameClient {
         hp.field_c = ek.a(5);
     }
 
-    private final void m(byte param0) {
+    private final void fetchArchives(byte param0) {
         if (GameApplet.field_m != null) {
           PoolUiText.applyLocalizedTexts(GameApplet.field_m, -8);
           GameApplet.field_m = null;
@@ -1130,9 +1130,9 @@ public final class Pool extends NetworkGameClient {
                 var3Lifetime1 = PlayerContextMenu.field_e.readByte((byte) 105);
                 ((PoolMatchController) (var2Lifetime1)).gameModel.finishGame(param0 - 14289, var3Lifetime1);
                 if (((PoolMatchController) (var2Lifetime1)).localPlayerIndex == var3Lifetime1) {
-                  LobbyGame.field_gc.a(17, 256, (byte) -121, 128);
+                  LobbyGame.field_gc.playTableSound(17, 256, (byte) -121, 128);
                 } else {
-                  LobbyGame.field_gc.a(18, 256, (byte) -114, 128);
+                  LobbyGame.field_gc.playTableSound(18, 256, (byte) -114, 128);
                 }
                 var20 = var2Lifetime1;
                 stackIn_101_0 = -3405;
@@ -1246,7 +1246,7 @@ public final class Pool extends NetworkGameClient {
     public Pool() {
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean handleKeyPress(int param0, int param1, int param2, int param3) {
         if (ea.field_z) {
           return ThemeSelectScreen.field_J.dispatchKeyInputOrRequestFocus(-81, IterableDualLinkDeque.field_a, ml.field_b);
         }
@@ -1257,7 +1257,7 @@ public final class Pool extends NetworkGameClient {
           return true;
         }
         if (param3 != -80) {
-          Pool.a(122, -100, -91, -77);
+          Pool.handleKeyPress(122, -100, -91, -77);
         }
         if (ViewportController.field_y) {
           return false;
@@ -1295,7 +1295,7 @@ public final class Pool extends NetworkGameClient {
         stackIn_6_2 = (null != MatchingTextValidator.field_u);
         this.serviceFramework(stackIn_5_1, stackIn_6_2);
         if (FullscreenFocusCanvas.field_c) {
-          this.m((byte) -125);
+          this.fetchArchives((byte) -125);
           FullscreenFocusCanvas.field_c = false;
         }
         SocialListEntry.field_Tb = SocialListEntry.field_Tb + 1;
@@ -1306,13 +1306,13 @@ public final class Pool extends NetworkGameClient {
             if (!DebouncedValidationProvider.a(true)) {
               return;
             }
-            discarded$0 = this.d(95, false);
+            discarded$0 = this.loadResources(95, false);
             return;
           }
         }
         if (!rm.field_d) {
           ln.a(0, wp.field_d);
-          if (this.d(82, true)) {
+          if (this.loadResources(82, true)) {
             rm.field_d = true;
           }
         } else {
@@ -1323,9 +1323,9 @@ public final class Pool extends NetworkGameClient {
               if (!ue.a(11)) {
                 if (!md.a((byte) -122)) {
                   if (!de.field_g) {
-                    this.a(false, 0);
+                    this.updateScreenTransition(false, 0);
                   } else {
-                    LobbyGame.field_gc.j(2);
+                    LobbyGame.field_gc.buildSceneryLayers(2);
                     ArrayWidgetGroup.a(0);
                     if (LobbyGame.field_gc.field_G == LobbyGame.field_gc.field_H) {
                       LobbyGame.field_gc.d(16);
@@ -1334,14 +1334,14 @@ public final class Pool extends NetworkGameClient {
                   }
                 } else {
                   if (EmailAvailabilityValidator.field_s != EmailAvailabilityValidator.field_o) {
-                    this.a(false, 0);
+                    this.updateScreenTransition(false, 0);
                   } else {
                     var3 = RankingsScreen.h(8);
                     if (var3 == 1) {
                       WireframeQuad.field_x = true;
                       TranslatedUiText.a(pl.pleaselogin, 0, (byte) 88);
                     }
-                    this.a(true, 0);
+                    this.updateScreenTransition(true, 0);
                   }
                 }
               } else {
@@ -1349,16 +1349,16 @@ public final class Pool extends NetworkGameClient {
                 var3 = this.pollAccountActions(stackIn_29_1, false);
                 if (1 != var3 &&
                   var3 != 2) {
-                  this.a(true, 0);
+                  this.updateScreenTransition(true, 0);
                 } else {
                   if (MatchingTextValidator.field_u != null) {
                     tq.d((byte) -101);
                   }
                   if (var3 != 2) {
-                    this.a(true, 0);
+                    this.updateScreenTransition(true, 0);
                   } else {
                     DualLinkNodeHashTable.openQuitPage(-1, NanoTickClock.getApplet(72));
-                    this.a(true, 0);
+                    this.updateScreenTransition(true, 0);
                   }
                 }
               }
@@ -1371,18 +1371,18 @@ public final class Pool extends NetworkGameClient {
                       NineSliceFrame.field_c = true;
                       TranslatedUiText.a(jc.pleaseloginMember, 0, (byte) 78);
                     }
-                    this.a(true, 0);
+                    this.updateScreenTransition(true, 0);
                   } else {
                     NineSliceFrame.field_c = false;
                     qr.a(-28038, true);
-                    this.a(true, 0);
+                    this.updateScreenTransition(true, 0);
                   }
                 } else {
                   tq.d((byte) -104);
-                  this.a(true, 0);
+                  this.updateScreenTransition(true, 0);
                 }
               } else {
-                this.a(false, 0);
+                this.updateScreenTransition(false, 0);
               }
             }
           }
@@ -1477,7 +1477,7 @@ public final class Pool extends NetworkGameClient {
         cd.a((byte) 60);
     }
 
-    private final boolean d(int param0, boolean param1) {
+    private final boolean loadResources(int param0, boolean param1) {
         int var3;
         PolarTableScene var4;
         int var6;
@@ -1567,7 +1567,7 @@ public final class Pool extends NetworkGameClient {
             HalloweenBallSkin.field_m = MusicTrack.loadFromArchive(jc.field_a, "", "title");
             jh.field_d = MusicTrack.loadFromArchive(jc.field_a, "", "title_next_door");
             for (var3 = 0; var3 < nn.field_b.length; var3++) {
-              nn.field_b[var3].a(1, jc.field_a);
+              nn.field_b[var3].loadMusicTracks(1, jc.field_a);
             }
             jc.field_a = null;
             ArrayWidgetGroup.a(0);
@@ -1605,7 +1605,7 @@ public final class Pool extends NetworkGameClient {
             TextInputValidator.a(UsernameAvailabilityValidator.field_r, (byte) -12);
             TextInputValidator.a(om.field_u, (byte) -12);
             dq.field_k = new Sprite(32, 32);
-            dq.field_k.e();
+            dq.field_k.bindAsRenderTarget();
             om.field_u.drawScaledAveraged(0, 0, 32, 32);
             OpacityWidget.field_P.bindAsRenderTarget(15100);
             om.field_u = null;
@@ -1653,47 +1653,47 @@ public final class Pool extends NetworkGameClient {
           ArrayWidgetGroup.a(0);
           return true;
         }
-        if (Under13NoticePanel.field_R.d(-62) &&
+        if (Under13NoticePanel.field_R.isIndexReady(-62) &&
           Under13NoticePanel.field_R.ensureGroupAvailableByName("arialbold14", 0)) {
-          if (Under13NoticePanel.field_R.d(-64) &&
+          if (Under13NoticePanel.field_R.isIndexReady(-64) &&
             Under13NoticePanel.field_R.ensureGroupAvailableByName("arialish12", 0)) {
-            if (QuickChatMenu.field_Zb.d(48) &&
+            if (QuickChatMenu.field_Zb.isIndexReady(48) &&
               QuickChatMenu.field_Zb.ensureGroupAvailableByName("arialbold14", 0)) {
-              if (QuickChatMenu.field_Zb.d(123) &&
+              if (QuickChatMenu.field_Zb.isIndexReady(123) &&
                 QuickChatMenu.field_Zb.ensureGroupAvailableByName("arialish12", 0)) {
-                if (Under13NoticePanel.field_R.d(107) &&
+                if (Under13NoticePanel.field_R.isIndexReady(107) &&
                   Under13NoticePanel.field_R.ensureGroupAvailableByName("basic", 0)) {
-                  if (Under13NoticePanel.field_R.d(-43) &&
+                  if (Under13NoticePanel.field_R.isIndexReady(-43) &&
                     Under13NoticePanel.field_R.ensureGroupAvailableByName("lobby", 0)) {
-                    if (QuickChatMenu.field_Zb.d(-47) &&
+                    if (QuickChatMenu.field_Zb.isIndexReady(-47) &&
                       QuickChatMenu.field_Zb.ensureGroupAvailableByName("lobby", 0)) {
-                      if (WeightedLruCache.field_d.d(79) &&
+                      if (WeightedLruCache.field_d.isIndexReady(79) &&
                         WeightedLruCache.field_d.ensureAllGroupsAvailable(-63)) {
-                        if (he.field_b.d(105) &&
+                        if (he.field_b.isIndexReady(105) &&
                           he.field_b.ensureAllGroupsAvailable(-63)) {
-                          if (gf.field_g.d(-50) &&
+                          if (gf.field_g.isIndexReady(-50) &&
                             gf.field_g.ensureAllGroupsAvailable(-63)) {
-                            if (jc.field_a.d(-114) &&
+                            if (jc.field_a.isIndexReady(-114) &&
                               jc.field_a.ensureAllGroupsAvailable(-63)) {
-                              if (ViewportController.field_q.d(-43) &&
+                              if (ViewportController.field_q.isIndexReady(-43) &&
                                 ViewportController.field_q.ensureGroupAvailableByName("", 0)) {
-                                if (rl.field_h.d(-90) &&
+                                if (rl.field_h.isIndexReady(-90) &&
                                   rl.field_h.ensureGroupAvailableByName("", 0)) {
-                                  if (Ball.field_z.d(120) &&
+                                  if (Ball.field_z.isIndexReady(120) &&
                                     Ball.field_z.ensureGroupAvailableByName("", 0)) {
-                                    if (fh.field_b.d(-76) &&
+                                    if (fh.field_b.isIndexReady(-76) &&
                                       fh.field_b.ensureAllGroupsAvailable(-63)) {
-                                      if (cp.field_a.d(-90) &&
+                                      if (cp.field_a.isIndexReady(-90) &&
                                         cp.field_a.ensureAllGroupsAvailable(-63)) {
-                                        if (s.field_a.d(-116) &&
+                                        if (s.field_a.isIndexReady(-116) &&
                                           s.field_a.ensureAllGroupsAvailable(-63)) {
-                                          if (NetworkGameClient.field_F.d(-118) &&
+                                          if (NetworkGameClient.field_F.isIndexReady(-118) &&
                                             NetworkGameClient.field_F.ensureAllGroupsAvailable(-63)) {
                                             if (!param1) {
                                               var61 = NetworkGameClient.field_F;
                                               var62 = de.waitingforExtradata;
                                               var63 = SoundCache.loadingExtradata;
-                                              KeyHandler.a(hp.a(var61, var62, -641, var63), (float)(w.field_i[18] + (w.field_i[19] - w.field_i[18]) * var61.b(0) / 100), false);
+                                              KeyHandler.a(hp.a(var61, var62, -641, var63), (float)(w.field_i[18] + (w.field_i[19] - w.field_i[18]) * var61.getOverallProgress(0) / 100), false);
                                               return false;
                                             }
                                             ue.a(true);
@@ -1724,109 +1724,109 @@ public final class Pool extends NetworkGameClient {
                                           var58 = NetworkGameClient.field_F;
                                           var59 = de.waitingforExtradata;
                                           var60 = SoundCache.loadingExtradata;
-                                          KeyHandler.a(hp.a(var58, var59, -641, var60), (float)(w.field_i[18] + (-w.field_i[18] + w.field_i[19]) * var58.b(0) / 100), false);
+                                          KeyHandler.a(hp.a(var58, var59, -641, var60), (float)(w.field_i[18] + (-w.field_i[18] + w.field_i[19]) * var58.getOverallProgress(0) / 100), false);
                                           return false;
                                         }
                                         var55 = s.field_a;
                                         var56 = de.waitingforExtradata;
                                         var57 = SoundCache.loadingExtradata;
-                                        KeyHandler.a(hp.a(var55, var56, -641, var57), (float)(w.field_i[17] + (w.field_i[18] - w.field_i[17]) * var55.b(0) / 100), false);
+                                        KeyHandler.a(hp.a(var55, var56, -641, var57), (float)(w.field_i[17] + (w.field_i[18] - w.field_i[17]) * var55.getOverallProgress(0) / 100), false);
                                         return false;
                                       }
                                       var52 = cp.field_a;
                                       var53 = de.waitingforExtradata;
                                       var54 = SoundCache.loadingExtradata;
-                                      KeyHandler.a(hp.a(var52, var53, -641, var54), (float)(w.field_i[16] + (-w.field_i[16] + w.field_i[17]) * var52.b(0) / 100), false);
+                                      KeyHandler.a(hp.a(var52, var53, -641, var54), (float)(w.field_i[16] + (-w.field_i[16] + w.field_i[17]) * var52.getOverallProgress(0) / 100), false);
                                       return false;
                                     }
                                     var49 = fh.field_b;
                                     var50 = de.waitingforExtradata;
                                     var51 = SoundCache.loadingExtradata;
-                                    KeyHandler.a(hp.a(var49, var50, -641, var51), (float)(w.field_i[15] + (w.field_i[16] - w.field_i[15]) * var49.b(0) / 100), false);
+                                    KeyHandler.a(hp.a(var49, var50, -641, var51), (float)(w.field_i[15] + (w.field_i[16] - w.field_i[15]) * var49.getOverallProgress(0) / 100), false);
                                     return false;
                                   }
                                   var46 = Ball.field_z;
                                   var48 = SpaceTableScene.waitingforFonts;
                                   var47 = TickClock.loadingFonts;
-                                  KeyHandler.a(dk.a((byte) -21, "", var46, var47, var48), (float)(w.field_i[14] + (w.field_i[15] - w.field_i[14]) * var46.a(100, "") / 100), false);
+                                  KeyHandler.a(dk.a((byte) -21, "", var46, var47, var48), (float)(w.field_i[14] + (w.field_i[15] - w.field_i[14]) * var46.getGroupProgressByName(100, "") / 100), false);
                                   return false;
                                 }
                                 var43 = rl.field_h;
                                 var45 = rp.waitingforGraphics;
                                 var44 = oj.loadingGraphics;
-                                KeyHandler.a(dk.a((byte) -1, "", var43, var44, var45), (float)(w.field_i[13] + (w.field_i[14] - w.field_i[13]) * var43.a(100, "") / 100), false);
+                                KeyHandler.a(dk.a((byte) -1, "", var43, var44, var45), (float)(w.field_i[13] + (w.field_i[14] - w.field_i[13]) * var43.getGroupProgressByName(100, "") / 100), false);
                                 return false;
                               }
                               var40 = ViewportController.field_q;
                               var42 = rp.waitingforGraphics;
                               var41 = oj.loadingGraphics;
-                              KeyHandler.a(dk.a((byte) 119, "", var40, var41, var42), (float)(w.field_i[12] + (w.field_i[13] - w.field_i[12]) * var40.a(100, "") / 100), false);
+                              KeyHandler.a(dk.a((byte) 119, "", var40, var41, var42), (float)(w.field_i[12] + (w.field_i[13] - w.field_i[12]) * var40.getGroupProgressByName(100, "") / 100), false);
                               return false;
                             }
                             var37 = jc.field_a;
                             var38 = NameEntryPopup.waitingforMusic;
                             var39 = Camera.loadingMusic;
-                            KeyHandler.a(hp.a(var37, var38, -641, var39), (float)(w.field_i[11] + (w.field_i[12] - w.field_i[11]) * var37.b(0) / 100), false);
+                            KeyHandler.a(hp.a(var37, var38, -641, var39), (float)(w.field_i[11] + (w.field_i[12] - w.field_i[11]) * var37.getOverallProgress(0) / 100), false);
                             return false;
                           }
                           var34 = gf.field_g;
                           var35 = NameEntryPopup.waitingforMusic;
                           var36 = Camera.loadingMusic;
-                          KeyHandler.a(hp.a(var34, var35, -641, var36), (float)(w.field_i[10] + (-w.field_i[10] + w.field_i[11]) * var34.b(0) / 100), false);
+                          KeyHandler.a(hp.a(var34, var35, -641, var36), (float)(w.field_i[10] + (-w.field_i[10] + w.field_i[11]) * var34.getOverallProgress(0) / 100), false);
                           return false;
                         }
                         var31 = he.field_b;
                         var32 = HuffmanCodec.waitingforSoundeffects;
                         var33 = AudioService.loadingSoundeffects;
-                        KeyHandler.a(hp.a(var31, var32, -641, var33), (float)(w.field_i[9] + (-w.field_i[9] + w.field_i[10]) * var31.b(0) / 100), false);
+                        KeyHandler.a(hp.a(var31, var32, -641, var33), (float)(w.field_i[9] + (-w.field_i[9] + w.field_i[10]) * var31.getOverallProgress(0) / 100), false);
                         return false;
                       }
                       var28 = WeightedLruCache.field_d;
                       var29 = HuffmanCodec.waitingforSoundeffects;
                       var30 = AudioService.loadingSoundeffects;
-                      KeyHandler.a(hp.a(var28, var29, -641, var30), (float)(w.field_i[8] + (w.field_i[9] - w.field_i[8]) * var28.b(0) / 100), false);
+                      KeyHandler.a(hp.a(var28, var29, -641, var30), (float)(w.field_i[8] + (w.field_i[9] - w.field_i[8]) * var28.getOverallProgress(0) / 100), false);
                       return false;
                     }
                     var25 = QuickChatMenu.field_Zb;
                     var27 = SpaceTableScene.waitingforFonts;
                     var26 = TickClock.loadingFonts;
-                    KeyHandler.a(dk.a((byte) 118, "lobby", var25, var26, var27), (float)(w.field_i[7] + (-w.field_i[7] + w.field_i[8]) * var25.a(100, "lobby") / 100), false);
+                    KeyHandler.a(dk.a((byte) 118, "lobby", var25, var26, var27), (float)(w.field_i[7] + (-w.field_i[7] + w.field_i[8]) * var25.getGroupProgressByName(100, "lobby") / 100), false);
                     return false;
                   }
                   var22 = Under13NoticePanel.field_R;
                   var24 = rp.waitingforGraphics;
                   var23 = oj.loadingGraphics;
-                  KeyHandler.a(dk.a((byte) 122, "lobby", var22, var23, var24), (float)(w.field_i[6] + (-w.field_i[6] + w.field_i[7]) * var22.a(100, "lobby") / 100), false);
+                  KeyHandler.a(dk.a((byte) 122, "lobby", var22, var23, var24), (float)(w.field_i[6] + (-w.field_i[6] + w.field_i[7]) * var22.getGroupProgressByName(100, "lobby") / 100), false);
                   return false;
                 }
                 var19 = Under13NoticePanel.field_R;
                 var21 = rp.waitingforGraphics;
                 var20 = oj.loadingGraphics;
-                KeyHandler.a(dk.a((byte) 101, "basic", var19, var20, var21), (float)(w.field_i[5] + (w.field_i[6] - w.field_i[5]) * var19.a(100, "basic") / 100), false);
+                KeyHandler.a(dk.a((byte) 101, "basic", var19, var20, var21), (float)(w.field_i[5] + (w.field_i[6] - w.field_i[5]) * var19.getGroupProgressByName(100, "basic") / 100), false);
                 return false;
               }
               var16 = QuickChatMenu.field_Zb;
               var18 = SpaceTableScene.waitingforFonts;
               var17 = TickClock.loadingFonts;
-              KeyHandler.a(dk.a((byte) -116, "arialish12", var16, var17, var18), (float)(w.field_i[4] + (-w.field_i[4] + w.field_i[5]) * var16.a(100, "arialish12") / 100), false);
+              KeyHandler.a(dk.a((byte) -116, "arialish12", var16, var17, var18), (float)(w.field_i[4] + (-w.field_i[4] + w.field_i[5]) * var16.getGroupProgressByName(100, "arialish12") / 100), false);
               return false;
             }
             var13 = QuickChatMenu.field_Zb;
             var15 = SpaceTableScene.waitingforFonts;
             var14 = TickClock.loadingFonts;
-            KeyHandler.a(dk.a((byte) -61, "arialbold14", var13, var14, var15), (float)(w.field_i[3] + (-w.field_i[3] + w.field_i[4]) * var13.a(100, "arialbold14") / 100), false);
+            KeyHandler.a(dk.a((byte) -61, "arialbold14", var13, var14, var15), (float)(w.field_i[3] + (-w.field_i[3] + w.field_i[4]) * var13.getGroupProgressByName(100, "arialbold14") / 100), false);
             return false;
           }
           var10 = Under13NoticePanel.field_R;
           var12 = rp.waitingforGraphics;
           var11 = oj.loadingGraphics;
-          KeyHandler.a(dk.a((byte) -17, "arialish12", var10, var11, var12), (float)(w.field_i[2] + (-w.field_i[2] + w.field_i[3]) * var10.a(100, "arialish12") / 100), false);
+          KeyHandler.a(dk.a((byte) -17, "arialish12", var10, var11, var12), (float)(w.field_i[2] + (-w.field_i[2] + w.field_i[3]) * var10.getGroupProgressByName(100, "arialish12") / 100), false);
           return false;
         }
         var7 = Under13NoticePanel.field_R;
         var9 = rp.waitingforGraphics;
         var8 = oj.loadingGraphics;
-        KeyHandler.a(dk.a((byte) -22, "arialbold14", var7, var8, var9), (float)(w.field_i[1] + (w.field_i[2] - w.field_i[1]) * var7.a(100, "arialbold14") / 100), false);
+        KeyHandler.a(dk.a((byte) -22, "arialbold14", var7, var8, var9), (float)(w.field_i[1] + (w.field_i[2] - w.field_i[1]) * var7.getGroupProgressByName(100, "arialbold14") / 100), false);
         return false;
     }
 

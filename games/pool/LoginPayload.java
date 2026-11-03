@@ -159,7 +159,7 @@ abstract class LoginPayload {
                 } else {
                   stackIn_17_5 = 3355443;
                 }
-                SoftwareRasterizer.a(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4, stackIn_17_5, var5.field_w / 2 + 128);
+                SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4, stackIn_17_5, var5.field_w / 2 + 128);
                 continue;
               }
               break;
@@ -176,7 +176,7 @@ abstract class LoginPayload {
                 } else {
                   stackIn_24_5 = 3407667;
                 }
-                SoftwareRasterizer.a(stackIn_23_0, stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_24_5, var5.field_w / 2 + 128);
+                SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_23_0, stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_24_5, var5.field_w / 2 + 128);
                 continue;
               }
               break;
@@ -193,7 +193,7 @@ abstract class LoginPayload {
                 } else {
                   stackIn_31_5 = 3355443;
                 }
-                SoftwareRasterizer.a(stackIn_30_0, stackIn_30_1, stackIn_30_2, stackIn_30_3, stackIn_30_4, stackIn_31_5, var5.field_w / 2 + 128);
+                SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_30_0, stackIn_30_1, stackIn_30_2, stackIn_30_3, stackIn_30_4, stackIn_31_5, var5.field_w / 2 + 128);
                 continue;
               }
               break;
@@ -212,7 +212,7 @@ abstract class LoginPayload {
               } else {
                 stackIn_38_5 = 3407667;
               }
-              SoftwareRasterizer.a(stackIn_37_0, stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_37_4, stackIn_38_5, var5.field_w / 2 + 128);
+              SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_37_0, stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_37_4, stackIn_38_5, var5.field_w / 2 + 128);
             }
           }
           return;

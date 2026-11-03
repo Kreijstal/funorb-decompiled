@@ -232,7 +232,7 @@ final class hi extends ByteStorage {
             return (PaletteBitmapFont) (stackIn_2_0);
           }
           var5_int = 41 / ((param0 + 73) / 41);
-          stackIn_4_0 = ta.a(16908, param3.a(105, param2, param1));
+          stackIn_4_0 = ta.a(16908, param3.getFileBytesUnkeyed(105, param2, param1));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

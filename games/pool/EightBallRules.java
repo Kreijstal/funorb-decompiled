@@ -238,7 +238,7 @@ final class EightBallRules extends GameRules {
         return 0;
     }
 
-    final int a(byte param0) {
+    final int evaluateShot(byte param0) {
         int stackIn_98_0 = 0;
         int stackIn_99_1 = 0;
         int var3;
@@ -274,21 +274,21 @@ final class EightBallRules extends GameRules {
         var3 = var14.groupBefore;
         var4 = 0;
         if (this.field_d.isCueBallPotted((byte) 123)) {
-          var14.a(3, -14, new int[]{this.field_d.field_A});
+          var14.addEvent(3, -14, new int[]{this.field_d.field_A});
           var14.field_t = true;
           var4 = var4 | (this.q(1) | um.field_c);
           var14.field_w = (byte)(var14.field_w - 1);
         }
         if (var14.field_n != 8) {
           if (var14.field_n == -1) {
-            var14.a(7, -14, new int[]{var13.playerIndex});
+            var14.addEvent(7, -14, new int[]{var13.playerIndex});
             var14.field_t = true;
             var4 = var4 | this.w(-2);
             var14.field_w = (byte)(var14.field_w - 1);
           } else {
             if (var3 != -1 &&
               this.ballGroup(var14.field_n, 30554) != var3) {
-              var14.a(1, -14, new int[]{var13.playerIndex});
+              var14.addEvent(1, -14, new int[]{var13.playerIndex});
               var14.field_t = true;
               var4 = var4 | this.b(true);
               var14.field_w = (byte)(var14.field_w - 1);
@@ -296,7 +296,7 @@ final class EightBallRules extends GameRules {
           }
         } else {
           if (var3 != 2) {
-            var14.a(2, -14, new int[]{var13.playerIndex});
+            var14.addEvent(2, -14, new int[]{var13.playerIndex});
             var14.field_t = true;
             var4 = var4 | this.o(-17);
             var14.field_w = (byte)(var14.field_w - 1);
@@ -326,7 +326,7 @@ final class EightBallRules extends GameRules {
             break;
           }
           if (decompiledFrameCompleted0) {
-            var14.a(5, -14, new int[]{this.field_d.field_A});
+            var14.addEvent(5, -14, new int[]{this.field_d.field_A});
             return Quaternion.field_e;
           }
         }
@@ -352,11 +352,11 @@ final class EightBallRules extends GameRules {
           }
           if (this.t(-91) > var5Lifetime2) {
             if (0 == var5Lifetime2) {
-              var14.a(12, -14, new int[]{});
+              var14.addEvent(12, -14, new int[]{});
               var14.field_t = true;
               var4 = var4 | this.s(0);
             } else {
-              var14.a(6, -14, new int[]{});
+              var14.addEvent(6, -14, new int[]{});
               var14.field_t = true;
               var4 = var4 | this.s(0);
             }
@@ -365,20 +365,20 @@ final class EightBallRules extends GameRules {
           else {
             if (var7 < this.d((byte) 87)) {
               if (var7 != 0) {
-                var14.a(14, -14, new int[]{});
+                var14.addEvent(14, -14, new int[]{});
               } else {
-                var14.a(13, -14, new int[]{});
+                var14.addEvent(13, -14, new int[]{});
               }
               var14.field_t = true;
               var4 = var4 | this.e((byte) 91);
             } else {
               if (!(var6 >= this.p(89))) {
                 if (var6 != 0) {
-                  var14.a(16, -14, new int[]{});
+                  var14.addEvent(16, -14, new int[]{});
                   var14.field_t = true;
                   var4 = var4 | this.g((byte) -46);
                 } else {
-                  var14.a(15, -14, new int[]{});
+                  var14.addEvent(15, -14, new int[]{});
                   var14.field_t = true;
                   var4 = var4 | this.g((byte) -46);
                 }
@@ -389,8 +389,8 @@ final class EightBallRules extends GameRules {
         var5Lifetime1 = -52 % ((param0 + 37) / 60);
         if (var14.field_t &&
           0 == (AccountWelcomePanel.field_Y & var4) &&
-          this.a((1 + this.field_d.field_A) % this.field_d.playerCount, -119)) {
-          var14.a(11, -14, new int[]{});
+          this.isTargetVisible((1 + this.field_d.field_A) % this.field_d.playerCount, -119)) {
+          var14.addEvent(11, -14, new int[]{});
           var4 = this.f((byte) -30);
         }
         boolean decompiledFrameRemainder0 = true;
@@ -455,7 +455,7 @@ final class EightBallRules extends GameRules {
           }
           if (decompiledFrameRemainder0) {
             if (var7Lifetime1 > 0) {
-              var14.a(4, -14, new int[]{this.field_d.field_A});
+              var14.addEvent(4, -14, new int[]{this.field_d.field_A});
               var14.field_t = true;
               var4 = var4 | this.c((byte) 116);
             } else {
@@ -467,18 +467,18 @@ final class EightBallRules extends GameRules {
           }
         }
         if (!this.field_d.shouldChangePlayer(false, (byte) 69, var14)) {
-          if (this.a(var14.playerIndex % this.field_d.playerCount, -57)) {
+          if (this.isTargetVisible(var14.playerIndex % this.field_d.playerCount, -57)) {
             var14.field_w = (byte)(var14.field_w - 1);
           }
         } else {
-          if (this.a((1 + var14.playerIndex) % this.field_d.playerCount, -122)) {
+          if (this.isTargetVisible((1 + var14.playerIndex) % this.field_d.playerCount, -122)) {
             var14.field_w = (byte)(var14.field_w + 1);
           }
         }
         return var4;
     }
 
-    final int[] a(int param0, byte param1) {
+    final int[] rackOrder(int param0, byte param1) {
         if (param1 != -32) {
           field_e = -117;
         }
@@ -521,7 +521,7 @@ final class EightBallRules extends GameRules {
         return var4;
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isTargetVisible(int param0, int param1) {
         int[] stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         int var3;
@@ -673,7 +673,7 @@ final class EightBallRules extends GameRules {
         }
     }
 
-    final int a(ShotRecord param0, int param1) {
+    final int groupMessageIndex(ShotRecord param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1084,7 +1084,7 @@ final class EightBallRules extends GameRules {
         return this.s(0);
     }
 
-    final int h(int param0) {
+    final int timeoutResolution(int param0) {
         int var3;
         int var4;
         int var5;
@@ -1107,9 +1107,9 @@ final class EightBallRules extends GameRules {
         } else {
           var3Lifetime1 = this.u(4) | AccountWelcomePanel.field_Q;
         }
-        var6.a(17, param0 - 13, new int[]{var6.playerIndex});
-        if (this.a((var6.playerIndex - param0) % this.field_d.playerCount, -112)) {
-          var6.a(11, -14, new int[]{});
+        var6.addEvent(17, param0 - 13, new int[]{var6.playerIndex});
+        if (this.isTargetVisible((var6.playerIndex - param0) % this.field_d.playerCount, -112)) {
+          var6.addEvent(11, -14, new int[]{});
           var3Lifetime1 = this.f((byte) -30);
         }
         var6.field_t = true;

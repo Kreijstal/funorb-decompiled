@@ -301,7 +301,7 @@ final class IsaacCipher {
               var11[2] = param0.vertexZ[param0.field_C[var3Lifetime1]];
               PacketBuffer.a(var31, var22, var23, var32, var25, var26, var27, (byte) 111, var28);
               MenuScreen.a(var22, var27, var23, var28, var31, var26, var32, 0, var25);
-              param0.field_k[var2_intLifetime1] = param0.a((short)param0.addVertex(PauseMenuScreen.c(0, -54264319, var25[0]), PauseMenuScreen.c(0, -54264319, var27[0]), PauseMenuScreen.c(0, -54264319, var22[0])), (short)param0.addVertex(PauseMenuScreen.c(0, cq.a(param1, -54264319), var25[1]), PauseMenuScreen.c(0, -54264319, var27[1]), PauseMenuScreen.c(0, -54264319, var22[1])), (short)param0.addVertex(PauseMenuScreen.c(0, -54264319, var25[2]), PauseMenuScreen.c(0, -54264319, var27[2]), PauseMenuScreen.c(0, -54264319, var22[2])));
+              param0.field_k[var2_intLifetime1] = param0.addTextureTriangle((short)param0.addVertex(PauseMenuScreen.c(0, -54264319, var25[0]), PauseMenuScreen.c(0, -54264319, var27[0]), PauseMenuScreen.c(0, -54264319, var22[0])), (short)param0.addVertex(PauseMenuScreen.c(0, cq.a(param1, -54264319), var25[1]), PauseMenuScreen.c(0, -54264319, var27[1]), PauseMenuScreen.c(0, -54264319, var22[1])), (short)param0.addVertex(PauseMenuScreen.c(0, -54264319, var25[2]), PauseMenuScreen.c(0, -54264319, var27[2]), PauseMenuScreen.c(0, -54264319, var22[2])));
             }
           }
           return;
@@ -400,7 +400,7 @@ final class IsaacCipher {
               var5.writeLong(var4.field_x, (byte) -122);
             }
             if (var4.phase >= 3) {
-              var4.a(var5, (byte) 0);
+              var4.writeChoices(var5, (byte) 0);
             }
             var4 = (ShotRecord) (var3.previous(-126));
           }

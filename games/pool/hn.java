@@ -55,7 +55,7 @@ final class hn {
             return stackIn_2_0;
           }
           var5_int = param4.getGroupId(param1, -1);
-          var6 = param4.a(var5_int, 0, param2);
+          var6 = param4.getFileId(var5_int, 0, param2);
           stackIn_4_0 = DelegatingCanvas.a(param4, var6, var5_int, param0, param3 ^ -890);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

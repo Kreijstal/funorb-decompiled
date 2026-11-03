@@ -93,7 +93,7 @@ final class dq {
           var6 = SoftwareRasterizer.width;
           var7 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var4);
-          var3.e();
+          var3.bindAsRenderTarget();
           FreePlayRules.field_e.d(param2, 2, FreePlayRules.field_e.maxAscent + 2, param0, -1);
           var3.addOutline(4144959);
           var3.addOutline(65793);

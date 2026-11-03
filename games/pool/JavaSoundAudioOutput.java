@@ -19,7 +19,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         }
     }
 
-    final void b() {
+    final void writeFrames() {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;

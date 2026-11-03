@@ -142,10 +142,10 @@ final class ae {
         var10 = Pool.field_O;
         try {
           if (IterableNodeHashTable.field_k != null &&
-            IterableNodeHashTable.field_k.d(-86) &&
+            IterableNodeHashTable.field_k.isIndexReady(-86) &&
             IterableNodeHashTable.field_k.ensureGroupAvailableByName("benefits", 0) &&
             null != rl.field_c &&
-            rl.field_c.d(-62) &&
+            rl.field_c.isIndexReady(-62) &&
             rl.field_c.ensureGroupAvailableByName("benefits", 0)) {
             rf.field_e = WidgetStyleLayer.loadSprite("benefits", (byte) 51, "headline", IterableNodeHashTable.field_k);
             BallDebugOverlay.field_d = WidgetStyleLayer.loadSprite("benefits", (byte) 79, "blurbpane", IterableNodeHashTable.field_k);
@@ -161,14 +161,14 @@ final class ae {
             var3 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(AgeValidator.field_o);
             var11 = new Sprite(4 + ContextMenu.field_Yb.field_z, 4 + ContextMenu.field_Yb.field_A);
-            var11.e();
+            var11.bindAsRenderTarget();
             ContextMenu.field_Yb.drawGrayModulated(2, 2, DialWidget.field_X);
             MembershipBenefitsScreen.a(1, 2, var11.field_A, var11, 4, var11.field_z, 0, 0);
             ContextMenu.field_Yb = var11;
             w.field_f = ContextMenu.field_Yb.copyFlippedHorizontal();
             var12 = new Sprite(195, 221);
             var6 = var12.field_z / 2;
-            var12.e();
+            var12.bindAsRenderTarget();
             de.field_d.drawCentered(AccountWelcomePanel.substituteTemplateArguments(new String[]{sa.field_o}, -1, HalloweenBallSkin.mbFullAccess1), var6, 40, 16777215, -1);
             so.field_h.drawCentered(AccountWelcomePanel.substituteTemplateArguments(new String[]{sa.field_o}, -1, BufferedSocket.mbFullAccess2), var6, 60, 16777215, -1);
             de.field_d.drawCentered(AccountWelcomePanel.substituteTemplateArguments(new String[]{LinkButtonPainter.field_e}, -1, CachedArchiveSource.mbAchievementCount1), var6, 110, 16777215, -1);
@@ -176,16 +176,16 @@ final class ae {
             de.field_d.drawCentered(UsernameSuggestionsPanel.field_X, var6, 180, 16777215, -1);
             so.field_h.drawCentered(cp.mbExclusive2, var6, 200, 16777215, -1);
             MembershipBenefitsScreen.a(1, 3, var12.field_A, var12, 4, var12.field_z, 0, 0);
-            BallDebugOverlay.field_d.e();
+            BallDebugOverlay.field_d.bindAsRenderTarget();
             var12.draw(-BallDebugOverlay.field_d.field_G + 18, -BallDebugOverlay.field_d.field_B + 241);
             for (var7 = 0; var7 < mk.field_a.length; var7++) {
-              TikiBallSkin.field_m[var7].e();
+              TikiBallSkin.field_m[var7].bindAsRenderTarget();
               so.field_h.drawParagraph(mk.field_a[var7], 3, 3, -6 + TikiBallSkin.field_m[var7].field_z, -6 + TikiBallSkin.field_m[var7].field_A, DialWidget.field_X, -1, 1, 1, so.field_h.maxDescent + so.field_h.maxAscent);
               MembershipBenefitsScreen.a(1, 3, TikiBallSkin.field_m[var7].field_A, TikiBallSkin.field_m[var7], 4, TikiBallSkin.field_m[var7].field_z, 0, 0);
             }
             mk.field_a = null;
             td.field_a = i.field_o.copy();
-            td.field_a.e();
+            td.field_a.bindAsRenderTarget();
             ShotRecord.a(SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 64, 0, (byte) 103, 0);
             SoftwareRasterizer.setTarget(var27, var2, var3);
             SoftwareRasterizer.restoreClip(AgeValidator.field_o);
@@ -251,14 +251,14 @@ final class ae {
             }
             vn.field_j.normalizeCanvas();
             var9 = new Sprite(vn.field_j.field_w, vn.field_j.field_y);
-            var9.e();
+            var9.bindAsRenderTarget();
             de.field_d.drawParagraph(var14, LongAndTextLoginPayload.field_h, rf.field_c, jc.field_h, IsaacCipher.field_e, 16777215, -1, 1, 1, de.field_d.maxAscent + de.field_d.maxDescent);
             MembershipBenefitsScreen.a(1, 3, var9.field_y, var9, param0 + 6, var9.field_w, 0, 0);
-            vn.field_j.e();
+            vn.field_j.bindAsRenderTarget();
             var9.draw(0, 0);
             UsernameAvailabilityValidator.field_u = new Sprite(640, 480);
-            UsernameAvailabilityValidator.field_u.e();
-            vn.field_j.b((vn.field_j.field_w >> 1) + Ball.field_m, (vn.field_j.field_y >> 1) + ArchiveIndex.field_r, JaggrabDownloader.field_g, 4096);
+            UsernameAvailabilityValidator.field_u.bindAsRenderTarget();
+            vn.field_j.drawRotated((vn.field_j.field_w >> 1) + Ball.field_m, (vn.field_j.field_y >> 1) + ArchiveIndex.field_r, JaggrabDownloader.field_g, 4096);
             vn.field_j = null;
             UsernameAvailabilityValidator.field_u.trimTransparentBorders();
             SoftwareRasterizer.setTarget(var28, var2Lifetime1, var3Lifetime1);
@@ -273,10 +273,10 @@ final class ae {
             var16 = new Sprite(412, 43);
             var5_ref_String = AccountWelcomePanel.substituteTemplateArguments(new String[]{AccountWelcomePanel.field_N}, -1, ReportAbuseDialog.mbIncludingGamename);
             AccountWelcomePanel.field_N = null;
-            var16.e();
+            var16.bindAsRenderTarget();
             so.field_h.drawParagraph(var5_ref_String, 3, 3, -6 + var16.field_z, var16.field_A - 6, 16777215, -1, 0, 1, so.field_h.maxAscent + so.field_h.maxDescent);
             MembershipBenefitsScreen.a(1, 3, var16.field_A, var16, 4, var16.field_z, 0, 0);
-            ProgressDialog.field_gb.e();
+            ProgressDialog.field_gb.bindAsRenderTarget();
             var16.draw(199 - ProgressDialog.field_gb.field_G, -ProgressDialog.field_gb.field_B + 83);
             SoftwareRasterizer.setTarget(var29, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(AgeValidator.field_o);
@@ -294,7 +294,7 @@ final class ae {
             var5Lifetime1 = var4 + Camera.field_c.field_w + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (var6Lifetime2 + Camera.field_c.field_w);
-            ProgressDialog.field_gb.e();
+            ProgressDialog.field_gb.bindAsRenderTarget();
             so.field_h.d(PlasmaTableScene.mbCaptionTitle, -ProgressDialog.field_gb.field_G + var7Lifetime2, so.field_h.maxDescent + (-ProgressDialog.field_gb.field_B + 155 + so.field_h.maxAscent), 16777215, -1);
             MembershipBenefitsScreen.a(1, 3, 50, ProgressDialog.field_gb, 4, var4, var7Lifetime2 - ProgressDialog.field_gb.field_G - 4, -ProgressDialog.field_gb.field_B + 155);
             var8Lifetime1 = 155 - ProgressDialog.field_gb.field_B - (-so.field_h.maxAscent + (-3 + Camera.field_c.field_y - so.field_h.maxDescent)) / 2;
@@ -304,8 +304,8 @@ final class ae {
             Camera.field_c = null;
           }
           SoftwareRasterizer.saveClip(AgeValidator.field_o);
-          SoftwareRasterizer.a(16, 16, 608, 112, 15, TableScene.field_k, ModelTableScene.field_L);
-          SoftwareRasterizer.a(231, 144, 393, 232, 15, TableScene.field_k, ModelTableScene.field_L);
+          SoftwareRasterizer.fillRoundedRectangleBlended(16, 16, 608, 112, 15, TableScene.field_k, ModelTableScene.field_L);
+          SoftwareRasterizer.fillRoundedRectangleBlended(231, 144, 393, 232, 15, TableScene.field_k, ModelTableScene.field_L);
           if (rf.field_e != null) {
             rf.field_e.draw(0, 0);
           }

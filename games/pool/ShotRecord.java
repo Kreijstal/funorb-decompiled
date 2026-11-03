@@ -122,7 +122,7 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean isPlayPassChoicePending(int param0) {
         if (param0 > -66) {
           return false;
         }
@@ -135,7 +135,7 @@ final class ShotRecord extends IntrusiveNode {
         return false;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void writeChoices(PacketBuffer param0, byte param1) {
         if (param1 != 0) {
           return;
         }
@@ -160,7 +160,7 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int[] param2) {
+    final void addEvent(int param0, int param1, int[] param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -197,7 +197,7 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    final void b(byte param0, PacketBuffer param1) {
+    final void readChoices(byte param0, PacketBuffer param1) {
         boolean discarded$1 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -205,12 +205,12 @@ final class ShotRecord extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.a(param1.readUnsignedByte(-105), true);
-          if (!this.d(117)) {
+          this.makeChoice(param1.readUnsignedByte(-105), true);
+          if (!this.isAnyChoicePending(117)) {
             this.phase = 3;
           }
           if (param0 <= 13) {
-            discarded$1 = this.a(30, -70);
+            discarded$1 = this.canMakeChoice(30, -70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -555,7 +555,7 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    final String a(boolean param0) {
+    final String describeChoices(boolean param0) {
         String var3 = "end choice: ";
         String var2 = var3;
         var2 = var3;
@@ -615,7 +615,7 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    final String c(int param0) {
+    final String describeOutcome(int param0) {
         if (param0 == 26859) {
           return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.endResolution, (byte) 10);
         }
@@ -623,7 +623,7 @@ final class ShotRecord extends IntrusiveNode {
         return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.endResolution, (byte) 10);
     }
 
-    final boolean c(boolean param0) {
+    final boolean isGroupChoicePending(boolean param0) {
         if (!param0) {
           return true;
         }
@@ -636,7 +636,7 @@ final class ShotRecord extends IntrusiveNode {
         return false;
     }
 
-    final String e(int param0) {
+    final String describeAim(int param0) {
         StringBuilder stackIn_5_0 = null;
         String stackIn_5_1 = null;
         StringBuilder stackIn_6_0 = null;
@@ -655,7 +655,7 @@ final class ShotRecord extends IntrusiveNode {
         return ((StringBuilder) (Object) stackIn_6_0).append(" cueball@" + this.cueBallX + "," + this.cueBallY).toString();
     }
 
-    final void a(int param0, boolean param1) {
+    final void makeChoice(int param0, boolean param1) {
         int var3;
         int var4;
         PacketBuffer var5;
@@ -693,13 +693,13 @@ final class ShotRecord extends IntrusiveNode {
                 this.field_l = (byte)(this.field_l | param0);
               }
             }
-            if (!this.a(-28872, param0)) {
+            if (!this.canMakeChoice(-28872, param0)) {
               throw new IllegalStateException("Can't make a choice now!");
             }
             this.field_l = (byte)(this.field_l | param0);
             if (!param1) {
               var5 = (PacketBuffer) null;
-              this.b((byte) 32, (PacketBuffer) null);
+              this.readChoices((byte) 32, (PacketBuffer) null);
             }
             return;
           }
@@ -732,7 +732,7 @@ final class ShotRecord extends IntrusiveNode {
                 this.field_l = (byte)(this.field_l | param0);
               }
             }
-            if (!this.a(-28872, param0)) {
+            if (!this.canMakeChoice(-28872, param0)) {
               throw new IllegalStateException("Can't make a choice now!");
             }
             this.field_l = (byte)(this.field_l | param0);
@@ -740,7 +740,7 @@ final class ShotRecord extends IntrusiveNode {
               return;
             }
             var5Lifetime3 = (PacketBuffer) null;
-            this.b((byte) 32, (PacketBuffer) null);
+            this.readChoices((byte) 32, (PacketBuffer) null);
             return;
           }
           var3Lifetime3 = param0;
@@ -800,13 +800,13 @@ final class ShotRecord extends IntrusiveNode {
                 if (var3Lifetime1 == 0) {
                   var3Lifetime1 = param0;
                   this.field_l = (byte)(this.field_l | param0);
-                  if (!this.a(-28872, param0)) {
+                  if (!this.canMakeChoice(-28872, param0)) {
                     throw new IllegalStateException("Can't make a choice now!");
                   }
                   this.field_l = (byte)(this.field_l | param0);
                   if (!param1) {
                     var5Lifetime1 = (PacketBuffer) null;
-                    this.b((byte) 32, (PacketBuffer) null);
+                    this.readChoices((byte) 32, (PacketBuffer) null);
                   }
                   return;
                 }
@@ -817,7 +817,7 @@ final class ShotRecord extends IntrusiveNode {
             }
           }
         }
-        if (!this.a(-28872, param0)) {
+        if (!this.canMakeChoice(-28872, param0)) {
           throw new IllegalStateException("Can't make a choice now!");
         }
         this.field_l = (byte)(this.field_l | param0);
@@ -825,23 +825,23 @@ final class ShotRecord extends IntrusiveNode {
           return;
         }
         var5Lifetime2 = (PacketBuffer) null;
-        this.b((byte) 32, (PacketBuffer) null);
+        this.readChoices((byte) 32, (PacketBuffer) null);
     }
 
-    final boolean d(int param0) {
+    final boolean isAnyChoicePending(int param0) {
         if (this.endResolution == IntrusiveNodeHashTable.field_a) {
           return false;
         }
         if (param0 < 105) {
           return false;
         }
-        if (this.c(true)) {
+        if (this.isGroupChoicePending(true)) {
           return true;
         }
-        if (this.a(-103)) {
+        if (this.isPlayPassChoicePending(-103)) {
           return true;
         }
-        if (!this.c((byte) 85)) {
+        if (!this.isOpponentChoicePending((byte) 85)) {
           return false;
         }
         return true;
@@ -859,7 +859,7 @@ final class ShotRecord extends IntrusiveNode {
           if (param0 < 76) {
             return;
           }
-          this.c(2, var3_int);
+          this.setEndResolution(2, var3_int);
           if ((LinkButtonPainter.field_i & 2097152L) != 0L) {
             System.out.println("->S2C_END_SHOT: " + ab.a(this.endResolution, (byte) 10));
           }
@@ -885,7 +885,7 @@ final class ShotRecord extends IntrusiveNode {
         return String.valueOf(param1);
     }
 
-    final void c(int param0, int param1) {
+    final void setEndResolution(int param0, int param1) {
         try {
           if (param0 != 2) {
             return;
@@ -905,7 +905,7 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean canMakeChoice(int param0, int param1) {
         boolean stackIn_27_0 = false;
         boolean stackIn_101_0 = false;
         if ((this.endResolution & ClientException.field_b) == 0) {
@@ -984,7 +984,7 @@ final class ShotRecord extends IntrusiveNode {
         return false;
     }
 
-    final boolean c(byte param0) {
+    final boolean isOpponentChoicePending(byte param0) {
         if (param0 <= 73) {
           this.field_H = (byte) 46;
           if ((this.endResolution & a.field_d) == 0) {

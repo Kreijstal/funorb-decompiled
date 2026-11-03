@@ -123,7 +123,7 @@ final class TextLineLayout {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param1.a(param3 ^ 44, param2, param0);
+          var5 = param1.getFileBytesUnkeyed(param3 ^ 44, param2, param0);
           var4 = var5;
           if (var5 == null) {
             return false;

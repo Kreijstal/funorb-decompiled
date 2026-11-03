@@ -18,7 +18,7 @@ final class kf extends IntrusiveNode {
 
     final void a(int param0, int param1, int param2) {
         this.field_n = param0;
-        this.field_o.c(param1, param2 + BallDebugOverlay.field_b * param0 >> 8);
+        this.field_o.rampVolume(param1, param2 + BallDebugOverlay.field_b * param0 >> 8);
     }
 
     final static void a(int param0, byte param1, int[] param2, int[] param3, int param4) {
@@ -299,9 +299,9 @@ final class kf extends IntrusiveNode {
     kf(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_o = param0;
-          this.field_n = param0.j();
+          this.field_n = param0.getVolume();
           this.field_m = param1;
-          this.field_o.d(BallDebugOverlay.field_b * this.field_n + 128 >> 8);
+          this.field_o.setVolume(BallDebugOverlay.field_b * this.field_n + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

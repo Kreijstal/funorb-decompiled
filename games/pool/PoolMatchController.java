@@ -707,22 +707,22 @@ final class PoolMatchController {
             }
             var9 = var4.field_A;
             uc.pushRasterSnapshot((byte) 125);
-            var4.e();
+            var4.bindAsRenderTarget();
             stackIn_20_0 = 0;
             break;
           }
           SoftwareRasterizer.grayscaleRectangle(stackIn_20_0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var10_ref = new Sprite(var9, var9);
-          var10_ref.e();
+          var10_ref.bindAsRenderTarget();
           var4.a(0, 0);
           var11 = new Sprite(var9, var9);
-          var11.e();
+          var11.bindAsRenderTarget();
           var4.a(var9 - var4.field_z, 0);
           if (param1 != -22764) {
             PoolMatchController.loadInterfaceAssets(26, false, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
           }
           var12 = new Sprite(var4.field_z - var9 * 2, var9);
-          var12.e();
+          var12.bindAsRenderTarget();
           var4.a(-var9, 0);
           TriangleMesh.a(112);
           jj.field_S = new Sprite[]{var10_ref, var12, var11};
@@ -1007,9 +1007,9 @@ final class PoolMatchController {
               var4 = this.gameModel.currentShot(70);
               if ((TutorialController.field_c & this.modeFlags) != 0) {
                 JaggrabDownloader.field_j.writeCipheredOpcode(false, 71);
-                var4.a(JaggrabDownloader.field_j, (byte) 0);
+                var4.writeChoices(JaggrabDownloader.field_j, (byte) 0);
               }
-              if (!var4.d(126)) {
+              if (!var4.isAnyChoicePending(126)) {
                 this.gameModel.beginNextShot((byte) 38);
                 this.announceBallGroups(127, var4);
               }
@@ -1365,7 +1365,7 @@ final class PoolMatchController {
             decompiledFrameRemainder5 = false;
           }
           if ((decompiledFrameRemainder5) && (0 != (TutorialController.field_c & this.modeFlags) &&
-            var4.d(116) &&
+            var4.isAnyChoicePending(116) &&
             1 < this.clockTicks)) {
             this.clockTicks = this.clockTicks - 1;
           }
@@ -1506,10 +1506,10 @@ final class PoolMatchController {
         try {
           if ((param0.endResolution & ag.field_e) == 0) {
             if (0 != (param0.endResolution & Quaternion.field_e)) {
-              LobbyGame.field_gc.a(11, 128, (byte) 96, 128);
+              LobbyGame.field_gc.playTableSound(11, 128, (byte) 96, 128);
             }
           } else {
-            LobbyGame.field_gc.a(12, 128, (byte) -123, 128);
+            LobbyGame.field_gc.playTableSound(12, 128, (byte) -123, 128);
           }
           if (param1 != -28) {
             this.camera = (Camera) null;
@@ -1828,8 +1828,8 @@ final class PoolMatchController {
             this.updatePlayerInfoButtonSprites(false);
           }
           var3 = this.gameModel.currentShot(param0 - 4029);
-          var3.b((byte) 111, param1);
-          if (!var3.d(param0 - 3985)) {
+          var3.readChoices((byte) 111, param1);
+          if (!var3.isAnyChoicePending(param0 - 3985)) {
             this.gameModel.beginNextShot((byte) 78);
           }
           return;
@@ -2098,7 +2098,7 @@ final class PoolMatchController {
           if (param1 != -29423) {
             return;
           }
-          LobbyGame.field_gc.a((byte) -55, this);
+          LobbyGame.field_gc.drawScene((byte) -55, this);
           if (this.gameModel.currentShot(param1 + 29476).phase == 0 &&
             0 == this.hoveredBallIndex) {
             this.drawStrikePointMarker(false);
@@ -2142,7 +2142,7 @@ final class PoolMatchController {
             var9 = 16 + var6 - (-DateInputWidget.field_Q[4].field_z - DateInputWidget.field_Q[6].field_z);
             var10 = 4 + DateInputWidget.field_Q[1].field_A + (var5.length * sa.field_h.baselineHeight + DateInputWidget.field_Q[7].field_A);
             var4Lifetime1 = var8Lifetime1 + DateInputWidget.field_Q[1].field_A + sa.field_h.baselineHeight;
-            SoftwareRasterizer.a(var7Lifetime1, var8Lifetime1, var9, var10, 8, 4144959, 192 * ChatMessageLine.field_u >> 8);
+            SoftwareRasterizer.fillRoundedRectangleBlended(var7Lifetime1, var8Lifetime1, var9, var10, 8, 4144959, 192 * ChatMessageLine.field_u >> 8);
             HuffmanCodec.drawNineSlice(114, var8Lifetime1, ChatMessageLine.field_u, var7Lifetime1, var9, var10, DateInputWidget.field_Q);
             for (var11 = 0; var5.length > var11; var11++) {
               sa.field_h.drawLeftAlpha(var5[var11], var3_int, var4Lifetime1, 15658734, 2039583, ChatMessageLine.field_u);
@@ -2637,14 +2637,14 @@ final class PoolMatchController {
           var6 = (ShotRecord) (var5.first(0));
           while (var6 != null) {
             if (var6.phase >= 3) {
-              sa.field_h.d(var6.a(true), param0, var4_int, 16724787, 1);
+              sa.field_h.d(var6.describeChoices(true), param0, var4_int, 16724787, 1);
               var4_int = var4_int - 5 * (sa.field_h.maxDescent + sa.field_h.maxAscent) / 4;
               if (sa.field_h.maxAscent >= var4_int) {
                 return;
               }
             }
             if (var6.phase >= 2) {
-              sa.field_h.d(var6.c(param2 ^ 26864), param0, var4_int, 16724787, 1);
+              sa.field_h.d(var6.describeOutcome(param2 ^ 26864), param0, var4_int, 16724787, 1);
               var4_int = var4_int - (sa.field_h.maxAscent + sa.field_h.maxDescent) * 5 / 4;
               if (sa.field_h.maxAscent >= var4_int) {
                 return;
@@ -2653,9 +2653,9 @@ final class PoolMatchController {
             if (!(1 > var6.phase) ||
               var6.power != -1) {
               if (var6.phase != 0) {
-                sa.field_h.d(var6.e(0), param0, var4_int, 16750899, 1);
+                sa.field_h.d(var6.describeAim(0), param0, var4_int, 16750899, 1);
               } else {
-                sa.field_h.drawLeftAlpha(var6.e(0), param0, var4_int, 16750899, 1, 128);
+                sa.field_h.drawLeftAlpha(var6.describeAim(0), param0, var4_int, 16750899, 1, 128);
               }
               var4_int = var4_int - 5 * (sa.field_h.maxAscent + sa.field_h.maxDescent) / 4;
               if (var4_int <= sa.field_h.maxAscent) {
@@ -2928,7 +2928,7 @@ final class PoolMatchController {
                   } else {
                     stackIn_35_1 = 1;
                   }
-                  ((TableScene) (Object) stackIn_34_0).a(stackIn_35_1, this.cueAim.field_n * 128 / 4096 + 32, (byte) -115, 128);
+                  ((TableScene) (Object) stackIn_34_0).playTableSound(stackIn_35_1, this.cueAim.field_n * 128 / 4096 + 32, (byte) -115, 128);
                   if (var9 != 0) {
                     stackIn_41_0 = LobbyGame.field_gc;
                     stackIn_41_1 = 1336449640;
@@ -3210,7 +3210,7 @@ final class PoolMatchController {
           this.cueAim.field_n = var2.power;
           this.cueAim.azimuth = (1024 + var2.aimAngle) % 2048;
           this.cueAim.polarAngle = var2.elevation;
-          System.out.println("Redoing shot: " + var2.e(0));
+          System.out.println("Redoing shot: " + var2.describeAim(0));
           this.beginShotAnimation((byte) 17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4300,7 +4300,7 @@ final class PoolMatchController {
                       }
                       if (stackIn_26_0 == 0) {
                         if (!LobbyGame.field_gc.isSoundPlaying(param0 ^ -657)) {
-                          LobbyGame.field_gc.a(13, 128, (byte) 125, 128);
+                          LobbyGame.field_gc.playTableSound(13, 128, (byte) 125, 128);
                         }
                         var3.field_q.field_c = true;
                         decompiledFrameRemainder2 = false;
@@ -4314,7 +4314,7 @@ final class PoolMatchController {
                     (decompiledFrameRemainder1)) {
                     var5_ref_qe = this.gameModel.currentShot(param0 ^ -704);
                     if (!this.gameModel.rules.isBallInGroup(var5_ref_qe.groupBefore, (byte) 125, var2_int)) {
-                      LobbyGame.field_gc.a(14, 128, (byte) 99, 128);
+                      LobbyGame.field_gc.playTableSound(14, 128, (byte) 99, 128);
                       var3.field_q.field_c = true;
                     } else {
                       var6_int = 0;
@@ -4336,12 +4336,12 @@ final class PoolMatchController {
                       if (!var5_ref_qe.field_t) {
                         if (var6_int == 0) {
                           if (!(LobbyGame.field_gc.isSoundPlaying(124))) {
-                            LobbyGame.field_gc.a(11, 128, (byte) -112, 128);
+                            LobbyGame.field_gc.playTableSound(11, 128, (byte) -112, 128);
                           }
                           decompiledFrameRemainder0 = false;
                         }
                         else {
-                          LobbyGame.field_gc.a(12, 128, (byte) -106, 128);
+                          LobbyGame.field_gc.playTableSound(12, 128, (byte) -106, 128);
                         }
                       }
                       var3.field_q.field_c = true;
@@ -4358,7 +4358,7 @@ final class PoolMatchController {
                     var10 = var6 * var6 + var8 * var8 >> 16;
                     stackIn_3_0 = $cfr$lcmp(~var10, -75759617L);
                     if (stackIn_3_0 > 0) {
-                      LobbyGame.field_gc.a(13, 128, (byte) -101, 128);
+                      LobbyGame.field_gc.playTableSound(13, 128, (byte) -101, 128);
                       var3.field_q.field_c = true;
                       var3.field_q = null;
                       break;
@@ -4606,7 +4606,7 @@ final class PoolMatchController {
             var5_ref_qe.field_H = (byte)var6_ref_kj.field_e;
             var5_ref_qe.field_D = (byte)var6_ref_kj.field_d;
             var5_ref_qe.aimAngle = (short)((var6_ref_kj.azimuth + 1024) % 2048);
-            sa.field_h.d(var4_ref_qe.e(param0 - 300), 300, var3_intLifetime3, 16772829, 0);
+            sa.field_h.d(var4_ref_qe.describeAim(param0 - 300), 300, var3_intLifetime3, 16772829, 0);
             var3_intLifetime3 = var3_intLifetime3 - sa.field_h.maxAscent * 3 / 2;
             sa.field_h.d("cue ang " + this.cueAim.azimuth + ", " + this.cueAim.polarAngle + ", power " + this.cuePower + ", loc " + id.field_c.field_l[0] + ",  " + id.field_c.field_l[1] + ", " + id.field_c.field_l[2], 300, var3_intLifetime3, 16772829, 0);
             var3_intLifetime3 = var3_intLifetime3 - sa.field_h.maxAscent * 3 / 2;
@@ -4827,7 +4827,7 @@ final class PoolMatchController {
           AlignedIconLabel.c(false);
           this.cueAim.field_n = this.cuePower;
           this.idleOrbitStep = -1;
-          LobbyGame.field_gc.a(9, 256, (byte) -112, 128);
+          LobbyGame.field_gc.playTableSound(9, 256, (byte) -112, 128);
           LobbyGame.field_gc.b(-50, this.cueAim.field_n);
           this.powerPulseTick = 0;
           return;
@@ -7754,7 +7754,7 @@ final class PoolMatchController {
           }
           if (q.field_b.enabled &&
             q.field_b.activeInside) {
-            stackIn_55_0 = this.gameModel.rules.a(this.gameModel.currentShot(113), param0 ^ -1223);
+            stackIn_55_0 = this.gameModel.rules.groupMessageIndex(this.gameModel.currentShot(113), param0 ^ -1223);
             return stackIn_55_0;
           }
           stackIn_57_0 = -1;
@@ -7830,7 +7830,7 @@ final class PoolMatchController {
             this.drawAudioFalloffDebug((byte) -46);
           }
           if (0 != (this.gameModel.currentShot(69).endResolution & um.field_c)) {
-            LobbyGame.field_gc.a(6, 256, (byte) 18, 128);
+            LobbyGame.field_gc.playTableSound(6, 256, (byte) 18, 128);
           }
           if ((sk.field_d & this.modeFlags) != 0 &&
             (Quaternion.field_e & param0.endResolution) != 0) {
@@ -7938,7 +7938,7 @@ final class PoolMatchController {
                     break;
                   }
                 }
-                LobbyGame.field_gc.a(17, 256, (byte) -100, 128);
+                LobbyGame.field_gc.playTableSound(17, 256, (byte) -100, 128);
               } else {
                 if ((Quaternion.field_e & param0.endResolution) != 0) {
                   this.gameModel.finishGame(-14286, this.gameModel.rules.nextPlayerIndex(param0, (byte) 114));
@@ -7946,9 +7946,9 @@ final class PoolMatchController {
                     this.gameModel.field_m = false;
                   }
                   if ((this.modeFlags & oj.field_m) == 0) {
-                    LobbyGame.field_gc.a(18, 256, (byte) 98, 128);
+                    LobbyGame.field_gc.playTableSound(18, 256, (byte) 98, 128);
                   } else {
-                    LobbyGame.field_gc.a(17, 256, (byte) -103, 128);
+                    LobbyGame.field_gc.playTableSound(17, 256, (byte) -103, 128);
                   }
                 }
               }
@@ -8751,7 +8751,7 @@ final class PoolMatchController {
           LobbyGame.field_gc.c(true);
           while (true) {
             if (LobbyGame.field_gc.field_H < LobbyGame.field_gc.field_G) {
-              LobbyGame.field_gc.j(2);
+              LobbyGame.field_gc.buildSceneryLayers(2);
               if (var3 != 0) {
                 return;
               }

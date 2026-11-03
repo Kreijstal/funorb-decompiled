@@ -241,7 +241,7 @@ final class ic {
           var10 = SoftwareRasterizer.width;
           var11 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var19);
-          var7.e();
+          var7.bindAsRenderTarget();
           FreePlayRules.field_e.drawParagraph(param3, 2, 2, param2, var6, param4, -1, param0, 0, FreePlayRules.field_e.baselineHeight * 3 / 4);
           var7.addOutline(4144959);
           var7.addOutline(65793);

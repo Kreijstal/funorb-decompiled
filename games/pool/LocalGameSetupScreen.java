@@ -150,7 +150,7 @@ final class LocalGameSetupScreen extends MenuScreen {
           dn.field_o = new Sprite[3];
           for (var2 = 0; var2 < dn.field_o.length; var2++) {
             var3 = new Sprite(var5.field_w, var5.field_y / dn.field_o.length);
-            var3.e();
+            var3.bindAsRenderTarget();
             var5.a(0, -var2 * var5.field_y / dn.field_o.length);
             dn.field_o[var2] = var3;
           }

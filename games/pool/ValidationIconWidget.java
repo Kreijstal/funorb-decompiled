@@ -134,7 +134,7 @@ final class ValidationIconWidget extends ButtonWidget {
             sm.field_z = new Sprite(var10, var11);
             CueAim.a(56, sm.field_z);
           }
-          var13.b(112, 144, var13.field_w << 4, var13.field_y << 4, -this.animationTicks << 10, 4096);
+          var13.drawRotatedAboutPivot(112, 144, var13.field_w << 4, var13.field_y << 4, -this.animationTicks << 10, 4096);
           TriangleMesh.a(112);
           sm.field_z.drawAdditive(-var13.field_w + var5, var6 - var13.field_y, 256);
         }

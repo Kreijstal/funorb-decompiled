@@ -320,15 +320,15 @@ final class UiTheme {
 
     final static void a(MidiPcmStream param0, PlatformTaskDispatcher param1, java.awt.Component param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         try {
-          AudioOutput.a(param7, param6, 10);
+          AudioOutput.configure(param7, param6, 10);
           MidiNoteMixer.field_s = AudioOutput.createOutput(param1, param2, 0, param3);
           CacheEntry.field_D = AudioOutput.createOutput(param1, param2, 1, param5);
           qf.field_d = new PcmStreamMixer();
           BallEvent.field_b = param5 * 1000 / param7;
-          CacheEntry.field_D.a(qf.field_d);
+          CacheEntry.field_D.setRootStream(qf.field_d);
           RankingsScreen.field_N = param0;
           RankingsScreen.field_N.setMasterVolume(TranslatedUiText.field_h, (byte) -26);
-          MidiNoteMixer.field_s.a(RankingsScreen.field_N);
+          MidiNoteMixer.field_s.setRootStream(RankingsScreen.field_N);
           if (param4) {
             UiTheme.isRenderableCharacter('`', (byte) -1);
           }

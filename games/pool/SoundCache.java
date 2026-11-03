@@ -35,7 +35,7 @@ final class SoundCache {
             stackIn_2_0 = null;
             return (PcmSample) (stackIn_2_0);
           }
-          var6 = this.field_h.a(var5_int, param1 ^ 18, param3);
+          var6 = this.field_h.getFileId(var5_int, param1 ^ 18, param3);
           if (param1 != 18) {
             fsAcceptCountdownPl = (String) null;
           }
@@ -282,10 +282,10 @@ final class SoundCache {
           dr.field_d = WidgetStyleLayer.loadSprite("", (byte) 95, "hud_chat_star", param1);
           var2_intLifetime4 = sa.field_h.b(UsernameAvailabilityValidator.chatButton);
           ta.field_e = new Sprite(var2_intLifetime4, sa.field_h.maxAscent + sa.field_h.maxDescent + 1);
-          ta.field_e.e();
+          ta.field_e.bindAsRenderTarget();
           sa.field_h.d(UsernameAvailabilityValidator.chatButton, 0, sa.field_h.maxAscent, 16777215, 1);
           jh.field_e = new Sprite(dr.field_d.field_z + ta.field_e.field_z + 2, ta.field_e.field_A);
-          jh.field_e.e();
+          jh.field_e.bindAsRenderTarget();
           sa.field_h.d(UsernameAvailabilityValidator.chatButton, 0, sa.field_h.maxAscent, 16777215, 1);
           dr.field_d.draw(2 + var2_intLifetime4, jh.field_e.field_A - dr.field_d.field_A >> 1);
           OpacityWidget.field_P.bindAsRenderTarget(15100);
@@ -507,7 +507,7 @@ final class SoundCache {
             return null;
           }
           var6 = -114 % ((4 - param3) / 60);
-          var7 = this.field_d.a(var5_int, 0, param1);
+          var7 = this.field_d.getFileId(var5_int, 0, param1);
           if (var7 < 0) {
             return null;
           }
@@ -548,11 +548,11 @@ final class SoundCache {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_h.f(param2)) {
+          if (1 == this.field_h.getGroupCount(param2)) {
             stackIn_3_0 = this.a(true, 0, param1, param0);
             return stackIn_3_0;
           }
-          if (1 != this.field_h.a(false, param1)) {
+          if (1 != this.field_h.getFileCount(false, param1)) {
             throw new RuntimeException();
           }
           stackIn_6_0 = this.a(true, param1, 0, param0);
@@ -658,11 +658,11 @@ final class SoundCache {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_d.f(-1) == 1) {
+          if (this.field_d.getGroupCount(-1) == 1) {
             stackIn_3_0 = this.a(param0, 127, 0, param2);
             return stackIn_3_0;
           }
-          if (this.field_d.a(false, param2) == 1) {
+          if (this.field_d.getFileCount(false, param2) == 1) {
             stackIn_7_0 = this.a(param0, 3, param2, 0);
             return stackIn_7_0;
           }

@@ -200,9 +200,9 @@ final class QuickChatPhraseRegistry {
             return var3;
           }
           if (param1 < 32768) {
-            var4 = this.standardArchive.a(83, param1, 1);
+            var4 = this.standardArchive.getFileBytesUnkeyed(83, param1, 1);
           } else {
-            var4 = this.extendedArchive.a(96, param1 & 32767, 1);
+            var4 = this.extendedArchive.getFileBytesUnkeyed(96, param1 & 32767, 1);
           }
           var6 = new QuickChatPhraseDefinition();
           QuickChatPhraseDefinition var5 = var6;
@@ -229,9 +229,9 @@ final class QuickChatPhraseRegistry {
           return var3Lifetime1;
         }
         if (param1 < 32768) {
-          var4Lifetime1 = this.standardArchive.a(83, param1, 1);
+          var4Lifetime1 = this.standardArchive.getFileBytesUnkeyed(83, param1, 1);
         } else {
-          var4Lifetime1 = this.extendedArchive.a(96, param1 & 32767, 1);
+          var4Lifetime1 = this.extendedArchive.getFileBytesUnkeyed(96, param1 & 32767, 1);
         }
         QuickChatPhraseDefinition var7 = new QuickChatPhraseDefinition();
         if (var4Lifetime1 != null) {
@@ -284,10 +284,10 @@ final class QuickChatPhraseRegistry {
           this.standardArchive = param1;
           this.extendedArchive = param2;
           if (this.standardArchive != null) {
-            this.standardArchive.a(false, 1);
+            this.standardArchive.getFileCount(false, 1);
           }
           if (this.extendedArchive != null) {
-            this.extendedArchive.a(false, 1);
+            this.extendedArchive.getFileCount(false, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

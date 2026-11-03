@@ -303,13 +303,13 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void playTableSound(int param0, int param1, byte param2, int param3) {
         int var5;
         int var6;
         int var7;
         var7 = Pool.field_O;
         var5 = 22 / ((-44 - param2) / 56);
-        super.a(param0, param1, (byte) -107, param3);
+        super.playTableSound(param0, param1, (byte) -107, param3);
         var6 = param0;
         if (var6 != 5) {
           if (2 == var6) {
@@ -369,7 +369,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void a(byte param0, PoolMatchController param1) {
+    final void drawScene(byte param0, PoolMatchController param1) {
         boolean[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_22_2 = 0;
@@ -582,7 +582,7 @@ final class SpaceTableScene extends ModelTableScene {
           this.a(param1, param0 ^ -61);
           for (var5Lifetime2 = 0; var5Lifetime2 < CacheEntry.field_C[0].length; var5Lifetime2++) {
             if (s.field_b[2][var5Lifetime2] >= 0) {
-              SoftwareRasterizer.a(s.field_b[0][var5Lifetime2], s.field_b[1][var5Lifetime2], var5Lifetime2 % ThreeSliceButtonPainter.field_t.length + 2 << 3, 255, dg.field_K);
+              SoftwareRasterizer.fillRadialGlow(s.field_b[0][var5Lifetime2], s.field_b[1][var5Lifetime2], var5Lifetime2 % ThreeSliceButtonPainter.field_t.length + 2 << 3, 255, dg.field_K);
             }
           }
           NodeHashTableIterator.field_k.a(PoolUiText.field_d, PasswordValidator.field_t[1], 4096, (byte) 113, PasswordValidator.field_t[0]);
@@ -973,7 +973,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadMusicTracks(int param0, ResourceArchive param1) {
         try {
           if (param0 != 1) {
             ResourceArchive var4 = (ResourceArchive) null;

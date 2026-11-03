@@ -529,7 +529,7 @@ final class VerticalScrollbar extends UiComponent {
           }
           param1.vertexZ = var3;
           ImageProducerRasterBuffer.a(param1, (byte) 38);
-          param1.a();
+          param1.clearCaches();
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "db.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

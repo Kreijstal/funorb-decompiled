@@ -174,7 +174,7 @@ final class cq {
           for (var5_intLifetime2 = 0; var5_intLifetime2 < param3.vertexZ.length; var5_intLifetime2++) {
             param3.vertexZ[var5_intLifetime2] = param3.vertexZ[var5_intLifetime2] - param2;
           }
-          param3.a();
+          param3.clearCaches();
           stackIn_13_0 = (MeshBuilder) (param3);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

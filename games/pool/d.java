@@ -42,7 +42,7 @@ final class d {
         MeshBuilder var16 = null;
         var15 = Pool.field_O;
         try {
-          param0.a();
+          param0.clearCaches();
           var2_int = 32767;
           var3 = 32767;
           var4 = 32767;

@@ -46,7 +46,7 @@ final class sk {
             field_d = 16;
           }
           var5_int = param4.getGroupId(param2, -1);
-          var6 = param4.a(var5_int, 0, param3);
+          var6 = param4.getFileId(var5_int, 0, param3);
           stackIn_3_0 = hi.a(107, var5_int, var6, param0, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

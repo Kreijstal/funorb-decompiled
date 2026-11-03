@@ -52,7 +52,7 @@ final class Texture extends IntrusiveNode {
         int var13Lifetime1;
         int var4Lifetime1;
         for (var4 = 0; var4 < this.field_m.length; var4++) {
-          if (!param2.b(true, this.field_m[var4])) {
+          if (!param2.loadFirstFile(true, this.field_m[var4])) {
             return false;
           }
         }

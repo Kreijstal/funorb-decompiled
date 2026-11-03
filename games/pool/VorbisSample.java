@@ -446,7 +446,7 @@ final class VorbisSample extends IntrusiveNode {
     private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_r) {
-          var1 = param0.a(112, 0, 0);
+          var1 = param0.getFileBytesUnkeyed(112, 0, 0);
           if (var1 == null) {
             return false;
           }
@@ -673,10 +673,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.b(param2, param1, 30);
+            param0.ensureFileLoaded(param2, param1, 30);
             return null;
           }
-          byte[] var3 = param0.a(121, param2, param1);
+          byte[] var3 = param0.getFileBytesUnkeyed(121, param2, param1);
           if (var3 == null) {
             return null;
           }
@@ -733,7 +733,7 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.a(param2, 121, param1);
+            param0.isNamedFileAvailable(param2, 121, param1);
             return null;
           }
           byte[] var3 = param0.getFileByName(false, param2, param1);

@@ -56,7 +56,7 @@ final class KillerRules extends GameRules {
         return var4 != 0;
     }
 
-    private final void f(int param0, int param1) {
+    private final void loseLife(int param0, int param1) {
         if (this.field_e[param0] > 0) {
           this.field_e[param0] = this.field_e[param0] - 1;
         }
@@ -66,7 +66,7 @@ final class KillerRules extends GameRules {
         }
     }
 
-    final int a(byte param0) {
+    final int evaluateShot(byte param0) {
         int var7 = 0;
         int var3;
         int var4;
@@ -92,12 +92,12 @@ final class KillerRules extends GameRules {
           var4 = var4 | (AccountWelcomePanel.field_R | um.field_c);
           var10.field_t = true;
           var10.field_w = (byte)(var10.field_w - 1);
-          var10.a(3, -14, new int[]{var9.playerIndex});
+          var10.addEvent(3, -14, new int[]{var9.playerIndex});
         }
         if (var10.field_n == -1) {
           var10.field_w = (byte)(var10.field_w - 1);
           var10.field_t = true;
-          var10.a(7, -14, new int[]{var9.playerIndex});
+          var10.addEvent(7, -14, new int[]{var9.playerIndex});
         }
         var5 = 0;
         var6_ref_aa = new IntrusiveDequeCursor(var10.pottedBalls);
@@ -108,8 +108,8 @@ final class KillerRules extends GameRules {
           } else {
             if (var7_ref_cr.ballIndex == 8 &&
               !var10.field_t) {
-              var10.a(20, -14, new int[]{var9.playerIndex});
-              this.d(var10.playerIndex, 165);
+              var10.addEvent(20, -14, new int[]{var9.playerIndex});
+              this.gainLife(var10.playerIndex, 165);
             }
             var5++;
           }
@@ -117,14 +117,14 @@ final class KillerRules extends GameRules {
         }
         if (var10.breakSeed < 0) {
           if (var5 == 0) {
-            var10.a(18, -14, new int[]{var10.playerIndex});
-            this.f(var10.playerIndex, 8640);
+            var10.addEvent(18, -14, new int[]{var10.playerIndex});
+            this.loseLife(var10.playerIndex, 8640);
           } else {
             var10.field_w = (byte)(var10.field_w + var5);
           }
           if (var10.field_t) {
-            var10.a(19, -14, new int[]{});
-            this.f(var10.playerIndex, 8640);
+            var10.addEvent(19, -14, new int[]{});
+            this.loseLife(var10.playerIndex, 8640);
           }
         } else {
           if (!var10.field_t) {
@@ -132,12 +132,12 @@ final class KillerRules extends GameRules {
               var4 = MarkerSliderPainter.field_j;
             }
           } else {
-            var10.a(22, -14, new int[]{var9.playerIndex});
-            this.f(var10.playerIndex, 8640);
+            var10.addEvent(22, -14, new int[]{var9.playerIndex});
+            this.loseLife(var10.playerIndex, 8640);
             var4 = var4 | (AccountWelcomePanel.field_R | MenuScreen.field_F);
           }
         }
-        if (this.e((byte) -91) > 1) {
+        if (this.countActivePlayers((byte) -91) > 1) {
           var6 = 0;
           for (var7 = 1; this.field_d.balls.length > var7; var7++) {
             if (!this.field_d.balls[var7].inPlay) {
@@ -214,7 +214,7 @@ final class KillerRules extends GameRules {
         }
     }
 
-    final static long a(long param0, byte param1, long param2) {
+    final static long multiplyFixedChecked(long param0, byte param1, long param2) {
         long var5;
         if (param1 != -48) {
           youAreGroupName = (String) null;
@@ -274,7 +274,7 @@ final class KillerRules extends GameRules {
         return de.a(-1, 3, param0);
     }
 
-    private final int e(byte param0) {
+    private final int countActivePlayers(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -295,7 +295,7 @@ final class KillerRules extends GameRules {
 
     final boolean showsTargetBall(int param0) {
         if (param0 <= 113) {
-          this.h(-114);
+          this.timeoutResolution(-114);
           return false;
         }
         return false;
@@ -344,9 +344,9 @@ final class KillerRules extends GameRules {
         return 0;
     }
 
-    final int[] a(int param0, byte param1) {
+    final int[] rackOrder(int param0, byte param1) {
         if (param1 != -32) {
-          this.d(28, 64);
+          this.gainLife(28, 64);
         }
         return uj.field_a;
     }
@@ -358,7 +358,7 @@ final class KillerRules extends GameRules {
         return 1 + this.field_d.field_h.length >> 1;
     }
 
-    final int h(int param0) {
+    final int timeoutResolution(int param0) {
         int var3;
         int var4;
         int var5;
@@ -385,8 +385,8 @@ final class KillerRules extends GameRules {
         if (~var6.breakSeed <= param0) {
           var3Lifetime1 = var3Lifetime1 | MenuScreen.field_F;
         }
-        this.f(var6.playerIndex, 8640);
-        if (this.e((byte) -125) <= 1) {
+        this.loseLife(var6.playerIndex, 8640);
+        if (this.countActivePlayers((byte) -125) <= 1) {
           if (this.isPlayerActive((byte) -99, var6.playerIndex)) {
             var3Lifetime1 = var3Lifetime1 | ag.field_e;
           } else {
@@ -414,7 +414,7 @@ final class KillerRules extends GameRules {
         }
     }
 
-    private final void d(int param0, int param1) {
+    private final void gainLife(int param0, int param1) {
         if (15 > this.field_e[param0]) {
           this.field_e[param0] = this.field_e[param0] + 1;
         }
@@ -423,7 +423,7 @@ final class KillerRules extends GameRules {
         }
     }
 
-    final int j(int param0) {
+    final int pickAutoPotBall(int param0) {
         int var2 = 0;
         if (IntrusiveDeque.a(param0, (byte) 99) &&
           this.field_d.field_s == 2) {
@@ -443,7 +443,7 @@ final class KillerRules extends GameRules {
         }
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isTargetVisible(int param0, int param1) {
         if (param1 >= -28) {
           youAreGroupName = (String) null;
           return false;
@@ -461,7 +461,7 @@ final class KillerRules extends GameRules {
     final byte ballGroup(int param0, int param1) {
         if (param1 != 30554) {
           ShotRecord var4 = (ShotRecord) null;
-          this.a((ShotRecord) null, 32);
+          this.groupMessageIndex((ShotRecord) null, 32);
         }
         if (param0 != 0) {
           return (byte) 0;
@@ -469,7 +469,7 @@ final class KillerRules extends GameRules {
         return (byte) -1;
     }
 
-    final int a(ShotRecord param0, int param1) {
+    final int groupMessageIndex(ShotRecord param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -558,7 +558,7 @@ final class KillerRules extends GameRules {
 
     final int ballCount(int param0) {
         if (param0 != 26840) {
-          this.a(-19, (byte) -27);
+          this.rackOrder(-19, (byte) -27);
         }
         return 16;
     }

@@ -16,7 +16,7 @@ final class ar implements eb {
           return;
         }
         try {
-          SoftwareRasterizer.a(this.field_h, this.field_f, this.field_b, 127, dq.field_a.gradientPalette(this.field_d, 0));
+          SoftwareRasterizer.fillRadialGlow(this.field_h, this.field_f, this.field_b, 127, dq.field_a.gradientPalette(this.field_d, 0));
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ar.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

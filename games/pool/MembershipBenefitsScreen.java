@@ -172,7 +172,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
             var11 = SoftwareRasterizer.height;
             var29 = new int[param4];
             SoftwareRasterizer.saveClip(var29);
-            param3.e();
+            param3.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param6 + param3.field_z * param7;
             var14 = param3.field_z - param5;

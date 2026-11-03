@@ -45,14 +45,14 @@ final class TimeTrialRules extends GameRules {
         super(param0);
     }
 
-    final int[] a(int param0, byte param1) {
+    final int[] rackOrder(int param0, byte param1) {
         if (param1 != -32) {
           this.b(79);
         }
         return uj.field_a;
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isTargetVisible(int param0, int param1) {
         if (param1 >= -28) {
           field_f = -107;
           return false;
@@ -121,7 +121,7 @@ final class TimeTrialRules extends GameRules {
         return this.o(24812) ? 2 : 0;
     }
 
-    final int a(ShotRecord param0, int param1) {
+    final int groupMessageIndex(ShotRecord param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -156,12 +156,12 @@ final class TimeTrialRules extends GameRules {
     final int ballCount(int param0) {
         if (param0 != 26840) {
           ShotRecord var3 = (ShotRecord) null;
-          this.a((ShotRecord) null, 33);
+          this.groupMessageIndex((ShotRecord) null, 33);
         }
         return 16;
     }
 
-    final int h(int param0) {
+    final int timeoutResolution(int param0) {
         if (param0 != -1) {
           this.updateGroupLabels(-66);
         }
@@ -299,7 +299,7 @@ final class TimeTrialRules extends GameRules {
         return (byte) 0;
     }
 
-    final int a(byte param0) {
+    final int evaluateShot(byte param0) {
         int var3;
         int var4;
         int var5;
@@ -322,20 +322,20 @@ final class TimeTrialRules extends GameRules {
         var4 = var11.groupBefore;
         var5 = 0;
         if (this.field_d.isCueBallPotted((byte) 74)) {
-          var11.a(3, -14, new int[]{var10.playerIndex});
+          var11.addEvent(3, -14, new int[]{var10.playerIndex});
           var11.field_w = (byte)(var11.field_w - 1);
           var11.field_t = true;
           var5 = var5 | (AccountWelcomePanel.field_R | (um.field_c | OptionsScreen.field_I));
         }
         if (8 == var11.field_n &&
           var4 != 2) {
-          var11.a(2, -14, new int[]{var10.playerIndex});
+          var11.addEvent(2, -14, new int[]{var10.playerIndex});
           var5 = var5 | OptionsScreen.field_I;
           var11.field_w = (byte)(var11.field_w - 1);
           var11.field_t = true;
         } else {
           if (var11.field_n == -1) {
-            var11.a(7, -14, new int[]{var10.playerIndex});
+            var11.addEvent(7, -14, new int[]{var10.playerIndex});
             var11.field_t = true;
             var11.field_w = (byte)(var11.field_w - 1);
             var5 = var5 | OptionsScreen.field_I;
@@ -352,7 +352,7 @@ final class TimeTrialRules extends GameRules {
         var8 = (PotEvent) (var7.last((byte) -92));
         while (var8 != null) {
           if (var8.ballIndex == 8) {
-            var11.a(5, -14, new int[]{this.field_d.field_A});
+            var11.addEvent(5, -14, new int[]{this.field_d.field_A});
             return Quaternion.field_e;
           }
           if (0 != var8.ballIndex) {

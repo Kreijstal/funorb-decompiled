@@ -234,7 +234,7 @@ final class NanoTickClock extends TickClock {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param0.b(param2, -31413);
+          var4 = param0.getOnlyFileBytes(param2, -31413);
           var3 = var4;
           if (param1 < 85) {
             stackIn_2_0 = (MusicPatch) null;

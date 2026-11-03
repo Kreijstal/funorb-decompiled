@@ -74,7 +74,7 @@ final class IntrusiveNodeHashTable implements Iterable {
               param0[2] = param0[2] + var6;
               param0[0] = param0[0] + var4;
             }
-            param2.a();
+            param2.clearCaches();
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

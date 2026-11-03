@@ -218,7 +218,7 @@ final class MarkerSliderPainter implements WidgetPainter {
               }
             }
           }
-          param0.a();
+          param0.clearCaches();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

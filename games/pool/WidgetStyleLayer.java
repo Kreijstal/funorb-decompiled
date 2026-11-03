@@ -396,7 +396,7 @@ final class WidgetStyleLayer {
           if (param1 <= 29) {
             field_e = (hj) null;
           }
-          var5 = param3.a(var4_int, 0, param2);
+          var5 = param3.getFileId(var4_int, 0, param2);
           stackIn_3_0 = UiComponent.a(var4_int, param3, -55, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

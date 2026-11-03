@@ -24,10 +24,10 @@ final class dr {
           var4 = var2.field_A;
           uc.pushRasterSnapshot((byte) -6);
           qf.field_k = new Sprite(var3, 3 * var4 / 4);
-          qf.field_k.e();
+          qf.field_k.bindAsRenderTarget();
           var2.a(0, 0);
           ArchiveLoadStep.field_k = new Sprite(var3, -qf.field_k.field_A + var4);
-          ArchiveLoadStep.field_k.e();
+          ArchiveLoadStep.field_k.bindAsRenderTarget();
           var2.a(0, -qf.field_k.field_A);
           ArchiveLoadStep.field_k.field_B = qf.field_k.field_A;
           TriangleMesh.a(125);

@@ -9,7 +9,7 @@ final class NineBallRules extends GameRules {
     static String unpackingGraphics;
     static String chatviewscrolledup;
 
-    final int h(int param0) {
+    final int timeoutResolution(int param0) {
         ShotRecord var2;
         int var3;
         int var4;
@@ -46,7 +46,7 @@ final class NineBallRules extends GameRules {
         this.field_f = 1;
     }
 
-    final int a(ShotRecord param0, int param1) {
+    final int groupMessageIndex(ShotRecord param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -269,7 +269,7 @@ final class NineBallRules extends GameRules {
         return true;
     }
 
-    final int a(byte param0) {
+    final int evaluateShot(byte param0) {
         int var3;
         int var4;
         Object var6;
@@ -288,20 +288,20 @@ final class NineBallRules extends GameRules {
         }
         var3 = 0;
         if (this.field_d.isCueBallPotted((byte) 118)) {
-          var9.a(3, -14, new int[]{this.field_d.field_A});
+          var9.addEvent(3, -14, new int[]{this.field_d.field_A});
           var3 = var3 | (this.d((byte) -47) | um.field_c);
           var9.field_t = true;
           var9.field_w = (byte)(var9.field_w - 1);
         }
         if (var9.field_n != -1) {
           if (this.field_f != var9.field_n) {
-            var9.a(8, -14, new int[]{});
+            var9.addEvent(8, -14, new int[]{});
             var3 = var3 | this.o(0);
             var9.field_w = (byte)(var9.field_w - 1);
             var9.field_t = true;
           }
         } else {
-          var9.a(7, -14, new int[]{var8.playerIndex});
+          var9.addEvent(7, -14, new int[]{var8.playerIndex});
           var9.field_t = true;
           var3 = var3 | this.p(75);
           var9.field_w = (byte)(var9.field_w - 1);
@@ -316,7 +316,7 @@ final class NineBallRules extends GameRules {
                 var6_ref = (PotEvent) (var11.previous(-86));
                 continue;
               }
-              var9.a(9, -14, new int[]{this.field_d.field_A});
+              var9.addEvent(9, -14, new int[]{this.field_d.field_A});
               var9.field_t = true;
               return Quaternion.field_e;
             }
@@ -327,7 +327,7 @@ final class NineBallRules extends GameRules {
             var6_ref = (PotEvent) (var10.last((byte) -92));
             while (var6_ref != null) {
               if (var6_ref.ballIndex == 9) {
-                var9.a(10, -14, new int[]{this.field_d.field_A});
+                var9.addEvent(10, -14, new int[]{this.field_d.field_A});
                 return ag.field_e;
               }
               var3 = var3 | MarkerSliderPainter.field_j;
@@ -336,11 +336,11 @@ final class NineBallRules extends GameRules {
             }
           }
           if (this.field_d.shouldChangePlayer(false, (byte) 81, var9)) {
-            if (this.a((var9.playerIndex + 1) % this.field_d.playerCount, -102)) {
+            if (this.isTargetVisible((var9.playerIndex + 1) % this.field_d.playerCount, -102)) {
               var9.field_w = (byte)(var9.field_w + 1);
             }
           } else {
-            if (this.a(var9.playerIndex % this.field_d.playerCount, -41)) {
+            if (this.isTargetVisible(var9.playerIndex % this.field_d.playerCount, -41)) {
               var9.field_w = (byte)(var9.field_w - 1);
             }
           }
@@ -405,7 +405,7 @@ final class NineBallRules extends GameRules {
         return 10;
     }
 
-    final int[] a(int param0, byte param1) {
+    final int[] rackOrder(int param0, byte param1) {
         int var4 = 0;
         int var5 = Pool.field_O;
         IsaacCipher var6 = new IsaacCipher(new int[]{1024 + param0});
@@ -439,7 +439,7 @@ final class NineBallRules extends GameRules {
 
     final byte ballGroup(int param0, int param1) {
         if (param1 != 30554) {
-          this.a(93, (byte) 18);
+          this.rackOrder(93, (byte) 18);
         }
         return (byte)param0;
     }
@@ -463,7 +463,7 @@ final class NineBallRules extends GameRules {
         return this.q(10);
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isTargetVisible(int param0, int param1) {
         if (param1 >= -28) {
           return true;
         }

@@ -15,7 +15,7 @@ final class nn {
           return;
         }
         if (null != LoginPayloadKind.field_a.field_a) {
-          LoginPayloadKind.field_a.field_j[vn.field_e] = (ModelMesh) (LoginPayloadKind.field_a.field_a[vn.field_e].a(96, 1031, -1024, -1024, -10240, tp.field_h));
+          LoginPayloadKind.field_a.field_j[vn.field_e] = (ModelMesh) (LoginPayloadKind.field_a.field_a[vn.field_e].createModelMeshTransformed(96, 1031, -1024, -1024, -10240, tp.field_h));
         }
         LoginPayloadKind.field_a.a(tp.field_h, CushionSegment.field_i, vn.field_e, -3637);
         PoolMatchController var3 = AccountContentDialog.field_ub;
@@ -43,7 +43,7 @@ final class nn {
           param0.vertexZ = param0.vertexX;
           param0.vertexX = var4;
           ImageProducerRasterBuffer.a(param0, (byte) 38);
-          param0.a();
+          param0.clearCaches();
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

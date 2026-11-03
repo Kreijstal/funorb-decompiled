@@ -86,7 +86,7 @@ final class FreePlayRules extends GameRules {
         return 1;
     }
 
-    final int a(ShotRecord param0, int param1) {
+    final int groupMessageIndex(ShotRecord param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -112,7 +112,7 @@ final class FreePlayRules extends GameRules {
         }
     }
 
-    final int[] a(int param0, byte param1) {
+    final int[] rackOrder(int param0, byte param1) {
         if (param1 != -32) {
           ShotRecord var4 = (ShotRecord) null;
           this.isPotLegal(-52, (byte) -33, (ShotRecord) null);
@@ -147,7 +147,7 @@ final class FreePlayRules extends GameRules {
         }
     }
 
-    final int a(byte param0) {
+    final int evaluateShot(byte param0) {
         int var2 = -96 / ((param0 + 37) / 60);
         int var3 = ll.field_f;
         if (this.field_d.isCueBallPotted((byte) 85)) {
@@ -185,7 +185,7 @@ final class FreePlayRules extends GameRules {
         return (byte) -84;
     }
 
-    final int h(int param0) {
+    final int timeoutResolution(int param0) {
         this.field_d.currentShot(96).field_t = true;
         if (param0 != -1) {
           return 77;
@@ -202,7 +202,7 @@ final class FreePlayRules extends GameRules {
 
     final void updateGroupLabels(int param0) {
         if (param0 > -25) {
-          this.a(41, 107);
+          this.isTargetVisible(41, 107);
         }
     }
 
@@ -237,13 +237,13 @@ final class FreePlayRules extends GameRules {
 
     final int ballCount(int param0) {
         if (param0 != 26840) {
-          this.a((byte) 16);
+          this.evaluateShot((byte) 16);
           return 16;
         }
         return 16;
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isTargetVisible(int param0, int param1) {
         if (param1 >= -28) {
           this.showsTargetBall(-106);
           return false;

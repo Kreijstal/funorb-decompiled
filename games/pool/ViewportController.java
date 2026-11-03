@@ -184,14 +184,14 @@ final class ViewportController {
           }
           param0 = param0 - param2[0];
           param4 = param4 - param2[2];
-          var6_long = KillerRules.a((long)param2[3], (byte) -48, (long)param0) - (-KillerRules.a((long)param2[4], (byte) -48, (long)param3) - KillerRules.a((long)param2[5], (byte) -48, (long)param4));
-          var8 = KillerRules.a((long)param2[6], (byte) -48, (long)param0) + KillerRules.a((long)param2[7], (byte) -48, (long)param3) + KillerRules.a((long)param2[8], (byte) -48, (long)param4);
-          var10 = KillerRules.a((long)param2[9], (byte) -48, (long)param0) + (KillerRules.a((long)param2[10], (byte) -48, (long)param3) + KillerRules.a((long)param2[11], (byte) -48, (long)param4));
+          var6_long = KillerRules.multiplyFixedChecked((long)param2[3], (byte) -48, (long)param0) - (-KillerRules.multiplyFixedChecked((long)param2[4], (byte) -48, (long)param3) - KillerRules.multiplyFixedChecked((long)param2[5], (byte) -48, (long)param4));
+          var8 = KillerRules.multiplyFixedChecked((long)param2[6], (byte) -48, (long)param0) + KillerRules.multiplyFixedChecked((long)param2[7], (byte) -48, (long)param3) + KillerRules.multiplyFixedChecked((long)param2[8], (byte) -48, (long)param4);
+          var10 = KillerRules.multiplyFixedChecked((long)param2[9], (byte) -48, (long)param0) + (KillerRules.multiplyFixedChecked((long)param2[10], (byte) -48, (long)param3) + KillerRules.multiplyFixedChecked((long)param2[11], (byte) -48, (long)param4));
           if (var10 == 0L) {
             var10 = 1L;
           }
-          param1[0] = (int)((long)TriangleRasterizer.projectionCenterX + KillerRules.a(512L, (byte) -48, var6_long) / var10);
-          param1[1] = (int)((long)TriangleRasterizer.projectionCenterY + KillerRules.a(512L, (byte) -48, var8) / var10);
+          param1[0] = (int)((long)TriangleRasterizer.projectionCenterX + KillerRules.multiplyFixedChecked(512L, (byte) -48, var6_long) / var10);
+          param1[1] = (int)((long)TriangleRasterizer.projectionCenterY + KillerRules.multiplyFixedChecked(512L, (byte) -48, var8) / var10);
           param1[2] = (int)var10;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hr.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');

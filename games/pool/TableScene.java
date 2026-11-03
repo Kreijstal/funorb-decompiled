@@ -71,9 +71,9 @@ abstract class TableScene {
         try {
           if (param2 != -25431) {
             var5 = (ResourceArchive) null;
-            this.a(-49, (ResourceArchive) null);
+            this.loadMusicTracks(-49, (ResourceArchive) null);
           }
-          stackIn_3_0 = param1.a(this.field_d, this.field_t, this.field_q, this.field_e, this.field_u, param0);
+          stackIn_3_0 = param1.createModelMeshTransformed(this.field_d, this.field_t, this.field_q, this.field_e, this.field_u, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,7 +116,7 @@ abstract class TableScene {
           return;
         }
         try {
-          this.a(param1, DualLinkDequeIterator.field_g, (byte) -118, LoginRequiredScreen.field_I);
+          this.playTableSound(param1, DualLinkDequeIterator.field_g, (byte) -118, LoginRequiredScreen.field_I);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.NB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -194,7 +194,7 @@ abstract class TableScene {
         if (param0) {
           this.field_g = (int[][]) null;
         }
-        this.a(10, 256, (byte) 62, 128);
+        this.playTableSound(10, 256, (byte) 62, 128);
     }
 
     private final void buildCushionMesh(int param0, int param1, int param2, int param3, byte param4, int param5) {
@@ -242,7 +242,7 @@ abstract class TableScene {
           var18.addFace(var25, var26, var27, (byte) 1, hh.rgbToPackedHsl((byte) 93, this.e(31761)), this.c(100));
           var18.addFace(var28, var27, var26, (byte) 1, hh.rgbToPackedHsl((byte) 42, this.e(31761)), this.c(95));
           var12[var16] = var18;
-          var13[var16] = new ModelInstance((ModelMesh) (var12[var16].a(this.field_C, this.field_x, this.field_q, this.field_e, this.field_u)), new int[]{var23, var24, 0});
+          var13[var16] = new ModelInstance((ModelMesh) (var12[var16].createModelMesh(this.field_C, this.field_x, this.field_q, this.field_e, this.field_u)), new int[]{var23, var24, 0});
         }
         this.field_f[param5] = var12;
         this.field_o[param5] = var13;
@@ -677,7 +677,7 @@ abstract class TableScene {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 103) {
-            stackIn_4_0 = param2.a(this.field_d, this.field_t, -param0[0] + (2304 + this.field_q), 1152 + (this.field_e - param0[1]), this.field_u - param0[2], param0);
+            stackIn_4_0 = param2.createModelMeshTransformed(this.field_d, this.field_t, -param0[0] + (2304 + this.field_q), 1152 + (this.field_e - param0[1]), this.field_u - param0[2], param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (fa) null;
@@ -749,7 +749,7 @@ abstract class TableScene {
         field_D = null;
     }
 
-    void a(int param0, ResourceArchive param1) {
+    void loadMusicTracks(int param0, ResourceArchive param1) {
         try {
           if (param0 != 1) {
             this.floorTexture(67);
@@ -789,7 +789,7 @@ abstract class TableScene {
             var5 = (Ball[]) null;
             this.a(true, (int[]) null, (Ball[]) null);
           }
-          stackIn_3_0 = param1.a(this.field_C, this.field_F, this.field_q, this.field_e, this.field_u, param0);
+          stackIn_3_0 = param1.createModelMeshTransformed(this.field_C, this.field_F, this.field_q, this.field_e, this.field_u, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -985,7 +985,7 @@ abstract class TableScene {
               param4[var7].a(var9 + ga.nextRandomInt(64, true, ea.field_r) + var8, 441, 128);
             } else if ((param4[var7] == null ||
               param4[var7].field_o.isSamplePositionOutOfRange()) && ga.nextRandomInt(param1, true, ea.field_r) == 0) {
-              param4[var7] = DualLinkDequeIterator.a(-24296, PcmSampleStream.c(param3[ga.nextRandomInt(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
+              param4[var7] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentPan(param3[ga.nextRandomInt(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
             }
           }
           var7Lifetime1 = -14 % ((-11 - param2) / 44);
@@ -1055,7 +1055,7 @@ abstract class TableScene {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -19 / ((param0 - 57) / 45);
-          stackIn_1_0 = param1.a(this.field_C, this.field_F, this.field_q, this.field_e, this.field_u);
+          stackIn_1_0 = param1.createModelMesh(this.field_C, this.field_F, this.field_q, this.field_e, this.field_u);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1071,9 +1071,9 @@ abstract class TableScene {
         }
     }
 
-    abstract void a(byte param0, PoolMatchController param1);
+    abstract void drawScene(byte param0, PoolMatchController param1);
 
-    void j(int param0) {
+    void buildSceneryLayers(int param0) {
         if (param0 != 2) {
           this.field_g = (int[][]) null;
         }
@@ -1115,7 +1115,7 @@ abstract class TableScene {
     final void a(int param0, int[] param1, int param2, int[] param3, int param4) {
         try {
           IntrusiveNode.a(param0 - 1336449638, param3, param1);
-          this.a(param4, DualLinkDequeIterator.field_g * param2 >> 8, (byte) -111, LoginRequiredScreen.field_I);
+          this.playTableSound(param4, DualLinkDequeIterator.field_g * param2 >> 8, (byte) -111, LoginRequiredScreen.field_I);
           if (param0 != 1336449640) {
             this.field_j = 1.1224327362689441;
           }
@@ -1241,7 +1241,7 @@ abstract class TableScene {
         return "lighting amb=" + this.field_C + ", cont=" + this.field_x + ", ang=[" + (int)(this.field_j * 180.0 / 3.141592653589793) + ", " + (int)(this.field_p * 180.0 / 3.141592653589793) + "], dist=" + (int)this.field_E + " => pos=[" + this.field_q + "," + this.field_e + "," + this.field_u + "], gamma=" + this.field_z;
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
+    void playTableSound(int param0, int param1, byte param2, int param3) {
         int var5;
         int var6;
         var5 = -95 % ((-44 - param2) / 56);
@@ -1268,10 +1268,10 @@ abstract class TableScene {
               KillerBallSkin.a(256, true, true, this.field_b);
             }
           } else {
-            this.a(3, param1, (byte) -117, param3);
+            this.playTableSound(3, param1, (byte) -117, param3);
           }
         } else {
-          this.a(2, param1, (byte) -105, param3);
+          this.playTableSound(2, param1, (byte) -105, param3);
         }
     }
 
@@ -1349,7 +1349,7 @@ abstract class TableScene {
         }
         TriangleRasterizer.field_p = this.field_z;
         this.field_t = 132072 / (3 * this.field_m);
-        TriangleRasterizer.b(this.field_z);
+        TriangleRasterizer.setBrightness(this.field_z);
     }
 
     private final void a(CushionSegment[] param0, int param1) {

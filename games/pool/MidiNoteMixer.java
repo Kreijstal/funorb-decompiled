@@ -59,9 +59,9 @@ final class MidiNoteMixer extends PcmStream {
             param1.field_y = param1.field_y + var4_int * param0 & 1048575;
             if (var5 <= param0) {
               if (this.field_w.field_U[param1.field_t] == 0) {
-                param1.field_o = PcmSampleStream.createAtStepQ8(param1.field_C, param1.field_o.m(), param1.field_o.j(), param1.field_o.f());
+                param1.field_o = PcmSampleStream.createAtStepQ8(param1.field_C, param1.field_o.getSampleStepMagnitude(), param1.field_o.getVolume(), param1.field_o.getPan());
               } else {
-                param1.field_o = PcmSampleStream.createAtStepQ8(param1.field_C, param1.field_o.m(), 0, param1.field_o.f());
+                param1.field_o = PcmSampleStream.createAtStepQ8(param1.field_C, param1.field_o.getSampleStepMagnitude(), 0, param1.field_o.getPan());
                 stackIn_9_0 = this.field_w;
                 stackIn_9_1 = param2 - 1048698;
                 stackIn_9_2 = (pr) (param1);
@@ -130,22 +130,22 @@ final class MidiNoteMixer extends PcmStream {
               }
               var11 = param2.field_o;
               if (this.field_w.field_U[param2.field_t] != 0) {
-                param2.field_o = PcmSampleStream.createAtStepQ8(param2.field_C, var11.m(), 0, var11.f());
+                param2.field_o = PcmSampleStream.createAtStepQ8(param2.field_C, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_14_0 = this.field_w;
                 stackIn_14_1 = -125;
                 stackIn_14_2 = (pr) (param2);
                 stackIn_15_3 = !(param2.field_u.field_s[param2.field_A] >= 0);
                 ((MidiPcmStream) (Object) stackIn_14_0).applyNoteSampleOffset(stackIn_14_1, stackIn_14_2, stackIn_15_3);
-                param2.field_o.c(var9, var11.j());
+                param2.field_o.rampVolume(var9, var11.getVolume());
               } else {
-                param2.field_o = PcmSampleStream.createAtStepQ8(param2.field_C, var11.m(), var11.j(), var11.f());
+                param2.field_o = PcmSampleStream.createAtStepQ8(param2.field_C, var11.getSampleStepMagnitude(), var11.getVolume(), var11.getPan());
               }
               if (param2.field_u.field_s[param2.field_A] < 0) {
                 param2.field_o.e(-1);
               }
               var11.fadeOutAndUnlink(var9);
               var11.mixInto(param5, param0, param1 - param0);
-              if (!var11.g()) {
+              if (!var11.isRamping()) {
                 continue;
               }
               this.field_p.b(var11);

@@ -56,31 +56,31 @@ final class AimTarget {
           return kg.field_q;
         }
         if (null != QuickChatPhraseRegistry.field_a) {
-          if (!QuickChatPhraseRegistry.field_a.d(84)) {
+          if (!QuickChatPhraseRegistry.field_a.isIndexReady(84)) {
             return BufferedFile.field_b;
           }
           return SingleChildWidget.field_F;
         }
-        if (!uj.field_d.d(101)) {
+        if (!uj.field_d.isIndexReady(101)) {
           return rp.waitingforGraphics;
         }
         if (!uj.field_d.ensureGroupAvailableByName("commonui", 0)) {
-          return oj.loadingGraphics + " - " + uj.field_d.a(100, "commonui") + "%";
+          return oj.loadingGraphics + " - " + uj.field_d.getGroupProgressByName(100, "commonui") + "%";
         }
-        if (!PolarTableScene.field_nb.d(-127)) {
+        if (!PolarTableScene.field_nb.isIndexReady(-127)) {
           return SpaceTableScene.waitingforFonts;
         }
         if (param0 != 84) {
           return (String) null;
         }
         if (!PolarTableScene.field_nb.ensureGroupAvailableByName("commonui", 0)) {
-          return TickClock.loadingFonts + " - " + PolarTableScene.field_nb.a(100, "commonui") + "%";
+          return TickClock.loadingFonts + " - " + PolarTableScene.field_nb.getGroupProgressByName(100, "commonui") + "%";
         }
-        if (!DualLinkNode.field_r.d(66)) {
+        if (!DualLinkNode.field_r.isIndexReady(66)) {
           return de.waitingforExtradata;
         }
         if (!DualLinkNode.field_r.ensureAllGroupsAvailable(-63)) {
-          return SoundCache.loadingExtradata + " - " + DualLinkNode.field_r.b(0) + "%";
+          return SoundCache.loadingExtradata + " - " + DualLinkNode.field_r.getOverallProgress(0) + "%";
         }
         return cl.pleasewaitDotdotdot;
     }

@@ -28,7 +28,7 @@ final class wc {
           if (!TextLineLayout.a(param2, param0, param4, (byte) 121)) {
             return null;
           }
-          stackIn_6_0 = QuickChatHelpDialog.a((byte) 126, param3.a(123, param4, param2));
+          stackIn_6_0 = QuickChatHelpDialog.a((byte) 126, param3.getFileBytesUnkeyed(123, param4, param2));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

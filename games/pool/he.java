@@ -166,7 +166,7 @@ final class he {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = param0.getGroupId(param4, -1);
-          var6 = param0.a(var5_int, param2, param1);
+          var6 = param0.getFileId(var5_int, param2, param1);
           stackIn_1_0 = wc.a(param0, 43, var5_int, param3, var6);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

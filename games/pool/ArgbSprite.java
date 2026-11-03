@@ -1399,7 +1399,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void drawRow(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

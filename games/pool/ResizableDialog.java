@@ -97,48 +97,48 @@ abstract class ResizableDialog extends FadingDialog {
         }
         if (0 != ProgressBarWidget.field_S) {
           if (null != QuickChatPhraseRegistry.field_a) {
-            if (!QuickChatPhraseRegistry.field_a.d(-103)) {
+            if (!QuickChatPhraseRegistry.field_a.isIndexReady(-103)) {
               return 14;
             }
-            if (!QuickChatPhraseRegistry.field_a.a((byte) 114, "")) {
+            if (!QuickChatPhraseRegistry.field_a.hasGroupNamed((byte) 114, "")) {
               return 29;
             }
             if (!QuickChatPhraseRegistry.field_a.ensureGroupAvailableByName("", 0)) {
               return 29;
             }
           }
-          if (!uj.field_d.d(84)) {
+          if (!uj.field_d.isIndexReady(84)) {
             return 43;
           }
           if (!uj.field_d.ensureGroupAvailableByName("commonui", param0 - 19535)) {
             return 57;
           }
-          if (!PolarTableScene.field_nb.d(-96)) {
+          if (!PolarTableScene.field_nb.isIndexReady(-96)) {
             return 71;
           }
           if (!PolarTableScene.field_nb.ensureGroupAvailableByName("commonui", 0)) {
             return 80;
           }
-          if (!DualLinkNode.field_r.d(47)) {
+          if (!DualLinkNode.field_r.isIndexReady(47)) {
             return 82;
           }
           if (!DualLinkNode.field_r.ensureAllGroupsAvailable(-63)) {
             return 86;
           }
         } else {
-          if (!uj.field_d.d(param0 - 19430)) {
+          if (!uj.field_d.isIndexReady(param0 - 19430)) {
             return 20;
           }
           if (!uj.field_d.ensureGroupAvailableByName("commonui", 0)) {
             return 40;
           }
-          if (!PolarTableScene.field_nb.d(104)) {
+          if (!PolarTableScene.field_nb.isIndexReady(104)) {
             return 50;
           }
           if (!PolarTableScene.field_nb.ensureGroupAvailableByName("commonui", param0 ^ 19535)) {
             return 60;
           }
-          if (!DualLinkNode.field_r.d(114)) {
+          if (!DualLinkNode.field_r.isIndexReady(114)) {
             return 70;
           }
           if (!DualLinkNode.field_r.ensureAllGroupsAvailable(-63)) {

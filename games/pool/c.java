@@ -58,7 +58,7 @@ final class c {
           var6 = SoftwareRasterizer.height;
           var16 = SoftwareRasterizer.pixels;
           ue.field_c = new Sprite(10, 14);
-          ue.field_c.e();
+          ue.field_c.bindAsRenderTarget();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }

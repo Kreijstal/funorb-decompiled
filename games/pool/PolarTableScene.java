@@ -48,7 +48,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void a(byte param0, PoolMatchController param1) {
+    final void drawScene(byte param0, PoolMatchController param1) {
         int var3_int = 0;
         int var6 = 0;
         boolean[] stackIn_13_0 = null;
@@ -368,7 +368,7 @@ final class PolarTableScene extends ModelTableScene {
         for (var2Lifetime3 = FullscreenErrorDialog.field_hb; ClassicBallSkin.field_m > var2Lifetime3; var2Lifetime3++) {
           var24 = this.field_O[var2Lifetime3];
           var33 = new IntrusiveDeque();
-          var24.e();
+          var24.computeBounds();
           if (var24.field_V > -this.field_M[var2Lifetime3][2]) {
             dupTemp$497 = hc.a(var24, this.field_M[var2Lifetime3], (byte) 101);
             var30 = dupTemp$497;
@@ -400,7 +400,7 @@ final class PolarTableScene extends ModelTableScene {
           }
           var31 = this.field_O[UsernameSuggestionsPanel.field_W + (var2Lifetime3 - FullscreenErrorDialog.field_hb)];
           var15_ref_eg = var31;
-          var31.e();
+          var31.computeBounds();
           dupTemp$501 = hc.a(var15_ref_eg, this.field_M[UsernameSuggestionsPanel.field_W - FullscreenErrorDialog.field_hb + var2Lifetime3], (byte) 101);
           var32 = dupTemp$501;
           var5.addFirst((byte) 108, new pm(dupTemp$501));
@@ -411,7 +411,7 @@ final class PolarTableScene extends ModelTableScene {
         var7.a((byte) 38, var4);
         if (!param0) {
           var21 = (PoolMatchController) null;
-          this.a((byte) 16, (PoolMatchController) null);
+          this.drawScene((byte) 16, (PoolMatchController) null);
         }
         var8.a((byte) 72, var5);
         var15 = 0;
@@ -941,7 +941,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadMusicTracks(int param0, ResourceArchive param1) {
         try {
           this.field_b = MusicTrack.loadFromArchive(param1, "", "pool_polar");
           this.field_i = MusicTrack.loadFromArchive(param1, "", "pool_polar_win_jingle");
@@ -954,7 +954,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void playTableSound(int param0, int param1, byte param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -997,7 +997,7 @@ final class PolarTableScene extends ModelTableScene {
                       kp.a(100, this.field_jb, param3, param1);
                       break regionExit1;
                     default:
-                      super.a(param0, param1, (byte) 115, param3);
+                      super.playTableSound(param0, param1, (byte) 115, param3);
                       break regionExit1;
                   }
                 }

@@ -39,7 +39,7 @@ final class tq extends IntrusiveNode {
         for (var4 = 0; var3.field_D.length > var4; var4++) {
           var5.field_D[var4] = TriangleRasterizer.colorPalette[var4];
         }
-        var3.e();
+        var3.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, param0, param1);
         OpacityWidget.field_P.bindAsRenderTarget(15100);
         return var3.field_D;

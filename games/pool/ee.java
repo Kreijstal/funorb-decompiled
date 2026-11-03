@@ -272,9 +272,9 @@ final class ee {
           return var3;
         }
         if (32768 > param1) {
-          var4 = this.field_c.a(82, param1, 0);
+          var4 = this.field_c.getFileBytesUnkeyed(82, param1, 0);
         } else {
-          var4 = this.field_e.a(112, param1 & 32767, 0);
+          var4 = this.field_e.getFileBytesUnkeyed(112, param1 & 32767, 0);
         }
         var3 = new QuickChatCategoryDefinition();
         if (var4 != null) {
@@ -300,10 +300,10 @@ final class ee {
           this.field_e = param2;
           this.field_c = param1;
           if (this.field_c != null) {
-            this.field_c.a(false, 0);
+            this.field_c.getFileCount(false, 0);
           }
           if (null != this.field_e) {
-            this.field_e.a(false, 0);
+            this.field_e.getFileCount(false, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

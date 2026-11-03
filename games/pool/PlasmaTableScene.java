@@ -94,13 +94,13 @@ final class PlasmaTableScene extends TableScene {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void playTableSound(int param0, int param1, byte param2, int param3) {
         int var5;
         int var6;
         int var7;
         var7 = Pool.field_O;
         var5 = 119 / ((param2 + 44) / 56);
-        super.a(param0, param1, (byte) -104, param3);
+        super.playTableSound(param0, param1, (byte) -104, param3);
         var6 = param0;
         if (var6 == 5) {
           var6 = ga.nextRandomInt(4, true, ea.field_r);
@@ -140,10 +140,10 @@ final class PlasmaTableScene extends TableScene {
                         if (null != this.field_bb) {
                           this.a((byte) 73, true, param0);
                         }
-                        this.field_bb = PcmSampleStream.a(this.field_U, 256, 0);
+                        this.field_bb = PcmSampleStream.createAtStepAndVolume(this.field_U, 256, 0);
                         this.field_bb.e(-1);
                         DualLinkDequeIterator.a(-24296, this.field_bb);
-                        this.field_bb.d(4096, 16 * param1 >> 8);
+                        this.field_bb.rampVolumeInSteps(4096, 16 * param1 >> 8);
                       }
                     }
                   } else {
@@ -742,7 +742,7 @@ final class PlasmaTableScene extends TableScene {
         }
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadMusicTracks(int param0, ResourceArchive param1) {
         try {
           this.field_b = MusicTrack.loadFromArchive(param1, "", "pool_plasma");
           this.field_i = MusicTrack.loadFromArchive(param1, "", "pool_plasma_win_jingle");
@@ -950,7 +950,7 @@ final class PlasmaTableScene extends TableScene {
         return;
     }
 
-    final void a(byte param0, PoolMatchController param1) {
+    final void drawScene(byte param0, PoolMatchController param1) {
         int var5 = 0;
         int stackIn_18_0 = 0;
         int stackIn_21_1 = 0;

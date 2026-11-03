@@ -139,7 +139,7 @@ final class ck extends HotspotTextWidget {
                 }
               }
             }
-            var21.b(112, 144, var21.field_w << 4, var21.field_y << 4, -this.field_V << 10, 4096);
+            var21.drawRotatedAboutPivot(112, 144, var21.field_w << 4, var21.field_y << 4, -this.field_V << 10, 4096);
             TriangleMesh.a(126);
             this.field_U.drawAdditive(var9 - (var21.field_w >> 1), var11 - var21.field_y, 256);
             return;
@@ -169,7 +169,7 @@ final class ck extends HotspotTextWidget {
             this.field_U = new Sprite(var12Lifetime4, var13Lifetime4);
             CueAim.a(81, this.field_U);
           }
-          var20.b(112, 144, var20.field_w << 4, var20.field_y << 4, -this.field_V << 10, 4096);
+          var20.drawRotatedAboutPivot(112, 144, var20.field_w << 4, var20.field_y << 4, -this.field_V << 10, 4096);
           TriangleMesh.a(126);
           this.field_U.drawAdditive(var9 - (var20.field_w >> 1), var11 - var20.field_y, 256);
           return;
@@ -207,7 +207,7 @@ final class ck extends HotspotTextWidget {
                 }
               }
             }
-            var27.b(112, 144, var27.field_w << 4, var27.field_y << 4, -this.field_V << 10, 4096);
+            var27.drawRotatedAboutPivot(112, 144, var27.field_w << 4, var27.field_y << 4, -this.field_V << 10, 4096);
             TriangleMesh.a(126);
             this.field_U.drawAdditive(var9Lifetime1 - (var27.field_w >> 1), var11Lifetime1 - var27.field_y, 256);
             return;
@@ -237,7 +237,7 @@ final class ck extends HotspotTextWidget {
             this.field_U = new Sprite(var12Lifetime1Lifetime1, var13Lifetime1Lifetime1);
             CueAim.a(81, this.field_U);
           }
-          var26.b(112, 144, var26.field_w << 4, var26.field_y << 4, -this.field_V << 10, 4096);
+          var26.drawRotatedAboutPivot(112, 144, var26.field_w << 4, var26.field_y << 4, -this.field_V << 10, 4096);
           TriangleMesh.a(126);
           this.field_U.drawAdditive(var9Lifetime1 - (var26.field_w >> 1), var11Lifetime1 - var26.field_y, 256);
           return;
@@ -277,7 +277,7 @@ final class ck extends HotspotTextWidget {
               }
             }
           }
-          var32.b(112, 144, var32.field_w << 4, var32.field_y << 4, -this.field_V << 10, 4096);
+          var32.drawRotatedAboutPivot(112, 144, var32.field_w << 4, var32.field_y << 4, -this.field_V << 10, 4096);
           TriangleMesh.a(126);
           this.field_U.drawAdditive(var9Lifetime2 - (var32.field_w >> 1), var11Lifetime2 - var32.field_y, 256);
           return;
@@ -307,7 +307,7 @@ final class ck extends HotspotTextWidget {
           this.field_U = new Sprite(var12Lifetime3, var13Lifetime3);
           CueAim.a(81, this.field_U);
         }
-        var31.b(112, 144, var31.field_w << 4, var31.field_y << 4, -this.field_V << 10, 4096);
+        var31.drawRotatedAboutPivot(112, 144, var31.field_w << 4, var31.field_y << 4, -this.field_V << 10, 4096);
         TriangleMesh.a(126);
         this.field_U.drawAdditive(var9Lifetime2 - (var31.field_w >> 1), var11Lifetime2 - var31.field_y, 256);
     }

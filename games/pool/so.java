@@ -399,8 +399,8 @@ final class so {
           for (var8 = 1 + var5; var8 < var2; var8++) {
             var9 = var3[var8];
             var24 = var22[var8];
-            var6.d();
-            var6.a(var9, -var23[0] + var24[0], -var23[1] + var24[1], -var23[2] + var24[2], false);
+            var6.computeNormals();
+            var6.mergeFrom(var9, -var23[0] + var24[0], -var23[1] + var24[1], -var23[2] + var24[2], false);
           }
         }
     }
@@ -497,7 +497,7 @@ final class so {
           field_g = (TutorialController[]) null;
         }
         if (null != this.field_i) {
-          this.field_a = (ModelMesh) (this.field_i.a(param5, param2, param0, param1, param4, this.field_d));
+          this.field_a = (ModelMesh) (this.field_i.createModelMeshTransformed(param5, param2, param0, param1, param4, this.field_d));
         }
         if (null != this.field_b) {
           for (var7 = 0; this.field_b.length > var7; var7++) {

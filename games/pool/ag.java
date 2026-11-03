@@ -115,7 +115,7 @@ final class ag {
           var6 = SoftwareRasterizer.width;
           var7 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var16);
-          var10.e();
+          var10.bindAsRenderTarget();
           ModernTableScene.field_Z.d(param2, 2, 2 + ModernTableScene.field_Z.maxAscent, param1, -1);
           var10.addOutline(4144959);
           SoftwareRasterizer.setTarget(var17, var6, var7);

@@ -55,15 +55,15 @@ final class CueStick {
         try {
           nn.a(param0, true);
           gn.a(param0, 5);
-          param0.e();
+          param0.computeBounds();
           while (1500 > -param0.field_V + param0.field_x) {
             for (var3_int = 0; param0.vertexCount > var3_int; var3_int++) {
               param0.vertexX[var3_int] = param0.vertexX[var3_int] << 1;
               param0.vertexY[var3_int] = param0.vertexY[var3_int] << 1;
               param0.vertexZ[var3_int] = param0.vertexZ[var3_int] << 1;
             }
-            param0.a();
-            param0.e();
+            param0.clearCaches();
+            param0.computeBounds();
           }
           var13 = new int[3];
           ln.recenterModel(var13, 0, param0);
@@ -85,21 +85,21 @@ final class CueStick {
               JaggrabDownloader.a(0, this.segments[var4], 0, false, var6_int, 0, 0, 1, var5_ref_eg, var3);
               var3 = var5_ref_eg;
             }
-            this.segments[var4].a();
-            this.segments[var4].e();
+            this.segments[var4].clearCaches();
+            this.segments[var4].computeBounds();
             var6 = this.segments[var4];
             d.computeMeshBounds(var6, -23109);
             var5 = (var6.field_V + var6.field_x) / 2;
             for (var7_int = 0; var6.vertexZ.length > var7_int; var7_int++) {
               var6.vertexZ[var7_int] = var6.vertexZ[var7_int] - var5;
             }
-            var6.a();
+            var6.clearCaches();
             this.segmentOffsets[var4] = (double)KillerRules.e(-this.segments[0].field_V + var5, 3);
             if (var4 > 0) {
               var7 = this.segments[var4 - 1];
-              var7.d();
+              var7.computeNormals();
               var8 = var7.field_V + var7.field_x >> 1;
-              var7.a(var6, 0, 0, -var8 + var5, false);
+              var7.mergeFrom(var6, 0, 0, -var8 + var5, false);
             }
           }
           return;
@@ -170,7 +170,7 @@ final class CueStick {
             this.segments[var3].addFace(var18, var17, var16, (byte) 1, hh.rgbToPackedHsl((byte) -1, 10053171), (byte) 0);
           }
           this.segmentOffsets[var3] = var9;
-          this.segments[var3].e();
+          this.segments[var3].computeBounds();
         }
         this.field_d = new int[this.segmentOffsets.length][3];
     }

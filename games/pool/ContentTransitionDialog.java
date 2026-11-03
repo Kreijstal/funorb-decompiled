@@ -83,7 +83,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           var4_long = param1.horizontalSpeedSquared(-14770) + param2.horizontalSpeedSquared(-14770);
           var6 = param2.positionX - param1.positionX;
           var7 = param2.positionY - param1.positionY;
-          var8 = KillerRules.a((long)var6, (byte) -48, (long)var6) + KillerRules.a((long)var7, (byte) -48, (long)var7);
+          var8 = KillerRules.multiplyFixedChecked((long)var6, (byte) -48, (long)var6) + KillerRules.multiplyFixedChecked((long)var7, (byte) -48, (long)var7);
           if (var8 < 0L) {
             throw new IllegalStateException("dnorm2_32 overflow " + var8);
           }
@@ -92,8 +92,8 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             var10 <= 2147483647L) {
             var6 = ArchiveProvider.divideFixed16((int)var10, (byte) -83, (long)var6);
             var7 = ArchiveProvider.divideFixed16((int)var10, (byte) -112, (long)var7);
-            var12 = KillerRules.a((long)param1.velocityX, (byte) -48, (long)var6) + KillerRules.a((long)param1.velocityY, (byte) -48, (long)var7) >> 16;
-            var14 = KillerRules.a((long)param2.velocityX, (byte) -48, (long)var6) + KillerRules.a((long)param2.velocityY, (byte) -48, (long)var7) >> 16;
+            var12 = KillerRules.multiplyFixedChecked((long)param1.velocityX, (byte) -48, (long)var6) + KillerRules.multiplyFixedChecked((long)param1.velocityY, (byte) -48, (long)var7) >> 16;
+            var14 = KillerRules.multiplyFixedChecked((long)param2.velocityX, (byte) -48, (long)var6) + KillerRules.multiplyFixedChecked((long)param2.velocityY, (byte) -48, (long)var7) >> 16;
             param1.velocityX = (int)((long)param1.velocityX - FullscreenFocusCanvas.multiplyFixedChecked((long)var6, var12, false));
             param1.velocityY = (int)((long)param1.velocityY - FullscreenFocusCanvas.multiplyFixedChecked((long)var7, var12, false));
             param2.velocityX = (int)((long)param2.velocityX - FullscreenFocusCanvas.multiplyFixedChecked((long)var6, var14, false));

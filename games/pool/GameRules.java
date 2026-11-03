@@ -35,12 +35,12 @@ abstract class GameRules {
         try {
           param0.groupBefore = this.initialGroup(-1);
           stackIn_3_0 = (ShotRecord) (param0);
-          stackIn_4_1 = (0 == param0.ballInHandMode) && (this.a(param0.playerIndex, -35));
+          stackIn_4_1 = (0 == param0.ballInHandMode) && (this.isTargetVisible(param0.playerIndex, -35));
           stackIn_3_0.field_E = stackIn_4_1;
           if (param1) {
             this.field_d = (PoolGameModel) null;
           }
-          param0.field_I = this.j(0);
+          param0.field_I = this.pickAutoPotBall(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ abstract class GameRules {
 
     abstract int initialGroup(int param0);
 
-    abstract int[] a(int param0, byte param1);
+    abstract int[] rackOrder(int param0, byte param1);
 
     abstract boolean isPotLegal(int param0, byte param1, ShotRecord param2);
 
@@ -72,7 +72,7 @@ abstract class GameRules {
         }
     }
 
-    abstract int h(int param0);
+    abstract int timeoutResolution(int param0);
 
     final void prepareShot(int param0) {
         ShotRecord var2 = this.field_d.currentShot(45);
@@ -169,7 +169,7 @@ abstract class GameRules {
         }
     }
 
-    abstract boolean a(int param0, int param1);
+    abstract boolean isTargetVisible(int param0, int param1);
 
     final static int g(int param0) {
         if (param0 <= 107) {
@@ -309,7 +309,7 @@ abstract class GameRules {
         }
     }
 
-    abstract int a(byte param0);
+    abstract int evaluateShot(byte param0);
 
     int sideMask(byte param0, int param1) {
         if (param0 >= -113) {
@@ -318,7 +318,7 @@ abstract class GameRules {
         return 1 << param1;
     }
 
-    int j(int param0) {
+    int pickAutoPotBall(int param0) {
         if (param0 != 0) {
           return 82;
         }
@@ -327,13 +327,13 @@ abstract class GameRules {
 
     void assignGroups(int param0, int param1, int param2) {
         if (param1 != -1) {
-          this.j(100);
+          this.pickAutoPotBall(100);
         }
     }
 
     abstract boolean isBallInGroup(int param0, byte param1, int param2);
 
-    abstract int a(ShotRecord param0, int param1);
+    abstract int groupMessageIndex(ShotRecord param0, int param1);
 
     static {
         field_a = new int[4];

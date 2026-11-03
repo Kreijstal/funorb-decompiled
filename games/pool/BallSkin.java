@@ -130,7 +130,7 @@ abstract class BallSkin {
             ff.field_a[var13] = md.a(md.a(ArchiveLoadSequence.b(Js5Transport.field_n[param2] * ArchiveLoadSequence.b(var15[var13], 65280) >>> 8, 973143808), ArchiveLoadSequence.b(-16776974, ArchiveLoadSequence.b(16711680, var15[var13]) * Js5Transport.field_n[param2]) >>> 8), ArchiveLoadSequence.b(-1912602369, Js5Transport.field_n[param2] * ArchiveLoadSequence.b(255, var15[var13]) >>> 8));
           }
           if (2147483647L > 64L * ((long)var11 * (long)var11)) {
-            SoftwareRasterizer.a(var6_intLifetime1, var7Lifetime1, var11, 64, ff.field_a);
+            SoftwareRasterizer.fillRadialGlow(var6_intLifetime1, var7Lifetime1, var11, 64, ff.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,7 +181,7 @@ abstract class BallSkin {
         var3 = var29.addVertex(-383, -383, 384);
         var4 = var29.addVertex(384, -383, 384);
         var5 = var29.addVertex(-383, 384, 384);
-        var29.a((short)var3, (short)var4, (short)var5);
+        var29.addTextureTriangle((short)var3, (short)var4, (short)var5);
         for (var6 = 0; var6 < ViewportController.field_b; var6++) {
           var7 = Math.cos((double)var6 * 3.141592653589793 / (double)ViewportController.field_b) * 8.0;
           var9 = 8.0 * Math.sin(3.141592653589793 * (double)var6 / (double)ViewportController.field_b);
@@ -204,7 +204,7 @@ abstract class BallSkin {
             }
           }
         }
-        var29.e();
+        var29.computeBounds();
         return var29;
     }
 

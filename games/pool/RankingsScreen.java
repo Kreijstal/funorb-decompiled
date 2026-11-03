@@ -1109,7 +1109,7 @@ final class RankingsScreen extends MenuScreen {
           if (param1 != 3812) {
             friendlistdupe = (String) null;
           }
-          var5 = param0.a(var4_int, 0, param2);
+          var5 = param0.getFileId(var4_int, 0, param2);
           stackIn_3_0 = LobbyGame.a(var5, var4_int, (byte) -97, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -41,7 +41,7 @@ final class ii {
           var5 = SoftwareRasterizer.width;
           var6 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var15);
-          var9.e();
+          var9.bindAsRenderTarget();
           param1.trimY = 0;
           var7 = param1;
           param1.fullWidth = param1.width;

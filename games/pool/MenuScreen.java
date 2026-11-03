@@ -155,7 +155,7 @@ class MenuScreen extends jh {
         var11 = var11 + Ball.field_H;
         var20 = PoolGameModel.field_B[0].gradientPalette(0, 0);
         for (var14 = var11; var14 <= 120 + var11; var14 += 20) {
-          SoftwareRasterizer.a(var14 << 4, -2 + var12 / 2 + var7 << 4, 16 - var11 + var14, var20.length - 1, var20);
+          SoftwareRasterizer.fillRadialGlow(var14 << 4, -2 + var12 / 2 + var7 << 4, 16 - var11 + var14, var20.length - 1, var20);
         }
         if (20 == var3) {
           stackIn_39_0 = BallDebugOverlay.field_b * 120 / 256;
@@ -888,7 +888,7 @@ class MenuScreen extends jh {
             var13 = SoftwareRasterizer.width;
             var14 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(var25);
-            PasswordValidator.field_p.e();
+            PasswordValidator.field_p.bindAsRenderTarget();
             var15 = 0;
             var16 = param0.maxAscent;
             while (var15 < var9) {

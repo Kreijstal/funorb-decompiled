@@ -87,7 +87,7 @@ final class qf {
                 this.field_n.field_f = hi.field_h[-134217728 - this.field_q >> 20];
               }
             }
-            this.field_o = (ModelMesh) (this.field_n.a(param1.field_C, param1.field_F, param1.field_q, param1.field_e, param1.field_u, this.field_g));
+            this.field_o = (ModelMesh) (this.field_n.createModelMeshTransformed(param1.field_C, param1.field_F, param1.field_q, param1.field_e, param1.field_u, this.field_g));
           }
           this.field_o.b(param0, this.field_g);
           return;

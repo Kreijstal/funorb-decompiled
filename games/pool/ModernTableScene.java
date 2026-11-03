@@ -53,7 +53,7 @@ final class ModernTableScene extends ModelTableScene {
           if (null != this.field_ab &&
             this.field_ab.isSamplePositionOutOfRange() &&
             this.field_hb == null) {
-            dupTemp$0 = PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, this.field_ab.getTargetVolume(), this.field_ab.n());
+            dupTemp$0 = PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, this.field_ab.getTargetVolume(), this.field_ab.getPanSteps());
             this.field_hb = dupTemp$0;
             DualLinkDequeIterator.a(-24296, dupTemp$0);
             this.field_ab = null;
@@ -131,7 +131,7 @@ final class ModernTableScene extends ModelTableScene {
         }
     }
 
-    final void a(byte param0, PoolMatchController param1) {
+    final void drawScene(byte param0, PoolMatchController param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         boolean[] stackIn_7_0 = null;
@@ -502,7 +502,7 @@ final class ModernTableScene extends ModelTableScene {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void playTableSound(int param0, int param1, byte param2, int param3) {
         PcmSampleStream dupTemp$0 = null;
         int var5;
         int var6;
@@ -525,7 +525,7 @@ final class ModernTableScene extends ModelTableScene {
                     DualLinkDequeIterator.a(-24296, dupTemp$0);
                   } else {
                     if (var6 != 6) {
-                      super.a(param0, param1, (byte) -104, param3);
+                      super.playTableSound(param0, param1, (byte) -104, param3);
                     } else {
                       kp.a(100, this.field_cb, param3, param1);
                     }
@@ -801,13 +801,13 @@ final class ModernTableScene extends ModelTableScene {
         field_eb = null;
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadMusicTracks(int param0, ResourceArchive param1) {
         try {
           this.field_b = MusicTrack.loadFromArchive(param1, "", "pool_modern");
           this.field_n = MusicTrack.loadFromArchive(param1, "", "lose_jingle");
           this.field_i = MusicTrack.loadFromArchive(param1, "", "win_jingle");
           if (param0 != 1) {
-            this.a(108, 33, (byte) 117, 21);
+            this.playTableSound(108, 33, (byte) 117, 21);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ni.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -1058,7 +1058,7 @@ final class ModernTableScene extends ModelTableScene {
             var20[2] = var53[2] - 0;
             var20[0] = var53[0] + 0;
             var19[0] = new MeshBuilder(var23, false, false, false, false);
-            var25[0].a(var42);
+            var25[0].transform(var42);
             var43 = mj.identityTransform(-31121);
             var28 = var43;
             var20Lifetime2 = var28;
@@ -1066,7 +1066,7 @@ final class ModernTableScene extends ModelTableScene {
             var20Lifetime2[0] = 0 + var53[0];
             var20Lifetime2[2] = var53[2] + 0;
             var19[1] = new MeshBuilder(var27, false, false, false, false);
-            var25[1].a(var43);
+            var25[1].transform(var43);
             var44 = mj.identityTransform(-31121);
             var29 = var44;
             var20Lifetime3 = var29;
@@ -1075,7 +1075,7 @@ final class ModernTableScene extends ModelTableScene {
             var20Lifetime3[2] = var53[2] - 0;
             dq.a((byte) 45, var44);
             var19[2] = new MeshBuilder(var23, false, false, false, false);
-            var25[2].a(var44);
+            var25[2].transform(var44);
             var45 = mj.identityTransform(-31121);
             var30 = var45;
             var20Lifetime4 = var30;
@@ -1084,7 +1084,7 @@ final class ModernTableScene extends ModelTableScene {
             var20Lifetime4[0] = var53[0] + 0;
             dq.a((byte) 75, var45);
             var19[3] = new MeshBuilder(var27, false, false, false, false);
-            var25[3].a(var45);
+            var25[3].transform(var45);
             this.field_O[var4Lifetime4] = new MeshBuilder(var31, 4);
           }
           for (var4Lifetime5 = ResizableDialog.field_fb; MarkerSliderPainter.field_m > var4Lifetime5; var4Lifetime5++) {
@@ -1104,7 +1104,7 @@ final class ModernTableScene extends ModelTableScene {
             var20Lifetime1[0] = 0 + var54[0];
             var20Lifetime1[2] = var54[2] + 0;
             var19Lifetime1[0] = new MeshBuilder(var32, false, false, false, false);
-            var34[0].a(var47);
+            var34[0].transform(var47);
             var48 = mj.identityTransform(-31121);
             var37 = var48;
             var20Lifetime1Lifetime1 = var37;
@@ -1112,7 +1112,7 @@ final class ModernTableScene extends ModelTableScene {
             var20Lifetime1Lifetime1[2] = 0 + var54[2];
             var20Lifetime1Lifetime1[0] = 0 + var54[0];
             var19Lifetime1[1] = new MeshBuilder(var36, false, false, false, false);
-            var34[1].a(var48);
+            var34[1].transform(var48);
             var49 = mj.identityTransform(-31121);
             var38 = var49;
             var20Lifetime1Lifetime2 = var38;
@@ -1121,7 +1121,7 @@ final class ModernTableScene extends ModelTableScene {
             var20Lifetime1Lifetime2[0] = var54[0] + 0;
             dq.a((byte) -123, var49);
             var19Lifetime1[2] = new MeshBuilder(var32, false, false, false, false);
-            var34[2].a(var49);
+            var34[2].transform(var49);
             var50 = mj.identityTransform(-31121);
             var39 = var50;
             var20Lifetime1Lifetime3 = var39;
@@ -1130,7 +1130,7 @@ final class ModernTableScene extends ModelTableScene {
             var20Lifetime1Lifetime3[2] = 0 + var54[2];
             dq.a((byte) -122, var50);
             var19Lifetime1[3] = new MeshBuilder(var36, false, false, false, false);
-            var34[3].a(var50);
+            var34[3].transform(var50);
             this.field_O[var4Lifetime5] = new MeshBuilder(var40, 4);
           }
           return;

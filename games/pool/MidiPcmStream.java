@@ -782,7 +782,7 @@ final class MidiPcmStream extends PcmStream {
             param1 == var3.field_t) {
             if (null != var3.field_o) {
               var3.field_o.fadeOutAndUnlink(AudioOutput.sampleRate / 100);
-              if (var3.field_o.g()) {
+              if (var3.field_o.isRamping()) {
                 this.noteMixer.field_p.b(var3.field_o);
               }
               var3.a(2);
@@ -1271,7 +1271,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             param4.field_o.mixInto(param1, param2, param0);
           }
-          if (param4.field_o.g()) {
+          if (param4.field_o.isRamping()) {
             this.noteMixer.field_p.b(param4.field_o);
           }
           param4.a(2);

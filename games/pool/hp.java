@@ -108,7 +108,7 @@ final class hp {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.d(-40)) {
+          if (!param0.isIndexReady(-40)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }
@@ -116,7 +116,7 @@ final class hp {
             var5 = (int[]) null;
             hp.copyIntArray((int[]) null, (byte) 39);
           }
-          stackIn_7_0 = param3 + " - " + param0.b(0) + "%";
+          stackIn_7_0 = param3 + " - " + param0.getOverallProgress(0) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

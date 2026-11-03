@@ -105,7 +105,7 @@ final class TikiTableScene extends ModelTableScene {
           if (500 > ln.field_t) {
             this.updateRollingSounds(128, 50, (byte) 71, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
             if (ga.nextRandomInt(400, true, ea.field_r) == 0) {
-              this.c(-4577, 32);
+              this.playAmbientSounds(-4577, 32);
             }
           } else {
             if (ln.field_t != 500) {
@@ -113,7 +113,7 @@ final class TikiTableScene extends ModelTableScene {
                 var3_int = (128 * ln.field_t - 64000) / 1500;
                 this.updateRollingSounds(128 - var3_int * 7 / 8, 50, (byte) 34, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
                 if (ga.nextRandomInt(800, true, ea.field_r) == 0) {
-                  this.c(-4577, 128 - 7 * var3_int / 8 >> 2);
+                  this.playAmbientSounds(-4577, 128 - 7 * var3_int / 8 >> 2);
                 }
                 RankingsScreen.field_N.setChannelVolumeScale((byte) 77, -1, var3_int);
               } else {
@@ -130,7 +130,7 @@ final class TikiTableScene extends ModelTableScene {
                     var3_int = 128 * (12200 - ln.field_t) / 1000;
                     this.updateRollingSounds(128 - 7 * var3_int / 8, 50, (byte) -126, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
                     if (ga.nextRandomInt(800, true, ea.field_r) == 0) {
-                      this.c(-4577, 128 - var3_int * 7 / 8 >> 2);
+                      this.playAmbientSounds(-4577, 128 - var3_int * 7 / 8 >> 2);
                     }
                     RankingsScreen.field_N.setChannelVolumeScale((byte) 32, -1, var3_int);
                   }
@@ -375,7 +375,7 @@ final class TikiTableScene extends ModelTableScene {
             var20[0] = var34[0] - 0;
             var20[2] = 0 + var34[2];
             var19[0] = new MeshBuilder(var17, false, false, false, false);
-            var19[0].a(var29);
+            var19[0].transform(var29);
             var30 = mj.identityTransform(-31121);
             var25 = var30;
             var20Lifetime1 = var25;
@@ -383,7 +383,7 @@ final class TikiTableScene extends ModelTableScene {
             var20Lifetime1[0] = 0 + var34[0];
             var20Lifetime1[1] = -(var34[1] + 0);
             var19[1] = new MeshBuilder(var21, false, false, false, false);
-            var19[1].a(var30);
+            var19[1].transform(var30);
             var31 = mj.identityTransform(-31121);
             var26 = var31;
             var20Lifetime2 = var26;
@@ -392,7 +392,7 @@ final class TikiTableScene extends ModelTableScene {
             var20Lifetime2[1] = 0 + var34[1];
             dq.a((byte) -121, var31);
             var19[2] = new MeshBuilder(var17, false, false, false, false);
-            var19[2].a(var31);
+            var19[2].transform(var31);
             var32 = mj.identityTransform(-31121);
             var27 = var32;
             var20Lifetime3 = var27;
@@ -401,7 +401,7 @@ final class TikiTableScene extends ModelTableScene {
             var20Lifetime3[1] = -(var34[1] - 0);
             dq.a((byte) 50, var32);
             var19[3] = new MeshBuilder(var21, false, false, false, false);
-            var19[3].a(var32);
+            var19[3].transform(var32);
             this.field_O[var4Lifetime4] = new MeshBuilder(var14, 4);
             this.field_O[var4Lifetime4].scaleVertices(1, 1, 1, 2);
           }
@@ -483,14 +483,14 @@ final class TikiTableScene extends ModelTableScene {
                   var9 = TutorialController.b((byte) 127);
                   JaggrabDownloader.a(0, var9, 0, false, jd.field_h[var7] - param0[2], 0, 0, 1, var8, var11);
                   if (var9.faceCount > 0) {
-                    var9.a();
-                    var9.e();
+                    var9.clearCaches();
+                    var9.computeBounds();
                     param1[var7].addFirst((byte) 106, new pm(hc.a(var9, param0, (byte) 101)));
                   }
-                  var8.a();
+                  var8.clearCaches();
                   var11 = var8;
                   param2 = var11;
-                  var8.e();
+                  var8.computeBounds();
                   if (0 == var11.faceCount) {
                     break scanLoop1;
                   }
@@ -538,7 +538,7 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void playTableSound(int param0, int param1, byte param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -562,7 +562,7 @@ final class TikiTableScene extends ModelTableScene {
                   } else {
                     if (var6 != 4) {
                       if (var6 != 10) {
-                        super.a(param0, param1, (byte) -102, param3);
+                        super.playTableSound(param0, param1, (byte) -102, param3);
                       }
                     } else {
                       kp.a(100, this.field_sb, param3, param1);
@@ -605,7 +605,7 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void j(int param0) {
+    final void buildSceneryLayers(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -771,8 +771,8 @@ final class TikiTableScene extends ModelTableScene {
           var7_int = param5 * hc.a(2047, param1) >> 16;
           var8 = param5 * ScrollPaneWithFooter.a(param1, true) >> 16;
           param1 = param1 + param4;
-          param3.a(new int[]{0, 0, 0, hc.a(2047, 1536 + param1), ScrollPaneWithFooter.a(1536 + param1, true), 0, -ScrollPaneWithFooter.a(param1 + 1536, true), hc.a(2047, param1 + 1536), 0, 0, 0, 65536});
-          param3.e();
+          param3.transform(new int[]{0, 0, 0, hc.a(2047, 1536 + param1), ScrollPaneWithFooter.a(1536 + param1, true), 0, -ScrollPaneWithFooter.a(param1 + 1536, true), hc.a(2047, param1 + 1536), 0, 0, 0, 65536});
+          param3.computeBounds();
           if (param2 < 68) {
             this.releaseModels(false);
           }
@@ -788,11 +788,11 @@ final class TikiTableScene extends ModelTableScene {
         monthnames = null;
         field_V = null;
         if (param0 <= 90) {
-          TikiTableScene.a(88, 124, 23, -78, -57);
+          TikiTableScene.drawGradientBand(88, 124, 23, -78, -57);
         }
     }
 
-    final void a(byte param0, PoolMatchController param1) {
+    final void drawScene(byte param0, PoolMatchController param1) {
         Object stackIn_53_0;
         int[] stackIn_53_1;
         int stackIn_53_2;
@@ -904,7 +904,7 @@ final class TikiTableScene extends ModelTableScene {
           kf.a(gf.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, CheckboxPainter.field_n);
           kf.a(DelegatingCanvas.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ClientException.field_e);
           kf.a(wn.field_j, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ue.field_a);
-          this.a(param1, 9291);
+          this.drawSky(param1, 9291);
           pr.a(ArchiveRequest.field_w, false);
           this.a(256, 3, 256, (byte) -86);
           var6 = TriangleRasterizer.colorPalette;
@@ -1022,18 +1022,18 @@ final class TikiTableScene extends ModelTableScene {
 
     private final void a(int param0, int param1, int param2, byte param3) {
         if (KeyHandler.field_c[param1][0][0] != KeyHandler.field_c[param1][1][1]) {
-          TikiTableScene.a(KeyHandler.field_c[param1][0][1], KeyHandler.field_c[param1][1][1], 13421772, 0, param0);
+          TikiTableScene.drawGradientBand(KeyHandler.field_c[param1][0][1], KeyHandler.field_c[param1][1][1], 13421772, 0, param0);
         }
         int var5 = 64 % ((-24 - param3) / 59);
         if (KeyHandler.field_c[param1][1][0] != KeyHandler.field_c[param1][2][1]) {
-          TikiTableScene.a(KeyHandler.field_c[param1][1][1], KeyHandler.field_c[param1][2][1], 13421772, param0, param2);
+          TikiTableScene.drawGradientBand(KeyHandler.field_c[param1][1][1], KeyHandler.field_c[param1][2][1], 13421772, param0, param2);
         }
         if (KeyHandler.field_c[param1][3][1] != KeyHandler.field_c[param1][2][0]) {
           SoftwareRasterizer.fillRectangleAlpha(0, KeyHandler.field_c[param1][2][1], SoftwareRasterizer.width, KeyHandler.field_c[param1][3][1] - KeyHandler.field_c[param1][2][1], 13421772, param2);
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawGradientBand(int param0, int param1, int param2, int param3, int param4) {
         int var8 = 0;
         int var5 = param4 - param3;
         int var6 = SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft;
@@ -1043,7 +1043,7 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadMusicTracks(int param0, ResourceArchive param1) {
         try {
           if (param0 != 1) {
             PoolGameModel var4 = (PoolGameModel) null;
@@ -1111,7 +1111,7 @@ final class TikiTableScene extends ModelTableScene {
           return;
         }
         while (var2 < LobbyPlayer.field_Wb) {
-          this.field_O[var2].e();
+          this.field_O[var2].computeBounds();
           var5 = this.field_O[var2].field_x + this.field_M[var2][2];
           if (var5 > var4Lifetime1) {
             var4Lifetime1 = var5;
@@ -1122,7 +1122,7 @@ final class TikiTableScene extends ModelTableScene {
         var9 = DualLinkDequeIterator.field_a;
         var2Lifetime1 = var9;
         while (var9 < FullscreenErrorDialog.field_ib) {
-          this.field_O[var9].e();
+          this.field_O[var9].computeBounds();
           var5 = -this.field_O[var9].field_V + var4Lifetime1;
           this.a(new int[]{0, 0, var5}, var3, this.field_O[var9], -116);
           var4Lifetime1 = this.field_O[var9].field_x + var5;
@@ -1152,7 +1152,7 @@ final class TikiTableScene extends ModelTableScene {
         this.field_v = 5609813;
     }
 
-    private final void a(PoolMatchController param0, int param1) {
+    private final void drawSky(PoolMatchController param0, int param1) {
         int var8 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -1181,7 +1181,7 @@ final class TikiTableScene extends ModelTableScene {
           }
           this.field_B.drawScaled(var6 - var4, var7, var4, var5);
           for (var8 = this.field_B.field_A + var7; var8 < SoftwareRasterizer.clipBottom; var8++) {
-            this.field_B.d(this.field_B.field_A - 1, -var4 + var6, var8);
+            this.field_B.drawRow(this.field_B.field_A - 1, -var4 + var6, var8);
           }
           if (-640 + this.field_B.field_z > var6 >> 16) {
             this.field_B.drawScaled(var6, var7, var4, var5);
@@ -1208,7 +1208,7 @@ final class TikiTableScene extends ModelTableScene {
         return 11184810;
     }
 
-    private final void c(int param0, int param1) {
+    private final void playAmbientSounds(int param0, int param1) {
         int var3 = 0;
         int stackIn_11_0 = 0;
         int var4;
@@ -1217,7 +1217,7 @@ final class TikiTableScene extends ModelTableScene {
         int var7;
         var7 = Pool.field_O;
         if (param0 != -4577) {
-          TikiTableScene.a(-42, 63, -74, 109, -107);
+          TikiTableScene.drawGradientBand(-42, 63, -74, 109, -107);
         }
         for (var3 = 2; var3 < FreePlayRules.field_j.length; var3++) {
           if (null == FreePlayRules.field_j[var3] ||
@@ -1383,7 +1383,7 @@ final class TikiTableScene extends ModelTableScene {
         var2 = BallDebugOverlay.field_c;
         if (param0 > -11) {
           var8 = (PoolMatchController) null;
-          this.a((byte) 7, (PoolMatchController) null);
+          this.drawScene((byte) 7, (PoolMatchController) null);
         }
         while (var2 < LobbyPlayer.field_Wb) {
           var4 = var2;

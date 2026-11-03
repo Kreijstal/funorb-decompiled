@@ -268,14 +268,14 @@ final class TextureCache implements in {
           this.field_g = param2;
           this.field_j = this.field_g;
           this.field_b = param3;
-          var12 = param0.a(0, 0);
+          var12 = param0.getFileIds(0, 0);
           var11 = var12;
           var10 = var11;
           var5 = var10;
           var6 = var12.length;
-          this.field_f = new Texture[param0.a(false, 0)];
+          this.field_f = new Texture[param0.getFileCount(false, 0)];
           for (var7 = 0; var7 < var6; var7++) {
-            var8 = new PacketBuffer(param0.a(86, var12[var7], 0));
+            var8 = new PacketBuffer(param0.getFileBytesUnkeyed(86, var12[var7], 0));
             this.field_f[var12[var7]] = new Texture(var8);
           }
           return;
