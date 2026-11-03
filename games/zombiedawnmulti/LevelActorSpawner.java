@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class LevelActorSpawner extends fc {
+final class LevelActorSpawner extends LevelData {
     private final boolean c(int param0, int param1, int param2) {
         RuntimeException var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 33554432) {
-            this.a(-55);
+            this.createObjects(-55);
           }
           stackIn_10_0 = ((33554432 & this.b(param2, (byte) -124, param1)) == 0) || !((this.b(param2, (byte) -75, param1) >> 7 & 511) <= 64);
           return stackIn_10_0;
@@ -288,7 +288,7 @@ final class LevelActorSpawner extends fc {
         }
     }
 
-    final void a(GameWorld param0, byte param1) {
+    final void spawnEntities(GameWorld param0, byte param1) {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_65_0 = null;
         StringBuilder stackIn_65_1 = null;
@@ -307,7 +307,7 @@ final class LevelActorSpawner extends fc {
         int var11 = 0;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3 = this.a(-103);
+          var3 = this.createObjects(-103);
           param0.nextObjectId = 1;
           var4 = 0;
           do {
@@ -454,7 +454,7 @@ final class LevelActorSpawner extends fc {
         }
     }
 
-    private final SimEntity a(int param0, int param1, int param2, int param3, int param4) {
+    private final SimEntity createEntity(int param0, int param1, int param2, int param3, int param4) {
         SimPortal var6 = null;
         int var6_int = 0;
         RuntimeException var6_ref = null;
@@ -569,7 +569,7 @@ final class LevelActorSpawner extends fc {
         try {
           en.a(-1, 1);
           if (param1 == 10 &&
-            1 == op.field_m.teamCount) {
+            1 == PortalEntryEvent.field_m.teamCount) {
             bi.field_e = true;
             param3 = 1;
             param1 = 15;
@@ -617,7 +617,7 @@ final class LevelActorSpawner extends fc {
             }
             gk.a(2, sp.field_g).a(0, param0, var4_int);
             if (8 == sp.field_g) {
-              fc.a((byte) 127, param0);
+              LevelData.a((byte) 127, param0);
             }
           }
           return;
@@ -628,7 +628,7 @@ final class LevelActorSpawner extends fc {
         }
     }
 
-    final IntrusiveDeque a(int param0) {
+    final IntrusiveDeque createObjects(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         IntrusiveDeque var3 = null;
@@ -651,7 +651,7 @@ final class LevelActorSpawner extends fc {
             var6 = this.field_l[1 + var4];
             var7 = this.field_l[2 + var4];
             var8 = this.field_l[3 + var4];
-            var9 = this.a(var7, var8, -8944, var6, var5);
+            var9 = this.createEntity(var7, var8, -8944, var6, var5);
             if (var9 != null) {
               var3.a(var9, false);
             }

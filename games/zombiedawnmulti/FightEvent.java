@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm extends GameEvent {
+final class FightEvent extends GameEvent {
     private int field_r;
     static float[] field_k;
     private int field_o;
@@ -23,7 +23,7 @@ final class jm extends GameEvent {
     final void a(byte param0) {
         super.a((byte) -54);
         if (param0 > -47) {
-          jm.c((byte) 116);
+          FightEvent.c((byte) 116);
         }
         MouseWheelInput.field_b.a((IntrusiveNode) (this), false);
     }
@@ -33,7 +33,7 @@ final class jm extends GameEvent {
           return;
         }
         try {
-          param1.a(this.field_q, this.field_r, this.field_m, this.field_i, this.field_o, false, this.field_j);
+          param1.applyFight(this.field_q, this.field_r, this.field_m, this.field_i, this.field_o, false, this.field_j);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "jm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -90,18 +90,18 @@ final class jm extends GameEvent {
           field_p = (String) null;
         }
         if (null == ki.field_e ||
-          sj.field_p != 13) {
+          InfectionEvent.field_p != 13) {
           if (sq.field_N) {
             if (!uk.a((byte) -120)) {
               return false;
             }
             var4 = WhirlpoolHasher.a(param3, 60, param0) ? 1 : 0;
-            if (sj.field_p == 80 ||
-              sj.field_p == 84) {
+            if (InfectionEvent.field_p == 80 ||
+              InfectionEvent.field_p == 84) {
               var4 = 1;
               sq.field_N = false;
             }
-            if (sj.field_p == 13) {
+            if (InfectionEvent.field_p == 13) {
               pf.a(-77);
               var4 = 1;
               sq.field_N = false;
@@ -109,10 +109,10 @@ final class jm extends GameEvent {
             return var4 != 0;
           }
           if (!ee.field_b &&
-            sj.field_p != 9 &&
-            sj.field_p != 10 &&
-            11 != sj.field_p) {
-            if (sj.field_p == 80 &&
+            InfectionEvent.field_p != 9 &&
+            InfectionEvent.field_p != 10 &&
+            11 != InfectionEvent.field_p) {
+            if (InfectionEvent.field_p == 80 &&
               uk.a((byte) -111)) {
               sq.field_N = true;
               return true;
@@ -140,7 +140,7 @@ final class jm extends GameEvent {
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (!param1) {
-            jm.a(-68, -96, -28, 88);
+            FightEvent.a(-68, -96, -28, 88);
           }
           if (param3 != null &&
             0 < param5) {
@@ -195,7 +195,7 @@ final class jm extends GameEvent {
         }
     }
 
-    jm() {
+    FightEvent() {
     }
 
     static {

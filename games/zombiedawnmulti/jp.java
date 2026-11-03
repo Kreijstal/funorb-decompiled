@@ -95,7 +95,7 @@ final class jp {
                   }
                 }
               }
-              if (!lq.b(param0 + 104)) {
+              if (!DualLinkDeque.b(param0 + 104)) {
                 stackIn_67_0 = "<img=3>: ";
               } else {
                 stackIn_67_0 = ": ";
@@ -114,7 +114,7 @@ final class jp {
                 var5 = "";
               }
               var9 = w.field_A.a(var4);
-              if (!lq.b(0)) {
+              if (!DualLinkDeque.b(0)) {
                 if (ec.field_b.field_L &&
                   var9 > (-ec.field_b.field_w + MouseInputHandler.field_g)) {
                   if (nh.field_m) {

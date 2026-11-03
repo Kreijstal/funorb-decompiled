@@ -77,7 +77,7 @@ final class rq extends IntrusiveNode {
         }
     }
 
-    final void a(nm param0, byte param1) {
+    final void a(Camera param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -89,13 +89,13 @@ final class rq extends IntrusiveNode {
           if (this.field_w > 0) {
             return;
           }
-          pk.field_c.c(-30 + param0.c(this.field_k, -20126), param0.d(this.field_f, 121) - 30, this.field_t);
+          pk.field_c.c(-30 + param0.worldToScreenX(this.field_k, -20126), param0.worldToScreenY(this.field_f, 121) - 30, this.field_t);
           if (param1 >= -24) {
             this.a((byte) 103);
           }
           if (this.field_p >= 0) {
-            var3_int = param0.c(this.field_j, -20126);
-            var4 = param0.d(this.field_i, 108);
+            var3_int = param0.worldToScreenX(this.field_j, -20126);
+            var4 = param0.worldToScreenY(this.field_i, 108);
             wi.field_g[this.field_p].c(-11 + var3_int, -this.field_p - this.field_p - this.field_p + var4 - (this.field_p + 11), 8 - this.field_p << 3);
           }
           return;
@@ -114,7 +114,7 @@ final class rq extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        nm stackIn_7_0 = null;
+        Camera stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_8_2 = 0;
         String stackIn_28_0 = null;
@@ -135,12 +135,12 @@ final class rq extends IntrusiveNode {
           return;
         }
         if (null != wd.field_G) {
-          var1 = wn.a(-125, wf.field_m << 7) * 4 >> 16;
-          stackIn_7_0 = fb.field_e.field_k;
-          stackIn_7_1 = 9 + wd.field_G.g(119);
-          stackIn_8_2 = (wd.field_G instanceof h) ? 30 : 0;
-          var2 = (int)((float)((nm) (Object) stackIn_7_0).c(stackIn_7_1 + stackIn_8_2, -20126) / fb.field_e.field_k.field_d);
-          var3 = (int)((float)fb.field_e.field_k.d(-72 + (wd.field_G.h(param0 ^ -80) + 6), 112) / fb.field_e.field_k.field_d);
+          var1 = wn.a(-125, PowerupEvent.field_m << 7) * 4 >> 16;
+          stackIn_7_0 = fb.field_e.camera;
+          stackIn_7_1 = 9 + wd.field_G.getX(119);
+          stackIn_8_2 = (wd.field_G instanceof PortalView) ? 30 : 0;
+          var2 = (int)((float)((Camera) (Object) stackIn_7_0).worldToScreenX(stackIn_7_1 + stackIn_8_2, -20126) / fb.field_e.camera.zoom);
+          var3 = (int)((float)fb.field_e.camera.worldToScreenY(-72 + (wd.field_G.getY(param0 ^ -80) + 6), 112) / fb.field_e.camera.zoom);
           var4_int = 2 + (var2 + var1);
           var5_int = -var1 + var3 - 2;
           if (0 == var1) {
@@ -149,7 +149,7 @@ final class rq extends IntrusiveNode {
           if (var1 == -4 &&
             ResourceArchive.field_e) {
             ResourceArchive.field_e = false;
-            nm.b(param0 - 137, 47);
+            Camera.b(param0 - 137, 47);
           }
           ig.field_b.e(var4_int, var5_int, 128, 61264);
         }
@@ -164,8 +164,8 @@ final class rq extends IntrusiveNode {
           SoftwareRasterizer.setClip(var1Lifetime1, var3Lifetime1, var2Lifetime1 + var1Lifetime1, var3Lifetime1 + hj.field_g);
           SoftwareRasterizer.fillRectAlpha(var1Lifetime1, var3Lifetime1, var2Lifetime1, hj.field_g, 2560, 160);
           g.a(IsaacRandom.field_h, 10, var3Lifetime1, 192);
-          sj.field_j.g(10, var3Lifetime1);
-          sj.field_j.a(10, -5 + (hj.field_g + var3Lifetime1));
+          InfectionEvent.field_j.g(10, var3Lifetime1);
+          InfectionEvent.field_j.a(10, -5 + (hj.field_g + var3Lifetime1));
           SimHuman.field_fb.g(var1Lifetime1, var3Lifetime1);
           SimHuman.field_fb.b(-5 + (var2Lifetime1 + var1Lifetime1), var3Lifetime1);
           rp.field_r[0].g(var1Lifetime1, var3Lifetime1);
@@ -192,8 +192,8 @@ final class rq extends IntrusiveNode {
           g.b();
         }
         if (21 == ai.field_b &&
-          hg.field_rb == 9) {
-          var1Lifetime2 = 4 * wn.a(-125, wf.field_m << 7) >> 16;
+          ArmedHumanView.field_rb == 9) {
+          var1Lifetime2 = 4 * wn.a(-125, PowerupEvent.field_m << 7) >> 16;
           var2Lifetime2 = var1Lifetime2 + 222;
           var3Lifetime2 = 428 - var1Lifetime2;
           if (var1Lifetime2 == 0) {
@@ -202,7 +202,7 @@ final class rq extends IntrusiveNode {
           if (var1Lifetime2 == -4 &&
             ResourceArchive.field_e) {
             ResourceArchive.field_e = false;
-            nm.b(-127, 47);
+            Camera.b(-127, 47);
           }
           ig.field_b.e(var2Lifetime2, var3Lifetime2, 128, 61264);
         }

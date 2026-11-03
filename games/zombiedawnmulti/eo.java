@@ -15,15 +15,15 @@ final class eo {
         String var4Lifetime1;
         stackIn_3_0 = (null == BufferedSocket.field_n) ? 0 : 1;
         var3 = stackIn_3_0;
-        if (sj.field_p != 9) {
-          if (sj.field_p == 10) {
+        if (InfectionEvent.field_p != 9) {
+          if (InfectionEvent.field_p == 10) {
             if (var3 != 0) {
               return false;
             }
             q.a(13151);
             return true;
           }
-          if (11 != sj.field_p) {
+          if (11 != InfectionEvent.field_p) {
             if (param1) {
             }
             return false;
@@ -33,8 +33,8 @@ final class eo {
             }
             return false;
           }
-          if (fh.field_n != 2) {
-            if (fh.field_n != 2 &&
+          if (NavigationGrid.field_n != 2) {
+            if (NavigationGrid.field_n != 2 &&
               var3 != 0) {
               return false;
             }
@@ -42,10 +42,10 @@ final class eo {
             if (!pd.a(InflaterDecompressor.field_c, v.field_a, 2)) {
               return false;
             }
-            if (fh.field_n == 2) {
+            if (NavigationGrid.field_n == 2) {
               if (ob.d((byte) 88)) {
                 var4 = (String) null;
-                GameWorld.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+                GameWorld.a(mi.field_Gb, v.field_a, param0, (String) null, NavigationGrid.field_n, 29602);
               }
               return true;
             }
@@ -63,14 +63,14 @@ final class eo {
             }
             return false;
           }
-          if (sj.field_p == 10) {
+          if (InfectionEvent.field_p == 10) {
             if (var3 != 0) {
               return false;
             }
             q.a(13151);
             return true;
           }
-          if (11 != sj.field_p) {
+          if (11 != InfectionEvent.field_p) {
             if (!param1) {
             }
             return false;
@@ -80,18 +80,18 @@ final class eo {
             }
             return false;
           }
-          if (fh.field_n == 2 &&
+          if (NavigationGrid.field_n == 2 &&
             !pd.a(InflaterDecompressor.field_c, v.field_a, 2)) {
             return false;
           }
-          if (fh.field_n != 2 &&
+          if (NavigationGrid.field_n != 2 &&
             var3 != 0) {
             return false;
           }
         }
         if (ob.d((byte) 88)) {
           var4Lifetime1 = (String) null;
-          GameWorld.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+          GameWorld.a(mi.field_Gb, v.field_a, param0, (String) null, NavigationGrid.field_n, 29602);
         }
         return true;
     }
@@ -112,7 +112,7 @@ final class eo {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         rp.field_l.a(param6, param2, param5, param4, -3344);
         if (mj.field_Ib != null) {
-          mj.field_Ib.a(-ti.field_Y + param0, param6, param3 ^ 77, param1, param0, param6);
+          mj.field_Ib.a(-UnitView.field_Y + param0, param6, param3 ^ 77, param1, param0, param6);
           if (param3 != -10) {
             eo.a(114, -96, -86, -58, 125, -101, 21);
             return;

@@ -82,7 +82,7 @@ final class ve {
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param8 <= 5 &&
           param2 >= 1) {
-          var11 = param6 + (int)(nm.a(0, param3) * (double)param2);
+          var11 = param6 + (int)(Camera.a(0, param3) * (double)param2);
           var12 = param4 + (int)((double)param2 * gh.a(param3, (byte) 19));
           var13 = hp.a((byte) -86, this.field_l, (int)(2.0 * this.field_g));
           var14 = param2 * 126 / this.field_i + 60;

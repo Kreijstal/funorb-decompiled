@@ -46,7 +46,7 @@ final class qh {
           if (param5 < 255) {
             em.field_X.a(22 + param4, param3 + 77, param5);
           } else {
-            em.field_X.a(param4 + 22, param3 + 77, 150 + (on.a(wf.field_m * 128, -18924) >> 11), 65535);
+            em.field_X.a(param4 + 22, param3 + 77, 150 + (on.a(PowerupEvent.field_m * 128, -18924) >> 11), 65535);
           }
           if (hh.field_h == null) {
             hh.field_h = new Sprite(12, 32);
@@ -69,7 +69,7 @@ final class qh {
               return;
             }
             var11 = new ve(85 + param4, param3 + 18, 8, 0.0, 8.0, 1.5, 1, 1.5, 0.99, 1);
-            var11.field_k = 39 * param4 + (wf.field_m + param3 * 17);
+            var11.field_k = 39 * param4 + (PowerupEvent.field_m + param3 * 17);
             var12 = 200 * param5 >> 8;
             var13 = 128 * var12;
             var14 = var12 * 64;

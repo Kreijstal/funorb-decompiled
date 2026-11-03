@@ -89,7 +89,7 @@ final class qi {
           if (param0 != 100) {
             qi.b((byte) 52);
           }
-          so.a((java.awt.Component) ((Object) param1), 127);
+          UnitStateEvent.a((java.awt.Component) ((Object) param1), 127);
           if (null == FullscreenFocusCanvas.field_a) {
             return;
           }
@@ -156,14 +156,14 @@ final class qi {
           for (var9 = 0; 4 > var9; var9++) {
             var8[var9] = ProxySocketConnector.field_j.nextInt();
           }
-          if (null == so.field_k ||
-            !(so.field_k.payload.length >= var7_int)) {
-            so.field_k = new PacketBuffer(var7_int);
+          if (null == UnitStateEvent.field_k ||
+            !(UnitStateEvent.field_k.payload.length >= var7_int)) {
+            UnitStateEvent.field_k = new PacketBuffer(var7_int);
           }
-          so.field_k.position = 0;
-          so.field_k.a(param5, param3, param0, 114);
-          so.field_k.b(var7_int, (byte) 119);
-          so.field_k.a(0, var13);
+          UnitStateEvent.field_k.position = 0;
+          UnitStateEvent.field_k.a(param5, param3, param0, 114);
+          UnitStateEvent.field_k.b(var7_int, (byte) 119);
+          UnitStateEvent.field_k.a(0, var13);
           if (null == RasterBuffer.field_e ||
             !(RasterBuffer.field_e.payload.length >= 100)) {
             RasterBuffer.field_e = new PacketBuffer(100);
@@ -179,7 +179,7 @@ final class qi {
           RasterBuffer.field_e.a(param3, (byte) -82);
           RasterBuffer.field_e.a(param4, -2628, param2);
           param6.a(RasterBuffer.field_e.payload, RasterBuffer.field_e.position, 0, 127);
-          param6.a(so.field_k.payload, so.field_k.position, 0, 122);
+          param6.a(UnitStateEvent.field_k.payload, UnitStateEvent.field_k.position, 0, 122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

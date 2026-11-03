@@ -42,7 +42,7 @@ final class uk extends gn {
         int var5 = (this.field_n >> 1) + param3 + this.field_y;
         int var6 = param1 - (-this.field_i - (this.field_w >> 1));
         re var8 = this.field_P.d(80);
-        if (var8 == h.field_H) {
+        if (var8 == PortalView.field_H) {
           var15 = rj.field_I[0];
           var9 = var15.fullWidth << 1;
           var10 = var15.field_u << 1;

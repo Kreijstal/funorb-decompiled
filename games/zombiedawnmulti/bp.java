@@ -25,7 +25,7 @@ final class bp extends un {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!ti.a((byte) 57, var4)) {
+          if (!UnitView.a((byte) 57, var4)) {
             stackIn_2_0 = jq.field_b;
             return stackIn_2_0;
           }

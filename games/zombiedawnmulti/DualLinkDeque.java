@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lq {
+final class DualLinkDeque {
     static String field_c;
     static int field_d;
     static int field_b;
@@ -9,7 +9,7 @@ final class lq {
     private DualLinkNode field_e;
     private DualLinkNode field_f;
 
-    final int a(byte param0) {
+    final int size(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = 0;
         DualLinkNode var3 = this.field_e.secondaryPrevious;
@@ -29,10 +29,10 @@ final class lq {
         if (param0 >= 74) {
           return;
         }
-        lq.b(1);
+        DualLinkDeque.b(1);
     }
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode next(byte param0) {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 < 82) {
@@ -72,7 +72,7 @@ final class lq {
         try {
           var2_int = param1.length();
           if (param0 != 1) {
-            lq.c(-68);
+            DualLinkDeque.c(-68);
           }
           if (0 == var2_int) {
             stackIn_5_0 = jo.field_e;
@@ -87,12 +87,12 @@ final class lq {
             if (45 == var4) {
               if (var3 == 0 ||
                 var3 == -1 + var2_int) {
-                stackIn_18_0 = so.field_t;
+                stackIn_18_0 = UnitStateEvent.field_t;
                 return stackIn_18_0;
               }
             } else {
               if (lb.field_e.indexOf(var4) == -1) {
-                stackIn_22_0 = so.field_t;
+                stackIn_22_0 = UnitStateEvent.field_t;
                 return stackIn_22_0;
               }
             }
@@ -112,12 +112,12 @@ final class lq {
         }
     }
 
-    final void d(int param0) {
+    final void clear(int param0) {
         DualLinkNode var5 = null;
         DualLinkNode var4 = null;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != -1) {
-          lq.c(-67);
+          DualLinkDeque.c(-67);
           while (true) {
             var5 = this.field_e.secondaryPrevious;
             if (this.field_e == var5) {
@@ -138,7 +138,7 @@ final class lq {
         this.field_f = null;
     }
 
-    final DualLinkNode c(byte param0) {
+    final DualLinkNode first(byte param0) {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 <= 84) {
@@ -162,17 +162,17 @@ final class lq {
 
     final static boolean b(int param0) {
         if (param0 != 0) {
-          lq.c(72);
-          return fh.field_m != null ? true : false;
+          DualLinkDeque.c(72);
+          return NavigationGrid.field_m != null ? true : false;
         }
-        return fh.field_m != null ? true : false;
+        return NavigationGrid.field_m != null ? true : false;
     }
 
     final DualLinkNode a(int param0) {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 != 11356) {
-          lq.b(-38);
+          DualLinkDeque.b(-38);
           var2 = this.field_e.secondaryPrevious;
           if (var2 != this.field_e) {
             var2.a(-4564);
@@ -188,7 +188,7 @@ final class lq {
         return null;
     }
 
-    final void a(int param0, DualLinkNode param1) {
+    final void add(int param0, DualLinkNode param1) {
         try {
           if (param1.secondaryNext != null) {
             param1.a(param0 - 34228);
@@ -197,7 +197,7 @@ final class lq {
           param1.secondaryNext = this.field_e.secondaryNext;
           if (param0 != 29664) {
             String var4 = (String) null;
-            lq.a((byte) 122, (String) null);
+            DualLinkDeque.a((byte) 122, (String) null);
           }
           param1.secondaryNext.secondaryPrevious = param1;
           param1.secondaryPrevious.secondaryNext = param1;
@@ -206,7 +206,7 @@ final class lq {
         }
     }
 
-    public lq() {
+    public DualLinkDeque() {
         this.field_e = new DualLinkNode();
         this.field_e.secondaryPrevious = this.field_e;
         this.field_e.secondaryNext = this.field_e;

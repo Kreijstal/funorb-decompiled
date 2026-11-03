@@ -54,10 +54,10 @@ final class nj {
         SimEntity.field_K = var8.readLong((byte) -30);
         if (2 == wc.field_N) {
           tk.field_m = var8.readUnsignedShort((byte) 69);
-          ti.field_W = var8.readUnsignedMedium(128);
+          UnitView.field_W = var8.readUnsignedMedium(128);
         } else {
           tk.field_m = 0;
-          ti.field_W = 0;
+          UnitView.field_W = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte(31365) != 1) ? 0 : 1;
         var4 = stackIn_11_0;

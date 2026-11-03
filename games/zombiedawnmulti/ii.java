@@ -13,7 +13,7 @@ abstract class ii {
           v.field_a = param3;
           InflaterDecompressor.field_c = param4;
           vh.field_Hb = true;
-          fh.field_n = param0;
+          NavigationGrid.field_n = param0;
           mi.field_Gb = param2;
           if (param1 > -108) {
             ii.b((byte) -126);
@@ -127,7 +127,7 @@ abstract class ii {
             return stackIn_23_0;
           }
           if (hp.a(param0, param1 + 904)) {
-            stackIn_26_0 = vl.a(wf.field_r, new String[]{param0}, param1 - 114);
+            stackIn_26_0 = vl.a(PowerupEvent.field_r, new String[]{param0}, param1 - 114);
             return stackIn_26_0;
           }
           var5 = ma.field_a;
@@ -222,7 +222,7 @@ abstract class ii {
             ii.b((byte) -126);
           }
           if (cb.field_l &&
-            ti.field_I == RasterBuffer.field_a) {
+            UnitView.field_I == RasterBuffer.field_a) {
             RasterBuffer.field_a = 0;
             cb.field_l = false;
           }

@@ -267,7 +267,7 @@ abstract class mp {
           }
           else {
             SimUnit.field_O.field_Z = false;
-            dp.field_b.field_wb = op.field_l;
+            dp.field_b.field_wb = PortalEntryEvent.field_l;
             if (1 == SimZombie.field_zb) {
               eg.field_B.field_Jb.field_Jb.field_wb = rg.field_D;
               if (var19 != 0) {

@@ -21,7 +21,7 @@ final class SimZombie extends SimUnit {
     int field_gb;
     private int field_kb;
     private int field_Ab;
-    private qk field_wb;
+    private Waypoint field_wb;
     private int field_fb;
     private int field_nb;
     private int field_ob;
@@ -36,7 +36,7 @@ final class SimZombie extends SimUnit {
         this.targetY = param0;
         this.moveToward(85, this.speedMultiplier * 14336);
         if (param1 != 750) {
-          this.field_wb = (qk) null;
+          this.field_wb = (Waypoint) null;
         }
         this.setState(6, (byte) -89);
     }
@@ -340,7 +340,7 @@ final class SimZombie extends SimUnit {
                         this.setState(4, (byte) -89);
                         this.needsSync = true;
                         if (this.field_wb != null) {
-                          this.setPath(true, this.simulation.navigation.b(this.getX((byte) -112), this.field_wb.field_h, this.getY(1829947600), this.field_wb.field_g, 8760));
+                          this.setPath(true, this.simulation.navigation.findPath(this.getX((byte) -112), this.field_wb.y, this.getY(1829947600), this.field_wb.x, 8760));
                         }
                       }
                     }
@@ -438,7 +438,7 @@ final class SimZombie extends SimUnit {
     }
 
     private final void computePath(int param0) {
-        this.field_Cb = this.field_wb != null ? this.simulation.navigation.b(this.getX((byte) -112), this.field_wb.field_h, this.getY(1829947600), this.field_wb.field_g, 8760) : null;
+        this.field_Cb = this.field_wb != null ? this.simulation.navigation.findPath(this.getX((byte) -112), this.field_wb.y, this.getY(1829947600), this.field_wb.x, 8760) : null;
         int var2 = 82 / ((-11 - param0) / 51);
     }
 
@@ -462,7 +462,7 @@ final class SimZombie extends SimUnit {
           var6 = var6 * 5;
         }
         if (var5 * var5 + var4 * var4 <= var6 + 10 &&
-          this.simulation.navigation.a(var3, -110, var2, this.getY(1829947600), this.getX((byte) -112)) != -1) {
+          this.simulation.navigation.traceLineDefault(var3, -110, var2, this.getY(1829947600), this.getX((byte) -112)) != -1) {
           this.targetX = var2;
           this.targetY = var3;
           var7 = 57344 * this.speedMultiplier;
@@ -670,7 +670,7 @@ final class SimZombie extends SimUnit {
                     var3 = var9.getY(1829947600) - this.getY(1829947600);
                     var4 = var3 * var3 + var2 * var2;
                     if (var4 < 1600 &&
-                      -1 != this.simulation.navigation.a(var9.getY(1829947600), -104, var9.getX((byte) -112), this.getY(1829947600), this.getX((byte) -112))) {
+                      -1 != this.simulation.navigation.traceLineDefault(var9.getY(1829947600), -104, var9.getX((byte) -112), this.getY(1829947600), this.getX((byte) -112))) {
                       this.setState(22, (byte) -89);
                       this.field_Ab = 70;
                       if (!var9.field_Bb) {
@@ -679,13 +679,13 @@ final class SimZombie extends SimUnit {
                       }
                       var10 = var9.positionX + (var2 << 15);
                       var11 = (var3 << 15) + var9.positionY;
-                      if (this.simulation.navigation.a(var11 >> 16, 126, var10 >> 16, var9.getY(1829947600), var9.getX((byte) -112)) != -1) {
+                      if (this.simulation.navigation.traceLineDefault(var11 >> 16, 126, var10 >> 16, var9.getY(1829947600), var9.getX((byte) -112)) != -1) {
                         var9.positionX = var10;
                         var9.positionY = var11;
                       }
                       var10Lifetime1 = -(var2 << 15) + this.positionX;
                       var11Lifetime1 = this.positionY - (var3 << 15);
-                      if (this.simulation.navigation.a(var11Lifetime1 >> 16, -72, var10Lifetime1 >> 16, this.getY(1829947600), this.getX((byte) -112)) != -1) {
+                      if (this.simulation.navigation.traceLineDefault(var11Lifetime1 >> 16, -72, var10Lifetime1 >> 16, this.getY(1829947600), this.getX((byte) -112)) != -1) {
                         this.positionY = var11Lifetime1;
                         this.positionX = var10Lifetime1;
                       }
@@ -784,7 +784,7 @@ final class SimZombie extends SimUnit {
           if (param1 != null &&
             !param1.f(28113)) {
             this.field_nb = 0;
-            this.field_wb = (qk) (param1.a((byte) 115));
+            this.field_wb = (Waypoint) (param1.a((byte) 115));
             this.field_Cb = param1;
             if (!this.c(param0)) {
               this.followPath((byte) 27);
@@ -815,12 +815,12 @@ final class SimZombie extends SimUnit {
     private final void followPath(byte param0) {
         int var3;
         int var4;
-        qk var5;
+        Waypoint var5;
         if (null != this.field_Cb &&
           !this.field_Cb.f(param0 ^ 28106)) {
-          var5 = (qk) (this.field_Cb.g(77));
-          this.targetX = var5.field_g;
-          this.targetY = var5.field_h;
+          var5 = (Waypoint) (this.field_Cb.g(77));
+          this.targetX = var5.x;
+          this.targetY = var5.y;
           this.setState(5, (byte) -89);
           var3 = 28672 * this.speedMultiplier;
           if (param0 != 27) {
@@ -929,7 +929,7 @@ final class SimZombie extends SimUnit {
                       var11 = var11 * 3;
                     }
                     if (var11 > var5) {
-                      if (this.simulation.navigation.a(var10.getY(1829947600), 111, var10.getX((byte) -112), this.getY(1829947600), this.getX((byte) -112)) == -1) {
+                      if (this.simulation.navigation.traceLineDefault(var10.getY(1829947600), 111, var10.getX((byte) -112), this.getY(1829947600), this.getX((byte) -112)) == -1) {
                         var9 = (SimEntity) (var8.next(-1));
                         continue;
                       }

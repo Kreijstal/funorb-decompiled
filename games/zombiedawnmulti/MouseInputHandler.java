@@ -821,7 +821,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               field_c = (an) null;
             }
             if (param1 != null) {
-              var3 = hg.a(-114, param1);
+              var3 = ArmedHumanView.formatThrowable(-114, param1);
             }
             if (param0 != null) {
               if (param1 != null) {

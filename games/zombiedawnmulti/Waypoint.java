@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qk extends IntrusiveNode {
+final class Waypoint extends IntrusiveNode {
     static String field_f;
     static int field_j;
-    int field_h;
+    int y;
     static String field_i;
-    int field_g;
+    int x;
 
     final static GameEvent a(ga param0, byte param1) {
         int var5 = 0;
@@ -15,7 +15,7 @@ final class qk extends IntrusiveNode {
         int var3 = 0;
         int[] var4 = null;
         int var6 = 0;
-        fg stackIn_7_0 = null;
+        ScoreUpdateEvent stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -29,9 +29,9 @@ final class qk extends IntrusiveNode {
             var4[var5] = param0.readUnsignedShort((byte) 69);
           }
           if (param1 != -114) {
-            qk.b(true);
+            Waypoint.b(true);
           }
-          stackIn_7_0 = new fg(var2_int, var4);
+          stackIn_7_0 = new ScoreUpdateEvent(var2_int, var4);
           return (GameEvent) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,16 +82,16 @@ final class qk extends IntrusiveNode {
         }
     }
 
-    final qk a(int param0) {
+    final Waypoint copy(int param0) {
         if (param0 != 30544) {
-          return (qk) null;
+          return (Waypoint) null;
         }
-        return new qk(this.field_g, this.field_h);
+        return new Waypoint(this.x, this.y);
     }
 
-    qk(int param0, int param1) {
-        this.field_h = param1;
-        this.field_g = param0;
+    Waypoint(int param0, int param1) {
+        this.y = param1;
+        this.x = param0;
     }
 
     static {

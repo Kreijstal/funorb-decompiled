@@ -75,9 +75,9 @@ final class va {
     final static boolean a(byte param0, int param1, int param2, int param3) {
         if (param0 != -59) {
           va.a((byte) -88);
-          return jm.a(param1, -23936, param2, param3);
+          return FightEvent.a(param1, -23936, param2, param3);
         }
-        return jm.a(param1, -23936, param2, param3);
+        return FightEvent.a(param1, -23936, param2, param3);
     }
 
     public static void a(int param0) {

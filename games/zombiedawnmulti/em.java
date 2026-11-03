@@ -464,21 +464,21 @@ final class em extends wk {
         field_Y[2][4][0] = 44;
         field_O = new int[19];
         field_N = 0L;
-        wf.a(3, 38, -1);
-        wf.a(2, 38, -1);
-        wf.a(4, 37, -1);
-        wf.a(7, 37, -1);
-        wf.a(1, 37, -1);
-        wf.a(2, 32, -1);
-        wf.a(0, 32, -1);
-        wf.a(15, 32, -1);
-        wf.a(13, 36, -1);
-        wf.a(4, 34, -1);
-        wf.a(8, 34, -1);
-        wf.a(14, 33, -1);
-        wf.a(16, 33, -1);
-        wf.a(5, 33, -1);
-        wf.a(5, 35, -1);
+        PowerupEvent.a(3, 38, -1);
+        PowerupEvent.a(2, 38, -1);
+        PowerupEvent.a(4, 37, -1);
+        PowerupEvent.a(7, 37, -1);
+        PowerupEvent.a(1, 37, -1);
+        PowerupEvent.a(2, 32, -1);
+        PowerupEvent.a(0, 32, -1);
+        PowerupEvent.a(15, 32, -1);
+        PowerupEvent.a(13, 36, -1);
+        PowerupEvent.a(4, 34, -1);
+        PowerupEvent.a(8, 34, -1);
+        PowerupEvent.a(14, 33, -1);
+        PowerupEvent.a(16, 33, -1);
+        PowerupEvent.a(5, 33, -1);
+        PowerupEvent.a(5, 35, -1);
         for (var0Lifetime2 = 0; var0Lifetime2 < 63; var0Lifetime2++) {
           field_W[var0Lifetime2] = 100;
         }

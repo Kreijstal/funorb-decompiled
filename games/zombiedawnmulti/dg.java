@@ -94,7 +94,7 @@ final class dg extends WidgetContainer implements in {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_y + param3;
         int var6 = this.field_i + param1;
-        ke.field_h.a(ti.field_H, 20 + var5, var6 + 20, this.field_n - 40, this.field_w - 50, 16777215, -1, 1, 0, ke.field_h.field_C);
+        ke.field_h.a(UnitView.field_H, 20 + var5, var6 + 20, this.field_n - 40, this.field_w - 50, 16777215, -1, 1, 0, ke.field_h.field_C);
         super.a(param0, param1, param2, param3);
     }
 

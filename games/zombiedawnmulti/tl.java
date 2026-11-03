@@ -150,7 +150,7 @@ final class tl extends DualLinkNode {
     }
 
     final static void a(int param0, byte param1, ga param2, int param3, int param4, int param5) {
-        if (op.field_m.field_c) {
+        if (PortalEntryEvent.field_m.field_c) {
           return;
         }
         if (df.field_I) {

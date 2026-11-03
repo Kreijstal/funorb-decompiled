@@ -141,7 +141,7 @@ final class ck {
                 var23.field_Ob = false;
               }
               if (0 != var5) {
-                var23.field_bc = so.field_r;
+                var23.field_bc = UnitStateEvent.field_r;
                 var23.field_Fb = var5;
               } else {
                 var23.unlink(true);
@@ -181,7 +181,7 @@ final class ck {
               if (var4_int == 0) {
                 var31.unlink(true);
               } else {
-                var17_ref.field_Jb = so.field_r;
+                var17_ref.field_Jb = UnitStateEvent.field_r;
                 var17_ref.field_Vb = var4_int;
               }
               var31.a(-4564);
@@ -206,7 +206,7 @@ final class ck {
                   var16 = var30_ref;
                   var30_ref.field_rc = false;
                   if (var4_intLifetime1 != 0) {
-                    var30_ref.field_Jb = so.field_r;
+                    var30_ref.field_Jb = UnitStateEvent.field_r;
                     var30_ref.field_Vb = var4_intLifetime1;
                   }
                   var16.field_lc = false;
@@ -249,7 +249,7 @@ final class ck {
                         var26.unlink(true);
                       } else {
                         var15.field_Fb = var5Lifetime1;
-                        var15.field_bc = so.field_r;
+                        var15.field_bc = UnitStateEvent.field_r;
                       }
                       var26.a(param0 ^ 6623);
                       JaggrabDownloader.field_c.field_cc = JaggrabDownloader.field_c.field_cc - 1;
@@ -298,7 +298,7 @@ final class ck {
                   var14.field_Pb = false;
                 }
                 if (var5Lifetime1Lifetime1 != 0) {
-                  var25.field_bc = so.field_r;
+                  var25.field_bc = UnitStateEvent.field_r;
                   var25.field_Fb = var5Lifetime1Lifetime1;
                 }
                 lf.a(var25, true);
@@ -379,8 +379,8 @@ final class ck {
             return;
           }
           la.field_k = true;
-          for (var3Lifetime2 = 0; fg.field_k.length > var3Lifetime2; var3Lifetime2++) {
-            fg.field_k[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte(param0 - 249697519);
+          for (var3Lifetime2 = 0; ScoreUpdateEvent.field_k.length > var3Lifetime2; var3Lifetime2++) {
+            ScoreUpdateEvent.field_k[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte(param0 - 249697519);
           }
           pb.field_h = ((PacketBuffer) ((Object) var1)).readUnsignedByte(31365);
           sc.field_f = ((PacketBuffer) ((Object) var1)).readUnsignedByte(31365);

@@ -31,7 +31,7 @@ final class nn {
         field_c = null;
     }
 
-    final static fc a(int param0, byte[] param1) {
+    final static LevelData a(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -39,7 +39,7 @@ final class nn {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        fc stackIn_8_0 = null;
+        LevelData stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

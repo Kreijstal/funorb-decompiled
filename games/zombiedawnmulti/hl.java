@@ -144,7 +144,7 @@ final class hl {
           DualLinkNode.field_h = param5;
           kj.field_h = param0.length;
           la.field_k = false;
-          fg.field_k = new byte[(DualLinkNode.field_h + 7) / 8];
+          ScoreUpdateEvent.field_k = new byte[(DualLinkNode.field_h + 7) / 8];
           JaggrabDownloader.field_c = null;
           BufferedSocket.field_n = null;
           var10_int = 0;
@@ -178,7 +178,7 @@ final class hl {
           nh.field_g = param4.field_Cb;
           nh.field_g.e(param1 - 31061);
           kp.field_o = new sc(param6);
-          so.field_r = param3;
+          UnitStateEvent.field_r = param3;
           qi.field_c = 0L;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -151,9 +151,9 @@ final class g {
     private final static boolean b(IntrusiveDeque param0) {
         IntrusiveNode var1;
         var1 = param0.c(51);
-        while (var1 instanceof id) {
-          if (var1.previous instanceof id) {
-            if (((id) (var1)).field_E > ((id) (var1.previous)).field_E) {
+        while (var1 instanceof SceneObject) {
+          if (var1.previous instanceof SceneObject) {
+            if (((SceneObject) (var1)).positionY > ((SceneObject) (var1.previous)).positionY) {
               return false;
             }
             var1 = var1.previous;
@@ -259,12 +259,12 @@ final class g {
         IntrusiveNode var2;
         while (!g.b(param0)) {
           var1_ref = param0.c(51);
-          while (var1_ref instanceof id) {
-            if (!(var1_ref.previous instanceof id)) {
+          while (var1_ref instanceof SceneObject) {
+            if (!(var1_ref.previous instanceof SceneObject)) {
               break;
             }
             var2 = var1_ref.previous;
-            if (((id) (var1_ref)).field_E > ((id) (var2)).field_E) {
+            if (((SceneObject) (var1_ref)).positionY > ((SceneObject) (var2)).positionY) {
               var1_ref.unlink(true);
               qc.a(var1_ref, var2, 0);
             }

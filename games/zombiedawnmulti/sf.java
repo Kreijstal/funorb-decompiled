@@ -19,10 +19,10 @@ final class sf {
         field_f = null;
     }
 
-    final static fc a(byte param0, byte[] param1) {
+    final static LevelData a(byte param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        fc stackIn_2_0 = null;
+        LevelData stackIn_2_0 = null;
         LevelActorSpawner stackIn_7_0 = null;
         Object stackIn_10_0 = null;
         LevelActorSpawner stackIn_12_0 = null;
@@ -34,28 +34,28 @@ final class sf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -96) {
-            stackIn_2_0 = (fc) null;
+            stackIn_2_0 = (LevelData) null;
             return stackIn_2_0;
           }
           var2_int = re.a(param1, 0, (byte) 77);
           if (var2_int == 3) {
             stackIn_16_0 = MidiPcmStream.a(param1, (byte) 46);
-            return (fc) ((Object) stackIn_16_0);
+            return (LevelData) ((Object) stackIn_16_0);
           }
           if (4 == var2_int) {
             stackIn_14_0 = ij.a(param1, 7);
-            return (fc) ((Object) stackIn_14_0);
+            return (LevelData) ((Object) stackIn_14_0);
           }
           if (5 == var2_int) {
             stackIn_7_0 = bo.a(param1, 24);
-            return (fc) ((Object) stackIn_7_0);
+            return (LevelData) ((Object) stackIn_7_0);
           }
           if (var2_int == 6) {
             stackIn_12_0 = no.a((byte) 104, param1);
-            return (fc) ((Object) stackIn_12_0);
+            return (LevelData) ((Object) stackIn_12_0);
           }
           stackIn_10_0 = null;
-          return (fc) (stackIn_10_0);
+          return (LevelData) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

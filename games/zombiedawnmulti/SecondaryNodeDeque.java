@@ -7,7 +7,7 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_f;
     DualLinkNode field_d;
     static int field_a;
-    static nm field_e;
+    static Camera field_e;
     static String field_b;
     static BitmapFont field_c;
 
@@ -46,7 +46,7 @@ final class SecondaryNodeDeque implements Iterable {
         String[] var20 = null;
         try {
           if (!param8) {
-            field_e = (nm) null;
+            field_e = (Camera) null;
           }
           var20 = (String[]) null;
           vb.a(param10, param11, (String[]) null, param3, param18, param9, param4, param7, param1, param17, param14, 1, param6, param5, param0, false, param16, param12, param13, param15);

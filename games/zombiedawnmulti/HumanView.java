@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class gm extends ti {
+abstract class HumanView extends UnitView {
     private int field_mb;
     private int field_nb;
     private int field_ib;
@@ -29,16 +29,16 @@ abstract class gm extends ti {
         nh.field_n = kd.field_c[param1];
     }
 
-    final void b(int param0, int param1) {
-        if (this.field_K == 0 &&
+    final void setState(int param0, int param1) {
+        if (this.state == 0 &&
           param0 == 1 &&
           hp.a((byte) 29, g.field_a, 4) == 0) {
           this.field_U = pb.$cfr$intArgs$a$90ed9136db05(62, this.field_mb);
         }
-        super.b(param0, param1);
+        super.setState(param0, param1);
     }
 
-    abstract void a(nm param0, byte param1);
+    abstract void drawDebugFleePoints(Camera param0, byte param1);
 
     final int q(int param0) {
         if (param0 != -5183) {
@@ -60,10 +60,10 @@ abstract class gm extends ti {
         field_ob = null;
     }
 
-    private final void p(int param0) {
+    private final void resetFleePoints(int param0) {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        int var2 = this.g(-96);
-        int var3 = this.h(70);
+        int var2 = this.getX(-96);
+        int var3 = this.getY(70);
         int var4 = 0;
         if (param0 < 113) {
           return;
@@ -77,7 +77,7 @@ abstract class gm extends ti {
         this.field_hb[this.field_fb - 1] = var3;
     }
 
-    gm(int param0, int param1, int param2, int param3) {
+    HumanView(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3);
         this.field_fb = 61;
         this.field_gb = false;
@@ -90,7 +90,7 @@ abstract class gm extends ti {
         this.field_ib = hp.a((byte) 89, g.field_a, 200);
         this.field_cb = new int[61];
         this.field_hb = new int[61];
-        this.p(118);
+        this.resetFleePoints(118);
         this.field_lb = hp.a((byte) -122, g.field_a, 5);
         if (this.m(15684)) {
           this.field_mb = hp.a((byte) -119, g.field_a, 4) + 49;
@@ -100,18 +100,18 @@ abstract class gm extends ti {
     }
 
     final void b(boolean param0) {
-        if (this.field_K == 18) {
+        if (this.state == 18) {
           return;
         }
-        this.b(18, -27655);
+        this.setState(18, -27655);
         fb.field_e.f(127);
         if (param0) {
           this.field_kb = -115;
         }
-        op.field_m.addEntity(-112, (TertiaryLinkNode) (this));
+        PortalEntryEvent.field_m.addEntity(-112, (TertiaryLinkNode) (this));
     }
 
-    final void a(int param0, nm param1) {
+    final void draw(int param0, Camera param1) {
         Sprite stackIn_27_0 = null;
         int stackIn_27_1 = 0;
         int stackIn_28_2 = 0;
@@ -134,11 +134,11 @@ abstract class gm extends ti {
         int var5Lifetime1;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (this.field_K == 20) {
+          if (this.state == 20) {
             return;
           }
-          var3_int = -24 + param1.c(this.g(109), -20126);
-          var4 = param1.d(this.h(param0 ^ -10222), 127) - 48;
+          var3_int = -24 + param1.worldToScreenX(this.getX(109), -20126);
+          var4 = param1.worldToScreenY(this.getY(param0 ^ -10222), 127) - 48;
           if (null != this.field_U) {
             if (this.field_U.k()) {
               this.field_U = null;
@@ -148,16 +148,16 @@ abstract class gm extends ti {
             }
           }
           if (i.field_b) {
-            this.a(param1, (byte) 80);
+            this.drawDebugFleePoints(param1, (byte) 80);
           }
           if (!io.a(var3_int, var4, (byte) -112, param1)) {
             return;
           }
-          if (this.field_K == 32) {
+          if (this.state == 32) {
             if (this.field_qb == -1) {
-              this.field_qb = wf.field_m;
+              this.field_qb = PowerupEvent.field_m;
             }
-            var5 = -this.field_qb + wf.field_m;
+            var5 = -this.field_qb + PowerupEvent.field_m;
             if (var5 > 150) {
               return;
             }
@@ -166,35 +166,35 @@ abstract class gm extends ti {
               return;
             }
           }
-          if (this.field_K != 17) {
+          if (this.state != 17) {
             stackIn_27_0 = ig.field_d[1];
             stackIn_27_1 = 12;
-            if (this.field_F != 3) {
+            if (this.facing != 3) {
               stackIn_28_2 = -3 + var3_int;
             } else {
               stackIn_28_2 = var3_int - 2;
             }
             g.a(stackIn_27_0, stackIn_27_1 + stackIn_28_2, 43 + var4);
           }
-          var5Lifetime1 = this.field_ab;
-          if (gg.field_i[this.field_K] != null) {
-            var5Lifetime1 = gg.field_i[this.field_K][this.field_ab];
+          var5Lifetime1 = this.animationFrame;
+          if (gg.field_i[this.state] != null) {
+            var5Lifetime1 = gg.field_i[this.state][this.animationFrame];
           }
-          var6 = var5Lifetime1 + gg.field_l[this.field_K];
+          var6 = var5Lifetime1 + gg.field_l[this.state];
           if (param0 != -10136) {
             return;
           }
           var7 = wq.field_c[this.field_C];
-          if (this.field_K != 10 &&
-            this.field_K != 11) {
-            if (this.field_K == 21) {
-              var7[var6].c(var3_int, var4, this.field_N);
+          if (this.state != 10 &&
+            this.state != 11) {
+            if (this.state == 21) {
+              var7[var6].c(var3_int, var4, this.exitCountdown);
             } else {
               var8 = 3 + var4;
-              var9 = wf.field_m / 4 % aa.field_h.length;
+              var9 = PowerupEvent.field_m / 4 % aa.field_h.length;
               var10 = null;
-              if (this.field_K != 25) {
-                if (30 == this.field_K) {
+              if (this.state != 25) {
+                if (30 == this.state) {
                   var10 = SimPortal.field_N[var9];
                 }
               } else {
@@ -205,9 +205,9 @@ abstract class gm extends ti {
               }
               if (var6 >= 0 &&
                 var6 < var7.length) {
-                stackIn_60_0 = (this.field_F != 1) ? 0 : 1;
+                stackIn_60_0 = (this.facing != 1) ? 0 : 1;
                 var11 = stackIn_60_0;
-                if (0 < this.field_G) {
+                if (0 < this.slowTicks) {
                   if (var11 != 0) {
                     g.a(var7[var6]);
                   }
@@ -231,14 +231,14 @@ abstract class gm extends ti {
               }
             }
           } else {
-            if (this.field_F == 2) {
+            if (this.facing == 2) {
               var7[var6 + 2].g(var3_int, var4);
             } else {
-              if (this.field_F == 0) {
+              if (this.facing == 0) {
                 var7[4 + var6].g(var3_int, var4);
               } else {
-                if (this.field_F != 3) {
-                  if (1 == this.field_F) {
+                if (this.facing != 3) {
+                  if (1 == this.facing) {
                     var7[var6].b(var3_int, var4);
                   }
                 } else {
@@ -307,7 +307,7 @@ abstract class gm extends ti {
         throw new IllegalArgumentException("" + param2);
     }
 
-    final void f(byte param0) {
+    final void tick(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -319,22 +319,22 @@ abstract class gm extends ti {
         int var4;
         int var2Lifetime1;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        super.f((byte) -95);
-        this.c(30818, this.field_K);
+        super.tick((byte) -95);
+        this.advanceAnimation(30818, this.state);
         if (param0 > -79) {
           return;
         }
-        if (this.field_K == 32) {
+        if (this.state == 32) {
           if (this.field_qb == -1) {
-            this.field_qb = wf.field_m;
+            this.field_qb = PowerupEvent.field_m;
           }
-          var2 = wf.field_m - this.field_qb;
+          var2 = PowerupEvent.field_m - this.field_qb;
           if (150 < var2) {
             this.b(false);
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_K == 0) {
+        if (this.state == 0) {
           fieldTemp$0 = this.field_eb + 1;
           this.field_eb = this.field_eb + 1;
           if (this.field_ib < fieldTemp$0) {
@@ -353,63 +353,63 @@ abstract class gm extends ti {
             }
           }
           if (!this.field_gb) {
-            this.field_ab = 0;
+            this.animationFrame = 0;
           }
         } else {
-          if (this.field_K == 2) {
-            this.i(5197);
-            if (4 > this.field_ab) {
-              this.field_Q = this.field_Q + 1;
+          if (this.state == 2) {
+            this.applyVelocity(5197);
+            if (4 > this.animationFrame) {
+              this.animationTicks = this.animationTicks + 1;
               return;
             }
-            if (this.field_ab != 4) {
-              if (this.field_ab != 6) {
+            if (this.animationFrame != 4) {
+              if (this.animationFrame != 6) {
               }
             } else {
-              this.field_Q = 0;
+              this.animationTicks = 0;
               fieldTemp$1 = this.field_nb;
               this.field_nb = this.field_nb + 1;
               if (400 <= fieldTemp$1) {
-                this.field_ab = this.field_ab + 1;
+                this.animationFrame = this.animationFrame + 1;
               }
-              this.field_S = 0;
-              this.field_X = 0;
+              this.velocityY = 0;
+              this.velocityX = 0;
             }
             return;
           }
-          if (this.field_K == 1) {
+          if (this.state == 1) {
             fieldTemp$2 = this.field_lb;
             this.field_lb = this.field_lb + 1;
             if (fieldTemp$2 >= 5) {
               this.field_lb = 0;
               var2Lifetime1 = 0;
-              var3 = op.field_m.field_A.c(103);
+              var3 = PortalEntryEvent.field_m.field_A.c(103);
               while (var3 instanceof cg) {
                 var2Lifetime1 = var2Lifetime1 != 0 | ((cg) (var3)).a(this, false) ? 1 : 0;
                 var3 = var3.previous;
               }
               if (!this.field_db &&
                 var2Lifetime1 != 0) {
-                this.d(6, this.field_bb >> 2);
+                this.moveToward(6, this.speed >> 2);
               } else {
                 if (this.field_db &&
                   var2Lifetime1 == 0) {
-                  this.d(6, this.field_bb);
+                  this.moveToward(6, this.speed);
                 }
               }
               stackIn_27_1 = (var2Lifetime1 != 0);
               this.field_db = stackIn_27_1;
             }
-            this.i(5197);
-            if (!(!this.k(-125))) {
-              this.b(0, -27655);
+            this.applyVelocity(5197);
+            if (!(!this.stepTowardTarget(-125))) {
+              this.setState(0, -27655);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (this.field_K != 3 &&
-              this.field_K != 16 &&
-              20 == this.field_K) {
+            if (this.state != 3 &&
+              this.state != 16 &&
+              20 == this.state) {
             }
           }
         }
@@ -417,7 +417,7 @@ abstract class gm extends ti {
     }
 
     final void n(int param0) {
-        this.b(param0, -27655);
+        this.setState(param0, -27655);
     }
 
     final boolean m(int param0) {
@@ -507,7 +507,7 @@ abstract class gm extends ti {
 
     final void l(int param0) {
         int var2 = -57 % ((0 - param0) / 33);
-        this.b(0, -27655);
+        this.setState(0, -27655);
     }
 
     final static void a(long param0, String param1, int param2) {

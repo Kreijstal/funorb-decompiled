@@ -112,7 +112,7 @@ final class vk extends rg {
             boolean decompiledFrameRemainder0 = true;
             if (uk.field_M[var3].field_l == param0.field_l) {
               var4 = uk.field_M[var3].a(true);
-              if (ub.field_ub[var4] > sj.field_m) {
+              if (ub.field_ub[var4] > InfectionEvent.field_m) {
                 ub.field_ub[var4] = ub.field_ub[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
@@ -155,7 +155,7 @@ final class vk extends rg {
             var3 = (int[]) null;
             vk.a((int[]) null, true, 94, 30, (byte) 84, (int[]) null, 90, 72, -73);
           }
-          stackIn_3_0 = so.a(false, -52, param1);
+          stackIn_3_0 = UnitStateEvent.a(false, -52, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -178,7 +178,7 @@ final class vk extends rg {
           var2 = (int[]) null;
           vk.a((int[]) null, false, -127, -95, (byte) -9, (int[]) null, -29, -30, -79);
         }
-        stackIn_6_0 = (a.a(-107)) && ((8 & wf.field_m) == 0);
+        stackIn_6_0 = (a.a(-107)) && ((8 & PowerupEvent.field_m) == 0);
         return stackIn_6_0;
     }
 

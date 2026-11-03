@@ -380,7 +380,7 @@ final class qm extends WidgetContainer implements fi, in {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        uo stackIn_3_0 = null;
+        AttackEvent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

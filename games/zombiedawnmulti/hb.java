@@ -55,9 +55,9 @@ final class hb {
               if (var3 == 1) {
                 Bzip2Decoder.a(var12, var5_int, param0, var4, 9);
               } else {
-                var7 = hg.field_wb;
+                var7 = ArmedHumanView.field_wb;
                 synchronized (var7) {
-                  hg.field_wb.a(var12, var9, param1 + 27);
+                  ArmedHumanView.field_wb.a(var12, var9, param1 + 27);
                 }
               }
               stackIn_19_0 = var6;

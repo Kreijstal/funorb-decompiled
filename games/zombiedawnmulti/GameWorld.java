@@ -7,7 +7,7 @@ class GameWorld {
     static cj field_n;
     IntrusiveDeque characters;
     static String field_w;
-    fc field_h;
+    LevelData field_h;
     int phase;
     int[] field_v;
     int field_F;
@@ -148,27 +148,27 @@ class GameWorld {
         return stackIn_8_0;
     }
 
-    final id a(int param0, byte param1) {
-        id var3;
+    final SceneObject a(int param0, byte param1) {
+        SceneObject var3;
         int var4;
-        id var3Lifetime1;
+        SceneObject var3Lifetime1;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        var3 = (id) (this.characters.c(param1 ^ 27));
+        var3 = (SceneObject) (this.characters.c(param1 ^ 27));
         while (var3 != null) {
-          if (var3.field_y == param0) {
+          if (var3.objectId == param0) {
             return var3;
           }
-          var3 = (id) (this.characters.b(6));
+          var3 = (SceneObject) (this.characters.b(6));
         }
         if (param1 != 33) {
           this.field_A = (IntrusiveDeque) null;
         }
-        var3Lifetime1 = (id) (this.field_u.c(47));
+        var3Lifetime1 = (SceneObject) (this.field_u.c(47));
         while (var3Lifetime1 != null) {
-          if (param0 == var3Lifetime1.field_y) {
+          if (param0 == var3Lifetime1.objectId) {
             return var3Lifetime1;
           }
-          var3Lifetime1 = (id) (this.field_u.b(param1 - 27));
+          var3Lifetime1 = (SceneObject) (this.field_u.b(param1 - 27));
         }
         return null;
     }
@@ -198,7 +198,7 @@ class GameWorld {
         int var8 = 0;
         int var9 = 0;
         GameCharacter var10 = null;
-        gm var11 = null;
+        HumanView var11 = null;
         jj var12 = null;
         cg var13 = null;
         int var14 = 0;
@@ -285,7 +285,7 @@ class GameWorld {
                     var4Lifetime1 = null;
                     var14 = var5;
                     var15 = var8 & 255 | var8 >> 16;
-                    this.a(var6, var14, 117, var7, var15, (fh) null);
+                    this.a(var6, var14, 117, var7, var15, (NavigationGrid) null);
                     var19 = (ce) (this.field_s.a((byte) -127));
                     var19.field_l = var15 * 2;
                   } else {
@@ -299,7 +299,7 @@ class GameWorld {
             if (var4Lifetime1 == null) {
               continue;
             }
-            ((id) (var4Lifetime1)).field_y = var5;
+            ((SceneObject) (var4Lifetime1)).objectId = var5;
             this.nextObjectId = 1 + var5;
             this.characters.a((IntrusiveNode) (var4Lifetime1), false);
           }
@@ -364,12 +364,12 @@ class GameWorld {
         }
         this.field_g = this.field_g - 1;
         if (param0 >= -57) {
-          this.field_h = (fc) null;
+          this.field_h = (LevelData) null;
         }
     }
 
     final GameCharacter a(int param0, boolean param1) {
-        id var3 = this.a(param0, (byte) 33);
+        SceneObject var3 = this.a(param0, (byte) 33);
         if (var3 == null) {
           return null;
         }
@@ -383,19 +383,19 @@ class GameWorld {
         return (GameCharacter) (var3);
     }
 
-    final gm a(int param0, int param1) {
-        id var3 = this.a(param0, (byte) 33);
+    final HumanView a(int param0, int param1) {
+        SceneObject var3 = this.a(param0, (byte) 33);
         if (var3 == null) {
           return null;
         }
         int var4 = 94 / ((param1 + 27) / 43);
-        if (!(var3 instanceof gm)) {
+        if (!(var3 instanceof HumanView)) {
           return null;
         }
-        return (gm) (var3);
+        return (HumanView) (var3);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, fh param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, NavigationGrid param5) {
         ce var7 = null;
         Sprite[] var8 = null;
         RuntimeException stackIn_5_0 = null;
@@ -425,7 +425,7 @@ class GameWorld {
         }
     }
 
-    GameWorld(String[] param0, fc param1) {
+    GameWorld(String[] param0, LevelData param1) {
         int var3_int = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

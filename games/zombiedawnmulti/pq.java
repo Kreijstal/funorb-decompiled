@@ -25,7 +25,7 @@ final class pq extends IntrusiveNode {
         this.field_k = this.field_i;
     }
 
-    final void a(int param0, nm param1) {
+    final void a(int param0, Camera param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -36,8 +36,8 @@ final class pq extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param1.c(this.field_g, -20126);
-          var4 = param1.d(this.field_l, param0 ^ 130);
+          var3_int = param1.worldToScreenX(this.field_g, -20126);
+          var4 = param1.worldToScreenY(this.field_l, param0 ^ 130);
           this.field_q.h(sd.b(12, var4, var3_int));
           if (param0 >= ~var3_int &&
             var4 >= -256 &&
@@ -183,7 +183,7 @@ final class pq extends IntrusiveNode {
         this.field_j = 0;
         this.field_h = 0;
         this.field_i = param2;
-        this.field_q = nm.b(-128, 17);
+        this.field_q = Camera.b(-128, 17);
     }
 
     static {

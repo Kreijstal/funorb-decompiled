@@ -122,7 +122,7 @@ final class iq {
                 ai.field_b = -1;
                 io.field_g = false;
                 ml.field_Jb = -1;
-                hg.field_rb = -1;
+                ArmedHumanView.field_rb = -1;
                 WidgetContainer.field_E = 0;
                 ma.field_d = -1;
                 return;
@@ -142,11 +142,11 @@ final class iq {
                 io.field_g = false;
                 return;
               }
-              if (hg.field_rb >= -1 + SimHuman.field_pb) {
+              if (ArmedHumanView.field_rb >= -1 + SimHuman.field_pb) {
                 io.field_g = false;
                 return;
               }
-              df.a(param1 ^ -17403, 1 + hg.field_rb);
+              df.a(param1 ^ -17403, 1 + ArmedHumanView.field_rb);
               return;
             }
             if (param0 == -1) {
@@ -156,8 +156,8 @@ final class iq {
             if (param0 != -14) {
               return;
             }
-            if (-1 + SimHuman.field_pb > hg.field_rb) {
-              df.a(-17306, 1 + hg.field_rb);
+            if (-1 + SimHuman.field_pb > ArmedHumanView.field_rb) {
+              df.a(-17306, 1 + ArmedHumanView.field_rb);
               return;
             }
             if (pp.field_n) {
@@ -167,7 +167,7 @@ final class iq {
             io.field_g = false;
             return;
           }
-          var2_int = hg.field_rb;
+          var2_int = ArmedHumanView.field_rb;
           if (param0 != -12) {
             MusicPatch.a((byte) -12, param0);
           }
@@ -175,76 +175,76 @@ final class iq {
             w.field_m = 0;
             df.a(-17306, 1);
           }
-          if (fb.field_e.field_Q.a((byte) 98) == 0) {
+          if (fb.field_e.selection.size((byte) 98) == 0) {
             w.field_m = w.field_m & -9;
           }
           if (-12 == param0) {
             df.a(-17306, 0);
           }
-          if (hg.field_rb == 0 && (gh.a(-3, param1 + 11554) ||
+          if (ArmedHumanView.field_rb == 0 && (gh.a(-3, param1 + 11554) ||
             param0 == -14)) {
             df.a(-17306, jh.field_ic);
           }
-          if (1 == hg.field_rb &&
+          if (1 == ArmedHumanView.field_rb &&
             gh.a(-8, 11653)) {
             df.a(param1 ^ -17403, 2);
           }
-          if (2 == hg.field_rb &&
+          if (2 == ArmedHumanView.field_rb &&
             gh.a(-7, 11653)) {
             df.a(param1 - 17405, 3);
           }
-          if (hg.field_rb == 3 &&
+          if (ArmedHumanView.field_rb == 3 &&
             gh.a(-3, 11653)) {
             df.a(-17306, 4);
           }
-          if (4 == hg.field_rb &&
+          if (4 == ArmedHumanView.field_rb &&
             gh.a(-13, 11653)) {
             df.a(param1 ^ -17403, 5);
           }
-          if (5 == hg.field_rb &&
+          if (5 == ArmedHumanView.field_rb &&
             gh.a(-4, 11653)) {
-            if (fb.field_e.field_Q.a((byte) 98) > 0) {
+            if (fb.field_e.selection.size((byte) 98) > 0) {
               df.a(param1 ^ -17403, 6);
             } else {
               df.a(param1 - 17405, 7);
             }
           }
-          if (hg.field_rb == 6 &&
+          if (ArmedHumanView.field_rb == 6 &&
             gh.a(-6, 11653)) {
             df.a(-17306, 7);
           }
-          if (hg.field_rb == 7 &&
+          if (ArmedHumanView.field_rb == 7 &&
             gh.a(-5, 11653)) {
             df.a(-17306, 6);
           }
-          if ((6 == hg.field_rb ||
-            hg.field_rb == 7) &&
+          if ((6 == ArmedHumanView.field_rb ||
+            ArmedHumanView.field_rb == 7) &&
             (gh.a(-6, 11653) &&
             gh.a(-5, 11653))) {
             df.a(-17306, 8);
           }
-          if (8 == hg.field_rb &&
+          if (8 == ArmedHumanView.field_rb &&
             gh.a(-9, 11653)) {
             df.a(param1 - 17405, 9);
           }
-          if (hg.field_rb == 9 &&
+          if (ArmedHumanView.field_rb == 9 &&
             gh.a(-10, 11653)) {
             df.a(-17306, 10);
           }
-          if (hg.field_rb == 10 &&
+          if (ArmedHumanView.field_rb == 10 &&
             gh.a(-11, 11653)) {
             df.a(-17306, 11);
           }
-          if (hg.field_rb == 4 &&
+          if (ArmedHumanView.field_rb == 4 &&
             !gh.a(-3, param1 + 11554)) {
             df.a(-17306, 3);
           }
-          if (hg.field_rb != var2_int) {
+          if (ArmedHumanView.field_rb != var2_int) {
             if (!io.field_g &&
-              hg.field_rb != 0) {
+              ArmedHumanView.field_rb != 0) {
               return;
             }
-            fb.field_e.c(true, hg.field_rb);
+            fb.field_e.c(true, ArmedHumanView.field_rb);
             return;
           }
           return;

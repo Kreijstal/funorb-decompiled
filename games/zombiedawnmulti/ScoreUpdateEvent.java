@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fg extends GameEvent {
+final class ScoreUpdateEvent extends GameEvent {
     static String field_l;
     static byte[] field_k;
     static int field_j;
@@ -15,7 +15,7 @@ final class fg extends GameEvent {
         int var1 = 105 % ((22 - param0) / 60);
     }
 
-    fg(int param0, int[] param1) {
+    ScoreUpdateEvent(int param0, int[] param1) {
         super(param0);
         try {
           this.field_i = param1;
@@ -32,15 +32,15 @@ final class fg extends GameEvent {
 
     final static void a(int param0) {
         if (param0 != -29956) {
-          fg.a(-45);
+          ScoreUpdateEvent.a(-45);
         }
     }
 
     final void a(int param0, GameScreen param1) {
         try {
-          param1.a(this.field_i, false);
+          param1.setTeamScores(this.field_i, false);
           if (param0 != 0) {
-            fg.c(-54);
+            ScoreUpdateEvent.c(-54);
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "fg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

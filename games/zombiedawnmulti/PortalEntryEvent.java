@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class op extends GameEvent {
+final class PortalEntryEvent extends GameEvent {
     static String field_l;
     static String field_o;
     private int field_p;
@@ -29,7 +29,7 @@ final class op extends GameEvent {
           if (param0 != 2) {
             field_l = (String) null;
           }
-          if (!op.a(120)) {
+          if (!PortalEntryEvent.a(120)) {
             if (rn.field_f != null &&
               rn.field_f.field_e) {
               rn.a(param0 ^ -79);
@@ -37,10 +37,10 @@ final class op extends GameEvent {
             }
             return;
           }
-          me.field_k.a(jk.field_g, (byte) -27, fg.field_j, true);
+          me.field_k.a(jk.field_g, (byte) -27, ScoreUpdateEvent.field_j, true);
           me.field_k.h((byte) -109);
           while (ba.c(-1)) {
-            me.field_k.a(param0 - 2, pn.field_d, sj.field_p);
+            me.field_k.a(param0 - 2, pn.field_d, InfectionEvent.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,7 +100,7 @@ final class op extends GameEvent {
 
     final void a(int param0, GameScreen param1) {
         try {
-          param1.b(this.field_p, (byte) 127, this.field_q);
+          param1.onUnitEnteredPortal(this.field_p, (byte) 127, this.field_q);
           if (param0 != 0) {
             this.field_p = -21;
           }
@@ -119,11 +119,11 @@ final class op extends GameEvent {
           field_k = null;
           return;
         }
-        op.a(-97);
+        PortalEntryEvent.a(-97);
         field_k = null;
     }
 
-    op() {
+    PortalEntryEvent() {
     }
 
     static {

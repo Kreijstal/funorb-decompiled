@@ -19,8 +19,8 @@ final class qj extends IntrusiveNode {
         try {
           bl.field_h = param1;
           nj.field_f = true;
-          h.field_L = new ne(nb.field_a, ci.field_d, param0, IntrusiveDequeCursor.field_e, bl.field_h);
-          nb.field_a.b(3016, h.field_L);
+          PortalView.field_L = new ne(nb.field_a, ci.field_d, param0, IntrusiveDequeCursor.field_e, bl.field_h);
+          nb.field_a.b(3016, PortalView.field_L);
           if (param2 <= 89) {
             field_j = (String) null;
           }

@@ -377,7 +377,7 @@ final class hd extends un {
             return stackIn_3_0;
           }
           if (param0 == 6) {
-            stackIn_7_0 = gm.field_ob;
+            stackIn_7_0 = HumanView.field_ob;
             return stackIn_7_0;
           }
           if (param0 == 7) {

@@ -29,7 +29,7 @@ final class ob extends DualLinkNode {
           var1 = ki.a((byte) -127);
         }
         if (var1.length() == 0) {
-          var1 = hg.field_vb;
+          var1 = ArmedHumanView.field_vb;
         }
         return var1;
     }

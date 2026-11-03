@@ -46,7 +46,7 @@ final class jq {
         if (param3 >= param0 &&
           hp.a((byte) 11, var7, 7) == 0) {
           var8 = new ve(3 + param5, param1 - 12, 5, 0.0, 8.0, 1.5, 1, 1.5, 0.99, 1);
-          var8.field_k = param1 * 79 + 13 * param5 + wf.field_m;
+          var8.field_k = param1 * 79 + 13 * param5 + PowerupEvent.field_m;
           var9 = 200;
           var10 = var9 * 128;
           var11 = var9 * 64;

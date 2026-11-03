@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends id {
+final class jj extends SceneObject {
     private boolean field_G;
     private int field_R;
     private int field_H;
@@ -30,7 +30,7 @@ final class jj extends id {
         field_F = null;
     }
 
-    final void f(byte param0) {
+    final void tick(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
@@ -127,11 +127,11 @@ final class jj extends id {
 
     final boolean a(int param0, int param1, int param2) {
         int var5 = 0;
-        int var4 = this.field_z >> 16;
+        int var4 = this.positionX >> 16;
         int var5Lifetime1;
         if (param0 != 7) {
           this.field_K = -42;
-          var5 = this.field_E >> 16;
+          var5 = this.positionY >> 16;
           if (param1 >= 24 + var4 - 7) {
             return false;
           }
@@ -146,7 +146,7 @@ final class jj extends id {
           }
           return false;
         }
-        var5Lifetime1 = this.field_E >> 16;
+        var5Lifetime1 = this.positionY >> 16;
         if (param1 >= 24 + var4 - 7) {
           return false;
         }
@@ -237,12 +237,12 @@ final class jj extends id {
         this.field_Q = param3;
         this.field_N = this.field_G ? 255 : 96;
         this.field_K = 3;
-        this.field_P = null == op.field_m ? 3000 : op.field_m.computeEffectDuration((byte) 32, this.field_Q, 3000);
+        this.field_P = null == PortalEntryEvent.field_m ? 3000 : PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.field_Q, 3000);
         this.field_G = param4 ? true : false;
         this.field_J = 1;
     }
 
-    final void a(int param0, nm param1) {
+    final void draw(int param0, Camera param1) {
         Sprite stackIn_9_0 = null;
         int stackIn_10_1 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -257,17 +257,17 @@ final class jj extends id {
         int var7 = 0;
         Sprite var8 = null;
         try {
-          var3_int = param1.c(this.g(-43), -20126) - 24;
+          var3_int = param1.worldToScreenX(this.getX(-43), -20126) - 24;
           if (param0 != -10136) {
             this.field_P = -6;
           }
-          var4 = -48 + param1.d(this.h(118), 119);
+          var4 = -48 + param1.worldToScreenY(this.getY(118), 119);
           if (!io.a(var3_int, var4, (byte) -86, param1)) {
             return;
           }
           var5 = this.field_Q;
-          var6 = op.field_m.field_D[var5][0];
-          var7 = op.field_m.field_D[var5][1];
+          var6 = PortalEntryEvent.field_m.field_D[var5][0];
+          var7 = PortalEntryEvent.field_m.field_D[var5][1];
           var8 = am.a(this.field_R, var7, this.field_C, param0 ^ -10135, var6);
           if (this.field_G) {
             stackIn_9_0 = ig.field_d[1];

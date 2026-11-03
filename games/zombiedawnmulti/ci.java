@@ -49,7 +49,7 @@ final class ci {
         int var4 = 0;
         String var8 = null;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        String var6 = "(" + PacketBuffer.field_k + " " + jp.field_e + " " + ij.field_d + ") " + op.field_i;
+        String var6 = "(" + PacketBuffer.field_k + " " + jp.field_e + " " + ij.field_d + ") " + PortalEntryEvent.field_i;
         String var1 = var6;
         if (param0 >= hd.field_q) {
         } else {
@@ -148,8 +148,8 @@ final class ci {
           bf.field_h.a(18, 2 + jk.field_f, 42 + DualLinkNode.field_o, -42 - DualLinkNode.field_o + ga.field_r.field_zb, -3344);
           bf.field_n.a(DualLinkNode.field_o, 2, ga.field_r.field_zb, 0, -2 - jk.field_f + (ga.field_r.field_z - 20), -31465, 20 + (2 + jk.field_f));
           jp.field_b.a(40, JaggrabDownloader.field_i.field_z - 40, JaggrabDownloader.field_i.field_zb, 0, -3344);
-          gg.field_m.a(30, 0, fc.field_a.field_zb, 0, -3344);
-          SocketConnector.field_a.a(-2 + fc.field_a.field_z - 70, 30, fc.field_a.field_zb, 0, -3344);
+          gg.field_m.a(30, 0, LevelData.field_a.field_zb, 0, -3344);
+          SocketConnector.field_a.a(-2 + LevelData.field_a.field_z - 70, 30, LevelData.field_a.field_zb, 0, -3344);
           var2_int = 3 + kj.field_h;
           if (2 > qo.field_r.length) {
             var2_int--;
@@ -236,7 +236,7 @@ final class ci {
                     ma.field_b[var6][0].a(LevelFileCatalog.field_c, 2, var3, 38, var8, var5, 2);
                     var8 += 40;
                   }
-                  var9_int = 2 + (-var8 + (-5 + fc.field_a.field_zb));
+                  var9_int = 2 + (-var8 + (-5 + LevelData.field_a.field_zb));
                   var10 = ma.field_b[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;

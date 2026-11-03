@@ -50,7 +50,7 @@ final class vl extends IntrusiveNode {
                 break;
               }
               var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!ti.a((byte) 87, (CharSequence) ((Object) var7_ref_String))) {
+              if (!UnitView.a((byte) 87, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -87,7 +87,7 @@ final class vl extends IntrusiveNode {
               break;
             }
             var9 = param0.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!ti.a((byte) 74, (CharSequence) ((Object) var9))) {
+            if (!UnitView.a((byte) 74, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {

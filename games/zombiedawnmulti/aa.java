@@ -21,7 +21,7 @@ final class aa extends ii {
           PcmSampleStream var3 = (PcmSampleStream) null;
           aa.a(true, (PcmSampleStream) null);
         }
-        so.field_j.a(var2, false);
+        UnitStateEvent.field_j.a(var2, false);
         qo.b(true, param1);
         return var2;
     }

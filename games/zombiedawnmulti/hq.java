@@ -286,7 +286,7 @@ class hq implements WidgetActionListener, rk {
             }
             var11 = var8.a((byte) -126, var9);
             var12 = var8.a((byte) -126, var10);
-            nm.a(param3 + param5.field_y, param1 + param5.field_i + param5.field_w, (byte) 105, param5.field_y + (param3 + param5.field_n), param5.field_i + param1);
+            Camera.a(param3 + param5.field_y, param1 + param5.field_i + param5.field_w, (byte) 105, param5.field_y + (param3 + param5.field_n), param5.field_i + param1);
             for (var13 = var11; var12 >= var13; var13++) {
               var14 = var8.field_e[var13];
               if (var11 != var13) {
@@ -407,7 +407,7 @@ class hq implements WidgetActionListener, rk {
             var10 = this.a(var9, param0, 15921, param2);
             var11 = this.a(param0, 0, param4) + Math.max(0, var8.field_d);
             var12 = this.a(param0, param1 - 2, param4) + Math.min(this.a(-109, param0), Math.min(var8.field_h, var14.field_e.length > 1 + var7 ? var13.field_e[1 + var7].field_d : var8.field_h));
-            nm.a(param2 + param0.field_y, param0.field_w + param4 + param0.field_i, (byte) 105, param0.field_n + (param2 + param0.field_y), param0.field_i + param4);
+            Camera.a(param2 + param0.field_y, param0.field_w + param4 + param0.field_i, (byte) 105, param0.field_n + (param2 + param0.field_y), param0.field_i + param4);
             ra.field_o.a(var12, var10, var11, this.field_h, (byte) 100, var10);
             ql.a(true);
           }
@@ -529,7 +529,7 @@ class hq implements WidgetActionListener, rk {
         int var12Lifetime1;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          nm.a(param7 + param5.field_y, param2 + param5.field_i + param5.field_w, (byte) 105, param5.field_n + param7 + param5.field_y, param2 + param5.field_i);
+          Camera.a(param7 + param5.field_y, param2 + param5.field_i + param5.field_w, (byte) 105, param5.field_n + param7 + param5.field_y, param2 + param5.field_i);
           var9_int = this.a(param5, true);
           if (param3 != 1) {
             this.field_q = -65;

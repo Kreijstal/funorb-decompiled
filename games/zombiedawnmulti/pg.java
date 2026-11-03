@@ -42,13 +42,13 @@ final class pg {
         }
     }
 
-    final static gm a(int param0, byte param1, int param2, int param3) {
+    final static HumanView a(int param0, byte param1, int param2, int param3) {
         if (param1 < -65) {
-          return (gm) ((Object) new hg(param0, param3, param2));
+          return (HumanView) ((Object) new ArmedHumanView(param0, param3, param2));
         }
         String var5 = (String) null;
         pg.a((String) null, (byte) -66);
-        return (gm) ((Object) new hg(param0, param3, param2));
+        return (HumanView) ((Object) new ArmedHumanView(param0, param3, param2));
     }
 
     final static ma a(String param0, byte param1) {
@@ -79,7 +79,7 @@ final class pg {
               return null;
             }
           }
-          stackIn_13_0 = so.field_t;
+          stackIn_13_0 = UnitStateEvent.field_t;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

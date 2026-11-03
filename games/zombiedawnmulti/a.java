@@ -27,7 +27,7 @@ final class a {
         pm.field_P = null;
         nj.field_f = false;
         if (IntrusiveDequeCursor.field_e) {
-          h.field_L.c(false);
+          PortalView.field_L.c(false);
           if (param0 == -1) {
             return;
           }
@@ -44,7 +44,7 @@ final class a {
           }
           pm.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) pm.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mi.field_Nb)}, 77);
         }
-        h.field_L.m(-7435);
+        PortalView.field_L.m(-7435);
         sp.c(param0 + 1);
         if (param0 == -1) {
           return;

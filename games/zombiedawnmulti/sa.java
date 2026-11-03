@@ -360,7 +360,7 @@ final class sa extends IntrusiveNode {
                 var24 = param0.field_t[var23];
                 var25 = param0.field_w[var23];
                 var26 = param0.field_I[var23];
-                nm.field_m[var23] = var9 + (var25 * var15 + var24 * var12 + var18 * var26 >> 16);
+                Camera.field_m[var23] = var9 + (var25 * var15 + var24 * var12 + var18 * var26 >> 16);
                 nh.field_i[var23] = var10 + (var13 * var24 + var25 * var16 + var26 * var19 >> 16);
                 cj.field_F[var23] = (var20 * var26 + (var17 * var25 + var24 * var14) >> 16) + var11;
                 var24 = param0.field_e[var23];

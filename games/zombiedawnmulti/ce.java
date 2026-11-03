@@ -6,19 +6,19 @@ final class ce extends IntrusiveNode {
     static String field_o;
     private int field_j;
     private Sprite field_f;
-    private lq field_p;
+    private DualLinkDeque field_p;
     private int field_n;
     int field_s;
     static int field_k;
     private int field_h;
     static String[] field_g;
-    private fh field_i;
+    private NavigationGrid field_i;
     int field_l;
     static int field_r;
     int field_q;
     int field_m;
 
-    final void a(fh param0, int param1) {
+    final void a(NavigationGrid param0, int param1) {
         boolean stackIn_30_0 = false;
         int stackIn_37_0 = 0;
         int stackIn_51_0 = 0;
@@ -33,7 +33,7 @@ final class ce extends IntrusiveNode {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        nm var6_ref_nm = null;
+        Camera var6_ref_nm = null;
         int var7_int = 0;
         IntrusiveDeque var7 = null;
         lk var7_ref = null;
@@ -52,15 +52,15 @@ final class ce extends IntrusiveNode {
           var3_int = 0 % ((59 - param1) / 56);
           this.field_n = 2 * ip.field_f + (this.field_t - 1);
           this.field_h = 2 * ip.field_f + this.field_m - 1;
-          if (this.field_i.field_i.field_e <= this.field_n) {
-            this.field_n = -1 + this.field_i.field_i.field_e;
+          if (this.field_i.level.field_e <= this.field_n) {
+            this.field_n = -1 + this.field_i.level.field_e;
           }
-          if (this.field_h >= this.field_i.field_i.field_d) {
-            this.field_h = -1 + this.field_i.field_i.field_d;
+          if (this.field_h >= this.field_i.level.field_d) {
+            this.field_h = -1 + this.field_i.level.field_d;
           }
           this.field_j = 0;
           if (IsaacRandom.field_j) {
-            this.field_p = new lq();
+            this.field_p = new DualLinkDeque();
             if (this.field_q != 1) {
               var4 = 48 * ip.field_f;
               var5 = ip.field_f * 48;
@@ -79,15 +79,15 @@ final class ce extends IntrusiveNode {
                 break;
               }
               g.c(this.field_f);
-              var6_ref_nm = new nm(this.field_i.field_r, this.field_i.field_c);
-              var6_ref_nm.field_g = 240 + this.field_t * 24;
-              var6_ref_nm.field_k = this.field_m * 24 + 320;
+              var6_ref_nm = new Camera(this.field_i.pixelWidth, this.field_i.pixelHeight);
+              var6_ref_nm.centerY = 240 + this.field_t * 24;
+              var6_ref_nm.centerX = this.field_m * 24 + 320;
               this.field_i.a((byte) -12, var6_ref_nm);
               if (0 == this.field_q) {
                 SoftwareRasterizer.clear();
               }
               this.field_i.a(1, false, var6_ref_nm, -1);
-              var7 = fb.field_e.field_H;
+              var7 = fb.field_e.sceneObjects;
               var8 = var7.c(46);
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (null == var8))) {
@@ -96,7 +96,7 @@ final class ce extends IntrusiveNode {
                 stackIn_30_0 = stackOut_29_0;
                 if (var11 == 0) {
                   if (stackIn_30_0) {
-                    ((id) (var8)).a(-10136, var6_ref_nm);
+                    ((SceneObject) (var8)).draw(-10136, var6_ref_nm);
                   }
                   var8 = var7.b(6);
                   continue;
@@ -137,14 +137,14 @@ final class ce extends IntrusiveNode {
               var5Lifetime1 = this.field_m;
               while (var5Lifetime1 <= this.field_h) {
                 stackIn_51_0Lifetime1 = 0;
-                stackIn_51_1Lifetime1 = this.field_i.field_i.field_h[var4Lifetime1][var5Lifetime1] & 1;
+                stackIn_51_1Lifetime1 = this.field_i.level.field_h[var4Lifetime1][var5Lifetime1] & 1;
                 if (stackIn_51_0Lifetime1 != stackIn_51_1Lifetime1 ||
                   this.field_i.field_k[var4Lifetime1][var5Lifetime1]) {
                   var6Lifetime1 = 0;
                   while (2 > var6Lifetime1) {
                     var7_ref = p.a(var5Lifetime1 * 24, var4Lifetime1 * 24, 100, true);
-                    this.field_p.a(29664, var7_ref);
-                    op.field_m.characters.a(-25612, var7_ref);
+                    this.field_p.add(29664, var7_ref);
+                    PortalEntryEvent.field_m.characters.a(-25612, var7_ref);
                     var6Lifetime1++;
                   }
                 }
@@ -273,7 +273,7 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0, nm param1) {
+    final void a(byte param0, Camera param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -287,13 +287,13 @@ final class ce extends IntrusiveNode {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param1.c(this.field_m * 24, -20126);
-          param1.c((this.field_h + 1) * 24, -20126);
+          var3_int = param1.worldToScreenX(this.field_m * 24, -20126);
+          param1.worldToScreenX((this.field_h + 1) * 24, -20126);
           if (param0 != 19) {
             return;
           }
-          var4 = param1.d(this.field_t * 24, 114);
-          param1.d((1 + this.field_n) * 24, 127);
+          var4 = param1.worldToScreenY(this.field_t * 24, 114);
+          param1.worldToScreenY((1 + this.field_n) * 24, 127);
           var5 = 50;
           if (this.field_j == 0) {
             var5 = -this.field_s + this.field_l;
@@ -332,7 +332,7 @@ final class ce extends IntrusiveNode {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
-        fc stackIn_14_0;
+        LevelData stackIn_14_0;
         int stackIn_14_1;
         int stackIn_14_2;
         int stackIn_14_3;
@@ -351,12 +351,12 @@ final class ce extends IntrusiveNode {
             }
             var3 = this.field_m;
             while (var3 <= this.field_h) {
-              stackIn_14_0 = this.field_i.field_i;
+              stackIn_14_0 = this.field_i.level;
               stackIn_14_1 = -8927;
               stackIn_14_2 = var2_int;
               stackIn_14_3 = var3;
-              stackIn_15_4 = (0 != (1 & this.field_i.field_i.field_h[var2_int][var3]));
-              ((fc) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_15_4);
+              stackIn_15_4 = (0 != (1 & this.field_i.level.field_h[var2_int][var3]));
+              ((LevelData) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_15_4);
               this.field_i.field_k[var2_int][var3] = false;
               var3++;
             }
@@ -412,9 +412,9 @@ final class ce extends IntrusiveNode {
               }
               boolean decompiledFrameCompleted0 = true;
               if (this.field_p != null) {
-                var3 = this.field_p.c((byte) 115);
+                var3 = this.field_p.first((byte) 115);
                 while (var3 != null) {
-                  var2 = this.field_p.b((byte) 97);
+                  var2 = this.field_p.next((byte) 97);
                   ((lk) (var3)).field_S = 1;
                   stackOut_40_0 = ((lk) (var3)).field_O;
                   stackIn_48_0 = stackOut_40_0 ? 1 : 0;
@@ -456,7 +456,7 @@ final class ce extends IntrusiveNode {
         int var4 = 0;
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
-        fc stackIn_17_0;
+        LevelData stackIn_17_0;
         int stackIn_17_1;
         int stackIn_17_2;
         int stackIn_17_3;
@@ -481,15 +481,15 @@ final class ce extends IntrusiveNode {
               }
               var3 = this.field_m;
               while (this.field_h >= var3) {
-                stackIn_6_0 = ~(this.field_i.field_i.field_g[var2_int][var3] & -2147483648);
+                stackIn_6_0 = ~(this.field_i.level.field_g[var2_int][var3] & -2147483648);
                 stackIn_6_1 = -1;
                 if (stackIn_6_0 == stackIn_6_1) {
-                  stackIn_17_0 = this.field_i.field_i;
+                  stackIn_17_0 = this.field_i.level;
                   stackIn_17_1 = -8927;
                   stackIn_17_2 = var2_int;
                   stackIn_17_3 = var3;
                   stackIn_18_4 = (0 == this.field_q);
-                  ((fc) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_18_4);
+                  ((LevelData) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_18_4);
                   stackIn_21_0 = this.field_i.field_k[var2_int];
                   stackIn_21_1 = var3;
                   stackIn_22_2 = (this.field_q == 0);
@@ -540,7 +540,7 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    ce(fh param0, int param1, int param2, int param3, int param4) {
+    ce(NavigationGrid param0, int param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

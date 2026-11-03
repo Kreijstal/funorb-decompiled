@@ -101,8 +101,8 @@ final class lb {
         if (!IntrusiveDequeCursor.field_e) {
           throw new IllegalStateException();
         }
-        if (h.field_L != null) {
-          h.field_L.m(-7435);
+        if (PortalView.field_L != null) {
+          PortalView.field_L.m(-7435);
         }
         String var1 = ob.e(-24093);
         b.field_c = new qm(var1, (String) null, true, false, false);

@@ -51,14 +51,14 @@ final class md {
         RuntimeException var2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          sj.a(NodeHashTableIterator.field_d, -891231071, param0, true, lj.field_n, 0, ab.field_j);
+          InfectionEvent.a(NodeHashTableIterator.field_d, -891231071, param0, true, lj.field_n, 0, ab.field_j);
           for (var2_int = 0; var2_int < lj.field_n; var2_int++) {
             la.field_c[var2_int + param0] = var2_int;
           }
           if (param1 > -27) {
             field_u = (IntrusiveDeque) null;
           }
-          sj.a(ba.field_m, -891231071, param0 + param0, false, param0 + lj.field_n, param0, mj.field_Ub);
+          InfectionEvent.a(ba.field_m, -891231071, param0 + param0, false, param0 + lj.field_n, param0, mj.field_Ub);
           if (param0 < lj.field_n) {
             lj.field_n = param0;
           }
@@ -390,13 +390,13 @@ final class md {
           ql.field_b = new cj(0L, vo.field_m);
           ql.field_b.field_R = 1;
           kj.field_u = new cj(0L, ai.field_c, SecondaryNodeDeque.field_b.toUpperCase());
-          ro.field_O = new cj(0L, LevelFileCatalog.field_d, uo.field_j.toUpperCase());
+          ro.field_O = new cj(0L, LevelFileCatalog.field_d, AttackEvent.field_j.toUpperCase());
           ml.field_Lb = new cj(0L, cg.field_f);
           PacketBuffer.field_g = new cj(0L, vd.field_a, vh.field_Nb);
           ud.field_M = new cj(0L, al.field_fb, GameWorld.field_p);
           tk.field_l = new cj(0L, al.field_fb, ck.field_b);
           sc.field_d = new cj(0L, al.field_fb, jl.field_t);
-          InflaterDecompressor.field_h = new cj(0L, al.field_fb, op.field_k);
+          InflaterDecompressor.field_h = new cj(0L, al.field_fb, PortalEntryEvent.field_k);
           bp.field_w = new cj(0L, pn.field_g, fd.field_N);
           SimEntity.field_H = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
           ia.field_t = new cj(0L, he.field_i, sn.field_Gb.toUpperCase());
@@ -480,7 +480,7 @@ final class md {
             }
           }
           mi.field_Ib[2] = new cj(0L, m.field_B, qj.field_j);
-          ma.field_b[2] = new mo[]{new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[0], ArchiveIndex.field_f), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[1], wf.field_k)};
+          ma.field_b[2] = new mo[]{new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[0], ArchiveIndex.field_f), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[1], PowerupEvent.field_k)};
           if (r.field_f > 1) {
             mi.field_Ib[3] = new cj(0L, m.field_B, gj.field_d);
             array$1 = new mo[r.field_f + 1];
@@ -537,9 +537,9 @@ final class md {
           eb.field_B.field_lb = 1;
           var17 = eb.field_B;
           var17.field_R = 1;
-          fc.field_a = new cj(0L, (cj) null);
-          fc.field_a.a((byte) 50, gg.field_m);
-          fc.field_a.a((byte) 50, SocketConnector.field_a);
+          LevelData.field_a = new cj(0L, (cj) null);
+          LevelData.field_a.a((byte) 50, gg.field_m);
+          LevelData.field_a.a((byte) 50, SocketConnector.field_a);
           SocketConnector.field_a.a((byte) 50, ik.field_d);
           for (var18Lifetime2 = 0; 4 + param9 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
@@ -553,9 +553,9 @@ final class md {
               }
             }
           }
-          fc.field_a.a((byte) 50, en.field_b);
-          fc.field_a.a((byte) 50, GameKeyHandler.field_a);
-          fc.field_a.a((byte) 50, eb.field_B);
+          LevelData.field_a.a((byte) 50, en.field_b);
+          LevelData.field_a.a((byte) 50, GameKeyHandler.field_a);
+          LevelData.field_a.a((byte) 50, eb.field_B);
           mq.field_l = new cj(0L, kc.field_c, p.field_c.toUpperCase());
           pg.field_a = new cj(0L, GameWorld.field_n, qq.field_d.toUpperCase());
           return;

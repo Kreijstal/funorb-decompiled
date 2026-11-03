@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class id extends TertiaryLinkNode {
+abstract class SceneObject extends TertiaryLinkNode {
     int field_C;
     static String field_x;
     static String field_A;
-    int field_z;
+    int positionX;
     static ak field_B;
-    int field_y;
+    int objectId;
     static int field_D;
-    int field_E;
+    int positionY;
 
-    abstract void f(byte param0);
+    abstract void tick(byte param0);
 
-    abstract void a(int param0, nm param1);
+    abstract void draw(int param0, Camera param1);
 
     final static void d(byte param0) {
         IntrusiveNode var1 = null;
@@ -73,9 +73,9 @@ abstract class id extends TertiaryLinkNode {
         field_A = null;
     }
 
-    final int h(int param0) {
+    final int getY(int param0) {
         int var2 = 60 / ((12 - param0) / 58);
-        return this.field_E >> 16;
+        return this.positionY >> 16;
     }
 
     final static ld a(cj param0, cj param1, byte param2, int[] param3, cj param4) {
@@ -163,15 +163,15 @@ abstract class id extends TertiaryLinkNode {
         }
     }
 
-    final int g(int param0) {
+    final int getX(int param0) {
         int var2 = -126 / ((param0 - 13) / 45);
-        return this.field_z >> 16;
+        return this.positionX >> 16;
     }
 
-    id(int param0, int param1, int param2) {
+    SceneObject(int param0, int param1, int param2) {
         this.field_C = param2;
-        this.field_E = param1 << 16;
-        this.field_z = param0 << 16;
+        this.positionY = param1 << 16;
+        this.positionX = param0 << 16;
     }
 
     static {

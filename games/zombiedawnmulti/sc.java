@@ -198,11 +198,11 @@ final class sc {
     }
 
     final static void d(byte param0) {
-        if (fh.field_m != null) {
-          ec.field_b = fh.field_m;
+        if (NavigationGrid.field_m != null) {
+          ec.field_b = NavigationGrid.field_m;
           ua.field_E = ke.field_j;
           ec.field_b.field_ob = -1;
-          fh.field_m = null;
+          NavigationGrid.field_m = null;
           ec.field_b.field_xb = -1;
           ke.field_j = null;
         }

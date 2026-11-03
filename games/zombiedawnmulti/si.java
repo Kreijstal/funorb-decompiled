@@ -93,9 +93,9 @@ final class si extends nc {
           this.field_q = param2;
           we.field_g[43] = ec.field_a;
           this.field_n = 0;
-          stackIn_4_1 = !(fb.field_e.field_M >= 0);
+          stackIn_4_1 = !(fb.field_e.localTeam >= 0);
           this.field_o = stackIn_4_1;
-          if (fb.field_e.field_M != this.field_q) {
+          if (fb.field_e.localTeam != this.field_q) {
             if (!this.field_o) {
               this.field_l = gf.field_c;
             } else {
@@ -216,7 +216,7 @@ final class si extends nc {
           tg.field_g.a(-17853, param0);
           qe.a(param4, -8995, param3, param2);
           dg.i(4);
-          id.field_B = mp.field_b;
+          SceneObject.field_B = mp.field_b;
           ta.field_hb = mp.field_b;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "si.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -500,12 +500,12 @@ final class si extends nc {
           var11 = 0;
           for (var12 = 0; var12 < this.field_z.teamCount; var12++) {
             var13 = this.field_A[var12];
-            stackIn_22_0 = (wp.field_h.field_M != var13) ? 0 : 1;
+            stackIn_22_0 = (wp.field_h.localTeam != var13) ? 0 : 1;
             var14 = stackIn_22_0;
             var15 = var9 * this.field_y[var13] / this.field_w;
             stackIn_25_0 = ((this.field_z.field_F & 1 << var13) == 0) ? 0 : 1;
             var16 = stackIn_25_0;
-            stackIn_28_0 = ((op.field_m.field_j & 1 << var13) == 0) ? 0 : 1;
+            stackIn_28_0 = ((PortalEntryEvent.field_m.field_j & 1 << var13) == 0) ? 0 : 1;
             var17 = stackIn_28_0;
             stackIn_31_0 = (var9 >= var15) ? var15 : var9;
             var15Lifetime2 = stackIn_31_0;
@@ -564,8 +564,8 @@ final class si extends nc {
                 var18 += 28;
               }
             }
-            var19Lifetime1 = op.field_m.field_o[var13];
-            var20Lifetime1 = op.field_m.field_v[var13];
+            var19Lifetime1 = PortalEntryEvent.field_m.field_o[var13];
+            var20Lifetime1 = PortalEntryEvent.field_m.field_v[var13];
             if (this.field_z.field_i) {
               qp.field_w.a(Integer.toString(var20Lifetime1), var8_int, 15 + var10, 16777215, 1, var6);
               stackIn_65_0 = qp.field_w;
@@ -581,10 +581,10 @@ final class si extends nc {
             } else {
               qp.field_w.a(Integer.toString(var20Lifetime1), var8_int, var10 + 22, 16777215, 1, var6);
             }
-            var21 = op.field_m.field_D[var13][0];
-            var22 = op.field_m.field_D[var13][1];
+            var21 = PortalEntryEvent.field_m.field_D[var13][0];
+            var22 = PortalEntryEvent.field_m.field_D[var13][1];
             var23 = 4;
-            var24 = wf.field_m / gg.field_b[var23];
+            var24 = PowerupEvent.field_m / gg.field_b[var23];
             var24 = var24 % gg.field_j[var23];
             var24 = var24 + gg.field_l[var23];
             am.a(var24, var22, var11, 1, var21).c(8, var10 - 11, var6);
@@ -650,7 +650,7 @@ final class si extends nc {
           }
           SoftwareRasterizer.setClip(0, 0, var7Lifetime1, 480);
           for (var9Lifetime1Lifetime2 = 0; var9Lifetime1Lifetime2 < 64; var9Lifetime1Lifetime2++) {
-            SoftwareRasterizer.a(-176 + ((var9Lifetime1Lifetime2 / 11 + 25) * wf.field_m + 1000 * var9Lifetime1Lifetime2) % 10560, 3952, 176, var6Lifetime1 * 125 >> 8, wp.field_f);
+            SoftwareRasterizer.a(-176 + ((var9Lifetime1Lifetime2 / 11 + 25) * PowerupEvent.field_m + 1000 * var9Lifetime1Lifetime2) % 10560, 3952, 176, var6Lifetime1 * 125 >> 8, wp.field_f);
           }
           SoftwareRasterizer.resetClip();
           rq.field_l.a(30, 231, var6Lifetime1);
@@ -666,7 +666,7 @@ final class si extends nc {
               63 > var12Lifetime1) {
               pq.field_o.a(ga.field_v[var11Lifetime1], 166, var6Lifetime1);
               for (var14Lifetime1 = 0; var14Lifetime1 < 8; var14Lifetime1++) {
-                SoftwareRasterizer.a(10 + ga.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * wf.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
+                SoftwareRasterizer.a(10 + ga.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * PowerupEvent.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
               }
               w.field_z.a(ga.field_v[var11Lifetime1], 166, var6Lifetime1);
               mg.a(var12Lifetime1, var13Lifetime1, (byte) 46, 106, FullscreenFocusCanvas.field_k, var6Lifetime1, -28 + ga.field_v[var11Lifetime1]);
@@ -711,10 +711,10 @@ final class si extends nc {
               qj.field_m.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
               SoftwareRasterizer.setClip(0, 0, 640, 366);
               for (var13Lifetime1Lifetime1 = 0; 16 > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
-                SoftwareRasterizer.a((48 + 209 * var11Lifetime1Lifetime1 << 4) + 8, 4000 + (wf.field_m * (var13Lifetime1Lifetime1 / 5 + 19) + 300 * var13Lifetime1Lifetime1) % 1920, 112, 125 * var6Lifetime1 >> 8, wp.field_f);
+                SoftwareRasterizer.a((48 + 209 * var11Lifetime1Lifetime1 << 4) + 8, 4000 + (PowerupEvent.field_m * (var13Lifetime1Lifetime1 / 5 + 19) + 300 * var13Lifetime1Lifetime1) % 1920, 112, 125 * var6Lifetime1 >> 8, wp.field_f);
               }
               for (var13Lifetime1Lifetime1Lifetime1 = 0; var13Lifetime1Lifetime1Lifetime1 < 8; var13Lifetime1Lifetime1Lifetime1++) {
-                SoftwareRasterizer.a(((var13Lifetime1Lifetime1Lifetime1 / 5 + 19) * wf.field_m + var13Lifetime1Lifetime1Lifetime1 * 300) % 720 + 8 + (209 * var11Lifetime1Lifetime1 + 48 << 4), 5744, 112, var6Lifetime1 * 125 >> 8, wp.field_f);
+                SoftwareRasterizer.a(((var13Lifetime1Lifetime1Lifetime1 / 5 + 19) * PowerupEvent.field_m + var13Lifetime1Lifetime1Lifetime1 * 300) % 720 + 8 + (209 * var11Lifetime1Lifetime1 + 48 << 4), 5744, 112, var6Lifetime1 * 125 >> 8, wp.field_f);
               }
               pm.field_N.a(var11Lifetime1Lifetime1 * 209 + 38, 244, var6Lifetime1);
               SoftwareRasterizer.resetClip();
@@ -873,10 +873,10 @@ final class si extends nc {
 
     final void f(int param0) {
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (0 != (op.field_m.field_j & 1 << fb.field_e.field_M)) {
+        if (0 != (PortalEntryEvent.field_m.field_j & 1 << fb.field_e.localTeam)) {
           we.field_g[42] = ih.field_c;
         } else {
-          if (cm.a(op.field_m.field_j, true) > 0) {
+          if (cm.a(PortalEntryEvent.field_m.field_j, true) > 0) {
             we.field_g[42] = ih.field_c;
           } else {
             we.field_g[42] = u.field_j;
@@ -929,7 +929,7 @@ final class si extends nc {
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (0 == wf.field_m % 2) {
+            if (0 == PowerupEvent.field_m % 2) {
               var6 = this.field_u;
               var2 = var6;
               for (var3 = 0; var6.length > var3; var3++) {

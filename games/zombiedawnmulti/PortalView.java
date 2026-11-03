@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends id {
+final class PortalView extends SceneObject {
     private int field_J;
     private int field_S;
     static ne field_L;
@@ -76,7 +76,7 @@ final class h extends id {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 19313) {
-            h.a((ResourceArchive) null, 102);
+            PortalView.loadGraphics((ResourceArchive) null, 102);
           }
           if (2 <= param0) {
             stackIn_5_0 = 2;
@@ -95,7 +95,7 @@ final class h extends id {
         }
     }
 
-    final static boolean a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
+    final static boolean areGraphicsArchivesReady(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -171,7 +171,7 @@ final class h extends id {
           field_K = null;
           field_H = null;
           if (param0) {
-            h.b(true);
+            PortalView.b(true);
           }
           field_L = null;
           field_F = null;
@@ -201,7 +201,7 @@ final class h extends id {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadGraphics(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_1861_0;
             StringBuilder stackIn_1861_1;
@@ -378,7 +378,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-122, "UNRESEARCHED");
                 if (null != var2) {
-                  fh.field_g = qe.a(-2739, var2);
+                  NavigationGrid.field_g = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "FULLY_RESEARCHED");
                 if (var2 != null) {
@@ -386,7 +386,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-127, "PARTIAL_RESEARCHED");
                 if (null != var2) {
-                  fh.field_d = qe.a(-2739, var2);
+                  NavigationGrid.field_d = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "comma_seperated_values");
                 if (var2 != null) {
@@ -650,19 +650,19 @@ final class h extends id {
                 }
                 var2 = qe.a(-123, "stage_name,0");
                 if (var2 != null) {
-                  ti.field_M[0] = qe.a(-2739, var2);
+                  UnitView.field_M[0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "stage_name,1");
                 if (var2 != null) {
-                  ti.field_M[1] = qe.a(-2739, var2);
+                  UnitView.field_M[1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "stage_name,2");
                 if (null != var2) {
-                  ti.field_M[2] = qe.a(-2739, var2);
+                  UnitView.field_M[2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "stage_name,3");
                 if (var2 != null) {
-                  ti.field_M[3] = qe.a(-2739, var2);
+                  UnitView.field_M[3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "levelselect_title,0");
                 if (null != var2) {
@@ -1090,7 +1090,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-126, "MENU_TEXT_GRAPHICS_MEDIUM");
                 if (null != var2) {
-                  jm.field_l = qe.a(-2739, var2);
+                  FightEvent.field_l = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "MENU_TEXT_GRAPHICS_BEST");
                 if (var2 != null) {
@@ -1098,7 +1098,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-127, "benefits_1");
                 if (null != var2) {
-                  nm.field_b = qe.a(-2739, var2);
+                  Camera.field_b = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "benefits_2");
                 if (var2 != null) {
@@ -1419,7 +1419,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-122, "teaser_POWERUP_TELEPORT");
                 if (null != var2) {
-                  ti.field_Z = qe.a(-2739, var2);
+                  UnitView.field_Z = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "teaser_TRAIT_HUNGRY");
                 if (null != var2) {
@@ -1527,7 +1527,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-124, "tip_POWERUP_MELTDOWN");
                 if (null != var2) {
-                  op.field_j = qe.a(-2739, var2);
+                  PortalEntryEvent.field_j = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "tip_POWERUP_PHANTOM");
                 if (var2 != null) {
@@ -1591,7 +1591,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-124, "tip_POWERUP_COUNTER");
                 if (null != var2) {
-                  fh.field_e = qe.a(-2739, var2);
+                  NavigationGrid.field_e = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "tip_POWERUP_TELEPORT");
                 if (null != var2) {
@@ -1711,7 +1711,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-128, "endofgame");
                 if (var2 != null) {
-                  lq.field_a = qe.a(-2739, var2);
+                  DualLinkDeque.field_a = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "endoffreegame");
                 if (var2 != null) {
@@ -1955,113 +1955,113 @@ final class h extends id {
                 }
                 var2 = qe.a(-124, "getready,0");
                 if (var2 != null) {
-                  gm.field_pb[0] = qe.a(-2739, var2);
+                  HumanView.field_pb[0] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "getready,1");
                 if (null != var2) {
-                  gm.field_pb[1] = qe.a(-2739, var2);
+                  HumanView.field_pb[1] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "getready,2");
                 if (var2 != null) {
-                  gm.field_pb[2] = qe.a(-2739, var2);
+                  HumanView.field_pb[2] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "getready,3");
                 if (null != var2) {
-                  gm.field_pb[3] = qe.a(-2739, var2);
+                  HumanView.field_pb[3] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "getready,4");
                 if (null != var2) {
-                  gm.field_pb[4] = qe.a(-2739, var2);
+                  HumanView.field_pb[4] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "getready,5");
                 if (var2 != null) {
-                  gm.field_pb[5] = qe.a(-2739, var2);
+                  HumanView.field_pb[5] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "getready,6");
                 if (null != var2) {
-                  gm.field_pb[6] = qe.a(-2739, var2);
+                  HumanView.field_pb[6] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "getready,7");
                 if (null != var2) {
-                  gm.field_pb[7] = qe.a(-2739, var2);
+                  HumanView.field_pb[7] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "getready,8");
                 if (null != var2) {
-                  gm.field_pb[8] = qe.a(-2739, var2);
+                  HumanView.field_pb[8] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "getready,9");
                 if (var2 != null) {
-                  gm.field_pb[9] = qe.a(-2739, var2);
+                  HumanView.field_pb[9] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "getready,10");
                 if (null != var2) {
-                  gm.field_pb[10] = qe.a(-2739, var2);
+                  HumanView.field_pb[10] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "getready,11");
                 if (var2 != null) {
-                  gm.field_pb[11] = qe.a(-2739, var2);
+                  HumanView.field_pb[11] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "getready,12");
                 if (null != var2) {
-                  gm.field_pb[12] = qe.a(-2739, var2);
+                  HumanView.field_pb[12] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "getready,13");
                 if (var2 != null) {
-                  gm.field_pb[13] = qe.a(-2739, var2);
+                  HumanView.field_pb[13] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "getready,14");
                 if (null != var2) {
-                  gm.field_pb[14] = qe.a(-2739, var2);
+                  HumanView.field_pb[14] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "getready,15");
                 if (var2 != null) {
-                  gm.field_pb[15] = qe.a(-2739, var2);
+                  HumanView.field_pb[15] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "getready,16");
                 if (null != var2) {
-                  gm.field_pb[16] = qe.a(-2739, var2);
+                  HumanView.field_pb[16] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "getready,17");
                 if (null != var2) {
-                  gm.field_pb[17] = qe.a(-2739, var2);
+                  HumanView.field_pb[17] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "getready,18");
                 if (null != var2) {
-                  gm.field_pb[18] = qe.a(-2739, var2);
+                  HumanView.field_pb[18] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "getready,19");
                 if (null != var2) {
-                  gm.field_pb[19] = qe.a(-2739, var2);
+                  HumanView.field_pb[19] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "getready,20");
                 if (null != var2) {
-                  gm.field_pb[20] = qe.a(-2739, var2);
+                  HumanView.field_pb[20] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "getready,21");
                 if (null != var2) {
-                  gm.field_pb[21] = qe.a(-2739, var2);
+                  HumanView.field_pb[21] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "getready,22");
                 if (null != var2) {
-                  gm.field_pb[22] = qe.a(-2739, var2);
+                  HumanView.field_pb[22] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "getready,23");
                 if (var2 != null) {
-                  gm.field_pb[23] = qe.a(-2739, var2);
+                  HumanView.field_pb[23] = qe.a(-2739, var2);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
                 var2 = qe.a(-125, "getready,24");
                 if (null != var2) {
-                  gm.field_pb[24] = qe.a(-2739, var2);
+                  HumanView.field_pb[24] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "getready,25");
                 if (null != var2) {
-                  gm.field_pb[25] = qe.a(-2739, var2);
+                  HumanView.field_pb[25] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "getready,26");
                 if (null != var2) {
-                  gm.field_pb[26] = qe.a(-2739, var2);
+                  HumanView.field_pb[26] = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "matchover");
                 if (null != var2) {
@@ -2388,7 +2388,7 @@ final class h extends id {
         decompiledBody.run();
     }
 
-    final void a(nm param0, int param1) {
+    final void a(Camera param0, int param1) {
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
@@ -2405,18 +2405,18 @@ final class h extends id {
             this.field_J != 2) {
             return;
           }
-          var3_int = param0.c(this.g(param1 - 13542377), param1 - 13562603);
+          var3_int = param0.worldToScreenX(this.getX(param1 - 13542377), param1 - 13562603);
           if (param1 != 13542477) {
             field_H = (re) null;
           }
-          var4 = param0.d(this.h(126), param1 ^ 13542456);
+          var4 = param0.worldToScreenY(this.getY(126), param1 ^ 13542456);
           if (!io.a(-48 + var3_int, var4, (byte) -107, param0) &&
             !io.a(var3_int, -48 + var4, (byte) -105, param0)) {
             return;
           }
           boolean decompiledFrameRemainder3 = true;
           if (fb.field_e != null) {
-            var5 = op.field_m.field_D[this.field_I][1];
+            var5 = PortalEntryEvent.field_m.field_D[this.field_I][1];
             decompiledFrameRemainder3 = (var7 != 0);
           }
           if (decompiledFrameRemainder3) {
@@ -2484,7 +2484,7 @@ final class h extends id {
           do {
             if (var5 >= 9) {
               if (param0 > -85) {
-                h.a((Object) null, 65, true);
+                PortalView.a((Object) null, 65, true);
               }
               var4[4] = PacketBuffer.a(-128, 64, param1);
               break;
@@ -2501,7 +2501,7 @@ final class h extends id {
         }
     }
 
-    final void a(int param0, nm param1) {
+    final void draw(int param0, Camera param1) {
         int stackIn_67_0 = 0;
         int stackIn_67_1 = 0;
         ea stackIn_83_0 = null;
@@ -2527,8 +2527,8 @@ final class h extends id {
           if (3 == this.field_J) {
             return;
           }
-          var3_int = param1.c(this.g(113), -20126);
-          var4 = param1.d(this.h(123), 121);
+          var3_int = param1.worldToScreenX(this.getX(113), -20126);
+          var4 = param1.worldToScreenY(this.getY(123), 121);
           if (null != this.field_N) {
             this.field_N.h(sd.b(param0 ^ -10218, var4, var3_int));
             this.field_N.f(pb.a(var4, var3_int, false));
@@ -2575,11 +2575,11 @@ final class h extends id {
           }
           if ((decompiledFrameRemainder2) &&
             (decompiledSharedTail1)) {
-            var7 = op.field_m.field_D[this.field_I][1];
-            var6 = op.field_m.field_D[this.field_I][0];
+            var7 = PortalEntryEvent.field_m.field_D[this.field_I][1];
+            var6 = PortalEntryEvent.field_m.field_D[this.field_I][0];
           }
           if (param0 != -10136) {
-            this.a(107, -17, (byte) 63);
+            this.isWithinRange(107, -17, (byte) 63);
           }
           g.c(vn.field_h);
           SoftwareRasterizer.clear();
@@ -2643,7 +2643,7 @@ final class h extends id {
             } else {
               stackIn_84_1 = 4;
             }
-            ((ea) (Object) stackIn_83_0).a(stackIn_84_1, -((double)wf.field_m / 5.0) + 2000000000.0, this.field_P);
+            ((ea) (Object) stackIn_83_0).a(stackIn_84_1, -((double)PowerupEvent.field_m / 5.0) + 2000000000.0, this.field_P);
           }
           g.d();
           if (FullscreenFocusCanvas.field_k.field_k == 1) {
@@ -2670,7 +2670,7 @@ final class h extends id {
         }
     }
 
-    final void f(byte param0) {
+    final void tick(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -2700,7 +2700,7 @@ final class h extends id {
         }
     }
 
-    h(int param0, int param1, boolean param2) {
+    PortalView(int param0, int param1, boolean param2) {
         super(param0, param1, 0);
         this.field_R = 0;
         this.field_N = null;
@@ -2734,18 +2734,18 @@ final class h extends id {
         }
     }
 
-    final boolean b(int param0, int param1, int param2) {
+    final boolean containsPoint(int param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         boolean stackIn_16_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = this.field_z >> 16;
+          var4_int = this.positionX >> 16;
           if (param2 != 19024) {
             field_L = (ne) null;
           }
-          var5 = this.field_E >> 16;
+          var5 = this.positionY >> 16;
           stackIn_16_0 = (param0 > var4_int) && (param0 < (var4_int + 75)) && (param1 > var5) && (var5 + 75 > param1);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2755,7 +2755,7 @@ final class h extends id {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2) {
+    final boolean isWithinRange(int param0, int param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -2764,8 +2764,8 @@ final class h extends id {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = 38 / ((param2 + 3) / 51);
-          var4_int = -this.g(77) + param1;
-          var5 = -this.h(-125) + param0;
+          var4_int = -this.getX(77) + param1;
+          var5 = -this.getY(-125) + param0;
           var7 = var4_int * var4_int + var5 * var5;
           return !(var7 >= 3600);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

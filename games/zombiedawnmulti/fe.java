@@ -48,7 +48,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           if (jq.field_b == var4) {
             return false;
           }
-          if (h.field_H == var4) {
+          if (PortalView.field_H == var4) {
             return false;
           }
           if (WidgetContainer.field_F != var4) {

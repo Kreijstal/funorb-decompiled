@@ -15,7 +15,7 @@ final class sd extends rg {
 
     final static boolean a(int param0, byte param1, int param2, int param3) {
         if (nh.field_m) {
-          return ra.field_f.a(0, pn.field_d, sj.field_p);
+          return ra.field_f.a(0, pn.field_d, InfectionEvent.field_p);
         }
         if (ee.field_b) {
           return ai.a(false, param2, param3);

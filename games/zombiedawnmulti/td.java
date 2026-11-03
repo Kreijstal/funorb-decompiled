@@ -58,10 +58,10 @@ final class td {
         this.field_e = new int[param2 + 1];
     }
 
-    final static jm a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        jm var8 = (jm) (MouseWheelInput.field_b.g(86));
+    final static FightEvent a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
+        FightEvent var8 = (FightEvent) (MouseWheelInput.field_b.g(86));
         if (var8 == null) {
-          var8 = new jm();
+          var8 = new FightEvent();
         }
         var8.a(param5, param0, param1, param7, 27658, param4, param6, param2);
         if (param3 <= 26) {

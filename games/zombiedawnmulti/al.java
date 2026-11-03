@@ -83,7 +83,7 @@ abstract class al extends df {
         IntrusiveDequeCursor.field_e = false;
         nj.field_f = false;
         fb.a(param0, 99);
-        id.field_B = mp.field_b;
+        SceneObject.field_B = mp.field_b;
         ta.field_hb = mp.field_b;
     }
 

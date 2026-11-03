@@ -8,7 +8,7 @@ final class lc extends IntrusiveNode {
     private int field_f;
     private int field_p;
     static ip field_l;
-    private id field_o;
+    private SceneObject field_o;
     private int field_k;
     boolean field_q;
     static String field_n;
@@ -28,8 +28,8 @@ final class lc extends IntrusiveNode {
     final boolean d(byte param0) {
         this.field_p = this.field_p + 1;
         if (this.field_o != null) {
-          this.field_k = this.field_o.g(109);
-          this.field_j = this.field_o.h(-104) - 24;
+          this.field_k = this.field_o.getX(109);
+          this.field_j = this.field_o.getY(-104) - 24;
         }
         this.field_q = 100 - 2 * this.field_p <= 0 ? true : false;
         if (param0 != 76) {
@@ -49,7 +49,7 @@ final class lc extends IntrusiveNode {
         field_g = null;
     }
 
-    final boolean a(int param0, nm param1) {
+    final boolean a(int param0, Camera param1) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -79,8 +79,8 @@ final class lc extends IntrusiveNode {
           if (var3_int <= 0) {
             return true;
           }
-          var4 = param1.c(this.field_k, param0 - 16731806);
-          var5 = param1.d(this.field_j, 106);
+          var4 = param1.worldToScreenX(this.field_k, param0 - 16731806);
+          var5 = param1.worldToScreenY(this.field_j, 106);
           if (this.field_f == -1) {
             SoftwareRasterizer.fillCircleAlpha(var4, var5, 50 - var3_int / 2, 12071039, var3_int);
             return true;
@@ -116,9 +116,9 @@ final class lc extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, id param2, byte param3) {
+    final void a(int param0, int param1, SceneObject param2, byte param3) {
         try {
-          this.a(-24 + param2.h(-76), param0, param2.g(-86), param1, (byte) 127);
+          this.a(-24 + param2.getY(-76), param0, param2.getX(-86), param1, (byte) 127);
           if (param3 <= 44) {
             lc.a(10);
           }
@@ -187,15 +187,15 @@ final class lc extends IntrusiveNode {
         try {
           var20 = InflaterDecompressor.a("crowns", param1, (byte) 19, "lobby");
           var5 = var20;
-          hg.field_ub = var20.length;
+          ArmedHumanView.field_ub = var20.length;
           if (param3 != null) {
-            var6 = new IndexedSprite[param3.length + hg.field_ub];
-            for (var7_int = 0; hg.field_ub > var7_int; var7_int++) {
+            var6 = new IndexedSprite[param3.length + ArmedHumanView.field_ub];
+            for (var7_int = 0; ArmedHumanView.field_ub > var7_int; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
             var5 = var6;
             for (var7_intLifetime3 = 0; var7_intLifetime3 < param3.length; var7_intLifetime3++) {
-              var6[var7_intLifetime3 + hg.field_ub] = param3[var7_intLifetime3];
+              var6[var7_intLifetime3 + ArmedHumanView.field_ub] = param3[var7_intLifetime3];
             }
           }
           var23 = new int[var5.length];
@@ -204,17 +204,17 @@ final class lc extends IntrusiveNode {
           var24 = var19;
           var22 = var24;
           var6_array = var22;
-          for (var7_intLifetime1 = 0; hg.field_ub > var7_intLifetime1; var7_intLifetime1++) {
+          for (var7_intLifetime1 = 0; ArmedHumanView.field_ub > var7_intLifetime1; var7_intLifetime1++) {
             var23[var7_intLifetime1] = 10;
           }
           if (param3 != null) {
             if (param2 != null) {
               for (var7_intLifetime2 = 0; var7_intLifetime2 < param3.length; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + hg.field_ub] = param2[var7_intLifetime2];
+                var6_array[var7_intLifetime2 + ArmedHumanView.field_ub] = param2[var7_intLifetime2];
               }
             } else {
               for (var7_intLifetime2 = 0; param3.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[hg.field_ub + var7_intLifetime2] = param3[var7_intLifetime2].field_a;
+                var6_array[ArmedHumanView.field_ub + var7_intLifetime2] = param3[var7_intLifetime2].field_a;
               }
             }
           }

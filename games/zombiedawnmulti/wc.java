@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc extends id {
+final class wc extends SceneObject {
     static int field_N;
     static int field_O;
     static Sprite[] field_M;
@@ -223,7 +223,7 @@ final class wc extends id {
         }
     }
 
-    final void f(byte param0) {
+    final void tick(byte param0) {
         if (param0 >= -79) {
           wc.a(8, false);
           if (0 >= this.field_F) {
@@ -231,7 +231,7 @@ final class wc extends id {
             return;
           }
           this.field_F = this.field_F - 7;
-          this.field_E = this.field_E - 131072;
+          this.positionY = this.positionY - 131072;
           if (0 > this.field_F) {
             this.field_F = 0;
             return;
@@ -243,14 +243,14 @@ final class wc extends id {
           return;
         }
         this.field_F = this.field_F - 7;
-        this.field_E = this.field_E - 131072;
+        this.positionY = this.positionY - 131072;
         if (0 > this.field_F) {
           this.field_F = 0;
           return;
         }
     }
 
-    final void a(int param0, nm param1) {
+    final void draw(int param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -260,8 +260,8 @@ final class wc extends id {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param1.c(this.g(param0 ^ -10199), -20126);
-          var4 = param1.d(this.h(-109), 116);
+          var3_int = param1.worldToScreenX(this.getX(param0 ^ -10199), -20126);
+          var4 = param1.worldToScreenY(this.getY(-109), 116);
           ah.field_e.a(this.field_P, var3_int, var4, 3, -1, this.field_F);
           if (null != this.field_R) {
             if (this.field_R.k()) {
@@ -307,7 +307,7 @@ final class wc extends id {
         this.field_P = Integer.toString(param2);
         this.field_F = 255;
         if (!param3) {
-          this.field_R = nm.b(-128, 55);
+          this.field_R = Camera.b(-128, 55);
         }
     }
 

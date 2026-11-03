@@ -105,8 +105,8 @@ final class dd implements dr {
               }
               PacketBuffer.field_k = jp.field_e;
               jp.field_e = ij.field_d;
-              ij.field_d = op.field_i;
-              op.field_i = var4_ref_bb.field_l;
+              ij.field_d = PortalEntryEvent.field_i;
+              PortalEntryEvent.field_i = var4_ref_bb.field_l;
               return true;
             }
           }
@@ -140,8 +140,8 @@ final class dd implements dr {
             if (SimArmedHuman.field_Db == 0) {
               PacketBuffer.field_k = jp.field_e;
               jp.field_e = ij.field_d;
-              ij.field_d = op.field_i;
-              op.field_i = fd.field_F;
+              ij.field_d = PortalEntryEvent.field_i;
+              PortalEntryEvent.field_i = fd.field_F;
               fd.field_F = -1;
               return true;
             }

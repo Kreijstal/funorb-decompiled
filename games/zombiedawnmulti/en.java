@@ -15,8 +15,8 @@ final class en extends IOException {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (wf.field_t != param1) {
-            wf.field_t = param1;
+          if (PowerupEvent.field_t != param1) {
+            PowerupEvent.field_t = param1;
           }
           if (param0 != -1) {
             en.a((byte) -66);

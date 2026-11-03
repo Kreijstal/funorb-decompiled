@@ -68,9 +68,9 @@ final class gg {
             eb.field_B.field_z = 0;
             var6.field_zb = 0;
             field_m.field_wb = mk.field_l.toUpperCase();
-            var7 = (2 + fc.field_a.field_zb) / 2;
-            eb.field_B.a(40, -40 + fc.field_a.field_z, -2 + var7, 0, -3344);
-            GameKeyHandler.field_a.a(40, fc.field_a.field_z - 40, fc.field_a.field_zb - var7, var7, -3344);
+            var7 = (2 + LevelData.field_a.field_zb) / 2;
+            eb.field_B.a(40, -40 + LevelData.field_a.field_z, -2 + var7, 0, -3344);
+            GameKeyHandler.field_a.a(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb - var7, var7, -3344);
             if (qo.field_r.length == 1 &&
               qo.field_r[0] == 2) {
               var8 = 0;
@@ -80,7 +80,7 @@ final class gg {
               var10 = 0;
               while (true) {
                 if (var10 < qo.field_r.length) {
-                  stackIn_10_0 = ((fg.field_k[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
+                  stackIn_10_0 = ((ScoreUpdateEvent.field_k[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
                   var11_int = stackIn_10_0;
                   if (var11_int != 0) {
                     var9_int++;
@@ -196,7 +196,7 @@ final class gg {
           stackIn_68_1 = -11838;
           stackIn_69_2 = (param1) && (!param2) && (!io.field_b);
           ((cj) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
-          stackIn_73_0 = fc.field_a;
+          stackIn_73_0 = LevelData.field_a;
           stackIn_73_1 = -11838;
           stackIn_74_2 = (param1) && (!param2) && (!io.field_b);
           ((cj) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
@@ -216,7 +216,7 @@ final class gg {
               if (la.field_k) {
                 GameApplet.a(param0, (byte) 98);
               } else {
-                uo.b(true, param0);
+                AttackEvent.b(true, param0);
               }
             }
             ld.a(BufferedSocket.field_n, true, param0, 1);
@@ -230,7 +230,7 @@ final class gg {
     }
 
     final static String a(int param0) {
-        if (dj.field_k == id.field_B) {
+        if (dj.field_k == SceneObject.field_B) {
           return RandomAccessCacheFile.field_g;
         }
         if (param0 <= 0) {

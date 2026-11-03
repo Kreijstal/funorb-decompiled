@@ -55,14 +55,14 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final static fc a(byte[] param0, int param1) {
+    final static LevelData a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
-        fc stackIn_4_0 = null;
-        fc stackIn_10_0 = null;
-        fc stackIn_13_0 = null;
-        fc stackIn_15_0 = null;
+        LevelData stackIn_4_0 = null;
+        LevelData stackIn_10_0 = null;
+        LevelData stackIn_13_0 = null;
+        LevelData stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;

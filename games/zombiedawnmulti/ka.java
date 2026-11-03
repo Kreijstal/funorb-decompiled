@@ -122,7 +122,7 @@ final class ka {
         this.field_k = fe.field_R;
         this.field_a = SimEntity.field_K;
         this.field_n = kk.field_s;
-        this.field_o = ti.field_W;
+        this.field_o = UnitView.field_W;
         this.field_d = pg.field_b;
         this.field_i = tk.field_m;
         this.field_e = IntrusiveDequeCursor.field_h;

@@ -34,7 +34,7 @@ final class tp extends un {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          if (!sj.a(var5, 12319)) {
+          if (!InfectionEvent.a(var5, 12319)) {
             stackIn_2_0 = jq.field_b;
             return stackIn_2_0;
           }

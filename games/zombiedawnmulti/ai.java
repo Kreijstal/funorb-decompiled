@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ai implements Runnable {
-    private lq field_e;
+    private DualLinkDeque field_e;
     static gh field_g;
     static String field_d;
     static int field_a;
@@ -187,13 +187,13 @@ final class ai implements Runnable {
         int var5 = 0;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          lq.field_b = lq.field_b + 65536;
+          DualLinkDeque.field_b = DualLinkDeque.field_b + 65536;
           if (param1 != 110) {
             field_d = (String) null;
           }
-          while (65536 <= sd.a((byte) 120, lq.field_b, nf.field_b)) {
+          while (65536 <= sd.a((byte) 120, DualLinkDeque.field_b, nf.field_b)) {
             ClientException.field_c = ClientException.field_c + 1;
-            lq.field_b = lq.field_b - nf.field_b;
+            DualLinkDeque.field_b = DualLinkDeque.field_b - nf.field_b;
           }
           var2_int = -1;
           if (null == ld.field_Ub) {
@@ -301,7 +301,7 @@ final class ai implements Runnable {
                 return stackIn_76_0;
               }
             }
-            if (13 != sj.field_p) {
+            if (13 != InfectionEvent.field_p) {
               continue;
             }
             break;
@@ -350,7 +350,7 @@ final class ai implements Runnable {
           var4.field_y = 1;
           var5 = this.field_e;
           synchronized (var5) {
-            var6 = (li) (this.field_e.c((byte) 85));
+            var6 = (li) (this.field_e.first((byte) 85));
             while (var6 != null) {
               if (var6.secondaryKey == (long)param0 &&
                 param1 == var6.field_B &&
@@ -360,7 +360,7 @@ final class ai implements Runnable {
                 stackIn_12_0 = var4;
                 return stackIn_12_0;
               }
-              var6 = (li) (this.field_e.b((byte) 118));
+              var6 = (li) (this.field_e.next((byte) 118));
             }
           }
           var4.field_D = param1.a(1, param0);
@@ -424,7 +424,7 @@ final class ai implements Runnable {
 
     private final void a(boolean param0, li param1) {
         synchronized (this.field_e) {
-          this.field_e.a(29664, param1);
+          this.field_e.add(29664, param1);
           if (param0) {
             this.field_i = (Thread) null;
           }
@@ -457,11 +457,11 @@ final class ai implements Runnable {
     }
 
     final static boolean a(boolean param0, int param1, int param2) {
-        if (sj.field_p == 13) {
+        if (InfectionEvent.field_p == 13) {
           ub.n(33423425);
           return true;
         }
-        if (sj.field_p == 102) {
+        if (InfectionEvent.field_p == 102) {
           mj.field_Ib.c((byte) 113);
           return true;
         }
@@ -486,7 +486,7 @@ final class ai implements Runnable {
 
     ai(PlatformTaskDispatcher param0) {
         PlatformTask var2 = null;
-        this.field_e = new lq();
+        this.field_e = new DualLinkDeque();
         this.field_f = false;
         this.field_h = 0;
         try {

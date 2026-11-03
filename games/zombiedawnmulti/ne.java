@@ -129,7 +129,7 @@ class ne extends ie implements in {
 
     final void c(boolean param0) {
         this.field_Bb.a(4210752, 2121792, (byte) 116);
-        wd var2 = new wd(this, this.field_zb, lq.field_c);
+        wd var2 = new wd(this, this.field_zb, DualLinkDeque.field_c);
         if (!param0) {
           var2.a(og.field_T, 15, true);
           this.a((UiWidget) (var2), (byte) -18);

@@ -51,7 +51,7 @@ abstract class sb {
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(var2_int - 1) != 34) {
-              stackIn_13_0 = so.field_t;
+              stackIn_13_0 = UnitStateEvent.field_t;
               return stackIn_13_0;
             }
             var3 = 0;
@@ -63,7 +63,7 @@ abstract class sb {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_27_0 = so.field_t;
+                  stackIn_27_0 = UnitStateEvent.field_t;
                   return stackIn_27_0;
                 }
                 var3 = 0;
@@ -83,13 +83,13 @@ abstract class sb {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_40_0 = so.field_t;
+                stackIn_40_0 = UnitStateEvent.field_t;
                 return stackIn_40_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (cd.field_Kb.indexOf(var5Lifetime1) == -1) {
-                stackIn_44_0 = so.field_t;
+                stackIn_44_0 = UnitStateEvent.field_t;
                 return stackIn_44_0;
               }
               var3Lifetime1 = 0;

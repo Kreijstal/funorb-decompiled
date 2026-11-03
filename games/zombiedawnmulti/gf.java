@@ -87,7 +87,7 @@ abstract class gf implements j {
         if (bl.a((byte) 40) >= 350L + this.field_i) {
           return this.f(-3);
         }
-        return h.field_H;
+        return PortalView.field_H;
     }
 
     abstract re f(int param0);

@@ -19,9 +19,9 @@ final class bk extends t {
     final static Sprite[] a(int param0, int param1, byte param2) {
         if (param2 != 28) {
           field_i = (fa) null;
-          return h.a((byte) -112, param0, 1, param1);
+          return PortalView.a((byte) -112, param0, 1, param1);
         }
-        return h.a((byte) -112, param0, 1, param1);
+        return PortalView.a((byte) -112, param0, 1, param1);
     }
 
     final void a(byte[] param0, byte param1) {

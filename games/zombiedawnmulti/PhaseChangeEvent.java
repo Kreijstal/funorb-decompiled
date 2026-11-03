@@ -15,7 +15,7 @@ final class PhaseChangeEvent extends GameEvent {
             PacketBuffer var4 = (PacketBuffer) null;
             PhaseChangeEvent.a((PacketBuffer) null, (byte) 15);
           }
-          param1.a((byte) -74, this.field_l, this.field_m);
+          param1.enterPhase((byte) -74, this.field_l, this.field_m);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "fq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -21,7 +21,7 @@ final class cc {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (mp.field_b != id.field_B) {
+          if (mp.field_b != SceneObject.field_B) {
             return false;
           }
           if (param4 != -10663) {
@@ -37,7 +37,7 @@ final class cc {
           RandomAccessCacheFile.field_g = param2;
           am.field_a = param0;
           ab.field_k = param6;
-          id.field_B = dj.field_k;
+          SceneObject.field_B = dj.field_k;
           rj.field_J = param3;
           IntrusiveDequeCursor.field_j = param1;
           return true;

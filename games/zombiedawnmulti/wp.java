@@ -26,7 +26,7 @@ final class wp {
             wp.c(117);
           }
           var1 = ma.field_a;
-          while (so.c(1)) {
+          while (UnitStateEvent.c(1)) {
             var1.b((byte) -35, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

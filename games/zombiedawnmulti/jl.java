@@ -89,7 +89,7 @@ final class jl extends hq {
         try {
           lj.a(param6, param4, param15, 61);
           SimEntity.a(param16, param0, 1829947600, param9, param10);
-          uo.a(param13, param1, 1633);
+          AttackEvent.a(param13, param1, 1633);
           if (!param20) {
             field_t = (String) null;
           }
@@ -207,7 +207,7 @@ final class jl extends hq {
             stackIn_3_0 = null;
           }
           var11 = (gn) (stackIn_3_0);
-          nm.a(param3 + param4.field_y, param4.field_w + (param4.field_i + param1), (byte) 105, param3 + param4.field_y + param4.field_n, param1 + param4.field_i);
+          Camera.a(param3 + param4.field_y, param4.field_w + (param4.field_i + param1), (byte) 105, param3 + param4.field_y + param4.field_n, param1 + param4.field_i);
           if (var11 != null) {
             param0 = param0 & var11.field_F;
           }

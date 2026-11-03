@@ -96,7 +96,7 @@ final class sn extends cj {
         if (this.field_Ob != -2) {
           return false;
         }
-        if (sj.field_p == 13) {
+        if (InfectionEvent.field_p == 13) {
           this.field_Ob = -1;
           return true;
         }

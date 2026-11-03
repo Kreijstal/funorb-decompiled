@@ -25,11 +25,11 @@ final class ik {
               for (var2 = 0; var2 < 112; var2++) {
                 lc.field_m[var2] = false;
               }
-              qf.field_f = fh.field_j;
+              qf.field_f = NavigationGrid.field_j;
             } else {
-              while (fh.field_j != qf.field_f) {
-                var2 = SecondaryNodeDequeIterator.field_f[fh.field_j];
-                fh.field_j = fh.field_j + 1 & 127;
+              while (NavigationGrid.field_j != qf.field_f) {
+                var2 = SecondaryNodeDequeIterator.field_f[NavigationGrid.field_j];
+                NavigationGrid.field_j = NavigationGrid.field_j + 1 & 127;
                 if (var2 < 0) {
                   lc.field_m[~var2] = false;
                   continue;

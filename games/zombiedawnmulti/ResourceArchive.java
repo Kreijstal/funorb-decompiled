@@ -190,7 +190,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.field_l[param0][param1]) {
-            var7 = h.a(this.field_l[param0][param1], -110, false);
+            var7 = PortalView.a(this.field_l[param0][param1], -110, false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -315,7 +315,7 @@ final class ResourceArchive {
             param2[1] != 0 ||
             param2[2] != 0 ||
             param2[3] != 0)) {
-            var35 = h.a(this.field_g[param0], -42, true);
+            var35 = PortalView.a(this.field_g[param0], -42, true);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -323,7 +323,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = h.a(this.field_g[param0], -124, false);
+            var9 = PortalView.a(this.field_g[param0], -124, false);
           }
           try {
             var36 = hb.a(var9, 0);

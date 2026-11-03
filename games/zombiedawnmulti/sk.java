@@ -24,7 +24,7 @@ final class sk {
 
     final static int a(byte param0) {
         int var1 = -15 % ((-16 - param0) / 38);
-        return qk.field_j;
+        return Waypoint.field_j;
     }
 
     public static void a(int param0) {

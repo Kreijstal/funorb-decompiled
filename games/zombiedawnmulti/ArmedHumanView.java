@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hg extends gm {
+final class ArmedHumanView extends HumanView {
     static InflaterDecompressor field_wb;
     static int field_rb;
     static String field_tb;
@@ -11,7 +11,7 @@ final class hg extends gm {
     static String field_sb;
     static String field_vb;
 
-    final static String a(int param0, Throwable param1) throws IOException {
+    final static String formatThrowable(int param0, Throwable param1) throws IOException {
         String var2;
         PrintWriter var4;
         String var5;
@@ -119,7 +119,7 @@ final class hg extends gm {
         }
     }
 
-    final static String a(int param0, char param1, int param2) {
+    final static String repeatChar(int param0, char param1, int param2) {
         int var4 = 0;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         char[] var6 = new char[param2];
@@ -131,14 +131,14 @@ final class hg extends gm {
           }
           return new String(var6);
         }
-        hg.c(false);
+        ArmedHumanView.c(false);
         for (var4Lifetime1 = 0; param2 > var4Lifetime1; var4Lifetime1++) {
           var6[var4Lifetime1] = param1;
         }
         return new String(var6);
     }
 
-    final void a(nm param0, byte param1) {
+    final void drawDebugFleePoints(Camera param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -150,17 +150,17 @@ final class hg extends gm {
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          SoftwareRasterizer.drawCircle(param0.c(this.g(58), -20126), param0.d(this.h(102), 109), this.field_kb, 16711680);
+          SoftwareRasterizer.drawCircle(param0.worldToScreenX(this.getX(58), -20126), param0.worldToScreenY(this.getY(102), 109), this.field_kb, 16711680);
           for (var3_int = 0; this.field_fb > var3_int; var3_int++) {
-            var4 = param0.c(this.field_cb[var3_int], -20126);
-            var5 = param0.d(this.field_hb[var3_int], 126);
+            var4 = param0.worldToScreenX(this.field_cb[var3_int], -20126);
+            var5 = param0.worldToScreenY(this.field_hb[var3_int], 126);
             SoftwareRasterizer.fillRect(-1 + var4, -1 + var5, 3, 3, 0);
             SoftwareRasterizer.setPixel(var4, var5, 65280);
           }
           if (param1 > 58) {
             return;
           }
-          hg.a(-91, '\033', 11);
+          ArmedHumanView.repeatChar(-91, '\033', 11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,7 +189,7 @@ final class hg extends gm {
         field_wb = null;
     }
 
-    final static void h(byte param0) {
+    final static void latchInputState(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         var1 = on.field_Z;
@@ -211,13 +211,13 @@ final class hg extends gm {
         }
     }
 
-    hg(int param0, int param1, int param2) {
+    ArmedHumanView(int param0, int param1, int param2) {
         super(param0, param1, param2, 200704);
         if (this.field_C == 2 ||
           this.field_C == 4 ||
           this.field_C == 6) {
           this.field_fb = 21;
-          this.field_bb = 143360;
+          this.speed = 143360;
         }
     }
 

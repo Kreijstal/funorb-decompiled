@@ -17,7 +17,7 @@ final class GameSimulation {
     private boolean cheatsEnabled;
     private IntrusiveDeque field_e;
     int[] field_p;
-    fh navigation;
+    NavigationGrid navigation;
     private boolean field_o;
     GameWorld world;
     static String field_c;
@@ -164,7 +164,7 @@ final class GameSimulation {
 
     private final void a(int param0, SimZombie param1) {
         RuntimeException runtimeException = null;
-        pc var3 = null;
+        ChaseEvent var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -322,7 +322,7 @@ final class GameSimulation {
     }
 
     private final void emitUnitEvent(int param0, SimUnit param1) {
-        so var3 = null;
+        UnitStateEvent var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -435,7 +435,7 @@ final class GameSimulation {
               if (!pp.field_n) {
                 return;
               }
-              if (11 == hg.field_rb) {
+              if (11 == ArmedHumanView.field_rb) {
                 return;
               }
               var3_ref_ge = new SimZombie(hc.field_c, gk.field_c, 0);
@@ -444,7 +444,7 @@ final class GameSimulation {
               var3_ref_ge.objectId = this.world.nextObjectId(-16777216);
               this.world.characters.a(-25612, var3_ref_ge);
               var3_ref_ge.needsSync = true;
-              op.field_m.nextObjectId = var3_ref_ge.objectId;
+              PortalEntryEvent.field_m.nextObjectId = var3_ref_ge.objectId;
               var3_ref_geLifetime1 = new SimZombie(hc.field_c, -30 + gk.field_c, 1);
               var3_ref_geLifetime1.attachToSimulation(-9019, this);
               var3_ref_geLifetime1.field_gb = 0;
@@ -727,7 +727,7 @@ final class GameSimulation {
         }
     }
 
-    private final void initialize(boolean param0, byte param1, fc param2) {
+    private final void initialize(boolean param0, byte param1, LevelData param2) {
         boolean stackIn_4_0 = false;
         int stackIn_13_0 = 0;
         int stackIn_36_0 = 0;
@@ -765,14 +765,14 @@ final class GameSimulation {
         int var13Lifetime1;
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          this.navigation = new fh(param2);
-          this.field_s = new TertiaryLinkDeque[(this.navigation.field_c >> 7) + 1][1 + (this.navigation.field_r >> 7)];
+          this.navigation = new NavigationGrid(param2);
+          this.field_s = new TertiaryLinkDeque[(this.navigation.pixelHeight >> 7) + 1][1 + (this.navigation.pixelWidth >> 7)];
           this.world.currentTick = 0;
           ip.b((byte) 97);
           this.field_n = new IntrusiveDeque();
           this.field_f = new IntrusiveDeque();
           this.field_e = new IntrusiveDeque();
-          var4 = param2.a(91);
+          var4 = param2.createObjects(91);
           var5_ref_ek = (SimEntity) (var4.c(78));
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var5_ref_ek == null))) {
@@ -1722,7 +1722,7 @@ final class GameSimulation {
     private final void b(int param0, int param1, int param2, int param3, int param4) {
         ce stackIn_6_0;
         ce stackIn_6_1;
-        fh stackIn_6_2;
+        NavigationGrid stackIn_6_2;
         int stackIn_6_3;
         int stackIn_6_4;
         int stackIn_6_5;
@@ -1896,7 +1896,7 @@ final class GameSimulation {
           this.queueEvent(-7737, ClientException.a(param3, param0.objectId, param1.objectId, (byte) 116, this.world.currentTick, param2));
           param1.needsSync = false;
           if (param4 != -63) {
-            this.navigation = (fh) null;
+            this.navigation = (NavigationGrid) null;
           }
           param1.field_eb = false;
           return;
@@ -1921,12 +1921,12 @@ final class GameSimulation {
     }
 
     private final void a(SimHuman param0, SimZombie param1, SimZombie param2, boolean param3) {
-        sj var5 = null;
-        sj stackIn_3_0 = null;
-        sj stackIn_3_1 = null;
+        InfectionEvent var5 = null;
+        InfectionEvent stackIn_3_0 = null;
+        InfectionEvent stackIn_3_1 = null;
         int stackIn_3_2 = 0;
-        sj stackIn_4_0 = null;
-        sj stackIn_4_1 = null;
+        InfectionEvent stackIn_4_0 = null;
+        InfectionEvent stackIn_4_1 = null;
         int stackIn_4_3 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -1950,7 +1950,7 @@ final class GameSimulation {
             stackIn_4_1 = null;
             stackIn_4_3 = param2.objectId;
           }
-          var5 = new sj(stackIn_3_2, stackIn_4_3, param0.objectId, param1.objectId, param0.positionX, param0.positionY, param1.field_gb);
+          var5 = new InfectionEvent(stackIn_3_2, stackIn_4_3, param0.objectId, param1.objectId, param0.positionX, param0.positionY, param1.field_gb);
           if (param3) {
             this.loadouts = (PlayerLoadout[]) null;
           }
@@ -2383,7 +2383,7 @@ final class GameSimulation {
           if (!decompiledSharedTail0) {
             stackIn_22_0 = var6;
             stackIn_23_1 = !(param4);
-            ((SimZombie) (Object) stackIn_22_0).setPath(stackIn_23_1, this.navigation.b(var6.getX((byte) -112), param2, var6.getY(1829947600), param1, 8760));
+            ((SimZombie) (Object) stackIn_22_0).setPath(stackIn_23_1, this.navigation.findPath(var6.getX((byte) -112), param2, var6.getY(1829947600), param1, 8760));
             decompiledSharedTail0 = (ZombieDawnMulti.field_E);
           }
           if (decompiledSharedTail0) {

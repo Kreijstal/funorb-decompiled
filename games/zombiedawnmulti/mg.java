@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class mg extends id {
+final class mg extends SceneObject {
     static int field_F;
     private int field_G;
     static int field_H;
@@ -143,7 +143,7 @@ final class mg extends id {
                 s.field_e.position = 0;
               } else {
                 vo.field_l = pq.field_p;
-                op.field_i = var9Lifetime1;
+                PortalEntryEvent.field_i = var9Lifetime1;
                 hd.field_q = -1;
               }
             }
@@ -167,7 +167,7 @@ final class mg extends id {
           }
           if (pq.field_p == vo.field_l &&
             dd.a(param6 ^ -92)) {
-            if (op.field_i == 255) {
+            if (PortalEntryEvent.field_i == 255) {
               var9_ref_String = s.field_e.readNullableString((byte) -89);
               if (var9_ref_String != null) {
                 jh.a(jl.b(0), -1, var9_ref_String);
@@ -177,7 +177,7 @@ final class mg extends id {
             }
             ak.a((byte) -118);
             sk.field_j = false;
-            stackIn_50_0 = op.field_i;
+            stackIn_50_0 = PortalEntryEvent.field_i;
             return stackIn_50_0;
           }
           if (param6 != -92) {
@@ -233,7 +233,7 @@ final class mg extends id {
         this.field_I = hp.a((byte) 44, g.field_a, 5);
     }
 
-    final void f(byte param0) {
+    final void tick(byte param0) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2_ref_br;
         double var2;
@@ -253,15 +253,15 @@ final class mg extends id {
         this.field_I = this.field_I + 1;
         if (fieldTemp$0 > 5) {
           this.field_I = 0;
-          var2_ref_br = fb.field_e.field_H.c(109);
-          while (var2_ref_br instanceof id) {
+          var2_ref_br = fb.field_e.sceneObjects.c(109);
+          while (var2_ref_br instanceof SceneObject) {
             if (var2_ref_br instanceof GameCharacter) {
               var3 = (GameCharacter) (var2_ref_br);
-              var4 = var3.g(-116) - this.g(-34) - 12;
-              var5 = var3.h(122) - this.h(-70);
+              var4 = var3.getX(-116) - this.getX(-34) - 12;
+              var5 = var3.getY(122) - this.getY(-70);
               if (var4 * var4 + var5 * var5 < 576 &&
                 fb.field_e.field_I.a(69, this.field_C, 255)) {
-                nm.b(-127, 9);
+                Camera.b(-127, 9);
                 iq.a(this.field_C, (byte) 99);
                 this.unlink(true);
                 return;
@@ -300,7 +300,7 @@ final class mg extends id {
         try {
           int var7_int = 73 % ((param2 + 45) / 36);
           var8 = qp.field_w;
-          nm.field_w.c(param6, param3, param5);
+          Camera.field_w.c(param6, param3, param5);
           wa.field_b[param0].c(param6 + 17, param3 + 21, param5);
           jq.a(cr.a(param0, -83), 33 + param3, (byte) 2, param4.field_t[param0], param5, -16 + param6);
           if (param1 != 255) {
@@ -322,7 +322,7 @@ final class mg extends id {
         va.field_a = 0;
     }
 
-    final void a(int param0, nm param1) {
+    final void draw(int param0, Camera param1) {
         int var11 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -356,8 +356,8 @@ final class mg extends id {
           if (param0 != -10136) {
             return;
           }
-          var4 = param1.c(this.g(74), -20126);
-          var5 = param1.d(-var3_int + this.h(93), 117) - 24;
+          var4 = param1.worldToScreenX(this.getX(74), -20126);
+          var5 = param1.worldToScreenY(-var3_int + this.getY(93), 117) - 24;
           if (var4 >= -48 &&
             var5 >= -48 &&
             var4 <= 640 &&

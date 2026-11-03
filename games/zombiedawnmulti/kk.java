@@ -7,7 +7,7 @@ abstract class kk extends DualLinkNode {
     static Sprite field_r;
     static int field_x;
     static String[] field_v;
-    static h field_w;
+    static PortalView field_w;
     static int field_q;
     static PlatformTaskDispatcher field_y;
     static String field_s;
@@ -18,7 +18,7 @@ abstract class kk extends DualLinkNode {
           rm.field_b = PcmPlayerService.a(param5, param4, 0, param2);
           ga.field_u = PcmPlayerService.a(param5, param4, 1, param6);
           bh.field_a = new PcmStreamMixer();
-          lq.field_d = param6 * 1000 / param0;
+          DualLinkDeque.field_d = param6 * 1000 / param0;
           ga.field_u.a(bh.field_a);
           wd.field_L = param7;
           wd.field_L.a(uk.field_S, (byte) 116);

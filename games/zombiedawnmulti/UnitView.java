@@ -3,41 +3,41 @@
  */
 import java.util.*;
 
-abstract class ti extends id {
+abstract class UnitView extends SceneObject {
     int field_L;
     static int field_Y;
     private int field_T;
     private boolean field_R;
-    int field_K;
+    int state;
     static int field_J;
     static String[] field_M;
-    int field_O;
-    int field_P;
+    int targetX;
+    int targetY;
     static String field_H;
-    int field_S;
-    int field_G;
+    int velocityY;
+    int slowTicks;
     PcmSampleStream field_U;
     static int field_I;
-    int field_N;
-    int field_bb;
+    int exitCountdown;
+    int speed;
     static String field_Z;
-    int field_X;
+    int velocityX;
     static int field_W;
     int field_V;
-    int field_F;
-    int field_ab;
-    int field_Q;
+    int facing;
+    int animationFrame;
+    int animationTicks;
 
-    final void j(int param0) {
-        this.field_G = param0;
+    final void setSlowTicks(int param0) {
+        this.slowTicks = param0;
     }
 
-    final boolean a(int param0, boolean param1, int param2) {
-        int var4 = this.field_z >> 16;
+    final boolean containsPoint(int param0, boolean param1, int param2) {
+        int var4 = this.positionX >> 16;
         if (!param1) {
           return true;
         }
-        int var5 = this.field_E >> 16;
+        int var5 = this.positionY >> 16;
         if (-7 + (var4 + 24) <= param0) {
           return false;
         }
@@ -53,32 +53,32 @@ abstract class ti extends id {
         return false;
     }
 
-    void f(byte param0) {
-        if (this.field_G > 0) {
-          this.field_G = this.field_G - 1;
+    void tick(byte param0) {
+        if (this.slowTicks > 0) {
+          this.slowTicks = this.slowTicks - 1;
         }
-        if (this.field_K != 21) {
+        if (this.state != 21) {
           if (param0 > -79) {
             field_W = 92;
           }
           return;
         }
-        this.field_N = this.field_N - 4;
-        if (this.field_N != 0) {
+        this.exitCountdown = this.exitCountdown - 4;
+        if (this.exitCountdown != 0) {
           return;
         }
         this.unlink(true);
         this.a(-4564);
     }
 
-    final void e(int param0, int param1) {
+    final void startSlowTimer(int param0, int param1) {
         int var3 = 0;
         if (param1 == 2) {
           var3 = 600;
-          if (this instanceof gm) {
+          if (this instanceof HumanView) {
             var3 = var3 * 2;
           }
-          this.field_G = op.field_m.computeEffectDuration((byte) 32, param0, var3);
+          this.slowTicks = PortalEntryEvent.field_m.computeEffectDuration((byte) 32, param0, var3);
           return;
         }
     }
@@ -109,25 +109,25 @@ abstract class ti extends id {
         }
     }
 
-    final void i(int param0) {
-        this.field_E = this.field_E + this.field_S;
-        this.field_z = this.field_z + this.field_X;
+    final void applyVelocity(int param0) {
+        this.positionY = this.positionY + this.velocityY;
+        this.positionX = this.positionX + this.velocityX;
         if (param0 != 5197) {
-          this.c(20, -102);
+          this.advanceAnimation(20, -102);
         }
     }
 
-    void b(int param0, int param1) {
-        if (this.field_K == 32) {
+    void setState(int param0, int param1) {
+        if (this.state == 32) {
           return;
         }
-        if (20 == this.field_K) {
+        if (20 == this.state) {
           if (param0 != 18) {
             return;
           }
-          this.field_Q = 0;
-          this.field_ab = 0;
-          this.field_K = param0;
+          this.animationTicks = 0;
+          this.animationFrame = 0;
+          this.state = param0;
           if (param0 != 21) {
             if (param1 == -27655) {
               return;
@@ -136,19 +136,19 @@ abstract class ti extends id {
             return;
           }
           this.a(-4564);
-          this.field_N = 256;
+          this.exitCountdown = 256;
           if (param1 != -27655) {
             field_Z = (String) null;
             return;
           }
           return;
         }
-        this.field_Q = 0;
-        this.field_ab = 0;
-        this.field_K = param0;
+        this.animationTicks = 0;
+        this.animationFrame = 0;
+        this.state = param0;
         if (param0 == 21) {
           this.a(-4564);
-          this.field_N = 256;
+          this.exitCountdown = 256;
           if (param1 == -27655) {
             return;
           }
@@ -161,27 +161,27 @@ abstract class ti extends id {
         field_Z = (String) null;
     }
 
-    ti(int param0, int param1, int param2, int param3) {
+    UnitView(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         this.field_U = null;
-        this.field_K = !(this instanceof gm) ? 4 : 0;
-        this.field_F = 1 != hp.a((byte) 21, g.field_a, 2) ? 1 : 3;
-        this.field_ab = 0;
-        this.field_Q = 0;
-        this.field_bb = param3;
+        this.state = !(this instanceof HumanView) ? 4 : 0;
+        this.facing = 1 != hp.a((byte) 21, g.field_a, 2) ? 1 : 3;
+        this.animationFrame = 0;
+        this.animationTicks = 0;
+        this.speed = param3;
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
         int var7 = -88 % ((param3 + 32) / 57);
         this.field_R = false;
-        this.field_z = param0;
-        this.field_O = param5;
-        this.field_P = param2;
-        this.field_E = param1;
-        this.d(6, param4);
+        this.positionX = param0;
+        this.targetX = param5;
+        this.targetY = param2;
+        this.positionY = param1;
+        this.moveToward(6, param4);
     }
 
-    final boolean k(int param0) {
+    final boolean stepTowardTarget(int param0) {
         int stackIn_16_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_62_0 = 0;
@@ -214,20 +214,20 @@ abstract class ti extends id {
         int var5Lifetime2Lifetime2;
         int var5Lifetime5Lifetime1;
         if (param0 >= -69) {
-          this.field_X = 119;
-          var2 = this.field_O << 16;
-          var3 = this.field_P << 16;
-          if (this.field_X == 0 &&
-            this.field_S == 0) {
+          this.velocityX = 119;
+          var2 = this.targetX << 16;
+          var3 = this.targetY << 16;
+          if (this.velocityX == 0 &&
+            this.velocityY == 0) {
             return false;
           }
-          if (this.field_X != 0) {
-            if (this.field_X > 0 &&
-              this.field_z > var2) {
+          if (this.velocityX != 0) {
+            if (this.velocityX > 0 &&
+              this.positionX > var2) {
               stackIn_16_0 = 1;
             } else {
-              if (this.field_X < 0) {
-                stackIn_16_0 = (this.field_z < var2) ? 1 : 0;
+              if (this.velocityX < 0) {
+                stackIn_16_0 = (this.positionX < var2) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -236,13 +236,13 @@ abstract class ti extends id {
             stackIn_16_0 = 1;
           }
           var4 = stackIn_16_0;
-          if (this.field_S != 0) {
-            if (this.field_S > 0 &&
-              this.field_E > var3) {
+          if (this.velocityY != 0) {
+            if (this.velocityY > 0 &&
+              this.positionY > var3) {
               stackIn_28_0 = 1;
             } else {
-              if (this.field_S < 0) {
-                stackIn_28_0 = (var3 > this.field_E) ? 1 : 0;
+              if (this.velocityY < 0) {
+                stackIn_28_0 = (var3 > this.positionY) ? 1 : 0;
               } else {
                 stackIn_28_0 = 0;
               }
@@ -251,19 +251,19 @@ abstract class ti extends id {
             stackIn_28_0 = 1;
           }
           var5 = stackIn_28_0;
-          if (Math.abs(-var2 + this.field_z) < wc.field_O &&
-            Math.abs(this.field_E - var3) < wc.field_O) {
+          if (Math.abs(-var2 + this.positionX) < wc.field_O &&
+            Math.abs(this.positionY - var3) < wc.field_O) {
             var4 = 1;
             var5 = 1;
           }
           if (var4 != 0 &&
             var5 == 0) {
-            this.field_X = 0;
+            this.velocityX = 0;
             return false;
           }
           if (var4 == 0 &&
             var5 != 0) {
-            this.field_S = 0;
+            this.velocityY = 0;
             return false;
           }
           if (var4 == 0) {
@@ -272,57 +272,57 @@ abstract class ti extends id {
           if (var5 == 0) {
             return false;
           }
-          this.field_E = this.field_P << 16;
-          this.field_z = this.field_O << 16;
+          this.positionY = this.targetY << 16;
+          this.positionX = this.targetX << 16;
           if (!this.field_R) {
             return true;
           }
           this.field_R = false;
-          this.field_O = this.field_V;
-          this.field_P = this.field_L;
-          this.d(6, this.field_T);
+          this.targetX = this.field_V;
+          this.targetY = this.field_L;
+          this.moveToward(6, this.field_T);
           return false;
         }
-        var2Lifetime1 = this.field_O << 16;
-        var3Lifetime1 = this.field_P << 16;
-        if (this.field_X == 0 &&
-          this.field_S == 0) {
+        var2Lifetime1 = this.targetX << 16;
+        var3Lifetime1 = this.targetY << 16;
+        if (this.velocityX == 0 &&
+          this.velocityY == 0) {
           return false;
         }
-        if (this.field_X == 0) {
+        if (this.velocityX == 0) {
           var4Lifetime1 = 1;
-          if (this.field_S != 0) {
-            if (this.field_S <= 0) {
-              if (this.field_S < 0 &&
-                var3Lifetime1 > this.field_E) {
+          if (this.velocityY != 0) {
+            if (this.velocityY <= 0) {
+              if (this.velocityY < 0 &&
+                var3Lifetime1 > this.positionY) {
                 var5Lifetime1 = 1;
-                if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-                  Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+                  Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
                   var4Lifetime1 = 1;
                   var5Lifetime1 = 1;
                 }
                 if (var4Lifetime1 != 0 &&
                   var5Lifetime1 == 0) {
-                  this.field_X = 0;
+                  this.velocityX = 0;
                   return false;
                 }
                 if (var4Lifetime1 == 0 &&
                   var5Lifetime1 != 0) {
-                  this.field_S = 0;
+                  this.velocityY = 0;
                 } else {
                   if (var4Lifetime1 == 0) {
                     return false;
                   }
                   if (var5Lifetime1 != 0) {
-                    this.field_E = this.field_P << 16;
-                    this.field_z = this.field_O << 16;
+                    this.positionY = this.targetY << 16;
+                    this.positionX = this.targetX << 16;
                     if (!this.field_R) {
                       return true;
                     }
                     this.field_R = false;
-                    this.field_O = this.field_V;
-                    this.field_P = this.field_L;
-                    this.d(6, this.field_T);
+                    this.targetX = this.field_V;
+                    this.targetY = this.field_L;
+                    this.moveToward(6, this.field_T);
                     return false;
                   }
                 }
@@ -330,40 +330,40 @@ abstract class ti extends id {
               }
               stackIn_107_0 = 0;
             } else {
-              if (this.field_E <= var3Lifetime1) {
-                if (this.field_S < 0) {
-                  stackIn_62_0 = (var3Lifetime1 <= this.field_E) ? 0 : 1;
+              if (this.positionY <= var3Lifetime1) {
+                if (this.velocityY < 0) {
+                  stackIn_62_0 = (var3Lifetime1 <= this.positionY) ? 0 : 1;
                 } else {
                   stackIn_62_0 = 0;
                 }
                 var5Lifetime1 = stackIn_62_0;
-                if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-                  Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+                  Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
                   var4Lifetime1 = 1;
                   var5Lifetime1 = 1;
                 }
                 if (var4Lifetime1 != 0 &&
                   var5Lifetime1 == 0) {
-                  this.field_X = 0;
+                  this.velocityX = 0;
                   return false;
                 }
                 if (var4Lifetime1 == 0 &&
                   var5Lifetime1 != 0) {
-                  this.field_S = 0;
+                  this.velocityY = 0;
                 } else {
                   if (var4Lifetime1 == 0) {
                     return false;
                   }
                   if (var5Lifetime1 != 0) {
-                    this.field_E = this.field_P << 16;
-                    this.field_z = this.field_O << 16;
+                    this.positionY = this.targetY << 16;
+                    this.positionX = this.targetX << 16;
                     if (!this.field_R) {
                       return true;
                     }
                     this.field_R = false;
-                    this.field_O = this.field_V;
-                    this.field_P = this.field_L;
-                    this.d(6, this.field_T);
+                    this.targetX = this.field_V;
+                    this.targetY = this.field_L;
+                    this.moveToward(6, this.field_T);
                     return false;
                   }
                 }
@@ -375,53 +375,53 @@ abstract class ti extends id {
             stackIn_107_0 = 1;
           }
           var5Lifetime1Lifetime1 = stackIn_107_0;
-          if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-            Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
             var4Lifetime1 = 1;
             var5Lifetime1Lifetime1 = 1;
           }
           if (var4Lifetime1 != 0 &&
             var5Lifetime1Lifetime1 == 0) {
-            this.field_X = 0;
+            this.velocityX = 0;
             return false;
           }
           if (var4Lifetime1 == 0 &&
             var5Lifetime1Lifetime1 != 0) {
-            this.field_S = 0;
+            this.velocityY = 0;
           } else {
             if (var4Lifetime1 == 0) {
               return false;
             }
             if (var5Lifetime1Lifetime1 != 0) {
-              this.field_E = this.field_P << 16;
-              this.field_z = this.field_O << 16;
+              this.positionY = this.targetY << 16;
+              this.positionX = this.targetX << 16;
               if (!this.field_R) {
                 return true;
               }
               this.field_R = false;
-              this.field_O = this.field_V;
-              this.field_P = this.field_L;
-              this.d(6, this.field_T);
+              this.targetX = this.field_V;
+              this.targetY = this.field_L;
+              this.moveToward(6, this.field_T);
               return false;
             }
           }
           return false;
         }
-        if (this.field_X > 0) {
-          if (this.field_z <= var2Lifetime1) {
-            if (this.field_X < 0) {
-              stackIn_209_0 = (this.field_z >= var2Lifetime1) ? 0 : 1;
+        if (this.velocityX > 0) {
+          if (this.positionX <= var2Lifetime1) {
+            if (this.velocityX < 0) {
+              stackIn_209_0 = (this.positionX >= var2Lifetime1) ? 0 : 1;
             } else {
               stackIn_209_0 = 0;
             }
             var4Lifetime2 = stackIn_209_0;
-            if (this.field_S != 0) {
-              if (this.field_S > 0 &&
-                this.field_E > var3Lifetime1) {
+            if (this.velocityY != 0) {
+              if (this.velocityY > 0 &&
+                this.positionY > var3Lifetime1) {
                 stackIn_221_0 = 1;
               } else {
-                if (this.field_S < 0) {
-                  stackIn_221_0 = (var3Lifetime1 > this.field_E) ? 1 : 0;
+                if (this.velocityY < 0) {
+                  stackIn_221_0 = (var3Lifetime1 > this.positionY) ? 1 : 0;
                 } else {
                   stackIn_221_0 = 0;
                 }
@@ -430,71 +430,71 @@ abstract class ti extends id {
               stackIn_221_0 = 1;
             }
             var5Lifetime2 = stackIn_221_0;
-            if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-              Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+            if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+              Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
               var4Lifetime2 = 1;
               var5Lifetime2 = 1;
             }
             if (var4Lifetime2 != 0 &&
               var5Lifetime2 == 0) {
-              this.field_X = 0;
+              this.velocityX = 0;
               return false;
             }
             if (var4Lifetime2 == 0 &&
               var5Lifetime2 != 0) {
-              this.field_S = 0;
+              this.velocityY = 0;
             } else {
               if (var4Lifetime2 == 0) {
                 return false;
               }
               if (var5Lifetime2 != 0) {
-                this.field_E = this.field_P << 16;
-                this.field_z = this.field_O << 16;
+                this.positionY = this.targetY << 16;
+                this.positionX = this.targetX << 16;
                 if (!this.field_R) {
                   return true;
                 }
                 this.field_R = false;
-                this.field_O = this.field_V;
-                this.field_P = this.field_L;
-                this.d(6, this.field_T);
+                this.targetX = this.field_V;
+                this.targetY = this.field_L;
+                this.moveToward(6, this.field_T);
                 return false;
               }
             }
             return false;
           }
           var4Lifetime2Lifetime1 = 1;
-          if (this.field_S != 0) {
-            if (this.field_S <= 0) {
-              if (this.field_S < 0 &&
-                var3Lifetime1 > this.field_E) {
+          if (this.velocityY != 0) {
+            if (this.velocityY <= 0) {
+              if (this.velocityY < 0 &&
+                var3Lifetime1 > this.positionY) {
                 var5Lifetime2Lifetime1 = 1;
-                if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-                  Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+                  Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
                   var4Lifetime2Lifetime1 = 1;
                   var5Lifetime2Lifetime1 = 1;
                 }
                 if (var4Lifetime2Lifetime1 != 0 &&
                   var5Lifetime2Lifetime1 == 0) {
-                  this.field_X = 0;
+                  this.velocityX = 0;
                   return false;
                 }
                 if (var4Lifetime2Lifetime1 == 0 &&
                   var5Lifetime2Lifetime1 != 0) {
-                  this.field_S = 0;
+                  this.velocityY = 0;
                 } else {
                   if (var4Lifetime2Lifetime1 == 0) {
                     return false;
                   }
                   if (var5Lifetime2Lifetime1 != 0) {
-                    this.field_E = this.field_P << 16;
-                    this.field_z = this.field_O << 16;
+                    this.positionY = this.targetY << 16;
+                    this.positionX = this.targetX << 16;
                     if (!this.field_R) {
                       return true;
                     }
                     this.field_R = false;
-                    this.field_O = this.field_V;
-                    this.field_P = this.field_L;
-                    this.d(6, this.field_T);
+                    this.targetX = this.field_V;
+                    this.targetY = this.field_L;
+                    this.moveToward(6, this.field_T);
                     return false;
                   }
                 }
@@ -502,40 +502,40 @@ abstract class ti extends id {
               }
               stackIn_184_0 = 0;
             } else {
-              if (this.field_E <= var3Lifetime1) {
-                if (this.field_S < 0) {
-                  stackIn_139_0 = (var3Lifetime1 <= this.field_E) ? 0 : 1;
+              if (this.positionY <= var3Lifetime1) {
+                if (this.velocityY < 0) {
+                  stackIn_139_0 = (var3Lifetime1 <= this.positionY) ? 0 : 1;
                 } else {
                   stackIn_139_0 = 0;
                 }
                 var5Lifetime2Lifetime1 = stackIn_139_0;
-                if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-                  Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+                  Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
                   var4Lifetime2Lifetime1 = 1;
                   var5Lifetime2Lifetime1 = 1;
                 }
                 if (var4Lifetime2Lifetime1 != 0 &&
                   var5Lifetime2Lifetime1 == 0) {
-                  this.field_X = 0;
+                  this.velocityX = 0;
                   return false;
                 }
                 if (var4Lifetime2Lifetime1 == 0 &&
                   var5Lifetime2Lifetime1 != 0) {
-                  this.field_S = 0;
+                  this.velocityY = 0;
                 } else {
                   if (var4Lifetime2Lifetime1 == 0) {
                     return false;
                   }
                   if (var5Lifetime2Lifetime1 != 0) {
-                    this.field_E = this.field_P << 16;
-                    this.field_z = this.field_O << 16;
+                    this.positionY = this.targetY << 16;
+                    this.positionX = this.targetX << 16;
                     if (!this.field_R) {
                       return true;
                     }
                     this.field_R = false;
-                    this.field_O = this.field_V;
-                    this.field_P = this.field_L;
-                    this.d(6, this.field_T);
+                    this.targetX = this.field_V;
+                    this.targetY = this.field_L;
+                    this.moveToward(6, this.field_T);
                     return false;
                   }
                 }
@@ -547,48 +547,48 @@ abstract class ti extends id {
             stackIn_184_0 = 1;
           }
           var5Lifetime2Lifetime2 = stackIn_184_0;
-          if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-            Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
             var4Lifetime2Lifetime1 = 1;
             var5Lifetime2Lifetime2 = 1;
           }
           if (var4Lifetime2Lifetime1 != 0 &&
             var5Lifetime2Lifetime2 == 0) {
-            this.field_X = 0;
+            this.velocityX = 0;
             return false;
           }
           if (var4Lifetime2Lifetime1 == 0 &&
             var5Lifetime2Lifetime2 != 0) {
-            this.field_S = 0;
+            this.velocityY = 0;
           } else {
             if (var4Lifetime2Lifetime1 == 0) {
               return false;
             }
             if (var5Lifetime2Lifetime2 != 0) {
-              this.field_E = this.field_P << 16;
-              this.field_z = this.field_O << 16;
+              this.positionY = this.targetY << 16;
+              this.positionX = this.targetX << 16;
               if (!this.field_R) {
                 return true;
               }
               this.field_R = false;
-              this.field_O = this.field_V;
-              this.field_P = this.field_L;
-              this.d(6, this.field_T);
+              this.targetX = this.field_V;
+              this.targetY = this.field_L;
+              this.moveToward(6, this.field_T);
               return false;
             }
           }
           return false;
         }
-        if (this.field_X < 0 &&
-          this.field_z < var2Lifetime1) {
+        if (this.velocityX < 0 &&
+          this.positionX < var2Lifetime1) {
           var4Lifetime3 = 1;
-          if (this.field_S != 0) {
-            if (this.field_S > 0 &&
-              this.field_E > var3Lifetime1) {
+          if (this.velocityY != 0) {
+            if (this.velocityY > 0 &&
+              this.positionY > var3Lifetime1) {
               stackIn_255_0 = 1;
             } else {
-              if (this.field_S < 0) {
-                stackIn_255_0 = (var3Lifetime1 > this.field_E) ? 1 : 0;
+              if (this.velocityY < 0) {
+                stackIn_255_0 = (var3Lifetime1 > this.positionY) ? 1 : 0;
               } else {
                 stackIn_255_0 = 0;
               }
@@ -597,50 +597,50 @@ abstract class ti extends id {
             stackIn_255_0 = 1;
           }
           var5Lifetime3 = stackIn_255_0;
-          if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-            Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
             var4Lifetime3 = 1;
             var5Lifetime3 = 1;
           }
           if (var4Lifetime3 != 0 &&
             var5Lifetime3 == 0) {
-            this.field_X = 0;
+            this.velocityX = 0;
             return false;
           }
           if (var4Lifetime3 == 0 &&
             var5Lifetime3 != 0) {
-            this.field_S = 0;
+            this.velocityY = 0;
           } else {
             if (var4Lifetime3 == 0) {
               return false;
             }
             if (var5Lifetime3 != 0) {
-              this.field_E = this.field_P << 16;
-              this.field_z = this.field_O << 16;
+              this.positionY = this.targetY << 16;
+              this.positionX = this.targetX << 16;
               if (!this.field_R) {
                 return true;
               }
               this.field_R = false;
-              this.field_O = this.field_V;
-              this.field_P = this.field_L;
-              this.d(6, this.field_T);
+              this.targetX = this.field_V;
+              this.targetY = this.field_L;
+              this.moveToward(6, this.field_T);
               return false;
             }
           }
           return false;
         }
         var4Lifetime4 = 0;
-        if (this.field_S == 0) {
+        if (this.velocityY == 0) {
           var5Lifetime4 = 1;
-          if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-            Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
             var4Lifetime4 = 1;
             var5Lifetime4 = 1;
           }
           if (var4Lifetime4 == 0) {
             if (var4Lifetime4 == 0 &&
               var5Lifetime4 != 0) {
-              this.field_S = 0;
+              this.velocityY = 0;
               return false;
             }
             if (var4Lifetime4 == 0) {
@@ -649,86 +649,86 @@ abstract class ti extends id {
             if (var5Lifetime4 == 0) {
               return false;
             }
-            this.field_E = this.field_P << 16;
-            this.field_z = this.field_O << 16;
+            this.positionY = this.targetY << 16;
+            this.positionX = this.targetX << 16;
             if (!this.field_R) {
               return true;
             }
             this.field_R = false;
-            this.field_O = this.field_V;
-            this.field_P = this.field_L;
-            this.d(6, this.field_T);
+            this.targetX = this.field_V;
+            this.targetY = this.field_L;
+            this.moveToward(6, this.field_T);
             return false;
           }
           if (var5Lifetime4 == 0) {
-            this.field_X = 0;
+            this.velocityX = 0;
             return false;
           }
           if (var4Lifetime4 != 0) {
             if (var4Lifetime4 == 0) {
               return false;
             }
-            this.field_E = this.field_P << 16;
-            this.field_z = this.field_O << 16;
+            this.positionY = this.targetY << 16;
+            this.positionX = this.targetX << 16;
             if (!this.field_R) {
               return true;
             }
             this.field_R = false;
-            this.field_O = this.field_V;
-            this.field_P = this.field_L;
-            this.d(6, this.field_T);
+            this.targetX = this.field_V;
+            this.targetY = this.field_L;
+            this.moveToward(6, this.field_T);
             return false;
           } else {
-            this.field_S = 0;
+            this.velocityY = 0;
           }
           return false;
         }
-        if (this.field_S > 0) {
-          if (this.field_E <= var3Lifetime1) {
-            if (this.field_S < 0) {
-              stackIn_341_0 = (var3Lifetime1 <= this.field_E) ? 0 : 1;
+        if (this.velocityY > 0) {
+          if (this.positionY <= var3Lifetime1) {
+            if (this.velocityY < 0) {
+              stackIn_341_0 = (var3Lifetime1 <= this.positionY) ? 0 : 1;
             } else {
               stackIn_341_0 = 0;
             }
             var5Lifetime5 = stackIn_341_0;
-            if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-              Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+            if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+              Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
               var4Lifetime4 = 1;
               var5Lifetime5 = 1;
             }
             if (var4Lifetime4 != 0 &&
               var5Lifetime5 == 0) {
-              this.field_X = 0;
+              this.velocityX = 0;
             } else if (var4Lifetime4 == 0 &&
               var5Lifetime5 != 0) {
-              this.field_S = 0;
+              this.velocityY = 0;
             } else {
               if (var4Lifetime4 != 0 &&
                 var5Lifetime5 != 0) {
-                this.field_E = this.field_P << 16;
-                this.field_z = this.field_O << 16;
+                this.positionY = this.targetY << 16;
+                this.positionX = this.targetX << 16;
                 if (!this.field_R) {
                   return true;
                 }
                 this.field_R = false;
-                this.field_O = this.field_V;
-                this.field_P = this.field_L;
-                this.d(6, this.field_T);
+                this.targetX = this.field_V;
+                this.targetY = this.field_L;
+                this.moveToward(6, this.field_T);
                 return false;
               }
             }
             return false;
           }
           var5Lifetime5Lifetime1 = 1;
-          if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-            Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
             var4Lifetime4 = 1;
             var5Lifetime5Lifetime1 = 1;
           }
           if (var4Lifetime4 == 0) {
             if (var4Lifetime4 == 0 &&
               var5Lifetime5Lifetime1 != 0) {
-              this.field_S = 0;
+              this.velocityY = 0;
               return false;
             }
             if (var4Lifetime4 == 0) {
@@ -737,53 +737,53 @@ abstract class ti extends id {
             if (var5Lifetime5Lifetime1 == 0) {
               return false;
             }
-            this.field_E = this.field_P << 16;
-            this.field_z = this.field_O << 16;
+            this.positionY = this.targetY << 16;
+            this.positionX = this.targetX << 16;
             if (!this.field_R) {
               return true;
             }
             this.field_R = false;
-            this.field_O = this.field_V;
-            this.field_P = this.field_L;
-            this.d(6, this.field_T);
+            this.targetX = this.field_V;
+            this.targetY = this.field_L;
+            this.moveToward(6, this.field_T);
             return false;
           }
           if (var5Lifetime5Lifetime1 == 0) {
-            this.field_X = 0;
+            this.velocityX = 0;
             return false;
           }
           if (var4Lifetime4 != 0) {
             if (var4Lifetime4 == 0) {
               return false;
             }
-            this.field_E = this.field_P << 16;
-            this.field_z = this.field_O << 16;
+            this.positionY = this.targetY << 16;
+            this.positionX = this.targetX << 16;
             if (!this.field_R) {
               return true;
             }
             this.field_R = false;
-            this.field_O = this.field_V;
-            this.field_P = this.field_L;
-            this.d(6, this.field_T);
+            this.targetX = this.field_V;
+            this.targetY = this.field_L;
+            this.moveToward(6, this.field_T);
             return false;
           } else {
-            this.field_S = 0;
+            this.velocityY = 0;
           }
           return false;
         }
         regionExit1: {
-          if (this.field_S < 0 &&
-            var3Lifetime1 > this.field_E) {
+          if (this.velocityY < 0 &&
+            var3Lifetime1 > this.positionY) {
             var5Lifetime6 = 1;
-            if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-              Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+            if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+              Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
               var4Lifetime4 = 1;
               var5Lifetime6 = 1;
             }
             if (var4Lifetime4 == 0) {
               if (var4Lifetime4 == 0 &&
                 var5Lifetime6 != 0) {
-                this.field_S = 0;
+                this.velocityY = 0;
                 return false;
               }
               if (var4Lifetime4 != 0) {
@@ -794,40 +794,40 @@ abstract class ti extends id {
                 if (var4Lifetime4 != 0) {
                   if (var4Lifetime4 != 0 &&
                     var5Lifetime6 != 0) {
-                    this.field_E = this.field_P << 16;
-                    this.field_z = this.field_O << 16;
+                    this.positionY = this.targetY << 16;
+                    this.positionX = this.targetX << 16;
                     if (!this.field_R) {
                       return true;
                     }
                     this.field_R = false;
-                    this.field_O = this.field_V;
-                    this.field_P = this.field_L;
-                    this.d(6, this.field_T);
+                    this.targetX = this.field_V;
+                    this.targetY = this.field_L;
+                    this.moveToward(6, this.field_T);
                     return false;
                   }
                 } else {
-                  this.field_S = 0;
+                  this.velocityY = 0;
                 }
                 return false;
               }
-              this.field_X = 0;
+              this.velocityX = 0;
             }
             return false;
           }
           var5Lifetime6 = 0;
-          if (Math.abs(-var2Lifetime1 + this.field_z) < wc.field_O &&
-            Math.abs(this.field_E - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
             var4Lifetime4 = 1;
             var5Lifetime6 = 1;
           }
           if (var4Lifetime4 == 0) {
             if (var5Lifetime6 != 0) {
-              this.field_S = 0;
+              this.velocityY = 0;
               return false;
             }
           } else {
             if (var5Lifetime6 == 0) {
-              this.field_X = 0;
+              this.velocityX = 0;
               return false;
             }
           }
@@ -838,15 +838,15 @@ abstract class ti extends id {
         if (var5Lifetime6 == 0) {
           return false;
         }
-        this.field_E = this.field_P << 16;
-        this.field_z = this.field_O << 16;
+        this.positionY = this.targetY << 16;
+        this.positionX = this.targetX << 16;
         if (!this.field_R) {
           return true;
         }
         this.field_R = false;
-        this.field_O = this.field_V;
-        this.field_P = this.field_L;
-        this.d(6, this.field_T);
+        this.targetX = this.field_V;
+        this.targetY = this.field_L;
+        this.moveToward(6, this.field_T);
         return false;
     }
 
@@ -859,7 +859,7 @@ abstract class ti extends id {
         field_Z = null;
     }
 
-    final void d(int param0, int param1) {
+    final void moveToward(int param0, int param1) {
         int stackIn_8_1 = 0;
         int stackIn_13_1 = 0;
         int stackIn_18_1 = 0;
@@ -868,69 +868,69 @@ abstract class ti extends id {
         int var4;
         int var5;
         int var6;
-        var3 = this.field_O - this.g(param0 + 68);
-        var4 = this.field_P - this.h(-80);
+        var3 = this.targetX - this.getX(param0 + 68);
+        var4 = this.targetY - this.getY(-80);
         var5 = g.b(var3 * var3 + var4 * var4);
         if (param0 != 6) {
-          this.c(-72, 91);
+          this.advanceAnimation(-72, 91);
         }
         if (var5 != 0) {
           var6 = param1 / var5;
-          this.a(var6 * var4, var6 * var3, (byte) -121);
+          this.setVelocity(var6 * var4, var6 * var3, (byte) -121);
           return;
         }
-        if (this.field_K == 1) {
-          if (!(this instanceof gm)) {
+        if (this.state == 1) {
+          if (!(this instanceof HumanView)) {
             stackIn_8_1 = 4;
           } else {
             stackIn_8_1 = 0;
           }
-          this.b(stackIn_8_1, param0 - 27661);
+          this.setState(stackIn_8_1, param0 - 27661);
           return;
         }
-        if (5 == this.field_K) {
-          if (!(this instanceof gm)) {
+        if (5 == this.state) {
+          if (!(this instanceof HumanView)) {
             stackIn_13_1 = 4;
           } else {
             stackIn_13_1 = 0;
           }
-          this.b(stackIn_13_1, param0 - 27661);
+          this.setState(stackIn_13_1, param0 - 27661);
           return;
         }
-        if (6 == this.field_K) {
-          if (!(this instanceof gm)) {
+        if (6 == this.state) {
+          if (!(this instanceof HumanView)) {
             stackIn_18_1 = 4;
           } else {
             stackIn_18_1 = 0;
           }
-          this.b(stackIn_18_1, param0 - 27661);
+          this.setState(stackIn_18_1, param0 - 27661);
           return;
         }
-        if (this.field_K != 7) {
+        if (this.state != 7) {
           return;
         }
-        if (!(this instanceof gm)) {
+        if (!(this instanceof HumanView)) {
           stackIn_24_1 = 4;
         } else {
           stackIn_24_1 = 0;
         }
-        this.b(stackIn_24_1, param0 - 27661);
+        this.setState(stackIn_24_1, param0 - 27661);
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void setVelocity(int param0, int param1, byte param2) {
         if (param2 <= -120) {
-          this.field_S = param0;
-          this.field_X = param1;
-          this.field_F = 0 < param1 ? 1 : 3;
+          this.velocityY = param0;
+          this.velocityX = param1;
+          this.facing = 0 < param1 ? 1 : 3;
           return;
         }
-        this.field_bb = -7;
-        this.field_S = param0;
-        this.field_X = param1;
-        this.field_F = 0 < param1 ? 1 : 3;
+        this.speed = -7;
+        this.velocityY = param0;
+        this.velocityX = param1;
+        this.facing = 0 < param1 ? 1 : 3;
     }
 
-    final void c(int param0, int param1) {
+    final void advanceAnimation(int param0, int param1) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$0 = 0;
@@ -943,73 +943,73 @@ abstract class ti extends id {
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
-        if (gg.field_j[param1] > this.field_ab) {
+        if (gg.field_j[param1] > this.animationFrame) {
           if (param0 == 30818) {
             var3 = gg.field_b[param1];
-            if (0 < this.field_G) {
+            if (0 < this.slowTicks) {
               var3 = var3 * 2;
             }
-            fieldTemp$2 = this.field_Q + 1;
-            this.field_Q = this.field_Q + 1;
+            fieldTemp$2 = this.animationTicks + 1;
+            this.animationTicks = this.animationTicks + 1;
             if (var3 < fieldTemp$2) {
-              fieldTemp$3 = this.field_ab + 1;
-              this.field_ab = this.field_ab + 1;
+              fieldTemp$3 = this.animationFrame + 1;
+              this.animationFrame = this.animationFrame + 1;
               if (fieldTemp$3 == gg.field_j[param1]) {
-                this.field_ab = 0;
+                this.animationFrame = 0;
               }
-              this.field_Q = 0;
+              this.animationTicks = 0;
             }
             return;
           }
           field_Y = 103;
           var3Lifetime3 = gg.field_b[param1];
-          if (0 < this.field_G) {
+          if (0 < this.slowTicks) {
             var3Lifetime3 = var3Lifetime3 * 2;
           }
-          fieldTemp$0 = this.field_Q + 1;
-          this.field_Q = this.field_Q + 1;
+          fieldTemp$0 = this.animationTicks + 1;
+          this.animationTicks = this.animationTicks + 1;
           if (var3Lifetime3 < fieldTemp$0) {
-            fieldTemp$1 = this.field_ab + 1;
-            this.field_ab = this.field_ab + 1;
+            fieldTemp$1 = this.animationFrame + 1;
+            this.animationFrame = this.animationFrame + 1;
             if (fieldTemp$1 == gg.field_j[param1]) {
-              this.field_ab = 0;
+              this.animationFrame = 0;
             }
-            this.field_Q = 0;
+            this.animationTicks = 0;
           }
           return;
         }
-        this.field_ab = 0;
+        this.animationFrame = 0;
         if (param0 == 30818) {
           var3Lifetime1 = gg.field_b[param1];
-          if (0 < this.field_G) {
+          if (0 < this.slowTicks) {
             var3Lifetime1 = var3Lifetime1 * 2;
           }
-          fieldTemp$4 = this.field_Q + 1;
-          this.field_Q = this.field_Q + 1;
+          fieldTemp$4 = this.animationTicks + 1;
+          this.animationTicks = this.animationTicks + 1;
           if (var3Lifetime1 < fieldTemp$4) {
-            fieldTemp$5 = this.field_ab + 1;
-            this.field_ab = this.field_ab + 1;
+            fieldTemp$5 = this.animationFrame + 1;
+            this.animationFrame = this.animationFrame + 1;
             if (fieldTemp$5 == gg.field_j[param1]) {
-              this.field_ab = 0;
+              this.animationFrame = 0;
             }
-            this.field_Q = 0;
+            this.animationTicks = 0;
           }
           return;
         }
         field_Y = 103;
         var3Lifetime2 = gg.field_b[param1];
-        if (0 < this.field_G) {
+        if (0 < this.slowTicks) {
           var3Lifetime2 = var3Lifetime2 * 2;
         }
-        fieldTemp$6 = this.field_Q + 1;
-        this.field_Q = this.field_Q + 1;
+        fieldTemp$6 = this.animationTicks + 1;
+        this.animationTicks = this.animationTicks + 1;
         if (var3Lifetime2 < fieldTemp$6) {
-          fieldTemp$7 = this.field_ab + 1;
-          this.field_ab = this.field_ab + 1;
+          fieldTemp$7 = this.animationFrame + 1;
+          this.animationFrame = this.animationFrame + 1;
           if (fieldTemp$7 == gg.field_j[param1]) {
-            this.field_ab = 0;
+            this.animationFrame = 0;
           }
-          this.field_Q = 0;
+          this.animationTicks = 0;
         }
         return;
     }

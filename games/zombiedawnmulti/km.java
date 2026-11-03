@@ -28,7 +28,7 @@ final class km extends sq {
         re var6Lifetime1;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         var6 = this.field_Y.d(102);
-        if (var6 != h.field_H &&
+        if (var6 != PortalView.field_H &&
           var6 != ua.field_I) {
           var5 = this.field_Y.c(-120);
           if (var5 == null) {
@@ -46,7 +46,7 @@ final class km extends sq {
         var8 = (rk) ((Object) this.listener);
         var9 = this.field_y + param3;
         var10 = var8.a((UiWidget) (this), 0, param1) + (var8.a((UiWidget) (this), param0 - 99).a((byte) -111) >> 1);
-        if (h.field_H == var6Lifetime1) {
+        if (PortalView.field_H == var6Lifetime1) {
           var18 = rj.field_I[0];
           var11 = var18.fullWidth << 1;
           var12 = var18.field_u << 1;
@@ -125,10 +125,10 @@ final class km extends sq {
             var5 = (ab) (ig.field_a.b(6));
           }
           var2_int = -37 / ((-63 - param1) / 58);
-          var3 = so.field_j.c(48);
+          var3 = UnitStateEvent.field_j.c(48);
           while (var3 != null) {
             qo.b(true, param0);
-            var3 = so.field_j.b(6);
+            var3 = UnitStateEvent.field_j.b(6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -270,7 +270,7 @@ final class km extends sq {
           var8_ref_ka = uk.field_M[var7];
           var9 = 0;
           if (!nh.field_m &&
-            var5 < sj.field_m) {
+            var5 < InfectionEvent.field_m) {
             var10 = ga.a(var8_ref_ka.field_l, true);
             if (var8_ref_ka.a(true) >= var10 && (var8_ref_ka.field_k ||
               !hp.a(var8_ref_ka.field_e, 1020))) {
@@ -281,7 +281,7 @@ final class km extends sq {
             if (var8_ref_ka.field_q == null ||
               bn.field_b) {
               if (null == var8_ref_ka.field_q) {
-                id.field_D = id.field_D + 1;
+                SceneObject.field_D = SceneObject.field_D + 1;
               }
               var10_ref_String = bh.a(-126, var8_ref_ka);
               var11 = var10_ref_String + BitmapFont.c(var8_ref_ka.field_d);

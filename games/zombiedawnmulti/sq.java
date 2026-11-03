@@ -399,7 +399,7 @@ class sq extends gn {
           var1_int = ce.field_k;
           var2 = 0;
           if (ho.field_q == 2) {
-            var3_long = bl.a((byte) 49) - so.field_s;
+            var3_long = bl.a((byte) 49) - UnitStateEvent.field_s;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;

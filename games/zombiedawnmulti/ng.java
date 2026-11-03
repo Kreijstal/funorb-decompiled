@@ -10,10 +10,10 @@ abstract class ng {
     static String field_f;
     static int field_d;
 
-    final static so a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        so var9 = (so) (fk.field_n.g(75));
+    final static UnitStateEvent a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        UnitStateEvent var9 = (UnitStateEvent) (fk.field_n.g(75));
         if (var9 == null) {
-          var9 = new so();
+          var9 = new UnitStateEvent();
         }
         var9.a(param3, param4, param5, param7, param6, param8, param0, false, param2);
         int var10 = -109 % ((-78 - param1) / 44);
@@ -175,7 +175,7 @@ abstract class ng {
             return stackIn_3_0;
           }
           if (SimZombie.field_zb != 2) {
-            stackIn_7_0 = id.field_A;
+            stackIn_7_0 = SceneObject.field_A;
             return stackIn_7_0;
           }
           var7 = md.a((byte) 90, param1);

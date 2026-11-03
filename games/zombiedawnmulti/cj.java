@@ -722,7 +722,7 @@ class cj extends qo {
         if (!wm.field_V.a(param0 ^ param0)) {
           return s.field_h + " - " + wm.field_V.b(param0 - 18006) + "%";
         }
-        return op.field_l;
+        return PortalEntryEvent.field_l;
     }
 
     final static int a(ka param0, byte param1) {

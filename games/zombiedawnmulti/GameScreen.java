@@ -12,48 +12,48 @@ final class GameScreen {
     static String field_r;
     static String field_E;
     static String field_V;
-    private IntrusiveDeque field_hb;
+    private IntrusiveDeque eventQueue;
     private boolean field_ab;
     static boolean field_bb;
     private int field_h;
     private int field_Z;
     private int field_R;
-    fh field_u;
+    NavigationGrid navigation;
     ko field_I;
     private qe field_G;
     int field_j;
     private uf field_J;
-    nm field_k;
+    Camera camera;
     int field_Y;
     private int field_p;
     private long field_a;
-    int field_M;
+    int localTeam;
     private IntrusiveDeque field_X;
     private IntrusiveDeque field_kb;
     private IntrusiveDeque field_cb;
     private int field_q;
     private IntrusiveDeque field_O;
     private Sprite field_L;
-    lq field_Q;
-    private gm field_x;
+    DualLinkDeque selection;
+    private HumanView field_x;
     private boolean field_lb;
     private int field_d;
     private boolean field_db;
     private GameCharacter field_mb;
     private int field_F;
     private Sprite field_y;
-    IntrusiveDeque field_H;
+    IntrusiveDeque sceneObjects;
     private ea field_S;
     private int field_fb;
     private IntrusiveDeque field_T;
-    private lq field_c;
+    private DualLinkDeque field_c;
     private Sprite field_B;
     private IntrusiveDeque field_C;
     private boolean field_eb;
     private boolean field_w;
     private boolean field_f;
     private int field_n;
-    private h field_o;
+    private PortalView portal;
     private int field_l;
     private int field_ib;
     private boolean field_z;
@@ -69,7 +69,7 @@ final class GameScreen {
     private int field_g;
     private int[] field_i;
 
-    private final void e(int param0) {
+    private final void handleMouseInput(int param0) {
         boolean stackIn_78_0 = false;
         boolean stackIn_84_0 = false;
         int stackIn_86_0 = 0;
@@ -87,10 +87,10 @@ final class GameScreen {
         RuntimeException var2 = null;
         float var3_float = 0.0f;
         int var3 = 0;
-        id var3_ref_id = null;
+        SceneObject var3_ref_id = null;
         int var4 = 0;
-        h var5 = null;
-        id var5_ref = null;
+        PortalView var5 = null;
+        SceneObject var5_ref = null;
         int var6_int = 0;
         GameCharacter var6 = null;
         int var7 = 0;
@@ -126,38 +126,38 @@ final class GameScreen {
           }
           bk.field_g = false;
           if (0 != var2_int) {
-            var3_float = (1.0f + (float)var2_int * 0.03999999910593033f) * this.field_k.field_d;
+            var3_float = (1.0f + (float)var2_int * 0.03999999910593033f) * this.camera.zoom;
             if (var3_float > 2.0f) {
               var3_float = 2.0f;
             }
             if (1.0f > var3_float) {
               var3_float = 1.0f;
             }
-            if (var3_float != this.field_k.field_d &&
-              (float)this.field_u.field_r >= 640.0f * var3_float &&
-              var3_float * 480.0f <= (float)this.field_u.field_c) {
-              this.field_k.field_d = var3_float;
+            if (var3_float != this.camera.zoom &&
+              (float)this.navigation.pixelWidth >= 640.0f * var3_float &&
+              var3_float * 480.0f <= (float)this.navigation.pixelHeight) {
+              this.camera.zoom = var3_float;
             }
           }
           boolean decompiledFrameCompleted2 = true;
-          if (this.c((byte) 124) &&
+          if (this.isInProgress((byte) 124) &&
             !gf.field_h) {
-            var3 = this.field_k.a(MouseInputHandler.field_g, 2);
-            var4 = this.field_k.a(true, bo.field_d);
+            var3 = this.camera.screenToWorldX(MouseInputHandler.field_g, 2);
+            var4 = this.camera.screenToWorldY(true, bo.field_d);
             bk.field_g = true;
-            var5 = (h) (this.field_c.c((byte) 97));
+            var5 = (PortalView) (this.field_c.first((byte) 97));
             while (true) {
               boolean decompiledFrameRemainder3 = true;
               if (null != var5) {
                 stackIn_86_0 = ~var5.field_I;
-                stackIn_86_1 = ~this.field_M;
+                stackIn_86_1 = ~this.localTeam;
                 if (var10 != 0) {
                   decompiledFrameCompleted2 = false;
                   break;
                 }
                 if (stackIn_86_0 != stackIn_86_1) {
-                  var6_int = var5.g(-73) - var3;
-                  var7 = var5.h(126) - var4;
+                  var6_int = var5.getX(-73) - var3;
+                  var7 = var5.getY(126) - var4;
                   var8 = 350;
                   if (var7 * var7 + var6_int * var6_int < var8 * var8) {
                     bk.field_g = false;
@@ -165,7 +165,7 @@ final class GameScreen {
                   }
                 }
                 if (decompiledFrameRemainder3) {
-                  var5 = (h) (this.field_c.b((byte) 102));
+                  var5 = (PortalView) (this.field_c.next((byte) 102));
                   continue;
                 }
               }
@@ -173,7 +173,7 @@ final class GameScreen {
                 break;
               }
               bk.field_g = false;
-              var5_ref = (id) (this.field_H.c(112));
+              var5_ref = (SceneObject) (this.sceneObjects.c(112));
               scanLoop1: while (true) {
                 boolean decompiledFrameRemainder2 = true;
                 if (var5_ref != null) {
@@ -183,10 +183,10 @@ final class GameScreen {
                   }
                   if (stackIn_78_0) {
                     var6 = (GameCharacter) (var5_ref);
-                    if (var6.i((byte) -43)) {
-                      var7Lifetime1 = var6.g(88) - var3;
-                      var8Lifetime1 = -var4 + var6.h(120);
-                      var9 = var6.l(-113);
+                    if (var6.isOwnedByLocalPlayer((byte) -43)) {
+                      var7Lifetime1 = var6.getX(88) - var3;
+                      var8Lifetime1 = -var4 + var6.getY(120);
+                      var9 = var6.getSelectionRadius(-113);
                       if (var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1 < var9 * var9) {
                         bk.field_g = true;
                         decompiledFrameRemainder2 = false;
@@ -194,7 +194,7 @@ final class GameScreen {
                     }
                   }
                   if (decompiledFrameRemainder2) {
-                    var5_ref = (id) (this.field_H.b(6));
+                    var5_ref = (SceneObject) (this.sceneObjects.b(6));
                     continue;
                   }
                 }
@@ -204,9 +204,9 @@ final class GameScreen {
               if (stackIn_78_0) {
                 break;
               }
-              var5 = this.field_o;
-              var6_intLifetime1 = -var3 + var5.g(88);
-              var7Lifetime2 = -var4 + var5.h(123);
+              var5 = this.portal;
+              var6_intLifetime1 = -var3 + var5.getX(88);
+              var7Lifetime2 = -var4 + var5.getY(123);
               var8Lifetime2 = 350;
               stackIn_84_0 = !((var8Lifetime2 * var8Lifetime2) <= (var6_intLifetime1 * var6_intLifetime1 + var7Lifetime2 * var7Lifetime2));
               bk.field_g = stackIn_84_0;
@@ -227,7 +227,7 @@ final class GameScreen {
               this.field_db &&
               this.field_eb &&
               this.field_w) {
-              var3_ref_id = (id) (this.field_H.c(83));
+              var3_ref_id = (SceneObject) (this.sceneObjects.c(83));
               while (null != var3_ref_id) {
                 stackOut_109_0 = var3_ref_id instanceof GameCharacter;
                 stackIn_232_0 = stackOut_109_0 ? 1 : 0;
@@ -236,11 +236,11 @@ final class GameScreen {
                   decompiledFrameCompleted1 = false;
                   break;
                 }
-                if (stackIn_110_0 && (((GameCharacter) (var3_ref_id)).team == this.field_M ||
+                if (stackIn_110_0 && (((GameCharacter) (var3_ref_id)).team == this.localTeam ||
                   var10 != 0)) {
                   ((GameCharacter) (var3_ref_id)).field_eb = false;
                 }
-                var3_ref_id = (id) (this.field_H.b(6));
+                var3_ref_id = (SceneObject) (this.sceneObjects.b(6));
               }
             }
             if (decompiledFrameCompleted1) {
@@ -267,23 +267,23 @@ final class GameScreen {
                   stackIn_143_1 = 5;
                 }
                 if (stackIn_142_0 < ~stackIn_143_1) {
-                  if (this.c((byte) 106) &&
+                  if (this.isInProgress((byte) 106) &&
                     this.field_w &&
                     !gf.field_h) {
                     this.field_I.h(1);
                     if (!lc.field_m[81] &&
                       !lc.field_m[82]) {
-                      this.b(-57);
+                      this.clearSelection(-57);
                     }
                   }
                   this.field_eb = true;
                 }
               }
               if (this.field_eb) {
-                if (this.c((byte) 101) &&
+                if (this.isInProgress((byte) 101) &&
                   this.field_w &&
                   !gf.field_h) {
-                  var5_ref = (id) (this.field_H.c(69));
+                  var5_ref = (SceneObject) (this.sceneObjects.c(69));
                   while (var5_ref != null) {
                     stackOut_175_0 = var5_ref instanceof GameCharacter;
                     stackIn_232_0 = stackOut_175_0 ? 1 : 0;
@@ -294,19 +294,19 @@ final class GameScreen {
                     }
                     if (stackIn_176_0) {
                       var6Lifetime1 = (GameCharacter) (var5_ref);
-                      if (this.field_M == var6Lifetime1.team ||
+                      if (this.localTeam == var6Lifetime1.team ||
                         var10 != 0) {
-                        var6Lifetime1.field_eb = var6Lifetime1.a(this.field_k.a(MouseInputHandler.field_g, 2), this.field_k.a(true, this.field_p), this.field_k.a(true, bo.field_d), 48, this.field_k.a(this.field_F, 2));
+                        var6Lifetime1.field_eb = var6Lifetime1.overlapsRect(this.camera.screenToWorldX(MouseInputHandler.field_g, 2), this.camera.screenToWorldY(true, this.field_p), this.camera.screenToWorldY(true, bo.field_d), 48, this.camera.screenToWorldX(this.field_F, 2));
                       }
                     }
-                    var5_ref = (id) (this.field_H.b(6));
+                    var5_ref = (SceneObject) (this.sceneObjects.b(6));
                   }
                   if ((decompiledFrameCompleted0) &&
                     (var10 != 0)) {
                     if (-1 == this.field_q) {
                       this.field_q = this.field_F;
                     }
-                    this.field_k.a(var3Lifetime1, var4Lifetime1, 25992);
+                    this.camera.scroll(var3Lifetime1, var4Lifetime1, 25992);
                     this.field_p = bo.field_d;
                     this.field_F = MouseInputHandler.field_g;
                   }
@@ -314,7 +314,7 @@ final class GameScreen {
                   if (-1 == this.field_q) {
                     this.field_q = this.field_F;
                   }
-                  this.field_k.a(var3Lifetime1, var4Lifetime1, 25992);
+                  this.camera.scroll(var3Lifetime1, var4Lifetime1, 25992);
                   this.field_p = bo.field_d;
                   this.field_F = MouseInputHandler.field_g;
                 }
@@ -327,15 +327,15 @@ final class GameScreen {
               (decompiledFrameCompleted0) &&
               (this.field_db)) {
               boolean decompiledFrameRemainder0 = true;
-              if (this.c((byte) 113)) {
+              if (this.isInProgress((byte) 113)) {
                 if ((this.field_eb) &&
                   (decompiledFrameRemainder0 = (this.field_w))) {
                   if (!lc.field_m[81] &&
                     !lc.field_m[82]) {
-                    this.b(-75);
+                    this.clearSelection(-75);
                   }
-                  this.a(this.field_k.a(this.field_F, 2), this.field_k.a(true, this.field_p), this.field_k.a(true, bo.field_d), this.field_k.a(MouseInputHandler.field_g, 2), (byte) 5);
-                  decompiledFrameRemainder0 = !(this.field_Q.a((byte) 98) <= 0);
+                  this.selectUnitsInRect(this.camera.screenToWorldX(this.field_F, 2), this.camera.screenToWorldY(true, this.field_p), this.camera.screenToWorldY(true, bo.field_d), this.camera.screenToWorldX(MouseInputHandler.field_g, 2), (byte) 5);
+                  decompiledFrameRemainder0 = !(this.selection.size((byte) 98) <= 0);
                   if (decompiledFrameRemainder0) {
                     iq.a(-3, (byte) 99);
                     decompiledFrameRemainder0 = (var10 != 0);
@@ -373,7 +373,7 @@ final class GameScreen {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    final void applyFight(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         Throwable decompiledCaughtException = null;
         GameCharacter var8 = null;
         Exception var8_ref = null;
@@ -381,15 +381,15 @@ final class GameScreen {
         GameCharacter var9 = null;
         try {
           try {
-            var8 = op.field_m.a(param3, false);
-            var9 = op.field_m.a(param1, false);
+            var8 = PortalEntryEvent.field_m.a(param3, false);
+            var9 = PortalEntryEvent.field_m.a(param1, false);
             if (null != var8 &&
               null != var9) {
               var8.field_V = param4 << 16;
               var8.field_L = param2 << 16;
               var9.field_L = param6 << 16;
               var9.field_V = param0 << 16;
-              var8.a(param5, var9);
+              var8.startFight(param5, var9);
               return;
             }
             return;
@@ -412,7 +412,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 107) {
-            stackIn_4_0 = op.field_m.getPowerupCooldown(tg.field_e.field_f[param0], tg.field_e.powerupTypes[param0], this.field_M, false);
+            stackIn_4_0 = PortalEntryEvent.field_m.getPowerupCooldown(tg.field_e.field_f[param0], tg.field_e.powerupTypes[param0], this.localTeam, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = 126;
@@ -424,14 +424,14 @@ final class GameScreen {
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void update(byte param0, boolean param1) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_14_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_27_1 = 0;
         int stackIn_31_0 = 0;
-        nm stackIn_84_0 = null;
+        Camera stackIn_84_0 = null;
         boolean stackIn_87_1 = false;
         boolean stackIn_91_2 = false;
         boolean stackIn_94_3 = false;
@@ -458,18 +458,18 @@ final class GameScreen {
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = this.field_k.field_k;
-          var5 = this.field_k.field_g;
-          var6 = this.field_k.field_d;
+          var4 = this.camera.centerX;
+          var5 = this.camera.centerY;
+          var6 = this.camera.zoom;
           var7 = 0;
           boolean decompiledNaturalLoopExit1 = false;
-          while (!(decompiledNaturalLoopExit1 = (!(var7 < op.field_m.field_a.length)))) {
-            stackIn_14_0 = op.field_m.field_a[var7];
+          while (!(decompiledNaturalLoopExit1 = (!(var7 < PortalEntryEvent.field_m.field_a.length)))) {
+            stackIn_14_0 = PortalEntryEvent.field_m.field_a[var7];
             if (var14 == 0) {
               if (stackIn_14_0 > 0) {
-                op.field_m.field_a[var7] = op.field_m.field_a[var7] - 1;
+                PortalEntryEvent.field_m.field_a[var7] = PortalEntryEvent.field_m.field_a[var7] - 1;
               } else {
-                op.field_m.field_a[var7] = 0;
+                PortalEntryEvent.field_m.field_a[var7] = 0;
               }
               var7++;
               continue;
@@ -481,14 +481,14 @@ final class GameScreen {
           }
           var7Lifetime1 = stackIn_14_0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(op.field_m.field_z.length > var7Lifetime1)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(PortalEntryEvent.field_m.field_z.length > var7Lifetime1)))) {
             stackIn_27_0 = 0;
-            stackIn_27_1 = op.field_m.field_z[var7Lifetime1];
+            stackIn_27_1 = PortalEntryEvent.field_m.field_z[var7Lifetime1];
             if (var14 == 0) {
               if (stackIn_27_0 < stackIn_27_1) {
-                op.field_m.field_z[var7Lifetime1] = op.field_m.field_z[var7Lifetime1] - 1;
+                PortalEntryEvent.field_m.field_z[var7Lifetime1] = PortalEntryEvent.field_m.field_z[var7Lifetime1] - 1;
               } else {
-                op.field_m.field_z[var7Lifetime1] = 0;
+                PortalEntryEvent.field_m.field_z[var7Lifetime1] = 0;
               }
               var7Lifetime1++;
               continue;
@@ -503,22 +503,22 @@ final class GameScreen {
           boolean decompiledFrameRemainder0 = true;
           ke.field_b = stackIn_31_0;
           if (gf.field_h) {
-            this.e(-106);
+            this.handleMouseInput(-106);
             decompiledFrameRemainder0 = (var14 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (this.c((byte) 104)) {
+            if (this.isInProgress((byte) 104)) {
               if (param1) {
                 this.d(15);
-                this.e(107);
+                this.handleMouseInput(107);
                 if ((var14 != 0) &&
-                  (op.field_m.phase == 0)) {
-                  this.e(-121);
+                  (PortalEntryEvent.field_m.phase == 0)) {
+                  this.handleMouseInput(-121);
                 }
               }
             } else {
-              if (op.field_m.phase == 0) {
-                this.e(-121);
+              if (PortalEntryEvent.field_m.phase == 0) {
+                this.handleMouseInput(-121);
               }
             }
             this.field_J.a(-29987);
@@ -532,11 +532,11 @@ final class GameScreen {
             }
             var3_int = er.a(-802) ? 1 : 0;
           }
-          var7Lifetime2 = this.field_k.field_k;
-          var8 = this.field_k.field_g;
-          if (!this.field_k.field_f &&
+          var7Lifetime2 = this.camera.centerX;
+          var8 = this.camera.centerY;
+          if (!this.camera.field_f &&
             !this.field_f) {
-            this.field_k.a(this.field_h, (byte) -86, this.field_R);
+            this.camera.moveTo(this.field_h, (byte) -86, this.field_R);
             this.field_f = true;
           }
           if (param0 <= 113) {
@@ -547,7 +547,7 @@ final class GameScreen {
               !sq.field_N ||
               !re.field_b) {
               boolean decompiledFrameRemainder1 = true;
-              stackIn_84_0 = this.field_k;
+              stackIn_84_0 = this.camera;
               if (!lc.field_m[96] && (!lc.field_m[field_e] ||
                 lc.field_m[82])) {
                 stackIn_87_1 = false;
@@ -561,31 +561,31 @@ final class GameScreen {
               stackIn_101_4 = (lc.field_m[97]) || (lc.field_m[MouseInputHandler.field_d]);
               stackIn_105_5 = -91;
               stackIn_108_6 = (lc.field_m[99]) || (lc.field_m[uq.field_g]);
-              ((nm) (Object) stackIn_84_0).a(stackIn_87_1, stackIn_91_2, stackIn_94_3, stackIn_101_4, (byte) stackIn_105_5, stackIn_108_6);
+              ((Camera) (Object) stackIn_84_0).updateKeyScroll(stackIn_87_1, stackIn_91_2, stackIn_94_3, stackIn_101_4, (byte) stackIn_105_5, stackIn_108_6);
               if (var14 != 0) {
-                this.field_k.a(lc.field_m[96], lc.field_m[81], lc.field_m[98], lc.field_m[97], (byte) -91, lc.field_m[99]);
-                this.field_k.a(false, false, false, false, (byte) -91, false);
+                this.camera.updateKeyScroll(lc.field_m[96], lc.field_m[81], lc.field_m[98], lc.field_m[97], (byte) -91, lc.field_m[99]);
+                this.camera.updateKeyScroll(false, false, false, false, (byte) -91, false);
               }
             } else {
-              this.field_k.a(lc.field_m[96], lc.field_m[81], lc.field_m[98], lc.field_m[97], (byte) -91, lc.field_m[99]);
+              this.camera.updateKeyScroll(lc.field_m[96], lc.field_m[81], lc.field_m[98], lc.field_m[97], (byte) -91, lc.field_m[99]);
               if (var14 != 0) {
-                this.field_k.a(false, false, false, false, (byte) -91, false);
+                this.camera.updateKeyScroll(false, false, false, false, (byte) -91, false);
               }
             }
           } else {
-            this.field_k.a(false, false, false, false, (byte) -91, false);
+            this.camera.updateKeyScroll(false, false, false, false, (byte) -91, false);
           }
           if (0 < this.field_l && (this.field_l < 640 ||
-            op.field_m.phase != 0 ||
-            op.field_m.phase == 0 &&
-            0.95 < (double)this.field_k.field_t)) {
+            PortalEntryEvent.field_m.phase != 0 ||
+            PortalEntryEvent.field_m.phase == 0 &&
+            0.95 < (double)this.camera.field_t)) {
             this.field_l = this.field_l - 15;
           }
           if (!gf.field_h &&
             this.field_eb &&
             1 == pq.field_f) {
-            this.field_p = this.field_p - (this.field_k.field_g - var8);
-            this.field_F = this.field_F - (this.field_k.field_k - var7Lifetime2);
+            this.field_p = this.field_p - (this.camera.centerY - var8);
+            this.field_F = this.field_F - (this.camera.centerX - var7Lifetime2);
             if (-1 == this.field_F) {
               this.field_F = this.field_F - 1;
             }
@@ -597,10 +597,10 @@ final class GameScreen {
             }
             var11 = this.field_W + (int)((-this.field_t + var9) / 20L);
             if (df.field_I) {
-              var11 = op.field_m.currentTick;
+              var11 = PortalEntryEvent.field_m.currentTick;
             }
             boolean decompiledFrameRemainder2 = true;
-            var12 = var11 - op.field_m.currentTick;
+            var12 = var11 - PortalEntryEvent.field_m.currentTick;
             var13 = 0;
             if (var12 < 0) {
               fieldTemp$0 = this.field_U - 1;
@@ -611,7 +611,7 @@ final class GameScreen {
                 decompiledFrameRemainder2 = (var14 != 0);
               }
               if (decompiledFrameRemainder2) {
-                this.a((byte) -91);
+                this.advanceTick((byte) -91);
                 this.field_U = -var12 / 8 + 1;
                 this.field_a = this.field_a + 20L;
               }
@@ -622,10 +622,10 @@ final class GameScreen {
               scanLoop1: while (true) {
                 boolean decompiledFrameCompleted0 = true;
                 if (var9 - this.field_a >= 20L &&
-                  var11 == op.field_m.currentTick) {
+                  var11 == PortalEntryEvent.field_m.currentTick) {
                   while (true) {
                     var13++;
-                    this.a((byte) 51);
+                    this.advanceTick((byte) 51);
                     this.field_a = this.field_a + 20L;
                     fieldTemp$1 = this.field_gb - 1;
                     this.field_gb = this.field_gb - 1;
@@ -645,13 +645,13 @@ final class GameScreen {
                 }
                 if (decompiledFrameCompleted0) {
                   stackIn_164_0 = var11;
-                  stackIn_164_1 = op.field_m.currentTick;
+                  stackIn_164_1 = PortalEntryEvent.field_m.currentTick;
                   do {
                     if (stackIn_164_0 <= stackIn_164_1) {
                       break scanLoop1;
                     }
                     var13++;
-                    this.a((byte) 51);
+                    this.advanceTick((byte) 51);
                     this.field_a = this.field_a + 20L;
                     fieldTemp$1 = this.field_gb - 1;
                     this.field_gb = this.field_gb - 1;
@@ -671,8 +671,8 @@ final class GameScreen {
                 this.field_gb = this.field_m;
               }
             }
-            if (this.c((byte) 120)) {
-              this.field_G.b((byte) 105, -op.field_m.currentTick + op.field_m.field_C);
+            if (this.isInProgress((byte) 120)) {
+              this.field_G.b((byte) 105, -PortalEntryEvent.field_m.currentTick + PortalEntryEvent.field_m.field_C);
               if (var14 != 0) {
                 this.field_G.c(0);
               }
@@ -681,10 +681,10 @@ final class GameScreen {
             }
           }
           if (pp.field_n &&
-            !this.field_k.field_f) {
-            this.field_A = this.field_A + Math.abs(-var4 + this.field_k.field_k);
-            this.field_jb = this.field_jb + Math.abs(this.field_k.field_g - var5);
-            this.field_D = this.field_D + Math.abs(-var6 + this.field_k.field_d);
+            !this.camera.field_f) {
+            this.field_A = this.field_A + Math.abs(-var4 + this.camera.centerX);
+            this.field_jb = this.field_jb + Math.abs(this.camera.centerY - var5);
+            this.field_D = this.field_D + Math.abs(-var6 + this.camera.zoom);
             if (this.field_A + this.field_jb > 1100) {
               iq.a(-8, (byte) 99);
             }
@@ -693,7 +693,7 @@ final class GameScreen {
             }
           }
           this.b(true);
-          g.a(this.field_H);
+          g.a(this.sceneObjects);
           this.a(param1, 15978);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -703,7 +703,7 @@ final class GameScreen {
         }
     }
 
-    private final void b(byte param0, int param1, int param2) {
+    private final void issueMoveOrder(byte param0, int param1, int param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -719,7 +719,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        lq var5 = null;
+        DualLinkDeque var5 = null;
         GameCharacter var6 = null;
         int var6_int = 0;
         IntrusiveDeque var7_ref_th = null;
@@ -754,7 +754,7 @@ final class GameScreen {
         var20 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           this.field_J.a(0, param2, param1);
-          if (this.field_Q.a((byte) 98) > 1) {
+          if (this.selection.size((byte) 98) > 1) {
             param2 = MusicPatch.d(12949) - param2 % 24 + param2;
             param1 = MusicPatch.d(12949) + (-(param1 % 24) + param1);
             if (var20 != 0) {
@@ -764,26 +764,26 @@ final class GameScreen {
             param1 += 6;
           }
           var4_int = 1;
-          var5 = new lq();
-          var6 = (GameCharacter) (this.field_Q.c((byte) 121));
+          var5 = new DualLinkDeque();
+          var6 = (GameCharacter) (this.selection.first((byte) 121));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6 == null))) {
-            var7_ref_th = this.field_u.b(var6.g(124), param1, var6.h(119), param2, 8760);
+            var7_ref_th = this.navigation.findPath(var6.getX(124), param1, var6.getY(119), param2, 8760);
             if (var20 == 0) {
               if (null == var7_ref_th) {
                 var6.a(-4564);
-                var5.a(29664, var6);
+                var5.add(29664, var6);
               } else {
                 var4_int = 0;
               }
-              var6 = (GameCharacter) (this.field_Q.b((byte) 100));
+              var6 = (GameCharacter) (this.selection.next((byte) 100));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
             if (var4_int != 0) {
-              this.field_Q = var5;
+              this.selection = var5;
               this.field_J.a(true);
               return;
             }
@@ -791,25 +791,25 @@ final class GameScreen {
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
-          if (this.field_o.a(param1, param2, (byte) -69)) {
-            param2 = -6 + this.field_o.g(-115);
-            param1 = this.field_o.h(-110) + 15;
+          if (this.portal.isWithinRange(param1, param2, (byte) -69)) {
+            param2 = -6 + this.portal.getX(-115);
+            param1 = this.portal.getY(-110) + 15;
             var6_int = 8192;
-            if (this.field_Q.a((byte) 98) > 0) {
-              var6_int = var6_int / this.field_Q.a((byte) 98);
+            if (this.selection.size((byte) 98) > 0) {
+              var6_int = var6_int / this.selection.size((byte) 98);
             }
             if (var6_int == 0) {
               var6_int = 1;
             }
             var7 = 0;
-            var8_ref = (GameCharacter) (this.field_Q.c((byte) 88));
+            var8_ref = (GameCharacter) (this.selection.first((byte) 88));
             while (var8_ref != null) {
               var9 = param2 + (wn.a(-128, var7) * 48 >> 16);
               var10 = (on.a(var7, -18924) * 48 >> 16) + param1;
               var7 = var7 + var6_int;
-              var8_ref.a((byte) 68, op.field_m.currentTick + 100, var9, var10);
-              wd.a(var8_ref.field_y, op.field_m.currentTick, ma.field_a, param2, 65, param1);
-              var8_ref = (GameCharacter) (this.field_Q.b((byte) 117));
+              var8_ref.startMoveCommand((byte) 68, PortalEntryEvent.field_m.currentTick + 100, var9, var10);
+              wd.a(var8_ref.objectId, PortalEntryEvent.field_m.currentTick, ma.field_a, param2, 65, param1);
+              var8_ref = (GameCharacter) (this.selection.next((byte) 117));
               if (var20 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -821,11 +821,11 @@ final class GameScreen {
             (decompiledFrameCompleted0)) {
             var6_intLifetime1 = param2 / 24;
             var7Lifetime1 = param1 / 24;
-            var8 = this.field_u.d(114);
+            var8 = this.navigation.createDistanceGrid(114);
             var8[var7Lifetime1][var6_intLifetime1] = 1;
             var9Lifetime1 = 2;
             var10Lifetime1 = 1;
-            var11 = this.field_Q.a((byte) 98);
+            var11 = this.selection.size((byte) 98);
             var12 = -1;
             var13 = -1;
             scanLoop1: while (true) {
@@ -885,7 +885,7 @@ final class GameScreen {
                   var8[var15_int][var14 - 1] = incrementValue$3;
                 }
                 var10Lifetime1++;
-                if (this.field_o.b(var14, var15_int, 19024)) {
+                if (this.portal.containsPoint(var14, var15_int, 19024)) {
                   var13 = var15_int;
                   var12 = var14;
                   decompiledFrameRemainder1 = false;
@@ -898,7 +898,7 @@ final class GameScreen {
               break;
             }
             var14Lifetime1 = stackIn_73_0;
-            var15 = (GameCharacter) (this.field_Q.c((byte) 109));
+            var15 = (GameCharacter) (this.selection.first((byte) 109));
             scanLoop2: while (true) {
               if (var15 != null) {
                 var14Lifetime1++;
@@ -941,9 +941,9 @@ final class GameScreen {
                 }
                 var18Lifetime1 = MusicPatch.d(12949) + 24 * var16Lifetime1;
                 var19Lifetime1 = 24 * var17Lifetime1 + MusicPatch.d(12949);
-                var15.a((byte) 95, 100 + op.field_m.currentTick, var18Lifetime1, var19Lifetime1);
-                wd.a(var15.field_y, op.field_m.currentTick, ma.field_a, var18Lifetime1, 61, var19Lifetime1);
-                var15 = (GameCharacter) (this.field_Q.b((byte) 108));
+                var15.startMoveCommand((byte) 95, 100 + PortalEntryEvent.field_m.currentTick, var18Lifetime1, var19Lifetime1);
+                wd.a(var15.objectId, PortalEntryEvent.field_m.currentTick, ma.field_a, var18Lifetime1, 61, var19Lifetime1);
+                var15 = (GameCharacter) (this.selection.next((byte) 108));
                 continue;
               }
               stackIn_103_0 = 0;
@@ -956,11 +956,11 @@ final class GameScreen {
           if (param0 <= 14) {
             this.b(false, -51, -45, 16);
           }
-          var6Lifetime1 = (GameCharacter) (var5.c((byte) 98));
+          var6Lifetime1 = (GameCharacter) (var5.first((byte) 98));
           while (null != var6Lifetime1) {
             var6Lifetime1.a(-4564);
-            this.field_Q.a(29664, var6Lifetime1);
-            var6Lifetime1 = (GameCharacter) (var5.b((byte) 126));
+            this.selection.add(29664, var6Lifetime1);
+            var6Lifetime1 = (GameCharacter) (var5.next((byte) 126));
             if (var20 != 0) {
               return;
             }
@@ -981,16 +981,16 @@ final class GameScreen {
         RuntimeException var6 = null;
         try {
           if (param0 >= -103) {
-            this.a((byte) -73, false);
+            this.update((byte) -73, false);
           }
-          stackIn_6_0 = op.field_m;
+          stackIn_6_0 = PortalEntryEvent.field_m;
           stackIn_6_1 = param4;
           if (param2 == 9) {
             stackIn_7_2 = 1;
           } else {
             stackIn_7_2 = 0;
           }
-          ((GameWorld) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_7_2, 118, param1, param3, this.field_u);
+          ((GameWorld) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_7_2, 118, param1, param3, this.navigation);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1018,16 +1018,16 @@ final class GameScreen {
           } else {
             SoftwareRasterizer.resetClip();
           }
-          if (1.0f == this.field_k.field_d) {
+          if (1.0f == this.camera.zoom) {
             ki.field_k.c(0, 0);
             if (var4 == 0) {
               return;
             }
           }
-          var2_int = (int)(1280.0f / this.field_k.field_d);
-          var3 = (int)(960.0f / this.field_k.field_d);
+          var2_int = (int)(1280.0f / this.camera.zoom);
+          var3 = (int)(960.0f / this.camera.zoom);
           ki.field_k.f(0, 0, var2_int, var3);
-          if (1.2999999523162842f < this.field_k.field_d) {
+          if (1.2999999523162842f < this.camera.zoom) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1037,17 +1037,17 @@ final class GameScreen {
         }
     }
 
-    private final void e(int param0, int param1, int param2) {
+    private final void centerCameraOn(int param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = (-this.field_k.field_k + param2) / 4;
-          var5 = (-this.field_k.field_g + param0) / 4;
-          this.field_k.a(var5 + this.field_k.field_g, -var4_int + param2, param2, this.field_k.field_k, this.field_k.field_g, param0, 0, param0 - var5, this.field_k.field_k + var4_int);
-          this.field_k.a((byte) 47);
-          this.field_k.field_i = this.field_k.field_i * 6.0f;
+          var4_int = (-this.camera.centerX + param2) / 4;
+          var5 = (-this.camera.centerY + param0) / 4;
+          this.camera.a(var5 + this.camera.centerY, -var4_int + param2, param2, this.camera.centerX, this.camera.centerY, param0, 0, param0 - var5, this.camera.centerX + var4_int);
+          this.camera.a((byte) 47);
+          this.camera.field_i = this.camera.field_i * 6.0f;
           if (param1 >= -36) {
             field_N = 59;
           }
@@ -1142,22 +1142,22 @@ final class GameScreen {
           }
           if (param0 != 0) {
             if (param0 == 1) {
-              h.b(param1 - 113, 1);
+              PortalView.b(param1 - 113, 1);
               ck.a(77, -23838);
               ck.a(110, -23838);
               ck.a(111, -23838);
               ck.a(173, -23838);
               ck.a(174, -23838);
               ck.a(175, param1 ^ -23839);
-              sj.a(189, 173, (byte) -66);
-              sj.a(190, 174, (byte) -66);
-              sj.a(191, 175, (byte) -66);
+              InfectionEvent.a(189, 173, (byte) -66);
+              InfectionEvent.a(190, 174, (byte) -66);
+              InfectionEvent.a(191, 175, (byte) -66);
               if (var4 == 0) {
                 return;
               }
             }
             if (param0 == 2) {
-              h.b(-101, 2);
+              PortalView.b(-101, 2);
               ck.a(132, -23838);
               ck.a(133, -23838);
               ck.a(70, -23838);
@@ -1165,32 +1165,32 @@ final class GameScreen {
               ck.a(265, -23838);
               ck.a(266, -23838);
               ck.a(267, -23838);
-              sj.a(132, 133, (byte) -66);
-              sj.a(268, 264, (byte) -66);
-              sj.a(269, 265, (byte) -66);
-              sj.a(270, 266, (byte) -66);
-              sj.a(271, 267, (byte) -66);
+              InfectionEvent.a(132, 133, (byte) -66);
+              InfectionEvent.a(268, 264, (byte) -66);
+              InfectionEvent.a(269, 265, (byte) -66);
+              InfectionEvent.a(270, 266, (byte) -66);
+              InfectionEvent.a(271, 267, (byte) -66);
               if (var4 == 0) {
                 return;
               }
             }
             if (param0 == 3) {
-              h.b(-74, 3);
+              PortalView.b(-74, 3);
               ck.a(163, -23838);
               ck.a(164, -23838);
               ck.a(165, -23838);
               ck.a(213, -23838);
               ck.a(214, -23838);
               ck.a(215, param1 ^ -23839);
-              sj.a(213, 163, (byte) -66);
-              sj.a(214, 164, (byte) -66);
-              sj.a(215, 165, (byte) -66);
+              InfectionEvent.a(213, 163, (byte) -66);
+              InfectionEvent.a(214, 164, (byte) -66);
+              InfectionEvent.a(215, 165, (byte) -66);
               ck.a(230, -23838);
               ck.a(246, -23838);
-              sj.a(246, 230, (byte) -66);
+              InfectionEvent.a(246, 230, (byte) -66);
               ck.a(247, -23838);
               ck.a(263, -23838);
-              sj.a(263, 247, (byte) -66);
+              InfectionEvent.a(263, 247, (byte) -66);
               if (var4 == 0) {
                 return;
               }
@@ -1198,7 +1198,7 @@ final class GameScreen {
             if (param0 != 4) {
               return;
             }
-            h.b(param1 ^ -89, 4);
+            PortalView.b(param1 ^ -89, 4);
             if (var4 == 0) {
               return;
             }
@@ -1222,10 +1222,10 @@ final class GameScreen {
           ck.a(276, -23838);
           ck.a(277, -23838);
           ck.a(278, -23838);
-          sj.a(276, 120, (byte) -66);
-          sj.a(277, 121, (byte) -66);
-          sj.a(278, 122, (byte) -66);
-          h.b(-70, 0);
+          InfectionEvent.a(276, 120, (byte) -66);
+          InfectionEvent.a(277, 121, (byte) -66);
+          InfectionEvent.a(278, 122, (byte) -66);
+          PortalView.b(-70, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1234,7 +1234,7 @@ final class GameScreen {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void handleKeyPress(int param0, int param1) {
         boolean stackIn_28_0 = false;
         boolean stackIn_55_0 = false;
         boolean stackIn_63_0 = false;
@@ -1260,7 +1260,7 @@ final class GameScreen {
             return;
           }
           if (!gf.field_h &&
-            this.c((byte) 124)) {
+            this.isInProgress((byte) 124)) {
             if (!df.field_I) {
               if (param1 == 84) {
                 stackIn_28_0 = !(iq.field_f);
@@ -1382,19 +1382,19 @@ final class GameScreen {
                 sc.field_a = stackIn_182_0;
               }
               if (param1 == 41) {
-                tl.a(2, (byte) -11, ma.field_a, 0, this.field_M, 0);
+                tl.a(2, (byte) -11, ma.field_a, 0, this.localTeam, 0);
                 if (!gf.field_h) {
                   this.field_I.b(113);
                 }
               }
               if (2 == param1) {
-                tl.a(0, (byte) -11, ma.field_a, this.field_k.a(true, bo.field_d), 0, this.field_k.a(MouseInputHandler.field_g, 2));
+                tl.a(0, (byte) -11, ma.field_a, this.camera.screenToWorldY(true, bo.field_d), 0, this.camera.screenToWorldX(MouseInputHandler.field_g, 2));
               }
               if (param1 == 4) {
-                tl.a(1, (byte) -11, ma.field_a, 0, this.field_M, 0);
+                tl.a(1, (byte) -11, ma.field_a, 0, this.localTeam, 0);
               }
               if (5 == param1) {
-                tl.a(1, (byte) -11, ma.field_a, 0, (this.field_M + 1) % op.field_m.teamCount, 0);
+                tl.a(1, (byte) -11, ma.field_a, 0, (this.localTeam + 1) % PortalEntryEvent.field_m.teamCount, 0);
               }
               if (6 == param1) {
                 nk.a(120, la.field_n, 120, 0, si.field_C);
@@ -1409,7 +1409,7 @@ final class GameScreen {
             var3_int = -34 % ((param0 - 63) / 56);
             if (lc.field_m[82] &&
               param1 == 48) {
-              this.a(this.field_u.field_r, this.field_u.field_c, 0, 0, (byte) 5);
+              this.selectUnitsInRect(this.navigation.pixelWidth, this.navigation.pixelHeight, 0, 0, (byte) 5);
             }
             if (~eg.field_C == ~param1) {
               this.field_I.a(0, -1);
@@ -1426,9 +1426,9 @@ final class GameScreen {
             if (mg.field_F == param1) {
               this.field_I.a(4, -1);
             }
-            if (op.field_m.hasUpgrade((byte) -67, 51, this.field_M)) {
+            if (PortalEntryEvent.field_m.hasUpgrade((byte) -67, 51, this.localTeam)) {
               if (param1 == 35) {
-                this.a(this.field_k.a(640, 2), this.field_k.a(true, 480), this.field_k.a(true, 0), this.field_k.a(0, 2), (byte) 5);
+                this.selectUnitsInRect(this.camera.screenToWorldX(640, 2), this.camera.screenToWorldY(true, 480), this.camera.screenToWorldY(true, 0), this.camera.screenToWorldX(0, 2), (byte) 5);
               }
               boolean decompiledFrameRemainder0 = true;
               if (lc.field_m[82]) {
@@ -1467,7 +1467,7 @@ final class GameScreen {
                 }
               }
               if (param1 == 53) {
-                this.e(this.field_o.h(-85), -108, this.field_o.g(63));
+                this.centerCameraOn(this.portal.getY(-85), -108, this.portal.getX(63));
               }
             }
             return;
@@ -1480,7 +1480,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, byte param4) {
+    private final void selectUnitsInRect(int param0, int param1, int param2, int param3, byte param4) {
         IntrusiveNode var6 = null;
         GameCharacter var7 = null;
         int var8 = 0;
@@ -1494,19 +1494,19 @@ final class GameScreen {
           if (param4 != 5) {
             this.a((byte) -83, -17, -19, -39, -124);
           }
-          var6 = this.field_H.c(param4 ^ 120);
+          var6 = this.sceneObjects.c(param4 ^ 120);
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var6 instanceof id)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var6 instanceof SceneObject)))) {
             stackOut_6_0 = var6 instanceof GameCharacter;
             stackIn_19_0 = stackOut_6_0 ? 1 : 0;
             stackIn_7_0 = stackOut_6_0;
             if (var8 == 0) {
               if (stackIn_7_0) {
                 var7 = (GameCharacter) (var6);
-                if (this.field_M == var7.team) {
+                if (this.localTeam == var7.team) {
                   var7.field_eb = false;
-                  if (var7.a(param3, param1, param2, 48, param0)) {
-                    this.field_Q.a(29664, var7);
+                  if (var7.overlapsRect(param3, param1, param2, 48, param0)) {
+                    this.selection.add(29664, var7);
                     var7.r(0);
                   }
                 }
@@ -1517,7 +1517,7 @@ final class GameScreen {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_19_0 = this.field_Q.a((byte) 98);
+            stackIn_19_0 = this.selection.size((byte) 98);
           }
           if (stackIn_19_0 > 1) {
             iq.a(-5, (byte) 99);
@@ -1573,7 +1573,7 @@ final class GameScreen {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var5 = null;
-          var6_ref_cg = (cg) (op.field_m.field_A.c(49));
+          var6_ref_cg = (cg) (PortalEntryEvent.field_m.field_A.c(49));
           boolean decompiledNaturalLoopExit2 = false;
           while (!(decompiledNaturalLoopExit2 = (var6_ref_cg == null))) {
             stackOut_3_0 = var6_ref_cg;
@@ -1584,18 +1584,18 @@ final class GameScreen {
                 var6_ref_cg.a(-1);
                 return true;
               }
-              var6_ref_cg = (cg) (op.field_m.field_A.b(6));
+              var6_ref_cg = (cg) (PortalEntryEvent.field_m.field_A.b(6));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit2) {
-            stackIn_13_0 = op.field_m.field_G.c(98);
+            stackIn_13_0 = PortalEntryEvent.field_m.field_G.c(98);
           }
           var6_ref_pq = (pq) (stackIn_13_0);
           scanLoop1: while (true) {
             if (var6_ref_pq != null) {
-              var5_ref = op.field_m.field_G.b(6);
+              var5_ref = PortalEntryEvent.field_m.field_G.b(6);
               stackOut_15_0 = var6_ref_pq.a(param0, false, param2);
               stackIn_43_0 = stackOut_15_0 ? 1 : 0;
               stackIn_16_0 = stackOut_15_0;
@@ -1609,10 +1609,10 @@ final class GameScreen {
                 continue;
               }
             } else {
-              var6_ref_ce = (ce) (op.field_m.field_s.c(39));
+              var6_ref_ce = (ce) (PortalEntryEvent.field_m.field_s.c(39));
               while (true) {
                 if (var6_ref_ce != null) {
-                  var5_ref = op.field_m.field_s.b(6);
+                  var5_ref = PortalEntryEvent.field_m.field_s.b(6);
                   stackOut_24_0 = var6_ref_ce.a(param0, param2, -1);
                   stackIn_43_0 = stackOut_24_0 ? 1 : 0;
                   stackIn_25_0 = stackOut_24_0;
@@ -1626,7 +1626,7 @@ final class GameScreen {
                     continue;
                   }
                 }
-                var6_ref_br = op.field_m.characters.c(125);
+                var6_ref_br = PortalEntryEvent.field_m.characters.c(125);
                 while (var6_ref_br != null) {
                   stackOut_33_0 = var6_ref_br instanceof jj;
                   stackIn_43_0 = stackOut_33_0 ? 1 : 0;
@@ -1640,7 +1640,7 @@ final class GameScreen {
                       var7_ref_jj.field_P = 1;
                     }
                   }
-                  var6_ref_br = op.field_m.characters.b(6);
+                  var6_ref_br = PortalEntryEvent.field_m.characters.b(6);
                 }
                 stackIn_43_0 = 0;
                 break;
@@ -1651,17 +1651,17 @@ final class GameScreen {
           var6 = stackIn_43_0;
           var7 = 0;
           boolean decompiledNaturalLoopExit1 = false;
-          while (!(decompiledNaturalLoopExit1 = (!(op.field_m.field_a.length > var7)))) {
+          while (!(decompiledNaturalLoopExit1 = (!(PortalEntryEvent.field_m.field_a.length > var7)))) {
             stackIn_57_0 = var6;
             if (var9 == 0) {
               if (stackIn_57_0 == 0 &&
-                op.field_m.field_a[var7] <= 0) {
+                PortalEntryEvent.field_m.field_a[var7] <= 0) {
                 stackIn_55_0 = 0;
               } else {
                 stackIn_55_0 = 1;
               }
               var6 = stackIn_55_0;
-              op.field_m.field_a[var7] = 0;
+              PortalEntryEvent.field_m.field_a[var7] = 0;
               var7++;
               continue;
             }
@@ -1676,17 +1676,17 @@ final class GameScreen {
           var7Lifetime1 = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(op.field_m.field_z.length > var8)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(PortalEntryEvent.field_m.field_z.length > var8)))) {
             stackIn_75_0 = var7Lifetime1;
             if (var9 == 0) {
               if (stackIn_75_0 == 0 &&
-                op.field_m.field_z[var8] <= 0) {
+                PortalEntryEvent.field_m.field_z[var8] <= 0) {
                 stackIn_73_0 = 0;
               } else {
                 stackIn_73_0 = 1;
               }
               var7Lifetime1 = stackIn_73_0;
-              op.field_m.field_z[var8] = 0;
+              PortalEntryEvent.field_m.field_z[var8] = 0;
               var8++;
               continue;
             }
@@ -1718,7 +1718,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3 = op.field_m.characters.c(40);
+          var3 = PortalEntryEvent.field_m.characters.c(40);
           var4 = -123 % ((-35 - param0) / 45);
           while (null != var3) {
             if (var6 != 0) {
@@ -1734,7 +1734,7 @@ final class GameScreen {
                 }
               }
             }
-            var3 = op.field_m.characters.b(6);
+            var3 = PortalEntryEvent.field_m.characters.b(6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1744,11 +1744,11 @@ final class GameScreen {
         }
     }
 
-    final void b(int param0, byte param1, int param2) {
+    final void onUnitEnteredPortal(int param0, byte param1, int param2) {
         int stackIn_22_0 = 0;
         int stackIn_23_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        ti var4 = null;
+        UnitView var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -1757,29 +1757,29 @@ final class GameScreen {
           if (param1 != 127) {
             return;
           }
-          var4 = (ti) (op.field_m.a(param2, (byte) 33));
+          var4 = (UnitView) (PortalEntryEvent.field_m.a(param2, (byte) 33));
           if (var4 == null) {
             System.out.println("*** character oid " + param2 + "is null!");
           }
-          if (21 == var4.field_K) {
+          if (21 == var4.state) {
             System.out.println("*** tried to enter portal twice!");
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (var4 instanceof gm) {
-            op.field_m.field_J[param0] = op.field_m.field_J[param0] + 1;
+          if (var4 instanceof HumanView) {
+            PortalEntryEvent.field_m.field_J[param0] = PortalEntryEvent.field_m.field_J[param0] + 1;
             var5 = 10;
             this.f(27);
-            if (op.field_m.hasUpgrade((byte) -88, 60, param0)) {
+            if (PortalEntryEvent.field_m.hasUpgrade((byte) -88, 60, param0)) {
               var5 = var5 + var5 / 2;
             }
-            if (this.field_M != param0) {
+            if (this.localTeam != param0) {
               pb.$cfr$intArgs$a$90ed9136db05(62, 79);
               decompiledFrameRemainder0 = (var6 != 0);
             }
             if (decompiledFrameRemainder0) {
               stackIn_22_0 = 62;
-              if (((gm) (var4)).m(param1 + 15557)) {
+              if (((HumanView) (var4)).m(param1 + 15557)) {
                 stackIn_23_1 = 77;
               } else {
                 stackIn_23_1 = 76;
@@ -1787,10 +1787,10 @@ final class GameScreen {
               pb.$cfr$intArgs$a$90ed9136db05(stackIn_22_0, stackIn_23_1);
               if (var6 != 0) {
                 var5 = 4;
-                if (op.field_m.hasUpgrade((byte) -124, 53, param0)) {
+                if (PortalEntryEvent.field_m.hasUpgrade((byte) -124, 53, param0)) {
                   var5 = var5 + var5 / 2;
                 }
-                if (~this.field_M == ~param0) {
+                if (~this.localTeam == ~param0) {
                   qq.b(1481485697, 78);
                   qq.b(1481485697, 79);
                 } else {
@@ -1800,10 +1800,10 @@ final class GameScreen {
             }
           } else {
             var5 = 4;
-            if (op.field_m.hasUpgrade((byte) -124, 53, param0)) {
+            if (PortalEntryEvent.field_m.hasUpgrade((byte) -124, 53, param0)) {
               var5 = var5 + var5 / 2;
             }
-            if (~this.field_M == ~param0) {
+            if (~this.localTeam == ~param0) {
               qq.b(1481485697, 78);
               if (var6 != 0) {
                 qq.b(1481485697, 79);
@@ -1812,9 +1812,9 @@ final class GameScreen {
               qq.b(1481485697, 79);
             }
           }
-          this.field_T.a(new wc(var4.g(-78), -30 + var4.h(-66), var5, true), false);
-          var4.b(21, -27655);
-          op.field_m.teamScores[param0] = op.field_m.teamScores[param0] + var5;
+          this.field_T.a(new wc(var4.getX(-78), -30 + var4.getY(-66), var5, true), false);
+          var4.setState(21, -27655);
+          PortalEntryEvent.field_m.teamScores[param0] = PortalEntryEvent.field_m.teamScores[param0] + var5;
           iq.a(-9, (byte) 99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1824,15 +1824,15 @@ final class GameScreen {
         }
     }
 
-    final void c(byte param0, int param1, int param2) {
+    final void startChase(byte param0, int param1, int param2) {
         RuntimeException runtimeException = null;
-        id var4 = null;
-        id var5 = null;
-        gm var6 = null;
+        SceneObject var4 = null;
+        SceneObject var5 = null;
+        HumanView var6 = null;
         GameCharacter var7 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = op.field_m.a(param2, (byte) 33);
+          var4 = PortalEntryEvent.field_m.a(param2, (byte) 33);
           if (var4 == null) {
             return;
           }
@@ -1842,14 +1842,14 @@ final class GameScreen {
           if (!(var4 instanceof GameCharacter)) {
             return;
           }
-          var5 = op.field_m.a(param1, (byte) 33);
+          var5 = PortalEntryEvent.field_m.a(param1, (byte) 33);
           if (var4 == null) {
             return;
           }
-          var6 = (gm) (var5);
+          var6 = (HumanView) (var5);
           var7 = (GameCharacter) (var4);
           var7.field_Eb = var6;
-          var7.b(7, param0 ^ -27761);
+          var7.setState(7, param0 ^ -27761);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1858,7 +1858,7 @@ final class GameScreen {
         }
     }
 
-    final GameCharacter a(int param0, GameCharacter param1, gm param2, boolean param3, qk param4) {
+    final GameCharacter spawnInfectedZombie(int param0, GameCharacter param1, HumanView param2, boolean param3, Waypoint param4) {
         GameCharacter stackIn_3_0;
         GameCharacter stackIn_3_1;
         int stackIn_3_2;
@@ -1883,8 +1883,8 @@ final class GameScreen {
         GameCharacter var8 = null;
         int var9 = 0;
         try {
-          var6_int = param4.field_g >> 16;
-          var7 = param4.field_h >> 16;
+          var6_int = param4.x >> 16;
+          var7 = param4.y >> 16;
           stackIn_3_0 = null;
           stackIn_3_1 = null;
           stackIn_3_2 = var6_int;
@@ -1901,12 +1901,12 @@ final class GameScreen {
           var8 = new GameCharacter(stackIn_3_2, stackIn_3_3, stackIn_4_4);
           var8.team = param0;
           this.a(1, var6_int, var7);
-          this.field_H.a(var8, false);
-          g.a(this.field_H);
+          this.sceneObjects.a(var8, false);
+          g.a(this.sceneObjects);
           if (null != param1) {
             if (param1.field_Bb) {
               var8.r(0);
-              this.field_Q.a(29664, var8);
+              this.selection.add(29664, var8);
             }
             var8.field_Kb = param1.field_Kb;
           }
@@ -1920,10 +1920,10 @@ final class GameScreen {
             stackIn_17_0 = (GameCharacter) null;
             return stackIn_17_0;
           }
-          op.field_m.teamScores[param0] = op.field_m.teamScores[param0] + var9;
+          PortalEntryEvent.field_m.teamScores[param0] = PortalEntryEvent.field_m.teamScores[param0] + var9;
           if (0 != var9 &&
-            this.field_M == param0) {
-            this.field_T.a(new wc(param2.g(104), param2.h(86) - 30, var9, true), false);
+            this.localTeam == param0) {
+            this.field_T.a(new wc(param2.getX(104), param2.getY(86) - 30, var9, true), false);
           }
           if (!this.field_G.b((byte) 31)) {
             var8.p(72);
@@ -1965,9 +1965,9 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          op.field_m.c(-122);
+          PortalEntryEvent.field_m.c(-122);
           this.field_G.h(2);
-          if (op.field_m.phase == 1) {
+          if (PortalEntryEvent.field_m.phase == 1) {
             this.field_G.field_n = 2.0f;
           }
           var2_int = 66 % ((param0 - 78) / 48);
@@ -1979,8 +1979,8 @@ final class GameScreen {
         }
     }
 
-    private final ti a(boolean param0, int param1, int param2, int param3) {
-        ti stackIn_3_0 = null;
+    private final UnitView findUnitAt(boolean param0, int param1, int param2, int param3) {
+        UnitView stackIn_3_0 = null;
         Object stackIn_37_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -1988,49 +1988,49 @@ final class GameScreen {
         int var6 = 0;
         Object var7 = null;
         int var8 = 0;
-        id var9 = null;
-        ti var10 = null;
+        SceneObject var9 = null;
+        UnitView var10 = null;
         jj var10_ref = null;
         int var11 = 0;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var5_int = this.field_k.a(param3, 2);
-          var6 = this.field_k.a(true, param2);
+          var5_int = this.camera.screenToWorldX(param3, 2);
+          var6 = this.camera.screenToWorldY(true, param2);
           if (param1 <= 35) {
-            stackIn_3_0 = (ti) null;
+            stackIn_3_0 = (UnitView) null;
             return stackIn_3_0;
           }
           var7 = null;
           var8 = -1;
-          var9 = (id) (this.field_H.c(48));
+          var9 = (SceneObject) (this.sceneObjects.c(48));
           while (var9 != null) {
             if (param0 &&
-              var9 instanceof gm ||
+              var9 instanceof HumanView ||
               !param0 &&
               var9 instanceof GameCharacter) {
-              var10 = (ti) (var9);
-              if (var10.a(var5_int, true, var6) &&
-                var8 < var10.h(-90)) {
-                var8 = var10.h(124);
+              var10 = (UnitView) (var9);
+              if (var10.containsPoint(var5_int, true, var6) &&
+                var8 < var10.getY(-90)) {
+                var8 = var10.getY(124);
                 var7 = var10;
               }
             }
             if (!param0 &&
               var9 instanceof jj) {
               var10_ref = (jj) (var9);
-              if (~var10_ref.field_Q != ~this.field_M &&
+              if (~var10_ref.field_Q != ~this.localTeam &&
                 var10_ref.a(7, var5_int, var6)) {
                 this.field_b = var10_ref;
               }
             }
-            var9 = (id) (this.field_H.b(6));
+            var9 = (SceneObject) (this.sceneObjects.b(6));
             if (var11 == 0) {
               continue;
             }
             break;
           }
           stackIn_37_0 = var7;
-          return (ti) (stackIn_37_0);
+          return (UnitView) (stackIn_37_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -2043,21 +2043,21 @@ final class GameScreen {
         Sprite var5 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = am.a(0, op.field_m.field_D[param3][1], 0, 1, op.field_m.field_D[param3][0]);
+          var5 = am.a(0, PortalEntryEvent.field_m.field_D[param3][1], 0, 1, PortalEntryEvent.field_m.field_D[param3][0]);
           og.h((byte) 116);
           SoftwareRasterizer.setClip(320 - this.field_l / 2, 0, 320 + this.field_l / 2, 480);
           if (param1 != -99) {
-            this.b(95, (byte) 85, -97);
+            this.onUnitEnteredPortal(95, (byte) 85, -97);
           }
           if (320 > param0) {
             var5.g(param0 - 24, param2);
-            ah.field_e.c(op.field_m.field_b[param3], param0 + 24, 48 + param2, 0, 0);
+            ah.field_e.c(PortalEntryEvent.field_m.field_b[param3], param0 + 24, 48 + param2, 0, 0);
             if (!ZombieDawnMulti.field_E) {
               return;
             }
           }
           var5.b(param0 - 24, param2);
-          ah.field_e.a(op.field_m.field_b[param3], param0 - 24, 48 + param2, 0, 0);
+          ah.field_e.a(PortalEntryEvent.field_m.field_b[param3], param0 - 24, 48 + param2, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2071,12 +2071,12 @@ final class GameScreen {
         GameCharacter var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = op.field_m.a(param0, false);
+          var3 = PortalEntryEvent.field_m.a(param0, false);
           if (null != var3) {
             var3.e(false);
           }
           if (param1 != 10) {
-            this.c((byte) -13, 20, 111);
+            this.startChase((byte) -13, 20, 111);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2086,7 +2086,7 @@ final class GameScreen {
         }
     }
 
-    final void a(boolean param0, GameEvent param1) {
+    final void receiveEvent(boolean param0, GameEvent param1) {
         GameEvent var3 = null;
         int var4 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -2097,16 +2097,16 @@ final class GameScreen {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1 instanceof PhaseChangeEvent) {
-            this.d(((PhaseChangeEvent) (param1)).field_l, param1.field_f, -30305);
+            this.applyPhaseChange(((PhaseChangeEvent) (param1)).field_l, param1.field_f, -30305);
           }
-          if (this.field_hb.f(28113)) {
-            this.field_hb.a(-25612, param1);
+          if (this.eventQueue.f(28113)) {
+            this.eventQueue.a(-25612, param1);
             return;
           }
           if (param0) {
             return;
           }
-          var3 = (GameEvent) (this.field_hb.a((byte) -84));
+          var3 = (GameEvent) (this.eventQueue.a((byte) -84));
           while (null != var3) {
             if (var4 != 0) {
               return;
@@ -2115,9 +2115,9 @@ final class GameScreen {
               qc.a(param1, var3, 0);
               return;
             }
-            var3 = (GameEvent) (this.field_hb.c((byte) 97));
+            var3 = (GameEvent) (this.eventQueue.c((byte) 97));
           }
-          this.field_hb.a(-25612, param1);
+          this.eventQueue.a(-25612, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2133,7 +2133,7 @@ final class GameScreen {
         }
     }
 
-    final void a(boolean param0, GameCharacter param1) {
+    final void deselectCharacter(boolean param0, GameCharacter param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -2172,7 +2172,7 @@ final class GameScreen {
           if (null == var5) {
             var5 = new lc();
           }
-          var5.a(param1, param3, op.field_m.a(param2, (byte) 33), (byte) 108);
+          var5.a(param1, param3, PortalEntryEvent.field_m.a(param2, (byte) 33), (byte) 108);
           this.field_C.a(-25612, var5);
           g.a(this.field_C);
           var6 = -116 / ((param0 + 36) / 61);
@@ -2189,14 +2189,14 @@ final class GameScreen {
         int var3_int = 0;
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        gm var4 = null;
+        HumanView var4 = null;
         GameCharacter var4_ref = null;
         int var5 = 0;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           wd.field_G = null;
           if (!param0) {
-            this.a((byte) 76, false);
+            this.update((byte) 76, false);
           }
           var3_int = param1;
           if (var3_int == 9 &&
@@ -2212,7 +2212,7 @@ final class GameScreen {
               boolean decompiledFrameRemainder0 = true;
               if (var3_int == 0 &&
                 var5 == 0) {
-                this.e(gk.field_c, -81, hc.field_c);
+                this.centerCameraOn(gk.field_c, -81, hc.field_c);
                 return;
               } else {
                 if ((var3_int != 8) &&
@@ -2226,44 +2226,44 @@ final class GameScreen {
                 }
               }
               if (decompiledFrameRemainder0) {
-                this.e(this.field_o.h(-102), -92, this.field_o.g(61));
-                wd.field_G = (id) ((Object) this.field_o);
+                this.centerCameraOn(this.portal.getY(-102), -92, this.portal.getX(61));
+                wd.field_G = (SceneObject) ((Object) this.portal);
                 if (var5 == 0) {
                   return;
                 }
               }
-              var3 = op.field_m.characters.c(89);
+              var3 = PortalEntryEvent.field_m.characters.c(89);
               while (var3 != null) {
                 if (var5 != 0) {
                   return;
                 }
-                if (var3 instanceof gm) {
-                  var4 = (gm) (var3);
+                if (var3 instanceof HumanView) {
+                  var4 = (HumanView) (var3);
                   if (var4.field_C == 4) {
-                    this.e(var4.h(-96), -49, var4.g(63));
-                    wd.field_G = (id) ((Object) var4);
+                    this.centerCameraOn(var4.getY(-96), -49, var4.getX(63));
+                    wd.field_G = (SceneObject) ((Object) var4);
                     return;
                   }
                 }
-                var3 = op.field_m.characters.b(6);
+                var3 = PortalEntryEvent.field_m.characters.b(6);
               }
               return;
             }
           }
-          var3 = op.field_m.characters.c(47);
+          var3 = PortalEntryEvent.field_m.characters.c(47);
           while (var3 != null) {
             if (var5 != 0) {
               return;
             }
             if (var3 instanceof GameCharacter) {
               var4_ref = (GameCharacter) (var3);
-              if (var4_ref.team == this.field_M) {
-                this.e(var4_ref.h(87), -61, var4_ref.g(73));
-                wd.field_G = (id) ((Object) var4_ref);
+              if (var4_ref.team == this.localTeam) {
+                this.centerCameraOn(var4_ref.getY(87), -61, var4_ref.getX(73));
+                wd.field_G = (SceneObject) ((Object) var4_ref);
                 return;
               }
             }
-            var3 = op.field_m.characters.b(6);
+            var3 = PortalEntryEvent.field_m.characters.b(6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2273,7 +2273,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0, fc param1) {
+    private final void a(int param0, LevelData param1) {
         boolean stackIn_112_0 = false;
         boolean stackIn_125_0 = false;
         int stackIn_132_0 = 0;
@@ -2288,12 +2288,12 @@ final class GameScreen {
         int var5 = 0;
         int var6 = 0;
         IntrusiveDeque var7 = null;
-        id var8 = null;
+        SceneObject var8 = null;
         cg var8_ref = null;
         ce var8_ref2 = null;
         rp var8_ref3 = null;
         String var8_ref4 = null;
-        h var9 = null;
+        PortalView var9 = null;
         GameCharacter var9_ref = null;
         int var9_int = 0;
         PaletteBitmapFont var9_ref2 = null;
@@ -2307,13 +2307,13 @@ final class GameScreen {
         try {
           iq.field_f = false;
           this.field_f = false;
-          this.field_Q.d(-1);
+          this.selection.clear(-1);
           this.field_jb = 0;
           this.field_A = 0;
           on.j((byte) 113);
           if (df.field_I) {
             if (!pp.field_n) {
-              if (!op.field_m.hasUpgrade((byte) -128, 45, this.field_M)) {
+              if (!PortalEntryEvent.field_m.hasUpgrade((byte) -128, 45, this.localTeam)) {
                 ah.a((byte) -86, 19);
                 if (var14 != 0) {
                   ah.a((byte) -86, 20);
@@ -2361,43 +2361,43 @@ final class GameScreen {
           this.field_db = false;
           this.field_J = new uf();
           this.field_Y = 0;
-          this.field_u = new fh(param1);
+          this.navigation = new NavigationGrid(param1);
           ip.b((byte) 111);
           gj.a(param0 + 6956);
-          this.field_k = new nm(this.field_u.field_r, this.field_u.field_c);
-          this.field_k.field_f = false;
+          this.camera = new Camera(this.navigation.pixelWidth, this.navigation.pixelHeight);
+          this.camera.field_f = false;
           this.d(param1.field_j, 3);
-          this.field_fb = op.field_m.field_r;
+          this.field_fb = PortalEntryEvent.field_m.field_r;
           this.field_ib = 1;
           this.field_O = new IntrusiveDeque();
           this.field_cb = new IntrusiveDeque();
           this.field_kb = new IntrusiveDeque();
           this.field_T = new IntrusiveDeque();
-          this.field_hb = new IntrusiveDeque();
+          this.eventQueue = new IntrusiveDeque();
           this.field_C = new IntrusiveDeque();
           this.field_X = new IntrusiveDeque();
-          this.field_c = new lq();
+          this.field_c = new DualLinkDeque();
           var3_int = -2147483647;
           var4 = -2147483647;
           var5 = 2147483647;
           var6 = 2147483647;
-          var7 = param1.a(-120);
-          var8 = (id) (var7.c(param0 + 38));
+          var7 = param1.createObjects(-120);
+          var8 = (SceneObject) (var7.c(param0 + 38));
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var8 == null))) {
-            stackIn_112_0 = var8 instanceof h;
+            stackIn_112_0 = var8 instanceof PortalView;
             if (var14 == 0) {
               if (stackIn_112_0) {
                 boolean decompiledFrameRemainder0 = true;
-                var9 = (h) (var8);
-                if (op.field_m.teamCount > var9.field_I) {
-                  var9.field_I = op.field_m.field_y[var9.field_I];
-                  this.field_H.a(var8, false);
-                  this.field_c.a(29664, var8);
-                  if (var9.field_I == this.field_M) {
-                    var10 = var8.g(param0 + 83);
-                    var11 = var8.h(74);
-                    this.field_o = var9;
+                var9 = (PortalView) (var8);
+                if (PortalEntryEvent.field_m.teamCount > var9.field_I) {
+                  var9.field_I = PortalEntryEvent.field_m.field_y[var9.field_I];
+                  this.sceneObjects.a(var8, false);
+                  this.field_c.add(29664, var8);
+                  if (var9.field_I == this.localTeam) {
+                    var10 = var8.getX(param0 + 83);
+                    var11 = var8.getY(74);
+                    this.portal = var9;
                     var12 = var10 - (var5 + var3_int) / 2;
                     var13 = -((var6 + var4) / 2) + var11;
                     if (var3_int == 2147483647 ||
@@ -2427,14 +2427,14 @@ final class GameScreen {
                 }
               } else if (!(var8 instanceof GameCharacter)) {
                 if (var8 instanceof fd) {
-                  this.field_H.a(var8, false);
+                  this.sceneObjects.a(var8, false);
                 }
               } else {
                 var9_ref = (GameCharacter) (var8);
-                if (op.field_m.teamCount > var9_ref.team &&
-                  op.field_m.field_y[var9_ref.team] == this.field_M) {
-                  var10 = var8.g(param0 ^ -37);
-                  var11 = var8.h(-56);
+                if (PortalEntryEvent.field_m.teamCount > var9_ref.team &&
+                  PortalEntryEvent.field_m.field_y[var9_ref.team] == this.localTeam) {
+                  var10 = var8.getX(param0 ^ -37);
+                  var11 = var8.getY(-56);
                   var12 = var10 - (var3_int + var5) / 2;
                   var13 = -((var4 + var6) / 2) + var11;
                   if (var3_int == 2147483647 ||
@@ -2459,7 +2459,7 @@ final class GameScreen {
                   }
                 }
               }
-              var8 = (id) (var7.b(6));
+              var8 = (SceneObject) (var7.b(6));
               continue;
             }
             break;
@@ -2471,26 +2471,26 @@ final class GameScreen {
           }
           if (stackIn_112_0 ||
             df.field_I) {
-            this.field_h = this.field_u.field_c / 2;
-            this.field_R = this.field_u.field_r / 2;
+            this.field_h = this.navigation.pixelHeight / 2;
+            this.field_R = this.navigation.pixelWidth / 2;
           }
-          this.field_k.a(this.field_h, (byte) -69, this.field_R);
+          this.camera.moveTo(this.field_h, (byte) -69, this.field_R);
           if (gf.field_h) {
-            this.field_k.a(false);
+            this.camera.a(false);
           }
-          g.a(this.field_H);
+          g.a(this.sceneObjects);
           this.field_j = 0;
-          var8 = (id) (this.field_H.c(46));
+          var8 = (SceneObject) (this.sceneObjects.c(46));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var8))) {
-            stackOut_124_0 = var8 instanceof gm;
+            stackOut_124_0 = var8 instanceof HumanView;
             stackIn_132_0 = stackOut_124_0 ? 1 : 0;
             stackIn_125_0 = stackOut_124_0;
             if (var14 == 0) {
               if (stackIn_125_0) {
                 this.field_j = this.field_j + 1;
               }
-              var8 = (id) (this.field_H.b(6));
+              var8 = (SceneObject) (this.sceneObjects.b(6));
               continue;
             }
             break;
@@ -2498,22 +2498,22 @@ final class GameScreen {
           if (decompiledNaturalLoopExit0) {
             stackIn_132_0 = -125;
           }
-          ho.$cfr$intArgs$a$b55aceaa55ac(stackIn_132_0, this.field_u);
-          var8_ref = (cg) (op.field_m.field_A.c(108));
+          ho.$cfr$intArgs$a$b55aceaa55ac(stackIn_132_0, this.navigation);
+          var8_ref = (cg) (PortalEntryEvent.field_m.field_A.c(108));
           do {
             if (var8_ref == null) {
-              na.a((byte) 127, this.field_u);
+              na.a((byte) 127, this.navigation);
               ih.a(256);
               break;
             }
             var8_ref.a((byte) -85);
-            var8_ref = (cg) (op.field_m.field_A.b(6));
+            var8_ref = (cg) (PortalEntryEvent.field_m.field_A.b(6));
           } while (var14 == 0);
-          var8_ref2 = (ce) (op.field_m.field_s.c(72));
+          var8_ref2 = (ce) (PortalEntryEvent.field_m.field_s.c(72));
           scanLoop1: while (true) {
             if (var8_ref2 != null) {
-              var8_ref2.a(this.field_u, -54);
-              var8_ref2 = (ce) (op.field_m.field_s.b(6));
+              var8_ref2.a(this.navigation, -54);
+              var8_ref2 = (ce) (PortalEntryEvent.field_m.field_s.b(6));
               if (var14 == 0) {
                 continue;
               }
@@ -2537,7 +2537,7 @@ final class GameScreen {
             }
             break;
           }
-          var8_ref4 = gm.field_pb[hp.a((byte) -90, g.field_a, gm.field_pb.length)];
+          var8_ref4 = HumanView.field_pb[hp.a((byte) -90, g.field_a, HumanView.field_pb.length)];
           var9_ref2 = ah.field_e;
           this.field_y = new Sprite(var9_ref2.a(var8_ref4), var9_ref2.field_C + var9_ref2.field_r);
           this.field_L = new Sprite(12 + this.field_y.width, this.field_y.height + 12);
@@ -2550,43 +2550,43 @@ final class GameScreen {
           SoftwareRasterizer.i(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
           this.field_y.f(6, 6, 0);
           g.d();
-          if (op.field_m.teamCount == 1) {
+          if (PortalEntryEvent.field_m.teamCount == 1) {
             this.field_l = 0;
           }
           this.field_G.c(0);
           if (!df.field_I) {
             if (!gf.field_h ||
-              op.field_m.phase != 0) {
-              this.a((byte) -110, op.field_m.phase, op.field_m.field_C);
+              PortalEntryEvent.field_m.phase != 0) {
+              this.enterPhase((byte) -110, PortalEntryEvent.field_m.phase, PortalEntryEvent.field_m.field_C);
               if (var14 != 0) {
-                this.a((byte) -36, 1, 0);
-                this.field_k.field_f = false;
-                op.field_m.phase = 1;
+                this.enterPhase((byte) -36, 1, 0);
+                this.camera.field_f = false;
+                PortalEntryEvent.field_m.phase = 1;
               }
             } else {
-              this.a((byte) -36, 1, 0);
+              this.enterPhase((byte) -36, 1, 0);
               if (var14 != 0) {
-                this.field_k.field_f = false;
-                op.field_m.phase = 1;
+                this.camera.field_f = false;
+                PortalEntryEvent.field_m.phase = 1;
               }
             }
           } else {
-            this.field_k.field_f = false;
-            op.field_m.phase = 1;
+            this.camera.field_f = false;
+            PortalEntryEvent.field_m.phase = 1;
           }
-          this.field_W = op.field_m.currentTick - 50;
+          this.field_W = PortalEntryEvent.field_m.currentTick - 50;
           this.field_t = bl.a((byte) 43);
           this.field_G.a(this.field_Z, false);
           this.a(21);
-          op.field_m.field_D = new int[4][2];
-          op.field_m.field_D[0][0] = 9089042;
-          op.field_m.field_D[0][1] = 2473480;
-          op.field_m.field_D[1][0] = 11498997;
-          op.field_m.field_D[1][1] = 8165621;
-          op.field_m.field_D[2][0] = 13542477;
-          op.field_m.field_D[2][1] = 13843485;
-          op.field_m.field_D[3][1] = 16054670;
-          op.field_m.field_D[3][0] = 9796207;
+          PortalEntryEvent.field_m.field_D = new int[4][2];
+          PortalEntryEvent.field_m.field_D[0][0] = 9089042;
+          PortalEntryEvent.field_m.field_D[0][1] = 2473480;
+          PortalEntryEvent.field_m.field_D[1][0] = 11498997;
+          PortalEntryEvent.field_m.field_D[1][1] = 8165621;
+          PortalEntryEvent.field_m.field_D[2][0] = 13542477;
+          PortalEntryEvent.field_m.field_D[2][1] = 13843485;
+          PortalEntryEvent.field_m.field_D[3][1] = 16054670;
+          PortalEntryEvent.field_m.field_D[3][0] = 9796207;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2632,18 +2632,18 @@ final class GameScreen {
         RuntimeException var5_ref = null;
         try {
           if (param2 < 116) {
-            this.e(95, -38, -6);
+            this.centerCameraOn(95, -38, -6);
           }
           this.field_lb = true;
-          op.field_m.field_c = true;
-          this.a((byte) -57, 3, 0);
+          PortalEntryEvent.field_m.field_c = true;
+          this.enterPhase((byte) -57, 3, 0);
           this.field_d = 450;
           var5 = (si) (gk.a(2, 10));
-          var5.a(param1, 0, param0, param3, op.field_m);
+          var5.a(param1, 0, param0, param3, PortalEntryEvent.field_m);
           stackIn_6_0 = false;
           stackIn_6_1 = 256;
           stackIn_6_2 = hl.field_d;
-          if (~param0 == ~this.field_M) {
+          if (~param0 == ~this.localTeam) {
             stackIn_7_3 = 13;
           } else {
             stackIn_7_3 = 14;
@@ -2665,28 +2665,28 @@ final class GameScreen {
         }
     }
 
-    private final void b(int param0) {
+    private final void clearSelection(int param0) {
         RuntimeException runtimeException = null;
         GameCharacter var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (this.field_Q.a((byte) 98) == 0) {
+          if (this.selection.size((byte) 98) == 0) {
             return;
           }
-          var2 = (GameCharacter) (this.field_Q.c((byte) 112));
+          var2 = (GameCharacter) (this.selection.first((byte) 112));
           while (var2 != null) {
             var2.t(16);
-            var2 = (GameCharacter) (this.field_Q.b((byte) 88));
+            var2 = (GameCharacter) (this.selection.next((byte) 88));
             if (var3 != 0) {
               return;
             }
           }
           if (param0 > -50) {
-            this.a((int[]) null, false);
+            this.setTeamScores((int[]) null, false);
           }
-          this.field_Q.d(-1);
+          this.selection.clear(-1);
           iq.a(-6, (byte) 99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2698,7 +2698,7 @@ final class GameScreen {
 
     final void c(int param0, int param1, int param2) {
         try {
-          op.field_m.field_a[param0] = param1;
+          PortalEntryEvent.field_m.field_a[param0] = param1;
           if (param2 != -2) {
             this.field_O = (IntrusiveDeque) null;
           }
@@ -2707,25 +2707,25 @@ final class GameScreen {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void applyAttack(int param0, int param1, int param2, int param3, int param4) {
         GameCharacter var6 = null;
-        gm var7 = null;
+        HumanView var7 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
         try {
           try {
-            var6 = op.field_m.a(param2, false);
-            var7 = op.field_m.a(param4, -81);
+            var6 = PortalEntryEvent.field_m.a(param2, false);
+            var7 = PortalEntryEvent.field_m.a(param4, -81);
             if (var6 != null &&
               null != var7) {
               if (param0 != -1181) {
                 field_r = (String) null;
               }
-              var6.field_z = param3 << 16;
+              var6.positionX = param3 << 16;
               var6.field_Eb = var7;
-              var6.field_E = param1 << 16;
+              var6.positionY = param1 << 16;
               var7.n(20);
-              var6.b(8, param0 ^ 26778);
+              var6.setState(8, param0 ^ 26778);
               return;
             }
             return;
@@ -2753,19 +2753,19 @@ final class GameScreen {
           if (!param0) {
             return;
           }
-          if (op.field_m.phase == 0) {
+          if (PortalEntryEvent.field_m.phase == 0) {
             if (this.field_W < 400) {
               return;
             }
-            this.a((byte) -25, 1, op.field_m.field_C);
+            this.enterPhase((byte) -25, 1, PortalEntryEvent.field_m.field_C);
             if (var3 == 0) {
               return;
             }
           }
-          if (op.field_m.phase != 3 &&
-            !op.field_m.field_c) {
-            if (op.field_m.phase == 2) {
-              if ((op.field_m.field_C - 1550) > op.field_m.currentTick) {
+          if (PortalEntryEvent.field_m.phase != 3 &&
+            !PortalEntryEvent.field_m.field_c) {
+            if (PortalEntryEvent.field_m.phase == 2) {
+              if ((PortalEntryEvent.field_m.field_C - 1550) > PortalEntryEvent.field_m.currentTick) {
                 return;
               }
               cj.d(!param0, 12);
@@ -2776,28 +2776,28 @@ final class GameScreen {
             if (!df.field_I) {
               return;
             }
-            if (0 != op.field_m.teamCharacterCounts[this.field_M]) {
+            if (0 != PortalEntryEvent.field_m.teamCharacterCounts[this.localTeam]) {
               return;
             }
             if (pp.field_n &&
-              hg.field_rb != 11) {
+              ArmedHumanView.field_rb != 11) {
               var2 = new GameCharacter(hc.field_c, gk.field_c, 0);
-              var2.team = this.field_M;
-              var2.field_y = op.field_m.nextObjectId(-16777216);
-              op.field_m.characters.a(-25612, var2);
-              op.field_m.teamCharacterCounts[this.field_M] = op.field_m.teamCharacterCounts[this.field_M] + 1;
+              var2.team = this.localTeam;
+              var2.objectId = PortalEntryEvent.field_m.nextObjectId(-16777216);
+              PortalEntryEvent.field_m.characters.a(-25612, var2);
+              PortalEntryEvent.field_m.teamCharacterCounts[this.localTeam] = PortalEntryEvent.field_m.teamCharacterCounts[this.localTeam] + 1;
               var2Lifetime1 = new GameCharacter(hc.field_c, gk.field_c - 30, 1);
-              var2Lifetime1.team = this.field_M;
-              var2Lifetime1.field_y = op.field_m.nextObjectId(-16777216);
-              op.field_m.characters.a(-25612, var2Lifetime1);
-              op.field_m.teamCharacterCounts[this.field_M] = op.field_m.teamCharacterCounts[this.field_M] + 1;
+              var2Lifetime1.team = this.localTeam;
+              var2Lifetime1.objectId = PortalEntryEvent.field_m.nextObjectId(-16777216);
+              PortalEntryEvent.field_m.characters.a(-25612, var2Lifetime1);
+              PortalEntryEvent.field_m.teamCharacterCounts[this.localTeam] = PortalEntryEvent.field_m.teamCharacterCounts[this.localTeam] + 1;
               iq.a(-12, (byte) 99);
               if (var3 == 0) {
                 return;
               }
             } else {
               if (ai.field_b != 21 ||
-                hg.field_rb != 11) {
+                ArmedHumanView.field_rb != 11) {
                 ec.field_c = false;
                 if (var3 != 0) {
                   ud.field_S = true;
@@ -2831,7 +2831,7 @@ final class GameScreen {
         GameCharacter var9 = null;
         RuntimeException var9_ref = null;
         try {
-          var9 = op.field_m.a(param0, false);
+          var9 = PortalEntryEvent.field_m.a(param0, false);
           if (var9 == null) {
             return;
           }
@@ -2844,17 +2844,17 @@ final class GameScreen {
             param7 != 13 &&
             29 != param7 &&
             param7 != 33) {
-            if (var9.field_K == 5 &&
+            if (var9.state == 5 &&
               param7 == 4) {
               return;
             }
-            if (~param7 != ~var9.field_K) {
-              var9.b(param7, -27655);
+            if (~param7 != ~var9.state) {
+              var9.setState(param7, -27655);
             }
-            var9.field_E = param6;
-            var9.field_z = param1;
-            var9.a(this.field_u.b(var9.g(-116), param4, var9.h(param2 - 65), param5, 8760), 88);
-            var9.d(6, param3);
+            var9.positionY = param6;
+            var9.positionX = param1;
+            var9.setPath(this.navigation.findPath(var9.getX(-116), param4, var9.getY(param2 - 65), param5, 8760), 88);
+            var9.moveToward(6, param3);
           }
           if (23 == param7 ||
             param7 == 28 ||
@@ -2865,7 +2865,7 @@ final class GameScreen {
             param7 == 13 ||
             29 == param7 ||
             param7 == 33 || ZombieDawnMulti.field_E) {
-            var9.b(param7, -27655);
+            var9.setState(param7, -27655);
           }
           if (param2 != -34) {
             this.c(false, -121);
@@ -2894,17 +2894,17 @@ final class GameScreen {
               if (this.field_I.h(1)) {
                 return;
               }
-              this.b(-93);
+              this.clearSelection(-93);
             }
             if ((var4_int != 0 ||
               var5 != 0) && var5 == 0 || var5 != 0) {
               if (this.field_I.h(1)) {
                 return;
               }
-              if (0 < this.field_Q.a((byte) 98) &&
+              if (0 < this.selection.size((byte) 98) &&
                 40 < param1 &&
                 param1 < 440) {
-                this.b((byte) 104, this.field_k.a(true, param1), this.field_k.a(param2, 2));
+                this.issueMoveOrder((byte) 104, this.camera.screenToWorldY(true, param1), this.camera.screenToWorldX(param2, 2));
               }
             }}
           if (!param0) {
@@ -2934,7 +2934,7 @@ final class GameScreen {
         }
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void applyPhaseChange(int param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
@@ -2951,7 +2951,7 @@ final class GameScreen {
               return;
             }
           }
-          op.field_m.currentTick = param1;
+          PortalEntryEvent.field_m.currentTick = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2960,14 +2960,14 @@ final class GameScreen {
         }
     }
 
-    private final boolean c(byte param0) {
+    private final boolean isInProgress(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -104 % ((param0 - 59) / 39);
-          stackIn_7_0 = (op.field_m.phase == 1) || (op.field_m.phase == 2);
+          stackIn_7_0 = (PortalEntryEvent.field_m.phase == 1) || (PortalEntryEvent.field_m.phase == 2);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3025,13 +3025,13 @@ final class GameScreen {
         int stackIn_30_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_5_0;
-        ti[] var6 = null;
+        UnitView[] var6 = null;
         RuntimeException var6_ref = null;
         int[] var7 = null;
         int var8 = 0;
         IntrusiveNode var9_ref_br = null;
         int var9 = 0;
-        ti var10 = null;
+        UnitView var10 = null;
         int var11 = 0;
         int var12 = 0;
         GameCharacter var13 = null;
@@ -3042,28 +3042,28 @@ final class GameScreen {
           if (param3 != -40) {
             return;
           }
-          var6 = new ti[this.field_H.a(0)];
-          var7 = new int[this.field_H.a(0)];
+          var6 = new UnitView[this.sceneObjects.a(0)];
+          var7 = new int[this.sceneObjects.a(0)];
           ArrayOperations.a(var7, 0, var7.length, 32767);
           var8 = 0;
-          var9_ref_br = this.field_H.c(94);
+          var9_ref_br = this.sceneObjects.c(94);
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var9_ref_br instanceof id)))) {
-            stackOut_5_0 = var9_ref_br instanceof ti;
+          while (!(decompiledNaturalLoopExit0 = (!(var9_ref_br instanceof SceneObject)))) {
+            stackOut_5_0 = var9_ref_br instanceof UnitView;
             stackIn_30_0 = stackOut_5_0 ? 1 : 0;
             stackIn_6_0 = stackOut_5_0;
             if (var14 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_6_0) {
-                var10 = (ti) (var9_ref_br);
-                var11 = var10.g(108) - param0;
-                var12 = -param2 + var10.h(-102);
+                var10 = (UnitView) (var9_ref_br);
+                var11 = var10.getX(108) - param0;
+                var12 = -param2 + var10.getY(-102);
                 if (14400 >= var12 * var12 + var11 * var11) {
                   if (!param1 ||
                     !(var10 instanceof GameCharacter)) {
-                    if (!(!(var10 instanceof gm))) {
+                    if (!(!(var10 instanceof HumanView))) {
                       var6[var8] = var10;
-                      var7[var8] = var10.field_y;
+                      var7[var8] = var10.objectId;
                       var8++;
                     }
                     decompiledFrameRemainder0 = false;
@@ -3071,14 +3071,14 @@ final class GameScreen {
                   else {
                     var13 = (GameCharacter) (var10);
                     if (~var13.team != ~param4) {
-                      var6[var8] = (ti) ((Object) var13);
-                      var7[var8] = var13.field_y;
+                      var6[var8] = (UnitView) ((Object) var13);
+                      var7[var8] = var13.objectId;
                       var8++;
                     }
                   }
                 }
               }
-              var9_ref_br = this.field_H.b(6);
+              var9_ref_br = this.sceneObjects.b(6);
               continue;
             }
             break;
@@ -3094,8 +3094,8 @@ final class GameScreen {
               return;
             }
             if (!(var10 instanceof GameCharacter) ||
-              !op.field_m.b(param3 ^ -40, ((GameCharacter) (var10)).team)) {
-              var6[var9].e(param4, 2);
+              !PortalEntryEvent.field_m.b(param3 ^ -40, ((GameCharacter) (var10)).team)) {
+              var6[var9].startSlowTimer(param4, 2);
             }
             var9++;
           }
@@ -3154,27 +3154,27 @@ final class GameScreen {
             boolean decompiledFrameRemainder0 = true;
             if (this.field_I.a(20) &&
               this.field_mb != null &&
-              !this.field_mb.i((byte) -15)) {
-              this.field_I.a(this.field_k.a(true, param0), this.field_mb, this.field_k.a(param2, 2), 122);
+              !this.field_mb.isOwnedByLocalPlayer((byte) -15)) {
+              this.field_I.a(this.camera.screenToWorldY(true, param0), this.field_mb, this.camera.screenToWorldX(param2, 2), 122);
               decompiledFrameRemainder1 = (var5 == 0);
             } else {
               if (this.field_I.a(20) &&
                 this.field_b != null) {
-                this.field_I.a(this.field_k.a(true, param0), this.field_b, this.field_k.a(param2, 2), 123);
+                this.field_I.a(this.camera.screenToWorldY(true, param0), this.field_b, this.camera.screenToWorldX(param2, 2), 123);
                 decompiledFrameRemainder0 = (var5 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (this.field_I.a(true) &&
                   this.field_mb != null &&
-                  this.field_mb.i((byte) -58)) {
+                  this.field_mb.isOwnedByLocalPlayer((byte) -58)) {
                   if (!this.field_I.a((byte) -126)) {
-                    this.b(-70);
+                    this.clearSelection(-70);
                   }
-                  this.field_Q.a(29664, this.field_mb);
+                  this.selection.add(29664, this.field_mb);
                   if (!this.field_I.a((byte) -115)) {
                     this.field_mb.r(0);
                   }
-                  this.field_I.a(this.field_k.a(true, param0), this.field_mb, this.field_k.a(param2, 2), 122);
+                  this.field_I.a(this.camera.screenToWorldY(true, param0), this.field_mb, this.camera.screenToWorldX(param2, 2), 122);
                   return;
                 }
                 if (!this.field_I.g(13) ||
@@ -3183,38 +3183,38 @@ final class GameScreen {
                     if (!bk.field_g) {
                       return;
                     }
-                    this.field_I.a(this.field_k.a(true, param0), this.field_x, this.field_k.a(param2, 2), 127);
+                    this.field_I.a(this.camera.screenToWorldY(true, param0), this.field_x, this.camera.screenToWorldX(param2, 2), 127);
                     return;
                   }
                   if (this.field_mb != null &&
-                    this.field_mb.i((byte) -86)) {
+                    this.field_mb.isOwnedByLocalPlayer((byte) -86)) {
                     if (!lc.field_m[81]) {
-                      this.b(-51);
+                      this.clearSelection(-51);
                     }
                     this.field_mb.r(0);
-                    this.field_Q.a(29664, this.field_mb);
+                    this.selection.add(29664, this.field_mb);
                     iq.a(-3, (byte) 99);
                     decompiledFrameRemainder0 = (var5 != 0);
                   }
                   if (decompiledFrameRemainder0) {
                     if ((this.field_n != 0 ||
-                      !(this.field_Q.a((byte) 98) > 0)) &&
+                      !(this.selection.size((byte) 98) > 0)) &&
                       (decompiledFrameRemainder0 = (this.field_n == 1))) {
-                      this.b(-128);
+                      this.clearSelection(-128);
                       decompiledFrameRemainder0 = (var5 != 0);
                     }
                     if ((decompiledFrameRemainder0) &&
                       (decompiledFrameRemainder0 = !(this.field_I.a((byte) -127))) &&
                       (decompiledFrameRemainder0 = !(param0 <= 40)) &&
                       (decompiledFrameRemainder0 = !(440 <= param0))) {
-                      this.b((byte) 57, this.field_k.a(true, param0), this.field_k.a(param2, 2));
+                      this.issueMoveOrder((byte) 57, this.camera.screenToWorldY(true, param0), this.camera.screenToWorldX(param2, 2));
                       decompiledFrameRemainder0 = (var5 != 0);
                     }
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  this.b(-56);
-                  this.field_I.a(this.field_k.a(true, param0), this.field_x, this.field_k.a(param2, 2), 117);
+                  this.clearSelection(-56);
+                  this.field_I.a(this.camera.screenToWorldY(true, param0), this.field_x, this.camera.screenToWorldX(param2, 2), 117);
                   return;
                 }
               }
@@ -3238,30 +3238,30 @@ final class GameScreen {
     final void a(byte param0, int param1, int param2, int param3) {
         boolean discarded$0 = false;
         try {
-          op.field_m.field_A.a(new cg(param3, param1, param2), false);
+          PortalEntryEvent.field_m.field_A.a(new cg(param3, param1, param2), false);
           if (param0 < 79) {
-            discarded$0 = this.c((byte) -123);
+            discarded$0 = this.isInProgress((byte) -123);
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "qd.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void enterPhase(byte param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         IntrusiveNode var4 = null;
-        id var4_ref = null;
+        SceneObject var4_ref = null;
         RuntimeException var4_ref2 = null;
         GameCharacter var5 = null;
         int var6 = 0;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          op.field_m.phase = param1;
+          PortalEntryEvent.field_m.phase = param1;
           if (param0 > -8) {
             this.b((byte) -48);
           }
-          var4_int = op.field_m.phase;
+          var4_int = PortalEntryEvent.field_m.phase;
           if (var4_int != 0) {
             if (2 != var4_int) {
               if (var4_int == 1) {
@@ -3272,18 +3272,18 @@ final class GameScreen {
               }
               if (var6 == 0) {
                 we.field_g[7] = pi.field_b;
-                var4 = op.field_m.characters.c(86);
+                var4 = PortalEntryEvent.field_m.characters.c(86);
                 while (true) {
                   if (null == var4) {
                     return;
                   }
                   if (var4 instanceof GameCharacter) {
                     var5 = (GameCharacter) (var4);
-                    if (var5.field_K != 21) {
-                      var5.b(4, -27655);
+                    if (var5.state != 21) {
+                      var5.setState(4, -27655);
                     }
                   }
-                  var4 = op.field_m.characters.b(6);
+                  var4 = PortalEntryEvent.field_m.characters.b(6);
                 }
               }
             }
@@ -3292,14 +3292,14 @@ final class GameScreen {
               LevelActorSpawner.a(false, 15, 125, sp.field_g);
               return;
             }
-            var4_ref = (id) (this.field_c.c((byte) 91));
+            var4_ref = (SceneObject) (this.field_c.first((byte) 91));
             do {
               if (null == var4_ref) {
-                op.field_m.field_C = param2;
+                PortalEntryEvent.field_m.field_C = param2;
                 break;
               }
-              ((h) (var4_ref)).c(2, 49951);
-              var4_ref = (id) (this.field_c.b((byte) 117));
+              ((PortalView) (var4_ref)).c(2, 49951);
+              var4_ref = (SceneObject) (this.field_c.next((byte) 117));
             } while (var6 == 0);
           }
           return;
@@ -3310,7 +3310,7 @@ final class GameScreen {
         }
     }
 
-    final void b(boolean param0, int param1) {
+    final void draw(boolean param0, int param1) {
         boolean stackIn_78_0 = false;
         int stackIn_89_0 = 0;
         int stackIn_103_0 = 0;
@@ -3351,7 +3351,7 @@ final class GameScreen {
         GameEvent var9_ref2 = null;
         int var10 = 0;
         GameCharacter var10_ref_wb = null;
-        h var10_ref_h = null;
+        PortalView var10_ref_h = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -3362,7 +3362,7 @@ final class GameScreen {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        h var10_ref_hLifetime1;
+        PortalView var10_ref_hLifetime1;
         int stackIn_103_0Lifetime1;
         int stackIn_103_1Lifetime1;
         int var3_intLifetime1;
@@ -3378,7 +3378,7 @@ final class GameScreen {
         try {
           g.c(ki.field_k);
           if (!he.field_a) {
-            SoftwareRasterizer.setClip(0, 40, (int)(640.0f * this.field_k.field_d), (int)(480.0f * this.field_k.field_d) - 40);
+            SoftwareRasterizer.setClip(0, 40, (int)(640.0f * this.camera.zoom), (int)(480.0f * this.camera.zoom) - 40);
             if (var20 != 0) {
               SoftwareRasterizer.resetClip();
             }
@@ -3389,8 +3389,8 @@ final class GameScreen {
           var4 = 0;
           var5 = oa.a((byte) 71);
           if (var5 <= 0) {
-            var3_intLifetime1 = this.field_k.field_k;
-            var4Lifetime1 = this.field_k.field_g;
+            var3_intLifetime1 = this.camera.centerX;
+            var4Lifetime1 = this.camera.centerY;
             if (null != lp.field_k) {
               aa.a(true, lp.field_k);
               lp.field_k = null;
@@ -3399,10 +3399,10 @@ final class GameScreen {
                   lp.field_k = wc.b(-1, 89);
                 }
                 lp.field_k.h(20 * var5 * db.field_c / 256);
-                var3_intLifetime1 = -(var5 / 2) + (this.field_k.field_k + hp.a((byte) -123, qf.field_a, var5));
-                var4Lifetime1 = -(var5 / 2) + (this.field_k.field_g + hp.a((byte) 36, qf.field_a, var5));
-                this.field_k.field_g = var4Lifetime1;
-                this.field_k.field_k = var3_intLifetime1;
+                var3_intLifetime1 = -(var5 / 2) + (this.camera.centerX + hp.a((byte) -123, qf.field_a, var5));
+                var4Lifetime1 = -(var5 / 2) + (this.camera.centerY + hp.a((byte) 36, qf.field_a, var5));
+                this.camera.centerY = var4Lifetime1;
+                this.camera.centerX = var3_intLifetime1;
               }
             }
           } else {
@@ -3410,88 +3410,88 @@ final class GameScreen {
               lp.field_k = wc.b(-1, 89);
             }
             lp.field_k.h(20 * var5 * db.field_c / 256);
-            var3_intLifetime1 = -(var5 / 2) + (this.field_k.field_k + hp.a((byte) -123, qf.field_a, var5));
-            var4Lifetime1 = -(var5 / 2) + (this.field_k.field_g + hp.a((byte) 36, qf.field_a, var5));
-            this.field_k.field_g = var4Lifetime1;
-            this.field_k.field_k = var3_intLifetime1;
+            var3_intLifetime1 = -(var5 / 2) + (this.camera.centerX + hp.a((byte) -123, qf.field_a, var5));
+            var4Lifetime1 = -(var5 / 2) + (this.camera.centerY + hp.a((byte) 36, qf.field_a, var5));
+            this.camera.centerY = var4Lifetime1;
+            this.camera.centerX = var3_intLifetime1;
           }
-          this.field_u.a((byte) 111, this.field_k);
-          var6 = op.field_m.field_A.c(98);
+          this.navigation.a((byte) 111, this.camera);
+          var6 = PortalEntryEvent.field_m.field_A.c(98);
           do {
             if (null == var6) {
               var6 = this.field_cb.c(122);
               break;
             }
-            ((cg) (var6)).a(this.field_k, param1 + 58);
-            var6 = op.field_m.field_A.b(6);
+            ((cg) (var6)).a(this.camera, param1 + 58);
+            var6 = PortalEntryEvent.field_m.field_A.b(6);
           } while (var20 == 0);
           scanLoop1: while (true) {
             if (var6 != null) {
-              ((rj) (var6)).a(-10136, this.field_k);
+              ((rj) (var6)).draw(-10136, this.camera);
               var6 = this.field_cb.b(6);
               if (var20 == 0) {
                 continue;
               }
             } else {
-              var6 = this.field_c.c((byte) 104);
+              var6 = this.field_c.first((byte) 104);
               while (null != var6) {
-                ((h) (var6)).a(this.field_k, 13542477);
-                var6 = this.field_c.b((byte) 101);
+                ((PortalView) (var6)).a(this.camera, 13542477);
+                var6 = this.field_c.next((byte) 101);
                 if (var20 != 0) {
                   break scanLoop1;
                 }
               }
-              var6 = op.field_m.field_G.c(113);
+              var6 = PortalEntryEvent.field_m.field_G.c(113);
             }
             break;
           }
           do {
             if (var6 == null) {
-              this.field_u.a(param1, false, this.field_k, -1);
+              this.navigation.a(param1, false, this.camera, -1);
               break;
             }
-            ((pq) (var6)).a(255, this.field_k);
-            var6 = op.field_m.field_G.b(param1 ^ 7);
+            ((pq) (var6)).a(255, this.camera);
+            var6 = PortalEntryEvent.field_m.field_G.b(param1 ^ 7);
           } while (var20 == 0);
-          var6 = op.field_m.field_s.c(param1 ^ 116);
+          var6 = PortalEntryEvent.field_m.field_s.c(param1 ^ 116);
           do {
             if (var6 == null) {
-              var6 = this.field_H.c(48);
+              var6 = this.sceneObjects.c(48);
               break;
             }
-            ((ce) (var6)).a((byte) 19, this.field_k);
-            var6 = op.field_m.field_s.b(param1 ^ 7);
+            ((ce) (var6)).a((byte) 19, this.camera);
+            var6 = PortalEntryEvent.field_m.field_s.b(param1 ^ 7);
           } while (var20 == 0);
           do {
             if (var6 == null) {
               var6 = this.field_kb.c(103);
               break;
             }
-            ((id) (var6)).a(-10136, this.field_k);
-            var6 = this.field_H.b(param1 ^ 7);
+            ((SceneObject) (var6)).draw(-10136, this.camera);
+            var6 = this.sceneObjects.b(param1 ^ 7);
           } while (var20 == 0);
           do {
             if (null == var6) {
               var6 = this.field_O.c(88);
               break;
             }
-            ((mg) (var6)).a(-10136, this.field_k);
+            ((mg) (var6)).draw(-10136, this.camera);
             var6 = this.field_kb.b(6);
           } while (var20 == 0);
           do {
             if (var6 == null) {
-              this.field_u.a(2, false, this.field_k, -1);
-              this.field_u.a(3, false, this.field_k, -1);
+              this.navigation.a(2, false, this.camera, -1);
+              this.navigation.a(3, false, this.camera, -1);
               break;
             }
-            ((lj) (var6)).a((byte) 103, this.field_k);
+            ((lj) (var6)).a((byte) 103, this.camera);
             var6 = this.field_O.b(6);
           } while (var20 == 0);
           var6 = this.field_C.c(param1 + 107);
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var6 == null))) {
             var7_ref_lc = (lc) (var6);
-            stackIn_78_0 = var7_ref_lc.a(16711680, this.field_k);
+            stackIn_78_0 = var7_ref_lc.a(16711680, this.camera);
             if (var20 == 0) {
               if (!stackIn_78_0) {
                 var7_ref_lc.unlink(true);
@@ -3509,17 +3509,17 @@ final class GameScreen {
             boolean decompiledFrameCompleted1 = true;
             var7 = this.field_I.b(false);
             if (var7 > 0 &&
-              6 != wf.field_t) {
+              6 != PowerupEvent.field_t) {
               stackIn_89_0 = (this.field_I.e(-1) != 9) ? 0 : 1;
               var8_int = stackIn_89_0;
-              var9_int = this.field_k.a(-(int)((float)(24 * var7) / this.field_k.field_d) + MouseInputHandler.field_g, 2);
-              var10 = this.field_k.a(true, bo.field_d - (int)((float)(var7 * 24) / this.field_k.field_d));
+              var9_int = this.camera.screenToWorldX(-(int)((float)(24 * var7) / this.camera.zoom) + MouseInputHandler.field_g, 2);
+              var10 = this.camera.screenToWorldY(true, bo.field_d - (int)((float)(var7 * 24) / this.camera.zoom));
               var11 = var9_int / 24;
               var12 = var10 / 24;
               var13 = var12 + 2 * var7;
               var14 = var11 + 2 * var7;
-              if (var13 > this.field_u.field_i.field_e) {
-                var13 = this.field_u.field_i.field_e;
+              if (var13 > this.navigation.level.field_e) {
+                var13 = this.navigation.level.field_e;
               }
               if (var12 < 0) {
                 var12 = 0;
@@ -3527,8 +3527,8 @@ final class GameScreen {
               if (0 > var11) {
                 var11 = 0;
               }
-              if (this.field_u.field_i.field_d < var14) {
-                var14 = this.field_u.field_i.field_d;
+              if (this.navigation.level.field_d < var14) {
+                var14 = this.navigation.level.field_d;
               }
               var15 = var12;
               while (true) {
@@ -3544,12 +3544,12 @@ final class GameScreen {
                 }
                 var16 = stackIn_117_0;
                 while (var14 > var16) {
-                  var17 = this.field_u.a(var16, var15, (byte) -116);
+                  var17 = this.navigation.getTile(var16, var15, (byte) -116);
                   stackIn_103_0Lifetime1 = 0;
                   stackIn_103_1Lifetime1 = -2147483648 & var17;
                   if (stackIn_103_0Lifetime1 == stackIn_103_1Lifetime1) {
-                    var18 = this.field_k.c(24 * var16, -20126);
-                    var19 = this.field_k.d(24 * var15, param1 + 107);
+                    var18 = this.camera.worldToScreenX(24 * var16, -20126);
+                    var19 = this.camera.worldToScreenY(24 * var15, param1 + 107);
                     stackIn_112_0 = var18;
                     stackIn_112_1 = var19;
                     stackIn_112_2 = 24;
@@ -3572,13 +3572,13 @@ final class GameScreen {
             stackIn_121_0 = (stackIn_117_0 != this.field_I.e(-1)) ? 0 : 1;
             var8_int = stackIn_121_0;
             if (var8_int != 0) {
-              var9_int = this.field_k.a(MouseInputHandler.field_g - (int)((float)(var7 * 24) / this.field_k.field_d), 2);
-              var10 = this.field_k.a(true, bo.field_d - (int)((float)(24 * var7) / this.field_k.field_d));
+              var9_int = this.camera.screenToWorldX(MouseInputHandler.field_g - (int)((float)(var7 * 24) / this.camera.zoom), 2);
+              var10 = this.camera.screenToWorldY(true, bo.field_d - (int)((float)(24 * var7) / this.camera.zoom));
               var11 = var9_int / 24;
               var12 = var10 / 24;
               var13 = var7 * 2 + var12;
-              if (var13 > this.field_u.field_i.field_e) {
-                var13 = this.field_u.field_i.field_e;
+              if (var13 > this.navigation.level.field_e) {
+                var13 = this.navigation.level.field_e;
               }
               var14Lifetime2 = 2 * var7 + var11;
               if (0 > var12) {
@@ -3587,21 +3587,21 @@ final class GameScreen {
               if (var11 < 0) {
                 var11 = 0;
               }
-              if (this.field_u.field_i.field_d < var14Lifetime2) {
-                var14Lifetime2 = this.field_u.field_i.field_d;
+              if (this.navigation.level.field_d < var14Lifetime2) {
+                var14Lifetime2 = this.navigation.level.field_d;
               }
               var15Lifetime1 = var14Lifetime2 + var11 >> 1;
               var16Lifetime1 = var12 + var13 >> 1;
-              var17Lifetime1 = this.field_k.c(24 * var15Lifetime1, -20126);
-              var18Lifetime1 = this.field_k.d(var16Lifetime1 * 24, 126);
+              var17Lifetime1 = this.camera.worldToScreenX(24 * var15Lifetime1, -20126);
+              var18Lifetime1 = this.camera.worldToScreenY(var16Lifetime1 * 24, 126);
               SoftwareRasterizer.fillCircleAlpha(var17Lifetime1, var18Lifetime1, 120, 0, 128);
             }
           }
-          if (~(1280 / ke.field_b) != ~so.field_l.width) {
+          if (~(1280 / ke.field_b) != ~UnitStateEvent.field_l.width) {
             if (kj.field_q >= 2) {
               System.out.println("realloc influence buffer, detail " + ke.field_b);
             }
-            so.field_l = new Sprite(1280 / ke.field_b, 960 / ke.field_b);
+            UnitStateEvent.field_l = new Sprite(1280 / ke.field_b, 960 / ke.field_b);
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameCompleted3 = true;
@@ -3610,11 +3610,11 @@ final class GameScreen {
           if (gf.field_h) {
             var7 = 0;
             do {
-              if (!(op.field_m.teamCharacterCounts.length > var7)) {
-                var6 = this.field_H.c(123);
+              if (!(PortalEntryEvent.field_m.teamCharacterCounts.length > var7)) {
+                var6 = this.sceneObjects.c(123);
                 break;
               }
-              op.field_m.teamCharacterCounts[var7] = 0;
+              PortalEntryEvent.field_m.teamCharacterCounts[var7] = 0;
               var7++;
             } while (var20 == 0);
             while (var6 != null) {
@@ -3627,9 +3627,9 @@ final class GameScreen {
               }
               if (stackIn_153_0) {
                 var7_ref_wb = (GameCharacter) (var6);
-                op.field_m.teamCharacterCounts[var7_ref_wb.team] = op.field_m.teamCharacterCounts[var7_ref_wb.team] + 1;
+                PortalEntryEvent.field_m.teamCharacterCounts[var7_ref_wb.team] = PortalEntryEvent.field_m.teamCharacterCounts[var7_ref_wb.team] + 1;
               }
-              var6 = this.field_H.b(6);
+              var6 = this.sceneObjects.b(6);
             }
             decompiledFrameRemainder1 = !(decompiledFrameCompleted3);
           }
@@ -3639,9 +3639,9 @@ final class GameScreen {
             stackIn_164_0 = (FullscreenFocusCanvas.field_k.field_k == 1) ? 0 : 1;
             var8_int = stackIn_164_0;
             if (var8_int != 0) {
-              var9 = so.field_l.pixels;
+              var9 = UnitStateEvent.field_l.pixels;
               var10 = 0;
-              var11 = so.field_l.width * so.field_l.height - 7;
+              var11 = UnitStateEvent.field_l.width * UnitStateEvent.field_l.height - 7;
               do {
                 if (var10 >= var11) {
                   var11 += 7;
@@ -3667,15 +3667,15 @@ final class GameScreen {
             if (decompiledFrameCompleted2) {
               var9_int = 0;
               do {
-                if (!(op.field_m.teamCharacterCounts.length > var9_int)) {
+                if (!(PortalEntryEvent.field_m.teamCharacterCounts.length > var9_int)) {
                   var9_int = 350;
                   var9_int = var9_int / ke.field_b;
                   break;
                 }
-                op.field_m.teamCharacterCounts[var9_int] = 0;
+                PortalEntryEvent.field_m.teamCharacterCounts[var9_int] = 0;
                 var9_int++;
               } while (var20 == 0);
-              var6 = this.field_H.c(param1 + 113);
+              var6 = this.sceneObjects.c(param1 + 113);
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (null == var6))) {
                 stackOut_190_0 = var6 instanceof GameCharacter;
@@ -3684,18 +3684,18 @@ final class GameScreen {
                 if (var20 == 0) {
                   if (stackIn_191_0) {
                     var10_ref_wb = (GameCharacter) (var6);
-                    var11 = this.field_k.c(var10_ref_wb.g(-79), -20126);
-                    var12 = this.field_k.d(var10_ref_wb.h(-71), 114);
-                    op.field_m.teamCharacterCounts[var10_ref_wb.team] = op.field_m.teamCharacterCounts[var10_ref_wb.team] + 1;
-                    if (var10_ref_wb.field_K == 4 ||
-                      var10_ref_wb.field_K == 5 ||
-                      22 == var10_ref_wb.field_K ||
-                      !(var10_ref_wb.field_Ib <= op.field_m.currentTick)) {
-                      var10_ref_wb.a(true, this.field_k);
-                      if ((var10_ref_wb.field_Ib + var10_ref_wb.field_y) % 7 == 0 &&
-                        var10_ref_wb.field_K == 5 &&
-                        var10_ref_wb.field_Ib > op.field_m.currentTick) {
-                        var13 = (3 + var10_ref_wb.field_y) * var10_ref_wb.field_Ib % he.field_b.length;
+                    var11 = this.camera.worldToScreenX(var10_ref_wb.getX(-79), -20126);
+                    var12 = this.camera.worldToScreenY(var10_ref_wb.getY(-71), 114);
+                    PortalEntryEvent.field_m.teamCharacterCounts[var10_ref_wb.team] = PortalEntryEvent.field_m.teamCharacterCounts[var10_ref_wb.team] + 1;
+                    if (var10_ref_wb.state == 4 ||
+                      var10_ref_wb.state == 5 ||
+                      22 == var10_ref_wb.state ||
+                      !(var10_ref_wb.field_Ib <= PortalEntryEvent.field_m.currentTick)) {
+                      var10_ref_wb.a(true, this.camera);
+                      if ((var10_ref_wb.field_Ib + var10_ref_wb.objectId) % 7 == 0 &&
+                        var10_ref_wb.state == 5 &&
+                        var10_ref_wb.field_Ib > PortalEntryEvent.field_m.currentTick) {
+                        var13 = (3 + var10_ref_wb.objectId) * var10_ref_wb.field_Ib % he.field_b.length;
                         if (0 != var13 ||
                           q.field_b) {
                           if (var13 == 1 &&
@@ -3709,15 +3709,15 @@ final class GameScreen {
                       }
                     }
                     if (var8_int != 0 &&
-                      var10_ref_wb.field_K != 9 &&
-                      var10_ref_wb.field_K != 21 &&
-                      var10_ref_wb.i((byte) 0)) {
-                      g.c(so.field_l);
+                      var10_ref_wb.state != 9 &&
+                      var10_ref_wb.state != 21 &&
+                      var10_ref_wb.isOwnedByLocalPlayer((byte) 0)) {
+                      g.c(UnitStateEvent.field_l);
                       SoftwareRasterizer.fillCircle(var11 / ke.field_b, var12 / ke.field_b, var9_int, 0);
                       g.d();
                     }
                   }
-                  var6 = this.field_H.b(6);
+                  var6 = this.sceneObjects.b(6);
                   continue;
                 }
                 break;
@@ -3726,34 +3726,34 @@ final class GameScreen {
                 stackIn_241_0 = var8_int;
               }
               if (stackIn_241_0 != 0) {
-                g.c(so.field_l);
-                var10_ref_h = this.field_o;
-                var11 = this.field_k.c(var10_ref_h.g(param1 - 97), param1 - 20127);
-                var12 = this.field_k.d(var10_ref_h.h(-51), 108);
+                g.c(UnitStateEvent.field_l);
+                var10_ref_h = this.portal;
+                var11 = this.camera.worldToScreenX(var10_ref_h.getX(param1 - 97), param1 - 20127);
+                var12 = this.camera.worldToScreenY(var10_ref_h.getY(-51), 108);
                 SoftwareRasterizer.fillCircle(var11 / ke.field_b, var12 / ke.field_b, var9_int, 0);
-                var6 = this.field_c.c((byte) 127);
+                var6 = this.field_c.first((byte) 127);
                 while (var6 != null) {
-                  var10_ref_hLifetime1 = (h) (var6);
+                  var10_ref_hLifetime1 = (PortalView) (var6);
                   stackIn_261_0 = ~var10_ref_hLifetime1.field_I;
-                  stackIn_261_1 = ~this.field_M;
+                  stackIn_261_1 = ~this.localTeam;
                   if (var20 != 0) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
                   if (stackIn_261_0 != stackIn_261_1) {
-                    var11 = this.field_k.c(var10_ref_hLifetime1.g(param1 ^ -82), -20126);
-                    var12 = this.field_k.d(var10_ref_hLifetime1.h(103), 121);
+                    var11 = this.camera.worldToScreenX(var10_ref_hLifetime1.getX(param1 ^ -82), -20126);
+                    var12 = this.camera.worldToScreenY(var10_ref_hLifetime1.getY(103), 121);
                     SoftwareRasterizer.fillCircle(var11 / ke.field_b, var12 / ke.field_b, var9_int, var7);
                   }
-                  var6 = this.field_c.b((byte) 96);
+                  var6 = this.field_c.next((byte) 96);
                 }
                 if (decompiledFrameCompleted0) {
                   g.d();
-                  so.field_l.a(0, 0, 1280, 960, 104);
+                  UnitStateEvent.field_l.a(0, 0, 1280, 960, 104);
                 }
               }
               if (decompiledFrameCompleted0) {
-                this.field_J.a(this.field_k, (byte) 36);
+                this.field_J.a(this.camera, (byte) 36);
               }
             }
           }
@@ -3762,7 +3762,7 @@ final class GameScreen {
             var6 = this.field_T.c(104);
             while (true) {
               if (null != var6) {
-                ((wc) (var6)).a(-10136, this.field_k);
+                ((wc) (var6)).draw(-10136, this.camera);
                 var6 = this.field_T.b(6);
                 if (var20 == 0) {
                   continue;
@@ -3789,12 +3789,12 @@ final class GameScreen {
               g.d();
               this.field_i = nk.a(16777215, param1 + 455739623, 8401072);
             }
-            if (0 == (wf.field_m & 1)) {
+            if (0 == (PowerupEvent.field_m & 1)) {
               g.c(this.field_B);
               this.field_i = nk.a(2154560, 455739624, 16724223);
               SoftwareRasterizer.clear();
               SoftwareRasterizer.fillRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l, 1);
-              this.field_S.a(1, (double)wf.field_m / 6.25, this.field_i);
+              this.field_S.a(1, (double)PowerupEvent.field_m / 6.25, this.field_i);
               g.d();
             }
             var8_int = 132;
@@ -3835,23 +3835,23 @@ final class GameScreen {
           }
           boolean decompiledFrameRemainder0 = true;
           var8 = ah.field_e;
-          if (0 != op.field_m.phase) {
-            if ((3 == op.field_m.phase) &&
+          if (0 != PortalEntryEvent.field_m.phase) {
+            if ((3 == PortalEntryEvent.field_m.phase) &&
               (decompiledFrameRemainder0 = !(this.field_d >= 225))) {
               var8.b(tm.field_g, 320, 240, 2, -1);
               decompiledFrameRemainder0 = (var20 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (!gf.field_h &&
-                op.field_m.phase == 1 &&
-                op.field_m.currentTick < 500) {
+                PortalEntryEvent.field_m.phase == 1 &&
+                PortalEntryEvent.field_m.currentTick < 500) {
                 var8.b(NodeHashTableIterator.field_c, 320, 240, 0, -1);
-                this.field_k.field_f = false;
+                this.camera.field_f = false;
                 decompiledFrameRemainder0 = (var20 != 0);
               }
               if ((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = (op.field_m.phase == 2))) {
-                var9_int = op.field_m.field_C - op.field_m.currentTick;
+                (decompiledFrameRemainder0 = (PortalEntryEvent.field_m.phase == 2))) {
+                var9_int = PortalEntryEvent.field_m.field_C - PortalEntryEvent.field_m.currentTick;
                 if (var9_int < 1550) {
                   if (gf.field_h) {
                     var8.b(gn.field_E, 320, 120, 0, -1);
@@ -3906,8 +3906,8 @@ final class GameScreen {
                 stackIn_352_2 = var10;
               }
               SoftwareRasterizer.setClip(stackIn_348_0, stackIn_351_1, stackIn_352_2, 345);
-              sj.field_j.c(var11 - 5, 75);
-              sj.field_j.a(-5 + var11, 340);
+              InfectionEvent.field_j.c(var11 - 5, 75);
+              InfectionEvent.field_j.a(-5 + var11, 340);
               SimHuman.field_fb.c(var11 - 5, 75);
               SimHuman.field_fb.b(-5 - var11 + 640, 75);
               rp.field_r[0].c(var11 - 5, 75);
@@ -3918,17 +3918,17 @@ final class GameScreen {
               var13 = 160;
               var14Lifetime1 = 90;
               this.a(var13, (byte) -99, var14Lifetime1, var12);
-              if (op.field_m.teamCount > 1) {
+              if (PortalEntryEvent.field_m.teamCount > 1) {
                 var12++;
                 var14Lifetime1Lifetime1 = 270;
                 var13 = 640 - var13;
                 this.a(var13, (byte) -99, var14Lifetime1Lifetime1, var12);
-                if (2 < op.field_m.teamCount) {
+                if (2 < PortalEntryEvent.field_m.teamCount) {
                   var13 = 640 - var13;
                   var14Lifetime1Lifetime1 = 230;
                   var12++;
                   this.a(var13, (byte) -99, var14Lifetime1Lifetime1, var12);
-                  if (3 < op.field_m.teamCount) {
+                  if (3 < PortalEntryEvent.field_m.teamCount) {
                     var12++;
                     var13 = 640 - var13;
                     var14Lifetime1Lifetime1 = 130;
@@ -3955,16 +3955,16 @@ final class GameScreen {
             SoftwareRasterizer.fillRectAlpha(0, 0, 640, 17, 0, 100);
           }
           if (sc.field_a) {
-            qp.field_w.c("cam=(" + this.field_k.field_k + ", " + this.field_k.field_g + ") bk=" + kd.field_b + " k=" + pq.field_f + " mouse=(" + MouseInputHandler.field_g + "," + bo.field_d + ")", 5, 13, 16777215, 0);
+            qp.field_w.c("cam=(" + this.camera.centerX + ", " + this.camera.centerY + ") bk=" + kd.field_b + " k=" + pq.field_f + " mouse=(" + MouseInputHandler.field_g + "," + bo.field_d + ")", 5, 13, 16777215, 0);
           }
           if (vk.field_E) {
             var8.c(Integer.toString(ji.field_b), 10, 40, 2, -1);
             var8.c(Integer.toString(ei.field_b), 10, 40, 2, -1);
-            var8.c(Integer.toString(op.field_m.currentTick), 10, 80, 2, -1);
-            var9_ref2 = (GameEvent) (this.field_hb.c(106));
+            var8.c(Integer.toString(PortalEntryEvent.field_m.currentTick), 10, 80, 2, -1);
+            var9_ref2 = (GameEvent) (this.eventQueue.c(106));
             while (null != var9_ref2) {
-              var9_ref2.a(-240 + this.field_k.field_g, true, -320 + this.field_k.field_k, op.field_m.currentTick);
-              var9_ref2 = (GameEvent) (this.field_hb.b(6));
+              var9_ref2.a(-240 + this.camera.centerY, true, -320 + this.camera.centerX, PortalEntryEvent.field_m.currentTick);
+              var9_ref2 = (GameEvent) (this.eventQueue.b(6));
               if (var20 != 0) {
                 return;
               }
@@ -4021,24 +4021,24 @@ final class GameScreen {
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var4_int = 0;
-          var5 = (GameCharacter) (this.field_Q.c((byte) 92));
+          var5 = (GameCharacter) (this.selection.first((byte) 92));
           if (null != var5) {
             stackIn_8_0 = (~param0 != ~var5.field_Kb) ? 0 : 1;
             var4_int = stackIn_8_0;
           }
           if (!param2) {
-            this.b(-60);
+            this.clearSelection(-60);
           }
           if (param1 != 1782) {
             return;
           }
-          var6 = this.field_u.field_r << 16;
+          var6 = this.navigation.pixelWidth << 16;
           var7 = 0;
-          var8 = this.field_u.field_c << 16;
+          var8 = this.navigation.pixelHeight << 16;
           var9 = 0;
           var10 = 41943040;
           var11 = 31457280;
-          var12 = op.field_m.characters.c(78);
+          var12 = PortalEntryEvent.field_m.characters.c(78);
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var12 == null))) {
             stackOut_16_0 = var12 instanceof GameCharacter;
@@ -4050,26 +4050,26 @@ final class GameScreen {
                 if (~param0 == ~var13.field_Kb) {
                   var5 = var13;
                   var13.r(0);
-                  this.field_Q.a(29664, var13);
-                  if (var7 < var13.field_z &&
-                    -var6 + var13.field_z < var10) {
-                    var7 = var13.field_z;
+                  this.selection.add(29664, var13);
+                  if (var7 < var13.positionX &&
+                    -var6 + var13.positionX < var10) {
+                    var7 = var13.positionX;
                   }
-                  if (var6 > var13.field_z &&
-                    var10 > (var7 - var13.field_z)) {
-                    var6 = var13.field_z;
+                  if (var6 > var13.positionX &&
+                    var10 > (var7 - var13.positionX)) {
+                    var6 = var13.positionX;
                   }
-                  if (var9 < var13.field_E &&
-                    var11 > (var13.field_E - var8)) {
-                    var9 = var13.field_E;
+                  if (var9 < var13.positionY &&
+                    var11 > (var13.positionY - var8)) {
+                    var9 = var13.positionY;
                   }
-                  if (var8 > var13.field_E &&
-                    (var9 - var13.field_E) < var11) {
-                    var8 = var13.field_E;
+                  if (var8 > var13.positionY &&
+                    (var9 - var13.positionY) < var11) {
+                    var8 = var13.positionY;
                   }
                 }
               }
-              var12 = op.field_m.characters.b(6);
+              var12 = PortalEntryEvent.field_m.characters.b(6);
               continue;
             }
             break;
@@ -4081,7 +4081,7 @@ final class GameScreen {
             stackIn_54_0 = var4_int;
           }
           if (stackIn_54_0 != 0) {
-            this.e(var8 + var9 >> 17, -108, var6 + var7 >> 17);
+            this.centerCameraOn(var8 + var9 >> 17, -108, var6 + var7 >> 17);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4093,28 +4093,28 @@ final class GameScreen {
 
     final void c(int param0, int param1) {
         RuntimeException runtimeException = null;
-        id var4 = null;
-        ti var5 = null;
+        SceneObject var4 = null;
+        UnitView var5 = null;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         GameCharacter var3 = null;
         try {
-          var4 = op.field_m.a(param0, (byte) 33);
-          if (!(var4 instanceof ti)) {
+          var4 = PortalEntryEvent.field_m.a(param0, (byte) 33);
+          if (!(var4 instanceof UnitView)) {
             return;
           }
           if (null == var4) {
             return;
           }
           var6 = 83 % ((param1 + 73) / 51);
-          var5 = (ti) (var4);
-          var5.j(0);
+          var5 = (UnitView) (var4);
+          var5.setSlowTicks(0);
           if (var5 instanceof GameCharacter) {
             var3 = (GameCharacter) (var5);
             var3.j((byte) -13);
             var3.d(false);
-            if (var3.field_K == 29) {
-              var3.b(4, -27655);
+            if (var3.state == 29) {
+              var3.setState(4, -27655);
             }
           }
           return;
@@ -4134,7 +4134,7 @@ final class GameScreen {
           if (param0 != 15) {
             GameScreen.a((BitmapFont) null, 30, (String) null, 93, (td) null);
           }
-          if (this.c((byte) 106)) {
+          if (this.isInProgress((byte) 106)) {
             if (this.field_b != null) {
               this.field_b.field_O = false;
               this.field_b = null;
@@ -4169,18 +4169,18 @@ final class GameScreen {
               en.a(-1, 0);
             }
             if (this.field_I.g(param0 ^ 2)) {
-              this.field_x = (gm) (this.a(true, 54, bo.field_d, MouseInputHandler.field_g));
+              this.field_x = (HumanView) (this.findUnitAt(true, 54, bo.field_d, MouseInputHandler.field_g));
               if (this.field_x != null) {
                 this.field_x.field_jb = true;
               }
             }
-            this.field_mb = (GameCharacter) (this.a(false, 124, bo.field_d, MouseInputHandler.field_g));
+            this.field_mb = (GameCharacter) (this.findUnitAt(false, 124, bo.field_d, MouseInputHandler.field_g));
             if (null != this.field_mb) {
               if ((!this.field_I.a(true) ||
-                !this.field_mb.i((byte) 116)) &&
+                !this.field_mb.isOwnedByLocalPlayer((byte) 116)) &&
                 (!this.field_I.a(param0 + 5) ||
-                this.field_mb.i((byte) -59))) {
-                if (this.field_mb.i((byte) -36)) {
+                this.field_mb.isOwnedByLocalPlayer((byte) -59))) {
+                if (this.field_mb.isOwnedByLocalPlayer((byte) -36)) {
                   this.field_mb.field_eb = true;
                   if (var3 != 0) {
                     if (bk.field_g) {
@@ -4238,17 +4238,17 @@ final class GameScreen {
           var3_int = stackIn_5_0;
           if (!df.field_I) {
             boolean decompiledFrameRemainder0 = true;
-            pb.field_i = id.field_x;
+            pb.field_i = SceneObject.field_x;
             if ((iq.field_f) &&
               (decompiledFrameRemainder0 = (var3_int != 0))) {
               pb.field_i = ArchiveIndex.field_m;
               decompiledFrameRemainder0 = (var6 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (id.field_D > 1) {
-                pb.field_i = vl.a(rq.field_q, new String[]{Integer.toString(id.field_D)}, 2);
+              if (SceneObject.field_D > 1) {
+                pb.field_i = vl.a(rq.field_q, new String[]{Integer.toString(SceneObject.field_D)}, 2);
                 if (var6 != 0) {
-                  if (id.field_D != 1) {
+                  if (SceneObject.field_D != 1) {
                     pb.field_i = FullscreenFocusCanvas.field_d;
                     pb.field_i = ma.field_c;
                   } else {
@@ -4256,7 +4256,7 @@ final class GameScreen {
                   }
                 }
               } else {
-                if (id.field_D != 1) {
+                if (SceneObject.field_D != 1) {
                   pb.field_i = FullscreenFocusCanvas.field_d;
                   if (var6 != 0) {
                     pb.field_i = ma.field_c;
@@ -4302,7 +4302,7 @@ final class GameScreen {
               stackIn_79_0 = !(iq.field_f);
               iq.field_f = stackIn_79_0;
               if (iq.field_f) {
-                id.field_D = 0;
+                SceneObject.field_D = 0;
               }
             }
             if (var6 != 0) {
@@ -4354,7 +4354,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(byte param0) {
+    private final void advanceTick(byte param0) {
         int stackIn_22_0 = 0;
         int stackIn_22_1 = 0;
         IntrusiveNode stackIn_33_0 = null;
@@ -4397,25 +4397,25 @@ final class GameScreen {
         int var3Lifetime1;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          op.field_m.currentTick = op.field_m.currentTick + 1;
+          PortalEntryEvent.field_m.currentTick = PortalEntryEvent.field_m.currentTick + 1;
           var2 = null;
-          var3_ref_ae = (GameEvent) (this.field_hb.c(50));
+          var3_ref_ae = (GameEvent) (this.eventQueue.c(50));
           while (var3_ref_ae != null) {
             if (var2 != null &&
               ((GameEvent) (var2)).field_f <= var3_ref_ae.field_f) {
             }
             var2 = var3_ref_ae;
-            var3_ref_ae = (GameEvent) (this.field_hb.b(6));
+            var3_ref_ae = (GameEvent) (this.eventQueue.b(6));
             if (var6 == 0) {
               continue;
             }
             break;
           }
           var3 = 10 % ((-25 - param0) / 61);
-          var4 = (GameEvent) (this.field_hb.c(114));
+          var4 = (GameEvent) (this.eventQueue.c(114));
           scanLoop1: while (true) {
             if (var4 != null) {
-              stackIn_22_0 = op.field_m.currentTick;
+              stackIn_22_0 = PortalEntryEvent.field_m.currentTick;
               stackIn_22_1 = var4.field_f;
               if (var6 != 0) {
                 break scanLoop1;
@@ -4428,26 +4428,26 @@ final class GameScreen {
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var5 = (Exception) (Object) decompiledCaughtException;
-                  MouseInputHandler.a(op.field_m.currentTick + ": error executing message of tick " + var4.field_f + ": " + var5.getMessage(), (Throwable) ((Object) var5), false);
+                  MouseInputHandler.a(PortalEntryEvent.field_m.currentTick + ": error executing message of tick " + var4.field_f + ": " + var5.getMessage(), (Throwable) ((Object) var5), false);
                 }
-                var4 = (GameEvent) (this.field_hb.c(78));
+                var4 = (GameEvent) (this.eventQueue.c(78));
                 continue;
               }
             }
-            stackIn_22_0 = ~op.field_m.phase;
+            stackIn_22_0 = ~PortalEntryEvent.field_m.phase;
             stackIn_22_1 = -1;
             break;
           }
           if (stackIn_22_0 != stackIn_22_1) {
             this.field_G.a(-21991);
-            if (op.field_m.phase != 3) {
+            if (PortalEntryEvent.field_m.phase != 3) {
               this.field_G.a(this.field_Z, false);
             }
-            var3_ref_br = this.field_H.c(61);
+            var3_ref_br = this.sceneObjects.c(61);
             boolean decompiledNaturalLoopExit5 = false;
-            while (!(decompiledNaturalLoopExit5 = (!(var3_ref_br instanceof id)))) {
+            while (!(decompiledNaturalLoopExit5 = (!(var3_ref_br instanceof SceneObject)))) {
               var4_ref = var3_ref_br.previous;
-              ((id) (var3_ref_br)).f((byte) -117);
+              ((SceneObject) (var3_ref_br)).tick((byte) -117);
               stackIn_33_0 = var4_ref;
               if (var6 == 0) {
                 var3_ref_br = stackIn_33_0;
@@ -4472,13 +4472,13 @@ final class GameScreen {
               break;
             }
             if (decompiledNaturalLoopExit4) {
-              stackIn_38_0 = op.field_m.field_A.c(81);
+              stackIn_38_0 = PortalEntryEvent.field_m.field_A.c(81);
             }
             var3_ref_cg = (cg) (stackIn_38_0);
             boolean decompiledNaturalLoopExit3 = false;
             while (!(decompiledNaturalLoopExit3 = (var3_ref_cg == null))) {
               var3_ref_cg.b(false);
-              stackOut_40_0 = (cg) (op.field_m.field_A.b(6));
+              stackOut_40_0 = (cg) (PortalEntryEvent.field_m.field_A.b(6));
               stackIn_43_0 = stackOut_40_0;
               stackIn_41_0 = stackOut_40_0;
               if (var6 == 0) {
@@ -4488,13 +4488,13 @@ final class GameScreen {
               break;
             }
             if (decompiledNaturalLoopExit3) {
-              stackIn_43_0 = op.field_m.field_G.c(42);
+              stackIn_43_0 = PortalEntryEvent.field_m.field_G.c(42);
             }
             var3_ref_pq = (pq) (stackIn_43_0);
             boolean decompiledNaturalLoopExit2 = false;
             while (!(decompiledNaturalLoopExit2 = (var3_ref_pq == null))) {
               var3_ref_pq.a(100);
-              stackOut_45_0 = (pq) (op.field_m.field_G.b(6));
+              stackOut_45_0 = (pq) (PortalEntryEvent.field_m.field_G.b(6));
               stackIn_48_0 = stackOut_45_0;
               stackIn_46_0 = stackOut_45_0;
               if (var6 == 0) {
@@ -4509,7 +4509,7 @@ final class GameScreen {
             var3_ref_wc = (wc) (stackIn_48_0);
             boolean decompiledNaturalLoopExit1 = false;
             while (!(decompiledNaturalLoopExit1 = (null == var3_ref_wc))) {
-              var3_ref_wc.f((byte) -122);
+              var3_ref_wc.tick((byte) -122);
               stackOut_50_0 = (wc) (this.field_T.b(6));
               stackIn_53_0 = stackOut_50_0;
               stackIn_51_0 = stackOut_50_0;
@@ -4545,13 +4545,13 @@ final class GameScreen {
             }
             var3Lifetime1 = stackIn_63_0;
             var4_ref2 = null;
-            var5_ref = (ce) (op.field_m.field_s.c(63));
+            var5_ref = (ce) (PortalEntryEvent.field_m.field_s.c(63));
             while (true) {
               if (null == var5_ref) {
                 stackIn_73_0 = var3Lifetime1;
                 break;
               }
-              var4_ref3 = (ce) (op.field_m.field_s.b(6));
+              var4_ref3 = (ce) (PortalEntryEvent.field_m.field_s.b(6));
               stackOut_65_0 = var5_ref.d(-20232);
               stackIn_73_0 = stackOut_65_0 ? 1 : 0;
               stackIn_66_0 = stackOut_65_0;
@@ -4567,15 +4567,15 @@ final class GameScreen {
             if (stackIn_73_0 == 0) {
               return;
             }
-            var5_refLifetime1 = (ce) (op.field_m.field_s.c(85));
+            var5_refLifetime1 = (ce) (PortalEntryEvent.field_m.field_s.c(85));
             while (null != var5_refLifetime1) {
               var5_refLifetime1.a((byte) -60);
-              var5_refLifetime1 = (ce) (op.field_m.field_s.b(6));
+              var5_refLifetime1 = (ce) (PortalEntryEvent.field_m.field_s.b(6));
               if (var6 != 0) {
                 return;
               }
             }
-            this.field_u.a(48);
+            this.navigation.a(48);
             return;
           }
           return;
@@ -4611,16 +4611,16 @@ final class GameScreen {
             this.field_cb.a(new rj(param1 - 15, param2, hp.a((byte) 126, g.field_a, 6)), false);
           }
           if (param0 != 1) {
-            this.field_o = (h) null;
+            this.portal = (PortalView) null;
           }
           this.field_cb.a(new rj(param1, param2 - 15, hp.a((byte) 9, g.field_a, 6)), false);
           this.field_cb.a(new rj(param1, param2 + 15, hp.a((byte) -86, g.field_a, 6)), false);
-          if (!this.field_u.a(param1, true, true, param2 - 24) &&
-            !this.field_u.a(param1 + 24, true, true, -24 + param2) &&
-            !this.field_u.a(param1 - 24, true, true, -24 + param2) &&
-            this.field_u.a(param1, true, true, param2)) {
+          if (!this.navigation.a(param1, true, true, param2 - 24) &&
+            !this.navigation.a(param1 + 24, true, true, -24 + param2) &&
+            !this.navigation.a(param1 - 24, true, true, -24 + param2) &&
+            this.navigation.a(param1, true, true, param2)) {
             param2 = param2 - (param2 % 24 + 24);
-            this.field_H.a(new rj(param1, param2, hp.a((byte) -100, g.field_a, 6) + 6), false);
+            this.sceneObjects.a(new rj(param1, param2, hp.a((byte) -100, g.field_a, 6) + 6), false);
             this.field_cb.a(new rj(param1, 24 + param2, hp.a((byte) -93, g.field_a, 6)), false);
           }
           return;
@@ -4631,7 +4631,7 @@ final class GameScreen {
         }
     }
 
-    final void a(int[] param0, boolean param1) {
+    final void setTeamScores(int[] param0, boolean param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -4641,7 +4641,7 @@ final class GameScreen {
           if (param1) {
             this.field_A = 96;
           }
-          ArrayOperations.a(param0, 0, op.field_m.teamScores, 0, param0.length);
+          ArrayOperations.a(param0, 0, PortalEntryEvent.field_m.teamScores, 0, param0.length);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4657,23 +4657,23 @@ final class GameScreen {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
+    final void applyUnitState(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException decompiledCaughtException = null;
-        id var9 = null;
+        SceneObject var9 = null;
         RuntimeException var9_ref = null;
-        ti var10 = null;
+        UnitView var10 = null;
         try {
           if (param2) {
             return;
           }
-          var9 = op.field_m.a(param0, (byte) 33);
+          var9 = PortalEntryEvent.field_m.a(param0, (byte) 33);
           if (var9 == null) {
             return;
           }
-          if (!(var9 instanceof ti)) {
+          if (!(var9 instanceof UnitView)) {
             throw new IllegalArgumentException("oid " + param0 + " is not a character");
           }
-          var10 = (ti) (var9);
+          var10 = (UnitView) (var9);
           if (23 != param6 &&
             param6 != 28 &&
             param6 != 15 &&
@@ -4684,19 +4684,19 @@ final class GameScreen {
             29 != param6 &&
             31 != param6 &&
             param6 != 33) {
-            if (var10.field_K == 5 &&
+            if (var10.state == 5 &&
               param6 == 4) {
               return;
             }
-            if (~var10.field_K != ~param6) {
-              var10.b(param6, -27655);
+            if (~var10.state != ~param6) {
+              var10.setState(param6, -27655);
             }
             var10.a(param1, param5, param3, (byte) 109, param4, param7);
             if (!ZombieDawnMulti.field_E) {
               return;
             }
           }
-          var10.b(param6, -27655);
+          var10.setState(param6, -27655);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4712,7 +4712,7 @@ final class GameScreen {
           if (param1 != 0) {
             this.a(118, (byte) -12, -22);
           }
-          op.field_m.field_z[param0] = param2;
+          PortalEntryEvent.field_m.field_z[param0] = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4768,28 +4768,28 @@ final class GameScreen {
           tg.field_e = param1;
           stackIn_8_0 = (((int)(bl.a((byte) 124) / 86400000L) - 11745) % 7 == 5);
           q.field_b = stackIn_8_0;
-          op.field_m = param0;
-          this.field_M = param2;
+          PortalEntryEvent.field_m = param0;
+          this.localTeam = param2;
           stackIn_12_1 = !(kj.field_q < 2);
           this.field_ab = stackIn_12_1;
           this.b((byte) 72);
-          this.field_Q = new lq();
+          this.selection = new DualLinkDeque();
           this.field_W = -50 + param0.currentTick;
-          var4 = fc.field_m;
+          var4 = LevelData.field_m;
           var5_int = 0;
           do {
             if (var5_int >= 8) {
-              this.field_H = param0.a((byte) 114);
+              this.sceneObjects = param0.a((byte) 114);
               this.a(6, param0.field_h);
               break;
             }
             var4[var5_int] = 0;
             var5_int++;
           } while (var9 == 0);
-          if (null == so.field_l) {
+          if (null == UnitStateEvent.field_l) {
             stackIn_26_0 = (FullscreenFocusCanvas.field_k.field_k == 2) ? 1 : 16;
             ke.field_b = stackIn_26_0;
-            so.field_l = new Sprite(1280 / ke.field_b, 960 / ke.field_b);
+            UnitStateEvent.field_l = new Sprite(1280 / ke.field_b, 960 / ke.field_b);
           }
           if (!gf.field_h) {
             var4 = new int[param0.teamCount + 3];
@@ -4803,7 +4803,7 @@ final class GameScreen {
               var4[var8] = param0.field_D[var7][0];
               var6[var8] = 25;
               if (var9 == 0) {
-                if (~var7 == ~fb.field_e.field_M) {
+                if (~var7 == ~fb.field_e.localTeam) {
                   var8++;
                   var5[var8] = param0.field_D[var7][1];
                   var4[var8] = param0.field_D[var7][0];

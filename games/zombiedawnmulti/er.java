@@ -32,9 +32,9 @@ final class er extends IntrusiveNode {
           WidgetContainer.field_E = WidgetContainer.field_E - 40;
           if (WidgetContainer.field_E <= 0) {
             WidgetContainer.field_E = 0;
-            ml.field_Jb = gn.field_I[hg.field_rb];
+            ml.field_Jb = gn.field_I[ArmedHumanView.field_rb];
             ma.field_d = ai.field_b;
-            stackIn_51_0 = !(hg.field_rb >= -1 + SimHuman.field_pb);
+            stackIn_51_0 = !(ArmedHumanView.field_rb >= -1 + SimHuman.field_pb);
             dg.field_J = stackIn_51_0;
             if (0 <= ai.field_b &&
               ml.field_Jb >= 0) {
@@ -46,7 +46,7 @@ final class er extends IntrusiveNode {
             }
           }
           if (ai.field_b == 21 &&
-            10 == hg.field_rb &&
+            10 == ArmedHumanView.field_rb &&
             !fb.field_e.field_I.a(true)) {
             df.a(param0 - 16504, 9);
             w.field_m = w.field_m & -1025;
@@ -57,17 +57,17 @@ final class er extends IntrusiveNode {
           field_k = -56;
           return false;
         }
-        if (hg.field_rb != ml.field_Jb) {
+        if (ArmedHumanView.field_rb != ml.field_Jb) {
           WidgetContainer.field_E = WidgetContainer.field_E - 40;
           if (WidgetContainer.field_E <= 0) {
             WidgetContainer.field_E = 0;
-            ml.field_Jb = gn.field_I[hg.field_rb];
+            ml.field_Jb = gn.field_I[ArmedHumanView.field_rb];
             ma.field_d = ai.field_b;
-            stackIn_7_0 = !(hg.field_rb >= -1 + SimHuman.field_pb);
+            stackIn_7_0 = !(ArmedHumanView.field_rb >= -1 + SimHuman.field_pb);
             dg.field_J = stackIn_7_0;
             if (0 > ai.field_b) {
               if (ai.field_b == 21 &&
-                10 == hg.field_rb &&
+                10 == ArmedHumanView.field_rb &&
                 !fb.field_e.field_I.a(true)) {
                 df.a(param0 - 16504, 9);
                 w.field_m = w.field_m & -1025;
@@ -90,7 +90,7 @@ final class er extends IntrusiveNode {
           if (!io.field_g) {
             if (io.field_g) {
               if (ai.field_b == 21 &&
-                10 == hg.field_rb &&
+                10 == ArmedHumanView.field_rb &&
                 !fb.field_e.field_I.a(true)) {
                 df.a(param0 - 16504, 9);
                 w.field_m = w.field_m & -1025;
@@ -98,7 +98,7 @@ final class er extends IntrusiveNode {
             } else {
               if (WidgetContainer.field_E <= 0) {
                 if (ai.field_b == 21 &&
-                  10 == hg.field_rb &&
+                  10 == ArmedHumanView.field_rb &&
                   !fb.field_e.field_I.a(true)) {
                   df.a(param0 - 16504, 9);
                   w.field_m = w.field_m & -1025;
@@ -109,7 +109,7 @@ final class er extends IntrusiveNode {
                   WidgetContainer.field_E = 0;
                 }
                 if (ai.field_b == 21 &&
-                  10 == hg.field_rb &&
+                  10 == ArmedHumanView.field_rb &&
                   !fb.field_e.field_I.a(true)) {
                   df.a(param0 - 16504, 9);
                   w.field_m = w.field_m & -1025;
@@ -128,7 +128,7 @@ final class er extends IntrusiveNode {
               WidgetContainer.field_E = 400;
             }
             if (ai.field_b == 21 &&
-              10 == hg.field_rb &&
+              10 == ArmedHumanView.field_rb &&
               !fb.field_e.field_I.a(true)) {
               df.a(param0 - 16504, 9);
               w.field_m = w.field_m & -1025;
@@ -148,7 +148,7 @@ final class er extends IntrusiveNode {
           }
         }
         if (ai.field_b == 21 &&
-          10 == hg.field_rb &&
+          10 == ArmedHumanView.field_rb &&
           !fb.field_e.field_I.a(true)) {
           df.a(param0 - 16504, 9);
           w.field_m = w.field_m & -1025;

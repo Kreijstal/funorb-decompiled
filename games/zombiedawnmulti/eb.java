@@ -83,7 +83,7 @@ final class eb {
         }
         if (param1 &&
           0 <= param0) {
-          return gm.a(param0, param1, 10, -1);
+          return HumanView.a(param0, param1, 10, -1);
         }
         return Integer.toString(param0);
     }
@@ -175,7 +175,7 @@ final class eb {
           } else if (ho.field_q != 2) {
             if (ho.field_q == 3) {
               if (pl.field_J.field_d) {
-                var3_int = mb.a(uq.field_f, param0, hg.field_sb, cq.field_e, ib.field_b);
+                var3_int = mb.a(uq.field_f, param0, ArmedHumanView.field_sb, cq.field_e, ib.field_b);
               } else {
                 var3_int = mb.a(uq.field_f, false, aa.field_j, cq.field_e, ib.field_b);
               }
@@ -318,7 +318,7 @@ final class eb {
               }
               stackIn_72_0[stackIn_72_1] = stackIn_75_2;
             }
-            so.field_s = bl.a((byte) 41);
+            UnitStateEvent.field_s = bl.a((byte) 41);
           }
           NetworkGameClient.field_B.field_c = v.field_b.length;
           var3_intLifetime1 = 0;
@@ -350,19 +350,19 @@ final class eb {
               }
             }
           }
-          qk.field_j = NetworkGameClient.field_B.field_c * (al.field_bb + wk.field_G << 1);
+          Waypoint.field_j = NetworkGameClient.field_B.field_c * (al.field_bb + wk.field_G << 1);
           ZombieDawnMulti.field_H = am.field_c - (var3_intLifetime1 >> 1);
           fl.field_a = -(var3_intLifetime1 >> 1) + (am.field_c + var3_intLifetime1);
           for (var4Lifetime2 = 0; hq.field_m.length > var4Lifetime2; var4Lifetime2++) {
-            stackIn_111_0 = qk.field_j;
+            stackIn_111_0 = Waypoint.field_j;
             if (wd.field_Q[var4Lifetime2] >= 0) {
               stackIn_112_1 = me.field_h;
             } else {
               stackIn_112_1 = WidgetContainer.field_C;
             }
-            qk.field_j = stackIn_111_0 + stackIn_112_1;
+            Waypoint.field_j = stackIn_111_0 + stackIn_112_1;
           }
-          ce.field_k = bp.field_r - (qk.field_j >> 1);
+          ce.field_k = bp.field_r - (Waypoint.field_j >> 1);
           uf.field_b = new int[hq.field_m.length][];
           if (param0) {
             field_M = -108;

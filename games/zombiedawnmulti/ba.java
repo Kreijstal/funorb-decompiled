@@ -270,7 +270,7 @@ final class ba extends PcmStream {
           if (lp.field_j == kj.field_j) {
             return false;
           }
-          sj.field_p = td.field_a[lp.field_j];
+          InfectionEvent.field_p = td.field_a[lp.field_j];
           pn.field_d = ta.field_pb[lp.field_j];
           if (param0 != -1) {
             field_m = -21;

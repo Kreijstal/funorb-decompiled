@@ -116,15 +116,15 @@ final class oa {
             var6 = (int[]) null;
             oa.a(114, (int[]) null);
           }
-          for (var2 = 0; op.field_m.field_z.length > var2; var2++) {
-            var3 = op.field_m.field_z[var2];
+          for (var2 = 0; PortalEntryEvent.field_m.field_z.length > var2; var2++) {
+            var3 = PortalEntryEvent.field_m.field_z[var2];
             if (var3 > 0) {
-              var4 = -var3 + op.field_m.computeEffectDuration((byte) 32, var2, 750);
+              var4 = -var3 + PortalEntryEvent.field_m.computeEffectDuration((byte) 32, var2, 750);
               if (var4 > 50) {
                 var4 = var3;
               }
               stackIn_15_0 = var1_int;
-              if (fb.field_e.field_M != var2) {
+              if (fb.field_e.localTeam != var2) {
                 stackIn_16_1 = var4 / 20;
               } else {
                 stackIn_16_1 = var4 / 40;

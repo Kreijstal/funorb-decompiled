@@ -124,7 +124,7 @@ final class ua extends rg {
             ua.a((ResourceArchive) null, (ResourceArchive) null, (byte) 0);
           }
           if (4 == param1) {
-            stackIn_14_0 = vl.a(fh.field_f, new String[]{param2}, 2);
+            stackIn_14_0 = vl.a(NavigationGrid.field_f, new String[]{param2}, 2);
             return stackIn_14_0;
           }
           if (param1 == 5) {
@@ -154,7 +154,7 @@ final class ua extends rg {
           if (13 != param1) {
             return null;
           }
-          stackIn_38_0 = vl.a(qk.field_i, new String[]{param2}, param0 + 63);
+          stackIn_38_0 = vl.a(Waypoint.field_i, new String[]{param2}, param0 + 63);
           return stackIn_38_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -211,8 +211,8 @@ final class ua extends rg {
     }
 
     final static void i(int param0) {
-        if (h.field_L != null) {
-          h.field_L.m(-7435);
+        if (PortalView.field_L != null) {
+          PortalView.field_L.m(-7435);
         }
         qe.field_e = new cp();
         if (param0 == -2) {

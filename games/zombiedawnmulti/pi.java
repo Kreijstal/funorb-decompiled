@@ -53,8 +53,8 @@ final class pi {
         try {
           mj.field_Fb[0] = TertiaryLinkDeque.field_c.nextInt();
           mj.field_Fb[1] = TertiaryLinkDeque.field_c.nextInt();
-          mj.field_Fb[2] = (int)(nm.field_c >> 32);
-          mj.field_Fb[3] = (int)nm.field_c;
+          mj.field_Fb[2] = (int)(Camera.field_c >> 32);
+          mj.field_Fb[3] = (int)Camera.field_c;
           pm.field_R.position = 0;
           pm.field_R.writeInt(33, mj.field_Fb[0]);
           pm.field_R.writeInt(param0 ^ 84, mj.field_Fb[1]);

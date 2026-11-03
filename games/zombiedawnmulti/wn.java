@@ -30,32 +30,32 @@ final class wn extends pp {
         if (param0 <= -122) {
           if (param1 < 4096) {
             if (param1 >= 2048) {
-              stackIn_19_0 = -h.field_K[param1 - 2048];
+              stackIn_19_0 = -PortalView.field_K[param1 - 2048];
             } else {
-              stackIn_19_0 = h.field_K[2048 - param1];
+              stackIn_19_0 = PortalView.field_K[2048 - param1];
             }
             return stackIn_19_0;
           }
           if (param1 < 6144) {
-            stackIn_15_0 = -h.field_K[6144 - param1];
+            stackIn_15_0 = -PortalView.field_K[6144 - param1];
           } else {
-            stackIn_15_0 = h.field_K[-6144 + param1];
+            stackIn_15_0 = PortalView.field_K[-6144 + param1];
           }
           return stackIn_15_0;
         }
         field_s = (String) null;
         if (param1 < 4096) {
           if (param1 >= 2048) {
-            stackIn_9_0 = -h.field_K[param1 - 2048];
+            stackIn_9_0 = -PortalView.field_K[param1 - 2048];
           } else {
-            stackIn_9_0 = h.field_K[2048 - param1];
+            stackIn_9_0 = PortalView.field_K[2048 - param1];
           }
           return stackIn_9_0;
         }
         if (param1 < 6144) {
-          stackIn_5_0 = -h.field_K[6144 - param1];
+          stackIn_5_0 = -PortalView.field_K[6144 - param1];
         } else {
-          stackIn_5_0 = h.field_K[-6144 + param1];
+          stackIn_5_0 = PortalView.field_K[-6144 + param1];
         }
         return stackIn_5_0;
     }

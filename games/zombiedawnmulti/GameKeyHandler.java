@@ -62,7 +62,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             0 <= var2_int) {
             SecondaryNodeDequeIterator.field_f[qf.field_f] = var2_int;
             qf.field_f = 127 & 1 + qf.field_f;
-            if (fh.field_j == qf.field_f) {
+            if (NavigationGrid.field_j == qf.field_f) {
               qf.field_f = -1;
             }
           }
@@ -123,7 +123,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int >= 0) {
               SecondaryNodeDequeIterator.field_f[qf.field_f] = ~var2_int;
               qf.field_f = 1 + qf.field_f & 127;
-              if (fh.field_j == qf.field_f) {
+              if (NavigationGrid.field_j == qf.field_f) {
                 qf.field_f = -1;
               }
             }

@@ -54,7 +54,7 @@ final class gk {
           ic.field_d = param3;
           var11 = param2;
           if (param4) {
-            stackIn_4_0 = wf.field_n;
+            stackIn_4_0 = PowerupEvent.field_n;
           } else {
             stackIn_4_0 = p.field_b;
           }

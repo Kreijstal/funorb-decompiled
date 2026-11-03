@@ -258,7 +258,7 @@ final class mq extends nc {
         if (param1 <= 10) {
           field_l = (cj) null;
         }
-        int[] var4 = this.field_d != 6 ? PacketBuffer.field_n : fc.field_m;
+        int[] var4 = this.field_d != 6 ? PacketBuffer.field_n : LevelData.field_m;
         int[] var3 = var4;
         return PhaseChangeEvent.a(param0, 127, var4);
     }

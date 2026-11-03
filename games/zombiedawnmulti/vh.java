@@ -168,7 +168,7 @@ final class vh extends cj {
         if (param0 <= 10) {
           return -120;
         }
-        return lq.field_d;
+        return DualLinkDeque.field_d;
     }
 
     static {

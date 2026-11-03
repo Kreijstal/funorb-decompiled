@@ -182,14 +182,14 @@ final class ki {
             }
             var4 = 280577;
             var5 = 2306851;
-            var8 = fh.field_g;
+            var8 = NavigationGrid.field_g;
             var9 = FullscreenFocusCanvas.field_k.field_t[param0];
             if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
               var8 = vo.field_n;
               var9 = cr.a(param0, -117);
             } else {
               if (var9 != 0) {
-                var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
+                var8 = vl.a(NavigationGrid.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
               }
             }
             var9 = var9 * 131 / cr.a(param0, -110);
@@ -218,7 +218,7 @@ final class ki {
           var6Lifetime3 = 8783880;
           var5Lifetime3 = 5053184;
           var4Lifetime3 = 8135424;
-          var8Lifetime3 = fh.field_g;
+          var8Lifetime3 = NavigationGrid.field_g;
           var9 = FullscreenFocusCanvas.field_k.field_t[param0];
           if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
             var8Lifetime3 = vo.field_n;
@@ -247,7 +247,7 @@ final class ki {
             return;
           }
           if (var9 != 0) {
-            var8Lifetime3 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
+            var8Lifetime3 = vl.a(NavigationGrid.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
             var10Lifetime5 = var8Lifetime3;
             var8Lifetime3 = var10Lifetime5;
           }
@@ -282,14 +282,14 @@ final class ki {
             }
             var4Lifetime1 = 280577;
             var5Lifetime1 = 2306851;
-            var8Lifetime1 = fh.field_g;
+            var8Lifetime1 = NavigationGrid.field_g;
             var9 = FullscreenFocusCanvas.field_k.field_t[param0];
             if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
               var8Lifetime1 = vo.field_n;
               var9 = cr.a(param0, -117);
             } else {
               if (var9 != 0) {
-                var8Lifetime1 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
+                var8Lifetime1 = vl.a(NavigationGrid.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
               }
             }
             var9 = var9 * 131 / cr.a(param0, -110);
@@ -318,7 +318,7 @@ final class ki {
           var6Lifetime1Lifetime1 = 8783880;
           var5Lifetime1Lifetime1 = 5053184;
           var4Lifetime1Lifetime1 = 8135424;
-          var8Lifetime1Lifetime1 = fh.field_g;
+          var8Lifetime1Lifetime1 = NavigationGrid.field_g;
           var9 = FullscreenFocusCanvas.field_k.field_t[param0];
           if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
             var8Lifetime1Lifetime1 = vo.field_n;
@@ -348,7 +348,7 @@ final class ki {
             return;
           }
           if (var9 != 0) {
-            var8Lifetime1Lifetime1 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
+            var8Lifetime1Lifetime1 = vl.a(NavigationGrid.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
           }
           var9 = var9 * 131 / cr.a(param0, -110);
           SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1);
@@ -376,7 +376,7 @@ final class ki {
         var4Lifetime2 = 6575425;
         var5Lifetime2 = 3420451;
         var6Lifetime2 = 5524287;
-        var8Lifetime2 = fh.field_g;
+        var8Lifetime2 = NavigationGrid.field_g;
         var9 = FullscreenFocusCanvas.field_k.field_t[param0];
         if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
           var8Lifetime2 = vo.field_n;
@@ -402,7 +402,7 @@ final class ki {
           return;
         }
         if (var9 != 0) {
-          var8Lifetime2 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
+          var8Lifetime2 = vl.a(NavigationGrid.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
         }
         var9 = var9 * 131 / cr.a(param0, -110);
         SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime2, var5Lifetime2);

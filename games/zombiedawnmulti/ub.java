@@ -29,11 +29,11 @@ final class ub extends ie {
           }
           var1_int = 125 % ((-26 - param0) / 58);
           var2 = 0;
-          for (var3 = 0; var3 < op.field_m.field_a.length; var3++) {
-            var4 = op.field_m.field_a[var3];
+          for (var3 = 0; var3 < PortalEntryEvent.field_m.field_a.length; var3++) {
+            var4 = PortalEntryEvent.field_m.field_a[var3];
             if (var4 > 0) {
               stackIn_12_0 = var2;
-              if (fb.field_e.field_M != var3) {
+              if (fb.field_e.localTeam != var3) {
                 stackIn_13_1 = var4 / 5;
               } else {
                 stackIn_13_1 = var4 / 25;
@@ -179,7 +179,7 @@ final class ub extends ie {
           ub.o(-45);
         }
         if (ee.field_b) {
-          fh.b(31706);
+          NavigationGrid.b(31706);
         }
     }
 

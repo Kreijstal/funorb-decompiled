@@ -408,10 +408,10 @@ final class tg implements Runnable {
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param2 == -7) {
           if (null != np.field_m) {
-            np.field_m.b(true, 1);
+            np.field_m.draw(true, 1);
           }
           if (af.field_e != null) {
-            af.field_e.b(true, 1);
+            af.field_e.draw(true, 1);
           }
         } else {
           if (param2 == -2) {
@@ -422,32 +422,32 @@ final class tg implements Runnable {
               var4 = var18.field_zb / 2 + var18.field_w;
               var5 = -6 + (var18.field_qb + var18.field_z - 48);
               SoftwareRasterizer.setClip(3 + var18.field_w, var18.field_qb, -6 + var18.field_w + var18.field_zb, var18.field_qb + var18.field_z - 3);
-              SecondaryNodeDeque.field_e.field_g = 0;
-              SecondaryNodeDeque.field_e.field_k = 420 - var4 - var18.field_zb / 4;
-              kk.field_w.a(-10136, SecondaryNodeDeque.field_e);
+              SecondaryNodeDeque.field_e.centerY = 0;
+              SecondaryNodeDeque.field_e.centerX = 420 - var4 - var18.field_zb / 4;
+              kk.field_w.draw(-10136, SecondaryNodeDeque.field_e);
               kk.field_w.field_P = nk.a(1052688, 455739624, FullscreenFocusCanvas.field_k.field_p[1]);
               var6 = 0;
               var7 = 30;
               var8 = 0;
               var9 = 7;
-              var10 = wf.field_m / var7 % var9 + var8;
+              var10 = PowerupEvent.field_m / var7 % var9 + var8;
               var19 = nk.a(no.field_Hb[var6][var10], FullscreenFocusCanvas.field_k.field_c[0], 255, FullscreenFocusCanvas.field_k.field_p[0]);
               og.h((byte) 126);
               var19.g(var4 - var18.field_zb / 4, var5);
               var7Lifetime2 = 45;
               var6Lifetime2 = 1;
-              var10Lifetime1 = (wf.field_m + 3) / var7Lifetime2 % var9 + var8;
+              var10Lifetime1 = (PowerupEvent.field_m + 3) / var7Lifetime2 % var9 + var8;
               var20 = nk.a(no.field_Hb[var6Lifetime2][var10Lifetime1], FullscreenFocusCanvas.field_k.field_c[1], 255, FullscreenFocusCanvas.field_k.field_p[1]);
               og.h((byte) 119);
               var20.b(var18.field_zb / 4 + var4, var5);
               SoftwareRasterizer.setClip(3 + var18.field_w, var18.field_qb, var18.field_zb + (var18.field_w - 6), -3 + (var18.field_qb + var18.field_z));
               var12 = 1;
-              var6Lifetime3 = (int)(1.1 * (double)wf.field_m) / 64 % 10;
+              var6Lifetime3 = (int)(1.1 * (double)PowerupEvent.field_m) / 64 % 10;
               var8Lifetime2 = gg.field_l[var12];
               var7Lifetime3 = gg.field_b[var12];
               var9Lifetime1 = gg.field_j[var12];
-              var13 = (int)((double)wf.field_m * 1.1) % 64;
-              var10Lifetime2 = (8 + wf.field_m) / var7Lifetime3 % var9Lifetime1 + var8Lifetime2;
+              var13 = (int)((double)PowerupEvent.field_m * 1.1) % 64;
+              var10Lifetime2 = (8 + PowerupEvent.field_m) / var7Lifetime3 % var9Lifetime1 + var8Lifetime2;
               var14 = var4 + 8;
               var15 = 50 + var5 + (3 - var13);
               stackIn_7_0 = wq.field_c[var6Lifetime3][var10Lifetime2];
@@ -460,9 +460,9 @@ final class tg implements Runnable {
               }
               ((Sprite) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_7_2, stackIn_8_3);
               var14Lifetime1 = -8 + var4;
-              var10Lifetime3 = var8Lifetime2 + (3 + wf.field_m) / var7Lifetime3 % var9Lifetime1;
-              var6Lifetime4 = (wf.field_m + 13) / 64 % 10;
-              var13Lifetime1 = (13 + wf.field_m) % 64;
+              var10Lifetime3 = var8Lifetime2 + (3 + PowerupEvent.field_m) / var7Lifetime3 % var9Lifetime1;
+              var6Lifetime4 = (PowerupEvent.field_m + 13) / 64 % 10;
+              var13Lifetime1 = (13 + PowerupEvent.field_m) % 64;
               var15Lifetime1 = 3 + (50 + var5) - var13Lifetime1;
               stackIn_10_0 = wq.field_c[var6Lifetime4][var10Lifetime3];
               stackIn_10_1 = var14Lifetime1;
@@ -473,7 +473,7 @@ final class tg implements Runnable {
                 stackIn_11_3 = -var13Lifetime1 + 64 << 4;
               }
               ((Sprite) (Object) stackIn_10_0).c(stackIn_10_1, stackIn_10_2, stackIn_11_3);
-              if (400 > wf.field_m % 1000) {
+              if (400 > PowerupEvent.field_m % 1000) {
                 qp.field_w.a(SpriteState.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
                 SoftwareRasterizer.resetClip();
                 tm.a(vk.i((byte) -39), false);
@@ -482,7 +482,7 @@ final class tg implements Runnable {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if ((500 + wf.field_m) % 1000 < 400) {
+                if ((500 + PowerupEvent.field_m) % 1000 < 400) {
                   qp.field_w.a(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
                   SoftwareRasterizer.resetClip();
                   tm.a(vk.i((byte) -39), false);
@@ -569,7 +569,7 @@ final class tg implements Runnable {
         RuntimeException var2_ref2 = null;
         String[] var3 = null;
         LevelActorSpawner var5 = null;
-        fc var6 = null;
+        LevelData var6 = null;
         ro var7 = null;
         PlayerLoadout[] var8 = null;
         int var9_int = 0;
@@ -612,7 +612,7 @@ final class tg implements Runnable {
             var8[0] = new PlayerLoadout();
             for (var9_int = 0; var9_int < 3; var9_int++) {
               boolean decompiledFrameRemainder0 = true;
-              if (!pp.field_n && (!h.i(51603) ||
+              if (!pp.field_n && (!PortalView.i(51603) ||
                 !jk.a((byte) -128, FullscreenFocusCanvas.field_k.field_s[var9_int]))) {
                 var8[0].field_c[var9_int] = FullscreenFocusCanvas.field_k.field_s[var9_int];
                 var7.teamUpgradeMask[0] = cp.a(var7.teamUpgradeMask[0], 1L << FullscreenFocusCanvas.field_k.field_s[var9_int]);
@@ -644,7 +644,7 @@ final class tg implements Runnable {
               var8[var9_intLifetime2] = new PlayerLoadout();
             }
             var7.field_C = 2147483647;
-            var5.a(var7, (byte) 53);
+            var5.spawnEntities(var7, (byte) 53);
             UiWidget.field_s = new GameSimulation(var7, var8, true, false);
             var9 = new GameWorld(var3, var6);
             var7.currentTick = 1000;

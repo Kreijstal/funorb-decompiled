@@ -26,7 +26,7 @@ final class gi extends IntrusiveNode {
         }
     }
 
-    final static fc a(byte[] param0, int param1) {
+    final static LevelData a(byte[] param0, int param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -41,7 +41,7 @@ final class gi extends IntrusiveNode {
         int incrementValue$7 = 0;
         int var15 = 0;
         int incrementValue$8 = 0;
-        fc stackIn_16_0 = null;
+        LevelData stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -129,7 +129,7 @@ final class gi extends IntrusiveNode {
             var2_int++;
             var14[var15] = ql.a(true, incrementValue$8, param0);
           }
-          stackIn_16_0 = new fc(var26, var22, var3, var4, var5, var23, var24, var8Lifetime1, var9);
+          stackIn_16_0 = new LevelData(var26, var22, var3, var4, var5, var23, var24, var8Lifetime1, var9);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

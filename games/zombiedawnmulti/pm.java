@@ -491,7 +491,7 @@ class pm extends gn {
 
     final static void a(boolean param0, boolean param1) {
         if (null != ui.field_j) {
-          qk.a(ui.field_j, -123);
+          Waypoint.a(ui.field_j, -123);
         }
         if (param0) {
           ResourceArchive var3 = (ResourceArchive) null;

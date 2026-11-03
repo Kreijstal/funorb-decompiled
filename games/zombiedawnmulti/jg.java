@@ -51,10 +51,10 @@ final class jg {
         }
     }
 
-    final static fc a(int param0, byte[] param1) {
+    final static LevelData a(int param0, byte[] param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        fc stackIn_9_0 = null;
+        LevelData stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

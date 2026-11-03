@@ -60,7 +60,7 @@ final class tk extends nc {
               stackIn_18_4 = param0;
             }
             SoftwareRasterizer.fillRect(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_18_4);
-            if (h.i(51603) &&
+            if (PortalView.i(51603) &&
               jk.a((byte) -70, var6)) {
               el.field_E.a(var5 + 419, 345);
             }
@@ -222,7 +222,7 @@ final class tk extends nc {
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         stackIn_3_0 = (kj.field_q < 2) ? 0 : 1;
         var2 = stackIn_3_0;
-        var7 = sj.field_p;
+        var7 = InfectionEvent.field_p;
         if (var7 == 1) {
           if (var2 != 0) {
             var4 = 8;
@@ -480,7 +480,7 @@ final class tk extends nc {
                 el.field_E.a(84 + var7, 340);
               }
             }
-            if (h.i(51603) && (jk.a((byte) -51, var8) ||
+            if (PortalView.i(51603) && (jk.a((byte) -51, var8) ||
               jk.a((byte) -103, var9))) {
               el.field_E.a(84 + var7, 340);
             }
@@ -533,7 +533,7 @@ final class tk extends nc {
         if (param1 != -562798775) {
           this.field_p = 119;
         }
-        int var7 = ((wf.field_m << 1) / 3 + 10 * param2) % 29;
+        int var7 = ((PowerupEvent.field_m << 1) / 3 + 10 * param2) % 29;
         int var8 = -var7 + 29;
         int var9 = q.$cfr$intArgs$a$f0c91481eb80(-126, (var7 << 10) / 29) >> 9;
         int var10 = (var7 * param0 + param5 * var8 << 4) / 29;
@@ -590,7 +590,7 @@ final class tk extends nc {
           } else {
             var7 = var6.field_s[-5 + q.field_d];
           }
-          if (h.i(51603) &&
+          if (PortalView.i(51603) &&
             jk.a((byte) -51, var7)) {
             var7 = -3;
           }
@@ -760,7 +760,7 @@ final class tk extends nc {
                   lh.field_l == 255 &&
                   !ud.field_S) {
                   cp.field_O = var13;
-                  on.field_bb[var13].field_b.e(on.field_bb[var13].field_q, on.field_bb[var13].field_g, (q.$cfr$intArgs$a$f0c91481eb80(-60, wf.field_m << 4) >> 9) + 128);
+                  on.field_bb[var13].field_b.e(on.field_bb[var13].field_q, on.field_bb[var13].field_g, (q.$cfr$intArgs$a$f0c91481eb80(-60, PowerupEvent.field_m << 4) >> 9) + 128);
                 }
                 var14Lifetime1 = on.field_bb[var13].field_c;
                 if (FullscreenFocusCanvas.field_k.g(var14Lifetime1, 4)) {
@@ -913,9 +913,9 @@ final class tk extends nc {
         }
         if (TertiaryLinkDeque.field_b &&
           pq.field_f != 0) {
-          stackIn_56_0 = !(wf.field_m - sq.field_S >= 25);
+          stackIn_56_0 = !(PowerupEvent.field_m - sq.field_S >= 25);
           kk.field_u = stackIn_56_0;
-          sq.field_S = wf.field_m;
+          sq.field_S = PowerupEvent.field_m;
         } else {
           kk.field_u = false;
         }
@@ -941,7 +941,7 @@ final class tk extends nc {
                     break;
                   }
                   var10.field_m[var6] = cp.field_O;
-                  nm.b(-128, 87);
+                  Camera.b(-128, 87);
                 }
                 break regionExit1;
               }
@@ -963,7 +963,7 @@ final class tk extends nc {
                       continue;
                     }
                     var10.field_s[var5Lifetime2Lifetime1] = cp.field_O;
-                    nm.b(-127, 87);
+                    Camera.b(-127, 87);
                     break;
                   }
                 }
@@ -1009,7 +1009,7 @@ final class tk extends nc {
           if (255 != cp.field_O &&
             var10.c(127, cp.field_O)) {
             lh.field_l = cp.field_O;
-            nm.b(-126, 90);
+            Camera.b(-126, 90);
           }
           if (kn.field_b == -1) {
             if (lh.field_l == 255 &&
@@ -1017,22 +1017,22 @@ final class tk extends nc {
               if (q.field_d < 5) {
                 if (bo.field_d >= 380) {
                   lh.field_l = var10.field_g[q.field_d];
-                  nm.b(param0 ^ -128, 90);
+                  Camera.b(param0 ^ -128, 90);
                 } else {
                   lh.field_l = var10.field_m[q.field_d];
-                  nm.b(-128, 90);
+                  Camera.b(-128, 90);
                   var10.field_m[q.field_d] = 255;
                 }
                 var10.field_g[q.field_d] = 255;
               } else {
                 lh.field_l = var10.field_s[q.field_d - 5];
-                nm.b(-128, 90);
+                Camera.b(-128, 90);
                 var10.field_s[q.field_d - 5] = 255;
               }
             }
           } else {
             ao.field_d = kn.field_b;
-            nm.b(-126, 91);
+            Camera.b(-126, 91);
           }
         }
         if (pq.field_f != 1) {
@@ -1051,7 +1051,7 @@ final class tk extends nc {
                     var9++;
                   }
                   var10.field_s[-5 + q.field_d] = lh.field_l;
-                  nm.b(param0 - 127, 87);
+                  Camera.b(param0 - 127, 87);
                 }
               } else {
                 if (q.field_d < var3Lifetime1) {
@@ -1060,7 +1060,7 @@ final class tk extends nc {
                     var10.field_m[q.field_d] = lh.field_l;
                     if (!(pb.a(lh.field_l, -20, var10.field_g[q.field_d]))) {
                       var10.field_g[q.field_d] = 255;
-                      nm.b(-126, 87);
+                      Camera.b(-126, 87);
                     }
                     break regionExit2;
                   }
@@ -1068,7 +1068,7 @@ final class tk extends nc {
                     lh.field_l <= 38 &&
                     pb.a(var10.field_m[q.field_d], -20, lh.field_l)) {
                     var10.field_g[q.field_d] = lh.field_l;
-                    nm.b(-128, 87);
+                    Camera.b(-128, 87);
                   }
                 }
               }
@@ -1111,7 +1111,7 @@ final class tk extends nc {
           if (ud.field_S) {
             SoftwareRasterizer.fillCircle(610, 20, 9, 65280);
           } else {
-            SoftwareRasterizer.fillCircleAlpha(610, 20, 9, 16711680, (q.$cfr$intArgs$a$f0c91481eb80(-104, wf.field_m << 5) >> 9) + 128);
+            SoftwareRasterizer.fillCircleAlpha(610, 20, 9, 16711680, (q.$cfr$intArgs$a$f0c91481eb80(-104, PowerupEvent.field_m << 5) >> 9) + 128);
           }
         }
         if (param0 >= -85) {
@@ -1138,7 +1138,7 @@ final class tk extends nc {
             ip.field_e.a(var2Lifetime1 + 50, var3Lifetime1 + 3 - ip.field_e.field_b);
             oi.field_k.a(var2Lifetime1 + 50, var5Lifetime1 + var3Lifetime1 - 3 + (var6 << 1));
             lh.field_m.a(var2Lifetime1 - (-var4Lifetime1 - (var6 << 1) + 3), var3Lifetime1 + (var5Lifetime1 >> 1));
-            uo.field_n.a(var2Lifetime1 + (-var6 - 1), (var5Lifetime1 >> 1) + var3Lifetime1);
+            AttackEvent.field_n.a(var2Lifetime1 + (-var6 - 1), (var5Lifetime1 >> 1) + var3Lifetime1);
           }
           if (this.field_p > 100) {
             var2Lifetime2 = 50;

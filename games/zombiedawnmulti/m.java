@@ -143,7 +143,7 @@ final class m extends tb {
             var4 = (PlatformTaskDispatcher) null;
             m.a(-33, (PlatformTaskDispatcher) null, 73, 31, -76, 61);
           }
-          stackIn_3_0 = hg.a(40, '*', param0.field_j.length());
+          stackIn_3_0 = ArmedHumanView.repeatChar(40, '*', param0.field_j.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

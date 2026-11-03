@@ -85,7 +85,7 @@ final class ee {
         }
     }
 
-    final static fc a(byte[] param0, boolean param1) {
+    final static LevelData a(byte[] param0, boolean param1) {
         int var6 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -93,7 +93,7 @@ final class ee {
         int var4 = 0;
         byte[] var5 = null;
         int var7 = 0;
-        fc stackIn_5_0 = null;
+        LevelData stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

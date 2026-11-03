@@ -60,7 +60,7 @@ final class qe {
           1550 >= this.field_l &&
           49 == this.field_l % 50) {
           this.field_n = 2.0f;
-          nm.b(-127, 47);
+          Camera.b(-127, 47);
         }
         if (this.field_j) {
           if (1.0f < this.field_n) {
@@ -201,7 +201,7 @@ final class qe {
         rb.field_e[0].g(5, 415);
         g.a(jj.field_F[2], 70, 400);
         rb.field_e[2].g(70, 400);
-        GameWorld var5 = op.field_m;
+        GameWorld var5 = PortalEntryEvent.field_m;
         if (2 <= kj.field_q) {
           qp.field_w.c("L" + var5.field_r, 12, 468, 16777215, 1);
         }
@@ -237,13 +237,13 @@ final class qe {
         String var21;
         String var22;
         int[] var25;
-        var18 = op.field_m;
+        var18 = PortalEntryEvent.field_m;
         var19 = var18;
         stackIn_3_0 = (0 == (1 << param1 & var19.field_F)) ? 0 : 1;
         var4 = stackIn_3_0;
         var5 = var18.teamScores[param1];
-        var25 = op.field_m.field_D[param1];
-        stackIn_6_0 = (param1 != fb.field_e.field_M) ? 0 : 1;
+        var25 = PortalEntryEvent.field_m.field_D[param1];
+        stackIn_6_0 = (param1 != fb.field_e.localTeam) ? 0 : 1;
         var7 = stackIn_6_0;
         var8 = var25[0];
         var9 = qp.field_w;
@@ -293,7 +293,7 @@ final class qe {
         jj.field_F[3].a();
         SoftwareRasterizer.clear();
         rb.field_e[3].f(0, 0, 16777215);
-        jm.d((byte) -18);
+        FightEvent.d((byte) -18);
         rb.field_e[3].f(0, 0, 0);
         g.b();
     }
@@ -309,7 +309,7 @@ final class qe {
         jj.field_F[4].a();
         SoftwareRasterizer.clear();
         rb.field_e[4].f(0, 0, 16777215);
-        jm.d((byte) -18);
+        FightEvent.d((byte) -18);
         rb.field_e[4].f(0, 0, 0);
         g.b();
     }
@@ -333,7 +333,7 @@ final class qe {
           this.c(-19);
         }
         rb.field_e[6].f(0, 0, 16777215);
-        jm.d((byte) -18);
+        FightEvent.d((byte) -18);
         rb.field_e[6].f(0, 0, 0);
         g.b();
     }
@@ -368,7 +368,7 @@ final class qe {
         jj.field_F[5].a();
         SoftwareRasterizer.clear();
         rb.field_e[5].f(0, 0, 16777215);
-        jm.d((byte) -18);
+        FightEvent.d((byte) -18);
         rb.field_e[5].f(0, 0, 0);
         g.b();
     }
@@ -394,8 +394,8 @@ final class qe {
         if (param0 != 2) {
           this.field_j = false;
         }
-        IntrusiveNode var2 = fb.field_e.field_H.c(83);
-        while (var2 instanceof id) {
+        IntrusiveNode var2 = fb.field_e.sceneObjects.c(83);
+        while (var2 instanceof SceneObject) {
           if (var2 instanceof GameCharacter) {
             this.field_h = this.field_h + 1;
           }
@@ -487,8 +487,8 @@ final class qe {
           this.b(-1, -30);
         }
         SoftwareRasterizer.clear();
-        int var2 = op.field_m.field_I;
-        int var3 = op.field_m.field_g;
+        int var2 = PortalEntryEvent.field_m.field_I;
+        int var3 = PortalEntryEvent.field_m.field_g;
         if (99 < var2) {
           this.field_i.c("/" + var2, 22, 2 * this.field_i.field_C + 6, 2, 65793);
           this.field_i.c(Integer.toString(var3), 15, this.field_i.field_C + 6, 2, 65793);
@@ -498,7 +498,7 @@ final class qe {
         jj.field_F[2].a();
         SoftwareRasterizer.clear();
         rb.field_e[2].f(0, 0, 16777215);
-        jm.d((byte) -18);
+        FightEvent.d((byte) -18);
         rb.field_e[2].f(0, 0, 0);
         g.b();
     }

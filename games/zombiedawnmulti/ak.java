@@ -7,22 +7,22 @@ final class ak {
     static String field_d;
     static volatile int field_b;
 
-    final static op a(int param0, byte param1, int param2, int param3) {
-        op var4 = null;
-        op var4Lifetime1;
+    final static PortalEntryEvent a(int param0, byte param1, int param2, int param3) {
+        PortalEntryEvent var4 = null;
+        PortalEntryEvent var4Lifetime1;
         if (param1 < -35) {
-          var4 = (op) (mi.field_Kb.g(72));
+          var4 = (PortalEntryEvent) (mi.field_Kb.g(72));
           if (var4 == null) {
-            var4 = new op();
+            var4 = new PortalEntryEvent();
           }
           var4.b(false, param2, param0, param3);
           return var4;
         }
         java.applet.Applet var5 = (java.applet.Applet) null;
         ak.a(88, (java.applet.Applet) null);
-        var4Lifetime1 = (op) (mi.field_Kb.g(72));
+        var4Lifetime1 = (PortalEntryEvent) (mi.field_Kb.g(72));
         if (var4Lifetime1 == null) {
-          var4Lifetime1 = new op();
+          var4Lifetime1 = new PortalEntryEvent();
         }
         var4Lifetime1.b(false, param2, param0, param3);
         return var4Lifetime1;
@@ -113,7 +113,7 @@ final class ak {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        sj.field_j.h(param3, param4, param0);
+        InfectionEvent.field_j.h(param3, param4, param0);
         SimHuman.field_fb.a(param3, param4, param1);
         vo.field_p.h(param3, -5 + param1 + param4, param0);
         tb.field_s.a(param0 + param3 - 5, param4, param1);

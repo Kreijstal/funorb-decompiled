@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pc extends GameEvent {
+final class ChaseEvent extends GameEvent {
     private int field_j;
     private int field_i;
 
     final void a(int param0, boolean param1, int param2, int param3) {
         GameCharacter var5 = null;
-        gm var5_ref = null;
+        HumanView var5_ref = null;
         try {
-          var5 = op.field_m.a(this.field_i, false);
-          ah.field_e.c(Integer.toString(this.field_f - param3), var5.g(-41) - param2, -param0 + var5.h(76), 4, -1);
+          var5 = PortalEntryEvent.field_m.a(this.field_i, false);
+          ah.field_e.c(Integer.toString(this.field_f - param3), var5.getX(-41) - param2, -param0 + var5.getY(76), 4, -1);
         } catch (Exception exception) {
         }
         try {
           if (!param1) {
             this.field_j = -25;
           }
-          var5_ref = op.field_m.a(this.field_i, 105);
-          ah.field_e.c(Integer.toString(this.field_f - param3), var5_ref.g(81) - param2, -param0 + var5_ref.h(87), 4, -1);
+          var5_ref = PortalEntryEvent.field_m.a(this.field_i, 105);
+          ah.field_e.c(Integer.toString(this.field_f - param3), var5_ref.getX(81) - param2, -param0 + var5_ref.getY(87), 4, -1);
         } catch (Exception exception) {
         }
     }
@@ -63,7 +63,7 @@ final class pc extends GameEvent {
 
     final void a(int param0, GameScreen param1) {
         try {
-          param1.c((byte) 118, this.field_j, this.field_i);
+          param1.startChase((byte) 118, this.field_j, this.field_i);
           if (param0 != 0) {
             this.field_j = -79;
           }
@@ -83,7 +83,7 @@ final class pc extends GameEvent {
         a.field_c.a((IntrusiveNode) (this), false);
     }
 
-    pc() {
+    ChaseEvent() {
     }
 
     static {

@@ -66,7 +66,7 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        pc stackIn_3_0 = null;
+        ChaseEvent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

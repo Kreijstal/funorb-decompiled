@@ -44,7 +44,7 @@ final class MusicPatch extends IntrusiveNode {
         nk.field_n[7] = kg.field_l;
         nk.field_n[5] = jk.field_e;
         nk.field_n[4] = hp.field_h;
-        nk.field_n[18] = op.field_o;
+        nk.field_n[18] = PortalEntryEvent.field_o;
         nk.field_n[21] = lj.field_p;
         nk.field_n[6] = ld.field_Lb;
         nk.field_n[16] = mn.field_n;

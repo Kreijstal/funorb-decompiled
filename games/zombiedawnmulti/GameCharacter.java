@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class GameCharacter extends ti {
+final class GameCharacter extends UnitView {
     private int field_yb;
-    gm field_Eb;
+    HumanView field_Eb;
     private int field_fb;
     int team;
     static int field_db;
@@ -40,7 +40,7 @@ final class GameCharacter extends ti {
     boolean field_zb;
     private int field_tb;
     private boolean field_Cb;
-    private qk field_Db;
+    private Waypoint field_Db;
     private IntrusiveDeque field_gb;
     private boolean field_Gb;
 
@@ -66,7 +66,7 @@ final class GameCharacter extends ti {
         }
     }
 
-    final static RasterBuffer a(int param0, java.awt.Component param1, int param2, int param3) {
+    final static RasterBuffer createRasterBuffer(int param0, java.awt.Component param1, int param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
@@ -118,7 +118,7 @@ final class GameCharacter extends ti {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void setState(int param0, int param1) {
         boolean stackIn_5_1 = false;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -129,12 +129,12 @@ final class GameCharacter extends ti {
         int var4Lifetime1;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          stackIn_5_1 = (this.field_K == 33);
+          stackIn_5_1 = (this.state == 33);
           this.field_rb = stackIn_5_1;
-          if (this.field_K == 9) {
+          if (this.state == 9) {
             return;
           }
-          if (34 == this.field_K &&
+          if (34 == this.state &&
             param0 != 9 &&
             param0 != 21) {
             return;
@@ -143,27 +143,27 @@ final class GameCharacter extends ti {
             21 == param0)) {
             this.field_jb.c(-24421);
           }
-          super.b(param0, param1);
-          if (this.field_K == 21) {
+          super.setState(param0, param1);
+          if (this.state == 21) {
             this.field_Bb = false;
             if (var5 == 0) {
               return;
             }
           }
-          if (this.field_K != 23) {
-            if (4 != this.field_K) {
-              if (this.field_K != 7) {
-                if (this.field_K == 9) {
-                  this.field_U = nm.b(-126, 66);
+          if (this.state != 23) {
+            if (4 != this.state) {
+              if (this.state != 7) {
+                if (this.state == 9) {
+                  this.field_U = Camera.b(-126, 66);
                   if (var5 == 0) {
                     return;
                   }
                 }
-                if (this.field_K != 27 &&
-                  this.field_K != 28 &&
-                  19 != this.field_K &&
-                  this.field_K != 24) {
-                  if (this.field_K == 29) {
+                if (this.state != 27 &&
+                  this.state != 28 &&
+                  19 != this.state &&
+                  this.state != 24) {
+                  if (this.state == 29) {
                     this.field_Cb = true;
                     this.field_yb = 0;
                     this.field_Ob = -65536000;
@@ -172,27 +172,27 @@ final class GameCharacter extends ti {
                       return;
                     }
                   }
-                  if (this.field_K == 33) {
+                  if (this.state == 33) {
                     this.field_rb = true;
                     this.field_yb = -100;
                     if (var5 == 0) {
                       return;
                     }
                   }
-                  if (this.field_K == 22) {
+                  if (this.state == 22) {
                     this.field_lb = 70;
                     if (var5 == 0) {
                       return;
                     }
                   }
-                  if (this.field_K != 8) {
+                  if (this.state != 8) {
                     return;
                   }
                   if (this.field_Eb == null) {
                     return;
                   }
-                  var3_int = (this.field_Eb.g(-97) - this.g(-47)) / 2;
-                  var4 = (this.field_Eb.h(123) - this.h(-99)) / 2;
+                  var3_int = (this.field_Eb.getX(-97) - this.getX(-47)) / 2;
+                  var4 = (this.field_Eb.getY(123) - this.getY(-99)) / 2;
                   this.field_Eb.n(20);
                   this.field_cb = var4;
                   this.field_mb = var3_int;
@@ -218,11 +218,11 @@ final class GameCharacter extends ti {
                 return;
               }
             }
-            this.field_S = 0;
-            this.field_X = 0;
+            this.velocityY = 0;
+            this.velocityX = 0;
             if (null != this.field_gb) {
-              var3_intLifetime1 = this.field_tb - this.g(-99);
-              var4Lifetime1 = this.field_Jb - this.h(-56);
+              var3_intLifetime1 = this.field_tb - this.getX(-99);
+              var4Lifetime1 = this.field_Jb - this.getY(-56);
               if (var3_intLifetime1 * var3_intLifetime1 + var4Lifetime1 * var4Lifetime1 < 400) {
                 this.field_gb = null;
               }
@@ -245,7 +245,7 @@ final class GameCharacter extends ti {
         }
     }
 
-    final boolean o(int param0) {
+    final boolean isBusy(int param0) {
         boolean stackIn_46_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -253,7 +253,7 @@ final class GameCharacter extends ti {
           if (param0 <= 86) {
             return true;
           }
-          stackIn_46_0 = (this.field_K == 8) || (21 == this.field_K) || (this.field_K == 9) || (this.field_K == 12) || (this.field_K == 7) || (this.field_K == 13) || (this.field_K == 14) || (this.field_K == 26) || (this.field_K == 27) || (this.field_K == 15) || (this.field_K == 17) || (28 == this.field_K) || (24 == this.field_K) || (19 == this.field_K);
+          stackIn_46_0 = (this.state == 8) || (21 == this.state) || (this.state == 9) || (this.state == 12) || (this.state == 7) || (this.state == 13) || (this.state == 14) || (this.state == 26) || (this.state == 27) || (this.state == 15) || (this.state == 17) || (28 == this.state) || (24 == this.state) || (19 == this.state);
           return stackIn_46_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -266,7 +266,7 @@ final class GameCharacter extends ti {
         try {
           this.field_Fb = 250;
           if (param0) {
-            this.a(87, (nm) null);
+            this.draw(87, (Camera) null);
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "wb.I(" + param0 + ')');
@@ -282,9 +282,9 @@ final class GameCharacter extends ti {
           }
           if (this.field_xb &&
             this.field_nb &&
-            ~this.team == ~fb.field_e.field_M) {
-            MidiPcmStream.field_B = fb.field_d[wf.field_m % fb.field_d.length];
-            mo.field_Ib = BufferedSocket.field_p[wf.field_m % BufferedSocket.field_p.length];
+            ~this.team == ~fb.field_e.localTeam) {
+            MidiPcmStream.field_B = fb.field_d[PowerupEvent.field_m % fb.field_d.length];
+            mo.field_Ib = BufferedSocket.field_p[PowerupEvent.field_m % BufferedSocket.field_p.length];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -294,7 +294,7 @@ final class GameCharacter extends ti {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final boolean overlapsRect(int param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -315,9 +315,9 @@ final class GameCharacter extends ti {
             param2 = param1;
             param1 = var6_intLifetime1;
           }
-          var6_intLifetime2 = 24 + (this.field_z >> 16);
+          var6_intLifetime2 = 24 + (this.positionX >> 16);
           var7 = var6_intLifetime2 - param3;
-          var8 = this.field_E >> 16;
+          var8 = this.positionY >> 16;
           var9 = var8 - 48;
           stackIn_19_0 = (param0 < var6_intLifetime2) && (param4 > var7) && (var8 > param2) && (param1 > var9);
           return stackIn_19_0;
@@ -369,10 +369,10 @@ final class GameCharacter extends ti {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -64 % ((-15 - param0) / 42);
-          if (this.o(106)) {
+          if (this.isBusy(106)) {
             return false;
           }
-          this.b(17, -27655);
+          this.setState(17, -27655);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -381,7 +381,7 @@ final class GameCharacter extends ti {
         }
     }
 
-    final void a(int param0, nm param1) {
+    final void draw(int param0, Camera param1) {
         int stackIn_5_0 = 0;
         boolean stackIn_17_1 = false;
         int stackIn_131_0 = 0;
@@ -438,8 +438,8 @@ final class GameCharacter extends ti {
           if (param0 != -10136) {
             return;
           }
-          var5 = this.field_K;
-          var6 = this.field_ab;
+          var5 = this.state;
+          var6 = this.animationFrame;
           if (var4 != 0 &&
             hp.a((byte) 59, g.field_a, 30) == 0) {
             stackIn_17_1 = !(this.field_wb);
@@ -447,7 +447,7 @@ final class GameCharacter extends ti {
           }
           if (var4 != 0 &&
             !this.field_wb) {
-            var7 = this.field_K;
+            var7 = this.state;
             switch ((var27 == 0
               || var7 == 4
               || var7 == 9
@@ -526,8 +526,8 @@ final class GameCharacter extends ti {
               var6 = 0;
             }
           }
-          var7 = -24 + param1.c(this.g(87), -20126);
-          var8 = -48 + param1.d(this.h(param0 + 10063), 108);
+          var7 = -24 + param1.worldToScreenX(this.getX(87), -20126);
+          var8 = -48 + param1.worldToScreenY(this.getY(param0 + 10063), 108);
           if (!this.field_Cb &&
             this.field_yb == 0) {
             stackIn_131_0 = 0;
@@ -545,17 +545,17 @@ final class GameCharacter extends ti {
             boolean decompiledFrameRemainder5 = true;
             if (this.field_rb) {
               if (var11 != 1) {
-                var7 = param1.c(this.g(param0 ^ 10153), param0 - 9990);
-                var8 = param1.d(this.h(102), param0 ^ -10212) - 24;
+                var7 = param1.worldToScreenX(this.getX(param0 ^ 10153), param0 - 9990);
+                var8 = param1.worldToScreenY(this.getY(102), param0 ^ -10212) - 24;
               } else {
-                var7 = param1.c(this.field_Ob >> 16, -20126);
-                var8 = -12 + param1.d(this.field_vb >> 16, 125);
+                var7 = param1.worldToScreenX(this.field_Ob >> 16, -20126);
+                var8 = -12 + param1.worldToScreenY(this.field_vb >> 16, 125);
               }
               if (1 != FullscreenFocusCanvas.field_k.field_k) {
                 if (null == this.field_kb) {
                   this.field_kb = new ve(var7, var8, 8, 0.0, 8.0, 3.0, 4, 1.5, 0.99, 1);
                 }
-                this.field_kb.field_k = 13 * var7 + (wf.field_m + 79 * var8);
+                this.field_kb.field_k = 13 * var7 + (PowerupEvent.field_m + 79 * var8);
                 var12 = 200;
                 var13 = 128 * var12;
                 var14 = var12 * 64;
@@ -572,12 +572,12 @@ final class GameCharacter extends ti {
             }
             if (decompiledFrameRemainder5) {
               if (var11 != 0) {
-                var7 = param1.c(this.g(88), -20126) - 24;
-                var8 = -48 + param1.d(this.h(param0 ^ 10225), 111);
+                var7 = param1.worldToScreenX(this.getX(88), -20126) - 24;
+                var8 = -48 + param1.worldToScreenY(this.getY(param0 ^ 10225), 111);
               }
-              if (this.field_K == 8) {
-                MidiPcmStream.field_B = op.field_m.field_D[this.team][0];
-                mo.field_Ib = op.field_m.field_D[this.team][1];
+              if (this.state == 8) {
+                MidiPcmStream.field_B = PortalEntryEvent.field_m.field_D[this.team][0];
+                mo.field_Ib = PortalEntryEvent.field_m.field_D[this.team][1];
                 this.n(0);
                 this.s(2);
                 var12_ref_ja = nk.a(ig.field_d[var6 + (gg.field_l[var5] + this.field_fb)], mo.field_Ib, 255, MidiPcmStream.field_B);
@@ -598,11 +598,11 @@ final class GameCharacter extends ti {
                 var27 == 0) {
                 return;
               }
-              if (17 != this.field_K &&
+              if (17 != this.state &&
                 !this.field_Gb) {
                 stackIn_191_0 = ig.field_d[1];
                 stackIn_191_1 = 12;
-                if (this.field_F != 3) {
+                if (this.facing != 3) {
                   stackIn_192_2 = var7;
                 } else {
                   stackIn_192_2 = var7 - 5;
@@ -612,7 +612,7 @@ final class GameCharacter extends ti {
               var12 = 0;
               var13 = 0;
               if (this.field_Cb ||
-                33 == this.field_K) {
+                33 == this.state) {
                 if (nk.field_h == null) {
                   g.c(bb.field_n);
                   nk.field_h = new ea();
@@ -623,10 +623,10 @@ final class GameCharacter extends ti {
                 SoftwareRasterizer.fillCircle(SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_l / 2, 1);
                 if (0 >= this.field_yb) {
                   var14_ref_int__ = nk.a(1052800, 455739624, 8454143);
-                  var15 = 1073741824 + this.field_y - wf.field_m;
+                  var15 = 1073741824 + this.objectId - PowerupEvent.field_m;
                 } else {
                   var14_ref_int__ = nk.a(8392720, 455739624, 16744448);
-                  var15 = -this.field_y + wf.field_m;
+                  var15 = -this.objectId + PowerupEvent.field_m;
                 }
                 nk.field_h.a(2, (double)var15 / 7.0, var14_ref_int__);
                 g.d();
@@ -638,8 +638,8 @@ final class GameCharacter extends ti {
                   } else if (this.field_yb > 0) {
                     var12 = this.field_yb * bb.field_n.width / 100;
                   } else {
-                    this.field_E = this.field_vb;
-                    this.field_z = this.field_Ob;
+                    this.positionY = this.field_vb;
+                    this.positionX = this.field_Ob;
                   }
                   var13 = -(var12 / 2) + 24;
                   if (var12 != 0) {
@@ -654,7 +654,7 @@ final class GameCharacter extends ti {
               boolean decompiledFrameRemainder4 = true;
               var15 = var14 + gg.field_l[var5];
               if (this.field_xb) {
-                if (this.i((byte) 122) &&
+                if (this.isOwnedByLocalPlayer((byte) 122) &&
                   var4 == 0) {
                   if (!(14 <= var15)) {
                     var15 += 70;
@@ -673,13 +673,13 @@ final class GameCharacter extends ti {
                   var16 = this.team;
                   if (this.field_xb &&
                     this.field_nb) {
-                    var16 = fb.field_e.field_M;
+                    var16 = fb.field_e.localTeam;
                     if (var16 < 0) {
-                      var16 = (this.team + 1) % op.field_m.teamCount;
+                      var16 = (this.team + 1) % PortalEntryEvent.field_m.teamCount;
                     }
                   }
-                  MidiPcmStream.field_B = op.field_m.field_D[var16][0];
-                  mo.field_Ib = op.field_m.field_D[var16][1];
+                  MidiPcmStream.field_B = PortalEntryEvent.field_m.field_D[var16][0];
+                  mo.field_Ib = PortalEntryEvent.field_m.field_D[var16][1];
                   this.n(param0 + 10136);
                   this.s(2);
                 } else {
@@ -732,17 +732,17 @@ final class GameCharacter extends ti {
               if (!he.field_a &&
                 !this.field_xb &&
                 var4 == 0 &&
-                this.field_Ib > op.field_m.currentTick &&
-                op.field_m.currentTick > this.field_Ib + (-100 + this.field_y * 19 % 35)) {
-                stackIn_313_0 = (this.field_tb >= this.g(param0 + 10218)) ? 0 : 1;
-                if (this.field_F != 3) {
+                this.field_Ib > PortalEntryEvent.field_m.currentTick &&
+                PortalEntryEvent.field_m.currentTick > this.field_Ib + (-100 + this.objectId * 19 % 35)) {
+                stackIn_313_0 = (this.field_tb >= this.getX(param0 + 10218)) ? 0 : 1;
+                if (this.facing != 3) {
                   stackIn_317_1 = 0;
                 } else {
                   stackIn_317_1 = 1;
                 }
-                if ((stackIn_313_0 ^ stackIn_317_1) != 0 && (this.field_K == 5 ||
-                  4 == this.field_K ||
-                  6 == this.field_K)) {
+                if ((stackIn_313_0 ^ stackIn_317_1) != 0 && (this.state == 5 ||
+                  4 == this.state ||
+                  6 == this.state)) {
                   stackIn_330_0 = 1;
                   decompiledFrameRemainder3 = false;
                 }
@@ -792,7 +792,7 @@ final class GameCharacter extends ti {
                 }
                 g.d();
               }
-              if (this.i((byte) 119) ||
+              if (this.isOwnedByLocalPlayer((byte) 119) ||
                 this.field_xb &&
                 this.field_nb) {
                 g.c(vb.field_b);
@@ -801,23 +801,23 @@ final class GameCharacter extends ti {
                 g.a(stackIn_370_0, stackIn_370_1, 54, 54, MidiPcmStream.field_B);
                 g.d();
               }
-              if (this.field_K != 21) {
-                var19 = wf.field_m / 4 % aa.field_h.length;
-                if (this.field_F == 3) {
+              if (this.state != 21) {
+                var19 = PowerupEvent.field_m / 4 % aa.field_h.length;
+                if (this.facing == 3) {
                   g.a(vb.field_b);
                 }
                 var20 = 3 + var8;
-                if (this.field_K == 23) {
+                if (this.state == 23) {
                   aa.field_h[var19].a(var7, var20);
                 } else if (this.field_Nb > 0) {
                   var21 = pn.field_c.length;
-                  var19 = -var21 + (1 + wf.field_m / 4 % (-1 + var21 * 2));
+                  var19 = -var21 + (1 + PowerupEvent.field_m / 4 % (-1 + var21 * 2));
                   if (0 > var19) {
                     var19 = -var19;
                   }
                   stackIn_389_0 = pn.field_c[var19];
                   stackIn_389_1 = var7;
-                  if (this.field_F != 3) {
+                  if (this.facing != 3) {
                     stackIn_390_2 = 2;
                   } else {
                     stackIn_390_2 = -2;
@@ -836,24 +836,24 @@ final class GameCharacter extends ti {
                     vb.field_b.a(var7 - 3 - (var21 - 48) / 2, -var21 + 48 - 3 + var8, var21, var21, 128);
                   }
                 }
-                if (this.field_K == 33) {
+                if (this.state == 33) {
                   vb.field_b.f(var13 + var7, var8 + var13, var12, var12);
-                } else if (this.field_G <= 0) {
+                } else if (this.slowTicks <= 0) {
                   vb.field_b.g(var7 - 3, var8 - 3);
                 } else {
                   vb.field_b.d(-3 + var7, var8 - 3, 142);
                 }
-                if (this.field_K == 23 ||
+                if (this.state == 23 ||
                   this.field_Nb > 0) {
                   g.c();
                   SoftwareRasterizer.setClip(var7, var20 + aa.field_h[var19].field_b / 2, 640, aa.field_h[var19].field_b + var20);
-                  if (23 == this.field_K) {
+                  if (23 == this.state) {
                     aa.field_h[var19].a(var7, var20);
                   }
                   g.b();
                 }
               } else {
-                vb.field_b.c(-3 + var7, -3 + var8, this.field_N);
+                vb.field_b.c(-3 + var7, -3 + var8, this.exitCountdown);
               }
               if (this.field_zb) {
                 ig.field_d[0].e(1 + var7, var8 + 2, 128, 16711680);
@@ -865,7 +865,7 @@ final class GameCharacter extends ti {
                   decompiledFrameRemainder5 = false;
                 }
                 else {
-                  if (!(param1.field_d > 1.25f)) {
+                  if (!(param1.zoom > 1.25f)) {
                     ig.field_d[0].g(var7, var8 + 3);
                     if ((0 != this.field_Kb)) {
                       qp.field_w.a((char)(48 + this.field_Kb), 1 + (var7 - (-ig.field_d[0].width - 9)), var8 + 7 + ig.field_d[0].height + 1, 0);
@@ -918,7 +918,7 @@ final class GameCharacter extends ti {
         }
     }
 
-    final void a(boolean param0, nm param1) {
+    final void a(boolean param0, Camera param1) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -938,26 +938,26 @@ final class GameCharacter extends ti {
           if (var3 == null) {
             return;
           }
-          param1.c(this.g(-127), -20126);
-          param1.d(this.h(-59), 126);
-          param1.c(this.field_O, -20126);
-          param1.d(this.field_P, 125);
+          param1.worldToScreenX(this.getX(-127), -20126);
+          param1.worldToScreenY(this.getY(-59), 126);
+          param1.worldToScreenX(this.targetX, -20126);
+          param1.worldToScreenY(this.targetY, 125);
           if (!param0) {
             this.field_sb = 20;
           }
-          var4 = param1.c(this.field_tb, -20126);
-          var5 = param1.d(this.field_Jb, 108) - 24;
+          var4 = param1.worldToScreenX(this.field_tb, -20126);
+          var5 = param1.worldToScreenY(this.field_Jb, 108) - 24;
           var6 = 50;
           var7 = 50;
-          if (-op.field_m.currentTick + this.field_Ib < 50) {
-            var6Lifetime1 = this.field_Ib - op.field_m.currentTick;
+          if (-PortalEntryEvent.field_m.currentTick + this.field_Ib < 50) {
+            var6Lifetime1 = this.field_Ib - PortalEntryEvent.field_m.currentTick;
             if (20 > var6Lifetime1) {
               var6Lifetime1 = 20;
             }
             var7 = var6Lifetime1;
           }
-          var8 = op.field_m.field_D[this.team][0];
-          var9 = op.field_m.field_D[this.team][1];
+          var8 = PortalEntryEvent.field_m.field_D[this.team][0];
+          var9 = PortalEntryEvent.field_m.field_D[this.team][1];
           var10 = am.a(0, var9, this.field_C, 1, var8);
           var10.c(-24 + var4, -24 + var5, var7 * 2);
           return;
@@ -975,7 +975,7 @@ final class GameCharacter extends ti {
         }
     }
 
-    final boolean i(byte param0) {
+    final boolean isOwnedByLocalPlayer(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
@@ -985,7 +985,7 @@ final class GameCharacter extends ti {
             return false;
           }
           var2_int = 97 % ((58 - param0) / 58);
-          stackIn_7_0 = (~this.team == ~fb.field_e.field_M);
+          stackIn_7_0 = (~this.team == ~fb.field_e.localTeam);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -994,7 +994,7 @@ final class GameCharacter extends ti {
         }
     }
 
-    final int l(int param0) {
+    final int getSelectionRadius(int param0) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -1085,10 +1085,10 @@ final class GameCharacter extends ti {
         RuntimeException var2 = null;
         try {
           if (null != this.field_jb) {
-            this.field_K = 15;
+            this.state = 15;
             this.field_jb.unlink(true);
             this.field_jb = null;
-            this.b(4, -27655);
+            this.setState(4, -27655);
           }
           if (param0) {
             GameCharacter.k((byte) -17);
@@ -1118,7 +1118,7 @@ final class GameCharacter extends ti {
         }
     }
 
-    final void a(IntrusiveDeque param0, int param1) {
+    final void setPath(IntrusiveDeque param0, int param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_11_0 = null;
@@ -1129,7 +1129,7 @@ final class GameCharacter extends ti {
           var3_int = 95 / ((36 - param1) / 40);
           if (null != param0 &&
             !param0.f(28113)) {
-            this.field_Db = (qk) (param0.a((byte) -39));
+            this.field_Db = (Waypoint) (param0.a((byte) -39));
             if (this.field_Db != null) {
             }
             this.field_qb = 0;
@@ -1150,14 +1150,14 @@ final class GameCharacter extends ti {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void startMoveCommand(byte param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
           if (param0 < 19) {
             return;
           }
-          if (!this.o(124)) {
+          if (!this.isBusy(124)) {
             if (this.field_Cb) {
               this.field_vb = param3 << 16;
               this.field_Ob = param2 << 16;
@@ -1165,7 +1165,7 @@ final class GameCharacter extends ti {
             this.field_Jb = param3;
             this.field_Ib = param1;
             this.field_tb = param2;
-            this.field_gb = fb.field_e.field_u.b(this.g(126), this.field_Jb, this.h(-73), this.field_tb, 8760);
+            this.field_gb = fb.field_e.navigation.findPath(this.getX(126), this.field_Jb, this.getY(-73), this.field_tb, 8760);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1182,7 +1182,7 @@ final class GameCharacter extends ti {
           if (param0 != 6) {
             this.e(false);
           }
-          this.b(4, param0 ^ -27649);
+          this.setState(4, param0 ^ -27649);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1223,13 +1223,13 @@ final class GameCharacter extends ti {
         try {
           if (!this.field_nb) {
             var5_int = 0;
-            var6 = this.field_ab % gg.field_j[var5_int];
-            var7 = op.field_m.field_h.field_j;
+            var6 = this.animationFrame % gg.field_j[var5_int];
+            var7 = PortalEntryEvent.field_m.field_h.field_j;
             stackIn_6_0 = (var7 != 0) ? 6 : 2;
             var8 = stackIn_6_0;
             var9 = gg.field_l[var5_int] + var6;
             if (param2 >= 256) {
-              if (this.field_F != 1) {
+              if (this.facing != 1) {
                 wq.field_c[var8][var9].g(param0, param1);
                 if (var10 != 0) {
                   wq.field_c[var8][var9].b(param0, param1);
@@ -1246,7 +1246,7 @@ final class GameCharacter extends ti {
             }
           }
           if (param3 >= -54) {
-            this.a(true, (nm) null);
+            this.a(true, (Camera) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1256,7 +1256,7 @@ final class GameCharacter extends ti {
         }
     }
 
-    final void f(byte param0) {
+    final void tick(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         boolean discarded$2 = false;
@@ -1280,11 +1280,11 @@ final class GameCharacter extends ti {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 >= -79) {
-            this.a(true, (GameCharacter) null);
+            this.startFight(true, (GameCharacter) null);
           }
-          super.f((byte) -92);
-          this.c(30818, this.field_K);
-          if (this.field_K != 33) {
+          super.tick((byte) -92);
+          this.advanceAnimation(30818, this.state);
+          if (this.state != 33) {
             this.field_yb = 0;
           }
           if (this.field_ub > 0) {
@@ -1293,78 +1293,78 @@ final class GameCharacter extends ti {
           if (0 < this.field_Fb) {
             this.field_Fb = this.field_Fb - 1;
           }
-          if (this.field_K != 29) {
+          if (this.state != 29) {
             this.field_Cb = false;
           }
           if (this.field_Nb > 0) {
             this.field_Nb = this.field_Nb - 1;
           }
           regionExit1: {
-            if (this.field_K == 4) {
+            if (this.state == 4) {
               if (!this.field_xb) {
                 break regionExit1;
               }
-              if (this.field_ab >= 2) {
+              if (this.animationFrame >= 2) {
                 break regionExit1;
               }
-              this.field_Q = this.field_Q + 3;
+              this.animationTicks = this.animationTicks + 3;
               if (var3 == 0) {
                 break regionExit1;
               }
             }
-            if (this.field_K != 31) {
-              if (this.field_K != 5) {
-                if (this.field_K == 29) {
+            if (this.state != 31) {
+              if (this.state != 5) {
+                if (this.state == 29) {
                   this.field_yb = -100;
                   if (var3 == 0) {
                     break regionExit1;
                   }
                 }
-                if (this.field_K != 33) {
-                  if (6 == this.field_K) {
+                if (this.state != 33) {
+                  if (6 == this.state) {
                     if (this.field_sb > 0) {
                       this.field_sb = this.field_sb - 1;
                     }
-                    this.i(5197);
-                    if (!this.k(-106)) {
-                      if (0 != this.field_X) {
+                    this.applyVelocity(5197);
+                    if (!this.stepTowardTarget(-106)) {
+                      if (0 != this.velocityX) {
                         break regionExit1;
                       }
-                      if (0 != this.field_S) {
+                      if (0 != this.velocityY) {
                         break regionExit1;
                       }
                     }
-                    this.b(4, -27655);
+                    this.setState(4, -27655);
                     if (var3 == 0) {
                       break regionExit1;
                     }
                   }
-                  if (7 == this.field_K) {
-                    this.i(5197);
+                  if (7 == this.state) {
+                    this.applyVelocity(5197);
                     if (this.field_Eb != null &&
-                      this.field_Eb.field_K != 18 &&
-                      this.field_Eb.field_K != 21 &&
-                      20 != this.field_Eb.field_K) {
+                      this.field_Eb.state != 18 &&
+                      this.field_Eb.state != 21 &&
+                      20 != this.field_Eb.state) {
                       fieldTemp$0 = this.field_sb;
                       this.field_sb = this.field_sb + 1;
                       if (fieldTemp$0 <= 60) {
-                        if (((this.field_Eb.field_K != 1)) &&
-                          (this.field_Eb.field_K != 2)) {
+                        if (((this.field_Eb.state != 1)) &&
+                          (this.field_Eb.state != 2)) {
                           break regionExit1;
                         }
                         break regionExit1;
                       }
                     }
                     this.field_Eb = null;
-                    this.b(4, -27655);
+                    this.setState(4, -27655);
                     if (var3 == 0) {
                       break regionExit1;
                     }
                   }
-                  if (this.field_K == 8) {
+                  if (this.state == 8) {
                     this.field_xb = false;
-                    if ((this.field_ab == 0 ||
-                      this.field_ab == 2) && this.field_Q == 0) {
+                    if ((this.animationFrame == 0 ||
+                      this.animationFrame == 2) && this.animationTicks == 0) {
                       var2_int = 0;
                       if (0 == hp.a((byte) -112, g.field_a, 3)) {
                         if (this.field_Eb != null &&
@@ -1388,21 +1388,21 @@ final class GameCharacter extends ti {
                     if (this.field_lb != 30) {
                       break regionExit1;
                     }
-                    fb.field_e.a(1, this.field_Eb.g(76), this.field_Eb.h(117));
+                    fb.field_e.a(1, this.field_Eb.getX(76), this.field_Eb.getY(117));
                     if (var3 == 0) {
                       break regionExit1;
                     }
                   }
-                  if (this.field_K != 22) {
-                    if (this.field_K == 9) {
+                  if (this.state != 22) {
+                    if (this.state == 9) {
                       if (this.field_pb != 0) {
-                        this.field_z = this.field_z + (this.field_pb << 16);
+                        this.positionX = this.positionX + (this.field_pb << 16);
                       }
-                      if (this.field_ab != 5) {
+                      if (this.animationFrame != 5) {
                         break regionExit1;
                       }
-                      fb.field_e.a(1, this.g(124), this.h(-105));
-                      fb.field_e.a(true, this);
+                      fb.field_e.a(1, this.getX(124), this.getY(-105));
+                      fb.field_e.deselectCharacter(true, this);
                       if (this.field_jb == null) {
                         break regionExit1;
                       }
@@ -1413,23 +1413,23 @@ final class GameCharacter extends ti {
                         break regionExit1;
                       }
                     }
-                    if (this.field_K != 12) {
-                      if (this.field_K != 13) {
-                        if (this.field_K == 14 ||
-                          this.field_K == 26) {
+                    if (this.state != 12) {
+                      if (this.state != 13) {
+                        if (this.state == 14 ||
+                          this.state == 26) {
                           this.field_xb = false;
-                          this.field_F = 1;
-                          if (4 != this.field_ab) {
+                          this.facing = 1;
+                          if (4 != this.animationFrame) {
                             break regionExit1;
                           }
-                          stackIn_158_0 = fb.field_e.field_H;
+                          stackIn_158_0 = fb.field_e.sceneObjects;
                           stackIn_158_1 = null;
                           stackIn_158_2 = null;
-                          stackIn_158_3 = this.g(113);
-                          stackIn_158_4 = this.h(101);
+                          stackIn_158_3 = this.getX(113);
+                          stackIn_158_4 = this.getY(101);
                           stackIn_158_5 = this.field_C;
                           stackIn_158_6 = this.team;
-                          if (26 != this.field_K) {
+                          if (26 != this.state) {
                             stackIn_159_1 = null;
                             stackIn_159_2 = null;
                             stackIn_159_7 = false;
@@ -1439,138 +1439,138 @@ final class GameCharacter extends ti {
                             stackIn_159_7 = true;
                           }
                           ((IntrusiveDeque) (Object) stackIn_158_0).a(new jj(stackIn_158_3, stackIn_158_4, stackIn_158_5, stackIn_158_6, stackIn_159_7), false);
-                          this.b(4, -27655);
+                          this.setState(4, -27655);
                           if (var3 == 0) {
                             break regionExit1;
                           }
                         }
-                        if (this.field_K == 34) {
-                          if (this.field_ab != 4) {
+                        if (this.state == 34) {
+                          if (this.animationFrame != 4) {
                             break regionExit1;
                           }
-                          this.field_Q = this.field_Q - 1;
+                          this.animationTicks = this.animationTicks - 1;
                           this.field_xb = false;
                           if (this.field_jb == null) {
-                            this.field_jb = new pq(this.g(-74), this.h(-61) - 30, op.field_m.computeEffectDuration((byte) 32, this.team, 750));
-                            op.field_m.field_G.a(this.field_jb, false);
+                            this.field_jb = new pq(this.getX(-74), this.getY(-61) - 30, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 750));
+                            PortalEntryEvent.field_m.field_G.a(this.field_jb, false);
                             if (var3 == 0) {
                               break regionExit1;
                             }
                           }
                           if (!this.field_jb.d(67)) {
-                            this.i(5197);
-                            if (this.k(-100) ||
-                              0 == this.field_X &&
-                              this.field_S == 0) {
+                            this.applyVelocity(5197);
+                            if (this.stepTowardTarget(-100) ||
+                              0 == this.velocityX &&
+                              this.velocityY == 0) {
                               this.m((byte) 6);
                             }
-                            this.field_jb.a(this.h(92) - 30, this.g(71), 0);
+                            this.field_jb.a(this.getY(92) - 30, this.getX(71), 0);
                             if (var3 == 0) {
                               break regionExit1;
                             }
                           }
                           this.field_jb.unlink(true);
                           this.field_jb = null;
-                          this.field_K = 15;
-                          this.b(4, -27655);
+                          this.state = 15;
+                          this.setState(4, -27655);
                           if (var3 == 0) {
                             break regionExit1;
                           }
                         }
-                        if (15 != this.field_K) {
-                          if (this.field_K == 17) {
-                            if (this.field_ab == 3 &&
-                              this.field_Q == 0) {
-                              fb.field_e.a((byte) 126, this.g(-113), this.h(-82), this.team);
+                        if (15 != this.state) {
+                          if (this.state == 17) {
+                            if (this.animationFrame == 3 &&
+                              this.animationTicks == 0) {
+                              fb.field_e.a((byte) 126, this.getX(-113), this.getY(-82), this.team);
                             }
-                            if (this.field_ab < 5) {
+                            if (this.animationFrame < 5) {
                               break regionExit1;
                             }
-                            fb.field_e.a(true, this);
-                            op.field_m.addEntity(-119, (TertiaryLinkNode) (this));
+                            fb.field_e.deselectCharacter(true, this);
+                            PortalEntryEvent.field_m.addEntity(-119, (TertiaryLinkNode) (this));
                             if (var3 == 0) {
                               break regionExit1;
                             }
                           }
-                          if (this.field_K != 19 &&
-                            this.field_K != 24) {
-                            if (this.field_K == 27) {
-                              if (~(gg.field_j[27] / 2) == ~this.field_ab) {
+                          if (this.state != 19 &&
+                            this.state != 24) {
+                            if (this.state == 27) {
+                              if (~(gg.field_j[27] / 2) == ~this.animationFrame) {
                                 this.field_ub = 0;
                                 this.field_xb = false;
-                                this.field_Nb = op.field_m.computeEffectDuration((byte) 32, this.team, 2250);
+                                this.field_Nb = PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 2250);
                               }
-                              if (gg.field_j[27] - 1 != this.field_ab) {
+                              if (gg.field_j[27] - 1 != this.animationFrame) {
                                 break regionExit1;
                               }
-                              this.b(4, -27655);
+                              this.setState(4, -27655);
                               if (var3 == 0) {
                                 break regionExit1;
                               }
                             }
-                            if (this.field_K != 28) {
+                            if (this.state != 28) {
                               break regionExit1;
                             }
-                            if (this.field_ab == gg.field_j[28] / 2) {
+                            if (this.animationFrame == gg.field_j[28] / 2) {
                               this.field_xb = false;
                               this.field_Nb = 0;
-                              this.field_Mb = op.field_m.computeEffectDuration((byte) 32, this.team, 2250);
+                              this.field_Mb = PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 2250);
                               this.field_ub = this.field_Mb;
                             }
-                            if (this.field_ab != -1 + gg.field_j[28]) {
+                            if (this.animationFrame != -1 + gg.field_j[28]) {
                               break regionExit1;
                             }
-                            this.b(4, -27655);
+                            this.setState(4, -27655);
                             if (var3 == 0) {
                               break regionExit1;
                             }
                           }
-                          if (5 != this.field_ab) {
+                          if (5 != this.animationFrame) {
                             break regionExit1;
                           }
-                          stackIn_248_1 = (this.field_K == 24);
+                          stackIn_248_1 = (this.state == 24);
                           this.field_nb = stackIn_248_1;
                           this.field_xb = true;
-                          this.b(4, -27655);
+                          this.setState(4, -27655);
                           if (var3 == 0) {
                             break regionExit1;
                           }
                         }
-                        if (this.field_ab != 4) {
+                        if (this.animationFrame != 4) {
                           break regionExit1;
                         }
-                        this.field_Q = this.field_Q - 1;
+                        this.animationTicks = this.animationTicks - 1;
                         this.field_xb = false;
                         if (this.field_jb == null) {
-                          this.field_jb = new pq(this.g(73), this.h(-104) - 30, op.field_m.computeEffectDuration((byte) 32, this.team, 750));
-                          op.field_m.field_G.a(this.field_jb, false);
+                          this.field_jb = new pq(this.getX(73), this.getY(-104) - 30, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 750));
+                          PortalEntryEvent.field_m.field_G.a(this.field_jb, false);
                         }
                         if (!this.field_jb.d(124)) {
                           break regionExit1;
                         }
                         this.field_jb.unlink(true);
                         this.field_jb = null;
-                        this.b(4, -27655);
+                        this.setState(4, -27655);
                         if (var3 == 0) {
                           break regionExit1;
                         }
                       }
                       if (this.field_xb) {
-                        this.field_ab = 2;
+                        this.animationFrame = 2;
                       }
-                      if (2 != this.field_ab) {
+                      if (2 != this.animationFrame) {
                         break regionExit1;
                       }
-                      this.field_ab = 0;
+                      this.animationFrame = 0;
                       this.field_xb = false;
-                      fb.field_e.b(this.field_Hb, 0, this.h(-71), this.g(-88));
+                      fb.field_e.b(this.field_Hb, 0, this.getY(-71), this.getX(-88));
                       this.b(false);
                       if (var3 == 0) {
                         break regionExit1;
                       }
                     }
                     this.field_xb = false;
-                    this.i(5197);
+                    this.applyVelocity(5197);
                     if (var3 == 0) {
                       break regionExit1;
                     }
@@ -1578,39 +1578,39 @@ final class GameCharacter extends ti {
                   fieldTemp$1 = this.field_lb - 1;
                   this.field_lb = this.field_lb - 1;
                   if (fieldTemp$1 <= 0) {
-                    this.b(4, -27655);
+                    this.setState(4, -27655);
                     if (var3 == 0) {
                       break regionExit1;
                     }
                   }
-                  if (this.field_z < this.field_V) {
-                    this.field_z = this.field_z + 32768;
-                    if (this.field_V < this.field_z) {
-                      this.field_z = this.field_V;
+                  if (this.positionX < this.field_V) {
+                    this.positionX = this.positionX + 32768;
+                    if (this.field_V < this.positionX) {
+                      this.positionX = this.field_V;
                     }
                   }
-                  if (this.field_z > this.field_V) {
-                    this.field_z = this.field_z - 32768;
-                    if (this.field_V > this.field_z) {
-                      this.field_z = this.field_V;
+                  if (this.positionX > this.field_V) {
+                    this.positionX = this.positionX - 32768;
+                    if (this.field_V > this.positionX) {
+                      this.positionX = this.field_V;
                     }
                   }
-                  if (this.field_E < this.field_L) {
-                    this.field_E = this.field_E + 32768;
-                    if (this.field_E > this.field_L) {
-                      this.field_E = this.field_L;
+                  if (this.positionY < this.field_L) {
+                    this.positionY = this.positionY + 32768;
+                    if (this.positionY > this.field_L) {
+                      this.positionY = this.field_L;
                     }
                   }
-                  if (this.field_E > this.field_L) {
-                    this.field_E = this.field_E - 32768;
-                    if (this.field_E < this.field_L) {
-                      this.field_E = this.field_L;
+                  if (this.positionY > this.field_L) {
+                    this.positionY = this.positionY - 32768;
+                    if (this.positionY < this.field_L) {
+                      this.positionY = this.field_L;
                     }
                   }
-                  if (this.field_ab != 0) {
+                  if (this.animationFrame != 0) {
                     break regionExit1;
                   }
-                  if (this.field_Q != 0) {
+                  if (this.animationTicks != 0) {
                     break regionExit1;
                   }
                   var2_intLifetime1 = 30 + hp.a((byte) 22, g.field_a, 5);
@@ -1624,13 +1624,13 @@ final class GameCharacter extends ti {
                   if (this.field_yb <= 100) {
                     break regionExit1;
                   }
-                  this.b(4, -27655);
+                  this.setState(4, -27655);
                   if (var3 == 0) {
                     break regionExit1;
                   }
                 }
-                this.field_E = this.field_vb;
-                this.field_z = this.field_Ob;
+                this.positionY = this.field_vb;
+                this.positionX = this.field_Ob;
                 if (var3 == 0) {
                   break regionExit1;
                 }
@@ -1639,16 +1639,16 @@ final class GameCharacter extends ti {
                 this.field_sb = this.field_sb - 1;
               }
               this.c(true);
-              this.i(5197);
+              this.applyVelocity(5197);
               if (this.field_Bb &&
                 this.field_qb < 128) {
                 this.field_qb = this.field_qb + 8;
               }
-              if (!this.k(-71)) {
-                if (0 != this.field_X) {
+              if (!this.stepTowardTarget(-71)) {
+                if (0 != this.velocityX) {
                   break regionExit1;
                 }
-                if (this.field_S != 0) {
+                if (this.velocityY != 0) {
                   break regionExit1;
                 }
               }
@@ -1657,8 +1657,8 @@ final class GameCharacter extends ti {
                 break regionExit1;
               }
             }
-            if (this.field_ab == gg.field_j[31] / 4) {
-              if (this.i((byte) -54)) {
+            if (this.animationFrame == gg.field_j[31] / 4) {
+              if (this.isOwnedByLocalPlayer((byte) -54)) {
                 if (this.field_Bb) {
                   this.t(16);
                   this.a(-4564);
@@ -1667,19 +1667,19 @@ final class GameCharacter extends ti {
               }
               this.team = this.field_ib;
             }
-            if (~(-1 + gg.field_j[31]) == ~this.field_ab) {
-              this.b(4, -27655);
+            if (~(-1 + gg.field_j[31]) == ~this.animationFrame) {
+              this.setState(4, -27655);
             }
           }
-          if (null != op.field_m &&
-            op.field_m.field_c &&
-            !this.o(109)) {
-            if ((13 * op.field_m.currentTick + 17 * this.field_y) % 71 != 0 ||
-              this.field_K == 9) {
-              if ((25 * this.field_y + op.field_m.currentTick * 37) % 59 != 0) {
+          if (null != PortalEntryEvent.field_m &&
+            PortalEntryEvent.field_m.field_c &&
+            !this.isBusy(109)) {
+            if ((13 * PortalEntryEvent.field_m.currentTick + 17 * this.objectId) % 71 != 0 ||
+              this.state == 9) {
+              if ((25 * this.objectId + PortalEntryEvent.field_m.currentTick * 37) % 59 != 0) {
                 return;
               }
-              if (this.field_K == 17) {
+              if (this.state == 17) {
                 return;
               }
               this.b(false);
@@ -1717,8 +1717,8 @@ final class GameCharacter extends ti {
         this.field_zb = false;
         this.field_Gb = false;
         try {
-          this.field_X = 0;
-          this.field_S = 0;
+          this.velocityX = 0;
+          this.velocityY = 0;
           hp.a((byte) 57, g.field_a, 5);
           hp.a((byte) 82, g.field_a, 120);
         } catch (RuntimeException runtimeException) {
@@ -1735,9 +1735,9 @@ final class GameCharacter extends ti {
             this.field_Bb = true;
           }
           stackIn_16_0 = ((!this.field_xb ||
-            this.field_K == 33 ||
-            this.field_K == 29) &&
-            this.field_K != 9);
+            this.state == 33 ||
+            this.state == 29) &&
+            this.state != 9);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1746,24 +1746,24 @@ final class GameCharacter extends ti {
         }
     }
 
-    final void a(boolean param0, GameCharacter param1) {
+    final void startFight(boolean param0, GameCharacter param1) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.b(22, -27655);
-          param1.b(22, -27655);
-          if (this.field_z < param1.field_z) {
-            this.field_F = 1;
+          this.setState(22, -27655);
+          param1.setState(22, -27655);
+          if (this.positionX < param1.positionX) {
+            this.facing = 1;
             if (ZombieDawnMulti.field_E) {
-              this.field_F = 3;
+              this.facing = 3;
             }
           } else {
-            this.field_F = 3;
+            this.facing = 3;
           }
-          param1.field_F = 4 - this.field_F;
+          param1.facing = 4 - this.facing;
           if (param0) {
             this.field_qb = -98;
           }
@@ -1806,15 +1806,15 @@ final class GameCharacter extends ti {
           fieldTemp$1 = this.field_ob;
           this.field_ob = this.field_ob - 1;
           if (0 >= fieldTemp$1 &&
-            this.field_K != 9) {
-            if (this.field_K == 8 &&
+            this.state != 9) {
+            if (this.state == 8 &&
               this.field_Eb != null) {
               this.field_Eb.l(-95);
             }
             if (param0) {
               field_hb = (java.awt.Font) null;
             }
-            this.b(9, -27655);
+            this.setState(9, -27655);
             return;
           }
           return;

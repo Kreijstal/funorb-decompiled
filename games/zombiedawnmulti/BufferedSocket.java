@@ -183,12 +183,12 @@ final class BufferedSocket implements Runnable {
           g.c();
           jj.field_F[0].a();
           rb.field_e[0].f(5, 5, 16777215);
-          jm.d((byte) -18);
+          FightEvent.d((byte) -18);
           rb.field_e[0].f(5, 5, 0);
           jj.field_F[1].a();
           rb.field_e[1].f(-35, 5, 16777215);
           g.a(16777215);
-          jm.d((byte) -18);
+          FightEvent.d((byte) -18);
           rb.field_e[1].f(-35, 5, 0);
           g.b();
         } catch (RuntimeException runtimeException) {

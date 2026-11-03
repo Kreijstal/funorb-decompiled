@@ -220,8 +220,8 @@ final class cb extends IntrusiveNode {
           return;
         }
         try {
-          if (h.field_L != null) {
-            h.field_L.m(-7435);
+          if (PortalView.field_L != null) {
+            PortalView.field_L.m(-7435);
           }
           b.field_c = new qm(param2, param0, false, true, true);
           wj.field_i.a((UiWidget) (b.field_c), (byte) -110);
@@ -265,10 +265,10 @@ final class cb extends IntrusiveNode {
         g.c(this.field_p);
         var2 = 60 % ((param0 + 53) / 55);
         if (this.field_t == 0) {
-          var3 = fg.field_m;
+          var3 = ScoreUpdateEvent.field_m;
         } else {
           if (this.field_t == 1) {
-            var3 = nm.field_w;
+            var3 = Camera.field_w;
           } else {
             var3 = ol.field_n;
           }

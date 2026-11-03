@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class lk extends id {
+final class lk extends SceneObject {
     private int field_K;
     private int field_M;
     private int field_Q;
@@ -17,7 +17,7 @@ final class lk extends id {
     private int field_H;
     private int field_N;
 
-    final void f(byte param0) {
+    final void tick(byte param0) {
         if (param0 >= -79) {
           return;
         }
@@ -42,12 +42,12 @@ final class lk extends id {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var5Lifetime1;
-        this.field_E = param2 << 16;
+        this.positionY = param2 << 16;
         this.field_S = 0;
         this.field_N = param2;
         if (param3 == 7457) {
           this.field_O = false;
-          this.field_z = param0 << 16;
+          this.positionX = param0 << 16;
           this.field_Q = param0;
           this.h((byte) -11);
           var5 = SimArmedHuman.field_Fb.length;
@@ -58,7 +58,7 @@ final class lk extends id {
         }
         lk.g((byte) -21);
         this.field_O = false;
-        this.field_z = param0 << 16;
+        this.positionX = param0 << 16;
         this.field_Q = param0;
         this.h((byte) -11);
         var5Lifetime1 = SimArmedHuman.field_Fb.length;
@@ -67,7 +67,7 @@ final class lk extends id {
         this.field_M = hp.a((byte) -68, g.field_a, var5Lifetime1);
     }
 
-    final void a(int param0, nm param1) {
+    final void draw(int param0, Camera param1) {
         int fieldTemp$2 = 0;
         RuntimeException runtimeException = null;
         int var3_int = 0;
@@ -84,13 +84,13 @@ final class lk extends id {
             fieldTemp$2 = this.field_K - 1;
             this.field_K = this.field_K - 1;
             if (fieldTemp$2 <= 0) {
-              var3_int = param1.c(this.g(-50), -20126);
-              var4 = -24 + param1.d(this.h(-76), param0 + 10242);
+              var3_int = param1.worldToScreenX(this.getX(-50), -20126);
+              var4 = -24 + param1.worldToScreenY(this.getY(-76), param0 + 10242);
               if (!io.a(var3_int, var4, (byte) -112, param1)) {
                 return;
               }
               if (!he.field_a &&
-                fb.field_e.field_u.field_k[this.h(82) / 24][this.g(-95) / 24]) {
+                fb.field_e.navigation.field_k[this.getY(82) / 24][this.getX(-95) / 24]) {
                 return;
               }
               SimArmedHuman.field_Fb[this.field_M].c(var3_int, var4, this.field_F);
@@ -146,7 +146,7 @@ final class lk extends id {
           nb.field_a.a(hj.field_c, (byte) -27, nk.field_s, true);
           nb.field_a.h((byte) -104);
           while (ba.c(-1)) {
-            nb.field_a.a(0, pn.field_d, sj.field_p);
+            nb.field_a.a(0, pn.field_d, InfectionEvent.field_p);
           }
           if (-1 != jk.field_j) {
             var1_int = jk.field_j;
@@ -166,7 +166,7 @@ final class lk extends id {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (dj.field_k != id.field_B) {
+          if (dj.field_k != SceneObject.field_B) {
             stackIn_23_0 = -1;
             return stackIn_23_0;
           }
@@ -212,15 +212,15 @@ final class lk extends id {
         this.a(-4564);
         bo.field_a.a(-25612, (IntrusiveNode) (this));
         if (param0 != 23068) {
-          this.f((byte) -105);
+          this.tick((byte) -105);
         }
     }
 
     private final void h(byte param0) {
         this.field_F = 128 + hp.a((byte) -85, g.field_a, 127);
         this.field_M = 0;
-        this.field_z = this.field_Q - 12 + hp.a((byte) -106, g.field_a, 24) << 16;
-        this.field_E = this.field_N - 12 + hp.a((byte) 40, g.field_a, 24) << 16;
+        this.positionX = this.field_Q - 12 + hp.a((byte) -106, g.field_a, 24) << 16;
+        this.positionY = this.field_N - 12 + hp.a((byte) 40, g.field_a, 24) << 16;
         if (param0 != -11) {
           this.field_N = 22;
         }

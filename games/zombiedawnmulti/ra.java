@@ -19,7 +19,7 @@ final class ra extends IntrusiveNode {
         }
         try {
           if (11 == a.field_b) {
-            fg.a(-29956);
+            ScoreUpdateEvent.a(-29956);
           }
           TertiaryLinkDeque.a(eb.field_p, (byte) -100, lh.field_i, SimArmedHuman.field_Bb);
           t.a(false, 0, param0, 0);

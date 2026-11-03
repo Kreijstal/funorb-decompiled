@@ -16,7 +16,7 @@ final class uf {
 
     final void a(boolean param0) {
         this.field_k = param0 ? true : false;
-        nm.b(-128, 59);
+        Camera.b(-128, 59);
     }
 
     public static void b(int param0) {
@@ -30,7 +30,7 @@ final class uf {
         field_d = null;
     }
 
-    final void a(nm param0, byte param1) {
+    final void a(Camera param0, byte param1) {
         IndexedSprite[] stackIn_3_0 = null;
         int stackIn_4_1 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -46,7 +46,7 @@ final class uf {
             } else {
               stackIn_4_1 = 6;
             }
-            ((IndexedSprite) (Object) stackIn_3_0[stackIn_4_1]).a(param0.c(this.field_e, -20126) - 12, -12 + param0.d(this.field_j, 111), this.field_a);
+            ((IndexedSprite) (Object) stackIn_3_0[stackIn_4_1]).a(param0.worldToScreenX(this.field_e, -20126) - 12, -12 + param0.worldToScreenY(this.field_j, 111), this.field_a);
           }
           if (param1 < 33) {
             this.field_a = -63;
@@ -76,10 +76,10 @@ final class uf {
     final void b(boolean param0) {
         this.field_k = false;
         if (!param0) {
-          nm var3 = (nm) null;
-          this.a((nm) null, (byte) 30);
+          Camera var3 = (Camera) null;
+          this.a((Camera) null, (byte) 30);
         }
-        nm.b(-126, 20);
+        Camera.b(-126, 20);
     }
 
     final void a(int param0) {

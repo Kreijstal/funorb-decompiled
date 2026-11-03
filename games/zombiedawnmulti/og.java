@@ -262,7 +262,7 @@ final class og extends SimEntity {
                 var12.field_jc.a((byte) 50, var12.field_Tb);
               }
               var12.field_ec = new cj(0L, (cj) null);
-              if ((1 << ti.field_J & var14) != 0) {
+              if ((1 << UnitView.field_J & var14) != 0) {
                 var12.field_jc.a((byte) 50, var12.field_ec);
               }
               var45 = var12.field_Xb;
@@ -474,7 +474,7 @@ final class og extends SimEntity {
                 var12.field_Tb.a(var12.field_jc.field_z, 0, var52_ref.fullWidth, var34_int, -3344);
                 var34_int = var34_int + (LevelFileCatalog.field_c + var52_ref.fullWidth);
               }
-              if ((1 << ti.field_J & var14Lifetime1) != 0) {
+              if ((1 << UnitView.field_J & var14Lifetime1) != 0) {
                 stackIn_89_0 = ke.field_i;
                 if (!var12.field_dc) {
                   stackIn_90_1 = 0;
@@ -558,7 +558,7 @@ final class og extends SimEntity {
             var34Lifetime1 = var33;
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Rb.field_yb.b(var33, -nj.field_h + (var12.field_zb - nj.field_h));
-              var12.field_Rb.field_Y = var12.field_Jb * 256 / so.field_r;
+              var12.field_Rb.field_Y = var12.field_Jb * 256 / UnitStateEvent.field_r;
               var12.field_Rb.field_wb = var33;
               var12.field_Rb.a(var34_intLifetime1 * jk.field_f, var31, var12.field_zb - nj.field_h * 2, nj.field_h, -3344);
               var31 = var31 + var34_intLifetime1 * jk.field_f;

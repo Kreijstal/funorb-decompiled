@@ -46,11 +46,11 @@ final class SimArmedHuman extends SimHuman {
             var5 = this.field_nb.getY(1829947600) - this.getY(1829947600);
             if (this.field_nb.o(124) &&
               var4 * var4 + var5 * var5 <= 125000) {
-              if (this.simulation.navigation.a(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
+              if (this.simulation.navigation.traceLine(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
                 this.a(false, this.field_nb);
                 return;
               }
-              if (this.simulation.navigation.a(this.getY(1829947600) - 48, this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600) - 48, false, false) != -1) {
+              if (this.simulation.navigation.traceLine(this.getY(1829947600) - 48, this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600) - 48, false, false) != -1) {
                 this.a(false, this.field_nb);
                 return;
               }
@@ -114,11 +114,11 @@ final class SimArmedHuman extends SimHuman {
             var5Lifetime1 = this.field_nb.getY(1829947600) - this.getY(1829947600);
             if (this.field_nb.o(124) &&
               var4Lifetime1 * var4Lifetime1 + var5Lifetime1 * var5Lifetime1 <= 125000) {
-              if (this.simulation.navigation.a(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
+              if (this.simulation.navigation.traceLine(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
                 this.a(false, this.field_nb);
                 return;
               }
-              if (this.simulation.navigation.a(this.getY(1829947600) - 48, this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600) - 48, false, false) != -1) {
+              if (this.simulation.navigation.traceLine(this.getY(1829947600) - 48, this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600) - 48, false, false) != -1) {
                 this.a(false, this.field_nb);
                 return;
               }
@@ -187,11 +187,11 @@ final class SimArmedHuman extends SimHuman {
           var5Lifetime2 = this.field_nb.getY(1829947600) - this.getY(1829947600);
           if (this.field_nb.o(124) &&
             var4Lifetime2 * var4Lifetime2 + var5Lifetime2 * var5Lifetime2 <= 125000) {
-            if (this.simulation.navigation.a(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
+            if (this.simulation.navigation.traceLine(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
               this.a(false, this.field_nb);
               return;
             }
-            if (this.simulation.navigation.a(this.getY(1829947600) - 48, this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600) - 48, false, false) != -1) {
+            if (this.simulation.navigation.traceLine(this.getY(1829947600) - 48, this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600) - 48, false, false) != -1) {
               this.a(false, this.field_nb);
               return;
             }

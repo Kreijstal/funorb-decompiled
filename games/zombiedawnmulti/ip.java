@@ -21,7 +21,7 @@ final class ip {
     final static void b(byte param0) {
         rb.field_c = new int[]{};
         me.field_f = new int[]{};
-        nm.field_u = new int[]{};
+        Camera.field_u = new int[]{};
         if (param0 <= 75) {
           field_d = (String) null;
         }

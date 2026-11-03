@@ -58,7 +58,7 @@ final class dk extends cj {
         boolean stackIn_125_1 = false;
         cj stackIn_128_0 = null;
         boolean stackIn_129_1 = false;
-        nm.a(SoftwareRasterizer.field_b - 640 >> 1, SoftwareRasterizer.field_l, (byte) 105, 640 + SoftwareRasterizer.field_b >> 1, 0);
+        Camera.a(SoftwareRasterizer.field_b - 640 >> 1, SoftwareRasterizer.field_l, (byte) 105, 640 + SoftwareRasterizer.field_b >> 1, 0);
         if (param1 != -7579) {
           dk.c((byte) -88);
           if (0 < JaggrabDownloader.field_h) {
@@ -77,7 +77,7 @@ final class dk extends cj {
                 stackIn_20_0 = JaggrabDownloader.field_i;
                 stackIn_21_1 = (param0) && (!io.field_b);
                 ((cj) (Object) stackIn_20_0).c(stackIn_21_1, -1);
-                stackIn_24_0 = fc.field_a;
+                stackIn_24_0 = LevelData.field_a;
                 stackIn_25_1 = (param0) && (!io.field_b);
                 ((cj) (Object) stackIn_24_0).c(stackIn_25_1, param1 + 7578);
               }
@@ -99,7 +99,7 @@ final class dk extends cj {
             stackIn_57_0 = JaggrabDownloader.field_i;
             stackIn_58_1 = (param0) && (!io.field_b);
             ((cj) (Object) stackIn_57_0).c(stackIn_58_1, -1);
-            stackIn_61_0 = fc.field_a;
+            stackIn_61_0 = LevelData.field_a;
             stackIn_62_1 = (param0) && (!io.field_b);
             ((cj) (Object) stackIn_61_0).c(stackIn_62_1, param1 + 7578);
           } else {
@@ -110,7 +110,7 @@ final class dk extends cj {
               stackIn_44_0 = JaggrabDownloader.field_i;
               stackIn_45_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_44_0).c(stackIn_45_1, -1);
-              stackIn_48_0 = fc.field_a;
+              stackIn_48_0 = LevelData.field_a;
               stackIn_49_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_48_0).c(stackIn_49_1, param1 + 7578);
             }
@@ -124,7 +124,7 @@ final class dk extends cj {
               stackIn_110_0 = JaggrabDownloader.field_i;
               stackIn_111_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_110_0).c(stackIn_111_1, -1);
-              stackIn_114_0 = fc.field_a;
+              stackIn_114_0 = LevelData.field_a;
               stackIn_115_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_114_0).c(stackIn_115_1, param1 + 7578);
             } else {
@@ -135,7 +135,7 @@ final class dk extends cj {
                 stackIn_124_0 = JaggrabDownloader.field_i;
                 stackIn_125_1 = (param0) && (!io.field_b);
                 ((cj) (Object) stackIn_124_0).c(stackIn_125_1, -1);
-                stackIn_128_0 = fc.field_a;
+                stackIn_128_0 = LevelData.field_a;
                 stackIn_129_1 = (param0) && (!io.field_b);
                 ((cj) (Object) stackIn_128_0).c(stackIn_129_1, param1 + 7578);
               }
@@ -157,7 +157,7 @@ final class dk extends cj {
               stackIn_82_0 = JaggrabDownloader.field_i;
               stackIn_83_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_82_0).c(stackIn_83_1, -1);
-              stackIn_86_0 = fc.field_a;
+              stackIn_86_0 = LevelData.field_a;
               stackIn_87_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_86_0).c(stackIn_87_1, param1 + 7578);
             } else {
@@ -168,7 +168,7 @@ final class dk extends cj {
                 stackIn_96_0 = JaggrabDownloader.field_i;
                 stackIn_97_1 = (param0) && (!io.field_b);
                 ((cj) (Object) stackIn_96_0).c(stackIn_97_1, -1);
-                stackIn_100_0 = fc.field_a;
+                stackIn_100_0 = LevelData.field_a;
                 stackIn_101_1 = (param0) && (!io.field_b);
                 ((cj) (Object) stackIn_100_0).c(stackIn_101_1, param1 + 7578);
               }
@@ -194,7 +194,7 @@ final class dk extends cj {
         if (this.field_Fb != 0) {
           return false;
         }
-        if (sj.field_p != 85) {
+        if (InfectionEvent.field_p != 85) {
           if (this.field_Hb.length() < 12) {
             var2 = Character.toLowerCase(pn.field_d);
             if (32 == var2) {
@@ -210,7 +210,7 @@ final class dk extends cj {
                   discarded$7 = this.field_Hb.append((char) var2);
                 }
               }
-              if (sj.field_p == 84) {
+              if (InfectionEvent.field_p == 84) {
                 if (0 >= this.field_Hb.length()) {
                   this.field_Fb = 1;
                 } else {
@@ -221,7 +221,7 @@ final class dk extends cj {
               if (param0 < 123) {
                 return true;
               }
-              if (sj.field_p != 13) {
+              if (InfectionEvent.field_p != 13) {
                 return true;
               }
               this.field_Fb = 1;
@@ -229,7 +229,7 @@ final class dk extends cj {
             }
             if (hd.a(-24315, (char) var2)) {
               discarded$8 = this.field_Hb.append((char) var2);
-              if (sj.field_p == 84) {
+              if (InfectionEvent.field_p == 84) {
                 if (0 >= this.field_Hb.length()) {
                   this.field_Fb = 1;
                 } else {
@@ -240,14 +240,14 @@ final class dk extends cj {
               if (param0 < 123) {
                 return true;
               }
-              if (sj.field_p == 13) {
+              if (InfectionEvent.field_p == 13) {
                 this.field_Fb = 1;
               }
               return true;
             }
             if (vh.a((char) var2, (byte) 85)) {
               discarded$9 = this.field_Hb.append((char) var2);
-              if (sj.field_p == 84) {
+              if (InfectionEvent.field_p == 84) {
                 if (0 >= this.field_Hb.length()) {
                   this.field_Fb = 1;
                 } else {
@@ -258,17 +258,17 @@ final class dk extends cj {
               if (param0 < 123) {
                 return true;
               }
-              if (sj.field_p == 13) {
+              if (InfectionEvent.field_p == 13) {
                 this.field_Fb = 1;
               }
               return true;
             }
           }
-          if (sj.field_p != 84) {
+          if (InfectionEvent.field_p != 84) {
             if (param0 < 123) {
               return true;
             }
-            if (sj.field_p != 13) {
+            if (InfectionEvent.field_p != 13) {
               return true;
             }
             this.field_Fb = 1;
@@ -283,7 +283,7 @@ final class dk extends cj {
           if (param0 < 123) {
             return true;
           }
-          if (sj.field_p == 13) {
+          if (InfectionEvent.field_p == 13) {
             this.field_Fb = 1;
           }
           return true;
@@ -292,11 +292,11 @@ final class dk extends cj {
           lf.a(' ', this.field_Hb.length() - 1, 0, this.field_Hb);
         }
         if (this.field_Hb.length() >= 12) {
-          if (sj.field_p != 84) {
+          if (InfectionEvent.field_p != 84) {
             if (param0 < 123) {
               return true;
             }
-            if (sj.field_p != 13) {
+            if (InfectionEvent.field_p != 13) {
               return true;
             }
             this.field_Fb = 1;
@@ -311,7 +311,7 @@ final class dk extends cj {
           if (param0 < 123) {
             return true;
           }
-          if (sj.field_p == 13) {
+          if (InfectionEvent.field_p == 13) {
             this.field_Fb = 1;
           }
           return true;
@@ -330,7 +330,7 @@ final class dk extends cj {
               discarded$2 = this.field_Hb.append((char) var2Lifetime1);
             }
           }
-          if (sj.field_p == 84) {
+          if (InfectionEvent.field_p == 84) {
             if (0 >= this.field_Hb.length()) {
               this.field_Fb = 1;
             } else {
@@ -341,14 +341,14 @@ final class dk extends cj {
           if (param0 < 123) {
             return true;
           }
-          if (sj.field_p == 13) {
+          if (InfectionEvent.field_p == 13) {
             this.field_Fb = 1;
           }
           return true;
         }
         if (hd.a(-24315, (char) var2Lifetime1)) {
           discarded$3 = this.field_Hb.append((char) var2Lifetime1);
-          if (sj.field_p == 84) {
+          if (InfectionEvent.field_p == 84) {
             if (0 >= this.field_Hb.length()) {
               this.field_Fb = 1;
             } else {
@@ -359,14 +359,14 @@ final class dk extends cj {
           if (param0 < 123) {
             return true;
           }
-          if (sj.field_p != 13) {
+          if (InfectionEvent.field_p != 13) {
             return true;
           }
           this.field_Fb = 1;
           return true;
         }
         if (!vh.a((char) var2Lifetime1, (byte) 85)) {
-          if (sj.field_p == 84) {
+          if (InfectionEvent.field_p == 84) {
             if (0 >= this.field_Hb.length()) {
               this.field_Fb = 1;
             } else {
@@ -377,18 +377,18 @@ final class dk extends cj {
           if (param0 < 123) {
             return true;
           }
-          if (sj.field_p != 13) {
+          if (InfectionEvent.field_p != 13) {
             return true;
           }
           this.field_Fb = 1;
           return true;
         }
         discarded$4 = this.field_Hb.append((char) var2Lifetime1);
-        if (sj.field_p != 84) {
+        if (InfectionEvent.field_p != 84) {
           if (param0 < 123) {
             return true;
           }
-          if (sj.field_p != 13) {
+          if (InfectionEvent.field_p != 13) {
             return true;
           }
           this.field_Fb = 1;
@@ -399,7 +399,7 @@ final class dk extends cj {
           if (param0 < 123) {
             return true;
           }
-          if (sj.field_p != 13) {
+          if (InfectionEvent.field_p != 13) {
             return true;
           }
           this.field_Fb = 1;
@@ -410,7 +410,7 @@ final class dk extends cj {
         if (param0 < 123) {
           return true;
         }
-        if (sj.field_p == 13) {
+        if (InfectionEvent.field_p == 13) {
           this.field_Fb = 1;
         }
         return true;
@@ -480,7 +480,7 @@ final class dk extends cj {
             this.field_Fb = 1;
             return this.field_Fb;
           }
-          if (sj.field_p == 85 &&
+          if (InfectionEvent.field_p == 85 &&
             this.field_Hb.length() > 0) {
             lf.a(' ', this.field_Hb.length() - 1, 0, this.field_Hb);
           }
@@ -501,8 +501,8 @@ final class dk extends cj {
               }
             }
           }
-          if (sj.field_p != 84) {
-            if (sj.field_p == 13) {
+          if (InfectionEvent.field_p != 84) {
+            if (InfectionEvent.field_p == 13) {
               return 1;
             }
             continue;

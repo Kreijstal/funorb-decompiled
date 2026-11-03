@@ -83,7 +83,7 @@ abstract class NetworkGameClient extends GameApplet {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         p.field_e = this.field_C;
-        gm.f(-7733, p.field_e);
+        HumanView.f(-7733, p.field_e);
         lf.a(param1, -5989, this.field_D, this.field_A, this.field_p, p.field_e, pl.field_J, param5, this.field_m, this.field_o, 5000, 5000, this.field_v, this.field_y);
         jj.a(this.field_p, this.field_y, this.field_v, p.field_e, this.field_A, pl.field_J, param5, this.field_o, (byte) -106);
         vc.a((byte) 116);
@@ -91,7 +91,7 @@ abstract class NetworkGameClient extends GameApplet {
         qi.a(100, dk.field_Ib);
         m.field_z = param3;
         sn.field_Lb = param2;
-        h.field_G = param0;
+        PortalView.field_G = param0;
         if (param7 > -35) {
           this.e((byte) 2);
         }
@@ -117,16 +117,16 @@ abstract class NetworkGameClient extends GameApplet {
         return eg.field_B.field_Ib;
     }
 
-    final static pc a(int param0, boolean param1, int param2, int param3) {
-        pc var4 = (pc) (a.field_c.g(69));
+    final static ChaseEvent a(int param0, boolean param1, int param2, int param3) {
+        ChaseEvent var4 = (ChaseEvent) (a.field_c.g(69));
         if (var4 == null) {
-          var4 = new pc();
+          var4 = new ChaseEvent();
         }
         if (!param1) {
           var4.a(param3, param2, param1, param0);
           return var4;
         }
-        return (pc) null;
+        return (ChaseEvent) null;
     }
 
     private final void enableBaseResponses(boolean param0, int param1) {
@@ -283,7 +283,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param0 != -13) {
           this.h(-72);
         }
-        var2 = op.field_i;
+        var2 = PortalEntryEvent.field_i;
         if (var2 < 64 &&
           wj.field_l[var2]) {
           if (var2 == 0) {
@@ -340,7 +340,7 @@ abstract class NetworkGameClient extends GameApplet {
                   }
                 }
               } else {
-                fh.c(1);
+                NavigationGrid.c(1);
               }
             } else {
               rj.i(3);
@@ -379,7 +379,7 @@ abstract class NetworkGameClient extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = wf.a(RasterBuffer.a((byte) -118), an.a(param0 ^ -2198), 32475);
+            var5_int = PowerupEvent.a(RasterBuffer.a((byte) -118), an.a(param0 ^ -2198), 32475);
             if (var5_int != -1) {
               dd.a(0, hb.field_b, ol.field_q, var5_int);
               ol.field_q = null;
@@ -393,7 +393,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (var4 == 2) {
             var5_intLifetime1 = SimEntity.a(nh.c((byte) -98), this.field_q, gg.a(param0 ^ -2218), -125, bb.c(-19385), s.a((byte) 32), GameCharacter.h((byte) -80));
             if (var5_intLifetime1 != -1) {
-              sj.a(hb.field_b, 31407, var5_intLifetime1, ol.field_q);
+              InfectionEvent.a(hb.field_b, 31407, var5_intLifetime1, ol.field_q);
               hb.field_b = null;
               ol.field_q = null;
             }
@@ -529,10 +529,10 @@ abstract class NetworkGameClient extends GameApplet {
           ng.field_g.b(-12371);
         }
         ik.a(param0 ^ 50);
-        hg.h((byte) -126);
+        ArmedHumanView.latchInputState((byte) -126);
         if (!vk.l((byte) -126) &&
           11 != a.field_b) {
-          op.c(param0 - 93);
+          PortalEntryEvent.c(param0 - 93);
         }
         if (FullscreenFocusCanvas.field_a != null) {
           t.field_d = FullscreenFocusCanvas.field_a.b(param0 - 216);
@@ -637,7 +637,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (p.field_e != 0) {
             cp.field_P = u.a(5, sn.field_Lb);
           }
-          ra.field_l = oj.a(false, h.field_G, 1, -24285, true);
+          ra.field_l = oj.a(false, PortalView.field_G, 1, -24285, true);
           fe.field_L = oj.a(false, m.field_y, 1, -24285, true);
           wm.field_V = oj.a(false, m.field_z, 1, -24285, true);
           ClientException.field_i = 2;
@@ -662,7 +662,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
         }
         if (ClientException.field_i == 3 &&
-          h.a(fe.field_L, param0 ^ -3795, ra.field_l, wm.field_V) &&
+          PortalView.areGraphicsArchivesReady(fe.field_L, param0 ^ -3795, ra.field_l, wm.field_V) &&
           jo.a(wm.field_V, 0)) {
           sc.b(1);
           lc.a(62);
@@ -759,7 +759,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (!SimZombie.p(-86)) {
           if (10 <= ClientException.field_i) {
             if (!GameKeyHandler.a(250)) {
-              fc.b((byte) -9);
+              LevelData.b((byte) -9);
             } else {
               if (a.field_b == 0) {
                 discarded$10 = this.a(-2197, false, false);

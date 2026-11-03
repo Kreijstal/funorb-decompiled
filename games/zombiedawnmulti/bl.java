@@ -121,7 +121,7 @@ final class bl {
             for (var2 = 0; var2 < 8; var2++) {
               var9[var2] = 0;
             }
-            var10 = fc.field_m;
+            var10 = LevelData.field_m;
             var8 = var10;
             var5 = var8;
             var1Lifetime1 = var5;

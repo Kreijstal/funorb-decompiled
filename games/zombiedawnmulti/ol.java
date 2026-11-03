@@ -63,7 +63,7 @@ final class ol extends nc {
           this.field_g.a(1, param0);
           return;
         }
-        if (sj.field_p == 96) {
+        if (InfectionEvent.field_p == 96) {
           this.field_g.a(1, false);
           if (var2 != 0) {
             if (this.field_g.field_d == 0) {
@@ -86,7 +86,7 @@ final class ol extends nc {
             }
           }
         } else {
-          if (97 != sj.field_p) {
+          if (97 != InfectionEvent.field_p) {
             this.field_g.a(1, param0);
           } else {
             this.field_g.a(1, false);
@@ -122,10 +122,10 @@ final class ol extends nc {
         }
         if (!param1 &&
           cp.field_S.length == this.field_m) {
-          var3 = sj.field_p;
-          sj.field_p = 96;
+          var3 = InfectionEvent.field_p;
+          InfectionEvent.field_p = 96;
           this.field_g.a(1, false);
-          sj.field_p = var3;
+          InfectionEvent.field_p = var3;
         }
     }
 
@@ -379,10 +379,10 @@ final class ol extends nc {
         this.field_m = this.field_m - 1;
         if (!param0 &&
           this.field_m == 0) {
-          var3 = sj.field_p;
-          sj.field_p = 97;
+          var3 = InfectionEvent.field_p;
+          InfectionEvent.field_p = 97;
           this.field_g.a(1, false);
-          sj.field_p = var3;
+          InfectionEvent.field_p = var3;
         }
         if (param1 > -110) {
           this.a(false, (byte) -86);

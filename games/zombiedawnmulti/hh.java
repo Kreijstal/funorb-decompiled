@@ -104,10 +104,10 @@ final class hh {
         this.field_g = 0;
         this.field_f = 0;
         if (this.field_k == 0) {
-          this.field_i = sj.field_p;
+          this.field_i = InfectionEvent.field_p;
         }
         if (this.field_k == 0 &&
-          sj.field_p == 98) {
+          InfectionEvent.field_p == 98) {
           if (this.field_d <= 0) {
             this.field_d = this.field_c;
           }
@@ -117,7 +117,7 @@ final class hh {
         if (this.field_k != 0) {
           return;
         }
-        if (sj.field_p != 99) {
+        if (InfectionEvent.field_p != 99) {
           return;
         }
         this.field_d = this.field_d + 1;
@@ -515,14 +515,14 @@ final class hh {
         this.field_f = 0;
         this.field_g = 0;
         if (0 == this.field_k) {
-          this.field_i = sj.field_p;
+          this.field_i = InfectionEvent.field_p;
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_k == 0) {
-          if (sj.field_p != 96) {
+          if (InfectionEvent.field_p != 96) {
             if (this.field_k != 0) {
-              if (0 == this.field_k && (98 == sj.field_p ||
-                sj.field_p == 99)) {
+              if (0 == this.field_k && (98 == InfectionEvent.field_p ||
+                InfectionEvent.field_p == 99)) {
                 this.field_a = false;
                 if (this.field_d < 0) {
                   this.field_d = param0;
@@ -533,9 +533,9 @@ final class hh {
               }
               return;
             }
-            if (sj.field_p != 97) {
-              if (0 == this.field_k && (98 == sj.field_p ||
-                sj.field_p == 99)) {
+            if (InfectionEvent.field_p != 97) {
+              if (0 == this.field_k && (98 == InfectionEvent.field_p ||
+                InfectionEvent.field_p == 99)) {
                 this.field_a = false;
                 if (this.field_d < 0) {
                   this.field_d = param0;
@@ -552,8 +552,8 @@ final class hh {
             }
             this.field_a = false;
             if (0 == this.field_k) {
-              if (98 != sj.field_p &&
-                sj.field_p != 99) {
+              if (98 != InfectionEvent.field_p &&
+                InfectionEvent.field_p != 99) {
                 if (param1) {
                   field_m = false;
                 }
@@ -576,7 +576,7 @@ final class hh {
         }
         if (decompiledFrameRemainder0) {
           if (this.field_k == 0 &&
-            sj.field_p == 97) {
+            InfectionEvent.field_p == 97) {
             this.field_d = this.field_d + 1;
             if (this.field_d >= this.field_c) {
               this.field_d = 0;
@@ -584,8 +584,8 @@ final class hh {
             this.field_a = false;
           }
           if (0 == this.field_k &&
-            (98 == sj.field_p ||
-            sj.field_p == 99)) {
+            (98 == InfectionEvent.field_p ||
+            InfectionEvent.field_p == 99)) {
             this.field_a = false;
             if (this.field_d < 0) {
               this.field_d = param0;

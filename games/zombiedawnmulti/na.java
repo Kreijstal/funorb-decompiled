@@ -84,7 +84,7 @@ final class na extends rg {
         return false;
     }
 
-    final static void a(byte param0, fh param1) {
+    final static void a(byte param0, NavigationGrid param1) {
         int var4 = 0;
         int[][] var2 = null;
         int var3 = 0;
@@ -100,7 +100,7 @@ final class na extends rg {
         RuntimeException var2_ref = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var6 = param1.field_i.field_k;
+          var6 = param1.level.field_k;
           var2 = var6;
           ImageProducerRasterBuffer.field_j = new int[var6.length][var6[0].length];
           var3 = 0;
@@ -160,7 +160,7 @@ final class na extends rg {
           var7 = (CharSequence) ((Object) param2);
           ql.field_a = tg.a(var7, false);
           jj.field_M = param3;
-          var6 = id.a(GameWorld.field_x, bb.field_k, (byte) -65, param0, tg.field_d);
+          var6 = SceneObject.a(GameWorld.field_x, bb.field_k, (byte) -65, param0, tg.field_d);
           wi.a((byte) 4, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

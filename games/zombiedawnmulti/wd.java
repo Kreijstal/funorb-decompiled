@@ -3,7 +3,7 @@
  */
 final class wd extends WidgetContainer implements in {
     static IndexedSprite field_P;
-    static id field_G;
+    static SceneObject field_G;
     static int[] field_Q;
     private String field_O;
     static MidiPcmStream field_L;
@@ -61,7 +61,7 @@ final class wd extends WidgetContainer implements in {
     }
 
     final static void a(int param0, int param1, ga param2, int param3, int param4, int param5) {
-        if (op.field_m.field_c) {
+        if (PortalEntryEvent.field_m.field_c) {
           return;
         }
         if (param4 < 21) {

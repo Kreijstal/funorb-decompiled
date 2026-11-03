@@ -192,10 +192,10 @@ final class ld extends cj {
             var6Lifetime1 = stackIn_43_0;
             if (var6Lifetime1 != 0) {
               var7 = tj.field_c;
-              for (var8_int = 0; var8_int < fg.field_k.length; var8_int++) {
-                fg.field_k[var8_int] = (byte) 0;
+              for (var8_int = 0; var8_int < ScoreUpdateEvent.field_k.length; var8_int++) {
+                ScoreUpdateEvent.field_k[var8_int] = (byte) 0;
               }
-              fg.field_k[var7 / 8] = (byte)cr.b((int) fg.field_k[var7 / 8], 1 << var7 % 8);
+              ScoreUpdateEvent.field_k[var7 / 8] = (byte)cr.b((int) ScoreUpdateEvent.field_k[var7 / 8], 1 << var7 % 8);
             }
             stackIn_51_0 = (!param1) ? 0 : -1;
             for (var7 = stackIn_51_0; qo.field_r.length > var7; var7++) {
@@ -210,11 +210,11 @@ final class ld extends cj {
                 if (param1) {
                   if (var6Lifetime1 == 0) {
                     if (var7 == -1) {
-                      for (var9 = 0; var9 < fg.field_k.length; var9++) {
-                        fg.field_k[var9] = (byte) 0;
+                      for (var9 = 0; var9 < ScoreUpdateEvent.field_k.length; var9++) {
+                        ScoreUpdateEvent.field_k[var9] = (byte) 0;
                       }
                     } else {
-                      fg.field_k[var7 / 8] = (byte)vg.a((int) fg.field_k[var7 / 8], 1 << tq.b(var7, 7));
+                      ScoreUpdateEvent.field_k[var7 / 8] = (byte)vg.a((int) ScoreUpdateEvent.field_k[var7 / 8], 1 << tq.b(var7, 7));
                     }
                   }
                 } else {
@@ -237,12 +237,12 @@ final class ld extends cj {
                     dupTemp$0 = ma.field_b[1][var7 + 1];
                     stackIn_76_0 = dupTemp$0;
                     stackIn_76_1 = dupTemp$0.field_Ab;
-                    stackIn_77_2 = ((fg.field_k[var9 / 8] & 1 << (var9 & 7)) == 0);
+                    stackIn_77_2 = ((ScoreUpdateEvent.field_k[var9 / 8] & 1 << (var9 & 7)) == 0);
                     stackIn_76_0.field_Ab = stackIn_76_1 & stackIn_77_2;
                   }
                 } else {
                   stackIn_80_0 = ma.field_b[1][var7 + 1];
-                  stackIn_81_1 = ((fg.field_k[var7 / 8] & 1 << (7 & var7)) != 0);
+                  stackIn_81_1 = ((ScoreUpdateEvent.field_k[var7 / 8] & 1 << (7 & var7)) != 0);
                   stackIn_80_0.field_Ab = stackIn_81_1;
                 }
               }
@@ -964,14 +964,14 @@ final class ld extends cj {
                         var18 = -1 - var17 + TriangleRasterizer.field_i;
                       }
                       if (var17 < 0) {
-                        so.a(param7, true, var16Lifetime2, var18 + var17, param8);
+                        UnitStateEvent.a(param7, true, var16Lifetime2, var18 + var17, param8);
                       } else {
-                        so.a(param7, true, var17 + var16Lifetime2, var18, param8);
+                        UnitStateEvent.a(param7, true, var17 + var16Lifetime2, var18, param8);
                       }
                     } else {
                       if (0 <= var17 &&
                         TriangleRasterizer.field_i > var17) {
-                        so.a(param7, true, var16Lifetime2 + var17, var18, param8);
+                        UnitStateEvent.a(param7, true, var16Lifetime2 + var17, var18, param8);
                       }
                     }
                   }
@@ -1015,14 +1015,14 @@ final class ld extends cj {
                     var17Lifetime1 = -1 - var16Lifetime1 + TriangleRasterizer.field_i;
                   }
                   if (var16Lifetime1 >= 0) {
-                    so.a(param7, true, var15Lifetime1 + var16Lifetime1, var17Lifetime1, param8);
+                    UnitStateEvent.a(param7, true, var15Lifetime1 + var16Lifetime1, var17Lifetime1, param8);
                   } else {
-                    so.a(param7, true, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param8);
+                    UnitStateEvent.a(param7, true, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param8);
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < TriangleRasterizer.field_i) {
-                    so.a(param7, true, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param8);
+                    UnitStateEvent.a(param7, true, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param8);
                   }
                 }
               }
@@ -1105,7 +1105,7 @@ final class ld extends cj {
           } else {
             if (this.field_Qb[param1] == -1) {
               GameScreen.c(4024);
-              fh.b(31706);
+              NavigationGrid.b(31706);
             } else {
               var5 = 32768 | this.field_Qb[param1];
               var6 = va.field_a;
@@ -1119,7 +1119,7 @@ final class ld extends cj {
               var8 = (String) null;
               GameWorld.a(var5, qf.field_g, param2, (String) null, va.field_a, 29602);
               ii.a(va.field_a, (byte) -128, var5, qf.field_g, jj.field_M);
-              fh.b(31706);
+              NavigationGrid.b(31706);
               lh.a(true);
             }
           }
@@ -1134,7 +1134,7 @@ final class ld extends cj {
         int var8;
         int stackIn_3_0 = 0;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
-        stackIn_3_0 = (sj.field_p != 85) ? 0 : 1;
+        stackIn_3_0 = (InfectionEvent.field_p != 85) ? 0 : 1;
         var4 = stackIn_3_0;
         if (this.field_Ib != null) {
           if (var4 != 0 &&
@@ -1148,7 +1148,7 @@ final class ld extends cj {
         if (null == this.field_Ib &&
           mj.field_Ib == this &&
           var4 != 0) {
-          fh.b(31706);
+          NavigationGrid.b(31706);
           return true;
         }
         var5 = pn.field_d;
@@ -1177,7 +1177,7 @@ final class ld extends cj {
         }
         bc.b(10);
         bk.field_i = null;
-        fh.b(param0 - 1481675862);
+        NavigationGrid.b(param0 - 1481675862);
     }
 
     static {

@@ -50,7 +50,7 @@ final class oq extends hq {
           var7 = stackIn_15_0;
           stackIn_18_0 = (!param0) ? 7105644 : 16777215;
           var8 = stackIn_18_0;
-          jm.a(var7, true, param3 + param4.field_y, this.field_A, (-this.field_A[0].field_u + param4.field_w >> 1) + (param4.field_i + param1), param4.field_n);
+          FightEvent.a(var7, true, param3 + param4.field_y, this.field_A, (-this.field_A[0].field_u + param4.field_w >> 1) + (param4.field_i + param1), param4.field_n);
           this.field_j.a(param4.field_j, param3 + param4.field_y, param4.field_i + (param1 - 2), param4.field_n, param4.field_w, var8, -1, 1, 1, this.field_j.field_C);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

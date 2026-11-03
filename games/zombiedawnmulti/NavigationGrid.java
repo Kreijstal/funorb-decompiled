@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fh {
+final class NavigationGrid {
     int[][] field_p;
     static String field_f;
-    fc field_i;
+    LevelData level;
     static Sprite[] field_h;
-    int field_r;
+    int pixelWidth;
     private int[][] field_a;
-    int field_c;
+    int pixelHeight;
     static String field_e;
     boolean[][] field_k;
     private int field_o;
-    private qk[] field_q;
+    private Waypoint[] field_q;
     private int[][] field_l;
     static int field_n;
     static cj field_m;
@@ -21,14 +21,14 @@ final class fh {
     static int field_j;
     static String field_g;
 
-    private final qk[] a(boolean param0, qk param1, qk[] param2) {
+    private final Waypoint[] a(boolean param0, Waypoint param1, Waypoint[] param2) {
         int var5 = 0;
-        qk[] var4 = null;
+        Waypoint[] var4 = null;
         RuntimeException var4_ref = null;
         int var6 = 0;
-        qk[] var7 = null;
-        qk[] stackIn_3_0 = null;
-        qk[] stackIn_8_0 = null;
+        Waypoint[] var7 = null;
+        Waypoint[] stackIn_3_0 = null;
+        Waypoint[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -38,10 +38,10 @@ final class fh {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0) {
-            stackIn_3_0 = (qk[]) null;
+            stackIn_3_0 = (Waypoint[]) null;
             return stackIn_3_0;
           }
-          var7 = new qk[param2.length + 1];
+          var7 = new Waypoint[param2.length + 1];
           var4 = var7;
           for (var5 = 0; var5 < param2.length; var5++) {
             var7[var5] = param2[var5];
@@ -69,7 +69,7 @@ final class fh {
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean isPositionWalkable(int param0, int param1, int param2) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -90,25 +90,25 @@ final class fh {
         var5 = param1 / 24;
         var6 = -2 / ((-9 - param0) / 59);
         var7 = 4;
-        if (!this.a(var4, (byte) 16, var5)) {
+        if (!this.isTileWalkable(var4, (byte) 16, var5)) {
           return false;
         }
         var8 = param2 % 24;
         var9 = param1 % 24;
         if (var4 != 0) {
-          stackIn_6_0 = this.a(var4 - 1, (byte) 125, var5) ? 1 : 0;
+          stackIn_6_0 = this.isTileWalkable(var4 - 1, (byte) 125, var5) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
         var10 = stackIn_6_0;
-        if (this.field_i.field_d - 1 == var4) {
+        if (this.level.field_d - 1 == var4) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = this.a(var4 + 1, (byte) 1, var5) ? 1 : 0;
+          stackIn_9_0 = this.isTileWalkable(var4 + 1, (byte) 1, var5) ? 1 : 0;
         }
         var11 = stackIn_9_0;
-        if (var5 != this.field_i.field_e - 1) {
-          stackIn_12_0 = this.a(var4, (byte) 119, 1 + var5) ? 1 : 0;
+        if (var5 != this.level.field_e - 1) {
+          stackIn_12_0 = this.isTileWalkable(var4, (byte) 119, 1 + var5) ? 1 : 0;
         } else {
           stackIn_12_0 = 0;
         }
@@ -116,7 +116,7 @@ final class fh {
         if (var11 != 0) {
           stackIn_16_0 = var11;
           if (var9 >= var7 &&
-            !this.a(1 + var4, (byte) 126, 1 + var5)) {
+            !this.isTileWalkable(1 + var4, (byte) 126, 1 + var5)) {
             stackIn_18_1 = 0;
           } else {
             stackIn_18_1 = 1;
@@ -126,7 +126,7 @@ final class fh {
         if (var10 != 0) {
           stackIn_23_0 = var10;
           if (var9 >= var7 &&
-            !this.a(var4 - 1, (byte) -125, 1 + var5)) {
+            !this.isTileWalkable(var4 - 1, (byte) -125, 1 + var5)) {
             stackIn_25_1 = 0;
           } else {
             stackIn_25_1 = 1;
@@ -154,19 +154,19 @@ final class fh {
         int var7;
         int var8;
         int var9;
-        nm var10;
+        Camera var10;
         boolean stackIn_18_0 = false;
         var5 = param0 / 24;
         var6 = param3 / 24;
         if (var5 >= 0 &&
           var6 >= 0 &&
-          this.field_i.field_e > var6) {
-          if (var5 >= this.field_i.field_d) {
+          this.level.field_e > var6) {
+          if (var5 >= this.level.field_d) {
             return false;
           }
           if (!param1) {
-            var10 = (nm) null;
-            this.a(110, false, (nm) null, -115);
+            var10 = (Camera) null;
+            this.a(110, false, (Camera) null, -115);
           }
           var7 = param0 % 24;
           var8 = 1;
@@ -178,14 +178,14 @@ final class fh {
               var8 = (byte)(var8 | 2);
             }
           }
-          var9 = (byte)(this.field_i.field_k[var6][var5] & 7);
+          var9 = (byte)(this.level.field_k[var6][var5] & 7);
           stackIn_18_0 = (var8 == (var8 & var9));
           return stackIn_18_0;
         }
         return false;
     }
 
-    final int a(int param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6) {
+    final int traceLine(int param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6) {
         int stackIn_15_0 = 0;
         int stackIn_22_0 = 0;
         float var8;
@@ -266,37 +266,37 @@ final class fh {
         int var3Lifetime1;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != 48) {
-          fh.a(true);
+          NavigationGrid.a(true);
         }
-        this.field_q = new qk[]{};
-        for (var2 = 0; var2 < this.field_i.field_e; var2++) {
-          for (var3 = 0; this.field_i.field_d > var3; var3++) {
-            if (this.a(var3, (byte) 5, var2) &&
-              this.a(1 + var3, (byte) 19, var2)) {
-              var4 = this.a(var3, (byte) -30, var2 + 1) ? 1 : 0;
-              var5 = this.a(var3 + 1, (byte) 127, var2 + 1) ? 1 : 0;
-              var6 = this.a(var3, (byte) 114, var2 - 1) ? 1 : 0;
-              var7 = this.a(1 + var3, (byte) 36, -1 + var2) ? 1 : 0;
+        this.field_q = new Waypoint[]{};
+        for (var2 = 0; var2 < this.level.field_e; var2++) {
+          for (var3 = 0; this.level.field_d > var3; var3++) {
+            if (this.isTileWalkable(var3, (byte) 5, var2) &&
+              this.isTileWalkable(1 + var3, (byte) 19, var2)) {
+              var4 = this.isTileWalkable(var3, (byte) -30, var2 + 1) ? 1 : 0;
+              var5 = this.isTileWalkable(var3 + 1, (byte) 127, var2 + 1) ? 1 : 0;
+              var6 = this.isTileWalkable(var3, (byte) 114, var2 - 1) ? 1 : 0;
+              var7 = this.isTileWalkable(1 + var3, (byte) 36, -1 + var2) ? 1 : 0;
               if (var4 != 0) {
                 if (var5 == 0) {
-                  this.field_q = this.a(false, new qk(24 * var3 + 1, var2 * 24 + 12), this.field_q);
+                  this.field_q = this.a(false, new Waypoint(24 * var3 + 1, var2 * 24 + 12), this.field_q);
                 }
                 if (var4 == 0 &&
                   var5 != 0) {
-                  this.field_q = this.a(false, new qk(-1 + (24 * var3 + 48), 24 * var2 + 12), this.field_q);
+                  this.field_q = this.a(false, new Waypoint(-1 + (24 * var3 + 48), 24 * var2 + 12), this.field_q);
                 }
               } else {
                 if (var5 != 0) {
-                  this.field_q = this.a(false, new qk(-1 + (24 * var3 + 48), 24 * var2 + 12), this.field_q);
+                  this.field_q = this.a(false, new Waypoint(-1 + (24 * var3 + 48), 24 * var2 + 12), this.field_q);
                 }
               }
               if (var6 != 0 &&
                 var7 == 0) {
-                this.field_q = this.a(false, new qk(1 + 24 * var3, 24 * (var2 + 1) - 12), this.field_q);
+                this.field_q = this.a(false, new Waypoint(1 + 24 * var3, 24 * (var2 + 1) - 12), this.field_q);
               }
               if (var6 == 0 &&
                 var7 != 0) {
-                this.field_q = this.a(false, new qk(47 + var3 * 24, (var2 + 1) * 24 - 12), this.field_q);
+                this.field_q = this.a(false, new Waypoint(47 + var3 * 24, (var2 + 1) * 24 - 12), this.field_q);
               }
             }
           }
@@ -345,7 +345,7 @@ final class fh {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-1478490344);
             }
-            var12 = (ra) (so.field_j.c(param0 ^ 60));
+            var12 = (ra) (UnitStateEvent.field_j.c(param0 ^ 60));
             if (var12 == null) {
               ak.a((byte) -111);
               return;
@@ -367,7 +367,7 @@ final class fh {
               MouseInputHandler.a("A1: " + ci.a(0), (Throwable) null, false);
               ak.a((byte) -118);
             } else {
-              var15 = (ra) (so.field_j.c(param0 ^ 76));
+              var15 = (ra) (UnitStateEvent.field_j.c(param0 ^ 76));
               if (var15 == null) {
                 ak.a((byte) -128);
                 return;
@@ -385,7 +385,7 @@ final class fh {
         }
     }
 
-    final void a(byte param0, nm param1) {
+    final void a(byte param0, Camera param1) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -423,8 +423,8 @@ final class fh {
         int var20Lifetime1;
         var22 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3_int = (int)(320.0f * param1.field_d - (float)param1.field_k);
-          var4 = (int)(param1.field_d * 240.0f - (float)param1.field_g);
+          var3_int = (int)(320.0f * param1.zoom - (float)param1.centerX);
+          var4 = (int)(param1.zoom * 240.0f - (float)param1.centerY);
           var5 = 0;
           var7 = 44 / ((param0 - 63) / 34);
           if (var3_int < -24) {
@@ -451,9 +451,9 @@ final class fh {
           this.field_b = var6;
           while (var6 < var9) {
             while (var5 < var8) {
-              if (var5 < this.field_i.field_d &&
-                this.field_i.field_e > var6) {
-                var14Lifetime1 = this.a(var5, var6, (byte) 126);
+              if (var5 < this.level.field_d &&
+                this.level.field_e > var6) {
+                var14Lifetime1 = this.getTile(var5, var6, (byte) 126);
                 var15Lifetime1 = (var14Lifetime1 & 127) >> 0;
                 if (var15Lifetime1 >= 0 &&
                   rn.field_a.length > var15Lifetime1) {
@@ -462,7 +462,7 @@ final class fh {
                   SoftwareRasterizer.fillRect(var3_int, var4, 24, 24, 7631988);
                 }
                 if (qq.field_h) {
-                  qp.field_w.c(Integer.toString(this.field_i.field_k[var6][var5]), 12 + var3_int, 12 + var4, 16777215, 1);
+                  qp.field_w.c(Integer.toString(this.level.field_k[var6][var5]), 12 + var3_int, 12 + var4, 16777215, 1);
                 }
                 var3_int += 24;
                 this.field_l[var13][var12] = var14Lifetime1;
@@ -482,29 +482,29 @@ final class fh {
             var6++;
           }
           if (qq.field_h) {
-            var14Lifetime2 = param1.a(MouseInputHandler.field_g, 2);
-            var15Lifetime2 = param1.a(true, bo.field_d);
+            var14Lifetime2 = param1.screenToWorldX(MouseInputHandler.field_g, 2);
+            var15Lifetime2 = param1.screenToWorldY(true, bo.field_d);
             for (var16 = 0; var16 < this.field_q.length; var16++) {
-              var17 = param1.c(this.field_q[var16].field_g, -20126);
-              var18 = param1.d(this.field_q[var16].field_h, 119);
+              var17 = param1.worldToScreenX(this.field_q[var16].x, -20126);
+              var18 = param1.worldToScreenY(this.field_q[var16].y, 119);
               for (var19 = 0; var19 < this.field_q.length; var19++) {
-                var20 = param1.c(this.field_q[var19].field_g, -20126);
-                var21 = param1.d(this.field_q[var19].field_h, 107);
+                var20 = param1.worldToScreenX(this.field_q[var19].x, -20126);
+                var21 = param1.worldToScreenY(this.field_q[var19].y, 107);
                 if (this.field_a[var16][var19] > 0) {
                   SoftwareRasterizer.drawLineAlpha(var17, var18, var20, var21, 65280, 48);
                 }
               }
-              if (-1 != this.a(var15Lifetime2, 113, var14Lifetime2, this.field_q[var16].field_h, this.field_q[var16].field_g)) {
-                var19Lifetime1 = param1.c(var14Lifetime2, -20126);
-                var20Lifetime1 = param1.d(var15Lifetime2, 122);
+              if (-1 != this.traceLineDefault(var15Lifetime2, 113, var14Lifetime2, this.field_q[var16].y, this.field_q[var16].x)) {
+                var19Lifetime1 = param1.worldToScreenX(var14Lifetime2, -20126);
+                var20Lifetime1 = param1.worldToScreenY(var15Lifetime2, 122);
                 SoftwareRasterizer.drawLine(var17, var18, var19Lifetime1, var20Lifetime1, 16711680);
               }
             }
             var23 = 0;
             var16Lifetime1 = var23;
             while (var23 < this.field_q.length) {
-              var17Lifetime1 = 320 + this.field_q[var23].field_g - param1.field_k;
-              var18Lifetime1 = -param1.field_g + (this.field_q[var23].field_h + 240);
+              var17Lifetime1 = 320 + this.field_q[var23].x - param1.centerX;
+              var18Lifetime1 = -param1.centerY + (this.field_q[var23].y + 240);
               SoftwareRasterizer.fillCircleAlpha(var17Lifetime1, var18Lifetime1, 2, 16711680, 256);
               qp.field_w.b(Integer.toString(var23), var17Lifetime1, var18Lifetime1, 16777215, 0, 64);
               var23++;
@@ -526,7 +526,7 @@ final class fh {
         }
     }
 
-    private final int a(qk param0, qk param1, byte param2) {
+    private final int a(Waypoint param0, Waypoint param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -538,7 +538,7 @@ final class fh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == -71) {
-            stackIn_4_0 = this.a(param0.field_h, -47, param0.field_g, param1.field_h, param1.field_g);
+            stackIn_4_0 = this.traceLineDefault(param0.y, -47, param0.x, param1.y, param1.x);
             return stackIn_4_0;
           }
           stackIn_2_0 = 94;
@@ -563,33 +563,33 @@ final class fh {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void computePixelSize(boolean param0) {
         boolean discarded$0 = false;
-        this.field_r = 24 * this.field_i.field_d;
+        this.pixelWidth = 24 * this.level.field_d;
         if (!param0) {
-          discarded$0 = this.a(-29, (byte) -50, -96);
+          discarded$0 = this.isTileWalkable(-29, (byte) -50, -96);
         }
-        this.field_c = this.field_i.field_e * 24;
+        this.pixelHeight = this.level.field_e * 24;
     }
 
-    final int a(int param0, int param1, byte param2) {
+    final int getTile(int param0, int param1, byte param2) {
         if (param0 < 0) {
           return 0;
         }
         if (param1 < 0) {
           return 0;
         }
-        if (param1 >= this.field_i.field_e) {
+        if (param1 >= this.level.field_e) {
           return 0;
         }
-        if (this.field_i.field_d <= param0) {
+        if (this.level.field_d <= param0) {
           return 0;
         }
         int var4 = 26 / ((param2 + 45) / 48);
-        return this.field_i.field_f[param1][param0];
+        return this.level.field_f[param1][param0];
     }
 
-    fh(fc param0) {
+    NavigationGrid(LevelData param0) {
         int[][] var8 = null;
         int[][] var7 = null;
         int[][] var6 = null;
@@ -597,10 +597,10 @@ final class fh {
         int var4 = 0;
         this.field_l = new int[41][55];
         try {
-          this.field_i = param0;
+          this.level = param0;
           this.a(48);
-          this.b(true);
-          var8 = this.field_i.field_k;
+          this.computePixelSize(true);
+          var8 = this.level.field_k;
           var7 = var8;
           var6 = var7;
           int[][] var2 = var6;
@@ -610,21 +610,21 @@ final class fh {
               this.field_p[var3][var4] = tq.b(1, var8[var3][var4]) == 0 ? 33554432 : 0;
             }
           }
-          this.field_k = new boolean[this.field_i.field_e][this.field_i.field_d];
+          this.field_k = new boolean[this.level.field_e][this.level.field_d];
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final IntrusiveDeque b(int param0, int param1, int param2, int param3, int param4) {
+    final IntrusiveDeque findPath(int param0, int param1, int param2, int param3, int param4) {
         int var17 = 0;
         int[] stackIn_29_0 = null;
         int stackIn_29_1 = 0;
         int stackIn_30_2 = 0;
         int var6;
         int var7;
-        qk var8;
-        qk var9;
+        Waypoint var8;
+        Waypoint var9;
         IntrusiveDeque var10;
         int var11;
         int[] var12;
@@ -634,7 +634,7 @@ final class fh {
         int var16;
         int var18;
         int var19;
-        nm var20;
+        Camera var20;
         int[] var21;
         int[] var22;
         int[] var23;
@@ -648,16 +648,16 @@ final class fh {
         var19 = ZombieDawnMulti.field_E ? 1 : 0;
         var6 = param3 / 24;
         var7 = param1 / 24;
-        if (!this.a(var6, (byte) 118, var7)) {
-          if (!this.a(var6, (byte) -25, var7 - 1)) {
-            if (!this.a(var6, (byte) 32, 1 + var7)) {
-              if (this.a(var6, (byte) 125, var7 + 2)) {
+        if (!this.isTileWalkable(var6, (byte) 118, var7)) {
+          if (!this.isTileWalkable(var6, (byte) -25, var7 - 1)) {
+            if (!this.isTileWalkable(var6, (byte) 32, 1 + var7)) {
+              if (this.isTileWalkable(var6, (byte) 125, var7 + 2)) {
                 param1 += 48;
               } else {
-                if (this.a(var6 + 1, (byte) 21, var7)) {
+                if (this.isTileWalkable(var6 + 1, (byte) 21, var7)) {
                   param3 += 24;
                 } else {
-                  if (this.a(var6 - 1, (byte) 116, var7)) {
+                  if (this.isTileWalkable(var6 - 1, (byte) 116, var7)) {
                     param3 -= 24;
                   }
                 }
@@ -671,24 +671,24 @@ final class fh {
         }
         var7Lifetime1 = param1 / 24;
         var6Lifetime1 = param3 / 24;
-        if (!this.a(var6Lifetime1, (byte) 22, var7Lifetime1)) {
+        if (!this.isTileWalkable(var6Lifetime1, (byte) 22, var7Lifetime1)) {
           return null;
         }
         if (!this.a(param3, true, true, param1)) {
-          if (!this.a(var6Lifetime1 - 1, (byte) 122, var7Lifetime1)) {
+          if (!this.isTileWalkable(var6Lifetime1 - 1, (byte) 122, var7Lifetime1)) {
             param3 = 24 + 24 * var6Lifetime1 - 1;
           } else {
-            if (!this.a(1 + var6Lifetime1, (byte) 119, var7Lifetime1)) {
+            if (!this.isTileWalkable(1 + var6Lifetime1, (byte) 119, var7Lifetime1)) {
               param3 = 24 * var6Lifetime1;
             }
           }
         }
-        var8 = new qk(param0, param2);
+        var8 = new Waypoint(param0, param2);
         if (param4 != 8760) {
-          var20 = (nm) null;
-          this.a(-105, true, (nm) null, 61);
+          var20 = (Camera) null;
+          this.a(-105, true, (Camera) null, 61);
         }
-        var9 = new qk(param3, param1);
+        var9 = new Waypoint(param3, param1);
         var10 = new IntrusiveDeque();
         var10.a(var9, false);
         var11 = this.a(var9, var8, (byte) -71);
@@ -748,7 +748,7 @@ final class fh {
           if (var15Lifetime2 == var24[var15Lifetime2]) {
             return null;
           }
-          var10.a(-25612, this.field_q[var15Lifetime2].a(30544));
+          var10.a(-25612, this.field_q[var15Lifetime2].copy(30544));
           var15Lifetime2 = var24[var15Lifetime2];
         }
         return var10;
@@ -762,52 +762,52 @@ final class fh {
         if (0 != va.field_a) {
           pf.a(89);
         }
-        ti.field_Y = 0;
+        UnitView.field_Y = 0;
         if (param0 != 31706) {
-          fh.b(-67);
+          NavigationGrid.b(-67);
         }
     }
 
-    private final boolean a(int param0, byte param1, int param2) {
+    private final boolean isTileWalkable(int param0, byte param1, int param2) {
         if (param0 < 0) {
           return false;
         }
         if (0 > param2) {
           return false;
         }
-        if (!(param2 < this.field_i.field_e)) {
+        if (!(param2 < this.level.field_e)) {
           return false;
         }
         int var4 = -18 / ((74 - param1) / 37);
-        if (!(param0 < this.field_i.field_d)) {
+        if (!(param0 < this.level.field_d)) {
           return false;
         }
-        return 0 != (1 & this.field_i.field_k[param2][param0]) ? true : false;
+        return 0 != (1 & this.level.field_k[param2][param0]) ? true : false;
     }
 
-    final int[][] d(int param0) {
+    final int[][] createDistanceGrid(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 <= 21) {
           this.field_o = -62;
         }
-        int[][] var6 = new int[this.field_i.field_e][this.field_i.field_d];
+        int[][] var6 = new int[this.level.field_e][this.level.field_d];
         int[][] var2 = var6;
-        for (var3 = 0; var3 < this.field_i.field_e; var3++) {
-          for (var4 = 0; var4 < this.field_i.field_d; var4++) {
-            var6[var3][var4] = !this.a(var4, (byte) -71, var3) ? -1 : 0;
+        for (var3 = 0; var3 < this.level.field_e; var3++) {
+          for (var4 = 0; var4 < this.level.field_d; var4++) {
+            var6[var3][var4] = !this.isTileWalkable(var4, (byte) -71, var3) ? -1 : 0;
           }
         }
         return var2;
     }
 
-    final int a(int param0, int param1, int param2, int param3, int param4) {
+    final int traceLineDefault(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 85 % ((33 - param1) / 62);
-        return this.a(param0, param2, -17201, param4, param3, true, false);
+        return this.traceLine(param0, param2, -17201, param4, param3, true, false);
     }
 
-    final void a(int param0, boolean param1, nm param2, int param3) {
+    final void a(int param0, boolean param1, Camera param2, int param3) {
         int var8 = 0;
         int var9 = 0;
         RuntimeException stackIn_83_0 = null;
@@ -827,11 +827,11 @@ final class fh {
         Sprite var16 = null;
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var5_int = (int)((float)(-param2.field_k) + 320.0f * param2.field_d);
+          var5_int = (int)((float)(-param2.centerX) + 320.0f * param2.zoom);
           if (var5_int < -24) {
             var5_int = var5_int % 24;
           }
-          var6 = (int)((float)(-param2.field_g) + param2.field_d * 240.0f);
+          var6 = (int)((float)(-param2.centerY) + param2.zoom * 240.0f);
           if (var6 < -24) {
             var6 = var6 % 24;
           }

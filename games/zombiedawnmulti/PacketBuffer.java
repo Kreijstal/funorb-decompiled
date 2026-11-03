@@ -171,7 +171,7 @@ class PacketBuffer extends IntrusiveNode {
           return;
         }
         if (ui.field_j != null) {
-          qk.a(ui.field_j, -113);
+          Waypoint.a(ui.field_j, -113);
         }
     }
 

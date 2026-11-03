@@ -270,7 +270,7 @@ final class s {
     }
 
     final static String a(byte param0) {
-        if (dj.field_k == id.field_B) {
+        if (dj.field_k == SceneObject.field_B) {
           return IntrusiveDequeCursor.field_j;
         }
         if (param0 != 32) {
@@ -315,9 +315,9 @@ final class s {
           !(param0 + param2 <= la.field_c.length)) {
           la.field_c = new int[2 * (param2 + param0)];
         }
-        if (fc.field_c == null ||
-          !(fc.field_c.length >= param0)) {
-          fc.field_c = new boolean[param0 * 2];
+        if (LevelData.field_c == null ||
+          !(LevelData.field_c.length >= param0)) {
+          LevelData.field_c = new boolean[param0 * 2];
         }
         lj.field_n = 0;
         ba.field_m = -2147483648;

@@ -29,7 +29,7 @@ final class fa extends cj {
         if (-2 != this.field_Lb) {
           return false;
         }
-        if (sj.field_p == 13) {
+        if (InfectionEvent.field_p == 13) {
           this.field_Lb = -1;
           return true;
         }

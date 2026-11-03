@@ -78,7 +78,7 @@ final class cg extends IntrusiveNode {
         field_i = null;
     }
 
-    final void a(nm param0, int param1) {
+    final void a(Camera param0, int param1) {
         int var3_int = 0;
         rq var4 = null;
         int var5 = 0;
@@ -110,7 +110,7 @@ final class cg extends IntrusiveNode {
         }
     }
 
-    final boolean a(gm param0, boolean param1) {
+    final boolean a(HumanView param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -122,11 +122,11 @@ final class cg extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3_int = param0.g(73);
+          var3_int = param0.getX(73);
           if (param1) {
             field_l = true;
           }
-          var4 = param0.h(81);
+          var4 = param0.getY(81);
           var5 = (rq) (this.field_k.c(80));
           while (true) {
             if (var5 == null) {

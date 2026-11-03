@@ -51,7 +51,7 @@ final class nk extends IntrusiveNode {
         int var7 = 0;
         int var8 = 0;
         IndexedSprite var9 = null;
-        jm stackIn_3_0 = null;
+        FightEvent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -216,7 +216,7 @@ final class nk extends IntrusiveNode {
         this.field_p = this.field_p + 6;
         if (this.field_r < this.field_p) {
           if (this.field_k) {
-            this.field_m.navigation.field_i.a((byte) 122);
+            this.field_m.navigation.level.a((byte) 122);
             this.field_m.navigation.a(48);
           }
           this.unlink(true);
@@ -318,7 +318,7 @@ final class nk extends IntrusiveNode {
             stackIn_7_1 = 90;
           }
           this.field_r = stackIn_7_1;
-          if (!this.field_m.navigation.a(-128, param2, param1)) {
+          if (!this.field_m.navigation.isPositionWalkable(-128, param2, param1)) {
             param2 = param2 - (param2 % 24 - 4);
           }
           this.field_p = 0;
@@ -345,7 +345,7 @@ final class nk extends IntrusiveNode {
               var12 = stackIn_19_0;
               if (!(var6 instanceof fd)) {
                 stackIn_29_0 = var12;
-                if (this.field_m.navigation.a(var8, -34, var7, this.field_i, this.field_o) == -1) {
+                if (this.field_m.navigation.traceLineDefault(var8, -34, var7, this.field_i, this.field_o) == -1) {
                   stackIn_30_1 = 0;
                 } else {
                   stackIn_30_1 = 1;
@@ -353,10 +353,10 @@ final class nk extends IntrusiveNode {
                 var12 = stackIn_29_0 & stackIn_30_1;
               } else {
                 stackIn_24_0 = var12;
-                if (-1 == this.field_m.navigation.a(-24 + (-24 + (var8 - 2)), 98, var7, this.field_i, this.field_o) &&
-                  this.field_m.navigation.a(-48 + var8 - 2, -58, var7 + 24, this.field_i, this.field_o) == -1 &&
-                  -1 == this.field_m.navigation.a(var8 + 2, -124, var7, this.field_i, this.field_o) &&
-                  this.field_m.navigation.a(2 + var8, 107, 24 + var7, this.field_i, this.field_o) == -1) {
+                if (-1 == this.field_m.navigation.traceLineDefault(-24 + (-24 + (var8 - 2)), 98, var7, this.field_i, this.field_o) &&
+                  this.field_m.navigation.traceLineDefault(-48 + var8 - 2, -58, var7 + 24, this.field_i, this.field_o) == -1 &&
+                  -1 == this.field_m.navigation.traceLineDefault(var8 + 2, -124, var7, this.field_i, this.field_o) &&
+                  this.field_m.navigation.traceLineDefault(2 + var8, 107, 24 + var7, this.field_i, this.field_o) == -1) {
                   stackIn_26_1 = 0;
                 } else {
                   stackIn_26_1 = 1;

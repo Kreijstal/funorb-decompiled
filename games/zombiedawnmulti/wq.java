@@ -82,7 +82,7 @@ final class wq {
         field_e = null;
     }
 
-    final static wf a(ga param0, int param1) {
+    final static PowerupEvent a(ga param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -92,7 +92,7 @@ final class wq {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        wf stackIn_1_0 = null;
+        PowerupEvent stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

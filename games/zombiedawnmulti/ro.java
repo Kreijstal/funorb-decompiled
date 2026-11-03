@@ -7,7 +7,7 @@ final class ro extends GameWorld {
     static boolean field_L;
     static String field_N;
 
-    ro(String[] param0, fc param1) {
+    ro(String[] param0, LevelData param1) {
         super(param0, param1);
     }
 

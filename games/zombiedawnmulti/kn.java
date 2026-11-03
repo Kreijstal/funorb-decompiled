@@ -41,7 +41,7 @@ final class kn {
         }
     }
 
-    final static so a(byte param0, ga param1) {
+    final static UnitStateEvent a(byte param0, ga param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -52,7 +52,7 @@ final class kn {
         int var8 = 0;
         int var9 = 0;
         String var10 = null;
-        so stackIn_3_0 = null;
+        UnitStateEvent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

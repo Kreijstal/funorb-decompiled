@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj extends GameEvent {
+final class InfectionEvent extends GameEvent {
     private int field_i;
     private int field_o;
     static int field_p;
@@ -25,7 +25,7 @@ final class sj extends GameEvent {
         RuntimeException var4 = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          id.field_B = oi.field_j;
+          SceneObject.field_B = oi.field_j;
           if (param2 == 255) {
             stackIn_9_0 = false;
             stackIn_10_1 = !(rj.field_J >= 13);
@@ -66,7 +66,7 @@ final class sj extends GameEvent {
         }
     }
 
-    sj(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    InfectionEvent(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         super(param0);
         this.field_o = param3;
         this.field_q = param4;
@@ -91,11 +91,11 @@ final class sj extends GameEvent {
           var4 = new int[me.field_f.length + 1];
           for (var5 = 0; me.field_f.length > var5; var5++) {
             var7[var5] = me.field_f[var5];
-            var4[var5] = nm.field_u[var5];
+            var4[var5] = Camera.field_u[var5];
           }
           var3[var3.length - 1] = param1;
           var4[-1 + var4.length] = param0;
-          nm.field_u = var4;
+          Camera.field_u = var4;
           me.field_f = var3;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "sj.F(" + param0 + ',' + param1 + ',' + param2 + ')');
@@ -158,8 +158,8 @@ final class sj extends GameEvent {
                 }
               }
             }
-            sj.a(param0, param1 + 0, param2, param3, var8, param5, var9);
-            sj.a(var10, param1 + 0, param2, param3, param4, var8, param6);
+            InfectionEvent.a(param0, param1 + 0, param2, param3, var8, param5, var9);
+            InfectionEvent.a(var10, param1 + 0, param2, param3, param4, var8, param6);
             return;
           }
           for (var7_intLifetime1 = param4 - 1; var7_intLifetime1 > param5; var7_intLifetime1--) {
@@ -186,34 +186,34 @@ final class sj extends GameEvent {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         Throwable decompiledCaughtException = null;
-        gm var3 = null;
+        HumanView var3 = null;
         RuntimeException var3_ref = null;
         Object var4 = null;
         GameCharacter var4_ref = null;
         Exception var5 = null;
-        qk var5_ref = null;
+        Waypoint var5_ref = null;
         GameCharacter var6 = null;
         try {
-          var3 = op.field_m.a(this.field_i, 70);
+          var3 = PortalEntryEvent.field_m.a(this.field_i, 70);
           var4 = null;
           try {
             if (this.field_l == -1) {
               stackIn_4_0 = null;
             } else {
-              stackIn_4_0 = op.field_m.a(this.field_l, false);
+              stackIn_4_0 = PortalEntryEvent.field_m.a(this.field_l, false);
             }
             var4_ref = stackIn_4_0;
             if (param0 != 0) {
-              sj.c(true);
+              InfectionEvent.c(true);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var5 = (Exception) (Object) decompiledCaughtException;
             return;
           }
-          var5_ref = new qk(this.field_q, this.field_n);
-          var6 = param1.a(this.field_k, var4_ref, var3, true, var5_ref);
-          var6.field_y = this.field_o;
+          var5_ref = new Waypoint(this.field_q, this.field_n);
+          var6 = param1.spawnInfectedZombie(this.field_k, var4_ref, var3, true, var5_ref);
+          var6.objectId = this.field_o;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -238,7 +238,7 @@ final class sj extends GameEvent {
     public static void c(boolean param0) {
         field_j = null;
         if (!param0) {
-          sj.a(-121, -52, -61, false, 25, -17, -24);
+          InfectionEvent.a(-121, -52, -61, false, 25, -17, -24);
         }
     }
 
@@ -251,7 +251,7 @@ final class sj extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 12319) {
-            sj.a(97, -25, -42, true, 8, 4, 118);
+            InfectionEvent.a(97, -25, -42, true, 8, 4, 118);
           }
           stackIn_3_0 = dp.a(0, false, param0);
           return stackIn_3_0;

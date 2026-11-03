@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fd extends id {
+final class fd extends SceneObject {
     static int field_F;
     boolean field_K;
     static cj field_O;
@@ -56,7 +56,7 @@ final class fd extends id {
         field_O = null;
     }
 
-    final void a(int param0, nm param1) {
+    final void draw(int param0, Camera param1) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -72,8 +72,8 @@ final class fd extends id {
           if (param0 != -10136) {
             field_M = (IntrusiveDeque) null;
           }
-          var3_int = param1.c(this.g(param0 ^ 10195), -20126);
-          var4 = -24 + param1.d(this.h(param0 ^ -10230), 127);
+          var3_int = param1.worldToScreenX(this.getX(param0 ^ 10195), -20126);
+          var4 = -24 + param1.worldToScreenY(this.getY(param0 ^ -10230), 127);
           if (!io.a(var3_int, var4, (byte) -110, param1)) {
             return;
           }
@@ -81,14 +81,14 @@ final class fd extends id {
             !io.a(var3_int, -24 + var4, (byte) -114, param1)) {
             return;
           }
-          var5 = this.g(-128) / 24;
-          var6 = this.h(-51) / 24;
+          var5 = this.getX(-128) / 24;
+          var6 = this.getY(-51) / 24;
           if (!he.field_a &&
             var5 >= 0 &&
-            var5 < fb.field_e.field_u.field_k[0].length &&
+            var5 < fb.field_e.navigation.field_k[0].length &&
             var6 >= 0 &&
-            var6 < fb.field_e.field_u.field_k.length &&
-            fb.field_e.field_u.field_k[var6][var5]) {
+            var6 < fb.field_e.navigation.field_k.length &&
+            fb.field_e.navigation.field_k[var6][var5]) {
             return;
           }
           if (this.field_H &&
@@ -131,9 +131,9 @@ final class fd extends id {
         }
     }
 
-    final void f(byte param0) {
+    final void tick(byte param0) {
         if (param0 > -79) {
-          this.f((byte) 89);
+          this.tick((byte) 89);
         }
     }
 
@@ -215,12 +215,12 @@ final class fd extends id {
               } else {
                 hd.field_q = -1;
                 vo.field_l = gn.field_K;
-                op.field_i = var6_int;
+                PortalEntryEvent.field_i = var6_int;
               }
             }
             if (ResourceArchive.field_n == vo.field_l &&
               fa.b(10, 8)) {
-              nm.field_c = s.field_e.readLong((byte) -30);
+              Camera.field_c = s.field_e.readLong((byte) -30);
               s.field_e.position = 0;
               pi.a((byte) -59, param2, param1, ki.field_a, param5);
               vo.field_l = lc.field_l;
@@ -231,7 +231,7 @@ final class fd extends id {
               var6_intLifetime1 = s.field_e.readUnsignedByte(31365);
               s.field_e.position = 0;
               oe.field_f = null;
-              op.field_i = var6_intLifetime1;
+              PortalEntryEvent.field_i = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -339,24 +339,24 @@ final class fd extends id {
                 mj.field_Fb[var8Lifetime1] = mj.field_Fb[var8Lifetime1] + 50;
               }
               s.field_e.a((byte) -116, mj.field_Fb);
-              stackIn_90_0 = op.field_i;
+              stackIn_90_0 = PortalEntryEvent.field_i;
               return stackIn_90_0;
             }
             if (vo.field_l == gn.field_K &&
               dd.a(0)) {
               ak.a((byte) -124);
-              if (op.field_i == 7 &&
+              if (PortalEntryEvent.field_i == 7 &&
                 !sk.field_j) {
                 sk.field_j = true;
                 stackIn_104_0 = -1;
                 return stackIn_104_0;
               }
-              if (op.field_i == 7) {
-                op.field_i = 3;
+              if (PortalEntryEvent.field_i == 7) {
+                PortalEntryEvent.field_i = 3;
               }
               ol.field_q = s.field_e.readString((byte) -31);
               sk.field_j = false;
-              stackIn_102_0 = op.field_i;
+              stackIn_102_0 = PortalEntryEvent.field_i;
               return stackIn_102_0;
             }
             if (ki.field_h == null) {

@@ -300,7 +300,7 @@ final class fb {
               this.field_a = 1;
               this.field_h = 65;
               this.field_c = this.field_c + 1;
-              this.field_c = op.field_m.currentTick - (tg.field_e.powerupReadyTick[this.field_j] - field_e.a(this.field_j, (byte) 109));
+              this.field_c = PortalEntryEvent.field_m.currentTick - (tg.field_e.powerupReadyTick[this.field_j] - field_e.a(this.field_j, (byte) 109));
               this.field_l = field_e.a(this.field_j, (byte) 108);
               if (this.field_l > this.field_c) {
                 return;
@@ -410,7 +410,7 @@ final class fb {
           this.field_a = 1;
           this.field_h = 65;
           this.field_c = this.field_c + 1;
-          this.field_c = op.field_m.currentTick - (tg.field_e.powerupReadyTick[this.field_j] - field_e.a(this.field_j, (byte) 109));
+          this.field_c = PortalEntryEvent.field_m.currentTick - (tg.field_e.powerupReadyTick[this.field_j] - field_e.a(this.field_j, (byte) 109));
           this.field_l = field_e.a(this.field_j, (byte) 108);
           if (this.field_l > this.field_c) {
             return;

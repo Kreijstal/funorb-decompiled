@@ -60,12 +60,12 @@ final class lp extends IntrusiveNode {
           }
           var5 = mj.field_Ib.i(param0 ^ 29767) + mj.field_Ib.field_w;
           if (var5 > 640) {
-            ti.field_Y = ti.field_Y + 5;
+            UnitView.field_Y = UnitView.field_Y + 5;
             return;
           }
           if (var5 < 635 &&
-            ti.field_Y > 0) {
-            ti.field_Y = ti.field_Y - 5;
+            UnitView.field_Y > 0) {
+            UnitView.field_Y = UnitView.field_Y - 5;
             return;
           }
           return;
@@ -88,27 +88,27 @@ final class lp extends IntrusiveNode {
           }
           var5Lifetime1 = mj.field_Ib.i(param0 ^ 29767) + mj.field_Ib.field_w;
           if (var5Lifetime1 > 640) {
-            ti.field_Y = ti.field_Y + 5;
+            UnitView.field_Y = UnitView.field_Y + 5;
             return;
           }
           if (var5Lifetime1 >= 635) {
             return;
           }
-          if (ti.field_Y <= 0) {
+          if (UnitView.field_Y <= 0) {
             return;
           }
-          ti.field_Y = ti.field_Y - 5;
+          UnitView.field_Y = UnitView.field_Y - 5;
           return;
         }
         if (var4Lifetime1 == 0) {
           var5Lifetime2 = mj.field_Ib.i(param0 ^ 29767) + mj.field_Ib.field_w;
           if (var5Lifetime2 > 640) {
-            ti.field_Y = ti.field_Y + 5;
+            UnitView.field_Y = UnitView.field_Y + 5;
             return;
           }
           if (var5Lifetime2 < 635 &&
-            ti.field_Y > 0) {
-            ti.field_Y = ti.field_Y - 5;
+            UnitView.field_Y > 0) {
+            UnitView.field_Y = UnitView.field_Y - 5;
             return;
           }
           return;
@@ -116,11 +116,11 @@ final class lp extends IntrusiveNode {
         rp.field_l.a(-11838, param2);
         var5Lifetime3 = mj.field_Ib.i(param0 ^ 29767) + mj.field_Ib.field_w;
         if (var5Lifetime3 > 640) {
-          ti.field_Y = ti.field_Y + 5;
+          UnitView.field_Y = UnitView.field_Y + 5;
         } else {
           if (var5Lifetime3 < 635 &&
-            ti.field_Y > 0) {
-            ti.field_Y = ti.field_Y - 5;
+            UnitView.field_Y > 0) {
+            UnitView.field_Y = UnitView.field_Y - 5;
           }
         }
     }
@@ -215,7 +215,7 @@ final class lp extends IntrusiveNode {
     final static void a(int param0, int param1) {
         uf.field_g = 0;
         uk.field_M = new ka[param0 * 15];
-        sj.field_m = param0;
+        InfectionEvent.field_m = param0;
         ub.field_ub = new int[3];
         if (param1 > -11) {
           field_f = (byte[][]) null;

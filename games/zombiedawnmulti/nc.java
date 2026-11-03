@@ -298,7 +298,7 @@ class nc {
                                   }
                                   if (var5 != db.field_c && (jq.field_d == null ||
                                     jq.field_d.k())) {
-                                    jq.field_d = nm.b(-128, 47);
+                                    jq.field_d = Camera.b(-128, 47);
                                   }
                                 } else {
                                   if (var6 == 13) {
@@ -474,7 +474,7 @@ class nc {
                         for (var8 = 0; var8 < 8; var8++) {
                           var14[var8] = 0;
                         }
-                        var15 = fc.field_m;
+                        var15 = LevelData.field_m;
                         for (var8 = 0; var8 < 8; var8++) {
                           var15[var8] = 0;
                         }
@@ -586,7 +586,7 @@ class nc {
         int var2Lifetime1;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_d == -7) {
-          wp.field_h.b(true, 1);
+          wp.field_h.draw(true, 1);
           return;
         }
         if (this.field_d == 11) {
@@ -598,7 +598,7 @@ class nc {
             return;
           }
           if (2 == this.field_d) {
-            wp.field_h.b(true, 1);
+            wp.field_h.draw(true, 1);
             SoftwareRasterizer.clearRect(0, 0, 640, 480);
             nn.a(!param0);
           }
@@ -608,9 +608,9 @@ class nc {
           var3 = 4 + ah.field_e.field_r + ah.field_e.field_J;
           var4 = 16777215;
           pb.field_e.b(af.field_a, 320, var2, var4, -1);
-          pb.field_e.b(jm.a(vh.field_Mb, false, 118, gg.field_k), 320, var3 + var2, var4, -1);
+          pb.field_e.b(FightEvent.a(vh.field_Mb, false, 118, gg.field_k), 320, var3 + var2, var4, -1);
           pb.field_e.b(on.a(true, gg.field_k, vh.field_Mb, false), 320, var2 + (3 * var3 + 38), var4, -1);
-          pb.field_e.b(op.a(vh.field_Mb, gg.field_k, 4, false), 320, 76 + (var2 + var3 * 4), var4, -1);
+          pb.field_e.b(PortalEntryEvent.a(vh.field_Mb, gg.field_k, 4, false), 320, 76 + (var2 + var3 * 4), var4, -1);
         }
         if (!param0) {
           this.a(-45);
@@ -670,7 +670,7 @@ class nc {
         if (var6Lifetime1 != -7) {
           mj.field_Hb[var6Lifetime1].b(0);
         } else {
-          wp.field_h.b(true, 1);
+          wp.field_h.draw(true, 1);
           SoftwareRasterizer.clearRect(0, 0, 640, 480);
           ClientException.field_e.h();
         }
@@ -701,7 +701,7 @@ class nc {
         }
         this.field_g.a(param2, param1, -31458, this.a(param0 - 6003, bo.field_d, MouseInputHandler.field_g));
         if (this.field_d == 8) {
-          fc.a((byte) 124, param1);
+          LevelData.a((byte) 124, param1);
         }
     }
 
@@ -796,7 +796,7 @@ class nc {
           stackIn_24_0 = wp.field_h;
           stackIn_24_1 = 122;
           stackIn_25_2 = (this.field_d != 2);
-          ((GameScreen) (Object) stackIn_24_0).a((byte) stackIn_24_1, stackIn_25_2);
+          ((GameScreen) (Object) stackIn_24_0).update((byte) stackIn_24_1, stackIn_25_2);
           if (-7 == this.field_d) {
             return;
           }
@@ -814,19 +814,19 @@ class nc {
                   continue;
                 }
               }
-              if (13 != sj.field_p &&
-                sj.field_p != 80) {
+              if (13 != InfectionEvent.field_p &&
+                InfectionEvent.field_p != 80) {
                 continue;
               }
               iq.field_f = false;
               continue;
             }
-            if (sj.field_p == 80) {
+            if (InfectionEvent.field_p == 80) {
               iq.field_f = true;
               continue;
             }
           }
-          if (sj.field_p != 13) {
+          if (InfectionEvent.field_p != 13) {
             this.c(false);
             if (-1 == this.field_g.field_d) {
               continue;
@@ -879,7 +879,7 @@ class nc {
           }
           if (this.field_g.field_d != var2 &&
             this.field_g.field_d != -1) {
-            nm.b(-128, 69);
+            Camera.b(-128, 69);
           }
         }
     }
@@ -975,7 +975,7 @@ class nc {
           if (var6 == 50) {
             if (FullscreenFocusCanvas.field_k.field_k != 1) {
               if (FullscreenFocusCanvas.field_k.field_k == 0) {
-                var12_ref_StringLifetime2 = jm.field_l;
+                var12_ref_StringLifetime2 = FightEvent.field_l;
               } else {
                 var12_ref_StringLifetime2 = jp.field_a;
               }

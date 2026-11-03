@@ -390,7 +390,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (ti.a((byte) -121, (CharSequence) ((Object) var4)) &&
+                      if (UnitView.a((byte) -121, (CharSequence) ((Object) var4)) &&
                         !(md.a((CharSequence) ((Object) var4), -9159) >= 10)) {
                         this.a(27200, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -449,7 +449,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 wa.a((byte) 43);
                 this.f(-58);
-                SocketConnector.field_h = GameCharacter.a(1, (java.awt.Component) ((Object) dk.field_Ib), ng.field_d, pi.field_i);
+                SocketConnector.field_h = GameCharacter.createRasterBuffer(1, (java.awt.Component) ((Object) dk.field_Ib), ng.field_d, pi.field_i);
                 this.a(73);
                 kj.field_r = hn.a((byte) -92);
                 do {

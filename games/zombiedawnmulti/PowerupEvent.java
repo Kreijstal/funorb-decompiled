@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wf extends GameEvent {
+final class PowerupEvent extends GameEvent {
     private int field_p;
     private boolean field_i;
     private int field_l;
@@ -96,7 +96,7 @@ final class wf extends GameEvent {
         String stackIn_96_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        id var3 = null;
+        SceneObject var3 = null;
         RuntimeException var3_ref = null;
         GameCharacter var4 = null;
         int var5 = 0;
@@ -108,53 +108,53 @@ final class wf extends GameEvent {
           if (this.field_i) {
             var3_int = this.field_q;
             if (var3_int == 9) {
-              nm.b(-126, 81);
+              Camera.b(-126, 81);
             } else {
               switch (var3_int) {
                 case 10:
-                  nm.b(-126, 83);
+                  Camera.b(-126, 83);
                   break;
                 case 4:
-                  nm.b(-127, 46);
+                  Camera.b(-127, 46);
                   break;
                 case 8:
-                  nm.b(-127, 35);
+                  Camera.b(-127, 35);
                   break;
                 case 18:
-                  nm.b(-128, 46);
+                  Camera.b(-128, 46);
                   break;
                 case 15:
-                  nm.b(param0 ^ -127, 80);
+                  Camera.b(param0 ^ -127, 80);
                   break;
                 case 5:
-                  nm.b(-126, 17);
+                  Camera.b(-126, 17);
                   break;
                 case 2:
-                  nm.b(-127, 46);
+                  Camera.b(-127, 46);
                   break;
                 case 1:
-                  nm.b(-127, 67);
+                  Camera.b(-127, 67);
                   break;
                 case 11:
-                  nm.b(param0 ^ -126, 86);
+                  Camera.b(param0 ^ -126, 86);
                   break;
                 case 13:
-                  nm.b(-128, 85);
+                  Camera.b(-128, 85);
                   break;
                 case 14:
-                  nm.b(param0 - 128, 92);
+                  Camera.b(param0 - 128, 92);
                   break;
                 case 3:
-                  nm.b(param0 - 128, 46);
+                  Camera.b(param0 - 128, 46);
                   break;
                 case 7:
-                  nm.b(-127, 46);
+                  Camera.b(-127, 46);
                   break;
                 case 17:
-                  nm.b(param0 - 127, 75);
+                  Camera.b(param0 - 127, 75);
                   break;
                 case 16:
-                  nm.b(param0 ^ -128, 84);
+                  Camera.b(param0 ^ -128, 84);
                   break;
                 default:
                   break;
@@ -189,17 +189,17 @@ final class wf extends GameEvent {
                   ((GameScreen) (Object) stackIn_85_0).a(stackIn_85_1, stackIn_86_2, this.field_s, (byte) -40, this.field_j);
                   break;
                 }
-                var5 = op.field_m.computeEffectDuration((byte) 32, this.field_j, 1000);
+                var5 = PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.field_j, 1000);
                 param1.a((byte) -111, this.field_s, this.field_q, var5, this.field_p);
                 break;
               case 4:
-                var4 = op.field_m.a(this.field_l, false);
+                var4 = PortalEntryEvent.field_m.a(this.field_l, false);
                 stackIn_76_0 = var4;
                 stackIn_77_1 = (this.field_o == 34);
                 stackIn_76_0.field_Hb = stackIn_77_1;
                 break;
               case 7:
-                var3 = op.field_m.a(this.field_l, (byte) 33);
+                var3 = PortalEntryEvent.field_m.a(this.field_l, (byte) 33);
                 if (var3 instanceof GameCharacter &&
                   37 == this.field_o) {
                   var8 = (GameCharacter) (var3);
@@ -207,16 +207,16 @@ final class wf extends GameEvent {
                 }
                 break;
               case 12:
-                param1.b(this.field_j, 0, op.field_m.computeEffectDuration((byte) 32, this.field_j, 750));
+                param1.b(this.field_j, 0, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.field_j, 750));
                 break;
               case 11:
-                param1.c(this.field_j, op.field_m.computeEffectDuration((byte) 32, this.field_j, 500), -2);
+                param1.c(this.field_j, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.field_j, 500), -2);
                 break;
             }
           } else {
             if (this.field_s == -1 &&
               this.field_p == -1) {
-              param1.b(this.field_q, param1.field_k.a(320, param0 + 2), this.field_j, param1.field_k.a(true, 240), -99);
+              param1.b(this.field_q, param1.camera.screenToWorldX(320, param0 + 2), this.field_j, param1.camera.screenToWorldY(true, 240), -99);
             } else {
               if (this.field_s != -1) {
                 param1.b(this.field_q, this.field_p, this.field_j, this.field_s, -46);
@@ -226,11 +226,11 @@ final class wf extends GameEvent {
             }
             this.field_f = this.field_f + 50;
             this.field_i = true;
-            param1.a(false, (GameEvent) (this));
-            nm.b(-127, 67);
+            param1.receiveEvent(false, (GameEvent) (this));
+            Camera.b(-127, 67);
           }
           if (param0 != 0) {
-            wf.a(11);
+            PowerupEvent.a(11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -247,7 +247,7 @@ final class wf extends GameEvent {
         }
     }
 
-    wf() {
+    PowerupEvent() {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

@@ -79,7 +79,7 @@ final class ko {
           if (param1 != 255 &&
             param1 < 19 && (!FullscreenFocusCanvas.field_k.a(45, -128) ||
             param1 == 17)) {
-            if (h.i(51603) && (jk.a((byte) -73, param1) ||
+            if (PortalView.i(51603) && (jk.a((byte) -73, param1) ||
               jk.a((byte) -122, param2))) {
               return false;
             }
@@ -87,7 +87,7 @@ final class ko {
               return false;
             }
             this.field_b[-1 + this.field_m] = new fb(190 + (this.field_m * 40 - 40), param1, this.field_m - 1);
-            this.field_b[-1 + this.field_m].field_l = -op.field_m.currentTick + tg.field_e.powerupReadyTick[this.field_m - 1];
+            this.field_b[-1 + this.field_m].field_l = -PortalEntryEvent.field_m.currentTick + tg.field_e.powerupReadyTick[this.field_m - 1];
             this.field_b[this.field_m - 1].a(0);
             return true;
           }
@@ -605,8 +605,8 @@ final class ko {
         }
     }
 
-    final void a(int param0, id param1, int param2, int param3) {
-        ti stackIn_8_0 = null;
+    final void a(int param0, SceneObject param1, int param2, int param3) {
+        UnitView stackIn_8_0 = null;
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
@@ -614,7 +614,7 @@ final class ko {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object var6 = null;
-        ti var6_ref = null;
+        UnitView var6_ref = null;
         GameCharacter var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -624,7 +624,7 @@ final class ko {
           regionExit1: {
             var5_int = this.e(-1);
             if (!(param1 instanceof jj)) {
-              var6_ref = (ti) (param1);
+              var6_ref = (UnitView) (param1);
               if (var6_ref instanceof GameCharacter) {
                 stackIn_8_0 = var6_ref;
               } else {
@@ -644,16 +644,16 @@ final class ko {
                   if (var8 == 17) {
                     if (var6_ref != null) {
                       param0 = -1;
-                      param2 = var6_ref.field_y;
+                      param2 = var6_ref.objectId;
                     }
-                    ok.a(-101, param0, ma.field_a, op.field_m.currentTick, param2, this.field_l);
+                    ok.a(-101, param0, ma.field_a, PortalEntryEvent.field_m.currentTick, param2, this.field_l);
                     break regionExit1;
                   }
                   if (3 == var8) {
                     if (var7 != null &&
                       var7.q(-14945) &&
-                      !var7.o(127)) {
-                      wd.a(var6_ref.field_y, -1, this.field_l, op.field_m.currentTick, ma.field_a);
+                      !var7.isBusy(127)) {
+                      wd.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
                       break regionExit1;
                     }
                     return;
@@ -668,25 +668,25 @@ final class ko {
                     if (var8 != 7 &&
                       var8 == 0) {
                     }
-                    wd.a(var6_ref.field_y, -1, this.field_l, op.field_m.currentTick, ma.field_a);
+                    wd.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
                     break regionExit1;
                   }
                   if (var7 != null &&
-                    !var7.o(88)) {
-                    wd.a(var6_ref.field_y, -1, this.field_l, op.field_m.currentTick, ma.field_a);
+                    !var7.isBusy(88)) {
+                    wd.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
                     break regionExit1;
                   }
                   return;
                 }
-                ok.a(-117, param0, ma.field_a, op.field_m.currentTick, param2, this.field_l);
+                ok.a(-117, param0, ma.field_a, PortalEntryEvent.field_m.currentTick, param2, this.field_l);
                 break regionExit1;
               }
-              nn.a(ma.field_a, op.field_m.currentTick, this.field_l, (byte) 102);
+              nn.a(ma.field_a, PortalEntryEvent.field_m.currentTick, this.field_l, (byte) 102);
             } else {
-              wd.a(param1.field_y, -1, this.field_l, op.field_m.currentTick, ma.field_a);
+              wd.a(param1.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
             }
           }
-          tg.field_e.powerupReadyTick[this.field_l] = op.field_m.currentTick + op.field_m.getPowerupCooldown(FullscreenFocusCanvas.field_k.field_g[this.field_l], var5_int, fb.field_e.field_M, false);
+          tg.field_e.powerupReadyTick[this.field_l] = PortalEntryEvent.field_m.currentTick + PortalEntryEvent.field_m.getPowerupCooldown(FullscreenFocusCanvas.field_k.field_g[this.field_l], var5_int, fb.field_e.localTeam, false);
           this.field_b[this.field_l].a(0);
           this.field_c = false;
           this.field_g = false;

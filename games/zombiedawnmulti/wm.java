@@ -39,9 +39,9 @@ final class wm extends gn {
     final static ao[] b(boolean param0) {
         if (!param0) {
           wm.b(false);
-          return new ao[]{hd.field_r, sf.field_d, so.field_o, km.field_W, mk.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
+          return new ao[]{hd.field_r, sf.field_d, UnitStateEvent.field_o, km.field_W, mk.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
         }
-        return new ao[]{hd.field_r, sf.field_d, so.field_o, km.field_W, mk.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
+        return new ao[]{hd.field_r, sf.field_d, UnitStateEvent.field_o, km.field_W, mk.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
     }
 
     final int g(byte param0) {

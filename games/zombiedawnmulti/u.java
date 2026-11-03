@@ -240,7 +240,7 @@ final class u extends IntrusiveNode {
             if (NetworkGameClient.field_B.c(-85)) {
               var1_int = 1;
             }
-            if (sj.field_p != 13) {
+            if (InfectionEvent.field_p != 13) {
               continue;
             }
             var2 = 1;
@@ -269,7 +269,7 @@ final class u extends IntrusiveNode {
           }
           if (var3 == 0 &&
             ho.field_q == 2) {
-            var4 = bl.a((byte) 118) - so.field_s;
+            var4 = bl.a((byte) 118) - UnitStateEvent.field_s;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               eb.a(false, true, 5);

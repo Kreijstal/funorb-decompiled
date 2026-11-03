@@ -66,7 +66,7 @@ final class el extends rg {
               gg.a(param7, param4, param9, true);
             }
             if (0 < InflaterDecompressor.field_a) {
-              so.a(param3 ^ 48, param4, param9, param1, param7);
+              UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
             }
             if (io.field_b &&
               JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
@@ -89,7 +89,7 @@ final class el extends rg {
                 gg.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
-                so.a(param3 ^ 48, param4, param9, param1, param7);
+                UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
                 JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
@@ -107,7 +107,7 @@ final class el extends rg {
               if (sq.field_Q > 0) {
                 gg.a(param7, param4, param9, true);
                 if (0 < InflaterDecompressor.field_a) {
-                  so.a(param3 ^ 48, param4, param9, param1, param7);
+                  UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (io.field_b &&
                   JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
@@ -121,7 +121,7 @@ final class el extends rg {
                 }
               } else {
                 if (0 < InflaterDecompressor.field_a) {
-                  so.a(param3 ^ 48, param4, param9, param1, param7);
+                  UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (!io.field_b) {
                   hf.field_e.field_Jb.field_wb = null;
@@ -168,7 +168,7 @@ final class el extends rg {
                 gg.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
-                so.a(param3 ^ 48, param4, param9, param1, param7);
+                UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
                 JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
@@ -192,7 +192,7 @@ final class el extends rg {
                 gg.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
-                so.a(param3 ^ 48, param4, param9, param1, param7);
+                UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (!io.field_b) {
                 hf.field_e.field_Jb.field_wb = null;
@@ -235,7 +235,7 @@ final class el extends rg {
                 gg.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
-                so.a(param3 ^ 48, param4, param9, param1, param7);
+                UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
                 JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
@@ -258,7 +258,7 @@ final class el extends rg {
                   gg.a(param7, param4, param9, true);
                 }
                 if (0 < InflaterDecompressor.field_a) {
-                  so.a(param3 ^ 48, param4, param9, param1, param7);
+                  UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (io.field_b &&
                   JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
@@ -276,7 +276,7 @@ final class el extends rg {
                 if (sq.field_Q > 0) {
                   gg.a(param7, param4, param9, true);
                   if (0 < InflaterDecompressor.field_a) {
-                    so.a(param3 ^ 48, param4, param9, param1, param7);
+                    UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
                   }
                   if (io.field_b &&
                     JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
@@ -290,7 +290,7 @@ final class el extends rg {
                   }
                 } else {
                   if (0 < InflaterDecompressor.field_a) {
-                    so.a(param3 ^ 48, param4, param9, param1, param7);
+                    UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
                   }
                   if (!io.field_b) {
                     hf.field_e.field_Jb.field_wb = null;

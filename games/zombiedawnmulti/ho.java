@@ -28,14 +28,14 @@ final class ho extends nc {
         }
     }
 
-    final static void a(byte param0, fh param1) {
+    final static void a(byte param0, NavigationGrid param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          oq.field_u = param1.field_i.field_k;
+          oq.field_u = param1.level.field_k;
           SocketConnector.a(-91);
           if (param0 >= -121) {
             ho.e(-95);
@@ -384,7 +384,7 @@ final class ho extends nc {
     final void a(boolean param0) {
         int var2_int = 0;
         try {
-          var2_int = (wn.a(-125, wf.field_m << 3) * 24 >> 16) + (175 + (4 * on.a(wf.field_m << 7, -18924) >> 16));
+          var2_int = (wn.a(-125, PowerupEvent.field_m << 3) * 24 >> 16) + (175 + (4 * on.a(PowerupEvent.field_m << 7, -18924) >> 16));
           SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, var2_int);
           SoftwareRasterizer.setClip(5, 5, 635, 475);
           GameKeyHandler.a(6, 3 + this.field_n, 469, 640 + (-this.field_n - this.field_n), (byte) 122);
@@ -429,7 +429,7 @@ final class ho extends nc {
             if (var9 == 0) {
               if (stackIn_29_0 == stackIn_29_1) {
                 var5 = ah.field_e.a(InflaterDecompressor.field_f);
-                var6 = ah.field_e.a(jm.field_l);
+                var6 = ah.field_e.a(FightEvent.field_l);
                 var7 = ah.field_e.a(jp.field_a);
                 stackIn_12_0 = (var5 > var6) ? var5 : var6;
                 var8 = stackIn_12_0;
@@ -456,7 +456,7 @@ final class ho extends nc {
             stackIn_29_1 = 74;
           }
           if (stackIn_29_0 != stackIn_29_1) {
-            ho.$cfr$intArgs$a$b55aceaa55ac(-52, (fh) null);
+            ho.$cfr$intArgs$a$b55aceaa55ac(-52, (NavigationGrid) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -495,14 +495,14 @@ final class ho extends nc {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$b55aceaa55ac(int param0, fh param1) {
+    final static void $cfr$intArgs$a$b55aceaa55ac(int param0, NavigationGrid param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          oq.field_u = param1.field_i.field_k;
+          oq.field_u = param1.level.field_k;
           SocketConnector.a(-91);
           if (param0 >= -121) {
             ho.e(-95);

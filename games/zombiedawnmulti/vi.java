@@ -206,7 +206,7 @@ final class vi {
                 var20 = "<img=" + (var12.field_Yb - 1) + ">" + var34;
               }
             } else {
-              var20 = "<img=" + (-4 + (var12.field_Yb + hg.field_ub)) + ">" + var34;
+              var20 = "<img=" + (-4 + (var12.field_Yb + ArmedHumanView.field_ub)) + ">" + var34;
             }
             var12.field_Ub.field_wb = var20;
             if (!var12.c((byte) 15)) {
@@ -306,7 +306,7 @@ final class vi {
             if (var23 != null) {
               var24_intLifetime1 = var12.field_Hb.field_yb.b(var23, -nj.field_h + (var12.field_zb - nj.field_h));
               var12.field_Hb.field_wb = var23;
-              var12.field_Hb.field_Y = 256 * var12.field_bc / so.field_r;
+              var12.field_Hb.field_Y = 256 * var12.field_bc / UnitStateEvent.field_r;
               var12.field_Hb.a(jk.field_f * var24_intLifetime1, var19, -(2 * nj.field_h) + var12.field_zb, nj.field_h, -3344);
               var19 = var19 + jk.field_f * var24_intLifetime1;
             }
@@ -319,7 +319,7 @@ final class vi {
             if (var12.field_T != 0 &&
               !var12.c((byte) 15)) {
               if (var12.field_Tb.field_T != 0) {
-                so.a(-21148, var12.field_ec, param1);
+                UnitStateEvent.a(-21148, var12.field_ec, param1);
               } else {
                 if (var12.field_cc.field_T == 0) {
                   WhirlpoolHasher.a(ka.field_t, param3, 0, 0, (byte) 81, vb.field_f, var12);
@@ -367,7 +367,7 @@ final class vi {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Nb) {
-                  var24Lifetime2 = vl.a(op.field_n, new String[]{var20}, 2);
+                  var24Lifetime2 = vl.a(PortalEntryEvent.field_n, new String[]{var20}, 2);
                 } else {
                   if (var12.field_Sb < var7) {
                     var25_int = var7 - var12.field_Sb;

@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class rj extends id {
+final class rj extends SceneObject {
     private boolean field_H;
     static int field_J;
     static Sprite[] field_I;
     static int field_F;
     private boolean field_G;
 
-    final void f(byte param0) {
+    final void tick(byte param0) {
         if (param0 >= -79) {
           rj.i(14);
         }
@@ -41,7 +41,7 @@ final class rj extends id {
         }
     }
 
-    final void a(int param0, nm param1) {
+    final void draw(int param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -52,12 +52,12 @@ final class rj extends id {
         RuntimeException var3 = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3_int = param1.c(this.g(65) - 24, -20126);
-          var4 = param1.d(this.h(96) - 24, 106);
+          var3_int = param1.worldToScreenX(this.getX(65) - 24, -20126);
+          var4 = param1.worldToScreenY(this.getY(96) - 24, 106);
           if (var3_int >= -48 &&
             var4 >= -48 &&
-            !(640.0f * param1.field_d < (float)var3_int) &&
-            !(480.0f * param1.field_d < (float)var4)) {
+            !(640.0f * param1.zoom < (float)var3_int) &&
+            !(480.0f * param1.zoom < (float)var4)) {
             if (!this.field_G) {
               if (!this.field_H) {
                 cp.field_X[this.field_C].g(var3_int, var4);

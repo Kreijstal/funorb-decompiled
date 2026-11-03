@@ -66,7 +66,7 @@ abstract class df extends WidgetContainer {
         if (param0 != -17306) {
           return;
         }
-        hg.field_rb = param1;
+        ArmedHumanView.field_rb = param1;
     }
 
     final static String a(int param0) {

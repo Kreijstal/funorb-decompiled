@@ -41,14 +41,14 @@ final class lj extends IntrusiveNode {
         this.field_r = this.field_r + 6;
         if (this.field_j < this.field_r) {
           if (this.field_o) {
-            fb.field_e.field_u.field_i.a((byte) 127);
-            fb.field_e.field_u.a(48);
+            fb.field_e.navigation.level.a((byte) 127);
+            fb.field_e.navigation.a(48);
           }
           this.unlink(true);
         }
     }
 
-    final void a(byte param0, nm param1) {
+    final void a(byte param0, Camera param1) {
         int stackIn_5_0 = 0;
         int stackIn_17_0 = 0;
         RuntimeException stackIn_29_0 = null;
@@ -70,8 +70,8 @@ final class lj extends IntrusiveNode {
         int var11Lifetime1;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3_int = param1.c(this.field_l, -20126);
-          var4 = param1.d(this.field_w, 122);
+          var3_int = param1.worldToScreenX(this.field_l, -20126);
+          var4 = param1.worldToScreenY(this.field_w, 122);
           if (this.field_g == null &&
             this.field_i == null) {
             stackIn_5_0 = 0;
@@ -149,7 +149,7 @@ final class lj extends IntrusiveNode {
           int var4_int = 43 / ((12 - param3) / 47);
           ib.field_b = param1;
           uq.field_f = param2;
-          uo.a(SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_b / 2, 1633);
+          AttackEvent.a(SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_b / 2, 1633);
           SimEntity.a(param0.field_J, param2.field_r + param2.field_J, 1829947600, param2.field_J, param0.field_r + param0.field_J);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "lj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -163,7 +163,7 @@ final class lj extends IntrusiveNode {
         this.field_g = null;
         this.field_o = false;
         this.field_i = null;
-        if (!fb.field_e.field_u.a(-113, param1, param0)) {
+        if (!fb.field_e.navigation.isPositionWalkable(-113, param1, param0)) {
           param1 = param1 - (param1 % 24 - 4);
         }
         this.field_w = param1;
@@ -171,10 +171,10 @@ final class lj extends IntrusiveNode {
         this.field_r = 0;
         this.field_l = param0;
         for (var4 = 0; this.field_u.length / 2 > var4; var4++) {
-          this.field_u[var4] = new um(jm.field_n[var4] * 6.0f, jm.field_k[var4] * 6.0f);
+          this.field_u[var4] = new um(FightEvent.field_n[var4] * 6.0f, FightEvent.field_k[var4] * 6.0f);
         }
         for (var4Lifetime1 = this.field_u.length / 2; this.field_u.length > var4Lifetime1; var4Lifetime1++) {
-          this.field_u[var4Lifetime1] = new um(jm.field_n[var4Lifetime1 % jm.field_n.length] * 6.0f / 2.0f, jm.field_k[var4Lifetime1 % jm.field_k.length] * 6.0f / 2.0f);
+          this.field_u[var4Lifetime1] = new um(FightEvent.field_n[var4Lifetime1 % FightEvent.field_n.length] * 6.0f / 2.0f, FightEvent.field_k[var4Lifetime1 % FightEvent.field_k.length] * 6.0f / 2.0f);
         }
         IntrusiveDeque discarded$0 = new IntrusiveDeque();
         if (!param2) {
@@ -183,7 +183,7 @@ final class lj extends IntrusiveNode {
           stackIn_11_1 = 90;
         }
         this.field_j = stackIn_11_1;
-        this.field_g = nm.b(-127, 0);
+        this.field_g = Camera.b(-127, 0);
     }
 
     static {

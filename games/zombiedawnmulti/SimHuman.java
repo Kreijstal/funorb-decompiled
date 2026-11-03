@@ -73,7 +73,7 @@ abstract class SimHuman extends SimUnit {
               var4 = var4 + (12 + (hp.a((byte) 108, g.field_a, 2 * var8) - var8));
             }
             if (this.a((byte) 125, var4, var3_int) &&
-              this.simulation.navigation.a(this.getY(1829947600), this.getX((byte) -112), -17201, var3_int, var4, false, false) != -1) {
+              this.simulation.navigation.traceLine(this.getY(1829947600), this.getX((byte) -112), -17201, var3_int, var4, false, false) != -1) {
               this.b(this.targetX, -94, this.targetY);
               this.targetX = var3_int;
               this.targetY = var4;
@@ -126,7 +126,7 @@ abstract class SimHuman extends SimUnit {
             var6 = var5.getX((byte) -112) - this.getX((byte) -112);
             var7 = var5.getY(param2 ^ 1829953258) - this.getY(1829947600);
             if (var6 * var6 + var7 * var7 < param1 * param1 && (param0 ||
-              this.simulation.navigation.a(var5.getY(1829947600), var5.getX((byte) -112), param2 ^ -21771, this.getX((byte) -112), this.getY(param2 + 1829941910), false, true) != -1)) {
+              this.simulation.navigation.traceLine(var5.getY(1829947600), var5.getX((byte) -112), param2 ^ -21771, this.getX((byte) -112), this.getY(param2 + 1829941910), false, true) != -1)) {
               return var5;
             }
           }
@@ -300,7 +300,7 @@ abstract class SimHuman extends SimUnit {
           regionExit1: {
             ClientException.field_a[var3] = 0;
             if (~(-1 + this.field_lb) != ~var3 && (!this.a((byte) 108, this.field_qb[var3], this.field_ub[var3]) ||
-              -1 == this.simulation.navigation.a(this.field_qb[var3], 95, this.field_ub[var3], this.getY(1829947600), this.getX((byte) -112)))) {
+              -1 == this.simulation.navigation.traceLineDefault(this.field_qb[var3], 95, this.field_ub[var3], this.getY(1829947600), this.getX((byte) -112)))) {
               ClientException.field_a[var3] = -1;
               break regionExit1;
             }
@@ -642,7 +642,7 @@ abstract class SimHuman extends SimUnit {
                   var17 = -var8 + var15;
                   var18 = var16 - var9;
                   if (var4 > var17 * var17 + var18 * var18 && (param0 ||
-                    this.simulation.navigation.a(var16, var15, -17201, var8, var9, false, true) != -1)) {
+                    this.simulation.navigation.traceLine(var16, var15, -17201, var8, var9, false, true) != -1)) {
                     return true;
                   }
                 }

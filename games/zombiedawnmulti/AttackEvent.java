@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uo extends GameEvent {
+final class AttackEvent extends GameEvent {
     static String field_j;
     private int field_l;
     private int field_k;
@@ -26,17 +26,17 @@ final class uo extends GameEvent {
         if (param0) {
           var3 = var2.position;
           var2.a(-116, 2);
-          var2.a(fg.field_k, fg.field_k.length, 0, 123);
+          var2.a(ScoreUpdateEvent.field_k, ScoreUpdateEvent.field_k.length, 0, 123);
           var2.a(123, pb.field_h);
           var2.a(125, sc.field_f);
           var2.a(tg.field_a, tg.field_a.length, 0, 119);
           var2.e(113, var2.position - var3);
           return;
         }
-        uo.b(true, -17);
+        AttackEvent.b(true, -17);
         var3Lifetime1 = var2.position;
         var2.a(-116, 2);
-        var2.a(fg.field_k, fg.field_k.length, 0, 123);
+        var2.a(ScoreUpdateEvent.field_k, ScoreUpdateEvent.field_k.length, 0, 123);
         var2.a(123, pb.field_h);
         var2.a(125, sc.field_f);
         var2.a(tg.field_a, tg.field_a.length, 0, 119);
@@ -57,7 +57,7 @@ final class uo extends GameEvent {
 
     final void a(int param0, GameScreen param1) {
         try {
-          param1.a(-1181, this.field_l, this.field_m, this.field_i, this.field_k);
+          param1.applyAttack(-1181, this.field_l, this.field_m, this.field_i, this.field_k);
           if (param0 != 0) {
             this.field_k = 117;
           }
@@ -97,7 +97,7 @@ final class uo extends GameEvent {
         bp.field_r = param0;
     }
 
-    uo() {
+    AttackEvent() {
     }
 
     static {

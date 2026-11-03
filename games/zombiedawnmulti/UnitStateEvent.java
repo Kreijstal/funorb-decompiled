@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so extends GameEvent {
+final class UnitStateEvent extends GameEvent {
     private int field_n;
     private int field_i;
     private int field_m;
@@ -20,7 +20,7 @@ final class so extends GameEvent {
     final void a(byte param0) {
         super.a((byte) -111);
         if (param0 >= -47) {
-          so.a(true, -39, (CharSequence) null);
+          UnitStateEvent.a(true, -39, (CharSequence) null);
         }
         fk.field_n.a((IntrusiveNode) (this), false);
     }
@@ -82,11 +82,11 @@ final class so extends GameEvent {
         uc.field_b = new String[4];
         uc.field_b[2] = wk.field_K;
         uc.field_b[3] = bb.field_h;
-        uc.field_b[0] = nm.field_b;
+        uc.field_b[0] = Camera.field_b;
         we.field_g = new String[51];
         uc.field_b[1] = ji.field_a;
         we.field_g[4] = cd.field_Lb;
-        we.field_g[14] = jm.field_p;
+        we.field_g[14] = FightEvent.field_p;
         we.field_g[21] = r.field_d;
         we.field_g[1] = ua.field_K;
         we.field_g[12] = cd.field_Fb;
@@ -94,20 +94,20 @@ final class so extends GameEvent {
         we.field_g[18] = ci.field_h;
         we.field_g[13] = vk.field_K;
         we.field_g[6] = qo.field_t;
-        we.field_g[0] = qk.field_f;
+        we.field_g[0] = Waypoint.field_f;
         we.field_g[19] = ah.field_b;
         we.field_g[5] = qo.field_t;
-        we.field_g[15] = wf.field_n;
+        we.field_g[15] = PowerupEvent.field_n;
         we.field_g[45] = ZombieDawnMulti.field_F;
         we.field_g[20] = s.field_g;
-        we.field_g[3] = fg.field_l;
+        we.field_g[3] = ScoreUpdateEvent.field_l;
         we.field_g[17] = NetworkGameClient.field_r;
         we.field_g[11] = ra.field_i;
         we.field_g[7] = qf.field_d;
         we.field_g[2] = r.field_b;
         we.field_g[36] = WhirlpoolHasher.field_i;
         we.field_g[39] = "Shouldn't See Me";
-        we.field_g[35] = lq.field_a;
+        we.field_g[35] = DualLinkDeque.field_a;
         we.field_g[49] = vl.field_j[1];
         we.field_g[50] = df.field_L;
         we.field_g[48] = vl.field_j[0];
@@ -185,14 +185,14 @@ final class so extends GameEvent {
         wq.field_g[15][0] = he.field_c;
         wq.field_g[16][0] = ha.field_h;
         wq.field_g[17][0] = bb.field_i;
-        wq.field_g[18][0] = ti.field_Z;
+        wq.field_g[18][0] = UnitView.field_Z;
         wq.field_g[61][0] = fk.field_o;
         wq.field_g[60][0] = og.field_P;
         wq.field_g[59][0] = hq.field_k;
         wq.field_g[58][0] = MusicPatch.field_i;
         wq.field_g[57][0] = wi.field_p;
         wq.field_g[56][0] = em.field_V;
-        wq.field_g[55][0] = h.field_F;
+        wq.field_g[55][0] = PortalView.field_F;
         wq.field_g[54][0] = df.field_O;
         wq.field_g[53][0] = ia.field_u;
         wq.field_g[52][0] = bb.field_m;
@@ -212,7 +212,7 @@ final class so extends GameEvent {
         wq.field_g[37][0] = uf.field_c;
         wq.field_g[38][0] = InflaterDecompressor.field_g;
         wq.field_g[0][1] = cj.field_db;
-        wq.field_g[1][1] = op.field_j;
+        wq.field_g[1][1] = PortalEntryEvent.field_j;
         wq.field_g[2][1] = UiWidget.field_t;
         wq.field_g[3][1] = hi.field_Nb;
         wq.field_g[4][1] = ha.field_n;
@@ -228,7 +228,7 @@ final class so extends GameEvent {
         wq.field_g[14][1] = cc.field_d;
         wq.field_g[15][1] = pp.field_o;
         wq.field_g[16][1] = pl.field_D;
-        wq.field_g[17][1] = fh.field_e;
+        wq.field_g[17][1] = NavigationGrid.field_e;
         wq.field_g[18][1] = vf.field_a;
         wq.field_g[61][1] = lj.field_q;
         wq.field_g[60][1] = ih.field_b;
@@ -238,7 +238,7 @@ final class so extends GameEvent {
         wq.field_g[56][1] = lh.field_a;
         wq.field_g[55][1] = ResourceArchive.field_c;
         if (param0 != -6445) {
-          so.a(-95);
+          UnitStateEvent.a(-95);
         }
         wq.field_g[54][1] = ResourceArchive.field_h;
         wq.field_g[53][1] = cr.field_g;
@@ -402,8 +402,8 @@ final class so extends GameEvent {
             var7.field_zb = 0;
             if (hl.b(0)) {
               gg.field_m.field_wb = ClientException.field_l.toUpperCase();
-              var9 = (2 + fc.field_a.field_zb) / 2;
-              en.field_b.a(40, fc.field_a.field_z - 40, var9 - 2, 0, -3344);
+              var9 = (2 + LevelData.field_a.field_zb) / 2;
+              en.field_b.a(40, LevelData.field_a.field_z - 40, var9 - 2, 0, -3344);
               if (JaggrabDownloader.field_c.field_mc > JaggrabDownloader.field_c.field_cc) {
                 en.field_b.field_wb = p.field_c.toUpperCase();
                 en.field_b.field_Z = true;
@@ -431,8 +431,8 @@ final class so extends GameEvent {
                   en.field_b.field_ab = he.field_i.field_X;
                 }
               }
-              GameKeyHandler.field_a.a(40, -40 + fc.field_a.field_z, fc.field_a.field_zb - var9, var9, -3344);
-              GameKeyHandler.field_a.field_wb = qk.field_f.toUpperCase();
+              GameKeyHandler.field_a.a(40, -40 + LevelData.field_a.field_z, LevelData.field_a.field_zb - var9, var9, -3344);
+              GameKeyHandler.field_a.field_wb = Waypoint.field_f.toUpperCase();
               var8 = GameKeyHandler.field_a;
               stackIn_20_0 = GameKeyHandler.field_a;
               stackIn_21_1 = (param3) && (0L == qi.field_c);
@@ -720,14 +720,14 @@ final class so extends GameEvent {
                 (var19 != 0)) {
                 var9_ref_String = JaggrabDownloader.field_c.field_Nb;
                 gg.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
-                eb.field_B.a(40, fc.field_a.field_z - 40, fc.field_a.field_zb, 0, -3344);
+                eb.field_B.a(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
                 eb.field_B.field_wb = vl.a(mp.field_a, new String[]{var9_ref_String}, 2);
                 var8 = eb.field_B;
               }
             } else {
               var9_ref_String = JaggrabDownloader.field_c.field_Nb;
               gg.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
-              eb.field_B.a(40, fc.field_a.field_z - 40, fc.field_a.field_zb, 0, -3344);
+              eb.field_B.a(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
               eb.field_B.field_wb = vl.a(mp.field_a, new String[]{var9_ref_String}, 2);
               var8 = eb.field_B;
             }
@@ -751,7 +751,7 @@ final class so extends GameEvent {
             stackIn_176_1 = -11838;
             stackIn_177_2 = (param1) && (!param2) && (!io.field_b);
             ((cj) (Object) stackIn_176_0).a(stackIn_176_1, stackIn_177_2);
-            stackIn_181_0 = fc.field_a;
+            stackIn_181_0 = LevelData.field_a;
             stackIn_181_1 = -11838;
             stackIn_182_2 = (param1) && (!param2) && (!io.field_b);
             ((cj) (Object) stackIn_181_0).a(stackIn_181_1, stackIn_182_2);
@@ -891,9 +891,9 @@ final class so extends GameEvent {
 
     final void a(int param0, GameScreen param1) {
         try {
-          param1.a(this.field_v, this.field_q, false, this.field_m, this.field_n, this.field_u, this.field_p, this.field_i);
+          param1.applyUnitState(this.field_v, this.field_q, false, this.field_m, this.field_n, this.field_u, this.field_p, this.field_i);
           if (param0 != 0) {
-            so.a(-46, (String) null);
+            UnitStateEvent.a(-46, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "so.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -914,7 +914,7 @@ final class so extends GameEvent {
         this.field_i = param6;
     }
 
-    so() {
+    UnitStateEvent() {
     }
 
     static {

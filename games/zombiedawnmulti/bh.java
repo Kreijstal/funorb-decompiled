@@ -215,7 +215,7 @@ final class bh {
             } else {
               var10_int = 0;
               while (!(qo.field_r.length <= var10_int)) {
-                if (0 == (fg.field_k[var10_int / 8] & 1 << (7 & var10_int))) {
+                if (0 == (ScoreUpdateEvent.field_k[var10_int / 8] & 1 << (7 & var10_int))) {
                   var10_int++;
                   continue;
                 }

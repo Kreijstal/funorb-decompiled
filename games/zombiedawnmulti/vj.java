@@ -243,7 +243,7 @@ final class vj extends nc {
           var11 = gg.field_b[var10];
           var12 = gg.field_l[var10];
           var13 = gg.field_j[var10];
-          var14 = var12 + wf.field_m / var11 % var13;
+          var14 = var12 + PowerupEvent.field_m / var11 % var13;
           var21 = am.a(var14, this.field_o, var9, 1, this.field_n);
           og.h((byte) 110);
           var21.g(47, 57);
@@ -291,7 +291,7 @@ final class vj extends nc {
           var11Lifetime1 = gg.field_b[var10Lifetime1];
           var12Lifetime1 = gg.field_l[var10Lifetime1];
           var13Lifetime1 = gg.field_j[var10Lifetime1];
-          var14Lifetime1 = var12Lifetime1 + wf.field_m / var11Lifetime1 % var13Lifetime1;
+          var14Lifetime1 = var12Lifetime1 + PowerupEvent.field_m / var11Lifetime1 % var13Lifetime1;
           var26 = am.a(var14Lifetime1, this.field_o, var9Lifetime1, 1, this.field_n);
           og.h((byte) 110);
           var26.g(47, 57);
@@ -339,7 +339,7 @@ final class vj extends nc {
           var11Lifetime2 = gg.field_b[var10Lifetime2];
           var12Lifetime2 = gg.field_l[var10Lifetime2];
           var13Lifetime2 = gg.field_j[var10Lifetime2];
-          var14Lifetime2 = var12Lifetime2 + wf.field_m / var11Lifetime2 % var13Lifetime2;
+          var14Lifetime2 = var12Lifetime2 + PowerupEvent.field_m / var11Lifetime2 % var13Lifetime2;
           var31 = am.a(var14Lifetime2, this.field_o, var9Lifetime2, 1, this.field_n);
           og.h((byte) 110);
           var31.g(47, 57);
@@ -387,7 +387,7 @@ final class vj extends nc {
           var11Lifetime3 = gg.field_b[var10Lifetime3];
           var12Lifetime3 = gg.field_l[var10Lifetime3];
           var13Lifetime3 = gg.field_j[var10Lifetime3];
-          var14Lifetime3 = var12Lifetime3 + wf.field_m / var11Lifetime3 % var13Lifetime3;
+          var14Lifetime3 = var12Lifetime3 + PowerupEvent.field_m / var11Lifetime3 % var13Lifetime3;
           var36 = am.a(var14Lifetime3, this.field_o, var9Lifetime3, 1, this.field_n);
           og.h((byte) 110);
           var36.g(47, 57);
@@ -431,7 +431,7 @@ final class vj extends nc {
           var11Lifetime4 = gg.field_b[var10Lifetime4];
           var12Lifetime4 = gg.field_l[var10Lifetime4];
           var13Lifetime4 = gg.field_j[var10Lifetime4];
-          var14Lifetime4 = var12Lifetime4 + wf.field_m / var11Lifetime4 % var13Lifetime4;
+          var14Lifetime4 = var12Lifetime4 + PowerupEvent.field_m / var11Lifetime4 % var13Lifetime4;
           var41 = am.a(var14Lifetime4, this.field_o, var9Lifetime4, 1, this.field_n);
           og.h((byte) 110);
           var41.g(47, 57);
@@ -471,7 +471,7 @@ final class vj extends nc {
           var11Lifetime5 = gg.field_b[var10Lifetime5];
           var12Lifetime5 = gg.field_l[var10Lifetime5];
           var13Lifetime5 = gg.field_j[var10Lifetime5];
-          var14Lifetime5 = var12Lifetime5 + wf.field_m / var11Lifetime5 % var13Lifetime5;
+          var14Lifetime5 = var12Lifetime5 + PowerupEvent.field_m / var11Lifetime5 % var13Lifetime5;
           var46 = am.a(var14Lifetime5, this.field_o, var9Lifetime5, 1, this.field_n);
           og.h((byte) 110);
           var46.g(47, 57);
@@ -511,7 +511,7 @@ final class vj extends nc {
           var11Lifetime6 = gg.field_b[var10Lifetime6];
           var12Lifetime6 = gg.field_l[var10Lifetime6];
           var13Lifetime6 = gg.field_j[var10Lifetime6];
-          var14Lifetime6 = var12Lifetime6 + wf.field_m / var11Lifetime6 % var13Lifetime6;
+          var14Lifetime6 = var12Lifetime6 + PowerupEvent.field_m / var11Lifetime6 % var13Lifetime6;
           var51 = am.a(var14Lifetime6, this.field_o, var9Lifetime6, 1, this.field_n);
           og.h((byte) 110);
           var51.g(47, 57);
@@ -551,7 +551,7 @@ final class vj extends nc {
           var11Lifetime7 = gg.field_b[var10Lifetime7];
           var12Lifetime7 = gg.field_l[var10Lifetime7];
           var13Lifetime7 = gg.field_j[var10Lifetime7];
-          var14Lifetime7 = var12Lifetime7 + wf.field_m / var11Lifetime7 % var13Lifetime7;
+          var14Lifetime7 = var12Lifetime7 + PowerupEvent.field_m / var11Lifetime7 % var13Lifetime7;
           var56 = am.a(var14Lifetime7, this.field_o, var9Lifetime7, 1, this.field_n);
           og.h((byte) 110);
           var56.g(47, 57);
@@ -594,7 +594,7 @@ final class vj extends nc {
         var11Lifetime8 = gg.field_b[var10Lifetime8];
         var12Lifetime8 = gg.field_l[var10Lifetime8];
         var13Lifetime8 = gg.field_j[var10Lifetime8];
-        var14Lifetime8 = var12Lifetime8 + wf.field_m / var11Lifetime8 % var13Lifetime8;
+        var14Lifetime8 = var12Lifetime8 + PowerupEvent.field_m / var11Lifetime8 % var13Lifetime8;
         Sprite var61 = am.a(var14Lifetime8, this.field_o, var9Lifetime8, 1, this.field_n);
         og.h((byte) 110);
         var61.g(47, 57);

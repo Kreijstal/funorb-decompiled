@@ -83,7 +83,7 @@ final class dm extends cj {
         return !this.c(0) ? true : false;
     }
 
-    final static sj a(byte param0, ga param1) {
+    final static InfectionEvent a(byte param0, ga param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -92,8 +92,8 @@ final class dm extends cj {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        sj stackIn_2_0 = null;
-        sj stackIn_4_0 = null;
+        InfectionEvent stackIn_2_0 = null;
+        InfectionEvent stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -103,14 +103,14 @@ final class dm extends cj {
           var3 = param1.readUnsignedShort((byte) 69);
           var4 = param1.readUnsignedShort((byte) 69);
           if (param0 < 37) {
-            stackIn_2_0 = (sj) null;
+            stackIn_2_0 = (InfectionEvent) null;
             return stackIn_2_0;
           }
           var5 = param1.readUnsignedShort((byte) 69);
           var6 = param1.readInt(-1478490344);
           var7 = param1.readInt(-1478490344);
           var8 = param1.readUnsignedByte(31365);
-          stackIn_4_0 = new sj(var2_int, var3, var4, var5, var6, var7, var8);
+          stackIn_4_0 = new InfectionEvent(var2_int, var3, var4, var5, var6, var7, var8);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

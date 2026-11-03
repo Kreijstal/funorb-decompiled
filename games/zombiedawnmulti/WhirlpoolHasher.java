@@ -317,11 +317,11 @@ final class WhirlpoolHasher {
           !tl.d((byte) -20)) {
           var3 = 0;
         }
-        if (sj.field_p == 84) {
+        if (InfectionEvent.field_p == 84) {
           if (var3 != 0) {
             if (rm.field_a.length() > 0) {
               var4_ref_String = rm.field_a.toString();
-              if (!so.a(-115, var4_ref_String)) {
+              if (!UnitStateEvent.a(-115, var4_ref_String)) {
                 var5 = va.field_a;
                 if (var5 == 0 &&
                   JaggrabDownloader.field_c != null) {
@@ -348,7 +348,7 @@ final class WhirlpoolHasher {
           }
           return true;
         }
-        if (sj.field_p == 85) {
+        if (InfectionEvent.field_p == 85) {
           if (var3 != 0 &&
             rm.field_a.length() > 0) {
             lf.a(' ', rm.field_a.length() - 1, 0, rm.field_a);

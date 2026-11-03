@@ -35,7 +35,7 @@ final class bb extends IntrusiveNode {
     }
 
     final static String c(int param0) {
-        if (dj.field_k == id.field_B) {
+        if (dj.field_k == SceneObject.field_B) {
           return am.field_a;
         }
         if (param0 != -19385) {

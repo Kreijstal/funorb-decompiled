@@ -5,11 +5,11 @@ abstract class qb {
     static ip field_e;
     static int[] field_a;
     static String field_o;
-    lq field_g;
-    lq field_j;
+    DualLinkDeque field_g;
+    DualLinkDeque field_j;
     static IndexedSprite field_h;
-    lq field_c;
-    lq field_l;
+    DualLinkDeque field_c;
+    DualLinkDeque field_l;
     PacketBuffer field_b;
     long field_f;
     int field_d;
@@ -39,10 +39,10 @@ abstract class qb {
 
     final int d(int param0) {
         if (param0 == 20) {
-          return this.field_c.a((byte) 98) + this.field_l.a((byte) 98);
+          return this.field_c.size((byte) 98) + this.field_l.size((byte) 98);
         }
         this.field_d = 116;
-        return this.field_c.a((byte) 98) + this.field_l.a((byte) 98);
+        return this.field_c.size((byte) 98) + this.field_l.size((byte) 98);
     }
 
     final static void a(int param0, byte param1, pd param2, int param3) {
@@ -83,12 +83,12 @@ abstract class qb {
           if (20 <= this.a(0)) {
             throw new RuntimeException();
           }
-          this.field_g.a(param0 ^ 488002304, var8);
+          this.field_g.add(param0 ^ 488002304, var8);
         } else {
           if (!(20 > this.d(20))) {
             throw new RuntimeException();
           }
-          this.field_c.a(29664, var8);
+          this.field_c.add(29664, var8);
         }
         if (param0 == 487989472) {
           return var8;
@@ -124,14 +124,14 @@ abstract class qb {
         if (param0 != 0) {
           return 31;
         }
-        return this.field_g.a((byte) 98) + this.field_j.a((byte) 98);
+        return this.field_g.size((byte) 98) + this.field_j.size((byte) 98);
     }
 
     qb() {
-        this.field_g = new lq();
-        this.field_j = new lq();
-        this.field_c = new lq();
-        this.field_l = new lq();
+        this.field_g = new DualLinkDeque();
+        this.field_j = new DualLinkDeque();
+        this.field_c = new DualLinkDeque();
+        this.field_l = new DualLinkDeque();
         this.field_b = new PacketBuffer(6);
         this.field_i = (byte) 0;
         this.field_n = 0;

@@ -157,8 +157,8 @@ final class bf extends IntrusiveNode {
           if (!param0) {
             field_j = (String) null;
           }
-          if (null != h.field_L &&
-            h.field_L.field_R) {
+          if (null != PortalView.field_L &&
+            PortalView.field_L.field_R) {
             var3_int = 1;
             if (param1 == 8) {
               if (!IntrusiveDequeCursor.field_e) {
@@ -180,7 +180,7 @@ final class bf extends IntrusiveNode {
               if (bl.field_h) {
                 param2 = wg.field_c;
               }
-              h.field_L.a(param2, 125, param1);
+              PortalView.field_L.a(param2, 125, param1);
             }
             if (256 != param1) {
               if (param1 == 10) {
@@ -197,7 +197,7 @@ final class bf extends IntrusiveNode {
         }
     }
 
-    bf(fh param0, int param1, int param2, int param3) {
+    bf(NavigationGrid param0, int param1, int param2, int param3) {
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
         String stackIn_56_2 = null;
@@ -223,7 +223,7 @@ final class bf extends IntrusiveNode {
         int var12Lifetime1;
         int var13Lifetime1;
         try {
-          this.field_k = param0.field_i.field_k;
+          this.field_k = param0.level.field_k;
           this.field_l = param3;
           this.field_i = param2;
           this.field_o = param1;

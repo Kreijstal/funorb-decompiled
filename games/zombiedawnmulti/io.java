@@ -58,7 +58,7 @@ final class io {
         String var7 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (fh.field_m != null) {
+          if (NavigationGrid.field_m != null) {
             return;
           }
           sq.field_N = false;
@@ -74,7 +74,7 @@ final class io {
           var7 = (String) null;
           IterableNodeHashTable.a(6, wj.field_g, 0, var5, (String) null);
           ke.field_j = ua.field_E;
-          fh.field_m = ec.field_b;
+          NavigationGrid.field_m = ec.field_b;
           ec.field_b.field_xb = (8355711 & qq.field_f.field_xb >> 1) + wj.field_g - (8355711 & wj.field_g >> 1);
           ec.field_b.field_Db = (8355711 & qq.field_f.field_Db >> 1) + (wj.field_g - (8355711 & wj.field_g >> 1));
           ec.field_b.field_ob = wj.field_g - (8355711 & wj.field_g >> 1) + (qq.field_f.field_ob >> 1 & param0);
@@ -150,9 +150,9 @@ final class io {
         field_e = null;
     }
 
-    final static boolean a(int param0, int param1, byte param2, nm param3) {
+    final static boolean a(int param0, int param1, byte param2, Camera param3) {
         RuntimeException var4 = null;
-        nm var5 = null;
+        Camera var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -160,10 +160,10 @@ final class io {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -72) {
-            var5 = (nm) null;
-            io.a(-88, -65, (byte) 96, (nm) null);
+            var5 = (Camera) null;
+            io.a(-88, -65, (byte) 96, (Camera) null);
           }
-          stackIn_8_0 = (param0 > -48) && (param0 > -48) && (640.0f * param3.field_d > (float)param0) && (param3.field_d * 480.0f > (float)param1);
+          stackIn_8_0 = (param0 > -48) && (param0 > -48) && (640.0f * param3.zoom > (float)param0) && (param3.zoom * 480.0f > (float)param1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

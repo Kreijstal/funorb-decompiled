@@ -111,8 +111,8 @@ final class ui extends IntrusiveNode {
           if (param1) {
             field_k = (Sprite[]) null;
           }
-          if (null != op.field_m &&
-            1 < op.field_m.teamCount) {
+          if (null != PortalEntryEvent.field_m &&
+            1 < PortalEntryEvent.field_m.teamCount) {
             stackIn_8_0 = (pl.field_I == 10) ? 1 : 0;
             var2_int = stackIn_8_0;
             if (!iq.field_f) {
@@ -123,9 +123,9 @@ final class ui extends IntrusiveNode {
             boolean decompiledFrameRemainder0 = true;
             var3 = stackIn_14_0;
             if ((!tj.field_f ||
-              !param0) && (!(0 < id.field_D) ||
-              !(20 > wf.field_m % 40)) && (var3 == 0 ||
-              !(wf.field_m % 40 < 20))) {
+              !param0) && (!(0 < SceneObject.field_D) ||
+              !(20 > PowerupEvent.field_m % 40)) && (var3 == 0 ||
+              !(PowerupEvent.field_m % 40 < 20))) {
               stackIn_26_0 = 0;
               decompiledFrameRemainder0 = false;
             }
@@ -254,7 +254,7 @@ final class ui extends IntrusiveNode {
                   if (InflaterDecompressor.field_a <= 0) {
                     if (JaggrabDownloader.field_h < b.field_d) {
                       if (0 == JaggrabDownloader.field_h) {
-                        wf.a(6835);
+                        PowerupEvent.a(6835);
                       }
                       JaggrabDownloader.field_h = JaggrabDownloader.field_h + 1;
                     }

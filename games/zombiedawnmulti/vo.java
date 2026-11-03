@@ -97,7 +97,7 @@ final class vo extends nc {
         stackIn_3_0 = (kd.field_b != 1) ? 0 : 1;
         var2 = stackIn_3_0;
         while (ba.c(-1)) {
-          if (sj.field_p != 13) {
+          if (InfectionEvent.field_p != 13) {
             continue;
           }
           var2 = 1;
@@ -145,9 +145,9 @@ final class vo extends nc {
 
     private final void b(int param0, int param1, int param2) {
         jo.field_d.g(param0, param1);
-        SecondaryNodeDeque.field_e.field_k = param2 - param0;
-        SecondaryNodeDeque.field_e.field_g = param1 - 80;
-        kk.field_w.a(param2 - 10021, SecondaryNodeDeque.field_e);
+        SecondaryNodeDeque.field_e.centerX = param2 - param0;
+        SecondaryNodeDeque.field_e.centerY = param1 - 80;
+        kk.field_w.draw(param2 - 10021, SecondaryNodeDeque.field_e);
         eq.field_c.a(param0 + 150, param1 + 50);
     }
 

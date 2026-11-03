@@ -441,14 +441,14 @@ final class BufferedFile {
     }
 
     final static gh d(int param0) {
-        if (mp.field_b == id.field_B) {
+        if (mp.field_b == SceneObject.field_B) {
           throw new IllegalStateException();
         }
         if (param0 != 0) {
           return (gh) null;
         }
-        if (oi.field_j == id.field_B) {
-          id.field_B = mp.field_b;
+        if (oi.field_j == SceneObject.field_B) {
+          SceneObject.field_B = mp.field_b;
           return iq.field_c;
         }
         return null;

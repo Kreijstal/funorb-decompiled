@@ -104,7 +104,7 @@ final class bo {
           if (var6 == null) {
             hj.field_f = 2;
           } else {
-            if (!ti.a((byte) -120, (CharSequence) ((Object) var6))) {
+            if (!UnitView.a((byte) -120, (CharSequence) ((Object) var6))) {
               hj.field_f = 2;
             } else {
               hj.field_f = md.a((CharSequence) ((Object) var6), param2 ^ -9159);

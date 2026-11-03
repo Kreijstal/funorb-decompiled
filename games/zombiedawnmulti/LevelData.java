@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fc {
+class LevelData {
     int field_e;
     int field_j;
     int[][] field_f;
@@ -27,7 +27,7 @@ class fc {
 
     final static void a(byte param0, boolean param1) {
         gf.field_g = 0;
-        lq.field_b = 0;
+        DualLinkDeque.field_b = 0;
         ClientException.field_c = 0;
         lb.field_a = nf.field_a;
         if (param0 < 121) {
@@ -37,9 +37,9 @@ class fc {
         gl.field_H.a(-1, param1, -31458, al.c(bo.field_d, -1, MouseInputHandler.field_g));
     }
 
-    private final id a(int param0, int param1, byte param2, int param3, int param4) {
+    private final SceneObject createObject(int param0, int param1, byte param2, int param3, int param4) {
         int var6_int;
-        h var6;
+        PortalView var6;
         fd var6_ref;
         int var7;
         GameCharacter var8;
@@ -48,10 +48,10 @@ class fc {
           var7 = (byte)(param3 >>> 30 & 3);
           var8 = new GameCharacter(param0, param4, var6_int);
           var8.team = var7;
-          return (id) ((Object) var8);
+          return (SceneObject) ((Object) var8);
         }
         if (param1 == 1) {
-          return (id) ((Object) pg.a(param0, (byte) -128, param3, param4));
+          return (SceneObject) ((Object) pg.a(param0, (byte) -128, param3, param4));
         }
         if (2 == param1) {
           var6_ref = new fd(param0, param4, param3 & -1610612737);
@@ -61,15 +61,15 @@ class fc {
           if (0 < (param3 & 536870912)) {
             var6_ref.field_K = true;
           }
-          return (id) ((Object) var6_ref);
+          return (SceneObject) ((Object) var6_ref);
         }
         if (3 == param1) {
-          return (id) ((Object) new mg(param0, param4, param3));
+          return (SceneObject) ((Object) new mg(param0, param4, param3));
         }
         if (param1 == 4) {
-          var6 = new h(param0, param4, false);
+          var6 = new PortalView(param0, param4, false);
           var6.field_I = (byte)((param3 & -1073741824) >>> 30);
-          return (id) ((Object) var6);
+          return (SceneObject) ((Object) var6);
         }
         if (param2 <= -60) {
           return null;
@@ -89,13 +89,13 @@ class fc {
         return param1 << 7;
     }
 
-    IntrusiveDeque a(int param0) {
+    IntrusiveDeque createObjects(int param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        id var9 = null;
+        SceneObject var9 = null;
         int var10 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = 88 % ((param0 - 37) / 41);
         IntrusiveDeque var3 = new IntrusiveDeque();
@@ -104,7 +104,7 @@ class fc {
           var6 = this.field_l[var4 + 1];
           var7 = this.field_l[2 + var4];
           var8 = this.field_l[3 + var4];
-          var9 = this.a(var7, var5, (byte) -97, var6, var8);
+          var9 = this.createObject(var7, var5, (byte) -97, var6, var8);
           var3.a(var9, false);
         }
         return var3;
@@ -182,7 +182,7 @@ class fc {
     }
 
     final void a(int[][] param0, int param1) {
-        id discarded$0 = null;
+        SceneObject discarded$0 = null;
         int[] dupTemp$1 = null;
         int dupTemp$2 = 0;
         int[] arrayValue$3 = null;
@@ -231,7 +231,7 @@ class fc {
             }
           }
           if (param1 != 9) {
-            discarded$0 = this.a(106, -54, (byte) -40, 61, -65);
+            discarded$0 = this.createObject(106, -54, (byte) -40, 61, -65);
           }
           for (var3_intLifetime1 = 0; var3_intLifetime1 < param0.length; var3_intLifetime1++) {
             var7 = 1;
@@ -532,7 +532,7 @@ class fc {
         return this.field_g[param2][param1];
     }
 
-    fc(int[][] param0, int[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8) {
+    LevelData(int[][] param0, int[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8) {
         int fieldTemp$0 = 0;
         try {
           this.field_j = param2;

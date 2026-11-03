@@ -159,23 +159,23 @@ final class ap extends qb {
           }
           try {
             this.field_q.b(-26844);
-            var2 = (tn) (this.field_g.c((byte) 111));
+            var2 = (tn) (this.field_g.first((byte) 111));
             while (var2 != null) {
               this.field_b.position = 0;
               this.field_b.a(-112, 1);
               this.field_b.b(var2.secondaryKey, true);
               this.field_q.a(0, -100, this.field_b.payload.length, this.field_b.payload);
-              this.field_j.a(29664, var2);
-              var2 = (tn) (this.field_g.b((byte) 97));
+              this.field_j.add(29664, var2);
+              var2 = (tn) (this.field_g.next((byte) 97));
             }
-            var2Lifetime1 = (tn) (this.field_c.c((byte) 124));
+            var2Lifetime1 = (tn) (this.field_c.first((byte) 124));
             while (var2Lifetime1 != null) {
               this.field_b.position = 0;
               this.field_b.a(-20, 0);
               this.field_b.b(var2Lifetime1.secondaryKey, true);
               this.field_q.a(0, -100, this.field_b.payload.length, this.field_b.payload);
-              this.field_l.a(29664, var2Lifetime1);
-              var2Lifetime1 = (tn) (this.field_c.b((byte) 102));
+              this.field_l.add(29664, var2Lifetime1);
+              var2Lifetime1 = (tn) (this.field_c.next((byte) 102));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_q.a(-79);
@@ -255,24 +255,24 @@ final class ap extends qb {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (tn) (this.field_j.c((byte) 96));
+                        var14_ref = (tn) (this.field_j.first((byte) 96));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (tn) (this.field_j.b((byte) 123));
+                          var14_ref = (tn) (this.field_j.next((byte) 123));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (tn) (this.field_l.c((byte) 110));
+                        var14_ref = (tn) (this.field_l.first((byte) 110));
                         while (var14_ref != null) {
                           if (~var14_ref.secondaryKey == ~var12) {
                             break;
                           }
-                          var14_ref = (tn) (this.field_l.b((byte) 122));
+                          var14_ref = (tn) (this.field_l.next((byte) 122));
                         }
                       }
                       if (var14_ref == null) {
@@ -470,7 +470,7 @@ final class ap extends qb {
             while (true) {
               var4_ref = (tn) (this.field_j.a(11356));
               if (var4_ref != null) {
-                this.field_g.a(29664, var4_ref);
+                this.field_g.add(29664, var4_ref);
                 continue;
               }
               break;
@@ -478,7 +478,7 @@ final class ap extends qb {
             while (true) {
               var4_refLifetime1 = (tn) (this.field_l.a(11356));
               if (var4_refLifetime1 != null) {
-                this.field_c.a(29664, var4_refLifetime1);
+                this.field_c.add(29664, var4_refLifetime1);
                 continue;
               }
               break;

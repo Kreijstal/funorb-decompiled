@@ -85,16 +85,16 @@ final class on extends pm implements kh {
           param0 = param0 & 8191;
           if (param0 >= 4096) {
             if (6144 <= param0) {
-              stackIn_19_0 = -h.field_K[8192 - param0];
+              stackIn_19_0 = -PortalView.field_K[8192 - param0];
             } else {
-              stackIn_19_0 = -h.field_K[-4096 + param0];
+              stackIn_19_0 = -PortalView.field_K[-4096 + param0];
             }
             return stackIn_19_0;
           }
           if (param0 >= 2048) {
-            stackIn_15_0 = h.field_K[4096 - param0];
+            stackIn_15_0 = PortalView.field_K[4096 - param0];
           } else {
-            stackIn_15_0 = h.field_K[param0];
+            stackIn_15_0 = PortalView.field_K[param0];
           }
           return stackIn_15_0;
         }
@@ -102,16 +102,16 @@ final class on extends pm implements kh {
         param0 = param0 & 8191;
         if (param0 >= 4096) {
           if (6144 <= param0) {
-            stackIn_9_0 = -h.field_K[8192 - param0];
+            stackIn_9_0 = -PortalView.field_K[8192 - param0];
           } else {
-            stackIn_9_0 = -h.field_K[-4096 + param0];
+            stackIn_9_0 = -PortalView.field_K[-4096 + param0];
           }
           return stackIn_9_0;
         }
         if (param0 >= 2048) {
-          stackIn_5_0 = h.field_K[4096 - param0];
+          stackIn_5_0 = PortalView.field_K[4096 - param0];
         } else {
-          stackIn_5_0 = h.field_K[param0];
+          stackIn_5_0 = PortalView.field_K[param0];
         }
         return stackIn_5_0;
     }

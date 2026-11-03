@@ -39,11 +39,11 @@ final class jb {
           this.c(123);
         }
         if (param1 == 8) {
-          gm.a(this.field_i, this.field_f, -1);
+          HumanView.a(this.field_i, this.field_f, -1);
           return true;
         }
         if (param1 == 18) {
-          fg.a(-16745, this.field_i, this.field_f);
+          ScoreUpdateEvent.a(-16745, this.field_i, this.field_f);
           return true;
         }
         if (11 == param1) {
@@ -151,7 +151,7 @@ final class jb {
           return false;
         }
         if (param2 == 0) {
-          so.a(-21148, this.field_i, param0);
+          UnitStateEvent.a(-21148, this.field_i, param0);
           return true;
         }
         if (param2 == 1) {
@@ -171,13 +171,13 @@ final class jb {
           return true;
         }
         if (param2 == 15) {
-          jm.a(this.field_b, param0, -105);
+          FightEvent.a(this.field_b, param0, -105);
           return true;
         }
         if (param2 != 16) {
           return false;
         }
-        jm.a(0, param0, param1 - 107);
+        FightEvent.a(0, param0, param1 - 107);
         return true;
     }
 
