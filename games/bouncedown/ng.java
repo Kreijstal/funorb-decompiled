@@ -11,7 +11,7 @@ abstract class ng {
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
-        int var7 = BounceDown.field_N;
+        int var7 = Bounce.field_N;
         tg[] var1 = new tg[nj.field_p];
         for (var2 = 0; var2 < nj.field_p; var2++) {
           var3 = qh.field_i[var2] * ih.field_V[var2];
@@ -103,7 +103,7 @@ abstract class ng {
         char[] var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           if (Character.isISOControl(param1)) {
             return false;

@@ -50,7 +50,7 @@ final class qj extends dk {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           var5_int = param4;
           while (true) {

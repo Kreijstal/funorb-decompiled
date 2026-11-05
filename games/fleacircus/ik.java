@@ -66,14 +66,14 @@ final class ik extends wi {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         try {
           if (param1 != 110) {
             ik.a(-105, (byte) 117);
           }
           var2 = (vh) (al.field_e.c((byte) 47));
           while (var2 != null) {
-            FleaCircusApplet.a(param0, var2, param1 ^ 108);
+            fleas.a(param0, var2, param1 ^ 108);
             var2 = (vh) (al.field_e.b((byte) -105));
           }
           return;
@@ -118,7 +118,7 @@ final class ik extends wi {
         int var9;
         int var4Lifetime1;
         int var6Lifetime1;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         gb.a(ia.field_q);
         gb.a(this.field_l, this.field_a + this.field_D.field_N, this.field_l - (-this.field_n + this.field_P), this.field_a + this.field_d);
         var2 = this.field_D.field_N + this.field_a;
@@ -220,7 +220,7 @@ final class ik extends wi {
         int var5Lifetime1;
         int var5Lifetime2;
         int var6Lifetime1;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         this.field_J = false;
         this.field_A = false;
         this.field_L = false;
@@ -386,7 +386,7 @@ final class ik extends wi {
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           if (param0 <= 104) {
             ik.d(69);

@@ -90,7 +90,7 @@ final class nk {
         Object var5 = null;
         int var6 = 0;
         int var8 = 0;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         if (u.field_g) {
           return;
         }
@@ -472,7 +472,7 @@ final class nk {
         int var10Lifetime3Lifetime1;
         String var6Lifetime1;
         String var19Lifetime1;
-        var16 = BounceDown.field_N;
+        var16 = Bounce.field_N;
         if (this.field_g <= -10 &&
           0 <= this.field_i) {
           return;
@@ -524,10 +524,10 @@ final class nk {
           }
           var6_int = this.field_l;
           this.field_l = -12 + (-480 + this.field_g) + 96 + 8;
-          this.field_l = this.field_l + this.a(80, 16741888, 480, 1, BounceDown.field_A[1], this.field_l, 0, 480, 20066, 20) * 20;
+          this.field_l = this.field_l + this.a(80, 16741888, 480, 1, Bounce.field_A[1], this.field_l, 0, 480, 20066, 20) * 20;
           this.field_l = this.field_l + 10;
-          this.field_l = this.field_l + this.a(80, 16741888, 480, 1, BounceDown.field_A[2], this.field_l, 0, 480, 20066, 20) * 20;
-          this.field_l = this.field_l + this.a(80, 16741888, 480, 1, BounceDown.field_A[3], this.field_l, 0, 480, 20066, 20) * 20;
+          this.field_l = this.field_l + this.a(80, 16741888, 480, 1, Bounce.field_A[2], this.field_l, 0, 480, 20066, 20) * 20;
+          this.field_l = this.field_l + this.a(80, 16741888, 480, 1, Bounce.field_A[3], this.field_l, 0, 480, 20066, 20) * 20;
           this.field_l = this.field_l + 10;
           var7 = -this.field_l - 40 + this.field_g;
           this.a(this.field_l, 80, var7, 4, 480);
@@ -538,7 +538,7 @@ final class nk {
           var10 = 120 + (320 - kc.field_c.field_t / 2);
           this.field_l = this.field_l + 8;
           kc.field_c.a(var10, var9 + this.field_l);
-          this.field_l = this.field_l + this.a(60 + (var4 - gk.field_e.b(BounceDown.field_A[4]) / 2), 16741888, 480, 1, BounceDown.field_A[4], this.field_l, 0, var5, param1 - 16721822, 20) * 20;
+          this.field_l = this.field_l + this.a(60 + (var4 - gk.field_e.b(Bounce.field_A[4]) / 2), 16741888, 480, 1, Bounce.field_A[4], this.field_l, 0, var5, param1 - 16721822, 20) * 20;
           if (Slime.field_a == 3) {
             this.field_l = this.field_l - 6;
           }
@@ -549,45 +549,45 @@ final class nk {
           } else {
             re.field_a.a(var10, var9 + this.field_l);
           }
-          this.field_l = this.field_l + this.a(-(gk.field_e.b(BounceDown.field_A[5]) / 2) + var4 + 60, 16741888, 480, 1, BounceDown.field_A[5], this.field_l, 0, var5, 20066, 20) * 20;
+          this.field_l = this.field_l + this.a(-(gk.field_e.b(Bounce.field_A[5]) / 2) + var4 + 60, 16741888, 480, 1, Bounce.field_A[5], this.field_l, 0, var5, 20066, 20) * 20;
           this.field_l = this.field_l + 8;
-          this.field_l = this.field_l + 12 * this.a(480, 480, -1, 0, 12, 16777215, BounceDown.field_A[6], 1, 80, this.field_l);
+          this.field_l = this.field_l + 12 * this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[6], 1, 80, this.field_l);
           if (Slime.field_a == 3) {
             this.field_l = this.field_l - 6;
           }
           this.field_l = this.field_l + 22;
           q.field_F.d(var10, var9 + this.field_l, (int)(128.0 + 128.0 * Math.sin((double)(ae.field_f / 4))));
-          this.field_l = this.field_l + 20 * this.a(var4 + 60 - gk.field_e.b(BounceDown.field_A[7]) / 2, 16741888, 480, 1, BounceDown.field_A[7], this.field_l, 0, var5, 20066, 20);
+          this.field_l = this.field_l + 20 * this.a(var4 + 60 - gk.field_e.b(Bounce.field_A[7]) / 2, 16741888, 480, 1, Bounce.field_A[7], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
-          this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, BounceDown.field_A[8], 1, 80, this.field_l) * 12;
+          this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[8], 1, 80, this.field_l) * 12;
           if (Slime.field_a == 3) {
             this.field_l = this.field_l - 6;
           }
           this.field_l = this.field_l + 22;
           fd.field_n[ae.field_f / 8 % 6].a(var10, var9 + this.field_l);
-          this.field_l = this.field_l + 20 * this.a(57 + (var4 - gk.field_e.b(BounceDown.field_A[9]) / 2), 16741888, 480, 1, BounceDown.field_A[9], this.field_l, 0, var5, param1 - 16721822, 20);
+          this.field_l = this.field_l + 20 * this.a(57 + (var4 - gk.field_e.b(Bounce.field_A[9]) / 2), 16741888, 480, 1, Bounce.field_A[9], this.field_l, 0, var5, param1 - 16721822, 20);
           this.field_l = this.field_l + 8;
-          this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, BounceDown.field_A[10], 1, 80, this.field_l) * 12;
+          this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[10], 1, 80, this.field_l) * 12;
           if (Slime.field_a == 3) {
             this.field_l = this.field_l + 4;
           }
           this.field_l = this.field_l + 26;
           bd.field_j[ae.field_f / 8 % 3].a(var10, this.field_l + var9);
-          this.field_l = this.field_l + 20 * this.a(-(gk.field_e.b(BounceDown.field_A[11]) / 2) + (60 + var4), 16741888, 480, 1, BounceDown.field_A[11], this.field_l, 0, var5, 20066, 20);
+          this.field_l = this.field_l + 20 * this.a(-(gk.field_e.b(Bounce.field_A[11]) / 2) + (60 + var4), 16741888, 480, 1, Bounce.field_A[11], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
-          this.field_l = this.field_l + this.a(480, 480, param1 - 16741889, 0, 12, 16777215, BounceDown.field_A[12], 1, 80, this.field_l) * 12;
+          this.field_l = this.field_l + this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[12], 1, 80, this.field_l) * 12;
           this.field_l = this.field_l + 22;
           wb.field_e[ae.field_f / 8 % 3].a(var10, this.field_l + var9);
-          this.field_l = this.field_l + 20 * this.a(-(gk.field_e.b(BounceDown.field_A[13]) / 2) + 60 + var4, 16741888, 480, 1, BounceDown.field_A[13], this.field_l, 0, var5, 20066, 20);
+          this.field_l = this.field_l + 20 * this.a(-(gk.field_e.b(Bounce.field_A[13]) / 2) + 60 + var4, 16741888, 480, 1, Bounce.field_A[13], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
-          this.field_l = this.field_l + 12 * this.a(480, 480, param1 - 16741889, 0, 12, 16777215, BounceDown.field_A[14], 1, 80, this.field_l);
+          this.field_l = this.field_l + 12 * this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[14], 1, 80, this.field_l);
           this.field_l = this.field_l + 22;
           field_h[ae.field_f / 8 % 4].a(var10, var9 + this.field_l);
           nl.field_d[0].a(var10, this.field_l + var9 - nl.field_d[0].field_q);
-          this.field_l = this.field_l + 20 * this.a(-(gk.field_e.b(BounceDown.field_A[15]) / 2) + (var4 + 60), 16741888, 480, 1, BounceDown.field_A[15], this.field_l, 0, var5, param1 ^ 16726114, 20);
+          this.field_l = this.field_l + 20 * this.a(-(gk.field_e.b(Bounce.field_A[15]) / 2) + (var4 + 60), 16741888, 480, 1, Bounce.field_A[15], this.field_l, 0, var5, param1 ^ 16726114, 20);
           this.field_l = this.field_l + 8;
-          this.field_l = this.field_l + this.a(480, 480, param1 ^ -16741889, 0, 12, 16777215, BounceDown.field_A[16], 1, 80, this.field_l) * 12;
-          this.field_l = this.field_l + 12 * this.a(480, 480, param1 - 16741889, 0, 12, 16777215, BounceDown.field_A[17], 1, 80, this.field_l);
+          this.field_l = this.field_l + this.a(480, 480, param1 ^ -16741889, 0, 12, 16777215, Bounce.field_A[16], 1, 80, this.field_l) * 12;
+          this.field_l = this.field_l + 12 * this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[17], 1, 80, this.field_l);
           na.d();
           this.field_l = var6_int;
         }
@@ -633,7 +633,7 @@ final class nk {
         }
         if (this.field_i < 0 &&
           tk.field_c == this.field_i) {
-          var6Lifetime1 = BounceDown.field_A[18] + var18;
+          var6Lifetime1 = Bounce.field_A[18] + var18;
           var19 = var6Lifetime1;
           var6Lifetime1 = var19;
           var5Lifetime1 = 16711680;
@@ -649,9 +649,9 @@ final class nk {
         }
         if (7 == this.field_i) {
           if (null != sj.field_f) {
-            var6Lifetime1 = var6Lifetime1 + BounceDown.field_A[19];
+            var6Lifetime1 = var6Lifetime1 + Bounce.field_A[19];
           } else {
-            var6Lifetime1 = var6Lifetime1 + BounceDown.field_A[20];
+            var6Lifetime1 = var6Lifetime1 + Bounce.field_A[20];
           }
         }
         if (this.field_i == 13) {
@@ -851,10 +851,10 @@ final class nk {
           var10Lifetime3 = -od.field_f.field_s + (-228 + this.field_g);
           this.a(var10Lifetime3 - 5, 75, 3 * od.field_f.field_s + 138, 4, 490);
           if (kb.field_a <= 0) {
-            var28 = BounceDown.field_A[25];
+            var28 = Bounce.field_A[25];
             this.a(-272 + this.field_g, 16777215, var28, 320, 21641);
           } else {
-            var27 = BounceDown.field_A[24];
+            var27 = Bounce.field_A[24];
             this.a(-44 + this.field_g - 228, 16777215, var27, 320, 21641);
           }
           var10Lifetime3Lifetime1 = 1;

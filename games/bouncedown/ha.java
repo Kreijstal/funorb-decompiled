@@ -32,7 +32,7 @@ final class ha implements Runnable {
           Throwable var3 = null;
           int var4 = 0;
           Throwable decompiledCaughtException = null;
-          var4 = BounceDown.field_N;
+          var4 = Bounce.field_N;
           try {
             while (this.field_a.field_i.length > this.field_a.field_h) {
               var1_int = this.field_c.read(this.field_a.field_i, this.field_a.field_h, -this.field_a.field_h + this.field_a.field_i.length);

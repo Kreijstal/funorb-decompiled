@@ -50,7 +50,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var27Lifetime1;
         int var28Lifetime1;
         int var29Lifetime1;
-        var30 = FleaCircusApplet.field_A ? 1 : 0;
+        var30 = fleas.field_A ? 1 : 0;
         try {
           var7_int = 2147483647;
           var8 = -2147483648;
@@ -231,7 +231,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             if (var2_int >= 0 &&
               var2_int < ah.field_g.length) {
               var2_int = -129 & ah.field_g[var2_int];
-              if (FleaCircusApplet.field_A) {
+              if (fleas.field_A) {
                 var2_int = -1;
               }
             } else {
@@ -328,7 +328,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int stackIn_18_1 = 0;
         RuntimeException decompiledCaughtException = null;
         double var10Lifetime1;
-        var19 = FleaCircusApplet.field_A ? 1 : 0;
+        var19 = fleas.field_A ? 1 : 0;
         try {
           jj.field_Z = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = ij.field_F.length;
@@ -464,7 +464,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var2_int = ah.field_g[var2_int];
               if ((var2_int & 128) != 0) {
                 var2_int = -1;
-                if (FleaCircusApplet.field_A) {
+                if (fleas.field_A) {
                   var2_int = -1;
                 }
               }

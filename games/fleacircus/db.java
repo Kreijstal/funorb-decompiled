@@ -118,7 +118,7 @@ abstract class db extends gj {
         int var11 = 0;
         int var5Lifetime1;
         int var8Lifetime1;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           var3_int = param0.length();
           var4 = var3_int;
@@ -228,7 +228,7 @@ abstract class db extends gj {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           if (param2 <= 0) {
             throw new IllegalArgumentException();

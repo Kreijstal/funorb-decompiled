@@ -200,7 +200,7 @@ final class pb {
         int var5;
         int var6;
         int var5Lifetime1;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         var2 = this.field_i;
         var4 = 56 % ((74 - param0) / 36);
         var3 = this.field_s;

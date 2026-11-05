@@ -35,7 +35,7 @@ final class nd extends jj {
         od var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           if (!param1.a(125)) {
             stackIn_3_0 = new hf[]{};

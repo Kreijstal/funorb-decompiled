@@ -85,7 +85,7 @@ final class jc implements ComponentLayout {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           if (param0 >= 2 &&
             param0 <= 36) {

@@ -73,7 +73,7 @@ final class oj {
         int var2;
         int var3;
         int var2Lifetime1;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         if (this.field_h == null) {
           return;
         }
@@ -109,7 +109,7 @@ final class oj {
         java.math.BigInteger var12;
         byte[] var13;
         byte[] var15;
-        var9 = BounceDown.field_N;
+        var9 = Bounce.field_N;
         var2 = 67 / ((-16 - param0) / 55);
         if (null != this.field_f) {
           return true;

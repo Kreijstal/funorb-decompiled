@@ -3034,7 +3034,7 @@ final class cg {
                 la.field_D = null;
             }
             void run() {
-                var3 = BounceDown.field_N;
+                var3 = Bounce.field_N;
                 try {
                   runChunk0();
                   if (finished) return;

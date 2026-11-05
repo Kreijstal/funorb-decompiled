@@ -74,7 +74,7 @@ final class g {
         int var12Lifetime1;
         int var10Lifetime1Lifetime1;
         int var13Lifetime1Lifetime1;
-        var16 = BounceDown.field_N;
+        var16 = Bounce.field_N;
         try {
           var17 = new PacketBuffer(ta.a(21125, param1));
           var4 = var17.d((byte) -86);

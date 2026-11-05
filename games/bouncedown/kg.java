@@ -121,7 +121,7 @@ final class kg {
         int var16Lifetime2;
         int var16Lifetime3;
         int var17Lifetime2;
-        var19 = BounceDown.field_N;
+        var19 = Bounce.field_N;
         try {
           if (param3 >= 0 &&
             param2 < qk.field_g) {

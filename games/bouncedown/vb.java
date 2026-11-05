@@ -70,7 +70,7 @@ final class vb implements fc {
         int var9Lifetime1;
         int var9Lifetime2;
         var16 = null;
-        var14 = BounceDown.field_N;
+        var14 = Bounce.field_N;
         try {
           var15 = param4.c((byte) -56);
           var11_ref_String = var15;

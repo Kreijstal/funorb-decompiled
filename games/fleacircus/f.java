@@ -34,7 +34,7 @@ final class f extends dk {
     }
 
     final void d(boolean param0) {
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         if (!param0) {
           this.field_I = (vc) null;
         }
@@ -50,7 +50,7 @@ final class f extends dk {
     }
 
     final void i(int param0) {
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         if (param0 >= -55) {
           field_G = (el) null;
         }
@@ -64,7 +64,7 @@ final class f extends dk {
     }
 
     final void k(int param0) {
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         if (param0 >= -54) {
           this.d(false);
         }
@@ -83,7 +83,7 @@ final class f extends dk {
         we var3;
         db var4;
         int var5;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         var2 = 112 % ((-10 - param0) / 51);
         var3 = new we(this.field_I);
         var4 = (db) (var3.b(127));
@@ -128,7 +128,7 @@ final class f extends dk {
         we var2;
         db var3;
         int var4;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         var2 = new we(this.field_I);
         var3 = (db) (var2.b(-59));
         if (param0 != 0) {
@@ -144,7 +144,7 @@ final class f extends dk {
     }
 
     final void b(int param0, int param1, boolean param2, int param3) {
-        int var7 = FleaCircusApplet.field_A ? 1 : 0;
+        int var7 = fleas.field_A ? 1 : 0;
         if (null != this.field_p) {
           this.field_p.a(-117, param1, true, (UiComponent) (this), param0);
         }

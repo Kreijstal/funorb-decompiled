@@ -88,7 +88,7 @@ final class id {
         int var3;
         int var4;
         int var3Lifetime1;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         if (param1) {
           var3 = this.field_a.length;
           while (param0 >= var3) {
@@ -205,7 +205,7 @@ final class id {
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           if (param1 != 31592) {
             field_h = (int[]) null;

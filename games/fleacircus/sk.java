@@ -129,7 +129,7 @@ final class sk implements Runnable {
         int[] var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           var6 = ed.field_c;
           var1 = var6;
@@ -165,7 +165,7 @@ final class sk implements Runnable {
           Throwable var3 = null;
           int var4 = 0;
           Throwable decompiledCaughtException = null;
-          var4 = FleaCircusApplet.field_A ? 1 : 0;
+          var4 = fleas.field_A ? 1 : 0;
           try {
             while (this.field_d.field_i < this.field_d.field_k.length) {
               var1_int = this.field_b.read(this.field_d.field_k, this.field_d.field_i, -this.field_d.field_i + this.field_d.field_k.length);

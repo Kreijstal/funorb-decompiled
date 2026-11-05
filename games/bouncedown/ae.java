@@ -38,7 +38,7 @@ final class ae {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           var2_int = param1.length();
           var3 = 0;
@@ -107,7 +107,7 @@ final class ae {
         int var10Lifetime5;
         int var10Lifetime6;
         int var10Lifetime7;
-        var11 = BounceDown.field_N;
+        var11 = Bounce.field_N;
         try {
           if (0 == param5) {
             stackIn_4_0 = 0;
@@ -287,7 +287,7 @@ final class ae {
         ClientException var14 = null;
         String var2 = null;
         String var11 = null;
-        int var13 = BounceDown.field_N;
+        int var13 = Bounce.field_N;
         String var2Lifetime1;
         String var11Lifetime1;
         String var11Lifetime2;

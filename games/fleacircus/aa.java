@@ -33,7 +33,7 @@ class aa extends e {
         dd var1 = null;
         dd var2 = null;
         int var3 = 0;
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         if (param0 != -65) {
           return;
         }

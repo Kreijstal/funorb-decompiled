@@ -33,7 +33,7 @@ final class r implements fc {
         int var12 = 0;
         int var13 = 0;
         int var6Lifetime1;
-        var13 = BounceDown.field_N;
+        var13 = Bounce.field_N;
         try {
           var5_int = param0.b(param2);
           if (param4 >= var5_int &&
@@ -132,7 +132,7 @@ final class r implements fc {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = BounceDown.field_N;
+        var12 = Bounce.field_N;
         try {
           var6_int = -49 / ((-60 - param2) / 56);
           if (!param1.field_g &&

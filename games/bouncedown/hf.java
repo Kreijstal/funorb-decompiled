@@ -22,7 +22,7 @@ final class hf {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           if (lf.field_q == null) {
             return null;
@@ -165,7 +165,7 @@ final class hf {
         int stackIn_21_0 = 0;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var2 = BounceDown.field_N;
+        var2 = Bounce.field_N;
         try {
           stackIn_3_0 = q.field_N;
           stackIn_3_1 = dk.field_c;

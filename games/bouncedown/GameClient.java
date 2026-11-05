@@ -32,7 +32,7 @@ abstract class GameClient extends AppletShell {
         int var2;
         bl var3;
         int var4;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         var2 = wa.field_d;
         if (64 > var2 &&
           ib.field_m[var2]) {
@@ -151,7 +151,7 @@ abstract class GameClient extends AppletShell {
         java.awt.Container var6;
         int var3Lifetime1;
         int var3Lifetime2;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         if (vd.field_b != null) {
           if (null == sj.field_f) {
             var6 = oa.a((byte) 126);
@@ -491,7 +491,7 @@ abstract class GameClient extends AppletShell {
           PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
-          var8 = BounceDown.field_N;
+          var8 = Bounce.field_N;
           var4 = ff.a(param2, Slime.field_a, 8786, va.field_a);
           if (0 == var4) {
             throw new IllegalStateException();
@@ -725,7 +725,7 @@ abstract class GameClient extends AppletShell {
     final void g(int param0) {
         int discarded$1 = 0;
         int discarded$2 = 0;
-        int var3 = BounceDown.field_N;
+        int var3 = Bounce.field_N;
         if (hi.a((byte) -113)) {
           discarded$1 = this.a(false, false, sj.field_f != null ? true : false);
         } else {

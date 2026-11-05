@@ -20,7 +20,7 @@ final class a {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var4_int = param3.length();
           param3.setLength(param0);

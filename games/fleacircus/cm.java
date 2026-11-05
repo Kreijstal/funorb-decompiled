@@ -50,7 +50,7 @@ abstract class cm {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_intLifetime1;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         try {
           gi.a(true, 0, qh.field_D, -3300, lc.field_u, param0, ea.field_a);
           for (var2_int = 0; qh.field_D > var2_int; var2_int++) {

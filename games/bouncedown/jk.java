@@ -60,7 +60,7 @@ final class jk {
         int var11;
         int var12;
         boolean stackIn_6_1 = false;
-        var12 = BounceDown.field_N;
+        var12 = Bounce.field_N;
         if (this.field_t) {
           return;
         }
@@ -112,7 +112,7 @@ final class jk {
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
-        int var7 = BounceDown.field_N;
+        int var7 = Bounce.field_N;
         if (param0 != -26) {
           jk.a((byte) 19);
         }
@@ -194,7 +194,7 @@ final class jk {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var6 = BounceDown.field_N;
+        int var6 = Bounce.field_N;
         int var5 = 0;
         if (param1 <= 123) {
           return;
@@ -225,7 +225,7 @@ final class jk {
         int var12Lifetime3;
         int var12Lifetime4;
         tg[] var10Lifetime1;
-        var15 = BounceDown.field_N;
+        var15 = Bounce.field_N;
         var9 = param1 + (param5 + param8);
         var10 = new tg[]{new tg(var9, var9), new tg(param6, var9), new tg(var9, var9), new tg(var9, param6), new tg(64, 64), new tg(var9, param6), new tg(var9, var9), new tg(param6, var9), new tg(var9, var9)};
         var11_ref_tg__ = var10;

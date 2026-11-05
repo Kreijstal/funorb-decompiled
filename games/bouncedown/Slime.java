@@ -40,7 +40,7 @@ final class Slime {
         tg var17;
         int var6_intLifetime1;
         int var6_intLifetime1Lifetime1;
-        var10 = BounceDown.field_N;
+        var10 = Bounce.field_N;
         var4 = 0;
         if (param1) {
           this.a((Platform[]) null, (rb) null, 62, (ue[]) null, -0.16860739722231136, (byte) 54);
@@ -219,7 +219,7 @@ final class Slime {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = BounceDown.field_N;
+        var11 = Bounce.field_N;
         try {
           this.field_e = this.field_o * 50.0 / 128.0;
           if (96.0 > this.field_o) {
@@ -648,7 +648,7 @@ final class Slime {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
-        var17 = BounceDown.field_N;
+        var17 = Bounce.field_N;
         if (param13 < param9) {
           if (param9 < param10) {
             ek.a(param4, na.field_d, param11, param15, param6, param12, param1, param9, param5, false, param14, param0, param10, param13, param2, param8, param3);

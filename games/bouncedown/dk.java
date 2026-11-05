@@ -26,7 +26,7 @@ final class dk {
         int[] var12 = null;
         int[] var13 = null;
         int var9Lifetime1;
-        var10 = BounceDown.field_N;
+        var10 = Bounce.field_N;
         try {
           var7_int = ca.a(param0, (byte) 27);
           if (null == DualLinkNode.field_g) {
@@ -116,7 +116,7 @@ final class dk {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           var2_int = param1.length();
           if (var2_int == 0) {

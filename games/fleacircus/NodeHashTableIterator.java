@@ -17,7 +17,7 @@ final class NodeHashTableIterator implements Iterator {
         int var2;
         IntrusiveNode var3;
         IntrusiveNode var4;
-        var2 = FleaCircusApplet.field_A ? 1 : 0;
+        var2 = fleas.field_A ? 1 : 0;
         if (this.field_g.field_f[-1 + this.field_d] != this.field_a) {
           var4 = this.field_a;
           this.field_e = var4;
@@ -64,7 +64,7 @@ final class NodeHashTableIterator implements Iterator {
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
         int var2;
-        var2 = FleaCircusApplet.field_A ? 1 : 0;
+        var2 = fleas.field_A ? 1 : 0;
         if (this.field_a != this.field_g.field_f[this.field_d - 1]) {
           return true;
         }

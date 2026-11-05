@@ -67,7 +67,7 @@ final class pk extends wf {
         long var5 = 0L;
         int var7 = 0;
         int var8 = 0;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           if (this.field_w.d()) {
             var4_int = this.field_w.field_b * this.field_n / e.field_r;
@@ -130,7 +130,7 @@ final class pk extends wf {
     private final synchronized void a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         if (param2 >= param0) {
           this.field_r[param2] = param1;
         }
@@ -234,7 +234,7 @@ final class pk extends wf {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           this.a(param1, 104);
           this.field_w.a(param0.field_h);
@@ -277,7 +277,7 @@ final class pk extends wf {
     private final void b(int param0, int param1) {
         kl var3;
         int var4;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         var3 = (kl) (this.field_o.field_m.a((byte) -102));
         if (param0 != 0) {
           this.field_t = (int[]) null;
@@ -349,7 +349,7 @@ final class pk extends wf {
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
         boolean decompiledFrameCompleted0 = true;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         if ((2 & this.field_l[param0]) != 0) {
           var3 = (kl) (this.field_o.field_m.a((byte) -67));
           while (var3 != null) {
@@ -394,7 +394,7 @@ final class pk extends wf {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        var12 = BounceDown.field_N;
+        var12 = Bounce.field_N;
         try {
           param3.field_j = e.field_r / 100;
           var6_int = 83 % ((param4 - 37) / 52);
@@ -566,7 +566,7 @@ final class pk extends wf {
         int var5;
         int var6;
         boolean decompiledFrameCompleted0 = true;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         if (this.field_w.d()) {
           var2 = this.field_n * this.field_w.field_b / e.field_r;
           while (true) {
@@ -607,7 +607,7 @@ final class pk extends wf {
     private final void b(boolean param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         if (!param0) {
           this.b(0, -1);
           if (var4 != 0) {
@@ -640,7 +640,7 @@ final class pk extends wf {
     private final void a(int param0, int param1) {
         kl var3;
         int var4;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         var3 = (kl) (this.field_o.field_m.a((byte) -49));
         if (param1 != 2099140935) {
           this.f(75);
@@ -682,7 +682,7 @@ final class pk extends wf {
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         var2 = this.field_p;
         var3 = this.field_A;
         if (param0 > -41) {
@@ -765,7 +765,7 @@ final class pk extends wf {
     final synchronized void e(int param0) {
         int var3 = 0;
         rj var4 = null;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         if (param0 != 16) {
           this.field_E = (int[]) null;
         }
@@ -801,7 +801,7 @@ final class pk extends wf {
         rj var10;
         rj var11;
         regionExit1: {
-          var9 = BounceDown.field_N;
+          var9 = Bounce.field_N;
           this.b(param3, param2, 64, 0);
           if ((this.field_l[param3] & 2) != 0) {
             var5 = (kl) (this.field_o.field_m.b((byte) 60));
@@ -923,7 +923,7 @@ final class pk extends wf {
         int var4Lifetime3Lifetime2;
         int var5Lifetime3Lifetime1;
         int var5Lifetime3Lifetime2;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         var3 = param1 & 240;
         if (param0 != 32755) {
           this.field_A = -20;
@@ -1119,7 +1119,7 @@ final class pk extends wf {
     private final void a(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         if (param0 >= -53) {
           this.field_y = (int[]) null;
         }
@@ -1212,7 +1212,7 @@ final class pk extends wf {
         kl var6;
         int var7;
         kl var8;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         var8 = this.field_C[param0][param1];
         if (var8 == null) {
           return;
@@ -1272,7 +1272,7 @@ final class pk extends wf {
               param0.field_i.a(true);
               var5 = -1 + var4_int + (var4_int - var5);
             }
-            decompiledSharedTail0 = (BounceDown.field_N != 0);
+            decompiledSharedTail0 = (Bounce.field_N != 0);
           }
           if (decompiledSharedTail0) {
             var5 = (int)((long)this.field_s[param0.field_E] * (long)var4_int >> 6);
@@ -1299,7 +1299,7 @@ final class pk extends wf {
         int stackIn_9_0 = 0;
         int stackIn_9_1 = 0;
         boolean decompiledFrameCompleted0 = true;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         if (0 != (4 & this.field_l[param1])) {
           var3 = (kl) (this.field_o.field_m.a((byte) -71));
           while (var3 != null) {
@@ -1390,7 +1390,7 @@ final class pk extends wf {
         int var11 = 0;
         rj var12 = null;
         rj var13 = null;
-        var11 = BounceDown.field_N;
+        var11 = Bounce.field_N;
         try {
           param3.b();
           var6_int = 1;
@@ -1473,7 +1473,7 @@ final class pk extends wf {
     }
 
     private final void f(int param0, int param1) {
-        int var4 = BounceDown.field_N;
+        int var4 = Bounce.field_N;
         if (param0 >= 0) {
           this.field_J[param0] = 12800;
           this.field_k[param0] = 8192;

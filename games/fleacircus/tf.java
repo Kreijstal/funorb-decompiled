@@ -154,7 +154,7 @@ final class tf extends dk {
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           var3_int = 1;
           if (param2 != -2) {

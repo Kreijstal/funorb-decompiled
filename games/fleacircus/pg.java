@@ -15,7 +15,7 @@ final class pg {
         oa var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         try {
           if (param0 > -64) {
             pg.a(-11, 18);
@@ -54,7 +54,7 @@ final class pg {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         try {
           var11 = new char[param0];
           var10 = var11;
@@ -94,7 +94,7 @@ final class pg {
 
     final static bi[] b(int param0) {
         int var2 = 0;
-        int var3 = FleaCircusApplet.field_A ? 1 : 0;
+        int var3 = fleas.field_A ? 1 : 0;
         bi[] var1 = new bi[ef.field_l];
         for (var2 = param0; ef.field_l > var2; var2++) {
           var1[var2] = new bi(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], of.field_d[var2], rd.field_d);

@@ -8,7 +8,7 @@ final class pf extends ak {
     static String field_B;
 
     final void d(byte param0) {
-        int var4 = BounceDown.field_N;
+        int var4 = Bounce.field_N;
         ea var2 = new ea(this.field_E);
         if (param0 <= 109) {
           field_A = (int[]) null;
@@ -33,7 +33,7 @@ final class pf extends ak {
     }
 
     final void l(int param0) {
-        int var4 = BounceDown.field_N;
+        int var4 = Bounce.field_N;
         if (param0 != -26623) {
           return;
         }
@@ -94,7 +94,7 @@ final class pf extends ak {
         ea var2;
         ri var3;
         int var4;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         var2 = new ea(this.field_E);
         var3 = (ri) (var2.a(22092));
         if (param0) {
@@ -110,7 +110,7 @@ final class pf extends ak {
     }
 
     final void k(int param0) {
-        int var4 = BounceDown.field_N;
+        int var4 = Bounce.field_N;
         ea var2 = new ea(this.field_E);
         ri var3 = (ri) (var2.a(22092));
         while (var3 != null) {
@@ -191,7 +191,7 @@ final class pf extends ak {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var7 = BounceDown.field_N;
+        int var7 = Bounce.field_N;
         if (null != this.field_j) {
           this.field_j.a(param1, (lk) (this), (byte) 3, true, param3);
         }
@@ -225,7 +225,7 @@ final class pf extends ak {
         ea var2;
         ri var3;
         int var4;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         var2 = new ea(this.field_E);
         if (param0 != 0) {
           this.d((byte) -47);

@@ -39,12 +39,12 @@ class DualLinkNode extends IntrusiveNode {
         int var2Lifetime1Lifetime2;
         int var2Lifetime1Lifetime3;
         int var2Lifetime1Lifetime4;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           if (param0 <= 100) {
             field_k = (String) null;
           }
-          if (0 == FleaCircusApplet.field_E) {
+          if (0 == fleas.field_E) {
             if (!fl.field_f) {
               return;
             }
@@ -199,7 +199,7 @@ class DualLinkNode extends IntrusiveNode {
         int var38Lifetime2;
         int var39Lifetime2;
         int var40Lifetime2;
-        var42 = FleaCircusApplet.field_A ? 1 : 0;
+        var42 = fleas.field_A ? 1 : 0;
         try {
           if (0 <= param14 &&
             bl.field_i > param7) {

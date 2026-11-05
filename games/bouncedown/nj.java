@@ -137,7 +137,7 @@ final class nj extends al {
         int var8Lifetime3;
         int var5Lifetime2Lifetime1;
         int var7Lifetime1Lifetime1;
-        var9 = BounceDown.field_N;
+        var9 = Bounce.field_N;
         try {
           ea.field_f = true;
           ne.field_u = param2;

@@ -46,7 +46,7 @@ final class oc {
         int var10Lifetime5;
         int var10Lifetime6;
         int var10Lifetime7;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           if (0 == param3) {
             stackIn_3_0 = 0;
@@ -225,7 +225,7 @@ final class oc {
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           if (param0) {
             field_d = (String) null;

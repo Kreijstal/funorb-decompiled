@@ -108,7 +108,7 @@ final class gk {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         try {
           ge.field_c = ge.field_c + 1;
           if (ck.field_c == -1 &&
@@ -373,7 +373,7 @@ final class gk {
         int var4;
         int var5;
         int var4Lifetime1;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         if (!this.c(94)) {
           return 0;
         }
@@ -408,7 +408,7 @@ final class gk {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = BounceDown.field_N;
+        int var10 = Bounce.field_N;
         if (param2 == null ||
           param4 <= 0) {
           return;
@@ -547,7 +547,7 @@ final class gk {
         int var2;
         int var4;
         int var5;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         if (!this.c(-95)) {
           return false;
         }
@@ -573,7 +573,7 @@ final class gk {
         int var4;
         int var5;
         int var6;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         var2 = 0;
         var3 = oa.field_a;
         if (var3 < 5) {
@@ -810,7 +810,7 @@ final class gk {
         byte[] var43 = null;
         byte[] var44 = null;
         int var14Lifetime1;
-        var22 = BounceDown.field_N;
+        var22 = Bounce.field_N;
         try {
           if (!this.a(param0, param1)) {
             return false;

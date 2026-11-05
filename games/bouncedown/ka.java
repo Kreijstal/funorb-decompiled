@@ -38,7 +38,7 @@ final class ka extends wf {
         int var10 = 0;
         pi var11 = null;
         int var12 = 0;
-        var12 = BounceDown.field_N;
+        var12 = Bounce.field_N;
         try {
           if ((this.field_p.field_l[param3.field_E] & 4) != 0 &&
             param3.field_C < 0) {
@@ -181,7 +181,7 @@ final class ka extends wf {
         int var5 = 0;
         kl var6 = null;
         int var7 = 0;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           this.field_l.a(param0, param1, param2);
           var6 = (kl) (this.field_m.a((byte) -49));
@@ -258,7 +258,7 @@ final class ka extends wf {
         kl var3;
         int var4;
         boolean stackIn_4_0 = false;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         this.field_l.a(param0);
         var3 = (kl) (this.field_m.a((byte) -91));
         while (var3 != null) {

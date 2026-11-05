@@ -70,7 +70,7 @@ final class w {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           var2 = 70 % ((37 - param0) / 51);
           var1_int = ja.field_c[0];

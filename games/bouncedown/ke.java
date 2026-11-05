@@ -21,7 +21,7 @@ final class ke extends IntrusiveNode {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           if (!param2) {
             return;

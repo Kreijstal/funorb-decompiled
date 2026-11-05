@@ -23,7 +23,7 @@ final class s extends vc {
         regionExit1: {
           regionExit2: {
             regionExit3: {
-              var13 = BounceDown.field_N;
+              var13 = Bounce.field_N;
               var6 = this.field_H.a((byte) 122);
               if (ui.field_o != var6 &&
                 mi.field_c != var6) {
@@ -95,7 +95,7 @@ final class s extends vc {
         int var4 = 0;
         j var5 = null;
         int var7 = 0;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           if (pj.field_a != b.field_b) {
             return false;

@@ -54,7 +54,7 @@ final class ii {
         int var12 = 0;
         String var2 = null;
         String var11 = null;
-        int var13 = FleaCircusApplet.field_A ? 1 : 0;
+        int var13 = fleas.field_A ? 1 : 0;
         String var2Lifetime1;
         String var2Lifetime2;
         String var2Lifetime3;
@@ -170,7 +170,7 @@ final class ii {
     final static void a(byte param0) {
         int var1;
         int var2;
-        var2 = FleaCircusApplet.field_A ? 1 : 0;
+        var2 = fleas.field_A ? 1 : 0;
         ResourceArchive.field_e = null;
         ah.field_c = false;
         if (!jg.field_d) {

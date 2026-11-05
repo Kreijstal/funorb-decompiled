@@ -28,7 +28,7 @@ class PacketBuffer extends IntrusiveNode {
         int var3;
         int var4;
         CharSequence var5;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         int fieldTemp$0 = this.field_h;
         this.field_h = this.field_h + 1;
         var2 = this.field_i[fieldTemp$0];
@@ -156,7 +156,7 @@ class PacketBuffer extends IntrusiveNode {
         int var9 = 0;
         int var10 = 0;
         tg[] var11 = null;
-        var10 = BounceDown.field_N;
+        var10 = Bounce.field_N;
         try {
           var3_long = 0L;
           var5 = 0L;
@@ -241,7 +241,7 @@ class PacketBuffer extends IntrusiveNode {
         byte[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var2_int = param0.length();
           if (!param1) {
@@ -392,7 +392,7 @@ class PacketBuffer extends IntrusiveNode {
         int var12 = 0;
         int var13 = 0;
         int[] var14 = null;
-        var13 = BounceDown.field_N;
+        var13 = Bounce.field_N;
         try {
           var5_int = this.field_h;
           this.field_h = param2;
@@ -451,7 +451,7 @@ class PacketBuffer extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           if (param0 < 121) {
             this.b(99, (byte) 102);
@@ -534,7 +534,7 @@ class PacketBuffer extends IntrusiveNode {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = BounceDown.field_N;
+        var9 = Bounce.field_N;
         try {
           var5_int = 0;
           var6 = -1;
@@ -604,7 +604,7 @@ class PacketBuffer extends IntrusiveNode {
     final void a(int param0, boolean param1) {
         int fieldTemp$0 = 0;
         int var4;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         if (param1) {
           return;
         }
@@ -633,7 +633,7 @@ class PacketBuffer extends IntrusiveNode {
         RuntimeException var5 = null;
         int var6 = 0;
         int[] var7 = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           if (!param1) {
             var7 = (int[]) null;
@@ -694,7 +694,7 @@ class PacketBuffer extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var11 = BounceDown.field_N;
+        var11 = Bounce.field_N;
         try {
           var3_int = this.field_h / 8;
           this.field_h = 0;

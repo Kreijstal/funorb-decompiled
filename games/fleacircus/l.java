@@ -42,7 +42,7 @@ final class l {
         int var4Lifetime3;
         int var4Lifetime4;
         int var4Lifetime5;
-        var15 = FleaCircusApplet.field_A ? 1 : 0;
+        var15 = fleas.field_A ? 1 : 0;
         try {
           var16 = new ni(param0);
           var17 = var16;

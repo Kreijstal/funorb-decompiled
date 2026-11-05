@@ -69,7 +69,7 @@ final class kl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var1_intLifetime1;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           bl.b();
           bj.field_l = 11;
@@ -100,7 +100,7 @@ final class kl {
     final static char a(byte param0, char param1) {
         int var2;
         int var3;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         if (param0 != -78) {
           field_b = (String) null;
         }

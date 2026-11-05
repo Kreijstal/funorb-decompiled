@@ -32,7 +32,7 @@ final class t {
         if (var4 != 20) {
           return true;
         }
-        if ((FleaCircusApplet.field_E != 0 ||
+        if ((fleas.field_E != 0 ||
           !(ResourceArchive.field_c.field_x >= 15) ||
           !qh.c((byte) 62) &&
           !(0 >= wc.field_q)) && ResourceArchive.field_c.a(ResourceArchive.field_c.field_x, 98)) {
@@ -48,16 +48,16 @@ final class t {
         tl.field_p.a(fi.field_l, 320, var2, var3, var4);
         var2 += 40;
         int var5 = tj.field_a;
-        if (!(tj.field_a < nl.field_c[FleaCircusApplet.field_E].length)) {
-          var5 = -1 + nl.field_c[FleaCircusApplet.field_E].length;
+        if (!(tj.field_a < nl.field_c[fleas.field_E].length)) {
+          var5 = -1 + nl.field_c[fleas.field_E].length;
         }
-        tl.field_p.a(db.a(pk.field_G, new String[]{wj.field_c[FleaCircusApplet.field_E][var5]}, true), 170, var2 - 27, 300, 320, var3, var4, 1, 0, tl.field_p.field_H);
+        tl.field_p.a(db.a(pk.field_G, new String[]{wj.field_c[fleas.field_E][var5]}, true), 170, var2 - 27, 300, 320, var3, var4, 1, 0, tl.field_p.field_H);
         var2 += 90;
-        tl.field_p.a(db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[FleaCircusApplet.field_E][var5].field_f)}, true), 320, var2, var3, var4);
+        tl.field_p.a(db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var5].field_f)}, true), 320, var2, var3, var4);
         var2 += 40;
         tl.field_p.a(db.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true), 320, var2, var3, var4);
         int var7 = -113 % ((param0 - 12) / 34);
-        String var6 = db.a(FleaCircusApplet.field_I, new String[]{wa.a(false)}, true);
+        String var6 = db.a(fleas.field_I, new String[]{wa.a(false)}, true);
         tl.field_p.a(db.a(var6, new String[]{"0"}, true), 320, var2 + tl.field_p.field_N, var3, var4);
     }
 
@@ -104,7 +104,7 @@ final class t {
         int var14;
         int[] var18;
         regionExit1: {
-          var14 = FleaCircusApplet.field_A ? 1 : 0;
+          var14 = fleas.field_A ? 1 : 0;
           var3 = lk.field_Q;
           this.b(2, nb.field_g);
           if (!qh.c((byte) 122)) {
@@ -185,7 +185,7 @@ final class t {
         int dupTemp$2 = 0;
         int discarded$0 = 0;
         int var3;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         for (var2 = 0; b.field_d.length > var2; var2++) {
           dupTemp$1 = b.field_d[var2] + (2 + var2);
           b.field_d[var2] = dupTemp$1;
@@ -265,7 +265,7 @@ final class t {
         if (qh.c((byte) 94)) {
           var3 = 150 + var10.field_N;
           var4 = var10.field_K + (var10.field_y + 4);
-          stackIn_7_0 = (FleaCircusApplet.field_L == 0) ? 0 : 1;
+          stackIn_7_0 = (fleas.field_L == 0) ? 0 : 1;
           var5 = stackIn_7_0;
           stackIn_10_0 = (wi.field_b == 0) ? 0 : 1;
           var6 = stackIn_10_0;
@@ -327,7 +327,7 @@ final class t {
         int var4Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
-        var14 = FleaCircusApplet.field_A ? 1 : 0;
+        var14 = fleas.field_A ? 1 : 0;
         if (param1 <= 2) {
           discarded$0 = this.a(-16, 3, (byte) 34);
         }
@@ -339,7 +339,7 @@ final class t {
         if (!param0) {
           stackIn_5_0 = kh.field_b;
         } else {
-          stackIn_5_0 = FleaCircusApplet.field_L;
+          stackIn_5_0 = fleas.field_L;
         }
         var6 = stackIn_5_0;
         var7 = 0;
@@ -462,7 +462,7 @@ final class t {
         int var5;
         int var4Lifetime1;
         Object var2Lifetime1;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         ResourceArchive.field_c.field_a = 100;
         if (this.field_i != 1) {
           qi.field_c.f(0, 0);
@@ -481,10 +481,10 @@ final class t {
           -2 != var4 &&
           1 != var4) {
           if (var4 == 10) {
-            if (pl.field_l[FleaCircusApplet.field_E] / 3 > tj.field_a) {
+            if (pl.field_l[fleas.field_E] / 3 > tj.field_a) {
               var3 = f.field_E;
             } else {
-              if (tj.field_a < pl.field_l[FleaCircusApplet.field_E] * 2 / 3) {
+              if (tj.field_a < pl.field_l[fleas.field_E] * 2 / 3) {
                 var3 = me.field_g;
               } else {
                 var3 = tk.field_s;
@@ -618,16 +618,16 @@ final class t {
         String var10;
         int var11;
         int var6Lifetime1;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         og.a(ResourceArchive.field_c.field_a + 22, ad.field_b, 93, -4 + ResourceArchive.field_c.field_l, ResourceArchive.field_c.field_d - 17, ResourceArchive.field_c.field_n + 9);
         ResourceArchive.field_c.c(-1);
         if (ResourceArchive.field_c.field_i) {
           gb.e(ResourceArchive.field_c.field_l, ResourceArchive.field_c.field_D.field_N + ResourceArchive.field_c.field_a, ResourceArchive.field_c.field_n + 1, ResourceArchive.field_c.field_d - ResourceArchive.field_c.field_D.field_N + 1, 32928, 256);
         }
-        stackIn_6_0 = (ResourceArchive.field_c.field_x > hj.field_a[FleaCircusApplet.field_E]) ? 0 : 1;
+        stackIn_6_0 = (ResourceArchive.field_c.field_x > hj.field_a[fleas.field_E]) ? 0 : 1;
         var2 = stackIn_6_0;
         var3 = 0;
-        if (FleaCircusApplet.field_E == 0 &&
+        if (fleas.field_E == 0 &&
           ResourceArchive.field_c.field_x >= 15 && (qh.c((byte) 36) ||
           !(wc.field_q > 0))) {
           var2 = 0;
@@ -660,7 +660,7 @@ final class t {
         }
         var6Lifetime1 = pf.field_a.field_w;
         var5 += 15;
-        var8 = ia.field_m[FleaCircusApplet.field_E][ResourceArchive.field_c.field_x];
+        var8 = ia.field_m[fleas.field_E][ResourceArchive.field_c.field_x];
         rd.field_e.d(-(rd.field_e.field_x / 2) + (var6Lifetime1 / 2 + var4), var5);
         if (ResourceArchive.field_c.field_d + ResourceArchive.field_c.field_a >= 397) {
           rd.field_e.b(var6Lifetime1 / 2 + (var4 - rd.field_e.field_x / 2), -20 + (ResourceArchive.field_c.field_d + ResourceArchive.field_c.field_a));
@@ -672,7 +672,7 @@ final class t {
           var5 = var5 + (var9.field_N + 15);
           var9.a(db.a(kl.field_b, new String[]{Integer.toString((int) var8.field_f)}, true), var4 + var6Lifetime1 / 2, var5, 1, -1);
           var5 = var5 + var9.field_N;
-          var9.a(db.a(FleaCircusApplet.field_H, new String[]{Integer.toString((int) var8.field_e)}, true), var4 + var6Lifetime1 / 2, var5, 1, -1);
+          var9.a(db.a(fleas.field_H, new String[]{Integer.toString((int) var8.field_e)}, true), var4 + var6Lifetime1 / 2, var5, 1, -1);
         } else {
           var10 = ej.field_b;
           var5 += 10;
@@ -691,7 +691,7 @@ final class t {
     private final int b(int param0) {
         int var2;
         int var3;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         var2 = param0;
         while (true) {
           if (var2 > 0 &&
@@ -701,7 +701,7 @@ final class t {
             ua.field_tb[1] != je.field_O[var2]) {
             return var2;
           }
-          var2 = db.a((byte) -115, FleaCircusApplet.field_F, je.field_O.length);
+          var2 = db.a((byte) -115, fleas.field_F, je.field_O.length);
         }
     }
 
@@ -721,7 +721,7 @@ final class t {
         int var16;
         fa var17;
         fa var18;
-        var16 = FleaCircusApplet.field_A ? 1 : 0;
+        var16 = fleas.field_A ? 1 : 0;
         var17 = tl.field_p;
         var18 = var17;
         var5 = this.a(param1, (byte) 118);
@@ -801,7 +801,7 @@ final class t {
         int var6;
         int var7;
         int[] var11;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         if (param1 >= -24) {
           this.a(-100, 39, false);
         }
@@ -832,7 +832,7 @@ final class t {
                     oa.a(7, param0, 69);
                     var11 = hj.field_a;
                     hj.field_a[1] = 0;
-                    FleaCircusApplet.field_L = 0;
+                    fleas.field_L = 0;
                     kh.field_b = 0;
                     var11[0] = 0;
                     a.field_e.f(1);
@@ -842,7 +842,7 @@ final class t {
                     if (!(!this.field_b.b(109))) {
                       oa.a(4, param0, 99);
                       bj.field_m = this.field_i;
-                      ae.field_e = db.a((byte) -115, FleaCircusApplet.field_F, je.field_O.length);
+                      ae.field_e = db.a((byte) -115, fleas.field_F, je.field_O.length);
                     }
                   } else {
                     if (var6 == 3) {
@@ -932,7 +932,7 @@ final class t {
                                         il.a((byte) 77, rl.a((byte) -66));
                                       }
                                     } else {
-                                      stackIn_150_0 = (FleaCircusApplet.field_L == 0) ? 2 : 5;
+                                      stackIn_150_0 = (fleas.field_L == 0) ? 2 : 5;
                                       me.a(stackIn_150_0, 6, false);
                                     }
                                     break regionExit1;
@@ -967,7 +967,7 @@ final class t {
                                   m.field_b = null;
                                   wi.field_p = new vj();
                                   tj.field_a = ResourceArchive.field_c.field_x;
-                                  if (ResourceArchive.field_c.field_x <= hj.field_a[FleaCircusApplet.field_E] &&
+                                  if (ResourceArchive.field_c.field_x <= hj.field_a[fleas.field_E] &&
                                     ResourceArchive.field_c.a(ResourceArchive.field_c.field_x, 110)) {
                                     ej.a((byte) -39);
                                     stackIn_187_0 = (tj.field_a == 0);
@@ -989,7 +989,7 @@ final class t {
                                   if (this.field_b.b(-76)) {
                                     if (this.field_i != 9 &&
                                       6 != this.field_i) {
-                                      if (tj.field_a + 1 < ia.field_m[FleaCircusApplet.field_E].length && (FleaCircusApplet.field_E != 0 ||
+                                      if (tj.field_a + 1 < ia.field_m[fleas.field_E].length && (fleas.field_E != 0 ||
                                         !(wc.field_q <= 0) ||
                                         !(tj.field_a + 1 >= 15))) {
                                         oa.a(-1, param0, 101);
@@ -1004,7 +1004,7 @@ final class t {
                                       if (qh.c((byte) 64)) {
                                         oa.a(6, param0, 81);
                                       } else {
-                                        if (FleaCircusApplet.field_L == 0) {
+                                        if (fleas.field_L == 0) {
                                           oa.a(2, param0, -66);
                                         } else {
                                           oa.a(5, param0, 29);
@@ -1056,7 +1056,7 @@ final class t {
                                     } else {
                                       wi.field_p.a(-1);
                                       m.field_b = null;
-                                      if (FleaCircusApplet.field_L == 0) {
+                                      if (fleas.field_L == 0) {
                                         oa.a(2, param0, -70);
                                       } else {
                                         oa.a(5, param0, 57);
@@ -1120,7 +1120,7 @@ final class t {
           }
           if (this.field_b.b(111)) {
             stackIn_48_0 = (var5 == 0) ? 0 : 1;
-            FleaCircusApplet.field_E = stackIn_48_0;
+            fleas.field_E = stackIn_48_0;
             vf.e(-6359);
             oa.a(8, param0, -67);
           }
@@ -1130,7 +1130,7 @@ final class t {
     private final int a(int param0, int param1, byte param2) {
         int var5 = 0;
         int var6 = 0;
-        int var7 = FleaCircusApplet.field_A ? 1 : 0;
+        int var7 = fleas.field_A ? 1 : 0;
         int var4 = -12 % ((param2 + 6) / 33);
         for (var5 = 0; var5 < ia.field_p[this.field_i].length; var5++) {
           var6 = this.a(var5, (byte) 127);
@@ -1152,7 +1152,7 @@ final class t {
         int stackIn_42_0 = 0;
         int var2;
         int var3;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         this.e(-400);
         if (this.field_i == 7) {
           stackIn_4_0 = 26;
@@ -1174,7 +1174,7 @@ final class t {
           return;
         }
         if (this.field_i == 0) {
-          FleaCircusApplet.field_L = 0;
+          fleas.field_L = 0;
         }
         if (this.field_i == 8) {
           ResourceArchive.field_c.e(param0 ^ 121);
@@ -1255,7 +1255,7 @@ final class t {
         int var2;
         int var3;
         int var4;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         if (2 == this.field_i &&
           !qh.c((byte) 34)) {
           if (96 == ji.field_a) {
@@ -1360,7 +1360,7 @@ final class t {
         fa var9;
         fa var10;
         int var3Lifetime1;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         var9 = ve.field_d;
         var10 = var9;
         this.b(2, g.field_s);

@@ -42,7 +42,7 @@ final class hi extends IntrusiveNode {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           while (true) {
             var3 = param0.a(param1, (byte) -34);

@@ -77,7 +77,7 @@ final class tk extends IOException {
         int var14 = 0;
         int var15 = 0;
         int[] var17 = null;
-        var16 = BounceDown.field_N;
+        var16 = Bounce.field_N;
         if (param3 != -72) {
           return;
         }

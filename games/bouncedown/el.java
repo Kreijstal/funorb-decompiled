@@ -15,7 +15,7 @@ final class el extends sg {
         int var4;
         int var5;
         int var6;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         var4 = -123 % ((-65 - param0) / 37);
         if (this.field_j > this.field_d) {
           this.field_g = this.field_g + (this.field_j - this.field_d);
@@ -38,7 +38,7 @@ final class el extends sg {
     private final long b(int param0) {
         long var6 = 0L;
         int var8 = 0;
-        int var9 = BounceDown.field_N;
+        int var9 = Bounce.field_N;
         long var2 = System.nanoTime();
         long var4 = var2 - this.field_g;
         long var6Lifetime1;

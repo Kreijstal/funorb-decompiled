@@ -29,7 +29,7 @@ final class ib implements ComponentLayout {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           if (param3 instanceof d) {
             stackIn_5_0 = (UiComponent) (param3);
@@ -145,7 +145,7 @@ final class ib implements ComponentLayout {
         int var8 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           var1 = ae.field_a;
           var2 = var1.e(false);

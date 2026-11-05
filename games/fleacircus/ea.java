@@ -131,7 +131,7 @@ final class ea {
         byte[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           var2_int = param1.length();
           if (param0 != -18428) {

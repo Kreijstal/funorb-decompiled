@@ -28,7 +28,7 @@ class lc extends DualLinkNode {
           String stackIn_22_2 = null;
           Throwable decompiledCaughtException = null;
           RuntimeException var2_ref = null;
-          var5 = FleaCircusApplet.field_A ? 1 : 0;
+          var5 = fleas.field_A ? 1 : 0;
           try {
             var9 = new byte[24];
             var7 = var9;

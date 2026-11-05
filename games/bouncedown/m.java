@@ -26,7 +26,7 @@ final class m implements Iterable {
         int var5;
         IntrusiveNode var6;
         int var7;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         var5 = -117 / ((param0 - 20) / 36);
         var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_d))];
         this.field_f = var4.field_c;

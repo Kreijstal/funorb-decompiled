@@ -52,7 +52,7 @@ final class ek extends ji {
         int var38Lifetime2;
         int var39Lifetime2;
         int var40Lifetime2;
-        var42 = BounceDown.field_N;
+        var42 = Bounce.field_N;
         try {
           if (param12 >= 0 &&
             param13 < qk.field_g) {

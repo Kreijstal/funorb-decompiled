@@ -55,7 +55,7 @@ final class gi {
         lh var2;
         int var3;
         lh var4;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         if (param0 != 0) {
           this.a(10);
         }
@@ -125,7 +125,7 @@ final class gi {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8;
         int var9;
-        var9 = BounceDown.field_N;
+        var9 = Bounce.field_N;
         var8 = 115 % ((param0 + 65) / 38);
         if (param2 > param1) {
           if (param4 > param2) {

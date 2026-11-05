@@ -40,7 +40,7 @@ final class th extends java.awt.Canvas {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = BounceDown.field_N;
+        var12 = Bounce.field_N;
         try {
           var6_int = 120 / ((33 - param1) / 59);
           if (param3 != null &&

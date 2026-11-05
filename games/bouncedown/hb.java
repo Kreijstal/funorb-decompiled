@@ -185,7 +185,7 @@ final class hb extends ak {
         int[] var14 = null;
         ld var15 = null;
         int[] var16 = null;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           var12 = jc.field_g;
           if (param0 != 1790) {

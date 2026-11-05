@@ -39,7 +39,7 @@ final class dh implements Iterator {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = BounceDown.field_N;
+        var10 = Bounce.field_N;
         try {
           na.a(param3, param0, param2 + 1, 10000536);
           na.a(param3, param0 + param4, param2 + 1, 12105912);
@@ -72,7 +72,7 @@ final class dh implements Iterator {
         int fieldTemp$0 = 0;
         IntrusiveNode var1;
         int var2;
-        var2 = BounceDown.field_N;
+        var2 = Bounce.field_N;
         if (this.field_h != this.field_c.field_b[-1 + this.field_f]) {
           var1 = this.field_h;
           this.field_g = var1;
@@ -95,7 +95,7 @@ final class dh implements Iterator {
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
         int var2;
-        var2 = BounceDown.field_N;
+        var2 = Bounce.field_N;
         if (this.field_c.field_b[-1 + this.field_f] != this.field_h) {
           return true;
         }

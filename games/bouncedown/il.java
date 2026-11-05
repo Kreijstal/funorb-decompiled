@@ -56,7 +56,7 @@ final class il {
         StringBuilder var8 = null;
         int var9 = 0;
         int var10 = 0;
-        var11 = BounceDown.field_N;
+        var11 = Bounce.field_N;
         try {
           var4_int = param0.length();
           if (param2 > -28) {

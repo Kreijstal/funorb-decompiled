@@ -59,7 +59,7 @@ final class el extends wi {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           pi.field_e = param0.getParameter("overxgames");
           if (null == pi.field_e) {
@@ -243,7 +243,7 @@ final class el extends wi {
         int var3Lifetime2;
         int var3Lifetime3;
         int var3Lifetime4;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         if (param0 >= 20) {
           if (!this.field_k) {
             this.field_g = false;

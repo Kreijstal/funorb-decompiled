@@ -31,7 +31,7 @@ final class ja {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           if (param1 != 200) {
             field_c = (int[]) null;

@@ -176,7 +176,7 @@ final class ij extends gj implements da {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           for (var6_int = 0; var6_int < this.field_K.length; var6_int++) {
             if (this.field_M[var6_int] == param4) {
@@ -227,7 +227,7 @@ final class ij extends gj implements da {
         int var5 = 0;
         int var6 = 0;
         int var5Lifetime1;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           this.field_C.f(1);
           if (param0 != null &&

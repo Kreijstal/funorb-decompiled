@@ -23,7 +23,7 @@ final class tb extends v {
           Exception var5 = null;
           int var6 = 0;
           lf var4_refLifetime1;
-          var6 = BounceDown.field_N;
+          var6 = Bounce.field_N;
           try {
             if (null != this.field_q) {
               try {
@@ -210,7 +210,7 @@ final class tb extends v {
           int var15 = 0;
           int var16 = 0;
           lf var2Lifetime1;
-          var16 = BounceDown.field_N;
+          var16 = Bounce.field_N;
           if (null != this.field_q) {
             var2_long = fa.a(param0 ^ -54);
             var4 = (int)(-this.field_k + var2_long);

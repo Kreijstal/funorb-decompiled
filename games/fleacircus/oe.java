@@ -30,11 +30,11 @@ final class oe {
         int var6Lifetime2;
         int var7Lifetime1;
         int var7Lifetime2;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         try {
           if (param2 >= 0 &&
             param1 >= 0) {
-            var3_int = param1 * se.field_a.length / ia.field_m[FleaCircusApplet.field_E].length;
+            var3_int = param1 * se.field_a.length / ia.field_m[fleas.field_E].length;
             var13 = ia.field_m[param2][param1].field_c;
             nl.field_c[param2][param1].d(0, 0);
             for (var5 = 39; var5 >= 0; var5--) {

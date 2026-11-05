@@ -39,7 +39,7 @@ final class ql extends IntrusiveNode {
         fh[] var2;
         int var4;
         fh[] var5;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         if (param0 != -22471) {
           field_l = (ae) null;
         }

@@ -28,7 +28,7 @@ final class sb {
           String stackIn_20_2 = null;
           Throwable decompiledCaughtException = null;
           RuntimeException var2_ref = null;
-          var5 = BounceDown.field_N;
+          var5 = Bounce.field_N;
           try {
             var10 = new byte[24];
             var8 = var10;

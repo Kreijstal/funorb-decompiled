@@ -43,7 +43,7 @@ final class vh {
           int var15 = 0;
           int var18 = 0;
           byte[] var19 = null;
-          var18 = BounceDown.field_N;
+          var18 = Bounce.field_N;
           var3 = this.field_b;
           synchronized (var3) {
             try {
@@ -239,7 +239,7 @@ final class vh {
           int var13 = 0;
           EOFException var14 = null;
           int var16 = 0;
-          var16 = BounceDown.field_N;
+          var16 = Bounce.field_N;
           try {
             var6 = this.field_b;
             synchronized (var6) {

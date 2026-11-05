@@ -28,7 +28,7 @@ final class ej {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           vc.field_F = he.field_p;
           if (param0 != param3) {

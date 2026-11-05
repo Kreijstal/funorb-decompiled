@@ -362,7 +362,7 @@ final class mi {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           var3_int = 0;
           if (param1 != 122) {
@@ -399,7 +399,7 @@ final class mi {
         CipherPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = BounceDown.field_N;
+        int var6 = Bounce.field_N;
         try {
           var7 = hh.field_p;
           var8 = var7;

@@ -91,7 +91,7 @@ abstract class ak extends lk implements ik {
     }
 
     final static String a(int param0, String param1, String param2, String param3) {
-        int var5 = BounceDown.field_N;
+        int var5 = Bounce.field_N;
         if (param0 <= 12) {
           return (String) null;
         }
@@ -210,7 +210,7 @@ abstract class ak extends lk implements ik {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           discarded$22 = param3.append('\n');
           if (param1 != 12) {

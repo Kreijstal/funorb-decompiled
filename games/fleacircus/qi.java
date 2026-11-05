@@ -29,7 +29,7 @@ final class qi {
         int[] var12 = null;
         int[] var13 = null;
         int var9Lifetime1;
-        var10 = FleaCircusApplet.field_A ? 1 : 0;
+        var10 = fleas.field_A ? 1 : 0;
         try {
           var7_int = pf.a(param6 ^ 104, param1);
           if (null == vk.field_N) {
@@ -52,21 +52,21 @@ final class qi {
           ri.field_x.a(param3, param1, param2, 0);
           ri.field_x.d(var7_int, 0);
           ri.field_x.a(0, var13);
-          if (FleaCircusApplet.field_B == null ||
-            !(100 <= FleaCircusApplet.field_B.field_k.length)) {
-            FleaCircusApplet.field_B = new ni(100);
+          if (fleas.field_B == null ||
+            !(100 <= fleas.field_B.field_k.length)) {
+            fleas.field_B = new ni(100);
           }
-          FleaCircusApplet.field_B.field_i = 0;
-          FleaCircusApplet.field_B.a(param6 + 49, 10);
+          fleas.field_B.field_i = 0;
+          fleas.field_B.a(param6 + 49, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            FleaCircusApplet.field_B.a(var13[var11], (byte) -15);
+            fleas.field_B.a(var13[var11], (byte) -15);
             var11++;
           }
-          FleaCircusApplet.field_B.b((byte) -49, param1);
-          FleaCircusApplet.field_B.a(param0, param5, 127);
-          param4.a(FleaCircusApplet.field_B.field_k, FleaCircusApplet.field_B.field_i, 0, 0);
+          fleas.field_B.b((byte) -49, param1);
+          fleas.field_B.a(param0, param5, 127);
+          param4.a(fleas.field_B.field_k, fleas.field_B.field_i, 0, 0);
           param4.a(ri.field_x.field_k, ri.field_x.field_i, 0, param6 + 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

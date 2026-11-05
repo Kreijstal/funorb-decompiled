@@ -24,7 +24,7 @@ class sh extends mh implements rc {
         RuntimeException var4 = null;
         int var5 = 0;
         uc var6 = null;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           if (this.field_ib) {
             return;

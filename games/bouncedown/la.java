@@ -57,7 +57,7 @@ final class la extends wd {
         int var9Lifetime2;
         int var10Lifetime1;
         int var10Lifetime2;
-        var11 = BounceDown.field_N;
+        var11 = Bounce.field_N;
         super.a(param0, param1, 119, param3);
         if (param0 != 0) {
           return;
@@ -171,7 +171,7 @@ final class la extends wd {
         int var3Lifetime1;
         int var4Lifetime1;
         String var1Lifetime1;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         var7 = "(" + ak.field_z + " " + i.field_f + " " + ck.field_b + ") " + wa.field_d;
         var1 = var7;
         if (param0 <= -104) {
@@ -263,7 +263,7 @@ final class la extends wd {
         int var6 = 0;
         int var7 = 0;
         int[] var9 = null;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           if (param1 != 2) {
             field_E = (tg[]) null;
@@ -296,7 +296,7 @@ final class la extends wd {
     final static void a(int param0, boolean param1) {
         int var2;
         int var3;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         if (param0 != 640) {
           return;
         }

@@ -58,7 +58,7 @@ final class gh extends lc implements ki, rc, rf {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           if (param3 != 0) {
             if (param3 == 1) {

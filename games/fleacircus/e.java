@@ -30,7 +30,7 @@ class e implements ComponentLayout, eg {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           var3 = fi.a(param0, param1, (byte) 124);
           if (var3 != null) {
@@ -71,7 +71,7 @@ class e implements ComponentLayout, eg {
         int var13 = 0;
         int var14 = 0;
         int var13Lifetime1;
-        var14 = FleaCircusApplet.field_A ? 1 : 0;
+        var14 = fleas.field_A ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           var10 = -16 / ((54 - param2) / 63);
@@ -280,7 +280,7 @@ class e implements ComponentLayout, eg {
         int var16 = 0;
         ne var17 = null;
         ne var18 = null;
-        var16 = FleaCircusApplet.field_A ? 1 : 0;
+        var16 = fleas.field_A ? 1 : 0;
         try {
           if (param4 != -30298) {
             return;
@@ -545,7 +545,7 @@ class e implements ComponentLayout, eg {
         int var6 = 0;
         int var7 = 0;
         int var6Lifetime1;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           if (param0.field_w == null) {
             param0.field_w = (ne) ((Object) new j());

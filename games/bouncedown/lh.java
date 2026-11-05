@@ -26,7 +26,7 @@ final class lh {
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = BounceDown.field_N;
+        var9 = Bounce.field_N;
         try {
           var11 = new char[param2];
           var10 = var11;
@@ -101,7 +101,7 @@ final class lh {
         CharSequence var9 = null;
         int var10 = 0;
         CharSequence var11 = null;
-        var10 = BounceDown.field_N;
+        var10 = Bounce.field_N;
         try {
           if (param1 == 0) {
             stackIn_3_0 = "";

@@ -63,7 +63,7 @@ final class kf extends IntrusiveNode {
           String var20 = null;
           byte[][] var21 = null;
           int var13Lifetime1;
-          var14 = FleaCircusApplet.field_A ? 1 : 0;
+          var14 = fleas.field_A ? 1 : 0;
           try {
             var18 = new fg();
             var18.field_k = param0.e(false);

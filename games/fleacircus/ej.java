@@ -57,10 +57,10 @@ final class ej {
         RuntimeException var1 = null;
         int var2 = 0;
         int var4 = 0;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           j.field_f = wi.field_p.field_b;
-          if (FleaCircusApplet.field_E == 0 &&
+          if (fleas.field_E == 0 &&
             tj.field_a >= 15 && (qh.c((byte) 55) ||
             !(wc.field_q > 0))) {
             bj.field_m = bc.field_V;
@@ -68,10 +68,10 @@ final class ej {
             return;
           }
           var1_int = tj.field_a;
-          if (tj.field_a >= nl.field_c[FleaCircusApplet.field_E].length) {
-            var1_int = -1 + nl.field_c[FleaCircusApplet.field_E].length;
+          if (tj.field_a >= nl.field_c[fleas.field_E].length) {
+            var1_int = -1 + nl.field_c[fleas.field_E].length;
           }
-          var2 = hf.field_e.length * var1_int / ia.field_m[FleaCircusApplet.field_E].length;
+          var2 = hf.field_e.length * var1_int / ia.field_m[fleas.field_E].length;
           if (param0 != -39) {
             return;
           }

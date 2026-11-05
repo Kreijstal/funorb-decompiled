@@ -130,7 +130,7 @@ final class jd {
         int var11Lifetime1;
         int var13Lifetime1;
         int var13Lifetime2;
-        var15 = FleaCircusApplet.field_A ? 1 : 0;
+        var15 = fleas.field_A ? 1 : 0;
         try {
           var5_int = this.field_r + this.field_c;
           var6 = this.field_e + this.field_j;
@@ -221,7 +221,7 @@ final class jd {
         dd var13 = null;
         hb var14 = null;
         hb var19 = null;
-        int var15 = FleaCircusApplet.field_A ? 1 : 0;
+        int var15 = fleas.field_A ? 1 : 0;
         hb var14Lifetime1;
         hb var14Lifetime2;
         try {

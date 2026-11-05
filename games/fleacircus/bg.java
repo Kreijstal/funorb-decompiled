@@ -17,7 +17,7 @@ final class bg {
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           if (param2 < 85) {
             stackIn_3_0 = -18;

@@ -39,7 +39,7 @@ abstract class hm {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           var3_int = -param0.field_mb + param1.field_mb;
           if (!param2) {

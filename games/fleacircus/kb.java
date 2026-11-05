@@ -46,7 +46,7 @@ final class kb extends IntrusiveNode {
         byte[] var6 = null;
         byte[] var10 = null;
         byte[] var11 = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           if (param2 <= 84) {
             var8 = (java.awt.Component) null;

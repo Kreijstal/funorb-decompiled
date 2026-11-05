@@ -134,7 +134,7 @@ final class tc {
         int var15Lifetime1;
         int var14Lifetime2;
         int var15Lifetime2;
-        var40 = FleaCircusApplet.field_A ? 1 : 0;
+        var40 = fleas.field_A ? 1 : 0;
         try {
           var44 = param7;
           if (var44.field_J != null &&
@@ -283,7 +283,7 @@ final class tc {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           if (!bh.a((byte) 109, param2, param1)) {
             return false;

@@ -14,7 +14,7 @@ final class vi {
         int var6;
         int var4Lifetime1;
         int var5Lifetime1;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         var2 = 0;
         var3 = vg.field_z;
         if (var3 < 5) {

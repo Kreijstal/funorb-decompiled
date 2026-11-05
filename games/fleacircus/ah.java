@@ -77,7 +77,7 @@ final class ah {
           int var13 = 0;
           EOFException var14 = null;
           int var16 = 0;
-          var16 = FleaCircusApplet.field_A ? 1 : 0;
+          var16 = fleas.field_A ? 1 : 0;
           try {
             var6 = this.field_f;
             synchronized (var6) {
@@ -281,7 +281,7 @@ final class ah {
           Object stackIn_55_0 = null;
           Throwable decompiledCaughtException = null;
           IOException var4 = null;
-          var18 = FleaCircusApplet.field_A ? 1 : 0;
+          var18 = fleas.field_A ? 1 : 0;
           var3_ref = this.field_f;
           synchronized (var3_ref) {
             try {
@@ -387,7 +387,7 @@ final class ah {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = FleaCircusApplet.field_A ? 1 : 0;
+        var2 = fleas.field_A ? 1 : 0;
         try {
           if (param0 != -1) {
             field_c = true;

@@ -37,7 +37,7 @@ final class hh extends IntrusiveNode {
           RuntimeException var1_ref = null;
           IOException var2 = null;
           int var3 = 0;
-          var3 = BounceDown.field_N;
+          var3 = Bounce.field_N;
           try {
             if (null != tb.field_p) {
               tb.field_p.a(param0 - 134);

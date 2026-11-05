@@ -309,7 +309,7 @@ final class uh extends IntrusiveNode {
         byte[] var2Lifetime215;
         byte[] var2Lifetime216;
         byte[] var2Lifetime217;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           em.field_c = param1;
           var2 = tf.a(0, "waitingfor_patches");
@@ -1139,7 +1139,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime206 = tf.a(0, "LABEL_MUSTSAVE");
           if (var2Lifetime206 != null) {
-            FleaCircusApplet.field_H = ab.a(0, var2Lifetime206);
+            fleas.field_H = ab.a(0, var2Lifetime206);
           }
           var2Lifetime207 = tf.a(0, "LABEL_FLEASRESCUED");
           if (var2Lifetime207 != null) {
@@ -1155,7 +1155,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime210 = tf.a(0, "BONUS");
           if (null != var2Lifetime210) {
-            FleaCircusApplet.field_I = ab.a(0, var2Lifetime210);
+            fleas.field_I = ab.a(0, var2Lifetime210);
           }
           var2Lifetime211 = tf.a(0, "LABEL_BONUS_TIME");
           if (var2Lifetime211 != null) {
@@ -1199,7 +1199,7 @@ final class uh extends IntrusiveNode {
           throw pf.a((Throwable) ((Object) stackIn_777_0), ((StringBuilder) (Object) stackIn_777_1).append(stackIn_778_2).append(')').toString());
         }
         if (GameAppletShell.field_e) {
-          FleaCircusApplet.field_A = (var4 == 0);
+          fleas.field_A = (var4 == 0);
         }
     }
 

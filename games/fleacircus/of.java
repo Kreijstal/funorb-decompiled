@@ -53,7 +53,7 @@ final class of {
         tc var2;
         int var3;
         tc var4;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         while (this.field_e > this.field_j) {
           var4 = this.field_l[this.field_j];
           var2 = var4;

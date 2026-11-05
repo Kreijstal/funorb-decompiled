@@ -68,7 +68,7 @@ final class si {
         int var10;
         int var11;
         int var12;
-        var12 = FleaCircusApplet.field_A ? 1 : 0;
+        var12 = fleas.field_A ? 1 : 0;
         if (this.field_a) {
           return;
         }
@@ -115,7 +115,7 @@ final class si {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
-        int var7 = FleaCircusApplet.field_A ? 1 : 0;
+        int var7 = fleas.field_A ? 1 : 0;
         for (var6 = param4; var6 < this.field_w; var6++) {
           this.field_n[var6] = (short)(this.field_n[var6] * param0 / param1);
           this.field_f[var6] = (short)(param3 * this.field_f[var6] / param1);
@@ -125,7 +125,7 @@ final class si {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        int var7 = FleaCircusApplet.field_A ? 1 : 0;
+        int var7 = fleas.field_A ? 1 : 0;
         int var5 = 0;
         int var6 = 15 % ((param3 + 11) / 63);
         while (var5 < this.field_w) {
@@ -159,7 +159,7 @@ final class si {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           ib.field_g = ib.field_g + 65536;
           while (a.a(hd.field_b, ib.field_g, (byte) -17) >= 65536) {
@@ -295,7 +295,7 @@ final class si {
         int var5 = 0;
         int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           var4 = -14 / ((param1 - 2) / 51);
           var3_int = 0;

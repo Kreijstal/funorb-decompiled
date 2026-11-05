@@ -46,7 +46,7 @@ final class qb {
         int var2;
         int var3;
         int var2Lifetime1;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         var1 = (int)(11.0 * Math.random());
         if (var1 == 10) {
           return 5;
@@ -318,7 +318,7 @@ final class qb {
         String var6;
         int var3Lifetime1;
         int var4Lifetime1;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         int fieldTemp$0 = this.field_a + 1;
         this.field_a = this.field_a + 1;
         this.field_e = this.field_e + fieldTemp$0;
@@ -392,7 +392,7 @@ final class qb {
 
     private final void b(boolean param0) {
         int var2 = 0;
-        int var11 = BounceDown.field_N;
+        int var11 = Bounce.field_N;
         int var5 = -1640531527;
         int var7 = -1640531527;
         int var3 = -1640531527;

@@ -75,7 +75,7 @@ abstract class kf {
         int var10 = 0;
         int var11 = 0;
         CharSequence var12 = null;
-        var11 = BounceDown.field_N;
+        var11 = Bounce.field_N;
         try {
           if (2 <= param0 &&
             param0 <= 36) {

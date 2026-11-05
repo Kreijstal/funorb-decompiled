@@ -21,7 +21,7 @@ abstract class hd {
         java.awt.Component var9;
         int var6Lifetime1;
         int var7Lifetime1;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         if (vg.field_z < 0) {
           return;
         }
@@ -94,7 +94,7 @@ abstract class hd {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           var2 = ck.a(-5174, "jagex-last-login-method", param1);
           if (!param0) {
@@ -143,7 +143,7 @@ abstract class hd {
         fg var4 = null;
         RuntimeException decompiledCaughtException = null;
         int var2Lifetime1;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         try {
           var4 = (fg) (jk.field_m.c((byte) 47));
           var1 = var4;

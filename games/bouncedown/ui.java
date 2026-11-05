@@ -73,7 +73,7 @@ final class ui extends IntrusiveNode {
         int var27Lifetime1;
         int var28Lifetime1;
         int var29Lifetime1;
-        var31 = BounceDown.field_N;
+        var31 = Bounce.field_N;
         try {
           var7_int = 2147483647;
           var8 = -2147483648;

@@ -56,7 +56,7 @@ final class uj {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           RuntimeException var2_ref = null;
-          var8 = BounceDown.field_N;
+          var8 = Bounce.field_N;
           try {
             try {
               var9 = param1.getParameter("cookieprefix");

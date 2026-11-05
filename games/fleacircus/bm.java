@@ -21,7 +21,7 @@ final class bm extends gj implements da {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           if (param3 != 248) {
             return;
@@ -55,7 +55,7 @@ final class bm extends gj implements da {
 
     private final void a(int param0, int param1) {
         int var5 = 0;
-        int var6 = FleaCircusApplet.field_A ? 1 : 0;
+        int var6 = fleas.field_A ? 1 : 0;
         if (this.field_J >= param1) {
           return;
         }
@@ -122,7 +122,7 @@ final class bm extends gj implements da {
     }
 
     final static ll a(boolean param0, int param1, int param2, int param3, int param4) {
-        int var6 = FleaCircusApplet.field_A ? 1 : 0;
+        int var6 = fleas.field_A ? 1 : 0;
         ll var5 = (ll) (jj.field_S.c((byte) 47));
         while (var5 != null) {
           if (var5.field_k == param4) {
@@ -159,7 +159,7 @@ final class bm extends gj implements da {
         int var8 = 0;
         int var9 = 0;
         int var2Lifetime1;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         try {
           if (param0 != 31) {
             bm.c(false);

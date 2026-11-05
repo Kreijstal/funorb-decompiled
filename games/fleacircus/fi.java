@@ -30,7 +30,7 @@ final class fi extends IntrusiveNode {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           if (param0 == null) {
             stackIn_3_0 = hi.field_k;

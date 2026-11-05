@@ -64,7 +64,7 @@ abstract class v {
         RuntimeException var6 = null;
         int var8 = 0;
         int var9 = 0;
-        var9 = BounceDown.field_N;
+        var9 = Bounce.field_N;
         try {
           if (param4 != -110) {
             v.b(76);

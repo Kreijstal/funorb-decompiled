@@ -13,7 +13,7 @@ final class f {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           if (!ne.a(param1, param2, (byte) -33)) {
             return false;

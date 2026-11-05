@@ -74,7 +74,7 @@ final class vg extends wi {
     }
 
     final void b(boolean param0) {
-        int var3 = FleaCircusApplet.field_A ? 1 : 0;
+        int var3 = fleas.field_A ? 1 : 0;
         if (!this.field_k) {
           this.field_c = false;
           this.field_g = false;
@@ -99,7 +99,7 @@ final class vg extends wi {
     private final void d(int param0) {
         int var3;
         boolean stackIn_16_1 = false;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         if (!this.field_g) {
           if (this.a((byte) 89)) {
             if (kc.field_f != 1) {
@@ -137,7 +137,7 @@ final class vg extends wi {
         int var5;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         if (ji.field_i == this.field_o) {
           stackIn_3_0 = this.field_w;
         } else {

@@ -34,7 +34,7 @@ final class rg extends ef {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           if (null == di.field_b) {
             return null;
@@ -82,7 +82,7 @@ final class rg extends ef {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = FleaCircusApplet.field_A ? 1 : 0;
+        var2 = fleas.field_A ? 1 : 0;
         try {
           if (param0 != 4) {
             field_n = 55;
@@ -126,7 +126,7 @@ final class rg extends ef {
         int[] var25 = null;
         int[] var29 = null;
         int[] var30 = null;
-        var19 = FleaCircusApplet.field_A ? 1 : 0;
+        var19 = fleas.field_A ? 1 : 0;
         try {
           if (gb.field_l > param0) {
             param2 = param2 - (gb.field_l - param0);

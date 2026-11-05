@@ -10,7 +10,7 @@ final class tj {
 
     final static String a(String param0, String param1, String param2, byte param3) {
         int var4 = 0;
-        int var5 = FleaCircusApplet.field_A ? 1 : 0;
+        int var5 = fleas.field_A ? 1 : 0;
         if (param3 == -66) {
           var4 = param1.indexOf(param0);
           while (var4 != -1) {

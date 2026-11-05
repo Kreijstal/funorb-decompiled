@@ -99,13 +99,13 @@ final class vc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4Lifetime1;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           var9 = new ih(param1.a(0, "", "logo.fo3d"));
           var10 = var9;
           var3 = var10.e(false);
           var10.k(8);
-          fc.field_a = FleaCircusApplet.a(var10, -6383);
+          fc.field_a = fleas.a(var10, -6383);
           ij.field_F = new si[var3];
           gm.field_kb = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
@@ -183,7 +183,7 @@ final class vc {
         int stackIn_9_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_intLifetime1;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           if (param2 < param0) {
             var3_int = param2;
@@ -223,7 +223,7 @@ final class vc {
     final void f(int param0) {
         IntrusiveNode var2;
         int var3;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         while (true) {
           var2 = this.field_e.field_h;
           if (this.field_e != var2) {

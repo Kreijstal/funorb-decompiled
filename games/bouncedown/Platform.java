@@ -28,7 +28,7 @@ final class Platform {
         int var3Lifetime3;
         int var3Lifetime4;
         boolean decompiledFrameRemainder0 = true;
-        var9 = BounceDown.field_N;
+        var9 = Bounce.field_N;
         var4 = this.field_d;
         if (var4 == 0) {
           if (this.field_b != 0) {
@@ -117,7 +117,7 @@ final class Platform {
     final void a(int param0) {
         int var2;
         int var3;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         var2 = this.field_d;
         if (var2 != 0) {
           if (1 != var2) {
@@ -211,7 +211,7 @@ final class Platform {
     }
 
     final static String a(int param0, char param1, int param2) {
-        int var5 = BounceDown.field_N;
+        int var5 = Bounce.field_N;
         char[] var3 = new char[param0];
         int var4 = 0;
         if (param2 != -13810) {

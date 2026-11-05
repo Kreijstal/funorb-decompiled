@@ -51,7 +51,7 @@ final class IterableNodeHashTable implements Iterable {
         int var3;
         int var2Lifetime1;
         int var2Lifetime2;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         if (wc.field_q > 0) {
           if (aa.field_r == null) {
             ResourceArchive.field_p = SecondaryNodeDeque.a(0, 640, 0, fg.field_q, 0, 480);
@@ -115,7 +115,7 @@ final class IterableNodeHashTable implements Iterable {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         if (!param0) {
           return (IntrusiveNode) null;
         }

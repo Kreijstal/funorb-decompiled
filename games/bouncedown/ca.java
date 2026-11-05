@@ -27,7 +27,7 @@ final class ca {
         int var2Lifetime3;
         int var2Lifetime4;
         int var3Lifetime1;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           var5 = new boolean[]{false, false, param0};
           var1 = var5;

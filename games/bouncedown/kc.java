@@ -72,7 +72,7 @@ final class kc {
         byte[] var21;
         int[] var10;
         int[] var22;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         var1 = new tg[nj.field_p];
         for (var2 = 0; nj.field_p > var2; var2++) {
           var3 = ih.field_V[var2] * qh.field_i[var2];

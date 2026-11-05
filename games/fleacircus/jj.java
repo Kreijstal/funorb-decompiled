@@ -117,7 +117,7 @@ abstract class jj extends db {
         int var9Lifetime2;
         int var12Lifetime1;
         int var13Lifetime1;
-        var16 = FleaCircusApplet.field_A ? 1 : 0;
+        var16 = fleas.field_A ? 1 : 0;
         if (param2 != 17344) {
           return;
         }

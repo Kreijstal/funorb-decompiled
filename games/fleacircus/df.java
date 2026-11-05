@@ -15,7 +15,7 @@ final class df {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         try {
           c.field_S = c.field_S + 1;
           if (~kb.field_r == param0 &&

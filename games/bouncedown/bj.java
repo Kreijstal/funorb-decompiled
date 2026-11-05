@@ -111,7 +111,7 @@ final class bj extends ak {
           String var20 = null;
           byte[][] var21 = null;
           int var13Lifetime1;
-          var14 = BounceDown.field_N;
+          var14 = Bounce.field_N;
           try {
             var18 = new hh();
             var18.field_j = param0.d((byte) -109);
@@ -328,16 +328,16 @@ final class bj extends ak {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         try {
-          BounceDown.a(va.field_b, q.field_M, 22668, 0, w.field_d, param1, true);
+          Bounce.a(va.field_b, q.field_M, 22668, 0, w.field_d, param1, true);
           if (param0 != -125) {
             field_E = (ng) null;
           }
           for (var2_int = 0; var2_int < q.field_M; var2_int++) {
             w.field_f[var2_int + param1] = var2_int;
           }
-          BounceDown.a(mg.field_n, q.field_M + param1, 22668, param1, uc.field_A, param1 + param1, false);
+          Bounce.a(mg.field_n, q.field_M + param1, 22668, param1, uc.field_A, param1 + param1, false);
           if (param1 < q.field_M) {
             q.field_M = param1;
           }

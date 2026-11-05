@@ -54,7 +54,7 @@ final class fl {
         int var4;
         int var5;
         int var6;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         var3 = (this.field_a.length >> 1) - 1;
         if (param1 <= 114) {
           this.a(82, (byte) 96);

@@ -24,7 +24,7 @@ class gj extends UiComponent implements wg {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           var3 = new we(this.field_C);
           var4 = (UiComponent) (var3.b(87));
@@ -94,7 +94,7 @@ class gj extends UiComponent implements wg {
     }
 
     final void f(int param0) {
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         we var2 = new we(this.field_C);
         if (param0 != -1) {
           return;
@@ -112,7 +112,7 @@ class gj extends UiComponent implements wg {
     }
 
     private final void d(byte param0) {
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         if (param0 != 84) {
           field_B = (String[]) null;
         }
@@ -133,7 +133,7 @@ class gj extends UiComponent implements wg {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         try {
           var7 = new we(this.field_C);
           var8 = (UiComponent) (var7.b(-128));
@@ -201,7 +201,7 @@ class gj extends UiComponent implements wg {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = FleaCircusApplet.field_A ? 1 : 0;
+        var10 = fleas.field_A ? 1 : 0;
         try {
           if (!param1) {
             return false;
@@ -244,7 +244,7 @@ class gj extends UiComponent implements wg {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           if (this.field_C.a(-1092895903)) {
             return false;
@@ -292,7 +292,7 @@ class gj extends UiComponent implements wg {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = FleaCircusApplet.field_A ? 1 : 0;
+        var10 = fleas.field_A ? 1 : 0;
         try {
           var8 = new we(this.field_C);
           var9 = (UiComponent) (var8.b(-62));
@@ -348,7 +348,7 @@ class gj extends UiComponent implements wg {
     }
 
     void b(int param0, int param1, boolean param2, int param3) {
-        int var7 = FleaCircusApplet.field_A ? 1 : 0;
+        int var7 = fleas.field_A ? 1 : 0;
         if (0 == param3 &&
           null != this.field_p) {
           this.field_p.a(-127, param1, true, (UiComponent) (this), param0);
@@ -375,7 +375,7 @@ class gj extends UiComponent implements wg {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           var9 = new we(this.field_C);
           var8 = (UiComponent) (var9.b(102));
@@ -421,7 +421,7 @@ class gj extends UiComponent implements wg {
         we var2;
         UiComponent var3;
         int var4;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         var2 = new we(this.field_C);
         if (param0 != -257) {
           return (UiComponent) null;
@@ -447,7 +447,7 @@ class gj extends UiComponent implements wg {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           if (this.field_C.a(param1 ^ 1092889578)) {
             return false;
@@ -500,7 +500,7 @@ class gj extends UiComponent implements wg {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           if (param2 != 0) {
             this.b(26, -83, true, -8);
@@ -538,7 +538,7 @@ class gj extends UiComponent implements wg {
 
     final String g(int param0) {
         String var4 = null;
-        int var5 = FleaCircusApplet.field_A ? 1 : 0;
+        int var5 = fleas.field_A ? 1 : 0;
         we var2 = new we(this.field_C);
         UiComponent var3 = (UiComponent) (var2.b(param0 ^ -127));
         while (var3 != null) {
@@ -564,7 +564,7 @@ class gj extends UiComponent implements wg {
 
     final int c(byte param0) {
         int var5 = 0;
-        int var6 = FleaCircusApplet.field_A ? 1 : 0;
+        int var6 = fleas.field_A ? 1 : 0;
         int var2 = 0;
         we var3 = new we(this.field_C);
         UiComponent var4 = (UiComponent) (var3.b(107));
@@ -590,7 +590,7 @@ class gj extends UiComponent implements wg {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           super.a(param0, param1, param2, (byte) -88);
           var5 = new we(this.field_C);

@@ -18,7 +18,7 @@ final class nb {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         try {
           if (param0) {
             nb.a((byte) -101);
@@ -29,7 +29,7 @@ final class nb {
                 fg.field_x = ed.a(16777215, 4);
               }
               if (fg.field_x.field_n) {
-                FleaCircusApplet.field_L = FleaCircusApplet.field_L & ~fg.field_x.field_k;
+                fleas.field_L = fleas.field_L & ~fg.field_x.field_k;
                 kh.field_b = kh.field_b | fg.field_x.field_k;
                 vc.field_b = true;
                 fg.field_x = null;
@@ -105,7 +105,7 @@ final class nb {
         int var12 = 0;
         int var13 = 0;
         int var6Lifetime1;
-        var13 = FleaCircusApplet.field_A ? 1 : 0;
+        var13 = fleas.field_A ? 1 : 0;
         try {
           var5_int = param2.b(param0);
           if (var5_int <= param1 &&

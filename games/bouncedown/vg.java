@@ -28,7 +28,7 @@ final class vg implements fc {
         int var7 = 0;
         CipherPacketBuffer var8 = null;
         ne var9 = null;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         if (param1 != 3904) {
           vg.a((byte) 2);
         }
@@ -97,7 +97,7 @@ final class vg implements fc {
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         try {
           var1 = hh.field_p;
           if (param0 != -17) {
@@ -133,7 +133,7 @@ final class vg implements fc {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var12 = BounceDown.field_N;
+        var12 = Bounce.field_N;
         try {
           if (!(param1 instanceof d)) {
             stackIn_4_0 = null;

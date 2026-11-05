@@ -80,7 +80,7 @@ final class sd extends sh implements rc {
         RuntimeException var4_ref = null;
         uc var5 = null;
         int var6 = 0;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           this.field_ob = true;
           if (param0 != -1) {

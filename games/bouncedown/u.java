@@ -60,7 +60,7 @@ final class u {
         int var7Lifetime1;
         int var8Lifetime1;
         int var10Lifetime1;
-        var11 = BounceDown.field_N;
+        var11 = Bounce.field_N;
         try {
           if (this.field_b != null) {
             var3_int = 14 + (int)((long)param0.length * (long)this.field_c / (long)this.field_e);

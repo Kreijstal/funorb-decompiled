@@ -63,7 +63,7 @@ final class bh extends IntrusiveNode {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           if (param2 == null) {
             return false;

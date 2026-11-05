@@ -30,7 +30,7 @@ final class qe extends ng {
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           var3_int = 0;
           if (param1 >= -91) {
@@ -97,7 +97,7 @@ final class qe extends ng {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           var2_int = param1.length();
           if (0 == var2_int) {

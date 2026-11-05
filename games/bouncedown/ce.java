@@ -69,7 +69,7 @@ final class ce extends td {
         byte[] var5 = null;
         byte[] var6 = null;
         byte[] var7 = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         if (this.field_s != null) {
           return this.field_s;
         }
@@ -165,7 +165,7 @@ final class ce extends td {
         byte[] var28 = null;
         byte[] var29 = null;
         byte[] var30 = null;
-        var10 = BounceDown.field_N;
+        var10 = Bounce.field_N;
         var12 = (gj) (this.field_o.a(36, (long)param2));
         var4 = var12;
         if (var12 != null &&
@@ -341,7 +341,7 @@ final class ce extends td {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = BounceDown.field_N;
+        var9 = Bounce.field_N;
         try {
           if (param0 == null) {
             stackIn_3_0 = null;
@@ -417,7 +417,7 @@ final class ce extends td {
         int var5Lifetime1;
         IntrusiveNode var4Lifetime1;
         boolean decompiledFrameRemainder0 = true;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         var2 = 97 % ((46 - param0) / 34);
         if (this.field_h != null) {
           if (this.b(1) == null) {
@@ -540,7 +540,7 @@ final class ce extends td {
         IntrusiveNode var2;
         int var3;
         int var4;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         if (null == this.field_h) {
           return;
         }

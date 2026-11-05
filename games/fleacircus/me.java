@@ -27,7 +27,7 @@ final class me implements ComponentLayout {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           if (param0 >= -36) {
             field_g = (dd) null;
@@ -135,7 +135,7 @@ final class me implements ComponentLayout {
         byte[] var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        int var8 = FleaCircusApplet.field_A ? 1 : 0;
+        int var8 = fleas.field_A ? 1 : 0;
         int var1 = -93 / ((param0 + 66) / 37);
         dd[] var2 = new dd[ef.field_l];
         for (var3 = 0; ef.field_l > var3; var3++) {

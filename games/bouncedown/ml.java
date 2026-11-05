@@ -25,7 +25,7 @@ final class ml {
 
     final int a(byte param0) {
         DualLinkNode var3 = null;
-        int var4 = BounceDown.field_N;
+        int var4 = Bounce.field_N;
         int var2 = 0;
         DualLinkNode var3Lifetime1;
         if (param0 == 12) {

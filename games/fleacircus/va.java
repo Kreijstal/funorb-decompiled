@@ -40,7 +40,7 @@ final class va {
         int var4;
         int var5;
         int var4Lifetime1;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         var2 = this.field_o;
         var3 = this.field_l;
         if (!this.c((byte) -114)) {

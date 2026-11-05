@@ -17,7 +17,7 @@ final class fb extends ih {
         int var3 = 0;
         hh var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         try {
           if (param0 != 102) {
             return false;

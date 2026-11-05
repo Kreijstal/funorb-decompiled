@@ -42,7 +42,7 @@ final class ek {
         int var12Lifetime1;
         int var12Lifetime2;
         int var12Lifetime3;
-        var13 = FleaCircusApplet.field_A ? 1 : 0;
+        var13 = fleas.field_A ? 1 : 0;
         try {
           var5_int = param4 + param1;
           if (param3 != 1) {

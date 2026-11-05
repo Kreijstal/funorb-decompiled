@@ -32,7 +32,7 @@ final class g extends w {
           Exception var5 = null;
           int var6 = 0;
           fk var4_refLifetime1;
-          var6 = FleaCircusApplet.field_A ? 1 : 0;
+          var6 = fleas.field_A ? 1 : 0;
           try {
             if (null != this.field_v) {
               try {
@@ -253,7 +253,7 @@ final class g extends w {
           int var15 = 0;
           int var16 = 0;
           fk var2Lifetime1;
-          var16 = FleaCircusApplet.field_A ? 1 : 0;
+          var16 = fleas.field_A ? 1 : 0;
           if (null != this.field_v) {
             var2_long = lj.a((byte) -24);
             var4 = (int)(-this.field_m + var2_long);

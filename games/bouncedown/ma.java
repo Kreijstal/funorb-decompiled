@@ -58,7 +58,7 @@ abstract class ma extends DualLinkNode {
         int var6 = 0;
         int var7 = 0;
         int var5Lifetime1;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           var2_long = 0L;
           var4 = param1.length();

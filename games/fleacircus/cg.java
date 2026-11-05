@@ -41,7 +41,7 @@ final class cg extends gi {
         byte[] var5 = null;
         byte[] var6 = null;
         byte[] var7 = null;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         if (null != this.field_j) {
           return this.field_j;
         }
@@ -150,7 +150,7 @@ final class cg extends gi {
         int var2_intLifetime1;
         int var4Lifetime1;
         IntrusiveNode var3Lifetime1;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         if (param0 <= 119) {
           field_z = -93L;
         }
@@ -302,7 +302,7 @@ final class cg extends gi {
         byte[] var28 = null;
         byte[] var29 = null;
         byte[] var30 = null;
-        var10 = FleaCircusApplet.field_A ? 1 : 0;
+        var10 = fleas.field_A ? 1 : 0;
         if (param0 != 2) {
           this.a(-58, (byte) -93);
         }
@@ -469,7 +469,7 @@ final class cg extends gi {
         int var3 = 0;
         dl discarded$0 = null;
         dl discarded$1 = null;
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         if (param0) {
           return;
         }

@@ -68,7 +68,7 @@ final class qd {
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           var2_int = param0.length();
           if (var2_int == 0) {

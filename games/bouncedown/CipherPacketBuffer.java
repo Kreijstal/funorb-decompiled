@@ -111,7 +111,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var5_int = 0;
           if (param1 != 8) {
@@ -140,7 +140,7 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final int f(int param0, int param1) {
         int incrementValue$0 = 0;
-        int var6 = BounceDown.field_N;
+        int var6 = Bounce.field_N;
         int var3 = this.field_m >> 3;
         int var4 = 8 - (this.field_m & param0);
         this.field_m = this.field_m + param1;

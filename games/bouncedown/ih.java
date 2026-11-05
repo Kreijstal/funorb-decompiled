@@ -68,7 +68,7 @@ class ih extends fd {
         ke var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         try {
           var4 = (ke) (uk.field_d.a((byte) -107));
           while (var4 != null) {
@@ -109,7 +109,7 @@ class ih extends fd {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           if (param1 == null) {
             stackIn_3_0 = ub.field_e;

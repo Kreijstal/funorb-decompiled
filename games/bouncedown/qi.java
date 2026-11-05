@@ -21,7 +21,7 @@ final class qi extends jd {
         kg var6 = null;
         int var7 = 0;
         tg[] var8 = null;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           super.a(param2, (byte) -122);
           if (param1 != -19463) {
@@ -298,7 +298,7 @@ final class qi extends jd {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var8 = this.field_q;
           var3 = var8;
@@ -367,7 +367,7 @@ final class qi extends jd {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var7 = this.field_q;
           var3 = var7;
@@ -431,7 +431,7 @@ final class qi extends jd {
         int var4Lifetime3;
         int var4Lifetime4;
         int var4Lifetime5;
-        var15 = BounceDown.field_N;
+        var15 = Bounce.field_N;
         try {
           var16 = new PacketBuffer(param0);
           var17 = var16;

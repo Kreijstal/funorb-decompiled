@@ -107,7 +107,7 @@ final class bk {
         int var4Lifetime19Lifetime2;
         int var4Lifetime20Lifetime1;
         int var4Lifetime20Lifetime2;
-        if (FleaCircusApplet.field_E == 0 &&
+        if (fleas.field_E == 0 &&
           fl.field_f) {
           var1 = (int)(ma.a((double)ni.field_j / 50.0, param0 + 58) * 32.0);
           var2 = 1;

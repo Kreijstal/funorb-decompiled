@@ -14,7 +14,7 @@ final class qg extends IntrusiveNode {
     }
 
     final static int a(int param0, int param1) {
-        int var3 = BounceDown.field_N;
+        int var3 = Bounce.field_N;
         ih.field_X = 0;
         if (param0 != -23888) {
           field_g = (mf) null;
@@ -63,7 +63,7 @@ final class qg extends IntrusiveNode {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           if (!param0) {
             stackIn_3_0 = (byte[]) null;

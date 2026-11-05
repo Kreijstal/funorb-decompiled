@@ -19,7 +19,7 @@ final class dd implements Runnable {
         RuntimeException var1_ref = null;
         Throwable var3 = null;
         String var5 = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           this.field_b = true;
           try {

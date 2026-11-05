@@ -117,7 +117,7 @@ final class j extends ne {
         dd var12 = null;
         int var8 = 0;
         int var9 = 0;
-        int var13 = FleaCircusApplet.field_A ? 1 : 0;
+        int var13 = fleas.field_A ? 1 : 0;
         int var8Lifetime1;
         int var9Lifetime1;
         uh.field_m = of.a("frame_top", "commonui", param0, 101);
@@ -303,7 +303,7 @@ final class j extends ne {
         String[] var16 = null;
         String[] var17 = null;
         int var12Lifetime1;
-        var15 = FleaCircusApplet.field_A ? 1 : 0;
+        var15 = fleas.field_A ? 1 : 0;
         try {
           if (0 == param1) {
             param1 = param3.field_N;

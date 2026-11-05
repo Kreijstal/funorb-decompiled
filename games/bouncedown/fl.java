@@ -38,7 +38,7 @@ final class fl {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           if (tk.field_b == null) {
             stackIn_3_0 = null;

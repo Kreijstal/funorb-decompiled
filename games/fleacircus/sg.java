@@ -59,7 +59,7 @@ final class sg {
         char[] var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           if (Character.isISOControl(param0)) {
             return false;
@@ -113,7 +113,7 @@ final class sg {
         int var7 = 0;
         ih var8 = null;
         aj var9 = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         var8 = ae.field_a;
         var3 = var8.e(false);
         stackIn_3_0 = (0 != (var3 & 128));

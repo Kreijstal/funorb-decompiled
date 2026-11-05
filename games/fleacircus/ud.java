@@ -26,7 +26,7 @@ final class ud {
         int var12Lifetime3;
         int var12Lifetime4;
         dd[] var10Lifetime1;
-        var15 = FleaCircusApplet.field_A ? 1 : 0;
+        var15 = fleas.field_A ? 1 : 0;
         var9 = param3 + (param4 + param7);
         var10 = new dd[]{new dd(var9, var9), new dd(param1, var9), new dd(var9, var9), new dd(var9, param1), new dd(64, 64), new dd(var9, param1), new dd(var9, var9), new dd(param1, var9), new dd(var9, var9)};
         var11_ref_dd__ = var10;
@@ -107,7 +107,7 @@ final class ud {
           String var8 = null;
           String var9 = null;
           String var10 = null;
-          var6 = FleaCircusApplet.field_A ? 1 : 0;
+          var6 = fleas.field_A ? 1 : 0;
           try {
             var3 = "";
             if (param1 != null) {
@@ -198,7 +198,7 @@ final class ud {
         fa var7 = null;
         fa var8 = null;
         int var3Lifetime1;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           var7 = tl.field_p;
           var8 = var7;

@@ -113,7 +113,7 @@ final class eb extends lc implements ki, rc {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           if (param1 != 125) {
             discarded$1 = this.a(false);

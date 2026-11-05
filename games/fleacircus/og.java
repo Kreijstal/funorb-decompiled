@@ -67,7 +67,7 @@ final class og extends gj implements dc, da {
         int var21Lifetime2;
         int var21Lifetime3;
         int var21Lifetime4;
-        var23 = FleaCircusApplet.field_A ? 1 : 0;
+        var23 = fleas.field_A ? 1 : 0;
         try {
           if (param1 == null) {
             return;
@@ -277,7 +277,7 @@ final class og extends gj implements dc, da {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           var5_int = -79 % ((param3 + 36) / 61);
           if (0 != param0) {

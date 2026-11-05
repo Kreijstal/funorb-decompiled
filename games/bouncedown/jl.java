@@ -3,7 +3,7 @@
  */
 final class jl {
     static bc field_f;
-    static BounceDown field_h;
+    static Bounce field_h;
     static String field_e;
     static int[] field_b;
     static long field_g;

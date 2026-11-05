@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class FleaCircusApplet extends NetworkGameClient {
+public final class fleas extends NetworkGameClient {
     private dd field_C;
     static String field_H;
     static Random field_F;
@@ -949,7 +949,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
 
     final void a(int param0) {
         try {
-          FleaCircusApplet.m(param0 + 0);
+          fleas.m(param0 + 0);
           nb.a((byte) 69);
           cf.b(21230);
           lc.c((byte) 99);
@@ -1298,7 +1298,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
                               wj.field_b[1] = ia.a(882, 2500, 1);
                               this.j((byte) 87);
                               pb.field_a = null;
-                              FleaCircusApplet.h((byte) -110);
+                              fleas.h((byte) -110);
                               return false;
                             }
                             jj.a(31.0f, sa.a(pf.field_b, "roman12", de.field_j, rg.field_q, (byte) 46), true);
@@ -1333,7 +1333,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
             this.d(true);
             wi.b(-14277);
             ib.field_f = null;
-            FleaCircusApplet.h((byte) 76);
+            fleas.h((byte) 76);
             return false;
           }
           if (jc.field_e != null) {
@@ -1350,7 +1350,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
                 field_K = null;
                 ob.field_d = null;
                 jc.field_e = null;
-                FleaCircusApplet.h((byte) -114);
+                fleas.h((byte) -114);
                 break;
               }
               gg.field_h.a(field_K, ob.field_d, 11498, 0, hf.field_e[var3_int]);
@@ -1368,7 +1368,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
             ve.field_d = (fa) ((Object) ub.a("roman12", a.field_a, "", pf.field_b, 32));
             lk.field_Q = (fa) ((Object) ub.a("roman20", a.field_a, "", pf.field_b, 32));
             a.field_a = null;
-            FleaCircusApplet.h((byte) 33);
+            fleas.h((byte) 33);
             return false;
           }
           if (hm.field_g != null) {
@@ -1377,7 +1377,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
             this.g((byte) -111);
             de.field_h = null;
             hm.field_g = null;
-            FleaCircusApplet.h((byte) -116);
+            fleas.h((byte) -116);
             return false;
           }
           if (DualLinkNode.field_l == null) {
@@ -1397,7 +1397,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
             var6 = 10;
             var7 = -2;
             if (param1 <= 0) {
-              FleaCircusApplet.a((ih) null, -35);
+              fleas.a((ih) null, -35);
             }
             var8 = this.field_C.field_w - 20;
             var9 = this.field_C.field_t - 20;
@@ -1408,7 +1408,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
             el.a((java.applet.Applet) (this), 150, (byte) 44, 15488514, jd.field_g, 1052688);
             we.a(50, 106);
             qb.a(50, 114);
-            FleaCircusApplet.h((byte) -71);
+            fleas.h((byte) -71);
             return true;
           }
           jj.a(98.0f, vi.field_c, true);
@@ -1481,7 +1481,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
             DualLinkNode.field_l = (ResourceArchive) (stackIn_137_0);
             jk.field_l = 2;
             tj.field_a = 0;
-            FleaCircusApplet.h((byte) -72);
+            fleas.h((byte) -72);
             break;
           }
           return false;
@@ -1824,7 +1824,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
           if (ne.field_a != null) {
             uh.a((byte) -128, ne.field_a);
             ne.field_a = null;
-            FleaCircusApplet.h((byte) 79);
+            fleas.h((byte) 79);
           }
           hm.field_g = q.a(8192, 1);
           pb.field_a = q.a(8192, 2);
@@ -1852,7 +1852,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
         try {
           bm.e((byte) 31);
           if (param0 > -47) {
-            FleaCircusApplet.h((byte) -92);
+            fleas.h((byte) -92);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "fleas.A(" + param0 + ',' + param1 + ',' + param2 + ')');
@@ -2060,7 +2060,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
         }
     }
 
-    public FleaCircusApplet() {
+    public fleas() {
     }
 
     final static re[] a(ih param0, int param1) {
@@ -2081,7 +2081,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
         var7 = field_A ? 1 : 0;
         try {
           if (param1 != -6383) {
-            FleaCircusApplet.a((ih) null, -51);
+            fleas.a((ih) null, -51);
           }
           var2_int = param0.b(8, (byte) -87);
           if (var2_int > 0) {
@@ -2880,7 +2880,7 @@ public final class FleaCircusApplet extends NetworkGameClient {
           field_H = null;
           field_F = null;
           if (param0 != -1) {
-            FleaCircusApplet.m(59);
+            fleas.m(59);
           }
           field_K = null;
           field_I = null;

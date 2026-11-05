@@ -91,7 +91,7 @@ final class v extends ja {
         var22 = null;
         var26 = null;
         var36 = null;
-        var13 = FleaCircusApplet.field_A ? 1 : 0;
+        var13 = fleas.field_A ? 1 : 0;
         var6 = this.field_S.a(false);
         if (ea.field_b == var6) {
           var17 = bg.field_b;

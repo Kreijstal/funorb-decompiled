@@ -29,7 +29,7 @@ final class ne extends DualLinkNode {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           var4_int = param3.f(7, param1);
           if (var4_int == 0) {
@@ -77,7 +77,7 @@ final class ne extends DualLinkNode {
         int var4 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
-        int var5 = BounceDown.field_N;
+        int var5 = Bounce.field_N;
         StringBuilder var6 = new StringBuilder(80);
         StringBuilder var2 = var6;
         int var3 = -44 / ((-51 - param0) / 41);
@@ -94,7 +94,7 @@ final class ne extends DualLinkNode {
 
     final static tg a(boolean param0) {
         int var4_int = 0;
-        int var5 = BounceDown.field_N;
+        int var5 = Bounce.field_N;
         int var1 = ih.field_V[0] * qh.field_i[0];
         byte[] var2 = ph.field_c[0];
         int[] var3 = new int[var1];
@@ -118,7 +118,7 @@ final class ne extends DualLinkNode {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           var3_int = -46 % ((-75 - param0) / 37);
           while (true) {
@@ -144,7 +144,7 @@ final class ne extends DualLinkNode {
 
     final void d(int param0) {
         int var2 = 0;
-        int var3 = BounceDown.field_N;
+        int var3 = Bounce.field_N;
         if (null != this.field_s) {
           for (var2 = 0; var2 < this.field_s.length; var2++) {
             this.field_s[var2] = ge.a(this.field_s[var2], 32768);
@@ -167,7 +167,7 @@ final class ne extends DualLinkNode {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           if (param0 == null) {
             return false;
@@ -251,7 +251,7 @@ final class ne extends DualLinkNode {
         int var6 = 0;
         eh var7 = null;
         int var9 = 0;
-        var9 = BounceDown.field_N;
+        var9 = Bounce.field_N;
         try {
           if (param0 != 18) {
             return;

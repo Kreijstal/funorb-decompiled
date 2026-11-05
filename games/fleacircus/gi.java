@@ -89,7 +89,7 @@ abstract class gi {
         int var8Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
-        var14 = FleaCircusApplet.field_A ? 1 : 0;
+        var14 = fleas.field_A ? 1 : 0;
         try {
           if (param5 <= param1) {
             return;
@@ -162,7 +162,7 @@ abstract class gi {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           if (param3 >= 2 &&
             param3 <= 36) {

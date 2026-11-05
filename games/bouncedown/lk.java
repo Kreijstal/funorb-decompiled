@@ -149,7 +149,7 @@ class lk extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           discarded$0 = param1.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_r).append(",").append(this.field_i).append(" ").append(this.field_k).append("x").append(this.field_m);
           if (this.field_h != null) {
@@ -266,7 +266,7 @@ class lk extends IntrusiveNode {
         bj var9;
         bj var10;
         bj var11;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         this.a(-1, param0, param3, this);
         var5 = this.e(1) ? 1 : 0;
         if (!param2) {
@@ -451,7 +451,7 @@ class lk extends IntrusiveNode {
         String var9 = null;
         String var10 = null;
         String var11 = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         var4 = this.f(0);
         var5 = 0;
         while (true) {

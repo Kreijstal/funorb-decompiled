@@ -76,7 +76,7 @@ final class di implements Iterator {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = BounceDown.field_N;
+        var9 = Bounce.field_N;
         try {
           var10 = (CharSequence) ((Object) param2);
           var3_int = pj.a(false, param1, var10);

@@ -46,7 +46,7 @@ final class ei extends sh {
         int var6;
         int var5;
         boolean decompiledFrameRemainder0 = true;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         if (this.field_G.c()) {
           var2 = this.field_w * this.field_G.field_a / la.field_a;
           while (true) {
@@ -146,7 +146,7 @@ final class ei extends sh {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           var3_int = 0;
           var4 = 78 / ((param0 + 2) / 63);
@@ -250,7 +250,7 @@ final class ei extends sh {
         int var5Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         var3 = param1 & 240;
         if (var3 == 128) {
           var4 = param1 & 15;
@@ -480,7 +480,7 @@ final class ei extends sh {
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           if (param2 != -30686) {
             this.field_K = (int[]) null;
@@ -643,7 +643,7 @@ final class ei extends sh {
         int discarded$0 = 0;
         int var5;
         tk var6;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         if (param2 < 0) {
           for (var4 = 0; var4 < 16; var4++) {
             this.field_P[var4] = param0;
@@ -755,7 +755,7 @@ final class ei extends sh {
         int var9;
         wc var10;
         wc var11;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         this.b(-106, param0, 64, param1);
         if ((2 & this.field_q[param1]) != 0) {
           var5 = (tk) (this.field_O.field_n.b(-61));
@@ -831,7 +831,7 @@ final class ei extends sh {
     }
 
     private final void a(int param0, int param1) {
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         tk var3 = (tk) (this.field_O.field_n.c((byte) 47));
         while (var3 != null) {
           if ((param1 < 0 || var3.field_o == param1) &&
@@ -864,7 +864,7 @@ final class ei extends sh {
         int var11 = 0;
         wc var12 = null;
         wc var13 = null;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           param4.a();
           var6_int = 1;
@@ -931,7 +931,7 @@ final class ei extends sh {
 
     private final void b(int param0, boolean param1) {
         int var3 = 0;
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         int var3Lifetime1;
         if (param1) {
           this.a(-1, (byte) -104);
@@ -979,7 +979,7 @@ final class ei extends sh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var7 = 0;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           if (this.field_G.c()) {
             var4_int = this.field_G.field_a * this.field_w / la.field_a;
@@ -1029,7 +1029,7 @@ final class ei extends sh {
         long var4;
         int var6;
         int var7;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         var2 = this.field_u;
         var3 = this.field_U;
         var4 = this.field_E;
@@ -1099,7 +1099,7 @@ final class ei extends sh {
         tk var3;
         int var4;
         tk var5;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         if (param1 != 31911) {
           var5 = (tk) null;
           discarded$1 = this.b(64, (tk) null);
@@ -1124,7 +1124,7 @@ final class ei extends sh {
     private final void e(int param0, int param1) {
         int var4;
         tk var5;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         if (param0 < 0) {
           for (param0 = 0; param0 < 16; param0++) {
             this.e(param0, 15198);
@@ -1154,7 +1154,7 @@ final class ei extends sh {
         tk var3;
         int var4;
         int var5;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         var4 = -69 / ((param1 - 56) / 55);
         var3 = (tk) (this.field_O.field_n.c((byte) 47));
         while (var3 != null) {
@@ -1185,7 +1185,7 @@ final class ei extends sh {
 
     private final void c(int param0, int param1) {
         tk var3 = null;
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         if (param1 != -20403) {
           return;
         }
@@ -1205,7 +1205,7 @@ final class ei extends sh {
         tk var7;
         int var8;
         tk var9;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         var9 = this.field_D[param3][param1];
         if (var9 == null) {
           return;
@@ -1232,7 +1232,7 @@ final class ei extends sh {
 
     private final void e(int param0, int param1, int param2) {
         int var4 = 0;
-        int var5 = FleaCircusApplet.field_A ? 1 : 0;
+        int var5 = fleas.field_A ? 1 : 0;
         if (param0 > -4) {
           ei.a(-11, (CharSequence) null, '�');
         }
@@ -1304,7 +1304,7 @@ final class ei extends sh {
     private final synchronized void a(byte param0, boolean param1, boolean param2, wk param3) {
         int var5_int = 0;
         int var6 = 0;
-        int var7 = FleaCircusApplet.field_A ? 1 : 0;
+        int var7 = fleas.field_A ? 1 : 0;
         try {
           this.a(33, param1);
           this.field_G.a(param3.field_i);

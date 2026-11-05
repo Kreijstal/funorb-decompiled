@@ -22,7 +22,7 @@ final class ue {
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var16 = FleaCircusApplet.field_A ? 1 : 0;
+        var16 = fleas.field_A ? 1 : 0;
         try {
           while (true) {
             param4--;

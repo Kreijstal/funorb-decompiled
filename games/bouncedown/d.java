@@ -97,7 +97,7 @@ final class d extends wd {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        var14 = BounceDown.field_N;
+        var14 = Bounce.field_N;
         try {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
@@ -217,7 +217,7 @@ final class d extends wd {
         int var8 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           var1 = jc.field_g;
           var2 = var1.d((byte) -113);

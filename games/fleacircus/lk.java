@@ -28,7 +28,7 @@ final class lk extends UiComponent {
         int var11 = 0;
         int var12 = 0;
         int var6 = 0;
-        int var13 = FleaCircusApplet.field_A ? 1 : 0;
+        int var13 = fleas.field_A ? 1 : 0;
         dd var14 = new dd(this.field_N * 2, this.field_j);
         int var8Lifetime1;
         int var9Lifetime1;
@@ -175,7 +175,7 @@ final class lk extends UiComponent {
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           var1_int = 0;
           var2 = 0;
@@ -234,7 +234,7 @@ final class lk extends UiComponent {
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
-        int var9 = FleaCircusApplet.field_A ? 1 : 0;
+        int var9 = fleas.field_A ? 1 : 0;
         int var2 = this.field_j >> 1;
         dd var3 = new dd(var2, this.field_j);
         r.a(var3, 45);
@@ -275,7 +275,7 @@ final class lk extends UiComponent {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           var5_int = this.field_u + param3;
           mi.a((byte) -52, var5_int - this.field_P.field_w, param3 + this.field_P.field_w, param1 + this.field_j, param1);

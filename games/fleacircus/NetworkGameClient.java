@@ -21,7 +21,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     final static int a(int param0, int param1) {
         int var2;
         int var3;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         lc.field_r = 0;
         jj.field_M = null;
         nj.field_a = null;
@@ -77,7 +77,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         java.awt.Container var6;
         int var3Lifetime1;
         int var3Lifetime2;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         if (null != aa.field_r) {
           if (ResourceArchive.field_p == null) {
             var6 = sk.a((byte) 60);
@@ -211,7 +211,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (il.field_a.a("", -123)) {
                 je.a(il.field_a, -30);
                 il.field_a = null;
-                FleaCircusApplet.h((byte) 76);
+                fleas.h((byte) 76);
               }
             }
           }
@@ -245,7 +245,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           oa.field_l = null;
           kc.field_d = null;
           bh.a(false, (java.applet.Applet) (this));
-          FleaCircusApplet.h((byte) -127);
+          fleas.h((byte) -127);
           ib.field_k = 10;
         }
         if (10 == ib.field_k) {
@@ -357,7 +357,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var2;
         sg var3;
         int var4;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         var2 = be.field_a;
         if (param0 != -12) {
           this.a(false, -14);
@@ -436,7 +436,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3;
         boolean stackIn_4_1 = false;
         int var2;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         if (!nl.a(-118)) {
           if (ib.field_k >= 10) {
             if (!wh.b(27415)) {
@@ -667,7 +667,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ni var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
-          var8 = FleaCircusApplet.field_A ? 1 : 0;
+          var8 = fleas.field_A ? 1 : 0;
           var4 = mg.a(param0, cg.field_y, 10, al.field_f);
           if (var4 == 0) {
             throw new IllegalStateException();
@@ -818,7 +818,7 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         int var9;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         if (param3 != -39) {
           NetworkGameClient.a(-108, 18, 34, (byte) -127, -110, -18, 7, 121);
         }

@@ -30,7 +30,7 @@ final class fg extends IntrusiveNode {
         int var4 = 0;
         int var5 = 0;
         int var8 = 0;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           pl.field_f = 0;
           var1_int = 61 % ((param0 + 43) / 47);

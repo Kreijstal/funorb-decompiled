@@ -189,7 +189,7 @@ abstract class mh extends wk {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        int var3 = BounceDown.field_N;
+        int var3 = Bounce.field_N;
         if (param0 == 21) {
           if (null == this.field_V) {
             return super.e((byte) 21);

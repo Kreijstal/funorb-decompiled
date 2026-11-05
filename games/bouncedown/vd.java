@@ -33,7 +33,7 @@ final class vd {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var3 = ih.a(param2, param1, false);
           var4 = 68 / ((-7 - param0) / 57);

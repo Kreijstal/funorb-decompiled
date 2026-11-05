@@ -40,7 +40,7 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           if (null == kc.field_c) {
             return null;

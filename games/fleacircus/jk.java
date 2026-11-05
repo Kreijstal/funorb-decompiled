@@ -48,7 +48,7 @@ final class jk extends hm {
         em var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
-        var13 = FleaCircusApplet.field_A ? 1 : 0;
+        var13 = fleas.field_A ? 1 : 0;
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
@@ -148,7 +148,7 @@ final class jk extends hm {
         java.net.Socket var14 = null;
         String var15 = null;
         String var16 = null;
-        var13 = FleaCircusApplet.field_A ? 1 : 0;
+        var13 = fleas.field_A ? 1 : 0;
         try {
           var14 = new java.net.Socket(param2, param1);
           var6 = -29 % ((param3 - 14) / 46);
@@ -342,7 +342,7 @@ final class jk extends hm {
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           var2_int = param0.length();
           if (var2_int == 0) {

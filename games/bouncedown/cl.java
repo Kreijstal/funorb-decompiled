@@ -173,7 +173,7 @@ final class cl extends al {
         CipherPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           boolean decompiledFrameRemainder0 = true;
           var9 = jc.field_g;

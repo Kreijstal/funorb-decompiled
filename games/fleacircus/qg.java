@@ -64,7 +64,7 @@ final class qg {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           var4_int = param3.b(param2, (byte) -87);
           if (var4_int == 0) {

@@ -46,7 +46,7 @@ final class mb extends ed {
         String[] var17 = null;
         String[] var18 = null;
         int var12Lifetime1;
-        var15 = BounceDown.field_N;
+        var15 = Bounce.field_N;
         try {
           if (0 == param7) {
             param7 = param1.field_p;

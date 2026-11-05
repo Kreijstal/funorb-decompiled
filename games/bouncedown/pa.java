@@ -32,7 +32,7 @@ final class pa {
         int var5 = 0;
         long var6 = 0L;
         int var8 = 0;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           this.field_l[this.field_j] = (byte)ge.a((int) this.field_l[this.field_j], 128 >>> da.b(7, this.field_g));
           this.field_j = this.field_j + 1;
@@ -90,7 +90,7 @@ final class pa {
         int var9 = 0;
         int var10 = 0;
         StringBuilder discarded$0 = null;
-        int var11 = BounceDown.field_N;
+        int var11 = Bounce.field_N;
         if (param0 <= 0L) {
           return null;
         }
@@ -139,7 +139,7 @@ final class pa {
 
     final void a(int param0) {
         int var2 = 0;
-        int var3 = BounceDown.field_N;
+        int var3 = Bounce.field_N;
         int var2Lifetime1;
         for (var2 = 0; var2 < 32; var2++) {
           this.field_m[var2] = (byte) 0;
@@ -162,7 +162,7 @@ final class pa {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = BounceDown.field_N;
+        var2 = Bounce.field_N;
         try {
           if (!fi.b(param0 + 21921)) {
             if (sj.field_f != null &&
@@ -206,7 +206,7 @@ final class pa {
         int var3Lifetime1Lifetime1;
         int var3Lifetime1Lifetime2;
         int var3Lifetime1Lifetime3;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
@@ -337,7 +337,7 @@ final class pa {
         int var12 = 0;
         int var13 = 0;
         int var8Lifetime1;
-        var13 = BounceDown.field_N;
+        var13 = Bounce.field_N;
         try {
           var5_int = 0;
           var6 = 8 - ((int)param0 & 7) & 7;

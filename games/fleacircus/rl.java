@@ -274,7 +274,7 @@ final class rl {
         int var16Lifetime2;
         int var16Lifetime3;
         int var17Lifetime2;
-        var19 = FleaCircusApplet.field_A ? 1 : 0;
+        var19 = fleas.field_A ? 1 : 0;
         try {
           if (param7 >= 0 &&
             bl.field_i > param1) {

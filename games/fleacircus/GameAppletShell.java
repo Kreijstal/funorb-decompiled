@@ -133,7 +133,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         int var7 = 0;
         int var8 = 0;
         int stackIn_37_0Lifetime1;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           if (null != param0 &&
             param0.field_p != null &&
@@ -244,7 +244,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.awt.Insets var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           if (null != ol.field_e) {
             ol.field_e.removeFocusListener((java.awt.event.FocusListener) (this));
@@ -325,7 +325,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
-          var9 = FleaCircusApplet.field_A ? 1 : 0;
+          var9 = fleas.field_A ? 1 : 0;
           try {
             try {
               if (null != pf.field_c) {
@@ -507,7 +507,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               null == ug.field_b) {
               var6 = cb.field_t.getInsets();
               ol.field_e.setLocation(va.field_u + var6.left, rg.field_p + var6.top);
-              if (FleaCircusApplet.field_A) {
+              if (fleas.field_A) {
                 ol.field_e.setLocation(va.field_u, rg.field_p);
               }
             } else {
@@ -576,7 +576,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           Throwable var3_ref_Throwable = null;
           String var4 = null;
           int var5 = 0;
-          var5 = FleaCircusApplet.field_A ? 1 : 0;
+          var5 = fleas.field_A ? 1 : 0;
           try {
             try {
               boolean decompiledFrameRemainder3 = true;
@@ -977,7 +977,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         try {
           var5_int = 0;
           var6 = -1;

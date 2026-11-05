@@ -47,7 +47,7 @@ final class sc {
         Throwable decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         int var5 = 0;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           var1 = ResourceArchive.field_f;
           synchronized (var1) {

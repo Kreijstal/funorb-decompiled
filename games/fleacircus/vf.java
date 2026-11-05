@@ -107,17 +107,17 @@ final class vf extends r {
     final static void e(int param0) {
         int var1_int = 0;
         int var2 = 0;
-        int var3 = FleaCircusApplet.field_A ? 1 : 0;
+        int var3 = fleas.field_A ? 1 : 0;
         try {
-          ResourceArchive.field_c.field_z = new String[wj.field_c[FleaCircusApplet.field_E].length];
+          ResourceArchive.field_c.field_z = new String[wj.field_c[fleas.field_E].length];
           ResourceArchive.field_c.field_t = new boolean[ResourceArchive.field_c.field_z.length];
           if (param0 != -6359) {
             vf.c(true);
           }
           for (var1_int = 0; var1_int < ResourceArchive.field_c.field_t.length; var1_int++) {
-            var2 = hj.field_a[FleaCircusApplet.field_E] >= var1_int ? 1 : 0;
-            ResourceArchive.field_c.field_z[var1_int] = var2 == 0 ? ik.field_C : wj.field_c[FleaCircusApplet.field_E][var1_int];
-            if (0 == FleaCircusApplet.field_E && var1_int >= 15 &&
+            var2 = hj.field_a[fleas.field_E] >= var1_int ? 1 : 0;
+            ResourceArchive.field_c.field_z[var1_int] = var2 == 0 ? ik.field_C : wj.field_c[fleas.field_E][var1_int];
+            if (0 == fleas.field_E && var1_int >= 15 &&
               (qh.c((byte) 107) || 0 >= wc.field_q)) {
               ResourceArchive.field_c.field_z[var1_int] = nb.field_e;
               var2 = 0;

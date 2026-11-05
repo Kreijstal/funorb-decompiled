@@ -252,7 +252,7 @@ class UiComponent extends IntrusiveNode {
         pk var11;
         pk var12;
         pk var13;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         this.a(param0, param3, this, (byte) -111);
         var5 = this.e(1) ? 1 : 0;
         if (!param2) {
@@ -442,7 +442,7 @@ class UiComponent extends IntrusiveNode {
         int var4_int;
         dd var4;
         int var5;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         var1 = ob.field_a[0] * ij.field_H[0];
         var2 = of.field_d[0];
         var3 = new int[var1];
@@ -500,7 +500,7 @@ class UiComponent extends IntrusiveNode {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           discarded$0 = param2.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_y).append(",").append(this.field_z).append(" ").append(this.field_u).append("x").append(this.field_j);
           if (null != this.field_i) {
@@ -596,7 +596,7 @@ class UiComponent extends IntrusiveNode {
         int var5_int;
         String var5;
         int var6;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         var4 = this.c((byte) 8);
         var5_int = param0;
         while (var4 >= var5_int) {

@@ -42,7 +42,7 @@ final class qb {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           var2_int = param0.length();
           if (var2_int > 20) {

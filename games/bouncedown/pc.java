@@ -34,7 +34,7 @@ final class pc implements Runnable {
           InterruptedException var4 = null;
           int var6 = 0;
           String var7 = null;
-          var6 = BounceDown.field_N;
+          var6 = Bounce.field_N;
           try {
             while (true) {
               var3 = this;
@@ -125,7 +125,7 @@ final class pc implements Runnable {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var8 = 0;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           if (this.field_l) {
             return;
@@ -174,7 +174,7 @@ final class pc implements Runnable {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           if (this.field_l) {
             return;
@@ -230,7 +230,7 @@ final class pc implements Runnable {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = BounceDown.field_N;
+        var11 = Bounce.field_N;
         try {
           if (param3 >= 2 &&
             param3 <= 36) {
@@ -298,7 +298,7 @@ final class pc implements Runnable {
     final void a(byte param0) {
         try {
           int var4 = 0;
-          var4 = BounceDown.field_N;
+          var4 = Bounce.field_N;
           if (this.field_l) {
             return;
           }
@@ -337,7 +337,7 @@ final class pc implements Runnable {
         int var8;
         int var6Lifetime1;
         int var7Lifetime1;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         if (oa.field_a < 0) {
           return;
         }
@@ -369,13 +369,13 @@ final class pc implements Runnable {
           if (var6 >= 20) {
             if (30 <= var6) {
               var7 = (-(var6 * 256) + 12800) / 20;
-              BounceDown.field_G.a(var3, var4, var7);
+              Bounce.field_G.a(var3, var4, var7);
             } else {
-              BounceDown.field_G.a(var3, var4, 256);
+              Bounce.field_G.a(var3, var4, 256);
             }
           } else {
             var7 = 256 * var6 / 20;
-            BounceDown.field_G.a(var3, var4, var7);
+            Bounce.field_G.a(var3, var4, var7);
           }
         }
         var6Lifetime1 = -140 + oa.field_a;

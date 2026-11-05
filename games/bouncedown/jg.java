@@ -94,7 +94,7 @@ final class jg extends ak {
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           var5 = ja.field_c;
           var1 = var5;

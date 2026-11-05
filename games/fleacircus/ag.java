@@ -26,7 +26,7 @@ final class ag {
     private final void a(int param0, long param1, Object param2, int param3) {
         cb var6 = null;
         pj var7 = null;
-        int var8 = FleaCircusApplet.field_A ? 1 : 0;
+        int var8 = fleas.field_A ? 1 : 0;
         try {
           if (param0 > this.field_g) {
             throw new IllegalStateException();

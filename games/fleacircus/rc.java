@@ -25,7 +25,7 @@ final class rc implements Iterator {
         int var2Lifetime2;
         int var2Lifetime3;
         int var2Lifetime4;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         if (param1 != 22861) {
           return (byte) -117;
         }

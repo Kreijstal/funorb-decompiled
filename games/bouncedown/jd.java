@@ -228,7 +228,7 @@ class jd implements fc, sf {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           if (param1 > param3) {
             var8 = new byte[param2];
@@ -306,7 +306,7 @@ class jd implements fc, sf {
         int var12 = 0;
         int var13 = 0;
         int var12Lifetime1;
-        var13 = BounceDown.field_N;
+        var13 = Bounce.field_N;
         try {
           IntrusiveNode.a(param3.field_k + (param3.field_r + param4), param3.field_m + (param3.field_i + param6), param3.field_i + param6, param3.field_r + param4, -19852);
           var9_int = this.a(param3, (byte) -55);
@@ -516,7 +516,7 @@ class jd implements fc, sf {
         int var16 = 0;
         ed var17 = null;
         ed var18 = null;
-        var16 = BounceDown.field_N;
+        var16 = Bounce.field_N;
         try {
           if (param4 == param3) {
             return;
@@ -652,7 +652,7 @@ class jd implements fc, sf {
         int var7 = 0;
         lk var8 = null;
         int var6Lifetime1;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           if (param0 > -2) {
             var8 = (lk) null;
@@ -812,7 +812,7 @@ class jd implements fc, sf {
         int var3;
         int var4;
         eh[] var5;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         var5 = ge.a(true);
         var2 = var5;
         var3 = 0;

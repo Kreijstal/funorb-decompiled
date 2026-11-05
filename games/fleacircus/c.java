@@ -220,7 +220,7 @@ class c extends bb {
         int var8;
         UiComponent var9;
         eg var10;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         if (!this.field_T) {
           this.field_n = 0;
           this.field_r = 0;
@@ -272,7 +272,7 @@ class c extends bb {
     private final int j(int param0) {
         int var2;
         int var3;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         if (0 == this.field_M) {
           return this.field_M;
         }
@@ -563,7 +563,7 @@ class c extends bb {
         int var2;
         int var3;
         int var4;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         var2 = this.field_i.length();
         if (var2 == this.field_M) {
           return this.field_M;

@@ -55,7 +55,7 @@ final class nd extends lc implements rc {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);
@@ -166,7 +166,7 @@ final class nd extends lc implements rc {
         RuntimeException var3 = null;
         r var4 = null;
         int var6 = 0;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           this.field_w.b(-77);
           if (param1 != null &&
@@ -226,7 +226,7 @@ final class nd extends lc implements rc {
           Throwable var2_ref = null;
           RuntimeException var2_ref2 = null;
           java.applet.Applet var8 = null;
-          var7 = BounceDown.field_N;
+          var7 = Bounce.field_N;
           try {
             if (oh.field_e) {
               return true;
@@ -289,7 +289,7 @@ final class nd extends lc implements rc {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           if (param0 <= 6) {
             return;

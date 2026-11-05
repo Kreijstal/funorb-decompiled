@@ -18,7 +18,7 @@ final class wd {
         hi var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         try {
           if (param0 != -29250) {
             field_c = -7;

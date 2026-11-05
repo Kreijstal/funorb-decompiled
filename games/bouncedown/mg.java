@@ -73,7 +73,7 @@ final class mg extends al {
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           var5 = oc.field_a;
           var1 = var5;

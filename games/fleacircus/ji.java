@@ -22,7 +22,7 @@ final class ji {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_14_1 = 0;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         var2 = param0 ? 1 : 0;
         for (var3 = -1 + this.field_e.length; var3 >= 0; var3--) {
           stackIn_7_0 = var2;
@@ -56,7 +56,7 @@ final class ji {
         ResourceArchive var5 = null;
         int var2 = 0;
         int var3 = 0;
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         int var2Lifetime1;
         int var2Lifetime2;
         int var3Lifetime1;
@@ -91,7 +91,7 @@ final class ji {
 
     final void a(int param0, byte param1) {
         int var3 = 0;
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         for (var3 = 19; 0 < var3; var3--) {
           this.field_e[var3] = this.field_e[-1 + var3];
           this.field_g[var3] = this.field_g[-1 + var3];

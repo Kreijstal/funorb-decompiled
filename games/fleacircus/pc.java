@@ -31,7 +31,7 @@ final class pc {
         int var3;
         int var4;
         int var5;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         int fieldTemp$0 = this.field_a + 1;
         this.field_a = this.field_a + 1;
         this.field_k = this.field_k + fieldTemp$0;
@@ -65,7 +65,7 @@ final class pc {
 
     private final void a(byte param0) {
         int var2 = 0;
-        int var11 = FleaCircusApplet.field_A ? 1 : 0;
+        int var11 = fleas.field_A ? 1 : 0;
         int var4 = -1640531527;
         int var8 = -1640531527;
         int var7 = -1640531527;
@@ -200,7 +200,7 @@ final class pc {
           var2 = (String) null;
           pc.a(false, (String) null, (String) null);
         }
-        stackIn_9_0 = (wi.field_b != 0) || (FleaCircusApplet.field_L != 0) || (hj.field_a[1] != 0) || (hj.field_a[0] != 0);
+        stackIn_9_0 = (wi.field_b != 0) || (fleas.field_L != 0) || (hj.field_a[1] != 0) || (hj.field_a[0] != 0);
         return stackIn_9_0;
     }
 

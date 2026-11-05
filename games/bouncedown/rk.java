@@ -10,7 +10,7 @@ final class rk {
         he var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         try {
           var5 = (he) (of.field_b.a((byte) -105));
           if (param1 != -29) {

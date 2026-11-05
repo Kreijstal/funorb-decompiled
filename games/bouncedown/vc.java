@@ -33,7 +33,7 @@ class vc extends wd {
         ui var15;
         int var16;
         int var7Lifetime1;
-        var16 = BounceDown.field_N;
+        var16 = Bounce.field_N;
         this.field_C = new bc();
         var2 = 0;
         var3 = (sf) ((Object) this.field_j);
@@ -106,7 +106,7 @@ class vc extends wd {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           if (param0 != -3) {
             vc.e((byte) -57);
@@ -177,7 +177,7 @@ class vc extends wd {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           if (this.field_D == null ||
             this.field_D.length <= param1) {
@@ -216,7 +216,7 @@ class vc extends wd {
 
     final static void e(byte param0) {
         int var1_int = 0;
-        int var2 = BounceDown.field_N;
+        int var2 = Bounce.field_N;
         int var1_intLifetime1;
         ff.field_D.a(false);
         if (param0 != -44) {
@@ -313,7 +313,7 @@ class vc extends wd {
         ui var4;
         ui var5;
         int var6;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         var4 = (ui) (this.field_C.a((byte) -57));
         if (param0 != 1) {
           field_G = (si) null;

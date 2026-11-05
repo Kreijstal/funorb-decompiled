@@ -24,7 +24,7 @@ final class il {
         dd var7 = null;
         dd var8 = null;
         int var3Lifetime1;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         try {
           gb.b(243, 197, 369, 143, 16777215);
           gb.e(244, param0, 367, 141, 0);

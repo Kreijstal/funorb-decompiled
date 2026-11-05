@@ -108,7 +108,7 @@ final class pg {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           if (null == param2.field_e) {
             return;

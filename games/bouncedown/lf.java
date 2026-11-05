@@ -34,7 +34,7 @@ final class lf extends gj {
         int var6 = 0;
         int var8 = 0;
         CipherPacketBuffer var9 = null;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           var2_int = param0.f(7, 8);
           if (param1 > -32) {
@@ -110,7 +110,7 @@ final class lf extends gj {
         int var3;
         int var4;
         {
-          var4 = BounceDown.field_N;
+          var4 = Bounce.field_N;
           var3 = 35 / ((23 - param1) / 57);
           if ((param0 <= 0 ||
             128 <= param0) && (param0 < 160 ||

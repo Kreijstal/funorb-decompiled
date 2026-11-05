@@ -23,7 +23,7 @@ final class rb extends gj implements da {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           if (param3 != 248) {
             rb.a(-65, -100, (byte) -84);
@@ -84,7 +84,7 @@ final class rb extends gj implements da {
           int var6_intLifetime1;
           int var6_intLifetime2;
           int var8Lifetime1;
-          var9 = FleaCircusApplet.field_A ? 1 : 0;
+          var9 = fleas.field_A ? 1 : 0;
           try {
             if (null == sg.field_h &&
               !id.a(false, param2)) {

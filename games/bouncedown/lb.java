@@ -47,7 +47,7 @@ final class lb {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           var2_int = param1.f(7, 8);
           if (param0 < 42) {

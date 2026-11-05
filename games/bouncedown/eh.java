@@ -72,7 +72,7 @@ final class eh {
         int var15Lifetime1;
         int var14Lifetime2;
         int var15Lifetime2;
-        var40 = BounceDown.field_N;
+        var40 = Bounce.field_N;
         try {
           var46 = param0;
           if (null != var46.field_v &&

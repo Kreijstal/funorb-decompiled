@@ -27,7 +27,7 @@ final class ma {
           Throwable decompiledCaughtException = null;
           Throwable var2_ref2 = null;
           int var5Lifetime1;
-          var7 = FleaCircusApplet.field_A ? 1 : 0;
+          var7 = fleas.field_A ? 1 : 0;
           try {
             if (qj.field_G) {
               return true;

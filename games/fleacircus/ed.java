@@ -60,7 +60,7 @@ final class ed {
         int var9_intLifetime1;
         int var9_intLifetime2;
         int var9_intLifetime3;
-        var10 = FleaCircusApplet.field_A ? 1 : 0;
+        var10 = fleas.field_A ? 1 : 0;
         try {
           if (null != ub.field_b &&
             ub.field_b.b((byte) -121) &&

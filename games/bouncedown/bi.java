@@ -71,7 +71,7 @@ final class bi extends IntrusiveNode {
           StringBuilder var7 = null;
           Exception var8 = null;
           int var9 = 0;
-          var9 = BounceDown.field_N;
+          var9 = Bounce.field_N;
           try {
             var5 = param0.getFile();
             var6 = 0;

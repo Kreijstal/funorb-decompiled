@@ -78,7 +78,7 @@ final class em extends IOException {
         int var8 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        int var9 = FleaCircusApplet.field_A ? 1 : 0;
+        int var9 = fleas.field_A ? 1 : 0;
         if ((3 & (param0.field_w | param0.field_t | param0.field_q | param0.field_v)) == 0) {
           return;
         }

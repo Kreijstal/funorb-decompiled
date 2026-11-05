@@ -53,7 +53,7 @@ final class k extends lc implements rc {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           if (param0 < 6) {
             return;

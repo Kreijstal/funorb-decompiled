@@ -41,7 +41,7 @@ final class fe {
         int var11Lifetime1;
         int var13Lifetime1;
         int var13Lifetime2;
-        var15 = BounceDown.field_N;
+        var15 = Bounce.field_N;
         try {
           var5_int = this.field_f + this.field_k;
           var6 = this.field_h + this.field_o;
@@ -205,7 +205,7 @@ final class fe {
         tg var13 = null;
         qi var14 = null;
         qi var19 = null;
-        int var15 = BounceDown.field_N;
+        int var15 = Bounce.field_N;
         qi var14Lifetime1;
         qi var14Lifetime2;
         try {

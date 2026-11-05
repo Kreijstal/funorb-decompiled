@@ -59,7 +59,7 @@ final class vj {
     }
 
     vj() {
-        FleaCircusApplet.field_L = 0;
+        fleas.field_L = 0;
         this.field_b = db.a((byte) -115, qe.field_j, 65536) << 16;
         this.field_b = this.field_b + db.a((byte) -115, qe.field_j, 65536);
         mc.field_b = 0;

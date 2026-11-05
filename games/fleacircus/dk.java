@@ -31,7 +31,7 @@ abstract class dk extends UiComponent implements wg {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           discarded$4 = param0.append('\n');
           for (var5_int = 0; var5_int <= param3; var5_int++) {

@@ -133,7 +133,7 @@ final class uc extends lc implements rc {
 
     private final void a(int param0, int param1) {
         int var5 = 0;
-        int var6 = BounceDown.field_N;
+        int var6 = Bounce.field_N;
         int var5Lifetime1;
         if (param1 <= this.field_B) {
           return;
@@ -160,7 +160,7 @@ final class uc extends lc implements rc {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           for (var6_int = 0; this.field_B > var6_int; var6_int++) {
             if (param4 != this.field_H[var6_int]) {
@@ -208,7 +208,7 @@ final class uc extends lc implements rc {
         tg var12 = null;
         int var8 = 0;
         int var9 = 0;
-        int var13 = BounceDown.field_N;
+        int var13 = Bounce.field_N;
         int var8Lifetime1;
         int var9Lifetime1;
         try {

@@ -3063,7 +3063,7 @@ final class je extends bb {
                 wh.field_e = null;
             }
             void run() {
-                var4 = FleaCircusApplet.field_A ? 1 : 0;
+                var4 = fleas.field_A ? 1 : 0;
                 try {
                   runChunk0();
                   if (finished) return;
@@ -3130,7 +3130,7 @@ final class je extends bb {
         int var11 = 0;
         dd var7Lifetime1;
         dd var7Lifetime2;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           super.b(param0, param1, param2, param3);
           if (param3 != 0) {

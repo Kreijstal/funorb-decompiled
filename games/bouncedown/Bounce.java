@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class BounceDown extends GameClient {
+public final class Bounce extends GameClient {
     static tg field_G;
     private int field_I;
     private boolean field_E;
@@ -95,7 +95,7 @@ public final class BounceDown extends GameClient {
         RuntimeException var2 = null;
         var3 = field_N;
         try {
-          BounceDown.k((byte) -99);
+          Bounce.k((byte) -99);
           kc.a(17345);
           nf.a(-60);
           ab.b((byte) -104);
@@ -1093,10 +1093,10 @@ public final class BounceDown extends GameClient {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              BounceDown.a(var9, var8, 22668, param3, param4, param5, param6);
+              Bounce.a(var9, var8, 22668, param3, param4, param5, param6);
               stackIn_44_0 = param0;
             }
-            BounceDown.a(stackIn_44_0, param1, param2, var8, var10, param5, param6);
+            Bounce.a(stackIn_44_0, param1, param2, var8, var10, param5, param6);
             return;
           }
           var7_intLifetime1 = -1 + param1;
@@ -1914,7 +1914,7 @@ public final class BounceDown extends GameClient {
         }
     }
 
-    public BounceDown() {
+    public Bounce() {
         this.field_K = 0;
         this.field_H = 0;
     }

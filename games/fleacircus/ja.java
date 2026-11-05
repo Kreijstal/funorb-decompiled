@@ -29,7 +29,7 @@ class ja extends bb {
         int var16;
         UiComponent var17;
         int var7Lifetime1;
-        var16 = FleaCircusApplet.field_A ? 1 : 0;
+        var16 = fleas.field_A ? 1 : 0;
         this.field_N = new vc();
         var2 = 0;
         if (param0 != 424) {
@@ -82,7 +82,7 @@ class ja extends bb {
         String[] var7 = null;
         String[] var8 = null;
         int var5 = 0;
-        int var6 = FleaCircusApplet.field_A ? 1 : 0;
+        int var6 = fleas.field_A ? 1 : 0;
         try {
           if (param0 != 0) {
             this.b(55, 20, false, -78);
@@ -119,7 +119,7 @@ class ja extends bb {
         mi var4;
         mi var5;
         int var6;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         var4 = (mi) (this.field_N.c((byte) 47));
         if (param2 != -1) {
           return (mi) null;

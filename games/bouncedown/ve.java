@@ -39,7 +39,7 @@ final class ve {
         int var20Lifetime2;
         int var20Lifetime3;
         int var20Lifetime4;
-        var22 = BounceDown.field_N;
+        var22 = Bounce.field_N;
         try {
           if (param2 == null) {
             return;

@@ -33,7 +33,7 @@ final class pf {
         int var9 = 0;
         hf[] var10 = null;
         od var11 = null;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         try {
           if (!param3.a(107)) {
             return null;
@@ -150,7 +150,7 @@ final class pf {
         int var8Lifetime3;
         int var5Lifetime2Lifetime1;
         int var7Lifetime1Lifetime1;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         try {
           vc.field_a = param0;
           d.field_L = true;

@@ -47,7 +47,7 @@ final class uk {
         IntrusiveNode var5;
         IntrusiveNode var6;
         IntrusiveNode var9;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         if (param0 <= ~this.field_h) {
           do {
             if (this.field_a <= this.field_h) {
@@ -81,7 +81,7 @@ final class uk {
 
     final IntrusiveNode a(int param0, long param1) {
         IntrusiveNode var5 = null;
-        int var6 = BounceDown.field_N;
+        int var6 = Bounce.field_N;
         IntrusiveNode var4 = this.field_c[(int)(param1 & (long)(this.field_a - 1))];
         this.field_g = var4.field_c;
         while (this.field_g != var4) {
@@ -118,7 +118,7 @@ final class uk {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           var2_int = param1.length();
           var3 = 0;

@@ -33,7 +33,7 @@ final class ll extends IntrusiveNode {
         if (null == fl.field_b) {
           fl.field_b = new dd(640, 336);
           fl.field_b.f();
-          oe.a((byte) -118, ResourceArchive.field_c.field_x, FleaCircusApplet.field_E);
+          oe.a((byte) -118, ResourceArchive.field_c.field_x, fleas.field_E);
           gi.field_b.a((byte) 71);
           if (param0 != 336) {
             ll.a(-25);
@@ -42,7 +42,7 @@ final class ll extends IntrusiveNode {
           return;
         }
         fl.field_b.f();
-        oe.a((byte) -118, ResourceArchive.field_c.field_x, FleaCircusApplet.field_E);
+        oe.a((byte) -118, ResourceArchive.field_c.field_x, fleas.field_E);
         gi.field_b.a((byte) 71);
         if (param0 == 336) {
           return;

@@ -29,7 +29,7 @@ final class bf {
     }
 
     final int a(byte param0) {
-        int var4 = FleaCircusApplet.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         if (param0 < 4) {
           return 77;
         }
@@ -174,7 +174,7 @@ final class bf {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           var4_int = param0.b(param3, (byte) -87);
           if (var4_int == 0) {

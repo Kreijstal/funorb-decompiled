@@ -24,7 +24,7 @@ final class md extends bb {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        var12 = FleaCircusApplet.field_A ? 1 : 0;
+        var12 = fleas.field_A ? 1 : 0;
         try {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;

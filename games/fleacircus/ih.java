@@ -54,7 +54,7 @@ final class ih extends ni {
         int incrementValue$1 = 0;
         int var4 = 0;
         int var5 = 0;
-        int var6 = FleaCircusApplet.field_A ? 1 : 0;
+        int var6 = fleas.field_A ? 1 : 0;
         int var3 = this.field_o >> 3;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -120,7 +120,7 @@ final class ih extends ni {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           if (param0 < 66) {
             ih.j(-43);

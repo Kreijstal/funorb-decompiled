@@ -21,7 +21,7 @@ final class ld extends IntrusiveNode {
         CipherPacketBuffer var9 = null;
         byte[] var13 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var9 = jc.field_g;
           if (param0 <= 36) {

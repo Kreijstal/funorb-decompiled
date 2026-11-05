@@ -69,7 +69,7 @@ final class ol {
         int var5 = 0;
         char[] var6 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           if ((param0 <= 0 ||
             param0 >= 128) &&

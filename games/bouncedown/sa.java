@@ -64,7 +64,7 @@ final class sa extends IntrusiveNode {
           var16 = null;
           var22 = null;
           var23 = null;
-          var12 = BounceDown.field_N;
+          var12 = Bounce.field_N;
           try {
             var14 = (hh) (ob.field_c.a((byte) -83));
             var19 = var14;

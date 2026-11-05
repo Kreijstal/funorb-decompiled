@@ -58,11 +58,11 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
               vf.a(-13891, (char) var2_int)) {
-              var3 = BounceDown.field_F + 1 & 127;
+              var3 = Bounce.field_F + 1 & 127;
               if (oh.field_a != var3) {
-                pf.field_A[BounceDown.field_F] = -1;
-                fk.field_b[BounceDown.field_F] = (char)var2_int;
-                BounceDown.field_F = var3;
+                pf.field_A[Bounce.field_F] = -1;
+                fk.field_b[Bounce.field_F] = (char)var2_int;
+                Bounce.field_F = var3;
               }
             }
           }
@@ -105,11 +105,11 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
           }
           if (0 <= var2_int) {
-            var3 = BounceDown.field_F + 1 & 127;
+            var3 = Bounce.field_F + 1 & 127;
             if (var3 != oh.field_a) {
-              pf.field_A[BounceDown.field_F] = var2_int;
-              fk.field_b[BounceDown.field_F] = (char)0;
-              BounceDown.field_F = var3;
+              pf.field_A[Bounce.field_F] = var2_int;
+              fk.field_b[Bounce.field_F] = (char)0;
+              Bounce.field_F = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();

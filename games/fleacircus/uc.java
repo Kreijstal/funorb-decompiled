@@ -34,15 +34,15 @@ abstract class uc {
     final static void b(byte param0) {
         int var1_int = 0;
         int var2 = 0;
-        int var3 = FleaCircusApplet.field_A ? 1 : 0;
+        int var3 = fleas.field_A ? 1 : 0;
         try {
-          ml.field_O = ia.field_m[FleaCircusApplet.field_E][tj.field_a].field_f;
+          ml.field_O = ia.field_m[fleas.field_E][tj.field_a].field_f;
           if (param0 != 84) {
             field_d = (dd) null;
           }
           for (var1_int = 0; var1_int < 40; var1_int++) {
             for (var2 = 0; var2 < 21; var2++) {
-              fl.field_c[var1_int][var2] = ia.field_m[FleaCircusApplet.field_E][tj.field_a].field_c[var1_int][var2];
+              fl.field_c[var1_int][var2] = ia.field_m[fleas.field_E][tj.field_a].field_c[var1_int][var2];
             }
           }
           fg.a((byte) 13);

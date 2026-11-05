@@ -12,7 +12,7 @@ final class od {
     private final void a(Object param0, long param1, boolean param2, int param3) {
         eg var6 = null;
         t var6_ref = null;
-        int var7 = BounceDown.field_N;
+        int var7 = Bounce.field_N;
         try {
           if (param3 > this.field_d) {
             throw new IllegalStateException();

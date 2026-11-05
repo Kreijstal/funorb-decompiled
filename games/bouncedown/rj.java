@@ -23,7 +23,7 @@ final class rj extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var1_intLifetime1;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           qk.c();
           GameClient.field_s = 11;
@@ -74,7 +74,7 @@ final class rj extends IntrusiveNode {
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = BounceDown.field_N;
+        var10 = Bounce.field_N;
         try {
           if (param0 < 84) {
             return true;

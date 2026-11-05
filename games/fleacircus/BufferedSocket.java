@@ -47,16 +47,16 @@ final class BufferedSocket implements Runnable {
         int var2;
         ql var3;
         boolean decompiledFrameRemainder0 = true;
-        var2 = FleaCircusApplet.field_A ? 1 : 0;
+        var2 = fleas.field_A ? 1 : 0;
         tj.field_a = tj.field_a + 1;
         if ((!(wc.field_q > 0) ||
-          qh.c((byte) 68)) && (FleaCircusApplet.field_E == 0 &&
+          qh.c((byte) 68)) && (fleas.field_E == 0 &&
           tj.field_a >= 15)) {
           oa.a(9, true, 15);
           decompiledFrameRemainder0 = false;
         }
         else {
-          if (ia.field_m[FleaCircusApplet.field_E].length <= tj.field_a) {
+          if (ia.field_m[fleas.field_E].length <= tj.field_a) {
             if (hj.field_a[1] == -1 + pl.field_l[1] &&
               hj.field_a[0] == -1 + pl.field_l[0]) {
               hg.a(-25389, 3, 252, tj.field_a);
@@ -75,15 +75,15 @@ final class BufferedSocket implements Runnable {
               em.field_b = 0;
             }
             if (tj.field_a == 12 &&
-              FleaCircusApplet.field_E == 0 &&
+              fleas.field_E == 0 &&
               !c.field_U) {
               hg.a(-25389, 10, 245, tj.field_a);
             }
-            if (tj.field_a >= ia.field_m[FleaCircusApplet.field_E].length) {
+            if (tj.field_a >= ia.field_m[fleas.field_E].length) {
               oa.a(9, true, 41);
             } else {
-              hj.field_a[FleaCircusApplet.field_E] = Math.max(tj.field_a, hj.field_a[FleaCircusApplet.field_E]);
-              var3 = new ql(FleaCircusApplet.field_E, -1 + hj.field_a[FleaCircusApplet.field_E], 0, 0, 0, 0);
+              hj.field_a[fleas.field_E] = Math.max(tj.field_a, hj.field_a[fleas.field_E]);
+              var3 = new ql(fleas.field_E, -1 + hj.field_a[fleas.field_E], 0, 0, 0, 0);
               if (!qh.c((byte) 38)) {
                 rd.a(var3, 79, 5);
                 ej.a((byte) -39);
@@ -128,7 +128,7 @@ final class BufferedSocket implements Runnable {
           InterruptedException var4 = null;
           int var6 = 0;
           String var7 = null;
-          var6 = FleaCircusApplet.field_A ? 1 : 0;
+          var6 = fleas.field_A ? 1 : 0;
           try {
             while (true) {
               var3 = this;
@@ -213,7 +213,7 @@ final class BufferedSocket implements Runnable {
     final void h(int param0) {
         try {
           int var4 = 0;
-          var4 = FleaCircusApplet.field_A ? 1 : 0;
+          var4 = fleas.field_A ? 1 : 0;
           if (this.field_l) {
             return;
           }
@@ -312,7 +312,7 @@ final class BufferedSocket implements Runnable {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var8 = 0;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           if (param0 > -85) {
             return;
@@ -374,7 +374,7 @@ final class BufferedSocket implements Runnable {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           if (this.field_l) {
             return;
@@ -411,7 +411,7 @@ final class BufferedSocket implements Runnable {
         fi var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         try {
           var4 = (ql) (sd.field_d.c((byte) 47));
           while (var4 != null) {

@@ -143,7 +143,7 @@ abstract class w {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           RuntimeException var2_ref = null;
-          var8 = FleaCircusApplet.field_A ? 1 : 0;
+          var8 = fleas.field_A ? 1 : 0;
           try {
             try {
               var9 = param1.getParameter("cookieprefix");

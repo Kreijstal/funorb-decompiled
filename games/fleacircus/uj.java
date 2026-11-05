@@ -27,7 +27,7 @@ final class uj {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           var4_int = -1;
           for (var5 = param1; param2 > var5; var5++) {
@@ -79,7 +79,7 @@ final class uj {
         StringBuilder var8 = null;
         int var9 = 0;
         int var10 = 0;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           var4_int = param1.length();
           var5 = param3.length();
@@ -142,7 +142,7 @@ final class uj {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           if (param1 >= -94) {
             var8 = (CharSequence) null;

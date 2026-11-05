@@ -51,7 +51,7 @@ abstract class oh extends jj {
     boolean a(int param0) {
         int fieldTemp$0 = 0;
         int var2 = 0;
-        int var3 = FleaCircusApplet.field_A ? 1 : 0;
+        int var3 = fleas.field_A ? 1 : 0;
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
@@ -140,7 +140,7 @@ abstract class oh extends jj {
     }
 
     final static dd c(int param0, int param1, int param2) {
-        int var6 = FleaCircusApplet.field_A ? 1 : 0;
+        int var6 = fleas.field_A ? 1 : 0;
         dd var7 = new dd(param2, param2);
         dd var3 = var7;
         int var4 = 0;
@@ -208,7 +208,7 @@ abstract class oh extends jj {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
-        var17 = FleaCircusApplet.field_A ? 1 : 0;
+        var17 = fleas.field_A ? 1 : 0;
         if (param8 < param11) {
           if (param0 > param11) {
             DualLinkNode.a(param6, param11, param4, param3, param2, param15, param14, param8, param9, param12, param13, gb.field_a, param1, param7, param0, 32679, param10);

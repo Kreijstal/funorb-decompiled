@@ -20,7 +20,7 @@ final class hb extends e {
         te var5 = null;
         te var6 = null;
         int var7 = 0;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           super.a(2, param1);
           if (param2 != 70) {
@@ -196,7 +196,7 @@ final class hb extends e {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           var7 = this.field_s;
           var3 = var7;
@@ -237,7 +237,7 @@ final class hb extends e {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           var7 = this.field_s;
           var3 = var7;

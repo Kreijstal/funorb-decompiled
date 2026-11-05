@@ -22,7 +22,7 @@ final class nj {
     final void c(int param0) {
         int var2 = 0;
         int var3;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         for (var2 = this.field_e.length - 1; 0 <= var2; var2--) {
           if (null != this.field_e[var2]) {
             this.field_e[var2].b(true);
@@ -65,7 +65,7 @@ final class nj {
           int var7_intLifetime1;
           int var7_intLifetime2;
           int var7_intLifetime3;
-          var9 = FleaCircusApplet.field_A ? 1 : 0;
+          var9 = fleas.field_A ? 1 : 0;
           try {
             var5 = param3.getFile();
             var6 = 0;
@@ -188,7 +188,7 @@ final class nj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = FleaCircusApplet.field_A ? 1 : 0;
+        var12 = fleas.field_A ? 1 : 0;
         try {
           if (gb.field_l > param3) {
             param2 = param2 - (gb.field_l - param3);
@@ -286,7 +286,7 @@ final class nj {
         int var2;
         int var3;
         int var5;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         var2 = 1;
         var3 = 122 % ((param0 - 3) / 55);
         for (var4 = -1 + this.field_e.length; var4 >= 0; var4--) {

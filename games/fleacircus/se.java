@@ -73,7 +73,7 @@ final class se {
         ih var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         try {
           var10 = ae.field_a;
           if (param0 > -94) {

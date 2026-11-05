@@ -22,7 +22,7 @@ abstract class ah {
           Throwable decompiledCaughtException = null;
           Throwable var3_ref = null;
           RuntimeException var3_ref2 = null;
-          var7 = BounceDown.field_N;
+          var7 = Bounce.field_N;
           try {
             if (param0 != -3058) {
               stackIn_3_0 = (String) null;

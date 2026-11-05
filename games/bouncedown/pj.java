@@ -95,7 +95,7 @@ final class pj implements fc {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var3_int = 0;
           var4 = param2.length();

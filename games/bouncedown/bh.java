@@ -25,7 +25,7 @@ final class bh {
     final int a(int param0, byte param1) {
         int var3 = 0;
         int var4;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         if (this.field_a != null &&
           this.field_a.length != 0) {
           for (var3 = 1; var3 < this.field_a.length; var3++) {

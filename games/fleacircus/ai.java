@@ -107,7 +107,7 @@ final class ai extends r {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         pd var1Lifetime1;
-        var2 = FleaCircusApplet.field_A ? 1 : 0;
+        var2 = fleas.field_A ? 1 : 0;
         try {
           db.field_J.a();
           tg.field_i.a();

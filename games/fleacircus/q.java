@@ -53,7 +53,7 @@ final class q {
         kf var9 = null;
         ih var10 = null;
         byte[] var14 = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           var10 = ae.field_a;
           if (!param0) {

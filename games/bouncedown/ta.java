@@ -12,7 +12,7 @@ final class ta {
         tg var1 = null;
         tg var2 = null;
         int var3 = 0;
-        int var4 = BounceDown.field_N;
+        int var4 = Bounce.field_N;
         try {
           var1 = new tg(540, 140);
           kh.a(var1, param0 + 1);
@@ -25,7 +25,7 @@ final class ta {
             var2.e(-2, -2, 16777215);
             na.c(4, 4, 0, 0, 540, 140);
           }
-          BounceDown.field_G.d();
+          Bounce.field_G.d();
           var1.c(0, 0);
           ve.a(-122);
         } catch (RuntimeException runtimeException) {
@@ -62,7 +62,7 @@ final class ta {
         int var1;
         int var2;
         java.applet.Applet var3;
-        var2 = BounceDown.field_N;
+        var2 = Bounce.field_N;
         ej.field_c = null;
         ng.field_b = false;
         if (param0 <= 86) {

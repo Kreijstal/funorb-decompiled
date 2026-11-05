@@ -33,7 +33,7 @@ final class ak {
         int var3 = 0;
         int var4 = 0;
         String var8 = null;
-        int var5 = FleaCircusApplet.field_A ? 1 : 0;
+        int var5 = fleas.field_A ? 1 : 0;
         if (!param0) {
           field_d = (vc) null;
         }
@@ -127,7 +127,7 @@ final class ak {
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
-        var13 = FleaCircusApplet.field_A ? 1 : 0;
+        var13 = fleas.field_A ? 1 : 0;
         try {
           var14 = param3.b(param1 ^ -15051);
           var11_ref_String = var14;

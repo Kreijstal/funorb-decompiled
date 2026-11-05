@@ -182,7 +182,7 @@ final class gh extends r {
         int var11 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           var1_int = rb.field_H;
           var2 = 0;

@@ -224,7 +224,7 @@ class ba extends wd {
         int var2;
         int var3;
         int var4;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         if (param0 < 44) {
           return -111;
         }
@@ -393,7 +393,7 @@ class ba extends wd {
         int var7;
         int var8;
         sf var9;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         if (!this.field_H) {
           this.field_v = 0;
           this.field_o = 0;
@@ -436,7 +436,7 @@ class ba extends wd {
     private final int k(int param0) {
         int var2;
         int var3;
-        var3 = BounceDown.field_N;
+        var3 = Bounce.field_N;
         if (param0 == this.field_G) {
           return this.field_G;
         }

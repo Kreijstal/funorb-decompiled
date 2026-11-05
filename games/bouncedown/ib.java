@@ -22,7 +22,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var4_int = -1;
           for (var5 = param2; param0 > var5; var5++) {
@@ -62,7 +62,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var2 = ah.a(-3058, param0, "jagex-last-login-method");
           if (var2 == null) {
@@ -138,7 +138,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           if (param2 < 68) {
             return;

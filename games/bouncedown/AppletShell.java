@@ -244,7 +244,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         java.awt.Insets var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           if (null != ch.field_h) {
             ch.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
@@ -523,7 +523,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
-          var9 = BounceDown.field_N;
+          var9 = Bounce.field_N;
           try {
             try {
               if (og.field_c != null) {
@@ -602,7 +602,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           Throwable var3_ref_Throwable = null;
           String var4 = null;
           int var5 = 0;
-          var5 = BounceDown.field_N;
+          var5 = Bounce.field_N;
           try {
             try {
               boolean decompiledFrameRemainder3 = true;
@@ -851,7 +851,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               null == IntrusiveNode.field_b);
             if (!decompiledSharedTail0) {
               ch.field_h.setLocation(el.field_e, ob.field_d);
-              decompiledSharedTail0 = (BounceDown.field_N != 0);
+              decompiledSharedTail0 = (Bounce.field_N != 0);
             }
             if (decompiledSharedTail0) {
               var6 = i.field_h.getInsets();

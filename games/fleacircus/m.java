@@ -23,7 +23,7 @@ final class m {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = FleaCircusApplet.field_A ? 1 : 0;
+        var9 = fleas.field_A ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param2);
           var3_int = ei.a(-78, var10, param0);

@@ -106,7 +106,7 @@ final class ml extends dk {
         int var3 = 0;
         hg var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         try {
           var4 = (hg) (ak.field_d.c((byte) 47));
           while (var4 != null) {
@@ -144,7 +144,7 @@ final class ml extends dk {
         ql var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = FleaCircusApplet.field_A ? 1 : 0;
+        var2 = fleas.field_A ? 1 : 0;
         try {
           var3 = (ql) (mi.field_r.c((byte) 47));
           if (param0 >= -36) {
@@ -185,7 +185,7 @@ final class ml extends dk {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = FleaCircusApplet.field_A ? 1 : 0;
+        var11 = fleas.field_A ? 1 : 0;
         try {
           if (param2 != null &&
             0 < param4) {

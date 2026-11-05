@@ -10612,17 +10612,17 @@
       "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
       "sources": {
         "files": 289,
-        "sha256": "042d73990262c737d597f9743463083746c82195691a4870d56f09d4b7d68fb1"
+        "sha256": "c93e847651694763339ee72c18113e3e40b548f0a43d92478f2c8fc6280e4389"
       },
       "dictionary": {
         "path": "decompilation/bouncedown-naming.json",
-        "sha256": "6541b5a0ca604d3b0568fcccd0fc017c7106348c82cdebe71107198b010cc8e6"
+        "sha256": "848421943a2883b1952e11fef6056d6726e6790e0415a5b1182490d2290cccec"
       },
       "readingGuide": {
         "path": "games/bouncedown/README.md",
-        "sha256": "19181a4b077869cf344f709a87cede09fffc084245b0b4a5bbd4113233f7e7ba"
+        "sha256": "2f1fdc010a7e9515e4e1c9012026d1ab0c8acb41a9c9c216b6c3e9fab224312c"
       },
-      "rulesSha256": "61609ef1d56ab273120dc3f072cc828da3a2a9cb5dc753c3462b56b7e98f2323",
+      "rulesSha256": "c2518623dfe2555cccdee4ef6e5fafbe7fa6538274b99d51fd54bdea6acb9a38",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10756,17 +10756,17 @@
       "inputTreeSha256": "029c16636c824d03651e357ffda43e5067bb8e254335ed518d08b6ab20edaae8",
       "sources": {
         "files": 306,
-        "sha256": "3d63e4bd531d3576946c1eacc9bbc3c9d0ce8139c2578f5a1463485bad09e1f6"
+        "sha256": "523f02937bbb4ad38e511c9d75c3ffe4b155942ecbe8d826e45c4027b3eb5ebc"
       },
       "dictionary": {
         "path": "decompilation/fleacircus-naming.json",
-        "sha256": "ac7c1319e9a7f29f60c5a7b0e3363adc07175ed068f871322d34bd527cdfe2dc"
+        "sha256": "448b35393c94a64659494d94a95545d109cb9dfaea37cecaa49fb34d95289d27"
       },
       "readingGuide": {
         "path": "games/fleacircus/README.md",
-        "sha256": "bb7220a1073b8376685255958cce7611727695a3c1f9dee6975f8f0d2d38f632"
+        "sha256": "8b993e522047635d5be4ed0aa06e46461da29736a6d148bc7120dc105b3b33a9"
       },
-      "rulesSha256": "4ce0e88a06eda82d93e5465a5157b86f6f2bc7feb7255e8358300c38a233b5fa",
+      "rulesSha256": "9274daa628347716be230312fbf49614e774cafe08c3ce8adb32b91b5ee52c22",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11793,7 +11793,7 @@
         },
         "publishedSources": {
           "files": 289,
-          "sha256": "042d73990262c737d597f9743463083746c82195691a4870d56f09d4b7d68fb1"
+          "sha256": "c93e847651694763339ee72c18113e3e40b548f0a43d92478f2c8fc6280e4389"
         }
       },
       "brickabrac": {
@@ -12335,7 +12335,7 @@
         },
         "publishedSources": {
           "files": 306,
-          "sha256": "3d63e4bd531d3576946c1eacc9bbc3c9d0ce8139c2578f5a1463485bad09e1f6"
+          "sha256": "523f02937bbb4ad38e511c9d75c3ffe4b155942ecbe8d826e45c4027b3eb5ebc"
         }
       },
       "geoblox": {

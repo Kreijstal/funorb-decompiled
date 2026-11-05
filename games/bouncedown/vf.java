@@ -20,7 +20,7 @@ final class vf {
         int var5 = 0;
         char[] var6 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           if (param0 != -13891) {
             field_a = (String) null;

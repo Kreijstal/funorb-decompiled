@@ -58,7 +58,7 @@ final class ll extends lk {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = BounceDown.field_N;
+        int var13 = Bounce.field_N;
         tg var14 = new tg(2 * this.field_K, this.field_m);
         int var8Lifetime1;
         int var9Lifetime1;
@@ -127,7 +127,7 @@ final class ll extends lk {
         int stackIn_13_0 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           if (param0 != -15083) {
             stackIn_3_0 = 28;
@@ -175,7 +175,7 @@ final class ll extends lk {
         int var7 = 0;
         int var8 = 0;
         int var7Lifetime1;
-        var8 = BounceDown.field_N;
+        var8 = Bounce.field_N;
         try {
           var5_int = this.field_k + param1;
           IntrusiveNode.a(var5_int - this.field_M.field_s, this.field_m + param3, param3, this.field_M.field_s + param1, -19852);
@@ -247,7 +247,7 @@ final class ll extends lk {
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
-        int var9 = BounceDown.field_N;
+        int var9 = Bounce.field_N;
         int var2 = this.field_m >> 1;
         tg var3 = new tg(var2, this.field_m);
         kh.a(var3, 1);

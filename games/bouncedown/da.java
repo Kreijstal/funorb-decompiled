@@ -21,7 +21,7 @@ final class da {
         int var4;
         int var5;
         int var6;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         var3 = -1 + (this.field_a.length >> 1);
         var4 = param1 & var3;
         if (param0 > -53) {

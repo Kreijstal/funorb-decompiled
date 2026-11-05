@@ -15,7 +15,7 @@ final class hc {
         int var4;
         DualLinkNode var2Lifetime1;
         DualLinkNode var3Lifetime1;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         if (this.field_a == null) {
           return null;
         }
@@ -76,7 +76,7 @@ final class hc {
         tg var6 = null;
         tg var3 = null;
         int var4 = 0;
-        int var5 = BounceDown.field_N;
+        int var5 = Bounce.field_N;
         if (param2 < -121) {
           var6 = new tg(param0, param0);
           var3 = var6;
@@ -186,7 +186,7 @@ final class hc {
         int var6;
         DualLinkNode var4Lifetime1;
         DualLinkNode var5Lifetime1;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         this.field_b = param0;
         if (param1 == 0) {
           var4 = this.field_f[(int)((long)(-1 + this.field_c) & param0)];

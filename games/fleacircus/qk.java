@@ -15,7 +15,7 @@ final class qk {
         DualLinkNode var4;
         DualLinkNode var5;
         int var6;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         if (param1 != 16571) {
           return (DualLinkNode) null;
         }
@@ -43,7 +43,7 @@ final class qk {
         DualLinkNode var3;
         int var4;
         DualLinkNode var3Lifetime1;
-        var4 = FleaCircusApplet.field_A ? 1 : 0;
+        var4 = fleas.field_A ? 1 : 0;
         if (this.field_d == null) {
           return null;
         }

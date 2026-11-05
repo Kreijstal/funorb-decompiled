@@ -143,7 +143,7 @@ final class ul extends gj implements nk, da {
         kb var2 = null;
         int var4 = 0;
         int var3 = 0;
-        int var5 = FleaCircusApplet.field_A ? 1 : 0;
+        int var5 = fleas.field_A ? 1 : 0;
         fa var6 = tl.field_p;
         fa var7 = var6;
         if (param0) {
@@ -200,7 +200,7 @@ final class ul extends gj implements nk, da {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         try {
           if (param3 != 248) {
             return;

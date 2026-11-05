@@ -21,7 +21,7 @@ abstract class ne {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var10 = FleaCircusApplet.field_A ? 1 : 0;
+        var10 = fleas.field_A ? 1 : 0;
         try {
           var5_int = 0;
           var6 = 0;
@@ -91,7 +91,7 @@ abstract class ne {
     final int b(int param0, int param1) {
         int var3 = 0;
         pi var4 = null;
-        int var5 = FleaCircusApplet.field_A ? 1 : 0;
+        int var5 = fleas.field_A ? 1 : 0;
         if (param1 != -1) {
           return 33;
         }
@@ -112,7 +112,7 @@ abstract class ne {
         pi var5;
         int var7;
         int var6;
-        var7 = FleaCircusApplet.field_A ? 1 : 0;
+        var7 = fleas.field_A ? 1 : 0;
         if (param0 != 97) {
           this.a(false);
         }
@@ -138,7 +138,7 @@ abstract class ne {
         pi var6;
         int var7;
         int var8;
-        var8 = FleaCircusApplet.field_A ? 1 : 0;
+        var8 = fleas.field_A ? 1 : 0;
         if (null != this.field_c &&
           this.field_c.length != 0 &&
           this.field_c[0].field_a <= param1) {
@@ -172,7 +172,7 @@ abstract class ne {
     final int c(int param0, int param1) {
         int var4 = 0;
         pi var5 = null;
-        int var6 = FleaCircusApplet.field_A ? 1 : 0;
+        int var6 = fleas.field_A ? 1 : 0;
         pi[] var7 = this.field_c;
         pi[] var3 = var7;
         if (param0 != -1) {

@@ -35,7 +35,7 @@ final class b {
           int var6_intLifetime1;
           int var6_intLifetime2;
           int var8Lifetime1;
-          var9 = BounceDown.field_N;
+          var9 = Bounce.field_N;
           try {
             if (null == dh.field_a &&
               !ok.a(param5, 118)) {

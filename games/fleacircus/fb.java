@@ -21,7 +21,7 @@ final class fb {
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_intLifetime1;
-        var2 = FleaCircusApplet.field_A ? 1 : 0;
+        var2 = fleas.field_A ? 1 : 0;
         try {
           nb.field_a.a(gh.field_p, 91, true, mk.field_h);
           nb.field_a.d(true);

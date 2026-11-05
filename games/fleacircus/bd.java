@@ -40,7 +40,7 @@ class bd extends oh implements da {
         int var5 = 0;
         String var6 = null;
         bm var7 = null;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           if (this.field_rb) {
             return;
@@ -164,7 +164,7 @@ class bd extends oh implements da {
         ih var28 = null;
         int var25Lifetime1;
         int var25Lifetime2;
-        var26 = FleaCircusApplet.field_A ? 1 : 0;
+        var26 = fleas.field_A ? 1 : 0;
         try {
           var28 = ae.field_a;
           var2 = var28.e(false);

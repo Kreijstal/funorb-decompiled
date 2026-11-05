@@ -25,7 +25,7 @@ final class ab extends IntrusiveNode {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = BounceDown.field_N;
+        var4 = Bounce.field_N;
         try {
           if (param1 != -12) {
             return true;

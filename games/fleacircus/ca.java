@@ -362,7 +362,7 @@ final class ca extends gj implements dc, da, pe {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         try {
           if (param0 == 0) {
             lk.a(-15493, "terms.ws");
@@ -457,7 +457,7 @@ final class ca extends gj implements dc, da, pe {
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = FleaCircusApplet.field_A ? 1 : 0;
+        var19 = fleas.field_A ? 1 : 0;
         try {
           var5_int = dk.a(3 * (param1 - param0), (byte) -57);
           var6 = 3 * param0;
@@ -738,7 +738,7 @@ final class ca extends gj implements dc, da, pe {
         try {
           if (this.field_R == param4) {
             ej.a(param3 - 232);
-            if ((FleaCircusApplet.field_A) &&
+            if ((fleas.field_A) &&
               (param4 == this.field_I)) {
               discarded$0 = this.l(127);
             }

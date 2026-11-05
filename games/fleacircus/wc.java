@@ -33,7 +33,7 @@ final class wc extends IntrusiveNode {
         int var9 = 0;
         int var10 = 0;
         int[] var11 = null;
-        var10 = FleaCircusApplet.field_A ? 1 : 0;
+        var10 = fleas.field_A ? 1 : 0;
         try {
           if (param2) {
             var11 = (int[]) null;

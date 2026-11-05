@@ -21,7 +21,7 @@ final class hc {
         IntrusiveNode var4;
         IntrusiveNode var5;
         IntrusiveNode var8;
-        var3 = FleaCircusApplet.field_A ? 1 : 0;
+        var3 = fleas.field_A ? 1 : 0;
         if (this.field_e <= 0) {
           do {
             if (this.field_e >= this.field_h) {
@@ -97,7 +97,7 @@ final class hc {
         IntrusiveNode var5;
         int var6;
         IntrusiveNode var5Lifetime1;
-        var6 = FleaCircusApplet.field_A ? 1 : 0;
+        var6 = fleas.field_A ? 1 : 0;
         var4 = this.field_g[(int)((long)(-1 + this.field_h) & param0)];
         if (param1 == -1110) {
           this.field_i = var4.field_h;

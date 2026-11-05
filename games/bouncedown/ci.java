@@ -59,7 +59,7 @@ final class ci extends lc implements gl, rc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4Lifetime1;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           var8 = new CipherPacketBuffer(param1.b("logo.fo3d", "", -88));
           var10 = var8;
@@ -108,7 +108,7 @@ final class ci extends lc implements gl, rc {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = BounceDown.field_N;
+        var7 = Bounce.field_N;
         try {
           if (param0 <= 6) {
             this.field_J = false;

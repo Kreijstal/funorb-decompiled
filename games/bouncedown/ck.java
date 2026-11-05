@@ -122,7 +122,7 @@ abstract class ck implements uh {
         int var12Lifetime1;
         int var12Lifetime2;
         int var12Lifetime3;
-        var13 = BounceDown.field_N;
+        var13 = Bounce.field_N;
         try {
           if (param4 != 14677) {
             return;
@@ -238,7 +238,7 @@ abstract class ck implements uh {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var2_int = param1.length();
           if (20 < var2_int) {

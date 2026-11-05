@@ -73,7 +73,7 @@ final class rk extends wi {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = FleaCircusApplet.field_A ? 1 : 0;
+        var5 = fleas.field_A ? 1 : 0;
         try {
           var2_int = param0.length();
           var3 = new char[var2_int];

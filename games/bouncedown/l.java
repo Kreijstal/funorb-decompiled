@@ -44,7 +44,7 @@ final class l {
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var3Lifetime1;
-        var5 = BounceDown.field_N;
+        var5 = Bounce.field_N;
         try {
           for (var2_int = 0; 3 > var2_int; var2_int++) {
             ef.field_i[var2_int] = 0;

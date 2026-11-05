@@ -123,7 +123,7 @@ final class bc {
 
     final void b(int param0) {
         IntrusiveNode var3 = null;
-        int var4 = BounceDown.field_N;
+        int var4 = Bounce.field_N;
         int var2 = 81 % ((-6 - param0) / 51);
         while (true) {
           var3 = this.field_b.field_c;
@@ -153,7 +153,7 @@ final class bc {
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = BounceDown.field_N;
+        var6 = Bounce.field_N;
         try {
           var3 = 4 / ((-61 - param1) / 32);
           var2_int = param0.length();

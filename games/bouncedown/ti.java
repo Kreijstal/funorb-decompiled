@@ -82,7 +82,7 @@ final class ti extends ba implements wc {
           String var8 = null;
           String var9 = null;
           String var10 = null;
-          var6 = BounceDown.field_N;
+          var6 = Bounce.field_N;
           try {
             var3 = "";
             if (param0 != null) {
@@ -163,7 +163,7 @@ final class ti extends ba implements wc {
         int var10 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
-        var10 = BounceDown.field_N;
+        var10 = Bounce.field_N;
         try {
           var1_int = jl.field_a;
           if (param0 != 6) {
