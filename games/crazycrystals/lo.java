@@ -44,7 +44,7 @@ final class lo {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void a(int param0, ng param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

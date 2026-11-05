@@ -32,15 +32,15 @@ final class ee extends lk {
         wl discarded$0 = null;
         int var2;
         wl var2_ref_wl;
-        IntrusiveNode var3;
+        jb var3;
         int var4;
         int var5;
-        IntrusiveNode var6;
-        IntrusiveNode var7;
+        jb var6;
+        jb var7;
         int var2Lifetime1;
         int var2Lifetime2;
         int var4Lifetime1;
-        IntrusiveNode var3Lifetime1;
+        jb var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = CrazyCrystals.field_B;
         if (this.field_j != null) {
@@ -62,18 +62,18 @@ final class ee extends lk {
               }
               var3 = this.field_j.a(false);
             }
-            scanLoop1: while (true) {
+            L10: while (true) {
               if (this.field_o < this.field_p.field_f.length) {
                 if (this.field_p.field_f[this.field_o] != 0) {
                   if (this.field_v.field_c >= 250) {
                     var2 = 0;
-                    break scanLoop1;
+                    break L10;
                   }
                   if (this.field_h[this.field_o] == 0) {
                     discarded$2 = this.a(true, 1, this.field_o);
                   }
                   if (this.field_h[this.field_o] == 0) {
-                    var6 = new IntrusiveNode();
+                    var6 = new jb();
                     var6.field_e = (long)this.field_o;
                     var2 = 0;
                     this.field_j.b(0, var6);
@@ -106,18 +106,18 @@ final class ee extends lk {
                 }
                 var3Lifetime1 = this.field_j.a(false);
               }
-              scanLoop2: while (true) {
+              L3: while (true) {
                 if (this.field_o < this.field_p.field_f.length) {
                   if (0 != this.field_p.field_f[this.field_o]) {
                     if (this.field_w.c(-21)) {
                       var2Lifetime2 = 0;
-                      break scanLoop2;
+                      break L3;
                     }
                     if (this.field_h[this.field_o] != 1) {
                       discarded$0 = this.a(true, 2, this.field_o);
                     }
                     if (this.field_h[this.field_o] != 1) {
-                      var7 = new IntrusiveNode();
+                      var7 = new jb();
                       var7.field_e = (long)this.field_o;
                       var2Lifetime2 = 0;
                       this.field_j.b(0, var7);
@@ -310,7 +310,7 @@ final class ee extends lk {
               var4 = this.field_v.a(-4, param2, this.field_l);
             }
           }
-          this.field_g.a(-22072, (long)param2, (IntrusiveNode) (var4));
+          this.field_g.a(-22072, (long)param2, (jb) (var4));
         }
         if (((wl) (var4)).field_n) {
           return null;
@@ -364,7 +364,7 @@ final class ee extends lk {
             if (((wl) (var4)).field_q &&
               !this.field_w.c((byte) -72)) {
               var4 = this.field_w.a(true, 18303, param2, this.field_r, (byte) 2);
-              this.field_g.a(-22072, (long)param2, (IntrusiveNode) (var4));
+              this.field_g.a(-22072, (long)param2, (jb) (var4));
             }
             return null;
           }
@@ -408,7 +408,7 @@ final class ee extends lk {
               return null;
             }
             var4 = this.field_w.a(true, 18303, param2, this.field_r, (byte) 2);
-            this.field_g.a(-22072, (long)param2, (IntrusiveNode) (var4));
+            this.field_g.a(-22072, (long)param2, (jb) (var4));
           }
           return null;
         }
@@ -512,7 +512,7 @@ final class ee extends lk {
     final void c(int param0) {
         wl discarded$0 = null;
         wl discarded$1 = null;
-        IntrusiveNode var2;
+        jb var2;
         int var3;
         int var4;
         var4 = CrazyCrystals.field_B;

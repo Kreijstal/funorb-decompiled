@@ -22,7 +22,7 @@ final class m extends ue {
     m(re param0, int param1, String param2, int param3, int param4, boolean param5) {
         super(5);
         try {
-          if (!(MouseInputHandler.field_b instanceof m)) {
+          if (!(a.field_b instanceof m)) {
             gh.field_B = 0;
           }
           this.field_t = param4;
@@ -46,7 +46,7 @@ final class m extends ue {
             gh.field_B = gh.field_B - 1;
           }
           if (0 == gh.field_B) {
-            MouseInputHandler.field_b = (ue) ((Object) this.field_g);
+            a.field_b = (ue) ((Object) this.field_g);
             this.field_g.a(this.field_b.field_i, -13880);
           }
           this.field_g.a(false);
@@ -62,7 +62,7 @@ final class m extends ue {
             gh.field_B = gh.field_B - 1;
           }
           if (0 == gh.field_B) {
-            MouseInputHandler.field_b = (ue) ((Object) new rb(this.field_g, this.field_b.field_i));
+            a.field_b = (ue) ((Object) new rb(this.field_g, this.field_b.field_i));
           }
           return;
         }

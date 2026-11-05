@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class DualLinkNode extends IntrusiveNode {
+class ij extends jb {
     long field_k;
-    DualLinkNode field_g;
-    DualLinkNode field_j;
+    ij field_g;
+    ij field_j;
     private static long[] field_f;
     static boolean field_i;
     static boolean field_h;
@@ -96,7 +96,7 @@ class DualLinkNode extends IntrusiveNode {
 
     public static void d(int param0) {
         if (param0 != 1) {
-          DualLinkNode.d(31);
+          ij.d(31);
         }
         field_f = null;
     }
@@ -114,7 +114,7 @@ class DualLinkNode extends IntrusiveNode {
         this.field_g = null;
     }
 
-    protected DualLinkNode() {
+    protected ij() {
     }
 
     static {

@@ -597,8 +597,8 @@ abstract class ea extends pn {
                   we.field_h = we.field_h + 20;
                   b.field_a = b.field_a + 10;
                   je.field_j = je.field_j + 10;
-                  MouseInputHandler.field_d.a(96, 12 * param3, param1 * 12, 60, (byte) -111);
-                  MouseInputHandler.field_d.a(96, var8 * 12, var9 * 12, 60, (byte) -111);
+                  a.field_d.a(96, 12 * param3, param1 * 12, 60, (byte) -111);
+                  a.field_d.a(96, var8 * 12, var9 * 12, 60, (byte) -111);
                   if (var13.field_o > 0) {
                     var13.field_o = var13.field_o - 1;
                     if (var13.field_o == 0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mc extends DualLinkNode {
+abstract class mc extends ij {
     static long[] field_p;
     int field_o;
     int field_n;

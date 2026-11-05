@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class CipherPacketBuffer extends PacketBuffer {
+final class md extends ng {
     static int field_q;
     static sj field_u;
     private int field_l;
     static db field_p;
     static int[] field_k;
     static String[] field_t;
-    private IsaacRandom field_r;
+    private bm field_r;
     static long field_m;
     static String field_s;
     static String field_o;
     static String field_n;
 
-    CipherPacketBuffer(int param0) {
+    md(int param0) {
         super(param0);
     }
 
@@ -89,7 +89,7 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final void a(int[] param0, boolean param1) {
         try {
-          this.field_r = new IsaacRandom(param0);
+          this.field_r = new bm(param0);
           if (!param1) {
             this.d(42, 32);
           }
@@ -196,7 +196,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void k(int param0) {
         if (param0 != -2321) {
           db var3 = (db) null;
-          CipherPacketBuffer.a(6, -104, (db) null);
+          md.a(6, -104, (db) null);
           this.field_f = (this.field_l + 7) / 8;
           return;
         }
@@ -216,7 +216,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         field_p = null;
     }
 
-    CipherPacketBuffer(byte[] param0) {
+    md(byte[] param0) {
         super(param0);
     }
 
@@ -238,7 +238,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             return (dk) (stackIn_2_0);
           }
           if (param1 < 74) {
-            CipherPacketBuffer.a(-108, true, 93, 119, (f[][]) null);
+            md.a(-108, true, 93, 119, (f[][]) null);
           }
           stackIn_6_0 = new dk(var4);
           return stackIn_6_0;

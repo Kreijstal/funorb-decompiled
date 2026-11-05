@@ -18,7 +18,7 @@ final class cj extends qf implements Cloneable {
         }
         if (!param0) {
           byte[] var4 = (byte[]) null;
-          cj.a(-101, 72, (CipherPacketBuffer) null, (byte[]) null);
+          cj.a(-101, 72, (md) null, (byte[]) null);
         }
         to.field_c = to.field_c + 1;
     }
@@ -261,18 +261,18 @@ final class cj extends qf implements Cloneable {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        scanLoop1: while (true) {
+        stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
                     var8 = CrazyCrystals.field_B;
                     statePc = 1;
-                    continue scanLoop1;
+                    continue stateLoop;
                 }
                 case 1: {
                     try {
                         if (ab.field_D != null) {
                             statePc = 11;
-                            continue scanLoop1;
+                            continue stateLoop;
                         } else {
                             /* Inlined CFG state: 2. */
                             {
@@ -282,7 +282,7 @@ final class cj extends qf implements Cloneable {
                                 fn.field_j = fn.field_j + 5;
                                 var6 = 0;
                                 statePc = 3;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_1) {
@@ -291,14 +291,14 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 3: {
                     try {
                         if (var6 >= 3) {
                             statePc = 11;
-                            continue scanLoop1;
+                            continue stateLoop;
                         } else {
                             /* Inlined CFG state: 4. */
                             {
@@ -314,13 +314,13 @@ final class cj extends qf implements Cloneable {
                                         } else {
                                             statePc = 8;
                                         }
-                                        continue scanLoop1;
+                                        continue stateLoop;
                                     }
                                 } else {
                                     /* Inlined CFG state: 5. */
                                     {
                                         statePc = 10;
-                                        continue scanLoop1;
+                                        continue stateLoop;
                                     }
                                 }
                             }
@@ -331,48 +331,48 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_3);
                         }
                         caughtException = stateCaught_3;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 8: {
                     try {
                         statePc = 10;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_8) {
                         statePc = ((Object) stateCaught_8 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_8);
                         }
                         caughtException = stateCaught_8;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 9: {
                     try {
                         qg.field_q = qg.field_q | 1 << var6;
                         statePc = 10;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_9) {
                         statePc = ((Object) stateCaught_9 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
                         }
                         caughtException = stateCaught_9;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 10: {
                     try {
                         var6++;
                         statePc = 3;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_10) {
                         statePc = ((Object) stateCaught_10 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 11: {
@@ -384,7 +384,7 @@ final class cj extends qf implements Cloneable {
                                 dd.field_c.a(64, param1 * 12, param0 * 12, 0, (byte) -111);
                                 stackIn_14_0 = new ig((f) (this), bd.field_n, this.field_l, false);
                                 statePc = 14;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         } else {
                             /* Inlined CFG state: 12. */
@@ -396,7 +396,7 @@ final class cj extends qf implements Cloneable {
                                     var5 = this.field_l.a((f) (this), param0, param1, param2, ba.field_g, (byte) -87).a((f) (this), param0, param1, param2, jg.field_i, (byte) -87);
                                     var6 = 1;
                                     statePc = 16;
-                                    continue scanLoop1;
+                                    continue stateLoop;
                                 }
                             }
                         }
@@ -406,7 +406,7 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
                         }
                         caughtException = stateCaught_11;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 14: {
@@ -416,7 +416,7 @@ final class cj extends qf implements Cloneable {
                     try {
                         if (var6 > this.field_D) {
                             statePc = 25;
-                            continue scanLoop1;
+                            continue stateLoop;
                         } else {
                             /* Inlined CFG state: 17. */
                             {
@@ -468,7 +468,7 @@ final class cj extends qf implements Cloneable {
                                                 stackIn_23_6 = stackIn_22_6;
                                                 stackIn_23_7 = hj.field_b;
                                                 statePc = 23;
-                                                continue scanLoop1;
+                                                continue stateLoop;
                                             }
                                         } else {
                                             /* Inlined CFG state: 21. */
@@ -482,7 +482,7 @@ final class cj extends qf implements Cloneable {
                                                 stackIn_23_6 = stackIn_21_6;
                                                 stackIn_23_7 = ba.field_g;
                                                 statePc = 23;
-                                                continue scanLoop1;
+                                                continue stateLoop;
                                             }
                                         }
                                     }
@@ -505,7 +505,7 @@ final class cj extends qf implements Cloneable {
                                         stackIn_19_6 = stackIn_48_6;
                                         if (stackIn_18_7 == stackIn_18_8) {
                                             statePc = 48;
-                                            continue scanLoop1;
+                                            continue stateLoop;
                                         } else {
                                             /* Inlined CFG state: 19. */
                                             {
@@ -517,7 +517,7 @@ final class cj extends qf implements Cloneable {
                                                 stackIn_47_5 = stackIn_19_5;
                                                 stackIn_47_6 = stackIn_19_6;
                                                 statePc = 47;
-                                                continue scanLoop1;
+                                                continue stateLoop;
                                             }
                                         }
                                     }
@@ -530,7 +530,7 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_16);
                         }
                         caughtException = stateCaught_16;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 23: {
@@ -538,13 +538,13 @@ final class cj extends qf implements Cloneable {
                         stackIn_23_0[stackIn_23_1] = ((f) (Object) stackIn_23_2).a((f) (this), stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, (byte) -87);
                         if (var7 == 0) {
                             statePc = 25;
-                            continue scanLoop1;
+                            continue stateLoop;
                         } else {
                             /* Inlined CFG state: 24. */
                             {
                                 var6++;
                                 statePc = 16;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_23) {
@@ -553,28 +553,28 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_23);
                         }
                         caughtException = stateCaught_23;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 25: {
                     try {
                         var6 = 1;
                         statePc = 26;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_25) {
                         statePc = ((Object) stateCaught_25 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_25);
                         }
                         caughtException = stateCaught_25;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 26: {
                     try {
                         if (var6 > this.field_D) {
                             statePc = 36;
-                            continue scanLoop1;
+                            continue stateLoop;
                         } else {
                             /* Inlined CFG state: 27. */
                             {
@@ -626,7 +626,7 @@ final class cj extends qf implements Cloneable {
                                                 stackIn_33_6 = stackIn_32_6;
                                                 stackIn_33_7 = q.field_b;
                                                 statePc = 33;
-                                                continue scanLoop1;
+                                                continue stateLoop;
                                             }
                                         } else {
                                             /* Inlined CFG state: 31. */
@@ -640,7 +640,7 @@ final class cj extends qf implements Cloneable {
                                                 stackIn_33_6 = stackIn_31_6;
                                                 stackIn_33_7 = ba.field_g;
                                                 statePc = 33;
-                                                continue scanLoop1;
+                                                continue stateLoop;
                                             }
                                         }
                                     }
@@ -663,7 +663,7 @@ final class cj extends qf implements Cloneable {
                                         stackIn_29_6 = stackIn_48_6;
                                         if (stackIn_28_7 == stackIn_28_8) {
                                             statePc = 48;
-                                            continue scanLoop1;
+                                            continue stateLoop;
                                         } else {
                                             /* Inlined CFG state: 29. */
                                             {
@@ -675,7 +675,7 @@ final class cj extends qf implements Cloneable {
                                                 stackIn_47_5 = stackIn_29_5;
                                                 stackIn_47_6 = stackIn_29_6;
                                                 statePc = 47;
-                                                continue scanLoop1;
+                                                continue stateLoop;
                                             }
                                         }
                                     }
@@ -688,7 +688,7 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_26);
                         }
                         caughtException = stateCaught_26;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 33: {
@@ -699,13 +699,13 @@ final class cj extends qf implements Cloneable {
                             {
                                 var6++;
                                 statePc = 26;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         } else {
                             /* Inlined CFG state: 34. */
                             {
                                 statePc = 36;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_33) {
@@ -714,28 +714,28 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_33);
                         }
                         caughtException = stateCaught_33;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 36: {
                     try {
                         var6 = 1;
                         statePc = 37;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_36) {
                         statePc = ((Object) stateCaught_36 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_36);
                         }
                         caughtException = stateCaught_36;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 37: {
                     try {
                         if (var6 > this.field_D) {
                             statePc = 44;
-                            continue scanLoop1;
+                            continue stateLoop;
                         } else {
                             /* Inlined CFG state: 38. */
                             {
@@ -766,7 +766,7 @@ final class cj extends qf implements Cloneable {
                                         stackIn_41_6 = stackIn_40_6;
                                         stackIn_41_7 = jg.field_i;
                                         statePc = 41;
-                                        continue scanLoop1;
+                                        continue stateLoop;
                                     }
                                 } else {
                                     /* Inlined CFG state: 39. */
@@ -780,7 +780,7 @@ final class cj extends qf implements Cloneable {
                                         stackIn_41_6 = stackIn_39_6;
                                         stackIn_41_7 = pl.field_B;
                                         statePc = 41;
-                                        continue scanLoop1;
+                                        continue stateLoop;
                                     }
                                 }
                             }
@@ -791,7 +791,7 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_37);
                         }
                         caughtException = stateCaught_37;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 41: {
@@ -802,13 +802,13 @@ final class cj extends qf implements Cloneable {
                             {
                                 var6++;
                                 statePc = 37;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         } else {
                             /* Inlined CFG state: 42. */
                             {
                                 statePc = 44;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_41) {
@@ -817,28 +817,28 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_41);
                         }
                         caughtException = stateCaught_41;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 44: {
                     try {
                         var6 = 1;
                         statePc = 45;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_44) {
                         statePc = ((Object) stateCaught_44 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_44);
                         }
                         caughtException = stateCaught_44;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 45: {
                     try {
                         if (var6 > this.field_D) {
                             statePc = 52;
-                            continue scanLoop1;
+                            continue stateLoop;
                         } else {
                             /* Inlined CFG state: 46. */
                             {
@@ -862,7 +862,7 @@ final class cj extends qf implements Cloneable {
                                 } else {
                                     statePc = 47;
                                 }
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_45) {
@@ -871,7 +871,7 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_45);
                         }
                         caughtException = stateCaught_45;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 47: {
@@ -885,14 +885,14 @@ final class cj extends qf implements Cloneable {
                         stackIn_49_6 = stackIn_47_6;
                         stackIn_49_7 = jg.field_i;
                         statePc = 49;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_47) {
                         statePc = ((Object) stateCaught_47 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_47);
                         }
                         caughtException = stateCaught_47;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 48: {
@@ -906,14 +906,14 @@ final class cj extends qf implements Cloneable {
                         stackIn_49_6 = stackIn_48_6;
                         stackIn_49_7 = cl.field_n;
                         statePc = 49;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_48) {
                         statePc = ((Object) stateCaught_48 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_48);
                         }
                         caughtException = stateCaught_48;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 49: {
@@ -924,13 +924,13 @@ final class cj extends qf implements Cloneable {
                             {
                                 var6++;
                                 statePc = 45;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         } else {
                             /* Inlined CFG state: 50. */
                             {
                                 statePc = 52;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_49) {
@@ -939,21 +939,21 @@ final class cj extends qf implements Cloneable {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_49);
                         }
                         caughtException = stateCaught_49;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 52: {
                     try {
                         stackIn_53_0 = (f) (var5);
                         statePc = 53;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_52) {
                         statePc = ((Object) stateCaught_52 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
                             throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_52);
                         }
                         caughtException = stateCaught_52;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 53: {
@@ -972,7 +972,7 @@ final class cj extends qf implements Cloneable {
                             stackIn_57_1 = stackIn_56_1;
                             stackIn_57_2 = "null";
                             statePc = 57;
-                            continue scanLoop1;
+                            continue stateLoop;
                         }
                     } else {
                         /* Inlined CFG state: 55. */
@@ -981,7 +981,7 @@ final class cj extends qf implements Cloneable {
                             stackIn_57_1 = stackIn_55_1;
                             stackIn_57_2 = "{...}";
                             statePc = 57;
-                            continue scanLoop1;
+                            continue stateLoop;
                         }
                     }
                 }
@@ -993,7 +993,7 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    final static byte[] a(int param0, int param1, CipherPacketBuffer param2, byte[] param3) {
+    final static byte[] a(int param0, int param1, md param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1071,7 +1071,7 @@ final class cj extends qf implements Cloneable {
         this.field_D = param0;
         if (param1 < 61) {
           byte[] var4 = (byte[]) null;
-          cj.a(29, -120, (CipherPacketBuffer) null, (byte[]) null);
+          cj.a(29, -120, (md) null, (byte[]) null);
         }
     }
 
@@ -1103,7 +1103,7 @@ final class cj extends qf implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 23525) {
-            stackIn_4_0 = PacketBuffer.a(kd.field_i, param1, new cj(new kp(-1), this.field_D, 0, 0), (byte) -83, bd.field_l);
+            stackIn_4_0 = ng.a(kd.field_i, param1, new cj(new kp(-1), this.field_D, 0, 0), (byte) -83, bd.field_l);
             return stackIn_4_0;
           }
           stackIn_2_0 = (nj) null;

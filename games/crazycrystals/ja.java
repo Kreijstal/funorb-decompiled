@@ -74,10 +74,10 @@ final class ja extends ff {
           var8Lifetime1 = rl.b(var6Lifetime1, (byte) -23) >> 8;
           var9Lifetime1 = tm.a(var6Lifetime1, 500) >> 8;
           if (qh.field_i != -1 &&
-            IsaacRandom.field_h != -1) {
+            bm.field_h != -1) {
             var7Lifetime1 = qh.field_i - 320;
             var9Lifetime1 = -128;
-            var8Lifetime1 = -IsaacRandom.field_h + 240;
+            var8Lifetime1 = -bm.field_h + 240;
           }
           var10 = 256.0 / Math.sqrt((double)(var7Lifetime1 * var7Lifetime1 - (-(var8Lifetime1 * var8Lifetime1) - var9Lifetime1 * var9Lifetime1)));
           var7Lifetime1 = (int)((double)var7Lifetime1 * var10);

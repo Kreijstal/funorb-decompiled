@@ -14,7 +14,7 @@ final class ml {
     private int[] field_g;
     private int[] field_b;
 
-    final void b(PacketBuffer param0) {
+    final void b(ng param0) {
         this.field_c = param0.h(255);
         this.field_h = param0.b((byte) 127);
         this.field_d = param0.b((byte) -7);
@@ -48,7 +48,7 @@ final class ml {
         return this.field_k - this.field_i >> 15;
     }
 
-    final void a(PacketBuffer param0) {
+    final void a(ng param0) {
         int var2 = 0;
         this.field_e = param0.h(255);
         this.field_g = new int[this.field_e];

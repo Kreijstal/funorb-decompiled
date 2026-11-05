@@ -7,7 +7,7 @@ final class tp {
     boolean field_j;
     static boolean field_e;
     static int field_b;
-    static CipherPacketBuffer field_f;
+    static md field_f;
     String field_g;
     static String field_d;
     static mk field_c;

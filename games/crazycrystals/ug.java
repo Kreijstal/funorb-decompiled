@@ -4,12 +4,12 @@
 import java.io.*;
 import java.util.*;
 
-final class IntrusiveNodeHashTable implements Iterable {
+final class ug implements Iterable {
     static String field_a;
     int field_e;
-    private IntrusiveNode field_b;
+    private jb field_b;
     static String field_d;
-    IntrusiveNode[] field_c;
+    jb[] field_c;
 
     final static void a(byte param0) {
         try {
@@ -36,7 +36,7 @@ final class IntrusiveNodeHashTable implements Iterable {
               }
             }
             if (param0 != -127) {
-              IntrusiveNodeHashTable.a((byte) 124);
+              ug.a((byte) 124);
             }
             if (li.field_d != null) {
               for (var1_int = 0; var1_int < li.field_d.length; var1_int++) {
@@ -65,7 +65,7 @@ final class IntrusiveNodeHashTable implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new NodeHashTableIterator(this));
+        return (Iterator) ((Object) new ii(this));
     }
 
     public static void b(int param0) {
@@ -115,10 +115,10 @@ final class IntrusiveNodeHashTable implements Iterable {
         return var1;
     }
 
-    final IntrusiveNode a(long param0, int param1) {
-        IntrusiveNode var6 = null;
+    final jb a(long param0, int param1) {
+        jb var6 = null;
         int var7 = CrazyCrystals.field_B;
-        IntrusiveNode var4 = this.field_c[(int)((long)(-1 + this.field_e) & param0)];
+        jb var4 = this.field_c[(int)((long)(-1 + this.field_e) & param0)];
         int var5 = -65 % ((param1 + 31) / 54);
         this.field_b = var4.field_b;
         while (var4 != this.field_b) {
@@ -133,12 +133,12 @@ final class IntrusiveNodeHashTable implements Iterable {
         return null;
     }
 
-    private IntrusiveNodeHashTable() throws Throwable {
+    private ug() throws Throwable {
         throw new Error();
     }
 
-    final void a(long param0, byte param1, IntrusiveNode param2) {
-        IntrusiveNode var5 = null;
+    final void a(long param0, byte param1, jb param2) {
+        jb var5 = null;
         try {
           if (null != param2.field_d) {
             param2.a(false);

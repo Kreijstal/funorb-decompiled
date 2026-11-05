@@ -76,7 +76,7 @@ final class rb extends ue {
             if (!ga.field_L.a(param0 ^ -20410, "benefits")) {
               if (!ob.field_o &&
                 ga.field_L.a(param0 ^ -20410, "screenshots")) {
-                IsaacRandom.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
+                bm.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
                 ob.field_o = true;
                 vp.a(127);
               }
@@ -97,7 +97,7 @@ final class rb extends ue {
           }
           if ((decompiledFrameRemainder0) && (!ob.field_o &&
             ga.field_L.a(param0 ^ -20410, "screenshots"))) {
-            IsaacRandom.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
+            bm.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
             ob.field_o = true;
             vp.a(127);
           }
@@ -136,11 +136,11 @@ final class rb extends ue {
           on.a(95, le.b((byte) -20));
         }
         if (var2 == 1) {
-          MouseInputHandler.field_b = (ue) ((Object) this.field_f);
+          a.field_b = (ue) ((Object) this.field_f);
           this.field_f.a(false, -13880);
         }
         if (var2 == 2) {
-          MouseInputHandler.field_b = (ue) ((Object) this.field_f);
+          a.field_b = (ue) ((Object) this.field_f);
           this.field_f.a(true, -13880);
         }
         if (!param0) {

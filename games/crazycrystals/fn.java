@@ -23,7 +23,7 @@ final class fn extends ln {
         super(param0, param1, param2, param3);
     }
 
-    final static boolean a(int param0, CipherPacketBuffer param1) {
+    final static boolean a(int param0, md param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

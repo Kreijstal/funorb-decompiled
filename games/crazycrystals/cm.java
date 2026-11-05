@@ -21,7 +21,7 @@ final class cm {
         if (!fj.a(136)) {
           return;
         }
-        MouseInputHandler.a(112, 4, false);
+        a.a(112, 4, false);
         if (param0 != -15544) {
           cm.b(44);
         }

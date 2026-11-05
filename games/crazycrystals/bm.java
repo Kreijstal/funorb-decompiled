@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class IsaacRandom {
+final class bm {
     private int field_i;
     static int field_h;
     private int[] field_a;
@@ -46,7 +46,7 @@ final class IsaacRandom {
           this.a(-95);
           this.field_b = 256;
           if (param0) {
-            IsaacRandom.b((byte) 50);
+            bm.b((byte) 50);
             fieldTemp$0 = this.field_b - 1;
             this.field_b = this.field_b - 1;
             return this.field_f[fieldTemp$0];
@@ -60,7 +60,7 @@ final class IsaacRandom {
           this.field_b = this.field_b - 1;
           return this.field_f[fieldTemp$2];
         }
-        IsaacRandom.b((byte) 50);
+        bm.b((byte) 50);
         int fieldTemp$3 = this.field_b - 1;
         this.field_b = this.field_b - 1;
         return this.field_f[fieldTemp$3];
@@ -253,7 +253,7 @@ final class IsaacRandom {
         this.field_b = 256;
     }
 
-    IsaacRandom(int[] param0) {
+    bm(int[] param0) {
         int var2_int = 0;
         try {
           this.field_a = new int[256];

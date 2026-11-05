@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dp extends IntrusiveNode {
+final class dp extends jb {
     int field_f;
     boolean field_k;
     static String field_j;
@@ -49,7 +49,7 @@ final class dp extends IntrusiveNode {
           for (var7Lifetime1 = 1; -1 + param5 > var7Lifetime1; var7Lifetime1++) {
             var14[var7Lifetime1][0] = aj.field_s;
             for (var8 = 1; var8 < param0 - 1; var8++) {
-              var14[var7Lifetime1][var8] = IsaacRandom.field_g;
+              var14[var7Lifetime1][var8] = bm.field_g;
             }
             var14[var7Lifetime1][-1 + param0] = aj.field_s;
           }
@@ -63,27 +63,27 @@ final class dp extends IntrusiveNode {
               var9 = param3[var7Lifetime3].charAt(var13);
               if (var9 == 64 ||
                 42 == var9) {
-                var10 = new bb(IsaacRandom.field_g);
+                var10 = new bb(bm.field_g);
                 var10.field_p = 2;
                 var6[-param3.length + param2 + var7Lifetime3][param4 + var13] = (f) ((Object) var10);
               }
               if (var9 == 42) {
-                var6[param2 - param3.length + var7Lifetime3][var13 + param4] = (f) ((Object) new jo(IsaacRandom.field_g, 0));
+                var6[param2 - param3.length + var7Lifetime3][var13 + param4] = (f) ((Object) new jo(bm.field_g, 0));
               }
               if (var9 == 35) {
-                var6[var7Lifetime3 + param2 - param3.length][var13 + param4] = (f) ((Object) new pj(0, 0, IsaacRandom.field_g));
+                var6[var7Lifetime3 + param2 - param3.length][var13 + param4] = (f) ((Object) new pj(0, 0, bm.field_g));
               }
               if (var9 == 47) {
-                var6[param2 - param3.length + var7Lifetime3][var13 + param4] = (f) ((Object) new pj(0, 1, IsaacRandom.field_g));
+                var6[param2 - param3.length + var7Lifetime3][var13 + param4] = (f) ((Object) new pj(0, 1, bm.field_g));
               }
               if (var9 == 76) {
-                var6[var7Lifetime3 + (-param3.length + param2)][param4 + var13] = (f) ((Object) new pj(0, 2, IsaacRandom.field_g));
+                var6[var7Lifetime3 + (-param3.length + param2)][param4 + var13] = (f) ((Object) new pj(0, 2, bm.field_g));
               }
               if (var9 == 96) {
-                var6[var7Lifetime3 + (-param3.length + param2)][param4 + var13] = (f) ((Object) new pj(0, 3, IsaacRandom.field_g));
+                var6[var7Lifetime3 + (-param3.length + param2)][param4 + var13] = (f) ((Object) new pj(0, 3, bm.field_g));
               }
               if (39 == var9) {
-                var6[var7Lifetime3 - param3.length + param2][param4 + var13] = (f) ((Object) new pj(0, 4, IsaacRandom.field_g));
+                var6[var7Lifetime3 - param3.length + param2][param4 + var13] = (f) ((Object) new pj(0, 4, bm.field_g));
               }
               var13++;
             }

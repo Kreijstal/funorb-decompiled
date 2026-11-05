@@ -129,7 +129,7 @@ class rf extends pc {
         qe.field_g.b(param0 ^ -3261, td.field_b);
     }
 
-    final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
+    final static void a(jb param0, jb param1, int param2) {
         try {
           if (param2 != 47) {
             rf.a(-16);
@@ -162,7 +162,7 @@ class rf extends pc {
           int var5_int = 37 / ((param1 + 50) / 59);
           if (this.field_m) {
             var6 = -this.field_r - param3 + qh.field_i;
-            var7 = -param2 + (IsaacRandom.field_h - this.field_j);
+            var7 = -param2 + (bm.field_h - this.field_j);
             this.field_D = this.a(var7, var6, 3);
           }
         } catch (RuntimeException runtimeException) {

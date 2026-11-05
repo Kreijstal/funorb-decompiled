@@ -3,7 +3,7 @@
  */
 final class kd extends se {
     static String field_i;
-    static CipherPacketBuffer field_n;
+    static md field_n;
     static String field_m;
     static int[] field_j;
     static double[] field_l;
@@ -30,7 +30,7 @@ final class kd extends se {
         RuntimeException var1 = null;
         var2 = CrazyCrystals.field_B;
         try {
-          if (!CipherPacketBuffer.l(-81)) {
+          if (!md.l(-81)) {
             if (ph.field_E != null &&
               ph.field_E.field_d) {
               no.e((byte) -23);
@@ -41,7 +41,7 @@ final class kd extends se {
           if (param0 != 3) {
             return;
           }
-          kf.field_h.a(NetworkGameClient.field_l, false, true, vl.field_a);
+          kf.field_h.a(eb.field_l, false, true, vl.field_a);
           kf.field_h.b(false);
           while (ge.b(-65)) {
             kf.field_h.a(pj.field_q, false, c.field_p);

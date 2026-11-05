@@ -21,7 +21,7 @@ final class fg extends pd {
           if (param0) {
             this.a((byte) 104);
           }
-          stackIn_3_0 = new gi(3 & q.field_a[ma.field_n[param1]].field_c[param2], IsaacRandom.field_g);
+          stackIn_3_0 = new gi(3 & q.field_a[ma.field_n[param1]].field_c[param2], bm.field_g);
           return (f) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

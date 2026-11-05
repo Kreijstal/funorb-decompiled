@@ -22,8 +22,8 @@ class fa extends mg {
         RuntimeException var17 = null;
         dl[] var18 = null;
         try {
-          MouseInputHandler.a(param8, param9, 0, param16, param7, param1, vh.field_f, param14, param0, aj.field_t, jn.field_i, ao.field_e, la.field_a, new hj(param11), param12, new hj(param10), param15, param5, param4, mc.field_s, param6);
-          MouseInputHandler.a(126, param13, param3);
+          a.a(param8, param9, 0, param16, param7, param1, vh.field_f, param14, param0, aj.field_t, jn.field_i, ao.field_e, la.field_a, new hj(param11), param12, new hj(param10), param15, param5, param4, mc.field_s, param6);
+          a.a(126, param13, param3);
           if (!param2) {
             var18 = (dl[]) null;
             fa.a((vc) null, (vc) null, true, false, 27, -22, 78, -62, -125, 77, (dl[]) null, (dl[]) null, -82, -3, -91, -105, 37);
@@ -104,7 +104,7 @@ class fa extends mg {
         field_m = null;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void a(ng param0, byte param1) {
         try {
           if (param1 < 94) {
             field_m = (String) null;

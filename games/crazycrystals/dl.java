@@ -1494,12 +1494,12 @@ class dl extends mc {
         int var4Lifetime2;
         int var5Lifetime1;
         var1 = this.field_u - 1;
-        scanLoop1: while (true) {
+        L1: while (true) {
           if (var1 >= 0) {
             var2 = var1 * this.field_l;
             for (var3 = 0; var3 < this.field_l; var3++) {
               if (this.field_w[var2 + var3] != 0) {
-                break scanLoop1;
+                break L1;
               }
             }
             var1--;
@@ -1508,12 +1508,12 @@ class dl extends mc {
           break;
         }
         var2Lifetime1 = 0;
-        scanLoop2: while (true) {
+        L4: while (true) {
           if (var2Lifetime1 < var1) {
             var3Lifetime1 = var2Lifetime1 * this.field_l;
             for (var4 = 0; var4 < this.field_l; var4++) {
               if (this.field_w[var3Lifetime1 + var4] != 0) {
-                break scanLoop2;
+                break L4;
               }
             }
             var2Lifetime1++;
@@ -1522,11 +1522,11 @@ class dl extends mc {
           break;
         }
         var3Lifetime2 = this.field_l - 1;
-        scanLoop3: while (true) {
+        L7: while (true) {
           if (var3Lifetime2 >= 0) {
             for (var4Lifetime1 = var2Lifetime1; var4Lifetime1 <= var1; var4Lifetime1++) {
               if (this.field_w[var4Lifetime1 * this.field_l + var3Lifetime2] != 0) {
-                break scanLoop3;
+                break L7;
               }
             }
             var3Lifetime2--;
@@ -1535,11 +1535,11 @@ class dl extends mc {
           break;
         }
         var4Lifetime2 = 0;
-        scanLoop4: while (true) {
+        L10: while (true) {
           if (var4Lifetime2 < var3Lifetime2) {
             for (var5 = var2Lifetime1; var5 <= var1; var5++) {
               if (this.field_w[var5 * this.field_l + var4Lifetime2] != 0) {
-                break scanLoop4;
+                break L10;
               }
             }
             var4Lifetime2++;

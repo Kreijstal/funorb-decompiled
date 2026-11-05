@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ak extends IntrusiveNode {
+final class ak extends jb {
     int field_g;
     boolean field_n;
     int[][] field_l;

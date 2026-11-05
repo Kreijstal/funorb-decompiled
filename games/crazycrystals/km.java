@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class SecondaryIntrusiveDeque {
+final class km {
     static int field_c;
-    private DualLinkNode field_a;
+    private ij field_a;
     static int field_d;
-    private DualLinkNode field_b;
+    private ij field_b;
     static int field_e;
     static byte[] field_f;
 
-    final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_b;
+    final ij a(int param0) {
+        ij var2 = this.field_b;
         if (var2 == this.field_a) {
           this.field_b = null;
           return null;
@@ -19,14 +19,14 @@ final class SecondaryIntrusiveDeque {
         if (param0 > 82) {
           return var2;
         }
-        SecondaryIntrusiveDeque.e(44);
+        km.e(44);
         return var2;
     }
 
     final int c(int param0) {
         int var4 = CrazyCrystals.field_B;
         int var2 = param0;
-        DualLinkNode var3 = this.field_a.field_j;
+        ij var3 = this.field_a.field_j;
         while (var3 != this.field_a) {
           var3 = var3.field_j;
           var2++;
@@ -38,7 +38,7 @@ final class SecondaryIntrusiveDeque {
         return param0 ^ param1;
     }
 
-    final void a(byte param0, DualLinkNode param1) {
+    final void a(byte param0, ij param1) {
         if (param1.field_g != null) {
           param1.a(1);
         }
@@ -62,11 +62,11 @@ final class SecondaryIntrusiveDeque {
         return !gk.field_e.b(-45) ? true : false;
     }
 
-    final DualLinkNode d(int param0) {
-        DualLinkNode var2 = null;
-        DualLinkNode var2Lifetime1;
+    final ij d(int param0) {
+        ij var2 = null;
+        ij var2Lifetime1;
         if (param0 != -4425) {
-          this.field_a = (DualLinkNode) null;
+          this.field_a = (ij) null;
           var2 = this.field_a.field_j;
           if (this.field_a != var2) {
             var2.a(1);
@@ -82,8 +82,8 @@ final class SecondaryIntrusiveDeque {
         return null;
     }
 
-    final DualLinkNode b(int param0) {
-        DualLinkNode var2 = this.field_a.field_j;
+    final ij b(int param0) {
+        ij var2 = this.field_a.field_j;
         if (this.field_a == var2) {
           this.field_b = null;
           return null;
@@ -92,7 +92,7 @@ final class SecondaryIntrusiveDeque {
           this.field_b = var2.field_j;
           return var2;
         }
-        this.field_b = (DualLinkNode) null;
+        this.field_b = (ij) null;
         this.field_b = var2.field_j;
         return var2;
     }
@@ -104,8 +104,8 @@ final class SecondaryIntrusiveDeque {
         }
     }
 
-    public SecondaryIntrusiveDeque() {
-        this.field_a = new DualLinkNode();
+    public km() {
+        this.field_a = new ij();
         this.field_a.field_j = this.field_a;
         this.field_a.field_g = this.field_a;
     }

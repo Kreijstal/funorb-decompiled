@@ -22,9 +22,9 @@ abstract class lk {
         jg var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        CipherPacketBuffer var8 = null;
+        md var8 = null;
         int var9 = 0;
-        CipherPacketBuffer var10 = null;
+        md var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -36,7 +36,7 @@ abstract class lk {
           if (param1 < 26) {
             return;
           }
-          var8 = new CipherPacketBuffer(param0.a(7693, "", "logo.fo3d"));
+          var8 = new md(param0.a(7693, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.h(255);
           var10.f((byte) 50);

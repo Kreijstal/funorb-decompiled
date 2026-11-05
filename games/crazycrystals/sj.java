@@ -47,7 +47,7 @@ final class sj {
     final static void a(dl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
         try {
           wn.field_c = param4;
-          MouseInputHandler.field_c = param0;
+          a.field_c = param0;
           if (param8 < 108) {
             sj.a(5);
           }
@@ -56,7 +56,7 @@ final class sj {
           kl.field_U = param1;
           sc.field_h = param5;
           fk.field_u = param6;
-          SecondaryIntrusiveDeque.field_e = param2;
+          km.field_e = param2;
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "sj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

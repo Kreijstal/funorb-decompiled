@@ -104,7 +104,7 @@ abstract class rd extends oh {
     rd() {
     }
 
-    final static hm[] a(CipherPacketBuffer param0, int param1) {
+    final static hm[] a(md param0, int param1) {
         int var5 = 0;
         hm[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;

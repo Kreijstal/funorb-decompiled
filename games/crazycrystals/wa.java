@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class wa extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_b;
     static String field_k;
     static String field_f;
@@ -482,7 +482,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          jd.field_D = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
+          jd.field_D = (java.awt.Canvas) ((Object) new pg((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) jd.field_D));
           jd.field_D.setSize(ap.field_r, rh.field_f);
           if (param0 >= -38) {
@@ -711,7 +711,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    protected GameAppletShell() {
+    protected wa() {
         this.field_b = false;
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk extends IntrusiveNode {
+final class dk extends jb {
     byte[] field_f;
     byte[] field_i;
     cp[] field_j;
@@ -177,7 +177,7 @@ final class dk extends IntrusiveNode {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        PacketBuffer var38 = null;
+        ng var38 = null;
         byte[] var39 = null;
         cp var40 = null;
         byte[] var41 = null;
@@ -261,7 +261,7 @@ final class dk extends IntrusiveNode {
           this.field_n = new short[128];
           this.field_k = new int[128];
           this.field_m = new ko[128];
-          var38 = new PacketBuffer(param0);
+          var38 = new ng(param0);
           for (var3 = 0; 0 != var38.field_h[var3 + var38.field_f]; var3++) {
           }
           var55 = new byte[var3];

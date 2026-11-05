@@ -87,7 +87,7 @@ final class bb extends qf implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 23525) {
-            stackIn_4_0 = PacketBuffer.a(NodeHashTableIterator.field_e, param1, new bb(new kp(-1)), (byte) -83, rl.field_g);
+            stackIn_4_0 = ng.a(ii.field_e, param1, new bb(new kp(-1)), (byte) -83, rl.field_g);
             return stackIn_4_0;
           }
           stackIn_2_0 = (nj) null;

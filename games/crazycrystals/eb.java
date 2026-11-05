@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class NetworkGameClient extends GameAppletShell {
+abstract class eb extends wa {
     String field_u;
     private boolean field_t;
     private boolean field_r;
@@ -86,7 +86,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                                 go.b(480);
                                 return;
                               }
-                              wp.a((Throwable) null, "MGS1: " + IntrusiveNodeHashTable.a(-1815), 21862);
+                              wp.a((Throwable) null, "MGS1: " + ug.a(-1815), 21862);
                               jj.a(4);
                               return;
                             }
@@ -115,7 +115,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           return;
         }
-        wp.a((Throwable) null, "MGS2: " + IntrusiveNodeHashTable.a(-1815), 21862);
+        wp.a((Throwable) null, "MGS2: " + ug.a(-1815), 21862);
         jj.a(4);
     }
 
@@ -130,7 +130,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          PacketBuffer var12 = null;
+          ng var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = CrazyCrystals.field_B;
@@ -177,7 +177,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   re.field_j = null;
                 } else {
                   wi.field_h = go.field_h;
-                  MouseInputHandler.a((byte) 63);
+                  a.a((byte) 63);
                   gl.field_c = false;
                   hp.field_s = 10;
                 }
@@ -261,7 +261,7 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     public static void f(byte param0) {
         if (param0 < 3) {
-          NetworkGameClient.a((byte) -108, 100);
+          eb.a((byte) -108, 100);
         }
         field_w = null;
         field_y = null;
@@ -347,7 +347,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (var9 != null) {
               this.field_x = Integer.parseInt(var9);
             }
-            PacketBuffer.field_j = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            ng.field_j = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.a((byte) 118, 32, param3, param2, this.field_z, param1, param0);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -415,7 +415,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           1 == var2) {
           if (hp.field_s == 11 &&
             ei.field_E == 0) {
-            MouseInputHandler.a((byte) 63);
+            a.a((byte) 63);
           }
           return var2;
         }
@@ -508,7 +508,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ei.field_E == 0 &&
             hp.field_s == 11 &&
             !gl.c(-11)) {
-            MouseInputHandler.a((byte) 63);
+            a.a((byte) 63);
           }
           if (ei.field_E != -1 &&
             ei.field_E != 0) {
@@ -613,14 +613,14 @@ abstract class NetworkGameClient extends GameAppletShell {
           m.c(29537);
           jd.field_z = false;
           ta.field_i = vl.field_b;
-          GameCanvas.a((byte) -106, dd.field_a, fj.field_d, ok.field_c, rb.field_k);
+          pg.a((byte) -106, dd.field_a, fj.field_d, ok.field_c, rb.field_k);
           if (uk.field_j ||
             tp.field_h != null) {
             stackIn_103_0 = !(uk.field_j);
             stackIn_106_1 = !(uk.field_j);
             fa.a(stackIn_103_0, stackIn_106_1, tp.field_h, true);
           }
-          if (PacketBuffer.field_j) {
+          if (ng.field_j) {
             hf.a(4);
           }
           if (am.field_e == null) {
@@ -686,7 +686,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     final static int a(byte param0, int param1) {
         int var2 = 0;
         if (param0 != -113) {
-          NetworkGameClient.a((byte) 10, -72);
+          eb.a((byte) 10, -72);
         }
         if ((param1 & 7) != 0) {
           var2 = 8 - (param1 & 7);
@@ -759,7 +759,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         return this.a(true, (byte) -94, param1);
     }
 
-    protected NetworkGameClient() {
+    protected eb() {
     }
 
     private final void e(byte param0) {

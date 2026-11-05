@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends IntrusiveNode {
+final class pi extends jb {
     gb[] field_m;
     int[] field_n;
     int field_i;

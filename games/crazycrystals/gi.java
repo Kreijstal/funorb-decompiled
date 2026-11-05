@@ -55,7 +55,7 @@ final class gi extends pn implements Cloneable {
           if (param0 != 23525) {
             this.b(-112, 33, -8, true, -15, -44);
           }
-          stackIn_3_0 = PacketBuffer.a(e.field_a, param1, new gi(this.field_p, new kp(-1)), (byte) -83, qd.field_p);
+          stackIn_3_0 = ng.a(e.field_a, param1, new gi(this.field_p, new kp(-1)), (byte) -83, qd.field_p);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

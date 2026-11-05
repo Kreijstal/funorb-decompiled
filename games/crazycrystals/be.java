@@ -6,7 +6,7 @@ import java.util.*;
 final class be implements Iterable {
     static String field_b;
     static int field_c;
-    DualLinkNode field_f;
+    ij field_f;
     static db field_e;
     static am field_d;
     static String field_a;
@@ -41,13 +41,13 @@ final class be implements Iterable {
             var5 = ub.field_b[var3_int];
             if (var5 >= 0) {
               var6 = vm.$cfr$intArgs$a$62abead39cee(96, true, je.field_i[var3_int]);
-              var4 = var4 + MouseInputHandler.field_a;
+              var4 = var4 + a.field_a;
               var7 = -(var6 >> 1) + oa.field_b;
               if (wn.a(var6 + (to.field_d << 1), param1, param2, var7 - to.field_d, (byte) -30, gh.field_w + (bn.field_c << 1), var4)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (gh.field_w + ((bn.field_c << 1) + MouseInputHandler.field_a));
+              var4 = var4 + (gh.field_w + ((bn.field_c << 1) + a.field_a));
             } else {
               var4 = var4 + io.field_O;
             }
@@ -66,7 +66,7 @@ final class be implements Iterable {
         return (Iterator) ((Object) new wk(this));
     }
 
-    final void a(byte param0, DualLinkNode param1) {
+    final void a(byte param0, ij param1) {
         if (param1.field_g != null) {
           param1.a(1);
         }
@@ -87,8 +87,8 @@ final class be implements Iterable {
         throw new Error();
     }
 
-    final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_f.field_j;
+    final ij a(int param0) {
+        ij var2 = this.field_f.field_j;
         if (var2 == this.field_f) {
           return null;
         }
@@ -96,8 +96,8 @@ final class be implements Iterable {
           var2.a(1);
           return var2;
         }
-        DualLinkNode var3 = (DualLinkNode) null;
-        this.a((byte) 94, (DualLinkNode) null);
+        ij var3 = (ij) null;
+        this.a((byte) 94, (ij) null);
         var2.a(1);
         return var2;
     }

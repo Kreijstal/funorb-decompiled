@@ -349,7 +349,7 @@ final class dc extends og implements im, vd, fd {
         RuntimeException decompiledCaughtException = null;
         try {
           var7 = (CharSequence) ((Object) param1);
-          var3_long = DualLinkNode.a(true, var7);
+          var3_long = ij.a(true, var7);
           var5 = (rm) (ra.field_d.a(var3_long, 0));
           if (var5 == null) {
             var5 = (rm) (ah.field_a.a(var3_long, 0));

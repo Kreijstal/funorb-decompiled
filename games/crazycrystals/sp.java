@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class sp {
-    static PacketBuffer field_c;
+    static ng field_c;
     private qa field_d;
     private int field_e;
     private qa field_b;
@@ -67,7 +67,7 @@ final class sp {
                   field_a = (na) null;
                 }
                 var9 = 0;
-                scanLoop1: while (true) {
+                L4: while (true) {
                   if (param0 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -83,7 +83,7 @@ final class sp {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break scanLoop1;
+                          break L4;
                         }
                         var10 = ((mf.field_u[4] & 255) << 16) + (mf.field_u[5] << 8 & 65280) + (255 & mf.field_u[6]);
                         var12 = ((mf.field_u[2] & 255) << 8) + (mf.field_u[3] & 255);
@@ -99,7 +99,7 @@ final class sp {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break scanLoop1;
+                          break L4;
                         }
                         var10 = ((255 & mf.field_u[7]) << 8) + (((255 & mf.field_u[6]) << 16) + (255 & mf.field_u[8]));
                         var12 = (mf.field_u[5] & 255) + ((255 & mf.field_u[4]) << 8);
@@ -207,7 +207,7 @@ final class sp {
         field_f = null;
         field_a = null;
         if (param0 != 113) {
-          field_c = (PacketBuffer) null;
+          field_c = (ng) null;
         }
         field_c = null;
     }
@@ -395,7 +395,7 @@ final class sp {
     }
 
     static {
-        field_c = new PacketBuffer(256);
+        field_c = new ng(256);
         field_f = new sj(15, 0, 1, 0);
     }
 }

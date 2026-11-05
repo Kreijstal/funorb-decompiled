@@ -10,7 +10,7 @@ abstract class ke {
 
     final static e a(String param0, int param1) {
         RuntimeException var2 = null;
-        CipherPacketBuffer var3 = null;
+        md var3 = null;
         e stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -18,8 +18,8 @@ abstract class ke {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 28515) {
-            var3 = (CipherPacketBuffer) null;
-            ke.a((CipherPacketBuffer) null, -96);
+            var3 = (md) null;
+            ke.a((md) null, -96);
           }
           if (gk.field_e.b(param1 ^ -28494) &&
             !param0.equals(gk.field_e.a(125))) {
@@ -79,7 +79,7 @@ abstract class ke {
         return this.a(param0, param1 ^ 18);
     }
 
-    final static void a(CipherPacketBuffer param0, int param1) {
+    final static void a(md param0, int param1) {
         try {
           int var5 = 0;
           int var10_int = 0;

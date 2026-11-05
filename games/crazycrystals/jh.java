@@ -246,7 +246,7 @@ final class jh {
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
-        int var6 = this.a((byte) -24, param2, qh.field_i, param4, param1, param0, IsaacRandom.field_h);
+        int var6 = this.a((byte) -24, param2, qh.field_i, param4, param1, param0, bm.field_h);
         int var7 = this.a((byte) -24, param2, to.field_a, param4, param1, param0, dp.field_h);
         this.a(0, var7, var6);
         if (param3 == 76) {
@@ -279,7 +279,7 @@ final class jh {
             this.field_k = 0;
             if (this.field_k == 0) {
               if (!this.field_i &&
-                !DualLinkNode.field_h) {
+                !ij.field_h) {
                 return;
               }
               if (0 > param2) {
@@ -315,7 +315,7 @@ final class jh {
             this.field_i = true;
             return;
           }
-          if (!DualLinkNode.field_h) {
+          if (!ij.field_h) {
             return;
           }
           if (0 > param2) {
@@ -336,7 +336,7 @@ final class jh {
             this.field_k = 0;
             if (this.field_k == 0) {
               if (!this.field_i &&
-                !DualLinkNode.field_h) {
+                !ij.field_h) {
                 return;
               }
               if (0 > param2) {
@@ -359,7 +359,7 @@ final class jh {
             return;
           }
           if (!this.field_i) {
-            if (!DualLinkNode.field_h) {
+            if (!ij.field_h) {
               return;
             }
             if (0 > param2) {
@@ -387,7 +387,7 @@ final class jh {
               return;
             }
             if (!this.field_i &&
-              !DualLinkNode.field_h) {
+              !ij.field_h) {
               return;
             }
           } else {
@@ -395,7 +395,7 @@ final class jh {
               return;
             }
             if (!this.field_i &&
-              !DualLinkNode.field_h) {
+              !ij.field_h) {
               return;
             }
           }

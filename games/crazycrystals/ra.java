@@ -63,7 +63,7 @@ final class ra {
           var7_int = 0;
           param3 = param3 + param1;
           var8 = param4;
-          scanLoop1: while (true) {
+          L2: while (true) {
             var9 = param0[var8];
             if (0 > var9) {
               var7_int = this.field_b[var7_int];
@@ -77,7 +77,7 @@ final class ra {
               param1++;
               param5[incrementValue$1] = (byte)(~var10);
               if (param3 <= param1) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -93,7 +93,7 @@ final class ra {
               param1++;
               param5[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param1 >= param3) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -109,7 +109,7 @@ final class ra {
               param1++;
               param5[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param1 >= param3) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -125,7 +125,7 @@ final class ra {
               param1++;
               param5[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param1 >= param3) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -141,7 +141,7 @@ final class ra {
               param1++;
               param5[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param1 >= param3) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -157,7 +157,7 @@ final class ra {
               param1++;
               param5[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param3 <= param1) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -189,7 +189,7 @@ final class ra {
               param1++;
               param5[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param3 <= param1) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }

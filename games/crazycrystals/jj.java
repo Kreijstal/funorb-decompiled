@@ -19,7 +19,7 @@ final class jj {
     final static int a(String param0, boolean param1, String param2, int param3, boolean param4, boolean param5) {
         try {
           int stackIn_4_0 = 0;
-          CipherPacketBuffer stackIn_24_0 = null;
+          md stackIn_24_0 = null;
           boolean stackIn_25_1 = false;
           int stackIn_34_0 = 0;
           boolean stackIn_45_0 = false;
@@ -79,14 +79,14 @@ final class jj {
               } else {
                 bf.field_b = var6_int;
                 rk.field_b = -1;
-                gj.field_k = GameCanvas.field_a;
+                gj.field_k = pg.field_a;
               }
             }
             if (gj.field_k == ul.field_j &&
               fq.a(8, (byte) 90)) {
               stackIn_24_0 = kd.field_n;
               stackIn_25_1 = !(param1);
-              CipherPacketBuffer.field_m = ((CipherPacketBuffer) (Object) stackIn_24_0).d(stackIn_25_1);
+              md.field_m = ((md) (Object) stackIn_24_0).d(stackIn_25_1);
               kd.field_n.field_f = 0;
               tf.a(param4, (byte) 75, mk.field_c, param3, param5);
               gj.field_k = tk.field_k;
@@ -102,7 +102,7 @@ final class jj {
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   rk.field_b = -1;
-                  gj.field_k = GameCanvas.field_a;
+                  gj.field_k = pg.field_a;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -141,9 +141,9 @@ final class jj {
                 kd.field_n.h(255);
                 kd.field_n.b((byte) -29);
                 um.field_f = kd.field_n.c((byte) -7);
-                SecondaryIntrusiveDeque.field_f = new byte[um.field_f];
+                km.field_f = new byte[um.field_f];
                 for (var8 = 0; var8 < um.field_f; var8++) {
-                  SecondaryIntrusiveDeque.field_f[var8] = kd.field_n.d((byte) 113);
+                  km.field_f[var8] = kd.field_n.d((byte) 113);
                 }
               }
               je.field_g = kd.field_n.i(119);
@@ -189,7 +189,7 @@ final class jj {
               stackIn_74_0 = bf.field_b;
               return stackIn_74_0;
             }
-            if (GameCanvas.field_a == gj.field_k &&
+            if (pg.field_a == gj.field_k &&
               ol.f((byte) 60)) {
               jj.a(4);
               if (bf.field_b == 7 &&

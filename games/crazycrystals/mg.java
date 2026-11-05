@@ -11,7 +11,7 @@ abstract class mg {
     static db field_g;
     static String field_f;
 
-    abstract void a(PacketBuffer param0, byte param1);
+    abstract void a(ng param0, byte param1);
 
     abstract wh a(int param0);
 

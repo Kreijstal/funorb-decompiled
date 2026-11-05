@@ -179,7 +179,7 @@ final class oj extends om {
           if ((!(this.field_w instanceof pc) ||
             ((pc) (this.field_w)).field_x) && this.field_s == 1) {
             var6 = qh.field_i + (-this.field_z - param3);
-            var7 = IsaacRandom.field_h - this.field_G - param2;
+            var7 = bm.field_h - this.field_G - param2;
             if ((var6 != this.field_r ||
               this.field_j != var7)) {
               this.field_j = var7;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hp extends IntrusiveNode {
+final class hp extends jb {
     static String field_r;
     int field_l;
     static int[] field_q;

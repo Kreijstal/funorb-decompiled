@@ -51,9 +51,9 @@ final class mn extends pd {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = gh.field_z[pf.b((int) var21[var6], 255)];
             }
-            var1[var2] = new dl(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var22);
+            var1[var2] = new dl(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var22);
           } else {
-            var16 = PacketBuffer.field_g[var2];
+            var16 = ng.field_g[var2];
             var12 = var16;
             var9 = var12;
             var5 = var9;
@@ -63,7 +63,7 @@ final class mn extends pd {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = hm.a(gh.field_z[pf.b((int) var21[var7], 255)], pf.b((int) var16[var7], 255) << 24);
             }
-            var1[var2] = (dl) ((Object) new vi(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var17));
+            var1[var2] = (dl) ((Object) new vi(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var17));
           }
         }
         ok.a(param0 ^ 2188450);
@@ -135,7 +135,7 @@ final class mn extends pd {
           this.field_h = this.field_h + 1;
           stackIn_6_0 = (q.field_a[ma.field_n[param1]].field_c[param2] < 4) ? 50 : 100;
           ph.a(stackIn_6_0, (byte) 107, param1, param4);
-          stackIn_7_0 = IsaacRandom.field_g;
+          stackIn_7_0 = bm.field_g;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

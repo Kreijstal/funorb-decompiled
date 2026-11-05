@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class IntrusiveNode {
+class jb {
     static String field_c;
     long field_e;
-    IntrusiveNode field_d;
-    IntrusiveNode field_b;
+    jb field_d;
+    jb field_b;
     static String field_a;
 
     final void a(boolean param0) {

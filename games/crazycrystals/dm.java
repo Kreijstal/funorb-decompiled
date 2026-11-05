@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm extends IntrusiveNode {
+final class dm extends jb {
     static boolean field_h;
     byte[] field_g;
     static ra field_f;

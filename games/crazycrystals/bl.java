@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class bl extends IntrusiveNode {
+final class bl extends jb {
     private boolean field_r;
     private float[] field_B;
     private static ej[] field_E;
@@ -380,7 +380,7 @@ final class bl extends IntrusiveNode {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        PacketBuffer var2 = new PacketBuffer(param0);
+        ng var2 = new ng(param0);
         this.field_H = var2.b((byte) -58);
         this.field_u = var2.b((byte) -126);
         this.field_D = var2.b((byte) 127);

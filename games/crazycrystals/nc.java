@@ -108,7 +108,7 @@ final class nc extends ue {
           }
           if (0 == this.field_j) {
             dg.a((byte) -85);
-            MouseInputHandler.field_b = (ue) ((Object) new rb(this.field_f, this.field_b.field_i));
+            a.field_b = (ue) ((Object) new rb(this.field_f, this.field_b.field_i));
           }
           return;
         }
@@ -146,16 +146,16 @@ final class nc extends ue {
               this.field_i.d(136);
             }
             if (pc.field_y != 0) {
-              MouseInputHandler.field_b = (ue) ((Object) new vn(this.field_i, this.field_f, true));
+              a.field_b = (ue) ((Object) new vn(this.field_i, this.field_f, true));
             } else {
               if (null != this.field_i) {
                 this.field_i.d(136);
-                MouseInputHandler.field_b = (ue) ((Object) this.field_i);
+                a.field_b = (ue) ((Object) this.field_i);
               } else {
                 if (0 == mo.field_l) {
-                  MouseInputHandler.field_b = (ue) ((Object) new rb(this.field_f, true));
+                  a.field_b = (ue) ((Object) new rb(this.field_f, true));
                 } else {
-                  MouseInputHandler.field_b = (ue) ((Object) this.field_f);
+                  a.field_b = (ue) ((Object) this.field_f);
                   this.field_f.a(this.field_b.field_i, -13880);
                 }
               }

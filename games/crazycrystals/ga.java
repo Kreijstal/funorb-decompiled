@@ -251,7 +251,7 @@ class ga extends pc {
           if (!(this.field_i instanceof fi)) {
             return false;
           }
-          var8_int = ((fi) ((Object) this.field_i)).a(qh.field_i, 58, IsaacRandom.field_h, param4, param0, (qm) (this));
+          var8_int = ((fi) ((Object) this.field_i)).a(qh.field_i, 58, bm.field_h, param4, param0, (qm) (this));
           if (-1 == var8_int) {
             stackIn_6_1 = 0;
           } else {
@@ -484,7 +484,7 @@ class ga extends pc {
           if (this.field_s == 1) {
             if (this.field_i instanceof fi) {
               var7 = (fi) ((Object) this.field_i);
-              var6 = var7.a(qh.field_i, 108, IsaacRandom.field_h, param2, param3, (qm) (this));
+              var6 = var7.a(qh.field_i, 108, bm.field_h, param2, param3, (qm) (this));
               if (var6 != -1) {
                 if (this.field_M && this.field_O > var6 &&
                   var6 > this.field_D) {

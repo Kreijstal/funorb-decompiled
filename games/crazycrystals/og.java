@@ -195,7 +195,7 @@ class og extends qm implements he {
         if (param0 != 0) {
           og.h(124);
         }
-        if (CipherPacketBuffer.field_q <= param2 && CipherPacketBuffer.field_q + fl.field_a.field_l > param2 && param1 >= gf.field_a &&
+        if (md.field_q <= param2 && md.field_q + fl.field_a.field_l > param2 && param1 >= gf.field_a &&
           !(gf.field_a + fl.field_a.field_u <= param1)) {
           return 1;
         }

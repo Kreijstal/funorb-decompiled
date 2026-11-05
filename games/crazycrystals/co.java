@@ -71,7 +71,7 @@ final class co extends qm {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          PacketBuffer var2 = null;
+          ng var2 = null;
           if (param0 != 1) {
             return -110;
           }
@@ -100,7 +100,7 @@ final class co extends qm {
             }
             if (2 == jh.field_e) {
               so.field_c = new j((java.net.Socket) (ci.field_k.field_b), cc.field_a);
-              var2 = new PacketBuffer(13);
+              var2 = new ng(13);
               hn.a(kn.field_q, pj.field_x, 12, var2, fk.field_v);
               var2.a(true, 15);
               var2.a(ah.field_e, -16384);
@@ -302,7 +302,7 @@ final class co extends qm {
           if (uo.field_o == 1) {
             ah.a(ma.field_o, var4, 1, (byte) -53, 1);
             ah.a(dn.field_b, var4, 9, (byte) 89, 9);
-            aj.a(32293, CipherPacketBuffer.field_k[1], var4, 12, 9, wf.field_f);
+            aj.a(32293, md.field_k[1], var4, 12, 9, wf.field_f);
             ah.a(fn.field_g, var4, 14, (byte) 116, 14);
           } else {
             if (uo.field_o != 2) {
@@ -314,10 +314,10 @@ final class co extends qm {
               } else {
                 ah.a(g.field_a, var4, 3, (byte) 119, 3);
                 ah.a(hc.field_c, var4, 3, (byte) -71, 6);
-                aj.a(32293, CipherPacketBuffer.field_k[0], var4, 9, 9, oj.field_M);
-                aj.a(32293, CipherPacketBuffer.field_k[1], var4, 13, 12, am.field_f);
-                aj.a(32293, CipherPacketBuffer.field_k[1], var4, 25, 25, tn.field_o);
-                aj.a(32293, CipherPacketBuffer.field_k[2], var4, 28, 27, GameAppletShell.field_f);
+                aj.a(32293, md.field_k[0], var4, 9, 9, oj.field_M);
+                aj.a(32293, md.field_k[1], var4, 13, 12, am.field_f);
+                aj.a(32293, md.field_k[1], var4, 25, 25, tn.field_o);
+                aj.a(32293, md.field_k[2], var4, 28, 27, wa.field_f);
               }
             } else {
               ah.a(vp.field_g, var4, 2, (byte) -94, 1);

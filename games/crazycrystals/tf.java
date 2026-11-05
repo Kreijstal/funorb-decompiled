@@ -56,8 +56,8 @@ final class tf {
         try {
           pj.field_r[0] = og.field_w.nextInt();
           pj.field_r[1] = og.field_w.nextInt();
-          pj.field_r[2] = (int)(CipherPacketBuffer.field_m >> 32);
-          pj.field_r[3] = (int)CipherPacketBuffer.field_m;
+          pj.field_r[2] = (int)(md.field_m >> 32);
+          pj.field_r[3] = (int)md.field_m;
           sp.field_c.field_f = 0;
           sp.field_c.a(pj.field_r[0], -16384);
           sp.field_c.a(pj.field_r[1], -16384);

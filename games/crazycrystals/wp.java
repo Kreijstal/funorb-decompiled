@@ -184,7 +184,7 @@ final class wp {
                 stackIn_44_0 = qh.field_h;
               }
               var9 = stackIn_44_0;
-              var1_int = var1_int + MouseInputHandler.field_a;
+              var1_int = var1_int + a.field_a;
               if (var9 != null) {
                 var9.a(-to.field_d + var8Lifetime1, 2, var1_int, (bn.field_c << 1) + gh.field_w, var7Lifetime1 + (to.field_d << 1));
               }
@@ -195,7 +195,7 @@ final class wp {
               var1_int = var1_int + io.field_O;
             } else {
               gh.field_F.a(var6, var8Lifetime1, var1_int + kb.field_h, var5, -1);
-              var1_int = var1_int + (MouseInputHandler.field_a + bn.field_c + gh.field_w);
+              var1_int = var1_int + (a.field_a + bn.field_c + gh.field_w);
             }
           }
           return;

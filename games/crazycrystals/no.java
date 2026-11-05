@@ -110,7 +110,7 @@ final class no extends se {
             this.d(70);
           }
           var4 = (CharSequence) ((Object) param0);
-          if (!MouseInputHandler.a(-30, var4)) {
+          if (!a.a(-30, var4)) {
             stackIn_5_0 = rk.field_c;
             return stackIn_5_0;
           }

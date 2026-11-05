@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mo extends IntrusiveNode {
+final class mo extends jb {
     byte[] field_g;
     long field_k;
     static vc field_m;

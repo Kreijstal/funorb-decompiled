@@ -3,7 +3,7 @@
  */
 final class ic {
     private static byte[] field_f;
-    private PacketBuffer field_d;
+    private ng field_d;
     private int[] field_b;
     private int[] field_g;
     private int field_e;
@@ -203,11 +203,11 @@ final class ic {
     }
 
     ic() {
-        this.field_d = new PacketBuffer((byte[]) null);
+        this.field_d = new ng((byte[]) null);
     }
 
     ic(byte[] param0) {
-        this.field_d = new PacketBuffer((byte[]) null);
+        this.field_d = new ng((byte[]) null);
         this.a(param0);
     }
 

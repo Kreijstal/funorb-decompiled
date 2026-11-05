@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static dl[] field_b;
     static long field_d;
     static int[] field_e;
@@ -94,7 +94,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           }
         }
         if (param0 != -1) {
-          KeyboardInputHandler.a((byte) -2);
+          vf.a((byte) -2);
         }
     }
 
@@ -172,7 +172,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
     public static void a(byte param0) {
         field_e = null;
         if (param0 != -117) {
-          KeyboardInputHandler.a(-34);
+          vf.a(-34);
           field_a = null;
           field_b = null;
           return;

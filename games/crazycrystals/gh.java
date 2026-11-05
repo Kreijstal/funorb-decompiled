@@ -91,7 +91,7 @@ final class gh extends ea implements Cloneable {
         if (param0 != 26500) {
           field_F = (vc) null;
         }
-        return new rh(ac.c(61), SecondaryIntrusiveDeque.a((byte) -102));
+        return new rh(ac.c(61), km.a((byte) -102));
     }
 
     private final void b(int param0, boolean param1, int param2, int param3, int param4, int param5) {
@@ -347,7 +347,7 @@ final class gh extends ea implements Cloneable {
           }
           for (var3 = 0; var3 < 17; var3++) {
             if ((ge.field_c & 1 << var3) != 0) {
-              var4 = KeyboardInputHandler.field_b[var3];
+              var4 = vf.field_b[var3];
               var5 = jm.field_e[var3];
               var6 = ci.a(new String[]{an.field_o[var3]}, wn.field_a, 3);
               var7 = new nj(var4, var5, var6);
@@ -416,7 +416,7 @@ final class gh extends ea implements Cloneable {
           if (param0 != 23525) {
             gh.j(58);
           }
-          stackIn_3_0 = PacketBuffer.a(rb.field_e, param1, new gh(new kp(-1), 0, 0), (byte) -83, fl.field_f);
+          stackIn_3_0 = ng.a(rb.field_e, param1, new gh(new kp(-1), 0, 0), (byte) -83, fl.field_f);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -866,8 +866,8 @@ final class gh extends ea implements Cloneable {
           jj.field_c = null;
           m.field_n.a((byte) -32);
           m.field_n = null;
-          MouseInputHandler.field_d.a((byte) -14);
-          MouseInputHandler.field_d = null;
+          a.field_d.a((byte) -14);
+          a.field_d = null;
           rb.field_g.a((byte) -75);
           rb.field_g = null;
           ln.field_f.a((byte) -29);

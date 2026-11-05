@@ -10675,30 +10675,6 @@
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
     },
-    "crazycrystals": {
-      "source": {
-        "repository": "Kreijstal/funorb-decompiled",
-        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
-        "subdirectory": "games/crazycrystals"
-      },
-      "inputTreeSha256": "c4a9de6b68d19ad0c441027083fcbb2078e0fa00013f1b1c46169002fef73404",
-      "sources": {
-        "files": 394,
-        "sha256": "1f2f421c7f69e897bf7116465383dac42ff9278f3509648f913e8e7aa688a607"
-      },
-      "dictionary": {
-        "path": "decompilation/crazycrystals-naming.json",
-        "sha256": "984963496c40bc413ccafcc10ceb5be5f087b7f4552f06f279dc71a315d7a757"
-      },
-      "readingGuide": {
-        "path": "games/crazycrystals/README.md",
-        "sha256": "6c40eb66ff5c12271780cd2516db6b7aa225666d6060422768b743d03add3265"
-      },
-      "rulesSha256": "543b71f72261209f3783790f5df66fb1c6950931267229fed6b59a5b0326dd0e",
-      "compiler": {
-        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
-      }
-    },
     "drphlogistonsavestheearth": {
       "source": {
         "repository": "Kreijstal/funorb-decompiled",
@@ -11957,7 +11933,7 @@
         },
         "sources": {
           "files": 394,
-          "sha256": "c4a9de6b68d19ad0c441027083fcbb2078e0fa00013f1b1c46169002fef73404"
+          "sha256": "bb3dfcf46b89f012ae7a499e137086c984daf881763ebd79b778558870ab7fbd"
         },
         "pipelineFingerprint": "cc7e02ef28e9d2ab7f6555b7da1c155de7643794a63ff5624e3a00bbccaf2647",
         "pipelineEnvironment": {
@@ -11991,9 +11967,48 @@
             "batch-stubs"
           ]
         },
-        "publishedSources": {
-          "files": 394,
-          "sha256": "1f2f421c7f69e897bf7116465383dac42ff9278f3509648f913e8e7aa688a607"
+        "sourceRepairs": {
+          "classes": {
+            "te.java": {
+              "generator": {
+                "repository": "Kreijstal/java-tools",
+                "commit": "ac1ac862e8d3aa4a6bf800d531b214f1c93125a6",
+                "execution": "committed-source-archive",
+                "sourceArchive": {
+                  "sha256": "ddc4f9812a351cb9c46355182fbec0bd97056ae4636f588a140d918a7e5a5173",
+                  "reproduce": "git archive --format=tar ac1ac862e8d3aa4a6bf800d531b214f1c93125a6 | sha256sum",
+                  "format": "Git-generated tar archive of all tracked decompiler source; not a game JAR"
+                }
+              },
+              "input": {
+                "path": "te.class",
+                "sha256": "4a546477ee911dfd5a9a9344fce6359b35c2072146f5bf7210833302fd67d877",
+                "gameJarSha256": "06f69bb995b4c34277339726efb5d1a81cca236404e6d453b2d60f4d3d8cf56d"
+              },
+              "output": {
+                "path": "games/crazycrystals/te.java",
+                "sha256": "b1602b462582f65784e91f733b2c89f9dc28ba6c0a7654e7710506a99f506d34"
+              },
+              "validation": {
+                "wholeGameJavac": "pass",
+                "sources": 394,
+                "originalBytecodeProbe": null
+              },
+              "base": {
+                "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+                "sourceSha256": "fdc79c3402c631e9667544bdd91738d719334d5be3815c100362d92bba9d847e",
+                "sources": {
+                  "files": 394,
+                  "sha256": "c4a9de6b68d19ad0c441027083fcbb2078e0fa00013f1b1c46169002fef73404"
+                }
+              },
+              "runner": {
+                "repository": "Kreijstal/dekobloko-work",
+                "commit": "2c124fa0101f145ab940d1c30f09f4a12d3602c7",
+                "script": "readable/refresh-raw-class.mjs"
+              }
+            }
+          }
         }
       },
       "dekobloko": {

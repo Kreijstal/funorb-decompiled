@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wl extends DualLinkNode {
+abstract class wl extends ij {
     volatile boolean field_n;
     boolean field_q;
     boolean field_l;
@@ -78,7 +78,7 @@ abstract class wl extends DualLinkNode {
           var21 = nb.field_h;
           var22 = nb.field_f;
           var23 = 0;
-          scanLoop1: while (true) {
+          L1: while (true) {
             if (var23 < param1.field_n) {
               var24 = param1.field_L[var23];
               var25 = param1.field_G[var23];
@@ -91,7 +91,7 @@ abstract class wl extends DualLinkNode {
               if (var30 != 0) {
                 if (stackIn_62_0 < stackIn_62_1) {
                   if (cf.field_b.length <= var18) {
-                    break scanLoop1;
+                    break L1;
                   }
                   var19 = param1.field_a[var18];
                   var20 = param1.field_N[var18];
@@ -100,9 +100,9 @@ abstract class wl extends DualLinkNode {
                   jp.field_a[var18] = var21 * var16 + var13 * var20 + var19 * var10 >> 16;
                   vm.field_d[var18] = var19 * var11 - (-(var14 * var20) - var21 * var17) >> 16;
                   var18++;
-                  break scanLoop1;
+                  break L1;
                 }
-                break scanLoop1;
+                break L1;
               }
               if (stackIn_62_0 > stackIn_62_1) {
                 cf.field_g[var23] = -2147483648;
@@ -153,7 +153,7 @@ abstract class wl extends DualLinkNode {
                 var25 = param1.field_m[var23];
                 var26 = param1.field_y[var23];
                 hp.field_q[var23] = (var18 * var26 + var25 * var15 + var24 * var12 >> 16) + var9;
-                KeyboardInputHandler.field_e[var23] = var10 + (var25 * var16 + (var13 * var24 + var19 * var26) >> 16);
+                vf.field_e[var23] = var10 + (var25 * var16 + (var13 * var24 + var19 * var26) >> 16);
                 d.field_a[var23] = (var25 * var17 + var24 * var14 + var26 * var20 >> 16) + var11;
                 var23++;
                 if (var30 != 0) {
@@ -164,7 +164,7 @@ abstract class wl extends DualLinkNode {
             }
             if (decompiledFrameCompleted0) {
               if (!param6) {
-                break scanLoop1;
+                break L1;
               }
               var9 = param5[3];
               var10 = param5[4];

@@ -75,11 +75,11 @@ class pc extends qm {
             if (this.field_s == gg.field_c) {
               return;
             }
-            if (this.a(IsaacRandom.field_h, param3, false, param2, qh.field_i) &&
+            if (this.a(bm.field_h, param3, false, param2, qh.field_i) &&
               gg.field_c == 0) {
-              this.a(IsaacRandom.field_h - param2, qh.field_i - param3, -100, this.field_s);
+              this.a(bm.field_h - param2, qh.field_i - param3, -100, this.field_s);
             }
-            this.a(IsaacRandom.field_h, param2, param3, qh.field_i, param0, 0);
+            this.a(bm.field_h, param2, param3, qh.field_i, param0, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "pc.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

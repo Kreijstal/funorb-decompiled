@@ -98,7 +98,7 @@ final class la {
             ra.field_c.c(ci.a(new String[]{fp.field_b}, fq.field_z, 3), var6, 110, 16777215, -1);
             rn.field_k.c(ci.a(new String[]{fp.field_b}, ro.field_s, 3), var6, 130, 16777215, -1);
             ra.field_c.c(s.field_f, var6, 180, 16777215, -1);
-            rn.field_k.c(IntrusiveNode.field_c, var6, 200, 16777215, -1);
+            rn.field_k.c(jb.field_c, var6, 200, 16777215, -1);
             hb.a(3, var12.field_u, 0, var12.field_l, var12, -35, 1, 0);
             uh.field_q.a();
             var12.a(-uh.field_q.field_v + 18, -uh.field_q.field_t + 241);
@@ -116,13 +116,13 @@ final class la {
             oj.field_H = null;
             kb.field_a = (ad.field_h.field_u - fl.field_a.field_u) / 2 + 390;
             pa.field_F = 231 + (ad.field_h.field_l - fl.field_a.field_l) / 2;
-            CipherPacketBuffer.field_q = 434 + (-fl.field_a.field_l + ad.field_h.field_l) / 2;
+            md.field_q = 434 + (-fl.field_a.field_l + ad.field_h.field_l) / 2;
             gf.field_a = (-fl.field_a.field_u + ad.field_h.field_u) / 2 + 390;
           }
           if (wl.field_o == null) {
             return;
           }
-          if (MouseInputHandler.field_c != null &&
+          if (a.field_c != null &&
             null != ra.field_c) {
             var29 = kh.field_i;
             var2Lifetime1 = kh.field_l;
@@ -131,59 +131,59 @@ final class la {
             var14 = ci.a(new String[]{qf.field_t[v.field_d]}, qn.field_C, 3);
             var5 = ra.field_c.c(var14, wn.field_c);
             var6Lifetime1 = ra.field_c.b(var14, wn.field_c, ra.field_c.field_u + ra.field_c.field_o);
-            var7Lifetime1 = (wn.field_c - var5) / 2 + SecondaryIntrusiveDeque.field_e;
+            var7Lifetime1 = (wn.field_c - var5) / 2 + km.field_e;
             var8 = fk.field_u + (-var6Lifetime1 + sc.field_h) / 2;
             var5 += 6;
             var7Lifetime1 -= 3;
             var8 -= 3;
             if (0 > var7Lifetime1) {
               var9_int = -var7Lifetime1;
-              SecondaryIntrusiveDeque.field_e = SecondaryIntrusiveDeque.field_e + var9_int;
+              km.field_e = km.field_e + var9_int;
               sj.field_f = sj.field_f - var9_int;
-              MouseInputHandler.field_c.field_v = MouseInputHandler.field_c.field_v + var9_int;
+              a.field_c.field_v = a.field_c.field_v + var9_int;
               var7Lifetime1 = var7Lifetime1 + var9_int;
               var5 = var5 + 2 * var9_int;
-              MouseInputHandler.field_c.field_n = MouseInputHandler.field_c.field_n + 2 * var9_int;
+              a.field_c.field_n = a.field_c.field_n + 2 * var9_int;
             }
             var6Lifetime1 += 6;
-            if (var5 + var7Lifetime1 > MouseInputHandler.field_c.field_n) {
-              var9_intLifetime1 = var5 + (var7Lifetime1 - MouseInputHandler.field_c.field_n);
+            if (var5 + var7Lifetime1 > a.field_c.field_n) {
+              var9_intLifetime1 = var5 + (var7Lifetime1 - a.field_c.field_n);
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
-              MouseInputHandler.field_c.field_v = MouseInputHandler.field_c.field_v + var9_intLifetime1;
+              a.field_c.field_v = a.field_c.field_v + var9_intLifetime1;
               var5 = var5 + var9_intLifetime1 * 2;
-              MouseInputHandler.field_c.field_n = MouseInputHandler.field_c.field_n + var9_intLifetime1 * 2;
+              a.field_c.field_n = a.field_c.field_n + var9_intLifetime1 * 2;
               sj.field_f = sj.field_f - var9_intLifetime1;
-              SecondaryIntrusiveDeque.field_e = SecondaryIntrusiveDeque.field_e + var9_intLifetime1;
+              km.field_e = km.field_e + var9_intLifetime1;
             }
             if (var8 < 0) {
               var9_intLifetime2 = -var8;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime2 * 2;
               var8 = var8 + var9_intLifetime2;
-              MouseInputHandler.field_c.field_t = MouseInputHandler.field_c.field_t + var9_intLifetime2;
-              MouseInputHandler.field_c.field_o = MouseInputHandler.field_c.field_o + var9_intLifetime2 * 2;
+              a.field_c.field_t = a.field_c.field_t + var9_intLifetime2;
+              a.field_c.field_o = a.field_c.field_o + var9_intLifetime2 * 2;
               kl.field_U = kl.field_U - var9_intLifetime2;
               fk.field_u = fk.field_u + var9_intLifetime2;
             }
-            if (MouseInputHandler.field_c.field_o < var8 + var6Lifetime1) {
-              var9_intLifetime3 = -MouseInputHandler.field_c.field_o + var8 + var6Lifetime1;
+            if (a.field_c.field_o < var8 + var6Lifetime1) {
+              var9_intLifetime3 = -a.field_c.field_o + var8 + var6Lifetime1;
               kl.field_U = kl.field_U - var9_intLifetime3;
-              MouseInputHandler.field_c.field_t = MouseInputHandler.field_c.field_t + var9_intLifetime3;
+              a.field_c.field_t = a.field_c.field_t + var9_intLifetime3;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
               fk.field_u = fk.field_u + var9_intLifetime3;
-              MouseInputHandler.field_c.field_o = MouseInputHandler.field_c.field_o + var9_intLifetime3 * 2;
+              a.field_c.field_o = a.field_c.field_o + var9_intLifetime3 * 2;
             }
-            MouseInputHandler.field_c.e();
-            var9 = new dl(MouseInputHandler.field_c.field_n, MouseInputHandler.field_c.field_o);
+            a.field_c.e();
+            var9 = new dl(a.field_c.field_n, a.field_c.field_o);
             var9.a();
-            ra.field_c.a(var14, SecondaryIntrusiveDeque.field_e, fk.field_u, wn.field_c, sc.field_h, 16777215, -1, 1, 1, ra.field_c.field_u + ra.field_c.field_o);
+            ra.field_c.a(var14, km.field_e, fk.field_u, wn.field_c, sc.field_h, 16777215, -1, 1, 1, ra.field_c.field_u + ra.field_c.field_o);
             hb.a(3, var9.field_o, 0, var9.field_n, var9, -42, 1, 0);
-            MouseInputHandler.field_c.a();
+            a.field_c.a();
             var9.a(0, 0);
             em.field_m = new dl(640, 480);
             em.field_m.a();
-            MouseInputHandler.field_c.a((MouseInputHandler.field_c.field_n >> 1) + sj.field_f, (MouseInputHandler.field_c.field_o >> 1) + kl.field_U, o.field_f, 4096);
-            MouseInputHandler.field_c = null;
+            a.field_c.a((a.field_c.field_n >> 1) + sj.field_f, (a.field_c.field_o >> 1) + kl.field_U, o.field_f, 4096);
+            a.field_c = null;
             em.field_m.b();
             kh.a(var29, var2Lifetime1, var3Lifetime1);
             kh.a(mc.field_m);
@@ -283,14 +283,14 @@ final class la {
             stackIn_65_0 = gf.field_a;
             stackIn_65_1 = -1;
             stackIn_66_2 = (bc.field_f.field_c == 1);
-            qf.a(stackIn_65_0, stackIn_65_1, stackIn_66_2, CipherPacketBuffer.field_q);
+            qf.a(stackIn_65_0, stackIn_65_1, stackIn_66_2, md.field_q);
           }
           if (null != qk.field_H) {
             var1_int = 357 - qk.field_H.field_o / 2;
             qk.field_H.a(-qk.field_H.field_n + 269, var1_int);
             bf.field_a.a(586, var1_int);
-            if (var1_int < IsaacRandom.field_h &&
-              qk.field_H.field_u + var1_int > IsaacRandom.field_h) {
+            if (var1_int < bm.field_h &&
+              qk.field_H.field_u + var1_int > bm.field_h) {
               var2Lifetime5 = 40 + (40 * va.a(2047, hl.field_g << 4) >> 16);
               if (var2Lifetime5 <= 0) {
                 rh.a(false);

@@ -141,7 +141,7 @@ abstract class qb {
                 }
                 if (stackIn_247_0 < stackIn_247_1) {
                   go.field_l.b(Integer.toString(gm.field_c[var4_int]), 608, 12 + var3_int + 5, 8438015, -1);
-                  vp.field_i[var4_int][SecondaryIntrusiveDeque.field_d % vp.field_i[var4_int].length].a(506, -24 + var3_int);
+                  vp.field_i[var4_int][km.field_d % vp.field_i[var4_int].length].a(506, -24 + var3_int);
                 }
                 var3_int += 48;
                 var4_int++;
@@ -164,8 +164,8 @@ abstract class qb {
                     var7 = 20 * var5_int + var6;
                     if (qh.field_i >= 480 &&
                       qh.field_i < 640 &&
-                      IsaacRandom.field_h >= (4 + var3_int + var6) &&
-                      var7 + 4 + var3_int > IsaacRandom.field_h) {
+                      bm.field_h >= (4 + var3_int + var6) &&
+                      var7 + 4 + var3_int > bm.field_h) {
                       var4_intLifetime1 = 16777215;
                     }
                     go.field_l.a(f.field_e, 484, -go.field_l.field_o + (15 + (4 + var3_int + var6)), 152, 1000, var4_intLifetime1, -1, 1, 0, 20);
@@ -208,8 +208,8 @@ abstract class qb {
               if (null != li.field_a) {
                 if (qh.field_i >= 480 &&
                   640 > qh.field_i &&
-                  (var2 - 16) <= IsaacRandom.field_h &&
-                  (4 + var2) > IsaacRandom.field_h) {
+                  (var2 - 16) <= bm.field_h &&
+                  (4 + var2) > bm.field_h) {
                   stackIn_138_0 = 1;
                 } else {
                   stackIn_138_0 = 0;
@@ -232,7 +232,7 @@ abstract class qb {
                 tb.a(stackIn_145_0, stackIn_145_1, stackIn_146_2, 488, sh.field_l);
                 var4 = uh.field_o;
                 var5 = li.field_a;
-                scanLoop1: while (true) {
+                L24: while (true) {
                   if (null != ((nj) (var5)).field_n) {
                     var5 = ((nj) (var5)).field_n;
                     if (var11 == 0) {
@@ -241,7 +241,7 @@ abstract class qb {
                   } else {
                     if (!li.field_a.field_i &&
                       0 != li.field_a.field_g) {
-                      break scanLoop1;
+                      break L24;
                     }
                   }
                   var4 = se.field_g;
@@ -261,8 +261,8 @@ abstract class qb {
                 if (ab.field_D instanceof ja) {
                   if (qh.field_i >= 480 &&
                     qh.field_i < 640 &&
-                    IsaacRandom.field_h >= var2 - 16 &&
-                    IsaacRandom.field_h < 4 + var2) {
+                    bm.field_h >= var2 - 16 &&
+                    bm.field_h < 4 + var2) {
                     stackIn_180_0 = 1;
                   } else {
                     stackIn_180_0 = 0;
@@ -296,8 +296,8 @@ abstract class qb {
                 if (decompiledFrameRemainder0) {
                   if (qh.field_i >= 480 &&
                     qh.field_i < 640 &&
-                    -16 + var2 <= IsaacRandom.field_h &&
-                    (4 + var2) > IsaacRandom.field_h) {
+                    -16 + var2 <= bm.field_h &&
+                    (4 + var2) > bm.field_h) {
                     stackIn_208_0 = 1;
                   } else {
                     stackIn_208_0 = 0;
@@ -329,8 +329,8 @@ abstract class qb {
                   var2 -= 20;
                   if (qh.field_i >= 480 &&
                     qh.field_i < 640 &&
-                    IsaacRandom.field_h >= (-16 + var2) &&
-                    IsaacRandom.field_h < (4 + var2)) {
+                    bm.field_h >= (-16 + var2) &&
+                    bm.field_h < (4 + var2)) {
                     stackIn_233_0 = 1;
                   } else {
                     stackIn_233_0 = 0;
@@ -420,14 +420,14 @@ abstract class qb {
                   if (null == oe.field_a[var7Lifetime1]) {
                     var8 = qh.field_o.size();
                     var9 = 0;
-                    scanLoop2: while (true) {
+                    L58: while (true) {
                       if (var9 < var8) {
                         var10 = (fq) (qh.field_o.elementAt(var9));
                         stackIn_293_0 = ~var10.field_u;
                         stackIn_293_1 = ~var7Lifetime1;
                         if (stackIn_293_0 == stackIn_293_1) {
                           var10.field_I.a(false, 24, 24, (byte) -97, true, var6Lifetime1, 72);
-                          break scanLoop2;
+                          break L58;
                         }
                         var9++;
                         continue;
@@ -438,7 +438,7 @@ abstract class qb {
                     decompiledFrameRemainder2 = false;
                   }
                   else {
-                    vj.field_a[3][(SecondaryIntrusiveDeque.field_d >> 2) % bp.field_c[3]].c(var6Lifetime1, 48, ek.field_f[var7Lifetime1]);
+                    vj.field_a[3][(km.field_d >> 2) % bp.field_c[3]].c(var6Lifetime1, 48, ek.field_f[var7Lifetime1]);
                     jf.field_b[var7Lifetime1].a(-(jf.field_b[var7Lifetime1].field_n / 2) + (24 + var6Lifetime1), 110);
                   }
                   stackIn_293_0Lifetime1 = ~q.field_a[var7Lifetime1].field_i;
@@ -457,13 +457,13 @@ abstract class qb {
             if (jo.field_o == 1) {
               var5Lifetime1 = null;
               if (uo.field_o == 19) {
-                var5Lifetime1 = ci.a(new String[]{"80C0FF", CipherPacketBuffer.field_t[0], CipherPacketBuffer.field_t[1]}, fb.field_e, 3);
+                var5Lifetime1 = ci.a(new String[]{"80C0FF", md.field_t[0], md.field_t[1]}, fb.field_e, 3);
               }
               if (39 == uo.field_o) {
-                var5Lifetime1 = ci.a(new String[]{"80C0FF", CipherPacketBuffer.field_t[1], CipherPacketBuffer.field_t[2]}, fb.field_e, 3);
+                var5Lifetime1 = ci.a(new String[]{"80C0FF", md.field_t[1], md.field_t[2]}, fb.field_e, 3);
               }
               if (uo.field_o == 59) {
-                var5Lifetime1 = ci.a(new String[]{"80C0FF", CipherPacketBuffer.field_t[2]}, of.field_G, 3);
+                var5Lifetime1 = ci.a(new String[]{"80C0FF", md.field_t[2]}, of.field_G, 3);
               }
               if (69 == uo.field_o) {
                 var5Lifetime1 = jn.field_n;
@@ -1487,7 +1487,7 @@ abstract class qb {
                 }
                 var2 = ah.a("cancel", 5236);
                 if (null != var2) {
-                  GameAppletShell.field_k = fa.a((byte) -102, var2);
+                  wa.field_k = fa.a((byte) -102, var2);
                 }
                 var2 = ah.a("pleaselogintoplay", 5236);
                 if (null != var2) {
@@ -1517,11 +1517,11 @@ abstract class qb {
                 }
                 var2 = ah.a("playfreeversion", 5236);
                 if (var2 != null) {
-                  GameCanvas.field_b = fa.a((byte) -92, var2);
+                  pg.field_b = fa.a((byte) -92, var2);
                 }
                 var2 = ah.a("reloadgame", 5236);
                 if (var2 != null) {
-                  PacketBuffer.field_i = fa.a((byte) -64, var2);
+                  ng.field_i = fa.a((byte) -64, var2);
                 }
                 var2 = ah.a("toserverlist", 5236);
                 if (null != var2) {
@@ -1977,11 +1977,11 @@ abstract class qb {
                 }
                 var2 = ah.a("login_create_tooltip", 5236);
                 if (var2 != null) {
-                  GameCanvas.field_c = fa.a((byte) -84, var2);
+                  pg.field_c = fa.a((byte) -84, var2);
                 }
                 var2 = ah.a("login_justplay_tooltip", 5236);
                 if (null != var2) {
-                  CipherPacketBuffer.field_o = fa.a((byte) -84, var2);
+                  md.field_o = fa.a((byte) -84, var2);
                 }
                 var2 = ah.a("login_back_tooltip", 5236);
                 if (var2 != null) {
@@ -2687,7 +2687,7 @@ abstract class qb {
                 }
                 var2 = ah.a("memberslevel_name", 5236);
                 if (var2 != null) {
-                  IntrusiveNodeHashTable.field_d = fa.a((byte) -111, var2);
+                  ug.field_d = fa.a((byte) -111, var2);
                 }
                 var2 = ah.a("memberslevel_cannotplayreason", 5236);
                 if (var2 != null) {
@@ -2747,7 +2747,7 @@ abstract class qb {
                 }
                 var2 = ah.a("achieved", 5236);
                 if (null != var2) {
-                  IsaacRandom.field_j = fa.a((byte) -128, var2);
+                  bm.field_j = fa.a((byte) -128, var2);
                 }
                 var2 = ah.a("orbpoints", 5236);
                 if (null != var2) {
@@ -3139,7 +3139,7 @@ abstract class qb {
                 }
                 var2 = ah.a("fs_button_cancel", 5236);
                 if (null != var2) {
-                  IntrusiveNode.field_a = fa.a((byte) -123, var2);
+                  jb.field_a = fa.a((byte) -123, var2);
                 }
                 var2 = ah.a("fs_accept_aftercancel", 5236);
                 if (var2 != null) {
@@ -3155,7 +3155,7 @@ abstract class qb {
                 }
                 var2 = ah.a("fs_nonmember", 5236);
                 if (var2 != null) {
-                  IntrusiveNodeHashTable.field_a = fa.a((byte) -106, var2);
+                  ug.field_a = fa.a((byte) -106, var2);
                 }
                 var2 = ah.a("fs_button_close", 5236);
                 if (var2 != null) {
@@ -3182,7 +3182,7 @@ abstract class qb {
                 }
                 var2 = ah.a("fs_focus_or_resolution", 5236);
                 if (null != var2) {
-                  CipherPacketBuffer.field_n = fa.a((byte) -79, var2);
+                  md.field_n = fa.a((byte) -79, var2);
                 }
                 var2 = ah.a("fs_timeout", 5236);
                 if (null != var2) {
@@ -3226,7 +3226,7 @@ abstract class qb {
                 }
                 var2 = ah.a("mb_exclusive_2", 5236);
                 if (var2 != null) {
-                  IntrusiveNode.field_c = fa.a((byte) -102, var2);
+                  jb.field_c = fa.a((byte) -102, var2);
                 }
                 var2 = ah.a("me_extra_benefits", 5236);
                 if (null != var2) {
@@ -3532,9 +3532,9 @@ abstract class qb {
                   throw dn.a((Throwable) ((Object) stackIn_2590_0), ((StringBuilder) (Object) stackIn_2590_1).append(stackIn_2591_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = GameAppletShell.field_e;
+                  var4 = wa.field_e;
                   var4++;
-                  GameAppletShell.field_e = var4;
+                  wa.field_e = var4;
                 }
             }
         }

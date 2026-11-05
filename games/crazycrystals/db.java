@@ -319,12 +319,12 @@ final class db {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        PacketBuffer var26 = null;
+        ng var26 = null;
         byte[] var27 = null;
-        PacketBuffer var29 = null;
+        ng var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        PacketBuffer var32 = null;
+        ng var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -391,7 +391,7 @@ final class db {
             var35 = l.a((byte) 110, true, this.field_h[param0]);
             var25 = var35;
             var9 = var25;
-            var26 = new PacketBuffer(var35);
+            var26 = new ng(var35);
             var26.a(8, 5, var26.field_h.length, param1);
             decompiledFrameRemainder0 = false;
           }
@@ -420,7 +420,7 @@ final class db {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * var5_int * var12;
-              var32 = new PacketBuffer(var43);
+              var32 = new ng(var43);
               var14 = 0;
               var15 = 0;
               var32.field_f = var11;
@@ -469,7 +469,7 @@ final class db {
             var11--;
             var12Lifetime1 = var23[var11] & 255;
             var11 = var11 - var12Lifetime1 * (var5_int * 4);
-            var29 = new PacketBuffer(var43);
+            var29 = new ng(var43);
             var38 = new int[var5_int];
             var30 = var38;
             var14_ref_int__ = var30;

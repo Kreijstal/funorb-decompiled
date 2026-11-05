@@ -107,7 +107,7 @@ final class ka extends od {
         try {
           this.field_l.a(param0, param1, param2);
           var6 = (pl) (this.field_k.g(32073));
-          scanLoop1: while (true) {
+          L0: while (true) {
             if (var6 == null) {
               return;
             }
@@ -122,7 +122,7 @@ final class ka extends od {
                 this.a(param0, var6, var4_int, -1048576, var5, var5 + var4_int);
                 var6.field_k = var6.field_k - var5;
                 var6 = (pl) (this.field_k.a(false));
-                continue scanLoop1;
+                continue L0;
               }
               this.a(param0, var6, var4_int, -1048576, var6.field_k, var5 + var4_int);
               var5 = var5 - var6.field_k;
@@ -242,7 +242,7 @@ final class ka extends od {
         var4 = CrazyCrystals.field_B;
         this.field_l.a(param0);
         var3 = (pl) (this.field_k.g(32073));
-        scanLoop1: while (true) {
+        L0: while (true) {
           if (var3 == null) {
             return;
           }
@@ -256,7 +256,7 @@ final class ka extends od {
               this.a(var3, var2, (byte) -101);
               var3.field_k = var3.field_k - var2;
               var3 = (pl) (this.field_k.a(false));
-              continue scanLoop1;
+              continue L0;
             }
             this.a(var3, var3.field_k, (byte) -116);
             var2 = var2 - var3.field_k;

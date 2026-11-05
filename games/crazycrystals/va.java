@@ -28,14 +28,14 @@ final class va extends IOException {
         RuntimeException var1 = null;
         var2 = CrazyCrystals.field_B;
         try {
-          for (var1_int = 0; var1_int < CipherPacketBuffer.field_k.length; var1_int++) {
+          for (var1_int = 0; var1_int < md.field_k.length; var1_int++) {
             if (~field_c == ~var1_int) {
-              if (CipherPacketBuffer.field_k[var1_int] < 32) {
-                CipherPacketBuffer.field_k[var1_int] = CipherPacketBuffer.field_k[var1_int] + 1;
+              if (md.field_k[var1_int] < 32) {
+                md.field_k[var1_int] = md.field_k[var1_int] + 1;
               }
             } else {
-              if (CipherPacketBuffer.field_k[var1_int] > 0) {
-                CipherPacketBuffer.field_k[var1_int] = CipherPacketBuffer.field_k[var1_int] - 1;
+              if (md.field_k[var1_int] > 0) {
+                md.field_k[var1_int] = md.field_k[var1_int] - 1;
               }
             }
           }

@@ -66,7 +66,7 @@ final class eq extends rl {
     }
 
     final static void b(int param0, int param1) {
-        CipherPacketBuffer var2 = tp.field_f;
+        md var2 = tp.field_f;
         var2.d(param0 ^ 10, param1);
         var2.a(true, 1);
         var2.a(true, param0);
@@ -91,7 +91,7 @@ final class eq extends rl {
           var7 = (int)(100.0 * Math.pow(2.0, (double)var6_int / 12.0));
           tb.field_d.a(qp.field_i, var7, 48 * gi.field_m, param3);
           ph.a(10, (byte) 107, param1, param4);
-          stackIn_4_0 = IsaacRandom.field_g;
+          stackIn_4_0 = bm.field_g;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

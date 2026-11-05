@@ -41,7 +41,7 @@ final class ah {
         var2 = 0;
         var3 = 0;
         while (8 > var2) {
-          this.field_k[var2] = SecondaryIntrusiveDeque.a(SecondaryIntrusiveDeque.a(ao.a((long)this.field_c[var3 + 6] << 8, 65280L), SecondaryIntrusiveDeque.a(SecondaryIntrusiveDeque.a(SecondaryIntrusiveDeque.a(SecondaryIntrusiveDeque.a(ao.a((long)this.field_c[2 + var3], 255L) << 40, SecondaryIntrusiveDeque.a((long)this.field_c[var3] << 56, ao.a((long)this.field_c[var3 + 1], 255L) << 48)), ao.a(255L, (long)this.field_c[var3 + 3]) << 32), ao.a((long)this.field_c[var3 + 4] << 24, 4278190080L)), ao.a((long)this.field_c[var3 + 5], 255L) << 16)), ao.a(255L, (long)this.field_c[var3 + 7]));
+          this.field_k[var2] = km.a(km.a(ao.a((long)this.field_c[var3 + 6] << 8, 65280L), km.a(km.a(km.a(km.a(ao.a((long)this.field_c[2 + var3], 255L) << 40, km.a((long)this.field_c[var3] << 56, ao.a((long)this.field_c[var3 + 1], 255L) << 48)), ao.a(255L, (long)this.field_c[var3 + 3]) << 32), ao.a((long)this.field_c[var3 + 4] << 24, 4278190080L)), ao.a((long)this.field_c[var3 + 5], 255L) << 16)), ao.a(255L, (long)this.field_c[var3 + 7]));
           var3 += 8;
           var2++;
         }
@@ -49,7 +49,7 @@ final class ah {
           dupTemp$0 = this.field_h[var2Lifetime1];
           arrayValue$1 = this.field_k[var2Lifetime1];
           this.field_o[var2Lifetime1] = dupTemp$0;
-          this.field_n[var2Lifetime1] = SecondaryIntrusiveDeque.a(arrayValue$1, dupTemp$0);
+          this.field_n[var2Lifetime1] = km.a(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -57,7 +57,7 @@ final class ah {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_m[var3Lifetime1] = SecondaryIntrusiveDeque.a(this.field_m[var3Lifetime1], so.field_b[var4][pf.b((int)(this.field_o[pf.b(7, -var4 + var3Lifetime1)] >>> var5), 255)]);
+              this.field_m[var3Lifetime1] = km.a(this.field_m[var3Lifetime1], so.field_b[var4][pf.b((int)(this.field_o[pf.b(7, -var4 + var3Lifetime1)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -65,14 +65,14 @@ final class ah {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_o[var3Lifetime1Lifetime1] = this.field_m[var3Lifetime1Lifetime1];
           }
-          this.field_o[0] = SecondaryIntrusiveDeque.a(this.field_o[0], so.field_a[var2Lifetime2]);
+          this.field_o[0] = km.a(this.field_o[0], so.field_a[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_m[var3Lifetime1Lifetime2] = this.field_o[var3Lifetime1Lifetime2];
             var8 = 0;
             var4Lifetime1 = var8;
             var5Lifetime1 = 56;
             while (var8 < 8) {
-              this.field_m[var3Lifetime1Lifetime2] = SecondaryIntrusiveDeque.a(this.field_m[var3Lifetime1Lifetime2], so.field_b[var8][pf.b(255, (int)(this.field_n[pf.b(var3Lifetime1Lifetime2 - var8, 7)] >>> var5Lifetime1))]);
+              this.field_m[var3Lifetime1Lifetime2] = km.a(this.field_m[var3Lifetime1Lifetime2], so.field_b[var8][pf.b(255, (int)(this.field_n[pf.b(var3Lifetime1Lifetime2 - var8, 7)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var8++;
             }
@@ -83,14 +83,14 @@ final class ah {
         }
         if (param0 != 18236) {
           var7 = (un) null;
-          ah.a((PacketBuffer) null, -120, 88, (un) null);
+          ah.a((ng) null, -120, 88, (un) null);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_h[var2Lifetime3] = SecondaryIntrusiveDeque.a(this.field_h[var2Lifetime3], SecondaryIntrusiveDeque.a(this.field_k[var2Lifetime3], this.field_n[var2Lifetime3]));
+          this.field_h[var2Lifetime3] = km.a(this.field_h[var2Lifetime3], km.a(this.field_k[var2Lifetime3], this.field_n[var2Lifetime3]));
         }
     }
 
-    final static void a(PacketBuffer param0, int param1, int param2, un param3) {
+    final static void a(ng param0, int param1, int param2, un param3) {
         try {
           int var6 = 0;
           int var12_int = 0;

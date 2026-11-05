@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vc extends DualLinkNode {
+abstract class vc extends ij {
     int field_A;
     int field_o;
     private int[] field_H;

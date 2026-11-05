@@ -5,15 +5,15 @@ abstract class ob {
     static int field_g;
     static int field_l;
     static boolean field_o;
-    SecondaryIntrusiveDeque field_m;
+    km field_m;
     static int[] field_b;
-    SecondaryIntrusiveDeque field_f;
-    SecondaryIntrusiveDeque field_k;
-    SecondaryIntrusiveDeque field_a;
-    PacketBuffer field_n;
+    km field_f;
+    km field_k;
+    km field_a;
+    ng field_n;
     int field_c;
     long field_e;
-    PacketBuffer field_i;
+    ng field_i;
     volatile int field_j;
     byte field_d;
     volatile int field_p;
@@ -116,20 +116,20 @@ abstract class ob {
         if (param0 == -21) {
           return this.d(20) >= 20 ? true : false;
         }
-        this.field_i = (PacketBuffer) null;
+        this.field_i = (ng) null;
         return this.d(20) >= 20 ? true : false;
     }
 
     ob() {
-        this.field_m = new SecondaryIntrusiveDeque();
-        this.field_f = new SecondaryIntrusiveDeque();
-        this.field_k = new SecondaryIntrusiveDeque();
-        this.field_a = new SecondaryIntrusiveDeque();
-        this.field_n = new PacketBuffer(6);
+        this.field_m = new km();
+        this.field_f = new km();
+        this.field_k = new km();
+        this.field_a = new km();
+        this.field_n = new ng(6);
         this.field_j = 0;
         this.field_d = (byte) 0;
         this.field_p = 0;
-        this.field_i = new PacketBuffer(10);
+        this.field_i = new ng(10);
     }
 
     static {

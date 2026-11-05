@@ -98,7 +98,7 @@ final class cb extends pn implements Cloneable {
             var4 = (mj) null;
             this.a(true, (f[][]) null, (mj) null);
           }
-          stackIn_3_0 = PacketBuffer.a(f.field_f, param1, new cb(new kp(-1), 0, 0), (byte) -83, jh.field_d);
+          stackIn_3_0 = ng.a(f.field_f, param1, new cb(new kp(-1), 0, 0), (byte) -83, jh.field_d);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

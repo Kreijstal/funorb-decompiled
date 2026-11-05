@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class GameCanvas extends java.awt.Canvas {
+final class pg extends java.awt.Canvas {
     static mk field_a;
     private java.awt.Component field_d;
     static String[] field_e;
@@ -14,7 +14,7 @@ final class GameCanvas extends java.awt.Canvas {
         field_b = null;
         if (param0 > -104) {
           db var2 = (db) null;
-          GameCanvas.a((byte) 1, (db) null, false, (db) null, (db) null);
+          pg.a((byte) 1, (db) null, false, (db) null, (db) null);
         }
         field_e = null;
     }
@@ -56,7 +56,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           if (param0 >= -96) {
             db var6 = (db) null;
-            GameCanvas.a((byte) 43, (db) null, false, (db) null, (db) null);
+            pg.a((byte) 43, (db) null, false, (db) null, (db) null);
           }
           gk.field_e = lc.a("", (byte) 51);
           gk.field_e.a(106, false);
@@ -155,7 +155,7 @@ final class GameCanvas extends java.awt.Canvas {
         }
     }
 
-    GameCanvas(java.awt.Component param0) {
+    pg(java.awt.Component param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

@@ -143,7 +143,7 @@ final class sa extends na implements vd {
               if (param2.field_g != 5) {
                 var5.a(cf.field_h, (byte) -124, -1);
               } else {
-                var5.a(PacketBuffer.field_i, (byte) -124, 11);
+                var5.a(ng.field_i, (byte) -124, 11);
                 var5.a(dn.field_c, (byte) -124, 17);
               }
             }

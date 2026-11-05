@@ -8,7 +8,7 @@ final class b {
     static int field_a;
     private be field_c;
     private int field_f;
-    private IntrusiveNodeHashTable field_e;
+    private ug field_e;
     static String field_b;
     static String field_d;
     private int field_g;
@@ -249,7 +249,7 @@ final class b {
         byte[] var5_ref_byte__ = null;
         int var5 = 0;
         byte[] var6 = null;
-        PacketBuffer var9 = null;
+        ng var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -262,7 +262,7 @@ final class b {
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         try {
-          var9 = new PacketBuffer(param0);
+          var9 = new ng(param0);
           var3 = var9.h(255);
           var4 = var9.b((byte) 127);
           if (param1 >= ~var4 && (0 == w.field_g ||

@@ -35,7 +35,7 @@ final class ap extends ob {
 
     final void a(boolean param0, Object param1, boolean param2) {
         try {
-          PacketBuffer stackIn_30_0 = null;
+          ng stackIn_30_0 = null;
           boolean stackIn_31_1 = false;
           RuntimeException stackIn_43_0 = null;
           StringBuilder stackIn_43_1 = null;
@@ -67,11 +67,11 @@ final class ap extends ob {
             if (param2) {
               return;
             }
-            scanLoop1: while (true) {
+            L4: while (true) {
               var4_ref = (ld) (this.field_f.d(-4425));
               if (var4_ref == null) {
                 if (var6 == 0) {
-                  break scanLoop1;
+                  break L4;
                 }
               } else {
                 this.field_m.a((byte) 122, var4_ref);
@@ -81,11 +81,11 @@ final class ap extends ob {
               }
               break;
             }
-            scanLoop2: while (true) {
+            L8: while (true) {
               var4_refLifetime1 = (ld) (this.field_a.d(-4425));
               if (var4_refLifetime1 == null) {
                 if (var6 == 0) {
-                  break scanLoop2;
+                  break L8;
                 }
               } else {
                 this.field_k.a((byte) 110, var4_refLifetime1);
@@ -101,7 +101,7 @@ final class ap extends ob {
                 this.field_n.a(true, 4);
                 stackIn_30_0 = this.field_n;
                 stackIn_31_1 = !(param2);
-                ((PacketBuffer) (Object) stackIn_30_0).a(stackIn_31_1, (int) this.field_d);
+                ((ng) (Object) stackIn_30_0).a(stackIn_31_1, (int) this.field_d);
                 this.field_n.a(0, -16384);
                 this.field_q.a(0, 90, this.field_n.field_h, this.field_n.field_h.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
@@ -143,7 +143,7 @@ final class ap extends ob {
     private final void a(boolean param0, int param1) {
         try {
           int var3_int = 0;
-          PacketBuffer stackIn_5_0 = null;
+          ng stackIn_5_0 = null;
           boolean stackIn_5_1 = false;
           int stackIn_6_2 = 0;
           Throwable decompiledCaughtException = null;
@@ -164,7 +164,7 @@ final class ap extends ob {
               } else {
                 stackIn_6_2 = 3;
               }
-              ((PacketBuffer) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
+              ((ng) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
               this.field_n.a(0L, false);
               this.field_q.a(0, 108, this.field_n.field_h, this.field_n.field_h.length);
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -244,7 +244,7 @@ final class ap extends ob {
         boolean stackIn_22_0 = false;
         ce stackIn_67_0 = null;
         RuntimeException decompiledCaughtException = null;
-        CipherPacketBuffer var1 = null;
+        md var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -316,7 +316,7 @@ final class ap extends ob {
               return;
             }
             if (4 != var2) {
-              wp.a((Throwable) null, "F1: " + IntrusiveNodeHashTable.a(-1815), 21862);
+              wp.a((Throwable) null, "F1: " + ug.a(-1815), 21862);
               jj.a(4);
               return;
             }
@@ -359,7 +359,7 @@ final class ap extends ob {
           var6_ref.field_fb = var4_ref_StringLifetime1;
           var6_ref.a(param0);
           var7_ref = (ce) (df.field_b.g(32073));
-          scanLoop1: while (true) {
+          L15: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
               stackIn_67_0 = var6_ref;
@@ -372,7 +372,7 @@ final class ap extends ob {
             }
             if (decompiledFrameRemainder0) {
               if (null == var7_ref) {
-                break scanLoop1;
+                break L15;
               }
               stackIn_67_0 = var7_ref;
             }
@@ -453,7 +453,7 @@ final class ap extends ob {
             try {
               this.field_q.a(-128);
               var2 = (ld) (this.field_m.b(120));
-              scanLoop1: while (true) {
+              L6: while (true) {
                 if (null != var2) {
                   this.field_n.field_f = 0;
                   this.field_n.a(true, 1);
@@ -462,7 +462,7 @@ final class ap extends ob {
                   this.field_f.a((byte) 113, var2);
                   var2 = (ld) (this.field_m.a(127));
                   if (var16 != 0) {
-                    break scanLoop1;
+                    break L6;
                   }
                   if (var16 == 0) {
                     continue;
@@ -487,12 +487,12 @@ final class ap extends ob {
               if (param0 < 60) {
                 this.e(111);
               }
-              scanLoop2: while (true) {
+              L12: while (true) {
                 if (var2_int < 100) {
                   var3_int = this.field_q.c(0);
                   stackIn_137_0 = ~var3_int;
                   if (var16 != 0) {
-                    break scanLoop2;
+                    break L12;
                   }
                   if (stackIn_137_0 > -1) {
                     throw new IOException();
@@ -643,7 +643,7 @@ final class ap extends ob {
                           stackIn_120_0 = (stackIn_116_0 == ~var10) ? 5 : 9;
                           var15 = stackIn_120_0;
                           this.field_h = var14_ref;
-                          this.field_h.field_s = new PacketBuffer(this.field_h.field_u + (var15 + var9));
+                          this.field_h.field_s = new ng(this.field_h.field_u + (var15 + var9));
                           this.field_h.field_s.a(true, var10);
                           this.field_h.field_s.a(var9, -16384);
                           this.field_h.field_t = 10;

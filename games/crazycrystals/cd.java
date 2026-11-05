@@ -621,7 +621,7 @@ final class cd extends ea implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 23525) {
-            stackIn_4_0 = PacketBuffer.a(wd.field_h, param1, new cd(new kp(-1), 0, 0, 0, 0), (byte) -83, wg.field_N);
+            stackIn_4_0 = ng.a(wd.field_h, param1, new cd(new kp(-1), 0, 0, 0, 0), (byte) -83, wg.field_N);
             return stackIn_4_0;
           }
           stackIn_2_0 = (nj) null;

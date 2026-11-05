@@ -59,10 +59,10 @@ final class qh extends hk {
                 sd.field_R = bf.a(-1, "sprites_player_" + wk.field_c[var4_int], "", param3);
               }
               for (var5 = 0; var5 < fg.field_j[var4_int]; var5++) {
-                vj.field_a[var4_int][var5] = sd.field_R[KeyboardInputHandler.field_a[var4_int] + var5];
+                vj.field_a[var4_int][var5] = sd.field_R[vf.field_a[var4_int] + var5];
               }
               while (bp.field_c[var4_int] > var5) {
-                vj.field_a[var4_int][var5] = sd.field_R[var5 + (KeyboardInputHandler.field_a[var4_int] + oe.field_c[var4_int])];
+                vj.field_a[var4_int][var5] = sd.field_R[var5 + (vf.field_a[var4_int] + oe.field_c[var4_int])];
                 var5++;
               }
             }

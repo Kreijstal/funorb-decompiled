@@ -79,7 +79,7 @@ final class lc {
             var5 = 0;
             var2Lifetime1 = var5;
             while (var5 < 9) {
-              kk.field_a[32][var5 + m.field_l[var1_intLifetime1]] = IsaacRandom.field_g;
+              kk.field_a[32][var5 + m.field_l[var1_intLifetime1]] = bm.field_g;
               var5++;
             }
           }

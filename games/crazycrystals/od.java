@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class od extends IntrusiveNode {
+abstract class od extends jb {
     int field_g;
     volatile boolean field_f;
     od field_i;

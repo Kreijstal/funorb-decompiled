@@ -172,7 +172,7 @@ final class vk extends og implements ho, vd {
           mb.field_g = field_I;
           ob.field_l = no.field_k;
         }
-        MouseInputHandler.field_b = (ue) ((Object) var2);
+        a.field_b = (ue) ((Object) var2);
         var3 = null;
         var4 = uo.field_o;
         fn.field_j = fn.field_j + var4;
@@ -185,27 +185,27 @@ final class vk extends og implements ho, vd {
             wd.a(-111, 65535, uo.field_o - 1, dk.field_h, var1, 70, 0);
             dupTemp$0 = new m(var2, 8, cp.field_h, 0, 70, true);
             var3 = dupTemp$0;
-            MouseInputHandler.field_b = (ue) ((Object) dupTemp$0);
+            a.field_b = (ue) ((Object) dupTemp$0);
           }
           if (0 < var1 &&
             4 == jo.field_o) {
             wd.a(-77, 65534, -1 + uo.field_o, dk.field_h, var1, 25, 1);
             dupTemp$1 = new m(var2, 9, fq.field_G, 1, 25, true);
             var3 = dupTemp$1;
-            MouseInputHandler.field_b = (ue) ((Object) dupTemp$1);
+            a.field_b = (ue) ((Object) dupTemp$1);
           }
         }
         if (rc.a(-116) &&
           uo.field_o > 0 &&
           uo.field_o <= ke.field_b[jo.field_o]) {
-          MouseInputHandler.field_b = (ue) ((Object) new nc((m) (var3), var2));
+          a.field_b = (ue) ((Object) new nc((m) (var3), var2));
         } else {
           if (0 != pc.field_y) {
-            MouseInputHandler.field_b = (ue) ((Object) new vn((m) (var3), var2, true));
+            a.field_b = (ue) ((Object) new vn((m) (var3), var2, true));
           } else {
             if (mo.field_l == 0 &&
               uo.field_o > dk.field_h) {
-              MouseInputHandler.field_b = (ue) ((Object) new rb(var2, true));
+              a.field_b = (ue) ((Object) new rb(var2, true));
             }
           }
         }
@@ -285,13 +285,13 @@ final class vk extends og implements ho, vd {
           }
           this.field_J.field_t = tm.field_c;
           if (this.field_H != null) {
-            this.field_H.field_t = GameCanvas.field_c;
+            this.field_H.field_t = pg.field_c;
           }
           if (!this.field_E) {
             if (!this.field_A) {
               this.field_G.field_i = (wo) ((Object) new ok());
             } else {
-              this.field_G.field_t = CipherPacketBuffer.field_o;
+              this.field_G.field_t = md.field_o;
               this.field_G.field_i = (wo) ((Object) new ok());
             }
           } else {

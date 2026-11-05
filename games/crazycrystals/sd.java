@@ -71,7 +71,7 @@ final class sd extends ga implements lf {
             return null;
           }
           if (null != this.field_t) {
-            sc.a(qh.field_i + this.field_g - this.field_P, 125, IsaacRandom.field_h);
+            sc.a(qh.field_i + this.field_g - this.field_P, 125, bm.field_h);
             return this.field_t;
           }
           return null;
@@ -80,7 +80,7 @@ final class sd extends ga implements lf {
           return null;
         }
         if (null != this.field_t) {
-          sc.a(qh.field_i + this.field_g - this.field_P, 125, IsaacRandom.field_h);
+          sc.a(qh.field_i + this.field_g - this.field_P, 125, bm.field_h);
           return this.field_t;
         }
         return null;

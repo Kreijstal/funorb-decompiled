@@ -31,7 +31,7 @@ final class bq extends mg {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void a(ng param0, byte param1) {
         try {
           if (param1 < 94) {
             bq.a((byte) -15);

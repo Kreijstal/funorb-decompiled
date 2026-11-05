@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fc {
-    private IntrusiveNode field_a;
-    private IntrusiveNode[] field_e;
-    private IntrusiveNode field_d;
+    private jb field_a;
+    private jb[] field_e;
+    private jb field_d;
     private int field_c;
     private int field_b;
 
-    final IntrusiveNode a(byte param0) {
+    final jb a(byte param0) {
         if (param0 > -69) {
           this.field_b = -120;
         }
@@ -16,10 +16,10 @@ final class fc {
         return this.a(15);
     }
 
-    final IntrusiveNode a(long param0, int param1) {
-        IntrusiveNode var5 = null;
+    final jb a(long param0, int param1) {
+        jb var5 = null;
         int var6 = CrazyCrystals.field_B;
-        IntrusiveNode var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_c))];
+        jb var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_c))];
         this.field_d = var4.field_b;
         while (this.field_d != var4) {
           if (~param0 == ~this.field_d.field_e) {
@@ -36,8 +36,8 @@ final class fc {
         return null;
     }
 
-    final void a(int param0, long param1, IntrusiveNode param2) {
-        IntrusiveNode var5 = null;
+    final void a(int param0, long param1, jb param2) {
+        jb var5 = null;
         try {
           if (null != param2.field_d) {
             param2.a(false);
@@ -47,7 +47,7 @@ final class fc {
           param2.field_d = var5.field_d;
           param2.field_d.field_b = param2;
           if (param0 != -22072) {
-            this.field_d = (IntrusiveNode) null;
+            this.field_d = (jb) null;
           }
           param2.field_e = param1;
           param2.field_b.field_d = param2;
@@ -56,10 +56,10 @@ final class fc {
         }
     }
 
-    final IntrusiveNode a(int param0) {
+    final jb a(int param0) {
         int fieldTemp$0 = 0;
         int var2;
-        IntrusiveNode var3;
+        jb var3;
         int var4;
         var4 = CrazyCrystals.field_B;
         var2 = -42 % ((param0 + 70) / 47);
@@ -83,13 +83,13 @@ final class fc {
 
     fc(int param0) {
         int var2 = 0;
-        IntrusiveNode dupTemp$0 = null;
-        IntrusiveNode var3 = null;
+        jb dupTemp$0 = null;
+        jb var3 = null;
         this.field_b = 0;
-        this.field_e = new IntrusiveNode[param0];
+        this.field_e = new jb[param0];
         this.field_c = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new IntrusiveNode();
+          dupTemp$0 = new jb();
           var3 = dupTemp$0;
           this.field_e[var2] = dupTemp$0;
           var3.field_b = var3;

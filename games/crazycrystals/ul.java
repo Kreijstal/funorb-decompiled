@@ -23,7 +23,7 @@ final class ul extends um {
           }
           this.field_i = this.field_i + 1;
           this.field_h = this.field_h + param3;
-          stackIn_3_0 = new jo(IsaacRandom.field_g, 1);
+          stackIn_3_0 = new jo(bm.field_g, 1);
           return (f) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

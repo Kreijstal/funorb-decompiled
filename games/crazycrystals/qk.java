@@ -30,7 +30,7 @@ final class qk extends og implements fd, vd {
         lb var1 = new lb(ba.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, ai.field_h.field_o, -1, 2147483647, true);
         qm var2 = new qm(gg.field_a, var1, (bi) null);
         this.field_B = new pc(hb.field_i, (bi) null);
-        this.field_C = new pc(GameAppletShell.field_k, (bi) null);
+        this.field_C = new pc(wa.field_k, (bi) null);
         this.field_G.field_t = ac.field_k;
         this.field_G.a(true, new no(this.field_G));
         this.field_B.field_x = false;
