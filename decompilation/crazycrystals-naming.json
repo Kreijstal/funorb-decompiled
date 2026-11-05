@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "inputTreeSha256": "c4a9de6b68d19ad0c441027083fcbb2078e0fa00013f1b1c46169002fef73404",
+  "inputTreeSha256": "bb3dfcf46b89f012ae7a499e137086c984daf881763ebd79b778558870ab7fbd",
   "positionUnits": "UTF-16 code units in original source",
   "rules": [
     {
@@ -161621,199 +161621,320 @@
     {
       "symbol": "L:te.<init>()V#0",
       "renamedSymbol": "L:te.<init>()V#0",
-      "originalName": "var2",
-      "renamedName": "var2",
+      "originalName": "runtimeException",
+      "renamedName": "runtimeException",
       "declaration": {
         "file": "te.java",
-        "start": 775,
-        "end": 779
+        "start": 2756,
+        "end": 2772
       }
     },
     {
       "symbol": "L:te.a(B)V#0",
       "renamedSymbol": "L:te.a(B)V#0",
-      "originalName": "var1",
-      "renamedName": "var1",
+      "originalName": "var1_int",
+      "renamedName": "var1_int",
       "declaration": {
         "file": "te.java",
-        "start": 3531,
-        "end": 3535
+        "start": 5475,
+        "end": 5483
+      }
+    },
+    {
+      "symbol": "L:te.a(B)V#1",
+      "renamedSymbol": "L:te.a(B)V#1",
+      "originalName": "runtimeException",
+      "renamedName": "runtimeException",
+      "declaration": {
+        "file": "te.java",
+        "start": 5574,
+        "end": 5590
       }
     },
     {
       "symbol": "L:te.a(BZ)Z#0",
       "renamedSymbol": "L:te.a(BZ)Z#0",
-      "originalName": "dupTemp$2",
-      "renamedName": "dupTemp$2",
+      "originalName": "decompiledRegionSelector0",
+      "renamedName": "decompiledRegionSelector0",
       "declaration": {
         "file": "te.java",
-        "start": 172,
-        "end": 181
+        "start": 191,
+        "end": 216
+      }
+    },
+    {
+      "symbol": "L:te.a(BZ)Z#1",
+      "renamedSymbol": "L:te.a(BZ)Z#1",
+      "originalName": "decompiledCaughtException",
+      "renamedName": "decompiledCaughtException",
+      "declaration": {
+        "file": "te.java",
+        "start": 246,
+        "end": 271
+      }
+    },
+    {
+      "symbol": "L:te.a(BZ)Z#10",
+      "renamedSymbol": "L:te.a(BZ)Z#10",
+      "originalName": "decompiledCheckedException",
+      "renamedName": "decompiledCheckedException",
+      "declaration": {
+        "file": "te.java",
+        "start": 2471,
+        "end": 2497
+      }
+    },
+    {
+      "symbol": "L:te.a(BZ)Z#2",
+      "renamedSymbol": "L:te.a(BZ)Z#2",
+      "originalName": "dupTemp$1",
+      "renamedName": "dupTemp$1",
+      "declaration": {
+        "file": "te.java",
+        "start": 604,
+        "end": 613
+      }
+    },
+    {
+      "symbol": "L:te.a(BZ)Z#3",
+      "renamedSymbol": "L:te.a(BZ)Z#3",
+      "originalName": "var2",
+      "renamedName": "var2",
+      "declaration": {
+        "file": "te.java",
+        "start": 916,
+        "end": 920
+      }
+    },
+    {
+      "symbol": "L:te.a(BZ)Z#4",
+      "renamedSymbol": "L:te.a(BZ)Z#4",
+      "originalName": "stackIn_14_0",
+      "renamedName": "stackIn_14_0",
+      "declaration": {
+        "file": "te.java",
+        "start": 989,
+        "end": 1001
+      }
+    },
+    {
+      "symbol": "L:te.a(BZ)Z#5",
+      "renamedSymbol": "L:te.a(BZ)Z#5",
+      "originalName": "decompiledCaughtParameter0",
+      "renamedName": "decompiledCaughtParameter0",
+      "declaration": {
+        "file": "te.java",
+        "start": 1417,
+        "end": 1443
+      }
+    },
+    {
+      "symbol": "L:te.a(BZ)Z#6",
+      "renamedSymbol": "L:te.a(BZ)Z#6",
+      "originalName": "iOException",
+      "renamedName": "iOException",
+      "declaration": {
+        "file": "te.java",
+        "start": 1547,
+        "end": 1558
+      }
+    },
+    {
+      "symbol": "L:te.a(BZ)Z#7",
+      "renamedSymbol": "L:te.a(BZ)Z#7",
+      "originalName": "decompiledCaughtParameter1",
+      "renamedName": "decompiledCaughtParameter1",
+      "declaration": {
+        "file": "te.java",
+        "start": 2023,
+        "end": 2049
+      }
+    },
+    {
+      "symbol": "L:te.a(BZ)Z#8",
+      "renamedSymbol": "L:te.a(BZ)Z#8",
+      "originalName": "var2_ref",
+      "renamedName": "var2_ref",
+      "declaration": {
+        "file": "te.java",
+        "start": 2150,
+        "end": 2158
+      }
+    },
+    {
+      "symbol": "L:te.a(BZ)Z#9",
+      "renamedSymbol": "L:te.a(BZ)Z#9",
+      "originalName": "decompiledUncheckedException",
+      "renamedName": "decompiledUncheckedException",
+      "declaration": {
+        "file": "te.java",
+        "start": 2366,
+        "end": 2394
+      }
+    },
+    {
+      "symbol": "L:te.a(I)V#0",
+      "renamedSymbol": "L:te.a(I)V#0",
+      "originalName": "runtimeException",
+      "renamedName": "runtimeException",
+      "declaration": {
+        "file": "te.java",
+        "start": 3019,
+        "end": 3035
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#0",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#0",
-      "originalName": "var7",
-      "renamedName": "var7",
+      "originalName": "stackIn_30_2",
+      "renamedName": "stackIn_30_2",
       "declaration": {
         "file": "te.java",
-        "start": 1049,
-        "end": 1053
+        "start": 3246,
+        "end": 3258
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#1",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#1",
-      "originalName": "stackIn_19_0",
-      "renamedName": "stackIn_19_0",
+      "originalName": "stackIn_34_2",
+      "renamedName": "stackIn_34_2",
       "declaration": {
         "file": "te.java",
-        "start": 1084,
-        "end": 1096
+        "start": 3282,
+        "end": 3294
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#10",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#10",
-      "originalName": "var5",
-      "renamedName": "var5",
+      "originalName": "stackIn_29_0",
+      "renamedName": "stackIn_29_0",
       "declaration": {
         "file": "te.java",
-        "start": 1452,
-        "end": 1456
+        "start": 4467,
+        "end": 4479
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#11",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#11",
-      "originalName": "var6",
-      "renamedName": "var6",
+      "originalName": "stackIn_29_1",
+      "renamedName": "stackIn_29_1",
       "declaration": {
         "file": "te.java",
-        "start": 1477,
-        "end": 1481
+        "start": 4512,
+        "end": 4524
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#12",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#12",
-      "originalName": "var8",
-      "renamedName": "var8",
+      "originalName": "stackIn_33_1",
+      "renamedName": "stackIn_33_1",
       "declaration": {
         "file": "te.java",
-        "start": 1499,
-        "end": 1503
+        "start": 4722,
+        "end": 4734
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#13",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#13",
-      "originalName": "var9",
-      "renamedName": "var9",
+      "originalName": "stackIn_37_1",
+      "renamedName": "stackIn_37_1",
       "declaration": {
         "file": "te.java",
-        "start": 1521,
-        "end": 1525
-      }
-    },
-    {
-      "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#14",
-      "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#14",
-      "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
-      "declaration": {
-        "file": "te.java",
-        "start": 2431,
-        "end": 2457
+        "start": 4996,
+        "end": 5008
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#2",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#2",
-      "originalName": "stackIn_19_1",
-      "renamedName": "stackIn_19_1",
+      "originalName": "stackIn_38_2",
+      "renamedName": "stackIn_38_2",
       "declaration": {
         "file": "te.java",
-        "start": 1127,
-        "end": 1139
+        "start": 3318,
+        "end": 3330
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#3",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#3",
-      "originalName": "stackIn_20_2",
-      "renamedName": "stackIn_20_2",
+      "originalName": "var9",
+      "renamedName": "var9",
       "declaration": {
         "file": "te.java",
-        "start": 1163,
-        "end": 1175
+        "start": 3351,
+        "end": 3355
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#4",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#4",
-      "originalName": "stackIn_22_1",
-      "renamedName": "stackIn_22_1",
+      "originalName": "var5_int",
+      "renamedName": "var5_int",
       "declaration": {
         "file": "te.java",
-        "start": 1206,
-        "end": 1218
+        "start": 3409,
+        "end": 3417
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#5",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#5",
-      "originalName": "stackIn_23_2",
-      "renamedName": "stackIn_23_2",
+      "originalName": "var6",
+      "renamedName": "var6",
       "declaration": {
         "file": "te.java",
-        "start": 1242,
-        "end": 1254
+        "start": 3437,
+        "end": 3441
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#6",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#6",
-      "originalName": "stackIn_25_1",
-      "renamedName": "stackIn_25_1",
+      "originalName": "var7",
+      "renamedName": "var7",
       "declaration": {
         "file": "te.java",
-        "start": 1285,
-        "end": 1297
+        "start": 3535,
+        "end": 3539
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#7",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#7",
-      "originalName": "stackIn_26_2",
-      "renamedName": "stackIn_26_2",
+      "originalName": "var8",
+      "renamedName": "var8",
       "declaration": {
         "file": "te.java",
-        "start": 1321,
-        "end": 1333
+        "start": 3604,
+        "end": 3608
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#8",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#8",
-      "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "originalName": "decompiledCaughtParameter0",
+      "renamedName": "decompiledCaughtParameter0",
       "declaration": {
         "file": "te.java",
-        "start": 1367,
-        "end": 1392
+        "start": 4348,
+        "end": 4374
       }
     },
     {
       "symbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#9",
       "renamedSymbol": "L:te.a(Lbh;ILjava/lang/String;BLvc;)V#9",
-      "originalName": "var5_int",
-      "renamedName": "var5_int",
+      "originalName": "var5",
+      "renamedName": "var5",
       "declaration": {
         "file": "te.java",
-        "start": 1413,
-        "end": 1421
+        "start": 4405,
+        "end": 4409
       }
     },
     {
@@ -214029,8 +214150,8 @@
       "renamedName": "te",
       "declaration": {
         "file": "te.java",
-        "start": 753,
-        "end": 755
+        "start": 2655,
+        "end": 2657
       }
     },
     {
@@ -214040,8 +214161,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "te.java",
-        "start": 3502,
-        "end": 3503
+        "start": 5430,
+        "end": 5431
       }
     },
     {
@@ -214062,8 +214183,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "te.java",
-        "start": 857,
-        "end": 858
+        "start": 2880,
+        "end": 2881
       }
     },
     {
@@ -214073,8 +214194,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "te.java",
-        "start": 971,
-        "end": 972
+        "start": 3165,
+        "end": 3166
       }
     },
     {
@@ -214084,8 +214205,8 @@
       "renamedName": "b",
       "declaration": {
         "file": "te.java",
-        "start": 732,
-        "end": 733
+        "start": 2634,
+        "end": 2635
       }
     },
     {
@@ -214095,8 +214216,8 @@
       "renamedName": "b",
       "declaration": {
         "file": "te.java",
-        "start": 700,
-        "end": 701
+        "start": 2602,
+        "end": 2603
       }
     },
     {
@@ -289368,8 +289489,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "te.java",
-        "start": 3509,
-        "end": 3515
+        "start": 5437,
+        "end": 5443
       }
     },
     {
@@ -289401,8 +289522,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "te.java",
-        "start": 863,
-        "end": 869
+        "start": 2886,
+        "end": 2892
       }
     },
     {
@@ -289412,8 +289533,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "te.java",
-        "start": 976,
-        "end": 982
+        "start": 3170,
+        "end": 3176
       }
     },
     {
@@ -289423,8 +289544,8 @@
       "renamedName": "param1",
       "declaration": {
         "file": "te.java",
-        "start": 988,
-        "end": 994
+        "start": 3182,
+        "end": 3188
       }
     },
     {
@@ -289434,8 +289555,8 @@
       "renamedName": "param2",
       "declaration": {
         "file": "te.java",
-        "start": 1003,
-        "end": 1009
+        "start": 3197,
+        "end": 3203
       }
     },
     {
@@ -289445,8 +289566,8 @@
       "renamedName": "param3",
       "declaration": {
         "file": "te.java",
-        "start": 1016,
-        "end": 1022
+        "start": 3210,
+        "end": 3216
       }
     },
     {
@@ -289456,8 +289577,8 @@
       "renamedName": "param4",
       "declaration": {
         "file": "te.java",
-        "start": 1027,
-        "end": 1033
+        "start": 3221,
+        "end": 3227
       }
     },
     {
@@ -289467,8 +289588,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "te.java",
-        "start": 739,
-        "end": 745
+        "start": 2641,
+        "end": 2647
       }
     },
     {
@@ -289478,8 +289599,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "te.java",
-        "start": 706,
-        "end": 712
+        "start": 2608,
+        "end": 2614
       }
     },
     {
@@ -309765,9 +309886,24 @@
     {
       "original": "te.java",
       "renamed": "te.java",
-      "inputSha256": "fdc79c3402c631e9667544bdd91738d719334d5be3815c100362d92bba9d847e",
-      "outputSha256": "fdc79c3402c631e9667544bdd91738d719334d5be3815c100362d92bba9d847e",
-      "edits": []
+      "inputSha256": "b1602b462582f65784e91f733b2c89f9dc28ba6c0a7654e7710506a99f506d34",
+      "outputSha256": "3fd4c66df614237f19c982218c6e8ffa83f24ad95f55cbb33127bb99892c9cdc",
+      "edits": [
+        {
+          "start": 913,
+          "end": 915,
+          "symbol": "C:md",
+          "original": "md",
+          "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 1245,
+          "end": 1247,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PacketBuffer"
+        }
+      ]
     },
     {
       "original": "tf.java",
@@ -311485,13 +311621,13 @@
     "mode": "readable-source-mirror",
     "source": {
       "repository": "Kreijstal/funorb-decompiled",
-      "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+      "commit": "67141d635b7060c02e01505325a82243446974c0",
       "subdirectory": "games/crazycrystals"
     },
-    "rulesSha256": "543b71f72261209f3783790f5df66fb1c6950931267229fed6b59a5b0326dd0e",
+    "rulesSha256": "63b868ad0906dccf78185ba8253efdc28ae9a58a5542e6473c4c830727b3c6c3",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
-    "inputTreeSha256": "c4a9de6b68d19ad0c441027083fcbb2078e0fa00013f1b1c46169002fef73404",
-    "outputTreeSha256": "1f2f421c7f69e897bf7116465383dac42ff9278f3509648f913e8e7aa688a607",
+    "inputTreeSha256": "bb3dfcf46b89f012ae7a499e137086c984daf881763ebd79b778558870ab7fbd",
+    "outputTreeSha256": "73a667fb15b2ae949cc96aeedc9f11c1d1bbe615e384443eefec22f1b96aa1bc",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -311502,7 +311638,7 @@
     "verification": {
       "originalCompiles": true,
       "renamedCompiles": true,
-      "bindingsCompared": 175622,
+      "bindingsCompared": 175724,
       "overrideFamiliesChecked": 903,
       "overrideRelationshipsPreserved": true,
       "classNameLiteralBindingsCompared": 11,
